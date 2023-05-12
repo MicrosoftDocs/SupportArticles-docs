@@ -28,9 +28,9 @@ Microsoft supports Windows Server containers for the following Windows versions 
 - Windows 10 and Windows 11 Professional and Enterprise with Docker Desktop installed
 - Azure Stack HCI (when hosting Azure Kubernetes Service on Azure Stack HCI)
 - Windows IoT Core
-- Windows Server Container hosts must have Windows installed to C:. This restriction does not apply if only Hyper-V isolated containers are deployed.
+- Windows Server Container hosts must have Windows installed to C:. This restriction doesn't apply if only Hyper-V isolated containers are deployed.
 
-Please refer to [Overview - Product end of support](/lifecycle/overview/product-end-of-support-overview) public doc for more information on the end of support.
+Refer to [Overview - Product end of support](/lifecycle/overview/product-end-of-support-overview) public doc for more information on the end of support.
 
 > [!NOTE]
 > For similar information about Microsoft's support policy for containers in Azure, see [Support policy for containers and related services on Azure](/troubleshoot/azure/general/support-policy-containers).
@@ -51,8 +51,8 @@ Microsoft defines the supported host configurations in the following terms:
 
 ## Host component support
 
-Windows Server containers on [supported Windows Server versions](/virtualization/windowscontainers/deploy-containers/system-requirements) running on physical hardware or virtual machines (VM) on Hyper-V will receive full support for issues that are related to the operating system, base container images and/or container feature.
-Running Windows Server containers on a Windows Server 2016 and higher VM hosted on a [SVVP validated hypervisor](/troubleshoot/windows-server/virtualization/microsoft-server-software-support-policy) will receive full support for issues that are related to the operating system, base container images and/or container feature.
+Windows Server containers on [supported Windows Server versions](/virtualization/windowscontainers/deploy-containers/system-requirements) running on physical hardware or virtual machines (VM) on Hyper-V receive full support for issues that are related to the operating system, base container images and/or container feature.
+Running Windows Server containers on a Windows Server 2016 and higher VM hosted on a [SVVP validated hypervisor](/troubleshoot/windows-server/virtualization/microsoft-server-software-support-policy) receive full support for issues that are related to the operating system, base container images and/or container feature.
 
 ## Supported configurations for Windows Server container hosts
 
@@ -71,7 +71,7 @@ To deploy Windows Server containers and Hyper-V container with isolation, the Mi
 |---------|---------|---------|---------|
 |Hyper-V|Windows Server (full or core)|None|Windows Server containers|
 |Hyper-V|Windows Server (full or core)|Hyper-V (must be running in [nested virtualization mode](/virtualization/hyper-v-on-windows/user-guide/nested-virtualization))|Windows Server containers and Hyper-V isolated containers|
-|SVVP validated hypervisor|Windows Server (full or core)|None (Hyper-V not supported on VMWare ESX)|Windows Server containers|
+|SVVP validated hypervisor|Windows Server (full or core)|None (Hyper-V not supported on VMware ESX)|Windows Server containers|
 
 For more information on SVVP validated hypervisors, see [Welcome to the Windows Server Virtualization Validation Program](https://www.windowsservercatalog.com/svvp.aspx).
 
@@ -92,7 +92,7 @@ Microsoft doesn't provide support for the following configurations on Windows 10
 
 - Docker Desktop. You can get support from the [Docker Community Forums](https://forums.docker.com/c/docker-desktop-for-windows) or from Docker support. For more information, see [Docker Desktop for Windows FAQ](https://docs.docker.com/desktop/faqs/).
 - Windows Server containers or Hyper-V containers with isolation on virtual machines that are hosted on a Windows 10 or Windows 11 Professional or Enterprise system. To use containers on a virtual machine, use Windows Server as the host.
-- Windows Server containers do work on Windows 10 or Windows 11 now but are not fully supported.
+- Windows Server containers do work on Windows 10 or Windows 11 now but aren't fully supported.
 
 ## Requirement for container hosts
 
@@ -113,11 +113,11 @@ For more information about requirements and compatibility issues for virtualizat
 To run Hyper-V containers, the container host must meet the requirements for running Hyper-V itself. To summarize Hyper-V requirements for Windows Server:
 
 - 64-bit processor, with the following capabilities
-  - Second-level address translation (SLAT): The Windows hypervisor functionality requires SLAT (the Hyper-V management tools do not).
+  - Second-level address translation (SLAT): The Windows hypervisor functionality requires SLAT (the Hyper-V management tools don't).
   - Hardware-assisted virtualization: This is available in processors that include a virtualization option – specifically processors with Intel Virtualization Technology (Intel VT) or AMD Virtualization (AMD-V) technology.
   - Hardware-enforced Data Execution Prevention (DEP) must be available and enabled. For Intel systems, this is the XD bit (execute disable bit). For AMD systems, this is the NX bit (no execute bit).
 - VM Monitor Mode extensions.
-- At least 4 GB of RAM. More memory is better. You'll need enough memory for the host and all virtual machines that you want to run at the same time.
+- At least 4 GB of RAM. More memory is better. You need enough memory for the host and all virtual machines that you want to run at the same time.
 - Virtualization support turned on in the BIOS or UEFI.
 
 For more information on system requirements:
@@ -145,7 +145,7 @@ As outlined in Supported container hosts, not all host operating systems support
 |Windows 10 Professional or Enterprise|Hyper-V containers with isolation and Windows Server containers for dev/test|Hyper-V containers with isolation and Windows Server containers for dev/test|Hyper-V containers with isolation and Windows Server containers for dev/test|Not supported|
 |Windows IoT Core|Not supported|Not supported|Not supported|Windows Server containers|
 
-If you plan to use container hosts that run different versions and releases of Windows, you will also need to consider the versions and releases of the container images. Some container features aren't backward compatible, so some newer container base images may not run on container hosts with old Operation System (OS) versions. See [Windows Container Version Compatibility](/virtualization/windowscontainers/deploy-containers/version-compatibility) for more information.
+If you plan to use container hosts that run different versions and releases of Windows, you also need to consider the versions and releases of the container images. Some container features aren't backward compatible, so some newer container base images may not run on container hosts with old Operation System (OS) versions. See [Windows Container Version Compatibility](/virtualization/windowscontainers/deploy-containers/version-compatibility) for more information.
 
 ## Support for container workloads
 
@@ -156,9 +156,9 @@ For support of Microsoft applications like IIS, SQL and .NET running in containe
 > [!NOTE]
 > If you are trying to move a custom application or a third-party application to Windows Server containers running the Windows Server Core image and have issues with missing .DLLs or other components in the Windows Server core base image, try using the Windows Server container image as it has additional Windows API set.
 
-Avoid copying .DLLs from the container host to the Windows Server Core base image as it may cause the application to misbehave. Microsoft provides some component .DLLs in redistributable package form. Download redistributable packages from official Microsoft Download Center and install it in the container image using a Dockerfile.
+Avoid copying .DLLs from the container host to the Windows Server Core base image as it may cause the application to misbehave. Microsoft provides some component .DLLs in Redistributable package form. Download Redistributable packages from official Microsoft Download Center and install it in the container image using a Dockerfile.
 
-There is not a “single source of truth” in terms of which .DLLs are offered in a redistributable form or not.
+There isn't a “single source of truth” in terms of which .DLLs are offered in a Redistributable form or not.
 
 For guidance on moving legacy apps, see [Lift and shift to containers](/virtualization/windowscontainers/quick-start/lift-shift-to-containers).
 
@@ -172,8 +172,8 @@ See this article for [Unsupported features and network options](/virtualization/
 
 Microsoft supports [Active Directory group Managed Service Accounts](/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview) (gMSA) for containers.
 
-Containers cannot be domain-joined but gMSA supports non-domain-joined and domain joined container hosts.
-By using gMSA, Windows Server containers themselves and the service they host can be configured to use a specific gMSA as their domain identity. Any service running with the Local System or Network Service will use the Windows Server containers' identity just like they use the domain-joined host's identity. See [Create gMSAs for Windows containers](/virtualization/windowscontainers/manage-containers/manage-serviceaccounts) for more information.
+Containers can't be domain-joined but gMSA supports non-domain-joined and domain joined container hosts.
+By using gMSA, Windows Server containers themselves and the service they host can be configured to use a specific gMSA as their domain identity. Any service running with the Local System or Network Service use the Windows Server containers' identity just like they use the domain-joined host's identity. See [Create gMSAs for Windows containers](/virtualization/windowscontainers/manage-containers/manage-serviceaccounts) for more information.
 
 ## Supported endpoint security options for containers and container hosts
 
@@ -187,16 +187,16 @@ _Mirantis Container Runtime (MCR)_ is a recommended and supported container runt
 
 See [Get Started: Prep Windows for containers](/virtualization/windowscontainers/quick-start/set-up-environment) for the recommended and supported installation method on Windows Server.
 
-After April 30, 2023, Microsoft will no longer be the first point of contact for customers running the Mirantis Container Runtime on Windows Server. Customers will need to engage Mirantis first.
+After April 30, 2023, Microsoft will no longer be the first point of contact for customers running the Mirantis Container Runtime on Windows Server. Customers need to engage Mirantis first.
 
-See the [Message from Mirantis](https://www.mirantis.com/docker-engine-enterprise-support/) for more information.
+For more information, See the [Message from Mirantis](https://www.mirantis.com/docker-engine-enterprise-support/).
 
-1. Microsoft will provide support for Mirantis Container Runtime until April 30th, 2023.
-2. Customers are licensed to run, in perpetuity, only the number of copies of Mirantis Container Runtime obtained before April 30th, 2023, and no more.
-3. After April 30th, 2023, customers will not be able to get support, updates, or patches for the Mirantis container runtime from either Microsoft or Mirantis.
+1. Microsoft will provide support for Mirantis Container Runtime until April 30, 2023.
+2. Customers are licensed to run, in perpetuity, only the number of copies of Mirantis Container Runtime obtained before April 30, 2023, and no more.
+3. After April 30, 2023, customers won't be able to get support, updates, or patches for the Mirantis container runtime from either Microsoft or Mirantis.
 4. Customers can purchase a license to use a fully supported version of Mirantis Container Runtime from Mirantis at any time.
 
-_ContainerD_ is an open-source industry-standard container runtime that is supported by the community. See [ContainerD project](https://containerd.io/) for more information. ContainerD running on Windows Server can create, manage, and run Windows Server Containers but Microsoft doesn't provide any support for it. For any issues or questions related to ContainerD, ask the [GitHub community](https://github.com/containerd/containerd/issues). For more information, see the [GitHub ContainerD project](https://github.com/containerd/containerd/issues).
+_ContainerD_ is an open-source industry-standard container runtime that is supported by the community. For more information, see [ContainerD project](https://containerd.io/). ContainerD running on Windows Server can create, manage, and run Windows Server Containers but Microsoft doesn't provide any support for it. For any issues or questions related to ContainerD, ask the [GitHub community](https://github.com/containerd/containerd/issues). For more information, see the [GitHub ContainerD project](https://github.com/containerd/containerd/issues).
 
 ## Supported Container Orchestrators
 
