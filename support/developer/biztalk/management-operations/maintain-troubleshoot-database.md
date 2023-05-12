@@ -198,7 +198,7 @@ Additionally, you can use the BHM tool output to determine which tables are the 
 
 |Table|Description|
 |---|---|
-|`<HostName>Q_Suspended` table|This table contains a reference to messages in the `Spool` table that are associated with suspended instances for the particular host. This table is in the `BizTalkMsgBoxDb` database.|
+|`<HostName>Q_Suspended`|This table contains a reference to messages in the `Spool` table that are associated with suspended instances for the particular host. This table is in the `BizTalkMsgBoxDb` database.|
 |`<HostName>Q` table|This table contains a reference to messages in the `Spool` table that are associated with the particular host and aren't suspended. This table is in the `BizTalkMsgBoxDb` database.|
 |`Spool`<br/><br/>`Parts`<br/><br/>`Fragments`|These tables store actual message data in the `BizTalkMsgBoxDb` database.|
 |`Instances`|This table stores all instances and their current status in the `BizTalkMsgBoxDb` database.|
