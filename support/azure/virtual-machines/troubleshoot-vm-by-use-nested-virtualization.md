@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot a faulty Azure VM by using nested virtualization in Azure
-description: How to troubleshoot a problem Azure VM by using nested virtualization in Azure
+description: How to troubleshoot a problem Azure VM by using nested virtualization in Azure.
 services: virtual-machines
 documentationcenter: ''
 author: genlin
@@ -11,9 +11,8 @@ ms.subservice: vm-backup-restore
 ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
-
 ms.topic: article
-ms.date: 10/11/2020
+ms.date: 05/12/2023
 ms.author: glimoli
 ---
 # Troubleshoot a faulty Azure VM by using nested virtualization in Azure
@@ -35,6 +34,20 @@ In order to mount the faulty VM, the Rescue VM must use the same type of Storage
     - Same location, Storage Account, and Resource Group as the faulty VM.
 
     - Select the same storage type as the faulty VM (Standard or Premium).
+
+    - Select a Generation 1 image instead of a Generation 2 image because Generation 2 isn't compatible for Hyper-V.
+
+        If you select a Generation 2 image, when you add server roles on the Rescue VM, you will receive the following error message:
+
+        "Hyper-V cannot be installed because virtualization support is not enabled in the BIOS."
+
+        :::image type="content" source="media/troubleshoot-vm-by-use-nested-virtualization/hyper-v-cannot-be-installed-error.png" alt-text="Screenshot of the 'Hyper-V cannot be installed' error message.":::
+
+        After selecting Generation 1, you need to set the **Secutiry type**. You have two options: Standard and Trusted. If you select Trusted, you will be prompted with the **Click here to swap to the trusted launch version** hyperlink. If you select Standard, you won't see the prompt.
+
+        :::image type="content" source="media/troubleshoot-vm-by-use-nested-virtualization/set-security-type.png" alt-text="Screenshot of the 'Click here to swap to the trusted launch version' prompt.":::
+
+        Once you select that hyperlink to re-select an image that's compatabile with the Trusted security type, you will be ready to deploy the VM.
 
 2. After the Rescue VM is created, remote desktop to the Rescue VM.
 
