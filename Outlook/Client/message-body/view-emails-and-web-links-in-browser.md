@@ -46,31 +46,33 @@ If you want Outlook to open web links using the system default browser, you'll n
 
 You have two options where you can manage this policy:
 
-### Option 1: [Cloud Policy service for Microsoft 365](/deployoffice/admincenter/overview-cloud-policy)
+### Option 1: Cloud Policy service for Microsoft 365
 
-1. Navigate to https://config.office.com/ and select Sign in.
+Follow these steps to manage the policy in the [Cloud Policy service for Microsoft 365](/deployoffice/admincenter/overview-cloud-policy):
 
-2. Under Office policies, select Go to Microsoft 365 Cloud Policy.
+1. Navigate to the [Microsoft 365 Apps admin center](https://config.office.com/), and then select **Sign in**.
 
-3. Under Policy configurations, select **+Create**.
+2. Under Office policies, and then select **Go to Microsoft 365 Cloud Policy**.
 
-4. Provide a Name and Description for your policy, select **Next**.
+3. Under Policy configurations, and then select **+Create**.
+
+4. Provide a Name and Description for your policy, and then select **Next**.
 
 5. Select the appropriate scope, such as creating a group or adding to an existing group.
 
-6. Select Next.
+6. Select **Next**.
 
-7. Under Configure Settings, search for "Choose which browser opens web links" and press enter.
+7. Under Configure Settings, search for "Choose which browser opens web links".
 
 8. Select the **Choose which browser opens web links** policy.
 
-9. Adjust Configuration setting to desired configuration, select Apply.
+9. Adjust Configuration setting to desired configuration, and then select **Apply**.
 
-10. Select Next.
+10. Select **Next**.
 
-11. Review your policy, then select Create.
+11. Review your policy, then select **Create**.
 
-12. Select Done.
+12. Select **Done**.
 
 *Policy in Cloud Policy service for Microsoft 365*
 
@@ -82,11 +84,11 @@ You have two options where you can manage this policy:
 
 2. Open them in the Group Policy Management Editor.
 
-3. Locate the policy: Policies \> Administrative Templates: Policy definitions (ADMX files) \> Microsoft Office 2016 \> Links \> Choose which browser opens web links
+3. Locate the policy: **Policies** \> **Administrative Templates: Policy definitions (ADMX files)** \> **Microsoft Office 2016** \> **Links** \> **Choose which browser opens web links**.
 
 4. Configure the policy.
 
-5. Select Apply.
+5. Select **Apply**.
 
 :::image type="content" source="media/view-emails-and-web-links-in-browser/administrative-templates-group-policy.png" alt-text="Screenshot of the 'Choose which browser opens web links' policy in the Group Policy Management Editor.":::
 
