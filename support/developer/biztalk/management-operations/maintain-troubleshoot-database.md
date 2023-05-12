@@ -228,21 +228,21 @@ Consider the following scenarios.
 
   This table can grow when the incoming rate of processing outpaces the outgoing rate of processing. This scenario can occur when another problem occurs, such as a large `BizTalkDTADb` database or SQL Server disk delays.
 
-- **Spool, Parts, and Fragments tables**
+- **`Spool`, `Parts`, and `Fragments` tables**
 
     If the `Spool`, `Parts`, and `Fragments` tables have many records, many messages are currently active, dehydrated, or suspended. Depending on the size, the number of parts, and the fragmentation settings in these tables, a single message may spawn all these tables. Each message has exactly one row in the `Spool` table and at least one row in the `Parts` table.
 
-- **Instances table**
+- **`Instances` table**
 
   The BizTalk Administrator shouldn't allow many suspended instances to remain in the `Instances` table. Dehydrated instances should only remain if business logic requires long-running orchestrations. Remember that one service instance can be associated with many messages on the `Spool` table.
 
-- **TrackingData_x_x tables**
+- **`TrackingData_x_x` tables**
 
   If the `TrackingData_x_x` tables are large, the Tracking host (TDDS) isn't running  successfully. If the tracking host instance is running, review the event logs and the `TDDS_FailedTrackingData` table in the `BizTalkDTADb` database for error information. If BizTalk is throttling with a state of 6 (large database), these tables can also be truncated by using the BizTalk Terminator tool if data isn't needed.
 
   If there is a large gap between the sequence numbers in the `BizTalkMsgBoxDb` `TrackingData_x_x` tables and the `BAMPrimaryImport` or `BizTalkDTADb` `TDDS_StreamStatus` tables, then TDDS may not move the data from the `BizTalkMsgBoxDb` database. To correct this, use the BHM tool to purge these tables and reset the sequence number.
 
-- **dta_DebugTrace table and dta_MessageInOutEvents**
+- **`dta_DebugTrace` and `dta_MessageInOutEvents` tables**
 
   The `dta_DebugTrace` table is populated when **Shape start and end** are enabled on an orchestration. If the `dta_DebugTrace` table has many records, these orchestration debugging events are being used or were being used. If orchestration debugging isn't required for regular operations, clear the **Shape start and end** check box in the **Orchestration** properties.
 
@@ -258,7 +258,7 @@ Consider the following scenarios.
 
   For more information about tracking database sizing guidelines, visit the following MSDN website: [Tracking Database Sizing Guidelines](/biztalk/core/tracking-database-sizing-guidelines).
 
-- **dta_ServiceInstanceExceptions table**
+- **`dta_ServiceInstanceExceptions` table**
 
   The `dta_ServiceInstanceExceptions` table typically becomes large in an environment that regularly has suspended instances.
 
