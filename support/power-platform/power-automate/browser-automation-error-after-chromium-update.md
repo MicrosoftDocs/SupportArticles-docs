@@ -20,7 +20,7 @@ At design time, when you try to capture UI elements in one of the web browsers, 
 
 At runtime, when you execute the **Launch new Chrome** or **Launch new Microsoft Edge** action, you receive the following error message:
 
-> Failed to assume control of Chrome/Edge (Communication with the browser failed. Try reloading extension).
+"Failed to assume control of Chrome/Edge (Communication with the browser failed. Try reloading extension)."
 
 The affected web browsers:
 
