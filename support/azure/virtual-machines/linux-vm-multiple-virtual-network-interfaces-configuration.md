@@ -1,7 +1,7 @@
 ---
 title: Configure multiple network interfaces in Azure Linux virtual machines
 description: Describes how to configure multiple network interfaces in Azure Linux virtual machines running the most common Linux distributions.
-ms.date: 05/10/2023
+ms.date: 05/20/2023
 ms.author: divargas
 author: divargas-msft
 ms.reviewer: malachma
@@ -49,11 +49,11 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
 
 * In all the scenarios, assume that the VM has two network interfaces that have any of the following settings:
 
-    - Routing (the output of `sudo ip route show`):
+    - Routing (the output of the `sudo ip route show` command):
 
-        **2 NICs in the same subnet:**
+      - 2 NICs in the same subnet:
 
-        ```Output
+        ```output
         default via 10.0.1.1 dev eth0 proto static metric 100
         10.0.1.0/24 dev eth0 proto kernel scope link src 10.0.1.4 metric 100
         10.0.1.0/24 dev eth1 proto kernel scope link src 10.0.1.5 metric 101
@@ -61,9 +61,9 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
         169.254.169.254 via 10.0.1.1 dev eth0 proto dhcp metric 100
         ```
 
-        **2 NICs in different subnets, but same VNET:**
+      - 2 NICs in different subnets, but in the same VNET:
 
-        ```Output
+        ```output
         default via 10.0.1.1 dev eth0 proto static metric 100
         10.0.1.0/24 dev eth0 proto kernel scope link src 10.0.1.4 metric 100
         10.0.2.0/24 dev eth1 proto kernel scope link src 10.0.2.5 metric 101
@@ -71,36 +71,36 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
         169.254.169.254 via 10.0.1.1 dev eth0 proto dhcp metric 100
         ```
 
-    - Interfaces (the output of `sudo ip address show`):
+    - Interfaces (the output of the `sudo ip address show` command):
 
-        **2 NICs in the same subnet:**
+      - 2 NICs in the same subnet:
 
-        ```Output
-        lo: inet 127.0.0.1/8 scope host lo
-        eth0: inet 10.0.1.4/24 brd 10.0.1.255 scope global eth0    
-        eth1: inet 10.0.1.5/24 brd 10.0.1.255 scope global eth1
-        ```
+         ```output
+         lo: inet 127.0.0.1/8 scope host lo
+         eth0: inet 10.0.1.4/24 brd 10.0.1.255 scope global eth0    
+         eth1: inet 10.0.1.5/24 brd 10.0.1.255 scope global eth1
+         ```
 
-        **2 NICs in different subnet:**
+       - 2 NICs in different subnet, but in the same VNET:
 
-        ```Output
-        lo: inet 127.0.0.1/8 scope host lo
-        eth0: inet 10.0.1.4/24 brd 10.0.1.255 scope global eth0    
-        eth1: inet 10.0.2.5/24 brd 10.0.2.255 scope global eth1
-        ```
+          ```output
+          lo: inet 127.0.0.1/8 scope host lo
+          eth0: inet 10.0.1.4/24 brd 10.0.1.255 scope global eth0    
+          eth1: inet 10.0.2.5/24 brd 10.0.2.255 scope global eth1
+          ```
 
 ## [RHEL/CentOS 7._x_](#tab/rhel7)
 
-1. Add two routing tables to `/etc/iproute2/rt_tables` by running the following commands. You will need one entry per NIC:
+1. Add two routing tables to the */etc/iproute2/rt_tables* file by running the following commands. You will need one entry per NIC:
 
     ```bash
     sudo echo "200 eth0-rt" >> /etc/iproute2/rt_tables
     sudo echo "201 eth1-rt" >> /etc/iproute2/rt_tables
     ```
 
-    If more network interfaces are attached to the VM, add extra routing tables (`202 eth2-rt`, `203 eth3-rt`, and so on).
+    If more network interfaces are attached to the VM, add extra routing tables (for example, *202 eth2-rt*, *203 eth3-rt*, and so on).
 
-2. Make sure that a configuration file exists for each network interface in the `/etc/sysconfig/network-scripts/` directory. You can create new network interface configuration files based on the `ifcfg-eth0` configuration file (by modifying the `DEVICE` line and removing the `DHCP_HOSTNAME` and `HWADDR` lines from the new file). To do this, run the following commands:
+2. Make sure that a configuration file exists for each network interface in the */etc/sysconfig/network-scripts/* directory. You can create new network interface configuration files based on the *ifcfg-eth0* configuration file (by modifying the `DEVICE` line and removing the `DHCP_HOSTNAME` and `HWADDR` lines from the new file). To do this, run the following commands:
 
     ```bash
     sudo cat /etc/sysconfig/network-scripts/ifcfg-eth0 > /etc/sysconfig/network-scripts/ifcfg-eth1
@@ -109,7 +109,7 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
     sudo sed -i '/HWADDR/d' /etc/sysconfig/network-scripts/ifcfg-eth1
     ```
 
-3. To make the change persistent and applied during network stack activation, edit `/etc/sysconfig/network-scripts/ifcfg-eth0` and `/etc/sysconfig/network-scripts/ifcfg-eth1` (eth2, eth3, and so on, if the VM has more than two network interfaces). Change the value of `NM_CONTROLLED` from **yes** to **no**. To do this, run the following commands:
+3. To make the change persistent and applied during network stack activation, edit the files */etc/sysconfig/network-scripts/ifcfg-eth0* and */etc/sysconfig/network-scripts/ifcfg-eth1* (*ifcfg-eth2*, *ifcfg-eth3*, and so on, if the VM has more than two network interfaces) and change the value of `NM_CONTROLLED` from `yes` to `no`. To do this, run the following commands:
 
     ```bash
     sudo cp -rp /etc/sysconfig/network-scripts/ifcfg-eth0 /tmp/ifcfg-eth0.bkp
@@ -119,85 +119,86 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
     ```
 
     > [!NOTE]
-    > Verify that the `NM_CONTROLLED=no` line is added to both the `/etc/sysconfig/network-scripts/ifcfg-eth0` and `/etc/sysconfig/network-scripts/ifcfg-eth1` files. If the line isn't there, add it manually using `sudo echo "NM_CONTROLLED=no" >> /etc/sysconfig/network-scripts/ifcfg-eth0` and `sudo echo "NM_CONTROLLED=no" >> /etc/sysconfig/network-scripts/ifcfg-eth1`  . You can use the `cat /etc/sysconfig/network-scripts/ifcfg-eth*` command to verify the configuration.
+    > Verify that the `NM_CONTROLLED=no` line is added to both the */etc/sysconfig/network-scripts/ifcfg-eth0* and */etc/sysconfig/network-scripts/ifcfg-eth1* files by using the `cat /etc/sysconfig/network-scripts/ifcfg-eth*` command. If the line isn't in the files, add it manually by using the `sudo echo "NM_CONTROLLED=no" >> /etc/sysconfig/network-scripts/ifcfg-eth0` and `sudo echo "NM_CONTROLLED=no" >> /etc/sysconfig/network-scripts/ifcfg-eth1` commands.
 
-4. After modifying this configuration, please make sure the network services are restarted to apply the changes:
+4. After modifying this configuration, restart network services to apply the changes by running the following command:
 
     ```bash
     sudo systemctl restart network
     ```
 
-5. Create corresponding rule and route files, and add appropriate rules and routes to each file. Use the following steps to create one set of `rule-eth#` and `route-eth#` files per network interfaces. Replace the IP address and subnet information accordingly in every step. If you have more network interfaces, create the same set of `rule-eth#` and `route-eth#` files for each interface by using the corresponding IP address, network and gateway details.
+5. Create corresponding rule and route files by using any text editor (in the following examples, the vi editor is used), and add appropriate rules and routes to each file. Use the following steps to create one set of *rule-eth#* and *route-eth#* files per network interfaces. Replace the IP address and subnet information accordingly in every step. If you have more network interfaces, create the same set of *rule-eth#* and *route-eth#* files for each interface by using the corresponding IP address, network and gateway details.
 
-    - Create rules and routes for eth0:
+    - Create rules and routes for *eth0*:
 
-      1. To create the rule file for `eth0`, open the file `/etc/sysconfig/network-scripts/rule-eth0` using any text editor. In the following example, `vi` is being used:
+      1. To create the rule file for *eth0*, open the file */etc/sysconfig/network-scripts/rule-eth0*.
 
           ```bash
           sudo vi /etc/sysconfig/network-scripts/rule-eth0
           ```
 
-      2. Add the following contents to the rule file. Replace the IP address accordingly, make sure that you specify the IPv4 address in the configuration, and preserve the 32 bits value:
+      2. Add the following contents to the rule file. Replace the IP address accordingly, make sure that you specify the IPv4 address in the configuration, and preserve the 32-bit value:
 
-          ```Configuration
+          ```output
           from 10.0.1.4/32 table eth0-rt
           to 10.0.1.4/32 table eth0-rt
           ```
 
-      3. To create the route file for `eth0`, open the file `/etc/sysconfig/network-scripts/route-eth0` using any text editor. In the following example, `vi` is being used:
+      3. To create the route file for *eth0*, open the file */etc/sysconfig/network-scripts/route-eth0*.
 
           ```bash
           sudo vi /etc/sysconfig/network-scripts/route-eth0
           ```
 
-      4. Add the following contents to the route file. Replace the network and gateway values accordingly:
+      4. Add the following contents to the route file. Replace the network and gateway values accordingly.
 
-          ```Configuration
+          ```output
           10.0.1.0/24 dev eth0 table eth0-rt
           default via 10.0.1.1 dev eth0 table eth0-rt
           ```
 
-    - Create rules and routes for eth1:
-      1. To create the rule file for eth1, open the file `/etc/sysconfig/network-scripts/rule-eth1` using any text editor. In the following example, `vi` is being used:
+    - Create rules and routes for *eth1*:
+    
+      1. To create the rule file for *eth1*, open the file */etc/sysconfig/network-scripts/rule-eth1*.
 
             ```bash
             sudo vi /etc/sysconfig/network-scripts/rule-eth1
             ```
 
-      2. Add the following contents to the rule file. Replace the IP address accordingly, make sure that you specify the IPv4 address in the command, and preserve the 32 bits value:
+      2. Add the following contents to the rule file. Replace the IP address accordingly, make sure that you specify the IPv4 address in the command, and preserve the 32-bit value.
 
-            **2 NICs in the same subnet:**
+          - 2 NICs in the same subnet:
 
-            ```Configuration
+            ```output
             from 10.0.1.5/32 table eth1-rt
             to 10.0.1.5/32 table eth1-rt
             ```
 
-            **2 NICs in different subnet:**
+           - 2 NICs in different subnet, but in the same VNET:
 
-            ```Configuration
-            from 10.0.2.5/32 table eth1-rt
-            to 10.0.2.5/32 table eth1-rt
-            ```
+             ```output
+             from 10.0.2.5/32 table eth1-rt
+             to 10.0.2.5/32 table eth1-rt
+             ```
 
-      3. To create the route file for eth1, open the file `/etc/sysconfig/network-scripts/route-eth1` using any text editor. In the following example, `vi` is being used:
+      3. To create the route file for *eth1*, open the file */etc/sysconfig/network-scripts/route-eth1*.
 
             ```bash
             sudo vi /etc/sysconfig/network-scripts/route-eth1
             ```
 
-      4. Add the following contents to the route file. Replace the network and gateway values accordingly:
+      4. Add the following contents to the route file. Replace the network and gateway values accordingly.
 
-            **2 NICs in the same subnet:**
+         - 2 NICs in the same subnet:
 
-            ```Configuration
+            ```output
             10.0.1.0/24 dev eth1 table eth1-rt
             default via 10.0.1.1 dev eth1 table eth1-rt
             ```
 
-            **2 NICs in different subnet:**
+          - 2 NICs in different subnet, but in the same VNET:
 
-            ```Configuration
+            ```output
             10.0.2.0/24 dev eth1 table eth1-rt
             default via 10.0.2.1 dev eth1 table eth1-rt
             ```
@@ -208,17 +209,17 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
     sudo systemctl restart network
     ```
 
-The routing rules are now correctly set, and connectivity should work from either network interface, as appropriate. You can test the connectivity by using Secure Shell (SSH), or by pinging both IPs from a **VM in the same VNET**.
+    The routing rules are now correctly set, and connectivity should work from any network interface. You can test the connectivity by using Secure Shell (SSH), or by pinging both IPs from a VM in the same VNET.
 
-7. You can verify the current routes and rules by using the following commands:
+7. Verify the current routes and rules are loaded by using the following commands:
 
-```bash
-sudo ip route show
-sudo ip rule show
-```
+    ```bash
+    sudo ip route show
+    sudo ip rule show
+    ```
 
->[!IMPORTANT]
-> If you still have issues to communicate with the second NIC, restart the VM by using the `sudo reboot` command, repeat the previous step to verify that the routes and rules are loaded, and test connectivity one more time.
+> [!IMPORTANT]
+> If you still have issues to communicate with the second NIC, restart the VM by using the `sudo reboot` command, repeat the step 7, and test connectivity again.
 
 ## [RHEL/CentOS 8._x_](#tab/rhel8)
 
@@ -230,7 +231,7 @@ sudo ip rule show
     sudo systemctl start NetworkManager-dispatcher.service
     ```
 
-3. In RHEL/CentOS 8.x, the `NM_CONTROLLED` setting should be set to **yes** in each network configuration file (`/etc/sysconfig/network-scripts/ifcfg-eth#`). That's the default setting. Make sure `NM_CONTROLLED` it's not set to **no** in your specific configuration file, to avoid issues. Also, make sure that a corresponding network configuration file is created per each network interface. The following is the sample configuration for network configuration files:
+2. In RHEL/CentOS 8.x, the `NM_CONTROLLED` setting is set to `yes` in each network configuration file (*/etc/sysconfig/network-scripts/ifcfg-eth#*) by default. To avoid issues, make sure this setting isn't set to `no` in your specific configuration file. Also, make sure that a corresponding network configuration file is created per each network interface. The following is the sample configuration for network configuration files:
 
     - */etc/sysconfig/network-scripts/ifcfg-eth0*:
 
@@ -238,7 +239,7 @@ sudo ip rule show
         sudo cat /etc/sysconfig/network-scripts/ifcfg-eth0
         ```
 
-        ```Configuration
+        ```output
         DEVICE=eth0
         ONBOOT=yes
         BOOTPROTO=dhcp
@@ -255,7 +256,7 @@ sudo ip rule show
         sudo cat /etc/sysconfig/network-scripts/ifcfg-eth1
         ```
 
-        ```Configuration
+        ```output
         DEVICE=eth1
         ONBOOT=yes
         BOOTPROTO=dhcp
@@ -266,33 +267,33 @@ sudo ip rule show
         PERSISTENT_DHCLIENT=yes
         ```
 
-4. Run the following commands to add two routing tables to `/etc/iproute2/rt_tables`:
+3. Run the following commands to add two routing tables to the */etc/iproute2/rt_tables* file:
 
     ```bash
     sudo echo "200 eth0-rt" >> /etc/iproute2/rt_tables
     sudo echo "201 eth1-rt" >> /etc/iproute2/rt_tables
     ```
 
-    If more network interfaces are attached to the VM, add extra routing tables (`202 eth2-rt`, `203 eth3-rt`, and so on).
+    If more network interfaces are attached to the VM, add extra routing tables (for example , *202 eth2-rt*, *203 eth3-rt*, and so on).
 
-5. Create the corresponding rules and routes configuration files for each of your NICs, and add the appropriate rules and routes to each of them. To create one set of `rule-eth#` and `route-eth#` files per network interfaces, follow the following steps. Replace the IP address and subnet information accordingly in every step. If you have more network interfaces, create the same set of `rule-eth#` and `route-eth#` files for each interface by using the corresponding IP and subnet details.
+4. Create the corresponding rules and routes configuration files for each of your NICs, and add the appropriate rules and routes to each of them. To create one set of *rule-eth#* and *route-eth#* files per network interfaces, follow the following steps. Replace the IP address and subnet information accordingly in every step. If you have more network interfaces, create the same set of *rule-eth#* and *route-eth#* files for each interface by using the corresponding IP and subnet details.
 
-    - Create rules and routes for `eth0`:
+    - Create rules and routes for *eth0*:
 
-      1. Create the rule file for `eth0` by running the following command:
+      1. Create the rule file for *eth0* by running the following command:
 
           ```bash
           sudo vi /etc/sysconfig/network-scripts/rule-eth0
           ```
 
-      2. Add the following contents to the rule file (adjust the IP address accordingly, and make sure that you specify the IPv4 address in the command):
+      2. Add the following contents to the rule file. Replace the IP address accordingly, and make sure that you specify the IPv4 address in the command.
 
-          ```Configuration
+          ```output
           from 10.0.1.4/32 table eth0-rt
           to 10.0.1.4/32 table eth0-rt
           ```
 
-      3. Create the route file for `eth0` by running the following command:
+      3. Create the route file for *eth0* by running the following command:
   
           ```bash
           sudo vi /etc/sysconfig/network-scripts/route-eth0
@@ -300,36 +301,36 @@ sudo ip rule show
 
       4. Add the following contents to the route file:
 
-          ```Configuration
+          ```output
           10.0.1.0/24 dev eth0 table eth0-rt
           default via 10.0.1.1 dev eth0 table eth0-rt
           ```
 
-    - Create rules and routes for `eth1`:
+    - Create rules and routes for *eth1*:
 
-      1. Create the rule file for `eth1` by running the following command:
+      1. Create the rule file for *eth1* by running the following command:
 
           ```bash
           sudo vi /etc/sysconfig/network-scripts/rule-eth1
           ```
 
-      2. Add the following contents to the rule file (adjust the IP address accordingly, make sure that you specify the IPv4 address in the command, and preserve the 32 bits value):
+      2. Add the following contents to the rule file. Replace the IP address accordingly, make sure that you specify the IPv4 address in the command, and preserve the 32-bit value.
 
-          **2 NICs in the same subnet:**
+         - 2 NICs in the same subnet:
 
-          ```Configuration
-          from 10.0.1.5/32 table eth1-rt
-          to 10.0.1.5/32 table eth1-rt
-          ```
+           ```output
+           from 10.0.1.5/32 table eth1-rt
+           to 10.0.1.5/32 table eth1-rt
+           ```
 
-          **2 NICs in different subnet:**
+         - 2 NICs in different subnet, but in the same VNET:
 
-          ```Configuration
-          from 10.0.2.5/32 table eth1-rt
-          to 10.0.2.5/32 table eth1-rt
-          ```
+           ```output
+           from 10.0.2.5/32 table eth1-rt
+           to 10.0.2.5/32 table eth1-rt
+           ```
 
-      3. Create the route file for `eth1` by running the following command:
+      3. Create the route file for *eth1* by running the following command:
 
           ```bash
           sudo vi /etc/sysconfig/network-scripts/route-eth1
@@ -337,52 +338,52 @@ sudo ip rule show
 
       4. Add the following contents to the route file:
 
-          **2 NICs in the same subnet:**
+         - 2 NICs in the same subnet:
 
-          ```Configuration
-          10.0.1.0/24 dev eth1 table eth1-rt
-          default via 10.0.1.1 dev eth1 table eth1-rt
-          ```
+            ```output
+            10.0.1.0/24 dev eth1 table eth1-rt
+            default via 10.0.1.1 dev eth1 table eth1-rt
+            ```
 
-          **2 NICs in different subnet:**
+         - 2 NICs in different subnet, but in the same VNET:
 
-          ```Configuration
-          10.0.2.0/24 dev eth1 table eth1-rt
-          default via 10.0.2.1 dev eth1 table eth1-rt
-          ```
+            ```output
+            10.0.2.0/24 dev eth1 table eth1-rt
+            default via 10.0.2.1 dev eth1 table eth1-rt
+            ```
 
-6. To apply the changes, restart the network service by running the following command:
+5. To apply the changes, restart the network service by running the following command:
 
     ```bash
     sudo systemctl restart NetworkManager
     ```
 
-The routing rules are now correctly set, and connectivity should work from either network interface, as appropriate. You can test the connectivity by using Secure Shell (SSH), or by pinging both IPs from a **VM in the same VNET**.
+    The routing rules are now correctly set, and connectivity should work from any network interface. You can test the connectivity by using Secure Shell (SSH), or by pinging both IPs from a VM in the same VNET.
 
-7. You can verify the current routes and rules by using the following commands:
+6. Verify the current routes and rules are loaded by using the following commands:
 
-```bash
-sudo ip route show
-sudo ip rule show
-```
+    ```bash
+    sudo ip route show
+    sudo ip rule show
+    ```
 
->[!IMPORTANT]
-> If you still don't have connectivity to the second NIC, restart the VM by using the `sudo reboot` command, repeat the previous step to verify that the routes and rules are loaded, and test connectivity one more time.
+> [!IMPORTANT]
+> If you still don't have connectivity to the second NIC, restart the VM by using the `sudo reboot` command, repeat the step 6, and test connectivity again.
 
 ## [Ubuntu 18.04/20.04/22.04](#tab/ubuntu)
 
-1. Add two routing tables to `/etc/iproute2/rt_tables` by running the following commands:
+1. Add two routing tables to the */etc/iproute2/rt_tables* file by running the following commands:
 
     ```bash
     sudo echo "200 eth0-rt" >> /etc/iproute2/rt_tables
     sudo echo "201 eth1-rt" >> /etc/iproute2/rt_tables
     ```
     
-    If more network interfaces are attached to the VM, add extra routing tables (`202 eth2-rt`, `203 eth3-rt`, and so on).
+    If more network interfaces are attached to the VM, add extra routing tables (for example, *202 eth2-rt*, *203 eth3-rt*, and so on).
 
-2. If Cloud-Init automation is set (the default in the Azure Ubuntu images), make sure that the network CI automation is disabled so that the `/etc/netplan/50-cloud-init.yaml` file doesn't get overwritten every time that the system is restarted.
+2. If Cloud-Init automation is set (by default it's set in the Azure Ubuntu images), make sure that the network CI automation is disabled so that the */etc/netplan/50-cloud-init.yaml* file doesn't get overwritten every time that the system is restarted.
 
-    Create the `/etc/cloud/cloud.cfg.d/99-disable-network-config.cfg` by using the following command and contents:
+    Create the */etc/cloud/cloud.cfg.d/99-disable-network-config.cfg* file by using the following command and contents:
 
     ```bash
     sudo vi /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg
@@ -393,7 +394,7 @@ sudo ip rule show
        config: disabled
     ```
 
-3. Modify the netplan configuration file `/etc/netplan/50-cloud-init.yaml` using any text editor, and include the following routes and policy-routing blocks for **each network interface** section:
+3. Modify the netplan configuration file */etc/netplan/50-cloud-init.yaml* by using any text editor, and include the following routes and policy-routing blocks for each network interface section:
 
     ```yaml
     routes:
@@ -411,7 +412,7 @@ sudo ip rule show
        table: <routingTableID>
     ```
 
-    Replace the subnet, MAC Address and IP address information for each network interface (eth0 and eth1) accordingly. Make sure the 32 bits value is preserved in the `routing-policy` block.
+    Replace the subnet, MAC Address and IP address information for each network interface (*eth0* and *eth1*) accordingly. Make sure the 32-bit value is preserved in the `routing-policy` block.
 
     Here's the sample configuration file that uses the given sample details:
 
@@ -419,112 +420,112 @@ sudo ip rule show
     sudo vi /etc/netplan/50-cloud-init.yaml
     ```
 
-    **2 NICs in the same subnet:**
+    - 2 NICs in the same subnet:
 
-    ```yaml
-    network:
-        ethernets:
-            eth0:
-                dhcp4: true
-                dhcp4-overrides:
-                    route-metric: 100
-                dhcp6: false
-                match:
-                    driver: hv_netvsc
-                    macaddress: 00:0d:3a:9d:60:e6
-                set-name: eth0
-                routes:
-                 - to: 10.0.1.0/24
-                   via: 10.0.1.1
-                   metric: 200
-                   table: 200
-                 - to: 0.0.0.0/0
-                   via: 10.0.1.1
-                   table: 200
-                routing-policy:
-                 - from: 10.0.1.4/32
-                   table: 200
-                 - to: 10.0.1.4/32
-                   table: 200
-            eth1:
-                dhcp4: true
-                dhcp4-overrides:
-                    route-metric: 200
-                dhcp6: false
-                match:
-                    driver: hv_netvsc
-                    macaddress: 00:0d:3a:9a:25:5f
-                set-name: eth1
-                routes:
-                 - to: 10.0.1.0/24
-                   via: 10.0.1.1
-                   metric: 200
-                   table: 201
-                 - to: 0.0.0.0/0
-                   via: 10.0.1.1
-                   table: 201
-                routing-policy:
-                 - from: 10.0.1.5/32
-                   table: 201
-                 - to: 10.0.1.5/32
-                   table: 201
-          version: 2
-    ```
+        ```yaml
+        network:
+            ethernets:
+                eth0:
+                    dhcp4: true
+                    dhcp4-overrides:
+                        route-metric: 100
+                    dhcp6: false
+                    match:
+                        driver: hv_netvsc
+                        macaddress: 00:0d:3a:9d:60:e6
+                    set-name: eth0
+                    routes:
+                     - to: 10.0.1.0/24
+                       via: 10.0.1.1
+                       metric: 200
+                       table: 200
+                     - to: 0.0.0.0/0
+                       via: 10.0.1.1
+                       table: 200
+                    routing-policy:
+                     - from: 10.0.1.4/32
+                       table: 200
+                     - to: 10.0.1.4/32
+                       table: 200
+                eth1:
+                    dhcp4: true
+                    dhcp4-overrides:
+                        route-metric: 200
+                    dhcp6: false
+                    match:
+                        driver: hv_netvsc
+                        macaddress: 00:0d:3a:9a:25:5f
+                    set-name: eth1
+                    routes:
+                     - to: 10.0.1.0/24
+                       via: 10.0.1.1
+                       metric: 200
+                       table: 201
+                     - to: 0.0.0.0/0
+                       via: 10.0.1.1
+                       table: 201
+                    routing-policy:
+                     - from: 10.0.1.5/32
+                       table: 201
+                     - to: 10.0.1.5/32
+                       table: 201
+              version: 2
+        ```
 
-    **2 NICs in different subnet:**
+    - 2 NICs in different subnet, but in the same VNET:
 
-    ```yaml
-    network:
-        ethernets:
-            eth0:
-                dhcp4: true
-                dhcp4-overrides:
-                    route-metric: 100
-                dhcp6: false
-                match:
-                    driver: hv_netvsc
-                    macaddress: 00:0d:3a:9d:60:e6
-                set-name: eth0
-                routes:
-                 - to: 10.0.1.0/24
-                   via: 10.0.1.1
-                   metric: 200
-                   table: 200
-                 - to: 0.0.0.0/0
-                   via: 10.0.1.1
-                   table: 200
-                routing-policy:
-                 - from: 10.0.1.4/32
-                   table: 200
-                 - to: 10.0.1.4/32
-                   table: 200
-            eth1:
-                dhcp4: true
-                dhcp4-overrides:
-                    route-metric: 200
-                dhcp6: false
-                match:
-                    driver: hv_netvsc
-                    macaddress: 00:0x:3x:9x:03:5f
-                set-name: eth1
-                routes:
-                 - to: 10.0.2.0/24
-                   via: 10.0.2.1
-                   metric: 200
-                   table: 201
-                 - to: 0.0.0.0/0
-                   via: 10.0.2.1
-                   table: 201
-                routing-policy:
-                 - from: 10.0.2.5/32
-                   table: 201
-                 - to: 10.0.2.5/32
-                   table: 201
-          version: 2
-    ```
+        ```yaml
+        network:
+            ethernets:
+                eth0:
+                    dhcp4: true
+                    dhcp4-overrides:
+                        route-metric: 100
+                    dhcp6: false
+                    match:
+                        driver: hv_netvsc
+                        macaddress: 00:0d:3a:9d:60:e6
+                    set-name: eth0
+                    routes:
+                     - to: 10.0.1.0/24
+                       via: 10.0.1.1
+                       metric: 200
+                       table: 200
+                     - to: 0.0.0.0/0
+                       via: 10.0.1.1
+                       table: 200
+                    routing-policy:
+                     - from: 10.0.1.4/32
+                       table: 200
+                     - to: 10.0.1.4/32
+                       table: 200
+                eth1:
+                    dhcp4: true
+                    dhcp4-overrides:
+                        route-metric: 200
+                    dhcp6: false
+                    match:
+                        driver: hv_netvsc
+                        macaddress: 00:0x:3x:9x:03:5f
+                    set-name: eth1
+                    routes:
+                     - to: 10.0.2.0/24
+                       via: 10.0.2.1
+                       metric: 200
+                       table: 201
+                     - to: 0.0.0.0/0
+                       via: 10.0.2.1
+                       table: 201
+                    routing-policy:
+                     - from: 10.0.2.5/32
+                       table: 201
+                     - to: 10.0.2.5/32
+                       table: 201
+              version: 2
+        ```
 
     > [!IMPORTANT]
-    > If you use any of the previous configuration file samples as a reference, make sure the MAC address value is replaced accordingly. You can get the corresponding NIC MAC address from the `ip a | grep ether | awk '{print $2}'` command output.
+    > If you use any of the previous configuration file samples, make sure the MAC address value is replaced accordingly. You can get the corresponding NIC MAC address from the output of the `ip a | grep ether | awk '{print $2}'` command.
 
 4. Apply the changes by running the following command:
 
@@ -541,16 +542,16 @@ sudo ip rule show
 
 ## [SLES 12._x_/15._x_](#tab/sles)
 
-1. Add two routing tables to `/etc/iproute2/rt_tables` by running the following commands:
+1. Add two routing tables to the */etc/iproute2/rt_tables* file by running the following commands:
 
     ```bash
     sudo echo "200 eth0-rt" >> /etc/iproute2/rt_tables
     sudo echo "201 eth1-rt" >> /etc/iproute2/rt_tables
     ```
     
-    If more network interfaces are attached to the VM, add extra routing tables (`202 eth2-rt`, `203 eth3-rt`, and so on).
+    If more network interfaces are attached to the VM, add extra routing tables (for examle, *202 eth2-rt*, *203 eth3-rt*, and so on).
 
-2. Create the scripts that have the routes and rules for each network interface in the `/etc/sysconfig/network/scripts/` directory using any text editor. In the following commands `vi` is being used as an example:
+2. Create the scripts that have the routes and rules for each network interface in the */etc/sysconfig/network/scripts/* directory by using any text editor (in the following commands, the vi text editor is used).
 
     - */etc/sysconfig/network/scripts/ifup-route.eth0*
 
@@ -572,50 +573,50 @@ sudo ip rule show
         sudo vi /etc/sysconfig/network/scripts/ifup-route.eth1
         ```
 
-        **2 NICs in the same subnet:**
+      - 2 NICs in the same subnet:
 
-        ```bash
-        #!/bin/bash
-        
-        /sbin/ip route add 10.0.1.0/24 dev eth1 table eth1-rt
-        /sbin/ip route add default via 10.0.1.1 dev eth1 table eth1-rt
-        /sbin/ip rule add from 10.0.1.5/32 table eth1-rt
-        /sbin/ip rule add to 10.0.1.5/32 table eth1-rt
-        ```
+            ```bash
+            #!/bin/bash
 
-        **2 NICs in different subnet:**
+            /sbin/ip route add 10.0.1.0/24 dev eth1 table eth1-rt
+            /sbin/ip route add default via 10.0.1.1 dev eth1 table eth1-rt
+            /sbin/ip rule add from 10.0.1.5/32 table eth1-rt
+            /sbin/ip rule add to 10.0.1.5/32 table eth1-rt
+            ```
 
-        ```bash
-        #!/bin/bash
-        
-        /sbin/ip route add 10.0.2.0/24 dev eth1 table eth1-rt
-        /sbin/ip route add default via 10.0.2.1 dev eth1 table eth1-rt
-        /sbin/ip rule add from 10.0.2.5/32 table eth1-rt
-        /sbin/ip rule add to 10.0.2.5/32 table eth1-rt
-        ```
+      - 2 NICs in different subnet, but in the same VNET:
 
-    Adjust the Network and IP address information accordingly, and preserve the 32 bits value where used. If there are more than two NICs, make sure that the corresponding IP rules and IP routes are included for each one.
+            ```bash
+            #!/bin/bash
+
+            /sbin/ip route add 10.0.2.0/24 dev eth1 table eth1-rt
+            /sbin/ip route add default via 10.0.2.1 dev eth1 table eth1-rt
+            /sbin/ip rule add from 10.0.2.5/32 table eth1-rt
+            /sbin/ip rule add to 10.0.2.5/32 table eth1-rt
+            ```
+
+    Adjust the network and IP address information accordingly, and preserve the 32-bit value. If there are more than two NICs, make sure that the corresponding IP rules and IP routes are included for each one.
   
-3. Provide execution permissions to both scripts:
+3. Provide execution permissions to both scripts by using the following commands:
 
     ```bash
     sudo chmod +x /etc/sysconfig/network/scripts/ifup-route.eth0
     sudo chmod +x /etc/sysconfig/network/scripts/ifup-route.eth1
     ```
 
-4. Modify the network configuration files for both `eth0` and `eth1` (*/etc/sysconfig/network/ifcfg-eth#*) using any text editor, and include the following line in both files to point to the corresponding script:
+4. Modify the network configuration files for both *eth0* and *eth1* (*/etc/sysconfig/network/ifcfg-eth#*) by using any text editor, and include the following line in both files to point to the corresponding script:
 
-    **In `/etc/sysconfig/network/ifcfg-eth0` network configuration file:**
+    - In the network configuration file */etc/sysconfig/network/ifcfg-eth0*:
 
-    ```Configuration
-    POST_UP_SCRIPT='compat:suse:/etc/sysconfig/network/scripts/ifup-route.eth0'
-    ```
+        ```output
+        POST_UP_SCRIPT='compat:suse:/etc/sysconfig/network/scripts/ifup-route.eth0'
+        ```
 
-    **In `/etc/sysconfig/network/ifcfg-eth1` network configuration file:**
+    - In the network configuration file */etc/sysconfig/network/ifcfg-eth1*:
 
-    ```Configuration
-    POST_UP_SCRIPT='compat:suse:/etc/sysconfig/network/scripts/ifup-route.eth1'
-    ```
+        ```Configuration
+        POST_UP_SCRIPT='compat:suse:/etc/sysconfig/network/scripts/ifup-route.eth1'
+        ```
 
     Here's a sample of both configuration files:
   
@@ -623,7 +624,7 @@ sudo ip rule show
     sudo cat /etc/sysconfig/network/ifcfg-eth0
     ```
 
-    ```Configuration
+    ```output
     BOOTPROTO='dhcp'
     DHCLIENT6_MODE='managed'
     MTU=''
@@ -647,7 +648,7 @@ sudo ip rule show
     POST_UP_SCRIPT="compat:suse:/etc/sysconfig/network/scripts/ifup-route.eth1"
     ```
 
-    If the `/etc/sysconfig/network/ifcfg-eth1` file  doesn't exist, create it using the contents from `/etc/sysconfig/network/ifcfg-eth0`. Make sure the `POST_UP_SCRIPT` is adjusted to use the corresponding script. To do this, execute the following command:
+    If the */etc/sysconfig/network/ifcfg-eth1* file doesn't exist, create it by using the contents from the */etc/sysconfig/network/ifcfg-eth0* file. Make sure the `POST_UP_SCRIPT` is adjusted to use the corresponding script. To do this, execute the following command:
 
     ```bash
     sudo cat /etc/sysconfig/network/ifcfg-eth0 > /etc/sysconfig/network/ifcfg-eth1
@@ -659,98 +660,99 @@ sudo ip rule show
     sudo systemctl restart network
     ```
 
-The routing rules are now correctly set, and connectivity should work from either network interface, as appropriate. You can test the connectivity by using Secure Shell (SSH), or by pinging both IPs from a **VM in the same VNET**.
+    The routing rules are now correctly set, and connectivity should work from any network interface. You can test the connectivity by using Secure Shell (SSH), or by pinging both IPs from a VM in the same VNET.
 
-6. You can verify the current routes and rules using the following commands:
+6. Verify the current routes and rules are loaded by using the following commands:
 
-```bash
-sudo ip route show
-sudo ip rule show
-```
+    ```bash
+    sudo ip route show
+    sudo ip rule show
+    ```
 
->[!IMPORTANT]
-> If you still don't have connectivity to the second NIC, restart the VM by using the `sudo reboot` command, repeat the previous step to verify that the routes and rules are loaded, and test connectivity one more time.
+> [!IMPORTANT]
+> If you still don't have connectivity to the second NIC, restart the VM by using the `sudo reboot` command, repeat the step 6, and test connectivity again.
 
 ## [Debian 10/11](#tab/debian)
 
-1. Add two routing tables to */etc/iproute2/rt_tables* by running the following commands:
+1. Add two routing tables to the */etc/iproute2/rt_tables* file by running the following commands:
 
     ```bash
     sudo echo "200 eth0-rt" >> /etc/iproute2/rt_tables
     sudo echo "201 eth1-rt" >> /etc/iproute2/rt_tables
     ```
     
-    If more network interfaces are attached to the VM, add extra routing tables (`202 eth2-rt`, `203 eth3-rt`, and so on).
+    If more network interfaces are attached to the VM, add extra routing tables (for example, *202 eth2-rt*, *203 eth3-rt*, and so on).
 
-2. Create or modify the `/etc/network/interfaces.d/50-cloud-init` configuration file with any text editor. Use the the following configuration:
+2. Create or modify the configuration file */etc/network/interfaces.d/50-cloud-init* with any text editor.
 
     ```bash
     sudo vi /etc/network/interfaces.d/50-cloud-init
     ```
-
-    **2 NICs in the same subnet:**
-
-    ```Configuration
-    auto lo
-    iface lo inet loopback
-
-    auto eth0
-    iface eth0 inet dhcp
-    metric 100
-    up /usr/sbin/ip route add default via 10.0.1.1 dev eth0 table eth0-rt
-    up /usr/sbin/ip rule add from 10.0.1.4/32 table eth0-rt
-    up /usr/sbin/ip rule add to 10.0.1.4/32 table eth0-rt
-
-    auto eth1
-    iface eth1 inet dhcp
-    metric 200
-    up /usr/sbin/ip route add 10.0.1.0/24 dev eth1 table eth1-rt
-    up /usr/sbin/ip route add default via 10.0.1.1 dev eth1 table eth1-rt
-    up /usr/sbin/ip rule add from 10.0.1.5/32 table eth1-rt
-    up /usr/sbin/ip rule add to 10.0.1.5/32 table eth1-rt
-    ```
-
-    **2 NICs in different subnet:**
-
-    ```Configuration
-    auto lo
-    iface lo inet loopback
-
-    auto eth0
-    iface eth0 inet dhcp
-    metric 100
-    up /usr/sbin/ip route add default via 10.0.1.1 dev eth0 table eth0-rt
-    up /usr/sbin/ip rule add from 10.0.1.4/32 table eth0-rt
-    up /usr/sbin/ip rule add to 10.0.1.4/32 table eth0-rt
-
-    auto eth1
-    iface eth1 inet dhcp
-    metric 200
-    up /usr/sbin/ip route add 10.0.2.0/24 dev eth1 table eth1-rt
-    up /usr/sbin/ip route add default via 10.0.2.1 dev eth1 table eth1-rt
-    up /usr/sbin/ip rule add from 10.0.2.5/32 table eth1-rt
-    up /usr/sbin/ip rule add to 10.0.2.5/32 table eth1-rt
-    ```
+    Use the the following configuration:
     
-    Adjust the Network and IP address information accordingly, and preserve the 32 bits value where used. If there are more than two NICs, make sure that the corresponding IP rules and IP routes are included for each one.
+    - 2 NICs in the same subnet:
 
-3. Activate the new configuration using the following command:
+        ```output
+        auto lo
+        iface lo inet loopback
+
+        auto eth0
+        iface eth0 inet dhcp
+        metric 100
+        up /usr/sbin/ip route add default via 10.0.1.1 dev eth0 table eth0-rt
+        up /usr/sbin/ip rule add from 10.0.1.4/32 table eth0-rt
+        up /usr/sbin/ip rule add to 10.0.1.4/32 table eth0-rt
+
+        auto eth1
+        iface eth1 inet dhcp
+        metric 200
+        up /usr/sbin/ip route add 10.0.1.0/24 dev eth1 table eth1-rt
+        up /usr/sbin/ip route add default via 10.0.1.1 dev eth1 table eth1-rt
+        up /usr/sbin/ip rule add from 10.0.1.5/32 table eth1-rt
+        up /usr/sbin/ip rule add to 10.0.1.5/32 table eth1-rt
+        ```
+
+    - 2 NICs in different subnet, but in the same VNET:
+
+        ```output
+        auto lo
+        iface lo inet loopback
+
+        auto eth0
+        iface eth0 inet dhcp
+        metric 100
+        up /usr/sbin/ip route add default via 10.0.1.1 dev eth0 table eth0-rt
+        up /usr/sbin/ip rule add from 10.0.1.4/32 table eth0-rt
+        up /usr/sbin/ip rule add to 10.0.1.4/32 table eth0-rt
+
+        auto eth1
+        iface eth1 inet dhcp
+        metric 200
+        up /usr/sbin/ip route add 10.0.2.0/24 dev eth1 table eth1-rt
+        up /usr/sbin/ip route add default via 10.0.2.1 dev eth1 table eth1-rt
+        up /usr/sbin/ip rule add from 10.0.2.5/32 table eth1-rt
+        up /usr/sbin/ip rule add to 10.0.2.5/32 table eth1-rt
+        ```
+    
+    Adjust the network and IP address information accordingly, and preserve the 32-bit value. If there are more than two NICs, make sure that the corresponding IP rules and IP routes are included for each one.
+
+3. Activate the new configuration by using the following command:
 
     ```bash
     sudo systemctl restart networking
     ```
 
-The routing rules are now correctly set, and connectivity should work from either network interface, as appropriate. You can test the connectivity by using Secure Shell (SSH), or by pinging both IPs from a **VM in the same VNET**.
+    The routing rules are now correctly set, and connectivity should work from any network interface. You can test the connectivity by using Secure Shell (SSH), or by pinging both IPs from a VM in the same VNET.
 
-4. You can verify the current routes and rules using the following commands:
+4. You can verify the current routes and rules are loaded by using the following commands:
 
-```bash
-sudo ip route show
-sudo ip rule show
-```
+    ```bash
+    sudo ip route show
+    sudo ip rule show
+    ```
 
-> [!IMPORTANT]
-> If you still don't have connectivity to the second NIC, restart the VM by using the `sudo reboot` command, repeat the previous step to verify that the routes and rules are loaded, and test connectivity one more time.
+    > [!IMPORTANT]
+    > If you still don't have connectivity to the second NIC, restart the VM by using the `sudo reboot` command, repeat the step 4, and test connectivity again.
 
 ---
 
