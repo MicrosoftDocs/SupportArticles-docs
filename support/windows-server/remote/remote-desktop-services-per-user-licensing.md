@@ -1,33 +1,38 @@
 ---
-title: The first connection to a non-persistent VDI session fails when using per-user Remote Desktop licensing
+title: First connection to non-persistent VDI session fails when using per-user Remote Desktop licensing
 description: Troubleshooting the "Remote Desktop License Servers unavailable" error when trying to connect to a remote session using non-persistent VDI and per-user Remote Desktop licensing.
-ms.date: 04/27/2023
+ms.date: 05/12/2023
 author: Heidilohr
 ms.author: helohr
-manager: femila
+manager:  dcscontentpm
 audience: itpro
 ms.prod: windows-server
 ms.topic: troubleshooting
 localization_priority: medium
+ms.reviewer: kaushika, femila
+ms.custom: sap:remote-desktop-services-terminal-services-licensing
 ms.technology: windows-server-rds
 ---
 
 # The first connection to a non-persistent VDI session fails when using per-user Remote Desktop licensing
 
-If you're running a Virtual Desktop Infrastructure (VDI) environment with non-persistent virtual machines (VMs) that connect to a Remote Desktop license server with per-user licensing, you may see an error message appear the first time a user tries to connect. The error message is **The remote session disconnected because there are no Remote Desktop License Servers available**. This article explains why this error happens and gives you directions for how to mitigate it.
+If you're running a Virtual Desktop Infrastructure (VDI) environment with non-persistent virtual machines (VMs) that connect to a Remote Desktop license server with per-user licensing, you may see an error message appear the first time a user tries to connect. The error message is:
 
-Let's first look at the difference between *persistent VDI* and *non-persistent VDI*:
+> The remote session disconnected because there are no Remote Desktop License Servers available.
 
-- *Persistent VDI* is when changes made to a virtual machine are kept after you shut down or restart your VM. Persistent VDI behaves like a physical machine.
+This article explains why this error happens and gives you directions for how to mitigate it.
 
-- *Non-persistent VDI* is when the VM doesn't keep the changes you make to it after you shut down or restart it. Instead, every time you end your session, the VM reverts to its original state and loses any changes. VMs on non-persistent VDI typically use a shared custom image.
+Let's first look at the difference between persistent VDI and non-persistent VDI:
+
+- Persistent VDI is when changes made to a virtual machine are kept after you shut down or restart your VM. Persistent VDI behaves like a physical machine.
+- Non-persistent VDI is when the VM doesn't keep the changes you make to it after you shut down or restart it. Instead, every time you end your session, the VM reverts to its original state and loses any changes. VMs on non-persistent VDI typically use a shared custom image.
 
 ## Symptoms
 
-A user sees the error message **The remote session disconnected because there are no Remote Desktop License Servers available**. This issue happens if a user is the first one to connect to a VM after they turn it on and the following things are true:
+A user sees the error message "The remote session disconnected because there are no Remote Desktop License Servers available." This issue happens if a user is the first one to connect to a VM after they turn it on and the following things are true:
 
-- The Windows VM has the *Remote Desktop Session Host* (RDSH) role installed.
-- The Remote Desktop licensing server the VM uses is configured in *per-user* mode.
+- The Windows VM has the Remote Desktop Session Host (RDSH) role installed.
+- The Remote Desktop licensing server the VM uses is configured in per-user mode.
 - The [120 day grace licensing period](/windows-server/remote/remote-desktop-services/rds-client-access-license) has expired. No license server is required during this time.
 - The VM has never connected to the Remote Desktop licensing server specified.
 
@@ -37,7 +42,7 @@ This scenario only applies to third-party VDI providers. A Microsoft Remote Desk
 
 ## Cause
 
-When the first user tries to connect, the VM queries the Remote Desktop licensing server for an X509 certificate. This process can take several seconds, during which connections fail and display the error message **The remote session disconnected because there are no Remote Desktop License Servers available**. Once the VM receives the X509 certificate, subsequent connections succeed. This error happens by design.
+When the first user tries to connect, the VM queries the Remote Desktop licensing server for an X509 certificate. This process can take several seconds, during which connections fail and display the error message "The remote session disconnected because there are no Remote Desktop License Servers available." Once the VM receives the X509 certificate, subsequent connections succeed. This error happens by design.
 
 With non-persistent VMs, depending on how you serviced the VM, this issue may happen each time someone turns it on because its state always resets. As a result, the VM queries the Remote Desktop licensing server for an X509 certificate.
 
