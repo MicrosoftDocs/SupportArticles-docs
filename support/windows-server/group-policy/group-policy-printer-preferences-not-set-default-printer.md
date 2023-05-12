@@ -55,8 +55,4 @@ There is currently no hotfix available for this issue. Possible work-arounds inc
 
 ## Data collection
 
-If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for Group Policy issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-group-policy.md).
-
-## Data collection
-
 If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for Windows troubleshooting](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-windows-troubleshooting.md#printing).
