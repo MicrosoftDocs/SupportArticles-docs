@@ -1,35 +1,43 @@
 ---
-title: Browser automation stopped working after browser update
-description: Provides resolution for the issue that browser automation stopped working in Power Automate for desktop after a browser update.
-ms.reviewer: pefelesk
-ms.date: 5/10/2022
+title: Browser automation actions not working after a browser update
+description: Provides a resolution for the issue where the browser automation actions stop working in Power Automate for desktop after a browser update.
+ms.author: pefelesk
+author: PetrosFeleskouras
+ms.date: 5/12/2022
 ms.subservice: power-automate-desktop-flows
 ---
-# Browser automation stopped working after browser update
+# "You need the Power Automate extension" or "Failed to assume control of Chrome/Edge" when using browser automation actions
 
-This article helps you fix an issue where browser automation stopped working in Power Automate for desktop after a browser update.
+This article provides a resolution for the issue where the browser automation actions aren't working in Power Automate for desktop after you update a web browser.
 
-_Applies to:_ &nbsp; Power Automate  
+_Applies to:_ &nbsp; Power Automate
 
 ## Symptoms
 
-“Browser automation” actions cannot communicate with the Google Chrome and/or Microsoft Edge browsers. 
-At design time, trying to capture UI elements in one of the browsers, shows the _“You need the Power Automate extension”_ message.
-At runtime, executing the **Launch new Chrome** or **Launch new Microsoft Edge** action, results to the error message _"Failed to assume control of Chrome/Edge (Communication with the browser failed. Try reloading extension)."_ 
+Browser automation actions can't communicate with Google Chrome, Microsoft Edge, or both.
 
-Browsers affected:
-- Chrome 113.x
-- Microsoft Edge 113.x
+At design time, when you try to capture UI elements in one of the web browsers, you receive the "You need the Power Automate extension" message.
+
+At runtime, when you execute the **Launch new Chrome** or **Launch new Microsoft Edge** action, you receive the following error message:
+
+> Failed to assume control of Chrome/Edge (Communication with the browser failed. Try reloading extension).
+
+The affected web browsers:
+
+- Google Chrome (version: 113.x)
+- Microsoft Edge (version: 113.x)
 
 ## Cause
 
-The new update of Chromium-based web browsers (Google Chrome, Microsoft Edge) to version 113.x.y broke the communication between Power Automate for desktop and the respective browsers.
+This issue occurs because the new update of Chromium-based web browsers (Google Chrome, Microsoft Edge) to version 113.x breaks the communication between Power Automate for desktop and the respective browsers.
 
 ## Resolution
 
-Update to the latest version of Power Automate for desktop. 
+To solve this issue, you need to update Power Automate for desktop to the latest version.
 
-## Workarounds
+## Workaround
 
-1. Prevent the web browsers from being updated.
-1. Rollback the update of the web browsers.
+To workaround this issue, you can:
+
+- Prevent the web browsers from being updated.
+- Roll back the update of the web browsers.
