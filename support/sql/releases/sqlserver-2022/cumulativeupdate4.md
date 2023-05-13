@@ -24,7 +24,7 @@ This article describes Cumulative Update package 4 (CU4) for Microsoft SQL Serve
 
 ## Known issues in this update
 
-After you install this cumulative update, external data sources using the generic ODBC connector may no longer work. When you try to query external tables that were created before installing CU4, you receive the following error message:
+After you install this cumulative update, external data sources using the generic ODBC connector may no longer work. When you try to query external tables that were created before installing this cumulative update, you receive the following error message:
 
 > Msg 7320, Level 16, State 110, Line 68  
 > Cannot execute the query "Remote Query" against OLE DB provider "MSOLEDBSQL" for linked server "(null)". Object reference not set to an instance of an object.
