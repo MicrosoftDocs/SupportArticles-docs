@@ -26,9 +26,9 @@ With this feature, when a user selects a web link from the Outlook for Windows a
 For more information, see: [Discover new ways to multitask with Microsoft 365 and Microsoft Edge](https://www.microsoft.com/microsoft-365/blog/2023/02/16/discover-new-ways-to-multitask-with-microsoft-365-and-edge/).
 
 > [!NOTE]
-> A similar experience will roll out for Microsoft Teams in the future. Configuring the feature policy will also apply to the Teams experience when it arrives.
+> A similar experience will roll out for Microsoft Teams in the future. Configuring the feature by using a policy will also apply to the Teams experience when it arrives.
 
-## How to manage this feature via policy
+## Manage the new feature by configuring a policy
 
 To manage this change in your organization, you'll need to configure the following policy:
 
@@ -64,6 +64,10 @@ Follow these steps to manage the policy in the [Cloud Policy service for Microso
 
 7. Under Configure Settings, search for "Choose which browser opens web links".
 
+   *Policy in Cloud Policy service for Microsoft 365*
+
+   :::image type="content" source="media/view-emails-and-web-links-in-browser/microsoft365-policy-settings.png" alt-text="Screenshot of a settings page in the Cloud Policy service for Microsoft 365.":::
+
 8. Select the **Choose which browser opens web links** policy.
 
 9. Adjust Configuration setting to desired configuration, and then select **Apply**.
@@ -74,13 +78,9 @@ Follow these steps to manage the policy in the [Cloud Policy service for Microso
 
 12. Select **Done**.
 
-*Policy in Cloud Policy service for Microsoft 365*
+### Option 2: Administrative Templates for Microsoft 365
 
-:::image type="content" source="media/view-emails-and-web-links-in-browser/microsoft365-policy-settings.png" alt-text="Screenshot of a settings page in the Cloud Policy service for Microsoft 365.":::
-
-### Option 2: [Administrative Templates for Microsoft 365](https://www.microsoft.com/download/details.aspx?id=49030)
-
-1. Download the latest ADMX files.
+1. Download the latest [Administrative Templates for Microsoft 365](https://www.microsoft.com/download/details.aspx?id=49030) (ADMX files).
 
 2. Open them in the Group Policy Management Editor.
 
@@ -90,12 +90,12 @@ Follow these steps to manage the policy in the [Cloud Policy service for Microso
 
 5. Select **Apply**.
 
-:::image type="content" source="media/view-emails-and-web-links-in-browser/administrative-templates-group-policy.png" alt-text="Screenshot of the 'Choose which browser opens web links' policy in the Group Policy Management Editor.":::
+   :::image type="content" source="media/view-emails-and-web-links-in-browser/administrative-templates-group-policy.png" alt-text="Screenshot of the 'Choose which browser opens web links' policy in the Group Policy Management Editor.":::
 
 > [!NOTE]
 > If your organization uses a **Microsoft 365 for business** plan, your users will need to manage this change individually. They can either click **Manage my settings** in the Edge notification banner when the experience first opens, or they can manage the change through the Outlook settings menu: **File** > **Options** > **Advanced** > **Link Handling**.
 
-## How to allow users to manage this feature
+## Allow users to manage the new feature
 
 If you'd prefer to let your users manage this change, then either leave the policy unconfigured or disable the policy. Users will then be able to manage this at any point through Outlook settings: **File** \> **Options** \> **Advanced** \> **Link Handling**.
 
@@ -103,6 +103,6 @@ Additionally, users are notified of this change with a banner when they first ex
 
 :::image type="content" source="media/view-emails-and-web-links-in-browser/microsoft-edge-banner.png" alt-text="Screenshot of the Microsoft Edge banner that asks users to select how to open email links.":::
 
-Note: If you confirm this experience by enabling the policy and selecting **Microsoft Edge**, users will still receive this banner, but **Manage my settings** will be grayed out and unavailable to use.
+**Note**: If you confirm this experience by enabling the policy and selecting **Microsoft Edge**, users will still receive this banner, but **Manage my settings** will be grayed out and unavailable to use.
 
 For additional information about how users can individually control this experience, see our Microsoft Support page: [Outlook emails open next to web links in Microsoft Edge](https://support.microsoft.com/topic/stay-in-your-flow-with-microsoft-365-on-microsoft-edge-b0e1a1c1-bd62-462c-9ed5-5938b9c649f0).
