@@ -64,8 +64,6 @@ Follow these steps to manage the policy in the [Cloud Policy service for Microso
 
 7. Under Configure Settings, search for "Choose which browser opens web links".
 
-   *Policy in Cloud Policy service for Microsoft 365*
-
    :::image type="content" source="media/view-emails-and-web-links-in-browser/microsoft365-policy-settings.png" alt-text="Screenshot of a settings page in the Cloud Policy service for Microsoft 365.":::
 
 8. Select the **Choose which browser opens web links** policy.
