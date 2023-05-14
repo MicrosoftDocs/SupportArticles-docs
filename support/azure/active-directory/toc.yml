@@ -40,6 +40,15 @@
   items:
   - name: Troubleshoot adding apps
     href: troubleshoot-adding-apps.md
+    items: 
+      - name: Application takes a long time to appear
+        href: app-takes-long-time-appear.md
+      - name: Application doesn't appear
+        href: app-doesnt-appear.md
+      - name: Unable to delete an application
+        href: unable-delete-app.md
+      - name: Send notification details to Microsoft support
+        href: send-notification-details.md
   - name: Troubleshoot sign-in to apps
     items:
       - name: Error AADSTS50003 - certificate or key not configured
