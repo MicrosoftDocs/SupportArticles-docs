@@ -26,9 +26,7 @@ When you try to create an Azure RM automatic subscription-based service connecti
 > [!NOTE]
 > We query for all the subscriptions against the logged-in Azure DevOps user who is trying to create a service connection.
 
-Check the behavior on the billing page (**Org settings > Billing > Change billing**).
-
-:::image type="content" source="media/troubleshoot-subscription-related-scenarios/change-billing-subscription.png" alt-text="Screenshot that shows how to check the behavior on the billing page.":::
+Check the behavior on the billing page (**Organization settings > Billing > Change billing**).
 
 This problem occurs if an AAD refresh token expires.
 
@@ -81,7 +79,9 @@ When you try to create a new Azure RM automatic subscription-based service conne
 
 ### Debugging steps
 
-Check the behavior on the billing page (**Org settings > Billing > Change billing**).
+Check the behavior on the billing page (**Organization settings > Billing > Change billing**).
+
+:::image type="content" source="media/troubleshoot-subscription-related-scenarios/change-billing-subscription.png" alt-text="Screenshot that shows the Billing page.":::
 
 ### Resolution
 

@@ -48,7 +48,7 @@ To get this information, download and run this [PowerShell script](https://githu
 After you provide the details to create a manual Azure RM service connection, select the **Verify** button, verification fails. You may receive the following error message:
 
 ```output
-Failed to query service connection API: 'https://management.azure.com/subscriptions/xxxxxx08-xxxx-xxxx-xxxx-eadxxxxxxxxx?api-version=2016-06-01 '. Status Code: 'Forbidden', Response from server: '{"error":{"code":"AuthorizationFailed","message":"The client 'xxxxxxaf-xxxx-xxxx-xxxx-6bexxxxxxxxx' with object id 'xxxxxxaf-xxxx-xxxx-xxxx-6bexxxxxxxxx' does not have authorization to perform action 'Microsoft.Resources/subscriptions/read' over scope '/subscriptions/xxxxxx08-xxxx-48ec-xxxx-eadxxxxxxxxx' or the scope is invalid. If access was recently granted, please refresh your credentials."}}'
+Failed to query service connection API: ''https://management.azure.com/subscriptions/xxxxxx08-xxxx-xxxx-xxxx-eadxxxxxxxxx?api-version=2016-06-01 '. Status Code: 'Forbidden', Response from server: '{"error":{"code":"AuthorizationFailed","message":"The client 'xxxxxxaf-xxxx-xxxx-xxxx-6bexxxxxxxxx' with object id 'xxxxxxaf-xxxx-xxxx-xxxx-6bexxxxxxxxx' does not have authorization to perform action 'Microsoft.Resources/subscriptions/read' over scope '/subscriptions/xxxxxx08-xxxx-48ec-xxxx-eadxxxxxxxxx' or the scope is invalid. If access was recently granted, please refresh your credentials."}}'
 ```
 
 :::image type="content" source="media/failed-to-get-azure-devops-service-access-token/new-service-connection-errormessage.png" alt-text="Screenshot that shows the creation of new service connection.":::
@@ -65,7 +65,7 @@ You will see the following response for the POST call in the trace:
 
 ### Resolution
 
-Make sure that the newly created SPN (App) has the Contributor and Reader permissions on the subscription.
+Make sure that the newly created SPN (App) has the Contributor permission on the subscription.
 
 ## See related
 

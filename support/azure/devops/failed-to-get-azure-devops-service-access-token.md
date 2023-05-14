@@ -24,15 +24,15 @@ Capture an F12/Fiddler trace while you reproduce the issue.
 
 You will see following response for the POST call in the trace:
 
-`{"authorization":{"parameters":{"tenantid":"xxxxxx49-XXXXcexxxxxx","serviceprincipalid":"xxxxxx7e-XXXX-027xxxxxxxxx","authenticationType":"spnKey","serviceprincipalkey":null,"accesstoken":null},"scheme":"ServicePrincipal"},"created}`
+`{"authorization":{"parameters":{"tenantid":"xxxxxx49-XXXXcexxxxxx","serviceprincipalid":"xxxxxx7e-XXXX-027xxxxxxxxx","authenticationType":"spnKey","serviceprincipalkey":null,"**accesstoken":null**},"scheme":"ServicePrincipal"},"created}`
 
 ## Cause
 
-When you run a service connection update call from the UI, the body of the `PUT` request contains an `accesstoken = null` entry. If we compare the `PUT` payload against the working service connections at either end of the operation, we don't see this entry. If the `AccessToken` property is present in the service connection UI object, it should have valid value (such as a GUID). It shouldn't be empty or null.
+When you run a service connection update call from the UI, the body of the `PUT` request contains an `accesstoken = null` entry. If we compare the `PUT` payload against the working service connections at either end of the operation, we don't see this entry. If the `AccessToken` property is present in the service connection UI object, it should have valid value (such as a GUID). It shouldn't be empty or **null**.
 
 ## Resolution
 
-1. Go to the **Service Connection** page, and then select the affected service connection.
+1. Go to the service connection page, and then select the affected service connection.
 1. Select **Edit**.
 1. Press **F12**, and then open the network trace window. If possible, select the **Disable cache** option in the panel under the **Network** tab.
 1. Update the description.

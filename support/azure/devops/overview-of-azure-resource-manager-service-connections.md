@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Azure Resource Manager (ARM) service connection issues
 description: Provides an overview of ARM service connection, types of connection modes, and lists the tools used to troubleshoot various scenarios.
-ms.date: 05/09/2023
+ms.date: 05/14/2023
 author: padmajayaraman
 ms.author: v-jayaramanp
 ms.reviewer: cathmill, kirthishkt
@@ -22,15 +22,15 @@ The **Connections** dialog box offers two main connection modes.
 
 - **Automated subscription detection**
   
-  In this mode, Azure Pipelines queries Azure for all the subscriptions and instances to which you have access. These subscriptions use the credentials that you currently use to sign in to Azure Pipelines (including Microsoft accounts and School or Work accounts).
+  In this mode, Azure DevOps queries Azure for all the subscriptions and instances to which you have access. These subscriptions use the credentials that you currently use to sign in to Azure DevOps (including Microsoft accounts and School or Work accounts).
 
-  If you don't see the subscription that you want to use, sign out of Azure Pipelines, and then sign in again by using the appropriate account credentials.
+  If you don't see the subscription that you want to use, sign out of Azure DevOps, and then sign in again by using the appropriate account credentials.
 
 - **Manual subscription pipeline**
   
   In this mode, you must specify the service principal that you want to use to connect to Azure. The service principal specifies the resources and the access levels that are available over the connection.
 
-  Use this approach when you have to connect to an Azure account by using credentials that differ from the credentials that you currently use to sign in to Azure Pipelines. This is an useful method to maximize security and limit access. Service principals are valid for two years.
+  Use this approach when you have to connect to an Azure account by using credentials that differ from the credentials that you currently use to sign in to Azure DevOps. This is an useful method to maximize security and limit access. Service principals are valid for two years.
 
 ## Create an Azure RM service connection
 
