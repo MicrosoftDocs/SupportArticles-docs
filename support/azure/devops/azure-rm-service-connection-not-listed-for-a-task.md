@@ -19,7 +19,7 @@ The **Settings / Service connections** screen shows that the Azure RM Service co
 
 :::image type="content" source="media/azure-rm-service-connection-not-listed-for-a-task/service-connection-not-listed-list.png" alt-text="Screenshot that shows the Service connection is listed.":::
 
-However, when we try to use this Azure RM Service connection in the task, the Service connection is not listed. The Azure PowerShell task screen shows that the Azure RM Service connection is not listed.
+However, when we try to use this Azure RM Service connection in the task, the Service connection is not listed. The **Azure PowerShell task** screen shows that the Azure RM Service connection is not listed.
 
 :::image type="content" source="media/azure-rm-service-connection-not-listed-for-a-task/service-connection-not-listed-list-powershell-script.png" alt-text="Screenshot that shows the service connection not listed.":::
 
