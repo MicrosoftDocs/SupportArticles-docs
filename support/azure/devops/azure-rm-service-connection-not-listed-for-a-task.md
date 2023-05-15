@@ -13,13 +13,13 @@ ms.service: azure-devops
 
 ## Symptoms
 
-When you try to load the Azure Resource Manager (AzureRM) service connection in a pipeline task, such as Azure App service deploy or Azure App service manager, the service connection does not appear in the list, However, when you check the Service **Connection** tab under **Project Settings**, the service connection is available.
+When you try to load the Azure Resource Manager (AzureRM) service connection in a pipeline task, such as Azure App service deploy or Azure App service manager, the service connection doesn't appear in the list. However, when you check the Service **Connection** tab under **Project Settings**, the service connection is available.
 
 The **Settings / Service connections** screen shows that the Azure RM Service connection is listed.
 
 :::image type="content" source="media/azure-rm-service-connection-not-listed-for-a-task/service-connection-not-listed-list.png" alt-text="Screenshot that shows the Service connection is listed.":::
 
-However, when we try to use this Azure RM Service connection in the task, the Service connection is not listed. The **Azure PowerShell task** screen shows that the Azure RM Service connection is not listed.
+The **Azure PowerShell task** screen shows that the Azure RM Service connection is not listed.
 
 :::image type="content" source="media/azure-rm-service-connection-not-listed-for-a-task/service-connection-not-listed-list-powershell-script.png" alt-text="Screenshot that shows the service connection not listed.":::
 
@@ -29,7 +29,7 @@ However, when we try to use this Azure RM Service connection in the task, the Se
 
 1. Select the **Edit** button.
 
-1. Press **F12**, and then open the network trace window. If possible, enable the  **Disable cache**check box in the panel under **Network** tab.
+1. Press **F12**, and then open the network trace window. If possible, enable the  **Disable cache** check box in the panel under the **Network** tab.
 
 1. Select the **verify** button.
 
