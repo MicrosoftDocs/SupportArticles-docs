@@ -80,6 +80,10 @@ For the IP ranges that are specified for Azure AD, make sure that you allow outb
 
 By default, both IPv6 and IPv4 traffic is supported on Windows and most other operating system (OS) platforms. Changes to the standard IPv6 configuration may result in unintended consequences. For more information, see [Guidance for configuring IPv6 in Windows for advanced users](/troubleshoot/windows-server/networking/configure-ipv6-in-windows).
 
+### Service endpoints
+
+The limitation of Azure Virtual Network service endpoints discussed in the article [Virtual Network service endpoints](/azure/virtual-network/virtual-network-service-endpoints-overview#limitations) still exist regarding IPv6 traffic.
+
 ## Test Azure AD authentication over IPv6
 
 You can test Azure AD authentication over IPv6 before we enable it worldwide by using the following procedures. These procedures help validate IPv6 range configurations. The recommended approach is to use a [Name Resolution Policy Table (NRPT)](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn593632(v=ws.11)) rule pushed to your Azure AD-joined Windows devices. In Windows Server, NRPT lets you implement a global or local policy that overrides DNS resolution paths. With this feature, you can redirect DNS for various fully qualified domain names (FQDNs) to special DNS servers that are configured to have IPv6 DNS entries for Azure AD sign-in. It's simple to enable and disable NRPT rules by using a PowerShell script. You can use [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) to push this feature to clients.
