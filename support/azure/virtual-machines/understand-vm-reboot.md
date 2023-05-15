@@ -11,7 +11,7 @@ ms.subservice: vm-cannot-start-stop
 ms.topic: troubleshooting
 ms.tgt_pltfrm: na
 ms.workload: infrastructure-services
-ms.date: 05/11/2023
+ms.date: 05/15/2023
 ms.author: genli
 
 ---
