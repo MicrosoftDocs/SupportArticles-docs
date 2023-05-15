@@ -60,6 +60,42 @@ SQLIOSIM.EXE -cfg "D:\Temp\SQLIOSIM\SQLIOSIM_Configs\sqliosim.sparse.cfg.ini" -d
 SQLIOSIM.EXE -cfg " D:\Temp\SQLIOSIM\SQLIOSIM_Configs\sqliosim.seqwrites.cfg.ini" -d 600 -dir d:\temp\sqliosim -log d:\temp\sqliosim\simlog.xml -size 32768
 ```
 
+1. Modify the `sqliosim.default.cfg.ini` file by removing the comments for `File1` and `File2` sections and modifying FileName values to new SQLIOSim files. For example:
+
+```ini
+[File1]
+FileName=d:\sqliosim\sqliosim.mdx
+InitialSize=100
+MaxSize=200
+Increment=10
+Shrinkable=TRUE
+LogFile=FALSE
+Sparse=FALSE
+
+[File2]
+FileName=l:\sqliosim\sqliosim.ldx
+InitialSize=50
+MaxSize=50
+Increment=0
+Shrinkable=FALSE
+LogFile=TRUE
+Sparse=FALSE
+```
+
+1. Run SQLIOSIM.COM using the configuration file
+
+```console
+SQLIOSIM.COM -cfg c:\temp\sqliosimconfig\sqliosim.default.cfg.ini -log c:\temp\sqliosimconfig\sqliosim.log.xml
+```
+
+### Example 2:
+
+You can test multiple disk volumes at the same time by using the `-dir` switch.
+
+```console
+SQLIOSIM.COM -cfg c:\temp\sqliosimconfig\sqliosim.default.cfg.ini -log c:\temp\sqliosim\sqliosim.log.xml -dir "d:\sqliosim" -dir "f:\sqliosim\testfolder" -size 500 -d 300
+```
+
 ## SQLIOSim.com command-line parameters
 
 SQLIOSim.com accepts a limited number of command-line parameters to control basic behavior. The configuration file for the SQLIOSim utility provides advanced behavior control. When command-line parameters and configuration file options overlap, the command-line parameters take precedence.
