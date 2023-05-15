@@ -42,10 +42,10 @@ Then, run the cmdlets that are listed in the following table according to your i
 |<a id="remote-desktop-session"></a>Remote Desktop session issues     |`.\TSSv2.ps1 -Start -Scenario UEX_General -UEX_Auth -UEX_Logon`         |
 |<a id="terminal-server-licensing"></a>Terminal Server licensing issues     |`.\TSSv2.ps1 -Start -UEX_RDS -Netsh -UEX_Logon -UEX_EVT -UEX_Auth -UEX_WMI -UEX_WinRM`         |
 |<a id="remote-desktop-session-connectivity"></a>Remote Desktop Session (RDS) connectivity issues     |`.\TSSv2.ps1 -Start -UEX_RDS -Netsh -UEX_Logon -UEX_EVT -UEX_Auth`         |
-|<a id="printing"></a>Printing issues     |`.\TSSv2.ps1 -Start -UEX_Print -Procmon -netsh -PSR`         |
+|<a id="printing"></a>Printing issues     |`.\TSSv2.ps1 -Start -UEX_Print -Procmon -Netsh -PSR`         |
 |<a id="remote-desktop-disconnection"></a>Remote Desktop disconnection issues     |`.\TSSv2.ps1 -CollectLog UEX_EventLog`<br>`.\TSSv2.ps1 -Start -Scenario UEX_General`|
 |<a id="remote-desktop-disconnection-configuration"></a>Remote Desktop connection configuration issues     |`.\TSSv2.ps1 -Start -Scenario UEX_ServerManager -UEX_WMI -UEX_RDS -UEX_ServerManager -UEX_WinRM`         |
 |<a id="wmi"></a>WMI issues     |`.\TSSv2.ps1 -Scenario UEX_WMIHighCPU` (with high CPU usage)<br>`.\TSSv2.ps1 -Scenario UEX_WMI` (without high CPU usage)         |
-|<a id="remote-desktop-client-connection"></a>Remote Desktop Client connection issues     |`.\TSSV2 -CollectLog -UEX_Basic -UEX_RDS -UEX_WinRM -UEX_WMI`         |
+|<a id="remote-desktop-client-connection"></a>Remote Desktop Client connection issues     |`.\TSSv2.ps1 -CollectLog -UEX_Basic -UEX_RDS -UEX_WinRM -UEX_WMI`         |
 |<a id="winrm"></a>WinRM issues     |`.\TSSv2.ps1 -Scenario UEX_WinRM`         |
 |<a id="powershell"></a>PowerShell issues     |`.\TSSv2.ps1 -Collectlog NET_PowerShell`<br>`.\TSSv2.ps1  -Scenario UEX_PowerShell`|
