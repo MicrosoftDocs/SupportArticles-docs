@@ -3,7 +3,7 @@ title: Troubleshoot SSH connection issues in Linux VM due to permission and owne
 description: Resolves an issue in which SSH fails because the /var/empty/sshd, or /var/lib/empty, or /var/run/sshd directory isn't owned by the root user, or is group- or world-writable.
 ms.date: 05/15/2023
 author: saimsh-msft
-ms.reviewer: vilibert, saimsh-msft
+ms.reviewer: divargas, adelgadohell
 ms.service: virtual-machines
 ms.subservice: vm-cannot-connect
 ms.collection: linux
@@ -57,15 +57,15 @@ This problem may occur if the affected directory isn't owned by the root user, o
 There are two ways to resolve the issue:
 
 * Repair the VM online
-  * [Serial Console](#serial-console)
-  * [Run Command Extension](#run-command-extension)
+  * [Serial Console](#onlinetroubleshooting-serialconsole)
+  * [Run Command Extension](#onlinetroubleshooting-runcommand)
 * Repair the VM offline
-  * [Use Azure Linux Auto Repair (ALAR)](#use-azure-linux-auto-repair-alar)
-  * [Use Manual Method](#use-manual-method)
+  * [Use Azure Linux Auto Repair (ALAR)](#offlinetroubleshooting-repairvm)
+  * [Use Manual Method](#offlinetroubleshooting-manualvm)
 
 ### <a id="onlinetroubleshooting"></a>Repair the VM online
 
-#### <a id="serial-console"></a>Serial Console
+#### <a id="onlinetroubleshooting-serialconsole"></a>Serial Console
 
 1. Connect to [the serial console](./serial-console-linux.md) of the VM from Azure portal.
 2. Login to the VM using local administrative account and its corresponding credential/password.
@@ -92,7 +92,7 @@ sudo chmod 755 /var/run/sshd
 sudo chown root:root /var/run/sshd
 ```
 
-#### <a id="run-command-extension"></a>Run Command Extension
+#### <a id="onlinetroubleshooting-runcommand"></a>Run Command Extension
 
 This method relies on the Azure Linux agent (WAagent). It's required that the VM has the agent installed and service running.
 
@@ -142,7 +142,7 @@ If the VM serial console access isn't available and the Waagent isn't ready, an 
 > [!NOTE]
 > In the case of Ubuntu systems, the _/var/run/sshd_ runs in memory. Restarting the VM will also fix the issue, so the offline troubleshooting in Ubuntu VMs isn't necessary.
 
-#### <a id="use-azure-linux-auto-repair-alar"></a>Use Azure Linux Auto Repair (ALAR)
+#### <a id="offlinetroubleshooting-repairvm"></a>Use Azure Linux Auto Repair (ALAR)
 
 Azure Linux Auto Repair (ALAR) scripts are a part of VM repair extension described in [Repair a Linux VM by using the Azure Virtual Machine repair commands](./repair-linux-vm-using-azure-virtual-machine-repair-commands.md).
 Implement the following steps to automate the manual offline process:
@@ -179,7 +179,7 @@ az vm repair restore --verbose -g $RGNAME -n $VMNAME
 > [!Note]
 >The resource group name `"$RGNAME`, vm name `"$VMNAME"`, and `--copy-disk-name "repairdiskcopy"` are examples and the values need to change accordingly.
 
-#### <a id="use-manual-method"></a>Use Manual Method
+#### <a id="offlinetroubleshooting-manualvm"></a>Use Manual Method
 
 If both serial console and ALAR approach aren't possible or fails, the repair has to be performed manually. Follow the steps here to manually attach the OS disk to a recovery VM and swap the OS disk back to the original VM:
 
