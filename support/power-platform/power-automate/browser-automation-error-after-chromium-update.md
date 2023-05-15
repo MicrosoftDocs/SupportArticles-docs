@@ -3,7 +3,8 @@ title: Browser automation actions not working after a browser update
 description: Provides a resolution for the issue where the browser automation actions stop working in Power Automate for desktop after a browser update.
 ms.author: pefelesk
 author: PetrosFeleskouras
-ms.date: 5/12/2022
+ms.reviewer: jefernn, tapanm
+ms.date: 5/15/2022
 ms.subservice: power-automate-desktop-flows
 ---
 # "You need the Power Automate extension" or "Failed to assume control of Chrome/Edge" when using browser automation actions
