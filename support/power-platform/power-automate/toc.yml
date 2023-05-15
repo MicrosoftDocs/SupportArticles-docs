@@ -89,6 +89,8 @@
       items:
         - name: Agent-related errors when running attended or unattended desktop flows
           href: agent-connectivity-issues-pad.md
+        - name: Browser automation actions stop working after a browser update
+          href: browser-automation-error-after-chromium-update.md
         - name: Can't automate webpage with iframes
           href: cannot-automate-webpage-with-iframes.md
         - name: Can't create a connection from a shared canvas app
