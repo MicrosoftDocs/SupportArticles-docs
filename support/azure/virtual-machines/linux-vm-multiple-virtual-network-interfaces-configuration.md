@@ -21,24 +21,24 @@ You can create an Azure VM that has multiple network interfaces attached to it. 
 This article provides the required configuration for multiple network interfaces to work in an Azure Linux VM that's based on the following sample scenario:
 
 - The VM has two or more network interfaces in the same subnet.
-- The VM has two or more network interfaces in different subnets, but in the same Virtual Network (VNET).
+- The VM has two or more network interfaces in different subnets but in the same Virtual Network (VNET).
 
 For details, see the following screenshots:
 
 ### [VM with 2 NICs in the same subnet](#tab/1subnet)
 
-:::image type="content" source="media/linux-vm-multiple-virtual-network-interfaces-configuration/vm-two-nics-same-subnet.png" alt-text="Diagram that shows networking configuration of a VM with 2 NICs in the same subnet.":::
+:::image type="content" source="media/linux-vm-multiple-virtual-network-interfaces-configuration/vm-two-nics-same-subnet.png" alt-text="Diagram that shows the networking configuration of a VM with two NICs in the same subnet.":::
 
 ### [VM with 2 NICs in different subnets](#tab/difsubnets)
 
-:::image type="content" source="media/linux-vm-multiple-virtual-network-interfaces-configuration/vm-two-nics-different-subnet.png" alt-text="Diagram that shows networking configuration of a VM with 2 NICs in different subnets.":::
+:::image type="content" source="media/linux-vm-multiple-virtual-network-interfaces-configuration/vm-two-nics-different-subnet.png" alt-text="Diagram that shows the networking configuration of a VM with two NICs in different subnets.":::
 
 ---
 
-In any of the scenarios, the connectivity can be tested from any VM in the same VNET.
+In each scenario, the connectivity can be tested from any VM in the same VNET.
 
 > [!IMPORTANT]
-> This same process could be also be followed in VMs with more than 2 NICs.
+> This same process could also be followed in VMs with more than two NICs.
 
 ## Configure guest OS for multiple network interfaces
 
@@ -47,11 +47,11 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
 > [!IMPORTANT]
 > Run all the commands in the following sections by using root privileges (by switching to the root or by using the `sudo` command utility).
 
-* In all the scenarios, assume that the VM has two network interfaces that have any of the following settings:
+* In each scenario, assume that the VM has two network interfaces that have any of the following settings:
 
     - Routing (the output of the `sudo ip route show` command):
 
-      - 2 NICs in the same subnet:
+      - Two NICs in the same subnet:
 
         ```output
         default via 10.0.1.1 dev eth0 proto static metric 100
@@ -61,7 +61,7 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
         169.254.169.254 via 10.0.1.1 dev eth0 proto dhcp metric 100
         ```
 
-      - 2 NICs in different subnets, but in the same VNET:
+      - Two NICs in different subnets but in the same VNET:
 
         ```output
         default via 10.0.1.1 dev eth0 proto static metric 100
@@ -73,7 +73,7 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
 
     - Interfaces (the output of the `sudo ip address show` command):
 
-      - 2 NICs in the same subnet:
+      - Two NICs in the same subnet:
 
          ```output
          lo: inet 127.0.0.1/8 scope host lo
@@ -81,7 +81,7 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
          eth1: inet 10.0.1.5/24 brd 10.0.1.255 scope global eth1
          ```
 
-       - 2 NICs in different subnet, but in the same VNET:
+       - Two NICs in different subnets but in the same VNET:
 
           ```output
           lo: inet 127.0.0.1/8 scope host lo
@@ -91,7 +91,7 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
 
 ## [RHEL/CentOS 7._x_](#tab/rhel7)
 
-1. Add two routing tables to the */etc/iproute2/rt_tables* file by running the following commands. You will need one entry per NIC:
+1. Add two routing tables to the */etc/iproute2/rt_tables* file by running the following commands (you need one entry per NIC):
 
     ```bash
     sudo echo "200 eth0-rt" >> /etc/iproute2/rt_tables
@@ -100,7 +100,7 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
 
     If more network interfaces are attached to the VM, add extra routing tables (for example, *202 eth2-rt*, *203 eth3-rt*, and so on).
 
-2. Make sure that a configuration file exists for each network interface in the */etc/sysconfig/network-scripts/* directory. You can create new network interface configuration files based on the *ifcfg-eth0* configuration file (by modifying the `DEVICE` line and removing the `DHCP_HOSTNAME` and `HWADDR` lines from the new file). To do this, run the following commands:
+2. Make sure a configuration file exists for each network interface in the */etc/sysconfig/network-scripts/* directory. You can create new network interface configuration files based on the *ifcfg-eth0* configuration file (modify the `DEVICE` line and remove the `DHCP_HOSTNAME` and `HWADDR` lines from the new file). To do this, run the following commands:
 
     ```bash
     sudo cat /etc/sysconfig/network-scripts/ifcfg-eth0 > /etc/sysconfig/network-scripts/ifcfg-eth1
@@ -127,7 +127,7 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
     sudo systemctl restart network
     ```
 
-5. Create corresponding rule and route files by using any text editor (in the following examples, the vi editor is used), and add appropriate rules and routes to each file. Use the following steps to create one set of *rule-eth#* and *route-eth#* files per network interfaces. Replace the IP address and subnet information accordingly in every step. If you have more network interfaces, create the same set of *rule-eth#* and *route-eth#* files for each interface by using the corresponding IP address, network and gateway details.
+5. Create corresponding rule and route files by using any text editor (in the following examples, the vi editor is used), and add appropriate rules and routes to each file. Use the following steps to create one set of *rule-eth#* and *route-eth#* files per network interface. Replace the IP address and subnet information accordingly in every step. If you have more network interfaces, create the same set of *rule-eth#* and *route-eth#* files for each interface by using the corresponding IP address, network, and gateway details.
 
     - Create rules and routes for *eth0*:
 
@@ -137,7 +137,7 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
           sudo vi /etc/sysconfig/network-scripts/rule-eth0
           ```
 
-      2. Add the following contents to the rule file. Replace the IP address accordingly, make sure that you specify the IPv4 address in the configuration, and preserve the 32-bit value:
+      2. Add the following contents to the rule file. Replace the IP address accordingly, make sure you specify the IPv4 address in the configuration, and preserve the 32-bit value:
 
           ```output
           from 10.0.1.4/32 table eth0-rt
@@ -167,14 +167,14 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
 
       2. Add the following contents to the rule file. Replace the IP address accordingly, make sure that you specify the IPv4 address in the command, and preserve the 32-bit value.
 
-          - 2 NICs in the same subnet:
+          - Two NICs in the same subnet:
 
             ```output
             from 10.0.1.5/32 table eth1-rt
             to 10.0.1.5/32 table eth1-rt
             ```
 
-           - 2 NICs in different subnet, but in the same VNET:
+           - Two NICs in different subnets but in the same VNET:
 
              ```output
              from 10.0.2.5/32 table eth1-rt
@@ -189,14 +189,14 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
 
       4. Add the following contents to the route file. Replace the network and gateway values accordingly.
 
-         - 2 NICs in the same subnet:
+         - Two NICs in the same subnet:
 
             ```output
             10.0.1.0/24 dev eth1 table eth1-rt
             default via 10.0.1.1 dev eth1 table eth1-rt
             ```
 
-          - 2 NICs in different subnet, but in the same VNET:
+          - Two NICs in different subnets but in the same VNET:
 
             ```output
             10.0.2.0/24 dev eth1 table eth1-rt
@@ -209,9 +209,9 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
     sudo systemctl restart network
     ```
 
-    The routing rules are now correctly set, and connectivity should work from any network interface. You can test the connectivity by using Secure Shell (SSH), or by pinging both IPs from a VM in the same VNET.
+    The routing rules are now correctly set, and connectivity should work from any network interface. You can test the connectivity by using Secure Shell (SSH) or pinging both IPs from a VM in the same VNET.
 
-7. Verify the current routes and rules are loaded by using the following commands:
+7. Verify that the current routes and rules are loaded by using the following commands:
 
     ```bash
     sudo ip route show
@@ -219,7 +219,7 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
     ```
 
 > [!IMPORTANT]
-> If you still have issues to communicate with the second NIC, restart the VM by using the `sudo reboot` command, repeat the step 7, and test connectivity again.
+> If you still have issues communicating with the second NIC, restart the VM by using the `sudo reboot` command, repeat step 7, and test the connectivity again.
 
 ## [RHEL/CentOS 8._x_](#tab/rhel8)
 
@@ -274,9 +274,9 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
     sudo echo "201 eth1-rt" >> /etc/iproute2/rt_tables
     ```
 
-    If more network interfaces are attached to the VM, add extra routing tables (for example , *202 eth2-rt*, *203 eth3-rt*, and so on).
+    If more network interfaces are attached to the VM, add extra routing tables (for example, *202 eth2-rt*, *203 eth3-rt*, and so on).
 
-4. Create the corresponding rules and routes configuration files for each of your NICs, and add the appropriate rules and routes to each of them. To create one set of *rule-eth#* and *route-eth#* files per network interfaces, follow the following steps. Replace the IP address and subnet information accordingly in every step. If you have more network interfaces, create the same set of *rule-eth#* and *route-eth#* files for each interface by using the corresponding IP and subnet details.
+4. Create the corresponding rules and routes configuration files for each of your NICs, and add the appropriate rules and routes to each. To create one set of *rule-eth#* and *route-eth#* files per network interface, follow the steps below. Replace the IP address and subnet information accordingly in every step. If you have more network interfaces, create the same set of *rule-eth#* and *route-eth#* files for each interface by using the corresponding IP and subnet details.
 
     - Create rules and routes for *eth0*:
 
@@ -316,14 +316,14 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
 
       2. Add the following contents to the rule file. Replace the IP address accordingly, make sure that you specify the IPv4 address in the command, and preserve the 32-bit value.
 
-         - 2 NICs in the same subnet:
+         - Two NICs in the same subnet:
 
            ```output
            from 10.0.1.5/32 table eth1-rt
            to 10.0.1.5/32 table eth1-rt
            ```
 
-         - 2 NICs in different subnet, but in the same VNET:
+         - Two NICs in different subnets but in the same VNET:
 
            ```output
            from 10.0.2.5/32 table eth1-rt
@@ -338,14 +338,14 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
 
       4. Add the following contents to the route file:
 
-         - 2 NICs in the same subnet:
+         - Two NICs in the same subnet:
 
             ```output
             10.0.1.0/24 dev eth1 table eth1-rt
             default via 10.0.1.1 dev eth1 table eth1-rt
             ```
 
-         - 2 NICs in different subnet, but in the same VNET:
+         - Two NICs in different subnets but in the same VNET:
 
             ```output
             10.0.2.0/24 dev eth1 table eth1-rt
@@ -358,9 +358,9 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
     sudo systemctl restart NetworkManager
     ```
 
-    The routing rules are now correctly set, and connectivity should work from any network interface. You can test the connectivity by using Secure Shell (SSH), or by pinging both IPs from a VM in the same VNET.
+    The routing rules are now correctly set, and connectivity should work from any network interface. You can test the connectivity by using Secure Shell (SSH) or pinging both IPs from a VM in the same VNET.
 
-6. Verify the current routes and rules are loaded by using the following commands:
+6. Verify that the current routes and rules are loaded by using the following commands:
 
     ```bash
     sudo ip route show
@@ -368,7 +368,7 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
     ```
 
 > [!IMPORTANT]
-> If you still don't have connectivity to the second NIC, restart the VM by using the `sudo reboot` command, repeat the step 6, and test connectivity again.
+> If you still don't have connectivity to the second NIC, restart the VM by using the `sudo reboot` command, repeat step 6, and test the connectivity again.
 
 ## [Ubuntu 18.04/20.04/22.04](#tab/ubuntu)
 
@@ -381,7 +381,7 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
     
     If more network interfaces are attached to the VM, add extra routing tables (for example, *202 eth2-rt*, *203 eth3-rt*, and so on).
 
-2. If Cloud-Init automation is set (by default it's set in the Azure Ubuntu images), make sure that the network CI automation is disabled so that the */etc/netplan/50-cloud-init.yaml* file doesn't get overwritten every time that the system is restarted.
+2. If Cloud-Init automation is set (by default, it's set in the Azure Ubuntu images), make sure that the network CI automation is disabled so that the */etc/netplan/50-cloud-init.yaml* file doesn't get overwritten every time the system is restarted.
 
     Create the */etc/cloud/cloud.cfg.d/99-disable-network-config.cfg* file by using the following command and contents:
 
