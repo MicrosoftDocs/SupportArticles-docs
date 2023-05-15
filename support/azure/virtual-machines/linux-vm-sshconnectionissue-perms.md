@@ -28,7 +28,7 @@ Starting sshd: /var/empty/sshd must be owned by root and not group or world-writ
 [FAILED]
 ```
 
-### [SUSE 12.x/15.x](#tab/slessymp)
+### [SUSE](#tab/slessymp)
 
 ```bash
 sudo tail /var/log/messages
