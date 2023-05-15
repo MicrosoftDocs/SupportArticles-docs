@@ -133,7 +133,7 @@ chmod 755 /var/run/sshd;chown root:root /var/run/sshd
 ```
 
 > [!NOTE]
-> In the case of Ubuntu systems, the _/var/run/sshd_ runs in memory. Restarting the VM will also fix the issue, so the offline troubleshooting in Ubuntu VMs isn't necessary.
+> In the case of Ubuntu systems, the _/var/run/sshd_ runs in memory. Restarting the VM will also fix the issue.
 
 ---
 
