@@ -1,7 +1,7 @@
 ---
 title: Configure multiple network interfaces in Azure Linux virtual machines
 description: Describes how to configure multiple network interfaces in Azure Linux virtual machines running the most common Linux distributions.
-ms.date: 05/20/2023
+ms.date: 05/15/2023
 ms.author: divargas
 author: divargas-msft
 ms.reviewer: malachma
