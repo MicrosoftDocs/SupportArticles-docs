@@ -14,7 +14,7 @@ ms.reviewer: gquintin, aruiz, meerak
 appliesto: 
   - Outlook for Microsoft 365
 search.appverid: MET150
-ms.date: 05/12/2023
+ms.date: 05/15/2023
 ---
 
 # View emails and web links side-by-side with Outlook and Microsoft Edge
@@ -22,6 +22,8 @@ ms.date: 05/12/2023
 Multitasking between email and the web has become the new standard for work, but unless your users are app windowing experts, switching back and forth between both can be a frustrating experience. To improve the user experience, Outlook and Microsoft Edge have a new feature that lets users see their email and the links they open at the same time, in the same place&mdash;no more switching back and forth between apps.
 
 With this feature, when a user selects a web link from the Outlook for Windows app, that link opens alongside their email in Microsoft Edge so they can easily access, read, and respond to their email using their matching authenticated profile. No more disruptive switching—just their email in the Microsoft Edge sidebar pane, right next to the online content from the link in a single, side-by-side view.
+
+This feature requires Outlook Build 16.0.16227.20280 or later.
 
 For more information, see: [Discover new ways to multitask with Microsoft 365 and Microsoft Edge](https://www.microsoft.com/microsoft-365/blog/2023/02/16/discover-new-ways-to-multitask-with-microsoft-365-and-edge/).
 
@@ -91,16 +93,19 @@ Follow these steps to manage the policy in the [Cloud Policy service for Microso
    :::image type="content" source="media/view-emails-and-web-links-in-browser/administrative-templates-group-policy.png" alt-text="Screenshot of the 'Choose which browser opens web links' policy in the Group Policy Management Editor.":::
 
 > [!NOTE]
-> If your organization uses a **Microsoft 365 for business** plan, your users will need to manage this change individually. They can either select **Manage my settings** in the Edge notification banner when the experience first opens, or they can manage the change through the Outlook settings menu: **File** > **Options** > **Advanced** > **Link Handling**.
+> If your organization uses a **Microsoft 365 for business** plan, then you can use the policy to manage the feature when it rolls out for Teams. However, the policy is unavailable for Outlook with this plan. Users will need to manage the feature by using Outlook settings as described in the following section. 
 
 ## Allow users to manage the new feature
 
-If you prefer to let your users manage this change, then either leave the policy unconfigured or disable the policy. Users will then be able to manage this at any point through Outlook settings: **File** \> **Options** \> **Advanced** \> **Link Handling**.
+If you prefer to let your users manage this feature, then either leave the policy unconfigured or disable the policy. Microsoft Edge will open as the new default experience when users open web links, and they can manage this behavior in one of two ways:
 
-Additionally, users are notified of this change with a banner when they first experience it. They can either choose **Try Edge** to keep using the feature or select **Manage my settings** to revert to their system default browser.
+- Through Outlook settings: **File** \> **Options** \> **Advanced** \> **Link Handling**.
+- Through the banner notification: A banner notification is shown when users first see the experience. They can either select the **Try Edge** option to keep using the feature or select **Manage my settings** to revert to their system's default browser experience. 
 
-:::image type="content" source="media/view-emails-and-web-links-in-browser/microsoft-edge-banner.png" alt-text="Screenshot of the Microsoft Edge banner that asks users to select how to open email links.":::
+  :::image type="content" source="media/view-emails-and-web-links-in-browser/microsoft-edge-banner.png" alt-text="Screenshot of the Microsoft Edge banner that asks users to select how to open email links.":::
 
-**Note**: If you confirm this experience by enabling the policy and selecting **Microsoft Edge**, users will still receive this banner, but **Manage my settings** will be grayed out and unavailable to use.
+The choices that a user makes for Outlook settings will also apply to Teams when this feature rolls out for Teams. 
+
+**Note**: If you confirm this experience by enabling the policy and selecting **Microsoft Edge**, users will still receive this banner, but the **Manage my settings** option will be grayed out and unavailable to use.
 
 For more information about how users can individually control this experience, see [Outlook emails open next to web links in Microsoft Edge](https://support.microsoft.com/topic/stay-in-your-flow-with-microsoft-365-on-microsoft-edge-b0e1a1c1-bd62-462c-9ed5-5938b9c649f0).
