@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot queries that seem to never complete in SQL Server
 description: Provides steps to help you identify and resolve issues where a query runs for a long time in SQL Server.
-ms.date: 07/22/2022
+ms.date: 05/15/2023
 ms.custom: sap:Performance
 ms.topic: troubleshooting
 ms.prod: sql
@@ -96,7 +96,7 @@ To identify whether a query is continuously executing or stuck on a bottleneck, 
 
 ### Long compilation time
 
-On rare occasions, you may observe that the CPU is increasing continuously over time but that is not driven by query execution. Instead, it could be driven by an excessively long compilation (the parsing and compiling of a query). In those cases, check the **transaction_name** output column and look for a value of `sqlsource_transform`. This transaction name indicates a compilation.
+On rare occasions, you may observe that the CPU is increasing continuously over time but that's not driven by query execution. Instead, it could be driven by an excessively long compilation (the parsing and compiling of a query). In those cases, check the **transaction_name** output column and look for a value of `sqlsource_transform`. This transaction name indicates a compilation.
 
 ## Collect diagnostic data
 
