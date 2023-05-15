@@ -95,6 +95,8 @@
         href: database-engine/availability-groups/troubleshooting-alwayson-issues.md
       - name: Troubleshoot Always On Availability Group failover
         href: database-engine/availability-groups/troubleshooting-availability-group-failover.md
+      - name: Use AGDiag to diagnose availability group health events
+        href: database-engine/availability-groups/use-agdiag-diagnose-availability-group-health-events.md
       - name: Troubleshoot recovery queueing in an availability group
         href: database-engine/availability-groups/troubleshooting-recovery-queuing-in-alwayson-availability-group.md
   - name: Always On Failover Cluster Instance (FCI)
