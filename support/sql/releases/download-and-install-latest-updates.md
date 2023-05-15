@@ -1,7 +1,7 @@
 ---
 title: Latest updates and version history for SQL Server
 description: This article lists various builds or updates that are available for different versions of SQL Server.
-ms.date: 04/13/2023
+ms.date: 05/11/2023
 ms.custom: sap:Installation, Patching and Upgrade
 ms.topic: how-to
 ms.prod: sql
@@ -39,7 +39,7 @@ Each of the following links provides information for all of the applicable produ
 
   |Version|Latest service pack|Latest GDR|Latest cumulative update|
   |---|---|---|---|
-|**SQL Server 2022**<br/><br/>- [Build information](#sql-server-2022)<br/>- [Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver16&preserve-view=true)|None|[GDR](https://support.microsoft.com/help/5021522) (16.0.1050.5 - February 2023) |[CU3 for 2022](../releases/sqlserver-2022/cumulativeupdate3.md) (16.0.4025.1 - April 2023) |
+|**SQL Server 2022**<br/><br/>- [Build information](#sql-server-2022)<br/>- [Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver16&preserve-view=true)|None|[GDR](https://support.microsoft.com/help/5021522) (16.0.1050.5 - February 2023) |[CU4 for 2022](../releases/sqlserver-2022/cumulativeupdate4.md) (16.0.4035.4 - May 2023) |
   |**SQL Server 2019**<br/><br/>- [Build information](#sql-server-2019)<br/>- [Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|None|[GDR](https://support.microsoft.com/help/5021125) (15.0.2101.7 - February 2023)|[CU20 for 2019](https://support.microsoft.com/help/5024276) (15.0.4312.2 - April 2023)<br/><br/>[CU18 + GDR](https://support.microsoft.com/help/5021124) (15.0.4280.7 - February 2023)|
   |**SQL Server 2017**<br/><br/>- [Build information](#sql-server-2017)<br/>- [Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|None|[GDR](https://support.microsoft.com/help/5021127) (14.0.2047.8 - February 2023)|[CU31 for 2017](https://support.microsoft.com/help/5016884) (14.0.3456.2 - September 2022)<br/><br/>[CU31 + GDR](https://support.microsoft.com/help/5021126) (14.0.3460.9 - February 2023)|
   |**SQL Server 2016**<br/><br/>- [Build information](#sql-server-2016)<br/>- [Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|[Azure Connect pack](https://support.microsoft.com/help/5014242) (13.0.7000.253 - May 2022)<br/><br/>[SP3](https://support.microsoft.com/help/5003279) (13.0.6300.2 - September 2021)<br/><br/>[SP2](https://support.microsoft.com/help/4052908) (13.0.5026.0 - April 2018)<br/><br/>[SP1](https://support.microsoft.com/help/3182545) (13.0.4001.0 - November 2016)|[GDR for Azure Connect pack](https://support.microsoft.com/help/5021128) (13.0.7024.30 - February 2023)<br/><br/>[GDR for SP3](https://support.microsoft.com/help/5021129) (13.0.6430.49 - February 2023)<br/><br/>[GDR for SP2](https://support.microsoft.com/help/5014365) (13.0.5108.50 - June 2022)<br/><br/>[GDR for SP1](https://support.microsoft.com/help/4505219) (13.0.4259.0 - July 2019)<br/><br/>[GDR for RTM](https://support.microsoft.com/help/4058560) (13.0.1745.2 - January 2018)|[CU17 + GDR for SP2](https://support.microsoft.com/help/5014351) (13.0.5893.48 - June 2022)<br/><br/>[CU17 for 2016 SP2](https://support.microsoft.com/help/5001092) (13.0.5888.11 - March 2021)<br/><br/>[CU15 + GDR for SP1](https://support.microsoft.com/help/4505221) (13.0.4604.0 - July 2019)<br/><br/>[CU15 for SP1](https://support.microsoft.com/help/4495257) (13.0.4574.0 - May 2019)<br/><br/>[CU9 for RTM](https://support.microsoft.com/help/4037357) (13.0.2216.0 - November 2017)|
@@ -60,6 +60,7 @@ Each of the following links provides information for all of the applicable produ
 
 |Build number or version|Service pack|Update|KB article|Release date|
 |---|---|---|---|---|
+|16.0.4035.4|None|CU4|[5026717](../releases/sqlserver-2022/cumulativeupdate4.md)|May 11, 2023|
 |16.0.4025.1|None|CU3|[5024396](../releases/sqlserver-2022/cumulativeupdate3.md)|April 13, 2023|
 |16.0.4015.1|None|CU2|[5023127](../releases/sqlserver-2022/cumulativeupdate2.md)|March 15, 2023|
 |16.0.4003.1|None|CU1|[5022375](../releases/sqlserver-2022/cumulativeupdate1.md)|February 16, 2023|
@@ -148,6 +149,7 @@ Each of the following links provides information for all of the applicable produ
 |14.0.2000.63|None| GDR| [4057122](https://support.microsoft.com/help/4057122)|January 03, 2018|
 |14.0.3008.27|None| CU2| [4052574](https://support.microsoft.com/help/4052574)|November 28, 2017|
 |14.0.3006.16|None| CU1| [4038634](https://support.microsoft.com/help/4038634)|October 24, 2017|
+|14.0.1000.169|None| RTM|NA|September 29, 2017|
 
 ### SQL Server 2016
 
@@ -223,6 +225,7 @@ Each of the following links provides information for all of the applicable produ
 |13.0.1722.0|RTM|GDR|[3194716](https://support.microsoft.com/help/3194716)|November 8, 2016|
 |13.0.2164.0|RTM| CU2| [3182270](https://support.microsoft.com/help/3182270)|September 22, 2016|
 |13.0.2149.0|RTM| CU1| [3164674](https://support.microsoft.com/help/3164674)|July 25, 2016|
+|13.0.1601.5|None| RTM|NA|June 1, 2016|
 
 ### SQL Server 2014
 
@@ -313,14 +316,21 @@ Each of the following links provides information for all of the applicable produ
 |---|---|---|---|---|
 |11.0.7512.11|SP4| GDR Security Update| [5021123](https://support.microsoft.com/help/5021123)|February 14, 2023|
 |11.0.7507.2|SP4| GDR Security Update| [4583465](https://support.microsoft.com/help/4583465)|January 12, 2021|
+|11.0.7493.4|SP4| GDR Security Update| [4532098](https://support.microsoft.com/help/4532098)|February 11, 2020|
+|11.0.7462.6|SP4| GDR Security Update| [4057116](https://support.microsoft.com/help/4057116)|January 16, 2018|
+|11.0.6614.2|SP3| QFE Security Update| [4057121](https://support.microsoft.com/help/4057121)|January 16, 2018|
 |11.0.6260.1|SP3| GDR Security Update| [4057115](https://support.microsoft.com/help/4057115)|January 16, 2018|
 |11.0.7001.0|SP4| RTW/PCU4| [4018073](https://support.microsoft.com/help/4018073)|October 2, 2017|
 |11.0.6607.3|SP3|CU10| [4025925](https://support.microsoft.com/help/4025925)|August 8, 2017|
+|11.0.6251.0|SP3| QFE Security Update| [4019092](https://support.microsoft.com/help/4019092)|August 8, 2017|
 |11.0.6598.0|SP3|CU9| [4016762](https://support.microsoft.com/help/4016762)|May 15, 2017|
 |11.0.6594.0|SP3|CU8| [4013104](https://support.microsoft.com/help/4013104)|March 20, 2017|
 |11.0.6579.0|SP3|CU7| [3205051](https://support.microsoft.com/help/3205051)|January 17, 2017|
 |11.0.6567.0|SP3|CU6| [3194992](https://support.microsoft.com/help/3194992)|November 17, 2016|
 |11.0.6248.0|SP3|MS16-136 GDR Security Update| [3194721](https://support.microsoft.com/help/3194721)|November 8, 2016|
+|11.0.6567.0|SP3|MS16-136 QFE Security Update| [3194724](https://support.microsoft.com/help/3194724)|November 8, 2016|
+|11.0.5388.0|SP2|MS16-136 GDR Security Update| [3194719](https://support.microsoft.com/help/3194719)|November 8, 2016|
+|11.0.5676.0|SP3|MS16-136 QFE Security Update| [3194725](https://support.microsoft.com/help/3194725)|November 8, 2016|
 |11.0.6544.0|SP3|CU5| [3180915](https://support.microsoft.com/help/3180915)|September 19, 2016|
 |11.0.6540.0|SP3|CU4| [3165264](https://support.microsoft.com/help/3165264)|July 18, 2016|
 |11.0.6537.0|SP3|CU3| [3152635](https://support.microsoft.com/help/3152635)|May 16, 2016|
@@ -381,6 +391,7 @@ Each of the following links provides information for all of the applicable produ
 |Build number or version|Service pack|Update|KB article|Release date|
 |---|---|---|---|---|
 |10.50.6785.2|SP3| GDR Security Update| [5021112](https://support.microsoft.com/help/5021112)|February 14, 2023|
+|10.50.6560.00|SP3| GDR Security Update| [4057113](https://support.microsoft.com/help/4057113)|January 6, 2018|
 |10.50.6529.00|SP3| MS15-058: QFE Security Update| [3045314](https://support.microsoft.com/help/3045314)|July 14, 2015|
 |10.50.6220.00|SP3| MS15-058: QFE Security Update| [3045316](https://support.microsoft.com/help/3045316)|July 14, 2015|
 |10.50.6000.34|SP3| RTW/PCU3| [2979597](https://support.microsoft.com/help/2979597)|September 26, 2014|
@@ -391,7 +402,7 @@ Each of the following links provides information for all of the applicable produ
 |10.50.4302.00|SP2|CU11| [2926028](https://support.microsoft.com/help/2926028)|February 18, 2014|
 |10.50.4297.00|SP2|CU10| [2908087](https://support.microsoft.com/help/2908087)|December 17, 2013|
 |10.50.4295.00|SP2|CU9| [2887606](https://support.microsoft.com/help/2887606)|October 28, 2013|
-|10.50.4285.00|SP2|CU7| [2844090](https://support.microsoft.com/help/2844090)|June 17, 2013|
+|10.50.4286.00|SP2|CU7| [2844090](https://support.microsoft.com/help/2844090)|June 17, 2013|
 |10.50.4279.00|SP2|CU6| [2830140](https://support.microsoft.com/help/2830140)|April 15, 2013|
 |10.50.4276.00|SP2|CU5| [2797460](https://support.microsoft.com/help/2797460)|February 18, 2013|
 |10.50.4270.00|SP2|CU4| [2777358](https://support.microsoft.com/help/2777358)|December 17, 2012|

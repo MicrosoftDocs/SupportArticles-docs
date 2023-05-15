@@ -17,7 +17,7 @@ This article discusses how to resolve a failed update to your cloud service that
 
 ## Symptoms
 
-During a migration of your cloud service, you receive a `ChangeDeploymentConfigurationOperationFailed` error message in Azure Cloud Services (classic) or an `OperationNotAllowed` error message in Azure Cloud Services (extended support). These messages resemble the following examples:
+During a migration of your cloud service, you receive a `ChangeDeploymentConfigurationOperationFailed` error message in Azure Cloud Services (classic) or an `OperationNotAllowed` error message in Azure Cloud Services (extended support). These messages resemble the following examples.
 
 ### Azure Cloud Services (classic)
 
@@ -82,7 +82,7 @@ To abort the migration in the Azure portal, follow these steps:
 
 ### [Azure PowerShell](#tab/azure-powershell)
 
-Use the [Move-AzureService](/powershell/module/servicemanagement/azure.service/move-azureservice) cmdlet to abort the migration, as shown in the following code snippet:
+Use the [Move-AzureService](/powershell/module/servicemanagement/azure/move-azureservice) cmdlet to abort the migration, as shown in the following code snippet:
 
 ```azurepowershell
 $abortMigrationDetails = @{
@@ -119,7 +119,7 @@ To commit the migration in the Azure portal, follow these steps:
 
 ### [Azure PowerShell](#tab/azure-powershell)
 
-Use the [Move-AzureService](/powershell/module/servicemanagement/azure.service/move-azureservice) cmdlet to commit the migration, as shown in the following code snippet:
+Use the [Move-AzureService](/powershell/module/servicemanagement/azure/move-azureservice) cmdlet to commit the migration, as shown in the following code snippet:
 
 ```azurepowershell
 $commitMigrationDetails = @{

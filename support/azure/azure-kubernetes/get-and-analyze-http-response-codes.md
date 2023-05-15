@@ -15,13 +15,13 @@ If an application responds to HTTP or HTTPS requests, you can check the HTTP res
 
 ## Prerequisites
 
-- The Client URL ([cURL](https://www.tecmint.com/install-curl-in-linux/)) tool, or another similar command-line tool.
+- The Client URL ([cURL](https://curl.se)) tool, or another similar command-line tool.
 
 - The Kubernetes [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) tool, or a similar tool to connect to the cluster. To install kubectl by using [Azure CLI](/cli/azure/install-azure-cli), run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
 
 ## Get HTTP response codes by using cURL
 
-The [cURL](https://www.mit.edu/afs.new/sipb/user/ssen/src/curl-7.11.1/docs/curl.html) command-line tool can send an HTTP request to an application endpoint and get the response. For a load balancer service (that responds on the path "/" on port 80), a curl request can be initiated by running the following command:
+The [cURL](https://curl.se) command-line tool can send an HTTP request to an application endpoint and get the response. For a load balancer service (that responds on the path "/" on port 80), a curl request can be initiated by running the following command:
 
 ```bash
 curl -Iv http://<load-balancer-service-ip-address>:80/
