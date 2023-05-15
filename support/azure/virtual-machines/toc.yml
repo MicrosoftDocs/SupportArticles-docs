@@ -401,6 +401,11 @@
       - name: Restarting, shutting down, or stopping services
         href: boot-error-troubleshoot-windows.md
 
+- name: VM health
+  items:
+  - name: VM availability might be inaccurate during restart
+    href: inaccurate-vm-availability-during-vm-restart.md
+
 - name: VM agent and extensions
   items:
   - name: Azure cloud-init support for Linux VMs
@@ -415,6 +420,8 @@
     href: extensions-stop-running.md
   - name: Minimum version support for agents
     href: support-extensions-agent-version.md
+  - name: Multiple certificates on IaaS VM that uses extensions
+    href: multiple-certificates-iaas-vm-extensions.md
   - name: Previous command is re-run
     href: customscript-reruns-previous-command.md
   - name: Supported extensions
@@ -431,6 +438,8 @@
     href: /azure/virtual-machines/extensions/troubleshoot?context=/troubleshoot/azure/virtual-machines/context/context
   - name: Install Windows VM agent offline
     href: install-vm-agent-offline.md
+  - name: Troubleshoot extension certificate issues on Windows VM
+    href: troubleshoot-extension-certificates-issues-windows-vm.md
   - name: Troubleshoot Windows VM agent
     href: windows-azure-guest-agent.md
   - name: Troubleshoot Linux VM agent
