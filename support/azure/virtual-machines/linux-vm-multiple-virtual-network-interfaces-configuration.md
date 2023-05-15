@@ -44,7 +44,10 @@ In each scenario, the connectivity can be tested from any VM in the same VNET.
 
 When you add multiple network interfaces to a Linux VM, you have to create routing rules. These rules enable the VM to send and receive traffic that belongs to a specific network interface. Otherwise, traffic can't be processed correctly. For example, traffic that belongs to *eth1* can't be processed correctly by the defined default route.
 
-The following sections provides the required configuration for two network interfaces to work in Linux VMs that run the most common Linux distributions. Run all the commands in the following sections by using root privileges (by switching to the root or by using the `sudo` command utility).
+The following sections provides the required configuration for two network interfaces to work in Linux VMs that run the most common Linux distributions.
+
+> [!NOTE]
+> Run all the commands in the following sections by using root privileges (by switching to the root or by using the `sudo` command utility).
 
 In each section, assume that the VM has two network interfaces have any of the following settings:
 
