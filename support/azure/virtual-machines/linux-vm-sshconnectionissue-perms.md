@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot SSH connection issues in Linux VM due to permission and ownership issues 
-description: Resolves an issue in which SSH fails because the /var/empty/sshd file isn't owned by the root directory and isn't group or world-writable.
+description: Resolves an issue in which SSH fails because the /var/empty/sshd, or /var/lib/empty, or /var/run/sshd directory isn't owned by the root user, or is group- or world-writable.
 ms.date: 05/15/2023
 author: saimsh-msft
 ms.reviewer: vilibert, saimsh-msft
@@ -8,33 +8,49 @@ ms.service: virtual-machines
 ms.subservice: vm-cannot-connect
 ms.collection: linux
 ---
+
 # Troubleshoot SSH connection issues in Linux VM due to permission and ownership issues
 
-This article provides a solution to an issue in which SSH service fails because the _/var/empty/sshd_ file isn't owned by the root directory and isn't group or world-writable.
+This article provides a solution to an issue in which SSH service fails because the _/var/empty/sshd_ directory in RHEL systems, the _/var/lib/empty_ in SUSE, or the _/var/run/sshd_, isn't owned by the root user, or is group- or world-writable.
 
 ## Symptoms
 
-You can't connect a Linux virtual machine (VM) by using a secure shell (SSH) connection due to permission and ownership issues. When this problem occurs, you may receive the following error message about the _/var/empty/sshd_ file, depending on your Linux distribution.
-
-**SUSE:**
-
-```output
-The /var/empty directory must be owned by the root user and not group or world-writable.  
-
-startproc: exit status of parent of /usr/sbin/sshd: 255  
-Failed
-```
+You can't connect a Linux virtual machine (VM) by using a secure shell (SSH) connection due to permission and ownership issues. When this problem occurs, you may receive the following error message about the affected directory.
 
 **CentOS/RHEL:**
+
+```bash
+sudo tail /var/log/messages
+```
 
 ```output
 Starting sshd: /var/empty/sshd must be owned by root and not group or world-writable.  
 [FAILED]
 ```
 
+**SUSE 12.x/15.x:**
+
+```bash
+sudo tail /var/log/messages
+```
+
+```output
+sshd[4022]: fatal: /var/lib/empty must be owned by root and not group or world-writable.
+```
+
+**Ubuntu:**
+
+```bash
+sudo tail /var/log/auth.log
+```
+
+```output
+sshd[1850]: fatal: /run/sshd must be owned by root and not group or world-writable.
+```
+
 ## Cause
 
-This problem may occur if the _/var/empty/sshd_ directory is not owned by the root user and isn't group-writable or world-writable.
+This problem may occur if the affected directory isn't owned by the root user, or is group- or world-writable.
 
 ## Resolution
 
@@ -55,10 +71,25 @@ There are two ways to resolve the issue:
 2. Login to the VM using local administrative account and its corresponding credential/password.
 3. Run the following commands to resolve the permission and ownership issue:
 
+**RHEL/CentOS:**
+
 ```bash
 sudo chmod 755 /var/empty/sshd
 sudo chown root:root /var/empty/sshd
-sudo systemctl restart sshd
+```
+
+**SUSE:**
+
+```bash
+sudo chmod 755 /var/lib/empty
+sudo chown root:root /var/lib/empty
+```
+
+**Ubuntu:**
+
+```bash
+sudo chmod 755 /var/run/sshd
+sudo chown root:root /var/run/sshd
 ```
 
 #### <a id="onlinetroubleshooting-runcommand"></a>Run Command Extension
@@ -70,16 +101,35 @@ Open the **Properties** window of the VM in the Azure portal to check the agent 
 1. Go to the Azure portal, locate your VM settings, and then select **Run Command**  under **Operations** section.
 2. Next, select **RunShellScript** and **Run** the following shell script:
 
-    > [!NOTE]
-    > You must update the script to reflect your system distribution. This script runs on Red Hat variants only.
+**RHEL/CentOS:**
 
-    ```bash
-    #!/bin/bash
+```bash
+#!/bin/bash
     
-    #Script to change permissions on a file
-    chmod 755 /var/empty/sshd;chown root:root /var/empty/sshd;systemctl restart sshd
+#Script to change permissions on a file
+chmod 755 /var/empty/sshd;chown root:root /var/empty/sshd
+```
 
-    ```
+**SUSE:**
+
+```bash
+#!/bin/bash
+    
+#Script to change permissions on a file
+chmod 755 /var/lib/empty;chown root:root /var/lib/empty
+```
+
+**Ubuntu:**
+
+```bash
+#!/bin/bash
+    
+#Script to change permissions on a file
+chmod 755 /var/run/sshd;chown root:root /var/run/sshd
+```
+
+> [!NOTE]
+> In the case of Ubuntu systems, the _/var/run/sshd_ runs in memory. Restarting the VM will also fix the issue, so the offline troubleshooting in Ubuntu VMs isn't necessary.
 
 3. After the script execution is completed, the output console window will provide `Enable succeeded` message.
 
@@ -87,7 +137,10 @@ If you can connect to the VM by using the SSH connection, and you want to analyz
 
 ### <a id="offlinetroubleshooting"></a>Repair the VM offline
 
-If the VM serial console access isn't available and the Waagent is not ready, an alternative solution is to repair the vm offline. There are two ways to take an offline approach:
+If the VM serial console access isn't available and the Waagent isn't ready, an alternative solution is to repair the vm offline. There are two ways to take an offline approach.
+
+> [!NOTE]
+> In the case of Ubuntu systems, the _/var/run/sshd_ runs in memory. Restarting the VM will also fix the issue, so the offline troubleshooting in Ubuntu VMs isn't necessary.
 
 #### <a id="offlinetroubleshooting-repairvm"></a>Use Azure Linux Auto Repair (ALAR)
 
@@ -103,10 +156,18 @@ az vm repair create --verbose -g $RGNAME -n $VMNAME --repair-username $USERNAME 
 2. Login to the repair vm. Mount and chroot to the filesystem of the attached copy of OS disk. Follow the detailed [chroot instructions](./chroot-environment-linux.md).
 3. Next, follow the same steps to resolve the permission and ownership issue:
 
- ```bash
+**RHEL/CentOS:**
+
+```bash
 chmod 755 /var/empty/sshd
 chown root:root /var/empty/sshd
-systemctl restart sshd
+```
+
+**SUSE:**
+
+```bash
+chmod 755 /var/lib/empty
+chown root:root /var/lib/empty
 ```
 
 4. Once the changes are applied, `az vm repair restore` command can be used to perform automatic OS disk swap with the original VM as shown in the following command. Replace `$RGNAME` and `$VMNAME` values accordingly.
@@ -116,7 +177,7 @@ az vm repair restore --verbose -g $RGNAME -n $VMNAME
  ```
 
 > [!Note]
->The resource group name "$RGNAME, vm name "$VMNAME", and --copy-disk-name "repairdiskcopy" are examples and the values need to change accordingly.
+>The resource group name `"$RGNAME`, vm name `"$VMNAME"`, and `--copy-disk-name "repairdiskcopy"` are examples and the values need to change accordingly.
 
 #### <a id="offlinetroubleshooting-manualvm"></a>Use Manual Method
 
