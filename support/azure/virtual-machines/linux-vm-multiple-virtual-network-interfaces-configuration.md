@@ -137,7 +137,7 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
           sudo vi /etc/sysconfig/network-scripts/rule-eth0
           ```
 
-      2. Add the following contents to the rule file. Replace the IP address accordingly, make sure you specify the IPv4 address in the configuration, and preserve the 32-bit value:
+      2. Add the following content to the rule file. Replace the IP address accordingly, make sure you specify the IPv4 address in the configuration, and preserve the 32-bit value:
 
           ```output
           from 10.0.1.4/32 table eth0-rt
@@ -150,7 +150,7 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
           sudo vi /etc/sysconfig/network-scripts/route-eth0
           ```
 
-      4. Add the following contents to the route file. Replace the network and gateway values accordingly.
+      4. Add the following content to the route file. Replace the network and gateway values accordingly.
 
           ```output
           10.0.1.0/24 dev eth0 table eth0-rt
@@ -165,7 +165,7 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
             sudo vi /etc/sysconfig/network-scripts/rule-eth1
             ```
 
-      2. Add the following contents to the rule file. Replace the IP address accordingly, make sure that you specify the IPv4 address in the command, and preserve the 32-bit value.
+      2. Add the following content to the rule file. Replace the IP address accordingly, make sure that you specify the IPv4 address in the command, and preserve the 32-bit value.
 
           - Two NICs in the same subnet:
 
@@ -187,7 +187,7 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
             sudo vi /etc/sysconfig/network-scripts/route-eth1
             ```
 
-      4. Add the following contents to the route file. Replace the network and gateway values accordingly.
+      4. Add the following content to the route file. Replace the network and gateway values accordingly.
 
          - Two NICs in the same subnet:
 
@@ -286,7 +286,7 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
           sudo vi /etc/sysconfig/network-scripts/rule-eth0
           ```
 
-      2. Add the following contents to the rule file. Replace the IP address accordingly, and make sure that you specify the IPv4 address in the command.
+      2. Add the following content to the rule file. Replace the IP address accordingly, and make sure that you specify the IPv4 address in the command.
 
           ```output
           from 10.0.1.4/32 table eth0-rt
@@ -299,7 +299,7 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
           sudo vi /etc/sysconfig/network-scripts/route-eth0
           ```
 
-      4. Add the following contents to the route file:
+      4. Add the following content to the route file:
 
           ```output
           10.0.1.0/24 dev eth0 table eth0-rt
@@ -314,7 +314,7 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
           sudo vi /etc/sysconfig/network-scripts/rule-eth1
           ```
 
-      2. Add the following contents to the rule file. Replace the IP address accordingly, make sure that you specify the IPv4 address in the command, and preserve the 32-bit value.
+      2. Add the following content to the rule file. Replace the IP address accordingly, make sure that you specify the IPv4 address in the command, and preserve the 32-bit value.
 
          - Two NICs in the same subnet:
 
@@ -336,7 +336,7 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
           sudo vi /etc/sysconfig/network-scripts/route-eth1
           ```
 
-      4. Add the following contents to the route file:
+      4. Add the following content to the route file:
 
          - Two NICs in the same subnet:
 
@@ -383,7 +383,7 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
 
 2. If Cloud-Init automation is set (by default, it's set in the Azure Ubuntu images), make sure that the network CI automation is disabled so that the */etc/netplan/50-cloud-init.yaml* file doesn't get overwritten every time the system is restarted.
 
-    Create the */etc/cloud/cloud.cfg.d/99-disable-network-config.cfg* file by using the following command and contents:
+    Create the */etc/cloud/cloud.cfg.d/99-disable-network-config.cfg* file by using the following command and content:
 
     ```bash
     sudo vi /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg
@@ -648,7 +648,7 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
     POST_UP_SCRIPT="compat:suse:/etc/sysconfig/network/scripts/ifup-route.eth1"
     ```
 
-    If the */etc/sysconfig/network/ifcfg-eth1* file doesn't exist, create it by using the contents from the */etc/sysconfig/network/ifcfg-eth0* file. Make sure the `POST_UP_SCRIPT` is adjusted to use the corresponding script. To do this, execute the following command:
+    If the */etc/sysconfig/network/ifcfg-eth1* file doesn't exist, create it by using the content from the */etc/sysconfig/network/ifcfg-eth0* file. Make sure the `POST_UP_SCRIPT` is adjusted to use the corresponding script. To do this, execute the following command:
 
     ```bash
     sudo cat /etc/sysconfig/network/ifcfg-eth0 > /etc/sysconfig/network/ifcfg-eth1
