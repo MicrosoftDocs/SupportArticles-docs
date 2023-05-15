@@ -221,7 +221,7 @@ The following Analysis services directories and processes can be excluded from a
 |SSAS Instance         | Process/Executable file                                                                |
 |-------               |---------                                                                               |
 |Default SSAS instance |%ProgramFiles%\\Microsoft SQLServer\\*\<MSASXX\>.MSSQLSERVER* \\OLAP\\Bin\\MSMDSrv.exe  |
-|Named SSAS instance   |%ProgramFiles%\\Microsoft SQL Server\\*MSASXX\>.InstanceName\>*\\OLAP\\Bin\\MSMDSrv.exe|
+|Named SSAS instance   |%ProgramFiles%\\Microsoft SQL Server\\*\<MSASXX\>.InstanceName\>*\\OLAP\\Bin\\MSMDSrv.exe|
 
 The XX is the build ID. For example, a default Analysis Services 2016 instance binary installation location by default is C:\Program Files\Microsoft SQL Server\MSAS13.MSSQLSERVER\OLAP\bin.
 
@@ -271,11 +271,30 @@ For Analysis Services 2012 and later versions, temporary files during processing
 
 #### Directories for partitions not stored in the default data directories for Analysis Services 2012 and later-version
 
-When you create the partitions, these locations are defined in the Storage location section of the Processing and Storage Locations page of the Partition Wizard. Be sure to exclude those from scanning. 
+When you create the partitions, these locations are defined in the Storage location section of the Processing and Storage Locations page of the Partition Wizard. Be sure to exclude those from scanning.
 
 ## Configure antivirus software to work with SQL Server Integration services (SSIS)
 
-??????
+The following processes and directories for the SSIS services are to be excluded from anti-virus scanning.
+
+### SSIS processes to exclude from virus scanning
+
+|Service           | Process/Executable file                                                          |
+|---------         |---------                                                                         |
+|SSIS Instance     | %Program Files%\\Microsoft SQL Server\\*\<XXXX\>*\\DTS\\Binn\\ISServerExec.exe   |
+|DTSExec Instance  | %Program Files%\\Microsoft SQL Server\\*\<XXXX\>*\\DTS\\Binn\\DTExec.exe         |
+
+The *\<XXXX\>* refers to the version-specific details
+
+### SSIS directories to exclude from virus scanning
+
+When you configure your antivirus software settings, make sure that you exclude the following files or directories (as applicable) from virus scanning. This improves the performance of the files and helps make sure that the files aren't locked when the SSIS service must use them. However, if these files become infected, your antivirus software can't detect the infection.
+
+|Description             | Directories to exclude                                |
+|---------               |---------                                              |
+|Directories to Exclude  |%Program Files%\\Microsoft SQL Server\\*\<XXXX\>*\\DTS |
+
+The *\<XXXX\>* refers to the version-specific details
 
 ## Configure antivirus software to work with Polybase
 
@@ -283,9 +302,9 @@ The following processes and directories for the Polybase services are to be excl
 
 ### Polybase processes to exclude from virus scanning
 
-|Service                 | Process/Executable file                                                                                     |
-|---------               |---------                                                                                                    |
-|PolyBase Engine service | %ProgramFiles%\\Microsoft SQL Server\\\<Instance_ID\>.\<Instance Name\>\\MSSQL\\Binn\\Polybase\\mpdwsvc.exe |
+|Service                                          | Process/Executable file                                                                                     |
+|---------                                        |---------                                                                                                    |
+|PolyBase Engine service                          | %ProgramFiles%\\Microsoft SQL Server\\\<Instance_ID\>.\<Instance Name\>\\MSSQL\\Binn\\Polybase\\mpdwsvc.exe |
 |PolyBase Data Movement (DMS) and Engine services | %ProgramFiles%\\Microsoft SQL Server\\\<Instance_ID\>.\<Instance Name\>\\MSSQL\\Binn\\Polybase\\mpdwsvc.exe |
 
 PolyBase Data Movement service (DMS) and Engine services use same executable with different command line parameters.
@@ -298,7 +317,9 @@ When you configure your antivirus software settings, make sure that you exclude 
 |---------            |---------                                                                                     |
 |PolyBase log files   |%ProgramFiles%\\Microsoft SQL Server\\\<Instance_ID\>.\<InstanceName\>\\MSSQL\\Log\\Polybase\\|
 
-## Configure antivirus software to work with Reporting Services
+## Configure antivirus software to work with Reporting Services (SSRS)
+
+The following processes and directories for the SQL Server Reporting Services (SSRS) are to be excluded from anti-virus scanning.
 
 ### SSRS processes to exclude from virus scanning
 
@@ -318,7 +339,6 @@ The executables to exclude have evolved across different versions of SSRS. The f
 |SSRS 2014      | %ProgramFiles%\Microsoft SQL Server\\*\<Instance_ID\>*.*\<Instance Name\>*\\Reporting Services |
 |SSRS 2016      | %ProgramFiles%\Microsoft SQL Server\\*\<Instance_ID\>*.*\<Instance Name\>*\\Reporting Services |
 |SSRS 2017 and later version|%ProgramFiles%\\Microsoft SQL Server Reporting Services\\SSRS </br> %ProgramFiles%\\Microsoft SQL Server Reporting Services\\Shared Tools |
-
 
 ## Power BI Report Server
 
