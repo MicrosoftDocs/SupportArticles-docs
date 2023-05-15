@@ -89,6 +89,8 @@
       items:
         - name: Agent-related errors when running attended or unattended desktop flows
           href: agent-connectivity-issues-pad.md
+        - name: Browser automation actions stop working after a browser update
+          href: browser-automation-error-after-chromium-update.md
         - name: Can't automate webpage with iframes
           href: cannot-automate-webpage-with-iframes.md
         - name: Can't create a connection from a shared canvas app
@@ -117,6 +119,8 @@
           href: cannot-access-java-application-elements.md
         - name: Can't execute a shared desktop flow after changing the connection
           href: sharing-deskop-flow-with-connections.md
+        - name: Cloud flow is suspended due to missing the attended RPA capability
+          href: cloud-flow-suspended-missing-attended-rpa-capability.md 
         - name: Communication error when launching Power Automate for desktop
           href: communication-error-console.md
         - name: Desktop flows don't show in console if license expired or unassigned
