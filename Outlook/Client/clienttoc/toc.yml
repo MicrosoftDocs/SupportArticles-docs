@@ -429,6 +429,8 @@
           href: ../message-body/the-linked-image-cannot-be-displayed-error.md
         - name: User info in @mentions doesn't resolve
           href: /office/troubleshoot/excel/mentions-not-resolve-user-information?context=/outlook/troubleshoot/context/client-context
+        - name: View emails and web links side-by-side with Outlook and Microsoft Edge
+          href: ../message-body/view-emails-and-web-links-in-browser.md
         - name: Yu Gothic font characters are displayed incorrectly
           href: ../message-body/yu-gothic-font-characters-displayed-incorrectly.md
     - name: Performance
