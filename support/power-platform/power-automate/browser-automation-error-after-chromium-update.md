@@ -4,7 +4,7 @@ description: Provides a resolution for the issue where the browser automation ac
 ms.author: pefelesk
 author: PetrosFeleskouras
 ms.reviewer: jefernn, tapanm
-ms.date: 5/15/2022
+ms.date: 05/15/2023
 ms.subservice: power-automate-desktop-flows
 ---
 # "You need the Power Automate extension" or "Failed to assume control of Chrome/Edge" when using browser automation actions
