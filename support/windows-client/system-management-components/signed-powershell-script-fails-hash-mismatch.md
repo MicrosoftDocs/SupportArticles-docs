@@ -11,7 +11,7 @@ ms.custom: Fix, csstroubleshoot, devx-track-azurepowershell
 audience: itpro
 localization_priority: medium
 ---
-#  Hash of the file does not match when running signed PowerShell script
+# Hash of the file does not match when running signed PowerShell script
 
 _Applies to:_ &nbsp; Windows PowerShell
 
@@ -122,4 +122,4 @@ For more information about the PowerShell scripts that are encoded differently, 
 
 ## Data collection
 
-If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for Windows troubleshooting](../windows-troubleshooters/gather-information-using-tssv2-windows-troubleshooting.md#powershell).
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for User Experience issues](../windows-troubleshooters/gather-information-using-tssv2-user-experience.md#powershell).
