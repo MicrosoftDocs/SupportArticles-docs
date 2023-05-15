@@ -30,7 +30,7 @@ For more information, see: [Discover new ways to multitask with Microsoft 365 an
 
 ## Manage the new feature by configuring a policy
 
-To manage this change in your organization, you'll need to configure the following policy:
+To manage this change in your organization, you need to configure the following policy:
 
 **Name:** *Choose Which Browser Opens Web Links*
 
@@ -42,7 +42,7 @@ To manage this change in your organization, you'll need to configure the followi
 
 *If you disable or don't configure this policy, web links will open in Microsoft Edge. The user can set their preferred browser from the settings for the specific Microsoft 365 app.*
 
-If you want Outlook to open web links using the system default browser, you'll need to enable this policy and select **System default browser**.
+If you want Outlook to open web links using the system default browser, you need to enable this policy and select **System default browser**.
 
 You have two options where you can manage this policy:
 
@@ -52,9 +52,9 @@ Follow these steps to manage the policy in the [Cloud Policy service for Microso
 
 1. Navigate to the [Microsoft 365 Apps admin center](https://config.office.com/), and then select **Sign in**.
 
-2. Under Office policies, and then select **Go to Microsoft 365 Cloud Policy**.
+2. Under Office policies, select **Go to Microsoft 365 Cloud Policy**.
 
-3. Under Policy configurations, and then select **+Create**.
+3. Under Policy configurations, select **+Create**.
 
 4. Provide a Name and Description for your policy, and then select **Next**.
 
@@ -91,11 +91,11 @@ Follow these steps to manage the policy in the [Cloud Policy service for Microso
    :::image type="content" source="media/view-emails-and-web-links-in-browser/administrative-templates-group-policy.png" alt-text="Screenshot of the 'Choose which browser opens web links' policy in the Group Policy Management Editor.":::
 
 > [!NOTE]
-> If your organization uses a **Microsoft 365 for business** plan, your users will need to manage this change individually. They can either click **Manage my settings** in the Edge notification banner when the experience first opens, or they can manage the change through the Outlook settings menu: **File** > **Options** > **Advanced** > **Link Handling**.
+> If your organization uses a **Microsoft 365 for business** plan, your users will need to manage this change individually. They can either select **Manage my settings** in the Edge notification banner when the experience first opens, or they can manage the change through the Outlook settings menu: **File** > **Options** > **Advanced** > **Link Handling**.
 
 ## Allow users to manage the new feature
 
-If you'd prefer to let your users manage this change, then either leave the policy unconfigured or disable the policy. Users will then be able to manage this at any point through Outlook settings: **File** \> **Options** \> **Advanced** \> **Link Handling**.
+If you prefer to let your users manage this change, then either leave the policy unconfigured or disable the policy. Users will then be able to manage this at any point through Outlook settings: **File** \> **Options** \> **Advanced** \> **Link Handling**.
 
 Additionally, users are notified of this change with a banner when they first experience it. They can either choose **Try Edge** to keep using the feature or select **Manage my settings** to revert to their system default browser.
 
@@ -103,4 +103,4 @@ Additionally, users are notified of this change with a banner when they first ex
 
 **Note**: If you confirm this experience by enabling the policy and selecting **Microsoft Edge**, users will still receive this banner, but **Manage my settings** will be grayed out and unavailable to use.
 
-For additional information about how users can individually control this experience, see our Microsoft Support page: [Outlook emails open next to web links in Microsoft Edge](https://support.microsoft.com/topic/stay-in-your-flow-with-microsoft-365-on-microsoft-edge-b0e1a1c1-bd62-462c-9ed5-5938b9c649f0).
+For more information about how users can individually control this experience, see [Outlook emails open next to web links in Microsoft Edge](https://support.microsoft.com/topic/stay-in-your-flow-with-microsoft-365-on-microsoft-edge-b0e1a1c1-bd62-462c-9ed5-5938b9c649f0).
