@@ -11,7 +11,7 @@ ms.collection: linux
 
 # Troubleshoot SSH connection issues in Linux VM due to permission and ownership issues
 
-This article provides a solution to an issue in which SSH service fails because the _/var/empty/sshd_ directory in RHEL systems, the _/var/lib/empty_ in SUSE, or the _/var/run/sshd_, isn't owned by the root user, or is group- or world-writable.
+This article provides a solution to an issue in which SSH service fails because the _/var/empty/sshd_ directory in RHEL systems, the _/var/lib/empty_ in SUSE, or the _/var/run/sshd_ in Ubuntu, isn't owned by the root user, or is group- or world-writable.
 
 ## Symptoms
 
