@@ -94,6 +94,8 @@ sudo chmod 755 /var/run/sshd
 sudo chown root:root /var/run/sshd
 ```
 
+---
+
 #### <a id="onlinetroubleshooting-runcommand"></a>Run Command Extension
 
 This method relies on the Azure Linux agent (WAagent). It's required that the VM has the agent installed and service running.
