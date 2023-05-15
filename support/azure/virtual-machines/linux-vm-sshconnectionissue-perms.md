@@ -17,7 +17,7 @@ This article provides a solution to an issue in which SSH service fails because 
 
 You can't connect a Linux virtual machine (VM) by using a secure shell (SSH) connection due to permission and ownership issues. When this problem occurs, you may receive the following error message about the affected directory.
 
-**CentOS/RHEL:**
+### [CentOS/RHEL](#tab/rhelsymp)
 
 ```bash
 sudo tail /var/log/messages
@@ -28,7 +28,7 @@ Starting sshd: /var/empty/sshd must be owned by root and not group or world-writ
 [FAILED]
 ```
 
-**SUSE 12.x/15.x:**
+### [SUSE 12.x/15.x](#tab/slessymp)
 
 ```bash
 sudo tail /var/log/messages
@@ -38,7 +38,7 @@ sudo tail /var/log/messages
 sshd[4022]: fatal: /var/lib/empty must be owned by root and not group or world-writable.
 ```
 
-**Ubuntu:**
+### [Ubuntu](#tab/ubuntusymp)
 
 ```bash
 sudo tail /var/log/auth.log
@@ -47,6 +47,8 @@ sudo tail /var/log/auth.log
 ```output
 sshd[1850]: fatal: /run/sshd must be owned by root and not group or world-writable.
 ```
+
+---
 
 ## Cause
 
@@ -71,21 +73,21 @@ There are two ways to resolve the issue:
 2. Login to the VM using local administrative account and its corresponding credential/password.
 3. Run the following commands to resolve the permission and ownership issue:
 
-**RHEL/CentOS:**
+#### [RHEL/CentOS](#tab/rhelts1)
 
 ```bash
 sudo chmod 755 /var/empty/sshd
 sudo chown root:root /var/empty/sshd
 ```
 
-**SUSE:**
+#### [SUSE](#tab/slests1)
 
 ```bash
 sudo chmod 755 /var/lib/empty
 sudo chown root:root /var/lib/empty
 ```
 
-**Ubuntu:**
+#### [Ubuntu](#tab/ubuntuts1)
 
 ```bash
 sudo chmod 755 /var/run/sshd
@@ -101,7 +103,7 @@ Open the **Properties** window of the VM in the Azure portal to check the agent 
 1. Go to the Azure portal, locate your VM settings, and then select **Run Command**  under **Operations** section.
 2. Next, select **RunShellScript** and **Run** the following shell script:
 
-**RHEL/CentOS:**
+#### [RHEL/CentOS](#tab/rhelts2)
 
 ```bash
 #!/bin/bash
@@ -110,7 +112,7 @@ Open the **Properties** window of the VM in the Azure portal to check the agent 
 chmod 755 /var/empty/sshd;chown root:root /var/empty/sshd
 ```
 
-**SUSE:**
+#### [SUSE](#tab/slests2)
 
 ```bash
 #!/bin/bash
@@ -119,7 +121,7 @@ chmod 755 /var/empty/sshd;chown root:root /var/empty/sshd
 chmod 755 /var/lib/empty;chown root:root /var/lib/empty
 ```
 
-**Ubuntu:**
+#### [Ubuntu](#tab/ubuntuts2)
 
 ```bash
 #!/bin/bash
@@ -130,6 +132,8 @@ chmod 755 /var/run/sshd;chown root:root /var/run/sshd
 
 > [!NOTE]
 > In the case of Ubuntu systems, the _/var/run/sshd_ runs in memory. Restarting the VM will also fix the issue, so the offline troubleshooting in Ubuntu VMs isn't necessary.
+
+---
 
 3. After the script execution is completed, the output console window will provide `Enable succeeded` message.
 
@@ -156,19 +160,21 @@ az vm repair create --verbose -g $RGNAME -n $VMNAME --repair-username $USERNAME 
 2. Login to the repair vm. Mount and chroot to the filesystem of the attached copy of OS disk. Follow the detailed [chroot instructions](./chroot-environment-linux.md).
 3. Next, follow the same steps to resolve the permission and ownership issue:
 
-**RHEL/CentOS:**
+#### [RHEL/CentOS](#tab/rhelts3)
 
 ```bash
 chmod 755 /var/empty/sshd
 chown root:root /var/empty/sshd
 ```
 
-**SUSE:**
+#### [SUSE](#tab/slests3)
 
 ```bash
 chmod 755 /var/lib/empty
 chown root:root /var/lib/empty
 ```
+
+---
 
 4. Once the changes are applied, `az vm repair restore` command can be used to perform automatic OS disk swap with the original VM as shown in the following command. Replace `$RGNAME` and `$VMNAME` values accordingly.
 
