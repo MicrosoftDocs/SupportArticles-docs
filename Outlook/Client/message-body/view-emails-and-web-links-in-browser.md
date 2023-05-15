@@ -52,23 +52,23 @@ Follow these steps to manage the policy in the [Cloud Policy service for Microso
 
 1. Navigate to the [Microsoft 365 Apps admin center](https://config.office.com/), and then select **Sign in**.
 
-2. Under Office policies, select **Go to Microsoft 365 Cloud Policy**.
+2. Under **Office policies**, select **Go to Microsoft 365 Cloud Policy**.
 
-3. Under Policy configurations, select **+Create**.
+3. Under **Policy configurations**, select **Create**.
 
-4. Provide a Name and Description for your policy, and then select **Next**.
+4. Provide a name and description for your policy, and then select **Next**.
 
 5. Select the appropriate scope, such as creating a group or adding to an existing group.
 
 6. Select **Next**.
 
-7. Under Configure Settings, search for "Choose which browser opens web links".
+7. Under **Configure Settings**, search for "Choose which browser opens web links".
 
    :::image type="content" source="media/view-emails-and-web-links-in-browser/microsoft365-policy-settings.png" alt-text="Screenshot of a settings page in the Cloud Policy service for Microsoft 365.":::
 
 8. Select the **Choose which browser opens web links** policy.
 
-9. Adjust Configuration setting to desired configuration, and then select **Apply**.
+9. Adjust **Configuration setting** to the desired configuration, and then select **Apply**.
 
 10. Select **Next**.
 
