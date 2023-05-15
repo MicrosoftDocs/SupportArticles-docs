@@ -5,7 +5,7 @@ summary: This library of articles provides guidance to troubleshoot and fix erro
 metadata:
   title: SharePoint Server troubleshooting
   description: Documentation for troubleshooting common issues with SharePoint Server.
-  ms.prod: sharepoint-server-itpro
+  ms.service: sharepoint-server-itpro
   ms.topic: landing-page
   author: helenclu
   ms.author: luche

@@ -5,7 +5,7 @@ summary: Welcome to this collection of content that has contributions from vario
 metadata:
   title: SharePoint Experts
   description: Documentation for troubleshooting common issues with SharePoint.
-  ms.prod: sharepoint-server-itpro
+  ms.service: sharepoint-server-itpro
   ms.topic: landing-page
   author: helenclu
   ms.author: luche
