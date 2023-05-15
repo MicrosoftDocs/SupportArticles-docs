@@ -30,7 +30,7 @@ The following screenshot shows an example of what occurs when you try to ping th
 :::image type="content" source="media/listener-connection-times-out/ping-aglisten.png" alt-text="Screenshot of the Command Prompt window when you ping the listener for the availability of aglisten.":::
 
 > [!NOTE]
-> You can use the `SQLCMD` command together with the `-M` parameter as shown in the screen shot to connect to the listener.
+> You can use the `SQLCMD` command together with the `-M` parameter as shown in the screenshot to connect to the listener.
 
 ## Cause
 

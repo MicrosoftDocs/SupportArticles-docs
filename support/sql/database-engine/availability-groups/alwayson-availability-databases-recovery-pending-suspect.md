@@ -6,6 +6,7 @@ ms.custom: sap:High Availability and Disaster Recovery features
 ms.reviewer: ramakoni, cmathews
 ms.prod: sql
 ---
+
 # Troubleshoot Always On availability databases in Recovery Pending or Suspect state in SQL Server
 
 This article describes the errors and limitations of an availability database in Microsoft SQL Server that is in a `Recovery Pending` or `Suspect` state and how to restore the database to full functionality in an availability group.
@@ -15,7 +16,7 @@ _Original KB number:_ &nbsp; 2857849
 
 ## Summary
 
-Assume that an availability database that is defined in an Always On availability group transitions to a `Recovery Pending` or `Suspect` state in SQL Server. If this occurs on the availability group's primary replica, database availability is affected. In this situation, you can not access the database through the client applications. Additionally, you can not drop or remove the database from the availability group.
+Assume that an availability database that is defined in an Always On availability group transitions to a `Recovery Pending` or `Suspect` state in SQL Server. If this occurs on the availability group's primary replica, database availability is affected. In this situation, you can't access the database through the client applications. Additionally, you can't drop or remove the database from the availability group.
 
 For example, assume SQL Server is running and an availability database is set to the `Recovery Pending` or `Suspect` state. When you query the dynamic management views (DMVs) at the primary replica by using the following SQL script, the database might be reported in a `NOT_HEALTHY` and `RECOVERY_PENDING` state or in a `SUSPECT` state as follows:
 
@@ -25,13 +26,13 @@ SELECT
     d.synchronization_health_desc,
     d.synchronization_state_desc,
     d.database_state_desc
-From
+FROM
     sys.dm_hadr_database_replica_states d
     JOIN sys.availability_databases_cluster dc ON d.group_database_id = dc.group_database_id
     AND d.is_local = 1
 ```
 
-```console
+```output
 database_name          synchronization_health_desc     synchronization_state_desc   database_state_desc
 -------------------- ------------------------------ ------------------------------ ---------------------
 <DatabaseName>                         NOT_HEALTHY              NOT SYNCHRONIZING      RECOVERY_PENDING
@@ -44,7 +45,7 @@ Additionally, this database may be reported as being in the **Not Synchronizing 
 
 :::image type="content" source="media/alwayson-availability-databases-recovery-pending-suspect/db-not-synchronizing-recovery-pending.png" alt-text="Screenshot of database which is in Not Synchronizing / Recovery Pending state.":::
 
-When the database is defined in an availability group, the database can not be dropped or restored. Therefore, you have to take specific steps to recover the database and return it to production use.
+When the database is defined in an availability group, the database can't be dropped or restored. Therefore, you have to take specific steps to recover the database and return it to production use.
 
 ## More information
 
@@ -52,7 +53,7 @@ The following content discusses the errors and limitations of an availability da
 
 - Database status prevents restoring database
 
-  You try to run the following SQL script in order to restore the database that has the `RECOVERY` parameter:
+  You try to run the following SQL script to restore the database that has the `RECOVERY` parameter:
 
   ```sql
   RESTORE DATABASE <DatabaseName> WITH RECOVERY
@@ -61,14 +62,14 @@ The following content discusses the errors and limitations of an availability da
   When you run this script, you receive the following error message because the database is defined in an availability group:
 
   > Msg 3104, Level 16, State 1, Line 1  
-  > RESTORE cannot operate on database *DatabaseName* because it is configured for database mirroring or has joined an availability group. If you intend to restore the database, use ALTER DATABASE to remove mirroring or to remove the database from its availability group.  
+  > RESTORE cannot operate on database <DatabaseName> because it is configured for database mirroring or has joined an availability group. If you intend to restore the database, use ALTER DATABASE to remove mirroring or to remove the database from its availability group.  
   >
   > Msg 3013, Level 16, State 1, Line 1  
   > RESTORE DATABASE is terminating abnormally.  
 
 - Database status prevents dropping database
 
-  You try to run the following SQL script in order to drop the database:
+  You try to run the following SQL script to drop the database:
 
   ```sql
   DROP DATABASE <DatabaseName>
@@ -77,7 +78,7 @@ The following content discusses the errors and limitations of an availability da
   When you run this script, you receive the following error message because the database is defined in an availability group:
 
   > Msg 3752, Level 16, State 1, Line 1  
-  > The database *DatabaseName* is currently joined to an availability group. Before you can drop the database, you need to remove it from the availability group.
+  > The database <DatabaseName> is currently joined to an availability group. Before you can drop the database, you need to remove it from the availability group.
 
 - Database status prevents removing database from availability group
 
@@ -90,9 +91,9 @@ The following content discusses the errors and limitations of an availability da
   When you try to run this script, you receive the following error message because the availability database belongs to the primary replica:
 
   > Msg 35240, Level 16, State 14, Line 1  
-  > Database *DatabaseName* cannot be joined to or unjoined from availability group *AvailabilityGroupName*. This operation is not supported on the primary replica of the availability group.
+  > Database <\DatabaseName>\ cannot be joined to or unjoined from availability group <\AvailabilityGroupName>\. This operation is not supported on the primary replica of the availability group.
 
-  Because of this error message, you may be compelled to fail over the database. After the database is failed over, the replica that owns the recovery pending database is in the secondary role. In this situation, you try to execute the following SQL script again in order to remove the database from the availability group at the secondary replica:
+  Because of this error message, you may be compelled to fail over the database. After the database is failed over, the replica that owns the recovery pending database is in the secondary role. In this situation, you try to execute the following SQL script again to remove the database from the availability group at the secondary replica:
 
   ```sql
   ALTER DATABASE <DatabaseName> SET hadr OFF
@@ -101,7 +102,7 @@ The following content discusses the errors and limitations of an availability da
   However, you still can not remove the database from the availability group, and you receive the following error message because the database is still in Recovery Pending state:
 
   > Msg 921, Level 16, State 112, Line 1  
-  > Database *DatabaseName* has not been recovered yet. Wait and try again.
+  > Database '<DatabaseName>' has not been recovered yet. Wait and try again.
 
 ## Resolution when the database is in the secondary role
 
@@ -135,7 +136,7 @@ These steps assume that the primary replica first hosts the damaged database. Th
 
 If the primary replica hosts the damaged database and is the only working replica in the availability group, the availability group must be dropped. After the availability group is dropped, your database can be recovered from a backup, or other emergency recovery efforts can be applied to restore the databases and to resume production.
 
-To drop the availability group, use the following SQL script :
+To drop the availability group, use the following SQL script:
 
 ```sql
 DROP AVAILABILITY GROUP <AvailabilityGroupName>
@@ -151,7 +152,7 @@ To minimize application downtime, use one of the following methods to sustain ap
 
 ### Method 1: Associate the listener with a new availability group (role) in Failover Cluster Manager
 
-This method lets you maintain the listener while dropping and re-creating the availability group
+This method lets you maintain the listener while dropping and re-creating the availability group.
 
 1. On the instance of SQL Server to which the existing availability group listener is directing connections, create a new, empty availability group. To simplify this process, use the Transact-SQL command to create an availability group that has no secondary replica or database:
 
@@ -166,7 +167,7 @@ This method lets you maintain the listener while dropping and re-creating the av
     ```
 
 2. Start Failover Cluster Manager, and then click **Roles** in the left pane. In the pane that lists the roles, select the original availability group.
-3. In the bottom-middle pane under the **Resources** tab, right-click the availability group resource, and then click **Properties**. Click the **Dependencies** tab, delete the dependency to the listener, and then click **OK**.
+3. In the bottom-middle pane under the **Resources** tab, right-click the availability group resource, and then select **Properties**. Select the **Dependencies** tab, delete the dependency to the listener, and then select **OK**.
 
     :::image type="content" source="media/alwayson-availability-databases-recovery-pending-suspect/ag-properties-dependencies-delete.png" alt-text="Screenshot of availability group properties Dependencies tab.":::
 

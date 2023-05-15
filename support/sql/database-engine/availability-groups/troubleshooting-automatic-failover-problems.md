@@ -8,6 +8,7 @@ ms.author: v-jayaramanp
 ms.reviewer: ramakoni, cmathews
 ms.prod: sql
 ---
+
 # Troubleshooting automatic failover problems in SQL Server Always On environments
 
 This article helps you resolve problems that occur during automatic failover in Microsoft SQL Server.
@@ -65,7 +66,7 @@ To investigate and diagnose whether this is the cause of unsuccessful failover, 
    > - The `-TimeSpan 15` parameter in this step assumes that the problem that's being diagnosed occurred during the previous 15 minutes.
    > - By default, the log file is created in _%WINDIR%\cluster\reports_.
 
-1. Open the _Cluster.log_ file in Notepad in order to review the Windows cluster log.
+1. Open the _Cluster.log_ file in Notepad to review the Windows cluster log.
 
 1. In Notepad, select **Edit** > **Find**, and then search for the "failoverCount" string at the end of the file. In the results, you should find a message that resembles the following message:
 
@@ -135,7 +136,7 @@ To resolve this issue, grant sufficient permissions to the `NT AUTHORITY\SYSTEM`
 
 To automatically fail over, all availability databases that are defined in the availability group must be in a `SYNCHRONIZED` state between the primary replica and the secondary replica. When an automatic failover occurs, this synchronization condition must be met in order to make sure that there's no data loss. Therefore, if one availability database in the availability group is in the synchronizing or `NOT SYNCHRONIZED` state, automatic failover won't successfully transition the secondary replica into the primary role.
 
-For more information about the required conditions for an automatic failover, see the **Conditions required for an Automatic Failover** section and the **Synchronous-commit replicas support two settings** section of [Failover and Failover Modes (Always On Availability Groups)](/sql/database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups).
+For more information about the required conditions for an automatic failover, see the **Conditions required for an Automatic Failover** and the **Synchronous-commit replicas support two settings** sections of [Failover and Failover Modes (Always On Availability Groups)](/sql/database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups).
 
 To investigate and diagnose whether this is the cause of unsuccessful failover, review the SQL Server error log. You should find an error entry that resembles the following text:
 
@@ -176,7 +177,7 @@ To check for this configuration:
 
 **Conclusion**
 
-SQL Server Always On health monitoring uses a local ODBC connection to monitor SQL Server health. **Force Protocol Encryption** should be enabled in the **Client Configuration** section of SQL Server Configuration Manager only if SQL Server itself was configured to Force Encryptions in SQL Server Configuration Manager in the **SQL Server Network Configuration** section. For more information, see: [Enable encrypted connections to the Database Engine](/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine).
+SQL Server Always On health monitoring uses a local ODBC connection to monitor SQL Server health. **Force Protocol Encryption** should be enabled in the **Client Configuration** section of SQL Server Configuration Manager only if SQL Server itself was configured to Force Encryptions in SQL Server Configuration Manager in the **SQL Server Network Configuration** section. For more information, see [Enable encrypted connections to the Database Engine](/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine).
 
 ## Case 5: Performance issues on secondary replica or node causes Always On health checks to fail
 
@@ -246,7 +247,7 @@ If you experience this problem, rebalance the workload on the secondary replica 
 
 To monitor the health of the new primary replica during failover, you must locally connect AlwaysOn health monitoring to the SQL Server instance that's transitioning to the primary role.
 
-In addition to the more common reasons that are discussed in this article, there are many reasons other reasons that this connection attempt might fail. To investigate a failed failover attempt further, review the Cluster log on the failover partner (the replica that you couldn't fail over to):
+In addition to the more common reasons that are discussed in this article, there are  other reasons that this connection attempt might fail. To investigate a failed failover attempt further, review the Cluster log on the failover partner (the replica that you couldn't fail over to):
 
 1. Use Windows PowerShell to generate the Windows Cluster log on the cluster node. To do this, run the following cmdlet in an elevated PowerShell window on the instance of SQL Server that's hosting the secondary replica that didn't transition into the primary role. A Cluster log will be generated for the last 60 minutes of activity.
 
@@ -256,7 +257,7 @@ In addition to the more common reasons that are discussed in this article, there
 
 1. To review the Windows Cluster log, open the _Cluster.log_ file in Notepad.
 
-1. Search for the "Connect to SQL Server" string that falls during the unsuccessful failover event.
+1. Search for the "Connect to SQL Server" string that fails during the unsuccessful failover event.
 
 1. Review the subsequent login messages by using the thread ID (see the following screenshot) to correlate the events that are related to the login event. The following example shows a search for "Connect to SQL Server." It also shows using the thread ID (left side) to locate the other diagnostics that describe why the connection attempt failed.
 
