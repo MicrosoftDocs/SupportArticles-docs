@@ -247,7 +247,7 @@ For Analysis Services 2012 and later versions, temporary files during processing
 |SSAS instance      | Temporary files directory                                                       |
 |---------          |---------                                                                        |
 |Default instance   |    C:\\Program Files\\Microsoft SQL Server\\MSASXX.MSSQLSERVER\\OLAP\\Temp      |
-|Named instance     |    C:\\Program Files\\Microsoft SQL Server\\MSASXX.\<InstanceName\>\\OLAP\\Temp |
+|Named instance     |    C:\\Program Files\\Microsoft SQL Server\\MSASXX.\\*\<InstanceName\>*\\OLAP\\Temp |
 
 #### Backup files for Analysis Services
 
