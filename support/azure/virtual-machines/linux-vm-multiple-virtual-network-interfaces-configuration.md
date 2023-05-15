@@ -42,52 +42,54 @@ In each scenario, the connectivity can be tested from any VM in the same VNET.
 
 ## Configure guest OS for multiple network interfaces
 
-When you add multiple network interfaces to a Linux VM, you have to create routing rules. These rules enable the VM to send and receive traffic that belongs to a specific network interface. Otherwise, traffic can't be processed correctly. For example, traffic that belongs to eth1 can't be processed correctly by the defined default route.
+When you add multiple network interfaces to a Linux VM, you have to create routing rules. These rules enable the VM to send and receive traffic that belongs to a specific network interface. Otherwise, traffic can't be processed correctly. For example, traffic that belongs to *eth1* can't be processed correctly by the defined default route.
 
 > [!IMPORTANT]
 > Run all the commands in the following sections by using root privileges (by switching to the root or by using the `sudo` command utility).
 
-* In each scenario, assume that the VM has two network interfaces that have any of the following settings:
+In each scenario, assume that the VM has two network interfaces that have any of the following settings:
 
-    - Routing (the output of the `sudo ip route show` command):
+- Routing (the output of the `sudo ip route show` command):
 
-      - Two NICs in the same subnet:
+  - Two NICs in the same subnet:
 
-        ```output
-        default via 10.0.1.1 dev eth0 proto static metric 100
-        10.0.1.0/24 dev eth0 proto kernel scope link src 10.0.1.4 metric 100
-        10.0.1.0/24 dev eth1 proto kernel scope link src 10.0.1.5 metric 101
-        168.63.129.16 via 10.0.1.1 dev eth0 proto dhcp metric 100
-        169.254.169.254 via 10.0.1.1 dev eth0 proto dhcp metric 100
-        ```
+    ```output
+    default via 10.0.1.1 dev eth0 proto static metric 100
+    10.0.1.0/24 dev eth0 proto kernel scope link src 10.0.1.4 metric 100
+    10.0.1.0/24 dev eth1 proto kernel scope link src 10.0.1.5 metric 101
+    168.63.129.16 via 10.0.1.1 dev eth0 proto dhcp metric 100
+    169.254.169.254 via 10.0.1.1 dev eth0 proto dhcp metric 100
+    ```
 
-      - Two NICs in different subnets but in the same VNET:
+  - Two NICs in different subnets but in the same VNET:
 
-        ```output
-        default via 10.0.1.1 dev eth0 proto static metric 100
-        10.0.1.0/24 dev eth0 proto kernel scope link src 10.0.1.4 metric 100
-        10.0.2.0/24 dev eth1 proto kernel scope link src 10.0.2.5 metric 101
-        168.63.129.16 via 10.0.1.1 dev eth0 proto dhcp metric 100
-        169.254.169.254 via 10.0.1.1 dev eth0 proto dhcp metric 100
-        ```
+    ```output
+    default via 10.0.1.1 dev eth0 proto static metric 100
+    10.0.1.0/24 dev eth0 proto kernel scope link src 10.0.1.4 metric 100
+    10.0.2.0/24 dev eth1 proto kernel scope link src 10.0.2.5 metric 101
+    168.63.129.16 via 10.0.1.1 dev eth0 proto dhcp metric 100
+    169.254.169.254 via 10.0.1.1 dev eth0 proto dhcp metric 100
+    ```
 
-    - Interfaces (the output of the `sudo ip address show` command):
+- Interfaces (the output of the `sudo ip address show` command):
 
-      - Two NICs in the same subnet:
+  - Two NICs in the same subnet:
 
-         ```output
-         lo: inet 127.0.0.1/8 scope host lo
-         eth0: inet 10.0.1.4/24 brd 10.0.1.255 scope global eth0    
-         eth1: inet 10.0.1.5/24 brd 10.0.1.255 scope global eth1
-         ```
+    ```output
+    lo: inet 127.0.0.1/8 scope host lo
+    eth0: inet 10.0.1.4/24 brd 10.0.1.255 scope global eth0
+    eth1: inet 10.0.1.5/24 brd 10.0.1.255 scope global eth1
+    ```
 
-       - Two NICs in different subnets but in the same VNET:
+  - Two NICs in different subnets but in the same VNET:
 
-          ```output
-          lo: inet 127.0.0.1/8 scope host lo
-          eth0: inet 10.0.1.4/24 brd 10.0.1.255 scope global eth0    
-          eth1: inet 10.0.2.5/24 brd 10.0.2.255 scope global eth1
-          ```
+    ```output
+    lo: inet 127.0.0.1/8 scope host lo
+    eth0: inet 10.0.1.4/24 brd 10.0.1.255 scope global eth0
+    eth1: inet 10.0.2.5/24 brd 10.0.2.255 scope global eth1
+    ```
+
+The following sections provides the required configuration for two or more network interfaces to work in Linux VMs that run the most common Linux distributions.
 
 ## [RHEL/CentOS 7._x_](#tab/rhel7)
 
@@ -104,7 +106,7 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
 
     ```bash
     sudo cat /etc/sysconfig/network-scripts/ifcfg-eth0 > /etc/sysconfig/network-scripts/ifcfg-eth1
-    sudo sed -i  's/DEVICE=eth0/DEVICE=eth1/' /etc/sysconfig/network-scripts/ifcfg-eth1
+    sudo sed -i 's/DEVICE=eth0/DEVICE=eth1/' /etc/sysconfig/network-scripts/ifcfg-eth1
     sudo sed -i '/DHCP_HOSTNAME/d' /etc/sysconfig/network-scripts/ifcfg-eth1
     sudo sed -i '/HWADDR/d' /etc/sysconfig/network-scripts/ifcfg-eth1
     ```
@@ -158,7 +160,7 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
           ```
 
     - Create rules and routes for *eth1*:
-    
+
       1. To create the rule file for *eth1*, open the file */etc/sysconfig/network-scripts/rule-eth1*.
 
             ```bash
@@ -174,7 +176,7 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
             to 10.0.1.5/32 table eth1-rt
             ```
 
-           - Two NICs in different subnets but in the same VNET:
+          - Two NICs in different subnets but in the same VNET:
 
              ```output
              from 10.0.2.5/32 table eth1-rt
@@ -189,14 +191,14 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
 
       4. Add the following content to the route file. Replace the network and gateway values accordingly.
 
-         - Two NICs in the same subnet:
+        - Two NICs in the same subnet:
 
             ```output
             10.0.1.0/24 dev eth1 table eth1-rt
             default via 10.0.1.1 dev eth1 table eth1-rt
             ```
 
-          - Two NICs in different subnets but in the same VNET:
+        - Two NICs in different subnets but in the same VNET:
 
             ```output
             10.0.2.0/24 dev eth1 table eth1-rt
@@ -614,7 +616,7 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
 
     - In the network configuration file */etc/sysconfig/network/ifcfg-eth1*:
 
-        ```Configuration
+        ```output
         POST_UP_SCRIPT='compat:suse:/etc/sysconfig/network/scripts/ifup-route.eth1'
         ```
 
@@ -631,7 +633,7 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
     REMOTE_IPADDR=''
     STARTMODE='onboot'
     CLOUD_NETCONFIG_MANAGE='yes'
-    POST_UP_SCRIPT="compat:suse:/etc/sysconfig/network/scripts/ifup-route.eth0"
+    POST_UP_SCRIPT='compat:suse:/etc/sysconfig/network/scripts/ifup-route.eth0'
     ```
 
     ```bash
