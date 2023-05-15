@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot establishing Terminal Services session
 description: Helps you understand the most common settings that affect establishing a Terminal Services session in an enterprise environment.
-ms.date: 9/24/2021
+ms.date: 05/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

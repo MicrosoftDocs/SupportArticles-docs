@@ -1,7 +1,7 @@
 ---
 title: Guidance for troubleshooting printing issues
 description: Introduces general guidance for troubleshooting scenarios related to printers.
-ms.date: 5/10/2022
+ms.date: 05/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

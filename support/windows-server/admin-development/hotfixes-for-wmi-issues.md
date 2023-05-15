@@ -1,7 +1,7 @@
 ---
 title: Suggested hotfixes for WMI issues
 description: Provides suggested hotfixes for Windows Management Intrumentation (WMI) related issue on Windows platforms.
-ms.date: 9/24/2021
+ms.date: 05/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

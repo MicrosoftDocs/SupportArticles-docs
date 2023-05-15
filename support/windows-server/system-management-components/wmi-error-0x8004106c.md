@@ -1,7 +1,7 @@
 ---
 title: Error 0x8004106C while you run WMI queries
 description: Provides a solution to fix the error 0x8004106C that occurs when you run WMI queries.
-ms.date: 9/24/2021
+ms.date: 05/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
