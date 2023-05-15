@@ -24,7 +24,7 @@ This article describes Cumulative Update package 4 (CU4) for Microsoft SQL Serve
 
 ## Known issues in this update
 
-After you install SQL Server 2022 CU2, external data sources using the generic ODBC connector may no longer work. When you try to query external tables that were created before installing CU2, you receive the following error message:
+After you install this cumulative update, external data sources using the generic ODBC connector may no longer work. When you try to query external tables that were created before installing this cumulative update, you receive the following error message:
 
 > Msg 7320, Level 16, State 110, Line 68  
 > Cannot execute the query "Remote Query" against OLE DB provider "MSOLEDBSQL" for linked server "(null)". Object reference not set to an instance of an object.
@@ -34,7 +34,7 @@ If you try to create a new external table, you receive the following error messa
 > Msg 110813, Level 16, State 1, Line 64  
 > Object reference not set to an instance of an object.
 
-To work around this issue, you can uninstall SQL Server 2022 CU2 or add the Driver keyword to the `CONNECTION_OPTIONS` argument. For more information, see [Generic ODBC external data sources may not work after installing Cumulative Update](https://techcommunity.microsoft.com/t5/sql-server-support-blog/generic-odbc-external-data-sources-may-not-work-after-installing/ba-p/3783873).
+To work around this issue, you can uninstall this cumulative update or add the Driver keyword to the `CONNECTION_OPTIONS` argument. For more information, see [Generic ODBC external data sources may not work after installing Cumulative Update](https://techcommunity.microsoft.com/t5/sql-server-support-blog/generic-odbc-external-data-sources-may-not-work-after-installing/ba-p/3783873).
 
 ## Improvements and fixes included in this update
 
