@@ -131,8 +131,6 @@
     },
     "fileMetadata": {
       "ms.prod": {
-        "SharePointServer/**/*.md": "sharepoint-server-itpro",
-        "SharePointExperts/**/*.md": "sharepoint-server-itpro"
       },
       "ms.technology": {
         "SharePointServer/people-pickers/**/*.md": "people-picker"
@@ -140,7 +138,9 @@
       "ms.service": {
         "SharePointHybrid/**/*.md": "sharepoint-online",
         "SharePointOnline/**/*.md": "sharepoint-online",
-        "OneDrive/**/*.md": "one-drive"       
+        "OneDrive/**/*.md": "one-drive"       ,
+        "SharePointServer/**/*.md": "sharepoint-server-itpro",
+        "SharePointExperts/**/*.md": "sharepoint-server-itpro"
       },
       "ms.subservice": {
         "SharePointOnline/administration/**/*.md": "administration",
