@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot service connections for ARM service principal (manual)
+title: Troubleshoot service connections for Azure RM service principal (manual)
 description: This article explains about how to create service principals by using the Azure RM service principal (manual) option and also troubleshoot an error that occurs while verifying manual Azure RM service connection.
 ms.date: 05/09/2023
 author: padmajayaraman
@@ -9,7 +9,7 @@ ms.custom: sap:Pipelines
 ms.service: azure-devops
 ---
 
-# Troubleshoot service connections for ARM service principal (manual)
+# Troubleshoot service connections for Azure RM service principal (manual)
 
 ## Create Azure RM service principal (manual)
 
@@ -29,7 +29,7 @@ For more information, see [Create a new application secret](/azure/active-direct
 
 Provide this SPN Contributor role or similar RBAC permissions on the subscription. You can even provide the Reader role at the subscription level. However, make sure that you provide Contributor access on the resource and resource group that these roles would update or deploy.
 
-To get the subscription details and create an ARM service connection by using the manual **Azure RM service principal** option, see [Create an Azure Resource Manager service connection with an existing service principal](/azure/devops/pipelines/library/connect-to-azure?view=azure-devops&preserve-view=true).
+To get the subscription details and create an Azure RM service connection by using the manual **Azure RM service principal** option, see [Create an Azure Resource Manager service connection with an existing service principal](/azure/devops/pipelines/library/connect-to-azure?view=azure-devops&preserve-view=true).
 
 Subscription details include the following information:
 
@@ -70,4 +70,3 @@ Make sure that the newly created SPN (App) has the Contributor permission on the
 ## See related
 
 [Troubleshoot Azure Resource Manager (ARM) service connection issues](overview-of-azure-resource-manager-service-connections.md)
-

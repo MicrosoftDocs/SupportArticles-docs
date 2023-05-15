@@ -1,7 +1,7 @@
 ---
-title: ARM service connection not listed for a task 
+title: Azure RM service connection not listed for a task 
 description: This article provides tips for an issue that you might encounter when a service connection is not listed for a task.
-ms.date: 05/14/2023
+ms.date: 05/15/2023
 author: padmajayaraman
 ms.author: v-jayaramanp
 ms.reviewer: cathmill, kirthishkt
@@ -9,11 +9,11 @@ ms.custom: sap:Pipelines
 ms.service: azure-devops
 ---
 
-# ARM service connection not listed for task
+# Azure RM service connection not listed for task
 
 ## Symptoms
 
-When you try to load the Azure Resource Manager (AzureRM) service connection in a pipeline task, such as Azure App service deploy or Azure App service manager, the service connection doesn't appear in the list. However, when you check the Service **Connection** tab under **Project Settings**, the service connection is available.
+When you try to load the Azure Resource Manager (Azure RM) service connection in a pipeline task, such as Azure App service deploy or Azure App service manager, the service connection doesn't appear in the list. However, when you check the Service **Connection** tab under **Project Settings**, the service connection is available.
 
 The **Settings / Service connections** screen shows that the Azure RM Service connection is listed.
 
@@ -67,4 +67,3 @@ The **Azure PowerShell task** screen shows that the Azure RM Service connection 
 [Troubleshoot Azure Resource Manager (ARM) service connection issues](overview-of-azure-resource-manager-service-connections.md)
 
 [Error when verifying the manual Azure RM service connection](create-azure-rm-service-principal-manual.md)
-

@@ -49,8 +49,8 @@ For more information, see [Endpoints - Update Service Endpoint](/rest/api/azure/
 
 ## See related
 
-[ARM service connection not listed for a task](azure-rm-service-connection-not-listed-for-a-task.md)
+[Azure RM service connection not listed for a task](azure-rm-service-connection-not-listed-for-a-task.md)
 
-[Fail to delete existing ARM service connection](fail-to-delete-existing-service-connection.md)
+[Fail to delete existing Azure RM service connection](fail-to-delete-existing-service-connection.md)
 
 [Troubleshoot common service connection issues](overview-of-azure-resource-manager-service-connections.md)
