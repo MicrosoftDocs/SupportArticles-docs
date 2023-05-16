@@ -32,7 +32,7 @@ When you try to bring a SQL Server cluster resource online for a virtual instanc
     User: N/A  
     Computer: \<Computer Name>
     Description:  
-    Cluster resource 'SQL Server (\<SQL Server instance name>)' in Resource Group '\<Cluster group name>'  failed.
+    Cluster resource 'SQL Server (\<SQL Server instance name>)' in Resource Group '\<Cluster group name>' failed.
 
   - Error message 2
 
