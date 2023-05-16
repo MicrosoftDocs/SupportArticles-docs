@@ -95,6 +95,8 @@
         href: database-engine/availability-groups/troubleshooting-alwayson-issues.md
       - name: Troubleshoot Always On Availability Group failover
         href: database-engine/availability-groups/troubleshooting-availability-group-failover.md
+      - name: Use AGDiag to diagnose availability group health events
+        href: database-engine/availability-groups/use-agdiag-diagnose-availability-group-health-events.md
       - name: Troubleshoot recovery queueing in an availability group
         href: database-engine/availability-groups/troubleshooting-recovery-queuing-in-alwayson-availability-group.md
   - name: Always On Failover Cluster Instance (FCI)
@@ -337,6 +339,8 @@
       href: database-engine/install/windows/update-or-slipstream-installation.md
     - name: Upgrade failures on Windows Server 2012
       href: database-engine/install/windows/error-upgrade-cluster-node.md
+    - name: Visual C++ Redistributable installed with SQL Server alerts end of life or obsolete
+      href: database-engine/install/windows/visual-c-redistributable-installed-sql-server-flagged-end-of-life-obsolete.md
     - name: Wait on the Database Engine recovery handle failed
       items:
       - name: Troubleshoot upgrade script failures when applying an update
@@ -789,6 +793,12 @@
     items:
     - name: SQL Server 2022 build versions
       href: releases/sqlserver-2022/build-versions.md
+    - name: Cumulative Update 4
+      items:
+      - name: Cumulative Update 4 (KB5026717)
+        href: releases/sqlserver-2022/cumulativeupdate4.md
+      - name: 'FIX: Errors after you apply a cumulative update to a contained availability group'
+        href: releases/sqlserver-2022/errors-apply-cu-contained-availability-group.md
     - name: Cumulative Update 3
       items:
       - name: Cumulative Update 3 (KB5024396)

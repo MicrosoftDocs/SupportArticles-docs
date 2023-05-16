@@ -11,7 +11,6 @@ metadata:
    title: Microsoft troubleshooting documentation | Microsoft Learn
    description: Find the documentation you need to troubleshoot issues and apply workarounds for the following commercial products from Microsoft.
    ms.topic: hub-page  
-   ms.service: troubleshoot
    ms.date: 02/06/2020
 
 
@@ -61,6 +60,11 @@ productDirectory:
     imageSrc: "media/hub-landing/sql-database-blue.svg"
     summary: Troubleshooting articles for SQL Server
     url: sql/welcome-sql-server.yml
+
+  - title: Surface
+    imageSrc: "media/hub-landing/windows-logo.png"
+    summary: Troubleshooting articles for Surface Hub and Surface devices
+    url: devices/index.yml
 
   - title: Endpoint management
     imageSrc: "media/hub-landing/microsoft.png"

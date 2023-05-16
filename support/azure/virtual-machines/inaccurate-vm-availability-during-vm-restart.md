@@ -1,7 +1,7 @@
 ---
-title: Inaccurate VM availability reported during a VM restart
-description: Understand why inaccurate virtual machine (VM) availability is reported during a virtual machine restart in Azure.
-ms.date: 5/4/2023
+title: VM availability might be inaccurate during VM restarts
+description: Understand why VM availability might be reported inaccurately during virtual machine restarts in Azure.
+ms.date: 5/12/2023
 author: DennisLee-DennisLee
 ms.author: v-dele
 editor: v-jsitser
@@ -9,17 +9,17 @@ ms.reviewer: macla, azurevmcptcic
 ms.service: virtual-machines
 ms.subservice: vm-health
 ---
-# Inaccurate VM availability reported during a VM restart
+# VM availability might be inaccurate during VM restarts
 
-This article discusses how an inaccurate virtual machine (VM) availability status might be reported during a VM restart that's issued by an authorized user or caused by a Guest OS crash. The inaccurate VM availability status might be published to the following Microsoft Azure resources:
+This article discusses how VM availability might be reported inaccurately during a virtual machine (VM) restart that's issued by an authorized user or caused by a Guest OS crash. The inaccurate VM availability status might be published to the following Microsoft Azure resources:
 
-- Azure Monitor
+- Azure Monitor Metrics
 - Azure Resource Graph
 - Azure Resource Health
 
 ## Symptoms
 
-Azure continues to report a VM as available during certain situations, such as an authorized user restarting the VM, or a crash that is initiated within the Guest OS and causes a VM restart. In these kinds of situations, the following things occur:
+Azure inaccurately continues to report a VM as available during a few rare situations, such as an authorized user restarting the VM, or a crash that is initiated within the Guest OS and causes a VM restart. In these kinds of situations, the following things occur:
 
 - The [VM availability metric in Monitor](/azure/azure-monitor/vm/tutorial-monitor-vm-alert-availability?context=%2Fazure%2Fvirtual-machines%2Fcontext%2Fcontext#view-the-vm-availability-metric) continues to emit a value of **1**. This indicates that the VM is available.
 
@@ -37,5 +37,9 @@ If you see that the VM has a status of **Available**, make sure that the status 
 
 > [!NOTE]  
 > We're prioritizing infrastructure improvements to minimize the delay in detection and notification. This investment is part of [Project Flash](https://azure.microsoft.com/blog/advancing-azure-virtual-machine-availability-monitoring-with-project-flash/). This project is intended to maintain highly accurate and actionable VM availability information.
+
+## References
+
+- [Reference: Monitoring Azure virtual machine data](/azure/virtual-machines/monitor-vm-reference)
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

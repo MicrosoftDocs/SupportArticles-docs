@@ -5,8 +5,8 @@ summary: Technical content to troubleshoot issues in Microsoft Dynamics 365
 metadata:
   ms.topic: hub-page
   services: service
-  ms.prod: dynamics-365
   ms.date: 04/27/2023
+  ms.service: dynamics-365
 
 additionalContent:
   sections:
