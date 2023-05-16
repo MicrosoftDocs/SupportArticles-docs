@@ -191,14 +191,14 @@ In each section, assume that the VM has two network interfaces that have any of 
 
       4. Add the following content to the route file. Replace the network and gateway values accordingly.
 
-         - Two NICs in the same subnet:
+          - Two NICs in the same subnet:
 
             ```output
             10.0.1.0/24 dev eth1 table eth1-rt
             default via 10.0.1.1 dev eth1 table eth1-rt
             ```
 
-         - Two NICs in different subnets but in the same VNET:
+          - Two NICs in different subnets but in the same VNET:
 
             ```output
             10.0.2.0/24 dev eth1 table eth1-rt
@@ -225,7 +225,7 @@ In each section, assume that the VM has two network interfaces that have any of 
 
 ## [RHEL/CentOS 8._x_](#tab/rhel8)
 
-1. By default, policy routing isn't installed in Red Hat Enterprise Linux (RHEL)/CentOS 8._x_. To configure multiple network interfaces, install and enable the policy routing. To do this, run the following commands:
+1. By default, policy routing isn't installed in Red Hat Enterprise Linux (RHEL)/CentOS 8.*x*. To configure multiple network interfaces, install and enable the policy routing. To do this, run the following commands:
 
     ```bash
     sudo yum install NetworkManager-dispatcher-routing-rules -y
@@ -233,7 +233,7 @@ In each section, assume that the VM has two network interfaces that have any of 
     sudo systemctl start NetworkManager-dispatcher.service
     ```
 
-2. In RHEL/CentOS 8._x_, the `NM_CONTROLLED` setting is set to `yes` in each network configuration file (*/etc/sysconfig/network-scripts/ifcfg-eth#*) by default. To avoid issues, make sure this setting isn't set to `no` in your specific configuration file. Also, make sure that a corresponding network configuration file is created per each network interface. The following is the sample configuration for network configuration files:
+2. In RHEL/CentOS 8.*x*, the `NM_CONTROLLED` setting is set to `yes` in each network configuration file (*/etc/sysconfig/network-scripts/ifcfg-eth#*) by default. To avoid issues, make sure this setting isn't set to `no` in your specific configuration file. Also, make sure that a corresponding network configuration file is created per each network interface. The following is the sample configuration for network configuration files:
 
     - */etc/sysconfig/network-scripts/ifcfg-eth0*:
 
@@ -380,7 +380,7 @@ In each section, assume that the VM has two network interfaces that have any of 
     sudo echo "200 eth0-rt" >> /etc/iproute2/rt_tables
     sudo echo "201 eth1-rt" >> /etc/iproute2/rt_tables
     ```
-    
+
     If more network interfaces are attached to the VM, add extra routing tables (for example, *202 eth2-rt*, *203 eth3-rt*, and so on).
 
 2. If Cloud-Init automation is set (by default, it's set in the Azure Ubuntu images), make sure that the network CI automation is disabled so that the */etc/netplan/50-cloud-init.yaml* file doesn't get overwritten every time the system is restarted.
@@ -550,7 +550,7 @@ In each section, assume that the VM has two network interfaces that have any of 
     sudo echo "200 eth0-rt" >> /etc/iproute2/rt_tables
     sudo echo "201 eth1-rt" >> /etc/iproute2/rt_tables
     ```
-    
+
     If more network interfaces are attached to the VM, add extra routing tables (for example, *202 eth2-rt*, *203 eth3-rt*, and so on).
 
 2. Create the scripts that have the routes and rules for each network interface in the */etc/sysconfig/network/scripts/* directory by using any text editor (in the following commands, the vi text editor is used).
@@ -682,7 +682,7 @@ In each section, assume that the VM has two network interfaces that have any of 
     sudo echo "200 eth0-rt" >> /etc/iproute2/rt_tables
     sudo echo "201 eth1-rt" >> /etc/iproute2/rt_tables
     ```
-    
+
     If more network interfaces are attached to the VM, add extra routing tables (for example, *202 eth2-rt*, *203 eth3-rt*, and so on).
 
 2. Create or modify the configuration file */etc/network/interfaces.d/50-cloud-init* with any text editor.
@@ -690,8 +690,9 @@ In each section, assume that the VM has two network interfaces that have any of 
     ```bash
     sudo vi /etc/network/interfaces.d/50-cloud-init
     ```
+
     Use the following configuration:
-    
+
     - Two NICs in the same subnet:
 
         ```output
@@ -735,7 +736,7 @@ In each section, assume that the VM has two network interfaces that have any of 
         up /usr/sbin/ip rule add from 10.0.2.5/32 table eth1-rt
         up /usr/sbin/ip rule add to 10.0.2.5/32 table eth1-rt
         ```
-    
+
     Adjust the network and IP address information accordingly, and preserve the 32-bit value. If there are more than two NICs, make sure that the corresponding IP rules and IP routes are included for each one.
 
 3. Activate the new configuration by using the following command:
