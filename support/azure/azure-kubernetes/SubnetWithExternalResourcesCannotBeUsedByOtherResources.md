@@ -1,35 +1,31 @@
 ---
-title: SubnetWithExternalResourcesCannotBeUsedByOtherResources
+title: AKS cluster error SubnetWithExternalResourcesCannotBeUsedByOtherResources
 description: Provides solutions to an error that occurs when you create, upgrade or scale a Microsoft Azure Kubernetes Service cluster.
-ms.date: 05/10/2023
+ms.date: 05/16/2023
 author: axelgMS
-ms.author: axelgMS
+ms.author: axelg
 ms.reviewer: chiragpa, eddie
 ms.service: azure-kubernetes-service
 ---
-# Failed to create or upgrade or scale Azure Kubernetes Service cluster due to "Subnet with external resources cannot be used by other resources"
+# Error when you create, update or scale Azure Kubernetes Service clusters
 
-This article provides solutions to the "Subnet with external resources cannot be used by other resources" error that occurs when you create, upgrade or scale a Microsoft Azure Kubernetes Service (AKS) cluster.
+This article provides solutions to an error that occurs when you create, update or scale a Microsoft Azure Kubernetes Service (AKS) cluster.
 
 ## Symptoms
 
-You receive following error message while trying to perform a Create or Update operation on an AKS cluster:
+When attempting to create an AKS cluster or perform an "update" or "scale" operation on an existing AKS cluster, you may encounter the following error message:
 
-> Code: SubnetWithExternalResourcesCannotBeUsedByOtherResources
+> Code: SubnetWithExternalResourcesCannotBeUsedByOtherResources  
+> Error Message: Subnet \<subnet1 URI> referenced by \<URI of the AKS resource referencing the subnet1> cannot be used because it contains external resources. The external resources in this subnet are \<URI of the external reference used by subnet1>. You need to delete these external resources before deploying into this subnet.
 
-> Sample error message: Message="Subnet /subscriptions/*\<subscription-id-guid>*/resourceGroups/*\<ResourceGroup-name>*/providers/*\<provider-and-resource-name>* referenced by /subscriptions/*\<subscription-id-guid>*/resourceGroups/*\<ResourceGroup-name>*/providers/*\<provider-and-resource-name>* cannot be used because it contains external resources. The external resources in this subnet are (*\<service-name>*, /subscriptions/*\<subscription-id-guid>*/resourceGroups/*\<ResourceGroup-name>*/providers/*\<provider-and-resource-name>* ). You need to delete these external resources before deploying into this subnet."
+## Cause
 
+This error is related to the configuration of subnets. It means that you are trying to use a subnet that already has external resources associated with it for another resource. However, a subnet that has external resources associated with it isn't allowed to be used by other resources. 
+
+## Solution
   
-## Cause 
-  
-The error message "Subnet with external resources cannot be used by other resources" is related to the configuration of subnets in Azure. It means that you are trying to use a subnet that already has external resources associated with it for another resource, which is not allowed.
-According to the Azure documentation, a subnet that has external resources associated with it cannot be used by other resources. 
-
-To resolve this issue, use one of the following solutions.
-
-## Solution : Create a new subnet
-
-If you need to use the subnet for another resource, you must create a new subnet and associate it with the new resource or delete the external reference including service link associate, delegation etc. You can find more information about this error message and how to resolve it in the [Azure documentation](https://learn.microsoft.com/azure/virtual-network/virtual-network-manage-subnet)
- 
+If you need to use the subnet for another resource, there are two methods:
+-	Create a new subnet and associate it with the new resource.
+-	Delete the external references, including service association links, subnet delegations, and so on.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
