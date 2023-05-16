@@ -29,7 +29,7 @@ The command may fail, and you may get errors 17053, 926, and other error message
 
 Error 926 indicates that the database is marked as suspect. This error message refers to the internal snapshot and not to the actual database. The status of the database is online, and the database is functional.
 
-Error 17053 is a SQL Server error used to disclose the underlying OS error. It contains the name of the NTFS file system's alternate streams that are used for the internal snapshot. The error message indicates the real reason for the problem.
+Error 17053 is a SQL Server error used to disclose the underlying OS error. It contains the name of the internal database snapshots that are used for the internal snapshot. The error message indicates the real reason for the problem.
 
 The following sections show the detailed error messages you may get. For more clarification regarding these error messages, see the [More information](#more-information) section.
 
