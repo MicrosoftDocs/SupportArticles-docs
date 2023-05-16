@@ -1,6 +1,6 @@
 ---
-title: Microsoft Teams meeting support for shared mailboxes
-description: Discusses supported features when you schedule and manage Microsoft Teams meetings by using shared mailboxes, and lists prerequisites for each feature.
+title: Available Teams meeting features for shared mailboxes
+description: Discusses available features when you schedule and manage Microsoft Teams meetings by using shared mailboxes, and lists detail information for each feature.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -14,47 +14,24 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 5/11/2023
+ms.date: 5/15/2023
 ---
-# Microsoft Teams meeting support for shared mailboxes
+# Teams meeting features for shared mailboxes
 
-When you schedule and manage Microsoft Teams meetings by using shared mailboxes, it's important to follow specific configuration and setup guidelines to take full advantage of the available capabilities. The following table outlines the supported features and the prerequisites for each feature. Understanding these requirements helps to ensure a smooth and successful meeting experience.
+For Microsoft Teams meetings that are managed by using a shared mailbox, only a limited number of features are available. The following table lists the details for each feature.
 
 > [!NOTE]
 > Shared mailboxes aren't intended for direct login. Keep the shared mailbox account in the **Disabled** state, and avoid resetting its password or signing in by using the shared mailbox user account.
 
-|Supported features|Prerequisites and notes|
+|Available feature|Details|
 |----------|-----------|
-|Create meetings|<ul><li>The meeting must be created by a delegate from the shared mailbox calendar.</li><li>Delegates can assign co-organizers through the meeting options.</li></ul>|
-|Organizer ID||
-|Update meetings|<ul><li>The meeting must be updated from the shared mailbox calendar.</li><li>The meeting can be updated by the organizing delegate or other delegates who have access to the shared mailbox.</li></ul>|
-|Meeting options|Meeting options can be updated by the organizing delegate or co-organizers who have delegate access to the shared mailbox.<br/><br/>**Note:** Depending on how the shared mailbox is added to Outlook, you might not be able to access meeting options for a meeting that's scheduled by using the shared mailbox. In this case, a workaround is to [remove the shared mailbox](/outlook/troubleshoot/performance/slow-performance-if-having-many-shared-folder-or-mailboxes-open#remove-a-shared-mailbox) and then add it again by using the **File** > **Add Account** option in Outlook.|
-|Attendance reports|The organizing delegate can access attendance reports when the following conditions are met:<ul><li>The shared mailbox is assigned a Microsoft Teams license.</li><li>The delegate is assigned the co-organizer role.</li></ul>|
-|Meeting recording|The initiator can manage meeting recording if either of the following conditions is met:<ul><li>The shared mailbox is assigned a Microsoft Teams license.</li><li>The [global meeting policy](/microsoftteams/meetings-policies-recording-and-transcription#meeting-recording) allows cloud recording if the shared mailbox is unlicensed.</li></ul>|
-|Breakout rooms|To manage breakout rooms, all the following conditions must be met:<ul><li>The shared mailbox is assigned a Microsoft Teams license.</li><li>The user is assigned the co-organizer role and has delegate access to the shared mailbox.</li><li>The user must first join the meeting.</li></ul>|
-|Audio conferencing|The shared mailbox must be assigned a [license for Teams Audio Conferencing](/microsoftteams/deploy-audio-conferencing-teams-landing-page#audio-conferencing-prerequisites).<br/><br/>**Note:** Meeting coordinates for shared mailboxes won't have PSTN information associated with the meeting.|
-|Custom meeting policy|The shared mailbox must be assigned a Microsoft Teams license.|
-|Chat before meeting|This feature is available to only the organizing delegate.|
+|Create meetings|<ul><li>The meeting must be created by a delegate by using the shared mailbox calendar.</li><li>Delegates can [add co-organizers to the meeting](https://support.microsoft.com/office/add-co-organizers-to-a-meeting-in-teams-0de2c31c-8207-47ff-ae2a-fc1792d466e2).</li></ul>|
+|Update meetings|<ul><li>The meeting must be updated by using the shared mailbox calendar.</li><li>The meeting can be updated by the delegate who organizes the meeting, or by other delegates who have **Full Access** permission to the shared mailbox.</li></ul>|
+|Update meeting options|Meeting options can be updated only by the delegate who organizes the meeting, or by co-organizers who have delegate access to the shared mailbox.<br/><br/>Depending on how the shared mailbox is added to Microsoft Outlook, in some scenarios, you might not be able to access the meeting options for a meeting that's scheduled by using the shared mailbox. In this case, a workaround is to [remove the shared mailbox](/outlook/troubleshoot/performance/slow-performance-if-having-many-shared-folder-or-mailboxes-open#remove-a-shared-mailbox) and then add it again by using the **File** > **Add Account** option in Outlook.|
+|Access attendance reports|The delegate who organizes the meeting can access attendance reports when the following conditions are met:<ul><li>The shared mailbox is assigned a Teams license.</li><li>The delegate is assigned the co-organizer role.</li></ul>|
+|Manage meeting recordings|The recording initiator can manage meeting recordings if either of the following conditions is met:<ul><li>The shared mailbox is assigned a Teams license.</li><li>The [global meeting policy](/microsoftteams/meetings-policies-recording-and-transcription#meeting-recording) allows cloud recording if the shared mailbox is unlicensed.</li></ul>|
+|Manage breakout rooms|For a user to manage breakout rooms, all the following conditions must be met:<ul><li>The shared mailbox is assigned a Teams license.</li><li>The user is assigned the co-organizer role and has delegate access to the shared mailbox.</li><li>The user must first join the meeting.</li></ul>|
+|Set up audio conferencing|To set up audio conferencing, the shared mailbox must be assigned a [license for Teams Audio Conferencing](/microsoftteams/deploy-audio-conferencing-teams-landing-page#audio-conferencing-prerequisites).<br/><br/>**Note:** The meeting coordinates won't have PSTN information associated with the meeting.|
+|Create custom meeting policies|To create custom meeting policies, the shared mailbox must be assigned a Teams license.|
 
-For more information about license options, see the following Microsoft websites:
-
-- [Compare Microsoft Teams pricing and plans for your business](https://www.microsoft.com/microsoft-teams/compare-microsoft-teams-options?activetab=pivot%3aprimaryr1)
-- [Compare Microsoft 365 Enterprise plans](https://www.microsoft.com/microsoft-365/enterprise/compare-office-365-plans)
-- [Microsoft Teams add-on licenses](/microsoftteams/teams-add-on-licensing/microsoft-teams-add-on-licensing)
-
-## Differences between shared mailboxes and Microsoft 365 group mailboxes
-
-When you choose between shared mailboxes and Microsoft 365 group mailboxes for your Teams meeting needs, it's important to understand the functionalities of different mailbox type. The following table compares the capabilities of each mailbox type for various Teams meeting features, licensing, and other functionalities. This includes delegation options, pre-meeting chat, voicemail greetings, and the ability to send email messages on behalf of the mailbox or group.
-
-|Capability|Shared mailboxes|Microsoft 365 group mailboxes
-|----------|-----------|-----------|
-|Create meetings|Delegates|Members|
-|Update meetings|Delegates|Members|
-|Meeting options|<ul><li>Organizing delegates</li><li>Co-organizers with delegate access</li></ul>|<ul><li>Organizing members</li><li>Co-organizers</li></ul>|
-|Attendance reports|Organizing delegates who are assigned the co-organizer role|<ul><li>Organizing members</li><li>Co-organizers</li></ul>|
-|Meeting recording|Initiator|Initiator|
-|Breakout rooms (must first join the meeting)|Co-organizers with delegate access|<ul><li>Organizing members</li><li>Co-organizers</li></ul>|
-|Licensing, including audio conferencing|Licensing on the shared mailbox|Licensing on the group member|
-|Chat before meeting|Organizing delegates|Everyone who is invited to the meeting|
-|Voicemail greeting|Greetings can't be delegated|Greetings can be delegated through voice apps|
-|Send As|Yes|No|
+For more information about Teams license options, see [Microsoft Teams add-on licenses](/microsoftteams/teams-add-on-licensing/microsoft-teams-add-on-licensing).
