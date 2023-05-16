@@ -34,7 +34,7 @@ You can ignore these alerts for the Microsoft Visual C++ Redistributable when pa
 > [!NOTE]
 > There may be third-party products, such as security scanners, that flag the Redistributable as expired. If the Microsoft Visual C++ Redistributable is installed by a Microsoft product that's still in support, the Redistributable is in support per the Microsoft component policy for that product. For more information, see [Microsoft Visual C++ Redistributable](/visualstudio/productinfo/vs-servicing#microsoft-visual-c-redistributable).
 
-Don't uninstall any component that SQL Server installs as part of the standard setup and patching process. If you remove the Microsoft Visual C++ Redistributable, SQL Server components and features might encounter unexpected behavior and results. For example, programs within SQL Server rely on the specific behavior of [C runtime functions](/cpp/c-runtime-library/reference/crt-alphabetical-function-reference) and may fail if VC++ runtime is removed. You may also notice that these components get reinstalled when you perform patching of the SQL Server instances.
+Don't uninstall any component that SQL Server installs as part of the standard setup and patching process. If you remove the Microsoft Visual C++ Redistributable, SQL Server components and features might encounter unexpected behavior and results. For example, programs within SQL Server rely on the specific behavior of [C runtime functions](/cpp/c-runtime-library/reference/crt-alphabetical-function-reference) and may fail if Visual C++ runtime is removed. You may also notice that these components get reinstalled when you perform patching of the SQL Server instances.
 
 ## More information
 
