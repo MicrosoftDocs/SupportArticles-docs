@@ -99,7 +99,7 @@ To resolve this problem, you must manually re-create the resource-specific regis
         Value Type: REG_SZ  
         Value Data: \<Name of the virtual SQL server>
 
-4. Quit Registry Editor.After you create the resource-specific registry keys, you can bring the SQL Server cluster resource online successfully.
+4. Quit Registry Editor. After you create the resource-specific registry keys, you can bring the SQL Server cluster resource online successfully.
 
    If you notice that a SQL Server Agent cluster resource can't be brought online, you must create the same set of resource-specific keys that correspond to the SQL Server Agent cluster resource.
 

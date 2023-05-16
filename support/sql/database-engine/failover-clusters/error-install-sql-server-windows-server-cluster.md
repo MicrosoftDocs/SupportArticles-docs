@@ -5,9 +5,10 @@ ms.date: 11/19/2020
 ms.custom: sap:Failover Clusters
 ms.prod: sql
 ---
+
 # Error message when you install SQL Server on a Windows Server cluster
 
-This article helps you resolve the problem that occurs when you install SQL Server on Windows Server cluster.
+This article helps you resolve the problem that occurs when you install SQL Server on a Windows Server cluster.
 
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 953748
@@ -21,7 +22,7 @@ When you install Microsoft SQL Server on a Windows Server cluster, the cluster v
 The setup log file may contain a message that resembles the following:
 
 > 2008-05-20 05:27:18 Slp: Evaluating rule : Cluster_VerifyForErrors  
-2008-05-20 05:27:18 Slp: Rule running on machine: **SQLNode_Name**  
+2008-05-20 05:27:18 Slp: Rule running on machine: SQLNode_Name  
 2008-05-20 05:27:18 Slp: Rule evaluation done : Failed  
 2008-05-20 05:27:18 Slp: Rule evaluation message: The cluster either has not been verified or there are errors or failures in the verification report.
 
@@ -42,7 +43,7 @@ To work around this issue, you must fix the problem that caused validation to fa
 > [!NOTE]
 > If you try this command line installation option and SQL Server Setup fails, make sure that the cluster hardware configuration is valid, and then contact Microsoft Customer Support Services (CSS) for more help.
 
-At a command prompt, change to the hard disk drive and to the folder that contains SQL Server Setup (Setup.exe). Then, type one of the following commands to skip the validation rule:
+At a command prompt, change to the hard disk drive and to the folder that contains SQL Server Setup (*Setup.exe*). Then, type one of the following commands to skip the validation rule:
 
 - For an integrated failover Add-Note setup, run the command on each node that is being added: `Setup /SkipRules=Cluster_VerifyForErrors /Action=InstallFailoverCluster`.
 

@@ -42,7 +42,7 @@ If this information is not helpful, see [More information about Always On Availa
 
 ## I am having problems configuring Always On Availability groups
 
-Typical configuration problems include Always On Availability Groups are disabled, accounts are incorrectly configured, the database mirroring endpoint does not exist, the endpoint is inaccessible (SQL Server Error 1418), network access does not exist, and a join database command fails (SQL Server Error 35250). Review the following document for help on troubleshooting these issues:
+Typical configuration problems include Always On Availability Groups are disabled, accounts are incorrectly configured, the database mirroring endpoint does not exist, the endpoint is inaccessible (SQL Server Error 1418), network access doesn't exist, and a join database command fails (SQL Server Error 35250). Review the following document for help on troubleshooting these issues:
 
 [Troubleshoot Always On Availability Groups Configuration (SQL Server)](/sql/database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server)
 
@@ -69,7 +69,7 @@ If the issue still exists, see [More information about Always On Availability Gr
 
 ## Automatic Failover is not working as expected
 
-If you notice that the automatic failover is not working as expected either during testing or in production, see: [Troubleshooting automatic failover problems in SQL Server 2012 Always On environments](https://support.microsoft.com/kb/2833707).
+If you notice that the automatic failover isn't working as expected either during testing or in production, see: [Troubleshooting automatic failover problems in SQL Server 2012 Always On environments](https://support.microsoft.com/kb/2833707).
 
 Improper configuration of **Maximum failures in the specified period** is one of the leading causes for primary not automatically failing over to the secondary. The default value for this setting is **N-1**, where N is the number of replicas. For more information, see [Failover cluster (group) maximum failures limit](https://deep.data.blog/2012/03/09/failover-cluster-group-maximum-failures-limit/).
 
@@ -128,7 +128,7 @@ You may notice that changes on primary replica are not getting propagated to sec
 - For SQL Server 2012 and SQL Server 2014 environments, see [FIX: Slow synchronization when disks have different sector sizes for primary and secondary replica log files in SQL Server AG and Logshipping environments](https://support.microsoft.com/kb/3009974).
 
 - Check if the secondary nodes are in a Paused state in the Cluster administrator.
-- Review this Troubleshooting article: [Troubleshoot: Changes on the Primary Replica are not Reflected on the Secondary Replica](/previous-versions/sql/sql-server-2012/dn135335(v=sql.110)).
+- Review this troubleshooting article [Troubleshoot: Changes on the Primary Replica are not Reflected on the Secondary Replica](/previous-versions/sql/sql-server-2012/dn135335(v=sql.110)).
 
 If the issue still exists, see [More information about Always On Availability Groups](#more-information-about-always-on-availability-groups).
 
