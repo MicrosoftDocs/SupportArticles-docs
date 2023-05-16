@@ -20,8 +20,6 @@ search.appverid: MET150
 ms.date: 05/15/2023
 ---
 
-Secondary content sets: Outlook for Windows\Email-management, Outlook for Mac\Email messages.
-
 # Read receipt shows incorrect information
 
 ## Symptoms
@@ -46,7 +44,7 @@ For example, the read receipt might contain the following text:
 
 ## Cause
 
-The issues occur if `UseExchangeDSNs` is set as the [DSNConversionMode](/powershell/module/exchange/set-transportconfig#-dsnconversionmode) parameter value in the transport configuration settings for your Microsoft Exchange organization.
+The issues occur if `UseExchangeDSNs` is the [DSNConversionMode](/powershell/module/exchange/set-transportconfig#-dsnconversionmode) parameter value in the transport configuration settings for your Microsoft Exchange organization.
 
 > [!NOTE]
 > The default value of the DSNConversionMode parameter in Exchange Server 2013 is `UseExchangeDSNs`. In later Exchange Server versions, the default value is `PreserveDSNBody`. However, if you upgraded from a previous Exchange Server version that had DSNConversionMode set to `UseExchangeDSNs`, the previous value might be retained.
