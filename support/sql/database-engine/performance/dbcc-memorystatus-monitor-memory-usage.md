@@ -331,7 +331,7 @@ The elements in this section are the following:
 
 ## Optimization
 
-The next section is a summary of the users who are trying to optimize queries at the same time.
+The next section is a summary for the users who are trying to optimize queries at the same time.
 
 ```output
 Optimization Queue (internal)      Value
