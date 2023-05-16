@@ -20,7 +20,7 @@ This article lists the Microsoft SQL Server 2022 builds that were released after
 | CU3 | 16.0.4025.1 | 2022.160.4025.1 | 16.0.43.211 | 2022.160.43.211 | [KB5024396](cumulativeupdate3.md) | April 13, 2023|
 | CU2 | 16.0.4015.1 | 2022.160.4015.1 | 16.0.43.208 | 2022.160.43.208 | [KB5023127](cumulativeupdate2.md) | March 15, 2023|
 | CU1 | 16.0.4003.1 | 2022.160.4003.1| 16.0.43.208 | 2022.160.43.208 | [KB5022375](cumulativeupdate1.md) | February 16, 2023|
-| RTM | 16.0.1000.6 | 2022.160.1000.6| 16.0.42.209 | 2022.160.42.209 | NA| November 16, 2022|
+| RTM | 16.0.1000.6 | 2022.160.1000.6| 16.0.42.209 | 2022.160.42.209 | [SQL 2022 Release Notes](https://learn.microsoft.com/sql/sql-server/sql-server-2022-release-notes) | November 16, 2022|
 
 ## SQL Server 2022 GDR builds
 
