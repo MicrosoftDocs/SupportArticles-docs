@@ -44,14 +44,14 @@ For example, the read receipt might contain the following text:
 
 ## Cause
 
-The issues occur if `UseExchangeDSNs` is the [DSNConversionMode](/powershell/module/exchange/set-transportconfig#-dsnconversionmode) parameter value in the transport configuration settings for your Microsoft Exchange organization.
+The issues occur if the [DSNConversionMode](/powershell/module/exchange/set-transportconfig#-dsnconversionmode) parameter value is set to `UseExchangeDSNs` in the transport configuration settings for your Microsoft Exchange organization.
 
 > [!NOTE]
 > The default value of the DSNConversionMode parameter in Exchange Server 2013 is `UseExchangeDSNs`. In later Exchange Server versions, the default value is `PreserveDSNBody`. However, if you upgraded from a previous Exchange Server version that had DSNConversionMode set to `UseExchangeDSNs`, the previous value might be retained.
 
 ## Resolution
 
-To determine the DSNConversionMode parameter value, run the following command:
+To determine the [DSNConversionMode](/powershell/module/exchange/set-transportconfig#-dsnconversionmode) parameter value, run the following command:
 
 ```powershell
 Get-TransportConfig | FL DSNConversionMode
@@ -59,13 +59,13 @@ Get-TransportConfig | FL DSNConversionMode
 
 To resolve this issue, follow these steps:
 
-1. Change the [DSNConversionMode](/powershell/module/exchange/set-transportconfig#-dsnconversionmode) parameter value to `PreserveDSNBody` by running the following command:
+1. Change the DSNConversionMode parameter value to `PreserveDSNBody` by running the following command:
 
    ```powershell
    Set-TransportConfig -DSNConversionMode PreserveDSNBody
    ```
 
-   **Note:** The DSNConversionMode parameter value `DoNotConvert` also fixes the issue.
+   The DSNConversionMode parameter value `DoNotConvert` also fixes the issue.
 
 2. Wait for the change to replicate, or restart the transport service by running the following command:
 
