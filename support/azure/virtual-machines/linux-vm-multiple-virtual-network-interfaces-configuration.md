@@ -1,7 +1,7 @@
 ---
 title: Configure multiple network interfaces in Azure Linux virtual machines
 description: Describes how to configure multiple network interfaces in Azure Linux virtual machines running the most common Linux distributions.
-ms.date: 05/15/2023
+ms.date: 05/16/2023
 ms.author: divargas
 author: divargas-msft
 ms.reviewer: malachma
@@ -49,7 +49,7 @@ The following sections provides the required configuration for two network inter
 > [!NOTE]
 > Run all the commands in the following sections by using root privileges (by switching to the root or by using the `sudo` command utility).
 
-In each section, assume that the VM has two network interfaces have any of the following settings:
+In each section, assume that the VM has two network interfaces that have any of the following settings:
 
 - Routing (the output of the `sudo ip route show` command):
 
@@ -191,14 +191,14 @@ In each section, assume that the VM has two network interfaces have any of the f
 
       4. Add the following content to the route file. Replace the network and gateway values accordingly.
 
-        - Two NICs in the same subnet:
+         - Two NICs in the same subnet:
 
             ```output
             10.0.1.0/24 dev eth1 table eth1-rt
             default via 10.0.1.1 dev eth1 table eth1-rt
             ```
 
-        - Two NICs in different subnets but in the same VNET:
+         - Two NICs in different subnets but in the same VNET:
 
             ```output
             10.0.2.0/24 dev eth1 table eth1-rt
@@ -641,13 +641,13 @@ In each section, assume that the VM has two network interfaces have any of the f
     ```
 
     ```output
-    STARTMODE="hotplug"
-    BOOTPROTO="dhcp"
-    DHCLIENT_SET_DEFAULT_ROUTE="yes"
-    DHCLIENT_ROUTE_PRIORITY="10100"
-    CLOUD_NETCONFIG_MANAGE="yes"
-    POST_DOWN_SCRIPT="compat:suse:cloud-netconfig-cleanup"
-    POST_UP_SCRIPT="compat:suse:/etc/sysconfig/network/scripts/ifup-route.eth1"
+    STARTMODE='hotplug'
+    BOOTPROTO='dhcp'
+    DHCLIENT_SET_DEFAULT_ROUTE='yes'
+    DHCLIENT_ROUTE_PRIORITY='10100'
+    CLOUD_NETCONFIG_MANAGE='yes'
+    POST_DOWN_SCRIPT='compat:suse:cloud-netconfig-cleanup'
+    POST_UP_SCRIPT='compat:suse:/etc/sysconfig/network/scripts/ifup-route.eth1'
     ```
 
     If the */etc/sysconfig/network/ifcfg-eth1* file doesn't exist, create it by using the content from the */etc/sysconfig/network/ifcfg-eth0* file. Make sure the `POST_UP_SCRIPT` is adjusted to use the corresponding script. To do this, execute the following command:
