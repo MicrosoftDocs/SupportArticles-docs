@@ -41,6 +41,10 @@ To maintain the behavior of transport rules, change the **Match sender address i
    :::image type="content" source="media/autoforward-mail-exclusions-not-honored-transport-rule/transport-rule-error.png" alt-text="Screenshot of selecting Header or envelope.":::
 
 > [!NOTE]
+> Mail flow rule matches auto forward messages based on message class (IPM.note.forward). The Outlook web app forwarding (ForwardingSmtpAddress) or forwarding set by the admins on the properties of the mailbox (ForwardingAddress) have normal message class (IPM.Note), so transport rules won’t detect them.
+> For more information on forwarding see [All you need to know about automatic email forwarding in Exchange Online](https://techcommunity.microsoft.com/t5/exchange-team-blog/all-you-need-to-know-about-automatic-email-forwarding-in/ba-p/2074888)
+
+> [!NOTE]
 > This change also affects the mailbox redirect rule, because the sender that's evaluated by the transport rule is now the original sender, and not the mailbox on which the rule is set. To maintain the behavior of this rule, set the exception in the transport rule based on the recipient instead of the sender. Alternatively, change this rule to an automatic forwarding rule.
 
 ## More information
