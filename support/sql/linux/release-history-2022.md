@@ -4,7 +4,7 @@ description: This article contains the release history for SQL Server 2022 runni
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, vanto
-ms.date: 05/11/2023
+ms.date: 05/15/2023
 ms.prod: sql
 ---
 # <a id="release-history"></a> Release history for SQL Server 2022 on Linux
@@ -28,6 +28,9 @@ The following table lists the release history for [!INCLUDE[sql-server-2022](../
 ## <a id="CU4"></a> CU 4 (May 2023)
 
 This is the Cumulative Update 4 (CU 4) release of [!INCLUDE[sql-server-2022](../includes/versions/sql-server-2022.md)]. The [!INCLUDE[sql-server-database-engine](../includes/versions/sql-server-database-engine.md)] version for this release is 16.0.4035.4. For information about the fixes and improvements in this release, see the [Support article](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate4).
+
+> [!NOTE]  
+> **SLES v15 SP4** is now supported on [!INCLUDE[sql-server-2022](../includes/versions/sql-server-2022.md)] starting with CU 4.
 
 ### Package details
 
