@@ -38,7 +38,7 @@ Don't uninstall any component that SQL Server installs as part of the standard s
 
 ## More information
 
-- The [Redistributable package policy](/troubleshoot/developer/visualstudio/cpp/libraries/minimum-service-pack-levels#summary) indicates:
+- The [Redistributable package policy](../../../developer/visualstudio/cpp/libraries/minimum-service-pack-levels#summary) indicates:
 
    If the Visual C++ Redistributable is installed by a product that's still in support, the Redistributable is in support per the Lifecycle General Policy for that product.
 
