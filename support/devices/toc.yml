@@ -14,10 +14,10 @@
   - name: Surface Hub
     items:
     - name: Surface Hub troubleshooting
-      href: /surface-hub/troubleshoot-surface-hub?toc=/troubleshoot/devices/toc.json
+      href: /surface-hub/troubleshoot-surface-hub?context=/troubleshoot/devices/context/context
     - name: Collect Surface Hub log files
-      href: /surface-hub/collect-surface-hub-log-files?toc=/troubleshoot/devices/toc.json
+      href: /surface-hub/collect-surface-hub-log-files?context=/troubleshoot/devices/context/context
     - name: Third-Party Stand policy and waiver
-      href: /surface-hub/surface-hub-third-party-stand-policy-waiver?toc=/troubleshoot/devices/toc.json
+      href: /surface-hub/surface-hub-third-party-stand-policy-waiver?context=/troubleshoot/devices/context/context
     - name: Surface Hub can't download updates from Windows Update
-      href: /surface-hub/surface-hub-cannot-download-updates-from-windows-update?toc=/troubleshoot/devices/toc.json
+      href: /surface-hub/surface-hub-cannot-download-updates-from-windows-update?context=/troubleshoot/devices/context/context

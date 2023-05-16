@@ -29,8 +29,8 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Surface Hub update history
-            url: /surface-hub/surface-hub-update-history?toc=/troubleshoot/devices/toc.json
+            url: /surface-hub/surface-hub-update-history?context=/troubleshoot/devices/context/context
           - text: Troubleshoot Surface Hub
-            url: /surface-hub/troubleshoot-surface-hub?toc=/troubleshoot/devices/toc.json
+            url: /surface-hub/troubleshoot-surface-hub?context=/troubleshoot/devices/context/context
           - text: Collect logs
-            url: /surface-hub/collect-surface-hub-log-files?toc=/troubleshoot/devices/toc.json
+            url: /surface-hub/collect-surface-hub-log-files?context=/troubleshoot/devices/context/context
