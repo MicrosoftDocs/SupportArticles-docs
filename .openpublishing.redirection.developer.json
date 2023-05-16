@@ -4358,6 +4358,11 @@
       "source_path": "support/power-platform/power-apps/dataverse-web-api/web-api-client-errors.md",
       "redirect_url": "/troubleshoot/power-platform/power-apps/dataverse/web-api-client-errors",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/webapps/welcome-webapps.yml",
+      "redirect_url": "/troubleshoot",
+      "redirect_document_id": false
     }
   ]
 }
