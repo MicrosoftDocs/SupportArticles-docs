@@ -57,7 +57,7 @@ This problem may occur if the affected directory isn't owned by the root user, o
 To resolve this issue, use one of the following resolutions:
 
 - [Resolution 1: Repair the VM online](#onlinetroubleshooting)
-- [Resolution 2: Repair the VM offline](#resolution-2-repair-the-vm-offline)
+- [Resolution 2: Repair the VM offline](#offlinetroubleshooting)
 
 ## <a id="onlinetroubleshooting"></a>Resolution 1: Repair the VM online
 
@@ -102,7 +102,7 @@ Here are two methods to repair the VM offline:
 
 In the Azure portal, open the **Properties** window of the VM to check the agent status. If the agent is enabled and has the **Ready** status, follow these steps to change the permission:
 
-1. Go to the Azure portal, locate your VM settings, and then select **Run Command** under **Operations** section.
+1. Go to the Azure portal, locate your VM settings, and then select **Run Command** under **Operations**.
 2. Execute the following shell script by selecting **RunShellScript** > **Run**:
 
    ### [RHEL/CentOS](#tab/rhelts2)
@@ -144,8 +144,8 @@ If you can connect to the VM via SSH, and you want to analyze the details of the
 ## <a id="offlinetroubleshooting"></a>Resolution 2: Repair the VM offline
 
 > [!NOTE]
-> - If the VM serial console access isn't available and the Waagent isn't ready, use this resolution.
-> - In Ubuntu systems, the _/var/run/sshd_ directory runs in memory. Restarting the VM will also fix the issue. Therefore, the offline troubleshooting in Ubuntu VMs isn't necessary.
+> - If the VM serial console access isn't available and the waagent isn't ready, use this resolution.
+> - In Ubuntu, the _/var/run/sshd_ directory runs in memory. Restarting the VM will also fix the issue. Therefore, the offline troubleshooting in Ubuntu VMs isn't necessary.
 
 Here are two methods to repair the VM offline:
 
@@ -160,8 +160,8 @@ Follow these steps to automate the manual offline process:
 
 1. Use the [az vm repair create](/cli/azure/vm/repair#az-vm-repair-create) command to create a repair VM. The repair VM has a copy of the OS disk for the problematic VM attached. Replace `$RGNAME`, `$VMNAME`, `$USERNAME` and `$PASSWORD` values accordingly.
 
-   ```azurecli-interactive
-   az vm repair create --verbose -g $RGNAME -n $VMNAME --repair-username $USERNAME --repair-password '$PASSWORD' --copy-disk-name  repairdiskcopy
+   ```azurecli
+   az vm repair create --verbose -g $RGNAME -n $VMNAME --repair-username $USERNAME --repair-password $PASSWORD --copy-disk-name repairdiskcopy
    ```
 
 2. Login to the repair VM. Mount and chroot to the filesystem of the attached copy of OS disk. Follow the detailed [chroot instructions](chroot-environment-linux.md).
@@ -186,7 +186,7 @@ Follow these steps to automate the manual offline process:
 
 4. Once the changes are applied, run the following `az vm repair restore` command to perform automatic OS disk swap with the original VM. Replace `$RGNAME` and `$VMNAME` values accordingly.
 
-   ```azurecli-interactive
+   ```azurecli
    az vm repair restore --verbose -g $RGNAME -n $VMNAME
    ```
 
