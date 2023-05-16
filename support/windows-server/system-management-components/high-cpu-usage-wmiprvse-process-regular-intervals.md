@@ -1,7 +1,7 @@
 ---
 title: High CPU usage by the WMI Provider Host (WmiPrvSE.exe) process at regular intervals
 description: Provides a workaround for the issue of high CPU usage by the WMI Provider Host (WmiPrvSE.exe) process at regular intervals.
-ms.date: 9/24/2021
+ms.date: 05/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -110,3 +110,7 @@ WMIPerfClass is the module that handles creating these classes when the WMI clie
 These performance classes are stored in a cache that's invalidated after 15 to 20 minutes. ‎As soon as the cache is invalidated, the performance classes must be created again if a client requests them.
 
 Creating the performance classes means that the WMIPerfClass.dll module will have to be loaded inside a WmiPrvSE.exe process and the related code executed.  
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for User Experience issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-user-experience.md#wmi).

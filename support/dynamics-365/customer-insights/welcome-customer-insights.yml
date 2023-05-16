@@ -6,7 +6,7 @@ metadata:
   title: Microsoft Dynamics 365 Customer Insights troubleshooting
   description: Landing page for Microsoft Dynamics 365 Customer Insights troubleshooting articles.
   ms.topic: landing-page
-  ms.prod: dynamics-365
+  ms.service: customer-insights
   author: m-hartmann
   ms.author: mhart
   ms.date: 03/23/2023
