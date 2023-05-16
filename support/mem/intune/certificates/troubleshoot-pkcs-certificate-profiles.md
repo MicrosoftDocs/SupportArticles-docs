@@ -298,7 +298,7 @@ PKCS certificates fail to deploy, and the certificate console on the issuing CA 
 Active Directory Certificate Services denied request abc123 because The Email name is unavailable and cannot be added to the Subject or Subject Alternate name. 0x80094812 (-2146875374 CERTSRV_E_SUBJECT_EMAIL_REQUIRED). The request was for CN=" Common Name".  Additional information: Denied by Policy Module".
 ```
 
-#### Cause - "Supply in the request" is miscongifured
+#### Cause - "Supply in the request" is misconfigured
 
 This issue occurs if the **Supply in the request** option isn't enabled on the **Subject Name** tab in the certificate template **Properties** dialog box.
 
