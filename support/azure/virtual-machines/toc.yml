@@ -68,8 +68,8 @@
       href: azure-linux-vm-uefi-boot-failures.md
     - name: Network issues
       href: cannot-connect-linux-network.md
-    - name: SSH connection
-      href: connect-linux-vm-sshconnection.md
+    - name: SSH connection fails due to permission and ownership issues
+      href: linux-vm-sshconnectionissue-perms.md
     - name: SSH troubleshooting
       href: troubleshoot-ssh-connection.md
     - name: Reset network interface for Azure Linux VM
