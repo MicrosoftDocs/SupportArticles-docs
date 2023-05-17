@@ -1,7 +1,7 @@
 ---
 title: Configure Distributed Transaction Coordinator (DTC) to work through a firewall
 description: Describes how to configure DTC to work through firewalls.
-ms.date: 05/06/2023
+ms.date: 05/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -9,7 +9,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika, jmeier, niklase
+ms.reviewer: kaushika, jmeier, niklase, shaheera, jpierauc
 ms.custom: sap:dtc-startup-configuration-connectivity-and-cluster, csstroubleshoot
 ms.technology: windows-server-application-compatibility
 ---
@@ -24,16 +24,18 @@ _Original KB number:_ &nbsp; 250367
 
 You can configure DTC to communicate through firewalls, including network address translation firewalls.
 
-DTC uses Remote Procedure Call (RPC) dynamic port allocation. By default, RPC dynamic port allocation randomly selects port numbers in the 49152-65535 range. By modifying the registry, you can control which ports RPC dynamically allocates for incoming communication. You can then configure your firewall to confine incoming external communication to only those ports and port 135 (the RPC Endpoint Mapper port). It is recommended to use the default 135, 49152-65535 range in firewalls to avoid port exhaustion and only change to fewer ports if firewalls cannot filter on computer or IPs.  
+DTC uses Remote Procedure Call (RPC) dynamic port allocation by default. RPC dynamic port allocation randomly selects port numbers in the 49152-65535 range. By modifying the registry, you can control which ports RPC dynamically allocates for incoming communication. You can then configure your firewall to confine incoming external communication to only those ports and port 135 (the RPC Endpoint Mapper port). It is recommended to use either fixed port for DTC services or the default dynamic 49152-65535 range in firewalls to avoid port exhaustion and only change to custom RPC ports if firewalls cannot filter on computer or IPs.
 
-You must provide one incoming dynamic port for DTC. It is recommend to use a fixed port for each DTC instance. You can have one local DTC instance and multiple clustered DTC instances. You may need to provide more incoming dynamic ports for other subsystems that rely on RPC so it is .
+You can have one local DTC instance and multiple clustered DTC instances. You may need to provide more incoming dynamic ports for other subsystems that rely on RPC so it is recommended to keep default RPC range even if using fixed port for DTC services.
 
 The registry keys and values described in this article don't appear in the registry by default; you must add them by using Registry Editor.
 
 > [!IMPORTANT]
 > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Window](https://support.microsoft.com/help/322756).
 
-Follow these steps on computers involved in DTC transactions to set fixed port for DTC. The firewall must be open in both directions for the fixed port and port 135.
+### Configure DTC to use single fixed port
+
+Follow these steps on computers involved in DTC transactions to set fixed port for DTC. The firewall must be open in both directions for the fixed port and port 135 (the RPC Endpoint Mapper port):
 
 1. To start Registry Editor, select **Start**, select **Run**, type *regedt32*, and then select **OK**.
 2. In Registry Editor, select **HKEY_LOCAL_MACHINE** in the **Local Machine** window.
@@ -48,11 +50,13 @@ To configure fixed port for clustered DTC instances, you need to find the cluste
 Alternative, you can use the `reg add` commands in scripts with administrator privileges to do this operation. Adjust the following example to your specific cluster GUID if clustered DTC instance is used:
 
 ```console
-reg add HKLM\SOFTWARE\Microsoft\MSDTC /v ServerTcpPort /t REG_DWORD /d 40001 /f 
+reg add HKLM\SOFTWARE\Microsoft\MSDTC /v ServerTcpPort /t REG_DWORD /d 40001 /f
 reg add HKLM\Cluster\Resources\012345678-9abc-def0-1234-56789abcdef0\MSDTCPRIVATE\MSDTC /v ServerTcpPort /t REG_DWORD /d 40002 /f
 ```
 
-Follow these steps on computers involved in DTC transactions where firewalls prevent full communication to control RPC dynamic port allocation. The firewall must be open in both directions for the specified ports and port 135:
+### Configure RPC to use customer port range
+
+Follow these steps on computers involved in DTC transactions where firewalls prevent full communication to control RPC dynamic port allocation. The firewall must be open in both directions for the specified ports and port 135 (the RPC Endpoint Mapper port):
 
 1. To start Registry Editor, select **Start**, select **Run**, type *regedt32*, and then select **OK**.
 
