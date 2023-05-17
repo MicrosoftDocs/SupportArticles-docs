@@ -67,30 +67,30 @@ For applications that deserialize untrusted XML data into an instance of either 
 
 ### Workaround 1: Call AppContext.SetSwitch
 
-    Change the start of the SQL CLR object code to set the **Switch.System.Data.AllowArbitraryDataSetTypeInstantiation** switch to **true**. You have to do this for every applicable SQL CLR object. See the following example.
+   Change the start of the SQL CLR object code to set the **Switch.System.Data.AllowArbitraryDataSetTypeInstantiation** switch to **true**. You have to do this for every applicable SQL CLR object. See the following example.
 
-    :::image type="content" source="media/execution-clr-fails-typeInitializationexception/code.png" alt-text="Screenshot shows an example of the SQL CLR object code change.":::
+   :::image type="content" source="media/execution-clr-fails-typeInitializationexception/code.png" alt-text="Screenshot shows an example of the SQL CLR object code change.":::
 
-    For more information, see [DataSet and DataTable security guidance](/dotnet/framework/data/adonet/dataset-datatable-dataview/security-guidance).
+   For more information, see [DataSet and DataTable security guidance](/dotnet/framework/data/adonet/dataset-datatable-dataview/security-guidance).
 
 ### Workaround 2: Create or change the _Sqlservr.exe.config_ file for each applicable instance
 
-    This workaround applies only to the instance itself.
+   This workaround applies only to the instance itself.
 
-    > [!IMPORTANT]
-    > We can't guarantee that this change will not be overwritten by SQL Server updates or instance upgrades. We recommend that you determine whether the change persists after an instance update or upgrade.
+   > [!IMPORTANT]
+   > We can't guarantee that this change will not be overwritten by SQL Server updates or instance upgrades. We recommend that you determine whether the change persists after an instance update or upgrade.
 
-    1. Locate the _Sqlservr.exe.config_ file in the [File Locations for Default and Named Instances of SQL Server](/sql/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server):
+   1. Locate the _Sqlservr.exe.config_ file in the [File Locations for Default and Named Instances of SQL Server](/sql/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server):
 
        `%ProgramFiles%\Microsoft SQL Server\<Instance_ID>.<Instance Name>\MSSQL\Binn\`
 
-    1. Within the `<runtime>` node, but outside any nested nodes, add the following line:
+   1. Within the `<runtime>` node, but outside any nested nodes, add the following line:
 
        ```xml
        <AppContextSwitchOverrides value="Switch.System.Data. AllowArbitraryDataSetTypeInstantiation=true"/>
        ```
 
-    1. Save the file, and restart the instance.
+   1. Save the file, and restart the instance.
 
        See the following example of a SQL Server 2016 instance.
 
@@ -98,32 +98,32 @@ For applications that deserialize untrusted XML data into an instance of either 
 
 ### Workaround 3: Create the System.Drawing assembly
 
-    Manually create the **System.Drawing** assembly in SQL Server from the DLL file in the **Global Assembly Cache (GAC)**, and then re-create assemblies that use either DataSet.ReadXML or DataTable.ReadXML. For example:
+   Manually create the **System.Drawing** assembly in SQL Server from the DLL file in the **Global Assembly Cache (GAC)**, and then re-create assemblies that use either DataSet.ReadXML or DataTable.ReadXML. For example:
 
-    ```sql
+   ```sql
     CREATE ASSEMBLY [Drawing] FROM 'C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Drawing\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Drawing.dll' WITH PERMISSION_SET = UNSAFE GO
-    ```
+   ```
 
 ### Workaround 4: Create a registry subkey
 
-    > [!IMPORTANT]
-    > Follow the steps in this workaround carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
+   > [!IMPORTANT]
+   > Follow the steps in this workaround carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
 
-    This workaround will affect all .NET applications on the server. Therefore, you should use this method only as a last resort if you can't use the other workarounds.
+   This workaround will affect all .NET applications on the server. Therefore, you should use this method only as a last resort if you can't use the other workarounds.
 
-    1. Open Registry Editor.
+   1. Open Registry Editor.
 
-    1. Locate the following subkey:
+   1. Locate the following subkey:
 
        `KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\AppContext`  
 
-    1. Create a REG_SZ value, as follows.
+   1. Create a REG_SZ value, as follows.
 
        |Name|Switch.System.Data.AllowArbitraryDataSetTypeInstantiation|
        |---|---|
        |Value|true|
 
-    1. Restart all SQL Server instances.
+   1. Restart all SQL Server instances.
 
        See the following example.
 

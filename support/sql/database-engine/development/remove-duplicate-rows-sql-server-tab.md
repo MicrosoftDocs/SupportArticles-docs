@@ -69,7 +69,7 @@ Also, if your table has an [IDENTITY](/sql/t-sql/statements/create-table-transac
 
 ### Method 2
 
-The [ROW_NUMBER function](/sql/t-sql/functions/row-number-transact-sql) that was introduced in Microsoft SQL Server 2005 makes this operation much simpler:
+The [ROW_NUMBER](/sql/t-sql/functions/row-number-transact-sql) function that was introduced in Microsoft SQL Server 2005 makes this operation much simpler:
 
 ```sql
 DELETE T
@@ -94,7 +94,7 @@ Because of the `(SELECT NULL)` expression, the script doesn't sort the partition
 
 ## More information
 
-[Method 2](#method-2-1) is simple and effective for these reasons:
+[Method 2](#method-2) is simple and effective for these reasons:
 
 - It doesn't require you to temporarily copy the duplicate records to another table.
 - It doesn't require you to join the original table with itself (for example, by using a subquery that returns all duplicate records by using a combination of `GROUP BY` and `HAVING`).
