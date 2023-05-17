@@ -209,13 +209,13 @@ If you're running antivirus software on a cluster, make sure that you also exclu
 - C:\\Windows\\
 - `ClusterMSDTC` directory in the `MSDTC` drive
 
-If you back up the database to a disk or if you back up the transaction log to a disk, you can exclude the backup files from the virus scanning.
+If you back up the database to a disk or back up the transaction log to a disk, you can exclude the backup files from the virus scanning.
 
 For more information about antivirus considerations on a cluster, see [Antivirus software cause problems with Cluster Services - Windows Server](../../../windows-server/high-availability/not-cluster-aware-antivirus-software-cause-issue.md).
 
 ## Configure antivirus software to work with Analysis Services (SSAS)
 
-The following Analysis Services directories and processes can be excluded from anti-virus scanning.
+The following Analysis Services directories and processes can be excluded from antivirus scanning.
 
 ### SSAS processes to exclude from virus scanning
 
@@ -250,7 +250,7 @@ For Analysis Services 2012 and later versions, temporary files during processing
 
 #### The backup files for Analysis Services
 
-In Analysis Services 2012 and later versions, the backup file location is the location that is specified by the `BackupDir` property. The following table shows the backup path for Analysis Service instance by default:
+In Analysis Services 2012 and later versions, the backup file location is the location that is specified by the `BackupDir` property. The following table shows the backup path for the Analysis Service instance by default:
 
 |SSAS instance      | Backup files directory (default)|
 |---------          |---------                        |
@@ -261,7 +261,7 @@ You can change this directory in the properties of the instance of Analysis Serv
 
 #### The directory that holds Analysis Services log files
 
-By default, in Analysis Services 2012 and later versions, the log file location is the location that is specified by the `LogDir` property. By default, the Log path is located:
+By default, in Analysis Services 2012 and later versions, the log file location is the location that is specified by the `LogDir` property. By default, the Log path is located as follows:
 
 |SSAS instance      | Log files directory|
 |---------          |---------           |
@@ -272,9 +272,9 @@ By default, in Analysis Services 2012 and later versions, the log file location 
 
 When you create the partitions, these locations are defined in the **Storage** location section of the **Processing and Storage Locations** page of the **Partition Wizard**. Be sure to exclude those from scanning.
 
-## Configure antivirus software to work with SQL Server Integration services (SSIS)
+## Configure antivirus software to work with SQL Server Integration Services (SSIS)
 
-The following processes and directories for the SSIS services are to be excluded from anti-virus scanning.
+The following processes and directories for the SSIS services are to be excluded from antivirus scanning.
 
 ### SSIS processes to exclude from virus scanning
 
@@ -294,7 +294,7 @@ When you configure your antivirus software settings, make sure that you exclude 
 |---------               |---------              |
 |Directories to Exclude  |%Program Files%\\Microsoft SQL Server\\\<VersionNum\>\\DTS |
 
-The placeholder `<VersionNum>` refers to the version-specific details
+The placeholder `<VersionNum>` refers to the version-specific details.
 
 ## Configure antivirus software to work with PolyBase
 
