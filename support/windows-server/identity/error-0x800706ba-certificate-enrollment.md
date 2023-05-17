@@ -4,7 +4,7 @@ description: Introduces steps to resolve the error 0x800706ba, The RPC Server is
 author: Deland-Han
 ms.author: delhan
 ms.topic: troubleshooting
-ms.date: 05/10/2023
+ms.date: 05/17/2023
 ms.reviewer: kaushika
 ms.prod: windows-server
 ms.technology: windows-server-active-directory
@@ -71,23 +71,13 @@ The machine wide limit settings do not grant Remote Activation permission for CO
 
 - The call should be made with **dce_c_authn_level_pkt_integrity** RPC Integrity level that enforces Kerberos or New Technology LAN Manager (NTLM) as an authentication mechanism. This behavior is enforced by default starting 6B.22 [KB5004442—Manage changes for Windows DCOM Server Security Feature Bypass (CVE-2021-26414)](https://support.microsoft.com/topic/kb5004442-manage-changes-for-windows-dcom-server-security-feature-bypass-cve-2021-26414-f1400b52-c141-43d2-941e-37ed901c769c).
 - When the client sends a KRB_AP_REQ request, it's rejected by the server side.
-- On the server side, the *kerberos.etl* displays the following entries:
-
-  ```output
-  [0] 02B4.11CC::\<date and time\> [KERBEROS] krbtoken_cxx3567 KerbCreateTokenFromTicketEx() - KerbCreateTokenFromTicket for \<user account\>, (null)  
-  [0] 02B4.11CC::\<date and time\> [KERBEROS] krbtoken_cxx3595 **KerbCreateTokenFromTicketEx() - Failed to create token: 0xc000015b**  
-  [2] 02B4.11CC::\<date and time\> [KERBEROS] logonapi_cxx9910 LsaApLogonTerminated() - LsaApLogonTerminated called: 0x0:0xf4eb9b0  
-  [2] 02B4.11CC::\<date and time\> [KERBEROS] ctxtapi_cxx4235 SpAcceptLsaModeContext() - Failed to create token from ticket: 0xc000015b  
-  [2] 02B4.11CC::\<date and time\> [KERBEROS] ctxtapi_cxx5078 SpAcceptLsaModeContext() - SpAcceptLsaModeContext returned 0xc000015b, Context 0000000000000000, Pid 0x0  
-  [2] 02B4.11CC::\<date and time\> [KERBEROS] ctxtapi_cxx5079 SpAcceptLsaModeContext() - SpAcceptLsaModeContext (0000000000000000) returned 0xc000015b
-  ```
 - The server tries to procure an access token for the user who presented the Kerberos Ticket Granting Service (TGS) and fails with error 0xc000015b, "STATUS_LOGON_TYPE_NOT_GRANTED."
 
 ## Cause
 
 This issue occurs because the group policy **Access this computer from the network** is set, and the user account used to enroll the certificate isn't added.
 
-The group policy locates at: *Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\User Rights Assignment*
+The group policy locates at: _Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\User Rights Assignment_.
 
 By default, the policy is populated by the groups: Administrators, Backup Operators, Everyone, and Users.
 
