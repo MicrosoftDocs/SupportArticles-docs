@@ -78,9 +78,9 @@ The example uses a file named _caCert.cer_ as a certificate file. You must obtai
 
 1. Start the Certificates snap-in for MMC on the client computer and then add the Certificates snap-in.
 
-1. In the **Certificates snap-in** dialog box, choose **Computer** account, and then choose **Next**.
+1. In the **Certificates snap-in** dialog box, choose **Computer** account, and then choose **Next**.
 
-1. In the **Select Computer** pane, choose **Local computer: (the computer this console is running on)**, and then choose **Finish**.
+1. In the **Select Computer** pane, choose **Local computer: (the computer this console is running on)**, and then choose **Finish**.
 
 1. Choose **OK** to close the **Add or Remove Snap-ins** dialog box.
 
@@ -92,13 +92,13 @@ The example uses a file named _caCert.cer_ as a certificate file. You must obtai
 
 1. On the **File to Import** page, choose **Browse**.
 
-1. Browse to the location of the *caCert.cer* certificate file, select the file, and then choose **Open**.
+1. Browse to the location of the *caCert.cer* certificate file, select the file, and then choose **Open**.
 
-1. On the **File to Import** page, choose **Next**.
+1. On the **File to Import** page, choose **Next**.
 
-1. On the **Certificate Store** page, accept the default selection, and then choose **Next**.
+1. On the **Certificate Store** page, accept the default selection, and then choose **Next**.
 
-1. On the Completing the **Certificate Import Wizard** page, choose **Finish**.
+1. On the Completing the **Certificate Import Wizard** page, choose **Finish**.
 
 For scenarios 1 and 2: Set **Trust Server Certificate** setting to _true_ in your client application.
 
