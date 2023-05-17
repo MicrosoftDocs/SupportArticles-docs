@@ -3,9 +3,8 @@ title: Use DBCC MEMORYSTATUS to monitor memory usage
 description: This article describes how to use the DBCC MEMORYSTATUS command to monitor memory usage.
 ms.date: 11/09/2020
 ms.custom: sap:Performance
-ms.reviewer: BorisB, Borisb, Bobward
+ms.reviewer: BorisB, Borisb, Bobward, jopilov
 ms.topic: how-to
-ms.prod: sql
 ---
 # Use the DBCC MEMORYSTATUS command to monitor memory usage on SQL Server
 
@@ -18,11 +17,11 @@ _Original KB number:_ &nbsp; 907877
 
 This article discusses the output of the `DBCC MEMORYSTATUS` command. This command is frequently used to troubleshoot Microsoft SQL Server memory consumption issues.
 
-This article describes the elements of the output for Memory Manager, the summary of memory usage, the aggregate memory information, the buffer distribution information, the buffer pool information, and the procedure cache information. It also describes the output of global memory objects, query memory objects, optimization, and memory brokers.
+This article describes the elements of the output for Memory Manager, the summary of memory usage, the aggregate memory information, the buffer pool information, and the procedure cache information. It also describes the output of global memory objects, query memory objects, optimization, and memory brokers.
 
 ## Introduction
 
-The `DBCC MEMORYSTATUS` command provides a snapshot of the current memory status of SQL Server. You can use the output from this command to troubleshoot memory consumption issues in SQL Server or to troubleshoot specific out-of-memory errors (many out-of-memory errors automatically print this output in the error log). You may run this command and provide the output when you contact Microsoft Support for an error that may be associated with a low-memory condition.
+The `DBCC MEMORYSTATUS` command provides a snapshot of the current memory status of SQL Server. You can use the output from this command to troubleshoot memory consumption issues in SQL Server or to troubleshoot specific out of memory errors (many out of memory errors automatically print this output in the error log). You may run this command and provide the output when you contact Microsoft Support for an error that may be associated with a low-memory condition.
 
 > [!NOTE]
 > Performance Monitor (PerfMon) and Task Manager don't account for memory correctly if Address Windowing Extensions (AWE) support is enabled.
@@ -87,7 +86,7 @@ Last OOM Factor            0
 Last OS Error              0
 ```
 
-The elements in this section are the following:
+For more information about the elements in this output, see:
 
 - VM Reserved: This value shows the overall amount of virtual address space (VAS) that SQL Server has reserved.
 - VM Committed: This value shows the overall amount of VAS that SQL Server has committed. VAS that is committed has been associated with physical memory.
@@ -98,7 +97,7 @@ The elements in this section are the following:
 The Memory Manager section is followed by a summary of memory usage for each memory node. In a non-uniform memory access (NUMA) enabled system, there's a corresponding Memory node entry for each hardware NUMA node. In an SMP system, there's a single Memory node entry.
 
 > [!NOTE]
-> The `memory node ID` may not correspond to the hardware node ID.
+> The `Memory node Id` may not correspond to the hardware node ID.
 
 ```output
 Memory node Id = 0      KB
@@ -118,7 +117,7 @@ Taken Away Committed    0
 > [!NOTE]
 > These values show the memory that is allocated by threads that are running on this NUMA node. These values are not the memory that is local to the NUMA node.
 
-The elements in this section are the following:
+For more information about the elements in this output, see:
 
 - VM Reserved: This value shows the VAS that is reserved by threads that are running on this node.
 
@@ -129,7 +128,7 @@ The elements in this section are the following:
 
 ## Aggregate memory
 
-The next section contains aggregate memory information for each clerk type and for each NUMA node. For a NUMA-enabled system, you may see output that is similar to the following.
+The next section contains aggregate memory information for each clerk type and for each NUMA node. For a NUMA-enabled system, you may see output that is similar to the following one:
 
 > [!NOTE]
 > The following table contains only part of the output.
@@ -163,12 +162,12 @@ SM Commited                     0
 Pages Allocated                 5552
 ```
 
-The `Pages Allocated` value shows the overall amount of the memory pages allocated to a process.
+The value of `Pages Allocated` shows the overall amount of the memory pages allocated to a process.
 
 > [!NOTE]
-> These node IDs correspond to the NUMA node configuration of the computer that is running SQL Server. The node IDs include possible software NUMA nodes that are defined on top of hardware NUMA nodes or on top of an SMP system. To find mapping between node IDs and CPUs for each node, view Information event ID number 17152. This event is logged in the Application log in Event Viewer when you start SQL Server.
+> These node IDs correspond to the NUMA node configuration of the computer that is running SQL Server. The node IDs include possible software NUMA nodes that are defined on top of hardware NUMA nodes or on top of an SMP system. To find mapping between node IDs and CPUs for each node, see Information event ID number 17152. This event is logged in the Application log in Event Viewer when you start SQL Server.
 
-For an SMP system, you see only one section for each clerk type. This section is similar to the following:
+For an SMP system, you see only one section for each clerk type. This section is similar to the following one:
 
 ```output
 MEMORYCLERK_SQLGENERAL (Total)     KB
@@ -225,7 +224,7 @@ In Internal Pool                                  0
 Page Life Expectancy                              3965
 ```
 
-The elements in this section are the following:
+For more information about the elements in this output, see:
 
 Database: This value shows the number of buffers that have database content (data and index pages).
 Target: This value shows the target size of the buffer pool (buffer count).
@@ -247,7 +246,7 @@ TotalPages              25
 InUsePages              0
 ```
 
-The elements in this section are the following:
+For more information about the elements in this output, see:
 
 - TotalProcs: This value shows the total cached objects currently in the procedure cache. This value matches the entries in the `sys.dm_exec_cached_plans` DMV.
 
@@ -281,7 +280,7 @@ XP Global                           2
 SortTables                          3
 ```
 
-The elements in this section are the following:
+For more information about the elements in this output, see:
 
 - Resource: This value shows the memory that the Resource object uses. The Resource object is used by the storage engine and for various server-wide structures.
 - Locks: This value shows the memory that Lock Manager uses.
@@ -317,7 +316,7 @@ Wait Time                                 0
 
 If the size and the cost of a query satisfy "small" query memory thresholds, the query is put in a small query queue. This behavior prevents smaller queries from being delayed behind larger queries that are already in the queue.
 
-The elements in this section are the following:
+For more information about the elements in this output, see:
 
 - Grants: This value shows the running queries that have memory grants.
 - Waiting: This value shows the queries that are waiting to obtain memory grants.
@@ -408,11 +407,11 @@ Threshold                          -1
 Queries are submitted to the server for compilation. The compilation process includes parsing, algebraization, and optimization. Queries are classified based on the memory each query consumes during the compilation process.
 
 > [!NOTE]
-> This amount does not include the memory that is required to run the query.
+> This amount doesn't include the memory that is required to run the query.
 
 When a query starts, there's no limit on how many queries can be compiled. As the memory consumption increases and reaches a threshold, the query must pass a gateway to continue. There's a progressively decreasing limit of simultaneously compiled queries after each gateway. The size of each gateway depends on the platform and the load. Gateway sizes are chosen to maximize scalability and throughput.
 
-If the query can't pass a gateway, it waits until memory is available or returns a time-out error (Error 8628). Additionally, the query may not acquire a gateway if the user cancels the query or if a deadlock is detected. If the query passes several gateways, it won't release the smaller gateways until the compilation process has completed.
+If the query can't pass a gateway, it waits until memory is available or returns a time-out error (Error 8628). Additionally, the query may not acquire a gateway if the user cancels the query or if a deadlock is detected. If the query passes several gateways, it doesn't release the smaller gateways until the compilation process has completed.
 
 This behavior lets only a few memory-intensive compilations occur at the same time. Additionally, this behavior maximizes throughput for smaller queries.
 
