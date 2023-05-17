@@ -59,7 +59,7 @@ After a recipient updates an actionable message in a pop-out window, Outlook ref
 
 In this scenario, the [adaptive card](/outlook/actionable-messages/adaptive-card#additional-properties-on-the-adaptivecard-type) payload in the actionable message defines the [autoInvokeAction](/outlook/actionable-messages/auto-invoke#using-autoinvokeaction) property, and the recipient performs either of the following procedures:
 
-- Saves the pop-out window view of the actionable message
+- Saves the pop-out window view of the actionable message.
 
 - Reopens the actionable message in the reading pane. For example, by opening a different message in the reading pane and then switching back to the actionable message.
 
@@ -70,9 +70,9 @@ In this scenario, the [adaptive card](/outlook/actionable-messages/adaptive-card
 
 In this scenario, the [adaptive card](/outlook/actionable-messages/adaptive-card#additional-properties-on-the-adaptivecard-type) payload in the actionable message doesn't define the [autoInvokeAction](/outlook/actionable-messages/auto-invoke#using-autoinvokeaction) property, and the recipient performs either of the following procedures:
 
-- Closes the pop-out window, opens a different message in the reading pane, and then reopens the actionable message in the reading pane
+- Closes the pop-out window, opens a different message in the reading pane, and then reopens the actionable message in the reading pane.
 
-- Restarts Outlook, and then reopens the actionable message in the reading pane
+- Restarts Outlook, and then reopens the actionable message in the reading pane.
 
 > [!NOTE]
 > If the adaptive card doesn't define the `autoInvokeAction` property, Outlook refreshes the reading pane view by displaying the latest actionable message that the recipient previously opened in Outlook.
