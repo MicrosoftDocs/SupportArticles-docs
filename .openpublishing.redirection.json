@@ -5754,7 +5754,7 @@
     },
      {
       "source_path": "support/azure/virtual-machines/connect-linux-vm-sshconnection.md",
-      "redirect_url": "/troubleshoot/azure/virtual-machines/linux-vm-ssh-connection-issue",
+      "redirect_url": "/troubleshoot/azure/virtual-machines/linux-vm-sshconnectionissue-perms",
       "redirect_document_id": true
     },
 ]
