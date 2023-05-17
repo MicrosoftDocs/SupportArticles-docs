@@ -18,14 +18,14 @@ _Original KB number:_ &nbsp; 907877
 
 This article discusses the output of the `DBCC MEMORYSTATUS` command. This command is frequently used to troubleshoot Microsoft SQL Server memory consumption issues.
 
-This article describes the elements of the output for Memory Manager, the summary of memory usage, the aggregate memory information, the buffer distribution information, the buffer pool information, and the procedure cache information. It also describes the output about global memory objects, query memory objects, optimization, and memory brokers.
+This article describes the elements of the output for Memory Manager, the summary of memory usage, the aggregate memory information, the buffer distribution information, the buffer pool information, and the procedure cache information. It also describes the output of global memory objects, query memory objects, optimization, and memory brokers.
 
 ## Introduction
 
-The `DBCC MEMORYSTATUS` command provides a snapshot of the current memory status of SQL Server. You can use the output from this command to troubleshoot memory consumption issues in SQL Server or to troubleshoot specific out of memory errors. (Many out of memory errors automatically print this output in the error log.) You may run this command and provide the output when you contact Microsoft Support for an error that may be associated with a low-memory condition.
+The `DBCC MEMORYSTATUS` command provides a snapshot of the current memory status of SQL Server. You can use the output from this command to troubleshoot memory consumption issues in SQL Server or to troubleshoot specific out-of-memory errors (many out-of-memory errors automatically print this output in the error log). You may run this command and provide the output when you contact Microsoft Support for an error that may be associated with a low-memory condition.
 
 > [!NOTE]
-> Performance Monitor (PerfMon) and Task Manager don't account for memory correctly if Address Windowing Extentions (AWE) support is enabled.
+> Performance Monitor (PerfMon) and Task Manager don't account for memory correctly if Address Windowing Extensions (AWE) support is enabled.
 
 This article describes some of the data that you can obtain from the output of the `DBCC MEMORYSTATUS` command.
 
@@ -55,12 +55,12 @@ Process physical memory low          0
 Process virtual memory low           0
 ```
 
-- Available Physical Memory: This value shows the overall amount of free memory on the system is 5060247552 bytes.
-- Available Virtual Memory: This value shows the overall amount of free virtual memory for SQL or any process is 140710048014336 bytes (128 TB). for more information, see [Memory and Address Space Limits](/windows/win32/memory/memory-limits-for-windows-releases#memory-and-address-space-limits).
-- Available Paging File: This value shows the free paging file space is 7066804224 bytes.
-- Working Set: This value shows the overall amount of virtual memory that SQL Server process has in RAM is 430026752 bytes.
-- Percent of Committed Memory in WS: This value shows the percentage of virtual memory that has been allocated to running processes or applications compared to the total amount of virtual memory available is 100%.
-- Page Faults: This value shows the overall amount of page faults for all processes is 151138.
+- Available Physical Memory: This value shows the overall amount of free memory on the system is 5,060,247,552 bytes.
+- Available Virtual Memory: This value shows the overall amount of free virtual memory for SQL, or any process is 140,710,048,014,336 bytes (128 TB). For more information, see [Memory and Address Space Limits](/windows/win32/memory/memory-limits-for-windows-releases#memory-and-address-space-limits).
+- Available Paging File: This value shows the free paging file space is 7,066,804,224 bytes.
+- Working Set: This value shows the overall amount of virtual memory that the SQL Server process has in RAM is 430,026,752 bytes.
+- Percent of Committed Memory in WS: This value shows the percentage of virtual memory allocated to running processes or applications compared to the total amount of virtual memory available is 100%.
+- Page Faults: This value shows the overall amount of page faults for all processes is 151,138.
 
 ## Memory Manager
 
@@ -91,7 +91,7 @@ The elements in this section are the following:
 
 - VM Reserved: This value shows the overall amount of virtual address space (VAS) that SQL Server has reserved.
 - VM Committed: This value shows the overall amount of VAS that SQL Server has committed. VAS that is committed has been associated with physical memory.
-- Pages Allocated: This value shows the overall amount of the memory pages allocated to a process.
+- Pages Allocated: This value shows the total number of memory pages allocated to a process.
 
 ## Summary of memory usage
 
@@ -168,7 +168,7 @@ Pages Allocated: This value shows the overall amount of the memory pages allocat
 > [!NOTE]
 > These node IDs correspond to the NUMA node configuration of the computer that is running SQL Server. The node IDs include possible software NUMA nodes that are defined on top of hardware NUMA nodes or on top of an SMP system. To find mapping between node IDs and CPUs for each node, view Information event ID number 17152. This event is logged in the Application log in Event Viewer when you start SQL Server.
 
-For an SMP system, you see only one section for each clerk type. This section is similar to the following.
+For an SMP system, you see only one section for each clerk type. This section is similar to the following:
 
 ```output
 MEMORYCLERK_SQLGENERAL (Total)     KB
@@ -231,8 +231,8 @@ Database: This value shows the number of buffers that have database content (dat
 Target: This value shows the target size of the buffer pool (buffer count).
 Dirty: This value shows the buffers that have database content and that have been modified. These buffers contain changes that must be flushed to disk.
 In IO: This value shows the buffers that are waiting for a pending I/O operation.
-Latched: This value shows the latched buffers. A buffer is latched when a thread is reading or modifying the contents of a page. A buffer is also latched when the page is being read from disk or written to disk. A latch is used to maintain physical consistency of the data in the page while it's being read or modified. A lock is used to maintain logical and transactional consistency.
-IO error: This value shows the count of buffers that may have encountered any I/O related OS error. This doesn't necessarily mean a problem.
+Latched: This value shows the latched buffers. A buffer is latched when a thread is reading or modifying the contents of a page. A buffer is also latched when the page is being read from disk or written to disk. A latch is used to maintain the physical consistency of the data on the page while it's being read or modified. A lock is used to maintain logical and transactional consistency.
+IO error: This value shows the count of buffers that may have encountered any I/O-related OS errors (this doesn't necessarily indicate a problem).
 Page Life Expectancy: This counter measures the amount of time in seconds that the oldest page stays in the buffer pool.
 
 ## Procedure cache
@@ -249,7 +249,7 @@ InUsePages              0
 
 The elements in this section are the following:
 
-- TotalProcs: This value shows the total cached objects that are currently in the procedure cache. This value matches the entries in the `sys.dm_exec_cached_plans` DMV.
+- TotalProcs: This value shows the total cached objects currently in the procedure cache. This value matches the entries in the `sys.dm_exec_cached_plans` DMV.
 
   > [!NOTE]
   > Because of the dynamic nature of this information, the match may not be exact. You can use PerfMon to monitor the SQL Server: Plan Cache object and the `sys.dm_exec_cached_plans` DMV for detailed information about the type of cached objects, such as triggers, procedures, and ad hoc objects.
@@ -405,14 +405,14 @@ Threshold Factor                   8
 Threshold                          -1
 ```
 
-Queries are submitted to the server for compilation. The compilation process includes parsing, algebraization, and optimization. Queries are classified based on the amount of memory that each query consumes during the compilation process.
+Queries are submitted to the server for compilation. The compilation process includes parsing, algebraization, and optimization. Queries are classified based on the memory each query consumes during the compilation process.
 
 > [!NOTE]
 > This amount does not include the memory that is required to run the query.
 
 When a query starts, there's no limit on how many queries can be compiled. As the memory consumption increases and reaches a threshold, the query must pass a gateway to continue. There's a progressively decreasing limit of simultaneously compiled queries after each gateway. The size of each gateway depends on the platform and the load. Gateway sizes are chosen to maximize scalability and throughput.
 
-If the query can't pass a gateway, the query waits until memory is available. Or, the query returns a time-out error (Error 8628). Additionally, the query may not acquire a gateway if the user cancels the query or if a deadlock is detected. If a query passes several gateways, the query doesn't release the smaller gateways until the compilation process has completed.
+If the query can't pass a gateway, it waits until memory is available or returns a time-out error (Error 8628). Additionally, the query may not acquire a gateway if the user cancels the query or if a deadlock is detected. If the query passes several gateways, it won't release the smaller gateways until the compilation process has completed.
 
 This behavior lets only a few memory-intensive compilations occur at the same time. Additionally, this behavior maximizes throughput for smaller queries.
 
