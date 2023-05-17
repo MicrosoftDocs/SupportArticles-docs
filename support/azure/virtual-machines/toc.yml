@@ -69,7 +69,7 @@
     - name: Network issues
       href: cannot-connect-linux-network.md
     - name: SSH connection fails due to permission and ownership issues
-      href: linux-vm-ssh-connection-issue.md
+      href: linux-vm-sshconnectionissue-perms.md
     - name: SSH troubleshooting
       href: troubleshoot-ssh-connection.md
     - name: Reset network interface for Azure Linux VM
