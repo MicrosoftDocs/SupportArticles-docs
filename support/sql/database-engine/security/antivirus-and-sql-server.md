@@ -104,7 +104,7 @@ These files typically have one of the following file name extensions:
 - `.bak`
 - `.trn`
 
-By default the backup folder are located in the following directories. However, backup files can be placed in any directory by the database administrators of the system.
+By default, the backup folders are located in the following directories. However, backup files can be placed in any directory by the database administrators of the system.
 
 |SQL Server Instance   | Default backup directory|
 |-------               |---------                |
@@ -125,7 +125,7 @@ These files usually have the `.trc` file name extension. These files can be gene
 #### Extended Event file targets
 
 - Typically saved as `.xel` or `.xem`.
-- System generated files are saved in the `\LOG` folder for that instance.
+- System-generated files are saved in the `\LOG` folder for that instance.
 
 #### SQL audit files
 
@@ -147,12 +147,12 @@ These files typically have the `.sql` file name extension and contain Transact-S
 #### Exception dump files
 
 - Typically use the `.mdmp` file name extension.
-- System generated files are saved in the `LOG` folder for that instance.
+- System-generated files are saved in the `LOG` folder for that instance.
 
 #### In-memory OLTP files
 
 - Native procedure and in-memory table definition-related files.
-- Present in an xtp subfolder under the DATA directory for instance.
+- Present in an xtp subfolder under the DATA directory, for instance.
 - File formats include the following types:
 
   - xtp\_\<t/p\>\_\<dbid\>\_\<objid\>.c
@@ -187,13 +187,13 @@ These files typically have the `.sql` file name extension and contain Transact-S
   > [!NOTE]
   > The `<nnn>` is a placeholder for version-specific information. To specify the correct value, check your installation or search for "Replication and server-side COM objects" in [Specifying File Paths](/sql/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server#specifying-file-paths). For example, the full path for SQL Server 2022 would be `<drive>:\Program Files\Microsoft SQL Server\160\COM\`.
   
-- Starting with SQL Server 2017 CU22 (including SQL 2019 RTM and later versions), if using Transactional Replication and the Distribution Agent is utilizing OLEDB streaming profile or you're using `-UseOledbStreaming` parameter, the Distribution Agent creates temporary files (`*.lob`) in the `AppData` folder of the account running the distribution agent where the job is being invoked. For prior versions of SQL Server, the default `COM` folder (already listed) is used.
+- Starting with SQL Server 2017 CU22 (including SQL 2019 RTM and later versions), if using Transactional Replication and the Distribution Agent is utilizing OLEDB streaming profile, or you're using the `-UseOledbStreaming` parameter, the Distribution Agent creates temporary files (`*.lob`) in the `AppData` folder of the account running the distribution agent where the job is being invoked. For prior versions of SQL Server, the default `COM` folder (already listed) is used.
 
   c:\\Users\\\<*DistributionAgentAccount\>*\\AppData\\Temp\\*.lob
 
   For more information, see ["The distribution agent failed to create temporary files" error message](../replication/error-run-distribution-agent.md).
 
-- Files in Replication Snapshot folder
+- Files in the Replication Snapshot folder
 
   The default path for the snapshot files is \\Microsoft SQL Server\\MSSQLxx.MSSQLSERVER\\MSSQL\\ReplData. These files typically have file name extensions such as `.sch`, `.idx`, `.bcp`, `.pre`, `.cft`, `.dri`, `.trg`, or `.prc`.
 
