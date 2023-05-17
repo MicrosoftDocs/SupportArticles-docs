@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 969488, 2733147
 
 You receive Event ID 4015 in one of the following scenarios:
 
-- If you're running the Domain Name Service (DNS) role on a Read-Only Domain Controller (RODC) and a writable Domain Controller (hosting DNS) isn't accessible, the following event is logged on the RODC.
+- If you're running the DNS role on a Read-Only Domain Controller (RODC) and a writable Domain Controller (hosting DNS) isn't accessible, the following event is logged on the RODC.
 
     ```output
     Log Name: DNS Server
@@ -51,7 +51,7 @@ You receive Event ID 4015 in one of the following scenarios:
 
 ## RODC logs DNS Event ID 4015 every three minutes with error code 00002095
 
-When a Read Only Domain Controller (RODC) locates a writeable DNS server to perform ReplicateSingleObject (RSO), it performs a DSGETDC function with the following flags set:
+When an RODC locates a writeable DNS server to perform ReplicateSingleObject (RSO), it performs a DSGETDC function with the following flags set:
 
 - DS_AVOID_SELF
 - DS_TRY_NEXTCLOSEST_SITE
@@ -91,11 +91,11 @@ This logging isn't enabled by default and should only be enabled during active t
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Diagnostics\15 Field Engineering`
 3. Create the following registry keys to configure registry-based filters for expensive, inefficient, and long-running searches:
 
-|Registry path  |Data type  |Default value  |
-|---------|---------|---------|
-|`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters\Expensive Search Results Threshold`     |REG_DWORD         |1         |
-|`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters\Inefficient Search Results Threshold`     |REG_DWORD         |1         |
-|`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters\Search Time Threshold (msecs)`     |REG_DWORD         |1         |
+    |Registry path  |Data type  |Default value  |
+    |---------|---------|---------|
+    |`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters\Expensive Search Results Threshold`     |REG_DWORD         |1         |
+    |`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters\Inefficient Search Results Threshold`     |REG_DWORD         |1         |
+    |`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters\Search Time Threshold (msecs)`     |REG_DWORD         |1         |
 
 ### Set DNS zone owner to SYSTEM
 
