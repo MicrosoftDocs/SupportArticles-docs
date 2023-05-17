@@ -17,7 +17,7 @@ This article provides solutions to an issue in which connecting to a Linux virtu
 
 When you connect to a Linux virtual machine (VM) via SSH, the connection fails. You may receive the following error message about the affected directory, depending on your Linux distribution.
 
-### [CentOS/RHEL](#tab/rhelsymp)
+### [RHEL/CentOS](#tab/rhelsymp)
 
 ```bash
 sudo tail /var/log/messages
