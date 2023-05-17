@@ -1,7 +1,7 @@
 ---
 title: Insufficient subnet size error while deploying an AKS cluster
 description: Troubleshoot an insufficientSubnetSize error that occurs while you deploy an Azure Kubernetes Service (AKS) cluster with advanced networking.
-ms.date: 6/1/2022
+ms.date: 05/17/2023
 author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: chiragpa, nickoman
@@ -24,7 +24,7 @@ The `insufficientSubnetSize` error occurs during any of the following three oper
 |-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Kubenet           | The number of new nodes that are requested.                                                                                                                |
 | Azure CNI         | The number of new nodes that are requested **times** the node pool's value in the `--max-pod` parameter.                                                   |
-| Azure CNI Overlay | The number of new nodes that are requested.<br/>In the node pools that use autoscaler the number of nodes is the value in the `--max-count` parameter. |
+| Azure CNI Overlay | The number of new nodes that are requested.<br/>In the node pools that use the autoscaler, the number of nodes is the value in the `--max-count` parameter. |
 
 ### Operation 2: Upgrading an AKS cluster or an AKS node pool
 
@@ -32,7 +32,7 @@ The `insufficientSubnetSize` error occurs during any of the following three oper
 |-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Kubenet           | The number of buffer nodes that are needed to upgrade.                                                                                                     |
 | Azure CNI         | The number of buffer nodes that are needed to upgrade **times** the node pool's value in the `--max-pod` parameter.                                        |
-| Azure CNI Overlay | The number of buffer nodes that are needed to upgrade.<br/>In the node pools that use autoscaler the number of nodes is the value in the `--max-count` parameter. |
+| Azure CNI Overlay | The number of buffer nodes that are needed to upgrade.<br/>In the node pools that use the autoscaler, the number of nodes is the value in the `--max-count` parameter. |
 
 By default, an AKS cluster sets a maximum surge (upgrade buffer) value of one (1). However, you can customize this upgrade behavior by setting the maximum surge value of a node pool. This action increases the number of available IP addresses that are needed to complete an upgrade.
 
@@ -42,7 +42,7 @@ By default, an AKS cluster sets a maximum surge (upgrade buffer) value of one (1
 |-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Kubenet           | The number of nodes that are requested.                                                                                                                    |
 | Azure CNI         | The number of nodes that are requested **times** the node pool's value in the `--max-pod` parameter.                                                   |
-| Azure CNI Overlay | The number of nodes that are requested.<br/>In the node pools that use autoscaler the number of nodes is the value in the `--max-count` parameter. |
+| Azure CNI Overlay | The number of nodes that are requested.<br/>In the node pools that use the autoscaler, the number of nodes is the value in the `--max-count` parameter. |
 
 ## Cause
 
