@@ -82,15 +82,15 @@ The example uses a file named _caCert.cer_ as a certificate file. You must obtai
 
 1. In the **Select Computer** pane, choose **Local computer: (the computer this console is running on)**, and then choose **Finish**.
 
-1. Choose **OK** to close the **Add or Remove Snap-ins** dialog box.
+1. Choose **OK** to close the **Add or Remove Snap-ins** dialog box.
 
-1. In the left pane of MMC, expand the **Certificates (Local Computer)** node.
+1. In the left pane of MMC, expand the **Certificates (Local Computer)** node.
 
-1. Expand the **Trusted Root Certification Authorities** node, right-click the **Certificates** subfolder, select **All Tasks**, and then choose **Import**.
+1. Expand the **Trusted Root Certification Authorities** node, right-click the **Certificates** subfolder, select **All Tasks**, and then choose **Import**.
 
-1. In the **Certificate Import Wizard**, on the **Welcome page**, choose **Next**.
+1. In the **Certificate Import Wizard**, on the **Welcome page**, choose **Next**.
 
-1. On the **File to Import** page, choose **Browse**.
+1. On the **File to Import** page, choose **Browse**.
 
 1. Browse to the location of the *caCert.cer* certificate file, select the file, and then choose **Open**.
 
