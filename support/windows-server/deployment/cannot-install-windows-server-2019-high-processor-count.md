@@ -19,8 +19,8 @@ This article provides workarounds for an issue in which Windows Server 2019 can'
 
 When you install Windows Server 2019 on servers with a high processor count, the installation fails at the setup stage, and you encounter the following issues:
 
-    - The mouse and keyboard don't respond.
-    - Windows Setup can't recognize the storage device.
+- The mouse and keyboard don't respond.
+- Windows Setup can't recognize the storage device.
 
 In the memory dump file, "USB Port Reset Failures" occur on the port with the CD-ROM.
 
