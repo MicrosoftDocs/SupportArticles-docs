@@ -22,7 +22,6 @@ appliesto:
   - Outlook for Microsoft 365
   - Outlook 2019
   - Outlook 2016
-  - Outlook 2013
   - Outlook for Microsoft 365 for Mac
   - Outlook for Mac
   - Outlook for iOS
