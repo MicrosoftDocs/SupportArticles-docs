@@ -4,9 +4,5 @@
   items:
 
   - name: Troubleshoot
-    tocHref: /windows-server/
+    tocHref: /surface-hub/
     topicHref: /troubleshoot/index
-    items:
-    - name: Surface
-      tocHref: /surface-hub/
-      topicHref: /troubleshoot/devices/index

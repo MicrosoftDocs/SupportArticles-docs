@@ -46,6 +46,8 @@
       href: ./identity/change-certificates-expiration-date.md
     - name: DPAPI MasterKey backup failures
       href: ./identity/dpapi-masterkey-backup-failures.md
+    - name: Error 0x800706ba during certificate enrollment
+      href: ./identity/error-0x800706ba-certificate-enrollment.md
     - name: Export Root Certification Authority Certificate
       href: ./identity/export-root-certification-authority-certificate.md
     - name: Find the name of Enterprise Root CA server
@@ -3076,3 +3078,5 @@
       href: ../windows-client/windows-troubleshooters/gather-information-using-tssv2-deployment.md?context=/troubleshoot/windows-server/context/context
     - name: Gather information for Group Policy issues
       href: ../windows-client/windows-troubleshooters/gather-information-using-tssv2-group-policy.md?context=/troubleshoot/windows-server/context/context
+    - name: Gather information for user experience-related issues
+      href: ../windows-client/windows-troubleshooters/gather-information-using-tssv2-user-experience.md?context=/troubleshoot/windows-server/context/context
