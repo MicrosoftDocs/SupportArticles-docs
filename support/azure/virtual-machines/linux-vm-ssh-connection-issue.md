@@ -133,7 +133,7 @@ In the Azure portal, open the **Properties** window of the VM to check the agent
    ```
 
    > [!NOTE]
-   > In Ubuntu systems, the _/var/run/sshd_ directory runs in memory. Restarting the VM will also fix the issue.
+   > In Ubuntu, the _/var/run/sshd_ directory runs in memory. Restarting the VM will also fix the issue.
 
    ---
 
@@ -167,7 +167,7 @@ Follow these steps to automate the manual offline process:
    az vm repair create --verbose -g $RGNAME -n $VMNAME --repair-username $USERNAME --repair-password $PASSWORD --copy-disk-name repairdiskcopy
    ```
 
-2. Log in to the repair VM. Mount and chroot to the filesystem of the attached copy of the OS disk. Follow the detailed [chroot instructions](chroot-environment-linux.md).
+2. Sign in to the repair VM. Mount and chroot to the filesystem of the attached copy of the OS disk. Follow the detailed [chroot instructions](chroot-environment-linux.md).
 
 3. Run the following commands to resolve the permission and ownership issues:
 
