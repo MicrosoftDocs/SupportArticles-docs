@@ -307,7 +307,7 @@ The following processes and directories for the PolyBase services are to be excl
 |PolyBase Engine service| %ProgramFiles%\\Microsoft SQL Server\\\<InstanceID\>.\<InstanceName\>\\MSSQL\\Binn\\Polybase\\mpdwsvc.exe |
 |PolyBase Data Movement (DMS) and Engine services | %ProgramFiles%\\Microsoft SQL Server\\\<InstanceID\>.\<InstanceName\>\\MSSQL\\Binn\\Polybase\\mpdwsvc.exe |
 
-PolyBase Data Movement service (DMS) and Engine services use same executable with different command line parameters.
+PolyBase Data Movement service (DMS) and Engine services use the same executable with different command line parameters.
 
 ### PolyBase directories and file name extensions to exclude from virus scanning
 
@@ -319,11 +319,11 @@ When you configure your antivirus software settings, make sure that you exclude 
 
 ## Configure antivirus software to work with Reporting Services (SSRS)
 
-The following processes and directories for the SQL Server Reporting Services (SSRS) are to be excluded from anti-virus scanning.
+The following processes and directories for the SQL Server Reporting Services (SSRS) are to be excluded from antivirus scanning.
 
 ### SSRS processes to exclude from virus scanning
 
-The executables to exclude have evolved across different versions of SSRS. The following table lists them according to SSRS version.
+The executables to exclude have evolved across different versions of SSRS. The following table lists them according to the SSRS version.
 
 |SSRS version       | Process/Executable file|
 |---------          |---------               |
@@ -375,6 +375,6 @@ The following table contains information about how to use a firewall with SQL Se
 
 ## More information
 
-- For more information on performance issues caused by third party modules and drivers to SQL Server, see [Performance and consistency issues when modules or driver are loaded](/troubleshoot/sql/database-engine/performance/performance-consistency-issues-filter-drivers-modules).
+- For more information on performance issues caused by third-party modules and drivers to SQL Server, see [Performance and consistency issues when modules or driver are loaded](/troubleshoot/sql/database-engine/performance/performance-consistency-issues-filter-drivers-modules).
 - To find general information about SQL Server security, see [Securing SQL Server](/sql/relational-databases/security/securing-sql-server).
 - For general recommendations from Microsoft for scanning on Enterprise systems, see [822158 Virus scanning recommendations for Enterprise computers that are running currently supported versions of Windows](https://support.microsoft.com/help/822158).
