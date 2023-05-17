@@ -399,6 +399,8 @@
       items:
         - name: Accept and Decline buttons missing in a task request
           href: ../message-body/accept-decline-buttons-missing-in-task-request.md
+        - name: Actionable message doesn't automatically refresh in the Outlook reading pane
+          href: ../message-body/actionable-message-in-reading-pane-not-refreshed.md
         - name: Attachment doesn't show in a Plain Text message
           href: ../message-body/attachment-does-not-appear-in-plain-text-message.md
         - name: Attachment size exceeds the allowable limit error
