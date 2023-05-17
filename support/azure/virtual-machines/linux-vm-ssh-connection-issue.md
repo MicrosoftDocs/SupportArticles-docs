@@ -1,7 +1,7 @@
 ---
 title: SSH connection to Azure Linux VM fails due to permission and ownership issues 
 description: Resolves an issue in which the SSH service fails because the /var/empty/sshd, or /var/lib/empty, or /var/run/sshd directory isn't owned by the root user, or it's group-writable or world-writable.
-ms.date: 05/16/2023
+ms.date: 05/17/2023
 author: saimsh-msft
 ms.reviewer: divargas, adelgadohell
 ms.service: virtual-machines
@@ -158,7 +158,10 @@ Azure Linux Auto Repair (ALAR) scripts are a part of the VM repair extension des
 
 Follow these steps to automate the manual offline process:
 
-1. Use the [az vm repair create](/cli/azure/vm/repair#az-vm-repair-create) command to create a repair VM. The repair VM has a copy of the OS disk for the problematic VM attached. Replace `$RGNAME`, `$VMNAME`, `$USERNAME` and `$PASSWORD` values accordingly.
+> [!Note]
+> In the following steps, replace `$RGNAME`, `$VMNAME`, `$USERNAME`, `$PASSWORD` and `repairdiskcopy` values accordingly.
+
+1. Use the [az vm repair create](/cli/azure/vm/repair#az-vm-repair-create) command to create a repair VM. The repair VM has a copy of the OS disk for the problematic VM attached.
 
    ```azurecli
    az vm repair create --verbose -g $RGNAME -n $VMNAME --repair-username $USERNAME --repair-password $PASSWORD --copy-disk-name repairdiskcopy
@@ -184,14 +187,11 @@ Follow these steps to automate the manual offline process:
 
    ---
 
-4. Once the changes are applied, run the following `az vm repair restore` command to perform automatic OS disk swap with the original VM. Replace `$RGNAME` and `$VMNAME` values accordingly.
+4. Once the changes are applied, run the following `az vm repair restore` command to perform automatic OS disk swap with the original VM.
 
    ```azurecli
    az vm repair restore --verbose -g $RGNAME -n $VMNAME
    ```
-
-   > [!Note]
-   > The resource group name `$RGNAME`, VM name `$VMNAME`, and `--copy-disk-name "repairdiskcopy"` are examples and the values need to change accordingly.
 
 ### <a id="offlinetroubleshooting-manualvm"></a>Use the manual method
 
