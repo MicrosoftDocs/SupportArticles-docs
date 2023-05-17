@@ -40,7 +40,7 @@ To fix the issue, stop (de-allocate) and start the VM then recheck to see if iss
 ## Verify if the Windows partition is marked as active
 
 > [!NOTE]
-> This section applies only for Generation 1 VMs because eneration 2 VMs that use UEFI doesn't use an active partition.
+> This section applies only for Generation 1 VMs because Generation 2 VMs that use UEFI don't use an active partition.
 
 1. Delete the virtual machine (VM). Make sure that you select the **Keep the disks** option when you do this.
 2. Attach the OS disk as a data disk to another VM (a troubleshooting VM). For more information, see [How to attach a data disk to a Windows VM in the Azure portal](/azure/virtual-machines/windows/attach-managed-disk-portal).
@@ -151,7 +151,7 @@ To fix the issue, stop (de-allocate) and start the VM then recheck to see if iss
       ```
 
       > [!NOTE]
-      > If the VHD has a single partition and both the BCD Folder and Windows Folder are in the same volume, and if the previous setup didn't work, then try replacing the partition values with `boot`.
+      > If the VHD has a single partition and both the BCD folder and Windows folder are in the same volume, and if the previous setup didn't work, then try replacing the partition values with `boot`.
 
       ```console
       bcdedit /store <BCD FOLDER - DRIVE LETTER>:\boot\bcd /set {bootmgr} device boot
