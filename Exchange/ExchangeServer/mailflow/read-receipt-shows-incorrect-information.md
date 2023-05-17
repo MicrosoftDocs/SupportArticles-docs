@@ -47,7 +47,7 @@ The issue occurs for email that you send in Outlook for Windows or Outlook for M
 
 ## Cause
 
-The issues occur if the [DSNConversionMode](/powershell/module/exchange/set-transportconfig#-dsnconversionmode) parameter value is set to `UseExchangeDSNs` in the transport configuration settings for your Microsoft Exchange organization.
+The issue occurs if the [DSNConversionMode](/powershell/module/exchange/set-transportconfig#-dsnconversionmode) parameter value is set to `UseExchangeDSNs` in the transport configuration settings for your Microsoft Exchange organization.
 
 > [!NOTE]
 > The default value of the DSNConversionMode parameter in Exchange Server 2013 is `UseExchangeDSNs`. In later Exchange Server versions, the default value is `PreserveDSNBody`. However, if you upgraded from a previous Exchange Server version that had DSNConversionMode set to `UseExchangeDSNs`, the previous value might be retained.
