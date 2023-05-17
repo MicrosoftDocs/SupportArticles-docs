@@ -1,6 +1,6 @@
 ---
-title: Configure Anti-Virus software to work with SQL Server
-description: This article provides guidance on how to use anti-virus software with SQL Server
+title: Configure antivirus software to work with SQL Server
+description: This article provides guidance on how to use antivirus software with SQL Server
 author: pijocoder
 ms.author: jopilov
 ms.reviewer: jopilov, pijocoder
@@ -9,31 +9,31 @@ ms.prod: sql
 ms.topic: troubleshooting
 ms.custom: sap:Security Issues
 ---
-# Configure Anti-Virus software to work with SQL Server
+# Configure antivirus software to work with SQL Server
 
-This article contains general guidelines to help you properly configure antivirus software to run on computers that are running SQL Server in your environment.
+This article contains general guidelines to help you properly configure antivirus software on computers that are running SQL Server in your environment.
 
-We strongly recommend that you individually assess the security risk for each computer that is running SQL Server in your environment. Based on the assessment, you must select the tools that are appropriate for the security risk level of each computer that is running SQL Server.
+We strongly recommend that you individually assess the security risk for each computer that's running SQL Server in your environment. Based on the assessment, you must select the appropriate tools for the security risk level of each computer that's running SQL Server.
 
 Additionally, we recommend that you test the entire system under a full load to measure any changes in stability and performance before you roll out any virus-protection software.
 
 Virus protection software requires some system resources to execute. You must perform testing before and after you install your antivirus
-software to determine whether there's any performance effect on the computer that is running SQL Server.
+software to determine whether there's any performance effect on the computer that's running SQL Server.
 
 ## Security risk factors
 
 Consider the following factors when deciding on anti-malware solutions:
 
-- The business value of the information that is stored on the computer.
+- The business value of the information that's stored on the computer.
 - The required security level for the information.
 - The cost of losing access to the information.
-- The risk of either virus or bad information propagating from that computer.
+- The risk of either viruses or bad information propagating from that computer.
 
 ## High-risk servers
 
 Any server is at some risk of infection. The highest-risk servers generally meet one or more of the following criteria:
 
-- The servers are open to public Internet.
+- The servers are open to the public Internet.
 - The servers have open ports to servers that aren't behind a firewall.
 - The servers read or execute files from other servers.
 - The servers run HTTP servers, such as Internet Information Services (IIS) or Apache.
@@ -42,22 +42,22 @@ Any server is at some risk of infection. The highest-risk servers generally meet
 
 Servers that don't meet the criteria for a high-risk server are generally at a lower risk, although not always.
 
-## Anti-Virus software types
+## Antivirus software types
 
 - Active virus scanning: This kind of scanning checks incoming and outgoing files for viruses.
 
 - Virus sweep software: Virus sweep software scans existing files for file infection. It detects issues after files are infected by a virus. This kind of scanning may cause the following SQL Server database recovery and SQL Server full-text catalog file issues:
 
-  - If the virus sweep has opened a database file when SQL Server tries to open the database, the database to which the file belongs might be marked as suspect. SQL Server opens a database when it starts or when a database with Auto-Close enabled was closed and is accessed again. SQL Server database files typically have the *.mdf*, *.ldf*, or *.ndf* file name extensions.
+  - If the virus sweep has opened a database file when SQL Server tries to open the database, the database to which the file belongs might be marked as suspect. SQL Server opens a database when it starts or when a database with Auto-Close enabled was closed and is accessed again. SQL Server database files typically have *.mdf*, *.ldf*, or *.ndf* file name extensions.
 
-  - If the virus sweep software has a SQL Server full-text catalog file open when Full-text Search tries to access the file, you may have problems with the full text catalog.
+  - If the virus sweep software has a SQL Server full-text catalog file open when Full-text Search tries to access the file, you may have problems with the full-text catalog.
 
 - Vulnerability scanning software: The Microsoft Security Compliance Toolkit includes a set of tools that enable enterprise administrators to perform a wide range of security tasks. These tasks include download, analyze, test, edit, store Microsoft-recommended security configuration baselines for Windows and other Microsoft products, and compare them against other security configurations. To download it, go to [Microsoft Security Compliance Toolkit 1.0](https://www.microsoft.com/download/details.aspx?id=55319).
 
-- Microsoft also released the Microsoft [Windows Malicious Software Removal Tool](https://www.microsoft.com/download/details.aspx?id=9905) to help remove specific, prevalent malicious software from computers. For more information about the Microsoft Windows Malicious Software Removal Tool, see [890830 Remove specific prevalent malware with Windows Malicious Software Removal Tool](https://support.microsoft.com//topic/remove-specific-prevalent-malware-with-windows-malicious-software-removal-tool-kb890830-ba51b71f-39cd-cdec-73eb-61979b0661e0).
+- Microsoft also released the [Windows Malicious Software Removal Tool](https://www.microsoft.com/download/details.aspx?id=9905) to help remove specific, prevalent malicious software from computers. For more information about the Microsoft Windows Malicious Software Removal Tool, see [890830 Remove specific prevalent malware with Windows Malicious Software Removal Tool](https://support.microsoft.com//topic/remove-specific-prevalent-malware-with-windows-malicious-software-removal-tool-kb890830-ba51b71f-39cd-cdec-73eb-61979b0661e0).
   
 > [!NOTE]  
-> Windows Server 2016 and later versions automatically enable Windows Defender. Make sure that Windows Defender is configured to exclude *Filestream* files. Failure to do this can result in decreased performance for backup and restore operations. For more information, see [Configure and validate exclusions for Windows Defender Antivirus scans](/windows/security/threat-protection/windows-defender-antivirus/configure-exclusions-windows-defender-antivirus).
+> Windows Server 2016 and later versions automatically enable Windows Defender. Make sure that Windows Defender is configured to exclude *Filestream* files. Failure to do this can result in decreased backup and restore operations performance. For more information, see [Configure and validate exclusions for Windows Defender Antivirus scans](/windows/security/threat-protection/windows-defender-antivirus/configure-exclusions-windows-defender-antivirus).
 
 ## SQL Server processes to exclude from virus scanning
 
@@ -70,7 +70,7 @@ When you configure your antivirus software settings, make sure that you exclude 
 
 For an updated list of services and file paths, see [Services installed by SQL Server](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions#Service_Details).
 
-Applications that are installed on a SQL Server computer can load modules into the SQL Server process (sqlservr.exe). The applications use this functionality to run business logic or for intrusion monitoring and protection. To detect if an unknown module or a module from a third-party software was loaded into the process memory space, check the output of the [sys.dm_os_loaded_modules](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-loaded-modules-transact-sql) Dynamic Management View (DMV).
+Applications installed on a SQL Server computer can load modules into the SQL Server process (sqlservr.exe). The applications use this functionality to run business logic or for intrusion monitoring and protection. To detect if an unknown module or a module from third-party software was loaded into the process memory space, check the output of the [sys.dm_os_loaded_modules](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-loaded-modules-transact-sql) Dynamic Management View (DMV).
 
 In some cases, applications or drivers may be used to detour SQL Server or Windows code to provide malware protection or monitoring services. However, if such applications or drivers aren't designed correctly, they may cause a wide variety of issues for products like SQL Server. For information about third-party detours or similar techniques in SQL Server, see [Detours or similar techniques may cause unexpected behaviors with SQL Server](../../general/issue-detours-similar-techniques.md).
 
@@ -90,7 +90,7 @@ These files usually have one of the following file name extensions:
 - `.ldf`
 - `.ndf`
 
-By default the data files are located in the following directories. However, they can be placed in any directory by the database administrators of the system.
+By default, the data files are located in the following directories. However, they can be placed in any directory by the database administrators of the system.
 
 |SQL Server Instance   | Default data directory|
 |-------               |---------              |
