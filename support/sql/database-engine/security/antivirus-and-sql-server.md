@@ -54,7 +54,7 @@ Servers that don't meet the criteria for a high-risk server are generally at a l
 
 - Vulnerability scanning software: The Microsoft Security Compliance Toolkit includes a set of tools that enable enterprise administrators to perform a wide range of security tasks. These tasks include download, analyze, test, edit, store Microsoft-recommended security configuration baselines for Windows and other Microsoft products, and compare them against other security configurations. To download it, go to [Microsoft Security Compliance Toolkit 1.0](https://www.microsoft.com/download/details.aspx?id=55319).
 
-- Microsoft also released the Microsoft [Windows Malicious Software Removal Tool](https://www.microsoft.com/download/details.aspx?id=9905) to help remove specific, prevalent malicious software from computers. For more information about the Microsoft Windows Malicious Software Removal Tool, see [890830 Remove specific prevalent malware with Windows Malicious Software Removal Tool](/topic/remove-specific-prevalent-malware-with-windows-malicious-software-removal-tool-kb890830-ba51b71f-39cd-cdec-73eb-61979b0661e0).
+- Microsoft also released the Microsoft [Windows Malicious Software Removal Tool](https://www.microsoft.com/download/details.aspx?id=9905) to help remove specific, prevalent malicious software from computers. For more information about the Microsoft Windows Malicious Software Removal Tool, see [890830 Remove specific prevalent malware with Windows Malicious Software Removal Tool](https://support.microsoft.com//topic/remove-specific-prevalent-malware-with-windows-malicious-software-removal-tool-kb890830-ba51b71f-39cd-cdec-73eb-61979b0661e0).
   
 > [!NOTE]  
 > Windows Server 2016 and later versions automatically enable Windows Defender. Make sure that Windows Defender is configured to exclude *Filestream* files. Failure to do this can result in decreased performance for backup and restore operations. For more information, see [Configure and validate exclusions for Windows Defender Antivirus scans](/windows/security/threat-protection/windows-defender-antivirus/configure-exclusions-windows-defender-antivirus).
@@ -191,7 +191,7 @@ These files typically have the `.sql` file name extension and contain Transact-S
 
   c:\\Users\\\<*DistributionAgentAccount\>*\\AppData\\Temp\\*.lob
 
-  For more information, see ["The distribution agent failed to create temporary files" error message](../replication/error-run-distribution-agent).
+  For more information, see ["The distribution agent failed to create temporary files" error message](../replication/error-run-distribution-agent.md).
 
 - Files in Replication Snapshot folder
 
@@ -211,7 +211,7 @@ If you're running antivirus software on a cluster, make sure that you also exclu
 
 If you back up the database to a disk or if you back up the transaction log to a disk, you can exclude the backup files from the virus scanning.
 
-For more information about antivirus considerations on a cluster, see [Antivirus software cause problems with Cluster Services - Windows Server](../../windows-server/high-availability/not-cluster-aware-antivirus-software-cause-issue.md).
+For more information about antivirus considerations on a cluster, see [Antivirus software cause problems with Cluster Services - Windows Server](../../../windows-server/high-availability/not-cluster-aware-antivirus-software-cause-issue.md).
 
 ## Configure antivirus software to work with Analysis Services (SSAS)
 
