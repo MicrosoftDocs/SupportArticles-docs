@@ -43,7 +43,7 @@ For example, the read receipt might contain the following text:
 >
 > was read on Monday, February 13, 2023 3:53:42 PM (UTC+00:00) Monrovia, Reykjavik.
 
-The issue occurs for email that you send in Outlook for Windows or Outlook for Mac.
+The issue occurs for email that you send in Outlook for Windows, Outlook for Mac, or Outlook on the web.
 
 ## Cause
 
