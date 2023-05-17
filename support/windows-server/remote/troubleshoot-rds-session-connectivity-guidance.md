@@ -1,7 +1,7 @@
 ---
 title: Guidance for troubleshooting RDS session connectivity
 description: Introduces general guidance for troubleshooting scenarios related to RDS session connectivity.
-ms.date: 9/28/2022
+ms.date: 05/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -73,7 +73,7 @@ For a full description of how to configure wireless network settings by using GP
 
 ## Data collection
 
-Before contacting Microsoft support, you can gather information about your issue.
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for User Experience issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-user-experience.md#remote-desktop-session-connectivity).
 
 ### Prerequisites
 
