@@ -24,7 +24,7 @@ ms.date: 05/17/2023
 
 Consider the following scenario:
 
-1. A recipient of an actionable message in Microsoft Outlook opens the message in a pop-out window.
+1. A recipient of an actionable message in Outlook for Microsoft 365 opens the message in a pop-out window.
 
 2. The recipient performs an action on the actionable message in the pop-out window that causes the message to update. For example, a recipient selects an **Approve** button in the message, and the following text then appears next to the button: "Your request is approved".
 
