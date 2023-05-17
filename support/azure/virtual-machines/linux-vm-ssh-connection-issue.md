@@ -15,7 +15,7 @@ This article provides solutions to an issue in which connecting to a Linux virtu
 
 ## Symptoms
 
-When you connect to a Linux virtual machine (VM) via SSH, the connection fails and you may receive the following error message about the affected directory, depending on your Linux distribution.
+When you connect to a Linux virtual machine (VM) via SSH, the connection fails. You may receive the following error message about the affected directory, depending on your Linux distribution.
 
 ### [CentOS/RHEL](#tab/rhelsymp)
 
@@ -52,7 +52,7 @@ sshd[1850]: fatal: /var/run/sshd must be owned by root and not group or world-wr
 
 ## Cause
 
-This problem may occur if the affected directory isn't owned by the root user, or it's group-writable or world-writable.
+This problem may occur if the root user doesn't own the affected directory or if it's group-writable or world-writable.
 
 To resolve this issue, use one of the following resolutions:
 
@@ -69,7 +69,7 @@ Here are two methods to repair the VM offline:
 ### <a id="onlinetroubleshooting-serialconsole"></a>Use the Serial Console
 
 1. Connect to [the Serial Console](serial-console-linux.md) of the VM from Azure portal.
-2. Sign into the VM by using a local administrative account and its corresponding credential/password.
+2. Sign in to the VM by using a local administrative account and its corresponding credential or password.
 3. Run the following commands to resolve the permission and ownership issue:
 
    ### [RHEL/CentOS](#tab/rhelts1)
@@ -98,7 +98,7 @@ Here are two methods to repair the VM offline:
 ### <a id="onlinetroubleshooting-runcommand"></a>Use the "Run Command" extension
 
 > [!NOTE]
-> This method relies on the Azure Linux VM Agent (waagent). Therefore, make sure that the agent is installed in the VM and its service is running.
+> This method relies on the Azure Linux VM Agent (waagent). Therefore, make sure that the agent is installed in the VM and that its service is running.
 
 In the Azure portal, open the **Properties** window of the VM to check the agent status. If the agent is enabled and has the **Ready** status, follow these steps to change the permission:
 
@@ -144,8 +144,8 @@ If you can connect to the VM via SSH, and you want to analyze the details of the
 ## <a id="offlinetroubleshooting"></a>Resolution 2: Repair the VM offline
 
 > [!NOTE]
-> - If the VM serial console access isn't available and the waagent isn't ready, use this resolution.
-> - In Ubuntu, the _/var/run/sshd_ directory runs in memory. Restarting the VM will also fix the issue. Therefore, the offline troubleshooting in Ubuntu VMs isn't necessary.
+> - Use this resolution if the VM serial console access isn't available and the waagent isn't ready.
+> - In Ubuntu, the _/var/run/sshd_ directory runs in memory. Restarting the VM will also fix the issue. Therefore, offline troubleshooting in Ubuntu VMs isn't necessary.
 
 Here are two methods to repair the VM offline:
 
@@ -159,7 +159,7 @@ Azure Linux Auto Repair (ALAR) scripts are a part of the VM repair extension des
 Follow these steps to automate the manual offline process:
 
 > [!Note]
-> In the following steps, replace `$RGNAME`, `$VMNAME`, `$USERNAME`, `$PASSWORD` and `repairdiskcopy` values accordingly.
+> In the following steps, replace `$RGNAME`, `$VMNAME`, `$USERNAME`, `$PASSWORD`, and `repairdiskcopy` values accordingly.
 
 1. Use the [az vm repair create](/cli/azure/vm/repair#az-vm-repair-create) command to create a repair VM. The repair VM has a copy of the OS disk for the problematic VM attached.
 
@@ -167,7 +167,7 @@ Follow these steps to automate the manual offline process:
    az vm repair create --verbose -g $RGNAME -n $VMNAME --repair-username $USERNAME --repair-password $PASSWORD --copy-disk-name repairdiskcopy
    ```
 
-2. Login to the repair VM. Mount and chroot to the filesystem of the attached copy of OS disk. Follow the detailed [chroot instructions](chroot-environment-linux.md).
+2. Log in to the repair VM. Mount and chroot to the filesystem of the attached copy of the OS disk. Follow the detailed [chroot instructions](chroot-environment-linux.md).
 
 3. Run the following commands to resolve the permission and ownership issues:
 
@@ -187,7 +187,7 @@ Follow these steps to automate the manual offline process:
 
    ---
 
-4. Once the changes are applied, run the following `az vm repair restore` command to perform automatic OS disk swap with the original VM.
+4. Once the changes are applied, run the following `az vm repair restore` command to perform an automatic OS disk swap with the original VM.
 
    ```azurecli
    az vm repair restore --verbose -g $RGNAME -n $VMNAME
