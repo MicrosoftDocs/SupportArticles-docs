@@ -1,5 +1,5 @@
 ---
-title: Read receipt shows incorrect information
+title: Outlook read receipt shows incorrect information
 description: Resolves an issue in which an email read receipt shows incorrect information.
 author: v-trisshores
 ms.author: v-trisshores
@@ -16,11 +16,12 @@ appliesto:
 - Exchange Server 2019
 - Exchange Server 2016
 - Exchange Server 2013
+- Outlook on the web
 search.appverid: MET150
-ms.date: 05/15/2023
+ms.date: 05/17/2023
 ---
 
-# Read receipt shows incorrect information
+# Outlook read receipt shows incorrect information
 
 ## Symptoms
 
@@ -41,6 +42,8 @@ For example, the read receipt might contain the following text:
 > &nbsp;&nbsp;Sent: Monday, February 13, 2023 3:53:45 PM (UTC+00:00) Monrovia, Reykjavik
 >
 > was read on Monday, February 13, 2023 3:53:42 PM (UTC+00:00) Monrovia, Reykjavik.
+
+The issue occurs for email that you send in Outlook for Windows or Outlook for Mac.
 
 ## Cause
 
