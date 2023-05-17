@@ -42,14 +42,14 @@ Outside the specific combinations that are described in the "More information" s
 
 ## Resolution
 
-If the actionable message defines the [autoInvokeAction](/outlook/actionable-messages/auto-invoke#using-autoinvokeaction) property, recipients can resolve this issue by saving the pop-out window view of an actionable message. That procedure triggers an automatic refresh of the Outlook reading pane view, as described in "Scenario A" in the "More information" section.
+If the actionable message defines the [autoInvokeAction](/outlook/actionable-messages/auto-invoke#using-autoinvokeaction) property, recipients can resolve this issue by saving the pop-out window view of an actionable message. That procedure triggers an automatic refresh of the Outlook reading pane view, as described in "Scenario A" in the "More information" section of this article.
 
 > [!NOTE]
-> You can use the [Actionable messages debugger for Outlook](https://appsource.microsoft.com/product/office/WA104381686) add-in to check whether an actionable message defines the autoInvokeAction property. Developers of actionable messages can use the Microsoft [Actionable Message Designer](https://amdesigner.azurewebsites.net) to define the autoInvokeAction property.
+> You can use the [Actionable messages debugger for Outlook](https://appsource.microsoft.com/product/office/WA104381686) add-in to check whether an actionable message defines the `autoInvokeAction` property. Developers of actionable messages can use the Microsoft [Actionable Message Designer](https://amdesigner.azurewebsites.net) to define the `autoInvokeAction` property.
 
 ## Workaround
 
-If the actionable message doesn't define the [autoInvokeAction](/outlook/actionable-messages/auto-invoke#using-autoinvokeaction) property, recipients can work around this issue by manually refreshing the Outlook reading pane view. Refer to "Scenario B" in the "More information" section.
+If the actionable message doesn't define the [autoInvokeAction](/outlook/actionable-messages/auto-invoke#using-autoinvokeaction) property, recipients can work around this issue by manually refreshing the Outlook reading pane view. Refer to "Scenario B" in the "More information" section of this article.
 
 ## More information
 
@@ -64,7 +64,7 @@ In this scenario, the [adaptive card](/outlook/actionable-messages/adaptive-card
 - Reopens the actionable message in the reading pane. For example, by opening a different message in the reading pane and then switching back to the actionable message.
 
 > [!NOTE]
-> The autoInvokeAction property provides an HTTP service endpoint for Outlook to retrieve an up-to-date actionable message. Depending on your organization's implementation of the HTTP service, the provided actionable message might have a state that's based on the cumulative actions of all recipients.
+> The `autoInvokeAction` property provides an HTTP service endpoint for Outlook to retrieve an up-to-date actionable message. Depending on your organization's implementation of the HTTP service, the provided actionable message might have a state that's based on the cumulative actions of all recipients.
 
 ### Scenario B: Actionable message doesn't define the autoInvokeAction property
 
@@ -75,4 +75,4 @@ In this scenario, the [adaptive card](/outlook/actionable-messages/adaptive-card
 - Restarts Outlook, and then reopens the actionable message in the reading pane
 
 > [!NOTE]
-> If the adaptive card doesn't define the autoInvokeAction property, Outlook refreshes the reading pane view by displaying the latest actionable message that the recipient previously opened in Outlook.
+> If the adaptive card doesn't define the `autoInvokeAction` property, Outlook refreshes the reading pane view by displaying the latest actionable message that the recipient previously opened in Outlook.
