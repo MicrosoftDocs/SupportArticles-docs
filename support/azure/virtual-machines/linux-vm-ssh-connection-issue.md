@@ -56,15 +56,15 @@ This problem may occur if the root user doesn't own the affected directory or if
 
 To resolve this issue, use one of the following resolutions:
 
-- [Resolution 1: Repair the VM online](#onlinetroubleshooting)
-- [Resolution 2: Repair the VM offline](#offlinetroubleshooting)
+- [Resolution 1: Repair the VM online.](#onlinetroubleshooting)
+- [Resolution 2: Repair the VM offline.](#offlinetroubleshooting)
 
 ## <a id="onlinetroubleshooting"></a>Resolution 1: Repair the VM online
 
 Here are two methods to repair the VM offline:
 
-- [Use the Serial Console](#onlinetroubleshooting-serialconsole)
-- [Use the "Run Command" extension](#onlinetroubleshooting-runcommand)
+- [Use the Serial Console.](#onlinetroubleshooting-serialconsole)
+- [Use the "Run Command" extension.](#onlinetroubleshooting-runcommand)
 
 ### <a id="onlinetroubleshooting-serialconsole"></a>Use the Serial Console
 
@@ -149,8 +149,8 @@ If you can connect to the VM via SSH, and you want to analyze the details of the
 
 Here are two methods to repair the VM offline:
 
-- [Use Azure Linux Auto Repair (ALAR)](#offlinetroubleshooting-repairvm)
-- [Use the manual method](#offlinetroubleshooting-manualvm)
+- [Use Azure Linux Auto Repair (ALAR).](#offlinetroubleshooting-repairvm)
+- [Use the manual method.](#offlinetroubleshooting-manualvm)
 
 ### <a id="offlinetroubleshooting-repairvm"></a>Use Azure Linux Auto Repair (ALAR)
 
@@ -197,8 +197,8 @@ Follow these steps to automate the manual offline process:
 
 If both the serial console and ALAR approach don't apply to you or fail, the repair has to be performed manually. Follow the steps below to manually attach the OS disk to a recovery VM and swap the OS disk back to the original VM:
 
-- [Attach the OS disk to a recovery VM using the Azure portal](troubleshoot-recovery-disks-portal-linux.md)
-- [Attach the OS disk to a recovery VM using Azure CLI](troubleshoot-recovery-disks-linux.md)
+- [Attach the OS disk to a recovery VM using the Azure portal.](troubleshoot-recovery-disks-portal-linux.md)
+- [Attach the OS disk to a recovery VM using Azure CLI.](troubleshoot-recovery-disks-linux.md)
 
 Once the OS disk is successfully attached to the recovery VM, follow the detailed [chroot instructions](chroot-environment-linux.md) to mount and chroot to the filesystems of the attached OS disk. Then, follow step 3 in the [Use Azure Linux Auto Repair (ALAR)](#offlinetroubleshooting-repairvm) section to resolve the permission and ownership issues.
 
