@@ -511,6 +511,8 @@
           href: ../mailflow/uneven-distribution-messages-basicauth-basicauthrequiretls.md
         - name: Outbound email messages aren't sent
           href: ../mailflow/outbound-email-messages-are-not-sent.md
+        - name: Read receipt shows incorrect information
+          href: ../mailflow/read-receipt-shows-incorrect-information.md
         - name: The front-end Microsoft Exchange Transport service stops and doesn't start
           href: ../mailflow/front-end-microsoft-exchange-transport-service-stops.md
         - name: TLS negotiation failed with error NoCredentials error
