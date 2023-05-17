@@ -52,7 +52,7 @@ sshd[1850]: fatal: /var/run/sshd must be owned by root and not group or world-wr
 
 ## Cause
 
-This problem may occur if the root user doesn't own the affected directory or if it's group-writable or world-writable.
+This problem may occur if the affected directory isn't owned by the root user, or if it's group-writable or world-writable.
 
 To resolve this issue, use one of the following resolutions:
 
