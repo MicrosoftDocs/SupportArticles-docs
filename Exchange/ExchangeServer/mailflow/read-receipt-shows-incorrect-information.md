@@ -8,15 +8,25 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom:
-- CI 174527
-- Exchange Server
-- CSSTroubleshoot
+  - CI 174527
+  - Exchange Server
+  - Outlook for Windows
+  - Outlook for Mac
+  - CSSTroubleshoot
 ms.reviewer: sofiamenezes, arindamt, meerak
 appliesto:
-- Exchange Server 2019
-- Exchange Server 2016
-- Exchange Server 2013
-- Outlook on the web
+  - Exchange Server 2019
+  - Exchange Server 2016
+  - Exchange Server 2013
+  - Outlook on the web
+  - Outlook for Microsoft 365
+  - Outlook 2019
+  - Outlook 2016
+  - Outlook 2013
+  - Outlook for Microsoft 365 for Mac
+  - Outlook for Mac
+  - Outlook for iOS
+  - Outlook for Android
 search.appverid: MET150
 ms.date: 05/17/2023
 ---
@@ -25,7 +35,7 @@ ms.date: 05/17/2023
 
 ## Symptoms
 
-You request a read receipt for an email message that you send to an external recipient, but the received receipt incorrectly describes your message:
+In Outlook, you request a read receipt for an email message that you send to an external recipient, but the received receipt incorrectly describes your message:
 
 - The **To** field that specifies the recipients of your message is empty.
 
@@ -42,8 +52,6 @@ For example, the read receipt might contain the following text:
 > &nbsp;&nbsp;Sent: Monday, February 13, 2023 3:53:45 PM (UTC+00:00) Monrovia, Reykjavik
 >
 > was read on Monday, February 13, 2023 3:53:42 PM (UTC+00:00) Monrovia, Reykjavik.
-
-The issue occurs for email that you send in Outlook for Windows, Outlook for Mac, or Outlook on the web.
 
 ## Cause
 
