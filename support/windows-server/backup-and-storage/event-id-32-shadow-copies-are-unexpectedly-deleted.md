@@ -34,7 +34,7 @@ During troubleshooting, you found there are delays in bringing the shadow copy v
 
 ## Cause
 
-When there are multiple phantom shadow copy entries under `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\STORAGE\VolumeSnapshot` , this increases the time for the snapshots being enumerated on the shadow storage volume once the parent volume comes online.
+This issue occurs because there are multiple phantom shadow copy entries under `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\STORAGE\VolumeSnapshot`. It increases the time for the snapshots being enumerated on the shadow storage volume when the parent volume comes online.
 
 If it takes a long time in the enumeration, volsnap will delete these snapshots.
 
