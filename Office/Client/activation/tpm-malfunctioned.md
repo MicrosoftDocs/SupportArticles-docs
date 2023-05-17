@@ -91,8 +91,9 @@ For manual troubleshooting for step 7, or for more information, see [Fix authent
 <summary><b>Troubleshoot Azure AD hybrid join</b></summary>
 
 1.	Open a Command Prompt window as an administrator. From Start, type *cmd.exe* in the search box, right-click **Command Prompt** in the list, and then select **Run as administrator**.  
-1.	Type the following command, and then press Enter:
-`desregmd /status`
+1. Type the following command, and then press Enter:
+
+   `dsregcmd /status`
 
 If EventID 220 is present in User Device Registration event logs, see [Troubleshoot hybrid Azure AD-joined devices](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current).
 
@@ -187,3 +188,5 @@ Update the BIOS for your device. If you need more information about doing so, co
 1.	Try to activate Microsoft 365 again.
 <br/><br/>
 </details>
+
+
