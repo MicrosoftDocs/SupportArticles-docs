@@ -163,7 +163,7 @@ SM Commited                     0
 Pages Allocated                 5552
 ```
 
-Pages Allocated: This value shows the overall amount of the memory pages allocated to a process.
+The `Pages Allocated` value shows the overall amount of the memory pages allocated to a process.
 
 > [!NOTE]
 > These node IDs correspond to the NUMA node configuration of the computer that is running SQL Server. The node IDs include possible software NUMA nodes that are defined on top of hardware NUMA nodes or on top of an SMP system. To find mapping between node IDs and CPUs for each node, view Information event ID number 17152. This event is logged in the Application log in Event Viewer when you start SQL Server.
