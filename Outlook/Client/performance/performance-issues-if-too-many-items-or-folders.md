@@ -43,7 +43,7 @@ These problems might occur if a mailbox contains lots of folders or there are lo
 
 ## Resolution
 
-Use the following resolutions, as appropriate, to fix performance issues that affect your Calendar and mail.
+Use the following resolutions, as appropriate, to fix performance issues that affect your Calendar, Mail, or shared folders.
 
 ### Resolutions for Calendar issues
 
@@ -112,6 +112,26 @@ If you have enabled Online Archive Mailbox, archive items to the Online Archive 
 **Apply a retention policy**
 
 Apply a retention policy on the Mail or Calendar folders to delete older items from this folder. For example: Any item that is not modified within one year moves to the Deleted Items folder.
+
+### Resolution for Shared Folders issues
+
+To fix performance issues that affect shared folders, try the following method.
+
+**Limit the Sync window**
+
+You can limit the synchronization window that’s used for shared folders to reduce the number of items that are stored locally. Doing this can improve performance.
+
+> [!IMPORTANT]
+> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/topic/how-to-back-up-and-restore-the-registry-in-windows-855140ad-e318-2a13-2829-d428a2ab0692) in case problems occur.
+
+To adjust the number of days of data that are synced for shared folders, add the following registry values.
+
+|Description|Setting to enable Shared Folders window|
+|---|---|
+|Registry path|HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Outlook\Cached Mode|
+|Name|SharedFolderSyncWindowDays|
+|Type|REG_DWORD|
+|Value|Value = Select a _Decimal_ value to set the number of days (1-365) for the shared folders sync window|
 
 ### Run Microsoft Support and Recovery Assistant
 
