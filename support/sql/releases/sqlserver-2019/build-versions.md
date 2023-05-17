@@ -36,7 +36,7 @@ This article lists the Microsoft SQL Server 2019 builds that were released after
 | CU3 | 15.0.4023.6| 2019.15.0.4023.6 | 15.0.34.9 | 2018.150.34.9| [KB4538853](https://support.microsoft.com/help/4538853) | March 12, 2020 |
 | CU2 | 15.0.4013.40 | 2019.15.0.4013.40| 15.0.34.1 | 2018.150.34.1| [KB4536075](https://support.microsoft.com/help/4536075) | February 13, 2020|
 | CU1 | 15.0.4003.23 | 2019.150.4003.23 | 15.0.32.52| 2018.150.32.52 | [KB4527376](https://support.microsoft.com/help/4527376) | January 07, 2020 |
-| RTM | 15.0.2000.5| 2019.150.2000.5| 15.0.32.50| 2018.150.32.50 | NA| November 04, 2019|
+| RTM | 15.0.2000.5| 2019.150.2000.5| 15.0.32.50| 2018.150.32.50 | [SQL Server 2019 release notes](/sql/sql-server/sql-server-2019-release-notes)| November 04, 2019|
 
 ## SQL Server 2019 GDR builds
 

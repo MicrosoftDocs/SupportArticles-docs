@@ -47,7 +47,7 @@ This article lists the Microsoft SQL Server 2017 builds that were released after
 | CU3| 14.0.3015.40 | 2017.140.3015.40 | 14.0.202.1| 2017.140.202.1 | [KB4052987](https://support.microsoft.com/help/4052987) | January 04, 2018 |
 | CU2| 14.0.3008.27 | 2017.140.3008.27 | 14.0.1.440| 2017.140.1.440 | [KB4052574](https://support.microsoft.com/help/4052574) | November 28, 2017|
 | CU1| 14.0.3006.16 | 2017.140.3006.16 | 14.0.1.439| 2017.140.1.439 | [KB4038634](https://support.microsoft.com/help/4038634) | October 24, 2017 |
-| RTM| 14.0.1000.169| 2017.140.1000.169| 14.0.1.439| 2017.140.1.439 | NA| September 29, 2017 |
+| RTM| 14.0.1000.169| 2017.140.1000.169| 14.0.1.439| 2017.140.1.439 | [SQL Server 2017 release notes](/sql/sql-server/sql-server-2017-release-notes)| September 29, 2017 |
 
 ## SQL Server 2017 GDR builds
 
