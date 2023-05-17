@@ -5,7 +5,7 @@ summary: Welcome to this collection of content that has contributions from vario
 metadata:
   title: Office Experts
   description: Documentation for troubleshooting common issues with Microsoft Office products.
-  ms.prod: office-perpetual-itpro
+  ms.service: office-perpetual-itpro
   ms.topic: landing-page
   author: helenclu
   ms.author: luche
