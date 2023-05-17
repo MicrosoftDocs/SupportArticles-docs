@@ -19,7 +19,7 @@ Consider the following scenario:
 
 - You have a Microsoft SQL Server 2016 database that's using the Query Data Store feature.
 
-- You have a stored procedure that makes a call to another stored procedure by using the *INSERT...EXEC* syntax.
+- You have a stored procedure that makes a call to another stored procedure by using the `INSERT...EXEC` syntax.
 
 - The Query Data Store feature periodically runs auto-cleanup as it increases to its maximum configured size. Additionally, the Query Data Store state changes from `READ_WRITE` to `READ_ONLY`.
 
