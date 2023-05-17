@@ -41,10 +41,12 @@ The endorsed Linux distributions are created and published by Linux partners for
 > ***Action recommended: Canonical Ubuntu 18.04 LTS Reaching End of Standard Support on 31 May 2023*** 
 > You can continue to use your existing VMs. However, security, feature, and maintenance updates will no longer be provided by Canonical and may leave your systems vulnerable.  
 > We recommend that you either migrate to the next Ubuntu LTS release or upgrade to Ubuntu Pro to gain access to extended security and maintenance from Canonical. 
+> 
 > **Upgrading to Ubuntu 20.04 LTS or Ubuntu 22.04** 
 > Transitioning to the latest operating system, such as [Ubuntu 20.04 LTS](https://azuremarketplace.microsoft.com/marketplace/apps/canonical.0001-com-ubuntu-server-focal?tab=Overview) or [Ubuntu Pro 22.04](https://azuremarketplace.microsoft.com/marketplace/apps/canonical.0001-com-ubuntu-pro-jammy?tab=Overview) LTS, is important for performance, hardware enablement, and new technology benefits, and we recommend it for new instances. The transition may be a complex process for existing deployments. Therefore, it should be properly scoped and tested with your workloads.  
 > Although there’s no direct upgrade path from Ubuntu 18.04 LTS to Ubuntu 22.04 LTS, you can directly upgrade to Ubuntu 20.04 LTS, and then to Ubuntu 22.04 LTS, or directly install Ubuntu 22.04 LTS.   
 > For more information, see the [Ubuntu Server upgrade guide](https://ubuntu.com/server/docs/upgrade-introduction). 
+> 
 > **Ubuntu Pro – Extended Security Maintenance to 2028** 
 > Ubuntu Pro includes security patching for all Ubuntu packages because of Extended Security Maintenance (ESM) for Infrastructure and Applications and optional 24/7 phone and ticket support. Ubuntu Pro 18.04 LTS will remain fully supported until April 2028. 
 > Ubuntu Pro is available for free for personal and small-scale commercial users on up to five VMs and with transparent, per-machine pricing for enterprises. 
