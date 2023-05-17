@@ -1590,8 +1590,8 @@
       href: ./networking/dns-zone-transfer-options-reset.md
     - name: DNS Server becomes an island
       href: ./networking/dns-server-becomes-island.md
-    - name: Event 4015 when running DNS on RODC
-      href: ./networking/rodc-logs-event-4015-error-00002095.md
+    - name: Event ID 4015 is logged and the DNS server encounters a critical error
+      href: ./networking/event-4015-dns-server-encounters-critical-error.md
     - name: Events 407 and 408 when querying DNS server
       href: ./networking/events-407-408-in-dns-server-event-log.md
     - name: Event ID 4000 and 4007 when DNS zones not loaded
