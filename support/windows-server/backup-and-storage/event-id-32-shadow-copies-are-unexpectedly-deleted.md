@@ -30,7 +30,7 @@ Description:
 The shadow copies of volume X: were aborted because the shadow copy storage volume was not present.
 ```
 
-During troubleshooting, you find elays in bringing the shadow copy volume online.
+During troubleshooting, you find delays in bringing the shadow copy volume online.
 
 ## Cause
 
@@ -43,7 +43,7 @@ If it takes a long time in the enumeration, volsnap will delete these snapshots.
 To work around this issue, use the [devnodeClean.exe tool](https://www.microsoft.com/download/details.aspx?id=42286) to clean up the large buildup of phantom `VolumeSnapshots` in the registry key under `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\STORAGE\VolumeSnapshot`.
 
 > [!NOTE]
-> The devnodeclean.exe tool will only delete phantom shadow copies. Valid shadow copies will remain intact.
+> The *devnodeclean.exe* tool will only delete phantom shadow copies. Valid shadow copies will remain intact.
 
 To get the list of entries to be deleted, run the following command:
 
@@ -57,4 +57,4 @@ To delete the phantom shadow copies, run the following command:
 devnodeclean
 ```
 
-Additionally, we recommend configuring a devnodeclean scheduled task to proactively remove stale entries.
+Additionally, we recommend configuring a `devnodeclean` scheduled task to proactively remove stale entries.
