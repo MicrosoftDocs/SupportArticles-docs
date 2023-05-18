@@ -92,7 +92,7 @@ These files usually have one of the following file name extensions:
 
 By default, the data files are located in the following directories. However, they can be placed in any directory by the database administrators of the system.
 
-|SQL Server Instance   | Default data directory|
+|SQL Server instance   | Default data directory|
 |-------               |---------              |
 |Default SQL instance  |*%ProgramFiles%\\Microsoft SQL Server\\MSSQLXX.MSSQLSERVER\\MSSQL\\DATA*  |
 |Named SQL instance    |*%ProgramFiles%\\Microsoft SQL Server\\MSSQLXX.InstanceName\\MSSQL\\DATA* |  
@@ -106,14 +106,14 @@ These files typically have one of the following file name extensions:
 
 By default, the backup folders are located in the following directories. However, backup files can be placed in any directory by the database administrators of the system.
 
-|SQL Server Instance   | Default backup directory|
+|SQL Server instance   | Default backup directory|
 |-------               |---------                |
 |Default SQL instance  |*%ProgramFiles%\\Microsoft SQL Server\\MSSQLXX.MSSQLSERVER\\MSSQL\\Backup*  |
 |Named SQL instance    |*%ProgramFiles%\\Microsoft SQL Server\\MSSQLXX.InstanceName\\MSSQL\\Backup* |  
 
 #### Full-Text catalog files
   
-|SQL Server Instance   | Process/Executable file|
+|SQL Server instance   | Process/Executable file|
 |-------               |---------               |
 |Default SQL instance  |*%ProgramFiles%\\Microsoft SQL Server\\MSSQLXX.MSSQLSERVER\\MSSQL\\FTDATA*  |
 |Named SQL instance    |*%ProgramFiles%\\Microsoft SQL Server\\MSSQLXX.InstanceName\\MSSQL\\FTDATA* |  
@@ -152,7 +152,7 @@ These files typically have the *.sql* file name extension and contain Transact-S
 #### In-memory OLTP files
 
 - Native procedure and in-memory table definition-related files.
-- Present in an xtp subfolder under the DATA directory, for instance.
+- Present in an xtp subfolder under the *DATA* directory, for instance.
 - File formats include the following types:
 
   - *xtp\_\<t/p\>\_\<dbid\>\_\<objid\>.c*
@@ -164,7 +164,7 @@ These files typically have the *.sql* file name extension and contain Transact-S
 
 - OLTP checkpoint and delta files.
 - No specific file extension for the files.
-- Files are present under the folder structure identified by the container of type FILESTREAM from *sys.database_files*.
+- Files are present under the folder structure identified by the container of type FILESTREAM from `sys.database_files`.
 
 #### DBCC CHECKDB files
 
@@ -219,7 +219,7 @@ The following Analysis Services directories and processes can be excluded from a
 
 ### SSAS processes to exclude from virus scanning
 
-|SSAS Instance         | Process/Executable file|
+|SSAS instance         | Process/Executable file|
 |-------               |---------               |
 |Default SSAS instance |*%ProgramFiles%\\Microsoft SQL Server\\\<MSASID\>.MSSQLSERVER\\OLAP\\Bin\\MSMDSrv.exe*|
 |Named SSAS instance   |*%ProgramFiles%\\Microsoft SQL Server\\\<MSASID\>.InstanceName\>\\OLAP\\Bin\\MSMDSrv.exe*|
@@ -241,7 +241,7 @@ The directory that holds all Analysis Services data files is specified in the `D
 
 #### Temporary files for Analysis Services
 
-For Analysis Services 2012 and later versions, temporary files during processing are specified by the `TempDir` property of the instance of Analysis Services. By default, this property is empty. When this property is empty, the default directory is used. The following table shows the Temp path by default.
+For Analysis Services 2012 and later versions, temporary files during processing are specified by the `TempDir` property of the instance of Analysis Services. By default, this property is empty. When this property is empty, the default directory is used. The following table shows the `Temp` path by default.
 
 |SSAS instance      | Temporary files directory|
 |---------          |---------                 |
@@ -261,7 +261,7 @@ You can change this directory in the properties of the instance of Analysis Serv
 
 #### The directory that holds Analysis Services log files
 
-By default, in Analysis Services 2012 and later versions, the log file location is the location that is specified by the `LogDir` property. By default, the Log path is located as follows:
+By default, in Analysis Services 2012 and later versions, the log file location is the location that is specified by the `LogDir` property. By default, the `Log` path is located as follows:
 
 |SSAS instance      | Log files directory|
 |---------          |---------           |
@@ -280,8 +280,8 @@ The following processes and directories for the SSIS services are to be excluded
 
 |Service           | Process/Executable file|
 |---------         |---------               |
-|SSIS Instance     | *%Program Files%\\Microsoft SQL Server\\\<VersionNum\>\\DTS\\Binn\\ISServerExec.exe*   |
-|DTSExec Instance  | *%Program Files%\\Microsoft SQL Server\\\<VersionNum\>\\DTS\\Binn\\DTExec.exe*         |
+|SSIS instance     | *%Program Files%\\Microsoft SQL Server\\\<VersionNum\>\\DTS\\Binn\\ISServerExec.exe*   |
+|DTSExec instance  | *%Program Files%\\Microsoft SQL Server\\\<VersionNum\>\\DTS\\Binn\\DTExec.exe*         |
 
 > [!NOTE]
 > The placeholder `<VersionNum>` refers to the version-specific details.
@@ -292,7 +292,7 @@ When you configure your antivirus software settings, make sure that you exclude 
 
 |Description             | Directories to exclude|
 |---------               |---------              |
-|Directories to Exclude  |*%Program Files%\\Microsoft SQL Server\\\<VersionNum\>\\DTS* |
+|Directories to exclude  |*%Program Files%\\Microsoft SQL Server\\\<VersionNum\>\\DTS* |
 
 The placeholder `<VersionNum>` refers to the version-specific details.
 
