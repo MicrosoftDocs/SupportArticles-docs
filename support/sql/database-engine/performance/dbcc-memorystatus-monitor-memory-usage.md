@@ -120,7 +120,6 @@ Taken Away Committed    0
 For more information about the elements in this output, see:
 
 - VM Reserved: This value shows the VAS that is reserved by threads that are running on this node.
-
 - VM Committed: This value shows the VAS that is committed by threads that are running on this node.
 
 > [!NOTE]
@@ -183,7 +182,6 @@ Pages Allocated                    2928
 Other information in these sections is about shared memory:
 
 - SM Reserved: This value shows the VAS that is reserved by all clerks of this kind that are using the memory-mapped files API. This API is also known as *shared memory*.
-
 - SM Committed: This value shows the VAS that is committed by all clerks of this kind that are using memory-mapped files API.
 
 You can obtain summary information for each clerk type for all memory nodes by using the sys.`dm_os_memory_clerks` dynamic management view (DMV). To do this, run the following query:
@@ -210,7 +208,7 @@ You can obtain detailed information about buffer pool buffers for database pages
 
 The next section lists details about the buffer pool plus additional information.
 
-```console
+```output
 Buffer Pool                                        Pages
 --------------------------------------------------------
 Database                                          5404
@@ -226,13 +224,13 @@ Page Life Expectancy                              3965
 
 For more information about the elements in this output, see:
 
-Database: This value shows the number of buffers that have database content (data and index pages).
-Target: This value shows the target size of the buffer pool (buffer count).
-Dirty: This value shows the buffers that have database content and that have been modified. These buffers contain changes that must be flushed to disk.
-In IO: This value shows the buffers that are waiting for a pending I/O operation.
-Latched: This value shows the latched buffers. A buffer is latched when a thread is reading or modifying the contents of a page. A buffer is also latched when the page is being read from disk or written to disk. A latch is used to maintain the physical consistency of the data on the page while it's being read or modified. A lock is used to maintain logical and transactional consistency.
-IO error: This value shows the count of buffers that may have encountered any I/O-related OS errors (this doesn't necessarily indicate a problem).
-Page Life Expectancy: This counter measures the amount of time in seconds that the oldest page stays in the buffer pool.
+- Database: This value shows the number of buffers that have database content (data and index pages).
+- Target: This value shows the target size of the buffer pool (buffer count).
+- Dirty: This value shows the buffers that have database content and that have been modified. These buffers contain changes that must be flushed to disk.
+- In IO: This value shows the buffers that are waiting for a pending I/O operation.
+- Latched: This value shows the latched buffers. A buffer is latched when a thread is reading or modifying the contents of a page. A buffer is also latched when the page is being read from disk or written to disk. A latch is used to maintain the physical consistency of the data on the page while it's being read or modified. A lock is used to maintain logical and transactional consistency.
+- IO error: This value shows the count of buffers that may have encountered any I/O-related OS errors (this doesn't necessarily indicate a problem).
+- Page Life Expectancy: This counter measures the amount of time in seconds that the oldest page stays in the buffer pool.
 
 ## Procedure cache
 
