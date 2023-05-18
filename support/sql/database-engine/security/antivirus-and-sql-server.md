@@ -185,7 +185,7 @@ These files typically have the *.sql* file name extension and contain Transact-S
   |x64 default location |*\<drive\>:\\Program Files\\Microsoft SQL Server\\\<*nnn*\>\\COM\\*  |
   
   > [!NOTE]
-  > The `<nnn>` is a placeholder for version-specific information. To specify the correct value, check your installation or search for "Replication and server-side COM objects" in [Specifying File Paths](/sql/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server#specifying-file-paths). For example, the full path for SQL Server 2022 would be *<drive>:\Program Files\Microsoft SQL Server\160\COM\*.
+  > The `<nnn>` is a placeholder for version-specific information. To specify the correct value, check your installation or search for "Replication and server-side COM objects" in [Specifying File Paths](/sql/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server#specifying-file-paths). For example, the full path for SQL Server 2022 would be `<drive>:\Program Files\Microsoft SQL Server\160\COM\`.
   
 - Starting with SQL Server 2017 CU22 (including SQL 2019 RTM and later versions), if using Transactional Replication and the Distribution Agent is utilizing OLEDB streaming profile, or you're using the `-UseOledbStreaming` parameter, the Distribution Agent creates temporary files (_*.lob_) in the *AppData* folder of the account running the distribution agent where the job is being invoked. For prior versions of SQL Server, the default *COM* folder (already listed) is used.
 
