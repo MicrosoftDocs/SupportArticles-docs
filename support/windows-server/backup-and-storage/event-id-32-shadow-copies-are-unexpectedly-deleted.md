@@ -40,7 +40,7 @@ If it takes a long time in the enumeration, volsnap will delete these snapshots.
 
 ## Workaround
 
-To work around this issue, use the [devnodeClean.exe tool](https://www.microsoft.com/download/details.aspx?id=42286) to clean up the large buildup of phantom `VolumeSnapshots` in the registry key under `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\STORAGE\VolumeSnapshot`.
+To work around this issue, use the [devnodeClean.exe tool](https://www.microsoft.com/download/details.aspx?id=42286) to clean up the large buildup of phantom VolumeSnapshots in the registry key under `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\STORAGE\VolumeSnapshot`.
 
 > [!NOTE]
 > The *devnodeclean.exe* tool will only delete phantom shadow copies. Valid shadow copies will remain intact.
