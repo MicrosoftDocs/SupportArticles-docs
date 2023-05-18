@@ -63,14 +63,14 @@ Servers that don't meet the criteria for a high-risk server are generally at a l
 
 When you configure your antivirus software settings, make sure that you exclude the following processes (as applicable) from virus scanning.
 
-- SQLServr.exe (SQL Server Database Engine)
-- SQLAgent.exe (SQL Server Agent)
-- sqlbrowser.exe (SQL Server Browser service)
-- %ProgramFiles%\\Microsoft SQL Server\\1xx\\Shared\\SQLDumper.exe (SQLDumper utility)
+- *SQLServr.exe* (SQL Server Database Engine)
+- *SQLAgent.exe* (SQL Server Agent)
+- *sqlbrowser.exe* (SQL Server Browser service)
+- *%ProgramFiles%\\Microsoft SQL Server\\1xx\\Shared\\SQLDumper.exe* (SQLDumper utility)
 
 For an updated list of services and file paths, see [Services installed by SQL Server](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions#Service_Details).
 
-Applications installed on a SQL Server computer can load modules into the SQL Server process (sqlservr.exe). The applications use this functionality to run business logic or for intrusion monitoring and protection. To detect if an unknown module or a module from third-party software was loaded into the process memory space, check the output of the [sys.dm_os_loaded_modules](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-loaded-modules-transact-sql) Dynamic Management View (DMV).
+Applications installed on a SQL Server computer can load modules into the SQL Server process (*sqlservr.exe*). The applications use this functionality to run business logic or for intrusion monitoring and protection. To detect if an unknown module or a module from third-party software was loaded into the process memory space, check the output of the [sys.dm_os_loaded_modules](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-loaded-modules-transact-sql) Dynamic Management View (DMV).
 
 In some cases, applications or drivers may be used to detour SQL Server or Windows code to provide malware protection or monitoring services. However, if such applications or drivers aren't designed correctly, they may cause a wide variety of issues for products like SQL Server. For information about third-party detours or similar techniques in SQL Server, see [Detours or similar techniques may cause unexpected behaviors with SQL Server](../../general/issue-detours-similar-techniques.md).
 
@@ -86,54 +86,54 @@ When you configure your antivirus software settings, make sure that you exclude 
 
 These files usually have one of the following file name extensions:
 
-- `.mdf`
-- `.ldf`
-- `.ndf`
+- *.mdf*
+- *.ldf*
+- *.ndf*
 
 By default, the data files are located in the following directories. However, they can be placed in any directory by the database administrators of the system.
 
 |SQL Server Instance   | Default data directory|
 |-------               |---------              |
-|Default SQL instance  |%ProgramFiles%\\Microsoft SQL Server\\MSSQLXX.MSSQLSERVER\\MSSQL\\DATA  |
-|Named SQL instance    |%ProgramFiles%\\Microsoft SQL Server\\MSSQLXX.InstanceName\\MSSQL\\DATA |  
+|Default SQL instance  |*%ProgramFiles%\\Microsoft SQL Server\\MSSQLXX.MSSQLSERVER\\MSSQL\\DATA*  |
+|Named SQL instance    |*%ProgramFiles%\\Microsoft SQL Server\\MSSQLXX.InstanceName\\MSSQL\\DATA* |  
 
 #### SQL Server backup files
 
 These files typically have one of the following file name extensions:
 
-- `.bak`
-- `.trn`
+- *.bak*
+- *.trn*
 
 By default, the backup folders are located in the following directories. However, backup files can be placed in any directory by the database administrators of the system.
 
 |SQL Server Instance   | Default backup directory|
 |-------               |---------                |
-|Default SQL instance  |%ProgramFiles%\\Microsoft SQL Server\\MSSQLXX.MSSQLSERVER\\MSSQL\\Backup  |
-|Named SQL instance    |%ProgramFiles%\\Microsoft SQL Server\\MSSQLXX.InstanceName\\MSSQL\\Backup |  
+|Default SQL instance  |*%ProgramFiles%\\Microsoft SQL Server\\MSSQLXX.MSSQLSERVER\\MSSQL\\Backup*  |
+|Named SQL instance    |*%ProgramFiles%\\Microsoft SQL Server\\MSSQLXX.InstanceName\\MSSQL\\Backup* |  
 
 #### Full-Text catalog files
   
 |SQL Server Instance   | Process/Executable file|
 |-------               |---------               |
-|Default SQL instance  |%ProgramFiles%\\Microsoft SQL Server\\MSSQLXX.MSSQLSERVER\\MSSQL\\FTDATA  |
-|Named SQL instance    |%ProgramFiles%\\Microsoft SQL Server\\MSSQLXX.InstanceName\\MSSQL\\FTDATA |  
+|Default SQL instance  |*%ProgramFiles%\\Microsoft SQL Server\\MSSQLXX.MSSQLSERVER\\MSSQL\\FTDATA*  |
+|Named SQL instance    |*%ProgramFiles%\\Microsoft SQL Server\\MSSQLXX.InstanceName\\MSSQL\\FTDATA* |  
 
 #### Trace files
 
-These files usually have the `.trc` file name extension. These files can be generated when you configure [SQL tracing manually](/sql/relational-databases/sql-trace/create-a-trace-transact-sql) or when you enable [C2 auditing](/sql/database-engine/configure-windows/c2-audit-mode-server-configuration-option) for the server.
+These files usually have the *.trc* file name extension. These files can be generated when you configure [SQL tracing manually](/sql/relational-databases/sql-trace/create-a-trace-transact-sql) or when you enable [C2 auditing](/sql/database-engine/configure-windows/c2-audit-mode-server-configuration-option) for the server.
 
 #### Extended Event file targets
 
-- Typically saved as `.xel` or `.xem`.
-- System-generated files are saved in the `\LOG` folder for that instance.
+- Typically saved as *.xel* or *.xem*.
+- System-generated files are saved in the *\LOG* folder for that instance.
 
 #### SQL audit files
 
-These files have the `.sqlaudit` file name extension. For more information, see [SQL Server Audit (Database Engine)](/sql/relational-databases/security/auditing/sql-server-audit-database-engine).
+These files have the *.sqlaudit* file name extension. For more information, see [SQL Server Audit (Database Engine)](/sql/relational-databases/security/auditing/sql-server-audit-database-engine).
 
 #### SQL query files
 
-These files typically have the `.sql` file name extension and contain Transact-SQL statements.
+These files typically have the *.sql* file name extension and contain Transact-SQL statements.
 
 #### Filestream data files
 
@@ -146,8 +146,8 @@ These files typically have the `.sql` file name extension and contain Transact-S
 
 #### Exception dump files
 
-- Typically use the `.mdmp` file name extension.
-- System-generated files are saved in the `LOG` folder for that instance.
+- Typically use the *.mdmp* file name extension.
+- System-generated files are saved in the *LOG* folder for that instance.
 
 #### In-memory OLTP files
 
@@ -155,16 +155,16 @@ These files typically have the `.sql` file name extension and contain Transact-S
 - Present in an xtp subfolder under the DATA directory, for instance.
 - File formats include the following types:
 
-  - xtp\_\<t/p\>\_\<dbid\>\_\<objid\>.c
-  - xtp\_\<t/p\>\_\<dbid\>\_\<objid\>.dll
-  - xtp\_\<t/p\>\_\<dbid\>\_\<objid\>.obj
-  - xtp\_\<t/p\>\_\<dbid\>\_\<objid\>.out
-  - xtp\_\<t/p\>\_\<dbid\>\_\<objid\>.pdb
-  - xtp\_\<t/p\>\_\<dbid\>\_\<objid\>.xml
+  - *xtp\_\<t/p\>\_\<dbid\>\_\<objid\>.c*
+  - *xtp\_\<t/p\>\_\<dbid\>\_\<objid\>.dll*
+  - *xtp\_\<t/p\>\_\<dbid\>\_\<objid\>.obj*
+  - *xtp\_\<t/p\>\_\<dbid\>\_\<objid\>.out*
+  - *xtp\_\<t/p\>\_\<dbid\>\_\<objid\>.pdb*
+  - *xtp\_\<t/p\>\_\<dbid\>\_\<objid\>.xml*
 
 - OLTP checkpoint and delta files.
 - No specific file extension for the files.
-- Files are present under the folder structure identified by the container of type FILESTREAM from `sys.database_files`.
+- Files are present under the folder structure identified by the container of type FILESTREAM from *sys.database_files*.
 
 #### DBCC CHECKDB files
 
@@ -181,21 +181,21 @@ These files typically have the `.sql` file name extension and contain Transact-S
 
   |default location     | Process/Executable directory|
   |-------              |---------                    |
-  |x86 default location |\<drive\>:\\Program Files (x86)\\Microsoft SQL Server\\\<*nnn*\>\\COM\\  |
-  |x64 default location |\<drive\>:\\Program Files\\Microsoft SQL Server\\\<*nnn*\>\\COM\\  |
+  |x86 default location |*\<drive\>:\\Program Files (x86)\\Microsoft SQL Server\\\<*nnn*\>\\COM\\*  |
+  |x64 default location |*\<drive\>:\\Program Files\\Microsoft SQL Server\\\<*nnn*\>\\COM\\*  |
   
   > [!NOTE]
-  > The `<nnn>` is a placeholder for version-specific information. To specify the correct value, check your installation or search for "Replication and server-side COM objects" in [Specifying File Paths](/sql/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server#specifying-file-paths). For example, the full path for SQL Server 2022 would be `<drive>:\Program Files\Microsoft SQL Server\160\COM\`.
+  > The `<nnn>` is a placeholder for version-specific information. To specify the correct value, check your installation or search for "Replication and server-side COM objects" in [Specifying File Paths](/sql/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server#specifying-file-paths). For example, the full path for SQL Server 2022 would be *<drive>:\Program Files\Microsoft SQL Server\160\COM\*.
   
-- Starting with SQL Server 2017 CU22 (including SQL 2019 RTM and later versions), if using Transactional Replication and the Distribution Agent is utilizing OLEDB streaming profile, or you're using the `-UseOledbStreaming` parameter, the Distribution Agent creates temporary files (`*.lob`) in the `AppData` folder of the account running the distribution agent where the job is being invoked. For prior versions of SQL Server, the default `COM` folder (already listed) is used.
+- Starting with SQL Server 2017 CU22 (including SQL 2019 RTM and later versions), if using Transactional Replication and the Distribution Agent is utilizing OLEDB streaming profile, or you're using the `-UseOledbStreaming` parameter, the Distribution Agent creates temporary files (_*.lob_) in the *AppData* folder of the account running the distribution agent where the job is being invoked. For prior versions of SQL Server, the default *COM* folder (already listed) is used.
 
-  c:\\Users\\\<*DistributionAgentAccount\>*\\AppData\\Temp\\*.lob
+  *c:\\Users\\\<*DistributionAgentAccount\>*\\AppData\\Temp\\*.lob*
 
   For more information, see ["The distribution agent failed to create temporary files" error message](../replication/error-run-distribution-agent.md).
 
 - Files in the Replication Snapshot folder
 
-  The default path for the snapshot files is \\Microsoft SQL Server\\MSSQLxx.MSSQLSERVER\\MSSQL\\ReplData. These files typically have file name extensions such as `.sch`, `.idx`, `.bcp`, `.pre`, `.cft`, `.dri`, `.trg`, or `.prc`.
+  The default path for the snapshot files is *\\Microsoft SQL Server\\MSSQLxx.MSSQLSERVER\\MSSQL\\ReplData*. These files typically have file name extensions such as *.sch*, *.idx*, *.bcp*, *.pre*, *.cft*, *.dri*, *.trg*, or *.prc*.
 
 ### Considerations for Failover Cluster instances (Always On FCI)
 
@@ -205,9 +205,9 @@ Contact your antivirus vendor about cluster-aware versions and interoperability.
 
 If you're running antivirus software on a cluster, make sure that you also exclude these locations from virus scanning:
 
-- Q:\\ (Quorum drive)
-- C:\\Windows\\
-- `ClusterMSDTC` directory in the `MSDTC` drive
+- *Q:\\\\* (Quorum drive)
+- *C:\\\Windows\\\\*
+- *ClusterMSDTC* directory in the `MSDTC` drive
 
 If you back up the database to a disk or back up the transaction log to a disk, you can exclude the backup files from the virus scanning.
 
@@ -221,10 +221,10 @@ The following Analysis Services directories and processes can be excluded from a
 
 |SSAS Instance         | Process/Executable file|
 |-------               |---------               |
-|Default SSAS instance |%ProgramFiles%\\Microsoft SQL Server\\\<MSASID\>.MSSQLSERVER\\OLAP\\Bin\\MSMDSrv.exe|
-|Named SSAS instance   |%ProgramFiles%\\Microsoft SQL Server\\\<MSASID\>.InstanceName\>\\OLAP\\Bin\\MSMDSrv.exe|
+|Default SSAS instance |*%ProgramFiles%\\Microsoft SQL Server\\\<MSASID\>.MSSQLSERVER\\OLAP\\Bin\\MSMDSrv.exe*|
+|Named SSAS instance   |*%ProgramFiles%\\Microsoft SQL Server\\\<MSASID\>.InstanceName\>\\OLAP\\Bin\\MSMDSrv.exe*|
 
-The `ID` is the build ID. For example, a default Analysis Services 2016 instance binary installation location by default is `C:\Program Files\Microsoft SQL Server\MSAS13.MSSQLSERVER\OLAP\bin`.
+The `ID` is the build ID. For example, a default Analysis Services 2016 instance binary installation location by default is *C:\Program Files\Microsoft SQL Server\MSAS13.MSSQLSERVER\OLAP\bin*.
 
 ### SSAS directories and file name extensions to exclude from virus scanning
 
@@ -236,8 +236,8 @@ The directory that holds all Analysis Services data files is specified in the `D
 
 |SSAS instance      | Default data directory|
 |---------          |---------              |
-|Default instance   | C:\\Program Files\\Microsoft SQL Server\\MSASXX.MSSQLSERVER \\OLAP\\Data     |
-|Named instance     | C:\\Program Files\\Microsoft SQL Server\\MSASXX.\<InstanceName\>\\OLAP\\Data |
+|Default instance   | *C:\\Program Files\\Microsoft SQL Server\\MSASXX.MSSQLSERVER \\OLAP\\Data*     |
+|Named instance     | *C:\\Program Files\\Microsoft SQL Server\\MSASXX.\<InstanceName\>\\OLAP\\Data* |
 
 #### Temporary files for Analysis Services
 
@@ -245,8 +245,8 @@ For Analysis Services 2012 and later versions, temporary files during processing
 
 |SSAS instance      | Temporary files directory|
 |---------          |---------                 |
-|Default instance   | C:\\Program Files\\Microsoft SQL Server\\MSASXX.MSSQLSERVER\\OLAP\\Temp         |
-|Named instance     | C:\\Program Files\\Microsoft SQL Server\\MSASXX.\\\<InstanceName\>\\OLAP\\Temp|
+|Default instance   | *C:\\Program Files\\Microsoft SQL Server\\MSASXX.MSSQLSERVER\\OLAP\\Temp*         |
+|Named instance     | *C:\\Program Files\\Microsoft SQL Server\\MSASXX.\\\<InstanceName\>\\OLAP\\Temp*|
 
 #### The backup files for Analysis Services
 
@@ -254,8 +254,8 @@ In Analysis Services 2012 and later versions, the backup file location is the lo
 
 |SSAS instance      | Backup files directory (default)|
 |---------          |---------                        |
-|Default instance   | C:\\Program Files\\Microsoft SQL Server\\MSASXX.MSSQLSERVER \\OLAP\\Backup     |
-|Named instance     | C:\\Program Files\\Microsoft SQL Server\\MSASXX.\<InstanceName\>\\OLAP\\Backup |
+|Default instance   | *C:\\Program Files\\Microsoft SQL Server\\MSASXX.MSSQLSERVER \\OLAP\\Backup*     |
+|Named instance     | *C:\\Program Files\\Microsoft SQL Server\\MSASXX.\<InstanceName\>\\OLAP\\Backup* |
 
 You can change this directory in the properties of the instance of Analysis Services. Any backup command can point to a different location also. Or, the backup files can be copied elsewhere for restore.
 
@@ -265,8 +265,8 @@ By default, in Analysis Services 2012 and later versions, the log file location 
 
 |SSAS instance      | Log files directory|
 |---------          |---------           |
-|Default instance   | C:\\Program Files\\Microsoft SQL Server\\MSASXX.MSSQLSERVER \\OLAP\\Log     |
-|Named instance     | C:\\Program Files\\Microsoft SQL Server\\MSASXX.\<InstanceName\>\\OLAP\\log |
+|Default instance   | *C:\\Program Files\\Microsoft SQL Server\\MSASXX.MSSQLSERVER \\OLAP\\Log*     |
+|Named instance     | *C:\\Program Files\\Microsoft SQL Server\\MSASXX.\<InstanceName\>\\OLAP\\log* |
 
 #### Directories for partitions not stored in the default data directories for Analysis Services 2012 and later versions
 
@@ -280,8 +280,8 @@ The following processes and directories for the SSIS services are to be excluded
 
 |Service           | Process/Executable file|
 |---------         |---------               |
-|SSIS Instance     | %Program Files%\\Microsoft SQL Server\\\<VersionNum\>\\DTS\\Binn\\ISServerExec.exe   |
-|DTSExec Instance  | %Program Files%\\Microsoft SQL Server\\\<VersionNum\>\\DTS\\Binn\\DTExec.exe         |
+|SSIS Instance     | *%Program Files%\\Microsoft SQL Server\\\<VersionNum\>\\DTS\\Binn\\ISServerExec.exe*   |
+|DTSExec Instance  | *%Program Files%\\Microsoft SQL Server\\\<VersionNum\>\\DTS\\Binn\\DTExec.exe*         |
 
 > [!NOTE]
 > The placeholder `<VersionNum>` refers to the version-specific details.
@@ -292,7 +292,7 @@ When you configure your antivirus software settings, make sure that you exclude 
 
 |Description             | Directories to exclude|
 |---------               |---------              |
-|Directories to Exclude  |%Program Files%\\Microsoft SQL Server\\\<VersionNum\>\\DTS |
+|Directories to Exclude  |*%Program Files%\\Microsoft SQL Server\\\<VersionNum\>\\DTS* |
 
 The placeholder `<VersionNum>` refers to the version-specific details.
 
@@ -304,8 +304,8 @@ The following processes and directories for the PolyBase services are to be excl
 
 |Service     | Process/Executable file|
 |---------   |---------               |
-|PolyBase Engine service| %ProgramFiles%\\Microsoft SQL Server\\\<InstanceID\>.\<InstanceName\>\\MSSQL\\Binn\\Polybase\\mpdwsvc.exe |
-|PolyBase Data Movement (DMS) and Engine services | %ProgramFiles%\\Microsoft SQL Server\\\<InstanceID\>.\<InstanceName\>\\MSSQL\\Binn\\Polybase\\mpdwsvc.exe |
+|PolyBase Engine service| *%ProgramFiles%\\Microsoft SQL Server\\\<InstanceID\>.\<InstanceName\>\\MSSQL\\Binn\\Polybase\\mpdwsvc.exe* |
+|PolyBase Data Movement (DMS) and Engine services | *%ProgramFiles%\\Microsoft SQL Server\\\<InstanceID\>.\<InstanceName\>\\MSSQL\\Binn\\Polybase\\mpdwsvc.exe* |
 
 PolyBase Data Movement service (DMS) and Engine services use the same executable with different command line parameters.
 
@@ -315,7 +315,7 @@ When you configure your antivirus software settings, make sure that you exclude 
 
 |Description          | Directories to exclude  |
 |---------            |---------                |
-|PolyBase log files   |%ProgramFiles%\\Microsoft SQL Server\\\<InstanceID\>.\<InstanceName\>\\MSSQL\\Log\\Polybase\\|
+|PolyBase log files   |*%ProgramFiles%\\Microsoft SQL Server\\\<InstanceID\>.\<InstanceName\>\\MSSQL\\Log\\Polybase\\*|
 
 ## Configure antivirus software to work with Reporting Services (SSRS)
 
@@ -327,17 +327,17 @@ The executables to exclude have evolved across different versions of SSRS. The f
 
 |SSRS version       | Process/Executable file|
 |---------          |---------               |
-|SSRS 2014 | %ProgramFiles%\\Microsoft SQL Server\\\<InstanceID\>.\<InstanceName\>\\Reporting Services\\ReportServer\\Bin\\ReportingServicesService.exe|
-|SSRS 2016 | %ProgramFiles%\Microsoft SQL Server\\\<InstanceID\>.\<InstanceName\>\\Reporting Services\\ReportServer\\Bin\ReportingServicesService.exe </br> %ProgramFiles%\Microsoft SQL Server\\\<InstanceID\>.\<InstanceName\>\\Reporting Services\\RSWebApp\Microsoft.ReportingServices.Portal.WebHost.exe  |
-|SSRS 2017 and later version| %ProgramFiles%\\Microsoft SQL Server Reporting Services\\SSRS\Management\\RSManagement.exe </br>  %ProgramFiles%\\Microsoft SQL Server Reporting Services\\SSRS\\Portal\\RSPortal.exe </br>  %ProgramFiles%\\Microsoft SQL Server Reporting Services\\SSRS\\ReportServer\\bin\\ReportingServicesService.exe  </br> %ProgramFiles%\\Microsoft SQL Server Reporting Services\\SSRS\\RSHostingService\\RSHostingService.exe |
+|SSRS 2014 | *%ProgramFiles%\\Microsoft SQL Server\\\<InstanceID\>.\<InstanceName\>\\Reporting Services\\ReportServer\\Bin\\ReportingServicesService.exe*|
+|SSRS 2016 | *%ProgramFiles%\Microsoft SQL Server\\\<InstanceID\>.\<InstanceName\>\\Reporting Services\\ReportServer\\Bin\ReportingServicesService.exe* </br> *%ProgramFiles%\Microsoft SQL Server\\\<InstanceID\>.\<InstanceName\>\\Reporting Services\\RSWebApp\Microsoft.ReportingServices.Portal.WebHost.exe*  |
+|SSRS 2017 and later version| *%ProgramFiles%\\Microsoft SQL Server Reporting Services\\SSRS\Management\\RSManagement.exe* </br>  *%ProgramFiles%\\Microsoft SQL Server Reporting Services\\SSRS\\Portal\\RSPortal.exe* </br>  *%ProgramFiles%\\Microsoft SQL Server Reporting Services\\SSRS\\ReportServer\\bin\\ReportingServicesService.exe*  </br> *%ProgramFiles%\\Microsoft SQL Server Reporting Services\\SSRS\\RSHostingService\\RSHostingService.exe* |
 
 ### SSRS directories to exclude from virus scanning
 
 |SSRS version   | Directories to exclude                                                               |
 |---------      |---------                                                                             |
-|SSRS 2014      | %ProgramFiles%\Microsoft SQL Server\\*\<Instance_ID\>*.*\<Instance Name\>*\\Reporting Services |
-|SSRS 2016      | %ProgramFiles%\Microsoft SQL Server\\*\<Instance_ID\>*.*\<Instance Name\>*\\Reporting Services |
-|SSRS 2017 and later version|%ProgramFiles%\\Microsoft SQL Server Reporting Services\\SSRS </br> %ProgramFiles%\\Microsoft SQL Server Reporting Services\\Shared Tools |
+|SSRS 2014      | *%ProgramFiles%\Microsoft SQL Server\\*\<Instance_ID\>*.*\<Instance Name\>*\\Reporting Services* |
+|SSRS 2016      | *%ProgramFiles%\Microsoft SQL Server\\*\<Instance_ID\>*.*\<Instance Name\>*\\Reporting Services* |
+|SSRS 2017 and later version|*%ProgramFiles%\\Microsoft SQL Server Reporting Services\\SSRS* </br> *%ProgramFiles%\\Microsoft SQL Server Reporting Services\\Shared Tools* |
 
 ## Power BI Report Server
 
@@ -345,21 +345,21 @@ For Power BI Report Server, the following exclusions can be made:
 
 ### Power BI Report Server processes to exclude from virus scanning
 
-- %ProgramFiles%\\Microsoft Power BI Report Server\\PBIRS\\ASEngine\\msmdsrv.exe
-- %ProgramFiles%\\Microsoft Power BI Report Server\\PBIRS\\Management\\RSManagement.exe
-- %ProgramFiles%\\Microsoft Power BI Report Server\\PBIRS\\Office\\RSOffice.exe
-- %ProgramFiles%\\Microsoft Power BI Report Server\\PBIRS\\Portal\\RSPortal.exe
-- %ProgramFiles%\\Microsoft Power BI Report Server\\PBIRS\\PowerBI\\Microsoft.Mashup.Container.exe
-- %ProgramFiles%\\Microsoft Power BI Report Server\\PBIRS\\PowerBI\\Microsoft.Mashup.Container.NetFX40.exe
-- %ProgramFiles%\\Microsoft Power BI Report Server\\PBIRS\\PowerBI\\Microsoft.Mashup.Container.NetFX45.exe
-- %ProgramFiles%\\Microsoft Power BI Report Server\\PBIRS\\PowerBI\\RSPowerBI.exe
-- %ProgramFiles%\\Microsoft Power BI Report Server\\PBIRS\\ReportServer\\bin\\ReportingServicesService.exe
-- %ProgramFiles%\\Microsoft Power BI Report Server\\PBIRS\\RSHostingService\\RSHostingService.exe
+- *%ProgramFiles%\\Microsoft Power BI Report Server\\PBIRS\\ASEngine\\msmdsrv.exe*
+- *%ProgramFiles%\\Microsoft Power BI Report Server\\PBIRS\\Management\\RSManagement.exe*
+- *%ProgramFiles%\\Microsoft Power BI Report Server\\PBIRS\\Office\\RSOffice.exe*
+- *%ProgramFiles%\\Microsoft Power BI Report Server\\PBIRS\\Portal\\RSPortal.exe*
+- *%ProgramFiles%\\Microsoft Power BI Report Server\\PBIRS\\PowerBI\\Microsoft.Mashup.Container.exe*
+- *%ProgramFiles%\\Microsoft Power BI Report Server\\PBIRS\\PowerBI\\Microsoft.Mashup.Container.NetFX40.exe*
+- *%ProgramFiles%\\Microsoft Power BI Report Server\\PBIRS\\PowerBI\\Microsoft.Mashup.Container.NetFX45.exe*
+- *%ProgramFiles%\\Microsoft Power BI Report Server\\PBIRS\\PowerBI\\RSPowerBI.exe*
+- *%ProgramFiles%\\Microsoft Power BI Report Server\\PBIRS\\ReportServer\\bin\\ReportingServicesService.exe*
+- *%ProgramFiles%\\Microsoft Power BI Report Server\\PBIRS\\RSHostingService\\RSHostingService.exe*
 
 ### Power BI Report Server directories to exclude from virus scanning
 
-- %ProgramFiles%\\Microsoft Power BI Report Server\\PBIRS
-- %ProgramFiles%\\Microsoft Power BI Report Server\\Shared Tools
+- *%ProgramFiles%\\Microsoft Power BI Report Server\\PBIRS*
+- *%ProgramFiles%\\Microsoft Power BI Report Server\\Shared Tools*
 
 ## Configure a Firewall with SQL Server products
 
