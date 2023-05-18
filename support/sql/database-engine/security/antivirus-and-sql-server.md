@@ -125,7 +125,7 @@ These files usually have the *.trc* file name extension. These files can be gene
 #### Extended Event file targets
 
 - Typically saved as *.xel* or *.xem*.
-- System-generated files are saved in the *\LOG* folder for that instance.
+- System-generated files are saved in the *LOG* folder for that instance.
 
 #### SQL audit files
 
@@ -138,7 +138,7 @@ These files typically have the *.sql* file name extension and contain Transact-S
 #### Filestream data files
 
 - No specific file extension for the files.
-- Files are present under the folder structure identified by the container of type FILESTREAM from [sys.database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql).
+- Files are present under the folder structure identified by the container type FILESTREAM from [sys.database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql).
 
 #### Remote Blob Storage files
 
@@ -164,7 +164,7 @@ These files typically have the *.sql* file name extension and contain Transact-S
 
 - OLTP checkpoint and delta files.
 - No specific file extension for the files.
-- Files are present under the folder structure identified by the container of type FILESTREAM from `sys.database_files`.
+- Files are present under the folder structure identified by the container type FILESTREAM from `sys.database_files`.
 
 #### DBCC CHECKDB files
 
@@ -187,11 +187,9 @@ These files typically have the *.sql* file name extension and contain Transact-S
   > [!NOTE]
   > The `<nnn>` is a placeholder for version-specific information. To specify the correct value, check your installation or search for "Replication and server-side COM objects" in [Specifying File Paths](/sql/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server#specifying-file-paths). For example, the full path for SQL Server 2022 would be `<drive>:\Program Files\Microsoft SQL Server\160\COM\`.
   
-- Starting with SQL Server 2017 CU22 (including SQL 2019 RTM and later versions), if using Transactional Replication and the Distribution Agent is utilizing OLEDB streaming profile, or you're using the `-UseOledbStreaming` parameter, the Distribution Agent creates temporary files (_*.lob_) in the *AppData* folder of the account running the distribution agent where the job is being invoked. For prior versions of SQL Server, the default *COM* folder (already listed) is used.
+- Starting with SQL Server 2017 CU22 (including SQL 2019 RTM and later versions), if using Transactional Replication and the Distribution Agent is utilizing OLEDB streaming profile, or you're using the `-UseOledbStreaming` parameter, the Distribution Agent creates temporary files (_*.lob_) in the *AppData* folder of the account running the distribution agent where the job is being invoked. For example, *C:\\Users\\\<*DistributionAgentAccount\>*\\AppData\\Temp\\*.lob*. For prior versions of SQL Server, the default *COM* folder (already listed) is used.
 
-  *c:\\Users\\\<*DistributionAgentAccount\>*\\AppData\\Temp\\*.lob*
-
-  For more information, see ["The distribution agent failed to create temporary files" error message](../replication/error-run-distribution-agent.md).
+For more information, see ["The distribution agent failed to create temporary files" error message](../replication/error-run-distribution-agent.md).
 
 - Files in the Replication Snapshot folder
 
