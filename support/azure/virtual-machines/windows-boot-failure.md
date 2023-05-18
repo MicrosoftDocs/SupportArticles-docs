@@ -1,7 +1,7 @@
 ---
 title: Windows boot error (INACCESSIBLE_BOOT_DEVICE) or (Boot failure) in an Azure VM
 description: Provides a solution to an issue where Windows VM doesn't start with error INACCESSIBLE_BOOT_DEVICE or Boot failure.
-ms.date: 05/17/2023
+ms.date: 05/18/2023
 ms.reviewer: 
 ms.service: virtual-machines
 ms.subservice: vm-cannot-start-stop
@@ -40,7 +40,7 @@ To fix the issue, stop (de-allocate) and start the VM then recheck to see if iss
 ## Verify if the Windows partition is marked as active
 
 > [!NOTE]
-> This section applies only for Generation 1 VMs because Generation 2 VMs that use UEFI don't use an active partition.
+> This section applies only to Generation 1 VMs because Generation 2 VMs that use UEFI don't use an active partition.
 
 1. Delete the virtual machine (VM). Make sure that you select the **Keep the disks** option when you do this.
 2. Attach the OS disk as a data disk to another VM (a troubleshooting VM). For more information, see [How to attach a data disk to a Windows VM in the Azure portal](/azure/virtual-machines/windows/attach-managed-disk-portal).
@@ -118,12 +118,12 @@ To fix the issue, stop (de-allocate) and start the VM then recheck to see if iss
 
 2. Run the following command line as an administrator, and then record the identifier of Windows Boot Loader (not Windows Boot Manager). The identifier is a 32-character code and it looks like this: xxxxxxxx-xxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. You will use this identifier in the next step.
 
-   1. For Generation 1 VM:
+   1. For Generation 1 VMs:
 
        ```console
        bcdedit /store <Boot partition>:\boot\bcd /enum
        ```  
-   2. For Generation 2 VM:
+   2. For Generation 2 VMs:
  
        ```console
        bcdedit /store <Volume Letter of EFI System Partition>:EFI\Microsoft\boot\bcd /enum /v
@@ -138,7 +138,7 @@ To fix the issue, stop (de-allocate) and start the VM then recheck to see if iss
     - \<Boot partition> is the partition that contains a hidden system folder named "Boot."
     - \<Identifier> is the identifier of Windows Boot Loader you found in the previous step.
 
-   1. For Generation 1 VM:
+   1. For Generation 1 VMs:
 
       ```console
       bcdedit /store <Boot partition>:\boot\bcd /set {bootmgr} device partition=<boot partition>:
@@ -150,8 +150,7 @@ To fix the issue, stop (de-allocate) and start the VM then recheck to see if iss
       bcdedit /store <Boot partition>:\boot\bcd /set {<identifier>} bootstatuspolicy IgnoreAllFailures
       ```
 
-      > [!NOTE]
-      > If the VHD has a single partition and both the BCD folder and Windows folder are in the same volume, and if the previous setup didn't work, then try replacing the partition values with `boot`.
+      If the VHD has a single partition and both the BCD folder and Windows folder are in the same volume, and if the previous setup didn't work, then try replacing the partition values with `boot`, as shown below:
 
       ```console
       bcdedit /store <BCD FOLDER - DRIVE LETTER>:\boot\bcd /set {bootmgr} device boot
@@ -162,7 +161,7 @@ To fix the issue, stop (de-allocate) and start the VM then recheck to see if iss
       bcdedit /store <BCD FOLDER - DRIVE LETTER>:\boot\bcd /set {<IDENTIFIER>} osdevice boot
       bcdedit /store <BCD FOLDER - DRIVE LETTER>:\boot\bcd /set {<IDENTIFIER>} bootstatuspolicy IgnoreAllFailures
       ```
-   2. For Generation 2 VM:
+   2. For Generation 2 VMs:
 
      ```console
      bcdedit /store <Volume Letter of EFI System Partition>:EFI\Microsoft\boot\bcd /set {bootmgr} device partition=<Volume Letter of EFI System Partition>:
