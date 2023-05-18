@@ -79,23 +79,7 @@ To resolve either of the causes above, ensure that a writable DC is accessible f
 
 ## Event ID 4015 is logged with error code 0000051B
 
-This issue occurs because of permissions issues. SYSTEM isn’t the owner of the DNS zone. You can enable the Active Directory diagnostic logging to identify the DNS zone and change the owner.
-
-### Enable Active Directory diagnostic logging (Field Engineering diagnostic logging)
-
-This logging isn't enabled by default and should only be enabled during active troubleshooting. You can enable the logging by using the following steps:
-
-1. Increase the size of Directory Services event logs to 200 MB.
-2. Enable the Field Engineering diagnostics registry key, and set the value to *5*.
-
-    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Diagnostics\15 Field Engineering`
-3. Create the following registry keys to configure registry-based filters for expensive, inefficient, and long-running searches:
-
-    |Registry path  |Data type  |Default value  |
-    |---------|---------|---------|
-    |`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters\Expensive Search Results Threshold`     |REG_DWORD         |1         |
-    |`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters\Inefficient Search Results Threshold`     |REG_DWORD         |1         |
-    |`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters\Search Time Threshold (msecs)`     |REG_DWORD         |1         |
+This issue occurs because of permissions issues. SYSTEM isn't the owner of the DNS zone. You can [enable the Field Engineering diagnostic logging](../identity/configure-ad-and-lds-event-logging.md#enable-field-engineering-diagnostic-event-logging) to identify the DNS zone and change the owner.
 
 ### Set DNS zone owner to SYSTEM
 
