@@ -33,11 +33,11 @@ This article describes some of the data that you can obtain from the output of t
 > [!IMPORTANT]
 > The `DBCC MEMORYSTATUS` command is intended to be a diagnostic tool for Microsoft Customer Support Services. The format of the output and the level of detail that is provided are subject to change between service packs and product releases. The functionality that the `DBCC MEMORYSTATUS` command provides may be replaced by a different mechanism in later product versions. Therefore, in later product versions, this command may no longer function. No additional warnings will be made before this command is changed or removed. Therefore, applications that use this command may break without warning.
 
-The output of the `DBCC MEMORYSTATUS` command has changed from earlier releases of SQL Server. Now, it contains several sections that were unavailable in earlier product versions.
+The output of the `DBCC MEMORYSTATUS` command has changed from earlier releases of SQL Server. Now, it contains several tables that were unavailable in earlier product versions.
 
 ## Process/System Counts
 
-The first section of the output is `Process/System Counts`.
+The first table of the output is `Process/System Counts`.
 
 ```output
 Process/System Counts                Value
@@ -63,7 +63,7 @@ Process virtual memory low           0
 
 ## Memory Manager
 
-This `Memory Manager` section shows overall memory consumption by SQL Server.
+This `Memory Manager` table shows overall memory consumption by SQL Server.
 
 ```output
 Memory Manager             KB
@@ -94,10 +94,7 @@ For more information about the elements in this output, see:
 
 ## Summary of memory usage
 
-The Memory Manager section is followed by a summary of memory usage for each memory node. In a non-uniform memory access (NUMA) enabled system, there's a corresponding Memory node entry for each hardware NUMA node. In an SMP system, there's a single Memory node entry.
-
-> [!NOTE]
-> The `Memory node Id` may not correspond to the hardware node ID.
+The Memory Manager table is followed by a summary of memory usage for each memory node. In a non-uniform memory access (NUMA) enabled system, there's a corresponding Memory node entry for each hardware NUMA node. In an SMP system, there's a single Memory node entry.
 
 ```output
 Memory node Id = 0      KB
@@ -115,19 +112,18 @@ Taken Away Committed    0
 ```
 
 > [!NOTE]
-> These values show the memory that is allocated by threads that are running on this NUMA node. These values are not the memory that is local to the NUMA node.
+> - The `Memory node Id` may not correspond to the hardware node ID.
+> - These values show the memory that is allocated by threads that are running on this NUMA node. These values are not the memory that is local to the NUMA node.
+> - The sums of the VM Reserved values and the VM Committed values on all memory nodes will be slightly less than the corresponding values that are reported in the Memory Manager table.
 
 For more information about the elements in this output, see:
 
 - VM Reserved: This value shows the VAS that is reserved by threads that are running on this node.
 - VM Committed: This value shows the VAS that is committed by threads that are running on this node.
 
-> [!NOTE]
-> The sums of the VM Reserved values and the VM Committed values on all memory nodes will be slightly less than the corresponding values that are reported in the Memory Manager section.
-
 ## Aggregate memory
 
-The next section contains aggregate memory information for each clerk type and for each NUMA node. For a NUMA-enabled system, you may see output that is similar to the following one:
+The next table contains aggregate memory information for each clerk type and for each NUMA node. For a NUMA-enabled system, you may see output that is similar to the following one:
 
 > [!NOTE]
 > The following table contains only part of the output.
@@ -166,7 +162,7 @@ The value of `Pages Allocated` shows the overall amount of the memory pages allo
 > [!NOTE]
 > These node IDs correspond to the NUMA node configuration of the computer that is running SQL Server. The node IDs include possible software NUMA nodes that are defined on top of hardware NUMA nodes or on top of an SMP system. To find mapping between node IDs and CPUs for each node, see Information event ID number 17152. This event is logged in the Application log in Event Viewer when you start SQL Server.
 
-For an SMP system, you see only one section for each clerk type. This section is similar to the following one:
+For an SMP system, you see only one table for each clerk type. This table is similar to the following one:
 
 ```output
 MEMORYCLERK_SQLGENERAL (Total)     KB
@@ -179,7 +175,7 @@ SM Commited                        0
 Pages Allocated                    2928
 ```
 
-Other information in these sections is about shared memory:
+Other information in these tables is about shared memory:
 
 - SM Reserved: This value shows the VAS that is reserved by all clerks of this kind that are using the memory-mapped files API. This API is also known as *shared memory*.
 - SM Committed: This value shows the VAS that is committed by all clerks of this kind that are using memory-mapped files API.
@@ -206,7 +202,7 @@ GROUP BY TYPE
 
 You can obtain detailed information about buffer pool buffers for database pages by using the `sys.dm_os_buffer_descriptors` DMV. And you can obtain detailed information about buffer pool pages that are being used for miscellaneous server purposes by using the `sys.dm_os_memory_clerks` DMV.
 
-The next section lists details about the buffer pool plus additional information.
+The next table lists details about the buffer pool plus additional information.
 
 ```output
 Buffer Pool                                        Pages
@@ -234,7 +230,7 @@ For more information about the elements in this output, see:
 
 ## Procedure cache
 
-The next section describes the makeup of the procedure cache.
+The next table describes the makeup of the procedure cache.
 
 ```output
 Procedure Cache         Value
@@ -256,7 +252,7 @@ For more information about the elements in this output, see:
 
 ## Global memory objects
 
-The next section contains information about various global memory objects. This section also contains information about how much memory the global memory objects use.
+The next table contains information about various global memory objects. This table also contains information about how much memory the global memory objects use.
 
 ```output
 Global Memory Objects               Buffers
@@ -294,7 +290,7 @@ For more information about the elements in this output, see:
 
 ## Query memory objects
 
-The next section describes Query Memory grant information. This section includes a snapshot of the query memory usage. Query memory is also known as *workspace memory*.
+The next table describes Query Memory grant information. This table includes a snapshot of the query memory usage. Query memory is also known as *workspace memory*.
 
 ```output
 Query Memory Objects (default)           Value
@@ -328,7 +324,7 @@ For more information about the elements in this output, see:
 
 ## Optimization
 
-The next section is a summary for the users who are trying to optimize queries at the same time.
+The next table is a summary for the users who are trying to optimize queries at the same time.
 
 ```output
 Optimization Queue (internal)      Value
@@ -415,7 +411,7 @@ This behavior lets only a few memory-intensive compilations occur at the same ti
 
 ## Memory brokers
 
-The following tables show information about memory brokers that control cached memory, stolen memory, and reserved memory. Information that these sections provide can only be used for internal diagnostics. Therefore, this information isn't detailed here.
+The following tables show information about memory brokers that control cached memory, stolen memory, and reserved memory. Information that these tables provide can only be used for internal diagnostics. Therefore, this information isn't detailed here.
 
 ```output
 MEMORYBROKER_FOR_CACHE (internal)       Value
