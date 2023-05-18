@@ -39,6 +39,8 @@ items:
         href: app-insights/intermittent-test-failure-protocol-error.md
       - name: Use availability tests on an internal server behind a firewall
         href: app-insights/internal-server-availability-tests-firewall.md     
+    - name: Daily cap unexpected behaviors
+      href: app-insights/daily-cap-unexpected-behaviors.md              
     - name: Error retrieving data in portal
       href: app-insights/troubleshoot-portal-connectivity.md
     - name: Missing CPU Total and Committed Memory metrics
