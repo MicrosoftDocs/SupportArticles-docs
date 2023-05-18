@@ -24,9 +24,9 @@ This article describes how to install Windows Package Manager to troubleshoot th
 - A network connection.
 
 > [!NOTE]
-> The WinGet client requires Windows 10 1809 (build 17763) or later versions. Windows Server 2019 isn't supported because Microsoft Store and other dependencies are not available for Windows Server.
+> The WinGet client requires Windows 10, version 1809 (build 17763) or later versions. Windows Server 2019 isn't supported because Microsoft Store and other dependencies are not available for Windows Server.
 
-If you're already running Windows 10 1809 or later versions, the client may already be available on your system. Check if the winget tool is available by invoking the `winget` command at the command prompt or Windows PowerShell.
+If you're already running Windows 10, version 1809 or later versions, the client may already be available on your system. Check if the winget tool is available by invoking the `winget` command at the command prompt or Windows PowerShell.
 
 1. Open the Start menu, type *PowerShell*, and press <kbd>Enter</kbd>.
 2. In PowerShell, run the `winget` cmdlet to check if the app is installed:
