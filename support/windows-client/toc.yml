@@ -1002,6 +1002,8 @@
       href: ./shell-experience/apps-not-start-without-user-profile-programdata.md
     - name: Store app used by multiple users won't open after update
       href: ./shell-experience/store-app-not-start-after-update.md
+    - name: Troubleshoot Apps failing to start using Windows Package Manager
+      href: ./shell-experience/troubleshoot-apps-start-failure-use-windows-package-manager.md
   - name: Windows Media Player
     items:
     - name: Videos don't play in Windows Media Player 11
