@@ -1,7 +1,7 @@
 ---
 title: Understand AD FS sign-in events in Azure AD with Connect Health
 description: Understand how to correlate sign-in events in Active Directory Federation Services (AD FS) security logs into one sign-in event in Azure for parsing.
-ms.date: 05/17/2023
+ms.date: 05/18/2023
 author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: brheld
