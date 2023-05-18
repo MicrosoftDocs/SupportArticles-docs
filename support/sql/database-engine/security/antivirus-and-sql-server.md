@@ -54,7 +54,7 @@ Servers that don't meet the criteria for a high-risk server are generally at a l
 
 - Vulnerability scanning software: The Microsoft Security Compliance Toolkit includes a set of tools that enable enterprise administrators to perform a wide range of security tasks. These tasks include download, analyze, test, edit, store Microsoft-recommended security configuration baselines for Windows and other Microsoft products, and compare them against other security configurations. To download it, go to [Microsoft Security Compliance Toolkit 1.0](https://www.microsoft.com/download/details.aspx?id=55319).
 
-- Microsoft also released the [Windows Malicious Software Removal Tool](https://www.microsoft.com/download/details.aspx?id=9905) to help remove specific, prevalent malicious software from computers. For more information about the Microsoft Windows Malicious Software Removal Tool, see [890830 Remove specific prevalent malware with Windows Malicious Software Removal Tool](https://support.microsoft.com//topic/remove-specific-prevalent-malware-with-windows-malicious-software-removal-tool-kb890830-ba51b71f-39cd-cdec-73eb-61979b0661e0).
+- Microsoft also released the [Windows Malicious Software Removal Tool](https://www.microsoft.com/download/details.aspx?id=9905) to help remove specific, prevalent malicious software from computers. For more information about the Microsoft Windows Malicious Software Removal Tool, see [Remove specific prevalent malware with Windows Malicious Software Removal Tool (KB890830)](https://support.microsoft.com//topic/remove-specific-prevalent-malware-with-windows-malicious-software-removal-tool-kb890830-ba51b71f-39cd-cdec-73eb-61979b0661e0).
   
 > [!NOTE]  
 > Windows Server 2016 and later versions automatically enable Windows Defender. Make sure that Windows Defender is configured to exclude *Filestream* files. Failure to do this can result in decreased backup and restore operations performance. For more information, see [Configure and validate exclusions for Windows Defender Antivirus scans](/windows/security/threat-protection/windows-defender-antivirus/configure-exclusions-windows-defender-antivirus).
@@ -373,6 +373,6 @@ The following table contains information about how to use a firewall with SQL Se
 
 ## More information
 
-- For more information on performance issues caused by third-party modules and drivers to SQL Server, see [Performance and consistency issues when modules or driver are loaded](/troubleshoot/sql/database-engine/performance/performance-consistency-issues-filter-drivers-modules).
+- For more information on performance issues caused by third-party modules and drivers to SQL Server, see [Performance and consistency issues when certain modules or filter drivers are loaded](/troubleshoot/sql/database-engine/performance/performance-consistency-issues-filter-drivers-modules).
 - To find general information about SQL Server security, see [Securing SQL Server](/sql/relational-databases/security/securing-sql-server).
-- For general recommendations from Microsoft for scanning on Enterprise systems, see [822158 Virus scanning recommendations for Enterprise computers that are running currently supported versions of Windows](https://support.microsoft.com/help/822158).
+- For general recommendations from Microsoft for scanning on Enterprise systems, see [Virus scanning recommendations for Enterprise computers that are running Windows or Windows Server (KB822158)](https://support.microsoft.com/help/822158).
