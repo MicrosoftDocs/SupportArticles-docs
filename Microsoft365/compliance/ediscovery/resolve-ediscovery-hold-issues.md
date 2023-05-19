@@ -23,6 +23,8 @@ ms.custom:
 
 This article discusses common issues that may occur with eDiscovery holds and how to resolve them. The article also includes recommended practices to help you mitigate or avoid these issues.
 
+For eDiscovery search issues, see [Resolve search errors in eDiscovery (Standard)](resolve-ediscovery-issues.md).
+
 ## Recommended practices
 
 To reduce the number of errors related to eDiscovery holds, we recommend the following practices:
