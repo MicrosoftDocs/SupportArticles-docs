@@ -1,7 +1,8 @@
 ---
 title: Conversation widget is blank when changing browser tabs
 description: Provides a resolution for the issue where the conversation widget becomes blank when switching browser tabs in Dynamics 365 Customer Service.
-ms.reviewer: laalexan
+ms.reviewer: nenellim
+ms.author: yangao
 ms.date: 04/11/2023
 ---
 # The conversation widget becomes blank when changing browser tabs
