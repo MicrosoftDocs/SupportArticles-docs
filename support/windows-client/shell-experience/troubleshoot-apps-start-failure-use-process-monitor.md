@@ -109,7 +109,7 @@ This method uses a file to store the recording and doesn't require saving the fi
 
 Once the Process Monitor is set and the recording is started, you need to reproduce the problem.
 
-## Example Troubleshooting
+## Example troubleshooting
 
 Take this issue as an example, you have the Calculator application that isn't working. First start the Process Monitor recording with any of the methods described above. Then reproduce the problem by trying to start the application. Once the issue is reproduced, stop the Process Monitor recording and save the data.
 
