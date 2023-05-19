@@ -61,10 +61,10 @@ Servers that don't meet the criteria for a high-risk server are generally at a l
 
 When you configure your antivirus software settings, make sure that you exclude the following processes (as applicable) from virus scanning.
 
-- *SQLServr.exe* (SQL Server Database Engine)
-- *SQLAgent.exe* (SQL Server Agent)
+- [sqlservr.exe](/sql/tools/sqlservr-application) (SQL Server Database Engine)
+- *sqlagent.exe* (SQL Server Agent)
 - *sqlbrowser.exe* (SQL Server Browser service)
-- *%ProgramFiles%\\Microsoft SQL Server\\1xx\\Shared\\SQLDumper.exe* (SQLDumper utility)
+- *%ProgramFiles%\\Microsoft SQL Server\\1\<NN\>\\Shared\\SQLDumper.exe* ([SQLDumper utility](../../tools/use-sqldumper-generate-dump-file.md))
 
 For an updated list of services and file paths, see [Services installed by SQL Server](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions#Service_Details).
 
@@ -152,7 +152,8 @@ These files typically have the *.sql* file name extension and contain Transact-S
 
 #### In-memory OLTP files
 
-- Native procedure and in-memory table definition-related files.
+Native procedure and in-memory table definition-related files are specific to In-memory OLTP in Microsoft SQL Server.
+
 - The In-memory OLTP files are typically stored in an *xtp* subfolder under the *DATA* directory.
 - File formats include the following types:
 
@@ -162,8 +163,12 @@ These files typically have the *.sql* file name extension and contain Transact-S
   - *xtp\_\<t/p\>\_\<dbid\>\_\<objid\>.out*
   - *xtp\_\<t/p\>\_\<dbid\>\_\<objid\>.pdb*
   - *xtp\_\<t/p\>\_\<dbid\>\_\<objid\>.xml*
+  
+  > [!NOTE]
+  > *xtp* is a prefix used to indicate the association with In-memory OLTP. The placeholder `<t/p>` represents either "t" for table or "p" for procedure. The placeholder `<dbid>` refers to the database ID of the user database where the memory-optimized object is located. The placeholder `<objid>` indicates the object ID assigned to the memory-optimized object (either the table or the procedure).
 
-- OLTP checkpoint and delta files.
+#### OLTP checkpoint and delta files
+
 - No specific file extension for the files.
 - Files are present under the folder structure identified by the container type FILESTREAM from `sys.database_files`.
 
@@ -182,11 +187,11 @@ These files typically have the *.sql* file name extension and contain Transact-S
 
   |Default location     | Process/Executable directory|
   |-------              |---------                    |
-  |x86 default location |*\<drive\>:\\Program Files (x86)\\Microsoft SQL Server\\\<nnn\>\\COM\\*  |
-  |x64 default location |*\<drive\>:\\Program Files\\Microsoft SQL Server\\\<nnn\>\\COM\\*  |
+  |x86 default location |*\<drive\>:\\Program Files (x86)\\Microsoft SQL Server\\\<NNN\>\\COM\\*  |
+  |x64 default location |*\<drive\>:\\Program Files\\Microsoft SQL Server\\\<NNN\>\\COM\\*  |
   
   > [!NOTE]
-  > The `<nnn>` is a placeholder for version-specific information. To specify the correct value, check your installation or search for "Replication and server-side COM objects" in [Specifying File Paths](/sql/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server#specifying-file-paths). For example, the full path for SQL Server 2022 would be <drive\>:\\Program Files\\Microsoft SQL Server\\160\\COM\\.
+  > The `<NNN>` is a placeholder for version-specific information. To specify the correct value, check your installation or search for "Replication and server-side COM objects" in [Specifying File Paths](/sql/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server#specifying-file-paths). For example, the full path for SQL Server 2022 would be <drive\>:\\Program Files\\Microsoft SQL Server\\160\\COM\\.
   
 - Starting with SQL Server 2017 CU22 (including SQL 2019 RTM and later versions), if using Transactional Replication and the Distribution Agent is utilizing OLEDB streaming profile, or you're using the `-UseOledbStreaming` parameter, the Distribution Agent creates temporary files (*\*.lob*) in the *AppData* folder of the account running the distribution agent where the job is being invoked. For example, *C:\\Users\\\<DistributionAgentAccount\>\\AppData\\Temp\\\*.lob*. For prior versions of SQL Server, the default *COM* folder (already listed) is used.
 
@@ -293,7 +298,8 @@ When you configure your antivirus software settings, make sure that you exclude 
 |---------               |---------              |
 |Directories to exclude  |*%Program Files%\\Microsoft SQL Server\\\<VersionNum\>\\DTS* |
 
-The placeholder `<VersionNum>` refers to the version-specific details.
+> [!NOTE]
+> The placeholder `<VersionNum>` refers to the version-specific details.
 
 ## Configure antivirus software to work with PolyBase
 
@@ -336,7 +342,7 @@ The executables to exclude have evolved across different versions of SSRS. The f
 |---------      |---------                                                                             |
 |SSRS 2014      | *%ProgramFiles%\Microsoft SQL Server\\<InstanceID\>.\<InstanceName\>\\Reporting Services* |
 |SSRS 2016      | *%ProgramFiles%\Microsoft SQL Server\\<InstanceID\>.\<InstanceName\>\\Reporting Services* |
-|SSRS 2017 and later version|*%ProgramFiles%\\Microsoft SQL Server Reporting Services\\SSRS* </br></br> *%ProgramFiles%\\Microsoft SQL Server Reporting Services\\Shared Tools* |
+|SSRS 2017 and later versions|*%ProgramFiles%\\Microsoft SQL Server Reporting Services\\SSRS* </br></br> *%ProgramFiles%\\Microsoft SQL Server Reporting Services\\Shared Tools* |
 
 ## Power BI Report Server
 
@@ -369,7 +375,7 @@ The following table contains information about how to use a firewall with SQL Se
 | SQL Server Database Engine | [Configure the Windows Firewall to allow SQL Server access](/sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access) |
 | Analysis Services (SSAS) | [Configure the Windows Firewall to Allow Analysis Services Access](/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access) |
 | Integration Services (SSIS) | [Configure the Windows Firewall to allow SQL Server access with Integration Services](/sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access#ports-used-by-integration-services) |
-| Polybase | [Which ports should I allow through my firewall for PolyBase?](/sql/relational-databases/polybase/polybase-faq#which-ports-should-i-allow-through-my-firewall-for-polybase) |
+| PolyBase | [Which ports should I allow through my firewall for PolyBase?](/sql/relational-databases/polybase/polybase-faq#which-ports-should-i-allow-through-my-firewall-for-polybase) |
 | Reporting services (SSRS) | [Configure a Firewall for Report Server Access](/sql/reporting-services/report-server/configure-a-firewall-for-report-server-access) |
 
 ## More information
