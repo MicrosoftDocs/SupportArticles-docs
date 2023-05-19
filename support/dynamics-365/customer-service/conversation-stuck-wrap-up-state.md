@@ -1,7 +1,8 @@
 ---
 title: Conversation stuck in the Wrap-up state
 description: Provides a resolution for the issue where a conversation is stuck in the Wrap-up state in Omnichannel for Customer Service.
-ms.reviewer: laalexan
+ms.reviewer: nenellim
+ms.author: yangao
 ms.date: 04/11/2023
 ---
 # Conversation is stuck in the Wrap-up state
