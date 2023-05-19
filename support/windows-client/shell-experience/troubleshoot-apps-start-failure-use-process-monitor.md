@@ -68,9 +68,9 @@ To stop the recording, you can use the following command.
 C:\PSTools>psexec.exe -sd \\<Computer Name> C:\ProcessMonitor\procmon64.exe -terminate -quiet
 ```
 
-## Store and save the recording
+## Store and save the events
 
-There are several methods available to store and save the recording. You can select **Backing files** from the **File** menu.
+There are several methods available to store and save the events. You can select **Backing files** from the **File** menu.
 
 Then, you can see two methods to store events:
 
@@ -105,7 +105,7 @@ This method uses a file to store the recording and doesn't require saving the fi
 
 Once the Process Monitor is set and the recording is started, you need to reproduce the problem.
 
-## Example troubleshooting
+## Troubleshooting example
 
 Take this issue as an example, you have the Calculator application that isn't working. First start the Process Monitor recording with any of the methods described above. Then reproduce the problem by trying to start the application. Once the issue is reproduced, stop the Process Monitor recording and save the data.
 
@@ -180,8 +180,6 @@ In this example, the result looks like the following:
 :::image type="content" source="media/troubleshoot-apps-start-failure-use-process-monitor/process-monitor-start-menu-experience.png" alt-text="Screenshot of the Process Monitor window with the StartMenuExperienceHost and Calculator process selected.":::
 
 :::image type="content" source="media/troubleshoot-apps-start-failure-use-process-monitor/start-menu-experience.png" alt-text="Screenshot of the Process Monitor window with the StartMenuExperienceHost process selected.":::
-
-In the above example, you also lost the Start menu.
 
 Adding the appropriate permission for "All Application Packages" resolves both issues at the same time for both applications.
 
