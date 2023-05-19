@@ -1,7 +1,8 @@
 ---
 title: Case creation fails with Case is missing customer error
 description: Provides a workaround for the issue where case creation fails when a mail is sent to same queue address on which the automatic record creation role is configured in Dynamics 365 Customer Service.
-ms.reviewer: laalexan
+ms.reviewer: sdas
+ms.author: shchaur
 ms.date: 04/11/2023
 ---
 # Case creation fails with "Case is missing" error
