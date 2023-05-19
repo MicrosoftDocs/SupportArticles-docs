@@ -886,6 +886,8 @@
       href: ./backup-and-storage/error-0x8000ffff-run-vssadmin-list-writers-command.md
     - name: Error 0x80042409 when doing a VSS restore
       href: ./backup-and-storage/event-12289-vss-backup-restore.md
+    - name: Event ID 32 occurs and shadow copies are unexpectedly deleted
+      href: ./backup-and-storage/event-id-32-shadow-copies-are-unexpectedly-deleted.md
     - name: Event ID 513 when running VSS in Windows Server
       href: ./backup-and-storage/event-id-513-vss-windows-server.md
     - name: No VSS writers are listed when running vssadmin list writers
@@ -1000,6 +1002,8 @@
       href: ./deployment/cannot-install-dotnet-framework-3dot5-oem.md
     - name: Can't install updates or programs
       href: ./deployment/cannot-install-updates-programs.md
+    - name: Can't install Windows Server 2019 on servers with a high processor count
+      href: ./deployment/cannot-install-windows-server-2019-high-processor-count.md
     - name: CBS.log file contains entries that some files aren't repaired
       href: ./deployment/cbs-log-file-record-entries-not-repaired-run-sfc.md
     - name: Description of System File Checker (Sfc.exe)
