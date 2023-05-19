@@ -1,7 +1,8 @@
 ---
 title: Communication panel doesn't load in Omnichannel for Customer Service
 description: Provides a resolution for the issue where the communication panel doesn't load in Omnichannel for Customer Service.
-ms.reviewer: laalexan
+ms.reviewer: nenellim
+ms.author: yangao
 ms.date: 04/11/2023
 ---
 # Communication panel doesn't load in Omnichannel for Customer Service
