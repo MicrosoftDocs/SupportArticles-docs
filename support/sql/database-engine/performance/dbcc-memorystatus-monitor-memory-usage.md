@@ -54,6 +54,8 @@ Process physical memory low          0
 Process virtual memory low           0
 ```
 
+For more information about the elements in this output, see:
+
 - Available Physical Memory: This value shows the overall amount of free memory on the system is 5,060,247,552 bytes.
 - Available Virtual Memory: This value shows the overall amount of free virtual memory for SQL, or any process is 140,710,048,014,336 bytes (128 TB). For more information, see [Memory and Address Space Limits](/windows/win32/memory/memory-limits-for-windows-releases#memory-and-address-space-limits).
 - Available Paging File: This value shows the free paging file space is 7,066,804,224 bytes.
@@ -63,7 +65,7 @@ Process virtual memory low           0
 
 ## Memory Manager
 
-This `Memory Manager` table shows overall memory consumption by SQL Server.
+This `Memory Manager` table shows the overall memory consumption by SQL Server.
 
 ```output
 Memory Manager             KB
@@ -98,7 +100,7 @@ For more information about the elements in this output, see:
 
 ## Summary of memory usage
 
-The Memory Manager table is followed by a summary of memory usage for each memory node. In a non-uniform memory access (NUMA) enabled system, there's a corresponding Memory node entry for each hardware NUMA node. In an SMP system, there's a single Memory node entry.
+The `Memory Manager` table is followed by a summary of memory usage for each memory node. In a non-uniform memory access (NUMA) enabled system, there's a corresponding Memory node entry for each hardware NUMA node. In an SMP system, there's a single Memory node entry.
 
 ```output
 Memory node Id = 0      KB
@@ -164,7 +166,7 @@ Pages Allocated                 5552
 The value of `Pages Allocated` shows the overall amount of the memory pages allocated to a process.
 
 > [!NOTE]
-> These node IDs correspond to the NUMA node configuration of the computer that is running SQL Server. The node IDs include possible software NUMA nodes that are defined on top of hardware NUMA nodes or on top of an SMP system. To find mapping between node IDs and CPUs for each node, see Information event ID number 17152. This event is logged in the Application log in Event Viewer when you start SQL Server.
+> These node IDs correspond to the NUMA node configuration of the computer that is running SQL Server. The node IDs include possible software NUMA nodes that are defined on top of hardware NUMA nodes or on top of an SMP system. To find mapping between node IDs and CPUs for each node, see Information Event ID 17152. This event is logged in the Application log in Event Viewer when you start SQL Server.
 
 For an SMP system, you see only one table for each clerk type. This table is similar to the following one:
 
