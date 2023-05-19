@@ -1,7 +1,7 @@
 ---
 title: Event ID 4015 is logged and the DNS server encounters a critical error
 description: Helps to resolve the issue in which Event ID 4015 is logged and the Domain Name Service (DNS) server encounters a critical error.
-ms.date: 05/17/2023
+ms.date: 05/19/2023
 author: v-lianna
 ms.author: v-lianna
 manager: dcscontentpm
@@ -33,7 +33,7 @@ You receive Event ID 4015 in one of the following scenarios:
     Level: Error
     Keywords: Classic
     User: N/A
-    Computer: computer_name
+    Computer: <ComputerName>
     Description:
     The DNS server has encountered a critical error from the Active Directory. Check that the Active Directory is functioning properly. The extended error debug information (which may be empty) is "00002095: SvcErr: DSID-03210A6A, problem 5012 (DIR_ERROR), data 16". The event data contains the error.
     ```
@@ -53,10 +53,10 @@ You receive Event ID 4015 in one of the following scenarios:
 
 When an RODC locates a writeable DNS server to perform ReplicateSingleObject (RSO), it performs a DSGETDC function with the following flags set:
 
-- DS_AVOID_SELF
-- DS_TRY_NEXTCLOSEST_SITE
-- DS_DIRECTORY_SERVICE_6_REQUIRED
-- DS_WRITEABLE_REQUIRED
+- `DS_AVOID_SELF`
+- `DS_TRY_NEXTCLOSEST_SITE`
+- `DS_DIRECTORY_SERVICE_6_REQUIRED`
+- `DS_WRITEABLE_REQUIRED`
 
 Once a DC is returned from the DSGETDC call, it uses the result to search for the NS record in DNS. If the DSGETDC call fails or it fails to find the NS record of the DC returned from DSGETDC, Event ID 4015 will be logged.
 
