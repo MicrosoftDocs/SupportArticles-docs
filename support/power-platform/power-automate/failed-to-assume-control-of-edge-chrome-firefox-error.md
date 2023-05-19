@@ -7,7 +7,7 @@ ms.subservice: power-automate-desktop-flows
 ---
 # "Failed to assume control of Microsoft Edge/Chrome/Firefox" error
 
-This article provides a resolution for the error that may occur when you run a desktop flow that contains a "Launch browser" action in Microsoft Power Automate.
+This article provides a resolution for the error that may occur when you run a desktop flow that contains a "Launch browser" action in Microsoft Power Automate. If the error occured right after a browser update and has the same symptoms, please check [Browser automation actions stop working after a browser update](https://learn.microsoft.com/troubleshoot/power-platform/power-automate/browser-automation-error-after-chromium-update).
 
 _Applies to:_ &nbsp; Power Automate  
 _Original KB number:_ &nbsp; 5001691
