@@ -1,12 +1,10 @@
 ---
 title: Configure antivirus software to work with SQL Server
-description: This article provides guidance on how to use antivirus software with SQL Server
+description: Provides guidance on how to use antivirus software with SQL Server.
 author: pijocoder
 ms.author: jopilov
 ms.reviewer: jopilov, pijocoder
 ms.date: 04/26/2023
-ms.prod: sql
-ms.topic: troubleshooting
 ms.custom: sap:Security Issues
 ---
 # Configure antivirus software to work with SQL Server
@@ -38,7 +36,7 @@ Any server is at some risk of infection. The highest-risk servers generally meet
 - The servers read or execute files from other servers.
 - The servers run HTTP servers, such as Internet Information Services (IIS) or Apache.
 - The servers host file shares.
-- The servers use Database Mail to handle incoming or outgoing email messages.
+- The servers use [Database Mail](/sql/relational-databases/database-mail/database-mail) to handle incoming or outgoing email messages.
 
 Servers that don't meet the criteria for a high-risk server are generally at a lower risk, although not always.
 
@@ -48,11 +46,11 @@ Servers that don't meet the criteria for a high-risk server are generally at a l
 
 - Virus sweep software: Virus sweep software scans existing files for file infection. It detects issues after files are infected by a virus. This kind of scanning may cause the following SQL Server database recovery and SQL Server full-text catalog file issues:
 
-  - If the virus sweep has opened a database file when SQL Server tries to open the database, the database to which the file belongs might be marked as suspect. SQL Server opens a database when it starts or when a database with Auto-Close enabled was closed and is accessed again. SQL Server database files typically have *.mdf*, *.ldf*, or *.ndf* file name extensions.
+  - If the virus sweep software has opened a database file when SQL Server tries to open the database, the database to which the file belongs might be marked as suspect. SQL Server opens a database when it starts or when a database with Auto-Close enabled was closed and is accessed again. SQL Server database files typically have *.mdf*, *.ldf*, or *.ndf* file name extensions.
 
-  - If the virus sweep software has a SQL Server full-text catalog file open when Full-text Search tries to access the file, you may have problems with the full-text catalog.
+  - If the virus sweep software has a SQL Server full-text catalog file open when [Full-Text Search](/sql/relational-databases/search/full-text-search) tries to access the file, you may have problems with the full-text catalog.
 
-- Vulnerability scanning software: The Microsoft Security Compliance Toolkit includes a set of tools that enable enterprise administrators to perform a wide range of security tasks. These tasks include download, analyze, test, edit, store Microsoft-recommended security configuration baselines for Windows and other Microsoft products, and compare them against other security configurations. To download it, go to [Microsoft Security Compliance Toolkit 1.0](https://www.microsoft.com/download/details.aspx?id=55319).
+- Vulnerability scanning software: The [Microsoft Security Compliance Toolkit](/windows/security/threat-protection/windows-security-configuration-framework/security-compliance-toolkit-10) includes a set of tools that enable enterprise administrators to perform a wide range of security tasks. These tasks include download, analyze, test, edit, store Microsoft-recommended security configuration baselines for Windows and other Microsoft products, and compare them against other security configurations. To download it, go to [Microsoft Security Compliance Toolkit 1.0](https://www.microsoft.com/download/details.aspx?id=55319).
 
 - Microsoft also released the [Windows Malicious Software Removal Tool](https://www.microsoft.com/download/details.aspx?id=9905) to help remove specific, prevalent malicious software from computers. For more information about the Microsoft Windows Malicious Software Removal Tool, see [Remove specific prevalent malware with Windows Malicious Software Removal Tool (KB890830)](https://support.microsoft.com//topic/remove-specific-prevalent-malware-with-windows-malicious-software-removal-tool-kb890830-ba51b71f-39cd-cdec-73eb-61979b0661e0).
   
@@ -76,7 +74,7 @@ In some cases, applications or drivers may be used to detour SQL Server or Windo
 
 ## Configure antivirus software to work with SQL Server Database Engine
 
-This section applies to SQL Server installations running on Windows Systems, both stand-alone and Failover cluster instances (FCI).
+This section applies to SQL Server installations running on Windows operating systems, both stand-alone and Failover Cluster Instances (FCI).
 
 ### Directories and file name extensions to exclude from virus scanning
 
@@ -94,8 +92,11 @@ By default, the data files are located in the following directories. However, th
 
 |SQL Server instance   | Default data directory|
 |-------               |---------              |
-|Default SQL instance  |*%ProgramFiles%\\Microsoft SQL Server\\MSSQLXX.MSSQLSERVER\\MSSQL\\DATA*  |
-|Named SQL instance    |*%ProgramFiles%\\Microsoft SQL Server\\MSSQLXX.InstanceName\\MSSQL\\DATA* |  
+|SQL Server default instance  |*%ProgramFiles%\\Microsoft SQL Server\\MSSQL\<NN\>.MSSQLSERVER\\MSSQL\\DATA*  |
+|SQL Server named instance    |*%ProgramFiles%\\Microsoft SQL Server\\MSSQL\<NN\>.\<InstanceName\>\\MSSQL\\DATA* |  
+
+> [!NOTE]
+> `<NN>` and `<InstanceName>` are placeholders.
 
 #### SQL Server backup files
 
@@ -108,15 +109,15 @@ By default, the backup folders are located in the following directories. However
 
 |SQL Server instance   | Default backup directory|
 |-------               |---------                |
-|Default SQL instance  |*%ProgramFiles%\\Microsoft SQL Server\\MSSQLXX.MSSQLSERVER\\MSSQL\\Backup*  |
-|Named SQL instance    |*%ProgramFiles%\\Microsoft SQL Server\\MSSQLXX.InstanceName\\MSSQL\\Backup* |  
+|SQL Server default instance  |*%ProgramFiles%\\Microsoft SQL Server\\MSSQL\<NN\>.MSSQLSERVER\\MSSQL\\Backup*  |
+|SQL Server named instance    |*%ProgramFiles%\\Microsoft SQL Server\\MSSQL\<NN\>.\<InstanceName\>\\MSSQL\\Backup* |  
 
 #### Full-Text catalog files
   
 |SQL Server instance   | Process/Executable file|
 |-------               |---------               |
-|Default SQL instance  |*%ProgramFiles%\\Microsoft SQL Server\\MSSQLXX.MSSQLSERVER\\MSSQL\\FTDATA*  |
-|Named SQL instance    |*%ProgramFiles%\\Microsoft SQL Server\\MSSQLXX.InstanceName\\MSSQL\\FTDATA* |  
+|SQL Server default instance  |*%ProgramFiles%\\Microsoft SQL Server\\MSSQL\<NN\>.MSSQLSERVER\\MSSQL\\FTDATA*  |
+|SQL Server named instance    |*%ProgramFiles%\\Microsoft SQL Server\\MSSQL\<NN\>.\<InstanceName\>\\MSSQL\\FTDATA* |  
 
 #### Trace files
 
@@ -142,7 +143,7 @@ These files typically have the *.sql* file name extension and contain Transact-S
 
 #### Remote Blob Storage files
 
-- The directory that holds Reporting Services temporary files and logs (`RSTempFiles` and `LogFiles`). For more information, see [Reporting Services Log Files and Sources - SQL Server Reporting Services (SSRS)](/sql/reporting-services/report-server/reporting-services-log-files-and-sources) and [RsReportServer.config Configuration File - SQL Server Reporting Services (SSRS)](/sql/reporting-services/report-server/rsreportserver-config-configuration-file).
+- The directory that holds Reporting Services temporary files and logs (*RSTempFiles* and *LogFiles*). For more information, see [Reporting Services Log Files and Sources - SQL Server Reporting Services (SSRS)](/sql/reporting-services/report-server/reporting-services-log-files-and-sources) and [RsReportServer.config Configuration File - SQL Server Reporting Services (SSRS)](/sql/reporting-services/report-server/rsreportserver-config-configuration-file).
 
 #### Exception dump files
 
@@ -152,7 +153,7 @@ These files typically have the *.sql* file name extension and contain Transact-S
 #### In-memory OLTP files
 
 - Native procedure and in-memory table definition-related files.
-- Present in an xtp subfolder under the *DATA* directory, for instance.
+- The In-memory OLTP files are typically stored in an *xtp* subfolder under the *DATA* directory.
 - File formats include the following types:
 
   - *xtp\_\<t/p\>\_\<dbid\>\_\<objid\>.c*
@@ -179,21 +180,21 @@ These files typically have the *.sql* file name extension and contain Transact-S
 
 - Replication executables and server-side COM objects
 
-  |default location     | Process/Executable directory|
+  |Default location     | Process/Executable directory|
   |-------              |---------                    |
-  |x86 default location |*\<drive\>:\\Program Files (x86)\\Microsoft SQL Server\\\<*nnn*\>\\COM\\*  |
-  |x64 default location |*\<drive\>:\\Program Files\\Microsoft SQL Server\\\<*nnn*\>\\COM\\*  |
+  |x86 default location |*\<drive\>:\\Program Files (x86)\\Microsoft SQL Server\\\<nnn\>\\COM\\*  |
+  |x64 default location |*\<drive\>:\\Program Files\\Microsoft SQL Server\\\<nnn\>\\COM\\*  |
   
   > [!NOTE]
-  > The `<nnn>` is a placeholder for version-specific information. To specify the correct value, check your installation or search for "Replication and server-side COM objects" in [Specifying File Paths](/sql/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server#specifying-file-paths). For example, the full path for SQL Server 2022 would be `<drive>:\Program Files\Microsoft SQL Server\160\COM\`.
+  > The `<nnn>` is a placeholder for version-specific information. To specify the correct value, check your installation or search for "Replication and server-side COM objects" in [Specifying File Paths](/sql/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server#specifying-file-paths). For example, the full path for SQL Server 2022 would be <drive\>:\\Program Files\\Microsoft SQL Server\\160\\COM\\.
   
-- Starting with SQL Server 2017 CU22 (including SQL 2019 RTM and later versions), if using Transactional Replication and the Distribution Agent is utilizing OLEDB streaming profile, or you're using the `-UseOledbStreaming` parameter, the Distribution Agent creates temporary files (_*.lob_) in the *AppData* folder of the account running the distribution agent where the job is being invoked. For example, *C:\\Users\\\<*DistributionAgentAccount\>*\\AppData\\Temp\\*.lob*. For prior versions of SQL Server, the default *COM* folder (already listed) is used.
+- Starting with SQL Server 2017 CU22 (including SQL 2019 RTM and later versions), if using Transactional Replication and the Distribution Agent is utilizing OLEDB streaming profile, or you're using the `-UseOledbStreaming` parameter, the Distribution Agent creates temporary files (*\*.lob*) in the *AppData* folder of the account running the distribution agent where the job is being invoked. For example, *C:\\Users\\\<DistributionAgentAccount\>\\AppData\\Temp\\\*.lob*. For prior versions of SQL Server, the default *COM* folder (already listed) is used.
 
-For more information, see ["The distribution agent failed to create temporary files" error message](../replication/error-run-distribution-agent.md).
+  For more information, see ["The distribution agent failed to create temporary files" error message](../replication/error-run-distribution-agent.md).
 
 - Files in the Replication Snapshot folder
 
-  The default path for the snapshot files is *\\Microsoft SQL Server\\MSSQLxx.MSSQLSERVER\\MSSQL\\ReplData*. These files typically have file name extensions such as *.sch*, *.idx*, *.bcp*, *.pre*, *.cft*, *.dri*, *.trg*, or *.prc*.
+  The default path for the snapshot files is *\\Microsoft SQL Server\\MSSQL\<NN\>.MSSQLSERVER\\MSSQL\\ReplData*. These files typically have file name extensions such as *.sch*, *.idx*, *.bcp*, *.pre*, *.cft*, *.dri*, *.trg*, or *.prc*.
 
 ### Considerations for Failover Cluster instances (Always On FCI)
 
@@ -204,12 +205,12 @@ Contact your antivirus vendor about cluster-aware versions and interoperability.
 If you're running antivirus software on a cluster, make sure that you also exclude these locations from virus scanning:
 
 - *Q:\\\\* (Quorum drive)
-- *C:\\\Windows\\\\*
-- *ClusterMSDTC* directory in the `MSDTC` drive
+- *C:\\\Windows\\*
+- *ClusterMSDTC* directory in the *MSDTC* drive
 
 If you back up the database to a disk or back up the transaction log to a disk, you can exclude the backup files from the virus scanning.
 
-For more information about antivirus considerations on a cluster, see [Antivirus software cause problems with Cluster Services - Windows Server](../../../windows-server/high-availability/not-cluster-aware-antivirus-software-cause-issue.md).
+For more information about antivirus considerations on a cluster, see [Antivirus software that isn't cluster-aware may cause problems with Cluster Services](../../../windows-server/high-availability/not-cluster-aware-antivirus-software-cause-issue.md).
 
 ## Configure antivirus software to work with Analysis Services (SSAS)
 
@@ -219,10 +220,10 @@ The following Analysis Services directories and processes can be excluded from a
 
 |SSAS instance         | Process/Executable file|
 |-------               |---------               |
-|Default SSAS instance |*%ProgramFiles%\\Microsoft SQL Server\\\<MSASID\>.MSSQLSERVER\\OLAP\\Bin\\MSMDSrv.exe*|
-|Named SSAS instance   |*%ProgramFiles%\\Microsoft SQL Server\\\<MSASID\>.InstanceName\>\\OLAP\\Bin\\MSMDSrv.exe*|
+|SSAS default instance |*%ProgramFiles%\\Microsoft SQL Server\\\MSAS\<ID\>.MSSQLSERVER\\OLAP\\bin\\MSMDSrv.exe*|
+|SSAS named instance   |*%ProgramFiles%\\Microsoft SQL Server\\\MSAS\<ID\>.<InstanceName\>\\OLAP\\bin\\MSMDSrv.exe*|
 
-The `ID` is the build ID. For example, a default Analysis Services 2016 instance binary installation location by default is *C:\Program Files\Microsoft SQL Server\MSAS13.MSSQLSERVER\OLAP\bin*.
+The `<ID>` is a placeholder for the build ID. For example, a default Analysis Services 2016 instance binary installation location by default is *C:\\Program Files\\Microsoft SQL Server\\MSAS13.MSSQLSERVER\OLAP\bin*.
 
 ### SSAS directories and file name extensions to exclude from virus scanning
 
@@ -234,17 +235,17 @@ The directory that holds all Analysis Services data files is specified in the `D
 
 |SSAS instance      | Default data directory|
 |---------          |---------              |
-|Default instance   | *C:\\Program Files\\Microsoft SQL Server\\MSASXX.MSSQLSERVER \\OLAP\\Data*     |
-|Named instance     | *C:\\Program Files\\Microsoft SQL Server\\MSASXX.\<InstanceName\>\\OLAP\\Data* |
+|Default instance   | *C:\\Program Files\\Microsoft SQL Server\\MSAS\<ID\>.MSSQLSERVER\\OLAP\\Data*     |
+|Named instance     | *C:\\Program Files\\Microsoft SQL Server\\MSAS\<ID\>.\<InstanceName\>\\OLAP\\Data* |
 
 #### Temporary files for Analysis Services
 
-For Analysis Services 2012 and later versions, temporary files during processing are specified by the `TempDir` property of the instance of Analysis Services. By default, this property is empty. When this property is empty, the default directory is used. The following table shows the `Temp` path by default.
+For Analysis Services 2012 and later versions, temporary files during processing are specified by the `TempDir` property of the instance of Analysis Services. By default, this property is empty. When this property is empty, the default directory is used. The following table shows the *Temp* path by default.
 
 |SSAS instance      | Temporary files directory|
 |---------          |---------                 |
-|Default instance   | *C:\\Program Files\\Microsoft SQL Server\\MSASXX.MSSQLSERVER\\OLAP\\Temp*         |
-|Named instance     | *C:\\Program Files\\Microsoft SQL Server\\MSASXX.\\\<InstanceName\>\\OLAP\\Temp*|
+|Default instance   | *C:\\Program Files\\Microsoft SQL Server\\MSAS\<ID\>.MSSQLSERVER\\OLAP\\Temp*         |
+|Named instance     | *C:\\Program Files\\Microsoft SQL Server\\MSAS\<ID\>.\<InstanceName\>\\OLAP\\Temp*|
 
 #### The backup files for Analysis Services
 
@@ -252,19 +253,19 @@ In Analysis Services 2012 and later versions, the backup file location is the lo
 
 |SSAS instance      | Backup files directory (default)|
 |---------          |---------                        |
-|Default instance   | *C:\\Program Files\\Microsoft SQL Server\\MSASXX.MSSQLSERVER \\OLAP\\Backup*     |
-|Named instance     | *C:\\Program Files\\Microsoft SQL Server\\MSASXX.\<InstanceName\>\\OLAP\\Backup* |
+|Default instance   | *C:\\Program Files\\Microsoft SQL Server\\MSAS\<ID\>.MSSQLSERVER\\OLAP\\Backup*     |
+|Named instance     | *C:\\Program Files\\Microsoft SQL Server\\MSAS\<ID\>.\<InstanceName\>\\OLAP\\Backup* |
 
 You can change this directory in the properties of the instance of Analysis Services. Any backup command can point to a different location also. Or, the backup files can be copied elsewhere for restore.
 
 #### The directory that holds Analysis Services log files
 
-By default, in Analysis Services 2012 and later versions, the log file location is the location that is specified by the `LogDir` property. By default, the `Log` path is located as follows:
+By default, in Analysis Services 2012 and later versions, the log file location is the location that is specified by the `LogDir` property. By default, the *Log* path is located as follows:
 
 |SSAS instance      | Log files directory|
 |---------          |---------           |
-|Default instance   | *C:\\Program Files\\Microsoft SQL Server\\MSASXX.MSSQLSERVER \\OLAP\\Log*     |
-|Named instance     | *C:\\Program Files\\Microsoft SQL Server\\MSASXX.\<InstanceName\>\\OLAP\\log* |
+|Default instance   | *C:\\Program Files\\Microsoft SQL Server\\MSAS\<ID\>.MSSQLSERVER\\OLAP\\Log*     |
+|Named instance     | *C:\\Program Files\\Microsoft SQL Server\\MSAS\<ID\>.\<InstanceName\>\\OLAP\\log* |
 
 #### Directories for partitions not stored in the default data directories for Analysis Services 2012 and later versions
 
@@ -325,17 +326,17 @@ The executables to exclude have evolved across different versions of SSRS. The f
 
 |SSRS version       | Process/Executable file|
 |---------          |---------               |
-|SSRS 2014 | *%ProgramFiles%\\Microsoft SQL Server\\\<InstanceID\>.\<InstanceName\>\\Reporting Services\\ReportServer\\Bin\\ReportingServicesService.exe*|
-|SSRS 2016 | *%ProgramFiles%\Microsoft SQL Server\\\<InstanceID\>.\<InstanceName\>\\Reporting Services\\ReportServer\\Bin\ReportingServicesService.exe* </br> *%ProgramFiles%\Microsoft SQL Server\\\<InstanceID\>.\<InstanceName\>\\Reporting Services\\RSWebApp\Microsoft.ReportingServices.Portal.WebHost.exe*  |
-|SSRS 2017 and later version| *%ProgramFiles%\\Microsoft SQL Server Reporting Services\\SSRS\Management\\RSManagement.exe* </br>  *%ProgramFiles%\\Microsoft SQL Server Reporting Services\\SSRS\\Portal\\RSPortal.exe* </br>  *%ProgramFiles%\\Microsoft SQL Server Reporting Services\\SSRS\\ReportServer\\bin\\ReportingServicesService.exe*  </br> *%ProgramFiles%\\Microsoft SQL Server Reporting Services\\SSRS\\RSHostingService\\RSHostingService.exe* |
+|SSRS 2014 | *%ProgramFiles%\\Microsoft SQL Server\\<InstanceID\>.\<InstanceName\>\\Reporting Services\\ReportServer\\Bin\\ReportingServicesService.exe*|
+|SSRS 2016 | *%ProgramFiles%\Microsoft SQL Server\\<InstanceID\>.\<InstanceName\>\\Reporting Services\\ReportServer\\Bin\ReportingServicesService.exe* </br></br> *%ProgramFiles%\Microsoft SQL Server\\<InstanceID\>.\<InstanceName\>\\Reporting Services\\RSWebApp\Microsoft.ReportingServices.Portal.WebHost.exe*  |
+|SSRS 2017 and later versions| *%ProgramFiles%\\Microsoft SQL Server Reporting Services\\SSRS\Management\\RSManagement.exe*</br> </br>  *%ProgramFiles%\\Microsoft SQL Server Reporting Services\\SSRS\\Portal\\RSPortal.exe* </br></br>  *%ProgramFiles%\\Microsoft SQL Server Reporting Services\\SSRS\\ReportServer\\bin\\ReportingServicesService.exe*  </br></br> *%ProgramFiles%\\Microsoft SQL Server Reporting Services\\SSRS\\RSHostingService\\RSHostingService.exe* |
 
 ### SSRS directories to exclude from virus scanning
 
 |SSRS version   | Directories to exclude                                                               |
 |---------      |---------                                                                             |
-|SSRS 2014      | *%ProgramFiles%\Microsoft SQL Server\\*\<Instance_ID\>*.*\<Instance Name\>*\\Reporting Services* |
-|SSRS 2016      | *%ProgramFiles%\Microsoft SQL Server\\*\<Instance_ID\>*.*\<Instance Name\>*\\Reporting Services* |
-|SSRS 2017 and later version|*%ProgramFiles%\\Microsoft SQL Server Reporting Services\\SSRS* </br> *%ProgramFiles%\\Microsoft SQL Server Reporting Services\\Shared Tools* |
+|SSRS 2014      | *%ProgramFiles%\Microsoft SQL Server\\<InstanceID\>.\<InstanceName\>\\Reporting Services* |
+|SSRS 2016      | *%ProgramFiles%\Microsoft SQL Server\\<InstanceID\>.\<InstanceName\>\\Reporting Services* |
+|SSRS 2017 and later version|*%ProgramFiles%\\Microsoft SQL Server Reporting Services\\SSRS* </br></br> *%ProgramFiles%\\Microsoft SQL Server Reporting Services\\Shared Tools* |
 
 ## Power BI Report Server
 
