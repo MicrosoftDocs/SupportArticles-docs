@@ -35,7 +35,7 @@ If you're already running Windows 10, version 1809, or later versions, the clien
 
 In the above example, invoking the cmdlet states that `winget` isn't recognized, which means it isn't installed on the system.
 
-## How to Install the winget tool
+## How to install the winget tool
 
 There are two ways to install the winget tool:
 
