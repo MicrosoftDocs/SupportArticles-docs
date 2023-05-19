@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot service connections for Azure RM service principal (manual)
 description: This article explains about how to create service principals by using the Azure RM service principal (manual) option and also troubleshoot an error that occurs while verifying manual Azure RM service connection.
-ms.date: 05/09/2023
+ms.date: 05/19/2023
 author: padmajayaraman
 ms.author: v-jayaramanp
 ms.reviewer: cathmill, kirthishkt
@@ -55,7 +55,7 @@ Failed to query service connection API: ''https://management.azure.com/subscript
 
 ### Debugging steps
 
-Capture F12/Fiddler trace, while reproducing the issue.
+Capture [F12/Fiddler trace](overview-of-azure-resource-manager-service-connections.md#tools-used-for-troubleshooting-azure-rm-service-connection-scenarios), while reproducing the issue.
 
 You will see the following response for the POST call in the trace:
 
@@ -69,4 +69,4 @@ Make sure that the newly created SPN (App) has the Contributor permission on the
 
 ## See related
 
-[Troubleshoot Azure Resource Manager (ARM) service connection issues](overview-of-azure-resource-manager-service-connections.md)
+[Troubleshoot Azure Resource Manager service connection issues](overview-of-azure-resource-manager-service-connections.md)

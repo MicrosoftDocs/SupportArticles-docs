@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting problems related to subscription based service connections
 description: This article explains about common problems when creating subscription based service connections.
-ms.date: 04/27/2023
+ms.date: 05/19/2023
 author: padmajayaraman
 ms.author: v-jayaramanp
 ms.reviewer: cathmill, kirthishkt
@@ -119,4 +119,4 @@ A maximum of 50 Azure subscriptions are listed. If the subscription isn't listed
 
 ## See related
 
-[Common service connection issues](overview-of-azure-resource-manager-service-connections.md)
+- [Troubleshoot Azure RM service connection issues](overview-of-azure-resource-manager-service-connections.md)

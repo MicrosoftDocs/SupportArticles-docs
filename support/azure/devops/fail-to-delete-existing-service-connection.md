@@ -1,7 +1,7 @@
 ---
 title: Fail to delete an existing Azure RM service connection 
 description: This article provides workaround for issues that you might encounter when you can't delete an existing Azure RM service connection. 
-ms.date: 04/24/2023
+ms.date: 05/19/2023
 author: padmajayaraman
 ms.author: v-jayaramanp
 ms.reviewer: cathmill, kirthishkt
@@ -33,8 +33,8 @@ You must manually delete or edit the service principal by using the Active Direc
 
 ## See related
 
-[ARM service connection not listed for a task](azure-rm-service-connection-not-listed-for-a-task.md)
+- [Azure RM service connection not listed for a task](azure-rm-service-connection-not-listed-for-a-task.md)
 
-[Troubleshoot service connections for ARM service principal (manual)](create-azure-rm-service-principal-manual.md)
+- [Troubleshoot service connections for Azure RM service principal (manual)](create-azure-rm-service-principal-manual.md)
 
-["Failed to get Azure DevOps Service access token" error](failed-to-get-azure-devops-service-access-token.md)
+- ["Failed to get Azure DevOps Service access token" error](failed-to-get-azure-devops-service-access-token.md)

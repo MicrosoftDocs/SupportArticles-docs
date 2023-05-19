@@ -1,7 +1,7 @@
 ---
-title: Troubleshoot Azure Resource Manager (ARM) service connection issues
-description: Provides an overview of ARM service connection, types of connection modes, and lists the tools used to troubleshoot various scenarios.
-ms.date: 05/14/2023
+title: Troubleshoot Azure RM service connection issues
+description: Provides an overview of Azure RM service connection, types of connection modes, and lists the tools used to troubleshoot various scenarios.
+ms.date: 05/19/2023
 author: padmajayaraman
 ms.author: v-jayaramanp
 ms.reviewer: cathmill, kirthishkt
@@ -10,13 +10,13 @@ ms.service: azure-devops
 ms.subservice: ts-pipelines
 ---
 
-# Troubleshoot Azure Resource Manager (ARM) service connection issues
+# Troubleshoot Azure RM service connection issues
 
-This article series helps you troubleshoot various Azure Resource Manager (ARM) service connection problems and describes the tools and methods you can use for troubleshooting.
+This article series helps you troubleshoot various Azure RM service connection problems and describes the tools and methods you can use for troubleshooting.
 
 ## Introduction to Azure RM service connection
 
-An Azure Resource Manager service connection is used to connect to a Microsoft Azure subscription or Azure resources by using Service Principal Authentication (SPA) or an Azure-Managed Service Identity.
+An Azure RM service connection is used to connect to a Microsoft Azure subscription or Azure resources by using Service Principal Authentication (SPA) or an Azure-Managed Service Identity.
 
 The **Connections** dialog box offers two main connection modes.
 
@@ -64,7 +64,7 @@ After you save the Azure RM service connection, the connection takes the followi
 
 - Creates an application in Azure AD on behalf of the user.
 
-- Creates an Azure Resource Manager service connection by using this application's details.
+- Creates an Azure RM service connection by using this application's details.
 
 After you successfully create the application, assign the application as a contributor to the selected subscription.
 
@@ -79,7 +79,7 @@ Many of the troubleshooting scenarios that are discussed in these topics involve
 To capture an F12 trace, follow the steps in [Capture a browser trace for troubleshooting](/azure/azure-portal/capture-browser-trace).
 
 > [!NOTE]
-> We recommend that you try to capture a minimum set of events in an F12 trace. Start capturing the trace just before the step that's causing the issue instead of starting the trace as soon as you log in to the Azure DevOps portal.
+> It is recommended that you try to capture a minimum set of events in an F12 trace. Start capturing the trace just before the step that's causing the issue instead of starting the trace as soon as you log in to the Azure DevOps portal.
 
 ### Fiddler trace
 
@@ -120,7 +120,7 @@ Use the following list to navigate to the appropriate article or section for det
 
 ## See also
 
-["Azure Resource Manager service connection"](/azure/devops/pipelines/library/service-endpoints?view=azure-devops&tabs=yaml&preserve-view=true) section of [Manage service connections](/azure/devops/pipelines/library/service-endpoints?view=azure-devops&preserve-view=true&tabs=yaml)
-[Troubleshoot ARM service connections](/azure/devops/pipelines/release/azure-rm-endpoint?view=azure-devops&preserve-view=true)
+- ["Azure Resource Manager service connection"](/azure/devops/pipelines/library/service-endpoints?view=azure-devops&tabs=yaml&preserve-view=true)
+- [Troubleshoot Azure RM service connections](/azure/devops/pipelines/release/azure-rm-endpoint?view=azure-devops&preserve-view=true)
 
 [!INCLUDE [third-party-disclaimer](../../includes/third-party-disclaimer.md)]

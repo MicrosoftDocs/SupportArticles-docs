@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting tips for problems while verifying Azure RM service connection
 description: This article explains about the problems that might occur when users verify the automatic Azure RM service connection.
-ms.date: 04/24/2023
+ms.date: 05/19/2023
 author: padmajayaraman
 ms.author: v-jayaramanp
 ms.custom: sap:Pipelines
@@ -20,7 +20,7 @@ When you try to verify the automatic Azure RM service connection, you may receiv
 
 ## Debugging steps
 
-Capture an F12/Fiddler trace while you reproduce the issue.
+Capture an [F12/Fiddler trace](overview-of-azure-resource-manager-service-connections.md#tools-used-for-troubleshooting-azure-rm-service-connection-scenarios) while you reproduce the issue.
 
 You will see following response for the POST call in the trace:
 
@@ -49,8 +49,8 @@ For more information, see [Endpoints - Update Service Endpoint](/rest/api/azure/
 
 ## See related
 
-[Azure RM service connection not listed for a task](azure-rm-service-connection-not-listed-for-a-task.md)
+- [Azure RM service connection not listed for a task](azure-rm-service-connection-not-listed-for-a-task.md)
 
-[Fail to delete existing Azure RM service connection](fail-to-delete-existing-service-connection.md)
+- [Fail to delete existing Azure RM service connection](fail-to-delete-existing-service-connection.md)
 
-[Troubleshoot common service connection issues](overview-of-azure-resource-manager-service-connections.md)
+- [Troubleshoot Azure RM service connection issues](overview-of-azure-resource-manager-service-connections.md)

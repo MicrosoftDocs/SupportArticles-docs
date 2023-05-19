@@ -51,17 +51,17 @@
 
   - name: Azure Resource Manager service connection
     items: 
-    - name: ARM service connection and trace tools
+    - name: Azure RM service connection and trace tools
       href: overview-of-azure-resource-manager-service-connections.md
     - name: Subscription issues
       href: troubleshoot-subscription-related-scenarios.md
-    - name: ARM service principal (manual)
+    - name: Azure RM service principal (manual)
       href: create-azure-rm-service-principal-manual.md
-    - name: Error verifying automatic ARM service connection
+    - name: Error verifying automatic Azure RM service connection
       href: failed-to-get-azure-devops-service-access-token.md
-    - name: ARM service connection not listed for task
+    - name: Azure RM service connection not listed for task
       href: azure-rm-service-connection-not-listed-for-a-task.md
-    - name: Fail to delete existing ARM service connection
+    - name: Fail to delete existing Azure RM service connection
       href: fail-to-delete-existing-service-connection.md
 
 - name: Repos

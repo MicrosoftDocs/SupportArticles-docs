@@ -1,7 +1,7 @@
 ---
 title: Azure RM service connection not listed for a task 
 description: This article provides tips for an issue that you might encounter when a service connection is not listed for a task.
-ms.date: 05/15/2023
+ms.date: 05/19/2023
 author: padmajayaraman
 ms.author: v-jayaramanp
 ms.reviewer: cathmill, kirthishkt
@@ -60,10 +60,10 @@ The **Azure PowerShell task** screen shows that the Azure RM Service connection 
 
 1. Check whether the SPN (App) still exists. (It was likely deleted.)
 
-1. If this is an automated service connection, create a new service connection. If this is a manual service connection, follow the steps in the [Create an Azure Resource Manager service connection](/azure/devops/pipelines/library/connect-to-azure?view=azure-devops&preserve-view=true) section of Connect to Microsoft Azure to update the service connection by using the new SPN (App) details.
+1. If this is an automated service connection, create a new service connection. If this is a manual service connection, follow the steps in the [Create an Azure Resource Manager service connection](/azure/devops/pipelines/library/connect-to-azure?view=azure-devops&preserve-view=true) to update the service connection by using the new SPN (App) details.
 
 ## See related
 
-[Troubleshoot Azure Resource Manager (ARM) service connection issues](overview-of-azure-resource-manager-service-connections.md)
+- [Troubleshoot Azure RM service connection issues](overview-of-azure-resource-manager-service-connections.md)
 
-[Error when verifying the manual Azure RM service connection](create-azure-rm-service-principal-manual.md)
+- [Error when verifying the manual Azure RM service connection](create-azure-rm-service-principal-manual.md)
