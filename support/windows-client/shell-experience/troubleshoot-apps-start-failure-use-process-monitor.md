@@ -34,9 +34,7 @@ By default, the recording should start automatically. However, you can make sure
 
 :::image type="content" source="media/troubleshoot-apps-start-failure-use-process-monitor/process-monitor-check-running.png" alt-text="Screenshot of the Process Monitor window with an icon selected to check if the tool is running.":::
 
-Alternately, you can start the recording by pressing the <kbd>Ctrl</kbd> + <kbd>E</kbd> key combination, or by selecting **Capture Events** from the **File** menu.
-
-You see the events recorded in the status bar as follows:
+Alternately, you can start the recording by pressing the <kbd>Ctrl</kbd> + <kbd>E</kbd> key combination, or by selecting **Capture Events** from the **File** menu. You see the events recorded in the status bar as follows:
 
 :::image type="content" source="media/troubleshoot-apps-start-failure-use-process-monitor/process-monitor-recorded-events.png" alt-text="Screenshot of the recorded events showing in the status bar.":::
 
@@ -68,11 +66,9 @@ To stop the recording, you can use the following command.
 C:\PSTools>psexec.exe -sd \\<Computer Name> C:\ProcessMonitor\procmon64.exe -terminate -quiet
 ```
 
-## Store and save the events
+## Store and save events
 
-There are several methods available to store and save the events. You can select **Backing files** from the **File** menu.
-
-Then, you can see two methods to store events:
+There are several methods available to store and save the events. You can select **Backing files** from the **File** menu. Then, you can see two methods to store events:
 
 - **Use virtual memory**
 - **Use file named**
