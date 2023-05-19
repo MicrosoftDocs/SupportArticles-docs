@@ -1,376 +1,445 @@
 ---
-title: Troubleshooting common eDiscovery issues
-description: Learn about basic troubleshooting steps you can take to resolve common issues in Microsoft Purview eDiscovery.
-f1.keywords: 
-  - NOCSH
-ms.author: v-six
-author: simonxjx
+title: Resolve search errors in eDiscovery (Standard)
+description: Resolve common search errors in Microsoft Purview eDiscovery (Standard).
+author: v-trisshores
+ms.author: v-trisshores
 manager: dcscontentpm
-audience: Admin
+audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
-ms.custom: 
-  - CI 157398
-  - CI 171536
+ms.reviewer: jkushwah, lindabr, meerak
+ms.custom:
+  - Exchange Online
+  - CI 174006
   - CSSTroubleshoot
-  - seo-marvel-apr2020
-ms.collection: 
-  - Strat_O365_IP
-  - M365-security-compliance
-search.appverid: 
-  - MOE150
-  - MET150
-siblings_only: true
-ms.date: 4/21/2023
+appliesto: 
+  - Microsoft Purview
+  - Exchange Online
+search.appverid: MET150
+ms.date: 05/18/2023
 ---
-# Resolve common eDiscovery issues
 
-This article covers basic troubleshooting steps that you can take to identify and resolve issues that you might encounter during an eDiscovery search or elsewhere in the eDiscovery process. For information about how to troubleshoot common retention policy errors, see [Resolve errors in Microsoft 365 retention and retention label policies](/microsoft-365/troubleshoot/retention/resolve-errors-in-retention-and-retention-label-policies).
+# Resolve search errors in eDiscovery (Standard)
 
-Resolving some of these scenarios requires help from Microsoft Support. Information about when to contact Microsoft Support is included in the resolution steps.
+If you encounter an issue or error that's related to searches in Microsoft Purview eDiscovery (Standard), retry the operation to rule out transient issues. For issues that persist, select the applicable description from the following list:
 
-## Error: Ambiguous location
+- [Search issue: Difference between estimated and downloaded search results](#search-issue-difference-between-estimated-and-downloaded-search-results)
+- [Search error: "Location is ambiguous](#search-error-location-is-ambiguous)"
+- [Search error: "Recipient not found](#search-error-recipient-not-found)"
+- [Search error: CS007](#search-error-cs007)
+- [Search error: "Internal server error (500)](#search-error-internal-server-error-500-occurred)"
+- [Search or export error: "Maximum number of jobs for your organization are currently running](#search-or-export-error-maximum-number-of-jobs-for-your-organization-are-currently-running)"
+- [Export issue: Export appears to be stalled](#export-issue-export-appears-to-be-stalled)
+- [Export error: "Item has been moved or deleted" or "Unable to retrieve item due to timeout](#export-error-item-has-been-moved-or-deleted-or-unable-to-retrieve-item-due-to-timeout)"
+- [Export error: "Request failed with status code 500" or "500 internal server error"](#export-error-request-failed-with-status-code-500-or-500-internal-server-error)
+- [Export error: "File wasn't exported because it doesn't exist" or "File not found"](#export-error-file-wasnt-exported-because-it-doesnt-exist-or-file-not-found)
+- [Export download issue: Slow download of exported search results](#export-download-issue-slow-download-of-exported-search-results)
+- [Export download issue: eDiscovery export tool doesn't download any files](#export-download-issue-ediscovery-export-tool-doesnt-download-any-files)
+- [Export download error: "Search result was not downloaded as it is a folder"](#export-download-error-search-result-was-not-downloaded-as-it-is-a-folder)
+- [Export download error: "Cannot access the file 'ExportData.db'"](#export-download-error-cannot-access-the-file-exportdatadb)
 
-If you try to add a user's mailbox location to a search, and there are duplicate or conflicting objects that have the same userID in the Exchange Online Protection (EOP) directory, you receive the following error message:
+If none of these resolutions apply to your search issue, contact [Microsoft Support](https://go.microsoft.com/fwlink/?linkid=2189021). Depending on your issue, gather output by using the [Get-ComplianceSearch](/powershell/module/exchange/get-compliancesearch) or [Get-ComplianceSearchAction](/powershell/module/exchange/get-compliancesearchaction) PowerShell cmdlet before you create a support case. For information about other diagnostic information that Microsoft Support might need, see [Collect eDiscovery diagnostic information](/microsoft-365/compliance/ediscovery-diagnostic-info).
 
-> The compliance search contains the following invalid location(s): `useralias@contoso.com`. The location `useralias@contoso.com` is ambiguous.
+For eDiscovery hold issues, see [Resolve hold errors in eDiscovery (Standard)](resolve-ediscovery-hold-issues.md).
+
+## Search issue: Difference between estimated and downloaded search results
+
+### Symptoms
+
+When you view the search result statistics in the *Export Summary \<timestamp\>.csv* file in the [downloaded eDiscovery search results](/microsoft-365/compliance/ediscovery-export-content) folder, you notice that the estimated and downloaded search result statistics differ. The estimated search result statistics are also shown in the details pane for the search in the Microsoft Purview compliance portal, and in the eDiscovery export tool.
+
+### Cause
+
+An estimate of the search results is just that: It's an estimate and not an actual count of items that meet the search query criteria. For more information about why estimated and downloaded search results can differ, see [Differences between estimated and actual eDiscovery search results](/microsoft-365/compliance/ediscovery-differences-between-estimated-and-actual-search-results).
+
+[Back to top](#resolve-search-errors-in-ediscovery-standard)
+
+## Search error: "Location is ambiguous"
+
+### Symptoms
+
+When you run an [eDiscovery search](/microsoft-365/compliance/ediscovery-search-for-content), the search fails and returns the following error message:
+
+> The compliance search contains the following invalid location(s): \<mailbox identifier\>. The location \<mailbox identifier\> is ambiguous.
+
+### Cause
+
+The locations specified in the error message are invalid. The mailbox identifier for each invalid location is used by duplicate or conflicting objects in Exchange Online Protection (EOP).
 
 ### Resolution
 
-Check for duplicate users or distribution lists that have the same user ID:
+For each invalid location, follow these steps:
 
-1. Connect to [Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell).
+1. [Connect to Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell).
 
-2. To retrieve all instances of the username, run the following command:
-
-    ```powershell
-    Get-Recipient <username>
-    ```
-
-   The output for "useralias@contoso.com" will resemble the following:
-
-   > |Name|RecipientType|
-   > |---|---|
-   > |Alias, User|MailUser|
-   > |Alias, User|User|
-
-3. If multiple users are returned, locate and fix the conflicting object.
-
-## Error: Search fails on specific locations
-
-An eDiscovery or Content search might yield the following error:
-
-> This search completed with (#) errors.  Would you like to retry the search on the failed locations?
-
-:::image type="content" source="media/resolve-ediscovery-issues/search-fails-error.png" alt-text="Screenshot of search-specific location fails error.":::
-
-### Resolution
-
-If you receive this message, we recommend that you verify the locations that failed in the search, and then rerun the search on the failed locations only:
-
-1. Connect to [Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell), and then run the following command:
+2. Find the duplicate or conflicting objects that use a mailbox identifier. To do this, run the following [Get-Recipient](/powershell/module/exchange/get-recipient) command:
 
    ```powershell
-   Get-ComplianceSearch <searchname> | FL
+   Get-Recipient -Identity "<mailbox identifier from error message>"
    ```
 
-2. From the PowerShell output, view the failed locations in the errors field or from the status details in the error message from the search output.
+3. Remove the duplicate or conflicting object.
 
-3. Retry the eDiscovery search on the failed locations only.
+[Back to top](#resolve-search-errors-in-ediscovery-standard)
 
-4. If you continue to receive these errors, see [Retry failed locations](/Office365/SecurityCompliance/retry-failed-content-search) for more troubleshooting steps.
+## Search error: "Recipient not found"
 
-## Error: File not found
+### Symptoms
 
-When you run an eDiscovery search that includes SharePoint Online and OneDrive for Business locations, you might receive a "File Not Found" error message even though the file is located on the site. This message will be posted in the export warnings and errors.csv file or skipped items.csv file. This might occur if the file can't be found on the site or if the index is out of date. Here's the text of an actual error message (with emphasis added):
+Your [eDiscovery search](/microsoft-365/compliance/ediscovery-search-for-content) fails and returns the error message, "Recipient not found."
 
-> 28.06.2019 10:02:19_FailedToExportItem_Failed to download content. Additional diagnostic info : Microsoft.Office.Compliance.EDiscovery.ExportWorker.Exceptions.ContentDownloadTemporaryFailure: Failed to download from content 6ea52149-xyxy-xyxy-b5bb-82ca6a3ec9be of type Document. Correlation Id: 3bd84722-xyxy-xyxy-b61b-08d6fba9ec32. ServerErrorCode: -2147024894 ---> Microsoft.SharePoint.Client.ServerException: ***File Not Found***. at Microsoft.SharePoint.Client.ClientRequest.ProcessResponseStream(Stream responseStream) at Microsoft.SharePoint.Client.ClientRequest.ProcessResponse()
---- End of inner exception stack trace ---
+### Cause
 
-### Resolution
-
-1. Check the location that's identified in the search to make sure that the location of the file is correct and added to the search locations.
-
-2. To reindex the site, use the procedures that are provided in [Manually request crawling and reindexing of a site, a library, or a list](/sharepoint/crawl-site-content).
-
-## Error: This file wasn't exported 
-
-**Full error message:** "This file wasn't exported because it doesn't exist anymore. The file was included in the count of estimated search results because it's still listed in the index. The file will eventually be removed from the index, and won't cause an error in the future."
-
-You might experience this error when you run an eDiscovery search that includes SharePoint Online and OneDrive for Business locations. eDiscovery relies on the SPO index to identify the file locations. If the file was deleted but the SPO index was not yet updated, this error might occur.
-
-### Resolution 
-
-Open the SPO location, and verify that this file is, indeed, not there. The suggested solution is to manually reindex the site, or wait until the site is reindexed through the automatic background process.
-
-## Error: This search result was not downloaded
-
-**Full error message:** "This search result was not downloaded as it is a folder or other artifact that can't be downloaded by itself, any items inside the folder or library will be downloaded."
-
-You might experience this error when you run an eDiscovery search that includes SharePoint Online and OneDrive for Business locations. This message means that we were going to try to export the item that's reported in the index, but the item turned out to be a folder. Therefore, we did not export it. As mentioned in the error message, we don't export folders, but we do export their contents.
-
-## Error: Search fails because recipient is not found
-
-An eDiscovery search fails and returns a "recipient not found" error message. This error might occur if the user object cannot be found in Exchange Online Protection (EOP) because the object is not synced.
+The system can't find one of the [recipients](/powershell/module/exchange/new-mailboxsearch#-recipients) in your eDiscovery search because of synchronization delays in Exchange Online Protection (EOP).
 
 ### Resolution
 
-1. Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+1. [Connect to Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell).
 
-2. Run the following command to check whether the user is synced to Exchange Online Protection:
+2. Check whether the recipients in the search query are synced in EOP by using the [Get-Recipient](/powershell/module/exchange/get-recipient) cmdlet. Run the following command:
 
    ```powershell
-   Get-Recipient <userId> | FL
+   Get-Recipient -Identity "<user identifier>" | FL
    ```
 
-3. There should be a mail user object for the user question. If nothing is returned, investigate the user object. If the object can't be synced, contact Microsoft Support.
+3. If the command doesn't return a user object for a recipient, wait 30 minutes for synchronization to finish, and then recheck.
 
-## Error: Search fails with error CS007
+4. After you verify that the recipient has synced in EOP, retry your search.
 
-When you run a Content search or a search that's associated with an eDiscovery (Standard) case, a transient error occurs, and the search fails and returns a "CS007" error message.
+[Back to top](#resolve-search-errors-in-ediscovery-standard)
 
-### Resolution
+## Search error: CS007
 
-1. Update the search, and reduce the complexity of the search query. For example, a wildcard search might return too many results for the system to process, and this triggers a CS007 error.
+### Symptoms
 
-2. Rerun the updated search.
+Your [eDiscovery search](/microsoft-365/compliance/ediscovery-search-for-content) fails and returns a `CS007` error code.
 
-## Error: Exporting search results is slow
+### Cause
 
-When you export search results from an eDiscovery (Standard) or Content search in the Microsoft Purview compliance portal, the download takes longer than expected. You can check to see the amount of data to be download, and consider increasing the export speed.
+Either of the following issues can cause this error:
 
-### Resolution
+- A transient issue
 
-1. Connect to [Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell), and then run the following command:
-
-   ```powershell
-   Get-ComplianceSearch <searchname> | FL
-   ```
-
-2. To determine the amount of data that has to be downloaded, examine the `SearchResults` and `SearchStatistics` parameters.
-
-3. Run the following command:
-
-   ```powershell
-   Get-ComplianceSearchAction | FL
-   ```
-
-4. In the results field, find the data that was exported, and then view any messages about errors that were encountered.
-
-5. Open the folder that you exported the content to, and examine the Trace.log file for any error entries.
-
-6. If you still experience issues, consider subdividing any searches that return a large set of results. For example, you can use date ranges in search queries to create a set of smaller searches that return fewer results and can be downloaded faster.
-
-## Error: Export process not progressing or is stuck
-
-When you export search results from eDiscovery (Standard) or Content search in the Microsoft Purview compliance portal, the export process does not progress, or it appears to be stuck.
+- A search query that returns too many results for the system to process. For example, a query that uses several wildcards can return a large result set.
 
 ### Resolution
 
-1. If it's necessary, rerun the search. If the search was last run more than seven days ago, you have to rerun the search.
+Retry your search. If your search still fails, split your search into smaller searches. For example, use date ranges or limit the number of search locations to return smaller result sets.
 
-2. Restart the export.
+## Search error: "Internal server error (500) occurred"
 
-## Error: "Request Failed with status Code 500" or "500 internal server error"
+### Symptoms
 
-When you perform an eDiscovery export, you receive one of the following error messages:
+Your [eDiscovery search](/microsoft-365/compliance/ediscovery-search-for-content) fails and returns the error message, "Internal server error (500) occurred."
 
-- Request Failed with status Code 500
-- 500 internal server error
+### Cause
 
-### Resolution
+Issues that can cause this error include:
 
-1. Make sure that you're assigned the **Export** role. This role is assigned automatically to the **eDiscovery Manager** role group. If you're a member of the **Organization Management** role group, add yourself to the **eDiscovery Manager** role group on the **Permissions** page in the Microsoft Purview compliance portal. You can also view your permissions on the eDiscovery (Premium) overview page in the compliance portal. For more information about eDiscovery permissions, see [Assign eDiscovery permissions in the Microsoft Purview compliance portal](/microsoft-365/compliance/ediscovery-assign-permissions?view=o365-worldwide&preserve-view=true).
-1. If you receive an error message when you try to download the export, verify that you're downloading the export that you created. You might have to contact the administrator who created the export to complete the download.
-1. Check security filters and the storage location.
-1. Subdivide the search into smaller searches by using a smaller date range or by limiting the number of locations that are searched. Then, run the search again.
+- A search query that returns too many results for the system to process. For example, a query that uses several wildcards can return a large result set.
 
-   **Note:** In Content Search and eDiscovery (Standard), the maximum exportable data for a single search is 2 TB. If your export exceeds 2 TB, reduce the amount of data to be exported, and then try again.
+- Other search errors. To check for those errors, run the following command to get information about the search, and then look for error messages in the output:
 
-## Error: Holds don't sync
-
-This is an eDiscovery Case Hold Policy Sync Distribution error. When this occurs, you receive the following error message:
-
-> Resources: It's taking longer than expected to deploy the policy. It might take an additional 2 hours to update the final deployment status, so check back in a couple hours.
+  ```powershell
+  Get-ComplianceSearch -Identity <search name> | FL ResultDetails
+  ```
 
 ### Resolution
 
-1. Connect to [Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell), and then run the following command for an eDiscovery case hold:
+Retry your search. If your search still fails, split your search into smaller searches. For example, use date ranges or limit the number of search locations to return smaller result sets.
 
-   ```powershell
-   Get-CaseHoldPolicy <policyname> - DistributionDetail | FL
-   ```
+[Back to top](#resolve-search-errors-in-ediscovery-standard)
 
-2. Examine the value in the `DistributionDetail` parameter for an error entry such as the following:
+## Search or export error: "Maximum number of jobs for your organization are currently running"
 
-   > Error: Resources: It's taking longer than expected to deploy the policy. It might take an additional 2 hours to update the final deployment status, so check back in a couple hours."
+### Symptoms
 
-3. Try running the RetryDistribution parameter on the policy in question:
+When you try to [search](/microsoft-365/compliance/ediscovery-search-for-content) or [export eDiscovery search results](/microsoft-365/compliance/ediscovery-export-content), the operation fails and you receive the following error message:
 
-   For eDiscovery case holds:
+> Your request can't be started because the maximum number of jobs for your organization are currently running.
 
-   ```powershell
-   Set-CaseHoldPolicy <policyname> -RetryDistribution
-   ```
+### Cause
 
-4. Contact Microsoft Support.
-
-## Error: Holds stuck in PendingDeletion
-
-In some situations, eDiscovery Case Hold Policies are stuck in PendingDeletion and can't be removed.
+Your organization has reached the [maximum limit of 50 concurrent jobs](/microsoft-365/compliance/ediscovery-limits-for-content-search). Because export jobs typically take longer to finish than search jobs, export jobs are more likely to fill the quota.
 
 ### Resolution
 
-1. Connect to [Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell).
-1. Try running the RetryDistribution parameter on the policy in question:
+Use the following procedure to see which export jobs are currently running:
 
-   For eDiscovery case holds:
+> [!NOTE]
+> To use the following procedure, you must be a member of the eDiscovery Manager role group and be an eDiscovery administrator in that group. For more information about how to view or assign eDiscovery Administrators in your organization, see [Assign eDiscovery permissions](/microsoft-365/compliance/ediscovery-assign-permissions#assign-ediscovery-permissions), [Get-eDiscoveryCaseAdmin](/powershell/module/exchange/get-ediscoverycaseadmin), and [Add-eDiscoveryCaseAdmin](/powershell/module/exchange/add-ediscoverycaseadmin).
 
-   ```powershell
-   Set-CaseHoldPolicy <policyname> -RetryDistribution
-   ```
+1. [Connect to Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell).
 
-2. Try to delete the policy by using PowerShell and the `-ForceDeletion` parameter:
+2. Run the following script:
 
-   For eDiscovery case holds, use the [Remove-CaseHoldPolicy](/powershell/module/exchange/remove-caseholdpolicy?view=exchange-ps&preserve-view=true) cmdlet:
-
-   ```powershell
-   Remove-CaseHoldPolicy <policyname> -ForceDeletion
-   ```
-  
-3. Contact Microsoft Support.
-
-## Error: "The condition specified using HTTP conditional header(s) is not met"
-
-When you try to download search results by using the eDiscovery Export Tool, you receive the following error message:
-
-> System.Net.WebException: The remote server returned an error: (412) The condition specified using HTTP conditional header(s) is not met.
-
-This is a transient error that typically occurs in the Azure Storage location.
-
-### Resolution
-
-To resolve this issue, try again [download the search results](/microsoft-365/compliance/export-search-results#step-2-download-the-search-results). This will restart the eDiscovery Export Tool.
-
-## Error: Downloaded export shows no results
-
-After a successful export, the download that was made through the eDiscovery Export Tool shows zero files in the results.
-
-### Resolution
-
-This is a client-side issue. To fix the issue, follow these steps:
-
-1. Try using another client to download.
-
-2. Remove old searches that are no longer required. To do this, run the [Remove-ComplianceSearch](/powershell/module/exchange/remove-compliancesearch) cmdlet.
-
-3. Make sure to download to a local drive.
-
-4. Make sure that no virus scanner is running.
-
-5. Make sure that no other export is downloading to the same folder or any parent folder.
-
-6. If the previous steps don't work, disable file compression and de-duplication.
-
-7. If step 6 works, then the issue occurs because of a local virus scanner or a disk issue.
-
-## Error: "Your request can't be started because the maximum number of jobs for your organization are currently running"
-
-Your organization has reached the limit for the maximum number of concurrent export jobs. All new export jobs are being throttled.
-
-### Resolution
-
-To discover how many export jobs that were started in the past seven days are still running, follow these steps:
-
-1. Connect to [Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell).
-
-2. To collect information about the current export jobs that are triggering the throttle, run the following cmdlets as an eDiscovery administrator.
-
-    **Note**: An eDiscovery administrator is a member of the eDiscovery Manager role group, and can view all eDiscovery cases. You can use the [Get-eDiscoveryCaseAdmin](/powershell/module/exchange/get-ediscoverycaseadmin) cmdlet to check for eDiscovery administrators, and use the [Add-eDiscoveryCaseAdmin](/powershell/module/exchange/add-ediscoverycaseadmin) cmdlet to add an eDiscovery administrator. The cmdlets might take some time to finish, depending on the number of cases.
-
-   ```powershell
+   ```PowerShell
    $date = Get-Date
-   $Exports = @(Get-ComplianceSearchAction -export -ResultSize Unlimited)
+   $exports = @(Get-ComplianceSearchAction -Export -ResultSize Unlimited)
    $cases = Get-ComplianceCase | ?{$_.status -like "Active"}
-     
    $i = 1
-   foreach ($case in $cases)
-   {
-   $Exports += Get-ComplianceSearchAction -export -case $case.name
-   write-host "Processing case $($i) of $($cases.count)"
-   $i++
+   foreach ($case in $cases) {
+     $exports += Get-ComplianceSearchAction -Export -Case $case.Name
+     Write-Host "Processing case $($i) of $($cases.Count)"
+     $i++
    }
-     
-   $inprogressExports = $exports | ?{$_.Results -eq $null -or (!$_.Results.Contains("Export status: Completed") -and !$_.Results.Contains("Export status: none"))};
-   $exportJobsRunning = $inprogressExports | ?{$_.JobStartTime -ge $date.AddDays(-7)} | Sort-Object JobStartTime -Descending
-
+   $inProgressExports = $exports | ?{$_.Results -eq $null -or (!$_.Results.Contains("Export status: Completed") -and !$_.Results.Contains("Export status: none"))}
+   $inProgressExportsSince = $inProgressExports | ?{$_.JobStartTime -ge $date.AddDays(-7)} | Sort-Object JobStartTime -Descending
+   Write-Host "In-progress export jobs:"
+   $inProgressExports | Format-Table Name,JobStartTime,JobEndTime,Status | More
+   Write-Host "In-progress export jobs started in the last 7 days:"
+   $inProgressExportsSince | Format-Table Name,JobStartTime,JobEndTime,Status | More
    ```
 
-3. Run the following cmdlet to display a list of export jobs that are currently running.
+To resolve the error, use the following procedure:
 
-   **Note**: If the cmdlet returns 10 or more exports jobs, your organization has reached the limit for the number of concurrent export jobs. For more information, see [Limits for eDiscovery search](/microsoft-365/compliance/limits-for-content-search).
+1. Reduce the number of jobs that are running. Use one or both of the following approaches:
 
-   ```powershell
-   $exportJobsRunning | Format-Table Name, JobStartTime, JobEndTime, Status | More;
-   ```
+   - Wait for one or more running jobs to finish.
 
-4. Wait for existing export jobs to finish, or use the [Remove-ComplianceSearchAction](/powershell/module/exchange/remove-compliancesearchaction) cmdlet to remove export jobs that are no longer required.
+   - Remove one or more running jobs that you no longer require by using the [Remove-ComplianceSearchAction](/powershell/module/exchange/remove-compliancesearchaction) PowerShell cmdlet.
 
-## Error: Hit tolerable error, will retry
+2. Retry your search or export operation.
 
-**Full error message:** "Hit tolerable error, will retry: The process cannot access the file 'ExportData.db' because it is being used by another process."
+[Back to top](#resolve-search-errors-in-ediscovery-standard)
 
-The export process might get stuck or produce zero-byte files.
+## Export issue: Export appears to be stalled
 
-### Resolution
+### Symptoms
 
-This might be a client-side issue. To fix it, follow these steps:
+You try to [export eDiscovery search results](/microsoft-365/compliance/ediscovery-export-content), but the export doesn't finish, and it appears to be stalled.
 
-1. Try using another client to download.
+### Cause
 
-2. Remove old searches that are no longer required. To do this, run the [Remove-ComplianceSearch](/powershell/module/exchange/remove-compliancesearch) cmdlet.
-
-3. Make sure to download to a local drive.
-
-4. Make sure that no virus scanner is running.
-
-5. Make sure that no other export is downloading to the same folder or any parent folder.
-
-6. If the previous steps don't work, disable file compression and de-duplication.
-
-7. If step 6 works, then the issue occurs because of a local virus scanner or a disk issue.
-
-If none of these steps solve the problem, gather the output of the `Get-ComplianceSearch` and `Get-ComplianceSearchAction` parameters before you create a support case.
-
-## Error: Problem retrieving mailbox items while archiving
-
-The following error entries are displayed in the Export Warnings.csv and Errors.csv files during a Content search and the eDiscovery standard export workflow.
-
-> "FailedToExportItem_Microsoft.Exchange.EDiscovery.Export.ExportException: Export failed with error type: 'FailedToExportItem'. Message: Item has been moved or deleted."
-> "FailedToExportItem_Microsoft.Exchange.EDiscovery.Export.ExportException: Export failed with error type: 'FailedToExportItem'. Message: Unable to retrieve item due to timeout after multiple retries."
-
-These errors entries indicate that certain items that were found during a search couldn’t be retrieved. These might be temporary backup copies that are created during archiving. Although these temporary backups are accessible for searching and, therefore, can be matched, they are not accessible for retrieval. However, eDiscovery can match and retrieve the original items because they are exact copies of the backups.
+Transient issues can stall the export process.
 
 ### Resolution
 
-No action is needed to address these errors. The original items that are associated with the same mailbox will be retrieved and subsequently exported or added to a review set.
+Restart the export.
 
-## Error: Export process opens a new blank page without a download
+> [!NOTE]
+> You can't restart an export of search results that were generated more than seven days earlier. Instead, rerun the search, and then start the export.
 
-When you export search results from an eDiscovery (Standard) or Content search in the Microsoft Purview compliance portal, the export process opens a new blank page, and the eDiscovery Export Tool (UnifiedExportTool) isn't downloaded.
+[Back to top](#resolve-search-errors-in-ediscovery-standard)
+
+## Export error: "Item has been moved or deleted" or "Unable to retrieve item due to timeout"
+
+### Symptoms
+
+After you [download eDiscovery search results](/microsoft-365/compliance/ediscovery-export-content), you see the following errors in the *Export Warnings and Errors.csv* file in the downloaded export folder:
+
+- > FailedToExportItem_Microsoft.Exchange.EDiscovery.Export.ExportException: Export failed with error type: 'FailedToExportItem'. Message: Item has been moved or deleted.
+
+- > FailedToExportItem_Microsoft.Exchange.EDiscovery.Export.ExportException: Export failed with error type: 'FailedToExportItem'. Message: Unable to retrieve item due to timeout after multiple retries.
+
+### Cause
+
+These "FailedToExportItem" error messages indicate that the system didn't export all search result items. The unexported items are temporary backups that the system created during mailbox archival. Although eDiscovery can search temporary backup items, these items aren't exportable.
 
 ### Resolution
 
-To fix this issue, allow pop-ups from the Microsoft Purview compliance portal.
+Wait for the system to retrieve and export the original mailbox items that are associated with the temporary backups.
 
-In Microsoft Edge:
+[Back to top](#resolve-search-errors-in-ediscovery-standard)
 
-1. Select the **Settings and more** icon (...) in the upper-right corner of the browser.
-1. Select **Settings** > **Cookies and site permissions**.
-1. Under **All permissions**, select **Pop-ups and redirects**.
-1. Under **Allow**, select **Add**.
-1. In the **Add a site** dialog box, enter *https://compliance.microsoft.com*, and then select **Add**.
+## Export error: "Request failed with status code 500" or "500 internal server error"
 
-If you're using a different browser, follow the browser's documentation to allow pop-ups from the Microsoft Purview compliance portal.
+### Symptoms
 
-After you make this change, restart the export process.
+When you try to [export or download eDiscovery search results,](/microsoft-365/compliance/ediscovery-export-content) you receive one of the following error messages:
+
+- > Request failed with status code 500
+
+- > 500 internal server error
+
+### Cause
+
+The issue can occur for any of the following reasons.
+
+#### Cause 1
+
+You don't have the [Export role](/microsoft-365/compliance/ediscovery-assign-permissions#rbac-roles-related-to-ediscovery). The Export role is automatically assigned to members of the eDiscovery Manager role group. The Export role isn't automatically assigned to members of the Organization Management role group.
+
+#### Cause 2
+
+The error occurs when you try to download exported search results if you're not the admin who exported the search results.
+
+#### Cause 3
+
+[Permissions filters](/microsoft-365/compliance/ediscovery-permissions-filtering-for-content-search) for your user account restrict the mailboxes, storage locations, or content that you can search and export.
+
+#### Cause 4
+
+The amount of exportable data for your search exceeds 2 TB. The maximum amount of exportable data for a single search is 2 TB. To determine the exportable data size, run the following command:
+
+```PowerShell
+Get-ComplianceSearch -Identity <search name> | FL Size,SuccessResults,SearchStatistics
+```
+
+### Resolution
+
+Choose the resolution that corresponds to the applicable cause.
+
+#### Resolution 1
+
+If you're a member of the Organization Management role group, [add yourself to the eDiscovery Manager role group](/microsoft-365/compliance/ediscovery-assign-permissions#assign-ediscovery-permissions). You can do that on the [Permissions page](https://compliance.microsoft.com/compliancecenterpermissions) in the Microsoft Purview compliance portal, or by using the [Add-eDiscoveryCaseAdmin](/powershell/module/exchange/add-ediscoverycaseadmin) PowerShell cmdlet.
+
+#### Resolution 2
+
+Ask the admin who created the export to complete the download. To find that admin, run the following command:
+
+```PowerShell
+Get-ComplianceSearchAction -Export -Case <case name> | FL Name,CreatedBy
+```
+
+#### Resolution 3
+
+For the mailboxes and storage locations that you want to search and export, check whether any [permissions filters](/microsoft-365/compliance/ediscovery-permissions-filtering-for-content-search) prevent those actions. If necessary, ask an admin to configure permissions filters.
+
+#### Resolution 4
+
+Reduce the download size by splitting your search into smaller searches. For example, use date ranges or limit the number of search locations to return smaller result sets.
+
+[Back to top](#resolve-search-errors-in-ediscovery-standard)
+
+## Export error: "File wasn't exported because it doesn't exist" or "File not found"
+
+### Symptoms
+
+After you [download eDiscovery search results](/microsoft-365/compliance/ediscovery-export-content), you see either of the following error messages in the *Export Warnings and Errors.csv*, *Skipped Items.csv*, or *trace.log* files in the downloaded export folder:
+
+- > This file wasn't exported because it doesn't exist anymore. The file was included in the count of estimated search results because it's still listed in the index. The file will eventually be removed from the index, and won't cause an error in the future.
+
+- > FailedToExportItem_Failed to download content. Additional diagnostic info : Microsoft.Office.Compliance.EDiscovery.ExportWorker.Exceptions.ContentDownloadTemporaryFailure: Failed to download from content \<document ID\> of type Document. Correlation Id: \<correlation ID\>. ServerErrorCode: -2147024894 ---\> Microsoft.SharePoint.Client.ServerException: File Not Found. at Microsoft.SharePoint.Client.ClientRequest.ProcessResponseStream(Stream responseStream) at Microsoft.SharePoint.Client.ClientRequest.ProcessResponse() --- End of inner exception stack trace ---
+
+### Cause
+
+You might see this error message if the eDiscovery search includes Microsoft SharePoint Online or Microsoft OneDrive for Business locations. eDiscovery relies on the SharePoint Online index to identify files in both those locations. The error occurs if a user renames, moves, or deletes a file in the search results after the search finishes but before the system updates the SharePoint Online index. You can check whether a file was renamed, moved, or deleted by looking for the file in the applicable SharePoint Online or OneDrive for Business location.
+
+### Resolution
+
+To resolve the issue, reindex the SharePoint Online or OneDrive for Business location by using one of the procedures that are provided in [Manually request crawling and reindexing of a site, a library or a list](/sharepoint/crawl-site-content). If you want the search results to include the renamed or moved files, rerun the eDiscovery search.
+
+[Back to top](#resolve-search-errors-in-ediscovery-standard)
+
+## Export download issue: Slow download of exported search results
+
+### Symptoms
+
+When you [download eDiscovery search results](/microsoft-365/compliance/ediscovery-export-content), the download takes longer than expected.
+
+### Cause
+
+Issues that can cause a slow download include:
+
+- A large amount of export data. To determine the download size, run the following command:
+
+  ```PowerShell
+  Get-ComplianceSearch -Identity <search name> | FL Size,SuccessResults,SearchStatistics
+  ```
+
+- A higher-than-usual load on the mailbox servers.
+
+- Other download errors. To check for those errors:
+
+  - Run the following command to get information about an in-progress export. Look for error messages in the command output.
+  
+    ```powershell
+    Get-ComplianceSearchAction | FL Results
+    ```
+  
+  - Look for error messages in the *trace.log* file in the downloaded export folder.
+
+### Resolution
+
+To reduce the download size, split your search into smaller searches. For example, use date ranges or limit the number of search locations to return smaller result sets.
+
+[Back to top](#resolve-search-errors-in-ediscovery-standard)
+
+## Export download issue: eDiscovery export tool doesn't download any files
+
+### Symptoms
+
+You run the eDiscovery export tool to [download eDiscovery search results](/microsoft-365/compliance/ediscovery-export-content). However, after the operation finishes, the **Estimated Total** field in the tool window shows that no files were downloaded.
+
+### Cause
+
+The issue can occur for any of the following reasons:
+
+- Antivirus software on the destination computer blocks the download.
+
+- You select a download drive that isn't a local drive.
+
+- You select a destination folder that's either:
+
+  - The download folder of another eDiscovery export.
+
+  - The parent folder of the download folder of another eDiscovery export. Because the export tool saves metadata files in the parent folder, metadata files for different downloads can conflict with one another.
+
+### Resolution
+
+Try each of the following methods in the given order until the issue is resolved:
+
+1. Pause the antivirus scanner on the destination computer, and then retry the download.
+
+2. Download to a local drive. If necessary, download to a different client computer.
+
+3. Select a destination folder that doesn't conflict with any concurrent eDiscovery export.
+
+4. Disable export to a compressed folder, and disable deduplication of Exchange content. If this step resolves the issue, then the cause is probably antivirus software blocking the download or that you tried to download to a remote drive.
+
+[Back to top](#resolve-search-errors-in-ediscovery-standard)
+
+## Export download error: "Search result was not downloaded as it is a folder"
+
+### Symptoms
+
+After you [download eDiscovery search results](/microsoft-365/compliance/ediscovery-export-content), you see the following error message in the *Skipped Items.csv* file in the downloaded export folder:
+
+> This search result was not downloaded as it is a folder or other artifact that can't be downloaded by itself, any items inside the folder or library will be downloaded.
+
+### Cause
+
+You might see this error message if your search includes Microsoft SharePoint Online or Microsoft OneDrive for Business locations. The *Skipped Items.csv* file lists all folders and other skipped items in the search results. The error message typically appears next to folder paths because they're not downloadable items.
+
+### Resolution
+
+No resolution is required. You can safely ignore the error message.
+
+[Back to top](#resolve-search-errors-in-ediscovery-standard)
+
+## Export download error: "Cannot access the file 'ExportData.db'"
+
+### Symptoms
+
+You run the eDiscovery export tool to [download eDiscovery search results](/microsoft-365/compliance/ediscovery-export-content), but the download gets stuck or produces zero-byte files. You see the following error message in the *trace.log* file in the downloaded export folder:
+
+> Hit tolerable error, will retry: The process cannot access the file 'ExportData.db' because it is being used by another process.
+
+### Cause
+
+The issue can occur if:
+
+- Antivirus software on the destination computer blocks the download.
+
+- You select a download drive that isn't a local drive.
+
+- You select a destination folder that's either:
+
+  - The download folder of another eDiscovery export.
+
+  - The parent folder of the download folder of another eDiscovery export. Because the export tool saves metadata files in the parent folder, metadata files for different downloads can conflict.
+
+### Resolution
+
+Try each of the following methods in the given order until the error is resolved:
+
+1. Pause the antivirus scanner on the destination computer, and then retry the download.
+
+2. Download to a local drive. If necessary, download to a different client computer.
+
+3. Select a destination folder that doesn't conflict with any concurrent eDiscovery export.
+
+4. Disable export to a compressed folder, and disable deduplication of Exchange content. If this step resolves the issue, then the cause is probably antivirus software blocking the download or that you tried to download to a remote drive.
+
+[Back to top](#resolve-search-errors-in-ediscovery-standard)
