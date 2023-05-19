@@ -1,7 +1,7 @@
 ---
 title: Use DBCC MEMORYSTATUS to monitor memory usage
 description: This article describes how to use the DBCC MEMORYSTATUS command to monitor memory usage.
-ms.date: 11/09/2020
+ms.date: 05/19/2023
 ms.custom: sap:Performance
 ms.reviewer: BorisB, Borisb, Bobward, jopilov
 ms.topic: how-to
@@ -184,7 +184,7 @@ Other information in these tables is about shared memory:
 - SM Reserved: This value shows the VAS that is reserved by all clerks of this kind that are using the memory-mapped files API. This API is also known as *shared memory*.
 - SM Committed: This value shows the VAS that is committed by all clerks of this kind that are using memory-mapped files API.
 
-You can obtain summary information for each clerk type for all memory nodes by using the sys.`dm_os_memory_clerks` dynamic management view (DMV). To do this, run the following query:
+You can obtain summary information for each clerk type for all memory nodes by using the [sys.dm_os_memory_clerks](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql) dynamic management view (DMV). To do this, run the following query:
 
 ```sql
 SELECT
