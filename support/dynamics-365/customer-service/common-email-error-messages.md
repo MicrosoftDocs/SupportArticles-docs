@@ -1,7 +1,8 @@
 ---
 title: Troubleshoot common email error messages
 description: Provides resolutions for common email error messages in Dynamics 365 Customer Service.
-ms.reviewer: laalexan
+ms.reviewer: sdas
+ms.author: shchaur
 ms.date: 04/11/2023
 ---
 # Troubleshoot common email error messages
