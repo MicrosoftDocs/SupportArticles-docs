@@ -6,7 +6,7 @@ ms.author: delhan
 ms.topic: troubleshooting
 ms.date: 5/20/2023
 ms.prod: windows-server
-ms.reviewer: cdascoli, bechinch, khoffman
+ms.reviewer: kaushika, cdascoli, bechinch, khoffman
 ms.technology: windows-server-backup-and-storage
 ms.custom: sap:volume-shadow-copy-service-vss, csstroubleshoot
 ---
@@ -30,7 +30,7 @@ Description:
 The shadow copies of volume X: were aborted because the shadow copy storage volume was not present.
 ```
 
-During troubleshooting, you find delays in bringing the shadow copy volume online.
+You may notice delays in bringing the shadow copy volume online. 
 
 ## Cause
 
