@@ -1,7 +1,8 @@
 ---
 title: Chat widget doesn't load on the portal
 description: Provides resolutions for the issue where the chat widget doesn't load on the portal in Omnichannel for Customer Service.
-ms.reviewer: laalexan
+ms.reviewer: nenellim
+ms.author: yangao
 ms.date: 04/11/2023
 ---
 # Chat widget doesn't load on the portal
