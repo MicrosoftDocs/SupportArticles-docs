@@ -209,9 +209,9 @@ Contact your antivirus vendor about cluster-aware versions and interoperability.
 
 If you're running antivirus software on a cluster, make sure that you also exclude these locations from virus scanning:
 
-- *Q:\\\\* (Quorum drive)
-- *C:\\\Windows\\*
-- *ClusterMSDTC* directory in the *MSDTC* drive
+- *Q:\\* (Quorum drive)
+- *C:\\Windows\\Cluster*
+- *MSDTC* directory in the *MSDTC* drive
 
 If you back up the database to a disk or back up the transaction log to a disk, you can exclude the backup files from the virus scanning.
 
