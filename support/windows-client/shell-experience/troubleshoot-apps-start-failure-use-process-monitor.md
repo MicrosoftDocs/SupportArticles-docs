@@ -36,8 +36,6 @@ By default, the recording should start automatically. However, you can make sure
 
 Alternately, you can start the recording by pressing the <kbd>Ctrl</kbd> + <kbd>E</kbd> key combination, or by selecting **Capture Events** from the **File** menu.
 
-:::image type="content" source="media/troubleshoot-apps-start-failure-use-process-monitor/process-monitor-capture-events.png" alt-text="Screenshot of the Process Monitor window with Capture Events selected under the File menu.":::
-
 You see the events recorded in the status bar as follows:
 
 :::image type="content" source="media/troubleshoot-apps-start-failure-use-process-monitor/process-monitor-recorded-events.png" alt-text="Screenshot of the recorded events showing in the status bar.":::
@@ -73,8 +71,6 @@ C:\PSTools>psexec.exe -sd \\<Computer Name> C:\ProcessMonitor\procmon64.exe -ter
 ## Store and save the recording
 
 There are several methods available to store and save the recording. You can select **Backing files** from the **File** menu.
-
-:::image type="content" source="media/troubleshoot-apps-start-failure-use-process-monitor/process-monitor-backing-files.png" alt-text="Screenshot of the Process Monitor window with Backing Files selected under the File menu.":::
 
 Then, you can see two methods to store events:
 
@@ -114,8 +110,6 @@ Once the Process Monitor is set and the recording is started, you need to reprod
 Take this issue as an example, you have the Calculator application that isn't working. First start the Process Monitor recording with any of the methods described above. Then reproduce the problem by trying to start the application. Once the issue is reproduced, stop the Process Monitor recording and save the data.
 
 To analyze the Process Monitor trace recorded, open it with Process Monitor. Select **Process Tree** under **Tools** on the Menu to see if your application starts at all during the recording.
-
-:::image type="content" source="media/troubleshoot-apps-start-failure-use-process-monitor/process-monitor-process-tree.png" alt-text="Screenshot of the Menu bar with Process Tree selected under Tools.":::
 
 Select the Calculator process:
 
@@ -167,15 +161,7 @@ For the nonworking system:
 
 :::image type="content" source="media/troubleshoot-apps-start-failure-use-process-monitor/user-shell-folders-permission-non-working-system.png" alt-text="Screenshot of the PowerShell cmdlet for the User Shell Folders permission for a nonworking system.":::
 
-If you don't spot any nearby permission issues that could be suspicious, you can always check the entire trace for any suspect permission blocks. First remove the filter for the Calculator process by selecting **Reset Filter** under the **Filter** menu.
-
-:::image type="content" source="media/troubleshoot-apps-start-failure-use-process-monitor/process-monitor-reset-filter.png" alt-text="Screenshot of the menu bar with Reset Filter selected under the Filter menu.":::
-
-Then select the **Count Occurrences** option from the **Tools** menu.
-
-:::image type="content" source="media/troubleshoot-apps-start-failure-use-process-monitor/process-monitor-count-occurrences.png" alt-text="Screenshot of the menu bar with Count Occurrences selected under the Tools menu.":::
-
-You can choose the result **Result** in the drop-down menu, then select **Count**.
+If you don't spot any nearby permission issues that could be suspicious, you can always check the entire trace for any suspect permission blocks. First remove the filter for the Calculator process by selecting **Reset Filter** under the **Filter** menu. Then, select the **Count Occurrences** option from the **Tools** menu. You can choose the result **Result** from the drop-down menu, then select **Count**.
 
 Once the filtering is done, you can double-click the "Access Denied" line to view the filtered events:
 
