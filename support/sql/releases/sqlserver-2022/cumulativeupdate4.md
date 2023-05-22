@@ -44,21 +44,21 @@ After you install this cumulative update, you may receive incorrect results from
 
 1. You have indexes that explicitly specify the sort order. Here's an example:
 
-```sql
-CREATE NONCLUSTERED INDEX [nci_table_column1] ON [dbo].[table1] (column1 DESC)
-```
+    ```sql
+    CREATE NONCLUSTERED INDEX [nci_table_column1] ON [dbo].[table1] (column1 DESC)
+    ```
 
 2. You run queries against tables that contain these indexes. These queries specify a sort order that matches the sort order of the indexes.
 
 3. The sort column is used in query predicates in the `WHERE IN` clauses or multiple equality clauses. Here's an example:
 
-```sql
-SELECT * FROM [dbo].[table1] WHERE column1 IN (1,2) ORDER BY column1 DESC
-SELECT * FROM [dbo].[table1] WHERE column1 = 1 or column1 = 2 ORDER BY column1 DESC
-```
+    ```sql
+    SELECT * FROM [dbo].[table1] WHERE column1 IN (1,2) ORDER BY column1 DESC
+    SELECT * FROM [dbo].[table1] WHERE column1 = 1 or column1 = 2 ORDER BY column1 DESC
+    ```
 
-> [!NOTE]
-> The `IN` clauses that have a single value don't have this issue.
+    > [!NOTE]
+    > The `IN` clauses that have a single value don't have this issue.
 
 To work around this issue, you can either uninstall this cumulative update or enable trace flag (TF) 13166 and then run `DBCC FREEPROCCACHE`.
 
