@@ -30,8 +30,8 @@ You receive error messages that resemble the following during certificate enroll
 
 #### Error 1
 
-> "An error occurred whilst enrolling for a certificate. The certificate request could not be submitted to the certification authority.  
-> Url: CertServ.contoso.com\MyPKI  
+> An error occurred whilst enrolling for a certificate. The certificate request could not be submitted to the certification authority.  
+> Url: \<certificate server FQDN\>\\MyPKI  
 > Error: The RPC server is unavailable.  0x800706ba (WIN32: 1322 RPC_S_SERVER_UNAVAILABLE)
 
 #### Error 2
@@ -69,8 +69,8 @@ Status : MSRPC:c/o Fault: Call=0x3 Context=0x1 Status=0x5 (Access is denied)
 For example:
 
 ```output
-<Certificate_Server>	<Client>	DCOM	DCOM:RemoteCreateInstance Request, DCOM Version=5.7  Causality Id={7CFF2CD3-3165-4098-93D6-4077D1DF7351}
-<Client>	<Certificate_Server>	MSRPC	MSRPC:c/o Fault:  Call=0x3  Context=0x1  Status=0x5  Cancels=0x0 
+<Certificate_Server> <Client> DCOM  DCOM:RemoteCreateInstance Request, DCOM Version=5.7  Causality Id={7CFF2CD3-3165-4098-93D6-4077D1DF7351}
+<Client> <Certificate_Server> MSRPC MSRPC:c/o Fault:  Call=0x3  Context=0x1  Status=0x5  Cancels=0x0 
 ```
 
 ### Event log
@@ -113,7 +113,7 @@ These group policies locate at: _Computer Configuration\\Windows Settings\\Secur
 > [!NOTE]
 > You can run `whoami /groups` to identify the groups of the user account or use **Active Directory Users and computers** to identify the groups belonging to the user or the computer account.
 
-Because the user account that's used for certificate enrollment fails authentication by using Kerberos, the authentication mechanism is downgraded to "anonymous logon." The logon fails on the DCOM level.
+Because the user account that's used for certificate enrollment fails authentication by using Kerberos, the authentication mechanism is downgraded to "anonymous logon". The logon fails on the DCOM level.
 
 ### How to identify
 
@@ -121,9 +121,9 @@ Because the user account that's used for certificate enrollment fails authentica
 2. Run the `gpresult /h` command. For example `gpresult /h appliedgpo.html`
 3. Open the .html file that is generated, and review the section:  
    _Settings \\ Policies \\ Windows Settings \\ Local Policies \\ User Rights Assignment_
-   - "Access this computer from the network"
-   - "Deny access to this computer from the network"
-4. Note the Winning GPO name.
+   - **Access this computer from the network**
+   - **Deny access to this computer from the network**
+4. Note the **Winning GPO** name.
 
    :::image type="content" source="media/error-0x800706ba-certificate-enrollment/screenshot-of-the-gpresult-output.png" alt-text="The screenshot of the gpresult output.":::
 
@@ -136,11 +136,11 @@ Add the appropriate user groups to the **Access this computer from the network**
 
 :::image type="content" source="media/error-0x800706ba-certificate-enrollment/properties-of-access-this-computer-from-the-network.png" alt-text="Screenshot that shows the properties window of the 'Access this computer from the network' group policy.":::
 
-Then, remove the group that the user account or the computer account belongs to from the "Deny access to this computer from the network" group policy.
+Then, remove the group that the user account or the computer account belongs to from the **Deny access to this computer from the network** group policy.
 
 For more information, see [Access this computer from the network - security policy setting](/windows/security/threat-protection/security-policy-settings/access-this-computer-from-the-network)
 
-## Cause 2: Missing "NT Authority\Authenticated Users" in the Users group of the Certificate server or any other default permissions
+## Cause 2: Missing "NT Authority\Authenticated Users" in the Users group of the certificate server or any other default permissions
 
 Here are the default permissions:
 
