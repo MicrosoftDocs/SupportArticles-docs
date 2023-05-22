@@ -1,7 +1,8 @@
 ---
 title: Warning occurs on SLA KPI instances
 description: Provides a resolution for the issue where a warning message occurs on the SLA KPI instances in Dynamics 365 Customer Service.
-ms.reviewer: laalexan
+ms.reviewer: sdas
+ms.author: ravimanne
 ms.date: 04/11/2023
 ---
 # A warning message appears on the SLA KPI instances
