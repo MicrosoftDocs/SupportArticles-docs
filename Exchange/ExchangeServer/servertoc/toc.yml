@@ -541,6 +541,8 @@
           href: ../migration/issue-msexchmasteraccountsid-on-user-account.md
         - name: Mailbox move request isn't showing in EAC
           href: ../migration/eac-not-show-mailbox-move-request.md
+        - name: Mailboxes are stalled during a migration
+          href: ../migration/mailboxes-stalled-during-migration.md
         - name: MapiExceptionPartialCompletion error when moving a mailbox
           href: ../migration/Mapiexceptionpartialcompletion-error-new-moverequest.md
         - name: Migration Workflow doesn't start
