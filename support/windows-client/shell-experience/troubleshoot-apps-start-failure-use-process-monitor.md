@@ -103,9 +103,9 @@ Once the Process Monitor is set and the recording is started, you need to reprod
 
 ## Troubleshooting example
 
-Take this issue as an example, you have the Calculator application that isn't working. First start the Process Monitor recording with any of the methods described above. Then reproduce the problem by trying to start the application. Once the issue is reproduced, stop the Process Monitor recording and save the data.
+Take this issue as an example; you have the Calculator application that isn't working. First, start the Process Monitor recording with any of the methods described above. Then reproduce the problem by trying to start the application. Once the issue is reproduced, stop the Process Monitor recording and save the data.
 
-To analyze the Process Monitor trace recorded, open it with Process Monitor. Select **Process Tree** under **Tools** on the Menu to see if your application starts at all during the recording.
+To analyze the recorded Process Monitor trace, open it with Process Monitor. Select **Process Tree** under **Tools** on the Menu to see if your application starts during the recording.
 
 Select the Calculator process:
 
@@ -119,7 +119,7 @@ Similarly, you can add a filter manually for your process ID.
 
 :::image type="content" source="media/troubleshoot-apps-start-failure-use-process-monitor/process-monitor-filter-process-id.png" alt-text="Screenshot of the Process Monitor Filter window with the process ID defined.":::
 
-Exit **Process Tree** view or select **OK** on the **Process Monitor Filter** window to see the filtered captured lines containing your process. In this example, the *Calculator.exe* process is starting.
+Exit the **Process Tree** view or select **OK** on the **Process Monitor Filter** window to see the filtered captured lines containing your process. In this example, the *Calculator.exe* process is starting.
 
 :::image type="content" source="media/troubleshoot-apps-start-failure-use-process-monitor/process-monitor-calculator-process.png" alt-text="Screenshot of the Process Monitor window with the Calculator process selected.":::
 
@@ -143,7 +143,7 @@ In this situation, you should check the permissions of the following registry ke
 
 `\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders`
 
-In this example, **ALL APPLICATION PACKAGES** is missing "read" permissions from the **User Shell Folders**.
+In this example, **ALL APPLICATION PACKAGES** is missing "read" permissions from **User Shell Folders**.
 
 :::image type="content" source="media/troubleshoot-apps-start-failure-use-process-monitor/all-application-packages-permission.png" alt-text="Screenshot of the permissions for User Shell Folders with all application packages selected.":::
 
@@ -157,7 +157,7 @@ For the nonworking system:
 
 :::image type="content" source="media/troubleshoot-apps-start-failure-use-process-monitor/user-shell-folders-permission-non-working-system.png" alt-text="Screenshot of the PowerShell cmdlet for the User Shell Folders permission for a nonworking system.":::
 
-If you don't spot any nearby permission issues that could be suspicious, you can always check the entire trace for any suspect permission blocks. First remove the filter for the Calculator process by selecting **Reset Filter** under the **Filter** menu. Then, select the **Count Occurrences** option from the **Tools** menu. You can choose the result **Result** from the drop-down menu, then select **Count**.
+If you don't spot any nearby permission issues that could be suspicious, you can always check the entire trace for any suspect permission blocks. First, remove the filter for the Calculator process by selecting **Reset Filter** under the **Filter** menu. Then, select the **Count Occurrences** option from the **Tools** menu. You can choose the result **Result** from the drop-down menu, then select **Count**.
 
 Once the filtering is done, you can double-click the "Access Denied" line to view the filtered events:
 
@@ -181,6 +181,6 @@ Adding the appropriate permission for "All Application Packages" resolves both i
 
 Sometimes it isn't possible to work out what permission change is stopping the application from starting. Process Monitor only captures some parts of the process activities.
 
-If many machines are affected by the same problem, work out the troubleshooting by starting from a new fresh installed machine and slowly add your policies until the application fails to start again.
+If many machines are affected by the same problem, work out the troubleshooting by starting from a new, freshly installed machine and slowly adding your policies until the application fails to start again.
 
 If only one machine is affected, recover or reset the machine. If only one user is affected, recreate the user's profile.
