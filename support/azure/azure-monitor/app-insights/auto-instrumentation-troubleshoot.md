@@ -42,7 +42,7 @@ Auto-instrumentation fails if it detects the following libraries:
 
 These libraries must be removed for auto-instrumentation to succeed.
 
-## When web applications are instrumented, you encounter issues about the Application Insights SDK
+## You encounter issues about the Application Insights SDK itself after you enable auto-instrumentation
 
 You can collect self-diagnostic logs for the Application Insights SDK to diagnose issues. For more information, see [How to collect self-diagnostic logs for Application Insights SDKs](enable-self-diagnostics.md).
 

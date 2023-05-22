@@ -1,20 +1,22 @@
 ---
-title: Self-diagnostic for Application Insights SDKs
+title: Self-diagnostics for Application Insights SDKs
 description: Introduces how to collect self-diagnostic logs for some Application Insights SDKs.
 author: AmandaAZ
 ms.author: v-weizhu
 ms.topic: how-to
+ms.service: azure-monitor
+ms.subservice: application-insights
 ms.date: 05/22/2023
 ---
 # How to collect self-diagnostic logs for Application Insights SDKs
 
-When you instrument an application with the Application Insights, you encounter issues with the Application Insights SDK itself. In this scenario, diagnostic logs of the Application Insights SDK itself are needed to spot and diagnose issues with Application Insights itself.
+When you instrument an application via Application Insights auto instrumentation or manual instrumentation with an Application Insights SDK, you encounter issues with the Application Insights SDK itself. In this scenario, diagnostic logs of the Application Insights SDK itself are needed to spot and diagnose issues with Application Insights itself.
 
 This article introduces how to collect self-diagnostic logs for the following Application Insights SDKs:
 
-- .NET/.NET Core Framework SDK
-- Java SDK 2.x
-- Java 3.x agent
+- .NET/.NET Core Framework
+- Java 2.x
+- Java 3.x
 
 ## .NET/.NET Core Framework SDK
 
@@ -117,9 +119,9 @@ In most cases, you could drop the file along your application. Here are two ways
 
 11. Delete the configuration file or rename it to *ApplicationInsightsDiagnostics.bak*. After 10 seconds, the logging will stop.
 
-## Java SDK 2.x
+## Java 2.x
 
-You can collect diagnostics logs for Application Insights Java SDK 2.6 or an earlier version. To do this, add an `<SDKLogger>` element under the root node of the *ApplicationInsights.xml* configuration file (in the resources folder in your project). In the `<SDKLogger>` element, you can instruct the logger to output to a file.
+You can collect diagnostics logs for the Application Insights Java 2.6 or an earlier version. To do this, add an `<SDKLogger>` element under the root node of the *ApplicationInsights.xml* configuration file (in the resources folder in your project). In the `<SDKLogger>` element, you can instruct the logger to output to a file.
 
 Here's an example of the *ApplicationInsights.xml* file:
 
@@ -133,8 +135,8 @@ Here's an example of the *ApplicationInsights.xml* file:
 
 For more information, see [Troubleshoot Azure Application Insights in a Java web project](/troubleshoot/azure/azure-monitor/app-insights/java-2x-troubleshoot#no-data).
 
-## Java 3.x agent
+## Java 3.x
 
-You can collect diagnostics logs for Application Insights Java 3.x. To do this, see [Self-diagnostics](/azure/azure-monitor/app/java-standalone-config#self-diagnostics).
+You can collect diagnostics logs for Application Insights Java 3.x by using the "self-diagnostics" functionality. To do this, see [Self-diagnostics](/azure/azure-monitor/app/java-standalone-config#self-diagnostics).
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
