@@ -1,7 +1,8 @@
 ---
 title: Sync issue with social data
 description: Provides a resolution for the issue where the Social Profile entity is blocked, and the social data isn't syncing in Omnichannel for Customer Service.
-ms.reviewer: laalexan
+ms.reviewer: nenellim
+ms.author: yangao
 ms.date: 04/11/2023
 ---
 # Sync issue with social data in Omnichannel for Customer Service
