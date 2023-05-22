@@ -17,9 +17,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
-# "550 5.6.0 APPROVAL.InvalidExpiry" when sending messages to a moderation
-
-_Original KB number:_ &nbsp; 4492048
+# "550 5.6.0 APPROVAL.InvalidExpiry" when sending messages to a moderated recipient
 
 ## Symptoms
 
