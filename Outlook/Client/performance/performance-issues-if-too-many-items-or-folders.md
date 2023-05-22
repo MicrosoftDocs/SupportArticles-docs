@@ -51,7 +51,7 @@ To fix performance issues that affect your Calendar, try the following methods.
 
 **Method 1: Manage the growth of exceptions for recurring meetings**
 
-Not all calendar items have an equal effect on performance. One-time meetings have a relatively smalleffect, and long-lived, recurring meetings have a greater effect. When an instance of a recurring meeting is changed, this creates exceptions that are stored in the recurring meeting series. Every change to the meeting attributes, such as the subject, body, location, or time, creates a corresponding exception. Eventually, these exceptions inflate the size of the recurring meeting and impose a greater performance cost. You can address mitigate this higher cost by using Appointment Recurrence settings to set an end time or maximum recurrence count. Then, you can create a new recurring meeting instead of extending the existing recurrence.
+Not all calendar items have an equal effect on performance. One-time meetings have a relatively small effect, and long-lived, recurring meetings have a greater effect. A change that's made in an instance of a recurring meeting creates exceptions that are stored in the recurring meeting series. Every change to the meeting attributes, such as the subject, body, location, or time, creates a corresponding exception. Eventually, these exceptions inflate the size of the recurring meeting and impose a greater performance cost. You can address mitigate this higher cost by using Appointment Recurrence settings to set an end time or maximum recurrence count. Then, you can create a new recurring meeting instead of extending the existing recurrence.
 
 **Method 2: Enable shared calendar improvements**
 
