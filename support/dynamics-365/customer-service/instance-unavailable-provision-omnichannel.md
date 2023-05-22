@@ -1,7 +1,8 @@
 ---
 title: Instance unavailable to select on the provisioning application
 description: Provides a resolution for the issue where you don't see all the instances in the Organization selector when provisioning Omnichannel for Customer Service.
-ms.reviewer: laalexan
+ms.reviewer: nenellim
+ms.author: nahadda
 ms.date: 04/11/2023
 ---
 # Instance isn't available to select on the provisioning application
