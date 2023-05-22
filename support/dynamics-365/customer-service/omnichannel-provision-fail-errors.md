@@ -1,7 +1,8 @@
 ---
 title: Omnichannel provisioning fails due to permissions issue
 description: Provides a resolution for the error that occurs when you provision Omnichannel for Customer Service.
-ms.reviewer: laalexan
+ms.reviewer: nenellim
+ms.author: nahadda
 ms.date: 05/22/2023
 ---
 # "Unable to perform the requested operation..." or "Request validation failed" error when provisioning Omnichannel
