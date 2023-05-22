@@ -41,8 +41,8 @@ This error occurs when you try to make an encrypted connection to SQL Server usi
 
 |Scenario|Server-side encryption|Client-side encryption  |Certificate type |Certificate issuing authority present in Trusted Root Certification Authorities store |
 |---|---|---|---|---|
-|1|Yes|No|You provision a certificate from a non-trusted source (the certificate issuing authority is not listed as a trusted authority in Trusted Root Certification Authorities on the client machine) |No|
-|2|Off|Yes|SQL Server self-generated certificate |Self-signed certificates do not show up in this store. |
+|1|Yes|No|You provision a certificate from a non-trusted source (the certificate issuing authority isn't listed as a trusted authority in Trusted Root Certification Authorities on the client machine) |No|
+|2|Off|Yes|SQL Server self-generated certificate |Self-signed certificates don't show up in this store. |
   
 When establishing encrypted connections to SQL Server, Secure Channel (Schannel) creates the list of trusted certificate authorities by searching the Trusted Root Certification Authorities store on the local computer. During the TLS handshake, the server sends its public key certificate to the client. The issuer of a public key certificate is known as a Certificate Authority (CA). The client has to ensure that the certificate authority is one that the client trusts. This is achieved by knowing the public key of trusted CAs in advance. When Schannel detects a certificate that was issued by an untrusted certification authority, such as in the previous two cases, you get the error message listed in the [Symptoms](#symptoms) section.
 
@@ -113,14 +113,14 @@ For more information on how to do this, review the following topics:
 > [!NOTE]
 > If you are using SQL Server Management Studio, you can click on the **Options** tab, and check the box **Trust Server certificate** option in the **Connection Properties** tab.
 
-**Caution:** SSL connections that are encrypted by using a self-signed certificate do not provide strong security. They are susceptible to `man-in-the-middle` attacks. You shouldn't rely on SSL using self-signed certificates in a production environment or on servers that are connected to the Internet.
+**Caution:** SSL connections that are encrypted by using a self-signed certificate don't provide strong security. They are susceptible to `man-in-the-middle` attacks. You shouldn't rely on SSL using self-signed certificates in a production environment or on servers that are connected to the Internet.
 
 If the configuration discussed in the previous sections of this article is unintended, you can use one of the following options to resolve this problem:
 
 - Configure database engine to use encryption as per the procedure in Enable encrypted connections to the Database Engine.
 
-- If encryption is not required:
+- If encryption isn't required:
 
   - Disable encryption settings (if any) in your client application.
 
-  - Disable server-side encryption using SQL Server Configuration manager. For more information on how to do this, review [Configure Server](/sql/relational-databases/sql-server-configuration-manager#manage-server--client-network-protocols).
+  - Disable server-side encryption using SQL Server Configuration manager. For more information on how to do this, see [Configure Server](/sql/relational-databases/sql-server-configuration-manager#manage-server--client-network-protocols).
