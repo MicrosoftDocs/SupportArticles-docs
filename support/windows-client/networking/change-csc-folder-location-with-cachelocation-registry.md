@@ -53,7 +53,7 @@ To change the location of the CSC folder, follow these steps.
     > [!NOTE]
     > Use the Microsoft Windows NT format for the folder name.
 
-    For example, if you want the cache location to be d:\csc, type the following: \??\d:\csc  
+    For example, if you want the cache location to be d:\csc, type the following: \\??\d:\csc  
 
 9. Exit Registry Editor, and then restart the computer.
 
