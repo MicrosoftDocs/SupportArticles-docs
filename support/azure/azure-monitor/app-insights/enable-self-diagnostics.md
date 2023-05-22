@@ -10,13 +10,13 @@ ms.date: 05/22/2023
 ---
 # How to collect self-diagnostic logs for Application Insights SDKs
 
-When you instrument an application via Application Insights auto instrumentation or manual instrumentation with an Application Insights SDK, you encounter issues with the Application Insights SDK itself. In this scenario, diagnostic logs of the Application Insights SDK itself are needed to spot and diagnose issues with Application Insights itself.
+When you instrument an application via Application Insights auto-instrumentation or manual instrumentation with an Application Insights SDK, you encounter issues with the Application Insights SDK itself. In this scenario, diagnostic logs of the Application Insights SDK itself are needed to spot and diagnose issues with Application Insights itself.
 
 This article introduces how to collect self-diagnostic logs for the following Application Insights SDKs:
 
-- .NET/.NET Core Framework
-- Java 2.x
-- Java 3.x
+- Application Insights .NET/.NET Core Framework SDK
+- Java SDK 2.x
+- Java 3.x agent
 
 ## .NET/.NET Core Framework SDK
 
@@ -119,7 +119,7 @@ In most cases, you could drop the file along your application. Here are two ways
 
 11. Delete the configuration file or rename it to *ApplicationInsightsDiagnostics.bak*. After 10 seconds, the logging will stop.
 
-## Java 2.x
+## Application Insights Java 2.x
 
 You can collect diagnostics logs for the Application Insights Java 2.6 or an earlier version. To do this, add an `<SDKLogger>` element under the root node of the *ApplicationInsights.xml* configuration file (in the resources folder in your project). In the `<SDKLogger>` element, you can instruct the logger to output to a file.
 
@@ -135,7 +135,7 @@ Here's an example of the *ApplicationInsights.xml* file:
 
 For more information, see [Troubleshoot Azure Application Insights in a Java web project](/troubleshoot/azure/azure-monitor/app-insights/java-2x-troubleshoot#no-data).
 
-## Java 3.x
+## Application Insights Java 3.x
 
 You can collect diagnostics logs for Application Insights Java 3.x by using the "self-diagnostics" functionality. To do this, see [Self-diagnostics](/azure/azure-monitor/app/java-standalone-config#self-diagnostics).
 
