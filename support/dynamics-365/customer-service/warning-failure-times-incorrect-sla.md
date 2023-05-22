@@ -1,7 +1,8 @@
 ---
 title: Warning and failure duration times are wrong for SLA
 description: Provides a resolution for the issue where the SLA warning and failure duration times are incorrect in Omnichannel for Customer Service.
-ms.reviewer: laalexan
+ms.reviewer: sdas
+ms.author: ravimanne
 ms.date: 04/11/2023
 ---
 # Warning and failure duration times are incorrect for the SLA
