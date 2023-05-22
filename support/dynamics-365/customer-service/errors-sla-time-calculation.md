@@ -1,7 +1,8 @@
 ---
 title: Errors in custom time calculation for SLA
 description: Provides a resolution for the SLA custom time calculation errors in Dynamics 365 Customer Service.
-ms.reviewer: laalexan
+ms.reviewer: sdas
+ms.author: ravimanne
 ms.date: 04/11/2023
 ---
 # Errors occur when setting up or using custom time calculation for SLA
