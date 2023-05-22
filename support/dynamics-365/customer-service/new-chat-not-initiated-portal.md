@@ -1,7 +1,8 @@
 ---
 title: Chat isn't initiated when starting a new chat from the portal
 description: Provides a resolution for the issue where chats aren't initiated when starting a new chat from the portal in Omnichannel for Customer Service.
-ms.reviewer: laalexan
+ms.reviewer: nenellim
+ms.author: yangao
 ms.date: 04/11/2023
 ---
 # Chat isn't initiated when starting a new chat from the portal
