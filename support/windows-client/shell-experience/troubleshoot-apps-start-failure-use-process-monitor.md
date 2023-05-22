@@ -127,7 +127,7 @@ Then go towards the end of the process capture, and look for a group of the **Th
 
 :::image type="content" source="media/troubleshoot-apps-start-failure-use-process-monitor/calculator-thread-exit.png" alt-text="Screenshot of the Process Monitor window with the Calculator process selected and Thread Exit events above.":::
 
-You can also see the **Process Create** event for *WerFault.exe*. At that point, the application has already hit unrecoverable condition and has called the default error handler.
+You can also see the **Process Create** event for *WerFault.exe*. At that point, the application has already reached an unrecoverable condition and has called the default error handler.
 
 You should also notice that some event logs related to application crashes are recorded as well.
 
