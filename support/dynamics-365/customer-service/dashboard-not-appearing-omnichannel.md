@@ -1,7 +1,8 @@
 ---
 title: Dashboards don't show in Omnichannel for Customer Service active dashboards view
 description: Provides a resolution for the issue where dashboards don't appear in Omnichannel for Customer Service.
-ms.reviewer: laalexan
+ms.reviewer: nenellim
+ms.author: vamullap
 ms.date: 04/11/2023
 ---
 # Dashboards don't appear in Omnichannel for Customer Service active dashboards view
