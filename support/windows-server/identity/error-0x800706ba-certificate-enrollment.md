@@ -101,18 +101,82 @@ The machine wide limit settings do not grant Remote Activation permission for CO
 - When the client sends a KRB_AP_REQ request, it's rejected by the server side.
 - The server tries to procure an access token for the user who presented the Kerberos Ticket Granting Service (TGS) and fails with error 0xc000015b, "STATUS_LOGON_TYPE_NOT_GRANTED."
 
-## Cause
+## Cause 1: Incorrect group policy configurations
 
-This issue occurs because the group policy **Access this computer from the network** is set, and the user account used to enroll the certificate isn't added.
+This issue can occur because one of the following reasons:
 
-The group policy locates at: _Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\User Rights Assignment_.
+1. The group policy **Access this computer from the network** is set, and the user account used to enroll the certificate isn't added. By default, the policy is populated by the groups: Administrators, Backup Operators, Everyone, and Users.
+2. The group policy **Deny access to this computer from the network** is set, **Everyone**, **Users** or a security group that the user belongs to is added.
 
-By default, the policy is populated by the groups: Administrators, Backup Operators, Everyone, and Users.
+These group policies locate at: _Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\User Rights Assignment_.
+
+> [!NOTE]
+> You can run `whoami /groups` to identify the groups of the user account or use **Active Directory Users and computers** to identify the groups belonging to the user or the computer account.
 
 Because the user account that's used for certificate enrollment fails authentication by using Kerberos, the authentication mechanism is downgraded to "anonymous logon." The logon fails on the DCOM level.
 
-## Resolution
+### How to identify
 
-To resolve this issue, add the appropriate user groups to the group policy. For example:
+1. Open an elevated command prompt on the certificate server.
+2. Run the `gpresult /h` command. For example `gpresult /h appliedgpo.html`
+3. Open the .html file that is generated, and review the section:  
+   _Settings \\ Policies \\ Windows Settings \\ Local Policies \\ User Rights Assignment_
+   - "Access this computer from the network"
+   - "Deny access to this computer from the network"
+4. Note the Winning GPO name.
+
+   :::image type="content" source="media/error-0x800706ba-certificate-enrollment/screenshot-of-the-gpresult-output.png" alt-text="The screenshot of the gpresult output.":::
+
+To resolve this issue, edit the Winning GPO.
+
+> [!NOTE]
+> The settings configured on the GPO's is for a reason hence you might need to talk to your security team before making any changes.
+
+Add the appropriate user groups to the **Access this computer from the network** group policy. For example:
 
 :::image type="content" source="media/error-0x800706ba-certificate-enrollment/properties-of-access-this-computer-from-the-network.png" alt-text="Screenshot that shows the properties window of the 'Access this computer from the network' group policy.":::
+
+Then, remove the group that the user account or the computer account belongs to from the "Deny access to this computer from the network" group policy.
+
+For more information, see [Access this computer from the network - security policy setting](/windows/security/threat-protection/security-policy-settings/access-this-computer-from-the-network)
+
+## Cause 2: Missing "NT Authority\Authenticated Users" in the Users group of the Certificate server or any other default permissions
+
+Here are the default permissions:
+
+- Contoso\Domain Users
+- NT AUTHORITY\Authenticated Users
+- NT AUTHORITY\INTERACTIVE
+
+To resolve this issue, open **Local Users and Groups** on the certificate server, locate the **Users** group and add the missing groups.
+
+## Cause 3: Missing "NT AUTHORITY\Authenticated Users" from "Certificate Service DCOM Access" local group of the certificate server
+
+To resolve this issue, follow these steps:
+
+1. Open **Local Users and Groups** on the certificate server.
+2. Locate the "Certificate Service DCOM Access" group.
+3. Add "NT AUTHORITY\Authenticated users".
+
+## Cause 4: EnableDCOM is not set to Y on Client and CA Server
+
+To resolve this issue, follow these steps:
+
+1. Locate the following registry key:  
+   `HKEY_LOCAL_MACHINE\Software\Microsoft\OLE`
+2. Verify if the data of the **EnableDCOM** registry value is set to **Y**.
+3. If it is **N**, change it to **Y**, and then restart the computer.
+
+## Cause 5: Remote Procedure Call restrictions not applied on the Certificate server
+
+To identify the issue, verify that the GPO is applied to the certificate Server. Follow these steps:
+
+1. Open an elevated command prompt on the certificate server.
+2. Run the `gpresult /h` command. For example, `gpresult /h appliedgpo.html`
+3. Open the .html file, identify the winning GPO where the **Restrictions for Unauthenticated RPC Client** group policy is configured to **Not Configured**.
+
+   The group policy locates at _Administrative Templates \\ System \\ Remote Procedure Call \\ Restrictions for Unauthenticated RPC Client_.
+
+## Reference
+
+For more information, see [Restrictions for Unauthenticated RPC Clients: The group policy that punches your domain in the face](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/restrictions-for-unauthenticated-rpc-clients-the-group-policy/ba-p/399128).
