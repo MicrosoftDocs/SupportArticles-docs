@@ -45,7 +45,7 @@ Throttling can occur in any of the following scenarios:
 
 ## Resolution
 
-To increase the number of simultaneous mailbox moves, you can increase the WLM limit. We recommend that you don't set the WLM limit to a value that is greater than 100. Start off by changing the WLM limit to 25, and then check Exchange Server performance during the migration. To further increase the number of simultaneous mailbox moves, successively increase the WLM limit by 10, and monitor Exchange Server performance at each step.
+To increase the number of simultaneous mailbox moves, you can increase the WLM limit. We recommend that you don't set the WLM limit to a value that is greater than 100. Start by changing the WLM limit to 25, and then check Exchange Server performance during the migration. To further increase the number of simultaneous mailbox moves, successively increase the WLM limit by 10, and monitor Exchange Server performance at each step.
 
 To initially set a WLM limit that is different from the default value, run the following commands (this example sets the WLM limit to 25):
 
