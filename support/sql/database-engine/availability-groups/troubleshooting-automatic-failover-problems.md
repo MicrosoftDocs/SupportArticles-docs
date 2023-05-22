@@ -247,7 +247,7 @@ If you experience this problem, rebalance the workload on the secondary replica 
 
 To monitor the health of the new primary replica during failover, you must locally connect AlwaysOn health monitoring to the SQL Server instance that's transitioning to the primary role.
 
-In addition to the more common reasons that are discussed in this article, there are  other reasons that this connection attempt might fail. To investigate a failed failover attempt further, review the Cluster log on the failover partner (the replica that you couldn't fail over to):
+In addition to the more common reasons that are discussed in this article, there are many other reasons that this connection attempt might fail. To investigate a failed failover attempt further, review the Cluster log on the failover partner (the replica that you couldn't fail over to):
 
 1. Use Windows PowerShell to generate the Windows Cluster log on the cluster node. To do this, run the following cmdlet in an elevated PowerShell window on the instance of SQL Server that's hosting the secondary replica that didn't transition into the primary role. A Cluster log will be generated for the last 60 minutes of activity.
 

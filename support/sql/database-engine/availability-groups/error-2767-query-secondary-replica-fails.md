@@ -67,7 +67,7 @@ To work around the issue, use one of the following methods as required:
     1. To determine the table where the query-generated statistics are defined, run the following command against the primary replica by using the statistics name in the error 2767:
 
         ```sql
-        SELECT object_name([object_id]) FROM sys.stats WHERE NAME='<StatisticsName>'
+        SELECT object_name([object_id]) FROM sys.stats WHERE name='<StatisticsName>'
         ```
 
         After running the command, the table name `<TableName>` is returned.

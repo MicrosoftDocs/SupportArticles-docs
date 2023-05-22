@@ -100,4 +100,4 @@ Because of the `(SELECT NULL)` expression, the script doesn't sort the partition
 - It doesn't require you to join the original table with itself (for example, by using a subquery that returns all duplicate records by using a combination of `GROUP BY` and `HAVING`).
 - For best performance, you should have a corresponding index on the table that uses the `key_value` as the index key and includes any sorting columns that you might have used in the `ORDER BY` expression.
 
-However, this method doesn't work in outdated versions of SQL Server that don't support the [ROW_NUMBER function](/sql/t-sql/functions/row-number-transact-sql). In this situation, you should use Method 1[Method 1](#method-1) or some similar method instead.
+However, this method doesn't work in outdated versions of SQL Server that don't support the [ROW_NUMBER function](/sql/t-sql/functions/row-number-transact-sql). In this situation, you should use [Method 1](#method-1) or some similar method instead.

@@ -6,7 +6,7 @@ ms.custom: sap:Availability Groups
 ms.reviewer: ramakoni, amamun
 ms.prod: sql
 ---
-# Error 9002 The transaction log for database is full due to AVAILABILITY_REPLICA error message in SQL Server
+# Error 9002: The transaction log for database is full due to AVAILABILITY_REPLICA error message in SQL Server
 
 This article helps you resolve the 9002 error that occurs when the transaction log becomes large or runs out of space in SQL Server.
 

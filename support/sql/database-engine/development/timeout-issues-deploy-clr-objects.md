@@ -7,7 +7,7 @@ ms.custom: sap:Database Design and Development
 
 # You may experience timeout issues when deploying SQL CLR objects through Visual Studio
 
-This article helps you resolve the timeout problem that occurs when deploying SQL  Common Language Runtime (CLR) objects through Visual Studio.
+This article helps you resolve the timeout problem that occurs when deploying SQL Common Language Runtime (CLR) objects through Visual Studio.
 
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 2011805
