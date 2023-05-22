@@ -30,7 +30,7 @@ Once started, reset any previously saved filters to default to ensure that no po
 
 :::image type="content" source="media/troubleshoot-apps-start-failure-use-process-monitor/process-monitor-filter-reset.png" alt-text="Screenshot of the Process Monitor Filter window with a Reset button.":::
 
-By default, the recording should start automatically. However, you can make sure it's running by selecting the following icon.
+By default, the recording should start automatically. However, you can make sure it's running by selecting the following icon:
 
 :::image type="content" source="media/troubleshoot-apps-start-failure-use-process-monitor/process-monitor-check-running.png" alt-text="Screenshot of the Process Monitor window with an icon selected to check if the tool is running.":::
 
