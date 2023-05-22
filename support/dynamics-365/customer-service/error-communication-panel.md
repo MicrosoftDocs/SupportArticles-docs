@@ -1,7 +1,8 @@
 ---
 title: An error occurred in the Communication panel
 description: Provides a resolution for the error that occurs when you sign in to the communication panel in Unified Service Desk client application.
-ms.reviewer: laalexan
+ms.reviewer: nenellim
+ms.author: askuma
 ms.date: 04/11/2023
 ---
 # "An error occurred in the communication panel" error in Unified Service Desk
