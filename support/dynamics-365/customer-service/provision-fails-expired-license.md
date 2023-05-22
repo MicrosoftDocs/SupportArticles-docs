@@ -2,6 +2,7 @@
 title: Provisioning fails due to expired license
 description: Provides a resolution for the issue where you can't provision Omnichannel for Customer Service because of a license issue.
 ms.reviewer: laalexan
+ms.author: nahadda
 ms.date: 04/11/2023
 ---
 # Provisioning fails due to an expired license
