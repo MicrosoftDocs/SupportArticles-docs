@@ -4,7 +4,7 @@ description: Introduces steps to resolve the error 0x800706ba, The RPC Server is
 author: Deland-Han
 ms.author: delhan
 ms.topic: troubleshooting
-ms.date: 05/17/2023
+ms.date: 05/24/2023
 ms.reviewer: kaushika
 ms.prod: windows-server
 ms.technology: windows-server-active-directory
@@ -28,7 +28,17 @@ When you encounter this issue, you may see one or more of the following symptoms
 
 You receive error messages that resemble the following during certificate enrollment.
 
+#### Error 1
+
+> "An error occurred whilst enrolling for a certificate. The certificate request could not be submitted to the certification authority.  
+> Url: CertServ.contoso.com\MyPKI  
+> Error: The RPC server is unavailable.  0x800706ba (WIN32: 1322 RPC_S_SERVER_UNAVAILABLE)
+
+#### Error 2
+
 :::image type="content" source="media/error-0x800706ba-certificate-enrollment/progress-window-of-certificate-enrollment.png" alt-text="Screenshot that shows the progress window of certificate enrollment." border="true":::
+
+#### Error 3
 
 :::image type="content" source="media/error-0x800706ba-certificate-enrollment/error-message-during-certificate-enrollment.png" alt-text="Screenshot that shows the error message during certificate enrollment." border="true":::
 
@@ -40,13 +50,28 @@ Then, the requesting server tries to do a remote procedure call (RPC) to the CA 
 
 For example:
 
-> 10167 \<time\> \<requesting server IP address\> \<CA IP address\> ISystemActivator 918 RemoteCreateInstance request  
-> 10174 \<time\> \<CA IP address\> \<requesting server IP address\> DCERPC 86 Fault: call_id: 3, Fragment: Single, Ctx: 1, **status: nca_s_fault_access_denied**
+```output
+10167 <time> <requesting server IP address> <CA IP address> ISystemActivator 918 RemoteCreateInstance request  
+10174 <time> <CA IP address> <requesting server IP address> DCERPC 86 Fault: call_id: 3, Fragment: Single, Ctx: 1, status: nca_s_fault_access_denied
+```
 
 Additionally, you can find the Microsoft Remote Procedure Call (MSRPC) bind attempt and error:
 
-> 1093    \<time\>    92.5590216     (0)    SourceIP    52237 (0xCC0D)    DestIP    135 (0x87)    MSRPC    MSRPC:c/o Bind: IRemoteSCMActivator(DCOM) UUID{000001A0-0000-0000-C000-000000000046}  Call=0x3  Assoc Grp=0x8A9E  Xmit=0x16D0  Recv=0x16D0  
-> 1097    \<time\>    92.5940283     (652)    SourceIP    135 (0x87)    DestIP    52237 (0xCC0D)    MSRPC    MSRPC:c/o Bind Nack:  Call=0x3  **Reject Reason: invalid_checksum**
+```output
+1093    <time>    92.5590216     (0)    SourceIP    52237 (0xCC0D)    DestIP    135 (0x87)    MSRPC    MSRPC:c/o Bind: IRemoteSCMActivator(DCOM) UUID{000001A0-0000-0000-C000-000000000046}  Call=0x3  Assoc Grp=0x8A9E  Xmit=0x16D0  Recv=0x16D0  
+1097    <time>    92.5940283     (652)    SourceIP    135 (0x87)    DestIP    52237 (0xCC0D)    MSRPC    MSRPC:c/o Bind Nack:  Call=0x3  Reject Reason: invalid_checksum
+```
+
+In network trace, you find the following error:
+
+Status : MSRPC:c/o Fault: Call=0x3 Context=0x1 Status=0x5 (Access is denied)
+
+For example:
+
+```output
+<Certificate_Server>	<Client>	DCOM	DCOM:RemoteCreateInstance Request, DCOM Version=5.7  Causality Id={7CFF2CD3-3165-4098-93D6-4077D1DF7351}
+<Client>	<Certificate_Server>	MSRPC	MSRPC:c/o Fault:  Call=0x3  Context=0x1  Status=0x5  Cancels=0x0 
+```
 
 ### Event log
 
@@ -55,17 +80,20 @@ If auditing is enabled, a Distributed Component Object Model (DCOM) error can be
 ```output
 Log Name: System  
 Source: Microsoft-Windows-DistributedCOM  
-Date: \<date\>  
+Date: <date>  
 Event ID: 10027  
 Task Category: None  
 Level: Warning  
 Keywords: Classic  
 User: ANONYMOUS LOGON  
-Computer: \<CA FQDN\>
+Computer: <CA FQDN>
 
 Description:  
-The machine wide limit settings do not grant Remote Activation permission for COM Server applications to the user NT AUTHORITY\ANONYMOUS LOGON SID (S-1-5-7) from address \<IP address\> running in the application container Unavailable SID (Unavailable). This security permission can be modified using the Component Services administrative tool.
+The machine wide limit settings do not grant Remote Activation permission for COM Server applications to the user NT AUTHORITY\ANONYMOUS LOGON SID (S-1-5-7) from address <IP address> running in the application container Unavailable SID (Unavailable). This security permission can be modified using the Component Services administrative tool.
 ```
+
+> [!NOTE]
+> An event ID 82 is logged in Application logs if auto-enrollment is failing with the same error.
 
 ### Other symptoms and logs
 
