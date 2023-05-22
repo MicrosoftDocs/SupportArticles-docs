@@ -62,7 +62,7 @@ The following content discusses the errors and limitations of an availability da
   When you run this script, you receive the following error message because the database is defined in an availability group:
 
   > Msg 3104, Level 16, State 1, Line 1  
-  > RESTORE cannot operate on database <\DatabaseName>\ because it is configured for database mirroring or has joined an availability group. If you intend to restore the database, use ALTER DATABASE to remove mirroring or to remove the database from its availability group.  
+  > RESTORE cannot operate on database \<DatabaseName\> because it is configured for database mirroring or has joined an availability group. If you intend to restore the database, use ALTER DATABASE to remove mirroring or to remove the database from its availability group.  
   >
   > Msg 3013, Level 16, State 1, Line 1  
   > RESTORE DATABASE is terminating abnormally.  
