@@ -3,7 +3,7 @@ title: IPv6 support in Azure Active Directory (Azure AD)
 description: Learn about Internet Protocol version 6 (IPv6) support in Azure Active Directory (Azure AD). Review what your organization needs to do to accommodate IPv6.
 ms.service: active-directory
 ms.subservice: aad-general
-ms.date: 4/4/2023
+ms.date: 05/22/2023
 ms.author: v-dele
 author: DennisLee-DennisLee
 ms.reviewer: lhuangnorth, gautama, amycolannino, joflore, mariourrutia
@@ -82,7 +82,7 @@ By default, both IPv6 and IPv4 traffic is supported on Windows and most other op
 
 ### Service endpoints
 
-IPv6 rollout to Azure AD has no impact on service endpoints. Service endpoints remain unsupported, for more information see the article [Virtual Network service endpoints](/azure/virtual-network/virtual-network-service-endpoints-overview#limitations).
+While Azure AD already supports IPv6, service endpoints still don't have IPv6 support. For more information, see [Virtual Network service endpoints](/azure/virtual-network/virtual-network-service-endpoints-overview#limitations).
 
 ## Test Azure AD authentication over IPv6
 
