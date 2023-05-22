@@ -1,6 +1,6 @@
 ---
 title: SSH connection to Azure Linux VM fails due to permission and ownership issues 
-description: Resolves an issue in which the SSH service fails because the /var/empty/sshd, or /var/lib/empty, or /var/run/sshd directory isn't owned by the root user, or it's group-writable or world-writable.
+description: Resolves an issue in which the SSH service fails because the /var/empty/sshd, or /var/lib/empty, or /var/run/sshd directory doesn't exist, or isn't owned by the root user, or it's group-writable or world-writable.
 ms.date: 05/17/2023
 author: saimsh-msft
 ms.reviewer: divargas, adelgadohell
@@ -11,7 +11,7 @@ ms.collection: linux
 
 # Troubleshoot SSH connection issues in Azure Linux VM due to permission and ownership issues
 
-This article provides solutions to an issue in which connecting to a Linux virtual machine (VM) via Secure Shell (SSH) fails because the _/var/empty/sshd_ directory in RHEL, the _/var/lib/empty_ directory in SUSE, or the _/var/run/sshd_ directory in Ubuntu, isn't owned by the root user, or it's group-writable or world-writable.
+This article provides solutions to an issue in which connecting to a Linux virtual machine (VM) via Secure Shell (SSH) fails because the _/var/empty/sshd_ directory in RHEL, the _/var/lib/empty_ directory in SUSE, or the _/var/run/sshd_ directory in Ubuntu, does not exist or isn't owned by the root user, or it's group-writable or world-writable.
 
 ## Symptoms
 
@@ -75,6 +75,7 @@ Here are two methods to repair the VM offline:
    ### [RHEL/CentOS](#tab/rhelts1)
 
    ```bash
+   sudo mkdir -p /var/empty/sshd
    sudo chmod 755 /var/empty/sshd
    sudo chown root:root /var/empty/sshd
    ```
@@ -82,6 +83,7 @@ Here are two methods to repair the VM offline:
    ### [SUSE](#tab/slests1)
 
    ```bash
+   sudo mkdir -p /var/lib/empty
    sudo chmod 755 /var/lib/empty
    sudo chown root:root /var/lib/empty
    ```
@@ -89,6 +91,7 @@ Here are two methods to repair the VM offline:
    ### [Ubuntu](#tab/ubuntuts1)
 
    ```bash
+   sudo mkdir -p /var/run/sshd
    sudo chmod 755 /var/run/sshd
    sudo chown root:root /var/run/sshd
    ```
