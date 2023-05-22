@@ -1,7 +1,8 @@
 ---
 title: Incoming email isn't converted to a case
 description: Provides a resolution for the issue where an incoming email isn't converted to a case in Dynamics 365 Customer Service.
-ms.reviewer: laalexan
+ms.reviewer: sdas
+ms.author: shchaur
 ms.date: 05/22/2023
 ---
 # Incoming email isn't converted to a case
