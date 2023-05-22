@@ -1,7 +1,8 @@
 ---
 title: SLA KPI instance isn't created on the entity
 description: Provides a resolution for the issue where an SLA KPI instance isn't created on the entity in Dynamics 365 Customer Service.
-ms.reviewer: laalexan
+ms.reviewer: sdas
+ms.author: ravimanne
 ms.date: 04/11/2023
 ---
 # An SLA KPI instance isn't created on the entity
