@@ -69,7 +69,7 @@ SUM(CASE quarter WHEN 2 THEN amount ELSE 0 END) as Q2,
 SUM(CASE quarter WHEN 3 THEN amount ELSE 0 END) as Q3,
 SUM(CASE quarter WHEN 4 THEN amount ELSE 0 END) as Q4
 FROM qtrsales q
-GROUP BY YEAR
+GROUP BY year
 ```
 
 ## Reference
