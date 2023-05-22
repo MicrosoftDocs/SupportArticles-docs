@@ -1,7 +1,8 @@
 ---
 title: Troubleshoot issues with Solution Health Hub
 description: Provides more information about how to troubleshoot issues using Solution Health Hub in Dynamics 365 Customer Service and Omnichannel for Customer Service.
-ms.reviewer: laalexan
+ms.reviewer: sdas
+ms.author: shchaur
 ms.date: 04/11/2023
 ---
 # Troubleshoot issues in Customer Service and Omnichannel for Customer Service using Solution Health Hub
