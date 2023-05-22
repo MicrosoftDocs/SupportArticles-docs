@@ -191,7 +191,7 @@ Native procedure and in-memory table definition-related files are specific to In
   |x64 default location |*\<drive\>:\\Program Files\\Microsoft SQL Server\\\<NNN\>\\COM\\*  |
   
   > [!NOTE]
-  > The `<NNN>` is a placeholder for version-specific information. To specify the correct value, check your installation or search for "Replication and server-side COM objects" in [Specifying File Paths](/sql/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server#specifying-file-paths). For example, the full path for SQL Server 2022 would be <drive\>:\\Program Files\\Microsoft SQL Server\\160\\COM\\.
+  > The `<NNN>` is a placeholder for version-specific information. To specify the correct value, check your installation or search for "Replication and server-side COM objects" in [Specifying File Paths](/sql/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server#specifying-file-paths). For example, the full path for SQL Server 2022 would be *<drive\>:\\Program Files\\Microsoft SQL Server\\160\\COM\\*.
   
 - Starting with SQL Server 2017 CU22 (including SQL 2019 RTM and later versions), if using Transactional Replication and the Distribution Agent is utilizing OLEDB streaming profile, or you're using the `-UseOledbStreaming` parameter, the Distribution Agent creates temporary files (*\*.lob*) in the *AppData* folder of the account running the distribution agent where the job is being invoked. For example, *C:\\Users\\\<DistributionAgentAccount\>\\AppData\\Temp\\\*.lob*. For prior versions of SQL Server, the default *COM* folder (already listed) is used.
 
@@ -366,11 +366,11 @@ For Power BI Report Server, the following exclusions can be made:
 - *%ProgramFiles%\\Microsoft Power BI Report Server\\PBIRS*
 - *%ProgramFiles%\\Microsoft Power BI Report Server\\Shared Tools*
 
-## Configure a Firewall with SQL Server products
+## Configure a firewall with SQL Server products
 
 The following table contains information about how to use a firewall with SQL Server:
 
-| Product | Information about Firewall configuration |
+| Product | Information about firewall configuration |
 | ---     |---                                       |
 | SQL Server Database Engine | [Configure the Windows Firewall to allow SQL Server access](/sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access) |
 | Analysis Services (SSAS) | [Configure the Windows Firewall to Allow Analysis Services Access](/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access) |
