@@ -1,7 +1,8 @@
 ---
 title: Can't deploy a custom solution with Agentscript solution
 description: Provides a resolution for a known issue about deploying an Agentscript custom solution in Omnichannel for Customer Service.
-ms.reviewer: laalexan
+ms.reviewer: nenellim
+ms.author: vamullap
 ms.date: 04/11/2023
 ---
 # Can't deploy a custom Agentscript solution in Omnichannel for Customer Service
