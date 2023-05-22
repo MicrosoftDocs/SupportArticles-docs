@@ -14,11 +14,11 @@ When you instrument an application via Application Insights auto-instrumentation
 
 This article introduces how to collect self-diagnostic logs for the following Application Insights SDKs:
 
-- Application Insights .NET/.NET Core Framework SDK
-- Java SDK 2.x
-- Java 3.x agent
+- [Application Insights .NET/.NET Core Framework SDK](#application-insights-netnet-core-framework-sdk)
+- [Application Insights Java 2.x](#application-insights-java-2x)
+- [Application Insights Java 3.x](#application-insights-java-3x)
 
-## .NET/.NET Core Framework SDK
+## Application Insights .NET/.NET Core Framework SDK
 
 From the version 2.18.0-beta 2 of the Application Insights .NET/.NET Core Framework SDK, the "self-diagnostics" feature is shipped to capture logs from the SDK itself and write them to a log file in a specified directory.
 
