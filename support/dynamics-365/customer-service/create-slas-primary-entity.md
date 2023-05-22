@@ -1,7 +1,8 @@
 ---
 title: Primary entity isn't available when creating SLAs
 description: Provides a resolution for the issue where the primary entity isn't available when creating SLAs in Dynamics 365 Customer Service.
-ms.reviewer: laalexan
+ms.reviewer: sdas
+ms.author: ravimanne
 ms.date: 04/11/2023
 ---
 # Primary entity isn't available when creating SLAs
