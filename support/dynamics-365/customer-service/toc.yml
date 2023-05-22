@@ -55,7 +55,7 @@
               href: sla-kpi-instance-compliance-timer.md
             - name: SLA timer doesn't pause when state is changed to OnHold on a holiday
               href: sla-timer-pause-state-changed.md
-            - name: Warning shows on slakpiinstances
+            - name: Warning appears on SLA KPI instances
               href: warning-slakpiinstances.md
         - name: Other SLA issues
           items:
@@ -101,8 +101,8 @@
           items:
             - name: Instance unavailable to select on the provisioning app
               href: instance-unavailable-provision-omnichannel.md
-            - name: Omnichannel provisioning fails due to expired Teams service principal
-              href: omnichannel-provision-fail-expired-principal.md
+            - name: Omnichannel provisioning fails with an error
+              href: omnichannel-provision-fail-errors.md
             - name: Omnichannel provisioning fails due to expired license
               href: provision-fails-expired-license.md
         - name: Omnichannel dashboards

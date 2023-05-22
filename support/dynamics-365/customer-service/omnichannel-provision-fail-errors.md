@@ -1,10 +1,10 @@
 ---
-title: Omnichannel provisioning fails due to an expired Teams service principal
-description: Provides a resolution for the issue where provisioning fails due to an expired Teams service principal in Omnichannel for Customer Service.
+title: Omnichannel provisioning fails due to permissions issue
+description: Provides a resolution for the error that occurs when you provision Omnichannel for Customer Service.
 ms.reviewer: laalexan
-ms.date: 04/11/2023
+ms.date: 05/22/2023
 ---
-# Omnichannel provisioning fails due to an expired Teams service principal
+# "Unable to perform the requested operation..." or "Request validation failed" error when provisioning Omnichannel
 
 This article provides a resolution for the issue where an error occurs when you provision Omnichannel for Customer Service.
 
