@@ -10,7 +10,8 @@ localization_priority: Normal
 ms.custom: 
   - Outlook for Windows
   - CSSTroubleshoot
-  - CI 163089, CI 170535
+  - CI 163089
+  - CI 170535
 ms.reviewer: gregmans, gbratton, tasitae, martinca
 appliesto: 
   - Outlook for Microsoft 365
@@ -51,7 +52,7 @@ To fix performance issues that affect your Calendar, try the following methods.
 
 **Method 1: Manage the growth of exceptions for recurring meetings**
 
-Not all calendar items have an equal effect on performance. One-time meetings have a relatively small effect, and long-lived, recurring meetings have a greater effect. A change that's made in an instance of a recurring meeting creates exceptions that are stored in the recurring meeting series. Every change to the meeting attributes, such as the subject, body, location, or time, creates a corresponding exception. Eventually, these exceptions inflate the size of the recurring meeting and impose a greater performance cost. You can address mitigate this higher cost by using Appointment Recurrence settings to set an end time or maximum recurrence count. Then, you can create a new recurring meeting instead of extending the existing recurrence.
+Not all calendar items have an equal effect on performance. One-time meetings have a relatively small effect, and long-lived, recurring meetings have a greater effect. A change that's made in an instance of a recurring meeting creates exceptions that are stored in the recurring meeting series. Every change to the meeting attributes, such as the subject, body, location, or time, creates a corresponding exception. Eventually, these exceptions inflate the size of the recurring meeting and impose a greater performance cost. You can mitigate this higher cost by using Appointment Recurrence settings to set an end time or maximum recurrence count. Then, you can create a new recurring meeting instead of extending the existing recurrence.
 
 **Method 2: Enable shared calendar improvements**
 
@@ -119,7 +120,7 @@ To fix performance issues that affect shared folders, try the following method.
 
 **Limit the Sync window**
 
- To reduce the number of items that are stored locally, limit the synchronization window that’s used for shared folders. Doing this can improve performance.
+ To reduce the number of items that are stored locally, limit the synchronization window that's used for shared folders. Doing this can improve performance.
 
 > [!IMPORTANT]
 > Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/topic/how-to-back-up-and-restore-the-registry-in-windows-855140ad-e318-2a13-2829-d428a2ab0692) in case problems occur.
