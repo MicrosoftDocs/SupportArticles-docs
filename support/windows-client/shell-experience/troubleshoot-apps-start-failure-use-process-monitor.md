@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Apps failing to start using Process Monitor
 description: Provides guidance to troubleshoot when Modern, Inbox, and Microsoft Store Apps fail to start.
-ms.date: 05/19/2023
+ms.date: 05/23/2023
 author: v-lianna
 ms.author: v-lianna
 manager: dcscontentpm
@@ -84,7 +84,7 @@ This method uses the system's memory to store the file until it gets saved by th
 
 :::image type="content" source="media/troubleshoot-apps-start-failure-use-process-monitor/backing-files-virtual-memory.png" alt-text="Screenshot of the events backed by virtual memory showing in the status bar.":::
 
-If you start recording as "backed by virtual memory," you need to save the recording prior to exiting Process Monitor.
+If you start recording as **Backed by virtual memory**, you need to save the recording prior to exiting Process Monitor.
 
 :::image type="content" source="media/troubleshoot-apps-start-failure-use-process-monitor/process-monitor-save-recording.png" alt-text="Screenshot of a saving icon and the Save To File window with All events and Native Process Monitor Format selected.":::
 
@@ -169,7 +169,7 @@ If you work through the list, not all "Access Denied" results cause the code to 
 
 Generally, anything asking for "All Access" is often refused, so you can exclude them from your investigations. You can do it automatically by filtering the events containing **Desired Access: All Access** as follows:
 
-:::image type="content" source="media/troubleshoot-apps-start-failure-use-process-monitor/process-monitor-filter-all-access.png" alt-text="Screenshot of the Process Monitor Filter window with the Desired Access All Access filter." lightbox="media/troubleshoot-apps-start-failure-use-process-monitor/process-monitor-filter-all-access.png":::
+:::image type="content" source="media/troubleshoot-apps-start-failure-use-process-monitor/process-monitor-filter-all-access.png" alt-text="Screenshot of the Process Monitor Filter window with the Desired Access All Access filter.":::
 
 In this example, the result looks like the following:
 
