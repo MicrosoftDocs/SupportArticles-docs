@@ -565,8 +565,6 @@
     items: 
      - name: Block remote use of local accounts in Windows
        href: database-engine/security/block-remote-use-local-accounts.md
-     - name: Configure antivirus software to work with SQL Server
-       href: database-engine/security/antivirus-and-sql-server.md
      - name: Create database permission is logged
        href: database-engine/security/create-database-permission-logged.md
      - name: Decryption Failed error working with Always-Encrypted-enabled database
