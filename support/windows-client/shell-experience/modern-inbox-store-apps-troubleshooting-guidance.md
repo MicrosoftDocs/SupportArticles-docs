@@ -843,7 +843,7 @@ These instructions are also not meant to reset the objects under the "Windows Se
 
 If the permissions are incorrect, always apply from the highest level and allow down inheritance to your target directory.
 
-If the "Bypass traverse checking" user right is missing, the permissions on the directory might be correct, but the user is unable to make use of any inherited permissions. Check that you aren't missing anyone in [Bypass traverse checking (Windows 10)](/windows/security/threat-protection/security-policy-settings/bypass-traverse-checking).
+If the **Bypass traverse checking** user right is missing, the permissions on the directory might be correct, but the user is unable to make use of any inherited permissions. Check that you aren't missing anyone in [Bypass traverse checking (Windows 10)](/windows/security/threat-protection/security-policy-settings/bypass-traverse-checking).
 
 :::image type="content" source="media/modern-inbox-store-apps-troubleshooting-guidance/bypass-traverse-checking-properties.png" alt-text="Screenshot shows the bypass traverse checking properties.":::
 
