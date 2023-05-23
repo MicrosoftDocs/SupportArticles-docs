@@ -17,3 +17,9 @@ items:
   href: uninstall-management-studio.md
 - name: Various errors when updating rows in a table
   href: error-use-ssms-update-row-table.md
+- name: SQL Agent (Jobs, Alerts, Operators)
+  items:
+  - name: Agent job may fail with error 65535
+    href: agent/agent-job-fail-error-65535-782-7437.md
+  - name: Policy-Based Management generates alerts
+    href: agent/34052-error-pbm-generates-alerts.md

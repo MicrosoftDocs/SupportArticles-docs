@@ -32,7 +32,7 @@ items:
 - name: Service may not start after patch installed
   href: service-not-start-after-patch-installed.md
 - name: Setup stops responding when you upgrade
-  href: /setup-stops-responding-upgrade.md
+  href: setup-stops-responding-upgrade.md
 - name: SQL on Windows 7 or Windows Server 2008 R2
   href: issues-install-sql-server.md
 - name: SQL Server 2008 R2 and SQL Server 2008 Setup issues 

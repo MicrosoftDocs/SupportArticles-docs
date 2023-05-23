@@ -71,5 +71,6 @@ items:
     href: ssms/toc.yml
   - name: Other tools
     href: tools/toc.yml
+
 - name: Product Updates and Release Notes
   href: releases/toc.yml
