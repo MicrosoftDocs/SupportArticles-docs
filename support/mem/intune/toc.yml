@@ -327,7 +327,7 @@ items:
   items:
   - name: Things to try before calling Intune support
     href: get-support/before-you-call-intune-support.md
-  - name: Get support in Endpoint Manager
+  - name: Get support in Intune
     href: /mem/get-support
   - name: Help and support blade doesn't load
     href: get-support/cannot-load-help-and-support-blade.md
