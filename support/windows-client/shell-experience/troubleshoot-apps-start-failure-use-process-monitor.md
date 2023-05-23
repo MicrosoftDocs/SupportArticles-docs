@@ -137,7 +137,7 @@ You should also notice that some event logs related to application crashes are r
 
 You can start from this line to see if you can spot any Access Denied Results events.
 
-:::image type="content" source="media/troubleshoot-apps-start-failure-use-process-monitor/calculator-process-access-denied.png" alt-text="Screenshot of the Process Monitor window with an access denied calculator process selected.":::
+:::image type="content" source="media/troubleshoot-apps-start-failure-use-process-monitor/calculator-process-access-denied.png" alt-text="Screenshot of the Process Monitor window with an access denied calculator process selected." lightbox="media/troubleshoot-apps-start-failure-use-process-monitor/calculator-process-access-denied.png":::
 
 In this situation, you should check the permissions of the following registry key against those from a working machine to see if there are some differences.
 
@@ -163,19 +163,19 @@ Once the filtering is done, you can double-click the "Access Denied" line to vie
 
 :::image type="content" source="media/troubleshoot-apps-start-failure-use-process-monitor/count-values-occurrences.png" alt-text="Screenshot of the Count Values Occurrences window with an access denied line selected.":::
 
-:::image type="content" source="media/troubleshoot-apps-start-failure-use-process-monitor/process-monitor-access-denied-lines.png" alt-text="Screenshot of the Calculator process followed by some access denied processes.":::
+:::image type="content" source="media/troubleshoot-apps-start-failure-use-process-monitor/process-monitor-access-denied-lines.png" alt-text="Screenshot of the Calculator process followed by some access denied processes. lightbox="media/troubleshoot-apps-start-failure-use-process-monitor/process-monitor-access-denied-lines.png"":::
 
 If you work through the list, not all "Access Denied" results cause the code to fail.
 
 Generally, anything asking for "All Access" is often refused, so you can exclude them from your investigations. You can do it automatically by filtering the events containing **Desired Access: All Access** as follows:
 
-:::image type="content" source="media/troubleshoot-apps-start-failure-use-process-monitor/process-monitor-filter-all-access.png" alt-text="Screenshot of the Process Monitor Filter window with the Desired Access All Access filter.":::
+:::image type="content" source="media/troubleshoot-apps-start-failure-use-process-monitor/process-monitor-filter-all-access.png" alt-text="Screenshot of the Process Monitor Filter window with the Desired Access All Access filter." lightbox="media/troubleshoot-apps-start-failure-use-process-monitor/process-monitor-filter-all-access.png":::
 
 In this example, the result looks like the following:
 
-:::image type="content" source="media/troubleshoot-apps-start-failure-use-process-monitor/process-monitor-start-menu-experience.png" alt-text="Screenshot of the Process Monitor window with the StartMenuExperienceHost and Calculator process selected.":::
+:::image type="content" source="media/troubleshoot-apps-start-failure-use-process-monitor/process-monitor-start-menu-experience.png" alt-text="Screenshot of the Process Monitor window with the StartMenuExperienceHost and Calculator process selected." lightbox="media/troubleshoot-apps-start-failure-use-process-monitor/process-monitor-start-menu-experience.png":::
 
-:::image type="content" source="media/troubleshoot-apps-start-failure-use-process-monitor/start-menu-experience.png" alt-text="Screenshot of the Process Monitor window with the StartMenuExperienceHost process selected.":::
+:::image type="content" source="media/troubleshoot-apps-start-failure-use-process-monitor/start-menu-experience.png" alt-text="Screenshot of the Process Monitor window with the StartMenuExperienceHost process selected." lightbox="media/troubleshoot-apps-start-failure-use-process-monitor/start-menu-experience.png":::
 
 Adding the appropriate permission for "All Application Packages" resolves both issues at the same time for both applications.
 
