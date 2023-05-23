@@ -816,9 +816,9 @@ If using the Process Monitor tool isn't an option, you can check the above folde
 
 Once you find the incorrect permissions, try to fix the permissions to avoid the possibility of a complete rebuild of the system. Take care in making corrective changes and notice the source of the permission change. A policy reapplication might wipe all your hard work if the incorrect policy isn't identified before making the changes. Perhaps move into a separate OU or block policy application when doing the investigation.
 
-Remember that moving a machine from an OU doesn't automatically reset all the permissions to default, they must be explicitly turned off, not set to "not configured". Rather like a policy to "turn tap on" isn't changed until "turn tap off" is set, "not configured" doesn't change the "on" status.
+Remember that moving a machine from an OU doesn't automatically reset all the permissions to default, they must be explicitly turned off, not set to **Not configured**. Rather like a policy to "turn tap on" isn't changed until "turn tap off" is set, **Not configured** doesn't change the "on" status.
 
-If you aren't sure which GPO is affecting the system and you have many GPOs applied, try to reset the Local Group Policy settings using a command prompt as a test. This action only sets the values to default, so if a policy was set to "Enabled" previously and the default setting is "Not configured" with a "Disabled" state, it doesn't actually disable the corresponding registry setting as explained above.
+If you aren't sure which GPO is affecting the system and you have many GPOs applied, try to reset the Local Group Policy settings using a command prompt as a test. This action only sets the values to default, so if a policy was set to **Enabled** previously and the default setting is **Not configured** with a **Disabled** state, it doesn't actually disable the corresponding registry setting as explained above.
 
 To reset the Group Policy settings with a command prompt, use these steps:
 
