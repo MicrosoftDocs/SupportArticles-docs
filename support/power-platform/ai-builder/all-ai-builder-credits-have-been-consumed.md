@@ -50,71 +50,71 @@ If credits comes from tenant Level (unasssigned credits), you need to add credit
 If credits comes from environment Level, you need to allocate more credits to your environment, either by using existing tenant level environment, or by first adding credits at tenant level, using purchase or environment deallocation.
 
 
-###How to determine the source and amount of allocated, unassigned and owned credits
+### How to determine the source and amount of allocated, unassigned and owned credits
 You need to be Administrator of your environment to perform these actions.
 
 1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
-2. On the left pane, select **Resources** then **Capacity**.
-3. On the right pane, select **Add-ons**
-4. Every environment with allocated AI Builder credits is listed with the number of allocated credits
-5. If environment is not listed or listed with 0 AI Builder credits, then credits come from tenant level. This step also gives the amount of owned credits.
+1. On the left pane, select **Resources** then **Capacity**.
+1. On the right pane, select **Add-ons**
+1. Every environment with allocated AI Builder credits is listed with the number of allocated credits
+1. If environment is not listed or listed with 0 AI Builder credits, then credits come from tenant level. This step also gives the amount of owned credits.
     1. On the right pane, select **Summary**
-    2. At the bottom of the pane, in the **Add-ons** section, look at **AI Builder credits**: it indicates the total number of credits allocated to environments among the total of owned credits. Amount of Tenant level credits (unassigned credits) is the difference between these numbers.
+    1. At the bottom of the pane, in the **Add-ons** section, look at **AI Builder credits**: it indicates the total number of credits allocated to environments among the total of owned credits. Amount of Tenant level credits (unassigned credits) is the difference between these numbers.
 
-###How to change the amount of environment allocated credits
+### How to change the amount of environment allocated credits
 You need to be Administrator of your environment to perform these actions.
 
 1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
-2. On the left pane, select **Resources** then **Capacity**.
-3. On the right pane, select **Add-ons**
-4. Every environment with allocated AI Builder credits is listed with the number of allocated credits
-5. Click on **Assign to an environment**
-6. In the right-side panel, select your environment
-7. Modify the number of AI Builder credits. If the number of remaining credits is not enough, you can either deallocate credits from other environments or purchase additional credits.
+1. On the left pane, select **Resources** then **Capacity**.
+1. On the right pane, select **Add-ons**
+1. Every environment with allocated AI Builder credits is listed with the number of allocated credits
+1. Click on **Assign to an environment**
+1. In the right-side panel, select your environment
+1. Modify the number of AI Builder credits. If the number of remaining credits is not enough, you can either deallocate credits from other environments or purchase additional credits.
 
-###How to change the amount of tenant level credits (unassigned credits) by unallocating credits from environments
+### How to change the amount of tenant level credits (unassigned credits) by unallocating credits from environments
 You need to be Administrator of your environment to perform these actions.
 
 1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
-2. On the left pane, select **Resources** then **Capacity**.
-3. On the right pane, select **Add-ons**
-4. Every environment with allocated AI Builder credits is listed with the number of allocated credits
-5. Click on **Assign to an environment**
-6. In the right-side panel, select an environment 
-7. Decrease the number of AI Builder credits. 
+1. On the left pane, select **Resources** then **Capacity**.
+1. On the right pane, select **Add-ons**
+1. Every environment with allocated AI Builder credits is listed with the number of allocated credits
+1. Click on **Assign to an environment**
+1. In the right-side panel, select an environment 
+1. Decrease the number of AI Builder credits. 
 
-###How to change the amount of tenant level credits (unassigned credits) by purchasing additional AI Builder credits
+### How to change the amount of tenant level credits (unassigned credits) by purchasing additional AI Builder credits
 You need to be Billing Administrator of your tenant to perform these actions.
 1. Sign in to the [Microsoft 365 admin center](https://admin.microsoft.com/).
-2. On the left pane, select **Billing** then **Purchase services**.
-3. Search for AI Builder 
-4. Select either  AI Builder Capacity Add-on T1 or AI Builder Capacity Add-on T2 (min 10 packs) or AI Builder Capacity Add-on T3 (min 50 packs) depending on how many packs you need. Each pack provides 1 million AI Builder credits.
-5. Follow the purchase process
-6. Once purchased, follow **#How to change the amount of environment allocated credits** steps if credits come from environment level.
+1. On the left pane, select **Billing** then **Purchase services**.
+1. Search for AI Builder 
+1. Select either  AI Builder Capacity Add-on T1 or AI Builder Capacity Add-on T2 (min 10 packs) or AI Builder Capacity Add-on T3 (min 50 packs) depending on how many packs you need. Each pack provides 1 million AI Builder credits.
+1. Follow the purchase process
+1. Once purchased, follow **#How to change the amount of environment allocated credits** steps if credits come from environment level.
 
-###How to evaluate the amount of credits to add
+### How to evaluate the amount of credits to add
 You need to be Administrator of your environment to perform these actions.
 
 1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
-2. On the left pane, select **Resources** then **Capacity**.
-3. On the right pane, select **Summary**
-4. At the bottom of the pane, in the **Add-ons** section, select **Download reports**
-5. Select **New** then **AI Builder** in the drop down, then **Submit**
-6. Select **Refresh** until the report with latest Report dates is marked as Completed
-7. Select the latest Report and click **Download** : a csv is downloaded to your computed
-8. Open the csv file in excel: it contains the AI Builder credit consumption per day, user, and environment. 
-9. By adding all consumption of current month of your environment, you can evaluate how much credit you need for an entire month for this environment.
+1. On the left pane, select **Resources** then **Capacity**.
+1. On the right pane, select **Summary**
+1. At the bottom of the pane, in the **Add-ons** section, select **Download reports**
+1. Select **New** then **AI Builder** in the drop down, then **Submit**
+1. Select **Refresh** until the report with latest Report dates is marked as Completed
+1. Select the latest Report and click **Download** : a csv is downloaded to your computed
+1. Open the csv file in excel: it contains the AI Builder credit consumption per day, user, and environment. 
+1. By adding all consumption of current month of your environment, you can evaluate how much credit you need for an entire month for this environment.
 
 
 
-## AI Builder purchase will take time and I need to unblock my Flow or my App, what can I do?
+## AI Builder purchase will take time and I need to urgently unblock my Flow or my App, what can I do?
 Please send an email to aihelpen@microsoft.com with following title and information:
 Title: AI Builder consumption overage
 Required information: 
 - Company name,  tenantId, Environment Id
 - Context of the overage and urgency (provide information on the AI Builder use case). 
 - Amount of available credits, current and expected consumption.
-- Commitment to quickly purchase AI Builder add on 
+- How you plan to resolve the issue in a near future
 
 We will analyze your request.
 
