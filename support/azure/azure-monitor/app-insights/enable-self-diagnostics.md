@@ -6,7 +6,7 @@ ms.author: v-weizhu
 ms.topic: how-to
 ms.service: azure-monitor
 ms.subservice: application-insights
-ms.date: 05/22/2023
+ms.date: 05/23/2023
 ---
 # How to collect self-diagnostic logs for Application Insights SDKs
 
@@ -70,7 +70,7 @@ In most cases, you could drop the file along with your application. Here are two
 4. Navigate to the directory where the App Service Web App is, such as *D:\Home\Site\wwwroot*.
 5. Use the "**+**" symbol at the top of the Kudu dashboard to create a new file in the *wwwroot* folder and name it *ApplicationInsightsDiagnostics.json*.
 
-    The *ApplicationInsightsDiagnostics.json* file needs to be placed in the *\<drive>:\home\site\wwwroot* folder. Not all App Service Web Apps reside on the same drive. some can be on *C:*, and some might be on *D:*. To find them, check the **Site folder** and **Temp folder** fields from the default Kudu page.
+    The *ApplicationInsightsDiagnostics.json* file needs to be placed in the *\<drive>:\home\site\wwwroot* folder. Not all App Service Web Apps reside on the same drive. some can be on *C:*, and some might be on *D:*. To find it, check the **Site folder** and **Temp folder** fields from the default Kudu page.
 
     :::image type="content" source="media/enable-self-diagnostics/kudu-dashboard.png" alt-text="Screenshot that shows the 'Site folder' and 'Temp folder' fields.":::
 
