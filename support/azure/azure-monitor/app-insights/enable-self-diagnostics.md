@@ -37,7 +37,7 @@ Configure self-diagnostics by using a file named *ApplicationInsightsDiagnostics
 > [!NOTE]
 >
 > - If the Application Insights .NET/.NET Core Framework SDK fails to parse any of those parameters in this configuration file, the configuration file will be treated as invalid, and self-diagnostics won't be enabled.
-> - This configuration file must be no more than 4 KiloBytes (KB). Otherwise, only the first 4 KB of content will be read.
+> - This configuration file must be no more than 4 kilobytes (KB). Otherwise, only the first 4 KB of content will be read.
 > - The Application Insights .NET/.NET Core Framework SDK will attempt to read the configuration file every 10 seconds and create or circularly overwrite the log file.
 
 Here are some explanations for the configuration parameters:
@@ -68,11 +68,11 @@ In most cases, you could drop the file along with your application. Here are two
 2. Go to the Kudu page by selecting **Advanced Tools** > **Go**.
 3. In the Kudu dashboard, select **Debug console** > **CMD**.
 4. Navigate to the directory where the App Service Web App is, such as *D:\Home\Site\wwwroot*.
-5. Use the "*+*" symbol at the top of the Kudu dashboard to create a new file in the *wwwroot* folder and name it *ApplicationInsightsDiagnostics.json*.
+5. Use the "**+**" symbol at the top of the Kudu dashboard to create a new file in the *wwwroot* folder and name it *ApplicationInsightsDiagnostics.json*.
 
     The *ApplicationInsightsDiagnostics.json* file needs to be placed in the *\<drive>:\home\site\wwwroot* folder. Not all App Service Web Apps reside on the same drive. some can be on *C:*, and some might be on *D:*. To find them, check the **Site folder** and **Temp folder** fields from the default Kudu page.
 
-    :::image type="content" source="media/enable-self-diagnostics/kudu-dashboard.png" alt-text="Screenshot that shows the "Site folder" and "Temp folder" fields.":::
+    :::image type="content" source="media/enable-self-diagnostics/kudu-dashboard.png" alt-text="Screenshot that shows the 'Site folder' and 'Temp folder' fields.":::
 
 6. Edit and add the following configuration to the *ApplicationInsightsDiagnostics.json* file:
 
