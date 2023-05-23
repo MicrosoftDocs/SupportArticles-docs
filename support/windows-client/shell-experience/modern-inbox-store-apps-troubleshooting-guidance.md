@@ -727,9 +727,9 @@ Modern Apps or Microsoft Store Apps can sometimes fail to start or launch, and t
 
     - Application Event Log
     - System Event Log
-    - Microsoft-Windows-AppXDeploymentServer/Operational (Applications and Services\Microsoft\Windows\AppXDeployment-Server)
-    - Microsoft-Windows-TWinUI/Operational (Applications and Services\Microsoft\Windows\Apps)
-    - Admin (Applications and Services\Microsoft\Windows\AppModel-Runtime)
+    - Microsoft-Windows-AppXDeploymentServer/Operational (*Applications and Services\\Microsoft\\Windows\\AppXDeployment-Server*)
+    - Microsoft-Windows-TWinUI/Operational (*Applications and Services\\Microsoft\\Windows\\Apps*)
+    - Admin (*Applications and Services\\Microsoft\\Windows\\AppModel-Runtime*)
 
 ## Common issues and solutions
 
@@ -775,13 +775,13 @@ The AppLocker rules remain enforced even though the service has been stopped and
 #### Solution
 
 To resolve this condition, remove all AppLocker rules and stop the service. That is to delete all the AppLocker rules in the Group Policy Object (GPO), push out that update to allow the empty AppLocker policy to be applied on the client computers, and then separately disable the service on those client computers. For more information, see
-[AppLocker Rules Still Enforced After the Service is Stopped](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/hh310286(v=ws.10))
+[AppLocker Rules Still Enforced After the Service is Stopped](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/hh310286(v=ws.10)).
 
 To terminate AppLocker rule enforcement, follow these steps:
 
 1. Back up the GPO that contains the currently applied AppLocker rules.
 2. Delete all the AppLocker rules on that GPO. For detailed steps, see [AppLocker Policy Procedures](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee791822(v=ws.10)).
-3. Push out the GPO that contains the empty AppLocker policy to the affected client computers. For detailed steps, see [Refresh an AppLocker Policy](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee791751(v=ws.10))
+3. Push out the GPO that contains the empty AppLocker policy to the affected client computers. For detailed steps, see [Refresh an AppLocker Policy](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee791751(v=ws.10)).
 4. Disable the AppLocker service (appidsvc) on all the affected client computers. Optionally, you can restart the service. For detailed steps, see [Configure the Application Identity Service](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee791779(v=ws.10)). Alternatively, you can disable the AppLocker service using Group Policy instead of disable locally.
 5. Optionally, if you want to update the computers with another set of AppLocker rules (and the service has been enabled), you force a Group Policy update for the revised AppLocker policy. For detailed steps, see [Refresh an AppLocker Policy](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee791751(v=ws.10)).
 
