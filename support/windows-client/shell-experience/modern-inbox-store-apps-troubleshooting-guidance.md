@@ -775,7 +775,7 @@ The AppLocker rules remain enforced even though the service has been stopped and
 #### Solution
 
 To resolve this condition, remove all AppLocker rules and stop the service. That is to delete all the AppLocker rules in the Group Policy Object (GPO), push out that update to allow the empty AppLocker policy to be applied on the client computers, and then separately disable the service on those client computers. For more information, see
-[AppLocker Rules Still Enforced After the Service is Stopped](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/hh310286(v=ws.10))
+[AppLocker Rules Still Enforced After the Service is Stopped](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/hh310286(v=ws.10))
 
 To terminate AppLocker rule enforcement, follow these steps:
 
