@@ -1,0 +1,15 @@
+items:
+- name: Considerations when using the Full-Text to search
+  href: full-text-search-engine-japanese-language.md
+- name: Dashes ignored in search with SQL Full-Text
+  href: dashes-ignored-search-full-text-msidxs-queries.md
+- name: Error 0x80040e97 when using full-text search
+  href: error-0x80040e97-using-full-text-search.md
+- name: Full-text index doesn't index attribute values
+  href: full-text-index-do-not-index-attribute-values.md
+- name: Full-text indexes stop populating
+  href: full-text-indexes-populate-slowly.md
+- name: Improve the performance of full-text queries
+  href: improve-performance-full-text-queries.md
+- name: Words are not returned by an English word breaker
+  href: words-not-returned-by-english-word-breaker.md
