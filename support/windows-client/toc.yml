@@ -980,6 +980,8 @@
       href: ./shell-experience/monitor-powers-off-when-pc-locked.md
   - name: Modern, Inbox and Microsoft Store Apps
     items:
+    - name: 'Troubleshooting guidance: Modern, Inbox, and Microsoft Store Apps'
+      href: ./shell-experience/modern-inbox-store-apps-troubleshooting-guidance.md
     - name: Can't open Microsoft Store when making a VPN connection
       href: ./shell-experience/microsoft-store-not-open-domain-joine-computer-vpn.md
     - name: Can't play audio in a system with DisplayPort
