@@ -16,18 +16,18 @@ productDirectory:
     summary: Troubleshooting articles for Data Protection Manager
     url: dpm/welcome-dpm.yml
   - title: Operations Manager
-    imageSrc: "../media/hub-landing/microsoft.png"
+    imageSrc: "../media/hub-landing/opsmgr_logo.png"
     summary: Troubleshooting articles for Operations Manager
     url: scom/welcome-scom.yml   
   - title: Orchestrator
-    imageSrc: "../media/hub-landing/microsoft.png"
+    imageSrc: "../media/hub-landing/orch_logo.png"
     summary: Troubleshooting articles for Orchestrator
     url: orchestrator/welcome-orchestrator.yml
   - title: Service Manager
-    imageSrc: "../media/hub-landing/microsoft.png"
+    imageSrc: "../media/hub-landing/servicemanager_logo.png"
     summary: Troubleshooting articles for Service Manager
     url: scsm/welcome-scsm.yml
   - title: Virtual Machine Manager
-    imageSrc: "../media/hub-landing/microsoft.png"
+    imageSrc: "../media/hub-landing/vmm_logo.png"
     summary: Troubleshooting articles for Virtual Machine Manager
     url: vmm/welcome-vmm.yml   
