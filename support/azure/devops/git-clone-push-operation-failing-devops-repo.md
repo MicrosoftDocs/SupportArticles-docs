@@ -139,8 +139,8 @@ To resolve the authentication error or credentials cache issues, begin by follow
 
 |Versions of Git for Windows|Git Credential Manager for Windows|Git Credential Manager Core|Git Credential Manager (Renamed from GCM Core)|
 |--|--|--|--|
-|2.27 and older|`manager` |||
+|2.27 and earlier|`manager` |||
 |2.28 to 2.33.0|`manager` (optional)|`manager-core`(optional)||
 |2.33.1 to 2.34.0||`manager-core`||
 |2.34.1 to 2.38|||`manager-core`|
-|2.39 and above|||`manager`|
+|2.39 and later|||`manager`|
