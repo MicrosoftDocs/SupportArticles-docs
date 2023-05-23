@@ -105,7 +105,7 @@ The machine wide limit settings do not grant Remote Activation permission for CO
 
 This issue can occur because of one of the following reasons:
 
-1. The group policy **Access this computer from the network** is set, and the user account used to enroll the certificate isn't added. By default, the policy is populated by the groups: Administrators, Backup Operators, Everyone, and Users.
+1. The group policy **Access this computer from the network** is set, and the user account used to enroll the certificate isn't added. By default, the policy is populated by the groups: **Administrators**, **Backup Operators**, **Everyone**, and **Users**.
 2. The group policy **Deny access to this computer from the network** is set, and **Everyone**, **Users** or a security group the user belongs to is added.
 
 These group policies locate at _Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\User Rights Assignment_.
@@ -144,9 +144,9 @@ For more information, see [Access this computer from the network - security poli
 
 Here are the default permissions:
 
-- Contoso\Domain Users
-- NT AUTHORITY\Authenticated Users
-- NT AUTHORITY\INTERACTIVE
+- **Contoso\Domain Users**
+- **NT AUTHORITY\Authenticated Users**
+- **NT AUTHORITY\INTERACTIVE**
 
 To resolve this issue, open **Local Users and Groups** on the certificate server, locate the **Users** group, and add the missing groups.
 
@@ -155,8 +155,8 @@ To resolve this issue, open **Local Users and Groups** on the certificate server
 To resolve this issue, follow these steps:
 
 1. Open **Local Users and Groups** on the certificate server.
-2. Locate the "Certificate Service DCOM Access" group.
-3. Add "NT AUTHORITY\Authenticated users."
+2. Locate the **Certificate Service DCOM Access** group.
+3. Add **NT AUTHORITY\Authenticated users**.
 
 ## Cause 4: EnableDCOM isn't set to Y on the Client and CA Server
 
