@@ -15,19 +15,19 @@ localization_priority: medium
 ---
 # Modern, Inbox, and Microsoft Store Apps troubleshooting guidance
 
-Modern Apps or Microsoft Store Apps can sometimes fail to start or launch, and then stop responding. This guide discusses troubleshooting techniques that you can use to troubleshoot such issues.
+Modern Apps or Microsoft Store Apps can sometimes fail to start or launch and then stop responding. This guide discusses troubleshooting techniques that you can use to troubleshoot such issues.
 
 ## Troubleshooting checklist
 
 1. Verify if the application is registered or installed for your user.
 
-    Modern Apps are deployed as a package onto a machine, and then need to register individually for each user that logs in. A record is kept on each machine for every application and which users have it registered. For example, to see if an individual user has the Calculator application installed, use the following cmdlet in a nonelevated Windows PowerShell prompt:
+    Modern Apps are deployed as a package onto a machine and then need to register individually for each user that logs in. A record is kept on each machine for every application and which users have it registered. For example, to see if an individual user has the Calculator application installed, use the following cmdlet in a nonelevated Windows PowerShell prompt:
 
     ```powershell
     Get-AppxPackage *calculator*
     ```
 
-    If it's registered, an output looks like the following:
+    If it's registered, the output looks like the following:
 
     ```output
     Name              : Microsoft.WindowsCalculator 
@@ -53,14 +53,14 @@ Modern Apps or Microsoft Store Apps can sometimes fail to start or launch, and t
     Status            : Ok 
     ```
 
-2. Even if the application is shown as registered for your user, sometimes re-registering the application for the user can resolve activation issues because it repairs any missing entries for the package. Use the following cmdlet at the same nonelevated PowerShell prompt (This example is for the Calculator application):
+2. Even if the application is shown as registered for your user, sometimes re-registering the application for the user can resolve activation issues because it repairs any missing entries for the package. Use the following cmdlet at the same nonelevated PowerShell prompt (this example is for the Calculator application):
 
     ```powershell
     Get-AppxPackage *calculator*| Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"} 
     ```
 
     > [!NOTE]
-    > Notice to feed the output that is returned from the `get-appxpackage` cmdlet into the `Add-AppxPackage` cmdlet using the pipe `|` cmdlet. This only works if the package is already registered.
+    > Notice to feed the output that's returned from the `get-appxpackage` cmdlet into the `Add-AppxPackage` cmdlet using the pipe `|` cmdlet. This only works if the package is already registered.
 
 3. If you receive no response to the `Get-AppxPackage` cmdlet, you can still use the `Add-AppxPackage` cmdlet by using the family name or the path to the *AppxManifest.xml* file:
 
@@ -79,7 +79,7 @@ Modern Apps or Microsoft Store Apps can sometimes fail to start or launch, and t
     ```
 
     > [!NOTE]
-    > Ensure to use the `Add-AppxPackage` cmdlet from a non-elevated prompt, or the package will be registered to the admin instead of the user.
+    > Be sure to use the `Add-AppxPackage` cmdlet from a non-elevated prompt, or the package will be registered to the admin instead of the user.
 
 5. For the XML path, you need to check which version you have installed. You can do this from an elevated PowerShell prompt with a `dir` cmdlet:
 
@@ -98,7 +98,7 @@ Modern Apps or Microsoft Store Apps can sometimes fail to start or launch, and t
 
 6. If the application still fails to start after registration, perhaps the package for the application is corrupted or missing some components. Get a new package for the machine by using Microsoft Store (public or private) or Windows Package Manager (winget). For more information, see [Troubleshoot Apps failing to start using Windows Package Manager](troubleshoot-apps-start-failure-use-windows-package-manager.md).
 
-7. For a single application you can use the `winget` command. To search for a tool, use the following command:
+7. For a single application, you can use the `winget` command. To search for a tool, use the following command:
 
     ```console
     winget search <AppName>
@@ -112,7 +112,7 @@ Modern Apps or Microsoft Store Apps can sometimes fail to start or launch, and t
 
     The winget tool will launch the installer and install the application on your computer. For example:
 
-    :::image type="content" source="media/modern-inbox-store-apps-troubleshooting-guidance/search-powertoys.png" alt-text="Screenshot shows the result of searching Microsoft PowerToys.":::
+    :::image type="content" source="media/modern-inbox-store-apps-troubleshooting-guidance/search-powertoys.png" alt-text="Screenshot that shows the result of searching Microsoft PowerToys.":::
 
     To avoid the license prompts, you can use a small, scripted command:
 
@@ -581,7 +581,7 @@ Modern Apps or Microsoft Store Apps can sometimes fail to start or launch, and t
 
     ```
 
-9. If Microsoft Store has issues to start or it was previously removed, try to reinstall it.
+9. If Microsoft Store has issues starting or was previously removed, try reinstalling it.
 
     > [!NOTE]
     > Removing Microsoft Store is not supported. For more information, see [Removing, uninstalling, or reinstalling Microsoft Store app isn't supported](cannot-remove-uninstall-or-reinstall-microsoft-store-app.md).
@@ -723,7 +723,7 @@ Modern Apps or Microsoft Store Apps can sometimes fail to start or launch, and t
 
     ```
 
-10. If the application still fails, then the following event logs might be helpful.
+10. If the application still fails, the following event logs might be helpful.
 
     - Application Event Log
     - System Event Log
@@ -770,11 +770,11 @@ Remove AppLocker restrictions. For AppLocker to stop enforcing its rules, two th
 1. The effective policy on the client computer is empty.
 2. The AppLocker service is disabled.
 
-The AppLocker rules remain enforced even though the service has been stopped and the rules have been deleted from the user interface. This can occur when a Group Policy administrator deletes all AppLocker rules and disables the AppLocker service in a single Group Policy update. The effect of this is that the AppLocker service is disabled before it can update the effective policy on the client computer, and as a result, AppLocker rules continue to be enforced.
+The AppLocker rules remain enforced even though the service has been stopped and the rules have been deleted from the user interface. This can occur when a Group Policy administrator deletes all AppLocker rules and disables the AppLocker service in a single Group Policy update. The effect of this is that the AppLocker service is disabled before it can update the effective policy on the client computer. As a result, AppLocker rules continue to be enforced.
 
 #### Solution
 
-To resolve this condition, remove all AppLocker rules and stop the service. That is to delete all the AppLocker rules in the Group Policy Object (GPO), push out that update to allow the empty AppLocker policy to be applied on the client computers, and then separately disable the service on those client computers. For more information, see
+To resolve this condition, remove all AppLocker rules and stop the service. That is, delete all the AppLocker rules in the Group Policy Object (GPO), push out that update to allow the empty AppLocker policy to be applied on the client computers, and then separately disable the service on those client computers. For more information, see
 [AppLocker Rules Still Enforced After the Service is Stopped](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/hh310286(v=ws.10)).
 
 To terminate AppLocker rule enforcement, follow these steps:
@@ -782,16 +782,16 @@ To terminate AppLocker rule enforcement, follow these steps:
 1. Back up the GPO that contains the currently applied AppLocker rules.
 2. Delete all the AppLocker rules on that GPO. For detailed steps, see [AppLocker Policy Procedures](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee791822(v=ws.10)).
 3. Push out the GPO that contains the empty AppLocker policy to the affected client computers. For detailed steps, see [Refresh an AppLocker Policy](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee791751(v=ws.10)).
-4. Disable the AppLocker service (appidsvc) on all the affected client computers. Optionally, you can restart the service. For detailed steps, see [Configure the Application Identity Service](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee791779(v=ws.10)). Alternatively, you can disable the AppLocker service using Group Policy instead of disable locally.
-5. Optionally, if you want to update the computers with another set of AppLocker rules (and the service has been enabled), you force a Group Policy update for the revised AppLocker policy. For detailed steps, see [Refresh an AppLocker Policy](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee791751(v=ws.10)).
+4. Disable the AppLocker service (appidsvc) on all the affected client computers. Optionally, you can restart the service. For detailed steps, see [Configure the Application Identity Service](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee791779(v=ws.10)). Alternatively, you can disable the AppLocker service using Group Policy instead of disabling locally.
+5. Optionally, if you want to update the computers with another set of AppLocker rules (and the service has been enabled), you can force a Group Policy update for the revised AppLocker policy. For detailed steps, see [Refresh an AppLocker Policy](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee791751(v=ws.10)).
 
 ### Bad permissions being set on registry keys or folders
 
-The general rule isn't to modify the permissions from registry keys owned by the operating system. Even for hardening purposes, we don't recommend changing the permissions or the ownership from registry key, files or folders from Windows. That action might break your system, and possibly require a rebuild to fix.
+The general rule isn't to modify the permissions from registry keys owned by the operating system. Even for hardening purposes, we don't recommend changing the permissions or the ownership from the registry key, files, or folders from Windows. That action might break your system and possibly require a rebuild to fix.
 
-The applications are installed to run in the user context and require the correct permission for user and **All Application Packages** to be able to launch.
+The applications are installed to run in the user context and require the correct permission for the user and **All Application Packages** to be able to launch.
 
-Permission problems often happen on folders or registry hives including:
+Permission problems often happen on folders or registry hives, including:
 
 - *C:\\Program Files\\WindowsApps*
 - *C:\\ProgramData\\Microsoft\\Windows\\AppRepository*
@@ -810,15 +810,15 @@ Get-Acl -Path HKLM:\SOFTWARE\Microsoft\OLE | Format-List
 Get-Acl C:\ProgramData\Microsoft\Windows\AppRepository
 ```
 
-You can also use the Process Monitor tool to trace the app failing to start, see [Troubleshoot Apps Failing to Start Using Process Monitor](troubleshoot-apps-start-failure-use-process-monitor.md)
+You can also use the Process Monitor tool to trace the app failing to start. See [Troubleshoot Apps Failing to Start Using Process Monitor](troubleshoot-apps-start-failure-use-process-monitor.md).
 
 If using the Process Monitor tool isn't an option, you can check the above folders against a working machine. Start from a new machine in an Organizational Unit (OU) without policies, and add them one by one until the applications break.
 
-Once you find the incorrect permissions, try to fix the permissions to avoid the possibility of a complete rebuild of the system. Take care in making corrective changes and notice the source of the permission change. A policy reapplication might wipe all your hard work if the incorrect policy isn't identified before making the changes. Perhaps move into a separate OU or block policy application when doing the investigation.
+Once you find the incorrect permissions, try to fix the permissions to avoid the possibility of a complete rebuild of the system. Take care in making corrective changes and notice the source of the permission change. A policy reapplication might wipe out all your hard work if the incorrect policy isn't identified before making the changes. Perhaps move into a separate OU or block policy application when doing the investigation.
 
-Remember that moving a machine from an OU doesn't automatically reset all the permissions to default, they must be explicitly turned off, not set to **Not configured**. Rather like a policy to "turn tap on" isn't changed until "turn tap off" is set, **Not configured** doesn't change the "on" status.
+Remember that moving a machine from an OU doesn't automatically reset all the permissions to default. They must be explicitly turned off, not set to **Not configured**. Rather like a policy to "turn tap on" isn't changed until "turn tap off" is set, **Not configured** doesn't change the "on" status.
 
-If you aren't sure which GPO is affecting the system and you have many GPOs applied, try to reset the Local Group Policy settings using a command prompt as a test. This action only sets the values to default, so if a policy was set to **Enabled** previously and the default setting is **Not configured** with a **Disabled** state, it doesn't actually disable the corresponding registry setting as explained above.
+If you aren't sure which GPO is affecting the system and have many GPOs applied, try to reset the Local Group Policy settings using a command prompt as a test. This action only sets the values to default, so if a policy was set to **Enabled** previously and the default setting is **Not configured** with a **Disabled** state, it doesn't actually disable the corresponding registry setting, as explained above.
 
 To reset the Group Policy settings with a command prompt, use these steps:
 
@@ -835,9 +835,9 @@ To reset the Group Policy settings with a command prompt, use these steps:
     gpupdate /force
     ```
 
-4. Restart your computer. (Not required but recommended)
+4. Restart your computer (not required but recommended).
 
-Once you complete the steps, the command deletes the folders that store the Group Policy settings on your device, and then Windows 10 or Window 11 should reapply the default values.
+Once you complete the steps, the command deletes the folders that store the Group Policy settings on your device. Then Windows 10 or Windows 11 should reapply the default values.
 
 These instructions are also not meant to reset the objects under the "Windows Security" (Local Security Policy) section since they're stored in a different location.
 
@@ -845,6 +845,6 @@ If the permissions are incorrect, always apply from the highest level and allow 
 
 If the **Bypass traverse checking** user right is missing, the permissions on the directory might be correct, but the user is unable to make use of any inherited permissions. Check that you aren't missing anyone in [Bypass traverse checking (Windows 10)](/windows/security/threat-protection/security-policy-settings/bypass-traverse-checking).
 
-:::image type="content" source="media/modern-inbox-store-apps-troubleshooting-guidance/bypass-traverse-checking-properties.png" alt-text="Screenshot shows the bypass traverse checking properties.":::
+:::image type="content" source="media/modern-inbox-store-apps-troubleshooting-guidance/bypass-traverse-checking-properties.png" alt-text="Screenshot that shows the bypass traverse checking properties.":::
 
-Finally, if you can't locate the permission issue that is causing the problem, and only a few machines are involved, recover the machine and refresh to a clean image may solve the problem.
+Finally, if you can't locate the permission issue causing the problem and only a few machines are involved, recovering the machine and refreshing it to a clean image may solve the problem.
