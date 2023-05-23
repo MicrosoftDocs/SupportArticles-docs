@@ -125,7 +125,7 @@ Because the user account used for certificate enrollment fails authentication by
    - **Deny access to this computer from the network**
 4. Note the **Winning GPO** name.
 
-   :::image type="content" source="media/error-0x800706ba-certificate-enrollment/screenshot-of-the-gpresult-output.png" alt-text="Screenshot that shows the gpresult output.":::
+   :::image type="content" source="media/error-0x800706ba-certificate-enrollment/screenshot-of-the-gpresult-output.png" alt-text="Screenshot that shows the gpresult output." lightbox="media/error-0x800706ba-certificate-enrollment/screenshot-of-the-gpresult-output.png":::
 
 To resolve this issue, edit the **Winning GPO**.
 
@@ -140,7 +140,7 @@ Then, remove the group that the user account or the computer account belongs to 
 
 For more information, see [Access this computer from the network - security policy setting](/windows/security/threat-protection/security-policy-settings/access-this-computer-from-the-network).
 
-## Cause 2: Missing "NT Authority\Authenticated Users" in the Users group of the certificate server or any other default permissions
+## Cause 2: Missing "NT Authority\Authenticated Users" in the "Users" group of the certificate server or any other default permissions
 
 Here are the default permissions:
 
