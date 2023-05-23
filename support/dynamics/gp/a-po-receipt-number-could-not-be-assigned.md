@@ -127,7 +127,7 @@ If the purchase order number or the receipt number doesn't increment, add leadin
 
         On the **Tools** menu, point to **Setup**, point to **Purchasing**, and then select **Purchase Order Processing.**
 2. In the **Next Number** column, enter leading zeros to the values in the following fields:
-    - **Purchase Orders**  
+    - **Purchase Orders**
     - **Receipts**
 3. Select **OK**.
 
