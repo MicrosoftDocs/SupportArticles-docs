@@ -4,126 +4,126 @@
     - name: Customer Service Insights
       items:
         - name: Troubleshoot issues using Solution Health Hub
-          href: troubleshoot-cs-oc-solution-health.md  
+          href: customer-service-insights/troubleshoot-cs-oc-solution-health.md  
     - name: Email
       items: 
         - name: '"Case is missing customer" error'
-          href: case-creation-queue-address-issue.md
+          href: email/case-creation-queue-address-issue.md
         - name: Incoming email isn't converted to a case
-          href: incoming-email-not-converted-case.md
+          href: email/incoming-email-not-converted-case.md
         - name: Troubleshoot common email errors
-          href: common-email-error-messages.md
+          href: email/common-email-error-messages.md
     - name: Entitlements
       items:
         - name: Can't create entitlements due to Allocation Type missing options
-          href: allocation-type-missing-options.md
+          href: entitlements/allocation-type-missing-options.md
     - name: Knowledge Management
       items:  
-        - name: Data isn't updated on Insights for integrated search providers (preview)
-          href: data-not-updated-integrated-search-providers.md                
+        - name: Data isn't updated on Insights for integrated search providers
+          href: knowledge-management/data-not-updated-integrated-search-providers.md                
     - name: Service Level Agreements (SLAs)
       items:
         - name: Import, export, or upgrade SLA
           items:
             - name: Changes to SLAItem via upgrade solution don't appear
-              href: slaitem-changes-missing-upgrade.md
+              href: service-level-agreements/slaitem-changes-missing-upgrade.md
             - name: Can't import solution with active SLAs and SLAs are deactivated when imported
-              href: import-solution-active-slas.md
+              href: service-level-agreements/import-solution-active-slas.md
         - name: SLA creation
           items:
             - name: Primary entity isn't available when creating SLAs
-              href: create-slas-primary-entity.md 
+              href: service-level-agreements/create-slas-primary-entity.md 
         - name: SLA migration
           items:
             - name: Can't migrate a large number of SLAs
-              href: migration-tool-issue-slas.md 
+              href: service-level-agreements/migration-tool-issue-slas.md 
             - name: Standard SLAs not showing in migration tool
-              href: standard-slas-migration-tool.md
+              href: service-level-agreements/standard-slas-migration-tool.md
         - name: SLA time calculation
           items:
             - name: Errors on custom time calculation for SLA
-              href: errors-sla-time-calculation.md
+              href: service-level-agreements/errors-sla-time-calculation.md
             - name: Warning and failure duration times are wrong for SLA
-              href: warning-failure-times-incorrect-sla.md
+              href: service-level-agreements/warning-failure-times-incorrect-sla.md
         - name: SLA timer
           items:
             - name: Can't delete SLAs or SLA Items in upgrade or manual deletion
-              href: sla-deletion-error-messages.md
+              href: service-level-agreements/sla-deletion-error-messages.md
             - name: OnHold Time isn't populated for Case for Unified Interface SLA
-              href: onhold-time-not-populated.md
+              href: service-level-agreements/onhold-time-not-populated.md
             - name: SLA KPI instance isn't Nearing Non-compliance or Non-compliant and timer runs
-              href: sla-kpi-instance-compliance-timer.md
+              href: service-level-agreements/sla-kpi-instance-compliance-timer.md
             - name: SLA timer doesn't pause when state is changed to OnHold on a holiday
-              href: sla-timer-pause-state-changed.md
+              href: service-level-agreements/sla-timer-pause-state-changed.md
             - name: Warning appears on SLA KPI instances
-              href: warning-slakpiinstances.md
+              href: service-level-agreements/warning-slakpiinstances.md
         - name: Other SLA issues
           items:
             - name: Can't delete managed solution consisting of SLA-enabled entity
-              href: unable-delete-sla-enabled-entity-managed-solution.md
+              href: service-level-agreements/unable-delete-sla-enabled-entity-managed-solution.md
             - name: Entity fields for modifiedon and modifiedby are updated for resolved cases
-              href: entity-case-field-updates.md
+              href: service-level-agreements/entity-case-field-updates.md
             - name: Errors occur when updating a case
-              href: errors-updating-case.md
+              href: service-level-agreements/errors-updating-case.md
             - name: SLA KPI instance status shows as canceled
-              href: sla-kpi-instance-shows-canceled.md
+              href: service-level-agreements/sla-kpi-instance-shows-canceled.md
             - name: Success, warning, and failure actions run many times in web client
-              href: actions-run-multiple-times-client.md
+              href: service-level-agreements/actions-run-multiple-times-client.md
             - name: SLA KPI instance isn't created on entity
-              href: sla-kpi-instance-not-created-entity.md
+              href: service-level-agreements/sla-kpi-instance-not-created-entity.md
     - name: Omnichannel for Customer Service
       items:
         - name: Agent Scripts and Macros
           items:
             - name: Can't deploy a custom Agentscript solution
-              href: custom-agentscript-solution.md
+              href: omnichannel-for-customer-service/custom-agentscript-solution.md
         - name: Conversation control
           items:
             - name: Conversation is stuck in a wrap-up state
-              href: conversation-stuck-wrap-up-state.md
+              href: omnichannel-for-customer-service/conversation-stuck-wrap-up-state.md
             - name: Conversation widget blank when changing browser tabs
-              href: conversation-widget-blank.md  
+              href: omnichannel-for-customer-service/conversation-widget-blank.md  
         - name: Live chat channel
           items:
             - name: Agent doesn't receive chat
-              href: agent-does-not-receive-chat.md
+              href: omnichannel-for-customer-service/agent-does-not-receive-chat.md
             - name: Chat isn't initiated when starting a new chat from portal
-              href: new-chat-not-initiated-portal.md
+              href: omnichannel-for-customer-service/new-chat-not-initiated-portal.md
             - name: Error when creating a chat widget or social channel
-              href: error-create-chat-widget-social-channel.md  
+              href: omnichannel-for-customer-service/error-create-chat-widget-social-channel.md  
         - name: Live Chat Widget (LCW)
           items:
             - name: Chat widget icon doesn't load on portal
-              href: chat-widget-icon-does-not-load-portal.md
+              href: omnichannel-for-customer-service/chat-widget-icon-does-not-load-portal.md
             - name: Chat widget doesn't load on the portal
-              href: chat-widget-not-loading-portal.md                    
+              href: omnichannel-for-customer-service/chat-widget-not-loading-portal.md                    
         - name: Licensing, provisioning, and installation
           items:
             - name: Instance unavailable to select on the provisioning app
-              href: instance-unavailable-provision-omnichannel.md
+              href: omnichannel-for-customer-service/instance-unavailable-provision-omnichannel.md
             - name: Omnichannel provisioning fails with an error
-              href: omnichannel-provision-fail-errors.md
+              href: omnichannel-for-customer-service/omnichannel-provision-fail-errors.md
             - name: Omnichannel provisioning fails due to expired license
-              href: provision-fails-expired-license.md
+              href: omnichannel-for-customer-service/provision-fails-expired-license.md
         - name: Omnichannel dashboards
           items:
             - name: Agent dashboard shows authentication error after provisioning
-              href: agent-dashboard-error-omnichannel-provision.md
+              href: omnichannel-for-customer-service/agent-dashboard-error-omnichannel-provision.md
             - name: Agent dashboard doesn't load or displays error
-              href: agent-dashboard-auth-error.md
+              href: omnichannel-for-customer-service/agent-dashboard-auth-error.md
             - name: Communication panel doesn't load
-              href: communication-panel-load-issue.md
+              href: omnichannel-for-customer-service/communication-panel-load-issue.md
             - name: Dashboards don't appear
-              href: dashboard-not-appearing-omnichannel.md
+              href: omnichannel-for-customer-service/dashboard-not-appearing-omnichannel.md
             - name: Error in communication panel
-              href: error-communication-panel.md
+              href: omnichannel-for-customer-service/error-communication-panel.md
         - name: Power Virtual Agents (PVA)
           items:
             - name: Missing variables and actions when agent transfers from PVA bots
-              href: agent-transfer-pva-bot-issue.md
+              href: omnichannel-for-customer-service/agent-transfer-pva-bot-issue.md
             - name: PVA bot conversations are active after chat ends
-              href: pva-conversations-active-dashboard.md            
+              href: omnichannel-for-customer-service/pva-conversations-active-dashboard.md            
         - name: Social channels
           items:
             - name: Troubleshoot sync issue with social data
-              href: social-data-sync.md
+              href: omnichannel-for-customer-service/social-data-sync.md

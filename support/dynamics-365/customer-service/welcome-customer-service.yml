@@ -5,11 +5,11 @@ summary: Welcome to Microsoft Dynamics 365 Customer Service troubleshooting. The
 metadata:
   title: Microsoft Dynamics 365 Customer Service troubleshooting
   description: Landing page for Microsoft Dynamics 365 Customer Service troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
-  ms.prod: dynamics-365 #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.service: dynamics-365-customerservice #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
   author: #Required; your GitHub user alias, with correct capitalization.
   ms.author: #Required; microsoft alias of author; optional team alias.
-  ms.date: 05/22/2023
+  ms.date: 05/23/2023
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -21,9 +21,9 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Incoming email isn't converted to a case
-            url: incoming-email-not-converted-case.md
+            url: email/incoming-email-not-converted-case.md
           - text: Troubleshoot common email errors
-            url: common-email-error-messages.md
+            url: email/common-email-error-messages.md
 
   # Card
   - title: Insights
@@ -31,7 +31,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Troubleshoot issues using Solution Health Hub
-            url: troubleshoot-cs-oc-solution-health.md
+            url: customer-service-insights/troubleshoot-cs-oc-solution-health.md
 
   # Card
   - title: Service Level Agreements (SLAs)
@@ -39,17 +39,17 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Can't delete SLAs or SLA Items in upgrade or manual deletion
-            url: sla-deletion-error-messages.md
+            url: service-level-agreements/sla-deletion-error-messages.md
           - text: Can't delete managed solution consisting of SLA-enabled entity
-            url: unable-delete-sla-enabled-entity-managed-solution.md
+            url: service-level-agreements/unable-delete-sla-enabled-entity-managed-solution.md
           - text: Error when updating a case
-            url: errors-updating-case.md
+            url: service-level-agreements/errors-updating-case.md
           - text: SLA timer doesn't pause when state is changed to OnHold on a holiday
-            url: sla-timer-pause-state-changed.md
+            url: service-level-agreements/sla-timer-pause-state-changed.md
           - text: SLA KPI instance shows status as Canceled
-            url: sla-kpi-instance-shows-canceled.md
+            url: service-level-agreements/sla-kpi-instance-shows-canceled.md
           - text: Warning message on SLA KPI instances
-            url: warning-slakpiinstances.md
+            url: service-level-agreements/warning-slakpiinstances.md
 
   # Card
   - title: Omnichannel for Customer Service
@@ -57,19 +57,19 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Authentication error in agent dashboard
-            url: agent-dashboard-error-omnichannel-provision.md
+            url: omnichannel-for-customer-service/agent-dashboard-error-omnichannel-provision.md
           - text: Agent dashboard loading or authorization issues
-            url: agent-dashboard-auth-error.md
+            url: omnichannel-for-customer-service/agent-dashboard-auth-error.md
           - text: Conversation stuck in wrap-up state
-            url: conversation-stuck-wrap-up-state.md
+            url: omnichannel-for-customer-service/conversation-stuck-wrap-up-state.md
           - text: Communication panel loading issues
-            url: communication-panel-load-issue.md
+            url: omnichannel-for-customer-service/communication-panel-load-issue.md
           - text: Error creating a chat widget or social channel
-            url: error-create-chat-widget-social-channel.md
+            url: omnichannel-for-customer-service/error-create-chat-widget-social-channel.md
           - text: Provisioning fails due to expired license
-            url: provision-fails-expired-license.md
+            url: omnichannel-for-customer-service/provision-fails-expired-license.md
           - text: PVA conversations active after chat ends
-            url: pva-conversations-active-dashboard.md
+            url: omnichannel-for-customer-service/pva-conversations-active-dashboard.md
 
   # Card
   - title: Documentation and Training
