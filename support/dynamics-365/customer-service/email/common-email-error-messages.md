@@ -25,6 +25,8 @@ In the **Customer** field of the **CASE DETAILS** section, the value of **Sender
 
 This setting results in the following error in system jobs:
 
+> The case is missing customer.
+
 :::image type="content" source="media/common-email-error-messages/case-missing-customer-error.png" alt-text="Screenshot that shows the details of the error that states the case is missing customer.":::
 
 #### Resolution for Error 1
@@ -39,6 +41,8 @@ The **Customer** field is set as **{Senders Account(Email)}**, and the **Contact
 
 This setting results in the following error in system jobs:
 
+> An error has occurred. Try this action again. If the problem continues, check the Microsoft Dynamics 365 Community for solutions or contact your organization's Microsoft Dynamics 365 Administrator. Finally, you can contact Microsoft Support.
+
 :::image type="content" source="media/common-email-error-messages/error-has-occured.png" alt-text="Screenshot that shows the details of the error that occurs due to the value set for the Customer field.":::
 
 #### Resolution for Error 2
@@ -52,6 +56,8 @@ The **Customer** and **Contact** fields are set as **{Sender(Email)}**.
 :::image type="content" source="media/common-email-error-messages/customer-value-set-case-details.png" alt-text="Screenshot that shows the value set for the Customer and Contact fields.":::
 
 This setting results in the following error in system jobs:
+
+> The specified contact doesn't belong to the contact that was specified in the customer field. Remove the value from the contact field, or select a contact associated to the selected customer, and then try again.
 
 :::image type="content" source="media/common-email-error-messages/specified-contact-not-belong-contact-error.png" alt-text="Screenshot that shows the details of the error that states the specified contact doesn't belong to the contact that was specified in the Customer field.":::
 
