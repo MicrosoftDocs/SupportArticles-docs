@@ -62,7 +62,7 @@ Additionally, you can find the Microsoft Remote Procedure Call (MSRPC) bind atte
 1097    <time>    92.5940283     (652)    SourceIP    135 (0x87)    DestIP    52237 (0xCC0D)    MSRPC    MSRPC:c/o Bind Nack:  Call=0x3  Reject Reason: invalid_checksum
 ```
 
-In network trace, you find the following error:
+In a network trace, you find the following error:
 
 Status : MSRPC:c/o Fault: Call=0x3 Context=0x1 Status=0x5 (Access is denied)
 
@@ -93,7 +93,7 @@ The machine wide limit settings do not grant Remote Activation permission for CO
 ```
 
 > [!NOTE]
-> An event ID 82 is logged in Application logs if auto-enrollment is failing with the same error.
+> Event ID 82 is logged in Application logs if auto-enrollment is failing with the same error.
 
 ### Other symptoms and logs
 
@@ -103,34 +103,34 @@ The machine wide limit settings do not grant Remote Activation permission for CO
 
 ## Cause 1: Incorrect group policy configurations
 
-This issue can occur because one of the following reasons:
+This issue can occur because of one of the following reasons:
 
 1. The group policy **Access this computer from the network** is set, and the user account used to enroll the certificate isn't added. By default, the policy is populated by the groups: Administrators, Backup Operators, Everyone, and Users.
-2. The group policy **Deny access to this computer from the network** is set, **Everyone**, **Users** or a security group that the user belongs to is added.
+2. The group policy **Deny access to this computer from the network** is set, and **Everyone**, **Users** or a security group the user belongs to is added.
 
-These group policies locate at: _Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\User Rights Assignment_.
+These group policies locate at _Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\User Rights Assignment_.
 
 > [!NOTE]
 > You can run `whoami /groups` to identify the groups of the user account or use **Active Directory Users and computers** to identify the groups belonging to the user or the computer account.
 
-Because the user account that's used for certificate enrollment fails authentication by using Kerberos, the authentication mechanism is downgraded to "anonymous logon". The logon fails on the DCOM level.
+Because the user account used for certificate enrollment fails authentication by using Kerberos, the authentication mechanism is downgraded to "anonymous logon." The logon fails on the DCOM level.
 
 ### How to identify
 
 1. Open an elevated command prompt on the certificate server.
-2. Run the `gpresult /h` command. For example `gpresult /h appliedgpo.html`
-3. Open the .html file that is generated, and review the section:  
+2. Run the `gpresult /h` command. For example, `gpresult /h appliedgpo.html`.
+3. Open the .html file that's generated, and review the section:  
    _Settings \\ Policies \\ Windows Settings \\ Local Policies \\ User Rights Assignment_
    - **Access this computer from the network**
    - **Deny access to this computer from the network**
 4. Note the **Winning GPO** name.
 
-   :::image type="content" source="media/error-0x800706ba-certificate-enrollment/screenshot-of-the-gpresult-output.png" alt-text="The screenshot of the gpresult output.":::
+   :::image type="content" source="media/error-0x800706ba-certificate-enrollment/screenshot-of-the-gpresult-output.png" alt-text="Screenshot that shows the gpresult output.":::
 
-To resolve this issue, edit the Winning GPO.
+To resolve this issue, edit the **Winning GPO**.
 
 > [!NOTE]
-> The settings configured on the GPO's is for a reason hence you might need to talk to your security team before making any changes.
+> The settings configured on the Group Policy Objects (GPOs) are for a reason, so you should talk to your security team before making any changes.
 
 Add the appropriate user groups to the **Access this computer from the network** group policy. For example:
 
@@ -138,7 +138,7 @@ Add the appropriate user groups to the **Access this computer from the network**
 
 Then, remove the group that the user account or the computer account belongs to from the **Deny access to this computer from the network** group policy.
 
-For more information, see [Access this computer from the network - security policy setting](/windows/security/threat-protection/security-policy-settings/access-this-computer-from-the-network)
+For more information, see [Access this computer from the network - security policy setting](/windows/security/threat-protection/security-policy-settings/access-this-computer-from-the-network).
 
 ## Cause 2: Missing "NT Authority\Authenticated Users" in the Users group of the certificate server or any other default permissions
 
@@ -148,32 +148,31 @@ Here are the default permissions:
 - NT AUTHORITY\Authenticated Users
 - NT AUTHORITY\INTERACTIVE
 
-To resolve this issue, open **Local Users and Groups** on the certificate server, locate the **Users** group and add the missing groups.
+To resolve this issue, open **Local Users and Groups** on the certificate server, locate the **Users** group, and add the missing groups.
 
-## Cause 3: Missing "NT AUTHORITY\Authenticated Users" from "Certificate Service DCOM Access" local group of the certificate server
+## Cause 3: Missing "NT AUTHORITY\Authenticated Users" from the "Certificate Service DCOM Access" local group of the certificate server
 
 To resolve this issue, follow these steps:
 
 1. Open **Local Users and Groups** on the certificate server.
 2. Locate the "Certificate Service DCOM Access" group.
-3. Add "NT AUTHORITY\Authenticated users".
+3. Add "NT AUTHORITY\Authenticated users."
 
-## Cause 4: EnableDCOM is not set to Y on Client and CA Server
+## Cause 4: EnableDCOM isn't set to Y on the Client and CA Server
 
 To resolve this issue, follow these steps:
 
-1. Locate the following registry key:  
-   `HKEY_LOCAL_MACHINE\Software\Microsoft\OLE`
+1. Locate this registry key `HKEY_LOCAL_MACHINE\Software\Microsoft\OLE`.
 2. Verify if the data of the **EnableDCOM** registry value is set to **Y**.
-3. If it is **N**, change it to **Y**, and then restart the computer.
+3. If it's **N**, change it to **Y**, and then restart the computer.
 
-## Cause 5: Remote Procedure Call restrictions not applied on the Certificate server
+## Cause 5: Remote Procedure Call restrictions aren't applied on the Certificate server
 
-To identify the issue, verify that the GPO is applied to the certificate Server. Follow these steps:
+To identify the issue, verify that the GPO is applied to the certificate server. Follow these steps:
 
 1. Open an elevated command prompt on the certificate server.
-2. Run the `gpresult /h` command. For example, `gpresult /h appliedgpo.html`
-3. Open the .html file, identify the winning GPO where the **Restrictions for Unauthenticated RPC Client** group policy is configured to **Not Configured**.
+2. Run the `gpresult /h` command. For example, `gpresult /h appliedgpo.html`.
+3. Open the .html file, and identify the winning GPO where the **Restrictions for Unauthenticated RPC Client** group policy is configured to **Not Configured**.
 
    The group policy locates at _Administrative Templates \\ System \\ Remote Procedure Call \\ Restrictions for Unauthenticated RPC Client_.
 
