@@ -3,6 +3,8 @@
   items:
     - name: Administration and licensing
       items:
+        - name: All AI Builder credits have been consumed
+          href: all-ai-builder-credits-have-been-consumed.md
         - name: Actions are disabled or deactivated
           href: aibuilder-actions-are-disabled-deactivated.md
         - name: AI Builder trial license still displays after you've purchased an AI Builder license
