@@ -156,7 +156,7 @@ In essence, the In-Memory OLTP technology has two sets of files:
 
 - Files related to [natively compiled stored procedures and memory-optimized tables](/sql/relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure).
 
-  - The In-memory OLTP files are typically stored in an *xtp* subfolder under the *DATA* directory.
+  - The In-memory OLTP files are typically stored in an *xtp* subfolder under the *DATA* directory for the instance.
   - File formats include the following types:
 
     - *xtp\_\<t/p\>\_\<dbid\>\_\<objid\>.c*
@@ -227,8 +227,8 @@ The following Analysis Services directories and processes can be excluded from a
 
 |SSAS instance         | Process/Executable file|
 |-------               |---------               |
-|SSAS default instance |*%ProgramFiles%\\Microsoft SQL Server\\\MSAS\<ID\>.MSSQLSERVER\\OLAP\\bin\\MSMDSrv.exe*|
-|SSAS named instance   |*%ProgramFiles%\\Microsoft SQL Server\\\MSAS\<ID\>.<InstanceName\>\\OLAP\\bin\\MSMDSrv.exe*|
+|Default instance |*%ProgramFiles%\\Microsoft SQL Server\\\MSAS\<ID\>.MSSQLSERVER\\OLAP\\bin\\MSMDSrv.exe*|
+|Named instance   |*%ProgramFiles%\\Microsoft SQL Server\\\MSAS\<ID\>.<InstanceName\>\\OLAP\\bin\\MSMDSrv.exe*|
 
 The `<ID>` is a placeholder for the build ID. For example, a default Analysis Services 2016 instance binary installation location by default is *C:\\Program Files\\Microsoft SQL Server\\MSAS13.MSSQLSERVER\OLAP\bin*.
 
@@ -272,7 +272,7 @@ By default, in Analysis Services 2012 and later versions, the log file location 
 |SSAS instance      | Log files directory|
 |---------          |---------           |
 |Default instance   | *C:\\Program Files\\Microsoft SQL Server\\MSAS\<ID\>.MSSQLSERVER\\OLAP\\Log*     |
-|Named instance     | *C:\\Program Files\\Microsoft SQL Server\\MSAS\<ID\>.\<InstanceName\>\\OLAP\\log* |
+|Named instance     | *C:\\Program Files\\Microsoft SQL Server\\MSAS\<ID\>.\<InstanceName\>\\OLAP\\Log* |
 
 #### Directories for partitions not stored in the default data directories for Analysis Services 2012 and later versions
 
