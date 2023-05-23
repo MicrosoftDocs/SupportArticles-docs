@@ -1,6 +1,6 @@
 ---
 title: AKS cluster error SubnetWithExternalResourcesCannotBeUsedByOtherResources
-description: Provides solutions to an error that occurs when you create, upgrade or scale a Microsoft Azure Kubernetes Service cluster.
+description: Provides solutions to an error that occurs when you create, upgrade, or scale a Microsoft Azure Kubernetes Service cluster.
 ms.date: 05/23/2023
 author: axelgMS
 ms.author: axelg
@@ -9,7 +9,7 @@ ms.service: azure-kubernetes-service
 ---
 # Troubleshoot the SubnetWithExternalResourcesCannotBeUsedByOtherResources error code
 
-This article provides solutions to the "SubnetWithExternalResourcesCannotBeUsedByOtherResources" error that occurs when you create, update or scale a Microsoft Azure Kubernetes Service (AKS) cluster.
+This article provides solutions to the "SubnetWithExternalResourcesCannotBeUsedByOtherResources" error that occurs when you create, update, or scale a Microsoft Azure Kubernetes Service (AKS) cluster.
 
 ## Symptoms
 
@@ -20,7 +20,7 @@ When attempting to create an AKS cluster or perform an "update" or "scale" opera
 
 ## Cause
 
-This error is related to the configuration of subnets. It means that you are trying to use a subnet that already has external resources associated with it for another resource. However, a subnet that has external resources associated with it isn't allowed to be used by other resources. For more information, see [Effect of subnet delegation on your subnet](/azure/virtual-network/subnet-delegation-overview#effect-of-subnet-delegation-on-your-subnet).
+This error is related to the configuration of subnets. It means that you're trying to use a subnet that already has external resources associated with it for another resource. However, a subnet that has external resources associated with it isn't allowed to be used by other resources. For more information, see [Effect of subnet delegation on your subnet](/azure/virtual-network/subnet-delegation-overview#effect-of-subnet-delegation-on-your-subnet).
 
 ## Solution
   
