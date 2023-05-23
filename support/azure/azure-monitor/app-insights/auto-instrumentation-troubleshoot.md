@@ -4,7 +4,7 @@ description: Helps troubleshoot problems with auto-instrumentation in Applicatio
 ms.topic: conceptual
 ms.service: azure-monitor
 ms.subservice: application-insights
-ms.date: 05/22/2023
+ms.date: 05/23/2023
 ---
 # Troubleshoot Application Insights auto-instrumentation
 
