@@ -27,7 +27,7 @@ This setting results in the following error in system jobs:
 
 :::image type="content" source="media/common-email-error-messages/case-missing-customer-error.png" alt-text="Screenshot that shows the details of the error that states the case is missing customer.":::
 
-## Resolution for Error 1
+#### Resolution for Error 1
 
 To resolve this issue, keep the **Customer** field blank or set it to **{Sender(Email)}**. This allows the system to automatically create a contact for the unknown sender and link it to the case.
 
@@ -41,7 +41,7 @@ This setting results in the following error in system jobs:
 
 :::image type="content" source="media/common-email-error-messages/error-has-occured.png" alt-text="Screenshot that shows the details of the error that occurs due to the value set for the Customer field.":::
 
-## Resolution for Error 2
+#### Resolution for Error 2
 
 To resolve this issue, keep the **Customer** field blank or set it to **{Sender(Email)}**. This allows the system to automatically create a contact for the unknown sender and link it to the case.
 
@@ -55,7 +55,7 @@ This setting results in the following error in system jobs:
 
 :::image type="content" source="media/common-email-error-messages/specified-contact-not-belong-contact-error.png" alt-text="Screenshot that shows the details of the error that states the specified contact doesn't belong to the contact that was specified in the Customer field.":::
 
-## Resolution for Error 3
+#### Resolution for Error 3
 
 To resolve this issue, leave the **Contact** field blank and set the **Customer** field either to blank or to **{Sender(Email)}**.
 

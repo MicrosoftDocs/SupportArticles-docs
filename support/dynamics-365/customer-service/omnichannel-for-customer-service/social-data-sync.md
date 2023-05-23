@@ -24,4 +24,4 @@ To solve this issue, ensure the toggle for preventing social data in Dynamics 36
 1. Open the Power Platform admin center, navigate to **Environments**, select an environment, and then select **Settings** > **Product** > **Features**.
 1. Ensure the toggle for the **Prevent social data in Dynamics** setting is set to **Off** in the Power BI **Embedded chat** settings.
 
-:::image type="content" source="media/social-data-sync/social-data-setting.png" alt-text="Screenshot shows how to prevent social data in the Dynamics setting in the Power Platform admin center.":::
+   :::image type="content" source="media/social-data-sync/social-data-setting.png" alt-text="Screenshot shows how to prevent social data in the Dynamics setting in the Power Platform admin center.":::
