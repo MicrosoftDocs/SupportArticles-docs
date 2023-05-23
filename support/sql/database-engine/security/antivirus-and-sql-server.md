@@ -152,25 +152,27 @@ These files typically have the *.sql* file name extension and contain Transact-S
 
 #### In-memory OLTP files
 
-Native procedure and in-memory table definition-related files are specific to In-memory OLTP in Microsoft SQL Server.
+In essence, the In-Memory OLTP technology has two sets of files:
 
-- The In-memory OLTP files are typically stored in an *xtp* subfolder under the *DATA* directory.
-- File formats include the following types:
+- Files related to [natively compiled stored procedures and memory-optimized tables](/sql/relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure).
 
-  - *xtp\_\<t/p\>\_\<dbid\>\_\<objid\>.c*
-  - *xtp\_\<t/p\>\_\<dbid\>\_\<objid\>.dll*
-  - *xtp\_\<t/p\>\_\<dbid\>\_\<objid\>.obj*
-  - *xtp\_\<t/p\>\_\<dbid\>\_\<objid\>.out*
-  - *xtp\_\<t/p\>\_\<dbid\>\_\<objid\>.pdb*
-  - *xtp\_\<t/p\>\_\<dbid\>\_\<objid\>.xml*
+  - The In-memory OLTP files are typically stored in an *xtp* subfolder under the *DATA* directory.
+  - File formats include the following types:
+
+    - *xtp\_\<t/p\>\_\<dbid\>\_\<objid\>.c*
+    - *xtp\_\<t/p\>\_\<dbid\>\_\<objid\>.dll*
+    - *xtp\_\<t/p\>\_\<dbid\>\_\<objid\>.obj*
+    - *xtp\_\<t/p\>\_\<dbid\>\_\<objid\>.out*
+    - *xtp\_\<t/p\>\_\<dbid\>\_\<objid\>.pdb*
+    - *xtp\_\<t/p\>\_\<dbid\>\_\<objid\>.xml*
   
-  > [!NOTE]
-  > *xtp* is a prefix used to indicate the association with In-memory OLTP. The placeholder `<t/p>` represents either "t" for table or "p" for procedure. The placeholder `<dbid>` refers to the database ID of the user database where the memory-optimized object is located. The placeholder `<objid>` indicates the object ID assigned to the memory-optimized object (either the table or the procedure).
+    > [!NOTE]
+    > *xtp* is a prefix used to indicate the association with In-memory OLTP. The placeholder `<t/p>` represents either "t" for table or "p" for procedure. The placeholder `<dbid>` refers to the database ID of the user database where the memory-optimized object is located. The placeholder `<objid>` indicates the object ID assigned to the memory-optimized object (either the table or the procedure).
 
-#### OLTP checkpoint and delta files
+- Files related to [checkpoint](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql) and [delta files](/sql/relational-databases/in-memory-oltp/durability-for-memory-optimized-tables).
 
-- No specific file extension for the files.
-- Files are present under the folder structure identified by the container type FILESTREAM from `sys.database_files`.
+  - No specific file extension for the files.
+  - Files are present under the folder structure identified by the container type FILESTREAM from `sys.database_files`.
 
 #### DBCC CHECKDB files
 
