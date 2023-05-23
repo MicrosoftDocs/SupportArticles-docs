@@ -163,7 +163,7 @@ Once the filtering is done, you can double-click the "Access Denied" line to vie
 
 :::image type="content" source="media/troubleshoot-apps-start-failure-use-process-monitor/count-values-occurrences.png" alt-text="Screenshot of the Count Values Occurrences window with an access denied line selected.":::
 
-:::image type="content" source="media/troubleshoot-apps-start-failure-use-process-monitor/process-monitor-access-denied-lines.png" alt-text="Screenshot of the Calculator process followed by some access denied processes. lightbox="media/troubleshoot-apps-start-failure-use-process-monitor/process-monitor-access-denied-lines.png"":::
+:::image type="content" source="media/troubleshoot-apps-start-failure-use-process-monitor/process-monitor-access-denied-lines.png" alt-text="Screenshot of the Calculator process followed by some access denied processes. lightbox="media/troubleshoot-apps-start-failure-use-process-monitor/process-monitor-access-denied-lines.png":::
 
 If you work through the list, not all "Access Denied" results cause the code to fail.
 
