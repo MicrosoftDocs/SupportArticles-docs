@@ -1,0 +1,23 @@
+- name: Surface
+  href: index.yml
+  items:
+  - name: Surface devices
+    items:
+    - name: Disk0 not found when deploying Windows on a Surface device
+      href: disk0-not-found-deploy-windows-surface-device-1tb-drive-configuration.md
+    - name: Prompted for BitLocker recovery key after installing updates
+      href: prompted-bitlocker-recovery-key-installing-updates-surface-uefi-tpm-firmware-surface-device.md
+    - name: PXE boot fails on a Surface Laptop
+      href: pxe-boot-fails-on-surface-laptop.md
+    - name: Surface Device with a 1-TB drive configuration shows two drives
+      href: surface-device-1tb-drive-configuration-shows-two-drives.md
+  - name: Surface Hub
+    items:
+    - name: Surface Hub troubleshooting
+      href: /surface-hub/troubleshoot-surface-hub?context=/troubleshoot/devices/context/context
+    - name: Collect Surface Hub log files
+      href: /surface-hub/collect-surface-hub-log-files?context=/troubleshoot/devices/context/context
+    - name: Third-Party Stand policy and waiver
+      href: /surface-hub/surface-hub-third-party-stand-policy-waiver?context=/troubleshoot/devices/context/context
+    - name: Surface Hub can't download updates from Windows Update
+      href: /surface-hub/surface-hub-cannot-download-updates-from-windows-update?context=/troubleshoot/devices/context/context

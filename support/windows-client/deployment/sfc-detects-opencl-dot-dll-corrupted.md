@@ -1,7 +1,7 @@
 ---
 title: SFC detects Opencl.dll as corrupted
 description: Fixes an issue that causes SFC to detect Opencl.dll as corrupted in Windows 10.
-ms.date: 09/24/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -33,3 +33,7 @@ To fix this issue, run the following command:
 ```console
 Dism /online /cleanup-image /restorehealth
 ```
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).

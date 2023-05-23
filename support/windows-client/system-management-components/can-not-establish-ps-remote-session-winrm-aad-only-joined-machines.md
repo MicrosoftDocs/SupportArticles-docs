@@ -1,7 +1,7 @@
 ---
 title: Can't establish a PowerShell remote session using WinRM
 description: Helps to resolve the issue in which a PowerShell remote session using Windows Remote Management (WinRM) can't be established between machines that are joined to Azure Active Directory (Azure AD) only.
-ms.date: 03/09/2023
+ms.date: 05/16/2023
 author: v-lianna
 ms.author: v-lianna
 manager: dcscontentpm
@@ -78,3 +78,7 @@ To resolve this issue, set the default SPN prefix to `HOST` by running the follo
 ```console
 reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WSMAN\Client /v spn_prefix /t REG_SZ /d "HOST" /f
 ```
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for User Experience issues](../windows-troubleshooters/gather-information-using-tssv2-user-experience.md#powershell).

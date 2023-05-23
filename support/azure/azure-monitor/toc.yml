@@ -5,6 +5,16 @@ items:
   items:
   - name: Application Insights telemetry
     items:
+    - name: OpenTelemetry troubleshooting
+      items:
+      - name: .NET
+        href: app-insights/opentelemetry-troubleshooting-dotnet.md
+      - name: Java
+        href: app-insights/opentelemetry-troubleshooting-java.md
+      - name: Node.js
+        href: app-insights/opentelemetry-troubleshooting-nodejs.md
+      - name: Python
+        href: app-insights/opentelemetry-troubleshooting-python.md
     - name: JavaScript SDK troubleshooting
       href: app-insights/javascript-sdk-troubleshooting.md
     - name: Troubleshoot missing telemetry in Application Insights
@@ -29,12 +39,16 @@ items:
         href: app-insights/intermittent-test-failure-protocol-error.md
       - name: Use availability tests on an internal server behind a firewall
         href: app-insights/internal-server-availability-tests-firewall.md     
+    - name: Daily cap unexpected behaviors
+      href: app-insights/daily-cap-unexpected-behaviors.md              
     - name: Error retrieving data in portal
       href: app-insights/troubleshoot-portal-connectivity.md
     - name: Missing CPU Total and Committed Memory metrics
       href: app-insights/missing-cpu-total-committed-memory-metrics.md
     - name: Troubleshoot Application Insights Profiler
       href: app-insights/profiler-troubleshooting.md
+    - name: Troubleshoot Code Optimizations (Preview)
+      href: ./app-insights/code-optimizations-troubleshooting.md
     - name: Troubleshoot Azure Application Insights availability monitoring
       href: app-insights/troubleshoot-availability.md
     - name: Troubleshoot user behavior analytics tools in Azure Application Insights
