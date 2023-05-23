@@ -1,53 +1,11 @@
 # - name: Support articles for SQL Server
-#   items:
+items:
 
 - name: Welcome
   href: welcome-sql-server.yml
 
 - name: Analysis Services (SSAS)
-  items:
-  - name: Calculate previous period growth
-    href: analysis-services/calculate-previous-period-growth.md
-  - name: Can't connect to a named instance
-    href: analysis-services/cannot-connect-named-instance.md
-  - name: Configure MSOLAP data provider for Excel
-    href: analysis-services/configure-msolap-data-provider-excel.md
-  - name: Configure SSAS to generate memory dump files
-    href: analysis-services/configure-ssas-generate-memory-dump-files.md
-  - name: Determine the first or last member with data
-    href: analysis-services/determine-first-or-last-member-with-data.md
-  - name: Disk space exhaustion causes SSAS crash
-    href: analysis-services/disk-space-exhaustion-ssas-crash.md
-  - name: Enable the snapshot transaction isolation level
-    href: analysis-services/enable-snapshot-transaction-isolation-level.md
-  - name: Error 1032 in the application log
-    href: analysis-services/error-1032-application-log.md
-  - name: Error and MDX query fails in SSAS multidimensional instance
-    href: analysis-services/error-mdx-query-fails-ssas-multidimensional-instance.md
-  - name: Error when you connect to a named instance
-    href: analysis-services/error-connect-named-instance.md
-  - name: Error when you process a database or a cube
-    href: analysis-services/error-messages-process-database-cube.md
-  - name: Error when you process a dimension
-    href: analysis-services/error-process-dimension.md
-  - name: Error when you use PowerPivot for Excel
-    href: analysis-services/error-use-powerpivot-excel-workbook.md
-  - name: MDX query contains Aggregate returns error
-    href: analysis-services/mdx-query-contains-aggregate-returns-error.md
-  - name: MDX query with calculated measure runs slowly
-    href: analysis-services/mdx-query-calculated-measure-run-slow.md
-  - name: No properties and members of Dimension Hierarchy
-    href: analysis-services/no-dimension-hierarchy-properties.md
-  - name: NA returns when you run a multi-subselect query
-    href: analysis-services/na-returns-run-a-multi-subselect-query.md
-  - name: Perform a distributed query with OLAP Server
-    href: analysis-services/perform-distributed-query-olap.md
-  - name: Unexpected result from Analysis Services
-    href: analysis-services/unexpected-result-analysis-services.md
-  - name: Writeback performance issue
-    href: analysis-services/writeback-performance-issue-cell-security-enable.md
-  - name: WMI Provider Error and 0x80004005 code
-    href: analysis-services/wmi-provider-error-0x80004005-code.md
+  href: analysis-services/toc.yml
 
 - name: Azure SQL Virtual Machine
   items:
