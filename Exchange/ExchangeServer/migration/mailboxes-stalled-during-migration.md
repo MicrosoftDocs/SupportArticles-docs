@@ -73,13 +73,13 @@ Set-SettingOverride -Identity "MdbDiskLatency" -Parameters @("MaxConcurrency=$li
 
 - After you set a new WLM limit, you can verify it by running the following commands:
 
-```powershell
-Get-SettingOverride -Identity "MdbReplication" | Select -ExpandProperty Parameters
-Get-SettingOverride -Identity "CiAgeOfLastNotification" | Select -ExpandProperty Parameters
-Get-SettingOverride -Identity "MdbAvailability" | Select -ExpandProperty Parameters
-Get-SettingOverride -Identity "DiskLatency" | Select -ExpandProperty Parameters
-Get-SettingOverride -Identity "MdbDiskLatency" | Select -ExpandProperty Parameters
-```
+  ```powershell
+  Get-SettingOverride -Identity "MdbReplication" | Select -ExpandProperty Parameters
+  Get-SettingOverride -Identity "CiAgeOfLastNotification" | Select -ExpandProperty Parameters
+  Get-SettingOverride -Identity "MdbAvailability" | Select -ExpandProperty Parameters
+  Get-SettingOverride -Identity "DiskLatency" | Select -ExpandProperty Parameters
+  Get-SettingOverride -Identity "MdbDiskLatency" | Select -ExpandProperty Parameters
+  ```
 
 - Use the [Get-MoveRequest](/powershell/module/exchange/get-moverequest) cmdlet to view the detailed status of an ongoing mailbox move that you initiated by using the [New-MoveRequest](/powershell/module/exchange/new-moverequest) cmdlet.
 
