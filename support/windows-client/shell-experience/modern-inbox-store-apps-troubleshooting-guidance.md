@@ -823,13 +823,13 @@ If you aren't sure which GPO is affecting the system and have many GPOs applied,
 To reset the Group Policy settings with a command prompt, use these steps:
 
 1. Open a command prompt window as an administrator.
-2. Type the following command to reset all the Group Policy settings and press <kbd>Enter</kbd>:
+2. Enter the following command to reset all the Group Policy settings and press <kbd>Enter</kbd>:
 
     ```console
     RD /S /Q "%WinDir%\System32\GroupPolicyUsers" && RD /S /Q "%WinDir%\System32\GroupPolicy" 
     ```
 
-3. Type the following command to update the changes in the Local Group Policy console and press <kbd>Enter</kbd>:
+3. Enter the following command to update the changes in the Local Group Policy console and press <kbd>Enter</kbd>:
 
     ```console
     gpupdate /force
