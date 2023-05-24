@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Apps failing to start using Windows Package Manager
 description: Provides troubleshooting guidance for resolving an issue where Modern, Inbox, and Microsoft Store Apps fail to start.
-ms.date: 05/23/2023
+ms.date: 05/24/2023
 author: v-lianna
 ms.author: v-lianna
 manager: dcscontentpm
