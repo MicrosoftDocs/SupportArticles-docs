@@ -22,9 +22,9 @@ ms.custom: CI176375
 
 After you upgrade to Windows 11, the on-screen keyboard is reduced to a smaller size on the following Microsoft Teams Rooms devices that have touch consoles:
 
--	Crestron Mercury
--	Crestron Mercury Mini
--	Yealink MTouch II
+- Crestron Mercury
+- Crestron Mercury Mini
+- Yealink MTouch II
 
 ## Cause
 
