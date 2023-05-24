@@ -161,7 +161,7 @@ Group Policies and GPOs aren't compatible with mobile device management (MDM) ba
 To perform a KIR activation on Intune managed devices, follow these steps:  
 
 1. [Download and install the KIR MSI file to get ADMX files](#1-download-and-install-the-kir-msi-file-to-get-admx-files).  
-2. [Create a custom configuration profile in Microsoft Intune](#2-create-a-custom-configuration-profile-in-microsoft-endpoint-manager).
+2. [Create a custom configuration profile in Microsoft Intune](#2-create-a-custom-configuration-profile-in-microsoft-intune).
 3. [Monitor KIR activation](#3-monitor-kir-activation).  
   
 ### 1. Download and install the KIR MSI file to get ADMX files
