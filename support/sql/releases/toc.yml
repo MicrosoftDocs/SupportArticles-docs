@@ -58,8 +58,8 @@ items:
 - name: SQL Server on Linux Release History
   items:
   - name: SQL Server 2022
-    href: ../linux/release-history-2022.md
+    href: linux/release-history-2022.md
   - name: SQL Server 2019
-    href: ../linux/release-history-2019.md
+    href: linux/release-history-2019.md
   - name: SQL Server 2017
-    href: ../linux/release-history-2017.md
+    href: linux/release-history-2017.md
