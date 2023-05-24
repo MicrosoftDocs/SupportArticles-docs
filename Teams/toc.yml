@@ -275,6 +275,8 @@
       href: ./teams-rooms-and-devices/teams-android-devices-conditional-access-issues.md
     - name: Known issues
       href: ./teams-rooms-and-devices/rooms-known-issues.md
+    - name: On-screen keyboard size is reduced on certain devices
+      href: ./teams-rooms-and-devices/teams-rooms-device-keyboard-size-reduced.md
     - name: Signed out of Teams Android devices
       href: ./teams-rooms-and-devices/signed-out-of-teams-android-devices.md
     - name: Teams Rooms app doesn't start automatically after updates
