@@ -112,7 +112,7 @@ If you add any other resources to the SQL Server group, those resources must alw
 
 ### MSDTC considerations
 
-Reading [MSDTC Recommendations on SQL Failover Cluster](/archive/blogs/alwaysonpro/msdtc-recommendations-on-sql-failover-cluster) should be the starting point for any MSDTC dependency discussions, to determine whether it is required or not.
+Reading [MSDTC Recommendations on SQL Failover Cluster](/archive/blogs/alwaysonpro/msdtc-recommendations-on-sql-failover-cluster) should be the starting point for any MSDTC dependency discussions, to determine whether it's required or not.
 
 That MSDTC Recommendations FAQ (Frequently Asked Questions) addresses common questions and best practices with MSDTC (Microsoft Distributed Transaction Coordinator) when used with SQL Server Failover Clustered instances to include current recommendations and best practices.  
 

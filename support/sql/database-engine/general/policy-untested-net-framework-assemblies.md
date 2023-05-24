@@ -31,10 +31,10 @@ There are two kinds of .NET assemblies: pure and mixed. Pure .NET assemblies con
 When you use a .NET Framework assembly that isn't in the supported list, you are required to use the `CREATE ASSEMBLY` statement to register the assembly and the referenced assemblies within SQL Server database. The SQL Server `CREATE ASSEMBLY` statement lets only pure .NET Framework assemblies be registered. If the assembly or any referenced assembly isn't a pure .NET Framework assembly (and, therefore, is a mixed assembly), you receive the following error message:
 
 > Msg 6544, Level 16, State 1, Line 2  
-CREATE ASSEMBLY for assembly '\<assembly name>' failed because assembly ‘\<assembly name>’ is malformed or not a pure .NET assembly.  
+CREATE ASSEMBLY for assembly '\<assembly name\>' failed because assembly '\<assembly name\>' is malformed or not a pure .NET assembly.  
 Unverifiable PE Header/native stub.
 
-In this case, you can't use the .NET Framework assembly together with SQL CLR unless the assembly is in the supported list that is documented in this article. Additionally, a .NET Framework assembly can change from a pure assembly to a mixed assembly between versions. If you use an assembly that's not in the supported list, you might have a situation in which the assembly works in one version of the .NET Framework but not in another. This restriction doesn't apply to the assemblies in the supported list because these assemblies are not required to be registered by using the `CREATE ASSEMBLY` statement.
+In this case, you can't use the .NET Framework assembly together with SQL CLR unless the assembly is in the supported list that's documented in this article. Additionally, a .NET Framework assembly can change from a pure assembly to a mixed assembly between versions. If you use an assembly that's not in the supported list, you might have a situation in which the assembly works in one version of the .NET Framework but not in another. This restriction doesn't apply to the assemblies in the supported list because these assemblies are not required to be registered by using the `CREATE ASSEMBLY` statement.
 
 Additionally, you must maintain these assemblies after you upgrade the .NET Framework. The following error message is shown when you execute a CLR routine or use an assembly in SQL Server:
 

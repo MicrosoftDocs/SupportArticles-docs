@@ -1,10 +1,11 @@
 ---
 title: Can't connect remotely using TCP/IP
 description: This article provides resolutions for the problem where users are not able to connect remotely to SQL Server using TCP/IP protocol.
-ms.date: 03/27/2023
+ms.date: 09/25/2020
 ms.custom: sap:Connection issues
 ms.technology: sql-engine-connectionissues
 ---
+
 # Users may not be able to connect remotely to SQL server using TCP/IP protocol
 
 This article helps you resolve the problem where you are not be able to connect remotely to SQL server using TCP/IP protocol.
@@ -48,11 +49,11 @@ SELECT * FROM sys.tcp_endpoints
 ```
 
 > [!NOTE]
-> As explained in Books Online topic on [sys.tcp_endpoints (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-tcp-endpoints-transact-sql), this view doesn't contain information on the ports and protocols that SQL Server instance is currently configured to use. To find that information, use [SQL Server Configuration Manager](/sql/relational-databases/sql-server-configuration-manager).
+> As explained in Books Online topic on [sys.tcp_endpoints (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-tcp-endpoints-transact-sql), this view doesn't contain information on the ports and protocols that SQL Server instance is currently configured to use. To find that information, see [SQL Server Configuration Manager](/sql/relational-databases/sql-server-configuration-manager).
 
 ## Resolution
 
-- **Method 1**: Drop the endpoint that is causing the problem using the [DROP ENDPOINT (Transact-SQL)](/sql/t-sql/statements/drop-endpoint-transact-sql) command.
+- **Method 1**: Drop the endpoint that's causing the problem using the [DROP ENDPOINT (Transact-SQL)](/sql/t-sql/statements/drop-endpoint-transact-sql) command.
 
   For example, to drop an endpoint named `TestEP` you can use the following command:
 

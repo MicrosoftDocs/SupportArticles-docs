@@ -73,10 +73,9 @@ To identify that this issue is caused by the WMI namespace for the cluster, foll
 
    > [!NOTE]
    > As an additional test, you can run the following query in Windows PowerShell:
-
-      ```powershell
-       select name from <MSCluster_Cluster>
-      ```
+     ```powershell
+       SELECT name FROM <MSCluster_Cluster>
+     ```
    > If the issue isn't caused by an invalid MSCluster namespace, the expected result is that the cluster network name is returned.
 
 ## Applies to

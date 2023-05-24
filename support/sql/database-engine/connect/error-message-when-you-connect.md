@@ -66,7 +66,7 @@ The example uses a file named _caCert.cer_ as a certificate file. You must obtai
 
 1. Click **Next** to move past the **welcome dialog** box of the **Certificate Export** Wizard.
 
-1. Confirm that **No, do not export the private key** is selected, and then click **Next**.
+1. Confirm that **No, do not export the private key** is selected, and then select **Next**.
 
 1. Make sure that either **DER encoded binary X.509 (.CER)** or **Base-64 encoded X.509 (.CER)** is selected, and then click **Next**.
 
@@ -78,27 +78,27 @@ The example uses a file named _caCert.cer_ as a certificate file. You must obtai
 
 1. Start the Certificates snap-in for MMC on the client computer and then add the Certificates snap-in.
 
-1. In the **Certificates snap-in** dialog box, choose **Computer** account, and then choose **Next**.
+1. In the **Certificates snap-in** dialog box, select **Computer** account, and then select **Next**.
 
-1. In the **Select Computer** pane, choose **Local computer: (the computer this console is running on)**, and then choose **Finish**.
+1. In the **Select Computer** pane, select **Local computer: (the computer this console is running on)**, and then select **Finish**.
 
 1. Choose **OK** to close the **Add or Remove Snap-ins** dialog box.
 
 1. In the left pane of MMC, expand the **Certificates (Local Computer)** node.
 
-1. Expand the **Trusted Root Certification Authorities** node, right-click the **Certificates** subfolder, select **All Tasks**, and then choose **Import**.
+1. Expand the **Trusted Root Certification Authorities** node, right-click the **Certificates** subfolder, select **All Tasks**, and then select **Import**.
 
-1. In the **Certificate Import Wizard**, on the **Welcome page**, choose **Next**.
+1. In the **Certificate Import Wizard**, on the **Welcome page**, select **Next**.
 
-1. On the **File to Import** page, choose **Browse**.
+1. On the **File to Import** page, select **Browse**.
 
-1. Browse to the location of the *caCert.cer* certificate file, select the file, and then choose **Open**.
+1. Browse to the location of the *caCert.cer* certificate file, select the file, and then select **Open**.
 
-1. On the **File to Import** page, choose **Next**.
+1. On the **File to Import** page, select **Next**.
 
-1. On the **Certificate Store** page, accept the default selection, and then choose **Next**.
+1. On the **Certificate Store** page, accept the default selection, and then select **Next**.
 
-1. On the Completing the **Certificate Import Wizard** page, choose **Finish**.
+1. On the Completing the **Certificate Import Wizard** page, select **Finish**.
 
 For scenarios 1 and 2: Set **Trust Server Certificate** setting to _true_ in your client application.
 
@@ -111,7 +111,7 @@ For more information on how to do this, review the following topics:
 - [Using Encryption with Sqlclient](/sql/connect/ado-net/sql/sqlclient-support-always-encrypted)
 
 > [!NOTE]
-> If you are using SQL Server Management Studio, you can click on the **Options** tab, and check the box **Trust Server certificate** option in the **Connection Properties** tab.
+> If you are using SQL Server Management Studio, select the **Options** tab, and check the box **Trust Server certificate** option in the **Connection Properties** tab.
 
 **Caution:** SSL connections that are encrypted by using a self-signed certificate don't provide strong security. They are susceptible to `man-in-the-middle` attacks. You shouldn't rely on SSL using self-signed certificates in a production environment or on servers that are connected to the Internet.
 

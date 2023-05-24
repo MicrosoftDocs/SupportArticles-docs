@@ -1,6 +1,6 @@
 ---
 title: Query that typecasts a Unicode column to a binary collation returns incorrect results
-description: This article provides workarounds for the problem that occurs when a statement contains an "IN" or "Or" clause that's defined for a Unicode column and contains 'collate' to typecast the Unicode column to another binary collation.
+description: This article provides workarounds for the problem that occurs when a statement contains an IN or OR clause that's defined for a Unicode column and contains 'collate' to typecast the Unicode column to another binary collation.
 ms.date: 09/07/2020
 ms.custom: sap:Database Design and Development
 ms.prod: sql
@@ -8,7 +8,7 @@ ms.prod: sql
 
 # SQL Server query that typecasts a Unicode column to a binary collation returns incorrect results
 
-This article helps you resolve the problem that occurs when a statement contains an `IN` or `Or` clause that's defined for a Unicode column and contains `collate` to typecast the Unicode column to another binary collation.
+This article helps you resolve the problem that occurs when a statement contains an `IN` or `OR` clause that's defined for a Unicode column and contains `collate` to typecast the Unicode column to another binary collation.
 
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 3053639
@@ -20,8 +20,8 @@ You have a table in a SQL Server database in which the following conditions are 
 - The table contains a Unicode column. For example, the table has a `nchar(5)` column.
 - Collation of the Unicode column is `Latin1_General_BIN`.
 - The same Unicode column is part of an index. However, T-SQL statements that are run against this table may return incorrect results. This problem occurs when the following conditions are true:
-- The T-SQL statement contains an `IN` or `Or` clause that's defined for the same Unicode column.
-- The T-SQL statement contains `collate` to typecast the Unicode column to another binary collation.
+  - The T-SQL statement contains an `IN` or `OR` clause that's defined for the same Unicode column.
+  - The T-SQL statement contains `collate` to typecast the Unicode column to another binary collation.
 
 Sample query:
 

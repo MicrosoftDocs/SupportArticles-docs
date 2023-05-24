@@ -82,7 +82,7 @@ To upgrade the compatibility level, follow these steps:
 > [!NOTE]
 > Trace flags in Azure SQL Database
 > Setting trace flags isn't supported in Azure SQL Database. Therefore, you must change the compatibility level before you perform validation:
-
+>
 > 1. Upgrade the database compatibility level to 140.
 > 1. Validate to identify any impacted persisted structures.
 > 1. Rebuild the structures that you identified in step 2.

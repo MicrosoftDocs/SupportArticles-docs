@@ -78,7 +78,7 @@ The following content discusses the errors and limitations of an availability da
   When you run this script, you receive the following error message because the database is defined in an availability group:
 
   > Msg 3752, Level 16, State 1, Line 1  
-  > The database <\DatabaseName>\ is currently joined to an availability group. Before you can drop the database, you need to remove it from the availability group.
+  > The database \<DatabaseName\> is currently joined to an availability group. Before you can drop the database, you need to remove it from the availability group.
 
 - Database status prevents removing database from availability group
 
@@ -91,7 +91,7 @@ The following content discusses the errors and limitations of an availability da
   When you try to run this script, you receive the following error message because the availability database belongs to the primary replica:
 
   > Msg 35240, Level 16, State 14, Line 1  
-  > Database <\DatabaseName>\ cannot be joined to or unjoined from availability group <\AvailabilityGroupName>\. This operation is not supported on the primary replica of the availability group.
+  > Database \<DatabaseName\> cannot be joined to or unjoined from availability group \<AvailabilityGroupName\>. This operation is not supported on the primary replica of the availability group.
 
   Because of this error message, you may be compelled to fail over the database. After the database is failed over, the replica that owns the recovery pending database is in the secondary role. In this situation, you try to execute the following SQL script again to remove the database from the availability group at the secondary replica:
 
@@ -102,7 +102,7 @@ The following content discusses the errors and limitations of an availability da
   However, you still can't remove the database from the availability group, and you receive the following error message because the database is still in the Recovery Pending state:
 
   > Msg 921, Level 16, State 112, Line 1  
-  > Database <\DatabaseName>\ has not been recovered yet. Wait and try again.
+  > Database \<DatabaseName\> has not been recovered yet. Wait and try again.
 
 ## Resolution when the database is in the secondary role
 
@@ -112,11 +112,11 @@ To resolve this issue, take the following general actions:
 - Resolve any issues that are affecting the system and that might have contributed to the database failure.
 - Restore the replica to the availability group.
 
-To take these actions, connect to the new primary replica, and then run the `ALTER AVAILABILITY GROUP` SQL script to remove the replica that is hosting the failed availability database. To do this, follow these steps.
+To take these actions, connect to the new primary replica, and then run the `ALTER AVAILABILITY GROUP` SQL script to remove the replica that's hosting the failed availability database. To do this, follow these steps.
 
 These steps assume that the primary replica first hosts the damaged database. Therefore, a failover must first occur to transition the replica that's hosting the damaged database into a secondary role.
 
-1. Connect to the server that's running SQL Server and that is hosting the secondary replica.
+1. Connect to the server that's running SQL Server and that's hosting the secondary replica.
 2. Run the following SQL script:
 
     ```sql
@@ -126,7 +126,7 @@ These steps assume that the primary replica first hosts the damaged database. Th
 3. Run the following SQL script to remove the replica that's hosting the damaged database from the availability group:
 
     ```sql
-    ALTER AVAILABILITY GROUP AvailabilityGroupName REMOVE REPLICA ON '<SQLServerNodeName>'
+    ALTER AVAILABILITY GROUP <AvailabilityGroupName> REMOVE REPLICA ON '<SQLServerNodeName>'
     ```
 
 4. Resolve any issues on the server that's running SQL Server and that might contribute to the database failure.
