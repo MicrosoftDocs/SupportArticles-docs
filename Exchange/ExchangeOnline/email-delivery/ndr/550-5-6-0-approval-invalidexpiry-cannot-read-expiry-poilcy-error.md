@@ -17,9 +17,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
-# "550 5.6.0 APPROVAL.InvalidExpiry" when sending messages to a moderated distribution group
-
-_Original KB number:_ &nbsp; 4492048
+# "550 5.6.0 APPROVAL.InvalidExpiry" when sending messages to a moderated recipient
 
 ## Symptoms
 
@@ -46,7 +44,7 @@ To set the retention policy tag, do the following:
 
     ```powershell
     Enable-OrganizationCustomization
-    New-RetentionPolicyTag -IsDefaultModeratedRecipientsPolicyTag -Name TagforModeration -AgeLimitForRetention 90
+    New-RetentionPolicyTag -IsDefaultModeratedRecipientsPolicyTag -Name TagforModeration -AgeLimitForRetention 2
     ```
 
 This creates *Personal* retention tag on the retention policy. For more information on retention tag types, see [Retention tags and retention policies in Exchange Server](/Exchange/policy-and-compliance/mrm/retention-tags-and-retention-policies).
