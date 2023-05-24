@@ -18,10 +18,9 @@ _Original KB number:_ &nbsp; 922672
 
 When you register an assembly that references an untested .NET Framework assembly in SQL Server, you may receive the following warning message:
 
-> [!WARNING]
-> The Microsoft .NET Framework assembly </AssemblyName>/ you are registering is not fully tested in the SQL Server hosted environment and is not supported.
+> .Net frameworks assembly AssemblyName you are registering is not fully tested in SQL Server hosted environment.
 
-The message means that the .NET Framework assembly hasn't been tested in the SQL Server CLR-hosted environment. Therefore, the assembly is not supported in the SQL Server CLR-hosted environment.
+The message means that the .NET Framework assembly hasn't been tested in the SQL Server CLR-hosted environment. Therefore, the assembly isn't supported in the SQL Server CLR-hosted environment.
 
 An untested .NET Framework assembly may exit its host process when a critical condition such as low-memory condition occurs. You can use the assembly in the SQL Server CLR-hosted environment at your own risk. However, SQL Server Customer Support Services (CSS) won't help you to use and troubleshoot issues that are associated with an unsupported .NET Framework assembly. If CSS determines that a particular unsupported assembly causes SQL Server issues, you may be asked to stop using the assembly. Additionally, you may be asked to stop using the assembly temporarily when CSS troubleshoots a particular SQL Server issue if it's necessary.
 
@@ -29,7 +28,7 @@ An untested .NET Framework assembly may exit its host process when a critical co
 
 There are two kinds of .NET assemblies: pure and mixed. Pure .NET assemblies contain only MSIL instructions. Mixed assemblies contain both unmanaged machine instructions and MSIL instructions. Mixed assemblies in general are compiled in a C++ compiler by using the "clr" switch, and also contain machine instructions built from native C++ code.
 
-When you use a .NET Framework assembly that is not in the supported list, you are required to use the `CREATE ASSEMBLY`statement to register the assembly and the referenced assemblies within SQL Server database. The SQL Server `CREATE ASSEMBLY` statement lets only pure .NET Framework assemblies be registered. If the assembly or any referenced assembly is not a pure .NET Framework assembly (and, therefore, is a mixed assembly), you receive the following error message:
+When you use a .NET Framework assembly that isn't in the supported list, you are required to use the `CREATE ASSEMBLY` statement to register the assembly and the referenced assemblies within SQL Server database. The SQL Server `CREATE ASSEMBLY` statement lets only pure .NET Framework assemblies be registered. If the assembly or any referenced assembly isn't a pure .NET Framework assembly (and, therefore, is a mixed assembly), you receive the following error message:
 
 > Msg 6544, Level 16, State 1, Line 2  
 CREATE ASSEMBLY for assembly '\<assembly name>' failed because assembly ‘\<assembly name>’ is malformed or not a pure .NET assembly.  

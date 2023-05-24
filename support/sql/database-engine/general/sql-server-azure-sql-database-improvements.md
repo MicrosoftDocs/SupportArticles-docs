@@ -103,19 +103,19 @@ The following tables list data type conversions and additional operations.
 
 |From| To |Change|Example query|Result for compatibility level < 130|Result for compatibility level = 130|
 |--|---|---|---|---|---|
-|`float, real, numeric, decimal, money, or smallmoney`|datetime or smalldatetime|Increase rounding precision. Previously, day and time were converted separately, and results were truncated before you combined them.|`DECLARE @f FLOAT = 1.2 DECLARE @d DATETIME = @f SELECT CAST(@d AS FLOAT)`|1.19999996141975|1.2|
-|datetime|`bigint, int, or smallint`|A negative datetime whose time part is exactly a half-day or in a tick of a half-day is rounded incorrectly (the result is off by 1).|`DECLARE @h DATETIME = -0.5 SELECT @h, CAST(@h AS INT)`|0|-1|
-|datetime or smalldatetime|`float, real, numeric, money, or smallmoney`|Improved precision for the last 8 bits of precision in some cases.|`DECLARE @p0 DATETIME = '1899-12-31 23:58:00.470' DECLARE @f FLOAT = CONVERT(FLOAT, @p0)  SELECT @f, CAST(@f AS VARBINARY(8))`|-0.00138344907407406, 0xBF56AA9B21D85800|-0.00138344907407407, 0xBF56AA9B21D8583B|
-| `float`|real|Boundary checks are less strict.| `SELECT CAST (3.40282347000E+038 AS REAL)`|Arithmetic overflow|3.402823E+38|
-|numeric, money, and smallmoney|`float`|When the input scale is zero, there's a rounding imprecision when you combine the four parts of numeric.|`DECLARE @n NUMERIC(38, 0)= 41538374868278625639929991208632320 DECLARE @f FLOAT = CAST(@n AS FLOAT) SELECT CONVERT(BINARY(8), @f)`|0x4720000000000000|0x4720000000000001|
+|`float`, `real`, `numeric`, `decimal`, `money`, or `smallmoney`|datetime or smalldatetime|Increase rounding precision. Previously, day and time were converted separately, and results were truncated before you combined them.|`DECLARE @f FLOAT = 1.2 DECLARE @d DATETIME = @f SELECT CAST(@d AS FLOAT)`|1.19999996141975|1.2|
+|`datetime`|`bigint, int, or smallint`|A negative datetime whose time part is exactly a half-day or in a tick of a half-day is rounded incorrectly (the result is off by 1).|`DECLARE @h DATETIME = -0.5 SELECT @h, CAST(@h AS INT)`|0|-1|
+|`datetime` or `smalldatetime`|`float, real, numeric, money, or smallmoney`|Improved precision for the last 8 bits of precision in some cases.|`DECLARE @p0 DATETIME = '1899-12-31 23:58:00.470' DECLARE @f FLOAT = CONVERT(FLOAT, @p0)  SELECT @f, CAST(@f AS VARBINARY(8))`|-0.00138344907407406, 0xBF56AA9B21D85800|-0.00138344907407407, 0xBF56AA9B21D8583B|
+| `float`|`real`|Boundary checks are less strict.| `SELECT CAST (3.40282347000E+038 AS REAL)`|Arithmetic overflow|3.402823E+38|
+|`numeric`, `money`, and `smallmoney`|`float`|When the input scale is zero, there's a rounding imprecision when you combine the four parts of numeric.|`DECLARE @n NUMERIC(38, 0)= 41538374868278625639929991208632320 DECLARE @f FLOAT = CAST(@n AS FLOAT) SELECT CONVERT(BINARY(8), @f)`|0x4720000000000000|0x4720000000000001|
 |`numeric`, `money`, and `smallmoney`|`float`|When the input scale is nonzero, there's a rounding imprecision when you divide by 10^scale.|`DECLARE @n NUMERIC(18, 10) = 12345678.0123456781 DECLARE @f FLOAT = CAST(@n AS FLOAT) SELECT CAST(@f AS BINARY(8))`|0x41678C29C06522C4|0x41678C29C06522C3|
 | `real` or `float`|numeric|Improved rounding precision in some cases.|`DECLARE @f float = 0.14999999999999999 SELECT CAST(@f AS numeric(1, 1))`|0.2|0.1|
 | `real` or `float`|numeric|Improved precision when you round to more than 16 digits in some cases.|`DECLARE @v decimal(38, 18) = 1E-18 SELECT @v`|0.000000000000000000|0.000000000000000001|
-| `real` or `float`|money or smallmoney|Improved accuracy when you convert large numbers in some cases.|`DECLARE @f float = 2SET @f = POWER(@f, 49) + POWER(@f, -2) SELECT CAST(@f AS money)`|562949953421312.2048|562949953421312.25|
-| `(n)(var)char`| numeric|An input of more than 39 characters no longer necessarily triggers an arithmetic overflow.|`DECLARE @value nchar(100) = '1.11111111111111111111111111111111111111' SELECT CAST(@value AS decimal(2,1))`|Arithmetic overflow|1.1|
-| `(n)(var)char`| bit|Supports leading spaces and signs.|`DECLARE @value nvarchar(100) = '1' SELECT CAST(@value AS bit)`|Conversion failed when converting the nvarchar value '1' to data type bit.|1|
-| `datetime`| time or datetime2|Improved precision when you convert to date/time types with higher precision. Be aware that datetime values are stored as ticks that represent 1/300th of a second. The newer time and datetime2 types store a discrete number of digits, where the number of digits matches the precision.|`DECLARE @value datetime = '1900-01-01 00:00:00.003' SELECT CAST(@value AS time(7))`|00:00:00.0030000|00:00:00.0033333|
-| `time` or `datetime2`| datetime|Improved rounding in some cases.|`DECLARE @value time(4) = '00:00:00.0045' SELECT CAST(@value AS datetime)`|1900-01-01 00:00:00.007|1900-01-01 00:00:00.003|
+| `real` or `float`|`money` or `smallmoney`|Improved accuracy when you convert large numbers in some cases.|`DECLARE @f float = 2SET @f = POWER(@f, 49) + POWER(@f, -2) SELECT CAST(@f AS money)`|562949953421312.2048|562949953421312.25|
+| `(n)(var)char`| `numeric`|An input of more than 39 characters no longer necessarily triggers an arithmetic overflow.|`DECLARE @value nchar(100) = '1.11111111111111111111111111111111111111' SELECT CAST(@value AS decimal(2,1))`|Arithmetic overflow|1.1|
+| `(n)(var)char`| `bit`|Supports leading spaces and signs.|`DECLARE @value nvarchar(100) = '1' SELECT CAST(@value AS bit)`|Conversion failed when converting the nvarchar value '1' to data type bit.|1|
+| `datetime`| `time` or `datetime2`|Improved precision when you convert to date/time types with higher precision. Be aware that datetime values are stored as ticks that represent 1/300th of a second. The newer time and datetime2 types store a discrete number of digits, where the number of digits matches the precision.|`DECLARE @value datetime = '1900-01-01 00:00:00.003' SELECT CAST(@value AS time(7))`|00:00:00.0030000|00:00:00.0033333|
+| `time` or `datetime2`| `datetime`|Improved rounding in some cases.|`DECLARE @value time(4) = '00:00:00.0045' SELECT CAST(@value AS datetime)`|1900-01-01 00:00:00.007|1900-01-01 00:00:00.003|
 
 **Operation**
 
@@ -123,7 +123,7 @@ The following tables list data type conversions and additional operations.
 |---|---|---|---|---|
 |Use the `RADIANS` or `DEGREES` built-in function that uses the numeric data type.|`DEGREES` divides by pi/180, where it previously multiplied by 180/pi. Similar for `RADIANS`.|`DECLARE @arg1 numeric = 1 SELECT DEGREES(@arg1)`|57.295779513082323000|57.295779513082322865|
 |Numerical addition or subtraction when the scale of one operand is larger than the scale of the result.|Rounding always occurs after the addition or subtraction, while previously it could sometimes occur before.|`DECLARE @p1 numeric(38, 2) = -1.15  DECLARE @p2 numeric(38, 1) = 10  SELECT @p1 + @p2`|8.8|8.9|
-|`CONVERT` with `NULL` style.|`CONVERT` with `NULL` style always returns `NULL` when the target type is numeric.|`SELECT CONVERT (SMALLINT, '0', NULL);`|0|NULL|
+|`CONVERT` with `NULL` style.|`CONVERT` with `NULL` style always returns `NULL` when the target type is numeric.|`SELECT CONVERT (SMALLINT, '0', NULL);`|0|`NULL`|
 |`DATEPART` that uses the microseconds or nanoseconds option, with the datetime data type.|Value is no longer truncated at the millisecond level before converting to micro- or nanoseconds.|`DECLARE @dt DATETIME = '01-01-1900 00:00:00.003';  SELECT DATEPART(MICROSECOND, @dt);`|3000|3333|
 |`DATEDIFF` that uses the microseconds or nanoseconds option, with the datetime data type.|Value is no longer truncated at the millisecond level before converting to micro- or nanoseconds.|`DECLARE @d1 DATETIME = '1900-01-01 00:00:00.003' DECLARE @d2 DATETIME = '1900-01-01 00:00:00.007'  SELECT DATEDIFF(MICROSECOND, @d1, @d2)`|3000|3333|
 |Comparison between datetime and datetime2 values with nonzero values for milliseconds.|Datetime value is no longer truncated at the millisecond level when you run a comparison with a datetime2 value. This means that certain values that previously compared equal, no longer compare equal.|`DECLARE @d1 DATETIME = '1900-01-01 00:00:00.003'  DECLARE @d2 DATETIME2(3) = @d1 SELECT CAST(@d1 AS datetime2(7)), @d2SELECT CASE WHEN (@d1=@d2) THEN 'equal' ELSE 'unequal' END`  |1900-01-01 00:00:00.0030000, 1900-01-01 00:00:00.003 equal|1900-01-01 00:00:00.0033333, 1900-01-01 00:00:00.003    unequal|
@@ -146,7 +146,7 @@ In this situation, run the following procedure.
 Step 1: Verify database compatibility level
 
 1. Check the compatibility level of your database by using the procedure that's documented in [View or change the compatibility level of a database](https://msdn.microsoft.com/library/bb933794.aspx).
-1. If the database compatibility level is lower than 130, we recommend that you perform the validation that's outlined in the Step 2 before you increase the compatibility level to 130.
+1. If the database compatibility level is lower than 130, we recommend that you perform the validation that's outlined in Step 2 before you increase the compatibility level to 130.
 
 Step 2: Identify affected persisted structures
 
