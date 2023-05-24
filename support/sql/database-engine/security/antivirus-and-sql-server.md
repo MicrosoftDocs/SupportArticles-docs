@@ -4,7 +4,7 @@ description: Provides guidance on how to use antivirus software with SQL Server.
 author: pijocoder
 ms.author: jopilov
 ms.reviewer: jopilov
-ms.date: 04/26/2023
+ms.date: 05/24/2023
 ms.custom: sap:Security Issues
 ---
 # Configure antivirus software to work with SQL Server
