@@ -19,7 +19,7 @@ This article covers how to diagnose Windows Management Instrumentation (WMI) hig
 
 ## Identify the problem
 
-In most scenarios, the CPU is consumed by the WmiPrvse.exe process, and there are few instances where svchost.exe hosting the WMI service (Winmgmt) is consuming high CPU.
+In most scenarios, the CPU is consumed by the *WmiPrvse.exe* process, and there are few instances where *svchost.exe* hosting the WMI service (Winmgmt) is consuming high CPU.
 
 ### Review Task Manager's Processes pane or Details pane to identify the exact process
 
@@ -38,9 +38,9 @@ This screenshot shows Services Host: Windows Management Instrumentation (*svchos
 
 :::image type="content" source="media/troubleshoot-wmi-high-cpu-issues/task-manager-details.png" alt-text="Screenshot shows the details via task manager.":::
 
-Go to **Task Manager** > **Services**, sort by **Name** and locate the Winmgmt service. Make a note of the PID. Right-click the service and select **Go to details** to locate the svchost.exe process as follows:
+Go to **Task Manager** > **Services**, sort by **Name** and locate the Winmgmt service. Make a note of the PID. Right-click the service and select **Go to details** to locate the *svchost.exe* process as follows:
 
-:::image type="content" source="media/troubleshoot-wmi-high-cpu-issues/task-manager-details.png" alt-text="Screenshot shows the services via task manager.":::
+:::image type="content" source="media/troubleshoot-wmi-high-cpu-issues/task-manager-services.png" alt-text="Screenshot shows the services via task manager.":::
 
 In the example, out of three *WmiPrvse.exe* instances, PID 3648 is located, that consumes around 25% CPU. Winmgmt is hosted under the *svchost.exe* process with PID 2752.
 
@@ -48,7 +48,7 @@ In the example, out of three *WmiPrvse.exe* instances, PID 3648 is located, that
 
 This involves mainly observing the overall CPU consumption and the PID identified. It's important to note down when, how and the frequency of the CPU consumption.
 
-Assess the situation by understanding if the CPU consumption is high during a specific time. Check if there's any activity such as running specific tasks or services active, running monitoring applications, or running scripts leading to WmiPrvse.exe or Winmgmt high CPU.
+Assess the situation by understanding if the CPU consumption is high during a specific time. Check if there's any activity such as running specific tasks or services active, running monitoring applications, or running scripts leading to *WmiPrvse.exe* or Winmgmt high CPU.
 
 Understand if there's any pattern, which means if the CPU usage is consistent or inconsistent, random, sporadic or regular spikes.
 
@@ -56,7 +56,7 @@ Identify the frequency of the CPU consumption. Check if it occurs only during pr
   
 You may use Task Manager and visually make a note of how the CPU usage pattern is.
 
-Here's an example shows how to use the Performance Monitor (Perfmon) tool to identify the exact instances of WmiPrvse.exe that has the PID you have identified. You can also get a graphical view of the CPU consumption of any process (WmiPrvse.exe or svchost.exe hosting WMI service).
+Here's an example shows how to use the Performance Monitor (Perfmon) tool to identify the exact instances of *WmiPrvse.exe* that has the PID you have identified. You can also get a graphical view of the CPU consumption of any process (*WmiPrvse.exe* or *svchost.exe* hosting WMI service).
 
 1. Open an elevated command prompt, and enter *Perfmon*.
 2. Select **Performance Monitor** in the left pane, and select the plus sign in the right pane to open the **Add Counters** window.
@@ -74,19 +74,19 @@ Here's an example shows how to use the Performance Monitor (Perfmon) tool to ide
 
 5. For the "ID Process" counter, the Last, Average, Minimum and Maximum, all represent the PID of the respective *WmiPrvse.exe* process. Once you have identified the exact instance that is consuming high CPU, you may remove the remaining instances of **WmiPrvse#** instances from the list by pressing <kbd>Delete</kbd>.
 
-In the example, it's noted that WmiPrvse.exe PID 556 was consuming high CPU, and it's **WmiPrvse#1** that is matching PID 556 in Performance Monitor.
+In the example, it's noted that *WmiPrvse.exe* PID 556 was consuming high CPU, and it's **WmiPrvse#1** that is matching PID 556 in Performance Monitor.
 
 Then counter **%Processor Time** of **WmiPrvse#1** is added to see live graphical view CPU usage of this process. In the example, the color of **%Processor Time** of **WmiPrvse#1** is changed from yellow to red.
 
-The steps are same for locating the right **svchost#** in Performance Monitor, in the case of high CPU by svchost.exe hosting Wmimgmt service.
+The steps are same for locating the right **svchost#** in Performance Monitor, in the case of high CPU by *svchost.exe* hosting Wmimgmt service.
 
-If you observe that a svchost.exe process hosting the WMI service is causing high CPU usage and suspect that WMI is contributing to the issue, you can confirm if the PID of the svchost.exe process is hosting the WMI service by running the following command:
+If you observe that a *svchost.exe* process hosting the WMI service is causing high CPU usage and suspect that WMI is contributing to the issue, you can confirm if the PID of the *svchost.exe* process is hosting the WMI service by running the following command:
 
 ```console
 tasklist /svc /fi "Services eq Winmgmt"
 ```
 
-If the svchost.exe process contains multiple services, you can break out the WMI service into its own svchost.exe process by following these steps:
+If the *svchost.exe* process contains multiple services, you can break out the WMI service into its own *svchost.exe* process by following these steps:
 
 1. Open an elevated command prompt with elevated privileges.
 2. Run the following command:
@@ -97,9 +97,9 @@ If the svchost.exe process contains multiple services, you can break out the WMI
 
 3. Restart the WMI service.
 
-After restarting the service, you may run the `Tasklist /svc` command to check if the Winmgmt service is running under its own svchost.exe process.
+After restarting the service, you may run the `Tasklist /svc` command to check if the Winmgmt service is running under its own *svchost.exe* process.
 
-After resolving the issue or no longer requiring the service to be in its own svchost.exe process, you can place it back into the shared svchost.exe process. You can perform the action by running the following command from a command prompt, and then restarting the WMI service again:
+After resolving the issue or no longer requiring the service to be in its own *svchost.exe* process, you can place it back into the shared *svchost.exe* process. You can perform the action by running the following command from a command prompt, and then restarting the WMI service again:
 
 ```console
 sc config Winmgmt type= share
@@ -168,7 +168,7 @@ As a workaround, you can also disable the monitoring application to prevent the 
 
 ## Diagnosing WmiPrvse.exe
 
-So far you have only the exact PID of WmiPrvse.exe consuming high CPU. Next, you may gather as much information as possible about this PID. This helps you assess the situation, identify or suspect something that could be causing the problem.  Gather information of other resource usage or identify the exact WMI provider (DLL) hosted by the WmiPrvse.exe PID identified.
+So far you have only the exact PID of *WmiPrvse.exe* consuming high CPU. Next, you may gather as much information as possible about this PID. This helps you assess the situation, identify or suspect something that could be causing the problem.  Gather information of other resource usage or identify the exact WMI provider (DLL) hosted by the *WmiPrvse.exe* PID identified.
 
 ### Other resource usage such as memory, handles, threads, and username
 
@@ -177,14 +177,14 @@ Gather information of other resource usage such as memory, handles, threads, and
 > [!NOTE]
 > Add additional columns as needed.
 
-:::image type="content" source="media/troubleshoot-wmi-high-cpu-issues/task-manager-high-cpu-service.png" alt-text="Screenshot shows the high CPU usage service in task manager.":::
+:::image type="content" source="media/troubleshoot-wmi-high-cpu-issues/task-manager-high-cpu-usage-service.png" alt-text="Screenshot shows the high CPU usage service in task manager.":::
 
 ### Identify the exact WMI provider (DLL) hosted by the WmiPrvse.exe PID identified
 
 Process Explorer can help you identify the exact providers hosted in the PID identified. Follow these steps:
 
-1. Run Process Explorer as administrator. Locate the identified WmiPrvse.exe PID, go to its properties and select the **WMI Providers** tab.
-2. In the following example, WmiPrvse.exe PID 556 is located and found that it is hosting:
+1. Run Process Explorer as administrator. Locate the identified *WmiPrvse.exe* PID, go to its properties and select the **WMI Providers** tab.
+2. In the following example, *WmiPrvse.exe* PID 556 is located and found that it is hosting:
 
     - WMI provider: MS_NT_EVENTLOG_PROVIDER
     - Namespace: root\CIMV2
@@ -194,7 +194,7 @@ Process Explorer can help you identify the exact providers hosted in the PID ide
 
 In most cases, there may be more than one provider loaded. It may be any one of the providers that is spending time in CPU, causing high CPU issue.
 
-Sometimes, if the issue is intermittent or happening not frequently, the WmiPrvse.exe causing issue may be terminated over time. When the issue occurs again, it may be the same provider(s) in a new WmiPrvse.exe instance. In this situation, once you have the provider(s) noted, run the following cmdlet to show the current PID of the WmiPrvse.exe process containing that provider.
+Sometimes, if the issue is intermittent or happening not frequently, the *WmiPrvse.exe* causing issue may be terminated over time. When the issue occurs again, it may be the same provider(s) in a new *WmiPrvse.exe* instance. In this situation, once you have the provider(s) noted, run the following cmdlet to show the current PID of the *WmiPrvse.exe* process containing that provider.
 
 ```PowerShell
 tasklist /m <Provider DLL>
@@ -206,13 +206,13 @@ Here's an example:
 tasklist /m ntevt.dll 
 ```
 
-The output shows, currently *CIMWin32.dll* provider is loaded in two different WmiPrvse.exe instances and their PID.
+The output shows, currently *CIMWin32.dll* provider is loaded in two different *WmiPrvse.exe* instances and their PID.
 
 :::image type="content" source="media/troubleshoot-wmi-high-cpu-issues/tasklist-output.png" alt-text="Screenshot shows the tasklist output of the ntevt.dll file.":::
 
 Hence, it's important to understand what providers are loaded in the *WmiPrvse.exe* process and make note of the PID of the *WmiPrvse.exe* process every time.
 
-Once you have the provider(s) that are loaded in the WmiPrvse.exe causing high CPU, you can understand if it is handling any tasks.
+Once you have the provider(s) that are loaded in the *WmiPrvse.exe* causing high CPU, you can understand if it is handling any tasks.
 
 Tasks may be the incoming WMI queries that are submitted by the client process to WMI service, which then is assigned to the appropriate WMI provider process. In the example, the task is submitted to the MS_NT_EVENTLOG_PROVIDER provider. So the next step will be to study the incoming queries and tasks to the MS_NT_EVENTLOG_PROVIDER provider.
 
@@ -235,7 +235,7 @@ The incoming queries are logged as operational events in the Microsoft-Windows-W
 
 There are several types of events logged.
 
-If the WmiPrvse.exe process consuming high CPU is terminated from time to time, and you already know what provider(s) are loaded, the following event may help determine the currently active WmiPrvse.exe process hosting the provider in question.
+If the *WmiPrvse.exe* process consuming high CPU is terminated from time to time, and you already know what provider(s) are loaded, the following event may help determine the currently active *WmiPrvse.exe* process hosting the provider in question.
 
 ```output
 Log Name:      Microsoft-Windows-WMI-Activity/Operational
@@ -258,7 +258,7 @@ In Event Viewer, select **View** > **Show Analytic and Debug Logs** to enable th
 > [!NOTE]
 > Enabling **Show Analytic and Debug Logs** enables debug and tracing for almost all the event sources and creates additional logging. Hence this has to be disabled once the investigation is complete and will not be in use anymore.
 
-This tracing can be kept enabled while you observe high CPU consumption by the WmiPrvse.exe process, or long enough to capture the behavior of high CPU to keep the logs clean and moderately sized for easier analyzing of traces.
+This tracing can be kept enabled while you observe high CPU consumption by the *WmiPrvse.exe* process, or long enough to capture the behavior of high CPU to keep the logs clean and moderately sized for easier analyzing of traces.
 
 1. Export the traces by right clicking **Trace** and select **Save All Events As…**.
 2. Select `.xml` or `.csv` in **Save as type**.
@@ -401,7 +401,7 @@ From the operation output of the second example, you can get and understand the 
 
 ## Finding the suspects
 
-The idea of reviewing this log file is to list out the operations that are associated with the identified WmiPrvse.exe PID that is consuming high CPU, understand the incoming queries to it and who is initiating them (the client process).
+The idea of reviewing this log file is to list out the operations that are associated with the identified *WmiPrvse.exe* PID that is consuming high CPU, understand the incoming queries to it and who is initiating them (the client process).
 
 In the example covered above, it's the PID 552 that is causing high CPU.
 
@@ -409,9 +409,9 @@ From the second example of the log output, the operation [CreateInstanceEnum](/w
 
 For more information, see [Win32_NTLogEvent](/previous-versions/windows/desktop/eventlogprov/win32-ntlogevent#requirements), which includes the WMI provider details that are associated with the WMI class.
 
-You now know the exact WMI provider hosted (MS_NT_EVENTLOG_PROVIDER) in the WmiPrvse.exe that's causing high CPU, the host ID (552), and WMI class (Win32_NTLogEvent) that's being queried by some client process.
+You now know the exact WMI provider hosted (MS_NT_EVENTLOG_PROVIDER) in the *WmiPrvse.exe* that's causing high CPU, the host ID (552), and WMI class (Win32_NTLogEvent) that's being queried by some client process.
 
-Depending on the tool that you're using to review the trace files, you may apply necessary filters to review just the operations related to Win32_NTLogEvent or WmiPrvse.exe PID 552 or Host ID 552 or ntevt.dll.
+Depending on the tool that you're using to review the trace files, you may apply necessary filters to review just the operations related to Win32_NTLogEvent or *WmiPrvse.exe* PID 552 or Host ID 552 or *ntevt.dll*.
 
 With the filter to show only the lines or operations that include "Win32_NTLogEvent", the results are:
 
@@ -424,14 +424,14 @@ With the filter to show only the lines or operations that include "Win32_NTLogEv
 
 From the above operations, you can get the following additional information:
 
-- Time stamp:
+- Time stamp
 - Operation ID: 30642;
 - The exact operation = Start IWbemServices::CreateInstanceEnum - root\cimv2 : Win32_NTLogEvent;
 - Client Machine = 21H2W10M
 - User = CONTOSO\boss
 - PID of Client that has initiated the query: 5484
 
-At last, you have the PID of a client process 5484, that is initiating query to Win32_NTLogEvent. That's handled by provider MS_NT_EVENTLOG_PROVIDER, and hosted under WmiPrvse.exe PID 552, which causes high CPU.
+At last, you have the PID of a client process 5484, that is initiating query to Win32_NTLogEvent. That's handled by provider MS_NT_EVENTLOG_PROVIDER, and hosted under *WmiPrvse.exe* PID 552, which causes high CPU.
 
 Once you have the possible suspects (the client PIDs), there are multiple ways to find the name of the process.
   
@@ -450,7 +450,7 @@ This data can be useful for system administrators who need to troubleshoot perfo
 
 To collect and analyze this data, you can follow the step-by-step instructions:
 
-1. Identify the PID of the WmiPrvSE.exe that is consuming the CPU using the methods described above.
+1. Identify the PID of the *WmiPrvSE.exe* that is consuming the CPU using the methods described above.
 2. Download the WMIMon.exe tool from [GitHub - luctalpe/WMIMon](https://github.com/luctalpe/WMIMon). The tool is to monitor WMI activity on Windows.
 3. Extract the contents of the *WMIMon_Binaries.zip* file to a folder on your computer.
 4. Open a command prompt as an administrator and go to the folder where you extracted the WMIMon files.
@@ -480,7 +480,7 @@ WMIPerfClass is the module that handles creating these classes when the WMI clie
 
 These performance classes are stored in a cache that's invalidated after 15 to 20 minutes. As soon as the cache is invalidated, the performance classes must be created again if a client requests them.
 
-Creating the performance classes means that the *WMIPerfClass.dll* module will have to be loaded inside a WmiPrvSE.exe process and the related code executed.
+Creating the performance classes means that the *WMIPerfClass.dll* module will have to be loaded inside a *WmiPrvSE.exe* process and the related code executed.
 
 ### Other solutions
 
