@@ -16,7 +16,7 @@ appliesto:
   - Microsoft Teams
 ms.custom: CI176375
 ---
-# On-screen keyboard is unexpectedly reduced on some Teams Rooms devices
+# On-screen keyboard is reduced on some Teams Rooms devices
 
 ## Symptoms
 
