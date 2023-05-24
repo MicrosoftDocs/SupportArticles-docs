@@ -765,9 +765,9 @@ Description:
 Activation for MicrosoftWindows.Client.CBS_cw5n1h2txyewy!FESearchUI failed. Error code: **This program is blocked by group policy**. For more information, contact your system administrator. Activation phase: Deployment
 ```
 
-Remove AppLocker restrictions. For AppLocker to stop enforcing its rules, two things need to happen in sequence:
+You need to remove AppLocker restrictions. For AppLocker to stop enforcing its rules, two things need to happen in sequence:
 
-1. The effective policy on the client computer is empty.
+1. The effective policy on the client computer is emptied.
 2. The AppLocker service is disabled.
 
 The AppLocker rules remain enforced even though the service has been stopped and the rules have been deleted from the user interface. This can occur when a Group Policy administrator deletes all AppLocker rules and disables the AppLocker service in a single Group Policy update. The effect of this is that the AppLocker service is disabled before it can update the effective policy on the client computer. As a result, AppLocker rules continue to be enforced.
