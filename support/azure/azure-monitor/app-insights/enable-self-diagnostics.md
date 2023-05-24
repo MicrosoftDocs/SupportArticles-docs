@@ -6,7 +6,7 @@ ms.author: v-weizhu
 ms.topic: how-to
 ms.service: azure-monitor
 ms.subservice: application-insights
-ms.date: 05/23/2023
+ms.date: 05/24/2023
 ---
 # How to collect self-diagnostic logs for Application Insights SDKs
 
@@ -42,11 +42,11 @@ Configure self-diagnostics by using a file named *ApplicationInsightsDiagnostics
 
 Here are some explanations for the configuration parameters:
 
-- `LogDirectory`: The directory where the log file is stored. It can be an absolute path or a relative path to the current working directory of the web application. This log file is named as *YearMonthDay-HourMinuteSecond.ExecutableName.ProcessId.log*, for example, *20220307-193542.w3wp.exe.7692.log*. The file name starts with the timestamp that's generated when the file is created.
-
-- `FileSize`: A positive integer that specifies the log file size in KB. This value must be between 1 megabyte (MB) and 128 MB (inclusive), or it will be rounded to the closest upper or lower limit. The log file won't exceed this configured max size.
-
-- `LogLevel`: The level of the events to be captured. This value must match one of the fields of the `EventLevel`. Lower severity levels include higher severity levels (for example, `Warning` includes the `Error` and `Critical` levels).
+|Configuration parameters|Description|
+|---|---|
+|`LogDirectory`|The directory where the log file is stored. It can be an absolute path or a relative path to the current working directory of the web application. This log file is named as *YearMonthDay-HourMinuteSecond.ExecutableName.ProcessId.log*, for example, *20220307-193542.w3wp.exe.7692.log*. The file name starts with the timestamp that's generated when the file is created.|
+|`FileSize`|A positive integer that specifies the log file size in KB. This value must be between 1 megabyte (MB) and 128 MB (inclusive), or it will be rounded to the closest upper or lower limit. The log file won't exceed this configured max size.|
+|`LogLevel`|The level of the events to be captured. This value must match one of the fields of the `EventLevel`. Lower severity levels include higher severity levels (for example, `Warning` includes the `Error` and `Critical` levels).|
 
 ### Self-diagnostics for a web application
 
@@ -70,7 +70,7 @@ In most cases, you could drop the file along with your application. Here are two
 4. Navigate to the directory where the App Service Web App is, such as *D:\Home\Site\wwwroot*.
 5. Use the "**+**" symbol at the top of the Kudu dashboard to create a new file in the *wwwroot* folder and name it *ApplicationInsightsDiagnostics.json*.
 
-    The *ApplicationInsightsDiagnostics.json* file needs to be placed in the *\<drive>:\home\site\wwwroot* folder. Not all App Service Web Apps reside on the same drive. some can be on *C:*, and some might be on *D:*. To find it, check the **Site folder** and **Temp folder** fields from the default Kudu page.
+    The *ApplicationInsightsDiagnostics.json* file needs to be placed in the *\<drive>:\home\site\wwwroot* folder. Not all App Service Web Apps reside on the same drive. Some can be on the C: drive, and some might be on the D: drive. To find it, check the **Site folder** and **Temp folder** fields from the default Kudu page.
 
     :::image type="content" source="media/enable-self-diagnostics/kudu-dashboard.png" alt-text="Screenshot that shows the 'Site folder' and 'Temp folder' fields.":::
 
@@ -91,7 +91,9 @@ In most cases, you could drop the file along with your application. Here are two
 
     After 10 seconds, a new log file, such as *20220307-193542.w3wp.exe.7692.log*, will show up in the *wwwroot* folder.
 
-8. Delete the configuration file or rename it to *ApplicationInsightsDiagnostics.bak*. After 10 seconds, the logging will stop.
+8. Delete the configuration file or rename it to *ApplicationInsightsDiagnostics.bak*.
+
+    After 10 seconds, the logging will stop.
 
 ### Self-diagnostics for App Service Web App in Linux
 
@@ -110,14 +112,16 @@ In most cases, you could drop the file along with your application. Here are two
 4. Go to the App Service Web App from the Azure portal.
 5. Go to the Kudu page by selecting **Advanced Tools** > **Go**.
 6. When the browser session starts up, add `/newui` to the end of the URL. The URL in the browser should look like `https://appnamehere.scm.azurewebsites.net/newui`.
-7. Press <kbd>Enter</kbd>. The Kudu page with new the UI will open.
+7. Press <kbd>Enter</kbd>. The Kudu page with the new UI will open.
 8. In the left menu, select **File Manager**.
 9. Select the *Site* folder and then select the *wwwroot* folder.
 10. Drag and drop the *ApplicationInsightsDiagnostics.json* file into the *wwwroot* folder.
 
     After 10 seconds, a new log file will show up in the *wwwroot* folder, for example, *20220307-193542.w3wp.exe.7692.log*.
 
-11. Delete the configuration file or rename it to *ApplicationInsightsDiagnostics.bak*. After 10 seconds, the logging will stop.
+11. Delete the configuration file or rename it to *ApplicationInsightsDiagnostics.bak*.
+
+    After 10 seconds, the logging will stop.
 
 ## Application Insights Java 2.x
 
