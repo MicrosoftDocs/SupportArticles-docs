@@ -46,7 +46,7 @@ The supplied password was correct, but Windows Installer (msiexec.exe) failed to
 
 Ensure the user account who installs the PES service is a member of the domain's built-in Administrators group by running the **whoami /groups** command, and run the Pwdmig.msi setup file in an elevated command-prompt window launched with the **Run as administrator** option. 
 
-Alternatively, launching an elevated command-prompt window, changing directories to where the PES installer has been downloaded, and running the **msiexec /i pwdmig.msi** can also lead to successful results. 
+Alternatively, launching an elevated command-prompt window, changing directories to where the PES installer has been downloaded, and running the **msiexec /i pwdmig.msi** command can also lead to successful results. 
 
 ## More information
 
