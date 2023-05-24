@@ -41,8 +41,10 @@ Tenant administrators perform many common tasks to manage Microsoft 365 groups. 
   - [Get a copy of group email messages you send](#get-a-copy-of-group-email-messages-you-send)
   - [Configure automatic replies](#configure-automatic-replies)
   - [Email issues in Microsoft 365 groups](#email-issues-in-microsoft-365-groups)
-- Other tasks
+- Microsoft 365 Groups restoration
   - [Restore a Microsoft 365 Group](#restore-a-microsoft-365-group)
+  - [Restore email conversations deleted from a Microsoft 365 group](#restore-email-conversations-deleted-from-a-microsoft-365-group)
+- Other tasks
   - [Convert to a Microsoft 365 group](#convert-to-a-microsoft-365-group)
   - [Access Microsoft 365 groups from Exchange clients](#access-microsoft-365-groups-from-exchange-clients)
   - [Microsoft 365 group migration](#microsoft-365-group-migration-between-tenants)
@@ -355,7 +357,7 @@ Get-UnifiedGroupLinks $Group -LinkType Member | % {Add-UnifiedGroupLinks -Identi
 
 [Back to top](#summary)
 
-## Other tasks
+## Microsoft 365 group restoration
 
 ### Restore a Microsoft 365 Group
 
@@ -383,6 +385,14 @@ Restoring a Microsoft 365 group restores any services that are related to the gr
 Use the [Microsoft 365 Admin center](https://aka.ms/RestoreDeletedGroup) or Azure Active Directory (Azure AD) PowerShell to restore a deleted group. See [Restore a deleted Microsoft 365 Group](/microsoft-365/admin/create-groups/restore-deleted-group?view=o365-worldwide&preserve-view=true).
 
 [Back to top](#summary)
+
+### Restore email conversations deleted from a Microsoft 365 group
+
+If you accidentally delete email conversations from a Microsoft 365 Group, you can restore them by using Outlook on the web or by running the `Restore-RecoverableItems` PowerShell cmdlet. For more information, see [Restore deleted email conversations from Microsoft 365 Groups](/Exchange/recipients-in-exchange-online/restore-deleted-items-group).
+
+[Back to top](#summary)
+
+## Other tasks
 
 ### Convert to a Microsoft 365 group
 
