@@ -11,7 +11,7 @@ This article provides a workaround for the issue where the case creation fails d
 
 ## Symptoms
 
-When configuring an automatic record creation rule for a queue in the web client, in the rule, set the customer value as null (Channel properties). Then, if you try to send mail from sender as queue mail address to recipient as queue mail address, the case creation fails with the following error message:
+When configuring an automatic record creation rule for a queue in the web client, in the rule, set the **Customer** field as **{null(Channel Properties)}**. Then, if you try to send mail from sender as queue mail address to recipient as queue mail address, the case creation fails with the following error message:
 
 > Case is missing customer.
 
