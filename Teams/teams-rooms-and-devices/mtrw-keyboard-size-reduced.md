@@ -2,8 +2,8 @@
 title: On-screen keyboard size is reduced on Teams Rooms devices
 description: Provides a workaround for an issue that causes the on-screen keyboard to be reduced in size on some Teams Rooms devices. 
 ms.date: 05/24/2023
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
@@ -13,8 +13,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft Teams
-ms.custom: 
-ms.reviewer: 
+ms.custom: CI176375
 ---
 # On-screen keyboard is unexpectedly reduced on some Teams Rooms devices
 
@@ -39,7 +38,7 @@ To increase the size of the on-screen keyboard on these devices, switch the Team
 3. Expand the **Text input** section.
 4. Expand the **Touch keyboard** section, and then select the **Open keyboard** button.
 5. Adjust the **Keyboard size** slider to your preference.
-6. Open an elevated PowerShell Command Prompt window, and then run the following command to copy the updated setting for the keyboard size to the Skype user account:
+6. Open an elevated PowerShell Command Prompt window, and then run the following command to copy the updated setting for the keyboard size to the *Skype* user account:
    
    ```powershell
    powershell -ExecutionPolicy unrestricted c:\rigel\x64\scripts\provisioning\ScriptLaunch.ps1 ApplyCurrentDisplayScaling.ps1
