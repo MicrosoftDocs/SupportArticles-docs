@@ -67,7 +67,7 @@ productDirectory:
     url: mem/index.yml
 
   - title: System Center
-    imageSrc: "media/hub-landing/logo-systemcenter.png"
+    imageSrc: "media/hub-landing/system-center-logo.png"
     summary: Troubleshooting articles for System Center
     url: system-center/index.yml
 
