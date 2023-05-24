@@ -103,9 +103,9 @@ The next few examples illustrate how to run SQLIOSim using the GUI and command l
 
 1. Run SQLIOSIM.COM using the configuration file
 
-```console
-SQLIOSIM.COM -cfg c:\temp\sqliosimconfig\sqliosim.default.cfg.ini -log c:\temp\sqliosimconfig\sqliosim.log.xml
-```
+   ```console
+   SQLIOSIM.COM -cfg c:\temp\sqliosimconfig\sqliosim.default.cfg.ini -log    c:\temp\sqliosimconfig\sqliosim.log.xml
+   ```
 
 ### Example 3
 
