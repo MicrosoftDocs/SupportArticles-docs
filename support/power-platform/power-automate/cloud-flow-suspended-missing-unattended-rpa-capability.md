@@ -27,18 +27,19 @@ Consider the following scenario:
 
 ## Cause
 
-This issue occurs when the environment doesn't have an unattended add-on assigned (from Power Platform Admin Center). You can confirm if this is the case by selecting the **Flow checker** button to view the error message details.
+This issue occurs when the environment doesn't have an [unattended add-on](/power-platform/admin/power-automate-licensing/add-ons#unattended-add-on) assigned from [Power Platform admin center]( https://admin.powerplatform.microsoft.com/). You can confirm if this is the case by selecting the **Flow checker** button to view the error message details.
 
 :::image type="content" source="media/cloud-flow-suspended-missing-unattended-rpa-permission/flow-checker.png" alt-text="Screenshot that shows the error details in the flow checker message.":::
 
-You can double-check your environment capabilities by selecting **Settings** (the gear icon on the top right) > **View my Licenses**. If you have an unattended add-on assigned to the environment it will show up under section **Environment capacities**.
+You can double-check your environment capabilities by selecting **Settings** (the gear icon on the top right) > **View my Licenses**. If you have an unattended add-on assigned to the environment, it will show up under the **Environment capacities** section.
 
 :::image type="content" source="media/cloud-flow-suspended-missing-unattended-rpa-permission/view-my-licenses.png" alt-text="Screenshot that shows the View my licenses panel.":::
 
 ## Resolution
 
-To solve this licensing issue the environment needs an [unattended add-on](/power-platform/admin/power-automate-licensing/add-ons#unattended-add-on) as described in the flow checker message. 
+To solve this licensing issue, you need to assign an [unattended add-on](/power-platform/admin/power-automate-licensing/add-ons#unattended-add-on) to the environment as described in the flow checker message.
 
-To do so, the flow checker offers two options: 
-- Send an add-on request to the admin
+To do so, the flow checker offers two options:
+
+- Send an add-on request to the admin.
 - Buy your own add-on.
