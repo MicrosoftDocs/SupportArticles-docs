@@ -442,7 +442,7 @@ sudo rpm -qf /lib64/libc-X.XX.so
 glibc-2.28-127.0.1.el8.x86_64
 ```
 > [!NOTE]
->The output of the previously command might show a different version of package installed on the affected VM however, it will show the package name that needs to be reinstalled.
+>The output of the previous command might show a different version of package installed on the affected VM however, it will show the package name that needs to be reinstalled.
 
 6. Verify which `glibc` package version is installed on the affected VM
 
