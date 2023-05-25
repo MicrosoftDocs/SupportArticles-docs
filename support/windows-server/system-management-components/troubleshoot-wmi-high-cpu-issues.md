@@ -105,67 +105,6 @@ After resolving the issue or no longer requiring the service to be in its own *s
 sc config Winmgmt type= share
 ```
 
-## Cause
-
-This issue can be caused by either of the following factors.
-
-### One or more processes are using a high number of handles
-
-All the handles are stored in the kernel structure \BaseNamedObjects. The [WMIPerfClass provider](/windows/win32/wmisdk/wmiperfclass-provider) must scan this structure when creating the performance class that is related to the Job objects.
-
-If this structure is bloated because of the high number of handles, the operation will have high CPU usage and will take longer than normal.
-
-You may expect an impact for this condition when a process is using more than about 30,000 handles, or the total number of handles on the system exceeds 50,000.
-
-An update that is released in March 2020 for supported operating system versions includes some performance optimization and addresses some variants of this issue. Refer to the Windows Updates history for more information on the update that applies to your Windows version.
-
-### One or more processes running on the system are using lots of memory
-
-This affects the creation of the Process performance classes because the memory area of each running process will have to be queried. The memory that's used by the process may be fragmented, and this makes the operation more resource-intensive. This happens because WMIPerfClass is also querying "Costly" performance counters.
-
-You can check whether Costly performance counters are enabled by running the following PowerShell command:
-
-```powershell
-(gwmi -query 'select * from meta_class').Name | ? { $_ -match "costly"}
-```
-
-If the command returns results, this indicates the Costly performance counters that are enabled. For example:
-
-> Win32_PerfFormattedData_PerfProc_FullImage_Costly  
-Win32_PerfRawData_PerfProc_FullImage_Costly  
-Win32_PerfFormattedData_PerfProc_Image_Costly  
-Win32_PerfRawData_PerfProc_Image_Costly  
-Win32_PerfFormattedData_PerfProc_ProcessAddressSpace_Costly  
-Win32_PerfRawData_PerfProc_ProcessAddressSpace_Costly  
-Win32_PerfFormattedData_PerfProc_ThreadDetails_Costly  
-Win32_PerfRawData_PerfProc_ThreadDetails_Costly  
-
-## Workaround
-
-To fix the issue, identify the process that's using a large number of handles or a large amount of memory. The process may have a memory leak or a handle leak issue. As a workaround, restart the process.
-
-By default if you're using Windows Server 2016 or a later version of Windows, the Costly performance counters are disabled starting from the following Cumulative Updates:
-
-- Windows Server 2016 / Windows 10 version 1607 (RS1)  
-[October 18, 2018-KB4462928 (OS Build 14393.2580)](https://support.microsoft.com/help/4462928)
-- Windows 10 version 1703 (RS2)  
-[July 24, 2018-KB4338827 (OS Build 15063.1235)](https://support.microsoft.com/help/4338827)
-- Windows 10 version 1709 (RS3)  
-[July 24, 2018-KB4338817 (OS Build 16299.579)](https://support.microsoft.com/help/4338817)
-- Windows 10 version 1803 (RS4)  
-[July 16, 2018-KB4345421 (OS Build 17134.167)](https://support.microsoft.com/help/4345421)  
-
-> [!NOTE]
-> After the cumulative update is installed, if you need the classes that are related to the Costly performance counters, set the value **Enable Costly Providers** to **1** (***DWORD***) under the following registry subkey to make them available again:
->
-> `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Wbem`
->
-> The cumulative update will not affect the behavior when a process is using a large number of handles.
-
-This issue happens when a client is querying the performance classes. This is usually a monitoring application.
-
-As a workaround, you can also disable the monitoring application to prevent the creation of the performance classes.
-
 ## Diagnosing WmiPrvse.exe
 
 So far you have only the exact PID of *WmiPrvse.exe* consuming high CPU. Next, you may gather as much information as possible about this PID. This helps you assess the situation, identify or suspect something that could be causing the problem.  Gather information of other resource usage or identify the exact WMI provider (DLL) hosted by the *WmiPrvse.exe* PID identified.
@@ -471,16 +410,6 @@ Here's an example:
 There may be tricky situations where it's impossible to narrow down to specific client PID or application or EXE. In such cases, considering a common entity such as user name or machine associated may be useful.
 
 That is, understand if the user who is initiating the query is a service account or associated with specific application.
-
-WMI provides several performance classes. For more information, see [Performance Counter Classes](/windows/win32/cimwin32prov/performance-counter-classes).
-
-These classes are created dynamically based on the Performance Counters that are available on the system. All the classes are created at the same time, not only the classes that are being queried.
-
-WMIPerfClass is the module that handles creating these classes when the WMI client queries any of them or enumerates the available classes.
-
-These performance classes are stored in a cache that's invalidated after 15 to 20 minutes. As soon as the cache is invalidated, the performance classes must be created again if a client requests them.
-
-Creating the performance classes means that the *WMIPerfClass.dll* module will have to be loaded inside a *WmiPrvSE.exe* process and the related code executed.
 
 ### Other solutions
 
