@@ -12,7 +12,7 @@ ms.collection: linux
 ms.topic: article
 ms.tgt_pltfrm: vm-linux
 ms.workload: infrastructure-services
-ms.date: 5/1/2019
+ms.date: 05/25/2023
 ms.author: genli
 ---
 
@@ -63,7 +63,7 @@ CentOS      | Serial console access enabled by default.
 Debian      | Serial console access enabled by default.
 Ubuntu      | Serial console access enabled by default.
 CoreOS      | Serial console access enabled by default.
-SUSE        | Newer SLES images available on Azure have serial console access enabled by default. If you're using older versions (10 or earlier) of SLES on Azure, see the [KB article](https://www.novell.com/support/kb/doc.php?id=3456486) to enable serial console.
+SUSE        | SLES images available on Azure have serial console access enabled by default.
 Oracle Linux        | Serial console access enabled by default.
 
 ### Custom Linux images
