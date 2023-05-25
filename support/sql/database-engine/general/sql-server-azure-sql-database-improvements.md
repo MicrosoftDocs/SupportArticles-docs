@@ -73,9 +73,9 @@ Trace flag 139 is supported starting in SQL Server 2016 CU3 and SQL Server 2016 
 To upgrade the compatibility level, follow these steps:
 
 1. Perform validation to identify any affected persisted structures:
-   1. Enable trace flag 139 by running **DBCC TRACEON(139, -1).**
-   1. Run **DBCC CHECKDB/TABLE** and **CHECKCONSTRAINTS** commands.
-   1. Disable trace flag 139 by running **DBCC TRACEOFF(139, -1).**
+   1. Enable trace flag 139 by running `DBCC TRACEON(139, -1)`.
+   1. Run `DBCC CHECKDB/TABLE` and `CHECKCONSTRAINTS` commands.
+   1. Disable trace flag 139 by running `DBCC TRACEOFF(139, -1)`.
 1. Change the database compatibility level to 130 (for SQL Server 2016) or 140 (for SQL Server 2017 and Azure SQL Database).
 1. Rebuild any structures that you identified in step 1.
 
@@ -103,7 +103,7 @@ The following tables list data type conversions and additional operations.
 
 |From| To |Change|Example query|Result for compatibility level < 130|Result for compatibility level = 130|
 |--|---|---|---|---|---|
-|`float`, `real`, `numeric`, `decimal`, `money`, or `smallmoney`|datetime or smalldatetime|Increase rounding precision. Previously, day and time were converted separately, and results were truncated before you combined them.|`DECLARE @f FLOAT = 1.2 DECLARE @d DATETIME = @f SELECT CAST(@d AS FLOAT)`|1.19999996141975|1.2|
+|`float`, `real`, `numeric`, `decimal`, `money`, or `smallmoney`|`datetime` or `smalldatetime`|Increase rounding precision. Previously, day and time were converted separately, and results were truncated before you combined them.|`DECLARE @f FLOAT = 1.2 DECLARE @d DATETIME = @f SELECT CAST(@d AS FLOAT)`|1.19999996141975|1.2|
 |`datetime`|`bigint, int, or smallint`|A negative datetime whose time part is exactly a half-day or in a tick of a half-day is rounded incorrectly (the result is off by 1).|`DECLARE @h DATETIME = -0.5 SELECT @h, CAST(@h AS INT)`|0|-1|
 |`datetime` or `smalldatetime`|`float, real, numeric, money, or smallmoney`|Improved precision for the last 8 bits of precision in some cases.|`DECLARE @p0 DATETIME = '1899-12-31 23:58:00.470' DECLARE @f FLOAT = CONVERT(FLOAT, @p0)  SELECT @f, CAST(@f AS VARBINARY(8))`|-0.00138344907407406, 0xBF56AA9B21D85800|-0.00138344907407407, 0xBF56AA9B21D8583B|
 | `float`|`real`|Boundary checks are less strict.| `SELECT CAST (3.40282347000E+038 AS REAL)`|Arithmetic overflow|3.402823E+38|
@@ -113,7 +113,7 @@ The following tables list data type conversions and additional operations.
 | `real` or `float`|numeric|Improved precision when you round to more than 16 digits in some cases.|`DECLARE @v decimal(38, 18) = 1E-18 SELECT @v`|0.000000000000000000|0.000000000000000001|
 | `real` or `float`|`money` or `smallmoney`|Improved accuracy when you convert large numbers in some cases.|`DECLARE @f float = 2SET @f = POWER(@f, 49) + POWER(@f, -2) SELECT CAST(@f AS money)`|562949953421312.2048|562949953421312.25|
 | `(n)(var)char`| `numeric`|An input of more than 39 characters no longer necessarily triggers an arithmetic overflow.|`DECLARE @value nchar(100) = '1.11111111111111111111111111111111111111' SELECT CAST(@value AS decimal(2,1))`|Arithmetic overflow|1.1|
-| `(n)(var)char`| `bit`|Supports leading spaces and signs.|`DECLARE @value nvarchar(100) = '1' SELECT CAST(@value AS bit)`|Conversion failed when converting the nvarchar value '1' to data type bit.|1|
+| `(n)(var)char`| `bit`|Supports leading spaces and signs.|`DECLARE @value nvarchar(100) = '1' SELECT CAST(@value AS bit)`|Conversion failed when converting the `nvarchar` value '1' to data type bit.|1|
 | `datetime`| `time` or `datetime2`|Improved precision when you convert to date/time types with higher precision. Be aware that datetime values are stored as ticks that represent 1/300th of a second. The newer time and datetime2 types store a discrete number of digits, where the number of digits matches the precision.|`DECLARE @value datetime = '1900-01-01 00:00:00.003' SELECT CAST(@value AS time(7))`|00:00:00.0030000|00:00:00.0033333|
 | `time` or `datetime2`| `datetime`|Improved rounding in some cases.|`DECLARE @value time(4) = '00:00:00.0045' SELECT CAST(@value AS datetime)`|1900-01-01 00:00:00.007|1900-01-01 00:00:00.003|
 
@@ -527,7 +527,7 @@ Inconsistencies in indexes correspond to errors 8951 and 8952 (for tables) or 89
 
 To repair these inconsistencies, run `DBCC CHECKTABLE` with `REPAIR_REBUILD`. This will repair the indexes structures without any data loss. However, the database must be in single-user mode and is therefore unavailable to other users while repair is occurring.
 
-You can also manually rebuild affected indexes. This option should be used if the workload cannot be taken offline, because index rebuild can be performed as an ONLINE operation (in supported editions of SQL Server).
+You can also manually rebuild affected indexes. This option should be used if the workload can't be taken offline, because index rebuild can be performed as an ONLINE operation (in supported editions of SQL Server).
 
 **Rebuild indexes**
 
@@ -541,9 +541,11 @@ SELECT QUOTENAME(SCHEMA_NAME(o.schema_id)) + N'.' + QUOTENAME(o.name) AS 'table'
 FROM sys.objects o JOIN sys.indexes i ON o.object_id=i.object_id
 
 WHERE o.object_id = object_id AND i.index_id = index_id
+```
 
 Use the following statement to rebuild the index:
 
+```sql
 ALTER INDEX index_name ON [schema_name].[table_name] REBUILD WITH (ONLINE=ON)
 ```
 
