@@ -45,15 +45,22 @@ To collect data to diagnose the issue, follow these steps:
 1. Collect the output of the following DMVs to analyze further.
 
    ```sql
-   SELECT * FROM  sys.dm_os_memory_clerks
-   SELECT * FROM  sys.dm_tran_database_transactions
-   SELECT * FROM  sys.dm_tran_active_transactions
+   SELECT * FROM sys.dm_os_memory_clerks
+   SELECT * FROM sys.dm_exec_requests
+   SELECT * FROM sys.dm_exec_sessions
+   
    -- from tempdb
-   SELECT * FROM  tempdb.sys.dm_xtp_system_memory_consumers 
-   SELECT * FROM  tempdb.sys.dm_xtp_transaction_stats
-   SELECT * FROM  tempdb.sys.dm_xtp_gc_queue_stats
-   SELECT * FROM  tempdb.sys.dm_db_xtp_object_stats
-   SELECT * FROM  tempdb.sys.dm_db_xtp_memory_consumers
+   SELECT * FROM tempdb.sys.dm_xtp_system_memory_consumers 
+   SELECT * FROM tempdb.sys.dm_db_xtp_memory_consumers
+   
+   SELECT * FROM tempdb.sys.dm_xtp_transaction_stats
+   SELECT * FROM tempdb.sys.dm_xtp_gc_queue_stats
+   SELECT * FROM tempdb.sys.dm_db_xtp_object_stats
+   
+   SELECT * FROM tempdb.sys.dm_db_xtp_transactions
+   SELECT * FROM tempdb.sys.dm_tran_session_transactions
+   SELECT * FROM tempdb.sys.dm_tran_database_transactions
+   SELECT * FROM tempdb.sys.dm_tran_active_transactions
    ```
 
 ## Cause and resolution
