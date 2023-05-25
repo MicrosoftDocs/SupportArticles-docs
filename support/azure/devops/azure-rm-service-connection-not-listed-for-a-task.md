@@ -29,7 +29,7 @@ The **Azure PowerShell task** screen shows that the Azure RM Service connection 
 
 1. Select the **Edit** button.
 
-1. Press **F12**, and then open the network trace window. If possible, enable the  **Disable cache** check box in the panel under the **Network** tab.
+1. Press <kbd>**F12**</kbd>, and then open the network trace window. If possible, enable the  **Disable cache** check box in the panel under the **Network** tab.
 
 1. Select the **verify** button.
 
