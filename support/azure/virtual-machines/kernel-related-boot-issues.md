@@ -405,7 +405,7 @@ sudo chroot /rescue
 /bin/bash: error while loading shared libraries: libc.so.6: cannot open shared object file: No such file or directory
 ```
 
-4. Verify all system packages and their corresponding status by running the following command. Compare the output against a healthy VM running the same OS version.  In the following example is showing `missing     /lib64/libc-2.28.so` which has relationship with previous error on the `chroot process`.
+4. Verify all system packages and their corresponding status by running the following command. Compare the output against a healthy VM running the same OS version.  In the following example is showing `missing     /lib64/libc-2.28.so` which has relationship with the previous error on the `chroot process`.
 
 ```bash
 sudo rpm --verify --all --root=/rescue 
@@ -447,7 +447,7 @@ glibc-2.28-127.0.1.el8.x86_64
 6. Verify which `glibc` package version is installed on the affected VM
 
 ```bash
-sudo rpm -qa   --all --root=/rescue | grep -i glibc
+sudo rpm -qa --all --root=/rescue | grep -i glibc
 ```
 
 ```output
