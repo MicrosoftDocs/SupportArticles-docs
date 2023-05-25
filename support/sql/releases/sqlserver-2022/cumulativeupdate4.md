@@ -24,6 +24,8 @@ This article describes Cumulative Update package 4 (CU4) for Microsoft SQL Serve
 
 ## Known issues in this update
 
+### Issue one
+
 After you install this cumulative update, external data sources using the generic ODBC connector may no longer work. When you try to query external tables that were created before installing this cumulative update, you receive the following error message:
 
 > Msg 7320, Level 16, State 110, Line 68  
@@ -35,6 +37,30 @@ If you try to create a new external table, you receive the following error messa
 > Object reference not set to an instance of an object.
 
 To work around this issue, you can uninstall this cumulative update or add the Driver keyword to the `CONNECTION_OPTIONS` argument. For more information, see [Generic ODBC external data sources may not work after installing Cumulative Update](https://techcommunity.microsoft.com/t5/sql-server-support-blog/generic-odbc-external-data-sources-may-not-work-after-installing/ba-p/3783873).
+
+### Issue two
+
+After you install this cumulative update, you may receive incorrect results from queries that meet all of the following conditions:
+
+1. You have indexes that explicitly specify the sort order. Here's an example:
+
+    ```sql
+    CREATE NONCLUSTERED INDEX [nci_table_column1] ON [dbo].[table1] (column1 DESC)
+    ```
+
+2. You run queries against tables that contain these indexes. These queries specify a sort order that matches the sort order of the indexes.
+
+3. The sort column is used in query predicates in the `WHERE IN` clause or multiple equality clauses. Here's an example:
+
+    ```sql
+    SELECT * FROM [dbo].[table1] WHERE column1 IN (1,2) ORDER BY column1 DESC
+    SELECT * FROM [dbo].[table1] WHERE column1 = 1 or column1 = 2 ORDER BY column1 DESC
+    ```
+
+    > [!NOTE]
+    > The `IN` clause that has a single value doesn't have this issue.
+
+To work around this issue, you can either uninstall this cumulative update or enable trace flag (TF) 13166 and then run `DBCC FREEPROCCACHE`.
 
 ## Improvements and fixes included in this update
 
