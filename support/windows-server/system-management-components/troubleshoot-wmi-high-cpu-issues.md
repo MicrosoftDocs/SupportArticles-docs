@@ -72,7 +72,7 @@ Here's an example that shows how to use the Performance Monitor (Perfmon) tool t
 
     :::image type="content" source="media/troubleshoot-wmi-high-cpu-issues/processor-time-counter-details.png" alt-text="Screenshot shows the details of the %Processor Time counters.":::
 
-5. For the "ID Process" counter, the Last, Average, Minimum, and Maximum all represent the PID of the respective *WmiPrvse.exe* process. Once you have identified the exact instance that's consuming high CPU usage, you may remove the remaining instances of **WmiPrvse#** instances from the list by pressing <kbd>Delete</kbd>.
+5. For the "ID Process" counter, the **Last**, **Average**, **Minimum**, and **Maximum** all represent the PID of the respective *WmiPrvse.exe* process. Once you have identified the exact instance that's consuming high CPU usage, you may remove the remaining instances of **WmiPrvse#** instances from the list by pressing <kbd>Delete</kbd>.
 
 In the example, it's noted that *WmiPrvse.exe* PID 556 was consuming high CPU usage, and it's **WmiPrvse#1** that matches PID 556 in Performance Monitor.
 
