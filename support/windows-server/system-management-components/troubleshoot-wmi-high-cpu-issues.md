@@ -220,9 +220,9 @@ Some of the important operations are:
 
 Here's one of the log entries from the WMI-Tracing CSV file saved.
 
-|Level|Date and Time|Source|Event ID|Task Category||
+|Level|Date and time|Source|Event ID|Task category|Description|
 |-|-|-|-|-|-|
-|Information|05-05-23 14:48|Microsoft-Windows-WMI-Activity|11|None|CorrelationId = {345E5566-0000-0000-0000-68343241D901}; GroupOperationId = 30693; OperationId = 30694; Operation = Start IWbemServices::ExecQuery - root\cimv2 : select * from Win32_Product; ClientMachine = 21H2W10M; User = CONTOSO\boss; ClientProcessId = 5484; NamespaceName = 133277000000783520|
+|Information|05-05-23 14:48|Microsoft-Windows-WMI-Activity|11|None|CorrelationId = {345E5566-0000-0000-0000-68343241D901}; GroupOperationId = 30693; OperationId = 30694; Operation = Start IWbemServices::ExecQuery - root\cimv2 : select * from Win32_Product; ClientMachine = 21H2W10M; User = CONTOSO\<UserName>; ClientProcessId = 5484; NamespaceName = 133277000000783520|
 
 Similar event in XML format looks like:
 
@@ -252,7 +252,7 @@ Similar event in XML format looks like:
 <Operation>Start IWbemServices::ExecQuery - root\cimv2 : select * from Win32_Product</Operation> 
 <ClientMachine>21H2W10M</ClientMachine> 
 <ClientMachineFQDN>21H2W10M.contoso.com</ClientMachineFQDN> 
-<User>CONTOSO\boss</User> 
+<User>CONTOSO\<UserName></User> 
 <ClientProcessId>5484</ClientProcessId> 
 <ClientProcessCreationTime>133277000000783520</ClientProcessCreationTime> 
 <NamespaceName>\\.\root\cimv2</NamespaceName> 
@@ -260,7 +260,7 @@ Similar event in XML format looks like:
 </Operation_New> 
 </UserData> 
 <RenderingInfo Culture="en-US"> 
-<Message>CorrelationId = {345E5566-0000-0000-0000-67343241D901}; GroupOperationId = 28089; OperationId = 28090; Operation = Start IWbemServices::ExecQuery - root\cimv2 : select * from Win32_Product; ClientMachine = 21H2W10M; User = CONTOSO\boss; ClientProcessId = 5484; NamespaceName = 133277000000783520</Message> 
+<Message>CorrelationId = {345E5566-0000-0000-0000-67343241D901}; GroupOperationId = 28089; OperationId = 28090; Operation = Start IWbemServices::ExecQuery - root\cimv2 : select * from Win32_Product; ClientMachine = 21H2W10M; User = CONTOSO\<UserName>; ClientProcessId = 5484; NamespaceName = 133277000000783520</Message> 
 <Level>Information</Level> 
 <Task/> 
 <Opcode>Info</Opcode> 
@@ -283,7 +283,7 @@ From the above sample operation output, you can get and understand the following
 
 Here's another log:
 
-|Level|Date and Time|Source|Event ID|Task Category||
+|Level|Date and time|Source|Event ID|Task category|Description|
 |-|-|-|-|-|-|
 |Information|05-05-23 14:47|Microsoft-Windows-WMI-Activity|12|None|ProviderInfo for GroupOperationId = 30641; Operation = Provider::CreateInstanceEnum - MS_NT_EVENTLOG_PROVIDER : Win32_NTLogEvent; HostID = 556; ProviderName = MS_NT_EVENTLOG_PROVIDER; ProviderGuid = {FD4F53E0-65DC-11d1-AB64-00C04FD9159E}; Path = %systemroot%\system32\wbem\ntevt.dll|
 
@@ -354,11 +354,11 @@ Depending on the tool that you're using to review the trace files, you may apply
 
 With the filter to show only the lines or operations that include "Win32_NTLogEvent", the results are:
 
-|Level|Source|Event ID||
+|Level|Source|Event ID|Description|
 |-|-|-|-|
-|Information|Microsoft-Windows-WMI-Activity|11|CorrelationId = {345E5566-0000-0000-0000-68343241D901}; GroupOperationId = 30641; OperationId = 30642; Operation = Start IWbemServices::CreateInstanceEnum - root\cimv2 : Win32_NTLogEvent; ClientMachine = 21H2W10M; User = CONTOSO\boss; ClientProcessId = 5484; NamespaceName = 133277000000783520|
+|Information|Microsoft-Windows-WMI-Activity|11|CorrelationId = {345E5566-0000-0000-0000-68343241D901}; GroupOperationId = 30641; OperationId = 30642; Operation = Start IWbemServices::CreateInstanceEnum - root\cimv2 : Win32_NTLogEvent; ClientMachine = 21H2W10M; User = CONTOSO\<UserName>; ClientProcessId = 5484; NamespaceName = 133277000000783520|
 |Information|Microsoft-Windows-WMI-Activity|12|ProviderInfo for GroupOperationId = 30641; Operation = Provider::CreateInstanceEnum - MS_NT_EVENTLOG_PROVIDER : Win32_NTLogEvent; HostID = 556; ProviderName = MS_NT_EVENTLOG_PROVIDER; ProviderGuid = {FD4F53E0-65DC-11d1-AB64-00C04FD9159E}; Path = %systemroot%\system32\wbem\ntevt.dll|
-|Information|Microsoft-Windows-WMI-Activity|11|CorrelationId = {345E5566-0000-0000-0000-68343241D901}; GroupOperationId = 30697; OperationId = 30698; Operation = Start IWbemServices::CreateInstanceEnum - root\cimv2 : Win32_NTLogEvent; ClientMachine = 21H2W10M; User = CONTOSO\boss; ClientProcessId = 5484; NamespaceName = 133277000000783520|
+|Information|Microsoft-Windows-WMI-Activity|11|CorrelationId = {345E5566-0000-0000-0000-68343241D901}; GroupOperationId = 30697; OperationId = 30698; Operation = Start IWbemServices::CreateInstanceEnum - root\cimv2 : Win32_NTLogEvent; ClientMachine = 21H2W10M; User = CONTOSO\<UserName>; ClientProcessId = 5484; NamespaceName = 133277000000783520|
 |Information|Microsoft-Windows-WMI-Activity|12|ProviderInfo for GroupOperationId = 30697; Operation = Provider::CreateInstanceEnum - MS_NT_EVENTLOG_PROVIDER : Win32_NTLogEvent; HostID = 556; ProviderName = MS_NT_EVENTLOG_PROVIDER; ProviderGuid = {FD4F53E0-65DC-11d1-AB64-00C04FD9159E}; Path = %systemroot%\system32\wbem\ntevt.dll|
 
 From the above operations, you can get the following additional information:
@@ -367,14 +367,14 @@ From the above operations, you can get the following additional information:
 - Operation ID: 30642;
 - The exact operation = Start IWbemServices::CreateInstanceEnum - root\cimv2 : Win32_NTLogEvent;
 - Client Machine = 21H2W10M
-- User = CONTOSO\boss
+- User = CONTOSO\<UserName>
 - PID of Client that has initiated the query: 5484
 
 At last, you have the PID of a client process 5484, that is initiating query to Win32_NTLogEvent. That's handled by provider MS_NT_EVENTLOG_PROVIDER, and hosted under *WmiPrvse.exe* PID 552, which causes high CPU.
 
-Once you have the possible suspects (the client PIDs), there are multiple ways to find the name of the process.
+Once you have narrowed down the client PIDs, use one of the following tools to find the process name.
   
-- Using task manager
+- [Task manager](/shows/inside/task-manager)
 - [Process Explorer](/sysinternals/downloads/process-explorer)
 - [Process Monitor](/sysinternals/downloads/procmon)
 - [WMIMon](https://github.com/luctalpe/WMIMon)
