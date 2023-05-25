@@ -20,7 +20,7 @@ This article introduces how to collect self-diagnostic logs for the following Ap
 
 ## Application Insights .NET/.NET Core Framework SDK
 
-From version 2.18.0-beta 2 of the Application Insights .NET/.NET Core Framework SDK, the "self-diagnostics" feature is shipped to capture logs from the SDK itself and write them to a log file in a specified directory.
+From version 2.18.0-beta2 of the Application Insights .NET/.NET Core Framework SDK, the "self-diagnostics" feature is shipped to capture logs from the SDK itself and write them to a log file in a specified directory.
 
 ### Self-diagnostics configuration
 
@@ -68,7 +68,7 @@ In most cases, you could drop the file along with your application. Here are two
 2. Go to the Kudu page by selecting **Advanced Tools** > **Go**.
 3. In the Kudu dashboard, select **Debug console** > **CMD**.
 4. Navigate to the directory where the App Service Web App is, such as *D:\Home\Site\wwwroot*.
-5. Use the "**+**" symbol at the top of the Kudu dashboard to create a new file in the *wwwroot* folder and name it *ApplicationInsightsDiagnostics.json*.
+5. Use the "**+**" symbol at the top of the Kudu dashboard to create a new file in the *wwwroot* folder and name it to *ApplicationInsightsDiagnostics.json*.
 
     The *ApplicationInsightsDiagnostics.json* file needs to be placed in the *\<drive>:\home\site\wwwroot* folder. Not all App Service Web Apps reside on the same drive. Some can be on the C: drive, and some might be on the D: drive. To find it, check the **Site folder** and **Temp folder** fields from the default Kudu page.
 
@@ -97,7 +97,7 @@ In most cases, you could drop the file along with your application. Here are two
 
 ### Self-diagnostics for App Service Web App in Linux
 
-1. On your local computer, create a file and name it *ApplicationInsightsDiagnostics.json*.
+1. On your local computer, create a file and name it to *ApplicationInsightsDiagnostics.json*.
 2. Edit the file and add the following content:
 
     ```json
@@ -111,7 +111,7 @@ In most cases, you could drop the file along with your application. Here are two
 3. Save the file.
 4. Go to the App Service Web App from the Azure portal.
 5. Go to the Kudu page by selecting **Advanced Tools** > **Go**.
-6. When the browser session starts up, add `/newui` to the end of the URL. The URL in the browser should look like `https://appnamehere.scm.azurewebsites.net/newui`.
+6. When the browser session starts up, add `/newui` to the end of the URL. The URL in the browser should look like `https://<appname>.scm.azurewebsites.net/newui`.
 7. Press <kbd>Enter</kbd>. The Kudu page with the new UI will open.
 8. In the left menu, select **File Manager**.
 9. Select the *Site* folder and then select the *wwwroot* folder.
