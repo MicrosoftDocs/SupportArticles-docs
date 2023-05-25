@@ -19,7 +19,7 @@ _Applies to:_ AI Builder
 ## Symptoms
 
 Here are the different symptoms of this issue:
-1. A banner is displayed in AI Builder pages : 'You've consumed all your credits.'
+1. A banner is displayed in AI Builder pages: 'You've consumed all your credits.'
 
 1. Maker actions in AI Builder pages are blocked. (Model creation, Model edit, Quick test)
 
@@ -36,7 +36,7 @@ This error is displayed in Error panel in Flow run page, and may be available in
 ## Cause
 
 AI Builder actions consume AI Builder credits.  
-These credits comes from Tenant level or from Environment level allocation.  
+These credits come from Tenant level or from Environment level allocation.  
 Each day, environment consumption since beginning of the month is computed.  
 
 - When consumption is higher than allocated credits, this issue is raised with following symptoms: banner is displayed and Maker actions are blocked.  
@@ -45,23 +45,23 @@ Each day, environment consumption since beginning of the month is computed.
 
 ## Resolution
 
-Your environment needs additional credits. 
-If credits comes from tenant Level (unasssigned credits), you need to add credits at tenant level, either by deallocating credits from other environments, or by purchasing more.
-If credits comes from environment Level, you need to allocate more credits to your environment, either by using existing tenant level environment, or by first adding credits at tenant level, using purchase or environment deallocation.
+Your environment needs more credits. 
+If credits come from tenant Level (unassigned credits), you need to add credits at tenant level: it can be done either by deallocating credits from other environments, or by purchasing more.
+If credits come from environment Level, you need to allocate more credits to your environment: it can be done either by using existing tenant level environment, or by first adding credits at tenant level (using purchase or environment deallocation).
 
 
-### How to determine the source and amount of allocated, unassigned and owned credits
+### How to determine the source and number of allocated, unassigned and owned credits
 You need to be Administrator of your environment to perform these actions.
 
 1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
 1. On the left pane, select **Resources** then **Capacity**.
 1. On the right pane, select **Add-ons**
 1. Every environment with allocated AI Builder credits is listed with the number of allocated credits
-1. If environment is not listed or listed with 0 AI Builder credits, then credits come from tenant level. This step also gives the amount of owned credits.
+1. If environment is not listed or listed with 0 AI Builder credits, then credits come from tenant level. This step also gives the number of owned credits.
     1. On the right pane, select **Summary**
     1. At the bottom of the pane, in the **Add-ons** section, look at **AI Builder credits**: it indicates the total number of credits allocated to environments among the total of owned credits. Amount of Tenant level credits (unassigned credits) is the difference between these numbers.
 
-### How to change the amount of environment allocated credits
+### How to change the number of environment allocated credits
 You need to be Administrator of your environment to perform these actions.
 
 1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
@@ -70,7 +70,7 @@ You need to be Administrator of your environment to perform these actions.
 1. Every environment with allocated AI Builder credits is listed with the number of allocated credits
 1. Click on **Assign to an environment**
 1. In the right-side panel, select your environment
-1. Modify the number of AI Builder credits. If the number of remaining credits is not enough, you can either deallocate credits from other environments or purchase additional credits.
+1. Modify the number of AI Builder credits. If the number of remaining credits is not enough, you can either deallocate credits from other environments or purchase more credits.
 
 ### How to change the amount of tenant level credits (unassigned credits) by unallocating credits from environments
 You need to be Administrator of your environment to perform these actions.
@@ -83,7 +83,7 @@ You need to be Administrator of your environment to perform these actions.
 1. In the right-side panel, select an environment 
 1. Decrease the number of AI Builder credits. 
 
-### How to change the amount of tenant level credits (unassigned credits) by purchasing additional AI Builder credits
+### How to change the amount of tenant level credits (unassigned credits) by purchasing more AI Builder credits
 You need to be Billing Administrator of your tenant to perform these actions.
 1. Sign in to the [Microsoft 365 admin center](https://admin.microsoft.com/).
 1. On the left pane, select **Billing** then **Purchase services**.
@@ -99,7 +99,7 @@ You need to be Administrator of your environment to perform these actions.
 1. On the left pane, select **Resources** then **Capacity**.
 1. On the right pane, select **Summary**
 1. At the bottom of the pane, in the **Add-ons** section, select **Download reports**
-1. Select **New** then **AI Builder** in the drop down, then **Submit**
+1. Select **New** then **AI Builder** in the drop-down, then **Submit**
 1. Select **Refresh** until the report with latest Report dates is marked as Completed
 1. Select the latest Report and click **Download** : a csv is downloaded to your computed
 1. Open the csv file in excel: it contains the AI Builder credit consumption per day, user, and environment. 
@@ -107,14 +107,14 @@ You need to be Administrator of your environment to perform these actions.
 
 
 
-## AI Builder purchase will take time and I need to urgently unblock my Flow or my App, what can I do?
-Please send an email to aihelpen@microsoft.com with following title and information:
-Title: AI Builder consumption overage
-Required information: 
-- Company name,  tenantId, Environment Id
-- Context of the overage and urgency (provide information on the AI Builder use case). 
-- Amount of available credits, current and expected consumption.
-- How you plan to resolve the issue in a near future
+## AI Builder purchase takes time and I need to urgently unblock my Flow or my App, what can I do?
+Send an email to aihelpen@microsoft.com with following title and information:
+- Title: AI Builder consumption overage  
+- Required information: 
+    - Company name,  tenantId, Environment Id
+    - Context of the overage and urgency (provide information on the AI Builder use case). 
+    - Amount of available credits, current and expected consumption.
+    - How you plan to resolve the issue in a near future
 
 We will analyze your request.
 
