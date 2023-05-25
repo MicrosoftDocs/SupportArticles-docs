@@ -1,7 +1,7 @@
 ---
 title: AKS cluster error SubnetWithExternalResourcesCannotBeUsedByOtherResources
 description: Provides solutions to an error that occurs when you create, upgrade, or scale a Microsoft Azure Kubernetes Service cluster.
-ms.date: 05/23/2023
+ms.date: 05/25/2023
 author: axelgMS
 ms.author: axelg
 ms.reviewer: chiragpa, eddie
@@ -16,7 +16,7 @@ This article provides solutions to the "SubnetWithExternalResourcesCannotBeUsedB
 When attempting to create an AKS cluster or perform an "update" or "scale" operation on an existing AKS cluster, you may encounter the following error message:
 
 > Code: SubnetWithExternalResourcesCannotBeUsedByOtherResources  
-> Error Message: Subnet \<subnet1 URI> referenced by \<URI of the AKS resource referencing the subnet1> cannot be used because it contains external resources. The external resources in this subnet are \<URI of the external reference used by subnet1>. You need to delete these external resources before deploying into this subnet.
+> Error Message: Subnet \<URI of subnet1> referenced by \<URI of the AKS resource referencing the subnet1> cannot be used because it contains external resources. The external resources in this subnet are \<URI of the external reference used by subnet1>. You need to delete these external resources before deploying into this subnet.
 
 ## Cause
 
@@ -24,7 +24,7 @@ This error is related to the configuration of subnets. It means that you're tryi
 
 ## Solution
   
-If you need to use the subnet for another resource, there are two methods:
+If you need to use the subnet for another resource, use one of the following methods:
 -	Create a new subnet and associate it with the new resource.
 -	Delete the external references, including service association links, subnet delegations, and so on.
 
