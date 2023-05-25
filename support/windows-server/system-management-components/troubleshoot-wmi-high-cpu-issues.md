@@ -99,7 +99,7 @@ If the *svchost.exe* process contains multiple services, you can break apart the
 
 After restarting the service, you may run the `Tasklist /svc` command to check if the Winmgmt service is running under its own *svchost.exe* process.
 
-After resolving the issue or no longer requiring the service to be in its own *svchost.exe* process, you can place it back into the shared *svchost.exe* process. You can perform the action by running the following command from a command prompt, and then restarting the WMI service again:
+After resolving the issue or no longer requiring the service to be in its own *svchost.exe* process, you can place it back into the shared *svchost.exe* process. You can perform the action by running the following command from a command prompt and then restarting the WMI service again:
 
 ```console
 sc config Winmgmt type= share
@@ -107,33 +107,33 @@ sc config Winmgmt type= share
 
 ## Diagnosing WmiPrvse.exe
 
-So far you have only the exact PID of *WmiPrvse.exe* consuming high CPU. Next, you may gather as much information as possible about this PID. This helps you assess the situation, identify or suspect something that could be causing the problem.  Gather information of other resource usage or identify the exact WMI provider (DLL) hosted by the *WmiPrvse.exe* PID identified.
+So far, you only have the exact PID of *WmiPrvse.exe* that's consuming high CPU usage. Next, gather as much information as possible about this PID. This helps you assess the situation or identify something that could be causing the problem.  Gather information on other resource usage or identify the exact WMI provider (DLL) hosted by the *WmiPrvse.exe* PID identified.
 
 ### Other resource usage such as memory, handles, threads, and username
 
-Gather information of other resource usage such as memory, handles, threads, and username, at the time of high CPU. You may use the **Details** tab in Task manager, select the exact PID and review it.
+Gather information on other resource usage, such as memory, handles, threads, and username, at the time of high CPU usage. You may use the **Details** tab in Task Manager, select the exact PID, and review it.
 
 > [!NOTE]
 > Add additional columns as needed.
 
-:::image type="content" source="media/troubleshoot-wmi-high-cpu-issues/task-manager-high-cpu-usage-service.png" alt-text="Screenshot shows the high CPU usage service in task manager.":::
+:::image type="content" source="media/troubleshoot-wmi-high-cpu-issues/task-manager-high-cpu-usage-service.png" alt-text="Screenshot shows the high CPU usage service in Task Manager.":::
 
 ### Identify the exact WMI provider (DLL) hosted by the WmiPrvse.exe PID identified
 
 Process Explorer can help you identify the exact providers hosted in the PID identified. Follow these steps:
 
-1. Run Process Explorer as administrator. Locate the identified *WmiPrvse.exe* PID, go to its properties and select the **WMI Providers** tab.
-2. In the following example, *WmiPrvse.exe* PID 556 is located and found that it is hosting:
+1. Run Process Explorer as administrator. Locate the identified *WmiPrvse.exe* PID, go to its properties, and select the **WMI Providers** tab.
+2. In the following example, *WmiPrvse.exe* PID 556 is located and found to be hosting:
 
-    - WMI provider: MS_NT_EVENTLOG_PROVIDER
-    - Namespace: root\CIMV2
-    - DLL path: %systemroot%\system32\wbem\ntevt.dll
+    - WMI provider: `MS_NT_EVENTLOG_PROVIDER`
+    - Namespace: `root\CIMV2`
+    - DLL path: *%systemroot%\system32\wbem\ntevt.dll*
 
     :::image type="content" source="media/troubleshoot-wmi-high-cpu-issues/wmiprvse-pid-556.png" alt-text="Screenshot shows the WmiPrvSE.exe:556 properties.":::
 
-In most cases, there may be more than one provider loaded. It may be any one of the providers that is spending time in CPU, causing high CPU issue.
+In most cases, there may be more than one provider loaded. It may be any of the providers that are spending time in the CPU, causing high CPU issues.
 
-Sometimes, if the issue is intermittent or happening not frequently, the *WmiPrvse.exe* causing issue may be terminated over time. When the issue occurs again, it may be the same provider(s) in a new *WmiPrvse.exe* instance. In this situation, once you have the provider(s) noted, run the following cmdlet to show the current PID of the *WmiPrvse.exe* process containing that provider.
+Sometimes, if the issue is intermittent or infrequent, the *WmiPrvse.exe* causing the issue may be terminated over time. When the issue occurs again, it may be the same provider(s) in a new *WmiPrvse.exe* instance. In this situation, once you have the provider(s) noted, run the following cmdlet to show the current PID of the *WmiPrvse.exe* process containing that provider:
 
 ```PowerShell
 tasklist /m <Provider DLL>
@@ -145,26 +145,26 @@ Here's an example:
 tasklist /m ntevt.dll 
 ```
 
-The output shows, currently *CIMWin32.dll* provider is loaded in two different *WmiPrvse.exe* instances and their PID.
+Currently, the output shows that the *CIMWin32.dll* provider is loaded in two different *WmiPrvse.exe* instances and their PIDs.
 
 :::image type="content" source="media/troubleshoot-wmi-high-cpu-issues/tasklist-output.png" alt-text="Screenshot shows the tasklist output of the ntevt.dll file.":::
 
-Hence, it's important to understand what providers are loaded in the *WmiPrvse.exe* process and make note of the PID of the *WmiPrvse.exe* process every time.
+Hence, it's important to understand what providers are loaded in the *WmiPrvse.exe* process and make a note of the PID of the *WmiPrvse.exe* process every time.
 
-Once you have the provider(s) that are loaded in the *WmiPrvse.exe* causing high CPU, you can understand if it is handling any tasks.
+Once you have the provider(s) that are loaded in the *WmiPrvse.exe* causing high CPU usage, you can understand if it's handling any tasks.
 
-Tasks may be the incoming WMI queries that are submitted by the client process to WMI service, which then is assigned to the appropriate WMI provider process. In the example, the task is submitted to the MS_NT_EVENTLOG_PROVIDER provider. So the next step will be to study the incoming queries and tasks to the MS_NT_EVENTLOG_PROVIDER provider.
+Tasks may be the incoming WMI queries that are submitted by the client process to the WMI service, which then is assigned to the appropriate WMI provider process. In the example, the task is submitted to the `MS_NT_EVENTLOG_PROVIDER` provider. So the next step will be to study the incoming queries and tasks to the `MS_NT_EVENTLOG_PROVIDER` provider.
 
 ## Analyze the incoming queries
 
 Examining incoming queries involves:
 
-- Identifying WMI query(s) that are handled by WMI provider causing high CPU.
+- Identifying WMI query(s) that are handled by WMI providers causing high CPU usage.
 - WMI class(es) queries.
-- Associated user.
-- Client process that is initiating the query.
+- An associated user.
+- A client process that's initiating the query.
 
-The above information can be gathered using the publicly available tool [WMIMon](https://github.com/luctalpe/WMIMon) or WMI-Activity Operational logs and WMI-Tracing available under Event Viewer.
+The above information can be gathered using the publicly available tool [WMIMon](https://github.com/luctalpe/WMIMon) or WMI-Activity Operational logs and WMI-Tracing available under **Event Viewer**.
 
 ### Operational logs: Microsoft-Windows-WMI-Activity/Operational
 
@@ -188,16 +188,16 @@ MS_NT_EVENTLOG_PROVIDER provider started with result code 0x0. HostProcess = wmi
 
 ### Enabling "Analytic and Debug Logs" for enabling the WMI tracing
 
-In Event Viewer, select **View** > **Show Analytic and Debug Logs** to enable the **Debug** and **Trace** for WMI-Activity.
+In **Event Viewer**, select **View** > **Show Analytic and Debug Logs** to enable the **Debug** and **Trace** for WMI-Activity.
 
 :::image type="content" source="media/troubleshoot-wmi-high-cpu-issues/event-viewer-operational.png" alt-text="Screenshot shows Operational in Event Viewer.":::
 
-**Debug** and **Trace** are disabled by default, and each of them can be enabled manually by right clicking **Trace** or **Debug** and select **Enable Log**.
+**Debug** and **Trace** are disabled by default, and each of them can be enabled manually by right-clicking **Trace** or **Debug** and then selecting **Enable Log**.
 
 > [!NOTE]
 > Enabling **Show Analytic and Debug Logs** enables debug and tracing for almost all the event sources and creates additional logging. Hence this has to be disabled once the investigation is complete and will not be in use anymore.
 
-This tracing can be kept enabled while you observe high CPU consumption by the *WmiPrvse.exe* process, or long enough to capture the behavior of high CPU to keep the logs clean and moderately sized for easier analyzing of traces.
+This tracing can be kept enabled while you observe high CPU consumption by the *WmiPrvse.exe* process or long enough to capture the behavior of high CPU usage to keep the logs clean and moderately sized for easier analyzing of traces.
 
 1. Export the traces by right clicking **Trace** and select **Save All Events As…**.
 2. Select `.xml` or `.csv` in **Save as type**.
@@ -374,7 +374,7 @@ At last, you have the PID of a client process 5484, that is initiating query to 
 
 Once you have narrowed down the client PIDs, use one of the following tools to find the process name.
   
-- [Task manager](/shows/inside/task-manager)
+- [Task Manager](/shows/inside/task-manager)
 - [Process Explorer](/sysinternals/downloads/process-explorer)
 - [Process Monitor](/sysinternals/downloads/procmon)
 - [WMIMon](https://github.com/luctalpe/WMIMon)
