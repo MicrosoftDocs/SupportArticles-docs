@@ -39,6 +39,8 @@
     href: error-code-subnetisfull.md
   - name: SubscriptionRequestsThrottled error (429)
     href: error-code-subscriptionrequeststhrottled.md
+  - name: SubnetWithExternalResourcesCannotBeUsedByOtherResources error
+    href: subnet-with-external-resources-cannot-be-used-by-other-resources.md
   - name: VMExtensionProvisioningTimeout error
     href: error-code-vmextensionprovisioningtimeout.md
   - name: ZonalAllocationFailed or AllocationFailed error
