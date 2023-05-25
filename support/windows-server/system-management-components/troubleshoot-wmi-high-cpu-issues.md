@@ -390,7 +390,7 @@ This data can be useful for system administrators who need to troubleshoot perfo
 To collect and analyze this data, you can follow the step-by-step instructions:
 
 1. Identify the PID of the *WmiPrvSE.exe* that's consuming the CPU usage using the methods described above.
-2. Download the WMIMon.exe tool from [GitHub - luctalpe/WMIMon](https://github.com/luctalpe/WMIMon). The tool is to monitor WMI activity on Windows.
+2. Download the *WMIMon.exe* tool from [GitHub - luctalpe/WMIMon](https://github.com/luctalpe/WMIMon). The tool is to monitor WMI activity on Windows.
 3. Extract the contents of the *WMIMon_Binaries.zip* file to a folder on your computer.
 4. Open a command prompt as an administrator and go to the folder where you extracted the WMIMon files.
 5. Execute the *WMIMon.exe* file by entering `WMIMon.exe` in the command prompt and pressing <kbd>Enter</kbd>.
@@ -418,8 +418,8 @@ Once you finalize the suspect, you may consider temporarily disabling its servic
 Here are some scenarios where disabling them can validate your observations.
 
 - Monitoring applications and services
-- System center configuration manager (SCCM) (policyhost.exe or Monitoringhost.exe)
-- Powershell.exe running scripts containing WMI queries
+- System center configuration manager (SCCM) (*policyhost.exe* or *Monitoringhost.exe*)
+- *Powershell.exe* running scripts containing WMI queries
 - Any third-party application
 
 ## Data collection
