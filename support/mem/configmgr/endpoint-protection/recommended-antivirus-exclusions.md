@@ -79,7 +79,7 @@ We recommend that you add the following real-time protection exclusions to preve
   - *ContentLib_drive*\SMSPKGSIG
   - *ContentLib_drive*\SMSSIG$
 - Site database servers
-  - [How to choose antivirus software to run on computers that are running SQL Server](https://support.microsoft.com/help/309422)  
+  - [How to choose antivirus software to run on computers that are running SQL Server](../../../sql/database-engine/security/antivirus-and-sql-server.md)  
 
 ### Folder exclusions for clients
 
@@ -92,6 +92,7 @@ We recommend that you add the following real-time protection exclusions to preve
 - C:\Windows\Setup\Scripts
 - C:\Windows\SMSTSPostUpgrade
 - C:\Program Files\Microsoft Policy Platform\authorityDb\\*.sdf
+- *Client installation folder*\temp
 
 ### File exclusions for MPs
 
@@ -128,5 +129,5 @@ Process exclusions are necessary only if aggressive antivirus programs consider 
 
 - [Configuration Manager Current Branch Antivirus Exclusions](https://techcommunity.microsoft.com/t5/Core-Infrastructure-and-Security/Configuration-Manager-Current-Branch-Antivirus-Exclusions/ba-p/884831)
 - [Updated System Center 2012 Configuration Manager Antivirus Exclusions with more details on OSD and Boot Images](https://techcommunity.microsoft.com/t5/Core-Infrastructure-and-Security/Updated-System-Center-2012-Configuration-Manager-Antivirus/ba-p/884371)
-- [How to choose antivirus software to run on computers that are running SQL Server](https://support.microsoft.com/help/309422/how-to-choose-antivirus-software-to-run-on-computers-that-are-running-sql-server)
+- [How to choose antivirus software to run on computers that are running SQL Server](../../../sql/database-engine/security/antivirus-and-sql-server.md)
 - [Virus scanning recommendations for Enterprise computers that are running currently supported versions of Windows](https://support.microsoft.com/help/822158/virus-scanning-recommendations-for-enterprise-computers-that-are-running-currently-supported-versions-of-windows)

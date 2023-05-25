@@ -126,8 +126,6 @@ When you run the analysis job, the following out-of-the-box rules are run. These
 | SMS settings should have all required fields | Verifies that SMS settings don't have empty customer ID and API key fields. |
 |Teams channel configuration should have work stream | Verifies that the Microsoft Teams channel configuration has an active work stream. For more information, see [Configure a Microsoft Teams channel](/dynamics365/customer-service/configure-microsoft-teams). |
 |Teams settings should have all required fields | Verifies that the bot ID field isn't missing from the Teams settings. |
-|Twitter handle configuration should have work stream | Verifies that all Twitter handles have an active work stream. For more information, see [Configure a Twitter channel](/dynamics365/customer-service/configure-twitter-channel). |
-| Twitter settings should have all required fields | Verifies that the Twitter settings don't have an empty callback URL field. |
 |WeChat channel configuration should have work stream | Verifies that all WeChat channel configurations have an active work stream. |
 | WeChat settings should have all required fields | Verifies that the **IP allowlist** and **Server address (URL)** fields aren't empty in the WeChat settings. For more information, see [Configure a WeChat channel](/dynamics365/customer-service/configure-wechat-channel). |
 |WhatsApp channel configuration should have work stream | Verifies that all WhatsApp phone numbers have an active work stream. For more information, see [Configure a WhatsApp channel](/dynamics365/customer-service/configure-whatsapp-channel). |
