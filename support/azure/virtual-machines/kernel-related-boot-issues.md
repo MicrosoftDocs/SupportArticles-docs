@@ -398,18 +398,20 @@ To resolve this issue, follow these steps:
 3. You will realized that `chroot` process is not working but it will give you and indication on what library is missing or corrupted.
 
 ```bash
-#chroot /rescue
-/bin/bash: error while loading shared libraries: libc.so.6: cannot open shared object file: No such file or directory
-```
-
-4. Verify all system packages and their corresponding status by running the following command. Compare the output against a healthy VM running the same OS version.  Below example is showing `missing     /lib64/libc-2.28.so` which has relationship with previous error on the `chroot process`.
-
-```bash
-rpm --verify --all --root=/rescue 
+sudo chroot /rescue
 ```
 
 ```output
-# rpm --verify --all --root=/rescue 
+/bin/bash: error while loading shared libraries: libc.so.6: cannot open shared object file: No such file or directory
+```
+
+4. Verify all system packages and their corresponding status by running the following command. Compare the output against a healthy VM running the same OS version.  In the following example is showing `missing     /lib64/libc-2.28.so` which has relationship with previous error on the `chroot process`.
+
+```bash
+sudo rpm --verify --all --root=/rescue 
+```
+
+```output
 error: Failed to dlopen /usr/lib64/rpm-plugins/systemd_inhibit.so /lib64/librt.so.1: undefined symbol: __pthread_attr_copy, version GLIBC_PRIVATE
 S.5....T.  c /etc/dnf/dnf.conf
 S.5....T.  c /etc/ssh/sshd_config
@@ -428,58 +430,54 @@ missing     /lib64/libc-2.28.so     <-------
 S.5....T.  c /etc/security/pwquality.conf
 ```
 > [!NOTE]
-> Above example, the `libc` package was missing but,it could be that it was modified. In that case it will show `.M.....` instead of `missing`
+> In the previous example, the `libc` package was missing but,it could be that it was modified. In that case it will show `.M.....` instead of `missing`
 
-6. Verify on the rescue VM which package contain the library `/lib64/libc-X.XX.so`
+5. Verify on the rescue VM which package contain the library `/lib64/libc-X.XX.so`
 
 ```bash
-rpm -qf /lib64/libc-X.XX.so
+sudo rpm -qf /lib64/libc-X.XX.so
 ```
 
 ```output
-# rpm -qf /lib64/libc-2.28.so
 glibc-2.28-127.0.1.el8.x86_64
 ```
 > [!NOTE]
->The output of the above command might show a different version of package installed on the affected VM however, it will show the package name that needs to be reinstalled.
+>The output of the previously command might show a different version of package installed on the affected VM however, it will show the package name that needs to be reinstalled.
 
-7. Verify which `glibc` package version is installed on the affected VM
+6. Verify which `glibc` package version is installed on the affected VM
 
 ```bash
-rpm -qa   --all --root=/rescue | grep -i glibc
+sudo rpm -qa   --all --root=/rescue | grep -i glibc
 ```
 
 ```output
-# rpm -qa  --all --root=/rescue | grep -i glibc
 glibc-common-2.28-211.0.1.el8.x86_64
 glibc-gconv-extra-2.28-211.0.1.el8.x86_64
 glibc-2.28-211.0.1.el8.x86_64     <----  
 glibc-langpack-en-2.28-211.0.1.el8.x86_64
 ```
 
-8. Download package `glibc-X.X-XXX.X.X.el8.x86_64`. You can download it from  the OS vendor web browser or from the rescue VM using the package management tool like `yumdownloader` or `zypper install --download-only <packagename>` depending on the OS running.
+7. Download package `glibc-X.X-XXX.X.X.el8.x86_64`. You can download it from  the OS vendor web browser or from the rescue VM using the package management tool like `yumdownloader` or `zypper install --download-only <packagename>` depending on the OS running.
 
 Continue with our example, we have used the `yumdownloader` 
 
 ```bash
-yumdownloader glibc-X.XX-XXX.X.X.el8.x86_64
+cd /tmp
+sudo yumdownloader glibc-X.XX-XXX.X.X.el8.x86_64
 ```
 
 ```output
-# cd /tmp
-# yumdownloader glibc-2.28-211.0.1.el8.x86_64
 Last metadata expiration check: 0:03:24 ago on Thu 25 May 2023 02:36:25 PM UTC.
 glibc-2.28-211.0.1.el8.x86_64.rpm               8.7 MB/s | 2.2 MB     00:00    
 ```
 
-9. Reinstall the affected package on affected VM
+8. Reinstall the affected package on affected VM
 
 ```bash
-rpm -ivh --root=/rescue /tmp/glibc-*.rpm --replacepkgs --replacefiles
+sudo rpm -ivh --root=/rescue /tmp/glibc-*.rpm --replacepkgs --replacefiles
 ```
 
 ```output
-# rpm -ivh --root=/rescue /tmp/glibc-*.rpm --replacepkgs 
 warning: /tmp/glibc-2.28-211.0.1.el8.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID ad986da3: NOKEY
 Verifying...                          ################################# [100%]
 Preparing...                          ################################# [100%]
@@ -487,17 +485,13 @@ Updating / installing...
    1:glibc-2.28-211.0.1.el8           ################################# [100%]
 ```
 
-10. Validate the reinstallation by trying to do the chroot process.
+9. Validate the reinstallation by trying to do the chroot process.
 
 ```bash
-chroot /rescue
+sudo chroot /rescue
 ```
 
-11. Turn off the rescue VM and Swap the OS disk to the affected VM.
-
-
-
-
+10. Turn off the rescue VM and Swap the OS disk to the affected VM.
 
 ### <a id="attempted-tokill-init-wrongpermissions"></a> Wrong file permissions
 
