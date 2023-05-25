@@ -407,20 +407,20 @@ Here's an example:
 > [!NOTE]
 > You can export the data captured by WMIMon to a text file by executing the `WMIMon.exe > Data.txt` command in the command prompt. To stop the data capture, press <kbd>Ctrl</kbd> + <kbd>C</kbd>.
 
-There may be tricky situations where it's impossible to narrow down to specific client PID or application or EXE. In such cases, considering a common entity such as user name or machine associated may be useful.
+There may be tricky situations where narrowing down a specific client PID, application, or EXE is impossible. In such cases, considering a common entity such as a user name or machine associated may be useful.
 
-That is, understand if the user who is initiating the query is a service account or associated with specific application.
+That is, understand if the user initiating the query is a service account or associated with a specific application.
 
 ### Other solutions
 
-Once you finalize the suspect, you may consider temporarily disabling its service or uninstall the application associated with it, and check if the high CPU issue gets solved.
+Once you finalize the suspect, you may consider temporarily disabling its service or uninstalling the application associated with it and checking if the high CPU usage issue gets solved.
 
 Here are some scenarios where disabling them can validate your observations.
 
 - Monitoring applications and services
 - System center configuration manager (SCCM) (policyhost.exe or Monitoringhost.exe)
 - Powershell.exe running scripts containing WMI queries
-- Any third party application
+- Any third-party application
 
 ## Data collection
 
