@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot WMI high CPU issues
+title: Troubleshoot WMI high CPU usage issues
 description: Describes how to diagnose Windows Management Instrumentation (WMI) high CPU issues on any Windows operating system.
 ms.date: 05/24/2023
 author: v-lianna
@@ -13,24 +13,24 @@ ms.reviewer: kaushika, krpg, warrenw, anleito, mistoyan
 ms.custom: sap:wmi, csstroubleshoot
 ms.technology: windows-client-system-management-components
 ---
-# Troubleshoot WMI high CPU issues
+# Troubleshoot WMI high CPU usage issues
 
-This article covers how to diagnose Windows Management Instrumentation (WMI) high CPU issues on any Windows operating system.
+This article covers how to diagnose Windows Management Instrumentation (WMI) high CPU usage issues on any Windows operating system.
 
 ## Identify the problem
 
-In most scenarios, the CPU is consumed by the *WmiPrvse.exe* process, and there are few instances where *svchost.exe* hosting the WMI service (Winmgmt) is consuming high CPU.
+In most scenarios, the CPU is consumed by the *WmiPrvse.exe* process, and there are a few instances where *svchost.exe* hosting the WMI service (Winmgmt) is consuming high CPU usage.
 
-### Review Task Manager's Processes pane or Details pane to identify the exact process
+### Review the Task Manager's Processes pane or Details pane to identify the exact process
 
 Identify if the process is *WmiPrvse.exe* or *svchost.exe* (hosting the WMI service Winmgmt), and identify the process ID.
 
 > [!NOTE]
 > You may have to manually add the **PID** column to view the process ID of all the processes in Task Manager.
 
-Here's an example. Go to **Task manager** > **Details**, then sort by **Name** and locate the *WmiPrvse.exe* process that's consuming high CPU. Make a note of the process ID (PID).
+Here's an example. Go to **Task manager** > **Details**, then sort by **Name** and locate the *WmiPrvse.exe* process that's consuming high CPU usage. Make a note of the process ID (PID).
 
-This screenshot shows multiple instances of **WMI Provider Host** (the *WmiPrvse.exe* process) active, and its CPU utilization.
+This screenshot shows multiple instances of **WMI Provider Host** (the *WmiPrvse.exe* process) as active and its CPU utilization.
 
 :::image type="content" source="media/troubleshoot-wmi-high-cpu-issues/task-manager-processes.png" alt-text="Screenshot shows the process via task manager.":::
 
@@ -38,47 +38,47 @@ This screenshot shows Services Host: Windows Management Instrumentation (*svchos
 
 :::image type="content" source="media/troubleshoot-wmi-high-cpu-issues/task-manager-details.png" alt-text="Screenshot shows the details via task manager.":::
 
-Go to **Task Manager** > **Services**, sort by **Name** and locate the Winmgmt service. Make a note of the PID. Right-click the service and select **Go to details** to locate the *svchost.exe* process as follows:
+Go to **Task Manager** > **Services**, sort by **Name**, and locate the Winmgmt service. Make a note of the PID. Right-click the service and select **Go to details** to locate the *svchost.exe* process as follows:
 
 :::image type="content" source="media/troubleshoot-wmi-high-cpu-issues/task-manager-services.png" alt-text="Screenshot shows the services via task manager.":::
 
-In the example, out of three *WmiPrvse.exe* instances, PID 3648 is located, that consumes around 25% CPU. Winmgmt is hosted under the *svchost.exe* process with PID 2752.
+In the example, out of three *WmiPrvse.exe* instances, PID 3648 is located, which consumes around 25% of CPU usage. Winmgmt is hosted under the *svchost.exe* process with PID 2752.
 
 ### Understand the CPU consumption
 
-This involves mainly observing the overall CPU consumption and the PID identified. It's important to note down when, how and the frequency of the CPU consumption.
+This involves mainly observing the overall CPU consumption and the PID identified. It's important to note when, how, and the frequency of the CPU consumption.
 
-Assess the situation by understanding if the CPU consumption is high during a specific time. Check if there's any activity such as running specific tasks or services active, running monitoring applications, or running scripts leading to *WmiPrvse.exe* or Winmgmt high CPU.
+Assess the situation by understanding if the CPU consumption is high during a specific time. Check if there's any activity, such as running specific tasks or services active, running monitoring applications, or running scripts leading to *WmiPrvse.exe* or Winmgmt high CPU.
 
-Understand if there's any pattern, which means if the CPU usage is consistent or inconsistent, random, sporadic or regular spikes.
+Understand if there's any pattern, which means CPU usage is consistent, inconsistent, random, sporadic, or has regular spikes.
 
-Identify the frequency of the CPU consumption. Check if it occurs only during production hours or a specific activity like user sign in, sign out, out of business hours or random time of the day.
+Identify the frequency of the CPU consumption. Check if it occurs only during production hours, out-of-business hours, or a random time of the day. It may also occur during a specific activity like user sign in or sign out.
   
 You may use Task Manager and visually make a note of how the CPU usage pattern is.
 
-Here's an example shows how to use the Performance Monitor (Perfmon) tool to identify the exact instances of *WmiPrvse.exe* that has the PID you have identified. You can also get a graphical view of the CPU consumption of any process (*WmiPrvse.exe* or *svchost.exe* hosting WMI service).
+Here's an example that shows how to use the Performance Monitor (Perfmon) tool to identify the exact instances of *WmiPrvse.exe* with the PID you identified. You can also get a graphical view of the CPU consumption of any process (*WmiPrvse.exe* or *svchost.exe* hosting WMI service).
 
 1. Open an elevated command prompt, and enter *Perfmon*.
-2. Select **Performance Monitor** in the left pane, and select the plus sign in the right pane to open the **Add Counters** window.
+2. Select **Performance Monitor** in the left pane, and select the plus sign (**+**) in the right pane to open the **Add Counters** window.
 3. Expand **Process** and select **ID Process**. Select all the **WmiPrvse#** instances, and then select **Add** > **OK**.
 
     :::image type="content" source="media/troubleshoot-wmi-high-cpu-issues/id-process-counter.png" alt-text="Screenshot shows how to add ID Process counters.":::
 
     :::image type="content" source="media/troubleshoot-wmi-high-cpu-issues/id-process-counter-details.png" alt-text="Screenshot shows the details of the ID Process counters.":::
 
-4. In the **Add Counters** window, expand **Process** and select **%Processor Time**. Select the **WmiPrvse#** matching the PID consuming high CPU, and then select **Add** > **OK**.
+4. In the **Add Counters** window, expand **Process** and select **%Processor Time**. Select the **WmiPrvse#** matching the PID consuming high CPU usage, and then select **Add** > **OK**.
 
     :::image type="content" source="media/troubleshoot-wmi-high-cpu-issues/processor-time-counter.png" alt-text="Screenshot shows how to add %Processor Time counters.":::
 
     :::image type="content" source="media/troubleshoot-wmi-high-cpu-issues/processor-time-counter-details.png" alt-text="Screenshot shows the details of the %Processor Time counters.":::
 
-5. For the "ID Process" counter, the Last, Average, Minimum and Maximum, all represent the PID of the respective *WmiPrvse.exe* process. Once you have identified the exact instance that is consuming high CPU, you may remove the remaining instances of **WmiPrvse#** instances from the list by pressing <kbd>Delete</kbd>.
+5. For the "ID Process" counter, the Last, Average, Minimum, and Maximum all represent the PID of the respective *WmiPrvse.exe* process. Once you have identified the exact instance that's consuming high CPU usage, you may remove the remaining instances of **WmiPrvse#** instances from the list by pressing <kbd>Delete</kbd>.
 
-In the example, it's noted that *WmiPrvse.exe* PID 556 was consuming high CPU, and it's **WmiPrvse#1** that is matching PID 556 in Performance Monitor.
+In the example, it's noted that *WmiPrvse.exe* PID 556 was consuming high CPU usage, and it's **WmiPrvse#1** that matches PID 556 in Performance Monitor.
 
-Then counter **%Processor Time** of **WmiPrvse#1** is added to see live graphical view CPU usage of this process. In the example, the color of **%Processor Time** of **WmiPrvse#1** is changed from yellow to red.
+Then counter **%Processor Time** of **WmiPrvse#1** is added to see a live graphical view the CPU usage of this process. In the example, the color of **%Processor Time** of **WmiPrvse#1** is changed from yellow to red.
 
-The steps are same for locating the right **svchost#** in Performance Monitor, in the case of high CPU by *svchost.exe* hosting Wmimgmt service.
+The steps are the same for locating the right **svchost#** in Performance Monitor in the case of high CPU usage by *svchost.exe* hosting the Wmimgmt service.
 
 If you observe that a *svchost.exe* process hosting the WMI service is causing high CPU usage and suspect that WMI is contributing to the issue, you can confirm if the PID of the *svchost.exe* process is hosting the WMI service by running the following command:
 
@@ -86,7 +86,7 @@ If you observe that a *svchost.exe* process hosting the WMI service is causing h
 tasklist /svc /fi "Services eq Winmgmt"
 ```
 
-If the *svchost.exe* process contains multiple services, you can break out the WMI service into its own *svchost.exe* process by following these steps:
+If the *svchost.exe* process contains multiple services, you can break apart the WMI service into its own *svchost.exe* process by following these steps:
 
 1. Open an elevated command prompt with elevated privileges.
 2. Run the following command:
