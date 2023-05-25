@@ -385,23 +385,123 @@ Important Linux files and directories are missing due to a human error. For exam
 
 ### <a id="attempted-tokill-init-missinglibraries"></a>Missing important system core libraries and packages
 
-Important system core libraries, files, or packages are deleted from the system or got corrupted. To resolve this issue, follow these steps:
+Important system core libraries, files, or packages are deleted from the system or got corrupted. 
 
-1. Look for the glibc package by running the following command. Make sure it's installed, and all their files are still present in the system.
+The solution works in RPM-based distros like, Red Hat/CentOS/SUSE VMs. For other Linux distributions, we recommend [restoring the VM from backup](/azure/backup/backup-azure-arm-restore-vms). 
 
-    ```bash
-    rpm -qa | grep glibc
-    ```
+To resolve this issue, follow these steps: 
 
-2. Verify all system packages and their corresponding status by running the following command. Compare the output against a healthy VM running the same OS version. Reinstall the corrupted packages from a repair VM.
+1. Create a rescue VM using a `raw image` with same `OS version` and `generation` as the affected VM.
 
-    ```bash
-    rpm --verify --all 
-    ```
+2. Follow the [chroot](chroot-environment-linux.md) process.
+
+3. You will realized that `chroot` process is not working but it will give you and indication on what library is missing or corrupted.
+
+```bash
+#chroot /rescue
+/bin/bash: error while loading shared libraries: libc.so.6: cannot open shared object file: No such file or directory
+```
+
+4. Verify all system packages and their corresponding status by running the following command. Compare the output against a healthy VM running the same OS version.  Below example is showing `missing     /lib64/libc-2.28.so` which has relationship with previous error on the `chroot process`.
+
+```bash
+rpm --verify --all --root=/rescue 
+```
+
+```output
+# rpm --verify --all --root=/rescue 
+error: Failed to dlopen /usr/lib64/rpm-plugins/systemd_inhibit.so /lib64/librt.so.1: undefined symbol: __pthread_attr_copy, version GLIBC_PRIVATE
+S.5....T.  c /etc/dnf/dnf.conf
+S.5....T.  c /etc/ssh/sshd_config
+.M.......    /boot/efi/EFI/BOOT/BOOTX64.EFI
+.M.......    /boot/efi/EFI/BOOT/fbx64.efi
+.M.......    /boot/efi/EFI/redhat/BOOTX64.CSV
+.M.......    /boot/efi/EFI/redhat/mmx64.efi
+.M.......    /boot/efi/EFI/redhat/shimx64-redhat.efi
+.M.......    /boot/efi/EFI/redhat/shimx64.efi
+missing     /run/motd.d
+.M.......  g /var/spool/anacron/cron.daily
+.M.......  g /var/spool/anacron/cron.monthly
+.M.......  g /var/spool/anacron/cron.weekly
+missing     /lib64/libc-2.28.so     <-------
+.M.......    /boot/efi/EFI/redhat
+S.5....T.  c /etc/security/pwquality.conf
+```
+> [!NOTE]
+> Above example, the `libc` package was missing but,it could be that it was modified. In that case it will show `.M.....` instead of `missing`
+
+6. Verify on the rescue VM which package contain the library `/lib64/libc-X.XX.so`
+
+```bash
+rpm -qf /lib64/libc-X.XX.so
+```
+
+```output
+# rpm -qf /lib64/libc-2.28.so
+glibc-2.28-127.0.1.el8.x86_64
+```
+> [!NOTE]
+>The output of the above command might show a different version of package installed on the affected VM however, it will show the package name that needs to be reinstalled.
+
+7. Verify which `glibc` package version is installed on the affected VM
+
+```bash
+rpm -qa   --all --root=/rescue | grep -i glibc
+```
+
+```output
+# rpm -qa  --all --root=/rescue | grep -i glibc
+glibc-common-2.28-211.0.1.el8.x86_64
+glibc-gconv-extra-2.28-211.0.1.el8.x86_64
+glibc-2.28-211.0.1.el8.x86_64     <----  
+glibc-langpack-en-2.28-211.0.1.el8.x86_64
+```
+
+8. Download package `glibc-X.X-XXX.X.X.el8.x86_64`. You can download it from  the OS vendor web browser or from the rescue VM using the package management tool like `yumdownloader` or `zypper install --download-only <packagename>` depending on the OS running.
+
+Continue with our example, we have used the `yumdownloader` 
+
+```bash
+yumdownloader glibc-X.XX-XXX.X.X.el8.x86_64
+```
+
+```output
+# cd /tmp
+# yumdownloader glibc-2.28-211.0.1.el8.x86_64
+Last metadata expiration check: 0:03:24 ago on Thu 25 May 2023 02:36:25 PM UTC.
+glibc-2.28-211.0.1.el8.x86_64.rpm               8.7 MB/s | 2.2 MB     00:00    
+```
+
+9. Reinstall the affected package on affected VM
+
+```bash
+rpm -ivh --root=/rescue /tmp/glibc-*.rpm --replacepkgs --replacefiles
+```
+
+```output
+# rpm -ivh --root=/rescue /tmp/glibc-*.rpm --replacepkgs 
+warning: /tmp/glibc-2.28-211.0.1.el8.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID ad986da3: NOKEY
+Verifying...                          ################################# [100%]
+Preparing...                          ################################# [100%]
+Updating / installing...
+   1:glibc-2.28-211.0.1.el8           ################################# [100%]
+```
+
+10. Validate the reinstallation by trying to do the chroot process.
+
+```bash
+chroot /rescue
+```
+
+11. Turn off the rescue VM and Swap the OS disk to the affected VM.
+
+
+
+
 
 ### <a id="attempted-tokill-init-wrongpermissions"></a> Wrong file permissions
 
-Wrong system wide file permissions are modified due to a human error (for example, someone runs `chmod 777` on */* or other important OS file systems). To resolve this issue, restore the file permissions. The solution works in Red Hat/CentOS VMs. For other Linux distributions, we recommend [restoring the VM from backup](/azure/backup/backup-azure-arm-restore-vms).
+Wrong system wide file permissions are modified due to a human error (for example, someone runs `chmod 777` on */* or other important OS file systems). To resolve this issue, restore the file permissions. The solution works in RPM-based distros like, Red Hat/CentOS/SUSE VMs. For other Linux distributions, we recommend [restoring the VM from backup](/azure/backup/backup-azure-arm-restore-vms).
 
 To restore the file permissions, run the following command after attaching the copy of the OS disk to a repair VM and mounting the corresponding file systems by using [chroot](chroot-environment-linux.md):
 
