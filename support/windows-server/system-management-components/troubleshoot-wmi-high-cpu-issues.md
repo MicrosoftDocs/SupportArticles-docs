@@ -199,18 +199,18 @@ In **Event Viewer**, select **View** > **Show Analytic and Debug Logs** to enabl
 
 This tracing can be kept enabled while you observe high CPU consumption by the *WmiPrvse.exe* process or long enough to capture the behavior of high CPU usage to keep the logs clean and moderately sized for easier analyzing of traces.
 
-1. Export the traces by right clicking **Trace** and select **Save All Events As…**.
+1. Export the traces by right-clicking **Trace** and selecting **Save All Events As…**.
 2. Select `.xml` or `.csv` in **Save as type**.
 
     > [!NOTE]
     > You may choose other familiar formats such as `.EVTX` as needed.
 
 3. Choose the desired language of the tracing file.
-4. You may choose to save the WMI-Activity Operational events as well, separately in desired format for you to review and analyze.
+4. You may choose to save the WMI-Activity Operational events separately as well, in the desired format for you to review and analyze.
 
 ### Reviewing the WMI trace files
 
-Within the WMI tracing, there are multiple important operations included which are all part of incoming WMI queries. The operations are documented in [IWbemServices interface (wbemcli.h)](/windows/win32/api/wbemcli/nn-wbemcli-iwbemservices).
+Within the WMI tracing, there are multiple important operations included, which are all part of incoming WMI queries. The operations are documented in [IWbemServices interface (wbemcli.h)](/windows/win32/api/wbemcli/nn-wbemcli-iwbemservices).
 
 Some of the important operations are:
 
@@ -218,13 +218,13 @@ Some of the important operations are:
 - `IWbemServices::ExecMethod` method (wbemcli.h)
 - `IWbemServices::ExecQueryAsync` method (wbemcli.h)
 
-Here's one of the log entries from the WMI-Tracing CSV file saved.
+Here's one of the log entries from the WMI-Tracing CSV file saved:
 
 |Level|Date and time|Source|Event ID|Task category|Description|
 |-|-|-|-|-|-|
 |Information|05-05-23 14:48|Microsoft-Windows-WMI-Activity|11|None|CorrelationId = {345E5566-0000-0000-0000-68343241D901}; GroupOperationId = 30693; OperationId = 30694; Operation = Start IWbemServices::ExecQuery - root\cimv2 : select * from Win32_Product; ClientMachine = 21H2W10M; User = CONTOSO\<UserName>; ClientProcessId = 5484; NamespaceName = 133277000000783520|
 
-Similar event in XML format looks like:
+A similar event in XML format looks like:
 
 ```xml
  <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event"> 
@@ -340,19 +340,19 @@ From the operation output of the second example, you can get and understand the 
 
 ## Finding the suspects
 
-The idea of reviewing this log file is to list out the operations that are associated with the identified *WmiPrvse.exe* PID that is consuming high CPU, understand the incoming queries to it and who is initiating them (the client process).
+The idea of reviewing this log file is to list the operations associated with the identified *WmiPrvse.exe* PID that's consuming high CPU usage, understand the incoming queries, and who's initiating them (the client process).
 
-In the example covered above, it's the PID 552 that is causing high CPU.
+In the example covered above, it's the PID 552 that is causing high CPU usage.
 
-From the second example of the log output, the operation [CreateInstanceEnum](/windows/win32/api/wbemcli/nf-wbemcli-iwbemservices-createinstanceenum) is initiated for specific WMI class Win32_NTLogEvent.
+From the second example of the log output, the operation [CreateInstanceEnum](/windows/win32/api/wbemcli/nf-wbemcli-iwbemservices-createinstanceenum) is initiated for specific WMI class `Win32_NTLogEvent`.
 
 For more information, see [Win32_NTLogEvent](/previous-versions/windows/desktop/eventlogprov/win32-ntlogevent#requirements), which includes the WMI provider details that are associated with the WMI class.
 
-You now know the exact WMI provider hosted (MS_NT_EVENTLOG_PROVIDER) in the *WmiPrvse.exe* that's causing high CPU, the host ID (552), and WMI class (Win32_NTLogEvent) that's being queried by some client process.
+You now know the exact WMI provider hosted (`MS_NT_EVENTLOG_PROVIDER`) in the *WmiPrvse.exe* that's causing high CPU usage, the host ID (552), and WMI class (Win32_NTLogEvent) that's being queried by some client process.
 
-Depending on the tool that you're using to review the trace files, you may apply necessary filters to review just the operations related to Win32_NTLogEvent or *WmiPrvse.exe* PID 552 or Host ID 552 or *ntevt.dll*.
+Depending on the tool that you're using to review the trace files, you may apply necessary filters to review just the operations related to `Win32_NTLogEvent` or *WmiPrvse.exe* PID 552 or Host ID 552 or *ntevt.dll*.
 
-With the filter to show only the lines or operations that include "Win32_NTLogEvent", the results are:
+With the filter showing only the lines or operations that include "Win32_NTLogEvent", the results are:
 
 |Level|Source|Event ID|Description|
 |-|-|-|-|
@@ -363,14 +363,14 @@ With the filter to show only the lines or operations that include "Win32_NTLogEv
 
 From the above operations, you can get the following additional information:
 
-- Time stamp
+- Timestamp
 - Operation ID: 30642;
 - The exact operation = Start IWbemServices::CreateInstanceEnum - root\cimv2 : Win32_NTLogEvent;
 - Client Machine = 21H2W10M
 - User = CONTOSO\<UserName>
 - PID of Client that has initiated the query: 5484
 
-At last, you have the PID of a client process 5484, that is initiating query to Win32_NTLogEvent. That's handled by provider MS_NT_EVENTLOG_PROVIDER, and hosted under *WmiPrvse.exe* PID 552, which causes high CPU.
+At last, you have the PID of a client process 5484, that's initiating a query to `Win32_NTLogEvent`. That's handled by provider `MS_NT_EVENTLOG_PROVIDER` and hosted under *WmiPrvse.exe* PID 552, which causes high CPU usage.
 
 Once you have narrowed down the client PIDs, use one of the following tools to find the process name.
   
@@ -389,11 +389,11 @@ This data can be useful for system administrators who need to troubleshoot perfo
 
 To collect and analyze this data, you can follow the step-by-step instructions:
 
-1. Identify the PID of the *WmiPrvSE.exe* that is consuming the CPU using the methods described above.
+1. Identify the PID of the *WmiPrvSE.exe* that's consuming the CPU usage using the methods described above.
 2. Download the WMIMon.exe tool from [GitHub - luctalpe/WMIMon](https://github.com/luctalpe/WMIMon). The tool is to monitor WMI activity on Windows.
 3. Extract the contents of the *WMIMon_Binaries.zip* file to a folder on your computer.
 4. Open a command prompt as an administrator and go to the folder where you extracted the WMIMon files.
-5. Execute the *WMIMon.exe* file by typing `WMIMon.exe` in the command prompt and pressing <kbd>Enter</kbd>.
+5. Execute the *WMIMon.exe* file by entering `WMIMon.exe` in the command prompt and pressing <kbd>Enter</kbd>.
 6. WMIMon will now start monitoring the WMI calls made by processes on the system, including the one identified in step 1.
 7. WMIMon displays information such as the client process ID, the WMI namespace called by the operation, the WMI class name, and the user account used to make the request.
 8. Analyze the output from WMIMon to identify which process(es) is making frequent WMI calls and potentially causing high CPU usage.
