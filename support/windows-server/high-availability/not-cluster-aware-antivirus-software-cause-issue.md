@@ -59,5 +59,3 @@ Additionally, you should exclude the following file system locations and the pro
 - rhs.exe (`%systemroot%\Cluster\rhs.exe`)
 
     This file may have to be configured as a process exclusion within the antivirus software.
-
-For more information about running antivirus software on servers that are running SQL Server, see [How to choose antivirus software to run on computers that are running SQL Server](https://support.microsoft.com/help/309422).
