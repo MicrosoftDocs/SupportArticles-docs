@@ -50,7 +50,7 @@ After you install this cumulative update, you may receive incorrect results from
 
 2. You run queries against tables that contain these indexes. These queries specify a sort order that matches the sort order of the indexes.
 
-3. The sort column is used in query predicates in the `WHERE IN` clauses or multiple equality clauses. Here's an example:
+3. The sort column is used in query predicates in the `WHERE IN` clause or multiple equality clauses. Here's an example:
 
     ```sql
     SELECT * FROM [dbo].[table1] WHERE column1 IN (1,2) ORDER BY column1 DESC
@@ -58,7 +58,7 @@ After you install this cumulative update, you may receive incorrect results from
     ```
 
     > [!NOTE]
-    > The `IN` clauses that have a single value don't have this issue.
+    > The `IN` clause that has a single value doesn't have this issue.
 
 To work around this issue, you can either uninstall this cumulative update or enable trace flag (TF) 13166 and then run `DBCC FREEPROCCACHE`.
 
