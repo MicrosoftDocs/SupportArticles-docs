@@ -6,11 +6,11 @@ ms.author: v-weizhu
 ms.topic: how-to
 ms.service: azure-monitor
 ms.subservice: application-insights
-ms.date: 05/24/2023
+ms.date: 05/25/2023
 ---
 # How to collect self-diagnostic logs for Application Insights SDKs
 
-When you instrument an application via Application Insights auto-instrumentation or manual instrumentation with an Application Insights SDK, you encounter issues with the Application Insights SDK itself. In this scenario, diagnostic logs of the Application Insights SDK are needed to spot and diagnose issues with Application Insights.
+When you instrument an application via Application Insights auto-instrumentation or manual instrumentation with an Application Insights SDK, you may encounter issues with the Application Insights SDK itself. In this scenario, diagnostic logs of the Application Insights SDK are needed to spot and diagnose issues with Application Insights.
 
 This article introduces how to collect self-diagnostic logs for the following Application Insights SDKs:
 
@@ -36,7 +36,7 @@ Configure self-diagnostics by using a file named *ApplicationInsightsDiagnostics
 
 > [!NOTE]
 >
-> - If the Application Insights .NET/.NET Core Framework SDK fails to parse any of those parameters in this configuration file, the configuration file will be treated as invalid, and self-diagnostics won't be enabled.
+> - The configuration file for self-diagnostics must have valid parameters for the Application Insights .NET/.NET Core Framework SDK to parse. If the file is invalid or malformed, the SDK will ignore it, and self-diagnostics won't be enabled. However, this won't affect the normal functioning of the monitored application.
 > - This configuration file must be no more than 4 kilobytes (KB). Otherwise, only the first 4 KB of content will be read.
 > - The Application Insights .NET/.NET Core Framework SDK will attempt to read the configuration file every 10 seconds and create or circularly overwrite the log file.
 
@@ -85,7 +85,7 @@ In most cases, you could drop the file along with your application. Here are two
     ```
 
     > [!NOTE]
-    > The `LogDirectory` parameter should be set to a location under *\<drive>:\home* for ease, but other locations are valid if there's enough access.
+    > The `LogDirectory` parameter should be set to a location under *\<drive>:\home* for easy access, but other locations are valid if there's enough access.
 
 7. Save the file.
 
