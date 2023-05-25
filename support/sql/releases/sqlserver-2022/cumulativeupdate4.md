@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 4 for SQL Server 2022 (KB5026717)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 4 (KB5026717).
-ms.date: 05/11/2023
+ms.date: 05/25/2023
 ms.custom: KB5026717
 author: Elena068
 ms.author: v-qianli2
