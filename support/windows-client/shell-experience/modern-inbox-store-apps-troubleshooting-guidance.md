@@ -60,7 +60,7 @@ Modern Apps or Microsoft Store Apps can sometimes fail to start or launch and th
     ```
 
     > [!NOTE]
-    > Notice how we return the output from the 'get-appxpackage' cmdlet to feed into the `Add-AppxPackage' cmdlet using the pipe `| `command. This only works if the package is already registered.
+    > Notice how we return the output from the 'get-appxpackage' cmdlet to feed into the `Add-AppxPackage' cmdlet using the pipe `|` cmdlet. This only works if the package is already registered.
 
 3. If you receive no response to the `Get-AppxPackage` cmdlet, you can still use the `Add-AppxPackage` cmdlet by using the family name or the path to the *AppxManifest.xml* file:
 
