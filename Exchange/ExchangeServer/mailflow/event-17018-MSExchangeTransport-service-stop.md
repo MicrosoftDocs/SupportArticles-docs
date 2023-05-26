@@ -37,7 +37,7 @@ This issue occurs because a high number of server-to-server connections can exha
 ## Resolution
 
 > [!NOTE]  
-> This fix applies to only Microoft Exchange Server 2019. 
+> This fix applies to only Microsoft Exchange Server 2019. 
 
 To fix this issue, follow these steps:
 
