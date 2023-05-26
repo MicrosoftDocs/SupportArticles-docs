@@ -15,7 +15,6 @@ ms.custom:
 ms.reviewer: nasira; lusassl; paulkwo; meerak
 appliesto:
 - Exchange Server 2019
-- Exchange Server 2016
 search.appverid: MET150
 ---
 # Microsoft Exchange Transport service stops and returns Event ID 17018
@@ -36,6 +35,9 @@ at Microsoft.Exchange.Transport.Storage.DataConnection..ctor(JET_INSTANCE instan
 This issue occurs because a high number of server-to-server connections can exhaust the session limit too quickly.
 
 ## Resolution
+
+> [!NOTE]  
+> This fix applies to only Microoft Exchange Server 2019. 
 
 To fix this issue, follow these steps:
 
