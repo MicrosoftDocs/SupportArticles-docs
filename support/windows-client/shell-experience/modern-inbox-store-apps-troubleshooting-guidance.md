@@ -120,7 +120,7 @@ Modern Apps or Microsoft Store Apps can sometimes fail to start or launch and th
     winget install --exact --silent --accept-source-agreements --accept-package-agreements XP89DCGQ3K6VLD --source msstore
     ```
 
-    The ID for the application can be pulled from the search.
+    You can search for available applications using [winget search](/windows/package-manager/winget/search).
 
     Here's an example of a WinGet script.
 
@@ -129,65 +129,7 @@ Modern Apps or Microsoft Store Apps can sometimes fail to start or launch and th
     EXAMPLE WINGET SCRIPT
 
     We could use this script to install/reinstall applications using WinGet:
-
-    The applications must be specified by their Application Id 
- 
-    Name                                          Id                                            Version             Source 
-    ----------------------------------------------------------------------------------------------------------------------- 
-    Clipchamp                                     Clipchamp.Clipchamp_yxz26nhyzhsrt             2.5.15.0             
-    Microsoft Edge                                Microsoft.Edge                                112.0.1722.64       winget 
-    Microsoft Edge Update                         Microsoft Edge Update                         1.3.173.55           
-    Microsoft Edge WebView2 Runtime               Microsoft.EdgeWebView2Runtime                 112.0.1722.64       winget 
-    Cortana                                       Microsoft.549981C3F5F10_8wekyb3d8bbwe         4.2204.13303.0       
-    News                                          Microsoft.BingNews_8wekyb3d8bbwe              4.55.50751.0         
-    MSN Weather                                   Microsoft.BingWeather_8wekyb3d8bbwe           3.2.8.0              
-    AppX Installer                                 Microsoft.DesktopAppInstaller_8wekyb3d8bbwe   1.19.10173.0         
-    Xbox                                          Microsoft.GamingApp_8wekyb3d8bbwe             2304.1001.15.0       
-    Get Help                                      Microsoft.GetHelp_8wekyb3d8bbwe               10.2303.10961.0      
-    Microsoft Tips                                Microsoft.Getstarted_8wekyb3d8bbwe            10.2210.3.0          
-    HEIF Image Extensions                         Microsoft.HEIFImageExtension_8wekyb3d8bbwe    1.0.60871.0          
-    HEVC Video Extensions from Device Manufacturâ&euro;¦ Microsoft.HEVCVideoExtension_8wekyb3d8bbwe    1.0.50361.0          
-    Microsoft Edge                                Microsoft.MicrosoftEdge.Stable_8wekyb3d8bbwe  112.0.1722.58        
-    Microsoft 365 (Office)                        Microsoft.MicrosoftOfficeHub_8wekyb3d8bbwe    18.2303.1201.0       
-    Solitaire & Casual Games                      Microsoft.MicrosoftSolitaireCollection_8wekyâ&euro;¦ 4.16.3140.0          
-    Microsoft Sticky Notes                        Microsoft.MicrosoftStickyNotes_8wekyb3d8bbwe  4.0.4600.0           
-    Microsoft People                              Microsoft.People_8wekyb3d8bbwe                10.2202.30.0         
-    Power Automate                                Microsoft.PowerAutomateDesktop_8wekyb3d8bbwe  1.0.465.0            
-    Raw Image Extension                           Microsoft.RawImageExtension_8wekyb3d8bbwe     2.1.60611.0          
-    Snipping Tool                                 Microsoft.ScreenSketch_8wekyb3d8bbwe          11.2302.20.0         
-    Windows Security                              Microsoft.SecHealthUI_8wekyb3d8bbwe           1000.25330.9000.0    
-    Store Experience Host                         Microsoft.StorePurchaseApp_8wekyb3d8bbwe      12301.1401.8.0       
-    Microsoft To Do                               Microsoft.Todos_8wekyb3d8bbwe                 0.94.6962.0          
-    VP9 Video Extensions                          Microsoft.VP9VideoExtensions_8wekyb3d8bbwe    1.0.52781.0          
-    Web Media Extensions                          Microsoft.WebMediaExtensions_8wekyb3d8bbwe    1.0.42192.0          
-    Webp Image Extensions                         Microsoft.WebpImageExtension_8wekyb3d8bbwe    1.0.52351.0          
-    Microsoft Photos                              Microsoft.Windows.Photos_8wekyb3d8bbwe        2023.11030.27009.0   
-    Windows Clock                                 Microsoft.WindowsAlarms_8wekyb3d8bbwe         1.0.104.0            
-    Windows Camera                                Microsoft.WindowsCamera_8wekyb3d8bbwe         2022.2210.9.0        
-    Feedback Hub                                  Microsoft.WindowsFeedbackHub_8wekyb3d8bbwe    1.2304.1101.0        
-    Windows Maps                                  Microsoft.WindowsMaps_8wekyb3d8bbwe           1.0.50.0             
-    Windows Notepad                               Microsoft.WindowsNotepad_8wekyb3d8bbwe        11.2302.26.0         
-    Windows Voice Recorder                        Microsoft.WindowsSoundRecorder_8wekyb3d8bbwe  1.0.64.0             
-    Microsoft Store                               Microsoft.WindowsStore_8wekyb3d8bbwe          22303.1401.5.0       
-    Windows Terminal                              Microsoft.WindowsTerminal                     1.16.10262.0        winget 
-    Windows Package Manager Source (winget)       Microsoft.Winget.Source_8wekyb3d8bbwe         2023.502.1112.103    
-    Xbox TCUI                                     Microsoft.Xbox.TCUI_8wekyb3d8bbwe             1.24.10001.0         
-    Xbox Game Bar Plugin                          Microsoft.XboxGameOverlay_8wekyb3d8bbwe       1.54.4001.0          
-    Xbox Game Bar                                 Microsoft.XboxGamingOverlay_8wekyb3d8bbwe     5.823.3261.0         
-    Xbox Identity Provider                        Microsoft.XboxIdentityProvider_8wekyb3d8bbwe  12.95.3001.0         
-    Xbox Game Speech Window                       Microsoft.XboxSpeechToTextOverlay_8wekyb3d8bâ&euro;¦ 1.21.13002.0         
-    Phone Link                                    Microsoft.YourPhone_8wekyb3d8bbwe             0.23032.186.0        
-    Windows Media Player                          Microsoft.ZuneMusic_8wekyb3d8bbwe             11.2303.10.0         
-    Movies & TV                                   Microsoft.ZuneVideo_8wekyb3d8bbwe             10.22091.10041.0     
-    Quick Assist                                  MicrosoftCorporationII.QuickAssist_8wekyb3d8â&euro;¦ 2.0.19.0             
-    Microsoft Teams                               MicrosoftTeams_8wekyb3d8bbwe                  23091.406.2009.3890  
-    Windows Web Experience Pack                   MicrosoftWindows.Client.WebExperience_cw5n1hâ&euro;¦ 423.8900.0.0         
-    Microsoft OneDrive                            Microsoft.OneDrive                            23.081.0416.0001    winget 
-    Mail and Calendar                             microsoft.windowscommunicationsapps_8wekyb3dâ&euro;¦ 16005.14326.21422.0  
-    Microsoft Update Health Tools                 {EF9EBC42-6969-45CE-A8D2-B9249B00C838}        5.69.0.0             
-     
-    #> 
-     
+    
     ### Install Applications from a list (can be replaced with a CSV or Interactively ### 
      
     $Application_List = @( 
