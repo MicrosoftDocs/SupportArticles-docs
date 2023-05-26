@@ -120,7 +120,7 @@ Gather information on other resource usage, such as memory, handles, threads, an
 
 ### Identify the exact WMI provider (DLL) hosted by the WmiPrvse.exe PID identified
 
-Process Explorer can help you identify the exact providers hosted in the PID identified. Follow these steps:
+[Process Explorer](/sysinternals/downloads/process-explorer) can help you identify the exact providers hosted in the PID identified. Follow these steps:
 
 1. Run Process Explorer as administrator. Locate the identified *WmiPrvse.exe* PID, go to its properties, and select the **WMI Providers** tab.
 2. In the following example, *WmiPrvse.exe* PID 556 is located and found to be hosting:
@@ -365,7 +365,7 @@ From the above operations, you can get the following additional information:
 
 - Timestamp
 - Operation ID: 30642;
-- The exact operation = Start IWbemServices::CreateInstanceEnum - root\cimv2 : Win32_NTLogEvent;
+- The exact operation = `Start IWbemServices::CreateInstanceEnum - root\cimv2 : Win32_NTLogEvent`;
 - Client Machine = 21H2W10M
 - User = CONTOSO\<UserName>
 - PID of Client that has initiated the query: 5484
@@ -425,3 +425,18 @@ Here are some scenarios where disabling them can validate your observations.
 ## Data collection
 
 If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for User Experience issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-user-experience.md#wmi).
+
+You can also gather information by using the WMI-Collect tool. Here are the steps:
+
+1. Download [WMI-Collect.zip](https://aka.ms/WMI-Collect) and extract it in a folder, such as *c:\\temp*.
+2. Open the folder where *WMI-Collect.ps1* is saved from an elevated PowerShell command prompt.
+3. Run the following cmdlet with the EULA read and accepted.
+
+    ```PowerShell
+    .\WMI-Collect.ps1 -Logs
+    ```
+
+> [!NOTE]
+>
+> - The script will create a subfolder with the results. Compress the folder.
+> - After a support case is created, this file can be uploaded to the secure workspace for analysis.

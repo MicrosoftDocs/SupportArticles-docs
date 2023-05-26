@@ -2570,7 +2570,7 @@
       href: ./system-management-components/winrm-service-not-start-uninstall-winrm-2.md
   - name: WMI
     items:
-    - name: Troubleshoot WMI high CPU issues
+    - name: Troubleshoot WMI high CPU usage issues
       href: ./system-management-components/troubleshoot-wmi-high-cpu-issues.md
     - name: Error 0x8004106C while you run WMI queries
       href: ./system-management-components/wmi-error-0x8004106c.md
