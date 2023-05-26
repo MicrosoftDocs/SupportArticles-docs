@@ -44,6 +44,12 @@
       "branch_mapping": {}
     },
     {
+      "path_to_root": "dynamics-365-customer-engagement-pr",
+      "url": "https://github.com/MicrosoftDocs/dynamics-365-customer-engagement-pr",
+      "branch": "main",
+      "branch_mapping": {}
+    },
+    {
       "path_to_root": "_themes.pdf",
       "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
       "branch": "main",
