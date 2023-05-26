@@ -222,7 +222,7 @@ Here's one of the log entries from the WMI-Tracing CSV file saved:
 
 |Level|Date and time|Source|Event ID|Task category|Description|
 |-|-|-|-|-|-|
-|Information|05-05-23 14:48|Microsoft-Windows-WMI-Activity|11|None|CorrelationId = {345E5566-0000-0000-0000-68343241D901}; GroupOperationId = 30693; OperationId = 30694; Operation = Start IWbemServices::ExecQuery - root\cimv2 : select * from Win32_Product; ClientMachine = 21H2W10M; User = CONTOSO\\<UserName>; ClientProcessId = 5484; NamespaceName = 133277000000783520|
+|Information|05-05-23 14:48|Microsoft-Windows-WMI-Activity|11|None|CorrelationId = {345E5566-0000-0000-0000-68343241D901}; GroupOperationId = 30693; OperationId = 30694; Operation = Start IWbemServices::ExecQuery - root\cimv2 : select * from Win32_Product; ClientMachine = 21H2W10M; User = CONTOSO\\\<UserName>; ClientProcessId = 5484; NamespaceName = 133277000000783520|
 
 A similar event in XML format looks like:
 
@@ -356,9 +356,9 @@ With the filter showing only the lines or operations that include "Win32_NTLogEv
 
 |Level|Source|Event ID|Description|
 |-|-|-|-|
-|Information|Microsoft-Windows-WMI-Activity|11|CorrelationId = {345E5566-0000-0000-0000-68343241D901}; GroupOperationId = 30641; OperationId = 30642; Operation = Start IWbemServices::CreateInstanceEnum - root\cimv2 : Win32_NTLogEvent; ClientMachine = 21H2W10M; User = CONTOSO\\<UserName>; ClientProcessId = 5484; NamespaceName = 133277000000783520|
+|Information|Microsoft-Windows-WMI-Activity|11|CorrelationId = {345E5566-0000-0000-0000-68343241D901}; GroupOperationId = 30641; OperationId = 30642; Operation = Start IWbemServices::CreateInstanceEnum - root\cimv2 : Win32_NTLogEvent; ClientMachine = 21H2W10M; User = CONTOSO\\\<UserName>; ClientProcessId = 5484; NamespaceName = 133277000000783520|
 |Information|Microsoft-Windows-WMI-Activity|12|ProviderInfo for GroupOperationId = 30641; Operation = Provider::CreateInstanceEnum - MS_NT_EVENTLOG_PROVIDER : Win32_NTLogEvent; HostID = 556; ProviderName = MS_NT_EVENTLOG_PROVIDER; ProviderGuid = {FD4F53E0-65DC-11d1-AB64-00C04FD9159E}; Path = %systemroot%\system32\wbem\ntevt.dll|
-|Information|Microsoft-Windows-WMI-Activity|11|CorrelationId = {345E5566-0000-0000-0000-68343241D901}; GroupOperationId = 30697; OperationId = 30698; Operation = Start IWbemServices::CreateInstanceEnum - root\cimv2 : Win32_NTLogEvent; ClientMachine = 21H2W10M; User = CONTOSO\\<UserName>; ClientProcessId = 5484; NamespaceName = 133277000000783520|
+|Information|Microsoft-Windows-WMI-Activity|11|CorrelationId = {345E5566-0000-0000-0000-68343241D901}; GroupOperationId = 30697; OperationId = 30698; Operation = Start IWbemServices::CreateInstanceEnum - root\cimv2 : Win32_NTLogEvent; ClientMachine = 21H2W10M; User = CONTOSO\\\<UserName>; ClientProcessId = 5484; NamespaceName = 133277000000783520|
 |Information|Microsoft-Windows-WMI-Activity|12|ProviderInfo for GroupOperationId = 30697; Operation = Provider::CreateInstanceEnum - MS_NT_EVENTLOG_PROVIDER : Win32_NTLogEvent; HostID = 556; ProviderName = MS_NT_EVENTLOG_PROVIDER; ProviderGuid = {FD4F53E0-65DC-11d1-AB64-00C04FD9159E}; Path = %systemroot%\system32\wbem\ntevt.dll|
 
 From the above operations, you can get the following additional information:
@@ -367,7 +367,7 @@ From the above operations, you can get the following additional information:
 - Operation ID: 30642;
 - The exact operation = `Start IWbemServices::CreateInstanceEnum - root\cimv2 : Win32_NTLogEvent`;
 - Client Machine = 21H2W10M
-- User = CONTOSO\\<UserName>
+- User = CONTOSO\\\<UserName>
 - PID of Client that has initiated the query: 5484
 
 At last, you have the PID of a client process 5484, that's initiating a query to `Win32_NTLogEvent`. That's handled by provider `MS_NT_EVENTLOG_PROVIDER` and hosted under *WmiPrvse.exe* PID 552, which causes high CPU usage.
