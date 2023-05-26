@@ -241,8 +241,9 @@
     href: tcp-timeouts-kubetctl-third-party-tools-connect-api-server.md
   - name: '"tls: client offered only unsupported versions" messages'
     href: tls-client-offered-unsupported-versions.md
-  - name: Troubleshoot common Mariner AKS Container Host (MACH) issues
-    href: troubleshoot-common-mariner-aks.md
+  - name: Troubleshoot common Azure Linux container host for AKS issues
+    displayName: Mariner, MACH
+    href: troubleshoot-common-azure-linux-aks.md
 
 - name: Extensions and add-ons
   items:

@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot common Mariner AKS Container Host (MACH) issues
-description: Troubleshoot common issues that are reported for Mariner container hosts on Azure Kubernetes Service (AKS). 
+title: Troubleshoot common issues for Azure Linux Container Host for AKS
+description: Troubleshoot commonly reported issues for Azure Linux container hosts on Azure Kubernetes Service (AKS). 
 ms.date: 03/03/2023
 author: DennisLee-DennisLee
 ms.author: v-dele
@@ -9,43 +9,44 @@ ms.reviewer: suhuruli
 ms.service: azure-kubernetes-service
 ms.subservice: common-issues
 ---
-# Troubleshoot common Mariner AKS Container Host (MACH) issues
 
-This article provides troubleshooting steps for some of the commonly reported issues that you might experience when you use Mariner container hosts in Microsoft Azure Kubernetes Service (AKS). For more information about how to get started using Mariner container hosts in AKS, see [Use Mariner with AKS](/azure/aks/use-mariner).
+# Troubleshoot common issues for Azure Linux Container Host for AKS
+
+This article provides troubleshooting steps for some of the commonly reported issues that you might experience when you use Azure Linux container hosts in Azure Kubernetes Service (AKS). For more information about how to get started using Azure Linux container hosts in AKS, see [Use Azure Linux with AKS](/azure/aks/use-azure-linux).
 
 ## Before you begin
 
 Read the [official guide for troubleshooting Kubernetes clusters](https://kubernetes.io/docs/tasks/debug/debug-cluster/_print/). Also, read the [Microsoft engineer's guide to Kubernetes troubleshooting](https://github.com/feiskyer/kubernetes-handbook/blob/master/en/troubleshooting/index.md). This guide contains commands for troubleshooting pods, nodes, clusters, and other features.
 
-Finally, review the [list of known limitations in Mariner](/azure/aks/use-mariner#limitations). An issue that you're trying to resolve might be one that we're already working on.
+Finally, review the [list of known limitations in Azure Linux](/azure/aks/use-azure-linux#limitations). An issue that you're trying to resolve might be one that we're already working on.
 
 ## Prerequisites
 
 - [Azure CLI](/cli/azure/install-azure-cli), version 2.31 or a later version. If Azure CLI is already installed, you can find the version number by running `az --version`.
 
-## About Mariner and MACH
+## About Azure Linux Container Host for AKS
 
-Mariner is an open-source Linux distribution that Microsoft created. As a lightweight OS, Mariner has the following features:
+Azure Linux is an open-source Linux distribution that Microsoft created. As a lightweight OS, Azure Linux has the following features:
 
 - Contains only the packages that are needed to run container workloads
 - Undergoes Azure validation tests
 - Is compatible with Azure agents
 
-Mariner AKS Container Host (MACH) is an operating system image for AKS that's optimized for running container workloads. MACH is maintained by Microsoft and based on Mariner. MACH provides reliability and consistency from cloud to edge across the [AKS](/azure/aks/intro-kubernetes), [AKS on Azure Stack HCI](/azure/aks/hybrid/overview), and [Azure Arc](/azure/azure-arc/overview) products. You can use Mariner and MACH to do the following processes:
+Azure Linux Container Host for AKS is an operating system image for AKS that's optimized for running container workloads. It's maintained by Microsoft and based on Azure Linux. It provides reliability and consistency from cloud to edge across the [AKS](/azure/aks/intro-kubernetes), [AKS on Azure Stack HCI](/azure/aks/hybrid/overview), and [Azure Arc](/azure/azure-arc/overview) products. You can use Azure Linux container hosts to do the following processes:
 
-- Deploy Mariner node pools in a new cluster.
-- Add Mariner node pools to your existing Ubuntu clusters.
-- Migrate your Ubuntu nodes to Mariner nodes.
+- Deploy Azure Linux node pools in a new cluster.
+- Add Azure Linux node pools to your existing Ubuntu clusters.
+- Migrate your Ubuntu nodes to Azure Linux nodes.
 
-For more information about Mariner, see the [CBL-Mariner](https://github.com/microsoft/CBL-Mariner) GitHub repository.
+For more information about Azure Linux, see the [Azure Linux](https://github.com/microsoft/CBL-Mariner) GitHub repository.
 
 ## Troubleshooting checklist
 
-### Step 1: Review equivalent commands in Ubuntu and Mariner
+### Step 1: Review equivalent commands in Ubuntu and Azure Linux
 
-Most commands in the Mariner OS, such as the process status (`ps`) command, resemble commands that are used in Ubuntu. However, package management is done by using the Tiny DNF (`tdnf`) command. The following table lists some common commands in Ubuntu and their equivalents in Mariner.
+Most commands in the Azure Linux OS, such as the process status (`ps`) command, resemble commands that are used in Ubuntu. However, package management is done by using the Tiny DNF (`tdnf`) command. The following table lists some common commands in Ubuntu and their equivalents in Azure Linux.
 
-| Ubuntu command            | Suggested Mariner command                                                    |
+| Ubuntu command            | Suggested Azure Linux command                                                    |
 |---------------------------|------------------------------------------------------------------------------|
 | `apt -- list installed`   | `rpm -qa`                                                                    |
 | `apt autoclean`           | `tdnf clean all`                                                             |
@@ -77,21 +78,21 @@ Most commands in the Mariner OS, such as the process status (`ps`) command, rese
 | `apt-mark manual`         | `dnf mark install`                                                           |
 | `apt-mark showmanual`     | `dnf history userinstalled`                                                  |
 
-### Step 2: Check the Mariner version
+### Step 2: Check the Azure Linux version
 
-Make sure that you're using the correct version of Mariner. The supported version of Mariner for consumption is Mariner 2.0. In the output of the following [az aks nodepool list](/cli/azure/aks/nodepool#az-aks-nodepool-list) command, the `osSKU` property should read `Mariner` instead of `CBL-Mariner` or anything else:
+Make sure that you're using the correct version of Azure Linux. The supported version of Azure Linux for consumption is Azure Linux 2.0. In the output of the following [az aks nodepool list](/cli/azure/aks/nodepool#az-aks-nodepool-list) command, the `osSKU` property should read `AzureLinux`.
 
 ```azurecli
 az aks nodepool list --resource-group <resource-group-name> --cluster-name <aks-cluster-name>
 ```
 
-Although this command might not address the issue that you're experiencing, versioning is a common issue for users who report that agents or extensions aren't working correctly on Mariner.
+Although this command might not address the issue that you're experiencing, versioning is a common issue for users who report that agents or extensions aren't working correctly on Azure Linux.
 
 ### Step 3: Understand the difference in certificate file paths
 
-Mariner (and other RPM distributions) store certificates differently from Ubuntu.
+Azure Linux (and other RPM distributions) store certificates differently from Ubuntu.
 
-On Mariner, the */etc/ssl/certs* path is a symbolic link to */etc/pki/tls/certs*. If a container expects to map */etc/ssl/certs* to use the *ca-certificates.crt* certificate file on Mariner, the container instead gets a symbolic link that points to nowhere. This behavior causes certificate-related errors in the container. The container also has to map */etc/pki* so that the container can follow the symbolic link chain. If the container has to work on both Ubuntu and Mariner hosts, you can map */etc/pki* by using the `DirectoryOrCreate` type in a [hostPath volume](https://kubernetes.io/docs/concepts/storage/volumes/#hostpath).
+On Azure Linux, the */etc/ssl/certs* path is a symbolic link to */etc/pki/tls/certs*. If a container expects to map */etc/ssl/certs* to use the *ca-certificates.crt* certificate file on Azure Linux, the container instead gets a symbolic link that points to nowhere. This behavior causes certificate-related errors in the container. The container also has to map */etc/pki* so that the container can follow the symbolic link chain. If the container has to work on both Ubuntu and Azure Linux hosts, you can map */etc/pki* by using the `DirectoryOrCreate` type in a [hostPath volume](https://kubernetes.io/docs/concepts/storage/volumes/#hostpath).
 
 [!INCLUDE [Third-party information disclaimer](../../includes/third-party-disclaimer.md)]
 
