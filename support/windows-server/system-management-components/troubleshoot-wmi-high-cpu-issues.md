@@ -238,7 +238,7 @@ A similar event in XML format looks like:
 <Keywords>0x8000000000000000</Keywords> 
 <TimeCreated SystemTime="2023-05-05T13:09:18.7442455Z"/> 
 <EventRecordID>112</EventRecordID> 
-<Correlation ActivityID="{eddc1bfb-5449-473e-b05d-18b6cabf5949}"/> 
+<Correlation ActivityID="{eddc1bfb-0000-0000-0000-18b6cabf5949}"/> 
 <Execution ProcessID="2752" ThreadID="4132"/> 
 <Channel>Microsoft-Windows-WMI-Activity/Trace</Channel> 
 <Computer>21H2W10M.contoso.com</Computer> 
