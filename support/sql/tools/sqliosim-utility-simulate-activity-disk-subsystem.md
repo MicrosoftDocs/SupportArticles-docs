@@ -17,30 +17,33 @@ _Original KB number:_ &nbsp; 231619
 
 ## Introduction
 
-This article describes the SQLIOSim tool. You can use SQLIOSim to perform reliability and integrity tests on disk subsystems that may be utilized by SQL Server. These SQLIOSim tests simulate read, write, checkpoint, backup, sort, and read-ahead activities that Microsoft SQL Server does. The primary goal of the tests is to ensure reliability of the underlying I/O subsystem before your SQL Server starts using it. SQLIOSim doesn't interact with SQL Server and doesn't even require SQL Server to be running. In fact in most cases, you would use SQLIOSim when SQL Server isn't running to avoid competition for I/O throughput. Be very careful not to point to or use the actual SQL Server database files in your SQLIOSim test because you can overwrite them.
+This article describes the SQLIOSim tool. You can use SQLIOSim to perform reliability and integrity tests on disk subsystems that SQL Server utilizes. These SQLIOSim tests simulate read, write, checkpoint, backup, sort, and read-ahead activities that Microsoft SQL Server does. The SQLIOSim utility performs this simulation independent of the SQL Server engine. For more information about SQL Server I/O patterns, see [SQL Server I/O Basics, Chapter 2](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10)).
 
-If you must do performance benchmark tests and would like to determine the I/O capacity of the storage system, you should use the [Diskspd](https://www.microsoft.com/?ref=aka) tool instead.
+The primary goal of the I/O simulation tests is to ensure reliability of the underlying I/O subsystem before your SQL Server starts using it. SQLIOSim doesn't interact with SQL Server and doesn't even require SQL Server to be running. In fact in most cases, you would use SQLIOSim when SQL Server isn't running to avoid competition for I/O throughput. Be very careful not to point to or use the actual SQL Server database files in your SQLIOSim test because you can overwrite them.
 
-In the past, SQLIOSim was shipped as a separate download package. Starting with SQL Server 2008, SQLIOSim is included with the SQL Server product installation. When you install SQL Server, you can find the SQLIOSim tool in the `\Binn` folder of your SQL Server installation. It's recommended that you use this updated versions of the tool to simulate the IO activity on the disk subsystem.
-
-The SQLIOSim utility replaces the SQLIOStress utility. The SQLIOStress utility was formerly known as the SQL70IOStress utility.
-
-## Overview
-
-The SQLIOSim utility simulates the I/O patterns of Microsoft SQL Server.
-
-For more information about SQL Server I/O patterns, see [SQL Server I/O Basics, Chapter 2](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10)).
-
-To help maintain appropriate data integrity, we recommend that you perform stress tests of your I/O subsystem before you deploy SQL Server on new hardware. The SQLIOSim utility simulates the read patterns, the write patterns, and the problem identification techniques of SQL Server. To perform these tasks, the SQLIOSim utility simulates the user activity and the system activity of a SQL Server system. The SQLIOSim utility performs this simulation independent of the SQL Server engine.
+To help maintain appropriate data integrity, we recommend that you perform stress tests of your I/O subsystem before you deploy SQL Server on new hardware. The SQLIOSim utility simulates the read patterns, the write patterns, and the problem identification techniques of SQL Server. To perform these tasks, the SQLIOSim utility simulates the user activity and the system activity of a SQL Server system.
 
 The SQLIOSim utility doesn't guarantee or warrant data security or integrity. The utility was designed to provide baseline testing of a system environment. The SQLIOSim utility may expose potential data integrity issues.
 
 For more information about logging and data storage, see [Description of logging and data storage algorithms that extend data reliability in SQL Server](https://support.microsoft.com/help/230785).
 
-The \Binn folder contains two executable files, SQLIOSim.com and SQLIOSim.exe. Both executable files provide identical simulation capabilities.
+If you must do performance benchmark tests and would like to determine the I/O capacity of the storage system, you should use the [Diskspd](https://www.microsoft.com/?ref=aka) tool instead.
+
+The SQLIOSim utility replaces the SQLIOStress utility. The SQLIOStress utility was formerly known as the SQL70IOStress utility.
+
+## SQLIOSim location
+
+In the past, SQLIOSim was shipped as a separate download package. Starting with SQL Server 2008, SQLIOSim is included with the SQL Server product installation. When you install SQL Server, you can find the SQLIOSim tool in the `\Binn` folder of your SQL Server installation. It's recommended that you use this updated versions of the tool to simulate the IO activity on the disk subsystem.
+
+There are 3 files that are part of the SQLIOSim package. Two of them are optional depending on which version you use the GUI one or the command line one. The \Binn folder contains two executable files, SQLIOSim.com and SQLIOSim.exe. Both executable files provide identical simulation capabilities.
 
 - **SQLIOSim.com** is a command-line tool. You can configure it to run without user interaction. To do this configuration, you can use command-line parameters, a configuration file, or a combination of both of these methods.
 - **SQLIOSim.exe** is a graphical (GUI) application that accepts no command-line parameters. However, SQLIOSim.exe does load default configuration data from configuration files.
+- You can also use configuration files to help automate the I/O simulation with SQLIOSim. For more information see the [SQLIOSim configuration file](#sqliosim-configuration-file) section
+
+### Use SQLIOSim on a machine with no SQL Server
+
+It is recommended that you use SQLIOSim for an extended test on a machine before you start using or even before you install SQL Server. This may help test the I/O subsystem where you plan to place data and log files in the future and ensure the I/O subsystem's reliability. To accomplish this task, you may consider copying the three SQLIOSim files from a machine where SQL Server is installed and run the tests prior to a SQL Server installation. Copy **SQLIOSim.com**, **SQLIOSim.exe** and optionally one or more of the configuration files if you plan to use pre-configured settings. Then run the test simulation on that machine. 
 
 ## How to use SQLIOSim
 
@@ -56,7 +59,7 @@ The next few examples illustrate how to run SQLIOSim using the GUI and command l
 1. Go to *C:\Program Files\Microsoft SQL Server\MSSQLXX.InstanceName\MSSQL\Binn*
 1. Start the **SQLIOSIM.EXE** application. You can see the **Files and Configuration** window, which contains some default settings. You can modify these settings to match your configuration needs
    :::image type="content" source="media/sqliosim/sqliosim-files-and-configuration.png" alt-text="file configuration":::
-1. Highlight the first `mdx` file on the list `c:\temp\sqliosim\sqliosim.mdx`. This is the equivalent of a data file.
+1. Highlight the first `mdx` file on the list `c:\temp\sqliosim\sqliosim.mdx`. This file is the equivalent of a data file.
 1. Modify the file settings by changing its location, size, max size, increment. Keep the Log File unchecked as you want to simulate a data file. Then press the **Apply** button
 
    :::image type="content" source="media/sqliosim/sqliosim-modify-data-file.png" alt-text="data file configuration":::
@@ -117,7 +120,7 @@ SQLIOSIM.COM -cfg c:\temp\sqliosimconfig\sqliosim.default.cfg.ini -log c:\temp\s
 
 ### Example 4
 
-This examples creates 32-GB files and runs the test for 600 seconds (10 minutes) using the sqliosim.hwcache.cfg.ini configuration file.
+This example creates 32-GB files and runs the test for 600 seconds (10 minutes) using the sqliosim.hwcache.cfg.ini configuration file.
 
 ```console
 SQLIOSIM.COM -cfg "D:\Temp\SQLIOSIM\SQLIOSIM_Configs\sqliosim.hwcache.cfg.ini" -d 600 -dir d:\temp\sqliosim -log d:\temp\sqliosim\simlog.xml -size 32768
@@ -137,6 +140,8 @@ SQLIOSim.com accepts a limited number of command-line parameters to control basi
 | -size **MB** | Set the initial size of the data file in megabytes (MB). The file can grow up to two times the initial size. The size of the log file is calculated as half the size of the data file. However, the log file can't be larger than 50 MB. |
 
 ## SQLIOSim configuration file
+
+You can use a configuration file with SQLIOSim to help you choose all the settings for the the I/O simulation up-front. This configuration file can help with automating executions of SQLIOSim. 
 
 Sample configuration files for various tests can be downloaded from SQL Server support team's [GitHub repo](https://github.com/microsoft/mssql-support/tree/master/sqliosim).
 
@@ -213,13 +218,13 @@ The SQLIOSim utility takes the values that you specify in the RandomUser section
 
 | Parameter | Default value | Description | Comments |
 | --- | --- | --- | --- |
-| _UserCount_ | -1 | Number of random access threads that are executing at the same time | The value cannot exceed the following value: CPUCount*1023-100<br />The total number of all users also can't exceed this value. A value of 0 means that you can't create random access users. A value of -1 means that you must use the automatic configuration of the following value: min(CPUCount*2, 8)<br />**NOTE** A SQL Server system may have thousands of sessions. Most of the sessions don't have active requests. Use the `count(*)` function in queries against the `sys.dm_exec_requests` dynamic management view (DMV) as a baseline for establishing this test parameter value.<br /><br />CPUCount here refers to the value of the _CPUCount_ parameter in the CONFIG section.<br /><br />The `min(CPUCount*2, 8)` value results in the smaller of the values between CPUCount*2 and 8. |
+| _UserCount_ | -1 | Number of random access threads that are executing at the same time | The value can't exceed the following value: CPUCount*1023-100<br />The total number of all users also can't exceed this value. A value of zero (0) means that you can't create random access users. A value of -1 means that you must use the automatic configuration of the following value: min(CPUCount*2, 8)<br />**NOTE** A SQL Server system may have thousands of sessions. Most of the sessions don't have active requests. Use the `count(*)` function in queries against the `sys.dm_exec_requests` dynamic management view (DMV) as a baseline for establishing this test parameter value.<br /><br />CPUCount here refers to the value of the _CPUCount_ parameter in the CONFIG section.<br /><br />The `min(CPUCount*2, 8)` value results in the smaller of the values between CPUCount*2 and 8. |
 | _JumpToNewRegionPercentage_ | 500 | The chance of a jump to a new region of the file | The start of the region is randomly selected. The size of the region is a random value between the value of the _MinIOChainLength_ parameter and the value of the _MaxIOChainLength_ parameter. |
 | _MinIOChainLength_ | 1 | Minimum region size in pages | |
 | _MaxIOChainLength_ | 100 | Maximum region size in pages | SQL Server 2005 Enterprise Edition and SQL Server 2000 Enterprise Edition can read ahead up to 1,024 pages.<br /><br />The minimum value is 0. The maximum value is limited by system memory.<br /><br />Typically, random user activity causes small scanning operations to occur. Use the values that are specified in the ReadAheadUser section to simulate larger scanning operations. |
 | _RandomUserReadWriteRatio_ | 9000 | Percentage of pages to be updated | A random-length chain is selected in the region and may be read. This parameter defines the percentage of the pages to be updated and written to disk. |
 | _MinLogPerBuffer_ | 64 | Minimum log record size in bytes | The value must be either a multiple of the on-disk sector size or a size that fits evenly into the on-disk sector size. |
-| _MaxLogPerBuffer_ | 8192 | Maximum log record size in bytes | This value cannot exceed 64000. The value must be a multiple of the on-disk sector size. |
+| _MaxLogPerBuffer_ | 8192 | Maximum log record size in bytes | This value can't exceed 64000. The value must be a multiple of the on-disk sector size. |
 | _RollbackChance_ | 100 | The chance that an in-memory operation will occur that causes a rollback operation to occur. | When this rollback operation occurs, SQL Server doesn't write to the log file. |
 | _SleepAfter_ | 5 | Sleep time after each cycle, in milliseconds | |
 
@@ -308,14 +313,14 @@ The SQLIOSim utility creates the error log file in one of the following location
 The SQLIOSim.log.xml error log contains details about the execution. These details include error information. Review the log carefully for error information and for warning information.
 
 > [!NOTE]  
-> If you experience an error in the SQLIOSim utility, we recommend that you ask your hardware manufacturer to help determine the root cause of the issue.
+> If you experience an error in the SQLIOSim utility, we recommend that you ask your hardware manufacturer to help determine the root cause of the issue. The problem could also be caused by a device driver, file system filter driver (anti-virus for example) or the OS.  
 
 ## Multiple copies
 
 The SQLIOSim utility accommodates multiple-file-level testing and multiple-user-level testing. The SQLIOSim utility does not require multiple invocations. You can run multiple copies of the SQLIOSim utility if the following conditions are true:
 
 - All copies reference unique testing files per instance of the utility.
-- The `MaxMemoryMB` parameter of each instance provides for a non-overlapping memory region that is sufficient for each instance.
+- The `MaxMemoryMB` parameter of each instance provides for a nonoverlapping memory region that is sufficient for each instance.
 
 The sum of the `MaxMemoryMB` parameter for each instance must be less than or equal to the total physical memory. Some testing phases, such as checkpoint simulation, can be memory-intensive and may create out-of-memory conditions when you run multiple copies. If you experience out-of-memory errors, you can reduce the number of utility copies that are running.
 
