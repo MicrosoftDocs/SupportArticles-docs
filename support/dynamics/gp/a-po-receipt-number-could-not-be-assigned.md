@@ -68,7 +68,7 @@ To use this method, follow these steps:
 
     **Method 4**: For SQL Server 2008
 
-    If you're using SQL Server 2008, start SQL Management Studio. To do it, select **Start**, point to **All Programs**, point to **Microsoft SQL Server 2008**, and then select **SQL Server Management Studio**.  
+    If you're using SQL Server 2008, start SQL Management Studio. To do it, select **Start**, point to **All Programs**, point to **Microsoft SQL Server 2008**, and then select **SQL Server Management Studio**.
 
 2. Run the following scripts against the company database to determine the largest purchase order number that is used.
 
