@@ -60,7 +60,7 @@ The **Azure PowerShell task** screen shows that the Azure RM Service connection 
 
 1. Check whether the SPN (App) still exists. (It was likely deleted.)
 
-1. If this is an automated service connection, create a new service connection. If this is a manual service connection, follow the steps in the [Create an Azure Resource Manager service connection](/azure/devops/pipelines/library/connect-to-azure?view=azure-devops&preserve-view=true) to update the service connection by using the new SPN (App) details.
+1. If this is an automated service connection, create a new service connection. If this is a manual service connection, follow the steps in the [Create an Azure Resource Manager service connection](/azure/devops/pipelines/library/connect-to-azure) to update the service connection by using the new SPN (App) details.
 
 ## See related
 

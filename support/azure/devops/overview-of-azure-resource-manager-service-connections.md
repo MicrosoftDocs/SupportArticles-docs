@@ -68,7 +68,7 @@ After you save the Azure RM service connection, the connection takes the followi
 
 After you successfully create the application, assign the application as a contributor to the selected subscription.
 
-For more information, see [What happens when you create an Azure RM service connection?](/azure/devops/pipelines/release/azure-rm-endpoint?view=azure-devops&preserve-view=true).
+For more information, see [What happens when you create an Azure RM service connection?](/azure/devops/pipelines/release/azure-rm-endpoint).
 
 ## Tools used for troubleshooting Azure RM service connection scenarios
 
@@ -121,6 +121,6 @@ Use the following list to navigate to the appropriate article or section for det
 ## See also
 
 - ["Azure Resource Manager service connection"](/azure/devops/pipelines/library/service-endpoints?view=azure-devops&tabs=yaml&preserve-view=true)
-- [Troubleshoot Azure RM service connections](/azure/devops/pipelines/release/azure-rm-endpoint?view=azure-devops&preserve-view=true)
+- [Troubleshoot Azure RM service connections](/azure/devops/pipelines/release/azure-rm-endpoint)
 
 [!INCLUDE [third-party-disclaimer](../../includes/third-party-disclaimer.md)]
