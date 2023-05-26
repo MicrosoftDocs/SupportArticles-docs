@@ -428,15 +428,15 @@ If you need assistance from Microsoft support, we recommend you collect the info
 
 You can also gather information by using the WMI-Collect tool. Here are the steps:
 
-1. Download [WMI-Collect.zip](https://aka.ms/WMI-Collect) and extract it in a folder, such as *c:\\temp*.
-2. Open the folder where *WMI-Collect.ps1* is saved from an elevated PowerShell command prompt.
-3. Run the following cmdlet with the EULA read and accepted.
+1. Download [WMI-Collect.zip](https://aka.ms/WMI-Collect) and extract it in a folder, such as *C:\\temp*.
+2. From an elevated PowerShell command prompt, run the WMI-Collect.ps1 script from the folder where the script is saved. For example:
 
     ```PowerShell
-    .\WMI-Collect.ps1 -Logs
+    C:\temp\WMI-Collect.ps1 -Logs
     ```
 
 > [!NOTE]
 >
+> - To run the cmdlet, you need to read and accept the End User License Agreement (EULA).
 > - The script will create a subfolder with the results. Compress the folder.
 > - After a support case is created, this file can be uploaded to the secure workspace for analysis.
