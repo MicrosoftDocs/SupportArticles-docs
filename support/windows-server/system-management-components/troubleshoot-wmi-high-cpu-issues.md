@@ -76,7 +76,7 @@ Here's an example that shows how to use the Performance Monitor (Perfmon) tool t
 
 In the example, it's noted that *WmiPrvse.exe* PID 556 was consuming high CPU usage, and it's **WmiPrvse#1** that matches PID 556 in Performance Monitor.
 
-Then counter **%Processor Time** of **WmiPrvse#1** is added to see a live graphical view the CPU usage of this process. In the example, the color of **%Processor Time** of **WmiPrvse#1** is changed from yellow to red.
+Then counter **%Processor Time** of **WmiPrvse#1** is added to see a live graphical view of the CPU usage of this process. In the example, the **%Processor Time** color of **WmiPrvse#1** is changed from yellow to red.
 
 The steps are the same for locating the right **svchost#** in Performance Monitor in the case of high CPU usage by *svchost.exe* hosting the Wmimgmt service.
 
@@ -278,8 +278,8 @@ From the above sample operation output, you can get and understand the following
 - From a client PID: 5484
 - Operation ID: 28089
 - Query: select * from Win32_Product
-- Namespace: \\.\root\cimv2
-- Operation: IWbemServices::ExecQuery
+- Namespace: `\\.\root\cimv2`
+- Operation: `IWbemServices::ExecQuery`
 
 Here's another log:
 
@@ -333,10 +333,10 @@ From the operation output of the second example, you can get and understand the 
 
 - Operation CreateInstanceEnum is initiated on behalf of the user with SID: UserID="S-1-5-21-0000000000-0000000000-00000000-1103"
 - On 2023-05-05 at 13:09
-- Exact operation: Provider::CreateInstanceEnum - MS_NT_EVENTLOG_PROVIDER : Win32_NTLogEvent
+- Exact operation: `Provider::CreateInstanceEnum - MS_NT_EVENTLOG_PROVIDER : Win32_NTLogEvent`
 - Host ID: 556
-- Provider name: MS_NT_EVENTLOG_PROVIDER
-- Provider path: %systemroot%\system32\wbem\ntevt.dll
+- Provider name: `MS_NT_EVENTLOG_PROVIDER`
+- Provider path: *%systemroot%\system32\wbem\ntevt.dll*
 
 ## Finding the suspects
 
