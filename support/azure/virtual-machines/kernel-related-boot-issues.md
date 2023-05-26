@@ -391,7 +391,7 @@ To perform the reinstallation, follow these steps:
 
 1. Create a rescue VM by using a raw image with the same OS version and generation as the affected VM.
 
-2. Troubleshoot the [chroot](chroot-environment-linux.md) environment in the rescue VM.
+2. Access the [chroot](chroot-environment-linux.md) environment in the rescue VM to troubleshoot the issue.
 
     ```bash
     sudo chroot /rescue
@@ -403,7 +403,7 @@ To perform the reinstallation, follow these steps:
     /bin/bash: error while loading shared libraries: libc.so.6: cannot open shared object file: No such file or directory
     ```
 
-3. Verify all system packages and their corresponding status. Compare the output against a healthy VM running the same OS version.
+3. Verify all system packages and their corresponding status in the rescue VM. Compare the output against a healthy VM running the same OS version.
 
     ```bash
     sudo rpm --verify --all --root=/rescue 
@@ -431,7 +431,7 @@ To perform the reinstallation, follow these steps:
  
     The output line `missing /lib64/libc-2.28.so` is related to the previous error in step 2 and it indicates the *libc-2.28.so* package is missing. However, the *libc-2.28.so* package could be modified. In that case, the output will show `.M.....` instead of `missing`. The *libc-2.28.so* package will be referenced as an example in the following steps.
 
-4. On the rescue VM, verify which package contains the library */lib64/libc-2.28.so*.
+4. In the rescue VM, verify which package contains the library */lib64/libc-2.28.so*.
 
     ```bash
     sudo rpm -qf /lib64/libc-2.28.so
@@ -444,7 +444,7 @@ To perform the reinstallation, follow these steps:
     > [!NOTE]
     > The output will show the package that needs to be reinstalled, including the package name and version. The package version might be different from the one installed on the affected VM.
 
-5. On the affected VM, verify which version of the *glibc* package is installed.
+5. In the affected VM, verify which version of the *glibc* package is installed.
 
     ```bash
     sudo rpm -qa --all --root=/rescue | grep -i glibc
@@ -471,7 +471,7 @@ To perform the reinstallation, follow these steps:
     glibc-2.28-211.0.1.el8.x86_64.rpm               8.7 MB/s | 2.2 MB     00:00    
     ```
 
-7. Reinstall the affected package on the affected VM.
+7. Reinstall the affected package in the rescue VM.
 
     ```bash
     sudo rpm -ivh --root=/rescue /tmp/glibc-*.rpm --replacepkgs --replacefiles
