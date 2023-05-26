@@ -12,7 +12,7 @@ This article describes a by-design behavior that the [discovered apps](/mem/intu
 
 ## Symptoms
 
-When you view the details of an Android Enterprise work profile device in the Microsoft Endpoint Manager admin center, some of the apps that you see in **Discovered apps** seem to be personal apps.
+When you view the details of an Android Enterprise work profile device in the Microsoft Intune admin center, some of the apps that you see in **Discovered apps** seem to be personal apps.
 
 The following screenshot shows an example **Discovered apps** list.
 
