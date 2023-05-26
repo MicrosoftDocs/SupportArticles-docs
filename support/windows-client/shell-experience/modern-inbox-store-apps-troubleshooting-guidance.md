@@ -120,7 +120,7 @@ Modern Apps or Microsoft Store Apps can sometimes fail to start or launch and th
     winget install --exact --silent --accept-source-agreements --accept-package-agreements XP89DCGQ3K6VLD --source msstore
     ```
 
-    You can search for available applications using [winget search](/windows/package-manager/winget/search). The ID for the application can be pulled from the search.
+    You can search for available applications using [winget search](/windows/package-manager/winget/search). The application ID can be pulled from the search.
 
     Here's an example of a WinGet script.
 
