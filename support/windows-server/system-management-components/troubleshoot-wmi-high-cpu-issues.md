@@ -429,7 +429,7 @@ If you need assistance from Microsoft support, we recommend you collect the info
 You can also gather information by using the WMI-Collect tool. Here are the steps:
 
 1. Download [WMI-Collect.zip](https://aka.ms/WMI-Collect) and extract it in a folder, such as *C:\\temp*.
-2. From an elevated PowerShell command prompt, run the WMI-Collect.ps1 script from the folder where the script is saved. For example:
+2. From an elevated PowerShell command prompt, run the *WMI-Collect.ps1* script from the folder where the script is saved. For example:
 
     ```PowerShell
     C:\temp\WMI-Collect.ps1 -Logs
