@@ -37,7 +37,7 @@ Subscription details include the following information:
 - Subscription Name
 - Service principal ID (client ID)
 - Service principal key (the value of the secret that you created in step 3)
-- Tenant ID (Directory ID)**
+- Tenant ID (Directory ID)*
 
 To get this information, download and run this [PowerShell script](https://github.com/microsoft/azure-pipelines-extensions/blob/master/TaskModules/powershell/Azure/SPNCreation.ps1) in an Azure PowerShell window. When you are prompted, enter your subscription name, password, role (optional), and the cloud type, such as Azure Cloud (default), Azure Stack, or Azure Government Cloud.
 
