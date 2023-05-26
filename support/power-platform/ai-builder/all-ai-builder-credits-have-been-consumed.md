@@ -118,7 +118,7 @@ You need to be the Administrator of your environment to perform these actions.
 
 ## AI Builder purchase will take time, and I urgently need to unblock my Flow or my App. What can I do?
 
-You can send an email to [aihelpen@microsoft.com](aihelpen@microsoft.com) with the following title and information:
+You can send an email to aihelpen@microsoft.com with the following title and information:
 
 Title: AI Builder consumption overage
 
