@@ -100,7 +100,7 @@ You need to be the Billing Administrator of your tenant to perform these actions
 1. Search for AI Builder.
 1. Select either **AI Builder Capacity Add-on T1** or **AI Builder Capacity Add-on T2 (min 10 packs)** or **AI Builder Capacity Add-on T3 (min 50 packs)** depending on how many packs you need. Each pack provides 1 million AI Builder credits.
 1. Follow the purchase process.
-1. Once purchased, follow the steps in the [How to change the amount of environment allocated credits](#how-to-change-the-amount-of-environment-allocated-credits) if credits come from the environment level.
+1. Once purchased, follow the steps in the [How to change the number of environment allocated credits](#how-to-change-the-number-of-environment-allocated-credits) if credits come from the environment level.
 
 ### How to evaluate the amount of credits to add
 
