@@ -28,7 +28,7 @@ Identify if the process is *WmiPrvse.exe* or *svchost.exe* (hosting the WMI serv
 > [!NOTE]
 > You may have to manually add the **PID** column to view the process ID of all the processes in Task Manager.
 
-Here's an example. Go to **Task manager** > **Details**, then sort by **Name** and locate the *WmiPrvse.exe* process that's consuming high CPU usage. Make a note of the process ID (PID).
+Here's an example. Go to **Task Manager** > **Details**, then sort by **Name** and locate the *WmiPrvse.exe* process that's consuming high CPU usage. Make a note of the process ID (PID).
 
 This screenshot shows multiple instances of **WMI Provider Host** (the *WmiPrvse.exe* process) as active and its CPU utilization.
 
@@ -105,7 +105,7 @@ After resolving the issue or no longer requiring the service to be in its own *s
 sc config Winmgmt type= share
 ```
 
-## Diagnosing WmiPrvse.exe
+## Diagnose WmiPrvse.exe
 
 So far, you only have the exact PID of *WmiPrvse.exe* that's consuming high CPU usage. Next, gather as much information as possible about this PID. This helps you assess the situation or identify something that could be causing the problem.  Gather information on other resource usage or identify the exact WMI provider (DLL) hosted by the *WmiPrvse.exe* PID identified.
 
@@ -186,7 +186,7 @@ Description:
 MS_NT_EVENTLOG_PROVIDER provider started with result code 0x0. HostProcess = wmiprvse.exe; ProcessID = 556; ProviderPath = %systemroot%\system32\wbem\ntevt.dll
 ```
 
-### Enabling "Analytic and Debug Logs" for enabling the WMI tracing
+### Enable "Analytic and Debug Logs" for enabling the WMI tracing
 
 In **Event Viewer**, select **View** > **Show Analytic and Debug Logs** to enable the **Debug** and **Trace** for WMI-Activity.
 
@@ -208,7 +208,7 @@ This tracing can be kept enabled while you observe high CPU consumption by the *
 3. Choose the desired language of the tracing file.
 4. You may choose to save the WMI-Activity Operational events separately as well, in the desired format for you to review and analyze.
 
-### Reviewing the WMI trace files
+### Review the WMI trace files
 
 Within the WMI tracing, there are multiple important operations included, which are all part of incoming WMI queries. The operations are documented in [IWbemServices interface (wbemcli.h)](/windows/win32/api/wbemcli/nn-wbemcli-iwbemservices).
 
@@ -277,7 +277,7 @@ From the above sample operation output, you can get and understand the following
 - On machine: 21H2W10M,
 - From a client PID: 5484
 - Operation ID: 28089
-- Query: select * from Win32_Product
+- Query: `select * from Win32_Product`
 - Namespace: `\\.\root\cimv2`
 - Operation: `IWbemServices::ExecQuery`
 
@@ -338,7 +338,7 @@ From the operation output of the second example, you can get and understand the 
 - Provider name: `MS_NT_EVENTLOG_PROVIDER`
 - Provider path: *%systemroot%\system32\wbem\ntevt.dll*
 
-## Finding the suspects
+## Find the client PIDs that causing high CPU usage
 
 The idea of reviewing this log file is to list the operations associated with the identified *WmiPrvse.exe* PID that's consuming high CPU usage, understand the incoming queries, and who's initiating them (the client process).
 
@@ -415,7 +415,7 @@ That is, understand if the user initiating the query is a service account or ass
 
 Once you finalize the suspect, you may consider temporarily disabling its service or uninstalling the application associated with it and checking if the high CPU usage issue gets solved.
 
-Here are some scenarios where disabling them can validate your observations.
+Here are some scenarios where disabling it can validate your observations.
 
 - Monitoring applications and services
 - System center configuration manager (SCCM) (*policyhost.exe* or *Monitoringhost.exe*)
