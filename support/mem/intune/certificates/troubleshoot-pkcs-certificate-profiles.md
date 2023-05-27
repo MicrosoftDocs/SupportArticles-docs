@@ -265,7 +265,7 @@ For more information, see [Configure certificate templates on the CA](/mem/intun
 
 ### Certificate profile stuck as Pending
 
-In the Microsoft Endpoint Manager admin center, PKCS certificate profiles fail to deploy with a state of **Pending**. There are no obvious errors in the NDESConnector_date_time.svclog log file.
+In the Microsoft Intune admin center, PKCS certificate profiles fail to deploy with a state of **Pending**. There are no obvious errors in the NDESConnector_date_time.svclog log file.
 Because the cause of this problem isn't identified clearly in logs, work through the following causes.
 
 #### Cause 1 - Unprocessed request files
