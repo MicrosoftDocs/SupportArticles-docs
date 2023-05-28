@@ -9,7 +9,7 @@ search.appverid: MET150
 
 The cut, copy, and paste feature is commonly used to transfer data between applications (apps). Restricting this feature may not work as expected. To troubleshoot these issues, first ensure that the issues and configurations discussed in the [Troubleshooting data transfer between apps](troubleshoot-data-transfer.md) document are addressed.
 
-When reviewing Intune app protection policy (APP) settings in the Endpoint Manager admin center, refer to the following table to make sure the desired settings are applied.
+When reviewing Intune app protection policy (APP) settings in the Intune admin center, refer to the following table to make sure the desired settings are applied.
 
 |Setting name   |Setting value   |Use case   |
 |------------|------|-----------------|
@@ -27,7 +27,7 @@ This section provides troubleshooting suggestions for common scenarios where cut
 
 **Scenario:** Users copy text from managed apps, such as Outlook, and try to paste it into unmanaged apps, such as Google Chrome. The pasting function should be blocked, however, the users are able to paste the text into unmanaged apps.
 
-**Action:** Check the **Restrict cut, copy, and paste between other apps** setting in both the Endpoint Manager admin center and the device using Microsoft Edge. It's possible that the setting is set to *Any app*. With this setting, pasting to other apps is always allowed.
+**Action:** Check the **Restrict cut, copy, and paste between other apps** setting in both the Intune admin center and the device using Microsoft Edge. It's possible that the setting is set to *Any app*. With this setting, pasting to other apps is always allowed.
 
 - If you use the *Policy managed apps* setting, then:
 
@@ -47,7 +47,7 @@ This section provides troubleshooting suggestions for common scenarios where cut
 
 **Scenario:** Users copy text from managed apps, such as Outlook, and try to paste it into managed apps, such as Microsoft Word, Excel, or PowerPoint. The pasting function should be allowed, however, users find they can't paste the text into managed apps.
 
-**Action:** Check the *Restrict cut, copy, and paste between other apps* setting in both the Endpoint Manager admin center and the device using Microsoft Edge. It's possible that the setting is set to *Blocked*.
+**Action:** Check the *Restrict cut, copy, and paste between other apps* setting in both the Intune admin center and the device using Microsoft Edge. It's possible that the setting is set to *Blocked*.
 
 Also, when copying and pasting text from one managed app to another, make sure the document you're pasting into is opened from a managed location, such as OneDrive for Business or SharePoint Online. App protection policies don't apply to unsaved new documents.
 

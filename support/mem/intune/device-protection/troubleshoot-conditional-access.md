@@ -44,7 +44,7 @@ You can view these conditions for each device in the Azure portal and in the dev
   - Restart the device.
   - See if the problem persists on different networks (for example, cellular, Wi-Fi, etc.).
 
-  If the problem remains, contact Microsoft Support as described in [Get support in Microsoft Endpoint Manager](/mem/get-support).
+  If the problem remains, contact Microsoft Support as described in [Get support in Microsoft Intune](/mem/get-support).
 
 - Certain Android devices might appear to be encrypted, however the Company Portal app recognizes these devices as not encrypted and marks them as noncompliant. In this scenario, the user will see a notification in the Company Portal app asking them to set a start-up passcode for the device. After tapping the notification and confirming the existing PIN or password, choose the **Require PIN to start device** option on the **Secure start-up** screen, then tap the **Check Compliance** button for the device from the Company Portal app. The device should now be detected as encrypted.
 

@@ -16,7 +16,7 @@
   href: windows/index.yml
 - name: Welcome
   href: windows-hardware/drivers/welcome-windowshardware.yml
-- name: Microsoft Endpoint Manager
+- name: Microsoft Intune
   href: mem/index.yml
 - name: System Center
   href: system-center/index.yml

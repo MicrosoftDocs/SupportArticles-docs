@@ -68,7 +68,7 @@ To add the latest LCU to the update source, follow these steps:
    > [!NOTE]  
    >
    > - If you're using WSUS to manage updates, see [WSUS and the Catalog Site](/windows-server/administration/windows-server-update-services/manage/wsus-and-the-catalog-site#the-microsoft-update-catalog-site). This article describes how to use WSUS to download updates from the Microsoft Update Catalog.
-   > - If you are using Microsoft Endpoint Manager to manage updates, see [Software update management documentation](/mem/configmgr/sum/).
+   > - If you are using Microsoft Intune to manage updates, see [Software update management documentation](/mem/configmgr/sum/).
 
 4. To add the LCU to the image, open an administrative Command Prompt window, and then run the following command:
 
