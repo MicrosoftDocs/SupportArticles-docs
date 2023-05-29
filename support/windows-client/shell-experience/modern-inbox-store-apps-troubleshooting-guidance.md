@@ -19,8 +19,6 @@ Modern Apps or Microsoft Store Apps can sometimes fail to start or launch and th
 
 ## Troubleshooting checklist
 
-Here's the troubleshooting checklist:
-
 1. [Verify if the application is registered or installed for your user.](#checklist-1)
 2. [Re-register the application for the user may resolve activation issues.](#checklist-2)
 3. [If you receive no response to the Get-AppxPackage cmdlet, you can still use the Add-AppxPackage cmdlet.](#checklist-3)
@@ -30,6 +28,8 @@ Here's the troubleshooting checklist:
 7. [For a single application, you can use the winget command.](#checklist-7)
 8. [Check if the system setup has appropriate settings to download and install AppX packages.](#checklist-8)
 9. [If Microsoft Store has issues starting or was previously removed, try reinstalling it.](#checklist-9)
+
+Here's the detailed troubleshooting checklist:
 
 1. <a id="checklist-1"></a>Verify if the application is registered or installed for your user.
 
