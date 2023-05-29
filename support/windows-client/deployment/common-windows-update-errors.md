@@ -1,7 +1,7 @@
 ---
 title: Common Windows Update errors
 description: Describes some common issues you might experience with Windows Update and steps to resolve them.
-ms.date: 04/28/2023
+ms.date: 05/29/2023
 ms.prod: windows-client
 author: aczechowski
 ms.author: aaroncz
@@ -39,7 +39,7 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-| ERROR_FAIL_REBOOT_REQUIRED | The requested operation failed. Restart the system to roll back changes made. | Ensure that you don't have any policies that control the start behavior for the Windows Installer Service. This service should be managed by the operating system. The Windows Installer service's default startup type is manual.|
+| ERROR_FAIL_REBOOT_REQUIRED | The requested operation failed. Restart the system to roll back changes made. | Ensure that you don't have any policies that control the start behavior for the Windows Installer service. This service should be managed by the operating system. The default **Startup type** of the Windows Installer service is **Manual**.|
 
 ## 0x80200053
 
@@ -242,4 +242,3 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 ## Data collection
 
 If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).
-
