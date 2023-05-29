@@ -110,7 +110,7 @@ Here's the detailed troubleshooting checklist:
 
 6. <a id="checklist-6"></a>If the application still fails to start after registration, perhaps the package for the application is corrupted or missing some components. Get a new package for the machine by using Microsoft Store (public or private) or Windows Package Manager (winget). For more information, see [Troubleshoot Apps failing to start using Windows Package Manager](troubleshoot-apps-start-failure-use-windows-package-manager.md).
 
-7. <a id="checklist-7"></a>For a single application, you can use the `winget` command. To search for a tool, use the following command:
+7. <a id="checklist-7"></a>For a single application, you can use the `winget` command. To search for an application, use the following command:
 
     ```console
     winget search <AppName>
