@@ -29,7 +29,7 @@ When you try to connect to Exchange Online PowerShell, you receive the following
 
 ## Cause
 
-This issue occurs if your account has the `RemotePowerShellEnable` parameter value set to **False**.
+This issue occurs if your account has the `RemotePowerShellEnabled` parameter value set to **False**.
 
 ## Resolution
 
