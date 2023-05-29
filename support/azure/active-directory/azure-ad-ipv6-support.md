@@ -82,7 +82,7 @@ By default, both IPv6 and IPv4 traffic is supported on Windows and most other op
 
 ### Service endpoints
 
-The implementation of IPv6 support in Azure AD doesn't affect Azure Virtual Network service endpoints. Service endpoints still don't support IPv6 traffic. For more information, see [Limitations of Virtual Network service endpoints](/azure/virtual-network/virtual-network-service-endpoints-overview#limitations).
+The implementation of IPv6 support in Azure AD won't affect Azure Virtual Network service endpoints. Service endpoints still don't support IPv6 traffic. For more information, see [Limitations of Virtual Network service endpoints](/azure/virtual-network/virtual-network-service-endpoints-overview#limitations).
 
 ## Test Azure AD authentication over IPv6
 
