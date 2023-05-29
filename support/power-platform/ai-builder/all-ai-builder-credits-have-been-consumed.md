@@ -1,7 +1,7 @@
 ---
 title: All AI Builder credits have been consumed
 description: Provides a resolution for the issue that all AI Builder credits have been consumed.
-ms.reviewer: 
+ms.reviewer: chplanty, cdbellar
 ms.date: 05/26/2023
 ms.subservice: 
 ms.author: antode
@@ -27,7 +27,7 @@ Here are the different symptoms of this issue:
    > [!NOTE]
    > This error is displayed in the **Error** panel on the flow run page and may be available in a flow error notification by email.
 
-1. The JSON in the AI Builder tile in error mentions one of the following:
+1. The Error Details of the AI Builder tile mentions one of the following:
 
    - Code="EntitlementNotAvailable"
    - Code="QuotaExceeded"
