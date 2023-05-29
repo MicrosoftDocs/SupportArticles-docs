@@ -5746,6 +5746,11 @@
       "source_path": "support/windows-server/identity/password-change-conflict-resolution-function.md",
       "redirect_url": "/troubleshoot/windows-server/identity/password-change-processing-conflict-resolution-function",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/system-management-components/high-cpu-usage-wmiprvse-process-regular-intervals.md",
+      "redirect_url": "/troubleshoot/windows-server/system-management-components/troubleshoot-wmi-high-cpu-issues",
+      "redirect_document_id": true
     }, 
     {
       "source_path": "support/sql/general/servicing-models-sql-server.md",
