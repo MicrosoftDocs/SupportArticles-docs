@@ -1,7 +1,7 @@
 ---
 title: The supplied password does not match this encryption key's password error and ADMT 3.1 PES installation fails
 description: Resolves an issue where error (The supplied password does not match this encryption key's password) occurs when you configure the Password Export Server (PES) service on Active Directory Migration Tool version 3.1.
-ms.date: 3/24/2022
+ms.date: 05/29/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -15,7 +15,7 @@ ms.technology: windows-server-active-directory
 ---
 # ADMT 3.1 PES installation fails with error: The supplied password does not match this encryption key's password
 
-This article helps resolves an issue where an "The supplied password does not match this encryption key's password" error occurs when you configure the Password Export Server (PES) service on Active Directory Migration Tool version 3.1.
+This article helps resolve an issue where an "The supplied password does not match this encryption key's password" error occurs when you configure the Password Export Server (PES) service on Active Directory Migration Tool version 3.1.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2004090
@@ -44,7 +44,9 @@ The supplied password was correct, but Windows Installer (msiexec.exe) failed to
 
 ## Resolution
 
-Ensure the user account who installs the PES service is a member of the domain's built-in Administrators group by running the **whoami /groups** command, and run the Pwdmig.msi setup file in an elevated command-prompt window launched with the **Run as administrator** option.  
+Ensure the user account who installs the PES service is a member of the domain's built-in Administrators group by running the `whoami /groups` command, and run the Pwdmig.msi setup file in an elevated command prompt window launched with the **Run as administrator** option.
+
+Alternatively, you can launch an elevated command prompt window, change directories to where the PES installer has been downloaded, and run the `msiexec /i pwdmig.msi` command.
 
 ## More information
 
