@@ -19,7 +19,19 @@ Modern Apps or Microsoft Store Apps can sometimes fail to start or launch and th
 
 ## Troubleshooting checklist
 
-1. Verify if the application is registered or installed for your user.
+Here's the troubleshooting checklist:
+
+1. [Verify if the application is registered or installed for your user.](#checklist-1)
+2. [Re-register the application for the user may resolve activation issues.](#checklist-2)
+3. [If you receive no response to the Get-AppxPackage cmdlet, you can still use the Add-AppxPackage cmdlet.](#checklist-3)
+4. [For a System Application, the path is slightly different.](#checklist-4)
+5. [For the XML path, you need to check which version you have installed.](#checklist-5)
+6. [If the application still fails to start after registration, perhaps the package for the application is corrupted or missing some components.](#checklist-6)
+7. [For a single application, you can use the winget command.](#checklist-7)
+8. [Check if the system setup has appropriate settings to download and install AppX packages.](#checklist-8)
+9. [If Microsoft Store has issues starting or was previously removed, try reinstalling it.](#checklist-9)
+
+1. <a id="checklist-1"></a>Verify if the application is registered or installed for your user.
 
     Modern Apps are deployed as a package onto a machine and then need to register individually for each user that logs in. A record is kept on each machine for every application and which users have it registered. For example, to see if an individual user has the Calculator application installed, use the following cmdlet in a nonelevated Windows PowerShell prompt:
 
@@ -53,7 +65,7 @@ Modern Apps or Microsoft Store Apps can sometimes fail to start or launch and th
     Status            : Ok 
     ```
 
-2. Even if the application is shown as registered for your user, sometimes re-registering the application for the user can resolve activation issues because it repairs any missing entries for the package. Use the following cmdlet at the same nonelevated PowerShell prompt (this example is for the Calculator application):
+2. <a id="checklist-2"></a>Even if the application is shown as registered for your user, sometimes re-registering the application for the user can resolve activation issues because it repairs any missing entries for the package. Use the following cmdlet at the same nonelevated PowerShell prompt (this example is for the Calculator application):
 
     ```powershell
     Get-AppxPackage *calculator*| Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"} 
@@ -62,7 +74,7 @@ Modern Apps or Microsoft Store Apps can sometimes fail to start or launch and th
     > [!NOTE]
     > Notice how we return the output from the 'get-appxpackage' cmdlet to feed into the `Add-AppxPackage' cmdlet using the pipe `|` cmdlet. This only works if the package is already registered.
 
-3. If you receive no response to the `Get-AppxPackage` cmdlet, you can still use the `Add-AppxPackage` cmdlet by using the family name or the path to the *AppxManifest.xml* file:
+3. <a id="checklist-3"></a>If you receive no response to the `Get-AppxPackage` cmdlet, you can still use the `Add-AppxPackage` cmdlet by using the family name or the path to the *AppxManifest.xml* file:
 
     ```powershell
     Add-AppxPackage -RegisterByFamilyName -MainPackage Microsoft.WindowsCalculator_8wekyb3d8bbwe
@@ -72,7 +84,7 @@ Modern Apps or Microsoft Store Apps can sometimes fail to start or launch and th
     Add-AppxPackage -path "c:\Program Files\WindowsApps\Microsoft.WindowsCalculator_11.2210.0.0_x64__8wekyb3d8bbwe\AppxManifest.xml" -DisableDevelopmentMode -Register
     ```
 
-4. For a System Application, the path is slightly different:
+4. <a id="checklist-4"></a>For a System Application, the path is slightly different:
 
     ```powershell
     Add-AppxPackage -Path "C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy\AppXManifest.xml" -DisableDevelopmentMode -Register
@@ -81,7 +93,7 @@ Modern Apps or Microsoft Store Apps can sometimes fail to start or launch and th
     > [!NOTE]
     > Be sure to use the `Add-AppxPackage` cmdlet from a non-elevated prompt, or the package will be registered to the admin instead of the user.
 
-5. For the XML path, you need to check which version you have installed. You can do this from an elevated PowerShell prompt with a `dir` cmdlet:
+5. <a id="checklist-5"></a>For the XML path, you need to check which version you have installed. You can do this from an elevated PowerShell prompt with a `dir` cmdlet:
 
     ```powershell
     dir "c:\Program Files\WindowsApps\Microsoft.WindowsCalculator*"
@@ -96,15 +108,15 @@ Modern Apps or Microsoft Store Apps can sometimes fail to start or launch and th
     d-----        <Date>     <Time>                Microsoft.WindowsCalculator_11.2210.0.0_x64__8wekyb3d8bbwe
     ```
 
-6. If the application still fails to start after registration, perhaps the package for the application is corrupted or missing some components. Get a new package for the machine by using Microsoft Store (public or private) or Windows Package Manager (winget). For more information, see [Troubleshoot Apps failing to start using Windows Package Manager](troubleshoot-apps-start-failure-use-windows-package-manager.md).
+6. <a id="checklist-6"></a>If the application still fails to start after registration, perhaps the package for the application is corrupted or missing some components. Get a new package for the machine by using Microsoft Store (public or private) or Windows Package Manager (winget). For more information, see [Troubleshoot Apps failing to start using Windows Package Manager](troubleshoot-apps-start-failure-use-windows-package-manager.md).
 
-7. For a single application, you can use the `winget` command. To search for a tool, use the following command:
+7. <a id="checklist-7"></a>For a single application, you can use the `winget` command. To search for a tool, use the following command:
 
     ```console
     winget search <AppName>
     ```
 
-    After you have confirmed that the tool you want is available, you can install the tool by using the following command:
+    After you have confirmed that the application you want is available, you can install it by using the following command:
 
     ```console
     winget install <AppName>
@@ -174,7 +186,7 @@ Modern Apps or Microsoft Store Apps can sometimes fail to start or launch and th
     } 
     ```
 
-8. Check if the system setup has appropriate settings to download and install AppX packages.
+8. <a id="checklist-8"></a>Check if the system setup has appropriate settings to download and install AppX packages.
 
     Use the following script to check more common Store configuration settings to see if downloads are possible.
 
@@ -523,7 +535,7 @@ Modern Apps or Microsoft Store Apps can sometimes fail to start or launch and th
 
     ```
 
-9. If Microsoft Store has issues starting or was previously removed, try reinstalling it.
+9. <a id="checklist-9"></a>If Microsoft Store has issues starting or was previously removed, try reinstalling it.
 
     > [!NOTE]
     > Removing Microsoft Store is not supported. For more information, see [Removing, uninstalling, or reinstalling Microsoft Store app isn't supported](cannot-remove-uninstall-or-reinstall-microsoft-store-app.md).
