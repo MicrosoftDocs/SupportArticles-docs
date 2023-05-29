@@ -39,7 +39,7 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-| ERROR_FAIL_REBOOT_REQUIRED | The requested operation failed. Restart the system to roll back changes made. | Ensure that you don't have any policies that control the start behavior for the Windows Installer service. This service should be managed by the operating system. The default **Startup type** of the Windows Installer service is **Manual**.|
+| ERROR_FAIL_REBOOT_REQUIRED | The requested operation failed. Restart the system to roll back changes made. | Ensure that you don't have any policies that control the start behavior of the Windows Installer service. This service should be managed by the operating system. The default **Startup type** of the Windows Installer service is **Manual**.|
 
 ## 0x80200053
 
