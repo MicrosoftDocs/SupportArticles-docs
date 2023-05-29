@@ -385,7 +385,7 @@ Important Linux files and directories are missing due to a human error. For exam
 
 ### <a id="attempted-tokill-init-missinglibraries"></a>Missing important system core libraries and packages
 
-Important system core libraries, files, or packages are deleted from the system or got corrupted. To resolve this issue, reinstall the affected libraries, files, or packages. This solution works in RPM-based distributions like Red Hat/CentOS/SUSE VMs. For other Linux distributions, we recommend [restoring the VM from backup](/azure/backup/backup-azure-arm-restore-vms).
+Important system core libraries, files, or packages are deleted from the system or got corrupted. To resolve this issue, reinstall the affected libraries, files, or packages. This solution works on RPM-based distributions like Red Hat/CentOS/SUSE VMs. For other Linux distributions, we recommend [restoring the VM from backup](/azure/backup/backup-azure-arm-restore-vms).
 
 To perform the reinstallation, follow these steps:
 
@@ -397,7 +397,7 @@ To perform the reinstallation, follow these steps:
     sudo chroot /rescue
     ```
     
-    The command output will indicate what library is missing or corrupted, as shown below:
+    The command output will indicate which library is missing or corrupted, as shown below:
     
     ```output
     /bin/bash: error while loading shared libraries: libc.so.6: cannot open shared object file: No such file or directory
@@ -408,7 +408,7 @@ To perform the reinstallation, follow these steps:
     ```bash
     sudo rpm --verify --all --root=/rescue 
     ```
-    Here is an example of the command output:
+    Here's an example of the command output:
     
     ```output
     error: Failed to dlopen /usr/lib64/rpm-plugins/systemd_inhibit.so /lib64/librt.so.1: undefined symbol: __pthread_attr_copy, version GLIBC_PRIVATE
@@ -429,7 +429,7 @@ To perform the reinstallation, follow these steps:
     S.5....T.  c /etc/security/pwquality.conf
     ```
  
-    The output line `missing /lib64/libc-2.28.so` is related to the previous error in step 2 and it indicates the *libc-2.28.so* package is missing. However, the *libc-2.28.so* package could be modified. In that case, the output will show `.M.....` instead of `missing`. The *libc-2.28.so* package will be referenced as an example in the following steps.
+    The output line `missing /lib64/libc-2.28.so` is related to the previous error in step 2, and it indicates the *libc-2.28.so* package is missing. However, the *libc-2.28.so* package can be modified. In this case, the output will show `.M.....` instead of `missing`. The *libc-2.28.so* package will be referenced as an example in the following steps.
 
 4. In the rescue VM, verify which package contains the library */lib64/libc-2.28.so*.
 
@@ -457,9 +457,9 @@ To perform the reinstallation, follow these steps:
     glibc-langpack-en-2.28-211.0.1.el8.x86_64
     ```
 
-6. Download the package *glibc-2.28-211.0.1.el8.x86_64*. You can downoad it from the official website of the OS vendor or from the rescue VM by using the package management tool like `yumdownloader` or `zypper install --download-only <packagename>` depending on the running OS.
+6. Download the package *glibc-2.28-211.0.1.el8.x86_64*. You can download it from the official website of the OS vendor or from the rescue VM by using a package management tool like `yumdownloader` or `zypper install --download-only <packagename>` depending on the OS you're running.
 
-    Here is an example of using the `yumdownloader` tool:
+    Here's an example of using the `yumdownloader` tool:
 
     ```bash
     cd /tmp
@@ -495,7 +495,7 @@ To perform the reinstallation, follow these steps:
 
 ### <a id="attempted-tokill-init-wrongpermissions"></a> Wrong file permissions
 
-Wrong system wide file permissions are modified due to a human error (for example, someone runs `chmod 777` on */* or other important OS file systems). To resolve this issue, restore the file permissions. This solution works in RPM-based distros like Red Hat/CentOS/SUSE VMs. For other Linux distributions, we recommend [restoring the VM from backup](/azure/backup/backup-azure-arm-restore-vms).
+Wrong system wide file permissions are modified due to a human error (for example, someone runs `chmod 777` on */* or other important OS file systems). To resolve this issue, restore the file permissions. This solution works on RPM-based distributions like Red Hat/CentOS/SUSE VMs. For other Linux distributions, we recommend [restoring the VM from backup](/azure/backup/backup-azure-arm-restore-vms).
 
 To restore the file permissions, run the following command after attaching the copy of the OS disk to a repair VM and mounting the corresponding file systems by using [chroot](chroot-environment-linux.md):
 
