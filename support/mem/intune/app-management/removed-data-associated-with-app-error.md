@@ -50,4 +50,4 @@ If the issue persists, follow these steps to get support:
    1. Provide the incident ID to Microsoft Support.
 
 1. Collect Android debug log information.
-1. Create a service request. To do this, follow the steps in [How to get support in Microsoft Endpoint Manager admin center](/mem/intune/fundamentals/get-support).
+1. Create a service request. To do this, follow the steps in [How to get support in Microsoft Intune admin center](/mem/intune/fundamentals/get-support).

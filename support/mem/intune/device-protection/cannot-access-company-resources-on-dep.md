@@ -30,7 +30,7 @@ This issue occurs if the following conditions are true:
 
 Set the **Authentication method** to **Company Portal** in the enrollment profile. To do this, follow these steps:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **iOS/iPad** > **iOS/iPad enrollment** > **Enrollment Program Tokens**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **iOS/iPad** > **iOS/iPad enrollment** > **Enrollment Program Tokens**.
 
 2. Select the token, select **Profiles**, select the enrollment profile that's assigned to the affected devices.
 

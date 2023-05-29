@@ -65,7 +65,7 @@
       tocHref: /troubleshoot/microsoft-identity-manager/
       topicHref: /troubleshoot/microsoft-identity-manager/welcome-identity-manager
 
-    - name: Microsoft Endpoint Manager
+    - name: Microsoft Intune
       tocHref: /troubleshoot/mem/
       topicHref: /troubleshoot/mem/
       items:
