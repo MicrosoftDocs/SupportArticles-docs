@@ -151,6 +151,18 @@ You don't have to use a configuration file. If you don't use a configuration fil
 - Use the **Files and Configuration** dialog box after you run the SQLIOSim.exe file.
 - Use the File**N** section of the configuration file.
 
+### Sample configuration files
+
+There are five sample configuration files available in case you want to use them for automated SQLIOSIm runs.
+
+| Sample file | Description | Parameters that differ from the default configuration file |
+| --- | --- | --- |
+| [sqliosim.default.cfg.ini](https://github.com/microsoft/mssql-support/blob/master/sqliosim/sqliosim.cfg.windows/sqliosim.default.cfg.ini) |  |  |
+| [sqliosim.hwcache.cfg.ini](https://github.com/microsoft/mssql-support/blob/master/sqliosim/sqliosim.cfg.windows/sqliosim.hwcache.cfg.ini) | Minimize reads<br /><br />Files are made small to keep them fully in memory<br /><br />No sequential reads | For the AuditUser section and for the ReadAheadUser section:<br /><br />_CacheHitRatio=10000_<br />_UserCount=0_ |
+| [sqliosim.nothrottle.cfg.ini](https://github.com/microsoft/mssql-support/blob/master/sqliosim/sqliosim.cfg.windows/sqliosim.nothrottle.cfg.ini) | Remove I/O throttling<br /><br />Minimize the time to wait to increase I/O volume | _TargetIODuration=1000000_<br />_AuditDelay=10_<br />_RADelay=10_ |
+| [sqliosim.seqwrites.cfg.ini](https://github.com/microsoft/mssql-support/blob/master/sqliosim/sqliosim.cfg.windows/sqliosim.seqwrites.cfg.ini) | Minimize reads<br /><br />Files are made small to keep them fully in memory<br /><br />Files are made non-shrinkable<br /><br />No sequential reads<br /><br />No random access<br /><br />Bulk update in large chunks without delays | _Shrinkable=FALSE_<br /><br />For the AuditUser section, for the ReadAheadUser section, and for the RandomUser section:<br /><br />_CacheHitRatio=10000_<br />_ForceReadAhead=FALSE_<br />_BuffersBUMin=600_<br />_BuffersBUMax=1000_<br />_BUDelay=1_<br />_UserCount=0_ |
+| [sqliosim.sparse.cfg.ini](https://github.com/microsoft/mssql-support/blob/master/sqliosim/sqliosim.cfg.windows/sqliosim.sparse.cfg.ini) | Use only 32 MB of memory<br /><br />Make target I/O duration large enough to enable many outstanding I/O requests<br /><br />Disable scatter/gather APIs to issue separate I/O requests for every 8-KB page<br /><br />Create a 1-GB non-shrinkable file<br /><br />Create a 1-GB non-shrinkable secondary sparse stream in the file | _MaxMemoryMB=32_<br />_TestCycles=3_<br />_TestCycleDuration=600_<br />_TargetIODuration=10000_<br />_UseScatterGather=FALSE_<br /><br />[File1]<br />_FileName=sqliosim.mdx_<br />_InitialSize=1000 MaxSize=1000_<br />_Increment=10_<br />_Shrinkable=FALSE_<br />_LogFile=FALSE_<br />_Sparse=FALSE_<br /><br />[File2]<br />_FileName=sqliosim.ldx_<br />_InitialSize=50_<br />_MaxSize=50_<br />_Increment=0_<br />_Shrinkable=FALSE_<br />_LogFile=TRUE_<br />_Sparse=FALSE_<br /><br />[File3]<br />_FileName=sqliosim.mdx:replica_<br />_InitialSize=1000_<br />_MaxSize=1000_<br />_Increment=10_<br />_Shrinkable=FALSE_<br />_LogFile=FALSE_<br />_Sparse=TRUE_ |
+
 ### Caveats on parameter values
 
 - If the name of the parameter indicates that the parameter is a ratio or a percentage, the value of the parameter is expressed as the percentage or the ratio, divided by 0.01. For example, the value of the `CacheHitRatio` parameter is **10 percent**. This value is expressed as 1000 because 10, divided by 0.01, equals 1000. The maximum value of a percentage parameter is **10000**.
@@ -277,18 +289,6 @@ The SQLIOSim utility takes the values that you specify in the ShrinkUser section
 ### Configuration .ini file comments
 
 The semicolon character (;) at the start of a line in the configuration .ini file causes the line to be treated as a single comment.
-
-### Sample configuration files
-
-In addition to the default Sqliosim.cfg.ini file, the package provides the following sample files.
-
-| Sample file | Description | Parameters that differ from the default configuration file |
-| --- | --- | --- |
-| [sqliosim.default.cfg.ini](https://github.com/microsoft/mssql-support/blob/master/sqliosim/sqliosim.cfg.windows/sqliosim.default.cfg.ini) |  |  |
-| [sqliosim.hwcache.cfg.ini](https://github.com/microsoft/mssql-support/blob/master/sqliosim/sqliosim.cfg.windows/sqliosim.hwcache.cfg.ini) | Minimize reads<br /><br />Files are made small to keep them fully in memory<br /><br />No sequential reads | For the AuditUser section and for the ReadAheadUser section:<br /><br />_CacheHitRatio=10000_<br />_UserCount=0_ |
-| [sqliosim.nothrottle.cfg.ini](https://github.com/microsoft/mssql-support/blob/master/sqliosim/sqliosim.cfg.windows/sqliosim.nothrottle.cfg.ini) | Remove I/O throttling<br /><br />Minimize the time to wait to increase I/O volume | _TargetIODuration=1000000_<br />_AuditDelay=10_<br />_RADelay=10_ |
-| [sqliosim.seqwrites.cfg.ini](https://github.com/microsoft/mssql-support/blob/master/sqliosim/sqliosim.cfg.windows/sqliosim.seqwrites.cfg.ini) | Minimize reads<br /><br />Files are made small to keep them fully in memory<br /><br />Files are made non-shrinkable<br /><br />No sequential reads<br /><br />No random access<br /><br />Bulk update in large chunks without delays | _Shrinkable=FALSE_<br /><br />For the AuditUser section, for the ReadAheadUser section, and for the RandomUser section:<br /><br />_CacheHitRatio=10000_<br />_ForceReadAhead=FALSE_<br />_BuffersBUMin=600_<br />_BuffersBUMax=1000_<br />_BUDelay=1_<br />_UserCount=0_ |
-| [sqliosim.sparse.cfg.ini](https://github.com/microsoft/mssql-support/blob/master/sqliosim/sqliosim.cfg.windows/sqliosim.sparse.cfg.ini) | Use only 32 MB of memory<br /><br />Make target I/O duration large enough to enable many outstanding I/O requests<br /><br />Disable scatter/gather APIs to issue separate I/O requests for every 8-KB page<br /><br />Create a 1-GB non-shrinkable file<br /><br />Create a 1-GB non-shrinkable secondary sparse stream in the file | _MaxMemoryMB=32_<br />_TestCycles=3_<br />_TestCycleDuration=600_<br />_TargetIODuration=10000_<br />_UseScatterGather=FALSE_<br /><br />[File1]<br />_FileName=sqliosim.mdx_<br />_InitialSize=1000 MaxSize=1000_<br />_Increment=10_<br />_Shrinkable=FALSE_<br />_LogFile=FALSE_<br />_Sparse=FALSE_<br /><br />[File2]<br />_FileName=sqliosim.ldx_<br />_InitialSize=50_<br />_MaxSize=50_<br />_Increment=0_<br />_Shrinkable=FALSE_<br />_LogFile=TRUE_<br />_Sparse=FALSE_<br /><br />[File3]<br />_FileName=sqliosim.mdx:replica_<br />_InitialSize=1000_<br />_MaxSize=1000_<br />_Increment=10_<br />_Shrinkable=FALSE_<br />_LogFile=FALSE_<br />_Sparse=TRUE_ |
 
 ## File creation
 
