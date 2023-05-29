@@ -429,7 +429,7 @@ To perform the reinstallation, follow these steps:
     S.5....T.  c /etc/security/pwquality.conf
     ```
  
-    The output line `missing /lib64/libc-2.28.so` is related to the previous error in step 2, and it indicates the *libc-2.28.so* package is missing. However, the *libc-2.28.so* package can be modified. In this case, the output will show `.M.....` instead of `missing`. The *libc-2.28.so* package will be referenced as an example in the following steps.
+    The output line `missing /lib64/libc-2.28.so` is related to the previous error in step 2, and it indicates the *libc-2.28.so* package is missing. However, the *libc-2.28.so* package can be modified. In this case, the output will show `.M.....` instead of `missing`. The *libc-2.28.so* package is referenced as an example in the following steps.
 
 4. In the rescue VM, verify which package contains the library */lib64/libc-2.28.so*.
 
