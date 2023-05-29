@@ -1,7 +1,7 @@
 ---
 title: Can't enter UEFI firmware setup
 description: Provides a solution to an issue where you can't enter UEFI firmware setup when in native UEFI mode.
-ms.date: 09/16/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -45,3 +45,7 @@ Contact your hardware vendor to see if there is a firmware update available to r
 ## More information
 
 LOAD_OPTION_CATEGORY_APP bit of Attributes in Boot#### is deleted by `bcdedit.exe /export`, then `bcdedit.exe /import /clean` process. It may also be cleared by installing Windows Vista or later. This can cause the UEFI Boot Manager failure to enter UEFI firmware menu.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).

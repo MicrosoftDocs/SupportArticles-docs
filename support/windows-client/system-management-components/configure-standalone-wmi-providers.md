@@ -1,7 +1,7 @@
 ---
 title: Use registry entries to configure standalone WMI providers
 description: Describes how to use registry entries to configure standalone WMI providers and resolve a WMIPrvSE.exe quota overflow error.
-ms.date: 03/29/2022
+ms.date: 05/16/2023
 author: v-tappelgate
 ms.author: v-tappelgate
 manager: dcscontentpm
@@ -104,3 +104,7 @@ This script checks whether the subkey exists. If the subkey doesn't exist, the s
 The following image shows how this listing appears in a list of providers.
 
 :::image type="content" source="media/configure-standalone-wmi-providers/wmi-provider-listing.png" alt-text="Provider listing that shows the standalone hosting information.":::
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for User Experience issues](../windows-troubleshooters/gather-information-using-tssv2-user-experience.md#wmi).

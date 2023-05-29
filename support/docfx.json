@@ -314,7 +314,7 @@
         "power-platform/power-apps/**/**.*": "powerapps",
         "power-platform/power-automate/*.md": "power-automate",
         "dynamics-365/customer-insights/**/**.*": "customer-insights",
-        "dynamics-365/fraud-protection/*.md": "dynamics-365-fraud-protection",
+        "dynamics-365/customer-service/**/**.*": "dynamics-365-customerservice",
         "dynamics-365/marketing/*.md": "dynamics-365-marketing",
         "dynamics-365/sales/*.md": "dynamics-365-sales",
         "dynamics-365/finance/**/**.*": "dynamics-365-finance",
@@ -395,7 +395,7 @@
         "azure/devops/*.md": "Azure DevOps",
         "azure/synapse-analytics/**/*.md": "Azure Synapse Analytics",
         "dynamics-365/customer-insights/**/*.md": "Dynamics 365 Customer Insights",
-        "dynamics-365/fraud-protection/*.md": "Dynamics 365 Fraud Protection",
+        "dynamics-365/customer-service/**/*.md": "Dynamics 365 Customer Service",
         "dynamics-365/marketing/*.md": "Dynamics 365 Marketing",
         "dynamics-365/sales/*.md": "Dynamics 365 Sales",
         "dynamics-365/finance/**/*.md": "Dynamics 365 Finance",
@@ -500,10 +500,10 @@
           "Dynamics 365",
           "Customer Insights"
         ],
-        "dynamics-365/fraud-protection/**/*.md": [
+        "dynamics-365/customer-service/**/*.md": [
           "Troubleshoot",
           "Dynamics 365",
-          "Fraud protection"
+          "Customer Service"
         ],
         "dynamics-365/finance/**/*.md": [
           "Troubleshoot",
@@ -565,10 +565,6 @@
         "dynamics-365/finance/**/**.*": [
           "FinanceAndOperations",
           "financeandoperations-docs"
-        ],
-        "dynamics-365/fraud-protection/**/**.*": [
-          "Capaedac-fraudprotection",
-          "fraudprotection-docs"
         ],
         "dynamics-365/marketing/**/**.*": [
           "D365CE",

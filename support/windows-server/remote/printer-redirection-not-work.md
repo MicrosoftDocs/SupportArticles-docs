@@ -1,7 +1,7 @@
 ---
 title: Windows Server printer redirection isn't working
 description: Discusses an issue in which the printer redirection isn't working and no event IDs occur.
-ms.date: 9/24/2021
+ms.date: 05/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -81,3 +81,7 @@ Following is a list of some more things that can be looked into in a "Printer Re
 4. If your server is also a domain controller, refer to [Install Remote Desktop Session Host role service in Windows Server without Connection Broker role service](/troubleshoot/windows-server/remote/install-rds-host-role-service-without-connection-broker).
 5. Group Policy must be correctly set to enable Easy Print on the Server. The policy location is "Computer Configuration > Administrative templates > Windows Components > Remote Desktop Services > Remote Desktop Session Host > Printer Redirection". The setting "Use Remote Desktop Easy Print printer driver first" must be set to "Enabled" for Easy Print redirection, and it has to be "Disabled" for Legacy Print. For "Not configured", Easy Print is chosen by default.
 6. Make sure that the **Printers** check box in the client (mstsc.exe) window on the **Local Resources** tab is checked. The corresponding setting in the associated RDP file is "redirectprinters:i:1".
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for User Experience issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-user-experience.md#printing).

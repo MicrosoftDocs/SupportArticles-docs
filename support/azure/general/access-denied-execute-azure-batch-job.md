@@ -1,5 +1,5 @@
 ---
-title: Azure Storage Account with firewall causes errors when executing Batch jobs
+title: Azure storage account with firewall causes errors when executing Batch jobs
 description: Provides solutions for access issues when you execute Azure Batch jobs.
 ms.date: 09/20/2022
 ms.service: batch

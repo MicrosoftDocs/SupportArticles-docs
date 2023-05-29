@@ -13,13 +13,13 @@ This article gives troubleshooting guidance for common scenarios in which data t
 
 In this scenario, a user can't transfer corporate files between managed apps or copy and paste data from a corporate document to a managed app.
 
-- Check the **Send org data to other apps** setting in both the Microsoft Endpoint Manager admin center and on the device side is using Microsoft Edge. If it is set to **None**, users cannot transfer files to any apps.
+- Check the **Send org data to other apps** setting in both the Microsoft Intune admin center and on the device side is using Microsoft Edge. If it is set to **None**, users cannot transfer files to any apps.
 
 ## Users cannot receive files from unmanaged apps
 
 In this scenario, a user can't receive files from unmanaged apps. For example, files can't be inserted into a document from the Camera, OneDrive for Business, or SharePoint app.
 
-- Check the **Receive data from other apps** setting in both the Microsoft Endpoint Manager admin center and on the device side is using Microsoft Edge. If it is set to **None**, users can't transfer files from any apps.
+- Check the **Receive data from other apps** setting in both the Microsoft Intune admin center and on the device side is using Microsoft Edge. If it is set to **None**, users can't transfer files from any apps.
 
 - Check the settings for **Open data into org documents** and select **Allow users to open data from selected services** to restrict the data source you block or allow.
 

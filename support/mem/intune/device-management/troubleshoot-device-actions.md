@@ -41,7 +41,7 @@ No. And you don't need to enter the dashes.
 
 ### How do I tell who started a Retire/Wipe?
 
-In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Tenant administration** > **Audit logs**, check the **Initiated By** column.
+In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Tenant administration** > **Audit logs**, check the **Initiated By** column.
 
 If you don't see an entry, it means the person who initiated the action is the user of the device. They used the Company Portal app or portal.manage.microsoft.com to perform the action. We can see the details in the console under **Devices** > **Monitor** > **Device actions**.
 

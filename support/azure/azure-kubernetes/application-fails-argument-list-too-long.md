@@ -1,7 +1,7 @@
 ---
 title: Argument list too long application failures
 description: Troubleshoot an argument list too long error message that causes an application to fail in Azure Kubernetes Service (AKS).
-ms.date: 6/1/2022
+ms.date: 05/23/2023
 author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: chiragpa, nickoman
@@ -38,7 +38,7 @@ You can reduce the total number of active services, so that the kubelet adds a s
 
 ### Solution 2: Reconfigure the kubelet so that it doesn't add environment variables for the service host and port
 
-Within the [PodSpec core API](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.21/#podspec-v1-core), set the `enableServiceLinks` field to `false`. This change reconfigures the kubelet behavior so that the host and port aren't automatically added as environment variables for each active service.
+Within the [PodSpec core API](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.23/#podspec-v1-core), set the `enableServiceLinks` field to `false`. This change reconfigures the kubelet behavior so that the host and port aren't automatically added as environment variables for each active service.
 
 > [!WARNING]
 > If your service relies on these environment variables to find other services, this field change will cause the service to fail. To avoid this scenario, rely on DNS for service discovery instead of environment variables, by using [CoreDNS](https://kubernetes.io/docs/tasks/administer-cluster/coredns/).

@@ -46,6 +46,8 @@
       href: ./identity/change-certificates-expiration-date.md
     - name: DPAPI MasterKey backup failures
       href: ./identity/dpapi-masterkey-backup-failures.md
+    - name: Error 0x800706ba during certificate enrollment
+      href: ./identity/error-0x800706ba-certificate-enrollment.md
     - name: Export Root Certification Authority Certificate
       href: ./identity/export-root-certification-authority-certificate.md
     - name: Find the name of Enterprise Root CA server
@@ -884,6 +886,8 @@
       href: ./backup-and-storage/error-0x8000ffff-run-vssadmin-list-writers-command.md
     - name: Error 0x80042409 when doing a VSS restore
       href: ./backup-and-storage/event-12289-vss-backup-restore.md
+    - name: Event ID 32 occurs and shadow copies are unexpectedly deleted
+      href: ./backup-and-storage/event-id-32-shadow-copies-are-unexpectedly-deleted.md
     - name: Event ID 513 when running VSS in Windows Server
       href: ./backup-and-storage/event-id-513-vss-windows-server.md
     - name: No VSS writers are listed when running vssadmin list writers
@@ -998,6 +1002,8 @@
       href: ./deployment/cannot-install-dotnet-framework-3dot5-oem.md
     - name: Can't install updates or programs
       href: ./deployment/cannot-install-updates-programs.md
+    - name: Can't install Windows Server 2019 on servers with a high processor count
+      href: ./deployment/cannot-install-windows-server-2019-high-processor-count.md
     - name: CBS.log file contains entries that some files aren't repaired
       href: ./deployment/cbs-log-file-record-entries-not-repaired-run-sfc.md
     - name: Description of System File Checker (Sfc.exe)
@@ -1216,6 +1222,8 @@
       href: ./group-policy/group-policy-error-7016-1091-1202.md
     - name: Group policy with WMI filters can be denied or cause slow logon/boot
       href: ./group-policy/group-policy-wmi-filters-denied-slow-logon-boot.md
+    - name: Network disconnection after configuring the LLTDIO and RSPNDR GPOs
+      href: ./group-policy/network-disconnection-after-configuring-lltdio-rspndr-gpos.md
     - name: Netlogon event ID 5719 or Group Policy event 1129
       href: ./group-policy/netlogon-event-id-5719-or-group-policy-event-1129.md
     - name: Password policy changes aren't applied
@@ -1348,6 +1356,8 @@
       href: ./high-availability/cluster-validation-failure-error-80070005.md
     - name: Creating failover cluster fails with error 0xc000005e
       href: ./high-availability/creating-failover-cluster-fails-error-0xc0000055.md
+    - name: Error 0x80090327 when adding a node to a cluster
+      href: ./high-availability/error-0x80090327-adding-node-to-cluster.md
     - name: Error message event ID 1289 is logged when you try to create a cluster
       href: ./high-availability/error-event-id-1289-create-cluster.md
     - name: Implications of using /forcequorum switch
@@ -1584,12 +1594,12 @@
       href: ./networking/dns-zone-transfer-options-reset.md
     - name: DNS Server becomes an island
       href: ./networking/dns-server-becomes-island.md
-    - name: Event 4015 when running DNS on RODC
-      href: ./networking/rodc-logs-event-4015-error-00002095.md
     - name: Events 407 and 408 when querying DNS server
       href: ./networking/events-407-408-in-dns-server-event-log.md
     - name: Event ID 4000 and 4007 when DNS zones not loaded
       href: ./networking/dns-zones-do-not-load-event-4000-4007.md
+    - name: Event ID 4015 is logged and the DNS server encounters a critical error
+      href: ./networking/event-4015-dns-server-encounters-critical-error.md
     - name: Forwarded DNS name resolution fails for dual-stacked queries
       href: ./networking/forwarded-dns-name-resolution-fails-for-dual-stacked-queries.md
     - name: Forwarders and conditional forwarders resolution timeouts
@@ -2326,6 +2336,8 @@
       href: ./remote/cannot-connect-rds-no-license-server.md
     - name: '"Licenses are not available for this Remote Desktop" error in Licensing Diagnosis'
       href: ./remote/rdsh-administrator-on-get-error-licensing-diagnosis.md
+    - name: Remote session disconnected when using non-persistent VDI with per-user licensing
+      href: ./remote/remote-desktop-services-per-user-licensing.md
     - name: Configure RDP listener certificates
       href: ./remote/remote-desktop-listener-certificate-configurations.md
     - name: Deactivate or reactivate a license server
@@ -2528,6 +2540,8 @@
       href: ./system-management-components/powershell-console-characters-garbled-for-cjk-languages.md
   - name: Server Manager
     items:
+    - name: Error 0x800f0805 when Server Manager and DISM fail to list the available features
+      href: ./system-management-components/error-0x800f0805-server-manager-dism-fail-list-available-features.md
     - name: error code 0x800706BE
       href: ./system-management-components/unable-view-roles-features-error-code-0x800706BE.md
     - name: Error when you select Roles in Server Manager
@@ -2550,12 +2564,14 @@
       href: ./system-management-components/scheduled-tasks-reference-incorrect-user-profile.md
   - name: WinRM
     items:
+    - name: Error 0x80090322 when connecting PowerShell to remote server via WinRM
+      href: ./system-management-components/error-0x80090322-when-connecting-powershell-to-remote-server-via-winrm.md
     - name: WinRM service not start
       href: ./system-management-components/winrm-service-not-start-uninstall-winrm-2.md
   - name: WMI
     items:
-    - name: High CPU usage by WmiPrvSE.exe process
-      href: ./system-management-components/high-cpu-usage-wmiprvse-process-regular-intervals.md
+    - name: Troubleshoot WMI high CPU usage issues
+      href: ./system-management-components/troubleshoot-wmi-high-cpu-issues.md
     - name: Error 0x8004106C while you run WMI queries
       href: ./system-management-components/wmi-error-0x8004106c.md
     - name: Event 5605 when querying MSCluster namespace by WMI
@@ -2578,10 +2594,14 @@
       href: ./user-profiles-and-logon/folder-redirection-settings-not-applied.md
   - name: User Logon fails
     items:
+    - name: '"Your credentials could not be verified" when logging on to Windows with WHFB'
+      href: ./user-profiles-and-logon/your-credential-could-not-be-verified-error-when-logging-on-to-windows-by-using-whfb.md
     - name: Cached domain logon information
       href: ./user-profiles-and-logon/cached-domain-logon-information.md
     - name: Can't log off from a computer
       href: ./user-profiles-and-logon/windows-log-off-errors-events.md
+    - name: Can't sign in to a DC and the LSASS process stops responding
+      href: ./user-profiles-and-logon/cannot-sign-in-dc-lsass-process-stop-responding.md
     - name: Error 1384 when you log on to a domain
       href: ./user-profiles-and-logon/security-content-accumated-many-security-ids.md
     - name: 'Error: The RPC server is unavailable'
@@ -2918,6 +2938,8 @@
       href: ./windows-security/rpc-endpoint-mapper-prevents-users-added-to-trust-forest.md
   - name: Kerberos authentication
     items:
+    - name: Active Directory authentication fails with klist error 0x8009030e
+      href: ./windows-security/active-directory-authentication-fails-klist-error-0x8009030e.md
     - name: 'Troubleshooting guidance: Kerberos authentication'
       href: ./windows-security/kerberos-authentication-troubleshooting-guidance.md
     - name: Authentication failure on NTLM and Kerberos servers
@@ -3060,3 +3082,5 @@
       href: ../windows-client/windows-troubleshooters/gather-information-using-tssv2-deployment.md?context=/troubleshoot/windows-server/context/context
     - name: Gather information for Group Policy issues
       href: ../windows-client/windows-troubleshooters/gather-information-using-tssv2-group-policy.md?context=/troubleshoot/windows-server/context/context
+    - name: Gather information for user experience-related issues
+      href: ../windows-client/windows-troubleshooters/gather-information-using-tssv2-user-experience.md?context=/troubleshoot/windows-server/context/context

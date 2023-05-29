@@ -1,0 +1,65 @@
+items:
+- name: Frequently asked questions and acronyms
+  href: faq-acronyms.md
+- name: Latest updates and version history
+  href: download-and-install-latest-updates.md
+- name: Microsoft Update Detection logic
+  href: new-mu-servicing-model.md
+- name: Naming schema and Fix areas for SQL updates
+  href: naming-schema-and-fix-area.md
+- name: Servicing model
+  href: servicing-models-sql-server.md
+- name: Version and edition of SQL Server engine
+  href: find-my-sql-version.md
+- name: Version and edition of SQL components
+  href: components-client-tools-versions.md
+- name: SQL Server 2022
+  items:
+  - name: SQL Server 2022 build versions
+    href: sqlserver-2022/build-versions.md
+  - name: Cumulative Update 4
+    items:
+    - name: Cumulative Update 4 (KB5026717)
+      href: sqlserver-2022/cumulativeupdate4.md
+    - name: 'FIX: Errors after you apply a cumulative update to a contained availability group'
+      href: sqlserver-2022/errors-apply-cu-contained-availability-group.md
+  - name: Cumulative Update 3
+    items:
+    - name: Cumulative Update 3 (KB5024396)
+      href: sqlserver-2022/cumulativeupdate3.md
+  - name: Cumulative Update 2
+    items:
+    - name: Cumulative Update 2 (KB5023127)
+      href: sqlserver-2022/cumulativeupdate2.md
+    - name: 'FIX: Error when setting the SQL Server Agent job history log'
+      href: sqlserver-2022/error-set-sql-server-agent-job-history-log.md
+  - name: Cumulative Update 1
+    items:
+    - name: Cumulative Update 1 (KB5022375)
+      href: sqlserver-2022/cumulativeupdate1.md
+    - name: 'FIX: Database accessibility issues with high-volume customer workloads'
+      href: sqlserver-2022/database-accessibility-issues-high-volume-customer-workloads.md
+- name: SQL Server 2019
+  items:
+  - name: SQL Server 2019 build versions
+    href: sqlserver-2019/build-versions.md
+- name: SQL Server 2017
+  items:
+  - name: SQL Server 2017 build versions
+    href: sqlserver-2017/build-versions.md
+- name: SQL Server 2016
+  items:
+  - name: SQL Server 2016 build versions
+    href: sqlserver-2016/build-versions.md
+- name: SQL Server 2014
+  items:
+  - name: SQL Server 2014 build versions
+    href: sqlserver-2014/build-versions.md
+- name: SQL Server on Linux Release History
+  items:
+  - name: SQL Server 2022
+    href: linux/release-history-2022.md
+  - name: SQL Server 2019
+    href: linux/release-history-2019.md
+  - name: SQL Server 2017
+    href: linux/release-history-2017.md
