@@ -44,7 +44,7 @@ To resolve this problem, follow these steps to identify any transaction dates in
     ```
 
     > [!NOTE]
-    > If you don't get any results from the scripts above, then you may review the dates on the BBF and P/L entries.  By default, these entries should be dated the last day of the prior fiscal year. (For example, on a calendar year setup, the '2017' BBF entries would have a '2017' year stamp and a docdate of '12-31-2016'.)  If a BBF or P/L entry has a blank docdate (1900-01-01", this may also be an issue and isn't typical behavior in Microsoft Dynamics GP.
+    > If you don't get any results from the scripts above, then you may review the dates on the BBF and P/L entries.  By default, these entries should be dated the last day of the prior fiscal year. (For example, on a calendar year setup, the '2017' BBF entries would have a '2017' year stamp and a docdate of '12-31-2016'.) If a BBF or P/L entry has a blank docdate (1900-01-01", this may also be an issue and isn't typical behavior in Microsoft Dynamics GP.
 
 1. Next, if GL history has been removed, the first historical year may contain a BBF or P/L entry dated the last day of the prior year, and that year no longer exists. This scenario will cause the above message to happen when Reconcile is done on the historical year. Execute the scripts below to identify the lowest and highest transaction dates in the GL tables, and verify that fiscal years exist that contain the dates returned.
 
