@@ -80,7 +80,7 @@ landingContent:
         links:
         - text: SQL Server support blog
           url: https://techcommunity.microsoft.com/t5/SQL-Server-Support/bg-p/SQLServerSupport/
-         - text: Azure Database Support Blog
+        - text: Azure Database Support Blog
           url: https://techcommunity.microsoft.com/t5/azure-database-support-blog/bg-p/AzureDBSupport
           
   - title: Documentation
