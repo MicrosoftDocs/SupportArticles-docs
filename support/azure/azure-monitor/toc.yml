@@ -21,6 +21,8 @@ items:
       href: app-insights/investigate-missing-telemetry.md
     - name: Troubleshoot auto-instrumentation issues
       href: app-insights/auto-instrumentation-troubleshoot.md
+    - name: Collect self-diagnostic logs for Application Insights SDKs
+      href: app-insights/enable-self-diagnostics.md
     - name: Troubleshoot Azure Application Insights in a Java web project
       href: app-insights/java-2x-troubleshoot.md
     - name: Troubleshoot no data in Azure Application Insights for .NET and .NET Core
