@@ -16,12 +16,6 @@ metadata:
 landingContent:
 
  # Card
-  - title: Documentation
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-        - text: How to contribute to SQL Server Documentation
-          url: /sql/sql-server/sql-server-docs-contribute
 
   - title: Product Updates and Release Notes
     linkLists:
@@ -42,6 +36,60 @@ landingContent:
         - text: Version and edition of SQL components
           url: releases/components-client-tools-versions.md
 
+  - title: Diagnostic Tools to gather logs
+    linkLists:
+      - linkListType: download
+        links:
+        - text: SQL LogScout
+          url: https://github.com/microsoft/sql_logscout#scenarios
+        - text: PSSDiag
+          url: https://github.com/microsoft/DiagManager/wiki/Create-a-PSSDiag-Package
+        - text: SQLTrace
+          url: https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLTRACE          
+        - text: SSPIClient
+          url: https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SSPICLIENT          
+        - text: TSS V2
+          url: https://learn.microsoft.com/en-us/troubleshoot/windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2          
+        - text: SQLDumper
+          url: https://learn.microsoft.com/en-us/troubleshoot/sql/tools/use-sqldumper-generate-dump-file
+          
+  - title: Diagnostic Tools to analyze logs
+    linkLists:
+      - linkListType: download
+        links:
+        - text:  SQL Nexus
+          url: https://github.com/microsoft/SqlNexus/wiki/How-to-use-SQL-Nexus
+        - text: AGDiag
+          url: https://github.com/microsoft/agdiag/wiki/Getting-Started
+        - text: SQL Network Analyzer
+          url: https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLNAUI          
+        - text: SQLCheck
+          url: https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLCHECK          
+        - text: SQLBench
+          url: https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLBENCH          
+        - text: DBTest
+          url: https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/DBTEST
+        - text: RML Utilities
+          url: https://learn.microsoft.com/troubleshoot/sql/tools/replay-markup-language-utility
+        - text: SQL Callstack Resolver
+          url: https://github.com/microsoft/SQLCallStackResolver
+        
+  - title: SQL Server blogs
+    linkLists:
+      - linkListType: reference
+        links:
+        - text: SQL Server support blog
+          url: https://techcommunity.microsoft.com/t5/SQL-Server-Support/bg-p/SQLServerSupport/
+         - text: Azure Database Support Blog
+          url: https://techcommunity.microsoft.com/t5/azure-database-support-blog/bg-p/AzureDBSupport
+          
+  - title: Documentation
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+        - text: How to contribute to SQL Server Documentation
+          url: /sql/sql-server/sql-server-docs-contribute
+          
   - title: Analysis Services (SSAS)
     linkLists:
       - linkListType: how-to-guide
