@@ -13,7 +13,7 @@ ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 
 ms.topic: article
-ms.date: 10/11/2020
+ms.date: 05/29/2023
 ms.author: glimoli
 ---
 # Troubleshoot a faulty Azure VM by using nested virtualization in Azure

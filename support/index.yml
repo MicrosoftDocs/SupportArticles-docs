@@ -11,7 +11,6 @@ metadata:
    title: Microsoft troubleshooting documentation | Microsoft Learn
    description: Find the documentation you need to troubleshoot issues and apply workarounds for the following commercial products from Microsoft.
    ms.topic: hub-page  
-   ms.service: troubleshoot
    ms.date: 02/06/2020
 
 
@@ -32,35 +31,35 @@ productDirectory:
     summary: Troubleshooting articles for Microsoft Edge and Internet Explorer
     url: developer/browsers/welcome-browsers.yml
       
-  - title: BizTalk Server
-    imageSrc: "media/hub-landing/biztalk.svg"
-    summary: Troubleshooting articles for BizTalk Server
-    url: developer/biztalk/welcome-biztalk-server.yml
-      
+  - title: Visual Studio
+    imageSrc: "media/hub-landing/logo_vs-ide.svg"
+    summary: Troubleshooting articles for Visual Studio
+    url: developer/visualstudio/welcome-visual-studio.yml
+
   - title: .NET
     imageSrc: "media/hub-landing/logo_NET.svg"
     summary: Troubleshooting articles for .NET
     url: developer/dotnet/welcome-dotnet-landing.yml
       
-  - title: Visual Studio
-    imageSrc: "media/hub-landing/logo_vs-ide.svg"
-    summary: Troubleshooting articles for Visual Studio
-    url: developer/visualstudio/welcome-visual-studio.yml
-      
-  - title: Host Integration Server
-    imageSrc: "media/hub-landing/his.jpeg"
-    summary: Troubleshooting articles for Host Integration Server
-    url: developer/host-integration-server/welcome-host-integration-server.yml
-      
-  - title: Web Apps
-    imageSrc: "media/hub-landing/app-service-web.svg"
-    summary: Troubleshooting articles for Web Apps
-    url: developer/webapps/welcome-webapps.yml
+  - title: ASP.NET
+    imageSrc: "media/hub-landing/logo_NET.svg"
+    summary: Troubleshooting articles for ASP.NET
+    url: developer/webapps/aspnet-welcome.yml
+
+  - title: Internet Information Services
+    imageSrc: "media/hub-landing/iis.jpg"
+    summary: Troubleshooting articles for Internet Information Services
+    url: developer/webapps/iis/iis-welcome.yml
 
   - title: SQL Server 
     imageSrc: "media/hub-landing/sql-database-blue.svg"
     summary: Troubleshooting articles for SQL Server
     url: sql/welcome-sql-server.yml
+
+  - title: Surface
+    imageSrc: "media/hub-landing/windows-logo.png"
+    summary: Troubleshooting articles for Surface Hub and Surface devices
+    url: devices/index.yml
 
   - title: Endpoint management
     imageSrc: "media/hub-landing/microsoft.png"
@@ -68,7 +67,7 @@ productDirectory:
     url: mem/index.yml
 
   - title: System Center
-    imageSrc: "media/hub-landing/logo-systemcenter.png"
+    imageSrc: "media/hub-landing/system-center-logo.png"
     summary: Troubleshooting articles for System Center
     url: system-center/index.yml
 
@@ -96,7 +95,17 @@ productDirectory:
     imageSrc: "media/hub-landing/microsoft.png"
     summary: Troubleshooting articles for Microsoft Power Platform
     url: power-platform/index.yml
+      
+  - title: BizTalk Server
+    imageSrc: "media/hub-landing/biztalk.svg"
+    summary: Troubleshooting articles for BizTalk Server
+    url: developer/biztalk/welcome-biztalk-server.yml
 
+  - title: Host Integration Server
+    imageSrc: "media/hub-landing/his.jpeg"
+    summary: Troubleshooting articles for Host Integration Server
+    url: developer/host-integration-server/welcome-host-integration-server.yml
+      
   - title: Previous Versions
     imageSrc: "media/hub-landing/microsoft.png"
     summary: Troubleshooting articles for previous versions of products

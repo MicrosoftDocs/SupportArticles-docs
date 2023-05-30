@@ -68,8 +68,8 @@
       href: azure-linux-vm-uefi-boot-failures.md
     - name: Network issues
       href: cannot-connect-linux-network.md
-    - name: SSH connection
-      href: connect-linux-vm-sshconnection.md
+    - name: SSH connection fails due to permission and ownership issues
+      href: linux-vm-sshconnectionissue-perms.md
     - name: SSH troubleshooting
       href: troubleshoot-ssh-connection.md
     - name: Reset network interface for Azure Linux VM
@@ -403,7 +403,7 @@
 
 - name: VM health
   items:
-  - name: Inaccurate VM availability reported during restart
+  - name: VM availability might be inaccurate during restart
     href: inaccurate-vm-availability-during-vm-restart.md
 
 - name: VM agent and extensions

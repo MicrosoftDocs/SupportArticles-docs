@@ -980,6 +980,10 @@
       href: ./shell-experience/monitor-powers-off-when-pc-locked.md
   - name: Modern, Inbox and Microsoft Store Apps
     items:
+    - name: Troubleshoot Apps failing to start using Process Monitor
+      href: ./shell-experience/troubleshoot-apps-start-failure-use-process-monitor.md
+    - name: Troubleshoot Apps failing to start using Windows Package Manager
+      href: ./shell-experience/troubleshoot-apps-start-failure-use-windows-package-manager.md
     - name: Can't open Microsoft Store when making a VPN connection
       href: ./shell-experience/microsoft-store-not-open-domain-joine-computer-vpn.md
     - name: Can't play audio in a system with DisplayPort
@@ -1304,3 +1308,5 @@
       href: ./windows-troubleshooters/gather-information-using-tssv2-deployment.md
     - name: Gather information for Group Policy issues
       href: ./windows-troubleshooters/gather-information-using-tssv2-group-policy.md
+    - name: Gather information for user experience-related issues
+      href: ./windows-troubleshooters/gather-information-using-tssv2-user-experience.md

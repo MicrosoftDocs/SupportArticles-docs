@@ -5746,10 +5746,45 @@
       "source_path": "support/windows-server/identity/password-change-conflict-resolution-function.md",
       "redirect_url": "/troubleshoot/windows-server/identity/password-change-processing-conflict-resolution-function",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/system-management-components/high-cpu-usage-wmiprvse-process-regular-intervals.md",
+      "redirect_url": "/troubleshoot/windows-server/system-management-components/troubleshoot-wmi-high-cpu-issues",
+      "redirect_document_id": true
     }, 
     {
       "source_path": "support/sql/general/servicing-models-sql-server.md",
       "redirect_url": "/troubleshoot/sql/releases/servicing-models-sql-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/azure-kubernetes/troubleshoot-common-mariner-aks.md",
+      "redirect_url": "/troubleshoot/azure/azure-kubernetes/troubleshoot-common-azure-linux-aks",
+      "redirect_document_id": true
+    }, 
+    {
+      "source_path": "support/azure/virtual-machines/connect-linux-vm-sshconnection.md",
+      "redirect_url": "/troubleshoot/azure/virtual-machines/linux-vm-sshconnectionissue-perms",
+      "redirect_document_id": true
+    }, 
+    {
+      "source_path": "support/azure/app-service/web-apps-configuration-and-management-faqs.md",
+      "redirect_url": "/troubleshoot/azure/app-service/create-delete-resources-faq",
+      "redirect_document_id": true
+    }, 
+    {
+      "source_path": "support/sql/linux/release-history-2017.md",
+      "redirect_url": "/troubleshoot/sql/releases/linux/release-history-2017",
+      "redirect_document_id": true
+    }, 
+    {
+      "source_path": "support/sql/linux/release-history-2019.md",
+      "redirect_url": "/troubleshoot/sql/releases/linux/release-history-2019",
+      "redirect_document_id": true
+    }, 
+    {
+      "source_path": "support/sql/linux/release-history-2022.md",
+      "redirect_url": "/troubleshoot/sql/releases/linux/release-history-2022",
       "redirect_document_id": true
     }
 ]
