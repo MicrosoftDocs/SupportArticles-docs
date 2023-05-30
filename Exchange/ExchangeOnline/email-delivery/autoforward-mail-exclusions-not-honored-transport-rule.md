@@ -16,7 +16,7 @@ appliesto:
   - Exchange Online
 search.appverid: 
   - MET150
-ms.date: 3/31/2022
+ms.date: 5/25/2023
 ---
 # A transport rule doesn't match if user mailbox rules automatically forward messages
 
@@ -41,7 +41,9 @@ To maintain the behavior of transport rules, change the **Match sender address i
    :::image type="content" source="media/autoforward-mail-exclusions-not-honored-transport-rule/transport-rule-error.png" alt-text="Screenshot of selecting Header or envelope.":::
 
 > [!NOTE]
-> This change also affects the mailbox redirect rule, because the sender that's evaluated by the transport rule is now the original sender, and not the mailbox on which the rule is set. To maintain the behavior of this rule, set the exception in the transport rule based on the recipient instead of the sender. Alternatively, change this rule to an automatic forwarding rule.
+> 
+> - Mail flow rules are used to match auto-forward messages based on their message class (`IPM.note.forward`). However, if the forwarding is set up through Outlook on the web (`ForwardingSmtpAddress`) or by admins on the properties of the mailbox (`ForwardingAddress`), the message class is normal (`IPM.Note`), and transport rules won't detect them. For more information about automatic forwarding, see [All you need to know about automatic email forwarding in Exchange Online](https://techcommunity.microsoft.com/t5/exchange-team-blog/all-you-need-to-know-about-automatic-email-forwarding-in/ba-p/2074888).
+> - This change also affects the mailbox redirect rule, because the sender that's evaluated by the transport rule is now the original sender, and not the mailbox on which the rule is set. To maintain the behavior of this rule, set the exception in the transport rule based on the recipient instead of the sender. Alternatively, change this rule to an automatic forwarding rule.
 
 ## More information
 
