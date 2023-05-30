@@ -67,7 +67,8 @@ Container Insights is a feature within AKS that monitors container workload perf
       Nine processes are listed under the node. The statuses are all **Ok**, the maximum percentage of memory used for the processes ranges from 16 to 0.3 percent, the maximum memory used is from 0.7 mc to 22 mc, the number of containers used is 1 to 3, and the uptime is 3 to 4 days. Unlike for the node, the processes all have a corresponding controller listed. In this screenshot, the controller names are prefixes of the process names, and they're hyperlinked.
    :::image-end:::
 
-   The percentage of CPU or memory usage for pods is based on the CPU request specified for the container. It doesn't represent the percentage of the CPU or memory usage for the node. So, look at the actual CPU or memory usage more than the percentage of CPU or memory usage for pods.
+    > [!NOTE]
+    > The percentage of CPU or memory usage for pods is based on the CPU request specified for the container. It doesn't represent the percentage of the CPU or memory usage for the node. So, look at the actual CPU or memory usage more than the percentage of CPU or memory usage for pods.
 
 ### [Command Line](#tab/command-line)
 
@@ -155,7 +156,8 @@ This procedure uses the kubectl commands in a console. It displays only the curr
      ...
    ```
 
-    The percentages in the command output above are the CPU/memory requests and limits based on the entire node capacity.
+    > [!NOTE]
+    > The percentages in the command output above are the CPU/memory requests and limits based on the entire node capacity.
 
 ---
 
