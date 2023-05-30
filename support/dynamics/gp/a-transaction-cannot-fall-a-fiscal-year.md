@@ -31,7 +31,7 @@ To resolve this problem, use one of the following methods.
 To resolve this problem, follow these steps to verify all the correct fiscal years exist and no dates are skipped:
 
 1. Open the **Fiscal Periods Setup** window. To do it, point to **Tools** on the **Microsoft Dynamics GP** menu, point to **Setup**, point to **Company**, and then select **Fiscal Periods**.
-2. In the **Fiscal Periods Setup**  window, verify that consecutive fiscal periods are configured to have no days that are excluded from open fiscal periods or from historical fiscal periods. Verify no dates are skipped between periods for all years.
+2. In the **Fiscal Periods Setup** window, verify that consecutive fiscal periods are configured to have no days that are excluded from open fiscal periods or from historical fiscal periods. Verify no dates are skipped between periods for all years.
 
 ### Method 2
 
