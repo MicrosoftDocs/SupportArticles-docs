@@ -66,10 +66,9 @@ To identify nodes, containers, or pods that drive high CPU usage, follow these s
 
     :::image type="content" source="media/identify-high-cpu-consuming-containers-aks/containers-in-node-insights.png" alt-text="Screenshot of the insights option for pods under the Monitoring selection." lightbox="media/identify-high-cpu-consuming-containers-aks/containers-in-node-insights.png":::
 
-    Once you get the list of pods with high CPU usage, you can map it to the applications that cause the spike in CPU usage.
+    The percentage of CPU or memory usage for pods is based on the CPU request specified for the container. It doesn't represent the percentage of the CPU or memory usage for the node. So, look at the actual CPU or memory usage more than the percentage of CPU or memory usage for pods.
 
-    > [!NOTE]
-    > The percentage of the CPU usage for pods are based on the CPU request for the container. It doesn't represent the percentage of CPU/memory for the node. It's important to look at the actual CPU/memory usage more than the percentage for pods.
+    Once you get the list of pods with high CPU usage, you can map it to the applications that cause the spike in CPU usage.
 
 ### [Command Line](#tab/command-line)
 
