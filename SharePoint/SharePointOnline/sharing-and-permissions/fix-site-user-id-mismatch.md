@@ -76,7 +76,7 @@ If a user is denied access to their old OneDrive site after a new account is cre
 > [!NOTE]  
 > Administrators can't fix this issue by manually updating the owners of the OneDrive site or editing the user profile properties that are associated with the OneDrive site. The diagnostic is the only recommended solution to fix this issue.
 
-#### User ID mismatch for a SharePoint site
+#### User ID mismatch for a SharePoint site OR on a OneDrive sites not belonging to them. 
 
 When the diagnostic detects a user ID mismatch in the UserInfo list, it will offer to remove the old ID. After you accept and the old ID is removed, assign the new user account the appropriate permissions to the SharePoint site. 
 
