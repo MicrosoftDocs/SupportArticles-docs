@@ -4,7 +4,7 @@ description: This article describes how to resolve last-page insert PAGELATCH_EX
 ms.date: 10/27/2021
 ms.custom: sap:Performance
 ms.reviewer: PijoCoder
-ms.author: pijocoder
+ms.author: JoPilov
 ms.prod: sql
 ---
 # Resolve last-page insert PAGELATCH_EX contention in SQL Server
