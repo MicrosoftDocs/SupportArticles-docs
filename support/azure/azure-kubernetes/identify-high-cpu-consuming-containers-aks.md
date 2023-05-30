@@ -1,7 +1,7 @@
 ---
 title: Identify CPU saturation in AKS clusters
 description: Troubleshoot high CPU that the node and containers consume in an AKS cluster.
-ms.date: 03/13/2023
+ms.date: 05/31/2023
 ms.reviewer: chiragpa
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-cluster-performance
@@ -68,6 +68,9 @@ To identify nodes, containers, or pods that drive high CPU usage, follow these s
 
     Once you get the list of pods with high CPU usage, you can map it to the applications that cause the spike in CPU usage.
 
+    > [!NOTE]
+    > The percentage of the CPU usage for pods are based on the CPU request for the container. It doesn't represent the percentage of CPU/memory for the node. It's important to look at the actual CPU/memory usage more than the percentage for pods.
+
 ### [Command Line](#tab/command-line)
 
 > [!NOTE]
@@ -88,6 +91,8 @@ To identify nodes, containers, or pods that drive high CPU usage, follow these s
 1. Check the requests and limits for each pod on the node with the `Kubectl describe node <node_name>` command.
 
     :::image type="content" source="media/identify-high-cpu-consuming-containers-aks/describe-node-kubectl.png" alt-text="Screenshot of kubectl describe node.":::
+
+    The percentages in the command output above are the CPU/memory requests and limits based on the entire node capacity.
 
     After you identify the pods that use excessive CPU, you can identify the applications running on the pods.
 
