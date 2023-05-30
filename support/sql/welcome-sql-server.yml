@@ -57,7 +57,7 @@ landingContent:
     linkLists:
       - linkListType: download
         links:
-        - text:  SQL Nexus
+        - text: SQL Nexus
           url: https://github.com/microsoft/SqlNexus/wiki/How-to-use-SQL-Nexus
         - text: AGDiag
           url: https://github.com/microsoft/agdiag/wiki/Getting-Started
