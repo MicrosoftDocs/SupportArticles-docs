@@ -4,7 +4,7 @@ description: Helps troubleshoot problems with auto-instrumentation in Applicatio
 ms.topic: conceptual
 ms.service: azure-monitor
 ms.subservice: application-insights
-ms.date: 03/10/2023
+ms.date: 05/29/2023
 ---
 # Troubleshoot Application Insights auto-instrumentation
 
@@ -41,6 +41,10 @@ Auto-instrumentation fails if it detects the following libraries:
 - `Microsoft.ApplicationInsights`
 
 These libraries must be removed for auto-instrumentation to succeed.
+
+## You encounter issues with the Application Insights SDK itself after you enable auto-instrumentation
+
+You can collect self-diagnostic logs for the Application Insights SDK to diagnose issues. For more information, see [How to collect self-diagnostic logs for Application Insights SDKs](enable-self-diagnostics.md).
 
 ## More help
 
