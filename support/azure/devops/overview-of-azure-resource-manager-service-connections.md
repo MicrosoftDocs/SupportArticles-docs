@@ -44,11 +44,11 @@ To create an Azure RM service connection,
 
 1. In the **New service connection** dialog box, select **Azure Resource Manager**.
 
-1. Click **Next**.
+1. Select **Next**.
 
 1. Select **Service principal (automatic) authentication** method.
 
-1. Click **Next**.
+1. Select **Next**.
 
 1. Select the Subscription under which the resource is available.
 
@@ -68,7 +68,7 @@ After you save the Azure RM service connection, the connection takes the followi
 
 After you successfully create the application, assign the application as a contributor to the selected subscription.
 
-For more information, see [What happens when you create an Azure RM service connection?](/azure/devops/pipelines/release/azure-rm-endpoint?view=azure-devops&preserve-view=true).
+For more information, see [What happens when you create an Azure RM service connection?](/azure/devops/pipelines/release/azure-rm-endpoint).
 
 ## Tools used for troubleshooting Azure RM service connection scenarios
 
@@ -87,10 +87,10 @@ To capture an F12 trace, follow the steps in [Capture a browser trace for troubl
 
 1. Run Fiddler.
 
-1. Press **F12** to stop the traffic capture, and then press **CTRL+X** to clear any traffic log.
+1. Press <kbd>F12</kbd> to stop the traffic capture, and then press <kbd>Ctrl</kbd>+<kbd>X</kbd> to clear any traffic log.
 
 > [!IMPORTANT]
-> Configure Fiddler to capture and decrypt HTTPS traffic. To do this, select **Tools > Options > HTTPS**. Select both checkboxes on this tab (**Capture HTTPS CONNECTs** and **Decrypt HTTPS traffic**), and then select **YES** to all prompts. For more information, see [Configure Fiddler Classic to Decrypt HTTPS Traffic](https://docs.telerik.com/fiddler/configure-fiddler/tasks/decrypthttps&preserve-view=true).
+> Configure Fiddler to capture and decrypt HTTPS traffic. To do this, select **Tools > Options > HTTPS**. Select both checkboxes on this tab (**Capture HTTPS CONNECTs** and **Decrypt HTTPS traffic**), and then select **YES** to all prompts. For more information, see [Configure Fiddler Classic to Decrypt HTTPS Traffic](https://docs.telerik.com/fiddler/configure-fiddler/tasks/decrypthttps).
 
 ## Common service connection issues
 
@@ -121,6 +121,6 @@ Use the following list to navigate to the appropriate article or section for det
 ## See also
 
 - ["Azure Resource Manager service connection"](/azure/devops/pipelines/library/service-endpoints?view=azure-devops&tabs=yaml&preserve-view=true)
-- [Troubleshoot Azure RM service connections](/azure/devops/pipelines/release/azure-rm-endpoint?view=azure-devops&preserve-view=true)
+- [Troubleshoot Azure RM service connections](/azure/devops/pipelines/release/azure-rm-endpoint)
 
 [!INCLUDE [third-party-disclaimer](../../includes/third-party-disclaimer.md)]
