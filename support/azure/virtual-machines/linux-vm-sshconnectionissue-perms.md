@@ -114,7 +114,7 @@ In the Azure portal, open the **Properties** window of the VM to check the agent
    #!/bin/bash
 
    #Script to change permissions on a file
-   chmod 755 /var/empty/sshd;chown root:root /var/empty/sshd
+   mkdir -p /var/empty/sshd;chmod 755 /var/empty/sshd;chown root:root /var/empty/sshd
    ```
 
    ### [SUSE](#tab/slests2)
@@ -123,7 +123,7 @@ In the Azure portal, open the **Properties** window of the VM to check the agent
    #!/bin/bash
 
    #Script to change permissions on a file
-   chmod 755 /var/lib/empty;chown root:root /var/lib/empty
+   mkdir -p /var/lib/empty;chmod 755 /var/lib/empty;chown root:root /var/lib/empty
    ```
 
    ### [Ubuntu](#tab/ubuntuts2)
@@ -132,7 +132,7 @@ In the Azure portal, open the **Properties** window of the VM to check the agent
    #!/bin/bash
 
    #Script to change permissions on a file
-   chmod 755 /var/run/sshd;chown root:root /var/run/sshd
+   mkdir -p /var/run/sshd;chmod 755 /var/run/sshd;chown root:root /var/run/sshd
    ```
 
    > [!NOTE]
@@ -177,6 +177,7 @@ Follow these steps to automate the manual offline process:
    ### [RHEL/CentOS](#tab/rhelts3)
 
    ```bash
+   mkdir -p /var/empty/sshd
    chmod 755 /var/empty/sshd
    chown root:root /var/empty/sshd
    ```
@@ -184,10 +185,18 @@ Follow these steps to automate the manual offline process:
    ### [SUSE](#tab/slests3)
 
    ```bash
+   mkdir -p /var/lib/empty
    chmod 755 /var/lib/empty
    chown root:root /var/lib/empty
    ```
+   
+   ### [Ubuntu](#tab/ubuntuts1)
 
+   ```bash
+   mkdir -p /var/run/sshd
+   chmod 755 /var/run/sshd
+   chown root:root /var/run/sshd
+   ```
    ---
 
 4. Once the changes are applied, run the following `az vm repair restore` command to perform an automatic OS disk swap with the original VM.
