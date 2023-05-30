@@ -49,9 +49,9 @@ landingContent:
         - text: SSPIClient
           url: https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SSPICLIENT          
         - text: TSS V2
-          url: https://learn.microsoft.com/en-us/troubleshoot/windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2          
+          url: ../windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2.md          
         - text: SQLDumper
-          url: https://learn.microsoft.com/en-us/troubleshoot/sql/tools/use-sqldumper-generate-dump-file
+          url: tools/use-sqldumper-generate-dump-file.md
           
   - title: Diagnostic Tools to analyze logs
     linkLists:
@@ -70,7 +70,7 @@ landingContent:
         - text: DBTest
           url: https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/DBTEST
         - text: RML Utilities
-          url: https://learn.microsoft.com/troubleshoot/sql/tools/replay-markup-language-utility
+          url: tools/replay-markup-language-utility.md
         - text: SQL Callstack Resolver
           url: https://github.com/microsoft/SQLCallStackResolver
         
