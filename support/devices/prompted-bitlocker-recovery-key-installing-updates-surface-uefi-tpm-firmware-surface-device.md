@@ -1,12 +1,12 @@
 ---
-title: Prompted for BitLocker recovery key after installing updates to Surface UEFI or TPM firmware on Surface device
+title: Prompted for BitLocker recovery key after installing updates to Surface UEFI or TPM firmware
 description: Provides workarounds to the issue in which you're prompted for BitLocker recovery key after installing updates to Surface UEFI or TPM firmware on Surface device.
-ms.date: 05/12/2023
+ms.date: 05/31/2023
 author: v-lianna
 ms.author: v-lianna
 manager: dcscontentpm
 audience: itpro
-ms.topic: how-to
+ms.topic: troubleshooting
 ms.prod: surface
 localization_priority: medium
 ms.reviewer: jarrettr
@@ -27,7 +27,7 @@ _Original KB number:_ &nbsp; 4057282
 
 You encounter one or more of the following symptoms on your Surface device:
 
-- At startup, you're prompted for your BitLocker recovery key, and you enter the correct recovery key, but Windows doesn’t start up.
+- At startup, you're prompted for your BitLocker recovery key, and you enter the correct recovery key, but Windows doesn't start up.
 - You boot directly into the Surface Unified Extensible Firmware Interface (UEFI) settings.
 - Your Surface device appears to be in an infinite reboot loop.
 
@@ -66,7 +66,7 @@ You can avoid this scenario when installing updates to system firmware or TPM fi
 To suspend BitLocker for installation of TPM or UEFI firmware updates:
 
 1. Open an administrative PowerShell session.
-2. Enter the following cmdlet and press Enter:
+2. Enter the following cmdlet and press <kbd>Enter</kbd>:
 
 	```PowerShell
 	Suspend-BitLocker -MountPoint "C:" -RebootCount 0
@@ -86,19 +86,19 @@ We strongly recommend that you restore the default and recommended configuration
 
 To enable Secure Boot on a Surface device that has BitLocker enabled:
 
-1. Suspend BitLocker by using the Suspend-BitLocker cmdlet as described in Method 1.
+1. Suspend BitLocker by using the `Suspend-BitLocker` cmdlet as described in Method 1.
 2. Boot your Surface device to UEFI by using one of the methods defined in [Using Surface UEFI on Surface Laptop, new Surface Pro, Surface Studio, Surface Book, and Surface Pro 4](https://support.microsoft.com/surface/how-to-use-surface-uefi-df2c8942-dfa0-859d-4394-95f45eb1c3f9).
 3. Select the **Security** section.
 4. Select **Change Configuration** under **Secure Boot**.
-5. Select **Microsoft Only** and select **OK**.
+5. Select **Microsoft Only** > **OK**.
 6. Select **Exit**, and then **Restart** to reboot the device.
-7. Resume BitLocker by using the Resume-BitLocker cmdlet as described in Method 1.
+7. Resume BitLocker by using the `Resume-BitLocker` cmdlet as described in Method 1.
 
 To change the PCR values used to validate BitLocker Drive Encryption:
 
 1. Disable any Group Policies that configure PCR, or remove the device from any groups where such policies apply. See "Deployment Options" at [BitLocker Group Policy Reference](/previous-versions/windows/it-pro/windows-7/ee706521(v=ws.10)) for more information.
-2. Suspend BitLocker by using the Suspend-BitLocker cmdlet as described in Method 1.
-3. Resume BitLocker by using the Resume-BitLocker cmdlet as described in Method 1.
+2. Suspend BitLocker by using the `Suspend-BitLocker` cmdlet as described in Method 1.
+3. Resume BitLocker by using the `Resume-BitLocker` cmdlet as described in Method 1.
 
 ### Method 3: Remove protectors from the boot drive
 
