@@ -68,7 +68,7 @@ Container Insights is a feature within AKS that monitors container workload perf
    :::image-end:::
 
     > [!NOTE]
-    > The percentage of CPU or memory usage for pods is based on the CPU request specified for the container. It doesn't represent the percentage of the CPU or memory usage for the node. So, look at the actual CPU or memory usage more than the percentage of CPU or memory usage for pods.
+    > The percentage of CPU or memory usage for pods is based on the CPU request specified for the container. It doesn't represent the percentage of the CPU or memory usage for the node. So, look at the actual CPU or memory usage rather than the percentage of CPU or memory usage for pods.
 
 ### [Command Line](#tab/command-line)
 
@@ -157,7 +157,7 @@ This procedure uses the kubectl commands in a console. It displays only the curr
    ```
 
     > [!NOTE]
-    > The percentage of CPU or memory usage for the node are based on the allocatable resources on the node, rather than the actual node capacity.
+    > The percentage of CPU or memory usage for the node is based on the allocatable resources on the node rather than the actual node capacity.
 
 ---
 
