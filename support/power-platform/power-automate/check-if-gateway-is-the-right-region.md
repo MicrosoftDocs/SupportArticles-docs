@@ -59,4 +59,4 @@ It's unfortunately not possible to change the region of a gateway that's already
 1. Select the region matching your Power Apps environment, and hit **Done**.
 1. Keep following the Gateway installation wizard until complete.
 1. Go to the Gateway page of the flow portal in the target environment.
-1. Verify that the Gateway properly appears in the list of Gateways. If the Gateway is still missing, contact the Microsoft support.
+1. Verify that the Gateway properly appears in the list of Gateways. If the Gateway is still missing, contact Microsoft support.
