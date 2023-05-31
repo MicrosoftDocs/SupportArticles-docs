@@ -74,6 +74,31 @@ landingContent:
         - text: SQL Callstack Resolver
           url: https://github.com/microsoft/SQLCallStackResolver
 
+- title: High Availability and Disaster Recovery (Always On Availability Groups)
+    linkLists:
+      - linkListType: whats-new
+        links:
+        - text: Troubleshoot issues with automatic failover Always On environments
+          url: database-engine/availability-groups/troubleshooting-automatic-failover-problems.md
+        - text: Determine the cause of Availability Group Failover
+          url: database-engine/availability-groups/troubleshooting-availability-group-failover.md
+        - text: Use diagnostic tool AGDiag to diagnose Availability Group Failures
+          url: database-engine/availability-groups/use-agdiag-diagnose-availability-group-health-events.md
+        - text: Troubleshoot latency on secondary replicas due to recovery (redo) queuing
+          url: database-engine/availability-groups/troubleshooting-recovery-queuing-in-alwayson-availability-group.md
+        - text: Troubleshoot latency on secondary replicas due to log send queuing
+          url: database-engine/availability-groups/troubleshooting-log-send-queuing-in-alwayson-availability-group.md      
+        - text: Troubleshoot intermittent connection time-outs between availability group replicas
+          url: database-engine/availability-groups/troubleshooting-intermittent-connection-timeouts-availability-groups.md
+        - text: Troubleshoot an AG database in reverting state
+          url: database-engine/availability-groups/troubleshoot-availability-group-database-reverting-state.md
+        - text: Troubleshoot Always On availability databases in Recovery Pending or Suspect state in SQL Server
+          url: database-engine/availability-groups/alwayson-availability-databases-recovery-pending-suspect.md
+         -text: Error with creating availability group due to permissions
+          url: database-engine/availability-groups/error-41131-create-availability-group.md          
+        - text: Troubleshoot most common Always On Isues
+          url: database-engine/availability-groups/troubleshooting-alwayson-issues.md    
+          
   - title: Slow Performance and Resource Usage
     linkLists:
       - linkListType: whats-new
