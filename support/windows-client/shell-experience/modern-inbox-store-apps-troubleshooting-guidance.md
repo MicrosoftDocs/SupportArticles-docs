@@ -802,3 +802,35 @@ If the **Bypass traverse checking** user right is missing, the permissions on th
 :::image type="content" source="media/modern-inbox-store-apps-troubleshooting-guidance/bypass-traverse-checking-properties.png" alt-text="Screenshot that shows the bypass traverse checking properties.":::
 
 Finally, if you can't locate the permission issue causing the problem and only a few machines are involved, recovering the machine and refreshing it to a clean image may solve the problem.
+
+## Data collection
+
+Before contacting Microsoft support, you can gather information about your issue.
+
+### Prerequisites
+
+Refer to [Introduction to TroubleShootingScript toolset (TSSv2)](introduction-to-troubleshootingscript-toolset-tssv2.md#prerequisites) for prerequisites for the toolset to run properly.
+
+### Gather key information before contacting Microsoft support
+
+1. Download [TSSv2](https://aka.ms/getTSSv2) and extract it in the *C:\\tss_tool* folder. If you've downloaded this tool previously, we recommend downloading the latest version. It doesn't automatically update when running.
+2. Open the *C:\\tss_tool* folder from an elevated PowerShell command prompt.
+    > [!NOTE]
+    > Don't use the Windows PowerShell Integrated Scripting Environment (ISE).
+3. Run the following cmdlet and enter *A* for "Yes to All" for the execution policy change.
+
+    ```powershell
+    Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+    ```
+
+4. Run the following cmdlets to start tracing and collect the event logs.
+
+    ```powershell
+    .\tss.ps1 -scenario PRF_UWP
+    ```
+
+    ```powershell
+    .\tss.ps1 -CollectLog PRF_AppX
+    ```
+
+The traces are stored in a compressed file in the *C:\\MSDATA* folder. After a support case is created, this file can be uploaded to the secure workspace for analysis.
