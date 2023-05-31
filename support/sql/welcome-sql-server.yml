@@ -95,9 +95,9 @@ landingContent:
     linkLists:
       - linkListType: whats-new
         links:
-        - text: network-related or instance-specific error
-          url: /database-engine/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection.md
-        - text: untrusted certificate authority error
+        - text: Network-related or instance-specific error
+          url: database-engine/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection.md
+        - text: Untrusted certificate authority error
           url: database-engine/connect/error-message-when-you-connect.md
         - text: The certificate chain was issued by an authority that is not trusted
           url: database-engine/connect/certificate-chain-not-trusted.md
@@ -107,7 +107,7 @@ landingContent:
           url: database-engine/connect/cannot-generate-sspi-context-error.md       
         - text: Timeout expired messages when connecting
           url: database-engine/connect/timeout-expired-error.md
-        - text: existing connection was forcibly closed by the remote host
+        - text: An existing connection was forcibly closed by the remote host
           url: database-engine/connect/tls-exist-connection-closed.md
           
   - title: SQL Server blogs
