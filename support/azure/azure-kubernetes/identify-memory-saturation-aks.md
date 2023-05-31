@@ -157,7 +157,7 @@ This procedure uses the kubectl commands in a console. It displays only the curr
    ```
 
     > [!NOTE]
-    > The percentages in the command output above are the CPU/memory requests and limits based on the entire node capacity.
+    > The percentage of CPU or memory usage for the node are based on the allocatable resources on the node, rather than the actual node capacity.
 
 ---
 

@@ -93,7 +93,7 @@ To identify nodes, containers, or pods that drive high CPU usage, follow these s
     :::image type="content" source="media/identify-high-cpu-consuming-containers-aks/describe-node-kubectl.png" alt-text="Screenshot of kubectl describe node.":::
 
     > [!NOTE]
-    > The percentages in the command output above are the CPU/memory requests and limits based on the entire node capacity.
+    > The percentage of CPU or memory usage for the node are based on the allocatable resources on the node, rather than the actual node capacity.
 
     After you identify the pods that use excessive CPU, you can identify the applications running on the pods.
 
