@@ -142,7 +142,7 @@ Error: "There was a problem. Your organization does not support this version of 
 
 To fix this issue in a stand-alone Intune environment, follow these steps:
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), chooses **Devices** > **Enrollment restrictions** > choose a device type restriction.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), chooses **Devices** > **Enrollment restrictions** > choose a device type restriction.
 2. Choose **Properties** > **Edit** (next to **Platform settings**) > **Allow** for **Windows (MDM)**.
 3. Click **Review + Save**.
 
@@ -280,7 +280,7 @@ Another possible cause for this error is that the Autopilot object's associated 
 
 **Solution 1:**
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose >  **Devices** > **Windows** > **Windows devices**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose >  **Devices** > **Windows** > **Windows devices**.
 2. Select the device which is experiencing the issue, and then click the ellipsis (…) on the rightmost side.
 3. Select **Unassign user** and wait for the process to finish.
 4. Verify that the Hybrid Azure AD Autopilot profile is assigned before reattempting OOBE.
