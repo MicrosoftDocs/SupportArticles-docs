@@ -1,7 +1,7 @@
 ---
 title: SSH connection to Azure Linux VM fails due to permission and ownership issues 
 description: Resolves an issue in which the SSH service fails because the /var/empty/sshd, /var/lib/empty, or /var/run/sshd directory doesn't exist, or it isn't owned by the root user, or it's group-writable or world-writable.
-ms.date: 05/23/2023
+ms.date: 05/31/2023
 author: saimsh-msft
 ms.reviewer: divargas, adelgadohell
 ms.service: virtual-machines
@@ -190,7 +190,7 @@ Follow these steps to automate the manual offline process:
    chown root:root /var/lib/empty
    ```
    
-   ### [Ubuntu](#tab/ubuntuts1)
+   ### [Ubuntu](#tab/ubuntuts3)
 
    ```bash
    mkdir -p /var/run/sshd
