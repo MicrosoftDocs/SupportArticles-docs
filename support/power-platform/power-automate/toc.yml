@@ -120,7 +120,9 @@
         - name: Can't execute a shared desktop flow after changing the connection
           href: sharing-deskop-flow-with-connections.md
         - name: Cloud flow is suspended due to missing the attended RPA capability
-          href: cloud-flow-suspended-missing-attended-rpa-capability.md 
+          href: cloud-flow-suspended-missing-attended-rpa-capability.md
+        - name: Cloud flow is suspended due to missing the unattended RPA capability
+          href: cloud-flow-suspended-missing-unattended-rpa-capability.md 
         - name: Communication error when launching Power Automate for desktop
           href: communication-error-console.md
         - name: Desktop flows don't show in console if license expired or unassigned
