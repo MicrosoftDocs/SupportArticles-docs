@@ -9,7 +9,7 @@ metadata:
   ms.topic: landing-page # Required
   author: HaiyingYu  #Required; your GitHub user alias, with correct capitalization.
   ms.author: HaiyingYu #Required; microsoft alias of author; optional team alias.
-  ms.date: 05/30/2023
+  ms.date: 05/31/2023
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -79,36 +79,36 @@ landingContent:
       - linkListType: whats-new
         links:
         - text: Troubleshoot high-CPU-usage issues
-          url: /troubleshoot/sql/database-engine/performance/troubleshoot-high-cpu-usage-issues
+          url: database-engine/performance/troubleshoot-high-cpu-usage-issues.md
         - text: Understand and resolve blocking problems
-          url: /troubleshoot/sql/database-engine/performance/understand-resolve-blocking
+          url: database-engine/performance/understand-resolve-blocking.md
         - text: Troubleshoot slow-running queries
-          url: /troubleshoot/sql/database-engine/performance/troubleshoot-slow-running-queries
+          url: database-engine/performance/troubleshoot-slow-running-queries.md
         - text: Troubleshoot slow performance caused by I/O issues
-          url: /troubleshoot/sql/database-engine/performance/troubleshoot-sql-io-performance
+          url: database-engine/performance/troubleshoot-sql-io-performance.md
         - text: Troubleshoot query time-out errors
-          url: /troubleshoot/sql/database-engine/performance/troubleshoot-query-timeouts          
+          url: database-engine/performance/troubleshoot-query-timeouts.md          
         - text: Troubleshoot out of memory or low memory
-          url: /troubleshoot/sql/database-engine/performance/troubleshoot-memory-issues 
+          url: database-engine/performance/troubleshoot-memory-issues.md
 
   - title: Connection and Authentication
     linkLists:
       - linkListType: whats-new
         links:
         - text: network-related or instance-specific error
-          url: /troubleshoot/sql/database-engine/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection
+          url: /database-engine/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection.md
         - text: untrusted certificate authority error
-          url: /troubleshoot/sql/database-engine/connect/error-message-when-you-connect
+          url: database-engine/connect/error-message-when-you-connect.md
         - text: The certificate chain was issued by an authority that is not trusted
-          url: /troubleshoot/sql/database-engine/connect/certificate-chain-not-trusted
+          url: database-engine/connect/certificate-chain-not-trusted.md
         - text: Transfer logins and passwords
-          url: /troubleshoot/sql/database-engine/security/transfer-logins-passwords-between-instances
+          url: database-engine/security/transfer-logins-passwords-between-instances.md
         - text: Cannot generate SSPI context
-          url: /troubleshoot/sql/database-engine/connect/cannot-generate-sspi-context-error        
+          url: database-engine/connect/cannot-generate-sspi-context-error.md       
         - text: Timeout expired messages when connecting
-          url: /troubleshoot/sql/database-engine/connect/timeout-expired-error
+          url: database-engine/connect/timeout-expired-error.md
         - text: existing connection was forcibly closed by the remote host
-          url: /troubleshoot/sql/database-engine/connect/tls-exist-connection-closed
+          url: database-engine/connect/tls-exist-connection-closed.md
           
   - title: SQL Server blogs
     linkLists:
@@ -118,7 +118,3 @@ landingContent:
           url: https://techcommunity.microsoft.com/t5/SQL-Server-Support/bg-p/SQLServerSupport/
         - text: Azure Database Support Blog
           url: https://techcommunity.microsoft.com/t5/azure-database-support-blog/bg-p/AzureDBSupport
-          
-
-          
-
