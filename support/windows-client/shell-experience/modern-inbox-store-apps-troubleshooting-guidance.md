@@ -809,7 +809,7 @@ Before contacting Microsoft support, you can gather information about your issue
 
 ### Prerequisites
 
-Refer to [Introduction to TroubleShootingScript toolset (TSSv2)](introduction-to-troubleshootingscript-toolset-tssv2.md#prerequisites) for prerequisites for the toolset to run properly.
+Refer to [Introduction to TroubleShootingScript toolset (TSSv2)](../windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2.md#prerequisites) for prerequisites for the toolset to run properly.
 
 ### Gather key information before contacting Microsoft support
 
