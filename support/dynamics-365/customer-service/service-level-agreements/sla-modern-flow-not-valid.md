@@ -1,17 +1,17 @@
 ---
-title: SLA Modern Flow <Flow Guid> is not valid for ExecuteWorkflow.
+title: SLA modern flow [Flow Guid] is not valid for execute workflow.
 description: Provides a resolution for the issue where SLA modern flow is not valid for execute workflow.
 ms.reviewer: sdas
 ms.author: ravimanne
 ms.date: 06/01/2023
 ---
-# SLA Modern Flow <Flow Guid> is not valid for ExecuteWorkflow 
+# SLA modern flow <Flow Guid> is not valid for execute workflow
 
 This article provides a resolution for the issue where SLA modern flow is not valid for execute workflow.
 
 ## Symptoms
 
-SLA modern flow fail with error : Modern Flow <Flow Guid> is not valid for ExecuteWorkflow.
+SLA modern flow fails with error : Modern Flow [Flow Guid] is not valid for ExecuteWorkflow.
 
 ## Cause
 
