@@ -9,7 +9,7 @@ metadata:
   ms.topic: landing-page # Required
   author: HaiyingYu  #Required; your GitHub user alias, with correct capitalization.
   ms.author: HaiyingYu #Required; microsoft alias of author; optional team alias.
-  ms.date: 05/31/2023
+  ms.date: 06/01/2023
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -80,9 +80,9 @@ landingContent:
         links:
         - text: Troubleshoot issues with automatic failover Always On environments
           url: database-engine/availability-groups/troubleshooting-automatic-failover-problems.md
-        - text: Determine the cause of Availability Group Failover
+        - text: Determine the cause of Availability Group failover
           url: database-engine/availability-groups/troubleshooting-availability-group-failover.md
-        - text: Use diagnostic tool AGDiag to diagnose Availability Group Failures
+        - text: Use diagnostic tool AGDiag to diagnose Availability Group failures
           url: database-engine/availability-groups/use-agdiag-diagnose-availability-group-health-events.md
         - text: Troubleshoot latency on secondary replicas due to recovery (redo) queuing
           url: database-engine/availability-groups/troubleshooting-recovery-queuing-in-alwayson-availability-group.md
@@ -96,7 +96,7 @@ landingContent:
           url: database-engine/availability-groups/alwayson-availability-databases-recovery-pending-suspect.md
         - text: Error with creating availability group due to permissions
           url: database-engine/availability-groups/error-41131-create-availability-group.md          
-        - text: Troubleshoot most common Always On Isues
+        - text: Troubleshoot most common Always On isues
           url: database-engine/availability-groups/troubleshooting-alwayson-issues.md    
           
   - title: Slow Performance and Resource Usage
