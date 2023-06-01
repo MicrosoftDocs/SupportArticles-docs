@@ -382,7 +382,7 @@ The `ERROR\_FRAMEWORK\_VERSIONS\_DO\_NOT\_MATCH` error can occur if you are doin
 
 **Resolution**
 
-By default, Web Deploy will prefer using the .Net version specified in its configuration file. If the version of .Net that Web Deploy is using on the client is different from the version on the server, block a Web Server sync to prevent settings from different versions of .Net from being migrated. To resolve this, you have two options:
+By default, Web Deploy prefers using the .Net version specified in its configuration file. If the version of .Net that Web Deploy is using on the client is different from the version on the server, block a Web Server sync to prevent settings from different versions of .Net from being migrated. To resolve this, you have two options:
 
 1. Use the `netFxVersion` provider setting to inform Web Deploy exactly which .Net settings to migrate. Here is a command line example, which forces Web Deploy to sync .Net 2.0 settings:
 
@@ -528,7 +528,7 @@ A destination file can't be overwritten or deleted because it is currently in us
 
 **Resolution**
 
-Make sure that the destination file isn' t in use before performing a sync. If you are syncing content to a web site hosted on IIS 7 or later (using the `appHostConfig`, `iisApp`, or `contentPath` providers), consider taking the application offline during the sync by enabling the `appOffline` rule.
+Make sure that the destination file isn't in use before performing a sync. If you are syncing content to a web site hosted on IIS 7 or later (using the `appHostConfig`, `iisApp`, or `contentPath` providers), consider taking the application offline during the sync by enabling the `appOffline` rule.
 
 You can configure the `appOffline` rule in the publishing profile (*.pubxml*). Add the `EnableMSDeployAppOffline` element to the `PropertyGroup` like this:
 
@@ -622,7 +622,7 @@ The package or backup being created exceeds the maximum size of 4 GB.
 
 **Resolution**
 
-Use the `archiveDir` provider when creating a package instead. At present, there is no solution for this limit with respect to automatic backups.
+Use the `archiveDir` provider when creating a package instead. Now, there is no solution for this limit with respect to automatic backups.
 
 <a id="ERROR_TIMED_OUT"></a>
 
@@ -646,7 +646,7 @@ Required dependencies couldn't be loaded.
 
 **Resolution**
 
-If you installed Web Deploy manually through the MSI, try reinstall using Web Platform Installer to install Web Deploy, which will help to install required dependencies for you.
+If you installed Web Deploy manually through the MSI, try reinstall using Web Platform Installer to install Web Deploy, which helps to install required dependencies for you.
 
 <a id="ERROR_SMO_NEEDED_FOR_SQL_PROVIDER"></a><a id="ERROR_USER_NOT_AUTHORIZED_FOR_IISAPP"></a><a id="ERROR_SCRIPTER_NEEDED_FOR_SQLCE_PROVIDER"></a>
 
@@ -704,13 +704,13 @@ Azure Websites doesn't support creating new virtual applications or modifying ex
 You can create new virtual applications or modify existing configuration settings for your site through the Azure portal (`manage.windowsazure.com`). To do this,
 
 1. Log in to the portal.
-1. Open your site settings
+1. Open your site settings.
 1. Select the **Configure** tab.
 1. In the **Configure** tab, modify your site to match the configuration settings of the application you're trying to deploy. In most cases, this is simply a matter of changing the .Net Framework Version, but in some cases this may also require you to add a new Virtual Application.
 
 ## ERROR\_EXCEPTION\_WHILE\_CREATING\_OBJECT
 
-Typically, this indicates an issue with validating the providers on the source. For instance, if you're trying to sync content from a source file share and you don't have access to the file share, you may see this error code. For these types of issues, ensure that you have access to all of the source data you would like to publish from.
+Typically, this indicates an issue with validating the providers on the source. For instance, if you're trying to sync content from a source file share and you don't have access to the file share, you may see this error code. For such issues, ensure that you have access to all of the source data you would like to publish from.
 
 ## ERROR\_EXECUTING\_METHOD
 
