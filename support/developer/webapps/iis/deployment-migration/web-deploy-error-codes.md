@@ -1,7 +1,7 @@
 ---
 title: Web Deploy error codes
 description: For some common error codes, Web Deploy shows an error message. This article helps you to diagnose these issues and provides workarounds to avoid the errors.
-ms.date: 06/01/2023
+ms.date: 04/12/2011
 author: padmajayaraman
 ms.author: v-jayaramanp
 ms.reviewer: chihshen, bilalaslam
@@ -400,7 +400,7 @@ The specified binding couldn't be found.
 
 **Resolution**
 
-Run `netsh http show sslcert` from the command line to verify that the specified binding exists. If it is not found, then you may need to recreate it through IIS Manager.
+Run `netsh http show sslcert` from the command line to verify that the specified binding exists. If it's not found, then you may need to recreate it through IIS Manager.
 
 <a id="ERROR_INCORRECT_PARAMETER_TAG"></a>
 
@@ -412,7 +412,7 @@ An incorrect parameter tag was passed.
 
 **Resolution**
 
-Rerun msdeploy with the tag SQL, SQLCE, or MYSQL.
+Re-run Microsoft Deploy with the SQL, SQLCE, or MYSQL tag.
 
 <a id="ERROR_INVALID_PATH"></a>
 
