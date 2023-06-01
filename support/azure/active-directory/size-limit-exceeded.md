@@ -1,7 +1,7 @@
 ---
 title: Size Limit Exceeded - Error Code 0x4 during delta import
 description: Learn how to resolve the Size Limit Exceeded - Error Code 0x4 error during the delta import step for an on-premises connector in Azure Active Directory Connect.
-ms.date: 5/30/2023
+ms.date: 5/31/2023
 author: DevOpsStyle
 ms.author: tommasosacco
 editor: v-jsitser
@@ -75,17 +75,17 @@ To change the `MaxPageSize` setting, run the [Ntdsutil](/previous-versions/windo
 > [!IMPORTANT]  
 > Follow the steps in this section carefully. Serious problems might occur if you modify the default AD configuration incorrectly. When the issue is resolved, you can restore the default values.
 
-1. Select **Start**, enter **Command Prompt**, and then select **Run as administrator**.
+1. Select **Start**, enter *Command Prompt*, and then select **Run as administrator**.
 
-2. At the command prompt, enter **ntdsutil** to start an Ntdsutil console session.
+2. At the command prompt, enter `ntdsutil` to start an Ntdsutil console session.
 
 3. In the [View and set LDAP policy in Active Directory by using Ntdsutil.exe](/troubleshoot/windows-server/identity/view-set-ldap-policy-using-ntdsutil) article, follow the instructions in the [View current policy settings](/troubleshoot/windows-server/identity/view-set-ldap-policy-using-ntdsutil#view-current-policy-settings) section to learn what the policy settings currently are.
 
-4. To change the maximum page size, enter **set MaxPageSize to \<new-maximum-page-size-value>**.
+4. To change the maximum page size, enter `set MaxPageSize to <new-maximum-page-size-value>`.
 
-5. Enter **commit changes** to apply the new value.
+5. Enter `commit changes` to apply the new value.
 
-6. To exit the Ntdsutil session, enter **quit** two times.
+6. To exit the Ntdsutil session, enter `quit` two times.
 
 After you make the configuration change, open a PowerShell console, and then run the `Start-ADSyncSyncCycle` cmdlet to start a normal delta synchronization cycle. This process is described in [Azure AD Connect sync: Scheduler][Start-ADSyncSyncCycle]. Now, Active Directory returns a larger number of records, and it should be able to provide the full delta response to Azure AD Connect.
 
