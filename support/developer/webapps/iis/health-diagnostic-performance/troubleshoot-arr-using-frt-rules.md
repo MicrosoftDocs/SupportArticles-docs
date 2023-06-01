@@ -1,96 +1,101 @@
 ---
-title: "Using Failed Request Tracing Rules to Troubleshoot Application Request Routing"
-author: rick-anderson
-description: "Failed Request Tracing Rules is a powerful tool for troubleshooting request-processing failures in IIS 7.0 and above. This topic leads the reader through the..."
+title: Using Failed Request Tracing rules to troubleshoot Application Request Routing
+description: Describes the steps to enable Failed Request Tracing rules to debug failures and trace steps in Application Request Routing.
 ms.date: 07/02/2008
-ms.assetid: e648fd47-7885-4dde-a37f-d6fbae2a47ac
-msc.legacyurl: /learn/troubleshoot/using-failed-request-tracing/using-failed-request-tracing-rules-to-troubleshoot-application-request-routing-arr
-msc.type: authoredcontent
+ms.author: haiyingyu
+author: HaiyingYu
+ms.reviewer: johnhart, riande
 ---
-# Using Failed Request Tracing Rules to Troubleshoot Application Request Routing
+# Using Failed Request Tracing rules to troubleshoot Application Request Routing
 
-Failed Request Tracing Rules is a powerful tool for troubleshooting request-processing failures in IIS 7.0 and above. This topic leads the reader through the steps to enable Failed Request Tracing Rules to debug failures and trace steps in Application Request Routing (ARR). For more information about Failed Request Tracing Rules, refer to [this article](troubleshooting-failed-requests-using-tracing-in-iis.md).
+Failed Request Tracing is a powerful tool for troubleshooting request-processing failures in IIS 7.0 and above. This article provides steps to enable Failed Request Tracing rules to debug failures and trace steps in Application Request Routing. For more information about Failed Request Tracing rules, see [Troubleshoot failed requests using tracing in IIS 7](troubleshoot-failed-requests-using-tracing-in-iis-7.md).
 
 ## Goal
 
-To configure Failed Request Tracing Rules and to understand what to look for when troubleshooting Application Request Routing.
+To configure Failed Request Tracing rules and to understand what to look for when troubleshooting Application Request Routing.
 
 ## Prerequisites
 
 This walkthrough requires the following prerequisites:
 
 - IIS 7.0 or above on Windows 2008 (any SKU) or newer with Tracing role service installed for IIS.
-- Microsoft Application Request Routing Version 1 and dependent modules.
+- Microsoft Application Request Routing and dependent modules.
 - Minimum of two application servers with working sites and applications.
 
-If Application Request Routing Version 1 has not been installed, it is available for download at:
+If Application Request Routing has not been installed, download from [Microsoft Application Request Routing 3.0 (x64)](https://www.microsoft.com/download/details.aspx?id=47333), and install it by following the steps outlined in [Install Application Request Routing](/iis/extensions/installing-application-request-routing-arr/install-application-request-routing).
 
-- Download Microsoft Application Request Routing Version 1 for IIS 7 (x86) [here](https://iis-umbraco.azurewebsites.net/downloads).
-- Download Microsoft Application Request Routing Version 1 for IIS 7 (x64) [here](https://iis-umbraco.azurewebsites.net/downloads).
+Another prerequisite is that you have gone through [Using the Application Request Routing Module](/iis/extensions/planning-for-arr/using-the-application-request-routing-module) and have configured Application Request Routing. Application Request Routing should be in working order before proceeding with the following sections.
 
-Follow the steps outlined in [Install Application Request Routing](../../extensions/installing-application-request-routing-arr/install-application-request-routing.md) document to install Application Request Routing.
+## Step 1: Configure Failed Request Tracing rules
 
-Another prerequisite is that the reader has gone through the other [walkthroughs](../../extensions/planning-for-arr/using-the-application-request-routing-module.md) and has configured Application Request Routing. Application Request Routing should be in working order before proceeding with this walkthrough.
+Configure the Failed Request Tracing rules for Application Request Routing using the UI or using the command-line.
 
-## Step 1 – Configure Failed Request Tracing Rules
+### How to configure Failed Request Tracing rules using the UI
 
-In this step, the Failed Request Tracing Rules are defined for Application Request Routing.
+1. Launch Internet Information Services (IIS) Manager (inetmgr).
+1. Select **Default Web Site**.  
+    :::image type="content" source="media/troubleshoot-arr-using-frt-rules/site-list-expanded.jpg" alt-text="Screenshot showing the Sites list expanded. Default Web Site is highlighted.":::
+1. In the **Actions** pane, under **Configure**, select **Failed Request Tracing…**.  
+    :::image type="content" source="media/troubleshoot-arr-using-frt-rules/failed-request-tracing-in-action-pane.jpg" alt-text="Screenshot focused on Failed Request Tracing in the Actions pane.":::
+1. In the **Edit Web Site Failed Request Tracing Settings** dialog box, check the **Enable** checkbox.  
+    :::image type="content" source="media/troubleshoot-arr-using-frt-rules/edit-web-site-frt-settings-dialog.jpg" alt-text="Screenshot of the Edit Web Site Failed Request Tracing Settings dialog.":::
+1. Select **OK** to save changes.  
+1. Select **Default Web Site**.
+1. Double-click **Failed Request Tracing Rules**.
+1. In the **Actions** pane, select **Add…**.  
+    :::image type="content" source="media/troubleshoot-arr-using-frt-rules/add-frt-rule-window.jpg" alt-text="Screenshot of the Add Failed Request Tracing Rule window. All content is selected.":::  
+    Select **All content (\*)**, and then select **Next**.
+1. Select **Status code(s):** and enter _200-399_.  
+    :::image type="content" source="media/troubleshoot-arr-using-frt-rules/add-frt-rule-select-status-code.jpg" alt-text="Screenshot of the Add Failed Request Tracing Rule. Status code is checked.":::  
+    Select **Next**. The above configuration has created a Failed Request Tracing rule that writes traces when the status code falls between 200 and 399.
+1. Deselect **ASP**,**ASPNET**, and **ISAPI Extension**. After selecting **WWW Server**, deselect everything under **Areas:**, except for **Rewrite** and **RequestRouting**. Because Application Request Routing relies on the URL Rewrite Module to inspect incoming requests, it's recommended that you enable the traces for both Application Request Routing (**RequestRouting**) and URL Rewrite Module (**Rewrite**).  
+    :::image type="content" source="media/troubleshoot-arr-using-frt-rules/edit-frt-rule-window.jpg" alt-text="Screenshot of the Edit Failed Request Tracing Rule window. W W W server is selected in the Providers section.":::  
+    For additional information about URL Rewrite Module traces, see [Using Failed Request Tracing to Trace Rewrite Rules](/iis/extensions/url-rewrite-module/using-failed-request-tracing-to-trace-rewrite-rules) .
+1. Select **Finish**.
 
-### To configure Failed Request Tracing Rules using the UI
+### How to configure Failed Request Tracing rules using the command-line
 
-1. Launch IIS Manager (inetmgr).
-2. Select the **Default Web Site**.  
-    ![Screenshot showing the Sites list expanded. Default Web Site is highlighted.](using-failed-request-tracing-rules-to-troubleshoot-application-request-routing-arr/_static/image1.jpg)
-3. In the **Actions** pane, under **Configure**, select **Failed Request Tracing…**.  
-    ![Screenshot focused on Failed Request Tracing in the Actions pane.](using-failed-request-tracing-rules-to-troubleshoot-application-request-routing-arr/_static/image3.jpg)
-4. In the **Edit Web Site Failed Request Tracing Settings** dialog box, check the **Enable** checkbox.  
-    ![Screenshot of the Edit Web Site Failed Request Tracing Settings dialog.](using-failed-request-tracing-rules-to-troubleshoot-application-request-routing-arr/_static/image5.jpg)
-5. Click **OK** to save changes.  
-6. Select the **Default Web Site**.
-7. Double-click **Failed Request Tracing Rules**.
-8. In the **Actions** pane, click **Add…**.  
-    ![Screenshot of the Add Failed Request Tracing Rule window. All content is selected.](using-failed-request-tracing-rules-to-troubleshoot-application-request-routing-arr/_static/image7.jpg)  
-    Select **All content (\*)**, and then click **Next**.
-9. Select **Status code(s):** and enter 200-399.  
-    ![Screenshot of the Add Failed Request Tracing Rule. Status code is checked.](using-failed-request-tracing-rules-to-troubleshoot-application-request-routing-arr/_static/image9.jpg)  
-    Click **Next**. The above configuration has created a Failed Request Tracing Rule that writes traces when the status code falls between 200 and 399.
-10. Deselect **ASP**,**ASPNET**, and **ISAPI Extension**. After selecting **WWW Server**, deselect everything under **Areas:**, except for **Rewrite** and **RequestRouting**. Since Application Request Routing relies on the URL Rewrite Module to inspect incoming requests, it is recommended that you enable the traces for both Application Request Routing (**RequestRouting**) and URL Rewrite Module (**Rewrite**).  
-    ![Screenshot of the Edit Failed Request Tracing Rule window. W W W server is selected in the Providers section. ](using-failed-request-tracing-rules-to-troubleshoot-application-request-routing-arr/_static/image11.jpg)  
-    For additional information about URL Rewrite Module traces, refer to [Using Failed Request Tracing to Trace Rewrite Rules](../../extensions/url-rewrite-module/using-failed-request-tracing-to-trace-rewrite-rules.md) .
-11. Click **Finish.**
+1. Open a command prompt with administrator privileges.
+1. Navigate to `%windir%\system32\inetsrv`.
+1. To enable Failed Request Tracing on the Default Web Site, run the following command:
 
-### To configure Failed Request Tracing Rules using the command-line
+    ```console
+    appcmd set site "Default Web Site" -traceFailedRequestsLogging.enabled:"true" /commit:apphost
+    ```
 
-1. Open a command prompt with **administrator** privileges.
-2. Navigate to `%windir%\system32\inetsrv`.
-3. To enable Failed Request Tracing on the Default Web Site, enter:
+1. To configure the Failed Request Tracing Rules as shown in the UI above, run the following commands:  
 
-    [!code-console[Main](using-failed-request-tracing-rules-to-troubleshoot-application-request-routing-arr/samples/sample1.cmd)]
+    ```console
+    appcmd.exe set config "Default Web Site" -section:system.webServer/tracing/traceFailedRequests /+"[path='*']"
+    ```
 
-4. To configure the Failed Request Tracing Rules as shown in the UI above, enter:  
+    ```console
+    appcmd.exe set config "Default Web Site" -section:system.webServer/tracing/traceFailedRequests /+"[path='*'].traceAreas.[provider='WWW Server',areas='Rewrite,RequestRouting',verbosity='Verbose']"
+    ```
 
-    [!code-console[Main](using-failed-request-tracing-rules-to-troubleshoot-application-request-routing-arr/samples/sample2.cmd)]
+    ```console
+    appcmd.exe set config "Default Web Site" -section:system.webServer/tracing/traceFailedRequests /[path='*'].failureDefinitions.statusCodes:"200-399"
+    ```
 
-    [!code-console[Main](using-failed-request-tracing-rules-to-troubleshoot-application-request-routing-arr/samples/sample3.cmd)]
-
-    [!code-console[Main](using-failed-request-tracing-rules-to-troubleshoot-application-request-routing-arr/samples/sample4.cmd)]
-
-## Step 2 – Analyze Failed Request Tracing Logs
+## Step 2: Analyze Failed Request Tracing Logs
 
 In this step, you will send requests to Application Request Routing and analyze Failed Request Tracing logs.
 
 ### To view Failed Request Tracing logs
 
 1. Navigate to the directory where the Failed Request Tracing logs are written. By default, the location is `%SystemDrive%\inetpub\Logs\FailedReqLogFiles\`.
-2. Change directory to the folder that matches the **Default Web Site**. By default, this is **W3SVC1**. If you are unsure, select the **Default Web Site** in IIS Manager, and then select **Advanced Settings…** in the **Actions** pane. The value of the **ID** indicates the corresponding folder. (ie. ID 1 corresponds to W3SVC1).
-3. If there are any xml files, remove them by typing:  
+1. Change the directory to the folder that matches the **Default Web Site**. By default, it's _W3SVC1_. If you are unsure, select the **Default Web Site** in IIS Manager, and then select **Advanced Settings…** in the **Actions** pane. The value of the **ID** indicates the corresponding folder. (For example, ID _1_ corresponds to _W3SVC1_).
+1. If there are any XML files, remove them by typing:  
 
-    [!code-console[Main](using-failed-request-tracing-rules-to-troubleshoot-application-request-routing-arr/samples/sample5.cmd)]
-4. Send a request to Application Request Routing. If Application Request Routing is functioning correctly, it results in a 200 response, which falls within the 200 to 399 range that was specified in Step 1. Therefore, the logs are written to the location above.  
-5. List the files in the directory to confirm that new xml files are written.
-6. Open the xml file. Click **Request Details**. Select **Complete Request Trace**, and then click **Expand All**. Below is an example of a Failed Request Tracing log for Application Request Routing:  
-    ![Screenshot of a browser window showing the Request Diagnostics for the example website in a tab.](using-failed-request-tracing-rules-to-troubleshoot-application-request-routing-arr/_static/image13.jpg)
-7. Pay closer attention to the following sections:  
+    ```console
+    del *.xml
+    ```
+
+1. Send a request to Application Request Routing. If Application Request Routing is functioning correctly, it results in a 200 response, which falls within the 200 to 399 range that is specified in [Step 1](#step-1-configure-failed-request-tracing-rules). Therefore, the logs are written to the location above.  
+1. List the files in the directory to confirm that new XML files are written.
+1. Open the XML file. Select **Request Details**. Select **Complete Request Trace**, and then Select **Expand All**. The following image is an example of a Failed Request Tracing log for Application Request Routing:  
+    :::image type="content" source="media/troubleshoot-arr-using-frt-rules/request-diagnostics-for-sample.jpg" alt-text="Screenshot of a browser window showing the Request Diagnostics for the example website in a tab.":::
+1. Pay closer attention to the following sections:
 
     - **GENERAL\_REQUEST\_HEADERS:**  
 
@@ -98,8 +103,8 @@ In this step, you will send requests to Application Request Routing and analyze 
 
     - **ARR\_REQUEST\_ROUTED:**  
 
-        - **WebFarm**: Indicates the name of the server group to where the request is routed.
-        - **Server**: Indicates the destination server to where the request is routed.
+        - **WebFarm**: Indicates the name of the server group where the request is routed.
+        - **Server**: Indicates the destination server where the request is routed.
         - **Algorithm**: Indicates which load balance algorithm is used.
         - **RoutingReason**: Indicates the decision behind why the server is selected.
 
@@ -124,15 +129,15 @@ In this step, you will send requests to Application Request Routing and analyze 
 
         - **ARR\_REQUEST\_HEADERS\_START**
         - **ARR\_REQUEST\_HEADERS\_END**
-        - **ARR\_RESPOSE\_HEADERS\_START**
+        - **ARR\_RESPONSE\_HEADERS\_START**
         - **ARR\_RESPONSE\_HEADERS\_END**
         - **ARR\_RESPONSE\_ENTITY\_START**
         - **ARR\_RESPONSE\_ENTITY\_END**
         - **ARR\_RESPONSE\_ENTITY\_START**
         - **ARR\_RESPONSE\_ENTITY\_END**
 
-If you are collecting the Failed Request Tracing logs on server core, you must copy the logs with freb.xsl stylesheet to a computer where a browser is available.
+If you are collecting the Failed Request Tracing logs on server core, copy the logs with _freb.xsl_ stylesheet to a computer where a browser is available.
 
 ## Summary
 
-You have now successfully configured Failed Request Tracing Rules for Application Request Routing. Failed Request Tracing Rules can be used to troubleshoot and debug Application Request Routing, as well as understand the routing decisions, including load balance algorithms, that it has made in selecting the destination server for a given request.
+You have now successfully configured Failed Request Tracing rules for Application Request Routing. Failed Request Tracing rules can be used to troubleshoot and debug Application Request Routing, as well as understand the routing decisions, including load balance algorithms, that it has made in selecting the destination server for a given request.

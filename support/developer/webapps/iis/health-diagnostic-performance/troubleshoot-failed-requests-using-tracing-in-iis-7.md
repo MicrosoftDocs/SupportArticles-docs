@@ -82,7 +82,7 @@ ASP must be disabled for this task. ASP is disabled only as an example and for t
 
 ## Enable Failed-Request Tracing
 
-After you enable failed-request tracing, you need to configure where the log files will reside. In this task, you'll enable failed-request tracing for the default web site and specify where to put the log files. You'll then configure the failure for which to generate failure logs.
+After you enable failed-request tracing, you need to configure where the log files will reside. In this task, you'll enable failed-request tracing for the Default Web Site and specify where to put the log files. You'll then configure the failure for which to generate failure logs.
 
 ### Step 1: Enable Failed-Request Tracing for the Site and Configure the Log File Directory
 
