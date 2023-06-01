@@ -35,5 +35,7 @@ items:
   href: cannot-access-site-using-https.md
 - name: Time-taken field in IIS HTTP logging
   href: time-taken-field-http-log.md
+- name: Troubleshoot ARR using Failed Request Tracing rules
+  href: troubleshoot-arr-using-frt-rules.md
 - name: Troubleshoot failed requests using tracing in IIS 7
   href: troubleshoot-failed-requests-using-tracing-in-iis-7.md
