@@ -176,7 +176,7 @@ The specified IIS site doesn't exist.
 
 **Resolution**
 
-Verify that the specified site actually exists. In some cases you may get this error if you have specified `/` instead of `\` in site URL. Try changing `/` to `\`.
+Verify that the specified site actually exists. Sometimes, you may get this error if you have specified `/` instead of `\` in site URL. Try changing `/` to `\`.
 
 <a id="ERROR_APP_DOES_NOT_EXIST"></a>
 
@@ -234,10 +234,10 @@ Web Deploy 2.0 setup doesn't create a delegation rule for this provider. Create 
 
 **Diagnosis**
 
-This error code can surface if connecting over the Web Management Service as a non-administrator:
+This error can occur when you try to connect over the Web Management Service as a non-administrator:
 
 - To connect using IIS Manager credentials, the Web Management Service's identity (typically Local Service) needs Full Control permissions on the site's root folder to be able to create files and folders underneath.
-- To connect using Windows credentials, the Windows user needs Full Control over the site's root folder to be able to create files and folders underneath.
+- To connect using Windows credentials, the Windows user needs full control over the site's root folder to be able to create files and folders.
 
 **Resolution**
 
@@ -258,7 +258,7 @@ The RunAs identity specified for the createApp delegation rule needs Write acces
 
 **Resolution**
 
-Grant the RunAs identity of the createApp delegation rule Write access to the IIS server's *applicationHost.config* file.
+Provide Write access to the IIS server's *applicationHost.config* file for the RunAs identity of the createApp delegation rule.
 
 <a id="ERROR_INVALID_CONNECTION_STRING"></a>
 
@@ -290,7 +290,7 @@ This error can happen for many reasons. For more information, see [Web developme
 
 **Diagnosis**
 
-dbFullSql provider of Web Deploy requires Server Management Objects version 10 or higher.
+The `dbFullSql` provider of Web Deploy requires Server Management Objects version 10 or higher.
 
 **Resolution**
 
@@ -382,7 +382,7 @@ The `ERROR\_FRAMEWORK\_VERSIONS\_DO\_NOT\_MATCH` error can occur if you are doin
 
 **Resolution**
 
-By default, Web Deploy prefers using the .Net version specified in its configuration file. If the version of .Net that Web Deploy is using on the client is different from the version on the server, block a Web Server sync to prevent settings from different versions of .Net from being migrated. To resolve this, you have two options:
+By default, Web Deploy prefers using the .Net version specified in its configuration file. If the version of .Net that Web Deploy is using on the client is different from the version on the server, block a Web Server sync to prevent settings from different versions of .Net from being migrated. To resolve this problem, you have two options:
 
 1. Use the `netFxVersion` provider setting to inform Web Deploy exactly which .Net settings to migrate. Here is a command line example, which forces Web Deploy to sync .Net 2.0 settings:
 
