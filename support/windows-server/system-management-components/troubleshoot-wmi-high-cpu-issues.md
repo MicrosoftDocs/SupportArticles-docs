@@ -440,4 +440,6 @@ You can also gather information by using the WMI-Collect tool. Here are the step
     > - Keep the PowerShell command prompt open with the "Press ENTER to stop the capture:" message, and make sure the *WmiPrvse.exe* process or the WMI service high CPU usage issue is reproduced.
     > - Don't keep the tracing enabled for more than one minute.
 
+3. Stop the tracing by pressing <kbd>Enter</kbd>.
+
 The script will create a subfolder with the results of all traces and the diagnostic information. Compress the folder. After a support case is created, this file can be uploaded to the secure workspace for analysis.
