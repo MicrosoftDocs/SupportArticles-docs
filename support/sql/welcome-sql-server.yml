@@ -74,7 +74,7 @@ landingContent:
         - text: SQL Callstack Resolver
           url: https://github.com/microsoft/SQLCallStackResolver
 
-- title: High Availability and Disaster Recovery (Always On Availability Groups)
+  - title: High Availability and Disaster Recovery (Always On Availability Groups)
     linkLists:
       - linkListType: whats-new
         links:
