@@ -4,13 +4,13 @@ description: For some common error codes, Web Deploy shows an error message. Thi
 ms.date: 06/01/2023
 author: padmajayaraman
 ms.author: v-jayaramanp
-ms.reviewer: chihshen
+ms.reviewer: chihshen, bilalaslam
 ms.topic: troubleshooting
 ---
 
 # Web Deploy error codes
 
-For certain common error cases, Web Deploy will show an error message. This article explains why the error occurs and steps to avoid the errors. Note that the error message may be different depending on how Web Deploy is started. For example, Microsoft WebMatrix chooses to show custom error messages. The error messages listed in the next few sections are shown on the *msdeploy.exe* command line and API:
+For certain common error cases, Web Deploy displays error messages. This article explains why the error message is shown and provides steps to avoid the errors. Note that the error message may be different depending on how Web Deploy is started. For example, Microsoft WebMatrix chooses to show custom error messages. The error messages listed in the next few sections are shown on the *msdeploy.exe* command line and API:
 
 <a id="MySqlDumpNotFound"></a>
 
@@ -81,16 +81,16 @@ Verify that Remote Agent Service or Web Management Service is started on the rem
 
 **Diagnosis**
 
-This error code may be shown because of a number of different reasons. It typically indicates an authentication or authorization problem, and can happen because of any of the following reasons:
+This error code may be shown because of various reasons. It typically indicates an authentication or authorization problem, and can happen because of any of the following reasons:
 
-- User doesn't exist
-- User doesn't have IIS Manager access to site if connecting using Web Management Service
-- Site doesn't exist
-- Password is incorrect
+- The user doesn't exist.
+- The user doesn't have IIS Manager access to site if connecting using Web Management Service.
+- The site doesn't exist.
+- The password is incorrect.
 
 **Resolution**
 
-To connect using the Web Management Service, do the following:
+To connect using the Web Management Service, do the following steps:
 
 - Verify that the username and password are correct.
 - Verify that the site exists.
@@ -98,7 +98,7 @@ To connect using the Web Management Service, do the following:
 
 **Resolution**
 
-To connect using the Remote Agent Service, do the following:
+To connect using the Remote Agent Service, do the following steps:
 
 1. Verify that the username and password are correct.
 1. Verify that the user account you specified is a member of the Administrators group on the remote computer.
@@ -114,16 +114,16 @@ To connect using the Remote Agent Service, do the following:
 
 **Diagnosis**
 
-The `ERROR\_USER\_NOT\_ADMIN` code is shown if you try to connect to the Remote Agent Service but have not provided appropriate administrator credentials.
+The `ERROR\_USER\_NOT\_ADMIN` code is shown if you try to connect to the Remote Agent Service but haven't provided appropriate administrator credentials.
 
 **Resolution**
 
-The Remote Agent Service accepts either built-in Administrator or Domain Administrator credentials. If you have a non-domain setup and want to use account other than built-in administrator, do the following:
+The Remote Agent Service accepts either built-in Administrator or Domain Administrator credentials. If you have a non-domain setup and want to use account other than built-in administrator, do the following steps:
 
 1. Create a separate user group `MSDepSvcUsers` on remote computer.
-1. Create an local account `A` on both local and remote computer.
+1. Create a local account `A` on both local and remote computer.
 1. Add `A` to `MSDepSvcUsers` on remote computer.
-1. Use account `A` to publish, this will allow you to publish without the need of a built-in admin account.
+1. Use account `A` to publish, this allows you to publish without the need of a built-in admin account.
 
 <a id="ERROR_CERTIFICATE_VALIDATION_FAILED"></a>
 
@@ -245,7 +245,7 @@ Grant the appropriate account Full Control on the site's root folder. Alternativ
 
 1. Start **IIS Manager** and right click on the site in question.
 1. Click **Deploy** > **Configure** for Web Deploy Publishing.
-1. Select a appropriate user name.
+1. Select an appropriate user name.
 1. Click **Setup**.
 
 <a id="ERROR_INSUFFICIENT_ACCESS_TO_APPHOSTCONFIG_"></a>
@@ -294,7 +294,7 @@ dbFullSql provider of Web Deploy requires Server Management Objects version 10 o
 
 **Resolution**
 
-The SQL provider can't run because of a missing dependency. Please make sure that Microsoft SQL Server Management Objects (Version 10 or higher) is installed.
+The SQL provider can't run because of a missing dependency. Make sure that Microsoft SQL Server Management Objects (Version 10 or higher) is installed.
 
 <a id="ERROR_OBJECT_TO_BE_DELETED_DOES_NOT_EXIST"></a>
 
@@ -302,7 +302,7 @@ The SQL provider can't run because of a missing dependency. Please make sure tha
 
 **Diagnosis**
 
-Web Deploy originally found an object to be deleted but when it tried to delete it, it was missing.
+Web Deploy originally found an object to be deleted but when it tried to delete it, the object was missing.
 
 **Resolution**
 
@@ -382,13 +382,13 @@ This can occur if you are doing a web server sync between two machines that have
 
 **Resolution**
 
-By default, Web Deploy will favor running in the version of .Net that is specified in its configuration file. If the version of .Net that Web Deploy is using on the client is different from the version on the server, block a Web Server sync to prevent settings from different versions of .Net from being migrated. To resolve this, you have two options:
+By default, Web Deploy will prefer using the .Net version specified in its configuration file. If the version of .Net that Web Deploy is using on the client is different from the version on the server, block a Web Server sync to prevent settings from different versions of .Net from being migrated. To resolve this, you have two options:
 
-1. Use the `netFxVersion` provider setting to tell Web Deploy exactly which .Net settings to migrate. Here is a command line example, which forces Web Deploy to sync .Net 2.0 settings:
+1. Use the `netFxVersion` provider setting to inform Web Deploy exactly which .Net settings to migrate. Here is a command line example, which forces Web Deploy to sync .Net 2.0 settings:
 
     > msdeploy.exe -verb:sync -source:webserver,machineconfig32.netfxversion=2,machineconfig64.netfxversion=2,rootwebconfig32.netfxversion=2,rootwebconfig64.netfxversion=2 -dest:webserver,machineconfig32.netfxversion=2,machineconfig64.netfxversion=2,rootwebconfig32.netfxversion=2,rootwebconfig64.netfxversion=2,computername=destServername
 
-2. Run Web Deploy in the same version of .Net between client and server. On the client side, you can change the order of the `supportedRuntime` version element in the `%programfiles%\IIS\Microsoft Web Deploy V3\msdeploy.exe.config` file for the version of .Net that's specified first (see [gacInstall provider](https://technet.microsoft.com/library/gg607836(v=WS.10).aspx) for an example of this). This will indicate the version of .Net that will be loaded, assuming it's installed on your system. On the server side, you can do the same for `%programfiles%\IIS\microsoft web deploy\msdepsvc.exe.config`. If you modify this file, make sure to restart the Web Deployment Agent Service that is the `net stop msdepsvc` and `net start msdepsvc`.
+2. Run Web Deploy in the same version of .Net between client and server. On the client side, change the order of the `supportedRuntime` version element in the `%programfiles%\IIS\Microsoft Web Deploy V3\msdeploy.exe.config` file for the version of .Net that's specified first (see [gacInstall provider](https://technet.microsoft.com/library/gg607836(v=WS.10).aspx) for an example). This indicates the version of .Net, assuming it's installed on your system. On the server side, you can do the same for `%programfiles%\IIS\microsoft web deploy\msdepsvc.exe.config`. If you modify this file, make sure to restart the Web Deployment Agent Services that is the `net stop msdepsvc` and `net start msdepsvc`.
 
 <a id="ERROR_HTTPCERT_BINDING_NOT_FOUND"></a>
 
@@ -424,7 +424,7 @@ The provider path is invalid.
 
 **Resolution**
 
-Depending on the provider you are using, the required path for your provider may be different. Visit https://technet.microsoft.com/library/dd569040(WS.10).aspx to find out more about the provider you are using.
+The path for your provider may differ depending on the provider you use. Visit https://technet.microsoft.com/library/dd569040(WS.10).aspx to know more about the provider you are using.
 
 <a id="ERROR_INVALID_SETTING_SPECIFIED"></a>
 
@@ -436,7 +436,7 @@ The provider setting specified is invalid.
 
 **Resolution**
 
-Visit [Technet](https://technet.microsoft.com/library/dd569040(WS.10).aspx) to find out more about the provider you are using.
+Visit [Technet](https://technet.microsoft.com/library/dd569040(WS.10).aspx) to know more about the provider you are using.
 
 <a id="ERROR_INVALID_SETTING_VALUE_SPECIFIED"></a>
 
@@ -448,7 +448,7 @@ The provider setting value is invalid.
 
 **Resolution**
 
-Visit [Technet](https://technet.microsoft.com/library/dd569040(WS.10).aspx) to find out more about the provider you are using.
+Visit [Technet](https://technet.microsoft.com/library/dd569040(WS.10).aspx) to know more about the provider you are using.
 
 <a id="ERROR_SNI_BINDINGS_NOT_SUPPORTED"></a>
 
@@ -472,10 +472,10 @@ Web Deploy was unable to restore a backup.
 
 **Resolution**
 
-Verify that:
+Verify the following points:
 
 - The backup specified exists on the server.
-- If there is a database within the backup, that a connection string is specified in the connection string provider setting.
+- If there is a database within the backup, a connection string is specified in the connection string provider setting.
 
 <a id="ERROR_BACKUPS_ARE_NOT_CONFIGURED_PROPERLY"></a>
 
@@ -504,7 +504,7 @@ Verify that:
 - If you are doing an `appHostConfig` provider sync, that the path for the provider isn't empty.
 - If there are multiple providers in a manifest that uses virtual paths, ensure that all paths point to the same application.
 - If you are performing a manual backup, ensure that the feature is turned ON in the server backup settings.
-- Check the server event logs if the error message returned to the client doesn't contain enough information.
+- Check the server event logs if the error message returned to the client doesn't contain the required information.
 
 <a id="ERROR_SETTING_IS_READ_ONLY"></a>
 
@@ -528,9 +528,9 @@ A destination file can't be overwritten or deleted because it is currently in us
 
 **Resolution**
 
-Make sure that the destination file is not in use before performing a sync. If you are syncing content to a web site hosted on IIS 7 or later (using the `appHostConfig`, `iisApp`, or `contentPath` providers), consider taking the application offline during the sync by enabling the `appOffline` rule.
+Make sure that the destination file isn' t in use before performing a sync. If you are syncing content to a web site hosted on IIS 7 or later (using the `appHostConfig`, `iisApp`, or `contentPath` providers), consider taking the application offline during the sync by enabling the `appOffline` rule.
 
-You can configure the `appOffline` rule in the publishing profile (.pubxml). Add the `EnableMSDeployAppOffline` element to the `PropertyGroup` like this:
+You can configure the `appOffline` rule in the publishing profile (*.pubxml*). Add the `EnableMSDeployAppOffline` element to the `PropertyGroup` like this:
 
 ```xml
 <PropertyGroup>
@@ -544,11 +544,13 @@ You can configure the `appOffline` rule in the publishing profile (.pubxml). Add
 
 **Diagnosis**
 
-Web Deploy was not able to remove the `app\_offline.htm` file from the site after the sync has completed.
+Web Deploy wasn't able to remove the `app\_offline.htm` file from the site after the sync has completed.
 
-**Resolution**: You may either rerun the sync with the `appOffline` rule enabled, or manually delete the `app\_offline.htm` file from the root of your site on the destination server. For details on the reason for the failure, check the server event logs.
+**Resolution**
 
-You can configure the appOffline rule in the publishing profile (.pubxml). Add the `EnableMSDeployAppOffline` element to the `PropertyGroup` like this:
+You may either rerun the sync with the `appOffline` rule enabled, or manually delete the `app\_offline.htm` file from the root of your site on the destination server. For details on the reason for the failure, check the server event logs.
+
+You can configure the appOffline rule in the publishing profile (*.pubxml*). Add the `EnableMSDeployAppOffline` element to the `PropertyGroup` like this:
 
 ```xml
 <PropertyGroup>
@@ -566,7 +568,7 @@ Web Deploy failed to perform a sync using SQL Dedicated Administrator Connection
 
 **Resolution**
 
-Ensure that the server making the SQL connection using DAC has .Net 4.0 installed. If you are connecting using the msdeploy.exe client, ensure that it has .Net 4.0 listed as its first option in the *msdeploy.exe* config file. If you are connecting to the `msdepsvc` server endpoint (Web Deployment Agent service), ensure that it has .Net 4.0 listed as its first option in the `msdepsvc.exe` config file.
+Ensure that the server making the SQL connection using DAC has .Net 4.0 installed. If you are connecting using the *msdeploy.exe* client, ensure that it has .Net 4.0 listed as its first option in the *msdeploy.exe* config file. If you're connecting to the `msdepsvc` server endpoint (Web Deployment Agent service), ensure that it has .Net 4.0 listed as its first option in the `msdepsvc.exe` config file.
 
 <a id="ERROR_MAX_NUM_APPLICATIONS_EXCEEDED"></a>
 
@@ -600,7 +602,7 @@ The group of 3 errors share the following diagnosis and resolution:
 
 **Diagnosis**
 
-SQL DAC and its dependencies are not installed.
+SQL DAC and its dependencies aren't installed.
 
 **Resolution**
 
@@ -676,7 +678,7 @@ Verify that:
 
 - Your connection string is correct.
 - The account specified in the connection string has access to the database.
-- The database server you are connecting to allows remote connections.
+- The database server you are connecting to allow remote connections.
 - The database server can be accessed from the machine running Web Deploy. If you are connecting to a remote Web Deploy server and specified a database, then you need to make sure that the remote Web Deploy server has access to your database.
 
 <a id="ERROR_DACPAC_EXTRACTION_TIMEDOUT"></a>
