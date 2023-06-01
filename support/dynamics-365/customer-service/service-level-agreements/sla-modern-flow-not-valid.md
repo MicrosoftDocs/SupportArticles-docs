@@ -5,7 +5,7 @@ ms.reviewer: sdas
 ms.author: ravimanne
 ms.date: 06/01/2023
 ---
-# SLA modern flow <Flow Guid> is not valid for execute workflow
+# SLA modern flow [Flow Guid] is not valid for execute workflow
 
 This article provides a resolution for the issue where SLA modern flow is not valid for execute workflow.
 
