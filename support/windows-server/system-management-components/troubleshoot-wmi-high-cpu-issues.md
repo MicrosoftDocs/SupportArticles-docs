@@ -442,4 +442,4 @@ You can also gather information by using the WMI-Collect tool. Here are the step
 
 3. Stop the tracing by pressing <kbd>Enter</kbd>.
 
-The script will create a subfolder with the results of all traces and the diagnostic information. Compress the folder. After a support case is created, this file can be uploaded to the secure workspace for analysis.
+The script will create a subfolder containing the results of all traces and the diagnostic information. Compress the folder. After a support case is created, this file can be uploaded to the secure workspace for analysis.
