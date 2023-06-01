@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 
 # Web Deploy error codes
 
-For certain common error cases, Web Deploy displays error messages. This article explains why the error message is shown and provides steps to avoid the errors. Note that the error message may be different depending on how Web Deploy is started. For example, Microsoft WebMatrix chooses to show custom error messages. The error messages listed in the next few sections are shown on the *msdeploy.exe* command line and API:
+For certain common error cases, Web Deploy displays error messages. This article explains why the error message is shown and provides steps to avoid the errors. The error message may be different depending on how Web Deploy is started. For example, Microsoft WebMatrix chooses to show custom error messages. The error messages listed in the next few sections are shown on the *msdeploy.exe* command line and API:
 
 <a id="MySqlDumpNotFound"></a>
 
@@ -33,7 +33,7 @@ You can try either of the following workarounds:
 
 **Diagnosis**
 
-The remote application couldn't be found. This can happen if you try to do a dump of "remotesite/remoteapp" where "remoteapp" doesn't actually exist.
+The remote application couldn't be found. This error can occur if you try to do a dump of "remotesite/remoteapp" where "remoteapp" doesn't actually exist.
 
 **Resolution**
 
@@ -45,7 +45,7 @@ Specify a remote application name that actually exists.
 
 **Diagnosis**
 
-This can happen if you try to do a SetAcl on a file or folder that doesn't exist.
+This error can occur if you try to do a `SetAcl` on a file or folder that doesn't exist.
 
 **Resolution**
 
@@ -202,15 +202,15 @@ ERROR\_USER\_NOT\_AUTHORIZED\_FOR\_RECYCLEAPP,
 ERROR\_USER\_NOT\_AUTHORIZED\_FOR\_CREATEAPP,  
 ERROR\_USER\_NOT\_AUTHORIZED\_FOR\_CONTENTPATH
 
-The group of errors listed above share the following diagnosis, resolution, and workaround:
+The group of errors listed share the following diagnosis, resolution, and workaround:
 
 **Diagnosis**
 
-A non-administrative user attempted to perform an operation with a Web Deploy provider for which the user is not currently authorized.
+A non-administrative user attempted to perform an operation with a Web Deploy provider for which the user is n't currently authorized.
 
 **Resolution**
 
-Web Deploy 2.0 setup, by default, creates Management Service Delegation Rules, which allow non-administrators to perform operations with this provider. It is possible that a delegation rule required for this provider hasn't been set up correctly.  
+Web Deploy 2.0 setup, by default, creates Management Service Delegation Rules, which allow non-administrators to perform operations with this provider. It's possible that a delegation rule required for this provider hasn't been set up correctly.  
 
 **Workaround**
 
@@ -266,7 +266,7 @@ Grant the RunAs identity of the createApp delegation rule Write access to the II
 
 **Diagnosis**
 
-An invalid database connection string was specified which caused a `dbFullSql` or `dbMySql` provider to not run correctly. This can happen if a connection string is malformed (Example, Se ***v*** ver=localhost;...) or if the connection string contains keys, which the target database server doesn't recognize.
+An invalid database connection string was specified which caused a `dbFullSql` or `dbMySql` provider to not run correctly. This error can happen if a connection string is malformed (Example, Se ***v*** ver=localhost;...) or if the connection string contains keys, which the target database server doesn't recognize.
 
 **Resolution**
 
@@ -282,7 +282,7 @@ A SQL script execution failure occurred.
 
 **Resolution**
 
-This can happen for a number of reasons. For more information, see [Web development on Windows](https://www.microsoft.com/web).
+This error can happen for many reasons. For more information, see [Web development on Windows](https://www.microsoft.com/web).
 
 <a id="ERROR_TYPE_NOT_FOUND_IN_ASSEMBLY"></a>
 
@@ -378,7 +378,7 @@ Ensure that:
 
 **Diagnosis**
 
-This can occur if you are doing a web server sync between two machines that have different versions of .Net installed.
+The `ERROR\_FRAMEWORK\_VERSIONS\_DO\_NOT\_MATCH` error can occur if you are doing a web server sync between two machines that have different versions of .Net installed.
 
 **Resolution**
 
