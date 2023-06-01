@@ -47,6 +47,8 @@
     href: deployment-migration/cannot-use-web-deploy.md
   - name: Can't use Web Deployment as a non-admin user
     href: deployment-migration/web-deploy-error-non-admin-user.md
+  - name: Web Deploy error codes
+    href: deployment-migration/web-deploy-error-codes.md
 
 - name: FTP authentication and authorization
   items:
