@@ -94,7 +94,7 @@ landingContent:
           url: database-engine/availability-groups/troubleshoot-availability-group-database-reverting-state.md
         - text: Troubleshoot Always On availability databases in Recovery Pending or Suspect state in SQL Server
           url: database-engine/availability-groups/alwayson-availability-databases-recovery-pending-suspect.md
-         -text: Error with creating availability group due to permissions
+        - text: Error with creating availability group due to permissions
           url: database-engine/availability-groups/error-41131-create-availability-group.md          
         - text: Troubleshoot most common Always On Isues
           url: database-engine/availability-groups/troubleshooting-alwayson-issues.md    
