@@ -8,6 +8,8 @@ ms.reviewer: johnhart, riande
 ---
 # Troubleshoot failed requests using tracing in IIS 7
 
+_Applies to:_ &nbsp; Internet Information Services 7.0
+
 Request-based tracing is available both in stand-alone IIS servers and on Azure web apps and provides a way to determine what exactly is happening with your requests and why, if you can reproduce the problem that you're experiencing. Problems like poor performance on some requests, or authentication-related failures on other requests, or the server 500 error from ASP or ASP.NET can often be difficult to troubleshoot--unless you have captured the trace of the problem when it occurs. This article discusses failed-request tracing on IIS Server. For information about doing this with Azure web apps, see [Troubleshoot an app in Azure App Service using Visual Studio](/azure/app-service/troubleshoot-dotnet-visual-studio).
 
 Failed-request tracing is designed to buffer the trace events for a request and only flush them to disk if the request fails, where you provide the definition of "failure". If you want to know why you're getting 404.2 error messages or request start hanging, use failed-request tracing.

@@ -8,7 +8,9 @@ ms.reviewer: johnhart, riande
 ---
 # Using Failed Request Tracing rules to troubleshoot Application Request Routing
 
-Failed Request Tracing is a powerful tool for troubleshooting request-processing failures in IIS 7.0 and above. This article provides steps to enable Failed Request Tracing rules to debug failures and trace steps in Application Request Routing. For more information about Failed Request Tracing rules, see [Troubleshoot failed requests using tracing in IIS 7](troubleshoot-failed-requests-using-tracing-in-iis-7.md).
+_Applies to:_ &nbsp; Internet Information Services 7.0 and later versions
+
+Failed Request Tracing is a powerful tool for troubleshooting request-processing failures in IIS 7.0 and later versions. This article provides steps to enable Failed Request Tracing rules to debug failures and trace steps in Application Request Routing. For more information about Failed Request Tracing rules, see [Troubleshoot failed requests using tracing in IIS 7](troubleshoot-failed-requests-using-tracing-in-iis-7.md).
 
 ## Goal
 
@@ -22,7 +24,7 @@ This walkthrough requires the following prerequisites:
 - Microsoft Application Request Routing and dependent modules.
 - Minimum of two application servers with working sites and applications.
 
-If Application Request Routing has not been installed, download from [Microsoft Application Request Routing 3.0 (x64)](https://www.microsoft.com/download/details.aspx?id=47333), and install it by following the steps outlined in [Install Application Request Routing](/iis/extensions/installing-application-request-routing-arr/install-application-request-routing).
+If Application Request Routing hasn't been installed, download from [Microsoft Application Request Routing 3.0 (x64)](https://www.microsoft.com/download/details.aspx?id=47333), and install it by following the steps outlined in [Install Application Request Routing](/iis/extensions/installing-application-request-routing-arr/install-application-request-routing).
 
 Another prerequisite is that you have gone through [Using the Application Request Routing Module](/iis/extensions/planning-for-arr/using-the-application-request-routing-module) and have configured Application Request Routing. Application Request Routing should be in working order before proceeding with the following sections.
 
@@ -79,12 +81,12 @@ Configure the Failed Request Tracing rules for Application Request Routing using
 
 ## Step 2: Analyze Failed Request Tracing Logs
 
-In this step, you will send requests to Application Request Routing and analyze Failed Request Tracing logs.
+In this step, you'll send requests to Application Request Routing and analyze Failed Request Tracing logs.
 
 ### To view Failed Request Tracing logs
 
 1. Navigate to the directory where the Failed Request Tracing logs are written. By default, the location is `%SystemDrive%\inetpub\Logs\FailedReqLogFiles\`.
-1. Change the directory to the folder that matches the **Default Web Site**. By default, it's _W3SVC1_. If you are unsure, select the **Default Web Site** in IIS Manager, and then select **Advanced Settings…** in the **Actions** pane. The value of the **ID** indicates the corresponding folder. (For example, ID _1_ corresponds to _W3SVC1_).
+1. Change the directory to the folder that matches the **Default Web Site**. By default, it's _W3SVC1_. If you're unsure, select the **Default Web Site** in IIS Manager, and then select **Advanced Settings…** in the **Actions** pane. The value of the **ID** indicates the corresponding folder. (For example, ID _1_ corresponds to _W3SVC1_).
 1. If there are any XML files, remove them by typing:  
 
     ```console
@@ -136,7 +138,7 @@ In this step, you will send requests to Application Request Routing and analyze 
         - **ARR\_RESPONSE\_ENTITY\_START**
         - **ARR\_RESPONSE\_ENTITY\_END**
 
-If you are collecting the Failed Request Tracing logs on server core, copy the logs with _freb.xsl_ stylesheet to a computer where a browser is available.
+If you're collecting the Failed Request Tracing logs on server core, copy the logs with _freb.xsl_ stylesheet to a computer where a browser is available.
 
 ## Summary
 

@@ -40,4 +40,4 @@ items:
 - name: Troubleshoot failed requests using tracing in IIS 7
   href: troubleshoot-failed-requests-using-tracing-in-iis-7.md
 - name: Troubleshoot IIS performance issues and application errors
-  href: tsg-iis-perf-issues-or-app-errors.md
+  href: troubleshoot-iis-perf-issues-or-app-errors.md
