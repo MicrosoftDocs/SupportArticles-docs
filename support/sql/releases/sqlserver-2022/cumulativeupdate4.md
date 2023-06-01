@@ -17,7 +17,7 @@ _Version:_ &nbsp; 16.0.4035.4
 
 ## Summary
 
-This article describes Cumulative Update package 4 (CU4) for Microsoft SQL Server 2022. This update contains 16 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 3, and it updates components in the following builds:
+This article describes Cumulative Update package 4 (CU4) for Microsoft SQL Server 2022. This update contains 21 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 3, and it updates components in the following builds:
 
 - SQL Server - Product version: **16.0.4035.4**, file version: **2022.160.4035.4**
 - Analysis Services - Product version: **16.0.43.211**, file version: **2022.160.43.211**
