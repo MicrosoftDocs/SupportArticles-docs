@@ -13,7 +13,7 @@ This article provides troubleshooting guidance for common issues related to poli
 
 You can use the built-in troubleshooting feature to review different compliance and configuration statuses.
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Troubleshooting + support** > **Troubleshoot**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Troubleshooting + support** > **Troubleshoot**.
 
     :::image type="content" source="media/troubleshoot-policies-in-microsoft-intune/troubleshoot-plus-support.png" alt-text="In Endpoint Management admin center and Intune, go to Troubleshooting and support.":::
 
@@ -77,7 +77,7 @@ Check the [Tenant Status](/mem/intune/fundamentals/tenant-status) and confirm th
 
 ## Confirm a configuration profile is correctly applied
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **All devices** > select the device > **Device configuration**.
 
     Every device lists its profiles. Each profile has a **Status**. The status applies when all of the assigned profiles, including hardware and OS restrictions and requirements, are considered together. Possible statuses include:

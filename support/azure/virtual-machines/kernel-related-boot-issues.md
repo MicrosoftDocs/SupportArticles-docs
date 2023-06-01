@@ -3,7 +3,7 @@ title: Recover Azure Linux VM from kernel-related boot issues
 description: Provides solutions to an issue in which a Linux virtual machine (VM) can't boot after applying kernel changes.
 author: divargas-msft
 ms.author: divargas
-ms.date: 10/08/2022
+ms.date: 05/29/2023
 ms.reviewer: jofrance
 ms.service: virtual-machines
 ms.subservice: vm-cannot-start-stop
@@ -385,23 +385,117 @@ Important Linux files and directories are missing due to a human error. For exam
 
 ### <a id="attempted-tokill-init-missinglibraries"></a>Missing important system core libraries and packages
 
-Important system core libraries, files, or packages are deleted from the system or got corrupted. To resolve this issue, follow these steps:
+Important system core libraries, files, or packages are deleted from the system or got corrupted. To resolve this issue, reinstall the affected libraries, files, or packages. This solution works on RPM-based distributions like Red Hat/CentOS/SUSE VMs. For other Linux distributions, we recommend [restoring the VM from backup](/azure/backup/backup-azure-arm-restore-vms).
 
-1. Look for the glibc package by running the following command. Make sure it's installed, and all their files are still present in the system.
+To perform the reinstallation, follow these steps:
 
-    ```bash
-    rpm -qa | grep glibc
-    ```
+1. Create a rescue VM by using a raw image with the same OS version and generation as the affected VM.
 
-2. Verify all system packages and their corresponding status by running the following command. Compare the output against a healthy VM running the same OS version. Reinstall the corrupted packages from a repair VM.
+2. Access the [chroot](chroot-environment-linux.md) environment in the rescue VM to troubleshoot the issue.
 
     ```bash
-    rpm --verify --all 
+    sudo chroot /rescue
     ```
+    
+    The command output will indicate which library is missing or corrupted, as shown below:
+    
+    ```output
+    /bin/bash: error while loading shared libraries: libc.so.6: cannot open shared object file: No such file or directory
+    ```
+
+3. Verify all system packages and their corresponding status in the rescue VM. Compare the output against a healthy VM running the same OS version.
+
+    ```bash
+    sudo rpm --verify --all --root=/rescue 
+    ```
+    Here's an example of the command output:
+    
+    ```output
+    error: Failed to dlopen /usr/lib64/rpm-plugins/systemd_inhibit.so /lib64/librt.so.1: undefined symbol: __pthread_attr_copy, version GLIBC_PRIVATE
+    S.5....T.  c /etc/dnf/dnf.conf
+    S.5....T.  c /etc/ssh/sshd_config
+    .M.......    /boot/efi/EFI/BOOT/BOOTX64.EFI
+    .M.......    /boot/efi/EFI/BOOT/fbx64.efi
+    .M.......    /boot/efi/EFI/redhat/BOOTX64.CSV
+    .M.......    /boot/efi/EFI/redhat/mmx64.efi
+    .M.......    /boot/efi/EFI/redhat/shimx64-redhat.efi
+    .M.......    /boot/efi/EFI/redhat/shimx64.efi
+    missing     /run/motd.d
+    .M.......  g /var/spool/anacron/cron.daily
+    .M.......  g /var/spool/anacron/cron.monthly
+    .M.......  g /var/spool/anacron/cron.weekly
+    missing     /lib64/libc-2.28.so     <-------
+    .M.......    /boot/efi/EFI/redhat
+    S.5....T.  c /etc/security/pwquality.conf
+    ```
+ 
+    The output line `missing /lib64/libc-2.28.so` is related to the previous error in step 2, and it indicates the *libc-2.28.so* package is missing. However, the *libc-2.28.so* package can be modified. In this case, the output will show `.M.....` instead of `missing`. The *libc-2.28.so* package is referenced as an example in the following steps.
+
+4. In the rescue VM, verify which package contains the library */lib64/libc-2.28.so*.
+
+    ```bash
+    sudo rpm -qf /lib64/libc-2.28.so
+    ```
+
+    ```output
+    glibc-2.28-127.0.1.el8.x86_64
+    ```
+    
+    > [!NOTE]
+    > The output will show the package that needs to be reinstalled, including the package name and version. The package version might be different from the one installed on the affected VM.
+
+5. In the affected VM, verify which version of the *glibc* package is installed.
+
+    ```bash
+    sudo rpm -qa --all --root=/rescue | grep -i glibc
+    ```
+
+    ```output
+    glibc-common-2.28-211.0.1.el8.x86_64
+    glibc-gconv-extra-2.28-211.0.1.el8.x86_64
+    glibc-2.28-211.0.1.el8.x86_64     <----  
+    glibc-langpack-en-2.28-211.0.1.el8.x86_64
+    ```
+
+6. Download the package *glibc-2.28-211.0.1.el8.x86_64*. You can download it from the official website of the OS vendor or from the rescue VM by using a package management tool like `yumdownloader` or `zypper install --download-only <packagename>` depending on the OS you're running.
+
+    Here's an example of using the `yumdownloader` tool:
+
+    ```bash
+    cd /tmp
+    sudo yumdownloader glibc-2.28-211.0.1.el8.x86_64
+    ```
+
+    ```output
+    Last metadata expiration check: 0:03:24 ago on Thu 25 May 2023 02:36:25 PM UTC.
+    glibc-2.28-211.0.1.el8.x86_64.rpm               8.7 MB/s | 2.2 MB     00:00    
+    ```
+
+7. Reinstall the affected package in the rescue VM.
+
+    ```bash
+    sudo rpm -ivh --root=/rescue /tmp/glibc-*.rpm --replacepkgs --replacefiles
+    ```
+
+    ```output
+    warning: /tmp/glibc-2.28-211.0.1.el8.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID ad986da3: NOKEY
+    Verifying...                          ################################# [100%]
+    Preparing...                          ################################# [100%]
+    Updating / installing...
+       1:glibc-2.28-211.0.1.el8           ################################# [100%]
+    ```
+
+8. Access the chroot environment in the rescue VM to validate the reinstallation.
+
+    ```bash
+    sudo chroot /rescue
+    ```
+
+9. Turn off the rescue VM and swap the OS disk to the affected VM.
 
 ### <a id="attempted-tokill-init-wrongpermissions"></a> Wrong file permissions
 
-Wrong system wide file permissions are modified due to a human error (for example, someone runs `chmod 777` on */* or other important OS file systems). To resolve this issue, restore the file permissions. The solution works in Red Hat/CentOS VMs. For other Linux distributions, we recommend [restoring the VM from backup](/azure/backup/backup-azure-arm-restore-vms).
+Wrong system wide file permissions are modified due to a human error (for example, someone runs `chmod 777` on */* or other important OS file systems). To resolve this issue, restore the file permissions. This solution works on RPM-based distributions like Red Hat/CentOS/SUSE VMs. For other Linux distributions, we recommend [restoring the VM from backup](/azure/backup/backup-azure-arm-restore-vms).
 
 To restore the file permissions, run the following command after attaching the copy of the OS disk to a repair VM and mounting the corresponding file systems by using [chroot](chroot-environment-linux.md):
 

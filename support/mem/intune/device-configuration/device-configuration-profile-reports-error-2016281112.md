@@ -12,7 +12,7 @@ This article discusses a **2016281112 (Remediation Failed)** error message in In
 
 ## Symptoms
 
-After you create and assign a device configuration profile that defines a custom VPN connection by using OMA-URI settings, Windows 10 clients receive the profile and can connect to the VPN endpoint successfully. However, the profile reports a **2016281112 (Remediation Failed)** error message in the Microsoft Endpoint Manager admin center.
+After you create and assign a device configuration profile that defines a custom VPN connection by using OMA-URI settings, Windows 10 clients receive the profile and can connect to the VPN endpoint successfully. However, the profile reports a **2016281112 (Remediation Failed)** error message in the Microsoft Intune admin center.
 
 ## Cause
 

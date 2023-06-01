@@ -53,7 +53,7 @@ Review the configuration of your EAS profile for Samsung KNOX and source policy.
 
 Users who have email accounts automatically configured can't send pictures or images from their devices. This scenario can happen if **Allow e-mail to be sent from third-party applications** isn't enabled.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Select **Devices** > **Configuration profiles**.
 1. Select your email profile > **Properties** > **Settings**.
 1. Set the **Allow e-mail to be sent from third-party applications** setting to **Enable**.

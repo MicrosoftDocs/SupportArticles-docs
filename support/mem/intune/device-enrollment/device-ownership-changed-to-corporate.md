@@ -20,7 +20,7 @@ After you enroll an Android Enterprise work profile device in Intune, the owners
 
 ## Cause
 
-This issue occurs if a corporate identifier was added for the device in the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+This issue occurs if a corporate identifier was added for the device in the [Microsoft Intune Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 ## Solution
 
