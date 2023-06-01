@@ -24,8 +24,8 @@ Web Deploy might not find the *mysqldump.exe* executable. This executable is req
 
 You can try either of the following workarounds:
 
-- Place the executable in `C:\Program Files\MySQL\MySQL Server 5.1\bin`.
-- Set a `REG\_SZ` registry key to point to the executable. For example, set  `HKEY\_LOCAL\_MACHINE\SOFTWARE\Microsoft\IIS Extensions\MSDeploy\2\MySqlDumpPath` to `c:\mysqldump\mysqldump.exe`
+- Place the executable in `C:\Program Files\MySQL\MySQL Server\bin`.
+- Set a `REG\_SZ` registry key to point to the executable. For example, set  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\IIS Extensions\MSDeploy\<version>\MySqlDumpPath` to `c:\mysqldump\mysqldump.exe`
 
 <a id="RemoteAppNotFound"></a>
 
@@ -114,11 +114,11 @@ To connect using the Remote Agent Service, do the following steps:
 
 **Diagnosis**
 
-The `ERROR\_USER\_NOT\_ADMIN` code is shown if you try to connect to the Remote Agent Service but haven't provided appropriate administrator credentials.
+The ERROR\_USER\_NOT\_ADMIN code is shown if you try to connect to the Remote Agent Service but haven't provided appropriate administrator credentials.
 
 **Resolution**
 
-The Remote Agent Service accepts either built-in Administrator or Domain Administrator credentials. If you have a non-domain setup and want to use account other than built-in administrator, do the following steps:
+The Remote Agent Service accepts either built-in Administrator or Domain Administrator credentials. If you have a non-domain setup and want to use an account other than built-in administrator, do the following steps:
 
 1. Create a separate user group `MSDepSvcUsers` on remote computer.
 1. Create a local account `A` on both local and remote computer.
@@ -135,18 +135,18 @@ The certificate presented by the Web Deploy endpoint is untrusted or invalid. Th
 
 **Resolution**
 
-Either install a trusted certificate on the endpoint, or try bypassing certificate validation.
+Either install a trusted certificate on the endpoint or try bypassing certificate validation.
 
 - From the *msdeploy.exe* command line, pass the `-allowUntrusted` flag.
-- From the Visual Studio 2010 publish UI, check `Allow Untrusted`.
-- From a Visual Studio 2010 deployment package (For example, *MyApp.deploy.cmd*), pass the `-allowUntrusted` flag.
+- From the Visual Studio publish UI, check `Allow Untrusted`.
+- From a Visual Studio deployment package (For example, *MyApp.deploy.cmd*), pass the `-allowUntrusted` flag.
 - Add `<AllowUntrustedCertificate>true</AllowUntrustedCertificate>` to the pubxml file:
 
-```xml
-<PropertyGroup>
-  <AllowUntrustedCertificate>true</AllowUntrustedCertificate>
-</PropertyGroup>
-```
+    ```xml
+    <PropertyGroup>
+      <AllowUntrustedCertificate>true</AllowUntrustedCertificate>
+    </PropertyGroup>
+    ```
 
 <a id="ERROR_PROXY_GATEWAY"></a>
 
@@ -210,11 +210,11 @@ A non-administrative user attempted to perform an operation with a Web Deploy pr
 
 **Resolution**
 
-Web Deploy 2.0 setup, by default, creates Management Service Delegation Rules, which allow non-administrators to perform operations with this provider. It's possible that a delegation rule required for this provider hasn't been set up correctly.  
+Web Deploy setup, by default, creates Management Service Delegation Rules, which allow non-administrators to perform operations with this provider. It's possible that a delegation rule required for this provider hasn't been set up correctly.  
 
 **Workaround**
 
- From the **Programs** > **Control Panel**, run **Repair** on Web Deploy 2.0. Alternatively, create the delegation rule [manually](/iis/publish/using-web-deploy/configure-the-web-deployment-handler).
+ From the **Programs** > **Control Panel**, run **Repair** on Web Deploy. Alternatively, create the delegation rule [manually](/iis/publish/using-web-deploy/configure-the-web-deployment-handler).
 
 <a id="ERROR_USER_NOT_AUTHORIZED_FOR_DEPLOYMENTPROVIDER"></a>
 
@@ -222,11 +222,11 @@ Web Deploy 2.0 setup, by default, creates Management Service Delegation Rules, w
 
 **Diagnosis**
 
-A non-administrative user attempted to perform an operation with a Web Deploy provider for which the user is n't currently authorized. This error code is shown if you try to perform an operation with a provider for which Web Deploy 2.0's setup doesn't create a delegation rule.
+A non-administrative user attempted to perform an operation with a Web Deploy provider for which the user isn't currently authorized. This error code is shown if you try to perform an operation with a provider for which Web Deploy's setup doesn't create a delegation rule.
 
 **Resolution**
 
-Web Deploy 2.0 setup doesn't create a delegation rule for this provider. Create the delegation rule [manually](/iis/publish/using-web-deploy/configure-the-web-deployment-handler).
+The Web Deploy setup doesn't create a delegation rule for this provider. Create the delegation rule [manually](/iis/publish/using-web-deploy/configure-the-web-deployment-handler).
 
 <a id="ERROR_INSUFFICIENT_ACCESS_TO_SITE_FOLDER"></a>
 
@@ -384,7 +384,7 @@ The `ERROR\_FRAMEWORK\_VERSIONS\_DO\_NOT\_MATCH` error can occur if you are doin
 
 By default, Web Deploy prefers using the .Net version specified in its configuration file. If the version of .Net that Web Deploy is using on the client is different from the version on the server, block a Web Server sync to prevent settings from different versions of .Net from being migrated. To resolve this problem, you have two options:
 
-1. Use the `netFxVersion` provider setting to inform Web Deploy exactly which .Net settings to migrate. Here is a command line example, which forces Web Deploy to sync .Net 2.0 settings:
+1. Use the `netFxVersion` provider setting to inform Web Deploy exactly which .Net settings to migrate. Here is a command line example, which forces Web Deploy to sync .Net settings:
 
     > msdeploy.exe -verb:sync -source:webserver,machineconfig32.netfxversion=2,machineconfig64.netfxversion=2,rootwebconfig32.netfxversion=2,rootwebconfig64.netfxversion=2 -dest:webserver,machineconfig32.netfxversion=2,machineconfig64.netfxversion=2,rootwebconfig32.netfxversion=2,rootwebconfig64.netfxversion=2,computername=destServername
 
@@ -550,7 +550,7 @@ Web Deploy wasn't able to remove the `app\_offline.htm` file from the site after
 
 You may either rerun the sync with the `appOffline` rule enabled, or manually delete the `app\_offline.htm` file from the root of your site on the destination server. For details on the reason for the failure, check the server event logs.
 
-You can configure the appOffline rule in the publishing profile (*.pubxml*). Add the `EnableMSDeployAppOffline` element to the `PropertyGroup` like this:
+You can configure the `appOffline` rule in the publishing profile (*.pubxml*). Add the `EnableMSDeployAppOffline` element to the `PropertyGroup` like this:
 
 ```xml
 <PropertyGroup>
@@ -598,7 +598,7 @@ Install the latest version of Web Deploy on the server.
 
 ## DacFxNeededForSQLProvider, ERROR\_SCRIPTDOM\_NEEDED\_FOR\_SQL\_PROVIDER, ERROR\_SQLCLRTYPES\_NEEDED\_FOR\_SQL\_PROVIDER
 
-The group of 3 errors share the following diagnosis and resolution:
+The group of three errors share the following diagnosis and resolution:
 
 **Diagnosis**
 
