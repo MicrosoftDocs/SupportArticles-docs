@@ -122,3 +122,4 @@ If these steps don't resolve the issue, an administrator should create a support
 
 - Outlook currently shows **Status unknown** for federated (external) Teams contacts.
 - In the 32-bit version of Outlook, the presence status icons related to "Out of Office" aren't currently displayed.
+- Presence status icons in Outlook do not match Teams when a user has an Out of Office auto-reply set in Outlook. Others see presence status for this user as Away or Offline in Outlook but Out of Office in Teams.
