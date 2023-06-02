@@ -25,7 +25,7 @@ Web Deploy might not find the *mysqldump.exe* executable. This executable is req
 You can try either of the following workarounds:
 
 - Place the executable in `C:\Program Files\MySQL\MySQL Server\bin`.
-- Set a `REG\_SZ` registry key to point to the executable. For example, set  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\IIS Extensions\MSDeploy\<version>\MySqlDumpPath` to `c:\mysqldump\mysqldump.exe`
+- Set a `REG_SZ` registry key to point to the executable. For example, set  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\IIS Extensions\MSDeploy\<version>\MySqlDumpPath` to `c:\mysqldump\mysqldump.exe`
 
 <a id="RemoteAppNotFound"></a>
 
@@ -210,7 +210,7 @@ A non-administrative user attempted to perform an operation with a Web Deploy pr
 
 **Resolution**
 
-Web Deploy setup, by default, creates Management Service Delegation Rules, which allow non-administrators to perform operations with this provider. It's possible that a delegation rule required for this provider hasn't been set up correctly.  
+Web Deploy setup, by default, creates Management Service Delegation Rules, which allow non-administrators to perform operations with this provider. Check that the delegation rule required for this provider has been set up correctly.  
 
 **Workaround**
 
@@ -382,7 +382,7 @@ The ERROR\_FRAMEWORK\_VERSIONS\_DO\_NOT\_MATCH error can occur if you're doing a
 
 **Resolution**
 
-By default, Web Deploy prefers using the .Net version specified in its configuration file. If the version of .Net that Web Deploy is using on the client is different from the version on the server, block a Web Server sync to prevent settings from different versions of .Net from being migrated. To resolve this problem, you have two options:
+By default, Web Deploy prefers using the .Net version specified in its configuration file. If the version of .Net that Web Deploy is using on the client is different from the version on the server, a Web Server sync is blocked to prevent settings from different versions of .Net from being migrated. To resolve this problem, you have two options:
 
 1. Use the `netFxVersion` provider setting to inform Web Deploy exactly which .Net settings to migrate. Here is a command line example, which forces Web Deploy to sync .Net settings:
 
@@ -424,7 +424,7 @@ The provider path is invalid.
 
 **Resolution**
 
-The path for your provider may differ depending on the provider you use. Visit https://technet.microsoft.com/library/dd569040(WS.10).aspx to know more about the provider you're using.
+The path for your provider may differ depending on the provider you use. See [Web Deploy Providers](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd569040(v=ws.10) to know more about the provider you're using.
 
 <a id="ERROR_INVALID_SETTING_SPECIFIED"></a>
 
@@ -436,7 +436,7 @@ The provider setting specified is invalid.
 
 **Resolution**
 
-Visit [Technet](https://technet.microsoft.com/library/dd569040(WS.10).aspx) to know more about the provider you're using.
+See [Web Deploy Providers](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd569040(v=ws.10)) to know more about the provider you're using.
 
 <a id="ERROR_INVALID_SETTING_VALUE_SPECIFIED"></a>
 
@@ -544,7 +544,7 @@ You can configure the `appOffline` rule in the publishing profile (*.pubxml*). A
 
 **Diagnosis**
 
-Web Deploy wasn't able to remove the `app\_offline.htm` file from the site after the sync has completed.
+Web Deploy wasn't able to remove the *app_offline.htm* file from the site after the sync has completed.
 
 **Resolution**
 
@@ -650,11 +650,10 @@ If you installed Web Deploy manually through the MSI, try reinstall using Web Pl
 
 <a id="ERROR_SMO_NEEDED_FOR_SQL_PROVIDER"></a><a id="ERROR_USER_NOT_AUTHORIZED_FOR_IISAPP"></a><a id="ERROR_SCRIPTER_NEEDED_FOR_SQLCE_PROVIDER"></a>
 
-## ERROR\_SMO\_NEEDED\_FOR\_SQL\_PROVIDER, ERROR\_USER\_NOT\_AUTHORIZED\_FOR\_IISAPP,  
-ERROR\_SCRIPTER\_NEEDED\_FOR\_SQLCE\_PROVIDER
+## ERROR\_SMO\_NEEDED\_FOR\_SQL\_PROVIDER, ERROR\_USER\_NOT\_AUTHORIZED\_FOR\_IISAPP, ERROR\_SCRIPTER\_NEEDED\_FOR\_SQLCE\_PROVIDER
 
-The error codes `ERROR\_SMO\_NEEDED\_FOR\_SQL\_PROVIDER`, `ERROR\_USER\_NOT\_AUTHORIZED\_FOR\_IISAPP`, and 
-`ERROR\_SCRIPTER\_NEEDED\_FOR\_SQLCE\_PROVIDER` codes share the following diagnosis and resolution:
+The error codes ERROR\_SMO\_NEEDED\_FOR\_SQL\_PROVIDER, ERROR\_USER\_NOT\_AUTHORIZED\_FOR\_IISAPP, and 
+ERROR\_SCRIPTER\_NEEDED\_FOR\_SQLCE\_PROVIDER codes share the following diagnosis and resolution:
 
 **Diagnosis**
 
