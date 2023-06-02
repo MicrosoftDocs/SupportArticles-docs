@@ -32,91 +32,49 @@ After Azure VM Agent is successfully installed, you can see following services l
 
 Go to the VM properties page in Azure portal, and check the **Agent status**. If the Azure VM Agent is working correctly, the status shows **Ready**. If VM Agent is in **Not Ready** status, the extensions and **Run command** on the Azure portal won’t work.
 
-## Troubleshooting VM agent that is in Not Ready status
+## Troubleshooting VM Guest Agent issues
+The Azure VM Guest Agent needs to be installed and working properly for any VM Extension to run. If you see that the Guest Agent is 'Not ready' or if an extension is failing with an error message such as 'VMAgentStatusCommunicationError' then please reference the following steps to begin troubleshooting the Azure VM Guest Agent.
 
-### Step 1 Check whether the Azure VM Agent service is installed
+### Check if the VM is started
+Ensure that the VM is started and that the Operating System is completely booted up and running properly.
 
-- Check for the Package
+### Is the Guest Agent 'Ready'
+Select your VM in the Azure Portal, in the Overview pane, under Properties, check the 'Agent status' and 'Agent version' property
+[insert image]
 
-    Locate the C:\WindowsAzure folder. If you see the GuestAgent folder that displays the version number, that means that Azure VM Agent was installed on the VM. You can also look for the installed package.  If Azure VM Agent is installed on the VM, the package will be saved in the following location: `C:\windows\OEM\GuestAgent\VMAgentPackage.zip`.
+If it is 'Ready' then confirm you are at or above the [minimum supported version.](https://learn.microsoft.com/en-US/troubleshoot/azure/virtual-machines/support-extensions-agent-version)
 
-    You can run the following PowerShell command to check whether VM Agent has been deployed to the VM:
+If the Guest Agent is 'Ready' and you are having an issue with a VM Extension please see here https://learn.microsoft.com/en-us/azure/virtual-machines/extensions/overview 
 
-    `Get-AzVM -ResourceGroupName "RGNAME" -Name "VMNAME" -DisplayHint expand`
+If it is not ready or blank then either the Guest Agent is not installed or it is not working correctly.
 
-    In the output, locate the **ProvisionVMAgent** property, and check whether the value is set to **True**. If it is, this means that the agent is installed on the VM.
+### Check whether the Guest Agent services are running
 
-- Check the Services and Processes
+RDP into the VM, open services.msc, and check for the following 2 services:
+```RDAgent```
+```WindowsAzureGuestAgent```
 
-   Go to the Services console (services.msc) and check the status of the following services: Azure VM Agent Service, RD Agent service, Windows Azure Telemetry Service, and Windows Azure Network Agent service.
+Each of the above services needs to be 'Running' and the Startup type should be set to 'Automatic'
+[Image]
 
-    You can also check whether these services are running by examining Task Manager for the following processes:
 
-  - WindowsAzureGuestAgent.exe: Azure VM Agent service
-  - WaAppAgent.exe: RD Agent service
-  - WindowsAzureTelemetryService.exe: Windows Azure Telemetry Service
-  
-   If you can't find these processes and services, this indicates that you don't have Azure VM Agent installed.
+If the services don't exist then the Guest Agent most likely isn't installed and you can reference the following links for steps to install the Guest Agent by downloading/installing the latest .MSI installer- [Windows installion steps](https://learn.microsoft.com/en-us/azure/virtual-machines/extensions/agent-windows#manual-installation)
 
-- Check the Program and Feature
+Before installing please check the prerequisites here - https://learn.microsoft.com/en-us/azure/virtual-machines/extensions/agent-windows#prerequisites
 
-    In Control Panel, go to **Programs and Features** to determine whether the Azure VM Agent service is installed.
 
-If you don't find any packages, services and processes running and don't  even see Azure VM Agent installed under Programs and Features, try [installing Azure VM Agent service](/azure/virtual-machines/extensions/agent-windows). If the Guest Agent doesn't install properly, you can [Install the VM agent offline](./install-vm-agent-offline.md).
+### Test Wireserver connectivity
+The Guest Agent requires connectivity to 168.63.129.16 on ports 80 and 32526 in order to function properly. Reference the steps in the following link to [test connectivity.](https://learn.microsoft.com/en-us/azure/virtual-network/what-is-ip-address-168-63-129-16#troubleshoot-connectivity)
 
-If you can see the services and they're running, restart the service that sees if the problem is resolved. If the services are stopped, start them and wait few minutes. Then check whether the **Agent status** is reporting as **Ready**. If you find that these services are crashing, some third party processes may be causing these services to crash. To further troubleshooting of these issues, contact [Microsoft Support](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade).
+If any of the above fail to connect then check for any issues that might be caused by a firewall, a proxy, or another application that might be blocking access to the IP address 168.63.129.16
 
-### Step 2 Check whether auto-update is working
+### Log files
+Next, check the following log locations for any notable errors and compare it to the issues listed below.
 
-The Azure VM Agent has an auto-update feature. It will automatically check for new updates and install them. If the auto-update feature doesn't work correctly, try uninstalling and installing the Azure VM Agent by using the following steps:
+C:\WindowsAzure\Logs\WaAppAgent.log  
+C:\WindowsAzure\Logs\TransparentInstaller.log
 
-1. If Azure VM Agent appears in **Programs and Features**, uninstall the Azure VM Agent.
-
-2. Open a Command Prompt window that has administrator privileges.
-
-3. Stop the Guest Agent services. If the services don't stop, you must set the services to **manual startup** and then restart the VM.
-
-    ```
-    net stop RDAgent 
-    net stop WindowsAzureGuestAgent
-    net stop WindowsAzureTelemetryService
-    ```
-
-1. Delete the Guest Agent Services:
-
-    ```
-    sc delete RDAgent 
-    sc delete WindowsAzureGuestAgent
-    sc delete WindowsAzureTelemetryService
-    ```
-
-1. Under `C:\WindowsAzure` create a folder that is named OLD. 
-
-1. Move any folders that are named Packages or GuestAgent into the OLD folder.
-1. Restart the VM to complete the uninstalling process. 
-1. Download and install the latest version of the agent installation package from [here](https://go.microsoft.com/fwlink/?linkid=394789&clcid=0x409). You must have Administrator rights to complete the installation.
-
-1. Install Guest Agent by using the following command:
-
-    ```
-    msiexec.exe /i c:\VMAgentMSI\WindowsAzureVmAgent.2.7.<version>.fre.msi /quiet /L*v c:\VMAgentMSI\msiexec.log
-    ```
-
-    Then check whether the **Windows Azure Guest Agent** service starts correctly.
-
-    In rare cases in which Guest Agent doesn't install correctly, you can [Install the VM agent offline](./install-vm-agent-offline.md).
-
-### Step 3 Check whether the VM can connect to the Fabric Controller
-
-Use a tool such as PsPing to test whether the VM can connect to 168.63.129.16 on ports 80 and 32526. If the VM doesn’t connect as expected, check whether outbound communication over ports 80 and 32526 is open in your local firewall on the VM. If this IP address is blocked, VM Agent may display unexpected behavior in a variety of scenarios.
-
-## Advanced troubleshooting
-
-Events for troubleshooting Azure VM Agent are recorded in the following log files:
-
-- C:\WindowsAzure\Logs\WaAppAgent.log
-- C:\WindowsAzure\Logs\TransparentInstaller.log
-
+## Common issues
 The following are some common scenarios in which Azure VM Agent can enter **Not ready** status or stop working as expected.
 
 <br/>
