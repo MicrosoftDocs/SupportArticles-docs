@@ -330,7 +330,7 @@ The central certificate store can't be used in your current configuration.
 
 **Resolution**
 
-You need to make sure that you are using IIS 8 or later. If you are running *msdeploy.exe* on a 64-bit server, make sure that you are using the 64-bit version of the executable.
+You need to make sure that you're using IIS 8 or later. If you're running *msdeploy.exe* on a 64-bit server, make sure that you're using the 64-bit version of the executable.
 
 <a id="ERROR_CENTRAL_CERT_STORE_NOT_CONFIGURED_PROPERLY"></a>
 
@@ -342,7 +342,7 @@ The Centralized SSL Certificate Store is either not installed or set up properly
 
 **Resolution**
 
-Verify that the server you are syncing to or from is running IIS 8 or later. Also verify that the Centralized SSL Certificate Store is installed and configured on that server.
+Verify that the server you're syncing to or from is running IIS 8 or later. Also verify that the Centralized SSL Certificate Store is installed and configured on that server.
 
 <a id="ERROR_MISSING_REQUIRED_DEPENDENCIES"></a>
 
@@ -354,7 +354,7 @@ The AppHostAuthOverride provider requires IIS 7 or later.
 
 **Resolution**
 
-Make sure that the destination server you are modifying is running IIS 7 or later.
+Make sure that the destination server you're modifying is running IIS 7 or later.
 
 <a id="ERROR_COULD_NOT_CONNECT_TO_REMOTESVC"></a>
 
@@ -378,7 +378,7 @@ Ensure that:
 
 **Diagnosis**
 
-The `ERROR\_FRAMEWORK\_VERSIONS\_DO\_NOT\_MATCH` error can occur if you are doing a web server sync between two machines that have different versions of .Net installed.
+The ERROR\_FRAMEWORK\_VERSIONS\_DO\_NOT\_MATCH error can occur if you're doing a web server sync between two machines that have different versions of .Net installed.
 
 **Resolution**
 
@@ -424,7 +424,7 @@ The provider path is invalid.
 
 **Resolution**
 
-The path for your provider may differ depending on the provider you use. Visit https://technet.microsoft.com/library/dd569040(WS.10).aspx to know more about the provider you are using.
+The path for your provider may differ depending on the provider you use. Visit https://technet.microsoft.com/library/dd569040(WS.10).aspx to know more about the provider you're using.
 
 <a id="ERROR_INVALID_SETTING_SPECIFIED"></a>
 
@@ -436,7 +436,7 @@ The provider setting specified is invalid.
 
 **Resolution**
 
-Visit [Technet](https://technet.microsoft.com/library/dd569040(WS.10).aspx) to know more about the provider you are using.
+Visit [Technet](https://technet.microsoft.com/library/dd569040(WS.10).aspx) to know more about the provider you're using.
 
 <a id="ERROR_INVALID_SETTING_VALUE_SPECIFIED"></a>
 
@@ -448,7 +448,7 @@ The provider setting value is invalid.
 
 **Resolution**
 
-Visit [Technet](https://technet.microsoft.com/library/dd569040(WS.10).aspx) to know more about the provider you are using.
+Visit [Technet](https://technet.microsoft.com/library/dd569040(WS.10).aspx) to know more about the provider you're using.
 
 <a id="ERROR_SNI_BINDINGS_NOT_SUPPORTED"></a>
 
@@ -501,9 +501,9 @@ Web Deploy failed to create a new backup on the destination server.
 
 Verify that:
 
-- If you are doing an `appHostConfig` provider sync, that the path for the provider isn't empty.
+- If you're doing an `appHostConfig` provider sync, that the path for the provider isn't empty.
 - If there are multiple providers in a manifest that uses virtual paths, ensure that all paths point to the same application.
-- If you are performing a manual backup, ensure that the feature is turned ON in the server backup settings.
+- If you're performing a manual backup, ensure that the feature is turned ON in the server backup settings.
 - Check the server event logs if the error message returned to the client doesn't contain the required information.
 
 <a id="ERROR_SETTING_IS_READ_ONLY"></a>
@@ -512,7 +512,7 @@ Verify that:
 
 **Diagnosis**
 
-The backup setting that you are trying to set is marked as read only and can't be set.
+The backup setting that you're trying to set is marked as read only and can't be set.
 
 **Resolution**
 
@@ -528,7 +528,7 @@ A destination file can't be overwritten or deleted because it is currently in us
 
 **Resolution**
 
-Make sure that the destination file isn't in use before performing a sync. If you are syncing content to a web site hosted on IIS 7 or later (using the `appHostConfig`, `iisApp`, or `contentPath` providers), consider taking the application offline during the sync by enabling the `appOffline` rule.
+Make sure that the destination file isn't in use before performing a sync. If you're syncing content to a web site hosted on IIS 7 or later (using the `appHostConfig`, `iisApp`, or `contentPath` providers), consider taking the application offline during the sync by enabling the `appOffline` rule.
 
 You can configure the `appOffline` rule in the publishing profile (*.pubxml*). Add the `EnableMSDeployAppOffline` element to the `PropertyGroup` like this:
 
@@ -568,7 +568,7 @@ Web Deploy failed to perform a sync using SQL Dedicated Administrator Connection
 
 **Resolution**
 
-Ensure that the server making the SQL connection using DAC has .Net 4.0 installed. If you are connecting using the *msdeploy.exe* client, ensure that it has .Net 4.0 listed as its first option in the *msdeploy.exe* config file. If you're connecting to the `msdepsvc` server endpoint (Web Deployment Agent service), ensure that it has .Net 4.0 listed as its first option in the `msdepsvc.exe` config file.
+Ensure that the server making the SQL connection using DAC has .Net 4.0 installed. If you're connecting using the *msdeploy.exe* client, ensure that it has .Net 4.0 listed as its first option in the *msdeploy.exe* config file. If you're connecting to the `msdepsvc` server endpoint (Web Deployment Agent service), ensure that it has .Net 4.0 listed as its first option in the `msdepsvc.exe` config file.
 
 <a id="ERROR_MAX_NUM_APPLICATIONS_EXCEEDED"></a>
 
@@ -658,7 +658,7 @@ The error codes `ERROR\_SMO\_NEEDED\_FOR\_SQL\_PROVIDER`, `ERROR\_USER\_NOT\_AUT
 
 **Diagnosis**
 
-SQL Shared Management Objects (SMO) was not found or the installed version is too old.
+SQL Shared Management Objects (SMO) wasn't found or the installed version is too old.
 
 **Resolution**
 
