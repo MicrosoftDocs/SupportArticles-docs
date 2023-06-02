@@ -448,7 +448,7 @@ The provider setting value is invalid.
 
 **Resolution**
 
-Visit [Technet](https://technet.microsoft.com/library/dd569040(WS.10).aspx) to know more about the provider you're using.
+See [Technet](https://technet.microsoft.com/library/dd569040(WS.10).aspx) to know more about the provider you're using.
 
 <a id="ERROR_SNI_BINDINGS_NOT_SUPPORTED"></a>
 
@@ -501,9 +501,9 @@ Web Deploy failed to create a new backup on the destination server.
 
 Verify that:
 
-- If you're doing an `appHostConfig` provider sync, that the path for the provider isn't empty.
-- If there are multiple providers in a manifest that uses virtual paths, ensure that all paths point to the same application.
-- If you're performing a manual backup, ensure that the feature is turned ON in the server backup settings.
+- If you're doing an `appHostConfig` provider sync, make sure that the path for the provider isn't empty.
+- If there are multiple providers in a manifest that uses virtual paths, make sure that all paths point to the same application.
+- If you're performing a manual backup, make sure that the feature is turned ON in the server backup settings.
 - Check the server event logs if the error message returned to the client doesn't contain the required information.
 
 <a id="ERROR_SETTING_IS_READ_ONLY"></a>
@@ -548,7 +548,7 @@ Web Deploy wasn't able to remove the *app_offline.htm* file from the site after 
 
 **Resolution**
 
-You may either rerun the sync with the `appOffline` rule enabled, or manually delete the `app\_offline.htm` file from the root of your site on the destination server. For details on the reason for the failure, check the server event logs.
+You may either rerun the sync with the `appOffline` rule enabled, or manually delete the *app_offline.htm* file from the root of your site on the destination server. For details on the reason for the failure, check the server event logs.
 
 You can configure the `appOffline` rule in the publishing profile (*.pubxml*). Add the `EnableMSDeployAppOffline` element to the `PropertyGroup` like this:
 
