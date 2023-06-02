@@ -10,7 +10,7 @@ ms.reviewer: johnhart, riande
 
 _Applies to:_ &nbsp; Internet Information Services 7.0 and later versions
 
-Failed Request Tracing is a powerful tool for troubleshooting request-processing failures in IIS 7.0 and later versions. This article provides steps to enable Failed Request Tracing rules to debug failures and trace steps in Application Request Routing. For more information about Failed Request Tracing rules, see [Troubleshoot failed requests using tracing in IIS 7](troubleshoot-failed-requests-using-tracing-in-iis-7.md).
+Failed Request Tracing is a powerful tool for troubleshooting request-processing failures in IIS 7.0 and later versions. This article provides steps to enable Failed Request Tracing rules to debug failures and trace steps in Application Request Routing. For more information about Failed Request Tracing rules, see [Troubleshoot failed requests using tracing in IIS 8.5](/iis/troubleshoot/using-failed-request-tracing/troubleshooting-failed-requests-using-tracing-in-iis-85).
 
 ## Goal
 
