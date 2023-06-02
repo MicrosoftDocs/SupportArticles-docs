@@ -424,7 +424,7 @@ The provider path is invalid.
 
 **Resolution**
 
-The path for your provider may differ depending on the provider you use. See [Web Deploy Providers](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd569040(v=ws.10)) to know more about the provider you're using.
+The path for your provider may differ depending on the provider you use. See [Web Deploy Providers](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd569040(v=ws.10)) to know more about the provider you're using.
 
 <a id="ERROR_INVALID_SETTING_SPECIFIED"></a>
 
@@ -436,7 +436,7 @@ The provider setting specified is invalid.
 
 **Resolution**
 
-See [Web Deploy Providers](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd569040(v=ws.10)) to know more about the provider you're using.
+See [Web Deploy Providers](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd569040(v=ws.10)) to know more about the provider you're using.
 
 <a id="ERROR_INVALID_SETTING_VALUE_SPECIFIED"></a>
 
