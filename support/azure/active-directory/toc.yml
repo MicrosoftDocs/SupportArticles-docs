@@ -285,6 +285,8 @@
     href: cannot-run-scripts-powershell.md
   - name: Separate passwords required
     href: separate-pwds-required-computer-work-account.md
+  - name: Size limit was exceeded
+    href: size-limit-exceeded.md
   - name: Slow performance and high CPU usage
     href: slow-performance-high-cpu-usage.md
   - name: Troubleshoot Azure AD Connect version upgrading issues

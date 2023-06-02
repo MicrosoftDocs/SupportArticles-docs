@@ -1146,7 +1146,7 @@
       href: ./user-profiles-and-logon/roaming-profile-was-not-completely-synchronized-error.md
     - name: Renaming user account doesn't change profile path
       href: ./user-profiles-and-logon/renaming-user-account-not-change-profile-path.md
-  - name: HELLO-FOR-BUSINESS
+  - name: Windows Hello for Business
     items:
     - name: Event ID 300 - Windows Hello successfully created in Windows 10
       href: ./user-profiles-and-logon/event-id-300-windows-hello-successfully-created-in-windows-10.md

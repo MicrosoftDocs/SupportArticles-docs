@@ -447,6 +447,10 @@
 
 - name: Disk management
   items:
+  - name: Resizing disks
+    items:
+      - name: Downsize a data disk without losing data
+        href: downsize-data-disk-without-losing-data.md
   - name: Overview
     href: /azure/virtual-machines/managed-disks-overview?context=/troubleshoot/azure/virtual-machines/context/context
   - name: FAQ
