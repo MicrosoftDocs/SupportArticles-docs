@@ -358,6 +358,78 @@ The solution is to set Enable64Bit key to 1 - and reboot the VM.
 
 <br/>
 
+
+### Windows Guest Agent not starting with ConfigurationErrorsException / TypeInitializationException
+
+You notice that the Guest Agent is crashing on startup and the Application event log shows the following:
+
+```Log sample
+og Name:      Application
+Source:        .NET Runtime
+Date:          3/7/2023 10:25:59 AM
+Event ID:      1026
+Task Category: None
+Level:         Error
+Keywords:      Classic
+User:          N/A
+Computer:      vm372437823
+Description:
+Application: WindowsAzureGuestAgent.exe
+Framework Version: v4.0.30319
+Description: The process was terminated due to an unhandled exception.
+Exception Info: System.Configuration.ConfigurationErrorsException
+   at System.Configuration.ConfigurationSchemaErrors.ThrowIfErrors(Boolean)
+   at System.Configuration.BaseConfigurationRecord.ThrowIfParseErrors(System.Configuration.ConfigurationSchemaErrors)
+   at System.Configuration.ClientConfigurationSystem.EnsureInit(System.String)
+
+Exception Info: System.Configuration.ConfigurationErrorsException
+   at System.Configuration.ClientConfigurationSystem.EnsureInit(System.String)
+   at System.Configuration.ClientConfigurationSystem.PrepareClientConfigSystem(System.String)
+   at System.Configuration.ClientConfigurationSystem.System.Configuration.Internal.IInternalConfigSystem.GetSection(System.String)
+   at System.Configuration.ConfigurationManager.GetSection(System.String)
+   at System.Configuration.PrivilegedConfigurationManager.GetSection(System.String)
+   at System.Diagnostics.DiagnosticsConfiguration.GetConfigSection()
+   at System.Diagnostics.DiagnosticsConfiguration.Initialize()
+   at System.Diagnostics.DiagnosticsConfiguration.get_IndentSize()
+   at System.Diagnostics.TraceInternal.InitializeSettings()
+   at System.Diagnostics.Trace.set_AutoFlush(Boolean)
+   at Microsoft.WindowsAzure.GuestAgent.Prime.TraceManager..cctor()
+
+Exception Info: System.TypeInitializationException
+   at Microsoft.WindowsAzure.GuestAgent.Prime.TraceManager.Write(System.String, System.Object[])
+   at Microsoft.WindowsAzure.GuestAgent.AgentCore.AgentCore.Start()
+   at System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object, Boolean)
+   at System.Threading.ExecutionContext.Run(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object, Boolean)
+   at System.Threading.ExecutionContext.Run(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object)
+   at System.Threading.ThreadHelper.ThreadStart()
+```
+
+**Analysis**
+
+This may occurr if the **C:\Windows\Microsoft.NET\Framework\v4.0.30319\Config\machine.config** file is missing or is corrupted.
+
+
+
+**Solution**
+
+Take the file from a working VM, and copy it in the folder C:\Windows\Microsoft.NET\Framework\v4.0.30319\Config.
+
+Restart the guest agent services:
+
+```
+net stop Rdagent
+net stop WindowsAzureGuestAgent
+
+net start Rdagent
+net start WindowsAzureGuestAgent
+```
+
+
+<br/>
+
+
+
+
 ## Next steps
 
 Other known issues with the Azure VM Agent are listed in its [GitHub repository](https://github.com/Azure/WindowsVMAgent/wiki/Known-Issues).
