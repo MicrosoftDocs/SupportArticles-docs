@@ -35,6 +35,8 @@ items:
   href: cannot-access-site-using-https.md
 - name: Time-taken field in IIS HTTP logging
   href: time-taken-field-http-log.md
+- name: Troubleshoot HTTP 400 errors in IIS
+  href: troubleshoot-http-400-errors-in-iis.md
 - name: Troubleshoot ARR using Failed Request Tracing rules
   href: troubleshoot-arr-using-frt-rules.md
 - name: Troubleshoot high CPU usage in an IIS 7x app pool
