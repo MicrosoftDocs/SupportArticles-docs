@@ -28,15 +28,11 @@ After Azure VM Agent is successfully installed, you can see following services l
 > [!NOTE]
 > Starting in version 2.7.41491.971 of the VM Guest Agent, the Telemetry component is included in the Windows Azure Guest Agent service, Therefore, you might not see this Telemetry service listed in newly created VMs.
 
-## Checking agent status and version
-
-Go to the VM properties page in Azure portal, and check the **Agent status**. If the Azure VM Agent is working correctly, the status shows **Ready**. If VM Agent is in **Not Ready** status, the extensions and **Run command** on the Azure portal won’t work.
-
 ## Troubleshooting VM Guest Agent issues
 The Azure VM Guest Agent needs to be installed and working properly for any VM Extension to run. If you see that the Guest Agent is 'Not ready' or if an extension is failing with an error message such as 'VMAgentStatusCommunicationError' then please reference the following steps to begin troubleshooting the Azure VM Guest Agent.
 
 ### Check if the VM is started
-Ensure that the VM is started and that the Operating System is completely booted up and running properly.
+Ensure that the VM is Started and that the Operating System is completely booted up and running properly.
 
 ### Is the Guest Agent 'Ready'
 Select your VM in the Azure Portal, in the Overview pane, under Properties, check the 'Agent status' and 'Agent version' property
@@ -44,9 +40,9 @@ Select your VM in the Azure Portal, in the Overview pane, under Properties, chec
 
 If it is 'Ready' then confirm you are at or above the [minimum supported version.](https://learn.microsoft.com/en-US/troubleshoot/azure/virtual-machines/support-extensions-agent-version)
 
-If the Guest Agent is 'Ready' and you are having an issue with a VM Extension please see here https://learn.microsoft.com/en-us/azure/virtual-machines/extensions/overview 
+If the Guest Agent is 'Ready' and you are having an issue with a VM Extension please continue here https://learn.microsoft.com/en-us/azure/virtual-machines/extensions/overview.
 
-If it is not ready or blank then either the Guest Agent is not installed or it is not working correctly.
+If it is not ready or blank, then either the Guest Agent is not installed or it is not working correctly.
 
 ### Check whether the Guest Agent services are running
 
@@ -58,10 +54,9 @@ Each of the above services needs to be 'Running' and the Startup type should be 
 [Image]
 
 
-If the services don't exist then the Guest Agent most likely isn't installed and you can reference the following links for steps to install the Guest Agent by downloading/installing the latest .MSI installer- [Windows installion steps](https://learn.microsoft.com/en-us/azure/virtual-machines/extensions/agent-windows#manual-installation)
+If the services don't exist then the Guest Agent most likely isn't installed and you can reference the following link for steps to install the Guest Agent by [downloading/installing the latest .MSI installer](https://learn.microsoft.com/en-us/azure/virtual-machines/extensions/agent-windows#manual-installation).
 
 Before installing please check the prerequisites here - https://learn.microsoft.com/en-us/azure/virtual-machines/extensions/agent-windows#prerequisites
-
 
 ### Test Wireserver connectivity
 The Guest Agent requires connectivity to 168.63.129.16 on ports 80 and 32526 in order to function properly. Reference the steps in the following link to [test connectivity.](https://learn.microsoft.com/en-us/azure/virtual-network/what-is-ip-address-168-63-129-16#troubleshoot-connectivity)
