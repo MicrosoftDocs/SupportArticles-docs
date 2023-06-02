@@ -1,7 +1,7 @@
 ---
 title: Modern, Inbox, and Microsoft Store Apps troubleshooting guidance
 description: Provides guidance to troubleshoot Modern, Inbox, and Microsoft Store Apps.
-ms.date: 05/22/2023
+ms.date: 06/02/2023
 author: v-lianna
 ms.author: v-lianna
 manager: dcscontentpm
@@ -14,6 +14,9 @@ ms.reviewer: kaushika, warrenw, traceytu, iovoicul, kimberj
 localization_priority: medium
 ---
 # Modern, Inbox, and Microsoft Store Apps troubleshooting guidance
+
+> [!NOTE]
+> This article is intended for use by support agents and IT professionals. If you're looking for more general information, see [Repair apps and programs in Windows](https://support.microsoft.com/windows/repair-apps-and-programs-in-windows-e90eefe4-d0a2-7c1b-dd59-949a9030f317).
 
 Modern Apps or Microsoft Store Apps can sometimes fail to start or launch and then stop responding. This guide discusses troubleshooting techniques that you can use to troubleshoot such issues.
 
