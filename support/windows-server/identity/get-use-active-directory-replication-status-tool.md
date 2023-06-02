@@ -15,6 +15,9 @@ ms.technology: windows-server-active-directory
 ---
 # How to get and use the Active Directory Replication Status Tool
 
+NOTE: As of June 2nd, 2023, the Active Directory Replication Status Tool is no longer available for download. The following article is provided for historical purposes only.
+
+
 This article introduces the Active Directory Replication Status Tool ([ADREPLSTATUS](https://www.microsoft.com/download/details.aspx?id=30005)). This tool helps administrators identify, prioritize, and fix Active Directory replication errors on a single domain controller (DC) or an all DCs that are in an Active Directory domain or forest.
 
 _Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
