@@ -448,7 +448,7 @@ The provider setting value is invalid.
 
 **Resolution**
 
-See [Technet](https://technet.microsoft.com/library/dd569040(WS.10).aspx) to know more about the provider you're using.
+See [Web Deploy Providers](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd569040(v=ws.10)) to know more about the provider you're using.
 
 <a id="ERROR_SNI_BINDINGS_NOT_SUPPORTED"></a>
 
