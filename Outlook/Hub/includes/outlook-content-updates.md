@@ -2,6 +2,14 @@
 
 
 
+## Week of May 29, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 5/30/2023 | [Outlook performance issues in a Cached Exchange Mode .ost or .pst file](/outlook/troubleshoot/performance/performance-issues-if-too-many-items-or-folders) | modified |
+
+
 ## Week of May 22, 2023
 
 
