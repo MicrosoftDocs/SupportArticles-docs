@@ -17,9 +17,9 @@ _Original KB number:_ &nbsp; 231619
 
 ## Introduction
 
-This article describes the SQLIOSim tool. You can use SQLIOSim to perform reliability and integrity tests on disk subsystems that SQL Server utilizes. These SQLIOSim tests simulate read, write, checkpoint, backup, sort, and read-ahead activities that Microsoft SQL Server does. The SQLIOSim utility performs this simulation independent of the SQL Server engine. For more information about SQL Server I/O patterns, see [SQL Server I/O Basics, Chapter 2](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10)).
+This article describes the SQLIOSim tool. You can use SQLIOSim to perform reliability and integrity tests on disk subsystems that SQL Server utilizes. These SQLIOSim tests simulate read, write, checkpoint, backup, sort, and read-ahead activities that Microsoft SQL Server does. The SQLIOSim utility performs this simulation independently of the SQL Server engine. For more information about SQL Server I/O patterns, see [SQL Server I/O Basics, Chapter 2](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10)).
 
-The primary goal of the I/O simulation tests is to ensure reliability of the underlying I/O subsystem before your SQL Server starts using it. SQLIOSim doesn't interact with SQL Server and doesn't even require SQL Server to be running. In fact, in most cases, you can use SQLIOSim to avoid competition for I/O throughput when SQL Server isn't running. Be very careful not to point to or use the actual SQL Server database files in your SQLIOSim test because you can overwrite them.
+The primary goal of the I/O simulation tests is to ensure the reliability of the underlying I/O subsystem before your SQL Server starts using it. SQLIOSim doesn't interact with SQL Server and doesn't even require SQL Server to be running. In fact, in most cases, you can use SQLIOSim to avoid competition for I/O throughput when SQL Server isn't running. Be very careful not to point to or use the actual SQL Server database files in your SQLIOSim test because you can overwrite them.
 
 To help maintain appropriate data integrity, we recommend that you perform stress tests of your I/O subsystem before you deploy SQL Server on new hardware. The SQLIOSim utility simulates the read patterns, the write patterns, and the problem identification techniques of SQL Server. To perform these tasks, the SQLIOSim utility simulates the user activity and the system activity of a SQL Server system.
 
@@ -33,9 +33,9 @@ The SQLIOSim utility replaces the SQLIOStress utility. The SQLIOStress utility w
 
 ## SQLIOSim location
 
-In the past, SQLIOSim was shipped as a separate download package. Starting with SQL Server 2008, SQLIOSim is included in the SQL Server product installation. When you install SQL Server, you can find the SQLIOSim tool in the *\\Binn* folder of your SQL Server installation. We recommend that you use this updated versions of the tool to simulate the IO activity on the disk subsystem.
+In the past, SQLIOSim was shipped as a separate download package. Starting with SQL Server 2008, SQLIOSim is included in the SQL Server product installation. When you install SQL Server, you can find the SQLIOSim tool in the *\\Binn* folder of your SQL Server installation. We recommend that you use this updated version of the tool to simulate the IO activity on the disk subsystem.
 
-There are three files that are part of the SQLIOSim package. Two of them are optional, depending on whether you use the GUI or the command line version. The *\\Binn* folder contains two executable files, *SQLIOSim.com* and *SQLIOSim.exe*. Both executable files provide identical simulation capabilities.
+Three files are part of the SQLIOSim package. Two are optional, depending on whether you use the GUI or the command line version. The *\\Binn* folder contains two executable files, *SQLIOSim.com* and *SQLIOSim.exe*. Both executable files provide identical simulation capabilities.
 
 - *SQLIOSim.com* is a command-line tool. You can configure it to run without user interaction. To do this configuration, you can use command-line parameters, a configuration file, or a combination of both of these methods.
 - *SQLIOSim.exe* is a graphical (GUI) application that accepts no command-line parameters. However, *SQLIOSim.exe* loads default configuration data from configuration files.
@@ -43,11 +43,11 @@ There are three files that are part of the SQLIOSim package. Two of them are opt
 
 ### Use SQLIOSim on a machine without SQL Server
 
-We recommend that you use SQLIOSim for an extended test on a machine before you start using or even before you install SQL Server. This may help test the I/O subsystem where you plan to place data and log files in the future and ensure the I/O subsystem's reliability. To accomplish this task, you may consider copying the three SQLIOSim files from a machine where SQL Server is installed and run the tests prior to a SQL Server installation. Copy *SQLIOSim.com*, *SQLIOSim.exe*, and optionally one or more of the configuration files if you plan to use preconfigured settings. Then run the test simulation on that machine.
+We recommend that you use SQLIOSim for an extended test on a machine before you start using it or even before you install SQL Server. This may help test the I/O subsystem where you plan to place data and log files in the future and ensure the I/O subsystem's reliability. To accomplish this task, consider copying the three SQLIOSim files from a machine where SQL Server is installed and run the tests prior to a SQL Server installation. Copy *SQLIOSim.com*, *SQLIOSim.exe*, and optionally one or more of the configuration files if you plan to use preconfigured settings. Then run the test simulation on that machine.
 
 ## How to use SQLIOSim
 
-You don't need the SQL Server service running while you're running SQLIOSim. In fact, we recommend that you don't run SQL Server while SQLIOSim is running as they can compete for I/O resources.
+You don't need the SQL Server service running while you're running SQLIOSim. In fact, we recommend that you don't run SQL Server while SQLIOSim is running, as they can compete for I/O resources.
 
 > [!WARNING]  
 > Don't specify the actual SQL Server database files for testing. The SQLIOSim utility will overwrite the data with random test patterns, and your actual SQL Server data will be lost.
@@ -59,12 +59,12 @@ The next few examples illustrate how to run SQLIOSim using the GUI and command l
 1. Go to *C:\\Program Files\\Microsoft SQL Server\\MSSQLXX.\<InstanceName\>\\MSSQL\\Binn*.
 1. Start the *SQLIOSIM.EXE* application. You can see the **Files and Configuration** window, which contains some default settings. You can modify these settings to match your configuration needs.
 
-   :::image type="content" source="media/sqliosim/sqliosim-files-and-configuration.png" alt-text="Screenshot of file configuration." lightbox="media/sqliosim/sqliosim-files-and-configuration.png":::
+   :::image type="content" source="media/sqliosim/sqliosim-files-and-configuration.png" alt-text="Screenshot that shows the file configuration." lightbox="media/sqliosim/sqliosim-files-and-configuration.png":::
 
 1. Highlight the first *mdx* file *C:\\temp\\sqliosim\\sqliosim.mdx* in the list. This file is the equivalent of a data file.
 1. Modify the file settings by changing its location, size, max size, or increment. Keep the **Log File** unchecked as you want to simulate a data file. Then select the **Apply** button.
 
-   :::image type="content" source="media/sqliosim/sqliosim-modify-data-file.png" alt-text="Screenshot of data file configuration." lightbox="media/sqliosim/sqliosim-modify-data-file.png":::
+   :::image type="content" source="media/sqliosim/sqliosim-modify-data-file.png" alt-text="Screenshot that shows the data file configuration." lightbox="media/sqliosim/sqliosim-modify-data-file.png":::
 
    The example shows the location of the file is changed to *D:\temp\sqliosim\sqliosim.mdx*, its size is set to 2,048 MB, its max size is set to 4,096 MB, and its increment size is set to 64 MB.
 
@@ -77,15 +77,15 @@ The next few examples illustrate how to run SQLIOSim using the GUI and command l
    :::image type="content" source="media/sqliosim/sqliosim-add-new-file.png" alt-text="Screenshot of adding a new test file." lightbox="media/sqliosim/sqliosim-add-new-file.png":::
 
 1. Once you're satisfied with your configuration, select the **OK** button.
-1. Select **Simulator** > **Start** to run the SQL IO simulation. Alternatively, you can select <kbd>F12</kbd>, or you can select the left-most button with a green circle inside it.
+1. Select **Simulator** > **Start** to run the SQL IO simulation. Alternatively, you can select <kbd>F12</kbd>, or you can select the leftmost button with a green circle inside it.
 
-   :::image type="content" source="media/sqliosim/sqliosim-start-simulation.png" alt-text="Screenshot of running SQLIOSim.":::
+   :::image type="content" source="media/sqliosim/sqliosim-start-simulation.png" alt-text="Screenshot that shows a running SQLIOSim.":::
 
 1. Wait for the simulation to complete and examine the output.
 
 ### Example 2
 
-1. Modify the *sqliosim.default.cfg.ini* file by removing the comments for `File1` and `File2` sections and modifying the `FileName` values to new SQLIOSim files. For example:
+1. Modify the *sqliosim.default.cfg.ini* file by removing the comments for the `File1` and `File2` sections and modifying the `FileName` values to new SQLIOSim files. For example:
 
    ```ini
    [File1]
