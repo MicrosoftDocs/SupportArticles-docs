@@ -35,11 +35,11 @@ What you can try:
 
 ---
 
-If the HTTP client is Internet Explorer, and the Show Friendly HTTP Error Messages option is turned off, the error may resemble the following:
+If the HTTP client is Internet Explorer, and the **Show Friendly HTTP Error Messages** option is turned off, the error may resemble:
 
 > Bad Request
 
-In these scenarios, IIS has rejected the client's HTTP request because the request did not meet the server's HTTP parsing rules, or it exceeded time limits, or failed some other rule that IIS or HTTP.sys require incoming requests to adhere to. IIS sends the HTTP 400 - Bad Request status back to the client, and then terminates the TCP connection.
+In these scenarios, IIS has rejected the client's HTTP request because the request didn't meet the server's HTTP parsing rules, or it exceeded time limits, or failed some other rule that IIS or HTTP.sys require incoming requests to adhere to. IIS sends the "HTTP 400 - Bad Request" status back to the client, and then terminates the TCP connection.
 
 ## Tools
 
@@ -48,23 +48,23 @@ In these scenarios, IIS has rejected the client's HTTP request because the reque
 
 ## Troubleshooting Methods
 
-When troubleshooting an HTTP 400 condition, it is important to remember that the underlying problem is that the client has sent a request to IIS that breaks one or more rules that HTTP.sys is enforcing. With that in mind, you will want to see exactly what the client is sending to IIS; to do this, capture a network trace of the client sending the bad request. You can analyze the trace to see the raw data that the client sends to IIS, and to see the raw response data that IIS sends back to the client. You can also use an HTTP sniffer tool called Fiddler; this is a great tool as it allows you to see the HTTP headers even if the client and server are communicating over SSL.
+When troubleshooting an HTTP 400 condition, it's important to remember that the underlying problem is that the client has sent a request to IIS that breaks one or more rules that HTTP.sys is enforcing. With that in mind, you'll want to see what exactly the client is sending to IIS. To do it, capture a network trace of the client sending the bad request. You can analyze the trace to see the raw data that the client sends to IIS, and to see the raw response data that IIS sends back to the client. You can also use an HTTP sniffer tool called Fiddler, a great tool as it allows you to see the HTTP headers even if the client and server are communicating over SSL.
 
-The next data item you will want to use is the _C:\Windows\System32\LogFiles\HTTPERR\httperr.log_ file. Beginning in IIS 6.0, the HTTP.sys component handles incoming HTTP requests before they are passed along to IIS, and is the component responsible for blocking requests that don't meet the IIS requirements. When HTTP.sys blocks the request, it will log information to its _httperr.log_ file concerning the bad request and why it was blocked.
+The next data item you use is the _C:\Windows\System32\LogFiles\HTTPERR\httperr.log_ file. Beginning in IIS 6.0, the HTTP.sys component handles incoming HTTP requests before they're passed along to IIS, and is the component responsible for blocking requests that don't meet the IIS requirements. When HTTP.sys blocks the request, it logs information to its _httperr.log_ file concerning the bad request and why it was blocked.
 
 **NOTE:** For more information on the HTTP API error logging that HTTP.sys provides, see [Error logging in HTTP API](../../aspnet/site-behavior-performance/error-logging-http-apis.md).
 
-It is technically possible, although not very likely, that a client will receive an HTTP 400 response which does not have an associated log entry in the _httperr.log_. This could happen if an ISAPI filter or extension or an HTTP module in IIS sets the 400 status, in which case you could look at the IIS log for more information. It could also happen if an entity between the client and the server, such as a proxy server or other network device, intercepts a response from IIS and overrides it with its own 400 status and/or &quot;Bad Request&quot; error.
+It's technically possible, although not very likely, that a client may receive an HTTP 400 response, which doesn't have an associated log entry in the _httperr.log_. It could happen if an ISAPI filter or extension or an HTTP module in IIS sets the 400 status, in which case you could look at the IIS log for more information. It could also happen if an entity between the client and the server, such as a proxy server or other network device, intercepts a response from IIS and overrides it with its own 400 status and/or "Bad Request" error.
 
 ## Sample Scenario
 
-Following is an example of an HTTP 400 scenario, where a client sends a bad request to IIS and the server sends back an HTTP 400 - Bad Request message.
+Following is an example of an HTTP 400 scenario, where a client sends a bad request to IIS and the server sends back an "HTTP 400 - Bad Request" message.
 
-When the client sends its request, the browser error it gets back looks like this:
+When the client sends its request, the browser error it gets back looks like:
 
 > Bad Request (Header Field Too Long)
 
-Capturing a network trace of the request and response, we see the following raw request/response:
+Capturing a network trace of the request and response, we see the following outputs:
 
 REQUEST:
 
@@ -95,7 +95,7 @@ HTTP: Content-Length =44
 HTTP: Data: Number of data bytes remaining = 63 (0x003F)
 ```
 
-You'll notice that the response headers don't tell us as much as the error message in the browser. However if we look at the raw data in the response body, we'll see more:
+You notice that the response headers don't tell us as much as the error message in the browser. However if we look at the raw data in the response body, we see more:
 
 ```output
 00000030                                           48 54               HT
@@ -125,25 +125,25 @@ The next step is to look at the _httperr.log_ file in the _C:\Windows\System32\L
 2012-11-14 20:36:36 HTTP/1.1 GET /1234567890/time.asp 400 FieldLength
 ```
 
-In this scenario, the Reason field in the _httperr.log_ file gives us the exact information we need to diagnose the problem. We see here that HTTP.sys logged FieldLength as the reason phrase for this request's failure. Once we know the reason phrase, check the table in [Kinds of errors that the HTTP API logs](../../aspnet/site-behavior-performance/error-logging-http-apis.md#kinds-of-errors-that-the-http-api-logs) section to get its description:
+In this scenario, the `Reason` field in the _httperr.log_ file gives us the exact information we need to diagnose the problem. We see that HTTP.sys logged `FieldLength` as the reason phrase for this request's failure. Once we know the reason phrase, check the table in [Kinds of errors that the HTTP API logs](../../aspnet/site-behavior-performance/error-logging-http-apis.md#kinds-of-errors-that-the-http-api-logs) section to get its description:
 
 > FieldLength: A field length limit was exceeded.
 
-So at this point we know from the browser error message and the HTTP API error logging that the request contained data in one of its HTTP headers that exceeded the allowable length limits. For the purpose of this example, the HTTP: Uniform Resource Identifier header is purposefully long: _/1234567890123456789012345678901234567890/time.asp_.
+So at this point we know from the browser error message and the HTTP API error logging that the request contained data in one of its HTTP headers that exceeded the allowable length limits. For this example, the `HTTP: Uniform Resource Identifier header` is purposefully long: _/1234567890123456789012345678901234567890/time.asp_.
 
-The final stage of troubleshooting this example is to see [the HTTP.sys registry keys and default settings for IIS](../iisadmin-service-inetinfo/httpsys-registry-windows.md)
+The final stage of troubleshooting this example is to check [the HTTP.sys registry keys and default settings for IIS](../iisadmin-service-inetinfo/httpsys-registry-windows.md)
 
-Since we know the reason phrase and error are suggesting a header field length exceeding limits, we can narrow our search in KB820129 as such. The prime candidate here is:
+Since we know the reason phrase and error are suggesting a header field length exceeding limits, we can narrow our search in the [Registry Keys]((../iisadmin-service-inetinfo/httpsys-registry-windows.md#registry-keys)) table as such. The prime candidate here is:
 
-MaxFieldLength: Sets an upper limit for each header. See MaxRequestBytes. This limit translates to approximately 32k characters for a URL.
+`MaxFieldLength`: Sets an upper limit for each header. See `MaxRequestBytes`. This limit translates to approximately 32k characters for a URL.
 
-To reproduce this error for this example, the MaxFieldLength registry key was set with a value of 2. Since the requested URL had a HTTP: Uniform Resource Identifier header field with more than 2 characters, the request was blocked with the FieldLength reason phrase.
+To reproduce this error for this example, the `MaxFieldLength` registry key was set with a value of _2_. Since the requested URL had a `HTTP: Uniform Resource Identifier header` field with more than two characters, the request was blocked with the `FieldLength` reason phrase.
 
 Another common HTTP 400 scenario is one where the user making the HTTP request is a member of a large number of Active Directory groups, and the web site is configured to user Kerberos authentication. When this occurs, an error message similar to the following will be displayed to the user:
 
 > Bad Request (Request Header Too Long)
 
-In this scenario, the authentication token that is included as part of the client's HTTP request is too big and exceeds size limits that http.sys is enforcing. This problem is discussed in detail, along with the solution, in [HTTP 400 - Bad Request (Request Header too long) responses to HTTP requests](../www-administration-management/http-bad-request-response-kerberos.md).
+In this scenario, the authentication token that is included as part of the client's HTTP request is too large and exceeds size limits that http.sys is enforcing. This problem is discussed in detail, along with the solution, in [HTTP 400 - Bad Request (Request Header too long) responses to HTTP requests](../www-administration-management/http-bad-request-response-kerberos.md).
 
 ## References
 
