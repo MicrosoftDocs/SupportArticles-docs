@@ -210,7 +210,7 @@ The SQLIOSim utility takes the values that you specify in the CONFIG section of 
 | `ScatterGather` | true | Use `ReadScatter` or `WriteGather` APIs | If this parameter is set to `true`, the `NoBuffering` parameter is also set to `true`.<br/><br/>SQL Server uses scatter/gather I/Os for most I/O requests. |
 | `ForceReadAhead` | true | Perform a read-ahead operation even if the data is already read | The SQLIOSim utility issues the read command even if the data page is already in the buffer pool.<br/><br/>Microsoft SQL Server Support has successfully used the true setting to expose I/O problems. |
 | `DeleteFilesAtStartup` | true | Delete files at startup if files exist | A file may contain multiple data streams. Only streams that are specified in the `File <N> FileName` entry are truncated in the file. If the default stream is specified, all streams are deleted. |
-| `DeleteFilesAtShutdown` | false | Delete files after the test is finished | A file may contain multiple data streams. Only data streams that you specify in the `File <N> FileName` entry are truncated in the file. If the default data stream is specified, the SQLIOSim utility deletes all data streams. |
+| `DeleteFilesAtShutdown` | false | Delete files after the test is finished | A file may contain multiple data streams. Only data streams you specify in the `File <N> FileName` entry are truncated in the file. If the default data stream is specified, the SQLIOSim utility deletes all data streams. |
 | `StampFiles` | false | Expand the file by stamping zeros | This process may take a long time if the file is large. If you set this parameter to false, the SQLIOSim utility extends the file by setting a valid data marker.<br/><br/>SQL Server 2005 uses the instant file initialization feature for data files. If the data file is a log file, or if instant file initialization isn't enabled, SQL Server performs zero stamping. Versions of SQL Server earlier than SQL Server 2000 always perform zero stamping.<br/><br/>You should switch the value of the `StampFiles` parameter during testing to make sure that both instant file initialization and zero stamping are operating correctly. |
 
 #### File\<N\> section
@@ -220,23 +220,23 @@ The SQLIOSim utility is designed to allow for multiple file testings. The `File<
 | Parameter | Default value | Description | Comments |
 | --- | --- | --- | --- |
 | `FileName` | **No default value** | File name and path | The `FileName` parameter can be a long path or a UNC path. It can also include a secondary stream name and type. For example, the `FileName` parameter may be set to `file.mdf:stream2`.<br/><br/>**NOTE** In SQL Server 2005, DBCC operations use streams. We recommend that you perform stream tests. |
-| `InitialSize` | **No default value** | Initial size in MB | If the existing file is larger than the value that is specified for the `InitialSize` parameter, the SQLIOSim utility doesn't shrink the existing file. If the existing file is smaller, the SQLIOSim utility expands the existing file. |
+| `InitialSize` | **No default value** | Initial size in MB | If the existing file is larger than the value specified for the `InitialSize` parameter, the SQLIOSim utility doesn't shrink the existing file. If the existing file is smaller, the SQLIOSim utility expands the existing file. |
 | `MaxSize` | **No default value** | Maximum size in MB | A file can't grow larger than the value that you specify for the `MaxSize` parameter. |
-| `Increment` | 0 | Size in MB of the increment by which the file grows or shrinks. For more information, see the `ShrinkUser` section part of this article. | The SQLIOSim utility adjusts the `Increment` parameter at startup so that the situation is established: `Increment * MaxExtents < MaxMemoryMB / NumberOfDataFiles`.<br/>If the value of `Increment` is `0`, the SQLIOSim utility sets the file as non-shrinkable. |
+| `Increment` | 0 | Size in MB of the increment by which the file grows or shrinks. For more information, see the `ShrinkUser` section of this article. | The SQLIOSim utility adjusts the `Increment` parameter at startup so that the situation is established: `Increment * MaxExtents < MaxMemoryMB / NumberOfDataFiles`.<br/>If the value of `Increment` is `0`, the SQLIOSim utility sets the file as non-shrinkable. |
 | `Shrinkable` | false | Indicates whether the file can be shrunk or expanded | If you set the `Increment` parameter to `0`, you set the file to be nonshrinkable. In this case, you must set the `Shrinkable` parameter to `false`. If you set the `Increment` parameter to a value other than `0`, you set the file to be shrinkable. In this case, you must set the `Shrinkable` parameter to `true`. |
-| `Sparse` | false | Indicates whether the Sparse attribute should be set on the files | For existing files, the SQLIOSim utility doesn't clear the Sparse attribute when you set the `Sparse` parameter to false.<br/><br/>SQL Server 2005 uses sparse files to support snapshot databases and the secondary DBCC streams.<br/><br/>We recommend that you enable both the sparse file and the streams, and then perform a test pass.<br/><br/>**NOTE** If you set `Sparse = true` for the file settings, don't specify `NoBuffering = false` in the `config` section. If you use these two conflicting combinations, you may receive an error that resembles the following from the tool:<br/><br/>Error:-=====Error: 0x80070467<br/>Error Text: While accessing the hard disk, a disk operation failed even after retries.<br/>Description: Buffer validation failed on C:\SQLIOSim.mdx Page: 28097 |
-| `LogFile` | false | Indicates whether a file contains user or transaction log data | You should define at least one-log file. |
+| `Sparse` | false | Indicates whether the Sparse attribute should be set on the files | For existing files, the SQLIOSim utility doesn't clear the Sparse attribute when you set the `Sparse` parameter to false.<br/><br/>SQL Server 2005 uses sparse files to support snapshot databases and the secondary DBCC streams.<br/><br/>We recommend that you enable both the sparse file and the streams and then perform a test pass.<br/><br/>**NOTE** If you set `Sparse = true` for the file settings, don't specify `NoBuffering = false` in the `config` section. If you use these two conflicting combinations, you may receive an error that resembles the following from the tool:<br/><br/>Error:-=====Error: 0x80070467<br/>Error Text: While accessing the hard disk, a disk operation failed even after retries.<br/>Description: Buffer validation failed on C:\SQLIOSim.mdx Page: 28097 |
+| `LogFile` | false | Indicates whether a file contains user or transaction log data | You should define at least one log file. |
 
 #### RandomUser section
 
-The SQLIOSim utility takes the values that you specify in the `RandomUser` section to simulate a SQL Server worker that is performing random query operations, such as Online Transaction Processing (OLTP) I/O patterns.
+The SQLIOSim utility takes the values you specify in the `RandomUser` section to simulate a SQL Server worker that's performing random query operations, such as Online Transaction Processing (OLTP) I/O patterns.
 
 | Parameter | Default value | Description | Comments |
 | --- | --- | --- | --- |
-| `UserCount` | -1 | Number of random access threads that are executing at the same time | The value can't exceed the value: `CPUCount*1023-100`.<br/>The total number of all users also can't exceed this value. A value of zero (0) means that you can't create random access users. A value of `-1` means that you must use the automatic configuration of the value: `min(CPUCount*2, 8)`.<br/>**NOTE** A SQL Server system may have thousands of sessions. Most of the sessions don't have active requests. Use the `count(*)` function in queries against the `sys.dm_exec_requests` dynamic management view (DMV) as a baseline for establishing this test parameter value.<br/><br/>`CPUCount` here refers to the value of the `CPUCount` parameter in the `CONFIG` section.<br/><br/>The `min(CPUCount*2, 8)` value results in the smaller of the values between `CPUCount*2` and `8`. |
+| `UserCount` | -1 | Number of random access threads that are executing at the same time | The value can't exceed the value: `CPUCount*1023-100`.<br/>The total number of all users also can't exceed this value. A value of zero (0) means you can't create random access users. A value of `-1` means that you must use the automatic configuration of the value: `min(CPUCount*2, 8)`.<br/>**NOTE** A SQL Server system may have thousands of sessions. Most of the sessions don't have active requests. Use the `count(*)` function in queries against the `sys.dm_exec_requests` dynamic management view (DMV) as a baseline for establishing this test parameter value.<br/><br/>`CPUCount` here refers to the value of the `CPUCount` parameter in the `CONFIG` section.<br/><br/>The `min(CPUCount*2, 8)` value results in the smaller of the values between `CPUCount*2` and `8`. |
 | `JumpToNewRegionPercentage` | 500 | The chance of a jump to a new region of the file | The start of the region is randomly selected. The size of the region is a random value between the value of the `MinIOChainLength` parameter and the value of the `MaxIOChainLength` parameter. |
 | `MinIOChainLength` | 1 | Minimum region size in pages | |
-| `MaxIOChainLength` | 100 | Maximum region size in pages | SQL Server 2005 Enterprise Edition and SQL Server 2000 Enterprise Edition can read ahead up to 1,024 pages.<br/><br/>The minimum value is `0`. The maximum value is limited by system memory.<br/><br/>Typically, random user activity causes small scanning operations to occur. Use the values that are specified in the `ReadAheadUser` section to simulate larger scanning operations. |
+| `MaxIOChainLength` | 100 | Maximum region size in pages | SQL Server 2005 Enterprise Edition and SQL Server 2000 Enterprise Edition can read ahead up to 1,024 pages.<br/><br/>The minimum value is `0`. The maximum value is limited by system memory.<br/><br/>Typically, random user activity causes small scanning operations to occur. Use the values specified in the `ReadAheadUser` section to simulate larger scanning operations. |
 | `RandomUserReadWriteRatio` | 9000 | Percentage of pages to be updated | A random-length chain is selected in the region and may be read. This parameter defines the percentage of the pages to be updated and written to disk. |
 | `MinLogPerBuffer` | 64 | Minimum log record size in bytes | The value must be either a multiple of the on-disk sector size or a size that fits evenly into the on-disk sector size. |
 | `MaxLogPerBuffer` | 8192 | Maximum log record size in bytes | This value can't exceed 64,000. The value must be a multiple of the on-disk sector size. |
@@ -245,7 +245,7 @@ The SQLIOSim utility takes the values that you specify in the `RandomUser` secti
 
 #### AuditUser section
 
-The SQLIOSim utility takes the values that you specify in the `AuditUser` section to simulate DBCC activity to read and to audit the information about the page. Validation occurs even if the value of the `UserCount` parameter is set to `0`.
+The SQLIOSim utility takes the values you specify in the `AuditUser` section to simulate DBCC activity to read and audit the information about the page. Validation occurs even if the value of the `UserCount` parameter is set to `0`.
 
 | Parameter | Default value | Description | Comments |
 | --- | --- | --- | --- |
@@ -256,11 +256,11 @@ The SQLIOSim utility takes the values that you specify in the `AuditUser` sectio
 
 #### ReadAheadUser section
 
-The SQLIOSim utility takes the values that are specified in the `ReadAheadUser` section to simulate SQL Server read-ahead activity. SQL Server takes advantage of read-ahead activity to maximize asynchronous I/O capabilities and to limit query delays.
+The SQLIOSim utility takes the values specified in the `ReadAheadUser` section to simulate SQL Server read-ahead activity. SQL Server takes advantage of read-ahead activity to maximize asynchronous I/O capabilities and to limit query delays.
 
 | Parameter | Default value | Description | Comments |
 | --- | --- | --- | --- |
-| `UserCount` | 2 | Number of read-ahead threads | The value can't exceed the following value: `CPUCount*1023-100`.<br/>The total number of all users also can't exceed this value. A value of `0` means that you can't create random access users. A value of `-1` means that you must use the automatic configuration of the following value: `min(CPUCount*2, 8)`.<br/>**NOTE** A SQL Server system may have thousands of sessions. Most of the sessions don't have active requests. Use the `count(*)` function in queries against the `sys.dm_exec_requests` DMV as a baseline for establishing this test parameter value.<br/><br/>`CPUCount` here refers to the value of the `CPUCount` parameter in the CONFIG section.<br/><br/>The `min(CPUCount*2, 8)` value results in the smaller of the values between `CPUCount*2` and `8`. |
+| `UserCount` | 2 | Number of read-ahead threads | The value can't exceed the following value: `CPUCount*1023-100`.<br/>The total number of all users also can't exceed this value. A value of `0` means that you can't create random access users. A value of `-1` means you must use the automatic configuration of the following value: `min(CPUCount*2, 8)`.<br/>**NOTE** A SQL Server system may have thousands of sessions. Most of the sessions don't have active requests. Use the `count(*)` function in queries against the `sys.dm_exec_requests` DMV as a baseline for establishing this test parameter value.<br/><br/>`CPUCount` here refers to the value of the `CPUCount` parameter in the CONFIG section.<br/><br/>The `min(CPUCount*2, 8)` value results in the smaller of the values between `CPUCount*2` and `8`. |
 | `BuffersRAMin` | 32 | Minimum number of pages to read per cycle | The minimum value is `0`. The maximum value is limited by system memory. |
 | `BuffersRAMax` | 64 | Maximum number of pages to read per cycle | SQL Server Enterprise editions can read up to 1,024 pages in a single request. If you install SQL Server on a computer that has lots of CPU, memory, and disk resources, we recommend that you increase the file size and the read-ahead size. |
 | `DelayAfterCycles` | 2 | Apply the `RADelay` parameter after the specified number of cycles is completed | |
@@ -284,8 +284,8 @@ The SQLIOSim utility takes the values that you specify in the `ShrinkUser` secti
 
 | Parameter | Default value | Description |
 | --- | --- | --- |
-| `MinShrinkInterval` | 120 | Minimum interval between shrink operations, in seconds |
-| `MaxShrinkInterval` | 600 | Maximum interval between shrink operations, in seconds |
+| `MinShrinkInterval` | 120 | Minimum interval between shrink operations in seconds |
+| `MaxShrinkInterval` | 600 | Maximum interval between shrink operations in seconds |
 | `MinExtends` | 1 | Minimum number of increments by which the SQLIOSim utility will grow or shrink the file |
 | `MaxExtends` | 20 | Maximum number of increments by which the SQLIOSim utility will grow or shrink the file |
 
@@ -295,7 +295,7 @@ The semicolon character (;) at the start of a line in the configuration *.ini* f
 
 ## File creation
 
-The SQLIOSim utility creates separate data files and log files to simulate the I/O patterns that SQL Server generates in its data file and in its log file. The SQLIOSim utility doesn't use the SQL Server engine to perform stress activity. Therefore, you can use the SQLIOSim utility to test a computer before you install SQL Server.
+The SQLIOSim utility creates separate data files and log files to simulate the I/O patterns that SQL Server generates in its data file and its log file. The SQLIOSim utility doesn't use the SQL Server engine to perform stress activity. Therefore, you can use the SQLIOSim utility to test a computer before you install SQL Server.
 
 When you run the SQLIOSim utility, make sure that you specify the same file location that you use for your SQL Server database files. When you do this, the utility simulates the same I/O path as your SQL Server database.
 
