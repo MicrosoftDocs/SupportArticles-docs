@@ -36,7 +36,8 @@ Ensure that the VM is Started and that the Operating System is completely booted
 
 ### Is the Guest Agent 'Ready'
 Select your VM in the Azure Portal, in the Overview pane, under Properties, check the 'Agent status' and 'Agent version' property
-[insert image]
+
+:::image type="content" source="media/windows-azure-guest-agent/GuestAgent_Portal_Status.png" alt-text="Screenshot of the Azure Portal showing the VM Guest Agent status." border="false":::
 
 If it is 'Ready' then confirm you are at or above the [minimum supported version.](https://learn.microsoft.com/en-US/troubleshoot/azure/virtual-machines/support-extensions-agent-version)
 
@@ -51,7 +52,7 @@ RDP into the VM, open services.msc, and check for the following 2 services:
 ```WindowsAzureGuestAgent```
 
 Each of the above services needs to be 'Running' and the Startup type should be set to 'Automatic'
-[Image]
+:::image type="content" source="media/windows-azure-guest-agent/GuestAgent_Checking_RdAgent_Service.png" alt-text="Screenshot showing the RdAgent servicve running and automatic." border="false":::
 
 
 If the services don't exist then the Guest Agent most likely isn't installed and you can reference the following link for steps to install the Guest Agent by [downloading/installing the latest .MSI installer](https://learn.microsoft.com/en-us/azure/virtual-machines/extensions/agent-windows#manual-installation).
