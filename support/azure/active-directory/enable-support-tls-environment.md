@@ -1,7 +1,7 @@
 ---
 title: Enable TLS 1.2 support as Azure AD TLS 1.0/1.1 is deprecated
 description: This article describes how to enable support for TLS 1.2 in your environment, in preparation for upcoming Azure AD TLS 1.0/1.1 deprecation.
-ms.date: 10/3/2022
+ms.date: 06/05/2023
 author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: dahans, abizerh
