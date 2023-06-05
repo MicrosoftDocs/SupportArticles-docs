@@ -48,7 +48,7 @@ If it is not ready or blank, then either the Guest Agent is not installed or it 
 ### Check whether the Guest Agent services are running
 
 RDP into the VM, open services.msc, and check for the following 2 services:  
-```RDAgent```
+```RDAgent```  
 ```WindowsAzureGuestAgent```
 
 Each of the above services needs to be 'Running' and the Startup type should be set to 'Automatic'
