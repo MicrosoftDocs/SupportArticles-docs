@@ -24,7 +24,7 @@ This walkthrough requires the following prerequisites:
 - Microsoft Application Request Routing and dependent modules.
 - Minimum of two application servers with working sites and applications.
 
-If Application Request Routing hasn't been installed, download from [Microsoft Application Request Routing 3.0 (x64)](https://www.microsoft.com/download/details.aspx?id=47333), and install it by following the steps outlined in [Install Application Request Routing](/iis/extensions/installing-application-request-routing-arr/install-application-request-routing).
+If Application Request Routing hasn't been installed, download it from the [Download Center](https://www.microsoft.com/download/details.aspx?id=47333), and install it by following the steps outlined in [Install Application Request Routing](/iis/extensions/installing-application-request-routing-arr/install-application-request-routing).
 
 Another prerequisite is that you have gone through [Using the Application Request Routing Module](/iis/extensions/planning-for-arr/using-the-application-request-routing-module) and have configured Application Request Routing. Application Request Routing should be in working order before proceeding with the following sections.
 
