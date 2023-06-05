@@ -1,6 +1,11 @@
 - name: Welcome
   href: welcome-azure-storage.yml
 
+- name: Azure Files
+  items:
+  - name: Troubleshoot Azure Files
+    href: files-troubleshoot.md
+
 - name: Blob Storage and Azure Data Lake Store Gen2
   items:
   - name: Azure Storage data protection, backup, and recovery
