@@ -46,7 +46,7 @@ In these scenarios, IIS has rejected the client's HTTP request because the reque
 - Network Monitor
 - HTTP Error logging
 
-## Troubleshooting Methods
+## Troubleshooting methods
 
 When troubleshooting an HTTP 400 condition, it's important to remember that the underlying problem is that the client has sent a request to IIS that breaks one or more rules that HTTP.sys is enforcing. With that in mind, you'll want to see what exactly the client is sending to IIS. To do it, capture a network trace of the client sending the bad request. You can analyze the trace to see the raw data that the client sends to IIS, and to see the raw response data that IIS sends back to the client. You can also use an HTTP sniffer tool called Fiddler, a great tool as it allows you to see the HTTP headers even if the client and server are communicating over SSL.
 
@@ -56,7 +56,7 @@ The next data item you use is the _C:\Windows\System32\LogFiles\HTTPERR\httperr.
 
 It's technically possible, although not very likely, that a client may receive an HTTP 400 response, which doesn't have an associated log entry in the _httperr.log_. It could happen if an ISAPI filter or extension or an HTTP module in IIS sets the 400 status, in which case you could look at the IIS log for more information. It could also happen if an entity between the client and the server, such as a proxy server or other network device, intercepts a response from IIS and overrides it with its own 400 status and/or "Bad Request" error.
 
-## Sample Scenario
+## Sample scenario
 
 Following is an example of an HTTP 400 scenario, where a client sends a bad request to IIS and the server sends back an "HTTP 400 - Bad Request" message.
 
