@@ -299,7 +299,7 @@ The SQLIOSim utility creates separate data files and log files to simulate the I
 
 When you run the SQLIOSim utility, make sure that you specify the same file location that you use for your SQL Server database files. When you do this, the utility simulates the same I/O path as your SQL Server database.
 
-You can enable the compress attribute or the encrypt attribute for the existing test files. You can also enable these attributes for the existing directory where the test files will be created. The corresponding options to enable these attributes are located in the **Properties** dialog box for a file or for a directory.
+You can enable the compress or encrypt attributes for the existing test files. You can also enable these attributes for the existing directory where the test files will be created. The corresponding options to enable these attributes are located in the **Properties** dialog box for a file or a directory.
 
 By default, the SQLIOSim utility creates test files that have the *.mdx* and *.ldx* file name extensions. Therefore, these files won't overwrite existing data and log files.
 
@@ -310,22 +310,22 @@ By default, the SQLIOSim utility creates test files that have the *.mdx* and *.l
 
 The SQLIOSim utility creates the error log file in one of the following locations:
 
-- The location that you specify in the log startup parameter.
+- The location that you specify in the log startup parameter
 - The location that you specify in the `ErrorFile=` line in the *Sqliosim.cfg.ini* file
 
-The *SQLIOSim.log.xml* error log contains details about the execution. These details include error information. Review the log carefully for error information and for warning information.
+The *SQLIOSim.log.xml* error log contains details about the execution. These details include error information. Review the log carefully for error information and warning information.
 
 > [!NOTE]  
-> If you experience an error in the SQLIOSim utility, we recommend that you ask your hardware manufacturer to help determine the root cause of the issue. The problem could also be caused by a device driver, file system filter driver (for example, anti-virus) or the OS.  
+> If you experience an error in the SQLIOSim utility, we recommend that you ask your hardware manufacturer to help determine the root cause of the issue. The problem could also be caused by a device driver, file system filter driver (for example, anti-virus), or the OS.  
 
 ## Multiple copies
 
 The SQLIOSim utility accommodates multiple-file-level testing and multiple-user-level testing. The SQLIOSim utility doesn't require multiple invocations. You can run multiple copies of the SQLIOSim utility if the following conditions are true:
 
 - All copies reference unique testing files per instance of the utility.
-- The `MaxMemoryMB` parameter of each instance provides for a non-overlapping memory region that is sufficient for each instance.
+- The `MaxMemoryMB` parameter of each instance provides for a non-overlapping memory region that's sufficient for each instance.
 
-The sum of the `MaxMemoryMB` parameter for each instance must be less than or equal to the total physical memory. Some testing phases, such as checkpoint simulation, can be memory-intensive and may create out-of-memory conditions when you run multiple copies. If you experience out-of-memory errors, you can reduce the number of utility copies that are running.
+The sum of the `MaxMemoryMB` parameter for each instance must be less than or equal to the total physical memory. Some testing phases, such as checkpoint simulation, can be memory-intensive and may create out-of-memory conditions when you run multiple copies. If you experience out-of-memory errors, you can reduce the number of utility copies running.
 
 ## References
 
