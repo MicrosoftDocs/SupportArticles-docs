@@ -83,7 +83,7 @@ The next few examples illustrate how to run SQLIOSim using the GUI and command l
 
 1. Wait for the simulation to complete and examine the output.
 
-### Example 2
+### Example 2: Use command-line tool and a configuration file 
 
 1. Modify the *sqliosim.default.cfg.ini* file by removing the comments for the `File1` and `File2` sections and modifying the `FileName` values to new SQLIOSim files. For example:
 
