@@ -68,7 +68,7 @@ The next few examples illustrate how to run SQLIOSim using the GUI and command l
 
    The example shows the location of the file is changed to *D:\temp\sqliosim\sqliosim.mdx*, its size is set to 2,048 MB, its max size is set to 4,096 MB, and its increment size is set to 64 MB.
 
-1. Modify the second file with *ldx* suffix. This file represents the equivalent of a transaction log file. Be sure to keep the **Log File** checkbox enabled. Select **Apply** when you're done.
+1. Modify the second file with the *ldx* suffix. This file represents the equivalent of a transaction log file. Be sure to keep the **Log File** checkbox enabled. Select **Apply** when you're done.
 
    :::image type="content" source="media/sqliosim/sqliosim-modify-log-file.png" alt-text="Screenshot of log file configuration." lightbox="media/sqliosim/sqliosim-modify-log-file.png":::
 
@@ -77,7 +77,7 @@ The next few examples illustrate how to run SQLIOSim using the GUI and command l
    :::image type="content" source="media/sqliosim/sqliosim-add-new-file.png" alt-text="Screenshot of adding a new test file." lightbox="media/sqliosim/sqliosim-add-new-file.png":::
 
 1. Once you're satisfied with your configuration, select the **OK** button.
-1. Select **Simulator** > **Start** to run the SQL IO simulation. Alternatively, you can select <kbd>F12</kbd>, or you can select the leftmost button with a green circle inside it.
+1. Select **Simulator** > **Start** to run the SQL IO simulation. Alternatively, you can select <kbd>F12</kbd> or the leftmost button with a green circle inside it.
 
    :::image type="content" source="media/sqliosim/sqliosim-start-simulation.png" alt-text="Screenshot that shows a running SQLIOSim.":::
 
@@ -223,7 +223,7 @@ The SQLIOSim utility is designed to allow for multiple file testings. The `File<
 | `InitialSize` | **No default value** | Initial size in MB | If the existing file is larger than the value specified for the `InitialSize` parameter, the SQLIOSim utility doesn't shrink the existing file. If the existing file is smaller, the SQLIOSim utility expands the existing file. |
 | `MaxSize` | **No default value** | Maximum size in MB | A file can't grow larger than the value that you specify for the `MaxSize` parameter. |
 | `Increment` | 0 | Size in MB of the increment by which the file grows or shrinks. For more information, see the `ShrinkUser` section of this article. | The SQLIOSim utility adjusts the `Increment` parameter at startup so that the situation is established: `Increment * MaxExtents < MaxMemoryMB / NumberOfDataFiles`.<br/>If the value of `Increment` is `0`, the SQLIOSim utility sets the file as non-shrinkable. |
-| `Shrinkable` | false | Indicates whether the file can be shrunk or expanded | If you set the `Increment` parameter to `0`, you set the file to be nonshrinkable. In this case, you must set the `Shrinkable` parameter to `false`. If you set the `Increment` parameter to a value other than `0`, you set the file to be shrinkable. In this case, you must set the `Shrinkable` parameter to `true`. |
+| `Shrinkable` | false | Indicates whether the file can be shrunk or expanded | If you set the `Increment` parameter to `0`, you set the file to be non-shrinkable. In this case, you must set the `Shrinkable` parameter to `false`. If you set the `Increment` parameter to a value other than `0`, you set the file to be shrinkable. In this case, you must set the `Shrinkable` parameter to `true`. |
 | `Sparse` | false | Indicates whether the Sparse attribute should be set on the files | For existing files, the SQLIOSim utility doesn't clear the Sparse attribute when you set the `Sparse` parameter to false.<br/><br/>SQL Server 2005 uses sparse files to support snapshot databases and the secondary DBCC streams.<br/><br/>We recommend that you enable both the sparse file and the streams and then perform a test pass.<br/><br/>**NOTE** If you set `Sparse = true` for the file settings, don't specify `NoBuffering = false` in the `config` section. If you use these two conflicting combinations, you may receive an error that resembles the following from the tool:<br/><br/>Error:-=====Error: 0x80070467<br/>Error Text: While accessing the hard disk, a disk operation failed even after retries.<br/>Description: Buffer validation failed on C:\SQLIOSim.mdx Page: 28097 |
 | `LogFile` | false | Indicates whether a file contains user or transaction log data | You should define at least one log file. |
 
