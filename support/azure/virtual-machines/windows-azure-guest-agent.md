@@ -52,6 +52,7 @@ RDP into the VM, open services.msc, and check for the following 2 services:
 ```WindowsAzureGuestAgent```
 
 Each of the above services needs to be 'Running' and the Startup type should be set to 'Automatic'
+
 :::image type="content" source="media/windows-azure-guest-agent/GuestAgent_Checking_RdAgent_Service.png" alt-text="Screenshot showing the RdAgent servicve running and automatic." border="false":::
 
 
