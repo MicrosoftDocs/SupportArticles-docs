@@ -183,7 +183,7 @@ There are several sections in the configuration file:
 - [[AuditUser]](#audituser-section)
 - [[ReadAheadUser]](#readaheaduser-section)
 - [[BulkUpdateUser]](#bulkupdateuser-section)
-- [[ShrinkUser]`](#shrinkuser-section)
+- [[ShrinkUser]](#shrinkuser-section)
 - [[File\<N\>]](#filen-section) (the placeholder `<N>` is a number)
 
 Each of these sections is described in the following section.
@@ -335,4 +335,4 @@ The sum of the `MaxMemoryMB` parameter for each instance must be less than or eq
 
 - [Information about using disk drive caches with SQL Server that every database administrator should know](https://support.microsoft.com/help/234656)
 
-- [KB826433 - SQL Server diagnostics added to detect unreported I/O problems due to stale reads or lost writes](https://support.microsoft.com/help/826433)
+- [SQL Server diagnostics detects unreported I/O problems due to stale reads or lost writes](https://support.microsoft.com/help/826433)
