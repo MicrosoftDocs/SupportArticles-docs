@@ -41,7 +41,7 @@
               href: service-level-agreements/migration-tool-issue-slas.md 
             - name: Standard SLAs not showing in migration tool
               href: service-level-agreements/standard-slas-migration-tool.md
-            - name: ServiceAnchor installation fails after migrating to Dynamics 365
+            - name: ServiceAnchor installation fails after migrating to Dynamics 365 online
               href: service-level-agreements/service-anchor-installation-fails-after-ol-migration.md
             - name: GUID is shown instead of owner name in migrated SLA action flow
               href: service-level-agreements/guid-instead-name-in-flow-generated-email.md
