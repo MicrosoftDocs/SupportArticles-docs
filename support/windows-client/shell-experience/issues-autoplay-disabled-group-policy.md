@@ -29,7 +29,7 @@ After Autoplay is disabled in Group Policy, you experience the following issues:
 
 You have a laptop running  Windows 7 with HotStart buttons. When Autoplay is disabled on all drives in the Group Policy setting, the HotStart buttons don't work.
 
-When you disable Autoplay on all drives in the Group Policy setting, the Autoplay registry value is set to 0xFF, which causes the HotStart buttons to not work.
+When you disable Autoplay on all drives in the Group Policy setting, the Autoplay registry value is set to `0xFF`, which causes the HotStart buttons to not work.
 
 ### Change the setting by using Local Group Policy Editor
 
@@ -43,14 +43,14 @@ Here are the steps:
 2. Go to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **AutoPlay Policies**, and double-click **Turn off Autoplay**.
 3. Select **Enabled**, and then select **CD-ROM and removable media drives** in the drop-down list of **Turn off Autoplay on**.
 
-By selecting this option, the Autoplay registry value is set to 0xB5. Random access memory (RAM) drives are the only ones still enabled. Any other drives like unknown type drives, removable drives, network drives, and CD-ROM drives are disabled.
+By selecting this option, the Autoplay registry value is set to `0xB5`. Random access memory (RAM) drives are the only ones still enabled. Any other drives like unknown type drives, removable drives, network drives, and CD-ROM drives are disabled.
 
 > [!NOTE]
 > If you experience this issue on a domain-joined system, contact the domain administrator for assistance. Your system settings have been synchronized to the domain server.
 
 ### Change the NoDriveTypeAutoRun value data
 
-As an optional resolution for operating systems that don't include *gpedit.msc*, you can directly change the `NoDriveTypeAutoRun` value data other than 0xFF in the following registry path:
+As an optional resolution for operating systems that don't include *gpedit.msc*, you can directly change the `NoDriveTypeAutoRun` value data other than `0xFF` in the following registry path:
 
 - `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Polices\Explorer\`
 - `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\policies\Explorer\`
