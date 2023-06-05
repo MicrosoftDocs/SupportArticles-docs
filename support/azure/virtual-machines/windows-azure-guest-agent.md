@@ -23,7 +23,7 @@ After Azure VM Agent is successfully installed, you can see following services l
 
 - Windows Azure Guest Agent - This service is responsible for configuring various extensions and communication from Guest to Host. It's also responsible for collecting logs into WAppAgent.log.
 - Telemetry Service - This service is responsible for sending the telemetry data of the VM to the backend server.
-- RDAgent - This service is responsible for the Installation of Guest Agent. Transparent Installer is also a component of Rd Agent that helps to upgrade other components and services of Guest Agent. RD Agent is also responsible for sending heartbeats from Guest VM to Host Agent on the physical server.
+- RdAgent - This service is responsible for the Installation of Guest Agent. Transparent Installer is also a component of Rd Agent that helps to upgrade other components and services of Guest Agent. RD Agent is also responsible for sending heartbeats from Guest VM to Host Agent on the physical server.
 
 > [!NOTE]
 > Starting in version 2.7.41491.971 of the VM Guest Agent, the Telemetry component is included in the Windows Azure Guest Agent service, Therefore, you might not see this Telemetry service listed in newly created VMs.
