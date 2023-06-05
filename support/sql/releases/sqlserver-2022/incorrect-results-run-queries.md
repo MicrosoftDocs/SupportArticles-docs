@@ -1,22 +1,22 @@
 ---
 title: Incorrect results when you run queries against tables that contain indexes
-description: Fixes incorrect results that may occur when you run queries against tables that contain indexes.
+description: Fixes incorrect results that may occur when you run queries against tables that contain indexes with a descending sort order.
 ms.date: 06/15/2023
 ms.custom: KB5027811
 author: MonicaChenc
 ms.author: v-cuichen
-ms.reviewer: hay, fahou
+ms.reviewer: hay, fahou, abhujabala
 appliesto:
 - SQL Server 2022 on Windows
 - SQL Server 2022 on Linux
 ---
-# FIX: Incorrect results may occur when you run queries against tables that contain indexes
+# FIX: Incorrect results may occur when you run queries against tables that contain indexes with a descending sort order
 
 ## Symptoms
 
 After you install SQL Server 2022 Cumulative Update 4 (CU4), you may receive incorrect results from queries that meet all of the following conditions:
 
-1. You have indexes that explicitly specify the sort order. Here's an example:
+1. You have indexes that explicitly specify a descending sort order. Here's an example:
 
     ```sql
     CREATE NONCLUSTERED INDEX [nci_table_column1] ON [dbo].[table1] (column1 DESC)
