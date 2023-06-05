@@ -23,8 +23,8 @@ This issue occurs when the import solution only contains SLA KPIs and no SLA ite
 
 Modify the *Customizations.xml* file and unzip the managed solution used to upgrade.
 
-Open the *Customizations.xml* file, search for `<msdyn_slakpis>`, and remove all the complete nodes till `</msdyn_slakpis>`. Save and zip all the folders within the unzipped folder. This action will create a new folder and try to import the solution.
+Open the *Customizations.xml* file, search for `<msdyn_slakpis>`, and remove all the complete nodes till `</msdyn_slakpis>`. Save and zip all the folders within the unzipped folder. This action creates a new folder and try to import the solution.
 
 ## Resolution 2
 
-Add SLAs to the solution: on the source organization, re-add all the SLAs if you re-added all the SLAs to the solution.
+Add SLAs to the solution: on the source organization, readd all the SLAs if you readded all the SLAs to the solution.
