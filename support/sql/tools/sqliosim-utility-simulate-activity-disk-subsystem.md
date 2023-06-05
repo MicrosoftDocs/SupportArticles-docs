@@ -146,7 +146,7 @@ SQLIOSIM.COM -cfg "D:\Temp\SQLIOSIM\SQLIOSIM_Configs\sqliosim.hwcache.cfg.ini" -
 
 You can use a configuration file with SQLIOSim to help you choose all the settings for the I/O simulation up-front. This configuration file can help with automating executions of SQLIOSim.
 
-Sample configuration files for various tests can be downloaded from SQL Server support team's [GitHub repo](https://github.com/microsoft/mssql-support/tree/master/sqliosim).
+Sample configuration files for various tests can be downloaded from the SQL Server support team's [GitHub repo](https://github.com/microsoft/mssql-support/tree/master/sqliosim).
 
 You don't have to use a configuration file. If you don't use a configuration file, all parameters take default values except the data file location and the log file location. You must use one of the following methods to specify the data file location and the log file location:
 
@@ -156,7 +156,7 @@ You don't have to use a configuration file. If you don't use a configuration fil
 
 ### Sample configuration files
 
-There are five sample configuration files available in case you want to use them for automated SQLIOSIm runs.
+Five sample configuration files are available if you want to use them for automated SQLIOSim runs.
 
 | Sample file | Description | Parameters that differ from the default configuration file |
 | --- | --- | --- |
@@ -168,11 +168,11 @@ There are five sample configuration files available in case you want to use them
 
 ### Caveats on parameter values
 
-- If the name of the parameter indicates that the parameter is a ratio or a percentage, the value of the parameter is expressed as the percentage or the ratio, divided by 0.01. For example, the value of the `CacheHitRatio` parameter is `10 percent`. This value is expressed as 1000 because 10 divided by 0.01 equals 1000. The maximum value of a percentage parameter is `10000`.
+- If the name of the parameter indicates that the parameter is a ratio or a percentage, the value of the parameter is expressed as the percentage or the ratio divided by 0.01. For example, the value of the `CacheHitRatio` parameter is `10 percent`. This value is expressed as 1000 because 10 divided by 0.01 equals 1000. The maximum value of a percentage parameter is `10000`.
 - If the parameter type is numeric, and you assign a non-numeric value to the parameter, the SQLIOSim utility sets the parameter to `0`.
-- If the parameter type is `Boolean`, the valid values that you can assign to the parameter are `true` and `false`. Additionally, the values are case sensitive. The SQLIOSim utility ignores any invalid values.
-- If a pair of parameters indicates a minimum value and a maximum value, the minimum value must not be larger than the maximum value. For example, the value of the `MinIOChainLength` parameter must not be larger than the value of the `MaxIOChainLength` parameter.
-- If the parameter indicates a number of pages, the SQLIOSim utility checks the value that you assign to the parameter against the file that the SQLIOSim utility processes. The SQLIOSim utility performs this check to make sure that the number of pages doesn't exceed the file size.
+- If the parameter type is `Boolean`, the valid values you can assign to the parameter are `true` and `false`. Additionally, the values are case-sensitive. The SQLIOSim utility ignores any invalid values.
+- If a pair of parameters indicates a minimum value and a maximum value, the minimum value must not exceed the maximum value. For example, the value of the `MinIOChainLength` parameter must not be larger than the value of the `MaxIOChainLength` parameter.
+- If the parameter indicates a number of pages, the SQLIOSim utility checks the value you assign to the parameter against the file that the SQLIOSim utility processes. The SQLIOSim utility performs this check to make sure that the number of pages doesn't exceed the file size.
 
 ### Configuration file sections
 
