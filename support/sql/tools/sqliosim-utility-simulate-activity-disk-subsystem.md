@@ -17,25 +17,25 @@ _Original KB number:_ &nbsp; 231619
 
 ## Introduction
 
-This article describes the SQLIOSim tool. You can use SQLIOSim to perform reliability and integrity tests on disk subsystems that SQL Server utilizes. These SQLIOSim tests simulate read, write, checkpoint, backup, sort, and read-ahead activities that Microsoft SQL Server does. The SQLIOSim utility performs this simulation independently of the SQL Server engine. For more information about SQL Server I/O patterns, see [SQL Server I/O Basics, Chapter 2](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10)).
+This article describes the SQLIOSim tool. You can use SQLIOSim to perform reliability and integrity tests on disk subsystems that SQL Server utilizes. These SQLIOSim tests simulate read, write, checkpoint, backup, sort, and read-ahead activities that Microsoft SQL Server does. For more information about SQL Server I/O patterns, see [SQL Server I/O Basics, Chapter 2](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10)). The SQLIOSim utility performs this simulation independently of the SQL Server engine. 
 
-The primary goal of the I/O simulation tests is to ensure the reliability of the underlying I/O subsystem before your SQL Server starts using it. SQLIOSim doesn't interact with SQL Server and doesn't even require SQL Server to be running. In fact, in most cases, you can use SQLIOSim to avoid competition for I/O throughput when SQL Server isn't running. Be very careful not to point to or use the actual SQL Server database files in your SQLIOSim test because you can overwrite them.
+The primary objective of the I/O simulation tests is to ensure the reliability of the underlying I/O subsystem before your SQL Server starts using it. SQLIOSim doesn't interact with SQL Server and doesn't even require SQL Server to be running. In fact, in most cases, it is recommended that you use SQLIOSim when SQL Server isn't running to avoid competition for I/O throughput between the two applications. Be very careful not to point to or use the actual SQL Server database files in your SQLIOSim test because you can overwrite them.
 
-To help maintain appropriate data integrity, we recommend that you perform stress tests of your I/O subsystem before you deploy SQL Server on new hardware. The SQLIOSim utility simulates the read patterns, the write patterns, and the problem identification techniques of SQL Server. To perform these tasks, the SQLIOSim utility simulates the user activity and the system activity of a SQL Server system.
+To help maintain appropriate data integrity, we recommend that you perform stress tests of your I/O subsystem before you deploy SQL Server on new hardware. The SQLIOSim utility simulates the read and write patterns and the problem identification techniques of SQL Server. To perform these tasks, the SQLIOSim utility simulates the user activity and the system activity of a SQL Server system.
 
 The SQLIOSim utility doesn't guarantee or warrant data security or integrity. The utility is designed to provide baseline testing of a system environment. The SQLIOSim utility may expose potential data integrity issues.
 
 For more information about logging and data storage, see [Description of logging and data storage algorithms that extend data reliability in SQL Server](https://support.microsoft.com/help/230785).
 
-If you must do performance benchmark tests and want to determine the I/O capacity of the storage system, you should use the [Diskspd](https://www.microsoft.com/?ref=aka) tool instead.
+If you must do performance benchmark tests and want to determine the I/O throughput capacity of the storage system, use the [Diskspd](https://www.microsoft.com/?ref=aka) tool instead.
 
-The SQLIOSim utility replaces the SQLIOStress utility. The SQLIOStress utility was formerly known as the SQL70IOStress utility.
+The SQLIOSim utility replaces the SQLIOStress utility, which was formerly known as the SQL70IOStress utility.
 
 ## SQLIOSim location
 
 In the past, SQLIOSim was shipped as a separate download package. Starting with SQL Server 2008, SQLIOSim is included in the SQL Server product installation. When you install SQL Server, you can find the SQLIOSim tool in the *\\Binn* folder of your SQL Server installation. We recommend that you use this updated version of the tool to simulate the IO activity on the disk subsystem.
 
-Three files are part of the SQLIOSim package. Two are optional, depending on whether you use the GUI or the command line version. The *\\Binn* folder contains two executable files, *SQLIOSim.com* and *SQLIOSim.exe*. Both executable files provide identical simulation capabilities.
+Three files are part of the SQLIOSim package. The *\\Binn* folder contains two executable files, *SQLIOSim.com* and *SQLIOSim.exe*. Both executable files provide identical I/O simulation capabilities.
 
 - *SQLIOSim.com* is a command-line tool. You can configure it to run without user interaction. To do this configuration, you can use command-line parameters, a configuration file, or a combination of both of these methods.
 - *SQLIOSim.exe* is a graphical (GUI) application that accepts no command-line parameters. However, *SQLIOSim.exe* loads default configuration data from configuration files.
@@ -43,7 +43,7 @@ Three files are part of the SQLIOSim package. Two are optional, depending on whe
 
 ### Use SQLIOSim on a machine without SQL Server
 
-We recommend that you use SQLIOSim for an extended test on a machine before you start using it or even before you install SQL Server. This may help test the I/O subsystem where you plan to place data and log files in the future and ensure the I/O subsystem's reliability. To accomplish this task, consider copying the three SQLIOSim files from a machine where SQL Server is installed and run the tests prior to a SQL Server installation. Copy *SQLIOSim.com*, *SQLIOSim.exe*, and optionally one or more of the configuration files if you plan to use preconfigured settings. Then run the test simulation on that machine.
+We recommend that you use SQLIOSim for an extended test on a machine even before you install SQL Server. Use it to test the I/O subsystem where you plan to place data and log files in the future and ensure the I/O subsystem's reliability. To accomplish this task, consider copying the three SQLIOSim files from a machine where SQL Server is installed and run the tests prior to a SQL Server installation. Copy *SQLIOSim.com*, *SQLIOSim.exe*, and optionally one or more of the configuration files if you plan to use preconfigured settings. Then run the test simulation on that machine.
 
 ## How to use SQLIOSim
 
@@ -54,7 +54,7 @@ You don't need the SQL Server service running while you're running SQLIOSim. In 
 
 The next few examples illustrate how to run SQLIOSim using the GUI and command line.
 
-### Example 1
+### Example 1: Use GUI
 
 1. Go to *C:\\Program Files\\Microsoft SQL Server\\MSSQLXX.\<InstanceName\>\\MSSQL\\Binn*.
 1. Start the *SQLIOSIM.EXE* application. You can see the **Files and Configuration** window, which contains some default settings. You can modify these settings to match your configuration needs.
@@ -113,7 +113,7 @@ The next few examples illustrate how to run SQLIOSim using the GUI and command l
    SQLIOSIM.COM -cfg C:\temp\sqliosimconfig\sqliosim.default.cfg.ini -log C:\temp\sqliosimconfig\sqliosim.log.xml
    ```
 
-### Example 3
+### Example 3: Use command-line tool with switches
 
 You can test multiple disk volumes at the same time by using the `-dir` switch. The following example creates 500-MB files and runs the test for 300 seconds (five minutes).
 
@@ -121,7 +121,7 @@ You can test multiple disk volumes at the same time by using the `-dir` switch. 
 SQLIOSIM.COM -cfg C:\temp\sqliosimconfig\sqliosim.default.cfg.ini -log C:\temp\sqliosim\sqliosim.log.xml -dir "D:\sqliosim" -dir "F:\sqliosim\testfolder" -size 500 -d 300
 ```
 
-### Example 4
+### Example 4: Use command-line tool against multiple drives
 
 The following example creates 32-GB files and runs the test for 600 seconds (10 minutes) using the _sqliosim.hwcache.cfg.ini_ configuration file.
 
