@@ -1,22 +1,22 @@
 ---
-title: SLA 'First Response By' and 'Resolve By' fields are not populating values in UCI.
-description: Provides a resolution for the issue where SLA First response by, Resolve by fields are not populating in UCI SLA.
+title: SLA First Response By and Resolve By fields aren't filled in Unified Interface
+description: Provides a resolution for the issue where the First Response By and Resolve By fields aren't populating values in the Unified Interface SLA.
 ms.reviewer: sdas
 ms.author: ravimanne
 ms.date: 06/01/2023
 ---
-# 'First Response By' and 'Resolve By' fields are not populating values in UCI
+# The SLA "First Response By" and "Resolve By" fields aren't populating values in Unified Interface
 
-This article provides a resolution for the issue where SLA First response by, Resolve by fields are not populating in UCI SLA.
+This article provides a resolution for the issue where the **First Response By** and **Resolve By** fields in a service-level agreement (SLA) aren't getting populated in Unified Interface.
 
 ## Symptoms
 
-In Legacy,  SLA First response by, Resolve by Fields are populated when SLA for specific KPI is triggered, but these field's values are not populating in UCI by default.
+In the legacy SLA, the **First Response By** and **Resolve By** fields are populated when the SLA for a specific KPI is triggered, but these fields' values aren't populated in Unified Interface by default.
 
 ## Cause
 
-As part of Standard Legacy SLA, SLA First response by and Resolve by fields were filled by default and these Standard Legacy SLAs are already deprecated. As part of UCI-SLA, we are not filling these fields by default as they can have multiple SLA KPIs per KPI field and enhanced Legacy SLA also does not have these field filled by default.
+As part of the legacy standard SLA, the SLA **First Response By** and **Resolve By** fields are filled by default, and these legacy standard SLAs are already deprecated. As part of the Unified Interface SLA, these fields aren't filled by default as they can have multiple SLA KPIs per a KPI field, and the legacy enhanced SLA also doesn't have these fields filled by default.
 
 ## Resolution
 
-This is by design behavior for UCI-SLA. So, please implement custom logic through workflow or plugin to fill these fields as per user requirement.
+This is a by-design behavior in Unified Interface. So, implement a custom logic through a workflow or a plugin to fill these fields per user requirements.

@@ -1,23 +1,25 @@
 ---
-title: Case updation fails due to no SLA KPI instance exist if it is associated with active SLA.
-description: Provides a resolution for the issue where case updating fails due to no SLA KPI instance exist.
+title: Case update fails due to no SLA KPI instance existing if it's associated with an active SLA
+description: Provides a resolution for the issue where updating a case fails due to no SLA KPI instance existing.
 ms.reviewer: sdas
 ms.author: ravimanne
 ms.date: 06/01/2023
 ---
-# SLA KPI instance does not exist error when updating a Case
+# "SLA KPI instance does not exist" error when updating a case
 
-This article provides a resolution for the issue where case updating fails due to no SLAKPI instance exist.
+This article provides a resolution for the issue where updating a case fails due to no service-level agreement (SLA) KPI instance existing.
 
 ## Symptoms
 
-Error occur during case update when SLA KPI instance does not exist.
+You can't update a case and receive the "SLA KPI instance does not exist" error.
 
 ## Cause
 
-This issue happens when active SLA is there, but no SLAItem’s ChangeAttributeList is not defined or NULL.
+This issue occurs when an active SLA exists but the SLA item's `ChangeAttributeList` isn't defined or null.
 
 ## Resolution
 
-- If SLA is having SLAItems then Admin can self resolve this issue by reactivating SLA which should calculate ChangeAttributeList again.
-- If SLA is not having any SLAItem then Admin can self resolve this issue by defining SLAItems and reactivating the SLA again.
+To solve this issue, 
+
+- If an SLA has SLA items, administrators can reactivate the SLA, which should calculate the `ChangeAttributeList` again.
+- If an SLA doesn't have any SLA item, administrators can define SLA items and reactivate the SLA again.

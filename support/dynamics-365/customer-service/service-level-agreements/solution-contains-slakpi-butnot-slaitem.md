@@ -1,27 +1,30 @@
 ---
-title: A managed solution cannot overwrite the SLAItem component.
-description: Provides a resolution for the issue where importing solution contains only slakpis and no slaitem referring to it.
+title: A managed solution cannot overwrite the SLAItem component
+description: Provides a resolution for the issue that occurs when importing a solution that only contains SLA KPIs and no SLA item referring to it.
 ms.reviewer: sdas
 ms.author: ravimanne
 ms.date: 06/01/2023
 ---
-# A managed solution cannot overwrite the SLAItem component
+# "A managed solution cannot overwrite the SLAItem component" error
 
-This article provides a resolution for the issue where importing solution contains only slakpis and no slaitem referring to it.
+This article provides a resolution for the issue that occurs when you try to import a solution that only has service-level agreement (SLA) KPIs and no SLA item referring to it.
 
 ## Symptoms
 
-While attempting to import the SLA solution, sometimes we may get following error message: A managed solution cannot overwrite the SLAItem component '<slaitem>' with Id=<slaid> which has an unmanaged base instance.
+When you try to import an SLA solution, you might receive the following error message: 
+
+> A managed solution cannot overwrite the SLAItem component '\<slaitem>' with Id=\<slaid> which has an unmanaged base instance.
 
 ## Cause
 
-This issue happens when the import solution contains only slakpis and not the slaitem referring to it.
+This issue occurs when the import solution only contains SLA KPIs and no SLA item referring to it.
 
-## Resolution
+## Resolution 1
 
-Method-1:
-Modifying the customizations.xml - Unzip the managed solution used to upgrade. 
-Open Customizations.xml -> Search for <msdyn_slakpis>, remove all the complete node till </msdyn_slakpis>. Save and zip all the folders within the unzipped folder. This will create a new folder and try to import the solution.
+Modify the *Customizations.xml* file and unzip the managed solution used to upgrade.
 
-Method-2:
-Add SLAs to the solution - On the source org readd all the slas if readd all the slas to the solution.
+Open the *Customizations.xml* file, search for `<msdyn_slakpis>`, and remove all the complete nodes till `</msdyn_slakpis>`. Save and zip all the folders within the unzipped folder. This action will create a new folder and try to import the solution.
+
+## Resolution 2
+
+Add SLAs to the solution: on the source organization, re-add all the SLAs if you re-added all the SLAs to the solution.
