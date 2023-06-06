@@ -43,12 +43,12 @@ In these scenarios, IIS has rejected the client's HTTP request because the reque
 
 ## Tools
 
-- Network Monitor
+- [Network Monitor](../../../../windows-server/networking/network-monitor-3.md)
 - HTTP Error logging
 
 ## Troubleshooting methods
 
-When troubleshooting an HTTP 400 condition, it's important to remember that the underlying problem is that the client has sent a request to IIS that breaks one or more rules that HTTP.sys is enforcing. With that in mind, you'll want to see what exactly the client is sending to IIS. To do it, capture a network trace of the client sending the bad request. You can analyze the trace to see the raw data that the client sends to IIS, and to see the raw response data that IIS sends back to the client. You can also use an HTTP sniffer tool called Fiddler, a great tool as it allows you to see the HTTP headers even if the client and server are communicating over SSL.
+When troubleshooting an HTTP 400 condition, it's important to remember that the underlying problem is that the client has sent a request to IIS that breaks one or more rules that HTTP.sys is enforcing. With that in mind, you'll want to see what exactly the client is sending to IIS. To do it, capture a network trace of the client sending the bad request. You can analyze the trace to see the raw data that the client sends to IIS, and to see the raw response data that IIS sends back to the client. You can also use an HTTP sniffer tool called [Fiddler](https://www.telerik.com/fiddler), a great tool as it allows you to see the HTTP headers even if the client and server are communicating over SSL.
 
 The next data item you use is the _C:\Windows\System32\LogFiles\HTTPERR\httperr.log_ file. Beginning in IIS 6.0, the HTTP.sys component handles incoming HTTP requests before they're passed along to IIS, and is the component responsible for blocking requests that don't meet the IIS requirements. When HTTP.sys blocks the request, it logs information to its _httperr.log_ file concerning the bad request and why it was blocked.
 
@@ -64,7 +64,7 @@ When the client sends its request, the browser error it gets back looks like:
 
 > Bad Request (Header Field Too Long)
 
-Capturing a network trace of the request and response, we see the following outputs:
+Capturing a network trace of the request and response, you see the following outputs:
 
 REQUEST:
 
@@ -95,7 +95,7 @@ HTTP: Content-Length =44
 HTTP: Data: Number of data bytes remaining = 63 (0x003F)
 ```
 
-You notice that the response headers don't tell us as much as the error message in the browser. However if we look at the raw data in the response body, we see more:
+You notice that the response headers don't tell as much as the error message in the browser. However, if you look at the raw data in the response body, you see more:
 
 ```output
 00000030                                           48 54               HT
@@ -125,17 +125,19 @@ The next step is to look at the _httperr.log_ file in the _C:\Windows\System32\L
 2012-11-14 20:36:36 HTTP/1.1 GET /1234567890/time.asp 400 FieldLength
 ```
 
-In this scenario, the `Reason` field in the _httperr.log_ file gives us the exact information we need to diagnose the problem. We see that HTTP.sys logged `FieldLength` as the reason phrase for this request's failure. Once we know the reason phrase, check the table in [Kinds of errors that the HTTP API logs](../../aspnet/site-behavior-performance/error-logging-http-apis.md#kinds-of-errors-that-the-http-api-logs) section to get its description:
+In this scenario, the `Reason` field in the _httperr.log_ file provides the exact information you need to diagnose the problem. You see that HTTP.sys logged `FieldLength` as the reason phrase for this request's failure. Once you know the reason phrase, check the table in [Kinds of errors that the HTTP API logs](../../aspnet/site-behavior-performance/error-logging-http-apis.md#kinds-of-errors-that-the-http-api-logs) section to get its description:
 
 > FieldLength: A field length limit was exceeded.
 
-So at this point we know from the browser error message and the HTTP API error logging that the request contained data in one of its HTTP headers that exceeded the allowable length limits. For this example, the `HTTP: Uniform Resource Identifier header` is purposefully long: _/1234567890123456789012345678901234567890/time.asp_.
+So at this point you know from the browser error message and the HTTP API error logging that the request contained data in one of its HTTP headers that exceeded the allowable length limits. For this example, the `HTTP: Uniform Resource Identifier header` is purposefully long: _/1234567890123456789012345678901234567890/time.asp_.
 
 The final stage of troubleshooting this example is to check [the HTTP.sys registry keys and default settings for IIS](../iisadmin-service-inetinfo/httpsys-registry-windows.md)
 
-Since we know the reason phrase and error are suggesting a header field length exceeding limits, we can narrow our search in the [Registry Keys]((../iisadmin-service-inetinfo/httpsys-registry-windows.md#registry-keys)) table as such. The prime candidate here is:
+Since you know the reason phrase and error are suggesting a header field length exceeding limits, you can narrow our search in the [Registry Keys](../iisadmin-service-inetinfo/httpsys-registry-windows.md#registry-keys) table as such. The prime candidate here is:
 
-`MaxFieldLength`: Sets an upper limit for each header. See `MaxRequestBytes`. This limit translates to approximately 32k characters for a URL.
+|Registry key|Default value|Valid value range|Registry key function|WARNING code|
+|---|---|---|---|---|
+|`MaxFieldLength`|16384|64 - 65534 (64k - 2) bytes|Sets an upper limit for each header. See `MaxRequestBytes`. This limit translates to approximately 32k characters for a URL.|1|
 
 To reproduce this error for this example, the `MaxFieldLength` registry key was set with a value of _2_. Since the requested URL had a `HTTP: Uniform Resource Identifier header` field with more than two characters, the request was blocked with the `FieldLength` reason phrase.
 
