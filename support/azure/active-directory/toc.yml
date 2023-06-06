@@ -212,9 +212,9 @@
   - name: Azure AD Connect won't work after upgrading
     href: cannot-work-automatic-upgrade.md
   - name: Can't connect to Azure RMS
-    href: fail-connect-azure-information-protection-PowerShell.md
+    href: fail-connect-azure-information-protection-powerShell.md
   - name: Can't enable Device writeback
-    href: Cannot-enable-device-writeback.md
+    href: cannot-enable-device-writeback.md
   - name: Can't manage or remove objects
     href: cannot-manage-objects.md
   - name: Can't run DirSyncConfigShell.psc1
