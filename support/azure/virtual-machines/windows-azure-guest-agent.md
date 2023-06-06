@@ -10,7 +10,7 @@ manager: dcscontentpm
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
-ms.date: 06/07/2023
+ms.date: 06/06/2023
 ms.author: genli
 ---
 # Troubleshooting Azure Windows VM Agent
@@ -21,7 +21,7 @@ The VM that is migrated to Azure from on-premises or that's created by using a c
 
 After Azure VM Agent is successfully installed, you can see the following services listed in services.msc on the VM:
 
-- Windows Azure Guest Agent - This service is responsible for configuring various extensions and communication from Guest to Host. It's also responsible for collecting logs into *WAppAgent.log*.
+- Windows Azure Guest Agent - This service is responsible for configuring various extensions and communication from Guest to Host. It's also responsible for collecting logs into *WaAppAgent.log*.
 - Telemetry Service - This service is responsible for sending the telemetry data of the VM to the backend server.
 - RDAgent - This service is responsible for the Installation of Guest Agent. Transparent Installer is also a component of Rd Agent that helps to upgrade other components and services of Guest Agent. RD Agent is also responsible for sending heartbeats from Guest VM to Host Agent on the physical server.
 
