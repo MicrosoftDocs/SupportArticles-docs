@@ -15,7 +15,7 @@ ms.technology: windows-client-shell-experience
 ---
 # Issues after Autoplay is disabled in Group Policy
 
-This article describes issues after Autoplay is disabled in Group Policy, and provides the resolutions.
+This article describes issues after [Autoplay](/previous-versions/windows/desktop/legacy/cc144212(v=vs.85)) is disabled in Group Policy, and provides the resolutions.
 
 _Applies to:_ &nbsp; Supported versions of Windows Client  
 _Original KB number:_ &nbsp; 2328787, 3096935
