@@ -19,7 +19,7 @@ _Original KB number:_ &nbsp; 231619
 
 This article describes the SQLIOSim tool. You can use SQLIOSim to perform reliability and integrity tests on disk subsystems that SQL Server utilizes. These SQLIOSim tests simulate read, write, checkpoint, backup, sort, and read-ahead activities that Microsoft SQL Server does. For more information about SQL Server I/O patterns, see [SQL Server I/O Basics, Chapter 2](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10)). The SQLIOSim utility performs this simulation independently of the SQL Server engine. 
 
-The primary objective of the I/O simulation tests is to ensure the reliability of the underlying I/O subsystem before your SQL Server starts using it. SQLIOSim doesn't interact with SQL Server and doesn't even require SQL Server to be running. In fact, in most cases, it is recommended that you use SQLIOSim when SQL Server isn't running to avoid competition for I/O throughput between the two applications. Be very careful not to point to or use the actual SQL Server database files in your SQLIOSim test because you can overwrite them.
+The primary objective of the I/O simulation tests is to ensure the reliability of the underlying I/O subsystem before your SQL Server starts using it. SQLIOSim doesn't interact with SQL Server and doesn't even require SQL Server to be running. In fact, in most cases, we recommend that you use SQLIOSim when SQL Server isn't running to avoid competition for I/O throughput between the two applications. Be very careful not to point to or use the actual SQL Server database files in your SQLIOSim test because you can overwrite them.
 
 To help maintain appropriate data integrity, we recommend that you perform stress tests of your I/O subsystem before you deploy SQL Server on new hardware. The SQLIOSim utility simulates the read and write patterns and the problem identification techniques of SQL Server. To perform these tasks, the SQLIOSim utility simulates the user activity and the system activity of a SQL Server system.
 
@@ -43,7 +43,7 @@ Three files are part of the SQLIOSim package. The *\\Binn* folder contains two e
 
 ### Use SQLIOSim on a machine without SQL Server
 
-We recommend that you use SQLIOSim for an extended test on a machine even before you install SQL Server. Use it to test the I/O subsystem where you plan to place data and log files in the future and ensure the I/O subsystem's reliability. To accomplish this task, consider copying the three SQLIOSim files from a machine where SQL Server is installed and run the tests prior to a SQL Server installation. Copy *SQLIOSim.com*, *SQLIOSim.exe*, and optionally one or more of the configuration files if you plan to use preconfigured settings. Then run the test simulation on that machine.
+We recommend that you use SQLIOSim for an extended test on a machine before you install SQL Server. Use it to test the I/O subsystem where you plan to place data and log files in the future and ensure the I/O subsystem's reliability. To accomplish this task, consider copying the three SQLIOSim files from a machine where SQL Server is installed and run the tests prior to a SQL Server installation. Copy *SQLIOSim.com*, *SQLIOSim.exe*, and optionally one or more of the configuration files if you plan to use preconfigured settings. Then run the test simulation on that machine.
 
 ## How to use SQLIOSim
 
@@ -83,7 +83,7 @@ The next few examples illustrate how to run SQLIOSim using the GUI and command l
 
 1. Wait for the simulation to complete and examine the output.
 
-### Example 2: Use command-line tool and a configuration file 
+### Example 2: Use a command-line tool and a configuration file 
 
 1. Modify the *sqliosim.default.cfg.ini* file by removing the comments for the `File1` and `File2` sections and modifying the `FileName` values to new SQLIOSim files. For example:
 
@@ -113,7 +113,7 @@ The next few examples illustrate how to run SQLIOSim using the GUI and command l
    SQLIOSIM.COM -cfg C:\temp\sqliosimconfig\sqliosim.default.cfg.ini -log C:\temp\sqliosimconfig\sqliosim.log.xml
    ```
 
-### Example 3: Use command-line tool with switches
+### Example 3: Use a command-line tool with switches
 
 You can test multiple disk volumes at the same time by using the `-dir` switch. The following example creates 500-MB files and runs the test for 300 seconds (five minutes).
 
@@ -121,7 +121,7 @@ You can test multiple disk volumes at the same time by using the `-dir` switch. 
 SQLIOSIM.COM -cfg C:\temp\sqliosimconfig\sqliosim.default.cfg.ini -log C:\temp\sqliosim\sqliosim.log.xml -dir "D:\sqliosim" -dir "F:\sqliosim\testfolder" -size 500 -d 300
 ```
 
-### Example 4: Use command-line tool against multiple drives
+### Example 4: Use a command-line tool against multiple drives
 
 The following example creates 32-GB files and runs the test for 600 seconds (10 minutes) using the _sqliosim.hwcache.cfg.ini_ configuration file.
 
