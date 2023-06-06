@@ -12,7 +12,7 @@ ms.reviewer: mmcc, toddfous, aaronmax
 ---
 # Troubleshoot Application Insights JavaScript SDK for webpages
 
-The article explains certain issues that involve [Application Insights JavaScript SDK for webpages](/azure/azure-monitor/app/javascript), and it offers strategies to help fix these issues.
+The article explains certain issues involving [Application Insights JavaScript SDK for webpages](/azure/azure-monitor/app/javascript) and offers strategies to help fix these issues.
 
 ## I'm getting an error message of "Failed to get Request-Context correlation header as it may be not included in the response or not accessible"
 
