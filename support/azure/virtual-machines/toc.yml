@@ -159,6 +159,7 @@
         - name: Serial Console for Linux
           href: serial-console-linux.md
         - name: Linux - Specific scenarios
+          href: boot-error-troubleshoot-linux
           items:
             - name: Troubleshoot file system errors
               href: linux-recovery-cannot-start-file-system-errors.md
