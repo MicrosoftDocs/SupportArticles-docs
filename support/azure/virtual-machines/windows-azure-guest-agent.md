@@ -28,7 +28,7 @@ After Azure VM Agent is successfully installed, you can see the following servic
 > [!NOTE]
 > Starting in version 2.7.41491.971 of the VM Guest Agent, the Telemetry component is included in the Windows Azure Guest Agent service, Therefore, you might not see this Telemetry service listed in newly created VMs.
 
-## Check agent status and version
+## Checking agent status and version
 
 Go to the VM properties page in the Azure portal, and check the **Agent status**. If the Azure VM Agent is working correctly, the status shows **Ready**. If VM Agent is in **Not Ready** status, the extensions and **Run command** in the Azure portal won't work.
 
