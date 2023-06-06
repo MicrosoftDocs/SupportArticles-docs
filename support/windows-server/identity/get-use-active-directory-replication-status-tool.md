@@ -1,7 +1,7 @@
 ---
 title: How to get and use the Active Directory Replication Status Tool
 description: Describes how to get and use the Active Directory Replication Status Tool.
-ms.date: 06/05/2023
+ms.date: 06/06/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -22,10 +22,6 @@ This article introduces the Active Directory Replication Status Tool (ADREPLSTAT
 
 _Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4469274
-
-You can find ADREPLSTATUS in the Microsoft Download Center. You can also find it in Microsoft Operations Management Suite (OMS), Microsoft’s all-in-one cloud IT management solution.
-
-If you run the tool and then receive a message that the license has expired, please download and install the tool again. ADREPLSTATUS was recently updated in the Microsoft Download Center.
 
 ## Features
 
