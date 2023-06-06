@@ -2,6 +2,17 @@
 
 
 
+## Week of May 29, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 5/30/2023 | [Common tasks to manage Microsoft 365 groups](/exchange/troubleshoot/groups-and-distribution-lists/o365-group-tasks) | modified |
+| 5/30/2023 | [Mailboxes are stalled during a migration](/exchange/troubleshoot/migration/mailboxes-stalled-during-migration) | modified |
+| 5/30/2023 | [Can't register a Hybrid Agent in Exchange Server](/exchange/troubleshoot/move-mailboxes/cannot-register-hybrid-agent) | modified |
+| 5/30/2023 | [Mailboxes are stalled during a migration](/exchange/troubleshoot/migration/mailboxes-stalled-during-migration) | added |
+
+
 ## Week of May 22, 2023
 
 
@@ -17,12 +28,3 @@
 | Published On |Topic title | Change |
 |------|------------|--------|
 | 5/18/2023 | [Outlook read receipt shows incorrect information](/exchange/troubleshoot/mailflow/read-receipt-shows-incorrect-information) | added |
-
-
-## Week of April 24, 2023
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 4/27/2023 | [Email non-delivery report (NDR) and SMTP errors in Exchange Online](/exchange/troubleshoot/email-delivery/ndr/non-delivery-reports-in-exchange-online) | modified |
-| 4/27/2023 | [eDiscovery search ignores some keywords in a query](/exchange/troubleshoot/compliance/ediscovery-search-ignores-query-keywords) | added |
