@@ -29,3 +29,5 @@ To troubleshoot issues with Direct Routing, administrators can run a diagnostic 
 2. In the Run diagnostic pane, enter the email of the user you want to test in the **Username or Email** field, and then select **Run Tests**.
 
 3. The test result will indicate whether the user is configured correctly for Direct Routing. If the user isn't configured correctly, the diagnostic will provide information on next steps that you can use to address issues with tenant, user, or policy configurations.
+
+For more information about the most common errors and suggested actions to further troubleshoot go to [Microsoft and SIP response codes](./microsoft-sip-response-codes.md).
