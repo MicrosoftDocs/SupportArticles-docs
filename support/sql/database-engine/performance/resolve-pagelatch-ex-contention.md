@@ -18,7 +18,7 @@ This article introduces how to resolve last-page insert `PAGELATCH_EX` contentio
 
 Consider the following scenarios:
 
-- You have a column that includes sequential values, such as an Identity column or a DateTime column, that is being inserted through the **Getdate()** function.
+- You have a column that includes sequential values such as an Identity column or a DateTime column that is inserted through the **Getdate()** function.
 
 - You have a clustered index that has the sequential column as a leading column.
 
@@ -27,7 +27,7 @@ Consider the following scenarios:
 
 - Your application does frequent INSERT or UPDATE operations against the table.
 
-- You have many CPUs on the system. Typically, the server has 16 CPUs or more. This allows multiple sessions to do the INSERT operations against the same table concurrently.
+- You have many CPUs on the system. Typically, the server has 16 CPUs or more. This hardware configuration allows multiple sessions to do the INSERT operations against the same table concurrently.
 
 In this situation, you may experience a decrease in performance of your application. When you examine wait types in **sys.dm_exec_requests**, you observe waits on the **PAGELATCH_EX** wait type and many sessions that are waiting on this wait type.
 
@@ -57,7 +57,7 @@ In this situation, you may get results that resemble the following.
 |103 |PAGELATCH_EX |515 |5:1:4144 |
 |105| PAGELATCH_EX |39| 5:1:4144|
 
-You notice that multiple sessions are all waiting for the same resource that resembles the following:
+You notice that multiple sessions are all waiting for the same resource that resembles the following pattern:
 
 database_id = 5, file_id = 1, database page_id = 4144
 
@@ -66,11 +66,11 @@ database_id = 5, file_id = 1, database page_id = 4144
 
 ## Cause
 
-**PAGELATCH** (latch on a data or index page) is a thread-synchronization mechanism. It is used to synchronize short-term physical access to database pages that are located in the Buffer cache.
+**PAGELATCH** (latch on a data or index page) is a thread-synchronization mechanism. It's used to synchronize short-term physical access to database pages that are located in the Buffer cache.
 
-**PAGELATCH** differs from a **PAGEIOLATCH**. The latter is used to synchronize physical access to pages when they are read from or written to disk.
+**PAGELATCH** differs from a **PAGEIOLATCH**. The latter is used to synchronize physical access to pages when they're read from or written to disk.
 
-Page latches are common in every system because they ensure physical page protection. A clustered index orders the data by the leading key column. For this reason, when you create the index on a sequential column, this causes all new data inserts to occur on the same page at the end of the index until that page is filled. However, under high load, the concurrent INSERT operations may cause contention on the last page of the B-tree. This contention can occur on clustered and nonclustered indexes. This is because the nonclustered index orders the leaf-level pages by the leading key. This issue is also known as last-page insert contention.
+Page latches are common in every system because they ensure physical page protection. A clustered index orders the data by the leading key column. For this reason, when you create the index on a sequential column,  all new data inserts occur on the same page at the end of the index until that page is filled. However, under high load, the concurrent INSERT operations may cause contention on the last page of the B-tree. This contention can occur on clustered and nonclustered indexes. The reason is that nonclustered indexes order the leaf-level pages by the leading key. This issue is also known as last-page insert contention.
 
 For more information, see [Diagnosing and Resolving Latch Contention on SQL Server](/sql/relational-databases/diagnose-resolve-latch-contention).
 
@@ -182,7 +182,7 @@ END
 
 #### 2. Choose a method to resolve the issue
 
-One of the following methods will help you resolve the issue. Choose the one that best fits your circumstances.
+You can use one of the following methods to resolve the issue. Choose the one that best fits your circumstances.
 
 ##### Method 1: Use OPTIMIZE_FOR_SEQUENTIAL_KEY index option (SQL Server 2019 only)
 
@@ -190,7 +190,7 @@ In SQL Server 2019, a new index option (`OPTIMIZE_FOR_SEQUENTIAL_KEY`) was added
 
 ##### Method 2: Move primary key off identity column
 
-Make the column that contains sequential values a nonclustered index, and then move the clustered index to another column. For example, for a primary key on an identity column, remove the clustered primary key, and then re-create it as a nonclustered primary key. This is the easiest method to follow, and it directly achieves the goal.
+Make the column that contains sequential values a nonclustered index, and then move the clustered index to another column. For example, for a primary key on an identity column, remove the clustered primary key, and then re-create it as a nonclustered primary key. This method is the easiest follow and directly achieves the objective.
 
 For example, assume that you have the following table that was defined by using a clustered primary key on an Identity column.
 
@@ -203,7 +203,7 @@ CustomerLastName VARCHAR (32) NOT NULL,
 CustomerFirstName VARCHAR(32) NOT NULL );
 ```
 
-To change this, you can remove the primary key index and redefine it.
+To change this design, you can remove the primary key index and redefine it.
 
 ```sql
 USE testdb;
@@ -218,7 +218,7 @@ PRIMARY KEY NONCLUSTERED (CustomerID)
 
 ##### Method 3: Make the leading key a non-sequential column
 
-Reorder the clustered index definition in such a way that the leading column isn't the sequential column. This requires that the clustered index be a composite index. For example, in a customer table, you can make a **CustomerLastName** column be the leading column, followed by the **CustomerID**. We recommend that you thoroughly test this method to make sure that it meets performance requirements.
+Reorder the clustered index definition in such a way that the leading column isn't the sequential column. This method requires that the clustered index is a composite index. For example, in a customer table, you can make a **CustomerLastName** column be the leading column, followed by the **CustomerID**. We recommend that you thoroughly test this method to make sure that it meets performance requirements.
 
 ```sql
 USE testdb;
@@ -230,7 +230,7 @@ PRIMARY KEY CLUSTERED (CustomerLastName, CustomerID)
 
 ##### Method 4: Add a non-sequential value as a leading key
 
-Add a nonsequential hash value as the leading index key. This will also spread out the inserts. A hash value is generated as a modulo that matches the number of CPUs on the system. For example, on a 16-CPU system, you can use a modulo of 16. This method spreads out the INSERT operations uniformly against multiple database pages.
+Add a nonsequential hash value as the leading index key. This technique also helps spread out the inserts. A hash value is generated as a modulo that matches the number of CPUs on the system. For example, on a 16-CPU system, you can use a modulo of 16. This method spreads out the INSERT operations uniformly against multiple database pages.
 
 ```sql
 USE testdb;
@@ -285,7 +285,7 @@ ON Customers (CustomerID, HashID) ON ps_hash(HashID);
 
 ##### Method 7: Switch to In-Memory OLTP
 
-Alternatively, use In-Memory OLTP particularly if the latch contention is high. This technology eliminates the latch contention overall. However, you have to redesign and migrate the specific table(s), where page latch contention is observed, to a memory-optimized table. You can use the [Memory Optimization Advisor](/sql/relational-databases/in-memory-oltp/memory-optimization-advisor?view=sql-server-2017&preserve-view=true) and [Transaction Performance Analysis Report](/sql/relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp?view=sql-server-2017&preserve-view=true) to determine whether migration is possible and the effort involved to do the migration. For more information about how In-Memory OLTP eliminates latch contention, download and review the document in [In-Memory OLTP - Common Workload Patterns and Migration Considerations](/previous-versions/dn673538(v=msdn.10)).
+Alternatively, use In-Memory OLTP particularly if the latch contention is high. This technology eliminates the latch contention overall. However, you have to redesign and migrate the specific table(s), where page latch contention is observed, to a memory-optimized table. You can use the [Memory Optimization Advisor](/sql/relational-databases/in-memory-oltp/memory-optimization-advisor?view=sql-server-2017&preserve-view=true) and [Transaction Performance Analysis Report](/sql/relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp?view=sql-server-2017&preserve-view=true) to determine whether migration is possible and what the effort would be to do the migration. For more information about how In-Memory OLTP eliminates latch contention, download and review the document in [In-Memory OLTP - Common Workload Patterns and Migration Considerations](/previous-versions/dn673538(v=msdn.10)).
 
 ## References
 

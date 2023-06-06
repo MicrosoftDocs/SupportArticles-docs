@@ -15,7 +15,7 @@ _Applies to:_ SQL Server
 
 ## Supported platforms
 
-| Common Scenario | Basic logs to collect | Tool to gather logs | Tool to analyze logs |
+| Scenario | Basic logs to collect | Tool to gather logs | Tool to analyze logs |
 | --- | --- | --- | --- |
 | Availability Group | • Cluster logs<br />Event logs<br />• System Monitor (Performance monitor logs)<br />• SQL Server error logs<br />• SQLDIAG XEL files<br />• AlwaysOn Health session XEL files<br />• System Health session XEL files<br />• Extended Events for AG data movement<br />• DMV and Catalog view snapshots for AG |<br />Preferred: **[SQL LogScout](https://github.com/microsoft/SQL_LogScout/releases)**<br />Use data collection [scenario](https://github.com/microsoft/sql_logscout#scenarios) named "AlwaysOn"<br/><br/>Alternative: **[TSSv2](../../windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2.md)**<br />Use scenario "SQL Base"<br/><br/>Alternative: **[PSSDIAG](https://github.com/microsoft/DiagManager/wiki/Create-a-PSSDiag-Package)**<br />Use custom diagnostic "Always On Basic Info"<br /> | Preferred: **[AGDiag](https://github.com/microsoft/agdiag/wiki/Getting-Started)**<br />Scenarios to use -> Analyze failover, failures<br /><br />Alternative: **[SQL Nexus](https://github.com/microsoft/SqlNexus/wiki/How-to-use-SQL-Nexus)**<br />Scenarios to use -> Performance, Latency, Health, Best practices<br /> |
 
