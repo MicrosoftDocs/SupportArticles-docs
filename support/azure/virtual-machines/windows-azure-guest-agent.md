@@ -15,7 +15,7 @@ ms.author: genli
 ---
 # Troubleshooting Azure Windows VM Agent
 
-Azure VM Agent is a virtual machine (VM) agent. It enables the VM to communicate with the Fabric Controller (the underlying physical server on which the VM is hosted) on IP address 168.63.129.16. This is a virtual public IP address that facilitates communication. For more information, see [What is IP address 168.63.129.16](/azure/virtual-network/what-is-ip-address-168-63-129-16).
+Azure VM Agent is a virtual machine (VM) agent. It enables the VM to communicate with the Fabric Controller (the underlying physical server on which the VM is hosted) on IP address 168.63.129.16. This address is a virtual public IP address that facilitates communication. For more information, see [What is IP address 168.63.129.16](/azure/virtual-network/what-is-ip-address-168-63-129-16).
 
 The VM that's migrated to Azure from on-premises or created using a customized image doesn't have Azure VM Agent installed. In these scenarios, you have to manually install the VM agent. For more information about how to install the VM Agent, see [Azure Virtual Machine Agent Overview](/azure/virtual-machines/extensions/agent-windows).
 
@@ -38,7 +38,7 @@ Go to the VM properties page in the Azure portal, and check the **Agent status**
 
 - Check for the package
 
-    Locate the *C:\WindowsAzure* folder. If you see the *GuestAgent* folder that displays the version number, that means Azure VM Agent was installed on the VM. You can also look for the installed package. If Azure VM Agent is installed on the VM, the package will be saved in the location *C:\windows\OEM\GuestAgent\VMAgentPackage.zip*.
+    Locate the *C:\WindowsAzure* folder. If you see the *GuestAgent* folder that displays the version number, that means Azure VM Agent was installed on the VM. You can also look for the installed package. If Azure VM Agent is installed on the VM, the package is saved in the location *C:\windows\OEM\GuestAgent\VMAgentPackage.zip*.
 
     You can run the following PowerShell command to check whether VM Agent has been deployed to the VM:
     
@@ -70,7 +70,7 @@ If you can see the services and they're running, restart the service to see if t
 
 ### Step 2: Check whether auto-update is working
 
-The Azure VM Agent has an auto-update feature. It will automatically check for new updates and install them. If the auto-update feature doesn't work correctly, try uninstalling and reinstalling the Azure VM Agent by using the following steps:
+The Azure VM Agent has an auto-update feature. It automatically checks for new updates and installs them. If the auto-update feature doesn't work correctly, try uninstalling and reinstalling the Azure VM Agent by using the following steps:
 
 1. If Azure VM Agent appears in **Programs and Features**, uninstall the Azure VM Agent.
 
@@ -110,7 +110,7 @@ The Azure VM Agent has an auto-update feature. It will automatically check for n
 
 ### Step 3: Check whether the VM can connect to the Fabric Controller
 
-Use a tool such as PsPing to test whether the VM can connect to 168.63.129.16 on ports 80 and 32526. If the VM doesn't connect as expected, check whether outbound communication over ports 80 and 32526 is open in your local firewall on the VM. If this IP address is blocked, VM Agent may display unexpected behavior in a variety of scenarios.
+Use a tool such as PsPing to test whether the VM can connect to 168.63.129.16 on ports 80 and 32526. If the VM doesn't connect as expected, check whether outbound communication over ports 80 and 32526 is open in your local firewall on the VM. If this IP address is blocked, VM Agent may display unexpected behavior in various scenarios.
 
 ## Advanced troubleshooting
 
@@ -133,7 +133,7 @@ Running *Sysprep.exe* on these VMs might lead to the errors below.
 
   > A fatal error occurred while trying to sysprep the VM
 
-The issue is only with version 1004, so you can try upgrading the agent to the latest agent version, or you can try upgrading it to version 1005 by using the following Microsoft Installer (MSI), which has the bug fixed.
+The issue is only with version 1004, so you can try upgrading the agent to the latest agent version. You can also try upgrading it to version 1005 by using the following Microsoft Installer (MSI), which has the bug fixed.
 
 *\\reddog\Builds\branches\git_compute_iaas_vmagent_master\2.7.41491.1005\retail-amd64\exports\IaaSVmAgentInstaller*
 
@@ -248,11 +248,11 @@ You notice the following error entries in the *WaAppAgent.log* file:
 
 **Analysis**
 
-The Npcap loopback adapter is installed on the VM by Wireshark. Wireshark is an open-source tool for profiling network traffic and analyzing packets. Such a tool is often referred to as a network analyzer, network protocol analyzer, or sniffer.
+Wireshark installs the Npcap Loopback Adapter on the VM. Wireshark is an open-source tool for profiling network traffic and analyzing packets. Such a tool is often referred to as a network analyzer, network protocol analyzer, or sniffer.
 
 **Solution**
 
-The Npcap Loopback Adapter is likely installed by WireShark. Try disabling it, and then check whether the problem is resolved.
+WireShark likely installed The Npcap Loopback Adapter. Try disabling it, and then check whether the problem is resolved.
 
 ### RPC issues
 
