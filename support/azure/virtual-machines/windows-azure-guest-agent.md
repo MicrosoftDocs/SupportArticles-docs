@@ -22,7 +22,7 @@ The VM that's migrated to Azure from on-premises or created using a customized i
 After Azure VM Agent is successfully installed, you can see the following services listed in *services.msc* on the VM:
 
 - Windows Azure Guest Agent - This service is responsible for configuring various extensions and communications from Guest to Host. It's also responsible for collecting logs into *WaAppAgent.log*.
-- Telemetry Service - This service is responsible for sending the telemetry data of the VM to the backend server.
+- Telemetry service - This service is responsible for sending the telemetry data of the VM to the backend server.
 - RDAgent - This service is responsible for the installation of Guest Agent. Transparent Installer is also a component of RDAgent that helps to upgrade other components and services of Guest Agent. RDAgent is also responsible for sending heartbeats from Guest VM to Host Agent on the physical server.
 
 > [!NOTE]
@@ -50,13 +50,13 @@ Go to the VM properties page in the Azure portal, and check the **Agent status**
 
 - Check the services and processes
 
-   Go to the Services console (*services.msc*) and check the status of the following services: Azure VM Agent Service, RDAgent service, Windows Azure Telemetry Service, and Windows Azure Network Agent service.
+   Go to the Services console (*services.msc*) and check the status of the following services: Azure VM Agent service, RDAgent service, Windows Azure Telemetry service, and Windows Azure Network Agent service.
 
     You can also check whether these services are running by examining Task Manager for the following processes:
 
   - *WindowsAzureGuestAgent.exe*: Azure VM Agent service
   - *WaAppAgent.exe*: RDAgent service
-  - *WindowsAzureTelemetryService.exe*: Windows Azure Telemetry Service
+  - *WindowsAzureTelemetryService.exe*: Windows Azure Telemetry service
   
    If you can't find these processes and services, this indicates that you don't have Azure VM Agent installed.
 
@@ -158,7 +158,7 @@ The VM is still running the older version of the Azure VM Agent. In the *C:\Wind
 Manually uninstall the Azure VM Agent, and then reinstall it by following these steps:
 
 1. Open **Control Panel** > **Programs and Features**, and uninstall Azure VM Agent.
-1. Open Task Manager and stop the following services: Azure VM Agent Service, RDAgent service, Windows Azure Telemetry Service, and Windows Azure Network Agent service.
+1. Open Task Manager and stop the following services: Azure VM Agent service, RDAgent service, Windows Azure Telemetry service, and Windows Azure Network Agent service.
 1. Under *C:\WindowsAzure*, create a folder named *OLD*.
 1. Move any folders that are named *Packages* or *GuestAgent* into the *OLD* folder. Also, move any of the *GuestAgent* folders in *C:\WindowsAzure\logs* that start as *GuestAgent_x.x.xxxxx* to the *OLD* folder.
 1. Download and install the latest version of the MSI agent. You must have administrator rights to complete the installation.
@@ -168,7 +168,7 @@ Manually uninstall the Azure VM Agent, and then reinstall it by following these 
     msiexec.exe /i c:\VMAgentMSI\WindowsAzureVmAgent.2.7.<version>.fre.msi /quiet /L*v c:\VMAgentMSI\msiexec.log
     ```
 
-1. Verify that RDAgent, Azure VM Agent, and Windows Azure Telemetry services are now running.
+1. Verify that RDAgent, Azure VM Agent, and Windows Azure Telemetry service are now running.
 
 1. Check the *WaAppAgent.log* file to make sure that the latest version of Azure VM Agent is running.
 
