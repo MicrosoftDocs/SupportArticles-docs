@@ -17,10 +17,10 @@ _Version:_ &nbsp; 16.0.4045.3
 
 ## Summary
 
-This article describes Cumulative Update package 5 (CU5) for Microsoft SQL Server 2022. This update contains 28 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 4, and it updates components in the following builds:
+This article describes Cumulative Update package 5 (CU5) for Microsoft SQL Server 2022. This update contains 30 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 4, and it updates components in the following builds:
 
 - SQL Server - Product version: **16.0.4045.3**, file version: **2022.160.4045.3**
-- Analysis Services - Product version: **16.0.43.211**, file version: **2022.160.43.211**
+- Analysis Services - Product version: **16.0.43.218**, file version: **2022.160.43.218**
 
 ## Known issues in this update
 
@@ -83,6 +83,8 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="2402263">[2402263](#2402263)</a> | Updates the version of the Microsoft OLE DB driver to 18.6.6. For more information, see [Release notes for the Microsoft OLE DB Driver for SQL Server](/sql/connect/oledb/release-notes-for-oledb-driver-for-sql-server). | SQL Connectivity | SQL Connectivity | Windows |
 | <a id="2429240">[2429240](#2429240)</a> | Fixes an issue where upgrading to SQL Server 2022 database mirroring fails and returns the following errors: </br></br>Error: 37526, Severity: 16, State: 1. </br>A ledger table cannot be created while database mirroring is enabled. </br></br>Error: 928, Severity: 20, State: 1. </br>During upgrade, database raised exception 3602, severity 25, state 51, address 00007FFFC67A3614. Use the exception number to determine the cause. | SQL Connectivity | Security Infrastructure | Windows |
 | <a id="2402141">[2402141](#2402141)</a> | Fixes an issue where applying the option `ONLINE` in the `ALTER INDEX REBUILD` statement is invalid when running the index rebuild task created in an index maintenance plan. | SQL Server Client Tools | Management Services | All |
+|  <a id="2399781">[2399781](#2399781)</a> | Fixes a memory leak issue that you encounter when you run queries that use an equals (`=`) string predicate on a clustered columnstore index (CCI). | SQL Server Engine | Column Stores | All |
+|  <a id="2399843">[2399843](#2399843)</a> | Fixes a performance issue that you may encounter when the String Min/Max for Rowgroup Elimination feature is enabled, and you query a clustered columnstore index (CCI) that's built with the feature disabled. The queries that contain simple string predicates may incorrectly qualify a rowgroup. | SQL Server Engine | Column Stores | All |
 | <a id="2417114">[2417114](#2417114)</a> | Consider the following scenario: </br></br>- You have an instance of SQL Server that connects to Azure Active Directory (Azure AD) </br>- You enable Transport Layer Security (TLS) encryption on this instance of SQL Server. </br></br>In this scenario, you may receive the following error 39011 if you run the `sp_execute_external_script` query against the instance: </br></br>Msg 39011, Level 16, State 7, Line \<LineNumber> </br>SQL Server was unable to communicate with the LaunchPad service for request id: \<ID>. Please verify the configuration of the service. | SQL Server Engine | Extensibility | Linux |
 |<a id="2375473">[2375473](#2375473)</a> | Fixes an issue where the following error occurs when you disable the `FILESTREAM` feature on a SQL Server failover cluster instance(FCI) by using SQL Server Configuration Manager (SSCM): </br></br>There was an unknown error applying FILESTREAM settings. </br>Check the parameters are valid. (0x800713d6) | SQL Server Engine | FileStream and FileTable | Windows |
 | <a id="2391164">[2391164](#2391164)</a> | Fixes an issue where messages in the sys.transmission_queue of the initiator database in a SQL Server Service Broker conversation are missing or stuck after a failover of the target database. | SQL Server Engine | High Availability and Disaster Recovery | All |
