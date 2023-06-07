@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Application Insights JavaScript SDK for webpages
 description: Provides strategies to fix issues that involve Azure Application Insights JavaScript SDK for webpages.
-ms.date: 06/06/2023
+ms.date: 06/07/2023
 ms.author: v-weizhu
 author: AmandaAZ
 ms.service: azure-monitor
