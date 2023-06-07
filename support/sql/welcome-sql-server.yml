@@ -155,4 +155,6 @@ landingContent:
         - text: System Dynamic Management Views
           url: ../sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md
         - text: DBCC commands
-          url: ../sql/t-sql/database-console-commands/dbcc-transact-sql          
+          url: ../sql/t-sql/database-console-commands/dbcc-transact-sql  
+        - text: Database Engine errors
+          url: ../sql/relational-databases/errors-events/database-engine-events-and-errors            
