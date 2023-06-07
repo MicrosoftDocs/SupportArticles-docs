@@ -10,23 +10,23 @@ manager: dcscontentpm
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
-ms.date: 06/06/2023
+ms.date: 06/07/2023
 ms.author: genli
 ---
 # Troubleshooting Azure Windows VM Agent
 
-Azure VM Agent is a virtual machine (VM) agent. It enables the VM to communicate with the Fabric Controller (the underlying physical server on which VM is hosted) on IP address 168.63.129.16. This is a virtual public IP address that facilitates the communication. For more information, see [What is IP address 168.63.129.16](/azure/virtual-network/what-is-ip-address-168-63-129-16).
+Azure VM Agent is a virtual machine (VM) agent. It enables the VM to communicate with the Fabric Controller (the underlying physical server on which the VM is hosted) on IP address 168.63.129.16. This is a virtual public IP address that facilitates communication. For more information, see [What is IP address 168.63.129.16](/azure/virtual-network/what-is-ip-address-168-63-129-16).
 
-The VM that is migrated to Azure from on-premises or that's created by using a customized image doesn't have Azure VM Agent installed. In these scenarios, you have to manually install the VM agent. For more information about how to install the VM Agent, see [Azure Virtual Machine Agent Overview](/azure/virtual-machines/extensions/agent-windows).
+The VM that's migrated to Azure from on-premises or created using a customized image doesn't have Azure VM Agent installed. In these scenarios, you have to manually install the VM agent. For more information about how to install the VM Agent, see [Azure Virtual Machine Agent Overview](/azure/virtual-machines/extensions/agent-windows).
 
-After Azure VM Agent is successfully installed, you can see the following services listed in services.msc on the VM:
+After Azure VM Agent is successfully installed, you can see the following services listed in *services.msc* on the VM:
 
-- Windows Azure Guest Agent - This service is responsible for configuring various extensions and communication from Guest to Host. It's also responsible for collecting logs into *WaAppAgent.log*.
+- Windows Azure Guest Agent - This service is responsible for configuring various extensions and communications from Guest to Host. It's also responsible for collecting logs into *WaAppAgent.log*.
 - Telemetry Service - This service is responsible for sending the telemetry data of the VM to the backend server.
-- RDAgent - This service is responsible for the Installation of Guest Agent. Transparent Installer is also a component of Rd Agent that helps to upgrade other components and services of Guest Agent. RD Agent is also responsible for sending heartbeats from Guest VM to Host Agent on the physical server.
+- RDAgent - This service is responsible for the installation of Guest Agent. Transparent Installer is also a component of RDAgent that helps to upgrade other components and services of Guest Agent. RDAgent is also responsible for sending heartbeats from Guest VM to Host Agent on the physical server.
 
 > [!NOTE]
-> Starting in version 2.7.41491.971 of the VM Guest Agent, the Telemetry component is included in the Windows Azure Guest Agent service, Therefore, you might not see this Telemetry service listed in newly created VMs.
+> Starting in version 2.7.41491.971 of the VM Guest Agent, the Telemetry component is included in the Windows Azure Guest Agent service. Therefore, you might not see this Telemetry service listed in newly created VMs.
 
 ## Checking agent status and version
 
@@ -38,7 +38,7 @@ Go to the VM properties page in the Azure portal, and check the **Agent status**
 
 - Check for the package
 
-    Locate the *C:\WindowsAzure* folder. If you see the *GuestAgent* folder that displays the version number, that means that Azure VM Agent was installed on the VM. You can also look for the installed package. If Azure VM Agent is installed on the VM, the package will be saved in the location *C:\windows\OEM\GuestAgent\VMAgentPackage.zip*.
+    Locate the *C:\WindowsAzure* folder. If you see the *GuestAgent* folder that displays the version number, that means Azure VM Agent was installed on the VM. You can also look for the installed package. If Azure VM Agent is installed on the VM, the package will be saved in the location *C:\windows\OEM\GuestAgent\VMAgentPackage.zip*.
 
     You can run the following PowerShell command to check whether VM Agent has been deployed to the VM:
     
@@ -46,16 +46,16 @@ Go to the VM properties page in the Azure portal, and check the **Agent status**
     Get-AzVM -ResourceGroupName "RGNAME" -Name "VMNAME" -DisplayHint expand
     ```
 
-    In the output, locate the **ProvisionVMAgent** property, and check whether the value is set to **True**. If it is, this means that the agent is installed on the VM.
+    In the output, locate the `ProvisionVMAgent` property, and check whether the value is set to **True**. If it is, the agent is installed on the VM.
 
 - Check the services and processes
 
-   Go to the Services console (*services.msc*) and check the status of the following services: Azure VM Agent Service, RD Agent service, Windows Azure Telemetry Service, and Windows Azure Network Agent service.
+   Go to the Services console (*services.msc*) and check the status of the following services: Azure VM Agent Service, RDAgent service, Windows Azure Telemetry Service, and Windows Azure Network Agent service.
 
     You can also check whether these services are running by examining Task Manager for the following processes:
 
   - *WindowsAzureGuestAgent.exe*: Azure VM Agent service
-  - *WaAppAgent.exe*: RD Agent service
+  - *WaAppAgent.exe*: RDAgent service
   - *WindowsAzureTelemetryService.exe*: Windows Azure Telemetry Service
   
    If you can't find these processes and services, this indicates that you don't have Azure VM Agent installed.
@@ -64,13 +64,13 @@ Go to the VM properties page in the Azure portal, and check the **Agent status**
 
     In Control Panel, go to **Programs and Features** to determine whether the Azure VM Agent service is installed.
 
-If you don't find any packages, services and processes running and don't even see Azure VM Agent installed under **Programs and Features**, try [installing Azure VM Agent service](/azure/virtual-machines/extensions/agent-windows). If the Guest Agent doesn't install properly, you can [Install the VM agent offline](./install-vm-agent-offline.md).
+If you don't find any packages, services, or processes running and don't see Azure VM Agent installed under **Programs and Features**, try [installing Azure VM Agent service](/azure/virtual-machines/extensions/agent-windows). If the Guest Agent doesn't install properly, you can [install the VM agent offline](./install-vm-agent-offline.md).
 
-If you can see the services and they're running, restart the service that sees if the problem is resolved. If the services are stopped, start them and wait few minutes. Then check whether the **Agent status** is reporting as **Ready**. If you find that these services are crashing, some third party processes may be causing these services to crash. To further troubleshooting of these issues, contact [Microsoft Support](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade).
+If you can see the services and they're running, restart the service to see if the problem is resolved. If the services are stopped, start them and wait a few minutes. Then check whether the **Agent status** is reporting as **Ready**. If you find that these services are crashing, some third-party processes may be causing these services to crash. To further troubleshoot these issues, contact [Microsoft Support](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade).
 
 ### Step 2: Check whether auto-update is working
 
-The Azure VM Agent has an auto-update feature. It will automatically check for new updates and install them. If the auto-update feature doesn't work correctly, try uninstalling and installing the Azure VM Agent by using the following steps:
+The Azure VM Agent has an auto-update feature. It will automatically check for new updates and install them. If the auto-update feature doesn't work correctly, try uninstalling and reinstalling the Azure VM Agent by using the following steps:
 
 1. If Azure VM Agent appears in **Programs and Features**, uninstall the Azure VM Agent.
 
@@ -92,11 +92,11 @@ The Azure VM Agent has an auto-update feature. It will automatically check for n
     sc delete WindowsAzureTelemetryService
     ```
 
-1. Under *C:\WindowsAzure*, create a folder that is named *OLD*. 
+1. Under *C:\WindowsAzure*, create a folder named *OLD*. 
 
 1. Move any folders that are named *Packages* or *GuestAgent* into the *OLD* folder.
 1. Restart the VM to complete the uninstalling process. 
-1. Download and install the latest version of the agent installation package from [here](https://go.microsoft.com/fwlink/?linkid=394789&clcid=0x409). You must have Administrator rights to complete the installation.
+1. Download and install the latest version of the agent installation package from [here](https://go.microsoft.com/fwlink/?linkid=394789&clcid=0x409). You must have administrator rights to complete the installation.
 
 1. Install Guest Agent by using the following command:
 
