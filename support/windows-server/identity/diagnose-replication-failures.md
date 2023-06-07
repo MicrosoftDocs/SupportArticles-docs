@@ -1,7 +1,7 @@
 ---
 title: Diagnose AD replication failures
 description: Describes how to diagnose Active Directory replication failures.
-ms.date: 04/28/2023
+ms.date: 06/07/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -43,7 +43,7 @@ Active Directory Domain Services (AD DS) replication has the following dependenc
 
 Use either of the following methods to view replications errors:
 
-- Download and run the [Microsoft Support and Recovery Assistant tool](https://aka.ms/sara-adreplication) OR Run [AD Status Replication Tool](https://www.microsoft.com/download/details.aspx?id=30005) on the DCs.
+- Download and run the [Microsoft Support and Recovery Assistant tool](https://aka.ms/sara-adreplication) or run AD Status Replication Tool on the DCs.
 - Read the replication status in the `repadmin /showrepl` output.
 
   - `Repadmin` is part of Remote Server Administrator Tools (RSAT). If you're using Windows 10, version 1803 or an earlier version of Windows, download [Remote Server Administration Tools (RSAT)](https://www.microsoft.com/download/details.aspx?id=45520).
@@ -56,7 +56,7 @@ You can create a Microsoft Excel spreadsheet for domain controllers by using the
 
 1. Open a Command Prompt as an administrator:
 
-    On the **Start** menu, right-click **Command Prompt**, and then click **Run as administrator**. If the **User Account Control** dialog box appears, provide Enterprise Admins credentials, and then click **Continue**.
+    On the **Start** menu, right-click **Command Prompt**, and then select **Run as administrator**. If the **User Account Control** dialog box appears, provide Enterprise Admins credentials, and then select **Continue**.
 
 2. At the command prompt, type the following command, and then press Enter:
 
@@ -69,12 +69,12 @@ You can create a Microsoft Excel spreadsheet for domain controllers by using the
 4. Format the spreadsheet as follows:
 
    1. Hide or delete column A and column G.
-   2. Select row 1 underneath the column header row. On the **View** tab, click **Freeze Panes**, and then click **Freeze Top Row**.
-   3. Select the whole spreadsheet. On the **Data** tab, click **Filter**.
-   4. In the **Last Success Time** column, click the down arrow, point to **Text Filters**, and then click **Custom Filter**.
+   2. Select row 1 underneath the column header row. On the **View** tab, select **Freeze Panes** > **Freeze Top Row**.
+   3. Select the whole spreadsheet. On the **Data** tab, select **Filter**.
+   4. In the **Last Success Time** column, select the down arrow, point to **Text Filters**, and then select **Custom Filter**.
    5. Sort the table from oldest to newest.
-   6. In the **Source DC** or **Source DSA** column, click the filter down arrow, point to **Text Filters**, and then click **Custom Filter**.
-   7. In the **Custom AutoFilter** dialog box, under **Show rows where**, click **does not contain**. In the adjacent text box, type **del** to eliminate deleted domain controllers from the view.
+   6. In the **Source DC** or **Source DSA** column, select the filter down arrow, point to **Text Filters**, and then select **Custom Filter**.
+   7. In the **Custom AutoFilter** dialog box, under **Show rows where**, select **does not contain**. In the adjacent text box, type *del* to eliminate deleted domain controllers from the view.
    8. Repeat step 6 for the **Last Failure Time** column, but use the value **does not equal**, and then type the value **0**.
 
 5. To fix any replication failures that appear under **Last Failure Status**, see [How to troubleshoot common Active Directory replication errors](https://support.microsoft.com/help/3108513/how-to-troubleshoot-common-active-directory-replication-errors).
