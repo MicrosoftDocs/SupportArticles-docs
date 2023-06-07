@@ -99,19 +99,19 @@ This problem occurs when the CGI application does exactly what the error suggest
 
 The request to the CGI starts at line 391:
 
-```output
+```xml
 <ROW>
 <EventNumber>391</EventNumber> 
 <EventName>IISGeneral</EventName> 
 <EventTypeName>GENERAL_REQUEST_START</EventTypeName> 
 <Timestamp>2005-08-23 20:19:06</Timestamp> 
-<UserData>ContextId={00000000-0000-0000-4c06-0060000000ef}|SiteId=1|AppPoolId=DefaultAppPool|ConnId=-1224979097571031481|RawConnId=0|RequestURL=http://btdatashare.btboces.org:80/cgi-bin/htmlos.exe/00182.3.055317239900014075|RequestVerb=POST</UserData> 
+<UserData>ContextId={00000000-0000-0000-4c06-0060000000ef}|SiteId=1|AppPoolId=DefaultAppPool|ConnId=-1224979097571031481|RawConnId=0|RequestURL=http://siteaddress:80/cgi-bin/htmlos.exe/00182.3.055317239900014075|RequestVerb=POST</UserData> 
 </ROW>
 ```
 
 The request is processed by IIS, you see it's for a CGI, and it's passed along to the CGI. The CGI starts its processing at line 405:
 
-```output
+```xml
 <ROW>
 <EventNumber>405</EventNumber> 
 <EventName>IISCGI</EventName> 
@@ -123,7 +123,7 @@ The request is processed by IIS, you see it's for a CGI, and it's passed along t
 
 Line 441 shows the problem in the CGI:
 
-```output
+```xml
 <ROW>
 <EventNumber>441</EventNumber> 
 <EventName>IISCGI</EventName> 
@@ -137,7 +137,7 @@ For some reasons, the CGI application is ended prematurely. Notice the value of 
 
 Line 446 shows the 502 that is sent to the client. It is actually a 502.2 (substatus of 2):
 
-```output
+```xml
 <ROW>
 <EventNumber>446</EventNumber> 
 <EventName>IISGeneral</EventName> 
