@@ -46,7 +46,7 @@ Go to the VM properties page in the Azure portal, and check the **Agent status**
     Get-AzVM -ResourceGroupName "RGNAME" -Name "VMNAME" -DisplayHint expand
     ```
 
-    In the output, locate the `ProvisionVMAgent` property, and check whether the value is set to **True**. If it is, the agent is installed on the VM.
+    In the output, locate the `ProvisionVMAgent` property, and check whether the value is set to `True`. If so, the agent is installed on the VM.
 
 - Check the services and processes
 
@@ -180,7 +180,7 @@ You notice the following error entries in the *WaAppAgent.log* and *Telemetry.lo
 
 **Log information**
 
-```Log sample
+```output
 [ERROR] GetVersions() failed with exception: Microsoft.ServiceModel.Web.WebProtocolException: Server Error: Service Unavailable (ServiceUnavailable) ---> 
 System.Net.WebException: The remote server returned an error: (503) Server Unavailable.
 ```
@@ -233,7 +233,7 @@ Azure VM Agent is stuck in the "Stopping" process.
 
 **Solution**
 
-1. Make sure that *WaAppAgent.exe* is running on the VM. If it isn't running, restart the *RDAgent* service, and wait five minutes. When *WaAppAgent.exe* is running, end the *WindowsAzureGuest.exe* process.
+1. Make sure that *WaAppAgent.exe* is running on the VM. If it isn't running, restart the RDAgent service, and wait five minutes. When *WaAppAgent.exe* is running, end the *WindowsAzureGuest.exe* process.
 2. If step 1 doesn't resolve the issue, remove the currently installed version and install the latest version of the agent manually.
 
 ### Npcap Loopback Adapter
@@ -258,7 +258,7 @@ The Npcap Loopback Adapter is likely installed by WireShark. Try disabling it, a
 
 You notice the following error entries in the *WaAppAgent.log* file:
 
-```Log sample
+```output
 [00000004] [01/12/2019 00:30:47.24] [ERROR] RdCrypt Initialization failed. Error Code: -2147023143.
 [00000004] [01/12/2019 00:30:47.24] [ERROR] Failed to get TransportCertificate. Error: System.AccessViolationException
 Microsoft.Cis.Fabric.CertificateServices.RdCertificateFactory.Shutdown()
@@ -301,7 +301,7 @@ This is most likely caused by a lack of permissions on the Crypto folders for th
 
 **Solution**
 
-Ensure that the SYSTEM account has Full Control permissions on the following folders:
+Ensure that the System account has **Full Control** permissions on the following folders:
 
 - *C:\ProgramData\Microsoft\Crypto\Keys*
 
