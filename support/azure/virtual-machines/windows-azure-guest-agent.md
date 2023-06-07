@@ -323,7 +323,7 @@ You notice the following error entries in the *WaAppAgent.log* file and the Gues
 
 **Analysis**
 
-It's likely that a third-party application has been installed on the VM, and it has modified the behavior of 32-bit / 64-bit .Net applications.
+It's likely that a third-party application has been installed on the VM, and it has modified the behavior of 32-bit/64-bit .Net applications.
 
 BadImageFormationException happens when a 64-bit application is loading a 32-bit DLL.
 
@@ -331,7 +331,7 @@ BadImageFormationException happens when a 64-bit application is loading a 32-bit
 
 Open the registry and check the registry key `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\Enable64Bit`.
 
-If it's set to 0, then 64-bit .Net application are considered as 32-bit applications. This can't work.
+If it's set to 0, then 64-bit .Net applications are considered as 32-bit applications, which won't work.
 
 The solution is to set the `Enable64Bit` key to 1 and reboot the VM.
 
