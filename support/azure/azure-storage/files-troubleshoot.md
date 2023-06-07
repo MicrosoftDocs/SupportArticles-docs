@@ -5,7 +5,7 @@ services: storage
 ms.subservice: files
 author: AmandaAZ
 ms.service: storage
-ms.date: 06/02/2023
+ms.date: 06/07/2023
 ms.author: v-weizhu
 ms.reviewer: kendownie, jarrettr
 ---
@@ -27,7 +27,7 @@ If you can't find an answer to your question, you can contact us through the fol
 | Standard file shares (GPv2), GRS/GZRS | :::image type="content" source="media/files-troubleshoot/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." ::: | :::image type="content" source="media/files-troubleshoot/no-icon.png" alt-text="Screenshot of the 'No' icon." :::|
 | Premium file shares (FileStorage), LRS/ZRS | :::image type="content" source="media/files-troubleshoot/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." ::: | :::image type="content" source="media/files-troubleshoot/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." ::: |
 
-## General troubleshooting steps
+## General troubleshooting first steps
 
 If you encounter problems with Azure Files, start with these steps. You can also use the [Azure file shares troubleshooter](https://support.microsoft.com/help/4022301/troubleshooter-for-azure-files-shares), which can help with problems connecting, mapping, and mounting Azure file shares.
 
@@ -58,7 +58,7 @@ The following command lets you test the DNS name resolution of your storage acco
 
 ##### [PowerShell](#tab/powershell)
 
-```PowerShell
+```powershell
 # If you have changed the DNS configuration in your environment, it may be helpful to clear
 # the DNS client cache to ensure you're getting the updated DNS name resolution.
 Clear-DnsClientCache
@@ -75,7 +75,7 @@ Resolve-DnsName -Name $hostName | Format-List
 
 The output returned by `Resolve-DnsName` may be different depending on your environment and desired networking configuration. For example, if you're trying to access the public endpoint of the storage account that doesn't have a private endpoint configured, you would see an output that looks like the following output, where `x.x.x.x` is the IP address of the cluster `file.phx10prdstf01a.store.core.windows.net` of the Azure storage platform that serves your storage account:
 
-```Output
+```output
 Name       : mystorageaccount.file.core.windows.net
 Type       : CNAME
 TTL        : 27
@@ -94,7 +94,7 @@ If you're trying to access the public endpoint of a storage account that has one
 > [!NOTE]
 > An additional CNAME record for `mystorageaccount.privatelink.file.core.windows.net` has been inserted in between the normal FQDN of the storage account and the name of storage cluster. This enables name resolution to the public endpoint's IP address when the user is accessing from the internet, and resolution to the private endpoint's IP address when the user is accessing from inside of an Azure virtual network (or peered network).
 
-```Output
+```output
 Name       : mystorageaccount.file.core.windows.net
 Type       : CNAME
 TTL        : 60
@@ -117,7 +117,7 @@ IP4Address : x.x.x.x
 
 If you're resolving to a private endpoint, you would normally expect an A record for `mystorageaccount.privatelink.file.core.windows.net` that maps to your private endpoint's IP address:
 
-```Output
+```output
 Name                   : mystorageaccount.file.core.windows.net
 Type                   : CNAME
 TTL                    : 53
@@ -133,8 +133,8 @@ IP4Address             : 10.0.0.5
 ```
 
 ##### [Bash](#tab/bash)
- 
-```Bash
+
+```bash
 # Replace this value with the fully qualified domain name for your storage account. 
 # Different storage accounts, especially in different Azure environments, 
 # may have different suffixes than file.core.windows.net, so be sure to use the correct
@@ -147,7 +147,7 @@ nslookup $HOSTNAME
 
 The output returned by `nslookup` may be different depending on your environment and desired networking configuration. For example, if you're trying to access the public endpoint of the storage account that doesn't have a private endpoint configured, you would see a result that looks like the following, where `x.x.x.x` is the IP address of the cluster `file.phx10prdstf01a.store.core.windows.net` of the Azure storage platform that serves your storage account:
 
-```Output
+```output
 Server:         127.0.0.53
 Address:        127.0.0.53#53
 
@@ -162,7 +162,7 @@ If you're trying to access the public endpoint of a storage account that has one
 > [!NOTE]
 > An additional CNAME record for `mystorageaccount.privatelink.file.core.windows.net` has been inserted in between the normal FQDN of the storage account and the name of storage cluster. This enables name resolution to the public endpoint's IP address when the user is accessing from the internet, and resolution to the private endpoint's IP address when the user is accessing from inside of an Azure virtual network (or peered network).
 
-```Output
+```output
 Server:         127.0.0.53
 Address:        127.0.0.53#53
 
@@ -175,7 +175,7 @@ Address: 20.60.39.8
 
 If you're resolving to a private endpoint, you would normally expect an A record for `mystorageaccount.privatelink.file.core.windows.net` that maps to your private endpoint's IP address:
 
-```Output
+```output
 Server:         127.0.0.53
 Address:        127.0.0.53#53
 
@@ -193,7 +193,7 @@ The following command lets you test your client's ability to make a TCP connecti
 
 ##### [PowerShell](#tab/powershell)
 
-```PowerShell
+```powershell
 # Replace this value with the fully qualified domain name for your storage account. 
 # Different storage accounts, especially in different Azure environments, 
 # may have different suffixes than file.core.windows.net, so be sure to use the correct
@@ -218,7 +218,7 @@ TcpTestSucceeded : True
 
 ##### [Bash](#tab/bash)
 
-```Bash
+```bash
 # Replace this value with the fully qualified domain name for your storage account. 
 # Different storage accounts, especially in different Azure environments, 
 # may have different suffixes than file.core.windows.net, so be sure to use the correct
@@ -232,7 +232,7 @@ nc -zvw3 $HOSTNAME 445
 
 If the connection was successfully established, you should expect to see the following result:
 
-```Output
+```output
 Connection to mystorageaccount.file.core.windows.net (10.0.0.5) 445 port [tcp/microsoft-ds] succeeded!
 ```
 
@@ -246,17 +246,17 @@ Both [Windows clients](https://github.com/Azure-Samples/azure-files-samples/tree
 
 For more detailed information, choose the subject area that you'd like to troubleshoot.
 
-- [Connectivity and access issues (SMB)](h/azure/storage/files/files-troubleshoot-smb-connectivity)
-- [Identity-based authentication and authorization issues (SMB)](/azure/storage/files/files-troubleshoot-smb-authentication)
-- [Performance issues (SMB/NFS)](h/azure/storage/files/files-troubleshoot-performance)
-- [General issues on Linux (SMB)](/azure/storage/files/files-troubleshoot-linux-smb)
-- [General issues on Linux (NFS)](/azure/storage/files/files-troubleshoot-linux-nfs)
-- [Azure File Sync issues](/azure/storage/file-sync/file-sync-troubleshoot)
+- [Connectivity and access issues (SMB)](files-troubleshoot-smb-connectivity.md)
+- [Identity-based authentication and authorization issues (SMB)](files-troubleshoot-smb-authentication.md)
+- [Performance issues (SMB/NFS)](files-troubleshoot-performance.md)
+- [General issues on Linux (SMB)](files-troubleshoot-linux-smb.md)
+- [General issues on Linux (NFS)](files-troubleshoot-linux-nfs.md)
+- [Azure File Sync issues](file-sync-troubleshoot.md)
 
 Some issues can be related to more than one subject area (both connectivity and performance, for example).
 
 ## See also
 
-[Monitor Azure Files](storage-files-monitoring.md)
+[Monitor Azure Files](/azure/storage/files/storage-files-monitoring)
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

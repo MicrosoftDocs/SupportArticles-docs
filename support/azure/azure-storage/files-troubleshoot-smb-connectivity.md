@@ -5,7 +5,7 @@ services: storage
 ms.subservice: files
 author: AmandaAZ
 ms.service: storage
-ms.date: 06/02/2023
+ms.date: 06/07/2023
 ms.author: v-weizhu
 ms.reviewer: kendownie, jarrettr
 ---
@@ -20,9 +20,9 @@ This article lists common problems that might occur when you try to connect to a
 
 | File share type | SMB | NFS |
 |-|:-:|:-:|
-| Standard file shares (GPv2), LRS/ZRS | :::image type="content" source="media/files-troubleshoot-smb-connectivity-smb-connectivity/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." ::: | :::image type="content" source="media/files-troubleshoot-smb-connectivity/no-icon.png" alt-text="Screenshot of the 'No' icon." ::: |
-| Standard file shares (GPv2), GRS/GZRS | :::image type="content" source="media/files-troubleshoot-smb-connectivity-smb-connectivity/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." ::: | :::image type="content" source="media/files-troubleshoot-smb-connectivity/no-icon.png" alt-text="Screenshot of the 'No' icon." ::: |
-| Premium file shares (FileStorage), LRS/ZRS | :::image type="content" source="media/files-troubleshoot-smb-connectivity-smb-connectivity/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." ::: | :::image type="content" source="media/files-troubleshoot-smb-connectivity/no-icon.png" alt-text="Screenshot of the 'No' icon." ::: |
+| Standard file shares (GPv2), LRS/ZRS | :::image type="content" source="media/files-troubleshoot-smb-connectivity/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." ::: | :::image type="content" source="media/files-troubleshoot-smb-connectivity/no-icon.png" alt-text="Screenshot of the 'No' icon." ::: |
+| Standard file shares (GPv2), GRS/GZRS | :::image type="content" source="media/files-troubleshoot-smb-connectivity/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." ::: | :::image type="content" source="media/files-troubleshoot-smb-connectivity/no-icon.png" alt-text="Screenshot of the 'No' icon." ::: |
+| Premium file shares (FileStorage), LRS/ZRS | :::image type="content" source="media/files-troubleshoot-smb-connectivity/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." ::: | :::image type="content" source="media/files-troubleshoot-smb-connectivity/no-icon.png" alt-text="Screenshot of the 'No' icon." ::: |
 
 ## Can't connect to or mount an Azure file share
 
@@ -30,7 +30,7 @@ Select the Windows or Linux tab depending on the client operating system you're 
 
 ### [Windows](#tab/windows)
 
-When trying to connect to an Azure file share on Windows, you might see the following errors.
+When trying to connect to an Azure file share in Windows, you might see the following errors.
 
 ### <a id="error5"></a>Error 5 when you mount an Azure file share
 
@@ -56,7 +56,7 @@ Network traffic is denied if virtual network (VNET) and firewall rules are confi
 
 #### Solution for cause 2
 
-Verify that virtual network and firewall rules are configured properly on the storage account. To test if virtual network or firewall rules is causing the issue, temporarily change the setting on the storage account to **Allow access from all networks**. To learn more, see [Configure Azure Storage firewalls and virtual networks](../common/storage-network-security.md).
+Verify that virtual network and firewall rules are configured properly on the storage account. To test if virtual network or firewall rules is causing the issue, temporarily change the setting on the storage account to **Allow access from all networks**. To learn more, see [Configure Azure Storage firewalls and virtual networks](/azure/storage/common/storage-network-security).
 
 #### Cause 3: Share-level permissions are incorrect when using identity-based authentication
 
@@ -66,15 +66,11 @@ If end users are accessing the Azure file share using Active Directory (AD) or A
 
 Validate that permissions are configured correctly:
 
-- **Active Directory Domain Services (AD DS)**
+- **Active Directory Domain Services (AD DS)** see [Assign share-level permissions](/azure/storage/files/storage-files-identity-ad-ds-assign-permissions).
 
     Share-level permission assignments are supported for groups and users that have been synced from AD DS to Azure Active Directory (Azure AD) using Azure AD Connect sync or Azure AD Connect cloud sync. Confirm that groups and users being assigned share-level permissions aren't unsupported "cloud-only" groups.
 
-    For more information, see [Assign share-level permissions](storage-files-identity-ad-ds-assign-permissions.md).
-
-- **Azure Active Directory Domain Services (Azure AD DS)**
-
-    For more information, see [Assign share-level permissions](storage-files-identity-auth-active-directory-domain-service-enable.md?tabs=azure-portal#assign-share-level-permissions).
+- **Azure Active Directory Domain Services (Azure AD DS)** see [Assign share-level permissions](/azure/storage/files/storage-files-identity-auth-active-directory-domain-service-enable?tabs=azure-portal#assign-share-level-permissions).
 
 ### <a id="error53-67-87"></a>Error 53, Error 67, or Error 87 when you mount or unmount an Azure file share
 
@@ -123,19 +119,21 @@ TcpTestSucceeded : True
 > [!Note]  
 > The command above returns the current IP address of the storage account. This IP address isn't guaranteed to remain the same, and may change at any time. Don't hardcode this IP address into any scripts or a firewall configuration.
 
-#### Solution 1 for cause 1: Use Azure File Sync as a QUIC endpoint
+#### Solutions for cause 1
 
-You can use Azure File Sync as a workaround to access Azure Files from clients that have port 445 blocked. Although Azure Files doesn't directly support SMB over QUIC, Windows Server 2022 Azure Edition does support the QUIC protocol. You can create a lightweight cache of your Azure file shares on a Windows Server 2022 Azure Edition VM using Azure File Sync. This configuration uses port 443, which is widely open outbound to support HTTPS, instead of port 445. To learn more about this option, see [SMB over QUIC with Azure File Sync](storage-files-networking-overview.md#smb-over-quic).
+##### Solution 1: Use Azure File Sync as a QUIC endpoint
 
-#### Solution 2 for cause 1: Use VPN or ExpressRoute
+You can use Azure File Sync as a workaround to access Azure Files from clients that have port 445 blocked. Although Azure Files doesn't directly support SMB over QUIC, Windows Server 2022 Azure Edition does support the QUIC protocol. You can create a lightweight cache of your Azure file shares on a Windows Server 2022 Azure Edition VM using Azure File Sync. This configuration uses port 443, which is widely open outbound to support HTTPS, instead of port 445. To learn more about this option, see [SMB over QUIC with Azure File Sync](/azure/storage/files/storage-files-networking-overview#smb-over-quic).
 
-By setting up a VPN or ExpressRoute from on-premises to your Azure storage account, with Azure Files exposed on your internal network using private endpoints, the traffic will go through a secure tunnel as opposed to over the internet. Follow the [instructions to setup VPN](storage-files-configure-p2s-vpn-windows.md) to access Azure Files from Windows.
+##### Solution 2: Use VPN or ExpressRoute
 
-#### Solution 3 for cause 1: Unblock port 445 with help from your ISP/IT admin
+By setting up a VPN or ExpressRoute from on-premises to your Azure storage account, with Azure Files exposed on your internal network using private endpoints, the traffic will go through a secure tunnel as opposed to over the internet. Follow the [instructions to setup VPN](/azure/storage/files/storage-files-configure-p2s-vpn-windows) to access Azure Files from Windows.
+
+##### Solution 3: Unblock port 445 with help from your ISP/IT admin
 
 Work with your IT department or ISP to open port 445 outbound to [Azure IP ranges](https://www.microsoft.com/download/details.aspx?id=56519).
 
-#### Solution 4 for cause 1: Use REST API-based tools like Storage Explorer/PowerShell
+##### Solution 4: Use REST API-based tools like Storage Explorer/PowerShell
 
 Azure Files also supports REST in addition to SMB. REST access works over port 443 (standard tcp). There are various tools that are written using REST API that enable a rich UI experience. [Storage Explorer](/azure/vs-azure-tools-storage-manage-with-storage-explorer?tabs=windows) is one of them. [Download and Install Storage Explorer](https://azure.microsoft.com/features/storage-explorer/) and connect to your file share backed by Azure Files. You can also use [PowerShell](/azure/storage/files/storage-how-to-use-files-portal) that also uses REST API.
 
@@ -147,7 +145,7 @@ To determine whether this is the cause of the error, verify that the `LmCompatib
 
 For more information, see [LmCompatibilityLevel](/previous-versions/windows/it-pro/windows-2000-server/cc960646(v=technet.10)).
 
-#### Solution for cause 2
+##### Solution for cause 2
 
 Revert the `LmCompatibilityLevel` registry subkey to the default value of 3.
 
@@ -254,7 +252,7 @@ If virtual networks (VNETs) and firewall rules are configured on the storage acc
 
 Verify virtual networks and firewall rules are configured properly on the storage account. To test if virtual networks or firewall rules are causing the issue, temporarily change the setting on the storage account to **Allow access from all networks**. To learn more, see [Configure Azure Storage firewalls and virtual networks](/azure/storage/common/storage-network-security).
 
-####<a id="error115"></a>"Mount error(115): Operation now in progress" when you mount Azure Files by using SMB 3.x
+#### <a id="error115"></a>"Mount error(115): Operation now in progress" when you mount Azure Files by using SMB 3.x
 
 ##### Cause
 
@@ -262,7 +260,7 @@ Some Linux distributions don't yet support encryption features in SMB 3.x. Users
 
 ##### Solution
 
-The encryption feature for SMB 3.x for Linux was introduced in the 4.11 kernel. This feature enables mounting of an Azure file share from on-premises or from a different Azure region. Some Linux distributions may have backported changes from the 4.11 kernel to older versions of the Linux kernel that they maintain. To help determine if your version of Linux supports SMB 3.x with encryption, consult with [Use Azure Files with Linux](storage-how-to-use-files-linux.md).
+The encryption feature for SMB 3.x for Linux was introduced in the 4.11 kernel. This feature enables mounting of an Azure file share from on-premises or from a different Azure region. Some Linux distributions may have backported changes from the 4.11 kernel to older versions of the Linux kernel that they maintain. To help determine if your version of Linux supports SMB 3.x with encryption, consult with [Use Azure Files with Linux](/azure/storage/files/storage-how-to-use-files-linux).
 
 If your Linux SMB client doesn't support encryption, mount Azure Files using SMB 2.1 from a Linux VM that's in the same Azure datacenter as the file share. Verify that the [Secure transfer required](/azure/storage/common/storage-require-secure-transfer) setting is disabled on the storage account.
 
@@ -274,8 +272,8 @@ A "112" mount error occurs on the Linux client when the client has been idle for
 
 The connection can be idle for the following reasons:
 
-- Network communication failures that prevent re-establishing a TCP connection to the server when the default "soft" mount option is used
-- Recent reconnection fixes that aren't present in older kernels
+- Network communication failures that prevent re-establishing a TCP connection to the server when the default "soft" mount option is used.
+- Recent reconnection fixes that aren't present in older kernels.
 
 ##### Solution
 
@@ -338,7 +336,7 @@ Before running the following script, you should [install the latest version](htt
 > [!Important]
 > Value-added services that take resource locks and share/share snapshot leases on your Azure Files resources may periodically reapply locks and leases. Modifying or deleting locked resources by value-added services may impact regular operation of those services, such as deleting share snapshots that were managed by Azure Backup.
 
-```PowerShell
+```powershell
 # Parameters for storage account resource
 $resourceGroupName = "<resource-group>"
 $storageAccountName = "<storage-account>"
@@ -418,7 +416,7 @@ To force a file handle to be closed, use the [Close-AzStorageFileHandle](/powers
 
 A file lease is preventing a file from being modified or deleted. You can check if a file has a file lease with the following PowerShell commands. Replace `<resource-group>`, `<storage-account>`, `<file-share>`, and `<path-to-file>` with the appropriate values for your environment.
 
-```PowerShell
+```powershell
 # Set variables 
 $resourceGroupName = "<resource-group>"
 $storageAccountName = "<storage-account>"
@@ -456,7 +454,7 @@ To remove a lease from a file, you can release the lease or break the lease. To 
 
 The following example shows how to break the lease for the file indicated in cause 2 (this example continues with the PowerShell variables from cause 2):
 
-```PowerShell
+```powershell
 $leaseClient = [Azure.Storage.Files.Shares.Specialized.ShareLeaseClient]::new($fileClient)
 $leaseClient.Break() | Out-Null
 ```
@@ -625,11 +623,11 @@ When a new file is uploaded, the **CacheControl** property by default is **no-ca
 
 ## See also
 
-- [Troubleshoot Azure Files](/azure/storage/files/files-troubleshoot)
-- [Troubleshoot Azure Files performance](/azure/storage/files/files-troubleshoot-performance)
-- [Troubleshoot Azure Files authentication and authorization (SMB)](/azure/storage/files/files-troubleshoot-smb-authentication)
-- [Troubleshoot Azure Files general SMB issues on Linux](/azure/storage/files/files-troubleshoot-linux-smb)
-- [Troubleshoot Azure Files general NFS issues on Linux](/azure/storage/files/files-troubleshoot-linux-nfs)
-- [Troubleshoot Azure File Sync issues](/azure/storage/file-sync/file-sync-troubleshoot)
+- [Troubleshoot Azure Files](files-troubleshoot.md)
+- [Troubleshoot Azure Files performance](files-troubleshoot-performance.md)
+- [Troubleshoot Azure Files authentication and authorization (SMB)](files-troubleshoot-smb-authentication.md)
+- [Troubleshoot Azure Files general SMB issues on Linux](files-troubleshoot-linux-smb.md)
+- [Troubleshoot Azure Files general NFS issues on Linux](files-troubleshoot-linux-nfs.md)
+- [Troubleshoot Azure File Sync issues](file-sync-troubleshoot.md)
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
