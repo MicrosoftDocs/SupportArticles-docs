@@ -204,12 +204,12 @@ The VM can't reach the Wireserver host server.
 **Solution**
 
 1. Because Wireserver isn't reachable, connect to the VM by using Remote Desktop, and then try to access the URL `http://168.63.129.16/?comp=versions` from an internet browser.
-1. If you can't reach the URL from step 1, check the network interface to determine whether it is set as DHCP-enabled and has DNS. To check the DHCP status of the network interface, run the command `netsh interface ip show config`.
+1. If you can't reach the URL from step 1, check the network interface to determine whether it's set as DHCP-enabled and has DNS. To check the DHCP status of the network interface, run the command `netsh interface ip show config`.
 1. If DHCP is disabled, run the command `netsh interface ip set address name="Name of the interface" source=dhcp`. Make sure you change the value in yellow to the name of your interface.
-1. Check for any issues that might be caused by a firewall, a proxy, or other source that could be blocking access to the IP address 168.63.129.16.
-1. Check whether Windows Firewall or a third-party firewall is blocking access to ports 80 and 32526. For more information about why this address shouldn't be blocked, see [What is IP address 168.63.129.16](/azure/virtual-network/what-is-ip-address-168-63-129-16).
+1. Check for any issues that might be caused by a firewall, a proxy, or another source that could be blocking access to the IP address 168.63.129.16.
+1. Check whether Windows Firewall or a third-party firewall is blocking access to ports 80 and 32526. For more information about why this address shouldn't be blocked, see [What is IP address 168.63.129.16?](/azure/virtual-network/what-is-ip-address-168-63-129-16).
 
-### Guest Agent is stuck at "Stopping"  
+### Guest Agent is stuck in the "Stopping" process  
 
 You notice the following error entries in the *WaAppAgent.log* file:
 
@@ -229,11 +229,11 @@ at Microsoft.WindowsAzure.GuestAgent.AgentCore.AgentService.<>c__DisplayClass2.<
 
 **Analysis**
 
-Azure VM Agent is stuck at the "Stopping" process.
+Azure VM Agent is stuck in the "Stopping" process.
 
 **Solution**
 
-1. Make sure that *WaAppAgent.exe* is running on the VM. If it isn't running, restart the *rdagent* service, and wait five minutes. When *WaAppAgent.exe* is running, end the *WindowsAzureGuest.exe* process.
+1. Make sure that *WaAppAgent.exe* is running on the VM. If it isn't running, restart the *RDAgent* service, and wait five minutes. When *WaAppAgent.exe* is running, end the *WindowsAzureGuest.exe* process.
 2. If step 1 doesn't resolve the issue, remove the currently installed version and install the latest version of the agent manually.
 
 ### Npcap Loopback Adapter
@@ -259,7 +259,7 @@ The Npcap Loopback Adapter is likely installed by WireShark. Try disabling it, a
 You notice the following error entries in the *WaAppAgent.log* file:
 
 ```Log sample
-[00000004] [01/12/2019 00:30:47.24] [ERROR] RdCrypt Initiailization failed. Error Code: -2147023143.
+[00000004] [01/12/2019 00:30:47.24] [ERROR] RdCrypt Initialization failed. Error Code: -2147023143.
 [00000004] [01/12/2019 00:30:47.24] [ERROR] Failed to get TransportCertificate. Error: System.AccessViolationException
 Microsoft.Cis.Fabric.CertificateServices.RdCertificateFactory.Shutdown()
 [00000004] [01/12/2019 00:30:47.24] [WARN]  Could not get transport certificate from agent runtime for subject name: 12345678-d7c8-4387-8cf3-d7ecf62544e5. Installing certificates in the LocalMachine store failed.
@@ -269,23 +269,23 @@ Microsoft.Cis.Fabric.CertificateServices.RdCertificateFactory.Shutdown()
 
 **Analysis**
 
-This is likely due to the RPC endpoint not listening, or the RPC process on the other side which isn't there.
+This is likely due to the Remote Procedure Call (RPC) endpoint not listening or the RPC process missing on the other side
 
 
 **Solution**
 
-Check if the "CNGKEYISO" Windows service is in the list of RPC endpoints by running the following command. 
+Check if the "CNGKEYISO" Windows service is in the list of RPC endpoints by running the following command: 
 
 ```console
 portqry -n <VMName> -e 135
 ```
 
 
-If you don't see the "CNGKEYISO" process, start it from the Windows Services console (CNG Key Isolation = KeyIso) and then restart *WaAppAgent.exe* / *WindowsAzureGuestAgent.exe*.
+If you don't see the "CNGKEYISO" process, start it from the Windows Services console (CNG Key Isolation = KeyIso) and then restart *WaAppAgent.exe* or *WindowsAzureGuestAgent.exe*.
 
 ### PInvoke PFXImportCertStore failed and null handle is returned. Error Code: 86.
 
-In this case, you can see that the Windows Guest Agent running, but extensions aren't working. You notice the following error entries in the *WaAppAgent.log* file:
+In this case, you can see that the Windows Guest Agent is running, but extensions aren't working. You notice the following error entries in the *WaAppAgent.log* file:
 
 ```output
 PInvoke PFXImportCertStore failed and null handle is returned. Error Code: 86
@@ -296,7 +296,7 @@ PInvoke PFXImportCertStore failed and null handle is returned. Error Code: 86
 
 **Analysis**
 
-This is most likely caused by lack of permissions on the Crypto folders for the SYSTEM account. Collecting a Procmon trace while restarting the GA services (RDAgent / WindowsAzureGuestAgent) should exhibit some "Access Denied" errors.
+This is most likely caused by a lack of permissions on the Crypto folders for the SYSTEM account. Collecting a Procmon trace while restarting the GA services (RDAgent or WindowsAzureGuestAgent) should exhibit some "Access Denied" errors.
 
 
 **Solution**
