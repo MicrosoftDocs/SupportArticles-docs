@@ -406,6 +406,8 @@
 
 - name: VM health
   items:
+  - name: HealthResources table in Resource Graph has missing entries
+    href: healthresources-table-resource-graph-missing-entries.md
   - name: VM availability might be inaccurate during restart
     href: inaccurate-vm-availability-during-vm-restart.md
 
