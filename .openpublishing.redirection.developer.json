@@ -4368,6 +4368,11 @@
       "source_path": "support/developer/webapps/welcome-webapps.yml",
       "redirect_url": "/troubleshoot",
       "redirect_document_id": false
+    },    
+    {
+      "source_path": "support/developer/visualstudio/cpp/libraries/minimum-service-pack-levels.md",
+      "redirect_url": "/cpp/windows/latest-supported-vc-redist",
+      "redirect_document_id": false
     }
   ]
 }
