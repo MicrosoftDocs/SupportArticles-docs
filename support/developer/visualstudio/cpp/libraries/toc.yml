@@ -1,6 +1,3 @@
-
-- name: Minimum service pack levels for Redistributable packages
-  href: ./minimum-service-pack-levels.md
 - name: Redistributable Package installation fails
   href: ./runtime-installation-fails.md
 - name: C2653 or C2039 error when you reference a STD function
