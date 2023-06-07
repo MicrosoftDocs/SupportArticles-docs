@@ -10,7 +10,7 @@ manager: dcscontentpm
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
-ms.date: 06/07/2023
+ms.date: 06/08/2023
 ms.author: genli
 ---
 # Troubleshooting Azure Windows VM Agent
@@ -60,7 +60,7 @@ Go to the VM properties page in the Azure portal, and check the **Agent status**
   
    If you can't find these processes and services, this indicates that you don't have Azure VM Agent installed.
 
-- Check the Program and Feature
+- Check the **Program and Feature**
 
     In Control Panel, go to **Programs and Features** to determine whether the Azure VM Agent service is installed.
 
@@ -121,15 +121,15 @@ Events for troubleshooting Azure VM Agent are recorded in the following log file
 
 The following are some common scenarios in which Azure VM Agent can enter **Not ready** status or stop working as expected.
 
-### Windows VMs using Azure VM agent version 2.7.41491.1004 may experience issues with Sysprep.exe
+### Windows VMs using Azure VM agent version 2.7.41491.1004 may experience issues with Sysprep
 
-Running *Sysprep.exe* on these VMs might lead to the errors below.
+Running Sysprep on these VMs might lead to the errors below.
 
-- When you run *Sysprep.exe* for the first time, you see the following error:
+- When you run Sysprep for the first time, you see the following error:
 
   > ADMINISTRATOR: Error Handler
 
-- When you run *Sysprep.exe* more than once, you see the following error:
+- When you run Sysprep more than once, you see the following error:
 
   > A fatal error occurred while trying to sysprep the VM
 
@@ -137,7 +137,7 @@ The issue is only with version 1004, so you can try upgrading the agent to the l
 
 *\\reddog\Builds\branches\git_compute_iaas_vmagent_master\2.7.41491.1005\retail-amd64\exports\IaaSVmAgentInstaller*
 
-Also, reset the *Sysprep.exe* state of the VM first. This consists of [modifying a few registry keys](https://www.wintips.org/fix-sysprep-fatal-error-dwret-31-machine-invalid-state-couldnt-update-recorded-state/).
+Also, reset the Sysprep state of the VM first. This consists of [modifying a few registry keys](https://www.wintips.org/fix-sysprep-fatal-error-dwret-31-machine-invalid-state-couldnt-update-recorded-state/).
 
 ### Agent is stuck in the "Starting" process
 
@@ -301,7 +301,7 @@ This is most likely caused by a lack of permissions on the Crypto folders for th
 
 **Solution**
 
-Ensure that the System account has **Full Control** permissions on the following folders:
+Ensure that the SYSTEM account has **Full Control** permissions on the following folders:
 
 - *C:\ProgramData\Microsoft\Crypto\Keys*
 
