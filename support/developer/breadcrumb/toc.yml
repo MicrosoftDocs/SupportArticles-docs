@@ -1,0 +1,12 @@
+- name: Docs
+  tocHref: /
+  topicHref: /index
+  items:
+
+  - name: Troubleshoot
+    tocHref: /developer/
+    topicHref: /troubleshoot/index
+    items:
+    - name: Developer
+      tocHref: /developer/visualstudio/
+      topicHref: /troubleshoot/developer/welcome-visual-studio.yml
