@@ -46,9 +46,9 @@ Here are the steps to turn off or turn on a flow:
 6. Select the respective flow and then select **Turn off** or **Turn on** from the top menu.
 If you are not sure about the flow name, then click on any one of the listed flows and replace flow ID(you can get it from error message) in the URL from the browser address bar, and press enter key. Now select **Turn off** and then **Turn on** from top menu.
 
-Sample URL where we need to replace flow ID immediately after **flows** in the address:
-https://make.powerautomate.com/environments/Default-00000000-0000-0000-0000-000000000000/solutions/00000000-0000-0000-0000-000000000000/flows/[00000000-0000-0000-0000-000000000000]/details?utm_source=solution_explorer
+    Sample URL where we need to replace flow ID immediately after **flows** in the address:
+    https://make.powerautomate.com/environments/Default-00000000-0000-0000-0000-000000000000/solutions/00000000-0000-0000-0000-000000000000/flows/```00000000-0000-0000-0000-000000000000```/details?utm_source=solution_explorer
 
-    :::image type="content" source="media/sla-modern-flow-not-valid/turn-on-turn-off-cloud-flow.png" alt-text="The screenshot shows how to turn off or turn on a flow.":::
+    :::image type="content" source="media/sla-modern-flow-not-valid/turn-on-turn-off-cloud-flow.png" alt-text="The screenshot shows the Cloud flows option in the left menu." border="false":::
 
 If this resolution doesn't work, raise an ICM to the flow team for assistance.
