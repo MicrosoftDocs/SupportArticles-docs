@@ -49,6 +49,6 @@ If you are not sure about the flow name, then click on any one of the listed flo
     Sample URL where we need to replace flow ID which is immediately after **flows** in the address: 
     https://make.powerautomate.com/environments/Default-00000000-0000-0000-0000-000000000000/solutions/00000000-0000-0000-0000-000000000000/flows/[**Flow ID**]/details?utm_source=solution_explorer
 
-    :::image type="content" source="media/sla-modern-flow-not-valid/turn-on-turn-off-cloud-flow.png" alt-text="The screenshot shows the Cloud flows option in the left menu." border="false":::
+    :::image type="content" source="media/sla-modern-flow-not-valid/turn-on-turn-off-cloud-flow.png" alt-text="The screenshot shows how to turn off or turn on a flow." border="false":::
 
 If this resolution doesn't work, raise an ICM to the flow team for assistance.
