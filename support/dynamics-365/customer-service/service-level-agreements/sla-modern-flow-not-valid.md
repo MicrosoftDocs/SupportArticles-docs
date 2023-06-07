@@ -37,7 +37,7 @@ Below are the steps to turn off or turn on a flow:
 5. Click on "Cloud flows" from left menu.
     :::image type="content" source="media/sla-modern-flow-not-valid/cloudflows.png" alt-text="The screenshot shows the cloud flows." border="false":::
 
-6. Select the respective flow and click on "Turn off\Turn on" from top menu.
-    :::image type="content" source="media/sla-modern-flow-not-valid/turnon-off.png" alt-text="The screenshot shows the how to trun off or turn on a flow." border="false":::
+6. Select the respective flow and click on "Turn off" or "Turn on" from top menu.
+    :::image type="content" source="media/sla-modern-flow-not-valid/turnon-off.png" alt-text="The screenshot shows the how to turn off or turn on a flow." border="false":::
 
 If this resolution doesn't work, raise an ICM to the flow team for assistance.
