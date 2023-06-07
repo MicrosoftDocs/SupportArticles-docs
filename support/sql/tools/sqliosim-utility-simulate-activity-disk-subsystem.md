@@ -66,7 +66,7 @@ The next few examples illustrate how to run SQLIOSim using the GUI and command l
 
    :::image type="content" source="media/sqliosim/sqliosim-modify-data-file.png" alt-text="Screenshot that shows the data file configuration." lightbox="media/sqliosim/sqliosim-modify-data-file.png":::
 
-   The example shows the location of the file is changed to *D:\temp\sqliosim\sqliosim.mdx*, its size is set to 2,048 MB, its max size is set to 4,096 MB, and its increment size is set to 64 MB.
+   The example shows the location of the file is changed to *D:\temp\sqliosim\sqliosim.mdx*, its size is set to *2048* MB, its max size is set to *4096* MB, and its increment size is set to *64* MB.
 
 1. Modify the second file with the *ldx* suffix. This file represents the equivalent of a transaction log file. Be sure to keep the **Log File** checkbox enabled. Select **Apply** when you're done.
 
