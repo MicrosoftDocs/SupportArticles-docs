@@ -41,7 +41,8 @@ items:
   href: troubleshoot-high-cpu-in-iis-app-pool.md
 - name: Troubleshoot HTTP 400 errors in IIS
   href: troubleshoot-http-400-errors-in-iis.md
-- name: Troubleshooting HTTP 502.2 Bad Gateway error in CGI apps
+- name: Troubleshoot HTTP 502.2 Bad Gateway error in CGI apps
   href: troubleshoot-502-2-bad-gateway-error-in-cgi-apps.md
 - name: Troubleshoot IIS performance issues and application errors
   href: troubleshoot-iis-perf-issues-or-app-errors.md
+
