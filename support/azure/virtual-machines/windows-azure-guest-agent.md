@@ -15,9 +15,9 @@ ms.author: genli
 ---
 # Troubleshooting Azure Windows VM Agent
 
-Azure VM Agent is a virtual machine (VM) agent. It enables the VM to communicate with the Fabric Controller (the underlying physical server on which the VM is hosted) on IP address 168.63.129.16. This address is a virtual public IP address that facilitates communication. For more information, see [What is IP address 168.63.129.16](/azure/virtual-network/what-is-ip-address-168-63-129-16).
+Azure VM Agent is a virtual machine (VM) agent. It enables the VM to communicate with the Fabric Controller (the underlying physical server on which the VM is hosted) on IP address 168.63.129.16. This address is a virtual public IP address that facilitates communication. For more information, see [What is IP address 168.63.129.16?](/azure/virtual-network/what-is-ip-address-168-63-129-16).
 
-The VM that's migrated to Azure from on-premises or created using a customized image doesn't have Azure VM Agent installed. In these scenarios, you have to manually install the VM agent. For more information about how to install the VM Agent, see [Azure Virtual Machine Agent Overview](/azure/virtual-machines/extensions/agent-windows).
+The VM that's migrated to Azure from on-premises or created using a customized image doesn't have Azure VM Agent installed. In these scenarios, you have to manually install the VM agent. For more information about how to install the VM Agent, see [Azure Virtual Machine Agent overview](/azure/virtual-machines/extensions/agent-windows).
 
 After Azure VM Agent is successfully installed, you can see the following services listed in *services.msc* on the VM:
 
