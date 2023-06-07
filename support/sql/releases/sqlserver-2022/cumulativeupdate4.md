@@ -42,7 +42,7 @@ To work around this issue, you can uninstall this cumulative update or add the D
 
 After you install this cumulative update, you may receive incorrect results from queries that meet all of the following conditions:
 
-1. You have indexes that explicitly specify the sort order. Here's an example:
+1. You have indexes that explicitly specify a descending sort order. Here's an example:
 
     ```sql
     CREATE NONCLUSTERED INDEX [nci_table_column1] ON [dbo].[table1] (column1 DESC)
