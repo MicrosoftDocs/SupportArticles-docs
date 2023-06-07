@@ -20,6 +20,7 @@ This issue occurs when an active SLA exists but the SLA item's `ChangeAttributeL
 ## Resolution
 
 To solve this issue, 
-
+- Find SLA which is associated with a case.
+- Open associated SLA and check SLA items. 
 - If an SLA has SLA items, administrators can reactivate the SLA, which should calculate the `ChangeAttributeList` again.
 - If an SLA doesn't have any SLA item, administrators can define SLA items and reactivate the SLA again.
