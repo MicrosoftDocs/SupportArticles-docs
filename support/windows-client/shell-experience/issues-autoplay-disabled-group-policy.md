@@ -1,7 +1,7 @@
 ---
 title: Issues after Autoplay is disabled in Group Policy
 description: Describes issues after Autoplay is disabled in Group Policy, and provides the resolutions.
-ms.date: 06/05/2023
+ms.date: 06/07/2023
 author: v-lianna
 ms.author: v-lianna
 manager: dcscontentpm
@@ -15,7 +15,7 @@ ms.technology: windows-client-shell-experience
 ---
 # Issues after Autoplay is disabled in Group Policy
 
-This article describes issues after [Autoplay](/previous-versions/windows/desktop/legacy/cc144212(v=vs.85)) is disabled in Group Policy, and provides the resolutions.
+This article describes the issues that occur after [Autoplay](/previous-versions/windows/desktop/legacy/cc144212(v=vs.85)) is disabled in Group Policy and provides resolutions.
 
 _Applies to:_ &nbsp; Supported versions of Windows Client  
 _Original KB number:_ &nbsp; 2328787, 3096935
