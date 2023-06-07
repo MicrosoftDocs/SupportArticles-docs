@@ -59,7 +59,7 @@ You must either manually set the correct MSBuild property to support XAML Hot Re
 
 ### Ensure your program is not running elevated
 
-XAML Hot Reloading is not supported in apps that run elevated/run as administrator.
+XAML Hot Reload is not supported in apps that run elevated/run as administrator.
 
 ### Verify that your XAML file has no errors
 
