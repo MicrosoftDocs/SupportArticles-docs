@@ -106,7 +106,7 @@ The Azure VM Agent has an auto-update feature. It will automatically check for n
 
     Then check whether the Windows Azure Guest Agent service starts correctly.
 
-    In rare cases in which Guest Agent doesn't install correctly, you can [Install the VM agent offline](./install-vm-agent-offline.md).
+    In rare cases in which Guest Agent doesn't install correctly, you can [install the VM agent offline](./install-vm-agent-offline.md).
 
 ### Step 3: Check whether the VM can connect to the Fabric Controller
 
@@ -121,27 +121,27 @@ Events for troubleshooting Azure VM Agent are recorded in the following log file
 
 The following are some common scenarios in which Azure VM Agent can enter **Not ready** status or stop working as expected.
 
-### Windows VMs using Azure VM agent version 2.7.41491.1004 may experience issue with Sysprep
+### Windows VMs using Azure VM agent version 2.7.41491.1004 may experience issues with Sysprep.exe
 
-Running Sysprep.exe on these VMs might end up with the errors below.
+Running *Sysprep.exe* on these VMs might lead to the errors below.
 
-- When you run Sysprep the first time, you'll see the following error:
+- When you run *Sysprep.exe* for the first time, you see the following error:
 
   > ADMINISTRATOR: Error Handler
 
-- When you run Sysprep more than once, you'll see the following error:
+- When you run *Sysprep.exe* more than once, you see the following error:
 
   > A fatal error occurred while trying to sysprep the VM
 
-The issue is only with version 1004, hence you can try upgrading the agent to the latest agent version, or you can try upgrading it to version 1005 by using the following MSI, which has the bug fixed.
+The issue is only with version 1004, so you can try upgrading the agent to the latest agent version, or you can try upgrading it to version 1005 by using the following Microsoft Installer (MSI), which has the bug fixed.
 
 *\\reddog\Builds\branches\git_compute_iaas_vmagent_master\2.7.41491.1005\retail-amd64\exports\IaaSVmAgentInstaller*
 
-Also, reset the Sysprep state of the VM first. This consists of [modifying a few registry keys](https://www.wintips.org/fix-sysprep-fatal-error-dwret-31-machine-invalid-state-couldnt-update-recorded-state/).
+Also, reset the *Sysprep.exe* state of the VM first. This consists of [modifying a few registry keys](https://www.wintips.org/fix-sysprep-fatal-error-dwret-31-machine-invalid-state-couldnt-update-recorded-state/).
 
-### Agent is stuck at "Starting"
+### Agent is stuck in the "Starting" process
 
-In the *WaAppAgent.log* file, you can see that the agent is stuck at the "Starting" process and can't start.
+In the *WaAppAgent.log* file, you can see that the agent is stuck in the "Starting" process and can't start.
 
 **Log information**
 
@@ -157,9 +157,9 @@ The VM is still running the older version of the Azure VM Agent. In the *C:\Wind
 
 Manually uninstall the Azure VM Agent, and then reinstall it by following these steps:
 
-1. Open Control Panel > **Programs and Features**, and uninstall the Azure VM Agent.
-1. Open Task Manager, and stop the following services: Azure VM Agent Service, RD Agent  service, Windows Azure Telemetry Service, and Windows Azure Network Agent service.
-1. Under *C:\WindowsAzure*, create a folder that's named *OLD*.
+1. Open **Control Panel** > **Programs and Features**, and uninstall Azure VM Agent.
+1. Open Task Manager and stop the following services: Azure VM Agent Service, RDAgent service, Windows Azure Telemetry Service, and Windows Azure Network Agent service.
+1. Under *C:\WindowsAzure*, create a folder named *OLD*.
 1. Move any folders that are named *Packages* or *GuestAgent* into the *OLD* folder. Also, move any of the *GuestAgent* folders in *C:\WindowsAzure\logs* that start as *GuestAgent_x.x.xxxxx* to the *OLD* folder.
 1. Download and install the latest version of the MSI agent. You must have administrator rights to complete the installation.
 1. Install Guest Agent by using the following MSI command:
@@ -168,7 +168,7 @@ Manually uninstall the Azure VM Agent, and then reinstall it by following these 
     msiexec.exe /i c:\VMAgentMSI\WindowsAzureVmAgent.2.7.<version>.fre.msi /quiet /L*v c:\VMAgentMSI\msiexec.log
     ```
 
-1. Verify that the RD Agent, Azure VM Agent, and Windows Azure Telemetry services are now running.
+1. Verify that RDAgent, Azure VM Agent, and Windows Azure Telemetry services are now running.
 
 1. Check the *WaAppAgent.log* file to make sure that the latest version of Azure VM Agent is running.
 
