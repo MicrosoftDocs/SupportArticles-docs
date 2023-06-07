@@ -7,6 +7,6 @@
     tocHref: /cpp/
     topicHref: /troubleshoot/index
     items:
-    - name: CPP
+    - name: Visual Studio
       tocHref: /cpp/windows/
       topicHref: /troubleshoot/developer/visualstudio/welcome-visual-studio
