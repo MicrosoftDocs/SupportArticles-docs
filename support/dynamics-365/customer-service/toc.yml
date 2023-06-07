@@ -63,7 +63,7 @@
               href: service-level-agreements/sla-timer-pause-state-changed.md
             - name: Warning appears on SLA KPI instances
               href: service-level-agreements/warning-slakpiinstances.md
-        - name: SLA Flow
+        - name: SLA flow
           items:
             - name: '"Modern flow is not valid for ExecuteWorkflow" error'
               href: service-level-agreements/sla-modern-flow-not-valid.md
