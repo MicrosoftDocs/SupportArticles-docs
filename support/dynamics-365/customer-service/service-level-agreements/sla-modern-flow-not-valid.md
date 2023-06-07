@@ -3,7 +3,7 @@ title: SLA modern flow is not valid for ExecuteWorkflow error
 description: Provides a resolution for the Modern flow is not valid for ExecuteWorkflow error.
 ms.reviewer: sdas
 ms.author: ravimanne
-ms.date: 06/01/2023
+ms.date: 06/07/2023
 ---
 # "Modern flow is not valid for ExecuteWorkflow" error
 
@@ -22,22 +22,29 @@ This issue occurs because the callback registrations are missing from the flow.
 ## Resolution
 
 To solve this issue, turn off and then turn on the SLA modern flow.
-Below are the steps to turn off or turn on a flow:
-1. Connect to https://make.powerautomate.com/ with the user who is having permissions to edit a flow.
 
-2. Select right environment from top right corner.
+Here are the steps to turn off or turn on a flow:
+
+1. Sign in to [Power Automate](https://make.powerautomate.com/) with a user who has the permissions to edit a flow.
+
+2. Select the right environment from **Environments** in the upper-right corner.
+
     :::image type="content" source="media/sla-modern-flow-not-valid/environment.png" alt-text="The screenshot shows the environment selection." border="false":::
 
-3. Click on "Solutions" from left menu.
-    :::image type="content" source="media/sla-modern-flow-not-valid/solutions.png" alt-text="The screenshot shows the solutions." border="false":::
+3. Select **Solutions** from the left menu.
 
-4. Click on "Default Solution" from the solutions list.
-    :::image type="content" source="media/sla-modern-flow-not-valid/defaultsolution.png" alt-text="The screenshot shows the default solution." border="false":::
+    :::image type="content" source="media/sla-modern-flow-not-valid/solutions.png" alt-text="The screenshot shows the Solutions option in the left menu.":::
 
-5. Click on "Cloud flows" from left menu.
-    :::image type="content" source="media/sla-modern-flow-not-valid/cloudflows.png" alt-text="The screenshot shows the cloud flows." border="false":::
+4. Select **Default Solution** from the solutions list.
 
-6. Select the respective flow and click on "Turn off" or "Turn on" from top menu.
-    :::image type="content" source="media/sla-modern-flow-not-valid/turnon-off.png" alt-text="The screenshot shows the how to turn off or turn on a flow." border="false":::
+    :::image type="content" source="media/sla-modern-flow-not-valid/default-solution.png" alt-text="The screenshot shows the Default Solution in the solutions list.":::
+
+5. Select **Cloud flows** from the left menu.
+
+    :::image type="content" source="media/sla-modern-flow-not-valid/cloud-flows.png" alt-text="The screenshot shows the Cloud flows option in the left menu." border="false":::
+
+6. Select the respective flow and then select **Turn off** or **Turn on** from the top menu.
+
+    :::image type="content" source="media/sla-modern-flow-not-valid/turn-on-turn-off-cloud-flow.png" alt-text="The screenshot shows how to turn off or turn on a flow.":::
 
 If this resolution doesn't work, raise an ICM to the flow team for assistance.

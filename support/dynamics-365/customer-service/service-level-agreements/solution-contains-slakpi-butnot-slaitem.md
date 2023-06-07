@@ -3,7 +3,7 @@ title: A managed solution cannot overwrite the SLAItem component
 description: Provides a resolution for the issue that occurs when importing a solution that only contains SLA KPIs and no SLA item referring to it.
 ms.reviewer: sdas
 ms.author: ravimanne
-ms.date: 06/01/2023
+ms.date: 06/07/2023
 ---
 # "A managed solution cannot overwrite the SLAItem component" error
 
@@ -19,8 +19,8 @@ When you try to import an SLA solution, you might receive the following error me
 
 This issue occurs when the import solution only contains SLA KPIs and no SLA item referring to it.
 
-## Resolution 1
+## Resolution
 
-Unzip the managed solution used to upgrade.
+To solve this issue, unzip the managed solution used to upgrade.
 
 Open the *Customizations.xml* file, search for `<msdyn_slakpis>`, and remove all the complete nodes till `</msdyn_slakpis>`. Save and zip all the folders within the unzipped folder. This action creates a new folder and try to import the solution.
