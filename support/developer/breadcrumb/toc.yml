@@ -4,9 +4,9 @@
   items:
 
   - name: Troubleshoot
-    tocHref: /developer/
+    tocHref: /cpp/
     topicHref: /troubleshoot/index
     items:
-    - name: Developer
-      tocHref: /developer/visualstudio/
+    - name: CPP
+      tocHref: /cpp/windows/
       topicHref: /troubleshoot/developer/visualstudio/welcome-visual-studio
