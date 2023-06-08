@@ -20,9 +20,9 @@ This article lists common problems that might occur when you try to connect to a
 
 | File share type | SMB | NFS |
 |-|:-:|:-:|
-| Standard file shares (GPv2), LRS/ZRS | :::image type="content" source="media/files-troubleshoot-smb-connectivity/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." ::: | :::image type="content" source="media/files-troubleshoot-smb-connectivity/no-icon.png" alt-text="Screenshot of the 'No' icon." ::: |
-| Standard file shares (GPv2), GRS/GZRS | :::image type="content" source="media/files-troubleshoot-smb-connectivity/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." ::: | :::image type="content" source="media/files-troubleshoot-smb-connectivity/no-icon.png" alt-text="Screenshot of the 'No' icon." ::: |
-| Premium file shares (FileStorage), LRS/ZRS | :::image type="content" source="media/files-troubleshoot-smb-connectivity/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." ::: | :::image type="content" source="media/files-troubleshoot-smb-connectivity/no-icon.png" alt-text="Screenshot of the 'No' icon." ::: |
+| Standard file shares (GPv2), LRS/ZRS | :::image type="content" source="media/files-troubleshoot-smb-connectivity/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." border="false"::: | :::image type="content" source="media/files-troubleshoot-smb-connectivity/no-icon.png" alt-text="Screenshot of the 'No' icon." border="false"::: |
+| Standard file shares (GPv2), GRS/GZRS | :::image type="content" source="media/files-troubleshoot-smb-connectivity/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." border="false"::: | :::image type="content" source="media/files-troubleshoot-smb-connectivity/no-icon.png" alt-text="Screenshot of the 'No' icon." border="false"::: |
+| Premium file shares (FileStorage), LRS/ZRS | :::image type="content" source="media/files-troubleshoot-smb-connectivity/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." border="false"::: | :::image type="content" source="media/files-troubleshoot-smb-connectivity/no-icon.png" alt-text="Screenshot of the 'No' icon." border="false"::: |
 
 ## Can't connect to or mount an Azure file share
 
@@ -40,7 +40,7 @@ Here's the error message:
 
 #### Cause 1: Unencrypted communication channel
 
-For security reasons, connections to Azure file shares are blocked if the communication channel isn't encrypted and if the connection attempt isn't made from the same datacenter where the Azure file shares reside. If the [Secure transfer required](../common/storage-require-secure-transfer.md) setting is enabled on the storage account, unencrypted connections within the same datacenter are also blocked. An encrypted communication channel is provided only if the end-user's client OS supports SMB encryption.
+For security reasons, connections to Azure file shares are blocked if the communication channel isn't encrypted and if the connection attempt isn't made from the same datacenter where the Azure file shares reside. If the [Secure transfer required](/azure/storage/common/storage-require-secure-transfer) setting is enabled on the storage account, unencrypted connections within the same datacenter are also blocked. An encrypted communication channel is provided only if the end-user's client OS supports SMB encryption.
 
 Windows 8, Windows Server 2012, and later versions of each system negotiate requests that include SMB 3.x, which supports encryption.
 
@@ -95,7 +95,7 @@ $resourceGroupName = "<your-resource-group-name>"
 $storageAccountName = "<your-storage-account-name>"
 
 # This command requires you to be logged into your Azure account and set the subscription your storage account is under, run:
-# Connect-AzAccount -SubscriptionId ‘xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx’
+# Connect-AzAccount -SubscriptionId 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'
 # if you haven't already logged in.
 $storageAccount = Get-AzStorageAccount -ResourceGroupName $resourceGroupName -Name $storageAccountName
 

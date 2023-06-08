@@ -16,9 +16,9 @@ This article lists common problems when using SMB Azure file shares with identit
 
 | File share type | SMB | NFS |
 |-|:-:|:-:|
-| Standard file shares (GPv2), LRS/ZRS | :::image type="content" source="media/files-troubleshoot-smb-authentication/yes-icon.png" alt-text="Screenshot of the 'Yes' icon."  | :::image type="content" source="media/files-troubleshoot-smb-authentication/no-icon.png" alt-text="Screenshot of the 'No' icon." |
-| Standard file shares (GPv2), GRS/GZRS | :::image type="content" source="media/files-troubleshoot-smb-authentication/yes-icon.png" alt-text="Screenshot of the 'Yes' icon."  | :::image type="content" source="media/files-troubleshoot-smb-authentication/no-icon.png" alt-text="Screenshot of the 'No' icon." |
-| Premium file shares (FileStorage), LRS/ZRS | :::image type="content" source="media/files-troubleshoot-smb-authentication/yes-icon.png" alt-text="Screenshot of the 'Yes' icon."  | :::image type="content" source="media/files-troubleshoot-smb-authentication/no-icon.png" alt-text="Screenshot of the 'No' icon." |
+| Standard file shares (GPv2), LRS/ZRS | :::image type="content" source="media/files-troubleshoot-smb-authentication/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." border="false":::  | :::image type="content" source="media/files-troubleshoot-smb-authentication/no-icon.png" alt-text="Screenshot of the 'No' icon." border="false"::: |
+| Standard file shares (GPv2), GRS/GZRS | :::image type="content" source="media/files-troubleshoot-smb-authentication/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." border="false":::  | :::image type="content" source="media/files-troubleshoot-smb-authentication/no-icon.png" alt-text="Screenshot of the 'No' icon." border="false"::: |
+| Premium file shares (FileStorage), LRS/ZRS | :::image type="content" source="media/files-troubleshoot-smb-authentication/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." border="false":::  | :::image type="content" source="media/files-troubleshoot-smb-authentication/no-icon.png" alt-text="Screenshot of the 'No' icon." border="false"::: |
 
 ## Error 5 when mounting an Azure file share
 
@@ -31,7 +31,7 @@ When you try to mount a file share, you might receive the following error:
 If end users are accessing the Azure file share using Active Directory Domain Services (AD DS) or Azure Active Directory Domain Services (Azure AD DS) authentication, access to the file share fails with an "Access is denied" error if share-level permissions are incorrect.
 
 > [!NOTE]
-> This error might be caused by issues other than incorrect share-level permissions. For information on other possible causes and solutions, see [Troubleshoot Azure Files connectivity and access issues](files-troubleshoot-smb-connectivity.md#error-5-when-you-mount-an-azure-file-share).
+> This error might be caused by issues other than incorrect share-level permissions. For information on other possible causes and solutions, see [Troubleshoot Azure Files connectivity and access issues](files-troubleshoot-smb-connectivity.md#error-5).
 
 ### Solution
 
@@ -78,8 +78,8 @@ The cmdlet performs these checks in sequence and provides guidance for failures:
 4. CheckPort445Connectivity: Check that port 445 is opened for SMB connection. If port 445 isn't open, refer to the troubleshooting tool [AzFileDiagnostics](https://github.com/Azure-Samples/azure-files-samples/tree/master/AzFileDiagnostics/Windows) for connectivity issues with Azure Files.
 5. CheckSidHasAadUser: Check that the logged on AD user is synced to Azure AD. If you want to look up whether a specific AD user is synchronized to Azure AD, you can specify the `-UserName` and `-Domain` in the input parameters.
 6. CheckGetKerberosTicket: Attempt to get a Kerberos ticket to connect to the storage account. If there isn't a valid Kerberos token, run the `klist get cifs/storage-account-name.file.core.windows.net` cmdlet and examine the error code to root-cause the ticket retrieval failure.
-7. CheckStorageAccountDomainJoined: Check if the AD authentication has been enabled and the account's AD properties are populated. If not, refer to the instructions [here](./storage-files-identity-ad-ds-enable.md) to enable AD DS authentication on Azure Files.
-8. CheckUserRbacAssignment: Check if the AD identity has the proper RBAC role assignment to provide share level permission to access Azure Files. If not, refer to the instructions [here](/azure/storage/files/storage-files-identity-ad-ds-enable) to configure the share level permission. (Supported on AzFilesHybrid v0.2.3+ version)
+7. CheckStorageAccountDomainJoined: Check if the AD authentication has been enabled and the account's AD properties are populated. If not, refer to the instructions [here](/azure/storage/files/storage-files-identity-ad-ds-enable) to enable AD DS authentication on Azure Files.
+8. CheckUserRbacAssignment: Check if the AD identity has the proper RBAC role assignment to provide share level permission to access Azure Files. If not, refer to the instructions [here](/azure/storage/files/storage-files-identity-ad-ds-assign-permissions) to configure the share level permission. (Supported on AzFilesHybrid v0.2.3+ version)
 9. CheckUserFileAccess: Check if the AD identity has the proper directory/file permission (Windows ACLs) to access Azure Files. If not, refer to the instructions [here](/azure/storage/files/storage-files-identity-ad-ds-configure-permissions) to configure the directory/file level permission. (Supported on AzFilesHybrid v0.2.3+ version)
 
 ## Unable to configure directory/file level permissions (Windows ACLs) with Windows File Explorer
@@ -115,7 +115,7 @@ Azure Files supports AES-256 Kerberos encryption for AD DS authentication beginn
 > [!IMPORTANT]
 > If you were previously using RC4 encryption and update the storage account to use AES-256, you should run `klist purge` on the client and then remount the file share to get new Kerberos tickets with AES-256.
 
-```PowerShell
+```powershell
 $ResourceGroupName = "<resource-group-name-here>"
 $StorageAccountName = "<storage-account-name-here>"
 

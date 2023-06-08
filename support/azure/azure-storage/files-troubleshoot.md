@@ -23,9 +23,9 @@ If you can't find an answer to your question, you can contact us through the fol
 
 | File share type | SMB | NFS |
 |-|:-:|:-:|
-| Standard file shares (GPv2), LRS/ZRS | :::image type="content" source="media/files-troubleshoot/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." :::| :::image type="content" source="media/files-troubleshoot/no-icon.png" alt-text="Screenshot of the 'No' icon." ::: |
-| Standard file shares (GPv2), GRS/GZRS | :::image type="content" source="media/files-troubleshoot/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." ::: | :::image type="content" source="media/files-troubleshoot/no-icon.png" alt-text="Screenshot of the 'No' icon." :::|
-| Premium file shares (FileStorage), LRS/ZRS | :::image type="content" source="media/files-troubleshoot/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." ::: | :::image type="content" source="media/files-troubleshoot/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." ::: |
+| Standard file shares (GPv2), LRS/ZRS | :::image type="content" source="media/files-troubleshoot/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." border="false":::| :::image type="content" source="media/files-troubleshoot/no-icon.png" alt-text="Screenshot of the 'No' icon." border="false"::: |
+| Standard file shares (GPv2), GRS/GZRS | :::image type="content" source="media/files-troubleshoot/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." border="false"::: | :::image type="content" source="media/files-troubleshoot/no-icon.png" alt-text="Screenshot of the 'No' icon." border="false":::|
+| Premium file shares (FileStorage), LRS/ZRS | :::image type="content" source="media/files-troubleshoot/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." border="false"::: | :::image type="content" source="media/files-troubleshoot/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." border="false"::: |
 
 ## General troubleshooting first steps
 
