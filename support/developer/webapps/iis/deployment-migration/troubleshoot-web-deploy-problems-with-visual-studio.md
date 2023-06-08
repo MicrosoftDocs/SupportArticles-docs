@@ -24,15 +24,15 @@ The first error you're likely to encounter will look something like the screensh
 
 :::image type="content" source="media/troubleshoot-web-deploy-problems-with-visual-studio/error-list.png" alt-text="Screenshot of the Error List output in Visual Studio." lightbox="media/troubleshoot-web-deploy-problems-with-visual-studio/error-list.png":::
 
-[!code-console[Main](troubleshooting-web-deploy-problems-with-visual-studio/samples/sample1.cmd)]
+[!code-console[Main](cmdsample/troubleshooting-web-deploy-problems-with-visual-studio/sample1.cmd)]
 
-[!code-console[Main](troubleshooting-web-deploy-problems-with-visual-studio/samples/sample2.cmd)]
+[!code-console[Main](cmdsample/troubleshooting-web-deploy-problems-with-visual-studio/sample2.cmd)]
 
-[!code-console[Main](troubleshooting-web-deploy-problems-with-visual-studio/samples/sample3.cmd)]
+[!code-console[Main](cmdsample/troubleshooting-web-deploy-problems-with-visual-studio/sample3.cmd)]
 
-[!code-console[Main](troubleshooting-web-deploy-problems-with-visual-studio/samples/sample4.cmd)]
+[!code-console[Main](cmdsample/troubleshooting-web-deploy-problems-with-visual-studio/sample4.cmd)]
 
-[!code-console[Main](troubleshooting-web-deploy-problems-with-visual-studio/samples/sample5.cmd)]
+[!code-console[Main](cmdsample/troubleshooting-web-deploy-problems-with-visual-studio/sample5.cmd)]
 
 The text highlighted in this error (and the other errors below) is the key to understanding the nature of the problem. Web Deploy didn't get a reply from the server, so Visual Studio can't distinguish between several possible causes. As a result, it gives a list of things to try.
 
@@ -53,17 +53,17 @@ By default, the Web Management Service listens on port 8172, but this can be cha
 
 :::image type="content" source="media/troubleshoot-web-deploy-problems-with-visual-studio/troubleshooting-web-deploy-problems-with-visual-studio-1118.png" alt-text="Screenshot of the Error List screen in Visual Studio." lightbox="media/troubleshoot-web-deploy-problems-with-visual-studio/troubleshooting-web-deploy-problems-with-visual-studio-1118.png":::
 
-[!code-console[Main](troubleshooting-web-deploy-problems-with-visual-studio/samples/sample6.cmd)]
+[!code-console[Main](cmdsample/troubleshooting-web-deploy-problems-with-visual-studio/sample6.cmd)]
 
-[!code-console[Main](troubleshooting-web-deploy-problems-with-visual-studio/samples/sample7.cmd)]
+[!code-console[Main](cmdsample/troubleshooting-web-deploy-problems-with-visual-studio/sample7.cmd)]
 
-[!code-console[Main](troubleshooting-web-deploy-problems-with-visual-studio/samples/sample8.cmd)]
+[!code-console[Main](cmdsample/troubleshooting-web-deploy-problems-with-visual-studio/sample8.cmd)]
 
 This message is somewhat misleading. It states that the server didn't respond, but the 403 error indicates that Web Deploy could contact the server, but the request was actively refused. The HTTP log for the Web Management Service can help confirm the request reached the server, and provide details about the actual request that failed. This log can be found at `%SystemDrive%\Inetpub\logs\WMSvc` by default. Like other IIS logs, data isn't written to the log immediately, so you may have to wait a couple minutes to see the request, or restart the Web Management Service to flush the log.
 
 In the WMSVC log, the error above looks like the following one:
 
-[!code-console[Main](troubleshooting-web-deploy-problems-with-visual-studio/samples/sample9.cmd)]
+[!code-console[Main](cmdsample/troubleshooting-web-deploy-problems-with-visual-studio/sample9.cmd)]
 
 The "6" after the 403 in the log is the substatus code, and means "IP address rejected". (A complete list of the status and substatus codes for IIS can be found at [https://support.microsoft.com/kb/943891](https://support.microsoft.com/kb/943891)
 
@@ -79,17 +79,17 @@ The other common reason you could get a 403 error is if the management service h
 
 :::image type="content" source="media/troubleshoot-web-deploy-problems-with-visual-studio/ip-restrictions-configured-management-service.png" alt-text="Screenshot of the Error List page in Visual Studio. Error Details are in focus." lightbox="media/troubleshoot-web-deploy-problems-with-visual-studio/ip-restrictions-configured-management-service.png":::
 
-[!code-console[Main](troubleshooting-web-deploy-problems-with-visual-studio/samples/sample10.cmd)]
+[!code-console[Main](cmdsample/troubleshooting-web-deploy-problems-with-visual-studio/sample10.cmd)]
 
-[!code-console[Main](troubleshooting-web-deploy-problems-with-visual-studio/samples/sample11.cmd)]
+[!code-console[Main](cmdsample/troubleshooting-web-deploy-problems-with-visual-studio/sample11.cmd)]
 
-[!code-console[Main](troubleshooting-web-deploy-problems-with-visual-studio/samples/sample12.cmd)]
+[!code-console[Main](cmdsample/troubleshooting-web-deploy-problems-with-visual-studio/sample12.cmd)]
 
-[!code-console[Main](troubleshooting-web-deploy-problems-with-visual-studio/samples/sample13.cmd)]
+[!code-console[Main](cmdsample/troubleshooting-web-deploy-problems-with-visual-studio/sample13.cmd)]
 
 The 404 error indicates that Web Deploy was able to contact the Web Management Service on the server, but couldn't find what it needed. The first thing to do is confirm what resource Web Deploy tried to connect to. You should see an entry in the WMSVC log that looks like the following one:
 
-[!code-console[Main](troubleshooting-web-deploy-problems-with-visual-studio/samples/sample14.cmd)]
+[!code-console[Main](cmdsample/troubleshooting-web-deploy-problems-with-visual-studio/sample14.cmd)]
 
 Msdeploy.axd is the handler for Web Deploy requests.
 
@@ -110,21 +110,21 @@ Select **Next** to complete the Wizard. You'll need to restart the web managemen
 Once Web Deploy and the Web Management Service are correctly configured, you'll need to set up delegation rules to allow users to update content. For permissions issues, there are several different errors you may see in Visual Studio. For example:
 :::image type="content" source="media/troubleshoot-web-deploy-problems-with-visual-studio/errors-delegation-rules.png" alt-text="Screenshot of the Error List in Visual Studio displaying permission issue errors." lightbox="media/troubleshoot-web-deploy-problems-with-visual-studio/errors-delegation-rules.png":::
 
-[!code-console[Main](troubleshooting-web-deploy-problems-with-visual-studio/samples/sample15.cmd)]
+[!code-console[Main](cmdsample/troubleshooting-web-deploy-problems-with-visual-studio/sample15.cmd)]
 
-[!code-console[Main](troubleshooting-web-deploy-problems-with-visual-studio/samples/sample16.cmd)]
+[!code-console[Main](cmdsample/troubleshooting-web-deploy-problems-with-visual-studio/sample16.cmd)]
 
-[!code-console[Main](troubleshooting-web-deploy-problems-with-visual-studio/samples/sample17.cmd)]
+[!code-console[Main](cmdsample/troubleshooting-web-deploy-problems-with-visual-studio/sample17.cmd)]
 
-[!code-console[Main](troubleshooting-web-deploy-problems-with-visual-studio/samples/sample18.cmd)]
+[!code-console[Main](cmdsample/troubleshooting-web-deploy-problems-with-visual-studio/sample18.cmd)]
 
 In the WMSvc log, you'll see the following message:
 
-[!code-console[Main](troubleshooting-web-deploy-problems-with-visual-studio/samples/sample19.cmd)]
+[!code-console[Main](cmdsample/troubleshooting-web-deploy-problems-with-visual-studio/sample19.cmd)]
 
 The highlighted http status in the Visual Studio output is an Access Denied error. The highlighted win32 status in the error log maps to "Logon failure: unknown user name or bad password", so this is a simple logon failure. If the user is authenticated, but doesn't have the rights needed to publish, the log entry will look like the following one:
 
-[!code-console[Main](troubleshooting-web-deploy-problems-with-visual-studio/samples/sample20.cmd)]
+[!code-console[Main](cmdsample/troubleshooting-web-deploy-problems-with-visual-studio/sample20.cmd)]
 
 To allow this user to publish, you'll need to set up delegation per the instructions at [https://www.iis.net/learn/publish/using-web-deploy/configure-the-web-deployment-handler](../using-web-deploy/configure-the-web-deployment-handler.md).
 
@@ -132,7 +132,7 @@ If the account is able to log in, but hasn't been granted the rights needed to p
 
 :::image type="content" source="media/troubleshoot-web-deploy-problems-with-visual-studio/web-deployment-task-failed.png" alt-text="Screenshot of the Error List page in Visual Studio displaying an error related to user permissions." lightbox="media/troubleshoot-web-deploy-problems-with-visual-studio/web-deployment-task-failed.png":::
 
-[!code-console[Main](troubleshooting-web-deploy-problems-with-visual-studio/samples/sample21.cmd)]
+[!code-console[Main](cmdsample/troubleshooting-web-deploy-problems-with-visual-studio/sample21.cmd)]
 
 The WMSvc log will show HTTP 200 responses for these requests. Fortunately, Web Deploy 2.1 also writes information to the Microsoft Web Deploy service log. To view it, open the event viewer and go to **Applications and Services Logs** > **Microsoft Web Deploy**.
 
@@ -140,21 +140,21 @@ The WMSvc log will show HTTP 200 responses for these requests. Fortunately, Web 
 
 For this particular error, the event log contains extra detail (truncated for brevity):
 
-[!code-console[Main](troubleshooting-web-deploy-problems-with-visual-studio/samples/sample22.cmd)]
+[!code-console[Main](cmdsample/troubleshooting-web-deploy-problems-with-visual-studio/sample22.cmd)]
 
 This message tells you where permissions need to be granted for this particular error. You may also see the following permissions error in Visual Studio:
 
 :::image type="content" source="media/troubleshoot-web-deploy-problems-with-visual-studio/permissions-need-to-be-granted.png" alt-text="Screenshot of the Error List page in Visual Studio with a permissions error in focus." lightbox="media/troubleshoot-web-deploy-problems-with-visual-studio/permissions-need-to-be-granted.png":::
 
-[!code-console[Main](troubleshooting-web-deploy-problems-with-visual-studio/samples/sample23.cmd)]
+[!code-console[Main](cmdsample/troubleshooting-web-deploy-problems-with-visual-studio/sample23.cmd)]
 
-[!code-console[Main](troubleshooting-web-deploy-problems-with-visual-studio/samples/sample24.cmd)]
+[!code-console[Main](cmdsample/troubleshooting-web-deploy-problems-with-visual-studio/sample24.cmd)]
 
-[!code-console[Main](troubleshooting-web-deploy-problems-with-visual-studio/samples/sample25.cmd)]
+[!code-console[Main](cmdsample/troubleshooting-web-deploy-problems-with-visual-studio/sample25.cmd)]
 
 This particular error doesn't give you much to go on, but the picture becomes clearer if you look at the Web Deploy error log in Event Viewer.
 
-[!code-console[Main](troubleshooting-web-deploy-problems-with-visual-studio/samples/sample26.cmd)]
+[!code-console[Main](cmdsample/troubleshooting-web-deploy-problems-with-visual-studio/sample26.cmd)]
 
 From this, we can see that User1 doesn't have rights to set security information. In this case, the user doesn't have Modify permissions on the content. Granting "Change Permissions" to the content resolves the problem.
 

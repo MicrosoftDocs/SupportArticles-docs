@@ -172,7 +172,7 @@ For certain common error cases, Web Deploy will show a message and an error code
 | **Symptoms** | Couldn't complete an operation with the specified provider &lt;provider name&gt; when connecting using the Web Management Service. This can occur if the server administrator hasn't authorized the user for this operation. |
 | --- | --- |
 | **Root Cause** | A non-administrator user tried to perform a restricted action with a provider. This usually indicates that a matching delegation rule wasn't found. Either the username, provider, operation, or provider path is wrong. |
-| **Fix/Workaround** | The workaround is to fix the delegation rule or create one. For more information about delegation rules, see [Configure the Web Deployment Handler](../using-web-deploy/configure-the-web-deployment-handler.md). |
+| **Fix/Workaround** | The workaround is to fix the delegation rule or create one. For more information about delegation rules, see [Configure the Web Deployment Handler](/iis/publish/using-web-deploy/configure-the-web-deployment-handler). |
 
 ## Case study: diagnose publishing errors in Visual Studio 2010
 
@@ -212,7 +212,7 @@ If they aren't there, you need to install the Web Management Service.
 
 - Through the **Web Platform Installer** from the **Products** tab. Select **Server** in the left column and select **IIS: Management Service**.
 
-> [!NOTE]]
+> [!NOTE]
 > After you install the Management Service, you'll need to start it, as it isn't started automatically.
 
 ### 2. (403) Forbidden
@@ -261,7 +261,7 @@ The remote server returned an error: (404) Not Found.
 
 If you look in the Web Management Service log under *%SystemDrive%\\Inetpub\\logs\\WMSvc* on the destination server, you'll see an entry that looks like the following one:
 
-[!code-console[Main](troubleshooting-common-problems-with-web-deploy/samples/sample1.cmd)]
+[!code-console[Main](cmdsample/troubleshooting-common-problems-with-web-deploy/sample1.cmd)]
 
 **Is Web Deploy installed?** You can verify web deploy is installed by going to the **Programs and Features** control panel and looking for **Microsoft Web Deploy 2.0** in the list of installed programs. If it isn't there, you can install it via the Web Platform Installer by going to the **Products** tab. It's listed as **Web Deployment Tool 2.1**.
 
@@ -291,15 +291,15 @@ The remote server returned an error: (401) Unauthorized.
 
 In the Web Management Service log, you'll see the following messages:
 
-[!code-console[Main](troubleshooting-common-problems-with-web-deploy/samples/sample2.cmd)]
+[!code-console[Main](cmdsample/troubleshooting-common-problems-with-web-deploy/sample2.cmd)]
 
-[!code-console[Main](troubleshooting-common-problems-with-web-deploy/samples/sample3.cmd)]
+[!code-console[Main](cmdsample/troubleshooting-common-problems-with-web-deploy/sample3.cmd)]
 
 The highlighted HTTP status in the Visual Studio output is an Access Denied error. The highlighted Win32 status in the error log maps to "Logon failure: unknown user name or bad password". This is a simple logon failure. If the user is authenticated, but doesn't have the rights needed to publish, the log entry will look like
 
-[!code-console[Main](troubleshooting-common-problems-with-web-deploy/samples/sample4.cmd)]
+[!code-console[Main](cmdsample/troubleshooting-common-problems-with-web-deploy/sample4.cmd)]
 
-You'll need to set up delegation for this user per the instructions at [https://www.iis.net/learn/publish/using-web-deploy/configure-the-web-deployment-handler](../using-web-deploy/configure-the-web-deployment-handler.md)
+You'll need to set up delegation for this user per the instructions at [Configure the Web Deployment Handler](/iis/publish/using-web-deploy/configure-the-web-deployment-handler)
 
 ### 5. Operation not authorized
 
@@ -317,7 +317,7 @@ The WMSvc log will show HTTP 200 responses for these requests. The most likely c
 
 For this particular error, the event log contains extra detail (truncated for brevity):
 
-[!code-console[Main](troubleshooting-common-problems-with-web-deploy/samples/sample5.cmd)]
+[!code-console[Main](cmdsample/troubleshooting-common-problems-with-web-deploy/sample5.cmd)]
 
 This message tells you where permissions need to be granted for this particular error. You may also see the following permissions error in Visual Studio:
 
@@ -330,7 +330,7 @@ The server experienced an issue processing the request. Contact the server admin
 
 This particular error doesn't give you much to go on, but the picture becomes much clearer if you look at the Web Deploy error log in Event Viewer.
 
-[!code-console[Main](troubleshooting-common-problems-with-web-deploy/samples/sample6.cmd)]
+[!code-console[Main](cmdsample/troubleshooting-common-problems-with-web-deploy/sample6.cmd)]
 
 From this, we can see that User1 doesn't have rights to set security information. In this case, the user doesn't have Modify permissions on the content. Granting "Change Permissions" to the content resolves the problem.
 
@@ -339,4 +339,4 @@ From this, we can see that User1 doesn't have rights to set security information
 
 If you can't browse a .NET 4.0 application after it has been successfully published, it could be that .NET 4.0 hasn't been registered correctly with IIS. Other symptoms are that .NET 4.0 is installed, but there are no .NET 4.0 application pools or handler mappings in IIS. This happens when .NET 4.0 is installed before IIS was installed. To fix this problem, start an elevated command prompt and run this command:
 
-[!code-console[Main](troubleshooting-common-problems-with-web-deploy/samples/sample7.cmd)]
+[!code-console[Main](cmdsample/troubleshooting-common-problems-with-web-deploy/sample7.cmd)]
