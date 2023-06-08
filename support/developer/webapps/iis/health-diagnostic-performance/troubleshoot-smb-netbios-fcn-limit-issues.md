@@ -1,16 +1,16 @@
 ---
-title: Troubleshoot SMB NetBIOS/FCN limit issues with Remote Content
-description: Introduces how to troubleshoot SMB NetBIOS/FCN limit issues with Remote Content
+title: Troubleshoot SMB NetBIOS/FCN limit issues with remote content
+description: Introduces how to troubleshoot SMB NetBIOS/FCN limit issues with remote content
 ms.date: 04/09/2012
 ms.author: haiyingyu
 author: HaiyingYu
 ms.reviewer: johnhart, riande, rimarr
 ---
-# Troubleshoot SMB NetBIOS/FCN limit issues with Remote Content
+# Troubleshoot SMB NetBIOS/FCN limit issues with remote content
 
 _Applies to:_ &nbsp; Internet Information Services
 
-This article introduces how to troubleshoot SMB NetBIOS/FCN limit issues with Remote Content.
+This article introduces how to troubleshoot SMB NetBIOS/FCN limit issues with remote content.
 
 ## Overview
 
