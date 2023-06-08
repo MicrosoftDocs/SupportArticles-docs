@@ -52,13 +52,13 @@ You are typically going to see these in Pre IIS 7.0 -2008 scenarios or when eith
 - Limit the number of file change monitors that are created by the client (IIS or asp.net).
 - Increase the limits supported.
 
-### Increase the Limits (MaxCmds and MaxMpxCt)
+### Increase the limits (MaxCmds and MaxMpxCt)
 
 The limit is a negotiated limit between the client and the server, whenever the lower of **MaxCmds** and **MaxMpxCt** will take effect.
 
 For example, if you have a scenario where on the IIS server you set `MaxCmds = 2000` and on the File Server `MaxMPXCt = 50`, _50_ will be the effective setting.
 
-#### How Do I know the effective settings?
+#### How do I know the effective settings?
 
 Obviously asking is one way, but sometimes the file servers are 3rd party and we cannot verify the settings.
 
