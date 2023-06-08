@@ -3,6 +3,8 @@ items:
   href: application-pool-exceed-time-limits.md
 - name: Data collection strategies of Web Server issues
   href: data-collection-strategies.md
+- name: Enable Failed Request Tracing for UNC hosting
+  href: how-to-enable-frt-for-unc-hosting.md
 - name: Enable Schannel event logging in Windows
   href: enable-schannel-event-logging.md
 - name: ETW logs diagnostic
