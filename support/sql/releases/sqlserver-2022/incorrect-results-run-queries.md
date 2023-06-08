@@ -34,15 +34,15 @@ After you install SQL Server 2022 Cumulative Update 4 (CU4), you may receive inc
     > [!NOTE]
     > The `IN` clause that has a single value doesn't have this issue.
 
-## Workaround
-
-To work around this issue, you can either uninstall SQL Server 2022 CU4 or enable trace flag (TF) 13166, and then run `DBCC FREEPROCCACHE`.
-
 ## Resolution
 
 This problem is fixed in the following cumulative update for SQL Server:
 
 [Cumulative Update 5 for SQL Server 2022](cumulativeupdate5.md)
+
+## Workaround
+
+To work around this issue, uninstall SQL Server 2022 CU4 or enable trace flag (TF) 13166, and then run `DBCC FREEPROCCACHE`.
 
 ## About cumulative updates for SQL Server
 
