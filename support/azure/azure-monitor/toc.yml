@@ -21,6 +21,8 @@ items:
         href: app-insights/javascript-sdk-troubleshooting.md
       - name: Troubleshoot Application Insights for webpages
         items:
+        - name: Troubleshoot common issues
+          href: app-insights/troubleshoot-webpages-issues.md
         - name: Duplicate telemetry data
           href: app-insights/duplicate-telemetry-data.md
         - name: Failed to get Request-Context correlation header
