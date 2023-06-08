@@ -1,13 +1,13 @@
 ---
-title: Troubleshoot common email error messages
-description: Provides resolutions for common email error messages in Dynamics 365 Customer Service.
+title: Troubleshoot common configuration issues with automatic record creation and update rules
+description: Provides resolutions for common configuration issues with automatic record creation and update rules in Dynamics 365 Customer Service.
 ms.reviewer: sdas
 ms.author: shchaur
-ms.date: 05/23/2023
+ms.date: 06/08/2023
 ---
-# Troubleshoot common configuration issues with Automatic record creation and update rules
+# Troubleshoot common configuration issues with automatic record creation and update rules
 
-This article provides common configuration failure scenarios with Automatic record creation and update rules due to which record creation might fail or get skipped. This also mentions steps to resolve these issues.
+This article provides resolutions for common configuration failure scenarios with automatic record creation and update rules, due to which record creation might fail or get skipped.
 
 ## Scenario 1
 
