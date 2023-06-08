@@ -153,7 +153,7 @@ landingContent:
         - text: System catalog views
           url: /sql/relational-databases/system-catalog-views/catalog-views-transact-sql
         - text: System Dynamic Management Views
-          url: sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views
+          url: /sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views
         - text: DBCC commands
           url: /sql/t-sql/database-console-commands/dbcc-transact-sql
         - text: Database Engine errors
