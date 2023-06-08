@@ -7,7 +7,7 @@ ms.date: 05/23/2023
 ---
 # Incoming email isn't converted to a case
 
-This article provides a resolution for the issue where an incoming email isn't converted to a case in Dynamics 365 Customer Service. Also, to diagnose and fix the issues, you can use the **Activity monitor** that is available on the Record creation and update rules page, and configure the options to view skipped scenarios, failed scenarios, or all scenarios for a time period. More information: [Use activity monitor to review and track rules](https://learn.microsoft.com/en-us/dynamics365/customer-service/automatically-create-update-records?tabs=customerserviceadmincenter#use-activity-monitor-to-review-and-track-rules)
+This article provides a resolution for the issue where an incoming email isn't converted to a case in Dynamics 365 Customer Service. Also, to diagnose and fix the issues, you can use the **Activity monitor** that is available on the **Record creation and update rules** page, and configure the options to view skipped scenarios, failed scenarios, or all scenarios for a time period. More information: [Use activity monitor to review and track rules](/dynamics365/customer-service/automatically-create-update-records?tabs=customerserviceadmincenter#use-activity-monitor-to-review-and-track-rules)
 
 ## Symptoms
 
