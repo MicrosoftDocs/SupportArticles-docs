@@ -135,7 +135,7 @@ Line 441 shows the problem in the CGI:
 
 For some reasons, the CGI application is ended prematurely. Notice the value of the headers entry. It's empty. This is why  the error is sent to the client that the CGI is sending a bad set of headers. It is in fact sending an empty list of headers.
 
-Line 446 shows the 502 that is sent to the client. It is actually a 502.2 (substatus of 2):
+Line 446 shows the 502 that is sent to the client. It's actually a 502.2 (substatus of 2):
 
 ```xml
 <ROW>
