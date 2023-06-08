@@ -391,13 +391,13 @@ To resolve the issue, follow these steps:
 1.	Take the file from a working VM, and paste it into the *C:\Windows\Microsoft.NET\Framework\v4.0.30319\Config* folder.
 2.	Restart the Guest Agent services:
 
-   ```console
-   net stop Rdagent
-   net stop WindowsAzureGuestAgent
+       ```console
+       net stop Rdagent
+       net stop WindowsAzureGuestAgent
 
-   net start Rdagent
-   net start WindowsAzureGuestAgent
-   ```
+       net start Rdagent
+       net start WindowsAzureGuestAgent
+       ```
  
 ## Next steps
 
