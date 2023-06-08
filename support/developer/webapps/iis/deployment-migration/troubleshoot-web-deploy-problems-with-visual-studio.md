@@ -49,7 +49,7 @@ Has the web management service been allowed through Windows Firewall? When you i
 
 **Is the service URL correct?**
 
-By default, the Web Management Service listens on port 8172, but this can be changed. The easiest way to check what port is being used is to open the Management Service pane as described above, and look at the IP and port information in the Connections section. If the port has been changed to something other than 8172, you'll need to ensure the new port is allowed through the firewall, and update the service URL in Visual Studio's publishing settings to use the new port.
+By default, the Web Management Service listens on port 8172, but this can be changed. The easiest way to check what port is being used is to open the **Management Service** pane as described above, and look at the IP and port information in the Connections section. If the port has been changed to something other than 8172, you'll need to ensure the new port is allowed through the firewall, and update the service URL in Visual Studio's publishing settings to use the new port.
 
 :::image type="content" source="media/troubleshoot-web-deploy-problems-with-visual-studio/troubleshooting-web-deploy-problems-with-visual-studio-1118.png" alt-text="Screenshot that shows the Error List screen in Visual Studio." lightbox="media/troubleshoot-web-deploy-problems-with-visual-studio/troubleshooting-web-deploy-problems-with-visual-studio-1118.png":::
 
@@ -61,7 +61,7 @@ By default, the Web Management Service listens on port 8172, but this can be cha
 
 This message is somewhat misleading. It states that the server didn't respond, but the 403 error indicates that Web Deploy could contact the server, but the request was actively refused. The HTTP log for the Web Management Service can help confirm the request reached the server and provide details about the actual request that failed. This log can be found at `%SystemDrive%\Inetpub\logs\WMSvc` by default. Like other IIS logs, data isn't written to the log immediately, so you may have to wait a couple of minutes to see the request or restart the Web Management Service to flush the log.
 
-In the WMSVC log, the error mentioned above looks like the following one:
+In the `WMSVC` log, the error mentioned above looks like the following one:
 
 [!code-console[Main](cmdsample/troubleshooting-web-deploy-problems-with-visual-studio/sample9.cmd)]
 
@@ -87,7 +87,7 @@ The other common reason you could get a 403 error is if the management service h
 
 [!code-console[Main](cmdsample/troubleshooting-web-deploy-problems-with-visual-studio/sample13.cmd)]
 
-The 404 error indicates that Web Deploy was able to contact the Web Management Service on the server but couldn't find what it needed. The first thing to do is confirm what resource Web Deploy tried to connect to. You should see an entry in the WMSVC log that looks like the following one:
+The 404 error indicates that Web Deploy was able to contact the Web Management Service on the server but couldn't find what it needed. The first thing to do is confirm what resource Web Deploy tried to connect to. You should see an entry in the `WMSVC` log that looks like the following one:
 
 [!code-console[Main](cmdsample/troubleshooting-web-deploy-problems-with-visual-studio/sample14.cmd)]
 
@@ -95,7 +95,7 @@ The 404 error indicates that Web Deploy was able to contact the Web Management S
 
 **Is Web Deploy installed?**
 
-You can verify that web deploy is installed by going to the **Programs and Features** control panel and looking for Microsoft Web Deploy 2.0 in the list of installed programs. If it isn't there, you can install it via the Web Platform Installer by going to the **Products** tab. It's listed as Web Deployment Tool 2.1. You should also ensure the Web Deployment Agent Service (MsDepSvc) is running.
+You can verify that web deploy is installed by going to the **Programs and Features** control panel and looking for **Microsoft Web Deploy 2.0** in the list of installed programs. If it isn't there, you can install it via the Web Platform Installer by going to the **Products** tab. It's listed as Web Deployment Tool 2.1. You should also ensure the Web Deployment Agent Service (MsDepSvc) is running.
 
 **Is the web deployment handler installed?**
 
@@ -122,7 +122,7 @@ In the WMSvc log, you'll see the following message:
 
 [!code-console[Main](cmdsample/troubleshooting-web-deploy-problems-with-visual-studio/sample19.cmd)]
 
-The highlighted http status in the Visual Studio output is an Access Denied error. The highlighted win32 status in the error log maps to "Logon failure: unknown user name or bad password," so this is a simple logon failure. If the user is authenticated but doesn't have the rights needed to publish, the log entry will look like the following one:
+The highlighted http status in the Visual Studio output is an Access Denied error. The highlighted *win32* status in the error log maps to "Logon failure: unknown user name or bad password," so this is a simple logon failure. If the user is authenticated but doesn't have the rights needed to publish, the log entry will look like the following one:
 
 [!code-console[Main](cmdsample/troubleshooting-web-deploy-problems-with-visual-studio/sample20.cmd)]
 
@@ -134,7 +134,7 @@ If the account is able to log in but hasn't been granted the rights needed to pu
 
 [!code-console[Main](cmdsample/troubleshooting-web-deploy-problems-with-visual-studio/sample21.cmd)]
 
-The WMSvc log will show HTTP 200 responses for these requests. Fortunately, Web Deploy 2.1 also writes information to the Microsoft Web Deploy service log. To view it, open the event viewer and go to **Applications and Services Logs** > **Microsoft Web Deploy**.
+The `WMSvc` log will show HTTP 200 responses for these requests. Fortunately, Web Deploy 2.1 also writes information to the Microsoft Web Deploy service log. To view it, select **Event Viewer** > **Applications and Services Logs** > **Microsoft Web Deploy**.
 
 :::image type="content" source="media/troubleshoot-web-deploy-problems-with-visual-studio/microsoft-web-deploy.png" alt-text="Screenshot that shows the Event Viewer menu. Microsoft Web Deploy is highlighted." lightbox="media/troubleshoot-web-deploy-problems-with-visual-studio/microsoft-web-deploy.png":::
 
