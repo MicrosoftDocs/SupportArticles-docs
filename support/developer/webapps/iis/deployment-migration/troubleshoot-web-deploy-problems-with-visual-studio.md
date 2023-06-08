@@ -99,16 +99,16 @@ You can verify that web deploy is installed by going to the **Programs and Featu
 
 **Is the web deployment handler installed?**
 
-If Web Deploy is installed and you still get this error, make sure the IIS 7 Deployment Handler feature in Web Deploy is installed. In the Programs and Features control panel, find Microsoft Web Deploy 2.0, right-click and choose Change. In the Wizard that comes up, select next on the first page, and then choose "Change" on the second page. Add IIS 7 Deployment Handler and everything under it.
+If Web Deploy is installed and you still get this error, make sure the IIS 7 Deployment Handler feature in Web Deploy is installed. In the **Programs and Features** control panel, find **Microsoft Web Deploy 2.0**, right-click and choose **Change**. In the Wizard that comes up, select **Next** on the first page and then choose **Change** on the second page. Add **IIS 7 Deployment Handler** and everything under it.
 
-:::image type="content" source="media/troubleshoot-web-deploy-problems-with-visual-studio/web-deploy-set-up.png" alt-text="Screenshot of the Microsoft Web Deploy 2 dot 0 Setup dialog box. Web Deployment Framework is highlighted." lightbox="media/troubleshoot-web-deploy-problems-with-visual-studio/web-deploy-set-up.png":::
+:::image type="content" source="media/troubleshoot-web-deploy-problems-with-visual-studio/web-deploy-set-up.png" alt-text="Screenshot that shows the Microsoft Web Deploy 2 dot 0 Setup dialog box. Web Deployment Framework is highlighted." lightbox="media/troubleshoot-web-deploy-problems-with-visual-studio/web-deploy-set-up.png":::
 
-Select **Next** to complete the Wizard. You'll need to restart the web management service after making this change.
+Select **Next** to complete the Wizard. You need to restart the web management service after making this change.
 
 ## Errors with delegation rules
 
-Once Web Deploy and the Web Management Service are correctly configured, you'll need to set up delegation rules to allow users to update content. For permissions issues, there are several different errors you may see in Visual Studio. For example:
-:::image type="content" source="media/troubleshoot-web-deploy-problems-with-visual-studio/errors-delegation-rules.png" alt-text="Screenshot of the Error List in Visual Studio displaying permission issue errors." lightbox="media/troubleshoot-web-deploy-problems-with-visual-studio/errors-delegation-rules.png":::
+Once Web Deploy and the Web Management Service are correctly configured, you need to set up delegation rules to allow users to update content. For permissions issues, there are several different errors you may see in Visual Studio. For example:
+:::image type="content" source="media/troubleshoot-web-deploy-problems-with-visual-studio/errors-delegation-rules.png" alt-text="Screenshot that shows the Error List in Visual Studio displaying permission issue errors." lightbox="media/troubleshoot-web-deploy-problems-with-visual-studio/errors-delegation-rules.png":::
 
 [!code-console[Main](cmdsample/troubleshooting-web-deploy-problems-with-visual-studio/sample15.cmd)]
 
@@ -122,21 +122,21 @@ In the WMSvc log, you'll see the following message:
 
 [!code-console[Main](cmdsample/troubleshooting-web-deploy-problems-with-visual-studio/sample19.cmd)]
 
-The highlighted http status in the Visual Studio output is an Access Denied error. The highlighted win32 status in the error log maps to "Logon failure: unknown user name or bad password", so this is a simple logon failure. If the user is authenticated, but doesn't have the rights needed to publish, the log entry will look like the following one:
+The highlighted http status in the Visual Studio output is an Access Denied error. The highlighted win32 status in the error log maps to "Logon failure: unknown user name or bad password," so this is a simple logon failure. If the user is authenticated but doesn't have the rights needed to publish, the log entry will look like the following one:
 
 [!code-console[Main](cmdsample/troubleshooting-web-deploy-problems-with-visual-studio/sample20.cmd)]
 
 To allow this user to publish, you'll need to set up delegation per the instructions at [Configure the Web Deployment Handler](/iis/publish/using-web-deploy/configure-the-web-deployment-handler).
 
-If the account is able to log in, but hasn't been granted the rights needed to publish the content, you'll see the following error message:
+If the account is able to log in but hasn't been granted the rights needed to publish the content, you'll see the following error message:
 
-:::image type="content" source="media/troubleshoot-web-deploy-problems-with-visual-studio/web-deployment-task-failed.png" alt-text="Screenshot of the Error List page in Visual Studio displaying an error related to user permissions." lightbox="media/troubleshoot-web-deploy-problems-with-visual-studio/web-deployment-task-failed.png":::
+:::image type="content" source="media/troubleshoot-web-deploy-problems-with-visual-studio/web-deployment-task-failed.png" alt-text="Screenshot that shows the Error List page in Visual Studio displaying an error related to user permissions." lightbox="media/troubleshoot-web-deploy-problems-with-visual-studio/web-deployment-task-failed.png":::
 
 [!code-console[Main](cmdsample/troubleshooting-web-deploy-problems-with-visual-studio/sample21.cmd)]
 
 The WMSvc log will show HTTP 200 responses for these requests. Fortunately, Web Deploy 2.1 also writes information to the Microsoft Web Deploy service log. To view it, open the event viewer and go to **Applications and Services Logs** > **Microsoft Web Deploy**.
 
-:::image type="content" source="media/troubleshoot-web-deploy-problems-with-visual-studio/microsoft-web-deploy.png" alt-text="Screenshot of the Event Viewer menu. Microsoft Web Deploy is highlighted." lightbox="media/troubleshoot-web-deploy-problems-with-visual-studio/microsoft-web-deploy.png":::
+:::image type="content" source="media/troubleshoot-web-deploy-problems-with-visual-studio/microsoft-web-deploy.png" alt-text="Screenshot that shows the Event Viewer menu. Microsoft Web Deploy is highlighted." lightbox="media/troubleshoot-web-deploy-problems-with-visual-studio/microsoft-web-deploy.png":::
 
 For this particular error, the event log contains extra detail (truncated for brevity):
 
@@ -144,7 +144,7 @@ For this particular error, the event log contains extra detail (truncated for br
 
 This message tells you where permissions need to be granted for this particular error. You may also see the following permissions error in Visual Studio:
 
-:::image type="content" source="media/troubleshoot-web-deploy-problems-with-visual-studio/permissions-need-to-be-granted.png" alt-text="Screenshot of the Error List page in Visual Studio with a permissions error in focus." lightbox="media/troubleshoot-web-deploy-problems-with-visual-studio/permissions-need-to-be-granted.png":::
+:::image type="content" source="media/troubleshoot-web-deploy-problems-with-visual-studio/permissions-need-to-be-granted.png" alt-text="Screenshot that shows the Error List page in Visual Studio with a permissions error in focus." lightbox="media/troubleshoot-web-deploy-problems-with-visual-studio/permissions-need-to-be-granted.png":::
 
 [!code-console[Main](cmdsample/troubleshooting-web-deploy-problems-with-visual-studio/sample23.cmd)]
 
@@ -156,7 +156,7 @@ This particular error doesn't give you much to go on, but the picture becomes cl
 
 [!code-console[Main](cmdsample/troubleshooting-web-deploy-problems-with-visual-studio/sample26.cmd)]
 
-From this, we can see that User1 doesn't have rights to set security information. In this case, the user doesn't have Modify permissions on the content. Granting "Change Permissions" to the content resolves the problem.
+From this, we can see that User1 doesn't have the rights to set security information. In this case, the user doesn't have "Modify permissions" on the content. Granting "Change Permissions" to the content resolves the problem.
 
 ### Other Resources
 
