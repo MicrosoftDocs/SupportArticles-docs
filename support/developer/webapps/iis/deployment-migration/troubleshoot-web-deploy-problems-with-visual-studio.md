@@ -20,9 +20,9 @@ The article helps you troubleshoot a series of errors when trying to publish fro
 
 ## "Unable to connect" errors
 
-The first error you're likely to encounter will look something like the screenshot below in Visual Studio's output window. To make it easier to read, the full text of the message is reproduced below the screenshot:
+The first error you're likely to encounter will look something like the screenshot below in Visual Studio's output window. For improved readability, the full text of the message is provided below the screenshot:
 
-:::image type="content" source="media/troubleshoot-web-deploy-problems-with-visual-studio/error-list.png" alt-text="Screenshot of the Error List output in Visual Studio." lightbox="media/troubleshoot-web-deploy-problems-with-visual-studio/error-list.png":::
+:::image type="content" source="media/troubleshoot-web-deploy-problems-with-visual-studio/error-list.png" alt-text="Screenshot that shows the Error List output in Visual Studio." lightbox="media/troubleshoot-web-deploy-problems-with-visual-studio/error-list.png":::
 
 [!code-console[Main](cmdsample/troubleshooting-web-deploy-problems-with-visual-studio/sample1.cmd)]
 
@@ -36,22 +36,22 @@ The first error you're likely to encounter will look something like the screensh
 
 The text highlighted in this error (and the other errors below) is the key to understanding the nature of the problem. Web Deploy didn't get a reply from the server, so Visual Studio can't distinguish between several possible causes. As a result, it gives a list of things to try.
 
-Is the web management service installed? On the IIS server, open the Internet Information Services Manager and select the machine name node. In the Features view, scroll down to the Management section and look for these Icons:
+Is the web management service installed? On the IIS server, open **Internet Information Services Manager** and select the machine name node. In the **Features** view, scroll down to the Management section and look for these icons:
 
-:::image type="content" source="media/troubleshoot-web-deploy-problems-with-visual-studio/management-section-icons.png" alt-text="Screenshot of the I I S Manager Permissions icon, I I S Manager Users icon, and Management Service icon." lightbox="media/troubleshoot-web-deploy-problems-with-visual-studio/management-section-icons.png":::
+:::image type="content" source="media/troubleshoot-web-deploy-problems-with-visual-studio/management-section-icons.png" alt-text="Screenshot that shows the I I S Manager Permissions icon, I I S Manager Users icon, and Management Service icon." lightbox="media/troubleshoot-web-deploy-problems-with-visual-studio/management-section-icons.png":::
 
-If they aren't there, you need to install the Management Service through the Add Role Services dialog. It can also be installed via the Web Platform Installer from the products tab. Select Server in the left column and choose IIS: Management Service.
+If they aren't there, you need to install the Management Service through the Add Role Services dialog. It can also be installed via the Web Platform Installer from the **Products** tab. Select **Server** in the left column and choose **IIS: Management Service**.
 
 > [!NOTE]
 > After you install the Management Service, you'll need to start it, as it isn't started automatically. To do this, double-click the **Management Service** icon. After the **Management Service** pane is displayed, select **Start** in the **Actions** pane on the right.
 
-Has the web management service been allowed through Windows Firewall? When you install the Web Management Service on the server, an inbound firewall rule named Web Management Service (HTTP Traffic-In). Verify this rule is enabled by going to **Start** > **AdministrativeTools** > **Windows Firewall with Advanced Security**. Select **Inbound Rules** and find the **Web Management** rule in the list. It should be enabled for all profiles. If you're using a third party firewall, you need to ensure inbound connections on port 8172 are allowed.
+Has the web management service been allowed through Windows Firewall? When you install the Web Management Service on the server, an inbound firewall rule is named Web Management Service (HTTP Traffic-In). Verify that this rule is enabled by going to **Start** > **AdministrativeTools** > **Windows Firewall with Advanced Security**. Select **Inbound Rules** and find the **Web Management** rule in the list. It should be enabled for all profiles. If you're using a third-party firewall, you need to ensure that inbound connections on port 8172 are allowed.
 
 **Is the service URL correct?**
 
 By default, the Web Management Service listens on port 8172, but this can be changed. The easiest way to check what port is being used is to open the Management Service pane as described above, and look at the IP and port information in the Connections section. If the port has been changed to something other than 8172, you'll need to ensure the new port is allowed through the firewall, and update the service URL in Visual Studio's publishing settings to use the new port.
 
-:::image type="content" source="media/troubleshoot-web-deploy-problems-with-visual-studio/troubleshooting-web-deploy-problems-with-visual-studio-1118.png" alt-text="Screenshot of the Error List screen in Visual Studio." lightbox="media/troubleshoot-web-deploy-problems-with-visual-studio/troubleshooting-web-deploy-problems-with-visual-studio-1118.png":::
+:::image type="content" source="media/troubleshoot-web-deploy-problems-with-visual-studio/troubleshooting-web-deploy-problems-with-visual-studio-1118.png" alt-text="Screenshot that shows the Error List screen in Visual Studio." lightbox="media/troubleshoot-web-deploy-problems-with-visual-studio/troubleshooting-web-deploy-problems-with-visual-studio-1118.png":::
 
 [!code-console[Main](cmdsample/troubleshooting-web-deploy-problems-with-visual-studio/sample6.cmd)]
 
@@ -59,25 +59,25 @@ By default, the Web Management Service listens on port 8172, but this can be cha
 
 [!code-console[Main](cmdsample/troubleshooting-web-deploy-problems-with-visual-studio/sample8.cmd)]
 
-This message is somewhat misleading. It states that the server didn't respond, but the 403 error indicates that Web Deploy could contact the server, but the request was actively refused. The HTTP log for the Web Management Service can help confirm the request reached the server, and provide details about the actual request that failed. This log can be found at `%SystemDrive%\Inetpub\logs\WMSvc` by default. Like other IIS logs, data isn't written to the log immediately, so you may have to wait a couple minutes to see the request, or restart the Web Management Service to flush the log.
+This message is somewhat misleading. It states that the server didn't respond, but the 403 error indicates that Web Deploy could contact the server, but the request was actively refused. The HTTP log for the Web Management Service can help confirm the request reached the server and provide details about the actual request that failed. This log can be found at `%SystemDrive%\Inetpub\logs\WMSvc` by default. Like other IIS logs, data isn't written to the log immediately, so you may have to wait a couple of minutes to see the request or restart the Web Management Service to flush the log.
 
-In the WMSVC log, the error above looks like the following one:
+In the WMSVC log, the error mentioned above looks like the following one:
 
 [!code-console[Main](cmdsample/troubleshooting-web-deploy-problems-with-visual-studio/sample9.cmd)]
 
-The "6" after the 403 in the log is the substatus code, and means "IP address rejected". (A complete list of the status and substatus codes for IIS can be found at [https://support.microsoft.com/kb/943891](https://support.microsoft.com/kb/943891)
+The "6" after the 403 in the log is the sub status code, and means that the IP address was rejected. A complete list of the status and sub status codes for IIS can be found at [https://support.microsoft.com/kb/943891](https://support.microsoft.com/kb/943891).
 
 **Is the Management Service configured to allow remote connections?**
 
-This is the most likely reason for the 403.6 response. Double-click the Management Service icon, and verify that Enable Remote Connections is checked. You must stop the service to make changes, so be sure to restart it when you're done.
+This is the most likely reason for the 403.6 response. Double-click the **Management Service** icon, and verify that **Enable Remote Connections** is checked. You must stop the service to make changes, so be sure to restart it when you're done.
 
-:::image type="content" source="media/troubleshoot-web-deploy-problems-with-visual-studio/management-service-configured-allow-remote-connections.png" alt-text="Screenshot of the Management Service dialog box." lightbox="media/troubleshoot-web-deploy-problems-with-visual-studio/management-service-configured-allow-remote-connections.png":::
+:::image type="content" source="media/troubleshoot-web-deploy-problems-with-visual-studio/management-service-configured-allow-remote-connections.png" alt-text="Screenshot that shows the Management Service dialog box." lightbox="media/troubleshoot-web-deploy-problems-with-visual-studio/management-service-configured-allow-remote-connections.png":::
 
 **Have IP restrictions been configured for the Management Service?**
 
-The other common reason you could get a 403 error is if the management service has been configured to deny the IP of the client. By default, it's configured to allow all IPs as long as remote connections are allowed. You can check for IP restrictions by double-clicking the **Management Service** icon. Any configured IP restriction rules are at the bottom of the page, in the IPv4 Address Restrictions.
+The other common reason you could get a 403 error is if the management service has been configured to deny the IP of the client. By default, it's configured to allow all IPs as long as remote connections are allowed. You can check for IP restrictions by double-clicking the **Management Service** icon. Any configured IP restriction rules are at the bottom of the page in the IPv4 Address Restrictions.
 
-:::image type="content" source="media/troubleshoot-web-deploy-problems-with-visual-studio/ip-restrictions-configured-management-service.png" alt-text="Screenshot of the Error List page in Visual Studio. Error Details are in focus." lightbox="media/troubleshoot-web-deploy-problems-with-visual-studio/ip-restrictions-configured-management-service.png":::
+:::image type="content" source="media/troubleshoot-web-deploy-problems-with-visual-studio/ip-restrictions-configured-management-service.png" alt-text="Screenshot that shows the Error List page in Visual Studio. Error Details are in focus." lightbox="media/troubleshoot-web-deploy-problems-with-visual-studio/ip-restrictions-configured-management-service.png":::
 
 [!code-console[Main](cmdsample/troubleshooting-web-deploy-problems-with-visual-studio/sample10.cmd)]
 
@@ -87,15 +87,15 @@ The other common reason you could get a 403 error is if the management service h
 
 [!code-console[Main](cmdsample/troubleshooting-web-deploy-problems-with-visual-studio/sample13.cmd)]
 
-The 404 error indicates that Web Deploy was able to contact the Web Management Service on the server, but couldn't find what it needed. The first thing to do is confirm what resource Web Deploy tried to connect to. You should see an entry in the WMSVC log that looks like the following one:
+The 404 error indicates that Web Deploy was able to contact the Web Management Service on the server but couldn't find what it needed. The first thing to do is confirm what resource Web Deploy tried to connect to. You should see an entry in the WMSVC log that looks like the following one:
 
 [!code-console[Main](cmdsample/troubleshooting-web-deploy-problems-with-visual-studio/sample14.cmd)]
 
-Msdeploy.axd is the handler for Web Deploy requests.
+*Msdeploy.axd* is the handler for Web Deploy requests.
 
 **Is Web Deploy installed?**
 
-You can verify web deploy is installed by going to the **Programs and Features** control panel and looking for Microsoft Web Deploy 2.0 in the list of installed programs. If it isn't there, you can install it via the Web Platform Installer by going to the "Products" tab. It's listed as Web Deployment Tool 2.1. You should also ensure the Web Deployment Agent Service (MsDepSvc) is running.
+You can verify that web deploy is installed by going to the **Programs and Features** control panel and looking for Microsoft Web Deploy 2.0 in the list of installed programs. If it isn't there, you can install it via the Web Platform Installer by going to the **Products** tab. It's listed as Web Deployment Tool 2.1. You should also ensure the Web Deployment Agent Service (MsDepSvc) is running.
 
 **Is the web deployment handler installed?**
 
