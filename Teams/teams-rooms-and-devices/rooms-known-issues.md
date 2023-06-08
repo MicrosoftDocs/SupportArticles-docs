@@ -82,7 +82,7 @@ This article lists the known issues for the Microsoft Teams Rooms app when it's 
 - Front row requires 1920 × 1080 resolution for a 16:9 display or 2560 × 1080 resolution for a 21:9 display. These displays are set to 100 percent scaling. If the chat panel on your front-of-room display shows unreadable UI, see [Change scale and resolution for front-of-room](/microsoftteams/rooms/rooms-operations#scale-and-resolution) to adjust your display settings.
 - Teams Rooms doesn't support High-Bandwidth Digital Content Protection (HDCP) input. Using HDCP input may cause issues that affect High-Definition Multimedia Interface (HDMI) ingest functionality, such as video and audio. To avoid these issues, make sure that the HDCP options are turned off for switches that are connected to Teams Rooms.
 - Teams Rooms on Android doesn't support large meetings that have 300 participants or more.
-- Joining cross-cloud meetings is not supported for devices that run Teams Rooms on Android.
+- Teams Rooms on Android doesn't support the ability to join cross-cloud meetings.
 
 ## Expected behavior
 
