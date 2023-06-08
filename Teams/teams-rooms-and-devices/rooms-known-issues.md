@@ -58,6 +58,7 @@ This article lists the known issues for the Microsoft Teams Rooms app when it's 
 | --- | --- | --- |
 | Laser pointer and drawing tools in PowerPoint Live don't display for in-room participants | In-room meeting participants in a Teams meeting who are using Teams Rooms on Android devices aren't able to see the following features during a PowerPoint Live presentation: Laser pointer, pen, highlighter, and eraser. | Join the meeting on your personal device to see the laser pointer and drawing tools in PowerPoint Live. |
 | Teams Admin Settings unavailable on Teams Rooms on Android devices with Teams Rooms Basic license. | The **Teams Admin Settings** option under **Device Settings** is unavailable on devices that have the Teams Rooms Basic license for Teams Rooms on Android CY22 U3 app (version 1449/1.0.96.2022120503). | Admins can either assign a Teams Rooms Pro license to the same device or downgrade the device to use Teams Rooms on Android CCY22 U2B app (version: 1449/1.0.96.2022090606) instead. |
+| Volume of the audio received from Poly Studio X30 or X50 devices is low. | In a Teams meeting that uses either the Poly Studio X30 or Poly Studio X50 Teams Rooms device, the audio that is sent to remote participants might have low volume. <br/><br/>This issue occurs because of a change made to Teams audio processing which causes the audio level of the microphone on the device to be set very low. | Log into the web interface for the affected Poly Studio X30 or X50 device using administrator credentials and use the following steps:<ol><li>Select **Audio / Video** > **Audio**.</li><li>Select the drop-down arrow in the **Transmission Audio Gain (dB)** field.</li><li>Select a number between 14 & 18 to specify the decibels for the audio sent from the microphone.</li></ol>
 
 ### Issues with Teams phones
 
@@ -81,6 +82,7 @@ This article lists the known issues for the Microsoft Teams Rooms app when it's 
 - Front row requires 1920 × 1080 resolution for a 16:9 display or 2560 × 1080 resolution for a 21:9 display. These displays are set to 100 percent scaling. If the chat panel on your front-of-room display shows unreadable UI, see [Change scale and resolution for front-of-room](/microsoftteams/rooms/rooms-operations#scale-and-resolution) to adjust your display settings.
 - Teams Rooms doesn't support High-Bandwidth Digital Content Protection (HDCP) input. Using HDCP input may cause issues that affect High-Definition Multimedia Interface (HDMI) ingest functionality, such as video and audio. To avoid these issues, make sure that the HDCP options are turned off for switches that are connected to Teams Rooms.
 - Teams Rooms on Android doesn't support large meetings that have 300 participants or more.
+- Joining cross-cloud meetings is not supported for devices that run Teams Rooms on Android.
 
 ## Expected behavior
 
