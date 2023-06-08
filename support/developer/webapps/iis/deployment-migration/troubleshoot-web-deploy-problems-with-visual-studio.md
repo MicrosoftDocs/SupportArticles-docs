@@ -126,7 +126,7 @@ The highlighted http status in the Visual Studio output is an Access Denied erro
 
 [!code-console[Main](cmdsample/troubleshooting-web-deploy-problems-with-visual-studio/sample20.cmd)]
 
-To allow this user to publish, you'll need to set up delegation per the instructions at [https://www.iis.net/learn/publish/using-web-deploy/configure-the-web-deployment-handler](../using-web-deploy/configure-the-web-deployment-handler.md).
+To allow this user to publish, you'll need to set up delegation per the instructions at [Configure the Web Deployment Handler](/iis/publish/using-web-deploy/configure-the-web-deployment-handler).
 
 If the account is able to log in, but hasn't been granted the rights needed to publish the content, you'll see the following error message:
 
@@ -160,6 +160,6 @@ From this, we can see that User1 doesn't have rights to set security information
 
 ### Other Resources
 
-- [Configure the Web Deployment Handler](../using-web-deploy/configure-the-web-deployment-handler.md)
+- [Configure the Web Deployment Handler](/iis/publish/using-web-deploy/configure-the-web-deployment-handler)
 - [The HTTP status codes in IIS 7.0 and IIS 7.5](https://support.microsoft.com/kb/943891)
 - [Configuring Web Management Service Logging and Tracing](https://technet.microsoft.com/library/ee461173(WS.10).aspx)
