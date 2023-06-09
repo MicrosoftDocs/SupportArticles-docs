@@ -38,12 +38,12 @@ The text highlighted in this error (and the other errors below) is the key to un
 
 Is the web management service installed? On the IIS server, open **Internet Information Services Manager** and select the machine name node. In the **Features** view, scroll down to the **Management** section and look for these icons:
 
-:::image type="content" source="media/troubleshoot-web-deploy-problems-with-visual-studio/management-section-icons.png" alt-text="Screenshot that shows the I I S Manager Permissions icon, I I S Manager Users icon, and Management Service icon." lightbox="media/troubleshoot-web-deploy-problems-with-visual-studio/management-section-icons.png":::
+:::image type="content" source="media/troubleshoot-web-deploy-problems-with-visual-studio/management-section-icons.png" alt-text="Screenshot that shows the IIS Manager Permissions icon, IIS Manager Users icon, and Management Service icon." lightbox="media/troubleshoot-web-deploy-problems-with-visual-studio/management-section-icons.png":::
 
-If they aren't there, you need to install the Management Service through the Add Role Services dialog. It can also be installed via the Web Platform Installer from the **Products** tab. Select **Server** in the left column and choose **IIS: Management Service**.
+If they aren't there, you need to install the Management Service through the **Add Role Services** dialog. It can also be installed via the Web Platform Installer from the **Products** tab. Select **Server** in the left column and choose **IIS: Management Service**.
 
 > [!NOTE]
-> After you install the Management Service, you'll need to start it, as it isn't started automatically. To do this, double-click the **Management Service** icon. After the **Management Service** pane is displayed, select **Start** in the **Actions** pane on the right.
+> After you install the Management Service, you need to start it, as it isn't started automatically. To do this, double-click the **Management Service** icon. After the **Management Service** pane is displayed, select **Start** in the **Actions** pane on the right.
 
 Has the web management service been allowed through Windows Firewall? When you install the Web Management Service on the server, an inbound firewall rule is named Web Management Service (HTTP Traffic-In). Verify that this rule is enabled by going to **Start** > **AdministrativeTools** > **Windows Firewall with Advanced Security**. Select **Inbound Rules** and find the **Web Management** rule in the list. It should be enabled for all profiles. If you're using a third-party firewall, you need to ensure that inbound connections on port 8172 are allowed.
 
