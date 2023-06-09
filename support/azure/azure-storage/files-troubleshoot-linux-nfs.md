@@ -7,7 +7,6 @@ ms.topic: troubleshooting
 ms.date: 06/10/2023
 ms.author: kendownie
 ms.subservice: files
-ms.custom: references_regions
 ---
 
 # Troubleshoot NFS Azure file shares

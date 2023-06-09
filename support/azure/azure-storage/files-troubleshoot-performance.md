@@ -3,7 +3,6 @@ title: Azure Files performance troubleshooting guide
 description: Troubleshoot performance issues with Azure file shares and discover potential causes and associated workarounds for these problems.
 author: khdownie
 ms.service: storage
-ms.topic: troubleshooting
 ms.date: 06/08/2023
 ms.author: kendownie
 ms.subservice: files

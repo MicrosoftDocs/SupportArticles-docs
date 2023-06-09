@@ -2,9 +2,10 @@
 title: Troubleshoot Azure file share backup
 description: This article is troubleshooting information about issues occurring when protecting your Azure file shares.
 ms.date: 06/10/2023
-ms.topic: troubleshooting
 author: jyothisuri
 ms.author: jsuri
+ms.service: storage
+ms.subservice: files
 ---
 
 # Troubleshoot problems while backing up Azure file shares
