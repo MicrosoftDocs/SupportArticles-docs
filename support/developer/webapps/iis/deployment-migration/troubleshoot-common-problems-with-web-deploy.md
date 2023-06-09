@@ -100,7 +100,7 @@ For certain common error cases, Web Deploy will show a message and an error code
 
 <a id="\_Toc239408311"></a>
 
-### 3. Trying to connect to server where HTTP isn't listening or allowed
+### 3. Trying to connect to a server where HTTP isn't listening or allowed
 
 | **Symptoms** | Microsoft.Web.Deployment.DeploymentAgentUnavailableException: Remote agent (URL `http://DestinationServer/msdeployagentservice`) could not be contacted. Make sure the remote agent service is installed and started on the target computer. ---&gt; System.Net.WebException: Unable to connect to the remote server ---&gt; System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it DestinationServer:80 |
 | --- | --- |
@@ -109,11 +109,11 @@ For certain common error cases, Web Deploy will show a message and an error code
 
 <a id="\_Toc239408312"></a>
 
-### 4. Trying to connect to server with Method Not Allowed error
+### 4. Trying to connect to a server with the Method Not Allowed error
 
 | **Symptoms** | Microsoft.Web.Deployment.DeploymentException: Could not complete the request to remote agent URL '`http://DestinationServer/`'. ---&gt; System.Net.WebException: The remote server returned an error: (405) Method Not Allowed. |
 | --- | --- |
-| **Root Cause** | Request was picked up by IIS itself instead of MS Deploy, because the path to *msdepsvc.exe* is missing. |
+| **Root Cause** | The request was picked up by Internet Information Services (IIS) itself instead of MS Deploy because the path to *msdepsvc.exe* is missing. |
 | **Fix/Workaround** | Change the URL to include `/MSDeployAgentService`. |
 
 <a id="\_Toc239408313"></a>
@@ -145,7 +145,7 @@ For certain common error cases, Web Deploy will show a message and an error code
 
 <a id="\_Toc239408316"></a>
 
-### 8. Remote Agent Service could not start listening on URL
+### 8. Remote Agent Service couldn't start listening on the URL
 
 | **Symptoms** | The Remote Agent Service couldn't start listening on the URL '{0}'. Make sure that the URL isn't in use. |
 | --- | --- |
@@ -158,7 +158,7 @@ For certain common error cases, Web Deploy will show a message and an error code
 
 <a id="\_Toc239408321"></a>
 
-### 1. Web Management Service not started
+### 1. Web Management Service isn't started
 
 | **Symptoms** | Web Management Service isn't started. |
 | --- | --- |
@@ -182,9 +182,9 @@ To collect the screenshots and errors below, we used a new ASP.NET MVC3 project.
 
 ### 1. Cannot connect to the server
 
-The first error you're likely to encounter will look something like this in Visual Studio's output window. To make it easier to read, the full text of the message is reproduced below the screenshot.
+The first error you're likely to encounter will look something like this in Visual Studio's output window. For improved readability, the full text of the message is provided below the screenshot.
 
-:::image type="content" source="media/troubleshoot-common-problems-with-web-deploy/conlud-not-connect -to-destination-computer.png" alt-text="Screenshot of the Error List page. An error description is shown." lightbox="media/troubleshoot-common-problems-with-web-deploy/conlud-not-connect -to-destination-computer.png":::
+:::image type="content" source="media/troubleshoot-common-problems-with-web-deploy/conlud-not-connect -to-destination-computer.png" alt-text="Screenshot that shows the Error List page. An error description is shown." lightbox="media/troubleshoot-common-problems-with-web-deploy/conlud-not-connect -to-destination-computer.png":::
 
 ```Output
 Web deployment task failed.(Could not connect to the destination computer ("deployserver"). On the destination computer, make sure that Web Deploy is installed and that the required process ("The Web Management Service") is started.)
