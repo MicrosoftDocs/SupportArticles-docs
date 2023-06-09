@@ -4,7 +4,7 @@ description: This article describes how to use the SQLIOSim utility to perform s
 ms.author: rdorr
 ms.reviewer: bobward, jopilov
 author: PiJoCoder
-ms.date: 05/12/2023
+ms.date: 06/09/2023
 ms.topic: how-to
 ms.custom: sap:Other tools
 ---
