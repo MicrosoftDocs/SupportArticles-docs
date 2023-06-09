@@ -10,7 +10,7 @@ ms.subservice: authentication
 ---
 # Enable support for TLS 1.2 in your environment for Azure AD TLS 1.1 and 1.0 deprecation
 
-To improve the security posture of your tenant, and to remain in compliance with industry standards, the following Transport Layer Security (TLS) protocols and ciphers are no longer supported in Azure Active Directory as of January 31, 2022:
+To improve the security posture of your tenant, and to remain in compliance with industry standards, Microsoft Azure Active Directory (Azure AD) will soon stop supporting the following Transport Layer Security (TLS) protocols and ciphers:
 
 - TLS 1.1
 - TLS 1.0
