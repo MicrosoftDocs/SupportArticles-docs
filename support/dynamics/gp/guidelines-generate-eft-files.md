@@ -146,7 +146,7 @@ Follow these guidelines to generate EFT files or EFT prenote files:
 
     If you recently upgraded to Microsoft Dynamics GP 10.0 or GP 2010, you may receive the following error message:
 
-    > The bank/country assigned to the vendors remit to address is missing or inactive. Assign the bank/country region to the address or activate the format.
+    > The bank country/region assigned to the vendor's remit-to address is missing or inactive. Assign the bank country/region to the address or activate the format.
 
     If you receive this error message, check the PM20000 (PM_Transaction_Open) table to make sure that the vendor addresses in the VADCDTRO column are the same addresses for the vendors in the earlier version. The VADCDTRO column in the PM20000 table must match the VADCDTRO column in the PM00200 (PM_Vendor_Master) table for each vendor. To determine which vendor generates the error message, use one of the following methods.
 
