@@ -36,7 +36,7 @@ The first error you're likely to encounter will look something like the screensh
 
 The text highlighted in this error (and the other errors below) is the key to understanding the nature of the problem. Web Deploy didn't get a reply from the server, so Visual Studio can't distinguish between several possible causes. As a result, it gives a list of things to try.
 
-Is the web management service installed? On the IIS server, open **Internet Information Services Manager** and select the machine name node. In the **Features** view, scroll down to the Management section and look for these icons:
+Is the web management service installed? On the IIS server, open **Internet Information Services Manager** and select the machine name node. In the **Features** view, scroll down to the **Management** section and look for these icons:
 
 :::image type="content" source="media/troubleshoot-web-deploy-problems-with-visual-studio/management-section-icons.png" alt-text="Screenshot that shows the I I S Manager Permissions icon, I I S Manager Users icon, and Management Service icon." lightbox="media/troubleshoot-web-deploy-problems-with-visual-studio/management-section-icons.png":::
 
@@ -138,7 +138,7 @@ The `WMSvc` log will show HTTP 200 responses for these requests. Fortunately, We
 
 :::image type="content" source="media/troubleshoot-web-deploy-problems-with-visual-studio/microsoft-web-deploy.png" alt-text="Screenshot that shows the Event Viewer menu. Microsoft Web Deploy is highlighted." lightbox="media/troubleshoot-web-deploy-problems-with-visual-studio/microsoft-web-deploy.png":::
 
-For this particular error, the event log contains extra detail (truncated for brevity):
+For this particular error, the event log contains extra details (truncated for brevity):
 
 [!code-console[Main](cmdsample/troubleshooting-web-deploy-problems-with-visual-studio/sample22.cmd)]
 
