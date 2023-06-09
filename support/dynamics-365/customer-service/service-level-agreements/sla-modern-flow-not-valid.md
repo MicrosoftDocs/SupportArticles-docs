@@ -13,7 +13,7 @@ This article provides a resolution for the issue where you receive the "Modern f
 
 An SLA modern flow fails with the following error:
 
-> Modern Flow [Flow Guid] is not valid for ExecuteWorkflow.
+> Modern Flow [flow ID] is not valid for ExecuteWorkflow.
 
 ## Cause
 
@@ -43,11 +43,13 @@ Here are the steps to turn off or turn on a flow:
 
     :::image type="content" source="media/sla-modern-flow-not-valid/cloud-flows.png" alt-text="The screenshot shows the Cloud flows option in the left menu." border="false":::
 
-6. Select the respective flow and then select **Turn off** or **Turn on** from the top menu.
-If you are not sure about the flow name, then click on any one of the listed flows and replace flow ID(you can get it from error message) in the URL from the browser address bar, and press enter key. Now select **Turn off** and then **Turn on** from top menu.
+6. Select the respective flow, and then select **Turn off** and then **Turn on** from the top menu.
 
-    Sample URL where we need to replace flow ID which is immediately after **flows** in the address: 
-    https://make.powerautomate.com/environments/Default-00000000-0000-0000-0000-000000000000/solutions/00000000-0000-0000-0000-000000000000/flows/[**Flow ID**]/details?utm_source=solution_explorer
+    If you aren't sure about the flow name, select any one of the listed flows, replace the flow ID (you can get it from the error message) in the URL from the browser's address bar, and press <kbd>Enter</kbd>. Then, select **Turn off** and then **Turn on** from the top menu.
+
+    Here's a sample URL where you need to replace the flow ID, which is immediately after "flows" in the address:
+
+    `https://make.powerautomate.com/environments/Default-00000000-0000-0000-0000-000000000000/solutions/00000000-0000-0000-0000-000000000000/flows/[flow ID]/details?utm_source=solution_explorer`
 
     :::image type="content" source="media/sla-modern-flow-not-valid/turn-on-turn-off-cloud-flow.png" alt-text="The screenshot shows how to turn off or turn on a flow." border="false":::
 
