@@ -25,7 +25,7 @@ This article helps you analyze IIS log files in an effort to determine the cause
 
 ## Scenario
 
-As a system administrator you begin to hear reports from users of your system hosted on IIS that the responses are slow. Some of them mention that web browsers simply time out or stop responding completely when they are accessing your website.
+As a system administrator you begin to hear reports from users of your system hosted on IIS that the responses are slow. Some of them mention that Web browsers simply time out or stop responding completely when they are accessing your website.
 
 You jump into action and recycle the worker process. All appears to be working again, as normal.
 
@@ -43,7 +43,7 @@ By default, IIS log files are located in the following directories:
 In this troubleshooter, I will be using IIS 8. Open IIS Manager and select **Sites**, as shown in _Figure 1_. This will show you the ID of each website hosted on your server. You will need this ID to determine which _W3SVC\*_ directory to analyze.
 
 :::image type="content" source="media/troubleshoot-iis-perf-issues-or-app-errors/iis-manager-sites-main-pane.png" alt-text="Screenshot of the I I S Manager window showing Sites in the main pane.":::  
-**Figure 1: Getting the ID of your web site**
+**Figure 1: Getting the ID of your website**
 
 Open Windows Explorer and navigate to the directory that contains the IIS log files of the website that experienced the performance problem. _Figure 2_ shows how that might look like.
 

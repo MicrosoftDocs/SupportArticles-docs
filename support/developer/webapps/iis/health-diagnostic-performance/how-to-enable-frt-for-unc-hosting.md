@@ -8,7 +8,9 @@ ms.reviewer: johnhart, riande
 ---
 # How to enable Failed Request Tracing and logging for UNC hosting
 
-Placing application content and code on a UNC share for hosting scenarios is increasingly important on web application servers. In hosting scenarios, it's important to be able to keep the logs alongside the web application content and code. Logs include the Failed Request Tracing log files, as well as the hit logs that IIS logs for the web site. This article walks you through the creation of the appropriate directories, setting the right permissions on them, and then configuring IIS on how to use the directories for the various log files by:
+_Applies to:_ &nbsp; Internet Information Services
+
+Placing application content and code on a UNC share for hosting scenarios is increasingly important on Web application servers. In hosting scenarios, it's important to be able to keep the logs alongside the Web application content and code. Logs include the Failed Request Tracing log files, as well as the hit logs that IIS logs for the website. This article walks you through the creation of the appropriate directories, setting the right permissions on them, and then configuring IIS on how to use the directories for the various log files by:
 
 - UI - Using the IIS Manager or Explorer
 - CMD - Using command line (PowerShell, AppCmd, etc.)
@@ -70,14 +72,14 @@ In order for IIS to be able to write its Failed Request Log Files to a UNC share
 
 If you use one of the built-in accounts (like IUSR or Network Service) as the application pool ID, these accounts appear as ANONYMOUS on the UNC server. It's **highly recommended** that you either:
 
-- **DOMAIN USAGE**: Create a domain user account for the application pool, then use that application pool ID to ACL down the share and filesystem directory where the Failure Request Log Files live. Both the web server and the UNC server must be members of the domain.
+- **DOMAIN USAGE**: Create a domain user account for the application pool, then use that application pool ID to ACL down the share and filesystem directory where the Failure Request Log Files live. Both the Web server and the UNC server must be members of the domain.
 - **NON-DOMAIN USAGE**: If the UNC and Web Servers aren't joined to the domain, the same account with the same account password must be created on each machine. This is the example used in this walkthrough.
 
 In the following sections, you'll create a new user with a sample name _PoolId1_ and with a sample password _!p4ssw0rd_, and a new application pool with a sample name _Pool\_Site1_.
 
-### UI: Create the new local account on the UNC server and front end web server
+### UI: Create the new local account on the UNC server and front end Web server
 
-These directions should be repeated on both the UNC server as well as the web server. Create a user called _PoolId1_, whose password is _!p4ssw0rd_.
+These directions should be repeated on both the UNC server as well as the Web server. Create a user called _PoolId1_, whose password is _!p4ssw0rd_.
 
 1. From an administrator elevated command prompt, run `start lusrmgr.msc`.
 1. Right-click on **Users** and select **New User...**.
@@ -91,13 +93,13 @@ These directions should be repeated on both the UNC server as well as the web se
 
      :::image type="content" source="media/how-to-enable-frt-for-unc-hosting/new-user-dialog.png" alt-text="Screenshot of the New User dialog box is displayed.":::
 
-Make sure to create the _PoolId1_ user on both the front-end IIS Web Server and the back end UNC server. You also need to add the _PoolId1_ to the **IIS\_IUSRS** group on the front end web server. To do so, follow these steps:
+Make sure to create the _PoolId1_ user on both the front-end IIS Web Server and the back end UNC server. You also need to add the _PoolId1_ to the **IIS\_IUSRS** group on the front end Web server. To do so, follow these steps:
 
 1. Select the **Groups** folder on the **lusrmgr** MMC snap-in.
 1. Right-click on **IIS\_IUSRS** and select **Add to Group**.
 1. Select **Add...**, then enter _\<servername\>\\PoolId1_ as the identity to add.
 
-### CMD: Create the new local account on the UNC server and front end web server
+### CMD: Create the new local account on the UNC server and front end Web server
 
 To add the new _PoolId1_ identity from the command line, follow these steps:
 
@@ -111,9 +113,9 @@ To add the new _PoolId1_ identity from the command line, follow these steps:
     ```
 
 > [!NOTE]
-> The `net localgroup` command is only required on the front end web server.
+> The `net localgroup` command is only required on the front end Web server.
 
-### UI: Create a new application pool for the web site and change its identity
+### UI: Create a new application pool for the website and change its identity
 
 Part of the shared hosting guidance that the IIS team is creating is a new application pool; set its identity to the _PoolId1_ that is just created.
 
@@ -126,14 +128,14 @@ Part of the shared hosting guidance that the IIS team is creating is a new appli
 
 :::image type="content" source="media/how-to-enable-frt-for-unc-hosting/advanced-settings-dialog-id-highlighted.png" alt-text="Screenshot of the Advanced Settings dialog box. Identity is highlighted.":::
 
-Drop a site into this application pool. Use the default web site for this sample. You can also create a new site (for example, _SITE1_) with IIS Manager. Do the following:
+Drop a site into this application pool. Use the default website for this sample. You can also create a new site (for example, _SITE1_) with IIS Manager. Do the following:
 
 1. Select **Sites** -> **Default Web Site**.
 2. In the right **Actions** pane, select **Basic Settings...**.
 3. To the right of **Application Pool:**, select **Select...**.
 4. Select the new **Pool\_Site1** application pool, select **OK**, and then **OK** again.
 
-### CMD: Create a new application pool for the web site and change its identity
+### CMD: Create a new application pool for the website and change its identity
 
 1. Start an administrator elevated command prompt.
 1. To add the new application pool, run the following command:  
@@ -188,7 +190,7 @@ Now that Share is shared out and the right permissions established, configure Fa
 
 ### UI: Configure Failed Request Tracing to log to UNC
 
-To configure Failed Request Tracing to log to our UNC path, follow these directions on the web server:
+To configure Failed Request Tracing to log to our UNC path, follow these directions on the Web server:
 
 1. Open IIS Manager by running **Start** -> **Inetmgr**.
 1. Select **Default Web Site**, and then under **Configure** select **Failed Request Tracing...**
@@ -203,7 +205,7 @@ To configure Failed Request Tracing to log to our UNC path, follow these directi
 
 ## Test
 
-Configure a rule to catch all 200 requests for all URLs for **All Content** to run a test.
+Configure a rule to catch all HTTP 200 requests for all URLs for **All Content** to run a test.
 
 1. In the IIS Manager UI again, expand the **Sites** and select **Default Web Site**.
 1. Double-click on **Failed Request Tracing Rules**.
@@ -215,7 +217,7 @@ Configure a rule to catch all 200 requests for all URLs for **All Content** to r
 
 ### XML: Configure the Failed Request Tracing rule in web.config
 
-The actual XML looks like the following in the _web.config_ file for the default web site:
+The actual XML looks like the following in the _web.config_ file for the default website:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

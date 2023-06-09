@@ -141,7 +141,7 @@ Since you know the reason phrase and error are suggesting a header field length 
 
 To reproduce this error for this example, the `MaxFieldLength` registry key was set with a value of _2_. Since the requested URL had a `HTTP: Uniform Resource Identifier header` field with more than two characters, the request was blocked with the `FieldLength` reason phrase.
 
-Another common HTTP 400 scenario is one where the user making the HTTP request is a member of a large number of Active Directory groups, and the web site is configured to user Kerberos authentication. When this occurs, an error message similar to the following will be displayed to the user:
+Another common HTTP 400 scenario is one where the user making the HTTP request is a member of a large number of Active Directory groups, and the website is configured to user Kerberos authentication. When this occurs, an error message similar to the following will be displayed to the user:
 
 > Bad Request (Request Header Too Long)
 
