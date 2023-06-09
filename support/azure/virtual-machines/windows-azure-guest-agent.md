@@ -10,7 +10,7 @@ manager: dcscontentpm
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
-ms.date: 06/08/2023
+ms.date: 06/09/2023
 ms.author: genli
 ---
 # Troubleshooting Azure Windows VM Agent
