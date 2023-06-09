@@ -17,7 +17,7 @@ _Version:_ &nbsp; 15.0.4316.3
 
 ## Summary
 
-This article describes Cumulative Update package 21 (CU21) for Microsoft SQL Server 2019. This update contains 29 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2019 Cumulative Update 20, and it updates components in the following builds:
+This article describes Cumulative Update package 21 (CU21) for Microsoft SQL Server 2019. This update contains 28 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2019 Cumulative Update 20, and it updates components in the following builds:
 
 - SQL Server - Product version: **15.0.4316.3**, file version: **2019.150.4316.3**
 - Analysis Services - Product version: **15.0.35.39**, file version: **2018.150.35.39**
@@ -36,15 +36,32 @@ Microsoft is working on a fix for this issue that will be available in a future 
 
 ### Issue two
 
-After you install this cumulative update, external data sources that use the generic ODBC connector might no longer work. When you try to query external tables that were created before you installed this cumulative update, you receive the following error message:
+This issue is caused by a change introduced in this cumulative update for the [Managed Instance link](/azure/azure-sql/managed-instance/managed-instance-link-feature-overview?view=azuresql) feature. Assume that the databases of an Always On availability group have one of the following conditions:
 
-> Msg 7320, Level 16, State 110, Line 68 </br>Cannot execute the query "Remote Query" against OLE DB provider "MSOLEDBSQL" for linked server "(null)". Object reference not set to an instance of an object.
+- The databases use memory-optimized tables, the FileStream class, or multiple log files.
 
-If you try to create a new external table, you receive the following error message:
+- You upgrade a replica to this cumulative update. For example, the primary replica is upgraded to SQL Server 2019 CU 21, and the secondary replica remains SQL Server 2019 CU 19.
 
-> Msg 110813, Level 16, State 1, Line 64 </br>Object reference not set to an instance of an object.
+- The databases indicate the “Not Synchronizing” status.
 
-To work around this issue, you can uninstall this cumulative update or add the Driver keyword to the CONNECTION_OPTIONS argument. For more information, see [Generic ODBC external data sources may not work after installing Cumulative Update](https://techcommunity.microsoft.com/t5/sql-server-support-blog/generic-odbc-external-data-sources-may-not-work-after-installing/ba-p/3783873).
+- You review the sys.dm_exec_requests DMV and notice the DB STARTUP command is blocked on wait `HADR_RECOVERY_WAIT_FOR_UNDO`.
+
+In this scenario, you restart the SQL Server instance hosting the primary replica of the availability group. Then the databases start to synchronize. Additionally, you might notice the following error messages logged in the SQL Server error log and Extended Event logs:
+
+>  Error 9642, Severity 16, State 3: An error occurred in a Service Broker/Database Mirroring transport connection endpoint. Error: 8474, State: 11. (Near endpoint role: target, far endpoint address: ‘’) 
+
+If you have applied this cumulative update to one or more secondary replicas and are currently not synchronizing with the primary replica, you can use the following steps to mitigate this issue:
+
+1. Add trace flag 12324 as a startup parameter on all replicas (including the primary replica). Restart the secondary replicas to activate this trace flag. Meanwhile, the primary replica should be synchronized with all secondary replicas restarted that have trace flag 12324 as the startup parameter.
+
+2. After all secondary replicas are patched and restarted, fail over the primary replica, now as a secondary role, and restart it to enable trace flag 12324.
+
+3. Apply this cumulative update to the old primary replica and restart it in the secondary role.
+
+4. Remove trace flag 12324 as the startup parameter from all replicas and disable trace flag 12324 on all replicas by executing the `DBCC TRACEOFF(12324, -1)` statement.
+
+> [!NOTE]
+> Trace flag 12324 impacts only the Managed Instance Link feature and is only used to activate the changes in SQL Server 2019 CU 20 and CU21.
 
 ## Improvements and fixes included in this update
 
@@ -57,17 +74,17 @@ For more information about the bugs that are fixed and enhancements that are inc
 
 |Bug reference| Description| Fix area| Component | Platform |
 |:-------------------------------------------------:|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------|-------------------------------------------|----------|
-| <a id="2354551">[2354551](#2354551)</a> | Adds an option for the Master Data Services (MDS) configuration tool to decide whether to enable the PerformanceImprovementEnable performance improvement setting. |Master Data Services | Master Data Services | Windows|
+| <a id="2354551">[2354551](#2354551)</a> | Adds an option for the Master Data Services (MDS) configuration tool to decide whether to enable the **PerformanceImprovementEnable** performance improvement setting. |Master Data Services | Master Data Services | Windows|
 | <a id="2367741">[2367741](#2367741)</a> | Fixes an issue where a hierarchy created in Master Data Services (MDS) doesn't expand correctly (on both the **Edit Derived Hierarchy** page and **Hierarchy** page in the Explorer area). | Master Data Services | Master Data Services | Windows |
-| <a id="2375656">[2375656](#2375656)</a> | Fixes the following error that you may encounter when clicking on any cell of a domain-based attribute column that has the different name and display name in a Master Data Services (MDS) entity and clicking the drop-down arrow: The current cell column title wasn't found. If the column title was changed, close the sheet and try again. | Master Data Services | Master Data Services | Windows |
+| <a id="2375656">[2375656](#2375656)</a> | Fixes the following error that you may encounter when clicking on any cell of a domain-based attribute column that has a different name and display name in a Master Data Services (MDS) entity and clicking the drop-down arrow: The current cell column title wasn't found. If the column title was changed, close the sheet and try again. | Master Data Services | Master Data Services | Windows |
 | <a id="2385119">[2385119](#2385119)</a> | Updates the support for predicate pushdown when filtering on the `session_id` column of the `sys.dm_exec_connections` dynamic management view (DMV). | SQL Connectivity | SQL Connectivity | All |
 | <a id="2405054">[2405054](#2405054)</a> | Updates the version of the Microsoft ODBC driver to 17.10.4.1. For more information, see [Release Notes for Microsoft ODBC Driver for SQL Server on Windows](/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows). | SQL Connectivity | SQL Connectivity | Windows |
 | <a id="2405058">[2405058](#2405058)</a> | Updates the version of the Microsoft OLE DB driver to 18.6.6. For more information, see [Release notes for the Microsoft OLE DB Driver for SQL Server](/sql/connect/oledb/release-notes-for-oledb-driver-for-sql-server). | SQL Connectivity | SQL Connectivity | Windows |
 | <a id="2405087">[2405087](#2405087)</a> | Fixes an issue where applying the option `ONLINE` in the `ALTER INDEX REBUILD` statement is invalid when running the index rebuild task created in an index maintenance plan. | SQL Server Client Tools | Management Services | All |
-| <a id="2399354">[2399354](#2399354)</a> | Consider the following scenario: </br></br>- You have an instance of SQL Server that connects to Azure Active Directory (Azure AD) </br>- You enable Transport Layer Security (TLS) encryption on this instance of SQL Server. </br></br>In this scenario, you may receive the following error 39011 if you run the `sp_execute_external_script` query against the instance: </br></br>Msg 39011, Level 16, State 7, Line \<LineNumber> </br>SQL Server was unable to communicate with the LaunchPad service for request id: \<ID>. Please verify the configuration of the service. | SQL Server Engine | Extensibility | Linux |
-| <a id="2375469">[2375469](#2375469)</a> | Fixes an issue where the following error occurs when you disable the `FILESTREAM` feature on a SQL Server failover cluster instance(FCI) by using SQL Server Configuration Manager (SSCM): </br></br>There was an unknown error applying FILESTREAM settings. </br>Check the parameters are valid. (0x800713d6) | SQL Server Engine | FileStream and FileTable | Windows |
+| <a id="2399354">[2399354](#2399354)</a> | Consider the following scenario: </br></br>- You have an instance of SQL Server that connects to Azure Active Directory (Azure AD). </br>- You enable Transport Layer Security (TLS) encryption on this instance of SQL Server. </br></br>In this scenario, you may receive the following error 39011 if you run the `sp_execute_external_script` query against the instance: </br></br>Msg 39011, Level 16, State 7, Line \<LineNumber> </br>SQL Server was unable to communicate with the LaunchPad service for request id: \<ID>. Please verify the configuration of the service. | SQL Server Engine | Extensibility | Linux |
+| <a id="2375469">[2375469](#2375469)</a> | Fixes an issue where the following error occurs when you disable the FILESTREAM feature on a SQL Server failover cluster instance(FCI) by using SQL Server Configuration Manager (SSCM): </br></br>There was an unknown error applying FILESTREAM settings. </br>Check the parameters are valid. (0x800713d6) | SQL Server Engine | FileStream and FileTable | Windows |
 | <a id="2195940">[2195940](#2195940)</a> | Fixes an issue where messages in the `sys.transmission_queue` of the initiator database in a SQL Server Service Broker conversation are missing or stuck after a failover of the target database.| SQL Server Engine | High Availability and Disaster Recovery | All |
-| <a id="2101590">[2101590](#2101590)</a> | Fixes an issue where restoring an In-Memory OLTP database backup that has Transparent data encryption (TDE) enabled fails and returns the following error message: </br></br>Error: 33126, Severity: 16, State: 1. </br>Database encryption key is corrupted and cannot be read. </br></br>**Note**: To apply this fix, you need to enable a trace flag (TF) to relax TDE checks for in-memory tables and disable the TF after the restoration is completed. For more information, contact [Microsoft Customer Service and Support](https://support.microsoft.com/contactus/?ws=support). | SQL Server Engine | In-Memory OLTP | Windows |
+| <a id="2101590">[2101590](#2101590)</a> | Fixes an issue where restoring an In-Memory OLTP database backup that has Transparent data encryption (TDE) enabled fails and returns the following error message: </br></br>Error: 33126, Severity: 16, State: 1. </br>Database encryption key is corrupted and cannot be read. </br></br>**Note**: To apply this fix, you need to enable a trace flag (TF) to relax TDE checks for In-Memory tables and disable the TF after the restoration is completed. For more information, contact [Microsoft Customer Service and Support](https://support.microsoft.com/contactus/?ws=support). | SQL Server Engine | In-Memory OLTP | Windows |
 | <a id="2184943">[2184943](#2184943)</a> | Fixes an assertion dump issue (Location: "sql\\ntdbms\\hekaton\\engine\\core\\tx.cpp":4753; Expression: 0 == Dependencies.CommitDepCountOut) that causes the availability group failover. | SQL Server Engine | In-Memory OLTP | All |
 | <a id="2347043">[2347043](#2347043)</a> | Fixes the following error that you may encounter when you try to restore a database and the checkpoint file is corrupted: </br></br>[ERROR] Recovery failed with error 0x84000004 on database 10. This error will be mapped to 'HK_E_RESTORE_ABORTED' (0x82000018). (sql\ntdbms\hekaton\runtime\src\hkruntime.cpp : 5051 - 'HkRtRestoreDatabase') | SQL Server Engine | In-Memory OLTP | Windows |
 | <a id="2401115">[2401115](#2401115)</a> | Fixes a dump issue where huge number of concurrent In-Memory OLTP transactions causes a stack overflow. | SQL Server Engine | In-Memory OLTP | All |
@@ -81,8 +98,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="2391556">[2391556](#2391556)</a> | Fixes inconsistent results that are caused by the parallel spool in the plan for the `INSERT`, `UPDATE`, or `DELETE` query. | SQL Server Engine | Query Optimizer | All |
 | <a id="2266806">[2266806](#2266806)</a> | Adds a new error 673 that helps avoid the assertion failure (Location: IndexRowScanner.cpp:1449; Expression: m_versionStatus.IsVisible ()) that you may encounter when you enable change tracking on a database. </br></br>Error message: </br></br>Failure to access row object in snapshot isolation. | SQL Server Engine | Replication | All |
 | <a id="2320889">[2320889](#2320889)</a> | Fixes an issue where applying a patch on the secondary replica or performing an in-place upgrade fails when the distribution database is in an availability group. The following error is returned: </br></br>Error: There was an error executing the Replication upgrade scripts. See the SQL Server error log for details. </br></br>You can see the following error details in the SQL Server error log: </br></br>Executing sp_vupgrade_replication. </br>Could not open distribution database distribution because it is offline or being recovered. Replication settings and system objects could not be upgraded. Be sure this database is available and run sp_vupgrade_replication again. | SQL Server Engine | Replication | Windows |
-| <a id="2421435">[2421435](#2421435)</a>| Resolves a query performance issue that affects change tracking autocleanup and manual cleanup queries. </br></br>**Note**: You need to turn on trace flags 8286 and 8287, as this forces the cleanup query to use the FORCE ORDER and FORCESEEK hints to speed up the performance. | SQL Server Engine | Replication | All |
-| <a id="2313424">[2313424](#2313424)</a> | Fixes an assertion failure that you encounter during the resumable operations. | SQL Server Engine | Security Infrastructure | All |
+| <a id="2421435">[2421435](#2421435)</a>| Resolves a query performance issue that affects change tracking autocleanup and manual cleanup queries. </br></br>**Note**: You need to turn on trace flags 8286 and 8287, as this forces the cleanup query to use the `FORCE ORDER` and `FORCESEEK` hints to speed up the performance. | SQL Server Engine | Replication | All |
 | <a id="2397659">[2397659](#2397659)</a> | [FIX: SQL Server Audit Events fail to write to the Security log (KB4052136)](https://support.microsoft.com/help/4052136) | SQL Server Engine | Security Infrastructure | Windows |
 | <a id="2409008">[2409008](#2409008)</a> | Fixes error 207 (Invalid column name '\<ColumnName>') that you encounter when you run a user-defined function (UDF), which references a dropped column that uses dynamic data masking (DDM). | SQL Server Engine | Security Infrastructure | All |
 | <a id="2330957">[2330957](#2330957)</a> | Fixes the following error that you encounter on the target instance when configuring a Service Broker communication with transport security: </br></br>The certificate serial number size is 19, however it must be no greater than 16 bytes in length. This occurred in the message with Conversation ID, Initiator: 1, and Message sequence number: 0. | SQL Server Engine | SQL Server Engine | All |
@@ -976,7 +992,7 @@ Beginning in Microsoft SQL Server 2017, the Analysis Services build version numb
 
 When you deploy an update to a hybrid environment (such as Always On, replication, cluster, and mirroring), we recommend that you refer to the following articles before you deploy the update:
 
-- [SQL Server failover cluster rolling update and service pack process](/sql/sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance)
+- [Upgrade a failover cluster instance](/sql/sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance)
 
 > [!NOTE]
 > If you don't want to use the rolling update process, follow these steps to apply an update:
@@ -991,7 +1007,7 @@ When you deploy an update to a hybrid environment (such as Always On, replicatio
 
 - [How to apply a hotfix for SQL Server in a transactional replication and database mirroring topology](../../database-engine/replication/install-service-packs-hotfixes.md)
 - [How to apply a hotfix for SQL Server in a replication topology](../../database-engine/replication/apply-hotfix-sql-replication-topology.md)
-- [How to install service packs and hotfixes on an instance of SQL Server that is configured to use database mirroring](/sql/database-engine/database-mirroring/upgrading-mirrored-instances)
+- [Upgrading Mirrored Instances](/sql/database-engine/database-mirroring/upgrading-mirrored-instances)
 - [Overview of SQL Server Servicing Installation](https://technet.microsoft.com/library/dd638062.aspx)
 
 </details>
