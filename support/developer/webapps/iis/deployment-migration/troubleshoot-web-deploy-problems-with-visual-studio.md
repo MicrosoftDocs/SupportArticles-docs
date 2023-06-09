@@ -16,7 +16,7 @@ This material is provided for informational purposes only. Microsoft makes no wa
 
 ## Overview
 
-The article helps you troubleshoot a series of errors when trying to publish from Visual Studio to a server that hasn't been correctly configured via Web Deploy. To collect the screenshots and errors below, use a new ASP.Net MVC 3 project in Visual Studio 2010 SP1. The destination server was a clean install of Windows Server 2008 R2 SP1 with IIS. No additional configuration was done.
+The article helps you troubleshoot a series of errors when trying to publish from Visual Studio to a server that hasn't been correctly configured via Web Deploy. To collect the screenshots and errors below, use a new ASP.Net MVC 3 project in Visual Studio 2010 SP1. The destination server was a clean install of Windows Server 2008 R2 SP1 with Internet Information Services (IIS). No additional configuration was done.
 
 ## "Unable to connect" errors
 
@@ -95,7 +95,7 @@ The 404 error indicates that Web Deploy was able to contact the Web Management S
 
 **Is Web Deploy installed?**
 
-You can verify that web deploy is installed by going to the **Programs and Features** control panel and looking for **Microsoft Web Deploy 2.0** in the list of installed programs. If it isn't there, you can install it via the Web Platform Installer by going to the **Products** tab. It's listed as Web Deployment Tool 2.1. You should also ensure the Web Deployment Agent Service (MsDepSvc) is running.
+You can verify that Web Deploy is installed by going to the **Programs and Features** control panel and looking for **Microsoft Web Deploy 2.0** in the list of installed programs. If it isn't there, you can install it via the Web Platform Installer by going to the **Products** tab. It's listed as **Web Deployment Tool 2.1**. You should also ensure the Web Deployment Agent Service (MsDepSvc) is running.
 
 **Is the web deployment handler installed?**
 
