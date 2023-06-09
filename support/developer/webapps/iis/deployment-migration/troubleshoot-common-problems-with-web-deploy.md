@@ -18,8 +18,8 @@ When you run into issues related to Web Deploy, there are several logging option
 
 If you can't diagnose the problem using the Event Log, here are some other options:
 
-- Use Web Deploy MSI logs located under `%programfiles%\\IIS\\Microsoft Web Deploy v3` to diagnose installation problems.
-- If Web Management Service or Remote Agent Service fails to start, see the errors by going to **Event Log** > **System for Service Control Manager**.
+- Use Web Deploy MSI logs located under *%programfiles%\\IIS\\Microsoft Web Deploy v3* to diagnose installation problems.
+- If Web Management Service or Remote Agent Service fails to start, see the error details by going to **Event Viewer (Local)** > **Windows Logs** > **System** for Service Control Manager.
 - You can further configure [tracing for Web Management Service](https://technet.microsoft.com/library/ee461173(WS.10).aspx).
 
 ## Error codes
@@ -31,14 +31,12 @@ For certain common error cases, Web Deploy will show a message and an error code
 
 ## Installation problems
 
-<a id="\_Toc295395132"></a>
-
 ### 1. Couldn't install Web Deploy on a valid OS
 
 | **Symptoms** | The Operating System (OS) is correct, and the version and bitness of Web Deploy are correct, but the installation doesn't succeed. |
 | --- | --- |
 | **Root cause** | Unknown |
-| **Fix/Workaround** | Look in the install log, located in `%programfiles%\\IIS\\Microsoft Web Deploy V2`. |
+| **Fix/Workaround** | Look in the install log, located in *%programfiles%\\IIS\\Microsoft Web Deploy V2*. |
 
 ### 2. Web Deploy doesn't function after an upgrade
 
@@ -74,10 +72,8 @@ For certain common error cases, Web Deploy will show a message and an error code
 
 | **Symptoms** | Remote Agent Service fails to start. |
 | --- | --- |
-| **Root cause** | *msdepsvc.exe* or other files are missing from `%programfiles%\\IIS\\Microsoft Web Deploy v2`. |
+| **Root cause** | *msdepsvc.exe* or other files are missing from *%programfiles%\\IIS\\Microsoft Web Deploy v2*. |
 | **Fix/Workaround** | Reinstall the product. |
-
-<a id="\_Toc239408310"></a>
 
 ### 2. Remote Agent Service isn't started
 
@@ -172,7 +168,7 @@ A connection attempt failed because the connected party did not properly respond
 
 **Is the web management service installed?**
 
-On the destination server, open **IIS Manager** and select the machine name node. In the **Features** view, scroll down to the **Management** section and look for the following icons:
+On the destination server, open **Internet Information Services Manager (IIS) Manager** and select the machine name node. In the **Features** view, scroll down to the **Management** section and look for the following icons:
 
 :::image type="content" source="media/troubleshoot-common-problems-with-web-deploy/management-section-icons.png" alt-text="Screenshot that shows the IIS Manager Permissions icon, the IIS Manager Users icon, and the Management Service icon." lightbox="media/troubleshoot-common-problems-with-web-deploy/management-section-icons.png":::
 
@@ -229,17 +225,19 @@ Could not connect to the destination computer ("deployserver"). On the destinati
 The remote server returned an error: (404) Not Found.
 ```
 
-If you look in the Web Management Service log under `%SystemDrive%\\Inetpub\\logs\\WMSvc` on the destination server, you see an entry that looks like the following one:
+If you look in the Web Management Service log under *%SystemDrive%\\Inetpub\\logs\\WMSvc* on the destination server, you see an entry that looks like the following one:
 
-[!code-console[Main](cmdsample/troubleshooting-common-problems-with-web-deploy/sample1.cmd)]
+```Output
+2011-05-12 15:21:50 192.168.0.211 POST /msdeploy.axd site=default%20web%20site 8172 - 192.168.0.203 - 404 7 0 1606
+```
 
 **Is Web Deploy installed?** 
 
 You can verify that Web Deploy is installed by going to the **Programs and Features** control panel and looking for **Microsoft Web Deploy 2.0** in the list of installed programs. If it isn't there, you can install it via the Web Platform Installer by going to the **Products** tab. It's listed as **Web Deployment Tool 2.1**.
 
-**Is the Web Deployment IIS7 Deployment Handler installed?** 
+**Is the Web Deployment IIS7 Deployment Handler installed?**
 
-If Web Deploy is installed and you still get this error, make sure the **IIS 7 Deployment Handler** feature in Web Deploy is installed. In **Add Remove Programs**, find **Microsoft Web Deploy 2.0**, right-click, and select **Change**. In the Wizard that comes up, select **Next** on the first page and then choose **Change** on the second page. Add **IIS 7 Deployment Handler** and everything under it.
+If Web Deploy is installed and you still get this error, make sure the **IIS 7 Deployment Handler** feature in Web Deploy is installed. In **Add Remove Programs**, find **Microsoft Web Deploy 2.0**, right-click, and select **Change**. In the Wizard that comes up, select **Next** on the first page and then select **Change** on the second page. Add **IIS 7 Deployment Handler** and everything under it.
 
 :::image type="content" source="media/troubleshoot-common-problems-with-web-deploy/iis7-deployment-handler-installed.png" alt-text="Screenshot that shows the Microsoft Web Deploy two dot zero Setup wizard. The Web Development Framework option is selected." lightbox="media/troubleshoot-common-problems-with-web-deploy/iis7-deployment-handler-installed.png":::
 
@@ -265,13 +263,16 @@ The remote server returned an error: (401) Unauthorized.
 
 In the `Web Management Service` log, you see the following messages:
 
-[!code-console[Main](cmdsample/troubleshooting-common-problems-with-web-deploy/sample2.cmd)]
-
-[!code-console[Main](cmdsample/troubleshooting-common-problems-with-web-deploy/sample3.cmd)]
+```Output
+2011-05-12 15:50:12 192.168.0.211 POST /msdeploy.axd site=default%20web%20site 8172 - 192.168.0.203 - 401 2 5 1653
+2011-05-12 15:50:12 192.168.0.211 POST /msdeploy.axd site=default%20web%20site 8172 user1 192.168.0.203 - 401 1 1326 124
+```
 
 The highlighted HTTP status in the Visual Studio output is an "Access Denied" error. The highlighted Win32 status in the error log maps to "Logon failure: unknown user name or bad password." This is a simple logon failure. If the user is authenticated but doesn't have the rights needed to publish, the log entry will look like:
 
-[!code-console[Main](cmdsample/troubleshooting-common-problems-with-web-deploy/sample4.cmd)]
+```Output
+2011-05-12 15:55:38 192.168.0.211 POST /msdeploy.axd site=default%20web%20site 8172 - 192.168.0.203 - 401 2 5 0
+```
 
 You need to set up delegation for this user per the instructions at [Configure the Web Deployment Handler](/iis/publish/using-web-deploy/configure-the-web-deployment-handler).
 
@@ -285,13 +286,34 @@ If the account is able to log in but hasn't been granted the rights needed to pu
 Web deployment task failed. (Unable to perform the operation ("Create Directory") for the specified directory ("bin"). This can occur if the server administrator has not authorized this operation for the user credentials you are using.
 ```
 
-The `WMSvc` log will show HTTP 200 responses for these requests. The most likely cause is file system permissions. Web Deploy will also write events to the "Microsoft Web Deploy" service log. To view it, go to **Event Viewer** > **Applications and Services Logs** > **Microsoft Web Deploy**.
+The `WMSvc` log will show HTTP 200 responses for these requests. The most likely cause is file system permissions. Web Deploy will also write events to the "Microsoft Web Deploy" service log. To view it, go to **Event Viewer (Local)** > **Applications and Services Logs** > **Microsoft Web Deploy**.
 
 :::image type="content" source="media/troubleshoot-common-problems-with-web-deploy/event-viewer-microsoft-web-deploy.png" alt-text="Screenshot that shows the Event Viewer navigation tree. The Microsoft Web Deploy option is selected." lightbox="media/troubleshoot-common-problems-with-web-deploy/event-viewer-microsoft-web-deploy.png":::
 
 For this particular error, the event log contains extra details (truncated for brevity):
 
-[!code-console[Main](cmdsample/troubleshooting-common-problems-with-web-deploy/sample5.cmd)]
+```Output
+User: DEPLOYSERVER\User1
+Client IP: 192.168.0.203
+Content-Type: application/msdeploy
+Version: 8.0.0.0
+MSDeploy.VersionMin: 7.1.600.0
+MSDeploy.VersionMax: 7.1.1070.1
+MSDeploy.Method: Sync
+MSDeploy.RequestId: 50de0746-f10d-4640-9b3d-4ba773520e38
+MSDeploy.RequestCulture: en-US
+MSDeploy.RequestUICulture: en-US
+Skip: objectName="^configProtectedData$"
+Provider: auto, Path: 
+Tracing deployment agent exception. Request ID '50de0746-f10d-4640-9b3d-4ba773520e38'. Request Timestamp: '5/12/2011 9:18:12 AM'. Error Details:
+Microsoft.Web.Deployment.DeploymentDetailedUnauthorizedAccessException: Unable to perform the operation ("Create Directory")  for the specified directory ("C:\inetpub\wwwroot\bin"). This can occur if the server administrator has not authorized this operation for the user credentials you are using. ---> Microsoft.Web.Deployment.DeploymentException: The error code was 0x80070005. ---> System.UnauthorizedAccessException: Access to the path 'C:\inetpub\wwwroot\bin' is denied.
+   at Microsoft.Web.Deployment.Win32Native.RaiseIOExceptionFromErrorCode(Win32ErrorCode errorCode, String maybeFullPath)
+   at Microsoft.Web.Deployment.DirectoryEx.CreateDirectory(String path)
+   at Microsoft.Web.Deployment.DirPathProvider.CreateDirectory(String fullPath, DeploymentObject source)
+   at Microsoft.Web.Deployment.DirPathProvider.Add(DeploymentObject source, Boolean whatIf)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+```
 
 This message tells you where permissions need to be granted for this particular error. You may also see the following permissions error in Visual Studio:
 
@@ -304,13 +326,38 @@ The server experienced an issue processing the request. Contact the server admin
 
 This particular error doesn't give you much to go on, but the picture becomes much clearer if you look at the Web Deploy error log in Event Viewer.
 
-[!code-console[Main](cmdsample/troubleshooting-common-problems-with-web-deploy/sample6.cmd)]
+```Output
+User: DEPLOYSERVER\User1
+Client IP: 192.168.0.203
+Content-Type: application/msdeploy
+Version: 8.0.0.0
+MSDeploy.VersionMin: 7.1.600.0
+MSDeploy.VersionMax: 7.1.1070.1
+MSDeploy.Method: Sync
+MSDeploy.RequestId: 63b2f3d1-1817-444f-8280-9fa4f6f85d53
+MSDeploy.RequestCulture: en-US
+MSDeploy.RequestUICulture: en-US
+Skip: objectName="^configProtectedData$"
+Provider: auto, Path: 
+Tracing deployment agent exception. Request ID '63b2f3d1-1817-444f-8280-9fa4f6f85d53'. Request Timestamp: '5/12/2011 9:31:41 AM'. Error Details:
+System.UnauthorizedAccessException: Attempted to perform an unauthorized operation.
+   at System.Security.AccessControl.Win32.SetSecurityInfo(ResourceType type, String name, SafeHandle handle, SecurityInfos securityInformation, SecurityIdentifier owner, SecurityIdentifier group, GenericAcl sacl, GenericAcl dacl)
+   at System.Security.AccessControl.NativeObjectSecurity.Persist(String name, SafeHandle handle, AccessControlSections includeSections, Object exceptionContext)
+   at System.Security.AccessControl.NativeObjectSecurity.Persist(String name, AccessControlSections includeSections, Object exceptionContext)
+   at Microsoft.Web.Deployment.FileSystemSecurityEx.Persist(String path)
+   at Microsoft.Web.Deployment.SetAclProvider.Add(DeploymentObject source, Boolean whatIf)
+   at Microsoft.Web.Deployment.DeploymentObject.Update(DeploymentObject source, DeploymentSyncContext syncContext)
+   at Microsoft.Web.Deployment.DeploymentSyncContext.HandleUpdate(DeploymentObject destObject, DeploymentObject sourceObject)
+   at Microsoft.Web.Deployment.DeploymentSyncContext.SyncChildrenOrder(DeploymentObject dest, DeploymentObject source)
+   at Microsoft.Web.Deployment.DeploymentSyncContext.ProcessSync(DeploymentObject destinationObject, DeploymentObject sourceObject)
+```
 
 From this, we can see that User1 doesn't have the rights to set security information. In this case, the user doesn't have "Modify permissions" on the content. Granting "Change Permissions" to the content resolves the problem.
-
 
 ### 6. Others
 
 If you can't browse a .NET 4.0 application after it has been successfully published, it could be that .NET 4.0 hasn't been registered correctly with IIS. Other symptoms are that .NET 4.0 is installed, but there are no .NET 4.0 application pools or handler mappings in IIS. This happens when .NET 4.0 is installed before IIS is installed. To fix this problem, start an elevated command prompt and run this command:
 
-[!code-console[Main](cmdsample/troubleshooting-common-problems-with-web-deploy/sample7.cmd)]
+```Output
+%systemdrive%\Windows\Microsoft.NET\Framework64\v4.0.30319\aspnet_regiis.exe -iru
+```

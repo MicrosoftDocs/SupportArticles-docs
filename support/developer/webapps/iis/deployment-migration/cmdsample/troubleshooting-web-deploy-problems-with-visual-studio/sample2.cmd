@@ -1,1 +1,0 @@
-This error indicates that you cannot connect to the server. Make sure the service URL is correct,firewall and network settings on this computer and on the server computer are configured properly,and the appropriate services have been started on the server.
