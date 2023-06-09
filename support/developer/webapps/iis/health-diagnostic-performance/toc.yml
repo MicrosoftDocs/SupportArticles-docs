@@ -47,5 +47,3 @@ items:
   href: troubleshoot-502-2-bad-gateway-error-in-cgi-apps.md
 - name: Troubleshoot IIS performance issues and application errors
   href: troubleshoot-iis-perf-issues-or-app-errors.md
-- name: Troubleshoot SMB NetBIOS/FCN limit issues with remote content
-  href: troubleshoot-smb-netbios-fcn-limit-issues.md
