@@ -20,8 +20,8 @@ When you run into issues related to Web Deploy, there are several logging option
 
 If you can't diagnose the problem using the Event Log, here are some other options:
 
-- Use Web Deploy MSI logs located under *%programfiles%\\IIS\\Microsoft Web Deploy v3* to diagnose installation problems.
-- If Web Management Service or Remote Agent Service fails to start at all, see Event Log > System for Service Control Manager errors.
+- Use Web Deploy MSI logs located under `%programfiles%\\IIS\\Microsoft Web Deploy v3` to diagnose installation problems.
+- If Web Management Service or Remote Agent Service fails to start, see the errors by going to **Event Log** > **System for Service Control Manager**.
 - You can further configure [tracing for Web Management Service](https://technet.microsoft.com/library/ee461173(WS.10).aspx).
 
 ## Error codes
@@ -29,7 +29,7 @@ If you can't diagnose the problem using the Event Log, here are some other optio
 For certain common error cases, Web Deploy will show a message and an error code that may be useful in getting more information to troubleshoot an issue. For a full list of error codes, see [https://go.microsoft.com/fwlink/?LinkId=221672](https://go.microsoft.com/fwlink/?LinkId=221672).
 
 > [!NOTE]
-> The error message may be different depending on how Web Deploy is invoked. For example, Microsoft WebMatrix chooses to show custom error messages instead of error codes whereas the command line will always show error codes if they're logged.
+> The error message may be different depending on how Web Deploy is invoked. For example, Microsoft WebMatrix chooses to show custom error messages instead of error codes, whereas the command line will always show error codes if they're logged.
 
 ## Installation problems
 
@@ -37,12 +37,12 @@ For certain common error cases, Web Deploy will show a message and an error code
 
 ### 1. Couldn't install Web Deploy on a valid OS
 
-| Symptoms | The Operating System (OS) is correct, the version and bitness of Web Deploy are correct, but the installation doesn't succeed. |
+| Symptoms | The Operating System (OS) is correct, and the version and bitness of Web Deploy are correct, but the installation doesn't succeed. |
 | --- | --- |
 | Root Cause | Unknown |
-| Fix/Workaround | Look in the install log, located in *%programfiles%\\IIS\\Microsoft Web Deploy V2*. |
+| Fix/Workaround | Look in the install log, located in `%programfiles%\\IIS\\Microsoft Web Deploy V2`. |
 
-### 2. Web Deploy doesn't function after upgrade
+### 2. Web Deploy doesn't function after an upgrade
 
 | **Symptoms** | Web Deploy doesn't work after a version upgrade. |
 | --- | --- |
@@ -53,7 +53,7 @@ For certain common error cases, Web Deploy will show a message and an error code
 
 ### 3. Couldn't install Web Deploy 32-bit version on 64-bit hardware
 
-| **Symptoms** | :::image type="content" source="media/troubleshoot-common-problems-with-web-deploy/could-not-install web-deploy-32-bit-on-64-bit.png" alt-text="Screenshot of the Microsoft Web Deployment Tool Setup dialog box. The text says that the 32-bit version of Microsoft Web Deployment Tool can't be installed on a 64-bit edition of Microsoft Windows." lightbox="media/troubleshoot-common-problems-with-web-deploy/could-not-install web-deploy-32-bit-on-64-bit.png"::: |
+| **Symptoms** | :::image type="content" source="media/troubleshoot-common-problems-with-web-deploy/could-not-install web-deploy-32-bit-on-64-bit.png" alt-text="Screenshot that shows the Web Deployment Tool Setup dialog box. The text shows that 32-bit version is incompatible with 64-bit Windows." lightbox="media/troubleshoot-common-problems-with-web-deploy/could-not-install web-deploy-32-bit-on-64-bit.png"::: |
 | --- | --- |
 | **Root Cause** | Trying to install 32-bit on 64-bit OS is a check inside the Web Deploy MSI that fails because it doesn't support WoW64 mode. |
 | **Fix/Workaround** | Install the same version that matches the architecture of your OS. |
@@ -62,7 +62,7 @@ For certain common error cases, Web Deploy will show a message and an error code
 
 ### 4. Couldn't install Web Deploy 64-bit version on 32-bit hardware
 
-| **Symptoms** | :::image type="content" source="media/troubleshoot-common-problems-with-web-deploy/could-not-install web-deploy-64-bit-on-32-bit.png" alt-text="Screenshot of the Windows Installer dialog box. The text says that This installation package isn't supported by this processor type. Contact your product vendor." lightbox="media/troubleshoot-common-problems-with-web-deploy/could-not-install web-deploy-64-bit-on-32-bit.png"::: |
+| **Symptoms** | :::image type="content" source="media/troubleshoot-common-problems-with-web-deploy/could-not-install web-deploy-64-bit-on-32-bit.png" alt-text="Screenshot that shows the Windows Installer dialog box. The text says that This installation package isn't supported by this processor type. Contact your product vendor." lightbox="media/troubleshoot-common-problems-with-web-deploy/could-not-install web-deploy-64-bit-on-32-bit.png"::: |
 | --- | --- |
 | **Root Cause** | Trying to install 64-bit on 32-bit OS is a check inside Web Deploy's MSI that will fail. |
 | **Fix/Workaround** | Install the same version that matches the architecture of your OS. |
@@ -74,7 +74,7 @@ For certain common error cases, Web Deploy will show a message and an error code
 | **Symptoms** | Unable to install Web Deploy |
 | --- | --- |
 | **Root Cause** | The URL namespace that Web Deploy tries to create during installation is already registered. |
-| **Fix/Workaround** | - Remove the conflicting registration <br>- Change Web Deploy URL during installation <br>`msiexec /i wdeploy.msi /passive ADDLOCAL=ALL LISTENURL=http://+:8080/MSDEPLOY2/`. <br>For more information about URL customization, see [Customizing and Securing the Remote Service](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd569093(v=ws.10)). |
+| **Fix/Workaround** | - Remove the conflicting registration. <br>- Change Web Deploy URL during installation <br>`msiexec /i wdeploy.msi /passive ADDLOCAL=ALL LISTENURL=http://+:8080/MSDEPLOY2/`. <br>For more information about URL customization, see [Customizing and Securing the Remote Service](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd569093(v=ws.10)). |
 
 <a id="\_Toc295395136"></a>
 
@@ -86,7 +86,7 @@ For certain common error cases, Web Deploy will show a message and an error code
 
 | **Symptoms** | Remote Agent Service fails to start |
 | --- | --- |
-| **Root Cause** | *msdepsvc.exe* or other files are missing from *%programfiles%\\IIS\\Microsoft Web Deploy v2*. |
+| **Root Cause** | *msdepsvc.exe* or other files are missing from `%programfiles%\\IIS\\Microsoft Web Deploy v2`. |
 | **Fix/Workaround** | Reinstall the product. |
 
 <a id="\_Toc239408310"></a>
