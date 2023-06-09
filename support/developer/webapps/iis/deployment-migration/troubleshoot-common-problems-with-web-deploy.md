@@ -37,16 +37,16 @@ For certain common error cases, Web Deploy will show a message and an error code
 
 ### 1. Couldn't install Web Deploy on a valid OS
 
-| Symptoms | The Operating System (OS) is correct, and the version and bitness of Web Deploy are correct, but the installation doesn't succeed. |
+| **Symptoms** | The Operating System (OS) is correct, and the version and bitness of Web Deploy are correct, but the installation doesn't succeed. |
 | --- | --- |
-| Root Cause | Unknown |
-| Fix/Workaround | Look in the install log, located in `%programfiles%\\IIS\\Microsoft Web Deploy V2`. |
+| **Root cause** | Unknown |
+| **Fix/Workaround** | Look in the install log, located in `%programfiles%\\IIS\\Microsoft Web Deploy V2`. |
 
 ### 2. Web Deploy doesn't function after an upgrade
 
 | **Symptoms** | Web Deploy doesn't work after a version upgrade. |
 | --- | --- |
-| **Root Cause** | Web Deploy doesn't restart services after an upgrade. |
+| **Root cause** | Web Deploy doesn't restart services after an upgrade. |
 | **Fix/Workaround** | If you're upgrading an existing installation of Web Deploy, make sure to restart the handler and agent services by running the following commands at an administrative command prompt:<br> `net stop msdepsvc` <br>`net start msdepsvc` <br>`net stop wmsvc` <br>`net start wmsvc` |
 
 <a id="\_Toc239408302"></a>
@@ -55,7 +55,7 @@ For certain common error cases, Web Deploy will show a message and an error code
 
 | **Symptoms** | :::image type="content" source="media/troubleshoot-common-problems-with-web-deploy/could-not-install web-deploy-32-bit-on-64-bit.png" alt-text="Screenshot that shows the Web Deployment Tool Setup dialog box. The text shows that 32-bit version is incompatible with 64-bit Windows." lightbox="media/troubleshoot-common-problems-with-web-deploy/could-not-install web-deploy-32-bit-on-64-bit.png"::: |
 | --- | --- |
-| **Root Cause** | Trying to install 32-bit on 64-bit OS is a check inside the Web Deploy MSI that fails because it doesn't support WoW64 mode. |
+| **Root cause** | Trying to install 32-bit on 64-bit OS is a check inside the Web Deploy MSI that fails because it doesn't support WoW64 mode. |
 | **Fix/Workaround** | Install the same version that matches the architecture of your OS. |
 
 <a id="\_Toc239408303"></a>
@@ -64,16 +64,16 @@ For certain common error cases, Web Deploy will show a message and an error code
 
 | **Symptoms** | :::image type="content" source="media/troubleshoot-common-problems-with-web-deploy/could-not-install web-deploy-64-bit-on-32-bit.png" alt-text="Screenshot that shows the Windows Installer dialog box. The text says that This installation package isn't supported by this processor type. Contact your product vendor." lightbox="media/troubleshoot-common-problems-with-web-deploy/could-not-install web-deploy-64-bit-on-32-bit.png"::: |
 | --- | --- |
-| **Root Cause** | Trying to install 64-bit on 32-bit OS is a check inside Web Deploy's MSI that will fail. |
+| **Root cause** | Trying to install 64-bit on 32-bit OS is a check inside Web Deploy's MSI that will fail. |
 | **Fix/Workaround** | Install the same version that matches the architecture of your OS. |
 
 <a id="\_Toc239408307"></a>
 
 ### 5. Couldn't register the URL namespace due to pre-existing namespace
 
-| **Symptoms** | Unable to install Web Deploy |
+| **Symptoms** | Unable to install Web Deploy. |
 | --- | --- |
-| **Root Cause** | The URL namespace that Web Deploy tries to create during installation is already registered. |
+| **Root cause** | The URL namespace that Web Deploy tries to create during installation is already registered. |
 | **Fix/Workaround** | - Remove the conflicting registration. <br>- Change Web Deploy URL during installation <br>`msiexec /i wdeploy.msi /passive ADDLOCAL=ALL LISTENURL=http://+:8080/MSDEPLOY2/`. <br>For more information about URL customization, see [Customizing and Securing the Remote Service](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd569093(v=ws.10)). |
 
 <a id="\_Toc295395136"></a>
@@ -84,9 +84,9 @@ For certain common error cases, Web Deploy will show a message and an error code
 
 ### 1. Couldn't initialize Microsoft.Web.Deployment.Dll during start-up
 
-| **Symptoms** | Remote Agent Service fails to start |
+| **Symptoms** | Remote Agent Service fails to start. |
 | --- | --- |
-| **Root Cause** | *msdepsvc.exe* or other files are missing from `%programfiles%\\IIS\\Microsoft Web Deploy v2`. |
+| **Root cause** | *msdepsvc.exe* or other files are missing from `%programfiles%\\IIS\\Microsoft Web Deploy v2`. |
 | **Fix/Workaround** | Reinstall the product. |
 
 <a id="\_Toc239408310"></a>
@@ -95,7 +95,7 @@ For certain common error cases, Web Deploy will show a message and an error code
 
 | **Symptoms** | Microsoft.Web.Deployment.DeploymentAgentUnavailableException: Remote agent (URL `http://DestinationServer/msdeployagentservice`) could not be contacted. Make sure the remote agent service is installed and started on the target computer. ---&gt; System.Net.WebException: The remote server returned an error: (404) Not Found. |
 | --- | --- |
-| **Root Cause** | Remote Agent Service isn't started. |
+| **Root cause** | Remote Agent Service isn't started. |
 | **Fix/Workaround** | Start the service: `net start msdepsvc`. |
 
 <a id="\_Toc239408311"></a>
@@ -104,7 +104,7 @@ For certain common error cases, Web Deploy will show a message and an error code
 
 | **Symptoms** | Microsoft.Web.Deployment.DeploymentAgentUnavailableException: Remote agent (URL `http://DestinationServer/msdeployagentservice`) could not be contacted. Make sure the remote agent service is installed and started on the target computer. ---&gt; System.Net.WebException: Unable to connect to the remote server ---&gt; System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it DestinationServer:80 |
 | --- | --- |
-| **Root Cause** | HTTP isn't listening. |
+| **Root cause** | HTTP isn't listening. |
 | **Fix/Workaround** | Make sure HTTP traffic is allowed to the Remote Agent Service. |
 
 <a id="\_Toc239408312"></a>
@@ -113,7 +113,7 @@ For certain common error cases, Web Deploy will show a message and an error code
 
 | **Symptoms** | Microsoft.Web.Deployment.DeploymentException: Could not complete the request to remote agent URL '`http://DestinationServer/`'. ---&gt; System.Net.WebException: The remote server returned an error: (405) Method Not Allowed. |
 | --- | --- |
-| **Root Cause** | The request was picked up by Internet Information Services (IIS) itself instead of MS Deploy because the path to *msdepsvc.exe* is missing. |
+| **Root cause** | The request was picked up by Internet Information Services (IIS) itself instead of MS Deploy because the path to *msdepsvc.exe* is missing. |
 | **Fix/Workaround** | Change the URL to include `/MSDeployAgentService`. |
 
 <a id="\_Toc239408313"></a>
@@ -122,16 +122,16 @@ For certain common error cases, Web Deploy will show a message and an error code
 
 | **Symptoms** | Microsoft.Web.Deployment.DeploymentException: Could not complete the request to remote agent URL '`http://DestinationServer/msdeployAgentService`'. ---&gt; System.Net.WebException: The remote server returned an error: (401) Unauthorized. |
 | --- | --- |
-| **Root Cause** | Remote Agent Service requires that the caller is a member of the Administrators group or from a domain account that has been added to the Administrators group. A local administrator that isn't the built-in account won't work with the Remote Agent Service because of a bug in Web Deploy 2.0. |
+| **Root cause** | Remote Agent Service requires that the caller is a member of the Administrators group or from a domain account that has been added to the Administrators group. A local administrator that isn't the built-in account won't work with the Remote Agent Service because of a bug in Web Deploy 2.0. |
 | **Fix/Workaround** | Provide administrative credentials. |
 
 <a id="\_Toc239408314"></a>
 
 ### 6. Remote Agent Service hangs during operation
 
-| **Symptoms** | Service may stop responding for a long time, up to several hours |
+| **Symptoms** | Service may stop responding for a long time, up to several hours. |
 | --- | --- |
-| **Root Cause** | Unknown |
+| **Root cause** | Unknown. |
 | **Fix/Workaround** | Stop the operation and attempt to repeat it. |
 
 <a id="\_Toc239408315"></a>
@@ -140,7 +140,7 @@ For certain common error cases, Web Deploy will show a message and an error code
 
 | **Symptoms** | Timestamp=24638007621418 MsDepSvc.exe Error: 0 : An error occurred. The exception details are as follows: Microsoft.Web.Deployment.DeploymentClientServerException: The client and server aren't compatible. The lowest version supported by the client is '7.1.538.0'. The highest version supported by the server is '7.1.537.0'. |
 | --- | --- |
-| **Root Cause** | Some versions don't work together, so Web Deploy blocks them from working together. This is typically done to block pre-release versions from operating with released versions. |
+| **Root cause** | Some versions don't work together, so Web Deploy blocks them from working together. This is typically done to block pre-release versions from operating with released versions. |
 | **Fix/Workaround** | Match the versions. |
 
 <a id="\_Toc239408316"></a>
@@ -149,7 +149,7 @@ For certain common error cases, Web Deploy will show a message and an error code
 
 | **Symptoms** | The Remote Agent Service couldn't start listening on the URL '{0}'. Make sure that the URL isn't in use. |
 | --- | --- |
-| **Root Cause** | Usually indicates a URL conflict. |
+| **Root cause** | Usually indicates a URL conflict. |
 | **Fix/Workaround** | Try reinstalling if you want the default URL or setting a custom URL as specified in the documentation. For more information about URL customization, see [Customizing and Securing the Remote Service](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd569093(v=ws.10)). |
 
 <a id="\_Toc295395145"></a>
@@ -162,8 +162,8 @@ For certain common error cases, Web Deploy will show a message and an error code
 
 | **Symptoms** | Web Management Service isn't started. |
 | --- | --- |
-| **Root Cause** | Unknown. The service should be started by default. |
-| **Fix/Workaround** | Start the Web Management Service service: `Net Start WMSVC` |
+| **Root cause** | Unknown. The service should be started by default. |
+| **Fix/Workaround** | Start the Web Management Service service: `Net Start WMSVC`. |
 
 <a id="\_Toc239408323"></a>
 
@@ -171,7 +171,7 @@ For certain common error cases, Web Deploy will show a message and an error code
 
 | **Symptoms** | Couldn't complete an operation with the specified provider &lt;provider name&gt; when connecting using the Web Management Service. This can occur if the server administrator hasn't authorized the user for this operation. |
 | --- | --- |
-| **Root Cause** | A non-administrator user tried to perform a restricted action with a provider. This usually indicates that a matching delegation rule wasn't found. Either the username, provider, operation, or provider path is wrong. |
+| **Root cause** | A non-administrator user tried to perform a restricted action with a provider. This usually indicates that a matching delegation rule wasn't found. Either the username, provider, operation, or provider path is wrong. |
 | **Fix/Workaround** | The workaround is to fix the delegation rule or create one. For more information about delegation rules, see [Configure the Web Deployment Handler](/iis/publish/using-web-deploy/configure-the-web-deployment-handler). |
 
 ## Case study: diagnose publishing errors in Visual Studio 2010
@@ -204,7 +204,7 @@ A connection attempt failed because the connected party did not properly respond
 
 On the destination server, open **IIS Manager** and select the machine name node. In the **Features** view, scroll down to the **Management** section and look for the following icons:
 
-:::image type="content" source="media/troubleshoot-common-problems-with-web-deploy/management-section-icons.png" alt-text="Screenshot that shows the I I S Manager Permissions icon, the I I S Manager Users icon, and the Management Service icon." lightbox="media/troubleshoot-common-problems-with-web-deploy/management-section-icons.png":::
+:::image type="content" source="media/troubleshoot-common-problems-with-web-deploy/management-section-icons.png" alt-text="Screenshot that shows the IIS Manager Permissions icon, the IIS Manager Users icon, and the Management Service icon." lightbox="media/troubleshoot-common-problems-with-web-deploy/management-section-icons.png":::
 
 If they aren't there, you need to install the Web Management Service using one of the following options:
 
@@ -315,7 +315,7 @@ If the account is able to log in but hasn't been granted the rights needed to pu
 Web deployment task failed. (Unable to perform the operation ("Create Directory") for the specified directory ("bin"). This can occur if the server administrator has not authorized this operation for the user credentials you are using.
 ```
 
-The `WMSvc` log will show HTTP 200 responses for these requests. The most likely cause is file system permissions. Web Deploy will also write events to the "Microsoft Web Deploy" service log. To view it, open **Event Viewer** > **Applications and Services Logs** > **Microsoft Web Deploy**.
+The `WMSvc` log will show HTTP 200 responses for these requests. The most likely cause is file system permissions. Web Deploy will also write events to the "Microsoft Web Deploy" service log. To view it, go to **Event Viewer** > **Applications and Services Logs** > **Microsoft Web Deploy**.
 
 :::image type="content" source="media/troubleshoot-common-problems-with-web-deploy/event-viewer-microsoft-web-deploy.png" alt-text="Screenshot that shows the Event Viewer navigation tree. The Microsoft Web Deploy option is selected." lightbox="media/troubleshoot-common-problems-with-web-deploy/event-viewer-microsoft-web-deploy.png":::
 
