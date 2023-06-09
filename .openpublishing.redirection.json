@@ -5781,7 +5781,12 @@
       "source_path": "support/sql/linux/release-history-2019.md",
       "redirect_url": "/troubleshoot/sql/releases/linux/release-history-2019",
       "redirect_document_id": true
-    }, 
+    },
+    {
+      "source_path": "support/windows-client/shell-experience/disabling-autoplay-cause-hotstart-buttons-not-working.md",
+      "redirect_url": "/troubleshoot/windows-client/shell-experience/issues-autoplay-disabled-group-policy",
+      "redirect_document_id": true
+    },
     {
       "source_path": "support/sql/linux/release-history-2022.md",
       "redirect_url": "/troubleshoot/sql/releases/linux/release-history-2022",
