@@ -40,7 +40,7 @@ First, sign in to the [Azure portal](https://portal.azure.com) and then select *
 
 3. Try connecting to your VM again.
 
-> [!NOTE]
+> [!TIP]
 > If you enter a different name than the current local administrator account on your VM, the VMAccess extension will add a local administrator account with that name, and assign your specified password to that account. If the local administrator account on your VM exists, the VMAccess extension will reset the password. If the account is disabled, the VMAccess extension will enable it.
 
 ### **Reset the Remote Desktop Services configuration**
