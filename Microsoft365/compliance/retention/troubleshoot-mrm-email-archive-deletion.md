@@ -15,7 +15,7 @@ appliesto:
   - Exchange Online
   - Microsoft Purview
 search.appverid: MET150
-ms.date: 3/7/2023
+ms.date: 6/9/2023
 ---
 
 # Resolve email archive and deletion issues when using retention policies
@@ -27,7 +27,7 @@ This article explores some common issues that prevent messaging records manageme
 > - These troubleshooting steps also apply to Exchange hybrid deployments in which the primary mailbox is hosted on-premises and the archive mailbox is in Exchange Online. In such deployments, perform these steps by using the on-premises Exchange Management Shell.
 > - In Exchange Online, the Managed Folder Assistant (MFA) is set to process mailboxes at least one time every seven days. Although MFA usually processes mailboxes every day, the process can take up to seven days to finish. Instead of waiting for the process to run, you can force it by running the `Start-ManagedFolderAssistant <mailbox ID>` cmdlet.
 > - MRM doesn't process mailboxes that are smaller than 10 MB.
-> - If the account is disabled, and the mailbox type is regular, then MRM won't process the mailbox, and as a result, any holds applied afterwards won't show up in the HoldTracking mailbox diagnostic logs.
+> - If the account is disabled and the mailbox type is regular, then MRM won't process the mailbox. Therefore, any subsequent holds applied won't show up in the Hold Tracking Mailbox Diagnostic logs.
 
 ## Common causes
 
