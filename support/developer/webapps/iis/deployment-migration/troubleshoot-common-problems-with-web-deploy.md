@@ -202,24 +202,24 @@ A connection attempt failed because the connected party did not properly respond
 
 **Is the web management service installed?**
 
-On the destination server, open IIS Manager and select the machine name node. In the **Features** view, scroll down to the **Management** section and look for the following icons:
+On the destination server, open **IIS Manager** and select the machine name node. In the **Features** view, scroll down to the **Management** section and look for the following icons:
 
-:::image type="content" source="media/troubleshoot-common-problems-with-web-deploy/management-section-icons.png" alt-text="Screenshot of the I I S Manager Permissions icon, the I I S Manager Users icon, and the Management Service icon." lightbox="media/troubleshoot-common-problems-with-web-deploy/management-section-icons.png":::
+:::image type="content" source="media/troubleshoot-common-problems-with-web-deploy/management-section-icons.png" alt-text="Screenshot that shows the I I S Manager Permissions icon, the I I S Manager Users icon, and the Management Service icon." lightbox="media/troubleshoot-common-problems-with-web-deploy/management-section-icons.png":::
 
-If they aren't there, you need to install the Web Management Service.
+If they aren't there, you need to install the Web Management Service using one of the following options:
 
 - Through the **Add Role Services** dialog in Server Manager.
 
 - Through the **Web Platform Installer** from the **Products** tab. Select **Server** in the left column and select **IIS: Management Service**.
 
 > [!NOTE]
-> After you install the Management Service, you'll need to start it, as it isn't started automatically.
+> After you install the Management Service, you need to start it, as it isn't started automatically.
 
 ### 2. (403) Forbidden
 
-Once the Web Management Service is installed, Visual studio may show the following error:
+Once the Web Management Service is installed, Visual Studio may show the following error:
 
-:::image type="content" source="media/troubleshoot-common-problems-with-web-deploy/403-forbidden.png" alt-text="Screenshot of an error page in Visual Studio. An error description is shown." lightbox="media/troubleshoot-common-problems-with-web-deploy/403-forbidden.png":::
+:::image type="content" source="media/troubleshoot-common-problems-with-web-deploy/403-forbidden.png" alt-text="Screenshot that shows an error page in Visual Studio. An error description is shown." lightbox="media/troubleshoot-common-problems-with-web-deploy/403-forbidden.png":::
 
 ```Output
 Web deployment task failed.(Could not connect to the destination computer ("deployserver") using the specified process ("The Web Management Service") because the server did not respond. Make sure that the process ("The Web Management Service") is started on the destination computer.)
@@ -231,21 +231,21 @@ The remote server returned an error: (403) Forbidden.
 
 **Is the Web Management Service configured to allow remote connections?**
 
-Start IIS Manager and double-click the **Management Service** icon, and verify that **Enable Remote Connections** is checked. You must stop the service to make changes, so be sure to restart it.
+Start **IIS Manager**, double-click the **Management Service** icon, and verify that **Enable Remote Connections** is checked. You must stop the service to make changes, so be sure to restart it.
 
-:::image type="content" source="media/troubleshoot-common-problems-with-web-deploy/web-management service-configured-allow-remote-connections.png" alt-text="Screenshot of the Management Service page. The Enable remote connections checkbox is checked." lightbox="media/troubleshoot-common-problems-with-web-deploy/web-management service-configured-allow-remote-connections.png":::
+:::image type="content" source="media/troubleshoot-common-problems-with-web-deploy/web-management service-configured-allow-remote-connections.png" alt-text="Screenshot that shows the Management Service page. The Enable remote connections checkbox is checked." lightbox="media/troubleshoot-common-problems-with-web-deploy/web-management service-configured-allow-remote-connections.png":::
 
 **Is Windows Firewall blocking the request?**
 
-The Web Management Service creates an Inbound rule named **Web Management Service (HTTP Traffic-In)**, and enables it. Verify this rule is enabled by going to **Start** >  **Administrative tools** >> **Windows Firewall with Advanced Security**. Select **Inbound Rules** and find the **Web Management** rule in the list. It should be enabled for all profiles.
+The Web Management Service creates an Inbound rule named **Web Management Service (HTTP Traffic-In)** and enables it. Verify that this rule is enabled by going to **Start** >  **Administrative tools** > **Windows Firewall with Advanced Security**. Select **Inbound Rules** and find the **Web Management** rule in the list. It should be enabled for all profiles.
 
-If you're using a third party firewall, make sure inbound TCP connections on port 8172 are allowed.
+If you're using a third-party firewall, make sure inbound TCP connections on port 8172 are allowed.
 
 ### 3. (404) Not Found
 
 If Visual Studio is able to contact the Management Service, the error message changes:
 
-:::image type="content" source="media/troubleshoot-common-problems-with-web-deploy/404-not-found.png" alt-text="Screenshot of the Visual Studio Error List page. A description of an error is shown." lightbox="media/troubleshoot-common-problems-with-web-deploy/404-not-found.png":::
+:::image type="content" source="media/troubleshoot-common-problems-with-web-deploy/404-not-found.png" alt-text="Screenshot that shows the Visual Studio Error List page. A description of an error is shown." lightbox="media/troubleshoot-common-problems-with-web-deploy/404-not-found.png":::
 
 ```Output
 Web deployment task failed.(Could not connect to the destination computer ("deployserver"). On the destination computer, make sure that Web Deploy is installed and that the required process ("The Web Management Service") is started.)
@@ -259,23 +259,27 @@ Could not connect to the destination computer ("deployserver"). On the destinati
 The remote server returned an error: (404) Not Found.
 ```
 
-If you look in the Web Management Service log under *%SystemDrive%\\Inetpub\\logs\\WMSvc* on the destination server, you'll see an entry that looks like the following one:
+If you look in the Web Management Service log under `%SystemDrive%\\Inetpub\\logs\\WMSvc` on the destination server, you see an entry that looks like the following one:
 
 [!code-console[Main](cmdsample/troubleshooting-common-problems-with-web-deploy/sample1.cmd)]
 
-**Is Web Deploy installed?** You can verify web deploy is installed by going to the **Programs and Features** control panel and looking for **Microsoft Web Deploy 2.0** in the list of installed programs. If it isn't there, you can install it via the Web Platform Installer by going to the **Products** tab. It's listed as **Web Deployment Tool 2.1**.
+**Is Web Deploy installed?** 
 
-**Is the Web Deployment IIS7 Deployment Handler installed?** If Web Deploy is installed and you still get this error, make sure the "IIS 7 Deployment Handler" feature in Web Deploy is installed. In "Add Remove Programs", find "Microsoft Web Deploy 2.0", right-click and select **Change**. In the Wizard that comes up, select next on the first page, and then choose "Change" on the second page. Add "IIS 7 Deployment Handler" and everything under it.
+You can verify that Web Deploy is installed by going to the **Programs and Features** control panel and looking for **Microsoft Web Deploy 2.0** in the list of installed programs. If it isn't there, you can install it via the Web Platform Installer by going to the **Products** tab. It's listed as **Web Deployment Tool 2.1**.
 
-:::image type="content" source="media/troubleshoot-common-problems-with-web-deploy/iis7-deployment-handler-installed.png" alt-text="SCreenshot of the Microsoft Web Deploy two dot zero Setup wizard. The Web Development Framework option is selected." lightbox="media/troubleshoot-common-problems-with-web-deploy/iis7-deployment-handler-installed.png":::
+**Is the Web Deployment IIS7 Deployment Handler installed?** 
+
+If Web Deploy is installed and you still get this error, make sure the **IIS 7 Deployment Handler** feature in Web Deploy is installed. In **Add Remove Programs**, find **Microsoft Web Deploy 2.0**, right-click, and select **Change**. In the Wizard that comes up, select **Next** on the first page and then choose **Change** on the second page. Add **IIS 7 Deployment Handler** and everything under it.
+
+:::image type="content" source="media/troubleshoot-common-problems-with-web-deploy/iis7-deployment-handler-installed.png" alt-text="Screenshot that shows the Microsoft Web Deploy two dot zero Setup wizard. The Web Development Framework option is selected." lightbox="media/troubleshoot-common-problems-with-web-deploy/iis7-deployment-handler-installed.png":::
 
 Select **Next** to complete the Wizard.
 
 ### 4. (401) Unauthorized
 
-Once Web Deploy and the Web Management Service are correctly configured, you'll need to set up Web Management Service delegation rules to allow users to update content. For permissions issues, there are several different errors you may see in Visual Studio. For example:
+Once Web Deploy and the Web Management Service are correctly configured, you need to set up Web Management Service delegation rules to allow users to update content. For permissions issues, there are several different errors you may see in Visual Studio. For example:
 
-:::image type="content" source="media/troubleshoot-common-problems-with-web-deploy/401-unauthorized.png" alt-text="Screenshot of the Visual Studio Error List page. An error appears along with a description of the error." lightbox="media/troubleshoot-common-problems-with-web-deploy/401-unauthorized.png":::
+:::image type="content" source="media/troubleshoot-common-problems-with-web-deploy/401-unauthorized.png" alt-text="Screenshot that shows the Visual Studio Error List page. An error appears along with a description of the error." lightbox="media/troubleshoot-common-problems-with-web-deploy/401-unauthorized.png":::
 
 ```Output
 Web deployment task failed.(Connected to the destination computer ("deployserver") using the Web Management Service, but could not authorize. Make sure that you are using the correct user name and password, that the site you are connecting to exists, and that the credentials represent a user who has permissions to access the site.)
@@ -289,33 +293,33 @@ Connected to the destination computer ("deployserver") using the Web Management 
 The remote server returned an error: (401) Unauthorized.
 ```
 
-In the Web Management Service log, you'll see the following messages:
+In the `Web Management Service` log, you see the following messages:
 
 [!code-console[Main](cmdsample/troubleshooting-common-problems-with-web-deploy/sample2.cmd)]
 
 [!code-console[Main](cmdsample/troubleshooting-common-problems-with-web-deploy/sample3.cmd)]
 
-The highlighted HTTP status in the Visual Studio output is an Access Denied error. The highlighted Win32 status in the error log maps to "Logon failure: unknown user name or bad password". This is a simple logon failure. If the user is authenticated, but doesn't have the rights needed to publish, the log entry will look like
+The highlighted HTTP status in the Visual Studio output is an "Access Denied" error. The highlighted Win32 status in the error log maps to "Logon failure: unknown user name or bad password." This is a simple logon failure. If the user is authenticated but doesn't have the rights needed to publish, the log entry will look like:
 
 [!code-console[Main](cmdsample/troubleshooting-common-problems-with-web-deploy/sample4.cmd)]
 
-You'll need to set up delegation for this user per the instructions at [Configure the Web Deployment Handler](/iis/publish/using-web-deploy/configure-the-web-deployment-handler)
+You need to set up delegation for this user per the instructions at [Configure the Web Deployment Handler](/iis/publish/using-web-deploy/configure-the-web-deployment-handler).
 
 ### 5. Operation not authorized
 
-If the account is able to log in, but hasn't been granted the rights needed to publish the content, you'll see the following error message:
+If the account is able to log in but hasn't been granted the rights needed to publish the content, you'll see the following error message:
 
-:::image type="content" source="media/troubleshoot-common-problems-with-web-deploy/unable-perform-operation.png" alt-text="Screenshot of the Visual Studio Error List page. A description of an error says that the Web deployment task failed." lightbox="media/troubleshoot-common-problems-with-web-deploy/unable-perform-operation.png":::
+:::image type="content" source="media/troubleshoot-common-problems-with-web-deploy/unable-perform-operation.png" alt-text="Screenshot that shows the Visual Studio Error List page. A description of an error says that the Web deployment task failed." lightbox="media/troubleshoot-common-problems-with-web-deploy/unable-perform-operation.png":::
 
 ```Output
 Web deployment task failed. (Unable to perform the operation ("Create Directory") for the specified directory ("bin"). This can occur if the server administrator has not authorized this operation for the user credentials you are using.
 ```
 
-The WMSvc log will show HTTP 200 responses for these requests. The most likely cause is file system permissions. Web Deploy will also write events to the "Microsoft Web Deploy" service log. To view it, open the event viewer and go to **Applications and Services Logs** > **Microsoft Web Deploy**.
+The `WMSvc` log will show HTTP 200 responses for these requests. The most likely cause is file system permissions. Web Deploy will also write events to the "Microsoft Web Deploy" service log. To view it, open **Event Viewer** > **Applications and Services Logs** > **Microsoft Web Deploy**.
 
-:::image type="content" source="media/troubleshoot-common-problems-with-web-deploy/event-viewer-microsoft-web-deploy.png" alt-text="Screenshot of the Event Viewer navigation tree. The Microsoft Web Deploy option is selected." lightbox="media/troubleshoot-common-problems-with-web-deploy/event-viewer-microsoft-web-deploy.png":::
+:::image type="content" source="media/troubleshoot-common-problems-with-web-deploy/event-viewer-microsoft-web-deploy.png" alt-text="Screenshot that shows the Event Viewer navigation tree. The Microsoft Web Deploy option is selected." lightbox="media/troubleshoot-common-problems-with-web-deploy/event-viewer-microsoft-web-deploy.png":::
 
-For this particular error, the event log contains extra detail (truncated for brevity):
+For this particular error, the event log contains extra details (truncated for brevity):
 
 [!code-console[Main](cmdsample/troubleshooting-common-problems-with-web-deploy/sample5.cmd)]
 
@@ -332,11 +336,11 @@ This particular error doesn't give you much to go on, but the picture becomes mu
 
 [!code-console[Main](cmdsample/troubleshooting-common-problems-with-web-deploy/sample6.cmd)]
 
-From this, we can see that User1 doesn't have rights to set security information. In this case, the user doesn't have Modify permissions on the content. Granting "Change Permissions" to the content resolves the problem.
+From this, we can see that User1 doesn't have the rights to set security information. In this case, the user doesn't have "Modify permissions" on the content. Granting "Change Permissions" to the content resolves the problem.
 
 
 ### 6. Others
 
-If you can't browse a .NET 4.0 application after it has been successfully published, it could be that .NET 4.0 hasn't been registered correctly with IIS. Other symptoms are that .NET 4.0 is installed, but there are no .NET 4.0 application pools or handler mappings in IIS. This happens when .NET 4.0 is installed before IIS was installed. To fix this problem, start an elevated command prompt and run this command:
+If you can't browse a .NET 4.0 application after it has been successfully published, it could be that .NET 4.0 hasn't been registered correctly with IIS. Other symptoms are that .NET 4.0 is installed, but there are no .NET 4.0 application pools or handler mappings in IIS. This happens when .NET 4.0 is installed before IIS is installed. To fix this problem, start an elevated command prompt and run this command:
 
 [!code-console[Main](cmdsample/troubleshooting-common-problems-with-web-deploy/sample7.cmd)]
