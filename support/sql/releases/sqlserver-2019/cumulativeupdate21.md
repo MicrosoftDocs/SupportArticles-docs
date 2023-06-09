@@ -61,7 +61,7 @@ If you have applied this cumulative update to one or more secondary replicas and
 4. Remove trace flag 12324 as the startup parameter from all replicas and disable trace flag 12324 on all replicas by executing the `DBCC TRACEOFF(12324, -1)` statement.
 
 > [!NOTE]
-> Trace flag 12324 impacts only the Managed Instance Link feature and is only used to activate the changes in SQL Server 2019 CU 20 and CU21.
+> Trace flag 12324 impacts only the Managed Instance Link feature and is only used to activate the changes in SQL Server 2019 CU 20 and CU 21.
 
 ## Improvements and fixes included in this update
 
