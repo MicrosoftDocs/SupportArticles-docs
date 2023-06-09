@@ -114,7 +114,7 @@ This article explains how to create and receive alerts if an Azure file share is
 
 - [Troubleshoot Azure Files](files-troubleshoot.md)
 - [Troubleshoot Azure Files Performance](files-troubleshoot-performance.md)
-- [Understand Azure Files performance](understand-performance.md)
+- [Understand Azure Files performance](/azure/storage/files/understand-performance)
 - [Overview of alerts in Microsoft Azure](/azure/azure-monitor/alerts/alerts-overview)
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
