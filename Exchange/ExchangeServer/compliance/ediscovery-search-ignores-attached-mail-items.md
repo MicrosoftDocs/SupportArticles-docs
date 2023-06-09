@@ -1,6 +1,6 @@
 ---
-title: In-Place eDiscovery attachment search doesn't search the file names of attached mail items
-description: Provides a workaround for an issue in which an eDiscovery attachment search doesn't search the file names of attached mail items.
+title: In-Place eDiscovery search doesn't search the file names of attached mail items
+description: Provides a workaround for an issue in which an eDiscovery search doesn't search the file names of attached mail items.
 author: v-trisshores
 ms.author: v-trisshores
 manager: dcscontentpm
@@ -18,7 +18,7 @@ search.appverid: MET150
 ms.date: 06/09/2023
 ---
 
-# In-Place eDiscovery attachment search doesn't search the file names of attached mail items
+# In-Place eDiscovery search doesn't search the file names of attached mail items
 
 ## Symptoms
 
