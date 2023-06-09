@@ -16,7 +16,7 @@ Placing application content and code on a UNC share for hosting scenarios is inc
 
 ## Configure Failed Request Tracing for a hosting scenario
 
-Failed Request Tracing is a powerful diagnostics feature helps developers and administrators determine where problems occur in their applications and why they are happening. Failed Request Tracing after installation is quite difficult to use by developers who are non-administrators on the machine. This section helps you setup Failed Request Tracing to be accessible by developers by:
+Failed Request Tracing is a powerful diagnostics feature helps developers and administrators determine where problems occur in their applications and why they're happening. Failed Request Tracing after installation is difficult to use by developers who are non-administrators on the machine. This section helps setup Failed Request Tracing to be accessible by developers by:
 
 - Unlocking the sections necessary to allow developers to define their own failed request tracing rules for their applications.
 - Setting up Failed Request Tracing to log to a UNC share for the application owner.
@@ -25,16 +25,16 @@ Failed Request Tracing is a powerful diagnostics feature helps developers and ad
 
 Remember that there are two different sections of configuration for Failed Request Tracing:
 
-- `<traceFailedRequestsLogging>`: This section is always restricted to IIS administrators. This section allows administrators to enable or disable the Failed Request Tracing feature for a site, configure the maximum # of log files, size of the log files, and the directory where the log files are to live. For these reasons, (i.e. controlling the ability to fill the disk with log files) administrators must maintain control over this section.
-- `<traceFailedRequests>`: This section is where you create your failure definitions - what URLs to capture traces for and under what conditions to save those traces to disk as XML. This is the section that we will allow to be unlocked.
+- `<traceFailedRequestsLogging>`: This section is always restricted to IIS administrators. This section allows administrators to enable or disable the Failed Request Tracing feature for a site, configure the maximum # of log files, size of the log files, and the directory where the log files are to live. For these reasons (i.e. controlling the ability to fill the disk with log files), administrators must maintain control over this section.
+- `<traceFailedRequests>`: This section is where you create your failure definitions - what URLs to capture traces for and under what conditions to save those traces to disk as XML. This is the section that you'll allow to be unlocked.
 
 After installation of the Failed Request Tracing Module (see the [Troubleshooting Failed Requests Using Tracing](/iis/troubleshoot/using-failed-request-tracing/troubleshooting-failed-requests-using-tracing-in-iis-85) for information regarding the installation and basic usage of Failed Request Tracing), the `<traceFailedRequests>` section is already set for Read/Write permissions. This allows application owners to define their own Failed Request Tracing rules, without the administrator defining these rules for them.
 
 ### UI: Verify \<traceFailedRequests\> delegation from the IIS Manager
 
-To verify that \<traceFailedRequests\> has been setup for delegation from the IIS Manager UI, do the following:
+To verify that \<traceFailedRequests\> has been set up for delegation from the IIS Manager UI, do the following:
 
-1. Select **Start** and enter _InetMgr_ to open IIS Manager. Enter administrator credentials if you are not already administrator.
+1. Select **Start** and enter _InetMgr_ to open IIS Manager. Enter administrator credentials if you aren't already administrator.
 1. Select **\<Your machine name\>**, then **Feature Delegation**.
 1. Verify that **Failed Request Tracing Rules** is set to **Read/Write**.
 
@@ -44,7 +44,7 @@ This allows developers who don't have access to _ApplicationHost.config_ to crea
 
 ### XML: Verify \<traceFailedRequests\> delegation in ApplicationHost.config
 
-To verify that \<traceFailedRequests\> has been setup for delegation via _ApplicationHost.config_, follow these steps:
+To verify that \<traceFailedRequests\> has been set up for delegation via _ApplicationHost.config_, follow these steps:
 
 1. Start an administrator elevated command prompt.
 1. Change directories to _%windir%\system32\inetsrv\config_, and run `notepad applicationHost.config`.
@@ -68,12 +68,12 @@ To verify that \<traceFailedRequests\> has been setup for delegation via _Applic
 
 In order for IIS to be able to write its Failed Request Log Files to a UNC share, the worker process identity must be given full control on the network share and the filesystem path on the UNC server. This is because it must be able to list directory contents, create new log files and directories, and delete old log files.
 
-If you use one of the built-in accounts (like IUSR or Network Service) as the application pool ID, these accounts appear as ANONYMOUS on the UNC server. It is **highly recommended** that you either:
+If you use one of the built-in accounts (like IUSR or Network Service) as the application pool ID, these accounts appear as ANONYMOUS on the UNC server. It's **highly recommended** that you either:
 
 - **DOMAIN USAGE**: Create a domain user account for the application pool, then use that application pool ID to ACL down the share and filesystem directory where the Failure Request Log Files live. Both the web server and the UNC server must be members of the domain.
-- **NON-DOMAIN USAGE**: If the UNC and Web Servers are not joined to the domain, the same account with the same account password must be created on each machine. This is the example used in this walkthrough.
+- **NON-DOMAIN USAGE**: If the UNC and Web Servers aren't joined to the domain, the same account with the same account password must be created on each machine. This is the example used in this walkthrough.
 
-In the following sections, we will create a new user with a sample name _PoolId1_ and with a sample password _!p4ssw0rd_, and a new application pool with a sample name _Pool\_Site1_.
+In the following sections, you'll create a new user with a sample name _PoolId1_ and with a sample password _!p4ssw0rd_, and a new application pool with a sample name _Pool\_Site1_.
 
 ### UI: Create the new local account on the UNC server and front end web server
 
@@ -83,8 +83,8 @@ These directions should be repeated on both the UNC server as well as the web se
 1. Right-click on **Users** and select **New User...**.
 1. Fill in the **New User** dialog entries as follows:  
 
-   - User name : _PoolId1_
-   - Password (and Confirm Password) : _!p4ssw0rd_
+   - **User name**: _PoolId1_
+   - **Password** (and **Confirm Password**): _!p4ssw0rd_
    - Uncheck **User must change password at next logon**
    - Check **user cannot change password**
    - Select **Create** -> **Close.**
@@ -93,7 +93,7 @@ These directions should be repeated on both the UNC server as well as the web se
 
 Make sure to create the _PoolId1_ user on both the front-end IIS Web Server and the back end UNC server. You also need to add the _PoolId1_ to the **IIS\_IUSRS** group on the front end web server. To do so, follow these steps:
 
-1. Select the **Groups** folder on the **lusrmgr** MMC snapin.
+1. Select the **Groups** folder on the **lusrmgr** MMC snap-in.
 1. Right-click on **IIS\_IUSRS** and select **Add to Group**.
 1. Select **Add...**, then enter _\<servername\>\\PoolId1_ as the identity to add.
 
@@ -115,23 +115,23 @@ To add the new _PoolId1_ identity from the command line, follow these steps:
 
 ### UI: Create a new application pool for the web site and change its identity
 
-Part of the shared hosting guidance that the IIS team is creating is a new application pool; set its identity to the _PoolId1_ that we just created.
+Part of the shared hosting guidance that the IIS team is creating is a new application pool; set its identity to the _PoolId1_ that is just created.
 
 1. On the IIS front end server, run **Start**-> **InetMgr**.
 1. Select **Application Pools**, then select under **Actions** -> **Add Application Pool...**.
 1. Make the name _Pool\_Site1_, leave all other settings alone, and then select **OK**.
 1. Right-click **Pool\_Site1** and select **Advanced Settings...**.
 1. Under **Process Model**, select the **Identity** row and then select the **...** button.
-1. Select **Set** and configure the **Custom Identity** to match our user identity we just created - _PoolId1_. Select **OK** and **OK** again to change the identity of the application pool.
+1. Select **Set** and configure the **Custom Identity** to match the user identity you just created - _PoolId1_. Select **OK** and **OK** again to change the identity of the application pool.
 
 :::image type="content" source="media/how-to-enable-frt-for-unc-hosting/advanced-settings-dialog-id-highlighted.png" alt-text="Screenshot of the Advanced Settings dialog box. Identity is highlighted.":::
 
-We must also drop a site into this application pool. Use the default web site for this sample. You can also create a new site (for example, _SITE1_) with IIS Manager. Do the following:
+Drop a site into this application pool. Use the default web site for this sample. You can also create a new site (for example, _SITE1_) with IIS Manager. Do the following:
 
 1. Select **Sites** -> **Default Web Site**.
 2. In the right **Actions** pane, select **Basic Settings...**.
 3. To the right of **Application Pool:**, select **Select...**.
-4. Select the new **Pool\_Site1** application pool we just created, select **OK**, and then **OK** again.
+4. Select the new **Pool\_Site1** application pool, select **OK**, and then **OK** again.
 
 ### CMD: Create a new application pool for the web site and change its identity
 
@@ -154,9 +154,9 @@ Now create and lock down the UNC share and its file system directories.
 
 ### CMD: Create and locking down the ACLs for the UNC share
 
-On the UNC server do the following steps:
+On the UNC server, do the following steps:
 
-1. Create a filesystem path _content_ where we will dump the content.
+1. Create a filesystem path _content_ where you will dump the content.
 1. Under that, create a new directory _Site1_, and under that another directory _Logs_, and the final directory _failedReqLogFiles_. You see:
     - g:\content
         - Site1
@@ -164,13 +164,13 @@ On the UNC server do the following steps:
                 - failedReqLogFIles
 1. On _g:\content\Site1\Logs\failedReqLogFiles_, set the permissions on the filesystem path to give the _PoolId1_ account full control over the Logs directory. This is required, as the worker process identity must be able to list contents, write new files, create new directories, and delete old files. To do this from an administrator elevated command prompt, run the following command:  
 
-    - Windows Server&reg; 2003 Fileserver:
+    - Windows Server&reg; 2003 File Server:
 
         ```console
         icacls g:\content\Site1\Logs\failedReqLogFiles /g PoolId1:F
         ```
 
-    - Windows Server 2003 Fileserver:
+    - Windows Server 2003 File Server:
 
         ```console
         cacls g:\content\Site1\Logs\failedReqLogFiles /g PoolId1:F /e
@@ -203,7 +203,7 @@ To configure Failed Request Tracing to log to our UNC path, follow these directi
 
 ## Test
 
-Configure a rule to catch all 200s for all URLs for **All Content** to run a test.
+Configure a rule to catch all 200 requests for all URLs for **All Content** to run a test.
 
 1. In the IIS Manager UI again, expand the **Sites** and select **Default Web Site**.
 1. Double-click on **Failed Request Tracing Rules**.
@@ -240,4 +240,4 @@ The actual XML looks like the following in the _web.config_ file for the default
 
 ## Check the UNC back end
 
-Browse to the website that we set up in order to log Failed Request Tracing rules to the UNC path (similar to `http://<uncsite>/default.aspx`). Check the UNC back end server directory where you are logging. Notice that a new directory called _W3SVC1_ has been created within the configured Failed Request log file directory. Browse into that directory, and see the log file and the _FREB.xsl_ file.
+Browse to the website that you set up in order to log Failed Request Tracing rules to the UNC path (similar to `http://<uncsite>/default.aspx`). Check the UNC back end server directory where you're logging. Notice that a new directory called _W3SVC1_ has been created within the configured Failed Request log file directory. Browse into that directory, and see the log file and the _FREB.xsl_ file.
