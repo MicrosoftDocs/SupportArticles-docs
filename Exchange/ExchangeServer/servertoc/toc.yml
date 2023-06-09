@@ -421,12 +421,12 @@
           href: ../compliance/mailbox-audit-log-searches-fail-errorinvalidserverversion.md
         - name: Content index state is stuck in crawling
           href: ../compliance/content-index-state-stuck-crawling-exchange-server-2010.md
+        - name: eDiscovery attachment search ignores attached mail items
+          href: ../compliance/ediscovery-search-ignores-attached-mail-items.md
         - name: eDiscovery search ignores some query keywords
           href: ../compliance/ediscovery-search-ignores-query-keywords.md
         - name: Error when doing a multi-mailbox search
           href: ../compliance/cannot-perform-multi-mailbox-search.md
-        - name: In-Place eDiscovery attachment search doesn't search the file names of attached mail items
-          href: ../compliance/ediscovery-search-missing-attached-mail-items.md
         - name: Issues caused by update 2874216/MS13-061
           href: ../compliance/mailbox-database-content-index-shows-failed.md
         - name: Items are removed by MRM 2.0 unexpectedly
