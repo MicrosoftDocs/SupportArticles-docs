@@ -36,7 +36,7 @@ Microsoft is working on a fix for this issue that will be available in a future 
 
 ### Issue two
 
-This issue is caused by a change introduced in this cumulative update for the [Managed Instance link](/azure/azure-sql/managed-instance/managed-instance-link-feature-overview?view=azuresql) feature. Assume that the databases of an Always On availability group have one of the following conditions:
+This issue is caused by a change introduced in this cumulative update for the [Managed Instance link](/azure/azure-sql/managed-instance/managed-instance-link-feature-overview) feature. Assume that the databases of an Always On availability group have one of the following conditions:
 
 - The databases use memory-optimized tables, the FileStream class, or multiple log files.
 
@@ -122,7 +122,7 @@ The following update is available from the Microsoft Download Center:
 <details>
 <summary><b>How to obtain or download this cumulative update package for Windows</b></summary>
 
-This cumulative update package isn't yet available on [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=sql%20server%202022). This article will be updated after the package is made available on this channel.
+This cumulative update package isn't yet available on [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=sql%20server%202019). This article will be updated after the package is made available on this channel.
 
 </details>
 
@@ -1053,7 +1053,7 @@ To uninstall this CU on Linux, you must roll back the package to the previous ve
 ## References
 
 - [Announcing updates to the SQL Server Incremental Servicing Model (ISM)](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/)
-- [SQL Server Service Packs are discontinued starting from SQL Server 2017](https://support.microsoft.com/topic/fd405dee-cae7-b40f-db14-01e3e4951169)
+- [SQL Server Service Packs are no longer supported starting from SQL Server 2017](https://support.microsoft.com/topic/fd405dee-cae7-b40f-db14-01e3e4951169)
 - [Determine which version and edition of SQL Server Database Engine is running](../find-my-sql-version.md)
 - [Servicing models for SQL Server](../../general/servicing-models-sql-server.md)
 - [Naming schema and Fix area descriptions for SQL Server software update packages](../../database-engine/install/windows/naming-schema-and-fix-area.md)
