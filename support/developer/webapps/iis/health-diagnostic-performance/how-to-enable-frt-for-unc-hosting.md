@@ -18,14 +18,14 @@ Placing application content and code on a UNC share for hosting scenarios is inc
 
 ## Configure Failed Request Tracing for a hosting scenario
 
-Failed Request Tracing is a powerful diagnostics feature helps developers and administrators determine where problems occur in their applications and why they're happening. Failed Request Tracing after installation is difficult to use by developers who are non-administrators on the machine. This section helps setup Failed Request Tracing to be accessible by developers by:
+Failed Request Tracing is a powerful diagnostics feature that helps developers and administrators determine where problems occur in their applications and why they're happening. Failed Request Tracing after installation is difficult to use by developers who are non-administrators on the machine. This section helps setup Failed Request Tracing to be accessible by developers by:
 
 - Unlocking the sections necessary to allow developers to define their own failed request tracing rules for their applications.
 - Setting up Failed Request Tracing to log to a UNC share for the application owner.
 
 ## Delegating \<traceFailedRequests\> to non-administrators
 
-Remember that there are two different sections of configuration for Failed Request Tracing:
+There are two different sections of configuration for Failed Request Tracing:
 
 - `<traceFailedRequestsLogging>`: This section is always restricted to IIS administrators. This section allows administrators to enable or disable the Failed Request Tracing feature for a site, configure the maximum # of log files, size of the log files, and the directory where the log files are to live. For these reasons (i.e. controlling the ability to fill the disk with log files), administrators must maintain control over this section.
 - `<traceFailedRequests>`: This section is where you create your failure definitions - what URLs to capture traces for and under what conditions to save those traces to disk as XML. This is the section that you'll allow to be unlocked.
@@ -117,7 +117,7 @@ To add the new _PoolId1_ identity from the command line, follow these steps:
 
 ### UI: Create a new application pool for the website and change its identity
 
-Part of the shared hosting guidance that the IIS team is creating is a new application pool; set its identity to the _PoolId1_ that is just created.
+Part of the shared hosting guidance is a new application pool; set its identity to the _PoolId1_ that is just created.
 
 1. On the IIS front end server, run **Start**-> **InetMgr**.
 1. Select **Application Pools**, then select under **Actions** -> **Add Application Pool...**.
@@ -150,11 +150,11 @@ Drop a site into this application pool. Use the default website for this sample.
     %windir%\system32\inetsrv\appcmd set app -app.name:"Default Web Site/" -applicationPool:Pool_Site1
     ```
 
-## Create and locking down the ACLs for the UNC share
+## Create and lock down the ACLs for the UNC share
 
 Now create and lock down the UNC share and its file system directories.
 
-### CMD: Create and locking down the ACLs for the UNC share
+### CMD: Create and lock down the ACLs for the UNC share
 
 On the UNC server, do the following steps:
 
