@@ -421,6 +421,8 @@
           href: ../compliance/mailbox-audit-log-searches-fail-errorinvalidserverversion.md
         - name: Content index state is stuck in crawling
           href: ../compliance/content-index-state-stuck-crawling-exchange-server-2010.md
+        - name: eDiscovery search ignores attached mail items
+          href: ../compliance/ediscovery-search-ignores-attached-mail-items.md
         - name: eDiscovery search ignores some query keywords
           href: ../compliance/ediscovery-search-ignores-query-keywords.md
         - name: Error when doing a multi-mailbox search
