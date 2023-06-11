@@ -2,6 +2,14 @@
 
 
 
+## Week of June 05, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 6/9/2023 | Office programs may crash with the SendToBluetooth add-in installed | removed |
+
+
 ## Week of May 29, 2023
 
 
