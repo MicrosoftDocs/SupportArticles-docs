@@ -26,9 +26,11 @@ After the [organization name is updated](/microsoft-365/admin/manage/change-addr
 
 ## Cause
 
-Updating the organization name in the Microsoft 365 admin center doesn't update the name in configured clients.
+Updating the organization name in the Microsoft 365 admin center doesn't update the name in configured clients automatically. 
 
 ## Resolution  
+
+If the name has not been corrected on a local machine **after 14 days**, please try the following. 
 
 To resolve this issue, unlink OneDrive. Before you do this, make sure that OneDrive isn't syncing files. If OneDrive is syncing files, wait for the process to finish or [pause the sync](https://support.microsoft.com/office/how-to-pause-and-resume-sync-in-onedrive-2152bfa4-a2a5-4d3a-ace8-92912fb4421e).  
 
