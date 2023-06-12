@@ -43,7 +43,7 @@ If you're running into issues using Power Apps, try these common troubleshooting
 
 1. **Performance degradation when opening Power Apps Studio in China** (March 25, 2022)
 
-    Power Apps Studio may take more than 30 seconds to load within the China region currently. This issue does not impact tenants hosted locally by 21Vianet.
+    Power Apps Studio may take more than 30 seconds when loading in China. This issue does not impact tenants hosted locally by 21Vianet.
 
 1. **Unable to copy paste forms into data cards** (March 2022)
 
@@ -223,7 +223,7 @@ If you're running into issues using Power Apps, try these common troubleshooting
 
 1. **Explicit column selection and columns that disappear.**
 
-   With the Preview feature Explicit column selection (ECS) turned on, columns may not be retrieved from the data source if the data is first retrieved into a collection. As some tables may have many columns, ECS automatically computes which columns are necessary to retrieve based on their usage in controls (for example, galleries and forms). This also generally works for collections. However, the column lineage is occasionally lost when the data moves through collections and variables, and Power Apps may lose track of the column it should retrieve. To resolve this issue, you can force Power Apps to “remember” the column by using the `ShowColumns` function. For example:
+   With the Preview feature Explicit column selection (ECS) turned on, columns may not be retrieved from the data source if the data is first retrieved into a collection. As some tables may have many columns, ECS automatically computes which columns are necessary to retrieve based on their usage in controls (for example, galleries and forms). This also generally works for collections. However, the column lineage is occasionally lost when the data moves through collections and variables, and Power Apps may lose track of the column it should retrieve. To resolve this issue, you can force Power Apps to "remember" the column by using the `ShowColumns` function. For example:
 
     ```powerapps-dot
     ClearCollect(MyColTable, ShowColumns(Filter(BankAccounts, AcountNo = 32), "Col1", "Col2", Col3"));
