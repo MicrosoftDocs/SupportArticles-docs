@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Azure Files issues in Linux (SMB)
-description: Troubleshooting Azure Files issues in Linux. See general issues related to SMB Azure file shares when you connect from Linux clients, and see possible resolutions.
+description: Troubleshooting Azure Files issues in Linux. See general issues related to SMB Azure file shares when you connect from Linux clients and possible resolutions.
 author: khdownie
 ms.service: storage
 ms.date: 06/09/2023
@@ -102,13 +102,13 @@ The folders or files were uploaded from a system that encodes the characters at 
 
 Use the mapchars option on the share when mounting the share on Linux:
 
-instead of:
+Instead of:
 
 ```bash
 sudo mount -t cifs $smbPath $mntPath -o vers=3.0,username=$storageAccountName,password=$storageAccountKey,serverino
 ```
 
-use:
+Use:
 
 ```bash
 sudo mount -t cifs $smbPath $mntPath -o vers=3.0,username=$storageAccountName,password=$storageAccountKey,serverino,mapchars
@@ -128,7 +128,7 @@ You'll also see that the server FQDN now resolves to a different IP address than
 
 ### Cause
 
-For capacity load balancing purposes, storage accounts are sometimes live-migrated from one storage cluster to another. Account migration triggers Azure Files traffic to be redirected from the source cluster to the destination cluster by updating the DNS mappings to point to the destination cluster. This blocks all traffic to the source cluster from that account. It’s expected that the SMB client picks up the DNS updates and redirects further traffic to the destination cluster. However, due to a bug in the Linux SMB kernel client, this redirection doesn't take effect. As a result, the data traffic keeps going to the source cluster, which has stopped serving this account post migration.
+For capacity load balancing purposes, storage accounts are sometimes live-migrated from one storage cluster to another. Account migration triggers Azure Files traffic to be redirected from the source cluster to the destination cluster by updating the DNS mappings to point to the destination cluster. This blocks all traffic to the source cluster from that account. It’s expected that the SMB client picks up the DNS updates and redirects further traffic to the destination cluster. However, due to a bug in the Linux SMB kernel client, this redirection doesn't take effect. As a result, the data traffic keeps going to the source cluster, which has stopped serving this account post-migration.
 
 ### Workaround
 
