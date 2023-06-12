@@ -1,10 +1,10 @@
 --- 
 title: Troubleshoot problems with Azure Application Insights Profiler
 description: This article presents troubleshooting steps and information to help developers enable and use Application Insights Profiler.
-ms.date: 03/07/2023
+ms.date: 05/11/2023
 author: AmandaAZ
 ms.author: v-weizhu
-ms.reviewer: v-dele, aaronmax, cweining, v-jsitser
+ms.reviewer: v-dele, aaronmax, cweining, v-jsitser, hannahhunter, ryankahng
 ms.service: azure-monitor
 ms.subservice: application-insights
 #Customer intent: As an Azure Application Insights user, I want to know how to troubleshoot various problems enabling or viewing Application Insights Profiler so I can use it effectively.  
@@ -89,7 +89,9 @@ For Profiler to work properly, make sure the following things:
 
         In the Azure portal, go to your App Service. Select **Advanced Tools** from the left side menu and then select **Go**.
 
-   1. In the top menu, select **Tools** > **WebJobs dashboard**. The **WebJobs** pane opens.
+   1. In the top menu, select **Tools** > **WebJobs dashboard**. The **WebJobs** pane opens. 
+
+      If **ApplicationInsightsProfiler3** doesn't show up, restart your App Service application.
 
       :::image type="content" source="media/profiler-troubleshooting/profiler-web-job.png" alt-text="Screenshot of the WebJobs pane, which displays the name, status, and last run time of jobs.":::
 
