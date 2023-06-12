@@ -5815,12 +5815,12 @@
     {
       "source_path": "support/azure/azure-monitor/app-insights/index.md",
       "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/azure/azure-monitor/log-analytics/index.md",
       "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/azure/synapse-analytics/index.md",
