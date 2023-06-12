@@ -20,11 +20,11 @@ If you can't diagnose the problem using the Event Log, here are some other optio
 
 - Use Web Deploy MSI logs located under *%programfiles%\\IIS\\Microsoft Web Deploy v3* to diagnose installation problems.
 - If Web Management Service or Remote Agent Service fails to start, see the error details by going to **Event Viewer (Local)** > **Windows Logs** > **System** for Service Control Manager.
-- You can further configure [tracing for Web Management Service](https://technet.microsoft.com/library/ee461173(WS.10).aspx).
+- You can further configure [tracing for Web Management Service](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461173(v=ws.10)).
 
 ## Error codes
 
-For certain common error cases, Web Deploy will show a message and an error code that may be useful in getting more information to troubleshoot an issue. For a full list of error codes, see [https://go.microsoft.com/fwlink/?LinkId=221672](https://go.microsoft.com/fwlink/?LinkId=221672).
+For certain common error cases, Web Deploy will show a message and an error code that may be useful in getting more information to troubleshoot an issue. For a full list of error codes, see [Web Deploy error codes](/iis/publish/troubleshooting-web-deploy/web-deploy-error-codes).
 
 > [!NOTE]
 > The error message may be different depending on how Web Deploy is invoked. For example, Microsoft WebMatrix chooses to show custom error messages instead of error codes, whereas the command line will always show error codes if they're logged.
@@ -36,7 +36,7 @@ For certain common error cases, Web Deploy will show a message and an error code
 | **Symptoms** | The Operating System (OS) is correct, and the version and bitness of Web Deploy are correct, but the installation doesn't succeed. |
 | --- | --- |
 | **Root cause** | Unknown |
-| **Fix/Workaround** | Look in the install log, located in *%programfiles%\\IIS\\Microsoft Web Deploy V2*. |
+| **Fix/Workaround** | Look in the install log, located in *%programfiles%\\IIS\\Microsoft Web Deploy V3*. |
 
 ### 2. Web Deploy doesn't function after an upgrade
 
@@ -72,7 +72,7 @@ For certain common error cases, Web Deploy will show a message and an error code
 
 | **Symptoms** | Remote Agent Service fails to start. |
 | --- | --- |
-| **Root cause** | *msdepsvc.exe* or other files are missing from *%programfiles%\\IIS\\Microsoft Web Deploy v2*. |
+| **Root cause** | *msdepsvc.exe* or other files are missing from *%programfiles%\\IIS\\Microsoft Web Deploy v3*. |
 | **Fix/Workaround** | Reinstall the product. |
 
 ### 2. Remote Agent Service isn't started

@@ -10,13 +10,9 @@ author: sevend2
 ---
 # Troubleshooting Web Deploy problems with Visual Studio
 
-## Tools used in this troubleshooter
+This article helps you troubleshoot a series of errors when trying to publish from Visual Studio to a server that hasn't been correctly configured via Web Deploy. Although the article is written for specific product versions, the concepts could be applied to newer versions as well.
 
-This material is provided for informational purposes only. Microsoft makes no warranties, express, or implied.
-
-## Overview
-
-The article helps you troubleshoot a series of errors when trying to publish from Visual Studio to a server that hasn't been correctly configured via Web Deploy. To collect the screenshots and errors below, use a new ASP.Net MVC 3 project in Visual Studio 2010 SP1. The destination server was a clean install of Windows Server 2008 R2 SP1 with Internet Information Services (IIS). No additional configuration was done.
+To collect the screenshots and errors below, use a new ASP.Net MVC 3 project in Visual Studio 2010 SP1. The destination server was a clean install of Windows Server 2008 R2 SP1 with Internet Information Services (IIS). No additional configuration was done.
 
 ## "Unable to connect" errors
 
@@ -75,7 +71,7 @@ In the `WMSVC` log, the error mentioned above looks like the following one:
 2011-06-02 17:59:05 192.168.0.211 POST /msdeploy.axd site=default%20web%20site 8172 - 192.168.0.203 - 403 6 5 1669
 ```
 
-The `6` after the `403` in the log is the sub-status code, and means that the IP address was rejected. A complete list of the status and sub-status codes for IIS can be found at [HTTP status codes in IIS](https://support.microsoft.com/kb/943891).
+The `6` after the `403` in the log is the sub-status code, and means that the IP address was rejected. A complete list of the status and sub-status codes for IIS can be found at [HTTP status codes in IIS](../www-administration-management/http-status-code.md).
 
 **Is the Management Service configured to allow remote connections?**
 
@@ -123,6 +119,7 @@ Select **Next** to complete the Wizard. You need to restart the web management s
 ## Errors with delegation rules
 
 Once Web Deploy and the Web Management Service are correctly configured, you need to set up delegation rules to allow users to update content. For permissions issues, there are several different errors you may see in Visual Studio. For example:
+
 :::image type="content" source="media/troubleshoot-web-deploy-problems-with-visual-studio/errors-delegation-rules.png" alt-text="Screenshot that shows the Error List in Visual Studio displaying permission issue errors." lightbox="media/troubleshoot-web-deploy-problems-with-visual-studio/errors-delegation-rules.png":::
 
 ```Output
@@ -242,5 +239,5 @@ From this output, we can see that `User1` doesn't have the rights to set securit
 ### Other resources
 
 - [Configure the Web Deployment Handler](/iis/publish/using-web-deploy/configure-the-web-deployment-handler)
-- [The HTTP status codes in IIS 7.0 and IIS 7.5](https://support.microsoft.com/kb/943891)
-- [Configuring Web Management Service Logging and Tracing](https://technet.microsoft.com/library/ee461173(WS.10).aspx)
+- [HTTP status codes in IIS](../www-administration-management/http-status-code.md)
+- [Configuring Web Management Service Logging and Tracing](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461173(v=ws.10))
