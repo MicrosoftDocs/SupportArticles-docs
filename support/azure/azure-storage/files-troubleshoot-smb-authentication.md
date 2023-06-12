@@ -101,7 +101,7 @@ We recommend that you [configure directory/file level permissions using icacls](
 
 ### Error: "The directory service was unable to allocate a relative identifier"
 
-This error might occur if a domain controller that holds the RID Master FSMO role is unavailable or was removed from the domain and restored from backup. Confirm that all Domain Controllers are running and available.
+This error might occur if a domain controller that holds the RID Master FSMO role is unavailable or was removed from the domain and restored from backup. Confirm that all domain controllers are running and available.
 
 ### Error: "Cannot bind positional parameters because no names were given"
 
@@ -112,7 +112,7 @@ This error is most likely triggered by a syntax error in the `Join-AzStorageAcco
 Azure Files supports AES-256 Kerberos encryption for AD DS authentication beginning with the AzFilesHybrid module v0.2.2. AES-256 is the recommended encryption method, and it's the default encryption method beginning in the AzFilesHybrid module v0.2.5. If you've enabled AD DS authentication with a module version lower than v0.2.2, you'll need to [download the latest AzFilesHybrid module](https://github.com/Azure-Samples/azure-files-samples/releases) and run the PowerShell cmdlets below. If you haven't enabled AD DS authentication on your storage account yet, follow this [guidance](/azure/storage/files/storage-files-identity-ad-ds-enable#option-one-recommended-use-azfileshybrid-powershell-module).
 
 > [!IMPORTANT]
-> If you were previously using RC4 encryption and update the storage account to use AES-256, you should run `klist purge` on the client and then remount the file share to get new Kerberos tickets with AES-256.
+> If you were previously using RC4 encryption and updated the storage account to use AES-256, you should run `klist purge` on the client and then remount the file share to get new Kerberos tickets with AES-256.
 
 ```powershell
 $ResourceGroupName = "<resource-group-name-here>"
@@ -123,7 +123,7 @@ Update-AzStorageAccountAuthForAES256 -ResourceGroupName $ResourceGroupName -Stor
 
 ## User identity formerly having the Owner or Contributor role assignment still has storage account key access
 
-The storage account Owner and Contributor roles grant the ability to list the storage account keys. The storage account key enables full access to the storage account's data including file shares, blob containers, tables, and queues, and limited access to the Azure Files management operations via the legacy management APIs exposed through the FileREST API. If you're changing role assignments, you should consider that the users being removed from the Owner or Contributor roles may continue to maintain access to the storage account through saved storage account keys.
+The storage account Owner and Contributor roles grant the ability to list the storage account keys. The storage account key enables full access to the storage account's data, including file shares, blob containers, tables, and queues, and limited access to the Azure Files management operations via the legacy management APIs exposed through the FileREST API. If you're changing role assignments, you should consider that the users being removed from the Owner or Contributor roles may continue to maintain access to the storage account through saved storage account keys.
 
 ### Solution 1
 
@@ -135,11 +135,11 @@ To rotate the Kerberos keys of a storage account, see [Update the password of yo
 
 Navigate to the desired storage account in the Azure portal. In the table of contents for the desired storage account, select **Access keys** under the **Security + networking** heading. In the **Access key** pane, select **Rotate key** above the desired key.
 
-:::image type="content" source="media/files-troubleshoot-smb-authentication/access-keys.png" alt-text="screenshot of the 'Access key' pane."
+:::image type="content" source="media/files-troubleshoot-smb-authentication/access-keys.png" alt-text="Screenshot that shows the 'Access key' pane."
 
 ### [PowerShell](#tab/azure-powershell)
 
-The following script will rotate both keys for the storage account. If you desire to swap out keys during rotation, you'll need to provide additional logic in your script to handle this scenario. Remember to replace `<resource-group>` and `<storage-account>` with the appropriate values for your environment.
+The following script will rotate both keys for the storage account. If you desire to swap out keys during rotation, you need to provide additional logic in your script to handle this scenario. Remember to replace `<resource-group>` and `<storage-account>` with the appropriate values for your environment.
 
 ```powershell
 $resourceGroupName = "<resource-group>"
@@ -160,7 +160,7 @@ New-AzStorageAccountKey `
 
 ### [Azure CLI](#tab/azure-cli)
 
-The following script will rotate both keys for the storage account. If you desire to swap out keys during rotation, you'll need to provide additional logic in your script to handle this scenario. Remember to replace `<resource-group>` and `<storage-account>` with the appropriate values for your environment.
+The following script will rotate both keys for the storage account. If you desire to swap out keys during rotation, you need to provide additional logic in your script to handle this scenario. Remember to replace `<resource-group>` and `<storage-account>` with the appropriate values for your environment.
 
 ```bash
 RESOURCE_GROUP_NAME="<resource-group>"
@@ -183,7 +183,7 @@ az storage account keys renew \
 
 ## Set the API permissions on a newly created application
 
-After enabling Azure AD Kerberos authentication, you'll need to explicitly grant admin consent to the new Azure AD application registered in your Azure AD tenant to complete your configuration. You can configure the API permissions from the [Azure portal](https://portal.azure.com) by following these steps.
+After enabling Azure AD Kerberos authentication, you need to explicitly grant admin consent to the new Azure AD application registered in your Azure AD tenant to complete your configuration. You can configure the API permissions from the [Azure portal](https://portal.azure.com) by following these steps.
 
 1. Open **Azure Active Directory**.
 2. Select **App registrations** in the left pane.
@@ -204,7 +204,7 @@ You might encounter the following errors when enabling Azure AD Kerberos authent
 
 In some cases, Azure AD admin may disable the ability to grant admin consent to Azure AD applications. Here's the screenshot of what this may look like in the Azure portal.
 
-   :::image type="content" source="media/files-troubleshoot-smb-authentication/grant-admin-consent-disabled.png" alt-text="Screenshot of the 'Configured permissions' blade displaying a warning that some actions may be disabled due to your permissions." lightbox="media/files-troubleshoot-smb-authentication/grant-admin-consent-disabled.png":::
+   :::image type="content" source="media/files-troubleshoot-smb-authentication/grant-admin-consent-disabled.png" alt-text="Screenshot that shows the 'Configured permissions' blade displaying a warning that some actions may be disabled due to your permissions." lightbox="media/files-troubleshoot-smb-authentication/grant-admin-consent-disabled.png":::
 
 If this is the case, ask your Azure AD admin to grant admin consent to the new Azure AD application. To find and view your administrators, select **roles and administrators**, then select **Cloud application administrator**.
 
@@ -216,14 +216,14 @@ When enabling Azure AD Kerberos authentication, you might encounter this error i
 
 1. You're using the beta/preview feature of [application management policies](/graph/api/resources/applicationauthenticationmethodpolicy).
 2. You (or your administrator) have set a [tenant-wide policy](/graph/api/resources/tenantappmanagementpolicy) that:
-    - Has no start date, or has a start date before 2019-01-01.
-    - Sets a restriction on service principal passwords, which either disallows custom passwords or sets a maximum password lifetime of less than 365.5 days.
+    - Has no start date or has a start date before January 1, 2019.
+    - Sets a restriction on service principal passwords, which either disallows custom passwords or sets a maximum password lifetime of fewer than 365.5 days.
 
 There is currently no workaround for this error.
 
 #### Cause 2: An application already exists for the storage account
 
-You might also encounter this error if you previously enabled Azure AD Kerberos authentication through manual limited preview steps. To delete the existing application, the customer or their IT admin can run the following script. Running this script will remove the old manually created application and allow the new experience to auto-create and manage the newly created application.
+You might also encounter this error if you previously enabled Azure AD Kerberos authentication through manual limited preview steps. To delete the existing application, the customer or their IT admin can run the following script. Running this script will remove the old, manually created application and allow the new experience to auto-create and manage the newly created application.
 
 > [!IMPORTANT]
 > This script must be run in PowerShell 5 because the AzureAD module doesn't work in PowerShell 7. This PowerShell snippet uses Azure AD Graph.
@@ -248,7 +248,7 @@ To mitigate this, you have two options: either rotate the service principal pass
 
 #### Option 1: Update the service principal password using PowerShell
 
-1. Install the latest Az.Storage and AzureAD modules. Use PowerShell 5.1, because currently the AzureAD module doesn't work in PowerShell 7. Azure Cloud Shell won't work in this scenario. For more information about installing PowerShell, see [Install Azure PowerShell on Windows with PowerShellGet](/powershell/azure/install-azure-powershell).
+1. Install the latest Az.Storage and AzureAD modules. Use PowerShell 5.1 because currently, the AzureAD module doesn't work in PowerShell 7. Azure Cloud Shell won't work in this scenario. For more information about installing PowerShell, see [Install Azure PowerShell on Windows with PowerShellGet](/powershell/azure/install-azure-powershell).
 
     To install the modules, open PowerShell with elevated privileges and run the following commands:
 
@@ -337,7 +337,7 @@ Once you've reconfigured Azure AD Kerberos, the new experience will auto-create 
 
 ### Error 1326 - The username or password is incorrect when using private link
 
-If you're connecting to a storage account via a private endpoint/private link using Azure AD Kerberos authentication, when attempting to mount a file share via `net use` or other method, the client is prompted for credentials. The user will likely type their credentials in, but the credentials are rejected.
+If you're connecting to a storage account via a private endpoint/private link using Azure AD Kerberos authentication, when attempting to mount a file share via `net use` or another method, the client is prompted for credentials. The user will likely enter their credentials, but the credentials are rejected.
 
 #### Cause
 
@@ -345,7 +345,7 @@ This is because the SMB client has tried to use Kerberos but failed, so it falls
 
 #### Solution
 
-The solution is to add the private link FQDN to the storage account's Azure AD application before you mount the file share. You can add the required identifierUris to the application object using the [Azure portal](https://portal.azure.com) by following these steps.
+The solution is to add the private link FQDN to the storage account's Azure AD application before you mount the file share. You can add the required identifierUris to the application object using the [Azure portal](https://portal.azure.com) by following these steps:
 
 1. Open **Azure Active Directory**.
 1. Select **App registrations** in the left pane.
