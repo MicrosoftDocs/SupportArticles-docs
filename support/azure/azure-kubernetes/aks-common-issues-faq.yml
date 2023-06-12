@@ -45,6 +45,15 @@ sections:
 
           - The *admin-username*, which sets the administrator user name for Linux nodes, must start with a letter. This user name may only contain letters, numbers, hyphens, and underscores. It has a maximum length of 64 characters.
 
+      - question: |
+          My cluster is in **Failed** state. Can I try to reconcile the cluster back to **Succeeded** state?
+        answer: |
+          In case you have resolved whatever issue caused the cluster provisioning state to change to **Failed** and would like to try to bring the cluster back to **Succeeded** state, you can attempt to do so by running the following [az resource update](https://learn.microsoft.com/cli/azure/resource?view=azure-cli-latest#az-resource-update) command:
+          
+          ```azurecli-interactive
+          az resource update --ids <aks-resource-id> 
+          ```
+
 additionalContent: |
   [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
   
