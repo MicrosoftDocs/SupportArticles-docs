@@ -14,15 +14,15 @@ ms.subservice: files
 This article explains how to create and receive alerts if an Azure file share is being throttled or is about to be throttled. Requests are throttled when the I/O operations per second (IOPS), ingress, or egress limits for a file share are reached.
 
 > [!IMPORTANT]
-> For standard storage accounts with large file shares (LFS) enabled, throttling occurs at the account level. For premium files shares and standard file shares without LFS enabled, throttling occurs at the share level.
+> For standard storage accounts with large file shares (LFS) enabled, throttling occurs at the account level. For premium file shares and standard file shares without LFS enabled, throttling occurs at the share level.
 
 ## Applies to
 
 | File share type | SMB | NFS |
 |-|:-:|:-:|
-| Standard file shares (GPv2), LRS/ZRS | :::image type="content" source="media/files-troubleshoot-linux-nfs/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." border="false"::: | :::image type="content" source="media/files-troubleshoot-linux-nfs/no-icon.png" alt-text="Screenshot of the 'No' icon." border="false"::: |
-| Standard file shares (GPv2), GRS/GZRS | :::image type="content" source="media/files-troubleshoot-linux-nfs/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." border="false"::: | :::image type="content" source="media/files-troubleshoot-linux-nfs/no-icon.png" alt-text="Screenshot of the 'No' icon." border="false"::: |
-| Premium file shares (FileStorage), LRS/ZRS | :::image type="content" source="media/files-troubleshoot-linux-nfs/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." border="false"::: | :::image type="content" source="media/files-troubleshoot-linux-nfs/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." border="false"::: |
+| Standard file shares (GPv2), LRS/ZRS | :::image type="content" source="media/files-troubleshoot-linux-nfs/yes-icon.png" alt-text="Screenshot that shows the 'Yes' icon." border="false"::: | :::image type="content" source="media/files-troubleshoot-linux-nfs/no-icon.png" alt-text="Screenshot of the 'No' icon." border="false"::: |
+| Standard file shares (GPv2), GRS/GZRS | :::image type="content" source="media/files-troubleshoot-linux-nfs/yes-icon.png" alt-text="Screenshot that shows the 'Yes' icon." border="false"::: | :::image type="content" source="media/files-troubleshoot-linux-nfs/no-icon.png" alt-text="Screenshot of the 'No' icon." border="false"::: |
+| Premium file shares (FileStorage), LRS/ZRS | :::image type="content" source="media/files-troubleshoot-linux-nfs/yes-icon.png" alt-text="Screenshot that shows the 'Yes' icon." border="false"::: | :::image type="content" source="media/files-troubleshoot-linux-nfs/yes-icon.png" alt-text="Screenshot that shows the 'Yes' icon." border="false"::: |
 
 ## Create an alert if a file share is being throttled
 
@@ -30,7 +30,7 @@ This article explains how to create and receive alerts if an Azure file share is
 2. In the **Monitoring** section, select **Alerts**, and then select **+ New alert rule**.
 3. Select **Edit resource**, select the **File resource type** for the storage account and then select **Done**. For example, if the storage account name is *contoso*, select the *contoso/file* resource.
 4. Select **Add condition** to add a condition.
-5. You'll see a list of signals supported for the storage account, select the **Transactions** metric.
+5. You'll see a list of signals supported for the storage account. Select the **Transactions** metric.
 6. On the **Configure signal logic** blade, select the **Dimension name** drop-down and select **Response type**.
 7. Select the **Dimension values** drop-down and select the appropriate response types for your file share.
 
@@ -55,36 +55,36 @@ This article explains how to create and receive alerts if an Azure file share is
     - ClientShareIopsThrottlingError
 
    > [!NOTE]
-   > If the response types aren't listed in the **Dimension values** drop-down, this means the resource hasn't been throttled. To add the dimension values, next to the **Dimension values** drop-down list, select **Add custom value**, enter the response type (for example, SuccessWithThrottling), select **OK**, and then repeat these steps to add all applicable response types for your file share.
+   > If the response types aren't listed in the **Dimension values** drop-down list, this means the resource hasn't been throttled. To add the dimension values, next to the **Dimension values** drop-down list, select **Add custom value**, enter the response type (for example, SuccessWithThrottling), select **OK**, and then repeat these steps to add all applicable response types for your file share.
 
 8. For **premium file shares**, select the **Dimension name** drop-down and select **File Share**. For **standard file shares**, skip to **step #10**.
 
    > [!NOTE]
    > If the file share is a standard file share, the **File Share** dimension won't list the file share(s) because per-share metrics aren't available for standard file shares. Throttling alerts for standard file shares will be triggered if any file share within the storage account is throttled, and the alert won't identify which file share was throttled. Because per-share metrics aren't available for standard file shares, we recommend having only one file share per storage account.
 
-9. Select the **Dimension values** drop-down and select the file share(s) that you want to alert on.
-10. Define the **alert parameters** (threshold value, operator, aggregation granularity and frequency of evaluation) and select **Done**.
+9. Select the **Dimension values** drop-down list and select the file share(s) you want to have an alert on.
+10. Define the **alert parameters** (threshold value, operator, aggregation granularity, and frequency of evaluation) and select **Done**.
 
     > [!TIP]
     > If you're using a static threshold, the metric chart can help determine a reasonable threshold value if the file share is currently being throttled. If you're using a dynamic threshold, the metric chart will display the calculated thresholds based on recent data.
 
-11. Select **Add action groups** to add an action group (email, SMS, etc.) to the alert either by selecting an existing action group or creating a new action group.
+11. Select **Add action groups** to add an action group (email, SMS, and so on) to the alert, either by selecting an existing action group or creating a new action group.
 12. Fill in the **Alert details** like **Alert rule name**, **Description**, and **Severity**.
 13. Select **Create alert rule** to create the alert.
 
-## Create alert if a premium file share is close to being throttled
+## Create an alert if a premium file share is close to being throttled
 
 1. In the Azure portal, go to your storage account.
 2. In the **Monitoring** section, select **Alerts**, and then select **New alert rule**.
 3. Select **Edit resource**, select the **File resource type** for the storage account, and then select **Done**. For example, if the storage account name is *contoso*, select the contoso/file resource.
 4. Select **Select Condition** to add a condition.
-5. In the list of signals that are supported for the storage account, select the **Egress** metric.
+5. In the list of signals supported for the storage account, select the **Egress** metric.
 
    > [!NOTE]
-   > You have to create three separate alerts to be alerted when the ingress, egress, or transaction values exceed the thresholds you set. This is because an alert is triggered only when all conditions are met. For example, if you put all the conditions in one alert, you would be alerted only if ingress, egress, and transactions exceed their threshold amounts.
+   > You have to create three separate alerts to be alerted when the ingress, egress, or transaction values exceed the thresholds you set. This is because an alert is triggered only when all conditions are met. For example, if you put all the conditions in one alert, you would only be alerted if ingress, egress, and transactions exceed their threshold amounts.
 
 6. Scroll down. In the **Dimension name** drop-down list, select **File Share**.
-7. In the **Dimension values** drop-down list, select the file share or shares that you want to alert on.
+7. In the **Dimension values** drop-down list, select the file share or shares you want to have an alert on.
 8. Define the alert parameters by selecting values in the **Operator**, **Threshold value**, **Aggregation granularity**, and **Frequency of evaluation** drop-down lists, and then select **Done**.
 
    Egress, ingress, and transactions metrics are expressed per minute, though you're provisioned egress, ingress, and I/O per second. Therefore, for example, if your provisioned egress is 90&nbsp;MiB/s and you want your threshold to be 80&nbsp;percent of provisioned egress, select the following alert parameters:
@@ -93,7 +93,7 @@ This article explains how to create and receive alerts if an Azure file share is
    - For **Operator**: **greater than or equal to**
    - For **Aggregation type**: **average**
 
-   Depending on how noisy you want your alert to be, you can also select values for **Aggregation granularity** and **Frequency of evaluation**. For example, if you want your alert to look at the average ingress over the time period of 1 hour, and you want your alert rule to be run every hour, select the following:
+   Depending on how noisy you want your alert to be, you can also select values for **Aggregation granularity** and **Frequency of evaluation**. For example, if you want your alert to look at the average ingress over the period of one hour and you want your alert rule to be run every hour, select the following:
    - For **Aggregation granularity**: **1 hour**
    - For **Frequency of evaluation**: **1 hour**
 
