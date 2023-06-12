@@ -50,7 +50,7 @@ Use either of the following methods to view replications errors:
   
   - In Windows 10, version 1809 and later version of Windows 10, you can install the RSAT feature through **Settings** > **Manage optional features**.
 
-### Use `repadmin` to identify forest-wide Active Directory replication errors
+### Use repadmin to identify forest-wide Active Directory replication errors
 
 You can create a Microsoft Excel spreadsheet for domain controllers by using the `repadmin/showrepl` command to view replication errors. To do it, follow these steps:
 
