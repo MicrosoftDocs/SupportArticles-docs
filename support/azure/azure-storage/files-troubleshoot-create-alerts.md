@@ -57,7 +57,7 @@ This article explains how to create and receive alerts if an Azure file share is
    > [!NOTE]
    > If the response types aren't listed in the **Dimension values** drop-down list, this means the resource hasn't been throttled. To add the dimension values, next to the **Dimension values** drop-down list, select **Add custom value**, enter the response type (for example, SuccessWithThrottling), select **OK**, and then repeat these steps to add all applicable response types for your file share.
 
-8. For **premium file shares**, select the **Dimension name** drop-down and select **File Share**. For **standard file shares**, skip to **step #10**.
+8. For premium file shares, select the **Dimension name** drop-down list and select **File Share**. For standard file shares, skip to step 10.
 
    > [!NOTE]
    > If the file share is a standard file share, the **File Share** dimension won't list the file share(s) because per-share metrics aren't available for standard file shares. Throttling alerts for standard file shares will be triggered if any file share within the storage account is throttled, and the alert won't identify which file share was throttled. Because per-share metrics aren't available for standard file shares, we recommend having only one file share per storage account.
