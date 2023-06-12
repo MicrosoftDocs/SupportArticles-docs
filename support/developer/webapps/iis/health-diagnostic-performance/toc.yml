@@ -41,6 +41,8 @@ items:
   href: troubleshoot-arr-using-frt-rules.md
 - name: Troubleshoot classic ASP errors with Failed Request Tracing
   href: troubleshoot-classic-asp-errors-with-frt.md
+- name: Troubleshoot failed requests using tracing in IIS 8.5
+  href: troubleshoot-failed-requests-using-tracing-in-iis-85.md
 - name: Troubleshoot high CPU usage in an IIS app pool
   href: troubleshoot-high-cpu-in-iis-app-pool.md
 - name: Troubleshoot HTTP 400 errors in IIS
