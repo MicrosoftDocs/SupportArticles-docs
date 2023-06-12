@@ -766,11 +766,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "support/azure/general/index.md",
-      "redirect_url": "/support/azure/virtual-machines/welcome-general",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "support/windows/win32/index.md",
       "redirect_url": "/support/windows/win32/welcome-windowsdeveloper",
       "redirect_document_id": false
@@ -5800,12 +5795,12 @@
     {
       "source_path": "support/azure/azure-kubernetes/index.md",
       "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
-      "source_path": "support/azure/azure-monitor/log-analytics/index.md",
+      "source_path": "support/azure/log-analytics/index.md",
       "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/azure/general/index.md",
