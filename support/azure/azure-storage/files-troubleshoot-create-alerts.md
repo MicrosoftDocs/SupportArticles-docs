@@ -20,8 +20,8 @@ This article explains how to create and receive alerts if an Azure file share is
 
 | File share type | SMB | NFS |
 |-|:-:|:-:|
-| Standard file shares (GPv2), LRS/ZRS | :::image type="content" source="media/files-troubleshoot-linux-nfs/yes-icon.png" alt-text="Screenshot that shows the 'Yes' icon." border="false"::: | :::image type="content" source="media/files-troubleshoot-linux-nfs/no-icon.png" alt-text="Screenshot of the 'No' icon." border="false"::: |
-| Standard file shares (GPv2), GRS/GZRS | :::image type="content" source="media/files-troubleshoot-linux-nfs/yes-icon.png" alt-text="Screenshot that shows the 'Yes' icon." border="false"::: | :::image type="content" source="media/files-troubleshoot-linux-nfs/no-icon.png" alt-text="Screenshot of the 'No' icon." border="false"::: |
+| Standard file shares (GPv2), LRS/ZRS | :::image type="content" source="media/files-troubleshoot-linux-nfs/yes-icon.png" alt-text="Screenshot that shows the 'Yes' icon." border="false"::: | :::image type="content" source="media/files-troubleshoot-linux-nfs/no-icon.png" alt-text="Screenshot that shows the 'No' icon." border="false"::: |
+| Standard file shares (GPv2), GRS/GZRS | :::image type="content" source="media/files-troubleshoot-linux-nfs/yes-icon.png" alt-text="Screenshot that shows the 'Yes' icon." border="false"::: | :::image type="content" source="media/files-troubleshoot-linux-nfs/no-icon.png" alt-text="Screenshot that shows the 'No' icon." border="false"::: |
 | Premium file shares (FileStorage), LRS/ZRS | :::image type="content" source="media/files-troubleshoot-linux-nfs/yes-icon.png" alt-text="Screenshot that shows the 'Yes' icon." border="false"::: | :::image type="content" source="media/files-troubleshoot-linux-nfs/yes-icon.png" alt-text="Screenshot that shows the 'Yes' icon." border="false"::: |
 
 ## Create an alert if a file share is being throttled
