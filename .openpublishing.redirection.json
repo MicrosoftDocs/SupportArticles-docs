@@ -766,11 +766,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "support/azure/general/index.md",
-      "redirect_url": "/support/azure/virtual-machines/welcome-general",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "support/windows/win32/index.md",
       "redirect_url": "/support/windows/win32/welcome-windowsdeveloper",
       "redirect_document_id": false
