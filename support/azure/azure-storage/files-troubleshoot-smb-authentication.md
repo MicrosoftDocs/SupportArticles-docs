@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Azure Files identity-based authentication and authorization issues (SMB)
-description: Troubleshoot problems using identity-based authentication to connect to SMB Azure file shares, and see possible resolutions.
+description: Troubleshoot problems using identity-based authentication to connect to SMB Azure file shares and see possible resolutions.
 author: khdownie
 ms.service: storage
 ms.date: 06/07/2023
@@ -15,11 +15,11 @@ This article lists common problems when using SMB Azure file shares with identit
 
 | File share type | SMB | NFS |
 |-|:-:|:-:|
-| Standard file shares (GPv2), LRS/ZRS | :::image type="content" source="media/files-troubleshoot-smb-authentication/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." border="false":::  | :::image type="content" source="media/files-troubleshoot-smb-authentication/no-icon.png" alt-text="Screenshot of the 'No' icon." border="false"::: |
-| Standard file shares (GPv2), GRS/GZRS | :::image type="content" source="media/files-troubleshoot-smb-authentication/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." border="false":::  | :::image type="content" source="media/files-troubleshoot-smb-authentication/no-icon.png" alt-text="Screenshot of the 'No' icon." border="false"::: |
-| Premium file shares (FileStorage), LRS/ZRS | :::image type="content" source="media/files-troubleshoot-smb-authentication/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." border="false":::  | :::image type="content" source="media/files-troubleshoot-smb-authentication/no-icon.png" alt-text="Screenshot of the 'No' icon." border="false"::: |
+| Standard file shares (GPv2), LRS/ZRS | :::image type="content" source="media/files-troubleshoot-smb-authentication/yes-icon.png" alt-text="Screenshot that shows the 'Yes' icon." border="false":::  | :::image type="content" source="media/files-troubleshoot-smb-authentication/no-icon.png" alt-text="Screenshot that shows the 'No' icon." border="false"::: |
+| Standard file shares (GPv2), GRS/GZRS | :::image type="content" source="media/files-troubleshoot-smb-authentication/yes-icon.png" alt-text="Screenshot that shows the 'Yes' icon." border="false":::  | :::image type="content" source="media/files-troubleshoot-smb-authentication/no-icon.png" alt-text="Screenshot that shows the 'No' icon." border="false"::: |
+| Premium file shares (FileStorage), LRS/ZRS | :::image type="content" source="media/files-troubleshoot-smb-authentication/yes-icon.png" alt-text="Screenshot that shows the 'Yes' icon." border="false":::  | :::image type="content" source="media/files-troubleshoot-smb-authentication/no-icon.png" alt-text="Screenshot that shows the 'No' icon." border="false"::: |
 
-## Error 5 when mounting an Azure file share
+## System error 5 occurs when mounting an Azure file share
 
 When you try to mount a file share, you might receive the following error:
 
@@ -46,7 +46,7 @@ Validate that permissions are configured correctly:
 
 ### Cause
 
-Error AadDsTenantNotFound happens when you try to [enable Azure AD DS authentication on Azure Files](/azure/storage/files/storage-files-identity-auth-active-directory-domain-service-enable) on a storage account where Azure AD DS isn't created on the Azure AD tenant of the associated subscription.  
+Error AadDsTenantNotFound happens when you try to [enable Azure AD DS authentication for Azure Files](/azure/storage/files/storage-files-identity-auth-active-directory-domain-service-enable) on a storage account where Azure AD DS isn't created on the Azure AD tenant of the associated subscription.  
 
 ### Solution
 
@@ -54,13 +54,13 @@ Enable Azure AD DS on the Azure AD tenant of the subscription that your storage 
 
 ## Unable to mount Azure file shares with AD credentials
 
-### Self diagnostics steps
+### Self-diagnostics steps
 
 First, make sure that you've followed the steps to [enable Azure Files AD DS Authentication](/azure/storage/files/storage-files-identity-auth-active-directory-enable).
 
 Second, try [mounting Azure file share with storage account key](/azure/storage/files/storage-how-to-use-files-windows). If the share fails to mount, download [AzFileDiagnostics](https://github.com/Azure-Samples/azure-files-samples/tree/master/AzFileDiagnostics/Windows) to help you validate the client running environment. AzFileDiagnostics can detect incompatible client configurations that might cause access failure for Azure Files, give prescriptive guidance on self-fix, and collect the diagnostics traces.
 
-Third, you can run the `Debug-AzStorageAccountAuth` cmdlet to conduct a set of basic checks on your AD configuration with the logged on AD user. This cmdlet is supported on [AzFilesHybrid v0.1.2+ version](https://github.com/Azure-Samples/azure-files-samples/releases). You need to run this cmdlet with an AD user that has owner permission on the target storage account.
+Third, you can run the `Debug-AzStorageAccountAuth` cmdlet to conduct a set of basic checks on your AD configuration with the logged-on AD user. This cmdlet is supported on [AzFilesHybrid v0.1.2+ version](https://github.com/Azure-Samples/azure-files-samples/releases). You need to run this cmdlet with an AD user that has owner permission on the target storage account.
 
 ```PowerShell
 $ResourceGroupName = "<resource-group-name-here>"
@@ -71,19 +71,19 @@ Debug-AzStorageAccountAuth -StorageAccountName $StorageAccountName -ResourceGrou
 
 The cmdlet performs these checks in sequence and provides guidance for failures:
 
-1. CheckADObjectPasswordIsCorrect: Ensure that the password configured on the AD identity that represents the storage account is matching that of the storage account kerb1 or kerb2 key. If the password is incorrect, you can run [Update-AzStorageAccountADObjectPassword](/azure/storage/files/storage-files-identity-ad-ds-update-password) to reset the password.
-2. CheckADObject: Confirm that there is an object in the Active Directory that represents the storage account and has the correct SPN (service principal name). If the SPN isn't correctly set up, run the `Set-AD` cmdlet returned in the debug cmdlet to configure the SPN.
-3. CheckDomainJoined: Validate that the client machine is domain joined to AD. If your machine isn't domain joined to AD, refer to this [article](/windows-server/identity/ad-fs/deployment/join-a-computer-to-a-domain) for domain join instruction.
+1. CheckADObjectPasswordIsCorrect: Ensure that the password configured on the AD identity that represents the storage account matches that of the storage account's kerb1 or kerb2 key. If the password is incorrect, you can run [Update-AzStorageAccountADObjectPassword](/azure/storage/files/storage-files-identity-ad-ds-update-password) to reset the password.
+2. CheckADObject: Confirm that there is an object in the Active Directory that represents the storage account and has the correct service principal name (SPN). If the SPN isn't correctly set up, run the `Set-AD` cmdlet returned in the debug cmdlet to configure the SPN.
+3. CheckDomainJoined: Validate that the client machine is domain joined to AD. If your machine isn't domain joined to AD, refer to this [article](/windows-server/identity/ad-fs/deployment/join-a-computer-to-a-domain) for domain join instructions.
 4. CheckPort445Connectivity: Check that port 445 is opened for SMB connection. If port 445 isn't open, refer to the troubleshooting tool [AzFileDiagnostics](https://github.com/Azure-Samples/azure-files-samples/tree/master/AzFileDiagnostics/Windows) for connectivity issues with Azure Files.
-5. CheckSidHasAadUser: Check that the logged on AD user is synced to Azure AD. If you want to look up whether a specific AD user is synchronized to Azure AD, you can specify the `-UserName` and `-Domain` in the input parameters.
-6. CheckGetKerberosTicket: Attempt to get a Kerberos ticket to connect to the storage account. If there isn't a valid Kerberos token, run the `klist get cifs/storage-account-name.file.core.windows.net` cmdlet and examine the error code to root-cause the ticket retrieval failure.
+5. CheckSidHasAadUser: Check that the logged-on AD user is synced to Azure AD. If you want to look up whether a specific AD user is synchronized to Azure AD, you can specify the `-UserName` and `-Domain` in the input parameters.
+6. CheckGetKerberosTicket: Attempt to get a Kerberos ticket to connect to the storage account. If there isn't a valid Kerberos token, run the `klist get cifs/storage-account-name.file.core.windows.net` cmdlet and examine the error code to find the root cause of the ticket retrieval failure.
 7. CheckStorageAccountDomainJoined: Check if the AD authentication has been enabled and the account's AD properties are populated. If not, refer to the instructions [here](/azure/storage/files/storage-files-identity-ad-ds-enable) to enable AD DS authentication on Azure Files.
-8. CheckUserRbacAssignment: Check if the AD identity has the proper RBAC role assignment to provide share level permission to access Azure Files. If not, refer to the instructions [here](/azure/storage/files/storage-files-identity-ad-ds-assign-permissions) to configure the share level permission. (Supported on AzFilesHybrid v0.2.3+ version)
-9. CheckUserFileAccess: Check if the AD identity has the proper directory/file permission (Windows ACLs) to access Azure Files. If not, refer to the instructions [here](/azure/storage/files/storage-files-identity-ad-ds-configure-permissions) to configure the directory/file level permission. (Supported on AzFilesHybrid v0.2.3+ version)
+8. CheckUserRbacAssignment: Check if the AD identity has the proper RBAC role assignment to provide share-level permission to access Azure Files. If not, refer to the instructions [here](/azure/storage/files/storage-files-identity-ad-ds-assign-permissions) to configure the share-level permission (supported on AzFilesHybrid v0.2.3+ version).
+9. CheckUserFileAccess: Check if the AD identity has the proper directory/file permission (Windows ACLs) to access Azure Files. If not, refer to the instructions [here](/azure/storage/files/storage-files-identity-ad-ds-configure-permissions) to configure the directory/file level permission (supported on AzFilesHybrid v0.2.3+ version).
 
 ## Unable to configure directory/file level permissions (Windows ACLs) with Windows File Explorer
 
-### Symptom
+### Symptoms
 
 You may experience one of the symptoms described below when trying to configure Windows ACLs with File Explorer on a mounted file share:
 
@@ -97,7 +97,7 @@ You may experience one of the symptoms described below when trying to configure 
 
 We recommend that you [configure directory/file level permissions using icacls](/azure/storage/files/storage-files-identity-ad-ds-configure-permissions#configure-windows-acls-with-icacls) instead of using Windows File Explorer.
 
-## Errors when running Join-AzStorageAccountForAuth cmdlet
+## Errors when running the Join-AzStorageAccountForAuth cmdlet
 
 ### Error: "The directory service was unable to allocate a relative identifier"
 
