@@ -51,7 +51,7 @@ For more information about installing Failed Request Tracing for IIS, see the [T
 1. In the **Connections** pane, select the server connection, site, application, or directory for which you want to configure Failed Request Tracing.
 1. In the **Actions** pane, select **Failed Request Tracing...**
 1. Configure the following options In the **Edit Web Site Failed Request Tracing Settings** dialog box:
-    - Select the **Enable** check box to enable tracing.
+    - Select the **Enable** checkbox to enable tracing.
     - Leave the default value or enter a new directory where you want to store failed request log files in the **Directory** box.
     - Enter the number of failed request trace files you want to store in the **Maximum number of trace files** box.
 1. Select **OK**.
@@ -135,9 +135,9 @@ The following steps configure a Failed Request Tracing rule for requests that ex
 1. In the **Actions** pane, select **Add...**
 1. On the **Specify Content to Trace** page of the **Add Failed Request Tracing Rule** Wizard, you would ordinarily select the content type you want to trace. In this case, accept the default for all content, and then select **Next**.
 1. On the **Define Trace Conditions** page:
-    - Clear the box for **Status code(s)**.
-    - Check the box for **Time taken (in seconds)**.
-    - Enter 5 for the number of seconds.
+    - Clear **Status code(s)**.
+    - Select **Time taken (in seconds)**.
+    - Enter _5_ for the number of seconds.
     - Select **Next**.
 1. On the **Select Trace Providers** page, accept the defaults, and then select **Finish**.
 

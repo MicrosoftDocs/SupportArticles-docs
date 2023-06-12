@@ -23,7 +23,7 @@ An application pool in IIS is experiencing a prolonged period of high CPU that e
 
 ## Data Collection
 
-The first thing you should do when you encounter high CPU usage issues is to determine the process that is consuming CPU. You can use **Processes** tab in Task Manager to do this. Make sure that you check the **Show processes from all users** checkbox. The following image shows this box checked and shows the `w3wp.exe` process (the process that hosts an IIS application pool) consuming a high level of CPU.
+The first thing you should do when you encounter high CPU usage issues is to determine the process that is consuming CPU. You can use **Processes** tab in Task Manager to do this. Make sure that you select the **Show processes from all users** checkbox. The following image shows this box checked and shows the `w3wp.exe` process (the process that hosts an IIS application pool) consuming a high level of CPU.
 
 :::image type="content" source="media/troubleshoot-high-cpu-in-iis-app-pool/windows-task-manager-w3wp.png" alt-text="Screenshot shows Windows Task Manager. Under the C P U column, 85 is highlighted on the w 3 w p executable row. Show processes from all users is selected.":::
 
@@ -53,7 +53,7 @@ Perfmon data can be viewed in real-time or it can be collected in a data collect
 1. Select **Create Manually (Advanced)**.
 1. Select **Next**.
 1. Select **Create Data Logs**.
-1. Check the **Performance Counter** checkbox.
+1. Select the **Performance Counter** checkbox.
 1. Select **Next**.
 1. Select **Add**. If your application is not an ASP.NET application, proceed to Step 19.
 1. Scroll to the top of the list of counters and select **.NET CLR Memory**.

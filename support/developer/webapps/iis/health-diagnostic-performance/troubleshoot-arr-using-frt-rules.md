@@ -39,7 +39,7 @@ Configure the Failed Request Tracing rules for Application Request Routing using
     :::image type="content" source="media/troubleshoot-arr-using-frt-rules/site-list-expanded.jpg" alt-text="Screenshot showing the Sites list expanded. Default Web Site is highlighted.":::
 1. In the **Actions** pane, under **Configure**, select **Failed Request Tracing…**.  
     :::image type="content" source="media/troubleshoot-arr-using-frt-rules/failed-request-tracing-in-action-pane.jpg" alt-text="Screenshot focused on Failed Request Tracing in the Actions pane.":::
-1. In the **Edit Web Site Failed Request Tracing Settings** dialog box, check the **Enable** checkbox.  
+1. In the **Edit Web Site Failed Request Tracing Settings** dialog box, select the **Enable** checkbox.  
     :::image type="content" source="media/troubleshoot-arr-using-frt-rules/edit-web-site-frt-settings-dialog.jpg" alt-text="Screenshot of the Edit Web Site Failed Request Tracing Settings dialog.":::
 1. Select **OK** to save changes.  
 1. Select **Default Web Site**.

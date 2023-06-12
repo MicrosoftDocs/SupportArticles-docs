@@ -87,8 +87,8 @@ These directions should be repeated on both the UNC server as well as the Web se
 
    - **User name**: _PoolId1_
    - **Password** (and **Confirm Password**): _!p4ssw0rd_
-   - Uncheck **User must change password at next logon**
-   - Check **user cannot change password**
+   - Clear **User must change password at next logon**
+   - Select **user cannot change password**
    - Select **Create** -> **Close.**
 
      :::image type="content" source="media/how-to-enable-frt-for-unc-hosting/new-user-dialog.png" alt-text="Screenshot of the New User dialog box is displayed.":::
@@ -194,7 +194,7 @@ To configure Failed Request Tracing to log to our UNC path, follow these directi
 
 1. Open IIS Manager by running **Start** -> **Inetmgr**.
 1. Select **Default Web Site**, and then under **Configure** select **Failed Request Tracing...**
-1. Check the **Enabled** check box.
+1. Select the **Enabled** checkbox.
 1. Under **Directory**, enter the path to the UNC share:
 
     ```console
