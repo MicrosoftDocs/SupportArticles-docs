@@ -388,7 +388,7 @@ This issue may occur if the *C:\Windows\Microsoft.NET\Framework\v4.0.30319\Confi
 
 To resolve the issue, follow these steps:
 
-1.	Take the file from a working VM, and paste it into the *C:\Windows\Microsoft.NET\Framework\v4.0.30319\Config* folder.
+1.	Take the file from a working VM, and paste it into the *C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config* folder.
 2.	Restart the Guest Agent services:
 
        ```console
