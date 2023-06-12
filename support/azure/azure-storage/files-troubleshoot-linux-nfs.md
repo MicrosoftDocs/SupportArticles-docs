@@ -20,9 +20,9 @@ This article lists common issues related to NFS Azure file shares and provides p
 
 | File share type | SMB | NFS |
 |-|:-:|:-:|
-| Standard file shares (GPv2), LRS/ZRS | :::image type="content" source="media/files-troubleshoot-linux-nfs/no-icon.png" alt-text="Screenshot of the 'No' icon." border="false"::: | :::image type="content" source="media/files-troubleshoot-linux-nfs/no-icon.png" alt-text="Screenshot of the 'No' icon." border="false"::: |
-| Standard file shares (GPv2), GRS/GZRS | :::image type="content" source="media/files-troubleshoot-linux-nfs/no-icon.png" alt-text="Screenshot of the 'No' icon." border="false"::: | :::image type="content" source="media/files-troubleshoot-linux-nfs/no-icon.png" alt-text="Screenshot of the 'No' icon." border="false"::: |
-| Premium file shares (FileStorage), LRS/ZRS | :::image type="content" source="media/files-troubleshoot-linux-nfs/no-icon.png" alt-text="Screenshot of the 'No' icon." border="false"::: | :::image type="content" source="media/files-troubleshoot-linux-nfs/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." border="false":::|
+| Standard file shares (GPv2), LRS/ZRS | :::image type="content" source="media/files-troubleshoot-linux-nfs/no-icon.png" alt-text="Screenshot that shows the 'No' icon." border="false"::: | :::image type="content" source="media/files-troubleshoot-linux-nfs/no-icon.png" alt-text="Screenshot that shows the 'No' icon." border="false"::: |
+| Standard file shares (GPv2), GRS/GZRS | :::image type="content" source="media/files-troubleshoot-linux-nfs/no-icon.png" alt-text="Screenshot that shows the 'No' icon." border="false"::: | :::image type="content" source="media/files-troubleshoot-linux-nfs/no-icon.png" alt-text="Screenshot that shows the 'No' icon." border="false"::: |
+| Premium file shares (FileStorage), LRS/ZRS | :::image type="content" source="media/files-troubleshoot-linux-nfs/no-icon.png" alt-text="Screenshot that shows the 'No' icon." border="false"::: | :::image type="content" source="media/files-troubleshoot-linux-nfs/yes-icon.png" alt-text="Screenshot that shows the 'Yes' icon." border="false":::|
 
 ## Chgrp "filename" failed: Invalid argument (22)
 
@@ -32,7 +32,7 @@ Because Azure Files disallows alphanumeric UID/GID, you must disable idmapping.
 
 ### Cause 2: Idmapping was disabled, but got re-enabled after encountering bad file/directory  name
 
-Even if you correctly disable idmapping, it can be automatically re-enabled in some cases. For example, when Azure Files encounters a bad file name, it sends back an error. Upon seeing this error code, an NFS 4.1 Linux client decides to re-enable idmapping, and sends future requests with alphanumeric UID/GID. For a list of unsupported characters on Azure Files, see [Naming and referencing shares, directories, files, and metadata](/rest/api/storageservices/naming-and-referencing-shares--directories--files--and-metadata). Colon is one of the unsupported characters.
+Even if you correctly disable idmapping, it can be automatically re-enabled in some cases. For example, when Azure Files encounters a bad file name, it sends back an error. Upon seeing this error code, an NFS 4.1 Linux client decides to re-enable idmapping and sends future requests with alphanumeric UID/GID. For a list of unsupported characters on Azure Files, see [Naming and referencing shares, directories, files, and metadata](/rest/api/storageservices/naming-and-referencing-shares--directories--files--and-metadata). Colon is one of the unsupported characters.
 
 ### Workaround
 
@@ -46,7 +46,7 @@ Make sure you've disabled idmapping and that nothing is re-enabling it. Then per
     ```
 
 1. Mount the share back.
-1. If running rsync, run rsync with the `—numeric-ids` argument from a directory that doesn't have a bad directory /file name.
+1. If running rsync, run rsync with the `—numeric-ids` argument from a directory that doesn't have a bad directory or file name.
 
 ## Unable to create an NFS share
 
@@ -64,9 +64,9 @@ Follow the instructions in [How to create an NFS share](/azure/storage/files/sto
 
 ## Can't connect to or mount an NFS Azure file share
 
-### Cause 1: Request originates from a client in an untrusted network/untrusted IP
+### Cause 1: Request originates from a client in an untrusted network or untrusted IP
 
-Unlike SMB, NFS doesn't have user-based authentication. The authentication for a share is based on your network security rule configuration. To ensure that clients only establish secure connections to your NFS share, you must use either the service endpoint or private endpoints. To access shares from on-premises in addition to private endpoints, you must set up a VPN or ExpressRoute connection. IPs added to the storage account's allowlist for the firewall are ignored. You must use one of the following methods to set up access to an NFS share:
+Unlike SMB, NFS doesn't have user-based authentication. The authentication for a share is based on your network security rule configuration. To ensure that clients only establish secure connections to your NFS share, you must use either the service or private endpoints. To access shares from on-premises in addition to private endpoints, you must set up a VPN or ExpressRoute connection. IPs added to the storage account's allowlist for the firewall are ignored. You must use one of the following methods to set up access to an NFS share:
 
 - [Service endpoint](/azure/storage/files/storage-files-networking-endpoints#restrict-public-endpoint-access)
   - Accessed by the public endpoint.
@@ -89,13 +89,13 @@ Unlike SMB, NFS doesn't have user-based authentication. The authentication for a
 
 ### Cause 2: Secure transfer required is enabled
 
-NFS Azure file shares don't currently support double encryption. Azure provides a layer of encryption for all data in transit between Azure datacenters using MACSec. You can only access NFS shares from trusted virtual networks and over VPN tunnels. No extra transport layer encryption is available on NFS shares.
+NFS Azure file shares don't currently support double encryption. Azure provides a layer of encryption for all data in transit between Azure data centers using MACSec. You can only access NFS shares from trusted virtual networks and over VPN tunnels. No extra transport layer encryption is available on NFS shares.
 
 ### Solution
 
 Disable **Secure transfer required** in your storage account's configuration blade.
 
-:::image type="content" source="media/files-troubleshoot-linux-nfs/disable-secure-transfer.png" alt-text="Screenshot of storage account configuration blade, disabling secure transfer required.":::
+:::image type="content" source="media/files-troubleshoot-linux-nfs/disable-secure-transfer.png" alt-text="Screenshot that shows the storage account configuration blade, disabling secure transfer required.":::
 
 ### Cause 3: nfs-utils, nfs-client or nfs-common package isn't installed
 
