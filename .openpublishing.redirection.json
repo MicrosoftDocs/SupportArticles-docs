@@ -5791,6 +5791,42 @@
       "source_path": "support/sql/linux/release-history-2022.md",
       "redirect_url": "/troubleshoot/sql/releases/linux/release-history-2022",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/virtual-machine-scale-sets/index.md",
+      "redirect_url": "/troubleshoot/azure/virtual-machine-scale-sets/welcome-virtual-machine-scale-sets",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/azure-kubernetes/index.md",
+      "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/azure-monitor/log-analytics/index.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/index.md",
+      "redirect_url": "/troubleshoot/azure/general/welcome-general",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/azure-monitor/app-insights/index.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/azure-monitor/log-analytics/index.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/synapse-analytics/index.md",
+      "redirect_url": "/troubleshoot/azure/synapse-analytics/welcome-synapse-analytics",
+      "redirect_document_id": true
     }
+
 ]
 }
