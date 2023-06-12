@@ -10,19 +10,19 @@ ms.subservice: files
 ---
 # Troubleshoot Azure Files performance issues
 
-This article lists common problems related to Azure file share performance, and provides potential causes and workarounds. To get the most value from this troubleshooting guide, we recommend first reading [Understand Azure Files performance](/azure/storage/files/understand-performance).
+This article lists common problems related to Azure file share performance and provides potential causes and workarounds. To get the most value from this troubleshooting guide, we recommend first reading [Understand Azure Files performance](/azure/storage/files/understand-performance).
 
 ## Applies to
 
 | File share type | SMB | NFS |
 |-|:-:|:-:|
-| Standard file shares (GPv2), LRS/ZRS | :::image type="content" source="media/files-troubleshoot-smb-authentication/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." border="false"::: | :::image type="content" source="media/files-troubleshoot-smb-authentication/no-icon.png" alt-text="Screenshot of the 'No' icon." border="false"::: |
-| Standard file shares (GPv2), GRS/GZRS | :::image type="content" source="media/files-troubleshoot-smb-authentication/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." border="false"::: | :::image type="content" source="media/files-troubleshoot-smb-authentication/no-icon.png" alt-text="Screenshot of the 'No' icon." border="false"::: |
-| Premium file shares (FileStorage), LRS/ZRS | :::image type="content" source="media/files-troubleshoot-smb-authentication/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." border="false"::: | :::image type="content" source="media/files-troubleshoot-smb-authentication/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." border="false"::: |
+| Standard file shares (GPv2), LRS/ZRS | :::image type="content" source="media/files-troubleshoot-smb-authentication/yes-icon.png" alt-text="Screenshot that shows the 'Yes' icon." border="false"::: | :::image type="content" source="media/files-troubleshoot-smb-authentication/no-icon.png" alt-text="Screenshot that shows the 'No' icon." border="false"::: |
+| Standard file shares (GPv2), GRS/GZRS | :::image type="content" source="media/files-troubleshoot-smb-authentication/yes-icon.png" alt-text="Screenshot that shows the 'Yes' icon." border="false"::: | :::image type="content" source="media/files-troubleshoot-smb-authentication/no-icon.png" alt-text="Screenshot that shows the 'No' icon." border="false"::: |
+| Premium file shares (FileStorage), LRS/ZRS | :::image type="content" source="media/files-troubleshoot-smb-authentication/yes-icon.png" alt-text="Screenshot that shows the 'Yes' icon." border="false"::: | :::image type="content" source="media/files-troubleshoot-smb-authentication/yes-icon.png" alt-text="Screenshot that shows the 'Yes' icon." border="false"::: |
 
 ## General performance troubleshooting
 
-First, rule out some common reasons why you might be having performance problems.
+First, rule out some common reasons you might have performance problems.
 
 ### You're running an old operating system
 
@@ -32,7 +32,7 @@ If your client virtual machine (VM) is running Windows 8.1 or Windows Server 201
 
 ### Considerations for Windows 8.1 and Windows Server 2012 R2
 
-Clients that are running Windows 8.1 or Windows Server 2012 R2 might see higher than expected latency when accessing Azure file shares for I/O-intensive workloads. Make sure that the [KB3114025](https://support.microsoft.com/help/3114025) hotfix is installed. This hotfix improves the performance of create and close handles.
+Clients running Windows 8.1 or Windows Server 2012 R2 might see higher than expected latency when accessing Azure file shares for I/O-intensive workloads. Make sure that the [KB3114025](https://support.microsoft.com/help/3114025) hotfix is installed. This hotfix improves the performance of "create" and "close" handles.
 
 You can run the following script to check whether the hotfix has been installed:
 
@@ -45,7 +45,7 @@ HKEY_Local_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameter
 ```
 
 > [!Note]
-> Windows Server 2012 R2 images in Azure Marketplace have hotfix KB3114025 installed by default, starting in December 2015.
+> As of December 2015, Windows Server 2012 R2 images in Azure Marketplace have hotfix KB3114025 installed by default.
 
 ### [Linux](#tab/linux)
 
@@ -53,7 +53,7 @@ HKEY_Local_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameter
 
 #### Cause
 
-An I/O depth of greater than 1 isn't supported on older versions of CentOS Linux or RHEL.
+An I/O depth greater than one isn't supported on older versions of CentOS Linux or RHEL.
 
 #### Workaround
 
@@ -75,10 +75,10 @@ To learn more about how throttling at the share level or storage account level c
 
 ### Cause 1: Share or storage account is being throttled
 
-To confirm whether your share or storage account is being throttled, you can access and use Azure metrics in the portal. You can also create alerts that will notify you if a share is being throttled or is about to be throttled. See [Troubleshoot Azure Files by creating alerts](/azure/storage/files/files-troubleshoot-create-alerts).
+To confirm whether your share or storage account is being throttled, you can access and use Azure metrics in the portal. You can also create alerts that notify you if a share is being throttled or is about to be throttled. See [Troubleshoot Azure Files by creating alerts](/azure/storage/files/files-troubleshoot-create-alerts).
 
 > [!IMPORTANT]
-> For standard storage accounts with large file shares (LFS) enabled, throttling occurs at the account level. For premium files shares and standard file shares without LFS enabled, throttling occurs at the share level.
+> For standard storage accounts with large file shares (LFS) enabled, throttling occurs at the account level. For premium file shares and standard file shares without LFS enabled, throttling occurs at the share level.
 
 1. In the Azure portal, go to your storage account.
 
