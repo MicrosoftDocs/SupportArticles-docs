@@ -127,6 +127,8 @@
     href: health-diagnostic-performance/cannot-access-site-using-https.md
   - name: Time-taken field in IIS HTTP logging
     href: health-diagnostic-performance/time-taken-field-http-log.md
+  - name: Troubleshoot native memory leak in an IIS 7.x Application Pool
+    href: health-diagnostic-performance/troubleshoot-native-memory-leak-iis-7x-application-pool.md
 
 - name: IISAdmin service and Inetinfo process operation
   items:
