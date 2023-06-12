@@ -609,6 +609,8 @@
           href: ../security/dlp-policy-tips-for-pdf-attachments-not-displayed.md
         - name: Document attachments open in Protected View
           href: ../security/office-document-attachments-open-in-protected-view.md
+        - name: External recipient can't open encrypted email
+          href: ../security/external-recipient-can't-open-encrypted-email.md
         - name: How to block additional attachment file name extensions
           href: ../security/how-to-block-additional-attachment-file-name-extensions.md
         - name: How to turn off e-mail matching for certificates
