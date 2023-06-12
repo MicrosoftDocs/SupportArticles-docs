@@ -97,15 +97,15 @@ Disable **Secure transfer required** in your storage account's configuration bla
 
 :::image type="content" source="media/files-troubleshoot-linux-nfs/disable-secure-transfer.png" alt-text="Screenshot that shows the storage account configuration blade, disabling secure transfer required.":::
 
-### Cause 3: nfs-utils, nfs-client or nfs-common package isn't installed
+### Cause 3: nfs-utils, nfs-client, or nfs-common package isn't installed
 
-Before running the `mount` command, install the nfs-utils, nfs-client or the nfs-common package.
+Before running the `mount` command, install the nfs-utils, nfs-client, or the nfs-common package.
 
 To check if the NFS package is installed, run the following commands:
 
 ### [RHEL](#tab/RHEL)
 
-Same commands on this section apply for CentOS and Oracle Linux.
+The same commands in this section apply to CentOS and Oracle Linux.
 
 ```bash
 sudo rpm -qa | grep nfs-utils
@@ -119,7 +119,7 @@ sudo rpm -qa | grep nfs-client
 
 ### [Ubuntu](#tab/Ubuntu)
 
-Same commands on this section apply for Debian.
+The same commands in this section apply to Debian.
 
 ```bash
 sudo dpkg -l | grep nfs-common
@@ -133,7 +133,7 @@ If the package isn't installed, install the package using your distro-specific c
 
 #### [RHEL](#tab/RHEL)
 
-Same commands on this section apply for CentOS and Oracle Linux.
+The same commands in this section apply to CentOS and Oracle Linux.
 
 - OS Version 7.X
 
@@ -155,7 +155,7 @@ sudo zypper install nfs-client
 
 #### [Ubuntu](#tab/Ubuntu)
 
-Same commands on this section apply for Debian.
+The same commands in this section apply to Debian.
 
 ```bash
 sudo apt update
