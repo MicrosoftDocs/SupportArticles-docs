@@ -165,6 +165,8 @@ In order to analyse an issue could be helpful to collect Network Traces. In App 
 
 For Windows App Services, select **Diagnose and Solve Problems** and proceed with the search of **Collect Network Trace**.
 
+:::image type="content" source="./media/troubleshoot-vnet-integration-apps/collect-networktrace-windows.png"
+
 For Linux App Services that don't use custom containers following commands can be used to install **tcpdump** and capture the trace by connecting via SSH to the container
 
 ```SSH
