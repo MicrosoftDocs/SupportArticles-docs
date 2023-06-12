@@ -74,14 +74,13 @@ An unoptimized Active Directory topology or Active Directory replication failure
   
 ### How to check Active Directory replication status 8464
 
-The `Repadmin` commands and other tools that provide an Active Directory replication status report state that a replication attempt is delayed with status 8464.
+The `Repadmin` commands provide an Active Directory replication status report state that a replication attempt is delayed with status 8464.
 
-The following is the `Repadmin` commands and other tools that typically cite the 8464 status, including but are not limited to:
+The following `Repadmin` commands typically cite the 8464 status, including but are not limited to:
 
 - `REPADMIN /SHOWREPL`
 - `REPADMIN /REPLSUM`
 - `REPADMIN /REPLICATE`
-- Active Directory Replication Status Tool
 
 The following is a sample output from `Repadmin /showrepl` that shows incoming replication from DC2 to DC1 being delayed:
 

@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 2498185
 
 You may notice that Active Directory fails to replicate in the following conditions:
 
-- Monitoring tools including Active Directory Replication Status Tool (ADREPLSTATUS) and REPADMIN expose replication failures.
+- The Repadmin monitoring tool exposes replication failures.
 - Administrators, users, or applications detect that objects that are created and changed in Active Directory don't exist on all domain controllers (DCs) in a common replication scope.
 
 ## Cause

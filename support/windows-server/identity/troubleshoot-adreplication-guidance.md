@@ -24,9 +24,7 @@ This article is designed to help get you started troubleshooting Active Director
 Use the following checklist to troubleshoot these replication issues:
 
 - The error and warning events in the Directory Service event log indicate the specific constraint that's causing replication failure on the source or destination domain controller. If the event message suggests steps for a solution, try the steps that are described in the event.
-- Diagnostic tools such as `Repadmin` also provide information that can help you resolve replication failures. To help monitor replication and diagnose errors, use either of the following methods:
-  - Download and run the [Microsoft Support and Recovery Assistant tool](https://outlookdiagnostics.azureedge.net/sarasetup/SetupProd_ADReplication.exe).
-  - Use the Active Directory Replication Status Tool if you want only to analyze the replication status.
+- Diagnostic tools such as `Repadmin` also provide information that can help you resolve replication failures. To help monitor replication and diagnose errors, download and run the [Microsoft Support and Recovery Assistant tool](https://outlookdiagnostics.azureedge.net/sarasetup/SetupProd_ADReplication.exe).
 - Rule out intentional disruptions or hardware failures.
 - In a scenario: A domain controller is built in a staging site. The domain controller is currently offline, and is waiting for its deployment in the final production site, a remote site such as a branch office.
 
