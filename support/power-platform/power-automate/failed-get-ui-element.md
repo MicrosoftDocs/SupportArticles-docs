@@ -3,7 +3,7 @@ title: Failed to get UI element error
 description: Provides a resolution for the issue that desktop flow actions fail to get UI elements.
 ms.reviewer: nimoutzo
 author: georgiostrantzas
-ms.author: gtrantzas
+ms.author: Giorgos.Trantzas
 ms.date: 02/01/2023
 ms.subservice: power-automate-desktop-flows
 ---

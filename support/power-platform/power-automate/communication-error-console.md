@@ -3,7 +3,7 @@ title: Communication error when launching Power Automate for desktop
 description: Provides a resolution for a communication error that occurs when launching or opening Power Automate for desktop.
 ms.reviewer: pefelesk
 author: georgiostrantzas
-ms.author: gtrantzas
+ms.author: Giorgos.Trantzas
 ms.date: 02/17/2023
 ms.subservice: power-automate-desktop-flows
 ---

@@ -3,7 +3,7 @@ title: We can't sign you in Power Automate for desktop due to the browser blocki
 description: Provides a resolution for the issue that occurs when you try to sign in to Power Automate for desktop.
 ms.reviewer: pefelesk
 author: georgiostrantzas
-ms.author: gtrantzas
+ms.author: Giorgos.Trantzas
 ms.date: 02/14/2023
 ms.subservice: power-automate-desktop-flows
 ---
