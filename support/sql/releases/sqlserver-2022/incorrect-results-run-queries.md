@@ -40,15 +40,15 @@ This problem is fixed in the following cumulative update for SQL Server:
 
 [Cumulative Update 5 for SQL Server 2022](cumulativeupdate5.md)
 
-## Workaround
-
-To work around this issue, uninstall SQL Server 2022 CU4 or enable trace flag (TF) 13166, and then run `DBCC FREEPROCCACHE`.
-
 ## About cumulative updates for SQL Server
 
 Each new cumulative update for SQL Server contains all the hotfixes and security fixes that were in the previous build. We recommend that you install the latest build for your version of SQL Server:
 
 [Latest cumulative update for SQL Server 2022](build-versions.md)
+
+## Workaround
+
+To work around this issue, uninstall SQL Server 2022 CU4 or enable trace flag (TF) 13166, and then run `DBCC FREEPROCCACHE`.
 
 ## Status
 
