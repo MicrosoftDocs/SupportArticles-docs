@@ -403,7 +403,7 @@ The resolution to this issue depends on whether this is being caused by an orpha
 
 A file handle is preventing a file/directory from being modified or deleted. You can use the [Get-AzStorageFileHandle](/powershell/module/az.storage/get-azstoragefilehandle) PowerShell cmdlet to view open handles.
 
-If all SMB clients have closed their open handles on a file/directory and the issue continues to occur, you can force close a file handle.
+If all SMB clients have closed their open handles on a file or directory and the issue continues to occur, you can force close a file handle.
 
 #### Solution 1
 
@@ -452,7 +452,7 @@ LeaseStatus           : Locked
 
 To remove a lease from a file, you can release the lease or break the lease. To release the lease, you need the LeaseId of the lease, which you set when you create the lease. You don't need the LeaseId to break the lease.
 
-The following example shows how to break the lease for the file indicated in cause 2 (this example continues with the PowerShell variables from cause 2):
+The following example shows how to break the lease for the file indicated in Cause 2 (this example continues with the PowerShell variables from Cause 2):
 
 ```powershell
 $leaseClient = [Azure.Storage.Files.Shares.Specialized.ShareLeaseClient]::new($fileClient)
@@ -492,7 +492,7 @@ If the `snapshot` option for the `mount` command isn't passed in a recognized fo
 
 #### Solution
 
-Make sure you're passing the `snapshot` option for the `mount` command in the correct format. Refer to the mount.cifs manual page (for example `man mount.cifs`). A common error is passing the GMT timestamp in the wrong format, such as using hyphens or colons in place of periods. For more information, see [Mount a file share snapshot](/azure/storage/files/storage-how-to-use-files-linux#mount-a-file-share-snapshot).
+Make sure you're passing the `snapshot` option for the `mount` command in the correct format. Refer to the mount.cifs manual page (for example, `man mount.cifs`). A common error is passing the GMT timestamp in the wrong format, such as using hyphens or colons in place of periods. For more information, see [Mount a file share snapshot](/azure/storage/files/storage-how-to-use-files-linux#mount-a-file-share-snapshot).
 
 ### <a id="badsnapshottoken"></a>"Bad snapshot token" when trying to mount an Azure file share snapshot on Linux
 
