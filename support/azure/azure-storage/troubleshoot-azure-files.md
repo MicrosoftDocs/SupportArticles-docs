@@ -124,7 +124,7 @@ Select an existing resource group or create a new resource group.
 > Error Code: UserErrorStorageAccountInternetRoutingNotSupported  
 > Error Message: Storage accounts with Internet routing configuration are not supported by Azure Backup
 
-Ensure that the routing preference set for the storage account hosting backed up file share is Microsoft network routing.
+Ensure that the routing preference set for the storage account hosting the backed-up file share is Microsoft network routing.
 
 ### FileshareBackupFailedWithAzureRpRequestThrottling/ FileshareRestoreFailedWithAzureRpRequestThrottling - File share backup or restore failed due to storage service throttling. This may be because the storage service is busy processing other requests for the given storage account
 
@@ -138,7 +138,7 @@ Try the backup/restore operation at a later time.
 > Error Code: TargetFileShareNotFound  
 > Error Message: Target file share not found.
 
-- Ensure that the selected storage account exists, and the target file share isn't deleted.
+- Ensure that the selected storage account exists and the target file share isn't deleted.
 
 - Ensure that the storage account is a supported storage account for file share backup.
 
@@ -189,7 +189,7 @@ Error Message: Restore fails because one of the files in the source does not exi
 
 File share backup doesn't support parallel recovery to the same target file share.
 
-Wait for the existing recovery to finish and then try again. If you can't find a recovery job in the Recovery Services vault, check other Recovery Services vaults in the same subscription.
+Wait for the existing recovery to finish, and then try again. If you can't find a recovery job in the Recovery Services vault, check other Recovery Services vaults in the same subscription.
 
 ### UserErrorTargetFileShareFull - Restore operation failed as target file share is full
 
