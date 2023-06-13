@@ -20,16 +20,16 @@ This article provides troubleshooting information to address any issues you come
 - Check if any file share under the storage account is already protected with another Recovery Services vault.
 
   > [!NOTE]
-  > All file shares in a storage account can be protected only under one Recovery Services vault. You can use [this script](/azure/backup/scripts/backup-powershell-script-find-recovery-services-vault) to find the Recovery Services vault where your storage account is registered.
+  > All file shares in a storage account can only be protected under one Recovery Services vault. You can use [this script](/azure/backup/scripts/backup-powershell-script-find-recovery-services-vault) to find the Recovery Services vault where your storage account is registered.
 
-- Ensure that the file share isn't present in any of the unsupported storage accounts. You can refer to the [Support matrix for Azure file share backup](/azure/backup/azure-file-share-support-matrix) to find supported storage accounts.
+- Ensure that the file share isn't present in any unsupported storage accounts. You can refer to [Support matrix for Azure file share backup](/azure/backup/azure-file-share-support-matrix) to find supported storage accounts.
 - Ensure that the storage account and recovery services vault are present in the same region.
-- Ensure that the combined length of the storage account name and the resource group name don't exceed 84 characters in the case of new storage accounts and 77 characters in the case of classic storage accounts.
-- Check the firewall settings of storage account to ensure that the exception "Allow Azure services on the trusted services list to access this storage account" is granted. You can refer [Manage exceptions](/azure/storage/common/storage-network-security?tabs=azure-portal#manage-exceptions) for the steps to grant exception.
+- Ensure that the combined length of the storage account name and the resource group name doesn't exceed 84 characters for new storage accounts and 77 characters for classic storage accounts.
+- Check the firewall settings of the storage account to ensure that the exception "Allow Azure services on the trusted services list to access this storage account" is granted. You can refer to [Manage exceptions](/azure/storage/common/storage-network-security?tabs=azure-portal#manage-exceptions) for the steps to grant the exception.
 
 ### Error in portal states discovery of storage accounts failed
 
-If you have a partner subscription (CSP-enabled), ignore the error. If your subscription isn't CSP-enabled, and your storage accounts can't be discovered, contact support.
+If you have a partner subscription (CSP-enabled), ignore the error. If your subscription isn't CSP-enabled and your storage accounts can't be discovered, contact support.
 
 ### Selected storage account validation or registration failed
 
@@ -39,11 +39,11 @@ Retry the registration. If the problem persists, contact support.
 
 - Ensure that the storage account exists in the resource group and hasn't been deleted or moved after the last validation or registration in the vault.
 - Ensure that the file share you're looking to protect hasn't been deleted.
-- Ensure that the Storage Account is a supported storage account for file share backup. You can refer to the [Support matrix for Azure file share backup](/azure/backup/azure-file-share-support-matrix) to find supported storage accounts.
+- Ensure that the Storage Account is a supported storage account for file share backup. You can refer to [Support matrix for Azure file share backup](/azure/backup/azure-file-share-support-matrix) to find supported storage accounts.
 - Check if the file share is already protected in the same Recovery Services vault.
-- Check the Network Routing setting of storage account to ensure that routing preference is set as Microsoft network routing.
+- Check the **Network Routing** setting of the storage account to ensure that the routing preference is set as **Microsoft network routing**.
 
-### Backup file share configuration (or the protection policy configuration) is failing
+### Backup file share configuration or the protection policy configuration is failing
 
 - Retry the configuration to see if the issue persists.
 - Ensure that the file share you want to protect hasn't been deleted.
@@ -82,7 +82,7 @@ Ensure that the file share you're trying to protect hasn't been deleted.
 > Error Code: AFSMaxSnapshotReached  
 > Error Message: You have reached the max limit of snapshots for this file share; you will be able to take more once the older ones expire.
 
-This error can occur when you create multiple on-demand backups for a file share. There's a limit of 200 snapshots per file share including the ones taken by Azure Backup. Older scheduled backups (or snapshots) are cleaned up automatically. On-demand backups (or snapshots) must be deleted if the maximum limit is reached.
+This error can occur when you create multiple on-demand backups for a file share. There's a limit of 200 snapshots per file share, including the ones taken by Azure Backup. Older scheduled backups (or snapshots) are cleaned up automatically. On-demand backups (or snapshots) must be deleted if the maximum limit is reached.
 
 Delete the on-demand backups (Azure file share snapshots) from the Azure Files portal.
 
