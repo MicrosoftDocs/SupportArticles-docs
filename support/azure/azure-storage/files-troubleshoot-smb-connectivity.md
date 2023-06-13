@@ -117,7 +117,7 @@ TcpTestSucceeded : True
 ```
 
 > [!Note]  
-> The command above returns the current IP address of the storage account. This IP address isn't guaranteed to remain the same, and may change at any time. Don't hardcode this IP address into any scripts or a firewall configuration.
+> The command above returns the current IP address of the storage account. This IP address isn't guaranteed to remain the same and may change at any time. Don't hardcode this IP address into any scripts or a firewall configuration.
 
 #### Solutions for cause 1
 
@@ -127,7 +127,7 @@ You can use Azure File Sync as a workaround to access Azure Files from clients t
 
 ##### Solution 2: Use VPN or ExpressRoute
 
-By setting up a VPN or ExpressRoute from on-premises to your Azure storage account, with Azure Files exposed on your internal network using private endpoints, the traffic will go through a secure tunnel as opposed to over the internet. Follow the [instructions to setup VPN](/azure/storage/files/storage-files-configure-p2s-vpn-windows) to access Azure Files from Windows.
+By setting up a VPN or ExpressRoute from on-premises to your Azure storage account, with Azure Files exposed on your internal network using private endpoints, the traffic will go through a secure tunnel as opposed to over the internet. Follow the [instructions to set up VPN](/azure/storage/files/storage-files-configure-p2s-vpn-windows) to access Azure Files from Windows.
 
 ##### Solution 3: Unblock port 445 with help from your ISP/IT admin
 
@@ -135,11 +135,11 @@ Work with your IT department or ISP to open port 445 outbound to [Azure IP range
 
 ##### Solution 4: Use REST API-based tools like Storage Explorer/PowerShell
 
-Azure Files also supports REST in addition to SMB. REST access works over port 443 (standard tcp). There are various tools that are written using REST API that enable a rich UI experience. [Storage Explorer](/azure/vs-azure-tools-storage-manage-with-storage-explorer?tabs=windows) is one of them. [Download and Install Storage Explorer](https://azure.microsoft.com/features/storage-explorer/) and connect to your file share backed by Azure Files. You can also use [PowerShell](/azure/storage/files/storage-how-to-use-files-portal) that also uses REST API.
+Azure Files also supports REST in addition to SMB. REST access works over port 443 (standard tcp). There are various tools that are written using REST API that enable a rich UI experience. [Storage Explorer](/azure/vs-azure-tools-storage-manage-with-storage-explorer?tabs=windows) is one of them. [Download and install Storage Explorer](https://azure.microsoft.com/features/storage-explorer/) and connect to your file share backed by Azure Files. You can also use [PowerShell](/azure/storage/files/storage-how-to-use-files-portal), which also uses REST API.
 
 #### Cause 2: NTLMv1 is enabled
 
-System error 53 or system error 87 can occur if NTLMv1 communication is enabled on the client. Azure Files supports only NTLMv2 authentication. Having NTLMv1 enabled creates a less-secure client. Therefore, communication is blocked for Azure Files.
+System error 53 or 87 can occur if NTLMv1 communication is enabled on the client. Azure Files supports only NTLMv2 authentication. Having NTLMv1 enabled creates a less-secure client. Therefore, communication is blocked for Azure Files.
 
 To determine whether this is the cause of the error, verify that the `LmCompatibilityLevel` registry subkey in `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa` isn't set to a value less than 3.
 
@@ -161,21 +161,21 @@ Use one of the following solutions:
 
 - Mount the drive from the same user account that contains the application. You can use a tool such as PsExec.
 - Pass the storage account name and key in the user name and password parameters of the `net use` command.
-- Use the following `cmdkey` command to add the credentials into Credential Manager. Perform this action from a command line under the service account context, either through an interactive login or by using `runas`.
+- Use the following `cmdkey` command to add the credentials to Credential Manager. Perform this action from a command line under the service account context, either through an interactive login or by using `runas`.
   
     ```console
     cmdkey /add:<storage-account-name>.file.core.windows.net /user:AZURE\<storage-account-name> /pass:<storage-account-key>
     ```
 
-- Map the share directly without using a mapped drive letter. Some applications might not reconnect to the drive letter properly, so using the full UNC path might more reliable:
+- Map the share directly without using a mapped drive letter. Some applications might not reconnect to the drive letter properly, so using the full UNC path might be more reliable:
 
   `net use * \\storage-account-name.file.core.windows.net\share`
 
-After you follow these instructions, you might receive the following error message when you run the `net use` command for the system/network service account:
+After you follow these instructions, you might receive the following error message when you run the `net use` command for the system or network service account:
 
 > System error 1312 has occurred. A specified logon session does not exist. It may already have been terminated.
 
-If this error appears, make sure that the username that's passed to the `net use` command includes domain information (for example: `<storage account name>.file.core.windows.net`).
+If this error appears, make sure that the username that's passed to the `net use` command includes domain information (for example, `<storage account name>.file.core.windows.net`).
 
 ### <a id="shareismissing"></a>No folder with a drive letter in "My Computer" or "This PC"
 
@@ -187,7 +187,7 @@ By default, Windows File Explorer doesn't run as an administrator. If you run `n
 
 #### Solution
 
-Mount the share from a nonadministrator command line. Alternatively, you can follow [this TechNet topic](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee844140(v=ws.10)) to configure the `EnableLinkedConnections` registry value.
+Mount the share from a non-administrator command line. Alternatively, you can follow [this TechNet topic](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee844140(v=ws.10)) to configure the `EnableLinkedConnections` registry value.
 
 ### <a id="netuse"></a>Net use command fails if the storage account contains a forward slash
 
