@@ -1,13 +1,10 @@
 ---
 title: Can't sign in with JavaScript error
 description: Provides a resolution for a login issue in Power Automate for desktop.
-ms.reviewer: pefelesk
-author: georgiostrantzas
-ms.author: Giorgos.Trantzas
+ms.reviewer: pefelesk, nimoutzo, dipapa, iomavrid
 ms.date: 02/20/2023
 ms.subservice: power-automate-desktop-flows
 ---
-
 # Can't sign in with a JavaScript error
 
 This article provides a resolution for a login issue in Power Automate for desktop.
@@ -17,7 +14,7 @@ This article provides a resolution for a login issue in Power Automate for deskt
 Consider the following scenario in Power Automate for desktop:
 
 - The current Power Automate for desktop login browser sends an invalid "user agent" header, which causes some two-factor authentications (2FA) to identify it as a security issue.
-- Attempting to log in to Power Automate for desktop shows a JavaScript error.
+- Attempting to sign in to Power Automate for desktop shows a JavaScript error.
 
 ## Verify the issue
 
