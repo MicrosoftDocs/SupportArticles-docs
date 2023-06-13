@@ -203,7 +203,7 @@ Increase the target file share size quota to accommodate the restore data and re
 > Error Code: UserErrorTargetFileShareQuotaNotSufficient  
 > Error Message: Target File share does not have sufficient storage size quota for restore
 
-Increase the target file share size quota to accommodate the restore data and retry the operation
+Increase the target file share size quota to accommodate the restore data and retry the operation.
 
 ### File Sync PreRestoreFailed - Restore operation failed as an error occurred while performing pre restore operations on File Sync Service resources associated with the target file share
 
@@ -239,7 +239,7 @@ Common reasons for file restore failures:
 - Ensure that the file share snapshot, corresponding to the recovery point you're trying to use for recovery, still exists.
 
   > [!NOTE]
-  > If you delete a file share snapshot that was created by Azure Backup, the corresponding recovery points become unusable. We recommend not deleting snapshots to ensure guaranteed recovery.
+  > If you delete a file share snapshot created by Azure Backup, the corresponding recovery points become unusable. We recommend not deleting snapshots to ensure guaranteed recovery.
 
 - Try selecting another restore point to recover your data.
 
@@ -257,14 +257,14 @@ Use a different target file share. Alternatively, you can cancel or wait for the
 > Error Code: BMSUserErrorConflictingProtectionOperation  
 > Error Message: Another configure protection operation is in progress for this item.
 
-Wait for the previous modify policy operation to finish and retry at a later time.
+Wait for the previous modify policy operation to finish and retry later.
 
 ### BMSUserErrorObjectLocked - Another operation is in progress on the selected item
 
 > Error Code: BMSUserErrorObjectLocked  
 > Error Message: Another operation is in progress on the selected item.
 
-Wait for the other in-progress operation to complete and retry at a later time.
+Wait for the other in-progress operation to complete and retry later.
 
 ## Common Soft Delete Related Errors
 
@@ -273,24 +273,24 @@ Wait for the other in-progress operation to complete and retry at a later time.
 > Error Code: UserErrorRestoreAFSInSoftDeleteState  
 > Error Message: This restore point is not available as the snapshot associated with this point is in a File Share that is in soft-deleted state.
 
-You can't perform a restore operation when the file share is in soft deleted state. Undelete the file share from Files portal  or using the [Undelete script](/azure/backup/scripts/backup-powershell-script-undelete-file-share) and then try to restore.
+You can't perform a restore operation when the file share is in a soft-deleted state. Undelete the file share from the **Files portal** or use the [Undelete script](/azure/backup/scripts/backup-powershell-script-undelete-file-share) and then try to restore.
 
 ### UserErrorRestoreAFSInDeleteState - Listed restore points are not available as the associated file share containing the restore point snapshots has been deleted permanently
 
 > Error Code: UserErrorRestoreAFSInDeleteState  
 > Error Message: Listed restore points are not available as the associated file share containing the restore point snapshots has been deleted permanently.
 
-Check if the backed-up file share is deleted. If it was in soft deleted state, check if the soft delete retention period is over and it wasn't recovered back. In either of these cases, you'll lose all your snapshots permanently and won't be able to recover the data.
+Check if the backed-up file share is deleted. If it was in a soft-deleted state, check if the soft delete retention period is over and it wasn't recovered back. In either of these cases, you'll lose all your snapshots permanently and won't be able to recover the data.
 
 > [!NOTE]
-> We recommend you don't delete the backed up file share, or if it's in soft deleted state, undelete before the soft delete retention period ends, to avoid losing all your restore points.
+> We recommend you don't delete the backed-up file share, or if it's in a soft-deleted state, undelete before the soft delete retention period ends to avoid losing all your restore points.
 
 ### UserErrorBackupAFSInSoftDeleteState - Backup failed as the Azure File Share is in soft-deleted state
 
 > Error Code: UserErrorBackupAFSInSoftDeleteState  
 > Error Message: Backup failed as the Azure File Share is in soft-deleted state
 
-Undelete the file share from the **Files portal** or by using the [Undelete script](/azure/backup/scripts/backup-powershell-script-undelete-file-share) to continue the backup and prevent permanent deletion of data.
+Undelete the file share from the **Files portal** or use the [Undelete script](/azure/backup/scripts/backup-powershell-script-undelete-file-share) to continue the backup and prevent permanent deletion of data.
 
 ### UserErrorBackupAFSInDeleteState - Backup failed as the associated Azure File Share is permanently deleted
 
