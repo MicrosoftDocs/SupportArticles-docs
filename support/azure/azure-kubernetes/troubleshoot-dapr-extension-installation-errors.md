@@ -7,7 +7,7 @@ editor: v-jsitser
 ms.reviewer: nigreenf
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-extensions-add-ons
-ms.date: 06/08/2023
+ms.date: 06/13/2023
 ---
 
 # Troubleshoot Dapr extension installation errors
@@ -100,41 +100,22 @@ You try to install the Dapr extension for AKS or Arc for Kubernetes, but you rec
 
 Uninstall the Dapr OSS before you install the Dapr extension. For more information, see [Migrate from Dapr OSS to the Dapr extension for AKS](/azure/aks/dapr-migration).
 
-## Scenario 5: Placement server pod in bad state with error
+## Scenario 5: Placement server pod is in bad state
 
-You've received the following error:
+You encounter the following error:
 
-> **0/4 nodes are available: 1 node(s) were unschedulable, 3 node(s) had volume node affinity conflict. preemption: 0/4 nodes are available: 4 Preemption is not helpful for scheduling.**
+> 0/4 nodes are available: 1 node(s) were unschedulable, 3 node(s) had volume node affinity conflict. preemption: 0/4 nodes are available: 4 Preemption is not helpful for scheduling.
 
-This might happen when the placement pod tries to use the persistent volume created in different zone from the placement pod itself.
+This might happen when the placement server pod tries to use the persistent volume that's created in a different zone from the placement pod itself.
 
 ### Solution 5:
 
-You can resolve by performing one of the following:
+To resolve this issue, use one of the following methods:
 
-- Follow the recommended approach while [installing Dapr in HA mode and in multiple availability zones](/azure/aks/dapr-settings#install-dapr-in-multiple-availability-zones-while-in-ha-mode)
-- If the above approach is not feasible, limit the placement service to a particular availability zone by creating a custom storage class and using it for placement service. For example, create the storage class YAML: 
+- Follow the recommended approach in [Install Dapr in multiple availability zones while in HA mode](/azure/aks/dapr-settings#install-dapr-in-multiple-availability-zones-while-in-ha-mode).
 
-   ```yaml
-   kind: StorageClass
-   apiVersion: storage.k8s.io/v1
-   metadata:
-     name: zone-restricted
-   provisioner: disk.csi.azure.com
-   reclaimPolicy: Delete
-   allowVolumeExpansion: true
-   volumeBindingMode: WaitForFirstConsumer
-   allowedTopologies:
-   - matchLabelExpressions:
-     - key: topology.kubernetes.io/zone
-       values:
-       - centralus-1
-   parameters:
-     storageaccounttype: StandardSSD_LRS
-   ```
+- Limit the placement service to a particular availability zone by creating a custom storage class and using it for the placement service, and then run the following command:
 
-   And then run the following command:
-   
    ```azurecli
    az k8s-extension create --cluster-type managedClusters
    --cluster-name XXX
@@ -145,6 +126,26 @@ You can resolve by performing one of the following:
    --version XXX
    --configuration-settings "dapr_placement.volumeclaims.storageClassName=zone-restricted"
    ```
+
+    Here is an example for creating the custom storage class:
+    
+    ```yaml
+    kind: StorageClass
+    apiVersion: storage.k8s.io/v1
+    metadata:
+     name: zone-restricted
+    provisioner: disk.csi.azure.com
+    reclaimPolicy: Delete
+    allowVolumeExpansion: true
+    volumeBindingMode: WaitForFirstConsumer
+    allowedTopologies:
+    - matchLabelExpressions:
+     - key: topology.kubernetes.io/zone
+       values:
+       - centralus-1
+    parameters:
+     storageaccounttype: StandardSSD_LRS
+    ```
    
 ## Next steps
 
