@@ -18,7 +18,7 @@ Consider the following scenario in Power Automate for desktop:
 
 ## Verify the issue
 
-To verify the issue, you need to install and use a network tracing tool, such as Fiddler. As shown below, the **User-Agent** contains legacy MSIE and Windows versions. A Javascript error will appear during sign-in if the network doesn't allow such calls.
+To verify the issue, you need to install and use a network tracing tool, such as Fiddler. As shown below, the **User-Agent** contains legacy MSIE and Windows versions. A Javascript error appears during sign-in if the network doesn't allow such calls.
 
 :::image type="content" source="media/enable-webview-pad-login/fiddler.png" alt-text="Screenshot presenting how to verify the issue with Fiddler." lightbox="media/enable-webview-pad-login/fiddler.png":::
 
@@ -28,8 +28,8 @@ To verify the issue, you need to install and use a network tracing tool, such as
 
 1. Add a REG_DWORD registry key in _Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Power Automate Desktop_.
 
-    - Key name: UseMsalDesktopFeatures
-    - Value: 1
+    - Key name: `UseMsalDesktopFeatures`
+    - Value: **1**
 
 ## More information
 
