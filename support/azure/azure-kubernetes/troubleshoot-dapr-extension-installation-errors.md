@@ -108,7 +108,7 @@ You encounter the following error:
 
 This might happen when the placement server pod tries to use the persistent volume that's created in a different zone from the placement pod itself.
 
-### Solution 5:
+### Solution 5: Install Dapr in multiple availability zones or limit the placement service to a particular availability zone
 
 To resolve this issue, use one of the following methods:
 
