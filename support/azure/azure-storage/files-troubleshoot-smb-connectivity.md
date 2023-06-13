@@ -313,7 +313,7 @@ Verify that virtual networks and firewall rules are configured properly on the s
 
 ##### Solution for cause 2
 
-Browse to the storage account in which the Azure file share is located, select **Access control (IAM)**, and verify your user account has access to the storage account. For more information, see [How to secure your storage account with Azure role-based access control (Azure RBAC)](/azure/storage/blobs/security-recommendations#data-protection).
+Browse to the storage account in which the Azure file share is located, select **Access control (IAM)**, and verify that your user account has access to the storage account. For more information, see [How to secure your storage account with Azure role-based access control (Azure RBAC)](/azure/storage/blobs/security-recommendations#data-protection).
 
 ### File locks and leases
 
@@ -321,20 +321,20 @@ If you can't modify or delete an Azure file share or snapshot, it might be due t
 
 - Storage account resource locks
 
-    All Azure resources, including the storage account, support [resource locks](/azure/azure-resource-manager/management/lock-resources). Locks might be put on the storage account by an administrator, or by services such as Azure Backup.
+    All Azure resources, including the storage account, support [resource locks](/azure/azure-resource-manager/management/lock-resources). Locks might be put on the storage account by an administrator or by services such as Azure Backup.
 
     Two variations of resource locks exist: **modify**, which prevents all modifications to the storage account and its resources, and **delete**, which only prevents deletions of the storage account and its resources. When modifying or deleting shares through the `Microsoft.Storage` resource provider, resource locks are enforced on Azure file shares and share snapshots. Most portal operations, Azure PowerShell cmdlets for Azure Files with `Rm` in the name (for example, `Get-AzRmStorageShare`), and Azure CLI commands in the `share-rm` command group (for example, `az storage share-rm list`) use the `Microsoft.Storage` resource provider. Some tools and utilities such as Storage Explorer, legacy Azure Files PowerShell management cmdlets without `Rm` in the name (for example, `Get-AzStorageShare`), and legacy Azure Files CLI commands under the `share` command group (for example, `az storage share list`) use legacy APIs in the FileREST API that bypass the `Microsoft.Storage` resource provider and resource locks. For more information on legacy management APIs exposed in the FileREST API, see [control plane in Azure Files](/rest/api/storageservices/file-service-rest-api#control-plane).
 
 - Share/share snapshot leases
 
-    Share leases are a kind of proprietary lock for Azure file shares and file share snapshots. Leases might be put on individual Azure file shares or file share snapshots by administrators by calling the API through a script, or by value-added services such as Azure Backup. When a lease is put on an Azure file share or file share snapshot, modifying or deleting the file share/share snapshot can be done with the lease ID. Admins can also release the lease before modification operations, which requires the lease ID, or break the lease, which doesn't require the lease ID. For more information on share leases, see [lease share](/rest/api/storageservices/lease-share).
+    Share leases are a kind of proprietary lock for Azure file shares and file share snapshots. Leases might be put on individual Azure file shares or file share snapshots by administrators by calling the API through a script or by value-added services such as Azure Backup. When a lease is put on an Azure file share or file share snapshot, modifying or deleting the file share/share snapshot can be done with the lease ID. Admins can also release the lease before modification operations, which requires the lease ID, or break the lease, which doesn't require the lease ID. For more information on share leases, see [lease share](/rest/api/storageservices/lease-share).
 
 Because resource locks and leases might interfere with intended administrator operations on your storage account/Azure file shares, you might wish to remove any resource locks/leases that have been put on your resources manually or automatically by value-added services such as Azure Backup. The following script removes all resource locks and leases. Remember to replace `<resource-group>` and `<storage-account>` with the appropriate values for your environment.
 
 Before running the following script, you should [install the latest version](https://www.powershellgallery.com/packages/Az.Storage/) of the Azure Storage PowerShell module.
 
 > [!Important]
-> Value-added services that take resource locks and share/share snapshot leases on your Azure Files resources may periodically reapply locks and leases. Modifying or deleting locked resources by value-added services may impact regular operation of those services, such as deleting share snapshots that were managed by Azure Backup.
+> Value-added services that take resource locks and share/share snapshot leases on your Azure Files resources may periodically reapply locks and leases. Modifying or deleting locked resources by value-added services may impact the regular operation of those services, such as deleting share snapshots that were managed by Azure Backup.
 
 ```powershell
 # Parameters for storage account resource
@@ -377,7 +377,7 @@ In Windows, you might see the following errors.
 
 One of the key purposes of a file share is that multiple users and applications may simultaneously interact with files and directories in the share. To assist with this interaction, file shares provide several ways of mediating access to files and directories.
 
-When you open a file from a mounted Azure file share over SMB, your application/operating system request a file handle, which is a reference to the file. Among other things, your application specifies a file sharing mode when it requests a file handle, which specifies the level of exclusivity of your access to the file enforced by Azure Files:
+When you open a file from a mounted Azure file share over SMB, your application/operating system requests a file handle, which is a reference to the file. Among other things, your application specifies a file-sharing mode when it requests a file handle, which specifies the level of exclusivity of your access to the file enforced by Azure Files:
 
 - `None`: you have exclusive access.
 - `Read`: others may read the file while you have it open.
@@ -387,7 +387,7 @@ When you open a file from a mounted Azure file share over SMB, your application/
 
 Although as a stateless protocol, the FileREST protocol doesn't have a concept of file handles, it does provide a similar mechanism to mediate access to files and folders that your script, application, or service may use: file leases. When a file is leased, it's treated as equivalent to a file handle with a file sharing mode of `None`.
 
-Although file handles and leases serve an important purpose, sometimes file handles and leases might be orphaned. When this happens, this can cause problems modifying or deleting files. You might see error messages like:
+Although file handles and leases serve an important purpose, sometimes file handles and leases might be orphaned. When this happens, this can cause problems in modifying or deleting files. You might see error messages like:
 
 > The process can't access the file because the file is being used by another process.
 
