@@ -235,38 +235,38 @@ To resolve the problem, use the [troubleshooting tool for Azure Files mounting e
 
 ##### Cause 1: Unencrypted communication channel
 
-For security reasons, connections to Azure file shares are blocked if the communication channel isn't encrypted and if the connection attempt isn't made from the same datacenter where the Azure file shares reside. Unencrypted connections within the same datacenter can also be blocked if the [Secure transfer required](/azure/storage/common/storage-require-secure-transfer) setting is enabled on the storage account. An encrypted communication channel is provided only if the user's client OS supports SMB encryption.
+For security reasons, connections to Azure file shares are blocked if the communication channel isn't encrypted and the connection attempt isn't made from the same datacenter where the Azure file shares reside. Unencrypted connections within the same datacenter can also be blocked if the [Secure transfer required](/azure/storage/common/storage-require-secure-transfer) setting is enabled on the storage account. An encrypted communication channel is only provided if the user's client OS supports SMB encryption.
 
 To learn more, see [Prerequisites for mounting an Azure file share with Linux and the cifs-utils package](/azure/storage/files/storage-how-to-use-files-linux#prerequisites).
 
 ##### Solution for cause 1
 
-1. Connect from a client that supports SMB encryption or connect from a virtual machine in the same datacenter as the Azure storage account that is used for the Azure file share.
+1. Connect from a client that supports SMB encryption or connect from a virtual machine in the same datacenter as the Azure storage account that's used for the Azure file share.
 2. Verify the [Secure transfer required](/azure/storage/common/storage-require-secure-transfer) setting is disabled on the storage account if the client doesn't support SMB encryption.
 
 ##### Cause 2: Virtual network or firewall rules are enabled on the storage account
 
-If virtual networks (VNETs) and firewall rules are configured on the storage account, network traffic will be denied access unless the client IP address or virtual network is allowed access.
+If the VNETs and firewall rules are configured on the storage account, network traffic will be denied access unless the client IP address or virtual network is allowed access.
 
 ##### Solution for cause 2
 
-Verify virtual networks and firewall rules are configured properly on the storage account. To test if virtual networks or firewall rules are causing the issue, temporarily change the setting on the storage account to **Allow access from all networks**. To learn more, see [Configure Azure Storage firewalls and virtual networks](/azure/storage/common/storage-network-security).
+Verify that the VNETs and firewall rules are configured properly on the storage account. To test if virtual networks or firewall rules are causing the issue, temporarily change the setting on the storage account to **Allow access from all networks**. To learn more, see [Configure Azure Storage firewalls and virtual networks](/azure/storage/common/storage-network-security).
 
 #### <a id="error115"></a>"Mount error(115): Operation now in progress" when you mount Azure Files by using SMB 3.x
 
 ##### Cause
 
-Some Linux distributions don't yet support encryption features in SMB 3.x. Users might receive a "115" error message if they try to mount Azure Files by using SMB 3.x because of a missing feature. SMB 3.x with full encryption is supported only on latest version of a Linux distro.
+Some Linux distributions don't yet support encryption features in SMB 3.x. Users might receive a "115" error message if they try to mount Azure Files by using SMB 3.x because of a missing feature. SMB 3.x with full encryption is supported only on the latest version of a Linux distro.
 
 ##### Solution
 
-The encryption feature for SMB 3.x for Linux was introduced in the 4.11 kernel. This feature enables mounting of an Azure file share from on-premises or from a different Azure region. Some Linux distributions may have backported changes from the 4.11 kernel to older versions of the Linux kernel that they maintain. To help determine if your version of Linux supports SMB 3.x with encryption, consult with [Use Azure Files with Linux](/azure/storage/files/storage-how-to-use-files-linux).
+The encryption feature for SMB 3.x for Linux was introduced in the 4.11 kernel. This feature enables the mounting of an Azure file share from on-premises or a different Azure region. Some Linux distributions may have backported changes from the 4.11 kernel to older versions of the Linux kernel that they maintain. To help determine if your version of Linux supports SMB 3.x with encryption, consult with [Use Azure Files with Linux](/azure/storage/files/storage-how-to-use-files-linux).
 
 If your Linux SMB client doesn't support encryption, mount Azure Files using SMB 2.1 from a Linux VM that's in the same Azure datacenter as the file share. Verify that the [Secure transfer required](/azure/storage/common/storage-require-secure-transfer) setting is disabled on the storage account.
 
 #### <a id="error112"></a>"Mount error(112): Host is down" because of a reconnection time-out
 
-A "112" mount error occurs on the Linux client when the client has been idle for a long time. After an extended idle time, the client disconnects and the connection times out.  
+A "112" mount error occurs on the Linux client when the client has been idle for a long time. After an extended idle time, the client disconnects, and the connection times out.  
 
 ##### Cause
 
@@ -284,7 +284,7 @@ This reconnection problem in the Linux kernel is now fixed as part of the follow
 - [CIFS: Fix a possible memory corruption during reconnect](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/commit/?id=53e0e11efe9289535b060a51d4cf37c25e0d0f2b)
 - [CIFS: Fix a possible double locking of mutex during reconnect (for kernel v4.9 and later)](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/commit/?id=96a988ffeb90dba33a71c3826086fe67c897a183)
 
-However, these changes might not be ported yet to all the Linux distributions. If you're using a popular Linux distribution, you can check on the [Use Azure Files with Linux](/azure/storage/files/storage-how-to-use-files-linux) to see which version of your distribution has the necessary kernel changes.
+However, these changes might not be ported yet to all Linux distributions. If you're using a popular Linux distribution, you can check [Use Azure Files with Linux](/azure/storage/files/storage-how-to-use-files-linux) to see which version of your distribution has the necessary kernel changes.
 
 ##### Workaround
 
