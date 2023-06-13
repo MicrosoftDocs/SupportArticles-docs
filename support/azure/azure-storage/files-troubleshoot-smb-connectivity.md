@@ -508,7 +508,7 @@ Make sure you're passing the GMT timestamp in the correct format, which is `@GMT
 
 #### Cause
 
-If the snapshot that you're attempting to mount doesn't exist, the `mount` command can fail with this error. To confirm it, check kernel log messages (dmesg). Dmesg will show a log entry such as:
+If the snapshot you're attempting to mount doesn't exist, the `mount` command can fail with this error. To confirm it, check kernel log messages (dmesg). Dmesg will show a log entry such as:
 
 ```output
 [Mon Dec 12 10:34:09 2022] CIFS: Attempting to mount \\snapshottestlinux.file.core.windows.net\snapshot-test-share1
@@ -529,15 +529,15 @@ Select the Windows or Linux tab depending on the client operating system you're 
 
 #### Cause
 
-Error 1816 happens when you reach the upper limit of concurrent open handles that are allowed for a file or directory on the Azure file share. For more information, see [Azure Files scale targets](/azure/storage/files/storage-files-scale-targets#azure-files-scale-targets).
+Error 1816 happens when you reach the upper limit of concurrent open handles allowed for a file or directory on the Azure file share. For more information, see [Azure Files scale targets](/azure/storage/files/storage-files-scale-targets#azure-files-scale-targets).
 
 #### Solution
 
-Reduce the number of concurrent open handles by closing some handles, and then retry. For more information, see [Microsoft Azure Storage performance and scalability checklist](/azure/storage/blobs/storage-performance-checklist?toc=/azure/storage/files/toc.json).
+Reduce the number of concurrent open handles by closing some handles and then retrying. For more information, see [Microsoft Azure Storage performance and scalability checklist](/azure/storage/blobs/storage-performance-checklist?toc=/azure/storage/files/toc.json).
 
-To view open handles for a file share, directory or file, use the [Get-AzStorageFileHandle](/powershell/module/az.storage/get-azstoragefilehandle) PowerShell cmdlet.  
+To view open handles for a file share, directory, or file, use the [Get-AzStorageFileHandle](/powershell/module/az.storage/get-azstoragefilehandle) PowerShell cmdlet.  
 
-To close open handles for a file share, directory or file, use the [Close-AzStorageFileHandle](/powershell/module/az.storage/close-azstoragefilehandle) PowerShell cmdlet.
+To close open handles for a file share, directory, or file, use the [Close-AzStorageFileHandle](/powershell/module/az.storage/close-azstoragefilehandle) PowerShell cmdlet.
 
 > [!Note]
 > The `Get-AzStorageFileHandle` and `Close-AzStorageFileHandle` cmdlets are included in Az PowerShell module version 2.4 or later. To install the latest Az PowerShell module, see [Install the Azure PowerShell module](/powershell/azure/install-azure-powershell).
@@ -546,7 +546,7 @@ To close open handles for a file share, directory or file, use the [Close-AzStor
 
 #### Cause
 
-If you cache/hold a large number of open handles for a long time, you might see this server-side failure due to throttling reasons. When a large number of handles are cached by the client, many of those handles can go into a reconnect phase at the same time, building up a queue on the server that needs to be throttled. The retry logic and the throttling on the backend for reconnect takes longer than the client's timeout. This situation manifests itself as a client not being able to use an existing handle for any operation, with all operations failing with ERROR_UNEXP_NET_ERR (59).
+If you cache/hold a large number of open handles for a long time, you might see this server-side failure due to throttling reasons. When a large number of handles are cached by the client, many of those handles can go into a reconnect phase at the same time, building up a queue on the server that needs to be throttled. The retry logic and the throttling on the backend for reconnecting take longer than the client's timeout. This situation manifests itself as a client not being able to use an existing handle for any operation, with all operations failing with ERROR_UNEXP_NET_ERR (59).
 
 There are also edge cases in which the client handle becomes disconnected from the server (for example, a network outage lasting several minutes) that could cause this error.
 
@@ -564,17 +564,17 @@ In Linux, you might receive an error message that resembles the following:
 
 #### Cause
 
-You've reached the upper limit of concurrent open handles that are allowed for a file or directory.
+You've reached the upper limit of concurrent open handles allowed for a file or directory.
 
 Azure Files supports 10,000 open handles on the root directory and 2,000 open handles per file and directory within the share.
 
 #### Solution
 
-Reduce the number of concurrent open handles by closing some handles, and then retry the operation.
+Reduce the number of concurrent open handles by closing some handles and then retrying the operation.
 
-To view open handles for a file share, directory or file, use the [Get-AzStorageFileHandle](/powershell/module/az.storage/get-azstoragefilehandle) PowerShell cmdlet.  
+To view open handles for a file share, directory, or file, use the [Get-AzStorageFileHandle](/powershell/module/az.storage/get-azstoragefilehandle) PowerShell cmdlet.  
 
-To close open handles for a file share, directory or file, use the [Close-AzStorageFileHandle](/powershell/module/az.storage/close-azstoragefilehandle) PowerShell cmdlet.
+To close open handles for a file share, directory, or file, use the [Close-AzStorageFileHandle](/powershell/module/az.storage/close-azstoragefilehandle) PowerShell cmdlet.
 
 > [!Note]  
 > The `Get-AzStorageFileHandle` and `Close-AzStorageFileHandle` cmdlets are included in Az PowerShell module version 2.4 or later. To install the latest Az PowerShell module, see [Install the Azure PowerShell module](/powershell/azure/install-azure-powershell).
@@ -609,17 +609,17 @@ To copy a file over the network, you must first decrypt it. To do this, use one 
 
 The ConditionHeadersNotSupported error occurs when accessing content hosted in Azure Files through an application that makes use of conditional headers, such as a web browser, access fails. The error states that condition headers aren't supported.
 
-:::image type="content" source="media/files-troubleshoot-smb-connectivity/conditionalerror.png" alt-text="Screenshot of the ConditionHeadersNotSupported error message.":::
+:::image type="content" source="media/files-troubleshoot-smb-connectivity/conditionalerror.png" alt-text="Screenshot that shows the ConditionHeadersNotSupported error message.":::
 
 ### Cause
 
-Conditional headers aren't yet supported. Applications implementing them will need to request the full file every time the file is accessed.
+Conditional headers aren't yet supported. Applications implementing them need to request the full file every time the file is accessed.
 
 ### Workaround
 
 When a new file is uploaded, the **CacheControl** property by default is **no-cache**. To force the application to request the file every time, the file's **CacheControl** property needs to be updated from **no-cache** to **no-cache, no-store, must-revalidate**. This can be achieved using Azure Storage Explorer.
 
-:::image type="content" source="media/files-troubleshoot-smb-connectivity/storage-explorer-cache.png" alt-text="Screeshot of the CacheControl file property.":::
+:::image type="content" source="media/files-troubleshoot-smb-connectivity/storage-explorer-cache.png" alt-text="Screeshot that shows the CacheControl file property.":::
 
 ## See also
 
