@@ -125,7 +125,7 @@ Failed Request Tracing logging is now enabled for the Default Web Site. Check th
 
 ### Step 2: Configure your failure definitions
 
-In this step, configure the failure definitions for your URL, including what areas to trace. Troubleshoot a 404.2 status code that is returned by IIS for any requests to extensions that haven't yet been enabled. It helps you determine which particular extensions you need to enable. For more information, see [The HTTP status code in IIS 7.0, IIS 7.5, and IIS 8.0](../www-administration-management/http-status-code.md).
+In this step, configure the failure definitions for your URL, including what areas to trace. You will troubleshoot a 404.2 status code that is returned by IIS for any requests to extensions that haven't yet been enabled. It helps you determine which particular extensions you need to enable. For more information, see [HTTP status codes in IIS](../www-administration-management/http-status-code.md).
 
 1. Open a command prompt with administrator user rights.
 1. Launch `inetmgr`.
