@@ -13,7 +13,8 @@ ms.reviewer: michael.green, gbratton, meerak
 appliesto: 
   - Outlook for Microsoft 365
   - Outlook for Mac for Microsoft 365
-  - Outlook for Mac
+  - Outlook 2021 for Mac
+  - Outlook 2019 for Mac
   - Outlook 2021
   - Outlook 2019
   - Outlook 2016
