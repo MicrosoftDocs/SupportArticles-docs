@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Azure Files SMB connectivity and access issues
-description: Troubleshoot problems connecting to and accessing SMB Azure file shares from Windows and Linux clients, and see possible resolutions.
+description: Troubleshoot problems connecting to and accessing SMB Azure file shares from Windows and Linux clients and see possible resolutions.
 services: storage
 ms.subservice: files
 author: AmandaAZ
@@ -11,18 +11,18 @@ ms.reviewer: kendownie, jarrettr
 ---
 # Troubleshoot Azure Files connectivity and access issues (SMB)
 
-This article lists common problems that might occur when you try to connect to and access SMB Azure file shares from Windows or Linux clients. It also provides possible causes and resolutions for these problems.
+This article lists common problems that might occur when you try to connect to and access Server Message Block (SMB) Azure file shares from Windows or Linux clients. It also provides possible causes and resolutions for these problems.
 
 > [!IMPORTANT]
-> This article only applies to SMB shares. For details on NFS shares, see [Troubleshoot Azure NFS file shares](/azure/storage/files/files-troubleshoot-linux-nfs).
+> This article only applies to SMB shares. For details on Network File System (NFS) shares, see [Troubleshoot Azure NFS file shares](/azure/storage/files/files-troubleshoot-linux-nfs).
 
 ## Applies to
 
 | File share type | SMB | NFS |
 |-|:-:|:-:|
-| Standard file shares (GPv2), LRS/ZRS | :::image type="content" source="media/files-troubleshoot-smb-connectivity/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." border="false"::: | :::image type="content" source="media/files-troubleshoot-smb-connectivity/no-icon.png" alt-text="Screenshot of the 'No' icon." border="false"::: |
-| Standard file shares (GPv2), GRS/GZRS | :::image type="content" source="media/files-troubleshoot-smb-connectivity/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." border="false"::: | :::image type="content" source="media/files-troubleshoot-smb-connectivity/no-icon.png" alt-text="Screenshot of the 'No' icon." border="false"::: |
-| Premium file shares (FileStorage), LRS/ZRS | :::image type="content" source="media/files-troubleshoot-smb-connectivity/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." border="false"::: | :::image type="content" source="media/files-troubleshoot-smb-connectivity/no-icon.png" alt-text="Screenshot of the 'No' icon." border="false"::: |
+| Standard file shares (GPv2), LRS/ZRS | :::image type="content" source="media/files-troubleshoot-smb-connectivity/yes-icon.png" alt-text="Screenshot that shows the 'Yes' icon." border="false"::: | :::image type="content" source="media/files-troubleshoot-smb-connectivity/no-icon.png" alt-text="Screenshot that shows the 'No' icon." border="false"::: |
+| Standard file shares (GPv2), GRS/GZRS | :::image type="content" source="media/files-troubleshoot-smb-connectivity/yes-icon.png" alt-text="Screenshot that shows the 'Yes' icon." border="false"::: | :::image type="content" source="media/files-troubleshoot-smb-connectivity/no-icon.png" alt-text="Screenshot that shows the 'No' icon." border="false"::: |
+| Premium file shares (FileStorage), LRS/ZRS | :::image type="content" source="media/files-troubleshoot-smb-connectivity/yes-icon.png" alt-text="Screenshot that shows the 'Yes' icon." border="false"::: | :::image type="content" source="media/files-troubleshoot-smb-connectivity/no-icon.png" alt-text="Screenshot that shows the 'No' icon." border="false"::: |
 
 ## Can't connect to or mount an Azure file share
 
@@ -40,7 +40,7 @@ Here's the error message:
 
 #### Cause 1: Unencrypted communication channel
 
-For security reasons, connections to Azure file shares are blocked if the communication channel isn't encrypted and if the connection attempt isn't made from the same datacenter where the Azure file shares reside. If the [Secure transfer required](/azure/storage/common/storage-require-secure-transfer) setting is enabled on the storage account, unencrypted connections within the same datacenter are also blocked. An encrypted communication channel is provided only if the end-user's client OS supports SMB encryption.
+For security reasons, connections to Azure file shares are blocked if the communication channel isn't encrypted and the connection attempt isn't made from the same datacenter where the Azure file shares reside. If the [Secure transfer required](/azure/storage/common/storage-require-secure-transfer) setting is enabled on the storage account, unencrypted connections within the same datacenter are also blocked. An encrypted communication channel is only provided if the end-user's client OS supports SMB encryption.
 
 Windows 8, Windows Server 2012, and later versions of each system negotiate requests that include SMB 3.x, which supports encryption.
 
@@ -48,15 +48,15 @@ Windows 8, Windows Server 2012, and later versions of each system negotiate requ
 
 1. Connect from a client that supports SMB encryption (Windows 8/Windows Server 2012 or later).
 2. Connect from a virtual machine (VM) in the same datacenter as the Azure storage account that's used for the Azure file share.
-3. Verify the [Secure transfer required](/azure/storage/common/storage-require-secure-transfer) setting is disabled on the storage account if the client doesn't support SMB encryption.
+3. Verify that the [Secure transfer required](/azure/storage/common/storage-require-secure-transfer) setting is disabled on the storage account if the client doesn't support SMB encryption.
 
 #### Cause 2: Virtual network or firewall rules are enabled on the storage account
 
-Network traffic is denied if virtual network (VNET) and firewall rules are configured on the storage account, unless the client IP address or virtual network is allow-listed.
+Network traffic is denied if the virtual network (VNET) and firewall rules are configured on the storage account unless the client IP address or virtual network is allow-listed.
 
 #### Solution for cause 2
 
-Verify that virtual network and firewall rules are configured properly on the storage account. To test if virtual network or firewall rules is causing the issue, temporarily change the setting on the storage account to **Allow access from all networks**. To learn more, see [Configure Azure Storage firewalls and virtual networks](/azure/storage/common/storage-network-security).
+Verify that the virtual network and firewall rules are configured properly on the storage account. To test if the virtual network or firewall rules are causing the issue, temporarily change the setting on the storage account to **Allow access from all networks**. To learn more, see [Configure Azure Storage firewalls and virtual networks](/azure/storage/common/storage-network-security).
 
 #### Cause 3: Share-level permissions are incorrect when using identity-based authentication
 
@@ -74,7 +74,7 @@ Validate that permissions are configured correctly:
 
 ### <a id="error53-67-87"></a>Error 53, Error 67, or Error 87 when you mount or unmount an Azure file share
 
-When you try to mount a file share from on-premises or from a different datacenter, you might receive the following errors:
+When you try to mount a file share from on-premises or a different datacenter, you might receive the following errors:
 
 > System error 53 has occurred. The network path was not found.
 
@@ -84,7 +84,7 @@ When you try to mount a file share from on-premises or from a different datacent
 
 #### Cause 1: Port 445 is blocked
 
-System error 53 or system error 67 can occur if port 445 outbound communication to an Azure Files datacenter is blocked. To see the summary of ISPs that allow or disallow access from port 445, go to [TechNet](https://social.technet.microsoft.com/wiki/contents/articles/32346.azure-summary-of-isps-that-allow-disallow-access-from-port-445.aspx).
+System error 53 or 67 can occur if port 445 outbound communication to an Azure Files datacenter is blocked. To see the summary of ISPs that allow or disallow access from port 445, go to [TechNet](https://social.technet.microsoft.com/wiki/contents/articles/32346.azure-summary-of-isps-that-allow-disallow-access-from-port-445.aspx).
 
 To check if your firewall or ISP is blocking port 445, use the [AzFileDiagnostics](https://github.com/Azure-Samples/azure-files-samples/tree/master/AzFileDiagnostics/Windows) tool or the `Test-NetConnection` cmdlet.
 
