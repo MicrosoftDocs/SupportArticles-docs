@@ -78,11 +78,11 @@ Your dialog should now look like the following one:
 
 ### Creating a Debug Diagnostics 1.2 Rule
 
-The easiest way to collect user-mode process dumps when a high memory condition occurs is to use Debug Diagnostics 1.2 (DebugDiag.) You can download [Debug Diagnostic Tool v2 Update 3](https://www.microsoft.com/download/details.aspx?id=58210).
+The easiest way to collect user-mode process dumps when a high memory condition occurs is to use Debug Diagnostics (DebugDiag.) You can download [Debug Diagnostic Tool v2 Update 3](https://www.microsoft.com/download/details.aspx?id=58210).
 
-Install DebugDiag 1.2 on your server and run it. (You'll find it on the **Start** menu after installation.)
+Install DebugDiag on your server and run it. (You'll find it on the **Start** menu after installation.)
 
-The most important information to figure out which function is caused the memory leak is the stack traces of the heap allocations. By default, these stack traces aren't acquired. You can enable this feature per-process. Use the following command to enable stack tracing:
+The most important information to figure out which function caused the memory leak is the stack traces of the heap allocations. By default, these stack traces aren't acquired. You can enable this feature per-process. Use the following command to enable stack tracing:
 
 ```cmd
 gflags -i w3wp.exe +ust
@@ -123,7 +123,7 @@ If you get the out of memory error even when you get the memory dumps, you can g
 
 After getting the out of memory error or creating the memory dumps, you'll have two sets of data to review; the Perfmon data collector set and the memory dumps. Let's begin by reviewing the Perfmon data.
 
-### Analyzing performance data**
+### Analyzing performance data
 
 To review the Perfmon data for your issue, right-click on the **High Memory data collector set** listed under the **User Defined** node and select **Latest Report**. You'll see something similar to the following image:
 
@@ -133,12 +133,12 @@ To get to the root of what is causing the high CPU problem, review the dumps tha
 
 ### Dump analysis with DebugDiag
 
-DebugDiag has the ability to recognize many problems by doing an automated dump analysis. For this particular issue, DebugDiag's Performance Analyzers are well-suited to helping to identify the root cause of the high CPU issue. To use the analyzer, follow these steps:
+DebugDiag has the ability to recognize many problems by doing an automated dump analysis. For this particular issue, DebugDiag's Performance Analyzers are well-suited to help identify the root cause of the high CPU issue. To use the analyzer, follow these steps:
 
 1. Select the **Advanced Analysis** tab in DebugDiag.
 1. Select **Memory Pressure Analyzers**. Make sure that you use *MemoryAnalysis.asp* instead of *DotNetMemoryAnalysis-BETA.asp*.
 1. Select **Add Data Files**.
-1. Browser to the location where the dumps were created. By default, this will be a subfolder of the *C:\\Program Files\\DebugDiag\\Logs* folder.
+1. Browse to the location where the dumps were created. By default, this will be a subfolder of the *C:\\Program Files\\DebugDiag\\Logs* folder.
 1. Select one of the dumps and then select <kbd>Ctrl</kbd>+<kbd>A</kbd> to select all of the dumps in that folder.
 1. Select **Open**.
 1. Select **Start Analysis**.
@@ -214,9 +214,8 @@ The above code will definitely cause memory leak because allocated memory isn't 
 
 ## Conclusion
 
-By using Perfmon and DebugDiag, you can easily collect data that can be helpful in determining the cause of memory leak in application pools. If you're unable to find the root cause using these techniques, you can open a support ticket with Microsoft via [support](https://support.microsoft.com/) and we can assist you with determining the cause of your issue. You'll collect dumps with enabling stack tracing (`gflags -i w3wp.exe +ust`) beforehand since the stack tracing is useful information for us to analyze the memory usage in details. By having the Perfmon data and dumps with the stack tracing ready for us when you open a case, you'll dramatically reduce the amount of time necessary for us to assist.
+By using Perfmon and DebugDiag, you can easily collect data that can be helpful in determining the cause of memory leak in application pools. If you're unable to find the root cause using these techniques, you can open a support ticket with Microsoft. Be sure to include the Perfmon data and stack tracing dumps in your support ticket to help reduce the turnaround time.
 
 ## Other resources
 
 - [How to use the IIS Debug Diagnostics tool to troubleshoot a memory leak in an IIS process](https://support.microsoft.com/topic/how-to-use-the-debug-diagnostics-tool-to-troubleshoot-a-process-that-has-stopped-responding-in-iis-995db9a3-a3be-6d20-cf2f-c48101a64444)
-- Why the low fragmentation heap (LFH) mechanism may be disabled on some computers that are running Windows Server 2003, Windows XP, or Windows 2000
