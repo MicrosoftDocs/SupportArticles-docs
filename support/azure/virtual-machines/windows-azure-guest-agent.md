@@ -10,7 +10,7 @@ manager: dcscontentpm
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
-ms.date: 06/09/2023
+ms.date: 06/13/2023
 ms.author: genli
 ---
 # Troubleshooting Azure Windows VM Agent
@@ -382,13 +382,13 @@ Exception Info: System.TypeInitializationException
 
 **Analysis**
 
-This issue may occur if the *C:\Windows\Microsoft.NET\Framework\v4.0.30319\Config\machine.config* file is missing or corrupted.
+This issue may occur if the *C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\machine.config* file is missing or corrupted.
 
 **Solution**
 
 To resolve the issue, follow these steps:
 
-1.	Take the file from a working VM, and paste it into the *C:\Windows\Microsoft.NET\Framework\v4.0.30319\Config* folder.
+1.	Take the file from a working VM, and paste it into the *C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config* folder.
 2.	Restart the Guest Agent services:
 
        ```console
