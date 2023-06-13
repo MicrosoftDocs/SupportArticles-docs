@@ -23,9 +23,9 @@ If you can't find an answer to your question, you can contact us through the fol
 
 | File share type | SMB | NFS |
 |-|:-:|:-:|
-| Standard file shares (GPv2), LRS/ZRS | :::image type="content" source="media/files-troubleshoot/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." border="false":::| :::image type="content" source="media/files-troubleshoot/no-icon.png" alt-text="Screenshot of the 'No' icon." border="false"::: |
-| Standard file shares (GPv2), GRS/GZRS | :::image type="content" source="media/files-troubleshoot/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." border="false"::: | :::image type="content" source="media/files-troubleshoot/no-icon.png" alt-text="Screenshot of the 'No' icon." border="false":::|
-| Premium file shares (FileStorage), LRS/ZRS | :::image type="content" source="media/files-troubleshoot/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." border="false"::: | :::image type="content" source="media/files-troubleshoot/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." border="false"::: |
+| Standard file shares (GPv2), LRS/ZRS | :::image type="content" source="media/files-troubleshoot/yes-icon.png" alt-text="Screenshot that shows the 'Yes' icon." border="false":::| :::image type="content" source="media/files-troubleshoot/no-icon.png" alt-text="Screenshot that shows the 'No' icon." border="false"::: |
+| Standard file shares (GPv2), GRS/GZRS | :::image type="content" source="media/files-troubleshoot/yes-icon.png" alt-text="Screenshot that shows the 'Yes' icon." border="false"::: | :::image type="content" source="media/files-troubleshoot/no-icon.png" alt-text="Screenshot that shows the 'No' icon." border="false":::|
+| Premium file shares (FileStorage), LRS/ZRS | :::image type="content" source="media/files-troubleshoot/yes-icon.png" alt-text="Screenshot that shows the 'Yes' icon." border="false"::: | :::image type="content" source="media/files-troubleshoot/yes-icon.png" alt-text="Screenshot that shows the 'Yes' icon." border="false"::: |
 
 ## General troubleshooting first steps
 
@@ -33,24 +33,24 @@ If you encounter problems with Azure Files, start with these steps. You can also
 
 ### Check DNS resolution and connectivity to your Azure file share
 
-The most common problem encountered by Azure Files customers is that mounting or accessing the Azure file share fails because of an incorrect networking configuration. This can happen with any of the three file sharing protocols that Azure Files supports: SMB, NFS, and FileREST.
+The most common problem encountered by Azure Files customers is that mounting or accessing the Azure file share fails because of an incorrect networking configuration. This can happen with any of the three file-sharing protocols Azure Files supports: SMB, NFS, and FileREST.
 
-The following table provides the SMB, NFS, and FileREST requirements for which of the network endpoints of a storage account they can use, and which port that endpoint can be accessed over. To learn more about network endpoints, see [Azure Files networking considerations](/azure/storage/files/storage-files-networking-overview).
+The following table provides the SMB, NFS, and FileREST requirements for which of the network endpoints of a storage account they can use and which port that endpoint can be accessed over. To learn more about network endpoints, see [Azure Files networking considerations](/azure/storage/files/storage-files-networking-overview).
 
 | Protocol name | Unrestricted public endpoint | Restricted public endpoint | Private endpoint | Required port |
 |-|:-:|:-:|:-:|-|
-| SMB | :::image type="content" source="media/files-troubleshoot/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." ::: | :::image type="content" source="media/files-troubleshoot/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." ::: | :::image type="content" source="media/files-troubleshoot/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." ::: | TCP 445 |
-| NFS | :::image type="content" source="media/files-troubleshoot/no-icon.png" alt-text="Screenshot of the 'No' icon." :::  | :::image type="content" source="media/files-troubleshoot/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." ::: | :::image type="content" source="media/files-troubleshoot/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." ::: | TCP 2049 |
-| FileREST | :::image type="content" source="media/files-troubleshoot/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." ::: | :::image type="content" source="media/files-troubleshoot/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." ::: | :::image type="content" source="media/files-troubleshoot/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." ::: | TCP 443 (HTTPS), TCP 80 (HTTP)|
+| SMB | :::image type="content" source="media/files-troubleshoot/yes-icon.png" alt-text="Screenshot that shows the 'Yes' icon." ::: | :::image type="content" source="media/files-troubleshoot/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." ::: | :::image type="content" source="media/files-troubleshoot/yes-icon.png" alt-text="Screenshot that shows the 'Yes' icon." ::: | TCP 445 |
+| NFS | :::image type="content" source="media/files-troubleshoot/no-icon.png" alt-text="Screenshot that shows the 'No' icon." :::  | :::image type="content" source="media/files-troubleshoot/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." ::: | :::image type="content" source="media/files-troubleshoot/yes-icon.png" alt-text="Screenshot that shows the 'Yes' icon." ::: | TCP 2049 |
+| FileREST | :::image type="content" source="media/files-troubleshoot/yes-icon.png" alt-text="Screenshot that shows the 'Yes' icon." ::: | :::image type="content" source="media/files-troubleshoot/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." ::: | :::image type="content" source="media/files-troubleshoot/yes-icon.png" alt-text="Screenshot that shows the 'Yes' icon." ::: | TCP 443 (HTTPS), TCP 80 (HTTP)|
 
 To mount or access a file share successfully, your client must:
 
-- Be able to resolve the fully qualified domain name (FQDN) of the storage account (ex. `mystorageaccount.file.core.windows.net`) to the correct IP address for the desired network endpoint of the storage account.
+- Be able to resolve the fully qualified domain name (FQDN) of the storage account (for example, `mystorageaccount.file.core.windows.net`) to the correct IP address for the desired network endpoint of the storage account.
 
 - Establish a successful TCP connection to the correctly resolved IP address on the correct port for the desired protocol.
 
 > [!Note]  
-> You must use the FQDN for your storage account when mounting/accessing the share. The following commands will let you see the current IP addresses of the network endpoints of your storage account, but you should not hardcode these IP addresses into any scripts, firewall configurations, or other locations. IP addresses aren't guaranteed to remain the same, and may change at any time.
+> You must use the FQDN for your storage account when mounting or accessing the share. The following commands will let you see the current IP addresses of the network endpoints of your storage account, but you should not hardcode these IP addresses into any scripts, firewall configurations, or other locations. IP addresses aren't guaranteed to remain the same and may change at any time.
 
 #### Check DNS name resolution
 
@@ -89,10 +89,10 @@ Section    : Answer
 IP4Address : x.x.x.x
 ```
 
-If you're trying to access the public endpoint of a storage account that has one or more private endpoints configured, you would expect to see a result that looked something like the following:
+If you're trying to access the public endpoint of a storage account that has one or more private endpoints configured, you would expect to see a result that looks something like the following:
 
 > [!NOTE]
-> An additional CNAME record for `mystorageaccount.privatelink.file.core.windows.net` has been inserted in between the normal FQDN of the storage account and the name of storage cluster. This enables name resolution to the public endpoint's IP address when the user is accessing from the internet, and resolution to the private endpoint's IP address when the user is accessing from inside of an Azure virtual network (or peered network).
+> An additional CNAME record for `mystorageaccount.privatelink.file.core.windows.net` has been inserted in between the normal FQDN of the storage account and the name of the storage cluster. This enables name resolution to the public endpoint's IP address when the user is accessing from the internet and resolution to the private endpoint's IP address when the user is accessing from inside an Azure virtual network (or peered network).
 
 ```output
 Name       : mystorageaccount.file.core.windows.net
@@ -115,7 +115,7 @@ Section    : Answer
 IP4Address : x.x.x.x
 ```
 
-If you're resolving to a private endpoint, you would normally expect an A record for `mystorageaccount.privatelink.file.core.windows.net` that maps to your private endpoint's IP address:
+If you're resolving to a private endpoint, you would normally expect an "A" record for `mystorageaccount.privatelink.file.core.windows.net` that maps to your private endpoint's IP address:
 
 ```output
 Name                   : mystorageaccount.file.core.windows.net
@@ -157,10 +157,10 @@ Name:   file.phx10prdstf01a.store.core.windows.net
 Address: x.x.x.x
 ```
 
-If you're trying to access the public endpoint of a storage account that has one or more private endpoints configured, you would expect to see a result that looked something like the following output:
+If you're trying to access the public endpoint of a storage account that has one or more private endpoints configured, you would expect to see a result that looks something like the following output:
 
 > [!NOTE]
-> An additional CNAME record for `mystorageaccount.privatelink.file.core.windows.net` has been inserted in between the normal FQDN of the storage account and the name of storage cluster. This enables name resolution to the public endpoint's IP address when the user is accessing from the internet, and resolution to the private endpoint's IP address when the user is accessing from inside of an Azure virtual network (or peered network).
+> An additional CNAME record for `mystorageaccount.privatelink.file.core.windows.net` has been inserted between the normal FQDN of the storage account and the name of storage cluster. This enables name resolution to the public endpoint's IP address when the user is accessing from the internet and resolution to the private endpoint's IP address when the user is accessing from inside of an Azure virtual network (or peered network).
 
 ```output
 Server:         127.0.0.53
@@ -173,7 +173,7 @@ Name:   file.phx10prdstf01a.store.core.windows.net
 Address: 20.60.39.8
 ```
 
-If you're resolving to a private endpoint, you would normally expect an A record for `mystorageaccount.privatelink.file.core.windows.net` that maps to your private endpoint's IP address:
+If you're resolving to a private endpoint, you would normally expect an "A" record for `mystorageaccount.privatelink.file.core.windows.net` that maps to your private endpoint's IP address:
 
 ```output
 Server:         127.0.0.53
@@ -244,7 +244,7 @@ Both [Windows clients](https://github.com/Azure-Samples/azure-files-samples/tree
 
 ## Common troubleshooting areas
 
-For more detailed information, choose the subject area that you'd like to troubleshoot.
+For more detailed information, choose the subject area you'd like to troubleshoot.
 
 - [Connectivity and access issues (SMB)](files-troubleshoot-smb-connectivity.md)
 - [Identity-based authentication and authorization issues (SMB)](files-troubleshoot-smb-authentication.md)
