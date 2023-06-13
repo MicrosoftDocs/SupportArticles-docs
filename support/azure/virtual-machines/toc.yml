@@ -159,6 +159,7 @@
         - name: Serial Console for Linux
           href: serial-console-linux.md
         - name: Linux - Specific scenarios
+          href: boot-error-troubleshoot-linux.md
           items:
             - name: Troubleshoot file system errors
               href: linux-recovery-cannot-start-file-system-errors.md
@@ -288,6 +289,8 @@
             href: os-bucket-boot-failure.md
           - name: VM stops at "Please wait for the Group Policy Client" screen
             href: vm-stops-at-please-wait-for-group-policy-client.md
+          - name: VM stops at "Checking file system" screen
+            href: troubleshoot-check-disk-boot-error.md
           - name: Azure VM cannot RDP - driver IRQL not less or equal
             href: azure-vm-cannot-rdp-driver-irql-not-less-equal.md
           - name: Azure VM cannot RDP - working on features
@@ -403,6 +406,8 @@
 
 - name: VM health
   items:
+  - name: HealthResources table in Resource Graph has missing entries
+    href: healthresources-table-resource-graph-missing-entries.md
   - name: VM availability might be inaccurate during restart
     href: inaccurate-vm-availability-during-vm-restart.md
 
@@ -447,6 +452,10 @@
 
 - name: Disk management
   items:
+  - name: Resizing disks
+    items:
+      - name: Downsize a data disk without losing data
+        href: downsize-data-disk-without-losing-data.md
   - name: Overview
     href: /azure/virtual-machines/managed-disks-overview?context=/troubleshoot/azure/virtual-machines/context/context
   - name: FAQ
@@ -537,6 +546,7 @@
       href: troubleshoot-linux-rhui-certificate-issues.md
 
 - name: Remote troubleshooting for VM tools
+  href: remote-tools-troubleshoot-azure-vm-issues.md
   items:
     - name: Custom Script Extension or Run Command
       items:

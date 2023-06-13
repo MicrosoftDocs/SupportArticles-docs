@@ -1,12 +1,12 @@
 ---
 title: PXE boot fails on a Surface Laptop
 description: Provides a workaround to the issue in which PXE boot fails on a Surface Laptop.
-ms.date: 05/12/2023
+ms.date: 05/31/2023
 author: v-lianna
 ms.author: v-lianna
 manager: dcscontentpm
 audience: itpro
-ms.topic: how-to
+ms.topic: troubleshooting
 ms.prod: surface
 localization_priority: medium
 ms.reviewer: v-six
