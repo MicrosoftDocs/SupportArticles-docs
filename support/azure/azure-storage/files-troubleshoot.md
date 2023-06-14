@@ -23,9 +23,9 @@ If you can't find an answer to your question, you can contact us through the fol
 
 | File share type | SMB | NFS |
 |-|:-:|:-:|
-| Standard file shares (GPv2), LRS/ZRS | :::image type="content" source="media/files-troubleshoot/yes-icon.png" alt-text="Screenshot that shows the 'Yes' icon." border="false":::| :::image type="content" source="media/files-troubleshoot/no-icon.png" alt-text="Screenshot that shows the 'No' icon." border="false"::: |
-| Standard file shares (GPv2), GRS/GZRS | :::image type="content" source="media/files-troubleshoot/yes-icon.png" alt-text="Screenshot that shows the 'Yes' icon." border="false"::: | :::image type="content" source="media/files-troubleshoot/no-icon.png" alt-text="Screenshot that shows the 'No' icon." border="false":::|
-| Premium file shares (FileStorage), LRS/ZRS | :::image type="content" source="media/files-troubleshoot/yes-icon.png" alt-text="Screenshot that shows the 'Yes' icon." border="false"::: | :::image type="content" source="media/files-troubleshoot/yes-icon.png" alt-text="Screenshot that shows the 'Yes' icon." border="false"::: |
+| Standard file shares (GPv2), LRS/ZRS | :::image type="icon" source="media/files-troubleshoot/yes-icon.png" border="false":::| :::image type="icon" source="media/files-troubleshoot/no-icon.png" border="false"::: |
+| Standard file shares (GPv2), GRS/GZRS | :::image type="icon" source="media/files-troubleshoot/yes-icon.png" border="false"::: | :::image type="icon" source="media/files-troubleshoot/no-icon.png" border="false":::|
+| Premium file shares (FileStorage), LRS/ZRS | :::image type="icon" source="media/files-troubleshoot/yes-icon.png" border="false"::: | :::image type="icon" source="media/files-troubleshoot/yes-icon.png" border="false"::: |
 
 ## General troubleshooting first steps
 
@@ -39,9 +39,9 @@ The following table provides the SMB, NFS, and FileREST requirements for which o
 
 | Protocol name | Unrestricted public endpoint | Restricted public endpoint | Private endpoint | Required port |
 |-|:-:|:-:|:-:|-|
-| SMB | :::image type="content" source="media/files-troubleshoot/yes-icon.png" alt-text="Screenshot that shows the 'Yes' icon." ::: | :::image type="content" source="media/files-troubleshoot/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." ::: | :::image type="content" source="media/files-troubleshoot/yes-icon.png" alt-text="Screenshot that shows the 'Yes' icon." ::: | TCP 445 |
-| NFS | :::image type="content" source="media/files-troubleshoot/no-icon.png" alt-text="Screenshot that shows the 'No' icon." :::  | :::image type="content" source="media/files-troubleshoot/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." ::: | :::image type="content" source="media/files-troubleshoot/yes-icon.png" alt-text="Screenshot that shows the 'Yes' icon." ::: | TCP 2049 |
-| FileREST | :::image type="content" source="media/files-troubleshoot/yes-icon.png" alt-text="Screenshot that shows the 'Yes' icon." ::: | :::image type="content" source="media/files-troubleshoot/yes-icon.png" alt-text="Screenshot of the 'Yes' icon." ::: | :::image type="content" source="media/files-troubleshoot/yes-icon.png" alt-text="Screenshot that shows the 'Yes' icon." ::: | TCP 443 (HTTPS), TCP 80 (HTTP)|
+| SMB | :::image type="icon" source="media/files-troubleshoot/yes-icon.png" ::: | :::image type="icon" source="media/files-troubleshoot/yes-icon.png" ::: | :::image type="icon" source="media/files-troubleshoot/yes-icon.png" ::: | TCP 445 |
+| NFS | :::image type="icon" source="media/files-troubleshoot/no-icon.png" :::  | :::image type="icon" source="media/files-troubleshoot/yes-icon.png" ::: | :::image type="icon" source="media/files-troubleshoot/yes-icon.png" ::: | TCP 2049 |
+| FileREST | :::image type="icon" source="media/files-troubleshoot/yes-icon.png" ::: | :::image type="icon" source="media/files-troubleshoot/yes-icon.png" ::: | :::image type="icon" source="media/files-troubleshoot/yes-icon.png" ::: | TCP 443 (HTTPS), TCP 80 (HTTP)|
 
 To mount or access a file share successfully, your client must:
 
