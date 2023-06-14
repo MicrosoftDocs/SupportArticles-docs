@@ -36,7 +36,7 @@ Microsoft is working on a fix for this issue and it will be available in a futur
 
 ### Issue two
 
-This issue is caused by a change introduced in this cumulative update for the [Managed Instance link](/azure/azure-sql/managed-instance/managed-instance-link-feature-overview) feature. Assume that the databases of an Always On availability group have one of the following conditions:
+This issue is caused by a change introduced in SQL Server 2019 CU20 for the [Managed Instance link](/azure/azure-sql/managed-instance/managed-instance-link-feature-overview) feature. Assume that the databases of an Always On availability group have one of the following conditions:
 
 - The databases use memory-optimized tables, the FileStream class, or multiple log files.
 
