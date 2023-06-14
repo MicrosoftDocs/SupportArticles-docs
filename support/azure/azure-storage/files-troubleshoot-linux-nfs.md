@@ -99,7 +99,7 @@ Disable **Secure transfer required** in your storage account's configuration bla
 
 ### Cause 3: nfs-utils, nfs-client, or nfs-common package isn't installed
 
-Before running the `mount` command, install the `nfs-utils`, `nfs-client`, or the `nfs-common` package.
+Before running the `mount` command, install the `nfs-utils`, `nfs-client`, or `nfs-common` package.
 
 To check if the NFS package is installed, run the following commands:
 
