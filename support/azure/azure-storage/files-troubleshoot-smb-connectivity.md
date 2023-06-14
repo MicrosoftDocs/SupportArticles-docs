@@ -127,11 +127,11 @@ You can use Azure File Sync as a workaround to access Azure Files from clients t
 
 ##### Solution 2: Use a VPN or ExpressRoute
 
-By setting up a Virtual Private Network (VPN) or ExpressRoute from on-premises to your Azure storage account, with Azure Files exposed on your internal network using private endpoints, the traffic will go through a secure tunnel as opposed to over the internet. Follow the [instructions to set up a VPN](/azure/storage/files/storage-files-configure-p2s-vpn-windows) to access Azure Files from Windows.
+By setting up a virtual private network (VPN) or ExpressRoute from on-premises to your Azure storage account, with Azure Files exposed on your internal network using private endpoints, the traffic will go through a secure tunnel as opposed to over the internet. Follow the [instructions to set up a VPN](/azure/storage/files/storage-files-configure-p2s-vpn-windows) to access Azure Files from Windows.
 
 ##### Solution 3: Unblock port 445 with help from your ISP/IT admin
 
-Work with your IT department or Internet Service Provider (ISP) to open port 445 outbound to [Azure IP ranges](https://www.microsoft.com/download/details.aspx?id=56519).
+Work with your IT department or internet service provider (ISP) to open port 445 outbound to [Azure IP ranges](https://www.microsoft.com/download/details.aspx?id=56519).
 
 ##### Solution 4: Use REST API-based tools like Storage Explorer or PowerShell
 
