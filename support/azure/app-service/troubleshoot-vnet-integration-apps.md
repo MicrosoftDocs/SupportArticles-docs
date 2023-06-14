@@ -167,13 +167,13 @@ Collecting network traces can be helpful in analyzing issues. In Azure App Servi
 
 To collect network traces for Windows App Services, follow these steps:
 
-1. In the Azure portal, navigate to your web app.
+1. In the Azure portal, navigate to your Web App.
 1. In the left navigation, select **Diagnose and Solve Problems**.
 1. In the search box, type *Collect Network Trace* and select **Collect Network Trace** to start the network trace collection.
 
 :::image type="content" source="media/troubleshoot-vnet-integration-apps/collect-network-trace-windows.png" alt-text="Screenshot that shows how to capture a network trace." lightbox="media/troubleshoot-vnet-integration-apps/collect-network-trace-windows.png":::
 
-To get the trace file for each instance serving a Web App, on your browser, go to the Kudo console for the Web App (`https://<sitename>.scm.azurewebsites.net`). Download the trace file from the *C:\home\LogFiles\networktrace* or *D:\home\LogFiles\networktrace* folder.
+To get the trace file for each instance serving a Web App, on your browser, go to the Kudu console for the Web App (`https://<sitename>.scm.azurewebsites.net`). Download the trace file from the *C:\home\LogFiles\networktrace* or *D:\home\LogFiles\networktrace* folder.
 
 ### Linux App Services
 
