@@ -88,7 +88,7 @@ To enable Failed Request Tracing for a site (for example, _Troubleshooting.PHP_)
     %windir%\system32\inetsrv\appcmd.exe list traces "<name of your site>" /text:*
     ```
 
-    This should have the following output similar to the following:  
+    This should have the output similar to the following:  
 
     ```output
     TRACELOG
@@ -198,5 +198,4 @@ You can refresh the view several times to observe that the same request continue
 
 ## More information
 
-- [IIS 7.0 Server-Side](http://mvolo.com/do-complex-iis-management-tasks-easily-with-appcmd-command-piping/)
 - [Error Handling and Logging](http://www.php.net/errorfunc)
