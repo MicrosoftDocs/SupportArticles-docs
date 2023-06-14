@@ -15,9 +15,9 @@ This article lists common problems when using Server Message Block (SMB) Azure f
 
 | File share type | SMB | NFS |
 |-|:-:|:-:|
-| Standard file shares (GPv2), LRS/ZRS | :::image type="content" source="media/files-troubleshoot-smb-authentication/yes-icon.png" alt-text="Screenshot that shows the 'Yes' icon." border="false":::  | :::image type="content" source="media/files-troubleshoot-smb-authentication/no-icon.png" alt-text="Screenshot that shows the 'No' icon." border="false"::: |
-| Standard file shares (GPv2), GRS/GZRS | :::image type="content" source="media/files-troubleshoot-smb-authentication/yes-icon.png" alt-text="Screenshot that shows the 'Yes' icon." border="false":::  | :::image type="content" source="media/files-troubleshoot-smb-authentication/no-icon.png" alt-text="Screenshot that shows the 'No' icon." border="false"::: |
-| Premium file shares (FileStorage), LRS/ZRS | :::image type="content" source="media/files-troubleshoot-smb-authentication/yes-icon.png" alt-text="Screenshot that shows the 'Yes' icon." border="false":::  | :::image type="content" source="media/files-troubleshoot-smb-authentication/no-icon.png" alt-text="Screenshot that shows the 'No' icon." border="false"::: |
+| Standard file shares (GPv2), LRS/ZRS | :::image type="icon" source="media/files-troubleshoot-smb-authentication/yes-icon.png" border="false":::  | :::image type="icon" source="media/files-troubleshoot-smb-authentication/no-icon.png" border="false"::: |
+| Standard file shares (GPv2), GRS/GZRS | :::image type="icon" source="media/files-troubleshoot-smb-authentication/yes-icon.png" border="false":::  | :::image type="icon" source="media/files-troubleshoot-smb-authentication/no-icon.png" border="false"::: |
+| Premium file shares (FileStorage), LRS/ZRS | :::image type="icon" source="media/files-troubleshoot-smb-authentication/yes-icon.png" border="false":::  | :::image type="icon" source="media/files-troubleshoot-smb-authentication/no-icon.png" border="false"::: |
 
 ## System error 5 occurs when mounting an Azure file share
 
@@ -36,11 +36,11 @@ If end users are accessing the Azure file share using Active Directory Domain Se
 
 Validate that permissions are configured correctly:
 
-- **Active Directory Domain Services (AD DS)** see [Assign share-level permissions](/azure/storage/files/storage-files-identity-ad-ds-assign-permissions).
+- For **Active Directory Domain Services (AD DS)**, see [Assign share-level permissions](/azure/storage/files/storage-files-identity-ad-ds-assign-permissions).
 
     Share-level permission assignments are supported for groups and users that have been synced from AD DS to Azure Active Directory (Azure AD) using Azure AD Connect sync or Azure AD Connect cloud sync. Confirm that groups and users being assigned share-level permissions are not unsupported "cloud-only" groups.
 
-- **Azure Active Directory Domain Services (Azure AD DS)** see [Assign share-level permissions](/azure/storage/files/storage-files-identity-auth-active-directory-domain-service-enable?tabs=azure-portal#assign-share-level-permissions).
+- For **Azure Active Directory Domain Services (Azure AD DS)**, see [Assign share-level permissions](/azure/storage/files/storage-files-identity-auth-active-directory-domain-service-enable?tabs=azure-portal#assign-share-level-permissions).
 
 ## Error AadDsTenantNotFound in enabling Azure AD DS authentication for Azure Files "Unable to locate active tenants with tenant ID aad-tenant-id"
 
