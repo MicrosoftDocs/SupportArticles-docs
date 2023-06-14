@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting Web Deploy problems with Visual Studio
+title: Troubleshoot Web Deploy problems with Visual Studio
 description: The article helps you troubleshoot a series of errors when trying to publish from Visual Studio to a server that hasn't been correctly configured via Web Deploy.
 ms.date: 04/09/2012
 ms.custom: sap:Deployment and migration
@@ -8,7 +8,7 @@ ms.reviewer: johnhart, hulopesv
 ms.author: v-sidong
 author: sevend2
 ---
-# Troubleshooting Web Deploy problems with Visual Studio
+# Troubleshoot Web Deploy problems with Visual Studio
 
 This article helps you troubleshoot a series of errors when trying to publish from Visual Studio to a server that hasn't been correctly configured via Web Deploy. Although the article is written for specific product versions, the concepts could be applied to newer versions as well.
 
