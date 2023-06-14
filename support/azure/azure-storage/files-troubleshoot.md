@@ -33,7 +33,7 @@ If you encounter problems with Azure Files, start with these steps. You can also
 
 ### Check DNS resolution and connectivity to your Azure file share
 
-The most common problem encountered by Azure Files customers is that mounting or accessing the Azure file share fails because of an incorrect networking configuration. This can happen with any of the three file-sharing protocols Azure Files supports: SMB, NFS, and FileREST.
+The most common problem encountered by Azure Files customers is that mounting or accessing the Azure file share fails because of an incorrect networking configuration. This can happen with any of the three file-sharing protocols Azure Files supports: Server Message Block (SMB), Network File System (NFS), and FileREST.
 
 The following table provides the SMB, NFS, and FileREST requirements for which of the network endpoints of a storage account they can use and which port that endpoint can be accessed over. To learn more about network endpoints, see [Azure Files networking considerations](/azure/storage/files/storage-files-networking-overview).
 
@@ -92,7 +92,7 @@ IP4Address : x.x.x.x
 If you're trying to access the public endpoint of a storage account that has one or more private endpoints configured, you would expect to see a result that looks something like the following:
 
 > [!NOTE]
-> An additional CNAME record for `mystorageaccount.privatelink.file.core.windows.net` has been inserted in between the normal FQDN of the storage account and the name of the storage cluster. This enables name resolution to the public endpoint's IP address when the user is accessing from the internet and resolution to the private endpoint's IP address when the user is accessing from inside an Azure virtual network (or peered network).
+> An additional Canonical Name (CNAME) record for `mystorageaccount.privatelink.file.core.windows.net` has been inserted in between the normal FQDN of the storage account and the name of the storage cluster. This enables name resolution to the public endpoint's IP address when the user is accessing from the internet and resolution to the private endpoint's IP address when the user is accessing from inside an Azure virtual network (or peered network).
 
 ```output
 Name       : mystorageaccount.file.core.windows.net
