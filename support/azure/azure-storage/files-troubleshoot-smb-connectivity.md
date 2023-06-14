@@ -20,9 +20,9 @@ This article lists common problems that might occur when you try to connect to a
 
 | File share type | SMB | NFS |
 |-|:-:|:-:|
-| Standard file shares (GPv2), LRS/ZRS | :::image type="content" source="media/files-troubleshoot-smb-connectivity/yes-icon.png" alt-text="Screenshot that shows the 'Yes' icon." border="false"::: | :::image type="content" source="media/files-troubleshoot-smb-connectivity/no-icon.png" alt-text="Screenshot that shows the 'No' icon." border="false"::: |
-| Standard file shares (GPv2), GRS/GZRS | :::image type="content" source="media/files-troubleshoot-smb-connectivity/yes-icon.png" alt-text="Screenshot that shows the 'Yes' icon." border="false"::: | :::image type="content" source="media/files-troubleshoot-smb-connectivity/no-icon.png" alt-text="Screenshot that shows the 'No' icon." border="false"::: |
-| Premium file shares (FileStorage), LRS/ZRS | :::image type="content" source="media/files-troubleshoot-smb-connectivity/yes-icon.png" alt-text="Screenshot that shows the 'Yes' icon." border="false"::: | :::image type="content" source="media/files-troubleshoot-smb-connectivity/no-icon.png" alt-text="Screenshot that shows the 'No' icon." border="false"::: |
+| Standard file shares (GPv2), LRS/ZRS | :::image type="icon" source="media/files-troubleshoot-smb-connectivity/yes-icon.png" border="false"::: | :::image type="icon" source="media/files-troubleshoot-smb-connectivity/no-icon.png" border="false"::: |
+| Standard file shares (GPv2), GRS/GZRS | :::image type="icon" source="media/files-troubleshoot-smb-connectivity/yes-icon.png" border="false"::: | :::image type="icon" source="media/files-troubleshoot-smb-connectivity/no-icon.png" border="false"::: |
+| Premium file shares (FileStorage), LRS/ZRS | :::image type="icon" source="media/files-troubleshoot-smb-connectivity/yes-icon.png" border="false"::: | :::image type="icon" source="media/files-troubleshoot-smb-connectivity/no-icon.png" border="false"::: |
 
 ## Can't connect to or mount an Azure file share
 
@@ -54,7 +54,7 @@ Windows 8, Windows Server 2012, and later versions of each system negotiate requ
 
 Network traffic is denied if the virtual network (VNET) and firewall rules are configured on the storage account unless the client IP address or virtual network is allow-listed.
 
-#### Solution for cause 2
+#### Solution for Cause 2
 
 Verify that the virtual network and firewall rules are configured properly on the storage account. To test if the virtual network or firewall rules are causing the issue, temporarily change the setting on the storage account to **Allow access from all networks**. To learn more, see [Configure Azure Storage firewalls and virtual networks](/azure/storage/common/storage-network-security).
 
@@ -62,7 +62,7 @@ Verify that the virtual network and firewall rules are configured properly on th
 
 If end users are accessing the Azure file share using Active Directory (AD) or Azure Active Directory Domain Services (Azure AD DS) authentication, access to the file share fails with the "Access is denied" error if share-level permissions are incorrect.
 
-#### Solution for cause 3
+#### Solution for Cause 3
 
 Validate that permissions are configured correctly:
 
@@ -119,7 +119,7 @@ TcpTestSucceeded : True
 > [!Note]  
 > The command above returns the current IP address of the storage account. This IP address isn't guaranteed to remain the same and may change at any time. Don't hardcode this IP address into any scripts or a firewall configuration.
 
-#### Solutions for cause 1
+#### Solutions for Cause 1
 
 ##### Solution 1: Use Azure File Sync as a QUIC endpoint
 
@@ -145,7 +145,7 @@ To determine whether this is the cause of the error, verify that the `LmCompatib
 
 For more information, see [LmCompatibilityLevel](/previous-versions/windows/it-pro/windows-2000-server/cc960646(v=technet.10)).
 
-##### Solution for cause 2
+##### Solution for Cause 2
 
 Revert the `LmCompatibilityLevel` registry subkey to the default value of 3.
 
@@ -239,7 +239,7 @@ For security reasons, connections to Azure file shares are blocked if the commun
 
 To learn more, see [Prerequisites for mounting an Azure file share with Linux and the cifs-utils package](/azure/storage/files/storage-how-to-use-files-linux#prerequisites).
 
-##### Solution for cause 1
+##### Solution for Cause 1
 
 1. Connect from a client that supports SMB encryption or connect from a virtual machine in the same datacenter as the Azure storage account that's used for the Azure file share.
 2. Verify the [Secure transfer required](/azure/storage/common/storage-require-secure-transfer) setting is disabled on the storage account if the client doesn't support SMB encryption.
@@ -248,7 +248,7 @@ To learn more, see [Prerequisites for mounting an Azure file share with Linux an
 
 If the VNETs and firewall rules are configured on the storage account, network traffic will be denied access unless the client IP address or virtual network is allowed access.
 
-##### Solution for cause 2
+##### Solution for Cause 2
 
 Verify that the VNETs and firewall rules are configured properly on the storage account. To test if virtual networks or firewall rules are causing the issue, temporarily change the setting on the storage account to **Allow access from all networks**. To learn more, see [Configure Azure Storage firewalls and virtual networks](/azure/storage/common/storage-network-security).
 
@@ -305,13 +305,13 @@ When you try to access or delete an Azure file share using the Azure portal, you
 
 #### Cause 1: Virtual networks or firewall rules are enabled on the storage account
 
-##### Solution for cause 1
+##### Solution for Cause 1
 
 Verify that virtual networks and firewall rules are configured properly on the storage account. To test if virtual networks or firewall rules are causing the issue, temporarily change the setting on the storage account to **Allow access from all networks**. For more information, see [Configure Azure Storage firewalls and virtual networks](/azure/storage/common/storage-network-security).
 
 #### Cause 2: Your user account doesn't have access to the storage account
 
-##### Solution for cause 2
+##### Solution for Cause 2
 
 Browse to the storage account in which the Azure file share is located, select **Access control (IAM)**, and verify that your user account has access to the storage account. For more information, see [How to secure your storage account with Azure role-based access control (Azure RBAC)](/azure/storage/blobs/security-recommendations#data-protection).
 
@@ -452,7 +452,7 @@ LeaseStatus           : Locked
 
 To remove a lease from a file, you can release the lease or break the lease. To release the lease, you need the LeaseId of the lease, which you set when you create the lease. You don't need the LeaseId to break the lease.
 
-The following example shows how to break the lease for the file indicated in Cause 2 (this example continues with the PowerShell variables from Cause 2):
+The following example shows how to break the lease for the file indicated in "Cause 2" (this example continues with the PowerShell variables from "Cause 2"):
 
 ```powershell
 $leaseClient = [Azure.Storage.Files.Shares.Specialized.ShareLeaseClient]::new($fileClient)
@@ -619,7 +619,7 @@ Conditional headers aren't yet supported. Applications implementing them need to
 
 When a new file is uploaded, the **CacheControl** property by default is **no-cache**. To force the application to request the file every time, the file's **CacheControl** property needs to be updated from **no-cache** to **no-cache, no-store, must-revalidate**. This can be achieved using Azure Storage Explorer.
 
-:::image type="content" source="media/files-troubleshoot-smb-connectivity/storage-explorer-cache.png" alt-text="Screeshot that shows the CacheControl file property.":::
+:::image type="content" source="media/files-troubleshoot-smb-connectivity/storage-explorer-cache.png" alt-text="Screeshot that shows the CacheControl file property." lightbox="media/files-troubleshoot-smb-connectivity/storage-explorer-cache.png":::
 
 ## See also
 
