@@ -7,7 +7,7 @@ editor: v-jsitser
 ms.reviewer: nigreenf
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-extensions-add-ons
-ms.date: 06/13/2023
+ms.date: 06/14/2023
 ---
 
 # Troubleshoot Dapr extension installation errors
@@ -106,7 +106,7 @@ You encounter the following error:
 
 > 0/4 nodes are available: 1 node(s) were unschedulable, 3 node(s) had volume node affinity conflict. preemption: 0/4 nodes are available: 4 Preemption is not helpful for scheduling.
 
-This issue might happen when the placement server pod tries to use the persistent volume that's created in a different zone from the placement pod itself.
+This issue might happen when the placement server pod tries to use the persistent volume that's created in a different zone from the placement server pod itself.
 
 ### Solution 5: Install Dapr in multiple availability zones or limit the placement service to a particular availability zone
 
