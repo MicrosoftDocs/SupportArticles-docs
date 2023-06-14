@@ -1,13 +1,10 @@
 ---
 title: Login windows keep appearing in Power Automate for desktop
 description: Provides a resolution for the issue where login windows of Power Automate for desktop keep appearing.
-ms.reviewer: pefelesk
-author: georgiostrantzas
-ms.author: gtrantzas
+ms.reviewer: pefelesk, nimoutzo, dipapa, iomavrid
 ms.date: 02/14/2023
 ms.subservice: power-automate-desktop-flows
 ---
-
 # Login windows keep appearing
 
 This article provides a resolution for the issue where login windows of Power Automate for desktop keep appearing when you sign in to Power Automate for desktop.
