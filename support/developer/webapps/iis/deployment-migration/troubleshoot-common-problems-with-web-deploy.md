@@ -140,6 +140,6 @@ For certain common error cases, Web Deploy will show a message and an error code
 | **Root cause** | A non-administrator user tried to perform a restricted action with a provider. This usually indicates that a matching delegation rule wasn't found. Either the username, provider, operation, or provider path is wrong. |
 | **Fix/Workaround** | The workaround is to fix the delegation rule or create one. For more information about delegation rules, see [Configure the Web Deployment Handler](/iis/publish/using-web-deploy/configure-the-web-deployment-handler). |
 
-## More information
+## Errors when publishing from Visual Studio
 
 For more information on troubleshooting common errors that you may encounter when trying to publish from Visual Studio to a server that hasn't been correctly configured via Web Deploy, see [Troubleshooting Web Deploy problems with Visual Studio](troubleshoot-web-deploy-problems-with-visual-studio.md).
