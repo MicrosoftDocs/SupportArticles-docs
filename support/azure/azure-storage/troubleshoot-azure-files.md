@@ -266,7 +266,7 @@ Wait for the previous modify policy operation to finish and retry later.
 
 Wait for the other in-progress operation to complete and retry later.
 
-## Common Soft Delete Related Errors
+## Common soft delete-related errors
 
 ### UserErrorRestoreAFSInSoftDeleteState - This restore point is not available as the snapshot associated with this point is in a File Share that is in soft-deleted state
 
