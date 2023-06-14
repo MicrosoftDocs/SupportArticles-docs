@@ -89,7 +89,7 @@ Unlike SMB, NFS doesn't have user-based authentication. The authentication for a
 
 ### Cause 2: Secure transfer required is enabled
 
-NFS Azure file shares don't currently support double encryption. Azure provides a layer of encryption for all data in transit between Azure data centers using MACSec. You can only access NFS shares from trusted virtual networks and over VPN tunnels. No extra transport layer encryption is available on NFS shares.
+NFS Azure file shares don't currently support double encryption. Azure provides a layer of encryption for all data in transit between Azure datacenters using MACSec. You can only access NFS shares from trusted virtual networks and over VPN tunnels. No extra transport layer encryption is available on NFS shares.
 
 ### Solution
 
@@ -99,7 +99,7 @@ Disable **Secure transfer required** in your storage account's configuration bla
 
 ### Cause 3: nfs-utils, nfs-client, or nfs-common package isn't installed
 
-Before running the `mount` command, install the nfs-utils, nfs-client, or the nfs-common package.
+Before running the `mount` command, install the `nfs-utils`, `nfs-client`, or the `nfs-common` package.
 
 To check if the NFS package is installed, run the following commands:
 
