@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot native memory leak in an IIS 7.x Application Pool
+title: Troubleshoot native memory leak in an IIS 7.x application pool
 description: This article describes memory leak in an IIS application pool and helps identify the cause of issue.
 ms.date: 04/09/2012
 ms.custom: sap:Health, diagnostic, and performance features
@@ -8,7 +8,7 @@ ms.reviewer: johnhart, hulopesv
 ms.author: v-sidong
 author: sevend2
 ---
-# Troubleshoot native memory leak in an IIS 7.x Application Pool
+# Troubleshoot native memory leak in an IIS 7.x application pool
 
 This article helps you to identify the cause of native memory leak in an IIS application pool.
 
