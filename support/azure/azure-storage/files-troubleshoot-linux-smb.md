@@ -21,9 +21,9 @@ You can use [AzFileDiagnostics](https://github.com/Azure-Samples/azure-files-sam
 
 | File share type | SMB | NFS |
 |-|:-:|:-:|
-| Standard file shares (GPv2), LRS/ZRS | :::image type="content" source="media/files-troubleshoot-smb-authentication/yes-icon.png" alt-text="Screenshot that shows the 'Yes' icon." border="false"::: | :::image type="content" source="media/files-troubleshoot-smb-authentication/no-icon.png" alt-text="Screenshot that shows the 'No' icon." border="false"::: |
-| Standard file shares (GPv2), GRS/GZRS | :::image type="content" source="media/files-troubleshoot-smb-authentication/yes-icon.png" alt-text="Screenshot that shows the 'Yes' icon." border="false"::: | :::image type="content" source="media/files-troubleshoot-smb-authentication/no-icon.png" alt-text="Screenshot that shows the 'No' icon." border="false"::: |
-| Premium file shares (FileStorage), LRS/ZRS | :::image type="content" source="media/files-troubleshoot-smb-authentication/yes-icon.png" alt-text="Screenshot that shows the 'Yes' icon." border="false"::: | :::image type="content" source="media/files-troubleshoot-smb-authentication/no-icon.png" alt-text="Screenshot that shows the 'No' icon." border="false"::: |
+| Standard file shares (GPv2), LRS/ZRS | :::image type="icon" source="media/files-troubleshoot-smb-authentication/yes-icon.png" border="false"::: | :::image type="icon" source="media/files-troubleshoot-smb-authentication/no-icon.png" border="false"::: |
+| Standard file shares (GPv2), GRS/GZRS | :::image type="icon" source="media/files-troubleshoot-smb-authentication/yes-icon.png" border="false"::: | :::image type="icon" source="media/files-troubleshoot-smb-authentication/no-icon.png" border="false"::: |
+| Premium file shares (FileStorage), LRS/ZRS | :::image type="icon" source="media/files-troubleshoot-smb-authentication/yes-icon.png" border="false"::: | :::image type="icon" source="media/files-troubleshoot-smb-authentication/no-icon.png" border="false"::: |
 
 ## <a id="timestampslost"></a>Time stamps were lost in copying files from Windows to Linux
 
