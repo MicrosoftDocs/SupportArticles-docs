@@ -3,7 +3,7 @@ title: Azure Files performance troubleshooting guide
 description: Troubleshoot performance issues with Azure file shares and discover potential causes and associated workarounds for these problems.
 author: khdownie
 ms.service: storage
-ms.date: 06/08/2023
+ms.date: 06/14/2023
 ms.author: kendownie
 ms.subservice: files
 #Customer intent: As a system admin, I want to troubleshoot performance issues with Azure file shares to improve performance for applications and users.
@@ -45,7 +45,7 @@ HKEY_Local_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameter
 ```
 
 > [!Note]
-> As of December 2015, Windows Server 2012 R2 images in Azure Marketplace have hotfix KB3114025 installed by default.
+> Starting from December 2015, Windows Server 2012 R2 images in Azure Marketplace have hotfix KB3114025 installed by default.
 
 ### [Linux](#tab/linux)
 
@@ -292,9 +292,9 @@ You might see slow performance when you try to transfer files to the Azure Files
         - [Fpart](https://github.com/martymac/fpart) - Sorts files and packs them into partitions.
         - [Fpsync](https://github.com/martymac/fpart/blob/master/tools/fpsync) - Uses Fpart and a copy tool to spawn multiple instances to migrate data from src_dir to dst_url.
         - [Multi](https://github.com/pkolano/mutil) - Multi-threaded cp and md5sum based on GNU coreutils.
-- Setting the file size in advance, instead of making every write an extending write, helps improve copy speed in scenarios where the file size is known. If extending writes needs to be avoided, you can set a destination file size with the `truncate --size <size> <file>` command. After that, the `dd if=<source> of=<target> bs=1M conv=notrunc`command will copy a source file without having to repeatedly update the size of the target file.
+- Setting the file size in advance, instead of making every write an extending write, helps improve copy speed in scenarios where the file size is known. If extending writes need to be avoided, you can set a destination file size with the `truncate --size <size> <file>` command. After that, the `dd if=<source> of=<target> bs=1M conv=notrunc`command will copy a source file without having to repeatedly update the size of the target file.
 
-    For example, you can set the destination file size for every file you want to copy (assume a share is mounted under `/mnt/share`):
+    For example, you can set the destination file size for every file you want to copy (assume a share is mounted under */mnt/share*):
 
     `for i in `` find * -type f``; do truncate --size ``stat -c%s $i`` /mnt/share/$i; done`
 
