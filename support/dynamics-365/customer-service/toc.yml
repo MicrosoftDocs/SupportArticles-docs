@@ -67,6 +67,10 @@
           items:
             - name: '"Modern flow is not valid for ExecuteWorkflow" error'
               href: service-level-agreements/sla-modern-flow-not-valid.md
+            - name: SLA workflow must be in published state
+              href: service-level-agreements/sla-workflow-published-state-error.md
+            - name: Disabled users cannot access the system
+              href: service-level-agreements/sla-users-cannot-access-system.md
         - name: Other SLA issues
           items:
             - name: Can't delete managed solution consisting of SLA-enabled entity
