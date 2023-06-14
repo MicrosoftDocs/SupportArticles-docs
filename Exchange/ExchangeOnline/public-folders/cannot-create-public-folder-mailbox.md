@@ -25,15 +25,15 @@ ms.date: 06/14/2023
 
 When you try to create a public folder mailbox in Microsoft Exchange Online, the operation fails and you receive one of the following error messages.
 
-### Error message 1
+### Error 1
 
 > The following error occurred during Validation in agent "Provisioning Policy Agent": "The number of "Mailbox" objects in the organization "\<organization name\>" has reached or exceeded the resource quota (100) enforced by policy "Recipient Quota Policy: PublicFolderMailboxHierarchyCountQuota"."
 
-### Error message 2
+### Error 2
 
 > The following error occurred during Validation in agent "Provisioning Policy Agent": "The number of "Mailbox" objects in the organization "\<organization name\>" has reached or exceeded the resource quota (100) enforced by policy "Recipient Quota Policy: PublicFolderMailboxCountQuota"."
 
-### Error message 3
+### Error 3
 
 > The following error occurred during Validation in agent "Provisioning Policy Agent": "The number of "Mailbox" objects in the organization "\<organization name\>" has reached or exceeded the resource quota (1000) enforced by policy "Recipient Quota Policy: PublicFolderMailboxCountQuota"."
 
@@ -41,17 +41,17 @@ The issue occurs regardless of whether you try to create the public folder mailb
 
 ## Cause
 
-### Cause 1
+### Cause for error 1
 
-When you create a new public folder mailbox, Exchange Online automatically configures it as a hierarchy-serving mailbox. However, for each tenant, Exchange Online [limits](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#storage-limits) to 100 the number of public folder mailboxes that are [hierarchy-serving](https://techcommunity.microsoft.com/t5/exchange-team-blog/introduction-to-public-folder-hierarchy-sync/ba-p/609344#toc-hId--55837873). You receive error message 1 if you try to create another hierarchy-serving public folder mailbox after your tenant reaches the limit.
+When you create a new public folder mailbox, Exchange Online automatically configures it as a hierarchy-serving mailbox. However, for each tenant, Exchange Online [limits](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#storage-limits) to 100 the number of public folder mailboxes that are [hierarchy-serving](https://techcommunity.microsoft.com/t5/exchange-team-blog/introduction-to-public-folder-hierarchy-sync/ba-p/609344#toc-hId--55837873). Error 1 occurs if you try to create another hierarchy-serving public folder mailbox after your tenant reaches the limit.
 
-### Cause 2
+### Cause for error 2
 
-For each tenant, Exchange Online [limits](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#storage-limits) to 1,000 the total number of public folder mailboxes. However, your tenant has a lower limit of 100. You receive error message 2 if you try to create another public folder mailbox after your tenant reaches the lower limit.
+For each tenant, Exchange Online [limits](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#storage-limits) to 1,000 the total number of public folder mailboxes. However, your tenant has a lower limit of 100. Error 2 occurs if you try to create another public folder mailbox after your tenant reaches the lower limit.
 
-### Cause 3
+### Cause for error 3
 
-For each tenant, Exchange Online [limits](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#storage-limits) to 1,000 the total number of public folder mailboxes. You receive error message 3 if you try to create another public folder mailbox after your tenant reaches the limit.
+For each tenant, Exchange Online [limits](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#storage-limits) to 1,000 the total number of public folder mailboxes. Error 3 occurs if you try to create another public folder mailbox after your tenant reaches the limit.
 
 ## Solution
 
