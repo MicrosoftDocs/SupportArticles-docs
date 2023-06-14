@@ -14,7 +14,7 @@ This article helps you troubleshoot a series of errors when trying to publish fr
 
 To collect the screenshots and errors below, use a new ASP.Net MVC 3 project in Visual Studio 2010 SP1. The destination server was a clean install of Windows Server 2008 R2 SP1 with Internet Information Services (IIS). No additional configuration was done.
 
-## "Unable to connect" errors
+## Cannot connect to the server
 
 The first error you're likely to encounter will look something like the screenshot below in Visual Studio's output window. For improved readability, the full text of the message is provided below the screenshot:
 
@@ -45,11 +45,13 @@ If they aren't there, you need to install the Management Service through the **A
 > [!NOTE]
 > After you install the Management Service, you need to start it, as it isn't started automatically. To do this, double-click the **Management Service** icon. After the **Management Service** pane is displayed, select **Start** in the **Actions** pane on the right.
 
-Has the web management service been allowed through Windows Firewall? When you install the Web Management Service on the server, an inbound firewall rule is named Web Management Service (HTTP Traffic-In). Verify that this rule is enabled by going to **Start** > **AdministrativeTools** > **Windows Firewall with Advanced Security**. Select **Inbound Rules** and find the **Web Management** rule in the list. It should be enabled for all profiles. If you're using a third-party firewall, you need to ensure that inbound connections on port 8172 are allowed.
-
 **Is the service URL correct?**
 
 By default, the Web Management Service listens on port 8172, but this can be changed. The easiest way to check what port is being used is to open the **Management Service** pane as described above, and look at the IP and port information in the Connections section. If the port has been changed to something other than 8172, you'll need to ensure the new port is allowed through the firewall, and update the service URL in Visual Studio's publishing settings to use the new port.
+
+## (403) Forbidden
+
+Once the Web Management Service is installed, Visual Studio may show the following error:
 
 :::image type="content" source="media/troubleshoot-web-deploy-problems-with-visual-studio/troubleshooting-web-deploy-problems-with-visual-studio-1118.png" alt-text="Screenshot that shows the Error List screen in Visual Studio." lightbox="media/troubleshoot-web-deploy-problems-with-visual-studio/troubleshooting-web-deploy-problems-with-visual-studio-1118.png":::
 
@@ -79,9 +81,17 @@ This is the most likely reason for the 403.6 response. Double-click the **Manage
 
 :::image type="content" source="media/troubleshoot-web-deploy-problems-with-visual-studio/management-service-configured-allow-remote-connections.png" alt-text="Screenshot that shows the Management Service dialog box." lightbox="media/troubleshoot-web-deploy-problems-with-visual-studio/management-service-configured-allow-remote-connections.png":::
 
+**Has the web management service been allowed through Windows Firewall?**
+
+When you install the Web Management Service on the server, an inbound firewall rule is named Web Management Service (HTTP Traffic-In). Verify that this rule is enabled by going to **Start** > **AdministrativeTools** > **Windows Firewall with Advanced Security**. Select **Inbound Rules** and find the **Web Management** rule in the list. It should be enabled for all profiles.
+
+If you're using a third-party firewall, you need to ensure that inbound connections on port 8172 are allowed.
+
 **Have IP restrictions been configured for the Management Service?**
 
 The other common reason you could get a 403 error is if the management service has been configured to deny the IP of the client. By default, it's configured to allow all IPs as long as remote connections are allowed. You can check for IP restrictions by double-clicking the **Management Service** icon. Any configured IP restriction rules are at the bottom of the page in the IPv4 Address Restrictions.
+
+## (404) Not Found
 
 :::image type="content" source="media/troubleshoot-web-deploy-problems-with-visual-studio/ip-restrictions-configured-management-service.png" alt-text="Screenshot that shows the Error List page in Visual Studio. Error Details are in focus." lightbox="media/troubleshoot-web-deploy-problems-with-visual-studio/ip-restrictions-configured-management-service.png":::
 
@@ -96,7 +106,7 @@ On the destination computer, make sure that Web Deploy is installed and that the
 The remote server returned an error: (404) Not Found.
 ```
 
-The 404 error indicates that Web Deploy was able to contact the Web Management Service on the server but couldn't find what it needed. The first thing to do is confirm what resource Web Deploy tried to connect to. You should see an entry in the `WMSVC` log that looks like the following one:
+The 404 error indicates that Web Deploy was able to contact the Web Management Service on the server but couldn't find what it needed. The first thing to do is confirm what resource Web Deploy tried to connect to. If you look in the Web Management Service log under *%SystemDrive%\\Inetpub\\logs\\WMSvc* on the destination server, you see an entry in the `WMSVC` log that looks like the following one:
 
 ```Output
 2011-05-12 15:21:50 192.168.0.211 POST /msdeploy.axd site=default%20web%20site 8172 - 192.168.0.203 - 404 7 0 1606
@@ -116,7 +126,7 @@ If Web Deploy is installed and you still get this error, make sure the IIS 7 Dep
 
 Select **Next** to complete the Wizard. You need to restart the web management service after making this change.
 
-## Errors with delegation rules
+## (401) Unauthorized
 
 Once Web Deploy and the Web Management Service are correctly configured, you need to set up delegation rules to allow users to update content. For permissions issues, there are several different errors you may see in Visual Studio. For example:
 
@@ -151,6 +161,8 @@ The highlighted http status in the Visual Studio output is an Access Denied erro
 ```
 
 To allow this user to publish, you'll need to set up delegation per the instructions at [Configure the Web Deployment Handler](/iis/publish/using-web-deploy/configure-the-web-deployment-handler).
+
+## Operation not authorized
 
 If the account is able to log in but hasn't been granted the rights needed to publish the content, you'll see the following error message:
 
@@ -236,7 +248,15 @@ System.UnauthorizedAccessException: Attempted to perform an unauthorized operati
 
 From this output, we can see that `User1` doesn't have the rights to set security information. In this case, the user doesn't have "Modify permissions" on the content. Granting "Change Permissions" to the content resolves the problem.
 
-### Other resources
+## Others
+
+If you can't browse a .NET 4.0 application after it has been successfully published, it could be that .NET 4.0 hasn't been registered correctly with IIS. Other symptoms are that .NET 4.0 is installed, but there are no .NET 4.0 application pools or handler mappings in IIS. This happens when .NET 4.0 is installed before IIS is installed. To fix this problem, start an elevated command prompt and run this command:
+
+```Output
+%systemdrive%\Windows\Microsoft.NET\Framework64\v4.0.30319\aspnet_regiis.exe -iru
+```
+
+## More information
 
 - [Configure the Web Deployment Handler](/iis/publish/using-web-deploy/configure-the-web-deployment-handler)
 - [HTTP status codes in IIS](../www-administration-management/http-status-code.md)
