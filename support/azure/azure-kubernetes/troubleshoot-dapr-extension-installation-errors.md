@@ -100,13 +100,13 @@ You try to install the Dapr extension for AKS or Arc for Kubernetes, but you rec
 
 Uninstall the Dapr OSS before you install the Dapr extension. For more information, see [Migrate from Dapr OSS to the Dapr extension for AKS](/azure/aks/dapr-migration).
 
-## Scenario 5: Placement server pod is in bad state
+## Scenario 5: The placement server pod is in a bad state
 
 You encounter the following error:
 
 > 0/4 nodes are available: 1 node(s) were unschedulable, 3 node(s) had volume node affinity conflict. preemption: 0/4 nodes are available: 4 Preemption is not helpful for scheduling.
 
-This might happen when the placement server pod tries to use the persistent volume that's created in a different zone from the placement pod itself.
+This issue might happen when the placement server pod tries to use the persistent volume that's created in a different zone from the placement pod itself.
 
 ### Solution 5: Install Dapr in multiple availability zones or limit the placement service to a particular availability zone
 
@@ -118,16 +118,16 @@ To resolve this issue, use one of the following methods:
 
    ```azurecli
    az k8s-extension create --cluster-type managedClusters
-   --cluster-name XXX
-   --resource-group XXX
-   --name XXX
+   --cluster-name <clustername>
+   --resource-group <resourcegroup>
+   --name <name>
    --extension-type Microsoft.Dapr
-   --auto-upgrade-minor-version XXX
-   --version XXX
+   --auto-upgrade-minor-version <minorversion>
+   --version <version>
    --configuration-settings "dapr_placement.volumeclaims.storageClassName=zone-restricted"
    ```
 
-    Here is an example for creating the custom storage class:
+    Here's an example of creating a custom storage class:
     
     ```yaml
     kind: StorageClass
