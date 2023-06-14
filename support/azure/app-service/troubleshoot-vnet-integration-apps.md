@@ -1,7 +1,7 @@
 ---
 title: Azure App Service virtual network integration troubleshooting guide
 description: How to troubleshoot virtual network integration on Windows and Linux apps.
-ms.date: 10/21/2022
+ms.date: 06/14/2023
 ms.service: app-service
 author: hepiet
 ms.author: hepiet
@@ -106,7 +106,7 @@ curl hostname:[port]
 A number of factors can prevent your app from reaching a specific host and port. Most of the time, it's one of the following:
 
 * **A firewall is in the way.** If you have a firewall in the way, you hit the TCP timeout. The TCP timeout is 21 seconds in this case. Use the **tcpping** tool to test connectivity. TCP timeouts can be caused by many things beyond firewalls, but start there.
-* **DNS isn't accessible.** The DNS timeout is 3 seconds per DNS server. If you have two DNS servers, the timeout is 6 seconds. Use nameresolver to see if DNS is working. You can't use nslookup, because that doesn't use the DNS your virtual network is configured with. If inaccessible, you could have a firewall or NSG blocking access to DNS or it could be down. Some DNS architectures with custom DNS servers can be complex and sometimes they can timeout, to help analyse if that is the case environment variable WEBSITE_DNS_ATTEMPTS can be set. For further information about DNS in App Services please check the following link: [DNS Resolution in App Services](/azure/app-service/overview-name-resolution) 
+* **DNS isn't accessible.** The DNS timeout is 3 seconds per DNS server. If you have two DNS servers, the timeout is 6 seconds. Use nameresolver to see if DNS is working. You can't use nslookup, because that doesn't use the DNS your virtual network is configured with. If inaccessible, you could have a firewall or NSG blocking access to DNS or it could be down. Some DNS architectures that use custom DNS servers can be complex, and may occasionally experience timeouts. To determine if this's the case, the environment variable `WEBSITE_DNS_ATTEMPTS` can be set. For more information about DNS in App Services, see [Name resolution (DNS) in App Service](/azure/app-service/overview-name-resolution).
 
 If those items don't answer your problems, look first for things like:
 
@@ -159,47 +159,57 @@ You can also use the Network troubleshooter to troubleshoot the connection issue
 
 :::image type="content" source="./media/troubleshoot-vnet-integration-apps/deletion-issue.png" alt-text="Screenshot that shows how to run troubleshooter for subnet or virtual network deletion issues.":::
 
-## Collecting Network Traces
+## Collect network traces
 
-In order to analyse an issue could be helpful to collect Network Traces. In App Services network traces are taken from the process of the application so reproducing the issue at the same time as the network trace collection started is essential to obtain the correct information.
+Collecting network traces can be helpful in analyzing issues. In Azure App Services, network traces are taken from the application process. To obtain accurate information, reproduce the issue at the same time as the network trace collection is started.
 
-For Windows App Services, select **Diagnose and Solve Problems** and proceed with the search of **Collect Network Trace**.
+### Windows App Services
 
-:::image type="content" source="./media/troubleshoot-vnet-integration-apps/collect-networktrace-windows.png" alt-text="Screenshot that shows how to capture Network trace.":::
+To collect network traces for Windows App Services, follow these steps:
 
-The resulting files from the network trace for each instance can be found under D:\ or C:\home\LogFiles\networktrace under Kudu: https://[sitename].scm.azurewebsites.net.
+1. In the Azure portal, navigate to your web app.
+1. In the left navigation, select **Diagnose and Solve Problems**.
+1. In the search box, type *Collect Network Trace* and select **Collect Network Trace** to start the network trace collection.
 
-For Linux App Services that don't use custom containers following commands can be used to install **tcpdump** and capture the trace by connecting via SSH to the container
+:::image type="content" source="media/troubleshoot-vnet-integration-apps/collect-networktrace-windows.png" alt-text="Screenshot that shows how to capture a network trace." lightbox="media/troubleshoot-vnet-integration-apps/collect-networktrace-windows.png":::
 
-```SSH
-apt-get update
-apt install tcpdump
-```
+To get the trace file for each instance serving a Web App, on your browser, go to the Kudo console for the Web App (`https://<sitename>.scm.azurewebsites.net`). Download the trace file from the *C:\home\LogFiles\networktrace* or *D:\home\LogFiles\networktrace* folder.
 
-After these steps, we need to identify the interface that is up and running, for example, eth0 and then use the name of the specific interface for further troubleshooting.
+### Linux App Services
 
-```SSH
-root@9b24ad3dc187:/home# tcpdump -D
+To collect network traces for Linux App Services that don't use custom container, follow these steps:
 
-1.eth0 [Up, Running, Connected]
-2.any (Pseudo-device that captures on all interfaces) [Up, Running]
-3.lo [Up, Running, Loopback]
-4.bluetooth-monitor (Bluetooth Linux Monitor) [Wireless]
-5.nflog (Linux netfilter log (NFLOG) interface) [none]
-6.nfqueue (Linux netfilter queue (NFQUEUE) interface) [none]
-7.dbus-system (D-Bus system bus) [none]
-8.dbus-session (D-Bus session bus) [none]
+1. Install the tcpdump command line utility by running the following commands:
 
-```
+   ```bash
+   apt-get update
+   apt install tcpdump
+   ```
+1. Connect to the container via the Secure Shell Protocol (SSH).
 
-Then the capture can be started with the following command, replacing the interface with the name:
+1. Identify the interface that's up and running by running the following command, for example, *eth0*.
 
-```SSH
-root@9b24ad3dc187:/home# tcpdump -i eth0 -w networktrace.pcap
-```
+   ```bash
+   root@9b24ad3dc187:/home# tcpdump -D
+   
+   1.eth0 [Up, Running, Connected]
+   2.any (Pseudo-device that captures on all interfaces) [Up, Running]
+   3.lo [Up, Running, Loopback]
+   4.bluetooth-monitor (Bluetooth Linux Monitor) [Wireless]
+   5.nflog (Linux netfilter log (NFLOG) interface) [none]
+   6.nfqueue (Linux netfilter queue (NFQUEUE) interface) [none]
+   7.dbus-system (D-Bus system bus) [none]
+   8.dbus-session (D-Bus session bus) [none]
+   ```
+1. Start the network trace collection by running the following command:
 
-Downloading the trace can be done through any traditional method connecting to the app via Kudu (FTP, Kudu API request...). As an example a request to the following URL would trigger the download of the file.
+   ```bash
+   root@9b24ad3dc187:/home# tcpdump -i eth0 -w networktrace.pcap
+   ```
+   Replace `eth0` with the name of the actual interface.
+   
+To download the trace file, connect to the Web App via some methods such as Kudu, FTP, a Kudu API request. Here's a request examle of triggering the file download:
 
-https://[sitename].scm.azurewebsites.net/api/vfs/<path to file from /home>/filenamex
+`https://<sitename>.scm.azurewebsites.net/api/vfs/<path to the trace file in the /home directory>/filename`
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
