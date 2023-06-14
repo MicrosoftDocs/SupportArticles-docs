@@ -188,5 +188,5 @@ An example is shown in the following illustration:
 
 For more information about Failed Request Tracing in IIS, see the following articles:
 
-- [Walkthrough: Troubleshooting Failed Requests Using Tracing in IIS 7.0 and Above](/iis/troubleshoot/using-failed-request-tracing/troubleshooting-failed-requests-using-tracing-in-iis-85)
+- [Walkthrough: Troubleshooting Failed Requests Using Tracing in IIS 7.0 and Above](troubleshoot-failed-requests-using-tracing-in-iis-85.md)
 - [Configuration Reference: Trace Failed Requests](/iis/configuration/system.webServer/tracing/traceFailedRequests)
