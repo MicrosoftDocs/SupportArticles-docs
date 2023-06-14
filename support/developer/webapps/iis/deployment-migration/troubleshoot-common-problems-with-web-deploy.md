@@ -47,7 +47,7 @@ For certain common error cases, Web Deploy will show a message and an error code
 
 ### 3. Couldn't install Web Deploy 32-bit version on 64-bit hardware
 
-| **Symptoms** | :::image type="content" source="media/troubleshoot-common-problems-with-web-deploy/could-not-install web-deploy-32-bit-on-64-bit.png" alt-text="Screenshot that shows the Web Deployment Tool Setup dialog box. The text shows that 32-bit version is incompatible with 64-bit Windows." lightbox="media/troubleshoot-common-problems-with-web-deploy/could-not-install web-deploy-32-bit-on-64-bit.png"::: |
+| **Symptoms** | :::image type="content" source="media/troubleshoot-common-problems-with-web-deploy/could-not-install web-deploy-32-bit-on-64-bit.png" alt-text="Screenshot of the Web Deployment Tool Setup dialog box. The text shows that 32-bit version is incompatible with 64-bit Windows." lightbox="media/troubleshoot-common-problems-with-web-deploy/could-not-install web-deploy-32-bit-on-64-bit.png"::: |
 | --- | --- |
 | **Root cause** | Trying to install 32-bit on 64-bit OS is a check inside the Web Deploy MSI that fails because it doesn't support WoW64 mode. |
 | **Fix/Workaround** | Install the same version that matches the architecture of your OS. |
