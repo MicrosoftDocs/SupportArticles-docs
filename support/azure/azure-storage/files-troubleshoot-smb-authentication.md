@@ -9,7 +9,7 @@ ms.subservice: files
 ---
 # Troubleshoot Azure Files identity-based authentication and authorization issues (SMB)
 
-This article lists common problems when using SMB Azure file shares with identity-based authentication. It also provides possible causes and resolutions for these problems. Identity-based authentication isn't currently supported for NFS Azure file shares.
+This article lists common problems when using Server Message Block (SMB) Azure file shares with identity-based authentication. It also provides possible causes and resolutions for these problems. Identity-based authentication isn't currently supported for Network File System (NFS) Azure file shares.
 
 ## Applies to
 
@@ -78,14 +78,14 @@ The cmdlet performs these checks in sequence and provides guidance for failures:
 5. CheckSidHasAadUser: Check that the logged-on AD user is synced to Azure AD. If you want to look up whether a specific AD user is synchronized to Azure AD, you can specify the `-UserName` and `-Domain` in the input parameters.
 6. CheckGetKerberosTicket: Attempt to get a Kerberos ticket to connect to the storage account. If there isn't a valid Kerberos token, run the `klist get cifs/storage-account-name.file.core.windows.net` cmdlet and examine the error code to find the root cause of the ticket retrieval failure.
 7. CheckStorageAccountDomainJoined: Check if the AD authentication has been enabled and the account's AD properties are populated. If not, refer to the instructions [here](/azure/storage/files/storage-files-identity-ad-ds-enable) to enable AD DS authentication on Azure Files.
-8. CheckUserRbacAssignment: Check if the AD identity has the proper RBAC role assignment to provide share-level permission to access Azure Files. If not, refer to the instructions [here](/azure/storage/files/storage-files-identity-ad-ds-assign-permissions) to configure the share-level permission (supported on AzFilesHybrid v0.2.3+ version).
+8. CheckUserRbacAssignment: Check if the AD identity has the proper Role-Based Access Control (RBAC) role assignment to provide share-level permission to access Azure Files. If not, refer to the instructions [here](/azure/storage/files/storage-files-identity-ad-ds-assign-permissions) to configure the share-level permission (supported on AzFilesHybrid v0.2.3+ version).
 9. CheckUserFileAccess: Check if the AD identity has the proper directory/file permission (Windows ACLs) to access Azure Files. If not, refer to the instructions [here](/azure/storage/files/storage-files-identity-ad-ds-configure-permissions) to configure the directory/file level permission (supported on AzFilesHybrid v0.2.3+ version).
 
 ## Unable to configure directory/file level permissions (Windows ACLs) with Windows File Explorer
 
 ### Symptoms
 
-You may experience one of the symptoms described below when trying to configure Windows ACLs with File Explorer on a mounted file share:
+You may experience one of the symptoms described below when trying to configure Windows Access Control Lists (ACLs) with File Explorer on a mounted file share:
 
 - After you select **Edit permission** under the **Security** tab, the **Permission** wizard doesn't load.
 - When you try to select a new user or group, the domain location doesn't display the right AD DS domain.
@@ -101,7 +101,7 @@ We recommend that you [configure directory/file level permissions using icacls](
 
 ### Error: "The directory service was unable to allocate a relative identifier"
 
-This error might occur if a domain controller that holds the RID Master FSMO role is unavailable or was removed from the domain and restored from backup. Confirm that all domain controllers are running and available.
+This error might occur if a domain controller that holds the Relative ID (RID) Master Flexible Single Master Operation (FSMO) role is unavailable or was removed from the domain and restored from backup. Confirm that all domain controllers are running and available.
 
 ### Error: "Cannot bind positional parameters because no names were given"
 
@@ -341,11 +341,11 @@ If you're connecting to a storage account via a private endpoint/private link us
 
 #### Cause
 
-This is because the SMB client has tried to use Kerberos but failed, so it falls back to using NTLM authentication, and Azure Files doesn't support using NTLM authentication for domain credentials. The client can't get a Kerberos ticket to the storage account because the private link FQDN isn't registered to any existing Azure AD application.
+This is because the SMB client has tried to use Kerberos but failed, so it falls back to using NT LAN Manager (NTLM) authentication, and Azure Files doesn't support using NTLM authentication for domain credentials. The client can't get a Kerberos ticket to the storage account because the private link's Fully Qualified Domain Name (FQDN) isn't registered to any existing Azure AD application.
 
 #### Solution
 
-The solution is to add the private link FQDN to the storage account's Azure AD application before you mount the file share. You can add the required identifierUris to the application object using the [Azure portal](https://portal.azure.com) by following these steps:
+The solution is to add the private link's FQDN to the storage account's Azure AD application before you mount the file share. You can add the required `identifierUris` to the application object using the [Azure portal](https://portal.azure.com) by following these steps:
 
 1. Open **Azure Active Directory**.
 1. Select **App registrations** in the left pane.
@@ -353,7 +353,7 @@ The solution is to add the private link FQDN to the storage account's Azure AD a
 1. Select the application with the name matching *[Storage Account] $storageAccountName.file.core.windows.net*.
 1. Select **Manifest** in the left pane.
 1. Copy and paste the existing content so you have a duplicate copy. Replace all instances of `<storageaccount>.file.core.windows.net` with `<storageaccount>.privatelink.file.core.windows.net`.
-1. Review the content and select **Save** to update the application object with the new identifierUris.
+1. Review the content and select **Save** to update the application object with the new `identifierUris`.
 1. Update any internal DNS references to point to the private link.
 1. Retry mounting the share.
 
