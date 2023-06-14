@@ -91,7 +91,7 @@ After you enable Failed Request Tracing, you need to configure where the log fil
 ### Step 1: Enable Failed Request Tracing for the site and configure the log file directory
 
 1. Open a command prompt with administrator user rights, and navigate to _%systemdrive%\\windows\\system32\\inetsrv_.
-1. Launch **inetmgr**.
+1. Enter `inetmgr` to open IIS Manager.
 1. In the **Connections** pane, expand the machine name, expand **Sites**, and then select **Default Web Site**.
 1. In the **Actions** pane, under **Configure**, select **Failed Request Tracing…**.
 
@@ -127,8 +127,8 @@ Failed Request Tracing logging is now enabled for the Default Web Site. Check th
 
 In this step, configure the failure definitions for your URL, including what areas to trace. You will troubleshoot a 404.2 status code that is returned by IIS for any requests to extensions that haven't yet been enabled. It helps you determine which particular extensions you need to enable. For more information, see [HTTP status codes in IIS](../www-administration-management/http-status-code.md).
 
-1. Open a command prompt with administrator user rights.
-1. Launch `inetmgr`.
+1. Open a command prompt with administrator user rights, and navigate to _%systemdrive%\\windows\\system32\\inetsrv_.
+1. Enter `inetmgr` to open IIS Manager.
 1. In the **Connections** pane, expand the machine name, expand **Sites**, and then select **Default Web Site**.
 1. Double-click **Failed Request Tracing Rules**.  
 
