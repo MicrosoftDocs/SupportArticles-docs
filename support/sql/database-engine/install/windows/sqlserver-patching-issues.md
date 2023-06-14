@@ -62,7 +62,7 @@ To troubleshoot and fix these errors, follow these steps:
 
 The following scenarios list some of the common causes of upgrade script failures and their corresponding resolutions.
 
-### `SSISDB` catalog database part of an availability group (AG)
+### SSISDB catalog database part of an availability group (AG)
 
 If your SQL Server Integration Services catalog database (SSISDB) was added to an Always ON availability group (AG), script upgrade can fail. For more information, see the [Upgrading SSISDB in an availability group](/sql/integration-services/catalog/ssis-catalog#Upgrade) section. To resolve this problem:
 
@@ -70,11 +70,40 @@ If your SQL Server Integration Services catalog database (SSISDB) was added to a
 1. Run the CU upgrade.
 1. After the upgrade finishes, restore `SSISDB` to the Always On availability group.
 
-### Misconfigured System user/role in `msdb` database
+### Missing ##MS_SSISServerCleanupJobLogin## login
+
+SQL Server Service fails to start after applying SQL patch and SQL generates error 15151. In the SQL Server error log, you may see the following messages:
+
+```output
+2022-01-15 19:21:52.75 spid9s Error: 15151, Severity: 16, State: 1.
+
+2022-01-15 19:21:52.75 spid9s Cannot find the login '##MS_SSISServerCleanupJobLogin##', because it does not exist or you do not have permission.
+```
+
+**Reason** This issue may occurs because either login is dropped manually or these [instructions](/sql/integration-services/catalog/ssis-catalog#backup) are not followed.
+
+**Resolution**
+
+1. Start SQL Server with [trace flag 902](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf902).
+1. Recreate the login (server principal) on the server.
+
+   ```sql
+   CREATE LOGIN [##MS_SSISServerCleanupJobLogin##] WITH PASSWORD=N'<password>', DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[us_english], CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF
+   ```
+ 
+ 1. Switch to the SSISDB database and map the existing user to the newly-created login:
+ 
+    ```sql
+    USE SSISDB
+    GO
+    ALTER USER[##MS_SSISServerCleanupJobUser##] with LOGIN =[##MS_SSISServerCleanupJobLogin##]
+    ```
+
+### Misconfigured System user/role in msdb database
 
 This section provides steps to resolve a misconfigured system user or role in the `msdb` database.
 
-#### `TargetServersRole` schema and security role
+#### TargetServersRole schema and security role
 
 These are used in multi-server environments. By default, the *TargetServersRole* security role is owned by the *dbo*, and the role owns the *TargetServersRole* schema. If you inadvertently change this association, and the update that you're installing includes changes to either of these roles, the upgrade might fail and return error ID 2714: `There is already an object named 'TargetServersRole' in the database.` To resolve this error, follow these steps after you start SQL Server trace flag `902`:
 
