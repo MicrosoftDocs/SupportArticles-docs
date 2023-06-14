@@ -125,15 +125,15 @@ TcpTestSucceeded : True
 
 You can use Azure File Sync as a workaround to access Azure Files from clients that have port 445 blocked. Although Azure Files doesn't directly support SMB over QUIC, Windows Server 2022 Azure Edition does support the QUIC protocol. You can create a lightweight cache of your Azure file shares on a Windows Server 2022 Azure Edition VM using Azure File Sync. This configuration uses port 443, which is widely open outbound to support HTTPS, instead of port 445. To learn more about this option, see [SMB over QUIC with Azure File Sync](/azure/storage/files/storage-files-networking-overview#smb-over-quic).
 
-##### Solution 2: Use VPN or ExpressRoute
+##### Solution 2: Use a VPN or ExpressRoute
 
-By setting up a VPN or ExpressRoute from on-premises to your Azure storage account, with Azure Files exposed on your internal network using private endpoints, the traffic will go through a secure tunnel as opposed to over the internet. Follow the [instructions to set up VPN](/azure/storage/files/storage-files-configure-p2s-vpn-windows) to access Azure Files from Windows.
+By setting up a Virtual Private Network (VPN) or ExpressRoute from on-premises to your Azure storage account, with Azure Files exposed on your internal network using private endpoints, the traffic will go through a secure tunnel as opposed to over the internet. Follow the [instructions to set up a VPN](/azure/storage/files/storage-files-configure-p2s-vpn-windows) to access Azure Files from Windows.
 
 ##### Solution 3: Unblock port 445 with help from your ISP/IT admin
 
-Work with your IT department or ISP to open port 445 outbound to [Azure IP ranges](https://www.microsoft.com/download/details.aspx?id=56519).
+Work with your IT department or Internet Service Provider (ISP) to open port 445 outbound to [Azure IP ranges](https://www.microsoft.com/download/details.aspx?id=56519).
 
-##### Solution 4: Use REST API-based tools like Storage Explorer/PowerShell
+##### Solution 4: Use REST API-based tools like Storage Explorer or PowerShell
 
 Azure Files also supports REST in addition to SMB. REST access works over port 443 (standard tcp). There are various tools that are written using REST API that enable a rich UI experience. [Storage Explorer](/azure/vs-azure-tools-storage-manage-with-storage-explorer?tabs=windows) is one of them. [Download and install Storage Explorer](https://azure.microsoft.com/features/storage-explorer/) and connect to your file share backed by Azure Files. You can also use [PowerShell](/azure/storage/files/storage-how-to-use-files-portal), which also uses REST API.
 
@@ -167,7 +167,7 @@ Use one of the following solutions:
     cmdkey /add:<storage-account-name>.file.core.windows.net /user:AZURE\<storage-account-name> /pass:<storage-account-key>
     ```
 
-- Map the share directly without using a mapped drive letter. Some applications might not reconnect to the drive letter properly, so using the full UNC path might be more reliable:
+- Map the share directly without using a mapped drive letter. Some applications might not reconnect to the drive letter properly, so using the full Universal Naming Convention (UNC) path might be more reliable:
 
   `net use * \\storage-account-name.file.core.windows.net\share`
 
