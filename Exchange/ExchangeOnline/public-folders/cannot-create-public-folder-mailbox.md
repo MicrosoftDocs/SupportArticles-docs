@@ -59,7 +59,7 @@ Use the appropriate solution, depending on the error message that you receive.
 
 ### Workaround for error 1
 
-If you reach the [hierarchy-serving](https://techcommunity.microsoft.com/t5/exchange-team-blog/introduction-to-public-folder-hierarchy-sync/ba-p/609344#toc-hId--55837873) public folder mailbox limit, you can create new public folder mailboxes as non-hierarchy-serving public folder mailboxes. Use the [New-Mailbox](/powershell/module/exchange/new-mailbox) cmdlet together with the *IsExcludedFromServingHierarchy* switch, as shown in the following example:
+If you reach the [hierarchy-serving](https://techcommunity.microsoft.com/t5/exchange-team-blog/introduction-to-public-folder-hierarchy-sync/ba-p/609344#toc-hId--55837873) public folder mailbox limit, you can create new public folder mailboxes as non-hierarchy-serving public folder mailboxes. Use the [New-Mailbox](/powershell/module/exchange/new-mailbox) cmdlet together with the `IsExcludedFromServingHierarchy` switch, as shown in the following example:
 
 ```powershell
 New-Mailbox -PublicFolder -Name <mailbox name> -IsExcludedFromServingHierarchy $True
