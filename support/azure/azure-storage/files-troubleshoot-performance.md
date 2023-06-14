@@ -22,7 +22,7 @@ This article lists common problems related to Azure file share performance and p
 
 ## General performance troubleshooting
 
-First, rule out some common reasons you might have performance problems.
+First, rule out some common reasons why you might have performance problems.
 
 ### You're running an old operating system
 
@@ -136,7 +136,7 @@ To determine whether most of your requests are metadata-centric, start by follow
 
 - Check to see whether the application can be modified to reduce the number of metadata operations.
 - Separate the file share into multiple file shares within the same storage account.
-- Add a virtual hard disk (VHD) on the file share and mount the VHD from the client to perform file operations against the data. This approach works for single writer/reader scenarios or scenarios with multiple readers and no writers. Because the file system is owned by the client rather than Azure Files, this allows metadata operations to be local. The setup offers performance similar to that of local directly attached storage. However, because the data is in a VHD, it can't be accessed via any other means other than the SMB mount, such as REST API or through the Azure portal.
+- Add a virtual hard disk (VHD) on the file share and mount the VHD from the client to perform file operations against the data. This approach works for single writer/reader scenarios or scenarios with multiple readers and no writers. Because the file system is owned by the client rather than Azure Files, this allows metadata operations to be local. The setup offers performance similar to that of local directly attached storage. However, because the data is in a VHD, it can't be accessed via any other means other than the Server Message Block (SMB) mount, such as REST API or through the Azure portal.
     1. From the machine that needs to access the Azure file share, mount the file share using the storage account key and map it to an available network drive (for example, the Z: drive).
     1. Go to **Disk Management** and select **Action** > **Create VHD**.
     1. Set **Location** to the network drive to which the Azure file share is mapped, then set **Virtual hard disk size** as needed, and select **Fixed size**.
@@ -164,7 +164,7 @@ If you're using SMB MultiChannel and the number of channels you have exceeds fou
 
 #### Solution
 
-Set the Windows per NIC setting for SMB so that the total channels don't exceed four. For example, if you have two NICs, you can set the maximum per NIC to two using the following PowerShell cmdlet: `Set-SmbClientConfiguration -ConnectionCountPerRssNetworkInterface 2`.
+Set the Windows per Network Interface Card (NIC) setting for SMB so that the total channels don't exceed four. For example, if you have two NICs, you can set the maximum per NIC to two using the following PowerShell cmdlet: `Set-SmbClientConfiguration -ConnectionCountPerRssNetworkInterface 2`.
 
 ## Very high latency for requests
 
@@ -175,7 +175,7 @@ The client VM could be located in a different region than the file share. Anothe
 ### Solution
 
 - Run the application from a VM that's located in the same region as the file share.
-- For your storage account, review transaction metrics **SuccessE2ELatency** and  **SuccessServerLatency** via Azure Monitor in Azure portal. A high difference between SuccessE2ELatency and SuccessServerLatency metrics values is an indication of latency that's likely caused by the network or the client. See [Transaction metrics](/azure/storage/files/storage-files-monitoring-reference#transaction-metrics) in Azure Files Monitoring data reference.
+- For your storage account, review transaction metrics **SuccessE2ELatency** and  **SuccessServerLatency** via Azure Monitor in Azure portal. A high difference between **SuccessE2ELatency** and **SuccessServerLatency** metrics values is an indication of latency that's likely caused by the network or the client. See [Transaction metrics](/azure/storage/files/storage-files-monitoring-reference#transaction-metrics) in Azure Files Monitoring data reference.
 
 ## Client unable to achieve maximum throughput supported by the network
 
@@ -341,7 +341,7 @@ To confirm, you can use Azure Metrics in the portal.
 1. In the left menu, under **Monitoring**, select **Metrics**.
 1. Select **File** as the metric namespace for your storage account scope.
 1. Select **Transactions** as the metric.
-1. Add a filter for **ResponseType** and check to see if any requests have a response code of SuccessWithThrottling (for SMB or NFS) or ClientThrottlingError (for REST).
+1. Add a filter for **ResponseType** and check to see if any requests have a response code of `SuccessWithThrottling` (for SMB or NFS) or `ClientThrottlingError` (for REST).
 
 ### Solution
 
