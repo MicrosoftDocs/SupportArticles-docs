@@ -20,9 +20,24 @@
       "redirect_url": "/power-automate/desktop-flows/how-to/add-images-email-messages",
       "redirect_document_id": false
     },
-  {
+    {
+      "source_path": "support/dynamics-365/fraud-protection/welcome-fraud-protection.yml",
+      "redirect_url": "/troubleshoot/dynamics-365/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/fraud-protection/mobile-device-fingerprinting.md",
+      "redirect_url": "/dynamics365/fraud-protection/",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/power-platform/admin/welcome-admin.md",
       "redirect_url": "/troubleshoot/power-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/a-report-displays-an-incorrect-eeo-class.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
       "redirect_document_id": false
     },
     {
@@ -748,11 +763,6 @@
     {
       "source_path": "support/azure/virtual-machines/index.md",
       "redirect_url": "/support/azure/virtual-machines/welcome-virtual-machines",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/azure/general/index.md",
-      "redirect_url": "/support/azure/virtual-machines/welcome-general",
       "redirect_document_id": false
     },
     {
@@ -2426,11 +2436,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "support/azure/azure-kubernetes/small-file-handling-high-latency.md",
-      "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
-      "redirect_document_id": true
-    },
-    {
       "source_path": "support/azure/general/web-apps-performance-faqs.md",
       "redirect_url": "/troubleshoot/azure/app-service/web-apps-performance-faqs",
       "redirect_document_id": true
@@ -2564,11 +2569,6 @@
       "source_path": "support/azure/log-analytics/workspace-data-export-faq.yml",
       "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/workspace-data-export-faq",
       "redirect_document_id": true
-    },
-    {
-      "source_path": "support/azure/azure-kubernetes/troubleshoot-upgrade-errors.md",
-      "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
-      "redirect_document_id": false
     },
     {
       "source_path": "support/azure/azure-monitor/app-insights/troubleshoot-availability.md",
@@ -5731,11 +5731,87 @@
       "source_path": "support/windows-server/identity/password-change-conflict-resolution-function.md",
       "redirect_url": "/troubleshoot/windows-server/identity/password-change-processing-conflict-resolution-function",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/system-management-components/high-cpu-usage-wmiprvse-process-regular-intervals.md",
+      "redirect_url": "/troubleshoot/windows-server/system-management-components/troubleshoot-wmi-high-cpu-issues",
+      "redirect_document_id": true
     }, 
     {
       "source_path": "support/sql/general/servicing-models-sql-server.md",
       "redirect_url": "/troubleshoot/sql/releases/servicing-models-sql-server",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/azure-kubernetes/troubleshoot-common-mariner-aks.md",
+      "redirect_url": "/troubleshoot/azure/azure-kubernetes/troubleshoot-common-azure-linux-aks",
+      "redirect_document_id": true
+    }, 
+    {
+      "source_path": "support/azure/virtual-machines/connect-linux-vm-sshconnection.md",
+      "redirect_url": "/troubleshoot/azure/virtual-machines/linux-vm-sshconnectionissue-perms",
+      "redirect_document_id": true
+    }, 
+    {
+      "source_path": "support/azure/app-service/web-apps-configuration-and-management-faqs.md",
+      "redirect_url": "/troubleshoot/azure/app-service/create-delete-resources-faq",
+      "redirect_document_id": true
+    }, 
+    {
+      "source_path": "support/sql/linux/release-history-2017.md",
+      "redirect_url": "/troubleshoot/sql/releases/linux/release-history-2017",
+      "redirect_document_id": true
+    }, 
+    {
+      "source_path": "support/sql/linux/release-history-2019.md",
+      "redirect_url": "/troubleshoot/sql/releases/linux/release-history-2019",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/shell-experience/disabling-autoplay-cause-hotstart-buttons-not-working.md",
+      "redirect_url": "/troubleshoot/windows-client/shell-experience/issues-autoplay-disabled-group-policy",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/linux/release-history-2022.md",
+      "redirect_url": "/troubleshoot/sql/releases/linux/release-history-2022",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/virtual-machine-scale-sets/index.md",
+      "redirect_url": "/troubleshoot/azure/virtual-machine-scale-sets/welcome-virtual-machine-scale-sets",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/azure-kubernetes/index.md",
+      "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/log-analytics/index.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/general/index.md",
+      "redirect_url": "/troubleshoot/azure/general/welcome-general",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/azure-monitor/app-insights/index.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/azure-monitor/log-analytics/index.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/synapse-analytics/index.md",
+      "redirect_url": "/troubleshoot/azure/synapse-analytics/welcome-synapse-analytics",
+      "redirect_document_id": true
     }
+
 ]
 }

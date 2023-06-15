@@ -68,8 +68,8 @@
       href: azure-linux-vm-uefi-boot-failures.md
     - name: Network issues
       href: cannot-connect-linux-network.md
-    - name: SSH connection
-      href: connect-linux-vm-sshconnection.md
+    - name: SSH connection fails due to permission and ownership issues
+      href: linux-vm-sshconnectionissue-perms.md
     - name: SSH troubleshooting
       href: troubleshoot-ssh-connection.md
     - name: Reset network interface for Azure Linux VM
@@ -159,6 +159,7 @@
         - name: Serial Console for Linux
           href: serial-console-linux.md
         - name: Linux - Specific scenarios
+          href: boot-error-troubleshoot-linux.md
           items:
             - name: Troubleshoot file system errors
               href: linux-recovery-cannot-start-file-system-errors.md
@@ -288,6 +289,8 @@
             href: os-bucket-boot-failure.md
           - name: VM stops at "Please wait for the Group Policy Client" screen
             href: vm-stops-at-please-wait-for-group-policy-client.md
+          - name: VM stops at "Checking file system" screen
+            href: troubleshoot-check-disk-boot-error.md
           - name: Azure VM cannot RDP - driver IRQL not less or equal
             href: azure-vm-cannot-rdp-driver-irql-not-less-equal.md
           - name: Azure VM cannot RDP - working on features
@@ -401,6 +404,13 @@
       - name: Restarting, shutting down, or stopping services
         href: boot-error-troubleshoot-windows.md
 
+- name: VM health
+  items:
+  - name: HealthResources table in Resource Graph has missing entries
+    href: healthresources-table-resource-graph-missing-entries.md
+  - name: VM availability might be inaccurate during restart
+    href: inaccurate-vm-availability-during-vm-restart.md
+
 - name: VM agent and extensions
   items:
   - name: Azure cloud-init support for Linux VMs
@@ -415,6 +425,8 @@
     href: extensions-stop-running.md
   - name: Minimum version support for agents
     href: support-extensions-agent-version.md
+  - name: Multiple certificates on IaaS VM that uses extensions
+    href: multiple-certificates-iaas-vm-extensions.md
   - name: Previous command is re-run
     href: customscript-reruns-previous-command.md
   - name: Supported extensions
@@ -431,6 +443,8 @@
     href: /azure/virtual-machines/extensions/troubleshoot?context=/troubleshoot/azure/virtual-machines/context/context
   - name: Install Windows VM agent offline
     href: install-vm-agent-offline.md
+  - name: Troubleshoot extension certificate issues on Windows VM
+    href: troubleshoot-extension-certificates-issues-windows-vm.md
   - name: Troubleshoot Windows VM agent
     href: windows-azure-guest-agent.md
   - name: Troubleshoot Linux VM agent
@@ -438,6 +452,10 @@
 
 - name: Disk management
   items:
+  - name: Resizing disks
+    items:
+      - name: Downsize a data disk without losing data
+        href: downsize-data-disk-without-losing-data.md
   - name: Overview
     href: /azure/virtual-machines/managed-disks-overview?context=/troubleshoot/azure/virtual-machines/context/context
   - name: FAQ
@@ -528,6 +546,7 @@
       href: troubleshoot-linux-rhui-certificate-issues.md
 
 - name: Remote troubleshooting for VM tools
+  href: remote-tools-troubleshoot-azure-vm-issues.md
   items:
     - name: Custom Script Extension or Run Command
       items:

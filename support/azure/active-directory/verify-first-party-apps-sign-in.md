@@ -1,7 +1,7 @@
 ---
 title: Verify first-party Microsoft applications in sign-in reports
-description: Describes how to verify first-party Microsoft applications in sign-in reports
-ms.date: 03/10/2023
+description: Describes how to verify first-party Microsoft applications in sign-in reports.
+ms.date: 05/08/2023
 ms.reviewer: bernaw
 ms.service: active-directory
 ms.subservice: compliance
@@ -90,6 +90,7 @@ The following table lists some, but not all, first-party Microsoft applications.
 |Microsoft Authentication Broker|29d9ed98-a469-4536-ade2-f981bc1d605e|
 |Microsoft Azure CLI|04b07795-8ddb-461a-bbee-02f9e1bf7b46|
 |Microsoft Azure PowerShell|1950a258-227b-4e31-a9cf-717495945fc2|
+|MicrosoftAzureActiveAuthn|0000001a-0000-0000-c000-000000000000|
 |Microsoft Bing Search|cf36b471-5b44-428c-9ce7-313bf84528de|
 |Microsoft Bing Search for Microsoft Edge|2d7f3606-b07d-41d1-b9d2-0d0c9296a6e8|
 |Microsoft Bing Default Search Engine|1786c5ed-9644-47b2-8aa0-7201292175b6|
@@ -159,6 +160,15 @@ The following table lists some, but not all, first-party Microsoft applications.
 |Yammer|00000005-0000-0ff1-ce00-000000000000|
 |Yammer Web|c1c74fed-04c9-4704-80dc-9f79a2e515cb|
 |Yammer Web Embed|e1ef36fd-b883-4dbf-97f0-9ece4b576fc6|
+
+## Application IDs of Microsoft tenant-owned applications
+
+The following table lists some, but not all, Microsoft tenant-owned applications (tenant ID: 72f988bf-86f1-41af-91ab-2d7cd011db47).
+
+|Application Name|Application IDs|
+|--|--|
+|Graph Explorer|de8bc8b5-d9f9-48b1-a8ad-b748da725064|
+|Microsoft Graph Command Line Tools|14d82eec-204b-4c2f-b7e8-296a70dab67e|
 
 ## More information
 

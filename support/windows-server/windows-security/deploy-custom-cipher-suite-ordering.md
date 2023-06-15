@@ -34,7 +34,7 @@ Cipher block chaining (CBC) mode cipher suites:
 Non-PFS (perfect forward secrecy) cipher suites:
 
 - TLS_RSA_WITH_AES_256_GCM_SHA384
-- TLS_RSA _WITH_AES_128_GCM_SHA256
+- TLS_RSA_WITH_AES_128_GCM_SHA256
 
 If the cipher suites that are on the block list are listed toward the top of your list, HTTP/2 clients and browsers may be unable to negotiate any HTTP/2-compatible cipher suite. This results in a failure to use the protocol.
 

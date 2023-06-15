@@ -1,7 +1,7 @@
 ---
 title: AD and LDS diagnostic event logging
 description: This article discusses the level of Active Directory diagnostic event logging and provides solutions for configuring Active Directory diagnostic event logging.
-ms.date: 9/24/2021
+ms.date: 05/19/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This step-by-step article describes how to configure Active Directory diagnostic event logging in Microsoft Windows Server operating systems.
 
-_Applies to:_ &nbsp; Windows Server 2019, , Windows Server 2016, Windows Server 2012 R2, Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012  
 _Original KB number:_ &nbsp; 314980
 
 ## Summary
@@ -61,6 +61,7 @@ Each of the following **REG_DWORD** values under the `Diagnostics` subkey repres
 24. DS Schema
 25. Transformation Engine
 26. Claims-Based Access Control
+27. PDC Password Update Notifications
 
 ## Logging levels
 
@@ -100,3 +101,20 @@ To configure Active Directory diagnostic event logging, follow these steps.
     >
     > - Logging levels should be set to the default value of 0 (None) unless you are investigating an issue.
     > - When you increase the logging level, the detail of each message and the number of messages that are written to the event log also increase. A diagnostic level of 3 or greater is not recommended, because logging at these levels requires more system resources and can degrade the performance of your server. Make sure that you reset the entries to 0 after you finish investigating the problem.
+
+### Enable Field Engineering diagnostic event logging
+
+This logging isn't enabled by default and should only be enabled during active troubleshooting. You can enable the logging by using the following steps:
+
+1. Increase the size of Directory Services event logs to 200 MB.
+2. Enable the Field Engineering diagnostics registry key, and set the value to _5_.
+
+    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Diagnostics\15 Field Engineering`
+
+3. Create the following registry keys to configure registry-based filters for expensive, inefficient, and long-running searches:
+
+    |Registry path  |Data type  |Default value  |
+    |---------|---------|---------|
+    |`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters\Expensive Search Results Threshold`     |REG_DWORD         |1         |
+    |`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters\Inefficient Search Results Threshold`     |REG_DWORD         |1         |
+    |`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters\Search Time Threshold (msecs)`     |REG_DWORD         |1         |

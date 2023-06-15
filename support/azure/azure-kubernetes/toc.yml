@@ -5,10 +5,16 @@
   items:
   - name: Basic troubleshooting
     href: troubleshoot-aks-cluster-creation-issues.md
+  - name: CniDownloadTimeoutVMExtensionError error (41)
+    href: error-code-cnidownloadtimeoutvmextensionerror.md
+  - name: ERR_VHD_FILE_NOT_FOUND error (124)
+    href: error-code-vhdfilenotfound.md
   - name: InvalidParameter error
     href: error-code-invalidparameter.md
   - name: InvalidResourceReference error
     href: error-code-invalidresourcereference.md
+  - name: Known issues - Custom kubelet configuration on Windows
+    href: known-issues-custom-kubelet-configuration.md
   - name: K8SAPIServerConnFailVMExtensionError error (51)
     href: error-code-k8sapiserverconnfailvmextensionerror.md
   - name: K8SAPIServerDNSLookupFailVMExtensionError error (52)
@@ -33,6 +39,8 @@
     href: error-code-subnetisfull.md
   - name: SubscriptionRequestsThrottled error (429)
     href: error-code-subscriptionrequeststhrottled.md
+  - name: SubnetWithExternalResourcesCannotBeUsedByOtherResources error
+    href: subnet-with-external-resources-cannot-be-used-by-other-resources.md
   - name: VMExtensionProvisioningTimeout error
     href: error-code-vmextensionprovisioningtimeout.md
   - name: ZonalAllocationFailed or AllocationFailed error
@@ -213,6 +221,8 @@
     href: error-using-feature-requiring-virtual-machine-scale-set.md
   - name: insufficientSubnetSize error
     href: insufficientsubnetsize-error-advanced-networking.md
+  - name: Memory saturation occurs in pods after cluster upgrade
+    href: aks-memory-saturation-after-upgrade.md
   - name: Missing or invalid service principal
     href: missing-or-invalid-service-principal.md
   - name: Network watch is stale after egress traffic restriction
@@ -233,8 +243,9 @@
     href: tcp-timeouts-kubetctl-third-party-tools-connect-api-server.md
   - name: '"tls: client offered only unsupported versions" messages'
     href: tls-client-offered-unsupported-versions.md
-  - name: Troubleshoot common Mariner AKS Container Host (MACH) issues
-    href: troubleshoot-common-mariner-aks.md
+  - name: Troubleshoot common Azure Linux container host for AKS issues
+    displayName: Mariner, MACH
+    href: troubleshoot-common-azure-linux-aks.md
 
 - name: Extensions and add-ons
   items:

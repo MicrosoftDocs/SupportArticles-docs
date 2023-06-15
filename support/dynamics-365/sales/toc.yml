@@ -219,6 +219,8 @@
           href: receiving-error-accessing-ws-metadata-exchange-failed-during-configuration.md
         - name: Alert appears in the user's mailbox record
           href: alert-appears-users-dynamics-365-mailbox-record.md
+        - name: An appointment is canceled or deleted during server-side synchronization
+          href: an-appointment-is-canceled-deleted.md
         - name: An email fails to be created with an error
           href: email-fails-be-created-error.md
         - name: An email fails to be created with InternalEmailReject sync
