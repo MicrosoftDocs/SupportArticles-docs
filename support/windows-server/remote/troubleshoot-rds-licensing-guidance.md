@@ -1,7 +1,7 @@
 ---
 title: Guidance for troubleshooting RDS Licensing
 description: Introduces general guidance for troubleshooting scenarios related to RDS Licensing.
-ms.date: 1/17/2023
+ms.date: 05/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -150,7 +150,7 @@ This issue is fixed in update [KB 4457127](https://support.microsoft.com/topic/s
 
 ## Data collection
 
-Before contacting Microsoft support, you can gather information about your issue.
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for User Experience issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-user-experience.md#terminal-server-licensing).
 
 ### Prerequisites
 

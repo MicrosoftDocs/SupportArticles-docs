@@ -16,7 +16,7 @@ This article gives troubleshooting guidance for when app installations fail for 
 
 Intune provides app troubleshooting details based on the apps installed on a specific user's device.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Troubleshoot + support**.
 3. Click **Select user** to go to the **Select users** pane.
 4. Type the name or email address of the user you want to troubleshoot, and then click **Select** at the bottom of the pane. The troubleshooting information for the user is displayed in the **Troubleshoot** pane.

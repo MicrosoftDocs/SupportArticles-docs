@@ -212,9 +212,9 @@
   - name: Azure AD Connect won't work after upgrading
     href: cannot-work-automatic-upgrade.md
   - name: Can't connect to Azure RMS
-    href: fail-connect-azure-information-protection-PowerShell.md
+    href: fail-connect-azure-information-protection-powerShell.md
   - name: Can't enable Device writeback
-    href: Cannot-enable-device-writeback.md
+    href: cannot-enable-device-writeback.md
   - name: Can't manage or remove objects
     href: cannot-manage-objects.md
   - name: Can't run DirSyncConfigShell.psc1
@@ -275,6 +275,8 @@
     href: pwd-not-sync.md
   - name: Password sync fails with event ID 611 
     href: pwd-hash-sync-stops-work.md
+  - name: Permission-issue 8344 (insufficient access rights to perform the operation)
+    href: troubleshoot-permission-issue-sync-service-manager.md
   - name: ProxyAddresses attribute in Azure AD
     href: proxyaddresses-attribute-populate.md
   - name: Request isn't processed when resetting password
@@ -285,6 +287,8 @@
     href: cannot-run-scripts-powershell.md
   - name: Separate passwords required
     href: separate-pwds-required-computer-work-account.md
+  - name: Size limit was exceeded
+    href: size-limit-exceeded.md
   - name: Slow performance and high CPU usage
     href: slow-performance-high-cpu-usage.md
   - name: Troubleshoot Azure AD Connect version upgrading issues

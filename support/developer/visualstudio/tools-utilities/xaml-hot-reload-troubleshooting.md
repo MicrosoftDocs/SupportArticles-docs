@@ -57,6 +57,10 @@ UWP:
 
 You must either manually set the correct MSBuild property to support XAML Hot Reload (see previous section), or you must use the default build configuration name (Debug). If you don't set the MSBuild property correctly, a custom build configuration name won't work, nor will a Release build.
 
+### Ensure your program is not running elevated
+
+XAML Hot Reload is not supported in apps that run elevated/run as administrator.
+
 ### Verify that your XAML file has no errors
 
 If your XAML file shows errors in the **Error List**, then XAML Hot Reload may not work.

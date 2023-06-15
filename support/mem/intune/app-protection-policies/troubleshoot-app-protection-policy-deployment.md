@@ -66,7 +66,7 @@ Review the following details to understand the status of your app protection pol
 
 Use these steps to get detailed information:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Select **Apps** > **Monitor** > **App protection status**, and then select the **Assigned users** tile.
 1. On the **App reporting** page, select **Select user** to bring up a list of users and groups.
 1. Search for and select one of the affected users from the list, then select **Select user**. At the top of the App reporting page, you can see whether the user is licensed for app protection and has a license for Microsoft 365. You can also see the app status for all the user's devices.
@@ -83,14 +83,14 @@ Intune app protection policies must be targeted to users. If you don't assign an
 
 To verify that the policy is applied to the targeted user, follow these steps:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Select **Apps** > **Monitor** > **App protection status**, and then select the **User status** tile (based on device OS platform).
 On the **App reporting** pane that opens, select **Select user** to search for a user.
 1. Select the user from the list. You can see the details for that user. Note it can take up to 24 hours for a newly targeted user to show up in reports.
 
 When you assign the policy to a user group, make sure that the user is in the user group. To do this, follow these steps:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Select **Groups > All groups**, and then search for and select the group that's used for your app protection policy assignment.
 1. Under the **Manage** section, select **Members**.
 1. If the affected user isn't listed, review [Manage app and resource access using Azure Active Directory groups](/azure/active-directory/fundamentals/active-directory-manage-groups) and your group membership rules. Make sure that the affected user is included in the group.
@@ -166,7 +166,7 @@ Intune app protection policy relies on user identity. Therefore, a valid login t
 
 To check app protection status, follow these steps:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Select **Apps** > **Monitor** > **App protection status**, and then select the **Assigned users** tile.
 1. On the App reporting page, select **Select user** to open a list of users and groups.
 1. Search for and select one of the affected users from the list, then select **Select user**.

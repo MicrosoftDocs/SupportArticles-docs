@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 4 for SQL Server 2022 (KB5026717)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 4 (KB5026717).
-ms.date: 05/11/2023
+ms.date: 06/02/2023
 ms.custom: KB5026717
 author: Elena068
 ms.author: v-qianli2
@@ -17,14 +17,16 @@ _Version:_ &nbsp; 16.0.4035.4
 
 ## Summary
 
-This article describes Cumulative Update package 4 (CU4) for Microsoft SQL Server 2022. This update contains 16 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 3, and it updates components in the following builds:
+This article describes Cumulative Update package 4 (CU4) for Microsoft SQL Server 2022. This update contains 21 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 3, and it updates components in the following builds:
 
 - SQL Server - Product version: **16.0.4035.4**, file version: **2022.160.4035.4**
 - Analysis Services - Product version: **16.0.43.211**, file version: **2022.160.43.211**
 
 ## Known issues in this update
 
-After you install SQL Server 2022 CU2, external data sources using the generic ODBC connector may no longer work. When you try to query external tables that were created before installing CU2, you receive the following error message:
+### Issue one
+
+After you install this cumulative update, external data sources using the generic ODBC connector may no longer work. When you try to query external tables that were created before installing this cumulative update, you receive the following error message:
 
 > Msg 7320, Level 16, State 110, Line 68  
 > Cannot execute the query "Remote Query" against OLE DB provider "MSOLEDBSQL" for linked server "(null)". Object reference not set to an instance of an object.
@@ -34,7 +36,31 @@ If you try to create a new external table, you receive the following error messa
 > Msg 110813, Level 16, State 1, Line 64  
 > Object reference not set to an instance of an object.
 
-To work around this issue, you can uninstall SQL Server 2022 CU2 or add the Driver keyword to the `CONNECTION_OPTIONS` argument. For more information, see [Generic ODBC external data sources may not work after installing Cumulative Update](https://techcommunity.microsoft.com/t5/sql-server-support-blog/generic-odbc-external-data-sources-may-not-work-after-installing/ba-p/3783873).
+To work around this issue, you can uninstall this cumulative update or add the Driver keyword to the `CONNECTION_OPTIONS` argument. For more information, see [Generic ODBC external data sources may not work after installing Cumulative Update](https://techcommunity.microsoft.com/t5/sql-server-support-blog/generic-odbc-external-data-sources-may-not-work-after-installing/ba-p/3783873).
+
+### Issue two
+
+After you install this cumulative update, you may receive incorrect results from queries that meet all of the following conditions:
+
+1. You have indexes that explicitly specify a descending sort order. Here's an example:
+
+    ```sql
+    CREATE NONCLUSTERED INDEX [nci_table_column1] ON [dbo].[table1] (column1 DESC)
+    ```
+
+2. You run queries against tables that contain these indexes. These queries specify a sort order that matches the sort order of the indexes.
+
+3. The sort column is used in query predicates in the `WHERE IN` clause or multiple equality clauses. Here's an example:
+
+    ```sql
+    SELECT * FROM [dbo].[table1] WHERE column1 IN (1,2) ORDER BY column1 DESC
+    SELECT * FROM [dbo].[table1] WHERE column1 = 1 or column1 = 2 ORDER BY column1 DESC
+    ```
+
+    > [!NOTE]
+    > The `IN` clause that has a single value doesn't have this issue.
+
+To work around this issue, you can either uninstall this cumulative update or enable trace flag (TF) 13166 and then run `DBCC FREEPROCCACHE`.
 
 ## Improvements and fixes included in this update
 
@@ -52,8 +78,13 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="2299195">[2299195](#2299195)</a> | Fixes an issue where SQL Server Agent job steps fail with the following error after the management data warehouse (MDW) is configured on a server: </br></br>Executed as user: NT Service\SQLSERVERAGENT. SSIS error. Component name: GenerateTSQLPackageTask, Code: -1073548540, Subcomponent: Generate T-SQL Package Task, Description: An error occurred with the following error message: "The given key was not present in the dictionary.".&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;SSIS error. Component name: GenerateTSQLPackageTask, Code: -1073548540, Subcomponent: Generate T-SQL Package Task, Description: An error occurred with the following error message: "The given key was not present in the dictionary.".&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;The master package exited with error, previous error messages should explain the cause.&nbsp;&nbsp;Process Exit Code 5.&nbsp;&nbsp;The step failed. | SQL Server Engine | Management Services | All |
 | <a id="2280423">[2280423](#2280423)</a> | [FIX: Scalar UDF Inlining issues in SQL Server 2022 and 2019 (KB4538581)](https://support.microsoft.com/help/4538581) | SQL Server Engine | Query Execution | All |
 | <a id="2306513">[2306513](#2306513)</a> | Fixes access violations and `INVALID_POINTER_READ_c0000005_sqlmin.dll!CProfileList::FGetPartitionSummaryXML` exceptions that you may encounter during the execution of `sys.dm_exec_query_plan_stats`. | SQL Server Engine | Query Execution | Windows |
+| <a id="2306669">[2306669](#2306669)</a> | Fixes an issue where parameter sensitive plan (PSP) optimization produces a dispatcher expression but fails to create a query variant when an application attempts to use the `SET FMTONLY ON` T-SQL statement to return only metadata. | SQL Server Engine | Query Execution | All |
 | <a id="2310201">[2310201](#2310201)</a> | Fixes an issue where running the `ALTER ASSEMBLY` command for a complex common language runtime (CLR) assembly can cause some of the other commands that are executed in parallel to time out. | SQL Server Engine | Query Execution | All |
+| <a id="2329208">[2329208](#2329208)</a> | Fixes an issue where parameter sensitive plan (PSP) optimization can't successfully remove a query from the in-memory portion of the Query Store when PSP optimization has Query Store integration enabled. | SQL Server Engine | Query Execution| All |
 | <a id="2344871">[2344871](#2344871)</a> | Adds two new trace flags (TF) to the automatic plan correction (APC) feature of automatic tuning. TF 12618 introduces a new plan regression detection model that includes multiple consecutive checks. TF 12656 introduces the ability to use a time-based plan regression check that will occur five minutes after a plan change is discovered, which avoids biasing the regression checks by queries that execute quickly. | SQL Server Engine | Query Execution | All |
+| <a id="2344940">[2344940](#2344940)</a> | Fixes an access violation when parameter sensitive plan (PSP) optimization has Query Store integration enabled under certain conditions when query variants and dispatcher plans are being flushed from the in-memory portion of the Query Store data to disk. | SQL Server Engine | Query Execution | All |
+| <a id="2344943">[2344943](#2344943)</a> | Fixes an access violation when parameter sensitive plan (PSP) optimization has Query Store integration enabled when an inconsistent state exists within the PSP-related Query Store. An improvement has also been made to the `sp_query_store_consistency_check` stored procedure, which will fix query variant and dispatch plan consistency issues. | SQL Server Engine | Query Execution | All|
+| <a id="2344945">[2344945](#2344945)</a> | Fixes an issue when parameter sensitive plan (PSP) optimization has Query Store integration enabled when a dispatcher plan is removed from the Query Store. | SQL Server Engine | Query Execution | All |
 | <a id="2278800">[2278800](#2278800)</a> | Fixes an issue where incorrect results are returned when you use the `LAG` or `LEAD` window functions while using the `IGNORE NULLS` clause. | SQL Server Engine | Query Optimizer | All |
 | <a id="2297428">[2297428](#2297428)</a> | Fixes an issue where the `KILL STATS JOB` process leaks reference counts on some items when multiple asynchronous statistics jobs are running, which causes those items to remain in the queue (visible via `sys.dm_exec_background_job_queue`) until the SQL Server instance is restarted. | SQL Server Engine | Query Optimizer | All |
 | <a id="2307893">[2307893](#2307893)</a> | Fixes incorrect results for queries that filter on `ROW_NUMBER` and involve nullable columns. | SQL Server Engine | Query Optimizer | All |
@@ -83,7 +114,15 @@ The following update is available from the Microsoft Download Center:
 <details>
 <summary><b>How to obtain or download this cumulative update package for Windows from Microsoft Update Catalog</b></summary>
 
-This cumulative update package isn't yet available on [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=sql%20server%202022). This article will be updated after the package is made available on this channel.
+The following update is available from the Microsoft Update Catalog:
+
+- :::image type="icon" source="../media/download-icon.png" border="false"::: [Download the cumulative update package for SQL Server 2022 CU4 now](https://catalog.s.download.windowsupdate.com/d/msdownload/update/software/updt/2023/05/sqlserver2022-kb5026717-x64_d6abee2fc65b806a2db2dc77590ddda77f6fa79d.exe)
+
+> [!NOTE]
+>
+> - [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=sql%20server%202022) contains this SQL Server 2022 CU and previously released SQL Server 2022 CU releases.
+> - This CU is also available through Windows Server Update Services (WSUS).
+> - We recommend that you always install the latest cumulative update that is available.
 
 </details>
 
