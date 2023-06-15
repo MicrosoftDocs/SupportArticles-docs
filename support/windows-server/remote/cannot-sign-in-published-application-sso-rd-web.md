@@ -21,9 +21,9 @@ When you use SSO to sign in to a published application through RD Web, you fail 
 
 This issue occurs because you have recently changed your password and configured the following registry value on the Remote Desktop Session Host server with which the connection is established.
 
-Registry path: `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Authentication\LogonUI`
-Value name: **ForceSilentTSAutoLogon**
-Value type: **REG_DWORD**
+Registry path: `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Authentication\LogonUI`  
+Value name: **ForceSilentTSAutoLogon**  
+Value type: **REG_DWORD**  
 Value data: **1**
 
 The registry value configuration disables the user interface (UI) components that allow prompting for new credentials. The credentials used to establish the connection can't be refreshed with the latest information.
