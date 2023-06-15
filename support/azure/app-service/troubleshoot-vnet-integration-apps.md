@@ -179,7 +179,7 @@ To get the trace file for each instance serving a Web App, on your browser, go t
 
 To collect network traces for Linux App Services that don't use a custom container, follow these steps:
 
-1. Install the `tcpdump` command line utility by running the following command:
+1. Install the `tcpdump` command line utility by running the following commands:
 
    ```bash
    apt-get update
