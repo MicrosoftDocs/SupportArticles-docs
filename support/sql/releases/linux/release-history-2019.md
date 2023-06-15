@@ -47,7 +47,7 @@ The following table lists the release history for [!INCLUDE [sql-server-2019](..
 
 ## <a id="CU21"></a> CU 21 (May 2023)
 
-This is the Cumulative Update 21 (CU 21) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4316.3. For information about the fixes and improvements in this release, see [KB 5025808](https://support.microsoft.com/help/5025808).
+This is the Cumulative Update 21 (CU 21) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4316.3. For information about the fixes and improvements in this release, see the [Support article](/troubleshoot/sql/releases/sqlserver-2019/cumulativeupdate21).
 
 ### Package details
 
