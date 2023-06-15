@@ -76,11 +76,10 @@ SQL Server Service fails to start after applying a SQL Server patch and SQL Serv
 
 ```output
 2022-01-15 19:21:52.75 spid9s Error: 15151, Severity: 16, State: 1.
-
 2022-01-15 19:21:52.75 spid9s Cannot find the login '##MS_SSISServerCleanupJobLogin##', because it does not exist or you do not have permission.
 ```
 
-This issue may occurs because either login is dropped manually or these [instructions](/sql/integration-services/catalog/ssis-catalog#backup) are not followed. Follow these steps to solve the issue:
+This issue may occurs because either the login was dropped manually or these [instructions](/sql/integration-services/catalog/ssis-catalog#backup) are not followed. Follow these steps to solve the issue:
 
 1. Start SQL Server with [trace flag 902](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf902).
 1. Recreate the login (server principal) on the server.
