@@ -1,7 +1,7 @@
 ---
 title: Azure App Service virtual network integration troubleshooting guide
 description: How to troubleshoot virtual network integration on Windows and Linux apps.
-ms.date: 06/14/2023
+ms.date: 06/15/2023
 ms.service: app-service
 author: hepiet
 ms.author: hepiet
@@ -106,7 +106,7 @@ curl hostname:[port]
 A number of factors can prevent your app from reaching a specific host and port. Most of the time, it's one of the following:
 
 * **A firewall is in the way.** If you have a firewall in the way, you hit the TCP timeout. The TCP timeout is 21 seconds in this case. Use the **tcpping** tool to test connectivity. TCP timeouts can be caused by many things beyond firewalls, but start there.
-* **DNS isn't accessible.** The DNS timeout is three seconds per DNS server. If you have two DNS servers, the timeout is six seconds. Use `nameresolver` to see if the DNS is working. You can't use `nslookup` because that doesn't use the DNS your virtual network is configured with. If inaccessible, you could have a firewall or NSG blocking access to DNS, or it could be down. Some DNS architectures that use custom DNS servers can be complex and may occasionally experience timeouts. To determine if this is the case, the environment variable `WEBSITE_DNS_ATTEMPTS` can be set. For more information about DNS in App Services, see [Name resolution (DNS) in App Service](/azure/app-service/overview-name-resolution).
+* **DNS isn't accessible.** The DNS timeout is three seconds per DNS server. If you have two DNS servers, the timeout is six seconds. Use nameresolver to see if the DNS is working. You can't use nslookup because that doesn't use the DNS your virtual network is configured with. If inaccessible, you could have a firewall or NSG blocking access to DNS, or it could be down. Some DNS architectures that use custom DNS servers can be complex and may occasionally experience timeouts. To determine if this is the case, the environment variable `WEBSITE_DNS_ATTEMPTS` can be set. For more information about DNS in App Services, see [Name resolution (DNS) in App Service](/azure/app-service/overview-name-resolution).
 
 If those items don't answer your problems, look first for things like:
 
@@ -161,7 +161,7 @@ You can also use the Network troubleshooter to troubleshoot the connection issue
 
 ## Collect network traces
 
-Collecting network traces can be helpful in analyzing issues. In Azure App Services, network traces are taken from the application process. To obtain accurate information, reproduce the issue while the network trace collection is started.
+Collecting network traces can be helpful in analyzing issues. In Azure App Services, network traces are taken from the application process. To obtain accurate information, reproduce the issue while starting the network trace collection.
 
 ### Windows App Services
 
