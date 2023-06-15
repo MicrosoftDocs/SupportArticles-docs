@@ -75,8 +75,8 @@ If your SQL Server Integration Services catalog database (SSISDB) was added to a
 SQL Server Service fails to start after applying a SQL Server patch and SQL Server generates error 15151. In the SQL Server error log, you may see the following messages:
 
 ```output
-2022-01-15 19:21:52.75 spid9s Error: 15151, Severity: 16, State: 1.
-2022-01-15 19:21:52.75 spid9s Cannot find the login '##MS_SSISServerCleanupJobLogin##', because it does not exist or you do not have permission.
+Error: 15151, Severity: 16, State: 1.
+Cannot find the login '##MS_SSISServerCleanupJobLogin##', because it does not exist or you do not have permission.
 ```
 
 This issue may occurs because either the login was dropped manually or these [instructions](/sql/integration-services/catalog/ssis-catalog#backup) are not followed. Follow these steps to solve the issue:
