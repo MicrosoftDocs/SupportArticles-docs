@@ -1,7 +1,7 @@
 ---
 title: Error 0x80090327 when adding a node to a cluster
 description: Provides a solution to fix error 0x80090327 that occurs when you add a node to a cluster.
-ms.date: 05/09/2023
+ms.date: 05/17/2023
 author: v-lianna
 ms.author: v-lianna
 manager: dcscontentpm
@@ -36,6 +36,8 @@ Example cluster logs for the sponsor node:
 ```
 
 ## Remove Transport Layer Security (TLS) 1.3 registry keys
+
+[!INCLUDE [Registry important alert](../../includes/registry-important-alert.md)]
 
 This issue occurs because TLS 1.3 is enabled on the sponsor node. To resolve this issue, remove the following registry keys:
 

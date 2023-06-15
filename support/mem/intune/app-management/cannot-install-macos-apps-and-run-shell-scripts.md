@@ -15,7 +15,7 @@ ms.author: v-six
 You experience the following issues on a macOS Big Sur 11.2._x_-based device:
 
 - Apps can't be downloaded and installed.
-- The app installation status shows **Install Pending** in the Microsoft Endpoint Manager admin center indefinitely.
+- The app installation status shows **Install Pending** in the Microsoft Intune admin center indefinitely.
 - Shell scripts don't run because the Microsoft Intune management agent can't be installed successfully.
 
 > [!NOTE]

@@ -11,6 +11,9 @@ ms.reviewer: cmathews
 
 # Troubleshoot Always On Availability Groups failover
 
+> [!NOTE]
+> To automate the manual analysis described in this article, see [Use AGDiag to diagnose availability group health events](use-agdiag-diagnose-availability-group-health-events.md).
+
 This article provides troubleshooting steps to help you determine why your availability group failed over.
 
 ## Symptoms and effects of Always On health issue or failover

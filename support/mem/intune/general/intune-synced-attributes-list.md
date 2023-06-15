@@ -16,7 +16,7 @@ The following table lists the attributes that are synced from the on-premises Ac
 |Attribute name|User|Contact|Group|Intune required|Description of attribute|
 |---|---|---|---|---|---|
 | AccountEnabled|X|||X|States whether the account is active|
-| c|X|X||X|Country code|
+| c|X|X||X|Country/Region code|
 | cn|X||X||Common name of the object|
 | description|X|X|X|X|Human-readable descriptive phrases about the object|
 | displayName|X|X|X|X|Display name for the object, usually the combination of the user's first name, middle initial, and last name|

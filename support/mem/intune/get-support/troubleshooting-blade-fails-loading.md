@@ -12,7 +12,7 @@ This article helps Intune Administrators resolve an issue in which the Intune **
 
 ## Symptoms
 
-When a user signs in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a **Help Desk Operator** role member, and goes to the Intune troubleshooting portal, the **Troubleshoot** pane displays a banner that states **Account status You do not have enough permissions**, and no user or device data is displayed.
+When a user signs in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a **Help Desk Operator** role member, and goes to the Intune troubleshooting portal, the **Troubleshoot** pane displays a banner that states **Account status You do not have enough permissions**, and no user or device data is displayed.
 
 :::image type="content" source="media/troubleshooting-blade-fails-loading/troubleshooting-blade.png" alt-text="Screenshot of troubleshooting blade showing the Account status You do not have enough permissions message.":::
 
@@ -22,7 +22,7 @@ The user is not licensed for Intune.
 
 ## Solution
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as an Intune Administrator.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as an Intune Administrator.
 2. On the **Intune** pane, go to **Users** > **All Users**.
 3. Select the user for whom the **Troubleshoot** pane fails to load.
 4. On the **Licenses** tab, select **+Assign**, and follow the wizard to assign an Intune license.

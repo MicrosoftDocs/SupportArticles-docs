@@ -196,13 +196,13 @@ Windows client devices can receive updates from various sources, including Windo
 
     ```powershell
     
-    \$MUSM = New-Object -ComObject "Microsoft.Update.ServiceManager"
+    $MUSM = New-Object -ComObject "Microsoft.Update.ServiceManager"
     ```
 
 3. Run the cmdlet:
 
     ```powershell
-    \$MUSM.Services
+    $MUSM.Services
     ```
 
 Check the output for the Name and OffersWindowsUPdates parameters, which you can interpret according to this table.

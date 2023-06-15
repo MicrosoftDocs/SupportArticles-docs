@@ -243,9 +243,9 @@ The ESP lists the installation status for all enrollment methods, including:
 - when any new user logs into the device that has ESP policy applied for the first time
 - when the **Only show page to devices provisioned by out-of-box experience (OOBE)** setting is on and the policy is set, only the first user who signs into the device gets the ESP
 
-### How can I disable the ESP if it has been configured on the device?
+### How can I disable the user ESP portion of the Enrollment Status Page (ESP) if an ESP has been configured on the device?
 
-ESP policy is set on a device at the time of enrollment. To disable the ESP, you must disable the user Enrollment Status Page section. To disable the section, create custom OMA-URI settings by using the following configurations:
+ESP policy is set on a device at the time of enrollment. To disable the user ESP portion of the Enrollment Status Page (ESP), create a custom OMA-URI setting by using the following configuration:
 
 - Disable user Enrollment Status Page:
 

@@ -33,7 +33,7 @@ Try the following solutions, depending on your scenario.
 
 If your user has reached the maximum number of allowed devices, use these steps to remove unused devices.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Go to **Users** > **All Users**.
 1. Select the affected user account, and then click **Devices**.
 1. Select any unused or unwanted devices, and then click **Delete**.
@@ -45,14 +45,14 @@ If there are no unused devices to remove, use these steps to increase the device
 > [!NOTE]
 > This method increases the device enrollment limit for all users, not just the affected user.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Go to **Devices** > **Enrollment restrictions** > **Default** (under **Device limit restrictions**) > **Properties** > **Edit** (next to **Device limit**) > increase the **Device limit** (maximum 15)> **Review + Save**.
 
 ## Solution 3
 
 Check if device enrollment is blocked by device type restrictions.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with a global administrator account.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with a global administrator account.
 1. Go to **Devices** > **Enrollment restrictions**, and then select the **Default** restriction under **Device Type Restrictions**.
 1. Select **Platforms**, and then select **Allow** for **Windows (MDM)**.
 
