@@ -63,3 +63,5 @@ items:
   href: understand-merge-replication-article-process.md
 - name: Update is replicated as DELETE/INSERT pairs
   href: update-statements-replicated-as-delete-insert.md
+- name: monitor long running transactions and transaction log growth
+  href: monitor-long-running-transactions-and-log-growth.md
