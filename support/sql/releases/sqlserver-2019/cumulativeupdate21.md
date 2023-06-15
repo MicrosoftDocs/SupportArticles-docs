@@ -54,7 +54,7 @@ If you have applied this cumulative update to one or more secondary replicas and
 
 1. Add trace flag 12324 as a startup parameter on all replicas (including the primary replica). Restart the secondary replicas to activate this trace flag. Meanwhile, the primary replica should be synchronized with all secondary replicas restarted with trace flag 12324 as the startup parameter.
 
-2. After all secondary replicas are patched and restarted, fail over the primary replica (now as a secondary role), and restart it to enable trace flag 12324.
+2. After all secondary replicas are patched and restarted, fail over the primary replica, now as a secondary role, and restart it to enable trace flag 12324.
 
 3. Apply this cumulative update to the old primary replica and restart it in the secondary role.
 
