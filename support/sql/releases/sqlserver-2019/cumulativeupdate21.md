@@ -54,7 +54,7 @@ If you have applied this cumulative update to one or more secondary replicas and
 
 1. Add trace flag 12324 as a startup parameter on all replicas (including the primary replica). Restart the secondary replicas to activate this trace flag. Meanwhile, the primary replica should be synchronized with all secondary replicas restarted with trace flag 12324 as the startup parameter.
 
-2. After all secondary replicas are patched and restarted, fail over the primary replica, now as a secondary role, and restart it to enable trace flag 12324.
+2. After all secondary replicas are updated and restarted, fail over the primary replica, now as a secondary role, and restart it to enable trace flag 12324.
 
 3. Apply this cumulative update to the old primary replica and restart it in the secondary role.
 
@@ -97,7 +97,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="2363303">[2363303](#2363303)</a> | Improves the cardinality estimation (CE) for "`AND`" conjunctions that are composed of point predicates when the predicates have a multi-column statistic covering them, and the predicate values are outside the histogram bounds. | SQL Server Engine | Query Optimizer | All |
 | <a id="2391556">[2391556](#2391556)</a> | Fixes inconsistent results that are caused by the parallel spool in the plan for the `INSERT`, `UPDATE`, or `DELETE` query. | SQL Server Engine | Query Optimizer | All |
 | <a id="2266806">[2266806](#2266806)</a> | Adds a new error 673 that helps avoid the assertion failure (Location: IndexRowScanner.cpp:1449; Expression: m_versionStatus.IsVisible ()) that you may encounter when you enable change tracking on a database. </br></br>Error message: </br></br>Failure to access row object in snapshot isolation. | SQL Server Engine | Replication | All |
-| <a id="2320889">[2320889](#2320889)</a> | Fixes an issue where applying a patch on a secondary replica or performing an in-place upgrade fails when the distribution database is in an availability group. The following error is returned: </br></br>Error: There was an error executing the Replication upgrade scripts. See the SQL Server error log for details. </br></br>You can see the following error details in the SQL Server error log: </br></br>Executing sp_vupgrade_replication. </br>Could not open distribution database distribution because it is offline or being recovered. Replication settings and system objects could not be upgraded. Be sure this database is available and run sp_vupgrade_replication again. | SQL Server Engine | Replication | Windows |
+| <a id="2320889">[2320889](#2320889)</a> | Fixes an issue where applying an update on a secondary replica or performing an in-place upgrade fails when the distribution database is in an availability group. The following error is returned: </br></br>Error: There was an error executing the Replication upgrade scripts. See the SQL Server error log for details. </br></br>You can see the following error details in the SQL Server error log: </br></br>Executing sp_vupgrade_replication. </br>Could not open distribution database distribution because it is offline or being recovered. Replication settings and system objects could not be upgraded. Be sure this database is available and run sp_vupgrade_replication again. | SQL Server Engine | Replication | Windows |
 | <a id="2421435">[2421435](#2421435)</a>| Resolves a query performance issue that affects change tracking autocleanup and manual cleanup queries. </br></br>**Note**: You need to turn on trace flags 8286 and 8287, as this forces the cleanup query to use the `FORCE ORDER` and `FORCESEEK` hints to speed up the performance. | SQL Server Engine | Replication | All |
 | <a id="2397659">[2397659](#2397659)</a> | [FIX: SQL Server Audit Events fail to write to the Security log (KB4052136)](https://support.microsoft.com/help/4052136) | SQL Server Engine | Security Infrastructure | Windows |
 | <a id="2409008">[2409008](#2409008)</a> | Fixes error 207 (Invalid column name '\<ColumnName>') that you encounter when you run a user-defined function (UDF), which references a dropped column that uses dynamic data masking (DDM). | SQL Server Engine | Security Infrastructure | All |
@@ -978,7 +978,7 @@ To use one of the hotfixes in this package, you do not have to make any changes 
 <details>
 <summary><b>Important notices</b></summary>
 
-This article also provides the following important information:
+This article also provides the following important information.
 
 ### Analysis Services CU build version
 
@@ -1037,7 +1037,7 @@ One CU package includes all available updates for all SQL Server 2019 components
 <details>
 <summary><b>Support for this update</b></summary>
 
-If another issues occur, or if any troubleshooting is required, you might have to create a service request. The usual support costs apply to additional support questions and to issues that don't qualify for this specific cumulative update package. For a complete list of Microsoft Customer Service and Support telephone numbers, or to create a separate service request, go to the [Microsoft support website](https://support.microsoft.com/contactus/?ws=support).
+If other issues occur, or if any troubleshooting is required, you might have to create a service request. The usual support costs apply to additional support questions and to issues that don't qualify for this specific cumulative update package. For a complete list of Microsoft Customer Service and Support telephone numbers, or to create a separate service request, go to the [Microsoft support website](https://support.microsoft.com/contactus/?ws=support).
 </details>
 
 ## How to uninstall this update
