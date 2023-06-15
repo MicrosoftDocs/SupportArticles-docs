@@ -10,7 +10,7 @@ ms.reviewer: kaushika, markstan
 
 ## Symptoms
 
-Your organization uses Microsoft Intune to [deploy Microsoft 365 apps](/mem/intune/apps/apps-add-office365-macos) to macOS devices. Users might experience the following issue when they use a Microsoft 365 app:
+Your organization uses Microsoft Intune to [deploy Microsoft 365 apps](/mem/intune/apps/apps-add-office365-macos) to macOS devices. When users use a Microsoft 365 app, they experience the following issue:
 
 The app closes without notification and restarts after a certain amount of time. For example, Microsoft Teams closes during a call and then restarts. When users check the modification date of the app on their device, the display shows the time between when the app was closed and when it was restarted. Here's an example:
 
