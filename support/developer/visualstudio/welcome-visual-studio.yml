@@ -54,8 +54,6 @@ landingContent:
         links:
           - text: Latest Visual C++ Redistributable downloads 
             url: /cpp/windows/latest-supported-vc-redist
-          - text: Supported OS for Visual C++ Redistributable 
-            url: ./cpp/libraries/minimum-service-pack-levels.md
           - text: Runtime framework packages for Desktop Bridge
             url: ./cpp/libraries/c-runtime-packages-desktop-bridge.md
   - title: Project and build system

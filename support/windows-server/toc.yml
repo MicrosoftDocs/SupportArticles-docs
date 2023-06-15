@@ -2399,7 +2399,7 @@
     - name: Remote Desktop Connection 6.0 prompts for credentials
       href: ./remote/remote-desktop-connection-6-prompts-credentials.md
     - name: Remote Desktop IP Virtualization does not work
-      href: ./remote/remote-desktop-ip-virtualization-not-work.md
+      href: ./remote/remote-desktop-ip-virtualization.md
     - name: Remote Desktop or RemoteApp session doesn't terminate
       href: ./remote/rd-or-remoteapp-session-not-terminate.md
     - name: Single-application sharing with Terminal Server

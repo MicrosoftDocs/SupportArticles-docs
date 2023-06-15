@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 306162
 
 ## Summary
 
-In the .NET Framework, the `CultureInfo` class from the `System.Globalization` namespace provides culture-specific information such as the associated language, country or region, calendar, and cultural conventions. The `CurrentCulture` property represents the culture that the current thread uses. The `CurrentUICulture` property represents the current culture that Resource Manager uses to look up culture-specific resources at run time. There are three ways to set the Culture information in an ASP.NET application: application level, page level, and thread level.
+In the .NET Framework, the `CultureInfo` class from the `System.Globalization` namespace provides culture-specific information such as the associated language, country/region, calendar, and cultural conventions. The `CurrentCulture` property represents the culture that the current thread uses. The `CurrentUICulture` property represents the current culture that Resource Manager uses to look up culture-specific resources at run time. There are three ways to set the Culture information in an ASP.NET application: application level, page level, and thread level.
 
 ## Application level
 

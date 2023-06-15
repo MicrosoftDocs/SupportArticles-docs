@@ -22,7 +22,7 @@ landingContent:
         links:
           - text: Incoming email isn't converted to a case
             url: email/incoming-email-not-converted-case.md
-          - text: Troubleshoot common email errors
+          - text: Troubleshoot configuration issues with automatic record creation and update rules
             url: email/common-email-error-messages.md
 
   # Card
