@@ -72,7 +72,7 @@ If your SQL Server Integration Services catalog database (SSISDB) was added to a
 
 ### Missing ##MS_SSISServerCleanupJobLogin## login
 
-SQL Server Service fails to start after applying SQL patch and SQL generates error 15151. In the SQL Server error log, you may see the following messages:
+SQL Server Service fails to start after applying a SQL Server patch and SQL Server generates error 15151. In the SQL Server error log, you may see the following messages:
 
 ```output
 2022-01-15 19:21:52.75 spid9s Error: 15151, Severity: 16, State: 1.
@@ -80,18 +80,21 @@ SQL Server Service fails to start after applying SQL patch and SQL generates err
 2022-01-15 19:21:52.75 spid9s Cannot find the login '##MS_SSISServerCleanupJobLogin##', because it does not exist or you do not have permission.
 ```
 
-**Reason** This issue may occurs because either login is dropped manually or these [instructions](/sql/integration-services/catalog/ssis-catalog#backup) are not followed.
-
-**Resolution**
+This issue may occurs because either login is dropped manually or these [instructions](/sql/integration-services/catalog/ssis-catalog#backup) are not followed. Follow these steps to solve the issue:
 
 1. Start SQL Server with [trace flag 902](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf902).
 1. Recreate the login (server principal) on the server.
 
    ```sql
-   CREATE LOGIN [##MS_SSISServerCleanupJobLogin##] WITH PASSWORD=N'<password>', DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[us_english], CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF
+   CREATE LOGIN [##MS_SSISServerCleanupJobLogin##]
+   WITH PASSWORD=N'<password>',
+   DEFAULT_DATABASE=[master],
+   DEFAULT_LANGUAGE=[us_english],
+   CHECK_EXPIRATION=OFF,
+   CHECK_POLICY=OFF;
    ```
  
- 1. Switch to the SSISDB database and map the existing user to the newly-created login:
+ 1. Switch to the `SSISDB` database and map the existing user to the newly-created login:
  
     ```sql
     USE SSISDB
