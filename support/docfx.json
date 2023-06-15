@@ -584,6 +584,7 @@
         ],
         "dynamics-365/supply-chain/**/**.*": [
           "SCM",
+          "FinanceAndOperations",
           "supplychainmanagement-docs",
           "supplychaincenter-docs"
         ]
