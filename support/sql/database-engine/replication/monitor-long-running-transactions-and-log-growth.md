@@ -1,34 +1,35 @@
 ---
 title: SQL Transaction log grows due to long running transactions
-description: This article helps you monitor the transaction log growth caused by long running transactions, and terminate those transactions if necessary, for a CDC enabled database.
+description: This article helps you monitor the transaction log growth caused by long running transactions, and terminate those transactions if necessary for a database with Change Data Capture (CDC) enabled. 
 ms.date: 06/15/2023
 ms.custom: sap:Change data capture
 ms.reviewer: abhtiwar
 ms.prod: sql
 ---
-# SQL Transaction log grows due to long running transactions when you use Change data capture
+# SQL Transaction log grows due to long running transactions when you use Change Data Capture
 
-This article helps you monitor and resolve the problem where you notice continuous transaction log growth due to long running transactions, for a CDC enabled database.
+This article helps you monitor and resolve the problem where you notice continuous transaction log growth due to long running transactions for a database with Change Data Capture (CDC) enabled. 
 
 ## Symptoms
 
 Consider the following scenario:
 
-- You enable Change data capture (CDC) feature on a database.
-- The source of change data for Change data capture is transaction log. As inserts, updates, and deletes are applied to tracked source tables, entries that describe those changes are added to the log.
-- The transaction log, on the database grows due to long running transactions.
+- You enable Change Data Capture on a database.
+- The source of change data for CDC is the transaction log. As inserts, updates, and deletes are applied to tracked source tables, entries that describe those changes are added to the log.
+- The transaction log on the database grows due to long running transactions.
 
-In this scenario, the database transaction log file grows gradually, leading to excessive transaction log space consumption. Once the transaction log size reaches the max defined limit, writes to the database fails.
+In this scenario, the database transaction log file grows gradually, leading to excessive transaction log space consumption. Once the transaction log size reaches the max defined limit, writes to the database fail.
 
 ## Cause
 
-On a CDC enabled database, capture job latency holds up the log truncation to ensure changes can be captured from transaction log to the CDC change tables, preventing any loss of change data.
+On a CDC-enabled database, capture job latency holds up log truncation to ensure changes can be captured from the transaction log to the CDC change tables, preventing loss of change data.
 
 ## Workaround
 
-To work around this issue, run the below query and specify the transaction log threshold and time interval for monitoring the transaction log. If necessary, terminate transactions by setting `@kill_oldest_tran = 1`.
+You can use Transact-SQL (T-SQL) to specify the transaction log threshold and the time interval to monitor the transaction log. If necessary, you can terminate transactions by setting `@kill_oldest_tran` = 1. 
 
-###### Transact-SQL script
+To monitor the transaction log, use the following T-SQL query: 
+
 
 ```sql
 -- Log Transactions that generated Txlog over this size
