@@ -48,7 +48,7 @@ This issue is caused by a change introduced in SQL Server 2019 CU20 for the [Man
 
 In this scenario, you restart the SQL Server instance hosting the primary replica of the availability group. Then the databases start to synchronize. Additionally, you might notice the following error messages logged in the SQL Server error log and Extended Event logs:
 
->  Error 9642, Severity 16, State 3: An error occurred in a Service Broker/Database Mirroring transport connection endpoint. Error: 8474, State: 11. (Near endpoint role: target, far endpoint address: ‘’) 
+>  Error 9642, Severity 16, State 3: An error occurred in a Service Broker/Database Mirroring transport connection endpoint. Error: 8474, State: 11. (Near endpoint role: target, far endpoint address: '') 
 
 If you have applied this cumulative update to one or more secondary replicas and are currently not synchronizing with the primary replica, you can use the following steps to mitigate this issue:
 
@@ -106,7 +106,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 ## How to obtain or download this or the latest cumulative update package
 
 <details>
-<summary><b>How to obtain or download the latest cumulative update package for Windows (recommended)</b></summary>
+<summary><b>How to obtain or download the latest cumulative update package for Windows (recommended)</b></summary>
 
 The following update is available from the Microsoft Download Center:
 
@@ -120,11 +120,11 @@ The following update is available from the Microsoft Download Center:
 </details>
 
 <details>
-<summary><b>How to obtain or download this cumulative update package for Windows from Microsoft Update Catalog</b></summary>
+<summary><b>How to obtain or download this cumulative update package for Windows from Microsoft Update Catalog</b></summary>
 
 The following update is available from the Microsoft Update Catalog:
 
- :::image type="icon" source="../media/download-icon.png" border="false"::: [Download the cumulative update package for SQL Server 2019 CU21 now](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5025808)
+ :::image type="icon" source="../media/download-icon.png" border="false"::: [Download the cumulative update package for SQL Server 2019 CU21 now](https://catalog.s.download.windowsupdate.com/c/msdownload/update/software/updt/2023/06/sqlserver2019-kb5025808-x64_b4935d744a9f5abb67d43fac573ff059cb82f8c1.exe)
 
 > [!NOTE]
 >
@@ -144,7 +144,7 @@ For installation instructions and direct links to the CU package downloads, see 
 </details>
 
 <details>
-<summary><b>How to obtain or download the latest cumulative update for Big Data Clusters (BDC)</b></summary>
+<summary><b>How to obtain or download the latest cumulative update for Big Data Clusters (BDC)</b></summary>
 
 To upgrade Microsoft SQL Server 2019 Big Data Clusters (BDC) on Linux to the latest CU, see the [Big Data Clusters Deployment Guidance](/sql/big-data-cluster/deployment-guidance).
 
@@ -159,7 +159,7 @@ For more information, see the [Big Data Clusters release notes](/sql/big-data-cl
 <details>
 <summary><b>File hash information</b></summary>
 
-You can verify the download by computing the hash of the *SQLServer2019-KB5025808-x64.exe* file by using the following command:
+You can verify the download by computing the hash of the *SQLServer2019-KB5025808-x64.exe* file by using the following command:
 
 `certutil -hashfile SQLServer2019-KB5025808-x64.exe SHA256`
 
