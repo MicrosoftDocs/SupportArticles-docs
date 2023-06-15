@@ -41,7 +41,7 @@ In order to mount the faulty VM, the Rescue VM must use the same type of Storage
 
         > Hyper-V cannot be installed because virtualization support is not enabled in the BIOS.
 
-        :::image type="content" source="media/troubleshoot-vm-by-use-nested-virtualization/hyper-v-cannot-be-installed-error.png" alt-text="Screenshot that shows the 'Hyper-V cannot be installed' error message.":::
+        :::image type="content" source="media/troubleshoot-vm-by-use-nested-virtualization/hyper-v-cannot-be-installed-error.png" alt-text="Screenshot that shows the 'Hyper-V cannot be installed' error message. "lightbox="media/troubleshoot-vm-by-use-nested-virtualization/hyper-v-cannot-be-installed-error.png":::
 
     - Security type: Select Standard or Trusted.
 
