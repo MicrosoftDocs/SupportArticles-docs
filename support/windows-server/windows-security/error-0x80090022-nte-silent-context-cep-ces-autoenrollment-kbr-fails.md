@@ -49,7 +49,7 @@ Here are the possible causes of the issue:
 
 The error reported in the certificate enrollment user interface is "0x80090022 NTE_SILENT_CONTEXT." However, the relevant error is "0x803d0013 WS_E_ENDPOINT_FAULT_RECEIVED" that was previously reported in the *CertEnroll.log* file.
 
-The confusion is caused by the higher priority of the certificate_CES endpoint. The certificate_CES endpoint executes first (the certificate_CES endpoint must work in KBR renewal scenario) and after that the initial username_password_CES takes place as a fallback. The username_password_CES endpoint requires the user input, which isn't expected to work. Then the error "0x80090022 NTE_SILENT_CONTEXT" occurs.
+The confusion is caused by the [higher priority](/windows-server/identity/solution-guides/certificate-enrollment-certificate-key-based-renewal#configure-the-client-computer) of the certificate_CES endpoint. The certificate_CES endpoint executes first (the certificate_CES endpoint must work in KBR renewal scenario) and after that the initial username_password_CES takes place as a fallback. The username_password_CES endpoint requires the user input, which isn't expected to work. Then the error "0x80090022 NTE_SILENT_CONTEXT" occurs.
 
 It means, the error "0x803d0013 WS_E_ENDPOINT_FAULT_RECEIVED" is the relevant error that needs to be further investigated.
 
