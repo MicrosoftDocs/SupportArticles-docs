@@ -677,7 +677,7 @@ Verify that:
 
 - Your connection string is correct.
 - The account specified in the connection string has access to the database.
-- The database server you are connecting to allow remote connections.
+- The database server you are connecting to allows remote connections.
 - The database server can be accessed from the machine running Web Deploy. If you are connecting to a remote Web Deploy server and specified a database, then you need to make sure that the remote Web Deploy server has access to your database.
 
 <a id="ERROR_DACPAC_EXTRACTION_TIMEDOUT"></a>
@@ -700,12 +700,12 @@ Azure Websites doesn't support creating new virtual applications or modifying ex
 
 **Resolution**
 
-You can create new virtual applications or modify existing configuration settings for your site through the Azure portal (https://portal.azure.com/). To do this,
+You can create new virtual applications or modify existing configuration settings for your website through the Azure portal (https://portal.azure.com/). To do this,
 
 1. Log in to the portal.
 1. Open your site settings.
 1. Select the **Configure** tab.
-1. In the **Configure** tab, modify your site to match the configuration settings of the application you're trying to deploy. In most cases, this is simply a matter of changing the .Net Framework Version, but in some cases this may also require you to add a new Virtual Application.
+1. In the **Configure** tab, modify your site to match the configuration settings of the application you're trying to deploy. In most cases, this is simply a matter of changing the .Net Framework version, but in some cases this may also require you to add a new virtual application.
 
 ## ERROR\_EXCEPTION\_WHILE\_CREATING\_OBJECT
 
