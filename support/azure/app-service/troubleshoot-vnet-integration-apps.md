@@ -190,7 +190,7 @@ To collect network traces for Linux App Services that don't use a custom contain
 1. Identify the interface that's up and running by running the following command (for example, `eth0`):
 
    ```bash
-   root@9b24ad3dc187:/home# tcpdump -D
+   root@<hostname>:/home# tcpdump -D
    
    1.eth0 [Up, Running, Connected]
    2.any (Pseudo-device that captures on all interfaces) [Up, Running]
@@ -204,12 +204,14 @@ To collect network traces for Linux App Services that don't use a custom contain
 1. Start the network trace collection by running the following command:
 
    ```bash
-   root@9b24ad3dc187:/home# tcpdump -i eth0 -w networktrace.pcap
+   root@<hostname>:/home# tcpdump -i eth0 -w networktrace.pcap
    ```
    Replace `eth0` with the name of the actual interface.
    
 To download the trace file, connect to the Web App via methods such as Kudu, FTP, or a Kudu API request. Here's a request example for triggering the file download:
 
 `https://<sitename>.scm.azurewebsites.net/api/vfs/<path to the trace file in the /home directory>/filename`
+
+[!INCLUDE [Third-party information disclaimer](../../includes/third-party-disclaimer.md)]
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
