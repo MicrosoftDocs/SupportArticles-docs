@@ -12,7 +12,7 @@ ms.reviewer: kaushika, markstan
 
 Your organization uses Microsoft Intune to [deploy Microsoft 365 apps](/mem/intune/apps/apps-add-office365-macos) to macOS devices. When users use a Microsoft 365 app, they experience the following issue:
 
-The app closes without notification and restarts after a certain amount of time. For example, Microsoft Teams closes during a call and then restarts. When users check the modification date of the app on their device, the display shows the time between when the app was closed and when it was restarted. Here's an example:
+The app closes without notification and restarts after a certain amount of time. For example, Microsoft Teams closes during a call and then restarts. When users check the modification date of the app on their device, they see a displayed time that falls between the time that the app was closed and when it was restarted. Here's an example:
 
 :::image type="content" source="media/no-notification-microsoft365-apps-macos-reinstall/app-modified-date.png" alt-text="Screenshot of the modified date of apps.":::
 
