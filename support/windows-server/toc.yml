@@ -2316,6 +2316,8 @@
       href: ./remote/cannot-view-remoteapp-rd-session-host.md
     - name: Can't connect to remote computer
       href: ./remote/cannot-connect-to-remote-computer.md
+    - name: Can't sign in to a published application with SSO through RD Web
+      href: ./remote/cannot-sign-in-published-application-sso-rd-web.md
     - name: No Connected icon in notification area
       href: ./remote/no-connected-icon-in-notification-area.md
     - name: Remote Desktop tab in RDWEB is missing from Edge
