@@ -1,7 +1,7 @@
 ---
 title: Microsoft 365 apps for macOS update without notification
 description: Microsoft 365 apps that are deployed to macOS devices by using Intune close and update without notification.
-ms.date: 10/19/2021
+ms.date: 6/15/2023
 search.appverid: MET150
 ms.custom: sap:Manage Apps
 ms.reviewer: kaushika, markstan
