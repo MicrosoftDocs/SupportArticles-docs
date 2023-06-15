@@ -1,6 +1,6 @@
 ---
-title: Permission-issue errors in Synchronization Service Manager
-description: Learn how to diagnose and fix permission-issue errors for an on-premises AD connector during an export operation in Synchronization Service Manager.
+title: Permission-issue error 8344 in Synchronization Service Manager
+description: Learn how to diagnose and fix permission-issue error 8344 (insufficient access rights to perform the operation) in Synchronization Service Manager.
 ms.date: 6/14/2023
 author: DennisLee-DennisLee
 ms.author: v-dele
@@ -8,15 +8,25 @@ ms.reviewer: calazlo, nualex
 ms.service: active-directory
 ms.subservice: enterprise-users
 ---
-# Permission-issue errors in Synchronization Service Manager
+# Permission-issue error 8344, "Insufficient access rights to perform the operation."
 
-This article discusses how to understand and troubleshoot the "permission-issue [8344]" error in Azure Active Directory (Azure AD).
+This article discusses how to understand and troubleshoot the "permission-issue [8344]" error, "Insufficient access rights to perform the operation." This Microsoft Azure Active Directory (Azure AD) error occurs on an on-premises Active Directory connector during an export operation in Synchronization Service Manager.
 
 ## Symptoms
 
 On the [**Operations** tab](/azure/active-directory/hybrid/connect/how-to-connect-sync-service-manager-ui-operations) of the [Synchronization Service Manager](/azure/active-directory/hybrid/connect/how-to-connect-sync-service-manager-ui) app, the **Connection Operations** table contains a row that represents an on-premises AD connector in which the **Profile Name** column value is **Export**. However, the corresponding **Status** column value is **completed-export-errors**. When you select this table row, a secondary table displays one or more **permission-issue** export errors.
 
 :::image type="content" source="./media/troubleshoot-permission-issue-sync-service-manager/sync-service-manager-symptoms.png" alt-text="Screenshot of the permission-issue errors in the Synchronization Service Manager app." lightbox="./media/troubleshoot-permission-issue-sync-service-manager/sync-service-manager-symptoms.png":::
+
+If you select one of the **permission-issue** export errors, the **Connector Space Object Properties** dialog box appears. On the **Export Error** tab, the following information is shown.
+
+| Error Information field              | Value                                                |
+|--------------------------------------|------------------------------------------------------|
+| **Error**                            | permission-issue                                     |
+| **Connected data source error code** | 8344                                                 |
+| **Connected data source error**      | Insufficient access rights to perform the operation. |
+
+:::image type="content" source="./media/troubleshoot-permission-issue-sync-service-manager/sync-service-manager-export-error.png" alt-text="Screenshot of the Export Error tab in the Connector Space Object Properties dialog box of the Synchronization Service Manager app." lightbox="./media/troubleshoot-permission-issue-sync-service-manager/sync-service-manager-export-error.png":::
 
 ## Cause
 
