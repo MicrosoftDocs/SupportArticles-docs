@@ -1,11 +1,12 @@
 ---
 title: Troubleshooting and diagnostic tools for on-premises and hybrid scenarios
 description: This article describes which tools Microsoft technical support uses for troubleshooting SQL Server hybrid issues.
-ms.author: JoPilov
-ms.reviewer: pijocoder
+ms.author: jopilov
+ms.reviewer: jopilov
 ms.date: 06/15/2023
 ms.prod: sql
 ms.custom: sap:Other tools
+author: PiJoCoder
 ---
 # Troubleshooting and diagnostic tools for SQL Server on-premises and hybrid scenarios
 
@@ -15,7 +16,7 @@ _Applies to:_ SQL Server
 
 Microsoft Product support for SQL Server hybrid uses troubleshooting tools to help customers collect logs and narrow down technical issues. These tools are available to use publicly. This article summarizes the diagnostic tools that SQL Server product support engineers have been using. The article details various troubleshooting scenarios and shows the corresponding log collection and log analysis tools.
 
-## SQL Server support diagnostic tools
+## Diagnostic tools for SQL Server
 
 | Scenario | Basic logs to collect | Tools to gather logs | Tools to analyze logs |
 | --- | --- | --- | --- |

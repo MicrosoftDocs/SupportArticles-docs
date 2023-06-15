@@ -757,6 +757,8 @@
       href: tools/error-you-run-sqlmaint-utility.md
     - name: Troubleshoot Database Mail issues
       href: tools/troubleshoot-database-mail-issues.md
+    - name: Troubleshooting and diagnostic tools for SQL Server on-premises and hybrid
+      href: tools/sql-support-troubleshooting-diagnostic-tools.md
     - name: Use Sqldumper to generate dump files
       href: tools/use-sqldumper-generate-dump-file.md
     - name: Use SQLIOSim utility to simulate SQL Server disk activity
