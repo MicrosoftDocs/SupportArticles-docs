@@ -33,4 +33,4 @@ You can try one or more of the following methods to resolve the issue:
 - Lock and then unlock your workstation with the new credentials.
 - Sign out of the RD Web site and reconnect it with the new credentials.
 - Sign out of and sign in to your workstation again with the new credentials.
-- Update or remove those credentials if they’re stored in the Windows Vault.
+- Update or remove those credentials if they're stored in the Windows Vault.
