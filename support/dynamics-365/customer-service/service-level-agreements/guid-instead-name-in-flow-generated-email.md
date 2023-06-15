@@ -3,7 +3,7 @@ title: GUID is shown instead of an owner name in the flow-generated email body
 description: Provides a resolution for the issue where the system user lookup is shown as a GUID instead of an owner name in the flow-generated email body.
 ms.reviewer: sdas
 ms.author: ravimanne
-ms.date: 06/01/2023
+ms.date: 06/09/2023
 ---
 # A GUID is populated instead of an owner name in the flow-generated email body
 
@@ -28,4 +28,4 @@ To solve this issue:
     concat(outputs('Get_a_row_by_ID')?['body/firstname'], outputs('Get_a_row_by_ID')?['body/lastname'])
     ```
 
-    :::image type="content" source="media/guid-instead-name-in-flow-generated-email/guid-instead-name.png" alt-text="The screenshot shows the variable setting to the Name value." border="false":::
+    :::image type="content" source="media/guid-instead-name-in-flow-generated-email/guid-instead-name.png" alt-text="Screenshot shows the variable setting to the Name value." border="false":::

@@ -3,7 +3,7 @@ title: Case update fails due to no SLA KPI instance existing if it's associated 
 description: Provides a resolution for the issue where updating a case fails due to no SLA KPI instance existing.
 ms.reviewer: sdas
 ms.author: ravimanne
-ms.date: 06/07/2023
+ms.date: 06/09/2023
 ---
 # "SLA KPI instance does not exist" error when updating a case
 
