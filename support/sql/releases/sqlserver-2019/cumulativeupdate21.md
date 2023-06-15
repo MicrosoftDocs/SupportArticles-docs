@@ -110,7 +110,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 
 The following update is available from the Microsoft Download Center:
 
-- :::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2019 now](https://www.microsoft.com/download/details.aspx?id=100809)
+ :::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2019 now](https://www.microsoft.com/download/details.aspx?id=100809)
 
 > [!NOTE]
 >
@@ -124,7 +124,7 @@ The following update is available from the Microsoft Download Center:
 
 The following update is available from the Microsoft Update Catalog:
 
-- :::image type="icon" source="../media/download-icon.png" border="false"::: [Download the cumulative update package for SQL Server 2019 CU21 now](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5025808)
+ :::image type="icon" source="../media/download-icon.png" border="false"::: [Download the cumulative update package for SQL Server 2019 CU21 now](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5025808)
 
 > [!NOTE]
 >
