@@ -38,26 +38,24 @@ Failed Request Tracing can be an effective way of tracking down intermittent or 
 
 Failed Request Tracing can be used in a production environment since it can be configured to only trace requests that meet the specific failure definition and can avoid most of the tracing overhead for successful requests.
 
-To enable Failed Request Tracing for a site (for example, _Troubleshooting.PHP_), use the following steps:
+To enable Failed Request Tracing for a site (in this sample, we use _TroubleshootingPhp_), use the following steps:
 
 1. Switch to **IIS Manager**. If it's closed, select **Start**,and then select **Internet Information Services (IIS) Manager**.
 1. Expand the **Server** node, and then expand the **Sites** node.
-1. In the tree view on the left, locate and select the name of the site.
+1. In the tree view on the left, locate and select the name of your site.
 1. Under **IIS**, double-click **Failed Request Tracing Rules**.  
     :::image type="content" source="media/troubleshoot-php-with-failed-request-tracing/iis-focus-frt-rules.png" alt-text="Screenshot of the I I S section with a focus on the Failed Request Tracing Rules icon.":::
-1. Select **Edit Site Tracing**.
-1. Select the **Enable** check box.
+1. In the **Actions** panel, select **Edit Site Tracing**.
+1. Select the **Enable** checkbox.
 1. Select **OK**.
-1. Now, create a Failed Request Tracing rule. Select **Add**.
+1. Now, create a Failed Request Tracing rule. In the **Actions** panel, select **Add**.
 1. Leave the **All content** option selected.  
     :::image type="content" source="media/troubleshoot-php-with-failed-request-tracing/add-frt-rule-dialog-all-content-selected.png" alt-text="Screenshot of the Add Failed Request Tracing Rule dialog box with the All content option selected.":::
 1. Select **Next**.
-1. Enter _400-999_ in the **Status code(s)** text box.  
+1. Enter _400-999_ in **Status code(s)**.  
     :::image type="content" source="media/troubleshoot-php-with-failed-request-tracing/define-trace-condition-400-999-code.png" alt-text="Screenshot of the Define Trace Conditions screen with 4 0 0 dash 9 9 9 entered as the Status code.":::
 1. Select **Next**.
-1. Leave the default trace providers enabled.  
-    :::image type="content" source="media/troubleshoot-php-with-failed-request-tracing/select-trace-providers-default-selected.png" alt-text="Screenshot of the Select Trace Providers screen with the default providers enabled.":::
-1. Select **Finish**.
+1. Leave the default trace providers enabled, and then select **Finish**.
 1. Now, you can make requests. Assume for these steps that the requests are made by other users of your site and you aren't aware of their requests or responses. For example, make the following requests using Internet Explorer:  
 
     - Request `http://localhost:84/hello.php`
@@ -85,7 +83,7 @@ To enable Failed Request Tracing for a site (for example, _Troubleshooting.PHP_)
 1. You can now obtain a specific trace log to gather more information about the request and the possible cause for the failure. To do this, run the following command from the command prompt (using the quoted ID of the trace log from the previous output):  
 
     ```console
-    %windir%\system32\inetsrv\appcmd.exe list traces "<name of your site>" /text:*
+    %windir%\system32\inetsrv\appcmd.exe list traces /site.name:"TroubleshootingPhp" /text:*
     ```
 
     This should have the output similar to the following:  
@@ -139,10 +137,9 @@ Suppose you request a page that enters into an endless loop due to a programming
 1. Select **Start**, and then select **Internet Information Services (IIS) Manager**.
 1. In the tree view on the left, select on the **Server** node.
 1. Under **IIS**, double-click **Worker Processes**.
-1. Under **Application Pool** Name, double-click on your site name. (In this example, the site is _Troubleshooting.PHP_.)  
+1. Under **Application Pool Name**, double-click on your application pool name to open the **Requests** view. (In this example, it's _TroubleshootingPhp_.)  
     :::image type="content" source="media/troubleshoot-php-with-failed-request-tracing/worker-processes-app-pool-highlighted.png" alt-text="Screenshot of the Worker Processes screen with the Application Pool Name being highlighted.":::
-1. Switch over to a Web browser, and refresh the page if the page has timed out. This may need to be done throughout these steps. Switch back to **IIS Manager**, and then refresh the **Requests** view.  
-    :::image type="content" source="media/troubleshoot-php-with-failed-request-tracing/request-view-php-highlighted.png" alt-text="Screenshot of the Requests view with slash loop dot P H P being highlighted.":::
+1. Switch over to a Web browser, and refresh the page if the page has timed out. This may need to be done throughout these steps. Switch back to **IIS Manager**, and then refresh the **Requests** view.
 1. Observe the list of currently executing requests, showing the request to the problem page, in this sample, _/loop.php_. The request entry shows:  
 
     - That the request has been executing for some time (Time Elapsed).
