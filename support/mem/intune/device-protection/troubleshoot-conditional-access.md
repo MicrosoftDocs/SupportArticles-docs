@@ -59,7 +59,7 @@ You can view these conditions for each device in the Azure portal and in the dev
   3. Select the *Enable Browser Access* button.
   4. In the Chrome browser, sign out of Microsoft 365 and restart Chrome.
 
-- Desktop applications must use modern authentication mechanisms, which rely on users interacting with the Identity Provider using a browser. Legacy authentication mechanisms such as apps sending the [password]([url](https://learn.microsoft.com/azure/active-directory/develop/v2-oauth-ropc)) on their own are not supported.
+Desktop applications must use modern authentication mechanisms, which rely on users interacting with the identity provider using a web browser. Legacy authentication mechanisms such as apps [sending the password directly](https://learn.microsoft.com/azure/active-directory/develop/v2-oauth-ropc) are not supported.
 - 
 ## Devices are blocked and no quarantine email is received
 
