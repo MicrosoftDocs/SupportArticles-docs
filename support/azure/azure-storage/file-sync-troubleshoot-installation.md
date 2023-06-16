@@ -118,7 +118,7 @@ To install the Az or AzureRM module on PowerShell 5.1, perform the following ste
 
 <a id="server-already-registered"></a>Server Registration displays the following message: "This server is already registered"
 
-:::image type="content" source="media/storage-sync-files-troubleshoot/server-already-registered-error.png" alt-text="Screenshot that shows the Server Registration dialog box with the 'server is already registered' error message.":::
+:::image type="content" source="media/file-sync-troubleshoot-installation/server-already-registered-error.png" alt-text="Screenshot that shows the Server Registration dialog box with the 'server is already registered' error message.":::
 
 This message appears if the server was previously registered with a Storage Sync Service. To unregister the server from the current Storage Sync Service and then register with a new Storage Sync Service, complete the steps that are described in [Unregister a server with Azure File Sync](/azure/storage/file-sync/file-sync-server-registration#unregister-the-server-with-storage-sync-service).
 
