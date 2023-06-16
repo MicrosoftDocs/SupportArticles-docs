@@ -3,10 +3,8 @@ title: Troubleshoot common SQL Server cumulative update (CU) installation issues
 description: This article helps you troubleshoot common SQL Server cumulative update issues.
 author: padmajayaraman
 ms.author: v-jayaramanp
-ms.reviewer: pijocoder
-ms.date: 12/07/2022
-ms.prod: sql
-ms.topic: troubleshooting
+ms.reviewer: jopilov
+ms.date: 06/16/2023
 ms.custom: sap:Connection Issues
 ---
 
