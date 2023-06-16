@@ -18,7 +18,7 @@ The following table lists the release history for [!INCLUDE [sql-server-2022](..
 
 | Release                | Version       | Release date |
 | ---------------------- | ------------- | ------------ |
-| [CU 5](#CU5)           | 16.0.4045.3   | 2023-05-15   |
+| [CU 5](#CU5)           | 16.0.4045.3   | 2023-06-15   |
 | [CU 4](#CU4)           | 16.0.4035.4   | 2023-05-11   |
 | [CU 3](#CU3)           | 16.0.4025.1   | 2023-04-13   |
 | [CU 2](#CU2)           | 16.0.4015.1   | 2023-03-15   |
@@ -26,9 +26,9 @@ The following table lists the release history for [!INCLUDE [sql-server-2022](..
 | [GDR 1](#GDR1)         | 16.0.1050.5   | 2023-02-14   |
 | [GA](#GA)              | 16.0.1000.6   | 2022-11-16   |
 
-## <a id="CU5"></a> CU 5 (May 2023)
+## <a id="CU5"></a> CU 5 (June 2023)
 
-This is the Cumulative Update 5 (CU 5) release of [!INCLUDE [sql-server-2022](../../includes/versions/sql-server-2022.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 16.0.4045.3. For information about the fixes and improvements in this release, see the [Support article](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate5).
+This is the Cumulative Update 5 (CU 5) release of [!INCLUDE [sql-server-2022](../../includes/versions/sql-server-2022.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 16.0.4045.3. For information about the fixes and improvements in this release, see the [Support article](../sqlserver-2022/cumulativeupdate5.md).
 
 ### Package details
 
