@@ -18,6 +18,7 @@ Consider the following scenario:
 - The source of change data for CDC is the transaction log. As inserts, updates, and deletes are applied to tracked source tables, entries that describe those changes are added to the log.
 - The transaction log on the database grows due to long running transactions.
 - When querying sys.databases for the given database, the log_reuse_wait_desc column shows REPLICATION.
+
 In this scenario, the database transaction log file grows gradually, leading to excessive transaction log space consumption. Once the transaction log size reaches the max defined limit, writes to the database fail.
 
 ## Cause
