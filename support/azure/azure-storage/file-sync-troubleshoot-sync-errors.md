@@ -38,7 +38,7 @@ To check the status of the cloud change enumeration job, go the Cloud Endpoint p
 
 Within each sync group, you can drill down into its individual server endpoints to see the status of the last completed sync sessions. A green **Health** column and a **Files not syncing** value of 0 indicate that sync is working as expected. If not, see the following screenshot for a list of common sync errors and how to handle files that aren't syncing.
 
-![A screenshot of the Azure portal](media/storage-sync-files-troubleshoot/portal-sync-health.png)
+:::image type="content" source="media/file-sync-troubleshoot-sync-errors/portal-sync-health.png" alt-text="Screenshot that shows the Azure portal.":::
 
 ### [Server](#tab/server)
 
@@ -159,7 +159,7 @@ To see these errors, run the *FileSyncErrorsReport.ps1* PowerShell script (locat
 | 0x80c8603e | -2134351810 | ECS_E_AZURE_STORAGE_SHARE_SIZE_LIMIT_REACHED | The file can't be synced because the Azure file share limit is reached. | To resolve this issue, see [You reached the Azure file share storage limit](?tabs=portal1%252cazure-portal#-2134351810) section in the troubleshooting guide. |
 | 0x80c83008 | -2134364152 | ECS_E_CANNOT_CREATE_AZURE_STAGED_FILE | The file can't be synced because the Azure file share limit is reached.  | To resolve this issue, see [You reached the Azure file share storage limit](?tabs=portal1%252cazure-portal#-2134351810) section in the troubleshooting guide. |
 | 0x80c8027C | -2134375812 | ECS_E_ACCESS_DENIED_EFS | The file is encrypted by an unsupported solution (like NTFS EFS). | Decrypt the file and use a supported encryption solution. For a list of support solutions, see the [Encryption](/azure/storage/file-sync/file-sync-planning#encryption) section of the planning guide. |
-| 0x80c80283 | -2160591491 | ECS_E_ACCESS_DENIED_DFSRRO | The file is located on a DFS-R read-only replication folder. | File is located on a DFS-R read-only replication folder. Azure File Sync doesn't support server endpoints on DFS-R read-only replication folders. See [planning guide](/azure/storage/file-sync/file-sync-planning.md#distributed-file-system-dfs) for more information. |
+| 0x80c80283 | -2160591491 | ECS_E_ACCESS_DENIED_DFSRRO | The file is located on a DFS-R read-only replication folder. | File is located on a DFS-R read-only replication folder. Azure File Sync doesn't support server endpoints on DFS-R read-only replication folders. See [planning guide](/azure/storage/file-sync/file-sync-planning#distributed-file-system-dfs) for more information. |
 | 0x80070005 | -2147024891 | ERROR_ACCESS_DENIED | The file has a delete pending state. | No action required. File will be deleted once all open file handles are closed. |
 | 0x80c86044 | -2134351804 | ECS_E_AZURE_AUTHORIZATION_FAILED | The file can't be synced because the firewall and virtual network settings on the storage account are enabled, and the server doesn't have access to the storage account. | Add the Server IP address or virtual network by following the steps documented in the [Configure firewall and virtual network settings](/azure/storage/file-sync/file-sync-deployment-guide?tabs=azure-portal#optional-configure-firewall-and-virtual-network-settings) section in the deployment guide. |
 | 0x80c80243 | -2134375869 | ECS_E_SECURITY_DESCRIPTOR_SIZE_TOO_LARGE | The file can't be synced because the security descriptor size exceeds the 64 KiB limit. | To resolve this issue, remove access control entries (ACE) on the file to reduce the security descriptor size. |
@@ -478,13 +478,13 @@ Sync sessions fail with either of these errors when the Azure file share storage
 3. Note the Azure file share name in the opened pane.
 4. Select the linked storage account. If this link fails, the referenced storage account has been removed.
 
-    :::image type="content" source="media/storage-sync-files-troubleshoot/file-share-inaccessible.png" alt-text="Screenshot that shows the cloud endpoint detail pane with a link to the storage account.":::
+    :::image type="content" source="media/file-sync-troubleshoot-sync-errors/file-share-inaccessible.png" alt-text="Screenshot that shows the cloud endpoint detail pane with a link to the storage account.":::
 
 5. Select **Files** to view the list of file shares.
 6. Select the ellipses (...) at the end of the row for the Azure file share referenced by the cloud endpoint.
 7. Verify that the **Usage** is the **Quota** below. Note unless an alternate quota has been specified, the quota will match the [maximum size of the Azure file share](/azure/storage/files/storage-files-scale-targets?toc=/azure/storage/filesync/toc.json).
 
-    :::image type="content" source="media/storage-sync-files-troubleshoot/file-share-limit-reached.png" alt-text="screenshot that shows the Azure file share properties.":::
+    :::image type="content" source="media/file-sync-troubleshoot-sync-errors/file-share-limit-reached.png" alt-text="Screenshot that shows the Azure file share properties.":::
 
 If the share is full and a quota isn't set, one possible way of fixing this issue is to make each subfolder of the current server endpoint into its own server endpoint in their own separate sync groups. This way each subfolder will sync to individual Azure file shares.
 
@@ -985,8 +985,8 @@ Server endpoint provisioning fails with this error code if these conditions are 
 
 This provisioning error protects you from deleting all content that might be available in an Azure file share. Server authoritative upload is a special mode to catch up a cloud location that was already seeded, with the updates from the server location. Review this [migration guide](/azure/storage/files/storage-files-migration-server-hybrid-databox) to understand the scenario for which this mode has been built.
 
-1. Remove the server endpoint in the sync group by following the steps documented in [Remove a server endpoint](file-sync-server-endpoint-delete.md).
-1. Create a new server endpoint in the sync group by following the steps documented in [Add a server endpoint](file-sync-server-endpoint-create.md).
+1. Remove the server endpoint in the sync group by following the steps documented in [Remove a server endpoint](/azure/storage/file-sync/file-sync-server-endpoint-delete).
+1. Create a new server endpoint in the sync group by following the steps documented in [Add a server endpoint](/azure/storage/file-sync/file-sync-server-endpoint-create).
 
 <a id="-2134364025"></a>**The subscription owning the storage account is disabled.**
 
@@ -1315,7 +1315,7 @@ Please verify the volume where the server endpoint is located is attached to the
 | **Error string** | ECS_E_PRIVATE_ENDPOINT_ACCESS_BLOCKED |
 | **Remediation required** | Yes |
 
-Check the private endpoint configuration and allow access to the file sync service. [Learn more](file-sync-firewall-and-proxy.md#test-network-connectivity-to-service-endpoints).
+Check the private endpoint configuration and allow access to the file sync service. [Learn more](/azure/storage/file-sync/file-sync-firewall-and-proxy#test-network-connectivity-to-service-endpoints).
 
 <a id="-2134375864"></a>**Sync needs to reconcile the server and Azure file share data before files can be uploaded.**
 
@@ -1363,7 +1363,7 @@ Run the following PowerShell command on the server to reset the certificate:
 3. Note the Azure file share name in the opened pane.
 4. Select the linked storage account. If this link fails, the referenced storage account has been removed.
 
-    :::image type="content" source="media/storage-sync-files-troubleshoot/file-share-inaccessible.png" alt-text="Screenshot that shows the cloud endpoint detail pane with a link to the storage account.":::
+    :::image type="content" source="media/file-sync-troubleshoot-sync-errors/file-share-inaccessible.png" alt-text="Screenshot that shows the cloud endpoint detail pane with a link to the storage account.":::
 
 ## [PowerShell](#tab/azure-powershell)
 
@@ -1473,7 +1473,7 @@ if ($fileShare -eq $null) {
 1. Select the **Role assignments** tab to list the users and applications (*service principals*) that have access to your storage account.
 1. Verify **Microsoft.StorageSync** or **Hybrid File Sync Service** (old application name) appears in the list with the **Reader and Data Access** role.
 
-    :::image type="content" source="media/storage-sync-files-troubleshoot/reader-and-data-access.png" alt-text="Screenshot that shows Hybrid File Sync Service service principal in the access control tab of the storage account":::
+    :::image type="content" source="media/file-sync-troubleshoot-sync-errors/reader-and-data-access.png" alt-text="Screenshot that shows Hybrid File Sync Service service principal in the access control tab of the storage account":::
 
     If **Microsoft.StorageSync** or **Hybrid File Sync Service** doesn't appear in the list, perform the following steps:
 
