@@ -59,6 +59,8 @@ You can view these conditions for each device in the Azure portal and in the dev
   3. Select the *Enable Browser Access* button.
   4. In the Chrome browser, sign out of Microsoft 365 and restart Chrome.
 
+- Desktop applications must use modern authentication mechanisms, which rely on users interacting with the Identity Provider using a browser. Legacy authentication mechanisms such as apps sending the [password]([url](https://learn.microsoft.com/azure/active-directory/develop/v2-oauth-ropc)) on their own are not supported.
+- 
 ## Devices are blocked and no quarantine email is received
 
 - Verify that the device is present in the Intune admin console as an Exchange ActiveSync device. If it's not, it's likely that device discovery is failing, probably because of an Exchange Connector issue. For more information, see [Troubleshoot the Intune Exchange Connector](troubleshoot-exchange-connector.md).
