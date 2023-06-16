@@ -18,7 +18,7 @@ The following table lists the release history for [!INCLUDE [sql-server-2019](..
 
 | Release                | Version       | Release date |
 | ---------------------- | ------------- | ------------ |
-| [CU 21](#CU21)         | 15.0.4316.3   | 2023-05-16   |
+| [CU 21](#CU21)         | 15.0.4316.3   | 2023-06-15   |
 | [CU 20](#CU20)         | 15.0.4312.2   | 2023-04-13   |
 | [CU 19](#CU19)         | 15.0.4298.1   | 2023-02-16   |
 | [CU 18 GDR](#CU18-GDR) | 15.0.4280.7   | 2023-02-14   |
@@ -45,7 +45,7 @@ The following table lists the release history for [!INCLUDE [sql-server-2019](..
 | [CU 1](#CU1)           | 15.0.4003.23  | 2020-01-07   |
 | [GA](#GA)              | 15.0.2000.5   | 2019-11-04   |
 
-## <a id="CU21"></a> CU 21 (May 2023)
+## <a id="CU21"></a> CU 21 (June 2023)
 
 This is the Cumulative Update 21 (CU 21) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4316.3. For information about the fixes and improvements in this release, see the [Support article](/troubleshoot/sql/releases/sqlserver-2019/cumulativeupdate21).
 
