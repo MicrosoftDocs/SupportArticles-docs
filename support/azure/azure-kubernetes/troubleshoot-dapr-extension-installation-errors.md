@@ -7,7 +7,7 @@ editor: v-jsitser
 ms.reviewer: nigreenf
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-extensions-add-ons
-ms.date: 06/14/2023
+ms.date: 06/16/2023
 ---
 
 # Troubleshoot Dapr extension installation errors
