@@ -2,6 +2,14 @@
 
 
 
+## Week of June 12, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 6/13/2023 | [In-Place eDiscovery search doesn't search the file names of attached mail items](/exchange/troubleshoot/compliance/ediscovery-search-ignores-attached-mail-items) | added |
+
+
 ## Week of June 05, 2023
 
 
