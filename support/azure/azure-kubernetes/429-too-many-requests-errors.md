@@ -46,7 +46,7 @@ A Kubernetes cluster on Azure (with or without AKS) that does a frequent scale u
 
 For more information about these errors, see [Throttling Azure Resource Manager requests](/azure/azure-resource-manager/management/request-limits-and-throttling) and [Troubleshooting API throttling errors](/troubleshoot/azure/virtual-machines/troubleshooting-throttling-errors).
 
-For AKS cluster, you can use [AKS Diagnostics](https://learn.microsoft.com/en-us/azure/aks/aks-diagnostics) to analyze, identify the cause of these errors and get recommendations to resolve them. In the AKS Diagnostics, search the **“Azure Resource Request Throttling”**, where you can get a report with a series of diagnostics to show if the cluster has experienced any Azure Resource Manager (ARM), or Resource Provider (RP) request rate throttling (429 responses), and where the throttles came from. 
+For AKS cluster, you can use [AKS Diagnostics]/azure/aks/aks-diagnostics) to analyze, identify the cause of these errors and get recommendations to resolve them. In the AKS Diagnostics, search the **“Azure Resource Request Throttling”**, where you can get a report with a series of diagnostics to show if the cluster has experienced any Azure Resource Manager (ARM), or Resource Provider (RP) request rate throttling (429 responses), and where the throttles came from. 
 
 **Request Rate Throttling has been detected for your Cluster**, this diagnostic will call out if there is throttling that has been detected in current AKS cluster and provides some general recommendations. 
 
@@ -71,7 +71,7 @@ Run Kubernetes 1.18.*x* or later. These versions contain many improvements that 
 
 ## Solution 2: Increase the auto scaler scan interval
 
-If you find the “Cluster Auto-Scaler Throttling has been detected” diagnostic report throttling caused by the cluster auto-scaler, you can try to increase the [auto scaler scan interval](https://learn.microsoft.com/en-us/azure/aks/cluster-autoscaler) to reduce the number of calls to VMSS from auto-scaler. 
+If you find the “Cluster Auto-Scaler Throttling has been detected” diagnostic report throttling caused by the cluster auto-scaler, you can try to increase the [auto scaler scan interval](/azure/aks/cluster-autoscaler) to reduce the number of calls to VMSS from auto-scaler. 
 
 ## Solution 3: Reconfigure third-party applications to make fewer calls
 
