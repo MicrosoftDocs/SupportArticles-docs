@@ -1,6 +1,9 @@
 - name: Welcome
   href: welcome-azure-kubernetes.yml
 
+- name: Node VM on AKS cluster is in failed state
+  href: cluster-node-virtual-machine-failed-state.md
+
 - name: Troubleshoot create operations
   items:
   - name: Basic troubleshooting
@@ -211,8 +214,6 @@
     href: cannot-view-resources-kubernetes-resource-viewer-portal.md
   - name: "Changing property 'imageReference' is not allowed"
     href: changing-property-imagereference-not-allowed.md
-  - name: Cluster provisioning status changed from Ready to Failed
-    href: cluster-provisioning-status-changed-ready-failed.md
   - name: Cluster upgrading and scaling errors
     href: upgrading-or-scaling-does-not-succeed.md
   - name: '"Error from server: error dialing backend: dial tcp" messages'
@@ -229,8 +230,6 @@
     href: stale-watch-azure-ad-pod-identity-nmi-status-500.md
   - name: Node count isn't in autoscaler min and max range
     href: node-count-is-not-in-autoscaler-min-max-range.md
-  - name: Node VM is in failed state
-    href: cluster-node-virtual-machine-failed-state.md
   - name: Pod is stuck in CrashLoopBackOff mode
     href: pod-stuck-crashloopbackoff-mode.md
   - name: '"Quota exceeded" error during creation or upgrade'
