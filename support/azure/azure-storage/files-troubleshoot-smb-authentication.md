@@ -1,4 +1,6 @@
----
+=]
+\/"
+"---
 title: Troubleshoot Azure Files identity-based authentication and authorization issues (SMB)
 description: Troubleshoot problems using identity-based authentication to connect to SMB Azure file shares and see possible resolutions.
 author: khdownie
@@ -19,7 +21,7 @@ This article lists common problems when using Server Message Block (SMB) Azure f
 | Standard file shares (GPv2), GRS/GZRS | :::image type="icon" source="media/files-troubleshoot-smb-authentication/yes-icon.png" border="false":::  | :::image type="icon" source="media/files-troubleshoot-smb-authentication/no-icon.png" border="false"::: |
 | Premium file shares (FileStorage), LRS/ZRS | :::image type="icon" source="media/files-troubleshoot-smb-authentication/yes-icon.png" border="false":::  | :::image type="icon" source="media/files-troubleshoot-smb-authentication/no-icon.png" border="false"::: |
 
-## System error 5 occurs when mounting an Azure file share
+## Error 5 occurs when mounting an Azure file share
 
 When you try to mount a file share, you might receive the following error:
 
