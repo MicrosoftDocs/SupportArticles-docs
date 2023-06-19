@@ -33,7 +33,7 @@ If you encounter problems with Azure Files, start with these steps. You can also
 
 ### Check DNS resolution and connectivity to your Azure file share
 
-The most common problem encountered by Azure Files customers is that mounting or accessing the Azure file share fails because of an incorrect networking configuration. This can happen with any of the three file-sharing protocols Azure Files supports: Server Message Block (SMB), Network File System (NFS), and FileREST.
+The most common problem encountered by Azure Files customers is that mounting or accessing the Azure file share fails because of an incorrect networking configuration. This can happen with any of the three file sharing protocols Azure Files supports: Server Message Block (SMB), Network File System (NFS), and FileREST.
 
 The following table provides the SMB, NFS, and FileREST requirements for which of the network endpoints of a storage account they can use and which port that endpoint can be accessed over. To learn more about network endpoints, see [Azure Files networking considerations](/azure/storage/files/storage-files-networking-overview).
 
@@ -115,7 +115,7 @@ Section    : Answer
 IP4Address : x.x.x.x
 ```
 
-If you're resolving to a private endpoint, you would normally expect an "A" record for `mystorageaccount.privatelink.file.core.windows.net` that maps to your private endpoint's IP address:
+If you're resolving to a private endpoint, you would normally expect an A record for `mystorageaccount.privatelink.file.core.windows.net` that maps to your private endpoint's IP address:
 
 ```output
 Name                   : mystorageaccount.file.core.windows.net
@@ -173,7 +173,7 @@ Name:   file.phx10prdstf01a.store.core.windows.net
 Address: 20.60.39.8
 ```
 
-If you're resolving to a private endpoint, you would normally expect an "A" record for `mystorageaccount.privatelink.file.core.windows.net` that maps to your private endpoint's IP address:
+If you're resolving to a private endpoint, you would normally expect an A record for `mystorageaccount.privatelink.file.core.windows.net` that maps to your private endpoint's IP address:
 
 ```output
 Server:         127.0.0.53
