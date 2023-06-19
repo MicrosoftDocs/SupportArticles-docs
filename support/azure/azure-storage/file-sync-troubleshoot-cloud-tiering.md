@@ -223,19 +223,19 @@ Tiered files on a server will become inaccessible if the files aren't recalled p
 
 Errors are logged if tiered files aren't accessible:
 
-- When syncing a file, error code -2147942467 (0x80070043 - ERROR_BAD_NET_NAME) is logged in the ItemResults event log.
-- When recalling a file, error code -2134376393 (0x80c80037 - ECS_E_SYNC_SHARE_NOT_FOUND) is logged in the RecallResults event log.
+- When syncing a file, error code -2147942467 (0x80070043 - ERROR_BAD_NET_NAME) is logged in the `ItemResults` event log.
+- When recalling a file, error code -2134376393 (0x80c80037 - ECS_E_SYNC_SHARE_NOT_FOUND) is logged in the `RecallResults` event log.
 
 Restoring access to your tiered files is possible if the following conditions are met:
 
-- Server endpoint was deleted within past 30 days.
-- Cloud endpoint wasn't deleted.
-- File share wasn't deleted.
-- Sync group wasn't deleted.
+- The server endpoint was deleted within the past 30 days.
+- The cloud endpoint wasn't deleted.
+- The file share wasn't deleted.
+- The sync group wasn't deleted.
 
 If the conditions above are met, you can restore access to the files on the server by recreating the server endpoint at the same path on the server within the same sync group within 30 days.
 
-If the conditions above aren't met, restoring access isn't possible as these tiered files on the server are now orphaned. Follow these instructions to remove the orphaned tiered files.
+If the conditions above aren't met, restoring access isn't possible, as these tiered files on the server are now orphaned. Follow these instructions to remove the orphaned tiered files.
 
 > [!NOTE]
 >
@@ -332,7 +332,7 @@ If you want to configure your antivirus or other applications to skip scanning f
 
 ## TLS 1.2 required for Azure File Sync
 
-You can view the TLS settings at your server by looking at the [registry settings](/windows-server/security/tls/tls-registry-settings).
+You can view the TLS settings on your server by looking at the [registry settings](/windows-server/security/tls/tls-registry-settings).
 
 If you're using a proxy, consult your proxy's documentation and ensure it's configured to use TLS 1.2.
 
