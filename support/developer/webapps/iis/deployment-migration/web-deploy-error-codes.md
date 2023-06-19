@@ -92,9 +92,9 @@ This error code may be shown because of various reasons. It typically indicates 
 
 To connect using the Web Management Service, do the following steps:
 
-- Verify that the username and password are correct.
-- Verify that the site exists.
-- Verify that you have the IIS Manager Permissions to the site's scope.
+1. Verify that the username and password are correct.
+1. Verify that the site exists.
+1. Verify that you have the IIS Manager Permissions to the site's scope.
 
 **Resolution**
 
@@ -137,10 +137,10 @@ The certificate presented by the Web Deploy endpoint is untrusted or invalid. Th
 
 Either install a trusted certificate on the endpoint or try bypassing certificate validation.
 
-- From the *msdeploy.exe* command line, pass the `-allowUntrusted` flag.
-- From the Visual Studio publish UI, check `Allow Untrusted`.
-- From a Visual Studio deployment package (For example, *MyApp.deploy.cmd*), pass the `-allowUntrusted` flag.
-- Add `<AllowUntrustedCertificate>true</AllowUntrustedCertificate>` to the pubxml file:
+1. From the *msdeploy.exe* command line, pass the `-allowUntrusted` flag.
+1. From the Visual Studio publish UI, check `Allow Untrusted`.
+1. From a Visual Studio deployment package (For example, *MyApp.deploy.cmd*), pass the `-allowUntrusted` flag.
+1. Add `<AllowUntrustedCertificate>true</AllowUntrustedCertificate>` to the pubxml file:
 
     ```xml
     <PropertyGroup>
@@ -378,17 +378,17 @@ Ensure that:
 
 **Diagnosis**
 
-The ERROR\_FRAMEWORK\_VERSIONS\_DO\_NOT\_MATCH error can occur if you're doing a web server sync between two machines that have different versions of .Net installed.
+The ERROR\_FRAMEWORK\_VERSIONS\_DO\_NOT\_MATCH error can occur if you're doing a web server sync between two machines that have different versions of .NET installed.
 
 **Resolution**
 
-By default, Web Deploy prefers using the .Net version specified in its configuration file. If the version of .Net that Web Deploy is using on the client is different from the version on the server, a Web Server sync is blocked to prevent settings from different versions of .Net from being migrated. To resolve this problem, you have two options:
+By default, Web Deploy prefers using the .NET version specified in its configuration file. If the version of .NET that Web Deploy is using on the client is different from the version on the server, a Web Server sync is blocked to prevent settings from different versions of .NET from being migrated. To resolve this problem, you have two options:
 
-1. Use the `netFxVersion` provider setting to inform Web Deploy exactly which .Net settings to migrate. Here is a command line example, which forces Web Deploy to sync .Net settings:
+1. Use the `netFxVersion` provider setting to inform Web Deploy exactly which .NET settings to migrate. Here is a command line example, which forces Web Deploy to sync .NET settings:
 
     > msdeploy.exe -verb:sync -source:webserver,machineconfig32.netfxversion=2,machineconfig64.netfxversion=2,rootwebconfig32.netfxversion=2,rootwebconfig64.netfxversion=2 -dest:webserver,machineconfig32.netfxversion=2,machineconfig64.netfxversion=2,rootwebconfig32.netfxversion=2,rootwebconfig64.netfxversion=2,computername=destServername
 
-2. Run Web Deploy in the same version of .Net between client and server. On the client side, change the order of the `supportedRuntime` version element in the `%programfiles%\IIS\Microsoft Web Deploy V3\msdeploy.exe.config` file for the version of .Net that's specified first (see [gacInstall provider](https://technet.microsoft.com/library/gg607836(v=WS.10).aspx) for an example). This indicates the version of .Net, assuming it's installed on your system. On the server side, you can do the same for `%programfiles%\IIS\microsoft web deploy\msdepsvc.exe.config`. If you modify this file, make sure to restart the Web Deployment Agent Services that is the `net stop msdepsvc` and `net start msdepsvc`.
+2. Run Web Deploy in the same version of .NET between client and server. On the client side, change the order of the `supportedRuntime` version element in the `%programfiles%\IIS\Microsoft Web Deploy V3\msdeploy.exe.config` file for the version of .NET that's specified first (see [gacInstall provider](https://technet.microsoft.com/library/gg607836(v=WS.10).aspx) for an example). This indicates the version of .NET, assuming it's installed on your system. On the server side, you can do the same for `%programfiles%\IIS\microsoft web deploy\msdepsvc.exe.config`. If you modify this file, make sure to restart the Web Deployment Agent Services that is the `net stop msdepsvc` and `net start msdepsvc`.
 
 <a id="ERROR_HTTPCERT_BINDING_NOT_FOUND"></a>
 
@@ -564,11 +564,11 @@ You can configure the `appOffline` rule in the publishing profile (*.pubxml*). A
 
 **Diagnosis**
 
-Web Deploy failed to perform a sync using SQL Dedicated Administrator Connection (DAC) because SQL DAC requires .Net 4.0.
+Web Deploy failed to perform a sync using SQL Dedicated Administrator Connection (DAC) because SQL DAC requires .NET 4.0.
 
 **Resolution**
 
-Ensure that the server making the SQL connection using DAC has .Net 4.0 installed. If you're connecting using the *msdeploy.exe* client, ensure that it has .Net 4.0 listed as its first option in the *msdeploy.exe* config file. If you're connecting to the `msdepsvc` server endpoint (Web Deployment Agent service), ensure that it has .Net 4.0 listed as its first option in the `msdepsvc.exe` config file.
+Ensure that the server making the SQL connection using DAC has .NET 4.0 installed. If you're connecting using the *msdeploy.exe* client, ensure that it has .NET 4.0 listed as its first option in the *msdeploy.exe* config file. If you're connecting to the `msdepsvc` server endpoint (Web Deployment Agent service), ensure that it has .NET 4.0 listed as its first option in the `msdepsvc.exe` config file.
 
 <a id="ERROR_MAX_NUM_APPLICATIONS_EXCEEDED"></a>
 
@@ -646,7 +646,7 @@ Required dependencies couldn't be loaded.
 
 **Resolution**
 
-If you installed Web Deploy manually through the MSI, try reinstall using Web Platform Installer to install Web Deploy, which helps to install required dependencies for you.
+If you installed Web Deploy manually through the MSI, try reinstalling Web Deploy using Web Platform Installer, which helps to install required dependencies for you.
 
 <a id="ERROR_SMO_NEEDED_FOR_SQL_PROVIDER"></a><a id="ERROR_USER_NOT_AUTHORIZED_FOR_IISAPP"></a><a id="ERROR_SCRIPTER_NEEDED_FOR_SQLCE_PROVIDER"></a>
 
@@ -705,7 +705,7 @@ You can create new virtual applications or modify existing configuration setting
 1. Log in to the portal.
 1. Open your site settings.
 1. Select the **Configure** tab.
-1. In the **Configure** tab, modify your site to match the configuration settings of the application you're trying to deploy. In most cases, this is simply a matter of changing the .Net Framework version, but in some cases this may also require you to add a new virtual application.
+1. In the **Configure** tab, modify your site to match the configuration settings of the application you're trying to deploy. In most cases, this is simply a matter of changing the .NET Framework version, but in some cases this may also require you to add a new virtual application.
 
 ## ERROR\_EXCEPTION\_WHILE\_CREATING\_OBJECT
 
