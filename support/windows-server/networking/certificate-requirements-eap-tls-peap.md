@@ -1,7 +1,7 @@
 ---
 title: Certificate requirements when you use EAP-TLS
 description: Discusses the requirements when you use Extensible Authentication Protocol (EAP) Transport Layer Security (TLS) or Protected Extensible Authentication Protocol (PEAP)-EAP-TLS in Windows Server.
-ms.date: 06/15/2023
+ms.date: 06/19/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -9,10 +9,9 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, samyun
 ms.custom: sap:radius-network-policy-server-nps-or-internet-authentication-service-ias, csstroubleshoot
 ms.technology: networking
-ms.contributor: samyun
 ---
 # Certificate requirements when you use EAP-TLS or PEAP with EAP-TLS
 
@@ -25,7 +24,7 @@ _Original KB number:_ &nbsp; 814394
 
 When you use EAP with a strong EAP type, such as TLS with smart cards, or TLS with certificates, both the client and server use certificates to verify identities to each other. Certificates must meet specific requirements both on the server and on the client for successful authentication.
 
-The certificate must be configured with one or more purposes in Extended Key Usage (EKU) extensions that match the certificate use. For example, a certificate that's used for the authentication of a client to a server must be configured with the `Client Authentication` purpose. Or, a certificate that's used for the authentication of a server must be configured with the `Server Authentication` purpose. When certificates are used for authentication, the authenticator examines the client certificate and looks for the correct purpose object identifier in EKU extensions. For example, the object identifier (OID) for the `Client Authentication` purpose is `1.3.6.1.5.5.7.3.2` and the OID for `Server Authentication` is `1.3.6.1.5.5.7.3.1`.
+The certificate must be configured with one or more purposes in Extended Key Usage (EKU) extensions that match the certificate use. For example, a certificate that's used for the authentication of a client to a server must be configured with the Client Authentication purpose. Or, a certificate that's used for the authentication of a server must be configured with the Server Authentication purpose. When certificates are used for authentication, the authenticator examines the client certificate and looks for the correct purpose object identifier (OID) in EKU extensions. For example, the object identifier for the Client Authentication purpose is 1.3.6.1.5.5.7.3.2 and the OID for Server Authentication is 1.3.6.1.5.5.7.3.1.
 
 ## Minimum certificate requirements
 
@@ -58,7 +57,7 @@ You can configure clients to validate server certificates by using the **Validat
   
   - A Microsoft stand-alone root or third-party root CA in an Active Directory domain that has an NTAuthCertificates store that contains the published root certificate. For more information about how to import third-party CA certificates, see [How to import third-party certification authority (CA) certificates into the Enterprise NTAuth store](https://support.microsoft.com/help/295663).
 
-- The NPS or the VPN server computer certificate is configured with the `Server Authentication` purpose. The object identifier for `Server Authentication` is `1.3.6.1.5.5.7.3.1`.
+- The Network Policy Server (NPS) or the VPN server computer certificate is configured with the Server Authentication purpose. The object identifier for Server Authentication is 1.3.6.1.5.5.7.3.1.
 
 - The computer certificate doesn't fail any one of the checks that are performed by the CryptoAPI certificate store. And it doesn't fail any one of the requirements in the remote access policy.
 
@@ -71,7 +70,7 @@ You can configure clients to validate server certificates by using the **Validat
 > [!NOTE]
 > With PEAP or with EAP-TLS authentication, servers display a list of all the installed certificates in the Certificates snap-in. However, the certificates that contain the Server Authentication purpose in EKU extensions are not displayed.
 
-## Additional resources
+## More information
 
 - [Extensible Authentication Protocol (EAP) for network access](/windows-server/networking/technologies/extensible-authentication-protocol/network-access)
 - [Configure Certificate Templates for PEAP and EAP Requirements for NPS](/windows-server/networking/technologies/nps/nps-manage-cert-requirements)
