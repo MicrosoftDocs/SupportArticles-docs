@@ -1,37 +1,36 @@
 ---
-title: SLA workflow must be in published state 
-description: Provides a resolution for the issue where case updating fails with the error “workflow must be in published state”.
+title: SLA workflow must be in Published state error
+description: Provides a resolution for an issue where a case update fails with the Workflow must be in published state error.
 ms.reviewer: sdas
 ms.author: ravimanne
-ms.date: 06/14/2023
+ms.date: 06/19/2023
 ---
 # "Workflow must be in Published state" error
 
-This article provides a resolution for the issue where case updating fails with the error “workflow must be in published state”.
+This article provides a resolution for the error â€œWorkflow must be in Published stateâ€ that occurs when you update a case.
 
 ## Symptoms
 
-“Workflow must be in published state” error while updating the status of SLAKPI instance during case update which is associated with SLA.
+When you update the status of an SLA KPI instance during a case update thatâ€™s associated with an SLA, you receive the following error message:
+
+> Workflow must be in Published state.
 
 ## Cause
 
-This issue happens due to the action flow on the SLA item being disabled during case update which is associated with SLA.
+This issue occurs because the action flow on the SLA item is disabled during a case update thatâ€™s associated with an SLA.
 
 ## Resolution
 
-To solve this issue, enable SLA action flow which is associated with the Case.
+To solve this issue, enable the SLA action flow associated with the case.
 
-Here are the steps to to enable SLA action flow:
+Here are the steps to enable the SLA action flow:
 
-1. Open SLA which is applied to Case.
+1. Open the SLA applied to the case.
+2. Open the SLA item.
+3. Select **Configure Actions**. It will open the respective action flow.
+4. Turn on the action flow if itâ€™s turned off.
 
-2. Open SLA item.
-
-3. Click on “Configure Actions” button (It will open respective action flow).
-
-4. Turn on action flow if it is turned off.
-
-    :::image type="content" source="media/sla-workflow-published-state-error/sla-action-flow-activate.png" alt-text="The screenshot shows how to activate a flow.":::
+    :::image type="content" source="media/sla-workflow-published-state-error/sla-action-flow-activate.png" alt-text="Screenshot that shows how to activate a flow." Border="false":::
 
 > [!NOTE]
-> Please repeat 2 to 4 steps for all SLA items if SLA has multiple SLA items.
+> Repeat steps 2 to 4 for all the SLA items if an SLA has multiple SLA items.
