@@ -36,7 +36,7 @@ Manually update the VM status by using one of the following options:
       --instance-id <vm-or-scale-set-id>
   ```
 
-Once you have resolved the issue, you can bring the cluster back from a **Failed** to a **Succeeded** state by running the following [az resource update](/cli/azure/resource?view=azure-cli-latest#az-resource-update) command:
+Once you have resolved the issue, you can bring the cluster back from a **Failed** to a **Succeeded** state by running the following [az resource update](/cli/azure/resource#az-resource-update) command:
 
 ```azurecli
 az resource update --ids <aks-resource-id>
