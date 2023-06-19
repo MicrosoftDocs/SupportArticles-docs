@@ -15,7 +15,7 @@ You can't update a case and receive the "SLA KPI instance does not exist" error.
 
 ## Cause
 
-This issue occurs when an active SLA exists but the SLA item's `ChangeAttributeList` isn't defined or null.
+This issue occurs when an active SLA exists but the SLA item's `ChangedAttributeList` isn't defined or null.
 
 ## Resolution
 
@@ -23,5 +23,5 @@ To solve this issue,
 
 1. Find the SLA that's associated with a case.
 2. Open the associated SLA and check the SLA items. 
-3. If the SLA has SLA items, administrators can reactivate the SLA, which should calculate the `ChangeAttributeList` again.
+3. If the SLA has SLA items, administrators can reactivate the SLA by redefining SLA items, which should calculate the `ChangedAttributeList` again.
 4. If the SLA doesn't have any SLA item, administrators can define SLA items and reactivate the SLA again.
