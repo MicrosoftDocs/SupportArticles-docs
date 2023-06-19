@@ -1,6 +1,6 @@
 ---
-title: Cluster node virtual machine in a failed state
-description: Troubleshoot why a node virtual machine on your Azure Kubernetes Service (AKS) cluster is in a failed state.
+title: AKS cluster/node is in a failed state
+description: Troubleshoot an issue where an Azure Kubernetes Service (AKS) cluster/node is in a failed state.
 ms.date: 6/20/2023
 author: DennisLee-DennisLee
 ms.author: v-dele
@@ -10,17 +10,25 @@ ms.subservice: common-issues
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot why attach my node virtual machine is in a failed state so that I can successfully use my Azure Kubernetes Service (AKS) cluster.
 ---
-# Troubleshoot Azure Kubernetes Service node virtual machine in a failed state
+# Troubleshoot Azure Kubernetes Service cluter/node in a failed state
 
-This article discusses how to troubleshoot a node virtual machine (VM) that's entered a failed state on your Microsoft Azure Kubernetes Service (AKS) cluster.
+This article discusses how to troubleshoot a Microsoft Azure Kubernetes Service (AKS)cluster/node that's entered a failed state.
 
-## Cause
+## Cluster is in a failed state
 
-In some edge cases, an Azure Disk detach operation may partially fail, which leaves the node VM in a failed state.
+You may encounter an issue where the provisioning status of your Microsoft Azure Kubernetes Service (AKS) cluster is changed from **Ready** to **Failed**. In this case, if your cluster applications continue to run, AKS may resolve the provisioning status automatically even if you didn't do an operation. Your running applications shouldn't be affected by the provisioning status change.
 
-## Solution
+Alternatively, you can also manually bring back the cluster from a **Failed** to a **Succeeded** state by running the following [az resource update](/cli/azure/resource#az-resource-update) command:
 
-Manually update the VM status by using one of the following options:
+```azurecli
+az resource update --ids <aks-resource-id>
+```
+
+## Node is in a failed state
+
+In some edge cases, an Azure Disk detach operation may partially fail, which leaves the node virtual machine (VM) in a failed state.
+
+To resolve this issue, manually update the VM status by using one of the following methods:
 
 - For a cluster that's based on an availability set, run the following [az vm update](/cli/azure/vm#az-vm-update) command:
 
@@ -35,15 +43,5 @@ Manually update the VM status by using one of the following options:
       --name <scale-set-name> \
       --instance-id <vm-or-scale-set-id>
   ```
-
-Once you have resolved the issue, you can bring the cluster back from a **Failed** to a **Succeeded** state by running the following [az resource update](/cli/azure/resource#az-resource-update) command:
-
-```azurecli
-az resource update --ids <aks-resource-id>
-```
-
-## Change in cluster provisioning status from Ready to Failed
-
-If the provisioning status of your Microsoft Azure Kubernetes Service (AKS) cluster changed from **Ready** to **Failed**, even if you didn't do an operation, AKS may resolve the provisioning status automatically if your cluster applications continue to run. Your running applications shouldn't be affected by the provisioning status change.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
