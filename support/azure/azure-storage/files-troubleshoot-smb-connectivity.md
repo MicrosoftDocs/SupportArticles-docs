@@ -570,7 +570,7 @@ Azure Files supports 10,000 open handles on the root directory and 2,000 open ha
 
 #### Solution
 
-Reduce the number of concurrent open handles by closing some handles and then retrying the operation.
+Reduce the number of concurrent open handles by closing some handles and then retry the operation.
 
 To view open handles for a file share, directory, or file, use the [Get-AzStorageFileHandle](/powershell/module/az.storage/get-azstoragefilehandle) PowerShell cmdlet.  
 
