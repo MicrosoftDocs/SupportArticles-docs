@@ -16,7 +16,7 @@ Cloud tiering, an optional feature of Azure File Sync, decreases the amount of l
 There are two paths for failures in cloud tiering:
 
 - Files can fail to tier, which means that Azure File Sync unsuccessfully attempts to tier a file to Azure Files.
-- Files can fail to recall, which means that the Azure File Sync file system filter (StorageSync.sys) fails to download data when a user attempts to access a file that has been tiered.
+- Files can fail to recall, which means that the Azure File Sync file system filter (*StorageSync.sys*) fails to download data when a user attempts to access a file that has been tiered.
 
 There are two main classes of failures that can happen via either failure path:
 
@@ -24,49 +24,49 @@ There are two main classes of failures that can happen via either failure path:
 
   - *Transient storage service availability issues*. For more information, see the [Service Level Agreement (SLA) for Azure Storage](https://azure.microsoft.com/support/legal/sla/storage/v1_5/).
   - *Inaccessible Azure file share*. This failure typically happens when you delete the Azure file share when it's still a cloud endpoint in a sync group.
-  - *Inaccessible storage account*. This failure typically happens when you delete the storage account while it still has an Azure file share that is a cloud endpoint in a sync group.
+  - *Inaccessible storage account*. This failure typically happens when you delete the storage account while it still has an Azure file share that's a cloud endpoint in a sync group.
 
 - Server failures
 
-  - *Azure File Sync file system filter (StorageSync.sys) isn't loaded*. In order to respond to tiering/recall requests, the Azure File Sync file system filter must be loaded. The filter not being loaded can happen for several reasons, but the most common reason is that an administrator unloaded it manually. The Azure File Sync file system filter must be loaded at all times for Azure File Sync to properly function.
+  - *Azure File Sync file system filter (StorageSync.sys) isn't loaded*. In order to respond to tiering/recall requests, the Azure File Sync file system filter must be loaded. The filter not being loaded can happen for several reasons, but the most common reason is that an administrator unloaded it manually. The Azure File Sync file system filter must be loaded at all times for Azure File Sync to function properly.
   - *Missing, corrupt, or otherwise broken reparse point*. A reparse point is a special data structure on a file that consists of two parts:
-    - A reparse tag, which indicates to the operating system that the Azure File Sync file system filter (StorageSync.sys) might need to do some action on IO to the file.
+    - A reparse tag, which indicates to the operating system that the Azure File Sync file system filter (*StorageSync.sys*) might need to do some action on IO to the file.
     - Reparse data, which indicates to the file system filter the URI of the file on the associated cloud endpoint (the Azure file share).
 
        The most common way a reparse point could become corrupted is if an administrator attempts to modify either the tag or its data.
   - *Network connectivity issues*. In order to tier or recall a file, the server must have internet connectivity.
 
-The following sections indicate how to troubleshoot cloud tiering issues and determine if an issue is a cloud storage issue or a server issue.
+The following sections indicate how to troubleshoot cloud tiering issues and determine if an issue is a cloud storage or server issue.
 
 ## How to monitor tiering activity on a server
 
-To monitor tiering activity on a server, use Event ID 9003, 9016, and 9029 in the Telemetry event log (located under *Applications and Services\Microsoft\FileSync\Agent* in Event Viewer).
+To monitor tiering activity on a server, use Event ID 9003, 9016, and 9029 in the Telemetry event log (located under *Applications and Services\Microsoft\FileSync\Agent* in **Event Viewer**).
 
-- Event ID 9003 provides error distribution for a server endpoint. For example, Total Error Count, ErrorCode, etc. Note, one event is logged per error code.
-- Event ID 9016 provides ghosting results for a volume. For example, Free space percent is, Number of files ghosted in session, Number of files failed to ghost, etc.
-- Event ID 9029 provides ghosting session information for a server endpoint. For example, Number of files attempted in the session, Number of files tiered in the session, Number of files already tiered, etc.
+- Event ID 9003 provides error distribution for a server endpoint, such as Total Error Count and ErrorCode. Note that one event is logged per error code.
+- Event ID 9016 provides ghosting results for a volume, such as Free space percent is, Number of files ghosted in session, and Number of files failed to ghost.
+- Event ID 9029 provides ghosting session information for a server endpoint, such as Number of files attempted in the session, Number of files tiered in the session, and Number of files already tiered.
 
 ## How to monitor recall activity on a server
 
 To monitor recall activity on a server, use Event ID 9005, 9006, 9009, and 9059 in the Telemetry event log (located under *Applications and Services\Microsoft\FileSync\Agent* in Event Viewer).
 
-- Event ID 9005 provides recall reliability for a server endpoint. For example, Total unique files accessed, Total unique files with failed access, etc.
-- Event ID 9006 provides recall error distribution for a server endpoint. For example, Total Failed Requests, ErrorCode, etc. Note, one event is logged per error code.
-- Event ID 9009 provides recall session information for a server endpoint. For example, DurationSeconds, CountFilesRecallSucceeded, CountFilesRecallFailed, etc.
-- Event ID 9059 provides application recall distribution for a server endpoint. For example, ShareId, Application Name, and TotalEgressNetworkBytes.
+- Event ID 9005 provides recall reliability for a server endpoint, such as Total unique files accessed and Total unique files with failed access.
+- Event ID 9006 provides recall error distribution for a server endpoint, such as Total Failed Requests and ErrorCode. Note that one event is logged per error code.
+- Event ID 9009 provides recall session information for a server endpoint, such as DurationSeconds, CountFilesRecallSucceeded, and CountFilesRecallFailed.
+- Event ID 9059 provides application recall distribution for a server endpoint, such as ShareId, Application Name, and TotalEgressNetworkBytes.
 
 ## How to troubleshoot files that fail to tier
 
 If files fail to tier to Azure Files:
 
-1. In Event Viewer, review the telemetry, operational and diagnostic event logs, located under *Applications and Services\Microsoft\FileSync\Agent*.
-   1. Verify the files exist in the Azure file share.
+1. In **Event Viewer**, review the telemetry, operational, and diagnostic event logs located under *Applications and Services\Microsoft\FileSync\Agent*.
+   1. Verify that the files exist in the Azure file share.
 
       > [!NOTE]
       > A file must be synced to an Azure file share before it can be tiered.
 
-   2. Verify the server has internet connectivity.
-   3. Verify the Azure File Sync filter drivers (*StorageSync.sys* and *StorageSyncGuard.sys*) are running:
+   2. Verify that the server has internet connectivity.
+   3. Verify that the Azure File Sync filter drivers (*StorageSync.sys* and *StorageSyncGuard.sys*) are running:
 
         At an elevated command prompt, run `fltmc`. Verify that the *StorageSync.sys* and *StorageSyncGuard.sys* file system filter drivers are listed.
 
