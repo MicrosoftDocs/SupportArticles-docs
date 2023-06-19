@@ -533,7 +533,7 @@ Error 1816 happens when you reach the upper limit of concurrent open handles all
 
 #### Solution
 
-Reduce the number of concurrent open handles by closing some handles and then retrying. For more information, see [Microsoft Azure Storage performance and scalability checklist](/azure/storage/blobs/storage-performance-checklist?toc=/azure/storage/files/toc.json).
+Reduce the number of concurrent open handles by closing some handles and then retry. For more information, see [Microsoft Azure Storage performance and scalability checklist](/azure/storage/blobs/storage-performance-checklist?toc=/azure/storage/files/toc.json).
 
 To view open handles for a file share, directory, or file, use the [Get-AzStorageFileHandle](/powershell/module/az.storage/get-azstoragefilehandle) PowerShell cmdlet.  
 
