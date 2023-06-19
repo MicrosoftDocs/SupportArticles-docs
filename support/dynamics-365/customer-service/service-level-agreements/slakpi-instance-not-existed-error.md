@@ -23,5 +23,5 @@ To solve this issue,
 
 1. Find the active SLA which meets applicable condtion.
 2. Open the respective SLA and check the SLA items. 
-3. If the SLA has SLA items, administrators can reactivate the SLA by redefining SLA items, which should calculate the `ChangedAttributeList` again.
+3. If the SLA has SLA items, administrators can reactivate the SLA by resetting any SLA item's applicable when\success condition, which should calculate the `ChangedAttributeList` again.
 4. If the SLA doesn't have any SLA item, administrators can define SLA items and reactivate the SLA again.
