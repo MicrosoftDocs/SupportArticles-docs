@@ -1,7 +1,7 @@
 ---
 title: Latest updates and version history for SQL Server
 description: This article lists various builds or updates that are available for different versions of SQL Server.
-ms.date: 05/11/2023
+ms.date: 06/15/2023
 ms.custom: sap:Installation, Patching and Upgrade
 ms.topic: how-to
 ms.prod: sql
@@ -39,8 +39,8 @@ Each of the following links provides information for all of the applicable produ
 
   |Version|Latest service pack|Latest GDR|Latest cumulative update|
   |---|---|---|---|
-|**SQL Server 2022**<br/><br/>- [Build information](#sql-server-2022)<br/>- [Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver16&preserve-view=true)|None|[GDR](https://support.microsoft.com/help/5021522) (16.0.1050.5 - February 2023) |[CU4 for 2022](../releases/sqlserver-2022/cumulativeupdate4.md) (16.0.4035.4 - May 2023) |
-  |**SQL Server 2019**<br/><br/>- [Build information](#sql-server-2019)<br/>- [Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|None|[GDR](https://support.microsoft.com/help/5021125) (15.0.2101.7 - February 2023)|[CU20 for 2019](https://support.microsoft.com/help/5024276) (15.0.4312.2 - April 2023)<br/><br/>[CU18 + GDR](https://support.microsoft.com/help/5021124) (15.0.4280.7 - February 2023)|
+|**SQL Server 2022**<br/><br/>- [Build information](#sql-server-2022)<br/>- [Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver16&preserve-view=true)|None|[GDR](https://support.microsoft.com/help/5021522) (16.0.1050.5 - February 2023) |[CU5 for 2022](../releases/sqlserver-2022/cumulativeupdate5.md) (16.0.4045.3 - June 2023) |
+  |**SQL Server 2019**<br/><br/>- [Build information](#sql-server-2019)<br/>- [Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|None|[GDR](https://support.microsoft.com/help/5021125) (15.0.2101.7 - February 2023)|[CU21 for 2019](../releases/sqlserver-2019/cumulativeupdate21.md) (15.0.4316.3 - June 2023)<br/><br/>[CU18 + GDR](https://support.microsoft.com/help/5021124) (15.0.4280.7 - February 2023)|
   |**SQL Server 2017**<br/><br/>- [Build information](#sql-server-2017)<br/>- [Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|None|[GDR](https://support.microsoft.com/help/5021127) (14.0.2047.8 - February 2023)|[CU31 for 2017](https://support.microsoft.com/help/5016884) (14.0.3456.2 - September 2022)<br/><br/>[CU31 + GDR](https://support.microsoft.com/help/5021126) (14.0.3460.9 - February 2023)|
   |**SQL Server 2016**<br/><br/>- [Build information](#sql-server-2016)<br/>- [Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|[Azure Connect pack](https://support.microsoft.com/help/5014242) (13.0.7000.253 - May 2022)<br/><br/>[SP3](https://support.microsoft.com/help/5003279) (13.0.6300.2 - September 2021)<br/><br/>[SP2](https://support.microsoft.com/help/4052908) (13.0.5026.0 - April 2018)<br/><br/>[SP1](https://support.microsoft.com/help/3182545) (13.0.4001.0 - November 2016)|[GDR for Azure Connect pack](https://support.microsoft.com/help/5021128) (13.0.7024.30 - February 2023)<br/><br/>[GDR for SP3](https://support.microsoft.com/help/5021129) (13.0.6430.49 - February 2023)<br/><br/>[GDR for SP2](https://support.microsoft.com/help/5014365) (13.0.5108.50 - June 2022)<br/><br/>[GDR for SP1](https://support.microsoft.com/help/4505219) (13.0.4259.0 - July 2019)<br/><br/>[GDR for RTM](https://support.microsoft.com/help/4058560) (13.0.1745.2 - January 2018)|[CU17 + GDR for SP2](https://support.microsoft.com/help/5014351) (13.0.5893.48 - June 2022)<br/><br/>[CU17 for 2016 SP2](https://support.microsoft.com/help/5001092) (13.0.5888.11 - March 2021)<br/><br/>[CU15 + GDR for SP1](https://support.microsoft.com/help/4505221) (13.0.4604.0 - July 2019)<br/><br/>[CU15 for SP1](https://support.microsoft.com/help/4495257) (13.0.4574.0 - May 2019)<br/><br/>[CU9 for RTM](https://support.microsoft.com/help/4037357) (13.0.2216.0 - November 2017)|
   |**SQL Server 2014**<br/><br/>- [Build information](#sql-server-2014)<br/>- [Installation](https://www.microsoft.com/download/details.aspx?id=42299)|[SP3](https://support.microsoft.com/help/4022619) (12.0.6024.0 - October 2018)<br/><br/>[SP2](https://support.microsoft.com/help/3171021) (12.0.5000.0 - July 2016)<br/><br/>[SP1](https://support.microsoft.com/help/3058865) (12.0.4100.1 - May 2015)|[GDR for SP3](https://support.microsoft.com/help/5021037) (12.0.6174.8 - February 2023)<br/><br/>[GDR for SP2](https://support.microsoft.com/help/4505217) (12.0.5223.6 - July 2019)<br/><br/>[GDR for SP1](https://support.microsoft.com/help/4019091) (August 2017)<br/><br/>[MS 15-058](/security-updates/SecurityBulletins/2015/ms15-058) (July 2015)|[CU4 + GDR for SP3](https://support.microsoft.com/help/5021045) (12.0.6444.4 - February 2023)<br/><br/>[CU4 for SP3](https://support.microsoft.com/help/4500181) (12.0.6329.1 - July 2019)<br/><br/>[CU18 for SP2](https://support.microsoft.com/help/4500180) (12.0.5687.1 - July 2019)<br/><br/>[CU13 for SP1](https://support.microsoft.com/help/4019099) (12.0.4522.0 - August 2017)|
@@ -60,6 +60,7 @@ Each of the following links provides information for all of the applicable produ
 
 |Build number or version|Service pack|Update|KB article|Release date|
 |---|---|---|---|---|
+|16.0.4045.3|None|CU5|[5026806](../releases/sqlserver-2022/cumulativeupdate5.md)|June 15, 2023|
 |16.0.4035.4|None|CU4|[5026717](../releases/sqlserver-2022/cumulativeupdate4.md)|May 11, 2023|
 |16.0.4025.1|None|CU3|[5024396](../releases/sqlserver-2022/cumulativeupdate3.md)|April 13, 2023|
 |16.0.4015.1|None|CU2|[5023127](../releases/sqlserver-2022/cumulativeupdate2.md)|March 15, 2023|
@@ -71,6 +72,7 @@ Each of the following links provides information for all of the applicable produ
 
 |Build number or version|Service pack|Update|KB article|Release date|
 |---|---|---|---|---|
+|15.0.4316.3|None|CU21| [5025808](../releases/sqlserver-2019/cumulativeupdate21.md)|June 15, 2023|
 |15.0.4312.2|None|CU20| [5024276](https://support.microsoft.com/help/5024276)|April 13, 2023|
 |15.0.4298.1|None|CU19| [5023049](https://support.microsoft.com/help/5023049)|February 16, 2023|
 |15.0.4280.7|None|CU18 + GDR| [5021124](https://support.microsoft.com/help/5021124)|February 14, 2023|
