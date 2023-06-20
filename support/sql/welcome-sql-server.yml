@@ -5,11 +5,11 @@ summary: Welcome to SQL Server troubleshooting. These articles explain how to de
 metadata:
   title: SQL Server troubleshooting document
   description: This article lists Knowledge Base (KB) and other Support articles for SQL Server. # Required; article description that is displayed in search results. < 160 chars.
-  ms.prod: sql
+  ms.service: sql
   ms.topic: landing-page # Required
   author: HaiyingYu  #Required; your GitHub user alias, with correct capitalization.
   ms.author: HaiyingYu #Required; microsoft alias of author; optional team alias.
-  ms.date: 05/30/2023
+  ms.date: 06/01/2023
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -73,7 +73,68 @@ landingContent:
           url: tools/replay-markup-language-utility.md
         - text: SQL Callstack Resolver
           url: https://github.com/microsoft/SQLCallStackResolver
-        
+
+  - title: High Availability and Disaster Recovery (Always On Availability Groups)
+    linkLists:
+      - linkListType: whats-new
+        links:
+        - text: Troubleshoot issues with automatic failover Always On environments
+          url: database-engine/availability-groups/troubleshooting-automatic-failover-problems.md
+        - text: Determine the cause of Availability Group failover
+          url: database-engine/availability-groups/troubleshooting-availability-group-failover.md
+        - text: Use diagnostic tool AGDiag to diagnose Availability Group failures
+          url: database-engine/availability-groups/use-agdiag-diagnose-availability-group-health-events.md
+        - text: Troubleshoot latency on secondary replicas due to recovery (redo) queuing
+          url: database-engine/availability-groups/troubleshooting-recovery-queuing-in-alwayson-availability-group.md
+        - text: Troubleshoot latency on secondary replicas due to log send queuing
+          url: database-engine/availability-groups/troubleshooting-log-send-queuing-in-alwayson-availability-group.md      
+        - text: Troubleshoot intermittent connection time-outs between availability group replicas
+          url: database-engine/availability-groups/troubleshooting-intermittent-connection-timeouts-availability-groups.md
+        - text: Troubleshoot an AG database in reverting state
+          url: database-engine/availability-groups/troubleshoot-availability-group-database-reverting-state.md
+        - text: Troubleshoot Always On availability databases in Recovery Pending or Suspect state in SQL Server
+          url: database-engine/availability-groups/alwayson-availability-databases-recovery-pending-suspect.md
+        - text: Error with creating availability group due to permissions
+          url: database-engine/availability-groups/error-41131-create-availability-group.md          
+        - text: Troubleshoot most common Always On issues
+          url: database-engine/availability-groups/troubleshooting-alwayson-issues.md    
+          
+  - title: Slow Performance and Resource Usage
+    linkLists:
+      - linkListType: whats-new
+        links:
+        - text: Troubleshoot high-CPU-usage issues
+          url: database-engine/performance/troubleshoot-high-cpu-usage-issues.md
+        - text: Understand and resolve blocking problems
+          url: database-engine/performance/understand-resolve-blocking.md
+        - text: Troubleshoot slow-running queries
+          url: database-engine/performance/troubleshoot-slow-running-queries.md
+        - text: Troubleshoot slow performance caused by I/O issues
+          url: database-engine/performance/troubleshoot-sql-io-performance.md
+        - text: Troubleshoot query time-out errors
+          url: database-engine/performance/troubleshoot-query-timeouts.md          
+        - text: Troubleshoot out of memory or low memory
+          url: database-engine/performance/troubleshoot-memory-issues.md
+
+  - title: Connection and Authentication
+    linkLists:
+      - linkListType: whats-new
+        links:
+        - text: Network-related or instance-specific error
+          url: database-engine/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection.md
+        - text: Untrusted certificate authority error
+          url: database-engine/connect/error-message-when-you-connect.md
+        - text: The certificate chain was issued by an authority that is not trusted
+          url: database-engine/connect/certificate-chain-not-trusted.md
+        - text: Transfer logins and passwords
+          url: database-engine/security/transfer-logins-passwords-between-instances.md
+        - text: Cannot generate SSPI context
+          url: database-engine/connect/cannot-generate-sspi-context-error.md       
+        - text: Timeout expired messages when connecting
+          url: database-engine/connect/timeout-expired-error.md
+        - text: An existing connection was forcibly closed by the remote host
+          url: database-engine/connect/tls-exist-connection-closed.md
+          
   - title: SQL Server blogs
     linkLists:
       - linkListType: reference
@@ -82,58 +143,18 @@ landingContent:
           url: https://techcommunity.microsoft.com/t5/SQL-Server-Support/bg-p/SQLServerSupport/
         - text: Azure Database Support Blog
           url: https://techcommunity.microsoft.com/t5/azure-database-support-blog/bg-p/AzureDBSupport
-          
-  - title: Documentation
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-        - text: How to contribute to SQL Server Documentation
-          url: /sql/sql-server/sql-server-docs-contribute
-          
-  - title: Analysis Services (SSAS)
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-        - text: Calculate previous period growth
-          url: analysis-services/calculate-previous-period-growth.md
-        - text: Can't connect to a named instance
-          url: analysis-services/cannot-connect-named-instance.md
-        - text: Configure MSOLAP data provider for Excel
-          url: analysis-services/configure-msolap-data-provider-excel.md
-        - text: Configure SSAS to generate memory dump files
-          url: analysis-services/configure-ssas-generate-memory-dump-files.md
-        - text: Determine the first or last member with data
-          url: analysis-services/determine-first-or-last-member-with-data.md
 
-  - title: Azure SQL Virtual Machine
+  - title: SQL Server References
     linkLists:
-      - linkListType: how-to-guide
+      - linkListType: reference
         links:
-        - text: FCI installation fails with error on Azure VM
-          url: azure-sql/fci-installation-fails-error-azure-vm.md
-
-  - title: Data Quality Services (DQS)
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-        - text: DQS Export to 64-bit Excel file fails with error
-          url: data-quality-services/dqs-export-64-bit-excel-file-fails-error.md
-        - text: DQSInstaller may fail accessing temp folder
-          url: data-quality-services/dqsinstaller-may-fail-accessing-tmp-folder.md
-        - text: Error when you run the DQS Cleansing transformation
-          url: data-quality-services/error-you-run-dqs-cleansing-transformation.md
-
-  - title: Database Client Programming
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Can't uninstall ODBC driver completely
-            url: connect/odbc-driver-uninstall-incomplete.md
-          - text: 80020009 error when you retrieve data
-            url: connect/80020009-error-retrieve-data.md
-          - text: Can't correctly translate character data
-            url: connect/cannot-correctly-translate-character-data.md
-          - text: Check for MDAC version
-            url: connect/check-mdac-version.md
-          - text: Error when you use client cursor to add record
-            url: connect/error-when-you-use-client-cursor-add-record.md
+        - text: Samples and sample databases
+          url: /sql/samples/sql-samples-where-are
+        - text: System catalog views
+          url: /sql/relational-databases/system-catalog-views/catalog-views-transact-sql
+        - text: System Dynamic Management Views
+          url: /sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views
+        - text: DBCC commands
+          url: /sql/t-sql/database-console-commands/dbcc-transact-sql
+        - text: Database Engine events and errors
+          url: /sql/relational-databases/errors-events/database-engine-events-and-errors         

@@ -5,7 +5,6 @@ ms.date: 06/16/2021
 ms.custom: sap:Other tools
 ms.reviewer: amitkh, dansha, rafidl, Suresh.Kandoth
 ms.topic: how-to
-ms.prod: sql
 author: HaiyingYu
 ms.author: haiyingyu
 ---

@@ -4,7 +4,6 @@ description: This article provides a resolution for the problem that occurs when
 ms.date: 10/23/2020
 ms.custom: sap:Database Engine 
 ms.reviewer: ramakoni, clivec
-ms.prod: sql
 ---
 
 # You can't update a SQL Server 2012 cluster when the Setup program checks the Cluster_IsOnlineIfClustered rule

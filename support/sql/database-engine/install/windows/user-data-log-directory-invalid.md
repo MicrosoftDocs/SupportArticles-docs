@@ -4,7 +4,6 @@ description: This article provides resolutions for the problem that occurs when 
 ms.date: 09/25/2020
 ms.custom: sap:Installation, Patching and Upgrade
 ms.reviewer: lramirez
-ms.prod: sql
 ---
 
 # The User Data directory in the registry is not valid error message when installing SQL Server Cumulative Update or a Service Pack

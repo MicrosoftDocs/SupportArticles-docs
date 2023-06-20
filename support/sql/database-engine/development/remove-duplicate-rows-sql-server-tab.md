@@ -4,7 +4,6 @@ description: This article provides a script that you can use to remove duplicate
 ms.date: 10/29/2020
 ms.custom: sap:Database Design and Development
 ms.topic: how-to
-ms.prod: sql
 ---
 
 # Remove duplicate rows from a SQL Server table by using a script

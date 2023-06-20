@@ -51,7 +51,7 @@ However, if you enter an item from the French Canadian installation as "une peti
 
 A4: There are two differences between the various localized releases. The following differences are based on the country/region that is selected during the installation.
 
-- The following list contains the countries/regions and regions that are available as localized releases during the Microsoft Dynamics GP installation. The various localized releases contain some words and phrases that are changed to match the language of that country/region. For example, the United Kingdom installation uses "cheque" instead of "check."
+- The following list contains the countries/regions that are available as localized releases during the Microsoft Dynamics GP installation. The various localized releases contain some words and phrases that are changed to match the language of that country/region. For example, the United Kingdom installation uses "cheque" instead of "check."
 
   - Andean (new in Microsoft Dynamics GP 10.0)
   - Argentina (new in Microsoft Dynamics GP 10.0)

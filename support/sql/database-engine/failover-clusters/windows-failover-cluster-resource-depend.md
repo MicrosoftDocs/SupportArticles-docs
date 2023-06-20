@@ -4,7 +4,6 @@ description: This article describes the default resource dependencies in SQL Ser
 ms.date: 07/22/2020
 ms.custom: sap:High Availability and Disaster Recovery features
 ms.reviewer: ramakoni
-ms.prod: sql
 ---
 
 # Microsoft Windows Failover cluster resource dependencies in SQL Server

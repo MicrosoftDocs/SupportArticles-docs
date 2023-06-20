@@ -16,7 +16,19 @@ items:
       - name: Python
         href: app-insights/opentelemetry-troubleshooting-python.md
     - name: JavaScript SDK troubleshooting
-      href: app-insights/javascript-sdk-troubleshooting.md
+      items:
+      - name: Troubleshoot Application Insights JavaScript SDK
+        href: app-insights/javascript-sdk-troubleshooting.md
+      - name: Troubleshoot Application Insights for webpages
+        items:
+        - name: Troubleshoot common issues
+          href: app-insights/troubleshoot-webpages-issues.md
+        - name: Duplicate telemetry data
+          href: app-insights/duplicate-telemetry-data.md
+        - name: Failed to get Request-Context correlation header
+          href: app-insights/webpages-not-get-request-context-header.md
+        - name: How to update third-party server configuration
+          href: app-insights/how-to-update-third-party-server-configuration.md
     - name: Troubleshoot missing telemetry in Application Insights
       href: app-insights/investigate-missing-telemetry.md
     - name: Troubleshoot auto-instrumentation issues

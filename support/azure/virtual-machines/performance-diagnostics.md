@@ -12,9 +12,8 @@ ms.subservice: vm-performance
 ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
-
 ms.topic: troubleshooting
-ms.date: 10/24/2022
+ms.date: 06/06/2023
 ms.author: anandh
 
 ---
@@ -52,7 +51,7 @@ You can run performance diagnostics directly from the Azure portal, where you ca
     | Debian                     | 8, 9, 10, 11 [`*`]                                    |
     | SLES                       | 12 SP4 [`*`], 12 SP5 [`*`], 15 [`*`], 15 SP1 [`*`], 15 SP2 [`*`], 15 SP4 [`*`]                                      |
     | AlmaLinux                  | 8.4, 8.5                                               |
-    | CBL-Mariner                | 2.0                                                   |
+    | Azure Linux                | 2.0                                                   |
 
 >[!Note]
 >[`*`] Please refer to [Known issues](how-to-use-perfinsights-linux.md#known-issues)

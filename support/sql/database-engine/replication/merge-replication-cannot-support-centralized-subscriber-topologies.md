@@ -4,7 +4,6 @@ description: This article discusses alternatives to centralized subscriber topol
 ms.date: 07/22/2020
 ms.custom: sap:Replication, change tracking, change data capture
 ms.reviewer: hnunes, jmneto, jeanyd, lakshmij, holgerl, syele, gemason
-ms.prod: sql
 ---
 # Merge replication doesn't support centralized subscriber topologies
 

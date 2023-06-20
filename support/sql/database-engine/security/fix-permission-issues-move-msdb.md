@@ -4,7 +4,6 @@ description: This article provides resolutions for permission problems that occu
 ms.date: 07/22/2020
 ms.custom: sap:Security Issues
 ms.reviewer: ericbu
-ms.prod: sql
 ---
 # Fix permission problems when moving MSDB database between different instances
 

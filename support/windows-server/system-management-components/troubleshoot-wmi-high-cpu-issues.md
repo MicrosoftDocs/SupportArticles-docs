@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot WMI high CPU usage issues
 description: Describes how to diagnose Windows Management Instrumentation (WMI) high CPU issues on any Windows operating system.
-ms.date: 05/26/2023
+ms.date: 06/01/2023
 author: v-lianna
 ms.author: v-lianna
 manager: dcscontentpm
@@ -432,11 +432,14 @@ You can also gather information by using the WMI-Collect tool. Here are the step
 2. From an elevated PowerShell command prompt, run the *WMI-Collect.ps1* script from the folder where the script is saved. For example:
 
     ```PowerShell
-    C:\temp\WMI-Collect.ps1 -Logs
+    C:\temp\WMI-Collect.ps1 -Logs -Trace -Activity -Kernel -WPR -PerfMonWMIPrvSE
     ```
 
-> [!NOTE]
->
-> - To run the cmdlet, you need to read and accept the End User License Agreement (EULA).
-> - The script will create a subfolder with the results. Compress the folder.
-> - After a support case is created, this file can be uploaded to the secure workspace for analysis.
+    > [!NOTE]
+    >
+    > - Keep the PowerShell command prompt open with the "Press ENTER to stop the capture:" message, and make sure the *WmiPrvse.exe* process or the WMI service high CPU usage issue is reproduced.
+    > - Don't keep the tracing enabled for more than one minute.
+
+3. Stop the tracing by pressing <kbd>Enter</kbd>.
+
+The script will create a subfolder containing the results of all traces and the diagnostic information. Compress the folder. After a support case is created, this file can be uploaded to the secure workspace for analysis.

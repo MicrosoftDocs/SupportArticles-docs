@@ -4,7 +4,6 @@ description: Provides a resolution for the problem that occurs when you install 
 ms.date: 11/04/2020
 ms.custom: sap:Installation, Patching and Upgrade (Failover Cluster)
 ms.reviewer: russg
-ms.prod: sql
 ---
 
 # Warning about the network binding order on the Setup Support Rules page

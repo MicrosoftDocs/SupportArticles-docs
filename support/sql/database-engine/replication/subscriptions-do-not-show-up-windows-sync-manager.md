@@ -6,7 +6,6 @@ ms.custom: sap:Replication, change tracking, change data capture
 author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: mathoma, tzakir, akbarf, maarumug, brcarrig
-ms.prod: sql
 ---
 # Pull subscriptions don't show up in Windows Synchronization Manager
 

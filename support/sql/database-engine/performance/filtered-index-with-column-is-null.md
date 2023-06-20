@@ -4,7 +4,6 @@ description: This article provides resolution for the problem that occurs when y
 ms.date: 09/14/2020
 ms.custom: sap:Database Design and Development
 ms.reviewer: fredep, ramakoni
-ms.prod: sql
 ---
 
 # A filtered index that you create together with the IS NULL predicate is not used in SQL Server

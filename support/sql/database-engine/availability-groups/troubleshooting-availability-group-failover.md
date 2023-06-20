@@ -3,7 +3,6 @@ title: Troubleshoot Always On Availability Groups failover
 description: This article provides troubleshooting steps to help you determine why your availability group failed over. 
 ms.date: 04/17/2023
 ms.custom: sap:Availability Groups
-ms.prod: sql
 author: padmajayaraman
 ms.author: v-jayaramanp
 ms.reviewer: cmathews

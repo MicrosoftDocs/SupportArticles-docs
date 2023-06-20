@@ -4,7 +4,6 @@ description: This article provides a resolution for the problem where mirrored d
 ms.date: 11/05/2020
 ms.custom: sap:Database Mirroring
 ms.reviewer: ramakoni
-ms.prod: sql
 ---
 # Mirrored databases are disconnected after you restart the database mirror in SQL Server
 

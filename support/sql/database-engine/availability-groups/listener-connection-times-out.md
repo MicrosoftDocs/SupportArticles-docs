@@ -4,7 +4,6 @@ description: This article provides resolutions for the timeout error that occurs
 ms.date: 08/04/2020
 ms.custom: sap:High Availability and Disaster Recovery features
 ms.reviewer: ramakoni
-ms.prod: sql
 ---
 
 # Timeout occurs when you connect to an Always On listener in multi-subnet environment

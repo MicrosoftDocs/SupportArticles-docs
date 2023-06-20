@@ -4,7 +4,6 @@ description: This article provides resolutions for the problem that occurs when 
 ms.date: 06/20/2022
 ms.custom: sap:Connection issues
 ms.reviewer: kayokon, masank
-ms.technology: sql-engine-connectionissues
 ---
 # "The certificate received from the remote server was issued by an untrusted certificate authority" error when you connect to SQL Server
 

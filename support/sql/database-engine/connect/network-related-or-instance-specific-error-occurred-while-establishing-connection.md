@@ -5,7 +5,6 @@ ms.date: 06/16/2022
 ms.custom: sap:Connection issues
 author: HaiyingYu
 ms.author: haiyingyu
-ms.prod: sql
 ---
 # A network-related or instance-specific error occurred while establishing a connection to SQL Server
 

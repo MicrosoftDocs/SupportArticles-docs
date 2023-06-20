@@ -3,7 +3,6 @@ title: Rowguidcol is not supported in merge replication
 description: This article describes that using rowguidcol in filter definition is not supported in merge replication.
 ms.date: 09/22/2020
 ms.custom: sap:Replication
-ms.prod: sql
 ---
 # Using rowguidcol in filter definition is not supported in merge replication
 
