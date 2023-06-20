@@ -11,7 +11,7 @@
           href: email/case-creation-queue-address-issue.md
         - name: Incoming email isn't converted to a case
           href: email/incoming-email-not-converted-case.md
-        - name: Troubleshoot common email errors
+        - name: Troubleshoot configuration issues with automatic record creation and update rules
           href: email/common-email-error-messages.md
     - name: Entitlements
       items:

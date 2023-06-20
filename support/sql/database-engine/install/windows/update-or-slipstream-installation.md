@@ -5,7 +5,6 @@ ms.date: 09/25/2020
 ms.custom: sap:Installation, Patching and Upgrade
 ms.reviewer: bobward
 ms.topic: how-to
-ms.prod: sql
 ---
 # Update or slipstream an installation of SQL Server 2008
 

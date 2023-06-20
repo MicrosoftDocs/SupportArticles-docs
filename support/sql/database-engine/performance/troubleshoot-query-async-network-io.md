@@ -4,7 +4,6 @@ description: Provides resolutions for slow query issues that result from ASYNC_N
 ms.date: 03/10/2022
 ms.custom: sap:Performance
 ms.topic: troubleshooting
-ms.prod: sql
 ms.author: jopilov
 author: pijocoder 
 ---

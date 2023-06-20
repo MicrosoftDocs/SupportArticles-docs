@@ -4,7 +4,6 @@ description: This article describes the support policy for SQL Server products t
 ms.date: 11/09/2020
 ms.custom: sap:General
 ms.reviewer: bobward
-ms.prod: sql
 ---
 # Support policy for Microsoft SQL Server products that are running in a hardware virtualization environment
 

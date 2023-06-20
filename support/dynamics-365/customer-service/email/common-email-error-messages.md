@@ -17,7 +17,7 @@ Sample: Configuration on **Automatic Record Creation and Update Rule**
 - Set condition criteria to **Any incoming email**.
 - Add action to create a case, select **View properties**, and set the case fields per business use case.
 
-## Error 1
+### Error 1 - "The case is missing customer"
 
 In the **Customer** field of the **CASE DETAILS** section, the value of **Senders Account (Email)** is set as shown below.
 
@@ -33,7 +33,7 @@ This setting results in the following error in system jobs:
 
 To resolve this issue, keep the **Customer** field blank or set it to **{Sender(Email)}**. This allows the system to automatically create a contact for the unknown sender and link it to the case.
 
-## Error 2
+### Error 2 - "An error has occurred"
 
 The **Customer** field is set as **{Senders Account(Email)}**, and the **Contact** field is set as **{Sender(Email)}**.
 
@@ -49,7 +49,7 @@ This setting results in the following error in system jobs:
 
 To resolve this issue, keep the **Customer** field blank or set it to **{Sender(Email)}**. This allows the system to automatically create a contact for the unknown sender and link it to the case.
 
-## Error 3
+### Error 3 - "The specified contact doesn't belong to the contact that was specified in the customer field."
 
 The **Customer** and **Contact** fields are set as **{Sender(Email)}**.
 
@@ -65,7 +65,7 @@ This setting results in the following error in system jobs:
 
 To resolve this issue, leave the **Contact** field blank and set the **Customer** field either to blank or to **{Sender(Email)}**.
 
-## Validation steps
+### Validation steps
 
 You must validate the configuration and validation steps provided in the following table to understand the main cause of the issue and resolve it.
 
@@ -82,27 +82,29 @@ You must validate the configuration and validation steps provided in the followi
 
 ## Scenario 2 - Use of {Regarding(Email)} in legacy experience doesn't give the correct data in flow
 
-In legacy ARC rule items in Customer Service, to look up the entity (either contact or account) that sent an email, you can use the **Sender (Email)** polymorphic lookup, which automatically fetches the appropriate entity and displays the entity's name. Polymorphic lookups are lookups where the target of the lookup is more than one kind of entity. For example, it can point to either a contact or an account. However, in modern ARC, this automatic display isn't supported, so you'll need to specify the type of entity you want to retrieve along with the fields to display from that entity.
+In legacy "automatic record creation and update rules" items in Customer Service, to look up the entity (either a contact or an account) that sends an email, you can use the **Sender (Email)** polymorphic lookup, which automatically fetches the appropriate entity and displays the entity's name. Polymorphic lookups are lookups where the target of the lookup is more than one kind of entity. For example, it can point to either a contact or an account. However, in modern "automatic record creation and update rules," this automatic display isn't supported, so you need to specify the type of entity you want to retrieve along with the fields to display from that entity.
 
-### Reason
+### Cause
 
-Flow doesn't use the **{Regarding(Email)}** value like legacy workflow because flow expressions reference a data value from one of the previous flow steps payload. For example, if the **{Regarding(Email)}** value is empty when the flow begins, the value in the trigger step payload for **{Regarding(Email)}** will remain empty. Even if the **{Regarding(Email)}** value gets updated after a case is created, the email record data gets updated but the payload in flow doesn't. So, when the value from the payload is referenced in the subsequent flow steps, it remains empty.
+A flow doesn't use the **{Regarding(Email)}** value like a legacy workflow because flow expressions reference a data value from one of the previous flow step's payload. For example, if the **{Regarding(Email)}** value is empty when the flow begins, the value in the trigger step payload for **{Regarding(Email)}** will remain empty. Even if the **{Regarding(Email)}** value gets updated after a case is created, the email record data gets updated, but the payload in flow doesn't. So, when the value from the payload is referenced in the subsequent flow steps, it remains empty.
 
 ### Resolution
 
-If the **{Regarding(Email)}** value is used in legacy rule items, you need to manually update the migrated flow to use the IncidentId or OData Id. Use the OData Id for fields that require entity reference or lookups. Use the Case unique identifier for fields that require GUID.
+If the **{Regarding(Email)}** value is used in legacy rule items, you need to manually update the migrated flow to use the "Incident Id" or "OData Id." Use the "OData Id" for fields that require entity reference or lookups. Use the case-unique identifier for fields that require GUID.
 
-## Scenario 3 - Issues with rendering polymorphic lookups on non-lookup fields during migration from legacy to modern ARC
+## Scenario 3 - Issues with rendering polymorphic lookups on non-lookup fields during migration from legacy to modern "automatic record creation and update rules"
 
-A legacy ARC rule item using polymorphic lookups such as **Sender** results in an invalid lookup when assigned to a text field.
+A legacy "automatic record creation and update rules" item using polymorphic lookups, such as **Sender**, results in an invalid lookup when assigned to a text field.
 
-In legacy ARC rule items in Customer Service, to look up the entity (either contact or account) that sent an email, you can use the **Sender (Email)** polymorphic lookup, which automatically fetches the appropriate entity and displays the entity's name. Polymorphic lookups are lookups where the target of the lookup is more than one kind of entity, for example, it can point to either a contact or an account. However, in modern ARC, this automatic display isn't supported. So, you'll need to specify the type of entity you want to retrieve along with the fields to display from that entity.
+In legacy "automatic record creation and update rules" items in Customer Service, to look up the entity (either a contact or an account) that sent an email, you can use the **Sender (Email)** polymorphic lookup, which automatically fetches the appropriate entity and displays the entity's name. Polymorphic lookups are lookups where the target of the lookup is more than one kind of entity. For example, it can point to either a contact or an account. However, in modern "automatic record creation and update rules," this automatic display isn't supported. So, you need to specify the type of entity you want to retrieve along with the fields to display from that entity.
 
-### Reason
+### Cause
 
-The classic workflow behavior used by legacy ARC has many hidden behaviors. For example, automatically determining the type of entity and fetching a field as the display name if the parameter is used in a string, but returning the ID if assigned to a lookup field. The platform migration code that ARC uses when converting from legacy to modern workflows doesn't add the required steps and fields.
+The classic workflow behavior used by legacy "automatic record creation and update rules" has many hidden behaviors. For example, automatically determining the type of entity and fetching a field as the display name if the parameter is used in a string but returning the ID if assigned to a lookup field. The platform migration code that "automatic record creation and update rules" uses when converting from legacy to modern workflows doesn't add the required steps and fields.
 
 ### Resolution 
+
+To solve this issue,
 
 - Update the lookup to a specific type.
 - Use a different field on the incoming entity that contains the desired text.

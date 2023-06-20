@@ -4,7 +4,6 @@ description: This article describes the errors and limitations of an availabilit
 ms.date: 08/03/2020
 ms.custom: sap:High Availability and Disaster Recovery features
 ms.reviewer: ramakoni, cmathews
-ms.prod: sql
 ---
 # Troubleshoot Always On availability databases in Recovery Pending or Suspect state in SQL Server
 

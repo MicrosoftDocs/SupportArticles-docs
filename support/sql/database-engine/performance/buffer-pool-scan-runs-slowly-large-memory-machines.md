@@ -4,8 +4,7 @@ description: This article describes how a scan of the SQL Server buffer pool mig
 ms.date: 06/20/2022
 ms.custom: sap:Performance
 ms.reviewer: jopilov
-ms.topic: article
-ms.prod: sql 
+ms.topic: article 
 ---
 # Operations that trigger a buffer pool scan may run slowly on large-memory computers
 
