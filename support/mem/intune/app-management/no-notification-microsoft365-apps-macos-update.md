@@ -12,7 +12,7 @@ ms.reviewer: kaushika, markstan
 
 Your organization uses Microsoft Intune to [deploy Microsoft 365 apps](/mem/intune/apps/apps-add-office365-macos) to macOS devices. Users experience the following issue on these devices:
 
-Microsoft 365 apps close, restart, and update without notification.
+Microsoft 365 apps close without notification, update, and restart.
 
 **Note:** Usually, users receive notifications about upcoming [deadlines if updates are required to be installed](/deployoffice/mac/mau-deadline). Here are examples of these notifications:
 
