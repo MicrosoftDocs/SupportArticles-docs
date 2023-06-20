@@ -6,7 +6,6 @@ ms.custom: sap:High Availability and Disaster Recovery Features
 author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: UTTAMKP, jaferebe
-ms.prod: sql
 ---
 # The Microsoft support policy for clustered configurations of SQL Server with Windows Server
 

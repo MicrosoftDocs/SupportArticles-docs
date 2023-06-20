@@ -4,7 +4,6 @@ description: This article describes troubleshooting steps that may help resolve 
 ms.date: 07/22/2020
 ms.custom: sap:Availability Groups
 ms.reviewer: ramakoni, amamun
-ms.prod: sql
 ---
 # Error 9002. The transaction log for database is full due to AVAILABILITY_REPLICA error message in SQL Server
 

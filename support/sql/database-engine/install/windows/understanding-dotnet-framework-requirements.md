@@ -5,7 +5,6 @@ ms.date: 07/22/2020
 ms.custom: sap:Installation, Patching and Upgrade
 ms.reviewer: uttamkp, ramakoni
 ms.topic: article
-ms.prod: sql
 ---
 # Understand the .NET Framework requirements for various versions of SQL Server
 

@@ -4,7 +4,6 @@ description: This article describes support for network database files in SQL Se
 ms.date: 09/25/2020
 ms.custom: sap:Administration and Management
 ms.reviewer: SANJAYAN
-ms.prod: sql
 ---
 # Description of support for network database files in SQL Server
 

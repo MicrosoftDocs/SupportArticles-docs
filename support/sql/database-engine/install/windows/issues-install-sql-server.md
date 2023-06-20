@@ -4,7 +4,6 @@ description: This article describes some known issues and prerequisites when you
 ms.date: 10/22/2020
 ms.custom: sap:Database Engine
 ms.reviewer: ramakoni
-ms.prod: sql
 ---
 # Known issues installing SQL Server on Windows 7 or Windows Server 2008 R2
 

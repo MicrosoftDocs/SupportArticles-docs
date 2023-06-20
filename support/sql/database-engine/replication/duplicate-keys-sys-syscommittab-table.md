@@ -2,7 +2,6 @@
 title: Duplicate keys from sys.syscommittab table
 description: This article provides information about resolving a SQL Server Change Tracking issue that can result in duplicate rows in `sys.syscommittab` file.
 ms.date: 03/16/2020
-ms.prod: sql
 ---
 # Duplicate key rows from the sys.syscommittab table in SQL Server
 

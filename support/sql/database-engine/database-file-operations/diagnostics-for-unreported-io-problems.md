@@ -6,7 +6,6 @@ ms.custom: sap:Administration and Management
 author: padmajayaraman
 ms.author: v-jayaramanp
 ms.reviewer: ramakoni1
-ms.prod: sql
 ---
 
 # SQL Server diagnostics detects unreported I/O problems due to stale reads or lost writes

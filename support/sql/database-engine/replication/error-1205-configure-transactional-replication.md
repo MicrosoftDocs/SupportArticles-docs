@@ -4,7 +4,6 @@ description: This article provides resolutions for the problem that occurs when 
 ms.date: 07/22/2020
 ms.custom: sap:Replication, change tracking, change data capture
 ms.reviewer: holgerl
-ms.prod: sql
 ---
 # Error 1205 when you configure transactional replication
 

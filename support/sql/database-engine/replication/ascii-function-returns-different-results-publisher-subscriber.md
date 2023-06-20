@@ -6,7 +6,6 @@ ms.custom: sap:Replication, change tracking, change data capture
 author: sevend2
 ms.author: v-sidong
 ms.reviewer: akbarf, valcan, tzakir, maarumug
-ms.prod: sql
 ---
 
 # ASCII function returns different results in Publisher and Subscriber database tables

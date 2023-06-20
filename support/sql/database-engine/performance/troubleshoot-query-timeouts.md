@@ -4,7 +4,6 @@ description: This article describes how to troubleshoot the time-out errors when
 ms.date: 08/01/2022
 ms.custom: sap:Performance
 ms.topic: troubleshooting
-ms.prod: sql
 author: pijocoder
 ms.author: jopilov
 ---

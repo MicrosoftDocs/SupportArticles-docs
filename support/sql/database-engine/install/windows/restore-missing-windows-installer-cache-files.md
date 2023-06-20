@@ -5,7 +5,6 @@ ms.date: 11/24/2021
 ms.custom: sap:Installation, Patching and Upgrade
 ms.reviewer: ramakoni
 ms.topic: how-to
-ms.prod: sql
 ---
 # Restore the missing Windows Installer cache files and resolve problems that occur during a SQL Server update
 

@@ -6,7 +6,6 @@ ms.custom: sap:Other tools
 author: padmajayaraman
 ms.author: v-jayaramanp
 ms.reviewer: ramakoni1
-ms.prod: sql
 ---
 
 # "Invalid password" error and slow response to typed password in SSMS

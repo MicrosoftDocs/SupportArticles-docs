@@ -6,7 +6,6 @@ ms.custom: sap:Administration and Management
 ms.reviewer: jopilov
 author: padmajayaraman
 ms.author: v-jayaramanp
-ms.prod: sql
 ---
 
 # Excessive unused space after running bulk load operations
