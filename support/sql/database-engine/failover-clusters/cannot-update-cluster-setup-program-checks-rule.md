@@ -55,7 +55,7 @@ To resolve this issue, follow these steps:
 
 3. Type the command `mofcomp.exe ClusWMI.mof`, and press **Enter**.
 
-4. Rerun the Setup of the service packs or cumulative updates on the server.
+4. Rerun the setup of the service packs or cumulative updates on the server.
 
 ## More information
 
@@ -72,9 +72,11 @@ To identify that this issue is caused by the WMI namespace for the cluster, foll
 
    > [!NOTE]
    > As an additional test, you can run the following query in Windows PowerShell:
-     ```powershell
-       SELECT name FROM <MSCluster_Cluster>
-     ```
+   >
+   > ```powershell
+   >    SELECT name FROM <MSCluster_Cluster>
+   >  ```
+   >
    > If the issue isn't caused by an invalid MSCluster namespace, the expected result is that the cluster network name is returned.
 
 ## Applies to

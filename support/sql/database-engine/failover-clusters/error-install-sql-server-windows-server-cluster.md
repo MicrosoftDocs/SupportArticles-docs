@@ -44,19 +44,22 @@ To work around this issue, you must fix the problem that caused validation to fa
 
 At a command prompt, change to the hard disk drive and to the folder that contains SQL Server Setup (*Setup.exe*). Then, type one of the following commands to skip the validation rule:
 
-- For an integrated failover Add-Note setup, run the command on each node that is being added:
+- For an integrated failover Add-Note setup, run the command on each node that's being added:
+
   `Setup /SkipRules=Cluster_VerifyForErrors /Action=InstallFailoverCluster`
 
-- For an advanced or enterprise installation, run the command: 
+- For an advanced or enterprise installation, run the command:
+  
   `Setup /SkipRules=Cluster_VerifyForErrors /Action=CompleteFailoverCluster`
 
 - If you receive a validation failure when you add a node to an existing failover installation, run the command on each node that is being added:
+  
   `Setup /SkipRules=Cluster_VerifyForErrors /Action=AddNode`
 
 > [!NOTE]
 > Setting up a SQL Server failover cluster instance on a Windows Server failover cluster that contains errors in the Windows Server Cluster Validation Report is unsupported. For a SQL Server failover cluster instance to be in a supported scenario, the Windows Server Cluster Validation Report can't contain errors. Confirm with CSS that the cluster configuration is in a supported state.
 
-The `SkipRules` parameter for setup is not a documented feature. You shouldn't use this parameter to skip any other rules except the `Cluster_VerifyForErrors` rule unless CSS directs you to do this.
+The `SkipRules` parameter for setup isn't a documented feature. You shouldn't use this parameter to skip any other rules except the `Cluster_VerifyForErrors` rule unless CSS directs you to do this.
 
 ## SQL Server failover cluster validation testing
 
@@ -66,7 +69,7 @@ By using the cluster validation wizard, you can run a set of focused tests on a 
 
 In most cases, if any tests in the cluster validation rule fail, Microsoft doesn't consider the solution to be supported. There are exceptions to this rule, such as the case with multiple-site (geographically dispersed) clusters where there is no shared storage. In this scenario, the expected result of the cluster validation wizard is that the storage tests will fail. This is still a supported solution if the rest of the tests finish successfully.
 
-The kind of test that fails is a guideline to the corrective action to take. For example, if the **List all disks** storage test fails and if later storage tests don't run because they would also fail, contact the storage vendor to troubleshoot. Similarly, if a network test that is related to IP addresses fails, contact the network infrastructure team.
+The kind of test that fails is a guideline to the corrective action to take. For example, if the **List all disks** storage test fails and if later storage tests don't run because they would also fail, contact the storage vendor to troubleshoot. Similarly, if a network test that's related to IP addresses fails, contact the network infrastructure team.
 
 ## References
 

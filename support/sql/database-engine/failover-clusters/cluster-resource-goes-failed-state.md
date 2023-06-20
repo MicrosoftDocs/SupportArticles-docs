@@ -4,6 +4,7 @@ description: This article provides a resolution for the problem that occurs if r
 ms.date: 10/30/2020
 ms.custom: sap:Failover Clusters
 ---
+
 # A SQL Server cluster resource goes to a "failed" state when you try to bring the resource online in SQL Server
 
 This article helps you resolve the problem that occurs if resource-specific registry keys are missing.
@@ -104,4 +105,4 @@ To resolve this problem, you must manually re-create the resource-specific regis
 
 ## More information
 
-[How to manually re-create the resource-specific registry keys for SQL Server cluster resources](https://support.microsoft.com/help/810056)
+[How to manually re-create the resource-specific registry keys for SQL Server cluster resources](manually-re-create-resource-specific-registry-keys.md)

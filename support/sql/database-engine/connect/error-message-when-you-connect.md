@@ -51,7 +51,7 @@ If you intentionally use either a certificate from a non-trusted authority or a 
 
 For Scenario 1: Add the certificate authority to the Trusted Root Certification Authorities store on the client computer initiating encrypted connection. To do this, complete the [Export the server certificate](#export-the-server-certificate) and [Install the root certificate authority (CA) on the client machine](#install-the-root-certificate-authority-ca-on-the-client-machine) procedures listed in the next few sections in that sequence.
 
-#### Export the server certificate
+### Export the server certificate
 
 The example uses a file named _caCert.cer_ as a certificate file. You must obtain this certificate file from the server. The following steps explain how to export the server certificate to a file:
 

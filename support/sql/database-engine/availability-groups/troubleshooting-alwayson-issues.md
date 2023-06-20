@@ -27,7 +27,7 @@ _Original KB number:_ &nbsp; 10179
 
 ## I need pointers on setting up and configuring Always On Availability groups
 
-If you are looking for documentation on setting up Always On configuration, please review the following documents:
+If you are looking for documentation on setting up Always On configuration, please review the following documents: 
 
 [Getting Started with Always On Availability Groups (SQL Server)](/sql/database-engine/availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server) - The document provides answers to many questions you may have related to Availability groups, setup etc. Following all the steps in this doc and reviewing [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups (SQL Server)](/sql/database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability) will help prevent many issues that you may run into with setting up and maintaining availability groups in your environment.
 
@@ -37,11 +37,11 @@ If you are looking for documentation on setting up Always On configuration, plea
 - [Always On Architecture Guides](/archive/blogs/sqlalwayson/alwayson-architecture-guides)
 - External link: [SQL Server Always On Availability Groups](http://www.brentozar.com/sql/sql-server-alwayson-availability-groups/)
 
-If this information is not helpful, see [More information about Always On Availability Groups](#more-information-about-always-on-availability-groups).
+If this information isn't helpful, see [More information about Always On Availability Groups](#more-information-about-always-on-availability-groups).
 
 ## I am having problems configuring Always On Availability groups
 
-Typical configuration problems include Always On Availability Groups are disabled, accounts are incorrectly configured, the database mirroring endpoint does not exist, the endpoint is inaccessible (SQL Server Error 1418), network access doesn't exist, and a join database command fails (SQL Server Error 35250). Review the following document for help on troubleshooting these issues:
+Typical configuration problems include Always On Availability Groups are disabled, accounts are incorrectly configured, the database mirroring endpoint doesn't exist, the endpoint is inaccessible (SQL Server Error 1418), network access doesn't exist, and a join database command fails (SQL Server Error 35250). Review the following document for help on troubleshooting these issues:
 
 [Troubleshoot Always On Availability Groups Configuration (SQL Server)](/sql/database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server)
 
@@ -57,7 +57,7 @@ One of the most common configuration issues customers encounter is availability 
 
 - > Msg 19476, Level 16, State 4, Line 2The attempt to create the network name and IP address for the listener failed. The WSFC service may not be running or may be inaccessible in its current state, or the values provided for the network name and IP address may be incorrect. Check the state of the WSFC cluster and validate the network name and IP address with the network administrator.
 
-The majority of time, listener creation failure resulting in the messages above are due to a lack of permissions for the Cluster Name Object (CNO) in Active Directory to create and read the listener computer object. For troubleshooting this problem, please review the following articles:
+The majority of time, listener creation failure resulting in the previous messages are due to a lack of permissions for the Cluster Name Object (CNO) in Active Directory to create and read the listener computer object. For troubleshooting this problem, please review the following articles:
 
 - [Create Listener Fails with Message 'The WSFC cluster could not bring the Network Name resource online'](/archive/blogs/alwaysonpro/create-listener-fails-with-message-the-wsfc-cluster-could-not-bring-the-network-name-resource-online)
 - [Troubleshooting Always On availability group listener creation in SQL Server 2012](https://support.microsoft.com/kb/2829783)
@@ -66,7 +66,7 @@ The majority of time, listener creation failure resulting in the messages above 
 
 If the issue still exists, see [More information about Always On Availability Groups](#more-information-about-always-on-availability-groups).
 
-## Automatic Failover is not working as expected
+## Automatic Failover isn't working as expected
 
 If you notice that the automatic failover isn't working as expected either during testing or in production, see: [Troubleshooting automatic failover problems in SQL Server 2012 Always On environments](https://support.microsoft.com/kb/2833707).
 
@@ -76,7 +76,7 @@ If the issue still exists, see [More information about Always On Availability Gr
 
 ## I am having issues connecting to Always On Availability groups
 
-After you configure the availability group listener for an Always On Availability Group in SQL Server 2012, you may be unable to ping the listener or connect to it from an application. You may get an error that is similar to the following:
+After you configure the availability group listener for an Always On Availability Group in SQL Server 2012, you may be unable to ping the listener or connect to it from an application. You may get an error that's similar to the following:
 
 > Sqlcmd: Error: Microsoft SQL Native Client : Login timeout expired.
 
@@ -96,17 +96,17 @@ If the issue still exists, see [More information about Always On Availability Gr
 
 1. Lot of issues related to Always On occur due to improper configuration of the listener. If you are having connection issues to the listener,
 
-   1. Ensure you read all the limitations of ILB listener and followed all the steps documented in the following article paying particular attention to dependency configuration, IP address, and various other parameters in the PowerShell script.
+   1. Make sure you read all the limitations of ILB listener and followed all the steps documented in the following article paying particular attention to dependency configuration, IP address, and various other parameters in the PowerShell script.
 
    2. If unsure, you may want to delete and recreate the listener as per the above document.
 
-2. If you recently moved your VM to a different service or if the IP addresses changed, you need to update the value of the IP address resource to reflect the new address and you need to recreate the load balanced endpoint for your AG. You can update the IP address using the **Get**/**Set** commands as follows:
+2. If you recently moved your VM to a different service or if the IP addresses changed, you need to update the value of the IP address resource to reflect the new address and you need to recreate the load balanced endpoint for your AG. You can update the IP address using the `Get` or `Set` commands as follows:
 
     ```console
     Get-ClusterResource "IPResourceName" | Set-ClusterParameter -name Address -value "w.x.y.z"
     ```
 
-Recommended docs:
+Recommended documents:
 
 - [Configure a load balancer for a SQL Server Always On availability group in Azure Virtual Machines](/azure/azure-sql/virtual-machines/windows/availability-group-load-balancer-portal-configure)
 
@@ -133,14 +133,14 @@ If the issue still exists, see [More information about Always On Availability Gr
 
 ## How to manage the size of transaction log for my AG databases
 
-You can reduce the transaction log sizes by configuring regular Backups at either primary or secondary servers.
+You can reduce the transaction log sizes by configuring regular backups at either primary or secondary servers.
 
 Review the following topics for additional information:
 
 - [Offload supported Backups to secondary replicas of an availability group](/sql/database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups)
 - [Performing Transaction Log Backups using Always On Availability Group Read-Only Secondary Replicas - Part 1](/archive/blogs/alwaysonpro/performing-transaction-log-backups-using-alwayson-availability-group-read-only-secondary-replicas-part-1)
 
-If this information is not helpful, see [More information about Always On Availability Groups](#more-information-about-always-on-availability-groups).
+If this information isn't helpful, see [More information about Always On Availability Groups](#more-information-about-always-on-availability-groups).
 
 ## Primary or Secondary Servers struck in Resolving State or you experience unexpected failovers
 
@@ -178,7 +178,7 @@ If the issue still exists, see [More information about Always On Availability Gr
 
 4. **How to recover in case of a failure on all nodes of your cluster?**
 
-    See: [WSFC Disaster Recovery through Forced Quorum (SQL Server)](https://support.microsoft.com/kb/2792138).
+    See [WSFC Disaster Recovery through Forced Quorum (SQL Server)](https://support.microsoft.com/kb/2792138).
 
 5. **Where can I find information on support for distributed transactions in AG configurations?**
 

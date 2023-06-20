@@ -83,7 +83,7 @@ SQL Server 2005 and later versions can't be migrated to a new domain. You need t
 > - Don't remove any of the following components: SQL Server support files, SQL Server Native Client, Integration Services, or Workstation Components, unless you are rebuilding the entire node.
 
 > [!WARNING]
-> If errors occur during the uninstallation process, you may need to rebuild the node to successfully install SQL Server again.
+> If errors occur during the un-installation process, you may need to rebuild the node to successfully install SQL Server again.
 
 ## More information
 

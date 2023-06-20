@@ -64,7 +64,7 @@ END
 ```
 
 > [!NOTE]
-> Both example 1 and 2 assume that a unique identifier exists for each row in the source table. In some cases, no unique identifier may exist. If that is the case, you can modify the temp table method to use a newly created key column. For example:
+> Both example 1 and 2 assume that a unique identifier exists for each row in the source table. In some cases, no unique identifier may exist. If that's the case, you can modify the temp table method to use a newly created key column. For example:
 
 ```SQL
 /********** example 3 **********/

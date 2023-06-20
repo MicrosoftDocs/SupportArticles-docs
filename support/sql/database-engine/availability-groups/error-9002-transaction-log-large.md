@@ -27,7 +27,7 @@ The transaction log for database '%.*ls' is full due to 'AVAILABILITY_REPLICA'
 
 ## Cause
 
-This occurs when the logged changes at primary replica aren't yet hardened on the secondary replica. For more information regarding data synchronization process in Always On environment, see [Data Synchronization Process](/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups?view=sql-server-2017#data-synchronization-process&preserve-view=true).
+This occurs when the logged changes at primary replica aren't yet hardened on the secondary replica. For more information regarding data synchronization process in Always On environment, see [Data Synchronization Process](/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups?view=sql-server-2017#data-synchronization-process).
 
 ## Troubleshooting
 
@@ -54,7 +54,7 @@ There are two scenarios that can lead to log growth in an availability database 
     | `redo_queue_size`| The amount of log records in the log files of the secondary replica that hasn't yet been redone, in kilobytes (KB). |
     | `redo_rate`| The rate at which the log records are being redone on a given secondary database, in kilobytes (KB)/second. |
     | `last_redone_lsn`| Actual log sequence number of the last log record that was redone on the secondary database. `last_redone_lsn` is always less than `last_hardened_lsn`. |
-    | `last_received_lsn`| Is the log block ID identifying the point up to which all log blocks have been received by the secondary replica that hosts this secondary database. Reflects a log-block ID padded with zeroes. It's not an actual log sequence number. |
+    | `last_received_lsn`| The log block ID identifying the point up to which all log blocks have been received by the secondary replica that hosts this secondary database. Reflects a log-block ID padded with zeroes. It's not an actual log sequence number. |
 
     For example, execute the following query against the primary replica to report the replica with the earliest `truncation_lsn` and is the upper bound that the primary can reclaim in its own transaction log:
 
@@ -77,8 +77,8 @@ There are two scenarios that can lead to log growth in an availability database 
 
     Corrective measures may include but aren't limited to the following:
 
-  - Make sure that there's no resource or performance bottleneck at the secondary.
-  - Make sure that the Redo thread isn't blocked at the secondary. Use the `lock_redo_blocked` extended event to identify when this occurs and on what objects the redo thread is blocked.
+    - Make sure that there's no resource or performance bottleneck at the secondary.
+    - Make sure that the Redo thread isn't blocked at the secondary. Use the `lock_redo_blocked` extended event to identify when this occurs and on what objects the redo thread is blocked.
 
 ## Workaround
 
@@ -100,13 +100,13 @@ After you identify the secondary database that makes this occur, try one or more
 
 ## More information
 
-- For more information about why a transaction log grows unexpectedly or becomes full in SQL Server, see [Troubleshoot a Full Transaction Log (SQL Server Error 9002)](/sql/relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002?view=sql-server-ver15&preserve-view=true).
+- For more information about why a transaction log grows unexpectedly or becomes full in SQL Server, see [Troubleshoot a Full Transaction Log (SQL Server Error 9002)](/sql/relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002).
 
 - For more information about the Redo operation blocking problem, see [AlwaysON - HADRON Learning Series: lock_redo_blocked/redo worker Blocked on Secondary Replica](https://techcommunity.microsoft.com/t5/SQL-Server-Support/AlwaysON-HADRON-Learning-Series-lock-redo-blocked-redo-worker/ba-p/317628).
 
 - For more information about AVAILABILITY_REPLICA-based log_reuse_wait columns, see [Factors that can delay log truncation](/previous-versions/sql/sql-server-2008-r2/ms345414(v=sql.105)).
 
-- For more information about the `sys.dm_hadr_database_replica_states` view, see [sys.dm_hadr_database_replica_states (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql?redirectedfrom=MSDN&view=sql-server-ver15&preserve-view=true).
+- For more information about the `sys.dm_hadr_database_replica_states` view, see [sys.dm_hadr_database_replica_states (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql?redirectedfrom=MSDN).
 
 - For more information about how to monitor and troubleshoot logged changes that aren't arriving and aren't being applied in a timely manner, see [Monitor performance for Always On availability groups](/previous-versions/sql/sql-server-2012/dn135338(v=sql.110)).
 
