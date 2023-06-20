@@ -4,7 +4,6 @@ description: This article describes various methods that you can use to iterate 
 ms.date: 10/29/2020
 ms.custom: sap:Administration and Management
 ms.topic: how-to
-ms.prod: sql
 ---
 # Iterate through a result set by using Transact-SQL in SQL Server
 

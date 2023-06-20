@@ -6,7 +6,6 @@ ms.custom: sap:Installation, Patching and Upgrade
 author: padmajayaraman
 ms.author: v-jayaramanp
 ms.reviewer: ramakoni
-ms.prod: sql
 ---
 
 # SQL Server upgrade from SQL Server 2014 or SQL Server 2016 to 2017 fails and returns error 1712

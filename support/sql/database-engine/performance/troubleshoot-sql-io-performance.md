@@ -4,7 +4,6 @@ description: Provides a methodology to isolate and troubleshoot SQL performance 
 ms.date: 09/28/2022
 ms.custom: sap:Performance
 ms.topic: troubleshooting
-ms.prod: sql
 author: PijoCoder 
 ms.author: v-jayaramanp
 ---

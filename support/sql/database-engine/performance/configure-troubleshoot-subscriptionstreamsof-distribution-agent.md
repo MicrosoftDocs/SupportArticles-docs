@@ -5,7 +5,6 @@ ms.date: 11/08/2022
 ms.reviewer: ramakoni
 ms.author: v-sidong
 author: sevend2
-ms.prod: sql
 ---
 
 # How to configure and troubleshoot the SubscriptionStreams parameter of the Distribution Agent in SQL Server

@@ -4,8 +4,6 @@ description: This article provides instruction on first understanding what block
 ms.date: 04/14/2021
 ms.custom: sap:Performance
 ms.reviewer: ramakoni
-ms.prod: sql
-ms.technology: performance 
 ---
 # Understand and resolve SQL Server blocking problems
 

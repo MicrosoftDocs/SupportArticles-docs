@@ -6,7 +6,6 @@ ms.custom: sap:Security Issues
 author: padmajayaraman
 ms.author: v-jayaramanp
 ms.reviewer: Milu, jopilov
-ms.prod: sql
 ---
 
 # SQL Server service can't start after you configure an instance to use a Secure Sockets Layer certificate

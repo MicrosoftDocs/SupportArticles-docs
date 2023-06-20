@@ -4,7 +4,6 @@ description: This article helps resolve issues that occur because of Slow query 
 ms.date: 05/10/2022
 ms.custom: sap:Performance
 ms.topic: troubleshooting
-ms.prod: sql
 author: yuej
 ms.author: v-jayaramanp
 ---

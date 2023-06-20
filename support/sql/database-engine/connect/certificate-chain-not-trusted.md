@@ -5,7 +5,6 @@ ms.date: 02/28/2023
 author: ramakoni1
 ms.author: v-jayaramanp
 ms.custom: sap:Connection issues
-ms.prod: sql
 ---
 
 # "The certificate chain was issued by an authority that is not trusted" error after upgrading SNAC applications

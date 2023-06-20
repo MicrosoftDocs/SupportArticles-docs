@@ -4,7 +4,6 @@ description: This article describes a method to improve the performance of queri
 ms.date: 09/19/2022
 ms.custom: sap:Administration and Management
 ms.topic: how-to
-ms.prod: sql
 ---
 # Improve the performance of full-text queries in SQL Server
 

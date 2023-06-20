@@ -5,7 +5,6 @@ ms.date: 12/02/2022
 ms.custom: sap:Connection issues
 author: HaiyingYu
 ms.author: haiyingyu
-ms.prod: sql
 ---
 # An existing connection was forcibly closed by the remote host (OS error 10054)
 
