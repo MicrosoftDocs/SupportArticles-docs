@@ -3,7 +3,7 @@ title: Disabled users cannot access the system error
 description: Provides a resolution for an issue where an SLA flow run fails due to the flow owner being disabled or having an invalid license.
 ms.reviewer: sdas
 ms.author: ravimanne
-ms.date: 06/19/2023
+ms.date: 06/20/2023
 ---
 # "Disabled users cannot access the system" error
 

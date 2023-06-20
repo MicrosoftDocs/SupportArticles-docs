@@ -3,7 +3,7 @@ title: SLA workflow must be in Published state error
 description: Provides a resolution for an issue where a case update fails with the Workflow must be in published state error.
 ms.reviewer: sdas
 ms.author: ravimanne
-ms.date: 06/19/2023
+ms.date: 06/20/2023
 ---
 # "Workflow must be in Published state" error
 
