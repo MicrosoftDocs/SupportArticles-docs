@@ -95,7 +95,7 @@ NFS Azure file shares don't currently support double encryption. Azure provides 
 
 Disable **Secure transfer required** in your storage account's configuration blade.
 
-:::image type="content" source="media/files-troubleshoot-linux-nfs/disable-secure-transfer.png" alt-text="Screenshot that shows the storage account configuration blade, disabling secure transfer required." lightbox=""media/files-troubleshoot-linux-nfs/disable-secure-transfer.png":::
+:::image type="content" source="media/files-troubleshoot-linux-nfs/disable-secure-transfer.png" alt-text="Screenshot that shows the storage account configuration blade, disabling secure transfer required." lightbox="media/files-troubleshoot-linux-nfs/disable-secure-transfer.png":::
 
 ### Cause 3: nfs-utils, nfs-client, or nfs-common package isn't installed
 
