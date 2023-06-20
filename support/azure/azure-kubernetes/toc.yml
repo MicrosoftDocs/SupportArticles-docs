@@ -1,7 +1,7 @@
 - name: Welcome
   href: welcome-azure-kubernetes.yml
 
-- name: Node VM on AKS cluster is in failed state
+- name: AKS cluster/node is in failed state
   href: cluster-node-virtual-machine-failed-state.md
 
 - name: Troubleshoot create operations
