@@ -92,7 +92,7 @@ After you identify the secondary database that makes this occur, try one or more
 - If the redo thread is frequently blocked, disable the `Readable Secondary` feature by changing the `ALLOW_CONNECTIONS` parameter of the `SECONDARY_ROLE` for the replica to **NO**.
 
     > [!NOTE]
-    > This will prevent users from reading the data in the secondary replica, which is the root cause of the block. Once the redo queue has dropped to an acceptable size, consider enabling the feature again.
+    > This will prevent users from reading the data in the secondary replica, which is the root cause of the blocking. Once the redo queue has dropped to an acceptable size, consider enabling the feature again.
 
 - Enable the **autogrow** setting if it's disabled and there is available disk space.
 - Increase the MaxSize value for the transaction log file if it has been reached and there is available disk space.
