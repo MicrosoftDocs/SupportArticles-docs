@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot the invalid viewstate issues
-description: This article describes techniques for debugging and resolving problems with viewstate. View state is a feature of ASP.NET that allows pages to automatically preserve state without relying on server state.
+description: This article describes techniques for debugging and resolving problems with viewstate. viewstate is a feature of ASP.NET that allows pages to automatically preserve state without relying on server state.
 ms.date: 06/20/2023
 author: padmajayaraman
 ms.author: v-jayaramanp
@@ -10,14 +10,14 @@ ms.topic: troubleshooting
 
 # Troubleshoot invalid viewstate issues
 
-This article introduces techniques for debugging and for resolving problems with View state in Microsoft ASP.NET applications.
+This article introduces techniques for debugging and for resolving problems with viewstate in Microsoft ASP.NET applications.
 
 _Original product version:_ &nbsp; ASP.NET  
 _Original KB number:_ &nbsp; 829743
 
 ## Introduction
 
-View state is a feature in ASP.NET that allows pages to automatically preserve state without relying on server state (for example, session state). However, issues related to View state can be difficult to debug. In most cases, when problems with viewstate occur, you receive the following error message in the web browser, with little indication of what might be causing the issue:
+viewstate is a feature in ASP.NET that allows pages to automatically preserve state without relying on server state (for example, session state). However, issues related to viewstate can be difficult to debug. In most cases, when problems with viewstate occur, you receive the following error message in the web browser, with little indication of what might be causing the issue:
 
 > The viewstate is invalid for this page and might be corrupted.
 
@@ -25,18 +25,18 @@ This article describes some techniques that can be used for debugging and for re
 
 ## Set the validationKey attribute if you're running in a Web farm
 
-In a Web farm, each client request can go to a different machine on every postback. Because of this behavior, you can't leave the `validationKey` attribute set to AutoGenerate in the *Machine.config* file. Instead, you must set the value of the `validationKey` attribute to a fixed string that is shared by all the machines on the Web farm.
+In a Web farm, each client request can go to a different machine on every postback. Because of this behavior, you can't leave the `validationKey` attribute set to `AutoGenerate` in the *Machine.config* file. Instead, you must set the value of the `validationKey` attribute to a fixed string that is shared by all the machines on the Web farm.
 
 ## Do not store dynamically generated types in viewstate in a Web farm
 
-When ASP.NET compiles files dynamically, the files are built into assemblies with random names (for example, a file name might be *jp395dun.dll*). If you're running a Web farm, the same files are compiled into assemblies with different random names. Normally, this isn't a problem because no one makes assumptions on those assembly names. But if you ever put a dynamically compiled type into viewstate by using binary serialization, the name of the assembly will be included as part of the viewstate data. When that viewstate is later sent to a different server in the Web farm, the viewstate can't be deserialized because it uses different assembly names.
+When ASP.NET compiles files dynamically, the files are built into assemblies with random names (for example, a file name might be *jp395dun.dll*). If you're running a Web farm, the same files are compiled into assemblies with different random names. Normally, this isn't a problem because no one makes assumptions on those assembly names. But if you ever put a dynamically compiled type into viewstate by using binary serialization, the name of the assembly are included as part of the viewstate data. When that viewstate is later sent to a different server in the Web farm, the viewstate can't be deserialized because it uses different assembly names.
 
 The best resolution is to avoid using binary serialization. Binary serialization uses many resources even when you don't run into this problem. Instead, limit what you put in viewstate to a combination of arrays, pairs, triplets, and simple types (for example, strings, int, and other types). `System.Web.UI.Pair` and `System.Web.UI.Triplet` are simple wrapper types that the viewstate engine can efficiently process.
 
 An alternative fix to avoid this problem is to move the types that you're storing in viewstate into a precompiled assembly, either in your `Bin` folder or in the `Global Assembly` cache. This fix doesn't address performance, but it guarantees that the assembly has the same name on all computers.
 
 > [!NOTE]
-> If you store complex data types in View state and experience this issue, the call stack information will contain stacks that are similar to the following:
+> If you store complex data types in viewstate and experience this issue, the call stack information will contain stacks that are similar to the following:
 
 ```console
 [FileNotFoundException: Could not load file or assembly 'App_Web_fx--sar9, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies. The system cannot find the file specified.]
@@ -91,6 +91,7 @@ The following steps are an example that uses the Runtime Debugger (*Cordbg.exe*)
 
     > [!NOTE]
     > Replace **PID** with the PID that was noted in step 3.
+
 1. Type **ca e** to instruct *Cordbg.exe* to break on all exceptions, and then type `<gto>` run the process.
 1. Whenever you get an exception, type `<w>` to see the stack. If the stack is a viewstate exception (look for `LoadPageStateFromPersistenceMedium` on the stack), copy all the exceptions and the stack information from the command window, and then save the information. This information can help you understand the problem. If the exception is unrelated, type `<g>`.
 
@@ -98,7 +99,7 @@ The following steps are an example that uses the Runtime Debugger (*Cordbg.exe*)
 
 By default, the viewstate is round-tripped with an `<input type=hidden>` field that is sent to the browser. The browser then sends the field back to the server on the next request. In some cases, this viewstate can get large and be a potential source of problems. Some browsers can't handle such a large hidden field (and the resulting large request), and the browsers may truncate the viewstate. Truncating the viewstate causes a "viewstate corrupted" error message. This behavior is most likely to occur in simpler browsers. For example, this behavior may occur in a browser on a PDA.
 
-To determine whether you may be running into such an issue, try storing the View state in the session. The following example demonstrates how to do this.
+To determine whether you may be running into such an issue, try storing the viewstate in the session. The following example demonstrates how to do this.
 
 ```aspx-csharp
 <%@ language=c# debug=true %> 
