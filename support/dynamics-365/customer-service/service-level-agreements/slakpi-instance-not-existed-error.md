@@ -1,17 +1,17 @@
 ---
-title: Failed to apply active SLA to case due to SLA item's `ChangedAttributeList` is null
-description: Provides a resolution for the issue where it's failed to apply active SLA to case if SLA item's `ChangedAttributeList` is null.
+title: Can't apply active SLA to case because SLA item's ChangedAttributeList is null
+description: Provides a resolution for an issue where you can't apply an active SLA to a case if the SLA item's ChangedAttributeList is null.
 ms.reviewer: sdas
 ms.author: ravimanne
-ms.date: 06/07/2023
+ms.date: 06/20/2023
 ---
-# Failed to apply active SLA to case if SLA item's `ChangedAttributeList` is null
+# Fails to apply an active SLA to a case if the SLA item's ChangedAttributeList is null
 
-This article provides a resolution for the issue where it's failed to apply active SLA to case if SLA item's `ChangedAttributeList` is null.
+This article provides a resolution for an issue where you can't apply an active SLA to a case if the SLA item's `ChangedAttributeList` is null.
 
 ## Symptoms
 
-You can't see active SLA applied to case even it has SLA item applicable condtion.
+You can't see an active SLA applied to a case even if it has an SLA item applicable condition.
 
 ## Cause
 
@@ -21,7 +21,7 @@ This issue occurs when an active SLA exists but the SLA item's `ChangedAttribute
 
 To solve this issue, 
 
-1. Find the active SLA which meets applicable condtion.
+1. Find the active SLA that meets the applicable condition.
 2. Open the respective SLA and check the SLA items. 
-3. If the SLA has SLA items, administrators can reactivate the SLA by resetting any SLA item's applicable when\success condition, which should calculate the `ChangedAttributeList` again.
+3. If the SLA has SLA items, administrators can reactivate the SLA by resetting any SLA item's **Applicable when** or **Success** conditions, which should recalculate the `ChangedAttributeList`.
 4. If the SLA doesn't have any SLA item, administrators can define SLA items and reactivate the SLA again.
