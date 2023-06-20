@@ -45,7 +45,7 @@ With either EAP-TLS or PEAP with EAP-TLS, the server accepts the client's authen
 - When clients use EAP-TLS or PEAP with EAP-TLS authentication, a list of all the installed certificates is displayed in the Certificates snap-in, with the following exceptions:
   - Wireless clients don't display registry-based certificates and smart card logon certificates.
   - Wireless clients and virtual private network (VPN) clients don't display certificates that are protected with a password.
-  - Certificates that don't contain the Client Authentication purpose in EKU extensions aren't displayed.
+  - Certificates that don't contain the **Client Authentication** purpose in EKU extensions aren't displayed.
 
 ## Server certificate requirements
 
