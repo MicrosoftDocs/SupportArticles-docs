@@ -12,6 +12,8 @@ ms.topic: troubleshooting
 
 This article provides information related to troubleshooting installation issues in IIS 7.x by reviewing the log files. Although this article is for IIS 7.x the same concepts can be applied to other versions of IIS.
 
+_Applies to:_&nbsp; 7.0, IIS 7.5
+
 ## Reviewing the IIS setup log files
 
 The installation process does its own logging in the *IIS7.log* text file (typically in *c:\windows\iis7.log*). The first thing to look for is "FAIL" errors in the log file.

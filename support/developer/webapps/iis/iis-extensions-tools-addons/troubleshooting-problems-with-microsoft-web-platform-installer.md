@@ -10,6 +10,8 @@ ms.topic: troubleshooting
 
 # Troubleshooting problems with Microsoft Web Platform Installer
 
+_Applies to:_ &nbsp; IIS 7.0, IIS 7.5
+
 ## Introduction
 
 Microsoft® Web Platform Installer (Web PI) makes it simple to download and install the latest Microsoft® Web Platform components, including Internet Information Services (IIS), Microsoft® SQL Server® 2008/R2 Express, Microsoft® ASP.NET Model View Controller (MVC3), and Microsoft® Visual Web Developer 2008/SP1 Express Edition. Web PI also helps to install popular Web applications such as WordPress, DasBlog, or Silverstripe. This article presents some troubleshooting advice for issues that may arise with Microsoft Web PI.
