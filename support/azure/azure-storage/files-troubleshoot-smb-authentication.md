@@ -1,6 +1,4 @@
-=]
-\/"
-"---
+---
 title: Troubleshoot Azure Files identity-based authentication and authorization issues (SMB)
 description: Troubleshoot problems using identity-based authentication to connect to SMB Azure file shares and see possible resolutions.
 author: khdownie
@@ -343,11 +341,11 @@ If you're connecting to a storage account via a private endpoint/private link us
 
 #### Cause
 
-This is because the SMB client has tried to use Kerberos but failed, so it falls back to using NT LAN Manager (NTLM) authentication, and Azure Files doesn't support using NTLM authentication for domain credentials. The client can't get a Kerberos ticket to the storage account because the private link's fully qualified domain name (FQDN) isn't registered to any existing Azure AD application.
+This is because the SMB client has tried to use Kerberos but failed, so it falls back to using NT LAN Manager (NTLM) authentication, and Azure Files doesn't support using NTLM authentication for domain credentials. The client can't get a Kerberos ticket to the storage account because the private link fully qualified domain name (FQDN) isn't registered to any existing Azure AD application.
 
 #### Solution
 
-The solution is to add the private link's FQDN to the storage account's Azure AD application before you mount the file share. You can add the required `identifierUris` to the application object using the [Azure portal](https://portal.azure.com) by following these steps:
+The solution is to add the private link FQDN to the storage account's Azure AD application before you mount the file share. You can add the required `identifierUris` to the application object using the [Azure portal](https://portal.azure.com) by following these steps:
 
 1. Open **Azure Active Directory**.
 1. Select **App registrations** in the left pane.
