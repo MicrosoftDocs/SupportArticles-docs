@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 111401
 
 ## Summary
 
-This article describes various methods that you can use to simulate a cursor-like `FETCH-NEXT` logic in a stored procedure, trigger, or Transact-SQL batch.
+This article describes various methods that you can use to simulate a cursor-like `FETCH`-`NEXT` logic in a stored procedure, trigger, or Transact-SQL batch.
 
 ## Use Transact-SQL Statements to Iterate Through a Result Set
 
