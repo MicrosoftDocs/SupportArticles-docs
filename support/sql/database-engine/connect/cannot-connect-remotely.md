@@ -5,9 +5,9 @@ ms.date: 09/25/2020
 ms.custom: sap:Connection issues
 ---
 
-# Users may not be able to connect remotely to SQL server using TCP/IP protocol
+# Users may not be able to connect remotely to SQL Server using TCP/IP protocol
 
-This article helps you resolve the problem where you are not be able to connect remotely to SQL server using TCP/IP protocol.
+This article helps you resolve the problem where you are not be able to connect remotely to SQL Server using TCP/IP protocol.
 
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 2018930
@@ -23,7 +23,7 @@ When using Microsoft SQL Server, you may see one or more of the following sympto
 
 - Both local and remote connections using Named Pipes protocol as well as local connections using shared memory protocol continue to work fine.
 
-Additionally the following messages are logged in the SQL Server Errorlog file:
+Additionally, the following messages are logged in the SQL Server Errorlog file:
 
 - At SQL Server start up:
 

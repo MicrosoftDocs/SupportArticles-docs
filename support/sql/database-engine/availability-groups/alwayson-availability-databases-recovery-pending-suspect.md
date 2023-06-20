@@ -165,25 +165,25 @@ This method lets you maintain the listener while dropping and re-creating the av
     )
     ```
 
-2. Start Failover Cluster Manager, and then click **Roles** in the left pane. In the pane that lists the roles, select the original availability group.
+2. Start Failover Cluster Manager, and then select **Roles** in the left pane. In the pane that lists the roles, select the original availability group.
 3. In the bottom-middle pane under the **Resources** tab, right-click the availability group resource, and then select **Properties**. Select the **Dependencies** tab, delete the dependency to the listener, and then select **OK**.
 
     :::image type="content" source="media/alwayson-availability-databases-recovery-pending-suspect/ag-properties-dependencies-delete.png" alt-text="Screenshot of availability group properties Dependencies tab.":::
 
-4. Under the resources, right-click the listener, click **More Actions**, and then click **Assign to Another Role**.
-5. In the **Assign Source to Role** dialog box, select the new availability group, and then click **OK**.
+4. Under the resources, right-click the listener, select **More Actions**, and then select **Assign to Another Role**.
+5. In the **Assign Source to Role** dialog box, select the new availability group, and then select **OK**.
 
     :::image type="content" source="media/alwayson-availability-databases-recovery-pending-suspect/add-resouce-role-ag-test.png" alt-text="Screenshot of Assign Source to Role dialog box, showing the added new availability group.":::
 
-6. In the **Roles** pane, select the new availability group. In the bottom-middle pane, under the **Resources** tab, you should now see the new availability group and the listener resource. Right-click the new availability group resource, and then click **Properties**.
+6. In the **Roles** pane, select the new availability group. In the bottom-middle pane, under the **Resources** tab, you should now see the new availability group and the listener resource. Right-click the new availability group resource, and then select **Properties**.
 
-7. Click the **Dependencies** tab, select the listener resource from the drop-down box, and then click **OK**.
+7. Click the **Dependencies** tab, select the listener resource from the drop-down box, and then select **OK**.
 
     :::image type="content" source="media/alwayson-availability-databases-recovery-pending-suspect/ag-test-properties-dependencies.png" alt-text="Screenshot of new availability group properties Dependencies tab.":::
 
-8. In SQL Server Management Studio, use **Object Explorer** to connect to the instance of SQL Server that hosts the primary replica of the new availability group. Click **Always On High Availability**, click the new availability group, and then click **Availability Group Listeners**. You should find the listener.
+8. In SQL Server Management Studio, use **Object Explorer** to connect to the instance of SQL Server that hosts the primary replica of the new availability group. Select **Always On High Availability**, click the new availability group, and then select **Availability Group Listeners**. You should find the listener.
 
-9. Right-click the listener, click **Properties**, type the appropriate port number for the listener, and then click **OK**.
+9. Right-click the listener, select **Properties**, type the appropriate port number for the listener, and then select **OK**.
 
     :::image type="content" source="media/alwayson-availability-databases-recovery-pending-suspect/config-ag-listener.png" alt-text="Screenshot of availability group listener properties, showing the configuration of listener." border="false":::
 
@@ -191,23 +191,23 @@ This makes sure that applications that use the listener can still use it to conn
 
 If you re-create the original availability group, you should reassign the listener back to the availability group role, set up the dependency between the new availability group resource and the listener, and then reassign the port to the listener. To do this, follow these steps:
 
-1. Start Failover Cluster Manager, and then click **Roles** in the left pane. In the pane that lists the roles, click the new availability group that hosts the listener.
-2. In the bottom middle pane under the **Resources** tab, right-click the listener, click **More Actions**, and then click **Assign to Another Role**. In the dialog box, choose the re-created availability group, and then click **OK**.
-3. In the **Roles** pane, click the re-created availability group. In the bottom middle pane, under the **Resources** tab, you should now see the re-created availability group and the listener resource. Right-click the re-created availability group resource, and then click **Properties**.
-4. Click the **Dependencies** tab, select the listener resource from the drop-down box, and then click **OK**.
-5. In SQL Server Management Studio, use **Object Explorer** to connect to the instance of SQL Server that hosts the primary replica of the re-created availability group. Click **Always On High Availability**, click the new availability group, and then click **Availability Group Listeners**. You should find the listener.
-6. Right-click the listener, click **Properties**, type the appropriate port number for the listener, and then click **OK**.
+1. Start Failover Cluster Manager, and then select **Roles** in the left pane. In the pane that lists the roles, click the new availability group that hosts the listener.
+2. In the bottom middle pane under the **Resources** tab, right-click the listener, select **More Actions**, and then select **Assign to Another Role**. In the dialog box, choose the re-created availability group, and then select **OK**.
+3. In the **Roles** pane, click the re-created availability group. In the bottom middle pane, under the **Resources** tab, you should now see the re-created availability group and the listener resource. Right-click the re-created availability group resource, and then select **Properties**.
+4. Select the **Dependencies** tab, select the listener resource from the drop-down box, and then select **OK**.
+5. In SQL Server Management Studio, use **Object Explorer** to connect to the instance of SQL Server that hosts the primary replica of the re-created availability group. Select **Always On High Availability**, click the new availability group, and then select **Availability Group Listeners**. You should find the listener.
+6. Right-click the listener, select **Properties**, type the appropriate port number for the listener, and then select **OK**.
 
 ### Method 2: Associate the listener with an existing SQL Server Failover Clustered Instance (SQLFCI)
 
 If you are hosting your availability group on a SQL Server Failover Clustered Instance (SQLFCI), you can associate the listener clustered resource with the SQLFCI clustered resource group while you drop and then re-create the availability group.
 
-1. Start Failover Cluster Manager, and then click **Roles** in the left pane.
+1. Start Failover Cluster Manager, and then select **Roles** in the left pane.
 2. In the pane that lists the roles, select the original availability group.
-3. In the bottom middle pane under the **Resources** tab, right-click the availability group resource, and then click **Properties**.
-4. Click the **Dependencies** tab, delete the dependency to the listener, and then click **OK**.
-5. In the bottom middle pane under the **Resources** tab, right-click the listener, click **More Actions**, and then click **Assign to Another Role**.
-6. In the **Assign Resource to Role** dialog box, click the SQL Server FCI instance, and then click **OK**.
+3. In the bottom middle pane under the **Resources** tab, right-click the availability group resource, and then select **Properties**.
+4. Select the **Dependencies** tab, delete the dependency to the listener, and then select **OK**.
+5. In the bottom middle pane under the **Resources** tab, right-click the listener, select **More Actions**, and then select **Assign to Another Role**.
+6. In the **Assign Resource to Role** dialog box, click the SQL Server FCI instance, and then select **OK**.
 
     :::image type="content" source="media/alwayson-availability-databases-recovery-pending-suspect/add-resouce-role-sqlfci.png" alt-text="Screenshot of Assign Resource to Role dialog box.":::
 
@@ -217,16 +217,16 @@ This makes sure that applications that use the listener can still use it to conn
 
 After the availability group is re-created, reassign the listener back to the availability group role. Then set up the dependency between the new availability group resource and the listener, and reassign the port to the listener:
 
-  1. Start Failover Cluster Manager, and then click **Roles** in the left pane.
+  1. Start Failover Cluster Manager, and then select **Roles** in the left pane.
   2. In the pane that lists the roles, click the original SQLFCI role.
-  3. In the bottom middle pane, under the **Resources** tab, right-click the listener, click **More Actions**, and then click **Assign to Another Role**.
-  4. In the dialog box, click the re-created availability group, and then click **OK**.
+  3. In the bottom middle pane, under the **Resources** tab, right-click the listener, select **More Actions**, and then select **Assign to Another Role**.
+  4. In the dialog box, click the re-created availability group, and then select **OK**.
   5. In the **Roles** pane, select the new availability group.
-  6. Under the **Resources** tab, you should see the new availability group and the listener resource. Right-click the new availability group resource, and then click **Properties**.
-  7. Click the **Dependencies** tab, select the listener resource from the drop-down box, and then click **OK**.
+  6. Under the **Resources** tab, you should see the new availability group and the listener resource. Right-click the new availability group resource, and then select **Properties**.
+  7. Select the **Dependencies** tab, select the listener resource from the drop-down box, and then select **OK**.
   8. In SQL Server Management Studio, use **Object Explorer** to connect to the instance of SQL Server that hosts the primary replica of the new availability group.
-  9. Click **Always On High Availability**, click the new availability group, and then click **Availability Group Listeners**. You should find the listener.
-  10. Right-click the listener, click **Properties**, type the appropriate port number for the listener, and then click **OK**.
+  9. Select **Always On High Availability**, click the new availability group, and then select **Availability Group Listeners**. You should find the listener.
+  10. Right-click the listener, select **Properties**, type the appropriate port number for the listener, and then select **OK**.
 
 ### Method 3: Drop the availability group, and then re-create the availability group and listener with the same listener name
 
