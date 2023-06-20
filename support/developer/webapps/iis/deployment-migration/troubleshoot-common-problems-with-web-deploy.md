@@ -10,6 +10,8 @@ author: sevend2
 ---
 # Troubleshoot common problems related to Web Deploy
 
+_Applies to:_ &nbsp; Internet Information Services
+
 This article describes how to diagnose and fix common problems with Web Deploy, including common errors seen while publishing from Visual Studio 2010.
 
 ## Logging

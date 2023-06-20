@@ -10,6 +10,8 @@ author: sevend2
 ---
 # Troubleshoot Web Deploy problems with Visual Studio
 
+_Applies to:_ &nbsp; Internet Information Services
+
 This article helps you troubleshoot a series of errors when trying to publish from Visual Studio to a server that hasn't been correctly configured via Web Deploy. Although the article is written for specific product versions, the concepts could be applied to newer versions as well.
 
 To collect the screenshots and errors below, use a new ASP.Net MVC 3 project in Visual Studio 2010 SP1. The destination server was a clean install of Windows Server 2008 R2 SP1 with Internet Information Services (IIS). No additional configuration was done.
