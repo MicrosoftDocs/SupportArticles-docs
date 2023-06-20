@@ -46,7 +46,7 @@ DECLARE  @delay VARCHAR(9) = '00:10:00'
 DECLARE @runtime DATETIME
 DECLARE @starttime DATETIME
 DECLARE @msg NVARCHAR(100)
-DECLARE  @oldest_tran_id bigint
+DECLARE  @oldest_tran_id BIGINT
 		, @oldest_tran_session_id INT
 		, @oldest_tran_begin_time DATETIME
 		, @killstr NVARCHAR(100)
@@ -177,7 +177,7 @@ BEGIN
 			ORDER BY transaction_begin_time DESC
 
 			SELECT @oldest_tran_id AS TranID,@oldest_tran_begin_time AS TranbeginTime,@oldest_tran_session_id AS SessionID
-			SET @killstr = 'KILL '+ cast(@oldest_tran_session_id AS VARCHAR(100))
+			SET @killstr = 'KILL '+ CAST(@oldest_tran_session_id AS VARCHAR(100))
 			PRINT @killstr
 			
             -- Kill oldest tran
@@ -189,6 +189,6 @@ BEGIN
 
 	-- Change the polling interval as required
 	WAITFOR DELAY @delay
- 
+
 END
 ```
