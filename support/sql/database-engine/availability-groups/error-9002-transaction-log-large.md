@@ -27,7 +27,7 @@ The transaction log for database '%.*ls' is full due to 'AVAILABILITY_REPLICA'
 
 ## Cause
 
-This occurs when the logged changes at primary replica aren't yet hardened on the secondary replica. For more information regarding data synchronization process in Always On environment, see [Data Synchronization Process](/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups?view=sql-server-2017#data-synchronization-process).
+This occurs when the logged changes at primary replica aren't yet hardened on the secondary replica. For more information regarding data synchronization process in Always On environment, see [Data Synchronization Process](/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups#data-synchronization-process).
 
 ## Troubleshooting
 
