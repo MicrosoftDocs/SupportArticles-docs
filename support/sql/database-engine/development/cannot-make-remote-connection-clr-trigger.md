@@ -131,7 +131,7 @@ If you require the functionality of impersonating the caller's identity inside a
 
 1. Deploy the project to the database created in Step 2 using Deploy SQLCLR Trigger Project option in the **Build** menu.
 1. Open SSMS and then connect to the instance of SQL Server 2008 where the trigger is deployed to.
-   You should see the following two items created under the test database `dbTriggerTest`:
+1. You should see the following two items created under the test database `dbTriggerTest`:
    - Triggers - mytrigger
    - Assemblies - SQLCLRTriggerProject
 
