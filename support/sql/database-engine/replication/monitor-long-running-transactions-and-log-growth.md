@@ -1,15 +1,15 @@
 ---
-title: SQL Transaction log grows due to long running transactions
-description: This article helps you monitor the transaction log growth caused by long running transactions and terminate those transactions if necessary for a database with Change Data Capture (CDC) enabled. 
+title: SQL Transaction log grows due to long-running transactions
+description: This article helps you monitor the transaction log growth caused by long-running transactions and terminate those transactions if necessary for a database with Change Data Capture (CDC) enabled. 
 ms.date: 06/15/2023
 ms.custom: sap:Change data capture
 ms.reviewer: abhtiwar, jopilov, mathoma
 author: abhimantiwari
 ms.author: v-sidong
 ---
-# SQL Transaction log grows due to long running transactions when you use Change Data Capture
+# SQL Transaction log grows due to long-running transactions when you use Change Data Capture
 
-This article helps you monitor and resolve the problem where you notice continuous transaction log growth due to long running transactions for a database with Change Data Capture (CDC) enabled.
+This article helps you monitor and resolve the problem where you notice continuous transaction log growth due to long-running transactions for a database with Change Data Capture (CDC) enabled.
 
 ## Symptoms
 
@@ -17,7 +17,7 @@ Consider the following scenario:
 
 - You enable [Change Data Capture](/sql/relational-databases/track-changes/about-change-data-capture-sql-server) on a database.
 - The source of change data for CDC is the transaction log. As inserts, updates, and deletes are applied to tracked source tables, entries that describe those changes are added to the log.
-- The transaction log on the database grows due to long running transactions.
+- The transaction log on the database grows due to long-running transactions.
 - When you query [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) for the given database, the `log_reuse_wait_desc` column shows `REPLICATION`.
 
 In this scenario, the database transaction log file grows gradually, leading to excessive transaction log space consumption. Once the transaction log size reaches the max defined limit, writes to the database fail.
