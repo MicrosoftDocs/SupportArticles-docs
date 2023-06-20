@@ -4,7 +4,6 @@ description: This article helps you resolve the problem that occurs when Winsock
 ms.date: 09/25/2020
 ms.custom: sap:Performance
 ms.reviewer: SureshKa
-ms.prod: sql
 ---
 # Winsock Layered Service Providers may result in network or server stability problems for SQL Server
 

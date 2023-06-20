@@ -5,7 +5,6 @@ ms.date: 09/25/2020
 ms.custom: sap:Administration and Management
 ms.reviewer: rdorr
 ms.topic: article
-ms.prod: sql
 ---
 # Microsoft SQL Server I/O subsystem requirements for the tempdb database
 

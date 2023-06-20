@@ -5,7 +5,6 @@ ms.date: 03/09/2022
 author: ramakoni1
 ms.author: v-jayaramanp
 ms.custom: sap:Connection Issues
-ms.prod: sql
 ---
 
 # Using the PortQryUI tool with SQL Server

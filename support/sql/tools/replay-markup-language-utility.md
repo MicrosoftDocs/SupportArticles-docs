@@ -7,7 +7,6 @@ author: padmajayaraman
 ms.author: v-jayaramanp
 ms.reviewer: sureshka, jopilov, toddhayn, troymoen
 ms.topic: article
-ms.prod: sql
 ---
 # Replay Markup Language (RML) Utilities for SQL Server
 

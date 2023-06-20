@@ -4,7 +4,6 @@ description: This article provides workarounds for the problem that occurs when 
 ms.date: 09/25/2020
 ms.custom: Fix, devx-track-azurepowershell
 ms.reviewer: desalg, daleche
-ms.prod: sql
 ---
 # SQL Server PowerShell issue when RemoteSigned is not set in Domain controller for SQL Server
 

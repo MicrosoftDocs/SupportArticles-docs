@@ -5,7 +5,6 @@ ms.author: jopilov
 author: PiJoCoder
 ms.reviewer: jopilov
 ms.date: 06/15/2023
-ms.prod: sql
 ms.custom: sap:Performance
 ---
 # Resolve last-page insert PAGELATCH_EX contention in SQL Server

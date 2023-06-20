@@ -4,7 +4,6 @@ description: This article describes the procedures to determine the version and 
 ms.date: 10/15/2022
 ms.custom: sap:Installation, Patching and Upgrade
 ms.topic: how-to
-ms.prod: sql
 author: simonxjx
 ms.author: v-six
 ---

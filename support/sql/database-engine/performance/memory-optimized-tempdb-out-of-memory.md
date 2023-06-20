@@ -6,7 +6,6 @@ ms.custom: sap:Database Engine
 ms.reviewer: jopilov, hesha
 author: Hemin-msft
 ms.author: jopilov
-ms.prod: sql
 ---
 
 # Memory-optimized tempdb metadata (HkTempDB) out of memory errors

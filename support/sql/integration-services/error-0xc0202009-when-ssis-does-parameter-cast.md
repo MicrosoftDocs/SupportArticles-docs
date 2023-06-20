@@ -4,7 +4,6 @@ description: This article provides resolutions for the error 0xC0202009 that occ
 ms.date: 09/02/2020
 ms.custom: sap:Integration Services
 ms.reviewer: ramakoni, daleche
-ms.prod: sql
 ---
 # Error 0xC0202009 occurs when SSIS does a parameter cast in SQL Server
 
