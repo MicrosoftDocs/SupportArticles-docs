@@ -127,7 +127,7 @@ You may notice that changes on primary replica are not getting propagated to sec
 - For SQL Server 2012 and SQL Server 2014 environments, see [FIX: Slow synchronization when disks have different sector sizes for primary and secondary replica log files in SQL Server AG and Logshipping environments](https://support.microsoft.com/kb/3009974).
 
 - Check if the secondary nodes are in a Paused state in the Cluster administrator.
-- Review this troubleshooting article [Troubleshoot: Changes on the Primary Replica are not Reflected on the Secondary Replica](/previous-versions/sql/sql-server-2012/dn135335(v=sql.110)).
+- Review [Troubleshoot: Changes on the Primary Replica are not Reflected on the Secondary Replica](/previous-versions/sql/sql-server-2012/dn135335(v=sql.110)).
 
 If the issue still exists, see [More information about Always On Availability Groups](#more-information-about-always-on-availability-groups).
 
