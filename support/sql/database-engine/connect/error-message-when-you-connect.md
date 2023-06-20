@@ -97,7 +97,7 @@ The example uses a file named _caCert.cer_ as a certificate file. You must obtai
 
 1. On the **Certificate Store** page, accept the default selection, and then select **Next**.
 
-1. On the Completing the **Certificate Import Wizard** page, select **Finish**.
+1. On the **Completing the **Certificate Import Wizard** page, select **Finish**.
 
 For scenarios 1 and 2: Set **Trust Server Certificate** setting to _true_ in your client application.
 
