@@ -38,7 +38,7 @@ To check the status of the cloud change enumeration job, go the Cloud Endpoint p
 
 Within each sync group, you can drill down into its individual server endpoints to see the status of the last completed sync sessions. A green **Health** column and a **Files not syncing** value of 0 indicate that sync is working as expected. If not, see the following screenshot for a list of common sync errors and how to handle files that aren't syncing.
 
-:::image type="content" source="media/file-sync-troubleshoot-sync-errors/portal-sync-health.png" alt-text="Screenshot that shows the Azure portal.":::
+:::image type="content" source="media/file-sync-troubleshoot-sync-errors/portal-sync-health.png" alt-text="Screenshot that shows the Azure portal."lightbox="media/file-sync-troubleshoot-sync-errors/portal-sync-health.png":::
 
 ### [Server](#tab/server)
 
