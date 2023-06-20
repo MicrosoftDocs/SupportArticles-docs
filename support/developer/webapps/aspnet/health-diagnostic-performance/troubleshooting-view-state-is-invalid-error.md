@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot the invalid viewstate issues
-description: This article describes techniques for debugging and resolving problems with viewstate. viewstate is a feature of ASP.NET that allows pages to automatically preserve state without relying on server state.
+description: This article describes techniques for debugging and resolving problems with viewstate. Viewstate is a feature of ASP.NET that allows pages to automatically preserve state without relying on server state.
 ms.date: 06/20/2023
 author: padmajayaraman
 ms.author: v-jayaramanp
@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 829743
 
 ## Introduction
 
-viewstate is a feature in ASP.NET that allows pages to automatically preserve state without relying on server state (for example, session state). However, issues related to viewstate can be difficult to debug. In most cases, when problems with viewstate occur, you receive the following error message in the web browser, with little indication of what might be causing the issue:
+Viewstate is a feature in ASP.NET that allows pages to automatically preserve state without relying on server state (for example, session state). However, issues related to viewstate can be difficult to debug. In most cases, when problems with viewstate occur, you receive the following error message in the web browser, with little indication of what might be causing the issue:
 
 > The viewstate is invalid for this page and might be corrupted.
 
@@ -70,7 +70,7 @@ enableViewStateMac="false"
 If you no longer get viewstate errors, the problem is related to the MAC feature.
 
 > [!IMPORTANT]
-> Only turn off the viewstate MAC feature to help diagnose the problem. You shouldn't keep the viewstate MAC turned off to work around the issue. If so, you could introduce security holes. For more information, see [Building Secure ASP.NET Applications: Authentication, Authorization, and Secure Communication](/previous-versions/msp-n-p/ff649337(v=pandp.10)).
+> Only turn off the viewstate MAC feature to help diagnose the problem. You shouldn't keep the viewstate MAC turned off to work around the issue. If you do, you could introduce security holes. For more information, see [Building Secure ASP.NET Applications: Authentication, Authorization, and Secure Communication](/previous-versions/msp-n-p/ff649337(v=pandp.10)).
 
 If you turn off the viewstate MAC feature, and then use viewstate for controls that don't HTML encode (for example, a Label control), attackers can tamper with the viewstate data and can put arbitrary data in viewstate. This arbitrary data is decoded and then used by controls when they render the posted page. As a result, attackers can inject script into the application unless you work to prevent the attack. For example, an attacker could decode the data, inject script into the data where a Label control is, and then link to it from a website. Anyone who clicks on the link would be the victim of a script injection attack that could potentially steal their authentication cookies or session ID. The script could also let an attacker alter state data for controls that use viewstate and application specific attacks could occur as a result.
 
