@@ -41,7 +41,7 @@ Retry the registration. If the problem persists, contact support.
 - Ensure that the file share you're looking to protect hasn't been deleted.
 - Ensure that the Storage Account is a supported storage account for file share backup. You can refer to [Support matrix for Azure file share backup](/azure/backup/azure-file-share-support-matrix) to find supported storage accounts.
 - Check if the file share is already protected in the same Recovery Services vault.
-- Check the **Network Routing** setting of the storage account to ensure that the routing preference is set as **Microsoft network routing**.
+- Check the **Network Routing** setting of the storage account to ensure that the routing preference is set as Microsoft network routing.
 
 ### Backup file share configuration or the protection policy configuration is failing
 
@@ -273,24 +273,24 @@ Wait for the other in-progress operation to complete and retry later.
 > Error Code: UserErrorRestoreAFSInSoftDeleteState  
 > Error Message: This restore point is not available as the snapshot associated with this point is in a File Share that is in soft-deleted state.
 
-You can't perform a restore operation when the file share is in a soft-deleted state. Undelete the file share from the **Files portal** or use the [Undelete script](/azure/backup/scripts/backup-powershell-script-undelete-file-share) and then try to restore.
+You can't perform a restore operation when the file share is in soft-deleted state. Undelete the file share from the Files portal or by using the [Undelete script](/azure/backup/scripts/backup-powershell-script-undelete-file-share) and then try to restore.
 
 ### UserErrorRestoreAFSInDeleteState - Listed restore points are not available as the associated file share containing the restore point snapshots has been deleted permanently
 
 > Error Code: UserErrorRestoreAFSInDeleteState  
 > Error Message: Listed restore points are not available as the associated file share containing the restore point snapshots has been deleted permanently.
 
-Check if the backed-up file share is deleted. If it was in a soft-deleted state, check if the soft delete retention period is over and it wasn't recovered back. In either of these cases, you'll lose all your snapshots permanently and won't be able to recover the data.
+Check if the backed-up file share is deleted. If it was in soft-deleted state, check if the soft delete retention period is over and it wasn't recovered back. In either of these cases, you'll lose all your snapshots permanently and won't be able to recover the data.
 
 > [!NOTE]
-> We recommend you don't delete the backed-up file share, or if it's in a soft-deleted state, undelete before the soft delete retention period ends to avoid losing all your restore points.
+> We recommend you don't delete the backed-up file share, or if it's in soft-deleted state, undelete before the soft delete retention period ends to avoid losing all your restore points.
 
 ### UserErrorBackupAFSInSoftDeleteState - Backup failed as the Azure File Share is in soft-deleted state
 
 > Error Code: UserErrorBackupAFSInSoftDeleteState  
 > Error Message: Backup failed as the Azure File Share is in soft-deleted state
 
-Undelete the file share from the **Files portal** or use the [Undelete script](/azure/backup/scripts/backup-powershell-script-undelete-file-share) to continue the backup and prevent permanent deletion of data.
+Undelete the file share from the Files portal or by using the [Undelete script](/azure/backup/scripts/backup-powershell-script-undelete-file-share) to continue the backup and prevent permanent deletion of data.
 
 ### UserErrorBackupAFSInDeleteState - Backup failed as the associated Azure File Share is permanently deleted
 
