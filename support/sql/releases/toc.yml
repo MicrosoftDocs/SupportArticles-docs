@@ -17,6 +17,12 @@ items:
   items:
   - name: SQL Server 2022 build versions
     href: sqlserver-2022/build-versions.md
+  - name: Cumulative Update 5
+    items:
+    - name: Cumulative Update 5 (KB5026806)
+      href: sqlserver-2022/cumulativeupdate5.md
+    - name: 'FIX: Incorrect results when you run queries against tables with indexes'
+      href: sqlserver-2022/incorrect-results-run-queries.md
   - name: Cumulative Update 4
     items:
     - name: Cumulative Update 4 (KB5026717)
@@ -43,6 +49,10 @@ items:
   items:
   - name: SQL Server 2019 build versions
     href: sqlserver-2019/build-versions.md
+  - name: Cumulative Update 21
+    items:
+    - name: Cumulative Update 21 (KB5025808)
+      href: sqlserver-2019/cumulativeupdate21.md
 - name: SQL Server 2017
   items:
   - name: SQL Server 2017 build versions
