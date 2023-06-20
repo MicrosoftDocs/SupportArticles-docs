@@ -12,6 +12,8 @@ ms.topic: troubleshooting
 
 This article helps you resolve the problems related to 502 errors in Application Request Routing (ARR).
 
+_Applies to:_ &nbsp; Internet Information Services
+
 ## HTTP 502 - Overview
 
 When you work with IIS Application Request Routing (ARR) deployments, one of the errors that you might see is "HTTP 502 - Bad Gateway". The 502.3 error means that while acting as a proxy, ARR was unable to complete the request to the upstream server and send a response back to the client. This problem can happen for multiple reasons. For example, failure to connect to the server, no response from the server, or the server took too long to respond (time out). If you're able to reproduce the error by browsing the web farm from the controller, and [detailed errors](https://www.iis.net/learn/troubleshoot/diagnosing-http-errors/how-to-use-http-detailed-errors-in-iis) are enabled on the server, you may see an error similar to the following error message:

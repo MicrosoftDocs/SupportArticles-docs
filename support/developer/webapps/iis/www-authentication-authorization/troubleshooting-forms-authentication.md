@@ -10,6 +10,8 @@ ms.topic: troubleshooting
 
 # Troubleshooting Forms Authentication
 
+_Applies to:_ &nbsp; Internet Information Services
+
 Often, while using Forms Authentication in an ASP.NET web application, there's a need to troubleshoot a problem that occurs when a new or an ongoing request is intermittently redirected to the application's login page. You can debug this problem on Visual Studio IDE by attaching a debugger in a development environment. In production environments, however, the task becomes hectic and problematic. To troubleshoot a random problem like this one, you need to log information related to the problem so that you can narrow down the root cause.
 
 This article briefly discusses the concept of Forms Authentication. It also discusses about various scenarios about a user being redirected to the login page and how to capture data that's relevant to isolating the problem. Additionally, it also discusses about how to implement an `IHttpModule` interface to log the Forms Authentication information.

@@ -10,6 +10,8 @@ ms.topic: troubleshooting
 
 # Troubleshooting cache items in ARR version 2.0 or later
 
+_Applies to:_ &nbsp; Internet Information Services
+
 ## Overview
 
 In this walkthrough, you can learn how to trace a request as it passes through ARR and is sent to a next-tier server, and look at the information that can be acquired to determine where the request was sent and where it was served from.

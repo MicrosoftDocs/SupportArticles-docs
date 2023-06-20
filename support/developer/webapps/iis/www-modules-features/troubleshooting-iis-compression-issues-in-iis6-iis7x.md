@@ -10,6 +10,8 @@ ms.topic: troubleshooting
 
 # Troubleshooting IIS Compression issues in IIS 6 or IIS 7.x
 
+_Applies to:_ &nbsp; Internet Information Services 6.0, Internet Information Services 7.0 and later versions
+
 ## Overview
 
 Enabling HTTP Compression for your IIS 6 or 7 web applications is one way of increasing site performance.
@@ -17,8 +19,6 @@ Enabling HTTP Compression for your IIS 6 or 7 web applications is one way of inc
 Many of the compression properties required to completely manage IIS are not exposed by the admin GUI. It merely offers an on or off switch. So, to completely enable HTTP compression, you must use a tool other than the IIS Manager to update the *metabase.xml* file. The most common tool used is *adsutil.vbs*, which is included in the IIS installation directory.
 
 This article helps you to configure compression and identifies common reasons of why IIS compression may not work in IIS 6 and IIS 7.x.
-
-_Applies to:_ &nbsp; Internet Information Services 6.0, Internet Information Services 7.0 and later versions
 
 ## Tools used in this troubleshooter
 
