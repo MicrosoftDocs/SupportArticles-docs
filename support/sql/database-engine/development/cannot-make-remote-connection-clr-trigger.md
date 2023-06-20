@@ -69,7 +69,7 @@ If you require the functionality of impersonating the caller's identity inside a
 
 1. In Microsoft Visual Studio 2008, create a Visual C# project using the SQL Server Project template.
 1. Name the project *SQLCLRTriggerProject*.
-1. From the **Project** menu, select **SQLCLRTriggerProject** and configure the Database section to point to the database created earlier in the procedure (dbTriggerTest) and set the **Permission Level** to **External**.
+1. From the **Project** menu, select **SQLCLRTriggerProject** and configure the **Database** section to point to the database created earlier in the procedure (dbTriggerTest) and set the **Permission Level** to **External**.
 1. From the **Project** menu, select **Add New Item**.
 1. Select **Trigger** in the **Add New Item** dialog box.
 1. Type a name for the new trigger.
