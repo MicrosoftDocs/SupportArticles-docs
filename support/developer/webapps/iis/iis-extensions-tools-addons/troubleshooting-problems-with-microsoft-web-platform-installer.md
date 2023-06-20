@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 
 # Troubleshooting problems with Microsoft Web Platform Installer
 
-_Applies to:_ &nbsp; IIS 7.0, IIS 7.5
+_Applies to:_ &nbsp; Internet Information Services 7.0, Internet Information Services 7.5
 
 ## Introduction
 

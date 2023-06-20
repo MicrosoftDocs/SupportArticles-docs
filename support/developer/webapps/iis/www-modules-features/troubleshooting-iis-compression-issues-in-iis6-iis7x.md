@@ -18,7 +18,7 @@ Many of the compression properties required to completely manage IIS are not exp
 
 This article helps you to configure compression and identifies common reasons of why IIS compression may not work in IIS 6 and IIS 7.x.
 
-_Applies to:_ &nbsp; IIS 6.0, 7.x
+_Applies to:_ &nbsp; Internet Information Services 6.0, Internet Information Services 7.0 and later versions
 
 ## Tools used in this troubleshooter
 

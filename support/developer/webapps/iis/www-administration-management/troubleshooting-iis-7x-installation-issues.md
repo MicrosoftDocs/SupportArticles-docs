@@ -12,7 +12,7 @@ ms.topic: troubleshooting
 
 This article provides information related to troubleshooting installation issues in IIS 7.x by reviewing the log files. Although this article is for IIS 7.x the same concepts can be applied to other versions of IIS.
 
-_Applies to:_&nbsp; 7.0, IIS 7.5
+_Applies to:_&nbsp; Internet Information Services 7.0 and later versions
 
 ## Reviewing the IIS setup log files
 

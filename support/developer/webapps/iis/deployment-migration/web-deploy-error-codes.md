@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 
 # Web Deploy error codes
 
-_Applies to:_ &nbsp; IIS 7.0, IIS 7.5, IIS 8.0
+_Applies to:_ &nbsp; Internet Information Services 7.0, Internet Information Services 7.5, Internet Information Services 8.0
 
 For certain common error cases, Web Deploy displays error messages. This article explains why the error message is shown and provides steps to avoid the errors. The error message may be different depending on how Web Deploy is started. For example, Microsoft WebMatrix chooses to show custom error messages. The error messages listed in the next few sections are shown on the *msdeploy.exe* command line and API:
 

@@ -10,6 +10,8 @@ ms.reviewer: kaushalp, johnhart
 
 # Troubleshooting SSL related issues (Server Certificate)
 
+_Applies to:_ &nbsp; Internet Information Services 6.0, Internet Information Services 7.0 and later versions
+
 ## Overview
 
 This article helps you troubleshoot Secure Sockets Layer (SSL) issues related to Internet Information Services (IIS) only. It covers server certificates that are meant for server authentication, and doesn't cover client certificates.

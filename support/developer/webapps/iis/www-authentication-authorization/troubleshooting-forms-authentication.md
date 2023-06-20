@@ -116,7 +116,7 @@ You can determine if a request doesn't contain the cookie by enabling cookie log
 1. Open the IIS Microsoft Management Console (MMC).
 1. Right-click the website and then select **Properties**.
 1. Select the **Web Site** tab, and then select **Enable Logging**.
-1. Make sure that the log format is W3C Extended Log File format.
+1. Make sure that the log format is W3C Extended Log file format.
 1. Select **Properties**.
 1. Select the **Advanced** tab, and then select **Extended Properties**.
 1. Under **Extended Properties**, select the **Cookie(cs(Cookie))** and the **Referer (cs(Referer))** checkboxes.

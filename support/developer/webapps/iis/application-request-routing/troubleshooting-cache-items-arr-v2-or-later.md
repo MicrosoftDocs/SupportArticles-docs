@@ -23,7 +23,7 @@ In this walkthrough, you can learn how to trace a request as it passes through A
 
 ## Understand the architecture of the farm
 
-The first step is to understand the architecture of the environment including the following. 
+The first step is to understand the architecture of the environment including the following.
 
 - ARR Farm topology (how many servers, how routing is configured, other devices)
 - URL Rewrite rules in place
