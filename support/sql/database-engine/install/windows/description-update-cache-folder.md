@@ -2,8 +2,7 @@
 title: Description of the Update Cache folder
 description: This article describes why this folder is created and what it's used for.
 ms.date: 10/23/2020
-ms.custom: sap:Database Engine
-ms.prod: sql 
+ms.custom: sap:Database Engine 
 ---
 # Description of the Update Cache folder in SQL Server
 

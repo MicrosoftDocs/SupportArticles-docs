@@ -4,7 +4,6 @@ description: This article describes SQL Server's database file storage behavior 
 ms.date: 09/07/2020
 ms.custom: sap:Administration and Management
 ms.reviewer: sureshka
-ms.prod: sql
 ---
 # Description of support for SQL Server databases on compressed volumes
 

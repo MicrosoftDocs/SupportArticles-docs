@@ -4,7 +4,6 @@ description: This article describes the support policy for Microsoft SQL Server.
 ms.date: 12/10/2021
 ms.custom: sap:General
 ms.reviewer: sureshka
-ms.prod: sql
 ---
 # Technical support policy for Microsoft SQL Server
 

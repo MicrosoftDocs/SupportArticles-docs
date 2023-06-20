@@ -4,7 +4,6 @@ description: This article provides a resolution for the problem that occurs when
 ms.date: 09/25/2020
 ms.custom: sap:Other tools
 ms.reviewer: jamestod
-ms.prod: sql
 ---
 # Error when you try to run the Sqlmaint Utility after you upgrade to SQL Server 2008 or a later version
 

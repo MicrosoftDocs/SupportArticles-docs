@@ -6,7 +6,6 @@ ms.custom: sap:Installation, Patching and Upgrade
 author: padmajayaraman
 ms.author: v-jayaramanp
 ms.reviewer: ramakoni
-ms.prod: sql
 ---
 
 # SQL Server upgrade fails and returns error 17182

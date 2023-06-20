@@ -6,7 +6,6 @@ ms.custom: sap:SQL Server 2019 on Linux
 author: ronking-zhu
 ms.author: v-jayaramanp
 ms.reviewer: rl-msft
-ms.prod: sql
 ms.topic: troubleshooting
 ---
 

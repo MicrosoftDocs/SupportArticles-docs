@@ -4,7 +4,6 @@ description: This article helps you resolve package load failures that occur whe
 ms.date: 09/02/2020
 ms.custom: sap:Integration Services
 ms.reviewer: craigg
-ms.prod: sql
 ---
 # You receive an 'Error loading' error message when you try to run a SQL Server Integration Services package
 

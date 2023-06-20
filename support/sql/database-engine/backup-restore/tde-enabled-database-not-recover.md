@@ -3,8 +3,7 @@ title: A TDE-enabled database might not recover
 description: This article provides a resolution for the problem where a TDE-enabled database might not recover when automatic encryption of the master key by the service master key is removed.
 ms.date: 01/14/2021
 ms.custom: sap:Administration and Management
-ms.reviewer: VenCher, SureshKa
-ms.prod: sql 
+ms.reviewer: VenCher, SureshKa 
 ---
 # A TDE-enabled database might not recover in SQL Server
 

@@ -4,7 +4,6 @@ description: This article describes which tools Microsoft technical support uses
 ms.author: jopilov
 ms.reviewer: jopilov
 ms.date: 06/15/2023
-ms.prod: sql
 ms.custom: sap:Other tools
 author: PiJoCoder
 ---

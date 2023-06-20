@@ -4,7 +4,6 @@ description: This article describes the support policy for untested Microsoft .N
 ms.date: 09/25/2020
 ms.custom: sap:Database Design and Development
 ms.reviewer: SureshKa
-ms.prod: sql
 ---
 # Support policy for untested .NET Framework assemblies in the SQL Server CLR-hosted environment
 
