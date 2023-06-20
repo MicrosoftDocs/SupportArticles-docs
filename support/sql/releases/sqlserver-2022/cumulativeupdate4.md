@@ -42,7 +42,7 @@ To work around this issue, you can uninstall this cumulative update or add the D
 
 After you install this cumulative update, you may receive incorrect results from queries that meet all of the following conditions:
 
-1. You have indexes that explicitly specify the sort order. Here's an example:
+1. You have indexes that explicitly specify a descending sort order. Here's an example:
 
     ```sql
     CREATE NONCLUSTERED INDEX [nci_table_column1] ON [dbo].[table1] (column1 DESC)
@@ -519,7 +519,7 @@ To use one of the hotfixes in this package, you don't have to make any changes t
 <details>
 <summary><b>Important notices</b></summary>
 
-This article also provides the following important information:
+This article also provides the following important information.
 
 ### Analysis Services CU build version
 
@@ -578,7 +578,7 @@ One CU package includes all available updates for all SQL Server 2022 components
 <details>
 <summary><b>Support for this update</b></summary>
 
-If another issues occur, or if any troubleshooting is required, you might have to create a service request. The usual support costs will apply to additional support questions and to issues that don't qualify for this specific cumulative update package. For a complete list of Microsoft Customer Service and Support telephone numbers, or to create a separate service request, go to the [Microsoft support website](https://support.microsoft.com/contactus/?ws=support).
+If other issues occur, or if any troubleshooting is required, you might have to create a service request. The usual support costs will apply to additional support questions and to issues that don't qualify for this specific cumulative update package. For a complete list of Microsoft Customer Service and Support telephone numbers, or to create a separate service request, go to the [Microsoft support website](https://support.microsoft.com/contactus/?ws=support).
 </details>
 
 ## How to uninstall this update

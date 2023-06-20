@@ -31,7 +31,7 @@ In this scenario, you receive the following error message:
 
 ### How to verify that the CredSSP update is installed
 
-Check the **update history** for the following updates, or check the version of TSpkg.dll.
+Check the **update history** for the following updates, or check the version of TSpkg.dll that is located at `%systemroot%\system32`.
 
 |Operating system|TSpkg.dll version with CredSSP update|CredSSP update|
 |---|---|---|

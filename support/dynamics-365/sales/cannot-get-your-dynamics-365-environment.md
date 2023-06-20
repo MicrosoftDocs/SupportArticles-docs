@@ -54,7 +54,7 @@ The deprecated redirector service is called <cloudredirector.crm.dynamics.com>.
 And it's replaced by something like `bn1 -- namcrlivesg614.crm.dynamics.com`.
 
 > [!NOTE]
-> It's just an example and this URL is different based on the region your tenant resides.
+> It's just an example and this URL is different based on where your tenant resides.
 
 Example (new):
 
