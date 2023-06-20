@@ -4,7 +4,6 @@ description: This article provides workarounds for the problem that a time-out e
 ms.date: 07/22/2020
 ms.custom: sap:Reporting Services
 ms.reviewer: joshger, aparnavi, ramakoni
-ms.prod: sql
 ---
 # You cannot start SQL Server Reporting Services after you apply the update that is discussed in KB 2677070
 

@@ -6,7 +6,6 @@ ms.author: v-jayaramanp
 ms.date: 12/12/2022
 ms.reviewer: jopilov 
 ms.custom: sap:Administration and Management
-ms.prod: sql
 ---
 
 # OS errors 665 and 1450 are reported for SQL Server files

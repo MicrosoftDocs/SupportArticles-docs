@@ -2,8 +2,7 @@
 title: 80020009 error when you retrieve data
 description: This article provides resolutions for 80020009 error when you retrieve data from SQL Server.
 ms.date: 09/25/2020
-ms.custom: sap:MDAC and ADO
-ms.prod: sql 
+ms.custom: sap:MDAC and ADO 
 ---
 # 80020009 error when you retrieve data from SQL
 

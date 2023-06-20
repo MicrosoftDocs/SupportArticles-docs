@@ -3,7 +3,6 @@ title: An I/O error when you use Backup to URL
 description: This article provides a resolution for the nonrecoverable I/O error that occurs when you use the Backup Database to URL command in SQL Server.
 ms.date: 09/15/2020
 ms.custom: sap:Administration and Management
-ms.prod: sql
 ---
 # Backup to URL fails with nonrecoverable I/O error 3271 in SQL Server
 

@@ -4,7 +4,6 @@ description: This article provides a workaround for the problem in which a non-c
 ms.date: 09/02/2020
 ms.custom: sap:Administration and Management
 ms.reviewer: gfourrat
-ms.prod: sql
 ---
 # ASR Agent or other non-component VSS Backup fails for a server hosting SQL Server 2008 R2
 

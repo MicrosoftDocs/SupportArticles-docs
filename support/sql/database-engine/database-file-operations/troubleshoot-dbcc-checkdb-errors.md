@@ -3,7 +3,6 @@ title: Troubleshoot database consistency errors reported
 description: This article introduces how to troubleshoot errors reported by DBCC CHECKDB command.
 ms.date: 09/25/2021
 ms.custom: sap:Administration and Management
-ms.prod: sql
 ---
 # Troubleshoot database consistency errors reported by DBCC CHECKDB
 

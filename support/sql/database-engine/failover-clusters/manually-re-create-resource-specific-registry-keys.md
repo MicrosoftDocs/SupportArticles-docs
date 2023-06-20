@@ -4,7 +4,6 @@ description: This article describes how to manually re-create the resource-speci
 ms.date: 07/22/2020
 ms.custom: sap:High Availability and Disaster Recovery features
 ms.topic: how-to
-ms.prod: sql
 ---
 # Manually re-create the resource-specific registry keys for SQL Server cluster resources
 

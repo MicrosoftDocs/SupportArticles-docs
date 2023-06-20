@@ -4,8 +4,7 @@ description: Microsoft Kerberos Configuration Manager for SQL Server is a diagno
 author: ramakoni1
 ms.author: v-jayaramanp
 ms.date: 06/16/2022
-ms.custom: sap:Connection Issues
-ms.prod: sql 
+ms.custom: sap:Connection Issues 
 ---
 
 # Overview of the Kerberos Configuration Manager for SQL Server

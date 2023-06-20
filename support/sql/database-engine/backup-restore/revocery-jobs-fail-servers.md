@@ -4,7 +4,6 @@ description: This article provides a workaround for the problem where non-compon
 ms.date: 11/05/2020
 ms.custom: sap:Administration and Management
 ms.reviewer: rvuppula, gfourrat
-ms.prod: sql
 ---
 # Non-component VSS backups such as Azure Site Recovery jobs fail on servers hosting SQL Server instances with AUTO_CLOSE DBs
 

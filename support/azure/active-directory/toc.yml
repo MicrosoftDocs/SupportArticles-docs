@@ -275,7 +275,7 @@
     href: pwd-not-sync.md
   - name: Password sync fails with event ID 611 
     href: pwd-hash-sync-stops-work.md
-  - name: Permission-issue errors in Synchronization Service Manager
+  - name: Permission-issue 8344 (insufficient access rights to perform the operation)
     href: troubleshoot-permission-issue-sync-service-manager.md
   - name: ProxyAddresses attribute in Azure AD
     href: proxyaddresses-attribute-populate.md
