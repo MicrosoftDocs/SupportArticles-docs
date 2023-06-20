@@ -1,23 +1,24 @@
 ---
 title: SQL Transaction log grows due to long running transactions
-description: This article helps you monitor the transaction log growth caused by long running transactions, and terminate those transactions if necessary for a database with Change Data Capture (CDC) enabled. 
+description: This article helps you monitor the transaction log growth caused by long running transactions and terminate those transactions if necessary for a database with Change Data Capture (CDC) enabled. 
 ms.date: 06/15/2023
 ms.custom: sap:Change data capture
-ms.reviewer: abhtiwar
-ms.prod: sql
+ms.reviewer: abhtiwar, jopilov, mathoma
+author: abhimantiwari
+ms.author: v-sidong
 ---
 # SQL Transaction log grows due to long running transactions when you use Change Data Capture
 
-This article helps you monitor and resolve the problem where you notice continuous transaction log growth due to long running transactions for a database with Change Data Capture (CDC) enabled. 
+This article helps you monitor and resolve the problem where you notice continuous transaction log growth due to long running transactions for a database with Change Data Capture (CDC) enabled.
 
 ## Symptoms
 
 Consider the following scenario:
 
-- You enable Change Data Capture on a database.
+- You enable [Change Data Capture](/sql/relational-databases/track-changes/about-change-data-capture-sql-server) on a database.
 - The source of change data for CDC is the transaction log. As inserts, updates, and deletes are applied to tracked source tables, entries that describe those changes are added to the log.
 - The transaction log on the database grows due to long running transactions.
-- When querying sys.databases for the given database, the log_reuse_wait_desc column shows REPLICATION.
+- When you query [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) for the given database, the `log_reuse_wait_desc` column shows `REPLICATION`.
 
 In this scenario, the database transaction log file grows gradually, leading to excessive transaction log space consumption. Once the transaction log size reaches the max defined limit, writes to the database fail.
 
@@ -27,32 +28,30 @@ On a CDC-enabled database, capture job latency holds up log truncation to ensure
 
 ## Workaround
 
-You can use Transact-SQL (T-SQL) to specify the transaction log threshold and the time interval to monitor the transaction log. If necessary, you can terminate transactions by setting `@kill_oldest_tran` = 1. 
+You can use Transact-SQL (T-SQL) to specify the transaction log threshold and the time interval to monitor the transaction log. If necessary, you can terminate transactions by setting `@kill_oldest_tran = 1`.
 
-To monitor the transaction log, use the following T-SQL query: 
-
+To monitor the transaction log, use the following T-SQL query:
 
 ```sql
 -- Log Transactions that generated Txlog over this size
-declare @transaction_log_bytes_used int = 5242880 -- 5MB (UPDATE)
+DECLARE @transaction_log_bytes_used INT = 5242880 -- 5MB (UPDATE)
 -- Log full threshold
-declare @log_full_threshold int = 30        -- Percent (UPDATE)
+DECLARE @log_full_threshold INT = 30        -- Percent (UPDATE)
 -- Kill Oldest Tran (0 = FALSE or 1 = TRUE)
-declare @kill_oldest_tran bit = 0;          --(UPDATE)
+DECLARE @kill_oldest_tran BIT = 0;          --(UPDATE)
 -- Log Transactions over this duration
-declare @active_tran_time_minutes int = 15  --(UPDATE)
+DECLARE @active_tran_time_minutes INT = 15  --(UPDATE)
 -- this specifies the loop delay, format is Hours:minutes:seconds
-declare  @delay varchar(9) = '00:10:00' 
-declare @runtime datetime
-declare @starttime datetime
-declare @msg nvarchar(100)
-declare  @oldest_tran_id bigint
-		, @oldest_tran_session_id int
-		, @oldest_tran_begin_time datetime
-		, @killstr nvarchar(100)
+DECLARE  @delay VARCHAR(9) = '00:10:00' 
+DECLARE @runtime DATETIME
+DECLARE @starttime DATETIME
+DECLARE @msg NVARCHAR(100)
+DECLARE  @oldest_tran_id bigint
+		, @oldest_tran_session_id INT
+		, @oldest_tran_begin_time DATETIME
+		, @killstr NVARCHAR(100)
 
-
-IF OBJECT_ID('tblDiagLongTransactions') is NULL
+IF OBJECT_ID('tblDiagLongTransactions') IS NULL
 BEGIN
 	CREATE TABLE tblDiagLongTransactions 
 	(
@@ -90,20 +89,19 @@ BEGIN
 		[statement_text] [nvarchar](max) NULL,
 		[batch_text] [nvarchar](max) NULL,
 		[objectid] [int] NULL,
-		[query_hash] binary(8),
-		[query_plan_hash] binary(8),
+		[query_hash] BINARY(8),
+		[query_plan_hash] BINARY(8),
 		[mostrecentsqltext] [nvarchar](max) NULL
 	) ON [PRIMARY]
 END
 
-
-while (1=1)
-begin
+WHILE (1=1)
+BEGIN
 	-- Check if the database log used space is over the threshold
 
 		SET @runtime = GETDATE()
-		insert into tblDiagLongTransactions
-		select distinct @runtime AS datacollectiontime,
+		INSERT INTO tblDiagLongTransactions
+		SELECT DISTINCT @runtime AS datacollectiontime,
 		atr.transaction_id
 		,atr.name
 		,transaction_begin_time
@@ -122,7 +120,7 @@ begin
 		, r.status
 		, r.cpu_time
 		, r.total_elapsed_time
-		, DATEDIFF(mi,transaction_begin_time, getdate()) as 'Transaction_time_in_mins'
+		, DATEDIFF(mi,transaction_begin_time, getdate()) AS 'Transaction_time_in_mins'
 		, r.logical_reads
 		, r.wait_time
 		, r.wait_type
@@ -146,40 +144,40 @@ begin
 		,query_hash
 		,query_plan_hash
 		,mqt.text
-		from sys.dm_tran_active_transactions atr
-		inner join sys.dm_tran_database_transactions dtr on atr.transaction_id = dtr.transaction_id
-		inner join sys.dm_tran_session_transactions dsr on atr.transaction_id = dsr.transaction_id
-		left outer join sys.dm_exec_sessions s on dsr.session_id = s.session_id
-		left outer join sys.dm_exec_connections conn on s.session_id = dsr.session_id
-		LEFT OUTER JOIN sys.dm_exec_requests r on r.session_id = s.session_id
+		FROM sys.dm_tran_active_transactions atr
+		INNER JOIN sys.dm_tran_database_transactions dtr ON atr.transaction_id = dtr.transaction_id
+		INNER JOIN sys.dm_tran_session_transactions dsr ON atr.transaction_id = dsr.transaction_id
+		LEFT OUTER JOIN sys.dm_exec_sessions s ON dsr.session_id = s.session_id
+		LEFT OUTER JOIN sys.dm_exec_connections conn ON s.session_id = dsr.session_id
+		LEFT OUTER JOIN sys.dm_exec_requests r ON r.session_id = s.session_id
 		OUTER APPLY sys.dm_exec_sql_text(r.sql_handle) AS qt
-		OUTER APPLY  sys.dm_exec_sql_text(conn.most_recent_sql_handle) as mqt
-		where 	s.session_id != @@spid
-		and atr.transaction_type != 2
-		and (database_transaction_log_bytes_used > @transaction_log_bytes_used
-		or datediff(minute,transaction_begin_time,getdate()) > @active_tran_time_minutes)
+		OUTER APPLY  sys.dm_exec_sql_text(conn.most_recent_sql_handle) AS mqt
+		WHERE s.session_id != @@spid
+		AND atr.transaction_type != 2
+		AND (database_transaction_log_bytes_used > @transaction_log_bytes_used
+		OR datediff(minute,transaction_begin_time,getdate()) > @active_tran_time_minutes)
 	
 	-- Check Log full threshold
-	if @kill_oldest_tran=1
+	IF @kill_oldest_tran=1
 	BEGIN
-		IF exists(select 1 from sys.dm_db_log_space_usage
-				  where used_log_space_in_percent >=@log_full_threshold)
+		IF EXISTS(SELECT 1 FROM sys.dm_db_log_space_usage
+				  WHERE used_log_space_in_percent >=@log_full_threshold)
 		BEGIN
 
-			select top 1
+			SELECT TOP 1
 			 @oldest_tran_id=atr.transaction_id
 			,@oldest_tran_begin_time=transaction_begin_time
 			,@oldest_tran_session_id=dsr.session_id
-			from sys.dm_tran_active_transactions atr
-			left outer join sys.dm_tran_database_transactions dtr on atr.transaction_id = dtr.transaction_id
-			left outer join sys.dm_tran_session_transactions dsr on atr.transaction_id = dsr.transaction_id
-			left outer join sys.dm_exec_sessions s on dsr.session_id = s.session_id
-			where 	dsr.session_id != @@spid
-			and is_user_transaction=1
-			order by transaction_begin_time desc
+			FROM sys.dm_tran_active_transactions atr
+			LEFT OUTER JOIN sys.dm_tran_database_transactions dtr ON atr.transaction_id = dtr.transaction_id
+			LEFT OUTER JOIN sys.dm_tran_session_transactions dsr ON atr.transaction_id = dsr.transaction_id
+			LEFT OUTER JOIN sys.dm_exec_sessions s ON dsr.session_id = s.session_id
+			WHERE dsr.session_id != @@spid
+			AND is_user_transaction=1
+			ORDER BY transaction_begin_time DESC
 
-			select @oldest_tran_id as TranID,@oldest_tran_begin_time as TranbeginTime,@oldest_tran_session_id as SessionID
-			set @killstr = 'KILL '+ cast(@oldest_tran_session_id as varchar(100))
+			SELECT @oldest_tran_id AS TranID,@oldest_tran_begin_time AS TranbeginTime,@oldest_tran_session_id AS SessionID
+			SET @killstr = 'KILL '+ cast(@oldest_tran_session_id AS VARCHAR(100))
 			PRINT @killstr
 			
             -- Kill oldest tran
@@ -190,7 +188,7 @@ begin
 	END
 
 	-- Change the polling interval as required
-	waitfor delay @delay
+	WAITFOR DELAY @delay
  
-end
+END
 ```
