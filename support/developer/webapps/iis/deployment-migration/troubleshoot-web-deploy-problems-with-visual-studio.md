@@ -14,11 +14,11 @@ _Applies to:_ &nbsp; Internet Information Services
 
 This article helps you troubleshoot a series of errors when trying to publish from Visual Studio to a server that hasn't been correctly configured via Web Deploy. Although the article is written for specific product versions, the concepts could be applied to newer versions as well.
 
-To collect the screenshots and errors below, use a new ASP.Net MVC 3 project in Visual Studio 2010 SP1. The destination server was a clean install of Windows Server 2008 R2 SP1 with Internet Information Services (IIS). No additional configuration was done.
+To collect the following screenshots and errors, use a new ASP.Net MVC 3 project in Visual Studio 2010 SP1. The destination server was a clean install of Windows Server 2008 R2 SP1 with Internet Information Services (IIS). No other configuration was done.
 
 ## Cannot connect to the server
 
-The first error you're likely to encounter will look something like the screenshot below in Visual Studio's output window. For improved readability, the full text of the message is provided below the screenshot:
+The first error you're likely to encounter will look like the following screenshot in Visual Studio's output window. For improved readability, the full text of the message is provided below the screenshot:
 
 :::image type="content" source="media/troubleshoot-web-deploy-problems-with-visual-studio/error-list.png" alt-text="Screenshot that shows the Error List output in Visual Studio." lightbox="media/troubleshoot-web-deploy-problems-with-visual-studio/error-list.png":::
 
@@ -49,7 +49,7 @@ If they aren't there, you need to install the Management Service through the **A
 
 **Is the service URL correct?**
 
-By default, the Web Management Service listens on port 8172, but this can be changed. The easiest way to check what port is being used is to open the **Management Service** pane as described above, and look at the IP and port information in the Connections section. If the port has been changed to something other than 8172, you'll need to ensure the new port is allowed through the firewall, and update the service URL in Visual Studio's publishing settings to use the new port.
+By default, the Web Management Service listens on port 8172, but this can be changed. The easiest way to check what port is being used is to open the **Management Service** pane as described above, and look at the IP and port information in the Connections section. If the port has been changed to something other than 8172, you need to ensure the new port is allowed through the firewall, and update the service URL in Visual Studio's publishing settings to use the new port.
 
 ## (403) Forbidden
 
@@ -149,24 +149,24 @@ has permissions to access the site.
 The remote server returned an error: (401) Unauthorized.
 ```
 
-In the WMSvc log, you'll see the following message:
+In the WMSvc log, you can see the following message:
 
 ```Output
 2011-05-12 15:50:12 192.168.0.211 POST /msdeploy.axd site=default%20web%20site 8172 - 192.168.0.203 - 401 2 5 1653
 2011-05-12 15:50:12 192.168.0.211 POST /msdeploy.axd site=default%20web%20site 8172 user1 192.168.0.203 - 401 1 1326 124
 ```
 
-The highlighted http status in the Visual Studio output is an Access Denied error. The highlighted win32 status in the error log maps to "Logon failure: unknown user name or bad password," so this is a simple logon failure. If the user is authenticated but doesn't have the rights needed to publish, the log entry will look like the following one:
+The highlighted http status in the Visual Studio output is an Access Denied error. The highlighted win32 status in the error log maps to "Logon failure: unknown user name or bad password," so this is a simple logon failure. If the user is authenticated but doesn't have the rights needed to publish, the log entry looks like the following one:
 
 ```Output
 2011-05-12 15:55:38 192.168.0.211 POST /msdeploy.axd site=default%20web%20site 8172 - 192.168.0.203 - 401 2 5 0
 ```
 
-To allow this user to publish, you'll need to set up delegation per the instructions at [Configure the Web Deployment Handler](/iis/publish/using-web-deploy/configure-the-web-deployment-handler).
+To allow this user to publish, you need to set up delegation per the instructions at [Configure the Web Deployment Handler](/iis/publish/using-web-deploy/configure-the-web-deployment-handler).
 
 ## Operation not authorized
 
-If the account is able to log in but hasn't been granted the rights needed to publish the content, you'll see the following error message:
+If the account is able to log in but hasn't been granted the rights needed to publish the content, you can see the following error message:
 
 :::image type="content" source="media/troubleshoot-web-deploy-problems-with-visual-studio/web-deployment-task-failed.png" alt-text="Screenshot that shows the Error List page in Visual Studio displaying an error related to user permissions." lightbox="media/troubleshoot-web-deploy-problems-with-visual-studio/web-deployment-task-failed.png":::
 
@@ -176,7 +176,7 @@ directory ("bin"). This can occur if the server administrator has not authorized
 the user credentials you are using.
 ```
 
-The `WMSvc` log will show HTTP 200 responses for these requests. Fortunately, Web Deploy 2.1 also writes information to the Microsoft Web Deploy service log. To view it, select **Event Viewer (Local)** > **Applications and Services Logs** > **Microsoft Web Deploy**.
+The `WMSvc` log shows HTTP 200 responses for these requests. Fortunately, Web Deploy 2.1 also writes information to the Microsoft Web Deploy service log. To view it, select **Event Viewer (Local)** > **Applications and Services Logs** > **Microsoft Web Deploy**.
 
 :::image type="content" source="media/troubleshoot-web-deploy-problems-with-visual-studio/microsoft-web-deploy.png" alt-text="Screenshot that shows the Event Viewer menu. Microsoft Web Deploy is highlighted." lightbox="media/troubleshoot-web-deploy-problems-with-visual-studio/microsoft-web-deploy.png":::
 

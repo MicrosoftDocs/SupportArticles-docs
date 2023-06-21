@@ -127,7 +127,7 @@ After getting the out of memory error or creating the memory dumps, you'll have 
 
 ### Analyzing performance data
 
-To review the Perfmon data for your issue, right-click on the **High Memory data collector set** listed under the **User Defined** node and select **Latest Report**. You'll see something similar to the following image:
+To review the Perfmon data for your issue, right-click on the **High Memory data collector set** listed under the **User Defined** node and select **Latest Report**. You can see something similar to the following image:
 
 :::image type="content" source="media/troubleshooting-native-memory-leak-in-an-iis-7x-application-pool/performance-data-high-memory-data-collector-set.png" alt-text="Screenshot of the Performance data on the High Memory data collector set." lightbox="media/troubleshooting-native-memory-leak-in-an-iis-7x-application-pool/performance-data-high-memory-data-collector-set.png":::
 
@@ -140,7 +140,7 @@ DebugDiag has the ability to recognize many problems by doing an automated dump 
 1. Select the **Advanced Analysis** tab in DebugDiag.
 1. Select **Memory Pressure Analyzers**. Make sure that you use *MemoryAnalysis.asp* instead of *DotNetMemoryAnalysis-BETA.asp*.
 1. Select **Add Data Files**.
-1. Browse to the location where the dumps were created. By default, this will be a subfolder of the *C:\\Program Files\\DebugDiag\\Logs* folder.
+1. Browse to the location where the dumps were created. By default, this is a subfolder of the *C:\\Program Files\\DebugDiag\\Logs* folder.
 1. Select one of the dumps and then select <kbd>Ctrl</kbd>+<kbd>A</kbd> to select all of the dumps in that folder.
 1. Select **Open**.
 1. Select **Start Analysis**.
@@ -158,7 +158,7 @@ From this analysis, you can see the leakcom COM component is running. To look fu
 
 :::image type="content" source="media/troubleshooting-native-memory-leak-in-an-iis-7x-application-pool/details-leak-com-module.png" alt-text="Screenshot of details for leakcom on the module." lightbox="media/troubleshooting-native-memory-leak-in-an-iis-7x-application-pool/details-leak-com-module.png":::
 
-The next step is to review the code of `CFoo::crtheap` method. When you do that, you find the following:
+The next step is to review the code of `CFoo::crtheap` method. When you do that, you find the following code snippet:
 
 ```cpp
 STDMETHODIMP CFoo::crtheap(void)

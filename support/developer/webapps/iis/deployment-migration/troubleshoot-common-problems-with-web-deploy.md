@@ -16,7 +16,7 @@ This article describes how to diagnose and fix common problems with Web Deploy, 
 
 ## Logging
 
-When you run into issues related to Web Deploy, there are several logging options depending on where the problem occurs. By default, Web Deploy logs to the Event Log under **Applications** > **Microsoft Web Deploy**. This is a great place to start looking for errors on the destination server.
+When you run into issues related to Web Deploy, there are several logging options depending on where the problem occurs. By default, Web Deploy logs to the Event Log under **Applications** > **Microsoft Web Deploy**. It's a great place to start looking for errors on the destination server.
 
 If you can't diagnose the problem using the Event Log, here are some other options:
 
@@ -26,7 +26,7 @@ If you can't diagnose the problem using the Event Log, here are some other optio
 
 ## Error codes
 
-For certain common error cases, Web Deploy will show a message and an error code that may be useful in getting more information to troubleshoot an issue. For a full list of error codes, see [Web Deploy error codes](/iis/publish/troubleshooting-web-deploy/web-deploy-error-codes).
+For certain common error cases, Web Deploy shows a message and an error code that may be useful in getting more information to troubleshoot an issue. For a full list of error codes, see [Web Deploy error codes](/iis/publish/troubleshooting-web-deploy/web-deploy-error-codes).
 
 > [!NOTE]
 > The error message may be different depending on how Web Deploy is invoked. For example, Microsoft WebMatrix chooses to show custom error messages instead of error codes, whereas the command line will always show error codes if they're logged.
@@ -56,7 +56,7 @@ For certain common error cases, Web Deploy will show a message and an error code
 
 ### 4. Couldn't install Web Deploy 64-bit version on 32-bit hardware
 
-| **Symptoms** | :::image type="content" source="media/troubleshoot-common-problems-with-web-deploy/could-not-install web-deploy-64-bit-on-32-bit.png" alt-text="Screenshot that shows the Windows Installer dialog box. The text says that This installation package isn't supported by this processor type. Contact your product vendor." lightbox="media/troubleshoot-common-problems-with-web-deploy/could-not-install web-deploy-64-bit-on-32-bit.png"::: |
+| **Symptoms** | :::image type="content" source="media/troubleshoot-common-problems-with-web-deploy/could-not-install web-deploy-64-bit-on-32-bit.png" alt-text="Screenshot that shows the Windows Installer dialog box. The text says that this processor type doesn't support this installation package. Contact your product vendor." lightbox="media/troubleshoot-common-problems-with-web-deploy/could-not-install web-deploy-64-bit-on-32-bit.png"::: |
 | --- | --- |
 | **Root cause** | Trying to install 64-bit on 32-bit OS is a check inside Web Deploy's MSI that will fail. |
 | **Fix/Workaround** | Install the same version that matches the architecture of your OS. |
@@ -79,28 +79,28 @@ For certain common error cases, Web Deploy will show a message and an error code
 
 ### 2. Remote Agent Service isn't started
 
-| **Symptoms** | Microsoft.Web.Deployment.DeploymentAgentUnavailableException: Remote agent (URL `http://DestinationServer/msdeployagentservice`) could not be contacted. Make sure the remote agent service is installed and started on the target computer. ---&gt; System.Net.WebException: The remote server returned an error: (404) Not Found. |
+| **Symptoms** | Microsoft.Web.Deployment.DeploymentAgentUnavailableException: Remote agent (URL `http://DestinationServer/msdeployagentservice`) could not be contacted. Make sure the remote agent service is installed and started on the target computer. ---\> System.Net.WebException: The remote server returned an error: (404) Not Found. |
 | --- | --- |
 | **Root cause** | Remote Agent Service isn't started. |
 | **Fix/Workaround** | Start the service: `net start msdepsvc`. |
 
 ### 3. Trying to connect to a server where HTTP isn't listening or allowed
 
-| **Symptoms** | Microsoft.Web.Deployment.DeploymentAgentUnavailableException: Remote agent (URL `http://DestinationServer/msdeployagentservice`) could not be contacted. Make sure the remote agent service is installed and started on the target computer. ---&gt; System.Net.WebException: Unable to connect to the remote server ---&gt; System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it DestinationServer:80 |
+| **Symptoms** | Microsoft.Web.Deployment.DeploymentAgentUnavailableException: Remote agent (URL `http://DestinationServer/msdeployagentservice`) could not be contacted. Make sure the remote agent service is installed and started on the target computer. ---\> System.Net.WebException: Unable to connect to the remote server ---\> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it DestinationServer:80 |
 | --- | --- |
 | **Root cause** | HTTP isn't listening. |
 | **Fix/Workaround** | Make sure HTTP traffic is allowed to the Remote Agent Service. |
 
 ### 4. Trying to connect to a server with the Method Not Allowed error
 
-| **Symptoms** | Microsoft.Web.Deployment.DeploymentException: Could not complete the request to remote agent URL '`http://DestinationServer/`'. ---&gt; System.Net.WebException: The remote server returned an error: (405) Method Not Allowed. |
+| **Symptoms** | Microsoft.Web.Deployment.DeploymentException: Could not complete the request to remote agent URL '`http://DestinationServer/`'. ---\> System.Net.WebException: The remote server returned an error: (405) Method Not Allowed. |
 | --- | --- |
 | **Root cause** | The request was picked up by Internet Information Services (IIS) itself instead of MS Deploy because the path to *msdepsvc.exe* is missing. |
 | **Fix/Workaround** | Change the URL to include `/MSDeployAgentService`. |
 
 ### 5. Trying to access Remote Agent Service as a non-administrator
 
-| **Symptoms** | Microsoft.Web.Deployment.DeploymentException: Could not complete the request to remote agent URL '`http://DestinationServer/msdeployAgentService`'. ---&gt; System.Net.WebException: The remote server returned an error: (401) Unauthorized. |
+| **Symptoms** | Microsoft.Web.Deployment.DeploymentException: Could not complete the request to remote agent URL '`http://DestinationServer/msdeployAgentService`'. ---\>; System.Net.WebException: The remote server returned an error: (401) Unauthorized. |
 | --- | --- |
 | **Root cause** | Remote Agent Service requires that the caller is a member of the Administrators group or from a domain account that has been added to the Administrators group. A local administrator that isn't the built-in account won't work with the Remote Agent Service because of a bug in Web Deploy 2.0. |
 | **Fix/Workaround** | Provide administrative credentials. |
@@ -116,7 +116,7 @@ For certain common error cases, Web Deploy will show a message and an error code
 
 | **Symptoms** | Timestamp=24638007621418 MsDepSvc.exe Error: 0 : An error occurred. The exception details are as follows: Microsoft.Web.Deployment.DeploymentClientServerException: The client and server aren't compatible. The lowest version supported by the client is '7.1.538.0'. The highest version supported by the server is '7.1.537.0'. |
 | --- | --- |
-| **Root cause** | Some versions don't work together, so Web Deploy blocks them from working together. This is typically done to block pre-release versions from operating with released versions. |
+| **Root cause** | Some versions don't work together, so Web Deploy blocks them from working together. It's typically done to block pre-release versions from operating with released versions. |
 | **Fix/Workaround** | Match the versions. |
 
 ### 8. Remote Agent Service couldn't start listening on the URL
@@ -137,9 +137,9 @@ For certain common error cases, Web Deploy will show a message and an error code
 
 ### 2. Not Authorized: User not authorized by deployment handler rules
 
-| **Symptoms** | Couldn't complete an operation with the specified provider &lt;provider name&gt; when connecting using the Web Management Service. This can occur if the server administrator hasn't authorized the user for this operation. |
+| **Symptoms** | Couldn't complete an operation with the specified provider \<ProviderName\> when connecting using the Web Management Service. This can occur if the server administrator hasn't authorized the user for this operation. |
 | --- | --- |
-| **Root cause** | A non-administrator user tried to perform a restricted action with a provider. This usually indicates that a matching delegation rule wasn't found. Either the username, provider, operation, or provider path is wrong. |
+| **Root cause** | A non-administrator user tried to perform a restricted action with a provider. This action usually indicates that a matching delegation rule wasn't found. Either the username, provider, operation, or provider path is wrong. |
 | **Fix/Workaround** | The workaround is to fix the delegation rule or create one. For more information about delegation rules, see [Configure the Web Deployment Handler](/iis/publish/using-web-deploy/configure-the-web-deployment-handler). |
 
 ## Errors when publishing from Visual Studio
