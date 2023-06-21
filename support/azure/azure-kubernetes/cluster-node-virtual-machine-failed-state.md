@@ -1,5 +1,5 @@
 ---
-title: Azure Kubernetes Service cluster/node is in failed state
+title: Azure Kubernetes Service cluster/node is in a failed state
 description: Troubleshoot an issue where an Azure Kubernetes Service (AKS) cluster/node is in a failed state.
 ms.date: 6/21/2023
 author: AmandaAZ
@@ -16,7 +16,7 @@ This article discusses how to troubleshoot a Microsoft Azure Kubernetes Service 
 
 ## Cluster is in a failed state
 
-You may encounter an issue where the provisioning status of your Microsoft Azure Kubernetes Service (AKS) cluster is changed from **Ready** to **Failed**. In this case, if your cluster applications continue to run, AKS may resolve the provisioning status automatically even if you didn't do an operation. Your running applications shouldn't be affected by the provisioning status change.
+You may encounter an issue where the provisioning status of your Microsoft Azure Kubernetes Service (AKS) cluster has changed from **Ready** to **Failed**. In this case, if your cluster applications continue to run, AKS may resolve the provisioning status automatically even if you didn't do an operation. Your running applications shouldn't be affected by the provisioning status change.
 
 Alternatively, you can also manually bring back the cluster from a **Failed** to a **Succeeded** state by running the following [az resource update](/cli/azure/resource#az-resource-update) command:
 
