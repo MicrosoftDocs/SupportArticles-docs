@@ -12,7 +12,7 @@ keywords:
 ---
 # Troubleshoot Azure Kubernetes Service cluter/node in a failed state
 
-This article discusses how to troubleshoot a Microsoft Azure Kubernetes Service (AKS)cluster/node that's entered a failed state.
+This article discusses how to troubleshoot a Microsoft Azure Kubernetes Service (AKS) cluster/node that's entered a failed state.
 
 ## Cluster is in a failed state
 
