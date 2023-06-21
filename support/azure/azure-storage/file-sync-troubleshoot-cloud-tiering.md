@@ -57,18 +57,18 @@ To monitor recall activity on a server, use Event ID 9005, 9006, 9009, and 9059 
 
 ## How to troubleshoot files that fail to tier
 
-If files fail to tier to Azure Files:
+If files fail to tier to Azure Files, follow these steps:
 
 1. In **Event Viewer**, review the telemetry, operational, and diagnostic event logs located under *Applications and Services\Microsoft\FileSync\Agent*.
-   1. Verify that the files exist in the Azure file share.
+1. Verify that the files exist in the Azure file share.
 
-      > [!NOTE]
-      > A file must be synced to an Azure file share before it can be tiered.
+    > [!NOTE]
+    > A file must be synced to an Azure file share before it can be tiered.
 
-   2. Verify that the server has internet connectivity.
-   3. Verify that the Azure File Sync filter drivers (*StorageSync.sys* and *StorageSyncGuard.sys*) are running:
+1. Verify that the server has internet connectivity.
+1. Verify that the Azure File Sync filter drivers (*StorageSync.sys* and *StorageSyncGuard.sys*) are running:
 
-        At an elevated command prompt, run `fltmc`. Verify that the *StorageSync.sys* and *StorageSyncGuard.sys* file system filter drivers are listed.
+   At an elevated command prompt, run `fltmc`. Verify that the *StorageSync.sys* and *StorageSyncGuard.sys* file system filter drivers are listed.
 
 > [!NOTE]
 > An Event ID 9003 is logged once an hour in the Telemetry event log if a file fails to tier (one event is logged per error code). Check the [Tiering errors and remediation](#tiering-errors-and-remediation) section to see if remediation steps are listed for the error code.
