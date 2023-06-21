@@ -300,8 +300,7 @@ If you can't upgrade to the latest kernel versions, you can work around this pro
 
 When you try to access or delete an Azure file share using the Azure portal, you might receive the following error:
 
-> No access  
-> Error code: 403
+> No access Error code: 403
 
 #### Cause 1: Virtual networks or firewall rules are enabled on the storage account
 
