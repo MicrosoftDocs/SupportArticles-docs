@@ -49,7 +49,7 @@ When establishing encrypted connections to SQL Server, Secure Channel (Schannel)
 
 If you intentionally use either a certificate from a non-trusted authority or a self-signed certificate to encrypt connections to SQL Server, you can use one of the following options:
 
-For Scenario 1: Add the certificate authority to the Trusted Root Certification Authorities store on the client computer initiating encrypted connection. To do this, complete the [Export the server certificate](#export-the-server-certificate) and [Install the root certificate authority (CA) on the client machine](#install-the-root-certificate-authority-ca-on-the-client-machine) procedures listed in the next few sections in that sequence.
+For scenario 1, add the certificate authority to the Trusted Root Certification Authorities store on the client computer initiating encrypted connection. To do this, complete the [Export the server certificate](#export-the-server-certificate) and [Install the root certificate authority (CA) on the client machine](#install-the-root-certificate-authority-ca-on-the-client-machine) procedures listed in the next few sections in that sequence.
 
 ### Export the server certificate
 
@@ -97,11 +97,11 @@ The example uses a file named _caCert.cer_ as a certificate file. You must obtai
 
 1. On the **Certificate Store** page, accept the default selection, and then select **Next**.
 
-1. On the **Completing the **Certificate Import Wizard** page, select **Finish**.
+1. On the **Completing the Certificate Import Wizard** page, select **Finish**.
 
-For scenarios 1 and 2: Set **Trust Server Certificate** setting to _true_ in your client application.
+For scenarios 1 and 2, set **Trust Server Certificate** setting to _true_ in your client application.
 
-For more information on how to do this, review the following topics:
+For more information on how to do this, see the following topics:
 
 - [Using Encryption Without Validation in SQL Server Native Client](/sql/relational-databases/native-client/features/using-encryption-without-validation)
 
@@ -110,7 +110,7 @@ For more information on how to do this, review the following topics:
 - [Using Encryption with Sqlclient](/sql/connect/ado-net/sql/sqlclient-support-always-encrypted)
 
 > [!NOTE]
-> If you are using SQL Server Management Studio, select the **Options** tab, and check the box **Trust Server certificate** option in the **Connection Properties** tab.
+> If you are using SQL Server Management Studio, select the **Options** tab, and select the **Trust Server certificate** option in the **Connection Properties** tab.
 
 **Caution:** SSL connections that are encrypted by using a self-signed certificate don't provide strong security. They are susceptible to `man-in-the-middle` attacks. You shouldn't rely on SSL using self-signed certificates in a production environment or on servers that are connected to the Internet.
 

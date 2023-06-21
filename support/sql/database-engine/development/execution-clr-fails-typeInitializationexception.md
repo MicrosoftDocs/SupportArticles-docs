@@ -98,7 +98,7 @@ This workaround applies only to the instance itself.
 Manually create the **System.Drawing** assembly in SQL Server from the DLL file in the **Global Assembly Cache (GAC)**, and then re-create assemblies that use either `DataSet.ReadXML` or `DataTable.ReadXML`. For example:
 
 ```sql
- CREATE ASSEMBLY [Drawing] FROM 'C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Drawing\v40_4.0.0.0__b03f5f7f11d50a3a\System.Drawing.dll' WITH PERMISSION_SET = UNSAFE GO
+ CREATE ASSEMBLY [Drawing] FROM 'C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Drawing\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Drawing.dll' WITH PERMISSION_SET = UNSAFE GO
 ```
 
 ### Workaround 4: Create a registry subkey

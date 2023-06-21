@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting on Always On issues
-description: This article provides resolutions for the common problem about Always On configuration on SQL server.
+description: This article provides resolutions for the common problem about Always On configuration on SQL Server.
 ms.date: 08/03/2020
 ms.custom: sap:Availability Groups
 ---
@@ -21,15 +21,15 @@ _Original KB number:_ &nbsp; 10179
 
     To check the latest CUs that may be available for your version, see [How to determine the version, edition and update level of SQL Server and its components](https://support.microsoft.com/kb/321185).
 
-- You can review [Useful Tools for Troubleshooting](/previous-versions/sql/sql-server-guides/dn135328(v=sql.110)#useful-tools-for-troubleshooting) and [Monitoring Always On Availability Groups](/previous-versions/sql/sql-server-guides/dn135328(v=sql.110)#monitoring-alwayson-availability-groups) in [Always On Availability Groups Troubleshooting and Monitoring Guide](/previous-versions/sql/sql-server-guides/dn135328(v=sql.110)) to learn more about the tools that you can use for diagnosing different types of issues and for monitoring availability groups. The guide also has additional scenarios that may not be covered in this guided walk through.
+- You can see [Useful Tools for Troubleshooting](/previous-versions/sql/sql-server-guides/dn135328(v=sql.110)#useful-tools-for-troubleshooting) and [Monitoring Always On Availability Groups](/previous-versions/sql/sql-server-guides/dn135328(v=sql.110)#monitoring-alwayson-availability-groups) in [Always On Availability Groups Troubleshooting and Monitoring Guide](/previous-versions/sql/sql-server-guides/dn135328(v=sql.110)) to learn more about the tools that you can use for diagnosing different types of issues and for monitoring availability groups. The guide also has additional scenarios that may not be covered in this guided walk through.
 
 - The parent node for Always On Availability Groups documentation and provides a one stop reference for various questions, see [Always On Availability Groups (SQL Server)](/sql/database-engine/availability-groups/windows/always-on-availability-groups-sql-server).
 
 ## I need pointers on setting up and configuring Always On Availability groups
 
-If you are looking for documentation on setting up Always On configuration, please review the following documents: 
+If you are looking for documentation on setting up Always On configuration, please see the following documents:
 
-[Getting Started with Always On Availability Groups (SQL Server)](/sql/database-engine/availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server) - The document provides answers to many questions you may have related to Availability groups, setup etc. Following all the steps in this doc and reviewing [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups (SQL Server)](/sql/database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability) will help prevent many issues that you may run into with setting up and maintaining availability groups in your environment.
+[Getting Started with Always On Availability Groups (SQL Server)](/sql/database-engine/availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server) - The document provides answers to many questions you may have about Availability groups and setup. Following all the steps in this article and reviewing [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups (SQL Server)](/sql/database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability) will help prevent many issues that you may run into with setting up and maintaining availability groups in your environment.
 
 ### Additional resources
 
@@ -127,7 +127,7 @@ You may notice that changes on primary replica are not getting propagated to sec
 - For SQL Server 2012 and SQL Server 2014 environments, see [FIX: Slow synchronization when disks have different sector sizes for primary and secondary replica log files in SQL Server AG and Logshipping environments](https://support.microsoft.com/kb/3009974).
 
 - Check if the secondary nodes are in a Paused state in the Cluster administrator.
-- Review [Troubleshoot: Changes on the Primary Replica are not Reflected on the Secondary Replica](/previous-versions/sql/sql-server-2012/dn135335(v=sql.110)).
+- See [Troubleshoot: Changes on the Primary Replica are not Reflected on the Secondary Replica](/previous-versions/sql/sql-server-2012/dn135335(v=sql.110)).
 
 If the issue still exists, see [More information about Always On Availability Groups](#more-information-about-always-on-availability-groups).
 

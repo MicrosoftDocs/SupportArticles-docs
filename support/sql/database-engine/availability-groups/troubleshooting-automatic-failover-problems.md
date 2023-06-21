@@ -78,7 +78,7 @@ To investigate and diagnose whether this is the cause of unsuccessful failover, 
 1. Start Failover Cluster Manager.
 1. In the navigation pane, select **Roles**.
 1. In the **Roles** pane, right-click the clustered resource, and then select **Properties**.
-1. Select the **Failover** tab, and check the **Maximum Failures in the Specified Period** value.
+1. Select the **Failover** tab, and select the **Maximum Failures in the Specified Period** value.
 
    :::image type="content" source="media/troubleshooting-automatic-failover-problems/properties.png" alt-text="Screenshot of the Maximum Failures in the Specified Period property.":::
 
@@ -98,7 +98,7 @@ To resolve this problem, increase the **Maximum Failures in the Specified Period
 
 ## Case 2: Insufficient NT Authority\SYSTEM account permissions
 
-The SQL Server Database Engine resource DLL connects to the instance of SQL Server that is hosting the primary replica by using ODBC in order to monitor health. The logon credentials that are used for this connection are the local SQL Server `NT AUTHORITY\SYSTEM` login account. By default, this local login account is granted the following permissions:
+The SQL Server Database Engine resource DLL connects to the instance of SQL Server that is hosting the primary replica by using ODBC to monitor health. The logon credentials that are used for this connection are the local SQL Server `NT AUTHORITY\SYSTEM` login account. By default, this local login account is granted the following permissions:
 
 - **Alter Any Availability Group**  
 - **Connect SQL**  
@@ -256,7 +256,7 @@ In addition to the more common reasons that are discussed in this article, there
 
 1. To review the Windows Cluster log, open the _Cluster.log_ file in Notepad.
 
-1. Search for the "Connect to SQL Server" string that fails during the unsuccessful failover event.
+1. Search for the "Connect to SQL Server" string that falls during the unsuccessful failover event.
 
 1. Review the subsequent login messages by using the thread ID (see the following screenshot) to correlate the events that are related to the login event. The following example shows a search for "Connect to SQL Server." It also shows using the thread ID (left side) to locate the other diagnostics that describe why the connection attempt failed.
 
