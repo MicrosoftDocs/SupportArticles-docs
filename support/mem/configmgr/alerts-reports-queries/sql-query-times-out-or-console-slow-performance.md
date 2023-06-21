@@ -25,7 +25,7 @@ In affected environments, Configuration Manager may run better when the site dat
 
 |SQL Server version|Supported compatibility level values|Recommended compatibility level for Configuration Manager|Recommended level for specific performance issues|
 |---|---|---|---|
-|SQL Server 2022|160, 150, 140, 130, 120, 110|160|110|
+|SQL Server 2022|150, 140, 130, 120, 110|150|110|
 |SQL Server 2019|150, 140, 130, 120, 110|150|110|
 |SQL Server 2017|140, 130, 120, 110|140|110|
 |SQL Server 2016|130, 120, 110|130|110|
