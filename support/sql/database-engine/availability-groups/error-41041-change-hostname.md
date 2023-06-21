@@ -4,7 +4,6 @@ description: This article provides workarounds for the issue that occurs after y
 ms.date: 10/13/2021
 ms.custom: sap:Availability Groups
 ms.reviewer: ramakoni, ericbu
-ms.prod: sql
 ---
 # Always On availability groups and replication issues after changing the hostname
 

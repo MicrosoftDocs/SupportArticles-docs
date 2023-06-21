@@ -6,7 +6,6 @@ ms.custom: sap:Installation, Patching and Upgrade
 ms.reviewer: ramakoni
 author: sevend2
 ms.author: v-sidong
-ms.prod: sql
 ---
 
 # SQL Server upgrade fails with error code 2714 when executing update database scripts

@@ -5,7 +5,6 @@ ms.date: 02/15/2023
 ms.reviewer: ramakoni
 ms.author: v-sidong
 author: sevend2
-ms.prod: sql
 ---
 
 # Servicing models for SQL Server

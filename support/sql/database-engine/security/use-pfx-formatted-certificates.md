@@ -4,7 +4,6 @@ description: This article describes the Microsoft PVKConverter for SQL Server to
 ms.date: 09/25/2020
 ms.custom: sap:Security Issues
 ms.reviewer: vencher
-ms.prod: sql
 ---
 # Use PFX-formatted certificates in SQL Server
 

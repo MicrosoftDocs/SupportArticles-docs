@@ -6,7 +6,6 @@ ms.custom: sap:Performance
 ms.reviewer: cmathews
 author: sevend2
 ms.author: v-sidong
-ms.prod: sql
 ---
 
 # Troubleshoot an Availability Group database in reverting state

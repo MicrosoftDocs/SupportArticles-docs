@@ -5,7 +5,6 @@ ms.date: 06/16/2022
 ms.custom: sap:Connection issues
 author: HaiyingYu
 ms.author: haiyingyu
-ms.prod: sql
 ---
 # Troubleshoot connectivity issues in SQL Server
 

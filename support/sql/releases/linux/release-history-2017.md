@@ -5,7 +5,6 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, vanto
 ms.date: 06/15/2023
-ms.prod: sql
 ---
 # <a id="release-history"></a> Release history for SQL Server 2017 on Linux
 

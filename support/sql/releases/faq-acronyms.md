@@ -4,7 +4,6 @@ description: This article describes the frequently asked questions, used terms a
 ms.date: 10/15/2022
 ms.custom: sap:Installation, Patching and Upgrade
 ms.topic: how-to
-ms.prod: sql
 author: simonxjx
 ms.author: v-six
 ---

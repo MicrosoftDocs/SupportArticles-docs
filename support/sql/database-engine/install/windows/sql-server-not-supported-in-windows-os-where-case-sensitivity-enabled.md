@@ -4,8 +4,7 @@ description: This article describes the issue on Windows OS where case sensitivi
 ms.date: 09/21/2022
 ms.custom: sap:Database Design and Development
 ms.author: v-jayaramanp 
-ms.topic: troubleshooting
-ms.prod: sql 
+ms.topic: troubleshooting 
 ---
 
 

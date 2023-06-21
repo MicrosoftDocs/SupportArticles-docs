@@ -6,7 +6,6 @@ ms.custom: sap:Administration and Management
 author: padmajayaraman
 ms.author: v-jayaramanp
 ms.reviewer: ramakoni
-ms.prod: sql
 ---
 
 # SQL Server services using domain credentials fail to start

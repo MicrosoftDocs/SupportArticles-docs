@@ -4,7 +4,6 @@ description: Provides a workaround for the performance issue when certain module
 ms.date: 10/22/2021
 ms.custom: sap:Performance
 ms.reviewer: bobward, SureshKa, jopilov
-ms.prod: sql
 ---
 
 # Performance and consistency issues when certain modules or filter drivers are loaded

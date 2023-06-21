@@ -5,7 +5,6 @@ ms.date: 11/8/2022
 author: padmajayaraman
 ms.author: v-jayaramanp
 ms.reviewer: ramakoni1
-ms.prod: sql
 ms.custom: sap:Database Engine
 ---
 

@@ -4,7 +4,6 @@ description: This article describes how to use SQL Server in Windows 8, Windows 
 ms.date: 05/30/2022
 ms.custom: sap:Installation, Patching and Upgrade
 ms.reviewer: ramakoni, randolphwest
-ms.prod: sql
 ---
 
 <!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.

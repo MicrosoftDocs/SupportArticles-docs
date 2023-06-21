@@ -3,7 +3,6 @@ title: Interoperability of indexes with page memory model
 description: This article provides resolutions for the performance issue when you use Columnstore Index feature and large page memory model in SQL Server.
 ms.date: 11/07/2022
 ms.custom: sap:Administration and Management
-ms.prod: sql
 ---
 # Performance may be slow when columnstore indexes are used with large page memory
 

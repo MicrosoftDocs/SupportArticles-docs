@@ -4,7 +4,6 @@ description: This article troubleshoots SQL Server installation or startup failu
 ms.date: 12/20/2022
 ms.custom: sap:Administration and Management
 ms.reviewer: ramakoni, dplessMSFT, briancarrig, suresh-kandoth 
-ms.prod: sql
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---

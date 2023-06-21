@@ -5,7 +5,6 @@ ms.date: 03/17/2022
 ms.custom: sap:Database Engine
 author: rielsql
 ms.author: v-jayaramanp
-ms.prod: sql
 ms.topic: troubleshooting
 ---
 
