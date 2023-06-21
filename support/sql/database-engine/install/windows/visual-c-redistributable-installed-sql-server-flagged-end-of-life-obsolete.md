@@ -3,8 +3,8 @@ title: Visual C++ Redistributable installed with SQL Server alerts end of life o
 description: Provides a resolution for an issue where a Microsoft Visual C++ Redistributable installed with SQL Server is flagged as end of life or obsolete software components.
 ms.date: 05/16/2023
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall
-ms.reviewer: sureshka
-ms.author: v-sidong
+ms.reviewer: v-sidong
+ms.author: sureshka
 author: sevend2
 ---
 # Microsoft Visual C++ Redistributable installed with SQL Server is flagged as end of life or obsolete
