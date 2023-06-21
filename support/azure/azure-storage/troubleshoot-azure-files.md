@@ -250,6 +250,23 @@ Common reasons for file restore failures:
 
 Use a different target file share. Alternatively, you can cancel or wait for the other restore to complete.
 
+### UserErrorSourceOrTargetAccountNotAccessible
+
+> Error Code: UserErrorSourceOrTargetAccountNotAccessible
+
+> Error Message: Source or Target storage account is not accessible from the Azure Files restore service.
+
+Recommended actions: Ensure that the following configurations in the storage account are correctly set for performing a successful restore:
+
+- Ensure that the storage keys aren't rotated during the restore.
+- Check the network configuration on the storage account(s) and ensure that it allows the Microsoft first party services.
+
+  :::image type="content" source="media/troubleshoot-azure-files/storage-account-network-configuration.png" alt-text="Screenshot that shows the required networking details in a storage account." lightbox="media/troubleshoot-azure-files/storage-account-network-configuration.png":::
+
+- Ensure that the target storage account has the following configuration: **Permitted scope for copy operations** is set to **From storage accounts in the same Azure AD tenant**.
+
+  :::image type="content" source="media/troubleshoot-azure-files/target-storage-account-configuration.png" alt-text="Screenshot that shows the target storage account configuration." lightbox="media/troubleshoot-azure-files/target-storage-account-configuration.png":::
+  
 ## Common modify policy errors
 
 ### BMSUserErrorConflictingProtectionOperation - Another configure protection operation is in progress for this item
