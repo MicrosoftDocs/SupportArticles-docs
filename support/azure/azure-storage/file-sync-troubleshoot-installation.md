@@ -14,7 +14,7 @@ After deploying the Storage Sync Service, the next steps in deploying Azure File
 
 ## Agent installation
 
-<a id="agent-installation-failures"></a>Troubleshoot agent installation failures
+<a id="agent-installation-failures"></a>**Troubleshoot agent installation failures**
 
 If the Azure File Sync agent installation fails, locate the installation log file in the agent installation directory. If the Azure File Sync agent is installed on the *C:* volume, the installation log file is located under *C:\Program Files\Azure\StorageSyncAgent\InstallerLog*.
 
@@ -40,7 +40,7 @@ MSI (s) (0C:C8) [12:23:40:994]: Note: 1: 2265 2:  3: -2147287035
 
 In this example, the agent installation failed with error code -2147287035 (ERROR_ACCESS_DENIED).
 
-<a id="agent-installation-gpo"></a>Agent installation fails with error: Storage Sync Agent Setup Wizard ended prematurely because of an error
+<a id="agent-installation-gpo"></a>**Agent installation fails with error: Storage Sync Agent Setup Wizard ended prematurely because of an error**
 
 In the agent installation log, the following error is logged:
 
@@ -59,7 +59,7 @@ This issue occurs if the [PowerShell execution policy](/powershell/module/micros
 
 To resolve this issue, temporarily disable the [Turn on Script Execution](/powershell/module/microsoft.powershell.core/about/about_execution_policies#use-group-policy-to-manage-execution-policy) group policy setting on the server. Once the agent installation completes, the group policy setting can be re-enabled.
 
-<a id="agent-installation-on-DC"></a>Agent installation fails on Active Directory Domain Controller
+<a id="agent-installation-on-DC"></a>**Agent installation fails on Active Directory Domain Controller**
 
 In the agent installation log, the following error is logged:
 
@@ -75,7 +75,7 @@ This issue occurs if you try to install the sync agent on an Active Directory do
 
 To resolve, transfer the PDC role to another domain controller running Windows Server 2012 R2 or more recent, then install sync.
 
-<a id="parameter-is-incorrect"></a>Accessing a volume on Windows Server 2012 R2 fails with error: The parameter is incorrect
+<a id="parameter-is-incorrect"></a>**Accessing a volume on Windows Server 2012 R2 fails with error: The parameter is incorrect**
 
 After creating a server endpoint on Windows Server 2012 R2, the following error occurs when accessing the volume:
 
@@ -86,7 +86,7 @@ To resolve this issue, install [KB2919355](https://support.microsoft.com/help/29
 
 ## Server registration
 
-<a id="server-registration-missing-subscriptions"></a>Server Registration does not list all Azure Subscriptions
+<a id="server-registration-missing-subscriptions"></a>**Server Registration does not list all Azure Subscriptions**
 
 When registering a server using *ServerRegistration.exe*, subscriptions are missing when you select the **Azure Subscription** drop-down list.
 
@@ -101,7 +101,7 @@ Connect-AzAccount -Subscription "<guid>" -Tenant "<guid>"
 Register-AzStorageSyncServer -ResourceGroupName "<your-resource-group-name>" -StorageSyncServiceName "<your-storage-sync-service-name>"
 ```
 
-<a id="server-registration-prerequisites"></a>Server Registration displays the following message: "Pre-requisites are missing"
+<a id="server-registration-prerequisites"></a>**Server Registration displays the following message: "Pre-requisites are missing"**
 
 This message appears if Az or AzureRM PowerShell module isn't installed on PowerShell 5.1.
 
@@ -116,7 +116,7 @@ To install the Az or AzureRM module on PowerShell 5.1, perform the following ste
     - [AzureRM module](https://go.microsoft.com/fwlink/?linkid=856959)
 3. Run *ServerRegistration.exe*, and complete the wizard to register the server with a Storage Sync Service.
 
-<a id="server-already-registered"></a>Server Registration displays the following message: "This server is already registered"
+<a id="server-already-registered"></a>**Server Registration displays the following message: "This server is already registered"**
 
 :::image type="content" source="media/file-sync-troubleshoot-installation/server-already-registered-error.png" alt-text="Screenshot that shows the Server Registration dialog box with the 'server is already registered' error message.":::
 
@@ -132,11 +132,11 @@ Reset-StorageSyncServer
 > [!Note]  
 > If the server is part of a cluster, use the `Reset-StorageSyncServer` `-CleanClusterRegistration` parameter to remove the server from the Azure File Sync cluster registration detail.
 
-<a id="web-site-not-trusted"></a>When I register a server, I see numerous "web site not trusted" responses. Why?
+<a id="web-site-not-trusted"></a>**When I register a server, I see numerous "web site not trusted" responses. Why?**
 
 This issue occurs when the **Enhanced Internet Explorer Security** policy is enabled during server registration. For more information about how to correctly disable the **Enhanced Internet Explorer Security** policy, see [Prepare Windows Server to use with Azure File Sync](/azure/storage/file-sync/file-sync-deployment-guide#prepare-windows-server-to-use-with-azure-file-sync) and [How to deploy Azure File Sync](/azure/storage/file-sync/file-sync-deployment-guide).
 
-<a id="server-registration-missing"></a>Server is not listed under registered servers in the Azure portal
+<a id="server-registration-missing"></a>**Server is not listed under registered servers in the Azure portal**
 
 If a server isn't listed under **Registered servers** for a Storage Sync Service:
 
