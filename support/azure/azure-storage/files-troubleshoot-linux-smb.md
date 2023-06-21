@@ -90,7 +90,7 @@ sudo mount -t cifs //<storage-account-name>.file.core.windows.net/<share-name> <
 
 You can then create symlinks as suggested on the [wiki](https://wiki.samba.org/index.php/UNIX_Extensions#Storing_symlinks_on_Windows_servers).
 
-## Unable to access folders or files with a name that has a space or a dot at the end
+## Unable to access folders or files whose name has a space or a dot at the end
 
 You can't access folders or files from the Azure file share while mounted on Linux. Commands like `du` and `ls` and/or third-party applications might fail with a "No such file or directory" error while accessing the share. However, you're able to upload files to these folders via the Azure portal.
 
