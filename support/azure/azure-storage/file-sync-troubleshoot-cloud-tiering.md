@@ -140,14 +140,15 @@ If files fail to tier to Azure Files:
 
 ## How to troubleshoot files that fail to be recalled
 
-If files fail to be recalled:
+If files fail to be recalled, follow these steps:
 
 1. In **Event Viewer**, review the telemetry, operational, and diagnostic event logs located under **Applications and Services\Microsoft\FileSync\Agent**.
-    1. Verify that the files exist in the Azure file share.
-    2. Verify that the server has internet connectivity.
-    3. Open the Services MMC snap-in and verify that the Storage Sync Agent service (FileSyncSvc) is running.
-    4. Verify that the Azure File Sync filter drivers (*StorageSync.sys* and *StorageSyncGuard.sys*) are running:
-        - At an elevated command prompt, run `fltmc`. Verify that the *StorageSync.sys* and *StorageSyncGuard.sys* file system filter drivers are listed.
+1. Verify that the files exist in the Azure file share.
+1. Verify that the server has internet connectivity.
+1. Open the Services MMC snap-in and verify that the Storage Sync Agent service (FileSyncSvc) is running.
+1. Verify that the Azure File Sync filter drivers (*StorageSync.sys* and *StorageSyncGuard.sys*) are running:
+
+   At an elevated command prompt, run `fltmc`. Verify that the *StorageSync.sys* and *StorageSyncGuard.sys* file system filter drivers are listed.
 
 > [!NOTE]
 > An Event ID 9006 is logged once per hour in the Telemetry event log if a file fails to recall (one event is logged per error code). Check the [Recall errors and remediation](#recall-errors-and-remediation) section to see if remediation steps are listed for the error code.
