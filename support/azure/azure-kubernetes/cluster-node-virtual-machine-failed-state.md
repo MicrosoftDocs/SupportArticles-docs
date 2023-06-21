@@ -1,5 +1,5 @@
 ---
-title: AKS cluster/node is in a failed state
+title: Azure Kubernetes Service cluster/node is in failed state
 description: Troubleshoot an issue where an Azure Kubernetes Service (AKS) cluster/node is in a failed state.
 ms.date: 6/21/2023
 author: AmandaAZ
@@ -26,7 +26,7 @@ az resource update --ids <aks-resource-id>
 
 ## Node is in a failed state
 
-In some edge cases, an Azure Disk detach operation may partially fail, which leaves the node virtual machine (VM) in a failed state.
+In some rare cases, an Azure Disk detach operation may partially fail, which leaves the node virtual machine (VM) in a failed state.
 
 To resolve this issue, manually update the VM status by using one of the following methods:
 
