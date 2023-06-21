@@ -69,6 +69,8 @@
           href: manage-apps-and-solutions/dataverse-records-missing-required-fields.md
         - name: Troubleshoot wrap issues
           href: manage-apps-and-solutions/wrap-issues.md
+        - name: Solution checker enforcement issues
+          href: manage-apps-and-solutions/solution-checker-enforcement.md
     - name: Support resources
       items:
         - name: Power Apps support
