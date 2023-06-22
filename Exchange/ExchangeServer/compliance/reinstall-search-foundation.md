@@ -20,7 +20,7 @@ ms.date: 06/22/2023
 ---
 # Reinstall Search Foundation in Exchange Server
 
-If you're troubleshooting issues that affect Microsoft Exchange Search, you might be advised by a Microsoft Support agent to reinstall Search Foundation in Exchange Server.
+If you're troubleshooting issues that affect Microsoft Exchange Search, a Microsoft Support agent might advise you to reinstall Search Foundation in Exchange Server.
 
 To complete the installation correctly, follow these steps:
 
