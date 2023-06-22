@@ -46,6 +46,17 @@ After Database Mail stops working, trying to run the `sysmail` stored procedure 
 
 > The object '[dbo].[sp_syspolicy_events_reader]' does not exist in database 'master' or is invalid for this operation.
 
+### Error 4
+
+After creating a contained avaialbility group, if you connect to the contained availability group listener and create a SQL Server login principal, when you connect using the login principal you will receive the error below in SQL Server Management Studio:
+
+> Error connecting to '_your listener'_
+> Failed to retrieve data for this request. (Microsoft.SqlServer.Management.Sdk.Sfc)
+> An exception occurred while executing a Transact-SQL statement or batch. (Microsoft.SqlServer.ConnectionInfo)
+> The EXECUTE permission was denied on the object 'xp_msver', database 'mssqlsystemresource', schema 'sys'. (Mocrosoft SQL Server, Error: 229)
+
+The cause of this error is the public role is not granted executed permission on the xp_msver extended stored procedure on the contained AG master.
+
 ## Resolution
 
 This problem is fixed in the following cumulative update for SQL Server:
