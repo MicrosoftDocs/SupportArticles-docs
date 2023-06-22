@@ -4,7 +4,7 @@ description: Describes an issue that triggers a "Request body is too large" erro
 ms.date: 08/14/2020
 author: genlin
 ms.author: genli
-ms.service: storage
+ms.service: azure-storage
 ms.subservice: files
 ms.reviewer: 
 ---
