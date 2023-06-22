@@ -1,6 +1,6 @@
 ---
-title: Reinstall Search Foundation in Exchange Server
-description: Describes the steps to reinstall Search Foundation in Exchange Server when troubleshooting issues that affect Microsoft Exchange Search.
+title: Re-install Search Foundation in Exchange Server
+description: Describes the steps to re-install Search Foundation in Exchange Server when troubleshooting issues that affect Exchange Search.
 author: Cloud-Writer
 ms.author: meerak
 manager: dcscontentpm
@@ -14,8 +14,7 @@ ms.custom:
 ms.reviewer: dpaul, batre, meerak
 appliesto:
   - Exchange Server 2019
-  - Exchange Server 2016
-  - Exchange Server 2013
+  - Exchange Server 2016 
 search.appverid: MET150
 ms.date: 06/22/2023
 ---
