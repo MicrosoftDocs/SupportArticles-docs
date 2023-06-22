@@ -37,21 +37,24 @@ When you try to create a public folder mailbox in Microsoft Exchange Online, the
 
 > The following error occurred during Validation in agent "Provisioning Policy Agent": "The number of "Mailbox" objects in the organization "\<organization name\>" has reached or exceeded the resource quota (1000) enforced by policy "Recipient Quota Policy: PublicFolderMailboxCountQuota"."
 
-The issue occurs regardless of whether you try to create the public folder mailbox in the Exchange admin center (EAC) or by using the PowerShell [New-Mailbox](/powershell/module/exchange/new-mailbox) cmdlet.
+The issue occurs regardless of whether you try to create the public folder mailbox in the Exchange admin center (EAC) or by using the [New-Mailbox](/powershell/module/exchange/new-mailbox) PowerShell cmdlet.
 
 ## Cause
 
 ### Cause for error 1
 
-When you create a new public folder mailbox, Exchange Online automatically configures it as a hierarchy-serving mailbox. However, for each tenant, Exchange Online [limits](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#storage-limits) to 100 the number of public folder mailboxes that are [hierarchy-serving](https://techcommunity.microsoft.com/t5/exchange-team-blog/introduction-to-public-folder-hierarchy-sync/ba-p/609344#toc-hId--55837873). Error 1 occurs if you try to create another hierarchy-serving public folder mailbox after your tenant reaches the limit.
+When you create a new public folder mailbox, Exchange Online automatically configures it as a hierarchy-serving mailbox. However, for each tenant, Exchange Online sets a limit of 100 for the number of public folder mailboxes that are [hierarchy-serving](https://techcommunity.microsoft.com/t5/exchange-team-blog/introduction-to-public-folder-hierarchy-sync/ba-p/609344#toc-hId--55837873). Error 1 occurs if you try to create another hierarchy-serving public folder mailbox after your tenant reaches the limit.
 
 ### Cause for error 2
 
-For each tenant, Exchange Online [limits](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#storage-limits) to 1,000 the total number of public folder mailboxes. However, your tenant has a lower limit of 100. Error 2 occurs if you try to create another public folder mailbox after your tenant reaches the lower limit.
+For each tenant, Exchange Online sets a limit of 1,000 for the total number of public folder mailboxes. However, your tenant has a lower limit of 100. Error 2 occurs if you try to create another public folder mailbox after your tenant reaches the lower limit.
 
 ### Cause for error 3
 
-For each tenant, Exchange Online [limits](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#storage-limits) to 1,000 the total number of public folder mailboxes. Error 3 occurs if you try to create another public folder mailbox after your tenant reaches the limit.
+For each tenant, Exchange Online sets a limit of 1,000 for the total number of public folder mailboxes. Error 3 occurs if you try to create another public folder mailbox after your tenant reaches the limit.
+
+> [!NOTE]
+> For more information about public folder mailbox limits in Exchange Online, see [Storage limits](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#storage-limits).
 
 ## Solution
 
@@ -65,7 +68,7 @@ If you reach the [hierarchy-serving](https://techcommunity.microsoft.com/t5/exch
 New-Mailbox -PublicFolder -Name <mailbox name> -IsExcludedFromServingHierarchy $True
 ```
 
-For each tenant, Exchange Online [limits](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#storage-limits) to 1,000 the total number of public folder mailboxes. This limit includes both hierarchy-serving and non-hierarchy-serving public folder mailboxes.
+For each tenant, Exchange Online sets a limit of 1,000 for the total number of public folder mailboxes. This limit includes both hierarchy-serving and non-hierarchy-serving public folder mailboxes.
 
 ### Resolution for error 2
 
@@ -75,6 +78,5 @@ To increase your tenant's public folder mailbox limit to 1,000, contact [Micros
 
 If your tenant reaches the public folder mailboxes limit of 1,000, contact [Microsoft Support](https://go.microsoft.com/fwlink/?linkid=2189021).
 
-### More information
-
-For information about how to create public folder mailboxes in Exchange Online to prepare for the migration of on-premises public folders, see [Best practices for public folder preparation before migrations](https://techcommunity.microsoft.com/t5/exchange-team-blog/best-practices-for-public-folder-preparation-before-migrations/ba-p/1909222). The "Target public folder mailboxes" section describes how you can map on-premises public folders to Exchange Online public folder mailboxes.
+> [!NOTE]
+> If you plan to create public folder mailboxes in Exchange Online to prepare for the migration of on-premises public folders, see [Best practices for public folder preparation before migrations](https://techcommunity.microsoft.com/t5/exchange-team-blog/best-practices-for-public-folder-preparation-before-migrations/ba-p/1909222). The "Target public folder mailboxes" section describes how you can map on-premises public folders to Exchange Online public folder mailboxes.
