@@ -43,7 +43,7 @@ The issue occurs regardless of whether you try to create the public folder mailb
 
 ### Cause for error 1
 
-When you create a new public folder mailbox, Exchange Online automatically configures it as a hierarchy-serving mailbox. However, for each tenant, Exchange Online sets a limit of 100 for the number of public folder mailboxes that are [hierarchy-serving](https://techcommunity.microsoft.com/t5/exchange-team-blog/introduction-to-public-folder-hierarchy-sync/ba-p/609344#toc-hId--55837873). Error 1 occurs if you try to create another hierarchy-serving public folder mailbox after your tenant reaches the limit.
+When you create a new public folder mailbox, Exchange Online automatically configures it as a hierarchy-serving mailbox. However, for each tenant, Exchange Online sets a limit of 100 for the total number of public folder mailboxes that are [hierarchy-serving](https://techcommunity.microsoft.com/t5/exchange-team-blog/introduction-to-public-folder-hierarchy-sync/ba-p/609344#toc-hId--55837873). Error 1 occurs if you try to create another hierarchy-serving public folder mailbox after your tenant reaches the limit.
 
 ### Cause for error 2
 
@@ -76,7 +76,7 @@ To increase your tenant's public folder mailbox limit to 1,000, contact [Micros
 
 ### Resolution for error 3
 
-If your tenant reaches the public folder mailboxes limit of 1,000, contact [Microsoft Support](https://go.microsoft.com/fwlink/?linkid=2189021).
+If your tenant reaches the public folder mailbox limit of 1,000, contact [Microsoft Support](https://go.microsoft.com/fwlink/?linkid=2189021).
 
 > [!NOTE]
 > If you plan to create public folder mailboxes in Exchange Online to prepare for the migration of on-premises public folders, see [Best practices for public folder preparation before migrations](https://techcommunity.microsoft.com/t5/exchange-team-blog/best-practices-for-public-folder-preparation-before-migrations/ba-p/1909222). The "Target public folder mailboxes" section describes how you can map on-premises public folders to Exchange Online public folder mailboxes.
