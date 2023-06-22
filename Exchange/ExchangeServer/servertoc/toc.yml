@@ -435,6 +435,8 @@
           href: ../compliance/ediscovery-search-missing-items.md
         - name: MRM doesn't process items in the Sync Issues folder
           href: ../compliance/mrm-not-process-sync-issues-folder.md
+        - name: Reinstall Search Foundation
+          href: ../compliance/reinstall-search-foundation.md
         - name: Search doesn't work if NodeRunner.exe stops
           href: ../compliance/noderunnersexe-stops-search-not-work.md
         - name: Search-AdminAuditLog or Search-MailboxAuditLog returns empty result
