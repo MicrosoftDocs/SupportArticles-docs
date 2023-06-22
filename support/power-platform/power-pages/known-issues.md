@@ -5,10 +5,8 @@ author: nickdoelman
 ms.topic: conceptual
 ms.custom: 
 ms.date: 3/24/2023
-ms.subservice:
 ms.author: ndoelman 
-ms.service: power-platform
-ms.subservice: power-pages
+ms.service: power-pages
 ms.reviewer: 
 contributors:
     - nickdoelman
