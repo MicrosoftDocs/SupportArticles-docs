@@ -45,7 +45,7 @@ To complete the installation correctly, follow these steps:
 
    1. Make sure that the Microsoft Exchange Search and Microsoft Exchange Search Host Controller services are stopped.
 
-   1. Remove the **\<AuthorizedRole>ContentSubmitters</AuthorizedRole>** entry in the *WcfConvigurator.xml* file from the following four configuration locations:
+   1. Remove the **\<AuthorizedRole>ContentSubmitters\</AuthorizedRole>** entry in the *WcfConvigurator.xml* file from the following four configuration locations:
 
       - *C:\Program Files\Microsoft\Exchange Server\V15\Bin\Search\Ceres\HostController\Data\Nodes\Fsis\AdminNode1\Configuration\Local*
 
