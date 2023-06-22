@@ -14,6 +14,8 @@ ms.custom:
 ms.reviewer: dpaul, batre, meerak
 appliesto:
   - Exchange Server 2019
+  - Exchange Server 2016
+  - Exchange Server 2013
 search.appverid: MET150
 ms.date: 06/22/2023
 ---
