@@ -430,7 +430,7 @@ storqosflt            C:                                        244000     storq
 
 **3. Find the volumes scanned by the antivirus driver**
 
-For example, the in sample output you may notice that WdFilter.sys driver scans the *X:\MSSQL15.SQL10\MSSQL\DATA* folder, which appears to be a SQL Server data folder. This folder is a good candidate to be excluded from antivirus scanning.
+In the sample output you may notice that WdFilter.sys driver scans the *X:\MSSQL15.SQL10\MSSQL\DATA* folder, which appears to be a SQL Server data folder. This folder is a good candidate to be excluded from antivirus scanning.
 
 ## Configure a firewall with SQL Server products
 
