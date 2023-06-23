@@ -1,0 +1,46 @@
+
+      - question: |
+          How do I cancel a long-running schedule or blocked schedule?
+        answer: |
+          If your schedule has been running for a long time and seems stuck, select **Reset Resource Scheduling Optimization**. This option clears the blocked job and resets the schedules into a good state. When resetting a single optimization schedule doesn't work or gets blocked too, reset all schedules and republish them. 
+
+      - question: |
+          I’m seeing the message “SAS Key hasn't been configured” when I publish a schedule. Is this ok?
+        answer: |
+          The message means the Resource Scheduling Optimization Azure resources aren't set up correctly. We recommend going to the Resource Scheduling Optimization deployment app to check the Resource Scheduling Optimization deployment status. Redeploy as needed to fix the issue.
+
+          
+      - question: |
+          An optimization request failed and gave the message “Object reference not set to an instance of an object.” What does that mean? 
+        answer: |
+          Typically, a custom plug-in ran into an unhandled null value. It can occur because of a custom plug-in that is triggered synchronously on the creation of a booking, the update of a work order, or other booking-related record, or one of the other records that could be impacted when the results are returned by an optimization run. System customizers can use the plug-in trace log capability to identify which plug-in is failing. Warning: don’t forget to disable plug-in trace logging as soon as debugging is over to avoid overloading the organization’s database.
+          
+      - question: |
+          Why has an optimization request failed with the message “System failed to modify some bookings.”?
+        answer: |
+          Sometimes you see this message for the following scenarios:
+          
+          - If you manually update the same bookings in the middle of a Resource Scheduling Optimization run, Resource Scheduling Optimization
+              won't overwrite the changes, and will fail the request.
+          - If you have a workflow/plug-in updating the same bookings during a Resource Scheduling Optimization run,
+              Resource Scheduling Optimization won't overwrite the changes your other system logic did, and will fail
+              the request.
+          - If you have multiple Resource Scheduling Optimization schedules that share the same resources and run at
+              the same time, Resource Scheduling Optimization might show this message. To better understand the
+              situation and further troubleshoot, check the following options:
+              - Scroll through the optimization request booking grid and inspect the
+                  operation details column for each individual requirement and booking.
+              - Do you have multiple schedules that share the same resources,
+                  requirements, and bookings running at the same time?  
+              - If you have only one schedule, is there any other user or workflow
+                  trying to update a booking during the run?
+          
+
+      - question: |
+          Why am I seeing the error message that a user doesn't have read permissions when running Resource Scheduling Optimization?
+        answer: |
+          If you run Resource Scheduling Optimization and get an error like the one below, add the system administrator security role to the user running Resource Scheduling Optimization.
+          
+          ```[External Exception [Microsoft.Dynamics.FieldService: Microsoft.Dynamics.FieldService.FieldServicePlugin]]Principal user (ID=c4c45efe-866d-eb11-a812-000d3a8eefe9, type=8, roleCount=1, privilegeCount=110, accessMode=4), is missing prvReadmsdyn_workorder privilege (ID=912a06d3-4545-4bea-bbd1-18661ff70424) on OTC=10425 for entity 'msdyn_workorder'. context.Caller=c4c45efe-866d-eb11-a812-000d3a8eefe9. Or identityUser.SystemUserId=dd1c82e4-ddf4-45fd-a1bf-4efd51274d04, identityUser.Privileges.Count=5978, identityUser.Roles.Count=0 is missing prvReadmsdyn_workorder privilege (ID=912a06d3-4545-4bea-bbd1-18661ff70424) on OTC=10425 for entity 'msdyn_workorder'.```
+
+
