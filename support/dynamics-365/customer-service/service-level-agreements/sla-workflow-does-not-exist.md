@@ -5,9 +5,9 @@ ms.reviewer: sdas
 ms.author: ravimanne
 ms.date: 06/23/2023
 ---
-# "Workflow With Id = <GUID> Does Not Exist" error while migrating SLA record from legacy to UCI
+# "Workflow With Id = [GUID] Does Not Exist" error while migrating SLA record from legacy to UCI
 
-This article provides a resolution for the issue where SLA migration failure with "Workflow With Id = <GUID> Does Not Exist".
+This article provides a resolution for the issue where SLA migration failure with "Workflow With Id = [GUID] Does Not Exist".
 
 ## Symptoms
 
