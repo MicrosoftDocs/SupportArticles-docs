@@ -368,6 +368,65 @@ For Power BI Report Server, the following exclusions can be made:
 - *%ProgramFiles%\\Microsoft Power BI Report Server\\PBIRS*
 - *%ProgramFiles%\\Microsoft Power BI Report Server\\Shared Tools*
 
+## How to check which volumes are scanned by antivirus programs
+
+Antivirus programs use file system filter drivers to attach to the I/O path on a computer and scan the I/O packets for suspicious or known virus patterns. In Windows, you can use the [Fltmc utility](/windows-hardware/drivers/ifs/development-and-testing-tools#fltmcexe-command) to enumerate the filter drivers and the volumes they're configured to scan. The `fltmc instances` output may guide you in the decision process of excluding volumes or folders from scanning. You can run this command from a Command Prompt or PowerShell prompt in elevated mode.
+
+```Console
+fltmc instance
+```
+
+Here's a sample output. You may need the [Allocated filter altitudes](/windows-hardware/drivers/ifs/allocated-altitudes) document to look up the antivirus filter driver that you're running. You can look up the driver by using the unique assigned altitude.
+
+```output
+Filter                Volume Name                              Altitude        Instance Name       Frame   SprtFtrs  VlStatus
+--------------------  -------------------------------------  ------------  ----------------------  -----   --------  --------
+CldFlt                C:                                        180451     CldFlt                    0     0000000f
+CldFlt                \Device\HarddiskVolumeShadowCopy3         180451     CldFlt                    0     0000000f
+FileInfo                                                         40500     FileInfo                  0     0000000f
+FileInfo              C:                                         40500     FileInfo                  0     0000000f
+FileInfo                                                         40500     FileInfo                  0     0000000f
+FileInfo              \Device\HarddiskVolumeShadowCopy3          40500     FileInfo                  0     0000000f
+FileInfo              X:\MSSQL15.SQL10\MSSQL\DATA                40500     FileInfo                  0     0000000f
+FileInfo              \Device\Mup                                40500     FileInfo                  0     0000000f
+FileInfo              \Device\RsFx0603                           40500     FileInfo                  0     0000000f
+MsSecFlt                                                        385600     MsSecFlt Instance         0     0000000f
+MsSecFlt              C:                                        385600     MsSecFlt Instance         0     0000000f
+MsSecFlt                                                        385600     MsSecFlt Instance         0     0000000f
+MsSecFlt              \Device\HarddiskVolumeShadowCopy3         385600     MsSecFlt Instance         0     0000000f
+MsSecFlt              \Device\Mailslot                          385600     MsSecFlt Instance         0     0000000f
+MsSecFlt              \Device\Mup                               385600     MsSecFlt Instance         0     0000000f
+MsSecFlt              \Device\NamedPipe                         385600     MsSecFlt Instance         0     0000000f
+MsSecFlt              \Device\RsFx0603                          385600     MsSecFlt Instance         0     0000000f
+RsFx0603              C:                                         41006.03  RsFx0603 MiniFilter Instance    0     00000000
+RsFx0603              \Device\Mup                                41006.03  RsFx0603 MiniFilter Instance    0     00000000
+WdFilter                                                        328010     WdFilter Instance         0     0000000f
+WdFilter              C:                                        328010     WdFilter Instance         0     0000000f
+WdFilter                                                        328010     WdFilter Instance         0     0000000f
+WdFilter              X:\MSSQL15.SQL10\MSSQL\DATA               328010     WdFilter Instance         0     0000000f
+WdFilter              \Device\HarddiskVolumeShadowCopy3         328010     WdFilter Instance         0     0000000f
+WdFilter              \Device\Mup                               328010     WdFilter Instance         0     0000000f
+WdFilter              \Device\RsFx0603                          328010     WdFilter Instance         0     0000000f
+Wof                   C:                                         40700     Wof Instance              0     0000000f
+Wof                                                              40700     Wof Instance              0     0000000f
+Wof                   \Device\HarddiskVolumeShadowCopy3          40700     Wof Instance              0     0000000f
+bfs                                                             150000     bfs                       0     0000000f
+bfs                   C:                                        150000     bfs                       0     0000000f
+bfs                                                             150000     bfs                       0     0000000f
+bfs                   \Device\HarddiskVolumeShadowCopy3         150000     bfs                       0     0000000f
+bfs                   \Device\Mailslot                          150000     bfs                       0     0000000f
+bfs                   \Device\Mup                               150000     bfs                       0     0000000f
+bfs                   \Device\NamedPipe                         150000     bfs                       0     0000000f
+bfs                   \Device\RsFx0603                          150000     bfs                       0     0000000f
+bindflt               C:                                        409800     bindflt Instance          0     0000000f
+luafv                 C:                                        135000     luafv                     0     0000000f
+npsvctrig             \Device\NamedPipe                          46000     npsvctrig                 0     00000008
+storqosflt            C:                                        244000     storqosflt                0     0000000f
+```
+
+For example, in this case the altitude 328010 is found in the [320000 - 329998: FSFilter Anti-Virus table](/windows-hardware/drivers/ifs/allocated-altitudes#320000---329998-fsfilter-anti-virus) in the document and the driver vendor is Microsoft. Therefore, you know that WdFilter.sys is an anti-virus filter driver made by Microsoft. Next in the output above you may notice that WdFilter.sys driver scans the *X:\MSSQL15.SQL10\MSSQL\DATA* folder, which appears to be a SQL Server data folder. This folder is a good candidate to be excluded from the anti-virus scanning.
+
+
 ## Configure a firewall with SQL Server products
 
 The following table contains information about how to use a firewall with SQL Server:
