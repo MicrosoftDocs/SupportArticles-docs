@@ -1,6 +1,6 @@
 ---
 title: Workflow with Id does not exist
-description: Provides a resolution for the issue where SLA migration failure with "Workflow With Id = <GUID> Does Not Exist".
+description: Provides a resolution for the issue where SLA migration failure with "Workflow With Id = [GUID] Does Not Exist".
 ms.reviewer: sdas
 ms.author: ravimanne
 ms.date: 06/23/2023
@@ -11,7 +11,7 @@ This article provides a resolution for the issue where SLA migration failure wit
 
 ## Symptoms
 
-SLA migration failure with "Workflow With Id = <GUID> Does Not Exist".
+SLA migration failure with "Workflow With Id = [GUID] Does Not Exist".
 
 ## Cause
 
