@@ -21,7 +21,7 @@ When you install Microsoft SQL Server on a Windows Server cluster, the cluster v
 The setup log file may contain a message that resembles the following:
 
 > 2008-05-20 05:27:18 Slp: Evaluating rule : Cluster_VerifyForErrors  
-2008-05-20 05:27:18 Slp: Rule running on machine: <SQLNode_Name>  
+2008-05-20 05:27:18 Slp: Rule running on machine: \<SQLNode_Name\>  
 2008-05-20 05:27:18 Slp: Rule evaluation done : Failed  
 2008-05-20 05:27:18 Slp: Rule evaluation message: The cluster either has not been verified or there are errors or failures in the verification report.
 
