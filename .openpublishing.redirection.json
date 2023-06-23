@@ -5816,6 +5816,11 @@
       "source_path": "support/azure/azure-kubernetes/cluster-provisioning-status-changed-ready-failed.md",
       "redirect_url": "/troubleshoot/azure/azure-kubernetes/cluster-node-virtual-machine-failed-state",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/remote/support-policy-windows-virtual-desktop-windows-10-enterprise-multi-session.md",
+      "redirect_url": "/azure/virtual-desktop/",
+      "redirect_document_id": false
     }
 
 ]
