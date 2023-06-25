@@ -55,7 +55,7 @@ After you create a contained availability group, if you connect to the contained
 > An exception occurred while executing a Transact-SQL statement or batch. (Microsoft.SqlServer.ConnectionInfo)
 > The EXECUTE permission was denied on the object 'xp_msver', database 'mssqlsystemresource', schema 'sys'. (Mocrosoft SQL Server, Error: 229)
 
-This error occurs because the public role isn't granted the EXECUTE permission on the xp_msver extended stored procedure on the master server of the included availability group (AG).
+This error occurs because the `public` role isn't granted the `EXECUTE` permission on the `xp_msver` extended stored procedure on the contained availability group (AG) master.
 
 ## Resolution
 
