@@ -4,7 +4,7 @@ description: Troubleshoot common issues with monitoring sync health and resolvin
 author: khdownie
 ms.service: storage
 ms.topic: troubleshooting
-ms.date: 06/25/2023
+ms.date: 06/26/2023
 ms.author: kendownie
 ms.subservice: files 
 ms.custom: devx-track-azurepowershell
@@ -1477,9 +1477,9 @@ if ($fileShare -eq $null) {
 
     If **Microsoft.StorageSync** or **Hybrid File Sync Service** doesn't appear in the list, perform the following steps:
 
-    1. Select **Add**.
-    1. In the **Role** field, select **Reader and Data Access**.
-    1. In the **Select** field, type *Microsoft.StorageSync*, select the role, and then select **Save**.
+    - Select **Add**.
+    - In the **Role** field, select **Reader and Data Access**.
+    - In the **Select** field, type *Microsoft.StorageSync*, select the role, and then select **Save**.
 
 ## [PowerShell](#tab/azure-powershell)
 
