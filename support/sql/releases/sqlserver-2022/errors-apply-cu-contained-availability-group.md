@@ -50,10 +50,10 @@ After Database Mail stops working, trying to run the `sysmail` stored procedure 
 
 After you create a contained availability group, if you connect to the contained availability group listener and create a SQL Server login principal, you will receive the following error in SQL Server Management Studio (SSMS) when you connect by using the login principal:
 
-> Error connecting to '_your listener'_
-> Failed to retrieve data for this request. (Microsoft.SqlServer.Management.Sdk.Sfc)
-> An exception occurred while executing a Transact-SQL statement or batch. (Microsoft.SqlServer.ConnectionInfo)
-> The EXECUTE permission was denied on the object 'xp_msver', database 'mssqlsystemresource', schema 'sys'. (Mocrosoft SQL Server, Error: 229)
+> Error connecting to _\<your listener>_  
+> Failed to retrieve data for this request. (Microsoft.SqlServer.Management.Sdk.Sfc)  
+> An exception occurred while executing a Transact-SQL statement or batch. (Microsoft.SqlServer.ConnectionInfo)  
+> The EXECUTE permission was denied on the object 'xp_msver', database 'mssqlsystemresource', schema 'sys'. (Microsoft SQL Server, Error: 229)
 
 This error occurs because the `public` role isn't granted the `EXECUTE` permission on the `xp_msver` extended stored procedure on the contained availability group (AG) master.
 
