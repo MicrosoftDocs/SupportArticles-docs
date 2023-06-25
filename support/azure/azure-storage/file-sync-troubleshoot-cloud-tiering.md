@@ -4,14 +4,13 @@ description: Troubleshoot common issues with cloud tiering in an Azure File Sync
 author: khdownie
 ms.service: storage
 ms.topic: troubleshooting
-ms.date: 06/25/2023
+ms.date: 06/26/2023
 ms.author: kendownie
 ms.subservice: files 
 ---
-
 # Troubleshoot Azure File Sync cloud tiering
 
-Cloud tiering, an optional feature of Azure File Sync, decreases the amount of local storage required while keeping the performance of an on-premises file server. When enabled, this feature stores only frequently accessed (hot) files on your local server. Infrequently accessed (cool) files are split into namespace (file and folder structure) and file content.
+Cloud tiering, an optional feature of Azure File Sync, decreases the amount of local storage required while keeping the performance of an on-premises file server. When enabled, this feature stores only frequently accessed (hot) files on your local server. Infrequently accessed (cool) files are split into namespace (file and folder structure) and file content. 
 
 There are two paths for failures in cloud tiering:
 
@@ -21,26 +20,23 @@ There are two paths for failures in cloud tiering:
 There are two main classes of failures that can happen via either failure path:
 
 - Cloud storage failures
-
-  - *Transient storage service availability issues*. For more information, see the [Service Level Agreement (SLA) for Azure Storage](https://azure.microsoft.com/support/legal/sla/storage/v1_5/).
-  - *Inaccessible Azure file share*. This failure typically happens when you delete the Azure file share when it's still a cloud endpoint in a sync group.
-  - *Inaccessible storage account*. This failure typically happens when you delete the storage account while it still has an Azure file share that is a cloud endpoint in a sync group.
-
-- Server failures
-
+    - *Transient storage service availability issues*. For more information, see the [Service Level Agreement (SLA) for Azure Storage](https://azure.microsoft.com/support/legal/sla/storage/v1_5/).
+    - *Inaccessible Azure file share*. This failure typically happens when you delete the Azure file share when it is still a cloud endpoint in a sync group.
+    - *Inaccessible storage account*. This failure typically happens when you delete the storage account while it still has an Azure file share that is a cloud endpoint in a sync group. 
+- Server failures 
   - *Azure File Sync file system filter (StorageSync.sys) isn't loaded*. In order to respond to tiering/recall requests, the Azure File Sync file system filter must be loaded. The filter not being loaded can happen for several reasons, but the most common reason is that an administrator unloaded it manually. The Azure File Sync file system filter must be loaded at all times for Azure File Sync to properly function.
   - *Missing, corrupt, or otherwise broken reparse point*. A reparse point is a special data structure on a file that consists of two parts:
-    - A reparse tag, which indicates to the operating system that the Azure File Sync file system filter (StorageSync.sys) might need to do some action on IO to the file.
-    - Reparse data, which indicates to the file system filter the URI of the file on the associated cloud endpoint (the Azure file share).
-
-       The most common way a reparse point could become corrupted is if an administrator attempts to modify either the tag or its data.
+    1. A reparse tag, which indicates to the operating system that the Azure File Sync file system filter (StorageSync.sys) might need to do some action on IO to the file. 
+    2. Reparse data, which indicates to the file system filter the URI of the file on the associated cloud endpoint (the Azure file share). 
+        
+       The most common way a reparse point could become corrupted is if an administrator attempts to modify either the tag or its data. 
   - *Network connectivity issues*. In order to tier or recall a file, the server must have internet connectivity.
 
 The following sections indicate how to troubleshoot cloud tiering issues and determine if an issue is a cloud storage issue or a server issue.
 
 ## How to monitor tiering activity on a server
 
-To monitor tiering activity on a server, use Event ID 9003, 9016, and 9029 in the Telemetry event log (located under *Applications and Services\Microsoft\FileSync\Agent* in Event Viewer).
+To monitor tiering activity on a server, use Event ID 9003, 9016, and 9029 in the Telemetry event log (located under `Applications and Services\Microsoft\FileSync\Agent` in Event Viewer).
 
 - Event ID 9003 provides error distribution for a server endpoint. For example, Total Error Count, ErrorCode, etc. Note, one event is logged per error code.
 - Event ID 9016 provides ghosting results for a volume. For example, Free space percent is, Number of files ghosted in session, Number of files failed to ghost, etc.
@@ -48,7 +44,7 @@ To monitor tiering activity on a server, use Event ID 9003, 9016, and 9029 in th
 
 ## How to monitor recall activity on a server
 
-To monitor recall activity on a server, use Event ID 9005, 9006, 9009, and 9059 in the Telemetry event log (located under *Applications and Services\Microsoft\FileSync\Agent* in Event Viewer).
+To monitor recall activity on a server, use Event ID 9005, 9006, 9009, and 9059 in the Telemetry event log (located under Applications and Services\Microsoft\FileSync\Agent in Event Viewer).
 
 - Event ID 9005 provides recall reliability for a server endpoint. For example, Total unique files accessed, Total unique files with failed access, etc.
 - Event ID 9006 provides recall error distribution for a server endpoint. For example, Total Failed Requests, ErrorCode, etc. Note, one event is logged per error code.
@@ -57,18 +53,17 @@ To monitor recall activity on a server, use Event ID 9005, 9006, 9009, and 9059 
 
 ## How to troubleshoot files that fail to tier
 
-If files fail to tier to Azure Files, follow these steps:
+If files fail to tier to Azure Files:
 
-1. In Event Viewer, review the telemetry, operational, and diagnostic event logs located under *Applications and Services\Microsoft\FileSync\Agent*.
-1. Verify the files exist in the Azure file share.
+1. In Event Viewer, review the telemetry, operational and diagnostic event logs, located under Applications and Services\Microsoft\FileSync\Agent. 
+   1. Verify the files exist in the Azure file share.
 
-    > [!NOTE]
-    > A file must be synced to an Azure file share before it can be tiered.
+      > [!NOTE]
+      > A file must be synced to an Azure file share before it can be tiered.
 
-1. Verify the server has internet connectivity.
-1. Verify the Azure File Sync filter drivers (*StorageSync.sys* and *StorageSyncGuard.sys*) are running:
-
-   At an elevated command prompt, run `fltmc`. Verify the *StorageSync.sys* and *StorageSyncGuard.sys* file system filter drivers are listed.
+   2. Verify the server has internet connectivity. 
+   3. Verify the Azure File Sync filter drivers (StorageSync.sys and StorageSyncGuard.sys) are running:
+       - At an elevated command prompt, run `fltmc`. Verify that the StorageSync.sys and StorageSyncGuard.sys file system filter drivers are listed.
 
 > [!NOTE]
 > An Event ID 9003 is logged once an hour in the Telemetry event log if a file fails to tier (one event is logged per error code). Check the [Tiering errors and remediation](#tiering-errors-and-remediation) section to see if remediation steps are listed for the error code.
@@ -140,15 +135,13 @@ If files fail to tier to Azure Files, follow these steps:
 
 ## How to troubleshoot files that fail to be recalled
 
-If files fail to be recalled, follow these steps:
-
-1. In Event Viewer, review the telemetry, operational, and diagnostic event logs located under **Applications and Services\Microsoft\FileSync\Agent**.
-1. Verify the files exist in the Azure file share.
-1. Verify the server has internet connectivity.
-1. Open the Services MMC snap-in and verify the Storage Sync Agent service (FileSyncSvc) is running.
-1. Verify the Azure File Sync filter drivers (StorageSync.sys and StorageSyncGuard.sys) are running:
-
-   At an elevated command prompt, run `fltmc`. Verify the StorageSync.sys and *StorageSyncGuard.sys* file system filter drivers are listed.
+If files fail to be recalled:
+1. In Event Viewer, review the telemetry, operational and diagnostic event logs, located under Applications and Services\Microsoft\FileSync\Agent.
+    1. Verify the files exist in the Azure file share.
+    2. Verify the server has internet connectivity. 
+    3. Open the Services MMC snap-in and verify the Storage Sync Agent service (FileSyncSvc) is running.
+    4. Verify the Azure File Sync filter drivers (StorageSync.sys and StorageSyncGuard.sys) are running:
+        - At an elevated command prompt, run `fltmc`. Verify that the StorageSync.sys and StorageSyncGuard.sys file system filter drivers are listed.
 
 > [!NOTE]
 > An Event ID 9006 is logged once per hour in the Telemetry event log if a file fails to recall (one event is logged per error code). Check the [Recall errors and remediation](#recall-errors-and-remediation) section to see if remediation steps are listed for the error code.
