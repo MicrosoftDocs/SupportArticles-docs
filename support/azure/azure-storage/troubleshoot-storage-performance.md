@@ -5,7 +5,7 @@ author: AmandaAZ
 ms.author: v-weizhu
 ms.reviewer: normesta, azurestocic, jarrettr
 ms.date: 04/12/2023
-ms.service: storage
+ms.service: azure-storage
 ---
 
 # Troubleshoot performance in Azure storage accounts
