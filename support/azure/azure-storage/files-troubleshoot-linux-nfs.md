@@ -24,13 +24,13 @@ This article lists common issues related to NFS Azure file shares and provides p
 | Standard file shares (GPv2), GRS/GZRS | :::image type="icon" source="media/files-troubleshoot-linux-nfs/no-icon.png" border="false"::: | :::image type="icon" source="media/files-troubleshoot-linux-nfs/no-icon.png" border="false"::: |
 | Premium file shares (FileStorage), LRS/ZRS | :::image type="icon" source="media/files-troubleshoot-linux-nfs/no-icon.png" border="false"::: | :::image type="icon" source="media/files-troubleshoot-linux-nfs/yes-icon.png" border="false":::|
 
-## Chgrp "filename" failed: Invalid argument (22)
+## chgrp "filename" failed: Invalid argument (22)
 
-### Cause 1: Idmapping isn't disabled
+### Cause 1: idmapping isn't disabled
 
 Because Azure Files disallows alphanumeric UID/GID, you must disable idmapping.
 
-### Cause 2: Idmapping was disabled, but got re-enabled after encountering bad file/directory  name
+### Cause 2: idmapping was disabled, but got re-enabled after encountering bad file/dir name
 
 Even if you correctly disable idmapping, it can be automatically re-enabled in some cases. For example, when Azure Files encounters a bad file name, it sends back an error. Upon seeing this error code, an NFS 4.1 Linux client decides to re-enable idmapping, and sends future requests with alphanumeric UID/GID. For a list of unsupported characters on Azure Files, see this [article](/rest/api/storageservices/naming-and-referencing-shares--directories--files--and-metadata). Colon is one of the unsupported characters.
 
@@ -97,7 +97,7 @@ Disable **Secure transfer required** in your storage account's configuration bla
 
 :::image type="content" source="media/files-troubleshoot-linux-nfs/disable-secure-transfer.png" alt-text="Screenshot that shows the storage account configuration blade, disabling secure transfer required." lightbox="media/files-troubleshoot-linux-nfs/disable-secure-transfer.png":::
 
-### Cause 3: nfs-utils, nfs-client, or nfs-common package isn't installed
+### Cause 3: nfs-utils, nfs-client or nfs-common package isn't installed
 
 Before running the `mount` command, install the nfs-utils, nfs-client, or nfs-common package.
 
