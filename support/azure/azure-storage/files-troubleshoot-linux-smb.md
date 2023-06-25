@@ -3,7 +3,7 @@ title: Troubleshoot Azure Files issues in Linux (SMB)
 description: Troubleshooting Azure Files issues in Linux. See general issues related to SMB Azure file shares when you connect from Linux clients and possible resolutions.
 author: khdownie
 ms.service: storage
-ms.date: 06/09/2023
+ms.date: 06/26/2023
 ms.author: kendownie
 ms.subservice: files
 ---
@@ -47,7 +47,7 @@ Use the storage account user to copy the files:
 
 When you try to list files in an Azure file share by using the `ls` command, the command hangs when listing files. You get the following error:
 
-> ls: cannot access'&lt;path&gt;': Input/output error
+**ls: cannot access'&lt;path&gt;': Input/output error**
 
 ### Solution
 
@@ -74,7 +74,7 @@ ln: failed to create symbolic link 't': Operation not supported
 
 ### Solution
 
-The Linux SMB client doesn't support creating Windows-style symbolic links over the SMB 2 or 3 protocol. Currently, the Linux client supports another style of symbolic links called [Minshall+French symlinks](https://wiki.samba.org/index.php/UNIX_Extensions#Minshall.2BFrench_symlinks) for both "create" and "follow" operations. Customers who need symbolic links can use the "mfsymlinks" mount option. We recommend "mfsymlinks" because it's also the format that Macs use.
+The Linux SMB client doesn't support creating Windows-style symbolic links over the SMB 2 or 3 protocol. Currently, the Linux client supports another style of symbolic links called [Minshall+French symlinks](https://wiki.samba.org/index.php/UNIX_Extensions#Minshall.2BFrench_symlinks) for both create and follow operations. Customers who need symbolic links can use the "mfsymlinks" mount option. We recommend "mfsymlinks" because it's also the format that Macs use.
 
 To use symlinks, add the following to the end of your SMB mount command:
 
@@ -90,9 +90,9 @@ sudo mount -t cifs //<storage-account-name>.file.core.windows.net/<share-name> <
 
 You can then create symlinks as suggested on the [wiki](https://wiki.samba.org/index.php/UNIX_Extensions#Storing_symlinks_on_Windows_servers).
 
-## Unable to access folders or files whose name has a space or a dot at the end
+## Unable to access folders or files which name has a space or a dot at the end
 
-You can't access folders or files from the Azure file share while mounted on Linux. Commands like `du` and `ls` and/or third-party applications might fail with a "No such file or directory" error while accessing the share. However, you're able to upload files to these folders via the Azure portal.
+You can't access folders or files from the Azure file share while mounted on Linux. Commands like du and ls and/or third-party applications might fail with a "No such file or directory" error while accessing the share; however, you're able to upload files to these folders via the Azure portal.
 
 ### Cause
 
@@ -128,11 +128,11 @@ You'll also see that the server FQDN now resolves to a different IP address than
 
 ### Cause
 
-For capacity load balancing purposes, storage accounts are sometimes live-migrated from one storage cluster to another. Account migration triggers Azure Files traffic to be redirected from the source cluster to the destination cluster by updating the DNS mappings to point to the destination cluster. This blocks all traffic to the source cluster from that account. It’s expected that the SMB client picks up the DNS updates and redirects further traffic to the destination cluster. However, due to a bug in the Linux SMB kernel client, this redirection doesn't take effect. As a result, the data traffic keeps going to the source cluster, which has stopped serving this account post-migration.
+For capacity load balancing purposes, storage accounts are sometimes live-migrated from one storage cluster to another. Account migration triggers Azure Files traffic to be redirected from the source cluster to the destination cluster by updating the DNS mappings to point to the destination cluster. This blocks all traffic to the source cluster from that account. It’s expected that the SMB client picks up the DNS updates and redirects further traffic to the destination cluster. However, due to a bug in the Linux SMB kernel client, this redirection doesn't take effect. As a result, the data traffic keeps going to the source cluster, which has stopped serving this account post migration.
 
 ### Workaround
 
-You can mitigate this issue by rebooting the client OS, but you might run into the issue again if you don't upgrade your client OS to a Linux distro version with account migration support. Umount and remount of the share may appear to fix the issue temporarily.
+You can mitigate this issue by rebooting the client OS, but you might run into the issue again if you don't upgrade your client OS to a Linux distro version with account migration support. Note that umount and remount of the share may appear to fix the issue temporarily.
 
 ### Solution
 
@@ -149,6 +149,10 @@ For a permanent fix, upgrade your client OS to a Linux distro version with accou
 - [cifs: fix memory leak of smb3_fs_context_dup::server_hostname](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=869da64d071142d4ed562a3e909deb18e4e72c4e)
 
 - [dns: Apply a default TTL to records obtained from getaddrinfo()](https://git.kernel.org/pub/scm/linux/kernel/git/dhowells/keyutils.git/commit/?id=75e7568dc516db698093b33ea273e1b4a30b70be)
+
+## Need help?
+
+If you still need help, [contact support](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) to get your problem resolved quickly.
 
 ## See also
 
