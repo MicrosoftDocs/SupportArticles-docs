@@ -380,7 +380,7 @@ fltmc instances
 
 ### 2. Use the output to identify which driver is installed and used by the antivirus program on your computer
 
-Here's a sample output. You need the [Allocated filter altitudes document](/windows-hardware/drivers/ifs/allocated-altitudes) to look up filter drivers by using the uniquely assigned altitude. For example, you may find that the altitude `328010` is in the **320000 - 329998: FSFilter Anti-Virus** table in the document. Therefore, based on the table name in the document, you know that the `WdFilter.sys` driver is used by the antivirus program on your computer and that it's developed by Microsoft.
+Here's a sample output. You need the [Allocated filter altitudes document](/windows-hardware/drivers/ifs/allocated-altitudes) to look up filter drivers by using the uniquely assigned altitude. For example, you may find that the altitude `328010` is in the [320000 - 329998: FSFilter Anti-Virus](/windows-hardware/drivers/ifs/allocated-altitudes#320000---329998-fsfilter-anti-virus) table in the document. Therefore, based on the table name in the document, you know that the `WdFilter.sys` driver is used by the antivirus program on your computer and that it's developed by Microsoft.
 
 ```output
 Filter                Volume Name                              Altitude        Instance Name       Frame   SprtFtrs  VlStatus
