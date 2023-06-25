@@ -88,7 +88,7 @@ To resolve this issue, install [KB2919355](https://support.microsoft.com/help/29
 
 <a id="server-registration-missing-subscriptions"></a>**Server Registration does not list all Azure Subscriptions**
 
-When registering a server using *ServerRegistration.exe*, subscriptions are missing when you select the **Azure Subscription** drop-down list.
+When registering a server using *ServerRegistration.exe*, subscriptions are missing when you select the **Azure Subscription** drop-down.
 
 This issue occurs because *ServerRegistration.exe* will only retrieve subscriptions from the first five Azure AD tenants.
 
