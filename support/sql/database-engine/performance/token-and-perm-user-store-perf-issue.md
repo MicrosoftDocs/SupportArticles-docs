@@ -4,7 +4,6 @@ description: This article helps you resolve performance issues that occur in the
 ms.date: 09/21/2022
 ms.custom: sap:Performance
 ms.topic: troubleshooting
-ms.prod: sql
 author: ramakoni1
 ms.author: v-jayaramanp
 ---

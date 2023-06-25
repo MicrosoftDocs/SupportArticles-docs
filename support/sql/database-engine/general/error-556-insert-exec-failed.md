@@ -4,7 +4,6 @@ description: This article helps you work around the periodic failure of a stored
 ms.date: 09/02/2020
 ms.custom: sap:Database Design and Development
 ms.reviewer: nathansc, dajiro
-ms.prod: sql
 ---
 # INSERT EXEC fails because the stored procedure altered the schema of the target table error in SQL Server 2016
 

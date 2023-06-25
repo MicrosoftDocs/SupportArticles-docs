@@ -4,7 +4,6 @@ description: This article lists various builds or updates that are available for
 ms.date: 06/15/2023
 ms.custom: sap:Installation, Patching and Upgrade
 ms.topic: how-to
-ms.prod: sql
 author: simonxjx
 ms.author: v-six
 ---

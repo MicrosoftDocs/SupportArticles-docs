@@ -6,7 +6,6 @@ ms.custom: sap:Performance
 ms.reviewer: ramakoni, jopilov
 author: pijocoder
 ms.author: jopilov
-ms.prod: sql
 ms.topic: troubleshooting
 ---
 

@@ -3,7 +3,6 @@ title: Use encryption and network packet size
 description: This article provides a resolution for the problem that occurs when you configure your SQL Server to use encrypted connections and network packet size option.
 ms.date: 09/15/2020
 ms.custom: sap:Integration Services
-ms.prod: sql
 ---
 # Error for SSIS packages on SQL servers configured to use encryption and network packet size
 

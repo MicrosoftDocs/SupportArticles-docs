@@ -4,7 +4,6 @@ description: This article provides resolutions for an error that occurs when you
 ms.date: 07/22/2020
 ms.custom: sap:Reporting Services
 ms.reviewer: ramakoni
-ms.prod: sql
 ---
 # 'Unable to retrieve application files. Files corrupt in deployment' error when you try to start the ClickOnce version of Report Builder from SQL Server 2012 Reporting Services
 

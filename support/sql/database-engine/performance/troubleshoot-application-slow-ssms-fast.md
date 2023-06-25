@@ -6,7 +6,6 @@ ms.custom: sap:Performance
 ms.reviewer: jopilov
 author: PiJoCoder
 ms.author: jopilov
-ms.prod: sql
 ---
 
 # Troubleshoot query performance difference between database application and SSMS

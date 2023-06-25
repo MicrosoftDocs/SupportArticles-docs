@@ -4,7 +4,6 @@ description: Provides resolutions for an issue where error 41131 occurs when you
 ms.date: 05/31/2022
 ms.custom: sap:High Availability and Disaster Recovery features
 ms.reviewer: ramakoni
-ms.prod: sql
 ms.author: v-sidong
 ---
 

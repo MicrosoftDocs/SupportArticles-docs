@@ -4,7 +4,6 @@ description: This article describes how to run a DLL-based COM object outside th
 ms.date: 09/25/2020
 ms.custom: sap:Administration and Management
 ms.topic: how-to
-ms.prod: sql
 ---
 # Run a DLL-based COM object outside the SQL Server process
 

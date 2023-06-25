@@ -2,8 +2,7 @@
 title: Retrieve values in Stored Procedures with ADO
 description: This article describes how to retrieve values in SQL Server Stored Procedures with ADO.
 ms.date: 09/25/2020
-ms.custom: sap:MDAC and ADO
-ms.prod: sql 
+ms.custom: sap:MDAC and ADO 
 ---
 # Retrieve values in SQL Server Stored Procedures with ADO
 

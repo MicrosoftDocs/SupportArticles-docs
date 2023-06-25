@@ -2,6 +2,8 @@
   items:
   - name: Troubleshoot Azure App Service
     href: ./welcome-app-service.yml
+  - name: Capture memory dumps in Azure App Service
+    href: ./capture-memory-dumps-app-service.md
   - name: Create or delete web apps FAQs
     href: ./create-delete-resources-faq.yml
   - name: Availability, performance, and application FAQs

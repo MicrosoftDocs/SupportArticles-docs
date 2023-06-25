@@ -6,7 +6,6 @@ ms.custom: sap:Administration and Management
 author: padmajayaraman
 ms.author: v-jayaramanp
 ms.reviewer: ramakoni1
-ms.prod: sql
 ---
 
 # Assertion failure on a mirror server when using SQL Server mirroring architecture

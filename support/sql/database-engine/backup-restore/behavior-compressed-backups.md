@@ -5,7 +5,6 @@ ms.date: 10/11/2020
 ms.custom: sap:Administration and Management
 ms.reviewer: denzilr
 ms.topic: article
-ms.prod: sql
 ---
 # Behavior of compressed backups when you append backups to an existing media set
 

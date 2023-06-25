@@ -5,7 +5,6 @@ ms.date: 02/23/2022
 author: ramakoni1
 ms.author: v-jayaramanp
 ms.custom: sap:Connection Issues
-ms.prod: sql
 ---
 
 # How to check if SQL Server is listening on a dynamic port or static port
