@@ -3,14 +3,14 @@ title: Azure Files performance troubleshooting guide
 description: Troubleshoot performance issues with Azure file shares and discover potential causes and associated workarounds for these problems.
 author: khdownie
 ms.service: storage
-ms.date: 06/14/2023
+ms.date: 06/26/2023
 ms.author: kendownie
 ms.subservice: files
 #Customer intent: As a system admin, I want to troubleshoot performance issues with Azure file shares to improve performance for applications and users.
 ---
 # Troubleshoot Azure Files performance issues
 
-This article lists common problems related to Azure file share performance and provides potential causes and workarounds. To get the most value from this troubleshooting guide, we recommend first reading [Understand Azure Files performance](/azure/storage/files/understand-performance).
+This article lists common problems related to Azure file share performance, and provides potential causes and workarounds. To get the most value from this troubleshooting guide, we recommend first reading [Understand Azure Files performance](/azure/storage/files/understand-performance).
 
 ## Applies to
 
@@ -22,7 +22,7 @@ This article lists common problems related to Azure file share performance and p
 
 ## General performance troubleshooting
 
-First, rule out some common reasons why you might have performance problems.
+First, rule out some common reasons why you might be having performance problems.
 
 ### You're running an old operating system
 
@@ -32,7 +32,7 @@ If your client virtual machine (VM) is running Windows 8.1 or Windows Server 201
 
 ### Considerations for Windows 8.1 and Windows Server 2012 R2
 
-Clients running Windows 8.1 or Windows Server 2012 R2 might see higher than expected latency when accessing Azure file shares for I/O-intensive workloads. Make sure that the [KB3114025](https://support.microsoft.com/help/3114025) hotfix is installed. This hotfix improves the performance of "create" and "close" handles.
+Clients that are running Windows 8.1 or Windows Server 2012 R2 might see higher than expected latency when accessing Azure file shares for I/O-intensive workloads. Make sure that the [KB3114025](https://support.microsoft.com/help/3114025) hotfix is installed. This hotfix improves the performance of create and close handles.
 
 You can run the following script to check whether the hotfix has been installed:
 
@@ -40,12 +40,10 @@ You can run the following script to check whether the hotfix has been installed:
 
 If the hotfix is installed, the following output is displayed:
 
-```output
-HKEY_Local_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters\Policies {96c345ef-3cac-477b-8fcd-bea1a564241c} REG_DWORD 0x1
-```
+`HKEY_Local_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters\Policies {96c345ef-3cac-477b-8fcd-bea1a564241c} REG_DWORD 0x1`
 
 > [!Note]
-> Starting from December 2015, Windows Server 2012 R2 images in Azure Marketplace have hotfix KB3114025 installed by default.
+> Windows Server 2012 R2 images in Azure Marketplace have hotfix KB3114025 installed by default, starting in December 2015.
 
 ### [Linux](#tab/linux)
 
@@ -53,7 +51,7 @@ HKEY_Local_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameter
 
 #### Cause
 
-An I/O depth greater than one isn't supported on older versions of CentOS Linux or RHEL.
+An I/O depth of greater than 1 isn't supported on older versions of CentOS Linux or RHEL.
 
 #### Workaround
 
@@ -75,7 +73,7 @@ To learn more about how throttling at the share level or storage account level c
 
 ### Cause 1: Share or storage account is being throttled
 
-To confirm whether your share or storage account is being throttled, you can access and use Azure metrics in the portal. You can also create alerts that notify you if a share is being throttled or is about to be throttled. See [Troubleshoot Azure Files by creating alerts](/azure/storage/files/files-troubleshoot-create-alerts).
+To confirm whether your share or storage account is being throttled, you can access and use Azure metrics in the portal. You can also create alerts that will notify you if a share is being throttled or is about to be throttled. See [Troubleshoot Azure Files by creating alerts](/azure/storage/files/files-troubleshoot-create-alerts).
 
 > [!IMPORTANT]
 > For standard storage accounts with large file shares (LFS) enabled, throttling occurs at the account level. For premium file shares and standard file shares without LFS enabled, throttling occurs at the share level.
@@ -128,7 +126,7 @@ To confirm whether your share or storage account is being throttled, you can acc
 
 If the majority of your requests are metadata-centric (such as `createfile`, `openfile`, `closefile`, `queryinfo`, or `querydirectory`), the latency will be worse than that of read/write operations.
 
-To determine whether most of your requests are metadata-centric, start by following steps 1 to 4, as previously outlined in Cause 1. For step 5, instead of adding a filter for **Response type**, add a property filter for **API name**.
+To determine whether most of your requests are metadata-centric, start by following steps 1-4 as previously outlined in Cause 1. For step 5, instead of adding a filter for **Response type**, add a property filter for **API name**.
 
 :::image type="content" source="media/files-troubleshoot-performance/metadata-metrics.png" alt-text="Screenshot that shows the 'API name' property filter.":::
 
@@ -136,18 +134,18 @@ To determine whether most of your requests are metadata-centric, start by follow
 
 - Check to see whether the application can be modified to reduce the number of metadata operations.
 - Separate the file share into multiple file shares within the same storage account.
-- Add a virtual hard disk (VHD) on the file share and mount the VHD from the client to perform file operations against the data. This approach works for single writer/reader scenarios or scenarios with multiple readers and no writers. Because the file system is owned by the client rather than Azure Files, this allows metadata operations to be local. The setup offers performance similar to that of local directly attached storage. However, because the data is in a VHD, it can't be accessed via any other means other than the Server Message Block (SMB) mount, such as REST API or through the Azure portal.
-    1. From the machine that needs to access the Azure file share, mount the file share using the storage account key and map it to an available network drive (for example, the Z: drive).
-    1. Go to **Disk Management** and select **Action** > **Create VHD**.
-    1. Set **Location** to the network drive to which the Azure file share is mapped, then set **Virtual hard disk size** as needed, and select **Fixed size**.
+- Add a virtual hard disk (VHD) on the file share and mount the VHD from the client to perform file operations against the data. This approach works for single writer/reader scenarios or scenarios with multiple readers and no writers. Because the file system is owned by the client rather than Azure Files, this allows metadata operations to be local. The setup offers performance similar to that of local directly attached storage. However, because the data is in a VHD, it can't be accessed via any other means other than the SMB mount, such as REST API or through the Azure portal.
+    1. From the machine which needs to access the Azure file share, mount the file share using the storage account key and map it to an available network drive (for example, Z:).
+    1. Go to **Disk Management** and select **Action > Create VHD**.
+    1. Set **Location** to the network drive that the Azure file share is mapped to, set **Virtual hard disk size** as needed, and select **Fixed size**.
     1. Select **OK**. Once the VHD creation is complete, it will automatically mount, and a new unallocated disk will appear.
     1. Right-click the new unknown disk and select **Initialize Disk**.
     1. Right-click the unallocated area and create a **New Simple Volume**.
-    1. You should see a new drive letter appear in **Disk Management** representing this VHD with read/write access (for example, the E: drive). In **File Explorer**, you should see the new VHD on the mapped Azure file share's network drive (the Z: drive in this example). To be clear, there should be two drive letters present: the standard Azure file share network mapping on the Z: drive and the VHD mapping on the E: drive.
+    1. You should see a new drive letter appear in **Disk Management** representing this VHD with read/write access (for example, E:). In **File Explorer**, you should see the new VHD on the mapped Azure file share's network drive (Z: in this example). To be clear, there should be two drive letters present: the standard Azure file share network mapping on Z:, and the VHD mapping on the E: drive.
     1. There should be much better performance on heavy metadata operations against files on the VHD mapped drive (E:) versus the Azure file share mapped drive (Z:). If desired, it should be possible to disconnect the mapped network drive (Z:) and still access the mounted VHD drive (E:).
 
-  - To mount a VHD on a Windows client, you can also use the [Mount-DiskImage](/powershell/module/storage/mount-diskimage) PowerShell cmdlet.
-  - To mount a VHD on Linux, consult the documentation for your Linux distribution. [Here's an example](https://man7.org/linux/man-pages/man5/nfs.5.html).  
+    - To mount a VHD on a Windows client, you can also use the [`Mount-DiskImage`](/powershell/module/storage/mount-diskimage) PowerShell cmdlet.
+    - To mount a VHD on Linux, consult the documentation for your Linux distribution. [Here's an example](https://man7.org/linux/man-pages/man5/nfs.5.html). 
 
 ### Cause 3: Single-threaded application
 
@@ -156,32 +154,32 @@ If the application that you're using is single-threaded, this setup can result i
 #### Solution
 
 - Increase application parallelism by increasing the number of threads.
-- Switch to applications where parallelism is possible. For example, for copy operations, you could use AzCopy or RoboCopy from Windows clients or the parallel command from Linux clients.
+- Switch to applications where parallelism is possible. For example, for copy operations, you could use AzCopy or RoboCopy from Windows clients or the **parallel** command from Linux clients.
 
-### Cause 4: The number of SMB channels exceeds four
+### Cause 4: Number of SMB channels exceeds four
 
 If you're using SMB MultiChannel and the number of channels you have exceeds four, this will result in poor performance. To determine if your connection count exceeds four, use the PowerShell cmdlet `get-SmbClientConfiguration` to view the current connection count settings.
 
 #### Solution
 
-Set the Windows per Network Interface Card (NIC) setting for SMB so that the total channels don't exceed four. For example, if you have two NICs, you can set the maximum per NIC to two using the following PowerShell cmdlet: `Set-SmbClientConfiguration -ConnectionCountPerRssNetworkInterface 2`.
+Set the Windows per NIC setting for SMB so that the total channels don't exceed four. For example, if you have two NICs, you can set the maximum per NIC to two using the following PowerShell cmdlet: `Set-SmbClientConfiguration -ConnectionCountPerRssNetworkInterface 2`.
 
 ## Very high latency for requests
 
 ### Cause
 
-The client VM could be located in a different region than the file share. Another reason for high latency could be the latency caused by the client or the network.
+The client VM could be located in a different region than the file share. Other reason for high latency could be due to the latency caused by the client or the network.
 
 ### Solution
 
 - Run the application from a VM that's located in the same region as the file share.
-- For your storage account, review transaction metrics **SuccessE2ELatency** and  **SuccessServerLatency** via Azure Monitor in Azure portal. A high difference between **SuccessE2ELatency** and **SuccessServerLatency** metrics values is an indication of latency that's likely caused by the network or the client. See [Transaction metrics](/azure/storage/files/storage-files-monitoring-reference#transaction-metrics) in Azure Files Monitoring data reference.
+- For your storage account, review transaction metrics **SuccessE2ELatency** and  **SuccessServerLatency** via **Azure Monitor** in Azure portal. A high difference between SuccessE2ELatency and SuccessServerLatency metrics values is an indication of latency that is likely caused by the network or the client. See [Transaction metrics](/azure/storage/files/storage-files-monitoring-reference#transaction-metrics) in Azure Files Monitoring data reference.
 
 ## Client unable to achieve maximum throughput supported by the network
 
 ### Cause
 
-One potential cause is a lack of SMB multi-channel support for standard file shares. Currently, Azure Files supports only a single channel for standard file shares, so there's only one connection from the client VM to the server. This single connection is pegged to a single core on the client VM, so the maximum throughput achievable from a VM is bound by a single core.
+One potential cause is a lack of SMB multi-channel support for standard file shares. Currently, Azure Files supports only single channel for standard file shares, so there's only one connection from the client VM to the server. This single connection is pegged to a single core on the client VM, so the maximum throughput achievable from a VM is bound by a single core.
 
 ### Workaround
 
@@ -292,9 +290,7 @@ You might see slow performance when you try to transfer files to the Azure Files
         - [Fpart](https://github.com/martymac/fpart) - Sorts files and packs them into partitions.
         - [Fpsync](https://github.com/martymac/fpart/blob/master/tools/fpsync) - Uses Fpart and a copy tool to spawn multiple instances to migrate data from src_dir to dst_url.
         - [Multi](https://github.com/pkolano/mutil) - Multi-threaded cp and md5sum based on GNU coreutils.
-- Setting the file size in advance, instead of making every write an extending write, helps improve copy speed in scenarios where the file size is known. If extending writes need to be avoided, you can set a destination file size with the `truncate --size <size> <file>` command. After that, the `dd if=<source> of=<target> bs=1M conv=notrunc`command will copy a source file without having to repeatedly update the size of the target file.
-
-    For example, you can set the destination file size for every file you want to copy (assume a share is mounted under */mnt/share*):
+- Setting the file size in advance, instead of making every write an extending write, helps improve copy speed in scenarios where the file size is known. If extending writes need to be avoided, you can set a destination file size with the `truncate --size <size> <file>` command. After that, the `dd if=<source> of=<target> bs=1M conv=notrunc`command will copy a source file without having to repeatedly update the size of the target file. For example, you can set the destination file size for every file you want to copy (assume a share is mounted under */mnt/share*):
 
     `for i in `` find * -type f``; do truncate --size ``stat -c%s $i`` /mnt/share/$i; done`
 
@@ -308,7 +304,7 @@ You might see slow performance when you try to transfer files to the Azure Files
 
 ### Cause
 
-If the number of `DirectoryOpen`or `DirectoryClose` calls is among the top API calls and you don't expect the client to make that many calls, the issue might be caused by the antivirus software that's installed on the Azure client VM.
+If the number of **DirectoryOpen/DirectoryClose** calls is among the top API calls and you don't expect the client to make that many calls, the issue might be caused by the antivirus software that's installed on the Azure client VM.
 
 ### Workaround
 
@@ -321,19 +317,19 @@ A fix for this issue is available in the [April Platform Update for Windows](htt
 Recent changes to SMB Multichannel config settings without a remount.
 
 ### Solution
-
-- After any changes to the Windows SMB client or account SMB multichannel configuration settings, you have to unmount the share, wait for 60 seconds, and remount the share to trigger the multichannel.
-- For Windows client OS, generate IO load with high queue depth, say QD=8, for example, copying a file to trigger SMB Multichannel. For server OS, SMB Multichannel is triggered with QD=1, which means as soon as you start any IO to the share.
+ 
+-	After any changes to Windows SMB client or account SMB multichannel configuration settings, you have to unmount the share, wait for 60 seconds, and remount the share to trigger the multichannel.
+-	For Windows client OS, generate IO load with high queue depth say QD=8, for example copying a file to trigger SMB Multichannel.  For server OS, SMB Multichannel is triggered with QD=1, which means as soon as you start any IO to the share.
 
 ## Slow performance when unzipping files in SMB file shares
 
-Depending on the exact compression method and unzip operation used, decompression operations may perform more slowly on an Azure file share than on your local disk. This is often because unzipping tools perform a number of metadata operations in the process of performing the decompression of a compressed archive. For the best performance, we recommend copying the compressed archive from the Azure file share to your local disk, unzipping there, and then using a copy tool such as Robocopy (or AzCopy) to copy it back to the Azure file share. Using a copy tool like Robocopy can compensate for the decreased performance of metadata operations in Azure Files relative to your local disk by using multiple threads to copy data in parallel.
+Depending on the exact compression method and unzip operation used, decompression operations may perform more slowly on an Azure file share than on your local disk. This is often because unzipping tools perform a number of metadata operations in the process of performing the decompression of a compressed archive. For the best performance, we recommend copying the compressed archive from the Azure file share to your local disk, unzipping there, and then using a copy tool such as Robocopy (or AzCopy) to copy back to the Azure file share. Using a copy tool like Robocopy can compensate for the decreased performance of metadata operations in Azure Files relative to your local disk by using multiple threads to copy data in parallel. 
 
 ## High latency on web sites hosted on file shares
 
 ### Cause
 
-A high number of file change notifications on file shares can result in high latencies. This typically occurs with web sites hosted on file shares with a deeply nested directory structure. A typical scenario is IIS hosted web application where file change notification is set up for each directory in the default configuration. Each change ([ReadDirectoryChangesW](/windows/win32/api/winbase/nf-winbase-readdirectorychangesw)) on the share that the client is registered for pushes a change notification from the file service to the client, which takes system resources, and the issue worsens with the number of changes. This can cause share throttling and thus result in higher client-side latency.
+High number file change notification on file shares can result in high latencies. This typically occurs with web sites hosted on file shares with deep nested directory structure. A typical scenario is IIS hosted web application where file change notification is set up for each directory in the default configuration. Each change ([ReadDirectoryChangesW](/windows/win32/api/winbase/nf-winbase-readdirectorychangesw)) on the share that the client is registered for pushes a change notification from the file service to the client, which takes system resources, and the issue worsens with the number of changes. This can cause share throttling and thus result in higher client-side latency.
 
 To confirm, you can use Azure Metrics in the portal.
 
