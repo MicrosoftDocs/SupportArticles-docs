@@ -5,7 +5,7 @@ services: storage
 ms.subservice: files
 author: AmandaAZ
 ms.service: storage
-ms.date: 06/25/2023
+ms.date: 06/26/2023
 ms.author: v-weizhu
 ms.reviewer: kendownie, jarrettr
 ---
@@ -34,9 +34,7 @@ When trying to connect to an Azure file share in Windows, you might see the foll
 
 ### <a id="error5"></a>Error 5 when you mount an Azure file share
 
-Here's the error message:
-
-> System error 5 has occurred. Access is denied.
+- System error 5 has occurred. Access is denied.
 
 #### Cause 1: Unencrypted communication channel
 
@@ -76,11 +74,9 @@ Validate that permissions are configured correctly:
 
 When you try to mount a file share from on-premises or a different datacenter, you might receive the following errors:
 
-> System error 53 has occurred. The network path was not found.
-
-> System error 67 has occurred. The network name cannot be found.
-
-> System error 87 has occurred. The parameter is incorrect.
+- System error 53 has occurred. The network path was not found.
+- System error 67 has occurred. The network name cannot be found.
+- System error 87 has occurred. The parameter is incorrect.
 
 #### Cause 1: Port 445 is blocked
 
@@ -121,21 +117,13 @@ TcpTestSucceeded : True
 
 #### Solutions for cause 1
 
-**Solution 1 — Use Azure File Sync as a QUIC endpoint**
+**Solution 1 — Use Azure File Sync as a QUIC endpoint** You can use Azure File Sync as a workaround to access Azure Files from clients that have port 445 blocked. Although Azure Files doesn't directly support SMB over QUIC, Windows Server 2022 Azure Edition does support the QUIC protocol. You can create a lightweight cache of your Azure file shares on a Windows Server 2022 Azure Edition VM using Azure File Sync. This configuration uses port 443, which is widely open outbound to support HTTPS, instead of port 445. To learn more about this option, see [SMB over QUIC with Azure File Sync](/azure/storage/files/storage-files-networking-overview#smb-over-quic).
 
-You can use Azure File Sync as a workaround to access Azure Files from clients that have port 445 blocked. Although Azure Files doesn't directly support SMB over QUIC, Windows Server 2022 Azure Edition does support the QUIC protocol. You can create a lightweight cache of your Azure file shares on a Windows Server 2022 Azure Edition VM using Azure File Sync. This configuration uses port 443, which is widely open outbound to support HTTPS, instead of port 445. To learn more about this option, see [SMB over QUIC with Azure File Sync](/azure/storage/files/storage-files-networking-overview#smb-over-quic).
+**Solution 2 — Use VPN or ExpressRoute** By setting up a virtual private network (VPN) or ExpressRoute from on-premises to your Azure storage account, with Azure Files exposed on your internal network using private endpoints, the traffic will go through a secure tunnel as opposed to over the internet. Follow the [instructions to setup a VPN](/azure/storage/files/storage-files-configure-p2s-vpn-windows) to access Azure Files from Windows.
 
-**Solution 2 — Use VPN or ExpressRoute**
+**Solution 3 — Unblock port 445 with help from your ISP/IT admin** Work with your IT department or ISP to open port 445 outbound to [Azure IP ranges](https://www.microsoft.com/download/details.aspx?id=56519).
 
-By setting up a virtual private network (VPN) or ExpressRoute from on-premises to your Azure storage account, with Azure Files exposed on your internal network using private endpoints, the traffic will go through a secure tunnel as opposed to over the internet. Follow the [instructions to setup a VPN](/azure/storage/files/storage-files-configure-p2s-vpn-windows) to access Azure Files from Windows.
-
-**Solution 3 — Unblock port 445 with help from your ISP/IT admin**
-
-Work with your IT department or ISP to open port 445 outbound to [Azure IP ranges](https://www.microsoft.com/download/details.aspx?id=56519).
-
-**Solution 4 — Use REST API-based tools like Storage Explorer or PowerShell**
-
-Azure Files also supports REST in addition to SMB. REST access works over port 443 (standard tcp). There are various tools that are written using REST API that enable a rich UI experience. [Storage Explorer](/azure/vs-azure-tools-storage-manage-with-storage-explorer?tabs=windows) is one of them. [Download and Install Storage Explorer](https://azure.microsoft.com/features/storage-explorer/) and connect to your file share backed by Azure Files. You can also use [PowerShell](/azure/storage/files/storage-how-to-use-files-portal) that also uses REST API.
+**Solution 4 — Use REST API-based tools like Storage Explorer or PowerShell** Azure Files also supports REST in addition to SMB. REST access works over port 443 (standard tcp). There are various tools that are written using REST API that enable a rich UI experience. [Storage Explorer](/azure/vs-azure-tools-storage-manage-with-storage-explorer?tabs=windows) is one of them. [Download and Install Storage Explorer](https://azure.microsoft.com/features/storage-explorer/) and connect to your file share backed by Azure Files. You can also use [PowerShell](/azure/storage/files/storage-how-to-use-files-portal) that also uses REST API.
 
 #### Cause 2: NTLMv1 is enabled
 
@@ -318,9 +306,7 @@ Browse to the storage account in which the Azure file share is located, select *
 
 If you can't modify or delete an Azure file share or snapshot, it might be due to file locks or leases. Azure Files provides two ways to prevent accidental modification or deletion of Azure file shares and share snapshots: 
 
-- - **Storage account resource locks**: All Azure resources, including the storage account, support [resource locks](/azure/azure-resource-manager/management/lock-resources). Locks might be put on the storage account by an administrator or by services such as Azure Backup.
-
-    Two variations of resource locks exist: **modify**, which prevents all modifications to the storage account and its resources, and **delete**, which only prevents deletions of the storage account and its resources. When modifying or deleting shares through the `Microsoft.Storage` resource provider, resource locks are enforced on Azure file shares and share snapshots. Most portal operations, Azure PowerShell cmdlets for Azure Files with `Rm` in the name (for example, `Get-AzRmStorageShare`), and Azure CLI commands in the `share-rm` command group (for example, `az storage share-rm list`) use the `Microsoft.Storage` resource provider. Some tools and utilities such as Storage Explorer, legacy Azure Files PowerShell management cmdlets without `Rm` in the name (for example, `Get-AzStorageShare`), and legacy Azure Files CLI commands under the `share` command group (for example, `az storage share list`) use legacy APIs in the FileREST API that bypass the `Microsoft.Storage` resource provider and resource locks. For more information on legacy management APIs exposed in the FileREST API, see [control plane in Azure Files](/rest/api/storageservices/file-service-rest-api#control-plane).
+- **Storage account resource locks**: All Azure resources, including the storage account, support [resource locks](/azure/azure-resource-manager/management/lock-resources). Locks might be put on the storage account by an administrator or by services such as Azure Backup. Two variations of resource locks exist: **modify**, which prevents all modifications to the storage account and its resources, and **delete**, which only prevents deletions of the storage account and its resources. When modifying or deleting shares through the `Microsoft.Storage` resource provider, resource locks are enforced on Azure file shares and share snapshots. Most portal operations, Azure PowerShell cmdlets for Azure Files with `Rm` in the name (for example, `Get-AzRmStorageShare`), and Azure CLI commands in the `share-rm` command group (for example, `az storage share-rm list`) use the `Microsoft.Storage` resource provider. Some tools and utilities such as Storage Explorer, legacy Azure Files PowerShell management cmdlets without `Rm` in the name (for example, `Get-AzStorageShare`), and legacy Azure Files CLI commands under the `share` command group (for example, `az storage share list`) use legacy APIs in the FileREST API that bypass the `Microsoft.Storage` resource provider and resource locks. For more information on legacy management APIs exposed in the FileREST API, see [control plane in Azure Files](/rest/api/storageservices/file-service-rest-api#control-plane).
 
 - **Share/share snapshot leases**: Share leases are a kind of proprietary lock for Azure file shares and file share snapshots. Leases might be put on individual Azure file shares or file share snapshots by administrators by calling the API through a script or by value-added services such as Azure Backup. When a lease is put on an Azure file share or file share snapshot, modifying or deleting the file share/share snapshot can be done with the lease ID. Admins can also release the lease before modification operations, which requires the lease ID, or break the lease, which doesn't require the lease ID. For more information on share leases, see [lease share](/rest/api/storageservices/lease-share).
 
@@ -548,7 +534,7 @@ Don't keep a large number of handles cached. Close handles, and then retry. Use 
 
 ## [Linux](#tab/linux)
 
-### <a id="permissiondenied"></a>Error "[permission denied] Disk quota exceeded" when you try to open a file
+### <a id="permissiondenied"></a>"[permission denied] Disk quota exceeded" when you try to open a file
 
 In Linux, you might receive an error message that resembles the following:
 
@@ -592,7 +578,7 @@ To copy a file over the network, you must first decrypt it. Use one of the follo
 
 Be aware that setting the registry key affects all copy operations that are made to network shares.
 
-## Error ConditionHeadersNotSupported from a web application using Azure Files from the browser
+## Error ConditionHeadersNotSupported from a Web Application using Azure Files from Browser
 
 The ConditionHeadersNotSupported error occurs when accessing content hosted in Azure Files through an application that makes use of conditional headers, such as a web browser, access fails. The error states that condition headers aren't supported.
 
