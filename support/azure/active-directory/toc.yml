@@ -136,6 +136,8 @@
     href: adal-authenticate-android-devices-fail.md
   - name: Can't perform a Workplace Join
     href: confirm-signin-info-workplace-join.md
+  - name: MFA fails because five registered devices already use authenticator apps
+    href: cant-set-up-mfa-five-devices-registered.md
   - name: Can't sync SystemMailbox or DiscoveryMailboxSearch accounts
     href: unable-sync-system-discovery-mailbox.md
   - name: Can't verify account when resetting password
