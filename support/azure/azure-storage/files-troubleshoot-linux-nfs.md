@@ -4,7 +4,7 @@ description: Troubleshoot issues with NFS Azure file shares.
 author: khdownie
 ms.service: storage
 ms.topic: troubleshooting
-ms.date: 06/10/2023
+ms.date: 06/26/2023
 ms.author: kendownie
 ms.subservice: files
 ---
@@ -32,14 +32,14 @@ Because Azure Files disallows alphanumeric UID/GID, you must disable idmapping.
 
 ### Cause 2: Idmapping was disabled, but got re-enabled after encountering bad file/directory  name
 
-Even if you correctly disable idmapping, it can be automatically re-enabled in some cases. For example, when Azure Files encounters a bad file name, it sends back an error. Upon seeing this error code, an NFS 4.1 Linux client decides to re-enable idmapping and sends future requests with alphanumeric UID/GID. For a list of unsupported characters on Azure Files, see [Naming and referencing shares, directories, files, and metadata](/rest/api/storageservices/naming-and-referencing-shares--directories--files--and-metadata). Colon is one of the unsupported characters.
+Even if you correctly disable idmapping, it can be automatically re-enabled in some cases. For example, when Azure Files encounters a bad file name, it sends back an error. Upon seeing this error code, an NFS 4.1 Linux client decides to re-enable idmapping, and sends future requests with alphanumeric UID/GID. For a list of unsupported characters on Azure Files, see this [article](/rest/api/storageservices/naming-and-referencing-shares--directories--files--and-metadata). Colon is one of the unsupported characters.
 
 ### Workaround
 
 Make sure you've disabled idmapping and that nothing is re-enabling it. Then perform the following steps:
 
 1. Unmount the share.
-1. Disable idmapping with the following command:
+1. Disable idmapping with:
 
     ```bash
     sudo echo Y > /sys/module/nfs/parameters/nfs4_disable_idmapping
@@ -64,9 +64,9 @@ Follow the instructions in [How to create an NFS share](/azure/storage/files/sto
 
 ## Can't connect to or mount an NFS Azure file share
 
-### Cause 1: Request originates from a client in an untrusted network or untrusted IP
+### Cause 1: Request originates from a client in an untrusted network/untrusted IP
 
-Unlike SMB, NFS doesn't have user-based authentication. The authentication for a share is based on your network security rule configuration. To ensure that clients only establish secure connections to your NFS share, you must use either the service or private endpoints. To access shares from on-premises in addition to private endpoints, you must set up a VPN or ExpressRoute connection. IPs added to the storage account's allowlist for the firewall are ignored. You must use one of the following methods to set up access to an NFS share:
+Unlike SMB, NFS doesn't have user-based authentication. The authentication for a share is based on your network security rule configuration. To ensure that clients only establish secure connections to your NFS share, you must use either the service endpoint or private endpoints. To access shares from on-premises in addition to private endpoints, you must set up a VPN or ExpressRoute connection. IPs added to the storage account's allowlist for the firewall are ignored. You must use one of the following methods to set up access to an NFS share:
 
 - [Service endpoint](/azure/storage/files/storage-files-networking-endpoints#restrict-public-endpoint-access)
   - Accessed by the public endpoint.
@@ -99,9 +99,9 @@ Disable **Secure transfer required** in your storage account's configuration bla
 
 ### Cause 3: nfs-utils, nfs-client, or nfs-common package isn't installed
 
-Before running the `mount` command, install the `nfs-utils`, `nfs-client`, or `nfs-common` package.
+Before running the `mount` command, install the nfs-utils, nfs-client, or nfs-common package.
 
-To check if the NFS package is installed, run the following commands:
+To check if the NFS package is installed, run:
 
 ### [RHEL](#tab/RHEL)
 
@@ -135,17 +135,17 @@ If the package isn't installed, install the package using your distro-specific c
 
 The same commands in this section apply to CentOS and Oracle Linux.
 
-- OS Version 7.X
+OS Version 7.X
 
-    ```bash
-    sudo yum install nfs-utils
-    ```
+```bash
+sudo yum install nfs-utils
+```
 
-- OS Version 8.X or 9.X
+OS Version 8.X or 9.X
 
-    ```bash
-    sudo dnf install nfs-utils
-    ```
+```bash
+sudo dnf install nfs-utils
+```
 
 #### [SLES](#tab/SLES)
 
@@ -178,13 +178,15 @@ sudo nc -zv <storageaccountnamehere>.file.core.windows.net 2049
 
 ## ls hangs for large directory enumeration on some kernels
 
-### Cause: A bug was introduced in Linux kernel v5.11 and was fixed in v5.12.5
-
-Some kernel versions have a bug that causes directory listings to result in an endless READDIR sequence. Small directories where all entries can be shipped in one call don't have this problem. The bug was introduced in Linux kernel v5.11 and was fixed in v5.12.5. So anything in between has the bug. RHEL 8.4 has this kernel version.
+### Cause: A bug was introduced in Linux kernel v5.11 and was fixed in v5.12.5.
+Some kernel versions have a bug that causes directory listings to result in an endless READDIR sequence. Small directories where all entries can be shipped in one call don't have this problem.
+The bug was introduced in Linux kernel v5.11 and was fixed in v5.12.5. So anything in between has the bug. RHEL 8.4 has this kernel version.
 
 #### Workaround: Downgrade or upgrade the kernel
-
 Downgrading or upgrading the kernel to anything outside the affected kernel should resolve the issue.
+
+## Need help?
+If you still need help, [contact support](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) to get your problem resolved quickly.
 
 ## See also
 
