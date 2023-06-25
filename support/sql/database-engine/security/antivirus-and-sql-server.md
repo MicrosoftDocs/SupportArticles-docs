@@ -4,7 +4,7 @@ description: Provides guidance on how to use antivirus software with SQL Server.
 author: pijocoder
 ms.author: jopilov
 ms.reviewer: jopilov
-ms.date: 05/24/2023
+ms.date: 06/25/2023
 ms.custom: sap:Security Issues
 ---
 # Configure antivirus software to work with SQL Server
@@ -372,15 +372,15 @@ For Power BI Report Server, the following exclusions can be made:
 
 Antivirus programs use filter drivers to attach to the I/O path on a computer and scan the I/O packets for known virus patterns. In Windows, you can use the [Fltmc utility](/windows-hardware/drivers/ifs/development-and-testing-tools#fltmcexe-command) to enumerate the filter drivers and the volumes they're configured to scan. The `fltmc instances` output may guide you through excluding volumes or folders from scanning.
 
-**1. Run run this command from a Command Prompt or PowerShell prompt in elevated mode**
+### 1. Run run this command from a Command Prompt or PowerShell prompt in elevated mode
 
 ```console
 fltmc instances
 ```
 
-**2. Use the output to identify which driver is installed and used by the antivirus program on your computer**
+### 2. Use the output to identify which driver is installed and used by the antivirus program on your computer
 
-Here's a sample output. You need the [Allocated filter altitudes document](/windows-hardware/drivers/ifs/allocated-altitudes) to look up filter drivers by using the uniquely assigned altitude. For example, you may find that the altitude 328010 is in the **320000 - 329998: FSFilter Anti-Virus** table in the document. Therefore, based on the table name in the document, you know that WdFilter.sys driver is used by the antivirus program on your computer and that it's developed by Microsoft.
+Here's a sample output. You need the [Allocated filter altitudes document](/windows-hardware/drivers/ifs/allocated-altitudes) to look up filter drivers by using the uniquely assigned altitude. For example, you may find that the altitude `328010` is in the **320000 - 329998: FSFilter Anti-Virus** table in the document. Therefore, based on the table name in the document, you know that the `WdFilter.sys` driver is used by the antivirus program on your computer and that it's developed by Microsoft.
 
 ```output
 Filter                Volume Name                              Altitude        Instance Name       Frame   SprtFtrs  VlStatus
@@ -428,9 +428,9 @@ npsvctrig             \Device\NamedPipe                          46000     npsvc
 storqosflt            C:                                        244000     storqosflt                0     0000000f
 ```
 
-**3. Find the volumes scanned by the antivirus driver**
+### 3. Find the volumes scanned by the antivirus driver
 
-In the sample output you may notice that WdFilter.sys driver scans the *X:\MSSQL15.SQL10\MSSQL\DATA* folder, which appears to be a SQL Server data folder. This folder is a good candidate to be excluded from antivirus scanning.
+In the sample output, you may notice that the `WdFilter.sys` driver scans the *X:\MSSQL15.SQL10\MSSQL\DATA* folder, which appears to be a SQL Server data folder. This folder is a good candidate to be excluded from antivirus scanning.
 
 ## Configure a firewall with SQL Server products
 
