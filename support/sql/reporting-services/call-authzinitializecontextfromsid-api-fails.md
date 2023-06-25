@@ -4,7 +4,6 @@ description: This article provides resolutions for the problem that you may expe
 ms.date: 09/21/2020
 ms.custom: sap:Reporting Services
 ms.reviewer: matthofa, prabagar
-ms.prod: sql
 ---
 # A call to the AuthzInitializeContextFromSid API function fails during the delivery of an e-mail subscription in SQL Server Reporting Services
 

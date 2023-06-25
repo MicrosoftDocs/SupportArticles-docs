@@ -3,7 +3,6 @@ title: Service may not start after patch installed
 description: This article provides a resolution for the problem that occurs after the patch installer installs a patch and attempts to restart the system.
 ms.date: 11/09/2020
 ms.custom: sap:Installation, Patching and Upgrade
-ms.prod: sql
 ---
 # SQL Server service may not start after patch installed
 

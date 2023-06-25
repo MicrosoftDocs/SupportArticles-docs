@@ -4,7 +4,6 @@ description: This article helps you work around a problem that causes incorrect 
 ms.date: 11/03/2020
 ms.custom: sap:MDAC and ADO
 ms.reviewer: bartd, rajeevp
-ms.prod: sql
 ---
 # You can't correctly translate character data from a client to a server by using the SQL Server ODBC driver if the client code page differs from the server code page
 

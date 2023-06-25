@@ -5,7 +5,6 @@ ms.date: 05/25/2022
 ms.custom: sap:Connection issues
 author: HaiyingYu
 ms.author: haiyingyu
-ms.prod: sql
 ---
 # Recommended prerequisites and checklist for troubleshooting SQL Server connectivity issues
 

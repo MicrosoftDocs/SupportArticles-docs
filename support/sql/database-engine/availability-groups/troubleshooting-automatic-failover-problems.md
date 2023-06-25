@@ -6,7 +6,6 @@ ms.custom: sap:Availability Groups
 author: padmajayaraman
 ms.author: v-jayaramanp
 ms.reviewer: ramakoni, cmathews
-ms.prod: sql
 ---
 # Troubleshooting automatic failover problems in SQL Server Always On environments
 

@@ -5,7 +5,6 @@ ms.date: 09/03/2020
 ms.custom: sap:Installation, Patching and Upgrade
 ms.reviewer: Arvindk
 ms.topic: article
-ms.prod: sql
 ---
 # Naming schema and Fix area descriptions for SQL Server software update packages
 

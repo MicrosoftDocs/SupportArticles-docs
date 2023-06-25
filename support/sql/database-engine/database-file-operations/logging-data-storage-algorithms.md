@@ -4,7 +4,6 @@ description: This article discusses how SQL Server logging and data storage algo
 ms.date: 10/10/2022
 ms.custom: sap:Administration and Management
 ms.reviewer: rdorr, bobward
-ms.prod: sql
 ---
 # Description of logging and data storage algorithms that extend data reliability in SQL Server
 
