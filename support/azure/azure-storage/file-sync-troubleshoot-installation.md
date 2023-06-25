@@ -4,19 +4,19 @@ description: Troubleshoot common issues with installing the Azure File Sync agen
 author: khdownie
 ms.service: storage
 ms.topic: troubleshooting
-ms.date: 06/14/2023
+ms.date: 06/25/2023
 ms.author: kendownie
 ms.subservice: files 
 ---
 # Troubleshoot Azure File Sync agent installation and server registration
 
-After deploying the Storage Sync Service, the next steps in deploying Azure File Sync are installing the Azure File Sync agent and registering Windows Server with the Storage Sync Service. This article is designed to help you troubleshoot and resolve issues you might encounter during these steps.
+After deploying the Storage Sync Service, the next steps in deploying Azure File Sync are installing the Azure File Sync agent and registering Windows Server with the Storage Sync Service. This article is designed to help you troubleshoot and resolve issues that you might encounter during these steps.
 
 ## Agent installation
 
 <a id="agent-installation-failures"></a>**Troubleshoot agent installation failures**
 
-If the Azure File Sync agent installation fails, locate the installation log file in the agent installation directory. If the Azure File Sync agent is installed on the *C:* volume, the installation log file is located under *C:\Program Files\Azure\StorageSyncAgent\InstallerLog*.
+If the Azure File Sync agent installation fails, locate the installation log file that's located in the agent installation directory. If the Azure File Sync agent is installed on the *C:* volume, the installation log file is located under *C:\Program Files\Azure\StorageSyncAgent\InstallerLog*.
 
 > [!Note]  
 > If the Azure File Sync agent is installed from the command line and the `/l\*v` switch is used, the log file will be located in the path where the agent installation was executed.
@@ -38,7 +38,7 @@ Action ended 12:23:40: InstallExecute. Return value 3.
 MSI (s) (0C:C8) [12:23:40:994]: Note: 1: 2265 2:  3: -2147287035
 ```
 
-In this example, the agent installation failed with error code -2147287035 (ERROR_ACCESS_DENIED).
+For this example, the agent installation failed with error code -2147287035 (ERROR_ACCESS_DENIED).
 
 <a id="agent-installation-gpo"></a>**Agent installation fails with error: Storage Sync Agent Setup Wizard ended prematurely because of an error**
 
@@ -82,7 +82,7 @@ After creating a server endpoint on Windows Server 2012 R2, the following error 
 > drive letter:\ is not accessible.  
 > The parameter is incorrect.
 
-To resolve this issue, install [KB2919355](https://support.microsoft.com/help/2919355/windows-rt-8-1-windows-8-1-windows-server-2012-r2-update-april-2014) and restart the server. If this update won't install because a later update is already installed, go to **Windows Update**, install the latest updates for Windows Server 2012 R2, and restart the server.
+To resolve this issue, install [KB2919355](https://support.microsoft.com/help/2919355/windows-rt-8-1-windows-8-1-windows-server-2012-r2-update-april-2014) and restart the server. If this update won't install because a later update is already installed, go to **Windows Update**, install the latest updates for Windows Server 2012 R2 and restart the server.
 
 ## Server registration
 
@@ -110,7 +110,7 @@ This message appears if Az or AzureRM PowerShell module isn't installed on Power
 
 To install the Az or AzureRM module on PowerShell 5.1, perform the following steps:
 
-1. Enter *powershell* from an elevated command prompt and press <kbd>Enter</kbd>.
+1. Type *powershell* from an elevated command prompt and hit <kbd>Enter</kbd>.
 2. Install the latest Az or AzureRM module by following the documentation:
     - [Az module (requires .NET 4.7.2)](/powershell/azure/install-azure-powershell)
     - [AzureRM module](https://go.microsoft.com/fwlink/?linkid=856959)
@@ -141,7 +141,7 @@ This issue occurs when the **Enhanced Internet Explorer Security** policy is ena
 If a server isn't listed under **Registered servers** for a Storage Sync Service:
 
 1. Sign in to the server that you want to register.
-2. Open **File Explorer**, and then go to the Storage Sync Agent installation directory (the default location is *C:\Program Files\Azure\StorageSyncAgent*).
+2. Open File Explorer, and then go to the Storage Sync Agent installation directory (the default location is *C:\Program Files\Azure\StorageSyncAgent*).
 3. Run *ServerRegistration.exe*, and complete the wizard to register the server with a Storage Sync Service.
 
 ## See also

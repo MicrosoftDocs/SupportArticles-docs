@@ -4,19 +4,19 @@ description: Troubleshoot common issues in managing Azure File Sync sync groups,
 author: khdownie
 ms.service: storage
 ms.topic: troubleshooting
-ms.date: 06/15/2023
+ms.date: 06/25/2023
 ms.author: kendownie
 ms.subservice: files
 ---
 # Troubleshoot Azure File Sync sync group management
 
-A sync group defines the sync topology for a set of files. Endpoints within a sync group are kept in sync with each other. A sync group must contain one cloud endpoint, which represents an Azure file share, and one or more server endpoints, which represents a path on a registered server. This article is designed to help you troubleshoot and resolve issues you might encounter when managing sync groups.
+A sync group defines the sync topology for a set of files. Endpoints within a sync group are kept in sync with each other. A sync group must contain one cloud endpoint, which represents an Azure file share, and one or more server endpoints, which represents a path on a registered server. This article is designed to help you troubleshoot and resolve issues that you might encounter when managing sync groups.
 
 ## Cloud endpoint creation errors
 
 <a id="cloud-endpoint-mgmtinternalerror"></a>**Cloud endpoint creation fails with this error: "MgmtInternalError"**
   
-This error can occur if the Azure File Sync service can't access the storage account due to Server Message Block (SMB) security settings. To enable Azure File Sync to access the storage account, the SMB security settings on the storage account must allow SMB 3.1.1 protocol version, NTLM v2 authentication, and AES-128-GCM encryption. To check the SMB security settings on the storage account, see [SMB security settings](/azure/storage/files/files-smb-protocol#smb-security-settings).
+This error can occur if the Azure File Sync service can't access the storage account due to Server Message Block (SMB) security settings. To enable Azure File Sync to access the storage account, the SMB security settings on the storage account must allow SMB 3.1.1 protocol version, NTLM v2 authentication and AES-128-GCM encryption. To check the SMB security settings on the storage account, see [SMB security settings](/azure/storage/files/files-smb-protocol#smb-security-settings).
 
 <a id="cloud-endpoint-mgmtforbidden"></a>**Cloud endpoint creation fails with this error: "MgmtForbidden"**
 
@@ -24,7 +24,7 @@ This error occurs if the Azure File Sync service can't access the storage accoun
 
 To resolve this issue, perform the following steps:
 
-- Verify that the "Allow trusted Microsoft services to access this storage account" setting is checked on your storage account. To learn more, see [Restrict access to the storage account public endpoint](/azure/storage/file-sync/file-sync-networking-endpoints#restrict-access-to-the-storage-account-public-endpoint).
+- Verify the "Allow trusted Microsoft services to access this storage account" setting is checked on your storage account. To learn more, see [Restrict access to the storage account public endpoint](/azure/storage/file-sync/file-sync-networking-endpoints#restrict-access-to-the-storage-account-public-endpoint).
 - Verify the SMB security settings on your storage account. To enable Azure File Sync to access the storage account, the SMB security settings on the storage account must allow SMB 3.1.1 protocol version, NTLM v2 authentication and AES-128-GCM encryption. To check the SMB security settings on the storage account, see [SMB security settings](/azure/storage/files/files-smb-protocol#smb-security-settings).
 
 <a id="cloud-endpoint-authfailed"></a>**Cloud endpoint creation fails, with this error: "AuthorizationFailed"**
@@ -48,7 +48,7 @@ To determine whether your user account role has the required permissions:
 1. In the Azure portal, select **Resource groups**.
 2. Select the resource group where the storage account is located, and then select **Access control (IAM)**.
 3. Select the **Role assignments** tab.
-4. Select the **Role** (for example, **Owner** or **Contributor**) for your user account.
+4. Select the **Role** (for example, Owner or Contributor) for your user account.
 5. In the **Resource Provider** list, select **Microsoft Authorization**.
     - **Role assignment** should have **Read** and **Write** permissions.
     - **Role definition** should have **Read** and **Write** permissions.
@@ -74,19 +74,19 @@ This error occurs if the server endpoint path is on the system volume and cloud 
 
 <a id="-2147024894"></a>**Server endpoint creation fails, with this error: "MgmtServerJobFailed" (Error code: -2147024894 or 0x80070002)**
 
-This error occurs if the server endpoint path specified isn't valid. Verify the server endpoint path specified is a locally attached NTFS volume. Note that, Azure File Sync doesn't support mapped drives as a server endpoint path.
+This error occurs if the server endpoint path specified isn't valid. Verify the server endpoint path specified is a locally attached NTFS volume. Note, Azure File Sync doesn't support mapped drives as a server endpoint path.
 
 <a id="-2134375640"></a>**Server endpoint creation fails with this error: "MgmtServerJobFailed" (Error code: -2134375640 or 0x80c80328)**
   
-This error occurs if the server endpoint path specified isn't an NTFS volume. Verify the server endpoint path specified is a locally attached NTFS volume. Note that, Azure File Sync doesn't support mapped drives as a server endpoint path.
+This error occurs if the server endpoint path specified isn't an NTFS volume. Verify the server endpoint path specified is a locally attached NTFS volume. Note, Azure File Sync doesn't support mapped drives as a server endpoint path.
 
 <a id="-2134347507"></a>**Server endpoint creation fails, with this error: "MgmtServerJobFailed" (Error code: -2134347507 or 0x80c8710d)**
   
-This error occurs because Azure File Sync doesn't support server endpoints on volumes that have a compressed System Volume Information folder. To resolve this issue, decompress the System Volume Information folder. If the System Volume Information folder is the only folder compressed on the volume, perform the following steps:
+This error occurs because Azure File Sync doesn't support server endpoints on volumes, which have a compressed System Volume Information folder. To resolve this issue, decompress the System Volume Information folder. If the System Volume Information folder is the only folder compressed on the volume, perform the following steps:
 
 1. Download [PsExec](/sysinternals/downloads/psexec) tool.
 2. Run the `PsExec.exe -i -s -d cmd` command from an elevated command prompt to launch a command prompt running under the system account.
-3. From the command prompt running under the system account, enter the following commands and press <kbd>Enter</kbd>:
+3. From the command prompt running under the system account, type the following commands and hit <kbd>Enter</kbd>:
 
     ```console
     cd /d "drive letter:\System Volume Information"
@@ -104,7 +104,7 @@ This error occurs if another server endpoint is already syncing the server endpo
 
 <a id="-2160590967"></a>**Server endpoint creation fails with this error: "MgmtServerJobFailed" (Error code: -2160590967 or 0x80c80077)**
   
-This error occurs if the server endpoint path contains orphaned tiered files. If a server endpoint was recently removed, wait until the orphaned tiered files cleanup has completed. An Event ID 6662 is logged to the Telemetry event log once the orphaned tiered files cleanup has started. An Event ID 6661 is logged once the orphaned tiered files cleanup has completed and a server endpoint can be recreated using the path. If the server endpoint creation fails after the cleanup of the tiered files has completed or if Event ID 6661 can't be found in the Telemetry event log due to event log rollover, remove the orphaned tiered files by performing the steps documented in [Tiered files are not accessible on the server after deleting a server endpoint](/azure/storage/file-sync/file-sync-troubleshoot-cloud-tiering#tiered-files-are-not-accessible-on-the-server-after-deleting-a-server-endpoint).
+This error occurs if the server endpoint path contains orphaned tiered files. If a server endpoint was recently removed, wait until the orphaned tiered files cleanup has completed. An Event ID 6662 is logged to the Telemetry event log once the orphaned tiered files cleanup has started. An Event ID 6661 is logged once the orphaned tiered files cleanup has completed and a server endpoint can be recreated using the path. If the server endpoint creation fails after the tiered files cleanup has completed or if Event ID 6661 can't be found in the Telemetry event log due to event log rollover, remove the orphaned tiered files by performing the steps documented in [Tiered files are not accessible on the server after deleting a server endpoint](/azure/storage/file-sync/file-sync-troubleshoot-cloud-tiering#tiered-files-are-not-accessible-on-the-server-after-deleting-a-server-endpoint).
 
 <a id="-2134347757"></a>**Server endpoint deletion fails with this error: "MgmtServerJobExpired" (Error code: -2134347757 or 0x80c87013)**
 
@@ -114,7 +114,7 @@ This error occurs if the server is offline or doesn't have network connectivity.
 
 <a id="server-endpoint-provisioningfailed"></a>**Unable to open server endpoint properties page or update cloud tiering policy**
 
-This issue can occur if a management operation on the server endpoint fails. If the server endpoint properties page doesn't open in the Azure portal, updating the server endpoint using PowerShell commands from the server may fix this issue.
+This issue can occur if a management operation on the server endpoint fails. If the server endpoint properties page doesn't open in the Azure portal, updating server endpoint using PowerShell commands from the server may fix this issue.
 
 ```powershell
 # Get the server endpoint id based on the server endpoint DisplayName property
@@ -133,13 +133,13 @@ Set-AzStorageSyncServerEndpoint `
 
 <a id="server-endpoint-noactivity"></a>**Server endpoint has a health status of "No Activity" or "Pending", and the server state on the registered servers blade is "Appears offline"**
 
-This issue can occur if the Storage Sync Monitor process (*AzureStorageSyncMonitor.exe*) isn't running or the server is unable to access the Azure File Sync service.
+This issue can occur if the Storage Sync Monitor process (AzureStorageSyncMonitor.exe) isn't running or the server is unable to access the Azure File Sync service.
 
-On the server that's showing as "Appears offline" in the portal, look at Event ID 9301 in the Telemetry event log (located under *Applications and Services\Microsoft\FileSync\Agent* in **Event Viewer**) to determine why the server is unable to access the Azure File Sync service.
+On the server that is showing as "Appears offline" in the portal, look at Event ID 9301 in the Telemetry event log (located under *Applications and Services\Microsoft\FileSync\Agent* in Event Viewer) to determine why the server is unable to access the Azure File Sync service.
 
 - If "GetNextJob completed with status: 0" is logged, the server can communicate with the Azure File Sync service
 
-    Open Task Manager on the server and verify that the Storage Sync Monitor (AzureStorageSyncMonitor.exe) process is running. If the process isn't running, first try restarting the server. If restarting the server doesn't resolve the issue, upgrade to the latest Azure File Sync [agent version](/azure/storage/file-sync/file-sync-release-notes).
+    Open Task Manager on the server and verify the Storage Sync Monitor (AzureStorageSyncMonitor.exe) process is running. If the process isn't running, first try restarting the server. If restarting the server doesn't resolve the issue, upgrade to the latest Azure File Sync [agent version](/azure/storage/file-sync/file-sync-release-notes).
 
 - If "GetNextJob completed with status: -2134347756" is logged, the server is unable to communicate with the Azure File Sync service due to a firewall, proxy, or TLS cipher suite order configuration.
 
@@ -161,7 +161,7 @@ On the server that's showing as "Appears offline" in the portal, look at Event I
     - TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256  
 
     > [!Note]
-    > Different Windows vesions support different TLS cipher suites and priority orders. See [TLS Cipher Suites in Windows](/windows/win32/secauthn/cipher-suites-in-schannel) for the corresponding Windows version and the supported cipher suites and default order in which they are chosen by the Microsoft Schannel Provider.
+    > Different Windows vesions support different TLS cipher suites and priority order. See [TLS Cipher Suites in Windows](/windows/win32/secauthn/cipher-suites-in-schannel) for the corresponding Windows version and the supported cipher suites and default order in which they are chosen by the Microsoft Schannel Provider.
 
 - If "GetNextJob completed with status: -2134347764" is logged, the server is unable to communicate with the Azure File Sync service due to an expired or deleted certificate.  
 
@@ -171,13 +171,13 @@ On the server that's showing as "Appears offline" in the portal, look at Event I
     Reset-AzStorageSyncServerCertificate -ResourceGroupName <string> -StorageSyncServiceName <string>
     ```
 
-<a id="endpoint-noactivity-sync"></a>**Server endpoint has a health status of "No Activity", and the server state on the registered servers blade is "Online"**
+<a id="endpoint-noactivity-sync"></a>**Server endpoint has a health status of "No Activity" and the server state on the registered servers blade is "Online"**
 
 A server endpoint health status of "No Activity" means the server endpoint hasn't logged sync activity in the past two hours.
 
 To check current sync activity on a server, see [How do I monitor the progress of a current sync session?](/azure/storage/file-sync/file-sync-troubleshoot-sync-errors#how-do-i-monitor-the-progress-of-a-current-sync-session)
 
-A server endpoint may not log sync activity for several hours due to a bug or insufficient system resources. Verify that the latest Azure File Sync [agent version](/azure/storage/file-sync/file-sync-release-notes) is installed. If the issue persists, open a support request.
+A server endpoint may not log sync activity for several hours due to a bug or insufficient system resources. Verify the latest Azure File Sync [agent version](/azure/storage/file-sync/file-sync-release-notes) is installed. If the issue persists, open a support request.
 
 > [!Note]  
 > If the server state on the registered servers blade is "Appears Offline," perform the steps documented in the [Server endpoint has a health status of "No Activity" or "Pending" and the server state on the registered servers blade is "Appears offline"](#server-endpoint-noactivity) section.
