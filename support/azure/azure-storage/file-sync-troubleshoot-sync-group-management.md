@@ -14,11 +14,11 @@ A sync group defines the sync topology for a set of files. Endpoints within a sy
 
 ## Cloud endpoint creation errors
 
-<a id="cloud-endpoint-mgmtinternalerror"></a>**Cloud endpoint creation fails with this error: "MgmtInternalError"**
+<a id="cloud-endpoint-mgmtinternalerror"></a>**Cloud endpoint creation fails, with this error: "MgmtInternalError"**
   
 This error can occur if the Azure File Sync service can't access the storage account due to Server Message Block (SMB) security settings. To enable Azure File Sync to access the storage account, the SMB security settings on the storage account must allow SMB 3.1.1 protocol version, NTLM v2 authentication and AES-128-GCM encryption. To check the SMB security settings on the storage account, see [SMB security settings](/azure/storage/files/files-smb-protocol#smb-security-settings).
 
-<a id="cloud-endpoint-mgmtforbidden"></a>**Cloud endpoint creation fails with this error: "MgmtForbidden"**
+<a id="cloud-endpoint-mgmtforbidden"></a>**Cloud endpoint creation fails, with this error: "MgmtForbidden"**
 
 This error occurs if the Azure File Sync service can't access the storage account.
 
@@ -53,7 +53,7 @@ To determine whether your user account role has the required permissions:
     - **Role assignment** should have **Read** and **Write** permissions.
     - **Role definition** should have **Read** and **Write** permissions.
 
-<a id="cloud-endpoint-using-share"></a>**Cloud endpoint creation fails with this error: "The specified Azure FileShare is already in use by a different CloudEndpoint"**
+<a id="cloud-endpoint-using-share"></a>**Cloud endpoint creation fails, with this error: "The specified Azure FileShare is already in use by a different CloudEndpoint"**
   
 This error occurs if the Azure file share is already in use by another cloud endpoint.
 
@@ -68,7 +68,7 @@ If you see this message and the Azure file share currently isn't in use by a clo
 
 ## Server endpoint creation and deletion errors
 
-<a id="-2134375898"></a>**Server endpoint creation fails with this error: "MgmtServerJobFailed" (Error code: -2134375898 or 0x80c80226)**
+<a id="-2134375898"></a>**Server endpoint creation fails, with this error: "MgmtServerJobFailed" (Error code: -2134375898 or 0x80c80226)**
   
 This error occurs if the server endpoint path is on the system volume and cloud tiering is enabled. Cloud tiering isn't supported on the system volume. To create a server endpoint on the system volume, disable cloud tiering when creating the server endpoint.
 
@@ -76,7 +76,7 @@ This error occurs if the server endpoint path is on the system volume and cloud 
 
 This error occurs if the server endpoint path specified isn't valid. Verify the server endpoint path specified is a locally attached NTFS volume. Note, Azure File Sync doesn't support mapped drives as a server endpoint path.
 
-<a id="-2134375640"></a>**Server endpoint creation fails with this error: "MgmtServerJobFailed" (Error code: -2134375640 or 0x80c80328)**
+<a id="-2134375640"></a>**Server endpoint creation fails, with this error: "MgmtServerJobFailed" (Error code: -2134375640 or 0x80c80328)**
   
 This error occurs if the server endpoint path specified isn't an NTFS volume. Verify the server endpoint path specified is a locally attached NTFS volume. Note, Azure File Sync doesn't support mapped drives as a server endpoint path.
 
@@ -93,20 +93,20 @@ This error occurs because Azure File Sync doesn't support server endpoints on vo
     compact /u /s
     ```
 
-<a id="-2134376345"></a>**Server endpoint creation fails with this error: "MgmtServerJobFailed" (Error code: -2134376345 or 0x80C80067)**
+<a id="-2134376345"></a>**Server endpoint creation fails, with this error: "MgmtServerJobFailed" (Error code: -2134376345 or 0x80C80067)**
 
 This error occurs if the limit of server endpoints per server is reached. Azure File Sync currently supports up to 30 server endpoints per server. For more information, see
 [Azure File Sync scale targets](/azure/storage/files/storage-files-scale-targets?toc=/azure/storage/filesync/toc.json#azure-file-sync-scale-targets).
 
-<a id="-2134376427"></a>**Server endpoint creation fails with this error: "MgmtServerJobFailed" (Error code: -2134376427 or 0x80c80015)**
+<a id="-2134376427"></a>**Server endpoint creation fails, with this error: "MgmtServerJobFailed" (Error code: -2134376427 or 0x80c80015)**
 
 This error occurs if another server endpoint is already syncing the server endpoint path specified. Azure File Sync doesn't support multiple server endpoints syncing the same directory or volume.
 
-<a id="-2160590967"></a>**Server endpoint creation fails with this error: "MgmtServerJobFailed" (Error code: -2160590967 or 0x80c80077)**
+<a id="-2160590967"></a>**Server endpoint creation fails, with this error: "MgmtServerJobFailed" (Error code: -2160590967 or 0x80c80077)**
   
 This error occurs if the server endpoint path contains orphaned tiered files. If a server endpoint was recently removed, wait until the orphaned tiered files cleanup has completed. An Event ID 6662 is logged to the Telemetry event log once the orphaned tiered files cleanup has started. An Event ID 6661 is logged once the orphaned tiered files cleanup has completed and a server endpoint can be recreated using the path. If the server endpoint creation fails after the tiered files cleanup has completed or if Event ID 6661 can't be found in the Telemetry event log due to event log rollover, remove the orphaned tiered files by performing the steps documented in [Tiered files are not accessible on the server after deleting a server endpoint](/azure/storage/file-sync/file-sync-troubleshoot-cloud-tiering#tiered-files-are-not-accessible-on-the-server-after-deleting-a-server-endpoint).
 
-<a id="-2134347757"></a>**Server endpoint deletion fails with this error: "MgmtServerJobExpired" (Error code: -2134347757 or 0x80c87013)**
+<a id="-2134347757"></a>**Server endpoint deletion fails, with this error: "MgmtServerJobExpired" (Error code: -2134347757 or 0x80c87013)**
 
 This error occurs if the server is offline or doesn't have network connectivity. If the server is no longer available, unregister the server in the portal, which will delete the server endpoints. To delete the server endpoints, follow the steps that are described in [Unregister a server with Azure File Sync](/azure/storage/file-sync/file-sync-server-registration#unregister-the-server-with-storage-sync-service).
 
@@ -131,7 +131,7 @@ Set-AzStorageSyncServerEndpoint `
     -VolumeFreeSpacePercent 60
 ```
 
-<a id="server-endpoint-noactivity"></a>**Server endpoint has a health status of "No Activity" or "Pending", and the server state on the registered servers blade is "Appears offline"**
+<a id="server-endpoint-noactivity"></a>**Server endpoint has a health status of "No Activity" or "Pending" and the server state on the registered servers blade is "Appears offline"**
 
 This issue can occur if the Storage Sync Monitor process (AzureStorageSyncMonitor.exe) isn't running or the server is unable to access the Azure File Sync service.
 
