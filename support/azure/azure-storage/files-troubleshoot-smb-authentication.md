@@ -3,7 +3,7 @@ title: Troubleshoot Azure Files identity-based authentication and authorization 
 description: Troubleshoot problems using identity-based authentication to connect to SMB Azure file shares and see possible resolutions.
 author: khdownie
 ms.service: storage
-ms.date: 06/25/2023
+ms.date: 06/26/2023
 ms.author: kendownie
 ms.subservice: files 
 ---
@@ -54,7 +54,7 @@ Enable Azure AD DS on the Azure AD tenant of the subscription that your storage 
 
 ## Unable to mount Azure file shares with AD credentials
 
-### Self-diagnostics steps
+### Self diagnostics steps
 
 First, make sure that you've followed the steps to [enable Azure Files AD DS Authentication](/azure/storage/files/storage-files-identity-auth-active-directory-enable).
 
