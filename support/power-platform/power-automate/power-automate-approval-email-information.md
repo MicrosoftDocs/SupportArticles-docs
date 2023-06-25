@@ -2,7 +2,7 @@
 title: Power Automate approval email information
 description: Describes the information about Power Automate approval emails.
 ms.reviewer: mansong, hamenon
-ms.date: 04/25/2023
+ms.date: 06/25/2023
 ms.subservice: power-automate-flows
 ---
 # Power Automate approval email delivery information
@@ -20,7 +20,7 @@ For customers whose MX record points at another filtering service (for instance,
 
 ## Commercial
 
-For commercial Power Automate (all geos), approval emails may come from any IP in the following Sender Policy Framework (SPF) record. We always recommend allow listing the SPF record instead of individual IP addresses to make sure your emails are not impacted.
+For commercial Power Automate (all geos), approval emails may come from any IP in the following Sender Policy Framework (SPF) record. We always recommend allowing the listing of the SPF record instead of individual IP addresses to make sure your emails aren't impacted.
 
 > [!NOTE]
 > SPF records can be updated when more servers and regions are added. For the most up-to-date IP address ranges, you can look up the SPF record for `_spf1-meo.microsoft.com`.
@@ -33,7 +33,7 @@ All approval emails will be sent with a sender address of `flow-noreply@microsof
 
 ## Sovereign Clouds
 
-For GCC, GCC High and DoD regions for Power Automate, approval emails may come from any of the following IPs:
+For US Government (GCC), US Government (GCC High), and US Department of Defense (DoD) regions for Power Automate, approval emails may come from any of the following IPs:
 
 - 52.244.206.214
 - 13.72.50.45
