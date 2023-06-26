@@ -1,6 +1,19 @@
 - name: Welcome
   href: welcome-azure-storage.yml
 
+- name: Azure File Sync
+  items:
+  - name: Troubleshoot Azure File Sync
+    href: file-sync-troubleshoot.md
+  - name: Troubleshoot agent installation and server registration
+    href: file-sync-troubleshoot-installation.md
+  - name: Troubleshoot cloud tiering issues
+    href: file-sync-troubleshoot-cloud-tiering.md
+  - name: Troubleshoot sync group management
+    href: file-sync-troubleshoot-sync-group-management.md
+  - name: Troubleshoot sync issues
+    href: file-sync-troubleshoot-sync-errors.md
+
 - name: Blob Storage and Azure Data Lake Store Gen2
   items:
   - name: Azure Storage data protection, backup, and recovery
