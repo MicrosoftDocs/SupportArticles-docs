@@ -5,7 +5,7 @@ summary: This library of articles provides guidance to troubleshoot and fix erro
 metadata:
   title: Skype for Business Server troubleshooting
   description: Documentation for troubleshooting common issues with Skype for Business Server.
-  ms.prod: skype-for-business-itpro
+  ms.service: skype-for-business-server
   ms.topic: landing-page
   author: helenclu
   ms.author: luche
