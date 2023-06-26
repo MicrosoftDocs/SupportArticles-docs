@@ -55,3 +55,5 @@ To solve this issue, below are steps for resolving above mentioned cases respect
 7.	Either create the calendar in UCI and change that in SLA Item.
 	(Or) 
 	Open the same legacy calendar in UCI interface and "Save and Close".
+	Setting up Calendar: https://docs.microsoft.com/dynamics365/customer-service/create-customer-service-schedule-define-work-hours
+	Change Business Hours in SLA Item: https://docs.microsoft.com/dynamics365/customer-service/create-customer-service-schedule-define-work-hours
