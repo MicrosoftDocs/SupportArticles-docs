@@ -4,7 +4,6 @@ description: This article provides resolutions for the problem that occurs when 
 ms.date: 12/07/2020
 ms.custom: sap:Integration Services
 ms.reviewer: craigg
-ms.prod: sql
 ---
 # SSIS package does not run when called from a SQL Server Agent job step
 

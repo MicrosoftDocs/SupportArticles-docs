@@ -2316,6 +2316,8 @@
       href: ./remote/cannot-view-remoteapp-rd-session-host.md
     - name: Can't connect to remote computer
       href: ./remote/cannot-connect-to-remote-computer.md
+    - name: Can't sign in to a published application with SSO through RD Web
+      href: ./remote/cannot-sign-in-published-application-sso-rd-web.md
     - name: No Connected icon in notification area
       href: ./remote/no-connected-icon-in-notification-area.md
     - name: Remote Desktop tab in RDWEB is missing from Edge
@@ -2399,7 +2401,7 @@
     - name: Remote Desktop Connection 6.0 prompts for credentials
       href: ./remote/remote-desktop-connection-6-prompts-credentials.md
     - name: Remote Desktop IP Virtualization does not work
-      href: ./remote/remote-desktop-ip-virtualization-not-work.md
+      href: ./remote/remote-desktop-ip-virtualization.md
     - name: Remote Desktop or RemoteApp session doesn't terminate
       href: ./remote/rd-or-remoteapp-session-not-terminate.md
     - name: Single-application sharing with Terminal Server

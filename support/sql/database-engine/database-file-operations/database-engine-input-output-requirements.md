@@ -4,7 +4,6 @@ description: This article describes the SQL Server Database Engine Disk I/O requ
 ms.date: 11/04/2022
 ms.custom: sap:Administration and Management
 ms.topic: article
-ms.prod: sql
 ---
 # SQL Server Database Engine Disk Input/Output (I/O) requirements
 

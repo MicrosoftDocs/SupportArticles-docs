@@ -4,7 +4,6 @@ description: This article provides resolutions for the error where the SQL Serve
 ms.date: 08/05/2020
 ms.custom: sap:Parallel Data Warehouse (APS)
 ms.reviewer: krlange
-ms.prod: sql
 ---
 # System Center Operations Manager can't monitor SQL Server Analytics Platform System appliance
 

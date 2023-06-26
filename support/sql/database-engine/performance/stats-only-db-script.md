@@ -5,7 +5,6 @@ ms.date: 08/18/2022
 ms.custom: sap:Administration and Management
 ms.topic: how-to
 author: ramakoni1
-ms.prod: sql
 ms.author: v-jayaramanp
 ---
 

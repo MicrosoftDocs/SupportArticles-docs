@@ -1,7 +1,7 @@
 ---
 title: Cluster provisioning status changed from Ready to Failed
 description: Troubleshoot why the provisioning status of my Azure Kubernetes Service (AKS) cluster changed from Ready to Failed, even if I didn't do an operation.
-ms.date: 5/25/2022
+ms.date: 6/08/2023
 author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: chiragpa, nickoman

@@ -5,7 +5,7 @@ summary: Welcome to SQL Server troubleshooting. These articles explain how to de
 metadata:
   title: SQL Server troubleshooting document
   description: This article lists Knowledge Base (KB) and other Support articles for SQL Server. # Required; article description that is displayed in search results. < 160 chars.
-  ms.prod: sql
+  ms.service: sql
   ms.topic: landing-page # Required
   author: HaiyingYu  #Required; your GitHub user alias, with correct capitalization.
   ms.author: HaiyingYu #Required; microsoft alias of author; optional team alias.
@@ -143,3 +143,18 @@ landingContent:
           url: https://techcommunity.microsoft.com/t5/SQL-Server-Support/bg-p/SQLServerSupport/
         - text: Azure Database Support Blog
           url: https://techcommunity.microsoft.com/t5/azure-database-support-blog/bg-p/AzureDBSupport
+
+  - title: SQL Server References
+    linkLists:
+      - linkListType: reference
+        links:
+        - text: Samples and sample databases
+          url: /sql/samples/sql-samples-where-are
+        - text: System catalog views
+          url: /sql/relational-databases/system-catalog-views/catalog-views-transact-sql
+        - text: System Dynamic Management Views
+          url: /sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views
+        - text: DBCC commands
+          url: /sql/t-sql/database-console-commands/dbcc-transact-sql
+        - text: Database Engine events and errors
+          url: /sql/relational-databases/errors-events/database-engine-events-and-errors         

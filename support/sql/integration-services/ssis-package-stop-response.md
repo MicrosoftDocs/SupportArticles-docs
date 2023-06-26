@@ -4,7 +4,6 @@ description: Describes a problem in which the execution of a Microsoft SSIS pack
 ms.date: 09/02/2020
 ms.custom: sap:Integration Services
 ms.reviewer: kayokon, hisashik, ksaito
-ms.prod: sql
 ---
 # The execution of an SSIS package stops responding when you enable DTC transactions for a package in Microsoft SQL Server
 

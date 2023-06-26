@@ -1,7 +1,7 @@
 ---
 title: VM Inspector for Azure Virtual Machines (Preview)
 description: Describes the VM Inspector tool for Azure virtual machines for troubleshooting issues on Windows or Linux virtual machines.
-ms.date: 11/14/2022
+ms.date: 06/06/2023
 author: DennisLee-DennisLee
 ms.author: v-dele
 ms.service: virtual-machines
@@ -41,7 +41,7 @@ From [Linux distributions endorsed on Azure](/azure/virtual-machines/linux/endor
 - CoreOS
 - Debian
 - Flatcar Container Linux by Kinvolk
-- Mariner
+- Azure Linux
 - OpenSUSE
 - Oracle Linux Server
 - Red Hat Enterprise Linux (RHEL)

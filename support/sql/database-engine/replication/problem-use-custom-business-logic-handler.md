@@ -4,7 +4,6 @@ description: Provides resolutions for a problem that occurs when you use a custo
 ms.date: 07/22/2020
 ms.custom: sap:Replication, change tracking, change data capture
 ms.reviewer: holgerl, sqlblt
-ms.prod: sql
 ---
 # A custom SQL Server business logic handler replaces an empty string with an end-of-string character
 

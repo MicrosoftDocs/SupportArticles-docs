@@ -221,6 +221,8 @@
     href: error-using-feature-requiring-virtual-machine-scale-set.md
   - name: insufficientSubnetSize error
     href: insufficientsubnetsize-error-advanced-networking.md
+  - name: Memory saturation occurs in pods after cluster upgrade
+    href: aks-memory-saturation-after-upgrade.md
   - name: Missing or invalid service principal
     href: missing-or-invalid-service-principal.md
   - name: Network watch is stale after egress traffic restriction

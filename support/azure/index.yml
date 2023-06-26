@@ -72,7 +72,7 @@ productDirectory:
     - url: azure-storage/welcome-azure-storage.yml
       text: Troubleshooting articles for Azure Files
   - title: Azure File Sync
-    imageSrc:
+    imageSrc: https://static.docs.com/ui/media/product/azure/storage-sync-services.svg
     links:
     - url: azure-storage/welcome-azure-storage.yml
       text: Troubleshooting articles for Azure File Sync
