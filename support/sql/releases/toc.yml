@@ -129,11 +129,11 @@ items:
     items:
     - name: Cumulative Update 2 (KB4536075)
       href: sqlserver-2019/cumulativeupdate2.md
-    - name: Cumulative Update 1
+  - name: Cumulative Update 1
     items:
     - name: Cumulative Update 1 (KB4527376)
       href: sqlserver-2019/cumulativeupdate1.md
-    - name: Servicing Update for RTM
+  - name: Servicing Update for RTM
     items:
     - name: Servicing Update for SQL Server 2019 RTM (KB4517790)
       href: sqlserver-2019/service-update-for-rtm.md    
