@@ -1,13 +1,13 @@
 ---
-title: SLA Instances associated with the Entity/Case records doesn’t have SLA Item Id filled.
-description: Provides a resolution when SLA instances associated with the Entity/Case records doesn’t have SLA Item Id filled.
+title: SLA instances associated with the Entity/Case records doesn’t have SLA item Id filled.
+description: Provides a resolution when SLA instances associated with the Entity/Case records doesn’t have SLA item Id filled.
 ms.reviewer: sdas
 ms.author: ravimanne
 ms.date: 06/23/2023
 ---
-# Failed to fill SLA Item for SLA Instances which are associated with the Entity/Case
+# Failed to fill SLA item for SLA instances which are associated with the Entity/Case
 
-This article provides a resolution when SLA Instances associated with the Entity/Case records doesn’t have SLA Item Id filled. These might be legacy SLA instances still attached with case but not in cancelled state.
+This article provides a resolution when SLA instances associated with the Entity/Case records doesn’t have SLA item Id filled. These might be legacy SLA instances still attached with case but not in cancelled state.
 
 ## Symptoms
 
@@ -18,14 +18,14 @@ at Microsoft.Dynamics.SLAManagement.Plugins.**SLAInstanceService.GetSLAInstance(
 
 ## Cause
 
-This will happen when SLA Instances associated with Entity/Case records doesn’t have SLA Item Id filled. These might be legacy SLA instances still attached with case but not in cancelled state.
+This will happen when SLA instances associated with Entity/Case records doesn’t have SLA item Id filled. These might be legacy SLA instances still attached with case but not in cancelled state.
 
 ## Resolution
 
 To solve this issue, 
-First verify in Support Org that record updates which are having errors, does have SLA instances with SLA Item null.
-Users can search for the slakpiinstances from advanced find using the filter for SLA Item is null and the SLA with the Id mentioned in the telemetry error.
-1.	If the SLA Items are no longer present on the slakpiinstances, the current mitigation would be either to update slakpiinstances with cancelled status or to delete the slakpiinstances. (If you aware then can update SLA Item id as well)
+First verify in Support Org that record updates which are having errors, does have SLA instances with SLA item null.
+Users can search for the slakpiinstances from advanced find using the filter for SLA item is null and the SLA with the Id mentioned in the telemetry error.
+1.	If the SLA items are no longer present on the slakpiinstances, the current mitigation would be either to update slakpiinstances with cancelled status or to delete the slakpiinstances. (If you aware then can update SLA item id as well)
 2.	Please follow the mitigation steps on support/lower env where the issue is repro and after confirmation try on the affected org.
 
 > [!NOTE]
