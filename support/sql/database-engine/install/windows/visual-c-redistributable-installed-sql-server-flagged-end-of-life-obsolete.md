@@ -29,7 +29,7 @@ According to the lifecycle policy, [support for Visual Studio components that be
 
 If the Microsoft Visual C++ Redistributable is installed as part of SQL Server, it will continue to be supported until the end of the [SQL Server lifecycle](/sql/sql-server/end-of-support/sql-server-end-of-support-overview).
 
-You can ignore these alerts for the Microsoft Visual C++ Redistributable when packaged as part of SQL Server.
+If you receive these alerts *for machines that have the listed SQL Server versions installed*, we recommend to work with your security team to implement exclusions for those machines as appropriate. Alerts for machines that do not have the listed SQL Server versions installed should follow the guidance provided in the alert details.
 
 > [!NOTE]
 > There may be third-party products, such as security scanners, that flag the Redistributable as expired. If the Microsoft Visual C++ Redistributable is installed by a Microsoft product that's still in support, the Redistributable is in support per the Microsoft component policy for that product. For more information, see [Microsoft Visual C++ Redistributable](/visualstudio/productinfo/vs-servicing#microsoft-visual-c-redistributable).
