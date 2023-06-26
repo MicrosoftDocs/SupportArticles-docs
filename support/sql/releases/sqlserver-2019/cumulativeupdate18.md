@@ -41,7 +41,7 @@ A downloadable Excel workbook that contains a summary list of builds, together w
 
 For more information about the bugs that are fixed and enhancements that are included in this cumulative update, see the following Microsoft Knowledge Base articles.
 
-| Bug reference | Description | Fix area | | Platform |
+| Bug reference | Description | Fix area | Component | Platform |
 |---|---|---|---|---|
 | <a id="14939335">[14939335](#14939335)</a> | The installation of Microsoft SQL Server 2019 that uses the configuration file ignores the value for the `ASCOLLATION` parameter and falls back to the system default locale. </br></br>**Note**: If you don't apply this SQL Server cumulative update, you can use `-ASCOLLATION` on the command line or UI as a workaround. | Servicing Experience | SQL Server | Windows |
 | <a id="14913295">[14913295](#14913295)</a> | Managed Backup fails intermittently because of the missing completion signal from the SQL Server Agent that causes backups for databases to stop. | SQL Server Engine | Backup Restore | Windows |
@@ -135,10 +135,6 @@ You can verify the download by computing the hash of the *SQLServer2019-KB501759
 <summary><b>Cumulative Update package file information</b></summary>
 
 The English version of this package has the file attributes (or later file attributes) that are listed in the following table. The dates and times for these files are listed in Coordinated Universal Time (UTC). When you view the file information, it's converted to local time. To find the difference between UTC and local time, use the **Time Zone** tab in the **Date and Time** item in Control Panel.
-
-x64-based versions
-
-SQL Server 2019 Analysis Services
 
 x64-based versions
 

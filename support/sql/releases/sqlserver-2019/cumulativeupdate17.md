@@ -158,10 +158,6 @@ x64-based versions
 
 SQL Server 2019 Analysis Services
 
-x64-based versions
-
-SQL Server 2019 Analysis Services
-
 |                         File name                         |   File version  | File size |     Date    |  Time | Platform |
 |:---------------------------------------------------------:|:---------------:|:---------:|:-----------:|:-----:|:--------:|
 | Asplatformhost.dll                                        | 2018.150.35.33  | 292768    | 22-Jul-2022 | 12:45 | x64      |
