@@ -2886,6 +2886,8 @@
       href: ./windows-security/clients-cant-authenticate-server.md
     - name: Crypt32 8 events continuously reported
       href: ./windows-security/crypt32-event-8.md
+    - name: Error 0x80090022 when CEP/CES autoenrollment using KBR fails
+      href: ./windows-security/error-0x80090022-nte-silent-context-cep-ces-autoenrollment-kbr-fails.md
     - name: Event ID 4107 or Event ID 11 is logged
       href: ./windows-security/event-id-4107-or-event-id-11-is-logged.md
     - name: How to decommission Windows enterprise CA and remove related objects
