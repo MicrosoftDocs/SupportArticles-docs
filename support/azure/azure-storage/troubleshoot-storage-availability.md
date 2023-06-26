@@ -5,7 +5,7 @@ author: AmandaAZ
 ms.author: v-weizhu
 ms.date: 04/12/2023
 ms.reviewer: normesta, azurestocic, jarrettr
-ms.service: storage
+ms.service: azure-storage
 ---
 
 # Troubleshoot availability issues in Azure storage accounts

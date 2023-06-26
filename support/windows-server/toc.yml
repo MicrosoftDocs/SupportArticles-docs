@@ -1740,8 +1740,6 @@
       href: ./networking/rras-doesnt-start.md
     - name: Troubleshoot error 720 when establishing a VPN connection
       href: ./networking/troubleshoot-error-720-when-establishing-a-vpn-connection.md
-    - name: Updates for Windows Server 2012 and 2012 R2 DirectAccess
-      href: ./networking/windows-server-2012-directaccess-hotfixes.md
     - name: 'Troubleshoot DirectAccess Server console: 6to4'
       href: ./networking/troubleshoot-directaccess-server-console-6to4.md
     - name: 'Troubleshoot DirectAccess Server console: DNS'
@@ -2888,6 +2886,8 @@
       href: ./windows-security/clients-cant-authenticate-server.md
     - name: Crypt32 8 events continuously reported
       href: ./windows-security/crypt32-event-8.md
+    - name: Error 0x80090022 when CEP/CES autoenrollment using KBR fails
+      href: ./windows-security/error-0x80090022-nte-silent-context-cep-ces-autoenrollment-kbr-fails.md
     - name: Event ID 4107 or Event ID 11 is logged
       href: ./windows-security/event-id-4107-or-event-id-11-is-logged.md
     - name: How to decommission Windows enterprise CA and remove related objects
