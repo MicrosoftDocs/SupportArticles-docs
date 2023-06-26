@@ -1,7 +1,7 @@
 ---
 title: Cumulative Update 3 for SQL Server 2019 (KB4538853)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 3 (KB4538853).
-ms.date: 5/19/2023
+ms.date: 6/30/2023
 ms.custom: KB4538853
 author: Elena068
 ms.author: v-qianli2
