@@ -53,6 +53,10 @@ items:
     items:
     - name: Cumulative Update 21 (KB5025808)
       href: sqlserver-2019/cumulativeupdate21.md
+  - name: Cumulative Update 20
+    items:
+    - name: Cumulative Update 20 (KB5024276)
+      href: sqlserver-2019/cumulativeupdate20.md
   - name: Cumulative Update 19
     items:
     - name: Cumulative Update 19 (KB5023049)
@@ -69,6 +73,10 @@ items:
     items:
     - name: Cumulative Update 16 (KB5011644)
       href: sqlserver-2019/cumulativeupdate16.md
+  - name: Cumulative Update 15
+    items:
+    - name: Cumulative Update 15 (KB5008996)
+      href: sqlserver-2019/cumulativeupdate15.md
   - name: Cumulative Update 14
     items:
     - name: Cumulative Update 14 (KB5007182)
@@ -113,6 +121,22 @@ items:
     items:
     - name: Cumulative Update 4 (KB4548597)
       href: sqlserver-2019/cumulativeupdate4.md
+  - name: Cumulative Update 3
+    items:
+    - name: Cumulative Update 3 (KB4538853)
+      href: sqlserver-2019/cumulativeupdate3.md
+  - name: Cumulative Update 2
+    items:
+    - name: Cumulative Update 2 (KB4536075)
+      href: sqlserver-2019/cumulativeupdate2.md
+    - name: Cumulative Update 1
+    items:
+    - name: Cumulative Update 1 (KB4527376)
+      href: sqlserver-2019/cumulativeupdate1.md
+    - name: Servicing Update for RTM
+    items:
+    - name: Servicing Update for SQL Server 2019 RTM (KB4517790)
+      href: sqlserver-2019/service-update-for-rtm.md    
 - name: SQL Server 2017
   items:
   - name: SQL Server 2017 build versions
