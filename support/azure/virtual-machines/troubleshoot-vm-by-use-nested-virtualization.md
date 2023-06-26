@@ -35,6 +35,7 @@ In order to mount the faulty VM, the Rescue VM must use the same type of Storage
 
     - Select the same storage type as the faulty VM (Standard or Premium).
 
+
     - Image: Select a Generation 1 image because a Generation 2 image isn't compatible with Hyper-V.
 
         If you select a Generation 2 image, when you add server roles on the Rescue VM, you'll receive the following error message:
@@ -135,3 +136,16 @@ In order to mount the faulty VM, the Rescue VM must use the same type of Storage
 If you are having issues connecting to your VM, see [Troubleshoot RDP connections to an Azure VM](troubleshoot-rdp-connection.md). For issues with accessing applications running on your VM, see [Troubleshoot application connectivity issues on a Windows VM](troubleshoot-app-connection.md).
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+
+========== Revise the document ==========
+1. It doesn't has to be Gen2 VM according to my lab. Gen1 VM can enable Hyper-V as well.
+2. If user choose "Trusted launch virtual machines" under "Security type", the error of "Validation error - HyperV can not be installed because virtualization is not enabled in the BIOS" will show up. But Hyper-V can be properly installed if choose "Standard". I created the 2 VMs with exactly the same VM size "D2s_v3" and OS "Windows Server 2016 datacenter" in the same region.
+3. Suggest to revise the document for not to confuse customers.
+
+![image](https://github.com/MicrosoftDocs/SupportArticles-docs/assets/137747596/6af4bca1-981f-458a-a4cb-14fbc8ccf96f)
+
+![image](https://github.com/MicrosoftDocs/SupportArticles-docs/assets/137747596/ca91c572-8720-454f-bdd7-8ecd395da779)
+
+![image](https://github.com/MicrosoftDocs/SupportArticles-docs/assets/137747596/b5e54cfc-f920-49d1-a396-ca2a85ec30a0)
+
+![image](https://github.com/MicrosoftDocs/SupportArticles-docs/assets/137747596/bff492d9-2c1c-4bfc-8872-544c27edf792)
