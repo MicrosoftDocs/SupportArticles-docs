@@ -524,7 +524,7 @@
           "Troubleshoot",
           "Power Platform",
           "Power Pages"
-        ]
+        ],
         "power-platform/ai-builder/*.md": [
           "Troubleshoot",
           "Power Platform",
