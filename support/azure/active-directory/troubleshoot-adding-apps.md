@@ -32,6 +32,8 @@ See the article [Unable to delete an application](unable-delete-app.md) for step
 
 See the article [Send notification details to Microsoft support](send-notification-details.md) to learn how to see the details of a portal notification and send them to a support engineer.
 
+## More information
+
 If you need help with learning about applications, the [List of Tutorials on How to Integrate SaaS Apps with Azure Active Directory](/azure/active-directory/saas-apps/tutorial-list) article is a good place to start.
 
 In addition to this, the [Azure AD Applications Document Library](/azure/active-directory/manage-apps/what-is-application-management) can help you learn more about single sign-on with Azure AD and how it works.
