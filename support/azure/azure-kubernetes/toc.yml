@@ -103,6 +103,8 @@
     href: aks-at-scale-troubleshoot-guide.md
   - name: Failed to fix node group sizes
     href: cluster-autoscaler-fails-to-scale.md
+  - name: Cannot scale cluster autoscaler enabled node pool
+    href: cluster-autoscaler-cannot-scale.md
 
 - name: Troubleshoot node not ready
   items:
