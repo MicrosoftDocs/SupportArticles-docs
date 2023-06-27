@@ -19,7 +19,7 @@ If you restart the SQL Server instance, you might notice the database takes a lo
 
 - When you use the catalog view [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) to gather information and troubleshoot this issue, the column `log_reuse_wait_desc` shows `XTP_CHECKPOINT` as the reason for long truncation. This value indicates that the transaction log is waiting for an In-Memory OLTP (formerly known as Hekaton) checkpoint to occur. It suggests a delay in checkpointing operations, potentially impacting performance or log file growth.
 
-- When you use the SQL Server dynamic management view (DMV) [sys.dm_db_xtp_checkpoint_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-stats-transact-sql) to gather information and troubleshoot this issue, the column `outstanding_checkpoint_count` is shown as a nonzero value for an extended period of time. It indicates that checkpoints aren't occurring efficiently, potentially affecting performance and log file growth.
+- When you use the SQL Server dynamic management view (DMV) [sys.dm_db_xtp_checkpoint_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-stats-transact-sql) to gather information and troubleshoot this issue, the column `outstanding_checkpoint_count` shows a nonzero value for an extended period of time. It indicates that checkpoints aren't occurring efficiently, potentially affecting performance and log file growth.
 
 ## Cause
 
