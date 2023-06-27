@@ -11,9 +11,9 @@ ms.author: jopilov
 
 ## Symptoms
 
-When your databases have [In-Memory OLTP](/sql/relational-databases/in-memory-oltp/overview-and-usage-scenarios) feature enabled in [SQL Server 2022](/sql/sql-server/what-s-new-in-sql-server-2022), you notice the transaction log file grows continuously. In addition, the SQL Server error log might have messages like `Close thread is falling behind: 4 checkpoints outstanding`. The column `log_reuse_wait_desc` of the catalog view [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) shows `XTP_CHECKPOINT` as the reason for long truncation. The SQL Server dynamic management view (DMV) [sys.dm_db_xtp_checkpoint_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-stats-transact-sql) shows `outstanding_checkpoint_count` as non-zero value for an extended period of time.
+When your databases have the [In-Memory OLTP](/sql/relational-databases/in-memory-oltp/overview-and-usage-scenarios) feature enabled in [SQL Server 2022](/sql/sql-server/what-s-new-in-sql-server-2022), you notice the transaction log file grows continuously. In addition, the SQL Server error log might have messages like `Close thread is falling behind: 4 checkpoints outstanding`. The column `log_reuse_wait_desc` of the catalog view [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) shows `XTP_CHECKPOINT` as the reason for long truncation. The SQL Server dynamic management view (DMV) [sys.dm_db_xtp_checkpoint_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-stats-transact-sql) shows `outstanding_checkpoint_count` as a non-zero value for an extended period of time.
 
-If you restart the SQL Server instance, you notice the database might take a long time to complete the database recovery process.
+If you restart the SQL Server instance, you might notice the database taking a long time to complete the database recovery process.
 
 ## Cause
 
@@ -23,9 +23,9 @@ SQL Server 2022 introduced new capabilities that improve memory management in la
 
 To solve the issue, follow these steps:
 
-1. Add *-T9810* as startup parameter for SQL Server instance.
-1. Restart instance.
-1. Issue checkpoint, take log backup, observe `log_reuse_wait_desc`, and shrink log if needed to reclaim space.
+1. Add *-T9810* as the startup parameter for the SQL Server instance.
+1. Restart the instance.
+1. Issue a checkpoint, take a log backup, observe `log_reuse_wait_desc`, and shrink the log if needed to reclaim space.
 
 ## More information
 
