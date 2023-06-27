@@ -269,6 +269,7 @@
         "azure/synapse-analytics/**/*.md": "synapse-analytics",
         "power-platform/power-apps/**/**.*": "powerapps",
         "power-platform/power-automate/*.md": "power-automate",
+        "power-platform/power-pages/**/**.*": "power-pages",
         "dynamics-365/customer-insights/**/**.*": "customer-insights",
         "dynamics-365/customer-service/**/**.*": "dynamics-365-customerservice",
         "dynamics-365/marketing/*.md": "dynamics-365-marketing",
@@ -519,6 +520,11 @@
           "Power Platform",
           "Power Automate"
         ],
+        "power-platform/power-pages/*.md": [
+          "Troubleshoot",
+          "Power Platform",
+          "Power Pages"
+        ]
         "power-platform/ai-builder/*.md": [
           "Troubleshoot",
           "Power Platform",
