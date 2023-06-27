@@ -48,39 +48,40 @@ For more information about these errors, see [Throttling Azure Resource Manager 
 
 For AKS cluster, you can use [AKS Diagnose and Solve Problems](/azure/aks/aks-diagnostics) to analyze, identify the cause of these errors and get recommendations to resolve them. In the AKS Diagnose and Solve Problems, search **"Azure Resource Request Throttling"**, where you can get a report with a series of diagnostics to show if the cluster has experienced any Azure Resource Manager (ARM), or Resource Provider (RP) request rate throttling (429 responses), and where the throttles came from.
 
-**Request Rate Throttling has been detected for your Cluster**: This diagnostic will provide some general recommendations if there is throttling that has been detected in the current AKS cluster.
+**Request Rate Throttling has been detected for your Cluster**: This diagnostic provides some general recommendations if there's throttling that has been detected in the current AKS cluster.
 
-**Cluster Auto-Scaler Throttling has been detected**: This diagnostic will show up if there is throttling that has been detected and originated from the cluster autoscaler. To reduce the volume of requests from the cluster autoscaler, use the following methods:
+**Cluster Auto-Scaler Throttling has been detected**: This diagnostic shows up if there's throttling that has been detected and originated from the cluster autoscaler. To reduce the volume of requests from the cluster autoscaler, use the following methods:
 
-- Increase the autoscaler scan interval to reduce the number of calls to VMSS from autoscaler. This method may have a negative latency impact on the time taken to scale up because the cluster autoscaler will wait longer before calling Azure Compute resource Provider (CRP) for a new VM.
-- Make sure the cluster is on a minimal Kubernetes version 1.18. Kubernetes version 1.18 and later versions handle request rate back-off better when 429 throttling responses are received. It is highly recommended to stay within supported Kubernetes versions to receive security patches.
+- Increase the autoscaler scan interval to reduce the number of calls to virtual machine scale sets from autoscaler. This method may have a negative latency impact on the time taken to scale up because the cluster autoscaler waits longer before calling Azure Compute Resource Provider (CRP) for a new virtual machine.
+- Make sure the cluster is on a minimal Kubernetes version 1.18. Kubernetes version 1.18 and later versions handle request rate back-off better when 429 throttling responses are received. It's highly recommended to stay within supported Kubernetes versions to receive security patches.
 
-**Throttling - Azure Resource Manager**, this diagnostic will show you the throttled request numbers in the specified time range in this AKS cluster. 
+**Throttling - Azure Resource Manager**: This diagnostic shows the throttled request numbers in the specified time range in this AKS cluster.
 
-**Request Rate - Azure Resource Manager**, this diagnostic will show you the total request numbers in the specified time range in this AKS cluster. 
+**Request Rate - Azure Resource Manager**: This diagnostic shows the total request numbers in the specified time range in this AKS cluster.
 
-**View request rate and throttle details**, this diagnostic has multiple diagrams to nail down the throttling details including throttled request and total requests, you can also further filter the results by following dimensions – 
-* Host – Host where HTTP status 429 responses were detected. ARM throttles come from management.azure.com, anything else will be a lower layer Resource Provider.
-* User agent – requests with specified user agent that were throttled.
-* Operation – Operations where HTTP status 429 responses were detected.
-* Client IP - Client IP address that sent the requests that were throttled.
+**View request rate and throttle details**: This diagnostic has multiple diagrams to determine the throttling details including throttled request and total requests. You can also filter the results further by using the following dimensions:
 
-Note that request throttling can be caused by a combination of any cluster in this subscription, not just the request rate for this cluster. 
+- Host: Host where HTTP status 429 responses were detected. Azure Resource Manager throttles come from `management.azure.com`, anything else is a lower layer resource provider.
+- User agent: Requests with specified user agent that were throttled.
+- Operation: Operations where HTTP status 429 responses were detected.
+- Client IP: Client IP address that sent the requests that were throttled.
+
+Request throttling can be caused by a combination of any cluster in this subscription, not just the request rate for this cluster.
 
 ## Solution 1: Upgrade to a later version of Kubernetes
 
-Run Kubernetes 1.18.*x* or later. These versions contain many improvements that are described in [AKS throttling/429 errors](https://github.com/Azure/AKS/issues/1413) and [Support large clusters without throttling](https://github.com/kubernetes-sigs/cloud-provider-azure/issues/247). However, if you still continue to see throttling (due to actual load or no. Clients in the subscription) then please see below possible solutions.
+Run Kubernetes 1.18.*x* or later. These versions contain many improvements that are described in [AKS throttling/429 errors](https://github.com/Azure/AKS/issues/1413) and [Support large clusters without throttling](https://github.com/kubernetes-sigs/cloud-provider-azure/issues/247). However, if you still see throttling (due to actual load or number of clients in the subscription), you can try the following solutions.
 
 ## Solution 2: Increase the auto scaler scan interval
 
-If you find the "Cluster Auto-Scaler Throttling has been detected" diagnostic report throttling caused by the cluster autoscaler, you can try to increase the [auto scaler scan interval](/azure/aks/cluster-autoscaler) to reduce the number of calls to VMSS from autoscaler.
+If you find the **Cluster Auto-Scaler Throttling has been detected** diagnostic reports throttling caused by the cluster autoscaler, you can try to increase the [auto scaler scan interval](/azure/aks/cluster-autoscaler) to reduce the number of calls to virtual machine scale sets from autoscaler.
 
 ## Solution 3: Reconfigure third-party applications to make fewer calls
 
-If you find third-party applications (such as monitoring applications) that make an excessive number of GET requests, in the **"View request rate and throttle details"** when filtering by user agent, change the settings of these applications to reduce the frequency of the GET calls. Please also make sure that these third party or your application clients are using exponential backoff when calling Azure APIs.
+When you filter by user agent in the **View request rate and throttle details** diagnostic, if you find third-party applications (such as monitoring applications) that make an excessive number of GET requests, change the settings of these applications to reduce the frequency of the GET calls. In addition, make sure that the application clients are using exponential backoff when calling Azure APIs.
 
 ## Solution 4: Split your clusters into different subscriptions or regions
 
-If there are numerous clusters and node pools that use virtual machine scale sets, try to split the clusters into different subscriptions or regions (within the same subscription). Most of the Azure API limits are shared limits at a subscription-region level for example: all clusters, clients within sub 1 and EastUS region share a limit for the VMSS GET API. Hence, you can simply move/scale new AKS clusters in a new region and get unblocked on Azure API throttling. This technique helps if you expect the clusters to have high activity (for example, if you have an active cluster autoscaler). It also helps if you have many clients (such as Rancher, Terraform, and so on). Since all clusters are different in their elasticity and no. of clients polling Azure APIs we do not publish any generic guidelines on the no. of clusters you can run per subscription-region, if you want specific guidance, please feel free to create a support ticket.
+If there are numerous clusters and node pools that use virtual machine scale sets, try to split the clusters into different subscriptions or regions (within the same subscription). Most of the Azure API limits are shared limits at a subscription-region level. For example, all clusters, clients within sub one and the East US region share a limit for the virtual machine scale sets GET API. Hence, you can move or scale new AKS clusters in a new region and get unblocked on Azure API throttling. This technique helps if you expect the clusters to have high activity (for example, if you have an active cluster autoscaler). It also helps if you have many clients (such as Rancher, Terraform, and so on). Since all clusters are different in their elasticity and number of clients polling Azure APIs, there's no generic guidelines on the number of clusters that you can run per subscription-region level. For specific guidance, you can create a support ticket.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
