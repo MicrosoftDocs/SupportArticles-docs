@@ -25,7 +25,7 @@ These might be legacy SLA instances still attached with the case but aren't in C
 - First verify in Support Org that record updates which are having errors have SLA instances with SLA item as null.
 Users can search for the slakpiinstances from advanced find using the filter for SLA item is null and the SLA with the Id mentioned in the telemetry error.
 - If the SLA items are no longer present on the slakpiinstances, the current mitigation would be either to update slakpiinstances with cancelled status or to delete the slakpiinstances. You can also update the SLA item Id.
-2.	Follow the mitigation steps on support or lower environments where the issue is reproduced and after confirmation try on the affected organization.
+- Follow the mitigation steps on support or lower environments where the issue is reproduced and after confirmation try on the affected organization.
 
 > [!NOTE]
 > This troubleshooting is applicable only for old records (created more than two years ago) which are getting errors. If newly created records also get this error, raise a support request for investigation.
