@@ -1,6 +1,6 @@
 ---
 title: Cumulative Update 3 for SQL Server 2019 (KB4538853)
-description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 3 (KB4538853).
+description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 3 (KB4538853).
 ms.date: 6/30/2023
 ms.custom: KB4538853
 author: Elena068
@@ -26,7 +26,7 @@ This article describes Cumulative Update package 3 (CU3) for Microsoft SQL Serve
 
 There's a known uninstallation issue that affects this SQL Server 2019 CU3 under certain circumstances. If you uninstall this CU, SQL Server doesn’t come online, and you find the following SQL Server error log entry:
 
-> The script level for `system_xevents_modification.sql` in database `master` cannot be downgraded from *XXXXXXXXX* to *XXXXXXXXX*, which is supported by this server. This usually implies that a future database was attached and the downgrade path is not supported by the current installation. Install a newer version of SQL Server and re-try opening the database.
+> The script level for 'system_xevents_modification.sql' in database 'master' cannot be downgraded from *XXXXXXXXX* to *XXXXXXXXX*, which is supported by this server. This usually implies that a future database was attached and the downgrade path is not supported by the current installation. Install a newer version of SQL Server and re-try opening the database.
 
 To mitigate this issue, enable Trace Flag - T902 to bring SQL Server online. You don’t have to uninstall the program again. To upgrade to a new CU, you must first remove this flag.
 
@@ -41,31 +41,31 @@ A downloadable Excel workbook that contains a summary list of builds, together w
 
 For more information about the bugs that are fixed and enhancements that are included in this servicing update, see the following Microsoft Knowledge Base articles.
 
-| Bug reference | Description | Fix area | Component| Platform |
-|-------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------|----------------------|----------|
-| <a id="13410674">[13410674](#13410674)</a> | [FIX: ISDBUpgradeWizard.exe throws error when you try to upgrade SSISDB after restoring from earlier versions in SQL Server 2019 (KB4547890)](https://support.microsoft.com/help/4547890) | Integration Services | DTS | Windows|
-| <a id="13410658">[13410658](#13410658)</a> | Allow DTSWizard to support AAD when the selected driver is MSOLEDBSQL. | Integration Services | Integration Services | Windows|
-| <a id="13405530">[13405530](#13405530)</a> | "The `JSON DDL` request is missing the database name" error occurs when you delete the database property from the descriptive table under the JSON code in SQL Server 2019. | Openness and Interoperability | Protocols | Windows|
-| <a id="13378659">[13378659](#13378659)</a> | [FIX: sp_execute_external_script doesn't run when you install SQL Server 2019 with Machine Learning Services and a customized Shared feature directory (KB4540121)](https://support.microsoft.com/help/4540121) | SQL Server Engine | Extensibility | Windows|
-| <a id="13404121">[13404121](#13404121)</a> | [FIX: Fail to access openmpi path when running rx jobs in parallel mode with Revo package in Linux SQL Server 2019 (KB4548131)](https://support.microsoft.com/help/4548131) | SQL Server Engine | Extensibility | Linux|
-| <a id="13411046">[13411046](#13411046)</a> | [FIX: Data length/size of Unicode nvarchar data type column is not correct for OutputDataSet in sp_execute_external_script query in SQL Server 2019 on Linux (KB4548133)](https://support.microsoft.com/help/4548131) | SQL Server Engine | Extensibility | Linux|
+| Bug Reference | Description | Fix area | Component | Platform |
+|---|---|---|---|---|
+| <a id="13410674">[13410674](#13410674)</a> | [FIX: ISDBUpgradeWizard.exe throws error when you try to upgrade SSISDB after restoring from earlier versions in SQL Server 2019 (KB4547890)](https://support.microsoft.com/help/4547890) | Integration Services | DTS | Windows |
+| <a id="13410658">[13410658](#13410658)</a> | Allow DTSWizard to support AAD when the selected driver is MSOLEDBSQL. | Integration Services | Integration Services | Windows |
+| <a id="13405530">[13405530](#13405530)</a> | "The JSON DDL request is missing the database name" error occurs when you delete the database property from the descriptive table under the JSON code in SQL Server 2019. | Openness and Interoperability | Protocols | Windows |
+| <a id="13378659">[13378659](#13378659)</a> | [FIX: sp_execute_external_script doesn't run when you install SQL Server 2019 with Machine Learning Services and a customized Shared feature directory (KB4540121)](https://support.microsoft.com/help/4540121) | SQL Server Engine | Extensibility | Windows |
+| <a id="13404121">[13404121](#13404121)</a> | [FIX: Fail to access openmpi path when running rx jobs in parallel mode with Revo package in Linux SQL Server 2019 (KB4548131)](https://support.microsoft.com/help/4548131) | SQL Server Engine | Extensibility | Linux |
+| <a id="13411046">[13411046](#13411046)</a> | [FIX: Data length/size of Unicode nvarchar data type column is not correct for OutputDataSet in sp_execute_external_script query in SQL Server 2019 on Linux (KB4548133)](https://support.microsoft.com/help/4548131) | SQL Server Engine | Extensibility | Linux |
 | <a id="13412450">[13412450](#13412450)</a> | [FIX: Launchpad services fails to start during failover in SQL Server 2019 (KB4539172)](https://support.microsoft.com/help/4539172) | SQL Server Engine | Extensibility | Windows |
-| <a id="13395279">[13395279](#13395279)</a> | Updates the Zulu JRE version to zulu11.37.18-sa-jre11.0.6. | SQL Server Engine | Extensibility | All|
-| <a id="13403957">[13403957](#13403957)</a> | Updates RSetup with the updated FWLINK version 3.5.2.293. | SQL Server Engine | Extensibility | Windows|
-| <a id="13412437">[13412437](#13412437)</a> |  Updates to SQL Server on Linux (mssql mlservices and extensibility) packages to address following issues: </br></br>1. BxlServer consumes 100% CPU. </br>2. Python launcher encounters assert when deleting files. </br>3. Data length mismatch when using Unicode string with OutputDataSet and InputDataSet of data passthrough query. | SQL Server Engine | Extensibility | Linux|
-| <a id="13429278">[13429278](#13429278)</a> | [FIX: Error occurs when you interact with SQL Server Agent in SQL Server 2019 (KB4550657)](https://support.microsoft.com/help/4550657) | SQL Server Engine | High Availability and Disaster Recovery | Windows|
+| <a id="13395279">[13395279](#13395279)</a> | Updates the Zulu JRE version to `zulu11.37.18-sa-jre11.0.6`. | SQL Server Engine | Extensibility | All |
+| <a id="13403957">[13403957](#13403957)</a> | Updates RSetup with the updated FWLINK version 3.5.2.293. | SQL Server Engine | Extensibility | Windows |
+| <a id="13412437">[13412437](#13412437)</a> |  Updates to SQL Server on Linux (mssql mlservices and extensibility) packages to address following issues: </br></br>1. BxlServer consumes 100% CPU. </br>2. Python launcher encounters assert when deleting files. </br>3. Data length mismatch when using Unicode string with OutputDataSet and InputDataSet of data passthrough query. | SQL Server Engine | Extensibility | Linux |
+| <a id="13429278">[13429278](#13429278)</a> | [FIX: Error occurs when you interact with SQL Server Agent in SQL Server 2019 (KB4550657)](https://support.microsoft.com/help/4550657) | SQL Server Engine | High Availability and Disaster Recovery | Windows |
 | <a id="13209410">[13209410](#13209410)</a> | SQL Server error log contains additional empty lines while printing In-memory OLTP related messages. | SQL Server Engine | In-memory OLTP | All |
-| <a id="13357974">[13357974](#13357974)</a> | Due to a new feature called concurrent PFS update in SQL Server 2019 which is enabled by default, in certain rare corner cases, you may encounter non-yielding threads and latch timeout errors in SQL Server. | SQL Server Engine | Methods to access stored data | All|
-| <a id="13324032">[13324032](#13324032)</a> | [FIX: .NET Framework DbDataAdapter.FillSchema method returns NULL on database with compatibility level 140 in SQL Server 2019 and 2017 (KB4529927)](https://support.microsoft.com/help/4529927) | SQL Server Engine | Programmability | Windows|
-| <a id="13350041">[13350041](#13350041)</a> | When you repeatedly run a stored procedure that uses temporary table with indexes on SQL Server 2019, the client may receive an unexpected error with message "A severe error occurred on the current command" and an access violation exception is recorded on the SQL Server. If the same workload is executed on any previous major version of SQL Server, this issue does not occur. | SQL Server Engine | Query Execution | Windows|
-| <a id="13388147">[13388147](#13388147)</a> | When you run a query against sys.dm_db_stats_histogram, it may fail with access violation when a parallel plan is chosen. | SQL Server Engine | Query Execution | All|
+| <a id="13357974">[13357974](#13357974)</a> | Due to a new feature called concurrent PFS update in SQL Server 2019 which is enabled by default, in certain rare corner cases, you may encounter non-yielding threads and latch timeout errors in SQL Server. | SQL Server Engine | Methods to access stored data | All |
+| <a id="13324032">[13324032](#13324032)</a> | [FIX: .NET Framework DbDataAdapter.FillSchema method returns NULL on database with compatibility level 140 in SQL Server 2019 and 2017 (KB4529927)](https://support.microsoft.com/help/4529927) | SQL Server Engine | Programmability | Windows |
+| <a id="13350041">[13350041](#13350041)</a> | When you repeatedly run a stored procedure that uses temporary table with indexes on SQL Server 2019, the client may receive an unexpected error with message "A severe error occurred on the current command" and an access violation exception is recorded on the SQL Server. If the same workload is executed on any previous major version of SQL Server, this issue does not occur. | SQL Server Engine | Query Execution | Windows |
+| <a id="13388147">[13388147](#13388147)</a> | When you run a query against `sys.dm_db_stats_histogram`, it may fail with access violation when a parallel plan is chosen. | SQL Server Engine | Query Execution | All |
 | <a id="13360725">[13360725](#13360725)</a> | When you run a `SELECT` query returning empty/multiple rows with variable assignment in inline-able scalar UDFs, you may receive wrong results. | SQL Server Engine | Query Optimizer | Windows |
-| <a id="13383620">[13383620](#13383620)</a> | This update reduces query execution time for BDC storage pool tables and other Polybase external tables. | SQL Server Engine | SQL BDC Polybase | Linux|
-| <a id="13321064">[13321064](#13321064)</a> | [Improvement: Enable hybrid buffer pool read caching in SQL Server 2019 (KB4538118)](https://support.microsoft.com/help/4538118) | SQL Server Engine | SQL OS | All|
-| <a id="13357938">[13357938](#13357938)</a> | [Improvement: Add new Protection key feature work for SQL Server 2019 on Linux (KB4538686)](https://support.microsoft.com/help/4538686) | SQL Server Engine | SQL OS | Linux|
+| <a id="13383620">[13383620](#13383620)</a> | This update reduces query execution time for BDC storage pool tables and other Polybase external tables. | SQL Server Engine | SQL BDC Polybase | Linux |
+| <a id="13321064">[13321064](#13321064)</a> | [Improvement: Enable hybrid buffer pool read caching in SQL Server 2019 (KB4538118)](https://support.microsoft.com/help/4538118) | SQL Server Engine | SQL OS | All |
+| <a id="13357938">[13357938](#13357938)</a> | [Improvement: Add new Protection key feature work for SQL Server 2019 on Linux (KB4538686)](https://support.microsoft.com/help/4538686) | SQL Server Engine | SQL OS | Linux |
 | <a id="13359752">[13359752](#13359752)</a> | [Improvement: Size and retention policy are increased in default XEvent trace system_health in SQL Server 2019 and 2016 (KB4541132)](https://support.microsoft.com/help/4541132) | SQL Server Engine | SQL OS | All |
-| <a id="13317222">[13317222](#13317222)</a> | Enable SQL checksum sniffer for Pmm pages in hybrid buffer pool. | SQL Server Engine | SQL OS | All|
-| <a id="13382004">[13382004](#13382004)</a> | [FIX: Database creation to Azure blob storage from SQL Server 2019 on Linux may fail with error (KB4548523)](https://support.microsoft.com/help/4548523) | SQL Server Engine | Storage Management | Windows| Windows|
+| <a id="13317222">[13317222](#13317222)</a> | Enable SQL checksum sniffer for Pmm pages in hybrid buffer pool. | SQL Server Engine | SQL OS | All |
+| <a id="13382004">[13382004](#13382004)</a> | [FIX: Database creation to Azure blob storage from SQL Server 2019 on Linux may fail with error (KB4548523)](https://support.microsoft.com/help/4548523) | SQL Server Engine | Storage Management | Windows |
 
 ## How to obtain or download this or the latest cumulative update package
 
@@ -632,7 +632,7 @@ To use one of the hotfixes in this package, you do not have to make any changes 
 <details>
 <summary><b>Important notices</b></summary>
 
-This article also provides the following important information:
+This article also provides the following important information.
 
 ### Analysis Services CU build version
 
@@ -691,7 +691,7 @@ One CU package includes all available updates for all SQL Server 2019 components
 <details>
 <summary><b>Support for this update</b></summary>
 
-If additional issues occur, or if any troubleshooting is required, you might have to create a service request. The usual support costs apply to additional support questions and to issues that don't qualify for this specific cumulative update package. For a complete list of Microsoft Customer Service and Support telephone numbers, or to create a separate service request, go to the [Microsoft support website](https://support.microsoft.com/contactus/?ws=support).
+If other issues occur, or if any troubleshooting is required, you might have to create a service request. The usual support costs apply to additional support questions and to issues that don't qualify for this specific cumulative update package. For a complete list of Microsoft Customer Service and Support telephone numbers, or to create a separate service request, go to the [Microsoft support website](https://support.microsoft.com/contactus/?ws=support).
 </details>
 
 ## How to uninstall this update

@@ -12,7 +12,7 @@ appliesto:
 
 # KB4517790 - Servicing Update for SQL Server 2019 RTM
 
-_Release Date:_ &nbsp; November 4, 2019  
+_Release Date:_ &nbsp; November 04, 2019  
 _Version:_ &nbsp; 15.0.2070.41
 
 ## Summary

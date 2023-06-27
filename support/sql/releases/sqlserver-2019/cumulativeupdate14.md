@@ -24,18 +24,22 @@ This article describes Cumulative Update package 14 (CU14) for Microsoft SQL Ser
 
 ## Known issues in this update
 
-- After you install CU 14, a parallel query that runs in batch mode might cause an access violation and create a memory dump file. To mitigate the issue, run the query to have a Degree of Parallelism of **1**, or disable batch mode processing by using [trace flag 9453](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf9453).
+### Issue one
+
+After you install CU14, a parallel query that runs in batch mode might cause an access violation and create a memory dump file. To mitigate the issue, run the query to have a Degree of Parallelism of **1**, or disable batch mode processing by using [trace flag 9453](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf9453).
 
     > [!NOTE] 
     > This issue is resolved in [CU15](cumulativeupdate15.md).
 
-- SQL Server 2019 CU14 introduced a [fix to address wrong results in parallel plans returned by the built-in SESSION_CONTEXT](https://support.microsoft.com/help/5008114). However, this fix might create access violation dump files when the SESSION is reset for reuse. To mitigate this issue and avoid incorrect results, you can disable the original fix, and also disable the parallelism for the built-in `SESSION_CONTEXT`. To do this, use the following trace flags:
+### Issue two
 
-    - 11042 - This trace flag disables the parallelism for the built-in `SESSION_CONTEXT`.
+SQL Server 2019 CU14 introduced a [fix to address wrong results in parallel plans returned by the built-in SESSION_CONTEXT](https://support.microsoft.com/help/5008114). However, this fix might create access violation dump files when the `SESSION` is reset for reuse. To mitigate this issue and avoid incorrect results, you can disable the original fix, and also disable the parallelism for the built-in `SESSION_CONTEXT`. To do this, use the following trace flags:
 
-    - 9432 - This trace flag disables the fix that was introduced in SQL Server 2019 CU14.
+- 11042 - This trace flag disables the parallelism for the built-in `SESSION_CONTEXT`.
 
-  Microsoft is working on a fix for this issue and it will be available in a future CU.
+- 9432 - This trace flag disables the fix that was introduced in SQL Server 2019 CU14.
+
+Microsoft is working on a fix for this issue and it will be available in a future CU.
 
 ## Improvements and fixes included in this update
 
@@ -417,28 +421,28 @@ SQL Server 2019 Database Services Core Instance
 | Sqlctr150.dll                              | 2019.150.4188.2 | 115600    | 03-Nov-2021 | 20:58 | x86      |
 | Sqldk.dll                                  | 2019.150.4188.2 | 3142536   | 03-Nov-2021 | 20:58 | x64      |
 | Sqldtsss.dll                               | 2019.150.4188.2 | 107408    | 03-Nov-2021 | 20:58 | x64      |
-| Sqlevn70.rll                               | 2019.150.4188.2 | 1594272   | 03-Nov-2021 | 20:58 | x64      |
-| Sqlevn70.rll                               | 2019.150.4188.2 | 3498904   | 03-Nov-2021 | 20:58 | x64      |
-| Sqlevn70.rll                               | 2019.150.4188.2 | 3695512   | 03-Nov-2021 | 20:58 | x64      |
-| Sqlevn70.rll                               | 2019.150.4188.2 | 4162456   | 03-Nov-2021 | 20:58 | x64      |
-| Sqlevn70.rll                               | 2019.150.4188.2 | 4281240   | 03-Nov-2021 | 20:58 | x64      |
-| Sqlevn70.rll                               | 2019.150.4188.2 | 3412896   | 03-Nov-2021 | 20:58 | x64      |
-| Sqlevn70.rll                               | 2019.150.4188.2 | 3580824   | 03-Nov-2021 | 20:58 | x64      |
-| Sqlevn70.rll                               | 2019.150.4188.2 | 4154264   | 03-Nov-2021 | 20:58 | x64      |
-| Sqlevn70.rll                               | 2019.150.4188.2 | 4010912   | 03-Nov-2021 | 20:58 | x64      |
-| Sqlevn70.rll                               | 2019.150.4188.2 | 4060056   | 03-Nov-2021 | 20:58 | x64      |
-| Sqlevn70.rll                               | 2019.150.4188.2 | 2220952   | 03-Nov-2021 | 20:58 | x64      |
-| Sqlevn70.rll                               | 2019.150.4188.2 | 2171808   | 03-Nov-2021 | 20:58 | x64      |
-| Sqlevn70.rll                               | 2019.150.4188.2 | 3867552   | 03-Nov-2021 | 20:58 | x64      |
-| Sqlevn70.rll                               | 2019.150.4188.2 | 3543960   | 03-Nov-2021 | 20:58 | x64      |
-| Sqlevn70.rll                               | 2019.150.4188.2 | 4015008   | 03-Nov-2021 | 20:58 | x64      |
-| Sqlevn70.rll                               | 2019.150.4188.2 | 3818400   | 03-Nov-2021 | 20:58 | x64      |
-| Sqlevn70.rll                               | 2019.150.4188.2 | 3814296   | 03-Nov-2021 | 20:58 | x64      |
-| Sqlevn70.rll                               | 2019.150.4188.2 | 3613592   | 03-Nov-2021 | 20:58 | x64      |
-| Sqlevn70.rll                               | 2019.150.4188.2 | 3498896   | 03-Nov-2021 | 20:58 | x64      |
-| Sqlevn70.rll                               | 2019.150.4188.2 | 1536928   | 03-Nov-2021 | 20:58 | x64      |
-| Sqlevn70.rll                               | 2019.150.4188.2 | 3904408   | 03-Nov-2021 | 20:58 | x64      |
-| Sqlevn70.rll                               | 2019.150.4188.2 | 4027296   | 03-Nov-2021 | 20:58 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4188.2 | 1594272   | 03-Nov-2021 | 20:58 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4188.2 | 3498904   | 03-Nov-2021 | 20:58 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4188.2 | 3695512   | 03-Nov-2021 | 20:58 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4188.2 | 4162456   | 03-Nov-2021 | 20:58 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4188.2 | 4281240   | 03-Nov-2021 | 20:58 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4188.2 | 3412896   | 03-Nov-2021 | 20:58 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4188.2 | 3580824   | 03-Nov-2021 | 20:58 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4188.2 | 4154264   | 03-Nov-2021 | 20:58 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4188.2 | 4010912   | 03-Nov-2021 | 20:58 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4188.2 | 4060056   | 03-Nov-2021 | 20:58 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4188.2 | 2220952   | 03-Nov-2021 | 20:58 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4188.2 | 2171808   | 03-Nov-2021 | 20:58 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4188.2 | 3867552   | 03-Nov-2021 | 20:58 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4188.2 | 3543960   | 03-Nov-2021 | 20:58 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4188.2 | 4015008   | 03-Nov-2021 | 20:58 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4188.2 | 3818400   | 03-Nov-2021 | 20:58 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4188.2 | 3814296   | 03-Nov-2021 | 20:58 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4188.2 | 3613592   | 03-Nov-2021 | 20:58 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4188.2 | 3498896   | 03-Nov-2021 | 20:58 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4188.2 | 1536928   | 03-Nov-2021 | 20:58 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4188.2 | 3904408   | 03-Nov-2021 | 20:58 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4188.2 | 4027296   | 03-Nov-2021 | 20:58 | x64      |
 | Sqllang.dll                                | 2019.150.4188.2 | 39977880  | 03-Nov-2021 | 20:58 | x64      |
 | Sqlmin.dll                                 | 2019.150.4188.2 | 40519560  | 03-Nov-2021 | 20:58 | x64      |
 | Sqlolapss.dll                              | 2019.150.4188.2 | 103320    | 03-Nov-2021 | 20:58 | x64      |
@@ -801,17 +805,17 @@ SQL Server 2019 sql_polybase_core_inst
 | Sharedmemory.dll                                                     | 2018.150.1951.0 | 60320     | 03-Nov-2021 | 20:47 | x64      |
 | Sqldk.dll                                                            | 2019.150.4188.2 | 3142536   | 03-Nov-2021 | 20:47 | x64      |
 | Sqldumper.exe                                                        | 2019.150.4188.2 | 185216    | 03-Nov-2021 | 20:47 | x64      |
-| Sqlevn70.rll                                                         | 2019.150.4188.2 | 1594272   | 03-Nov-2021 | 20:47 | x64      |
-| Sqlevn70.rll                                                         | 2019.150.4188.2 | 4162456   | 03-Nov-2021 | 20:47 | x64      |
-| Sqlevn70.rll                                                         | 2019.150.4188.2 | 3412896   | 03-Nov-2021 | 20:47 | x64      |
-| Sqlevn70.rll                                                         | 2019.150.4188.2 | 4154264   | 03-Nov-2021 | 20:47 | x64      |
-| Sqlevn70.rll                                                         | 2019.150.4188.2 | 4060056   | 03-Nov-2021 | 20:47 | x64      |
-| Sqlevn70.rll                                                         | 2019.150.4188.2 | 2220952   | 03-Nov-2021 | 20:47 | x64      |
-| Sqlevn70.rll                                                         | 2019.150.4188.2 | 2171808   | 03-Nov-2021 | 20:47 | x64      |
-| Sqlevn70.rll                                                         | 2019.150.4188.2 | 3818400   | 03-Nov-2021 | 20:47 | x64      |
-| Sqlevn70.rll                                                         | 2019.150.4188.2 | 3814296   | 03-Nov-2021 | 20:47 | x64      |
-| Sqlevn70.rll                                                         | 2019.150.4188.2 | 1536928   | 03-Nov-2021 | 20:47 | x64      |
-| Sqlevn70.rll                                                         | 2019.150.4188.2 | 4027296   | 03-Nov-2021 | 20:47 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4188.2 | 1594272   | 03-Nov-2021 | 20:47 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4188.2 | 4162456   | 03-Nov-2021 | 20:47 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4188.2 | 3412896   | 03-Nov-2021 | 20:47 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4188.2 | 4154264   | 03-Nov-2021 | 20:47 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4188.2 | 4060056   | 03-Nov-2021 | 20:47 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4188.2 | 2220952   | 03-Nov-2021 | 20:47 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4188.2 | 2171808   | 03-Nov-2021 | 20:47 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4188.2 | 3818400   | 03-Nov-2021 | 20:47 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4188.2 | 3814296   | 03-Nov-2021 | 20:47 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4188.2 | 1536928   | 03-Nov-2021 | 20:47 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4188.2 | 4027296   | 03-Nov-2021 | 20:47 | x64      |
 | Sqlos.dll                                                            | 2019.150.4188.2 | 41856     | 03-Nov-2021 | 20:47 | x64      |
 | Sqlsortpdw.dll                                                       | 2018.150.1951.0 | 4840352   | 03-Nov-2021 | 20:47 | x64      |
 | Sqltses.dll                                                          | 2019.150.4188.2 | 9114520   | 03-Nov-2021 | 20:47 | x64      |
@@ -1010,4 +1014,3 @@ To uninstall this CU on Linux, you must roll back the package to the previous ve
 - [Servicing models for SQL Server](../../general/servicing-models-sql-server.md)
 - [Naming schema and Fix area descriptions for SQL Server software update packages](../../database-engine/install/windows/naming-schema-and-fix-area.md)
 - [Description of the standard terminology that is used to describe Microsoft software updates](../../../windows-client/deployment/standard-terminology-software-updates.md)
-

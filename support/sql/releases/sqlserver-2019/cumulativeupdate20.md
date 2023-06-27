@@ -26,7 +26,7 @@ This article describes Cumulative Update package 20 (CU20) for Microsoft SQL Ser
 
 ### Issue one
 
-SQL Server 2019 CU14 introduced a [fix to address wrong results in parallel plans returned by the built-in SESSION_CONTEXT](https://support.microsoft.com/help/5008114). However, this fix might create access violation dump files when the SESSION is reset for reuse. To mitigate this issue and avoid incorrect results, you can disable the original fix, and also disable the parallelism for the built-in `SESSION_CONTEXT`. To do this, use the following trace flags:
+SQL Server 2019 CU14 introduced a [fix to address wrong results in parallel plans returned by the built-in SESSION_CONTEXT](https://support.microsoft.com/help/5008114). However, this fix might create access violation dump files when the `SESSION` is reset for reuse. To mitigate this issue and avoid incorrect results, you can disable the original fix, and also disable the parallelism for the built-in `SESSION_CONTEXT`. To do this, use the following trace flags:
 
 - 11042 - This trace flag disables the parallelism for the built-in `SESSION_CONTEXT`.
 
@@ -84,7 +84,7 @@ A downloadable Excel workbook that contains a summary list of builds, together w
 
 For more information about the bugs that are fixed and enhancements that are included in this cumulative update, see the following Microsoft Knowledge Base articles.
 
-| Bug reference | Description | Fix area | Component| Platform |
+| Bug reference | Description | Fix area | Component | Platform |
 |-------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------|----------------------|----------|
 | <a id="2204516">[2204516](#2204516)</a> | Fixes an issue that can cause corruption of the internal data structure that the Analysis Services engine uses to manage memory. | Analysis Services | Analysis Services | Windows |
 | <a id="2279650">[2279650](#2279650)</a> | Fixes a failure in SQL Server Analysis Services (SSAS) that you encounter after you rename partitions to the same name in a multidimensional model. | Analysis Services | Analysis Services | Windows |
@@ -95,18 +95,18 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="2268752">[2268752](#2268752)</a> | Fixes a memory leak issue that you encounter when configuring SQL Server log shipping that's in standby or read-only mode for an In-memory OLTP database. </br></br>**Note**: You need to turn on trace flag 9953 during startup to avoid the issue. | SQL Server Engine | In-Memory OLTP | All |
 | <a id="2251105">[2251105](#2251105)</a> | Updates the error message that's returned in the `SqlBackendNotSupported` exception when you run `CREATE EXTERNAL TABLE` by using a Synapse serverless external data source to the following one: Azure Synapse Serverless SQL Pool is not a supported data source. | SQL Server Engine | PolyBase | All |
 | <a id="2285519">[2285519](#2285519)</a> | Fixes a failure where the `DateTime` field can't be pushed down to some PolyBase generic ODBC external data sources such as Denodo when you query an external table by using a filter clause for a `DateTime` field. | SQL Server Engine | PolyBase | All |
-| <a id="2280420">[2280420](#2280420)</a> </br> <a id="2292769">[2292769](#2292769)</a> | [FIX: Scalar UDF Inlining issues in SQL Server 2022 and 2019](https://support.microsoft.com/help/4538581) | SQL Server Engine| Query Execution | All |
+| <a id="2280420">[2280420](#2280420)</a> </br> <a id="2292769">[2292769](#2292769)</a> | [FIX: Scalar UDF Inlining issues in SQL Server 2022 and 2019 (KB4538581)](https://support.microsoft.com/help/4538581) | SQL Server Engine| Query Execution | All |
 | <a id="2162863">[2162863](#2162863)</a> | Fixes an access violation that may be encountered when querying the `sys.dm_os_memory_objects` dynamic management view (DMV). | SQL Server Engine | Query Execution | All |
-| <a id="2204764">[2204764](#2204764)</a> | Fixes access violations and INVALID_POINTER_READ_c0000005_sqlmin.dll!CProfileList::FGetPartitionSummaryXML exceptions that you may encounter during the execution of `sys.dm_exec_query_plan_stats`. | SQL Server Engine | Query Execution | Windows |
+| <a id="2204764">[2204764](#2204764)</a> | Fixes access violations and `INVALID_POINTER_READ_c0000005_sqlmin.dll!CProfileList::FGetPartitionSummaryXML` exceptions that you may encounter during the execution of `sys.dm_exec_query_plan_stats`. | SQL Server Engine | Query Execution | Windows |
 | <a id="2275387">[2275387](#2275387)</a> | Fixes an assertion failure (Location: bpctxt.cpp:129; Expression: 'm_cCreated < m_cMaxBatches') that you encounter when running window queries that have aggregate functions in batch mode. | SQL Server Engine | Query Execution | All |
 | <a id="2292999">[2292999](#2292999)</a> | Fixes an issue where running the `ALTER ASSEMBLY` command for a complex common language runtime (CLR) assembly can cause some of the other commands that are executed in parallel to time out. | SQL Server Engine | Query Execution | All |
 | <a id="2112485">[2112485](#2112485)</a> | Fixes an issue where the cardinality estimation (CE) uniformly increases after each `LEFT JOIN` or `RIGHT JOIN` combines, which causes overestimation. This fix adds a limitation to the CE when the join predicates are the primary keys of the tables that are involved. | SQL Server Engine | Query Optimizer | Windows |
 | <a id="2161795">[2161795](#2161795)</a> | Fixes an assertion failure (Location: purecall.cpp:51; Expression: !"purecall") that you encounter after you cancel a user-defined stored procedure that is still running. | SQL Server Engine | Query Optimizer | All |
 | <a id="2216357">[2216357](#2216357)</a> | Produces consistent results for statements that perform multiple updates to a variable when the query optimization hotfixes are enabled, such as `SELECT @sum = @sum + c FROM t`. | SQL Server Engine | Query Optimizer | All |
 | <a id="2264977">[2264977](#2264977)</a> | Fixes an issue that's caused by automatic parameterization of queries where interleaved execution of multi-statement table-valued functions (MSTVFs) may return incorrect results or cause a deadlock on the first execution. | SQL Server Engine | Query Optimizer | All |
-| <a id="2299078">[2299078](#2299078)</a> | Fixes an issue where the KILL STATS JOB process leaks reference counts on some items when multiple asynchronous statistics jobs are running, which causes those items to remain in the queue (visible via `sys.dm_exec_background_job_queue`) until the SQL Server instance is restarted. | SQL Server Engine | Query Optimizer | All |
+| <a id="2299078">[2299078](#2299078)</a> | Fixes an issue where the `KILL STATS JOB` process leaks reference counts on some items when multiple asynchronous statistics jobs are running, which causes those items to remain in the queue (visible via `sys.dm_exec_background_job_queue`) until the SQL Server instance is restarted. | SQL Server Engine | Query Optimizer | All |
 | <a id="2162994">[2162994](#2162994)</a> | Fixes an issue where the `DataAccess` property for the linked server is reset to False when you execute the `sp_addsubscription` stored procedure or create a subscription through the New Subscription Wizard on server A after: </br></br>1. You have a linked server on server A for server B and have used the linked server for data access. </br></br>2. You configure server A as the Publisher and server B as the Subscriber and create transactional replication. | SQL Server Engine | Replication | Windows |
-| <a id="2212160">[2212160](#2212160)</a> </br><a id="2269819">[2269819](#2269819)</a>| Before the fix, you can still enable transactional replication or change data capture (CDC) and delayed durability on a database at the same time, even if transactional replication or CDC and delayed durability aren't compatible. This fix explicitly prevents you from enabling transactional replication or CDC and delayed durability on a database at the same time by returning the following error 22891 or 22892: </br></br>22891: Could not enable '\<FeatureName>' for database '\<DatabaseName>'. '\<FeatureName>' cannot be enabled on a DB with delayed durability set. </br></br>22892: Could not enable delayed durability on DB. Delayed durability cannot be enabled on a DB while '\<FeatureName>' is enabled. </br></br>For more information, see Delayed durability and other SQL Server features. | SQL Server Engine | Replication | All |
+| <a id="2212160">[2212160](#2212160)</a> </br><a id="2269819">[2269819](#2269819)</a>| Before the fix, you can still enable transactional replication or change data capture (CDC) and delayed durability on a database at the same time, even if transactional replication or CDC and delayed durability aren't compatible. This fix explicitly prevents you from enabling transactional replication or CDC and delayed durability on a database at the same time by returning the following error 22891 or 22892: </br></br>22891: Could not enable '\<FeatureName>' for database '\<DatabaseName>'. '\<FeatureName>' cannot be enabled on a DB with delayed durability set. </br></br>22892: Could not enable delayed durability on DB. Delayed durability cannot be enabled on a DB while '\<FeatureName>' is enabled. </br></br>For more information, see [Delayed durability and other SQL Server features](/sql/relational-databases/logs/control-transaction-durability#bkmk_OtherSQLFeatures). | SQL Server Engine | Replication | All |
 | <a id="2021114">[2021114](#2021114)</a> | [FIX: Error may occur when setting the SQL Server Agent job history log (KB5024352)](../sqlserver-2022/error-set-sql-server-agent-job-history-log.md)| SQL Server Engine | SQL Agent | Linux |
 
 ## How to obtain or download this or the latest cumulative update package
@@ -456,28 +456,28 @@ SQL Server 2019 Database Services Core Instance
 | Sqlctr150.dll                              | 2019.150.4312.2 | 145312    | 1-Apr-23 | 16:08 | x64      |
 | Sqldk.dll                                  | 2019.150.4312.2 | 3159968   | 1-Apr-23 | 16:00 | x64      |
 | Sqldtsss.dll                               | 2019.150.4312.2 | 108496    | 1-Apr-23 | 16:09 | x64      |
-| Sqlevn70.rll                               | 2019.150.4312.2 | 1595344   | 1-Apr-23 | 15:56 | x64      |
-| Sqlevn70.rll                               | 2019.150.4312.2 | 3504016   | 1-Apr-23 | 15:56 | x64      |
-| Sqlevn70.rll                               | 2019.150.4312.2 | 3700640   | 1-Apr-23 | 15:56 | x64      |
-| Sqlevn70.rll                               | 2019.150.4312.2 | 4167584   | 1-Apr-23 | 15:56 | x64      |
-| Sqlevn70.rll                               | 2019.150.4312.2 | 4286368   | 1-Apr-23 | 15:56 | x64      |
-| Sqlevn70.rll                               | 2019.150.4312.2 | 3418016   | 1-Apr-23 | 15:56 | x64      |
-| Sqlevn70.rll                               | 2019.150.4312.2 | 3586000   | 1-Apr-23 | 15:56 | x64      |
-| Sqlevn70.rll                               | 2019.150.4312.2 | 4163472   | 1-Apr-23 | 15:56 | x64      |
-| Sqlevn70.rll                               | 2019.150.4312.2 | 4016024   | 1-Apr-23 | 15:56 | x64      |
-| Sqlevn70.rll                               | 2019.150.4312.2 | 4065168   | 1-Apr-23 | 15:56 | x64      |
-| Sqlevn70.rll                               | 2019.150.4312.2 | 2226064   | 1-Apr-23 | 15:56 | x64      |
-| Sqlevn70.rll                               | 2019.150.4312.2 | 2172832   | 1-Apr-23 | 15:56 | x64      |
-| Sqlevn70.rll                               | 2019.150.4312.2 | 3872672   | 1-Apr-23 | 15:56 | x64      |
-| Sqlevn70.rll                               | 2019.150.4312.2 | 3549072   | 1-Apr-23 | 15:56 | x64      |
-| Sqlevn70.rll                               | 2019.150.4312.2 | 4020128   | 1-Apr-23 | 15:56 | x64      |
-| Sqlevn70.rll                               | 2019.150.4312.2 | 3823568   | 1-Apr-23 | 15:56 | x64      |
-| Sqlevn70.rll                               | 2019.150.4312.2 | 3823504   | 1-Apr-23 | 15:56 | x64      |
-| Sqlevn70.rll                               | 2019.150.4312.2 | 3618768   | 1-Apr-23 | 15:56 | x64      |
-| Sqlevn70.rll                               | 2019.150.4312.2 | 3504016   | 1-Apr-23 | 15:56 | x64      |
-| Sqlevn70.rll                               | 2019.150.4312.2 | 1537952   | 1-Apr-23 | 15:56 | x64      |
-| Sqlevn70.rll                               | 2019.150.4312.2 | 3913680   | 1-Apr-23 | 15:56 | x64      |
-| Sqlevn70.rll                               | 2019.150.4312.2 | 4032416   | 1-Apr-23 | 15:56 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4312.2 | 1595344   | 1-Apr-23 | 15:56 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4312.2 | 3504016   | 1-Apr-23 | 15:56 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4312.2 | 3700640   | 1-Apr-23 | 15:56 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4312.2 | 4167584   | 1-Apr-23 | 15:56 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4312.2 | 4286368   | 1-Apr-23 | 15:56 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4312.2 | 3418016   | 1-Apr-23 | 15:56 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4312.2 | 3586000   | 1-Apr-23 | 15:56 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4312.2 | 4163472   | 1-Apr-23 | 15:56 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4312.2 | 4016024   | 1-Apr-23 | 15:56 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4312.2 | 4065168   | 1-Apr-23 | 15:56 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4312.2 | 2226064   | 1-Apr-23 | 15:56 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4312.2 | 2172832   | 1-Apr-23 | 15:56 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4312.2 | 3872672   | 1-Apr-23 | 15:56 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4312.2 | 3549072   | 1-Apr-23 | 15:56 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4312.2 | 4020128   | 1-Apr-23 | 15:56 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4312.2 | 3823568   | 1-Apr-23 | 15:56 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4312.2 | 3823504   | 1-Apr-23 | 15:56 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4312.2 | 3618768   | 1-Apr-23 | 15:56 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4312.2 | 3504016   | 1-Apr-23 | 15:56 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4312.2 | 1537952   | 1-Apr-23 | 15:56 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4312.2 | 3913680   | 1-Apr-23 | 15:56 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4312.2 | 4032416   | 1-Apr-23 | 15:56 | x64      |
 | Sqllang.dll                                | 2019.150.4312.2 | 39860176  | 1-Apr-23 | 16:09 | x64      |
 | Sqlmin.dll                                 | 2019.150.4312.2 | 40557984  | 1-Apr-23 | 16:09 | x64      |
 | Sqlolapss.dll                              | 2019.150.4312.2 | 108448    | 1-Apr-23 | 16:09 | x64      |
@@ -859,17 +859,17 @@ SQL Server 2019 sql_polybase_core_inst
 | Sharedmemory.dll                                                     | 2018.150.1963.0 | 61360     | 1-Apr-23 | 16:01 | x64      |
 | Sqldk.dll                                                            | 2019.150.4312.2 | 3159968   | 1-Apr-23 | 16:01 | x64      |
 | Sqldumper.exe                                                        | 2019.150.4312.2 | 186264    | 1-Apr-23 | 16:01 | x64      |
-| Sqlevn70.rll                                                         | 2019.150.4312.2 | 1595344   | 1-Apr-23 | 15:56 | x64      |
-| Sqlevn70.rll                                                         | 2019.150.4312.2 | 4167584   | 1-Apr-23 | 15:56 | x64      |
-| Sqlevn70.rll                                                         | 2019.150.4312.2 | 3418016   | 1-Apr-23 | 15:56 | x64      |
-| Sqlevn70.rll                                                         | 2019.150.4312.2 | 4163472   | 1-Apr-23 | 15:56 | x64      |
-| Sqlevn70.rll                                                         | 2019.150.4312.2 | 4065168   | 1-Apr-23 | 15:56 | x64      |
-| Sqlevn70.rll                                                         | 2019.150.4312.2 | 2226064   | 1-Apr-23 | 15:56 | x64      |
-| Sqlevn70.rll                                                         | 2019.150.4312.2 | 2172832   | 1-Apr-23 | 15:56 | x64      |
-| Sqlevn70.rll                                                         | 2019.150.4312.2 | 3823568   | 1-Apr-23 | 15:56 | x64      |
-| Sqlevn70.rll                                                         | 2019.150.4312.2 | 3823504   | 1-Apr-23 | 15:56 | x64      |
-| Sqlevn70.rll                                                         | 2019.150.4312.2 | 1537952   | 1-Apr-23 | 15:56 | x64      |
-| Sqlevn70.rll                                                         | 2019.150.4312.2 | 4032416   | 1-Apr-23 | 15:56 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4312.2 | 1595344   | 1-Apr-23 | 15:56 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4312.2 | 4167584   | 1-Apr-23 | 15:56 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4312.2 | 3418016   | 1-Apr-23 | 15:56 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4312.2 | 4163472   | 1-Apr-23 | 15:56 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4312.2 | 4065168   | 1-Apr-23 | 15:56 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4312.2 | 2226064   | 1-Apr-23 | 15:56 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4312.2 | 2172832   | 1-Apr-23 | 15:56 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4312.2 | 3823568   | 1-Apr-23 | 15:56 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4312.2 | 3823504   | 1-Apr-23 | 15:56 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4312.2 | 1537952   | 1-Apr-23 | 15:56 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4312.2 | 4032416   | 1-Apr-23 | 15:56 | x64      |
 | Sqlncli17e.dll                                                       | 2017.1710.3.1   | 1898432   | 1-Apr-23 | 16:01 | x64      |
 | Sqlos.dll                                                            | 2019.150.4312.2 | 42960     | 1-Apr-23 | 16:01 | x64      |
 | Sqlsortpdw.dll                                                       | 2018.150.1963.0 | 4841392   | 1-Apr-23 | 16:01 | x64      |

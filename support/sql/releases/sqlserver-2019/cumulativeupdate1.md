@@ -1,6 +1,6 @@
 ---
 title: Cumulative Update 1 for SQL Server 2019 (KB4527376)
-description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 1 (KB4527376).
+description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 1 (KB4527376).
 ms.date: 6/30/2023
 ms.custom: KB4527376
 author: Elena068
@@ -12,12 +12,12 @@ appliesto:
 
 # KB4527376 - Cumulative Update 1 for SQL Server 2019
 
-_Release Date:_ &nbsp; January 7, 2020  
+_Release Date:_ &nbsp; January 07, 2020  
 _Version:_ &nbsp; 15.0.4003.23
 
 ## Summary
 
-This article describes Cumulative Update package 1 (CU1) for Microsoft SQL Server 2019. This update contains 62 [fixes](#improvements-and-fixes-included-in-this-cumulative-update) that were issued after the release of SQL Server 2019 RTM, and it updates components in the following builds:
+This article describes Cumulative Update package 1 (CU1) for Microsoft SQL Server 2019. This update contains 61 [fixes](#improvements-and-fixes-included-in-this-cumulative-update) that were issued after the release of SQL Server 2019 RTM, and it updates components in the following builds:
 
 - SQL Server - Product version: **15.0.4003.23**, file version: **2019.150.4003.23**
 - Analysis Services - Product version: **15.0.32.52**, file version: **2018.150.32.52**
@@ -37,12 +37,13 @@ For more information about the bugs that are fixed and enhancements that are inc
 
 | Bug reference | Description | Fix area | Component | Platform |
 |----------------------------------------------|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------|----------|
-| <a id="13234376">[13234376](#13234376)</a> | [FIX: Package execution may be impacted in SQL Server 2019 Integration Services (KB4530097)](https://support.microsoft.com/help/4530097) | Integration services | Integration services | Windows|
+| <a id="13234376">[13234376](#13234376)</a> | [FIX: Package execution may be impacted in SQL Server 2019 Integration Services (KB4530097)](https://support.microsoft.com/help/4530097) | Integration services | Integration services | Windows |
 | <a id="13211958">[13211958](#13211958)</a> | [FIX: File content is sent twice when copied to HDFS using Hadoop File System Task in SQL Server 2017 and 2019 (KB4516999)](https://support.microsoft.com/help/4516999) | Integration Services | Tasks_Components | Windows |
 | <a id="13202468">[13202468](#13202468)</a> | [FIX: Restore fails when you try to restore compressed TDE backups prior to SQL Server 2016 SP2 CU4 on SQL Server 2016 SP2 CU8 (KB4529942)](https://support.microsoft.com/help/4529942) | SQL Server Engine | Backup Restore | Windows |
 | <a id="13211965">[13211965](#13211965)</a> | [FIX: SQL Writer Service fails to back up in non-component backup path in SQL Server 2016, 2017 and 2019 (KB4521659)](https://support.microsoft.com/help/4521659) | SQL Server Engine | Backup Restore | Windows |
 | <a id="13211960">[13211960](#13211960)</a> | [FIX: Non-yielding scheduler error occurs when you run batch query with sort operation in SQL Server 2017 and 2019 (KB4522405)](https://support.microsoft.com/help/4522405) | SQL Server Engine | Column Stores | All |
 | <a id="13255810">[13255810](#13255810)</a> | [FIX: Unsigned files are installed through the Microsoft MPI in SQL Server 2019 (KB4529944)](https://support.microsoft.com/help/4529944) | SQL Server Engine |Extensibility | Windows |
+| <a id="13261241">[13261241](#13261241)</a> | [FIX: PolyBase Hadoop queries may fail when the launchpadd service is restarted or killed in SQL Server 2019 (KB4530468)](https://support.microsoft.com/help/4530468) | SQL Server Engine | Extensibility | Linux |
 | <a id="13224872">[13224872](#13224872)</a> | [FIX: "The File location cannot be opened" error occurs when you try to open a FileTable directory in SQL Server (KB4530720)](https://support.microsoft.com/help/4530720) | SQL Server Engine | FileStream and FileTable | Windows |
 | <a id="13198910">[13198910](#13198910)</a> | [FIX: Transaction log isn't truncated on a single node Availability Group in SQL Server (KB4515772)](https://support.microsoft.com/help/4515772) | SQL Server Engine | High Availability and Disaster Recovery | Windows |
 | <a id="13221770">[13221770](#13221770)</a> | [FIX: Dump is generated when you create an AG with more than 122 characters in SQL Server 2019 (KB4536077)](https://support.microsoft.com/help/4536077) | SQL Server Engine | High Availability and Disaster Recovery | All |
@@ -59,11 +60,11 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="13234474">[13234474](#13234474)</a> | [FIX: Access violation occurs when attempting to fetch the IAM page of the table in SQL Server 2019 (KB4528490)](https://support.microsoft.com/help/4528490) | SQL Server Engine | Metadata | All |
 | <a id="13234476">[13234476](#13234476)</a> | [FIX: Access violation occurs when you call HkError.Throw() in SQL Server 2019 (KB4528491)](https://support.microsoft.com/help/4528491) | SQL Server Engine | Metadata | All |
 | <a id="13234477">[13234477](#13234477)</a> | [FIX: DTC transaction scenario reports unsupported transaction error when HkTempdb transaction is used in SQL Server 2019 (KB4528492)](https://support.microsoft.com/help/4528492) | SQL Server Engine | Metadata | All |
-| <a id="13265941">[13265941](#13265941)</a> | [Improvement: Update PolyBase vbump to 150.1812.0 in SQL Server 2019 (KB4531025)](https://support.microsoft.com/help/4531025) | SQL Server Engine | Polybase | Linux |
-| <a id="13262614">[13262614](#13262614)</a> | [FIX: Non-yielding scheduler error when Polybase function call to shared memory takes long time in SQL Server 2019 (KB4530499)](https://support.microsoft.com/help/4530499) | SQL Server Engine | Polybase | All |
-| <a id="13187033">[13187033](#13187033)</a> | [FIX: Two issues with remote Hadoop bridge process in SQL Server 2019 (KB4530827)](https://support.microsoft.com/help/4530827) | SQL Server Engine | Polybase | Linux |
-| <a id="13262844">[13262844](#13262844)</a> | [FIX: Spurious lines may be added to the SQL Server error log at each initialization in SQL Server 2019 (KB4531224)](https://support.microsoft.com/help/4531224) | SQL Server Engine | Polybase | All |
-| <a id="13262848">[13262848](#13262848)</a> | [FIX: PolyBase query may hang when DMS restarts in SQL Server 2019 (KB4531225)](https://support.microsoft.com/help/4531225) | SQL ServSer Engine | Polybase | All |
+| <a id="13265941">[13265941](#13265941)</a> | [Improvement: Update PolyBase vbump to 150.1812.0 in SQL Server 2019 (KB4531025)](https://support.microsoft.com/help/4531025) | SQL Server Engine | PolyBase | Linux |
+| <a id="13187033">[13187033](#13187033)</a> | [FIX: Two issues with remote Hadoop bridge process in SQL Server 2019 (KB4530827)](https://support.microsoft.com/help/4530827) | SQL Server Engine | PolyBase | Linux |
+| <a id="13262614">[13262614](#13262614)</a> | [FIX: Non-yielding scheduler error when Polybase function call to shared memory takes long time in SQL Server 2019 (KB4530499)](https://support.microsoft.com/help/4530499) | SQL Server Engine | PolyBase | All |
+| <a id="13262844">[13262844](#13262844)</a> | [FIX: Spurious lines may be added to the SQL Server error log at each initialization in SQL Server 2019 (KB4531224)](https://support.microsoft.com/help/4531224) | SQL Server Engine | PolyBase | All |
+| <a id="13262848">[13262848](#13262848)</a> | [FIX: PolyBase query may hang when DMS restarts in SQL Server 2019 (KB4531225)](https://support.microsoft.com/help/4531225) | SQL ServSer Engine | PolyBase | All |
 | <a id="13198916">[13198916](#13198916)</a> | [FIX: Orphaned CLR sessions cause blocking in SQL Server (KB4517771)](https://support.microsoft.com/help/4517771) | SQL Server Engine | Programmability | Windows |
 | <a id="13211959">[13211959](#13211959)</a> | [FIX: Access violation occurs when you run queries that involve PIVOT or UNPIVOT in SQL Server 2016, 2017 and 2019 (KB4518364)](https://support.microsoft.com/help/4518364) | SQL Server Engine | Programmability | Windows |
 | <a id="13238936">[13238936](#13238936)</a> | [FIX: Using temporary tables across multiple scopes may cause Error 213 or access violation in SQL Server 2019 (KB4528168)](https://support.microsoft.com/help/4528168) | SQL Server Engine | Programmability | All |
@@ -74,18 +75,17 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="13264113">[13264113](#13264113)</a> | [FIX: Error 8601 occurs when you run a query with partition function in SQL Server (KB4530251)](https://support.microsoft.com/help/4530251) | SQL Server Engine | Query Execution | Windows |
 | <a id="13222690">[13222690](#13222690)</a> | [FIX: Incorrect results occur with index intersection on partitioned table with a clustered columnstore index in SQL Server (KB4519366)](https://support.microsoft.com/help/4519366) | SQL Server Engine | Query Optimizer | All |
 | <a id="13262555">[13262555](#13262555)</a> | [Improvement: Corrupted statistics can be detected by using extended_logical_checks in SQL Server 2019 (KB4530907)](https://support.microsoft.com/help/4530907) | SQL Server Engine | Query Optimizer | All |
-| <a id="13200684">[13200684](#13200684)</a> | [FIX: Error occurs when CDC capture process tries to insert duplicate key in table "cdc.lsn_time_mapping" in SQL Server 2016, 2017 and 2019 (KB4521739)](https://support.microsoft.com/help/4521739) | SQL Server Engine | Replication | All |
 | <a id="13256585">[13256585](#13256585)</a> | [Improvement: Execute Database upgrade scripts when Database state changes in SQL Server 2019 (KB4530283)](https://support.microsoft.com/help/4530283) | SQL Server Engine | Replication | Windows |
+| <a id="13200684">[13200684](#13200684)</a> | [FIX: Error occurs when CDC capture process tries to insert duplicate key in table "cdc.lsn_time_mapping" in SQL Server 2016, 2017 and 2019 (KB4521739)](https://support.microsoft.com/help/4521739) | SQL Server Engine | Replication | All |
+| <a id="13254376">[13254376](#13254376)</a> | [Improvement: Update SDK to improve security of Always Encrypted by using secure enclaves in SQL Server 2019 (KB4530286)](https://support.microsoft.com/help/4530286) | SQL Server Engine | Security Infrastructure | Windows |
 | <a id="13254382">[13254382](#13254382)</a> | [Improvement: Update error messages of Always Encrypted with secure enclaves in SQL Server 2019 (KB4530079)](https://support.microsoft.com/help/4530079) | SQL Server Engine | Security Infrastructure | Windows |
 | <a id="13254394">[13254394](#13254394)</a> | [Improvement: Update the misspelled words in server_principal_sid and server_principal_name description in SQL Server 2019 (KB4530080)](https://support.microsoft.com/help/4530080) | SQL Server Engine | Security Infrastructure | Windows |
-| <a id="13254376">[13254376](#13254376)</a> | [Improvement: Update SDK to improve security of Always Encrypted by using secure enclaves in SQL Server 2019 (KB4530286)](https://support.microsoft.com/help/4530286) | SQL Server Engine | Security Infrastructure | Windows |
 | <a id="13254405">[13254405](#13254405)</a> | [Improvement: Add support to create index on encrypted unique identifier using Always Encrypted feature in SQL Server 2019 (KB4530814)](https://support.microsoft.com/help/4530814) | SQL Server Engine | Security Infrastructure | Windows |
 | <a id="13255812">[13255812](#13255812)</a> | [Improvement: Add unlimited buffer size to support TDS V1 and V2 in SQL Server 2019 (KB4530302)](https://support.microsoft.com/help/4530302) | SQL Server Engine | Security Infrastructure | All |
 | <a id="13251715">[13251715](#13251715)</a> | [FIX: Audit of batch may be skipped when the batch causes a failure that closes the session in SQL Server 2019 (KB4529893)](https://support.microsoft.com/help/4529893) | SQL Server Engine | Security Infrastructure | All |
 | <a id="13254368">[13254368](#13254368)</a> | [FIX: Error occurs when you try to install SQL Server 2019 on a low power CPU (KB4530084)](https://support.microsoft.com/help/4530084) | SQL Server Engine | Security Infrastructure | Windows |
 | <a id="13254399">[13254399](#13254399)</a> | [FIX: Data masking of user-defined functions may result in crashes in SQL Server 2019 (KB4530303)](https://support.microsoft.com/help/4530303) | SQL Server Engine | Security Infrastructure | All |
 | <a id="13259822">[13259822](#13259822)</a> | [FIX: sp_describe_parameter_encryption returns different results with different parameter positions in SQL Server 2019 (KB4530427)](https://support.microsoft.com/help/4530427) | SQL Server Engine | Security Infrastructure | Windows |
-| <a id="13261241">[13261241](#13261241)</a> | [FIX: PolyBase Hadoop queries may fail when the launchpadd service is restarted or killed in SQL Server 2019 (KB4530468)](https://support.microsoft.com/help/4530468) | SQL Server Engine | Security Infrastructure | Linux |
 | <a id="13234380">[13234380](#13234380)</a> | [FIX: PolyBase DMVs may return unexpected results after changing PolyBase enabled setting in SQL Server 2019 (KB4529848)](https://support.microsoft.com/help/4529848) | SQL Server Engine | SQL BDC Polybase | All |
 | <a id="13262593">[13262593](#13262593)</a> | [FIX: Data pool database may be deleted if you fail to drop database on master in SQL Server 2019 (KB4530496)](https://support.microsoft.com/help/4530496) | SQL Server Engine | SQL BDC Polybase | All |
 | <a id="13262616">[13262616](#13262616)</a> | [FIX: FSM may be called when you create a database in SQL Server 2019 Big Data Clusters (KB4530769)](https://support.microsoft.com/help/4530769) | SQL Server Engine | SQL BDC Polybase | All |
@@ -94,7 +94,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="13265940">[13265940](#13265940)</a> | [FIX: Error occurs when you select from storage pool table and insert into another external table in SQL Server 2019 (KB4531226)](https://support.microsoft.com/help/4531226) | SQL Server Engine | SQL BDC Polybase | Linux |
 | <a id="13268527">[13268527](#13268527)</a> | [FIX: DMVs fail when Big Data Cluster has multiple compute nodes in SQL Server 2019 (KB4531349)](https://support.microsoft.com/help/4531349) | SQL Server Engine | SQL BDC Polybase | Linux |
 | <a id="13211951">[13211951](#13211951)</a> | [FIX: SQL Server 2017 and 2019 on Linux fails with an Assertion error (KB4522002)](https://support.microsoft.com/help/4522002) | SQL Server Engine | SQL OS | Linux |
-| <a id="13218547">[13218547](#13218547)</a> | [FIX: Database cannot recover and reports error 5243 in SQL Server (KB4526315](https://support.microsoft.com/help/4526315)) | SQL Server Engine | Storage Management | Windows |
+| <a id="13218547">[13218547](#13218547)</a> | [FIX: Database cannot recover and reports error 5243 in SQL Server (KB4526315)](https://support.microsoft.com/help/4526315) | SQL Server Engine | Storage Management | Windows |
 | <a id="13198914">[13198914](#13198914)</a> | [FIX: Access violation occurs when you enable TF 3924 to clean orphaned DTC transactions in SQL Server 2016, 2017 and 2019 (KB4519668)](https://support.microsoft.com/help/4519668) | SQL Server Engine | Transaction Services | Windows |
 | <a id="13262374">[13262374](#13262374)</a> | [FIX: Assertion dump occurs when sp_cdc_disable_db is executed to disable CDC or when distributed transaction is committed after ROLLBACK SAVEPOINT in SQL Server (KB4530500)](https://support.microsoft.com/help/4530500) | SQL Server Engine | Transaction Services | Windows |
 | <a id="13268501">[13268501](#13268501)</a> | [FIX: Heap corruption occurs when ADR is disabled and aborted transactions are present in SQL Server 2019 database (KB4531238)](https://support.microsoft.com/help/4531238) | SQL Server Engine | Transaction Services | All |
@@ -574,7 +574,7 @@ To use one of the hotfixes in this package, you do not have to make any changes 
 <details>
 <summary><b>Important notices</b></summary>
 
-This article also provides the following important information:
+This article also provides the following important information.
 
 ### Analysis Services CU build version
 

@@ -29,7 +29,7 @@ This article describes Cumulative Update package 19 (CU19) for Microsoft SQL Ser
 
 ### Issue one
 
-SQL Server 2019 CU14 introduced a [fix to address wrong results in parallel plans returned by the built-in SESSION_CONTEXT](https://support.microsoft.com/help/5008114). However, this fix might create access violation dump files when the SESSION is reset for reuse. To mitigate this issue and avoid incorrect results, you can disable the original fix, and also disable the parallelism for the built-in `SESSION_CONTEXT`. To do this, use the following trace flags:
+SQL Server 2019 CU14 introduced a [fix to address wrong results in parallel plans returned by the built-in SESSION_CONTEXT](https://support.microsoft.com/help/5008114). However, this fix might create access violation dump files when the `SESSION` is reset for reuse. To mitigate this issue and avoid incorrect results, you can disable the original fix, and also disable the parallelism for the built-in `SESSION_CONTEXT`. To do this, use the following trace flags:
 
 - 11042 - This trace flag disables the parallelism for the built-in `SESSION_CONTEXT`.
 
@@ -458,28 +458,28 @@ SQL Server 2019 Database Services Core Instance
 | Sqlctr150.dll                              | 2019.150.4298.1 | 116640    | 27-Jan-2023 | 18:16 | x86      |
 | Sqldk.dll                                  | 2019.150.4298.1 | 3159968   | 27-Jan-2023 | 18:16 | x64      |
 | Sqldtsss.dll                               | 2019.150.4298.1 | 108488    | 27-Jan-2023 | 18:16 | x64      |
-| Sqlevn70.rll                               | 2019.150.4298.1 | 1595304   | 27-Jan-2023 | 17:58 | x64      |
-| Sqlevn70.rll                               | 2019.150.4298.1 | 3504040   | 27-Jan-2023 | 17:58 | x64      |
-| Sqlevn70.rll                               | 2019.150.4298.1 | 3696544   | 27-Jan-2023 | 17:58 | x64      |
-| Sqlevn70.rll                               | 2019.150.4298.1 | 4163488   | 27-Jan-2023 | 17:58 | x64      |
-| Sqlevn70.rll                               | 2019.150.4298.1 | 4282272   | 27-Jan-2023 | 17:58 | x64      |
-| Sqlevn70.rll                               | 2019.150.4298.1 | 3413920   | 27-Jan-2023 | 17:58 | x64      |
-| Sqlevn70.rll                               | 2019.150.4298.1 | 3581856   | 27-Jan-2023 | 17:58 | x64      |
-| Sqlevn70.rll                               | 2019.150.4298.1 | 4159400   | 27-Jan-2023 | 17:58 | x64      |
-| Sqlevn70.rll                               | 2019.150.4298.1 | 4011936   | 27-Jan-2023 | 17:58 | x64      |
-| Sqlevn70.rll                               | 2019.150.4298.1 | 4065192   | 27-Jan-2023 | 17:58 | x64      |
-| Sqlevn70.rll                               | 2019.150.4298.1 | 2221984   | 27-Jan-2023 | 17:58 | x64      |
-| Sqlevn70.rll                               | 2019.150.4298.1 | 2172840   | 27-Jan-2023 | 17:58 | x64      |
-| Sqlevn70.rll                               | 2019.150.4298.1 | 3868576   | 27-Jan-2023 | 17:58 | x64      |
-| Sqlevn70.rll                               | 2019.150.4298.1 | 3544992   | 27-Jan-2023 | 17:58 | x64      |
-| Sqlevn70.rll                               | 2019.150.4298.1 | 4016024   | 27-Jan-2023 | 17:58 | x64      |
-| Sqlevn70.rll                               | 2019.150.4298.1 | 3823520   | 27-Jan-2023 | 17:58 | x64      |
-| Sqlevn70.rll                               | 2019.150.4298.1 | 3819424   | 27-Jan-2023 | 17:58 | x64      |
-| Sqlevn70.rll                               | 2019.150.4298.1 | 3614632   | 27-Jan-2023 | 17:58 | x64      |
-| Sqlevn70.rll                               | 2019.150.4298.1 | 3499944   | 27-Jan-2023 | 17:58 | x64      |
-| Sqlevn70.rll                               | 2019.150.4298.1 | 1537952   | 27-Jan-2023 | 17:58 | x64      |
-| Sqlevn70.rll                               | 2019.150.4298.1 | 3909544   | 27-Jan-2023 | 17:58 | x64      |
-| Sqlevn70.rll                               | 2019.150.4298.1 | 4028320   | 27-Jan-2023 | 17:58 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4298.1 | 1595304   | 27-Jan-2023 | 17:58 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4298.1 | 3504040   | 27-Jan-2023 | 17:58 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4298.1 | 3696544   | 27-Jan-2023 | 17:58 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4298.1 | 4163488   | 27-Jan-2023 | 17:58 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4298.1 | 4282272   | 27-Jan-2023 | 17:58 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4298.1 | 3413920   | 27-Jan-2023 | 17:58 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4298.1 | 3581856   | 27-Jan-2023 | 17:58 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4298.1 | 4159400   | 27-Jan-2023 | 17:58 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4298.1 | 4011936   | 27-Jan-2023 | 17:58 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4298.1 | 4065192   | 27-Jan-2023 | 17:58 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4298.1 | 2221984   | 27-Jan-2023 | 17:58 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4298.1 | 2172840   | 27-Jan-2023 | 17:58 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4298.1 | 3868576   | 27-Jan-2023 | 17:58 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4298.1 | 3544992   | 27-Jan-2023 | 17:58 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4298.1 | 4016024   | 27-Jan-2023 | 17:58 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4298.1 | 3823520   | 27-Jan-2023 | 17:58 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4298.1 | 3819424   | 27-Jan-2023 | 17:58 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4298.1 | 3614632   | 27-Jan-2023 | 17:58 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4298.1 | 3499944   | 27-Jan-2023 | 17:58 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4298.1 | 1537952   | 27-Jan-2023 | 17:58 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4298.1 | 3909544   | 27-Jan-2023 | 17:58 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4298.1 | 4028320   | 27-Jan-2023 | 17:58 | x64      |
 | Sqllang.dll                                | 2019.150.4298.1 | 39991200  | 27-Jan-2023 | 18:16 | x64      |
 | Sqlmin.dll                                 | 2019.150.4298.1 | 40595912  | 27-Jan-2023 | 18:16 | x64      |
 | Sqlolapss.dll                              | 2019.150.4298.1 | 108448    | 27-Jan-2023 | 18:16 | x64      |
@@ -862,17 +862,17 @@ SQL Server 2019 sql_polybase_core_inst
 | Sharedmemory.dll                                                     | 2018.150.1959.0 | 61400     | 27-Jan-2023 | 18:03 | x64      |
 | Sqldk.dll                                                            | 2019.150.4298.1 | 3159968   | 27-Jan-2023 | 18:03 | x64      |
 | Sqldumper.exe                                                        | 2019.150.4298.1 | 186312    | 27-Jan-2023 | 18:03 | x64      |
-| Sqlevn70.rll                                                         | 2019.150.4298.1 | 1595304   | 27-Jan-2023 | 18:03 | x64      |
-| Sqlevn70.rll                                                         | 2019.150.4298.1 | 4163488   | 27-Jan-2023 | 18:03 | x64      |
-| Sqlevn70.rll                                                         | 2019.150.4298.1 | 3413920   | 27-Jan-2023 | 18:03 | x64      |
-| Sqlevn70.rll                                                         | 2019.150.4298.1 | 4159400   | 27-Jan-2023 | 18:03 | x64      |
-| Sqlevn70.rll                                                         | 2019.150.4298.1 | 4065192   | 27-Jan-2023 | 18:03 | x64      |
-| Sqlevn70.rll                                                         | 2019.150.4298.1 | 2221984   | 27-Jan-2023 | 18:03 | x64      |
-| Sqlevn70.rll                                                         | 2019.150.4298.1 | 2172840   | 27-Jan-2023 | 18:03 | x64      |
-| Sqlevn70.rll                                                         | 2019.150.4298.1 | 3823520   | 27-Jan-2023 | 18:03 | x64      |
-| Sqlevn70.rll                                                         | 2019.150.4298.1 | 3819424   | 27-Jan-2023 | 18:03 | x64      |
-| Sqlevn70.rll                                                         | 2019.150.4298.1 | 1537952   | 27-Jan-2023 | 18:03 | x64      |
-| Sqlevn70.rll                                                         | 2019.150.4298.1 | 4028320   | 27-Jan-2023 | 18:03 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4298.1 | 1595304   | 27-Jan-2023 | 18:03 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4298.1 | 4163488   | 27-Jan-2023 | 18:03 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4298.1 | 3413920   | 27-Jan-2023 | 18:03 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4298.1 | 4159400   | 27-Jan-2023 | 18:03 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4298.1 | 4065192   | 27-Jan-2023 | 18:03 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4298.1 | 2221984   | 27-Jan-2023 | 18:03 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4298.1 | 2172840   | 27-Jan-2023 | 18:03 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4298.1 | 3823520   | 27-Jan-2023 | 18:03 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4298.1 | 3819424   | 27-Jan-2023 | 18:03 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4298.1 | 1537952   | 27-Jan-2023 | 18:03 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4298.1 | 4028320   | 27-Jan-2023 | 18:03 | x64      |
 | Sqlncli17e.dll                                                       | 2017.1710.3.1   | 1898432   | 27-Jan-2023 | 18:03 | x64      |
 | Sqlos.dll                                                            | 2019.150.4298.1 | 42912     | 27-Jan-2023 | 18:03 | x64      |
 | Sqlsortpdw.dll                                                       | 2018.150.1959.0 | 4841432   | 27-Jan-2023 | 18:03 | x64      |

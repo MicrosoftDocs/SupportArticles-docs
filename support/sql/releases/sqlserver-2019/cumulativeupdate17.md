@@ -24,7 +24,7 @@ This article describes Cumulative Update package 17 (CU17) for Microsoft SQL Ser
 
 ## Known issues in this update
 
-SQL Server 2019 CU14 introduced a [fix to address wrong results in parallel plans returned by the built-in SESSION_CONTEXT](https://support.microsoft.com/help/5008114). However, this fix might create access violation dump files when the SESSION is reset for reuse. To mitigate this issue and avoid incorrect results, you can disable the original fix, and also disable the parallelism for the built-in `SESSION_CONTEXT`. To do this, use the following trace flags:
+SQL Server 2019 CU14 introduced a [fix to address wrong results in parallel plans returned by the built-in SESSION_CONTEXT](https://support.microsoft.com/help/5008114). However, this fix might create access violation dump files when the `SESSION` is reset for reuse. To mitigate this issue and avoid incorrect results, you can disable the original fix, and also disable the parallelism for the built-in `SESSION_CONTEXT`. To do this, use the following trace flags:
 
 - 11042 - This trace flag disables the parallelism for the built-in `SESSION_CONTEXT`.
 
@@ -420,28 +420,28 @@ SQL Server 2019 Database Services Core Instance
 | Sqlctr150.dll                              | 2019.150.4249.2 | 116640    | 22-Jul-2022 | 14:01 | x86      |
 | Sqldk.dll                                  | 2019.150.4249.2 | 3155880   | 22-Jul-2022 | 14:01 | x64      |
 | Sqldtsss.dll                               | 2019.150.4249.2 | 108456    | 22-Jul-2022 | 14:01 | x64      |
-| Sqlevn70.rll                               | 2019.150.4249.2 | 1595320   | 22-Jul-2022 | 14:01 | x64      |
-| Sqlevn70.rll                               | 2019.150.4249.2 | 3499944   | 22-Jul-2022 | 14:01 | x64      |
-| Sqlevn70.rll                               | 2019.150.4249.2 | 3696568   | 22-Jul-2022 | 14:01 | x64      |
-| Sqlevn70.rll                               | 2019.150.4249.2 | 4163496   | 22-Jul-2022 | 14:01 | x64      |
-| Sqlevn70.rll                               | 2019.150.4249.2 | 4282280   | 22-Jul-2022 | 14:01 | x64      |
-| Sqlevn70.rll                               | 2019.150.4249.2 | 3413928   | 22-Jul-2022 | 14:01 | x64      |
-| Sqlevn70.rll                               | 2019.150.4249.2 | 3581880   | 22-Jul-2022 | 14:01 | x64      |
-| Sqlevn70.rll                               | 2019.150.4249.2 | 4159400   | 22-Jul-2022 | 14:01 | x64      |
-| Sqlevn70.rll                               | 2019.150.4249.2 | 4011944   | 22-Jul-2022 | 14:01 | x64      |
-| Sqlevn70.rll                               | 2019.150.4249.2 | 4065192   | 22-Jul-2022 | 14:01 | x64      |
-| Sqlevn70.rll                               | 2019.150.4249.2 | 2222008   | 22-Jul-2022 | 14:01 | x64      |
-| Sqlevn70.rll                               | 2019.150.4249.2 | 2172840   | 22-Jul-2022 | 14:01 | x64      |
-| Sqlevn70.rll                               | 2019.150.4249.2 | 3868576   | 22-Jul-2022 | 14:01 | x64      |
-| Sqlevn70.rll                               | 2019.150.4249.2 | 3545000   | 22-Jul-2022 | 14:01 | x64      |
-| Sqlevn70.rll                               | 2019.150.4249.2 | 4016040   | 22-Jul-2022 | 14:01 | x64      |
-| Sqlevn70.rll                               | 2019.150.4249.2 | 3819432   | 22-Jul-2022 | 14:01 | x64      |
-| Sqlevn70.rll                               | 2019.150.4249.2 | 3819432   | 22-Jul-2022 | 14:01 | x64      |
-| Sqlevn70.rll                               | 2019.150.4249.2 | 3614632   | 22-Jul-2022 | 14:01 | x64      |
-| Sqlevn70.rll                               | 2019.150.4249.2 | 3499944   | 22-Jul-2022 | 14:01 | x64      |
-| Sqlevn70.rll                               | 2019.150.4249.2 | 1537960   | 22-Jul-2022 | 14:01 | x64      |
-| Sqlevn70.rll                               | 2019.150.4249.2 | 3909544   | 22-Jul-2022 | 14:01 | x64      |
-| Sqlevn70.rll                               | 2019.150.4249.2 | 4028320   | 22-Jul-2022 | 14:01 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4249.2 | 1595320   | 22-Jul-2022 | 14:01 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4249.2 | 3499944   | 22-Jul-2022 | 14:01 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4249.2 | 3696568   | 22-Jul-2022 | 14:01 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4249.2 | 4163496   | 22-Jul-2022 | 14:01 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4249.2 | 4282280   | 22-Jul-2022 | 14:01 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4249.2 | 3413928   | 22-Jul-2022 | 14:01 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4249.2 | 3581880   | 22-Jul-2022 | 14:01 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4249.2 | 4159400   | 22-Jul-2022 | 14:01 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4249.2 | 4011944   | 22-Jul-2022 | 14:01 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4249.2 | 4065192   | 22-Jul-2022 | 14:01 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4249.2 | 2222008   | 22-Jul-2022 | 14:01 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4249.2 | 2172840   | 22-Jul-2022 | 14:01 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4249.2 | 3868576   | 22-Jul-2022 | 14:01 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4249.2 | 3545000   | 22-Jul-2022 | 14:01 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4249.2 | 4016040   | 22-Jul-2022 | 14:01 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4249.2 | 3819432   | 22-Jul-2022 | 14:01 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4249.2 | 3819432   | 22-Jul-2022 | 14:01 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4249.2 | 3614632   | 22-Jul-2022 | 14:01 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4249.2 | 3499944   | 22-Jul-2022 | 14:01 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4249.2 | 1537960   | 22-Jul-2022 | 14:01 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4249.2 | 3909544   | 22-Jul-2022 | 14:01 | x64      |
+| `Sqlevn70.rll`                               | 2019.150.4249.2 | 4028320   | 22-Jul-2022 | 14:01 | x64      |
 | Sqllang.dll                                | 2019.150.4249.2 | 39962536  | 22-Jul-2022 | 14:01 | x64      |
 | Sqlmin.dll                                 | 2019.150.4249.2 | 40539064  | 22-Jul-2022 | 14:01 | x64      |
 | Sqlolapss.dll                              | 2019.150.4249.2 | 104360    | 22-Jul-2022 | 14:01 | x64      |
@@ -807,17 +807,17 @@ SQL Server 2019 sql_polybase_core_inst
 | Sharedmemory.dll                                                     | 2018.150.1951.0 | 60320     | 22-Jul-2022 | 13:39 | x64      |
 | Sqldk.dll                                                            | 2019.150.4249.2 | 3155880   | 22-Jul-2022 | 13:39 | x64      |
 | Sqldumper.exe                                                        | 2019.150.4249.2 | 186280    | 22-Jul-2022 | 13:39 | x64      |
-| Sqlevn70.rll                                                         | 2019.150.4249.2 | 1595320   | 22-Jul-2022 | 13:33 | x64      |
-| Sqlevn70.rll                                                         | 2019.150.4249.2 | 4163496   | 22-Jul-2022 | 13:33 | x64      |
-| Sqlevn70.rll                                                         | 2019.150.4249.2 | 3413928   | 22-Jul-2022 | 13:33 | x64      |
-| Sqlevn70.rll                                                         | 2019.150.4249.2 | 4159400   | 22-Jul-2022 | 13:33 | x64      |
-| Sqlevn70.rll                                                         | 2019.150.4249.2 | 4065192   | 22-Jul-2022 | 13:33 | x64      |
-| Sqlevn70.rll                                                         | 2019.150.4249.2 | 2222008   | 22-Jul-2022 | 13:33 | x64      |
-| Sqlevn70.rll                                                         | 2019.150.4249.2 | 2172840   | 22-Jul-2022 | 13:33 | x64      |
-| Sqlevn70.rll                                                         | 2019.150.4249.2 | 3819432   | 22-Jul-2022 | 13:33 | x64      |
-| Sqlevn70.rll                                                         | 2019.150.4249.2 | 3819432   | 22-Jul-2022 | 13:33 | x64      |
-| Sqlevn70.rll                                                         | 2019.150.4249.2 | 1537960   | 22-Jul-2022 | 13:33 | x64      |
-| Sqlevn70.rll                                                         | 2019.150.4249.2 | 4028320   | 22-Jul-2022 | 13:33 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4249.2 | 1595320   | 22-Jul-2022 | 13:33 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4249.2 | 4163496   | 22-Jul-2022 | 13:33 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4249.2 | 3413928   | 22-Jul-2022 | 13:33 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4249.2 | 4159400   | 22-Jul-2022 | 13:33 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4249.2 | 4065192   | 22-Jul-2022 | 13:33 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4249.2 | 2222008   | 22-Jul-2022 | 13:33 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4249.2 | 2172840   | 22-Jul-2022 | 13:33 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4249.2 | 3819432   | 22-Jul-2022 | 13:33 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4249.2 | 3819432   | 22-Jul-2022 | 13:33 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4249.2 | 1537960   | 22-Jul-2022 | 13:33 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4249.2 | 4028320   | 22-Jul-2022 | 13:33 | x64      |
 | Sqlos.dll                                                            | 2019.150.4249.2 | 42912     | 22-Jul-2022 | 13:39 | x64      |
 | Sqlsortpdw.dll                                                       | 2018.150.1951.0 | 4840352   | 22-Jul-2022 | 13:39 | x64      |
 | Sqltses.dll                                                          | 2019.150.4249.2 | 9115560   | 22-Jul-2022 | 13:39 | x64      |
@@ -1015,4 +1015,3 @@ To uninstall this CU on Linux, you must roll back the package to the previous ve
 - [Servicing models for SQL Server](../../general/servicing-models-sql-server.md)
 - [Naming schema and Fix area descriptions for SQL Server software update packages](../../database-engine/install/windows/naming-schema-and-fix-area.md)
 - [Description of the standard terminology that is used to describe Microsoft software updates](../../../windows-client/deployment/standard-terminology-software-updates.md)
-
