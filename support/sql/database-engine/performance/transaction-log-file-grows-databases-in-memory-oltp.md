@@ -1,0 +1,32 @@
+---
+title: Transaction log file grows for databases with In-Memory OLTP in SQL server 2022
+description: Troubleshoots the issue where transaction log file grows continuously for databases with In-Memory OLTP enabled in SQL Server 2022.
+ms.date: 06/27/2023
+ms.custom: sap:Performance
+ms.reviewer: jopilov
+author: PiJoCoder
+ms.author: jopilov
+---
+## Transaction log file grows for databases with In-Memory OLTP in SQL server 2022
+
+## Symptoms
+
+When your databases have [In-Memory OLTP](/sql/relational-databases/in-memory-oltp/overview-and-usage-scenarios) feature enabled in [SQL Server 2022](/sql/sql-server/what-s-new-in-sql-server-2022), you notice the transaction log file grows continuously. In addition, the SQL Server error log might have messages like `Close thread is falling behind: 4 checkpoints outstanding`. The column `log_reuse_wait_desc` of the catalog view [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) shows `XTP_CHECKPOINT` as the reason for long truncation. The SQL Server dynamic management view (DMV) [sys.dm_db_xtp_checkpoint_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-stats-transact-sql) shows `outstanding_checkpoint_count` as non-zero value for an extended period of time.
+
+If you restart the SQL Server instance, you notice the database might take a long time to complete the database recovery process.
+
+## Cause
+
+SQL Server 2022 introduced new capabilities that improve memory management in large memory servers to reduce out-of-memory conditions. A known issue in this change can sometimes lead to the behavior described in the **Symptoms** section.
+
+## Resolution
+
+To solve the issue, follow these steps:
+
+1. Add *-T9810* as startup parameter for SQL Server instance.
+1. Restart instance.
+1. Issue checkpoint, take log backup, observe `log_reuse_wait_desc`, and shrink log if needed to reclaim space.
+
+## More information
+
+The [trace flag 9810](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf9810) disables memory reclamation of Hekaton Thread Local Storage (TLS) memory, reverting the behavior to SQL Server 2019.
