@@ -3,17 +3,23 @@ title: Transaction log file grows for databases with In-Memory OLTP in SQL serve
 description: Troubleshoots the issue where transaction log file grows continuously for databases with In-Memory OLTP enabled in SQL Server 2022.
 ms.date: 06/27/2023
 ms.custom: sap:Performance
-ms.reviewer: jopilov
-author: PiJoCoder
-ms.author: jopilov
+ms.reviewer: prmadhes, jopilov
+author: prmadhes-msft
+ms.author: v-sidong
 ---
 # Transaction log file grows for databases with In-Memory OLTP in SQL server 2022
 
 ## Symptoms
 
-When your databases have the [In-Memory OLTP](/sql/relational-databases/in-memory-oltp/overview-and-usage-scenarios) feature enabled in [SQL Server 2022](/sql/sql-server/what-s-new-in-sql-server-2022), you notice the transaction log file grows continuously. In addition, the SQL Server error log might have messages like `Close thread is falling behind: 4 checkpoints outstanding`. The column `log_reuse_wait_desc` of the catalog view [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) shows `XTP_CHECKPOINT` as the reason for long truncation. The SQL Server dynamic management view (DMV) [sys.dm_db_xtp_checkpoint_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-stats-transact-sql) shows `outstanding_checkpoint_count` as a non-zero value for an extended period of time.
+When your databases have the [In-Memory OLTP](/sql/relational-databases/in-memory-oltp/overview-and-usage-scenarios) feature enabled in [SQL Server 2022](/sql/sql-server/what-s-new-in-sql-server-2022), you notice the transaction log file grows continuously. In addition, the SQL Server error log might have messages like `Close thread is falling behind: 4 checkpoints outstanding`.
 
-If you restart the SQL Server instance, you might notice the database taking a long time to complete the database recovery process.
+If you restart the SQL Server instance, you might notice the database takes a long time to complete the database recovery process.
+
+## Troubleshoot the issue with sys.databases and sys.dm_db_xtp_checkpoint_stats
+
+- When you use the catalog view [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) to gather information and troubleshoot this issue, the column `log_reuse_wait_desc` shows `XTP_CHECKPOINT` as the reason for long truncation. This value indicates that the transaction log is waiting for an In-Memory OLTP (formerly known as Hekaton) checkpoint to occur. It suggests a delay in checkpointing operations, potentially impacting performance or log file growth.
+
+- When you use the SQL Server dynamic management view (DMV) [sys.dm_db_xtp_checkpoint_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-stats-transact-sql) to gather information and troubleshoot this issue, the column `outstanding_checkpoint_count` is shown as a nonzero value for an extended period of time. It indicates that checkpoints aren't occurring efficiently, potentially affecting performance and log file growth.
 
 ## Cause
 
@@ -29,4 +35,4 @@ To solve the issue, follow these steps:
 
 ## More information
 
-The [trace flag 9810](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf9810) disables memory reclamation of Hekaton Thread Local Storage (TLS) memory, reverting the behavior to SQL Server 2019.
+The [trace flag 9810](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf9810) disables the In-Memory OLTP engine from reclaiming Thread Local Storage (TLS) memory, reverting to the behavior of SQL Server 2019.
