@@ -1,32 +1,31 @@
 ---
-title: SLA instances associated with the Entity/Case records doesn’t have SLA item Id filled.
-description: Provides a resolution when SLA instances associated with the Entity/Case records doesn’t have SLA item Id filled.
+title: SLA instances associated with the Entity or Case records donâ€™t have SLA item Id filled.
+description: Provides a resolution when SLA instances associated with the Entity or Case records donâ€™t have SLA item Id filled.
 ms.reviewer: sdas
 ms.author: ravimanne
-ms.date: 06/23/2023
+ms.date: 06/27/2023
 ---
-# Failed to fill SLA item for SLA instances which are associated with the Entity/Case
+# Failed to fill SLA item for SLA instances which are associated with the Entity or Case
 
-This article provides a resolution when SLA instances associated with the Entity/Case records doesn’t have SLA item Id filled. These might be legacy SLA instances still attached with case but not in cancelled state.
+This article provides a resolution when SLA instances associated with the Entity or Case records donâ€™t have SLA item Id filled.
 
 ## Symptoms
 
-UCI-SLA: Updated Old cases and entities with SLA (created more than 2+ years ago) are failing with below error:
+Unified Interface SLA: Updated old cases and entities with SLA (created more than two years ago) are failing with the following error:
 
 System.NullReferenceException: Object reference not set to an instance of an object.
 at Microsoft.Dynamics.SLAManagement.Plugins.**SLAInstanceService.GetSLAInstance(**String regardingId, Guid slaItemId).
 
 ## Cause
 
-This will happen when SLA instances associated with Entity/Case records doesn’t have SLA item Id filled. These might be legacy SLA instances still attached with case but not in cancelled state.
+These might be legacy SLA instances still attached with the case but aren't in Cancelled state.
 
 ## Resolution
 
-To solve this issue, 
-First verify in Support Org that record updates which are having errors, does have SLA instances with SLA item null.
+- First verify in Support Org that record updates which are having errors have SLA instances with SLA item as null.
 Users can search for the slakpiinstances from advanced find using the filter for SLA item is null and the SLA with the Id mentioned in the telemetry error.
-1.	If the SLA items are no longer present on the slakpiinstances, the current mitigation would be either to update slakpiinstances with cancelled status or to delete the slakpiinstances. (If you aware then can update SLA item id as well)
-2.	Please follow the mitigation steps on support/lower env where the issue is repro and after confirmation try on the affected org.
+- If the SLA items are no longer present on the slakpiinstances, the current mitigation would be either to update slakpiinstances with cancelled status or to delete the slakpiinstances. You can also update the SLA item Id.
+2.	Follow the mitigation steps on support or lower environments where the issue is reproduced and after confirmation try on the affected organization.
 
 > [!NOTE]
-> This TSG is applicable only for old records (created more than 2+ years ago) which are getting errors. If newly created records also get this error then please raise a support request for investigation.
+> This troubleshooting is applicable only for old records (created more than two years ago) which are getting errors. If newly created records also get this error, raise a support request for investigation.
