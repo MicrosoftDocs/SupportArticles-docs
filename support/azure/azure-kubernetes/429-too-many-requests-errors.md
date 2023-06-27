@@ -46,13 +46,13 @@ A Kubernetes cluster on Azure (with or without AKS) that does a frequent scale u
 
 For more information about these errors, see [Throttling Azure Resource Manager requests](/azure/azure-resource-manager/management/request-limits-and-throttling) and [Troubleshooting API throttling errors](/troubleshoot/azure/virtual-machines/troubleshooting-throttling-errors).
 
-For AKS cluster, you can use [AKS Diagnose and Solve Problems](/azure/aks/aks-diagnostics) to analyze, identify the cause of these errors and get recommendations to resolve them. In the AKS Diagnose and Solve Problems, search **"Azure Resource Request Throttling"**, where you can get a report with a series of diagnostics to show if the cluster has experienced any Azure Resource Manager (ARM), or Resource Provider (RP) request rate throttling (429 responses), and where the throttles came from.
+For AKS cluster, you can use [AKS Diagnose and Solve Problems](/azure/aks/aks-diagnostics) to analyze and identify the cause of these errors and get recommendations to resolve them. In the AKS Diagnose and Solve Problems, search **"Azure Resource Request Throttling"**, where you can get a report with a series of diagnostics to show if the cluster has experienced any request rate throttling (429 responses) of Azure Resource Manager (ARM) or Resource Provider (RP), and where the throttles came from.
 
 **Request Rate Throttling has been detected for your Cluster**: This diagnostic provides some general recommendations if there's throttling that has been detected in the current AKS cluster.
 
 **Cluster Auto-Scaler Throttling has been detected**: This diagnostic shows up if there's throttling that has been detected and originated from the cluster autoscaler. To reduce the volume of requests from the cluster autoscaler, use the following methods:
 
-- Increase the autoscaler scan interval to reduce the number of calls to virtual machine scale sets from autoscaler. This method may have a negative latency impact on the time taken to scale up because the cluster autoscaler waits longer before calling Azure Compute Resource Provider (CRP) for a new virtual machine.
+- Increase the autoscaler scan interval to reduce the number of calls to virtual machine scale sets from the cluster autoscaler. This method may have a negative latency impact on the time taken to scale up because the cluster autoscaler waits longer before calling Azure Compute Resource Provider (CRP) for a new virtual machine.
 - Make sure the cluster is on a minimal Kubernetes version 1.18. Kubernetes version 1.18 and later versions handle request rate back-off better when 429 throttling responses are received. It's highly recommended to stay within supported Kubernetes versions to receive security patches.
 
 **Throttling - Azure Resource Manager**: This diagnostic shows the throttled request numbers in the specified time range in this AKS cluster.
@@ -64,7 +64,7 @@ For AKS cluster, you can use [AKS Diagnose and Solve Problems](/azure/aks/aks-di
 - Host: Host where HTTP status 429 responses were detected. Azure Resource Manager throttles come from `management.azure.com`, anything else is a lower layer resource provider.
 - User agent: Requests with specified user agent that were throttled.
 - Operation: Operations where HTTP status 429 responses were detected.
-- Client IP: Client IP address that sent the requests that were throttled.
+- Client IP: Client IP address that sent the throttled requests.
 
 Request throttling can be caused by a combination of any cluster in this subscription, not just the request rate for this cluster.
 
@@ -74,7 +74,7 @@ Run Kubernetes 1.18.*x* or later. These versions contain many improvements that 
 
 ## Solution 2: Increase the auto scaler scan interval
 
-If you find the **Cluster Auto-Scaler Throttling has been detected** diagnostic reports throttling caused by the cluster autoscaler, you can try to increase the [auto scaler scan interval](/azure/aks/cluster-autoscaler) to reduce the number of calls to virtual machine scale sets from autoscaler.
+If you find the **Cluster Auto-Scaler Throttling has been detected** diagnostic reports throttling caused by the cluster autoscaler, you can try to increase the [auto scaler scan interval](/azure/aks/cluster-autoscaler) to reduce the number of calls to virtual machine scale sets from the cluster autoscaler.
 
 ## Solution 3: Reconfigure third-party applications to make fewer calls
 
