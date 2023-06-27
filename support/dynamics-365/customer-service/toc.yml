@@ -47,7 +47,7 @@
               href: service-level-agreements/service-anchor-installation-fails-after-ol-migration.md
             - name: GUID is shown instead of owner name in migrated SLA action flow
               href: service-level-agreements/guid-instead-name-in-flow-generated-email.md
-            - name: '"Workflow with Id = [GUID] does not exist" error
+            - name: '"Workflow with Id = [GUID] does not exist" error'
               href: service-level-agreements/sla-workflow-does-not-exist.md
         - name: SLA time calculation
           items:
@@ -93,7 +93,7 @@
               href: service-level-agreements/actions-run-multiple-times-client.md
             - name: SLA KPI instance isn't created on entity
               href: service-level-agreements/sla-kpi-instance-not-created-entity.md
-            - name: '"SLA KPI instance does not exist" error when updating a case
+            - name: '"SLA KPI instance does not exist" error when updating a case'
               href: service-level-agreements/slakpi-instance-not-existed-error.md
             - name: First Response By and Resolve By aren't getting populated
               href: service-level-agreements/sla-firstresponseby-resolveby-not-populating-uci.md
