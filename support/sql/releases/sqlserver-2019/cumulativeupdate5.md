@@ -35,7 +35,7 @@ A downloadable Excel workbook that contains a summary list of builds, together w
 
 For more information about the bugs that are fixed and enhancements that are included in this cumulative update, see the following Microsoft Knowledge Base articles.
 
-| Bug Reference | Description | Fix area | Component | Platform |
+| Bug reference | Description | Fix area | Component | Platform |
 |---|---|---|---|---|
 | <a id="13491009">[13491009](#13491009)</a> | [FIX: Analysis Services Execute DDL task may fail to impersonate the user context to the remote Analysis services instance in SQL Server 2017 and 2019 (KB4539023)](https://support.microsoft.com/help/4539023) | Analysis Services | Analysis Services | Windows |
 | <a id="13458540">[13458540](#13458540)</a> | When you try to build relationship on a model that contains many measures with `USERELATIONSHIP` function, this fix can improve the processing performance and also reduce the time of "sequence point algorithm" step. | Analysis Services | Analysis Services | Windows |

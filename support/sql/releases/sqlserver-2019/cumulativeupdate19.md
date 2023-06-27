@@ -15,15 +15,15 @@ appliesto:
 _Release Date:_ &nbsp; February 16, 2023 
 _Version:_ &nbsp; 15.0.4298.1
 
-> [NOTICE]
-> This cumulative update includes Security Update 5021125. For more information, see [KB5021125 - Description of the security update for SQL Server 2019 GDR: February 14, 2023](https://support.microsoft.com/help/5021125).
-
 ## Summary
 
 This article describes Cumulative Update package 19 (CU19) for Microsoft SQL Server 2019. This update contains 47 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2019 Cumulative Update 18, and it updates components in the following builds:
 
 - SQL Server - Product version: **15.0.4298.1**, file version: **2019.150.4298.1**
 - Analysis Services - Product version: **15.0.35.35**, file version: **2018.150.35.35**
+
+> [!NOTE]
+> This cumulative update includes Security Update 5021125. For more information, see [KB5021125 - Description of the security update for SQL Server 2019 GDR: February 14, 2023](https://support.microsoft.com/help/5021125).
 
 ## Known issues in this update
 

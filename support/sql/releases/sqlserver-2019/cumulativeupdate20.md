@@ -60,7 +60,7 @@ This issue is caused by a change introduced in SQL Server 2019 CU20 for the [Man
 
 In this scenario, you restart the SQL Server instance hosting the primary replica of the availability group. Then the databases start to synchronize. Additionally, you might notice the following error messages logged in the SQL Server error log and Extended Event logs:
 
->  Error 9642, Severity 16, State 3: An error occurred in a Service Broker/Database Mirroring transport connection endpoint. Error: 8474, State: 11. (Near endpoint role: target, far endpoint address: '') 
+> Error 9642, Severity 16, State 3: An error occurred in a Service Broker/Database Mirroring transport connection endpoint. Error: 8474, State: 11. (Near endpoint role: target, far endpoint address: '')
 
 If you have applied this cumulative update to one or more secondary replicas and are currently not synchronizing with the primary replica, you can use the following steps to mitigate this issue:
 

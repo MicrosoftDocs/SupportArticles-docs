@@ -35,7 +35,7 @@ A downloadable Excel workbook that contains a summary list of builds, together w
 
 For more information about the bugs that are fixed and enhancements that are included in this cumulative update, see the following Microsoft Knowledge Base articles.
 
-| Bug Reference | Description | Fix area | Component | Platform |
+| Bug reference | Description | Fix area | Component | Platform |
 |---|---|---|---|---|
 | <a id="13491013">[13491013](#13491013)</a> | DMV query `$system.DISCOVER_STORAGE_TABLES` can execute slowly against in-memory model which contains many tables and large table row counts in SQL Server 2019. | Analysis Services | Analysis Services | Windows |
 | <a id="13521097">[13521097](#13521097)</a> | Excel MDX queries running against an SSAS Tabular instance may return incorrect result when you convert PivotTable Filters to formulas. | Analysis Services | Analysis Services | Windows |

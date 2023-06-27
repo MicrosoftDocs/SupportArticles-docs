@@ -43,7 +43,7 @@ A downloadable Excel workbook that contains a summary list of builds, together w
 
 For more information about the bugs that are fixed and enhancements that are included in this cumulative update, see the following Microsoft Knowledge Base articles.
 
-| Bug Reference | Description | Fix area | Component | Platform |
+| Bug reference | Description | Fix area | Component | Platform |
 |---|---|---|---|---|
 | <a id="13607136">[13607136](#13607136)</a> | Error occurs when mashup is used to import from Active Directory (AD) using the default M query generated from the connection wizard. </br></br>Key Expression Error: The key didn't match any rows in the table | Analysis Services | Analysis Services | Windows |
 | <a id="13607145">[13607145](#13607145)</a> | Fixes an error that occurs when a session cube is created on a database and you try to query from that session cube. The following error is received when you query the session cube: </br></br>Server: The operation has been cancelled because there is not enough memory available for the application. If using a 32-bit version of the product, consider upgrading to the 64-bit version or increasing the amount of memory available on the machine. | Analysis Services | Analysis Services | Windows |
