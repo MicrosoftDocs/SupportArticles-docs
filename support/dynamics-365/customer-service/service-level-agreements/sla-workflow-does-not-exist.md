@@ -1,23 +1,27 @@
 ---
-title: Workflow with Id doesn't exist
-description: Provides a resolution for the issue where SLA migration fails with the "Workflow with Id = [GUID] does not exist" error.
+title: Workflow with Id doesn't exist error
+description: Provides a resolution for an issue where an SLA migration fails with the Workflow with Id = [GUID] does not exist error.
 ms.reviewer: sdas
 ms.author: ravimanne
 ms.date: 06/27/2023
 ---
-# "Workflow with Id = [GUID] does not exist" error while migrating SLA record from legacy to UCI
+# "Workflow with Id = [GUID] does not exist" error when migrating SLA records from legacy to Unified Interface
 
-This article provides a resolution for the issue where SLA migration fails with the "Workflow with Id = [GUID] does not exist" error.
+This article provides a resolution for an issue where a service-level agreement (SLA) migration fails with the "Workflow with Id = [GUID] does not exist" error.
 
 ## Symptoms
 
-SLA migration failure with "Workflow with Id = [GUID] does not exist".
+An SLA migration fails with the  following error message:
+
+> Workflow with Id = [GUID] does not exist.
 
 ## Cause
 
-This happens during SLA migration from legacy to Unified Interface, if the customer has deleted the workflow associated with the SLA item.
+This issue occurs during the SLA migration from legacy to Unified Interface, and the user has deleted the workflow associated with the SLA item.
 
 ## Resolution
 
-- Check if the SLA item is accessible in legacy SLA.
-- Delete the SLA and create it again in legacy because the workflow is deleted.
+To solve this issue,
+
+1. Check if the SLA item is accessible in the legacy SLA.
+2. Delete the SLA and create it again in legacy because the workflow is deleted.
