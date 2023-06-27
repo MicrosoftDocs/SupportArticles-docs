@@ -35,7 +35,7 @@ In order to mount the faulty VM, the Rescue VM must use the same type of Storage
 
     - Select the same storage type as the faulty VM (Standard or Premium).
 
-    - Image: Select a Generation 1 image or a Generation 2 image.
+    - Image: Choose either a Generation 2 image or a Generation 1 image.
 
     - Security type: Change the security type to **Standard**. The default security type is **Virtual machine Trust Launch** that does not support nested virtualization. If the security type is set to **Virtual machine Trust Launch**, when you add server roles on the Rescue VM, you'll receive the following error message:
 
