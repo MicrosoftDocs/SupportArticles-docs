@@ -28,6 +28,9 @@ When deploying Windows 7 or Windows Server 2008 R2, you may want to disable the 
 
 **Allow the computer to turn off this device to save power**
 
+> [!IMPORTANT]
+> This article does not apply to NetAdapterCx drivers. For more information about NetAdapterCx drivers, see [User Control of Device Idle and Wake Behavior](/windows-hardware/drivers/wdf/user-control-of-device-idle-and-wake-behavior).
+
 ## More information
 
 The **Allow the computer to turn off this device to save power** setting controls how the network card is handled when the computer enters sleep. This setting can be used if a driver misrepresents how it handles sleep states.
