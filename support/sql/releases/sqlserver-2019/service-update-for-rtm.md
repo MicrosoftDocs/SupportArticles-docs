@@ -493,7 +493,7 @@ The Servicing Update payload mainly contains other fixes required for the new SQ
 
 When you deploy an update to a hybrid environment (such as Always On, replication, cluster, and mirroring), we recommend that you refer to the following articles before you deploy the update:
 
-- [SQL Server failover cluster rolling update and service pack process](/sql/sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance)
+- [Upgrade a failover cluster instance](/sql/sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance)
 
     > [!NOTE]
     > If you don't want to use the rolling update process, follow these steps to apply an update:
@@ -508,7 +508,7 @@ When you deploy an update to a hybrid environment (such as Always On, replicatio
 
 - [How to apply a hotfix for SQL Server in a transactional replication and database mirroring topology](../../database-engine/replication/install-service-packs-hotfixes.md)
 - [How to apply a hotfix for SQL Server in a replication topology](../../database-engine/replication/apply-hotfix-sql-replication-topology.md)
-- [How to install service packs and hotfixes on an instance of SQL Server that is configured to use database mirroring](/sql/database-engine/database-mirroring/upgrading-mirrored-instances)
+- [Upgrading Mirrored Instances](/sql/database-engine/database-mirroring/upgrading-mirrored-instances)
 - [Overview of SQL Server Servicing Installation](https://technet.microsoft.com/library/dd638062.aspx)
 
 </details>
@@ -530,7 +530,7 @@ One CU package includes all available updates for all SQL Server 2019 components
 <details>
 <summary><b>Support for this update</b></summary>
 
-If other issues occur, or if any troubleshooting is required, you might have to create a service request. The usual support costs will apply to other support questions and to issues that don't qualify for this specific cumulative update package. For a complete list of Microsoft Customer Service and Support telephone numbers, or to create a separate service request, go to the [Microsoft support website](https://support.microsoft.com/contactus/?ws=support).
+If other issues occur, or if any troubleshooting is required, you might have to create a service request. The usual support costs will apply to additional support questions and to issues that don't qualify for this specific cumulative update package. For a complete list of Microsoft Customer Service and Support telephone numbers, or to create a separate service request, go to the [Microsoft support website](https://support.microsoft.com/contactus/?ws=support).
 </details>
 
 ## How to uninstall this update

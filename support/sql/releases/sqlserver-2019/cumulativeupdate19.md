@@ -72,7 +72,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="2032954">[2032954](#2032954)</a> | Fixes an Access Violation issue that occurs when removing the database snapshot files on the readable secondary replica of an Always On availability group that has the buffer pool extension enabled. | SQL Server Engine | DB Management | All |
 | <a id="1943179">[1943179](#1943179)</a> | Fixes an assertion failure (Location: schemamgr.cpp:1253; Expression:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;!regularPVSHobt->m_NeedsRefresh && !longtermPVSHobt->m_NeedsRefresh) that may occur when you run `sys.dm_tran_persistent_version_store_stats` on the secondary replica of an Always On availability group. | SQL Server Engine | High Availability and Disaster Recovery | All |
 | <a id="1990621">[1990621](#1990621)</a> | After you apply this fix, the `cluster_nodename` returns valid results when you query `sys.dm_server_services` in SQL Server 2019. | SQL Server Engine | High Availability and Disaster Recovery | All |
-| <a id="1992694">[1992694](#1992694)</a> | Fixes a failure of the SQL Server resource DLL (*hadrres.dll*) to report SQLSTATE when you retrieve the health information from SQL Server and **SQLGetData** returns SQL_ERROR. | SQL Server Engine | High Availability and Disaster Recovery | Windows |
+| <a id="1992694">[1992694](#1992694)</a> | Fixes a failure of the SQL Server resource DLL (*hadrres.dll*) to report `SQLSTATE` when you retrieve the health information from SQL Server and **SQLGetData** returns `SQL_ERROR`. | SQL Server Engine | High Availability and Disaster Recovery | Windows |
 | <a id="2025412">[2025412](#2025412)</a> | After you apply this fix, the SQL Server performance counter '`Log File(s) Size (KB)`' for the `SQLServer:Databases` object is correctly updated for secondary replicas in an Always On availability group (AG) when there's a log growth. | SQL Server Engine | High Availability and Disaster Recovery | Windows |
 | <a id="2044132">[2044132](#2044132)</a> | Fixes an access violation issue that occurs on the secondary replica of an Always On availability group while accessing the empty conversation list. This issue occurs due to a concurrency condition when the system processes the messages like `HadrExtendedRecoveryForksMsg` or `HadrEstablishDB`. | SQL Server Engine | High Availability and Disaster Recovery | All |
 | <a id="2023266">[2023266](#2023266)</a> | Fixes an assertion failure that occurs in natively compiled modules when the `Inner FOR JSON` operator is followed by an operator that buffers the corresponding objects, such as another `FOR JSON` or `ORDER BY` operator. Additionally, you may see the following assert expression: </br></br>Location:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memilb.cpp:\<LineNumber> </br>Expression: (*ppilb)->m_cRef == 0 </br>SPID:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<SPID> </br>Process ID:&nbsp;&nbsp;&nbsp;&nbsp;\<ProcessID> | SQL Server Engine | In-Memory OLTP | All |
@@ -1011,16 +1011,16 @@ When you deploy an update to a hybrid environment (such as Always On, replicatio
 
 - [Upgrade a failover cluster instance](/sql/sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance)
 
-> [!NOTE]
-> If you don't want to use the rolling update process, follow these steps to apply an update:
->
-> - Install the update on the passive node.
-> - Install the update on the active node (requires a service restart).
+    > [!NOTE]
+    > If you don't want to use the rolling update process, follow these steps to apply an update:
+    >
+    > - Install the update on the passive node.
+    > - Install the update on the active node (requires a service restart).
 
-- [Upgrade and update of availability group servers that use minimal downtime and data loss](/sql/database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances)
+- [Upgrade and update of availability group servers that use minimal downtime and data loss](https://msdn.microsoft.com/library/dn178483.aspx)
 
-> [!NOTE]
-> If you enabled Always On together with the **SSISDB** catalog, see the [information about SSIS with Always On](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-with-alwayson/ba-p/388091) about how to apply an update in these environments.
+    > [!NOTE]
+    > If you enabled Always On together with the **SSISDB** catalog, see the [information about SSIS with Always On](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-with-alwayson/ba-p/388091) about how to apply an update in these environments.
 
 - [How to apply a hotfix for SQL Server in a transactional replication and database mirroring topology](../../database-engine/replication/install-service-packs-hotfixes.md)
 - [How to apply a hotfix for SQL Server in a replication topology](../../database-engine/replication/apply-hotfix-sql-replication-topology.md)
@@ -1046,7 +1046,7 @@ One CU package includes all available updates for all SQL Server 2019 components
 <details>
 <summary><b>Support for this update</b></summary>
 
-If other issues occur, or if any troubleshooting is required, you might have to create a service request. The usual support costs apply to additional support questions and to issues that don't qualify for this specific cumulative update package. For a complete list of Microsoft Customer Service and Support telephone numbers, or to create a separate service request, go to the [Microsoft support website](https://support.microsoft.com/contactus/?ws=support).
+If other issues occur, or if any troubleshooting is required, you might have to create a service request. The usual support costs will apply to additional support questions and to issues that don't qualify for this specific cumulative update package. For a complete list of Microsoft Customer Service and Support telephone numbers, or to create a separate service request, go to the [Microsoft support website](https://support.microsoft.com/contactus/?ws=support).
 </details>
 
 ## How to uninstall this update
