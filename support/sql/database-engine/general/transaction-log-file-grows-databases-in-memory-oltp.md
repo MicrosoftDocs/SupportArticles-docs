@@ -7,7 +7,7 @@ ms.reviewer: prmadhes, jopilov, sureshka
 author: prmadhes-msft
 ms.author: v-sidong
 ---
-# Transaction log file grows for databases with In-Memory OLTP in SQL server 2022
+# Transaction log file grows for databases with In-Memory OLTP in SQL Server 2022
 
 ## Symptoms
 
