@@ -45,7 +45,7 @@
               href: service-level-agreements/standard-slas-migration-tool.md
             - name: ServiceAnchor installation fails after migrating to Dynamics 365 online
               href: service-level-agreements/service-anchor-installation-fails-after-ol-migration.md
-            - name: '"Workflow with Id = [GUID] does not exist" error'
+            - name: '"Workflow with ID = [GUID] does not exist" error'
               href: service-level-agreements/sla-workflow-does-not-exist.md
         - name: SLA time calculation
           items:
