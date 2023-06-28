@@ -49,7 +49,7 @@ Look in the operating system documentation for the current and updated hyperviso
 Microsoft also supports deploying SQL Server on VMware’s vSphere, allowing users to take advantage of the SDDC (software-defined data center) platform and capabilities such as network and storage virtualization. VMware provides additional documentation that allows you to learn more about how to best deploy SQL Server using vSphere, including right-sizing your SQL Server VMs and managing your vCenter Server configuration: 
 - [Architecting Microsoft SQL Server on VMware vSphere](https://core.vmware.com/resource/architecting-microsoft-sql-server-vmware-vsphere#introduction)
 
-Azure VMware Solution – Microsoft’s first-party solution that allows customers to run VMware workloads natively on Azure – also supports running SQL Server deployments on the same vSphere infrastructure you are used to running on VMware on-premises.  To learn more about how to get started with Azure VMware Solution, see [Azure VMware Solution](https://azure.microsoft.com/en-us/products/azure-vmware#overview)
+Azure VMware Solution – Microsoft’s first-party solution that allows customers to run VMware workloads natively on Azure – also supports running SQL Server deployments on the same vSphere infrastructure you are used to running on VMware on-premises.  To learn more about how to get started with Azure VMware Solution, see [Azure VMware Solution](https://azure.microsoft.com/products/azure-vmware#overview)
 
 ## SQL Server running in Linux containers
 
