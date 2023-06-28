@@ -1,7 +1,7 @@
 ---
 title: Servicing Update for SQL Server 2019 RTM (KB4517790)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 RTM servicing update (KB4517790).
-ms.date: 6/30/2023
+ms.date: 06/30/2023
 ms.custom: KB4517790
 author: Elena068
 ms.author: v-qianli2
@@ -118,8 +118,8 @@ x64-based versions
 
 SQL Server 2019 Analysis Services
 
-| File   name                                               | File version     | File size | Date      | Time  | Platform |
-|-----------------------------------------------------------|------------------|-----------|-----------|-------|----------|
+|                         File name                         |   File version   | File size |    Date   |  Time | Platform |
+|:---------------------------------------------------------:|:----------------:|:---------:|:---------:|:-----:|:--------:|
 | Asplatformhost.dll                                        | 2018.150.32.52   | 291728    | 28-Oct-19 | 20:41 | x64      |
 | Mashupcompression.dll                                     | 2.72.5556.181    | 140664    | 28-Oct-19 | 20:41 | x64      |
 | Microsoft.analysisservices.minterop.dll                   | 15.0.32.52       | 757640    | 28-Oct-19 | 20:41 | x86      |
@@ -255,8 +255,8 @@ SQL Server 2019 Analysis Services
 
 SQL Server 2019 Database Services Common Core
 
-| File   name    | File version     | File size | Date      | Time  | Platform |
-|----------------|------------------|-----------|-----------|-------|----------|
+|    File name   |   File version   | File size |    Date   |  Time | Platform |
+|:--------------:|:----------------:|:---------:|:---------:|:-----:|:--------:|
 | Instapi140.dll | 2019.150.2070.41 | 81720     | 28-Oct-19 | 20:42 | x86      |
 | Instapi140.dll | 2019.150.2070.41 | 93800     | 28-Oct-19 | 20:42 | x64      |
 | Msasxpress.dll | 2018.150.32.52   | 25992     | 28-Oct-19 | 20:42 | x86      |
@@ -266,20 +266,20 @@ SQL Server 2019 Database Services Common Core
 
 SQL Server 2019 sql_dreplay_client
 
-| File   name    | File version     | File size | Date      | Time  | Platform |
-|----------------|------------------|-----------|-----------|-------|----------|
-| Instapi140.dll | 2019.150.2070.41 | 93800     | 28-Oct-19 | 20:42 | x64      |
+|    File name   |   File version   | File size |    Date   |  Time | Platform |
+|:--------------:|:----------------:|:---------:|:---------:|:-----:|:--------:|
+| Instapi140.dll | 2019.150.2070.41 | 93800     | 28-Oct-19 | 20:43 | x64      |
 
 SQL Server 2019 sql_dreplay_controller
 
-| File   name    | File version     | File size | Date      | Time  | Platform |
-|----------------|------------------|-----------|-----------|-------|----------|
+|    File name   |   File version   | File size |    Date   |  Time | Platform |
+|:--------------:|:----------------:|:---------:|:---------:|:-----:|:--------:|
 | Instapi140.dll | 2019.150.2070.41 | 93800     | 28-Oct-19 | 20:42 | x64      |
 
 SQL Server 2019 Database Services Core Instance
 
-| File   name            | File version     | File size | Date      | Time  | Platform |
-|------------------------|------------------|-----------|-----------|-------|----------|
+|        File name       |   File version   | File size |    Date   |  Time | Platform |
+|:----------------------:|:----------------:|:---------:|:---------:|:-----:|:--------:|
 | Hkcompile.dll          | 2019.150.2070.41 | 1298232   | 28-Oct-19 | 21:50 | x64      |
 | Hkengine.dll           | 2019.150.2070.41 | 5791544   | 28-Oct-19 | 21:49 | x64      |
 | Hkruntime.dll          | 2019.150.2070.41 | 188008    | 28-Oct-19 | 21:49 | x64      |
@@ -322,15 +322,15 @@ SQL Server 2019 Database Services Core Instance
 
 SQL Server 2019 Database Services Core Shared
 
-| File   name      | File version     | File size | Date      | Time  | Platform |
-|------------------|------------------|-----------|-----------|-------|----------|
+|     File name    |   File version   | File size |    Date   |  Time | Platform |
+|:----------------:|:----------------:|:---------:|:---------:|:-----:|:--------:|
 | Flatfiledest.dll | 2019.150.2070.41 | 417592    | 28-Oct-19 | 20:40 | x64      |
 | Flatfilesrc.dll  | 2019.150.2070.41 | 433976    | 28-Oct-19 | 20:40 | x64      |
 
 SQL Server 2019 sql_extensibility
 
-| File   name        | File version     | File size | Date      | Time  | Platform |
-|--------------------|------------------|-----------|-----------|-------|----------|
+|      File name     |   File version   | File size |    Date   |  Time | Platform |
+|:------------------:|:----------------:|:---------:|:---------:|:-----:|:--------:|
 | Commonlauncher.dll | 2019.150.2070.41 | 97896     | 28-Oct-19 | 20:43 | x64      |
 | Exthost.exe        | 2019.150.2070.41 | 233056    | 28-Oct-19 | 20:43 | x64      |
 | Launchpad.exe      | 2019.150.2070.41 | 1228600   | 28-Oct-19 | 20:43 | x64      |
@@ -338,14 +338,14 @@ SQL Server 2019 sql_extensibility
 
 SQL Server 2019 sql_inst_mr
 
-| File   name | File version | File size | Date      | Time  | Platform |
-|-------------|--------------|-----------|-----------|-------|----------|
-| Imrdll.dll  | 15.0.2070.41 | 36456     | 28-Oct-19 | 20:42 | x86      |
+|  File name | File version | File size |    Date   |  Time | Platform |
+|:----------:|:------------:|:---------:|:---------:|:-----:|:--------:|
+| Imrdll.dll | 15.0.2070.41 | 36456     | 28-Oct-19 | 20:42 | x86      |
 
 SQL Server 2019 Integration Services
 
-| File   name                        | File version     | File size | Date      | Time  | Platform |
-|------------------------------------|------------------|-----------|-----------|-------|----------|
+|              File name             |   File version   | File size |    Date   |  Time | Platform |
+|:----------------------------------:|:----------------:|:---------:|:---------:|:-----:|:--------:|
 | Flatfiledest.dll                   | 2019.150.2070.41 | 364344    | 28-Oct-19 | 20:55 | x86      |
 | Flatfiledest.dll                   | 2019.150.2070.41 | 417592    | 28-Oct-19 | 20:55 | x64      |
 | Flatfilesrc.dll                    | 2019.150.2070.41 | 433976    | 28-Oct-19 | 20:55 | x64      |
@@ -358,8 +358,8 @@ SQL Server 2019 Integration Services
 
 SQL Server 2019 sql_polybase_core_inst
 
-| File   name                                                          | File version     | File size | Date      | Time  | Platform |
-|----------------------------------------------------------------------|------------------|-----------|-----------|-------|----------|
+|                               File name                              |   File version   | File size |    Date   |  Time | Platform |
+|:--------------------------------------------------------------------:|:----------------:|:---------:|:---------:|:-----:|:--------:|
 | Dms.dll                                                              | 15.0.1807.0      | 557184    | 28-Oct-19 | 21:32 | x86      |
 | Dmsnative.dll                                                        | 2018.150.1807.0  | 138872    | 28-Oct-19 | 21:32 | x64      |
 | Dwengineservice.dll                                                  | 15.0.1807.0      | 50304     | 28-Oct-19 | 21:32 | x86      |
@@ -438,14 +438,14 @@ SQL Server 2019 sql_polybase_core_inst
 
 SQL Server 2019 sql_shared_mr
 
-| File   name | File version | File size | Date      | Time  | Platform |
-|-------------|--------------|-----------|-----------|-------|----------|
-| Smrdll.dll  | 15.0.2070.41 | 36664     | 28-Oct-19 | 20:42 | x86      |
+|  File name | File version | File size |    Date   |  Time | Platform |
+|:----------:|:------------:|:---------:|:---------:|:-----:|:--------:|
+| Smrdll.dll | 15.0.2070.41 | 36664     | 28-Oct-19 | 20:42 | x86      |
 
 SQL Server 2019 sql_tools_extensions
 
-| File   name                                    | File version     | File size | Date      | Time  | Platform |
-|------------------------------------------------|------------------|-----------|-----------|-------|----------|
+|                    File name                   |   File version   | File size |    Date   |  Time | Platform |
+|:----------------------------------------------:|:----------------:|:---------:|:---------:|:-----:|:--------:|
 | Flatfiledest.dll                               | 2019.150.2070.41 | 417592    | 28-Oct-19 | 21:03 | x64      |
 | Flatfiledest.dll                               | 2019.150.2070.41 | 364344    | 28-Oct-19 | 21:03 | x86      |
 | Flatfilesrc.dll                                | 2019.150.2070.41 | 433976    | 28-Oct-19 | 21:03 | x64      |

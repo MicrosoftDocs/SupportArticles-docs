@@ -1,7 +1,7 @@
 ---
 title: Cumulative Update 15 for SQL Server 2019 (KB5008996)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 15 (KB5008996).
-ms.date: 6/30/2023
+ms.date: 06/30/2023
 ms.custom: KB5008996
 author: Elena068
 ms.author: v-qianli2
@@ -155,8 +155,8 @@ x64-based versions
 
 SQL Server 2019 Analysis Services
 
-| File   name                                               | File version    | File size | Date      | Time  | Platform |
-|-----------------------------------------------------------|-----------------|-----------|-----------|-------|----------|
+|                         File name                         |   File version  | File size |    Date   |  Time | Platform |
+|:---------------------------------------------------------:|:---------------:|:---------:|:---------:|:-----:|:--------:|
 | Asplatformhost.dll                                        | 2018.150.35.22  | 292800    | 12-Jan-22 | 22:58 | x64      |
 | Mashupcompression.dll                                     | 2.80.5803.541   | 140672    | 12-Jan-22 | 22:58 | x64      |
 | Microsoft.analysisservices.minterop.dll                   | 15.0.35.22      | 758200    | 12-Jan-22 | 22:58 | x86      |
@@ -321,12 +321,12 @@ SQL Server 2019 Analysis Services
 | Tmpersistence.dll                                         | 2018.150.35.22  | 1183632   | 12-Jan-22 | 22:58 | x64      |
 | Tmtransactions.dll                                        | 2018.150.35.22  | 6805400   | 12-Jan-22 | 22:58 | x64      |
 | Xmsrv.dll                                                 | 2018.150.35.22  | 26024840  | 12-Jan-22 | 22:58 | x64      |
-| Xmsrv.dll                                                 | 2018.150.35.22  | 35460544  | 12-Jan-22 | 22:58 | x64      |
+| Xmsrv.dll                                                 | 2018.150.35.22  | 35460544  | 12-Jan-22 | 22:58 | x86      |
 
 SQL Server 2019 Database Services Common Core
 
-| File   name                          | File version    | File size | Date      | Time  | Platform |
-|--------------------------------------|-----------------|-----------|-----------|-------|----------|
+|               File name              |   File version  | File size |    Date   |  Time | Platform |
+|:------------------------------------:|:---------------:|:---------:|:---------:|:-----:|:--------:|
 | Instapi150.dll                       | 2019.150.4198.2 | 75704     | 12-Jan-22 | 22:58 | x86      |
 | Instapi150.dll                       | 2019.150.4198.2 | 86912     | 12-Jan-22 | 22:58 | x64      |
 | Microsoft.sqlserver.mgdsqldumper.dll | 2019.150.4198.2 | 99200     | 12-Jan-22 | 22:58 | x64      |
@@ -348,31 +348,31 @@ SQL Server 2019 Database Services Common Core
 | Sqlsvcsync.dll                       | 2019.150.4198.2 | 357264    | 12-Jan-22 | 22:58 | x64      |
 | Sqlsvcsync.dll                       | 2019.150.4198.2 | 276408    | 12-Jan-22 | 22:58 | x86      |
 | Svrenumapi150.dll                    | 2019.150.4198.2 | 910224    | 12-Jan-22 | 22:58 | x86      |
-| Svrenumapi150.dll                    | 2019.150.4198.2 | 1161144   | 12-Jan-22 | 22:58 | x86      |
+| Svrenumapi150.dll                    | 2019.150.4198.2 | 1161144   | 12-Jan-22 | 22:58 | x64      |
 
 SQL Server 2019 sql_dreplay_client
 
-| File   name           | File version    | File size | Date      | Time  | Platform |
-|-----------------------|-----------------|-----------|-----------|-------|----------|
+|       File name       |   File version  | File size |    Date   |  Time | Platform |
+|:---------------------:|:---------------:|:---------:|:---------:|:-----:|:--------:|
 | Dreplayclient.exe     | 2019.150.4198.2 | 136064    | 12-Jan-22 | 22:58 | x86      |
 | Dreplaycommon.dll     | 2019.150.4198.2 | 665488    | 12-Jan-22 | 22:58 | x86      |
 | Dreplayutil.dll       | 2019.150.4198.2 | 304008    | 12-Jan-22 | 22:58 | x86      |
 | Instapi150.dll        | 2019.150.4198.2 | 86912     | 12-Jan-22 | 22:58 | x64      |
-| Sqlresourceloader.dll | 2019.150.4198.2 | 37760     | 12-Jan-22 | 22:58 | x64      |
+| Sqlresourceloader.dll | 2019.150.4198.2 | 37760     | 12-Jan-22 | 22:58 | x86      |
 
 SQL Server 2019 sql_dreplay_controller
 
-| File   name           | File version    | File size | Date      | Time  | Platform |
-|-----------------------|-----------------|-----------|-----------|-------|----------|
+|       File name       |   File version  | File size |    Date   |  Time | Platform |
+|:---------------------:|:---------------:|:---------:|:---------:|:-----:|:--------:|
 | Dreplaycommon.dll     | 2019.150.4198.2 | 665488    | 12-Jan-22 | 22:58 | x86      |
 | Dreplaycontroller.exe | 2019.150.4198.2 | 365448    | 12-Jan-22 | 22:58 | x86      |
 | Instapi150.dll        | 2019.150.4198.2 | 86912     | 12-Jan-22 | 22:58 | x64      |
-| Sqlresourceloader.dll | 2019.150.4198.2 | 37760     | 12-Jan-22 | 22:58 | x64      |
+| Sqlresourceloader.dll | 2019.150.4198.2 | 37760     | 12-Jan-22 | 22:58 | x86      |
 
 SQL Server 2019 Database Services Core Instance
 
-| File   name                                | File version    | File size | Date      | Time  | Platform |
-|--------------------------------------------|-----------------|-----------|-----------|-------|----------|
+|                  File name                 |   File version  | File size |    Date   |  Time | Platform |
+|:------------------------------------------:|:---------------:|:---------:|:---------:|:-----:|:--------:|
 | Aetm-enclave-simulator.dll                 | 2019.150.4198.2 | 4657024   | 12-Jan-22 | 23:51 | x64      |
 | Aetm-enclave.dll                           | 2019.150.4198.2 | 4611448   | 12-Jan-22 | 23:51 | x64      |
 | Aetm-sgx-enclave-simulator.dll             | 2019.150.4198.2 | 4931344   | 12-Jan-22 | 23:51 | x64      |
@@ -463,8 +463,8 @@ SQL Server 2019 Database Services Core Instance
 
 SQL Server 2019 Database Services Core Shared
 
-| File   name                                                  | File version    | File size | Date      | Time  | Platform |
-|--------------------------------------------------------------|-----------------|-----------|-----------|-------|----------|
+|                           File name                          |   File version  | File size |    Date   |  Time | Platform |
+|:------------------------------------------------------------:|:---------------:|:---------:|:---------:|:-----:|:--------:|
 | Commanddest.dll                                              | 2019.150.4198.2 | 263048    | 12-Jan-22 | 22:58 | x64      |
 | Datacollectortasks.dll                                       | 2019.150.4198.2 | 227256    | 12-Jan-22 | 22:58 | x64      |
 | Distrib.exe                                                  | 2019.150.4198.2 | 234384    | 12-Jan-22 | 22:58 | x64      |
@@ -552,26 +552,32 @@ SQL Server 2019 Database Services Core Shared
 
 SQL Server 2019 sql_extensibility
 
-| File   name        | File version    | File size | Date      | Time  | Platform |
-|--------------------|-----------------|-----------|-----------|-------|----------|
+|      File name     |   File version  | File size |    Date   |  Time | Platform |
+|:------------------:|:---------------:|:---------:|:---------:|:-----:|:--------:|
 | Commonlauncher.dll | 2019.150.4198.2 | 95112     | 12-Jan-22 | 22:58 | x64      |
 | Exthost.exe        | 2019.150.4198.2 | 238464    | 12-Jan-22 | 22:58 | x64      |
 | Launchpad.exe      | 2019.150.4198.2 | 1221520   | 12-Jan-22 | 22:58 | x64      |
 | Sqlsatellite.dll   | 2019.150.4198.2 | 1021880   | 12-Jan-22 | 22:58 | x64      |
 
-SQL Server 2019 sql_inst_mr
+SQL Server 2019 Full-Text Engine
 
-| File   name    | File version    | File size | Date      | Time  | Platform |
-|----------------|-----------------|-----------|-----------|-------|----------|
+|    File name   |   File version  | File size |    Date   |  Time | Platform |
+|:--------------:|:---------------:|:---------:|:---------:|:-----:|:--------:|
 | Fd.dll         | 2019.150.4198.2 | 686008    | 12-Jan-22 | 22:58 | x64      |
 | Fdhost.exe     | 2019.150.4198.2 | 127872    | 12-Jan-22 | 22:58 | x64      |
 | Fdlauncher.exe | 2019.150.4198.2 | 78736     | 12-Jan-22 | 22:58 | x64      |
 | Sqlft150ph.dll | 2019.150.4198.2 | 92088     | 12-Jan-22 | 22:58 | x64      |
 
+SQL Server 2019 sql_inst_mr
+
+|  File name | File version | File size |    Date   |  Time | Platform |
+|:----------:|:------------:|:---------:|:---------:|:-----:|:--------:|
+| Imrdll.dll | 15.0.4198.2  | 29568     | 12-Jan-22 | 22:58 | x86      |
+
 SQL Server 2019 Integration Services
 
-| File   name                                                   | File version    | File size | Date      | Time  | Platform |
-|---------------------------------------------------------------|-----------------|-----------|-----------|-------|----------|
+|                           File name                           |   File version  | File size |    Date   |  Time | Platform |
+|:-------------------------------------------------------------:|:---------------:|:---------:|:---------:|:-----:|:--------:|
 | Commanddest.dll                                               | 2019.150.4198.2 | 263048    | 12-Jan-22 | 22:59 | x64      |
 | Commanddest.dll                                               | 2019.150.4198.2 | 227256    | 12-Jan-22 | 22:59 | x86      |
 | Dteparse.dll                                                  | 2019.150.4198.2 | 112568    | 12-Jan-22 | 22:59 | x86      |
@@ -704,12 +710,12 @@ SQL Server 2019 Integration Services
 | Txunpivot.dll                                                 | 2019.150.4198.2 | 213904    | 12-Jan-22 | 22:59 | x64      |
 | Txunpivot.dll                                                 | 2019.150.4198.2 | 181128    | 12-Jan-22 | 22:59 | x86      |
 | Xe.dll                                                        | 2019.150.4198.2 | 631696    | 12-Jan-22 | 22:59 | x86      |
-| Xe.dll                                                        | 2019.150.4198.2 | 721808    | 12-Jan-22 | 22:59 | x86      |
+| Xe.dll                                                        | 2019.150.4198.2 | 721808    | 12-Jan-22 | 22:59 | x64      |
 
 SQL Server 2019 sql_polybase_core_inst
 
-| File   name                                                          | File version    | File size | Date      | Time  | Platform |
-|----------------------------------------------------------------------|-----------------|-----------|-----------|-------|----------|
+|                               File name                              |   File version  | File size |    Date   |  Time | Platform |
+|:--------------------------------------------------------------------:|:---------------:|:---------:|:---------:|:-----:|:--------:|
 | Dms.dll                                                              | 15.0.1951.0     | 558480    | 12-Jan-22 | 23:40 | x86      |
 | Dmsnative.dll                                                        | 2018.150.1951.0 | 151464    | 12-Jan-22 | 23:40 | x64      |
 | Dwengineservice.dll                                                  | 15.0.1951.0     | 43944     | 12-Jan-22 | 23:40 | x86      |
@@ -815,14 +821,14 @@ SQL Server 2019 sql_polybase_core_inst
 
 SQL Server 2019 sql_shared_mr
 
-| File   name | File version | File size | Date      | Time  | Platform |
-|-------------|--------------|-----------|-----------|-------|----------|
-| Smrdll.dll  | 15.0.4198.2  | 30648     | 12-Jan-22 | 22:58 | x86      |
+|  File name | File version | File size |    Date   |  Time | Platform |
+|:----------:|:------------:|:---------:|:---------:|:-----:|:--------:|
+| Smrdll.dll | 15.0.4198.2  | 30648     | 12-Jan-22 | 22:58 | x86      |
 
 SQL Server 2019 sql_tools_extensions
 
-| File   name                                                  | File version    | File size | Date      | Time  | Platform |
-|--------------------------------------------------------------|-----------------|-----------|-----------|-------|----------|
+|                           File name                          |   File version  | File size |    Date   |  Time | Platform |
+|:------------------------------------------------------------:|:---------------:|:---------:|:---------:|:-----:|:--------:|
 | Autoadmin.dll                                                | 2019.150.4198.2 | 1631104   | 12-Jan-22 | 23:15 | x86      |
 | Dtaengine.exe                                                | 2019.150.4198.2 | 218000    | 12-Jan-22 | 23:15 | x86      |
 | Dteparse.dll                                                 | 2019.150.4198.2 | 112568    | 12-Jan-22 | 23:15 | x86      |
@@ -885,7 +891,7 @@ SQL Server 2019 sql_tools_extensions
 | Txdataconvert.dll                                            | 2019.150.4198.2 | 316304    | 12-Jan-22 | 23:15 | x64      |
 | Txdataconvert.dll                                            | 2019.150.4198.2 | 275344    | 12-Jan-22 | 23:15 | x86      |
 | Xe.dll                                                       | 2019.150.4198.2 | 631696    | 12-Jan-22 | 23:15 | x86      |
-| Xe.dll                                                       | 2019.150.4198.2 | 721808    | 12-Jan-22 | 23:15 | x86      |
+| Xe.dll                                                       | 2019.150.4198.2 | 721808    | 12-Jan-22 | 23:15 | x64      |
 
 </details>
 

@@ -1,7 +1,7 @@
 ---
 title: Cumulative Update 2 for SQL Server 2019 (KB4536075)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 2 (KB4536075).
-ms.date: 6/30/2023
+ms.date: 06/30/2023
 ms.custom: KB4536075
 author: Elena068
 ms.author: v-qianli2
@@ -199,460 +199,460 @@ x64-based versions
 
 SQL Server 2019 Analysis Services
 
-| File   name                                               | File version     | File size | Date     | Time  | Platform |
-|-----------------------------------------------------------|------------------|-----------|----------|-------|----------|
-| Asplatformhost.dll                                        | 2018.150.34.1    | 291728    | 3-Feb-20 | 17:16 | x64      |
-| Mashupcompression.dll                                     | 2.72.5556.181    | 140664    | 3-Feb-20 | 17:16 | x64      |
-| Microsoft.analysisservices.minterop.dll                   | 15.0.34.1        | 757136    | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.analysisservices.server.core.resources.dll      | 15.0.34.1        | 174480    | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.analysisservices.server.core.resources.dll      | 15.0.34.1        | 198544    | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.analysisservices.server.core.resources.dll      | 15.0.34.1        | 201104    | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.analysisservices.server.core.resources.dll      | 15.0.34.1        | 197520    | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.analysisservices.server.core.resources.dll      | 15.0.34.1        | 213904    | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.analysisservices.server.core.resources.dll      | 15.0.34.1        | 196496    | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.analysisservices.server.core.resources.dll      | 15.0.34.1        | 192400    | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.analysisservices.server.core.resources.dll      | 15.0.34.1        | 251280    | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.analysisservices.server.core.resources.dll      | 15.0.34.1        | 172944    | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.analysisservices.server.core.resources.dll      | 15.0.34.1        | 195984    | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.analysisservices.server.tabular.dll             | 15.0.34.1        | 1096584   | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.analysisservices.server.tabular.json.dll        | 15.0.34.1        | 479624    | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.analysisservices.server.tabular.resources.dll   | 15.0.34.1        | 53648     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.analysisservices.server.tabular.resources.dll   | 15.0.34.1        | 58256     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.analysisservices.server.tabular.resources.dll   | 15.0.34.1        | 58256     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.analysisservices.server.tabular.resources.dll   | 15.0.34.1        | 57744     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.analysisservices.server.tabular.resources.dll   | 15.0.34.1        | 60816     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.analysisservices.server.tabular.resources.dll   | 15.0.34.1        | 57232     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.analysisservices.server.tabular.resources.dll   | 15.0.34.1        | 57224     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.analysisservices.server.tabular.resources.dll   | 15.0.34.1        | 66448     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.analysisservices.server.tabular.resources.dll   | 15.0.34.1        | 52624     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.analysisservices.server.tabular.resources.dll   | 15.0.34.1        | 57232     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.analysisservices.timedimgenerator.resources.dll | 15.0.34.1        | 16776     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.analysisservices.timedimgenerator.resources.dll | 15.0.34.1        | 16784     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.analysisservices.timedimgenerator.resources.dll | 15.0.34.1        | 16776     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.analysisservices.timedimgenerator.resources.dll | 15.0.34.1        | 16784     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.analysisservices.timedimgenerator.resources.dll | 15.0.34.1        | 16784     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.analysisservices.timedimgenerator.resources.dll | 15.0.34.1        | 16784     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.analysisservices.timedimgenerator.resources.dll | 15.0.34.1        | 16784     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.analysisservices.timedimgenerator.resources.dll | 15.0.34.1        | 17808     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.analysisservices.timedimgenerator.resources.dll | 15.0.34.1        | 16784     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.analysisservices.timedimgenerator.resources.dll | 15.0.34.1        | 16784     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.data.edm.netfx35.dll                            | 5.7.0.62516      | 660856    | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.data.mashup.dll                                 | 2.72.5556.181    | 180600    | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.data.mashup.oledb.dll                           | 2.72.5556.181    | 30072     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.data.mashup.preview.dll                         | 2.72.5556.181    | 74616     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.data.mashup.providercommon.dll                  | 2.72.5556.181    | 102264    | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.data.mashup.providercommon.resources.dll        | 2.72.5556.181    | 37752     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.data.mashup.providercommon.resources.dll        | 2.72.5556.181    | 41848     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.data.mashup.providercommon.resources.dll        | 2.72.5556.181    | 41848     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.data.mashup.providercommon.resources.dll        | 2.72.5556.181    | 41848     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.data.mashup.providercommon.resources.dll        | 2.72.5556.181    | 41848     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.data.mashup.providercommon.resources.dll        | 2.72.5556.181    | 41848     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.data.mashup.providercommon.resources.dll        | 2.72.5556.181    | 28536     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.data.mashup.providercommon.resources.dll        | 2.72.5556.181    | 45944     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.data.mashup.providercommon.resources.dll        | 2.72.5556.181    | 37752     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.data.mashup.providercommon.resources.dll        | 2.72.5556.181    | 29048     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.data.odata.netfx35.dll                          | 5.7.0.62516      | 1454456   | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.data.odata.query.netfx35.dll                    | 5.7.0.62516      | 181112    | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.data.sapclient.dll                              | 1.0.0.25         | 920680    | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.data.sapclient.resources.dll                    | 1.0.0.25         | 23928     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.data.sapclient.resources.dll                    | 1.0.0.25         | 25464     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.data.sapclient.resources.dll                    | 1.0.0.25         | 25976     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.data.sapclient.resources.dll                    | 1.0.0.25         | 28536     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.data.sapclient.resources.dll                    | 1.0.0.25         | 37752     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.hostintegration.connectors.dll                  | 2.72.5556.181    | 5242744   | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.mashup.container.exe                            | 2.72.5556.181    | 19832     | 3-Feb-20 | 17:16 | x64      |
-| Microsoft.mashup.container.netfx40.exe                    | 2.72.5556.181    | 19832     | 3-Feb-20 | 17:16 | x64      |
-| Microsoft.mashup.container.netfx45.exe                    | 2.72.5556.181    | 19832     | 3-Feb-20 | 17:16 | x64      |
-| Microsoft.mashup.eventsource.dll                          | 2.72.5556.181    | 149368    | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.mashup.oauth.dll                                | 2.72.5556.181    | 82296     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.mashup.oauth.resources.dll                      | 2.72.5556.181    | 14712     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.mashup.oauth.resources.dll                      | 2.72.5556.181    | 15224     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.mashup.oauth.resources.dll                      | 2.72.5556.181    | 15432     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.mashup.oauth.resources.dll                      | 2.72.5556.181    | 15224     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.mashup.oauth.resources.dll                      | 2.72.5556.181    | 15224     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.mashup.oauth.resources.dll                      | 2.72.5556.181    | 15224     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.mashup.oauth.resources.dll                      | 2.72.5556.181    | 14712     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.mashup.oauth.resources.dll                      | 2.72.5556.181    | 15736     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.mashup.oauth.resources.dll                      | 2.72.5556.181    | 14712     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.mashup.oauth.resources.dll                      | 2.72.5556.181    | 14712     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.mashup.oledbinterop.dll                         | 2.72.5556.181    | 190840    | 3-Feb-20 | 17:16 | x64      |
-| Microsoft.mashup.oledbprovider.dll                        | 2.72.5556.181    | 59768     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.mashup.oledbprovider.resources.dll              | 2.72.5556.181    | 13176     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.mashup.oledbprovider.resources.dll              | 2.72.5556.181    | 13176     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.mashup.oledbprovider.resources.dll              | 2.72.5556.181    | 13176     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.mashup.oledbprovider.resources.dll              | 2.72.5556.181    | 13176     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.mashup.oledbprovider.resources.dll              | 2.72.5556.181    | 13176     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.mashup.oledbprovider.resources.dll              | 2.72.5556.181    | 13176     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.mashup.oledbprovider.resources.dll              | 2.72.5556.181    | 13176     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.mashup.oledbprovider.resources.dll              | 2.72.5556.181    | 13176     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.mashup.oledbprovider.resources.dll              | 2.72.5556.181    | 13176     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.mashup.oledbprovider.resources.dll              | 2.72.5556.181    | 13176     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.mashup.scriptdom.dll                            | 2.40.4554.261    | 2371808   | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.mashup.shims.dll                                | 2.72.5556.181    | 26488     | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.mashup.storage.xmlserializers.dll               | 1.0.0.0          | 140152    | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.mashupengine.dll                                | 2.72.5556.181    | 14094200  | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.mashupengine.resources.dll                      | 2.72.5556.181    | 541560    | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.mashupengine.resources.dll                      | 2.72.5556.181    | 652152    | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.mashupengine.resources.dll                      | 2.72.5556.181    | 643960    | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.mashupengine.resources.dll                      | 2.72.5556.181    | 627576    | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.mashupengine.resources.dll                      | 2.72.5556.181    | 676728    | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.mashupengine.resources.dll                      | 2.72.5556.181    | 635768    | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.mashupengine.resources.dll                      | 2.72.5556.181    | 615288    | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.mashupengine.resources.dll                      | 2.72.5556.181    | 848760    | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.mashupengine.resources.dll                      | 2.72.5556.181    | 533368    | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.mashupengine.resources.dll                      | 2.72.5556.181    | 623480    | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.odata.core.netfx35.dll                          | 6.15.0.0         | 1437560   | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.odata.edm.netfx35.dll                           | 6.15.0.0         | 778616    | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.powerbi.adomdclient.dll                         | 15.0.30.15       | 1100152   | 3-Feb-20 | 17:16 | x86      |
-| Microsoft.spatial.netfx35.dll                             | 6.15.0.0         | 126328    | 3-Feb-20 | 17:16 | x86      |
-| Msmdctr.dll                                               | 2018.150.34.1    | 37264     | 3-Feb-20 | 17:16 | x64      |
-| Msmdlocal.dll                                             | 2018.150.34.1    | 66198408  | 3-Feb-20 | 17:16 | x64      |
-| Msmdlocal.dll                                             | 2018.150.34.1    | 47711632  | 3-Feb-20 | 17:16 | x86      |
-| Msmdpump.dll                                              | 2018.150.34.1    | 10187664  | 3-Feb-20 | 17:16 | x64      |
-| Msmdredir.dll                                             | 2018.150.34.1    | 7955336   | 3-Feb-20 | 17:16 | x86      |
-| Msmdspdm.resources.dll                                    | 15.0.34.1        | 15760     | 3-Feb-20 | 17:16 | x86      |
-| Msmdspdm.resources.dll                                    | 15.0.34.1        | 15760     | 3-Feb-20 | 17:16 | x86      |
-| Msmdspdm.resources.dll                                    | 15.0.34.1        | 16272     | 3-Feb-20 | 17:16 | x86      |
-| Msmdspdm.resources.dll                                    | 15.0.34.1        | 15760     | 3-Feb-20 | 17:16 | x86      |
-| Msmdspdm.resources.dll                                    | 15.0.34.1        | 16272     | 3-Feb-20 | 17:16 | x86      |
-| Msmdspdm.resources.dll                                    | 15.0.34.1        | 16272     | 3-Feb-20 | 17:16 | x86      |
-| Msmdspdm.resources.dll                                    | 15.0.34.1        | 16272     | 3-Feb-20 | 17:16 | x86      |
-| Msmdspdm.resources.dll                                    | 15.0.34.1        | 17296     | 3-Feb-20 | 17:16 | x86      |
-| Msmdspdm.resources.dll                                    | 15.0.34.1        | 15760     | 3-Feb-20 | 17:16 | x86      |
-| Msmdspdm.resources.dll                                    | 15.0.34.1        | 15760     | 3-Feb-20 | 17:16 | x86      |
-| Msmdsrv.exe                                               | 2018.150.34.1    | 65733008  | 3-Feb-20 | 17:16 | x64      |
-| Msmdsrv.rll                                               | 2018.150.34.1    | 832400    | 3-Feb-20 | 17:16 | x64      |
-| Msmdsrv.rll                                               | 2018.150.34.1    | 1627024   | 3-Feb-20 | 17:16 | x64      |
-| Msmdsrv.rll                                               | 2018.150.34.1    | 1452936   | 3-Feb-20 | 17:16 | x64      |
-| Msmdsrv.rll                                               | 2018.150.34.1    | 1641872   | 3-Feb-20 | 17:16 | x64      |
-| Msmdsrv.rll                                               | 2018.150.34.1    | 1607560   | 3-Feb-20 | 17:16 | x64      |
-| Msmdsrv.rll                                               | 2018.150.34.1    | 1000336   | 3-Feb-20 | 17:16 | x64      |
-| Msmdsrv.rll                                               | 2018.150.34.1    | 991120    | 3-Feb-20 | 17:16 | x64      |
-| Msmdsrv.rll                                               | 2018.150.34.1    | 1535888   | 3-Feb-20 | 17:16 | x64      |
-| Msmdsrv.rll                                               | 2018.150.34.1    | 1520528   | 3-Feb-20 | 17:16 | x64      |
-| Msmdsrv.rll                                               | 2018.150.34.1    | 809872    | 3-Feb-20 | 17:16 | x64      |
-| Msmdsrv.rll                                               | 2018.150.34.1    | 1595280   | 3-Feb-20 | 17:16 | x64      |
-| Msmdsrvi.rll                                              | 2018.150.34.1    | 831376    | 3-Feb-20 | 17:16 | x64      |
-| Msmdsrvi.rll                                              | 2018.150.34.1    | 1623440   | 3-Feb-20 | 17:16 | x64      |
-| Msmdsrvi.rll                                              | 2018.150.34.1    | 1449872   | 3-Feb-20 | 17:16 | x64      |
-| Msmdsrvi.rll                                              | 2018.150.34.1    | 1636752   | 3-Feb-20 | 17:16 | x64      |
-| Msmdsrvi.rll                                              | 2018.150.34.1    | 1603472   | 3-Feb-20 | 17:16 | x64      |
-| Msmdsrvi.rll                                              | 2018.150.34.1    | 997776    | 3-Feb-20 | 17:16 | x64      |
-| Msmdsrvi.rll                                              | 2018.150.34.1    | 990088    | 3-Feb-20 | 17:16 | x64      |
-| Msmdsrvi.rll                                              | 2018.150.34.1    | 1531792   | 3-Feb-20 | 17:16 | x64      |
-| Msmdsrvi.rll                                              | 2018.150.34.1    | 1516944   | 3-Feb-20 | 17:16 | x64      |
-| Msmdsrvi.rll                                              | 2018.150.34.1    | 808848    | 3-Feb-20 | 17:16 | x64      |
-| Msmdsrvi.rll                                              | 2018.150.34.1    | 1590672   | 3-Feb-20 | 17:16 | x64      |
-| Msmgdsrv.dll                                              | 2018.150.34.1    | 10184584  | 3-Feb-20 | 17:16 | x64      |
-| Msmgdsrv.dll                                              | 2018.150.34.1    | 8278416   | 3-Feb-20 | 17:16 | x86      |
-| Msolap.dll                                                | 2018.150.34.1    | 11014544  | 3-Feb-20 | 17:16 | x64      |
-| Msolap.dll                                                | 2018.150.34.1    | 8607120   | 3-Feb-20 | 17:16 | x86      |
-| Msolui.dll                                                | 2018.150.34.1    | 305552    | 3-Feb-20 | 17:16 | x64      |
-| Msolui.dll                                                | 2018.150.34.1    | 285064    | 3-Feb-20 | 17:16 | x86      |
-| Powerbiextensions.dll                                     | 2.72.5556.181    | 9252728   | 3-Feb-20 | 17:16 | x86      |
-| Private_odbc32.dll                                        | 10.0.14832.1000  | 728440    | 3-Feb-20 | 17:16 | x64      |
-| Sqlceip.exe                                               | 15.0.4013.40     | 283528    | 3-Feb-20 | 17:16 | x86      |
-| Sqldumper.exe                                             | 2019.150.4013.40 | 152664    | 3-Feb-20 | 17:16 | x86      |
-| Sqldumper.exe                                             | 2019.150.4013.40 | 185432    | 3-Feb-20 | 17:16 | x64      |
-| System.spatial.netfx35.dll                                | 5.7.0.62516      | 117624    | 3-Feb-20 | 17:16 | x86      |
-| Tmapi.dll                                                 | 2018.150.34.1    | 6177168   | 3-Feb-20 | 17:16 | x64      |
-| Tmcachemgr.dll                                            | 2018.150.34.1    | 4916624   | 3-Feb-20 | 17:16 | x64      |
-| Tmpersistence.dll                                         | 2018.150.34.1    | 1183632   | 3-Feb-20 | 17:16 | x64      |
-| Tmtransactions.dll                                        | 2018.150.34.1    | 6802312   | 3-Feb-20 | 17:16 | x64      |
-| Xmsrv.dll                                                 | 2018.150.34.1    | 26021264  | 3-Feb-20 | 17:16 | x64      |
-| Xmsrv.dll                                                 | 2018.150.34.1    | 35457928  | 3-Feb-20 | 17:16 | x86      |
+|                         File name                         |   File version   | File size |    Date   |  Time | Platform |
+|:---------------------------------------------------------:|:----------------:|:---------:|:---------:|:-----:|:--------:|
+| Asplatformhost.dll                                        | 2018.150.34.1    | 291728    | 03-Feb-20 | 17:16 | x64      |
+| Mashupcompression.dll                                     | 2.72.5556.181    | 140664    | 03-Feb-20 | 17:16 | x64      |
+| Microsoft.analysisservices.minterop.dll                   | 15.0.34.1        | 757136    | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.analysisservices.server.core.resources.dll      | 15.0.34.1        | 174480    | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.analysisservices.server.core.resources.dll      | 15.0.34.1        | 198544    | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.analysisservices.server.core.resources.dll      | 15.0.34.1        | 201104    | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.analysisservices.server.core.resources.dll      | 15.0.34.1        | 197520    | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.analysisservices.server.core.resources.dll      | 15.0.34.1        | 213904    | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.analysisservices.server.core.resources.dll      | 15.0.34.1        | 196496    | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.analysisservices.server.core.resources.dll      | 15.0.34.1        | 192400    | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.analysisservices.server.core.resources.dll      | 15.0.34.1        | 251280    | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.analysisservices.server.core.resources.dll      | 15.0.34.1        | 172944    | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.analysisservices.server.core.resources.dll      | 15.0.34.1        | 195984    | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.analysisservices.server.tabular.dll             | 15.0.34.1        | 1096584   | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.analysisservices.server.tabular.json.dll        | 15.0.34.1        | 479624    | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.analysisservices.server.tabular.resources.dll   | 15.0.34.1        | 53648     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.analysisservices.server.tabular.resources.dll   | 15.0.34.1        | 58256     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.analysisservices.server.tabular.resources.dll   | 15.0.34.1        | 58256     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.analysisservices.server.tabular.resources.dll   | 15.0.34.1        | 57744     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.analysisservices.server.tabular.resources.dll   | 15.0.34.1        | 60816     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.analysisservices.server.tabular.resources.dll   | 15.0.34.1        | 57232     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.analysisservices.server.tabular.resources.dll   | 15.0.34.1        | 57224     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.analysisservices.server.tabular.resources.dll   | 15.0.34.1        | 66448     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.analysisservices.server.tabular.resources.dll   | 15.0.34.1        | 52624     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.analysisservices.server.tabular.resources.dll   | 15.0.34.1        | 57232     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.analysisservices.timedimgenerator.resources.dll | 15.0.34.1        | 16776     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.analysisservices.timedimgenerator.resources.dll | 15.0.34.1        | 16784     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.analysisservices.timedimgenerator.resources.dll | 15.0.34.1        | 16776     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.analysisservices.timedimgenerator.resources.dll | 15.0.34.1        | 16784     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.analysisservices.timedimgenerator.resources.dll | 15.0.34.1        | 16784     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.analysisservices.timedimgenerator.resources.dll | 15.0.34.1        | 16784     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.analysisservices.timedimgenerator.resources.dll | 15.0.34.1        | 16784     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.analysisservices.timedimgenerator.resources.dll | 15.0.34.1        | 17808     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.analysisservices.timedimgenerator.resources.dll | 15.0.34.1        | 16784     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.analysisservices.timedimgenerator.resources.dll | 15.0.34.1        | 16784     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.data.edm.netfx35.dll                            | 5.7.0.62516      | 660856    | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.data.mashup.dll                                 | 2.72.5556.181    | 180600    | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.data.mashup.oledb.dll                           | 2.72.5556.181    | 30072     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.data.mashup.preview.dll                         | 2.72.5556.181    | 74616     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.data.mashup.providercommon.dll                  | 2.72.5556.181    | 102264    | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.data.mashup.providercommon.resources.dll        | 2.72.5556.181    | 37752     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.data.mashup.providercommon.resources.dll        | 2.72.5556.181    | 41848     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.data.mashup.providercommon.resources.dll        | 2.72.5556.181    | 41848     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.data.mashup.providercommon.resources.dll        | 2.72.5556.181    | 41848     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.data.mashup.providercommon.resources.dll        | 2.72.5556.181    | 41848     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.data.mashup.providercommon.resources.dll        | 2.72.5556.181    | 41848     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.data.mashup.providercommon.resources.dll        | 2.72.5556.181    | 28536     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.data.mashup.providercommon.resources.dll        | 2.72.5556.181    | 45944     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.data.mashup.providercommon.resources.dll        | 2.72.5556.181    | 37752     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.data.mashup.providercommon.resources.dll        | 2.72.5556.181    | 29048     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.data.odata.netfx35.dll                          | 5.7.0.62516      | 1454456   | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.data.odata.query.netfx35.dll                    | 5.7.0.62516      | 181112    | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.data.sapclient.dll                              | 1.0.0.25         | 920680    | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.data.sapclient.resources.dll                    | 1.0.0.25         | 23928     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.data.sapclient.resources.dll                    | 1.0.0.25         | 25464     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.data.sapclient.resources.dll                    | 1.0.0.25         | 25976     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.data.sapclient.resources.dll                    | 1.0.0.25         | 28536     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.data.sapclient.resources.dll                    | 1.0.0.25         | 37752     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.hostintegration.connectors.dll                  | 2.72.5556.181    | 5242744   | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.mashup.container.exe                            | 2.72.5556.181    | 19832     | 03-Feb-20 | 17:16 | x64      |
+| Microsoft.mashup.container.netfx40.exe                    | 2.72.5556.181    | 19832     | 03-Feb-20 | 17:16 | x64      |
+| Microsoft.mashup.container.netfx45.exe                    | 2.72.5556.181    | 19832     | 03-Feb-20 | 17:16 | x64      |
+| Microsoft.mashup.eventsource.dll                          | 2.72.5556.181    | 149368    | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.mashup.oauth.dll                                | 2.72.5556.181    | 82296     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.mashup.oauth.resources.dll                      | 2.72.5556.181    | 14712     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.mashup.oauth.resources.dll                      | 2.72.5556.181    | 15224     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.mashup.oauth.resources.dll                      | 2.72.5556.181    | 15432     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.mashup.oauth.resources.dll                      | 2.72.5556.181    | 15224     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.mashup.oauth.resources.dll                      | 2.72.5556.181    | 15224     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.mashup.oauth.resources.dll                      | 2.72.5556.181    | 15224     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.mashup.oauth.resources.dll                      | 2.72.5556.181    | 14712     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.mashup.oauth.resources.dll                      | 2.72.5556.181    | 15736     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.mashup.oauth.resources.dll                      | 2.72.5556.181    | 14712     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.mashup.oauth.resources.dll                      | 2.72.5556.181    | 14712     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.mashup.oledbinterop.dll                         | 2.72.5556.181    | 190840    | 03-Feb-20 | 17:16 | x64      |
+| Microsoft.mashup.oledbprovider.dll                        | 2.72.5556.181    | 59768     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.mashup.oledbprovider.resources.dll              | 2.72.5556.181    | 13176     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.mashup.oledbprovider.resources.dll              | 2.72.5556.181    | 13176     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.mashup.oledbprovider.resources.dll              | 2.72.5556.181    | 13176     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.mashup.oledbprovider.resources.dll              | 2.72.5556.181    | 13176     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.mashup.oledbprovider.resources.dll              | 2.72.5556.181    | 13176     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.mashup.oledbprovider.resources.dll              | 2.72.5556.181    | 13176     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.mashup.oledbprovider.resources.dll              | 2.72.5556.181    | 13176     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.mashup.oledbprovider.resources.dll              | 2.72.5556.181    | 13176     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.mashup.oledbprovider.resources.dll              | 2.72.5556.181    | 13176     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.mashup.oledbprovider.resources.dll              | 2.72.5556.181    | 13176     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.mashup.scriptdom.dll                            | 2.40.4554.261    | 2371808   | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.mashup.shims.dll                                | 2.72.5556.181    | 26488     | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.mashup.storage.xmlserializers.dll               | 1.0.0.0          | 140152    | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.mashupengine.dll                                | 2.72.5556.181    | 14094200  | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.mashupengine.resources.dll                      | 2.72.5556.181    | 541560    | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.mashupengine.resources.dll                      | 2.72.5556.181    | 652152    | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.mashupengine.resources.dll                      | 2.72.5556.181    | 643960    | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.mashupengine.resources.dll                      | 2.72.5556.181    | 627576    | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.mashupengine.resources.dll                      | 2.72.5556.181    | 676728    | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.mashupengine.resources.dll                      | 2.72.5556.181    | 635768    | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.mashupengine.resources.dll                      | 2.72.5556.181    | 615288    | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.mashupengine.resources.dll                      | 2.72.5556.181    | 848760    | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.mashupengine.resources.dll                      | 2.72.5556.181    | 533368    | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.mashupengine.resources.dll                      | 2.72.5556.181    | 623480    | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.odata.core.netfx35.dll                          | 6.15.0.0         | 1437560   | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.odata.edm.netfx35.dll                           | 6.15.0.0         | 778616    | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.powerbi.adomdclient.dll                         | 15.0.30.15       | 1100152   | 03-Feb-20 | 17:16 | x86      |
+| Microsoft.spatial.netfx35.dll                             | 6.15.0.0         | 126328    | 03-Feb-20 | 17:16 | x86      |
+| Msmdctr.dll                                               | 2018.150.34.1    | 37264     | 03-Feb-20 | 17:16 | x64      |
+| Msmdlocal.dll                                             | 2018.150.34.1    | 66198408  | 03-Feb-20 | 17:16 | x64      |
+| Msmdlocal.dll                                             | 2018.150.34.1    | 47711632  | 03-Feb-20 | 17:16 | x86      |
+| Msmdpump.dll                                              | 2018.150.34.1    | 10187664  | 03-Feb-20 | 17:16 | x64      |
+| Msmdredir.dll                                             | 2018.150.34.1    | 7955336   | 03-Feb-20 | 17:16 | x86      |
+| Msmdspdm.resources.dll                                    | 15.0.34.1        | 15760     | 03-Feb-20 | 17:16 | x86      |
+| Msmdspdm.resources.dll                                    | 15.0.34.1        | 15760     | 03-Feb-20 | 17:16 | x86      |
+| Msmdspdm.resources.dll                                    | 15.0.34.1        | 16272     | 03-Feb-20 | 17:16 | x86      |
+| Msmdspdm.resources.dll                                    | 15.0.34.1        | 15760     | 03-Feb-20 | 17:16 | x86      |
+| Msmdspdm.resources.dll                                    | 15.0.34.1        | 16272     | 03-Feb-20 | 17:16 | x86      |
+| Msmdspdm.resources.dll                                    | 15.0.34.1        | 16272     | 03-Feb-20 | 17:16 | x86      |
+| Msmdspdm.resources.dll                                    | 15.0.34.1        | 16272     | 03-Feb-20 | 17:16 | x86      |
+| Msmdspdm.resources.dll                                    | 15.0.34.1        | 17296     | 03-Feb-20 | 17:16 | x86      |
+| Msmdspdm.resources.dll                                    | 15.0.34.1        | 15760     | 03-Feb-20 | 17:16 | x86      |
+| Msmdspdm.resources.dll                                    | 15.0.34.1        | 15760     | 03-Feb-20 | 17:16 | x86      |
+| Msmdsrv.exe                                               | 2018.150.34.1    | 65733008  | 03-Feb-20 | 17:16 | x64      |
+| Msmdsrv.rll                                               | 2018.150.34.1    | 832400    | 03-Feb-20 | 17:16 | x64      |
+| Msmdsrv.rll                                               | 2018.150.34.1    | 1627024   | 03-Feb-20 | 17:16 | x64      |
+| Msmdsrv.rll                                               | 2018.150.34.1    | 1452936   | 03-Feb-20 | 17:16 | x64      |
+| Msmdsrv.rll                                               | 2018.150.34.1    | 1641872   | 03-Feb-20 | 17:16 | x64      |
+| Msmdsrv.rll                                               | 2018.150.34.1    | 1607560   | 03-Feb-20 | 17:16 | x64      |
+| Msmdsrv.rll                                               | 2018.150.34.1    | 1000336   | 03-Feb-20 | 17:16 | x64      |
+| Msmdsrv.rll                                               | 2018.150.34.1    | 991120    | 03-Feb-20 | 17:16 | x64      |
+| Msmdsrv.rll                                               | 2018.150.34.1    | 1535888   | 03-Feb-20 | 17:16 | x64      |
+| Msmdsrv.rll                                               | 2018.150.34.1    | 1520528   | 03-Feb-20 | 17:16 | x64      |
+| Msmdsrv.rll                                               | 2018.150.34.1    | 809872    | 03-Feb-20 | 17:16 | x64      |
+| Msmdsrv.rll                                               | 2018.150.34.1    | 1595280   | 03-Feb-20 | 17:16 | x64      |
+| Msmdsrvi.rll                                              | 2018.150.34.1    | 831376    | 03-Feb-20 | 17:16 | x64      |
+| Msmdsrvi.rll                                              | 2018.150.34.1    | 1623440   | 03-Feb-20 | 17:16 | x64      |
+| Msmdsrvi.rll                                              | 2018.150.34.1    | 1449872   | 03-Feb-20 | 17:16 | x64      |
+| Msmdsrvi.rll                                              | 2018.150.34.1    | 1636752   | 03-Feb-20 | 17:16 | x64      |
+| Msmdsrvi.rll                                              | 2018.150.34.1    | 1603472   | 03-Feb-20 | 17:16 | x64      |
+| Msmdsrvi.rll                                              | 2018.150.34.1    | 997776    | 03-Feb-20 | 17:16 | x64      |
+| Msmdsrvi.rll                                              | 2018.150.34.1    | 990088    | 03-Feb-20 | 17:16 | x64      |
+| Msmdsrvi.rll                                              | 2018.150.34.1    | 1531792   | 03-Feb-20 | 17:16 | x64      |
+| Msmdsrvi.rll                                              | 2018.150.34.1    | 1516944   | 03-Feb-20 | 17:16 | x64      |
+| Msmdsrvi.rll                                              | 2018.150.34.1    | 808848    | 03-Feb-20 | 17:16 | x64      |
+| Msmdsrvi.rll                                              | 2018.150.34.1    | 1590672   | 03-Feb-20 | 17:16 | x64      |
+| Msmgdsrv.dll                                              | 2018.150.34.1    | 10184584  | 03-Feb-20 | 17:16 | x64      |
+| Msmgdsrv.dll                                              | 2018.150.34.1    | 8278416   | 03-Feb-20 | 17:16 | x86      |
+| Msolap.dll                                                | 2018.150.34.1    | 11014544  | 03-Feb-20 | 17:16 | x64      |
+| Msolap.dll                                                | 2018.150.34.1    | 8607120   | 03-Feb-20 | 17:16 | x86      |
+| Msolui.dll                                                | 2018.150.34.1    | 305552    | 03-Feb-20 | 17:16 | x64      |
+| Msolui.dll                                                | 2018.150.34.1    | 285064    | 03-Feb-20 | 17:16 | x86      |
+| Powerbiextensions.dll                                     | 2.72.5556.181    | 9252728   | 03-Feb-20 | 17:16 | x86      |
+| Private_odbc32.dll                                        | 10.0.14832.1000  | 728440    | 03-Feb-20 | 17:16 | x64      |
+| Sqlceip.exe                                               | 15.0.4013.40     | 283528    | 03-Feb-20 | 17:16 | x86      |
+| Sqldumper.exe                                             | 2019.150.4013.40 | 152664    | 03-Feb-20 | 17:16 | x86      |
+| Sqldumper.exe                                             | 2019.150.4013.40 | 185432    | 03-Feb-20 | 17:16 | x64      |
+| System.spatial.netfx35.dll                                | 5.7.0.62516      | 117624    | 03-Feb-20 | 17:16 | x86      |
+| Tmapi.dll                                                 | 2018.150.34.1    | 6177168   | 03-Feb-20 | 17:16 | x64      |
+| Tmcachemgr.dll                                            | 2018.150.34.1    | 4916624   | 03-Feb-20 | 17:16 | x64      |
+| Tmpersistence.dll                                         | 2018.150.34.1    | 1183632   | 03-Feb-20 | 17:16 | x64      |
+| Tmtransactions.dll                                        | 2018.150.34.1    | 6802312   | 03-Feb-20 | 17:16 | x64      |
+| Xmsrv.dll                                                 | 2018.150.34.1    | 26021264  | 03-Feb-20 | 17:16 | x64      |
+| Xmsrv.dll                                                 | 2018.150.34.1    | 35457928  | 03-Feb-20 | 17:16 | x86      |
 
 SQL Server 2019 Database Services Common Core
 
-| File   name    | File version     | File size | Date     | Time  | Platform |
-|----------------|------------------|-----------|----------|-------|----------|
-| Instapi150.dll | 2019.150.4013.40 | 74840     | 3-Feb-20 | 17:16 | x86      |
-| Instapi150.dll | 2019.150.4013.40 | 87128     | 3-Feb-20 | 17:16 | x64      |
-| Msasxpress.dll | 2018.150.34.1    | 26000     | 3-Feb-20 | 17:16 | x86      |
-| Msasxpress.dll | 2018.150.34.1    | 31120     | 3-Feb-20 | 17:16 | x64      |
-| Sqldumper.exe  | 2019.150.4013.40 | 152664    | 3-Feb-20 | 17:16 | x86      |
-| Sqldumper.exe  | 2019.150.4013.40 | 185432    | 3-Feb-20 | 17:16 | x64      |
-| Sqlmanager.dll | 2019.150.4013.40 | 742280    | 3-Feb-20 | 17:16 | x86      |
-| Sqlmanager.dll | 2019.150.4013.40 | 873352    | 3-Feb-20 | 17:16 | x64      |
+|    File name   |   File version   | File size |    Date   |  Time | Platform |
+|:--------------:|:----------------:|:---------:|:---------:|:-----:|:--------:|
+| Instapi150.dll | 2019.150.4013.40 | 74840     | 03-Feb-20 | 17:16 | x86      |
+| Instapi150.dll | 2019.150.4013.40 | 87128     | 03-Feb-20 | 17:16 | x64      |
+| Msasxpress.dll | 2018.150.34.1    | 26000     | 03-Feb-20 | 17:16 | x86      |
+| Msasxpress.dll | 2018.150.34.1    | 31120     | 03-Feb-20 | 17:16 | x64      |
+| Sqldumper.exe  | 2019.150.4013.40 | 152664    | 03-Feb-20 | 17:16 | x86      |
+| Sqldumper.exe  | 2019.150.4013.40 | 185432    | 03-Feb-20 | 17:16 | x64      |
+| Sqlmanager.dll | 2019.150.4013.40 | 742280    | 03-Feb-20 | 17:16 | x86      |
+| Sqlmanager.dll | 2019.150.4013.40 | 873352    | 03-Feb-20 | 17:16 | x64      |
 
 SQL Server 2019 sql_dreplay_client
 
-| File   name       | File version     | File size | Date     | Time  | Platform |
-|-------------------|------------------|-----------|----------|-------|----------|
-| Dreplaycommon.dll | 2019.150.4013.40 | 665176    | 3-Feb-20 | 17:16 | x86      |
-| Dreplayutil.dll   | 2019.150.4013.40 | 304008    | 3-Feb-20 | 17:17 | x86      |
-| Instapi150.dll    | 2019.150.4013.40 | 87128     | 3-Feb-20 | 17:16 | x64      |
+|     File name     |   File version   | File size |    Date   |  Time | Platform |
+|:-----------------:|:----------------:|:---------:|:---------:|:-----:|:--------:|
+| Dreplaycommon.dll | 2019.150.4013.40 | 665176    | 03-Feb-20 | 17:16 | x86      |
+| Dreplayutil.dll   | 2019.150.4013.40 | 304008    | 03-Feb-20 | 17:17 | x86      |
+| Instapi150.dll    | 2019.150.4013.40 | 87128     | 03-Feb-20 | 17:16 | x64      |
 
 SQL Server 2019 sql_dreplay_controller
 
-| File   name       | File version     | File size | Date     | Time  | Platform |
-|-------------------|------------------|-----------|----------|-------|----------|
-| Dreplaycommon.dll | 2019.150.4013.40 | 665176    | 3-Feb-20 | 17:16 | x86      |
-| Instapi150.dll    | 2019.150.4013.40 | 87128     | 3-Feb-20 | 17:16 | x64      |
+|     File name     |   File version   | File size |    Date   |  Time | Platform |
+|:-----------------:|:----------------:|:---------:|:---------:|:-----:|:--------:|
+| Dreplaycommon.dll | 2019.150.4013.40 | 665176    | 03-Feb-20 | 17:16 | x86      |
+| Instapi150.dll    | 2019.150.4013.40 | 87128     | 03-Feb-20 | 17:16 | x64      |
 
 SQL Server 2019 Database Services Core Instance
 
-| File   name                    | File version     | File size | Date     | Time  | Platform |
-|--------------------------------|------------------|-----------|----------|-------|----------|
-| Aetm-enclave-simulator.dll     | 2019.150.4013.40 | 4653168   | 3-Feb-20 | 18:16 | x64      |
-| Aetm-enclave.dll               | 2019.150.4013.40 | 4603744   | 3-Feb-20 | 18:16 | x64      |
-| Aetm-sgx-enclave-simulator.dll | 2019.150.4013.40 | 4924648   | 3-Feb-20 | 18:16 | x64      |
-| Aetm-sgx-enclave.dll           | 2019.150.4013.40 | 4866464   | 3-Feb-20 | 18:16 | x64      |
-| Azureattest.dll                | 10.0.18965.1000  | 255056    | 3-Feb-20 | 17:19 | x64      |
-| Azureattestmanager.dll         | 10.0.18965.1000  | 97528     | 3-Feb-20 | 17:19 | x64      |
-| Hkcompile.dll                  | 2019.150.4013.40 | 1291352   | 3-Feb-20 | 18:16 | x64      |
-| Hkengine.dll                   | 2019.150.4013.40 | 5784456   | 3-Feb-20 | 18:16 | x64      |
-| Hkruntime.dll                  | 2019.150.4013.40 | 181128    | 3-Feb-20 | 18:16 | x64      |
-| Hktempdb.dll                   | 2019.150.4013.40 | 62344     | 3-Feb-20 | 18:16 | x64      |
-| Qds.dll                        | 2019.150.4013.40 | 1176456   | 3-Feb-20 | 18:16 | x64      |
-| Rsfxft.dll                     | 2019.150.4013.40 | 50264     | 3-Feb-20 | 18:16 | x64      |
-| Secforwarder.dll               | 2019.150.4013.40 | 78728     | 3-Feb-20 | 18:16 | x64      |
-| Sqlaamss.dll                   | 2019.150.4013.40 | 107400    | 3-Feb-20 | 18:16 | x64      |
-| Sqlaccess.dll                  | 2019.150.4013.40 | 492424    | 3-Feb-20 | 18:16 | x64      |
-| Sqlagent.exe                   | 2019.150.4013.40 | 721800    | 3-Feb-20 | 18:16 | x64      |
-| Sqlceip.exe                    | 15.0.4013.40     | 283528    | 3-Feb-20 | 18:16 | x86      |
-| Sqlcmdss.dll                   | 2019.150.4013.40 | 86920     | 3-Feb-20 | 18:16 | x64      |
-| Sqlctr150.dll                  | 2019.150.4013.40 | 140168    | 3-Feb-20 | 18:16 | x64      |
-| Sqlctr150.dll                  | 2019.150.4013.40 | 115592    | 3-Feb-20 | 18:16 | x86      |
-| Sqldk.dll                      | 2019.150.4013.40 | 3138440   | 3-Feb-20 | 18:16 | x64      |
-| Sqldtsss.dll                   | 2019.150.4013.40 | 107400    | 3-Feb-20 | 18:16 | x64      |
-| `Sqlevn70.rll`                   | 2019.150.4013.40 | 1586056   | 3-Feb-20 | 18:16 | x64      |
-| `Sqlevn70.rll`                   | 2019.150.4013.40 | 3482504   | 3-Feb-20 | 18:16 | x64      |
-| `Sqlevn70.rll`                   | 2019.150.4013.40 | 3675016   | 3-Feb-20 | 18:16 | x64      |
-| `Sqlevn70.rll`                   | 2019.150.4013.40 | 4142168   | 3-Feb-20 | 18:16 | x64      |
-| `Sqlevn70.rll`                   | 2019.150.4013.40 | 4256864   | 3-Feb-20 | 18:16 | x64      |
-| `Sqlevn70.rll`                   | 2019.150.4013.40 | 3396696   | 3-Feb-20 | 18:16 | x64      |
-| `Sqlevn70.rll`                   | 2019.150.4013.40 | 3560536   | 3-Feb-20 | 18:16 | x64      |
-| `Sqlevn70.rll`                   | 2019.150.4013.40 | 4133768   | 3-Feb-20 | 18:16 | x64      |
-| `Sqlevn70.rll`                   | 2019.150.4013.40 | 3990408   | 3-Feb-20 | 18:16 | x64      |
-| `Sqlevn70.rll`                   | 2019.150.4013.40 | 4039560   | 3-Feb-20 | 18:16 | x64      |
-| `Sqlevn70.rll`                   | 2019.150.4013.40 | 2208856   | 3-Feb-20 | 18:16 | x64      |
-| `Sqlevn70.rll`                   | 2019.150.4013.40 | 2159704   | 3-Feb-20 | 18:16 | x64      |
-| `Sqlevn70.rll`                   | 2019.150.4013.40 | 3847256   | 3-Feb-20 | 18:16 | x64      |
-| `Sqlevn70.rll`                   | 2019.150.4013.40 | 3523464   | 3-Feb-20 | 18:16 | x64      |
-| `Sqlevn70.rll`                   | 2019.150.4013.40 | 3994504   | 3-Feb-20 | 18:16 | x64      |
-| `Sqlevn70.rll`                   | 2019.150.4013.40 | 3802200   | 3-Feb-20 | 18:16 | x64      |
-| `Sqlevn70.rll`                   | 2019.150.4013.40 | 3797896   | 3-Feb-20 | 18:16 | x64      |
-| `Sqlevn70.rll`                   | 2019.150.4013.40 | 3593304   | 3-Feb-20 | 18:16 | x64      |
-| `Sqlevn70.rll`                   | 2019.150.4013.40 | 3482712   | 3-Feb-20 | 18:16 | x64      |
-| `Sqlevn70.rll`                   | 2019.150.4013.40 | 1528928   | 3-Feb-20 | 18:16 | x64      |
-| `Sqlevn70.rll`                   | 2019.150.4013.40 | 3888008   | 3-Feb-20 | 18:16 | x64      |
-| `Sqlevn70.rll`                   | 2019.150.4013.40 | 4007000   | 3-Feb-20 | 18:16 | x64      |
-| Sqllang.dll                    | 2019.150.4013.40 | 39523208  | 3-Feb-20 | 18:17 | x64      |
-| Sqlmin.dll                     | 2019.150.4013.40 | 40123784  | 3-Feb-20 | 18:16 | x64      |
-| Sqlolapss.dll                  | 2019.150.4013.40 | 103512    | 3-Feb-20 | 18:16 | x64      |
-| Sqlos.dll                      | 2019.150.4013.40 | 45960     | 3-Feb-20 | 18:16 | x64      |
-| Sqlpowershellss.dll            | 2019.150.4013.40 | 83056     | 3-Feb-20 | 18:16 | x64      |
-| Sqlrepss.dll                   | 2019.150.4013.40 | 83032     | 3-Feb-20 | 18:16 | x64      |
-| Sqlscriptdowngrade.dll         | 2019.150.4013.40 | 41864     | 3-Feb-20 | 18:16 | x64      |
-| Sqlscriptupgrade.dll           | 2019.150.4013.40 | 5903448   | 3-Feb-20 | 18:16 | x64      |
-| Sqlservr.exe                   | 2019.150.4013.40 | 623496    | 3-Feb-20 | 18:16 | x64      |
-| Sqlsvc.dll                     | 2019.150.4013.40 | 181336    | 3-Feb-20 | 18:16 | x64      |
-| Sqltses.dll                    | 2019.150.4013.40 | 9069448   | 3-Feb-20 | 18:16 | x64      |
-| Svl.dll                        | 2019.150.4013.40 | 160648    | 3-Feb-20 | 18:16 | x64      |
-| Xpstar.dll                     | 2019.150.4013.40 | 471944    | 3-Feb-20 | 18:16 | x64      |
+|            File name           |   File version   | File size |    Date   |  Time | Platform |
+|:------------------------------:|:----------------:|:---------:|:---------:|:-----:|:--------:|
+| Aetm-enclave-simulator.dll     | 2019.150.4013.40 | 4653168   | 03-Feb-20 | 18:16 | x64      |
+| Aetm-enclave.dll               | 2019.150.4013.40 | 4603744   | 03-Feb-20 | 18:16 | x64      |
+| Aetm-sgx-enclave-simulator.dll | 2019.150.4013.40 | 4924648   | 03-Feb-20 | 18:16 | x64      |
+| Aetm-sgx-enclave.dll           | 2019.150.4013.40 | 4866464   | 03-Feb-20 | 18:16 | x64      |
+| Azureattest.dll                | 10.0.18965.1000  | 255056    | 03-Feb-20 | 17:19 | x64      |
+| Azureattestmanager.dll         | 10.0.18965.1000  | 97528     | 03-Feb-20 | 17:19 | x64      |
+| Hkcompile.dll                  | 2019.150.4013.40 | 1291352   | 03-Feb-20 | 18:16 | x64      |
+| Hkengine.dll                   | 2019.150.4013.40 | 5784456   | 03-Feb-20 | 18:16 | x64      |
+| Hkruntime.dll                  | 2019.150.4013.40 | 181128    | 03-Feb-20 | 18:16 | x64      |
+| Hktempdb.dll                   | 2019.150.4013.40 | 62344     | 03-Feb-20 | 18:16 | x64      |
+| Qds.dll                        | 2019.150.4013.40 | 1176456   | 03-Feb-20 | 18:16 | x64      |
+| Rsfxft.dll                     | 2019.150.4013.40 | 50264     | 03-Feb-20 | 18:16 | x64      |
+| Secforwarder.dll               | 2019.150.4013.40 | 78728     | 03-Feb-20 | 18:16 | x64      |
+| Sqlaamss.dll                   | 2019.150.4013.40 | 107400    | 03-Feb-20 | 18:16 | x64      |
+| Sqlaccess.dll                  | 2019.150.4013.40 | 492424    | 03-Feb-20 | 18:16 | x64      |
+| Sqlagent.exe                   | 2019.150.4013.40 | 721800    | 03-Feb-20 | 18:16 | x64      |
+| Sqlceip.exe                    | 15.0.4013.40     | 283528    | 03-Feb-20 | 18:16 | x86      |
+| Sqlcmdss.dll                   | 2019.150.4013.40 | 86920     | 03-Feb-20 | 18:16 | x64      |
+| Sqlctr150.dll                  | 2019.150.4013.40 | 140168    | 03-Feb-20 | 18:16 | x64      |
+| Sqlctr150.dll                  | 2019.150.4013.40 | 115592    | 03-Feb-20 | 18:16 | x86      |
+| Sqldk.dll                      | 2019.150.4013.40 | 3138440   | 03-Feb-20 | 18:16 | x64      |
+| Sqldtsss.dll                   | 2019.150.4013.40 | 107400    | 03-Feb-20 | 18:16 | x64      |
+| `Sqlevn70.rll`                   | 2019.150.4013.40 | 1586056   | 03-Feb-20 | 18:16 | x64      |
+| `Sqlevn70.rll`                   | 2019.150.4013.40 | 3482504   | 03-Feb-20 | 18:16 | x64      |
+| `Sqlevn70.rll`                   | 2019.150.4013.40 | 3675016   | 03-Feb-20 | 18:16 | x64      |
+| `Sqlevn70.rll`                   | 2019.150.4013.40 | 4142168   | 03-Feb-20 | 18:16 | x64      |
+| `Sqlevn70.rll`                   | 2019.150.4013.40 | 4256864   | 03-Feb-20 | 18:16 | x64      |
+| `Sqlevn70.rll`                   | 2019.150.4013.40 | 3396696   | 03-Feb-20 | 18:16 | x64      |
+| `Sqlevn70.rll`                   | 2019.150.4013.40 | 3560536   | 03-Feb-20 | 18:16 | x64      |
+| `Sqlevn70.rll`                   | 2019.150.4013.40 | 4133768   | 03-Feb-20 | 18:16 | x64      |
+| `Sqlevn70.rll`                   | 2019.150.4013.40 | 3990408   | 03-Feb-20 | 18:16 | x64      |
+| `Sqlevn70.rll`                   | 2019.150.4013.40 | 4039560   | 03-Feb-20 | 18:16 | x64      |
+| `Sqlevn70.rll`                   | 2019.150.4013.40 | 2208856   | 03-Feb-20 | 18:16 | x64      |
+| `Sqlevn70.rll`                   | 2019.150.4013.40 | 2159704   | 03-Feb-20 | 18:16 | x64      |
+| `Sqlevn70.rll`                   | 2019.150.4013.40 | 3847256   | 03-Feb-20 | 18:16 | x64      |
+| `Sqlevn70.rll`                   | 2019.150.4013.40 | 3523464   | 03-Feb-20 | 18:16 | x64      |
+| `Sqlevn70.rll`                   | 2019.150.4013.40 | 3994504   | 03-Feb-20 | 18:16 | x64      |
+| `Sqlevn70.rll`                   | 2019.150.4013.40 | 3802200   | 03-Feb-20 | 18:16 | x64      |
+| `Sqlevn70.rll`                   | 2019.150.4013.40 | 3797896   | 03-Feb-20 | 18:16 | x64      |
+| `Sqlevn70.rll`                   | 2019.150.4013.40 | 3593304   | 03-Feb-20 | 18:16 | x64      |
+| `Sqlevn70.rll`                   | 2019.150.4013.40 | 3482712   | 03-Feb-20 | 18:16 | x64      |
+| `Sqlevn70.rll`                   | 2019.150.4013.40 | 1528928   | 03-Feb-20 | 18:16 | x64      |
+| `Sqlevn70.rll`                   | 2019.150.4013.40 | 3888008   | 03-Feb-20 | 18:16 | x64      |
+| `Sqlevn70.rll`                   | 2019.150.4013.40 | 4007000   | 03-Feb-20 | 18:16 | x64      |
+| Sqllang.dll                    | 2019.150.4013.40 | 39523208  | 03-Feb-20 | 18:17 | x64      |
+| Sqlmin.dll                     | 2019.150.4013.40 | 40123784  | 03-Feb-20 | 18:16 | x64      |
+| Sqlolapss.dll                  | 2019.150.4013.40 | 103512    | 03-Feb-20 | 18:16 | x64      |
+| Sqlos.dll                      | 2019.150.4013.40 | 45960     | 03-Feb-20 | 18:16 | x64      |
+| Sqlpowershellss.dll            | 2019.150.4013.40 | 83056     | 03-Feb-20 | 18:16 | x64      |
+| Sqlrepss.dll                   | 2019.150.4013.40 | 83032     | 03-Feb-20 | 18:16 | x64      |
+| Sqlscriptdowngrade.dll         | 2019.150.4013.40 | 41864     | 03-Feb-20 | 18:16 | x64      |
+| Sqlscriptupgrade.dll           | 2019.150.4013.40 | 5903448   | 03-Feb-20 | 18:16 | x64      |
+| Sqlservr.exe                   | 2019.150.4013.40 | 623496    | 03-Feb-20 | 18:16 | x64      |
+| Sqlsvc.dll                     | 2019.150.4013.40 | 181336    | 03-Feb-20 | 18:16 | x64      |
+| Sqltses.dll                    | 2019.150.4013.40 | 9069448   | 03-Feb-20 | 18:16 | x64      |
+| Svl.dll                        | 2019.150.4013.40 | 160648    | 03-Feb-20 | 18:16 | x64      |
+| Xpstar.dll                     | 2019.150.4013.40 | 471944    | 03-Feb-20 | 18:16 | x64      |
 
 SQL Server 2019 Database Services Core Shared
 
-| File   name                                              | File version     | File size | Date     | Time  | Platform |
-|----------------------------------------------------------|------------------|-----------|----------|-------|----------|
-| Dts.dll                                                  | 2019.150.4013.40 | 3142536   | 3-Feb-20 | 17:16 | x64      |
-| Dtsmsg150.dll                                            | 2019.150.4013.40 | 566360    | 3-Feb-20 | 17:15 | x64      |
-| Dtspipeline.dll                                          | 2019.150.4013.40 | 1328216   | 3-Feb-20 | 17:16 | x64      |
-| Flatfiledest.dll                                         | 2019.150.4013.40 | 410504    | 3-Feb-20 | 17:15 | x64      |
-| Flatfilesrc.dll                                          | 2019.150.4013.40 | 427104    | 3-Feb-20 | 17:15 | x64      |
-| Logread.exe                                              | 2019.150.4013.40 | 717704    | 3-Feb-20 | 17:15 | x64      |
-| Microsoft.sqlserver.integrationservice.hadoop.common.dll | 15.0.4013.40     | 58248     | 3-Feb-20 | 17:15 | x86      |
-| Microsoft.sqlserver.maintenanceplantasks.dll             | 15.0.4013.40     | 390024    | 3-Feb-20 | 17:16 | x86      |
-| Msoledbsql.dll                                           | 2018.182.3.0     | 148432    | 3-Feb-20 | 17:16 | x64      |
-| Msxmlsql.dll                                             | 2019.150.4013.40 | 1496152   | 3-Feb-20 | 17:16 | x64      |
-| Osql.exe                                                 | 2019.150.4013.40 | 91224     | 3-Feb-20 | 17:16 | x64      |
-| Qrdrsvc.exe                                              | 2019.150.4013.40 | 496520    | 3-Feb-20 | 17:15 | x64      |
-| Rdistcom.dll                                             | 2019.150.4013.40 | 914520    | 3-Feb-20 | 17:16 | x64      |
-| Replmerg.exe                                             | 2019.150.4013.40 | 562264    | 3-Feb-20 | 17:16 | x64      |
-| Replprov.dll                                             | 2019.150.4013.40 | 852872    | 3-Feb-20 | 17:16 | x64      |
-| Replrec.dll                                              | 2019.150.4013.40 | 1029208   | 3-Feb-20 | 17:15 | x64      |
-| Replsub.dll                                              | 2019.150.4013.40 | 471944    | 3-Feb-20 | 17:16 | x64      |
-| Spresolv.dll                                             | 2019.150.4013.40 | 275336    | 3-Feb-20 | 17:16 | x64      |
-| Sqldiag.exe                                              | 2019.150.4013.40 | 1139800   | 3-Feb-20 | 17:16 | x64      |
-| Sqllogship.exe                                           | 15.0.4013.40     | 103304    | 3-Feb-20 | 17:16 | x64      |
-| Sqlsvc.dll                                               | 2019.150.4013.40 | 148568    | 3-Feb-20 | 17:15 | x86      |
-| Sqlsvc.dll                                               | 2019.150.4013.40 | 181336    | 3-Feb-20 | 17:15 | x64      |
+|                         File name                        |   File version   | File size |    Date   |  Time | Platform |
+|:--------------------------------------------------------:|:----------------:|:---------:|:---------:|:-----:|:--------:|
+| Dts.dll                                                  | 2019.150.4013.40 | 3142536   | 03-Feb-20 | 17:16 | x64      |
+| Dtsmsg150.dll                                            | 2019.150.4013.40 | 566360    | 03-Feb-20 | 17:15 | x64      |
+| Dtspipeline.dll                                          | 2019.150.4013.40 | 1328216   | 03-Feb-20 | 17:16 | x64      |
+| Flatfiledest.dll                                         | 2019.150.4013.40 | 410504    | 03-Feb-20 | 17:15 | x64      |
+| Flatfilesrc.dll                                          | 2019.150.4013.40 | 427104    | 03-Feb-20 | 17:15 | x64      |
+| Logread.exe                                              | 2019.150.4013.40 | 717704    | 03-Feb-20 | 17:15 | x64      |
+| Microsoft.sqlserver.integrationservice.hadoop.common.dll | 15.0.4013.40     | 58248     | 03-Feb-20 | 17:15 | x86      |
+| Microsoft.sqlserver.maintenanceplantasks.dll             | 15.0.4013.40     | 390024    | 03-Feb-20 | 17:16 | x86      |
+| Msoledbsql.dll                                           | 2018.182.3.0     | 148432    | 03-Feb-20 | 17:16 | x64      |
+| Msxmlsql.dll                                             | 2019.150.4013.40 | 1496152   | 03-Feb-20 | 17:16 | x64      |
+| Osql.exe                                                 | 2019.150.4013.40 | 91224     | 03-Feb-20 | 17:16 | x64      |
+| Qrdrsvc.exe                                              | 2019.150.4013.40 | 496520    | 03-Feb-20 | 17:15 | x64      |
+| Rdistcom.dll                                             | 2019.150.4013.40 | 914520    | 03-Feb-20 | 17:16 | x64      |
+| Replmerg.exe                                             | 2019.150.4013.40 | 562264    | 03-Feb-20 | 17:16 | x64      |
+| Replprov.dll                                             | 2019.150.4013.40 | 852872    | 03-Feb-20 | 17:16 | x64      |
+| Replrec.dll                                              | 2019.150.4013.40 | 1029208   | 03-Feb-20 | 17:15 | x64      |
+| Replsub.dll                                              | 2019.150.4013.40 | 471944    | 03-Feb-20 | 17:16 | x64      |
+| Spresolv.dll                                             | 2019.150.4013.40 | 275336    | 03-Feb-20 | 17:16 | x64      |
+| Sqldiag.exe                                              | 2019.150.4013.40 | 1139800   | 03-Feb-20 | 17:16 | x64      |
+| Sqllogship.exe                                           | 15.0.4013.40     | 103304    | 03-Feb-20 | 17:16 | x64      |
+| Sqlsvc.dll                                               | 2019.150.4013.40 | 148568    | 03-Feb-20 | 17:15 | x86      |
+| Sqlsvc.dll                                               | 2019.150.4013.40 | 181336    | 03-Feb-20 | 17:15 | x64      |
 
 SQL Server 2019 sql_extensibility
 
-| File   name        | File version     | File size | Date     | Time  | Platform |
-|--------------------|------------------|-----------|----------|-------|----------|
-| Commonlauncher.dll | 2019.150.4013.40 | 91016     | 3-Feb-20 | 17:17 | x64      |
-| Exthost.exe        | 2019.150.4013.40 | 230280    | 3-Feb-20 | 17:17 | x64      |
-| Launchpad.exe      | 2019.150.4013.40 | 1225608   | 3-Feb-20 | 17:17 | x64      |
-| Sqlsatellite.dll   | 2019.150.4013.40 | 1020808   | 3-Feb-20 | 17:17 | x64      |
+|      File name     |   File version   | File size |    Date   |  Time | Platform |
+|:------------------:|:----------------:|:---------:|:---------:|:-----:|:--------:|
+| Commonlauncher.dll | 2019.150.4013.40 | 91016     | 03-Feb-20 | 17:17 | x64      |
+| Exthost.exe        | 2019.150.4013.40 | 230280    | 03-Feb-20 | 17:17 | x64      |
+| Launchpad.exe      | 2019.150.4013.40 | 1225608   | 03-Feb-20 | 17:17 | x64      |
+| Sqlsatellite.dll   | 2019.150.4013.40 | 1020808   | 03-Feb-20 | 17:17 | x64      |
 
 SQL Server 2019 sql_inst_mr
 
-| File   name | File version | File size | Date     | Time  | Platform |
-|-------------|--------------|-----------|----------|-------|----------|
-| Imrdll.dll  | 15.0.4013.40 | 29576     | 3-Feb-20 | 17:16 | x86      |
+|  File name | File version | File size |    Date   |  Time | Platform |
+|:----------:|:------------:|:---------:|:---------:|:-----:|:--------:|
+| Imrdll.dll | 15.0.4013.40 | 29576     | 03-Feb-20 | 17:16 | x86      |
 
 SQL Server 2019 Integration Services
 
-| File   name                                              | File version     | File size | Date     | Time  | Platform |
-|----------------------------------------------------------|------------------|-----------|----------|-------|----------|
-| Dts.dll                                                  | 2019.150.4013.40 | 3142536   | 3-Feb-20 | 17:34 | x64      |
-| Dts.dll                                                  | 2019.150.4013.40 | 2765704   | 3-Feb-20 | 17:34 | x86      |
-| Dtsmsg150.dll                                            | 2019.150.4013.40 | 553864    | 3-Feb-20 | 17:34 | x86      |
-| Dtsmsg150.dll                                            | 2019.150.4013.40 | 566360    | 3-Feb-20 | 17:34 | x64      |
-| Dtspipeline.dll                                          | 2019.150.4013.40 | 1328216   | 3-Feb-20 | 17:34 | x64      |
-| Dtspipeline.dll                                          | 2019.150.4013.40 | 1119112   | 3-Feb-20 | 17:34 | x86      |
-| Flatfiledest.dll                                         | 2019.150.4013.40 | 410504    | 3-Feb-20 | 17:34 | x64      |
-| Flatfiledest.dll                                         | 2019.150.4013.40 | 357464    | 3-Feb-20 | 17:34 | x86      |
-| Flatfilesrc.dll                                          | 2019.150.4013.40 | 369544    | 3-Feb-20 | 17:34 | x86      |
-| Flatfilesrc.dll                                          | 2019.150.4013.40 | 427104    | 3-Feb-20 | 17:34 | x64      |
-| Microsoft.sqlserver.integrationservice.hadoop.common.dll | 15.0.4013.40     | 58480     | 3-Feb-20 | 17:34 | x86      |
-| Microsoft.sqlserver.integrationservice.hadoop.common.dll | 15.0.4013.40     | 58248     | 3-Feb-20 | 17:34 | x86      |
-| Microsoft.sqlserver.maintenanceplantasks.dll             | 15.0.4013.40     | 390024    | 3-Feb-20 | 17:34 | x86      |
-| Microsoft.sqlserver.scripttask.dll                       | 15.0.4013.40     | 140376    | 3-Feb-20 | 17:34 | x86      |
-| Microsoft.sqlserver.scripttask.dll                       | 15.0.4013.40     | 140376    | 3-Feb-20 | 17:34 | x86      |
-| Msdtssrvr.exe                                            | 15.0.4013.40     | 217992    | 3-Feb-20 | 17:34 | x64      |
-| Msmdpp.dll                                               | 2018.150.34.1    | 10062224  | 3-Feb-20 | 17:16 | x64      |
-| Odbcdest.dll                                             | 2019.150.4013.40 | 369752    | 3-Feb-20 | 17:34 | x64      |
-| Odbcdest.dll                                             | 2019.150.4013.40 | 316296    | 3-Feb-20 | 17:34 | x86      |
-| Odbcsrc.dll                                              | 2019.150.4013.40 | 382040    | 3-Feb-20 | 17:34 | x64      |
-| Odbcsrc.dll                                              | 2019.150.4013.40 | 328584    | 3-Feb-20 | 17:34 | x86      |
-| Sqlceip.exe                                              | 15.0.4013.40     | 283528    | 3-Feb-20 | 17:34 | x86      |
+|                         File name                        |   File version   | File size |    Date   |  Time | Platform |
+|:--------------------------------------------------------:|:----------------:|:---------:|:---------:|:-----:|:--------:|
+| Dts.dll                                                  | 2019.150.4013.40 | 3142536   | 03-Feb-20 | 17:34 | x64      |
+| Dts.dll                                                  | 2019.150.4013.40 | 2765704   | 03-Feb-20 | 17:34 | x86      |
+| Dtsmsg150.dll                                            | 2019.150.4013.40 | 553864    | 03-Feb-20 | 17:34 | x86      |
+| Dtsmsg150.dll                                            | 2019.150.4013.40 | 566360    | 03-Feb-20 | 17:34 | x64      |
+| Dtspipeline.dll                                          | 2019.150.4013.40 | 1328216   | 03-Feb-20 | 17:34 | x64      |
+| Dtspipeline.dll                                          | 2019.150.4013.40 | 1119112   | 03-Feb-20 | 17:34 | x86      |
+| Flatfiledest.dll                                         | 2019.150.4013.40 | 410504    | 03-Feb-20 | 17:34 | x64      |
+| Flatfiledest.dll                                         | 2019.150.4013.40 | 357464    | 03-Feb-20 | 17:34 | x86      |
+| Flatfilesrc.dll                                          | 2019.150.4013.40 | 369544    | 03-Feb-20 | 17:34 | x86      |
+| Flatfilesrc.dll                                          | 2019.150.4013.40 | 427104    | 03-Feb-20 | 17:34 | x64      |
+| Microsoft.sqlserver.integrationservice.hadoop.common.dll | 15.0.4013.40     | 58480     | 03-Feb-20 | 17:34 | x86      |
+| Microsoft.sqlserver.integrationservice.hadoop.common.dll | 15.0.4013.40     | 58248     | 03-Feb-20 | 17:34 | x86      |
+| Microsoft.sqlserver.maintenanceplantasks.dll             | 15.0.4013.40     | 390024    | 03-Feb-20 | 17:34 | x86      |
+| Microsoft.sqlserver.scripttask.dll                       | 15.0.4013.40     | 140376    | 03-Feb-20 | 17:34 | x86      |
+| Microsoft.sqlserver.scripttask.dll                       | 15.0.4013.40     | 140376    | 03-Feb-20 | 17:34 | x86      |
+| Msdtssrvr.exe                                            | 15.0.4013.40     | 217992    | 03-Feb-20 | 17:34 | x64      |
+| Msmdpp.dll                                               | 2018.150.34.1    | 10062224  | 03-Feb-20 | 17:16 | x64      |
+| Odbcdest.dll                                             | 2019.150.4013.40 | 369752    | 03-Feb-20 | 17:34 | x64      |
+| Odbcdest.dll                                             | 2019.150.4013.40 | 316296    | 03-Feb-20 | 17:34 | x86      |
+| Odbcsrc.dll                                              | 2019.150.4013.40 | 382040    | 03-Feb-20 | 17:34 | x64      |
+| Odbcsrc.dll                                              | 2019.150.4013.40 | 328584    | 03-Feb-20 | 17:34 | x86      |
+| Sqlceip.exe                                              | 15.0.4013.40     | 283528    | 03-Feb-20 | 17:34 | x86      |
 
 SQL Server 2019 sql_polybase_core_inst
 
-| File   name                                                          | File version     | File size | Date     | Time  | Platform |
-|----------------------------------------------------------------------|------------------|-----------|----------|-------|----------|
-| Dms.dll                                                              | 15.0.1826.0      | 557904    | 3-Feb-20 | 18:10 | x86      |
-| Dmsnative.dll                                                        | 2018.150.1826.0  | 138880    | 3-Feb-20 | 18:10 | x64      |
-| Dwengineservice.dll                                                  | 15.0.1826.0      | 50512     | 3-Feb-20 | 18:10 | x86      |
-| Eng_polybase_odbcdrivermongo_238_mongodbodbc_sb64_dll.64             | 2.3.8.1008       | 17142672  | 3-Feb-20 | 18:10 | x64      |
-| Eng_polybase_odbcdrivermongo_238_saslsspi_dll.64                     | 1.0.2.1003       | 146304    | 3-Feb-20 | 18:10 | x64      |
-| Eng_polybase_odbcdriveroracle_802_mscurl28_dll.64                    | 8.0.2.108        | 2365520   | 3-Feb-20 | 18:10 | x64      |
-| Eng_polybase_odbcdriveroracle_802_msora28_dll.64                     | 8.0.2.2272       | 2199120   | 3-Feb-20 | 18:10 | x64      |
-| Eng_polybase_odbcdriveroracle_802_msora28r_dll.64                    | 8.0.2.2272       | 144976    | 3-Feb-20 | 18:10 | x64      |
-| Eng_polybase_odbcdriveroracle_802_msssl28_dll.64                     | 8.0.2.217        | 2408016   | 3-Feb-20 | 18:10 | x64      |
-| Eng_polybase_odbcdriveroracle_802_mstls28_dll.64                     | 8.0.2.39         | 2928720   | 3-Feb-20 | 18:10 | x64      |
-| Icudt58.dll                                                          | 58.2.0.0         | 27109768  | 3-Feb-20 | 18:10 | x64      |
-| Icudt58.dll                                                          | 58.2.0.0         | 27109832  | 3-Feb-20 | 18:10 | x64      |
-| Icuin58.dll                                                          | 58.2.0.0         | 2425288   | 3-Feb-20 | 18:10 | x64      |
-| Icuin58.dll                                                          | 58.2.0.0         | 2431880   | 3-Feb-20 | 18:10 | x64      |
-| Icuuc42.dll                                                          | 8.0.2.124        | 15488080  | 3-Feb-20 | 18:10 | x64      |
-| Icuuc58.dll                                                          | 58.2.0.0         | 1775048   | 3-Feb-20 | 18:10 | x64      |
-| Icuuc58.dll                                                          | 58.2.0.0         | 1783688   | 3-Feb-20 | 18:10 | x64      |
-| Instapi150.dll                                                       | 2019.150.4013.40 | 87128     | 3-Feb-20 | 18:10 | x64      |
-| Libcrypto-1_1-x64.dll                                                | 1.1.0.10         | 2620304   | 3-Feb-20 | 18:10 | x64      |
-| Libcrypto                                                            | 1.1.1.4          | 2953680   | 3-Feb-20 | 18:10 | x64      |
-| Libsasl.dll                                                          | 2.1.26.0         | 292224    | 3-Feb-20 | 18:10 | x64      |
-| Libssl-1_1-x64.dll                                                   | 1.1.0.10         | 648080    | 3-Feb-20 | 18:10 | x64      |
-| Libssl                                                               | 1.1.1.4          | 798160    | 3-Feb-20 | 18:10 | x64      |
-| Microsoft.sqlserver.datawarehouse.backup.backupmetadata.dll          | 15.0.1826.0      | 73344     | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.catalog.dll                        | 15.0.1826.0      | 299344    | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.common.dll                         | 15.0.1826.0      | 1956688   | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.configuration.dll                  | 15.0.1826.0      | 176256    | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.datamovement.common.dll            | 15.0.1826.0      | 626304    | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.datamovement.manager.dll           | 15.0.1826.0      | 249472    | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.datamovement.messagetypes.dll      | 15.0.1826.0      | 144504    | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.datamovement.messagingprotocol.dll | 15.0.1826.0      | 85840     | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.diagnostics.dll                    | 15.0.1826.0      | 56960     | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.distributor.dll                    | 15.0.1826.0      | 94336     | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.engine.dll                         | 15.0.1826.0      | 1134720   | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.engine.statsstream.dll             | 15.0.1826.0      | 86656     | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.eventing.dll                       | 15.0.1826.0      | 76416     | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.fabric.appliance.dll               | 15.0.1826.0      | 41296     | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.fabric.interface.dll               | 15.0.1826.0      | 36992     | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.fabric.polybase.dll                | 15.0.1826.0      | 52048     | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.fabric.xdbinterface.dll            | 15.0.1826.0      | 27472     | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.failover.dll                       | 15.0.1826.0      | 32384     | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.hadoop.hadoopbridge.dll            | 15.0.1826.0      | 137344    | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.loadercommon.dll                   | 15.0.1826.0      | 92496     | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.loadmanager.dll                    | 15.0.1826.0      | 106832    | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.localization.dll                   | 15.0.1826.0      | 295248    | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 15.0.1826.0      | 124752    | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 15.0.1826.0      | 141952    | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 15.0.1826.0      | 145256    | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 15.0.1826.0      | 141648    | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 15.0.1826.0      | 153728    | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 15.0.1826.0      | 143696    | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 15.0.1826.0      | 138368    | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 15.0.1826.0      | 178816    | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 15.0.1826.0      | 122192    | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 15.0.1826.0      | 140416    | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.nodes.dll                          | 15.0.1826.0      | 78672     | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.nulltransaction.dll                | 15.0.1826.0      | 27776     | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.parallelizer.dll                   | 15.0.1826.0      | 43136     | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.resourcemanagement.dll             | 15.0.1826.0      | 134480    | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.sql.dll                            | 15.0.1826.0      | 3034240   | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.sql.parser.dll                     | 15.0.1826.0      | 3959120   | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 15.0.1826.0      | 124032    | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 15.0.1826.0      | 138880    | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 15.0.1826.0      | 143488    | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 15.0.1826.0      | 139384    | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 15.0.1826.0      | 154240    | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 15.0.1826.0      | 139904    | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 15.0.1826.0      | 136320    | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 15.0.1826.0      | 176976    | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 15.0.1826.0      | 121168    | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 15.0.1826.0      | 137856    | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.sqldistributor.dll                 | 15.0.1826.0      | 72528     | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.transactsql.scriptdom.dll          | 15.0.1826.0      | 2688128   | 3-Feb-20 | 18:10 | x86      |
-| Microsoft.sqlserver.datawarehouse.utilities.dll                      | 15.0.1826.0      | 2442360   | 3-Feb-20 | 18:10 | x86      |
-| Mpdwinterop.dll                                                      | 2019.150.4013.40 | 451672    | 3-Feb-20 | 18:10 | x64      |
-| Mpdwsvc.exe                                                          | 2019.150.4013.40 | 7394184   | 3-Feb-20 | 18:10 | x64      |
-| Msodbcsql17.dll                                                      | 2017.174.1.1     | 2016120   | 3-Feb-20 | 18:10 | x64      |
-| Odbc32.dll                                                           | 10.0.17763.1     | 720792    | 3-Feb-20 | 18:10 | x64      |
-| Odbccp32.dll                                                         | 10.0.17763.1     | 138136    | 3-Feb-20 | 18:10 | x64      |
-| Odbctrac.dll                                                         | 10.0.17763.1     | 175000    | 3-Feb-20 | 18:10 | x64      |
-| Saslplain.dll                                                        | 2.1.26.0         | 170880    | 3-Feb-20 | 18:10 | x64      |
-| Secforwarder.dll                                                     | 2019.150.4013.40 | 78728     | 3-Feb-20 | 18:10 | x64      |
-| Sharedmemory.dll                                                     | 2018.150.1826.0  | 66688     | 3-Feb-20 | 18:10 | x64      |
-| Sqldk.dll                                                            | 2019.150.4013.40 | 3138440   | 3-Feb-20 | 18:10 | x64      |
-| Sqldumper.exe                                                        | 2019.150.4013.40 | 185432    | 3-Feb-20 | 18:10 | x64      |
-| `Sqlevn70.rll`                                                         | 2019.150.4013.40 | 1586056   | 3-Feb-20 | 18:10 | x64      |
-| `Sqlevn70.rll`                                                         | 2019.150.4013.40 | 4142168   | 3-Feb-20 | 18:10 | x64      |
-| `Sqlevn70.rll`                                                         | 2019.150.4013.40 | 3396696   | 3-Feb-20 | 18:10 | x64      |
-| `Sqlevn70.rll`                                                         | 2019.150.4013.40 | 4133768   | 3-Feb-20 | 18:10 | x64      |
-| `Sqlevn70.rll`                                                         | 2019.150.4013.40 | 4039560   | 3-Feb-20 | 18:10 | x64      |
-| `Sqlevn70.rll`                                                         | 2019.150.4013.40 | 2208856   | 3-Feb-20 | 18:10 | x64      |
-| `Sqlevn70.rll`                                                         | 2019.150.4013.40 | 2159704   | 3-Feb-20 | 18:10 | x64      |
-| `Sqlevn70.rll`                                                         | 2019.150.4013.40 | 3802200   | 3-Feb-20 | 18:10 | x64      |
-| `Sqlevn70.rll`                                                         | 2019.150.4013.40 | 3797896   | 3-Feb-20 | 18:10 | x64      |
-| `Sqlevn70.rll`                                                         | 2019.150.4013.40 | 1528928   | 3-Feb-20 | 18:10 | x64      |
-| `Sqlevn70.rll`                                                         | 2019.150.4013.40 | 4007000   | 3-Feb-20 | 18:10 | x64      |
-| Sqlos.dll                                                            | 2019.150.4013.40 | 45960     | 3-Feb-20 | 18:10 | x64      |
-| Sqlsortpdw.dll                                                       | 2018.150.1826.0  | 4846928   | 3-Feb-20 | 18:10 | x64      |
-| Sqltses.dll                                                          | 2019.150.4013.40 | 9069448   | 3-Feb-20 | 18:10 | x64      |
-| Tdataodbc_sb                                                         | 16.20.0.1078     | 14995920  | 3-Feb-20 | 18:10 | x64      |
-| Terasso.dll                                                          | 16.20.0.13       | 2158896   | 3-Feb-20 | 18:10 | x64      |
-| Zlibwapi.dll                                                         | 1.2.11.0         | 281472    | 3-Feb-20 | 18:10 | x64      |
+|                               File name                              |   File version   | File size |    Date   |  Time | Platform |
+|:--------------------------------------------------------------------:|:----------------:|:---------:|:---------:|:-----:|:--------:|
+| Dms.dll                                                              | 15.0.1826.0      | 557904    | 03-Feb-20 | 18:10 | x86      |
+| Dmsnative.dll                                                        | 2018.150.1826.0  | 138880    | 03-Feb-20 | 18:10 | x64      |
+| Dwengineservice.dll                                                  | 15.0.1826.0      | 50512     | 03-Feb-20 | 18:10 | x86      |
+| Eng_polybase_odbcdrivermongo_238_mongodbodbc_sb64_dll.64             | 2.3.8.1008       | 17142672  | 03-Feb-20 | 18:10 | x64      |
+| Eng_polybase_odbcdrivermongo_238_saslsspi_dll.64                     | 1.0.2.1003       | 146304    | 03-Feb-20 | 18:10 | x64      |
+| Eng_polybase_odbcdriveroracle_802_mscurl28_dll.64                    | 8.0.2.108        | 2365520   | 03-Feb-20 | 18:10 | x64      |
+| Eng_polybase_odbcdriveroracle_802_msora28_dll.64                     | 8.0.2.2272       | 2199120   | 03-Feb-20 | 18:10 | x64      |
+| Eng_polybase_odbcdriveroracle_802_msora28r_dll.64                    | 8.0.2.2272       | 144976    | 03-Feb-20 | 18:10 | x64      |
+| Eng_polybase_odbcdriveroracle_802_msssl28_dll.64                     | 8.0.2.217        | 2408016   | 03-Feb-20 | 18:10 | x64      |
+| Eng_polybase_odbcdriveroracle_802_mstls28_dll.64                     | 8.0.2.39         | 2928720   | 03-Feb-20 | 18:10 | x64      |
+| Icudt58.dll                                                          | 58.2.0.0         | 27109768  | 03-Feb-20 | 18:10 | x64      |
+| Icudt58.dll                                                          | 58.2.0.0         | 27109832  | 03-Feb-20 | 18:10 | x64      |
+| Icuin58.dll                                                          | 58.2.0.0         | 2425288   | 03-Feb-20 | 18:10 | x64      |
+| Icuin58.dll                                                          | 58.2.0.0         | 2431880   | 03-Feb-20 | 18:10 | x64      |
+| Icuuc42.dll                                                          | 8.0.2.124        | 15488080  | 03-Feb-20 | 18:10 | x64      |
+| Icuuc58.dll                                                          | 58.2.0.0         | 1775048   | 03-Feb-20 | 18:10 | x64      |
+| Icuuc58.dll                                                          | 58.2.0.0         | 1783688   | 03-Feb-20 | 18:10 | x64      |
+| Instapi150.dll                                                       | 2019.150.4013.40 | 87128     | 03-Feb-20 | 18:10 | x64      |
+| Libcrypto-1_1-x64.dll                                                | 1.1.0.10         | 2620304   | 03-Feb-20 | 18:10 | x64      |
+| Libcrypto                                                            | 1.1.1.4          | 2953680   | 03-Feb-20 | 18:10 | x64      |
+| Libsasl.dll                                                          | 2.1.26.0         | 292224    | 03-Feb-20 | 18:10 | x64      |
+| Libssl-1_1-x64.dll                                                   | 1.1.0.10         | 648080    | 03-Feb-20 | 18:10 | x64      |
+| Libssl                                                               | 1.1.1.4          | 798160    | 03-Feb-20 | 18:10 | x64      |
+| Microsoft.sqlserver.datawarehouse.backup.backupmetadata.dll          | 15.0.1826.0      | 73344     | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.catalog.dll                        | 15.0.1826.0      | 299344    | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.common.dll                         | 15.0.1826.0      | 1956688   | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.configuration.dll                  | 15.0.1826.0      | 176256    | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.datamovement.common.dll            | 15.0.1826.0      | 626304    | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.datamovement.manager.dll           | 15.0.1826.0      | 249472    | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.datamovement.messagetypes.dll      | 15.0.1826.0      | 144504    | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.datamovement.messagingprotocol.dll | 15.0.1826.0      | 85840     | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.diagnostics.dll                    | 15.0.1826.0      | 56960     | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.distributor.dll                    | 15.0.1826.0      | 94336     | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.engine.dll                         | 15.0.1826.0      | 1134720   | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.engine.statsstream.dll             | 15.0.1826.0      | 86656     | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.eventing.dll                       | 15.0.1826.0      | 76416     | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.fabric.appliance.dll               | 15.0.1826.0      | 41296     | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.fabric.interface.dll               | 15.0.1826.0      | 36992     | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.fabric.polybase.dll                | 15.0.1826.0      | 52048     | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.fabric.xdbinterface.dll            | 15.0.1826.0      | 27472     | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.failover.dll                       | 15.0.1826.0      | 32384     | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.hadoop.hadoopbridge.dll            | 15.0.1826.0      | 137344    | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.loadercommon.dll                   | 15.0.1826.0      | 92496     | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.loadmanager.dll                    | 15.0.1826.0      | 106832    | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.localization.dll                   | 15.0.1826.0      | 295248    | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 15.0.1826.0      | 124752    | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 15.0.1826.0      | 141952    | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 15.0.1826.0      | 145256    | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 15.0.1826.0      | 141648    | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 15.0.1826.0      | 153728    | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 15.0.1826.0      | 143696    | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 15.0.1826.0      | 138368    | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 15.0.1826.0      | 178816    | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 15.0.1826.0      | 122192    | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 15.0.1826.0      | 140416    | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.nodes.dll                          | 15.0.1826.0      | 78672     | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.nulltransaction.dll                | 15.0.1826.0      | 27776     | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.parallelizer.dll                   | 15.0.1826.0      | 43136     | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.resourcemanagement.dll             | 15.0.1826.0      | 134480    | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.sql.dll                            | 15.0.1826.0      | 3034240   | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.sql.parser.dll                     | 15.0.1826.0      | 3959120   | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 15.0.1826.0      | 124032    | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 15.0.1826.0      | 138880    | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 15.0.1826.0      | 143488    | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 15.0.1826.0      | 139384    | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 15.0.1826.0      | 154240    | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 15.0.1826.0      | 139904    | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 15.0.1826.0      | 136320    | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 15.0.1826.0      | 176976    | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 15.0.1826.0      | 121168    | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 15.0.1826.0      | 137856    | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.sqldistributor.dll                 | 15.0.1826.0      | 72528     | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.transactsql.scriptdom.dll          | 15.0.1826.0      | 2688128   | 03-Feb-20 | 18:10 | x86      |
+| Microsoft.sqlserver.datawarehouse.utilities.dll                      | 15.0.1826.0      | 2442360   | 03-Feb-20 | 18:10 | x86      |
+| Mpdwinterop.dll                                                      | 2019.150.4013.40 | 451672    | 03-Feb-20 | 18:10 | x64      |
+| Mpdwsvc.exe                                                          | 2019.150.4013.40 | 7394184   | 03-Feb-20 | 18:10 | x64      |
+| Msodbcsql17.dll                                                      | 2017.174.1.1     | 2016120   | 03-Feb-20 | 18:10 | x64      |
+| Odbc32.dll                                                           | 10.0.17763.1     | 720792    | 03-Feb-20 | 18:10 | x64      |
+| Odbccp32.dll                                                         | 10.0.17763.1     | 138136    | 03-Feb-20 | 18:10 | x64      |
+| Odbctrac.dll                                                         | 10.0.17763.1     | 175000    | 03-Feb-20 | 18:10 | x64      |
+| Saslplain.dll                                                        | 2.1.26.0         | 170880    | 03-Feb-20 | 18:10 | x64      |
+| Secforwarder.dll                                                     | 2019.150.4013.40 | 78728     | 03-Feb-20 | 18:10 | x64      |
+| Sharedmemory.dll                                                     | 2018.150.1826.0  | 66688     | 03-Feb-20 | 18:10 | x64      |
+| Sqldk.dll                                                            | 2019.150.4013.40 | 3138440   | 03-Feb-20 | 18:10 | x64      |
+| Sqldumper.exe                                                        | 2019.150.4013.40 | 185432    | 03-Feb-20 | 18:10 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4013.40 | 1586056   | 03-Feb-20 | 18:10 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4013.40 | 4142168   | 03-Feb-20 | 18:10 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4013.40 | 3396696   | 03-Feb-20 | 18:10 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4013.40 | 4133768   | 03-Feb-20 | 18:10 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4013.40 | 4039560   | 03-Feb-20 | 18:10 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4013.40 | 2208856   | 03-Feb-20 | 18:10 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4013.40 | 2159704   | 03-Feb-20 | 18:10 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4013.40 | 3802200   | 03-Feb-20 | 18:10 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4013.40 | 3797896   | 03-Feb-20 | 18:10 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4013.40 | 1528928   | 03-Feb-20 | 18:10 | x64      |
+| `Sqlevn70.rll`                                                         | 2019.150.4013.40 | 4007000   | 03-Feb-20 | 18:10 | x64      |
+| Sqlos.dll                                                            | 2019.150.4013.40 | 45960     | 03-Feb-20 | 18:10 | x64      |
+| Sqlsortpdw.dll                                                       | 2018.150.1826.0  | 4846928   | 03-Feb-20 | 18:10 | x64      |
+| Sqltses.dll                                                          | 2019.150.4013.40 | 9069448   | 03-Feb-20 | 18:10 | x64      |
+| Tdataodbc_sb                                                         | 16.20.0.1078     | 14995920  | 03-Feb-20 | 18:10 | x64      |
+| Terasso.dll                                                          | 16.20.0.13       | 2158896   | 03-Feb-20 | 18:10 | x64      |
+| Zlibwapi.dll                                                         | 1.2.11.0         | 281472    | 03-Feb-20 | 18:10 | x64      |
 
 SQL Server 2019 sql_shared_mr
 
-| File name  | File version | File size | Date        | Time  | Platform |
-|------------|--------------|-----------|-------------|-------|----------|
-| Smrdll.dll | 15.0.4013.40 | 29576     | 03-Feb-2020 | 17:16 | x86      |
+|  File name | File version | File size |    Date   |  Time | Platform |
+|:----------:|:------------:|:---------:|:---------:|:-----:|:--------:|
+| Smrdll.dll | 15.0.4013.40 | 29576     | 03-Feb-20 | 17:16 | x86      |
 
 SQL Server 2019 sql_tools_extensions
 
-| File   name                                    | File version     | File size | Date     | Time  | Platform |
-|------------------------------------------------|------------------|-----------|----------|-------|----------|
-| Dts.dll                                        | 2019.150.4013.40 | 2765704   | 3-Feb-20 | 17:29 | x86      |
-| Dts.dll                                        | 2019.150.4013.40 | 3142536   | 3-Feb-20 | 17:29 | x64      |
-| Dtsmsg150.dll                                  | 2019.150.4013.40 | 553864    | 3-Feb-20 | 17:28 | x86      |
-| Dtsmsg150.dll                                  | 2019.150.4013.40 | 566360    | 3-Feb-20 | 17:28 | x64      |
-| Dtspipeline.dll                                | 2019.150.4013.40 | 1119112   | 3-Feb-20 | 17:29 | x86      |
-| Dtspipeline.dll                                | 2019.150.4013.40 | 1328216   | 3-Feb-20 | 17:29 | x64      |
-| Flatfiledest.dll                               | 2019.150.4013.40 | 357464    | 3-Feb-20 | 17:28 | x86      |
-| Flatfiledest.dll                               | 2019.150.4013.40 | 410504    | 3-Feb-20 | 17:28 | x64      |
-| Flatfilesrc.dll                                | 2019.150.4013.40 | 369544    | 3-Feb-20 | 17:28 | x86      |
-| Flatfilesrc.dll                                | 2019.150.4013.40 | 427104    | 3-Feb-20 | 17:28 | x64      |
-| Microsoft.sqlserver.chainer.infrastructure.dll | 15.0.4013.40     | 402312    | 3-Feb-20 | 17:29 | x86      |
-| Microsoft.sqlserver.configuration.sco.dll      | 15.0.4013.40     | 2999176   | 3-Feb-20 | 17:29 | x86      |
-| Msmgdsrv.dll                                   | 2018.150.34.1    | 8278416   | 3-Feb-20 | 17:29 | x86      |
-| Sqlsvc.dll                                     | 2019.150.4013.40 | 148568    | 3-Feb-20 | 17:28 | x86      |
-| Sqlsvc.dll                                     | 2019.150.4013.40 | 181336    | 3-Feb-20 | 17:29 | x64      |
+|                    File name                   |   File version   | File size |    Date   |  Time | Platform |
+|:----------------------------------------------:|:----------------:|:---------:|:---------:|:-----:|:--------:|
+| Dts.dll                                        | 2019.150.4013.40 | 2765704   | 03-Feb-20 | 17:29 | x86      |
+| Dts.dll                                        | 2019.150.4013.40 | 3142536   | 03-Feb-20 | 17:29 | x64      |
+| Dtsmsg150.dll                                  | 2019.150.4013.40 | 553864    | 03-Feb-20 | 17:28 | x86      |
+| Dtsmsg150.dll                                  | 2019.150.4013.40 | 566360    | 03-Feb-20 | 17:28 | x64      |
+| Dtspipeline.dll                                | 2019.150.4013.40 | 1119112   | 03-Feb-20 | 17:29 | x86      |
+| Dtspipeline.dll                                | 2019.150.4013.40 | 1328216   | 03-Feb-20 | 17:29 | x64      |
+| Flatfiledest.dll                               | 2019.150.4013.40 | 357464    | 03-Feb-20 | 17:28 | x86      |
+| Flatfiledest.dll                               | 2019.150.4013.40 | 410504    | 03-Feb-20 | 17:28 | x64      |
+| Flatfilesrc.dll                                | 2019.150.4013.40 | 369544    | 03-Feb-20 | 17:28 | x86      |
+| Flatfilesrc.dll                                | 2019.150.4013.40 | 427104    | 03-Feb-20 | 17:28 | x64      |
+| Microsoft.sqlserver.chainer.infrastructure.dll | 15.0.4013.40     | 402312    | 03-Feb-20 | 17:29 | x86      |
+| Microsoft.sqlserver.configuration.sco.dll      | 15.0.4013.40     | 2999176   | 03-Feb-20 | 17:29 | x86      |
+| Msmgdsrv.dll                                   | 2018.150.34.1    | 8278416   | 03-Feb-20 | 17:29 | x86      |
+| Sqlsvc.dll                                     | 2019.150.4013.40 | 148568    | 03-Feb-20 | 17:28 | x86      |
+| Sqlsvc.dll                                     | 2019.150.4013.40 | 181336    | 03-Feb-20 | 17:29 | x64      |
 
 </details>
 
