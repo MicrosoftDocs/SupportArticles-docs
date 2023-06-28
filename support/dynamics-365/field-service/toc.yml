@@ -1,0 +1,44 @@
+- name: Dynamics 365 Field Service
+  href: welcome-field-service.yml
+  items:
+    - name: Administration and settings
+      items:
+        - name: Error with AttributeMap when upgrading
+          href: administration\attibutemap-error-upgrade.md
+        - name: Date window start/end field don't exist
+          href: administration\date-window-fields-missing.md
+        - name: Entity record names have duplicated numbers
+          href: administration\entity-names-duplicated-numbers.md
+    - name: Customization
+      items:
+        - name: Forms show an error about being read-only
+          href: customization\forms-error-read-only.md
+        - name: Can't delete record because of an restrict-delete relationships
+          href: customization\restrict-delete-relationships.md
+
+    - name: Scheduling
+      items: 
+        - name: Issue with cascading crew changes when assigning a booking
+          href: scheduling\cascade-crew-changes-booking.md
+    - name: IoT and Connected Field Service
+      items:
+        - name: Can't change Time Series Insights instance
+          href: iot\change-TSI-instance.md
+        - name: IoT Edge modules data is aggregated in charts
+          href: iot\edge-module-data-aggregated.md
+        - name: No records after pulling IoT device data
+          href: iot\no-device-history-properties.md
+        - name: Troubleshoot issues with IoT capabilities
+          href: iot\troubleshoot-iot-issues-logic-app.md
+    - name: Resource Scheduling Optimization add-in
+      items: 
+        - name: 
+          href:
+        - name: 
+          href: 
+        - name: 
+          href: 
+        - name: 
+          href: 
+
+
