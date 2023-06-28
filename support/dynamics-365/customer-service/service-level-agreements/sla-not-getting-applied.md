@@ -88,7 +88,7 @@ The Workflow might be in a draft or inactive state.
 
 #### Resolution
 
-To solve this issue, activate the flow for the SLA item if it's in an inactive state. For more information about how to activate a flow, see (/sla-modern-flow-not-valid.md).
+To solve this issue, activate the flow for the SLA item if it's in an inactive state. For more information about how to activate a flow, see ["Modern flow is not valid for ExecuteWorkflow" error](sla-modern-flow-not-valid.md).
 
 ## Scenario 7
 
