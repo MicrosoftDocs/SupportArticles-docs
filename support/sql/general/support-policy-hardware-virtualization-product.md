@@ -31,7 +31,7 @@ Microsoft provides technical support for SQL Server 2008 and later versions for 
 
 Microsoft provides technical support for SQL Server 2008 and later versions for the following supported hardware virtualization environments:
 
-- Azure Infrastructure Services that includes Azure Virtual Machines and Azure Virtual Network (See the Frequently Asked Questions section for more details)
+- Azure Infrastructure Services that includes Azure Virtual Machines, Azure Virtual Network, and Azure VMware Solution (See the Frequently Asked Questions section for more details)
 
 Microsoft may provide limited or no technical support for the following environments:
 
@@ -172,13 +172,21 @@ The following restrictions and limitations may affect the support policy of the 
 
     - SQL Server FCI n Windows Server 2016 and later versions with Azure shared disks. For more information review [Create an FCI with Azure shared disks (SQL Server on Azure VMs)](/azure/azure-sql/virtual-machines/windows/failover-cluster-instance-azure-shared-disks-manually-configure).
 
-- **Q9: Can customers run SQL Server in the Microsoft Azure VM role?**
+- **Q9: Do you support SQL Server running in Microsoft Azure VMware Solution?**
 
-  A9:  Microsoft Azure VM role is a non-persistent role and not the same as Microsoft Azure Virtual Machine. It is not supported for SQL Server production use. Customers who want to deploy data platform capabilities today in the Microsoft Azure platform should use Microsoft Azure Virtual Machine or Microsoft Azure SQL Database.
+  A9: Yes. Microsoft supports SQL Server 2008 and later versions in Microsoft Azure Infrastructure Services that includes Microsoft Azure VMware Solution. Consider the following when you deploy SQL Server 2008 and later versions in Microsoft Azure VMware Solution:
+  
+    - For more information on how to best deploy SQL Server using VMware vSphere, including right-sizing your SQL Server VMs and managing your VMware vCenter Server configuration, see [Architecting Microsoft SQL Server on VMware vSphere](https://core.vmware.com/resource/architecting-microsoft-sql-server-vmware-vsphere#introduction)
+      
+    - For more information on getting started with Azure VMware Solution, see [Azure VMware Solution](https://azure.microsoft.com/products/azure-vmware#overview)
 
-- **Q10: Are there any recommended configuration or best practices to consider while deploying SQL Server in virtualized environments?**
+- **Q10: Can customers run SQL Server in the Microsoft Azure VM role?**
 
-  A10: Yes, you should consult with the following recommendations from the respective hypervisor:
+  A10:  Microsoft Azure VM role is a non-persistent role and not the same as Microsoft Azure Virtual Machine. It is not supported for SQL Server production use. Customers who want to deploy data platform capabilities today in the Microsoft Azure platform should use Microsoft Azure Virtual Machine or Microsoft Azure SQL Database.
+
+- **Q11 Are there any recommended configuration or best practices to consider while deploying SQL Server in virtualized environments?**
+
+  A11: Yes, you should consult with the following recommendations from the respective hypervisor:
 
   - [Best Practices for Virtualizing and Managing SQL Server](https://download.microsoft.com/download/6/1/D/61DDE9B6-AB46-48CA-8380-D7714C9CB1AB/Best_Practices_for_Virtualizing_and_Managing_SQL_Server_2012.pdf)
 
