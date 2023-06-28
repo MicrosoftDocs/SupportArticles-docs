@@ -98,7 +98,32 @@ This issue may occurs because either the login was dropped manually or these [in
     GO
     ALTER USER[##MS_SSISServerCleanupJobUser##] with LOGIN =[##MS_SSISServerCleanupJobLogin##]
     ```
+  1. Note that in some cases the database user may also be missing. In such cases, recreate the user in the `SSISDB` database and re-run the previous step to map the user to the login:
 
+     ```sql
+     USE [SSISDB]
+     GO
+     DROP USER [##MS_SSISServerCleanupJobLogin##]
+     GO
+
+     USE [SSISDB]
+     GO
+     CREATE USER [##MS_SSISServerCleanupJobUser##] FOR LOGIN [##MS_SSISServerCleanupJobLogin##]
+     GO
+     
+     USE [SSISDB]
+     GO
+     ALTER USER [##MS_SSISServerCleanupJobUser##] WITH DEFAULT_SCHEMA=[dbo]
+     GO
+
+     USE [SSISDB]
+     GO
+     GRANT EXECUTE ON [internal].[cleanup_server_project_version] TO [##MS_SSISServerCleanupJobUser##]
+     GO
+     GRANT EXECUTE ON [internal].[cleanup_server_retention_window] TO [##MS_SSISServerCleanupJobUser##]
+     GO
+     ```
+     
 ### Misconfigured System user/role in msdb database
 
 This section provides steps to resolve a misconfigured system user or role in the `msdb` database.
