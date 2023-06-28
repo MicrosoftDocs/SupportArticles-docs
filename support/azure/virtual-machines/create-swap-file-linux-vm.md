@@ -27,7 +27,7 @@ If the SWAP creation is configured in *Waagent.config*, you must disable it.
     ResourceDisk.EnableSWAP=n
 
     #Mount point for the resource disk
-    ResourceDisk.MountPoint=/mnt
+    ResourceDisk.MountPoint=/mnt/resource
   
     #Size of the SWAPfile.
     ResourceDisk.SWAPSizeMB=0
@@ -35,9 +35,9 @@ If the SWAP creation is configured in *Waagent.config*, you must disable it.
 
 1. Restart the Azure Linux Agent. See [How to update the Azure Linux Agent on a VM](/azure/virtual-machines/extensions/update-linux-agent) for information about the restart commands for different Linux distributions.
 
-Then, create the SWAP file under the resource disk path or a custom path.
+Then, create the SWAP file under the resource disk path using both bash script and cloud-init.
 
-## Create a SWAP file under the resource disk path
+## Create a SWAP file under the resource disk path using bash script.
 
 1. Create a new file named swap.sh under `/var/lib/cloud/scripts/per-boot` with the following script:
 
@@ -75,15 +75,17 @@ Then, create the SWAP file under the resource disk path or a custom path.
 
     The script will be executed on every boot and allocates 30% of the available space in the resource disk. You can customize the values based on your situation.
 
-1. Make sure the file is executable.
+2. Make sure the file is executable.
 
     ```bash
     chmod +x /var/lib/cloud/scripts/per-boot/swap.sh
     ```
+ 3. Stop and start the VM. Stopping and starting the VM is only necessary the first time after you create the SWAP file.
 
-1. Stop and start the VM. Stopping and starting the VM is only necessary the first time after you create the SWAP file.
+> [!NOTE]
+>  In order to customize the swapfile location set "Location" variable to a desired path.
 
-## Create a SWAP file under a custom path using cloud-init.
+## Create a SWAP file using cloud-init under the resource disk path.
 
 1. Create CLOUD_CFG variable in /systemd/system.conf to set both swap and the resource disk.
 ```
@@ -106,51 +108,13 @@ fs_setup:
   - device: ephemeral0.2
     filesystem: swap
 mounts:
-  - ["ephemeral0.1", "/azure/resource"]
+  - ["ephemeral0.1", "/mnt/resource"]
   - ["ephemeral0.2", "none", "swap", "sw,nofail,x-systemd.requires=cloud-init.service,x-systemd.device-timeout=2", "0", "0"]
 EOF
 ```
 
-1. Proceed with the same steps to create the script, but you should notice a different path. Instead of `/mnt`, we use `/azure/resource` as the custom path. You can change the path or SWAPsize based on your situation.
+> [!NOTE]
+>  In order to customize the swapfile location set "mounts: ephemeral0.1" setting to a desired path.
 
-    ```bash
-    #!/bin/sh
-
-    # Percent of space on the ephemeral disk to dedicate to swap. Here 30% is being used. Modify as appropriate.
-    PCT=0.3
-
-    # Location of swap file. Modify as appropriate based on location of ephemeral disk.
-    LOCATION=/azure/resource
-
-    if [ ! -f ${LOCATION}/swapfile ]
-    then
-    
-        # Get size of the ephemeral disk and multiply it by the percent of space to allocate
-        size=$(/bin/df -m --output=target,avail | /usr/bin/awk -v percent="$PCT" -v pattern=${LOCATION} '$0 ~ pattern {SIZE=int($2*percent);print SIZE}')
-        echo "$size MB of space allocated to swap file"
-
-         # Create an empty file first and set correct permissions
-        /bin/dd if=/dev/zero of=${LOCATION}/swapfile bs=1M count=$size
-        /bin/chmod 0600 ${LOCATION}/swapfile
-
-        # Make the file available to use as swap
-        /sbin/mkswap ${LOCATION}/swapfile
-    fi
-
-    # Enable swap
-    /sbin/swapon ${LOCATION}/swapfile
-    /sbin/swapon -a
-
-    # Display current swap status
-    /sbin/swapon -s
-    ```
-
-1. Make sure the file is executable:
-
-    ```bash
-    chmod +x /var/lib/cloud/scripts/per-boot/swap.sh
-    ```
-
-1. Stop and start the VM. Stopping and starting the VM is only necessary the first time after you create the SWAP file.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
