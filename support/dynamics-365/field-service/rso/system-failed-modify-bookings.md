@@ -1,0 +1,27 @@
+---
+title: Optimization request failed to modify some bookings
+description: Resolve issues with optimization requests in the Resource Scheduling Optimization add-in for Dynamics 365 Field Service.
+ms.author: feifeiqiu
+author: feifeiqiu
+ms.reviewer: mhart
+ms.date: 06/28/2023
+---
+
+# Optimization request failed to modify some bookings
+
+This article helps administrators troubleshoot optimization requests in the Resource Scheduling Optimization add-in for Dynamics 365 Field Service.
+
+## Symptoms
+
+An optimization request failed with the message “System failed to modify some bookings".
+
+## Resolution
+
+The optimization request can fail in the following scenarios:
+
+- A user manually updates a booking in the middle of a Resource Scheduling Optimization run. Resource Scheduling Optimization won't overwrite the changes.
+- A workflow or plug-in updates the same bookings during a Resource Scheduling Optimization run. Resource Scheduling Optimization won't overwrite the changes your other system logic did.
+- Multiple Resource Scheduling Optimization schedules that share the same resources and run at the same time. For analysis and troubleshooting, check the following options:
+  - Review optimization request booking grid and inspect the operation details column for each individual requirement and booking.
+  - Verify if multiple schedules that share the same resources, requirements, and bookings running at the same time. if that's the case, update the schedules to run sequentially or reconfigure them to avoid overlaps.
+  - Check if some other user or workflow tries to update a booking during the optimization request run.
