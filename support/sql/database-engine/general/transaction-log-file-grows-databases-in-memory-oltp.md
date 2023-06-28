@@ -1,5 +1,5 @@
 ---
-title: Transaction log file grows for databases with In-Memory OLTP in SQL server 2022
+title: Transaction log file grows for databases with In-Memory OLTP in SQL Server 2022
 description: Troubleshoots the issue where transaction log file grows continuously for databases with In-Memory OLTP enabled in SQL Server 2022.
 ms.date: 06/27/2023
 ms.custom: sap:Database Design and Development
