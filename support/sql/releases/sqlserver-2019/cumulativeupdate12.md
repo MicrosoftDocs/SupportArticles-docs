@@ -905,7 +905,7 @@ You might have to restart the computer after you apply this cumulative update pa
 <details>
 <summary><b>Registry information</b></summary>
 
-To use one of the hotfixes in this package, you do not have to make any changes to the registry.
+To use one of the hotfixes in this package, you don't have to make any changes to the registry.
 
 </details>
 

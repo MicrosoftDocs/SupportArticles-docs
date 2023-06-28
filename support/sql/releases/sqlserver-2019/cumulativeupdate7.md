@@ -62,7 +62,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="13643805">[13643805](#13643805)</a> | [FIX: Add language and extension directories to the PATH environment variable in SQL Server 2019 (KB4577594)](https://support.microsoft.com/help/4577594) | SQL Server Engine | Extensibility | All |
 | <a id="13619478">[13619478](#13619478)</a> | Updates RSetup with the updated FWLINK version 3.5.2.777. | SQL Server Engine | Extensibility | Windows |
 | <a id="13643390">[13643390](#13643390)</a> | Fixes failure of SQL Server Extensibility Runtimes Setup on FIPS compliant servers. | SQL Server Engine | Extensibility | All |
-| <a id="13647889">[13647889](#13647889)</a> | Python and R CAB files for SQL Server Machine Learning Services on Windows and `mssql-mlservices` packages on Linux are updated to version 9.4.7.958. On Windows, "Cannot resume session with terminated pooled proccess" error is fixed while launching Python/R runtimes. On Linux, this update enables successful installation of `mssql-mlservices-mlm-r` package on RHEL8. | SQL Server Engine | Extensibility | All |
+| <a id="13647889">[13647889](#13647889)</a> | Python and R CAB files for SQL Server Machine Learning Services on Windows and `mssql-mlservices` packages on Linux are updated to version 9.4.7.958. On Windows, "Cannot resume session with terminated pooled process" error is fixed while launching Python/R runtimes. On Linux, this update enables successful installation of `mssql-mlservices-mlm-r` package on RHEL8. | SQL Server Engine | Extensibility | All |
 | <a id="13598899">[13598899](#13598899)</a> | When you concurrently create sub directories in a FileTable directory, a deadlock may occur internally in the SQL Server Engine and all subsequent requests to FileTable directories and files may not respond. | SQL Server Engine | FileStream and FileTable | Windows |
 | <a id="13607142">[13607142](#13607142)</a> | [FIX: Intermittent Availability Group failover occurs as AG helper connection times out while connecting to SQL Server (KB4569424)](https://support.microsoft.com/help/4569424) | SQL Server Engine | High Availability and Disaster Recovery | Linux |
 | <a id="13567739">[13567739](#13567739)</a> | Fixes an issue to reduce parallel redo thread shutdown and startup thread messages in error log on servers with fewer cores and more idle databases. | SQL Server Engine | High Availability and Disaster Recovery | Windows |
@@ -86,7 +86,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="13598911">[13598911](#13598911)</a> | [FIX: Upgrade script may fail if you use an Always On high availability group as a secondary replica in SQL Server 2016 and 2019 (KB4563115)](https://support.microsoft.com/help/4563115) | SQL Server Engine | Replication | Windows |
 | <a id="13607134">[13607134](#13607134)</a> | [FIX: Transactional replication publications can support URL type device to initialize subscriptions from backups in Azure Blob Storage in SQL Server 2017 (KB4569425)](https://support.microsoft.com/help/4569425) | SQL Server Engine | Replication | Windows |
 | <a id="13636909">[13636909](#13636909)</a> | [FIX: Couldn't disable "change data capture" if any column is encrypted by "Always Encrypted" feature of SQL Server (KB4034376)](https://support.microsoft.com/help/4034376) | SQL Server Engine | Replication | All |
-| <a id="13598905">[13598905](#13598905)</a> | When a replication error such as deadlock occurs, random id is inserted in `MSRepl_Errors` table while it should be just incremented by 1 from the previous id value. This cumulative update (CU) fixes the issue and the `MSRepl_Errors` will insert entries with row id incremented by 1 instead of using some random value. | SQL Server Engine | Replication | Windows |
+| <a id="13598905">[13598905](#13598905)</a> | When a replication error such as deadlock occurs, random ID is inserted in `MSRepl_Errors` table while it should be just incremented by 1 from the previous ID value. This cumulative update (CU) fixes the issue and the `MSRepl_Errors` will insert entries with row ID incremented by 1 instead of using some random value. | SQL Server Engine | Replication | Windows |
 | <a id="13598909">[13598909](#13598909)</a> | [FIX: Full-Text search auto crawl stops when AG goes offline in SQL Server (KB4511771)](https://support.microsoft.com/help/4511771) | SQL Server Engine | Search | Windows |
 | <a id="13635355">[13635355](#13635355)</a> | [FIX: Error occurs when using DBCC operations while TDE key change happens in SQL Server 2019 (KB4578395)](https://support.microsoft.com/help/4578395) | SQL Server Engine | Security Infrastructure | All |
 | <a id="13491695">[13491695](#13491695)</a> | [FIX: Unable to restore SQL Server database from previous versions on NVMe device partitioned in 4K block size (KB4578011)](https://support.microsoft.com/help/4578011) | SQL Server Engine | Storage Management | Linux |
@@ -907,7 +907,7 @@ You might have to restart the computer after you apply this cumulative update pa
 <details>
 <summary><b>Registry information</b></summary>
 
-To use one of the hotfixes in this package, you do not have to make any changes to the registry.
+To use one of the hotfixes in this package, you don't have to make any changes to the registry.
 
 </details>
 

@@ -48,7 +48,7 @@ To work around this issue, you can uninstall this cumulative update or add the D
 
 ### Issue three
 
-This issue is caused by a change introduced in SQL Server 2019 CU20 for the [Managed Instance link](/azure/azure-sql/managed-instance/managed-instance-link-feature-overview) feature. Assume that the databases of an Always On availability group have one of the following conditions:
+This issue is caused by a change introduced in this cumulative update for the [Managed Instance link](/azure/azure-sql/managed-instance/managed-instance-link-feature-overview) feature. Assume that the databases of an Always On availability group have one of the following conditions:
 
 - The databases use memory-optimized tables, the FileStream class, or multiple log files.
 
@@ -106,7 +106,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="2264977">[2264977](#2264977)</a> | Fixes an issue that's caused by automatic parameterization of queries where interleaved execution of multi-statement table-valued functions (MSTVFs) may return incorrect results or cause a deadlock on the first execution. | SQL Server Engine | Query Optimizer | All |
 | <a id="2299078">[2299078](#2299078)</a> | Fixes an issue where the `KILL STATS JOB` process leaks reference counts on some items when multiple asynchronous statistics jobs are running, which causes those items to remain in the queue (visible via `sys.dm_exec_background_job_queue`) until the SQL Server instance is restarted. | SQL Server Engine | Query Optimizer | All |
 | <a id="2162994">[2162994](#2162994)</a> | Fixes an issue where the `DataAccess` property for the linked server is reset to False when you execute the `sp_addsubscription` stored procedure or create a subscription through the New Subscription Wizard on server A after: </br></br>1. You have a linked server on server A for server B and have used the linked server for data access. </br></br>2. You configure server A as the Publisher and server B as the Subscriber and create transactional replication. | SQL Server Engine | Replication | Windows |
-| <a id="2212160">[2212160](#2212160)</a> </br><a id="2269819">[2269819](#2269819)</a>| Before the fix, you can still enable transactional replication or change data capture (CDC) and delayed durability on a database at the same time, even if transactional replication or CDC and delayed durability aren't compatible. This fix explicitly prevents you from enabling transactional replication or CDC and delayed durability on a database at the same time by returning the following error 22891 or 22892: </br></br>22891: Could not enable '\<FeatureName>' for database '\<DatabaseName>'. '\<FeatureName>' cannot be enabled on a DB with delayed durability set. </br></br>22892: Could not enable delayed durability on DB. Delayed durability cannot be enabled on a DB while '\<FeatureName>' is enabled. </br></br>For more information, see [Delayed durability and other SQL Server features](/sql/relational-databases/logs/control-transaction-durability#bkmk_OtherSQLFeatures). | SQL Server Engine | Replication | All |
+| <a id="2212160">[2212160](#2212160)</a> </br><a id="2269819">[2269819](#2269819)</a> | Before the fix, you can still enable transactional replication or change data capture (CDC) and delayed durability on a database at the same time, even if transactional replication or CDC and delayed durability aren't compatible. This fix explicitly prevents you from enabling transactional replication or CDC and delayed durability on a database at the same time by returning the following error 22891 or 22892: </br></br>22891: Could not enable '\<FeatureName>' for database '\<DatabaseName>'. '\<FeatureName>' cannot be enabled on a DB with delayed durability set. </br></br>22892: Could not enable delayed durability on DB. Delayed durability cannot be enabled on a DB while '\<FeatureName>' is enabled. </br></br>For more information, see [Delayed durability and other SQL Server features](/sql/relational-databases/logs/control-transaction-durability#bkmk_OtherSQLFeatures). | SQL Server Engine | Replication | All |
 | <a id="2021114">[2021114](#2021114)</a> | [FIX: Error may occur when setting the SQL Server Agent job history log (KB5024352)](../sqlserver-2022/error-set-sql-server-agent-job-history-log.md)| SQL Server Engine | SQL Agent | Linux |
 
 ## How to obtain or download this or the latest cumulative update package
@@ -977,7 +977,7 @@ You might have to restart the computer after you apply this cumulative update pa
 <details>
 <summary><b>Registry information</b></summary>
 
-To use one of the hotfixes in this package, you do not have to make any changes to the registry.
+To use one of the hotfixes in this package, you don't have to make any changes to the registry.
 
 </details>
 

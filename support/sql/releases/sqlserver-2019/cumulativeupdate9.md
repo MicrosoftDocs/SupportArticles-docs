@@ -66,7 +66,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="13746925">[13746925](#13746925)</a> | When running a `RESTORE HEADERONLY` of a SQL Server 2016 backup you may notice [error 3285](/sql/relational-databases/errors-events/database-engine-events-and-errors-3000-to-3999) even if the correct block size has been specified. If the error persists after applying this fix, specify the proper block size or contact Microsoft Support for assistance. | SQL Server Engine | Backup Restore | Windows |
 | <a id="13746927">[13746927](#13746927)</a> | FIX: When you try to restore from a compressed or encrypted backup over an existing TDE enabled database, you may notice that the restore operation may take longer time than expected. | SQL Server Engine | Backup Restore | Windows |
 | <a id="13768244">[13768244](#13768244)</a> | Fixes an error where you may receive the following error when you restore a TDE enabled database from a backup with compression option and "`WITH FILE =`" option is greater than `1`: </br></br>Msg 3241, Level 16, State 40, Line \<LineNumber> </br>The media family on device '\<FilePath>\\\<FileName>' is incorrectly formed. SQL Server cannot process this media family. | SQL Server Engine | Backup Restore | Windows |
-| <a id="13819319">[13819319](#13819319)</a> | Fixes an issue where a database restore fails with an error 3257 (insufficient free space error) when the database is larger than 2TB. The issue happens when the `TotalAllocationUnits` on the target volume is more than 4,294,967,295 units, for example when the target volume is larger than 16TB and uses an allocation unit size = 512 bytes and a single sector per cluster. | SQL Server Engine | Backup Restore | Windows |
+| <a id="13819319">[13819319](#13819319)</a> | Fixes an issue where a database restore fails with an error 3257 (insufficient free space error) when the database is larger than 2 TB. The issue happens when the `TotalAllocationUnits` on the target volume is more than 4,294,967,295 units, for example when the target volume is larger than 16 TB and uses an allocation unit size = 512 bytes and a single sector per cluster. | SQL Server Engine | Backup Restore | Windows |
 | <a id="13807755">[13807755](#13807755)</a> | [Improvement: New trace Flags for better maintenance of deleted rows in Clustered Columnstore Index (KB5000895)](https://support.microsoft.com/help/5000895) | SQL Server Engine | Column Stores | Windows |
 | <a id="13770156">[13770156](#13770156)</a> | [FIX: Higher than expected number of single row Columnstore rowgroups may be generated for Columnstore bulk insert when both large page allocator and scalable Columnstore bulk insert features are turned on (KB4588980)](https://support.microsoft.com/help/4588980) | SQL Server Engine | Column Stores | All |
 | <a id="13746938">[13746938](#13746938)</a> | FIX: `VERIFY_CLONEDB` prints message 'Clone database verification has failed' for the database if the database name starts with a number. | SQL Server Engine | DB Management | Windows |
@@ -971,7 +971,7 @@ You might have to restart the computer after you apply this cumulative update pa
 <details>
 <summary><b>Registry information</b></summary>
 
-To use one of the hotfixes in this package, you do not have to make any changes to the registry.
+To use one of the hotfixes in this package, you don't have to make any changes to the registry.
 
 </details>
 

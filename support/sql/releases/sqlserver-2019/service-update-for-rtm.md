@@ -17,7 +17,7 @@ _Version:_ &nbsp; 15.0.2070.41
 
 ## Summary
 
-This Servicing Update for Microsoft SQL Server 2019 RTM is a nonsecurity GDR release. It's a supplemental update that's designed to be installed after SQL Server 2019 RTM. After you install this servicing update, you'll still have the option to install the next SQL Server 2019 cumulative update or GDR servicing release. This release updates components to the following builds:
+This Servicing Update for Microsoft SQL Server 2019 RTM is a non-security GDR release. It's a supplemental update that's designed to be installed after SQL Server 2019 RTM. After you install this servicing update, you'll still have the option to install the next SQL Server 2019 cumulative update or GDR servicing release. This release updates components to the following builds:
 
 - SQL Server - Product version: **15.0.2070.41**, file version: **2019.150.2070.41**
 - Analysis Services - Product version: **15.0.32.52**, file version: **2018.150.32.52**
@@ -31,7 +31,7 @@ There are no known issues in this update.
 A downloadable Excel workbook that contains a summary list of builds, together with their current support lifecycle, is available. The Excel file also contains detailed fix lists for SQL Server 2019 and SQL Server 2017. [Select to download this Excel file now](https://aka.ms/sqlserverbuilds).
 
 > [!NOTE]
-> Individual entries in the following table can be referenced directly through a bookmark. If you select any bug reference ID in the table, a bookmark tag is added to the URL by using the "#NNNNNNNN" format. You can then share this URL with other people so that they can jump directly to the desired fix in the table.
+> Individual entries in the following table can be referenced directly through a bookmark. If you select any bug reference ID in the table, a bookmark tag is added to the URL by using the "#NNNNNNNN" format. You can then share this URL with others so that they can jump directly to the desired fix in the table.
 
 For more information about the bugs that are fixed and enhancements that are included in this servicing update, see the following Microsoft Knowledge Base articles.
 
@@ -56,7 +56,11 @@ The following update is available from the Microsoft Download Center:
 </details>
 
 <details>
-<summary><b>How to obtain or download this servicing update package for Windows from Microsoft Update Catalog</b></summary>
+<summary><b>How to obtain or download this servicing update package for Windows</b></summary>
+
+The following update is available from the Microsoft Download Center:
+
+ :::image type="icon" source="../media/download-icon.png" border="false"::: [Download the servicing update package for SQL Server 2019 RTM now](https://www.microsoft.com/download/details.aspx?id=100442)
 
 The following update is available from the Microsoft Update Catalog:
 
@@ -79,7 +83,7 @@ For installation instructions and direct links to the CU package downloads, see 
 
 </details>
 
-</details>
+<details>
 <summary><b>How to obtain or download the latest cumulative update for Big Data Clusters (BDC)</b></summary>
 
 To upgrade Microsoft SQL Server 2019 Big Data Clusters (BDC) on Linux to the latest CU, see the [Big Data Clusters Deployment Guidance](/sql/big-data-cluster/deployment-guidance).
@@ -87,6 +91,8 @@ To upgrade Microsoft SQL Server 2019 Big Data Clusters (BDC) on Linux to the lat
 Starting in SQL Server 2019 CU1, you can perform in-place upgrades for Big Data Clusters from the production supported releases (SQL Server 2019 GDR1). For more information, see [How to upgrade SQL Server Big Data Clusters](/sql/big-data-cluster/deployment-upgrade).
 
 For more information, see the [Big Data Clusters release notes](/sql/big-data-cluster/release-notes-big-data-cluster).
+
+</details>
 
 ## File information
 

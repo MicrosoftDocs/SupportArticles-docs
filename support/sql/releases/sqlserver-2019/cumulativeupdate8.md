@@ -26,7 +26,7 @@ This article describes Cumulative Update package 8 (CU8) for Microsoft SQL Serve
 
 **SQL Server 2019 CU8 contains the fix for the reliability issue that affected SQL Server 2019 CU7.**
 
-If you applied Microsoft SQL Server 2019 CU7, and you are using the database snapshot feature explicitly together with the "`CREATE DATABASE … AS SNAPSHOT OF`" syntax, please recreate the snapshot after you apply CU8.
+If you applied Microsoft SQL Server 2019 CU7, and you're using the database snapshot feature explicitly together with the "`CREATE DATABASE … AS SNAPSHOT OF`" syntax, please recreate the snapshot after you apply CU8.
 
 ## Improvements and fixes included in this update
 
@@ -885,7 +885,7 @@ You might have to restart the computer after you apply this cumulative update pa
 <details>
 <summary><b>Registry information</b></summary>
 
-To use one of the hotfixes in this package, you do not have to make any changes to the registry.
+To use one of the hotfixes in this package, you don't have to make any changes to the registry.
 
 </details>
 

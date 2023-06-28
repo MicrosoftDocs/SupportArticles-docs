@@ -89,7 +89,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="13974743">[13974743](#13974743)</a> | Fixes a high `HADR_SYNC_COMMIT` waits which may show on SQL Server with heavy workload after you apply CU7. | SQL Server Engine | SQL OS | Linux |
 | <a id="13980551">[13980551](#13980551)</a> | SQL Server Service isn't starting and failing with core dump after applying SQL Server 2019 CU8. | SQL Server Engine | SQL OS | Linux |
 | <a id="13970216">[13970216](#13970216)</a> | Fixes an issue where `DBCC PAGE` with option `3` generates access violation dumps after dropping a unique identifier column from the table in SQL Server 2019. </br></br>Msg 596, Level 21, State 1, Line \<LineNumber> </br>Cannot continue the execution because the session is in the kill state. </br></br>Msg 0, Level 20, State 0, Line \<LineNumber> </br>A severe error occurred on the current command. The results, if any, should be discarded. | SQL Server Engine | Storage Management | Windows |
-| <a id="13974728">[13974728](#13974728)</a> | Fixes an issue where performance counter `Data File(s) Size (KB)` doesn't report the correct total size of database files if one file is created with initial size > 4 TB or grown by more than 4TB. | SQL Server Engine | Storage Management | Windows |
+| <a id="13974728">[13974728](#13974728)</a> | Fixes an issue where performance counter `Data File(s) Size (KB)` doesn't report the correct total size of database files if one file is created with initial size > 4 TB or grown by more than 4 TB. | SQL Server Engine | Storage Management | Windows |
 | <a id="13974746">[13974746](#13974746)</a> | Adds a new option to free the `LogPool` cache only: `DBCC FREESYSTEMCACHE('LogPool')`. | SQL Server Engine | Transaction Services | Windows |
 
 ## How to obtain or download this or the latest cumulative update package
@@ -923,7 +923,7 @@ You might have to restart the computer after you apply this cumulative update pa
 <details>
 <summary><b>Registry information</b></summary>
 
-To use one of the hotfixes in this package, you do not have to make any changes to the registry.
+To use one of the hotfixes in this package, you don't have to make any changes to the registry.
 
 </details>
 

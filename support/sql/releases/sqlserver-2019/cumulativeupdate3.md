@@ -17,29 +17,29 @@ _Version:_ &nbsp; 15.0.4023.6
 
 ## Summary
 
-This article describes Cumulative Update package 3 (CU3) for Microsoft SQL Server 2019. This update contains 23 [fixes](#improvements-and-fixes-included-in-this-cumulative-update) that were issued after the release of SQL Server 2019 Cumulative Update 2, and it updates components in the following builds:
+This article describes Cumulative Update package 3 (CU3) for Microsoft SQL Server 2019. This update contains 23 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2019 Cumulative Update 2, and it updates components in the following builds:
 
 - SQL Server - Product version: **15.0.4023.6**, file version: **2019.150.4023.6**
 - Analysis Services - Product version: **15.0.34.9**, file version: **2018.150.34.9**
 
 ## Known issues in this update
 
-There's a known uninstallation issue that affects this SQL Server 2019 CU3 under certain circumstances. If you uninstall this CU, SQL Server doesn’t come online, and you find the following SQL Server error log entry:
+There's a known uninstallation issue that affects this SQL Server 2019 CU3 under certain circumstances. If you uninstall this CU, SQL Server doesn't come online, and you find the following SQL Server error log entry:
 
 > The script level for 'system_xevents_modification.sql' in database 'master' cannot be downgraded from *XXXXXXXXX* to *XXXXXXXXX*, which is supported by this server. This usually implies that a future database was attached and the downgrade path is not supported by the current installation. Install a newer version of SQL Server and re-try opening the database.
 
-To mitigate this issue, enable Trace Flag - T902 to bring SQL Server online. You don’t have to uninstall the program again. To upgrade to a new CU, you must first remove this flag.
+To mitigate this issue, enable Trace Flag - T902 to bring SQL Server online. You don't have to uninstall the program again. To upgrade to a new CU, you must first remove this flag.
 
 SQL Server 2019 CU5 or any later CU release contains the fix.
 
-## Improvements and fixes included in this cumulative update
+## Improvements and fixes included in this update
 
 A downloadable Excel workbook that contains a summary list of builds, together with their current support lifecycle, is available. The Excel file also contains detailed fix lists for SQL Server 2019 and SQL Server 2017. [Select to download this Excel file now](https://aka.ms/sqlserverbuilds).
 
 > [!NOTE]
-> Individual entries in the following table can be referenced directly through a bookmark. If you select any bug reference ID in the table, a bookmark tag is added to the URL by using the "#NNNNNNNN" format. You can then share this URL with other people so that they can jump directly to the desired fix in the table.
+> Individual entries in the following table can be referenced directly through a bookmark. If you select any bug reference ID in the table, a bookmark tag is added to the URL by using the "#NNNNNNNN" format. You can then share this URL with others so that they can jump directly to the desired fix in the table.
 
-For more information about the bugs that are fixed and enhancements that are included in this servicing update, see the following Microsoft Knowledge Base articles.
+For more information about the bugs that are fixed and enhancements that are included in this cumulative update, see the following Microsoft Knowledge Base articles.
 
 | Bug reference | Description | Fix area | Component | Platform |
 |---|---|---|---|---|
@@ -52,12 +52,12 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="13412450">[13412450](#13412450)</a> | [FIX: Launchpad services fails to start during failover in SQL Server 2019 (KB4539172)](https://support.microsoft.com/help/4539172) | SQL Server Engine | Extensibility | Windows |
 | <a id="13395279">[13395279](#13395279)</a> | Updates the Zulu JRE version to `zulu11.37.18-sa-jre11.0.6`. | SQL Server Engine | Extensibility | All |
 | <a id="13403957">[13403957](#13403957)</a> | Updates RSetup with the updated FWLINK version 3.5.2.293. | SQL Server Engine | Extensibility | Windows |
-| <a id="13412437">[13412437](#13412437)</a> |  Updates to SQL Server on Linux (mssql mlservices and extensibility) packages to address following issues: </br></br>1. BxlServer consumes 100% CPU. </br>2. Python launcher encounters assert when deleting files. </br>3. Data length mismatch when using Unicode string with OutputDataSet and InputDataSet of data passthrough query. | SQL Server Engine | Extensibility | Linux |
+| <a id="13412437">[13412437](#13412437)</a> |  Updates to SQL Server on Linux (mssql mlservices and extensibility) packages to address following issues: </br></br>1. BxlServer consumes 100% CPU. </br>2. Python launcher encounters assert when deleting files. </br>3. Data length mismatch when using Unicode string with `OutputDataSet` and `InputDataSet` of data passthrough query. | SQL Server Engine | Extensibility | Linux |
 | <a id="13429278">[13429278](#13429278)</a> | [FIX: Error occurs when you interact with SQL Server Agent in SQL Server 2019 (KB4550657)](https://support.microsoft.com/help/4550657) | SQL Server Engine | High Availability and Disaster Recovery | Windows |
 | <a id="13209410">[13209410](#13209410)</a> | SQL Server error log contains additional empty lines while printing In-memory OLTP related messages. | SQL Server Engine | In-memory OLTP | All |
 | <a id="13357974">[13357974](#13357974)</a> | Due to a new feature called concurrent PFS update in SQL Server 2019 which is enabled by default, in certain rare corner cases, you may encounter non-yielding threads and latch timeout errors in SQL Server. | SQL Server Engine | Methods to access stored data | All |
 | <a id="13324032">[13324032](#13324032)</a> | [FIX: .NET Framework DbDataAdapter.FillSchema method returns NULL on database with compatibility level 140 in SQL Server 2019 and 2017 (KB4529927)](https://support.microsoft.com/help/4529927) | SQL Server Engine | Programmability | Windows |
-| <a id="13350041">[13350041](#13350041)</a> | When you repeatedly run a stored procedure that uses temporary table with indexes on SQL Server 2019, the client may receive an unexpected error with message "A severe error occurred on the current command" and an access violation exception is recorded on the SQL Server. If the same workload is executed on any previous major version of SQL Server, this issue does not occur. | SQL Server Engine | Query Execution | Windows |
+| <a id="13350041">[13350041](#13350041)</a> | When you repeatedly run a stored procedure that uses temporary table with indexes on SQL Server 2019, the client may receive an unexpected error with message "A severe error occurred on the current command" and an access violation exception is recorded on the SQL Server. If the same workload is executed on any previous major version of SQL Server, this issue doesn't occur. | SQL Server Engine | Query Execution | Windows |
 | <a id="13388147">[13388147](#13388147)</a> | When you run a query against `sys.dm_db_stats_histogram`, it may fail with access violation when a parallel plan is chosen. | SQL Server Engine | Query Execution | All |
 | <a id="13360725">[13360725](#13360725)</a> | When you run a `SELECT` query returning empty/multiple rows with variable assignment in inline-able scalar UDFs, you may receive wrong results. | SQL Server Engine | Query Optimizer | Windows |
 | <a id="13383620">[13383620](#13383620)</a> | This update reduces query execution time for BDC storage pool tables and other Polybase external tables. | SQL Server Engine | SQL BDC Polybase | Linux |
@@ -86,7 +86,7 @@ The following update is available from the Microsoft Download Center:
 <details>
 <summary><b>How to obtain or download this cumulative update package for Windows from Microsoft Update Catalog</b></summary>
 
-The following update is available from Microsoft Update Catalog:
+The following update is available from the Microsoft Update Catalog:
 
 - :::image type="icon" source="../media/download-icon.png" border="false"::: [Download the cumulative update package for SQL Server 2019 CU3 now](https://catalog.s.download.windowsupdate.com/c/msdownload/update/software/updt/2020/03/sqlserver2019-kb4538853-x64_e110a1af271b4e97840c713c1d8f44d159f2393e.exe)
 
@@ -625,7 +625,7 @@ You might have to restart the computer after you apply this cumulative update pa
 <details>
 <summary><b>Registry information</b></summary>
 
-To use one of the hotfixes in this package, you do not have to make any changes to the registry.
+To use one of the hotfixes in this package, you don't have to make any changes to the registry.
 
 </details>
 
@@ -715,7 +715,7 @@ To uninstall this CU on Linux, you must roll back the package to the previous ve
 ## References
 
 - [Announcing updates to the SQL Server Incremental Servicing Model (ISM)](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/)
-- [SQL Server Service Packs are discontinued starting from SQL Server 2017](https://support.microsoft.com/topic/fd405dee-cae7-b40f-db14-01e3e4951169)
+- [SQL Server Service Packs are no longer supported starting from SQL Server 2017](https://support.microsoft.com/topic/fd405dee-cae7-b40f-db14-01e3e4951169)
 - [Determine which version and edition of SQL Server Database Engine is running](../find-my-sql-version.md)
 - [Servicing models for SQL Server](../../general/servicing-models-sql-server.md)
 - [Naming schema and Fix area descriptions for SQL Server software update packages](../../database-engine/install/windows/naming-schema-and-fix-area.md)

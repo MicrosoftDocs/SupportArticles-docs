@@ -72,7 +72,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="14032116">[14032116](#14032116)</a> | [FIX: Performance issues occur when metadata is scanned to find keys to be sent to the AE enclave in SQL Server 2019 (KB5003750)](https://support.microsoft.com/help/5003750) | SQL Server Engine | Security Infrastructure | Windows |
 | <a id="13990055">[13990055](#13990055)</a> | Fixes the memory release issue in execution of the `STDistance` spatial method while using spatial index. Before the fix, memory usage of `MEMORYCLERK_SOSNODE` gradually grew until all the memory available is taken. | SQL Server Engine | Spatial | Windows |
 | <a id="14068550">[14068550](#14068550)</a> | Fixes the high `SOS_SUSPEND_QUEUE` spinlock contention with parallel `window aggregate`. | SQL Server Engine | SQL OS | All |
-| <a id="14043293">[14043293](#14043293)</a> | Fixes an issue where `Setup Account Privileges` check may not performed when installing CU or Security Update. | SQL Setup | Patching | Windows |
+| <a id="14043293">[14043293](#14043293)</a> | Fixes an issue where `Setup Account Privileges` check may not be performed when installing CU or Security Update. | SQL Setup | Patching | Windows |
 
 ## How to obtain or download this or the latest cumulative update package
 
@@ -890,7 +890,7 @@ You might have to restart the computer after you apply this cumulative update pa
 <details>
 <summary><b>Registry information</b></summary>
 
-To use one of the hotfixes in this package, you do not have to make any changes to the registry.
+To use one of the hotfixes in this package, you don't have to make any changes to the registry.
 
 </details>
 

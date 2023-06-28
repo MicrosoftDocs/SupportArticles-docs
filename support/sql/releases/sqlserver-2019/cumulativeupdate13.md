@@ -53,7 +53,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="14239890">[14239890](#14239890)</a> | [Improvement: Last Writer Wins and support for P2P database in Availability Group (KB5006665)](https://support.microsoft.com/help/5006665) | SQL Server Engine | Replication | Windows |
 | <a id="14243398">[14243398](#14243398)</a> | [FIX: An assertion dump occurs many times in SQL Server 2019 (KB5006632)](https://support.microsoft.com/help/5006632) | SQL Server Engine | Replication | Windows |
 | <a id="14127274">[14127274](#14127274)</a> | Fixes an issue where 22836 error occurs when you add CDC job again after deleting CDC capture and removing jobs in SQL Server Agent. | SQL Server Engine | Replication | All |
-| <a id="14178357">[14178357](#14178357)</a> | Adds `pOwnerSess` to the error message to find the owner session Id that runs the Log Reader Agent or log - related procedure in SQL Server 2017. | SQL Server Engine | Replication | Windows |
+| <a id="14178357">[14178357](#14178357)</a> | Adds `pOwnerSess` to the error message to find the owner session ID that runs the Log Reader Agent or log - related procedure in SQL Server 2017. | SQL Server Engine | Replication | Windows |
 | <a id="14115230">[14115230](#14115230)</a> | Fixes an issue where AD Authentication in SQL Server BDC encounters an error "enctype aes256-cts found in keytab but cannot decrypt ticket" if support for 128-bit and 256-bit Kerberos AES encryption is enabled. | SQL Server Engine | SQL Big Data Cluster | Linux |
 | <a id="14173307">[14173307](#14173307)</a> | [Improvement: Corrupted statistics can be detected by using extended_logical_checks in SQL Server 2016, 2017, and 2019 (KB4530907)](https://support.microsoft.com/help/4530907) | SQL Server Engine | Storage Management | Windows |
 | <a id="14021172">[14021172](#14021172)</a> | Fixes an Access Violation that occurs in SQL Server 2019 when you attempt to add file to database that has backup in progress. | SQL Server Engine | Storage Management | Windows |
@@ -893,7 +893,7 @@ You might have to restart the computer after you apply this cumulative update pa
 <details>
 <summary><b>Registry information</b></summary>
 
-To use one of the hotfixes in this package, you do not have to make any changes to the registry.
+To use one of the hotfixes in this package, you don't have to make any changes to the registry.
 
 </details>
 
