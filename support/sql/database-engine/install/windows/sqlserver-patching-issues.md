@@ -106,18 +106,12 @@ This issue may occurs because either the login was dropped manually or these [in
      DROP USER [##MS_SSISServerCleanupJobLogin##]
      GO
 
-     USE [SSISDB]
-     GO
      CREATE USER [##MS_SSISServerCleanupJobUser##] FOR LOGIN [##MS_SSISServerCleanupJobLogin##]
      GO
      
-     USE [SSISDB]
-     GO
      ALTER USER [##MS_SSISServerCleanupJobUser##] WITH DEFAULT_SCHEMA=[dbo]
      GO
 
-     USE [SSISDB]
-     GO
      GRANT EXECUTE ON [internal].[cleanup_server_project_version] TO [##MS_SSISServerCleanupJobUser##]
      GO
      GRANT EXECUTE ON [internal].[cleanup_server_retention_window] TO [##MS_SSISServerCleanupJobUser##]
