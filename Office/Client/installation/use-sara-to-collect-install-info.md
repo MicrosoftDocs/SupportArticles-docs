@@ -18,7 +18,7 @@ appliesto:
   - Office 2016
   - Office 2013
   - Office 2010
-ms.date: 3/31/2022
+ms.date: 6/28/2023
 ---
 
 # Use Support and Recovery Assistant to collect data about Microsoft 365 Apps installations
@@ -62,47 +62,57 @@ To install Support and Recovery Assistant and automatically start collecting ROI
 
 After Support and Recovery Assistant is successfully installed, collect the ROIScan data:
 
-1. Select **Advanced diagnostics** > **Next**.<br/>
-:::image type="content" source="media/use-sara-to-collect-install-info/open-screen.png" alt-text="Screenshot of the Support and Recovery Assistant window with Advanced diagnostics selected.":::
+1. Select **Advanced diagnostics** > **Next**.
 
-1. Select **Office** > **Next**.<br/>
-:::image type="content" source="media/use-sara-to-collect-install-info/advanced-diagnostics.png" alt-text="Screenshot of the Support and Recovery Assistant window with Office selected.":::
+   :::image type="content" source="media/use-sara-to-collect-install-info/open-screen.png" alt-text="Screenshot of the Support and Recovery Assistant window with Advanced diagnostics selected.":::
+
+1. Select **Office** > **Next**.
+
+   :::image type="content" source="media/use-sara-to-collect-install-info/advanced-diagnostics.png" alt-text="Screenshot of the Support and Recovery Assistant window with Office selected.":::
 
 1. Select **Normal Robust Office Inventory Scan** or **Full Robust Office Inventory Scan**.
-:::image type="content" source="media/use-sara-to-collect-install-info/select-diagnostic.png" alt-text="Screenshot to select whether to run the normal scan or the full scan.":::
- 
+
+   :::image type="content" source="media/use-sara-to-collect-install-info/select-diagnostic.png" alt-text="Screenshot to select whether to run the normal scan or the full scan.":::
+
 1. When you are prompted to confirm that you are using the affected computer, select **Yes** > **Next**.
-:::image type="content" source="media/use-sara-to-collect-install-info/affected-machine.png" alt-text="Screenshot to confirm you're using the affected computer.":::
+
+   :::image type="content" source="media/use-sara-to-collect-install-info/affected-machine.png" alt-text="Screenshot to confirm you're using the affected computer.":::
 
    After you select **Next**, you might be prompted for a Support and Recovery Assistant restart in order to validate the user or admin permissions.
 
    > [!NOTE]
+   >
    > - The scan may take several minutes to run.
    > - You are notified when the scan is finished. You can view the output by selecting **Next**.
    > - The last page gives you the option to view the log, and send it directly to Microsoft if you have an active support request.
 
 ## Tips to analyze a ROIScan log
 
-If you are not currently working with Microsoft on a support request, and you want to review the ROIScan log yourself, review the following details:
+If you aren't currently working with Microsoft on a support request, and you want to review the ROIScan log yourself, review the following details:
 
 Aside from the title line, the ROIScan log is grouped into three sections: Computer, Review Items, and Products Inventory.
 
 ### Computer
-- This section contains current user and operating system-specific data:
-   - Windows Installer Version
-   - Computer Name
-   - OS Details: OS Name, Service pack, Version, Codepage, Country Code, Language as LCID, 64-bit or 32-bit
-   - Current User: Username, IsAdmin, SID.
-   - Logfile Name 
-   - ROI Script Build
-- Data in this section is collected only. No additional analyses is done.
+
+This section contains current user and operating system-specific data:
+
+- Windows Installer Version
+- Computer Name
+- OS Details: OS Name, Service pack, Version, Codepage, Country/Region Code, Language as LCID, 64-bit or 32-bit
+- Current User: Username, IsAdmin, SID.
+- Logfile Name 
+- ROI Script Build
+
+**Note:** Data in this section is collected only. No additional analysis is done.
 
 ### Review items
-- This section includes three categories of review items to notify you about anything in the “Products Inventory” section that requires attention:
-   - Note
-   - Warning
-   - Error
+
+This section includes three categories of review items to notify you about anything in the “Products Inventory” section that requires attention:
+
+- Note
+- Warning
+- Error
 
 ### Products Inventory
-- This section contains data about each Office product that is installed on the computer where the ROIScan script is executed.
-- For Click-To-Run installations, “Products Inventory” also lists shared properties, such as Shared Computer Licensing and SCLCacheOverride.
+
+This section contains data about each Office product that is installed on the computer where the ROIScan script is executed. For Click-To-Run installations, Products Inventory also lists shared properties, such as Shared Computer Licensing and SCLCacheOverride.
