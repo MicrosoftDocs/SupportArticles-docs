@@ -19,9 +19,9 @@ ms.date: 3/31/2022
 
 # Can't retain cloud attachments
 
-Microsoft Purview provides tools that admins can use to retain cloud attachments that users share through Teams and Outlook. If you've configured cloud attachments to be retained, but you can't find them by using eDiscovery, it might be that the items weren't actually cloud attachments but separate copies or shared by using other mechanisms. Use the following table to identify which sharing mechanisms are cloud attachments in Outlook, Teams, and Yammer.
+Microsoft Purview provides tools that admins can use to retain cloud attachments that users share through Teams and Outlook. If you've configured cloud attachments to be retained, but you can't find them by using eDiscovery, it might be that the items weren't actually cloud attachments but separate copies or shared by using other mechanisms. Use the following table to identify which sharing mechanisms are cloud attachments in Outlook, Teams, and Viva Engage.
 
-For information about how to retain cloud attachments that are shared in Outlook, Teams, and Yammer and known limitations for this scenario, see the retention label condition for cloud attachments in [Automatically apply a retention label to retain or delete content](/microsoft-365/compliance/apply-retention-labels-automatically).
+For information about how to retain cloud attachments that are shared in Outlook, Teams, and Viva Engage and known limitations for this scenario, see the retention label condition for cloud attachments in [Automatically apply a retention label to retain or delete content](/microsoft-365/compliance/apply-retention-labels-automatically).
 
 ### Cloud attachments in Outlook
 
@@ -48,7 +48,7 @@ For information about how to retain cloud attachments that are shared in Outlook
 |Stickers that are shared in a chat.<br><br> Example:<br> :::image type="content" source="media/cannot-retain-cloud-attachments/stickers-shared-on-chat.png" alt-text="Screenshot of stickers shared in a chat.":::    | No      |
 |Praise and approvals that are shared in a chat.<br><br> Example:<br> :::image type="content" source="media/cannot-retain-cloud-attachments/praise-sent-in-chat.png" alt-text="Screenshot of praise sent in a chat.":::  | No      |
 
-### Cloud attachments in Yammer
+### Cloud attachments in Viva Engage
 
 |Sharing mechanism  |Is it a cloud attachment?|
 |:------------------- |:---------------:|

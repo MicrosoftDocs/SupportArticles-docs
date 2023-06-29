@@ -92,8 +92,8 @@ To resolve this issue, use either of the following methods.
    Use the [New-AppRetentionComplianceRule](/powershell/module/exchange/new-appretentioncompliancerule) cmdlet for policies that target:
 
    - Teams private channel messages
-   - Microsoft Yammer user messages
-   - Yammer community messages
+   - Microsoft Viva Engage user messages
+   - Viva Engage community messages
 
    For example, to add a rule that specifies an unlimited retention period, run the following command:
 

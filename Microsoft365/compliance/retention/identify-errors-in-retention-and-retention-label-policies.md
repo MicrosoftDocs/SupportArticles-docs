@@ -76,8 +76,8 @@ Use the following steps to check for errors in policies that target:
 Use the following steps to check for errors in policies that target:
 
 - Teams private channel messages
-- Microsoft Yammer user messages
-- Yammer community messages
+- Microsoft Viva Engage user messages
+- Viva Engage community messages
 
 1. [Connect to Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell).
 
