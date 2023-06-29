@@ -43,11 +43,11 @@ Azure Kubernetes Service (AKS) uses virtual machine scale sets based agent pools
 Deleting the virtual machine scale set attached to the cluster causes the cluster autoscaler to fail. It also causes issues when provisioning resources such as nodes and pods.
 
 > [!NOTE]
-> Modifying any resource under the node resource group in the AKS cluster is an unsupported action and will cause cluster operation failures. You can prevent changes from being made to the node resource group by [blocking users from modifying resources](/azure/aks/cluster-configuration.md#fully-managed-resource-group-preview) managed by the AKS cluster.
+> Modifying any resource under the node resource group in the AKS cluster is an unsupported action and will cause cluster operation failures. You can prevent changes from being made to the node resource group by [blocking users from modifying resources](/azure/aks/cluster-configuration#fully-managed-resource-group-preview) managed by the AKS cluster.
 
 ## Cause 2: Tags or any other properties were modified from the node resource group
 
-You may receive scaling errors if you modify or delete Azure-created tags and other resource properties in the node resource group. For more information, see [Can I modify tags and other properties of the AKS resources in the node resource group](/azure/aks/cluster-configuration#can-i-modify-tags-and-other-properties-of-the-aks-resources-in-the-node-resource-group).
+You may receive scaling errors if you modify or delete Azure-created tags and other resource properties in the node resource group. For more information, see [Can I modify tags and other properties of the AKS resources in the node resource group](/azure/aks/faq#can-i-modify-tags-and-other-properties-of-the-aks-resources-in-the-node-resource-group).
 
 ## Solution: Update the cluster to the goal state without changing the configuration
 
