@@ -24,9 +24,9 @@ This article describes Cumulative Update package 4 (CU4) for Microsoft SQL Serve
 
 ## Known issues in this update
 
-There is a known uninstallation issue that affects this SQL Server 2019 CU4 under certain circumstances. If you uninstall this CU, SQL Server doesn't come online, and you find the following SQL Server error log entry:
+There's a known uninstallation issue that affects this SQL Server 2019 CU4 under certain circumstances. If you uninstall this CU, SQL Server doesn't come online, and you find the following SQL Server error log entry:
 
-> The script level for 'system_xevents_modification.sql' in database 'master' cannot be downgraded from XXXXXXXXX to XXXXXXXXX, which is supported by this server. This usually implies that a future database was attached and the downgrade path is not supported by the current installation. Install a newer version of SQL Server and re-try opening the database
+> The script level for 'system_xevents_modification.sql' in database 'master' cannot be downgraded from XXXXXXXXX to XXXXXXXXX, which is supported by this server. This usually implies that a future database was attached and the downgrade path is not supported by the current installation. Install a newer version of SQL Server and re-try opening the database.
 
 To mitigate this issue, enable Trace Flag - T902 to bring SQL Server online. You don't have to uninstall the program again. To upgrade to a new CU, you must first remove this flag.
 

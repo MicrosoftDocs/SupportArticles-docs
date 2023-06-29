@@ -17,7 +17,7 @@ _Version:_ &nbsp; 15.0.4249.2
 
 ## Summary
 
-This article describes Cumulative Update package 17 (CU17) for Microsoft SQL Server 2019. This update contains 38 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2019 Cumulative Update 16, and it updates components in the following builds:
+This article describes Cumulative Update package 17 (CU17) for Microsoft SQL Server 2019. This update contains 39 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2019 Cumulative Update 16, and it updates components in the following builds:
 
 - SQL Server - Product version: **15.0.4249.2**, file version: **2019.150.4249.2**
 - Analysis Services - Product version: **15.0.35.33**, file version: **2018.150.35.33**
@@ -59,7 +59,6 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="14923176">[14923176](#14923176)</a> | A memory leak occurs in the range index of in-memory tables after the parallel index scan. | SQL Server Engine | In-Memory OLTP | All |
 | <a id="14350896">[14350896](#14350896)</a> | Improves the response time of the system view `sys.spt_columns_odbc_view` on Linux. | SQL Server Engine | Linux | Linux |
 | <a id="14826907">[14826907](#14826907)</a> | Incorrect reporting of physical sector size for Linux block devices can cause unexpected "misaligned log IOs" warnings for log shipping and Always On availability groups. | SQL Server Engine | Linux | Linux |
-| <a id="312902877">[312902877](#312902877)</a> | When you use the `AZDATA BDC ROTATE` command to rotate the password of a SQL Server big data cluster that uses Active Directory, you receive the following error message: </br></br>Failed to update password for existing AD account '\<AccountName>'. Error code: 30 | SQL Server Engine |  | Linux |
 | <a id="14679511">[14679511](#14679511)</a> | This fix resolves the following issues: </br></br>- An online index rebuild may not finish when the database is using the simple recovery model. </br></br>- An assertion failure about the latch owner occurs when you reorganize an index. | SQL Server Engine | Methods to access stored data | All |
 | <a id="14708235">[14708235](#14708235)</a> | Traversing long IAM chains may cause a non-yielding scheduler and associated dump. | SQL Server Engine | Methods to access stored data | All |
 | <a id="14862654">[14862654](#14862654)</a> | An access violation occurs when `XVBChainTails::UpdateChainTails` updates `m_pNewVersionChainTailInsert` and `m_pOldVersionChainTailInsert` and these values aren't allocated. | SQL Server Engine | Methods to access stored data | All |
@@ -80,6 +79,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="14737844">[14737844](#14737844)</a> | [FIX: sp_replmonitorsubscriptionpendingcmds returns incorrect pending commands for P2P replication (KB5017009)](https://support.microsoft.com/help/5017009) | SQL Server Engine | Replication | Windows |
 | <a id="14884007">[14884007](#14884007)</a> | When you create a peer-to-peer publication by using the last-write-wins conflict resolution policy, and one or few articles in this publication have just 1 column which is the primary key column, running the distribution agent fails and returns the following error message: </br></br> Incorrect syntax near '$sys_mw_cd_id'. | SQL Server Engine | Replication | Windows |
 | <a id="14915360">[14915360](#14915360)</a> | The floating-point exception error 3628 occurs when you run a full-text query that contains a `FREETEXTTABLE` function. | SQL Server Engine | Search | All |
+| <a id="312902877">[312902877](#312902877)</a> | When you use the `AZDATA BDC ROTATE` command to rotate the password of a SQL Server big data cluster that uses Active Directory, you receive the following error message: </br></br>Failed to update password for existing AD account '\<AccountName>'. Error code: 30 | SQL Server Engine | SQL Big Data Cluster | Linux |
 | <a id="14874191">[14874191](#14874191)</a> | [Improvement: Provide the closest matching non-UTF8 collation for the client drivers that don't support UTF-8 (KB5016780)](https://support.microsoft.com/help/5016780) | SQL Server Engine | SQL Server Engine | All |
 | <a id="14764719">[14764719](#14764719)</a> | An instance of SQL Server Express LocalDB fails to start and returns error 9003 after multiple backups on the `model` database. | SQL Server Engine | Transaction Services | Windows |
 

@@ -24,7 +24,7 @@ This article describes Cumulative Update package 7 (CU7) for Microsoft SQL Serve
 
 ## Known issues in this update
 
-There is a known issue that affects using database snapshots in SQL Server 2019 CU7. Notice that using `DBCC CHECKDB` is also affected because this generates a database snapshot. This issue is fixed in SQL Server 2019 CU8. To get this fix, apply SQL Server 2019 CU8 or any later SQL Server 2019 CU release.
+There's a known issue that affects using database snapshots in SQL Server 2019 CU7. Notice that using `DBCC CHECKDB` is also affected because this generates a database snapshot. This issue is fixed in SQL Server 2019 CU8. To get this fix, apply SQL Server 2019 CU8 or any later SQL Server 2019 CU release.
 
 - If you downloaded the CU7 package file before September 23, 2020, we recommend that you don't install it. Please move to SQL Server CU8 or a later CU release.
 
