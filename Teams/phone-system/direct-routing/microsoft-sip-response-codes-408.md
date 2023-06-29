@@ -44,7 +44,7 @@ This article provides troubleshooting information for various combinations of th
 - Microsoft response code: **560408**
 - SIP response code: **408**
 - Suggested actions:  
-  - Review the tenant's call records that include *CallEndSubReason = 560408*. Look for trends in the called numbers, or a distribution of the failures by destination country. Patterns can be identified that would suggest a problem that affects a downstream component.
+  - Review the tenant's call records that include *CallEndSubReason = 560408*. Look for trends in the called numbers, or a distribution of the failures by destination country/region. Patterns can be identified that would suggest a problem that affects a downstream component.
 
 ## 0 408 Establishment timeout
 

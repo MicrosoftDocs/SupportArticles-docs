@@ -38,4 +38,4 @@ This article provides troubleshooting information for various combinations of th
 - Suggested actions:  
   - Check the logs on the SBC to investigate why it returns the "503" SIP response.
   - Make sure that the SBC is correctly licensed to handle the number of concurrent sessions.
-  - Determine whether the "503" error is related to a specific destination country or calling corridor.
+  - Determine whether the "503" error is related to a specific destination country/region or calling corridor.

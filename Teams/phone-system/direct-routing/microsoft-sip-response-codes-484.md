@@ -28,6 +28,6 @@ This article provides troubleshooting information for various combinations of th
 - Microsoft response code: **560484**
 - SIP response code: **484**
 - Suggested actions:  
-  - Review the tenant's call records that contain *CallEndSubReason = 560484*. Look for trends in the called numbers, including the called numbers distribution by country. You can identify patterns that suggest that you should either establish additional normalization rules for extension-based dialing or follow up about user education.  
+  - Review the tenant's call records that contain *CallEndSubReason = 560484*. Look for trends in the called numbers, including the called numbers distribution by country/region. You can identify patterns that suggest that you should either establish additional normalization rules for extension-based dialing or follow up about user education.  
 
     In some cases, these failures can be ignored because the user is dialing an invalid number. In other cases, the SBC could cause these failures because of a missing configuration in a call transfer scenario (CallType = ByotOutUserForwarding).
