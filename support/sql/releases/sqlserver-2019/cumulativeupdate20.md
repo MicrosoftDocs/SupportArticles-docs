@@ -36,15 +36,17 @@ Microsoft is working on a fix for this issue and it will be available in a futur
 
 ### Issue two
 
-After you install this cumulative update, external data sources that use the generic ODBC connector might no longer work. When you try to query external tables that were created before you installed this cumulative update, you receive the following error message:
+After you install this cumulative update, external data sources using the generic ODBC connector may no longer work. When you try to query external tables that were created before installing this cumulative update, you receive the following error message:
 
-> Msg 7320, Level 16, State 110, Line 68 </br></br>Cannot execute the query "Remote Query" against OLE DB provider "MSOLEDBSQL" for linked server "(null)". Object reference not set to an instance of an object.
+> Msg 7320, Level 16, State 110, Line 68  
+> Cannot execute the query "Remote Query" against OLE DB provider "MSOLEDBSQL" for linked server "(null)". Object reference not set to an instance of an object.
 
 If you try to create a new external table, you receive the following error message:
 
-> Msg 110813, Level 16, State 1, Line 64 </br></br>Object reference not set to an instance of an object.
+> Msg 110813, Level 16, State 1, Line 64  
+> Object reference not set to an instance of an object.
 
-To work around this issue, you can uninstall this cumulative update or add the Driver keyword to the CONNECTION_OPTIONS argument. For more information, see [Generic ODBC external data sources may not work after installing Cumulative Update](https://techcommunity.microsoft.com/t5/sql-server-support-blog/generic-odbc-external-data-sources-may-not-work-after-installing/ba-p/3783873).
+To work around this issue, you can uninstall this cumulative update or add the `Driver` keyword to the `CONNECTION_OPTIONS` argument. For more information, see [Generic ODBC external data sources may not work after installing Cumulative Update](https://techcommunity.microsoft.com/t5/sql-server-support-blog/generic-odbc-external-data-sources-may-not-work-after-installing/ba-p/3783873).
 
 ### Issue three
 
@@ -85,7 +87,7 @@ A downloadable Excel workbook that contains a summary list of builds, together w
 For more information about the bugs that are fixed and enhancements that are included in this cumulative update, see the following Microsoft Knowledge Base articles.
 
 | Bug reference | Description | Fix area | Component | Platform |
-|-------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------|----------------------|----------|
+|---|---|---|---|---|
 | <a id="2204516">[2204516](#2204516)</a> | Fixes an issue that can cause corruption of the internal data structure that the Analysis Services engine uses to manage memory. | Analysis Services | Analysis Services | Windows |
 | <a id="2279650">[2279650](#2279650)</a> | Fixes a failure in SQL Server Analysis Services (SSAS) that you encounter after you rename partitions to the same name in a multidimensional model. | Analysis Services | Analysis Services | Windows |
 | <a id="2255878">[2255878](#2255878)</a> | Fixes security vulnerabilities [CVE-2015-6420](https://nvd.nist.gov/vuln/detail/CVE-2015-6420) and [CVE-2017-15708](https://nvd.nist.gov/vuln/detail/CVE-2017-15708). | Integration Services | Integration Services | Windows |

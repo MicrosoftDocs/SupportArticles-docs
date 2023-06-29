@@ -12,7 +12,7 @@ appliesto:
 
 # KB5017593 - Cumulative Update 18 for SQL Server 2019
 
-_Release Date:_ &nbsp; September 28, 2022 
+_Release Date:_ &nbsp; September 28, 2022  
 _Version:_ &nbsp; 15.0.4261.1
 
 ## Summary

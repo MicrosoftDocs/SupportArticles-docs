@@ -12,7 +12,7 @@ appliesto:
 
 # KB5011644 - Cumulative Update 16 for SQL Server 2019
 
-_Release Date:_ &nbsp; April 18, 2022 
+_Release Date:_ &nbsp; April 18, 2022  
 _Version:_ &nbsp; 15.0.4223.1
 
 ## Summary

@@ -12,7 +12,7 @@ appliesto:
 
 # KB5023049 - Cumulative Update 19 for SQL Server 2019
 
-_Release Date:_ &nbsp; February 16, 2023 
+_Release Date:_ &nbsp; February 16, 2023  
 _Version:_ &nbsp; 15.0.4298.1
 
 ## Summary

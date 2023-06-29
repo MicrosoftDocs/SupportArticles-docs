@@ -24,13 +24,13 @@ This article describes Cumulative Update package 15 (CU15) for Microsoft SQL Ser
 
 ## Known issues in this update
 
-SQL Server 2019 CU14 introduced a [fix to address wrong results in parallel plans returned by built-in SESSION_CONTEXT](https://support.microsoft.com/help/5008114). However, this fix could cause Access Violation dump files while resetting the `SESSION` for reuse. To mitigate this issue, you can disable the original fix, and disable the parallelism for built-in `SESSION_CONTEXT` to avoid wrong results. To do this, use the following trace flags:
+SQL Server 2019 CU14 introduced a [fix to address wrong results in parallel plans returned by the built-in SESSION_CONTEXT](https://support.microsoft.com/help/5008114). However, this fix might create access violation dump files when the `SESSION` is reset for reuse. To mitigate this issue and avoid incorrect results, you can disable the original fix, and also disable the parallelism for the built-in `SESSION_CONTEXT`. To do this, use the following trace flags:
 
-- 11042 - This trace flag disables the parallelism for built-in SESSION_CONTEXT.
+- 11042 - This trace flag disables the parallelism for the built-in `SESSION_CONTEXT`.
 
-- 9432 - This trace flag disables the fix introduced in SQL Server 2019 CU14.
+- 9432 - This trace flag disables the fix that was introduced in SQL Server 2019 CU14.
 
-Microsoft is working on a fix for this issue that will be available in a future CU.
+Microsoft is working on a fix for this issue and it will be available in a future CU.
 
 ## Improvements and fixes included in this cumulative update
 
@@ -99,7 +99,7 @@ The following update is available from the Microsoft Download Center:
 <details>
 <summary><b>How to obtain or download this cumulative update package for Windows from Microsoft Update Catalog</b></summary>
 
-The following update is available from the Microsoft Download Center:
+The following update is available from the Microsoft Update Catalog:
 
 - :::image type="icon" source="../media/download-icon.png" border="false"::: [Download the cumulative update package for SQL Server 2019 CU15 now](https://catalog.s.download.windowsupdate.com/d/msdownload/update/software/updt/2022/01/sqlserver2019-kb5008996-x64_f914e20d97650c2b2c09bd8f3d35d3f0feb1afd3.exe)
 

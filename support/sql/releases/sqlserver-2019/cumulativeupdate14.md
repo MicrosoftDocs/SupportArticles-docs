@@ -12,7 +12,7 @@ appliesto:
 
 # KB5007182 - Cumulative Update 14 for SQL Server 2019
 
-_Release Date:_ &nbsp; November 22, 2021 
+_Release Date:_ &nbsp; November 22, 2021  
 _Version:_ &nbsp; 15.0.4188.2
 
 ## Summary
