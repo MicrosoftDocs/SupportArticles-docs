@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 3210239
 
 ## Symptoms
 
-- In an instance of SQL Server, you use [trace flag 834](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf834) as a startup flag. You do this operation to enable large page allocations by the SQL Server memory manager in order to improve performance of the 64-bit instance.
+- In an instance of SQL Server, you use [trace flag 834](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf834) or [trace flag 876](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf876) as a startup flag. You may have done this operation to enable large page allocations by the SQL Server memory manager in order to improve performance of the 64-bit instance.
 
 - You use the [columnstore indexes](/sql/relational-databases/indexes/columnstore-indexes-overview) or [batch mode processing on rowstore](/sql/relational-databases/performance/intelligent-query-processing-details#batch-mode-on-rowstore).
 
