@@ -45,6 +45,8 @@
               href: service-level-agreements/standard-slas-migration-tool.md
             - name: ServiceAnchor installation fails after migrating to Dynamics 365 online
               href: service-level-agreements/service-anchor-installation-fails-after-ol-migration.md
+            - name: '"Workflow with ID = [GUID] does not exist" error'
+              href: service-level-agreements/sla-workflow-does-not-exist.md
         - name: SLA time calculation
           items:
             - name: Errors on custom time calculation for SLA
@@ -89,6 +91,12 @@
               href: service-level-agreements/actions-run-multiple-times-client.md
             - name: SLA KPI instance isn't created on entity
               href: service-level-agreements/sla-kpi-instance-not-created-entity.md
+            - name: '"SLA KPI instance does not exist" error when updating a case'
+              href: service-level-agreements/slakpi-instance-not-existed-error.md
+            - name: SLA isn't applied to a case
+              href: service-level-agreements/sla-not-getting-applied.md
+            - name: SLA Instances associated with a case don't have SLA Items
+              href: service-level-agreements/slaitem-not-mapped-to-sla-instance.md
     - name: Omnichannel for Customer Service
       items:
         - name: Agent Scripts and Macros
