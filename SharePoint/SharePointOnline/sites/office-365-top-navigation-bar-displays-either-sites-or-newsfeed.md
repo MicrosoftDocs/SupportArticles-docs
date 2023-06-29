@@ -47,8 +47,8 @@ To set the Enterprise Social Collaboration feature, follow these steps:
 
 **NOTES**
 
-- If you select **Use Yammer.com service**, the top navigation bar displays **Sites** on some OneDrive for Business pages. This occurs even if you change the setting to **Use SharePoint Newsfeed (default)**.
+- If you select **Use Viva Engage.com service**, the top navigation bar displays **Sites** on some OneDrive for Business pages. This occurs even if you change the setting to **Use SharePoint Newsfeed (default)**.
 
-- If you select **Use SharePoint Newsfeed (default)**, and if you have never set the **Use Yammer.com service** option, the top navigation bar displays **Newsfeed** on some OneDrive for Business pages.
+- If you select **Use SharePoint Newsfeed (default)**, and if you have never set the **Use Viva Engage.com service** option, the top navigation bar displays **Newsfeed** on some OneDrive for Business pages.
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).
