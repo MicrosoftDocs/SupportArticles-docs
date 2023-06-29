@@ -53,4 +53,4 @@ Here are the steps to turn off or turn on a flow:
 
     :::image type="content" source="media/sla-modern-flow-not-valid/turn-on-turn-off-cloud-flow.png" alt-text="Screenshot shows how to turn off or turn on a flow." border="false":::
 
-If this resolution doesn't work, raise an ICM to the flow team for assistance.
+If this resolution doesn't work, contact [Microsoft Support](https://dynamics.microsoft.com/support/) for further assistance.
