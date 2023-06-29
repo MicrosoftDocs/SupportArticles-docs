@@ -509,7 +509,7 @@ Also, you can [search the content](/microsoft-365/compliance/content-search) of 
 
 ### Microsoft 365 Group usage report
 
-In the Microsoft 365 groups report, you can gain insights into the activity of groups in your organization, such as Emails received in Exchange, Messages in Yammer. For more information, see [Microsoft 365 Reports in the admin center](https://aka.ms/M365GroupUsageReport).
+In the Microsoft 365 groups report, you can gain insights into the activity of groups in your organization, such as Emails received in Exchange, Messages in Viva Engage. For more information, see [Microsoft 365 Reports in the admin center](https://aka.ms/M365GroupUsageReport).
 
 [Back to top](#summary)
 

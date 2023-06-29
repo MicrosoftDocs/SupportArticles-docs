@@ -27,7 +27,7 @@ Microsoft 365 reports show anonymous user names instead of the actual user names
 - SharePoint Activity
 - SharePoint Site Usage
 - Microsoft Teams Activity
-- Yammer Activity
+- Viva Engage Activity
 - Active users in Microsoft 365 Services and Apps
 - Groups Activity
 
