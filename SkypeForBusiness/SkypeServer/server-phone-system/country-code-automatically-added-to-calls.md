@@ -1,6 +1,6 @@
 ---
-title: +<Country code> is automatically added to all calls
-description: Describes an issue in which Skype for Business for iOS users see +<country code> added to the beginning of phone numbers that they want to dial on an iPhone or iPad. Provides a resolution.
+title: +<Country/Region code> is automatically added to all calls
+description: Describes an issue in which Skype for Business for iOS users see +<country/region code> added to the beginning of phone numbers that they want to dial on an iPhone or iPad. Provides a resolution.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -13,20 +13,20 @@ ms.custom: CSSTroubleshoot
 ms.reviewer: rischwen， landerl， mirung， corbinm
 appliesto: 
   - Skype for Business for iOS
-ms.date: 3/31/2022
+ms.date: 6/28/2023
 ---
 
 # + is automatically added to all Skype for Business for iOS calls
 
 ## Symptoms
 
-After you upgrade to the Skype for Business for iOS application on your iPhone or iPad, you notice that "+<**country code**>" is automatically added at the front of the number text box. This may cause a problem for customers who dial by using an extension or who have other custom dialing behavior. 
+After you upgrade to the Skype for Business for iOS application on your iPhone or iPad, you notice that "+<**country/region code**>" is automatically added at the front of the number text box. This may cause a problem for customers who dial by using an extension or who have other custom dialing behavior.
 
-For example, customers in the **United States** that have a country code of **1**. They are used to dialing "5000" to call an internal DID. However, the dialing rules encounter "+15000" instead. In this situation, the call may fail for this user.
+For example, customers in the **United States** that have a country/region code of **1**. They are used to dialing "5000" to call an internal DID. However, the dialing rules encounter "+15000" instead. In this situation, the call may fail for this user.
 
 ## Cause
 
-The same dialing behavior in the Skype Consumer iOS application is adopted by the Skype for Business for iOS application. This includes automatically adding +<**country code**> to all calls.
+The same dialing behavior in the Skype Consumer iOS application is adopted by the Skype for Business for iOS application. This includes automatically adding +<**country/region code**> to all calls.
 
 ## Resolution
 
@@ -34,7 +34,7 @@ This issue can be addressed by both the user and the Enterprise Voice administra
 
 **HOW TO FIX:**
 
-In the Skype for Business for iOS application, the user can press and hold the **Delete** button to backspace over the +<**country code**> entry. 
+In the Skype for Business for iOS application, the user can press and hold the **Delete** button to backspace over the +<**country/region code**> entry. 
 
 Enterprise Voice administrators can manipulate dialed numbers by using normalization rules within the dial plan. They may also be able to use a trunk translation rule to do this, depending on the dial plan configuration.
 
