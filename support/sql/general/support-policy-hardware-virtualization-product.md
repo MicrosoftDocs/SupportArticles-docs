@@ -31,7 +31,7 @@ Microsoft provides technical support for SQL Server 2008 and later versions for 
 
 Microsoft provides technical support for SQL Server 2008 and later versions for the following supported hardware virtualization environments:
 
-- Azure Infrastructure Services that includes Azure Virtual Machines, Azure Virtual Network, and Azure VMware Solution (See the Frequently Asked Questions section for more details)
+- Azure Infrastructure Services that includes Azure Virtual Machines, Azure Virtual Network, and Azure VMware Solution (See the [Frequently asked questions](#frequently-asked-questions) section for more details).
 
 Microsoft may provide limited or no technical support for the following environments:
 
