@@ -2,7 +2,7 @@
 title: Power Automate approval email information
 description: Describes the information about Power Automate approval emails.
 ms.reviewer: mansong, hamenon
-ms.date: 06/25/2023
+ms.date: 06/29/2023
 ms.subservice: power-automate-flows
 ---
 # Power Automate approval email delivery information
@@ -20,7 +20,7 @@ For customers whose MX record points at another filtering service (for instance,
 
 ## Commercial
 
-For commercial Power Automate (all geos), approval emails may come from any IP in the following Sender Policy Framework (SPF) record. We always recommend allowing the listing of the SPF record instead of individual IP addresses to make sure your emails aren't impacted.
+For commercial Power Automate (all geos), approval emails may come from any IP in the following Sender Policy Framework (SPF) record. We always recommend allowing the SPF record to be listed instead of individual IP addresses to make sure your emails aren't impacted.
 
 > [!NOTE]
 > SPF records can be updated when more servers and regions are added. For the most up-to-date IP address ranges, you can look up the SPF record for `_spf1-meo.microsoft.com`.
