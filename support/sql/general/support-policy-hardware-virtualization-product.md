@@ -1,7 +1,7 @@
 ---
 title: Support policy for hardware virtualization product
 description: This article describes the support policy for SQL Server products that are running in a hardware virtualization environment.
-ms.date: 11/09/2020
+ms.date: 06/29/2023
 ms.custom: sap:General
 ms.reviewer: bobward
 ---
@@ -12,7 +12,7 @@ This article describes the support policy for SQL Server products that are runni
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 956893
 
-## INTRODUCTION
+## Introduction
 
 This article describes the support policy for Microsoft SQL Server products that are running in a hardware virtualization environment.
 
@@ -42,7 +42,7 @@ This policy of limited support is based on the following Microsoft Knowledge Bas
 
 [Support policy for Microsoft software that runs on non-Microsoft hardware virtualization software](/troubleshoot/windows-server/virtualization/software-runs-on-non-microsoft-virtualization-software)
 
-## Restrictions and Limitations
+## Restrictions and limitations
 
 The following restrictions and limitations may affect the support policy of the above supported configurations:
 
@@ -172,21 +172,21 @@ The following restrictions and limitations may affect the support policy of the 
 
     - SQL Server FCI n Windows Server 2016 and later versions with Azure shared disks. For more information review [Create an FCI with Azure shared disks (SQL Server on Azure VMs)](/azure/azure-sql/virtual-machines/windows/failover-cluster-instance-azure-shared-disks-manually-configure).
 
-- **Q9: Do you support SQL Server running in Microsoft Azure VMware Solution?**
+- **Q9: Does Microsoft support SQL Server running in Microsoft Azure VMware Solution?**
 
-  A9: Yes. Microsoft supports SQL Server 2008 and later versions in Microsoft Azure Infrastructure Services that includes Microsoft Azure VMware Solution. Consider the following when you deploy SQL Server 2008 and later versions in Microsoft Azure VMware Solution:
+  A9: Yes. Microsoft supports SQL Server 2008 and later versions in Microsoft Azure Infrastructure Services that includes Microsoft Azure VMware Solution. When you deploy SQL Server 2008 and later versions in Microsoft Azure VMware Solution, see:
   
-    - For more information on how to best deploy SQL Server using VMware vSphere, including right-sizing your SQL Server VMs and managing your VMware vCenter Server configuration, see [Architecting Microsoft SQL Server on VMware vSphere](https://core.vmware.com/resource/architecting-microsoft-sql-server-vmware-vsphere#introduction)
+    - For more information on how to best deploy SQL Server using VMware vSphere, including right-sizing your SQL Server VMs and managing your VMware vCenter Server configuration, see [Architecting Microsoft SQL Server on VMware vSphere](https://core.vmware.com/resource/architecting-microsoft-sql-server-vmware-vsphere#introduction).
       
-    - For more information on getting started with Azure VMware Solution, see [Azure VMware Solution](https://azure.microsoft.com/products/azure-vmware#overview)
+    - For more information on getting started with Azure VMware Solution, see [Azure VMware Solution](https://azure.microsoft.com/products/azure-vmware#overview).
 
 - **Q10: Can customers run SQL Server in the Microsoft Azure VM role?**
 
-  A10:  Microsoft Azure VM role is a non-persistent role and not the same as Microsoft Azure Virtual Machine. It is not supported for SQL Server production use. Customers who want to deploy data platform capabilities today in the Microsoft Azure platform should use Microsoft Azure Virtual Machine or Microsoft Azure SQL Database.
+  A10:  Microsoft Azure VM role is a non-persistent role and not the same as Microsoft Azure Virtual Machine. It's not supported for SQL Server production use. Customers who want to deploy data platform capabilities today in the Microsoft Azure platform should use Microsoft Azure Virtual Machine or Microsoft Azure SQL Database.
 
 - **Q11 Are there any recommended configuration or best practices to consider while deploying SQL Server in virtualized environments?**
 
-  A11: Yes, you should consult with the following recommendations from the respective hypervisor:
+  A11: Yes. You should consult with the following recommendations from the respective hypervisor:
 
   - [Best Practices for Virtualizing and Managing SQL Server](https://download.microsoft.com/download/6/1/D/61DDE9B6-AB46-48CA-8380-D7714C9CB1AB/Best_Practices_for_Virtualizing_and_Managing_SQL_Server_2012.pdf)
 
