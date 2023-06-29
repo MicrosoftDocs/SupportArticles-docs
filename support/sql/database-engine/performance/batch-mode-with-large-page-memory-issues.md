@@ -1,7 +1,8 @@
 ---
 title: Interoperability issues between batch mode processing and large page memory model
 description: This article helps you resolve the performance and stability issues that arise from the use of batch mode processing on columnstore and rowstore with large page memory model in SQL Server.
-ms.date: 11/07/2022
+ms.reviewer: pijocoder, hemin-msft
+ms.date: 06/29/2023
 ms.custom: sap:Administration and Management
 ---
 # Interoperability issues between batch mode processing and large page memory model
