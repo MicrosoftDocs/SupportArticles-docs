@@ -152,7 +152,7 @@ The following restrictions and limitations may affect the support policy of the 
 
 - **Q8: Do you support SQL Server running in Microsoft Azure Virtual Machine?**
 
-  A8: Yes. Microsoft supports SQL Server 2008 and later versions in Microsoft Azure Infrastructure Services that includes Microsoft Azure Virtual Machines and Microsoft Azure Virtual Network. Consider the following when you deploy SQL Server 2008 and later versions in Microsoft Azure Virtual Machine:
+  A8: Yes, Microsoft supports SQL Server 2008 and later versions in Microsoft Azure Infrastructure Services that includes Microsoft Azure Virtual Machines and Microsoft Azure Virtual Network. Consider the following when you deploy SQL Server 2008 and later versions in Microsoft Azure Virtual Machine:
 
   - Microsoft Azure Storages Geo-Replication is not supported if the data and log files of a database are stored in more than one disk.
 
@@ -174,7 +174,7 @@ The following restrictions and limitations may affect the support policy of the 
 
 - **Q9: Does Microsoft support SQL Server running in Microsoft Azure VMware Solution?**
 
-  A9: Yes. Microsoft supports SQL Server 2008 and later versions in Microsoft Azure Infrastructure Services that includes Microsoft Azure VMware Solution. When you deploy SQL Server 2008 and later versions in Microsoft Azure VMware Solution, see:
+  A9: Yes, Microsoft supports SQL Server 2008 and later versions in Microsoft Azure Infrastructure Services, which includes Microsoft Azure VMware Solution. When you deploy SQL Server 2008 and later versions in Microsoft Azure VMware Solution, consider the following resources:
   
     - For more information on how to best deploy SQL Server using VMware vSphere, including right-sizing your SQL Server VMs and managing your VMware vCenter Server configuration, see [Architecting Microsoft SQL Server on VMware vSphere](https://core.vmware.com/resource/architecting-microsoft-sql-server-vmware-vsphere#introduction).
       
@@ -186,7 +186,7 @@ The following restrictions and limitations may affect the support policy of the 
 
 - **Q11 Are there any recommended configuration or best practices to consider while deploying SQL Server in virtualized environments?**
 
-  A11: Yes. You should consult with the following recommendations from the respective hypervisor:
+  A11: Yes, you should consult with the following recommendations from the respective hypervisor:
 
   - [Best Practices for Virtualizing and Managing SQL Server](https://download.microsoft.com/download/6/1/D/61DDE9B6-AB46-48CA-8380-D7714C9CB1AB/Best_Practices_for_Virtualizing_and_Managing_SQL_Server_2012.pdf)
 
