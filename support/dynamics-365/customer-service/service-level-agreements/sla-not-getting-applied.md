@@ -9,7 +9,7 @@ ms.date: 06/30/2023
 
 A service-level agreement (SLA) might not get applied to a case. This article explains how to resolve the issue in different scenarios.
 
-## Scenario 1: The SLA KPI Applicable From field value is null
+## Scenario 1: The SLA KPI "Applicable From" field value is null
 
 #### Cause
 
@@ -19,7 +19,7 @@ It may fail to set the SLA KPI **Applicable From** field value during the migrat
 
 You should make sure that the SLA KPI **Applicable From** field value isn't set to null. It should be set to some values.
 
-## Scenario 2: The SLA item's Applicable when conditions and entity conditions don't match
+## Scenario 2: The SLA item's "Applicable when" conditions and entity conditions don't match
 
 #### Cause
 
@@ -33,7 +33,7 @@ The SLA item's **Applicable when** conditions and entity conditions don't match 
 
 To solve this issue, check the SLA item's **Applicable when** conditions and entity conditions to make sure the issues mentioned above won't occur.
 
-## Scenario 3: You can't update the SLA item's Applicable when condition during the migration from legacy to Unified Interface
+## Scenario 3: You can't update the SLA item's "Applicable when" condition during the migration from legacy to Unified Interface
 
 #### Cause
 
@@ -58,7 +58,7 @@ To solve this issue, activate the `SdkMessageProcessing` steps if they're in a d
 - `PostOperationIncidentUpdateEntitlement` (a468c44e-c204-e711-80ca-02155dc812c3)
 - `PostOperationIncidentCreateEntitlement` (8fbadfbe-c104-e711-80ca-02155dc812c3)
 
-## Scenario 5: The Disable SLAs in the Service Configuration Settings isn't set to No
+## Scenario 5: The "Disable SLAs" in the "Service Configuration Settings" isn't set to "No"
 
 #### Cause
 
