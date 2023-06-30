@@ -13,7 +13,7 @@ author: antrod
 
 This article provides a resolution for the issue that a model uses a preview functionality which has expired and causes the model to stop functioning.
 
-_Applies to:_ &nbsp; Power Automate, document processing models
+_Applies to:_ &nbsp; Power Automate, Power Apps, document processing models
 
 ## Symptoms
 
