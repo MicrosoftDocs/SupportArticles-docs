@@ -96,7 +96,7 @@ This issue may occurs because either the login was dropped manually or these [in
     ```sql
     USE SSISDB
     GO
-    ALTER USER[##MS_SSISServerCleanupJobUser##] with LOGIN =[##MS_SSISServerCleanupJobLogin##]
+    ALTER USER[##MS_SSISServerCleanupJobUser##] WITH LOGIN =[##MS_SSISServerCleanupJobLogin##]
     ```
   1. Note that in some cases the database user may also be missing. In such cases, recreate the user in the `SSISDB` database and re-run the previous step to map the user to the login:
 
@@ -143,7 +143,7 @@ These are used in multi-server environments. By default, the *TargetServersRole*
 1. Back up your `msdb` database.
 
    ```sql
-   BACKUP DATABASE msdb to disk = '<backup folder>'
+   BACKUP DATABASE msdb TO disk = '<backup folder>'
    ```
 
 1. Make a list of users (if any) that are currently part of this role.
