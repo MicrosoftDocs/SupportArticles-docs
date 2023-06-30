@@ -23,19 +23,67 @@ You can create a minimal repro app with one of the following methods:
 - Create a blank app and add just the necessary connections and controls to demonstrate the problem.
 - Make a copy of the original app and progressively remove irrelevant screens, controls and simplify formulas until the essence of the issue remains.
 
-## Power Apps
+## Replace external data sources
+
+A minimal repro app should be self-contained. It should not rely on connections to external data sources, like Dataverse or SharePoint, because others will not be able to access them.
+
+You can see data sources used in the app in the **Data** panel.
+:::image type="content" source="media/minimal-canvas-app-repro/studio-data-panel.png" alt-text="Screenshot shows the Data panel in Power Apps Studio. The panel is empty.":::
+
+To handle data sources when creating a minimal repro app, you can:
+
+* Remove them if they're not relevant to the issue you're showing.
+* Use [Collections](/power-apps/maker/canvas-apps/create-update-collection) with sample data.
+* Provide sample data in a `csv` or Excel file. Explain how to re-create the data source from scratch.
+
+Sample data should be as simple as possible.
+
+## Stub integrations and external web services
+
+Apps may use features from other web services. For example, it may display a [Power BI tile](/power-apps/maker/canvas-apps/controls/control-power-bi-tile), YouTube video, or Power Automate flows.
+
+Remove these components if they're not relevant to the issue you're showing. If they're essential, you should provide materials and instructions on how to re-create them. Use sample content instead of the original. If the issue does not happen with sample content, it might be an issue with the external content or service. For example, a Power BI report may not be configured correctly for embedding.
+
+## Simplify components
+
+If the app contains [components](/power-apps/maker/canvas-apps/create-component) or [code components](power-apps/developer/component-framework/component-framework-for-canvas-apps), others may not be able to see their internals or load them correctly.
+
+Remove these components if they're not relevant to the issue you're showing. If they're essential, you should simplify them as much as possible and then:
+
+* Package them together with the app in an [unmanaged solution](/power-apps/maker/data-platform/export-solutions), or
+* Provide instructions on how to re-create these components from scratch.
+* For code components, mention which lines of code and [framework feature](/power-apps/developer/component-framework/reference) is not working.
+
+## Review for privacy and security
+
+Unauthorized users won't be able to access data sources in exported apps but they can see how the data sources are used in them. They can also see the app's controls and formulas. If an entire solution `.zip` file is provided, assets like images are also visible.
+
+Follow the below steps to help you limit privacy and security exposure before distributing the exported app:
+
+- Don't include private and confidential information in the app. Check names of variables, controls, and other app elements that can inadvertently give away sensitive information.
+- Create a new app from scratch instead of simplifying an existing production app. A new app will also reduce the accidental exposure of sensitive information if you were to use the original app instead. You'll save time in manually removing sensitive information from the original app.
+- Distribute just the `.msapp` file instead of the `.zip` file. The `.msapp` file can be found inside the `.zip` package.
+
+
+## Download the minimal repro app
+
+A canvas app can be saved in a `.msapp` or `.zip` file, depending on how it was created.
+
+### Power Apps
 
 1. Sign in to [Power Apps](https://make.powerapps.com/).
 
 1. Open the app for editing.
 
-1. Go to **File** > **Save as** > **This computer**.
+2. Expand the **Save** menu item. Select **Download a copy**.
 
-   :::image type="content" source="media/minimal-canvas-app-repro/studio.png" alt-text="Screenshot shows the **Save as** menu in Power Apps Studio. The option **This computer** is highlighted.":::
+   :::image type="content" source="media/minimal-canvas-app-repro/studio-save.png" alt-text="Screenshot shows an expanded sub-menu for the Save menu item in Power Apps Studio. The option **Download a copy** is highlighted.":::
 
-   The downloaded `.msapp` file can be opened by others using **File** > **Open** in [Power Apps](https://make.powerapps.com/).
+   The downloaded `.msapp` file can be opened by others using **Open** in the menu bar of [Power Apps](https://make.powerapps.com/). You may have to expand the menu bar to see this option.
 
-## Microsoft Lists
+   :::image type="content" source="media/minimal-canvas-app-repro/studio-open.png" alt-text="Screenshot shows a popup at the end of the menu bar in Power Apps Studio, containing more menu items. The option **Open** is highlighted.":::
+
+### Microsoft Lists
 
 1. Open the list.
 
@@ -57,7 +105,7 @@ You can create a minimal repro app with one of the following methods:
 
     The downloaded `.zip` file can be opened by others.
 
-## Power Apps in Teams
+### Power Apps in Teams
 
 1. In Microsoft Teams, go to the [Power Apps app list for your team](/power-apps/teams/manage-your-apps)
 
@@ -76,16 +124,6 @@ You can create a minimal repro app with one of the following methods:
 Only custom pages in [unmanaged solutions](/power-platform/alm/solution-concepts-alm#managed-and-unmanaged-solutions) can be exported. If the custom page is in a managed solution, ask the publisher of the solution to create an unmanaged solution that contains the custom page. You can also create a new unmanaged solution and create a new custom page there.
 
 You can [export custom pages in an unmanaged solution](/power-apps/maker/data-platform/export-solutions) just like any other solution component. The downloaded `.zip` file can be imported into any environment by other users.
-
-## Privacy and security
-
-Unauthorized users won't be able to access data sources in exported apps but they can see how the data sources are used in them. They can also see the app's controls and formulas. If an entire solution `.zip` file is provided, assets like images are also visible.
-
-Follow the below steps to help you limit privacy and security exposure before distributing the exported app:
-
-- Don't include private and confidential information in the app. Check names of variables, controls, and other app elements that can inadvertently give away sensitive information.
-- Create a new app from scratch instead of simplifying an existing production app. New app will also reduce the accidental exposure of sensitive information if you were to use the original app instead. Also, use of such a new app also reduces overhead for you to manually remove sensitive information from the original app.
-- Distribute just the `.msapp` file instead of the `.zip` file. The `.msapp` file can be found inside the `.zip` package.
 
 ## Next steps
 
