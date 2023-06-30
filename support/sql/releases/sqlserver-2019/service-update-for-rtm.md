@@ -35,7 +35,7 @@ A downloadable Excel workbook that contains a summary list of builds, together w
 
 For more information about the bugs that are fixed and enhancements that are included in this servicing update, see the following Microsoft Knowledge Base articles.
 
-| VSTS bug number | Description | Fix area | Component | Platform |
+| Bug reference | Description | Fix area | Component | Platform |
 |-|-|-|-|-|
 | <a id="12710429">[12710429](#12710429)</a> | [FIX: SQL Server Browser doesn't respond through clustered IP address from a SQL Server 2019 Failover Clustered Instance (FCI) (KB4527165)](https://support.microsoft.com/help/4527165) | SQL Connectivity | Protocols | Windows |
 
