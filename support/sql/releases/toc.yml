@@ -136,7 +136,7 @@ items:
   - name: Servicing Update for RTM
     items:
     - name: Servicing Update for SQL Server 2019 RTM (KB4517790)
-      href: sqlserver-2019/service-update-for-rtm.md    
+      href: sqlserver-2019/service-update-rtm.md
 - name: SQL Server 2017
   items:
   - name: SQL Server 2017 build versions
