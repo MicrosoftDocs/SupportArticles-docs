@@ -1,4 +1,10 @@
-items: 
+items:
+- name: Bulk load operations can leave large amounts of unused space
+  href: troubleshoot-bulk-load-causes-unused-space.md
+- name: Considerations for the autogrow and autoshrink
+  href: considerations-autogrow-autoshrink.md
+- name: Database Engine Input/Output requirements
+  href: database-engine-input-output-requirements.md
 - name: DBCC CHECK
   items:
     - name: 1450 and 665 errors when running DBCC CHECKDB
@@ -11,10 +17,6 @@ items:
       href: latch-timeout-running-dbcc-checkdb.md
     - name: Troubleshoot DBCC CHECKDB errors
       href: troubleshoot-dbcc-checkdb-errors.md
-- name: Considerations for the autogrow and autoshrink
-  href: considerations-autogrow-autoshrink.md
-- name: Database Engine Input/Output requirements
-  href: database-engine-input-output-requirements.md
 - name: Defragmenting database disk drives
   href: defragmenting-database-disk-drives.md
 - name: I/O subsystem requirements for the tempdb
@@ -31,8 +33,6 @@ items:
   href: support-network-database-files.md
 - name: Support on iSCSI technology components
   href: support-iscsi-technology-components.md
-- name: Bulk load operations can leave large amounts of unused space
-  href: troubleshoot-bulk-load-causes-unused-space.md
 - name: Transaction log file doesn't grow
   href: transaction-log-file-not-grow.md
 - name: Troubleshoot errors related to system disk sector size greater than 4 KB
