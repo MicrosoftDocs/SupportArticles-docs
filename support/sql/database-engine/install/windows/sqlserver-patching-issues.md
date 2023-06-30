@@ -4,7 +4,7 @@ description: This article helps you troubleshoot common SQL Server cumulative up
 author: padmajayaraman
 ms.author: v-jayaramanp
 ms.reviewer: jopilov
-ms.date: 06/16/2023
+ms.date: 06/30/2023
 ms.custom: sap:Connection Issues
 ---
 
