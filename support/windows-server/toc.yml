@@ -960,7 +960,7 @@
       href: ./deployment/stop-0x0000007b-error-group-policy-setting.md
     - name: '"This device cannot start" error when deploying a hot plug NVMe SSD'
       href: ./deployment/device-cannot-start-error-hot-plug-nvme-ssd.md
-    - name: %NUMBER_OF_PROCESSORS% environment variable shows incorrect values
+    - name: '%NUMBER_OF_PROCESSORS% environment variable shows incorrect values'
       href: ./deployment/number-of-processors-environment-variable-show-incorrect-values.md
     - name: Can't find the Microsoft Loopback Adapter
       href: ./deployment/microsoft-loopback-adapter-rename.md
