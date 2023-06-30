@@ -1,7 +1,7 @@
 ---
 title: The %NUMBER_OF_PROCESSORS% environment variable may show incorrect values
 description: Helps resolve the issue in which the %NUMBER_OF_PROCESSORS% environment variable may show incorrect values on systems with more than 64 logical processors.
-ms.date: 06/29/2023
+ms.date: 06/30/2023
 author: v-lianna
 ms.author: v-lianna
 manager: dcscontentpm
