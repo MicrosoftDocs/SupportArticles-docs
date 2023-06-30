@@ -960,6 +960,8 @@
       href: ./deployment/stop-0x0000007b-error-group-policy-setting.md
     - name: '"This device cannot start" error when deploying a hot plug NVMe SSD'
       href: ./deployment/device-cannot-start-error-hot-plug-nvme-ssd.md
+    - name: %NUMBER_OF_PROCESSORS% environment variable shows incorrect values
+      href: ./deployment/number-of-processors-environment-variable-show-incorrect-values.md
     - name: Can't find the Microsoft Loopback Adapter
       href: ./deployment/microsoft-loopback-adapter-rename.md
     - name: Can't install a VMWare driver on Windows Server 2008 R2
@@ -982,8 +984,6 @@
       href: ./deployment/use-device-manager-configure-devices.md
     - name: Support policy for third-party, kernel-level software
       href: ./deployment/support-policy-third-party-kernel-level-attestation.md
-    - name: The %NUMBER_OF_PROCESSORS% environment variable shows incorrect values
-      href: ./deployment/number-of-processors-environment-variable-show-incorrect-values.md
     - name: VMware driver installation fails in Windows Server 2008 R2 SP1
       href: ./deployment/virtual-machines-vmware-not-install-update.md
     - name: Windows Deployment Services (WDS) support for UEFI
