@@ -95,7 +95,7 @@
               href: service-level-agreements/slakpi-instance-not-existed-error.md
             - name: SLA isn't applied to a case
               href: service-level-agreements/sla-not-getting-applied.md
-            - name: SLA Instances associated with a case don't have SLA Items
+            - name: SLA instances associated with a case don't have SLA items
               href: service-level-agreements/slaitem-not-mapped-to-sla-instance.md
     - name: Omnichannel for Customer Service
       items:
