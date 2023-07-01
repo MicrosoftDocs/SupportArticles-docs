@@ -16,7 +16,7 @@ _Applies to:_ &nbsp; Power Platform, Solutions
 
 ## Symptoms
 
-When you try to [import a solution](/powerapps/maker/data-platform/import-update-export-solutions), you receive one of the following error or warning message:
+When you try to [import a solution](/powerapps/maker/data-platform/import-update-export-solutions), you receive one of the following error or warning messages:
 
 > Error: Solution is blocked from importing due to missing Solution Checker results. Run Solution Checker and ensure there are no critical violations in this solution before retrying.
 
