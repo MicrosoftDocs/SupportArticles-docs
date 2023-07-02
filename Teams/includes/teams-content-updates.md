@@ -2,6 +2,14 @@
 
 
 
+## Week of June 26, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 6/29/2023 | [Messages in Teams and Viva Engage unexpectedly deleted by retention policies](/microsoftteams/troubleshoot/teams-im-presence/messages-unexpectedly-deleted-retention-policy) | modified |
+
+
 ## Week of May 29, 2023
 
 
@@ -9,20 +17,3 @@
 |------|------------|--------|
 | 5/30/2023 | [On-screen keyboard size is reduced on some Teams Rooms devices](/microsoftteams/troubleshoot/teams-rooms-and-devices/teams-rooms-device-keyboard-size-reduced) | modified |
 | 5/30/2023 | [On-screen keyboard size is reduced on Teams Rooms devices](/microsoftteams/troubleshoot/teams-rooms-and-devices/teams-rooms-device-keyboard-size-reduced) | added |
-
-
-## Week of May 22, 2023
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 5/24/2023 | [On-screen keyboard size is reduced on Teams Rooms devices](/microsoftteams/troubleshoot/teams-rooms-and-devices/teams-rooms-device-keyboard-size-reduced) | added |
-| 5/24/2023 | [On-screen keyboard size is reduced on some Teams Rooms devices](/microsoftteams/troubleshoot/teams-rooms-and-devices/teams-rooms-device-keyboard-size-reduced) | modified |
-
-
-## Week of May 15, 2023
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 5/18/2023 | [Available Teams meeting features for shared mailboxes](/microsoftteams/troubleshoot/meetings/teams-meeting-with-shared-mailboxes) | added |
