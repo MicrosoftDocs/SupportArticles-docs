@@ -46,10 +46,10 @@ landingContent:
         links:
           - text: IIS ETW logs diagnostic
             url: health-diagnostic-performance/etw-log-diagnostic.md
-          - text: Troubleshoot failed requests using tracing in IIS 7
-            url: health-diagnostic-performance/troubleshoot-failed-requests-using-tracing-in-iis-7.md
           - text: Troubleshooting High CPU in an IIS application pool
             url: health-diagnostic-performance/troubleshoot-high-cpu-in-iis-app-pool.md
+          - text: Troubleshoot native memory leak in an IIS 7.x application pool
+            url: health-diagnostic-performance/troubleshoot-native-memory-leak-iis-7x-application-pool.md
           - text: Troubleshoot Web Deploy problems with Visual Studio
             url: deployment-migration/troubleshoot-web-deploy-problems-with-visual-studio.md
           - text: Troubleshoot failed requests using tracing in IIS 8.5
@@ -60,6 +60,8 @@ landingContent:
             url: www-service-svchost/disable-winhttp-tracing-sdp.md
           - text: Upload files to a WebDav directory with the WinINet API
             url: development/upload-to-webdav-directory-fails.md
+          - text: Using Failed Request Tracing rules to troubleshoot Application Request Routing
+            url: health-diagnostic-performance/troubleshoot-arr-using-frt-rules.md
 
   - title: Status/Error Codes
     linkLists:
