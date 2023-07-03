@@ -34,7 +34,7 @@ Azure Kubernetes Service (AKS) uses virtual machine scale sets-based agent pools
    - The custom name (if it was provided at creation).
 
    > [!NOTE]
-   > When you create a new cluster, AKS automatically creates a second resource group to store the AKS resources. For more information, see [Why are two resource groups created with AKS](/azure/aks/faq#why-are-two-resource-groups-created-with-aks).
+   > When you create a new cluster, AKS automatically creates a second resource group to store the AKS resources. For more information, see [Why are two resource groups created with AKS?](/azure/aks/faq#why-are-two-resource-groups-created-with-aks)
 
 1. Check the list of resources and make sure that there's a virtual machine scale set.
 
