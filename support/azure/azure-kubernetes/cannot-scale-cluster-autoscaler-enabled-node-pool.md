@@ -11,7 +11,7 @@ ms.subservice: troubleshoot-scale-operations
 ---
 # Cluster autoscaler fails to scale with "cannot scale cluster autoscaler enabled node pool" error
 
-This article discusses how to resolve the "cannot scale cluster autoscaler enabled node pool" error that appears when scaling a cluster with autoscaler enabled node pool.
+This article discusses how to resolve the "cannot scale cluster autoscaler enabled node pool" error that appears when scaling a cluster with an autoscaler enabled node pool.
 
 ## Symptoms
 
@@ -23,7 +23,7 @@ You receive an error message that resembles the following message:
 
 ## Troubleshooting checklist
 
-Azure Kubernetes Service (AKS) uses virtual machine scale sets based agent pools, which contain the cluster nodes and the [cluster autoscaling capabilities](/azure/aks/cluster-autoscaler) if enabled.
+Azure Kubernetes Service (AKS) uses virtual machine scale sets-based agent pools, which contain cluster nodes and [cluster autoscaling capabilities](/azure/aks/cluster-autoscaler) if enabled.
 
 ### Check that the cluster virtual machine scale set exists
 
@@ -31,7 +31,7 @@ Azure Kubernetes Service (AKS) uses virtual machine scale sets based agent pools
 1. Find the node resource group by searching the following names:
 
    - The default name `MC_{AksResourceGroupName}_{YourAksClusterName}_{AksResourceLocation}`.
-   - The custom name if it was provided at creation.
+   - The custom name (if it was provided at creation).
 
    > [!NOTE]
    > When you create a new cluster, AKS automatically creates a second resource group to store the AKS resources. For more information, see [Why are two resource groups created with AKS](/azure/aks/faq#why-are-two-resource-groups-created-with-aks).
@@ -47,7 +47,7 @@ Deleting the virtual machine scale set attached to the cluster causes the cluste
 
 ## Cause 2: Tags or any other properties were modified from the node resource group
 
-You may receive scaling errors if you modify or delete Azure-created tags and other resource properties in the node resource group. For more information, see [Can I modify tags and other properties of the AKS resources in the node resource group](/azure/aks/faq#can-i-modify-tags-and-other-properties-of-the-aks-resources-in-the-node-resource-group).
+You may receive scaling errors if you modify or delete Azure-created tags and other resource properties in the node resource group. For more information, see [Can I modify tags and other properties of the AKS resources in the node resource group?](/azure/aks/faq#can-i-modify-tags-and-other-properties-of-the-aks-resources-in-the-node-resource-group)
 
 ## Solution: Update the cluster to the goal state without changing the configuration
 
