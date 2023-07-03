@@ -2,7 +2,7 @@
 title: Monitor and troubleshoot Azure Storage (classic logs & metrics)
 description: Introduces how to use features like storage analytics, client-side logging, and other third-party tools to identify, diagnose, and troubleshoot Azure Storage-related issues.
 author: AmandaAZ
-ms.service: storage
+ms.service: azure-storage
 ms.date: 04/12/2023
 ms.author: v-weizhu
 ms.reviewer: fryu, normesta, azurestocic, jarrettr

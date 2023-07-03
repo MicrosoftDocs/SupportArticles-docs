@@ -4,7 +4,7 @@ description: Identifies and troubleshoots latency issues using Azure Storage Ana
 author: AmandaAZ
 ms.author: v-weizhu
 ms.date: 04/12/2023
-ms.service: storage
+ms.service: azure-storage
 ms.reviewer: v-miegge, kartup, azurestocic, jarrettr
 ---
 
