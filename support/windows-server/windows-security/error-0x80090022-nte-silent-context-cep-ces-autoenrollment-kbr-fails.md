@@ -1,7 +1,7 @@
 ---
 title: Error 0x80090022 NTE_SILENT_CONTEXT when CEP/CES autoenrollment using KBR fails
 description: Helps resolve the issue in which Certificate Enrollment Policy Web Service (CEP) and Certificate Enrollment Web Service (CES) autoenrollment using key-based renewal (KBR) fails on non-domain-joined clients, and you receive error 0x80090022 NTE_SILENT_CONTEXT.
-ms.date: 06/26/2023
+ms.date: 07/03/2023
 author: v-lianna
 ms.author: v-lianna
 manager: dcscontentpm
@@ -33,11 +33,11 @@ https://ws2019cepces.contoso.lab/KeyBasedRenewal_ADPolicyProvider_CEP_UsernamePa
 3002.744.0:<DateTime>: 0x803d0013 (-2143485933 WS_E_ENDPOINT_FAULT_RECEIVED): https://ws2019cepces.contoso.lab/KeyBasedRenewal_ADPolicyProvider_CEP_Certificate/service.svc/CEP
 …
 2032.1371.0:<DateTime>: 0x80090022 (-2146893790 NTE_SILENT_CONTEXT)
-450.201.0:< DateTime>: 0x1 (WIN32: 1 ERROR_INVALID_FUNCTION): Error
-450.202.0:< DateTime>: 0x825a0044 (-2108030908)
-450.219.0:< DateTime>: 0x0 (WIN32: 0): Local system
+450.201.0:<DateTime>: 0x1 (WIN32: 1 ERROR_INVALID_FUNCTION): Error
+450.202.0:<DateTime>: 0x825a0044 (-2108030908)
+450.219.0:<DateTime>: 0x0 (WIN32: 0): Local system
 …
-450.219.0:< DateTime>: 0x2 (WIN32: 2 ERROR_FILE_NOT_FOUND): Provider could not perform the action since the context was acquired as silent. 0x80090022 (-2146893790 NTE_SILENT_CONTEXT)
+450.219.0:<DateTime>: 0x2 (WIN32: 2 ERROR_FILE_NOT_FOUND): Provider could not perform the action since the context was acquired as silent. 0x80090022 (-2146893790 NTE_SILENT_CONTEXT)
 ```
 
 Here are the possible causes of the issue:
