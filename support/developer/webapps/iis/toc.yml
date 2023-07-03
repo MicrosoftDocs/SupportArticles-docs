@@ -1,3 +1,4 @@
+items:
 - name: Internet Information Services
   href: iis-welcome.yml
 - name: Active Server Pages
@@ -96,45 +97,7 @@
     href: general/users-cannot-access-web-sites-when-log-full.md
 
 - name: Health, diagnostic, and performance features
-  items:
-  - name: An application pool exceeds time limits
-    href: health-diagnostic-performance/application-pool-exceed-time-limits.md
-  - name: Data collection strategies of Web Server issues
-    href: health-diagnostic-performance/data-collection-strategies.md
-  - name: Enable Schannel event logging in Windows
-    href: health-diagnostic-performance/enable-schannel-event-logging.md
-  - name: ETW logs diagnostic
-    href: health-diagnostic-performance/etw-log-diagnostic.md
-  - name: Hidden static files return HTTP 404 error
-    href: health-diagnostic-performance/hidden-static-files-http-404-access-denied.md
-  - name: HTTP error 400 in the CLM portal
-    href: health-diagnostic-performance/clm-http-bad-request.md
-  - name: HTTP error 403.14
-    href: health-diagnostic-performance/http-403-14-forbidden-webpage.md
-  - name: HTTP error 403.16
-    href: health-diagnostic-performance/http-403-forbidden-access-website.md
-  - name: HTTP error 403.7
-    href: health-diagnostic-performance/http-error-403-7-forbidden-web-app.md
-  - name: HTTP error 404 file not found on a server
-    href: health-diagnostic-performance/troubleshoot-404-file-not-found-error.md
-  - name: HTTP error 404.13
-    href: health-diagnostic-performance/http-404-13-website.md
-  - name: HTTP error 404.17 when you visit a Web site
-    href: health-diagnostic-performance/error-message-you-visit-web-site.md
-  - name: HTTP error 405.0
-    href: health-diagnostic-performance/http-error-405-website.md
-  - name: HTTP error 500.19
-    href: health-diagnostic-performance/http-error-500-19-webpage.md
-  - name: HTTP error 501 - Not Implemented
-    href: health-diagnostic-performance/http-error-501-not-implemented.md
-  - name: Logs contain dots instead of logging field value
-    href: health-diagnostic-performance/iis-logs-contain-dots.md
-  - name: Pages can't be displayed
-    href: health-diagnostic-performance/cannot-access-site-using-https.md
-  - name: Time-taken field in IIS HTTP logging
-    href: health-diagnostic-performance/time-taken-field-http-log.md
-  - name: Troubleshoot native memory leak in an IIS 7.x Application Pool
-    href: health-diagnostic-performance/troubleshoot-native-memory-leak-iis-7x-application-pool.md
+  href: health-diagnostic-performance/toc.yml
 
 - name: IISAdmin service and Inetinfo process operation
   items:
