@@ -4,7 +4,7 @@ description: Learn how to troubleshoot the cannot scale cluster autoscaler enabl
 author: simonxjx
 ms.author: v-six
 ms.topic: troubleshooting-general #Required; leave this attribute/value as-is.
-ms.date: 06/28/2023
+ms.date: 07/03/2023
 ms.reviewer: ninasegares, aritraghosh
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-scale-operations
