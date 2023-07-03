@@ -123,7 +123,7 @@ A canvas app can be saved in a *.msapp* or *.zip* file, depending on how it was 
 
 Only custom pages in [unmanaged solutions](/power-platform/alm/solution-concepts-alm#managed-and-unmanaged-solutions) can be exported. If the custom page is in a managed solution, ask the publisher of the solution to create an unmanaged solution that contains the custom page. You can also create a new unmanaged solution and custom page there.
 
-You can [export custom pages in an unmanaged solution](/power-apps/maker/data-platform/export-solutions) just like any other solution component. The downloaded `.zip` file can be imported into any environment by other users.
+You can [export custom pages in an unmanaged solution](/power-apps/maker/data-platform/export-solutions) just like any other solution component. The downloaded *.zip* file can be imported into any environment by other users.
 
 ## Next steps
 
