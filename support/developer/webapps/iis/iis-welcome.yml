@@ -50,8 +50,6 @@ landingContent:
             url: health-diagnostic-performance/troubleshoot-high-cpu-in-iis-app-pool.md
           - text: Troubleshoot native memory leak in an IIS 7.x application pool
             url: health-diagnostic-performance/troubleshoot-native-memory-leak-iis-7x-application-pool.md
-          - text: Troubleshoot Web Deploy problems with Visual Studio
-            url: deployment-migration/troubleshoot-web-deploy-problems-with-visual-studio.md
           - text: Troubleshoot failed requests using tracing in IIS 8.5
             url: health-diagnostic-performance/troubleshoot-failed-requests-using-tracing-in-iis-85.md
           - text: Troubleshoot PHP errors with Failed Request Tracing
