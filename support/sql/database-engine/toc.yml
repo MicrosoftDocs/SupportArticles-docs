@@ -42,6 +42,8 @@ items:
       href: general/sql-server-azure-sql-database-improvements.md
     - name: Policy for untested .NET Framework assemblies
       href: general/policy-untested-net-framework-assemblies.md
+    - name: Transaction log file grows for databases with In-Memory OLTP
+      href: general/transaction-log-file-grows-databases-in-memory-oltp.md
 
 - name: Installation, Patching, Upgrade, Uninstall
   href: install/windows/toc.yml

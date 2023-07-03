@@ -3,10 +3,8 @@ title: Troubleshoot common SQL Server cumulative update (CU) installation issues
 description: This article helps you troubleshoot common SQL Server cumulative update issues.
 author: padmajayaraman
 ms.author: v-jayaramanp
-ms.reviewer: pijocoder
-ms.date: 12/07/2022
-ms.prod: sql
-ms.topic: troubleshooting
+ms.reviewer: jopilov
+ms.date: 06/30/2023
 ms.custom: sap:Connection Issues
 ---
 
@@ -62,7 +60,7 @@ To troubleshoot and fix these errors, follow these steps:
 
 The following scenarios list some of the common causes of upgrade script failures and their corresponding resolutions.
 
-### `SSISDB` catalog database part of an availability group (AG)
+### SSISDB catalog database part of an availability group (AG)
 
 If your SQL Server Integration Services catalog database (SSISDB) was added to an Always ON availability group (AG), script upgrade can fail. For more information, see the [Upgrading SSISDB in an availability group](/sql/integration-services/catalog/ssis-catalog#Upgrade) section. To resolve this problem:
 
@@ -70,11 +68,61 @@ If your SQL Server Integration Services catalog database (SSISDB) was added to a
 1. Run the CU upgrade.
 1. After the upgrade finishes, restore `SSISDB` to the Always On availability group.
 
-### Misconfigured System user/role in `msdb` database
+### Missing ##MS_SSISServerCleanupJobLogin## login
+
+SQL Server Service fails to start after applying a SQL Server patch and SQL Server generates error 15151. In the SQL Server error log, you may see the following messages:
+
+```output
+Error: 15151, Severity: 16, State: 1.
+Cannot find the login '##MS_SSISServerCleanupJobLogin##', because it does not exist or you do not have permission.
+```
+
+This issue may occurs because either the login was dropped manually or these [instructions](/sql/integration-services/catalog/ssis-catalog#backup) are not followed. Follow these steps to solve the issue:
+
+1. Start SQL Server with [trace flag 902](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf902).
+1. Recreate the login (server principal) on the server.
+
+   ```sql
+   CREATE LOGIN [##MS_SSISServerCleanupJobLogin##]
+   WITH PASSWORD=N'<password>',
+   DEFAULT_DATABASE=[master],
+   DEFAULT_LANGUAGE=[us_english],
+   CHECK_EXPIRATION=OFF,
+   CHECK_POLICY=OFF;
+   ```
+ 
+ 1. Switch to the `SSISDB` database and map the existing user to the newly-created login:
+ 
+    ```sql
+    USE SSISDB
+    GO
+    ALTER USER[##MS_SSISServerCleanupJobUser##] WITH LOGIN =[##MS_SSISServerCleanupJobLogin##]
+    ```
+  1. Note that in some cases the database user may also be missing. In such cases, recreate the user in the `SSISDB` database and re-run the previous step to map the user to the login:
+
+     ```sql
+     USE [SSISDB]
+     GO
+     DROP USER [##MS_SSISServerCleanupJobLogin##]
+     GO
+
+     CREATE USER [##MS_SSISServerCleanupJobUser##] FOR LOGIN [##MS_SSISServerCleanupJobLogin##]
+     GO
+     
+     ALTER USER [##MS_SSISServerCleanupJobUser##] WITH DEFAULT_SCHEMA=[dbo]
+     GO
+
+     GRANT EXECUTE ON [internal].[cleanup_server_project_version] TO [##MS_SSISServerCleanupJobUser##]
+     GO
+     GRANT EXECUTE ON [internal].[cleanup_server_retention_window] TO [##MS_SSISServerCleanupJobUser##]
+     GO
+     ```
+     
+### Misconfigured System user/role in msdb database
 
 This section provides steps to resolve a misconfigured system user or role in the `msdb` database.
 
-#### `TargetServersRole` schema and security role
+#### TargetServersRole schema and security role
 
 These are used in multi-server environments. By default, the *TargetServersRole* security role is owned by the *dbo*, and the role owns the *TargetServersRole* schema. If you inadvertently change this association, and the update that you're installing includes changes to either of these roles, the upgrade might fail and return error ID 2714: `There is already an object named 'TargetServersRole' in the database.` To resolve this error, follow these steps after you start SQL Server trace flag `902`:
 
@@ -95,7 +143,7 @@ These are used in multi-server environments. By default, the *TargetServersRole*
 1. Back up your `msdb` database.
 
    ```sql
-   BACKUP DATABASE msdb to disk = '<backup folder>'
+   BACKUP DATABASE msdb TO disk = '<backup folder>'
    ```
 
 1. Make a list of users (if any) that are currently part of this role.

@@ -3,7 +3,6 @@ title: Saving changes is not permitted error message
 description:  This article provides workarounds for the problem in which you receive an error message when you try to save a table in SQL Server Management Studio.
 ms.date: 09/25/2020
 ms.custom: sap:Management Studio
-ms.prod: sql
 ---
 # Saving changes is not permitted error message in SSMS
 

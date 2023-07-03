@@ -67,7 +67,7 @@ You could then copy the above output in a notepad as follows:
 > [!NOTE]
 > Ensure that you're appending the "sc sdset spooler D: (A;;CCLCSWLOCRRC;;;AU)" section of above command to the output you see in your case.  
 
-Copy and paste this command in the command prompt. (Ensure that "(A;;CCLCSWLOCRRC;;;AU)" appears in the beginning. I'm not sure why this is the way it seems to work.)
+Copy and paste this command in the command prompt. (Ensure that "(A;;CCLCSWLOCRRC;;;AU)" appears in the beginning. Otherwise, this might not work.)
 
 By running the above command, you retain the old ACLs and also add the missing ACL that is the one for authenticated user (AU).  
 

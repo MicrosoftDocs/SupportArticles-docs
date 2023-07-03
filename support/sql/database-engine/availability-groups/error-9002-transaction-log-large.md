@@ -4,9 +4,8 @@ description: This article describes troubleshooting steps that may help resolve 
 ms.date: 07/22/2020
 ms.custom: sap:Availability Groups
 ms.reviewer: ramakoni, amamun
-ms.prod: sql
 ---
-# Error 9002. The transaction log for database is full due to AVAILABILITY_REPLICA error message in SQL Server
+# Error 9002: The transaction log for database is full due to AVAILABILITY_REPLICA error message in SQL Server
 
 This article helps you resolve the 9002 error that occurs when the transaction log becomes large or runs out of space in SQL Server.
 
@@ -28,38 +27,36 @@ The transaction log for database '%.*ls' is full due to 'AVAILABILITY_REPLICA'
 
 ## Cause
 
-This occurs when the logged changes at primary replica are not yet hardened on the secondary replica. For more information regarding data synchronization process in Always On environment, you can review:
-
-- [Data Synchronization Process](/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups?view=sql-server-2017#data-synchronization-process&preserve-view=true)
+This occurs when the logged changes at primary replica aren't yet hardened on the secondary replica. For more information regarding data synchronization process in Always On environment, see [Data Synchronization Process](/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups#data-synchronization-process).
 
 ## Troubleshooting
 
-There are two scenarios that can lead to log growth in an availability database and the 'AVAILABILITY_REPLICA' log_reuse_wait_desc:
+There are two scenarios that can lead to log growth in an availability database and the `'AVAILABILITY_REPLICA' log_reuse_wait_desc`:
 
 - Scenario 1: Latency delivering logged changes to secondary
 
-    When transactions change data in the primary replica, these changes are encapsulated into log record blocks and these logged blocks are delivered and hardened to the database log file at the secondary replica. The primary replica cannot overwrite log blocks in its own log file until those log blocks have been delivered and hardened to the corresponding database log file in all secondary replicas. Any delay in the delivery or hardening of these blocks to any replica in the Availability Group will prevent truncation of those logged changes in the database at the primary replica and cause its log file usage to grow.
+    When transactions change data in the primary replica, these changes are encapsulated into log record blocks and these logged blocks are delivered and hardened to the database log file at the secondary replica. The primary replica can't overwrite log blocks in its own log file until those log blocks have been delivered and hardened to the corresponding database log file in all secondary replicas. Any delay in the delivery or hardening of these blocks to any replica in the Availability Group will prevent truncation of those logged changes in the database at the primary replica and cause its log file usage to grow.
 
-    For more information, see: [High network latency or low network throughput causes log build-up on the primary replica](/sql/database-engine/availability-groups/windows/troubleshoot-availability-group-exceeded-rpo?view=sql-server-2017#BKMK_LATENCY&preserve-view=true)
+    For more information, see [High network latency or low network throughput causes log build-up on the primary replica](/sql/database-engine/availability-groups/windows/troubleshoot-availability-group-exceeded-rpo?view=sql-server-2017#BKMK_LATENCY&preserve-view=true).
 
 - Scenario 2: Redo Latency  
 
-    Once hardened to the secondary database log file, a dedicated redo thread in the secondary replica instance applies the contained log records to the corresponding data file(s). The primary replica cannot overwrite log blocks in its own log file until all redo threads in all secondary replicas have applied the contained log records.
+    Once hardened to the secondary database log file, a dedicated redo thread in the secondary replica instance applies the contained log records to the corresponding data file(s). The primary replica can't overwrite log blocks in its own log file until all redo threads in all secondary replicas have applied the contained log records.
 
-    If the redo operation on any secondary replica is not able to keep up with the speed at which log blocks are hardened at that secondary replica, it will lead to log growth at the primary replica. The primary replica can only truncate and reuse its own transaction log up to the point that all secondary replica's redo threads have applied. If there is more than one secondary, compare the truncation_lsn column of the `sys.dm_hadr_database_replica_states` dynamic management view across the multiple secondaries to identify which secondary database is delaying log truncation the most.
+    If the redo operation on any secondary replica isn't able to keep up with the speed at which log blocks are hardened at that secondary replica, it will lead to log growth at the primary replica. The primary replica can only truncate and reuse its own transaction log up to the point that all secondary replica's redo threads have applied. If there is more than one secondary, compare the `truncation_lsn` column of the `sys.dm_hadr_database_replica_states` dynamic management view across the multiple secondaries to identify which secondary database is delaying log truncation the most.
 
     You can use the Always On Dashboard and `sys.dm_hadr_database_replica_states` dynamic management views to help monitor the log send queue and redo queue. Some key fields are:
 
     | Field| Description |
     |---|---|
-    | log_send_queue_size| Amount of log records that have not arrived at the secondary replica |
-    | log_send_rate| Rate at which log records are being sent to the secondary databases |
-    | redo_queue_size| The amount of log records in the log files of the secondary replica that has not yet been redone, in kilobytes (KB) |
-    | redo_rate| The rate at which the log records are being redone on a given secondary database, in kilobytes (KB)/second |
-    | last_redone_lsn| Actual log sequence number of the last log record that was redone on the secondary database. last_redone_lsn is always less than last_hardened_lsn |
-    | last_received_lsn| Log block ID identifying the point up to which all log blocks have been received by the secondary replica that hosts this secondary database. Reflects a log-block ID padded with zeroes. It is not an actual log sequence number. |
+    | `log_send_queue_size`| Amount of log records that have not arrived at the secondary replica |
+    | `log_send_rate`| Rate at which log records are being sent to the secondary databases. |
+    | `redo_queue_size`| The amount of log records in the log files of the secondary replica that hasn't yet been redone, in kilobytes (KB). |
+    | `redo_rate`| The rate at which the log records are being redone on a given secondary database, in kilobytes (KB)/second. |
+    | `last_redone_lsn`| Actual log sequence number of the last log record that was redone on the secondary database. `last_redone_lsn` is always less than `last_hardened_lsn`. |
+    | `last_received_lsn`| The log block ID identifying the point up to which all log blocks have been received by the secondary replica that hosts this secondary database. Reflects a log-block ID padded with zeroes. It's not an actual log sequence number. |
 
-    For example, execute the following query against the primary replica in order to report the replica with the earliest truncation_lsn and is the upper bound that the primary can reclaim in its own transaction log:
+    For example, execute the following query against the primary replica to report the replica with the earliest `truncation_lsn` and is the upper bound that the primary can reclaim in its own transaction log:
 
     ```sql
     SELECT ag.name AS [availability_group_name]
@@ -78,10 +75,10 @@ There are two scenarios that can lead to log growth in an availability database 
     ORDER BY ag.name ASC, d.name ASC, drs.truncation_lsn ASC, ar.replica_server_name ASC
     ```
 
-    Corrective measures may include but are not limited to the following:
+    Corrective measures may include but aren't limited to the following:
 
-  - Make sure that there is no resource or performance bottleneck at the secondary.
-  - Make sure that the Redo thread is not blocked at the secondary. Use the `lock_redo_blocked` extended event to identify when this occurs and on what objects the redo thread is blocked.
+    - Make sure that there's no resource or performance bottleneck at the secondary.
+    - Make sure that the Redo thread isn't blocked at the secondary. Use the `lock_redo_blocked` extended event to identify when this occurs and on what objects the redo thread is blocked.
 
 ## Workaround
 
@@ -95,23 +92,23 @@ After you identify the secondary database that makes this occur, try one or more
 - If the redo thread is frequently blocked, disable the `Readable Secondary` feature by changing the `ALLOW_CONNECTIONS` parameter of the `SECONDARY_ROLE` for the replica to **NO**.
 
     > [!NOTE]
-    > This will prevent users from reading the data in the secondary replica which is the root cause of the blocking. Once the redo queue has dropped to an acceptable size, consider enabling the feature again.
+    > This will prevent users from reading the data in the secondary replica, which is the root cause of the blocking. Once the redo queue has dropped to an acceptable size, consider enabling the feature again.
 
-- Enable the **autogrow** setting if it is disabled and there is available disk space.
+- Enable the **autogrow** setting if it's disabled and there is available disk space.
 - Increase the MaxSize value for the transaction log file if it has been reached and there is available disk space.
 - Add an additional transaction log file if the current one has reached the system maximum of 2 TB or if additional space is available on another available volume.
 
 ## More information
 
-- For more information about why a transaction log grows unexpectedly or becomes full in SQL Server, see: [Troubleshoot a Full Transaction Log (SQL Server Error 9002)](/sql/relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002?view=sql-server-ver15&preserve-view=true)
+- For more information about why a transaction log grows unexpectedly or becomes full in SQL Server, see [Troubleshoot a Full Transaction Log (SQL Server Error 9002)](/sql/relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002).
 
-- For more information about the Redo operation blocking problem, see: [AlwaysON - HADRON Learning Series: lock_redo_blocked/redo worker Blocked on Secondary Replica](https://techcommunity.microsoft.com/t5/SQL-Server-Support/AlwaysON-HADRON-Learning-Series-lock-redo-blocked-redo-worker/ba-p/317628)
+- For more information about the Redo operation blocking problem, see [AlwaysON - HADRON Learning Series: lock_redo_blocked/redo worker Blocked on Secondary Replica](https://techcommunity.microsoft.com/t5/SQL-Server-Support/AlwaysON-HADRON-Learning-Series-lock-redo-blocked-redo-worker/ba-p/317628).
 
-- For more information about AVAILABILITY_REPLICA-based log_reuse_wait columns, see: [Factors that can delay log truncation](/previous-versions/sql/sql-server-2008-r2/ms345414(v=sql.105))
+- For more information about AVAILABILITY_REPLICA-based log_reuse_wait columns, see [Factors that can delay log truncation](/previous-versions/sql/sql-server-2008-r2/ms345414(v=sql.105)).
 
-- For more information about the `sys.dm_hadr_database_replica_states` view, see: [sys.dm_hadr_database_replica_states (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql?redirectedfrom=MSDN&view=sql-server-ver15&preserve-view=true)
+- For more information about the `sys.dm_hadr_database_replica_states` view, see [sys.dm_hadr_database_replica_states (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql?redirectedfrom=MSDN).
 
-- For more information about how to monitor and troubleshoot logged changes that are not arriving and are not being applied in a timely manner, see: [Monitor performance for Always On availability groups](/previous-versions/sql/sql-server-2012/dn135338(v=sql.110))
+- For more information about how to monitor and troubleshoot logged changes that aren't arriving and aren't being applied in a timely manner, see [Monitor performance for Always On availability groups](/previous-versions/sql/sql-server-2012/dn135338(v=sql.110)).
 
 ## Applies to
 

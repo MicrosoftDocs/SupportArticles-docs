@@ -4,7 +4,6 @@ description: This article describes a list of performance improvements and confi
 ms.date: 09/25/2020
 ms.custom: sap:Performance
 ms.reviewer: Sureshka
-ms.prod: sql
 ---
 # Recommended updates and configuration options for SQL Server 2017 and 2016 with high-performance workloads
 

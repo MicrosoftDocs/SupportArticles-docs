@@ -960,6 +960,8 @@
       href: ./deployment/stop-0x0000007b-error-group-policy-setting.md
     - name: '"This device cannot start" error when deploying a hot plug NVMe SSD'
       href: ./deployment/device-cannot-start-error-hot-plug-nvme-ssd.md
+    - name: '%NUMBER_OF_PROCESSORS% environment variable shows incorrect values'
+      href: ./deployment/number-of-processors-environment-variable-show-incorrect-values.md
     - name: Can't find the Microsoft Loopback Adapter
       href: ./deployment/microsoft-loopback-adapter-rename.md
     - name: Can't install a VMWare driver on Windows Server 2008 R2
@@ -1740,8 +1742,6 @@
       href: ./networking/rras-doesnt-start.md
     - name: Troubleshoot error 720 when establishing a VPN connection
       href: ./networking/troubleshoot-error-720-when-establishing-a-vpn-connection.md
-    - name: Updates for Windows Server 2012 and 2012 R2 DirectAccess
-      href: ./networking/windows-server-2012-directaccess-hotfixes.md
     - name: 'Troubleshoot DirectAccess Server console: 6to4'
       href: ./networking/troubleshoot-directaccess-server-console-6to4.md
     - name: 'Troubleshoot DirectAccess Server console: DNS'
@@ -2316,6 +2316,8 @@
       href: ./remote/cannot-view-remoteapp-rd-session-host.md
     - name: Can't connect to remote computer
       href: ./remote/cannot-connect-to-remote-computer.md
+    - name: Can't sign in to a published application with SSO through RD Web
+      href: ./remote/cannot-sign-in-published-application-sso-rd-web.md
     - name: No Connected icon in notification area
       href: ./remote/no-connected-icon-in-notification-area.md
     - name: Remote Desktop tab in RDWEB is missing from Edge
@@ -2399,7 +2401,7 @@
     - name: Remote Desktop Connection 6.0 prompts for credentials
       href: ./remote/remote-desktop-connection-6-prompts-credentials.md
     - name: Remote Desktop IP Virtualization does not work
-      href: ./remote/remote-desktop-ip-virtualization-not-work.md
+      href: ./remote/remote-desktop-ip-virtualization.md
     - name: Remote Desktop or RemoteApp session doesn't terminate
       href: ./remote/rd-or-remoteapp-session-not-terminate.md
     - name: Single-application sharing with Terminal Server
@@ -2886,6 +2888,8 @@
       href: ./windows-security/clients-cant-authenticate-server.md
     - name: Crypt32 8 events continuously reported
       href: ./windows-security/crypt32-event-8.md
+    - name: Error 0x80090022 when CEP/CES autoenrollment using KBR fails
+      href: ./windows-security/error-0x80090022-nte-silent-context-cep-ces-autoenrollment-kbr-fails.md
     - name: Event ID 4107 or Event ID 11 is logged
       href: ./windows-security/event-id-4107-or-event-id-11-is-logged.md
     - name: How to decommission Windows enterprise CA and remove related objects

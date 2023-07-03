@@ -6,8 +6,8 @@ ms.custom: sap:High Availability and Disaster Recovery Features
 author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: UTTAMKP, jaferebe
-ms.prod: sql
 ---
+
 # The Microsoft support policy for clustered configurations of SQL Server with Windows Server
 
 This article describes the Microsoft support policy for clustered configurations of SQL Server with Windows Server.
@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 327518
 
 ## Summary
 
-This article describes the Microsoft support policy for SQL Server failover clustering. Microsoft supports SQL Server failover clustering that is based on the failover clustering features of the Windows Failover Cluster Service in the following products:
+This article describes the Microsoft support policy for SQL Server failover clustering. Microsoft supports SQL Server failover clustering that's based on the failover clustering features of the Windows Failover Cluster Service in the following products:
 
 - Windows Server 2012
 - Windows Server 2012 R2
@@ -83,7 +83,7 @@ SQL Server 2005 and later versions can't be migrated to a new domain. You need t
 > - Don't remove any of the following components: SQL Server support files, SQL Server Native Client, Integration Services, or Workstation Components, unless you are rebuilding the entire node.
 
 > [!WARNING]
-> If errors occur during the uninstallation process, you may need to rebuild the node in order to successfully install SQL Server again.
+> If errors occur during the un-installation process, you may need to rebuild the node to successfully install SQL Server again.
 
 ## More information
 
