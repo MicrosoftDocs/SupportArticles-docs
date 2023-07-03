@@ -51,8 +51,12 @@
     href: deployment-migration/cannot-use-web-deploy.md
   - name: Can't use Web Deployment as a non-admin user
     href: deployment-migration/web-deploy-error-non-admin-user.md
+  - name: Troubleshoot common problems related to Web Deploy
+    href: deployment-migration/troubleshoot-common-problems-with-web-deploy.md
+  - name: Troubleshooting Web Deploy problems with Visual Studio
+    href: deployment-migration/troubleshoot-web-deploy-problems-with-visual-studio.md
   - name: Web Deploy error codes
-    href: deployment-migration/web-deploy-error-codes.md
+    href: deployment-migration/web-deploy-error-codes.md  
 
 - name: FTP authentication and authorization
   items:
@@ -129,6 +133,8 @@
     href: health-diagnostic-performance/cannot-access-site-using-https.md
   - name: Time-taken field in IIS HTTP logging
     href: health-diagnostic-performance/time-taken-field-http-log.md
+  - name: Troubleshoot native memory leak in an IIS 7.x Application Pool
+    href: health-diagnostic-performance/troubleshoot-native-memory-leak-iis-7x-application-pool.md
 
 - name: IISAdmin service and Inetinfo process operation
   items:
