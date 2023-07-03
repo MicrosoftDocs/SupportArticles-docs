@@ -47,7 +47,7 @@ Remove these components if they're not relevant to the issue you're showing. If 
 
 ## Simplify components
 
-If the app contains [components](/power-apps/maker/canvas-apps/create-component) or [code components](power-apps/developer/component-framework/component-framework-for-canvas-apps), others may not be able to see their internals or load them correctly.
+If the app contains [components](/power-apps/maker/canvas-apps/create-component) or [code components](/power-apps/developer/component-framework/component-framework-for-canvas-apps), others may not be able to see their internals or load them correctly.
 
 Remove these components if they're not relevant to the issue you're showing. If they're essential, you should simplify them as much as possible and then:
 
