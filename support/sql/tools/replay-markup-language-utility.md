@@ -125,12 +125,19 @@ You can obtain these DLLs from the respective software packages of the vendors:
 
 - <https://www.nuget.org/packages/Xceed.Products.Zip.Full/>
 
+### Dependencies for ReadTrace and Ostress
+
+ReadTrace and Ostress use the ODBC and OLEDB drivers shipped as part of the [SQL Server Native Client](/sql/relational-databases/native-client/applications/installing-sql-server-native-client).
+If you plan to analyze Extended Event files (*.xel) then you need to have [Visual C++ 2010 Redistributable](/cpp/windows/latest-supported-vc-redist) installed on the system.
+
 ## Known issues and fixes
 
 |Issue|Resolution|
 |----|----|
 |ReadTrace encounters "ERROR: Event runtime check: Detected missing column [cached_text] in event [sp_cache_remove] at event sequence 209494"|Fixed in version 09.04.0102. As a workaround, you can add trace flags (-T28 -T29) to the ReadTrace command line.|
 |Reporter encounters "Could not load file or assembly 'Reporter, Version=9.4.10000.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' or one of its dependencies. Strong name validation failed. (Exception from HRESULT: 0x8013141A)"|Fixed in version 09.04.0102. As a workaround, you can create the following registry key to override the strong name verification: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\StrongName\Verification\Reporter,31BF3856AD364E35`.|
+|ReadTrace fails with error "Unable to connect to the specified server. Initial HRESULT: 0x80040154". Ostress fails with error "Attempt to establish connection failed. SSL Security error.".|See instructions to [Install SQL Server Native Client](/sql/relational-databases/native-client/applications/installing-sql-server-native-client).|
+|You encounter the exception from ReadTrace "Unhandled Exception: System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.SqlServer.XEvent.Linq.dll' or one of its dependencies. The specified module could not be found".|Install [Visual C++ 2010 Redistributable](/cpp/windows/latest-supported-vc-redist)|
 
 ## Examples
 
