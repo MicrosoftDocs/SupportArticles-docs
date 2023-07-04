@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot common query execution errors on an Azure Synapse dedicated SQL pool
 description: Provides a reference of the most common errors and recommendations for query execution on an Azure Synapse dedicated SQL pool.
-ms.date: 06/28/2023
+ms.date: 07/04/2023
 author: scott-epperly
 ms.author: scepperl
 ms.reviewer: goventur
