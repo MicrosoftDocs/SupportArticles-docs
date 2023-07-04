@@ -4,7 +4,9 @@ items:
 - name: Assembly cannot be migrated to SQL Server 2017 error
   href: assembly-name-cannot-migrated-error.md
 - name: Can't make a remote connection from a CLR trigger
-  href: cannot-make-remote-connection-clr-trigger.md
+  href: cannot-make-remote-connection-clr-trigger.m
+- name: Character data is incorrect when the code page differs
+  href: character-data-represented-incorrectly-code-page-differs-code-page.md
 - name: Error when you run CLR object or create assembly
   href: error-run-clr-object-create-assembly.md
 - name: Execution of CLR fails with TypeInitializationException
