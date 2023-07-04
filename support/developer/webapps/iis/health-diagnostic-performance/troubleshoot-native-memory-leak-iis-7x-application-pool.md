@@ -154,7 +154,7 @@ DebugDiag takes a few minutes to parse through the dumps and provide an analysis
 
 :::image type="content" source="media/troubleshooting-native-memory-leak-in-an-iis-7x-application-pool/details-high-memory-module.png" alt-text="Screenshot of details on high memory module." lightbox="media/troubleshooting-native-memory-leak-in-an-iis-7x-application-pool/details-high-memory-module.png":::
 
-From this analysis, you can see the leakcom COM component is running. To look further down the **Module Information** of leakcom as shown below, you can see that `CFoo::crtheap` method allocates the outstanding memory.
+From this analysis, you can see the leakcom component is running. To look further down the **Module Information** of leakcom as shown below, you can see that `CFoo::crtheap` method allocates the outstanding memory.
 
 :::image type="content" source="media/troubleshooting-native-memory-leak-in-an-iis-7x-application-pool/details-leak-com-module.png" alt-text="Screenshot of details for leakcom on the module." lightbox="media/troubleshooting-native-memory-leak-in-an-iis-7x-application-pool/details-leak-com-module.png":::
 
