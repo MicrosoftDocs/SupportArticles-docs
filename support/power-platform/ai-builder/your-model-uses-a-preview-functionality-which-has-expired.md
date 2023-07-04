@@ -2,20 +2,20 @@
 title: Your model that uses a preview functionality has expired
 description: Provides a resolution for an issue where a model that uses a preview functionality has expired, and the issue causes the model to stop functioning.
 ms.reviewer: angieandrews
-ms.date: 07/03/2023
+ms.date: 07/04/2023
 ms.subservice: 
 ms.author: antrod
 author: Antrodfr
 ---
 # Your model that uses a preview functionality has expired
 
-Provides a resolution for an issue where a model that uses a preview functionality has expired, which causes the model to stop working.
+This article provides a resolution for an issue where a model that uses a preview functionality has expired, which causes the model to stop working.
 
 _Applies to:_ &nbsp; Power Automate, Power Apps, document processing models
 
 ## Symptoms
 
-On the model's detail page, a message bar shows indicating that the model that uses a preview functionality has expired.
+On the model's detail page, a message bar indicates that the model that uses a preview functionality has expired.
 
 ## Cause
 
@@ -23,10 +23,12 @@ When a model has been created using a preview model template, it could be necess
 
 ## Resolution
 
-To solve this issue, select **Edit model** on the model's detail page. Go through the wizard without necessarily making any changes, and retrain the model. 
+1. To solve this issue, select **Edit model** on the model's detail page.
 
-Make sure to publish the model after training if you want to use it in an app or a flow.
+1. Go through the wizard without necessarily making any changes, and retrain the model. 
+
+1. if you want to use the model in an app or a flow, publish it after training.
 
 ## Resources
 
-For more information, see [Train a document processing model](/ai-builder/form-processing-train).
+For more information, go to [Train a document processing model](/ai-builder/form-processing-train).
