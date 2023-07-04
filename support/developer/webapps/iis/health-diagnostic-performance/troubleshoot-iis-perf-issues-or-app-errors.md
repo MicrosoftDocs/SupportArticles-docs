@@ -33,7 +33,7 @@ However, you can't accept that as a solution and need to know why it happened, b
 
 Microsoft LogParser is a good tool that is quick and easy to use. In many situations, the tool will help you quickly get to a deeper understanding of what happened on the server and may help you identify problems. You can take the information you gather with LogParser and pass it along to your database team, your network team or to your developers for more analysis.
 
-## Data Collection
+## Data collection
 
 By default, IIS log files are located in the following directories:
 
@@ -54,7 +54,7 @@ IIS log files can be quite large; for example, in _Figure 2_, the log file _u\_e
 
 This is when LogParser becomes an indispensable tool in your troubleshooting arsenal.
 
-## Data Analysis
+## Data analysis
 
 Your first step is to determine which log files may contain errors. For example, if customers were complaining about performance on the 3rd of June, 2012, the log file might be _u\_ex120603.log_, where:
 
@@ -116,13 +116,13 @@ The points of interest within the results are:
 
 The significance for each of these status codes is explained below.
 
-### The Ratio Between HTTP 200 and 304 Status Codes (Analyzing Successful Requests)
+### The ratio between HTTP 200 and 304 status codes (analyzing successful requests)
 
 The ratio between the 200 and 304 HTTP status codes is important because it shows how many requests are being retrieved from the clients' cache instead of directly from the server. The results in _Figure 4_ show that there are 3,920,658 requests which resulted in an HTTP Status code of 200. This means that the requested file was served from the server each time. In contrast, there were 178,705 requests which resulted in a 304 HTTP status code. This means that the requested file was retrieved from the local cache. In other words, 95.5% of the requests are being handled from the server.
 
 Caching can have some very positive impact on your system's performance; see the details for both static and dynamic compression in the [Configuring HTTP Compression in IIS 7](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771003(v=ws.10)) article.
 
-### HTTP 500 Status Codes (Analyzing Failed Requests)
+### HTTP 500 status codes (analyzing failed requests)
 
 HTTP 500 Status codes may indicate serious issues on your system. The level of impact that the root cause of an HTTP 500 error may have on your system can range from nothing to the crash of a worker process. Therefore, when you see these, you should execute the query shown in _Figure 5_ in order to find which requests resulted in a 500 HTTP Status code.
 
@@ -341,7 +341,7 @@ Select the _status.csv_ file created by the LogParser query and navigate through
 
 The end result is a Pie chart, _Figure 18_ that is similar to that shown previously in _Figure 10_. There are many options in regards to color, chart type, labels, etc. With a click of a button you can change the chart type from Pie to Bar or to Line. There are a lot of options for creating professional looking charts within Excel.
 
-:::image type="content" source="media/troubleshoot-iis-perf-issues-or-app-errors/pie-chart-request-status.png" alt-text="Screenshot of a three-dimensional pie chart showing request status.":::
+:::image type="content" source="media/troubleshoot-iis-perf-issues-or-app-errors/pie-chart-request-status.png" alt-text="Screenshot of a three-dimensional pie chart showing request status.":::  
 **Figure 18: A Pie chart using a CSV file similar to Figure 10**
 
 There are so many options and possibilities for analyzing and presenting the results of that analysis using LogParser. For some additional tips and examples, check out the [blogs about LogParser](https://iis-blogs.azurewebsites.net/robert_mcmurray/Tags/LogParser) written by Robert McMurray. There is also a very useful help file and many pre-written scripts provided within the installation package of LogParser. The next section will discuss this and other topics in more detail.
