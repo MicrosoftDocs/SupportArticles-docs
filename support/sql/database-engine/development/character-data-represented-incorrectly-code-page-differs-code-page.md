@@ -125,7 +125,7 @@ A                    NA         Comment
 
 - [You can't correctly translate character data from a client to a server by using the SQL Server ODBC driver if the client code page differs from the server code page](/troubleshoot/sql/connect/cannot-correctly-translate-character-data)
 
-- For more information about SQL Server Unicode data types, see [Microsoft Developer Network (MSDN) Web site](http://msdn2.microsoft.com/library/aa902669(SQL.80).aspx)
+- For more information about SQL Server Unicode data types, see [Microsoft Developer Network (MSDN) Web site](https://msdn2.microsoft.com/library/aa902669(SQL.80).aspx)
 
 - [SQL Native Client Autotranslate](/sql/relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client)
 
