@@ -128,7 +128,7 @@ You can obtain these DLLs from the respective software packages of the vendors:
 ### Dependencies for ReadTrace and Ostress
 
 ReadTrace and Ostress use the ODBC and OLEDB drivers shipped as part of the [SQL Server Native Client](/sql/relational-databases/native-client/applications/installing-sql-server-native-client).
-If you plan to analyze Extended Event files (*.xel) then you need to have [Visual C++ 2010 Redistributable](/cpp/windows/latest-supported-vc-redist) installed on the system.
+If you plan to analyze Extended Event files (_*.xel_), make sure that [Visual C++ 2010 Redistributable](/cpp/windows/latest-supported-vc-redist) is installed on the system.
 
 ## Known issues and fixes
 
