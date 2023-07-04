@@ -27,7 +27,7 @@ When a model has been created using a preview model template, it could be necess
 
 1. Go through the wizard without necessarily making any changes, and retrain the model. 
 
-1. if you want to use the model in an app or a flow, publish it after training.
+1. If you want to use the model in an app or a flow, publish it after training.
 
 ## Resources
 
