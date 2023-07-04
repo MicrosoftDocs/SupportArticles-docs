@@ -53,6 +53,90 @@ items:
     items:
     - name: Cumulative Update 21 (KB5025808)
       href: sqlserver-2019/cumulativeupdate21.md
+  - name: Cumulative Update 20
+    items:
+    - name: Cumulative Update 20 (KB5024276)
+      href: sqlserver-2019/cumulativeupdate20.md
+  - name: Cumulative Update 19
+    items:
+    - name: Cumulative Update 19 (KB5023049)
+      href: sqlserver-2019/cumulativeupdate19.md
+  - name: Cumulative Update 18
+    items:
+    - name: Cumulative Update 18 (KB5017593)
+      href: sqlserver-2019/cumulativeupdate18.md
+  - name: Cumulative Update 17
+    items:
+    - name: Cumulative Update 17 (KB5016394)
+      href: sqlserver-2019/cumulativeupdate17.md
+  - name: Cumulative Update 16
+    items:
+    - name: Cumulative Update 16 (KB5011644)
+      href: sqlserver-2019/cumulativeupdate16.md
+  - name: Cumulative Update 15
+    items:
+    - name: Cumulative Update 15 (KB5008996)
+      href: sqlserver-2019/cumulativeupdate15.md
+  - name: Cumulative Update 14
+    items:
+    - name: Cumulative Update 14 (KB5007182)
+      href: sqlserver-2019/cumulativeupdate14.md
+  - name: Cumulative Update 13
+    items:
+    - name: Cumulative Update 13 (KB5005679)
+      href: sqlserver-2019/cumulativeupdate13.md
+  - name: Cumulative Update 12
+    items:
+    - name: Cumulative Update 12 (KB5004524)
+      href: sqlserver-2019/cumulativeupdate12.md
+  - name: Cumulative Update 11
+    items:
+    - name: Cumulative Update 11 (KB5003249)
+      href: sqlserver-2019/cumulativeupdate11.md
+  - name: Cumulative Update 10
+    items:
+    - name: Cumulative Update 10 (KB5001090)
+      href: sqlserver-2019/cumulativeupdate10.md
+  - name: Cumulative Update 9
+    items:
+    - name: Cumulative Update 9 (KB5000642)
+      href: sqlserver-2019/cumulativeupdate9.md
+  - name: Cumulative Update 8
+    items:
+    - name: Cumulative Update 8 (KB4577194)
+      href: sqlserver-2019/cumulativeupdate8.md
+  - name: Cumulative Update 7
+    items:
+    - name: Cumulative Update 7 (KB4570012)
+      href: sqlserver-2019/cumulativeupdate7.md
+  - name: Cumulative Update 6
+    items:
+    - name: Cumulative Update 6 (KB4563110)
+      href: sqlserver-2019/cumulativeupdate6.md
+  - name: Cumulative Update 5
+    items:
+    - name: Cumulative Update 5 (KB4552255)
+      href: sqlserver-2019/cumulativeupdate5.md
+  - name: Cumulative Update 4
+    items:
+    - name: Cumulative Update 4 (KB4548597)
+      href: sqlserver-2019/cumulativeupdate4.md
+  - name: Cumulative Update 3
+    items:
+    - name: Cumulative Update 3 (KB4538853)
+      href: sqlserver-2019/cumulativeupdate3.md
+  - name: Cumulative Update 2
+    items:
+    - name: Cumulative Update 2 (KB4536075)
+      href: sqlserver-2019/cumulativeupdate2.md
+  - name: Cumulative Update 1
+    items:
+    - name: Cumulative Update 1 (KB4527376)
+      href: sqlserver-2019/cumulativeupdate1.md
+  - name: Servicing Update for RTM
+    items:
+    - name: Servicing Update for SQL Server 2019 RTM (KB4517790)
+      href: sqlserver-2019/service-update-rtm.md
 - name: SQL Server 2017
   items:
   - name: SQL Server 2017 build versions

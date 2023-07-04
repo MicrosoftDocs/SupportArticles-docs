@@ -99,6 +99,8 @@
 
 - name: Troubleshoot scale operations
   items:
+  - name: Cannot scale cluster autoscaler enabled node pool
+    href: cannot-scale-cluster-autoscaler-enabled-node-pool.md
   - name: Common issues with running or scaling large AKS clusters
     href: aks-at-scale-troubleshoot-guide.md
   - name: Failed to fix node group sizes
