@@ -21,7 +21,7 @@ An application pool in IIS is experiencing a prolonged period of high CPU that e
 - [Debug Diagnostics (DebugDiag)](https://www.microsoft.com/download/details.aspx?id=103453)
 - Performance Monitor (Perfmon)
 
-## Data Collection
+## Data collection
 
 The first thing you should do when you encounter high CPU usage issues is to determine the process that is consuming CPU. You can use **Processes** tab in Task Manager to do this. Make sure that you select the **Show processes from all users** checkbox. The following image shows this box checked and shows the `w3wp.exe` process (the process that hosts an IIS application pool) consuming a high level of CPU.
 
@@ -118,7 +118,7 @@ This rule will create 11 dump files. The first 10 will be "mini dumps" which wil
 
 Once the high CPU problem has occurred, you will want to stop the Perfmon data collector set from collecting data. To do that, right-click on the **High CPU** data collector set listed under the **User Defined** node and select **Stop**.
 
-## Data Analysis
+## Data analysis
 
 After the high CPU event, you will have two sets of data to review; the Perfmon data collector set and the memory dumps. Let's begin by reviewing the Perfmon data.
 
@@ -192,7 +192,7 @@ This kind of code will definitely cause high CPU.
 
 By using Perfmon and DebugDiag, you can easily collect data that can be helpful in determining the cause of high CPU in application pools. If you are unable to find the root cause using these techniques, you can contact Microsoft support for further assistance. Microsoft support engineers can assist you with determining the cause of your issue. By having the Perfmon data and dumps ready when you open a case, you will dramatically reduce the amount of time necessary for the engineers to assist you.
 
-### Other Resources
+### Other resources
 
 - [Troubleshooting High CPU Utilization](/previous-versions/windows/it-pro/windows-2000-server/bb742546(v=technet.10))
 - [What to Gather to Troubleshoot High CPU or Hang](https://blogs.iis.net/tomchris/asp-net-tips-what-to-gather-to-troubleshoot-part-1-high-cpu)
