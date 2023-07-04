@@ -29,9 +29,9 @@ Failed Request Tracing isn't installed by default on IIS. Install Failed Request
 
 ### Windows Vista or Windows 7 Client
 
-1. Select **Start**, and then select **Control Panel**.
-1. In **Control Panel**, select **Programs and Features**, and then select **Turn Windows Features on or off**.
-1. Expand **Internet Information Services**, then **World Wide Web Services**, then **Health and Diagnostics**.
+1. Select **Start** -> **Control Panel**.
+1. In **Control Panel**, select **Programs and Features** -> **Turn Windows Features on or off**.
+1. Expand **Internet Information Services** -> **World Wide Web Services** -> **Health and Diagnostics**.
 1. Select **Tracing**, and then select **OK**.
 
 ### Windows Server 2008 or Windows Server 2008 R2
@@ -104,7 +104,7 @@ In this section, you examine an ASP page that attempts to create an instance of 
 </html>
 ```
 
-When you use a Web browser to browse to this file, IIS should return an HTTP 500 error message, and IIS will create a failed request trace log that is created in your _%*SystemDrive*%\\Inetpub\\FailedRequestLogFiles\\W3SVCnnn_ folder by default, where _W3SVCnnn_ contains the unique identifier for your website that is listed in IIS Manager. Failed request trace logs are XML files, and IIS creates an XSL file that transforms the XML into a presentation format that you can open in Internet Explorer.
+When you use a Web browser to browse to this file, IIS should return an HTTP 500 error message, and IIS will create a failed request trace log that is created in your _%SystemDrive%\\Inetpub\\FailedRequestLogFiles\\W3SVCnnn_ folder by default, where _W3SVCnnn_ contains the unique identifier for your website that is listed in IIS Manager. Failed request trace logs are XML files, and IIS creates an XSL file that transforms the XML into a presentation format that you can open in Internet Explorer.
 
 #### Read the trace log in Internet Explorer
 
@@ -184,7 +184,7 @@ An example is shown in the following illustration:
 
 :::image type="content" source="media/troubleshoot-classic-asp-errors-with-frt/browser-trace-warning.png" alt-text="Screenshot of a browser window displaying the section of the trace where the warning occurred.":::
 
-## More Information
+## More information
 
 For more information about Failed Request Tracing in IIS, see the following articles:
 
