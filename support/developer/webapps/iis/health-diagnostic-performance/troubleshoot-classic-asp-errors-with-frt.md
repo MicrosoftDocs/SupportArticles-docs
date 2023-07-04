@@ -29,9 +29,9 @@ Failed Request Tracing isn't installed by default on IIS. Install Failed Request
 
 ### Windows Vista or Windows 7 Client
 
-1. Select **Start** -> **Control Panel**.
-1. In **Control Panel**, select **Programs and Features** -> **Turn Windows Features on or off**.
-1. Expand **Internet Information Services** -> **World Wide Web Services** -> **Health and Diagnostics**.
+1. Select **Start** > **Control Panel**.
+1. In **Control Panel**, select **Programs and Features** > **Turn Windows Features on or off**.
+1. Expand **Internet Information Services** > **World Wide Web Services** > **Health and Diagnostics**.
 1. Select **Tracing**, and then select **OK**.
 
 ### Windows Server 2008 or Windows Server 2008 R2
