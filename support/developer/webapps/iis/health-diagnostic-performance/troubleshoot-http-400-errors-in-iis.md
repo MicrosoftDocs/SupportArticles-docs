@@ -1,12 +1,12 @@
 ---
-title: Troubleshoot HTTP 400 Errors in IIS
+title: Troubleshoot HTTP 400 errors in IIS
 description: Describes the troubleshooting steps to identify the cause of various HTTP 400 errors when using IIS.
 ms.date: 11/27/2012
 ms.author: haiyingyu
 author: HaiyingYu
 ms.reviewer: johnhart, riande, mlaing
 ---
-# Troubleshooting HTTP 400 Errors in IIS
+# Troubleshooting HTTP 400 errors in IIS
 
 _Applies to:_ &nbsp; Internet Information Services
 
@@ -117,7 +117,7 @@ You can see that the error message text displayed in the browser is also viewabl
 
 The next step is to look at the _httperr.log_ file in the _C:\Windows\System32\LogFiles\HTTPERR_ directory for the entry that corresponds to the bad request:
 
-```log
+```output
 #Software: Microsoft HTTP API 1.0
 #Version: 1.0
 #Date: 2012-11-14 20:35:02
