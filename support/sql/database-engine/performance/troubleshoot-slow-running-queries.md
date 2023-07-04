@@ -4,7 +4,7 @@ description: This article describes how to handle a performance issue that appli
 ms.date: 08/22/2022
 ms.custom: sap:Performance
 ---
-# Troubleshoot slow-running queries on SQL Server
+# Troubleshoot slow-running queries in SQL Server
 
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 243589
