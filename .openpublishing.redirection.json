@@ -5824,8 +5824,8 @@
     },
     {
       "source_path": "support/sql/database-engine/performance/performance-issues-using-columstore-indexes-large-pages.md",
-      "redirect_url": "/sql/database-engine/performance/batch-mode-with-large-page-memory-issues.md",
-      "redirect_document_id": true
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/batch-mode-with-large-page-memory-issues.md",
+      "redirect_document_id": false
     }
 ]
 }
