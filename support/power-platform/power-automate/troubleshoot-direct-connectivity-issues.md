@@ -14,14 +14,21 @@ _Original KB number:_ &nbsp; 5016345
 
 ## Symptoms
 
-Consider the following scenario:
+Consider the following scenarios when using direct machine connectivity (not the deprecated data gateway):
 
-- You're using direct to machine connectivity, not the gateway.
+### Scenario 1
+
 - Your previously registered machines appear offline when they're booted up and connected to the network.
 - Runs fail with either of these error messages:
   > ConnectionNotEstablished - None of the connected listeners accepted the connections within the allowed timeout. Check that your machine is online.
 
   > NoListenerConnected - The endpoint was not found. There are no listeners connected for the endpoint. Check that your machine is online.
+
+### Scenario 2
+
+- Desktop flows run on a registered machine as a long as a user session is running (attended runs) or even for some minutes after the last user has logged off (unattended runs.)
+- The connection to the machine is lost after some minutes (e.g. 15 minutes.)
+- The connection is re-established once a user logs back to the machine.
 
 ## Cause
 
@@ -32,6 +39,8 @@ The most common cause of relay connectivity issues is the machine losing connect
 The Power Automate service runs under its own Windows account (NT Service\UIFlowService by default) which must have access to the network and be able to connect to _*.servicebus.windows.net_ (for more information, see [network requirements](/power-automate/ip-address-configuration#desktop-flows-services-required-for-runtime).)
 
 If the machine and Power Automate service have reliable access to the network, the next likeliest source of issues is the on-premises network blocking or interfering with Azure relay connections.
+
+A common culprit in both scenarios above is a network proxy that restricts outbound traffic. This is particularly true for authenticated proxies that use the credentials of the connected Windows user, given that, as mentioned above, the Power Automate service runs under its own account.
 
 ## How to investigate
 
