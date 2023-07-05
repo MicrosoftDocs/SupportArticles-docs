@@ -2,7 +2,7 @@
 title: Interoperability issues between batch mode processing and large page memory model
 description: Learn to resolve the performance and stability issues that that arise from the use of batch mode processing on columnstore and rowstore with large page memory model in SQL Server.
 ms.reviewer: pijocoder, hemin-msft
-ms.date: 06/30/2023
+ms.date: 07/05/2023
 ms.custom: sap:Administration and Management
 ---
 
@@ -32,11 +32,11 @@ In this scenario, you experience one or more of the following issues:
 
 ## Workaround
 
-To mitigate these issues, follow these steps:
+To mitigate these issues, try either or both of the following two methods:
 
-1. Disable the large page memory model by removing the [trace flag 834](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf834) (`-T834`) from SQL Server startup parameters on the SQL Server instance. When you complete this step, SQL Server stops using a `large page` memory model and reverts to a `conventional` or `lock pages` memory model.
+- Disable the large page memory model by removing the [trace flag 834](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf834) (`-T834`) from SQL Server startup parameters on the SQL Server instance. When you complete this step, SQL Server stops using a `large page` memory model and reverts to a `conventional` or `lock pages` memory model.
 
-1. If you don't use columnstore indexes in your SQL Server and you experience the described symptoms, you can disable batch mode on rowstore at the database level by using `ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ON_ROWSTORE = OFF`. For more information, see [ALTER DATABASE SCOPED CONFIGURATION](/sql/t-sql/statements/alter-database-scoped-configuration-transact-sql#batch_mode_on_rowstore---on--off-).
+- If you don't use columnstore indexes in your SQL Server and you experience the described symptoms, you can disable batch mode on rowstore at the database level by using `ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ON_ROWSTORE = OFF`. For more information, see [ALTER DATABASE SCOPED CONFIGURATION](/sql/t-sql/statements/alter-database-scoped-configuration-transact-sql#batch_mode_on_rowstore---on--off-).
 
 ## More information
 
