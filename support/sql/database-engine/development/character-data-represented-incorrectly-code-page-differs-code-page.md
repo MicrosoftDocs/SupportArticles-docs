@@ -1,6 +1,6 @@
 ---
 title: Character data is incorrect when the code page differs
-description: Provides workarounds for problems that character data is represented incorrectly when the code page of the client computer differs from the code page of the database in SQL Server.
+description: Provides workarounds for problems that character data is represented incorrectly when the code page of the client computer differs from the code page of the database.
 ms.date: 07/04/2023
 ms.custom: sap:Database Design and Development
 ---
@@ -21,12 +21,12 @@ In this scenario, character data is represented incorrectly.
 
 For example, you may experience one of the following problems:
 
-- The character data is represented as a question mark (?). You may see this problem if you inserted or updated the character data as a non-Unicode data type before you queried the character data. This problem occurs if you make this change by using SQL Server Management Studio on a client computer that has a different code page.
+- The character data is represented as a question mark (`?`). You may see this problem if you insert or update the character data as a non-Unicode data type before you query the character data. This problem occurs if you make this change by using SQL Server Management Studio on a client computer that has a different code page.
 
 - The character data is represented as corrupted data. The character data of code page X is stored in a non-Unicode column of code page Y. Additionally, the character data isn't translated. This problem occurs when you query the character data by using SQL Server Management Studio.
 
   > [!NOTE]
-  > When you query the character data by using SQL Query Analyzer in Microsoft SQL Server, the character data is represented correctly if the Perform translation for character data setting (the `Auto Translate` parameter) is disabled. The `Auto Translate` parameter is a parameter of the `ConnectionString` property for Microsoft OLE DB Provider for SQL Server and for Microsoft .NET Framework Data Provider for OLE DB.
+  > When you query the character data by using SQL Query Analyzer (now known as SQL Server Management Studio), the character data is represented correctly if the **Perform translation for character data** setting (also known as the `Auto Translate` parameter) is disabled. The `Auto Translate` parameter is a parameter of the `ConnectionString` property for Microsoft OLE DB Provider for SQL Server and for Microsoft .NET Framework Data Provider for OLE DB.
 
 ## Cause
 
@@ -67,7 +67,7 @@ When you use Microsoft OLE DB Provider for SQL Server to connect to a database t
 
 To work around this problem, follow these steps:
 
-1. Manually convert the characters to raw data, and then insert the data into the database by using the code page of the database. To do this, use a code snippet that is similar to the following one:
+1. Manually convert the characters to raw data, and then insert the data into the database by using the code page of the database. To do this operation, use a code snippet that is similar to the following one:
 
    ```csharp
    string strsrc="가";string strsrc="가";
@@ -76,7 +76,7 @@ To work around this problem, follow these steps:
    // code for updating the database;
    ```
 
-1. When you want to query the data, use Microsoft OLE DB Provider for SQL Server or Microsoft .NET Framework Data Provider for SQL Server to connect to the database, and then set the `Auto Translate` parameter to `False`. To do this, use a code snippet that's similar to the following one:
+1. When you want to query the data, use Microsoft OLE DB Provider for SQL Server or Microsoft .NET Framework Data Provider for SQL Server to connect to the database, and then set the `Auto Translate` parameter to `False`. To do this operation, use a code snippet that's similar to the following one:
 
    ```csharp
    OleDbConnection conn=new OleDbConnection("Provider=SQLOLEDB;" +
@@ -97,19 +97,19 @@ To reproduce the problem, follow these steps:
 1. Create a table in the database by using the following query:
 
    ```sql
-   Create table tbTest (A char(20), NA nchar(10), Comment char(20))
+   CREATE TABLE tbTest (A char(20), NA nchar(10), Comment char(20))
    ```
 
 1. Insert a Korean character into the database by using the following query:
 
    ```sql
-   Insert into tbTest (A,NA,Comment) values('가',N'가','SQL2005/INSERT')
+   INSERT INTO tbTest (A,NA,Comment) VALUES('가',N'가','SQL2005/INSERT')
    ```
 
 1. Create a select query to retrieve the data by using the following query:
 
    ```sql
-   select * from tbTest
+   SELECT * FROM tbTest
    ```
 
 You receive the following results. The value in column A is a question mark.
@@ -123,10 +123,8 @@ A                    NA         Comment
 
 ## References
 
-- [You can't correctly translate character data from a client to a server by using the SQL Server ODBC driver if the client code page differs from the server code page.](/troubleshoot/sql/connect/cannot-correctly-translate-character-data)
+- [You can't correctly translate character data from a client to a server by using the SQL Server ODBC driver if the client code page differs from the server code page](/troubleshoot/sql/connect/cannot-correctly-translate-character-data)
 
-- For more information about SQL Server Unicode data types, see [Microsoft Developer Network (MSDN) Web site.](https://msdn2.microsoft.com/library/aa902669(SQL.80).aspx)
+- [SQL Native Client Auto Translate](/sql/relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client)
 
-- [SQL Native Client Autotranslate.](/sql/relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client)
-
-- [SQL OLEDB provider Autotranslate.](/sql/ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server)
+- [SQL OLEDB provider Auto Translate](/sql/ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server)
