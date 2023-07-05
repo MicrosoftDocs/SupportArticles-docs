@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 5016345
 
 ## Symptoms
 
-Consider the following scenarios when using direct machine connectivity (not the deprecated data gateway):
+Consider the following scenarios when using direct machine connectivity (not the data gateway, which has been deprecated for desktop flows):
 
 ### Scenario 1
 
@@ -26,9 +26,9 @@ Consider the following scenarios when using direct machine connectivity (not the
 
 ### Scenario 2
 
-- Desktop flows run on a registered machine as a long as a user session is running (attended runs) or even for some minutes after the last user has logged off (unattended runs.)
-- The connection to the machine is lost after some minutes (e.g. 15 minutes.)
-- The connection is re-established once a user logs back to the machine.
+- Desktop flows run on a registered machine as long as a user session is running (attended runs) or even for some minutes after the last user has logged off (unattended runs.)
+- The connection to the machine is lost after some minutes (for example, 15 minutes.)
+- The connection is re-established once a user logs back on to the machine.
 
 ## Cause
 
@@ -40,7 +40,9 @@ The Power Automate service runs under its own Windows account (NT Service\UIFlow
 
 If the machine and Power Automate service have reliable access to the network, the next likeliest source of issues is the on-premises network blocking or interfering with Azure relay connections.
 
-A common culprit in both scenarios above is a network proxy that restricts outbound traffic. This is particularly true for authenticated proxies that use the credentials of the connected Windows user, given that, as mentioned above, the Power Automate service runs under its own account.
+A common culprit in both of the scenarios described is a network proxy that restricts outbound traffic. In particular, authenticated proxies that use the credentials of the connected Windows user, given that the Power Automate service runs under its own dedicated account.
+
+You can refer to [Proxy setup](https://support.microsoft.com/topic/power-automate-for-desktop-proxy-setup-8a79d690-1c02-416f-8af1-f057df5fe9b7) if you determine that you need to override the default proxy settings used by the Power Automate service. Additionally, you may also need to [change the on-premises service account](/power-automate/desktop-flows/troubleshoot#change-the-on-premises-service-account).
 
 ## How to investigate
 
