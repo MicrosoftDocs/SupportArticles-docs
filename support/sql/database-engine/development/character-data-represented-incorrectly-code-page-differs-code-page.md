@@ -103,7 +103,7 @@ To reproduce the problem, follow these steps:
 1. Insert a Korean character into the database by using the following query:
 
    ```sql
-   INSERT INTO tbTest (A,NA,Comment) VALUES('가',N'가','SQL2005/INSERT')
+   INSERT INTO tbTest (A,NA,Comment) VALUES('가',N'가','SQLServer/INSERT')
    ```
 
 1. Create a select query to retrieve the data by using the following query:
@@ -118,7 +118,7 @@ You receive the following results. The value in column A is a question mark.
 
 A                    NA         Comment
 -------------------- ---------- --------------------
-?                    가          SQL2005/INSERT
+?                    가          SQLServer/INSERT
 ```
 
 ## References
