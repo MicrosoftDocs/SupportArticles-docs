@@ -3,7 +3,7 @@ title: Create a minimal repro canvas app for troubleshooting
 description: Provides more information about how to create an app that showcases a problem clearly.
 author: tahoon
 ms.reviewer: tapanm
-ms.date: 07/03/2023
+ms.date: 07/05/2023
 ms.author: tahoon
 search.audienceType: 
   - maker
