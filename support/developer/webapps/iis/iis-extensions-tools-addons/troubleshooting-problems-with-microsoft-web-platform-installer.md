@@ -71,7 +71,7 @@ Operating system components, such as IIS, are installed with Windows setup techn
 
 **Windows Vista, Windows 7, Windows Server 2008, and Windows Server 2008 R2**
 
-Operating system components on Windows Vista, Windows 7, Windows Server 2008, and Windows Server 2008 R2 use component-based setup. The log file for operating system components is stored in the `%windir%\logs\cbs` directory. You can open it with the command:
+Operating system components on Windows Vista, Windows 7, Windows Server 2008, and Windows Server 2008 R2 use component-based setup. The log file for operating system components is stored in the *%windir%\logs\cbs* directory. You can open it with the command:
 
 ```Console
 notepad %windir%\logs\cbs\cbs.log
@@ -132,17 +132,17 @@ If IIS is configured for Shared Configuration, Web PI can't install most additio
   
   Check the SQL Server log files in the following directory for more information:  
 
-  > "%programfiles%\microsoft sql server\100\setup bootstrap\log"
+   *%programfiles%\microsoft sql server\100\setup bootstrap\log*
 
   For information on how to troubleshoot SQL issues, see [View and Read SQL Server Setup Log Files](/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
 
 - **Custom Installation of SQL Server**  
 
-  For customers who want to customize their SQL Server install outside of Web PI, see <https://blogs.msdn.com/sqlexpress/archive/2009/06/15/installing-sql-server-2008-guidance.aspx>.
+  For customers who want to customize their SQL Server install outside of Web PI, see [SQL Server Express WebLog](https://blogs.msdn.com/sqlexpress/archive/2009/06/15/installing-sql-server-2008-guidance.aspx).
 
 ### Issues with Visual Web Developer installation
 
-- The following link is a troubleshooting guide for failures during Visual Web Developer Installations <https://blogs.msdn.com/astebner/archive/2007/07/31/4156781.aspx>.
+- For more information, see [troubleshooting guide for failures during Visual Web Developer Installations](https://blogs.msdn.com/astebner/archive/2007/07/31/4156781.aspx).
 
 ## Additional troubleshooting tools, tips, and tricks
 
