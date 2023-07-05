@@ -1,21 +1,21 @@
 ---
-title: Your model that uses a preview functionality has expired
-description: Provides a resolution for an issue where a model that uses a preview functionality has expired, and the issue causes the model to stop functioning.
+title: Your model uses a preview functionality which has expired
+description: Provides a resolution for an issue where a model uses a preview functionality which has expired and causes the model to stop functioning.
 ms.reviewer: angieandrews
-ms.date: 07/04/2023
+ms.date: 07/05/2023
 ms.subservice: 
 ms.author: antrod
 author: Antrodfr
 ---
-# Your model that uses a preview functionality has expired
+# Your model uses a preview functionality which has expired
 
-This article provides a resolution for an issue where a model that uses a preview functionality has expired, which causes the model to stop working.
+This article provides a resolution for an issue where a model uses a preview functionality which has expired and causes the model to stop functioning.
 
 _Applies to:_ &nbsp; Power Automate, Power Apps, document processing models
 
 ## Symptoms
 
-On the model's detail page, a message bar indicates that the model that uses a preview functionality has expired.
+On the model's detail page, a message bar indicates that the model uses a preview functionality which has expired.
 
 ## Cause
 
