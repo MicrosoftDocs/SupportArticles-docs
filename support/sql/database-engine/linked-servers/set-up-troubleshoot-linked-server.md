@@ -165,7 +165,7 @@ For performance-related issues, search SQL Server Books Online for the **Optimiz
   > Locate the following registry key. Then, change the value of the AllowInProcess (DWORD) entry to 1. This registry key is located under the corresponding provider name: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Providers\ProviderName`.
   >
   > - Method 2
-  > Set the Allow InProcess option directly through SQL Server Enterprise Manager when you add a new linked server. Click Provider Options , and then click to select the Allow InProcess check box.
+  > Set the Allow InProcess option directly through SQL Server Management Studio when you add a new linked server. Click Provider Options , and then click to select the Allow InProcess check box.
 
 - Message 4
 
