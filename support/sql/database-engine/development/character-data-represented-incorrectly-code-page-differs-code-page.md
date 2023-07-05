@@ -51,11 +51,11 @@ Change the columns to a Unicode data type to avoid all the problems caused by co
 
 If you must use a non-Unicode data type, always make sure that the code page of the database and the code page of any non-Unicode columns can store the non-Unicode data correctly. For example, if you want to store code page 949 (Korean) character data, use a Korean collation for the database. For example, use the `Korean_Wansung_CI_AS` collation for the database.
 
-### Method 3: Use the binary data type or the varbinary data type
+### Method 3: Use the "binary" data type or the "varbinary" data type
 
 If you want the database to directly store and retrieve the exact byte values of the characters that are handled without trying to perform appropriate code page translation, use the `binary` data type or the `varbinary` data type.
 
-### Method 4: Use a different tool to store and retrieve data and disable the Auto Translate parameter
+### Method 4: Use a different tool to store and retrieve data and disable the "Auto Translate" parameter
 
 > [!WARNING]
 > We don't test or support storing the character data of code page X in a column of code page Y. This operation may cause linguistically incorrect query results, incorrect string matching or ordering, and unexpected code page translation (data corruption). We encourage you to use one of the other methods to work around this problem.
