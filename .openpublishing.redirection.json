@@ -5821,7 +5821,11 @@
       "source_path": "support/windows-server/networking/windows-server-2012-directaccess-hotfixes.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-server/windows-server-2012-directaccess-hotfixes",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/database-engine/performance/performance-issues-using-columstore-indexes-large-pages.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/batch-mode-with-large-page-memory-issues",
+      "redirect_document_id": true
     }
-
 ]
 }
