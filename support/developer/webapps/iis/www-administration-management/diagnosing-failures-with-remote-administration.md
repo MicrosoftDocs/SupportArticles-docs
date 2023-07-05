@@ -27,7 +27,7 @@ If this happens after updating the port on which Web Management Service (WMSvc) 
 
 If this doesn't solve the problem, run the following command:
 
-```Console
+```output
 netsh http show sslcert
 ```
 
@@ -63,7 +63,7 @@ Make sure that the URL `https://*:8172/` (the port on which WMSvc is configured 
   
 Here's a sample output:
 
-```Console
+```output
 c:\>netsh http show urlacl
 
 URL Reservations:
@@ -130,7 +130,7 @@ Here are steps on how to get the exception and call stack:
     g
     ```
 
-1. When the exception breaks, print the exception and the call stack and send it to iis.net forums.
+1. When the exception breaks, print the exception and the call stack and send it to *iis.net* forums.
 
     ```Console
     !pe

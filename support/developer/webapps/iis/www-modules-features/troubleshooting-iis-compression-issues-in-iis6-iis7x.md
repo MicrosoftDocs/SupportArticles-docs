@@ -33,13 +33,13 @@ This article helps you to configure compression and identifies common reasons of
 
 The only way to determine whether the IIS server sent a compressed response is by analyzing a network trace of the client request and server response. The request from the client must contain the following HTTP Request Header:
 
-```Console
+```output
 HTTP: Accept-Encoding =gzip, deflate
 ```
 
 This lets the server know that the client is willing to receive a compressed response and supports compression. In return, a compressed response from the server will contain the following HTTP Response header and a value:
 
-```Console
+```output
 HTTP: Content-Encoding = gzip
 ```
 
@@ -71,15 +71,15 @@ Perform the following steps to troubleshoot compression issues:
 
     Compression isn't turned on in the metabase at the right nodes. There are three metabase nodes for the Compression configuration:
 
-    ```Console
+    ```xml
     w3svc/filters/compression/parameters
     ```
 
-    ```Console
+    ```xml
     w3svc/filters/compression/gzip
     ```
 
-    ```Console
+    ```xml
     w3svc/filters/compression/deflate
     ```
 
@@ -98,7 +98,7 @@ Perform the following steps to troubleshoot compression issues:
 
     **ETW Trace**
 
-    ```Console
+    ```output
     IISCompression: STATIC_COMPRESSION_NOT_SUCCESS - IIS has been unsuccessful doing static compression
     Reason: COMPRESSION_DISABLED
     ```
@@ -143,7 +143,7 @@ Perform the following steps to troubleshoot compression issues:
 
     The previous command shows the following output:
 
-    ```console
+    ```output
     HcFileExtensions : (LIST)  (3 Items)
     "htm"
     "html"
@@ -159,7 +159,7 @@ Perform the following steps to troubleshoot compression issues:
 
     The previous command shows the following output:
 
-    ```console
+    ```output
     HcFileExtensions : (LIST)  (4 Items)
     "asp"
     "dll"
@@ -265,13 +265,13 @@ Perform the following steps to troubleshoot compression issues:
        tracerpt compressionTrace.etl
        ```
 
-       - **Summary.txt** contains general details about the trace session, including which providers were used.
+       - *Summary.txt* contains general details about the trace session, including which providers were used.
 
-       - **DumpFile.csv** contains the actual trace data in a text format.
+       - *DumpFile.csv* contains the actual trace data in a text format.
 
     1. Read the trace file to find useful information. Open the *dumpfiles.csv*, and find keyword like `COMPRESSION_NOT_SUCCESS`. Here's an example:
 
-       ```console
+       ```output
        IISCompression, STATIC_COMPRESSION_NOT_SUCCESS, 0x000008B0, 129744354075770195, 0, 0, {00000000-0000-0000-0700-0060000000bd}, "NO_MATCHING_SCHEME", 0, 0
        ```
 
