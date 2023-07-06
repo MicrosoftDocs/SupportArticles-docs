@@ -119,6 +119,8 @@
       href: ../authentication/error-add-address-cname-record.md
     - name: Repeatedly prompted for credentials
       href: ../authentication/access-denied-when-connect-to-office-365.md
+    - name: Unable to sign in to Microsoft 365 desktop applications
+      href: ../authentication/cannot-sign-in-microsoft-365-desktop-apps.md
   - name: Diagnostic Logs
     items:
     - name: Collect a Network Monitor trace in Microsoft 365
