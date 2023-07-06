@@ -267,6 +267,8 @@
           href: ../access/sync-combo-boxes.md
         - name: Text of text box control displays incorrectly
           href: ../access/text-box-control-information-incorrectly.md
+        - name: The digital signature in Access is tampered with or invalidated
+          href: ../access/access-database-digital-signature-invalidated.md
         - name: Troubleshoot errors updating queries or forms
           href: ../access/errors-updating-query-form-data.md
         - name: Troubleshooting corruption in database
