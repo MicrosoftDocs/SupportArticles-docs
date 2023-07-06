@@ -84,7 +84,7 @@ When you observe the first two reasons, `ResolveTimeout` and `ConnectTimeout`, t
 
 ## 502.3 Connection termination errors
 
-502.3 errors are also returned when the connection between ARR and the member server is disconnected mid-stream. To test this type of problem, create an *.aspx* page that calls `Response.Close()`. In the following example, there's a directory called "time", which is configured with an .aspx page as the default document in that directory. When you try to browse to the directory, ARR shows the following error message:
+502.3 errors are also returned when the connection between ARR and the member server is disconnected mid-stream. To test this type of problem, create an .aspx page that calls `Response.Close()`. In the following example, there's a directory called "time", which is configured with an .aspx page as the default document in that directory. When you try to browse to the directory, ARR shows the following error message:
 
 :::image type="content" source="media/troubleshooting-502-errors-in-arr/502-3-service-terminated-abnormally.png" alt-text="Screenshot that shows connection termination errors.":::
 
@@ -100,7 +100,7 @@ The following error is another example of an invalid response from the member se
 
 :::image type="content" source="media/troubleshooting-502-errors-in-arr/502-3-invalid-unrecognized-response.png" alt-text="Screenshot that shows an invalid response from the member server.":::
 
-In this example, ARR started to receive data from the client but something went wrong while reading the request entity body. This resulted in the 0x80072f78 error code being returned. To investigate further, use [Network Monitor](https://github.com/windows-server/networking/network-monitor-3.md) on the member server to get a network trace of the problem. This particular error example was created by calling `Response.Close()` in the *ASP.net* page after sending part of the response and then calling `Response.Flush()`. If the traffic between the ARR server and the member servers is over SSL, then [WinHTTP](https://technet.microsoft.com/library/cc731131(WS.10).aspx) tracing on Windows Server 2008 or WebIO tracing on Windows Server 2008 R2 may provide additional information. WebIO tracing is described later in this troubleshooter.
+In this example, ARR started to receive data from the client but something went wrong while reading the request entity body. This resulted in the 0x80072f78 error code being returned. To investigate further, use [Network Monitor](../../../../windows-server/networking/network-monitor-3.md) on the member server to get a network trace of the problem. This particular error example was created by calling `Response.Close()` in the *ASP.net* page after sending part of the response and then calling `Response.Flush()`. If the traffic between the ARR server and the member servers is over SSL, then [WinHTTP](https://technet.microsoft.com/library/cc731131(WS.10).aspx) tracing on Windows Server 2008 or WebIO tracing on Windows Server 2008 R2 may provide additional information. WebIO tracing is described later in this troubleshooter.
 
 ## 502.4 No appropriate server could be found to route the request
 

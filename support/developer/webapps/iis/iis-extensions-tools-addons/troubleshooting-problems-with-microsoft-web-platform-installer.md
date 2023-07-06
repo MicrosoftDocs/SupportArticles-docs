@@ -110,15 +110,15 @@ If IIS is configured for Shared Configuration, Web PI can't install most additio
 ### Issues during application installation using Web PI
 
 - **Web PI does not automatically create physical directories when an application is installed to a new site**.
- Create the directory manually or use the '...' button next to the Physical path text box to create a new folder.
+ Create the directory manually or use the '...' button next to the **Physical path** text box to create a new folder.
 - **Web PI requires password fields to be filled in and does not allow them to be empty**.
- If an application allows an empty password, the password does not work when the application is installed in Web PI.
+ If an application allows an empty password, the password doesn't work when the application is installed in Web PI.
 
 ### Issues with Microsoft SQL Server during application installation
 
 - **Applications do not work without SQL "Mixed mode authentication."**
 
-    For most Web applications, SQL Server user accounts are required in order to access a database. If only integrated or Windows authentication for SQL Server are selected, you cannot install some of the applications in the gallery.
+    For most Web applications, SQL Server user accounts are required in order to access a database. If only integrated or Windows authentication for SQL Server are selected, you can't install some of the applications in the gallery.
 
 - **SQL Server passwords are not accepted if they do not meet strength requirements**.
 
