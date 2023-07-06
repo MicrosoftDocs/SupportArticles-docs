@@ -27,17 +27,17 @@ On a device that has security software installed, users might experience any of 
 - The sign-in prompts are intermittent.
 - The sign-in window shows a blank authentication screen.
   
-  :::image type="content" source="./media/cannot-sign-in-microsoft-365-desktop-apps/blank-authentication-screen.png" alt-text="Screenshot of a blank authentication screen.":::
+   :::image type="content" source="./media/cannot-sign-in-microsoft-365-desktop-apps/blank-authentication-screen.png" alt-text="Screenshot of a blank authentication screen.":::
 
 - The sign-in window is stuck on authentication.
 
-  :::image type="content" source="./media/cannot-sign-in-microsoft-365-desktop-apps/sign-in-hangs-on-authentication.png" alt-text="Screenshot of a sign-in window that gets stuck on authentication.":::
+   :::image type="content" source="./media/cannot-sign-in-microsoft-365-desktop-apps/sign-in-hangs-on-authentication.png" alt-text="Screenshot of a sign-in window that gets stuck on authentication.":::
 - The Outlook desktop client displays "Trying to connect…".
 - The Teams desktop client displays "We weren't able to connect. Sign in and we'll try again".
 
 ## Cause
 
-The security software on the device is preventing network communication from being established or maintaining the previous communication state. This may be due to existing or obsolete Windows Filtering Platform (WFP) drivers in the security software. In addition, the security software may be blocking the Web Account Manager (WAM) plug-ins from running or may remove the plug-ins as a side effect of its activity on the device.
+The security software on the device is preventing network communication from being established or maintaining the previous communication state. This problem may be due to existing or obsolete Windows Filtering Platform (WFP) drivers in the security software. In addition, the security software may be blocking the Web Account Manager (WAM) plug-ins from running or may remove the plug-ins as a side effect of its activity on the device.
 
 > [!NOTE]
 >
@@ -66,7 +66,7 @@ To fix the issues, follow these steps on the device:
        ```
 
        If either the **Work or school account** or **Microsoft account** window doesn't pop up, go to step 3. Otherwise, go to step 4.
-1. Reinstall the WAM plug-ins if step 2 isn't successful. To do this, run the following PowerShell cmdlets:
+1. Reinstall the WAM plug-ins if step 2 isn't successful. To do so, run the following PowerShell cmdlets:
 
    ```powershell
    Add-AppxPackage -Register "$env:windir\SystemApps\Microsoft.AAD.BrokerPlugin_cw5n1h2txyewy\Appxmanifest.xml" -DisableDevelopmentMode -ForceApplicationShutdown
@@ -82,7 +82,7 @@ To fix the issues, follow these steps on the device:
    > - Third-party modules are holding the file or registry lock and preventing the sign-in process.
    > - Obsolete WFP or security software drivers are installed in the system.
 
-1. Sign in by using an administrator account, reinstall the security software and standalone WFP drivers that were uninstalled in step 1. Then, work with your security software and WFP driver vendor to configure the following package, folder and process exclusions in the security software and WFP drivers.
+1. Sign in by using an administrator account, reinstall the security software and standalone WFP drivers that were uninstalled in step 1. Then, work with your security software and WFP driver vendor to configure the following package, folder, and process exclusions in the security software and WFP drivers.
 
    **Package family names to exclude**
 
