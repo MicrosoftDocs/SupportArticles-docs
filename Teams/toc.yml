@@ -113,6 +113,8 @@
       href: ./files/download-documents-open-in-protected-view.md
     - name: Guest user can't access Files tab
       href: ./files/guests-cannot-access-files.md
+    - name: Unable to share files in a large group chat or meeting chat
+      href: ./files/cannot-share-files-in-large-chat.md
   - name: Forms
     items:
     - name: Can't send or respond a poll
