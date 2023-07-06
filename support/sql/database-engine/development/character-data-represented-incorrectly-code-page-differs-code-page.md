@@ -4,7 +4,7 @@ description: Provides workarounds for problems that character data is represente
 ms.date: 07/04/2023
 ms.custom: sap:Database Design and Development
 ---
-# Character data is represented incorrectly when the code page of the client computer differs from the code page of the database
+# Character data is incorrect when the client computer's code page differs from the database's
 
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 904803
