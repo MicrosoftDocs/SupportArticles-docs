@@ -51,7 +51,7 @@ You can refer to [Proxy setup](https://support.microsoft.com/topic/power-automat
 
 2. Understand the topology of the network: what network devices does the traffic hop through before being handed off to the public internet: NAT, firewalls, proxies and so on. Get logs from these devices during impacted runs, and logs from the outermost network device attesting that the traffic to _*.servicebus.windows.net_ is handed off to the public internet.
 
-3. Get WCF logs from UI flow service. For more information, see the Enable WCF tracing section below.
+3. Get WCF logs from UI flow service. For more information, see the [Enable WCF tracing](#enable-wcf-tracing) section below.
 
 4. Make sure your network configuration allows web socket traffic and long-running connections: a common pattern is proxies or other network devices killing connections after a set time.
 
@@ -59,7 +59,7 @@ You can refer to [Proxy setup](https://support.microsoft.com/topic/power-automat
 
 - Your network topology: what are the devices that traffic goes through. (see the step 2 in the section above)
 - Logs from your network devices showing that the traffic is indeed handed off to the public internet. Include times of the issues and the time zones used by the logs.
-- WCF traces from the impacted machines. (see the Enable WCF tracing section below)
+- WCF traces from the impacted machines. (see the [Enable WCF tracing](#enable-wcf-tracing) section below)
 - Desktop flow run IDs of impacted runs.
 - Local logs from the impacted machine: they can be extracted using the Power Automate machine runtime app's troubleshooting pane.
 
