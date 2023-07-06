@@ -49,7 +49,7 @@ You can refer to [Proxy setup](https://support.microsoft.com/topic/power-automat
 
 1. To help you investigate these issues, make sure to engage your network administrators who will have the knowledge required to understand what is happening.
 
-2. Understand the topology of the network: what network devices do the traffic hop through before being handed off to the public internet: NAT, firewalls, proxies and so on. Get logs from these devices during impacted runs, and log from the outermost network device attesting that the traffic to _*.servicebus.windows.net_ is handed off to the public internet.
+2. Understand the topology of the network: what network devices does the traffic hop through before being handed off to the public internet: NAT, firewalls, proxies and so on. Get logs from these devices during impacted runs, and logs from the outermost network device attesting that the traffic to _*.servicebus.windows.net_ is handed off to the public internet.
 
 3. Get WCF logs from UI flow service. For more information, see the Enable WCF tracing section below.
 
