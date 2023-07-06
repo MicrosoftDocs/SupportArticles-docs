@@ -91,6 +91,24 @@ For more information about this hotfix package, see the following Microsoft Know
 6. In the **Value data** box, type 1, and then click **OK**.
 7. Exit Registry Editor.
 
+	Below list describes the expected behavior, based on the registry key setting and the mailbox parameter:
+	1) With Delegatesentitemstyle set to 0 and MessageCopyForSentAsEnabled set to true:
+	A copy of the email will be saved in the primary mailbox and shared mailbox both.
+	 
+	2) With Delegatesentitemstyle set to 1 and MessageCopyForSentAsEnabled set to true:
+	Two copies of the email will be saved in the shared mailbox and no copy in the primary mailbox.
+	 
+	3) With Delegatesentitemstyle set to 0 and MessageCopyForSentAsEnabled set to false:
+	A copy of the email will be saved in the primary mailbox and no copy in the shared mailbox.
+	 
+	4) With Delegatesentitemstyle set to 1 and MessageCopyForSentAsEnabled set to false:
+	A copy of the email will be saved in the shared mailbox and no copy in the primary mailbox.
+	 
+If you set DelegateSentItemsStyle=0 in the registry, email messages that you send from a shared mailbox (including on behalf of a shared mailbox) will be copied to the primary mailbox Sent Items folder and not the Sent Items folder of the shared mailbox.	 
+If you set DelegateSentItemsStyle=1 in the registry, email messages that you send from a shared mailbox (including on behalf of a shared mailbox) will be copied to the Sent Items folder of the shared mailbox and no copy will be saved to the Sent Items folder of the primary mailbox.
+
+
+
 ## More information
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet forums](/answers/topics/office-exchange-server-itpro.html).
