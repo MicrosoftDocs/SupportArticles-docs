@@ -1,8 +1,8 @@
 ---
 title: Direct connectivity issues in Power Automate for desktop
 description: Provides more information about how to solve the direct connectivity issues in Power Automate for desktop.
-ms.reviewer: guco
-ms.date: 9/20/2022
+ms.reviewer: guco, madiazor, johndund
+ms.date: 07/06/2023
 ms.subservice: power-automate-desktop-flows
 ---
 # Direct connectivity issues in Power Automate for desktop
@@ -16,18 +16,19 @@ _Original KB number:_ &nbsp; 5016345
 
 Consider the following scenarios when using direct machine connectivity (not the data gateway, which has been deprecated for desktop flows):
 
-### Scenario 1
+#### Scenario 1
 
 - Your previously registered machines appear offline when they're booted up and connected to the network.
 - Runs fail with either of these error messages:
+
   > ConnectionNotEstablished - None of the connected listeners accepted the connections within the allowed timeout. Check that your machine is online.
 
   > NoListenerConnected - The endpoint was not found. There are no listeners connected for the endpoint. Check that your machine is online.
 
-### Scenario 2
+#### Scenario 2
 
-- Desktop flows run on a registered machine as long as a user session is running (attended runs) or even for some minutes after the last user has logged off (unattended runs.)
-- The connection to the machine is lost after some minutes (for example, 15 minutes.)
+- Desktop flows run on a registered machine as long as a user session is running (attended runs) or even for some minutes after the last user has logged off (unattended runs).
+- The connection to the machine is lost after some minutes (for example, 15 minutes).
 - The connection is re-established once a user logs back on to the machine.
 
 ## Cause
@@ -40,9 +41,9 @@ The Power Automate service runs under its own Windows account (NT Service\UIFlow
 
 If the machine and Power Automate service have reliable access to the network, the next likeliest source of issues is the on-premises network blocking or interfering with Azure relay connections.
 
-A common culprit in both of the scenarios described is a network proxy that restricts outbound traffic. In particular, authenticated proxies that use the credentials of the connected Windows user, given that the Power Automate service runs under its own dedicated account.
+A common culprit in both scenarios is a network proxy that restricts outbound traffic. In particular, authenticated proxies that use the credentials of the connected Windows user, given that the Power Automate service runs under its own dedicated account.
 
-You can refer to [Proxy setup](https://support.microsoft.com/topic/power-automate-for-desktop-proxy-setup-8a79d690-1c02-416f-8af1-f057df5fe9b7) if you determine that you need to override the default proxy settings used by the Power Automate service. Additionally, you may also need to [change the on-premises service account](/power-automate/desktop-flows/troubleshoot#change-the-on-premises-service-account).
+You can refer to [Proxy setup](https://support.microsoft.com/topic/power-automate-for-desktop-proxy-setup-8a79d690-1c02-416f-8af1-f057df5fe9b7) if you determine that you need to override the default proxy settings used by the Power Automate service. You may also need to [change the on-premises service account](/power-automate/desktop-flows/troubleshoot#change-the-on-premises-service-account).
 
 ## How to investigate
 
@@ -64,7 +65,7 @@ You can refer to [Proxy setup](https://support.microsoft.com/topic/power-automat
 
 ## Enable WCF tracing
 
-In the installation folder (typically _C:\Program Files (x86)\Power Automate Desktop_), edit the _UIFlowService.exe.config_ file, this requires running your text editor as administrator.
+In the installation folder (typically _C:\Program Files (x86)\Power Automate Desktop_), edit the _UIFlowService.exe.config_ file. This requires running your text editor as administrator.
 
 Add this config section:
 
