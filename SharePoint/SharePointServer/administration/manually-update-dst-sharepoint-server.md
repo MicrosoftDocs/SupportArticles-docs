@@ -58,7 +58,7 @@ If an automatic update isn't possible, update the Timezone.xml file manually on 
    </TimeZone>
    ```
 
-   When the **DayOfWeek** element isn't specified, its value is assumed to be 0, which indicates Sunday, while the value of 6 indicates Saturday. In this example, since the value of ***DayOfWeek** isn't specified, the standard time begins on the third Sunday in March while DST begins on the first Sunday in October.
+   When the **DayOfWeek** element isn't specified, its value is assumed to be 0, which indicates Sunday, while the value of 6 indicates Saturday. In this example, since the value of **DayOfWeek** isn't specified, the standard time begins on the third Sunday in March while DST begins on the first Sunday in October.
 1. Add a [History](/sharepoint/dev/schema/history-element-regional-settings) element to the [TimeZone](/sharepoint/dev/schema/timezone-element-regional-settings) element to preserve the existing time zone definition. In the **Year** attribute of the **History** element, specify the last year for which the time zone definition applies.
 1. Update the [StandardTime](/sharepoint/dev/schema/standardtime-element-regional-settings) and [DaylightTime](/sharepoint/dev/schema/daylighttime-element-regional-settings) elements with the correct date and time for the current period.
 
