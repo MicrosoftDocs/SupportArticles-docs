@@ -138,11 +138,11 @@ If IIS is configured for Shared Configuration, Web PI can't install most additio
 
 - **Custom Installation of SQL Server**  
 
-  For customers who want to customize their SQL Server install outside of Web PI, see [SQL Server Express WebLog](https://blogs.msdn.com/sqlexpress/archive/2009/06/15/installing-sql-server-2008-guidance.aspx).
+  For customers who want to customize their SQL Server install outside of Web PI, see [SQL Server Express WebLog](https://stackoverflow.com/questions/2196018/web-platform-installer-and-sql-express-database-setup).
 
 ### Issues with Visual Web Developer installation
 
-- For more information, see [troubleshooting guide for failures during Visual Web Developer Installations](https://blogs.msdn.com/astebner/archive/2007/07/31/4156781.aspx).
+- For more information, see [troubleshooting guide for failures during Visual Web Developer Installations](https://stackoverflow.com/questions/24910301/issues-when-installing-visual-web-developer-2010).
 
 ## Additional troubleshooting tools, tips, and tricks
 
