@@ -269,7 +269,7 @@ Perform the following steps to troubleshoot compression issues:
 
        - *DumpFile.csv* contains the actual trace data in a text format.
 
-    1. Read the trace file to find useful information. Open the *dumpfiles.csv*, and find keyword like `COMPRESSION_NOT_SUCCESS`. Here's an example:
+    1. Read the trace file to find useful information. Open the *dumpfile.csv*, and find keyword like `COMPRESSION_NOT_SUCCESS`. Here's an example:
 
        ```output
        IISCompression, STATIC_COMPRESSION_NOT_SUCCESS, 0x000008B0, 129744354075770195, 0, 0, {00000000-0000-0000-0700-0060000000bd}, "NO_MATCHING_SCHEME", 0, 0

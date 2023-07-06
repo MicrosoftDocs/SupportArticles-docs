@@ -48,7 +48,7 @@ Another common but important step is to uninstall WPAS "Windows Process Activati
 
 ## Reviewing the CBS (Component based Setup) logs
 
-If *IIS7.log* is clean, then there's a good chance that the problem is with the CBS (Component based Setup) engine. CBS logs can be found at *C:\Windows\Logs\CBS folder*.
+If *IIS7.log* is clean, then there's a good chance that the problem is with the CBS (Component Based Setup) engine. CBS logs can be found at *C:\Windows\Logs\CBS folder*.
 
 Just like *IIS7.log* file, *CBS.log* file is a text file and can be opened using any text editor (You have to open this file from administrative command prompt). You can get some useful information from these logs by keeping the time frame of the installation failure in mind and searching for "Failure will not be ignored: A rollback will be initiated" string in the *CBS.log* file. Here's an example of one such instance.
 
@@ -78,7 +78,7 @@ Windows Resource Protection found corrupt files and successfully repaired
 them. Details are included in the CBS.Log windir\Logs\CBS\CBS.log. For example C:\Windows\Logs\CBS\CBS.log
 ```
 
-If this command reports errors that the tool cannot fix, you may see something like the following message. In this case, contact Microsoft support for assistance.
+If this command reports errors that the tool can't fix, you may see something like the following message. In this case, contact Microsoft Support for assistance.
 
 ```output
 Windows Resource Protection found corrupt files but was unable to fix some of them. 

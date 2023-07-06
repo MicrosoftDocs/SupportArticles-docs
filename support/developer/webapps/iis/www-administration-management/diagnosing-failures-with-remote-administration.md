@@ -35,7 +35,7 @@ Make sure that the port 8172 (the one on which WMSvc is running) has SSL certifi
 
 Here's a sample output:
 
-```Console
+```output
 c:\>netsh http show sslcert 
 SSL Certificate bindings:
 -------------------------
@@ -53,6 +53,7 @@ Ctl Store Name          : (null)
 DS Mapper Usage    : Disabled
 Negotiate Client Certificate    : Disabled
 ```
+
 Then run the following command:
 
 ```Console

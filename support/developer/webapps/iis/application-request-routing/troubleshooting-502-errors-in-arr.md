@@ -137,9 +137,9 @@ To analyze the log,
 1. Scroll through the trace until you find the *w3wp.exe* instance where ARR is running by correlating with the **UT process name** column.
 1. Right-click on w3wp and select **Add UT Process name to display filter**. This sets the display filter similar to:
 
-      ```Console
-      UTProcessName == "w3wp.exe (1432)"
-      ```
+    ```Console
+     UTProcessName == "w3wp.exe (1432)"
+    ```
 
   You can further filter the results by changing it to the following:
 
