@@ -2,6 +2,24 @@
 
 
 
+## Week of June 26, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 6/26/2023 | [Can't create public folder mailbox in Exchange Online](/exchange/troubleshoot/public-folders/cannot-create-public-folder-mailbox) | added |
+| 6/26/2023 | [Reinstall Search Foundation in Exchange Server](/exchange/troubleshoot/compliance/reinstall-search-foundation) | added |
+
+
+## Week of June 19, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 6/22/2023 | [Can't create public folder mailbox in Exchange Online](/exchange/troubleshoot/public-folders/cannot-create-public-folder-mailbox) | added |
+| 6/22/2023 | [Reinstall Search Foundation in Exchange Server](/exchange/troubleshoot/compliance/reinstall-search-foundation) | added |
+
+
 ## Week of June 12, 2023
 
 
@@ -27,20 +45,3 @@
 | 5/30/2023 | [Mailboxes are stalled during a migration](/exchange/troubleshoot/migration/mailboxes-stalled-during-migration) | modified |
 | 5/30/2023 | [Can't register a Hybrid Agent in Exchange Server](/exchange/troubleshoot/move-mailboxes/cannot-register-hybrid-agent) | modified |
 | 5/30/2023 | [Mailboxes are stalled during a migration](/exchange/troubleshoot/migration/mailboxes-stalled-during-migration) | added |
-
-
-## Week of May 22, 2023
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 5/22/2023 | [Mailboxes are stalled during a migration](/exchange/troubleshoot/migration/mailboxes-stalled-during-migration) | added |
-| 5/24/2023 | [Mailboxes are stalled during a migration](/exchange/troubleshoot/migration/mailboxes-stalled-during-migration) | modified |
-
-
-## Week of May 15, 2023
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 5/18/2023 | [Outlook read receipt shows incorrect information](/exchange/troubleshoot/mailflow/read-receipt-shows-incorrect-information) | added |
