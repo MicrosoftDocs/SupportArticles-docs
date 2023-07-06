@@ -36,13 +36,13 @@ In this scenario, you may receive one or more of the following  messages indicat
 
 The following database usage scenarios are known to invalidate the digital signature:
 
-- Import, modify or create forms, reports, macros or modules
-- Import, modify or create action queries
-- Import, modify or create passthrough queries
-- Add, change or remove VBA references
+- Import, modify, or create forms, reports, macros, or modules
+- Import, modify, or create action queries
+- Import, modify, or create passthrough queries
+- Add, change, or remove Visual Basic for Applications (VBA) references
 - Distribute a database that contains ActiveX controls to a machine that uses a different bit of Microsoft 365 than where the digital signature is applied
-- The [Perform name AutoCorrect](https://support.microsoft.com/office/set-name-autocorrect-options-981b70ef-56ea-47a8-8bb4-a93c10a9d98b#bm3) option is enabled and there are pending name corrections
-- The [Track name AutoCorrect info](https://support.microsoft.com/office/set-name-autocorrect-options-981b70ef-56ea-47a8-8bb4-a93c10a9d98b#bm3) option is enabled after the digital signature is applied 
+- The [Perform name autocorrect](https://support.microsoft.com/office/set-name-autocorrect-options-981b70ef-56ea-47a8-8bb4-a93c10a9d98b#bm3) option is enabled and there are pending name corrections
+- The [Track name autocorrect info](https://support.microsoft.com/office/set-name-autocorrect-options-981b70ef-56ea-47a8-8bb4-a93c10a9d98b#bm3) option is enabled after the digital signature is applied 
 
 ## Workarounds
 
