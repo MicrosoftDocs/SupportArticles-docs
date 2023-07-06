@@ -34,6 +34,12 @@ The following features can affect normal operation. Try disabling or removing th
 
 [Client scripts](/power-apps/developer/model-driven-apps/client-scripting) contain JavaScript code that can conflict with the Power Apps system or change it in unexpected ways. If disabling the script solves the issue, you should [isolate which part of the custom script causes the issue](#simplify-custom-scripts).
 
+You can temporarily disable all custom scripts by appending this to the URL of the page:
+
+```http
+&flags=DisableFormHandlers=true,DisableFormLibraries=true,DisableWebResourceControls=true
+```
+
 ### Custom commands
 
 **Affects**: Form pages, Table-based view pages
@@ -106,6 +112,10 @@ If you suspect that a script is causing an issue, follow these steps:
    - If the error is from custom code, contact the developer who wrote the script for assistance.
 
    - If a Client API feature isn't working as documented, you can report it to Microsoft. Attach a copy of the simplified script and mention which API feature isn't working.
+
+## Create a vanilla repro app
+
+The process of creating a [vanilla repro app](vanilla-model-driven-app-repro) may uncover configuration errors that aren't obvious in an environment with many customizations. Even if the problem isn't fixed, you would have narrowed the cause and made it easier to explain the problem to others.
 
 ## Next steps
 

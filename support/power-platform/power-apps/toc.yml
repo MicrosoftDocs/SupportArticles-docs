@@ -49,6 +49,8 @@
           href: isolate-and-troubleshoot-common-issues/common-issues-and-resolutions.md
         - name: Create a minimal repro canvas app
           href: isolate-and-troubleshoot-common-issues/minimal-canvas-app-repro.md
+        - name: Create a vanilla repro model-driven app
+          href: isolate-and-troubleshoot-common-issues/vanilla-model-driven-app-repro.md
         - name: General Power Apps debugging strategies
           href: isolate-and-troubleshoot-common-issues/isolate-common-issues.md
         - name: Isolate issues in canvas apps
