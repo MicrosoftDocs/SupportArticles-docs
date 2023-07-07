@@ -38,7 +38,7 @@ Solution checker must be run on the solution before it can be imported.  There a
 
 - Solution checker must be run with the solution checker ruleset. The easiest ways to do this are:
   - Run solution checker in the [maker portal](/power-apps/maker/data-platform/use-powerapps-checker) where the solution checker ruleset is used.
-  - Use [pac solution check](/power-platform/developer/cli/reference/solution#pac-solution-add-license) where the solution checker ruleset is used by default.
+  - Use [pac solution check](/power-platform/developer/cli/reference/solution#pac-solution-check) where the solution checker ruleset is used by default.
   - If explicitly passing a ruleset ID, use `0AD12346-E108-40B8-A956-9A8F95EA18C9` which represents the solution checker ruleset.
 - Solution checker must be run within a 90 day window of the import.
 - When invoking solution checker, do not pass any file exclusions or rule overrides. These may be supported for solution checker enforcement in the future.
