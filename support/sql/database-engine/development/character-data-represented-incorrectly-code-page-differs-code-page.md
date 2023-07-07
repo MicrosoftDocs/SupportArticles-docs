@@ -1,10 +1,10 @@
 ---
 title: Character data is incorrect when the code page differs
 description: Provides workarounds for problems that character data is represented incorrectly when the code page of the client computer differs from the code page of the database.
-ms.date: 07/04/2023
+ms.date: 07/07/2023
 ms.custom: sap:Database Design and Development
 ---
-# Character data is incorrect when the client computer's code page differs from the database's
+# Character data is represented incorrectly when the client computer's code page differs from the database's
 
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 904803
@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 904803
 
 Consider the following scenario:
 
-- In Microsoft SQL Server, you use SQL Server Management Studio to query character data from a SQL Server database that uses a non-Unicode data type. For example, the SQL Server database uses the `char` data type, `varchar` data type, or `text` data type.
+- You use SQL Server Management Studio to query character data from a SQL Server database that uses a non-Unicode data type. For example, the SQL Server database uses the `char` data type, `varchar` data type, or `text` data type.
 
 - The code page of the client computer differs from the code page of the database. The code page is associated with the collation of the database.
 
@@ -26,11 +26,11 @@ For example, you may experience one of the following problems:
 - The character data is represented as corrupted data. The character data of code page X is stored in a non-Unicode column of code page Y. Additionally, the character data isn't translated. This problem occurs when you query the character data by using SQL Server Management Studio.
 
   > [!NOTE]
-  > When you query the character data by using SQL Query Analyzer (now known as SQL Server Management Studio), the character data is represented correctly if the **Perform translation for character data** setting (also known as the `Auto Translate` parameter) is disabled. The `Auto Translate` parameter is a parameter of the `ConnectionString` property for Microsoft OLE DB Provider for SQL Server and for Microsoft .NET Framework Data Provider for OLE DB.
+  > When you query the character data by using SQL Server Management Studio, the character data is represented correctly if the **Perform translation for character data** setting (also known as the `Auto Translate` parameter) is disabled. The `Auto Translate` parameter is a parameter of the `ConnectionString` property for Microsoft OLE DB Provider for SQL Server and for Microsoft .NET Framework Data Provider for OLE DB.
 
 ## Cause
 
-This problem occurs because the character data of code page X is stored in a non-Unicode column of code page Y. Additionally, the character data isn't translated correctly. We don't support storing the character data of code page X in a column of code page Y.
+This problem occurs because the character data of code page X is stored in a non-Unicode column of code page Y, which is unsupported.
 
 In SQL Server, when you use a string literal of a non-Unicode data type, the string literal is converted by using the database's default code page that's derived from the database's collation. Storing the character data of code page X in a column of code page Y may cause data loss or data corruption.
 
