@@ -15,15 +15,15 @@ contributors:
 
 A vanilla repro app is an app that reproduces a problem on a vanilla environment. Unlike canvas apps, model-driven apps in the same environment share customizations like [client scripts](/power-apps/developer/model-driven-apps/client-scripting) and [server plug-ins](/power-apps/developer/data-platform/plug-ins). It can be difficult to find out whether a problem is caused by a bad customization or a product bug.
 
-Vanilla means "no customizations". So, a vanilla environment is one that's in its original state, like with a fresh installation. Use a vanilla environment and make minimal modifications to reproduce an issue, to rule out the possibility of a configuration error.
+Vanilla means no customizations. So, a vanilla environment is one that's in its original state, like with a fresh installation. Use a vanilla environment and make minimal modifications to reproduce an issue, to rule out the possibility of a configuration error.
 
 After creating a vanilla repro app, you can share it with others, like in the [Microsoft Power Apps Community](https://powerusers.microsoft.com/t5/Power-Apps-Community/ct-p/PowerApps1) or with [Microsoft Support](https://powerapps.microsoft.com/support/).
 
 ## Create a vanilla environment
 
-A vanilla environment does not refer to any specific [type of environment](/power-platform/admin/environments-overview#types-of-environments) from Power Platform. You can [create a new trial, sandbox, or developer environment](/power-platform/admin/create-environment) to use as a vanilla environment. You will need an appropriate license.
+A vanilla environment does not refer to any specific [type of environment](/power-platform/admin/environments-overview#types-of-environments) from Power Platform. You can [create a new trial, sandbox, or developer environment](/power-platform/admin/create-environment) to use as a vanilla environment. You'll need an appropriate license.
 
-If you don't have a license to create new environments, try to simplify the customizations in your environment, as described below.
+If you don't have a license to create new environments, try to [simplify the customizations](isolate-model-app-issues.md#remove-customizations) in your environment.
 
 ## Re-create custom tables and other components
 
@@ -39,7 +39,7 @@ When the issue requires specific data to reproduce, prepare a *.csv* or Excel fi
 
 ## Simplify developer customizations
 
-Some advanced customizations require programming knowledge. These include [client scripts](/power-apps/developer/model-driven-apps/client-scripting), [code components](/power-apps/developer/component-framework/overview) (custom controls), [classic commands](/power-apps/maker/model-driven-apps/command-designer-overview), [plug-ins](/power-apps/developer/data-platform/plug-ins), and [web resources](/power-apps/developer/model-driven-apps/web-resources). If they are necessary to reproduce an issue, simplify them as much as possible. Remove irrelevant lines of code and references to third-party libraries.
+Some advanced customizations require programming knowledge. These include [client scripts](/power-apps/developer/model-driven-apps/client-scripting), [code components](/power-apps/developer/component-framework/overview) (custom controls), [classic commands](/power-apps/maker/model-driven-apps/command-designer-overview), [plug-ins](/power-apps/developer/data-platform/plug-ins), and [web resources](/power-apps/developer/model-driven-apps/web-resources). If they're necessary to reproduce an issue, simplify them as much as possible. Remove irrelevant lines of code and references to third-party libraries.
 
 ## Isolate custom pages
 
@@ -66,7 +66,7 @@ Sometimes, other materials are needed that can't be packaged in solutions. Here 
 
 ### Provide sample data
 
-Some issues require specific data to reproduce. Since data is not exported in a solution, provide a *.csv* or Excel file with the necessary data. Remember to remove any private and confidential data.
+Some issues require specific data to reproduce. Since data isn't exported in a solution, provide a *.csv* or Excel file with the necessary data. Remember to remove any private and confidential data.
 
 ### Explain source code
 
@@ -82,7 +82,7 @@ If the customizations are complicated, it can be difficult for others to underst
 
 The obvious question to ask is "why not?" In many cases, the difference is because of configuration. There's some missing factor not accounted for in the vanilla environment.
 
-The fact that an issue does not happen in one environment is an important clue. By systematically examining different types of customizations, you can figure out the conditions that reproduce the problem.
+The fact that an issue doesn't happen in one environment is an important clue. By systematically examining different types of customizations, you can figure out the conditions that reproduce the problem.
 
 Some reasons why a problem happens in one environment but not another:
 * **[Customizations](isolate-model-app-issues.md#remove-customizations) are interfering with normal operation.** To confirm, add those customizations one by one to the vanilla environment or remove them from the problem environment.
