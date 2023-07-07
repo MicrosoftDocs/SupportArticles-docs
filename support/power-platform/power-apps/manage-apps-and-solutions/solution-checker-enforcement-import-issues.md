@@ -1,18 +1,19 @@
 ---
-title: Solution checker enforcement issues
+title: Solution checker enforcement blocks or warns on import
 description: Describes an issue in which importing solutions fails due to solution checker enforcement and provides resolutions and workarounds.
 ms.reviewer: squassina
 ms.date: 07/07/2023
 author: jeparson
 ms.author: jeparson
 ---
+
 # Solution checker enforcement blocks or warns on import
 
 _Applies to:_ &nbsp; Power Platform, Solutions
 
 ## Background
 
-[Solution checker enforcement](/power-platform/admin/managed-environment-solution-checker) allows admins to require valid solution checker results before a solution can be imported. The feature requires solution checker to be run before the solution is imported. It doesn't run solution checker on demand during the import process. You can run solution checker using the Power Apps maker portal, PAC CLI, Azure DevOps (ADO) build tasks, or the web API.
+[Solution checker enforcement in Managed Environments (preview)](/power-platform/admin/managed-environment-solution-checker) allows admins to require valid solution checker results before a solution can be imported. The feature requires solution checker to be run before the solution is imported. It doesn't run solution checker on demand during the import process. You can run solution checker using the Power Apps maker portal, PAC CLI, Azure DevOps (ADO) build tasks, or the web API.
 
 ## Symptoms
 
@@ -30,14 +31,14 @@ When you try to [import a solution](/powerapps/maker/data-platform/import-update
 
 ## Cause
 
-This issue occurs because [solution checker enforcement](/power-platform/admin/managed-environment-solution-checker) is enabled in either **Warn** or **Block** mode. Either the solution wasn't run through the checker, or critical violations are present in the results.
+This issue occurs because [solution checker enforcement in Managed Environments (preview)](/power-platform/admin/managed-environment-solution-checker) is enabled in either **Warn** or **Block** mode. Either the solution wasn't run through the checker, or critical violations are present in the results.
 
 ## Resolution
 
 Solution checker must be run on the solution before it can be imported. There are some special considerations to keep in mind:
 
 - Solution checker must be run with the solution checker ruleset. The easiest ways to do this are:
-  - Run solution checker in the [Power Apps maker portal](/power-apps/maker/data-platform/use-powerapps-checker) where the solution checker ruleset is used.
+  - Run solution checker in [Power Apps](/power-apps/maker/data-platform/use-powerapps-checker) where the solution checker ruleset is used.
   - Use [pac solution check](/power-platform/developer/cli/reference/solution#pac-solution-check) where the solution checker ruleset is used by default.
   - If explicitly passing a ruleset ID, use `0AD12346-E108-40B8-A956-9A8F95EA18C9`, which represents the solution checker ruleset.
 - Solution checker must be run within a 90-day window of the import.
