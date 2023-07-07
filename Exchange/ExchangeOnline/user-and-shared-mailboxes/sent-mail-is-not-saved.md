@@ -104,9 +104,6 @@ For more information about this hotfix package, see the following Microsoft Know
 	4) With Delegatesentitemstyle set to 1 and MessageCopyForSentAsEnabled set to false:
 	A copy of the email will be saved in the shared mailbox and no copy in the primary mailbox.
 	 
-If you set DelegateSentItemsStyle=0 in the registry, email messages that you send from a shared mailbox (including on behalf of a shared mailbox) will be copied to the primary mailbox Sent Items folder and not the Sent Items folder of the shared mailbox.	 
-If you set DelegateSentItemsStyle=1 in the registry, email messages that you send from a shared mailbox (including on behalf of a shared mailbox) will be copied to the Sent Items folder of the shared mailbox and no copy will be saved to the Sent Items folder of the primary mailbox.
-
 
 
 ## More information
