@@ -85,12 +85,12 @@ The obvious question to ask is "why not?" In many cases, the difference is becau
 The fact that an issue does not happen in one environment is an important clue. By systematically examining different types of customizations, you can figure out the conditions that reproduce the problem.
 
 Some reasons why a problem happens in one environment but not another:
-* **[Customizations](isolate-model-app-issues#remove-customizations) are interfering with normal operation.** To confirm, add those customizations one by one to the vanilla environment or remove them from the problem environment.
+* **[Customizations](isolate-model-app-issues.md#remove-customizations) are interfering with normal operation.** To confirm, add those customizations one by one to the vanilla environment or remove them from the problem environment.
 * **Tables, relationships, and other components are configured differently.** To confirm, re-examine the differences between the same component in the vanilla and problem environment.
 * **Components could be corrupted.** To confirm, re-create them in the problem environment.
 * **User-specific reasons.** For example, some users have a different [security role](/power-platform/admin/security-roles-privileges) in one environment. To confirm, try alternative ways to access data or perform the same task. Dataverse tables can be accessed in many ways such as in model-driven apps, canvas apps, [Power Apps table designer](/power-apps/maker/canvas-apps/create-edit-tables), [Power Pages](/power-pages/introduction), and [Web API requests](/power-apps/developer/data-platform/webapi/query-data-web-api).
 * **Different version.** The environment may be a different version or in a different geographical region. Check the **About** section in the app or [environment details in Power Platform admin center](/power-platform/admin/environments-overview#environment-details) for version details.
-* **Issues with an environment's server.** To confirm, [examine network traffic](isolate-model-app-issues#find-out-if-the-issue-occurs-when-getting-data-or-showing-data) to determine if the server is sending the right information. Compare it with the network traffic of the vanilla environment.
+* **Issues with an environment's server.** To confirm, [examine network traffic](isolate-model-app-issues.md#find-out-if-the-issue-occurs-when-getting-data-or-showing-data) to determine if the server is sending the right information. Compare it with the network traffic of the vanilla environment.
 
 ## Next steps
 
