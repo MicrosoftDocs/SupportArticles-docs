@@ -87,7 +87,7 @@ If any of the following aren't working, try re-creating them. It can be a simpli
 
 ## Find out if the issue occurs when getting data or showing data
 
-When data isn't showing correctly in an app, it could either be a server issue in providing the data, or an app issue in processing and displaying it. To narrow down the cause, you can try [general methods for isolating the problematic layer](isolate-common-issues.md#data-issues).
+When data isn't showing correctly in an app, it could either be a server issue in providing the data, or an app issue in processing and displaying it. To narrow down the cause, you can try [general methods for isolating the problematic layer](isolate-common-issues#data-issues).
 
 Model-driven apps have a complex data flow. Here are more advanced things to try.
 
@@ -115,7 +115,7 @@ If you suspect that a script is causing an issue, follow these steps:
 
 ## Create a vanilla repro app
 
-The process of creating a [vanilla repro app](vanilla-model-driven-app-repro) may uncover configuration errors that aren't obvious in an environment with many customizations. Even if the problem isn't fixed, you would have narrowed the cause and made it easier to explain the problem to others.
+The process of creating a [vanilla repro app](vanilla-model-driven-app-repro.md) may uncover configuration errors that aren't obvious in an environment with many customizations. Even if the problem isn't fixed, you would have narrowed the cause and made it easier to explain the problem to others.
 
 ## Next steps
 
