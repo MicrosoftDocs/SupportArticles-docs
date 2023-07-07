@@ -6,7 +6,7 @@ items:
 - name: Can't make a remote connection from a CLR trigger
   href: cannot-make-remote-connection-clr-trigger.md
 - name: Character data is incorrect when the code page differs
-  href: character-data-represented-incorrectly-code-page-differs-code-page.md
+  href: character-data-incorrect-code-page-client-compute-differs-database.md
 - name: Error when you run CLR object or create assembly
   href: error-run-clr-object-create-assembly.md
 - name: Execution of CLR fails with TypeInitializationException
