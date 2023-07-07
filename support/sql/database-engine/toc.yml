@@ -93,8 +93,8 @@ items:
     href: performance/resource-monitor-nonyielding-condition.md
   - name: Operations that trigger buffer pool scan may run slowly on large-memory computers
     href: performance/buffer-pool-scan-runs-slowly-large-memory-machines.md
-  - name: Performance issues when using Columstore indexes with large pages
-    href: performance/performance-issues-using-columstore-indexes-large-pages.md
+  - name: Interoperability issues between batch mode processing and large page memory model
+    href: performance/batch-mode-with-large-page-memory-issues.md
   - name: Reducing allocation contention in tempdb
     href: performance/recommendations-reduce-allocation-contention.md
   - name: SchemaMgr Store entries degrade performance
