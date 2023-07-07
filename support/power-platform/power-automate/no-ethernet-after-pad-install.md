@@ -1,6 +1,6 @@
 ---
 title: Ethernet connection interrupted after installation of Power Automate for desktop
-description: Some third party software may interrupted internet connectivity due to certificates installed by Power Automate desktop
+description: Some third party software may interrupt internet connectivity due to certificates installed by Power Automate desktop
 ms.subservice: power-automate-desktop-flows
 ---
 
@@ -16,7 +16,7 @@ After installing Power Automate on your local machine, you no longer have intern
 
 ## Description
 
-By default, Power Automate installs local machine public key certificates in the Personal > Certificates. These certificates allow the runtime to ensure the authenticity of requests coming from the cloud through the on-premises data gateway (note: the use of on-premises data gateways has been deprecated for desktop flows). The existence of these certificates without private keys can cause some third party software to block internet access through ethernet on the machine.
+By default, Power Automate installs local machine public key certificates in the Machine/Local Computer > Personal > Certificates store. These certificates allow the runtime to ensure the authenticity of requests coming from the cloud through the on-premises data gateway (note: the use of on-premises data gateways has been deprecated for desktop flows). The existence of these certificates without private keys can cause some third party software to block internet access through ethernet on the machine.
 
 ## Resolution
 
