@@ -3,6 +3,9 @@ title: Character data is incorrect when the code page differs
 description: Provides workarounds for problems that character data is represented incorrectly when the code page of the client computer differs from the code page of the database.
 ms.date: 07/07/2023
 ms.custom: sap:Database Design and Development
+author: sevend2
+ms.author: v-sidong
+ms.reviewer: aartigoyle, jopilov
 ---
 # Character data is represented incorrectly when the client computer's code page differs from the database's
 
@@ -13,7 +16,7 @@ _Original KB number:_ &nbsp; 904803
 
 Consider the following scenario:
 
-- You use SQL Server Management Studio to query character data from a SQL Server database that uses a non-Unicode data type. For example, the SQL Server database uses the `char` data type, `varchar` data type, or `text` data type.
+- You use SQL Server Management Studio to query character data from a SQL Server database that uses a non-Unicode data type. For example, the SQL Server database uses the `char`, `varchar`, or `text` data type.
 
 - The code page of the client computer differs from the code page of the database. The code page is associated with the collation of the database.
 
@@ -45,15 +48,15 @@ To work around this problem, use one of the following methods:
 
 ### Method 1: Use a Unicode data type instead of a non-Unicode data type
 
-Change the columns to a Unicode data type to avoid all the problems caused by code page translation. For example, use the `nchar` data type, the `nvarchar` data type, or the `ntext` data type.
+Change the columns to a Unicode data type to avoid all the problems caused by code page translation. For example, use the `nchar`, `nvarchar`, or `ntext` data type.
 
 ### Method 2: Use an appropriate collation for the database
 
 If you must use a non-Unicode data type, always make sure that the code page of the database and the code page of any non-Unicode columns can store the non-Unicode data correctly. For example, if you want to store code page 949 (Korean) character data, use a Korean collation for the database. For example, use the `Korean_Wansung_CI_AS` collation for the database.
 
-### Method 3: Use the "binary" data type or the "varbinary" data type
+### Method 3: Use the "binary" or "varbinary" data type
 
-If you want the database to directly store and retrieve the exact byte values of the characters that are handled without trying to perform appropriate code page translation, use the `binary` data type or the `varbinary` data type.
+If you want the database to directly store and retrieve the exact byte values of the characters that are handled without trying to perform appropriate code page translation, use the `binary` or `varbinary` data type.
 
 ### Method 4: Use a different tool to store and retrieve data and disable the "Auto Translate" parameter
 
