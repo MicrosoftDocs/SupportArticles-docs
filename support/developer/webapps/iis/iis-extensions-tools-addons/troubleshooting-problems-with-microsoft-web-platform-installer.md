@@ -136,14 +136,6 @@ If IIS is configured for Shared Configuration, Web PI can't install most additio
 
   For information on how to troubleshoot SQL issues, see [View and Read SQL Server Setup Log Files](/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
 
-- **Custom Installation of SQL Server**  
-
-  For customers who want to customize their SQL Server install outside of Web PI, see [SQL Server Express WebLog](https://stackoverflow.com/questions/2196018/web-platform-installer-and-sql-express-database-setup).
-
-### Issues with Visual Web Developer installation
-
-- For more information, see [troubleshooting guide for failures during Visual Web Developer Installations](https://stackoverflow.com/questions/24910301/issues-when-installing-visual-web-developer-2010).
-
 ## Additional troubleshooting tools, tips, and tricks
 
 The following information contains some additional useful tips and tricks for solving problems you might encounter when installing parts of the Microsoft Web Platform stack with Web PI.
