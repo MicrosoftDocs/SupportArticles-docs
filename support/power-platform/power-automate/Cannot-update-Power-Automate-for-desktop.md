@@ -20,7 +20,7 @@ When trying to open Power Automate for desktop for the first time, the following
 ## Verifying issue
 
 1. Make sure that you have an active internet connection. 
-2. Go to Windows Services and make sure that the "Windows Update" service is not running. 
+2. Go to Windows Services and make sure that the "Windows Update" service **is not** running. 
 
 ## Cause
 
@@ -29,14 +29,14 @@ This issue could occur because the "Windows Update" service is not running/is di
 ## Resolution 
 
 Follow one of the options below: 
-Option 1 
+### Option 1 
 1. Go to Windows Services and enable the Windows Update service. 
 2. Launch Power Automate 
-Option 2 
+### Option 2 
 1. Open the Windows Settings 
 2. Go to Troubleshoot > Other troubleshooters 
 3. Run the Windows Update troubleshooter and wait for it to complete 
 4. Launch Power Automate 
-Option 3 
+### Option 3 
 1. Uninstall Power Automate 
 2. Open the Microsoft Store and install Power Automate 
