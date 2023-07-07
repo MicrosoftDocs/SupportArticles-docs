@@ -15,7 +15,7 @@ _Applies to:_ &nbsp; Power Automate
 
 When trying to open Power Automate for desktop for the first time, the following message is displayed:
 
-:::image type="content" source="media/cannot-update-Power-Automate-for-desktop/Power-Automate-needs-an-update.png" alt-text="Power Automate needs an update.":::
+:::image type="content" source="media/cannot-update-power-automate-for-desktop/Power-Automate-needs-an-update.png" alt-text="Power Automate needs an update.":::
 
 ## Verifying issue
 
