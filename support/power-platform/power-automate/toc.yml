@@ -119,6 +119,8 @@
           href: cannot-access-java-application-elements.md
         - name: Can't execute a shared desktop flow after changing the connection
           href: sharing-deskop-flow-with-connections.md
+        - name: Can't update Power Automate for desktop
+          href: cannot-update-Power-Automate-for-desktop.md
         - name: Cloud flow is suspended due to missing the attended RPA capability
           href: cloud-flow-suspended-missing-attended-rpa-capability.md
         - name: Cloud flow is suspended due to missing the unattended RPA capability
