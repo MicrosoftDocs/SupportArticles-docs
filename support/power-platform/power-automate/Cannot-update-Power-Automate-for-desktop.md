@@ -15,7 +15,7 @@ _Applies to:_ &nbsp; Power Automate
 
 When trying to open Power Automate for desktop for the first time, the following message is displayed:
 
-:::image type="content" source="media/web-automation-action-fails-runtime/imagename.png" alt-text="The Selector builder page that you can use to review and edit CSS selectors." lightbox="media/web-automation-action-fails-runtime/imagename.png":::
+:::image type="content" source="media/Cannot-update-Power-Automate-for-desktop/Power-Automate-needs-an-update.png" alt-text="Power Automate needs an update" lightbox="media/Cannot-update-Power-Automate-for-desktop/Power-Automate-needs-an-update.png":::
 
 ## Verifying issue
 
