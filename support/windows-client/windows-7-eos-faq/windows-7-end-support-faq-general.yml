@@ -2,7 +2,7 @@
 metadata:
   title: FAQ about the end of support for Windows 7
   description: After January 14, 2020, Microsoft no longer provides security updates or support for computers that run Windows 7 for home users.
-  ms.date: 06/10/2022
+  ms.date: 07/07/2023
   author: Deland-Han
   ms.author: delhan
   manager: dcscontentpm
@@ -53,6 +53,8 @@ sections:
           
           ESU aren't available for Office 2010.
 
+          Starting January 2024, any connections to Windows 7 VMs will be blocked to maintain the security of our service. These VMs will still not be deleted, but they can only be accessed by Administrators.
+
       - question: What assistance is available for organizations that are affected by the end of support for Windows 7
         answer: |
           To help reduce security risks and continue to get regular security updates, we recommend that you upgrade to the latest versions of our software in the cloud.
@@ -75,7 +77,9 @@ sections:
 
       - question: What happens to Windows 7 virtual machines (VMs) that are hosted on Azure after January 2023? Will Microsoft remove them
         answer: |
-          Organizations that have Windows 7 VMs in Azure will continue to have access to those VMs after January 2023. Microsoft won't delete those VMs or block access to them. However, Microsoft will stop maintaining those VMs through updates. Therefore, the affected VMs will quickly fall out of compliance.
+          Organizations that have Windows 7 VMs in Azure will continue to have access to those VMs after January 2023.
+          
+          Starting January 2024, any connections to Windows 7 VMs will be blocked to maintain the security of our service. These VMs will still not be deleted, but they can only be accessed by Administrators.
 
       - question: If an organization experiences an issue that requires a new feature, what support can the organization expect
         answer: |
