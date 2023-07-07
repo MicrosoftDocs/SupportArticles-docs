@@ -67,7 +67,7 @@
           href: manage-apps-and-solutions/dataverse-environment-variables.md
         - name: Required fields are missing in Dataverse records
           href: manage-apps-and-solutions/dataverse-records-missing-required-fields.md
-        - name: Solution checker enforcement issues
+        - name: Solution checker enforcement in Managed Environments (preview) blocks or warns on import
           href: manage-apps-and-solutions/solution-checker-enforcement-import-issues.md
         - name: Troubleshoot wrap issues
           href: manage-apps-and-solutions/wrap-issues.md
