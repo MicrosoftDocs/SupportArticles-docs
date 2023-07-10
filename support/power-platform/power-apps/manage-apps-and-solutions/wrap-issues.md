@@ -243,7 +243,7 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
    > ![Create a tag for iOS Provisioning Profile Secret.](media/wrap-issues/ProvisioningProfileSecretTag.png "Create a tag for iOS Provisioning Profile Secret")
 
 
-## Other issues in wrap
+## Other issues in wrap for Power Apps
 
 For all other issues, or if your issue persists after following these steps, reach out to <pamobsup@microsoft.com>. You need to provide a repro video and/or screenshots together with a session ID that can be acquired in the following ways:
 
