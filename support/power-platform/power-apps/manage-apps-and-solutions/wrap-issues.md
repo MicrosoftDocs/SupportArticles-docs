@@ -22,7 +22,7 @@ Ensure that the images you're using in wrap are in a PNG format. Using images in
 
 #### Step 2: Verify that your App Center is correctly configured
 
-Your App Center link must be created as an app within an organization and not a standalone app. The following screenshot shows how to create a new organization in wrap wizard in **Step 5**.
+Your App Center link must be created as an app within an organization and not a standalone app. The following screenshot shows how to create a new organization in wrap wizard in [Step 5](/power-apps/maker/common/wrap/wrap-how-to#step-5-manage-output).
 
     > [!div class="mx-imgBorder"] 
    > ![Create new app center location.](media/wrap-issues/new-app-center-location.png "Create new app center location.")
