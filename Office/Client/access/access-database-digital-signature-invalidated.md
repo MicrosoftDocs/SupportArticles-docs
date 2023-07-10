@@ -40,7 +40,7 @@ The following database usage scenarios are known to invalidate the digital signa
 - You import, modify, or create action queries
 - You import, modify, or create passthrough queries
 - You add, change, or remove Visual Basic for Applications (VBA) references
-- You distribute a database that contains ActiveX controls to a computer that uses a different part of Microsoft 365 than where the digital signature is applied
+- You distribute a database that contains ActiveX controls to a computer that uses a different bit version of Microsoft 365 than where the digital signature is applied
 - The [Perform name autocorrect](https://support.microsoft.com/office/set-name-autocorrect-options-981b70ef-56ea-47a8-8bb4-a93c10a9d98b#bm3) option is enabled and there are pending name corrections
 - The [Track name autocorrect info](https://support.microsoft.com/office/set-name-autocorrect-options-981b70ef-56ea-47a8-8bb4-a93c10a9d98b#bm3) option is enabled after the digital signature is applied 
 
