@@ -137,4 +137,28 @@ If you created a Batch account with pool allocation mode set to **user subscript
 
     After you submit your support request, Azure support will contact you. Quota requests may be completed within a few minutes or up to two business days. Once the quota request is completed or fulfilled, the pool creation should be successful.
 
+## Scenario 4: Transient internal server error during batch pool resizing
+
+### Symptom for Scenario 4
+
+The batch pool has been operating normally for some time. However, the resize operation unexpectedly failed with an internal server error, or the resize operation remained in the resizing state. 
+
+> **Code:** AllocationFailed  
+> **Message:**  
+> Desired number of dedicated nodes could not be allocated  
+> **Values:**
+> Reason - The server encountered an internal error.
+
+### Cause: transient internal server issue
+
+The Batch Service may experience occasional glitches or regional infrastructure issues that can affect the performance of the Batch Service.
+
+### Solution: Retry or create a new pool
+
+1.	To reduce the impact on your production, please retry your resize request after a few minutes or consider using our service in another available region as a workaround.
+2.	If you still encounter any issues, please feel free to contact our customer support team for further assistance.
+
+
+
+
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
