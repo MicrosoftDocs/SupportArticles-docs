@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 280106
 
 This article describes how to set up a linked server from a computer that is running Microsoft SQL Server to an Oracle database and provides basic troubleshooting steps for common errors you may experience when you set up a linked server to Oracle. Most of the information in this article is applicable to environments that are configured to use Microsoft OLEDB Provider for Oracle (MSDAORA). Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Instead, use Oracle's OLE DB provider.
 
-For more information on configuring a linked server using Oracle's OLEDB provider review [How to get up and running with Oracle and Linked Servers](https://techcommunity.microsoft.com/t5/sql-server-support/how-to-get-up-and-running-with-oracle-and-linked-servers/ba-p/318636).
+For more information on configuring a linked server using Oracle's OLEDB provider, review [How to get up and running with Oracle and Linked Servers](https://techcommunity.microsoft.com/t5/sql-server-support/how-to-get-up-and-running-with-oracle-and-linked-servers/ba-p/318636).
 
 > [!IMPORTANT]
 > The current version of the Microsoft ODBC Driver for Oracle complies with the ODBC 2.5 specification, while the OLE DB Provider for Oracle is a native Oracle 7 OCI API provider. Both the driver and provider use the SQL*Net Client (or Net8 client for Oracle 8x) and the Oracle Call Interface (OCI) library, and other Oracle client components, to connect to Oracle databases and retrieve data. The Oracle client components are important, and must be configured correctly to successfully connect to Oracle databases using both the driver and the provider.
@@ -159,7 +159,7 @@ For performance-related issues, search SQL Server Books Online for the **Optimiz
   Make sure that the MSDAORA.dll file is registered correctly. (The MSDAORA.dll file is the Microsoft OLE DB provider for Oracle file.) Use RegSvr32.exe to register Microsoft OLE DB Provider for Oracle.
 
   > [!NOTE]
-  > If you use a third-party Oracle provider, and your Oracle provider cannot run outside a SQL Server process, enable it to run in-process by changing the provider options. To change the provider options, use one of the following methods.
+  > If you use a third-party Oracle provider, and your Oracle provider cannot run outside a SQL Server process, enable it to run in-process by changing the provider options. To change the provider options, use one of the following methods:
   >
   > - Method 1
   > Locate the following registry key. Then, change the value of the AllowInProcess (DWORD) entry to 1. This registry key is located under the corresponding provider name: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Providers\ProviderName`.
