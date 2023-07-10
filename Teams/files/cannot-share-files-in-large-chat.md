@@ -36,7 +36,7 @@ To work around this issue, follow these steps:
    > [!NOTE]
    > Selecting this setting opens the **Sharing settings** dialog box.
    >
-   :::image type="content" source="media/cannot-share-files-in-large-chat/current-sharing-setting.png" alt-text="Screenshot that shows the current sharing setting. In this example, "People currently in this chat with the link can edit.":::
+   :::image type="content" source="media/cannot-share-files-in-large-chat/current-sharing-setting.png" alt-text="Screenshot that shows the current sharing setting. In this example, "People currently in this chat with the link can edit."":::
 1. In **Sharing settings**, select one of the following settings:
 
    - If there are people outside your organization in the chat, select **Anyone**.
