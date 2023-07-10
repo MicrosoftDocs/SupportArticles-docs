@@ -1,7 +1,7 @@
 ---
 title: Required trusted root certificates
 description: Lists the trusted root certificates that are required by Windows operating systems. These trusted root certificates are required for the operating system to run correctly.
-ms.date: 3/24/2022
+ms.date: 07/10/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article lists the trusted root certificates that are required by Windows operating systems. These trusted root certificates are required for the operating system to run correctly.
 
-_Applies to:_ &nbsp; All supported versions of Windows 
+_Applies to:_ &nbsp; Supported versions of Windows Server and Windows Client 
 _Original KB number:_ &nbsp; 293781
 
 ## Summary
