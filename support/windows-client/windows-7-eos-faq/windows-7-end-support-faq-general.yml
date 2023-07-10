@@ -60,10 +60,6 @@ sections:
         answer: |
           Azure Virtual Desktop is a cloud-based service that is delivered on Azure. It's the best virtualized Windows and Office experience. It delivers a multi-user Windows 10 experience that is optimized for Microsoft 365 Apps for enterprise. For customers who are upgrading from Windows 7, Azure Virtual Desktop includes free Windows 7 ESU through 2023. You can use Azure Virtual Desktop to deploy and scale Windows and Office on Azure in minutes, including appropriate security and compliance measures.
 
-      - question: When is Azure Virtual Desktop an appropriate solution
-        answer: |
-          Azure Virtual Desktop is an appropriate option for organizations that can use a virtualization solution. Azure Virtual Desktop delivers a multi-user Windows 10 experience that is optimized for Microsoft 365 Apps for enterprise.
-  
       - question: Where can I find information about the end of support for Windows Server 2008 or Windows 2008 R2
         answer: |
           Support for Windows Server 2008 and Windows Server 2008 R2 ended on January 14, 2020. [Learn more here](/azure/azure-sql/virtual-machines/windows/sql-server-extend-end-of-support).
@@ -72,7 +68,7 @@ sections:
         answer: |
           Organizations that have Windows 7 VMs in Azure will continue to have access to those VMs after January 2023.
           
-          Starting January 2024, any connections to Windows 7 AVDs will be blocked to maintain the security of our service. These AVDs will still not be deleted, but they can only be accessed by Administrators.
+          Starting January 2024, any connections to Windows 7 AVD VMs will be blocked to maintain the security of our service. These VMs will still not be deleted, but they can only be accessed by Administrators.
 
       - question: If an organization experiences an issue that requires a new feature, what support can the organization expect
         answer: |
