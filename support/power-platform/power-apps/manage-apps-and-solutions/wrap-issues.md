@@ -98,9 +98,9 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
 
  - Make sure your Azure key vault is in the Default Subscription for your tenant. 
 
- - Run these PowerShell commands as an admin: 
+ - Run these commands in Power Shell as an admin: 
 
-`Connect-AzureAD -TenantId <your tenant ID>` in Power Shell <br>
+`Connect-AzureAD -TenantId <your tenant ID>`  <br>
 `New-AzureADServicePrincipal -AppId 4e1f8dc5-5a42-45ce-a096-700fa485ba20 -DisplayName "Wrap KeyVault Access App"`
 
 - In your Default subscription's **Access Control (IAM)** on  Azure portal at [https://portal.azure.com](https://portal.azure.com), add a **Reader** role assignment to the **Service Principal** representing your app, e.g. **Wrap KeyVault Access App**. Make sure it is present in both **Subscription's IAM**, and the **Keyvault's IAM**.
@@ -138,9 +138,9 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
    > [!div class="mx-imgBorder"] 
    > ![Select Vault Access policy.](media/how-to-v2/VaultAccessPolicy.png "Select Vault access policy option.")
 
- - Run these PowerShell commands as an admin: 
+ - Run these commands in Power Shell as an admin: 
 
-`Connect-AzureAD -TenantId <your tenant ID>` in Power Shell <br>
+`Connect-AzureAD -TenantId <your tenant ID>` <br>
 `New-AzureADServicePrincipal -AppId 4e1f8dc5-5a42-45ce-a096-700fa485ba20 -DisplayName "Wrap KeyVault Access App"`
 
 - In your Default subscription's **Access Control (IAM)** on  Azure portal at [https://portal.azure.com](https://portal.azure.com), add a **Reader** role assignment to the **Service Principal** representing your app, e.g. **Wrap KeyVault Access App**. Make sure it is present in both **Subscription's IAM**, and the **Keyvault's IAM**.
@@ -208,7 +208,7 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
    > ![Create an Android certificate.](media/how-to-v2/CertificateName.png "Create an Android certificate")
 
 
-- Add a new **Tag** for your **Android Certificate**.
+- Add a new **Tag** for your **Certificate**.
  1. The **Tag name** should be based on the **bundle id** that you used in your **wrap project**. For example, if the **bundle id** for your wrapped app is **com.testApp.wrap**, then the new **Tag name** should be  **com.testApp.wrap.keystore**.
  2. The **Tag value** should correspod to the name you chose for your **Certificate** when uploading a certificate file in the previous step. For example, if your **Cerfificate** is named  **AndroidWrapCertificate**, then the value for the **Tag value** should also be **AndroidWrapCertificate**.
 
@@ -229,7 +229,7 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
    > [!div class="mx-imgBorder"] 
    > ![Create an iOS certificate.](media/how-to-v2/CertificateNameiOS.png "Create an iOS certificate")
 
-- Add a new **Tag** for your **iOS Certificate**.
+- Add a new **Tag** for your **Certificate**.
  1. The **Tag name** should be based on the **bundle id** that you used in your **wrap project**. For example, if the **bundle id** for your wrapped app is **com.testApp.wrap**, then the new **Tag name** should be  **com.testApp.wrap.cert**.
  2. The **Tag value** should correspod to the name you chose for your **Certificate** when uploading a certificate file in the previous step. For example, if your **Cerfificate** is named  **iOSCertificate1**, then the value for the **Tag value** should also be **iOSCertificate1**.
 
