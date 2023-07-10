@@ -12,7 +12,7 @@ ms.author: jeparson
 _Applies to:_ &nbsp; Power Platform, Solutions
 
 > [!IMPORTANT]
-> This article is pre-release documentation and is subject to change.]
+> This article is pre-release documentation and is subject to change.
 
 ## Background
 
