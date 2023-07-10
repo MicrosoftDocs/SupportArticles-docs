@@ -43,7 +43,7 @@ Some advanced customizations require programming knowledge. These include [clien
 
 ## Isolate custom pages
 
-Custom pages are just a special type of canvas app. You can [create a minimal repro canvas app](minimal-canvas-app-repro.md) to demonstrate issues with custom pages.
+Custom pages are just a special type of canvas app. You can [create a minimal repro canvas app](minimal-canvas-app-repro.md) to demonstrate issues with custom pages. First, create a regular canvas app with sample data. If the issue does not happen, it might have to do with how the custom page is integrated in the model-driven app. Create a simplified version of the custom page in a new model-driven app.
 
 ## Export the vanilla repro app
 
@@ -52,6 +52,7 @@ After verifying that an issue also exists in a vanilla environment, you can [cre
 It should include relevant customizations such as:
 
 - the model-driven app, if it's not a standard Microsoft Dynamics app like Customer Service Hub or Sales Hub
+- custom pages
 - dashboards
 - forms
 - relationships
@@ -88,7 +89,7 @@ Some reasons why a problem happens in one environment but not another:
 * **[Customizations](isolate-model-app-issues.md#remove-customizations) are interfering with normal operation.** To confirm, add those customizations one by one to the vanilla environment or remove them from the problem environment.
 * **Tables, relationships, and other components are configured differently.** To confirm, re-examine the differences between the same component in the vanilla and problem environment.
 * **Components could be corrupted.** To confirm, re-create them in the problem environment.
-* **User-specific reasons.** For example, some users have a different [security role](/power-platform/admin/security-roles-privileges) in one environment. To confirm, try alternative ways to access data or perform the same task. Dataverse tables can be accessed in many ways such as in model-driven apps, canvas apps, [Power Apps table designer](/power-apps/maker/canvas-apps/create-edit-tables), [Power Pages](/power-pages/introduction), and [Web API requests](/power-apps/developer/data-platform/webapi/query-data-web-api).
+* **User-specific reasons.** For example, some users have different [security roles](/power-platform/admin/security-roles-privileges) in one environment. To confirm, try alternative ways to access data or perform the same task. Dataverse tables can be accessed in many ways such as in model-driven apps, canvas apps, [Power Apps table designer](/power-apps/maker/canvas-apps/create-edit-tables), [Power Pages](/power-pages/introduction), and [Web API requests](/power-apps/developer/data-platform/webapi/query-data-web-api).
 * **Different version.** The environment may be a different version or in a different geographical region. Check the **About** section in the app or [environment details in Power Platform admin center](/power-platform/admin/environments-overview#environment-details) for version details.
 * **Issues with an environment's server.** To confirm, [examine network traffic](isolate-model-app-issues.md#find-out-if-the-issue-occurs-when-getting-data-or-showing-data) to determine if the server is sending the right information. Compare it with the network traffic of the vanilla environment.
 

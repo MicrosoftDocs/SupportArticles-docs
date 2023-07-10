@@ -37,7 +37,7 @@ The following features can affect normal operation. Try disabling or removing th
 You can temporarily disable all custom scripts by appending this to the URL of the page:
 
 ```http
-&flags=DisableFormHandlers=true,DisableFormLibraries=true,DisableWebResourceControls=true
+&flags=DisableFormLibraries=true,DisableWebResourceControls=true
 ```
 
 ### Custom commands
