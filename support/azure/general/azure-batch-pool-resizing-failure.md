@@ -1,7 +1,7 @@
 ---
 title: Azure batch pool resizing failure
 description: An Azure batch pool resizing failure occurs. You can review the symptoms, understand the causes, and apply solutions to this problem.
-ms.date: 11/24/2022
+ms.date: 07/11/2023
 author: AmandaAZ
 ms.author: v-weizhu
 ms.reviewer: biny
@@ -141,24 +141,26 @@ If you created a Batch account with pool allocation mode set to **user subscript
 
 ### Symptom for Scenario 4
 
-The batch pool has been operating normally for some time. However, the resize operation unexpectedly failed with an internal server error, or the resize operation remained in the resizing state. 
+The batch pool has been operating normally for some time; however, the resize operation unexpectedly failed with an internal server error, or the resize operation remained in the resizing state.
+
+Here's the error message:
 
 > **Code:** AllocationFailed  
 > **Message:**  
 > Desired number of dedicated nodes could not be allocated  
-> **Values:**
+> **Values:**  
 > Reason - The server encountered an internal error.
 
-### Cause: transient internal server issue
+### Cause: Transient internal server issue
 
-The Batch Service may experience occasional glitches or regional infrastructure issues that can affect the performance of the Batch Service.
+The Batch service may experience occasional glitches or regional infrastructure issues that can affect its performance.
 
-### Solution: Retry or create a new pool
+### Solution: Retry the resize operation, create a new pool or use another region
 
-1.	To reduce the impact on your production, please retry your resize request after a few minutes or consider using our service in another available region as a workaround.
-2.	If you still encounter any issues, please feel free to contact our customer support team for further assistance.
+To reduce the impact on your production, use the following methods:
 
-
-
+1.	Retry your resize request after a few minutes.
+2.	Create a new pool.
+3.	Use the Batch service in another available region as failover if the methods above aren't helpful.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
