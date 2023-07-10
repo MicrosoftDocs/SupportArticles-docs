@@ -33,7 +33,7 @@ On a device that has security software installed, users might experience any of 
 
    :::image type="content" source="./media/cannot-sign-in-microsoft-365-desktop-apps/sign-in-hangs-on-authentication.png" alt-text="Screenshot of a sign-in window that gets stuck on authentication.":::
 - The Outlook desktop client displays "Trying to connect…".
-- The Teams desktop client displays "We weren't able to connect. Sign in and we'll try again".
+- The Teams desktop client displays "We weren't able to connect. Sign in and we'll try again."
 
 ## Cause
 
