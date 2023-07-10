@@ -141,7 +141,7 @@ If you created a Batch account with pool allocation mode set to **user subscript
 
 ### Symptom for Scenario 4
 
-The batch pool has been operating normally for some time; however, the resize operation unexpectedly failed with an internal server error, or the resize operation remained in the resizing state.
+The batch pool has been operating normally for some time. However, the resize operation unexpectedly failed with an internal server error, or the resize operation remained in the resizing state.
 
 Here's the error message:
 
@@ -155,12 +155,12 @@ Here's the error message:
 
 The Batch service may experience occasional glitches or regional infrastructure issues that can affect its performance.
 
-### Solution: Retry the resize operation, create a new pool or use another region
+### Solution: Retry the resize operation, create a new pool, or use another region
 
 To reduce the impact on your production, use the following methods:
 
 1.	Retry your resize request after a few minutes.
 2.	Create a new pool.
-3.	Use the Batch service in another available region as failover if the methods above aren't helpful.
+3.	Use the Batch service in another available region as a failover if the methods above aren't helpful.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
