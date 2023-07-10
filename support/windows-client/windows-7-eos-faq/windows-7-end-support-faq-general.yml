@@ -53,7 +53,7 @@ sections:
           
           ESU aren't available for Office 2010.
 
-          Starting January 2024, any connections to Windows 7 VMs will be blocked to maintain the security of our service. These VMs will still not be deleted, but they can only be accessed by Administrators.
+          Starting January 2024, any connections to Windows 7 Azure Virtual Desktop (AVD) will be blocked to maintain the security of our service. These AVDs will still not be deleted, but they can only be accessed by Administrators.
 
       - question: What assistance is available for organizations that are affected by the end of support for Windows 7
         answer: |
@@ -69,7 +69,7 @@ sections:
 
       - question: When is Azure Virtual Desktop an appropriate solution
         answer: |
-          Azure Virtual Desktop is an appropriate option for organizations that can use a virtualization solution. Azure Virtual Desktop delivers a multi-user Windows 10 experience that is optimized for Microsoft 365 Apps for enterprise. For customers who are upgrading from Windows 7, Azure Virtual Desktop includes free Windows 7 ESU through 2023.
+          Azure Virtual Desktop is an appropriate option for organizations that can use a virtualization solution. Azure Virtual Desktop delivers a multi-user Windows 10 experience that is optimized for Microsoft 365 Apps for enterprise.
   
       - question: Where can I find information about the end of support for Windows Server 2008 or Windows 2008 R2
         answer: |
@@ -79,7 +79,7 @@ sections:
         answer: |
           Organizations that have Windows 7 VMs in Azure will continue to have access to those VMs after January 2023.
           
-          Starting January 2024, any connections to Windows 7 VMs will be blocked to maintain the security of our service. These VMs will still not be deleted, but they can only be accessed by Administrators.
+          Starting January 2024, any connections to Windows 7 AVDs will be blocked to maintain the security of our service. These AVDs will still not be deleted, but they can only be accessed by Administrators.
 
       - question: If an organization experiences an issue that requires a new feature, what support can the organization expect
         answer: |
