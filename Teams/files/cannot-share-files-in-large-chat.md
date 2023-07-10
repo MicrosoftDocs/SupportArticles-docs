@@ -21,7 +21,7 @@ ms.date: 7/4/2023
 
 ## Symptoms
 
-When you try to share files in a Microsoft Teams group chat or meeting chat that contains more than 50 participants, the message isn't sent successfully when you select **Send** :::image type="icon" source="media/cannot-share-files-in-large-chat/send-file-icon.png":::.
+When you try to share files in a Microsoft Teams group chat or meeting chat that contains more than 50 participants, the message might not be sent successfully when you select **Send** :::image type="icon" source="media/cannot-share-files-in-large-chat/send-file-icon.png":::.
 
 ## Cause
 
