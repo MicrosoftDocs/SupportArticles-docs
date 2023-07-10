@@ -6,7 +6,7 @@ summary: Welcome to Azure Storage troubleshooting. These articles explain how to
 metadata:
   title: Troubleshoot Azure Storage issues 
   description: Documentation for troubleshooting common issues with Azure Storage. # Required; article description that is displayed in search results. < 160 chars.
-  ms.service: storage #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.service: azure-storage #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.

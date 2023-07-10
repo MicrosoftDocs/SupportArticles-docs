@@ -2,7 +2,7 @@
 title: Azure Storage data protection, backup, and recovery
 description: This article discusses data backup and protection options and recovery scenarios for Azure Storage.
 ms.date: 04/17/2023
-ms.service: storage
+ms.service: azure-storage
 ms.author: v-weizhu
 author: AmandaAZ
 ms.reviewer: jiajwu, ryanchen, azurestocic
