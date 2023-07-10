@@ -3,7 +3,7 @@
   items:
   - name: Access Management
     items:
-    - name: Adding guest users in the M365 admin center
+    - name: Adding guest users in the admin center
       href: ../access-management/cannot-add-guest-users-in-m365-admin-center.md
     - name: '"Application configuration incomplete" error'
       href: ../access-management/error-run-office-365-desktop-setup-tool.md
@@ -63,7 +63,7 @@
       href: ../active-directory/idfix-not-display-objects-errors.md
     - name: Errors when using Azure AD Graph API applications
       href: ../active-directory/errors-using-azure-ad-custom-apps.md
-    - name: Exception Error when you run Directory Sync Configuration Wizard
+    - name: Exception Error when you run Directory Sync Configuration wizard
       href: ../active-directory/exception-with-azure-ad-sync.md
     - name: How to restore deleted user accounts
       href: ../active-directory/restore-deleted-user-accounts.md
@@ -99,6 +99,8 @@
       href: ../authentication/office-365-user-with-name-already-exists.md
     - name: Authentication automatically fails
       href: ../authentication/automatic-authentication-fails.md
+    - name: Can't sign in to Microsoft 365 desktop applications
+      href: ../authentication/cannot-sign-in-microsoft-365-desktop-apps.md  
     - name: Certificate-based authentication fails on iOS
       href: ../authentication/certificate-based-authentication-fails-on-ios.md
     - name: Certificate warning from AD FS
@@ -118,7 +120,7 @@
     - name: Issue with adding Address or CNAME record
       href: ../authentication/error-add-address-cname-record.md
     - name: Repeatedly prompted for credentials
-      href: ../authentication/access-denied-when-connect-to-office-365.md
+      href: ../authentication/access-denied-when-connect-to-office-365.md    
   - name: Diagnostic Logs
     items:
     - name: Collect a Network Monitor trace in Microsoft 365
@@ -145,7 +147,7 @@
       href: ../administration/remove-domain-link-unavailable.md
     - name: A user with this name could not be found
       href: ../administration/user-found-error-fails-resetting-password.md
-    - name: Application cannot be started
+    - name: Application can't be started
       href: ../administration/office-365-application-cannot-be-started.md
     - name: Can't add a domain
       href: ../administration/administrator-failed-adding-domain.md
@@ -201,11 +203,11 @@
       href: ../installation/desktop-setup-tool-logging-errors.md
     - name: Error 12 when installing Office Click-to-Run
       href: ../installation/click-to-run-installation-error-12.md
-    - name: Error 30050-1039 (0) when installing M365 Apps for enterprise
+    - name: Error 30050-1039 (0) when installing Microsoft 365 Apps for enterprise
       href: ../installation/error-30050-1039-0.md
     - name: Error when installing Microsoft 365 apps
       href: ../installation/cannot-access-powershell-file-error.md
-    - name: Error when uninstalling O365 Pro Plus
+    - name: Error when uninstalling Microsoft 365 Pro Plus
       href: ../installation/something-went-wrong-30016-4-error.md
     - name: Install Microsoft 365 apps
       href: ../installation/install-apps.md
@@ -289,7 +291,7 @@
       href: ../sign-in/we-are-having-trouble-signing-you-in-error.md
     - name: Federated user is repeatedly prompted for credentials
       href: ../sign-in/federated-user-repeatedly-prompted-for-credentials.md
-    - name: Forgot sign-in password to M365, Azure, or Intune
+    - name: Forgot sign-in password to Microsoft 365, Azure, or Intune
       href: ../sign-in/forgot-sign-in-password.md
     - name: Issue when sign in Microsoft 365
       href: ../sign-in/exchange-online-application-service-principal-disabled.md
