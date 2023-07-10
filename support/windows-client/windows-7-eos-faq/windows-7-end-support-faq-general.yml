@@ -44,10 +44,6 @@ sections:
 
           **Last resort path:** Buy Extended Security Updates to protect on-premises servers and desktops for three more years.
 
-      - question: If an organization can't transition from Windows 7 before the end of support deadline, what are its options
-        answer: |
-          If you are using Windows 7 Azure Virtual Desktop (AVD), starting January 2024, any connections to the AVD will be blocked to maintain the security of our service. These AVDs will still not be deleted, but they can only be accessed by Administrators.
-
       - question: What assistance is available for organizations that are affected by the end of support for Windows 7
         answer: |
           To help reduce security risks and continue to get regular security updates, we recommend that you upgrade to the latest versions of our software in the cloud.
