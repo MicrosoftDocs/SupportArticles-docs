@@ -22,21 +22,13 @@ Ensure that the images you're using in wrap are in a PNG format. Using images in
 
 #### Step 2: Verify that your App Center is correctly configured
 
-Your App Center link must be created as an app within an organization and not a standalone app. The following screenshot shows how to create a new organization.
+Your App Center link must be created as an app within an organization and not a standalone app. The following screenshot shows how to create a new organization in wrap wizard in **Step 5**.
 
-   :::image type="content" source="media/wrap-issues/add-new-organization.png" alt-text="Screenshot of how to add a new organization in App Center.":::
+    > [!div class="mx-imgBorder"] 
+   > ![Create new app center location.](media/wrap-issues/new-app-center-location.png "Create new app center location.")
 
-Check that the access token you've created is correct.
+For more information, see [Create an App Center container for your mobile app in wrap for Power Apps](/power-apps/maker/common/wrap/wrap-how-to#step-5-manage-output).
 
-- The correct way to check the access token: Select the app you created, and then select **Settings** > **App API Tokens**.
-- The incorrect way to check the access token: **Account Settings** > **User API Tokens**.
-
-Verify that the iOS or Android app you created has the right configurations.
-
-- iOS: OS = Custom
-- Android: OS = Android, Platform = React Native
-
-For more information, see steps 8 and 9 in [Create an App Center container for your mobile app](/power-apps/maker/common/wrap/how-to#create-an-app-center-container-for-your-mobile-app).
 
 #### Step 3: Verify that your key vault configuration is correct
 
