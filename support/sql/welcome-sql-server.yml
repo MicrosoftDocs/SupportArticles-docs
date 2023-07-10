@@ -157,4 +157,6 @@ landingContent:
         - text: DBCC commands
           url: /sql/t-sql/database-console-commands/dbcc-transact-sql
         - text: Database Engine events and errors
-          url: /sql/relational-databases/errors-events/database-engine-events-and-errors         
+          url: /sql/relational-databases/errors-events/database-engine-events-and-errors   
+        - text: SQL Server product documentation
+          url: /sql 
