@@ -46,14 +46,7 @@ sections:
 
       - question: If an organization can't transition from Windows 7 before the end of support deadline, what are its options
         answer: |
-          To help organizations protect data and applications during the end of support transition, especially those that can't complete the transition before the end-of-support date, we offer the following options:
-          
-          - **Azure Virtual Desktop**. An appropriate option for organizations that can use a virtualization solution. Azure Virtual Desktop is the only cloud-based service that delivers a multi-user Windows 10 experience and is optimized for Microsoft 365 Apps for enterprise. This option includes free Windows 7 ESU.  
-          - **Windows 7 Extended Security Updates (ESU)**. A last-resort option. Organizations can purchase Windows 7 ESU for their devices. ESU are also available for Windows Server 2008, Windows Server 2008 R2, SQL Server 2008, and SQL Server 2008 R2. For more information about Windows Server ESU offerings, see [Extended Security Updates frequently asked questions](https://www.microsoft.com/cloud-platform/extended-security-updates).  
-          
-          ESU aren't available for Office 2010.
-
-          Starting January 2024, any connections to Windows 7 Azure Virtual Desktop (AVD) will be blocked to maintain the security of our service. These AVDs will still not be deleted, but they can only be accessed by Administrators.
+          If you are using Windows 7 Azure Virtual Desktop (AVD), starting January 2024, any connections to the AVD will be blocked to maintain the security of our service. These AVDs will still not be deleted, but they can only be accessed by Administrators.
 
       - question: What assistance is available for organizations that are affected by the end of support for Windows 7
         answer: |
