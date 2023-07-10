@@ -2,7 +2,7 @@
 title: Solution checker enforcement in Managed Environments (preview) blocks or warns on import
 description: Describes an issue in which importing solutions fails due to solution checker enforcement and provides resolutions and workarounds.
 ms.reviewer: squassina
-ms.date: 07/07/2023
+ms.date: 07/10/2023
 author: jeparson
 ms.author: jeparson
 ---
@@ -10,6 +10,9 @@ ms.author: jeparson
 # Solution checker enforcement in Managed Environments (preview) blocks or warns on import
 
 _Applies to:_ &nbsp; Power Platform, Solutions
+
+> [!IMPORTANT]
+> This article is pre-release documentation and is subject to change.]
 
 ## Background
 
