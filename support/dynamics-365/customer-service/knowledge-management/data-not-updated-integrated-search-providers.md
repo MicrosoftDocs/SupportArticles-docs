@@ -3,7 +3,7 @@ title: Data isn't updated on the Insights tab for integrated search providers
 description: Provides a resolution for the issue where data isn't updated on the Insights tab for integrated search providers in Dynamics 365 Customer Service.
 ms.author: ravimanne
 ms.reviewer: sdas
-ms.date: 05/23/2023
+ms.date: 07/10/2023
 ---
 # Data isn't updated on the Insights tab for integrated search providers
 
@@ -27,6 +27,6 @@ Take the following troubleshooting steps to diagnose and fix the issue:
 - Make sure you haven't selected the **No refresh** option for **Refresh interval** for a data provider.
 - If the source is authenticated, make sure that the secret provided is correct.
 
-If the issue persists, contact [Microsoft Support](https://support.microsoft.com/) to raise a ticket.
+If the issue persists, contact Microsoft Support to raise a ticket.
 
 For more information about managing a search provider, see [Manage integrated search providers](/dynamics365/customer-service/add-search-provider#manage-integrated-search-providers).
