@@ -59,7 +59,7 @@ You can view these conditions for each device in the Azure portal and in the dev
   3. Select the *Enable Browser Access* button.
   4. In the Chrome browser, sign out of Microsoft 365 and restart Chrome.
 
-- Desktop applications must use modern authentication methods, which rely on displaying an authentication prompt in a web browser or in an authentication broker. Scripts and automation that [send passwords directly](/azure/active-directory/develop/v2-oauth-ropc) can prove device identity only if they use an authentication broker, which is currently only available in Windows.
+- Desktop applications must use modern authentication methods, which rely on displaying an authentication prompt in a web browser or in an authentication broker. Scripts and automation that [send passwords directly](/azure/active-directory/develop/v2-oauth-ropc) can prove device identity only if they use an authentication broker. Currently, it is only available in Windows.
  
 ## Devices are blocked and no quarantine email is received
 
