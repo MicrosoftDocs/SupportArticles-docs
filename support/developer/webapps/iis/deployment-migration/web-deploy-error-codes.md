@@ -161,7 +161,7 @@ A proxy gateway is preventing Web Deploy from communicating with the remote Web 
 Web Deploy doesn't read system proxy settings. As a workaround, try disabling the system proxy by doing the following steps:
 
 1. Start Internet Explorer.
-1. Click **Tools** > **Options**.
+1. Select **Tools** > **Options**.
 1. Select **Connection**.
 1. Select **LAN Settings**.
 1. Disable all checkboxes.
