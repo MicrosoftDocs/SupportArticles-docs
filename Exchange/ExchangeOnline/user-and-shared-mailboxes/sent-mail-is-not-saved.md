@@ -100,6 +100,6 @@ The following table lists the expected behavior based on different combinations 
 |0|True|A copy of the email will be saved in both the primary mailbox and the shared mailbox.|
 |1|True|Two copies of the email will be saved in the shared mailbox and no copies in the primary mailbox.|
 |0|False|A copy of the email will be saved in the primary mailbox and no copies in the shared mailbox.|
-|1|False|A copy of the email will be saved in the shared mailbox and no copy in the primary mailbox.|
+|1|False|A copy of the email will be saved in the shared mailbox and no copies in the primary mailbox.|
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet forums](/answers/topics/office-exchange-server-itpro.html).
