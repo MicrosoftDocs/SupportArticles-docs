@@ -6,7 +6,7 @@ ms.reviewer: bernawy
 ms.service: active-directory
 ms.subservice: app-mgmt
 ---
-# Error AADSTS50011 - The reply URL specified in the request does not match
+# Error AADSTS50011 with SAML authentication - The reply URL specified in the request does not match
 
 This article provides a resolution to the AADSTS50011 error that occurs during federated authentication with Azure Active Directory (Azure AD).
 
