@@ -198,7 +198,7 @@ Level: Warning
 Keywords: Classic 
 User: N/A 
 Computer: 
-Description: Drive with path '\\?\E:\temp$\arrcache\' is being marked unhealthy. The data contains the error code. 
+Description: Drive with path '\?\E:\temp$\arrcache\' is being marked unhealthy. The data contains the error code. 
 Event Xml: 
 ```
 

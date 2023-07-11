@@ -124,7 +124,7 @@ In this scenario, consider that you have a server certificate that contains the 
 
     :::image type="content" source="media/troubleshooting-ssl-related-issues-server-certificate/ssl-diagnostics-window-error-message.png" alt-text="Screenshot of the SSL Diagnostics window, the error message is highlighted.":::
 
-    **CertVerifyCertificateChainPolicy** will fail with **CERT\_E\_UNTRUSTEDROOT (0x800b0109)**, if the root CA certificate isn't trusted root.
+    `CertVerifyCertificateChainPolicy` will fail with **CERT\_E\_UNTRUSTEDROOT (0x800b0109)**, if the root CA certificate isn't trusted root.
 
  1. To fix this error, add the CA's certificate to the "Trusted Root CA" store under My computer account on the server. You may also get the following error:
 
