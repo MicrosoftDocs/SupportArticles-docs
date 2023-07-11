@@ -48,11 +48,11 @@ You can check this time-out by enabling [Failed Request Tracing](https://www.iis
 83. GENERAL_SET_REQUEST_HEADER HeaderName="Connection", HeaderValue="", Replace="true" 16:50:21.033
 ```
 
-The following example shows how this might look on the target server's Failed Request Tracing logs. You can validate that you have found the correct request by matching up the "X-ARR-LOG_ID" values in both traces.
+The following example shows how this might look on the target server's Failed Request Tracing logs. You can validate that you have found the correct request by matching up the "X-ARR-LOG-ID" values in both traces.
 
 ```output
 185. GENERAL_REQUEST_HEADERS Headers="Connection: Keep-Alive Content-Length: 0 Accept: \*/\* Accept-Encoding: gzip, deflate Accept-Language: en-US Host: test Max-Forwards: 10 User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0) X-Original-URL: /time/ X-Forwarded-For: 192.168.0.204:49247 X-ARR-LOG-ID: dbf06c50-adb0-4141-8c04-20bc2f193a61 
-*&lt;multiple entries skipped for brevity&gt;* 
+<multiple entries skipped for brevity>* 
 345. GENERAL_FLUSH_RESPONSE_END BytesSent="0", ErrorCode="An operation was attempted on a nonexistent network connection. (0x800704cd)" 16:51:06.240
 ```
 
@@ -114,7 +114,7 @@ The first step is to verify that the member servers are online. To check this, g
 
 :::image type="content" source="media/troubleshooting-502-errors-in-arr/servers-node-under-service-farm.png" alt-text="Screenshot that shows you how to navigate to the Servers node under the Server farm in IIS Manager.":::
 
-To bring back the offline servers, right-click on the server name and select **Add to Load Balancing**. If you can't bring the servers back online, verify if the member servers are reachable from the ARR server. Check the **trace Messages** pane in the **Servers** page to look for some clues about the problem. If you're using Web Farm Framework (WFF) 2.0, you may receive this error when the application pool restarts. You need to restart the Web Farm Service to recover.
+To bring back the offline servers, right-click on the server name, and select **Add to Load Balancing**. If you can't bring the servers back online, verify if the member servers are reachable from the ARR server. Check the **trace Messages** pane in the **Servers** page to look for some clues about the problem. If you're using Web Farm Framework (WFF) 2.0, you may receive this error when the application pool restarts. You need to restart the Web Farm Service to recover.
 
 ## WinHTTP or WebIO tracing
 
@@ -156,7 +156,7 @@ To analyze the log,
     337  2:32:22 PM  7/22/2011  32.6380489  w3wp.exe (1432)  WINHTTP_MicrosoftWindowsWinHttp  WINHTTP_MicrosoftWindowsWinHttp:12:32:23.123 ::current thread is not impersonating 
     340  2:32:22 PM  7/22/2011  32.6380584  w3wp.exe (1432)  WINHTTP_MicrosoftWindowsWinHttp  WINHTTP_MicrosoftWindowsWinHttp:12:32:23.123 ::sys-recver processing WebReceiveHttpResponse completion (error-cdoe = ? (0x5b4), overlapped = 003728F0) 
     341  2:32:22 PM  7/22/2011  32.6380606  w3wp.exe (1432)  WINHTTP_MicrosoftWindowsWinHttp  WINHTTP_MicrosoftWindowsWinHttp:12:32:23.123 ::sys-recver failed to receive headers; error = ? (1460)
-    342  2:32:22 PM  7/22/2011  32.6380800  w3wp.exe (1432)  WINHTTP_MicrosoftWindowsWinHttp  WINHTTP_MicrosoftWindowsWinHttp:12:32:23.123 ::ERROR_WINHTTP_FROM_WIN32 mapped (?) 1460 to (ERROR_WINHTTP_TIMEOUT) 12002 |
+    342  2:32:22 PM  7/22/2011  32.6380800  w3wp.exe (1432)  WINHTTP_MicrosoftWindowsWinHttp  WINHTTP_MicrosoftWindowsWinHttp:12:32:23.123 ::ERROR_WINHTTP_FROM_WIN32 mapped (?) 1460 to (ERROR_WINHTTP_TIMEOUT) 12002 
     343  2:32:22 PM  7/22/2011  32.6380829  w3wp.exe (1432)  WINHTTP_MicrosoftWindowsWinHttp  WINHTTP_MicrosoftWindowsWinHttp:12:32:23.123 ::sys-recver returning ERROR_WINHTTP_TIMEOUT (12002) from RecvResponse() 
     344  2:32:22 PM  7/22/2011  32.6380862  w3wp.exe (1432)  WINHTTP_MicrosoftWindowsWinHttp  WINHTTP_MicrosoftWindowsWinHttp:12:32:23.123 ::sys-req completes recv-headers inline (sync); error = ERROR_WINHTTP_TIMEOUT (12002) 
    ```
@@ -165,7 +165,7 @@ To analyze the log,
   
    ```output
     42  2:26:39 PM  7/22/2011  18.9279133  WINHTTP_MicrosoftWindowsWinHttp  WINHTTP_MicrosoftWindowsWinHttp:12:26:39.704 ::WinHttpReceiveResponse(0x11d23d0, 0x0)  {WINHTTP_MicrosoftWindowsWinHttp:4, NetEvent:3} 
-     43  2:26:39 PM  7/22/2011  18.9279633  WINHTTP_MicrosoftWindowsWinHttp  WINHTTP_MicrosoftWindowsWinHttp:12:26:39.704 ::sys-recver starts in _INIT state  {WINHTTP_MicrosoftWindowsWinHttp:4, NetEvent:3} 
+    43  2:26:39 PM  7/22/2011  18.9279633  WINHTTP_MicrosoftWindowsWinHttp  WINHTTP_MicrosoftWindowsWinHttp:12:26:39.704 ::sys-recver starts in _INIT state  {WINHTTP_MicrosoftWindowsWinHttp:4, NetEvent:3} 
     44  2:26:39 PM  7/22/2011  18.9280469  WINHTTP_MicrosoftWindowsWinHttp  WINHTTP_MicrosoftWindowsWinHttp:12:26:39.704 ::current thread is not impersonating  {WINHTTP_MicrosoftWindowsWinHttp:4, NetEvent:3} 
     45  2:26:39 PM  7/22/2011  18.9280776  WINHTTP_MicrosoftWindowsWinHttp  WINHTTP_MicrosoftWindowsWinHttp:12:26:39.704 ::sys-recver processing WebReceiveHttpResponse completion (error-cdoe = WSAETIMEDOUT (0x274c), overlapped = 003728F0)  {WINHTTP_MicrosoftWindowsWinHttp:4, NetEvent:3} 
     46  2:26:39 PM  7/22/2011  18.9280802  WINHTTP_MicrosoftWindowsWinHttp  WINHTTP_MicrosoftWindowsWinHttp:12:26:39.704 ::sys-recver failed to receive headers; error = WSAETIMEDOUT (10060) {WINHTTP_MicrosoftWindowsWinHttp:4, NetEvent:3} 

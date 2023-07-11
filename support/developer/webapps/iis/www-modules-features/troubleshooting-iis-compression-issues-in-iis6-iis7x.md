@@ -246,7 +246,7 @@ Perform the following steps to troubleshoot compression issues:
     1. Run the following command to stop the trace.
 
        ```console
-        Logman stop trace compressionTrace -ets
+        logman stop trace compressionTrace -ets
        ```
 
     1. Convert the trace to text file.

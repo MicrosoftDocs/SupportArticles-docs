@@ -189,17 +189,17 @@ For more information about why content isn't cached by *HTTP.sys* in kernel, see
 ARR logs events to the Application event log when disk failures occur and mark the disk as unhealthy.
 
 ```output
- Log Name: Application 
- Source: Application Request Routing 
- Date: 11/2/2009 5:26:59 PM 
- Event ID: 1006 
- Task Category: None 
- Level: Warning 
- Keywords: Classic 
- User: N/A 
- Computer: 
- Description: Drive with path '\\?\E:\temp$\arrcache\' is being marked unhealthy. The data contains the error code. 
- Event Xml: 
+Log Name: Application 
+Source: Application Request Routing 
+Date: 11/2/2009 5:26:59 PM 
+Event ID: 1006 
+Task Category: None 
+Level: Warning 
+Keywords: Classic 
+User: N/A 
+Computer: 
+Description: Drive with path '\\?\E:\temp$\arrcache\' is being marked unhealthy. The data contains the error code. 
+Event Xml: 
 ```
 
 ## More information
