@@ -19,15 +19,13 @@ appliesto:
   - Outlook 2016
   - Outlook on the web
 search.appverid: MET150
-ms.date: 5/19/2022
+ms.date: 7/11/2023
 ---
 
 # "Send updates" prompt not displayed when updating meetings
 
-_Original KB number:_ &nbsp; 3197165
-
 > [!IMPORTANT]
-> In response to user feedback, we have reintroduced the "Send updates" prompt in the latest versions of Outlook for Windows. The information in this article does not apply to Microsoft 365 Current Channel users running Version 2305 (Build 16501.20000) or later.
+> Based on user feedback, we have reintroduced the "Send updates" prompt in the latest versions of Outlook for Windows. The information in this article doesn't apply to Microsoft 365 Current Channel users running version 2305 (Build 16501.20000) or later.
 
 When a meeting organizer updates a meeting by adding or removing attendees, the following notifications are no longer displayed in Microsoft Outlook:
 
