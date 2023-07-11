@@ -71,7 +71,7 @@ Operating system components, such as IIS, are installed with Windows setup techn
 
 **Windows Vista, Windows 7, Windows Server 2008, and Windows Server 2008 R2**
 
-Operating system components on Windows Vista, Windows 7, Windows Server 2008, and Windows Server 2008 R2 use component-based setup. The log file for operating system components is stored in the *%windir%\logs\cbs* directory. You can open it with the command:
+Operating system components on Windows Vista, Windows 7, Windows Server 2008, and Windows Server 2008 R2 use component-based setup. The log file for operating system components is stored in the *%windir%\logs\cbs* directory. You can open it with the folowing command:
 
 ```Console
 notepad %windir%\logs\cbs\cbs.log
@@ -79,7 +79,7 @@ notepad %windir%\logs\cbs\cbs.log
 
 For more information, see [Optional Component Setup Log Diagnoser](https://technet.microsoft.com/library/cc732334.aspx).
 
-IIS 7.0 (Windows Vista and Windows Server 2008) and IIS 7.5 (Windows 7 and Windows Server 2008 R2) setup generates a separate setup log file, located in the `%windir%` directory. You can open this log file with the command:
+IIS 7.0 (Windows Vista and Windows Server 2008) and IIS 7.5 (Windows 7 and Windows Server 2008 R2) setup generates a separate setup log file, located in the `%windir%` directory. You can open this log file with the following command:
 
 ```Console
 notepad %windir%\iis7.log
@@ -87,17 +87,17 @@ notepad %windir%\iis7.log
 
 ### Products installed using Windows Installer (MSI) technology
 
-You can use the [Windows Installer technology](https://msdn.microsoft.com/library/aa371366(VS.85).aspx) for Web platform components such as Microsoft® SQL Server® and Visual Web Developer 2008 Express Edition. To look at the logs, open Internet Explorer and type the following into the address bar:
+You can use the [Windows Installer technology](https://msdn.microsoft.com/library/aa371366(VS.85).aspx) for Web platform components such as Microsoft® SQL Server® and Visual Web Developer 2008 Express Edition. To look at the logs, open Internet Explorer and type the following path in the address bar:
 
 ```Console
 %localappdata%\Microsoft\Web Platform Installer\logs\install
 ```
 
-Web PI also displays a link to the log file that failed in the summary screen. For more information,  see the [detailed description of Windows Installer error codes](https://msdn.microsoft.com/library/aa372835(VS.85).aspx).
+Web PI also displays a link to the log file that failed in the summary screen. For more information, see the [detailed description of Windows Installer error codes](https://msdn.microsoft.com/library/aa372835(VS.85).aspx).
 
 ### Products installed using the Microsoft Web Deployment Tool technology
 
-The Web Deployment tool offers a way for Web applications to join the Web PI ecosystem by adding a few manifest files to an existing compressed file (Zip) package. Web PI calls the Web Deployment tool and installs the Web application on an IIS Web site. The Web Deployment Tool technology is used for all Web applications found in the Windows Web App Gallery. Note that the Web Deployment Tool logs all its information into a file named *x86_msdeploy.txt* (32-bit system) or *x64_msdeploy.txt* (64-bit system).
+The Web Deployment tool offers a way for Web applications to join the Web PI ecosystem by adding a few manifest files to an existing compressed file (Zip) package. Web PI calls the Web Deployment tool and installs the Web application on an IIS Web site. The Web Deployment Tool technology is used for all Web applications found in the Windows Web App Gallery. Note that the Web Deployment tool logs all its information into a file named *x86_msdeploy.txt* (32-bit system) or *x64_msdeploy.txt* (64-bit system).
 
 ### Known issues
 
@@ -188,7 +188,7 @@ The trace file called *WebPI.log* file is also written to the *%programfiles%\Mi
 
 ### Cleaning the Web PI Cache
 
-Web PI is caching the product catalog and other files to optimize startup time. If the product catalog seems to be outdated or if incorrect data is displayed in Web PI, delete the cache with:
+Web PI caches the product catalog and other files to optimize startup time. If the product catalog seems to be outdated or if incorrect data is displayed in Web PI, delete the cache using the following command:
 
 ```Console
 del /q "%localappdata%\Microsoft\web platform installer\*"
@@ -196,4 +196,4 @@ del /q "%localappdata%\Microsoft\web platform installer\*"
 
 ## Additional help
 
-If you have exhausted the troubleshooting tips and tricks in this article and are still having problems, visit the Web Platform Installer forum at <https://forums.iis.net/1155.aspx>.
+If you have exhausted the troubleshooting tips and tricks in this article and are still having problems, visit the [Web Platform Installer forum](https://forums.iis.net/1155.aspx).

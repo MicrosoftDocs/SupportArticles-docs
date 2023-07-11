@@ -38,21 +38,23 @@ The win32 status 12002 maps to the same ERROR\_WINHTTP\_TIMEOUT error reported i
 
 You can check this time-out by enabling [Failed Request Tracing](https://www.iis.net/learn/troubleshoot/using-failed-request-tracing/troubleshooting-failed-requests-using-tracing-in-iis) on the IIS server. The first point that you can see, in the failed request trace log and this is where the request was sent to in the ARR\_SERVER\_ROUTED event. The second point is the X-ARR-LOG-ID, which you can use to track the request on the target server. This helps to trace the target or destination of the HTTP request:
 
-| 77. | ARR\_SERVER\_ROUTED | RoutingReason="LoadBalancing", Server="192.168.0.216", State="Active", TotalRequests="3", FailedRequests="2", CurrentRequests="1", BytesSent="648", BytesReceived="0", ResponseTime="15225" 16:50:21.033 |
-| --- | --- | --- |
-| 78. | GENERAL\_SET\_REQUEST\_HEADER | HeaderName="Max-Forwards", HeaderValue="10", Replace="true" 16:50:21.033 |
-| 79. | GENERAL\_SET\_REQUEST\_HEADER | HeaderName="X-Forwarded-For", HeaderValue="192.168.0.204:49247", Replace="true" 16:50:21.033 |
-| 80. | GENERAL\_SET\_REQUEST\_HEADER | HeaderName="X-ARR-SSL", HeaderValue="", Replace="true" 16:50:21.033 |
-| 81. | GENERAL\_SET\_REQUEST\_HEADER | HeaderName="X-ARR-ClientCert", HeaderValue="", Replace="true" 16:50:21.033 |
-| 82. | GENERAL\_SET\_REQUEST\_HEADER | HeaderName="X-ARR-LOG-ID", HeaderValue="dbf06c50-adb0-4141-8c04-20bc2f193a61", Replace="true" 16:50:21.033 |
-| 83. | GENERAL\_SET\_REQUEST\_HEADER | HeaderName="Connection", HeaderValue="", Replace="true" 16:50:21.033 |
+```output
+77.  ARR\_SERVER\_ROUTED  RoutingReason="LoadBalancing", Server="192.168.0.216", State="Active", TotalRequests="3", FailedRequests="2", CurrentRequests="1", BytesSent="648", BytesReceived="0", ResponseTime="15225" 16:50:21.033 
+78. GENERAL\_SET\_REQUEST\_HEADER HeaderName="Max-Forwards", HeaderValue="10", Replace="true" 16:50:21.033 
+79. GENERAL\_SET\_REQUEST\_HEADER HeaderName="X-Forwarded-For", HeaderValue="192.168.0.204:49247", Replace="true" 16:50:21.033 
+80. GENERAL\_SET\_REQUEST\_HEADER HeaderName="X-ARR-SSL", HeaderValue="", Replace="true" 16:50:21.033 
+81. GENERAL\_SET\_REQUEST\_HEADER HeaderName="X-ARR-ClientCert", HeaderValue="", Replace="true" 16:50:21.033 
+82. GENERAL\_SET\_REQUEST\_HEADER HeaderName="X-ARR-LOG-ID", HeaderValue="dbf06c50-adb0-4141-8c04-20bc2f193a61", Replace="true" 16:50:21.033 
+83. GENERAL\_SET\_REQUEST\_HEADER HeaderName="Connection", HeaderValue="", Replace="true" 16:50:21.033
+```
 
 The following example shows how this might look on the target server's Failed Request Tracing logs. You can validate that you have found the correct request by matching up the "X-ARR-LOG\_ID" values in both traces.
 
-| 185. | GENERAL\_REQUEST\_HEADERS Headers="Connection: Keep-Alive Content-Length: 0 Accept: \*/\* Accept-Encoding: gzip, deflate Accept-Language: en-US Host: test Max-Forwards: 10 User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0) X-Original-URL: /time/ X-Forwarded-For: 192.168.0.204:49247 X-ARR-LOG-ID: dbf06c50-adb0-4141-8c04-20bc2f193a61 |
-| --- | --- |
-| *&lt;multiple entries skipped for brevity&gt;* |
-| 345. | GENERAL\_FLUSH\_RESPONSE\_END BytesSent="0", ErrorCode="An operation was attempted on a nonexistent network connection. (0x800704cd)" 16:51:06.240 |
+```output
+185. GENERAL\_REQUEST\_HEADERS Headers="Connection: Keep-Alive Content-Length: 0 Accept: \*/\* Accept-Encoding: gzip, deflate Accept-Language: en-US Host: test Max-Forwards: 10 User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0) X-Original-URL: /time/ X-Forwarded-For: 192.168.0.204:49247 X-ARR-LOG-ID: dbf06c50-adb0-4141-8c04-20bc2f193a61 
+*&lt;multiple entries skipped for brevity&gt;* 
+345. GENERAL\_FLUSH\_RESPONSE\_END BytesSent="0", ErrorCode="An operation was attempted on a nonexistent network connection. (0x800704cd)" 16:51:06.240
+```
 
 In the previous example, you can see that the ARR server disconnected before the HTTP response was sent. The timestamp for GENERAL\_FLUSH\_RESPONSE\_END can be used as a rough guide to find the corresponding entry in the IIS logs on the destination server.
 
@@ -70,7 +72,7 @@ Although the member server log indicates that the response was sent in 45 second
 
 So, in this case, you can clearly see that the ARR timeout was shorter than the execution of the request. Therefore, you might want to check to see if this execution time was typical or if you needed to look into why the request was taking longer than expected. If this execution time was expected and normal, increasing the ARR timeout should resolve the error.
 
-Other possible reasons for **ERROR\_WINHTTP\_TIMEOUT** include:
+Other possible reasons for ERROR\_WINHTTP\_TIMEOUT include:
 
 - `ResolveTimeout`: Occurs if name resolution takes longer than the specified timeout period.
 - `ConnectTimeout`: Occurs if it takes longer than the specified timeout period to connect to the server after the name resolved.
@@ -79,7 +81,7 @@ Other possible reasons for **ERROR\_WINHTTP\_TIMEOUT** include:
 
 When you observe the first two reasons, `ResolveTimeout` and `ConnectTimeout`, the troubleshooting methodology outlined previously wouldn't work. This is because you wouldn't see any traffic on the target server and therefore wouldn't know the error code. So, in this case of `ResolveTimeout` or `ConnectTimeout` you might want to capture a WinHTTP trace for additional insight. See the [WinHTTP or WEBIO tracing](#winhttp-or-webio-tracing) section and at the following blogs for other examples on troubleshooting and tracing:
 
-- [502.3 Bad Gateway &quot;The operation timed out&quot; with IIS Application Request Routing (ARR)](https://blogs.iis.net/richma/archive/2010/07/03/502-3-bad-gateway-the-operation-timed-out-with-iis-application-request-routing-arr.aspx)
+- [502.3 Bad Gateway "The operation timed out" with IIS Application Request Routing (ARR)](https://blogs.iis.net/richma/archive/2010/07/03/502-3-bad-gateway-the-operation-timed-out-with-iis-application-request-routing-arr.aspx)
 - [Winhttp Tracing Options for Troubleshooting with Application Request Routing](https://blogs.iis.net/richma/archive/2012/08/24/winhttp-tracing-options-for-troubleshooting-with-application-request-routing.aspx)
 
 ## 502.3 Connection termination errors

@@ -27,7 +27,7 @@ If this happens after updating the port on which Web Management Service (WMSvc) 
 
 If this doesn't solve the problem, run the following command:
 
-```output
+```Console
 netsh http show sslcert
 ```
 
@@ -108,7 +108,7 @@ Make sure the server uses a trusted root certificate for WMSvc. Create a trusted
 
 ## Additional help
 
-If the previous resolutions don't help, capture the exception and call stack using the steps below. Then post the issue on the [IIS.NET forums](https://forums.iis.net/) and include the *eventvwr.msc* log along with exception and call stack.
+If the previous resolutions don't help, capture the exception and call stack using the following steps. Then post the issue on the [IIS.NET forums](https://forums.iis.net/) and include the *eventvwr.msc* log along with exception and call stack.
 
 Here are steps on how to get the exception and call stack:
 
@@ -131,7 +131,7 @@ Here are steps on how to get the exception and call stack:
     g
     ```
 
-1. When the exception breaks, print the exception and the call stack and send it to *iis.net* forums.
+1. When the exception breaks, print the exception and the call stack and send it to iis.net forums.
 
     ```Console
     !pe

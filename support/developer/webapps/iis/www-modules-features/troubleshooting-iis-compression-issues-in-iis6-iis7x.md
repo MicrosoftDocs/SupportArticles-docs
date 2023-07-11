@@ -47,7 +47,7 @@ The following screenshots show output from the Fiddler tool when compression isn
 
 :::image type="content" source="media/troubleshooting-iis-compression-issues-in-iis6-iis7x/fiddler-tool-compression-not-working1.png" alt-text="Screenshot of HTTP Compression set to No Compression in the Transformer tab.":::
 
-:::image type="content" source="media/troubleshooting-iis-compression-issues-in-iis6-iis7x/disabled-http-compression-section.png" alt-text="Screenshot of a disabled H T T P Compression section in the Transformer tab.":::
+:::image type="content" source="media/troubleshooting-iis-compression-issues-in-iis6-iis7x/disabled-http-compression-section.png" alt-text="Screenshot of a disabled HTTP Compression section in the Transformer tab.":::
 
 ## Troubleshooting compression issues
 
@@ -71,19 +71,11 @@ Perform the following steps to troubleshoot compression issues:
 
     Compression isn't turned on in the metabase at the right nodes. There are three metabase nodes for the Compression configuration:
 
-    ```xml
-    w3svc/filters/compression/parameters
-    ```
+    - `w3svc/filters/compression/parameters`
+    - `w3svc/filters/compression/gzip`
+    - `w3svc/filters/compression/deflate`
 
-    ```xml
-    w3svc/filters/compression/gzip
-    ```
-
-    ```xml
-    w3svc/filters/compression/deflate
-    ```
-
-    Configuring the **/parameters** node is mandatory. Then, you can configure either **/gzip** or **/deflate** node, or both. This means that configuring just the gzip, deflate, or parameters nodes will not work. If you configure the **/parameters** and **/gzip** nodes, the Gzip compression scheme will be enabled. If you configure the **/parameters** and **/deflate** nodes, the Deflate compression scheme will be enabled. Finally, if you configure all three nodes, both GZip compression and Deflate compression will be enabled.
+    Configuring the `/parameters` node is mandatory. Then, you can configure either `/gzip` or `/deflate` node, or both. This means that configuring just the gzip, deflate, or parameters nodes will not work. If you configure the `/parameters` and `/gzip` nodes, the Gzip compression scheme will be enabled. If you configure the `/parameters` and `/deflate` nodes, the Deflate compression scheme will be enabled. Finally, if you configure all three nodes, both GZip compression and Deflate compression will be enabled.
 
 1. Check the metabase permission for IIS 6.
 
@@ -105,9 +97,9 @@ Perform the following steps to troubleshoot compression issues:
 
 1. Check if Dynamic or Static compression is turned off in *Metabase.xml*.
 
-    At each of the three configuration nodes (**/parameters**, **/gzip**, and **/deflate**), you have the option of enabling static and/or dynamic compression. To enable static compression for file types such as .txt and .html, you must set the `HcDoStaticCompression` key to `1` (or TRUE). To enable dynamic compression for file types such as .asp, .aspx, .asmx, or .exe, you must set the `HcDoDynamicCompression` key to `1` (or TRUE).
+    At each of the three configuration nodes (`/parameters`, `/gzip`, and `/deflate`), you have the option of enabling static and/or dynamic compression. To enable static compression for file types such as .txt and .html, you must set the `HcDoStaticCompression` key to `1` (or TRUE). To enable dynamic compression for file types such as .asp, .aspx, .asmx, or .exe, you must set the `HcDoDynamicCompression` key to `1` (or TRUE).
 
-    For example, to set dynamic compression at the **/parameters** node, run the following command by using *adsutil.vbs*:
+    For example, to set dynamic compression at the `/parameters` node, run the following command by using *adsutil.vbs*:
 
     ```Console
     cscript.exe adsutil.vbs SET w3svc/filters/compression/parameters/HcDoDynamicCompression TRUE

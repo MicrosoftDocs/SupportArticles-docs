@@ -386,7 +386,7 @@ By default, Web Deploy prefers using the .NET version specified in its configura
 
 1. Use the `netFxVersion` provider setting to inform Web Deploy exactly which .NET settings to migrate. Here is a command line example, which forces Web Deploy to sync .NET settings:
 
-`msdeploy.exe -verb:sync -source:webserver,machineconfig32.netfxversion=2,machineconfig64.netfxversion=2,rootwebconfig32.netfxversion=2,rootwebconfig64.netfxversion=2 -dest:webserver,machineconfig32.netfxversion=2,machineconfig64.netfxversion=2,rootwebconfig32.netfxversion=2,rootwebconfig64.netfxversion=2,computername=destServername`
+   `msdeploy.exe -verb:sync -source:webserver,machineconfig32.netfxversion=2,machineconfig64.netfxversion=2,rootwebconfig32.netfxversion=2,rootwebconfig64.netfxversion=2 -dest:webserver,machineconfig32.netfxversion=2,machineconfig64.netfxversion=2,rootwebconfig32.netfxversion=2,rootwebconfig64.netfxversion=2,computername=destServername`
 
 2. Run Web Deploy in the same version of .NET between client and server. On the client side, change the order of the `supportedRuntime` version element in the `%programfiles%\IIS\Microsoft Web Deploy V3\msdeploy.exe.config` file for the version of .NET that's specified first (see [gacInstall provider](https://technet.microsoft.com/library/gg607836(v=WS.10).aspx) for an example). This indicates the version of .NET, assuming it's installed on your system. On the server side, you can do the same for `%programfiles%\IIS\microsoft web deploy\msdepsvc.exe.config`. If you modify this file, make sure to restart the Web Deployment Agent Services that is the `net stop msdepsvc` and `net start msdepsvc`.
 

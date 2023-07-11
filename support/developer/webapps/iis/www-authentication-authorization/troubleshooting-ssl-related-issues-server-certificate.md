@@ -89,17 +89,17 @@ In this scenario, consider that you have a server certificate that contains the 
 
     Additionally, the following SChannel warning will appear in the system event logs:
 
-    ```output
-     Event Type: Error 
-     Event Source: Schannel 
-     Event Category: None 
-     Event ID: 36870 
-     Date: 2/11/2012 
-     Time: 12:44:55 AM 
-     User: N/A 
-     Computer: 
-     Description: A fatal error occurred when attempting to access the SSL server credential private key. The error code returned from the cryptographic module is 0x80090016. 
-    ```
+      ```output
+         Event Type: Error 
+         Event Source: Schannel 
+         Event Category: None 
+         Event ID: 36870 
+         Date: 2/11/2012 
+         Time: 12:44:55 AM 
+         User: N/A 
+         Computer: 
+         Description: A fatal error occurred when attempting to access the SSL server credential private key. The error code returned from the cryptographic module is 0x80090016. 
+      ```
 
     This event or error indicates that there was a problem acquiring certificate's private key. So, try the following steps to resolve the warning:
 
@@ -107,15 +107,15 @@ In this scenario, consider that you have a server certificate that contains the 
   1. If the permissions are in place and if the issue is still not fixed, then there might be a problem with the certificate. It might have been corrupted. You may see an error code of 0x8009001a in the following SChannel event log:
 
    ```output
-        Event Type: Error 
-        Event Source: Schannel 
-        Event Category: None 
-        Event ID: 36870 
-        Date: 2/11/2012 
-        Time: 12:44:55 AM 
-        User: N/A 
-        Computer: 
-        A fatal error occurred when attempting to access the SSL server credential private key. The error code returned from the cryptographic module is 0x8009001a. 
+      Event Type: Error 
+      Event Source: Schannel 
+      Event Category: None 
+      Event ID: 36870 
+      Date: 2/11/2012 
+      Time: 12:44:55 AM 
+      User: N/A 
+      Computer: 
+      A fatal error occurred when attempting to access the SSL server credential private key. The error code returned from the cryptographic module is 0x8009001a. 
    ```
 
  1. Check if the website works with a test certificate.
@@ -270,7 +270,7 @@ For example, SSL 2.0 is disabled by default.
 
 ## Scenario 6
 
-If everything has been verified and if you're still running into issues accessing the website over HTTPS, then it most likely is some update which is causing the SSL handshake to fail.
+If everything has been verified and if you're still running into issues accessing the website over HTTPS, then it most likely is some update, which is causing the SSL handshake to fail.
 
 Microsoft has released an update to the implementation of SSL in Windows:
 
