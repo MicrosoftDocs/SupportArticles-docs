@@ -23,7 +23,7 @@ The TSSv2 toolset includes PowerShell-based tools and a framework for data colle
 
 The toolset includes several PowerShell scripts and executable files, which are all signed by Microsoft. Depending on how the toolset is started, it uses one or more of those scripts and executables to collect the required logs.
 
-You can download the toolset as a zip file (*TSSv2.zip*) from https://aka.ms/getTSS.  
+You can download the toolset as a zip file (*TSS.zip*) from https://aka.ms/getTSS.  
 
 ## Prerequisites
 
@@ -55,8 +55,8 @@ Here are the steps for the logs collection and sharing process:
 > The support representative will provide you with complete steps for downloading and data collection.
 
 1. The support representative identifies the problem and provides a certain TSSv2 cmdlet to collect the proper logs.
-2. Download the *TSSv2.zip* file and copy the file to the affected systems.
-3. Extract the *TSSv2.zip* file to a local folder in the affected systems, and run the TSSv2 cmdlet(s) from an elevated PowerShell command prompt simultaneously.  
+2. Download the *TSS.zip* file and copy the file to the affected systems.
+3. Extract the *TSS.zip* file to a local folder in the affected systems, and run the TSSv2 cmdlet(s) from an elevated PowerShell command prompt simultaneously.  
 4. When the issue is reproduced, stop the TSSv2 toolset by pressing any key. The logs are automatically zipped by TSSv2 afterwards.
 5. Upload the logs to a Microsoft secure file transfer site, which the support representative provides.
 
