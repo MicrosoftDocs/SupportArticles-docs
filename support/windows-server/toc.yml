@@ -1092,6 +1092,8 @@
       href: ./deployment/mdt-media-deployment-isnt-bootable.md
     - name: Microsoft Deployment Toolkit support life cycle
       href: ./deployment/deployment-toolkit-support.md
+    - name: Mitigation for AMD Rome Erratum 1474
+      href: ./deployment/mitigation-for-amd-rome-erratum-1474.md
     - name: Post-Deployment Configuration task fails
       href: ./deployment/post-deployment-configuration-task-fail.md
     - name: Setup fails on a VM with error 0xE0000100
