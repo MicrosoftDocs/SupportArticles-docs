@@ -148,6 +148,8 @@ Either install a trusted certificate on the endpoint or try bypassing certificat
     </PropertyGroup>
     ```
 
+<a id="ERROR_PROXY_GATEWAY"></a>
+
 ## ERROR\_PROXY\_GATEWAY
 
 **Diagnosis**
@@ -187,6 +189,8 @@ The specified application doesn't exist in IIS.
 **Resolution**
 
 Check IIS Manager to make sure you have correctly specified the name of the application path.
+
+<a id="ERROR_USER_NOT_AUTHORIZED_FOR_IISAPP"></a><a id="ERROR_USER_NOT_AUTHORIZED_FOR_DBFULLSQL"></a><a id="ERROR_USER_NOT_AUTHORIZED_FOR_DBMYSQL"></a><a id="ERROR_USER_NOT_AUTHORIZED_FOR_SETACL"></a><a id="ERROR_USER_NOT_AUTHORIZED_FOR_APPPOOLNETFX"></a><a id="ERROR_USER_NOT_AUTHORIZED_FOR_APPPOOLPIPELINE"></a><a id="ERROR_USER_NOT_AUTHORIZED_FOR_RECYCLEAPP"></a><a id="ERROR_USER_NOT_AUTHORIZED_FOR_CREATEAPP"></a><a id="ERROR_USER_NOT_AUTHORIZED_FOR_CONTENTPATH"></a>
 
 ## ERROR\_USER\_NOT\_AUTHORIZED\_FOR\_IISAPP,  
 ERROR\_USER\_NOT\_AUTHORIZED\_FOR\_DBFULLSQL,  
