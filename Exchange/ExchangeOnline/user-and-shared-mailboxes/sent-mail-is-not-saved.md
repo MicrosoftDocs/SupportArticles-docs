@@ -14,7 +14,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Online
-ms.date: 3/31/2022
+ms.date: 7/11/2023
 ---
 # Messages sent from a shared mailbox aren't saved to the Sent Items folder of the shared mailbox in Outlook
 
@@ -53,9 +53,9 @@ set-mailbox <mailbox name> -MessageCopyForSendOnBehalfEnabled $True
 
 #### Exchange Server 2010 Service Pack 2 Update Rollup 4 or later update
 
-Update Rollup 4 for Exchange Server 2010 Service Pack 2 introduced a new Exchange PowerShell cmdlet to configure the Sent Items folder to which a message is copied. Because this new feature is handled by the server that's running Exchange Server, Outlook can be configured in online mode or cached Exchange mode. However, this feature works only if the Outlook DelegateSentItemsStyleregistry (Method 2 below) value is disabled.
+Update Rollup 4 for Exchange Server 2010 Service Pack 2 introduced a new Exchange PowerShell cmdlet to configure the Sent Items folder to which a message is copied. Because this new feature is handled by the server that's running Exchange Server, Outlook can be configured in online mode or cached Exchange mode. However, this feature works only if the Outlook `DelegateSentItemsStyle` registry (Method 2 below) value is disabled.
 
-For more information about the Set-MailboxSentItemsConfiguration cmdlet, see the following Microsoft Knowledge Base article:
+For more information about the `Set-MailboxSentItemsConfiguration` cmdlet, see the following Microsoft Knowledge Base article:
 
 [2632409](https://support.microsoft.com/help/2632409) Messages sent by using the "Send As" and "Send on behalf" permissions are only copied to the Sent Items folder of the sender in an Exchange Server 2010 environment  
 
@@ -86,26 +86,20 @@ For more information about this hotfix package, see the following Microsoft Know
     > [!NOTE]
     > The **x.0** placeholder represents your version of Office (16.0 = Office 2016, Office 2019, or Office LTSC 2021, 15.0 = Office 2013, 14.0 = Office 2010).
 3. On the **Edit** menu, point to **New**, and then click **DWORD Value**.
-4. Type DelegateSentItemsStyle, and then press Enter.
+4. Type *DelegateSentItemsStyle*, and then press Enter.
 5. Right-click **DelegateSentItemsStyle**, and then click **Modify**.
 6. In the **Value data** box, type 1, and then click **OK**.
 7. Exit Registry Editor.
 
-	Below list describes the expected behavior, based on the registry key setting and the mailbox parameter:
-	1) With Delegatesentitemstyle set to 0 and MessageCopyForSentAsEnabled set to true:
-	A copy of the email will be saved in the primary mailbox and shared mailbox both.
-	 
-	2) With Delegatesentitemstyle set to 1 and MessageCopyForSentAsEnabled set to true:
-	Two copies of the email will be saved in the shared mailbox and no copy in the primary mailbox.
-	 
-	3) With Delegatesentitemstyle set to 0 and MessageCopyForSentAsEnabled set to false:
-	A copy of the email will be saved in the primary mailbox and no copy in the shared mailbox.
-	 
-	4) With Delegatesentitemstyle set to 1 and MessageCopyForSentAsEnabled set to false:
-	A copy of the email will be saved in the shared mailbox and no copy in the primary mailbox.
-	 
-
-
 ## More information
+
+The following table lists the expected behavior based on different combinations of the `DelegateSentItemsStyle` registry value setting and the mailbox's `MessageCopyForSentAsEnabled` parameter value.
+
+|DelegateSentItemsStyle|MessageCopyForSentAsEnabled|Expected behavior|
+| -------- | ------- | ------- |
+|0|True|A copy of the email will be saved in both the primary mailbox and the shared mailbox.|
+|1|True|Two copies of the email will be saved in the shared mailbox and no copies in the primary mailbox.|
+|0|False|A copy of the email will be saved in the primary mailbox and no copies in the shared mailbox.|
+|1|False|A copy of the email will be saved in the shared mailbox and no copy in the primary mailbox.|
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet forums](/answers/topics/office-exchange-server-itpro.html).
