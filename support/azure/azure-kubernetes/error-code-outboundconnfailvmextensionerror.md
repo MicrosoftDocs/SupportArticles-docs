@@ -43,6 +43,15 @@ nc -vz mcr.microsoft.com 443
 dig mcr.microsoft.com 443
 ```
 
+If you are having trouble getting access to the node via SSH, you can use [Run-Command invoke](https://learn.microsoft.com/en-us/cli/azure/vmss/run-command?view=azure-cli-latest#az-vmss-run-command-invoke) against the VMSS instance to test the outbound connectivity:
+``` azurecli
+# Get the VMSS instance IDs:
+az vmss list-instances -g {MC_resourceGroupName} -n { VMSS_NAME } -o table
+
+# Use any instance ID to test the outbound connectivity:
+az vmss run-command invoke -g {MC_resourceGroupName} -n {VMSS_NAME} --command-id RunShellScript --instance-id {VMSS-instance-ID} -o json --scripts "nc -vz mcr.microsoft.com 443"
+``` 
+
 ## Solution
 
 The following table lists specific reasons why traffic might be blocked, and the corresponding solution for each reason.
