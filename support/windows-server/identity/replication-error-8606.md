@@ -90,7 +90,7 @@ Object GUID:
 Error 8606 is logged when the following conditions are true:  
 
 - A source domain controller sends an update to an object (instead of an originating object create) that has already been created, deleted, and then reclaimed by garbage collection from a destination domain controller's copy of Active Directory.  
-- he destination domain controller was configured to run in [strict replication consistency.](https://technet.microsoft.com/library/cc816938%28ws.10%29.aspx)  
+- The destination domain controller was configured to run in [strict replication consistency.](https://technet.microsoft.com/library/cc816938%28ws.10%29.aspx)  
 
 If the destination domain controller was configured to use loose replication consistency, the object would have been "reanimated" on the destination domain controller's copy of the directory. Specific variations that can cause error are 8606 documented in the "More Information" section. However, the error is caused by one of the following:  
 
