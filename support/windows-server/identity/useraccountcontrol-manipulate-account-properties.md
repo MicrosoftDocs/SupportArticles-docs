@@ -117,9 +117,9 @@ Here are the default UserAccountControl values for the certain objects:
 - Trust: 0x820 (2080)
 
 >[!NOTE]
->A Windows trust account is exempt from having a password through PASSWD_NOTREQD UserAccountControl attribute value because trust objects don’t use the traditional password policy >and password attributes in the same way as user and computer objects. 
->Trust secrets are represented by special attributes on the interdomain trust accounts, indicating the direction of the trust.  Inbound trust secrets are stored in >trustAuthIncoming, on the "trusted" side of a trust and Outbound trust secrets are stored in trustAuthOutgoing, on the "trusting" end of a trust. 
->For two-way trusts the INTERDOMAIN_TRUST_ACCOUNT object on each side of the trust will have both set.
->Trust secrets are maintained by the Domain Controller which is the PDC Emulator FSMO role in the trusting domain.
->For this reason the PASSWD_NOTREQD UserAccountControl attribute is set on INTERDOMAIN_TRUST_ACCOUNT accounts by default.
+>A Windows trust account is exempt from having a password through PASSWD_NOTREQD UserAccountControl attribute value because trust objects don’t use the traditional password policy and password attributes in the same way as user and computer objects. 
+Trust secrets are represented by special attributes on the interdomain trust accounts, indicating the direction of the trust.  Inbound trust secrets are stored in trustAuthIncoming, on the "trusted" side of a trust and Outbound trust secrets are stored in trustAuthOutgoing, on the "trusting" end of a trust. 
+For two-way trusts the INTERDOMAIN_TRUST_ACCOUNT object on each side of the trust will have both set.
+Trust secrets are maintained by the Domain Controller which is the PDC Emulator FSMO role in the trusting domain.
+For this reason the PASSWD_NOTREQD UserAccountControl attribute is set on INTERDOMAIN_TRUST_ACCOUNT accounts by default.
 
