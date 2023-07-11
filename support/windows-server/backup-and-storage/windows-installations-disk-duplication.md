@@ -17,7 +17,7 @@ ms.technology: windows-server-backup-and-storage
 
 This article describes the SID and supported methods for cloning or duplicating a Windows installation.
 
-_Applies to:_ &nbsp; Windows 10, version 2004, Windows 10, version 1909, Windows 10, version 1903, Windows 10, version 1809, Windows 7 Service Pack 1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 11, Windows 10, version 2004, Windows 10, version 1909, Windows 10, version 1903, Windows 10, version 1809, Windows 7 Service Pack 1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 314828
 
 ## Summary
@@ -70,6 +70,7 @@ We support the following operating systems that are prepared by using the Syspre
 - All versions of Windows 8
 - All versions of Windows Server 2012
 - All versions of Windows 10
+- All versions of Windows 11
 - All versions of Windows Server 2016
 - All versions of Windows Server 2019
 - All versions of Windows Server 1903
