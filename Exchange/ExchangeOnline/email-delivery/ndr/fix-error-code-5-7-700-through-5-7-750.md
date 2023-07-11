@@ -52,7 +52,7 @@ The solutions for specific error codes are described in the following sections.
 
 ### 5.7.703 Your message can't be delivered because one or more recipients are blocked by your organization's tenant recipient block policy
 
-Although the [Tenant Allow/Block List](/microsoft-365/security/office-365-security/tenant-allow-block-list-about) is mostly about preventing outside users from sending email into your organization, users in the organization also can't send mail to those blocked senders or sender domains. The entire message is blocked for all recipients of the message, even if only one recipient email address or domain is defined in a block entry.
+Although the [Tenant Allow/Block List](/microsoft-365/security/office-365-security/tenant-allow-block-list-about) is mostly about preventing outside users from sending email into your organization, users in the organization also can't send mail to those blocked senders or sender domains. The entire message is blocked for all *external* recipients of the message, even if only one recipient email address or domain is defined in a block entry.
 
 ### 5.7.705 Access denied, tenant has exceeded threshold
 
