@@ -52,7 +52,7 @@ The following example shows how this might look on the target server's Failed Re
 
 ```output
 185. GENERAL_REQUEST_HEADERS Headers="Connection: Keep-Alive Content-Length: 0 Accept: \*/\* Accept-Encoding: gzip, deflate Accept-Language: en-US Host: test Max-Forwards: 10 User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0) X-Original-URL: /time/ X-Forwarded-For: 192.168.0.204:49247 X-ARR-LOG-ID: dbf06c50-adb0-4141-8c04-20bc2f193a61 
-<multiple entries skipped for brevity>* 
+<multiple entries skipped for brevity> 
 345. GENERAL_FLUSH_RESPONSE_END BytesSent="0", ErrorCode="An operation was attempted on a nonexistent network connection. (0x800704cd)" 16:51:06.240
 ```
 
@@ -140,7 +140,7 @@ To analyze the log,
 1. Right-click on w3wp and select **Add UT Process name to display filter**. This sets the display filter similar to:
 
     ```Console
-     UTProcessName == "w3wp.exe (1432)"
+    UTProcessName == "w3wp.exe (1432)"
     ```
 
   You can further filter the results by changing it to the following:
@@ -152,25 +152,25 @@ To analyze the log,
   You'll need to scroll through the output until you find the timeout error. In the following example, a request timed out because it took more than 30 seconds (ARR's default timeout) to run.
 
    ```output  
-    336  2:32:22 PM  7/22/2011  32.6380453  w3wp.exe (1432)  WINHTTP_MicrosoftWindowsWinHttp WINHTTP_MicrosoftWindowsWinHttp:12:32:23.123 ::sys-recver starts in _INIT state 
-    337  2:32:22 PM  7/22/2011  32.6380489  w3wp.exe (1432)  WINHTTP_MicrosoftWindowsWinHttp  WINHTTP_MicrosoftWindowsWinHttp:12:32:23.123 ::current thread is not impersonating 
-    340  2:32:22 PM  7/22/2011  32.6380584  w3wp.exe (1432)  WINHTTP_MicrosoftWindowsWinHttp  WINHTTP_MicrosoftWindowsWinHttp:12:32:23.123 ::sys-recver processing WebReceiveHttpResponse completion (error-cdoe = ? (0x5b4), overlapped = 003728F0) 
-    341  2:32:22 PM  7/22/2011  32.6380606  w3wp.exe (1432)  WINHTTP_MicrosoftWindowsWinHttp  WINHTTP_MicrosoftWindowsWinHttp:12:32:23.123 ::sys-recver failed to receive headers; error = ? (1460)
-    342  2:32:22 PM  7/22/2011  32.6380800  w3wp.exe (1432)  WINHTTP_MicrosoftWindowsWinHttp  WINHTTP_MicrosoftWindowsWinHttp:12:32:23.123 ::ERROR_WINHTTP_FROM_WIN32 mapped (?) 1460 to (ERROR_WINHTTP_TIMEOUT) 12002 
-    343  2:32:22 PM  7/22/2011  32.6380829  w3wp.exe (1432)  WINHTTP_MicrosoftWindowsWinHttp  WINHTTP_MicrosoftWindowsWinHttp:12:32:23.123 ::sys-recver returning ERROR_WINHTTP_TIMEOUT (12002) from RecvResponse() 
-    344  2:32:22 PM  7/22/2011  32.6380862  w3wp.exe (1432)  WINHTTP_MicrosoftWindowsWinHttp  WINHTTP_MicrosoftWindowsWinHttp:12:32:23.123 ::sys-req completes recv-headers inline (sync); error = ERROR_WINHTTP_TIMEOUT (12002) 
+   336  2:32:22 PM  7/22/2011  32.6380453  w3wp.exe (1432)  WINHTTP_MicrosoftWindowsWinHttp WINHTTP_MicrosoftWindowsWinHttp:12:32:23.123 ::sys-recver starts in _INIT state 
+   337  2:32:22 PM  7/22/2011  32.6380489  w3wp.exe (1432)  WINHTTP_MicrosoftWindowsWinHttp  WINHTTP_MicrosoftWindowsWinHttp:12:32:23.123 ::current thread is not impersonating 
+   340  2:32:22 PM  7/22/2011  32.6380584  w3wp.exe (1432)  WINHTTP_MicrosoftWindowsWinHttp  WINHTTP_MicrosoftWindowsWinHttp:12:32:23.123 ::sys-recver processing WebReceiveHttpResponse completion (error-cdoe = ? (0x5b4), overlapped = 003728F0) 
+   341  2:32:22 PM  7/22/2011  32.6380606  w3wp.exe (1432)  WINHTTP_MicrosoftWindowsWinHttp  WINHTTP_MicrosoftWindowsWinHttp:12:32:23.123 ::sys-recver failed to receive headers; error = ? (1460)
+   342  2:32:22 PM  7/22/2011  32.6380800  w3wp.exe (1432)  WINHTTP_MicrosoftWindowsWinHttp  WINHTTP_MicrosoftWindowsWinHttp:12:32:23.123 ::ERROR_WINHTTP_FROM_WIN32 mapped (?) 1460 to (ERROR_WINHTTP_TIMEOUT) 12002 
+   343  2:32:22 PM  7/22/2011  32.6380829  w3wp.exe (1432)  WINHTTP_MicrosoftWindowsWinHttp  WINHTTP_MicrosoftWindowsWinHttp:12:32:23.123 ::sys-recver returning ERROR_WINHTTP_TIMEOUT (12002) from RecvResponse() 
+   344  2:32:22 PM  7/22/2011  32.6380862  w3wp.exe (1432)  WINHTTP_MicrosoftWindowsWinHttp  WINHTTP_MicrosoftWindowsWinHttp:12:32:23.123 ::sys-req completes recv-headers inline (sync); error = ERROR_WINHTTP_TIMEOUT (12002) 
    ```
 
    In the following example, the content server was completely offline:
   
    ```output
-    42  2:26:39 PM  7/22/2011  18.9279133  WINHTTP_MicrosoftWindowsWinHttp  WINHTTP_MicrosoftWindowsWinHttp:12:26:39.704 ::WinHttpReceiveResponse(0x11d23d0, 0x0)  {WINHTTP_MicrosoftWindowsWinHttp:4, NetEvent:3} 
-    43  2:26:39 PM  7/22/2011  18.9279633  WINHTTP_MicrosoftWindowsWinHttp  WINHTTP_MicrosoftWindowsWinHttp:12:26:39.704 ::sys-recver starts in _INIT state  {WINHTTP_MicrosoftWindowsWinHttp:4, NetEvent:3} 
-    44  2:26:39 PM  7/22/2011  18.9280469  WINHTTP_MicrosoftWindowsWinHttp  WINHTTP_MicrosoftWindowsWinHttp:12:26:39.704 ::current thread is not impersonating  {WINHTTP_MicrosoftWindowsWinHttp:4, NetEvent:3} 
-    45  2:26:39 PM  7/22/2011  18.9280776  WINHTTP_MicrosoftWindowsWinHttp  WINHTTP_MicrosoftWindowsWinHttp:12:26:39.704 ::sys-recver processing WebReceiveHttpResponse completion (error-cdoe = WSAETIMEDOUT (0x274c), overlapped = 003728F0)  {WINHTTP_MicrosoftWindowsWinHttp:4, NetEvent:3} 
-    46  2:26:39 PM  7/22/2011  18.9280802  WINHTTP_MicrosoftWindowsWinHttp  WINHTTP_MicrosoftWindowsWinHttp:12:26:39.704 ::sys-recver failed to receive headers; error = WSAETIMEDOUT (10060) {WINHTTP_MicrosoftWindowsWinHttp:4, NetEvent:3} 
-    47  2:26:39 PM  7/22/2011  18.9280926  WINHTTP_MicrosoftWindowsWinHttp  WINHTTP_MicrosoftWindowsWinHttp:12:26:39.704 ::ERROR_WINHTTP_FROM_WIN32 mapped (WSAETIMEDOUT) 10060 to (ERROR_WINHTTP_TIMEOUT) 12002  {WINHTTP_MicrosoftWindowsWinHttp:4, NetEvent:3} 
-    48  2:26:39 PM  7/22/2011  18.9280955  WINHTTP_MicrosoftWindowsWinHttp  WINHTTP_MicrosoftWindowsWinHttp:12:26:39.704 ::sys-recver returning ERROR_WINHTTP_TIMEOUT (12002) from RecvResponse() {WINHTTP_MicrosoftWindowsWinHttp:4, NetEvent:3} 
+   42  2:26:39 PM  7/22/2011  18.9279133  WINHTTP_MicrosoftWindowsWinHttp  WINHTTP_MicrosoftWindowsWinHttp:12:26:39.704 ::WinHttpReceiveResponse(0x11d23d0, 0x0)  {WINHTTP_MicrosoftWindowsWinHttp:4, NetEvent:3} 
+   43  2:26:39 PM  7/22/2011  18.9279633  WINHTTP_MicrosoftWindowsWinHttp  WINHTTP_MicrosoftWindowsWinHttp:12:26:39.704 ::sys-recver starts in _INIT state  {WINHTTP_MicrosoftWindowsWinHttp:4, NetEvent:3} 
+   44  2:26:39 PM  7/22/2011  18.9280469  WINHTTP_MicrosoftWindowsWinHttp  WINHTTP_MicrosoftWindowsWinHttp:12:26:39.704 ::current thread is not impersonating  {WINHTTP_MicrosoftWindowsWinHttp:4, NetEvent:3} 
+   45  2:26:39 PM  7/22/2011  18.9280776  WINHTTP_MicrosoftWindowsWinHttp  WINHTTP_MicrosoftWindowsWinHttp:12:26:39.704 ::sys-recver processing WebReceiveHttpResponse completion (error-cdoe = WSAETIMEDOUT (0x274c), overlapped = 003728F0)  {WINHTTP_MicrosoftWindowsWinHttp:4, NetEvent:3} 
+   46  2:26:39 PM  7/22/2011  18.9280802  WINHTTP_MicrosoftWindowsWinHttp  WINHTTP_MicrosoftWindowsWinHttp:12:26:39.704 ::sys-recver failed to receive headers; error = WSAETIMEDOUT (10060) {WINHTTP_MicrosoftWindowsWinHttp:4, NetEvent:3} 
+   47  2:26:39 PM  7/22/2011  18.9280926  WINHTTP_MicrosoftWindowsWinHttp  WINHTTP_MicrosoftWindowsWinHttp:12:26:39.704 ::ERROR_WINHTTP_FROM_WIN32 mapped (WSAETIMEDOUT) 10060 to (ERROR_WINHTTP_TIMEOUT) 12002  {WINHTTP_MicrosoftWindowsWinHttp:4, NetEvent:3} 
+   48  2:26:39 PM  7/22/2011  18.9280955  WINHTTP_MicrosoftWindowsWinHttp  WINHTTP_MicrosoftWindowsWinHttp:12:26:39.704 ::sys-recver returning ERROR_WINHTTP_TIMEOUT (12002) from RecvResponse() {WINHTTP_MicrosoftWindowsWinHttp:4, NetEvent:3} 
    ```
 
 ## Other resources
