@@ -40,10 +40,6 @@ sections:
         answer: |
           **Recommended path:** Enroll in Microsoft 365 or upgrade directly to the latest version of Windows 10. If you experience any application compatibility issues after you update to Windows 10, go to [Desktop App Assure](https://aka.ms/DesktopAppAssureRequest) for assistance.
 
-          **Fallback path:** Enroll in Azure Virtual Desktop in Azure. After you enroll, you can get free Extended Security Updates to protect on-premises servers and desktops for three more years.
-
-          **Last resort path:** Buy Extended Security Updates to protect on-premises servers and desktops for three more years.
-
       - question: What assistance is available for organizations that are affected by the end of support for Windows 7
         answer: |
           To help reduce security risks and continue to get regular security updates, we recommend that you upgrade to the latest versions of our software in the cloud.
@@ -51,10 +47,6 @@ sections:
           - If your organization has access to cloud transition SKUs or Software Assurance (SA), talk to your account manager about your transition path. The Microsoft FastTrack program includes a large portfolio of deployment offers and tools that can help you reduce the time and cost that you require to upgrade. This portfolio includes remediation services such as Desktop App assure, Desktop Analytics, and others.
           
           - If your organization doesn't have access to programs such as SA, talk to your account manager or Microsoft Partner about finding licensing offers that meet your needs.
-
-      - question: What is Azure Virtual Desktop
-        answer: |
-          Azure Virtual Desktop is a cloud-based service that is delivered on Azure. It's the best virtualized Windows and Office experience. It delivers a multi-user Windows 10 experience that is optimized for Microsoft 365 Apps for enterprise. For customers who are upgrading from Windows 7, Azure Virtual Desktop includes free Windows 7 ESU through 2023. You can use Azure Virtual Desktop to deploy and scale Windows and Office on Azure in minutes, including appropriate security and compliance measures.
 
       - question: Where can I find information about the end of support for Windows Server 2008 or Windows 2008 R2
         answer: |
@@ -64,7 +56,7 @@ sections:
         answer: |
           Organizations that have Windows 7 VMs in Azure will continue to have access to those VMs after January 2023.
           
-          Starting January 2024, any connections to Windows 7 AVD VMs will be blocked to maintain the security of our service. These VMs will still not be deleted, but they can only be accessed by Administrators.
+          Starting January 2024, any connections to Windows 7 Azure Virtual Desktop session host VMs will be blocked to maintain the security of our service. These VMs will still not be deleted, but they can only be accessed by Administrators.
 
       - question: If an organization experiences an issue that requires a new feature, what support can the organization expect
         answer: |
