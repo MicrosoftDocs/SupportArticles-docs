@@ -97,7 +97,7 @@ Perform the following steps to troubleshoot compression issues:
 
 1. Check if dynamic or static compression is turned off in *Metabase.xml*.
 
-    At each of the three configuration nodes (`/parameters`, `/gzip`, and `/deflate`), you have the option of enabling static and/or dynamic compression. To enable static compression for file types such as .txt and .html, you must set the `HcDoStaticCompression` key to `1` (or TRUE). To enable dynamic compression for file types such as .asp, .aspx, .asmx, or .exe, you must set the `HcDoDynamicCompression` key to `1` (or TRUE).
+    At each of the three configuration nodes (`/parameters`, `/gzip`, and `/deflate`), you have the option of enabling static and/or dynamic compression. To enable static compression for file types such as .txt and .html, you must set the `HcDoStaticCompression` key to `1` (or `TRUE`). To enable dynamic compression for file types such as .asp, .aspx, .asmx, or .exe, you must set the `HcDoDynamicCompression` key to `1` (or `TRUE`).
 
     For example, to set dynamic compression at the `/parameters` node, run the following command by using *adsutil.vbs*:
 

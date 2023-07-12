@@ -39,7 +39,7 @@ The win32 status 12002 maps to the same ERROR\_WINHTTP\_TIMEOUT error reported i
 You can check this time-out by enabling [Failed Request Tracing](https://www.iis.net/learn/troubleshoot/using-failed-request-tracing/troubleshooting-failed-requests-using-tracing-in-iis) on the IIS server. The first point that you can see, in the failed request trace log and this is where the request was sent to in the ARR\_SERVER\_ROUTED event. The second point is the X-ARR-LOG-ID, which you can use to track the request on the target server. This helps to trace the target or destination of the HTTP request:
 
 ```output
-77.  ARR_SERVER_ROUTED  RoutingReason="LoadBalancing", Server="192.168.0.216", State="Active", TotalRequests="3", FailedRequests="2", CurrentRequests="1", BytesSent="648", BytesReceived="0", ResponseTime="15225" 16:50:21.033 
+77. ARR_SERVER_ROUTED  RoutingReason="LoadBalancing", Server="192.168.0.216", State="Active", TotalRequests="3", FailedRequests="2", CurrentRequests="1", BytesSent="648", BytesReceived="0", ResponseTime="15225" 16:50:21.033 
 78. GENERAL_SET_REQUEST_HEADER HeaderName="Max-Forwards", HeaderValue="10", Replace="true" 16:50:21.033 
 79. GENERAL_SET_REQUEST_HEADER HeaderName="X-Forwarded-For", HeaderValue="192.168.0.204:49247", Replace="true" 16:50:21.033 
 80. GENERAL_SET_REQUEST_HEADER HeaderName="X-ARR-SSL", HeaderValue="", Replace="true" 16:50:21.033 
@@ -51,7 +51,7 @@ You can check this time-out by enabling [Failed Request Tracing](https://www.iis
 The following example shows how this might look on the target server's Failed Request Tracing logs. You can validate that you have found the correct request by matching up the "X-ARR-LOG-ID" values in both traces.
 
 ```output
-185. GENERAL_REQUEST_HEADERS Headers="Connection: Keep-Alive Content-Length: 0 Accept: \*/\* Accept-Encoding: gzip, deflate Accept-Language: en-US Host: test Max-Forwards: 10 User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0) X-Original-URL: /time/ X-Forwarded-For: 192.168.0.204:49247 X-ARR-LOG-ID: dbf06c50-adb0-4141-8c04-20bc2f193a61 
+185. GENERAL_REQUEST_HEADERS Headers="Connection: Keep-Alive Content-Length: 0 Accept: */* Accept-Encoding: gzip, deflate Accept-Language: en-US Host: test Max-Forwards: 10 User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0) X-Original-URL: /time/ X-Forwarded-For: 192.168.0.204:49247 X-ARR-LOG-ID: dbf06c50-adb0-4141-8c04-20bc2f193a61 
 <multiple entries skipped for brevity> 
 345. GENERAL_FLUSH_RESPONSE_END BytesSent="0", ErrorCode="An operation was attempted on a nonexistent network connection. (0x800704cd)" 16:51:06.240
 ```
@@ -152,7 +152,8 @@ To analyze the log,
   You'll need to scroll through the output until you find the timeout error. In the following example, a request timed out because it took more than 30 seconds (ARR's default timeout) to run.
 
    ```output  
-   336  2:32:22 PM  7/22/2011  32.6380453  w3wp.exe (1432)  WINHTTP_MicrosoftWindowsWinHttp WINHTTP_MicrosoftWindowsWinHttp:12:32:23.123 ::sys-recver starts in _INIT state 
+   336  2:32:22 PM  7/22/2011  32.6380453  w3wp.exe (1432)  WINHTTP_MicrosoftWindowsWinHttp 
+ WINHTTP_MicrosoftWindowsWinHttp:12:32:23.123 ::sys-recver starts in _INIT state 
    337  2:32:22 PM  7/22/2011  32.6380489  w3wp.exe (1432)  WINHTTP_MicrosoftWindowsWinHttp  WINHTTP_MicrosoftWindowsWinHttp:12:32:23.123 ::current thread is not impersonating 
    340  2:32:22 PM  7/22/2011  32.6380584  w3wp.exe (1432)  WINHTTP_MicrosoftWindowsWinHttp  WINHTTP_MicrosoftWindowsWinHttp:12:32:23.123 ::sys-recver processing WebReceiveHttpResponse completion (error-cdoe = ? (0x5b4), overlapped = 003728F0) 
    341  2:32:22 PM  7/22/2011  32.6380606  w3wp.exe (1432)  WINHTTP_MicrosoftWindowsWinHttp  WINHTTP_MicrosoftWindowsWinHttp:12:32:23.123 ::sys-recver failed to receive headers; error = ? (1460)
