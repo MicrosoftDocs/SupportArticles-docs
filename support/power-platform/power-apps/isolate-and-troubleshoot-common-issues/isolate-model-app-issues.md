@@ -3,7 +3,7 @@ title: Isolate issues in model-driven apps
 description: Learn about techniques to narrow down the cause of errors in model-driven apps.
 author: tahoon
 ms.reviewer: matp
-ms.date: 06/15/2022
+ms.date: 07/12/2023
 ms.author: tahoon
 search.audienceType: 
   - maker
