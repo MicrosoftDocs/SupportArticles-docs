@@ -67,6 +67,20 @@
           href: manage-apps-and-solutions/unmanaged-layer-after-solution-import.md
         - name: Data source references not updated after solution import
           href: manage-apps-and-solutions/dataverse-environment-variables.md
+        - name: Form doesn't appear in target environment after import
+          href: manage-apps-and-solutions/form-not-appear-after-import.md
+        - name: Full formXml is expected to create a form
+          href: manage-apps-and-solutions/full-formxml-expected.md
+        - name: You cannot delete this form
+          href: manage-apps-and-solutions/you-cannot-delete-this-form.md
+        - name: Solution cannot be deleted due to dependencies
+          href: manage-apps-and-solutions/solution-cannot-be-deleted.md
+        - name: Newly added components don’t appear in the app
+          href: manage-apps-and-solutions/newly-added-components-dont-appear.md
+        - name: Label text doesn’t display in additional languages
+          href: manage-apps-and-solutions/label-text-not-displayed.md
+        - name: Duplicate security roles after solution import
+          href: manage-apps-and-solutions/duplicate-security-roles.md
         - name: Required fields are missing in Dataverse records
           href: manage-apps-and-solutions/dataverse-records-missing-required-fields.md
         - name: Solution checker enforcement in Managed Environments (preview) blocks or warns on import
