@@ -3,7 +3,7 @@ title: General Power Apps debugging strategies
 description: Learn about general strategies to narrow down the cause of app errors.
 author: tahoon
 ms.reviewer: tapanm
-ms.date: 06/24/2022
+ms.date: 07/12/2023
 ms.author: tahoon
 search.audienceType: 
   - maker
@@ -26,7 +26,7 @@ If you're unable to revert an app to a working state, it's also helpful to make 
 
 Here are a few examples:
 
-- Searching for a long piece of text does not return correct results. Try a shorter piece of text.
+- Searching for a long piece of text doesn't return correct results. Try a shorter piece of text.
 - View the same app on the same device, but with a different browser.
 - If data isn't displaying correctly in a control, try displaying it in a different type of control.
 - If data isn't displaying correctly on a page, try a different page or app with the same data.
