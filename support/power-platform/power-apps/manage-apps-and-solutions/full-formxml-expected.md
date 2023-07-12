@@ -1,6 +1,6 @@
 ---
 title: Full formXml is expected to create a form
-description: Describes an issue where the message Microsoft.Crm.CrmInvalidOperationException: full formXml is expected to create a form is displayed during solution import.
+description: Describes an issue where the message full formXml is expected to create a form is displayed during solution import.
 ms.reviewer: squassina
 ms.topic: troubleshooting
 ms.date: 06/18/2021
@@ -13,7 +13,7 @@ _Applies to:_ &nbsp; Power Platform, Solutions
 
 ## Symptoms
 
-Microsoft.Crm.CrmInvalidOperationException: full formXml is expected to create a form *formid* message during solution import.
+Microsoft.Crm.CrmInvalidOperationException: full formXml is expected to create a form *formid* message is displayed during solution import.
 
 ## Cause
 
