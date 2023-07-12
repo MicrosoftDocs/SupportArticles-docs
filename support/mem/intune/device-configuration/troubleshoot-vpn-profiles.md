@@ -79,7 +79,7 @@ This scenario uses an Android device enrolled as a Personally owned work profile
 
     :::image type="content" source="media/troubleshoot-vpn-profiles/notification-install-vpn-profile-android.png" alt-text="Screenshot that shows the notification to install the VPN profile.":::
 
-1. In the AnyConnect app, tap the **Change Settings** button to enable the **External Control** option.
+1. In case you do not recieve a notification, in the AnyConnect app, tap the **Change Settings** button to enable the **External Control** option.
 
     :::image type="content" source="media/troubleshoot-vpn-profiles/change-settings-android.png" alt-text="Screenshot that shows the Change Settings button.":::
 
