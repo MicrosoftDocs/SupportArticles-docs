@@ -19,14 +19,14 @@ When processing the results of a batch, SQL Server fills the output buffer of th
 
 ## Workaround
 
-To work around the problem, use one of the following methods:
+To work around the problem, use the following methods:
 
-- Method 1: Flush all the output result sets. As soon as all output result sets are consumed by the client, SQL Server completes executing the batch.
+- 1) Flush all the output result sets. As soon as all output result sets are consumed by the client, SQL Server completes executing the batch.
 
   - If you are using Open Database Connectivity (ODBC) to connect to SQL Server, you can call the `SQLMoreResults` method until the method reports that there are no more result sets.
   - If you are using OLE DB to connect to SQL Server, you can repeatedly call the IMultipleResults::GetResult method until it returns `DB_S_NORESULT`.
 
-- Method 2: Add the statement `SET NOCOUNT ON` to the beginning of your batch. If the batch is executed inside a stored procedure, add the statement to the beginning of the stored procedure definition. This prevents SQL Server from returning many types of result sets. Therefore, it can reduce the data to be output to the output buffer of the server. However, this does not guarantee that the problem will not occur. It only increases the chance that the data that is returned from the server is small enough to fit into one batch of result sets.
+- 2) Add the statement `SET NOCOUNT ON` to the beginning of your batch. If the batch is executed inside a stored procedure, add the statement to the beginning of the stored procedure definition. This prevents SQL Server from returning many types of result sets. Therefore, it can reduce the data to be output to the output buffer of the server. However, this does not guarantee that the problem will not occur. It only increases the chance that the data that is returned from the server is small enough to fit into one batch of result sets.
 
 > [!NOTE]
 >
