@@ -31,6 +31,8 @@
               href: service-level-agreements/slaitem-changes-missing-upgrade.md
             - name: Can't import solution with active SLAs and SLAs are deactivated when imported
               href: service-level-agreements/import-solution-active-slas.md
+            - name: Solution upgrade contains SLA presents in the org moves to draft state
+              href: service-level-agreements/sla-draft-state-post-solution-import.md
         - name: SLA creation
           items:
             - name: Primary entity isn't available when creating SLAs
@@ -65,6 +67,8 @@
               href: service-level-agreements/sla-timer-pause-state-changed.md
             - name: Warning appears on SLA KPI instances
               href: service-level-agreements/warning-slakpiinstances.md
+            - name: SLA Timer keeps running or expired prior to the failure time on Timer
+              href: service-level-agreements/sla-timer-keep-running-or-expired.md
         - name: SLA flow
           items:
             - name: '"Disabled users cannot access the system" error'
@@ -97,6 +101,8 @@
               href: service-level-agreements/sla-not-getting-applied.md
             - name: SLA instances associated with a case don't have SLA items
               href: service-level-agreements/slaitem-not-mapped-to-sla-instance.md
+            - name: SLA KPI instance pausedon is null when status is on-hold(paused)
+              href: service-level-agreements/slakpiinstance-pausedon-null.md
     - name: Omnichannel for Customer Service
       items:
         - name: Agent Scripts and Macros
