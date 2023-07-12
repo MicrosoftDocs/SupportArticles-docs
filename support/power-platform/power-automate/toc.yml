@@ -119,8 +119,6 @@
           href: cannot-access-java-application-elements.md
         - name: Can't execute a shared desktop flow after changing the connection
           href: sharing-deskop-flow-with-connections.md
-        - name: Can't update Power Automate for desktop
-          href: cannot-update-Power-Automate-for-desktop.md
         - name: Cloud flow is suspended due to missing the attended RPA capability
           href: cloud-flow-suspended-missing-attended-rpa-capability.md
         - name: Cloud flow is suspended due to missing the unattended RPA capability
@@ -173,6 +171,8 @@
           href: multi-screen-recording-is-not-working.md
         - name: Module or action wasn't found error
           href: module-action-wasnt-found-error.md
+        - name: '"Power Automate needs an update" occurs when opening Power Automate for desktop'
+          href: cannot-update-Power-Automate-for-desktop.md
         - name: Power Automate for desktop console doesn't show any flows
           href: console-not-show-desktop-flows.md
         - name: Power Automate service doesn't start automatically after restarting
