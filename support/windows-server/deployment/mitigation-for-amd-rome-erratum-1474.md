@@ -15,7 +15,7 @@ This article introduces how to fix the AMD Rome Erratum 1474: A CPU core may han
 
 ## More about AMD Rome Erratum 1474
 
-This issue is due to a processor core failing to exit hardware CC6 idle sleep state after approximately 1044 days from the last system reset.
+This issue is due to a processor core failing to exit hardware CC6 idle sleep state after approximately 1044 days from the last system restart.
 
 An active processor runs at power state C0 when there's work being done. However, if the processor doesn’t have work, it may go into an idle sleep-state. There are different levels or depths of sleep. The deeper the sleep, the more power savings, and the longer it takes to get back to C0.
 
