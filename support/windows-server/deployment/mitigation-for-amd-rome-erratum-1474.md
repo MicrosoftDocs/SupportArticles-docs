@@ -8,6 +8,7 @@ ms.date: 7/24/2023
 ms.prod: windows-server
 ms.technology: windows-server-deployment
 ms.custom: sap:setup, csstroubleshoot
+ROBOTS: NOINDEX
 ---
 # Mitigation for AMD Rome Erratum 1474: A CPU core may hang after about 1044 days
 
