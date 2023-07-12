@@ -152,8 +152,7 @@ To analyze the log,
   You'll need to scroll through the output until you find the timeout error. In the following example, a request timed out because it took more than 30 seconds (ARR's default timeout) to run.
 
    ```output  
-   336  2:32:22 PM  7/22/2011  32.6380453  w3wp.exe (1432)  WINHTTP_MicrosoftWindowsWinHttp 
- WINHTTP_MicrosoftWindowsWinHttp:12:32:23.123 ::sys-recver starts in _INIT state 
+   336  2:32:22 PM  7/22/2011  32.6380453  w3wp.exe (1432)  WINHTTP_MicrosoftWindowsWinHttp  WINHTTP_MicrosoftWindowsWinHttp:12:32:23.123 ::sys-recver starts in _INIT state 
    337  2:32:22 PM  7/22/2011  32.6380489  w3wp.exe (1432)  WINHTTP_MicrosoftWindowsWinHttp  WINHTTP_MicrosoftWindowsWinHttp:12:32:23.123 ::current thread is not impersonating 
    340  2:32:22 PM  7/22/2011  32.6380584  w3wp.exe (1432)  WINHTTP_MicrosoftWindowsWinHttp  WINHTTP_MicrosoftWindowsWinHttp:12:32:23.123 ::sys-recver processing WebReceiveHttpResponse completion (error-cdoe = ? (0x5b4), overlapped = 003728F0) 
    341  2:32:22 PM  7/22/2011  32.6380606  w3wp.exe (1432)  WINHTTP_MicrosoftWindowsWinHttp  WINHTTP_MicrosoftWindowsWinHttp:12:32:23.123 ::sys-recver failed to receive headers; error = ? (1460)
