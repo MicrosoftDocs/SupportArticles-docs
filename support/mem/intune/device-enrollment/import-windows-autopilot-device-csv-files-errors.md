@@ -47,12 +47,13 @@ If the device record doesn't exist in Microsoft Store for Business or Intune, yo
 - **Proof of ownership**: Typically, this is a bill of sale or an invoice in PDF format.
 
   > [!IMPORTANT]
-  > Microsoft Support must verify ownership of the device before the device record can be removed. Therefore, the following requirements must be met:
+  > Microsoft Support has to verify ownership of the device before the device record can be removed. Therefore, the following requirements must be met:
   >
   > - The document must be in its original form. Screenshots are not accepted.
-  > - The serial number, chassis ID, or other unique identifier must be present in the document. For some vendors, you may have to request additional details about the purchased device to see this information.
-  > - Your company name must appear in the document.
-  > - Microsoft Premier Support no longer requires proof of ownership to perform device deregistration. However, confirming that the device is in the customer's possession is still needed.
+  > - The serial number, chassis ID, or other unique identifier must be present in the document. For some vendors, you may need to request additional details about the purchased device to see this information.
+  > - Your company's name must appear in the document.
+  >
+  > Microsoft Premier Support no longer requires proof of ownership to perform device deregistration. However, confirming that the device is in the customer's physical possession is still needed.
 
 - **Diagnostic logs**:
 
