@@ -59,36 +59,36 @@
           href: isolate-and-troubleshoot-common-issues/troubleshoot-power-query-issues.md
         - name: Troubleshoot startup issues for Power Apps
           href: isolate-and-troubleshoot-common-issues/troubleshooting-startup-issues.md
-    - name: Manage apps and solutions
+    - name: Manage apps
       items:
         - name: Required fields are missing in Dataverse records
           href: manage-apps-and-solutions/dataverse-records-missing-required-fields.md
         - name: Troubleshoot wrap issues
           href: manage-apps-and-solutions/wrap-issues.md
-        - name: Work with solutions
-          items:
-            - name: Solution checker enforcement in Managed Environments (preview) blocks or warns on import
-              href: manage-apps-and-solutions/solution-checker-enforcement-import-issues.md
-            - name: Can't import solutions or publish changes
-              href: manage-apps-and-solutions/cannot-import-solutions-publish-changes.md
-            - name: Active unmanaged layer after importing a managed solution
-              href: manage-apps-and-solutions/unmanaged-layer-after-solution-import.md
-            - name: Data source references not updated after solution import
-              href: manage-apps-and-solutions/dataverse-environment-variables.md
-            - name: Form doesn't appear in target environment after import
-              href: manage-apps-and-solutions/form-not-appear-after-import.md
-            - name: Full formXml is expected to create a form
-              href: manage-apps-and-solutions/full-formxml-expected.md
-            - name: You cannot delete this form
-              href: manage-apps-and-solutions/you-cannot-delete-this-form.md
-            - name: Solution cannot be deleted due to dependencies
-              href: manage-apps-and-solutions/solution-cannot-be-deleted.md
-            - name: Newly added components don’t appear in the app
-              href: manage-apps-and-solutions/newly-added-components-dont-appear.md
-            - name: Label text doesn’t display in additional languages
-              href: manage-apps-and-solutions/label-text-not-displayed.md
-            - name: Duplicate security roles after solution import
-              href: manage-apps-and-solutions/duplicate-security-roles.md 
+    - name: Work with solutions
+      items:
+        - name: Solution checker enforcement in Managed Environments (preview) blocks or warns on import
+          href: manage-apps-and-solutions/solution-checker-enforcement-import-issues.md
+        - name: Can't import solutions or publish changes
+          href: manage-apps-and-solutions/cannot-import-solutions-publish-changes.md
+        - name: Active unmanaged layer after importing a managed solution
+          href: manage-apps-and-solutions/unmanaged-layer-after-solution-import.md
+        - name: Data source references not updated after solution import
+          href: manage-apps-and-solutions/dataverse-environment-variables.md
+        - name: Form doesn't appear in target environment after import
+          href: manage-apps-and-solutions/form-not-appear-after-import.md
+        - name: Full formXml is expected to create a form
+          href: manage-apps-and-solutions/full-formxml-expected.md
+        - name: You cannot delete this form
+          href: manage-apps-and-solutions/you-cannot-delete-this-form.md
+        - name: Solution cannot be deleted due to dependencies
+          href: manage-apps-and-solutions/solution-cannot-be-deleted.md
+        - name: Newly added components don’t appear in the app
+          href: manage-apps-and-solutions/newly-added-components-dont-appear.md
+        - name: Label text doesn’t display in additional languages
+          href: manage-apps-and-solutions/label-text-not-displayed.md
+        - name: Duplicate security roles after solution import
+          href: manage-apps-and-solutions/duplicate-security-roles.md 
     - name: Support resources
       items:
         - name: Power Apps support
