@@ -1,30 +1,29 @@
 ---
-title: Internet connection interrupted after installation of Power Automate for desktop
-description: Some third party software may interrupt internet connectivity due to certificates installed by Power Automate desktop
+title: Internet connection is interrupted after installing Power Automate for desktop
+description: Provides a resolution for an issue where some third-party software may interrupt the internet connectivity due to the certificates installed by Power Automate for desktop.
 ms.subservice: power-automate-desktop-flows
+ms.reviewer: johndund
+ms.date: 07/12/2023
 ---
+# Internet connection is interrupted after you install Power Automate for desktop
 
-# Internet connection interrupted after installation of Power Automate for desktop
-
-This article provides a resolution for when third party software interrupts internet connectivity due to certificates installed by Power Automate for desktop.
+This article provides a resolution for an issue where third-party software interrupts the internet connectivity due to the certificates installed by Power Automate for desktop.
 
 _Applies to:_ &nbsp; Power Automate  
 
 ## Symptoms
 
-After installing Power Automate on your local machine, you no longer have internet access.
+After you install Power Automate on your local machine, you no longer have internet access.
 
-## Description
+## Cause
 
-By default, Power Automate installs local machine public key certificates in the Machine/Local Computer > Personal > Certificates store. These certificates allow the runtime to ensure the authenticity of requests coming from the cloud through the on-premises data gateway (note: the use of on-premises data gateways has been deprecated for desktop flows). The existence of these certificates without private keys can cause some third party software to block internet access on the machine. This may be in the form of ethernet, wifi, or VPN access.
+By default, Power Automate installs local machine public key certificates in the **Machine**/**Local Computer** > **Personal** > **Certificates** store. These certificates allow Power Automate machine runtime to ensure the authenticity of requests coming from the cloud through the on-premises data gateway. Note that the use of on-premises data gateways has been deprecated for desktop flows. These certificates without private keys can cause some third-party software to block internet access on the machine. This may be in the form of Ethernet, Wi-Fi, or VPN access.
 
 ## Resolution
 
-Resolution (Power Automate installer version 2.32 or greater required)
+To install Power Automate without on-premises gateway certificates, you can run the Power Automate installer (version 2.32 or later) by using the command line together with the `/SkipGatewaySupport` parameter. With this option, you can only run flows using direct machine connectivity.
 
-To install Power Automate without on-premises gateway certificates, you can run the installer from the command line with the `/SkipGatewaySupport` parameter. Using this option you will only be able to run flows using direct machine connectivity.
-
-1. Go to the start menu, type cmd, and open a command prompt
-2. Navigate to the location of the installer
-3. Type `Setup.Microsoft.PowerAutomate.exe /SkipGatewaySupport`
-4. Follow the prompts and install Power Automate
+1. Go to the **Start** menu, type *cmd*, and open a command prompt.
+2. Navigate to the location of the installer.
+3. Type `Setup.Microsoft.PowerAutomate.exe /SkipGatewaySupport`.
+4. Follow the prompts and install Power Automate.
