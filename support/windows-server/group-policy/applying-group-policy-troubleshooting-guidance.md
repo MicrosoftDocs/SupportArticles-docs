@@ -332,6 +332,22 @@ ErrorCode 2147483658 <-> 0x8000000a       -2147483638               E_PENDING   
 > [!NOTE]
 > The return value "-2147483638 (E_PENDING)" is expected and by design during audit client-side extension processing. It indicates that an asynchronous thread was started successfully by the Group Policy engine to process the audit extension information. It also means that the return value will be logged even if the new audit settings are effective or applied on the clients.
 
+#### Determine the advanced Audit client side extension (AuditCSE) processing
+
+After you receive the return value 2147483658 from Event ID 5016, you can examine the verbose level events of AuditCSE processing under the **Security-Audit-Configuration-Client** > **Operational** event log. This information is useful to observe the processing of Advanced Audit group policy settings and thus detect any failures/errors.
+
+
+
+1. Audit Client Side Extension (Auditcse.dll) will process the Audit client side extensions.
+2. It has its own logging under **Security-Audit-Configuration-Client** > **Operational log**.
+
+Follow these steps to review the **Security-Audit-Configuration-Client** > **Operational** event log for troubleshooting Audit group policy settings:
+
+1. Open **Event viewer**.
+2. Under **Event Viewer (local)**, select **Applications and Services Logs** > **Microsoft** > **Windows** > **Security-Audit-Configuration-Client** > **Operational**.
+3. Double-click the **Warning** or **Error** events to troubleshoot. Also review the **Details** tab for these events for any **Error** value.
+4. Else, review the **Informational** event to capture the complete processing of Audit extension.
+
 ## Gather key information before you contact Microsoft Support
 
 Before you complete your support request, we recommend that you use the Windows Live Dump feature to save a snapshot of kernel memory on the affected computer. To do this, follow these steps:

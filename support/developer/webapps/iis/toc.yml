@@ -26,7 +26,7 @@ items:
     href: application-request-routing/affinity-not-honored-ssl-common-names-arr.md
   - name: Troubleshooting cache items in ARR version 2.0 or later
     href: application-request-routing/troubleshooting-cache-items-arr-v2-or-later.md
-  - name: Troubleshooting 502 Errors in ARR
+  - name: Troubleshooting 502 errors in ARR
     href: application-request-routing/troubleshooting-502-errors-in-arr.md
 
 - name: Development
