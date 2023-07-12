@@ -3,7 +3,7 @@ title: The difference must be zero before you can reconcile this checkbook error
 description: Fixes a problem that occurs when you reconcile the checkbook in Select Bank Transactions in Microsoft Dynamics GP, and you receive an error message that states the difference must be zero before you can reconcile this checkbook. Provides a resolution
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 07/12/2023
 ---
 # "The difference must be zero before you can reconcile this checkbook" error when reconciling the checkbook in Select Bank Transactions
 
@@ -20,7 +20,8 @@ When you reconcile the checkbook in Select Bank Transactions in Microsoft Dynami
 
 ## Cause
 
-This is caused by a fractional difference. The Select Bank Transactions window will only display as many decimal places as are set up for the currency ID assigned to respective checkbook. So for example, if your checkbook is assigned a currency ID with two decimal places, then only two decimal places show in the Select Bank Transactions window. However, the records in the SQL Table store up to five decimal places for an amount field, so this issue may happen if you have amounts in the remaining decimal places for any record in the SQL tables, and may result in a fractional difference. This typically happens if the records were imported in to Microsoft Dynamics GP with amounts that are more decimal places than the currency ID is set up for.
+This is caused by a fractional difference. The Select Bank Transactions window will only display as many decimal places as are set up for the currency ID assigned to respective checkbook. So for example, if your checkbook is assigned a currency ID with two decimal places, then only two decimal places show in the Select Bank Transactions window. However, the records in the SQL Table store up to five decimal places for an amount field, so this issue may happen if you have amounts in the remaining decimal places for any record in the SQL tables, and may result in a fractional difference. This typically happens if the records were imported in to Microsoft Dynamics GP with amounts that are more decimal places than the currency ID is set up for.  
+**Importing data like this is not supported.  This article is a guide for you to fix this data, as we cannot provide data fixing for unsupported conditions within a support case.**
 
 ## Resolution
 
