@@ -11,7 +11,7 @@ author: prmadhes-msft
 
 ## Overview
 
-This article provides workarounds for some of the most common issues when performing upgrade from SQL Server 2019 to SQL Server 2022. It addresses the following issues and provides steps to troubleshoot and resolve errors.
+This article provides steps to troubleshoot and resolve the following common issues when performing upgrade from SQL Server 2019 to SQL Server 2022.
 
 ## Issue 1: An error related to access violation dumps
 
@@ -34,17 +34,19 @@ Information: Windows Error Reporting - Fault bucket INVALID_REQUEST, type 0
 Error: A user request from the session with SPID <SPID> generated a fatal exception. SQL Server is terminating this session. Contact Product Support Services with the dump produced in the log directory.
 ```
 
-**Workaround:**
+**Resolution:**
 
 There's a known issue with [LIGHTWEIGHT_QUERY_PROFILING](/sql/t-sql/statements/alter-database-scoped-configuration-transact-sql#lightweight_query_profiling---on--off-) in SQL Server 2022.
 
 This issue has been fixed in [SQL Server 2022 CU4 (May 2023)](../releases/sqlserver-2022/cumulativeupdate4.md) and [SQL Server 2019 CU20 (April 2023 release)](../releases/sqlserver-2019/cumulativeupdate20.md).
 
-The other workaround is to disable `LIGHTWEIGHT_QUERY_PROFILING`. Lightweight profiling can be disabled at the database level using the `LIGHTWEIGHT_QUERY_PROFILING` database scoped configuration: `ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = OFF;`. For more information, see [Query Profiling Infrastructure](/sql/relational-databases/performance/query-profiling-infrastructure).
+**Workaround:**
+
+To work around this issue, disable `LIGHTWEIGHT_QUERY_PROFILING`. The [lightweight profiling](/sql/relational-databases/performance/query-profiling-infrastructure) can be disabled at the database level using the `LIGHTWEIGHT_QUERY_PROFILING` database scoped configuration: `ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = OFF;`.
 
 ## Issue 2: An error related to an inactive SQL Server instance for 2022
 
-You're unable to upgrade from SQL Server 2019 to SQL Server 2022 due to inactive SQL Server instance for 2022.
+You're unable to upgrade from SQL Server 2019 to SQL Server 2022 due to an inactive SQL Server instance for 2022.
 
 **Cause:**
 
@@ -52,7 +54,7 @@ This problem occurs when a previous installation of SQL Server fails, leaving be
 
 **Resolution:**
 
-To resolve this issue, follow the steps mentioned at [Remove a partial installation of SQL server - SQL Server | Microsoft Learn](../database-engine/install/windows/remove-partial-installation.md).
+To resolve this issue, follow the steps mentioned at [Remove a partial installation of SQL Server](../database-engine/install/windows/remove-partial-installation.md).
 
 ## Issue 3: The failover cluster instance fails to come online
 
