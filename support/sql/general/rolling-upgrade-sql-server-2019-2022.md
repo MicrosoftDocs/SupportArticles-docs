@@ -112,4 +112,4 @@ To work around this issue, follow these steps:
 - [Supported version and edition upgrades (SQL Server 2022)](/sql/database-engine/install-windows/supported-version-and-edition-upgrades-2022)
 - [Upgrade availability group replicas](/sql/database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances)
 - [Troubleshoot upgrade script failures when applying an update](../database-engine/install/windows/troubleshoot-upgrade-script-failures-apply-update.md)
-- [Troubleshoot common SQL Server cumulative update (CU) installation issues](../database-engine/install/windows/sqlserver-patching-issues#errors-912-and-3417-and-wait-on-database-engine-recovery-handle-failed.md)
+- [Troubleshoot common SQL Server cumulative update (CU) installation issues](../database-engine/install/windows/sqlserver-patching-issues.md#errors-912-and-3417-and-wait-on-database-engine-recovery-handle-failed)
