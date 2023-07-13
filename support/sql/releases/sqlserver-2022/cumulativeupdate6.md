@@ -212,7 +212,7 @@ SQL Server 2022 Data Quality
 | Microsoft.ssdqs.proxy.dll | 16.0.4055.4  | 370584    | 29-Jun-23 | 16:20 | x86      |
 | Microsoft.ssdqs.proxy.dll | 16.0.4055.4  | 370624    | 29-Jun-23 | 16:20 | x86      |
 
-SQL Server 2008 Database Services Core Instance
+SQL Server 2022 Database Services Core Instance
 
 |                  File   name                 |   File version  | File size |    Date   |  Time | Platform |
 |:--------------------------------------------:|:---------------:|:---------:|:---------:|:-----:|:--------:|
