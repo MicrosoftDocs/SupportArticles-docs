@@ -226,6 +226,8 @@
     href: insufficientsubnetsize-error-advanced-networking.md
   - name: Memory saturation occurs in pods after cluster upgrade
     href: aks-memory-saturation-after-upgrade.md
+  - name: Increased memory usage reported in Kubernetes 1.25 or later versions
+    href: aks-increased-memory-usage-cgroup-v2.md
   - name: Missing or invalid service principal
     href: missing-or-invalid-service-principal.md
   - name: Network watch is stale after egress traffic restriction
