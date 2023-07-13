@@ -25,8 +25,8 @@ Refer to [Introduction to TroubleShootingScript toolset (TSS)](introduction-to-t
 
 ## Gather key information before contacting Microsoft support
 
-1. Download [TSS](https://aka.ms/getTSS) and extract it in the *C:\\tss_tool* folder. If you've downloaded this tool previously, we recommend downloading the latest version. It doesn't automatically update when running.
-2. Open the *C:\\tss_tool* folder from an elevated PowerShell command prompt.
+1. Download [TSS](https://aka.ms/getTSS) and extract it in the *C:\\tss* folder. If you've downloaded this tool previously, we recommend downloading the latest version. It doesn't automatically update when running.
+2. Open the *C:\\tss* folder from an elevated PowerShell command prompt.
     > [!NOTE]
     > Don't use the Windows PowerShell Integrated Scripting Environment (ISE).
 3. Run the following cmdlet and enter *A* for "Yes to All" for the execution policy change.

@@ -141,32 +141,32 @@ Before contacting Microsoft support, you can gather information about your issue
 
 ### Prerequisites
 
--  TSS must be run by accounts that have administrator privileges on the local system, and the EULA must be accepted. (After the EULA is accepted,  TSS won't prompt again.)
+- TSS must be run by accounts that have administrator privileges on the local system, and the EULA must be accepted. (After the EULA is accepted, TSS won't prompt again.)
 - We recommend the LocalMachine `RemoteSigned` PowerShell execution policy.
 
 > [!NOTE]
-> If the current PowerShell execution policy doesn't allow running  TSS, take the following actions:
+> If the current PowerShell execution policy doesn't allow running TSS, take the following actions:
 >
 > - Set the `RemoteSigned` execution policy for the process level by running the cmdlet, `PS C:\> Set-ExecutionPolicy -scope Process -ExecutionPolicy RemoteSigned`.
 > - To verify that the change takes effect, run the cmdlet, `PS C:\> Get-ExecutionPolicy -List`.
-> - Because the process level permissions apply to only the current PowerShell session, after the given PowerShell window in which  TSS runs is closed, the assigned permission for the process level also reverts to the previously configured state.
+> - Because the process level permissions apply to only the current PowerShell session, after the given PowerShell window in which TSS runs is closed, the assigned permission for the process level also reverts to the previously configured state.
 
 ### Gather key information before contacting Microsoft support
 
-1. Download [ TSS](https://aka.ms/get TSS) on all nodes and unzip it in the *C:\\tss_tool* folder.
-2. Open the *C:\\tss_tool* folder at an elevated PowerShell command prompt.
+1. Download [TSS](https://aka.ms/getTSS) on all nodes and unzip it in the *C:\\tss* folder.
+2. Open the *C:\\tss* folder at an elevated PowerShell command prompt.
 3. Start the traces on the client and the server by using the following cmdlets:
 
     - Client:  
 
         ```powershell
-         TSS.ps1 -Scenario NET_DNScli
+        TSS.ps1 -Scenario NET_DNScli
         ```
 
     - Server:  
 
         ```powershell
-         TSS.ps1 -Scenario NET_DNSsrv
+        TSS.ps1 -Scenario NET_DNSsrv
         ```
 
 4. Accept the EULA if the traces are run for the first time on the server or the client.

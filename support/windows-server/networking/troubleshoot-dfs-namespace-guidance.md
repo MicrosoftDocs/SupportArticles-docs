@@ -62,15 +62,15 @@ Before contacting Microsoft support, you can gather information about your issue
 
 ### Prerequisites
 
-1. TSS must be run by accounts with administrator privileges on the local system, and EULA must be accepted (once EULA is accepted,  TSS won't prompt again).
+1. TSS must be run by accounts with administrator privileges on the local system, and EULA must be accepted (once EULA is accepted, TSS won't prompt again).
 2. We recommend the local machine `RemoteSigned` PowerShell execution policy.
 
 > [!NOTE]
-> If the current PowerShell execution policy doesn't allow running  TSS, take the following actions:
+> If the current PowerShell execution policy doesn't allow running TSS, take the following actions:
 >
 > - Set the `RemoteSigned` execution policy for the process level by running the cmdlet `PS C:\Set-ExecutionPolicy -scope Process -ExecutionPolicy RemoteSigned`.
 > - To verify if the change takes effect, run the cmdlet `PS C:\Get-ExecutionPolicy -List`.
-> - Because the process level permissions only apply to the current PowerShell session, once the given PowerShell window in which  TSS runs is closed, the assigned permission for the process level will also go back to the previously configured state.
+> - Because the process level permissions only apply to the current PowerShell session, once the given PowerShell window in which TSS runs is closed, the assigned permission for the process level will also go back to the previously configured state.
 
 ### Gather key information before contacting Microsoft support
 
@@ -81,13 +81,13 @@ Before contacting Microsoft support, you can gather information about your issue
     - Client:  
 
         ```powershell
-         TSS.ps1 -Scenario NET_DFScli
+        TSS.ps1 -Scenario NET_DFScli
         ```
 
     - Server:  
 
         ```powershell
-         TSS.ps1 -Scenario NET_DFSsrv
+        TSS.ps1 -Scenario NET_DFSsrv
         ```
 
 4. Accept the EULA if the traces are run for the first time on the server or the client.
