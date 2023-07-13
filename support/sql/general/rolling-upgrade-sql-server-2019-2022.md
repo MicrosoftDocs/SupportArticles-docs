@@ -38,7 +38,7 @@ Error: A user request from the session with SPID <SPID> generated a fatal except
 
 There's a known issue with [LIGHTWEIGHT_QUERY_PROFILING](/sql/t-sql/statements/alter-database-scoped-configuration-transact-sql#lightweight_query_profiling---on--off-) in SQL Server 2022.
 
-This issue has been fixed in [SQL Server 2022 CU4 (May 2023)](../../releases/sqlserver-2022/cumulativeupdate4.md) and [SQL Server 2019 CU20 (April 2023 release)](../../releases/sqlserver-2019/cumulativeupdate20.md).
+This issue has been fixed in [SQL Server 2022 CU4 (May 2023)](../releases/sqlserver-2022/cumulativeupdate4.md) and [SQL Server 2019 CU20 (April 2023 release)](../releases/sqlserver-2019/cumulativeupdate20.md).
 
 The other workaround is to disable `LIGHTWEIGHT_QUERY_PROFILING`. Lightweight profiling can be disabled at the database level using the `LIGHTWEIGHT_QUERY_PROFILING` database scoped configuration: `ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = OFF;`. For more information, see [Query Profiling Infrastructure](/sql/relational-databases/performance/query-profiling-infrastructure).
 
@@ -52,7 +52,7 @@ This problem occurs when a previous installation of SQL Server fails, leaving be
 
 **Resolution:**
 
-To resolve this issue, follow the steps mentioned at [Remove a partial installation of SQL server - SQL Server | Microsoft Learn](../install/windows/remove-partial-installation.md).
+To resolve this issue, follow the steps mentioned at [Remove a partial installation of SQL server - SQL Server | Microsoft Learn](../database-engine/install/windows/remove-partial-installation.md).
 
 ## Issue 3: The failover cluster instance fails to come online
 
@@ -64,7 +64,7 @@ One possible cause for this issue is that the SQL Server instance could be in sc
 
 **Workaround:**
 
-To resolve the issue and bring the SQL Server instance online successfully, you can bypass the running upgrade script. Follow the steps for bypass upgrade script documented at [Troubleshoot upgrade script failures when applying an update](../install/windows/troubleshoot-upgrade-script-failures-apply-update.md).
+To resolve the issue and bring the SQL Server instance online successfully, you can bypass the running upgrade script. Follow the steps for bypass upgrade script documented at [Troubleshoot upgrade script failures when applying an update](../database-engine/install/windows/troubleshoot-upgrade-script-failures-apply-update.md).
 
 > [!NOTE]
 > The [-T902](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf902) parameter disables the upgrade script execution during startup.
@@ -92,7 +92,7 @@ The error occurs when the distribution database is part of an Availability Group
 
 **Resolution:**
 
-The fix for this issue is available in [SQL Server 2022 CU5](../../releases/sqlserver-2022/cumulativeupdate5.md).
+The fix for this issue is available in [SQL Server 2022 CU5](../releases/sqlserver-2022/cumulativeupdate5.md).
 
 **Workaround:**
 
@@ -103,13 +103,13 @@ To work around this issue, follow these steps:
 1. After completing the upgrade, add the distribution database back to the Availability Group.
 
 > [!NOTE]
-> This issue can occur when upgrading from SQL Server 2016 SP2 CU3/SQL Server 2017 CU6 or later versions to SQL Server 2019 as well. The fix for this issue is available in [Cumulative Update 21 for SQL Server 2019](../../releases/sqlserver-2019/cumulativeupdate21.md).
+> This issue can occur when upgrading from SQL Server 2016 SP2 CU3/SQL Server 2017 CU6 or later versions to SQL Server 2019 as well. The fix for this issue is available in [Cumulative Update 21 for SQL Server 2019](../releases/sqlserver-2019/cumulativeupdate21.md).
 
 ## More information
 
-- [Remove a partial installation of SQL server](../install/windows/remove-partial-installation.md)
+- [Remove a partial installation of SQL server](../database-engine/install/windows/remove-partial-installation.md)
 - [Uninstall an existing instance of SQL Server (Setup)](/sql/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup)
 - [Supported version and edition upgrades (SQL Server 2022)](/sql/database-engine/install-windows/supported-version-and-edition-upgrades-2022)
 - [Upgrade availability group replicas](/sql/database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances)
-- [Troubleshoot upgrade script failures when applying an update](../install/windows/troubleshoot-upgrade-script-failures-apply-update.md)
-- [Troubleshoot common SQL Server cumulative update (CU) installation issues](../install/windows/sqlserver-patching-issues#errors-912-and-3417-and-wait-on-database-engine-recovery-handle-failed.md)
+- [Troubleshoot upgrade script failures when applying an update](../database-engine/install/windows/troubleshoot-upgrade-script-failures-apply-update.md)
+- [Troubleshoot common SQL Server cumulative update (CU) installation issues](../database-engine/install/windows/sqlserver-patching-issues#errors-912-and-3417-and-wait-on-database-engine-recovery-handle-failed.md)
