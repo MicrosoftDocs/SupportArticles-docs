@@ -9,15 +9,15 @@ author: prmadhes-msft
 ---
 # Rolling upgrade from SQL Server 2019 to SQL Server 2022
 
-## Overview
+_Applies to:_&nbsp; SQL Server 2019, SQL Server 2022
 
 This article provides steps to troubleshoot and resolve the following common issues when performing upgrade from SQL Server 2019 to SQL Server 2022.
 
 ## Issue 1: An error related to access violation dumps
 
-You attempt to upgrade from SQL Server 2019 to SQL Server 2022 in an Always On environment and encounter an error related to access violation dumps. The error message and associated log entries indicate a fatal exception generated during the upgrade process.
+An error related to access violation dumps occurs when you attempt to upgrade SQL Server from version 2019 to 2022 in an Always On environment. The error message and associated log entries indicate a fatal exception generated during the upgrade process.
 
-**Error details:**
+**Error message:**
 
 > Exception Code: c0000005 EXCEPTION_ACCESS_VIOLATION
 
@@ -28,7 +28,7 @@ Error: A user request from the session with SPID <SPID> generated a fatal except
 Information: Windows Error Reporting - Fault bucket INVALID_REQUEST, type 0
 ```
 
-**SQL error log:**
+**SQL Server error log:**
 
 ```output
 Error: A user request from the session with SPID <SPID> generated a fatal exception. SQL Server is terminating this session. Contact Product Support Services with the dump produced in the log directory.
@@ -38,7 +38,7 @@ Error: A user request from the session with SPID <SPID> generated a fatal except
 
 There's a known issue with [LIGHTWEIGHT_QUERY_PROFILING](/sql/t-sql/statements/alter-database-scoped-configuration-transact-sql#lightweight_query_profiling---on--off-) in SQL Server 2022.
 
-This issue has been fixed in [SQL Server 2022 CU4 (May 2023)](../releases/sqlserver-2022/cumulativeupdate4.md) and [SQL Server 2019 CU20 (April 2023 release)](../releases/sqlserver-2019/cumulativeupdate20.md).
+This issue has been fixed in [Cumulative Update 4 for SQL Server 2022)](../releases/sqlserver-2022/cumulativeupdate4.md) and [Cumulative Update 20 for SQL Server 2019](../releases/sqlserver-2019/cumulativeupdate20.md).
 
 **Workaround:**
 
@@ -46,7 +46,7 @@ To work around this issue, disable `LIGHTWEIGHT_QUERY_PROFILING`. The [lightweig
 
 ## Issue 2: An error related to an inactive SQL Server instance for 2022
 
-You're unable to upgrade from SQL Server 2019 to SQL Server 2022 due to an inactive SQL Server instance for 2022.
+You're unable to upgrade SQL Server from version 2019 to 2022 due to an inactive SQL Server instance for 2022.
 
 **Cause:**
 
@@ -73,13 +73,16 @@ To resolve the issue and bring the SQL Server instance online successfully, you 
 
 ## Issue 4: An error related to replication
 
-There's an error related to replication encountered during the upgrade to SQL 2022 on machines that host the [distribution database](/sql/relational-databases/replication/distribution-database) in an availability group.
+An error related to replication occurs when you upgrade SQL Server from version 2019 to 2022 on machines that host the [distribution database](/sql/relational-databases/replication/distribution-database) in an availability group.
+
+> [!NOTE]
+> This issue can occur when you upgrade SQL Server from version 2016 SP2 CU3/SQL Server 2017 CU6 or later versions to SQL Server 2019 as well. The fix for this issue is available in [Cumulative Update 21 for SQL Server 2019](../releases/sqlserver-2019/cumulativeupdate21.md).
 
 **Error message:**
 
 SQL setup completes but shows the error "There was an error executing the replication upgrade scripts" for the replication component. Attempting to run a repair on an instance in this state will yield the same error.
 
-The SQL ERRORLOGs post-upgrade shows the following entries:
+**SQL Server error log:**
 
 ```output
 Executing sp_vupgrade_replication.
@@ -90,22 +93,19 @@ Saving upgrade script status to 'SOFTWARE\Microsoft\MSSQLServer\Replication\Setu
 
 **Cause:**
 
-The error occurs when the distribution database is part of an Availability Group (AG), and an in-place upgrade is attempted.
+The error occurs when the distribution database is part of an availability group (AG), and an in-place upgrade is attempted.
 
 **Resolution:**
 
-The fix for this issue is available in [SQL Server 2022 CU5](../releases/sqlserver-2022/cumulativeupdate5.md).
+The fix for this issue is available in [Cumulative Update 5 for SQL Server 2022](../releases/sqlserver-2022/cumulativeupdate5.md).
 
 **Workaround:**
 
 To work around this issue, follow these steps:
 
-1. Remove the distribution database from the Availability Group.
-1. Proceed with the upgrade to [SQL Sever 2022](/sql/sql-server/editions-and-components-of-sql-server-2022).
-1. After completing the upgrade, add the distribution database back to the Availability Group.
-
-> [!NOTE]
-> This issue can occur when upgrading from SQL Server 2016 SP2 CU3/SQL Server 2017 CU6 or later versions to SQL Server 2019 as well. The fix for this issue is available in [Cumulative Update 21 for SQL Server 2019](../releases/sqlserver-2019/cumulativeupdate21.md).
+1. Remove the distribution database from the availability group.
+1. Proceed with the upgrade to SQL Server 2022.
+1. After completing the upgrade, add the distribution database back to the availability group.
 
 ## More information
 
