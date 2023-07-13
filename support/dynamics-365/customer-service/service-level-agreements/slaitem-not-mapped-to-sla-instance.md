@@ -1,5 +1,5 @@
 ---
-title: Object reference not set to an instance of an object error
+title: SLA instances associated with a case don't have mapped SLA item
 description: Provides a resolution for the Object reference not set to an instance of an object error that occurs when updating old cases and entities.
 ms.reviewer: sdas
 ms.author: ravimanne
@@ -11,7 +11,7 @@ This article provides a resolution for an issue where the service-level agreemen
 
 ## Symptoms
 
-You can't update old cases and entities with an SLA (created more than two years ago) in a Unified Interface SLA, and you receive the following error message:
+You can't update old cases and entities with an old SLA in a Unified Interface SLA, and you receive the following error message:
 
 > System.NullReferenceException: Object reference not set to an instance of an object.  
 > at Microsoft.Dynamics.SLAManagement.Plugins.SLAInstanceService.GetSLAInstance(String regardingId, Guid slaItemId).
@@ -33,5 +33,5 @@ To solve this issue, take the following steps:
 3. Follow the mitigation steps on test or lower environments where the issue is reproduced, and after confirmation, try on the affected environment.
 
 > [!NOTE]
-> This resolution applies only to old records (created more than two years ago) that are getting errors. If newly created records also get this error, contact [Microsoft support](https://dynamics.microsoft.com/support/) for further assistance.
+> This resolution applies only to old records that are getting errors. If newly created records also get this error, contact [Microsoft support](https://dynamics.microsoft.com/support/) for further assistance.
 
