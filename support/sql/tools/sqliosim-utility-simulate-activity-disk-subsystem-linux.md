@@ -4,7 +4,7 @@ description: This article describes how to use SQLIOSim utility to simulate SQL 
 author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: amitkh, dansha, rafidl, Suresh.Kandoth, randolphwest
-ms.date: 07/12/2023
+ms.date: 07/14/2023
 ms.topic: how-to
 ms.custom: sap:Other tools
 ---
@@ -57,7 +57,7 @@ To install SQLIOSim, follow the steps relevant to the Linux distribution the hos
        sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2022.repo
        ```
 
-1. After you've added the repository, run the installation with the following commands.
+1. After you've added the repository, run the installation with the following commands:
 
    1. Switch to the root user:
 
@@ -65,7 +65,7 @@ To install SQLIOSim, follow the steps relevant to the Linux distribution the hos
       sudo su
       ```
 
-   1. Set the environment variable `ACCEPT_EULA` to `y`, to accept the End-User License Agreement.
+   1. Set the environment variable `ACCEPT_EULA` to `y`, to accept the End-User License Agreement:
 
       ```bash
       export ACCEPT_SQLIOSIM_EULA=y
@@ -79,7 +79,7 @@ To install SQLIOSim, follow the steps relevant to the Linux distribution the hos
 
 ### [SUSE Linux Enterprise Server (SLES)](#tab/sles)
 
-1. Add the repository.
+1. Add the repository:
 
    - For SLES v12:
 
@@ -123,7 +123,7 @@ To install SQLIOSim, follow the steps relevant to the Linux distribution the hos
       sudo su
       ```
 
-   1. Set the environment variable `ACCEPT_EULA` to `y`, to accept the End-User License Agreement.
+   1. Set the environment variable `ACCEPT_EULA` to `y`, to accept the End-User License Agreement:
 
       ```bash
       export ACCEPT_SQLIOSIM_EULA=y
@@ -175,7 +175,7 @@ To install SQLIOSim, follow the steps relevant to the Linux distribution the hos
       sudo su
       ```
 
-   1. Set the environment variable `ACCEPT_EULA` to `y`, to accept the End-User License Agreement.
+   1. Set the environment variable `ACCEPT_EULA` to `y`, to accept the End-User License Agreement:
 
       ```bash
       export ACCEPT_SQLIOSIM_EULA=y
