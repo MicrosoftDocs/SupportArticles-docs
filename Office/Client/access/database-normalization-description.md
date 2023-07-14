@@ -11,11 +11,13 @@ ms.custom:
   - CI 114797
   - CSSTroubleshoot
 ms.reviewer: rioj
-appliesto: 
-  - Microsoft Office Access 2007
-  - Microsoft Office Access 2003
+appliesto:
+  - Access 2021
+  - Access 2019
+  - Access 2016
+  - Access 2013
 search.appverid: MET150
-ms.date: 3/31/2022
+ms.date: 7/7/2023
 ---
 
 # Description of the database normalization basics
