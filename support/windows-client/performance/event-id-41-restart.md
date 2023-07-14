@@ -52,7 +52,7 @@ By itself, Event ID 41 might not contain sufficient information to explicitly de
 - [Scenario 2](#scenario-2-the-computer-restarts-because-you-pressed-and-held-the-power-button): The computer restarts because you pressed and held the power button
 - [Scenario 3](#scenario-3-the-computer-is-unresponsive-or-randomly-restarts-and-event-id-41-isnt-recorded-or-the-event-id-41-entry-or-lists-error-code-values-of-zero): The computer is unresponsive or randomly restarts, and Event ID 41 isn't logged or the Event ID 41 entry lists error code values of zero
 
-### Scenario 1: The computer restarts because of a Stop error, and Event ID 41 contains a Stop error (bug check) code
+## Scenario 1: The computer restarts because of a Stop error, and Event ID 41 contains a Stop error (bug check) code
 
 When a computer shuts down or restarts because of a Stop error, Windows includes the Stop error data in Event ID 41 as part of more event data. This information includes the Stop error code (also called a bug check code), as shown in the following example:
 
@@ -83,7 +83,7 @@ After you identify the hexadecimal value, use the following references to contin
 - [Bug Check Code Reference](/windows-hardware/drivers/debugger/bug-check-code-reference2). This page lists links to documentation for different bug check codes.
 - [How to Debug Kernel Mode Blue Screen Crashes (for beginners)](/archive/blogs/askcore/how-to-debug-kernel-mode-blue-screen-crashes-for-beginners).
 
-### Scenario 2: The computer restarts because you pressed and held the power button
+## Scenario 2: The computer restarts because you pressed and held the power button
 
 Because this method of restarting the computer interferes with the Windows shutdown operation, we recommend that you use this method only if you've no alternative. For example, you might have to use this approach if your computer isn't responding. When you restart the computer by pressing and holding the power button, the computer logs an Event ID 41 that includes a non-zero value for the **PowerButtonTimestamp** entry.
 
@@ -102,7 +102,7 @@ Because this method of restarting the computer interferes with the Windows shutd
 
 For help when troubleshooting an unresponsive computer, see [Windows Help](https://support.microsoft.com/hub/4338813/windows-help?os=windows-10). Consider searching for assistance by using keywords such as "hang," "responding," or "blank screen."
 
-### Scenario 3: The computer is unresponsive or randomly restarts, and Event ID 41 isn't recorded or the Event ID 41 entry or lists error code values of zero
+## Scenario 3: The computer is unresponsive or randomly restarts, and Event ID 41 isn't recorded or the Event ID 41 entry or lists error code values of zero
 
 This scenario includes the following circumstances:
 
