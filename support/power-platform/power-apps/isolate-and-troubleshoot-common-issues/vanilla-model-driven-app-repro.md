@@ -2,7 +2,7 @@
 title: Create a vanilla repro model-driven app for troubleshooting
 description: Provides more information about how to isolate a problem by reproducing it in a different environment.
 author: tahoon
-ms.date: 07/13/2023
+ms.date: 07/14/2023
 ms.author: tahoon
 search.audienceType: 
   - maker
@@ -27,7 +27,7 @@ If you don't have a license to create new environments, consider [simplifying th
 
 ## Recreate custom tables and other components
 
-Some tables (entities) like **Accounts** and **Contacts** come out of the box with Microsoft Power Apps and Microsoft Dynamics 365. To address issues with custom tables, you can create similar ones in the vanilla environment. You don't have to copy the exact configuration. For example, if the issue is with a column (field) of a table, create the column for a new table.
+Microsoft Power Apps and Microsoft Dynamics 365 have some out-of-the-box tables (entities) like **Accounts** and **Contacts**. To address issues with custom tables, you can create similar ones in the vanilla environment. You don't have to copy the exact configuration. For example, if the issue is with a column (field) of a table, create the column for a new table.
 
 The same principle applies to any customizations, such as [business rules](/power-apps/maker/model-driven-apps/create-business-rules-recommendations-apply-logic-form), [commands](/power-apps/maker/model-driven-apps/command-designer-overview), [forms](/power-apps/maker/model-driven-apps/create-design-forms), and [views](/power-apps/maker/model-driven-apps/create-edit-views).
 
