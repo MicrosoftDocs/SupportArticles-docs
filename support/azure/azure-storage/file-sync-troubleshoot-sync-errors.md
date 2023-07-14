@@ -1,4 +1,3 @@
-![image](https://github.com/MicrosoftDocs/SupportArticles-docs/assets/139396378/3660563c-0724-4bf4-8d3e-e0baf5bb7ab1)
 ---
 title: Troubleshoot sync health and errors in Azure File Sync
 description: Troubleshoot common issues with monitoring sync health and resolving sync errors in an Azure File Sync deployment.
