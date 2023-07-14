@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - CI 114797
   - CSSTroubleshoot
-ms.reviewer: rioj
+ms.reviewer: denniwil
 appliesto:
   - Access 2021
   - Access 2019
@@ -21,8 +21,6 @@ ms.date: 7/7/2023
 ---
 
 # Description of the database normalization basics
-
-_Original KB number:_ &nbsp; 283878
 
 This article explains database normalization terminology for beginners. A basic understanding of this terminology is helpful when discussing the design of a relational database.
 
