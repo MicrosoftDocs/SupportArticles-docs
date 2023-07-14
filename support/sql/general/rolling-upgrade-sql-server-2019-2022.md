@@ -1,6 +1,6 @@
 ---
 title: Rolling upgrade from SQL Server 2019 to SQL Server 2022
-description: Provides workarounds for some of the most common issues when performing upgrade from SQL Server 2019 to SQL Server 2022.
+description: Provides workarounds for some of the most common issues when performing an upgrade from SQL Server 2019 to SQL Server 2022.
 ms.date: 07/12/2023
 ms.custom: sap:General Troubleshooting Information
 ms.reviewer: joriel, jopilov, prmadhes
@@ -9,9 +9,9 @@ author: prmadhes-msft
 ---
 # Rolling upgrade from SQL Server 2019 to SQL Server 2022
 
-_Applies to:_&nbsp; SQL Server 2019, SQL Server 2022
+_Applies to:_&nbsp; SQL Server 2022, SQL Server 2019, SQL Server 2017, SQL Server 2016
 
-This article provides steps to troubleshoot and resolve the following common issues when performing upgrade from SQL Server 2019 to SQL Server 2022.
+This article provides steps to troubleshoot and resolve the following common issues when performing an upgrade from SQL Server 2019 to SQL Server 2022.
 
 ## Issue 1: An error related to access violation dumps
 
@@ -38,23 +38,23 @@ Error: A user request from the session with SPID <SPID> generated a fatal except
 
 There's a known issue with [LIGHTWEIGHT_QUERY_PROFILING](/sql/t-sql/statements/alter-database-scoped-configuration-transact-sql#lightweight_query_profiling---on--off-) in SQL Server 2022.
 
-This issue has been fixed in [Cumulative Update 4 for SQL Server 2022)](../releases/sqlserver-2022/cumulativeupdate4.md) and [Cumulative Update 20 for SQL Server 2019](../releases/sqlserver-2019/cumulativeupdate20.md).
+This issue has been fixed in [Cumulative Update 4 for SQL Server 2022](../releases/sqlserver-2022/cumulativeupdate4.md) and [Cumulative Update 20 for SQL Server 2019](../releases/sqlserver-2019/cumulativeupdate20.md).
 
 **Workaround:**
 
 To work around this issue, disable `LIGHTWEIGHT_QUERY_PROFILING`. The [lightweight profiling](/sql/relational-databases/performance/query-profiling-infrastructure) can be disabled at the database level using the `LIGHTWEIGHT_QUERY_PROFILING` database scoped configuration: `ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = OFF;`.
 
-## Issue 2: An error related to an inactive SQL Server instance for 2022
+## Issue 2: An error related to an inactive instance for SQL Server 2022
 
-You're unable to upgrade SQL Server from version 2019 to 2022 due to an inactive SQL Server instance for 2022.
+You're unable to upgrade SQL Server from version 2019 to 2022 due to an inactive instance for SQL Server 2022.
 
 **Cause:**
 
-This problem occurs when a previous installation of SQL Server fails, leaving behind a partly installed instance on the computer. The SQL Server setup program doesn't automatically roll back the installation in case of failure. The partly installed instance doesn't include the edition of SQL Server you were trying to install, leading to subsequent installation failures when attempting to upgrade to the same version.
+This problem occurs when a previous installation of SQL Server fails, leaving behind a partially installed instance on the computer. The SQL Server setup program doesn't automatically roll back the installation if there's a failure. The partially installed instance doesn't include the edition of SQL Server you were trying to install, leading to subsequent installation failures when attempting to upgrade to the same version.
 
 **Resolution:**
 
-To resolve this issue, follow the steps mentioned at [Remove a partial installation of SQL Server](../database-engine/install/windows/remove-partial-installation.md).
+To resolve this issue, follow the steps mentioned in [Remove a partial installation of SQL Server](../database-engine/install/windows/remove-partial-installation.md).
 
 ## Issue 3: The failover cluster instance fails to come online
 
@@ -62,25 +62,25 @@ After upgrading SQL Server from version 2019 to 2022 on a [failover cluster inst
 
 **Possible cause:**
 
-One possible cause for this issue is that the SQL Server instance could be in script upgrade mode, which prevents it from starting. During the upgrade process, SQL Server goes through several steps to ensure a smooth transition, including executing upgrade scripts. If the instance is stuck in the script upgrade mode, it won't be able to come online.
+One possible cause of this issue is that the SQL Server instance might be in the script upgrade mode, which prevents it from starting. During the upgrade process, SQL Server goes through several steps to ensure a smooth transition, including executing upgrade scripts. If the instance is stuck in the script upgrade mode, it won't be able to come online.
 
 **Workaround:**
 
-To resolve the issue and bring the SQL Server instance online successfully, you can bypass the running upgrade script. Follow the steps for bypass upgrade script documented at [Troubleshoot upgrade script failures when applying an update](../database-engine/install/windows/troubleshoot-upgrade-script-failures-apply-update.md).
+To resolve the issue and bring the SQL Server instance online successfully, you can bypass the running upgrade script by following the steps in [Troubleshoot upgrade script failures when applying an update](../database-engine/install/windows/troubleshoot-upgrade-script-failures-apply-update.md).
 
 > [!NOTE]
 > The [-T902](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf902) parameter disables the upgrade script execution during startup.
 
 ## Issue 4: An error related to replication
 
-An error related to replication occurs when you upgrade SQL Server from version 2019 to 2022 on machines that host the [distribution database](/sql/relational-databases/replication/distribution-database) in an availability group.
+An error related to replication occurs when you upgrade SQL Server from version 2019 to 2022 on machines that host the [distribution database](/sql/relational-databases/replication/distribution-database) in an availability group (AG).
 
 > [!NOTE]
-> This issue can occur when you upgrade SQL Server from version 2016 SP2 CU3/SQL Server 2017 CU6 or later versions to SQL Server 2019 as well. The fix for this issue is available in [Cumulative Update 21 for SQL Server 2019](../releases/sqlserver-2019/cumulativeupdate21.md).
+> This issue can also occur when you upgrade SQL Server from version 2016 SP2 CU3, SQL Server 2017 CU6, or later versions to SQL Server 2019. The fix for this issue is available in [Cumulative Update 21 for SQL Server 2019](../releases/sqlserver-2019/cumulativeupdate21.md).
 
 **Error message:**
 
-SQL setup completes but shows the error "There was an error executing the replication upgrade scripts" for the replication component. Attempting to run a repair on an instance in this state will yield the same error.
+SQL setup completes but shows the error "There was an error executing the replication upgrade scripts" for the replication component. If you try to run a repair on an instance in this state, you'll receive the same error message.
 
 **SQL Server error log:**
 
@@ -93,7 +93,7 @@ Saving upgrade script status to 'SOFTWARE\Microsoft\MSSQLServer\Replication\Setu
 
 **Cause:**
 
-The error occurs when the distribution database is part of an availability group (AG), and an in-place upgrade is attempted.
+The error occurs when the distribution database is part of an AG, and an in-place upgrade is attempted.
 
 **Resolution:**
 
@@ -103,9 +103,9 @@ The fix for this issue is available in [Cumulative Update 5 for SQL Server 2022]
 
 To work around this issue, follow these steps:
 
-1. Remove the distribution database from the availability group.
+1. Remove the distribution database from the AG.
 1. Proceed with the upgrade to SQL Server 2022.
-1. After completing the upgrade, add the distribution database back to the availability group.
+1. After completing the upgrade, add the distribution database back to the AG.
 
 ## More information
 
