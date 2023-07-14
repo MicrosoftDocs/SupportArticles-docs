@@ -48,7 +48,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="2442348">[2442348](#2442348)</a> | Fixes an issue in which applying a patch on the secondary replica or performing an in-place upgrade fails if a database has change data capture (CDC) enabled and is in an availability group. The following error is returned: </br></br>\<DateTime>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Error: 912, Severity: 21, State: 2. </br>\<DateTime>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Script level upgrade for database 'master' failed because upgrade step 'repl_upgrade.sql' encountered error 35262, state 4, severity 10. This is a serious error condition which might interfere with regular operation and the database will be taken offline. If the error happened during upgrade of the 'master' database, it will prevent the entire SQL Server instance from starting. Examine the previous errorlog entries for errors, take the appropriate corrective actions and re-start the database so that the script upgrade steps run to completion. | SQL Server Engine | Replication | Windows |
 | <a id="2397656">[2397656](#2397656)</a> | [FIX: SQL Server Audit Events fail to write to the Security log (KB4052136)](https://support.microsoft.com/help/4052136) | SQL Server Engine | Security Infrastructure | Windows |
 | <a id="2472403">[2472403](#2472403)</a> | Fixes the following error 41313 that you encounter when you create a natively compiled stored procedure that contains a `CASE` statement and a column that uses dynamic data masking (DDM): </br></br>Msg 41313, Level 16, State 1, Procedure \<ProcedureName>, Line \<LineNumber> [Batch Start Line \<LineNumber>] </br>The C compiler encountered a failure. The exit code was 2. | SQL Server Engine | Security Infrastructure | All |
-| <a id="2475171">[2475171](#2475171)</a> | Enables Azure Active Directory (Azure AD) authentication for SQL Server replication by setting trace flag 11543 as the default. Azure AD authentication for replication can be disabled by using trace flag 11561. Using Azure AD authentication for replication is currently in public preview. | SQL Server Engine | Security Infrastructure | All |
+| <a id="2475171">[2475171](#2475171)</a> | Enables Azure Active Directory (Azure AD) authentication for SQL Server replication. Azure AD authentication for replication can be disabled by using trace flag 11561. Using Azure AD authentication for replication is currently in public preview. For more information, see [Configure replication with Azure AD authentication](/sql/relational-databases/replication/configure-replication-with-azure-ad-authentication).| SQL Server Engine | Security Infrastructure | All |
 | <a id="2405773">[2405773](#2405773)</a> | Fixes an issue in which upgrading SQL Server 2017 to SQL Server 2022 on Linux fails and returns an error such as "'model_replicatedmaster.ldf' file does not exist." | SQL Server Engine | SQL Agent | Linux |
 | <a id="2425643">[2425643](#2425643)</a> | Fixes an issue in which running `DBCC CHECKDB` reports `RBPEX::NotifyFileShutdown` in the SQL Server error log. | SQL Server Engine | SQL Server Engine | All |
 | <a id="2431805">[2431805](#2431805)</a> | Fixes a non-yielding dump issue that you encounter when the `IORequestDispenser` is waiting for the I/O to finish. | SQL Server Engine | Storage Management | All |
@@ -74,7 +74,13 @@ The following update is available from the Microsoft Download Center:
 
 The following update is available from the Microsoft Update Catalog:
 
-This cumulative update package is not yet available on [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=sql%20server%202022). This article will be updated after the package is made available on this channel.
+- :::image type="icon" source="../media/download-icon.png" border="false"::: [Download the cumulative update package for SQL Server 2022 CU6 now](https://catalog.s.download.windowsupdate.com/d/msdownload/update/software/updt/2023/07/sqlserver2022-kb5027505-x64_7e188a61f59eaf1011bc1625900202d7fbca6b0d.exe)
+
+> [!NOTE]
+>
+> - [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=sql%20server%202022) contains this SQL Server 2022 CU and previously released SQL Server 2022 CU releases.
+> - This CU is also available through Windows Server Update Services (WSUS).
+> - We recommend that you always install the latest cumulative update that is available.
 
 </details>
 
