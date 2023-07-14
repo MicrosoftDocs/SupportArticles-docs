@@ -1,6 +1,6 @@
 ---
-title: The CPU status of a Teams Rooms device is Unhealthy
-description: Resolves an issue that triggers a CPU performance limited signal and reports a Microsoft Teams Rooms device as Unhealthy.
+title: The CPU performance limited status of a Teams Rooms device is Unhealthy
+description: Resolves an issue that causes the CPU performance limited signal of a Microsoft Teams Rooms device to appear as Unhealthy.
 ms.reviewer: rebenite
 ms.topic: troubleshooting
 ms.date: 7/13/2023
@@ -16,15 +16,11 @@ appliesto:
   - Microsoft Teams
 ms.custom: CI177322
 ---
-# The CPU status of a Team Rooms device is Unhealthy
+# The CPU performance limited status is Unhealthy
 
 ## Symptoms
 
-In the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/), the following symptoms occur for a Teams Rooms device:  
-
-   - A **CPU performance limited** signal is displayed
-   - The device status is shown as **Unhealthy**
-   - The incident severity value is shown as **Warning**
+In the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/), the **CPU performance limited** signal of a Microsoft Teams Rooms device is shown as **Unhealthy**, and the incident severity value is shown as **Warning**.
 
 > [!NOTE]  
 > Incidents that are classified as **Warning** don't affect the health status that's reported for a device.
@@ -41,7 +37,7 @@ Every Teams Rooms device includes a Windows configuration that specifies whether
 - Through Mobile Device Management (MDM) policies
 - Manually by administrators
 
-If this setting is set to a value that's less than 100 percent, it might affect overall processor performance during peak hours and also affect the ability of Teams Rooms to handle the full processing load. In this case, the Teams Rooms Pro agent detects and reports the status of the device as **CPU performance limited** and **Unhealthy**.
+If this setting is set to a value that's less than 100 percent, it might affect overall processor performance during peak hours and also affect the ability of Teams Rooms to handle the full processing load. In this case, the Teams Rooms Pro agent detects and reports the status of **CPU performance limited** as **Unhealthy**.
 
 ## Resolution
 
