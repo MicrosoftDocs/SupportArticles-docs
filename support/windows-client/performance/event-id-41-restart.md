@@ -170,19 +170,17 @@ If you perform these checks and still can't isolate the problem, set the system 
 
 ### Details about the event ID 41
 
-The Kernel Power event ID 41 error occurs when the computer shuts down or restarts unexpectedly. When a Windows-based computer starts, a check is performed to determine whether the computer was shut down cleanly. If the computer was not shut down cleanly, a Kernel Power event ID 41 message is generated.
+The Kernel Power event ID 41 error occurs when the computer shuts down or restarts unexpectedly. When a Windows-based computer starts, a check is performed to determine whether the computer was shut down cleanly. If not, a Kernel Power event ID 41 message is generated.
 
-An event ID 41 is used to report that something unexpected happened that prevented Windows from shutting down correctly. There may be insufficient information to explicitly define what happened. See [Kernel Power Event ID 41](https://social.technet.microsoft.com/wiki/contents/articles/14246.kernel-power-event-id-41.aspx).
+An event ID 41 is used to report that something unexpected happened that prevented Windows from shutting down correctly. There may be insufficient information to explicitly define what happened. See [Kernel Power Event ID 41](https://social.technet.microsoft.com/wiki/contents/articles/14246.kernel-power-event-id-41.aspx) for more information.
 
-```output
-Log name  System
-Product   Windows Operating System
-ID        41
-Source    Microsoft-Windows-Kernel-Power
-Level     Critical
-Version   6.1
-Message   The system has rebooted without cleanly shutting down first. This error could be caused if the system stopped responding, crashed, or lost power unexpectedly.
-```
+- Log name: System
+- Product: Windows Operating System
+- ID: 41
+- Source: Microsoft-Windows-Kernel-Power
+- Level: Critical
+- Version: 6.1
+- Message: The system has rebooted without cleanly shutting down first. This error could be caused if the system stopped responding, crashed, or lost power unexpectedly.
 
 > [!NOTE]
 > The time shown in the .evtx file is adjusted to your system’s time. Check the time zone of the server.
@@ -192,22 +190,23 @@ Message   The system has rebooted without cleanly shutting down first. This erro
 - Event ID 6006: This event indicates that Windows was adequately turned off.
 - Event ID 6008: This event indicates an improper or dirty shutdown. It is logged when the most recent shutdown was unexpected.
 
-Just before the computer shutdown, shutdown.exe will record the shutdown event in the Windows System log with a Source=User32 and event ID 1074 along with any custom message & reason code.
+Just before the computer shuts down, `shutdown.exe` will record the shutdown event in the Windows System log with a Source=User32 and event ID 1074 along with any custom message & reason code.
 
-The event log is the only way to tell that a reboot triggered from Shutdown.exe is pending. It also records the username and date and time when the shutdown command was issued.
+The event log is the only way to tell that a reboot triggered from `shutdown.exe` is pending. The event also records the username, and the date and time when the `shutdown` command was issued.
 
-When using Shutdown.exe to reboot a server, the shutdown process will normally allow 30 seconds to ensure each running service has time to stop. Services are shutdown in alphabetical order. Halting the services manually in a specific order with NET STOP or SC can be slightly faster.
+When using `shutdown.exe` to restart a server, the shutdown process will normally allow 30 seconds to ensure each running service has time to stop. Services are shutdown in alphabetical order. Halting the services manually in a specific order with `NET STOP` or `SC` can be slightly faster.
 
 ### Boot Status File (from the windows internals 6th)
 
-Windows uses a boot status file (%SystemRoot%\Bootstat.dat) to record the fact that it has progressed through various stages of the system life cycle, including boot and shutdown.
+Windows uses a boot status file (*%SystemRoot%\Bootstat.dat*) to record the fact that it has progressed through various stages of the system life cycle, including startup and shutdown.
 
-This allows the Boot Manager, Windows loader, and the Startup Repair tool to detect abnormal shutdown or a failure to shut down cleanly and offer the user recovery and diagnostic boot options, like Last Known Good and Safe Mode. This binary file contains information through which the system reports the success of the following phases of the system life cycle:
+This allows the Boot Manager, Windows loader, and the Startup Repair tool to detect abnormal shutdown or a failure to shut down cleanly, in order to offer the user recovery and diagnostic boot options, such as Last Known Good and Safe Mode. This binary file contains information through which the system reports the success of the following phases of the system life cycle:
 
 - Boot (the definition of a successful boot is the same as the one used for determining Last Known Good status, which was described earlier)
 - Shutdown
 - Resume from hibernate or suspend
-The boot status file also indicates whether a problem was detected the last time the user attempted to boot the operating system and the recovery options shown, indicating that the user has been made aware of the problem and taken action. Runtime Library APIs (Rtl) in Ntdll.dll contain the private interfaces that Windows uses to read from and write to the file. Like the BCD, it cannot be edited by users.
+
+The boot status file also indicates whether a problem was detected the last time the user tried to boot the operating system and the recovery options shown, indicating that the user has been made aware of the problem and taken action. Runtime Library APIs (Rtl) in ntdll.dll contain the private interfaces that Windows uses to read from and write to the file. Like the BCD, it cannot be edited by users.
 
 ### About shutdown
 
@@ -215,10 +214,10 @@ When a shutdown is initiated, Windows sends a WM_QUERYENDSESSION message to all 
 
 If all applications respond to the WM_QUERYENDSESSION message and terminate gracefully, Windows logs a clean shutdown event in the System event log. If any application does not respond to the message or terminates abnormally, Windows logs a dirty shutdown event in the System event log.
 
-The unexpected shutdowns are mostly caused by components outside the OS.
+The unexpected shutdowns are mostly caused by components outside the operating system.
 
 A dirty shutdown is when a computer system is shut down without going through the proper shutdown process. This can happen when the power is suddenly cut off or when the computer is forced to shut down by holding down the power button. A dirty shutdown can cause data loss or corruption and can also lead to boot-up problems.
 
 The dirty shutdown count registry is a registry key in the Windows Registry that is used to track the number of times a computer system has been shut down without going through the proper shutdown process. This key can be useful when troubleshooting boot-up problems to identify whether the system was powered off incorrectly.
 
-You can also clear all the values (like DirtyShutdown, LastAliveStamp, TimeStampInterval) in the following registry key: Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Reliability. This can help prevent the Shutdown Event Tracker from appearing after an unexpected shutdown.
+You can also clear all the values (like DirtyShutdown, LastAliveStamp, TimeStampInterval) in the following registry key: `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Reliability`. This can help prevent the Shutdown Event Tracker from appearing after an unexpected shutdown.
