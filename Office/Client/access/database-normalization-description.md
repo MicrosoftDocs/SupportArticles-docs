@@ -86,7 +86,7 @@ These steps demonstrate the process of normalizing a fictitious student table.
 
    Tables should have only two dimensions. Since one student has several classes, these classes should be listed in a separate table. Fields Class1, Class2, and Class3 in the above records are indications of design trouble.
 
-   Spreadsheets often use the third dimension, but tables shouldn't. Another way to look at this problem is with a one-to-many relationship, don't put the one side and the many sides in the same table. Instead, create another table in the first normal form by eliminating the repeating group (Class#), as shown in the following example:
+   Spreadsheets often use the third dimension, but tables shouldn't. Another way to look at this problem is with a one-to-many relationship, don't put the one side and the many sides in the same table. Instead, create another table in first normal form by eliminating the repeating group (Class#), as shown in the following example:
 
    |Student#|Advisor|Adv-Room|Class#|
    |---|---|---|---|
