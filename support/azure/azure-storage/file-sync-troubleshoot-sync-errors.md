@@ -1,4 +1,3 @@
-![image](https://github.com/MicrosoftDocs/SupportArticles-docs/assets/139396378/b325b587-8cb3-4c7a-b6ab-353c4c750adb)
 ![image](https://github.com/MicrosoftDocs/SupportArticles-docs/assets/139396378/3660563c-0724-4bf4-8d3e-e0baf5bb7ab1)
 ---
 title: Troubleshoot sync health and errors in Azure File Sync
