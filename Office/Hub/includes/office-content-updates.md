@@ -2,6 +2,14 @@
 
 
 
+## Week of July 10, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 7/10/2023 | [The digital signature in Access is tampered with or invalidated](/office/troubleshoot/access/access-database-digital-signature-invalidated) | added |
+
+
 ## Week of June 26, 2023
 
 
