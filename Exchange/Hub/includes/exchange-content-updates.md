@@ -2,6 +2,14 @@
 
 
 
+## Week of July 10, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 7/11/2023 | [Messages sent from a shared mailbox aren't saved to the Sent Items folder](/exchange/troubleshoot/user-and-shared-mailboxes/sent-mail-is-not-saved) | modified |
+
+
 ## Week of June 26, 2023
 
 
@@ -26,22 +34,3 @@
 | Published On |Topic title | Change |
 |------|------------|--------|
 | 6/13/2023 | [In-Place eDiscovery search doesn't search the file names of attached mail items](/exchange/troubleshoot/compliance/ediscovery-search-ignores-attached-mail-items) | added |
-
-
-## Week of June 05, 2023
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 6/9/2023 | [In-Place eDiscovery search doesn't search the file names of attached mail items](/exchange/troubleshoot/compliance/ediscovery-search-ignores-attached-mail-items) | added |
-
-
-## Week of May 29, 2023
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 5/30/2023 | [Common tasks to manage Microsoft 365 groups](/exchange/troubleshoot/groups-and-distribution-lists/o365-group-tasks) | modified |
-| 5/30/2023 | [Mailboxes are stalled during a migration](/exchange/troubleshoot/migration/mailboxes-stalled-during-migration) | modified |
-| 5/30/2023 | [Can't register a Hybrid Agent in Exchange Server](/exchange/troubleshoot/move-mailboxes/cannot-register-hybrid-agent) | modified |
-| 5/30/2023 | [Mailboxes are stalled during a migration](/exchange/troubleshoot/migration/mailboxes-stalled-during-migration) | added |
