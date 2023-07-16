@@ -27,3 +27,7 @@ To install Power Automate without on-premises gateway certificates, you can run 
 2. Navigate to the location of the installer.
 3. Type `Setup.Microsoft.PowerAutomate.exe /SkipGatewaySupport`.
 4. Follow the prompts and install Power Automate.
+
+After installing using this command, subsequent upgrades will remember this setting so there is no need to add the flag again. To add the gateway certificates back, you can run the installer in the same fashion using the `AddGatewaySupport` command.
+
+This parameter is also supported using [silent installer](https://learn.microsoft.com/en-us/power-automate/desktop-flows/install-silently).
