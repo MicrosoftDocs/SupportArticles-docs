@@ -6,7 +6,7 @@ ms.date: 07/17/2023
 ms.custom: sap:Change data capture
 ms.reviewer: mathoma
 author: croblesm
-ms.author: v-sidong, roblescarlos
+ms.author: roblescarlos
 ---
 # Transaction log grows due to long-running transactions when you use Change Data Capture - SQL Server & Azure SQL
 
