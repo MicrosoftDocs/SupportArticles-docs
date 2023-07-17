@@ -224,10 +224,10 @@ These procedures use the [TroubleShootingScript (TSS)](../windows-troubleshooter
   > If your environment prevents you from using `RemoteSigned` at the computer level, you can temporarily set it at the process level. To do this, run the following cmdlet in an elevated Powershell Command Prompt window before you start the tool:
   >  
   > ```powershell
-  > PS C:\Set-ExecutionPolicy -scope Process -ExecutionPolicy RemoteSigned
+  > PS C:\> Set-ExecutionPolicy -scope Process -ExecutionPolicy RemoteSigned
   > ```
   >  
-  > To verify that the change takes effect, run the `PS C:\Get-ExecutionPolicy -List` cmdlet.
+  > To verify that the change takes effect, run the `PS C:\> Get-ExecutionPolicy -List` cmdlet.
   >  
   > The process-level permissions apply to only the current PowerShell session. After you close the PowerShell window, the execution policy reverts to the original setting.
 

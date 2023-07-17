@@ -78,11 +78,11 @@ Before contacting Microsoft Support, you can gather information about the issue.
 >
 > - Set **RemoteSigned** for the **Process** level and run the following cmdlet:
 >
->   `PS C:\Set-ExecutionPolicy -scope Process -ExecutionPolicy RemoteSigned`
+>   `PS C:\> Set-ExecutionPolicy -scope Process -ExecutionPolicy RemoteSigned`
 >
 > - Verify if the change has taken effect, run the following cmdlet:
 >
->   `PS C:\Get-ExecutionPolicy -List`
+>   `PS C:\> Get-ExecutionPolicy -List`
 >
 > Since the **Process** level permissions only apply to the current PowerShell session, once the given PowerShell window in which TSS runs is closed, the assigned permission for the **Process** level will also go back to the previously configured state.
 
