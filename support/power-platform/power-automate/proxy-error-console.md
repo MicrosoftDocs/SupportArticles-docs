@@ -8,6 +8,7 @@ ms.subservice: power-automate-desktop-flows
 # “The proxy server in your network requires authentication” or “The communication with the cloud services requires network proxy authentication” or “The proxy server in your network is blocking access to Microsoft cloud services” error
 
 This article provides a resolution to proxy-related errors encountered in Microsoft Power Automate for desktop.
+
 _Applies to:_ &nbsp; Power Automate
 
 ## Symptoms
@@ -15,8 +16,11 @@ _Applies to:_ &nbsp; Power Automate
 Power Automate for desktop console displays one of the following errors:
 
 > The proxy server in your network requires authentication.
+> 
 > The communication with the cloud services requires network proxy authentication.
+> 
 > During startup Power Automate couldn't sign you in. The proxy server in your network requires authentication.
+> 
 > The proxy server in your network is blocking access to Microsoft cloud services.
 
 ## Cause
@@ -33,6 +37,7 @@ Configure the proxy address and port that will be used to interact with the prox
 If the error message is related to authentication, follow one of the below options:
 - Option 1 - [Configure Power Automate for desktop to interact with a corporate proxy server using Windows Credentials](/power-automate/desktop-flows/governance#configure-power-automate-for-desktop-to-authenticate-to-a-corporate-proxy-server-using-windows-credentials)
 - Option 2 - [Configure Power Automate for desktop to authenticate to a corporate proxy server using the current user's credentials](/power-automate/desktop-flows/governance#configure-power-automate-for-desktop-to-authenticate-to-a-corporate-proxy-server-using-the-current-users-credentials)
+  
 Alternatively, [Configure Power Automate for desktop to bypass a corporate proxy server](/power-automate/desktop-flows/governance#configure-power-automate-for-desktop-to-bypass-a-corporate-proxy-server)
 
 
@@ -43,12 +48,16 @@ If modifying the registry entries as described above does not provide the desire
 > This method is not recommended, since the configuration files are not updated after a product update.
 
 1. Close all instances of Power Automate for desktop.
-- Ensure that the icon does not exist in the system tray.
-- Ensure that no processes are running in the background using Windows Task Manager.
+   
+   - Ensure that the icon does not exist in the system tray.
+   - Ensure that no processes are running in the background using Windows Task Manager.
+
 2. Navigate to the installation folder (_C:\Program Files (x86)\Power Automate Desktop_) and backup the following configuration files to recover them if something goes wrong:
-- PAD.Designer.exe.config
-- PAD.Console.Host.exe.config
-- PAD.Robot.exe.config
+
+   - PAD.Designer.exe.config
+   - PAD.Console.Host.exe.config
+   - PAD.Robot.exe.config
+
 3. For all files, edit each file with administrator rights, and at the end of the root xml node (<configuration>), add the following child xml node:
 
 ```xml
