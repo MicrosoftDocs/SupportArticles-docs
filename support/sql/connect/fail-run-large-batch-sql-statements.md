@@ -31,7 +31,7 @@ The following are the possible effects of this problem. The effects are varied a
 
 ## Cause
 
-When processing the results of a batch, SQL Server fills the output buffer of the connection with the result sets that are created by the batch. These result sets must be processed by the client application. If you're executing a large batch with multiple result sets, SQL Server fills that output buffer until it hits an internal limit and can't continue to process more result sets. At that point, control returns to the client. When the client starts to consume the result sets, SQL Server starts to execute the batch again because there's now available memory in the output buffer.
+When processing the results of a batch, SQL Server fills the connection output buffer with the results that come from the batch. These results must be processed by the client application. If you're executing a large batch with multiple result sets (multiple statements producing results), SQL Server fills that output buffer until it hits an internal limit and can't continue until the client application starts consuming those results. When the client starts to consume the result sets, SQL Server starts to execute the batch again because there's now available memory in the output buffer.
 
 In many cases, you encounter this problem when you connect to the SQL Server by using the Named pipes protocol or the Shared memory (LPC) protocol. This is because of the internal buffer size that SQL Server has available for the different protocols.
 
@@ -39,12 +39,12 @@ In many cases, you encounter this problem when you connect to the SQL Server by 
 
 To work around the problem, follow these steps:
 
-1. Flush all the output result sets. As soon as all output result sets are consumed by the client, SQL Server completes executing the batch.
+1. Ensure that the client application consumes all the output result sets. As soon as all output result sets are consumed by the client, SQL Server completes executing the batch.
 
     - If you're using Open Database Connectivity (ODBC) to connect to SQL Server, you can call the `SQLMoreResults` method until the method reports that there are no more result sets.
     - If you're using OLE DB to connect to SQL Server, you can repeatedly call the IMultipleResults::GetResult method until it returns `DB_S_NORESULT`.
 
-1. Add the statement `SET NOCOUNT ON` to the beginning of your batch. If the batch is executed inside a stored procedure, add the statement to the beginning of the stored procedure definition. This prevents SQL Server from returning many types of result sets. Therefore, it can reduce the data to be output to the output buffer of the server. However, this doesn't guarantee that the problem won't occur. It only increases the chance that the data returned from the server is small enough to fit into one batch of result sets.
+1. Add the statement `SET NOCOUNT ON` to the beginning of your batch. If the batch is executed inside a stored procedure, add the statement to the beginning of the stored procedure definition. This prevents SQL Server from returning an additional result set that shows the number of rows processed, after the main result set. Therefore, it can reduce the data to be output to the output buffer of the server. However, this doesn't guarantee that the problem won't occur. It only increases the chance that the data returned from the server is small enough to fit into one batch of result sets.
 
 > [!NOTE]
 >
