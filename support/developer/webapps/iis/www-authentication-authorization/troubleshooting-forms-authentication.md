@@ -94,7 +94,7 @@ Form authentication can expire prior to the value of the timeout attribute defin
 
 If the forms authentication ticket is manually generated, the timeout property of the ticket will override the value that's set in the configuration file. Therefore, if that value is less than the value in the configuration file, the forms authentication ticket will expire before the configuration file timeout attribute value and vice-versa. For example, let's assume that the `FORMS` timeout attribute is set to 30 in the *Web.config* file and the expiration value of the ticket is set to 20 minutes. In this case, the forms authentication ticket will expire after 20 minutes and then you have to log on again.
 
-```console
+```output
 Event code: 4005
 Event message: Forms authentication failed for the request. Reason: The ticket 
 supplied has expired.
@@ -104,12 +104,12 @@ supplied has expired.
 
 In ASP.NET 4 web application using forms authentication, the event log message says:
 
-```console
+```output
 Event code: 4005 
 Event message: Forms authentication failed for the request. Reason: The ticket supplied was invalid.
 ```
 
-## Data Collection and Troubleshooting
+## Data collection and troubleshooting
 
 ### Troubleshooting scenario 1
 
@@ -157,7 +157,7 @@ After the request leaves the client, there are various layers that can affect th
 
 This is a `GET` request after the user has been authenticated. The forms authentication ticket information is highlighted in grey. This confirms that the cookie information left the client. When you use a network capture tool, like Netmon, you see the traffic that actually went through the adapter.
 
-```console
+```output
 47 45 54 20 68 74 74 70-3a 2f 2f 6c 6f 63 61 6c   GET http://local
 68 6f 73 74 2f 46 6f 72-6d 73 41 75 74 68 4c 6f   host/FormsAuthLo
 67 54 65 73 74 2f 57 65-62 46 6f 72 6d 31 2e 61   gTest/WebForm1.a

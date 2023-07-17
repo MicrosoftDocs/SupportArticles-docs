@@ -33,13 +33,13 @@ This article helps you to configure compression and identifies common reasons of
 
 The only way to determine whether the IIS server sent a compressed response is by analyzing a network trace of the client request and server response. The request from the client must contain the following HTTP Request Header:
 
-```Console
+```output
 HTTP: Accept-Encoding =gzip, deflate
 ```
 
 This lets the server know that the client is willing to receive a compressed response and supports compression. In return, a compressed response from the server will contain the following HTTP Response header and a value:
 
-```Console
+```output
 HTTP: Content-Encoding = gzip
 ```
 
@@ -47,7 +47,7 @@ The following screenshots show output from the Fiddler tool when compression isn
 
 :::image type="content" source="media/troubleshooting-iis-compression-issues-in-iis6-iis7x/fiddler-tool-compression-not-working1.png" alt-text="Screenshot of HTTP Compression set to No Compression in the Transformer tab.":::
 
-:::image type="content" source="media/troubleshooting-iis-compression-issues-in-iis6-iis7x/disabled-http-compression-section.png" alt-text="Screenshot of a disabled H T T P Compression section in the Transformer tab.":::
+:::image type="content" source="media/troubleshooting-iis-compression-issues-in-iis6-iis7x/disabled-http-compression-section.png" alt-text="Screenshot of a disabled HTTP Compression section in the Transformer tab.":::
 
 ## Troubleshooting compression issues
 
@@ -71,43 +71,35 @@ Perform the following steps to troubleshoot compression issues:
 
     Compression isn't turned on in the metabase at the right nodes. There are three metabase nodes for the Compression configuration:
 
-    ```Console
-    w3svc/filters/compression/parameters
-    ```
+    - `w3svc/filters/compression/parameters`
+    - `w3svc/filters/compression/gzip`
+    - `w3svc/filters/compression/deflate`
 
-    ```Console
-    w3svc/filters/compression/gzip
-    ```
-
-    ```Console
-    w3svc/filters/compression/deflate
-    ```
-
-    Configuring the **/parameters** node is mandatory. Then, you can configure either **/gzip** or **/deflate** node, or both. This means that configuring just the gzip, deflate, or parameters nodes will not work. If you configure the **/parameters** and **/gzip** nodes, the Gzip compression scheme will be enabled. If you configure the **/parameters** and **/deflate** nodes, the Deflate compression scheme will be enabled. Finally, if you configure all three nodes, both GZip compression and Deflate compression will be enabled.
+    Configuring the `/parameters` node is mandatory. Then, you can configure either `/gzip` or `/deflate` node, or both. This means that configuring just the gzip, deflate, or parameters nodes will not work. If you configure the `/parameters` and `/gzip` nodes, the Gzip compression scheme will be enabled. If you configure the `/parameters` and `/deflate` nodes, the Deflate compression scheme will be enabled. Finally, if you configure all three nodes, both GZip compression and Deflate compression will be enabled.
 
 1. Check the metabase permission for IIS 6.
 
-    By default, `IIS\_WPG` has Read, Unsecure Read, Enumerate Keys, and Write permissions to the `/LM/W3SVC/Filters`.
+    By default, `IIS_WPG` has Read, Unsecure Read, Enumerate Keys, and Write permissions to the `/LM/W3SVC/Filters`.
 
     IIS will be unable to initialize the compression if the permissions were removed due to unexpected change or if security hardens.
 
     Use *metaacl.vbs* to verify and modify IIS 6 metabase ACL. For more information, see 
     [Default Metabase ACL](https://msdn.microsoft.com/library/ms524775(v=VS.90).aspx).
 
-    If the application pool identity (or the `IIS\_WPG` group in general) doesn't have Read and Write access to the metabase key W3SVC or Filters, a failure condition of `COMPRESSION\_DISABLED` will be logged in an Enterprise Tracing for Windows (ETW) trace.
+    If the application pool identity (or the `IIS_WPG` group in general) doesn't have Read and Write access to the metabase key W3SVC or Filters, a failure condition of `COMPRESSION_DISABLED` will be logged in an Enterprise Tracing for Windows (ETW) trace.
 
     **ETW Trace**
 
-    ```Console
+    ```output
     IISCompression: STATIC_COMPRESSION_NOT_SUCCESS - IIS has been unsuccessful doing static compression
     Reason: COMPRESSION_DISABLED
     ```
 
-1. Check if Dynamic or Static compression is turned off in *Metabase.xml*.
+1. Check if dynamic or static compression is turned off in *Metabase.xml*.
 
-    At each of the three configuration nodes (**/parameters**, **/gzip**, and **/deflate**), you have the option of enabling static and/or dynamic compression. To enable static compression for file types such as .txt and .html, you must set the `HcDoStaticCompression` key to `1` (or TRUE). To enable dynamic compression for file types such as .asp, .aspx, .asmx, or .exe, you must set the `HcDoDynamicCompression` key to `1` (or TRUE).
+    At each of the three configuration nodes (`/parameters`, `/gzip`, and `/deflate`), you have the option of enabling static and/or dynamic compression. To enable static compression for file types such as .txt and .html, you must set the `HcDoStaticCompression` key to `1` (or `TRUE`). To enable dynamic compression for file types such as .asp, .aspx, .asmx, or .exe, you must set the `HcDoDynamicCompression` key to `1` (or `TRUE`).
 
-    For example, to set dynamic compression at the **/parameters** node, run the following command by using *adsutil.vbs*:
+    For example, to set dynamic compression at the `/parameters` node, run the following command by using *adsutil.vbs*:
 
     ```Console
     cscript.exe adsutil.vbs SET w3svc/filters/compression/parameters/HcDoDynamicCompression TRUE
@@ -127,9 +119,9 @@ Perform the following steps to troubleshoot compression issues:
     </system.webServer>
     ```
 
-1. Check if the file type you want to compress is listed in the appropriate File Extensions sections at the **/gzip** and **/deflate** nodes.
+1. Check if the file type you want to compress is listed in the appropriate File Extensions sections at the `/gzip` and `/deflate` nodes.
     
-    After you turn on compression with the `HcDoDynamicCompression` and/or `HcDoStaticCompression` keys, specify which file types must be actually compressed. By default, STATIC compression uses file types such as .htm, .html, and .txt and DYNAMIC compression uses .asp, .dll, and .exe. If you want to compress different file types, for example .aspx, add it to the appropriate file extension section in the **/gzip** and-or **/deflate** nodes, depending on the type of compression you're using. For static file compression (like .html, txt, and xml), add the file extensions to the `HcFileExtensions` property. For dynamic compression (like .asp, .aspx, and .asmx) add it to the `HcScriptFileExtension` property.
+    After you turn on compression with the `HcDoDynamicCompression` and/or `HcDoStaticCompression` keys, specify which file types must be actually compressed. By default, STATIC compression uses file types such as .htm, .html, and .txt and DYNAMIC compression uses .asp, .dll, and .exe. If you want to compress different file types, for example .aspx, add it to the appropriate file extension section in the `/gzip` and-or `/deflate` nodes, depending on the type of compression you're using. For static file compression (like .html, txt, and xml), add the file extensions to the `HcFileExtensions` property. For dynamic compression (like .asp, .aspx, and .asmx) add it to the `HcScriptFileExtension` property.
 
     **For static files**
 
@@ -143,7 +135,7 @@ Perform the following steps to troubleshoot compression issues:
 
     The previous command shows the following output:
 
-    ```console
+    ```output
     HcFileExtensions : (LIST)  (3 Items)
     "htm"
     "html"
@@ -159,7 +151,7 @@ Perform the following steps to troubleshoot compression issues:
 
     The previous command shows the following output:
 
-    ```console
+    ```output
     HcFileExtensions : (LIST)  (4 Items)
     "asp"
     "dll"
@@ -198,7 +190,7 @@ Perform the following steps to troubleshoot compression issues:
     > You must configure the `HcFileExtensions` or `HcScriptFileExtensions` properties with the correct syntax. Any trailing spaces or unnecessary quotes or carriage returns will cause the property to be misconfigured. Unfortunately, *adsutil.vbs* doesn't show an error if you add an extra space, so you need to be very careful. Also, you can't copy or paste the values into a command prompt or into the *metabase.xml* file (metabase direct-edit) and must type it manually.
 
 1. Check if compression is set at the master level, but is getting overridden by a setting at a child level.
-   
+
     Compression would be enabled at the `w3svc/filters/compression` level. However, it might be that it's getting overridden by a setting at the website or application level.
 
     For example, if you have `HcDoDynamicCompression` set to `TRUE` at the `w3svc/filters/compression` level, and for the default website have `DoDynamicCompression` set to `FALSE`, dynamic compression will not occur for responses to requests for the default website.
@@ -218,14 +210,14 @@ Perform the following steps to troubleshoot compression issues:
 
 1. Check if the ISAPI filters modify the request or response headers.
 
-    An ISAPI is doing the send operation and isn't sending the complete set of HTTP headers along with the entity to `HTTP\_COMPRESSION::DoDynamicCompression`. Since `DoDynamicCompression` doesn't receive all the data from the ISAPI, we can't compress the response. Third party and/or non-Microsoft ISAPIs have been seen to do this by putting the headers in the function meant for the entity body or the entity body in the function meant for the HTTP headers, or by not providing any headers. When this happens, things like the ISAPI filter SF\_NOTIFY\_SEND\_RESPONSE, or AddResponseHeaders, or dynamic compression will fail. The ISAPI needs to put the headers and the entity in the right locations, respectively.
+    An ISAPI is doing the send operation and isn't sending the complete set of HTTP headers along with the entity to `HTTP_COMPRESSION::DoDynamicCompression`. Since `DoDynamicCompression` doesn't receive all the data from the ISAPI, we can't compress the response. Third party and/or non-Microsoft ISAPIs have been seen to do this by putting the headers in the function meant for the entity body or the entity body in the function meant for the HTTP headers, or by not providing any headers. When this happens, things like the ISAPI filter SF\_NOTIFY\_SEND\_RESPONSE, or AddResponseHeaders, or dynamic compression will fail. The ISAPI needs to put the headers and the entity in the right locations, respectively.
 
 1. Check if the response status code is something other than 200. In IIS 6 or 7, only responses with an HTTP 200 status will get compressed.
 
    Response with status codes other than 200 will not be compressed. You have to write an `HTTPModule` to achieve the same.
 
 1. Check if the request contains a `Via: header`, the `Via headers` indicates that the request is coming to IIS through a proxy.
-   
+
     Many proxies don't handle the compression header correctly and provide compressed data to clients when they aren't supposed to. So, by default, the compressed responses aren't allowed when the request has a Via header. You can override this by setting the `HcNoCompressionForProxies` metabase key to `True`.
 
 1. Check if the request is for a static page, and the response contains document footer. Document footers will cause static compression to fail.
@@ -254,7 +246,7 @@ Perform the following steps to troubleshoot compression issues:
     1. Run the following command to stop the trace.
 
        ```console
-        Logman stop trace compressionTrace -ets
+        logman stop trace compressionTrace -ets
        ```
 
     1. Convert the trace to text file.
@@ -265,17 +257,17 @@ Perform the following steps to troubleshoot compression issues:
        tracerpt compressionTrace.etl
        ```
 
-       - **Summary.txt** contains general details about the trace session, including which providers were used.
+       - *Summary.txt* contains general details about the trace session, including which providers were used.
 
-       - **DumpFile.csv** contains the actual trace data in a text format.
+       - *DumpFile.csv* contains the actual trace data in a text format.
 
-    1. Read the trace file to find useful information. Open the *dumpfiles.csv*, and find keyword like `COMPRESSION_NOT_SUCCESS`. Here's an example:
+    1. Read the trace file to find useful information. Open the *dumpfile.csv*, and find keyword like COMPRESSION_NOT_SUCCESS. Here's an example:
 
-       ```console
+       ```output
        IISCompression, STATIC_COMPRESSION_NOT_SUCCESS, 0x000008B0, 129744354075770195, 0, 0, {00000000-0000-0000-0700-0060000000bd}, "NO_MATCHING_SCHEME", 0, 0
        ```
 
-      This error `NO_MATCHING_SCHEME` means that there weren't compression scheme matches for this extension or Accept-Encoding. For a detailed list of compression errors, see the [List of compression errors](#list-of-compression-errors).
+      This error NO_MATCHING_SCHEME means that there weren't compression scheme matches for this extension or Accept-Encoding. For a detailed list of compression errors, see the [List of compression errors](#list-of-compression-errors).
 
 1. Check if the FREB trace to troubleshooting IIS compression issue is used.
 
@@ -290,7 +282,7 @@ Perform the following steps to troubleshoot compression issues:
    For a detailed list of compression errors, see the following table.
 
    > [!NOTE]
-   > The following Reasons apply to both IIS 6 and IIS 7.
+   > The following reasons apply to both IIS 6 and IIS 7.
 
    | Reason | Description |
    |--|--|
@@ -312,7 +304,7 @@ Perform the following steps to troubleshoot compression issues:
    | ALREADY\_CONTENT\_ENCODING | There is a content-encoding already present in the response. |
 
    > [!NOTE]
-   > The following Reasons apply to IIS 7 only.
+   > The following reasons apply to IIS 7 only.
 
    | Reason | Description |
    |--|--|

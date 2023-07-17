@@ -89,15 +89,15 @@ Here you can identify a cache hit or miss in either the IIS logs or FREB logs. T
 
 **IIS Log Entry** - You will find the following entries in the **cs-uri-query** field that identifies the cache Hit or Miss and the GUID for the request, which can be used to identify the request on down level servers.
 
-```console
+```output
 X-ARR-CACHE-HIT=0
 ```
 
-```console
+```output
 0 =  Cache miss, 1 = Cache hit
 ```
 
-```console
+```output
 X-ARR-LOG-ID=62a3161c-b4f5-408e-9ce7-55d25c018aea
 ```
 
@@ -139,7 +139,7 @@ In the previous step, you had identified this server as `W2K8WEBSERVER2`. In thi
 
 **IIS Advanced Logging Module** - By using advanced logging, you can add custom logging fields based on the headers `X-Forwarded-For` and `X-ARR-LOG-ID` and then use filtering to only log when these headers are present.
 
-```console
+```output
 #Software: IIS Advanced Logging Module
 #Version: 1.0
 #Start-Date: 2009-10-16 18:42:51.494
@@ -188,18 +188,19 @@ For more information about why content isn't cached by *HTTP.sys* in kernel, see
 
 ARR logs events to the Application event log when disk failures occur and mark the disk as unhealthy.
 
-| Log Name: Application |
-| --- |
-| Source: Application Request Routing |
-| Date: 11/2/2009 5:26:59 PM |
-| Event ID: 1006 |
-| Task Category: None |
-| Level: Warning |
-| Keywords: Classic |
-| User: N/A |
-| Computer: |
-| Description: Drive with path '\\?\E:\temp$\arrcache\' is being marked unhealthy. The data contains the error code. |
-| Event Xml: |
+```output
+Log Name: Application 
+Source: Application Request Routing 
+Date: 11/2/2009 5:26:59 PM 
+Event ID: 1006 
+Task Category: None 
+Level: Warning 
+Keywords: Classic 
+User: N/A 
+Computer: 
+Description: Drive with path '\?\E:\temp$\arrcache\' is being marked unhealthy. The data contains the error code. 
+Event Xml: 
+```
 
 ## More information
 

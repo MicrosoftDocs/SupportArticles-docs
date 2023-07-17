@@ -30,7 +30,7 @@ Example: </br>`sudo /opt/mssql/bin/mssql-conf set sqlagent.jobhistorymaxrows 100
 This problem is fixed in the following cumulative updates for SQL Server:
 
 - [Cumulative Update 2 for SQL Server 2022](cumulativeupdate2.md)
-- [Cumulative Update 20 for SQL Server 2019](https://support.microsoft.com/help/5024276)
+- [Cumulative Update 20 for SQL Server 2019](../sqlserver-2019/cumulativeupdate20.md)
 
 ## About cumulative updates for SQL Server
 
