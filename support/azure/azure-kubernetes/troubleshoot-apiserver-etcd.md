@@ -9,21 +9,19 @@ ms.service: Azure Kubernetes Service
 ---
 
 
-# Troubleshoot your AKS cluster's API server
+# Troubleshoot your AKS API server
 
 This guide aims to assist users in identifying and resolving unlikely issues encountered with the API Server in large AKS deployments.
 
-When considering the resilience of the API server we have tested reliability and performance to a scale of 5,000 nodes and 65,000 pods, with the ability to automatically scale-out and deliver [Kubernetes SLOs][K8s SLOs]. As such, if you observe high latencies or timeouts, these are likely due to a resource leakage on etcd or an offending client with excessive heavy API calls.
+When considering the resilience of the API server we have tested reliability and performance to a scale of 5,000 nodes and 65,000 pods, with the ability to automatically scale out and deliver [Kubernetes SLOs][K8s SLOs]. As such, if you observe high latencies or timeouts, these are likely due to a resource leakage on etcd or an offending client with excessive heavy API calls.
 
 
 <!---Avoid notes, tips, and important boxes—readers tend to skip over them. It's better to put those things directly into the text of the article. --->
 
 ## Prerequisites
 
-- A [Log Analytics workspace][log-analytics-workspace-overview].
-> [NOTE]
-> Kubernetes audit logging is not enabled by default. This must be enabled. You can enable Diagnostics Settings in Azure Portal and send kube-audit and apiserver category logs to Log Analytics. <!-- TODO add link back to how to enable log analytics>
-- Ensure that you are using the Standard tier of AKS. If you are on the Free tier, the API server and Etcd come with limited resources. Free tier clusters do not provide high availability, which is often the root cause of API server and Etcd issues. 
+- AKS Diagnostics logs have been enabled and sent to a [Log Analytics workspace][log-analytics-workspace-overview].
+- Ensure that you're using the Standard tier of AKS. If you're on the Free tier, the API server and Etcd come with limited resources. Free tier clusters don't provide high availability, which is often the root cause of API server and Etcd issues. 
 
 ## Symptoms
 
@@ -68,7 +66,7 @@ AzureDiagnostics
 | project User, count_ 
 ```
 
-This information is useful to get a sense of which clients have the greatest request volume. However, high request volume alone is not necessarily a cause for concern. The response latency each client experiences is a better indicator of the true load they are generating on the API server.
+This information is useful to get a sense of which clients have the greatest request volume. However, high request volume alone isn't necessarily a cause for concern. The response latency each client experiences is a better indicator of the true load they're generating on the API server.
 
 ### Chart Average Latency of Requests per User Agent
 
@@ -116,7 +114,7 @@ AzureDiagnostics
 
 i. Create a FlowSchema that matches the offending client's API call pattern:
 
-``
+```yaml
 apiVersion: flowcontrol.apiserver.k8s.io/v1beta2
 kind: FlowSchema
 metadata:
@@ -137,11 +135,11 @@ spec:
       serviceAccount:
         name: bad-client-account
         namespace: default 
-``
+```
 
 ii. Create a lower priority configuration to throttle bad client's API calls
 
-``
+```yaml
 apiVersion: flowcontrol.apiserver.k8s.io/v1beta2
 kind: PriorityLevelConfiguration
 metadata:
@@ -152,15 +150,15 @@ spec:
     limitResponse:
       type: Reject
   type: Limited
-``
+```
 
 ii. Then, you can observe the throttled call in the API server metrics.
 
-``
+```bash
 kubectl get --raw /metrics | grep "restrict-bad-client"
-``
+```
 
-### Verify your clients do not leak resources in Etcd
+### Verify your clients don't leak resources in Etcd
 
 A common issue is to continuously create objects without deleting unused ones in the Etcd database. The etcd database is prone to performance issues when dealing with too many objects of any type (>10K). A rapid increase of changes on such objects could also result in exceeding the etcd database size (4 GB by default).
 
@@ -171,9 +169,9 @@ To check for Etcd database usage, go to Diagnose and Solve blade on the Azure Po
 
 If you have identified objects that are no longer in use but are taking resources, consider deleting them. As an example, completed jobs can be deleted to free up space:
 
-``
+```bash
 kubectl delete jobs --field-selector status.successful=1
-``
+```
 
 ## References
 [Query and Logging API server][monitor-aks-reference.md]
