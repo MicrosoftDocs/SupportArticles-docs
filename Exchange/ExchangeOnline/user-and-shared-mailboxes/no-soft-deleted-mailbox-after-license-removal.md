@@ -42,7 +42,7 @@ Get-Mailbox <Account> -IncludeInactive
 
 ## Resolution
 
-When the license is removed from a mailbox without following other deprovisioning steps, this may leave the mailbox in a disabled state. In order to recover the mailbox, the user must relicense the Azure user object. That will reconnect the mailbox as long as it's within 30 days from the disconnect date. After 30 days the mailbox will be permanently deleted.
+When the license is removed from a mailbox without following other deprovisioning steps, this may leave the mailbox in a disabled state. In order to recover the mailbox, the user must relicense the Azure user object. That will reconnect the mailbox as long as it's within 30 days from the disconnect date. After 30 days, the mailbox will be permanently deleted and not recoverable.
 
 :::image type="content" source="media/no-soft-deleted-mailbox-after-license-removal/assign-license-page.png" alt-text="Screenshot of the Assign License page in Microsoft 365.":::
 
