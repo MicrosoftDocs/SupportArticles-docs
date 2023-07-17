@@ -3,6 +3,7 @@ title: Fail to run a large batch of SQL statements
 description: This article provides workarounds for the problem that occurs when you execute a large batch of SQL statements that returns multiple result sets.
 ms.date: 7/14/2023
 ms.custom: sap:MDAC and ADO
+ms.reviewer: jopilov
 ---
 # SQL Server doesn't finish execution of a large batch of SQL statements
 
@@ -36,14 +37,14 @@ In many cases, you encounter this problem when you connect to the SQL Server by 
 
 ## Workaround
 
-To work around the problem, use either or both of the following methods:
+To work around the problem, follow these steps:
 
-- Method 1: Flush all the output result sets. As soon as all output result sets are consumed by the client, SQL Server completes executing the batch.
+1. Flush all the output result sets. As soon as all output result sets are consumed by the client, SQL Server completes executing the batch.
 
-  - If you're using Open Database Connectivity (ODBC) to connect to SQL Server, you can call the `SQLMoreResults` method until the method reports that there are no more result sets.
-  - If you're using OLE DB to connect to SQL Server, you can repeatedly call the IMultipleResults::GetResult method until it returns `DB_S_NORESULT`.
+    - If you're using Open Database Connectivity (ODBC) to connect to SQL Server, you can call the `SQLMoreResults` method until the method reports that there are no more result sets.
+    - If you're using OLE DB to connect to SQL Server, you can repeatedly call the IMultipleResults::GetResult method until it returns `DB_S_NORESULT`.
 
-- Method 2: Add the statement `SET NOCOUNT ON` to the beginning of your batch. If the batch is executed inside a stored procedure, add the statement to the beginning of the stored procedure definition. This prevents SQL Server from returning many types of result sets. Therefore, it can reduce the data to be output to the output buffer of the server. However, this doesn't guarantee that the problem won't occur. It only increases the chance that the data returned from the server is small enough to fit into one batch of result sets.
+1. Add the statement `SET NOCOUNT ON` to the beginning of your batch. If the batch is executed inside a stored procedure, add the statement to the beginning of the stored procedure definition. This prevents SQL Server from returning many types of result sets. Therefore, it can reduce the data to be output to the output buffer of the server. However, this doesn't guarantee that the problem won't occur. It only increases the chance that the data returned from the server is small enough to fit into one batch of result sets.
 
 > [!NOTE]
 >
