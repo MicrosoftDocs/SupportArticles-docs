@@ -59,18 +59,16 @@
           href: isolate-and-troubleshoot-common-issues/troubleshoot-power-query-issues.md
         - name: Troubleshoot startup issues for Power Apps
           href: isolate-and-troubleshoot-common-issues/troubleshooting-startup-issues.md
-    - name: Manage apps
+    - name: Manage apps and solutions
       items:
         - name: Required fields are missing in Dataverse records
           href: manage-apps-and-solutions/dataverse-records-missing-required-fields.md
         - name: Troubleshoot wrap issues
           href: manage-apps-and-solutions/wrap-issues.md
-    - name: Work with solutions
-      items:
-        - name: Solution checker enforcement in Managed Environments (preview) blocks or warns on import
-          href: manage-apps-and-solutions/solution-checker-enforcement-import-issues.md
         - name: Can't import solutions or publish changes
           href: manage-apps-and-solutions/cannot-import-solutions-publish-changes.md
+        - name: Solution checker enforcement in Managed Environments (preview) blocks or warns on import
+          href: manage-apps-and-solutions/solution-checker-enforcement-import-issues.md
         - name: Active unmanaged layer after importing a managed solution
           href: manage-apps-and-solutions/unmanaged-layer-after-solution-import.md
         - name: Data source references not updated after solution import
