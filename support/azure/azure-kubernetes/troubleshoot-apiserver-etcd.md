@@ -1,10 +1,11 @@
 ---
 title: Troubleshoot API server and etcd issues #Required; this page title is displayed in search results; Always include the word "troubleshoot" in this line.
 description: Troubleshooting guide for API server and etcd in Azure Kubernetes Services #Required; this article description is displayed in search results.
-author: merooney, wdarko3, segule #Required; your GitHub user alias — correct capitalization is needed.
+author: gulerse #Required; your GitHub user alias — correct capitalization is needed.
 ms.author: segule #Required; Microsoft alias of the author.
 ms.topic: troubleshooting #Required.
 ms.date: 6/30/2023 #Required; enter the date in the mm/dd/yyyy format.
+ms.service: Azure Kubernetes Service
 ---
 
 
@@ -190,11 +191,10 @@ kubectl delete jobs --field-selector status.successful=1
 
 <!-- LINKS - internal -->
 [azure-diagnostics-overview]: ../azure-monitor/essentials/diagnostic-settings.md
-[log-analytics-workspace-overview]: ../azure-monitor/logs/log-analytics-workspace-overview.md
+[log-analytics-workspace-overview]: /azure/aks/monitor-aks.md
 [design-log-analytics-deployment]: ../azure-monitor/logs/design-logs-deployment.md
 [create-diagnostic settings]: ../azure-monitor/essentials/diagnostic-settings.md#create-diagnostic-settings
 [cost-optimization-azure-monitor]: ../azure-monitor/best-practices-cost.md
 [azure-diagnostics-table]: /azure/azure-monitor/reference/tables/azurediagnostics
 [container-insights-overview]: ..//azure-monitor/containers/container-insights-overview.md
-[monitor-aks-reference.md]: https://learn.microsoft.com/en-us/azure/aks/monitor-apiserver
 [apiserversla]: /azure/aks/free-standard-pricing-tiers#uptime-sla-terms-and-conditions
