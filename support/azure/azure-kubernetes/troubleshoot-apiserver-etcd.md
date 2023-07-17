@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot API server and etcd issues #Required; this page title is displayed in search results; Always include the word "troubleshoot" in this line.
 description: Troubleshooting guide for API server and etcd in Azure Kubernetes Services #Required; this article description is displayed in search results.
-author: seguler, merooney #Required; your GitHub user alias — correct capitalization is needed.
+author: merooney #Required; your GitHub user alias — correct capitalization is needed.
 ms.author: segule #Required; Microsoft alias of the author.
 ms.topic: troubleshooting #Required.
 ms.date: 6/30/2023 #Required; enter the date in the mm/dd/yyyy format.
