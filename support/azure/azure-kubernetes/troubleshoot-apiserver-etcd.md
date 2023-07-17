@@ -110,7 +110,7 @@ AzureDiagnostics
 #### How do you address a client overloading control plane?
 
 1. Disable the client or tune its API call pattern.
-2. Use Priority & Fairness feature to assign a lower priority for the client's API calls and throttle it to protect other applications. 
+2. Use Priority & Fairness feature to assign a lower priority for the client's API calls and throttle it to protect other applications. The following illustrates how to throttle an offending client's LIST Pods API set to 5 concurrent calls.
 
 i. Create a FlowSchema that matches the offending client's API call pattern:
 
@@ -121,7 +121,7 @@ metadata:
   name: restrict-bad-client
 spec:
   priorityLevelConfiguration:
-    name: restrict-bad-client
+    name: very-low-priority
   distinguisherMethod:
     type: ByUser
   rules:
