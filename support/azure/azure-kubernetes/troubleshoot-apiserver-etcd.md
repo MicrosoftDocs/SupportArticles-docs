@@ -174,8 +174,6 @@ kubectl delete jobs --field-selector status.successful=1
 ```
 
 ## References
-[Query and Logging API server][monitor-aks-reference.md]
-
 [Priority and Fairness][priority-and-fairness]
 
 
