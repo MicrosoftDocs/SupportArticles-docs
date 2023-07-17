@@ -2,25 +2,17 @@
 
 
 
+## Week of July 10, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 7/10/2023 | [Can't sign in to Microsoft 365 desktop applications](/microsoft-365/troubleshoot/authentication/cannot-sign-in-microsoft-365-desktop-apps) | added |
+
+
 ## Week of June 26, 2023
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
 | 6/29/2023 | [Set language and regional settings for Microsoft 365](/microsoft-365/troubleshoot/access-management/set-language-and-region) | modified |
-
-
-## Week of June 05, 2023
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 6/9/2023 | Office programs may crash with the SendToBluetooth add-in installed | removed |
-
-
-## Week of May 29, 2023
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 5/30/2023 | [Resolve search errors in eDiscovery (Standard)](/microsoft-365/troubleshoot/ediscovery/resolve-ediscovery-issues) | modified |
