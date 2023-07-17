@@ -35,7 +35,7 @@ The following table lists the release history for [!INCLUDE [sql-server-2019](..
 | [CU 8 GDR](#CU8-GDR)   | 15.0.4083.2   | 2021-01-12   |
 | [GDR 1](#GDR1)         | 15.0.2080.9   | 2021-01-12   |
 | [CU 8](#CU8)           | 15.0.4073.23  | 2020-10-07   |
-| [CU 7 (Removed)](https://support.microsoft.com/help/4570012) | 15.0.4063.15  | 2020-09-02   |
+| [CU 7 (Removed)](../sqlserver-2019/cumulativeupdate7.md) | 15.0.4063.15  | 2020-09-02   |
 | [CU 6](#CU6)           | 15.0.4053.23  | 2020-08-04   |
 | [CU 5](#CU5)           | 15.0.4043.16  | 2020-06-22   |
 | [CU 4](#CU4)           | 15.0.4033.1   | 2020-03-31   |
@@ -46,7 +46,7 @@ The following table lists the release history for [!INCLUDE [sql-server-2019](..
 
 ## <a id="CU21"></a> CU 21 (June 2023)
 
-This is the Cumulative Update 21 (CU 21) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4316.3. For information about the fixes and improvements in this release, see the [Support article](/troubleshoot/sql/releases/sqlserver-2019/cumulativeupdate21).
+This is the Cumulative Update 21 (CU 21) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4316.3. For information about the fixes and improvements in this release, see the [Support article](../sqlserver-2019/cumulativeupdate21.md).
 
 ### Package details
 
@@ -62,7 +62,7 @@ Go back to the [release history](#release-history).
 
 ## <a id="CU20"></a> CU 20 (April 2023)
 
-This is the Cumulative Update 20 (CU 20) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4312.2. For information about the fixes and improvements in this release, see [KB 5024276](https://support.microsoft.com/help/5024276).
+This is the Cumulative Update 20 (CU 20) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4312.2. For information about the fixes and improvements in this release, see [KB 5024276](../sqlserver-2019/cumulativeupdate20.md).
 
 ### Package details
 
@@ -78,7 +78,7 @@ Go back to the [release history](#release-history).
 
 ## <a id="CU19"></a> CU 19 (February 2023)
 
-This is the Cumulative Update 19 (CU 19) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4298.1. For information about the fixes and improvements in this release, see [KB 5023049](https://support.microsoft.com/help/5023049).
+This is the Cumulative Update 19 (CU 19) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4298.1. For information about the fixes and improvements in this release, see [KB 5023049](../sqlserver-2019/cumulativeupdate19.md).
 
 ### Package details
 
@@ -110,7 +110,7 @@ Go back to the [release history](#release-history).
 
 ## <a id="CU18"></a> CU 18 (September 2022)
 
-This is the Cumulative Update 18 (CU 18) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4261.1. For information about the fixes and improvements in this release, see [KB 5017593](https://support.microsoft.com/help/5017593).
+This is the Cumulative Update 18 (CU 18) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4261.1. For information about the fixes and improvements in this release, see [KB 5017593](../sqlserver-2019/cumulativeupdate18.md).
 
 ### Package details
 
@@ -126,7 +126,7 @@ Go back to the [release history](#release-history).
 
 ## <a id="CU17"></a> CU 17 (August 2022)
 
-This is the Cumulative Update 17 (CU 17) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4249.2. For information about the fixes and improvements in this release, see [KB 5016394](https://support.microsoft.com/help/5016394).
+This is the Cumulative Update 17 (CU 17) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4249.2. For information about the fixes and improvements in this release, see [KB 5016394](../sqlserver-2019/cumulativeupdate17.md).
 
 ### Package details
 
@@ -166,7 +166,7 @@ Go back to the [release history](#release-history).
 
 ## <a id="CU16"></a> CU 16 (April 2022)
 
-This is the Cumulative Update 16 (CU 16) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4223.1. For information about the fixes and improvements in this release, see [KB 5011644](https://support.microsoft.com/help/5011644).
+This is the Cumulative Update 16 (CU 16) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4223.1. For information about the fixes and improvements in this release, see [KB 5011644](../sqlserver-2019/cumulativeupdate16.md).
 
 > [!IMPORTANT]  
 > TDE-compressed backups that are made using [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)] CU 16 and later cannot be restored to previous CU versions of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. For more information, see [FIX: Error 3241 occurs during executing RESTORE LOG or RESTORE DATABASE](https://support.microsoft.com/help/5014298).
@@ -190,7 +190,7 @@ Go back to the [release history](#release-history).
 
 ## <a id="CU15"></a> CU 15 (January 2022)
 
-This is the Cumulative Update 15 (CU 15) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4198.2. For information about the fixes and improvements in this release, see [KB 5008996](https://support.microsoft.com/help/5008996).
+This is the Cumulative Update 15 (CU 15) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4198.2. For information about the fixes and improvements in this release, see [KB 5008996](../sqlserver-2019/cumulativeupdate15.md).
 
 ### Package details
 
@@ -206,7 +206,7 @@ Go back to the [release history](#release-history).
 
 ## <a id="CU14"></a> CU 14 (November 2021)
 
-This is the Cumulative Update 14 (CU 14) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4188.2. For information about the fixes and improvements in this release, see [KB 5007182](https://support.microsoft.com/help/5007182).
+This is the Cumulative Update 14 (CU 14) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4188.2. For information about the fixes and improvements in this release, see [KB 5007182](../sqlserver-2019/cumulativeupdate14.md).
 
 > [!NOTE]  
 > **SLES v15** is now supported on [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)] starting with CU 14. The offline package installation links for SLES are pointing to SLES v15 packages. If you are looking for SLES v12 packages, refer to the download path <https://packages.microsoft.com/sles/12/mssql-server-2019/>.
@@ -225,7 +225,7 @@ Go back to the [release history](#release-history).
 
 ## <a id="CU13"></a> CU 13 (October 2021)
 
-This is the Cumulative Update 13 (CU 13) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4178.1. For information about the fixes and improvements in this release, see [KB 5005679](https://support.microsoft.com/help/5005679).
+This is the Cumulative Update 13 (CU 13) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4178.1. For information about the fixes and improvements in this release, see [KB 5005679](../sqlserver-2019/cumulativeupdate13.md).
 
 ### Package details
 
@@ -241,7 +241,7 @@ Go back to the [release history](#release-history).
 
 ## <a id="CU12"></a> CU 12 (August 2021)
 
-This is the Cumulative Update 12 (CU 12) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4153.1. For information about the fixes and improvements in this release, see [KB 5004524](https://support.microsoft.com/help/5004524).
+This is the Cumulative Update 12 (CU 12) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4153.1. For information about the fixes and improvements in this release, see [KB 5004524](../sqlserver-2019/cumulativeupdate12.md).
 
 ### Package details
 
@@ -257,7 +257,7 @@ Go back to the [release history](#release-history).
 
 ## <a id="CU11"></a> CU 11 (June 2021)
 
-This is the Cumulative Update 11 (CU 11) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4138.2. For information about the fixes and improvements in this release, see [KB 5003249](https://support.microsoft.com/help/5003249).
+This is the Cumulative Update 11 (CU 11) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4138.2. For information about the fixes and improvements in this release, see [KB 5003249](../sqlserver-2019/cumulativeupdate11.md).
 
 ### Package details
 
@@ -273,7 +273,7 @@ Go back to the [release history](#release-history).
 
 ## <a id="CU10"></a> CU 10 (April 2021)
 
-This is the Cumulative Update 10 (CU 10) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4123.1. For information about the fixes and improvements in this release, see [KB 5001090](https://support.microsoft.com/help/5001090).
+This is the Cumulative Update 10 (CU 10) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4123.1. For information about the fixes and improvements in this release, see [KB 5001090](../sqlserver-2019/cumulativeupdate10.md).
 
 > [!NOTE]  
 > **Ubuntu 20.04** is now supported on [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)] starting with CU 10. The offline package installation links for Ubuntu are pointing to Ubuntu 20.04 packages. If you are looking for Ubuntu 18.04 packages, refer to the download path <https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/>.
@@ -292,7 +292,7 @@ Go back to the [release history](#release-history).
 
 ## <a id="CU9"></a> CU 9 (February 2021)
 
-This is the Cumulative Update 9 (CU 9) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4102.2. For information about the fixes and improvements in this release, see [KB 5000642](https://support.microsoft.com/help/5000642).
+This is the Cumulative Update 9 (CU 9) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4102.2. For information about the fixes and improvements in this release, see [KB 5000642](../sqlserver-2019/cumulativeupdate9.md).
 
 ### Package details
 
@@ -308,7 +308,7 @@ Go back to the [release history](#release-history).
 
 ## <a id="CU8-GDR"></a> CU 8 GDR (January 2021)
 
-This is the Cumulative Update 8-GDR (CU 8 GDR) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. This is a security update that also includes the previously released CU (CU 8). The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4083.2. For information about the fixes and improvements in this release, see [KB 4577194](https://support.microsoft.com/help/4577194).
+This is the Cumulative Update 8-GDR (CU 8 GDR) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. This is a security update that also includes the previously released CU (CU 8). The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4083.2. For information about the fixes and improvements in this release, see [KB 4577194](../sqlserver-2019/cumulativeupdate8.md).
 
 ### Package details
 
@@ -340,7 +340,7 @@ Go back to the [release history](#release-history).
 
 ## <a id="CU8"></a> CU 8 (October 2020)
 
-This is the Cumulative Update 8 (CU 8) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4073.23. For information about the fixes and improvements in this release, see [KB 4577194](https://support.microsoft.com/help/4577194).
+This is the Cumulative Update 8 (CU 8) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4073.23. For information about the fixes and improvements in this release, see [KB 4577194](../sqlserver-2019/cumulativeupdate8.md
 
 ### Package details
 
@@ -356,7 +356,7 @@ Go back to the [release history](#release-history).
 
 ## <a id="CU6"></a> CU 6 (August 2020)
 
-This is the Cumulative Update 6 (CU 6) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4053.23. For information about the fixes and improvements in this release, see [KB 4563110](https://support.microsoft.com/help/4563110).
+This is the Cumulative Update 6 (CU 6) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4053.23. For information about the fixes and improvements in this release, see [KB 4563110](../sqlserver-2019/cumulativeupdate6.md).
 
 ### Package details
 
@@ -372,7 +372,7 @@ Go back to the [release history](#release-history).
 
 ## <a id="CU5"></a> CU 5 (June 2020)
 
-This is the Cumulative Update 5 (CU 5) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4043.16. For information about the fixes and improvements in this release, see [KB 4552255](https://support.microsoft.com/help/4552255).
+This is the Cumulative Update 5 (CU 5) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4043.16. For information about the fixes and improvements in this release, see [KB 4552255](../sqlserver-2019/cumulativeupdate5.md).
 
 ### Package details
 
@@ -388,7 +388,7 @@ Go back to the [release history](#release-history).
 
 ## <a id="CU4"></a> CU 4 (March 2020)
 
-This is the Cumulative Update 4 (CU 4) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4033.1. For information about the fixes and improvements in this release, see [KB 4548597](https://support.microsoft.com/help/4548597).
+This is the Cumulative Update 4 (CU 4) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4033.1. For information about the fixes and improvements in this release, see [KB 4548597](../sqlserver-2019/cumulativeupdate4.md).
 
 ### Package details
 
@@ -404,7 +404,7 @@ Go back to the [release history](#release-history).
 
 ## <a id="CU3"></a> CU 3 (March 2020)
 
-This is the Cumulative Update 3 (CU 3) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4023.6. For information about the fixes and improvements in this release, see [KB 4538853](https://support.microsoft.com/help/4538853).
+This is the Cumulative Update 3 (CU 3) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4023.6. For information about the fixes and improvements in this release, see [KB 4538853](../sqlserver-2019/cumulativeupdate3.md).
 
 > [!NOTE]  
 > **Ubuntu 18.04** is now supported on [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)] starting with CU 3. The offline package installation links for Ubuntu are pointing to Ubuntu 18.04 packages. If you are looking for Ubuntu 16.04 packages, refer to the download path <https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/>.
@@ -423,7 +423,7 @@ Go back to the [release history](#release-history).
 
 ## <a id="CU2"></a> CU 2 (February 2020)
 
-This is the Cumulative Update 2 (CU 2) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4013.40. For information about the fixes and improvements in this release, see [KB 4536075](https://support.microsoft.com/help/4536075).
+This is the Cumulative Update 2 (CU 2) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4013.40. For information about the fixes and improvements in this release, see [KB 4536075](../sqlserver-2019/cumulativeupdate2.md).
 
 ### Package details
 
@@ -439,7 +439,7 @@ Go back to the [release history](#release-history).
 
 ## <a id="CU1"></a> CU 1 (January 2020)
 
-This is the Cumulative Update 1 (CU 1) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4003.23. For information about the fixes and improvements in this release, see [KB 4527376](https://support.microsoft.com/help/4527376).
+This is the Cumulative Update 1 (CU 1) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4003.23. For information about the fixes and improvements in this release, see [KB 4527376](../sqlserver-2019/cumulativeupdate1.md).
 
 > [!NOTE]  
 > **RHEL 8** is now supported on [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)] starting with CU 1. The offline package installation links for RHEL are pointing to RHEL 8 packages. If you are looking for RHEL 7 packages, refer to the download path <https://packages.microsoft.com/rhel/7/mssql-server-2019/>.
