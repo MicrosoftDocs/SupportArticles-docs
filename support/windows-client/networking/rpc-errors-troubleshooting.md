@@ -214,7 +214,7 @@ Before you contact Microsoft support, we recommend that you gather information a
 
 ### Prerequisites
 
-These procedures use the [TroubleShootingScript Version 2 (TSSv2)](../windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2.md) toolset. To use this toolset, you should be aware of the following prerequisites:
+These procedures use the [TroubleShootingScript (TSS)](../windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tss.md) toolset. To use this toolset, you should be aware of the following prerequisites:
 
 - You must have Administrator-level permission on the local computer.
 - The first time that you run the toolset, you have to accept a EULA.
@@ -224,21 +224,21 @@ These procedures use the [TroubleShootingScript Version 2 (TSSv2)](../windows-tr
   > If your environment prevents you from using `RemoteSigned` at the computer level, you can temporarily set it at the process level. To do this, run the following cmdlet in an elevated Powershell Command Prompt window before you start the tool:
   >  
   > ```powershell
-  > PS C:\> Set-ExecutionPolicy -scope Process -ExecutionPolicy RemoteSigned
+  > PS C:\Set-ExecutionPolicy -scope Process -ExecutionPolicy RemoteSigned
   > ```
   >  
-  > To verify that the change takes effect, run the `PS C:\> Get-ExecutionPolicy -List` cmdlet.
+  > To verify that the change takes effect, run the `PS C:\Get-ExecutionPolicy -List` cmdlet.
   >  
   > The process-level permissions apply to only the current PowerShell session. After you close the PowerShell window, the execution policy reverts to the original setting.
 
 ### Gather key information before contacting Microsoft support
 
-1. Download [TSSv2](https://aka.ms/getTSSv2) on all nodes, and expand it to the _C:\\tss\_tool_ folder.
-1. Open the _C:\\tss\_tool_ folder in an elevated PowerShell Command Prompt window.
+1. Download [TSS](https://aka.ms/getTSS) on all nodes, and expand it to the _C:\\tss_ folder.
+1. Open the _C:\\tss_ folder in an elevated PowerShell Command Prompt window.
 1. Start traces on the problem computer by running the following cmdlet:
 
     ```powershell
-    TSSv2.ps1 -Start -Scenario NET_RPC
+    TSS.ps1 -Scenario NET_RPC
     ```
 
 1. Respond to the EULA prompt.

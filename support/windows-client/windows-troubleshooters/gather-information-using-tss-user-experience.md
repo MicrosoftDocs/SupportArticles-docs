@@ -21,7 +21,7 @@ Before contacting Microsoft support, you can gather information about your issue
 
 ## Prerequisites
 
-Refer to [Introduction to TroubleShootingScript toolset (TSS)](introduction-to-troubleshootingscript-toolset-tssv2.md#prerequisites) for prerequisites for the toolset to run properly.
+Refer to [Introduction to TroubleShootingScript toolset (TSS)](introduction-to-troubleshootingscript-toolset-tss.md#prerequisites) for prerequisites for the toolset to run properly.
 
 ## Gather key information before contacting Microsoft support
 
