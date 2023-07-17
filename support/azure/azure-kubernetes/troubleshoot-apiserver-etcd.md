@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot API server and etcd issues #Required; this page title is displayed in search results; Always include the word "troubleshoot" in this line.
 description: Troubleshooting guide for API server and etcd in Azure Kubernetes Services #Required; this article description is displayed in search results.
-author: seguler #Required; your GitHub user alias — correct capitalization is needed.
+author: seguler, merooney #Required; your GitHub user alias — correct capitalization is needed.
 ms.author: segule #Required; Microsoft alias of the author.
 ms.topic: troubleshooting #Required.
 ms.date: 6/30/2023 #Required; enter the date in the mm/dd/yyyy format.
@@ -14,9 +14,6 @@ ms.service: azure-kubernetes-service
 This guide aims to assist users in identifying and resolving unlikely issues encountered with the API Server in large AKS deployments.
 
 When considering the resilience of the API server we have tested reliability and performance to a scale of 5,000 nodes and 65,000 pods, with the ability to automatically scale out and deliver [Kubernetes SLOs][K8s SLOs]. As such, if you observe high latencies or timeouts, these are likely due to a resource leakage on etcd or an offending client with excessive heavy API calls.
-
-
-<!---Avoid notes, tips, and important boxes—readers tend to skip over them. It's better to put those things directly into the text of the article. --->
 
 ## Prerequisites
 
@@ -80,18 +77,18 @@ AzureDiagnostics
 | where Category == "kube-audit" 
 | extend event = parse_json(log_s) 
 | extend User = tostring(event.user.username)
-| where User == "DUMMYUSERAGENT" // filter by name of the useragent you are interested in
 | extend start_time = todatetime(event.requestReceivedTimestamp)
 | extend end_time = todatetime(event.stageTimestamp)
 | extend latency = datetime_diff('millisecond', end_time, start_time)
-| summarize avg(latency) by User, bin(start_time, 1m) 
+| summarize avg(latency) by User, bin(start_time, 5m) 
 | render timechart 
 ```
 
+### Identify bad API calls for a given User Agent
 
-This query is used to tabulate the distribution of api calls across different resource types in a chart for a given client.
+This query is used to tabulate the p99 latency of api calls across different resource types for a given client.
 
-Troubleshooting tip:  The results from this query can be useful for identifying types of API calls that may be causing the problems. In most cases, an offending client may be making too many LIST calls on a large set of objects or large objects in size. Unfortunately, there aren't hard scalability limits that can guide users on API server scalability. API server or Etcd scalability limits depend on variety of factors explained in the [Kubernetes Scalability documents](https://github.com/kubernetes/community/blob/master/sig-scalability/configs-and-limits/thresholds.md). 
+Troubleshooting tip:  The results from this query can be useful for identifying types of API calls that fail the Upstream K8s SLOs. In most cases, an offending client may be making too many LIST calls on a large set of objects or large objects in size. Unfortunately, there aren't hard scalability limits that can guide users on API server scalability. API server or Etcd scalability limits depend on variety of factors explained in the [Kubernetes Scalability documents](https://github.com/kubernetes/community/blob/master/sig-scalability/configs-and-limits/thresholds.md). 
 
 
 ```kusto
@@ -102,15 +99,36 @@ AzureDiagnostics
 | extend HttpMethod = tostring(event.verb) 
 | extend Resource = tostring(event.objectRef.resource) 
 | extend User = tostring(event.user.username) 
+| where User == "DUMMYUSERAGENT" // filter by name of the useragent you are interested in
 | where Resource != ""
-| summarize count() by User, HttpMethod, Resource 
+| extend start_time = todatetime(event.requestReceivedTimestamp)
+| extend end_time = todatetime(event.stageTimestamp)
+| extend latency = datetime_diff('millisecond', end_time, start_time)
+| summarize p99latency=percentile(latency, 99) by HttpMethod, Resource 
 | render table  
 ```
 
-#### How do you address a client overloading control plane?
 
-1. Disable the client or tune its API call pattern.
-2. Use Priority & Fairness feature to assign a lower priority for the client's API calls and throttle it to protect other applications. The following illustrates how to throttle an offending client's LIST Pods API set to 5 concurrent calls.
+### Verify your clients don't leak resources in Etcd
+
+A common issue is to continuously create objects without deleting unused ones in the Etcd database. The etcd database is prone to performance issues when dealing with too many objects of any type (>10K). A rapid increase of changes on such objects could also result in exceeding the etcd database size (4 GB by default).
+
+To check for Etcd database usage, go to Diagnose and Solve blade on the Azure Portal. Run the Etcd Availability diagnosis by searching for Etcd in the search box. The diagnosis shows you usage breakdown and the total database size. 
+
+
+:::image type="content" source="media/troubleshoot-apiserver-etcd/etcd-detector.png" alt-text="Etcd Availability Diagnosis for AKS":::
+
+If you have identified objects that are no longer in use but are taking resources, consider deleting them. As an example, completed jobs can be deleted to free up space:
+
+```bash
+kubectl delete jobs --field-selector status.successful=1
+```
+
+### How do you address a client overloading control plane?
+
+If you ruled out overloading Etcd with too many objects, you may consider tuning your client's API call pattern to reduce pressure on the control plane. 
+
+If you can't tune the client, you can use Priority & Fairness feature in Kubernetes to throttle the client. This helps you preserve the health of the control plane and protect other applications from failing. The following sample illustrates how to throttle an offending client's LIST Pods API set to 5 concurrent calls.
 
 i. Create a FlowSchema that matches the offending client's API call pattern:
 
@@ -158,20 +176,6 @@ ii. Then, you can observe the throttled call in the API server metrics.
 kubectl get --raw /metrics | grep "restrict-bad-client"
 ```
 
-### Verify your clients don't leak resources in Etcd
-
-A common issue is to continuously create objects without deleting unused ones in the Etcd database. The etcd database is prone to performance issues when dealing with too many objects of any type (>10K). A rapid increase of changes on such objects could also result in exceeding the etcd database size (4 GB by default).
-
-To check for Etcd database usage, go to Diagnose and Solve blade on the Azure Portal. Run the Etcd Availability diagnosis by searching for Etcd in the search box. The diagnosis shows you usage breakdown and the total database size. 
-
-
-:::image type="content" source="media/troubleshoot-apiserver-etcd/etcd-detector.png" alt-text="Etcd Availability Diagnosis for AKS":::
-
-If you have identified objects that are no longer in use but are taking resources, consider deleting them. As an example, completed jobs can be deleted to free up space:
-
-```bash
-kubectl delete jobs --field-selector status.successful=1
-```
 
 ## References
 [Priority and Fairness][priority-and-fairness]
