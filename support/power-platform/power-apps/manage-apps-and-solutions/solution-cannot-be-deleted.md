@@ -1,11 +1,11 @@
 ---
 title: Solution cannot be deleted due to dependencies from other components 
 description: Describes an issue where the message Solution cannot be deleted due to dependencies from other components in the system is displayed.
-ms.reviewer: squassina
+ms.reviewer: matp
 ms.topic: troubleshooting
 ms.date: 06/18/2021
-author: squassina
-ms.author: risquass
+author: nhelgren
+ms.author: nhelgren
 ---
 # Solution cannot be deleted due to dependencies from other components
 

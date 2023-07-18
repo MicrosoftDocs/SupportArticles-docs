@@ -1,11 +1,11 @@
 ---
 title: Label text doesn’t display in additional languages
 description: Describes an issue where label text doesn’t display in additional languages after import.
-ms.reviewer: squassina
+ms.reviewer: matp
 ms.topic: troubleshooting
 ms.date: 06/18/2021
-author: squassina
-ms.author: risquass
+author: nhelgren
+ms.author: nhelgren
 ---
 # Label text doesn’t display in additional languages
 

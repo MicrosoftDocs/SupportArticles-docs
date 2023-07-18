@@ -1,10 +1,10 @@
 ---
 title: Duplicate security roles after solution import
 description: Describes an issue where duplicate security roles appear after solution import.
-ms.reviewer: squassina
+ms.reviewer: matp
 ms.topic: troubleshooting
 ms.date: 06/18/2021
-author: squassina
+author: nhelgren
 ms.author: risquass
 ---
 # Duplicate security roles after solution import

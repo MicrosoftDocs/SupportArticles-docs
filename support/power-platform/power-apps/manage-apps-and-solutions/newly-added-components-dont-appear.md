@@ -1,11 +1,11 @@
 ---
 title: Newly added components don’t appear in the app after import
 description: Describes an issue where newly added components don’t appear in the app after importing an update to the app.
-ms.reviewer: squassina
+ms.reviewer: matp
 ms.topic: troubleshooting
 ms.date: 06/18/2021
-author: squassina
-ms.author: risquass
+author: nhelgren
+ms.author: nhelgren
 ---
 # Newly added components don’t appear in the app after import
 

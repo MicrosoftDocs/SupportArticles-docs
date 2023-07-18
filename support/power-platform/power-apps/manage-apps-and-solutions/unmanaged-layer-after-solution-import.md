@@ -1,11 +1,11 @@
 ---
 title: There's an active unmanaged layer created after importing a managed solution
 description: Describes an issue where there's an active unmanaged layer created after importing a managed solution.
-ms.reviewer: squassina
+ms.reviewer: matp
 ms.topic: troubleshooting
 ms.date: 06/18/2021
-author: squassina
-ms.author: risquass
+author: nhelgren
+ms.author: nhelgren
 ---
 # There's an active unmanaged layer created after importing a managed solution
 

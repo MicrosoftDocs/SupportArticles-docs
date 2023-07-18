@@ -1,11 +1,11 @@
 ---
 title: Full formXml is expected to create a form
 description: Describes an issue where the message full formXml is expected to create a form is displayed during solution import.
-ms.reviewer: squassina
+ms.reviewer: matp
 ms.topic: troubleshooting
 ms.date: 06/18/2021
-author: squassina
-ms.author: risquass
+author: nhelgren
+ms.author: nhelgren
 ---
 # Full formXml is expected to create a form
 

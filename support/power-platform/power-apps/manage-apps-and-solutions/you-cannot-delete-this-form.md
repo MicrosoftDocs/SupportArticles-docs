@@ -1,11 +1,11 @@
 ---
 title: You cannot delete this form because it is the only fallback form
 description: Describes an issue where the message You cannot delete this form because it is the only fallback form of type main is displayed during solution upgrade or uninstall.
-ms.reviewer: squassina
+ms.reviewer: matp
 ms.topic: troubleshooting
 ms.date: 06/18/2021
-author: squassina
-ms.author: risquass
+author: nhelgren
+ms.author: nhelgren
 ---
 # You cannot delete this form because it is the only fallback form
 
