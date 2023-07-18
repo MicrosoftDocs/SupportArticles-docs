@@ -73,7 +73,7 @@
           items:
             - name: '"Disabled users cannot access the system" error'
               href: service-level-agreements/sla-users-cannot-access-system.md
-            - name: '"Modern flow is not valid for ExecuteWorkflow" error'
+            - name: '"Modern flow isn't valid for ExecuteWorkflow" error'
               href: service-level-agreements/sla-modern-flow-not-valid.md
             - name: SLA workflow must be in published state error
               href: service-level-agreements/sla-workflow-published-state-error.md
