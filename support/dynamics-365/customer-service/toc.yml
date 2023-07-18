@@ -73,7 +73,7 @@
           items:
             - name: '"Disabled users cannot access the system" error'
               href: service-level-agreements/sla-users-cannot-access-system.md
-            - name: '"Modern flow isn't valid for ExecuteWorkflow" error'
+            - name: '"Modern flow is not valid for ExecuteWorkflow" error'
               href: service-level-agreements/sla-modern-flow-not-valid.md
             - name: SLA workflow must be in published state error
               href: service-level-agreements/sla-workflow-published-state-error.md
@@ -101,7 +101,7 @@
               href: service-level-agreements/sla-not-getting-applied.md
             - name: SLA instances associated with a case don't have SLA items
               href: service-level-agreements/slaitem-not-mapped-to-sla-instance.md
-            - name: SLA KPI instance pausedon is null when status is On-Hold (paused)
+            - name: SLA KPI instance `pausedon` is null when status is On-Hold (paused)
               href: service-level-agreements/slakpiinstance-pausedon-null.md
     - name: Omnichannel for Customer Service
       items:
