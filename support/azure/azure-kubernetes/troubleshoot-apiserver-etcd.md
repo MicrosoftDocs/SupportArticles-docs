@@ -9,13 +9,13 @@ ms.reviewer: segule, merooney
 ---
 # Troubleshoot API server and etcd issues in Azure Kubernetes Services
 
-This guide is designed to help you identify and resolve any unlikely issues they may encounter with the Kubernetes API server in large Azure Kubernetes Services (AKS) deployments.
+This guide is designed to help you identify and resolve any unlikely issues they may encounter with the API server in large Azure Kubernetes Services (AKS) deployments.
 
-Considering the resilience of the API server, Microsoft has tested the reliability and performance of the API server at a scale of 5,000 nodes and 65,000 pods, with the ability to automatically scale out and deliver [Kubernetes SLOs](https://github.com/kubernetes/community/blob/master/sig-scalability/slos/slos.md). If you experience high latencies or timeouts, it's likely due to a resource leakage on etcd or an offending client with excessive API calls.
+Considering the resilience of the API server, Microsoft has tested the reliability and performance of the API server at a scale of 5,000 nodes and 65,000 pods, with the ability to automatically scale out and deliver [Kubernetes Service Level Objectives (SLOs)](https://github.com/kubernetes/community/blob/master/sig-scalability/slos/slos.md). If you experience high latencies or timeouts, it's likely due to a resource leakage on etcd or an offending client with excessive API calls.
 
 ## Prerequisites
 
-- AKS diagnostics logs have been enabled and sent to a [Log Analytics workspace][/azure/aks/monitor-aks].
+- AKS diagnostics logs have been enabled and sent to a [Log Analytics workspace](/azure/aks/monitor-aks).
 - Ensure that you're using the Standard tier for AKS clusters. If you're using the Free tier, the API server and etcd come with limited resources. AKS clusters in the Free tier don't provide high availability, which is often the root cause of API server and etcd issues.
 
 ## Symptoms
@@ -109,7 +109,7 @@ AzureDiagnostics
 | render table  
 ```
 
-The results from this query can be useful for identifying types of API calls that fail the upstream Kubernetes SLOs. In most cases, an offending client may be making too many `LIST` calls on a large set of objects or objects that are too large in size. Unfortunately, there are no hard scalability limits that can guide users on API server scalability. API server or etcd scalability limits depend on a variety of factors explained in [Kubernetes Scalability thresholds](https://github.com/kubernetes/community/blob/master/sig-scalability/configs-and-limits/thresholds.md). 
+The results from this query can be useful for identifying types of API calls that fail the Upstream Kubernetes SLOs. In most cases, an offending client may be making too many `LIST` calls on a large set of objects or objects that are too large in size. Unfortunately, there are no hard scalability limits that can guide users on API server scalability. API server or etcd scalability limits depend on a variety of factors explained in [Kubernetes Scalability thresholds](https://github.com/kubernetes/community/blob/master/sig-scalability/configs-and-limits/thresholds.md). 
 
 ## Verify clients don't leak resources in etcd
 
