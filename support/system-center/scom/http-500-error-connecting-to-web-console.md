@@ -29,6 +29,7 @@ To fix the issue, perform the following configurations and verifications, and th
 1. [Verify the HTTP SPNs.](#verify-the-http-spns)
 1. [Configure constraint delegations.](#configure-constraint-delegations)
 1. [Verify "Account is sensitive and cannot be delegated" isn't set.](#verify-account-is-sensitive-and-cannot-be-delegated-isnt-set)
+1. [Disable Kernel-mode Authentication in IIS](#disable-kernel-mode-authentication-in-iis)
 
 > [!NOTE]
 > The following sample names are used in the configuration and verification steps. You have to replace them with the names in your environment.
@@ -173,3 +174,14 @@ To verify that the user logging into the Web console doesn't have **Account is s
 2. Right-click the user account that's used to connect to the Web console, and then select **Properties**.
 3. Select **Account**.
 4. In the **Account options** dialogue box, confirm that the **Account is sensitive and cannot be delegated** checkbox isn't selected.
+
+### Disable Kernel-mode Authentication in IIS
+
+To disable **Kernel-mode Authentication** in IIS for both **MonitoringView** and **OperationsManager**, follow these steps:
+
+1. In the IIS Manager Navigate to **Default Web Site\MonitoringView** .
+2. Double-click on **Authentication**.
+3. Select **Windows Authentication**.
+4. In the **Actions** pane on the left select **Advanced Settings**.
+5. Remove the Checkbox **Enable Kernel-mode authentication**
+6. Repeat steps 1-5 for the **Default Web Site\OperationsManager**
