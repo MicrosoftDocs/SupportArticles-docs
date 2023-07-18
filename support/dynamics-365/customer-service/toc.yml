@@ -101,13 +101,13 @@
               href: service-level-agreements/sla-not-getting-applied.md
             - name: SLA instances associated with a case don't have SLA items
               href: service-level-agreements/slaitem-not-mapped-to-sla-instance.md
-            - name: SLA KPI instance `pausedon` is null when status is On-Hold (paused)
+            - name: SLA KPI instance pausedon is null when status is On-Hold (paused)
               href: service-level-agreements/slakpiinstance-pausedon-null.md
     - name: Omnichannel for Customer Service
       items:
         - name: Agent Scripts and Macros
           items:
-            - name: Can't deploy a custom Agentscript solution
+            - name: Can't deploy a custom Agent script solution
               href: omnichannel-for-customer-service/custom-agentscript-solution.md
         - name: Conversation control
           items:
