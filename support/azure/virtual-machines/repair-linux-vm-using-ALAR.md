@@ -38,7 +38,7 @@ ALAR covers the following repair scenarios:
 
 ### fstab
 
-This action strips off any lines in the */etc/fstab* file that aren't needed to boot a system. First a a copy of the original file is made for reference.  When the OS starts, the administrator can edit the fstab to correct any errors that didn't allow a reboot of the system before.
+This action strips off any lines in the */etc/fstab* file that aren't needed to boot a system. First a copy of the original file is made for reference.  When the OS starts, the administrator can edit the fstab to correct any errors that didn't allow a reboot of the system before.
 
 For more information about issues with a malformed */etc/fstab* file, see [Troubleshoot Linux VM starting issues because fstab errors](./linux-virtual-machine-cannot-start-fstab-errors.md).
 
@@ -85,12 +85,12 @@ If your VM shuts down immediately upon startup due to the audit daemon configura
 ## How to use ALAR
 
 The ALAR scripts use the repair extension `run` command and its `--run-id` option. The script-id for the automated recovery is: **linux-alar2**. The procedure to use one of the above actions is outlined below, with the following parameters
-* RG-NAME : Resource group containing the broken VM
-* VM-NAME : Broken/original VM
-* RESCUE-UID : User to create on the repair VM for login.  The user specified here is the equivilent to the user created on a new VM in the Azure portal
-* RESCUE-PASS : Password for RESCUE-UID, in single quotes.  Example: `'password!234'`
-* DISK-COPY : Name for the copy of the OS disk which will be created from the broken VM
-* ACTION : Scripted task to run from the list above, such as `initrd` or `fstab`
+* RG-NAME: Resource group containing the broken VM
+* VM-NAME: Broken/original VM
+* RESCUE-UID: User to create on the repair VM for login.  The user specified here is the equivalent to the user created on a new VM in the Azure portal
+* RESCUE-PASS: Password for RESCUE-UID, in single quotes.  Example: `'password!234'`
+* DISK-COPY: Name for the copy of the OS disk which will be created from the broken VM
+* ACTION: Scripted task to run from the list above, such as `initrd` or `fstab`
 
 >[!NOTE]
 > You can pass over either a single recover-operation or multiple operations. For multiple operations, delineate them by using commas without spaces:
