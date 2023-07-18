@@ -1,25 +1,24 @@
 ---
-title: SLA Timer keeps running or expired prior to the failure time on Timer
-description: Provides a resolution a resolution for the issue where SLA Timer keeps running or expired prior to the failure time on Timer.
+title: SLA Timer keeps running or expires before the Timer failure time
+description: Provides a resolution for an issue where the SLA Timer keeps running or expires prior to the failure time on Timer.
 ms.reviewer: sdas
 ms.author: ravimanne
-ms.date: 07/12/2023
+ms.date: 07/18/2023
 ---
-# Updating SLA KPI instance's Failure and Warning time in the workflow is not a supported 
+# Updating failure and warning times for SLA KPI instances in workflows isn't supported 
 
-This article provides a resolution for an issue where SLA Timer keeps running or expired prior to the failure time on Timer.
+This article provides a resolution for an issue where the service-level agreements (SLA) Timer keeps running or expires prior to the failure time on Timer.
 
 ## Symptoms
 
-SLA Timer keeps running or expired prior to the failure time on Timer
+The SLA Timer keeps running or expires prior to the failure time on Timer.
 
 ## Cause
 
-Updating SLA KPI instance's Failure and Warning time in the workflow is not a supported scenario.
-Static flow (SLAInstanceMonitoringWarningAndExpiryFlow) is triggered only on the creation of SLA KPI instances, when failure and warning time updated for already existing KPI instances, static flow can't process as expected and it leads to unexpected behaviors.
+Updating the failure and warning times for SLA KPI instances in workflows isn't supported.
+
+A static flow (`SLAInstanceMonitoringWarningAndExpiryFlow`) is triggered only when an SLA KPI instance is created. When the failure and warning times are updated for existing SLA KPI instances, the static flow can't run as expected, which can cause unexpected behaviors.
 
 ## Resolution
 
-To solve this issue, take the following step:
-
-Custom Workflow and plugins can be used to cancel the existing KPI and triggering new KPI instead of updating Failure and Warning time.
+To resolve this issue, you can use a custom workflow and plugin to cancel the existing KPI and trigger a new KPI instead of updating the failure and warning times.

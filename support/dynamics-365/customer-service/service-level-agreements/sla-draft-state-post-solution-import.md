@@ -1,24 +1,22 @@
 ---
-title: The SLA state moves from active to draft state after importing the solution which contains an SLA presents in the org.
-description: Provides a resolution for the issue where solution upgrade contains an SLA which present on the org, that SLA will go into draft state after importing the solution.
+title: SLA's state changes to Draft after importing a solution
+description: Resolves an issue where an SLA defined in an organization goes into a draft state after you import an upgrade solution containing the SLA.
 ms.reviewer: sdas
 ms.author: ravimanne
-ms.date: 07/12/2023
+ms.date: 07/18/2023
 ---
-# Solution upgrade contains SLA presents in the org moves to draft state 
+# SLA's state changes from "Active" to "Draft" after importing an upgrade solution that contains the SLA
 
-This article provides a resolution for the issue where a solution upgrade contains an SLA that is present in the org, the SLA will go into draft state after importing the solution.
+This article provides a resolution for an issue where the state of a service-level agreement (SLA) defined in an organization changes to **Draft** after you import an upgrade solution that contains the SLA.
 
 ## Symptoms
 
-SLA state moves from active to draft state after importing the solution which contains SLA presents in the org.
+If an upgrade solution contains an SLA that's defined in an organization, the SLA's state changes from **Active** to **Draft** after you import the solution.
 
 ## Cause
 
-The reason for moving the state to draft is for applying any metadata changes from source SLA to target SLA while importing solution.
+The reason for changing the state to **Draft** is to apply any metadata changes from the source SLA to the target SLA during the solution import.
 
 ## Resolution
 
-To solve this issue, take the following step:
-
-This is a by-design behavior, if upgrade solution contains an SLA that is present on the org, that SLA state will move to draft state after importing the solution. So, the user has to activate that SLA again manually after importing the solution.
+This is a by-design behavior. You need to manually activate the SLA again after importing the solution.
