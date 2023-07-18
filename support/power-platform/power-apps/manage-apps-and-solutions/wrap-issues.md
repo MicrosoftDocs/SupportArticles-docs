@@ -138,21 +138,21 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
 
 - In the [Azure portal](https://portal.azure.com), go to your Default subscription, on the **Access Control (IAM)** page, add a **Reader** role assignment to the **Service Principal** representing your app, for example, **Wrap KeyVault Access App**. Make sure that it's in the **Subscription's IAM** and **Keyvault's IAM**. Here are the steps:
 
-      1. Go to the **Access control (IAM)** tab, and select the **Add role assignment** option under the **Add** menu button.
+   1. Go to the **Access control (IAM)** tab, and select the **Add role assignment** option under the **Add** menu button.
 
-          :::image type="content" source="media/wrap-issues/add-role-assignment.png" alt-text="Screenshot that shows the Add role assignment option in the Access control (IAM) tab.":::
+      :::image type="content" source="media/wrap-issues/add-role-assignment.png" alt-text="Screenshot that shows the Add role assignment option in the Access control (IAM) tab.":::
 
-      2. Select the **Job fucntion roles** tab and make sure that the **Reader** role is selected. Then select the **Members** tab on the top menu.
+   2. Select the **Job fucntion roles** tab and make sure that the **Reader** role is selected. Then select the **Members** tab on the top menu.
 
-          :::image type="content" source="media/wrap-issues/add-members.png" alt-text="Screenshot that shows the Members tab on the top menu.":::
+      :::image type="content" source="media/wrap-issues/add-members.png" alt-text="Screenshot that shows the Members tab on the top menu.":::
 
-      3. Search for **Wrap KeyVault Access App** on the **Members** tab.
+   3. Search for **Wrap KeyVault Access App** on the **Members** tab.
 
-          :::image type="content" source="media/wrap-issues/select-members-to-add-role.png" alt-text="Screenshot that shows how to search for Wrap KeyVault Access App.":::
+      :::image type="content" source="media/wrap-issues/select-members-to-add-role.png" alt-text="Screenshot that shows how to search for Wrap KeyVault Access App.":::
 
-      4. Select **Wrap KeyVault Access App** and then select the **Review + assign** button on the bottom of the tab to assign the **Reader** role to it.
+   4. Select **Wrap KeyVault Access App** and then select the **Review + assign** button on the bottom of the tab to assign the **Reader** role to it.
   
-          :::image type="content" source="media/wrap-issues/assign-reader-role-to-wrap-keyvault-access-app.png" alt-text="Screenshot that shows how to assign a Reader role to Wrap KeyVault Access App.":::
+      :::image type="content" source="media/wrap-issues/assign-reader-role-to-wrap-keyvault-access-app.png" alt-text="Screenshot that shows how to assign a Reader role to Wrap KeyVault Access App.":::
 
 - Add access policies for your Azure key vault.
 
