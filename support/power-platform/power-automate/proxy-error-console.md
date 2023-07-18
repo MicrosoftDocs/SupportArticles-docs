@@ -58,7 +58,7 @@ If modifying the registry entries as described above does not provide the desire
    - PAD.Console.Host.exe.config
    - PAD.Robot.exe.config
 
-3. For all files, edit each file with administrator rights, and at the end of the root xml node (<configuration>), add the following child xml node:
+3. For all files, edit each file with administrator rights, and at the end of the root xml node (\<configuration>), add the following child xml node:
 
 ```xml
 <system.net> 
