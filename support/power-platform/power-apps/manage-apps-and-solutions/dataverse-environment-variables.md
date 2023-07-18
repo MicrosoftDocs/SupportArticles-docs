@@ -1,5 +1,5 @@
 ---
-title: Data source references based on environment variables aren't updated during solution import to another environment
+title: Data source references based on environment variables aren't updated during solution import
 description: Describes an issue when importing a solution to a different environment, data source references based on environment variables aren't updated.
 ms.reviewer: tapanm
 ms.date: 6/30/2022
@@ -14,7 +14,7 @@ contributors:
   - tapanm-msft
 ---
 
-# Data source references based on environment variables aren't updated during solution import to another environment
+# Data source references based on environment variables aren't updated during solution import
 
 ## Symptoms
 
