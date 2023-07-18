@@ -183,6 +183,8 @@
           href: recorder-not-recording-applications.md
         - name: Some actions appear to be missing or aren't visible
           href: actions-not-available.md
+        - name: Proxy server related error in Power Automate for desktop
+          href: proxy-error-console.md
         - name: Tips on working with SQL queries
           href: troubleshooting-tips-sql-queries.md
         - name: Troubleshoot UI flow Playback
