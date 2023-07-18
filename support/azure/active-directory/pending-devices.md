@@ -3,7 +3,7 @@ title: Pending devices in Azure Active Directory
 description: Explains why a device is in the pending state in Azure Active Directory.
 author: genlin
 ms.author: genli
-ms.date: 07/14/2023
+ms.date: 07/18/2023
 ms.service: active-directory
 ms.subservice: domain-services
 ---
