@@ -31,7 +31,7 @@ The following are the possible effects of this problem. The effects are varied a
 
 ## Cause
 
-When processing the results of a batch, SQL Server fills the connection output buffer with the results that come from the batch. These results must be processed by the client application. If you're executing a large batch with multiple result sets (multiple statements producing results), SQL Server fills that output buffer until it hits an internal limit and can't continue until the client application starts consuming those results. When the client starts to consume the result sets, SQL Server starts to execute the batch again because there's now available memory in the output buffer.
+When processing the results of a batch, SQL Server fills the connection output buffer with the results that come from the batch. These results must be processed by the client application. If you're executing a large batch with multiple result sets (multiple statements producing results), SQL Server fills that output buffer until it hits an internal limit and can't continue until the client application starts consuming those results. When the client starts to consume the result sets, SQL Server starts to execute the batch again because there's now available memory in the output buffer. This behavior is by design.
 
 In many cases, you encounter this problem when you connect to the SQL Server by using the Named pipes protocol or the Shared memory (LPC) protocol. This is because of the internal buffer size that SQL Server has available for the different protocols.
 
@@ -46,14 +46,7 @@ To work around the problem, follow these steps:
 
 1. Add the statement `SET NOCOUNT ON` to the beginning of your batch. If the batch is executed inside a stored procedure, add the statement to the beginning of the stored procedure definition. This prevents SQL Server from returning an additional result set that shows the number of rows processed, after the main result set. Therefore, it can reduce the data to be output to the output buffer of the server. However, this doesn't guarantee that the problem won't occur. It only increases the chance that the data returned from the server is small enough to fit into one batch of result sets.
 
-> [!NOTE]
->
-> - Microsoft recommends that you always consume all result sets from SQL Server regardless of the size of the batch that you are executing. If you do not flush this data and there are successful result sets to be returned ahead of the error in the result set batch, the client might not discover the server errors.
-> - Client applications should flush the result sets to guarantee correct execution.
-
-## Status
-
-This behavior is by design.
+We recommend that your client application always consumes all result sets coming from SQL Server regardless of the size of the batch that you are executing. If you do not process this data and there are successful result sets to be returned ahead of an error in the result set batch, the client might not discover the server errors.  Client applications should process the result sets in their entirety to guarantee correct execution.
 
 ## Steps to reproduce the problem
 
