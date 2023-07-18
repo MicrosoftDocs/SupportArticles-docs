@@ -84,27 +84,32 @@ If your VM shuts down immediately upon startup due to the audit daemon configura
 
 ## How to use ALAR
 
-The ALAR scripts use the repair extension `run` command and its `--run-id` option. The script-id for the automated recovery is: **linux-alar2**. For example:
+The ALAR scripts use the repair extension `run` command and its `--run-id` option. The script-id for the automated recovery is: **linux-alar2**. The procedure to use one of the above actions is outlined below, with the following parameters
+* RG-NAME : Resource group containing the broken VM
+* VM-NAME : Broken/original VM
+* RESCUE-UID : User to create on the repair VM for login.  This is the equivilent to the user created on a new VM in the Azure portal
+* RESCUE-PASS : Password for RESCUE-UID, in single quotes.  Example: `'password!234'`
+* DISK-COPY : name for the copy of the OS disk which will be created from the broken VM
+* ACTION : This is the scripted task to run from the list above, such as `initrd` or `fstab`
 
-```azurecli-interactive
-az vm repair create --verbose -g centos7 -n cent7 --repair-username rescue --repair-password 'password!234' --copy-disk-name  repairdiskcopy
- ```
-
-```azurecli-interactive
-az vm repair run --verbose -g centos7 -n cent7 --run-id linux-alar2 --parameters initrd --run-on-repair
- ```
-
-```azurecli-interactive
-az vm repair restore --verbose -g centos7 -n cent7
- ```
-
-These steps create a repair task. In the next step, you'll use the `initrd` script to fix an initrd-related startup problem. In the last step, run the restore operation.
-
-  [!NOTE]
+>[!NOTE]
 > You can pass over either a single recover-operation or multiple operations. For multiple operations, delineate them by using commas without spaces:
-   >
-   > - ‘fstab’
-   > - ‘fstab,initrd’
+> - ‘fstab’
+> - ‘fstab,initrd’
+
+The three commands will create the rescue, run the action script, then swap the OS disks and delete the temporary resources, not including the original and new disks 
+
+```azurecli-interactive
+az vm repair create --verbose -g RG-NAME -n VM-NAME --repair-username RESCUE-UID --repair-password RESCUE-PASS --copy-disk-name DISK-COPY
+ ```
+
+```azurecli-interactive
+az vm repair run --verbose -g RG-NAME -n VM-NAME --run-id linux-alar2 --parameters ACTION --run-on-repair
+ ```
+
+```azurecli-interactive
+az vm repair restore --verbose -g RG-NAME -n VM-NAME 
+ ```
 
 ## Limitation
 
