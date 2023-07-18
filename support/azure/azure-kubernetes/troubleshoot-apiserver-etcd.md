@@ -1,45 +1,45 @@
 ---
-title: Troubleshoot API server and etcd issues #Required; this page title is displayed in search results; Always include the word "troubleshoot" in this line.
-description: Troubleshooting guide for API server and etcd in Azure Kubernetes Services #Required; this article description is displayed in search results.
-author: merooney #Required; your GitHub user alias — correct capitalization is needed.
-ms.author: segule #Required; Microsoft alias of the author.
-ms.topic: troubleshooting #Required.
-ms.date: 6/30/2023 #Required; enter the date in the mm/dd/yyyy format.
+title: Troubleshoot API server and etcd issues in AKS
+description: Provides a troubleshooting guide for API server and etcd issues in Azure Kubernetes Services.
+author: merooney
+ms.author: segule
+ms.date: 07/18/2023
 ms.service: azure-kubernetes-service
+ms.reviewer: segule, merooney
 ---
+# Troubleshoot API server and etcd issues in Azure Kubernetes Services
 
+This guide is designed to help you identify and resolve any unlikely issues they may encounter with the Kubernetes API server in large Azure Kubernetes Services (AKS) deployments.
 
-# Troubleshoot your AKS API server
-
-This guide aims to assist users in identifying and resolving unlikely issues encountered with the API Server in large AKS deployments.
-
-When considering the resilience of the API server we have tested reliability and performance to a scale of 5,000 nodes and 65,000 pods, with the ability to automatically scale out and deliver [Kubernetes SLOs][K8s SLOs]. As such, if you observe high latencies or timeouts, these are likely due to a resource leakage on etcd or an offending client with excessive heavy API calls.
+Considering the resilience of the API server, Microsoft has tested the reliability and performance of the API server at a scale of 5,000 nodes and 65,000 pods, with the ability to automatically scale out and deliver [Kubernetes SLOs](https://github.com/kubernetes/community/blob/master/sig-scalability/slos/slos.md). If you experience high latencies or timeouts, it's likely due to a resource leakage on etcd or an offending client with excessive API calls.
 
 ## Prerequisites
 
-- AKS Diagnostics logs have been enabled and sent to a [Log Analytics workspace][log-analytics-workspace-overview].
-- Ensure that you're using the Standard tier of AKS. If you're on the Free tier, the API server and Etcd come with limited resources. Free tier clusters don't provide high availability, which is often the root cause of API server and Etcd issues. 
+- AKS diagnostics logs have been enabled and sent to a [Log Analytics workspace][/azure/aks/monitor-aks].
+- Ensure that you're using the Standard tier for AKS clusters. If you're using the Free tier, the API server and etcd come with limited resources. AKS clusters in the Free tier don't provide high availability, which is often the root cause of API server and etcd issues.
 
 ## Symptoms
 
-The following table outlines the common symptoms of API server failures.
+The following table outlines the common symptoms of API server failures:
 
 | Symptom | Description |
 |---|---|
-| Timeouts from API server | Frequent timeouts that are beyond what's guaranteed in [the AKS API Server SLA][apiserversla] |
-| High latencies | High latencies that fail the Kubernetes SLOs |
+| Timeouts from the API server | Frequent timeouts that are beyond what's guaranteed in [the AKS API server SLA](/azure/aks/free-standard-pricing-tiers#uptime-sla-terms-and-conditions). |
+| High latencies | High latencies that make the Kubernetes SLOs to fail.|
 
+## Cause
 
-## Troubleshooting Walkthrough
+Here are three most common causes for API server failures:
 
-The following sections help you identify if these three most common causes for failures affect your cluster:
-- A network rule blocking traffic to API Server from agent nodes
-- An offending client is making excessive LIST or PUT calls
-- An offending client leaks Etcd objects and results in slowdown of Etcd
+- A network rule is blocking traffics to the API server from agent nodes.
+- An offending client is making excessive `LIST` or `PUT` calls.
+- An offending client leaks etcd objects and results in slowdown of etcd.
 
-### Verify network connectivity between the API server and agent pool nodes
+The following sections help you identify if the three most common causes for API server failures affect your cluster.
 
-This command can be used to validate whether a misconfigured network policy is blocking communication between the API server and agent pool system nodes. If the following command returns connection succeeded, then connectivity is unimpeded.
+## Verify network connectivity between the API server and agent pool nodes
+ 
+To validate whether a misconfigured network policy is blocking communication between the API server and agent pool system nodes, use the following command:
 
 ```azurecli
 az vmss run-command invoke -g "myAgentpoolVmssResourceGroup" -n "myAgentpoolVmss" \
@@ -47,10 +47,11 @@ az vmss run-command invoke -g "myAgentpoolVmssResourceGroup" -n "myAgentpoolVmss
 --instance-id 0 \
 --scripts "echo | nc -vz "myAKSApiServerFQDN" 443"
 ```
+If the command above returns "connection succeeded," then the network connectivity is unimpeded.
 
-### Identify top user agents by number of requests
+## <a id="identifytopuseragents"></a> Identify top user agents by the number of requests
 
-It can be useful to identify which clients are generating the most requests, and potentially the most API Server load. Below you find a query that lists the top 10 user agents by number of API server requests sent. 
+To identify which clients are generating the most requests, and potentially the most API server load, use a query like the following that lists the top 10 user agents by the number of API server requests sent:
 
 ```kusto
 AzureDiagnostics
@@ -63,13 +64,11 @@ AzureDiagnostics
 | project User, count_ 
 ```
 
-This information is useful to get a sense of which clients have the greatest request volume. However, high request volume alone isn't necessarily a cause for concern. The response latency each client experiences is a better indicator of the true load they're generating on the API server.
+While this information is useful to know which clients generate the greatest request volume, high request volume alone may not be a cause for concern. A better indicator of the true load each client is generating on the API server is the response latency they experience.
 
-### Chart Average Latency of Requests per User Agent
+## Identify and chart the average latency of API server requests per user agent
 
-This query identifies the average latency of API server requests per user agent plotted on a time chart. This query is a follow-on to the previous query that may lend more insights into the true load over time generated by each user agent.
-
-Troubleshooting tip: By analyzing this data, you can identify patterns and anomalies that may indicate issues with your Kubernetes cluster or applications. For example, you might notice that a particular user is experiencing high latency. This could indicate the type of API call that is causing excessive load on either API server or etcd.
+To identify the average latency of API server requests per user agent plotted on a time chart, use the following query:
 
 ```kusto
 AzureDiagnostics
@@ -84,12 +83,14 @@ AzureDiagnostics
 | render timechart 
 ```
 
-### Identify bad API calls for a given User Agent
+This query is a follow-on to the query in the previous section [Identify top user agents by the number of requests](#identifytopuseragents). It may lend more insights into the true load over time generated by each user agent.
 
-This query is used to tabulate the p99 latency of api calls across different resource types for a given client.
+> [!TIP]
+> By analyzing this data, you can identify patterns and anomalies that may indicate issues with your AKS cluster or applications. For example, you might notice that a particular user is experiencing high latency. This could indicate the type of API calls that are causing excessive load on the API server or etcd.
 
-Troubleshooting tip:  The results from this query can be useful for identifying types of API calls that fail the Upstream K8s SLOs. In most cases, an offending client may be making too many LIST calls on a large set of objects or large objects in size. Unfortunately, there aren't hard scalability limits that can guide users on API server scalability. API server or Etcd scalability limits depend on variety of factors explained in the [Kubernetes Scalability documents](https://github.com/kubernetes/community/blob/master/sig-scalability/configs-and-limits/thresholds.md). 
+## Identify bad API calls for a given user agent
 
+Use the following query to tabulate the P99 latency of API calls across different resource types for a given client:
 
 ```kusto
 AzureDiagnostics
@@ -108,78 +109,77 @@ AzureDiagnostics
 | render table  
 ```
 
+The results from this query can be useful for identifying types of API calls that fail the upstream Kubernetes SLOs. In most cases, an offending client may be making too many `LIST` calls on a large set of objects or objects that are too large in size. Unfortunately, there are no hard scalability limits that can guide users on API server scalability. API server or etcd scalability limits depend on a variety of factors explained in [Kubernetes Scalability thresholds](https://github.com/kubernetes/community/blob/master/sig-scalability/configs-and-limits/thresholds.md). 
 
-### Verify your clients don't leak resources in Etcd
+## Verify clients don't leak resources in etcd
 
-A common issue is to continuously create objects without deleting unused ones in the Etcd database. The etcd database is prone to performance issues when dealing with too many objects of any type (>10K). A rapid increase of changes on such objects could also result in exceeding the etcd database size (4 GB by default).
+A common issue is to continuously create objects without deleting unused ones in the etcd database. This can cause performance issues when dealing with too many objects of any type (> 10 kilobytes). A rapid increase of changes on such objects could also result in exceeding the etcd database size (4 gigabytes by default).
 
-To check for Etcd database usage, go to Diagnose and Solve blade on the Azure Portal. Run the Etcd Availability diagnosis by searching for Etcd in the search box. The diagnosis shows you usage breakdown and the total database size. 
+To check for etcd database usage, navigate to **Diagnose and Solve problems** in the Azure portal. Run the Etcd Availability diagnosis tool by searching for 'etcd' in the search box. The diagnosis tool shows you the usage breakdown and the total database size.
 
+:::image type="content" source="media/troubleshoot-apiserver-etcd/etcd-detector.png" alt-text="Screenshot that shows the Etcd Availability Diagnosis for AKS.":::
 
-:::image type="content" source="media/troubleshoot-apiserver-etcd/etcd-detector.png" alt-text="Etcd Availability Diagnosis for AKS":::
-
-If you have identified objects that are no longer in use but are taking resources, consider deleting them. As an example, completed jobs can be deleted to free up space:
+If you have identified objects that are no longer in use but are taking up resources, consider deleting them. For example, you can delete completed jobs to free up space:
 
 ```bash
 kubectl delete jobs --field-selector status.successful=1
 ```
 
-### How do you address a client overloading control plane?
+## How to address overload in client control plane
 
-If you ruled out overloading Etcd with too many objects, you may consider tuning your client's API call pattern to reduce pressure on the control plane. 
+If you rule out that etcd is overloaded with too many objects, you may consider tuning your client's API call pattern to reduce pressure on the control plane.
 
-If you can't tune the client, you can use Priority & Fairness feature in Kubernetes to throttle the client. This helps you preserve the health of the control plane and protect other applications from failing. The following sample illustrates how to throttle an offending client's LIST Pods API set to 5 concurrent calls.
+If you're unable to tune the client, you can use the [Priority and Fairness](https://kubernetes.io/docs/concepts/cluster-administration/flow-control/) feature in Kubernetes to throttle the client. This can help preserve the health of the control plane and prevent other applications from failing.
 
-i. Create a FlowSchema that matches the offending client's API call pattern:
+The following sample illustrates how to throttle an offending client's LIST Pods API set to five concurrent calls:
 
-```yaml
-apiVersion: flowcontrol.apiserver.k8s.io/v1beta2
-kind: FlowSchema
-metadata:
-  name: restrict-bad-client
-spec:
-  priorityLevelConfiguration:
-    name: very-low-priority
-  distinguisherMethod:
-    type: ByUser
-  rules:
-  - resourceRules:
-    - apiGroups: [""]
-      namespaces: ["default"]
-      resources: ["pods"]
-      verbs: ["list"]
-    subjects:
-    - kind: ServiceAccount
-      serviceAccount:
-        name: bad-client-account
-        namespace: default 
-```
+1. Create a `FlowSchema` that matches the offending client's API call pattern:
 
-ii. Create a lower priority configuration to throttle bad client's API calls
+    ```yaml
+    apiVersion: flowcontrol.apiserver.k8s.io/v1beta2
+    kind: FlowSchema
+    metadata:
+      name: restrict-bad-client
+    spec:
+      priorityLevelConfiguration:
+        name: very-low-priority
+      distinguisherMethod:
+        type: ByUser
+      rules:
+      - resourceRules:
+        - apiGroups: [""]
+          namespaces: ["default"]
+          resources: ["pods"]
+          verbs: ["list"]
+        subjects:
+        - kind: ServiceAccount
+          serviceAccount:
+            name: bad-client-account
+            namespace: default 
+    ```
 
-```yaml
-apiVersion: flowcontrol.apiserver.k8s.io/v1beta2
-kind: PriorityLevelConfiguration
-metadata:
-  name: very-low-priority
-spec:
-  limited:
-    assuredConcurrencyShares: 5
-    limitResponse:
-      type: Reject
-  type: Limited
-```
+2. Create a lower priority configuration to throttle bad client's API calls:
 
-ii. Then, you can observe the throttled call in the API server metrics.
+    ```yaml
+    apiVersion: flowcontrol.apiserver.k8s.io/v1beta2
+    kind: PriorityLevelConfiguration
+    metadata:
+      name: very-low-priority
+    spec:
+      limited:
+        assuredConcurrencyShares: 5
+        limitResponse:
+          type: Reject
+      type: Limited
+    ```
 
-```bash
-kubectl get --raw /metrics | grep "restrict-bad-client"
-```
+3. Observe the throttled call in the API server metrics.
 
+    ```bash
+    kubectl get --raw /metrics | grep "restrict-bad-client"
+    ```
 
-## References
-[Priority and Fairness][priority-and-fairness]
-
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
 
 <!-- LINKS - external -->
 [kube-audit-overview]: https://kubernetes.io/docs/tasks/debug/debug-cluster/audit/

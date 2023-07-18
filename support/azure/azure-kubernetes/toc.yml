@@ -106,9 +106,9 @@
   - name: Failed to fix node group sizes
     href: cluster-autoscaler-fails-to-scale.md
 
-- name: Troubleshoot K8s control plane
+- name: Troubleshoot Kubernetes control plane
   items:
-  - name: API server and etcd
+  - name: Troubleshoot API server and etcd
     href: troubleshoot-apiserver-etcd.md
 
 - name: Troubleshoot node not ready
