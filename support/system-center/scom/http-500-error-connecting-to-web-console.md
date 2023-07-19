@@ -177,11 +177,11 @@ To verify that the user logging into the Web console doesn't have **Account is s
 
 ### Disable Kernel-mode Authentication in IIS
 
-To disable **Kernel-mode Authentication** in IIS for both `MonitoringView` and `OperationsManager`, follow these steps:
+To disable **Kernel-mode Authentication** for both `MonitoringView` and `OperationsManager` in IIS, follow these steps:
 
 1. In IIS Manager, navigate to *Default Web Site\MonitoringView*.
 2. Double-click **Authentication**.
 3. Select **Windows Authentication**.
 4. In the **Actions** pane on the right, select **Advanced Settings**.
 5. Clear the **Enable Kernel-mode authentication** checkbox.
-6. Navigate to *Default Web Site\MonitoringView*, repeat the steps 2 through 5.
+6. Navigate to *Default Web Site\OperationsManager*, repeat the steps 2 through 5.
