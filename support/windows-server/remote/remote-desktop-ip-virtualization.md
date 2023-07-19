@@ -30,13 +30,13 @@ If you want to use IP virtualization on Windows Server 2019, please follow these
 1. Start an elevated PowerShell window, and run the following command to rename the registry key:
 
    ```powershell
-   Rename-Item HKLM:\SYSTEM\ControlSet001\Services\WinSock2\Parameters\AppId_Catalog\2C69D9F1 Backup_2C69D9F1
+   Rename-Item HKLM:\SYSTEM\CurrentControlSet\Services\WinSock2\Parameters\AppId_Catalog\2C69D9F1 Backup_2C69D9F1
    ```
 
    > [!NOTE]
    > Deleting the key has the same effects, but the rename provides a way to revert back more easily if desired. The following is the default values:
    >
-   > `HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\AppId_Catalog\2C69D9F1\`
+   > `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WinSock2\Parameters\AppId_Catalog\2C69D9F1\`
    > **AppFullPath**: C:\Windows\System32\svchost.exe\
    > **PermittedLspCategories**: 0x40000000
 
