@@ -13,9 +13,8 @@ ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.devlang: azurecli
-ms.date: 02/19/2021
+ms.date: 07/19/2023
 ms.author: malachma
-
 ---
 
 # Use Azure Linux Auto Repair (ALAR) to fix a Linux VM
@@ -38,7 +37,7 @@ ALAR covers the following repair scenarios:
 
 ### fstab
 
-This action strips off any lines in the */etc/fstab* file that aren't needed to boot a system. First a copy of the original file is made for reference.  When the OS starts, the administrator can edit the fstab to correct any errors that didn't allow a reboot of the system before.
+This action strips off any lines in the */etc/fstab* file that aren't needed to boot a system. First a copy of the original file is made for reference. When the OS starts, the administrator can edit the fstab to correct any errors that didn't allow a reboot of the system before.
 
 For more information about issues with a malformed */etc/fstab* file, see [Troubleshoot Linux VM starting issues because fstab errors](./linux-virtual-machine-cannot-start-fstab-errors.md).
 
@@ -84,32 +83,39 @@ If your VM shuts down immediately upon startup due to the audit daemon configura
 
 ## How to use ALAR
 
-The ALAR scripts use the repair extension `run` command and its `--run-id` option. The script-id for the automated recovery is: **linux-alar2**. The procedure to use one of the above actions is outlined below, with the following parameters
-* RG-NAME: Resource group containing the broken VM
-* VM-NAME: Broken/original VM
-* RESCUE-UID: User to create on the repair VM for login.  The user specified here is the equivalent to the user created on a new VM in the Azure portal
-* RESCUE-PASS: Password for RESCUE-UID, in single quotes.  Example: `'password!234'`
-* DISK-COPY: Name for the copy of the OS disk which will be created from the broken VM
-* ACTION: Scripted task to run from the list above, such as `initrd` or `fstab`
+The ALAR scripts use the repair extension `run` command and its `--run-id` option. The value of the `--run-id` option for the automated recovery is: `linux-alar2`. To fix a Linux VM by using an ALAR script, follow these steps:
 
->[!NOTE]
-> You can pass over either a single recover-operation or multiple operations. For multiple operations, delineate them by using commas without spaces:
-> - ‘fstab’
-> - ‘fstab,initrd’
+1. Create a rescue VM:
 
-The three commands will create the rescue, run the action script, then swap the OS disks and delete the temporary resources, not including the original and new disks 
+    ```azurecli-interactive
+    az vm repair create --verbose -g RG-NAME -n VM-NAME --repair-username RESCUE-UID --repair-password RESCUE-PASS --copy-disk-name DISK-COPY
+    ```
+2. Run a script with one of the ALAR actions on the rescue VM:
 
-```azurecli-interactive
-az vm repair create --verbose -g RG-NAME -n VM-NAME --repair-username RESCUE-UID --repair-password RESCUE-PASS --copy-disk-name DISK-COPY
- ```
+    ```azurecli-interactive
+    az vm repair run --verbose -g RG-NAME -n VM-NAME --run-id linux-alar2 --parameters ACTION --run-on-repair
+    ```
+3. Swap the OS disks and delete the temporary resources:
 
-```azurecli-interactive
-az vm repair run --verbose -g RG-NAME -n VM-NAME --run-id linux-alar2 --parameters ACTION --run-on-repair
- ```
+    ```azurecli-interactive
+    az vm repair restore --verbose -g RG-NAME -n VM-NAME 
+    ```
+    
+    > [!NOTE]
+    > The original and new disks won't be deleted.
 
-```azurecli-interactive
-az vm repair restore --verbose -g RG-NAME -n VM-NAME 
- ```
+Here are explanations for the parameters in the commands above:
+
+- RG-NAME: The name of the resource group containing the broken VM.
+- VM-NAME: The name of the broken VM.
+- RESCUE-UID: The user created on the repair VM for login. It's the equivalent to the user created on a new VM in the Azure portal.
+- RESCUE-PASS: The password for RESCUE-UID, in single quotes. For example: `'password!234'`.
+- DISK-COPY: The name for the copy of the OS disk which will be created from the broken VM.
+- ACTION: A scripted task to run, such as `initrd` or `fstab`.
+
+  > [!NOTE]
+  >  You can pass over a single or multiple recovery operations. For multiple operations, delineate them by using commas without spaces, for example, `fstab,initrd`.
+
 
 ## Limitation
 
