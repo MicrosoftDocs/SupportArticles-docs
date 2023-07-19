@@ -115,7 +115,7 @@ The results from this query can be useful for identifying types of API calls tha
 
 > [!TIP]
 > Whenever an object in etcd is mutated, a new complete version of that object is created. Should the object being mutated be large, this can end up consuming a lot of space. To stop etcd fom reaching capacity and causing cluster downtime, you can cap the maximum number of resources created and/or slow the number of revisions generated for resource instances.
-=======
+
 A common issue is continuously creating objects without deleting unused ones in the etcd database. This can cause performance issues when dealing with too many objects of any type (> 10 kilobytes). A rapid increase of changes on such objects could also cause the etcd database size (4 gigabytes by default) to be exceeded.
 
 To check the etcd database usage, navigate to **Diagnose and Solve problems** in the Azure portal. Run the Etcd Availability diagnosis tool by searching for "_etcd_" in the search box. The diagnosis tool shows you the usage breakdown and the total database size.
