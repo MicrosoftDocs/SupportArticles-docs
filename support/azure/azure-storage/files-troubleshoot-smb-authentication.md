@@ -221,13 +221,11 @@ There is currently no workaround for this error.
 You might also encounter this error if you previously enabled Azure AD Kerberos authentication through manual limited preview steps. To delete the existing application, the customer or their IT admin can run the following script. Running this script will remove the old manually created application and allow the new experience to auto-create and manage the newly created application.
 
 > [!IMPORTANT]
-> This script must be run in PowerShell 5.1 (Windows PowerShell) because the AzureAD module doesn't work in PowerShell 7. Or you can import the AzureAD module by using the `-UseWindowsPowerShell` option in a PowerShell 7 session:
+> This script must be run in PowerShell 5.1 (Windows PowerShell) because the AzureAD module doesn't work in PowerShell 7. Or you can import the module by using the `-UseWindowsPowerShell` option in a PowerShell 7 session:
 > 
-> ```powershell
-> Import-Module AzureAD -UseWindowsPowerShell
-> ```
+> `Import-Module AzureAD -UseWindowsPowerShell`
 > 
-> The AzureAD module is scheduled for deprecation and is being replaced by Microsoft Graph PowerShell. See [Upgrade from Azure AD PowerShell to Microsoft Graph PowerShell](/powershell/microsoftgraph/migration-steps) and the [Cmdlet map](/powershell/microsoftgraph/azuread-msoline-cmdlet-map).
+> The AzureAD module is scheduled for deprecation and is being replaced by Microsoft Graph PowerShell. See [Upgrade from Azure AD PowerShell to Microsoft Graph PowerShell](/powershell/microsoftgraph/migration-steps) and the [Cmdlet map](/powershell/microsoftgraph/azuread-msoline-cmdlet-map) if you want to use the Microsoft.Graph module instead.
 
 ```powershell
 $storageAccount = "exampleStorageAccountName"
