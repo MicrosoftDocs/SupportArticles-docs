@@ -1,0 +1,9 @@
+- name: Dynamics 365 Commerce
+  href: welcome-commerce.yml
+  items:
+    - name: Data synchronization
+      items:
+        - name: CDX Download jobs can't be downloaded in UAT/Sandbox
+          href: data-synchronization/UATCDXbrokeafterdebugAos.md
+
+        
