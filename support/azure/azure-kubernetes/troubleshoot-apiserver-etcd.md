@@ -9,13 +9,13 @@ ms.reviewer: segule, merooney
 ---
 # Troubleshoot API server and etcd issues in Azure Kubernetes Services
 
-This guide is designed to help you identify and resolve any unlikely issues they may encounter with the API server in large Azure Kubernetes Services (AKS) deployments.
+This guide is designed to help you identify and resolve any unlikely issues you may encounter with the API server in large Azure Kubernetes Services (AKS) deployments.
 
-Considering the resilience of the API server, Microsoft has tested the reliability and performance of the API server at a scale of 5,000 nodes and 65,000 pods, with the ability to automatically scale out and deliver [Kubernetes Service Level Objectives (SLOs)](https://github.com/kubernetes/community/blob/master/sig-scalability/slos/slos.md). If you experience high latencies or timeouts, it's likely due to a resource leakage on etcd or an offending client with excessive API calls.
+Microsoft has tested the reliability and performance of the API server at a scale of 5,000 nodes and 65,000 pods, with the ability to automatically scale out and deliver [Kubernetes Service Level Objectives (SLOs)](https://github.com/kubernetes/community/blob/master/sig-scalability/slos/slos.md). If you experience high latencies or timeouts, it's likely due to a resource leakage on etcd or an offending client with excessive API calls.
 
 ## Prerequisites
 
-- AKS diagnostics logs have been enabled and sent to a [Log Analytics workspace](/azure/aks/monitor-aks).
+- AKS diagnostics logs (specifically kube-audit events) have been enabled and sent to a [Log Analytics workspace](/azure/aks/monitor-apiserver).
 - Ensure that you're using the Standard tier for AKS clusters. If you're using the Free tier, the API server and etcd come with limited resources. AKS clusters in the Free tier don't provide high availability, which is often the root cause of API server and etcd issues.
 
 ## Symptoms
@@ -109,11 +109,11 @@ AzureDiagnostics
 | render table  
 ```
 
-The results from this query can be useful for identifying types of API calls that fail the Upstream Kubernetes SLOs. In most cases, an offending client may be making too many `LIST` calls on a large set of objects or objects that are too large in size. Unfortunately, there are no hard scalability limits that can guide users on API server scalability. API server or etcd scalability limits depend on a variety of factors explained in [Kubernetes Scalability thresholds](https://github.com/kubernetes/community/blob/master/sig-scalability/configs-and-limits/thresholds.md). 
+The results from this query can be useful for identifying types of API calls that fail the upstream Kubernetes SLOs. In most cases, an offending client may be making too many `LIST` calls on a large set of objects or objects that are too large in size. Unfortunately, there are no hard scalability limits that can guide users on API server scalability. API server or etcd scalability limits depend on a variety of factors explained in [Kubernetes Scalability thresholds](https://github.com/kubernetes/community/blob/master/sig-scalability/configs-and-limits/thresholds.md). 
 
 ## Verify clients don't leak resources in etcd
 
-A common issue is to continuously create objects without deleting unused ones in the etcd database. This can cause performance issues when dealing with too many objects of any type (> 10 kilobytes). A rapid increase of changes on such objects could also result in exceeding the etcd database size (4 gigabytes by default).
+A common issue is to continuously create objects without deleting unused ones in the etcd database. This can cause performance issues when dealing with too many objects of any type (count > 10,000). A rapid increase of changes on such objects could also result in exceeding the etcd database size (4 gigabytes by default).
 
 To check for etcd database usage, navigate to **Diagnose and Solve problems** in the Azure portal. Run the Etcd Availability diagnosis tool by searching for 'etcd' in the search box. The diagnosis tool shows you the usage breakdown and the total database size.
 
@@ -158,7 +158,7 @@ The following sample illustrates how to throttle an offending client's LIST Pods
             namespace: default 
     ```
 
-2. Create a lower priority configuration to throttle bad client's API calls:
+2. Create a lower priority configuration to throttle the bad client's API calls:
 
     ```yaml
     apiVersion: flowcontrol.apiserver.k8s.io/v1beta2
