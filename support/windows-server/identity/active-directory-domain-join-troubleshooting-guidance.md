@@ -49,6 +49,7 @@ The following table lists the ports required to be open between the client compu
 |389|TCP|LDAP Server|LSASS|
 |88|TCP|Kerberos|Kerberos Key Distribution Server|
 |135|TCP|RPC|RPC Endpoint Mapper|
+|445|TCP|SMB|LanmanServer|
 |1024-65535|TCP|RPC|RPC Endpoint Mapper for DSCrackNames, SAMR and Netlogon calls between Client and Domain Controller|
 
 ## Common issues and solutions
