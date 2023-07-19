@@ -47,7 +47,7 @@ az vmss run-command invoke -g "myAgentpoolVmssResourceGroup" -n "myAgentpoolVmss
 --instance-id 0 \
 --scripts "echo | nc -vz "myAKSApiServerFQDN" 443"
 ```
-If the command above returns `connection succeeded``, then the network connectivity is unimpeded.
+If the command above returns `connection succeeded`, then the network connectivity is unimpeded.
 
 ## <a id="identifytopuseragents"></a> Identify top user agents by the number of requests
 
