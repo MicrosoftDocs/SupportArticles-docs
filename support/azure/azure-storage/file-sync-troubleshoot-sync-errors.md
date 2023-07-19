@@ -4,7 +4,7 @@ description: Troubleshoot common issues with monitoring sync health and resolvin
 author: khdownie
 ms.service: storage
 ms.topic: troubleshooting
-ms.date: 07/17/2023
+ms.date: 07/19/2023
 ms.author: kendownie
 ms.subservice: files 
 ms.custom: devx-track-azurepowershell
