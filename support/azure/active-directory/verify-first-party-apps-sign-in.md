@@ -105,7 +105,6 @@ The following table lists some, but not all, first-party Microsoft applications.
 |Microsoft Graph|00000003-0000-0000-c000-000000000000|
 |Microsoft Intune Web Company Portal|74bcdadc-2fdc-4bb3-8459-76d06952a0e9|
 |Microsoft Intune Windows Agent|fc0f3af4-6835-4174-b806-f7db311fd2f3|
-|Microsoft Learn|18fbca16-2224-45f6-85b0-f7bf2b39b3f3|
 |Microsoft Office|d3590ed6-52b3-4102-aeff-aad2292ab01c|
 |Microsoft Office 365 Portal|00000006-0000-0ff1-ce00-000000000000|
 |Microsoft Office Web Apps Service|67e3df25-268a-4324-a550-0de1c7f97287|
@@ -154,7 +153,7 @@ The following table lists some, but not all, first-party Microsoft applications.
 |Substrate Context Service|13937bba-652e-4c46-b222-3003f4d1ff97|
 |Sway|905fcf26-4eb7-48a0-9ff0-8dcc7194b5ba|
 |Universal Store Native Client|268761a2-03f3-40df-8a8b-c3db24145b6b|
-|Vortex [wsfed enabled]|5572c4c0-d078-44ce-b81c-6cbf8d3ed39e|
+|Viva Engage (formerly Yammer)|00000005-0000-0ff1-ce00-000000000000|
 |Windows Azure Active Directory|00000002-0000-0000-c000-000000000000|
 |Windows Azure Security Resource Provider|8edd93e1-2103-40b4-bd70-6e34e586362d|
 |Windows Azure Service Management API|797f4846-ba00-4fd7-ba43-dac1f8f63013|
@@ -162,7 +161,6 @@ The following table lists some, but not all, first-party Microsoft applications.
 |Windows Search|26a7ee05-5602-4d76-a7ba-eae8b7b67941|
 |Windows Spotlight|1b3c667f-cde3-4090-b60b-3d2abd0117f0|
 |Windows Store for Business|45a330b1-b1ec-4cc1-9161-9f03992aa49f|
-|Yammer|00000005-0000-0ff1-ce00-000000000000|
 |Yammer Web|c1c74fed-04c9-4704-80dc-9f79a2e515cb|
 |Yammer Web Embed|e1ef36fd-b883-4dbf-97f0-9ece4b576fc6|
 
@@ -175,6 +173,7 @@ The following table lists some, but not all, Microsoft tenant-owned applications
 |Graph Explorer|de8bc8b5-d9f9-48b1-a8ad-b748da725064|
 |Microsoft Graph Command Line Tools|14d82eec-204b-4c2f-b7e8-296a70dab67e|
 |OutlookUserSettingsConsumer|7ae974c5-1af7-4923-af3a-fb1fd14dcb7e|
+|Vortex [wsfed enabled]|5572c4c0-d078-44ce-b81c-6cbf8d3ed39e|
 
 ## More information
 
