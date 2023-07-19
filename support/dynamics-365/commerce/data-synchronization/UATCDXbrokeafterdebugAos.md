@@ -33,4 +33,4 @@ Remove the Dev machine from the Server Configuration Manager form and re-generat
 
 
 ##Reference
-[Debug a copy of the production database](https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/database/dbmovement-scenario-debugdiag)
+[Debug a copy of the production database](/dynamics365/fin-ops-core/dev-itpro/database/dbmovement-scenario-debugdiag)
