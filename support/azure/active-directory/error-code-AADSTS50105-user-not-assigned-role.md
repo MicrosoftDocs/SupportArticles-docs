@@ -6,7 +6,7 @@ ms.reviewer: bernawy
 ms.service: active-directory
 ms.subservice: app-mgmt
 ---
-# Error AADSTS50105 - The signed-in user is not assigned to a role for the application
+# Error AADSTS50105 - The signed in user is not assigned to a role for the application
 
 This article provides a resolution to the AADSTS50105 error that occurs during federated authentication with Azure Active Directory (Azure AD).
 
