@@ -65,10 +65,12 @@ SELECT @utilizedCpuCount = COUNT( * )
 FROM sys.dm_os_schedulers
 WHERE status = 'VISIBLE ONLINE' 
 --calculate the CPU usage by queries OVER a 5 sec interval 
-SELECT @init_sum_cpu_time = SUM(cpu_time)
-FROM sys.dm_exec_requests WAITFOR DELAY '00:00:05'SELECT CONVERT(DECIMAL(5,
-         2),
-         ((SUM(cpu_time) - @init_sum_cpu_time) / (@utilizedCpuCount * 5000.00)) * 100) AS [CPU FROM Queries AS Percent of Total CPU Capacity]
+SELECT @init_sum_cpu_time = SUM(CAST(cpu_time AS BIGINT))
+FROM sys.dm_exec_requests
+
+WAITFOR DELAY '00:00:05'
+
+SELECT CONVERT(DECIMAL(5, 2), ((SUM(CAST(cpu_time AS BIGINT)) - @init_sum_cpu_time) / (@utilizedCpuCount * 5000.00)) * 100) AS [CPU FROM Queries AS Percent of Total CPU Capacity]
 FROM sys.dm_exec_requests
 ```
 
