@@ -20,7 +20,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: CDX Download jobs can't be downloaded in UAT/Sandbox
-            url: data-synchronization/UATCDXbrokeafterdebugAos.md
+            url: data-synchronization/uat-cdx-broke-after-debug-aos.md
 
 
 

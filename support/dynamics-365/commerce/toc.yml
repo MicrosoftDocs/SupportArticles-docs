@@ -4,6 +4,6 @@
     - name: Data synchronization
       items:
         - name: CDX Download jobs can't be downloaded in UAT/Sandbox
-          href: data-synchronization/UATCDXbrokeafterdebugAos.md
+          href: data-synchronization/uat-cdx-broke-after-debug-aos.md
 
         
