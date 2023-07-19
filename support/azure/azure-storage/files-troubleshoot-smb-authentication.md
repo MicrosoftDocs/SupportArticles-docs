@@ -221,7 +221,11 @@ There is currently no workaround for this error.
 You might also encounter this error if you previously enabled Azure AD Kerberos authentication through manual limited preview steps. To delete the existing application, the customer or their IT admin can run the following script. Running this script will remove the old manually created application and allow the new experience to auto-create and manage the newly created application.
 
 > [!IMPORTANT]
-> This script must be run in PowerShell 5 because the AzureAD module doesn't work in PowerShell 7. This PowerShell snippet uses Azure AD Graph.
+> This script must be run in PowerShell 5 because the AzureAD module doesn't work in PowerShell 7. Or you can import it with the `-UseWindowsPowerShell` option in a PowerShell 7 session:
+> 
+> `Import-Module AzureAD -UseWindowsPowerShell`
+> 
+> The AzureAD module is scheduled for deprecation and is being replaced by Microsoft Graph PowerShell. See [Upgrade from Azure AD PowerShell to Microsoft Graph PowerShell](/powershell/microsoftgraph/migration-steps?view=graph-powershell-1.0) and the [Cmdlet map](/powershell/microsoftgraph/azuread-msoline-cmdlet-map?view=graph-powershell-1.0).
 
 ```powershell
 $storageAccount = "exampleStorageAccountName"
@@ -243,7 +247,7 @@ To mitigate this, you have two options: either rotate the service principal pass
 
 #### Option 1: Update the service principal password using PowerShell
 
-1. Install the latest Az.Storage and AzureAD modules. Use PowerShell 5.1, because currently the AzureAD module doesn't work in PowerShell 7. Azure Cloud Shell won't work in this scenario. For more information about installing PowerShell, see [Install Azure PowerShell on Windows with PowerShellGet](/powershell/azure/install-azure-powershell).
+1. Install the latest Az.Storage and AzureAD modules. Use PowerShell 5.1, because the AzureAD module doesn't work in PowerShell 7. Azure Cloud Shell won't work in this scenario. For more information about installing PowerShell, see [Install Azure PowerShell on Windows with PowerShellGet](/powershell/azure/install-azure-powershell).
 
     To install the modules, open PowerShell with elevated privileges and run the following commands:
 
