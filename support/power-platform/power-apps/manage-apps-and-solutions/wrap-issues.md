@@ -2,11 +2,11 @@
 title: Troubleshoot wrap issues
 description: Provides resolutions for issues related to the wrap feature in Power Apps.
 ms.reviewer: makolomi
-ms.date: 07/18/2023
+ms.date: 07/19/2023
 ---
 # Troubleshoot issues with the wrap feature in Power Apps
 
-This article helps you resolve the most common issues with the **wrap** feature in Microsoft Power Apps.
+This article helps you resolve the most common issues with the wrap feature in Microsoft Power Apps.
 
 ## Issue 1 - Wrap build is failing
 
@@ -25,7 +25,7 @@ Your App Center link must be created as an app within an organization and not a 
 
 :::image type="content" source="media/wrap-issues/new-app-center-location.png" alt-text="Screenshot that shows how to create a new app center location in wrap wizard.":::
 
-For more information about how to automatically create a new location in wrap wizard, see [step 5: Manage output](/power-apps/maker/common/wrap/wrap-how-to#step-5-manage-output).
+For more information about how to automatically create a new location in wrap wizard, see [step 5: Manage output](/power-apps/maker/common/wrap/wrap-how-to#step-5-manage-output) in Create native mobile apps for iOS and Android using the wizard.
 
 #### Step 3: Verify that your key vault configuration is correct
 
@@ -74,7 +74,7 @@ If you can't sign in to your wrapped mobile app, verify that:
 
 - The `Add-AdminAllowedThirdPartyApps` script was run successfully. For more information, see [Allow registered apps in your environment](/power-apps/maker/common/wrap/how-to).
 - Your AAD app type is **Multitenant**. Under your AAD app's **Authentication** tab, supported account types should be **Accounts in any organizational directory (Any Azure AD directory – Multitenant)**.
-- The proper Redirect URIs have been created for iOS and Android. For Android, check that the hash is provided correctly. For more information about configuring a redirect URI, see [Configure platform settings](/azure/active-directory/develop/quickstart-register-app#configure-platform-settings).
+- The proper redirect URIs have been created for iOS and Android. For Android, check that the hash is provided correctly. For more information about configuring a redirect URI, see [Configure platform settings](/azure/active-directory/develop/quickstart-register-app#configure-platform-settings).
 
 ## Issue 6 - Errors in Azure key vault in wrap for Power Apps
 
@@ -82,12 +82,12 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
 
 #### Error code 1000118
 
-| Error code      | Description          | 
-| ------------- |:-------------:| 
+| Error code      | Description          |
+| ------------- |-------------|
 |1000118    | Default subscription not found, or missing access permissions|
 
-- Make sure your Azure key vault is in the **Default subscription** for your tenant. 
-- Run these commands in Power Shell as an admin: 
+- Make sure your Azure key vault is in the **Default subscription** for your tenant.
+- Run these commands in PowerShell as an admin:
 
   ```ps
   Connect-AzureAD -TenantId <your tenant ID>
@@ -97,13 +97,13 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
   New-AzureADServicePrincipal -AppId 4e1f8dc5-5a42-45ce-a096-700fa485ba20 -DisplayName "Wrap KeyVault Access App"
   ```
 
-- In the [Azure portal](https://portal.azure.com), go to your Default subscription, on the **Access Control (IAM)** page, add a **Reader** role assignment to the **Service Principal** representing your app, for example, **Wrap KeyVault Access App**. Make sure that it's in the **Subscription's IAM** and **Keyvault's IAM**. Here are the steps:
+- In the [Azure portal](https://portal.azure.com), go to your default subscription, on the **Access Control (IAM)** page, add a **Reader** role assignment to the **Service Principal** representing your app, for example, **Wrap KeyVault Access App**. Make sure that it's in the **Subscription's IAM** and **Keyvault's IAM**. Here are the steps:
 
    1. Go to the **Access control (IAM)** tab, and select the **Add role assignment** option under the **Add** menu button.
 
       :::image type="content" source="media/wrap-issues/add-role-assignment.png" alt-text="Screenshot that shows the Add role assignment option in the Access control (IAM) tab.":::
 
-   2. Select the **Job fucntion roles** tab and make sure that the **Reader** role is selected. Then select the **Members** tab on the top menu.
+   2. Select the **Job function roles** tab and make sure that the **Reader** role is selected. Then select the **Members** tab on the top menu.
 
       :::image type="content" source="media/wrap-issues/add-members.png" alt-text="Screenshot that shows the Members tab on the top menu.":::
 
@@ -117,16 +117,16 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
   
 #### Error code 1000119
 
-| Error code      | Description          | 
-| ------------- |-------------| 
+| Error code      | Description          |
+| ------------- |-------------|
 |1000119    | Keyvault does not exist, or Keyvault is missing access privileges|
 
-- Verify that your Azure key vault is in the **Default subscription** for your tenant. 
+- Verify that your Azure key vault is in the **Default subscription** for your tenant.
 - Make sure that the **Vault access policy** option is selected when you create your key vault.
 
    :::image type="content" source="media/wrap-issues/vault-acces-policy.png" alt-text="Select the Vault Access policy option under the Access configuration tab.":::
 
-- Run these commands in Power Shell as an admin: 
+- Run these commands in PowerShell as an admin:
 
   ```ps
   Connect-AzureAD -TenantId <your tenant ID>
@@ -136,13 +136,13 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
   New-AzureADServicePrincipal -AppId 4e1f8dc5-5a42-45ce-a096-700fa485ba20 -DisplayName "Wrap KeyVault Access App"
   ```
 
-- In the [Azure portal](https://portal.azure.com), go to your Default subscription, on the **Access Control (IAM)** page, add a **Reader** role assignment to the **Service Principal** representing your app, for example, **Wrap KeyVault Access App**. Make sure that it's in the **Subscription's IAM** and **Keyvault's IAM**. Here are the steps:
+- In the [Azure portal](https://portal.azure.com), go to your default subscription, on the **Access Control (IAM)** page, add a **Reader** role assignment to the **Service Principal** representing your app, for example, **Wrap KeyVault Access App**. Make sure that it's in the **Subscription's IAM** and **Keyvault's IAM**. Here are the steps:
 
    1. Go to the **Access control (IAM)** tab, and select the **Add role assignment** option under the **Add** menu button.
 
       :::image type="content" source="media/wrap-issues/add-role-assignment.png" alt-text="Screenshot that shows the Add role assignment option in the Access control (IAM) tab.":::
 
-   2. Select the **Job fucntion roles** tab and make sure that the **Reader** role is selected. Then select the **Members** tab on the top menu.
+   2. Select the **Job function roles** tab and make sure that the **Reader** role is selected. Then select the **Members** tab on the top menu.
 
       :::image type="content" source="media/wrap-issues/add-members.png" alt-text="Screenshot that shows the Members tab on the top menu.":::
 
@@ -154,16 +154,16 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
   
       :::image type="content" source="media/wrap-issues/assign-reader-role-to-wrap-keyvault-access-app.png" alt-text="Screenshot that shows how to assign a Reader role to Wrap KeyVault Access App.":::
 
-- Add access policies for your Azure key vault.
+- Add access policies to your Azure key vault.
 
-   :::image type="content" source="media/wrap-issues/create-vault-access-policy.png" alt-text="Screenshot that shows how to add access policies for your Azure key vault."::: 
-   
+   :::image type="content" source="media/wrap-issues/create-vault-access-policy.png" alt-text="Screenshot that shows how to add access policies for your Azure key vault.":::
+
    :::image type="content" source="media/wrap-issues/review-and-create-vault-policy.png" alt-text="Screenshot that shows how to review and create vault access policy.":::
 
 #### Error code 1000120
 
-| Error code      | Description          | 
-| ------------- |-------------| 
+| Error code      | Description          |
+| ------------- |-------------|
 |1000120   | No organization ID tags found on key vault|
 
 - Go to [Power Platform admin center](https://admin.powerplatform.microsoft.com/environments) and select **Environment** where your wrap project is.
@@ -180,8 +180,8 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
 
 #### Error code 1000121
 
-| Error code      | Description          | 
-| ------------- |:-------------:| 
+| Error code      | Description          |
+| ------------- |-------------|
 |1000121    | Android keystore is not valid. Missing Tag and/or Certificate|
 
 - Import your **Android Certificate**.
@@ -200,8 +200,8 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
   
 #### Error code 1000122
 
-| Error code      | Description          | 
-| ------------- |:-------------:| 
+| Error code      | Description          |
+| ------------- |:-------------|
 |1000122    |  iOS certificate is not valid|
 
 - Import your **iOS Certificate**.
@@ -220,8 +220,8 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
 
 #### Error code 1000123
 
-| Error code      | Description          | 
-| ------------- |:-------------:| 
+| Error code      | Description          |
+| ------------- |:-------------|
 |1000123    |   iOS profile is not valid|
 
 - Import your **Provisioning Profile** as a **Secret**.
@@ -229,7 +229,7 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
 
    1. The **Tag name** should be based on the **bundle id** that you used in your **wrap project**. For example, if the **bundle id** for your wrapped app is **com.testApp.wrap**, then the new **Tag name** should be **com.testApp.wrap.profile**.
 
-   2. The **Tag value** should correspod to the name you chose for your **Secret** when uploading a povisioning profile in the previous step. For example, if your **Secret** is named **iOSProvisioningProfileSecret**, then the value for the **Tag value** should also be **iOSProvisioningProfileSecret**.
+   2. The **Tag value** should correspond to the name you chose for your **Secret** when uploading a povisioning profile in the previous step. For example, if your **Secret** is named **iOSProvisioningProfileSecret**, then the value for the **Tag value** should also be **iOSProvisioningProfileSecret**.
 
   :::image type="content" source="media/wrap-issues/provisioning-profile-secret-tag.png" alt-text="Screenshot that shows how to create a tag for iOS Provisioning Profile Secret.":::
 
@@ -238,4 +238,4 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
 For all other issues, or if your issue persists after following these steps, reach out to <pamobsup@microsoft.com>. You need to provide a repro video, screenshots, or both together with a session ID that can be acquired in the following ways:
 
 - On the sign-in screen, go to the lower right to select the gear icon, and then select **Session Details**.
-- In an opened app, shake your device, and then select **Session Details**.
+- After you open and app, shake your device, and then select **Session Details**.
