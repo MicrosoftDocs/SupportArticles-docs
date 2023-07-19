@@ -11,12 +11,12 @@ ms.reviewer: segule, merooney, v-weizhu
 
 This guide is designed to help you identify and resolve any unlikely issues you may encounter with the API server in large Azure Kubernetes Services (AKS) deployments.
 
-Considering the resilience of the API server, Microsoft has tested the reliability and performance of the API server at a scale of 5,000 nodes and 65,000 pods, with the ability to automatically scale out and deliver [Kubernetes Service Level Objectives (SLOs)](https://github.com/kubernetes/community/blob/master/sig-scalability/slos/slos.md). If you experience high latencies or time-outs, it's likely due to a resource leakage on etcd or a problematic client with excessive API calls.
+Microsoft has tested the reliability and performance of the API server at a scale of 5,000 nodes and 65,000 pods, with the ability to automatically scale out and deliver [Kubernetes Service Level Objectives (SLOs)](https://github.com/kubernetes/community/blob/master/sig-scalability/slos/slos.md). If you experience high latencies or timeouts, it's likely due to a resource leakage on etcd or an offending client with excessive API calls.
 
 ## Prerequisites
 
-- AKS diagnostic logs have been enabled and sent to a [Log Analytics workspace](/azure/aks/monitor-aks).
-- Ensure that you're using the Standard tier for AKS clusters. If you're using the Free tier, the API server and etcd will have limited resources. AKS clusters in the Free tier don't provide high availability, which is often the root cause of API server and etcd issues.
+- AKS diagnostics logs (specifically kube-audit events) have been enabled and sent to a [Log Analytics workspace](/azure/aks/monitor-apiserver).
+- Ensure that you're using the Standard tier for AKS clusters. If you're using the Free tier, the API server and etcd come with limited resources. AKS clusters in the Free tier don't provide high availability, which is often the root cause of API server and etcd issues.
 
 ## Symptoms
 
@@ -27,7 +27,7 @@ The following table outlines the common symptoms of API server failures:
 | Time-outs from the API server | Frequent time-outs that are beyond the guarantees in [the AKS API server SLA](/azure/aks/free-standard-pricing-tiers#uptime-sla-terms-and-conditions). |
 | High latencies | High latencies that make the Kubernetes SLOs fail.|
 
-## Cause
+## Causes
 
 Here are the three most common causes of API server failures:
 
@@ -109,23 +109,36 @@ AzureDiagnostics
 | render table  
 ```
 
-The results of this query can help identify types of API calls that fail the Upstream Kubernetes SLOs. In most cases, a problematic client may make too many `LIST` calls on a large set of objects or objects that are too large. Unfortunately, no hard scalability limits can guide users on API server scalability. API server or etcd scalability limits depend on various factors explained in [Kubernetes Scalability thresholds](https://github.com/kubernetes/community/blob/master/sig-scalability/configs-and-limits/thresholds.md). 
+The results from this query can be useful for identifying types of API calls that fail the upstream Kubernetes SLOs. In most cases, an offending client may be making too many `LIST` calls on a large set of objects or objects that are too large in size. Unfortunately, there are no hard scalability limits that can guide users on API server scalability. API server or etcd scalability limits depend on a variety of factors explained in [Kubernetes Scalability thresholds](https://github.com/kubernetes/community/blob/master/sig-scalability/configs-and-limits/thresholds.md). 
 
 ## Verify that clients don't leak resources in etcd
 
+> [!TIP]
+> Whenever an object in etcd is mutated, a new complete version of that object is created. Should the object being mutated be large, this can end up consuming a lot of space. To stop etcd fom reaching capacity and causing cluster downtime, you can cap the maximum number of resources created and/or slow the number of revisions generated for resource instances.
+=======
 A common issue is continuously creating objects without deleting unused ones in the etcd database. This can cause performance issues when dealing with too many objects of any type (> 10 kilobytes). A rapid increase of changes on such objects could also cause the etcd database size (4 gigabytes by default) to be exceeded.
 
 To check the etcd database usage, navigate to **Diagnose and Solve problems** in the Azure portal. Run the Etcd Availability diagnosis tool by searching for "_etcd_" in the search box. The diagnosis tool shows you the usage breakdown and the total database size.
 
 :::image type="content" source="media/troubleshoot-apiserver-etcd/etcd-detector.png" alt-text="Screenshot that shows the Etcd Availability Diagnosis for AKS.":::
 
-If you find objects that are no longer in use but are taking up resources, consider deleting them. For example, you can delete completed jobs to free up space:
+Alternatively, if you just want a quick way to see current size of your etcd db in bytes:
+
+```bash
+kubectl get --raw /metrics | grep "etcd_db_total_size_in_bytes"
+```
+
+If you have identified objects that are no longer in use but are taking up resources, consider deleting them. For example, you can delete completed jobs to free up space:
 
 ```bash
 kubectl delete jobs --field-selector status.successful=1
 ```
 
-## How to address overload in the client control plane
+Alternatively, for objects that support [automatic clean-up](https://kubernetes.io/docs/concepts/architecture/garbage-collection/), you can set time to live (TTL) values to limit the lifetime of these objects. You can also label your objects so that you can bulk delete all objects of a specific type using label selectors. If you establish [owner references](https://kubernetes.io/docs/concepts/overview/working-with-objects/owners-dependents/) among objects, then when the parent object is deleted, any dependent objects will be automatically deleted.
+
+If you'd like to limit the number of objects that can created, you can [define object quotas](https://kubernetes.io/docs/concepts/policy/resource-quotas/#object-count-quota)
+
+## How to throttle a client overwhelming the control plane
 
 If you determine that etcd isn't overloaded with too many objects, consider tuning your client's API call pattern to reduce the pressure on the control plane.
 
@@ -180,21 +193,3 @@ The following sample illustrates how to throttle a problematic client's LIST Pod
     ```
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
-
-<!-- LINKS - external -->
-[kube-audit-overview]: https://kubernetes.io/docs/tasks/debug/debug-cluster/audit/
-[kube-apiserver-overview]: https://kubernetes.io/docs/reference/command-line-tools-reference/kube-apiserver/
-[too-many-requests-error-tsg]: https://learn.microsoft.com/troubleshoot/azure/azure-kubernetes/429-too-many-requests-errors
-[monitorr-apiserver]: https://github.com/MicrosoftDocs/azure-docs-pr/blob/main/articles/aks/monitor-apiserver.md
-[priority-and-fairness]: https://kubernetes.io/docs/concepts/cluster-administration/flow-control/
-[K8s SLOs]: https://github.com/kubernetes/community/blob/master/sig-scalability/slos/slos.md
-
-<!-- LINKS - internal -->
-[azure-diagnostics-overview]: ../azure-monitor/essentials/diagnostic-settings.md
-[log-analytics-workspace-overview]: /azure/aks/monitor-aks
-[design-log-analytics-deployment]: ../azure-monitor/logs/design-logs-deployment.md
-[create-diagnostic settings]: ../azure-monitor/essentials/diagnostic-settings.md#create-diagnostic-settings
-[cost-optimization-azure-monitor]: ../azure-monitor/best-practices-cost.md
-[azure-diagnostics-table]: /azure/azure-monitor/reference/tables/azurediagnostics
-[container-insights-overview]: ..//azure-monitor/containers/container-insights-overview.md
-[apiserversla]: /azure/aks/free-standard-pricing-tiers#uptime-sla-terms-and-conditions
