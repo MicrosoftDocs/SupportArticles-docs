@@ -29,7 +29,7 @@ To fix the issue, perform the following configurations and verifications, and th
 1. [Verify the HTTP SPNs.](#verify-the-http-spns)
 1. [Configure constraint delegations.](#configure-constraint-delegations)
 1. [Verify "Account is sensitive and cannot be delegated" isn't set.](#verify-account-is-sensitive-and-cannot-be-delegated-isnt-set)
-1. [Disable Kernel-mode Authentication in IIS](#disable-kernel-mode-authentication-in-iis)
+1. [Disable Kernel-mode Authentication in IIS.](#disable-kernel-mode-authentication-in-iis)
 
 > [!NOTE]
 > The following sample names are used in the configuration and verification steps. You have to replace them with the names in your environment.
