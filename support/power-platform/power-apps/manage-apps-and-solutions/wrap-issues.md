@@ -101,7 +101,7 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
 
    1. Go to the **Access control (IAM)** tab, and select the **Add role assignment** option under the **Add** menu button.
 
-      :::image type="content" source="media/wrap-issues/add-role-assignment.png" alt-text="Screenshot that shows the Add role assignment option in the Access control (IAM) tab.":::
+      :::image type="content" source="media/wrap-issues/add-role-assignment.png" alt-text="Screenshot that shows the Add role assignment option in the Access control (IAM) tab." lightbox="media/wrap-issues/add-role-assignment.png":::
 
    2. Select the **Job function roles** tab, and make sure that the **Reader** role is selected. Then select the **Members** tab on the top menu.
 
@@ -113,7 +113,7 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
 
    4. Select **Wrap KeyVault Access App** and then select the **Review + assign** button at the bottom of the tab to assign it the **Reader** role.
   
-      :::image type="content" source="media/wrap-issues/assign-reader-role-to-wrap-keyvault-access-app.png" alt-text="Screenshot that shows how to assign a Reader role to Wrap KeyVault Access App.":::
+      :::image type="content" source="media/wrap-issues/assign-reader-role-to-wrap-keyvault-access-app.png" alt-text="Screenshot that shows how to assign a Reader role to Wrap KeyVault Access App." lightbox="media/wrap-issues/assign-reader-role-to-wrap-keyvault-access-app.png":::
   
 #### Error code 1000119
 
@@ -176,7 +176,7 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
 
 - In your key vault in the [Azure portal](https://portal.azure.com), go to **Tags**, create a new tag named **organization-id**, and add your organization ID to this tag.
 
-   :::image type="content" source="media/wrap-issues/add-tag.png" alt-text="Screenshot that shows how to add an organization ID to a tag in Azure portal.":::
+   :::image type="content" source="media/wrap-issues/add-tag.png" alt-text="Screenshot that shows how to add an organization ID to a tag in Azure portal." lightbox="media/wrap-issues/add-tag.png":::
 
 #### Error code 1000121
 
