@@ -27,7 +27,7 @@ The following table outlines the common symptoms of API server failures:
 | Timeouts from the API server | Frequent timeouts that are beyond what's guaranteed in [the AKS API server SLA](/azure/aks/free-standard-pricing-tiers#uptime-sla-terms-and-conditions). |
 | High latencies | High latencies that make the Kubernetes SLOs to fail.|
 
-## Cause
+## Causes
 
 Here are three most common causes for API server failures:
 
@@ -138,7 +138,7 @@ Alternatively, for objects that support [automatic clean-up](https://kubernetes.
 
 If you'd like to limit the number of objects that can created, you can [define object quotas](https://kubernetes.io/docs/concepts/policy/resource-quotas/#object-count-quota)
 
-## How to address overload in client control plane
+## How to throttle a client overwhelming the control plane
 
 If you rule out that etcd is overloaded with too many objects, you may consider tuning your client's API call pattern to reduce pressure on the control plane.
 
