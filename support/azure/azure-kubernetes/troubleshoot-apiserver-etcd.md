@@ -115,6 +115,9 @@ The results from this query can be useful for identifying types of API calls tha
 
 A common issue is to continuously create objects without deleting unused ones in the etcd database. This can cause performance issues when dealing with too many objects of any type (count > 10,000). A rapid increase of changes on such objects could also result in exceeding the etcd database size (4 gigabytes by default).
 
+> [!TIP]
+> Whenever an object in etcd is mutated, a new complete version of that object is created. Should the object being mutated be large, this can end up consuming a lot of space. To stop etcd fom reaching capacity and causing cluster downtime, you can cap the maximum number of resources created and/or slow the number of revisions generated for resource instances.
+
 To check for etcd database usage, navigate to **Diagnose and Solve problems** in the Azure portal. Run the Etcd Availability diagnosis tool by searching for 'etcd' in the search box. The diagnosis tool shows you the usage breakdown and the total database size.
 
 :::image type="content" source="media/troubleshoot-apiserver-etcd/etcd-detector.png" alt-text="Screenshot that shows the Etcd Availability Diagnosis for AKS.":::
@@ -124,6 +127,10 @@ If you have identified objects that are no longer in use but are taking up resou
 ```bash
 kubectl delete jobs --field-selector status.successful=1
 ```
+
+Alternatively, for objects that support [automatic clean-up](https://kubernetes.io/docs/concepts/architecture/garbage-collection/), you can set time to live (TTL) values to limit the lifetime of these objects. You can also label your objects so that you can bulk delete all objects of a specific type using label selectors. If you establish [owner references](https://kubernetes.io/docs/concepts/overview/working-with-objects/owners-dependents/) among objects, then when the parent object is deleted, any dependent objects will be automatically deleted.
+
+If you'd like to limit the number of objects that can created, you can [define object quotas](https://kubernetes.io/docs/concepts/policy/resource-quotas/#object-count-quota)
 
 ## How to address overload in client control plane
 
