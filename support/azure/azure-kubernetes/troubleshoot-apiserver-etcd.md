@@ -180,21 +180,3 @@ The following sample illustrates how to throttle an offending client's LIST Pods
     ```
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
-
-<!-- LINKS - external -->
-[kube-audit-overview]: https://kubernetes.io/docs/tasks/debug/debug-cluster/audit/
-[kube-apiserver-overview]: https://kubernetes.io/docs/reference/command-line-tools-reference/kube-apiserver/
-[too-many-requests-error-tsg]: https://learn.microsoft.com/troubleshoot/azure/azure-kubernetes/429-too-many-requests-errors
-[monitorr-apiserver]: https://github.com/MicrosoftDocs/azure-docs-pr/blob/main/articles/aks/monitor-apiserver.md
-[priority-and-fairness]: https://kubernetes.io/docs/concepts/cluster-administration/flow-control/
-[K8s SLOs]: https://github.com/kubernetes/community/blob/master/sig-scalability/slos/slos.md
-
-<!-- LINKS - internal -->
-[azure-diagnostics-overview]: ../azure-monitor/essentials/diagnostic-settings.md
-[log-analytics-workspace-overview]: /azure/aks/monitor-aks
-[design-log-analytics-deployment]: ../azure-monitor/logs/design-logs-deployment.md
-[create-diagnostic settings]: ../azure-monitor/essentials/diagnostic-settings.md#create-diagnostic-settings
-[cost-optimization-azure-monitor]: ../azure-monitor/best-practices-cost.md
-[azure-diagnostics-table]: /azure/azure-monitor/reference/tables/azurediagnostics
-[container-insights-overview]: ..//azure-monitor/containers/container-insights-overview.md
-[apiserversla]: /azure/aks/free-standard-pricing-tiers#uptime-sla-terms-and-conditions
