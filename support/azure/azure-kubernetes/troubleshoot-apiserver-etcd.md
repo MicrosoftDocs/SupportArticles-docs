@@ -122,6 +122,12 @@ To check for etcd database usage, navigate to **Diagnose and Solve problems** in
 
 :::image type="content" source="media/troubleshoot-apiserver-etcd/etcd-detector.png" alt-text="Screenshot that shows the Etcd Availability Diagnosis for AKS.":::
 
+Alternatively, if you just want a quick way to see current size of your etcd db in bytes:
+
+```bash
+kubectl get --raw /metrics | grep "etcd_db_total_size_in_bytes"
+```
+
 If you have identified objects that are no longer in use but are taking up resources, consider deleting them. For example, you can delete completed jobs to free up space:
 
 ```bash
