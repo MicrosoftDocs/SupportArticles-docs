@@ -184,4 +184,4 @@ To disable **Kernel-mode Authentication** for both `MonitoringView` and `Operati
 3. Select **Windows Authentication**.
 4. In the **Actions** pane on the right, select **Advanced Settings**.
 5. Clear the **Enable Kernel-mode authentication** checkbox.
-6. Navigate to *Default Web Site\OperationsManager*, repeat the steps 2 through 5.
+6. Navigate to *Default Web Site\OperationsManager*, and repeat steps 2 through 5.
