@@ -24,8 +24,8 @@ The following table outlines the common symptoms of API server failures:
 
 | Symptom | Description |
 |---|---|
-| Time-outs from the API server | Frequent time-outs that are beyond the guarantees in [the AKS API server SLA](/azure/aks/free-standard-pricing-tiers#uptime-sla-terms-and-conditions). |
-| High latencies | High latencies that make the Kubernetes SLOs fail.|
+| Time-outs from the API server | Frequent time-outs that are beyond the guarantees in [the AKS API server SLA](/azure/aks/free-standard-pricing-tiers#uptime-sla-terms-and-conditions). `e.g. kubectl commands timeout` |
+| High latencies | High latencies that make the Kubernetes SLOs fail. `e.g. kubectl command takes more than 30 seconds to list pods`|
 
 ## Causes
 
