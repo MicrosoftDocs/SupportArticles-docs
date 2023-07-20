@@ -47,15 +47,15 @@ Logs related to the traces are also automatically collected when you stop the da
 |Parameter  |Description  |
 |---------|---------|
 |`<placeholder>`     |The string in the \<angle brackets\> for placeholder needs to be substituted with an actual scenario name, trace component, command, or value.         |
-|`[optional]`     |The keyword or value in the [square brackets] is optional. For example, [module:int] means the module and interval are optional, the default values are used if [<xx>:<yy>] are omitted.         |
-|`'\|'`     |Means 'OR'. You can choose one of the available options.         |
+|`[optional]`     |The keyword or value in the [square brackets] is optional. For example, `[module:int]` means the module and interval are optional, the default values are used if `[<xx>:<yy>]` are omitted.         |
+|`'\|'`     |Means `'OR'`. You can choose one of the available options.         |
 |`:`     |The separator character between two values.         |
 
 ## Cmdlet examples
 
 |PowerShell cmdlet  |Description  |
 |---------|---------|
-|`.\TSS.ps1 -PerfMon [General:10]`     |Means `PerfMon CounterSetName`= 'General' and `Interval`= '10' seconds. When `[General:10]` is omitted, the defaults kick in, so `-PerfMon` has the same effects as `-PerfMon General -PerfIntervalSec 10`.         |
+|`.\TSS.ps1 -PerfMon [General:10]`     |Means `PerfMon CounterSetName`= `General` and `Interval`= `10` seconds. When `[General:10]` is omitted, the defaults kick in, so `-PerfMon` has the same effects as `-PerfMon General -PerfIntervalSec 10`.         |
 |`.\TSS.ps1 [-StopWaitTimeInSec <N>]`      |Means that the argument `-StopWaitTimeInSec` is optional, but if it's specified, then a value for `<N>` ='number of seconds' is mandatory.         |
 
 ## Event Tracing for Windows (ETW) trace
@@ -83,7 +83,7 @@ Start support tools or commands (for example, ProcMon, ProcDump, netsh, Performa
 |`-GPresult <Start\|Stop\|Both>`      |Collect SysInternals Handle.exe output on phase `start`, `stop` or `both`.         |
 |`-Handle <Start\|Stop\|Both>`      |Collect SysInternals Handle.exe output on phase `start`, `stop` or `both`.         |
 |`-LiveKD <Start\|Stop\|Both>`     |Start SysInternals LiveKD `-ml` (live kernel dump).<br>`<Start>`: the dump is taken on start of repro.<br>`<Stop>`: the dump is taken on stop.<br>`<Both>`: the dump is taken on both start and stop.         |
-|`-Netsh`<br>1. `-NetshOptions '<Option string>'`<br>2. `-NetshMaxSizeMB <Int>`<br>3. `-noPacket`     |Start network packet capturing.<br><br>1. Specify additional options for `Netsh`. For example, 'capturetype=both captureMultilayer=yes provider=Microsoft-Windows-PrimaryNetworkIcon provider={<GUID>}'.<br>2. The max log size for `Netsh` in megabyte (MB) (for example, `-NetshMaxSizeMB 4096`). The default value is 2048.<br>3.    Prevent packets from being captured with `Netsh` (only ETW traces in the `ScenarioName` will be captured).         |
+|`-Netsh`<br>1. `-NetshOptions '<Option string>'`<br>2. `-NetshMaxSizeMB <Int>`<br>3. `-noPacket`     |Start network packet capturing.<br><br>1. Specify additional options for `Netsh`. For example, `'capturetype=both captureMultilayer=yes provider=Microsoft-Windows-PrimaryNetworkIcon provider={<GUID>}'`.<br>2. The max log size for `Netsh` in megabyte (MB) (for example, `-NetshMaxSizeMB 4096`). The default value is 2048.<br>3.    Prevent packets from being captured with `Netsh` (only ETW traces in the `ScenarioName` will be captured).         |
 |`-NetshScenario`<br>1. `-NetshOptions '<Option string>'`<br>2. `-NetshMaxSizeMB <Int>`<br>3. `-noPacket`          |Start `Netsh` scenario trace. The supported `<ScenarioName>` are listed by using the `-ListSupportedNetshScenario` cmdlet.<br><br>1. Specify additional options for `Netsh`. For example, 'capturetype=both captureMultilayer=yes provider=Microsoft-Windows-PrimaryNetworkIcon provider={<GUID>}'.<br>2. The max log size for `Netsh` in MB (for example, `-NetshMaxSizeMB 4096`). The default value is 2048.<br>3. Prevent packets from being captured with `Netsh` (only ETW traces in the scenario name` will be captured).         |
 |`-PerfMon <CounterSetName> [-PerfIntervalSec N] [-PerfMonMaxMB <N>] [-PerfMonCNF <[[hh:]mm:]ss>]`<br>1. `-PerfIntervalSec <Interval in sec>`<br>2.    `-PerfMonMaxMB <N>`<br>3. `-PerfMonCNF <[[hh:]mm:]ss>`            |Start Performance Monitor logs, `<CounterSetName>` can be listed by using the `-ListSupportedPerfCounter` cmdlet.<br><br>1. Set the interval for the `PerfMon` log (the default value is 10 seconds).<br>2. Specify an int value for the maximum `Perfmon` log size in MB, the default value is 2048.<br>3.    Create a new file when the specified time has elapsed or when the max size of <PerfMonMaxMB> is exceeded.         |
 |`-PerfMonLong <CounterSetName> [-PerfLongIntervalMin N] [-PerfMonMaxMB <N>] [-PerfMonCNF <[[hh:]mm:]ss>]`<br>1. `-PerfLongIntervalMin <Interval in min>`     |Performance Monitor with a long interval.<br><br>1. Set the interval for the `PerfMonLong` log (the default value is 10 minutes).         |
@@ -125,7 +125,7 @@ Defines specific parameters within the TSS options, to control, enhance, or simp
 |`-CollectEventLog <Eventlog[]>`     |Collect specified event logs. The asterisk (\*) wildcard character can be used for the event log name.<br><br>Example:<br>`-CollectEventLog Security,*Cred*`<br>Collect security and all event logs that match `*Cred*` like 'Microsoft-Windows-CertificateServicesClient-CredentialRoaming/Operational'.         |
 |`-CommonTask <<POD>\|Full\|Mini>`     |Run common tasks before starting and after stopping trace.<br><br>`<POD>`: currently only 'NET' is available. Collects additional information before starting and after stopping trace.<br>`Full`: full basic log is collected after stopping trace.<br>`Mini`: mini basic log is collected after stopping trace.         |
 |`-Crash`     |Trigger system crash with `NotMyFault` at the stop of repro, or after all events are signaled in case used with `-WaitEvent`.<br><br>Caution:<br>This switch will force a memory dump (the system will restart), so open files won't save.          |
-|`-CustomETL`     |Add custom ETL trace provider(s). For example, `.\TSSv2.ps1 -WIN_CustomETL -CustomETL '{<GUID>}','Microsoft-Windows-PrimaryNetworkIcon'` (comma separated list of single quoted '{GUID}' and/or 'Provider-Name').         |
+|`-CustomETL`     |Add custom ETL trace provider(s). For example, `.\TSSv2.ps1 -WIN_CustomETL -CustomETL '{<GUID>}','Microsoft-Windows-PrimaryNetworkIcon'` (comma separated list of single quoted `'{GUID}'` and/or `'Provider-Name'`).         |
 |`-DebugMode`     |Run with debug mode for a developer.         |
 |`-VerboseMode`     |Show more verbose or informational output while processing TSS functions.         |
 |`-Discard`     |Used to discard a dataset at phase `-Stop`. `*Stop-` or `*Collect-` functions will not run. `xray` and `psSDP` will be skipped.         |
@@ -152,8 +152,8 @@ Defines specific parameters within the TSS options, to control, enhance, or simp
 |`\scripts\tss_EventCreate.ps1`     |Create an event log entry in event log files with event IDs.         |
 |`\scripts\tss_SMB_Fix-SmbBindings.ps1`     |Useful for fixing corrupted SMB Bindings (LanmanServer, LanmanWorkstation, or NetBT). See also with `-Collect NET_SMBsrvBinding`.         |
 |`\BINx64\kdbgctrl.exe`     |Use switch `-sd <dump type>`  to set kernel crash dump type `Full|Kernel`, for example, `kdbgctrl -sd Full`.         |
-|`\BINx64\NTttcp.exe`     |Performance tests. For more information, see [Test VM network throughput by using NTTTCP](https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-bandwidth-testing).         |
-|`\BINx64\latte.exe`     |Latency tests. For more information, see [Test network latency between Azure VMs](https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-test-latency).         |
+|`\BINx64\NTttcp.exe`     |Performance tests. For more information, see [Test VM network throughput by using NTTTCP](/azure/virtual-network/virtual-network-bandwidth-testing).         |
+|`\BINx64\latte.exe`     |Latency tests. For more information, see [Test network latency between Azure VMs](/azure/virtual-network/virtual-network-test-latency).         |
 |`\BINx64\notmyfaultc.exe`     |Force a memory dump. See [NotMyFault v4.21](https://learn.microsoft.com/ sysinternals/downloads/notmyfault) if the TSS command line includes `-Crash`.         |
 
 ## Troubleshoot unexpected PowerShell errors
