@@ -14,7 +14,7 @@ ms.reviewer: gquintin, aruiz, meerak
 appliesto: 
   - Outlook for Microsoft 365
 search.appverid: MET150
-ms.date: 05/15/2023
+ms.date: 07/20/2023
 ---
 
 # View emails and web links side-by-side with Outlook and Microsoft Edge
@@ -93,14 +93,14 @@ Follow these steps to manage the policy in the [Cloud Policy service for Microso
    :::image type="content" source="media/view-emails-and-web-links-in-browser/administrative-templates-group-policy.png" alt-text="Screenshot of the 'Choose which browser opens web links' policy in the Group Policy Management Editor.":::
 
 > [!NOTE]
-> If your organization uses a **Microsoft 365 for business** plan, then you can use the policy to manage the feature when it rolls out for Teams. However, the policy is unavailable for Outlook with this plan. Users will need to manage the feature by using Outlook settings as described in the following section. 
+> If your organization uses a **Microsoft 365 for business** plan, then you can use the policy to manage the feature when it rolls out for Teams. However, the policy is unavailable for Outlook with this plan. Users will need to manage the feature by using Outlook settings as described in the following section.
 
 ## Allow users to manage the new feature
 
 If you prefer to let your users manage this feature, then either leave the policy unconfigured or disable the policy. Microsoft Edge will open as the new default experience when users open web links, and they can manage this behavior in one of two ways:
 
-- Through Outlook settings: **File** \> **Options** \> **Advanced** \> **Link Handling**.
-- Through the banner notification: A banner notification is shown when users first see the experience. They can either select the **Try Edge** option to keep using the feature or select **Manage my settings** to revert to their system's default browser experience. 
+- Through Outlook settings: **File** \> **Options** \> **Advanced** \> **File and browser preferences**.
+- Through the banner notification: A banner notification is shown when users first see the experience. They can either select the **Try Edge** option to keep using the feature or select **Manage my settings** to revert to their system's default browser experience.
 
   :::image type="content" source="media/view-emails-and-web-links-in-browser/microsoft-edge-banner.png" alt-text="Screenshot of the Microsoft Edge banner that asks users to select how to open email links.":::
 
