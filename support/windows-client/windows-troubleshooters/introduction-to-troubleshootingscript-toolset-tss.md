@@ -77,7 +77,7 @@ Logs related to the traces are also automatically collected when you stop the da
 
 Start support tools or commands (for example, ProcMon, ProcDump, netsh, Performance Monitor (PerfMon), WPR, or Radar) to enhance your log collection with additional tools for specialized captures.
 
-|PowerShell cmdlet  |Description  |
+|PowerShell cmdlet|Description|
 |---------|---------|
 |-Fiddler|Collect Fiddler trace. It requires Fiddler to be installed.<br><br>Enable the traffic decryption option by selecting **Tools** > **Options** and selecting **Decrypt HTTPS Traffic** on the **HTTPS** tab.|
 |-GPresult \<Start\|Stop\|Both\>|Collect SysInternals *Handle.exe* output on phase `start`, `stop` or `both`.|
@@ -89,8 +89,8 @@ Start support tools or commands (for example, ProcMon, ProcDump, netsh, Performa
 |-PerfMonLong \<CounterSetName\> \[-PerfLongIntervalMin N\] \[-PerfMonMaxMB \<N\>\] \[-PerfMonCNF \<\[\[hh\:\]mm\:\]ss\>\]<br>1. -PerfLongIntervalMin \<Interval in min\>|Performance Monitor with a long interval.<br><br>1. Set the interval for the `PerfMonLong` log (the default value is 10 minutes).|
 |-PktMon|Collect packet monitoring data (on Windows Server 2019 or Windows 10, version 1809 and later versions). PktMon\:Drop will collect only dropped packets.|
 |-PoolMon \<Start\|Stop\|Both\>|Collect `PoolMon` on `start`, `stop` or `both`.|
-|-ProcDump \<PID\[\]\|ProcessName.exe\[\]\|ServiceName\[\]><br>1. -ProcDumpOption \<Start\|Stop\|Both\> -ProcDumpInterval \<N\>:\<Interval in sec><br>2. -ProcDumpInterval \<N\>:\<Interval in sec\><br>3. -ProcDumpAppCrash|Capture user dump(s) of a single item or comma separated list of items using SysInternals ProcDump.exe. By default, the dump is taken on start of repro and stop. Enter `ProcessName`(s) with `.exe` extension.<br><br>1. `Start`: the dump is taken on start of the repro.<br>`Stop`: the dump is taken on stop.<br>`Both` (default): the dump is taken on both start and stop.<br>2. Use this option when the dump needs to be captured repeatedly.<br>`N`: the number of dumps<br>`Int`: the interval in seconds<br>The default value is 3:10.<br>3. This switch will enable `ProcDump -ma -e` which writes a full dump when the process encounters an unhandled exception.|
-|`-ProcMon`<br>1. -ProcmonAltitude \<N\><br>2. -ProcmonPath \<folder path to Procmon.exe\><br>3. -ProcmonFilter \<filter-file.pmc\>|Start SysInternals *Procmon.exe*.<br><br>1. Specify a string value for `ProcmonAltitude` (the default value is 385200). Use 'fltmc instances' to show filter driver Altitude. Use a lower number than the suspected specific driver, value 45100 will show you virtually everything.<br>2. Specify a path to *Procmon.exe* (by default, TSS uses built-in Procmon).<br>3. Specify a config file for Procmon (for example, *ProcmonConfiguration.pmc*) located in the *\\config* folder.|
+|-ProcDump \<PID\[\]\|ProcessName.exe\[\]\|ServiceName\[\]><br>1. -ProcDumpOption \<Start\|Stop\|Both\> -ProcDumpInterval \<N\>:\<Interval in sec><br>2. -ProcDumpInterval \<N\>:\<Interval in sec\><br>3. -ProcDumpAppCrash|Capture user dump(s) of a single item or comma separated list of items using SysInternals ProcDump.exe. By default, the dump is taken on start of repro and stop. Enter `ProcessName`(s) with `.exe` extension.<br><br>1. `Start`: the dump is taken on start of the repro.<br>`Stop`: the dump is taken on stop.<br>`Both` (default): the dump is taken on both start and stop.<br>2. Use this option when the dump needs to be captured repeatedly.<br>`N`: the number of dumps<br>`Int`: the interval in seconds<br>The default value is 3:10.<br>3. This switch will enable ProcDump \-ma \-e which writes a full dump when the process encounters an unhandled exception.|
+|-ProcMon<br>1. -ProcmonAltitude \<N\><br>2. -ProcmonPath \<folder path to Procmon.exe\><br>3. -ProcmonFilter \<filter-file.pmc\>|Start SysInternals *Procmon.exe*.<br><br>1. Specify a string value for `ProcmonAltitude` (the default value is 385200). Use 'fltmc instances' to show filter driver Altitude. Use a lower number than the suspected specific driver, value 45100 will show you virtually everything.<br>2. Specify a path to *Procmon.exe* (by default, TSS uses built-in Procmon).<br>3. Specify a config file for Procmon (for example, *ProcmonConfiguration.pmc*) located in the *\\config* folder.|
 |-PSR|Start Problems Steps Recorder.|
 |-Radar \<PID\[\]\|ProcessName\[\]\|ServiceName\[\]\>|Collect leak diagnostic information (*rdrleakdiag.exe*).<br><br>For example, -Radar AppIDSvc.|
 |-RASdiag|Collect trace. The `Netsh` Ras diagnostics set trace is enabled.|
@@ -154,7 +154,7 @@ Defines specific parameters within the TSS options, to control, enhance, or simp
 |`\BINx64\kdbgctrl.exe`     |Use switch `-sd <dump type>`  to set kernel crash dump type `Full|Kernel`, for example, `kdbgctrl -sd Full`.         |
 |`\BINx64\NTttcp.exe`     |Performance tests. For more information, see [Test VM network throughput by using NTTTCP](/azure/virtual-network/virtual-network-bandwidth-testing).         |
 |`\BINx64\latte.exe`     |Latency tests. For more information, see [Test network latency between Azure VMs](/azure/virtual-network/virtual-network-test-latency).         |
-|`\BINx64\notmyfaultc.exe`     |Force a memory dump. See [NotMyFault v4.21](/hsysinternals/downloads/notmyfault) if the TSS command line includes `-Crash`.         |
+|`\BINx64\notmyfaultc.exe`     |Force a memory dump. See [NotMyFault v4.21](/sysinternals/downloads/notmyfault) if the TSS command line includes `-Crash`.         |
 
 ## Troubleshoot unexpected PowerShell errors
 
