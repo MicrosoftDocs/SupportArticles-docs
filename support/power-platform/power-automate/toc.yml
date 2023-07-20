@@ -161,6 +161,8 @@
           href: how-to-get-power-automate-desktop-installer-logs.md
         - name: '"Invalid Private key file" error in Open secure FTP connection action'
           href: invalid-private-key-file-error.md
+        - name: Internet connection is interrupted after installing Power Automate
+          href: no-ethernet-after-pad-install.md
         - name: Keyboard and mouse click combinations not working
           href: key-and-mouse-click-combo-not-working.md
         - name: Known limitations of Selenium IDE
