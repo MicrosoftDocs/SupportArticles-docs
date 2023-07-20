@@ -154,7 +154,7 @@ Defines specific parameters within the TSS options, to control, enhance, or simp
 |`\BINx64\kdbgctrl.exe`     |Use switch `-sd <dump type>`  to set kernel crash dump type `Full|Kernel`, for example, `kdbgctrl -sd Full`.         |
 |`\BINx64\NTttcp.exe`     |Performance tests. For more information, see [Test VM network throughput by using NTTTCP](/azure/virtual-network/virtual-network-bandwidth-testing).         |
 |`\BINx64\latte.exe`     |Latency tests. For more information, see [Test network latency between Azure VMs](/azure/virtual-network/virtual-network-test-latency).         |
-|`\BINx64\notmyfaultc.exe`     |Force a memory dump. See [NotMyFault v4.21](hsysinternals/downloads/notmyfault) if the TSS command line includes `-Crash`.         |
+|`\BINx64\notmyfaultc.exe`     |Force a memory dump. See [NotMyFault v4.21](/hsysinternals/downloads/notmyfault) if the TSS command line includes `-Crash`.         |
 
 ## Troubleshoot unexpected PowerShell errors
 
@@ -177,7 +177,7 @@ Defines specific parameters within the TSS options, to control, enhance, or simp
       ```
 
 2. Verify the settings with the 'Get-ExecutionPolicy -List' cmdlet that no `ExecutionPolicy` with higher precedence is blocking the execution of this script.
-3. Run the '.\TSSv2.ps1 <Desired Parameters>' cmdlet again.
+3. Run the `.\TSSv2.ps1 <Desired Parameters>` cmdlet again.
 
 ### Method 2 (alternatively)
 
