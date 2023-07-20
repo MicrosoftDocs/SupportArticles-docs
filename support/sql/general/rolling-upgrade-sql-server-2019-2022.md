@@ -1,21 +1,21 @@
 ---
-title: Rolling upgrade from SQL Server 2019 to SQL Server 2022
-description: Provides workarounds for some of the most common issues when performing an upgrade from SQL Server 2019 to SQL Server 2022.
+title: Issues when upgrading to SQL Server 2022
+description: Provides workarounds for some of the most common issues when performing an upgrade to SQL Server 2022.
 ms.date: 07/12/2023
 ms.custom: sap:General Troubleshooting Information
 ms.reviewer: joriel, jopilov, prmadhes
 ms.author: prmadhes
 author: prmadhes-msft
 ---
-# Rolling upgrade from SQL Server 2019 to SQL Server 2022
+# Issues when upgrading to SQL Server 2022
 
 _Applies to:_&nbsp; SQL Server 2022, SQL Server 2019, SQL Server 2017, SQL Server 2016
 
-This article provides steps to troubleshoot and resolve the following common issues when performing an upgrade from SQL Server 2019 to SQL Server 2022.
+This article provides steps to troubleshoot and resolve the following common issues when performing an upgrade to SQL Server 2022.
 
 ## Issue 1: An error related to access violation dumps
 
-An error related to access violation dumps occurs when you attempt to upgrade SQL Server from version 2019 to 2022 in an Always On environment. The error message and associated log entries indicate a fatal exception generated during the upgrade process.
+An error related to access violation dumps occurs when you perform an upgrade to SQL Server 2022 in an Always On environment. The error message and associated log entries indicate a fatal exception generated during the upgrade process.
 
 **Error message:**
 
@@ -46,7 +46,7 @@ To work around this issue, disable `LIGHTWEIGHT_QUERY_PROFILING`. The [lightweig
 
 ## Issue 2: An error related to an inactive instance for SQL Server 2022
 
-You're unable to upgrade SQL Server from version 2019 to 2022 due to an inactive instance for SQL Server 2022.
+You're unable to upgrade to SQL Server 2022 due to an inactive instance for SQL Server 2022.
 
 **Cause:**
 
@@ -58,7 +58,7 @@ To resolve this issue, follow the steps mentioned in [Remove a partial installat
 
 ## Issue 3: The failover cluster instance fails to come online
 
-After upgrading SQL Server from version 2019 to 2022 on a [failover cluster instance](/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server) (FCI), you may encounter a situation where the instance fails to come online. When checking the FCI role on the cluster manager, you notice that the instance is unable to start.
+After upgrading SQL Server from an earlier version to 2022 on a [failover cluster instance](/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server) (FCI), you may encounter a situation where the instance fails to come online. When checking the FCI role on the cluster manager, you notice that the instance is unable to start.
 
 **Possible cause:**
 
@@ -73,7 +73,7 @@ To resolve the issue and bring the SQL Server instance online successfully, you 
 
 ## Issue 4: An error related to replication
 
-An error related to replication occurs when you upgrade SQL Server from version 2019 to 2022 on machines that host the [distribution database](/sql/relational-databases/replication/distribution-database) in an availability group (AG).
+An error related to replication occurs when you upgrade to SQL Server 2022 on machines that host the [distribution database](/sql/relational-databases/replication/distribution-database) in an availability group (AG).
 
 > [!NOTE]
 > This issue can also occur when you upgrade SQL Server from version 2016 SP2 CU3, SQL Server 2017 CU6, or later versions to SQL Server 2019. The fix for this issue is available in [Cumulative Update 21 for SQL Server 2019](../releases/sqlserver-2019/cumulativeupdate21.md).
