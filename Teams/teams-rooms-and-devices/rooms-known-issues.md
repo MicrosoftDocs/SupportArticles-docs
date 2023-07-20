@@ -22,7 +22,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 06/07/2022
+ms.date: 07/20/2023
 ---
 # Known issues in Teams Rooms and devices
 
