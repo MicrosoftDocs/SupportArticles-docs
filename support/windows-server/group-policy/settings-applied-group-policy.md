@@ -52,4 +52,4 @@ Organizations that use software distribution and folder redirection Group Policy
 
 ## Data collection
 
-If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for Group Policy issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-group-policy.md).
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Group Policy issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-group-policy.md).
