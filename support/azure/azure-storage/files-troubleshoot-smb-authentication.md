@@ -225,7 +225,7 @@ You might also encounter this error if you previously enabled Azure AD Kerberos 
 > 
 > `Import-Module AzureAD -UseWindowsPowerShell`
 > 
-> The AzureAD module is scheduled to be deprecated and replaced by Microsoft Graph PowerShell. If you want to use the Microsoft Graph module instead, see [Upgrade from Azure AD PowerShell to Microsoft Graph PowerShell](/powershell/microsoftgraph/migration-steps) and the [Cmdlet map](/powershell/microsoftgraph/azuread-msoline-cmdlet-map).
+> The AzureAD module is scheduled to be deprecated and replaced by Microsoft Graph PowerShell. If you want to use the Microsoft.Graph module instead, see [Upgrade from Azure AD PowerShell to Microsoft Graph PowerShell](/powershell/microsoftgraph/migration-steps) and the [Cmdlet map](/powershell/microsoftgraph/azuread-msoline-cmdlet-map).
 
 ```powershell
 $storageAccount = "exampleStorageAccountName"
