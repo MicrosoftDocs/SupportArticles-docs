@@ -83,9 +83,9 @@
           href: manage-apps-and-solutions/you-cannot-delete-this-form.md
         - name: Solution cannot be deleted due to dependencies
           href: manage-apps-and-solutions/solution-cannot-be-deleted.md
-        - name: Newly added components don’t appear in the app
+        - name: Newly added components don't appear in the app
           href: manage-apps-and-solutions/newly-added-components-dont-appear.md
-        - name: Label text doesn’t display in additional languages
+        - name: Label text doesn't display in additional languages
           href: manage-apps-and-solutions/label-text-not-displayed.md
         - name: Duplicate security roles after solution import
           href: manage-apps-and-solutions/duplicate-security-roles.md 
