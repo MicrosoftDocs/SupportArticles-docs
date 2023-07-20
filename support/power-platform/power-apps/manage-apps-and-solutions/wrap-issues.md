@@ -86,18 +86,18 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
 | ------------- |-------------|
 |1000118    | Default subscription not found, or missing access permissions|
 
-- Make sure that your Azure key vault is in your tenant's **Default subscription**.
-- Run these commands in PowerShell as an admin:
+1. Make sure that your Azure key vault is in your tenant's **Default subscription**.
+2. Run these commands in PowerShell as an admin:
 
-  ```powershell
-  Connect-AzureAD -TenantId <your tenant ID>
-  ```
+   ```powershell
+   Connect-AzureAD -TenantId <your tenant ID>
+   ```
 
-  ```powershell
-  New-AzureADServicePrincipal -AppId 4e1f8dc5-5a42-45ce-a096-700fa485ba20 -DisplayName "Wrap KeyVault Access App"
-  ```
+   ```powershell
+   New-AzureADServicePrincipal -AppId 4e1f8dc5-5a42-45ce-a096-700fa485ba20 -DisplayName "Wrap KeyVault Access App"
+   ```
 
-- In the [Azure portal](https://portal.azure.com), go to your default subscription. On the **Access Control (IAM)** page, add a **Reader** role assignment to the **Service Principal** representing your app, for example, **Wrap KeyVault Access App**. Make sure that it's in the **Subscription's IAM** and **Keyvault's IAM**. Here are the steps:
+3. In the [Azure portal](https://portal.azure.com), go to your default subscription. On the **Access Control (IAM)** page, add a **Reader** role assignment to the **Service Principal** representing your app, for example, **Wrap KeyVault Access App**. Make sure that it's in the **Subscription's IAM** and **Keyvault's IAM**. Here are the steps:
 
    1. Go to the **Access control (IAM)** tab, and select the **Add role assignment** option under the **Add** menu button.
 
@@ -121,22 +121,22 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
 | ------------- |-------------|
 |1000119    | Keyvault does not exist, or Keyvault is missing access privileges|
 
-- Verify that your Azure key vault is in your tenant's **Default subscription**.
-- Make sure that the **Vault access policy** option is selected when you create your key vault.
+1. Verify that your Azure key vault is in your tenant's **Default subscription**.
+2. Make sure that the **Vault access policy** option is selected when you create your key vault.
 
    :::image type="content" source="media/wrap-issues/vault-acces-policy.png" alt-text="Select the Vault Access policy option under the Access configuration tab.":::
 
-- Run these commands in PowerShell as an admin:
+3. Run these commands in PowerShell as an admin:
 
-  ```powershell
-  Connect-AzureAD -TenantId <your tenant ID>
-  ```
+   ```powershell
+    Connect-AzureAD -TenantId <your tenant ID>
+   ```
 
-  ```powershell
-  New-AzureADServicePrincipal -AppId 4e1f8dc5-5a42-45ce-a096-700fa485ba20 -DisplayName "Wrap KeyVault Access App"
-  ```
+   ```powershell
+   New-AzureADServicePrincipal -AppId 4e1f8dc5-5a42-45ce-a096-700fa485ba20 -DisplayName "Wrap KeyVault Access App"
+   ```
 
-- In the [Azure portal](https://portal.azure.com), go to your default subscription. On the **Access Control (IAM)** page, add a **Reader** role assignment to the **Service Principal** representing your app, for example, **Wrap KeyVault Access App**. Make sure that it's in the **Subscription's IAM** and **Keyvault's IAM**. Here are the steps:
+4. In the [Azure portal](https://portal.azure.com), go to your default subscription. On the **Access Control (IAM)** page, add a **Reader** role assignment to the **Service Principal** representing your app, for example, **Wrap KeyVault Access App**. Make sure that it's in the **Subscription's IAM** and **Keyvault's IAM**. Here are the steps:
 
    1. Go to the **Access control (IAM)** tab, and select the **Add role assignment** option under the **Add** menu button.
 
@@ -154,7 +154,7 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
   
       :::image type="content" source="media/wrap-issues/assign-reader-role-to-wrap-keyvault-access-app.png" alt-text="Screenshot that shows how to assign a Reader role to Wrap KeyVault Access App." lightbox="media/wrap-issues/assign-reader-role-to-wrap-keyvault-access-app.png":::
 
-- Add access policies to your Azure key vault.
+5. Add access policies to your Azure key vault.
 
    :::image type="content" source="media/wrap-issues/create-vault-access-policy.png" alt-text="Screenshot that shows how to add access policies for your Azure key vault.":::
 
@@ -166,15 +166,15 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
 | ------------- |-------------|
 |1000120   | No organization ID tags found on key vault|
 
-- Go to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/environments), select **Environments** and then select the environment where your wrap project is.
+1. Go to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/environments), select **Environments** and then select the environment where your wrap project is.
 
    :::image type="content" source="media/wrap-issues/environment-tab.png" alt-text="Screenshot that shows the Environment tab in Power Platform admin center." lightbox="media/wrap-issues/environment-tab.png":::
 
-- Copy the **Organization ID**.
+2. Copy the **Organization ID**.
 
    :::image type="content" source="media/wrap-issues/organization-id.png" alt-text="Screenshot that shows the organization ID that you can find in your environment in Power Platform admin center.":::
 
-- In your key vault in the [Azure portal](https://portal.azure.com), go to **Tags**, create a new tag named **organization-id**, and add your organization ID to this tag.
+3. In your key vault in the [Azure portal](https://portal.azure.com), go to **Tags**, create a new tag named **organization-id**, and add your organization ID to this tag.
 
    :::image type="content" source="media/wrap-issues/add-tag.png" alt-text="Screenshot that shows how to add an organization ID to a tag in Azure portal." lightbox="media/wrap-issues/add-tag.png":::
 
@@ -184,19 +184,19 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
 | ------------- |-------------|
 |1000121    | Android keystore is not valid. Missing Tag and/or Certificate|
 
-- Import your **Android Certificate**.
+1. Import your **Android Certificate**.
 
    :::image type="content" source="media/wrap-issues/import-certificate.png" alt-text="Screenshot that shows how to import an Android certificate." lightbox="media/wrap-issues/import-certificate.png":::
 
    :::image type="content" source="media/wrap-issues/certificate-name.png" alt-text="Screenshot that shows how to create an Android certificate." lightbox="media/wrap-issues/certificate-name.png":::
 
-- Add a new **Tag** for your **Certificate**.
+2. Add a new **Tag** for your **Certificate**.
 
-  - The **Tag name** should be based on the **bundle id** that you used in your wrap project. For example, if the **bundle id** for your wrapped app is **com.testApp.wrap**, then the new **Tag name** should be **com.testApp.wrap.keystore**.
+   - The **Tag name** should be based on the **bundle id** that you used in your wrap project. For example, if the **bundle id** for your wrapped app is **com.testApp.wrap**, then the new **Tag name** should be **com.testApp.wrap.keystore**.
 
-  - The **Tag value** should correspond to the name you chose for your **Certificate** when uploading the certificate file in the previous step. For example, if your **Certificate** is named **AndroidWrapCertificate**, then the value of the **Tag value** should also be **AndroidWrapCertificate**.
+   - The **Tag value** should correspond to the name you chose for your **Certificate** when uploading the certificate file in the previous step. For example, if your **Certificate** is named **AndroidWrapCertificate**, then the value of the **Tag value** should also be **AndroidWrapCertificate**.
 
-   :::image type="content" source="media/wrap-issues/create-certificate-tag.png" alt-text="Screenshot that shows how to create a certificate tag." lightbox="media/wrap-issues/create-certificate-tag.png":::
+    :::image type="content" source="media/wrap-issues/create-certificate-tag.png" alt-text="Screenshot that shows how to create a certificate tag." lightbox="media/wrap-issues/create-certificate-tag.png":::
   
 #### Error code 1000122
 
@@ -204,19 +204,19 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
 | ------------- |:-------------|
 |1000122    |  iOS certificate is not valid|
 
-- Import your **iOS Certificate**.
+1. Import your **iOS Certificate**.
 
    :::image type="content" source="media/wrap-issues/import-certificate.png" alt-text="Screenshot that shows how to import an iOS certificate." lightbox="media/wrap-issues/import-certificate.png":::
 
    :::image type="content" source="media/wrap-issues/certificate-name-ios.png" alt-text="Screenshot that shows how to create an iOS certificate." lightbox="media/wrap-issues/certificate-name-ios.png":::
 
-- Add a new **Tag** for your **Certificate**.
+2. Add a new **Tag** for your **Certificate**.
 
-  - The **Tag name** should be based on the **bundle id** that you used in your wrap project. For example, if the **bundle id** for your wrapped app is **com.testApp.wrap**, then the new **Tag name** should be **com.testApp.wrap.cert**.
+   - The **Tag name** should be based on the **bundle id** that you used in your wrap project. For example, if the **bundle id** for your wrapped app is **com.testApp.wrap**, then the new **Tag name** should be **com.testApp.wrap.cert**.
 
-  - The **Tag value** should correspond to the name you chose for your **Certificate** when uploading the certificate file in the previous step. For example, if your **Certificate** is named **iOSCertificate1**, then the value of the **Tag value** should also be **iOSCertificate1**.
+   - The **Tag value** should correspond to the name you chose for your **Certificate** when uploading the certificate file in the previous step. For example, if your **Certificate** is named **iOSCertificate1**, then the value of the **Tag value** should also be **iOSCertificate1**.
 
-  :::image type="content" source="media/wrap-issues/certificate-tag-ios.png" alt-text="Screenshot that shows how to create a certificate tag for iOS." lightbox="media/wrap-issues/certificate-tag-ios.png":::
+   :::image type="content" source="media/wrap-issues/certificate-tag-ios.png" alt-text="Screenshot that shows how to create a certificate tag for iOS." lightbox="media/wrap-issues/certificate-tag-ios.png":::
 
 #### Error code 1000123
 
@@ -224,14 +224,14 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
 | ------------- |:-------------|
 |1000123    |   iOS profile is not valid|
 
-- Import your **Provisioning Profile** as a **Secret**.
-- Add a new **Tag** for your **Provisioning Profile**.
+1. Import your **Provisioning Profile** as a **Secret**.
+2. Add a new **Tag** for your **Provisioning Profile**.
 
-  - The **Tag name** should be based on the **bundle id** that you used in your wrap project. For example, if the **bundle id** for your wrapped app is **com.testApp.wrap**, then the new **Tag name** should be **com.testApp.wrap.profile**.
+   - The **Tag name** should be based on the **bundle id** that you used in your wrap project. For example, if the **bundle id** for your wrapped app is **com.testApp.wrap**, then the new **Tag name** should be **com.testApp.wrap.profile**.
 
-  - The **Tag value** should correspond to the name you chose for your **Secret** when uploading the povisioning profile in the previous step. For example, if your **Secret** is named **iOSProvisioningProfileSecret**, then the value of the **Tag value** should also be **iOSProvisioningProfileSecret**.
+   - The **Tag value** should correspond to the name you chose for your **Secret** when uploading the povisioning profile in the previous step. For example, if your **Secret** is named **iOSProvisioningProfileSecret**, then the value of the **Tag value** should also be **iOSProvisioningProfileSecret**.
 
-  :::image type="content" source="media/wrap-issues/provisioning-profile-secret-tag.png" alt-text="Screenshot that shows how to create a tag for iOS Provisioning Profile Secret." lightbox="media/wrap-issues/provisioning-profile-secret-tag.png":::
+   ::image type="content" source="media/wrap-issues/provisioning-profile-secret-tag.png" alt-text="Screenshot that shows how to create a tag for iOS Provisioning Profile Secret." lightbox="media/wrap-issues/provisioning-profile-secret-tag.png":::
 
 ## Other issues in wrap for Power Apps
 
