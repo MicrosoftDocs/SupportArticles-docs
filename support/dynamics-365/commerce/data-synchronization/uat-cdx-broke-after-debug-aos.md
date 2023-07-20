@@ -9,7 +9,7 @@ ms.date: 07/20/2023
 
 ## Symptoms
 
-When a DevTest machine is attached to a sandbox user acceptance testing (UAT) environment for debugging, the DevTest machine becomes part of the batch group, and it's picked up by the batch job to create Commerce Data Exchange (CDX) packages.
+When a DevTest machine is attached to a sandbox user acceptance testing (UAT) environment for debugging, the DevTest machine becomes part of the batch group, and it's picked up by the batch job to create [Commerce Data Exchange (CDX)](/dynamics365/commerce/dev-itpro/implementation-considerations-cdx) packages.
 
 The resulting download session package generation succeeds, and a download session record is created. However, the package is uploaded to the DevTest machine's Azure storage account (usually locally emulated) instead of the storage account of the sandbox UAT environment. The download session will then fail to download and apply to the channel database. The system will show the following error messages:  
 
