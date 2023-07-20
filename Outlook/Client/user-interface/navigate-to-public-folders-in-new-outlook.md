@@ -19,7 +19,7 @@ ms.date: 7/11/2023
 ---
 # Access public folders in Outlook for Windows
 
-In the redesigned user interface in Microsoft Outlook, you'll see that:
+In the redesigned user interface in Microsoft Outlook, you see that:
 
 - The horizontal navigation bar that was at the bottom of the **Folders** view is now a left-side vertical navigation bar.
 
@@ -39,7 +39,7 @@ If your Microsoft Outlook app was updated to the new Outlook for Windows, you ne
 
 1. Right-click the name of the account and select **Add public folder to Favorites**.
 
-   :::image type="content" source="media/navigate-to-public-folders-in-new-outlook/select-add-pf-to-favorites.png" alt-text="Screenshot of the the add public folders to favorites menu option after you right-click the account name." border="true":::
+   :::image type="content" source="media/navigate-to-public-folders-in-new-outlook/select-add-pf-to-favorites.png" alt-text="Screenshot of the Add public folders to Favorites menu option after you right-click the account name." border="true":::
   
    **Notes**:
    - If you don't see this option, make sure that public folders are deployed in your tenant.
