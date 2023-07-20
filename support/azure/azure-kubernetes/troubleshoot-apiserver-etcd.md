@@ -3,7 +3,7 @@ title: Troubleshoot API server and etcd issues in AKS
 description: Provides a troubleshooting guide for API server and etcd issues in Azure Kubernetes Services.
 author: merooney
 ms.author: segule
-ms.date: 07/19/2023
+ms.date: 07/20/2023
 ms.service: azure-kubernetes-service
 ms.reviewer: segule, merooney, v-weizhu
 ---
@@ -24,8 +24,8 @@ The following table outlines the common symptoms of API server failures:
 
 | Symptom | Description |
 |---|---|
-| Time-outs from the API server | Frequent time-outs that are beyond the guarantees in [the AKS API server SLA](/azure/aks/free-standard-pricing-tiers#uptime-sla-terms-and-conditions). `e.g. kubectl commands timeout` |
-| High latencies | High latencies that make the Kubernetes SLOs fail. `e.g. kubectl command takes more than 30 seconds to list pods`|
+| Timeouts from the API server | Frequent timeouts that are beyond the guarantees in [the AKS API server SLA](/azure/aks/free-standard-pricing-tiers#uptime-sla-terms-and-conditions). For example, `kubectl commands timeout` |
+| High latencies | High latencies that make the Kubernetes SLOs fail. For example, `kubectl command takes more than 30 seconds to list pods`|
 
 ## Causes
 
@@ -114,7 +114,7 @@ The results from this query can be useful for identifying types of API calls tha
 ## Verify that clients don't leak resources in etcd
 
 > [!TIP]
-> Whenever an object in etcd is mutated, a new complete version of that object is created. Should the object being mutated be large, this can end up consuming a lot of space. To stop etcd fom reaching capacity and causing cluster downtime, you can cap the maximum number of resources created and/or slow the number of revisions generated for resource instances.
+> When an object in etcd is mutated, a new complete version of that object is created. If the object being mutated is large, this can consume a lot of space. To prevent etcd from reaching capacity and causing cluster downtime, you can limit the maximum number of resources created and/or slow the number of revisions generated for resource instances.
 
 A common issue is continuously creating objects without deleting unused ones in the etcd database. This can cause performance issues when dealing with too many objects of any type (> 10 kilobytes). A rapid increase of changes on such objects could also cause the etcd database size (4 gigabytes by default) to be exceeded.
 
@@ -122,7 +122,7 @@ To check the etcd database usage, navigate to **Diagnose and Solve problems** in
 
 :::image type="content" source="media/troubleshoot-apiserver-etcd/etcd-detector.png" alt-text="Screenshot that shows the Etcd Availability Diagnosis for AKS.":::
 
-Alternatively, if you just want a quick way to see current size of your etcd db in bytes:
+If you just want a quick way to view the current size of your etcd database in bytes, use the following command:
 
 ```bash
 kubectl get --raw /metrics | grep "etcd_db_total_size_in_bytes"
@@ -134,9 +134,9 @@ If you have identified objects that are no longer in use but are taking up resou
 kubectl delete jobs --field-selector status.successful=1
 ```
 
-Alternatively, for objects that support [automatic clean-up](https://kubernetes.io/docs/concepts/architecture/garbage-collection/), you can set time to live (TTL) values to limit the lifetime of these objects. You can also label your objects so that you can bulk delete all objects of a specific type using label selectors. If you establish [owner references](https://kubernetes.io/docs/concepts/overview/working-with-objects/owners-dependents/) among objects, then when the parent object is deleted, any dependent objects will be automatically deleted.
+For objects that support [automatic clean-up](https://kubernetes.io/docs/concepts/architecture/garbage-collection/), you can set Time to Live (TTL) values to limit the lifetime of these objects. Additionally, you can label your objects so that you can bulk delete all objects of a specific type using label selectors. If you establish [owner references](https://kubernetes.io/docs/concepts/overview/working-with-objects/owners-dependents/) among objects, any dependent objects will be automatically deleted when the parent object is deleted.
 
-If you'd like to limit the number of objects that can created, you can [define object quotas](https://kubernetes.io/docs/concepts/policy/resource-quotas/#object-count-quota)
+To limit the number of objects that can be created, you can [define object quotas](https://kubernetes.io/docs/concepts/policy/resource-quotas/#object-count-quota).
 
 ## How to throttle a client overwhelming the control plane
 
