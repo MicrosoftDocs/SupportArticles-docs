@@ -231,7 +231,7 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
 
    - The **Tag value** should correspond to the name you chose for your **Secret** when uploading the povisioning profile in the previous step. For example, if your **Secret** is named **iOSProvisioningProfileSecret**, then the value of the **Tag value** should also be **iOSProvisioningProfileSecret**.
 
-   ::image type="content" source="media/wrap-issues/provisioning-profile-secret-tag.png" alt-text="Screenshot that shows how to create a tag for iOS Provisioning Profile Secret." lightbox="media/wrap-issues/provisioning-profile-secret-tag.png":::
+   :::image type="content" source="media/wrap-issues/provisioning-profile-secret-tag.png" alt-text="Screenshot that shows how to create a tag for iOS Provisioning Profile Secret." lightbox="media/wrap-issues/provisioning-profile-secret-tag.png":::
 
 ## Other issues in wrap for Power Apps
 
