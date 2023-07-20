@@ -3,7 +3,7 @@ title: Troubleshoot Azure Files identity-based authentication and authorization 
 description: Troubleshoot problems using identity-based authentication to connect to SMB Azure file shares and see possible resolutions.
 author: khdownie
 ms.service: storage
-ms.date: 06/26/2023
+ms.date: 07/20/2023
 ms.author: kendownie
 ms.subservice: files 
 ---
@@ -225,7 +225,7 @@ You might also encounter this error if you previously enabled Azure AD Kerberos 
 > 
 > `Import-Module AzureAD -UseWindowsPowerShell`
 > 
-> The AzureAD module is scheduled for deprecation and is being replaced by Microsoft Graph PowerShell. See [Upgrade from Azure AD PowerShell to Microsoft Graph PowerShell](/powershell/microsoftgraph/migration-steps) and the [Cmdlet map](/powershell/microsoftgraph/azuread-msoline-cmdlet-map) if you want to use the Microsoft.Graph module instead.
+> The AzureAD module is scheduled for deprecation and is being replaced by Microsoft Graph PowerShell. If you want to use the Microsoft.Graph module instead, see [Upgrade from Azure AD PowerShell to Microsoft Graph PowerShell](/powershell/microsoftgraph/migration-steps) and the [Cmdlet map](/powershell/microsoftgraph/azuread-msoline-cmdlet-map).
 
 ```powershell
 $storageAccount = "exampleStorageAccountName"
