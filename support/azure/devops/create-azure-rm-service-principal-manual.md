@@ -7,6 +7,7 @@ ms.author: v-jayaramanp
 ms.reviewer: cathmill, kirthishkt
 ms.custom: sap:Pipelines
 ms.service: azure-devops
+ms.subservice: ts-pipelines
 ---
 
 # Troubleshoot service connections for Azure RM service principal (manual)

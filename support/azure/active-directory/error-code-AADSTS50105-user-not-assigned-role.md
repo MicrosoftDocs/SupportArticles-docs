@@ -1,7 +1,7 @@
 ---
 title: Error AADSTS50105 - The signed in user is not assigned to a role for the application.
 description: Describes a problem in which you receive the AADSTS50105 error when you sign in to a SAML-based configured app with Azure AD SSO.
-ms.date: 06/15/2022
+ms.date: 07/19/2023
 ms.reviewer: bernawy
 ms.service: active-directory
 ms.subservice: app-mgmt

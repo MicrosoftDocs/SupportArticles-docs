@@ -7,6 +7,7 @@ ms.reviewer: dmittal, cathmill
 ms.author: v-sidong
 author: sevend2
 ms.service: azure-devops
+ms.subservice: ts-pipelines
 ---
 # Azure Web App service deployments related issues
 
