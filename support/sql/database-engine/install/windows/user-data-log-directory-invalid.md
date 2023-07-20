@@ -2,9 +2,8 @@
 title: Invalid directory error when installing SQL CU or SP
 description: This article provides resolutions for the problem that occurs when you install a Cumulative Update or a Service Pack for a SQL Server instance.
 ms.date: 07/20/2023
-ms.reviewer: pijocoder
 ms.custom: sap:Installation, Patching and Upgrade
-ms.reviewer: lramirez
+ms.reviewer: lramirez, pijocoder
 ---
 
 # Error that Data or Log directory in the registry is not valid when installing SQL Server Cumulative Update or a Service Pack
