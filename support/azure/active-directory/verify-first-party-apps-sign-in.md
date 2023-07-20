@@ -1,7 +1,7 @@
 ---
 title: Verify first-party Microsoft applications in sign-in reports
 description: Describes how to verify first-party Microsoft applications in sign-in reports.
-ms.date: 05/08/2023
+ms.date: 07/19/2023
 ms.reviewer: bernaw
 ms.service: active-directory
 ms.subservice: compliance
@@ -80,6 +80,8 @@ The following table lists some, but not all, first-party Microsoft applications.
 |CRM Power BI Integration|e64aa8bc-8eb4-40e2-898b-cf261a25954f|
 |Dataverse|00000007-0000-0000-c000-000000000000|
 |Enterprise Roaming and Backup|60c8bde5-3167-4f92-8fdb-059f6176dc0f|
+|Focused Inbox|b669c6ea-1adf-453f-b8bc-6d526592b419|
+|GroupsRemoteApiRestClient|c35cb2ba-f88b-4d15-aa9d-37bd443522e1|
 |IAM Supportability|a57aca87-cbc0-4f3c-8b9e-dc095fdc8978|
 |IrisSelectionFrontDoor|16aeb910-ce68-41d1-9ac3-9e1673ac9575|
 |MCAPI Authorization Prod|d73f4b35-55c9-48c7-8b10-651f6f2acb2e|
@@ -103,7 +105,6 @@ The following table lists some, but not all, first-party Microsoft applications.
 |Microsoft Graph|00000003-0000-0000-c000-000000000000|
 |Microsoft Intune Web Company Portal|74bcdadc-2fdc-4bb3-8459-76d06952a0e9|
 |Microsoft Intune Windows Agent|fc0f3af4-6835-4174-b806-f7db311fd2f3|
-|Microsoft Learn|18fbca16-2224-45f6-85b0-f7bf2b39b3f3|
 |Microsoft Office|d3590ed6-52b3-4102-aeff-aad2292ab01c|
 |Microsoft Office 365 Portal|00000006-0000-0ff1-ce00-000000000000|
 |Microsoft Office Web Apps Service|67e3df25-268a-4324-a550-0de1c7f97287|
@@ -142,14 +143,17 @@ The following table lists some, but not all, first-party Microsoft applications.
 |Outlook Mobile|27922004-5251-4030-b22d-91ecd9a37ea4|
 |Partner Customer Delegated Admin Offline Processor|a3475900-ccec-4a69-98f5-a65cd5dc5306|
 |Password Breach Authenticator|bdd48c81-3a58-4ea9-849c-ebea7f6b6360|
+|PeoplePredictions|35d54a08-36c9-4847-9018-93934c62740c|
 |Power BI Service|00000009-0000-0000-c000-000000000000|
 |SharedWithMe|ffcb16e8-f789-467c-8ce9-f826a080d987|
 |SharePoint Online Web Client Extensibility|08e18876-6177-487e-b8b5-cf950c1e598c|
 |Signup|b4bddae8-ab25-483e-8670-df09b9f1d0ea|
 |Skype for Business Online|00000004-0000-0ff1-ce00-000000000000|
+|Sticky Notes API|91ca2ca5-3b3e-41dd-ab65-809fa3dffffa|
+|Substrate Context Service|13937bba-652e-4c46-b222-3003f4d1ff97|
 |Sway|905fcf26-4eb7-48a0-9ff0-8dcc7194b5ba|
 |Universal Store Native Client|268761a2-03f3-40df-8a8b-c3db24145b6b|
-|Vortex [wsfed enabled]|5572c4c0-d078-44ce-b81c-6cbf8d3ed39e|
+|Viva Engage (formerly Yammer)|00000005-0000-0ff1-ce00-000000000000|
 |Windows Azure Active Directory|00000002-0000-0000-c000-000000000000|
 |Windows Azure Security Resource Provider|8edd93e1-2103-40b4-bd70-6e34e586362d|
 |Windows Azure Service Management API|797f4846-ba00-4fd7-ba43-dac1f8f63013|
@@ -157,7 +161,6 @@ The following table lists some, but not all, first-party Microsoft applications.
 |Windows Search|26a7ee05-5602-4d76-a7ba-eae8b7b67941|
 |Windows Spotlight|1b3c667f-cde3-4090-b60b-3d2abd0117f0|
 |Windows Store for Business|45a330b1-b1ec-4cc1-9161-9f03992aa49f|
-|Yammer|00000005-0000-0ff1-ce00-000000000000|
 |Yammer Web|c1c74fed-04c9-4704-80dc-9f79a2e515cb|
 |Yammer Web Embed|e1ef36fd-b883-4dbf-97f0-9ece4b576fc6|
 
@@ -169,6 +172,8 @@ The following table lists some, but not all, Microsoft tenant-owned applications
 |--|--|
 |Graph Explorer|de8bc8b5-d9f9-48b1-a8ad-b748da725064|
 |Microsoft Graph Command Line Tools|14d82eec-204b-4c2f-b7e8-296a70dab67e|
+|OutlookUserSettingsConsumer|7ae974c5-1af7-4923-af3a-fb1fd14dcb7e|
+|Vortex [wsfed enabled]|5572c4c0-d078-44ce-b81c-6cbf8d3ed39e|
 
 ## More information
 
