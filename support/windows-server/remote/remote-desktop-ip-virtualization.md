@@ -23,9 +23,9 @@ This article discusses about Remote Desktop IP Virtualization in Windows Server 
 _Applies to:_ &nbsp; Windows Server 2019  
 _Original KB number:_ &nbsp; 4501072
 
-## How to use IP virtualization on Windows Server 2019
+## How to use IP virtualization in Windows Server 2019
 
-If you want to use IP virtualization on Windows Server 2019, please follow these steps:
+If you want to use IP virtualization in Windows Server 2019, follow these steps:
 
 1. Start an elevated PowerShell window, and run the following command to rename the registry key:
 
