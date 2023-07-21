@@ -69,6 +69,7 @@ The following table lists some, but not all, first-party Microsoft applications.
 |--|--|
 |ACOM Azure Website|23523755-3a2b-41ca-9315-f81f3f566a95|
 |AEM-DualAuth|69893ee3-dd10-4b1c-832d-4870354be3d8|
+|App Service|7ab7862c-4c57-491e-8a45-d52a7e023983|
 |ASM Campaign Servicing|0cb7b9ec-5336-483b-bc31-b15b5788de71|
 |Azure Advanced Threat Protection|7b7531ad-5926-4f2d-8a1d-38495ad33e17|
 |Azure Data Lake|e9f49c6b-5ce5-44c8-925d-015017e9f7ad|
@@ -76,12 +77,16 @@ The following table lists some, but not all, first-party Microsoft applications.
 |Azure Portal|c44b4083-3bb0-49c1-b47d-974e53cbdf3c|
 |AzureSupportCenter|37182072-3c9c-4f6a-a4b3-b3f91cacffce|
 |Bing|9ea1ad79-fdb6-4f9a-8bc3-2b70f96e34c7|
+|ContactsInferencingEmailProcessor|20a11fe0-faa8-4df5-baf2-f965f8f9972e|
 |CPIM Service|bb2a2e3a-c5e7-4f0a-88e0-8e01fd3fc1f4|
 |CRM Power BI Integration|e64aa8bc-8eb4-40e2-898b-cf261a25954f|
 |Dataverse|00000007-0000-0000-c000-000000000000|
 |Enterprise Roaming and Backup|60c8bde5-3167-4f92-8fdb-059f6176dc0f|
+|Exchange Admin Center|497effe9-df71-4043-a8bb-14cf78c4b63b|
+|FindTime|f5eaa862-7f08-448c-9c4e-f4047d4d4521|
 |Focused Inbox|b669c6ea-1adf-453f-b8bc-6d526592b419|
 |GroupsRemoteApiRestClient|c35cb2ba-f88b-4d15-aa9d-37bd443522e1|
+|HxService|d9b8ec3a-1e4e-4e08-b3c2-5baf00c0fcb0|
 |IAM Supportability|a57aca87-cbc0-4f3c-8b9e-dc095fdc8978|
 |IrisSelectionFrontDoor|16aeb910-ce68-41d1-9ac3-9e1673ac9575|
 |MCAPI Authorization Prod|d73f4b35-55c9-48c7-8b10-651f6f2acb2e|
@@ -100,7 +105,10 @@ The following table lists some, but not all, first-party Microsoft applications.
 |Microsoft Docs|18fbca16-2224-45f6-85b0-f7bf2b39b3f3|
 |Microsoft Dynamics ERP|00000015-0000-0000-c000-000000000000|
 |Microsoft Edge Insider Addons Prod|6253bca8-faf2-4587-8f2f-b056d80998a7|
+|Microsoft Exchange ForwardSync|99b904fd-a1fe-455c-b86c-2f9fb1da7687|
 |Microsoft Exchange Online Protection|00000007-0000-0ff1-ce00-000000000000|
+|Microsoft Exchange ProtectedServiceHost|51be292c-a17e-4f17-9a7e-4b661fb16dd2|
+|Microsoft Exchange REST API Based Powershell|fb78d390-0c51-40cd-8e17-fdbfab77341b|
 |Microsoft Forms|c9a559d2-7aab-4f13-a6ed-e7e9c52aec87|
 |Microsoft Graph|00000003-0000-0000-c000-000000000000|
 |Microsoft Intune Web Company Portal|74bcdadc-2fdc-4bb3-8459-76d06952a0e9|
@@ -119,6 +127,7 @@ The following table lists some, but not all, first-party Microsoft applications.
 |Microsoft Teams Services|cc15fd57-2c6c-4117-a88c-83b1d56b4bbe|
 |Microsoft Teams Web Client|5e3ce6c0-2b1f-4285-8d4b-75ee78787346|
 |Microsoft Whiteboard Services|95de633a-083e-42f5-b444-a4295d8e9314|
+|O365 SkypeSpaces Ingestion Service|dfe74da8-9279-44ec-8fb2-2aed9e1c73d0|
 |O365 Suite UX|4345a7b9-9a63-4910-a426-35363201d503|
 |Office 365 Exchange Online|00000002-0000-0ff1-ce00-000000000000|
 |Office 365 Management|00b41c95-dab0-4487-9791-b9d2c32c80f2|
@@ -145,15 +154,21 @@ The following table lists some, but not all, first-party Microsoft applications.
 |Password Breach Authenticator|bdd48c81-3a58-4ea9-849c-ebea7f6b6360|
 |PeoplePredictions|35d54a08-36c9-4847-9018-93934c62740c|
 |Power BI Service|00000009-0000-0000-c000-000000000000|
+|Scheduling|ae8e128e-080f-4086-b0e3-4c19301ada69|
 |SharedWithMe|ffcb16e8-f789-467c-8ce9-f826a080d987|
 |SharePoint Online Web Client Extensibility|08e18876-6177-487e-b8b5-cf950c1e598c|
 |Signup|b4bddae8-ab25-483e-8670-df09b9f1d0ea|
 |Skype for Business Online|00000004-0000-0ff1-ce00-000000000000|
+|SpoolsProvisioning|61109738-7d2b-4a0b-9fe3-660b1ff83505|
 |Sticky Notes API|91ca2ca5-3b3e-41dd-ab65-809fa3dffffa|
 |Substrate Context Service|13937bba-652e-4c46-b222-3003f4d1ff97|
+|SubstrateDirectoryEventProcessor|26abc9a8-24f0-4b11-8234-e86ede698878|
+|Substrate Search Settings Management Service|a970bac6-63fe-4ec5-8884-8536862c42d4|
 |Sway|905fcf26-4eb7-48a0-9ff0-8dcc7194b5ba|
+|Transcript Ingestion|97cb1f73-50df-47d1-8fb0-0271f2728514|
 |Universal Store Native Client|268761a2-03f3-40df-8a8b-c3db24145b6b|
 |Viva Engage (formerly Yammer)|00000005-0000-0ff1-ce00-000000000000|
+|WeveEngine|3c896ded-22c5-450f-91f6-3d1ef0848f6e|
 |Windows Azure Active Directory|00000002-0000-0000-c000-000000000000|
 |Windows Azure Security Resource Provider|8edd93e1-2103-40b4-bd70-6e34e586362d|
 |Windows Azure Service Management API|797f4846-ba00-4fd7-ba43-dac1f8f63013|
