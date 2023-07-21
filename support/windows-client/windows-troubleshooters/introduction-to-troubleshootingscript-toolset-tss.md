@@ -79,8 +79,8 @@ Start support tools or commands (for example, ProcMon, ProcDump, netsh, Performa
 
 |PowerShell cmdlet|Description|
 |---------|---------|
-|-Fiddler|Collect Fiddler trace. It requires Fiddler to be installed.<br><br>Enable the traffic decryption option by selecting **Tools** > **Options** and selecting **Decrypt HTTPS Traffic** on the **HTTPS** tab.|
-|-GPresult \<Start\|Stop\|Both\>|Collect SysInternals *Handle.exe* output on phase `start`, `stop` or `both`.|
+|`-Fiddler`|Collect Fiddler trace. It requires Fiddler to be installed.<br><br>Enable the traffic decryption option by selecting **Tools** > **Options** and selecting **Decrypt HTTPS Traffic** on the **HTTPS** tab.|
+|`-GPresult <Start\|Stop\|Both>`|Collect SysInternals *Handle.exe* output on phase `start`, `stop` or `both`.|
 |-Handle \<Start\|Stop\|Both\>|Collect SysInternals *Handle.exe* output on phase `start`, `stop` or `both`.|
 |-LiveKD \<Start\|Stop\|Both\>|Start SysInternals LiveKD \-ml (live kernel dump).<br>\<Start\>: the dump is taken on start of repro.<br>\<Stop\>: the dump is taken on stop.<br>\<Both\>: the dump is taken on both start and stop.|
 |-Netsh<br>1. -NetshOptions '\<Option string\>'<br>2. -NetshMaxSizeMB \<Int\><br>3. -noPacket|Start network packet capturing.<br><br>1. Specify additional options for `Netsh`. For example, 'capturetype=both captureMultilayer=yes provider=Microsoft-Windows-PrimaryNetworkIcon provider={\<GUID\>}'.<br>2. The max log size for `Netsh` in megabyte (MB) (for example, -NetshMaxSizeMB 4096). The default value is 2048.<br>3. Prevent packets from being captured with `Netsh` (only ETW traces in the `ScenarioName` will be captured).|
