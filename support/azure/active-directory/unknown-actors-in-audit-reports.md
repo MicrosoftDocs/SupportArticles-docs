@@ -11,7 +11,7 @@ ms.subservice: compliance
 
 The following are common examples of Microsoft first party service principal actors that may be found in Azure Active Directory audit logs including a description of actions these actors may take on Azure Active Directory objects in your tenant. 
 
-For more commonly used first-party Microsoft applications, see [Application IDs of commonly used Microsoft applications](verify-first-party-apps-sign-in#application-ids-of-commonly-used-microsoft-applications.md).
+For more commonly used first-party Microsoft applications, see [Application IDs of commonly used Microsoft applications](verify-first-party-apps-sign-in.md#application-ids-of-commonly-used-microsoft-applications).
 
 ## Unknown actors
 
