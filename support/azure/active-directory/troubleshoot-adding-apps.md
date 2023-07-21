@@ -2,10 +2,10 @@
 title: Troubleshoot common problems adding or removing an application to Azure Active Directory
 description: Troubleshoot the common problems people face when adding or removing an app in Azure Active Directory.
 ms.date: 6/25/2023
-author: DennisLee-DennisLee
-ms.author: v-dele
+author: bernawy
+ms.author: bernaw
 editor: v-jsitser
-ms.reviewer: jarrettr
+ms.reviewer: v-leedennis, jarrettr
 ms.service: active-directory
 ms.subservice: app-mgmt
 content_well_notification: 

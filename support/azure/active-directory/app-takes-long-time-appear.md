@@ -2,10 +2,10 @@
 title: Application takes a long time to appear after clicking the "add" button
 description: Understand why an application takes a long time to appear after clicking the "add" button.
 ms.date: 5/8/2023
-author: DennisLee-DennisLee
-ms.author: v-dele
+author: bernawy
+ms.author: bernaw
 editor: v-jsitser
-ms.reviewer: jarrettr
+ms.reviewer: v-leedennis, jarrettr
 ms.service: active-directory
 ms.subservice: app-mgmt
 content_well_notification: 
