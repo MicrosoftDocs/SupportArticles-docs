@@ -27,7 +27,7 @@ _Original KB number:_ &nbsp; 4501072
 
 If you want to use IP virtualization in Windows Server 2019, follow these steps:
 
-1. Start an elevated PowerShell window, and run the following command to rename the registry key:
+1. Start an elevated PowerShell window, and run the following cmdlet to rename the registry key:
 
    ```powershell
    Rename-Item HKLM:\SYSTEM\CurrentControlSet\Services\WinSock2\Parameters\AppId_Catalog\2C69D9F1 Backup_2C69D9F1
