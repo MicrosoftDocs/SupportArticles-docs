@@ -8,11 +8,10 @@ editor: v-jsitser
 ms.reviewer: jarrettr
 ms.service: active-directory
 ms.subservice: app-mgmt
-ms.custom: ai-gen-docs
+content_well_notification: 
+  - AI-contribution
 ---
 # How to send Notification Details to Microsoft support
-
-[!INCLUDE [AI Generated Attribution](../../includes/ai-generated-attribution.md)]
 
 ## How to see the details of a portal notification
 

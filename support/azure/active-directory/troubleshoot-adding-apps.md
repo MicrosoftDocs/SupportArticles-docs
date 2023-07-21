@@ -8,11 +8,10 @@ editor: v-jsitser
 ms.reviewer: jarrettr
 ms.service: active-directory
 ms.subservice: app-mgmt
-ms.custom: ai-gen-docs
+content_well_notification: 
+  - AI-contribution
 ---
 # Troubleshoot common problems adding or removing an application to Azure Active Directory
-
-[!INCLUDE [AI Generated Attribution](../../includes/ai-generated-attribution.md)]
 
 This series of articles provide guidance on how to troubleshoot issues that may arise when adding or removing an application in Azure Active Directory.
 

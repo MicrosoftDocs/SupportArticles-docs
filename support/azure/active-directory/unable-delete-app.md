@@ -8,11 +8,10 @@ editor: v-jsitser
 ms.reviewer: jarrettr
 ms.service: active-directory
 ms.subservice: app-mgmt
-ms.custom: ai-gen-docs
+content_well_notification: 
+  - AI-contribution
 ---
 # Unable to delete an application due to disabled Delete button
-
-[!INCLUDE [AI Generated Attribution](../../includes/ai-generated-attribution.md)]
 
 When deleting an app in Azure Active Directory, the Delete button may be disabled in certain scenarios. These scenarios include:
 
