@@ -25,19 +25,18 @@ You receive one of the following errors in Power Automate for desktop console:
 
 ## Cause
 
-The machine that runs Power Automate for desktop is behind a proxy server. Either Power Automate for desktop can't authenticate with the proxy server, or the proxy configuration prevents access to one or more cloud services.
+Power Automate for desktop can't authenticate with the proxy server that is used by the machine.
 
 ## Resolution
 
 > [!NOTE]
 > Administrator rights are required for the following configurations.
 
-To solve this issue, you need to configure the proxy address and port that will be used to interact with the proxy server. For more information, see [Configure Power Automate for desktop to interact with a corporate proxy server](/power-automate/desktop-flows/governance#configure-power-automate-for-desktop-to-interact-with-a-corporate-proxy-server).
+To solve this issue, configure the proxy address and port that will be used by Power Automate for desktop to interact with the proxy server. For more information, see [Configure Power Automate for desktop to interact with a corporate proxy server](/power-automate/desktop-flows/governance#configure-power-automate-for-desktop-to-interact-with-a-corporate-proxy-server).
 
-If the error message is related to authentication, follow one of these options:
-
-- Option 1 - [Configure Power Automate for desktop to interact with a corporate proxy server using Windows Credentials](/power-automate/desktop-flows/governance#configure-power-automate-for-desktop-to-authenticate-to-a-corporate-proxy-server-using-windows-credentials)
-- Option 2 - [Configure Power Automate for desktop to authenticate to a corporate proxy server using the current user's credentials](/power-automate/desktop-flows/governance#configure-power-automate-for-desktop-to-authenticate-to-a-corporate-proxy-server-using-the-current-users-credentials)
+Then, follow one of the below options:
+- Option 1 - [Configure Power Automate for desktop to authenticate to a corporate proxy server using the current user's credentials](/power-automate/desktop-flows/governance#configure-power-automate-for-desktop-to-authenticate-to-a-corporate-proxy-server-using-the-current-users-credentials)
+- Option 2 - [Configure Power Automate for desktop to interact with a corporate proxy server using Windows Credentials](/power-automate/desktop-flows/governance#configure-power-automate-for-desktop-to-authenticate-to-a-corporate-proxy-server-using-windows-credentials)
 
 Alternatively, you can [configure Power Automate for desktop to bypass a corporate proxy server](/power-automate/desktop-flows/governance#configure-power-automate-for-desktop-to-bypass-a-corporate-proxy-server).
 
@@ -58,8 +57,9 @@ If modifying the registry entries as described above doesn't solve the issue, ta
    - PAD.Designer.exe.config
    - PAD.Console.Host.exe.config
    - PAD.Robot.exe.config
+   - UIFlowService.exe.config
 
-3. For all files, edit each file with administrator rights, and add the following child xml node at the end of the root xml node (`<configuration`).
+3. For all files, edit each file with administrator rights, and add the following child xml node at the end of the root xml node (`<configuration>`).
 
     ```xml
     <system.net> 
@@ -91,3 +91,7 @@ If modifying the registry entries as described above doesn't solve the issue, ta
 
 4. Save the changes.
 5. Restart Power Automate for desktop.
+6. Restart thePower Automate service:
+     - Open services.msc
+     - Look for "Power Automate service"
+     - Right-click and restart
