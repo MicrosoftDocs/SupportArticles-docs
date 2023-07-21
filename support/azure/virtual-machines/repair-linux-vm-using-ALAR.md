@@ -1,6 +1,6 @@
 ---
 title: Repair a Linux VM automatically with the help of ALAR
-description: This article describes how to autorepair a nonbootable VM with the  Azure Linux Auto Repair scripts (ALAR).
+description: This article describes how to automatically repair a non bootable VM with the Azure Linux Auto Repair (ALAR) scripts.
 services: virtual-machines-linux
 documentationcenter: ''
 author: malachma
@@ -13,7 +13,7 @@ ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.devlang: azurecli
-ms.date: 07/19/2023
+ms.date: 07/21/2023
 ms.author: malachma
 ---
 
@@ -37,7 +37,7 @@ ALAR covers the following repair scenarios:
 
 ### fstab
 
-This action strips off any lines in the */etc/fstab* file that aren't needed to boot a system. First a copy of the original file is made for reference. When the OS starts, the administrator can edit the fstab to correct any errors that didn't allow a reboot of the system before.
+This action strips off any lines in the */etc/fstab* file that aren't needed to boot a system. First, a copy of the original file is made for reference. When the OS starts, the administrator can edit the fstab to correct any errors that didn't allow a reboot of the system before.
 
 For more information about issues with a malformed */etc/fstab* file, see [Troubleshoot Linux VM starting issues because fstab errors](./linux-virtual-machine-cannot-start-fstab-errors.md).
 
@@ -79,11 +79,11 @@ This action can be used to reinstall the required software to boot from a GEN2 V
 
 ### auditd
 
-If your VM shuts down immediately upon startup due to the audit daemon configuration, use this action. This action modifies the audit daemon configuration (in the */etc/audit/auditd.conf* file) by changing the `HALT` value configured for any `action` parameters to `SYSLOG`, which do not force the system to shut down. In a Logical Volume Manager (LVM) environment, if the logical volume that contains the audit logs is full and there's available space in the volume group, the logical volume will also be extended by 10% of the current size. However, if you're not using an LVM environment or there's no available space, only the configuration file is altered.
+If your VM shuts down immediately upon startup due to the audit daemon configuration, use this action. This action modifies the audit daemon configuration (in the */etc/audit/auditd.conf* file) by changing the `HALT` value configured for any `action` parameters to `SYSLOG`, which doesn't force the system to shut down. In a Logical Volume Manager (LVM) environment, if the logical volume that contains the audit logs is full and there's available space in the volume group, the logical volume will also be extended by 10% of the current size. However, if you're not using an LVM environment or there's no available space, only the configuration file is altered.
 
 ## How to use ALAR
 
-The ALAR scripts use the repair extension `run` command and its `--run-id` option. The value of the `--run-id` option for the automated recovery is: `linux-alar2`. To fix a Linux VM by using an ALAR script, follow these steps:
+The ALAR scripts use the repair extension `run` command and its `--run-id` option. The value of the `--run-id` option for the automated recovery is `linux-alar2`. To fix a Linux VM by using an ALAR script, follow these steps:
 
 1. Create a rescue VM:
 
@@ -106,15 +106,15 @@ The ALAR scripts use the repair extension `run` command and its `--run-id` optio
 
 Here are explanations for the parameters in the commands above:
 
-- RG-NAME: The name of the resource group containing the broken VM.
-- VM-NAME: The name of the broken VM.
-- RESCUE-UID: The user created on the repair VM for login. It's the equivalent to the user created on a new VM in the Azure portal.
-- RESCUE-PASS: The password for RESCUE-UID, in single quotes. For example: `'password!234'`.
-- DISK-COPY: The name for the copy of the OS disk which will be created from the broken VM.
-- ACTION: A scripted task to run, such as `initrd` or `fstab`.
+- `RG-NAME`: The name of the resource group containing the broken VM.
+- `VM-NAME`: The name of the broken VM.
+- `RESCUE-UID`: The user created on the repair VM for login. It's the equivalent of the user created on a new VM in the Azure portal.
+- `RESCUE-PASS`: The password for `RESCUE-UID`, enclosed in single quotes. For example: `'password!234'`.
+- `DISK-COPY`: The name of the OS disk copy that will be created from the broken VM.
+- `ACTION`: A scripted task to run, such as `initrd` or `fstab`.
 
   > [!NOTE]
-  >  You can pass over a single or multiple recovery operations. For multiple operations, delineate them by using commas without spaces, for example, `fstab,initrd`.
+  >  You can pass over single or multiple recovery operations. For multiple operations, delineate them using commas without spaces, such as `fstab,initrd`.
 
 
 ## Limitation
