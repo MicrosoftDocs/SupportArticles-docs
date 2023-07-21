@@ -21,7 +21,7 @@ ms.date: 7/21/2023
 
 ## Symptoms
 
-During a Microsoft Teams call, when you share a video or other content that needs a higher frame rate for optimal viewing, the display for the other attendees lags and is choppy.
+During a call in Microsoft Teams, when you share a video or other content that needs a higher frame rate for optimal viewing, the display for the other attendees lags and is choppy.
 
 ## Cause
 
@@ -52,4 +52,4 @@ If you want to check the frame rate for the content being shared, use the follow
 
 1. In the drop-down menu, select **Settings**, and then select **Call health**.
 
-1. Scroll to the **Screen Sharing** section to see the frame rate, resolution and other details about the screen sharing session.
+1. Scroll to the **Screen Sharing** section to see the frame rate, resolution, and other details about the screen sharing session.
