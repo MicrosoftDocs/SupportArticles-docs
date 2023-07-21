@@ -177,14 +177,14 @@
           href: console-not-show-desktop-flows.md
         - name: Power Automate service doesn't start automatically after restarting
           href: windows-services-not-start-after-restart.md
+        - name: Proxy server related errors in Power Automate for desktop
+          href: proxy-error-console.md
         - name: Restart UI flows to recover from a bad state
           href: reset-ui-flow-service-when-bad-state.md
         - name: Recorder not recording applications
           href: recorder-not-recording-applications.md
         - name: Some actions appear to be missing or aren't visible
           href: actions-not-available.md
-        - name: Proxy server related error in Power Automate for desktop
-          href: proxy-error-console.md
         - name: Tips on working with SQL queries
           href: troubleshooting-tips-sql-queries.md
         - name: Troubleshoot UI flow Playback
