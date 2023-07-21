@@ -90,34 +90,35 @@ This issue may occurs because either the login was dropped manually or these [in
    CHECK_EXPIRATION=OFF,
    CHECK_POLICY=OFF;
    ```
- 
- 1. Switch to the `SSISDB` database and map the existing user to the newly-created login:
- 
+
+1. Switch to the `SSISDB` database and map the existing user to the newly-created login:
+
     ```sql
     USE SSISDB
     GO
     ALTER USER[##MS_SSISServerCleanupJobUser##] WITH LOGIN =[##MS_SSISServerCleanupJobLogin##]
     ```
-  1. Note that in some cases the database user may also be missing. In such cases, recreate the user in the `SSISDB` database and re-run the previous step to map the user to the login:
 
-     ```sql
-     USE [SSISDB]
-     GO
-     DROP USER [##MS_SSISServerCleanupJobLogin##]
-     GO
+1. Note that in some cases the database user may also be missing. In such cases, recreate the user in the `SSISDB` database and re-run the previous step to map the user to the login:
 
-     CREATE USER [##MS_SSISServerCleanupJobUser##] FOR LOGIN [##MS_SSISServerCleanupJobLogin##]
-     GO
-     
-     ALTER USER [##MS_SSISServerCleanupJobUser##] WITH DEFAULT_SCHEMA=[dbo]
-     GO
+   ```sql
+   USE [SSISDB]
+   GO
+   DROP USER [##MS_SSISServerCleanupJobLogin##]
+   GO
 
-     GRANT EXECUTE ON [internal].[cleanup_server_project_version] TO [##MS_SSISServerCleanupJobUser##]
-     GO
-     GRANT EXECUTE ON [internal].[cleanup_server_retention_window] TO [##MS_SSISServerCleanupJobUser##]
-     GO
-     ```
-     
+   CREATE USER [##MS_SSISServerCleanupJobUser##] FOR LOGIN [##MS_SSISServerCleanupJobLogin##]
+   GO
+   
+   ALTER USER [##MS_SSISServerCleanupJobUser##] WITH DEFAULT_SCHEMA=[dbo]
+   GO
+
+   GRANT EXECUTE ON [internal].[cleanup_server_project_version] TO [##MS_SSISServerCleanupJobUser##]
+   GO
+   GRANT EXECUTE ON [internal].[cleanup_server_retention_window] TO [##MS_SSISServerCleanupJobUser##]
+   GO
+   ```
+
 ### Misconfigured System user/role in msdb database
 
 This section provides steps to resolve a misconfigured system user or role in the `msdb` database.
@@ -193,6 +194,7 @@ To fix this issue, follow these steps:
 1. Under **Database Default locations**, make sure that `Data` and `Log` are the correct folders.
 1. Ensure that **Data Path** property in SQL Server Configuration Manager, **SQL Server Services**, **Advanced** tab of the affected SQL Service is correct. The value is grayed out and can't be modified from here. However, if you need to correct it, follow Method 2 in [Error that Data or Log directory in the registry is not valid when installing SQL Server Cumulative Update or a Service Pack](user-data-log-directory-invalid.md#method-2--using-registry-editor) to modify **SQLDataRoot** registry entry.
 1. Retry the CU or SP installation.
+
 ## Misconfigured Windows Server Failover Clustering (WSFC) nodes
 
 For smooth functioning and maintenance of a SQL Server Failover Cluster Instance (FCI), follow the best practices that are described in [Before Installing Failover Clustering](/sql/sql-server/failover-clusters/install/before-installing-failover-clustering?view=sql-server-ver15&preserve-view=true) and [Failover Cluster Instance administration & maintenance](/sql/sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance?view=sql-server-ver15&preserve-view=true). If you experience errors when you apply a CU or an SP, check the following conditions:
