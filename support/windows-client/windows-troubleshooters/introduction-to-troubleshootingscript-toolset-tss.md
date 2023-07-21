@@ -135,7 +135,7 @@ Defines specific parameters within the TSS options, to control, enhance, or simp
 |`-EvtDaysBack <N>`     |Convert event logs only for the last N days. The default value is 30 days. It also applies to SDP report.<br><br>Note:<br>Security event logs will be skipped.          |
 |`-ExternalScript <path to external PS file>`     |Run the specified PowerShell script before starting trace.         |
 |`-LogFolderPath <Drive:\path to log folder>`     |Use a different log folder path for the resulting output data, instead of the default location (*C:\\MS_DATA*). It's useful when drive C: is low on free disk space.         |
-|`-MaxEvents <N>`     |As an argument for `'-WaitEvent Evt:..'`, the parameter will investigate the last N number of events with the same Event ID (the default value is 1).         |
+|`-MaxEvents <N>`     |As an argument for `'-WaitEvent Evt:..'``, the parameter will investigate the last N number of events with the same Event ID (the default value is 1).         |
 |`-Mini`     |Collect only minimal data. Skip `noPSR`, `noSDP`, `noVideo`, `noXray`, `noZip`, `noBasicLog`.         |
 |`-Mode` \<`Basic`\|`Medium`\|`Advanced`\|`Full`\|`Verbose`\|`VerboseEx`\|`Hang`\|`Restart`<br>\|`Swarm`\|`Kube`\|`GetFarmdata`\|`Permission`\|`traceMS`>     |Run script in `Basic`, `Medium`, `Advanced`, `Full` or `Verbose(Ex)` mode for data collection. `Restart` will restart the associated service.         |
 |`-RemoteRun`     |Use when TSS is being executed on a remote host, for example, via PsExec or in Azure Serial Console, or with PowerShell remoting. This will inhibit PSR, Video recording, starting TssClock and opening Explorer with final results. In such case, also consider `-AcceptEula`.         |
