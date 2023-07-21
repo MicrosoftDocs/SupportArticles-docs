@@ -32,11 +32,11 @@ Microsoft provides technical support for SQL Server for the following supported 
 Microsoft provides technical support for SQL Server versions for the following supported hardware virtualization environments:
 
 - Azure Infrastructure Services that includes Azure Virtual Machines, Azure Virtual Network, and Azure VMware Solution (See the [Frequently asked questions](#frequently-asked-questions) section for more details).
-- The SQL Server version is currently a supported version according to the [lifecycle policy](sql/sql-server/end-of-support/sql-server-end-of-support-overview#lifecycle-dates).
+- The SQL Server version is currently a supported version according to the [lifecycle policy](/sql/sql-server/end-of-support/sql-server-end-of-support-overview#lifecycle-dates).
 
 Microsoft may provide limited or no technical support for the following environments:
 
-- Any version of SQL Server that is outside the [lifecycle policy](sql/sql-server/end-of-support/sql-server-end-of-support-overview#lifecycle-dates) and running on any virtualization vendor or configuration.
+- Any version of SQL Server that is outside the [lifecycle policy](/sql/sql-server/end-of-support/sql-server-end-of-support-overview#lifecycle-dates) and running on any virtualization vendor or configuration.
 - Any non-Microsoft virtualization software that isn't a configuration that is validated through the SVVP program.
 
 This policy of limited support is based on the following Microsoft Knowledge Base article:
