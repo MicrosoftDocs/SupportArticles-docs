@@ -37,7 +37,7 @@ In Teams versions 1.6.00.12455 or higher, you can use a keyboard shortcut to ena
 
 1. Start sharing your screen in Teams.
 
-1. Select the Teams app, and then select <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>SHIFT</kbd>+<kbd>T</kbd>.
+1. Select the Teams app, and then select **Ctrl+Alt+Shift+T**.
 
 > [!NOTE]
 > The resolution of the shared content might drop to accommodate the higher frame rate depending on several factors that include machine capability and available bandwidth.
