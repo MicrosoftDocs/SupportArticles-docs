@@ -19,7 +19,7 @@ additionalContent:
           url: customer-service/welcome-customer-service.yml
         - title: Dynamics 365 Commerce
           summary: Troubleshooting articles for Dynamics 365 Commerce
-          url: customer-service/welcome-commerce.yml
+          url: commerce/welcome-commerce.yml
         - title: Dynamics 365 Finance
           summary: Troubleshooting articles for Dynamics 365 Finance
           url: finance/welcome-finance.yml
