@@ -52,4 +52,4 @@ If your Microsoft Outlook app was updated to the new Outlook for Windows, you ne
 
    :::image type="content" source="media/navigate-to-public-folders-in-new-outlook/select-pf-and-add-pf.png" alt-text="Screenshot of a public folder selected from the list and the Add Public Folders option highlighted." border="true":::
 
-1. After the public folder is added, select it to access it.
+1. After the public folder is added, select it from the list of **Favorites** to access it.
