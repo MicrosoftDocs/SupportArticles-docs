@@ -42,7 +42,7 @@ Isolate the error by following these steps:
    1. Go to the subfolder that's named *yyyyMMdd_HHmmss* (for example *20220618_174947*) that corresponds to the reported failure time that you're focusing on. The goal is to examine the feature-specific files, ERRORLOG files, and *Details.txt* file, as necessary.
    1. Go to the \MSSQLSERVER subfolder, and locate the log files that are specific to the feature that failed. For example, *sql_engine_core_inst_Cpu64_1.log*. For upgrade script failures, examine the *SQLServer_ERRORLOG_date_time.txt* files that correspond to the time of the upgrade failure.
    1. Open the *Details.txt* log file, and search on the keyword "Failed." Not every failure is considered critical.
-   
+
 For more information, see [View and Read SQL Server Setup Log Files](/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files?view=sql-server-ver15&preserve-view=true).
 
 In the next few sections, check for a scenario that corresponds to your situation, and then follow the associated troubleshooting steps.
@@ -180,18 +180,23 @@ Applications such as SQL Server that use Windows Installer technology for the se
 
 ## Setup fails because of incorrect data or log location in registry
 
-The default database and log file paths that you specify during installation are saved in the registry at *HKEY_LOCAL_MACHINE\HKLM\Software\Microsoft\MicrosoftSQL Server\MSSQL{nn}.MyInstance*. When you install a CU or SP, these locations are validated by the Setup process. If the validation fails, you might receive errors that resemble the following messages:
+The default database and log file paths that you specify during installation are saved in the registry at *HKEY_LOCAL_MACHINE\HKLM\Software\Microsoft\MicrosoftSQL Server\MSSQL{nn}.MyInstance* and in *HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<MSSQL.x>\Setup*. When you install a CU or SP, these locations are validated by the Setup process. If the validation fails, you might receive errors that resemble the following messages:
 
-- `Error installing SQL Server Database Engine Services Instance Features. The Database Engine system data directory in the registry is not valid.`
-- `The User Log directory in the registry is not valid. Verify DefaultLog key under the instance hive points to a valid directory.`
+```output
+Error installing SQL Server Database Engine Services Instance Features. The Database Engine system data directory in the registry is not valid.
+```
+
+```output
+The User Log directory in the registry is not valid. Verify DefaultLog key under the instance hive points to a valid directory.
+```
 
 To fix this issue, follow these steps:
 
 1. Connect to the SQL Server instance by using SQL Server Management Studio (SSMS).
 1. Right-click on SQL Server instance in the Object Browser and choose **Properties**, and select **Database Settings** page on the left side.
 1. Under **Database Default locations**, make sure that `Data` and `Log` are the correct folders.
+1. Ensure that **Data Path** property in SQL Server Configuration Manager, **SQL Server Services**, **Advanced** tab of the affected SQL Service is correct. The value is grayed out and can't be modified from here. However, if you need to correct it, follow Method 2 in [Error that Data or Log directory in the registry is not valid when installing SQL Server Cumulative Update or a Service Pack](user-data-log-directory-invalid.md) to modify **SQLDataRoot** registry entry.
 1. Retry the CU or SP installation.
-
 ## Misconfigured Windows Server Failover Clustering (WSFC) nodes
 
 For smooth functioning and maintenance of a SQL Server Failover Cluster Instance (FCI), follow the best practices that are described in [Before Installing Failover Clustering](/sql/sql-server/failover-clusters/install/before-installing-failover-clustering?view=sql-server-ver15&preserve-view=true) and [Failover Cluster Instance administration & maintenance](/sql/sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance?view=sql-server-ver15&preserve-view=true). If you experience errors when you apply a CU or an SP, check the following conditions:

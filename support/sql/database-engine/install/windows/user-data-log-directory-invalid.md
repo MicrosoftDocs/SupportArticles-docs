@@ -62,40 +62,42 @@ The issue happens when the default locations for new data or log files for a dat
 
 Use the following procedure to resolve the problem.
 
-- Step 1: Set the default data directory value and the default log directory value to valid folder paths.
+### Step 1: Correct the default data and log directories valid folder paths
 
-  You can set the default data directory value and the default log directory value by using either SQL Server Management Studio or Registry Editor.
+You can set the default data directory value and the default log directory values to valid folder paths by using either SQL Server Management Studio or Registry Editor.
 
-  - Method 1: Use SQL Server Management Studio (SSMS) and SQL Server Configuration Manager
+#### Method 1: Use SQL Server Management Studio (SSMS) and SQL Server Configuration Manager
 
-    1. In SSMS, open **Object Explorer**, right-click a server and click **Properties**.
-    1. In the left panel, select the **Database Settings** page.
-    1. In **Database default locations**, view the current default locations for new data files and new log files.
-    1. To change a default location, enter a new default pathname in the **Data** or **Log** field, or click the browse button to find and select a pathname.
-    1. Open SQL Server Configuration Manager and select on SQL Server Services
-    1. Double-click on your instance and choose the **Advanced** tab
-    1. Review the **Data Path** property and see if the value is correct. The value is grayed out and can't be modified from here
-    1. If the value is incorrect, use Method 2 to update it to the correct path
+1. In SSMS, open **Object Explorer**, right-click a server and click **Properties**.
+1. In the left panel, select the **Database Settings** page.
+1. In **Database default locations**, view the current default locations for new data files and new log files.
+1. To change a default location, enter a new default pathname in the **Data** or **Log** field, or click the browse button to find and select a pathname.
+1. Open SQL Server Configuration Manager and select on SQL Server Services
+1. Double-click on your instance and choose the **Advanced** tab
+1. Review the **Data Path** property and see if the value is correct. The value is grayed out and can't be modified from here
+1. If the value is incorrect, use Method 2 to update it to the correct path
 
-  - Method 2 : Using registry editor:
+#### Method 2 : Using registry editor
 
-    > [!IMPORTANT]
-    > This section, method, or task contains steps that tell you how to modify the registry. Serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).
+   > [!IMPORTANT]
+   > This section, method, or task contains steps that tell you how to modify the registry. Serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).
 
-    1. Start Registry Editor (Regedit.exe) from the command line.
-    1. Locate and then click the registry subkey: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<MSSQL.x>\MSSQLServer`.
+1. Start Registry Editor (Regedit.exe) from the command line.
+1. Locate and then click the registry subkey: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<MSSQL.x>\MSSQLServer`.
 
-       > [!NOTE]
-       > In this registry subkey, <MSSQL.x> represents the corresponding value for your system. To obtain this value, locate and then click the registry subkey: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\Instance Names\SQL\`
+   > [!NOTE]
+   > In this registry subkey, <MSSQL.x> represents the corresponding value for your system. To obtain this value, locate and then click the registry subkey: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\Instance Names\SQL\`
 
-    1. In the right panel, click the **DefaultData** registry entry and enter a valid path, if it's pointing to an incorrect location.
-    1. In the right panel, click the **DefaultLog** registry entry and enter a valid path, if it's pointing to an incorrect location.
-    1. Locate and then click the registry subkey: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<MSSQL.x>\Setup`.
-    1. In the right panel, click the **SQLDataRoot** registry entry and enter a valid path, if it's pointing to an incorrect location.
+1. In the right panel, click the **DefaultData** registry entry and enter a valid path, if it's pointing to an incorrect location.
+1. In the right panel, click the **DefaultLog** registry entry and enter a valid path, if it's pointing to an incorrect location.
+1. Locate and then click the registry subkey: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<MSSQL.x>\Setup`.
+1. In the right panel, click the **SQLDataRoot** registry entry and enter a valid path, if it's pointing to an incorrect location.
 
-- Step 2: Retry the installation of Service Pack or Cumulative Update for the affected instance.
+### Step 2: Retry the installation of Service Pack or Cumulative Update 
 
-  The setup program may show that the instance has already been upgraded and it may not allow you to select just the Database Services component. You need to select all the features for that instance for the setup program to continue.
+Once you have corrected the data and log paths for the affected instance, you can retry the installation. 
+
+The setup program may show that the instance has already been upgraded and it may not allow you to select just the Database Services component. You need to select all the features for that instance for the setup program to continue.
 
 ## References
 
