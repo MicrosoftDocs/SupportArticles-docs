@@ -55,13 +55,13 @@ Posting results for journal batch number 0009656328 Voucher ARP-000959899 Postin
 ```
 
 ### Solution:  
-To fix this you must review the account structures. For guidance review our official documentation [here](https://docs.microsoft.com/en-us/dynamics365/finance/general-ledger/configure-account-structures).  
+To fix this you must review the account structures. For guidance review our official documentation [here](https://docs.microsoft.com/dynamics365/finance/general-ledger/configure-account-structures).  
 After fixing the account structures, run the Synchronize Orders job again. 
 
 ## Error 3: Fiscal Period does not exist
-You must check the existing fiscal periods and create new ones if needed. For guidance review our official documentation [here](https://learn.microsoft.com/en-us/dynamics365/finance/budgeting/fiscal-calendars-fiscal-years-periods)
+You must check the existing fiscal periods and create new ones if needed. For guidance review our official documentation [here](https://learn.microsoft.com/dynamics365/finance/budgeting/fiscal-calendars-fiscal-years-periods)
 
 
 
 ## Advanced troubleshooting
-You can use the "Edit and Audit" functionality to mark the transactions as voided.  This will stop the Synchronize order flow from processing the transaction. For more information about using Edit and Audit review our official documentation [here](https://learn.microsoft.com/en-us/dynamics365/commerce/edit-order-trans)
+You can use the "Edit and Audit" functionality to mark the transactions as voided.  This will stop the Synchronize order flow from processing the transaction. For more information about using Edit and Audit review our official documentation [here](https://learn.microsoft.com/dynamics365/commerce/edit-order-trans)
