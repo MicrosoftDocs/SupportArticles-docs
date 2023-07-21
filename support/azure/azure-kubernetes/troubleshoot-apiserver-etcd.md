@@ -24,8 +24,8 @@ The following table outlines the common symptoms of API server failures:
 
 | Symptom | Description |
 |---|---|
-| Timeouts from the API server | Frequent timeouts that are beyond the guarantees in [the AKS API server SLA](/azure/aks/free-standard-pricing-tiers#uptime-sla-terms-and-conditions). For example, `kubectl commands timeout`. |
-| High latencies | High latencies that make the Kubernetes SLOs fail. For example, `kubectl command takes more than 30 seconds to list pods`. |
+| Timeouts from the API server | Frequent timeouts that are beyond the guarantees in [the AKS API server SLA](/azure/aks/free-standard-pricing-tiers#uptime-sla-terms-and-conditions). For example, `kubectl` commands timeout. |
+| High latencies | High latencies that make the Kubernetes SLOs fail. For example, `kubectl` command takes more than 30 seconds to list pods. |
 
 ## Causes
 
@@ -113,10 +113,10 @@ The results from this query can be useful for identifying types of API calls tha
 
 ## Verify that clients don't leak resources in etcd
 
-> [!TIP]
-> When an object in etcd is mutated, a new complete version of that object is created. If the object being mutated is large, this can consume a lot of space. To prevent etcd from reaching capacity and causing cluster downtime, you can limit the maximum number of resources created and/or slow the number of revisions generated for resource instances.
+A common issue is continuously creating objects without deleting unused ones in the etcd database. This can cause performance issues when dealing with too many objects of any type (count > 10,000). A rapid increase of changes on such objects could also cause the etcd database size (4 gigabytes by default) to be exceeded. 
 
-A common issue is continuously creating objects without deleting unused ones in the etcd database. This can cause performance issues when dealing with too many objects of any type (count > 10,000). A rapid increase of changes on such objects could also cause the etcd database size (4 gigabytes by default) to be exceeded.
+To prevent etcd from reaching capacity and causing cluster downtime, you can limit the maximum number of resources created and/or slow the number of revisions generated for resource instances. To limit the number of objects that can be created, you can [define object quotas](https://kubernetes.io/docs/concepts/policy/resource-quotas/#object-count-quota).
+
 
 To check the etcd database usage, navigate to **Diagnose and Solve problems** in the Azure portal. Run the Etcd Availability diagnosis tool by searching for "_etcd_" in the search box. The diagnosis tool shows you the usage breakdown and the total database size.
 
@@ -135,8 +135,6 @@ kubectl delete jobs --field-selector status.successful=1
 ```
 
 For objects that support [automatic clean-up](https://kubernetes.io/docs/concepts/architecture/garbage-collection/), you can set Time to Live (TTL) values to limit the lifetime of these objects. Additionally, you can label your objects so that you can bulk delete all the objects of a specific type by using label selectors. If you establish [owner references](https://kubernetes.io/docs/concepts/overview/working-with-objects/owners-dependents/) among objects, any dependent objects will be automatically deleted when the parent object is deleted.
-
-To limit the number of objects that can be created, you can [define object quotas](https://kubernetes.io/docs/concepts/policy/resource-quotas/#object-count-quota).
 
 ## How to throttle a client overwhelming the control plane
 
