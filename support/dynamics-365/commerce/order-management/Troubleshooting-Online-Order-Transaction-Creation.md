@@ -1,6 +1,6 @@
 ---
 title: How to troubleshoot Online store transaction creation failures in HQ
-description: Providies guidance on how to troubleshooting D365 Commerce Online store transaction creation failures. 
+description: Provides guidance on how to troubleshoot D365 Commerce Online store transaction creation failures. 
 author: bstorie
 ms.author: brstor
 ms.topic: troubleshooting-general 
@@ -8,12 +8,12 @@ ms.date: 07/21/2023
 ---
 # The following provides guidance on how to troubleshoot the Online store transaction creation process
 
-After a transaction is created on an Ecommerce website it is pulled back to Commerce HQ via the P-job.  However for that transaction to become a Sales Order inside Commerce HQ the Synchronize Orders process also needs to be executed. The Synchronize Order process can fail for a number of reasons, the following articles lists some of the most common causes.   
+After a transaction is created on an Ecommerce website it is pulled back to Commerce HQ via the P-job.  However, for that transaction to become a Sales Order inside Commerce HQ the Synchronize Orders process also needs to be executed. The Synchronize Order process can fail for multiple reasons, the following article lists some of the most common causes.   
 
 
 ## Prerequisites
-1) Confirm the Upload sessions are showing as applied in (Retail and Commerce > Inquiries and reports > Commerce data Exchange > Upload Sessions)
-2) Make sure you recently ran the Synchronize Orders (Retail and Commerce > Retail and Commerce IT > Synchronize Orders) 
+1) Confirm the Upload sessions are showing as applied in (**Retail and Commerce > Inquiries and reports > Commerce data Exchange > Upload Sessions**)
+2) Make sure you recently ran the Synchronize Orders (**Retail and Commerce > Retail and Commerce IT > Synchronize Orders**) 
 
 ## Troubleshooting check list
 
@@ -22,13 +22,13 @@ Go to **Retail** and **Commerce** > **Inquiries** and **reports** > **Order sync
 
   - If the order is showing as failed, check the error message and proceed to the cause/solution section in the article. 
   - If the order is showing as not synchronized, make sure you ran Synchronize Orders in step 2 of the pre-requisites, and schedule the job to run periodically. 
-  - If the order is not showing on this report, it indicates an issues with the CDX upload process.  Go to **Retail** and **Commerce IT** > **Distribution Schedule** > **Select** and **execute** the **P-0001 job**
+  - If the order is not showing on this report, it indicates an issue with the CDX upload process.  Go to **Retail** and **Commerce IT** > **Distribution Schedule** > **Select** and **execute** the **P-0001 job**
 
 ### Method 2: If you know the missing transaction/order confirmation number
   1. Go to **Retail** and **Commerce** > **Inquiries** and **reports** > **Online store transactions** 
   1. **Search** the **transaction**. You may filter by "Date" or if you have the order confirmation number, add "Channel reference ID" to the filter.
 
-     - If the order is not showing on this report, it indicates an issues with the CDX upload process.  Go to **Retail** and **Commerce IT** > **Distribution Schedule** > **Select** and **execute** the **P-0001 job**
+     - If the order is not showing on this report, it indicates an issue with the CDX upload process.  Go to **Retail** and **Commerce IT** > **Distribution Schedule** > **Select** and **execute** the **P-0001 job**
 
 ------------------------------------------------------------------------
 
@@ -63,5 +63,5 @@ You must check the existing fiscal periods and create new ones if needed. For gu
 
 
 
-## Advanced troubleshooting and data collection
+## Advanced troubleshooting
 You can use the "Edit and Audit" functionality to mark the transactions as voided.  This will stop the Synchronize order flow from processing the transaction. For more information about using Edit and Audit review our official documentation [here](https://learn.microsoft.com/en-us/dynamics365/commerce/edit-order-trans)
