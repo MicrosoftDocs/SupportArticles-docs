@@ -68,7 +68,7 @@ We recommend that your client application always consumes all result sets coming
 1. Right-click **Sessions**, and then select **New Session Wizard**.
 1. Create a new event session by using the _TSQL\_SPs_ session template.
 1. Start the session and watch the live data. For more information, see [Quickstart: Extended events in SQL Server](/sql/relational-databases/extended-events/quick-start-extended-events-in-sql-server).
-1. Connect to SQL Server with ODBC or OLD DB, run `bigBatch`, and then analysis the live data of the event session.
+1. Connect to SQL Server with ODBC or OLE DB, run `bigBatch`, and then analysis the live data of the event session.
 
 ### Connect with ODBC
 
@@ -84,7 +84,7 @@ To connect to SQL Server by using ODBC, follow these steps:
 
 In the XEvent live data, you notice that the processing of the stored procedure isn't complete. However, the ODBC Test tool indicates that the execution was successful. To fetch all the result sets and to cause the batch to finish on the server, select **Get Data All** on the **Results** menu.
 
-### Connect with OLD DB
+### Connect with OLE DB
 
 To connect to SQL Server by using OLE DB, follow these steps:
 
