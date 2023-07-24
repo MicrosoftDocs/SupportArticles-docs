@@ -54,7 +54,7 @@ How do you maintain a secure connection to Azure Active Directory (Azure AD) and
 For more information, see the following articles:
 
 - [How to enable TLS 1.2 on clients](/mem/configmgr/core/plan-design/security/enable-tls-1-2-client)
-- [Preparing for TLS 1.2 in Office 365 and Office 365 GCC - Microsoft 365 Compliance](/microsoft-365/compliance/prepare-tls-1.2-in-office-365)
+- [Preparing for TLS 1.2 in Office 365 and Office 365 GCC - Microsoft 365 Compliance](/purview/prepare-tls-1.2-in-office-365)
 
 ### Update the Windows OS and the default TLS that you use for WinHTTP
 
