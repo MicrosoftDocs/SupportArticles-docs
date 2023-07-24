@@ -1,7 +1,7 @@
 ---
 title: Remote Desktop IP Virtualization in Windows Server 2019
 description: Remote Desktop IP Virtualization in Windows Server 2019.
-ms.date: 07/21/2023
+ms.date: 07/24/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
