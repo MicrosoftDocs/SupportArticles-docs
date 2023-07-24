@@ -2,10 +2,10 @@
 title: Proxy server in your network requires authentication or Communication with cloud services requires network proxy authentication or Proxy server is blocking access to cloud services error
 description: This article provides a resolution for the proxy-related errors that occur in Microsoft Power Automate for desktop.
 ms.reviewer: pefelesk
-ms.date: 07/21/2023
+ms.date: 07/24/2023
 ms.subservice: power-automate-desktop-flows
 ---
-# "The proxy server in your network requires authentication", "The communication with the cloud services requires network proxy authentication" or "The proxy server in your network is blocking access to Microsoft cloud services" error
+# Proxy server related errors in Power Automate for desktop
 
 This article provides a resolution for the proxy-related errors that occur in Microsoft Power Automate for desktop.
 
@@ -25,7 +25,7 @@ You receive one of the following errors in Power Automate for desktop console:
 
 ## Cause
 
-Power Automate for desktop can't authenticate with the proxy server that is used by the machine.
+Power Automate for desktop can't authenticate with the proxy server that's used by the machine.
 
 ## Resolution
 
@@ -35,6 +35,7 @@ Power Automate for desktop can't authenticate with the proxy server that is used
 To solve this issue, configure the proxy address and port that will be used by Power Automate for desktop to interact with the proxy server. For more information, see [Configure Power Automate for desktop to interact with a corporate proxy server](/power-automate/desktop-flows/governance#configure-power-automate-for-desktop-to-interact-with-a-corporate-proxy-server).
 
 Then, follow one of the below options:
+
 - Option 1 - [Configure Power Automate for desktop to authenticate to a corporate proxy server using the current user's credentials](/power-automate/desktop-flows/governance#configure-power-automate-for-desktop-to-authenticate-to-a-corporate-proxy-server-using-the-current-users-credentials)
 - Option 2 - [Configure Power Automate for desktop to interact with a corporate proxy server using Windows Credentials](/power-automate/desktop-flows/governance#configure-power-automate-for-desktop-to-authenticate-to-a-corporate-proxy-server-using-windows-credentials)
 
@@ -42,10 +43,10 @@ Alternatively, you can [configure Power Automate for desktop to bypass a corpora
 
 ## Workaround
 
-If modifying the registry entries as described above doesn't solve the issue, take the following steps:
-
 > [!NOTE]
 > This method isn't recommended since the configuration files aren't updated after a product update.
+
+If modifying the registry entries as described above doesn't solve the issue, take the following steps:
 
 1. Close all instances of Power Automate for desktop.
    
@@ -91,7 +92,7 @@ If modifying the registry entries as described above doesn't solve the issue, ta
 
 4. Save the changes.
 5. Restart Power Automate for desktop.
-6. Restart thePower Automate service:
-     - Open services.msc
-     - Look for "Power Automate service"
-     - Right-click and restart
+6. Restart the Power Automate service:
+     1. In Windows, open the **Services** desktop app. Press **Windows**+**R** to open the **Run** box, enter *services.msc*, and then press <kbd>Enter</kbd> or select **OK**.
+     2. Look for "Power Automate service".
+     3. Right-click the service and select **Restart**.
