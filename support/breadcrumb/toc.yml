@@ -145,6 +145,12 @@
       - name: Dynamics 365 Customer Insights
         tocHref: /troubleshoot/dynamics-365/customer-insights/
         topicHref: /troubleshoot/dynamics-365/customer-insights/welcome-customer-insights
+      - name: Dynamics 365 Customer Service
+        tocHref: /troubleshoot/dynamics-365/customer-service/
+        topicHref: /troubleshoot/dynamics-365/customer-service/welcome-customer-service
+      - name: Dynamics 365 Commerce
+        tocHref: /troubleshoot/dynamics-365/commerce/
+        topicHref: /troubleshoot/dynamics-365/commerce/welcome-commerce
       - name: Dynamics 365 Finance
         tocHref: /troubleshoot/dynamics-365/finance/
         topicHref: /troubleshoot/dynamics-365/finance/welcome-finance
