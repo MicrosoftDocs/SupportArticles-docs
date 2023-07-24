@@ -181,7 +181,7 @@ Applications such as SQL Server that use Windows Installer technology for the se
 
 ## Setup fails because of incorrect data or log location in registry
 
-The default database and log file paths that you specify during installation are saved in the registry at *HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MicrosoftSQL Server\MSSQL{nn}\MSSQLServer* and in *HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL{nn}\Setup*. When you install a CU or SP, these locations are validated by the Setup process. If the validation fails, you might receive errors that resemble the following messages:
+When you install a Cumulative Update or Service Pack, if the default data and log folders are invalid, you may receive errors that resemble the following messages:
 
 `Error installing SQL Server Database Engine Services Instance Features. The Database Engine system data directory in the registry is not valid.`
 
