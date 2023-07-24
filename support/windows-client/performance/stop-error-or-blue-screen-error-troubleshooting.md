@@ -218,7 +218,7 @@ For more information, see [Driver Verifier](/windows-hardware/drivers/devtest/dr
 
 ## Common Windows stop errors
 
-This section doesn't contain a list of all error codes, but since many error codes have the same potential resolutions, your best bet is to follow the steps below to troubleshoot your error. For a full list of stop error codes, see [Bug Check Code Reference](/windows-hardware/drivers/debugger/bug-check-code-reference2).
+This section doesn't contain a list of all error codes, but since many error codes have the same potential resolutions, your best bet is to follow the steps below to troubleshoot your error. For a complete list of stop error codes, see [Bug Check Code Reference](/windows-hardware/drivers/debugger/bug-check-code-reference2).
 
 The following sections list general troubleshooting procedures for common stop error codes.
 
