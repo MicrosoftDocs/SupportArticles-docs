@@ -22,12 +22,17 @@ appliesto:
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
+
 # Hyperlinks are not working in Outlook
 
 _Original KB number:_ &nbsp; 310049
 
 ## Symptoms
 
+Assume that you set Internet Explorer as your default browser in Windows. When you select a hyperlink in Microsoft Outlook, you receive one of the following error messages, depending on your Outlook version:
+
+> [!TIP]
+> Outlook Desktop implemented security changes in the July 2023 updates.  If you are unable to open links or see an error message “**Something unexpected went wrong with this URL**” please see the Known Issue article for these changes, [https://support.microsoft.com/en-us/office/outlook-blocks-opening-fqdn-and-ip-address-hyperlinks-after-installing-protections-for-microsoft-outlook-security-feature-bypass-vulnerability-released-july-11-2023-4a5160b4-76d0-465b-9809-60837bbd35a8](https://support.microsoft.com/en-us/office/outlook-blocks-opening-fqdn-and-ip-address-hyperlinks-after-installing-protections-for-microsoft-outlook-security-feature-bypass-vulnerability-released-july-11-2023-4a5160b4-76d0-465b-9809-60837bbd35a8)
 Assume that you set Internet Explorer as your default browser in Windows. When you select a hyperlink in Microsoft Outlook, you receive one of the following error messages, depending on your Outlook version:
 
 > This operation has been cancelled due to restrictions in effect on this computer. Please contact your system administrator.
@@ -188,3 +193,5 @@ This section is intended for advanced computer users. For help with advanced tro
 4. Make sure that the value of the **String (Default)**  is "htmlfile". If it's not **htmlfile**, right-click **(Default)**, select **Modify**, input *htmlfile* in the **Value data** box, and then select **OK**.
 
 5. Exit Registry Editor.
+
+
