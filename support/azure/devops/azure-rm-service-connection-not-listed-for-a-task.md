@@ -7,6 +7,7 @@ ms.author: v-jayaramanp
 ms.reviewer: cathmill, kirthishkt
 ms.custom: sap:Pipelines
 ms.service: azure-devops
+ms.subservice: ts-pipelines
 ---
 
 # Azure RM service connection not listed for task

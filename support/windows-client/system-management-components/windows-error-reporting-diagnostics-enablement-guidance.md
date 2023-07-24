@@ -168,16 +168,16 @@ After you've applied the above-mentioned settings to the Organizational Unit, ch
 
 ## Gather key information before contacting Microsoft support
 
-1. Download [TSSv2](https://aka.ms/getTSSv2) on all nodes and unzip it in the *C:\\tss_tool* folder.
-2. Open the *C:\\tss_tool* folder from an elevated PowerShell command prompt.
+1. Download [TSS](https://aka.ms/getTSS) on all nodes and unzip it in the *C:\\tss* folder.
+2. Open the *C:\\tss* folder from an elevated PowerShell command prompt.
 3. Start the following traces on the problem computer by using the following cmdlets:
 
     ```powershell
-    TSSv2.ps1 -SDP PERF,SETUP
+    TSS.ps1 -SDP PERF,SETUP
     ```
 
     ```PowerShell
-    TSSv2.ps1 -Start -Scenario NET_WFP
+    TSS.ps1 -Scenario NET_WFP
     ```
 
 4. Respond to the EULA prompt.

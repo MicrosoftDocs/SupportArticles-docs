@@ -167,13 +167,13 @@ If the instance is stopped, right-click the instance and select **Start**. Then,
 You can use the following command in PowerShell to check the status of SQL Server services on the system:
 
 ```powershell
-Get-Service | Where {$_.status -eq 'running' -and $_.DisplayName -match "sql server*"}
+Get-Service | Where {$_.status -eq 'running' -and $_.DisplayName -like "sql server*"}
 ```
 
 You can use the following command to search the error log file for the specific string "SQL Server is now ready for client connections. This is an informational message; no user action is required.":
 
 ```powershell
-Get-ChildItem -Path "c:\program files\microsoft sql server\mssql*" -Recurse -Include Errorlog |select-string "SQL Server is now ready for client connections."
+Get-ChildItem -Path "c:\program files\microsoft sql server\mssql*" -Recurse -Include Errorlog | Select-String "SQL Server is now ready for client connections."
 ```
 
 ## Step 2: Verify that the SQL Server Browser service is running
