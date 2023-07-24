@@ -25,10 +25,18 @@ The toolset includes several PowerShell scripts and executable files, which are 
 
 You can download the toolset as a zip file (*TSS.zip*) from https://aka.ms/getTSS.
 
-## How to start TSS toolset
+## Prerequisites
 
-> [!NOTE]  
-> Make sure you run the TSS toolset in an elevated PowerShell window as an administrator. Running the TSS toolset in the Windows PowerShell Integrated Scripting Environment (ISE) isn't supported. 
+Here are some prerequisites for the toolset to run properly:
+
+- The TSS toolset must be run in an elevated PowerShell window by accounts with administrator privileges on the local system. Running the TSS toolset in the Windows PowerShell Integrated Scripting Environment (ISE) isn't supported. The end-user license agreement (EULA) must be accepted. Once the EULA is accepted, the TSS toolset won't prompt the EULA again.
+
+- The PowerShell script execution policy should be set to `RemoteSigned` for the process level by running the cmdlet `Set-ExecutionPolicy -scope Process -ExecutionPolicy RemoteSigned -Force` from an elevated PowerShell command prompt.
+
+    > [!NOTE]  
+    > The process level changes only affect the current PowerShell session.
+
+## How to start TSS toolset
 
 You can start *TSS.ps1* with different switches depending on the scenario. The `-Start` verb is the default and optional verb, and can be replaced by a complementary verb based on the need. The complementary `-Start` verbs are: `-StartAutoLogger`, `-StartDiag`, `-StartNoWait`, `-CollectLog`.
 
