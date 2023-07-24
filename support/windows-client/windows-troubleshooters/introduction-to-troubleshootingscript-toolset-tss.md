@@ -1,7 +1,7 @@
 ---
 title: Introduction to TroubleShootingScript toolset (TSS)
 description: Introduces the TroubleShootingScript (TSS) toolset and provides answers to frequently asked questions about the toolset.
-ms.date: 07/13/2023
+ms.date: 07/25/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -56,7 +56,7 @@ Logs related to the traces are also automatically collected when you stop data c
 |---------|---------|
 |`<placeholder>`     |The string in angle brackets (\< \>) for placeholders needs to be substituted with an actual scenario name, trace component, command, or value.         |
 |`[optional]`     |The keyword or value in square brackets ([ ]) is optional. For example, `[module:int]` means the module and interval are optional. The default value is used if `[<xx>:<yy>]` is omitted.         |
-|\|     |This parameter parameter means `'OR'`. You can choose one of the available options.         |
+|\|     |This parameter means `'OR'`. You can choose one of the available options.         |
 |`:`     |The separator character between two values.         |
 
 ## Cmdlet examples
@@ -70,8 +70,8 @@ Logs related to the traces are also automatically collected when you stop data c
 
 |ETW trace  |PowerShell cmdlet  |Description  |
 |---------|---------|---------|
-|Enable a scenario trace.     |`.\TSS.ps1 -Scenario <ScenarioName>`         |The supported scenario names are listed by using the `TSSv2.ps1 -ListSupportedScenarioTrace` cmdlet.         |
-|Enable component traces.     |`.\TSS.ps1 <-ComponentName> <-ComponentName> ...`         |The supported `<-componentName>` is listed by using the `TSSv2.ps1 -ListSupportedTrace` cmdlet.         |
+|Enable a scenario trace.     |`.\TSS.ps1 -Scenario <ScenarioName>`         |The supported scenario names are listed using the `TSSv2.ps1 -ListSupportedScenarioTrace` cmdlet.         |
+|Enable component traces.     |`.\TSS.ps1 <-ComponentName> <-ComponentName> ...`         |The supported `<-componentName>` is listed using the `TSSv2.ps1 -ListSupportedTrace` cmdlet.         |
 |Start traces with no-wait mode.     |`.\TSS.ps1 -StartNoWait -Scenario <ScenarioName>`<br><br>`.\TSS.ps1 -Stop`         |The prompt returns immediately, so you can sign out or use a cmdlet like `Shutdown`.<br><br>The cmdlet `.\TSS.ps1 -Stop` stops the trace.         |
 
 > [!NOTE]  
@@ -97,7 +97,7 @@ Start support tools or commands (for example, ProcMon, ProcDump, netsh, Performa
 |`-PerfMonLong <CounterSetName> [-PerfLongIntervalMin N] [-PerfMonMaxMB <N>] [-PerfMonCNF <[[hh:]mm:]ss>]`<br>1. `-PerfLongIntervalMin <Interval in min>`|Performance Monitor with a long interval.<br><br>1. Set the interval for the `PerfMonLong` log (the default value is 10 minutes).|
 |`-PktMon`|Collect packet monitoring data (on Windows Server 2019, Windows 10, version 1809, and later versions). `PktMon:Drop` collects only dropped packets.|
 |`-PoolMon` \<`Start`\|`Stop`\|`Both`>|Collect `PoolMon` on `start`, `stop`, or `both`.|
-|`-ProcDump` \<`PID[]`\|`ProcessName.exe[]`\|`ServiceName[]`><br>1. `-ProcDumpOption` \<`Start`\|`Stop`\|`Both`> `-ProcDumpInterval <N>:<Interval in sec>`<br>2. `-ProcDumpInterval <N>:<Interval in sec>`<br>3. `-ProcDumpAppCrash`|Capture user dumps of a single item or comma-separated list of items using SysInternals *ProcDump.exe*. By default, the dump is taken at the start of the repro and stop. Enter `ProcessName`(s) with the `.exe` extension.<br><br>1. `Start`: the dump is taken at the start of the repro.<br>`Stop`: the dump is taken at stop.<br>`Both` (default): the dump is taken at both start and stop.<br>2. Use this option when the dump needs to be captured repeatedly.<br>`N`: the number of dumps<br>`Int`: the interval in seconds<br>The default value is 3:10.<br>3. This switch will enable `ProcDump -ma -e`, which writes a full dump when the process encounters an unhandled exception.|
+|`-ProcDump` \<`PID[]`\|`ProcessName.exe[]`\|`ServiceName[]`><br>1. `-ProcDumpOption` \<`Start`\|`Stop`\|`Both`> `-ProcDumpInterval <N>:<Interval in sec>`<br>2. `-ProcDumpInterval <N>:<Interval in sec>`<br>3. `-ProcDumpAppCrash`|Capture user dumps of a single item or comma-separated list of items using SysInternals *ProcDump.exe*. By default, the dump is taken at the start of the repro and stop. Enter `ProcessName`(s) with the `.exe` extension.<br><br>1. `Start`: the dump is taken at the start of the repro.<br>`Stop`: the dump is taken at stop.<br>`Both` (default): the dump is taken at both start and stop.<br>2. Use this option when the dump needs to be captured repeatedly.<br>`N`: the number of dumps<br>`Int`: the interval in seconds<br>The default value is 3:10.<br>3. This switch enables `ProcDump -ma -e`, which writes a full dump when the process encounters an unhandled exception.|
 |`-ProcMon`<br>1. `-ProcmonAltitude <N>`<br>2. `-ProcmonPath <folder path to Procmon.exe>`<br>3. `-ProcmonFilter <filter-file.pmc>`|Start SysInternals *Procmon.exe*.<br><br>1. Specify a string value for `ProcmonAltitude` (the default value is 385200). Use `fltmc instances` to show filter driver altitude. Use a lower number than the suspected specific driver. Value 45100 will show you virtually everything.<br>2. Specify a path to *Procmon.exe* (by default, TSS uses the built-in Procmon).<br>3. Specify a config file for Procmon (for example, *ProcmonConfiguration.pmc*) located in the *\\config* folder.|
 |`-PSR`|Start Problems Steps Recorder.|
 |`-Radar` \<`PID[]`\|`ProcessName[]`\|`ServiceName[]`>|Collect the leak diagnostic information (*rdrleakdiag.exe*).<br><br>For example, `-Radar AppIDSvc`.|
@@ -109,7 +109,7 @@ Start support tools or commands (for example, ProcMon, ProcDump, netsh, Performa
 |`-WFPdiag`|Collect traces with the `netsh Wfp capture` command.|
 |`-WireShark`|Start WireShark. The following parameters are configurable through the *tss_config.cfg* file. <br><br>1. `WS_IF`: used for `-i`. Specify the interface number (for example, `_WS_IF=1`).<br>2. `WS_Filter`: used for `-f`. Filter for the interface (for example, `_WS_Filter="port 443"`).<br>3. `WS_Snaplen`: used for `-s`. Limit the amount of data for each frame. This parameter has better performance and is helpful for high-load situations (for example, `_WS_Snaplen=128`).<br>4. `WS_TraceBufferSizeInMB`: used for `-b FileSize` (multiplied by 1024). Switch to the next file after the number of megabytes. (for example, `_WS_TraceBufferSizeInMB=512`, default=512 MB)<br>5. `WS_PurgeNrFilesToKeep`: used for `-b files`. Replace after the number of the files. (for example, `_WS_PurgeNrFilesToKeep=20`)<br>6. `WS_Options`: any other options for `-i` (for example, `_WS_Options="-P"`).<br><br>Example:<br>To collect WireShark on interfaces 15 and 11, input when TSS prompts for an interface number: `15 -i 11`.<br><br>By default, Wireshark starts `dumpcap.exe -i <all NICs> -B 1024 -n -t -w _WireShark-packetcapture.pcap -b files:10 -b filesize:524288`.|
 |`-WPR <WPRprofile>`<br>1. `-SkipPdbGen`<br>2. `-WPROptions '<Option string>'`|Start a WPR profile trace. `<WPRprofile>` is one of `General`\|`BootGeneral`\|`CPU`\|`Device`\|`Memory`\|`Network`\|`Registry`\|`Storage`\|`Wait`\|`SQL`\|`Graphic`\|`Xaml`\|`VSOD_CPU`\|`VSOD_Leak`.<br><br>1. Skip generating symbol files (PDB files).<br>2. Specify options for *WPR.exe*. For example, `-WPROptions '-onoffproblemdescription "test description"'`.<br><br>Example 1:<br>`.\TSSv2.ps1 -StartAutoLogger -WPR BootGeneral -WPROptions '-addboot CPU'` will capture WPR boot traces with the `General` and `CPU` profiles.<br><br>Example 2:<br>`.\TSSv2.ps1 -WPR General -WPROptions '-Start CPU -start Network -start Minifilter'` will combine profiles (`General`, `CPU`, `Network`, and `Minifilter`).|
-|`-Xperf <Profile>`<br>1. `-XperfMaxFileMB <Size>`<br>2. `-XperfTag <Pool Tag>`<br>3. `-XperfPIDs <PID>`<br>4. `-XperfOptions <Option string>`|Start Xperf. `<Profile>` is one of `General`\|`CPU`\|`Disk`\|`Leak`\|`Memory`\|`Network`\|`Pool`\|`PoolNPP`\|`Registry`\|`SMB2`\|`SBSL`\|`SBSLboot`.<br><br>1. Specify the parameter log size in MB (the default value is 2048 MB). The default value for SBSL\* scenarios is 16384 (same for ADS_\/NET_SBSL).<br>2. Specify `PoolTag` to be logged. This is used with the `Pool` or `PoolNPP` profile (for example, `-Xperf Pool -XperfTag TcpE+AleE+AfdE+AfdX`).<br>3. Specify `ProcessID`. This is used with the `Leak` profile (for example, `-Xperf Leak -XperfPIDs <PID>`).<br>4. Specify other option strings for `Xperf`.|
+|`-Xperf <Profile>`<br>1. `-XperfMaxFileMB <Size>`<br>2. `-XperfTag <Pool Tag>`<br>3. `-XperfPIDs <PID>`<br>4. `-XperfOptions <Option string>`|Start Xperf. `<Profile>` is one of `General`\|`CPU`\|`Disk`\|`Leak`\|`Memory`\|`Network`\|`Pool`\|`PoolNPP`\|`Registry`\|`SMB2`\|`SBSL`\|`SBSLboot`.<br><br>1. Specify the maximum log size in MB (the default value is 2048 MB). The default value for SBSL\* scenarios is 16384 (same for ADS_\/NET_SBSL).<br>2. Specify `PoolTag` to be logged. This parameter is used with the `Pool` or `PoolNPP` profile (for example, `-Xperf Pool -XperfTag TcpE+AleE+AfdE+AfdX`).<br>3. Specify `ProcessID`. This parameter is used with the `Leak` profile (for example, `-Xperf Leak -XperfPIDs <PID>`).<br>4. Specify other option strings for `Xperf`.|
 |`-xray`|Start xray to diagnose a system for known issues.|
 
 The following example illustrates how to activate multiple support tools (commands) during the same trace.
@@ -128,7 +128,7 @@ Defines specific parameters within the TSS options to control, enhance, or simpl
 |`-AddDescription <description>`     |Add a brief description of the repro issue. The name of the resulting zip file will include such a description.         |
 |`-Assist`     |Accessibility mode.         |
 |`-BasicLog`     |Collect the full basic log (the mini basic log is always collected by default).         |
-|`-CollectComponentLog`     |Use with `-Scenario`. By default, component collect functions aren't called in the case of the `-Scenario` trace. This switch enables the component collect functions to be called.         |
+|`-CollectComponentLog`     |Use with `-Scenario`. By default, component collect functions aren't called in the `-Scenario` trace. This switch enables the component collect functions to be called.         |
 |`-CollectDump`     |Collect system dump (*memory.dmp*) after stopping all traces. `-CollectDump` can be used with `-Start` and `-Stop`.         |
 |`-CollectEventLog <Eventlog[]>`     |Collect specified event logs. The asterisk (\*) wildcard character can be used for the event log name.<br><br>Example:<br>`-CollectEventLog Security,*Cred*`<br>Collect security and all event logs that match `*Cred*` like `'Microsoft-Windows-CertificateServicesClient-CredentialRoaming/Operational'`.         |
 |`-CommonTask` \<`<POD>`\|`Full`\|`Mini`>     |Run common tasks before starting and after stopping the trace.<br><br>`<POD>`: currently, only "NET" is available. Collect additional information before starting and after stopping the trace.<br>`Full`: the full basic log is collected after stopping the trace.<br>`Mini`: the mini basic log is collected after stopping the trace.         |
@@ -142,11 +142,11 @@ Defines specific parameters within the TSS options to control, enhance, or simpl
 |`-ETWlevel` \<`Info`\|`Warning`\|`Error`>     |Set Event Tracing Level. The default value is 0xFF.         |
 |`-EvtDaysBack <N>`     |Convert event logs only for the last N days. The default value is 30 days. It also applies to the SDP report.<br><br>Note:<br>Security event logs will be skipped.          |
 |`-ExternalScript <path to external PS file>`     |Run the specified PowerShell script before starting the trace.         |
-|`-LogFolderPath <Drive:\path to log folder>`     |Use a different log folder path for the resulting output data instead of the default location (*C:\\MS_DATA*). It's useful when drive C: is low on free disk space.         |
+|`-LogFolderPath <Drive:\path to log folder>`     |Use a different log folder path for the resulting output data instead of the default location (*C:\\MS_DATA*). It's useful when drive *C:* is low on free disk space.         |
 |`-MaxEvents <N>`     |As an argument for `'-WaitEvent Evt:..'`, the parameter will investigate the last N number of events with the same event ID (the default value is 1).         |
 |`-Mini`     |Collect only minimal data. Skip `noPSR`, `noSDP`, `noVideo`, `noXray`, `noZip`, and `noBasicLog`.         |
 |`-Mode` \<`Basic`\|`Medium`\|`Advanced`\|`Full`\|`Verbose`\|`VerboseEx`\|`Hang`\|`Restart`<br>\|`Swarm`\|`Kube`\|`GetFarmdata`\|`Permission`\|`traceMS`>     |Run scripts in `Basic`, `Medium`, `Advanced`, `Full`, or `Verbose(Ex)` mode for data collection. `Restart` will restart the associated service.         |
-|`-RemoteRun`     |Use when TSS is being executed on a remote host, for example, via PsExec, in the Azure Serial Console, or with PowerShell remoting. This will inhibit PSR, video recording, starting TssClock, and opening Explorer with final results. In such a case, also consider `-AcceptEula`.         |
+|`-RemoteRun`     |Use when TSS is being executed on a remote host, for example, via PsExec, in the Azure Serial Console, or with PowerShell remoting. This parameter will inhibit PSR, video recording, starting TssClock, and opening Explorer with final results. In such a case, also consider `-AcceptEula`.         |
 |`-StartNoWait`     |Don't wait, and prompt will return immediately. This parameter is useful for the scenario where a user needs to log off.         |
 |`-WaitEvent`     |Monitor for the specified event or stop-trigger; if it's signaled, traces will be stopped automatically.<br><br>There's a wide variety of options to trigger an automatic stop. Run `.\TSSv2.ps1 -Find Monitoring` to see the usage.         |
 |`-Update`<br>1. `-UpdMode` \<`Online`\|`Lite`>      |Update the TSS package. It can be used together with `-UpdMode Online|Lite`.<br><br>`Online` is the default, and `Lite` is the newer lite version.         |
@@ -187,7 +187,7 @@ Defines specific parameters within the TSS options to control, enhance, or simpl
 2. Verify the settings with the `Get-ExecutionPolicy -List` cmdlet that no `ExecutionPolicy` with higher precedence is blocking the execution of this script.
 3. Run the `.\TSSv2.ps1 <Desired Parameters>` cmdlet again.
 
-### Method 2 (alternatively)
+### Method 2 (alternative)
 
 If scripts are blocked by `MachinePolicy`, run the following cmdlets in an elevated PowerShell window:
 
@@ -199,7 +199,7 @@ If scripts are blocked by `MachinePolicy`, run the following cmdlets in an eleva
    Set-ItemProperty -Path HKLM:\Software\Policies\Microsoft\Windows\PowerShell -Name EnableScripts  -Value 1 -Type DWord
    ```
 
-### Method 3 (alternatively)
+### Method 3 (alternative)
 
 If scripts are blocked by `UserPolicy`, run the following cmdlets in an elevated PowerShell window:
 
