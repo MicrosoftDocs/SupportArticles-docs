@@ -2,8 +2,6 @@
 title: Windows Error Reporting and Windows diagnostics enablement guidance
 description: Provides guidance on configuring Windows Error Reporting and Windows Telemetry.
 ms.date: 02/16/2023
-author: v-lianna
-ms.author: v-lianna
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -11,7 +9,7 @@ ms.prod: windows-client
 ms.technology: windows-client-system-management-components
 ms.custom: sap:wer, csstroubleshoot
 localization_priority: medium
-ms.reviewer: kaushika, sangar, plingadevaru
+ms.reviewer: kaushika, sangar, plingadevaru, v-lianna
 ---
 # Windows Error Reporting and Windows diagnostics enablement guidance
 

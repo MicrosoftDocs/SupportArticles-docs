@@ -2,14 +2,12 @@
 title: Forwarded DNS name resolution fails for dual-stacked queries
 description: Describes an issue in which DNS queries that include requests for A and AAAA records initially succeed but then fail.
 ms.date: 2/9/2023
-author: v-tappelgate
-ms.author: v-tappelgate
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, v-tappelgate
 ms.custom: sap:dns, csstroubleshoot
 ms.technology: networking
 keywords: A record, AAAA record, nonexistent domain, DNS cache, conditional forward

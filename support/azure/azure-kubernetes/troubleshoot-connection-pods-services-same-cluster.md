@@ -2,9 +2,7 @@
 title: Troubleshoot connections to pods and services within an AKS cluster
 description: Troubleshoot connections to pods and services (internal traffic) from within an Azure Kubernetes Service (AKS) cluster.
 ms.date: 11/4/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
-ms.reviewer: chiragpa, rissing
+ms.reviewer: chiragpa, rissing, v-leedennis
 editor: v-jsitser
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-outbound-connections

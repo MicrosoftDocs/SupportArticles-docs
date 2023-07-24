@@ -4,8 +4,7 @@ description: This article lists various builds or updates that are available for
 ms.date: 07/13/2023
 ms.custom: sap:Installation, Patching and Upgrade
 ms.topic: how-to
-author: simonxjx
-ms.author: v-six
+ms.reviewer: v-six
 ---
 
 <!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.

@@ -3,8 +3,7 @@ title: Cumulative update 8 for SQL Server 2019 (KB4577194)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 8 (KB4577194).
 ms.date: 06/30/2023
 ms.custom: KB4577194
-author: MonicaChenc
-ms.author: v-cuichen
+ms.reviewer: v-cuichen
 appliesto:
 - SQL Server 2019 on Windows
 - SQL Server 2019 on Linux

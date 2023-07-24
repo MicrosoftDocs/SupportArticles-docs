@@ -2,8 +2,7 @@
 title: BizTalkMsgBoxDb database connection issues
 description: Discusses an issue where you experience blocking, deadlocks, or other connection issues when you try to connect to the BizTalkMsgBoxDb database. This issue may occur in BizTalk Server.
 ms.date: 05/08/2023
-author: padmajayaraman
-ms.author: v-jayaramanp
+ms.reviewer: v-jayaramanp
 ms.custom: sap:Management and Operations
 ---
 

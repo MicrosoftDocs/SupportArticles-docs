@@ -3,8 +3,7 @@ title: Cumulative Update 2 for SQL Server 2019 (KB4536075)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 2 (KB4536075).
 ms.date: 06/30/2023
 ms.custom: KB4536075
-author: Elena068
-ms.author: v-qianli2
+ms.reviewer: v-qianli2
 appliesto:
 - SQL Server 2019 on Windows
 - SQL Server 2019 on Linux

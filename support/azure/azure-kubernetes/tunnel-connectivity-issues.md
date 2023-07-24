@@ -2,9 +2,7 @@
 title: Tunnel connectivity issues
 description: Resolve communication issues that are related to tunnel connectivity in an Azure Kubernetes Service (AKS) cluster.
 ms.date: 7/14/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
-ms.reviewer: chiragpa, andbar
+ms.reviewer: chiragpa, andbar, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: cannot-connect-to-cluster-through-api-server
 keywords: Azure Kubernetes Service, AKS cluster, Kubernetes cluster, tunnels, connectivity, tunnel-front, aks-link

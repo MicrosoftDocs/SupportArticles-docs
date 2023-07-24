@@ -5,13 +5,11 @@ services: virtual-machines
 ms.service: virtual-machines
 ms.subservice: vm-extensions-not-operating
 ms.collection: windows
-author: DennisLee-DennisLee
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
 ms.date: 7/14/2023
-ms.author: v-leedennis
 editor: v-jsitser
-ms.reviewer: kegregoi, scotro
+ms.reviewer: kegregoi, scotro, v-leedennis
 ---
 # Troubleshoot Azure Windows VM Agent issues
 

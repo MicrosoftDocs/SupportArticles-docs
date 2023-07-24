@@ -2,9 +2,7 @@
 title: Troubleshooting problems with Microsoft Web Platform Installer
 description: This article helps you resolve problems with troubleshooting with Microsoft Web Platform Installer. 
 ms.date: 03/18/2009
-author: padmajayaraman
-ms.author: v-jayaramanp
-ms.reviewer: riande, johnhart
+ms.reviewer: riande, johnhart, v-jayaramanp
 ms.topic: troubleshooting
 ---
 
@@ -14,17 +12,17 @@ _Applies to:_ &nbsp; Internet Information Services 7.0, Internet Information Ser
 
 ## Introduction
 
-Microsoft® Web Platform Installer (Web PI) makes it simple to download and install the latest Microsoft® Web Platform components, including Internet Information Services (IIS), Microsoft® SQL Server® 2008/R2 Express, Microsoft® ASP.NET Model View Controller (MVC3), and Microsoft® Visual Web Developer 2008/SP1 Express Edition. Web PI also helps to install popular Web applications such as WordPress, DasBlog, or Silverstripe. This article presents some troubleshooting advice for issues that may arise with Microsoft Web PI.
+Microsoft&reg; Web Platform Installer (Web PI) makes it simple to download and install the latest Microsoft&reg; Web Platform components, including Internet Information Services (IIS), Microsoft&reg; SQL Server&reg; 2008/R2 Express, Microsoft&reg; ASP.NET Model View Controller (MVC3), and Microsoft&reg; Visual Web Developer 2008/SP1 Express Edition. Web PI also helps to install popular Web applications such as WordPress, DasBlog, or Silverstripe. This article presents some troubleshooting advice for issues that may arise with Microsoft Web PI.
 
 Web PI runs on the following operating systems:
 
-- Windows Server® 2008 and Windows Server® 2008 R2
-- Windows® XP Professional Edition Service Pack 3
-- Windows Server® 2003 SP2
-- Windows Vista® SP 1
-- Windows® 7
+- Windows Server&reg; 2008 and Windows Server&reg; 2008 R2
+- Windows&reg; XP Professional Edition Service Pack 3
+- Windows Server&reg; 2003 SP2
+- Windows Vista&reg; SP 1
+- Windows&reg; 7
 
-While it's possible to install Web PI on Windows® XP Home Edition, this operating system version doesn't include IIS. Web PI is therefore not supported on Windows XP Home Edition.
+While it's possible to install Web PI on Windows&reg; XP Home Edition, this operating system version doesn't include IIS. Web PI is therefore not supported on Windows XP Home Edition.
 
 Web PI tasks can be divided into three phases:
 
@@ -34,9 +32,9 @@ Web PI tasks can be divided into three phases:
 
 Web PI helps you install products using one of three technologies:
 
-- Windows® operating system components (for example, IIS) - Web PI uses Windows operating system [tools and interfaces](https://technet.microsoft.com/library/cc776554(WS.10).aspx) such as [PKGMGR](https://technet.microsoft.com/library/cc749302(WS.10).aspx).
-- Non-operating system platform components, (for example, SQL Server 2008/R2 Express) - Web PI uses the Windows® Installer technology (also known as MSI).
-- Web applications (for example, WordPress, Silverstripe, or DasBlog) - Web PI uses the Microsoft® Web Deployment Tool.
+- Windows&reg; operating system components (for example, IIS) - Web PI uses Windows operating system [tools and interfaces](https://technet.microsoft.com/library/cc776554(WS.10).aspx) such as [PKGMGR](https://technet.microsoft.com/library/cc749302(WS.10).aspx).
+- Non-operating system platform components, (for example, SQL Server 2008/R2 Express) - Web PI uses the Windows&reg; Installer technology (also known as MSI).
+- Web applications (for example, WordPress, Silverstripe, or DasBlog) - Web PI uses the Microsoft&reg; Web Deployment Tool.
 
 ## Problems with Visual Web Developer 2010 or Visual Studio 2010 SP1 install
 
@@ -50,7 +48,7 @@ Most common problems during the Web PI Launch phase involve connectivity. Web PI
 
 ### Unable to download Web Platform error message
 
-- **Behind Proxy**: If the computer is behind a proxy, ensure that the proxy settings for Windows® Internet Explorer® are set correctly and retry accessing the URL through Internet Explorer and then through Web PI.  
+- **Behind Proxy**: If the computer is behind a proxy, ensure that the proxy settings for Windows&reg; Internet Explorer&reg; are set correctly and retry accessing the URL through Internet Explorer and then through Web PI.  
 - **Behind Firewalls**: When third-party firewalls are installed on the computer, try disabling them before launching Web PI. You can also add exceptions for *WebpiLauncher.exe* and *WebPlatformInstaller.exe* to the firewall settings. If the issue isn't resolved, it should be possible to fix the problem by following the steps described in [How to troubleshoot network connectivity problems in Internet Explorer](https://support.microsoft.com/kb/936211).
 
 If the URL can be accessed in Internet Explorer but not through Web PI, use [Fiddler](http://www.fiddlertool.com/fiddler/ "Fiddler Web Debugger"), a Web debugger that monitors which HTTP requests are made from a computer.
@@ -87,7 +85,7 @@ notepad %windir%\iis7.log
 
 ### Products installed using Windows Installer (MSI) technology
 
-You can use the [Windows Installer technology](https://msdn.microsoft.com/library/aa371366(VS.85).aspx) for Web platform components such as Microsoft® SQL Server® and Visual Web Developer 2008 Express Edition. To look at the logs, open Internet Explorer and type the following path in the address bar:
+You can use the [Windows Installer technology](https://msdn.microsoft.com/library/aa371366(VS.85).aspx) for Web platform components such as Microsoft&reg; SQL Server&reg; and Visual Web Developer 2008 Express Edition. To look at the logs, open Internet Explorer and type the following path in the address bar:
 
 ```Console
 %localappdata%\Microsoft\Web Platform Installer\logs\install

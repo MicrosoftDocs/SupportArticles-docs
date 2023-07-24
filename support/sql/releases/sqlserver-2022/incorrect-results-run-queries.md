@@ -3,9 +3,7 @@ title: Incorrect results when you run queries against tables that contain indexe
 description: Fixes incorrect results that may occur when you run queries against tables that contain indexes that use a descending sort order.
 ms.date: 06/15/2023
 ms.custom: KB5027811
-author: MonicaChenc
-ms.author: v-cuichen
-ms.reviewer: hay, fahou, abhujabala
+ms.reviewer: hay, fahou, abhujabala, v-cuichen
 appliesto:
 - SQL Server 2022 on Windows
 - SQL Server 2022 on Linux

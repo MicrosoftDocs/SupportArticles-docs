@@ -3,8 +3,7 @@ title: Cumulative update 16 for SQL Server 2019 (KB5011644)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 16 (KB5011644).
 ms.date: 06/30/2023
 ms.custom: KB5011644
-author: MonicaChenc
-ms.author: v-cuichen
+ms.reviewer: v-cuichen
 appliesto:
 - SQL Server 2019 on Windows
 - SQL Server 2019 on Linux

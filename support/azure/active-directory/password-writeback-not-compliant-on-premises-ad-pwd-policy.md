@@ -2,9 +2,7 @@
 title: Troubleshoot password resets blocked by on-premises policy
 description: Troubleshoot scenarios in which a user or administrator can't reset or change a password because of the on-premises Active Directory password policy.
 ms.date: 2/11/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
-ms.reviewer: jarrettr, nualex
+ms.reviewer: jarrettr, nualex, v-leedennis
 ms.service: active-directory
 ms.subservice: enterprise-users
 keywords:

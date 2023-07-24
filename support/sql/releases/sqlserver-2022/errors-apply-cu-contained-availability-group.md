@@ -3,9 +3,7 @@ title: Errors after you apply a cumulative update to a contained availability gr
 description: Fixes the errors that occur after you apply a cumulative update to an instance of SQL Server that has a contained availability group.
 ms.date: 06/27/2023
 ms.custom: KB5027331
-author: MonicaChenc
-ms.author: v-cuichen
-ms.reviewer: matteot, dliao, sureshka, jaferebe
+ms.reviewer: matteot, dliao, sureshka, jaferebe, v-cuichen
 appliesto:
 - SQL Server 2022 on Windows
 - SQL Server 2022 on Linux

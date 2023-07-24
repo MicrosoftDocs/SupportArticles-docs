@@ -2,10 +2,8 @@
 title: Disk partition preservation in Azure virtual machines
 description: Review which disk partitions are preserved or rebuilt during certain processes (restarts, recoveries, upgrades, reimaging, and so on) on an Azure virtual machine.
 ms.date: 09/26/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
 editor: v-jsitser
-ms.reviewer: v-maallu, piw, prpillai
+ms.reviewer: v-maallu, piw, prpillai, v-leedennis
 ms.service: cloud-services
 ms.subservice: troubleshoot-extended-support
 #Customer intent: As an Azure virtual machine user, I want to understand which disk partitions are preserved and which disk partitions are rebuilt so that I know what to expect during certain VM processes, such as reboots, recoveries, updates, reimaging, and node migration.

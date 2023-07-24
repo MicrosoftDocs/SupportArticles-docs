@@ -2,9 +2,7 @@
 title: Azure batch pool creation failure
 description: An Azure batch pool creation failure occurs. You can review the symptoms, understand the causes, and apply solutions to this problem.
 ms.date: 11/22/2022
-author: AmandaAZ
-ms.author: v-weizhu
-ms.reviewer: biny
+ms.reviewer: biny, v-weizhu
 ms.service: batch
 ---
 # Azure batch pool creation failure

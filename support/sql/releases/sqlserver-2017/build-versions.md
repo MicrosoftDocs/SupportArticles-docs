@@ -5,8 +5,7 @@ ms.date: 10/12/2022
 ms.custom: KB4047329
 appliesto:
 - SQL Server 2017
-author: simonxjx
-ms.author: v-six
+ms.reviewer: v-six
 ---
 # KB4047329 - SQL Server 2017 build versions
 

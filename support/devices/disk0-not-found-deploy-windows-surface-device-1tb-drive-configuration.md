@@ -2,14 +2,12 @@
 title: Disk0 not found when deploying Windows on a Surface device that has 1-TB drive configuration
 description: Helps resolve the errors or other issues that concern locating the Disk0 When deploying Windows on a Surface device that has 1-TB drive configuration.
 ms.date: 05/12/2023
-author: v-lianna
-ms.author: v-lianna
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: surface
 localization_priority: medium
-ms.reviewer: delhan
+ms.reviewer: delhan, v-lianna
 ms.custom: csstroubleshoot
 ms.technology: windows
 ---
