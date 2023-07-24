@@ -1,7 +1,7 @@
 ---
 title: LDAP and Kerberos Server reset TCP sessions
 description: Fixes an issue where TCP sessions created to the server ports 88, 389 and 3268 are reset. Sessions using Secure Sockets Layer or Transport Layer Security on ports 636 and 3269 are also affected.
-ms.date: 9/24/2021
+ms.date: 07/10/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article provides a solution to an issue where TCP sessions created to the server ports 88, 389 and 3268 are reset. Sessions using Secure Sockets Layer (SSL) or Transport Layer Security (TLS) on ports 636 and 3269 are also affected.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2000061
 
 ## Symptoms

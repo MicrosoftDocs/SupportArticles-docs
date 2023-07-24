@@ -122,4 +122,4 @@ For more information about the PowerShell scripts that are encoded differently, 
 
 ## Data collection
 
-If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for User Experience issues](../windows-troubleshooters/gather-information-using-tssv2-user-experience.md#powershell).
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../windows-troubleshooters/gather-information-using-tss-user-experience.md#powershell).

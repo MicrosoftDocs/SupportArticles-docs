@@ -102,4 +102,4 @@ Use the Delegate Control Wizard to add the permissions to add read\write permiss
 
 ## Data collection
 
-If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for User Experience issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-user-experience.md#terminal-server-licensing).
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-user-experience.md#terminal-server-licensing).

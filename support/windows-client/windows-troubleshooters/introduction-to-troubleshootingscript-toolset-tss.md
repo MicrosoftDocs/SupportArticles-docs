@@ -1,7 +1,7 @@
 ---
-title: Introduction to TroubleShootingScript toolset (TSSv2)
-description: Introduces the TroubleShootingScript Version 2 (TSSv2) toolset and provides answers to frequently asked questions about the toolset.
-ms.date: 03/31/2022
+title: Introduction to TroubleShootingScript toolset (TSS)
+description: Introduces the TroubleShootingScript (TSS) toolset and provides answers to frequently asked questions about the toolset.
+ms.date: 07/13/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -13,23 +13,23 @@ ms.reviewer: kaushika, muratka, waltere
 ms.custom: sap:windows-troubleshooters, csstroubleshoot
 ms.technology: windows-client-troubleshooter
 ---
-# Introduction to TroubleShootingScript toolset (TSSv2)
+# Introduction to TroubleShootingScript toolset (TSS)
 
-This article introduces the TroubleShootingScript Version 2 (TSSv2) toolset and provides answers to frequently asked questions.
+This article introduces the TroubleShootingScript (TSS) toolset and provides answers to frequently asked questions.
 
 _Applies to:_ &nbsp; Supported versions of Windows Server and Windows Client
 
-The TSSv2 toolset includes PowerShell-based tools and a framework for data collection and diagnostics. The toolset aims to resolve customer support cases efficiently and securely.
+The TSS toolset includes PowerShell-based tools and a framework for data collection and diagnostics. The toolset aims to resolve customer support cases efficiently and securely.
 
 The toolset includes several PowerShell scripts and executable files, which are all signed by Microsoft. Depending on how the toolset is started, it uses one or more of those scripts and executables to collect the required logs.
 
-You can download the toolset as a zip file (*TSSv2.zip*) from https://aka.ms/getTSS.  
+You can download the toolset as a zip file (*TSS.zip*) from https://aka.ms/getTSS.  
 
 ## Prerequisites
 
 Here are some prerequisites for the toolset to run properly:
 
-- The TSSv2 toolset must be run by accounts with administrator privileges on the local system, and the end-user license agreement (EULA) must be accepted. Once the EULA is accepted, the TSSv2 toolset won't prompt the EULA again.
+- The TSS toolset must be run by accounts with administrator privileges on the local system, and the end-user license agreement (EULA) must be accepted. Once the EULA is accepted, the TSS toolset won't prompt the EULA again.
 
 - The PowerShell script execution policy should be set to `RemoteSigned` for the process level by running the cmdlet `Set-ExecutionPolicy -scope Process -ExecutionPolicy RemoteSigned -Force` from an elevated PowerShell command prompt.
 
@@ -38,7 +38,7 @@ Here are some prerequisites for the toolset to run properly:
 
 ## Logs collection and sharing process
 
-The TSSv2 toolset supports collecting various logs for troubleshooting purposes. Microsoft support representatives may provide you with a certain TSSv2 cmdlet to collect logs for a problem when working on a support case, such as:
+The TSS toolset supports collecting various logs for troubleshooting purposes. Microsoft support representatives may provide you with a certain TSS cmdlet to collect logs for a problem when working on a support case, such as:
 
 - Event logs
 - System configuration
@@ -54,41 +54,41 @@ Here are the steps for the logs collection and sharing process:
 > [!NOTE]
 > The support representative will provide you with complete steps for downloading and data collection.
 
-1. The support representative identifies the problem and provides a certain TSSv2 cmdlet to collect the proper logs.
-2. Download the *TSSv2.zip* file and copy the file to the affected systems.
-3. Extract the *TSSv2.zip* file to a local folder in the affected systems, and run the TSSv2 cmdlet(s) from an elevated PowerShell command prompt simultaneously.  
-4. When the issue is reproduced, stop the TSSv2 toolset by pressing any key. The logs are automatically zipped by TSSv2 afterwards.
+1. The support representative identifies the problem and provides a certain TSS cmdlet to collect the proper logs.
+2. Download the *TSS.zip* file and copy the file to the affected systems.
+3. Extract the *TSS.zip* file to a local folder in the affected systems, and run the TSS cmdlet(s) from an elevated PowerShell command prompt simultaneously.  
+4. When the issue is reproduced, stop the TSS toolset by pressing any key. The logs are automatically zipped by TSS afterwards.
 5. Upload the logs to a Microsoft secure file transfer site, which the support representative provides.
 
 The support representative will work on the logs for further troubleshooting and provide the next action plan.
 
 ## Frequently asked questions (FAQs)
 
-- Q1: Does the TSSv2 script change any setup or configuration of my system?
+- Q1: Does the TSS script change any setup or configuration of my system?
 
     A1: No, but a registry setting is required for enabling debug logging in some scenarios. The script sets the necessary key at the start of the data collection and reverts the key to the default value at the end of the data collection. It may also delete some caches (for example, the ARP cache or the name resolution cache) at the start of the data collection to observe the problem from the logs.
 
-- Q2: Does the TSSv2 toolset put an additional load on the server?
+- Q2: Does the TSS toolset put an additional load on the server?
 
-    A2: Some loggings (for example, network capturing, ETW tracing collection, and so on) that are started by the TSSv2 toolset might put a minor load on the system. The load is usually at ignorable levels. Contact your support representative when you see high CPU, memory, or disk usage after starting the TSSv2 toolset.
+    A2: Some loggings (for example, network capturing, ETW tracing collection, and so on) that are started by the TSS toolset might put a minor load on the system. The load is usually at ignorable levels. Contact your support representative when you see high CPU, memory, or disk usage after starting the TSS toolset.
 
-- Q3: Why can't we reproduce the issue when the TSSv2 toolset is running?
+- Q3: Why can't we reproduce the issue when the TSS toolset is running?
 
-    A3: The TSSv2 toolset may delete all cached information at the start. It also starts the network capturing in a promiscuous mode, which changes the Network Interface Card (NIC) default behaviors. These changes might affect the issue, and the problems may disappear. Especially for particular timing issues, problems disappear because of the TSSv2 toolset's data collection. The data collection starts logging, which might affect the issue indirectly and change the situation.
+    A3: The TSS toolset may delete all cached information at the start. It also starts the network capturing in a promiscuous mode, which changes the Network Interface Card (NIC) default behaviors. These changes might affect the issue, and the problems may disappear. Especially for particular timing issues, problems disappear because of the TSS toolset's data collection. The data collection starts logging, which might affect the issue indirectly and change the situation.
 
-- Q4: Why is the TSSv2 toolset not responding for a long time?
+- Q4: Why is the TSS toolset not responding for a long time?
 
-    A4: In some cases, the operating system's built-in commands run by the TSSv2 toolset might not respond or take a long time to complete. Contact your support representative if you experience this issue.
+    A4: In some cases, the operating system's built-in commands run by the TSS toolset might not respond or take a long time to complete. Contact your support representative if you experience this issue.
 
-- Q5: Do I need to worry about disk space or anything else when I run the TSSv2 toolset for a long time?
+- Q5: Do I need to worry about disk space or anything else when I run the TSS toolset for a long time?
 
-    A5: All TSSv2 tracing is configured to run with ring buffers, so you can run the toolset for a long time if needed. The TSSv2 toolset also calculates disk space at the beginning of the data collection and may exit if there isn't sufficient disk space. If you see high disk usage after starting the TSSv2 toolset or have any other concerns about the disk usage of the toolset, contact your support representative.
+    A5: All TSS tracing is configured to run with ring buffers, so you can run the toolset for a long time if needed. The TSS toolset also calculates disk space at the beginning of the data collection and may exit if there isn't sufficient disk space. If you see high disk usage after starting the TSS toolset or have any other concerns about the disk usage of the toolset, contact your support representative.
 
-- Q6: What should I do if I receive the following security warning when running the *.\\TSSv2.ps1* script?
+- Q6: What should I do if I receive the following security warning when running the *.\\TSS.ps1* script?
 
-    `Security Warning: Run only scripts that you trust. While scripts from the Internet can be useful, this script can potentially harm your computer. Do you want to run .\TSSv2.ps1? [D] Do not run [R] Run once [S] Suspend [?] Help (default is "D")`
+    `Security Warning: Run only scripts that you trust. While scripts from the Internet can be useful, this script can potentially harm your computer. Do you want to run .\TSS.ps1? [D] Do not run [R] Run once [S] Suspend [?] Help (default is "D")`
 
-    A6: In rare situations, you may receive this security warning. You may unblock the script by using the cmdlet `PS C:\> Unblock-File -Path C:\TSSv2\TSSv2.ps1`. This script will unblock all other modules by using the cmdlet `Get-ChildItem -Recurse -Path C:\TSSv2\*.ps* | Unblock-File -Confirm:$false`.
+    A6: In rare situations, you may receive this security warning. You may unblock the script by using the cmdlet `PS C:\> Unblock-File -Path C:\TSS\TSS.ps1`. This script will unblock all other modules by using the cmdlet `Get-ChildItem -Recurse -Path C:\TSS\*.ps* | Unblock-File -Confirm:$false`.
 
 ## End User License Agreement (EULA)
 
