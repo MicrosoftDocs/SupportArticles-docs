@@ -54,20 +54,36 @@ HKCU\Software\Policies\Microsoft\Office\16.0\Common\Internet
 
 Modify the DWORD value "OnlineStorage".
 
-Available values are:
+To filter specific services, add the values for all services to be disabled:
+```
+    1 - OneDrive Personal
+    4 - ThisPC
+    8 - SharePoint OnPrem
+    16 - Recent Places
+    32 - SharePoint
+    64 - OneDrive for Business
+    128 - Third Party Services
+```
 
-* **0** Policy is off (all locations are shown)
+Special Values:
+```
+    0 - (Default) All services enabled.
+    2 - (Legacy Value) Disable SharePoint and OneDrive for Business.
+	4294967295 - All optional services disabled.
+```
 
-* **1** Only OneDrive Personal locations are hidden
+For example, OneDrive Personal (1), This PC (4) and Third Party Services (128) can all be disabled with a value of 133.
 
-* **2** All SharePoint Online locations are hidden
+This value is calculated as follows: 1 + 4 + 128 = 133
 
-* **3** All Microsoft Online Locations are hidden
+Common Setting Values:
+```
+ 1 - Disable OneDrive Personal
+ 2 - Disable SharePoint Online and OneDrive for Business
+ 3 - Disable SharePoint Online, OneDrive for Business, and OneDrive Personal
+```
 
-If you set other values, the policy is off (all locations are shown).
-
-If the value is set to **1**, uses can no longer see their personal OneDrive location under **Add a place**.
-
+If you disable or don’t configure this policy setting, users can use any configured Microsoft cloud-based file location to open, save, and share files.
 
 To block the use of OneDrive from within Windows, see [How to block OneDrive.exe from being advertised after you install Office 2016](https://support.microsoft.com/help/3107393). 
 
