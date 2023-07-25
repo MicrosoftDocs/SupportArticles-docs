@@ -15,7 +15,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 7/21/2023
+ms.date: 7/25/2023
 ---
 # Fix video display lag issue in Teams
 
