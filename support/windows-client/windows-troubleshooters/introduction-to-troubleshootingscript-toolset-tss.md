@@ -149,7 +149,7 @@ Defines specific parameters within the TSS options to control, enhance, or simpl
 |`-RemoteRun`     |Use when TSS is being executed on a remote host, for example, via PsExec, in the Azure Serial Console, or with PowerShell remoting. This parameter will inhibit PSR, video recording, starting TssClock, and opening Explorer with final results. In such a case, also consider `-AcceptEula`.         |
 |`-StartNoWait`     |Don't wait, and prompt will return immediately. This parameter is useful for the scenario where a user needs to log off.         |
 |`-WaitEvent`     |Monitor for the specified event or stop-trigger; if it's signaled, traces will be stopped automatically.<br><br>There's a wide variety of options to trigger an automatic stop. Run `.\TSSv2.ps1 -Find Monitoring` to see the usage.         |
-|`-Update`<br>1. `-UpdMode` \<`Online`\|`Lite`>      |Update the TSS package. It can be used together with `-UpdMode Online|Lite`.<br><br>`Online` is the default, and `Lite` is the newer lite version.         |
+|`-Update`<br>1. `-UpdMode` \<`Online`\|`Lite`>      |Update the TSS package. It can be used together with `-UpdMode Online|Lite`.<br><br>`Online` is the default, and `Lite` is the `Upd` lite version.         |
 |`-Help`<br>1. `Common`<br>2. `ALL`<br>3. `Monitoring`<br>4. `Config`<br>5. `Keyword`     |Provide help messages on various scenarios.<br><br>1. Common general help message.<br>2.    All available options.<br>3. Show help messages for monitoring and remote features.<br>4. Help with all config parameters.<br>5. You can enter any keyword, and it will show the help information about that keyword.          |
 |`-Status`     |Show the status of the running trace, if any.        |
 
