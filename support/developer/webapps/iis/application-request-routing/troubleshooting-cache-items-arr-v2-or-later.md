@@ -2,9 +2,7 @@
 title: Troubleshooting cache items in ARR version 2.0 or later
 description: This article provides resolutions for troubleshooting cache items ARR version 2.0 or later.
 ms.date: 04/09/2012
-author: padmajayaraman
-ms.author: v-jayaramanp
-ms.reviewer: apurvajo, chihshen
+ms.reviewer: apurvajo, chihshen, v-jayaramanp
 ms.topic: troubleshooting
 ---
 

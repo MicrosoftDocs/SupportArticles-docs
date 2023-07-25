@@ -5,8 +5,7 @@ ms.date: 10/12/2022
 ms.custom: KB2936603
 appliesto:
 - SQL Server 2014
-author: simonxjx
-ms.author: v-six
+ms.reviewer: v-six
 ---
 # KB2936603 - SQL Server 2014 build versions
 

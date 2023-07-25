@@ -1,8 +1,7 @@
 ---
 title: Self-diagnostics for Application Insights SDKs
 description: Introduces how to collect self-diagnostic logs for some Application Insights SDKs.
-author: AmandaAZ
-ms.author: v-weizhu
+ms.reviewer: v-weizhu
 ms.topic: how-to
 ms.service: azure-monitor
 ms.subservice: application-insights

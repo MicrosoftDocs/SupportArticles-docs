@@ -5,8 +5,7 @@ ms.date: 06/15/2023
 ms.custom: KB4518398
 appliesto:
 - SQL Server 2019
-author: simonxjx
-ms.author: v-six
+ms.reviewer: v-six
 ---
 # KB4518398 - SQL Server 2019 build versions
 

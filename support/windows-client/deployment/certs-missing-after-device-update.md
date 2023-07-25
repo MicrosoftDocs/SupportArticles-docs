@@ -2,14 +2,12 @@
 title: Certificates are missing after you update a device to a newer version of Windows 10
 description: Works around an issue in which a device loses its system and user certificates after an update.
 ms.date: 04/28/2023
-author: v-tappelgate
-ms.author: v-tappelgate
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, v-tappelgate
 ms.custom: sap:deployment, csstroubleshoot
 ms.technology: windows-client-deployment
 keywords: managed devices, certificates, WSUS, MECM, Windows Update
@@ -97,7 +95,7 @@ To add the latest LCU to the update source, follow these steps:
 7. (Optional) Use the updated file to re-create the image. To do this, run the following command:
 
    ```console
-   Oscdimg –n –d –m “<Source>” “<Target.iso>”
+   Oscdimg –n –d –m "<Source>" "<Target.iso>"
    ```
 
    > [!NOTE]  

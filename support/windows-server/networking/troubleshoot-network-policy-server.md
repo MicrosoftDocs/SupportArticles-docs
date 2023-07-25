@@ -2,14 +2,12 @@
 title: Guidance for troubleshooting Network Policy Server
 description: Learn how to troubleshoot scenarios related to Network Policy Server (NPS).
 ms.date: 5/14/2022
-author: v-tappelgate
-ms.author: v-tappelgate
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, v-tappelgate
 ms.custom: sap:nps, csstroubleshoot
 ms.technology: networking
 ---

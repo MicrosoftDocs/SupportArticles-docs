@@ -2,10 +2,8 @@
 title: Windows Azure platform as a service compute diagnostic data
 description: Learn what data is available in Azure platform as a service (PaaS) compute environments. Discover how to gather this data from a PaaS Windows virtual machine.
 ms.date: 09/26/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
 editor: v-jsitser
-ms.reviewer: v-maallu
+ms.reviewer: v-maallu, v-leedennis
 ms.service: cloud-services
 ms.subservice: troubleshoot-extended-support
 #Customer intent: As an Azure virtual machine user, I want to know what kinds of compute diagnostic data can be extracted from a platform as a service (PaaS) Windows virtual machine (VM) so that I can use this data to help troubleshoot various problems.
@@ -13,7 +11,7 @@ ms.subservice: troubleshoot-extended-support
 
 # Windows Azure platform as a service (PaaS) compute diagnostic data
 
-When you have to troubleshoot a problem, one of the most important things to understand is what diagnostic data is available. If you don’t know where to look for logs or other diagnostic information, you might have to resort to the trial-and-error or shotgun approach to troubleshooting. If you have access to logs, you have a better chance of diagnosing any problem, even if it isn’t within your area of expertise.
+When you have to troubleshoot a problem, one of the most important things to understand is what diagnostic data is available. If you don't know where to look for logs or other diagnostic information, you might have to resort to the trial-and-error or shotgun approach to troubleshooting. If you have access to logs, you have a better chance of diagnosing any problem, even if it isn't within your area of expertise.
 
 This article discusses the data that's available in Azure platform as a service (PaaS) compute environments. It describes how you can easily gather this data from a Windows PaaS virtual machine (VM).
 

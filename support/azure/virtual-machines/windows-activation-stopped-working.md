@@ -2,10 +2,8 @@
 title: Windows VM activation no longer works in Azure
 description: Resolve an issue (two new Key Management Services (KMS) IP addresses) that causes Windows Virtual Machine activation to stop working successfully in Azure.
 ms.date: 4/4/2023
-author: DennisLee-DennisLee
-ms.author: v-dele
 editor: v-jsitser
-ms.reviewer: meijin, danielli, scotro
+ms.reviewer: meijin, danielli, scotro, v-leedennis
 ms.service: virtual-machines
 ms.subservice: vm-windows-activation
 ---

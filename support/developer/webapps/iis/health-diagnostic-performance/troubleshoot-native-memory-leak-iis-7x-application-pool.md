@@ -4,9 +4,7 @@ description: This article describes memory leak in an IIS application pool and h
 ms.date: 04/09/2012
 ms.custom: sap:Health, diagnostic, and performance features
 ms.technology: iis-health-diagnostic-performance
-ms.reviewer: johnhart, hulopesv
-ms.author: v-sidong
-author: sevend2
+ms.reviewer: johnhart, hulopesv, v-sidong
 ---
 # Troubleshoot native memory leak in an IIS 7.x application pool
 

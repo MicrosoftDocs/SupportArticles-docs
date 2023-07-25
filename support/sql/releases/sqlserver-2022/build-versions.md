@@ -5,8 +5,7 @@ ms.date: 07/13/2023
 ms.custom: KB5023451
 appliesto:
 - SQL Server 2022
-author: simonxjx
-ms.author: v-six
+ms.reviewer: v-six
 ---
 # KB5023451 - SQL Server 2022 build versions
 
