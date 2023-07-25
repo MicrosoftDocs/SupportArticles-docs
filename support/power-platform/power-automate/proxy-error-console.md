@@ -1,5 +1,5 @@
 ---
-title: Proxy server in your network requires authentication or Communication with cloud services requires network proxy authentication or Proxy server is blocking access to cloud services error
+title: Proxy server or communication requires network authentication error
 description: Provides a resolution for the proxy-related errors that occur in Power Automate for desktop.
 ms.reviewer: pefelesk
 ms.date: 07/25/2023
@@ -40,8 +40,7 @@ To solve this issue, follow these steps:
 
    - Option 1: [Configure Power Automate for desktop to authenticate to a corporate proxy server using the current user's credentials](/power-automate/desktop-flows/governance#configure-power-automate-for-desktop-to-authenticate-to-a-corporate-proxy-server-using-the-current-users-credentials).
    - Option 2: [Configure Power Automate for desktop to interact with a corporate proxy server using Windows credentials](/power-automate/desktop-flows/governance#configure-power-automate-for-desktop-to-authenticate-to-a-corporate-proxy-server-using-windows-credentials).
-
-3. Alternatively, you can [configure Power Automate for desktop to bypass a corporate proxy server](/power-automate/desktop-flows/governance#configure-power-automate-for-desktop-to-bypass-a-corporate-proxy-server).
+   - Option 3: Alternatively, you can [configure Power Automate for desktop to bypass a corporate proxy server](/power-automate/desktop-flows/governance#configure-power-automate-for-desktop-to-bypass-a-corporate-proxy-server).
 
 ## Workaround
 
