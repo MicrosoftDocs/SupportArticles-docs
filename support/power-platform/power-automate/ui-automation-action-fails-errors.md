@@ -7,7 +7,7 @@ ms.subservice: power-automate-desktop-flows
 ---
 # UI automation action fails with "Failed to get element/window" or "Element/Window wasn't found" error
 
-This article helps you resolve error messages that you may receive when a UI automation action fails in Microsoft Power Automate.
+This article helps you resolve error messages that you may receive when a [UI automation action](/power-automate/desktop-flows/actions-reference/uiautomation) fails in Microsoft Power Automate.
 
 _Applies to:_ &nbsp; Power Automate  
 _Original KB number:_ &nbsp; 5003385
