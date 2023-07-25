@@ -1,5 +1,5 @@
 ---
-title: Proxy server or communication requires network authentication error
+title: Proxy server requires authentication or it is blocking access to cloud services error
 description: Provides a resolution for the proxy-related errors that occur in Power Automate for desktop.
 ms.reviewer: pefelesk
 ms.date: 07/25/2023
