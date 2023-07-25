@@ -1,5 +1,5 @@
 ---
-title: Fix video lag issues in Teams
+title: Fix video display lag issue in Teams
 description: Resolves an issue in which the display for attendees lags when viewing a shared video during a Teams call.
 author: Cloud-Writer
 ms.author: meerak
@@ -17,7 +17,7 @@ search.appverid:
   - MET150
 ms.date: 7/21/2023
 ---
-# Fix video lag issues in Teams
+# Fix video display lag issue in Teams
 
 ## Symptoms
 
@@ -29,7 +29,7 @@ Teams isn't detecting motion quickly enough.
 
 By default, the frame rate for screen sharing in Teams is set to the low motion option. This is because commonly shared content, such as an Excel worksheet or Word document, is static. The low motion setting ensures that attendees see the highest possible resolution of the shared content.
 
-Typically, Teams detects when higher motion content, such as a full-screen video, is shared, and it automatically increases the frame rate. However, there are situationsn which this doesn't occur.
+Typically, Teams detects when higher motion content, such as a full-screen video, is shared, and it automatically increases the frame rate. However, there are situations in which this doesn't occur.
 
 ## Resolution
 
