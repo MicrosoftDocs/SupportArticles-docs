@@ -40,7 +40,8 @@ To solve this issue, follow these steps:
 
    - Option 1: [Configure Power Automate for desktop to authenticate to a corporate proxy server using the current user's credentials](/power-automate/desktop-flows/governance#configure-power-automate-for-desktop-to-authenticate-to-a-corporate-proxy-server-using-the-current-users-credentials).
    - Option 2: [Configure Power Automate for desktop to interact with a corporate proxy server using Windows credentials](/power-automate/desktop-flows/governance#configure-power-automate-for-desktop-to-authenticate-to-a-corporate-proxy-server-using-windows-credentials).
-   - Option 3: Alternatively, you can [configure Power Automate for desktop to bypass a corporate proxy server](/power-automate/desktop-flows/governance#configure-power-automate-for-desktop-to-bypass-a-corporate-proxy-server).
+
+   Alternatively, you can [configure Power Automate for desktop to bypass a corporate proxy server](/power-automate/desktop-flows/governance#configure-power-automate-for-desktop-to-bypass-a-corporate-proxy-server).
 
 ## Workaround
 
@@ -94,6 +95,6 @@ If modifying the registry entries described in the **Resolution** section doesn'
 4. Save the changes.
 5. Restart Power Automate for desktop.
 6. Restart the Power Automate service:
-     1. In Windows, open the **Services** desktop app. Press **Windows</kbd>+<kbd>R</kbd> to open the **Run** box, enter *services.msc*, and then press <kbd>Enter</kbd> or select **OK**.
+     1. In Windows, open the **Services** desktop app. Press <kbd>Windows</kbd>+<kbd>R</kbd> to open the **Run** box, enter *services.msc*, and then press <kbd>Enter</kbd> or select **OK**.
      2. Look for **Power Automate service**.
      3. Right-click the service and select **Restart**.
