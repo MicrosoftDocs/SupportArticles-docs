@@ -63,7 +63,7 @@ Detailed results:
 The issue happens when the default locations for new data or log files for a database point to an invalid location. Common scenarios that lead to this:
 
 - Change of storage drives for database and log files and missing to update the default data and log location
-- A misconfiguration of the default data or log path during initial installation in the **Data Directories** tab (see [Install SQL Server from the Installation Wizard (Setup)](/sql/database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup))
+- A misconfiguration of the default data or log path during initial installation in the **Data Directories** tab (see [Database Engine Configuration - Data Directories page](/sql/sql-server/install/instance-configuration#-database-engine-configuration---data-directories-page))
 - A misconfiguration of the default data or log path under **Database Settings** in SQL Server Management Studio (see [View or Change the Default Locations for Data and Log Files](/sql/database-engine/configure-windows/view-or-change-the-default-locations-for-data-and-log-files)).
 
 ## Resolution
