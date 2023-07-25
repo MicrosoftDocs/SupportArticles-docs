@@ -46,7 +46,7 @@ To solve this issue, follow these steps:
 ## Workaround
 
 > [!NOTE]
-> This method isn't recommended since the configuration files aren't updated after a product update.
+> This method isn't recommended since the configuration files are updated after a product update and the following process should be repeated.
 
 If modifying the registry entries described in the **Resolution** section doesn't solve the issue, take the following steps:
 
