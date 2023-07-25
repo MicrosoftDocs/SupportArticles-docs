@@ -27,6 +27,10 @@ The User Log directory in the registry is not valid. Verify DefaultLog key under
 Error code: 0x851A0044
 ```
 
+```output
+Error installing SQL Server Database Engine Services Instance Features. The Database Engine system data directory in the registry is not valid.
+```
+
 When the problem occurs, the SQL Server Setup log file *Summary.txt* has messages similar to one of the following:
 
 ```output
