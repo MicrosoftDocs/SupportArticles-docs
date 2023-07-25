@@ -34,14 +34,14 @@ Power Automate for desktop can't authenticate with the proxy server used by the 
 
 To solve this issue, follow these steps:
 
-1.	[Configure the proxy address and port](/power-automate/desktop-flows/governance#configure-power-automate-for-desktop-to-interact-with-a-corporate-proxy-server) that Power Automate for desktop uses to interact with the proxy server.
+1. [Configure the proxy address and port](/power-automate/desktop-flows/governance#configure-power-automate-for-desktop-to-interact-with-a-corporate-proxy-server) that Power Automate for desktop uses to interact with the proxy server.
 
-2.	Use one of the following options:
+2. Use one of the following options:
 
    - Option 1: [Configure Power Automate for desktop to authenticate to a corporate proxy server using the current user's credentials](/power-automate/desktop-flows/governance#configure-power-automate-for-desktop-to-authenticate-to-a-corporate-proxy-server-using-the-current-users-credentials).
    - Option 2: [Configure Power Automate for desktop to interact with a corporate proxy server using Windows credentials](/power-automate/desktop-flows/governance#configure-power-automate-for-desktop-to-authenticate-to-a-corporate-proxy-server-using-windows-credentials).
 
-3.	Alternatively, you can [configure Power Automate for desktop to bypass a corporate proxy server](/power-automate/desktop-flows/governance#configure-power-automate-for-desktop-to-bypass-a-corporate-proxy-server).
+3. Alternatively, you can [configure Power Automate for desktop to bypass a corporate proxy server](/power-automate/desktop-flows/governance#configure-power-automate-for-desktop-to-bypass-a-corporate-proxy-server).
 
 ## Workaround
 
