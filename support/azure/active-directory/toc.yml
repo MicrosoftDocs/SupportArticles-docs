@@ -87,8 +87,14 @@
   - name: Server Error in '/' Application error in application
     href: server-error-application.md
 
-- name: Directories, Domains, and Objects
+- name: Azure AD Directories, Domains, and Objects
   items:
+  - name: Devices
+    items:
+      - name: No local administrator group privileges on Azure AD-joined device
+        href: no-local-admin-privileges-azure-ad-joined-device.md
+      - name: Pending devices
+        href: pending-devices.md
   - name: Can't delete a directory using portal
     href: cannot-delete-directory-azure-portal.md
   - name: Can't open Azure AD Module PowerShell
@@ -99,8 +105,6 @@
     href: method-invocation-failed-error.md
   - name: Password changes aren't saved
     href: pwd-change-not-save.md
-  - name: Pending devices
-    href: pending-devices.md
   - name: Perform a Workplace Join using DRS
     href: cant-perform-workplace-join.md
   - name: Remove user from recycle bin
@@ -120,7 +124,6 @@
     items:
       - name: Unknown Actors in Audit Reports
         href: unknown-actors-in-audit-reports.md
-
   - name: Sign-in Activity Reports
     items:
       - name: Verify 1st party Microsoft apps in sign-in reports
