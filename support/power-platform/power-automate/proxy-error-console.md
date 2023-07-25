@@ -1,66 +1,68 @@
 ---
 title: Proxy server in your network requires authentication or Communication with cloud services requires network proxy authentication or Proxy server is blocking access to cloud services error
-description: This article provides a resolution for the proxy-related errors that occur in Microsoft Power Automate for desktop.
+description: Provides a resolution for the proxy-related errors that occur in Power Automate for desktop.
 ms.reviewer: pefelesk
-ms.date: 07/24/2023
+ms.date: 07/25/2023
 ms.subservice: power-automate-desktop-flows
 ---
 # Proxy server related errors in Power Automate for desktop
 
-This article provides a resolution for the proxy-related errors that occur in Microsoft Power Automate for desktop.
+This article helps resolve the proxy-related errors that occur in Microsoft Power Automate for desktop.
 
 _Applies to:_ &nbsp; Power Automate
 
 ## Symptoms
 
-You receive one of the following errors in Power Automate for desktop console:
+You receive one of the following errors in the Power Automate for desktop console:
 
-> The proxy server in your network requires authentication.
+- > The proxy server in your network requires authentication.
 
-> The communication with the cloud services requires network proxy authentication.
+- > The communication with the cloud services requires network proxy authentication.
 
-> During startup Power Automate couldn't sign you in. The proxy server in your network requires authentication.
+- > During startup Power Automate couldn't sign you in. The proxy server in your network requires authentication.
 
-> The proxy server in your network is blocking access to Microsoft cloud services.
+- > The proxy server in your network is blocking access to Microsoft cloud services.
 
 ## Cause
 
-Power Automate for desktop can't authenticate with the proxy server that's used by the machine.
+Power Automate for desktop can't authenticate with the proxy server used by the machine.
 
 ## Resolution
 
 > [!NOTE]
-> Administrator rights are required for the following configurations.
+> The following configurations require administrator rights.
 
-To solve this issue, configure the proxy address and port that will be used by Power Automate for desktop to interact with the proxy server. For more information, see [Configure Power Automate for desktop to interact with a corporate proxy server](/power-automate/desktop-flows/governance#configure-power-automate-for-desktop-to-interact-with-a-corporate-proxy-server).
+To solve this issue, follow these steps:
 
-Then, follow one of the below options:
+1.	[Configure the proxy address and port](/power-automate/desktop-flows/governance#configure-power-automate-for-desktop-to-interact-with-a-corporate-proxy-server) that Power Automate for desktop uses to interact with the proxy server.
 
-- Option 1 - [Configure Power Automate for desktop to authenticate to a corporate proxy server using the current user's credentials](/power-automate/desktop-flows/governance#configure-power-automate-for-desktop-to-authenticate-to-a-corporate-proxy-server-using-the-current-users-credentials)
-- Option 2 - [Configure Power Automate for desktop to interact with a corporate proxy server using Windows Credentials](/power-automate/desktop-flows/governance#configure-power-automate-for-desktop-to-authenticate-to-a-corporate-proxy-server-using-windows-credentials)
+2.	Use one of the following options:
 
-Alternatively, you can [configure Power Automate for desktop to bypass a corporate proxy server](/power-automate/desktop-flows/governance#configure-power-automate-for-desktop-to-bypass-a-corporate-proxy-server).
+- Option 1: [Configure Power Automate for desktop to authenticate to a corporate proxy server using the current user's credentials](/power-automate/desktop-flows/governance#configure-power-automate-for-desktop-to-authenticate-to-a-corporate-proxy-server-using-the-current-users-credentials).
+- Option 2: [Configure Power Automate for desktop to interact with a corporate proxy server using Windows credentials](/power-automate/desktop-flows/governance#configure-power-automate-for-desktop-to-authenticate-to-a-corporate-proxy-server-using-windows-credentials).
+
+3.	Alternatively, you can [configure Power Automate for desktop to bypass a corporate proxy server](/power-automate/desktop-flows/governance#configure-power-automate-for-desktop-to-bypass-a-corporate-proxy-server).
 
 ## Workaround
 
 > [!NOTE]
 > This method isn't recommended since the configuration files aren't updated after a product update.
 
-If modifying the registry entries as described above doesn't solve the issue, take the following steps:
+If modifying the registry entries described in the **Resolution** section doesn't solve the issue, take the following steps:
 
 1. Close all instances of Power Automate for desktop.
    
    - Ensure that the icon doesn't exist in the system tray.
    - Ensure that no processes are running in the background using Windows Task Manager.
 
-2. Navigate to the installation folder (_C:\Program Files (x86)\Power Automate Desktop_) and back up the following configuration files to recover them if something goes wrong:
+2. Navigate to the installation folder (_C:\Program Files (x86)\Power Automate Desktop_) and back up the following configuration files. If something goes wrong, you can recover them:
 
-   - PAD.Designer.exe.config
-   - PAD.Console.Host.exe.config
-   - PAD.Robot.exe.config
-   - UIFlowService.exe.config
+   - *PAD.Designer.exe.config*
+   - *PAD.Console.Host.exe.config*
+   - *PAD.Robot.exe.config*
+   - *UIFlowService.exe.config*
 
-3. For all files, edit each file with administrator rights, and add the following child xml node at the end of the root xml node (`<configuration>`).
+3. For all files, edit each file with administrator rights, and add the following child XML node at the end of the root XML node (`<configuration>`).
 
     ```xml
     <system.net> 
@@ -93,6 +95,6 @@ If modifying the registry entries as described above doesn't solve the issue, ta
 4. Save the changes.
 5. Restart Power Automate for desktop.
 6. Restart the Power Automate service:
-     1. In Windows, open the **Services** desktop app. Press **Windows**+**R** to open the **Run** box, enter *services.msc*, and then press <kbd>Enter</kbd> or select **OK**.
-     2. Look for "Power Automate service".
+     1. In Windows, open the **Services** desktop app. Press **Windows</kbd>+<kbd>R</kbd> to open the **Run** box, enter *services.msc*, and then press <kbd>Enter</kbd> or select **OK**.
+     2. Look for **Power Automate service**.
      3. Right-click the service and select **Restart**.
