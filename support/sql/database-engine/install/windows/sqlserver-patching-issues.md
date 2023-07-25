@@ -183,9 +183,11 @@ Applications such as SQL Server that use Windows Installer technology for the se
 
 When you install a Cumulative Update or Service Pack, if the default data and log folders are invalid, you may receive errors that resemble the following messages:
 
-`Error installing SQL Server Database Engine Services Instance Features. The Database Engine system data directory in the registry is not valid.`
+`The User Data directory in the registry is not valid. Verify DefaultData key under the instance hive points to a valid directory.`
 
 `The User Log directory in the registry is not valid. Verify DefaultLog key under the instance hive points to a valid directory.`
+
+`Error installing SQL Server Database Engine Services Instance Features. The Database Engine system data directory in the registry is not valid.`
 
 To fix this issue, follow these steps:
 
