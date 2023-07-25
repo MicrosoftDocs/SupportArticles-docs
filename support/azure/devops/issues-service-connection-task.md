@@ -3,20 +3,18 @@ title: Issues with the service connection in Azure Web App tasks
 description: Provides solutions for issues related to the service connection in Azure Web App tasks.
 ms.date: 05/10/2023
 ms.custom: sap:Pipelines
-ms.reviewer: dmittal, cathmill
-ms.author: v-sidong
-author: sevend2
+ms.reviewer: dmittal, cathmill, v-sidong
 ms.service: azure-devops
 ms.subservice: ts-pipelines
 ---
 # Issues with the service connection in Azure Web App tasks
 
-This article provides troubleshooting steps and solutions for common issues you may encounter with Azure Resource Manager (ARM) service connections when working with Azure services deployment.
+This article provides troubleshooting steps and solutions for common issues you may encounter with Azure Resource Manager (Azure RM) service connections when working with Azure services deployment.
 
 ## Common issues and solutions
 
 > [!NOTE]
-> For more common issues and solutions, see [Troubleshoot ARM service connections](/azure/devops/pipelines/release/azure-rm-endpoint). You can also explore [Service connection APIs](/rest/api/azure/devops/serviceendpoint/endpoints) to get, create, and update endpoints.
+> For more common issues and solutions, see [Troubleshoot Azure RM service connections](/azure/devops/pipelines/release/azure-rm-endpoint) and [Troubleshoot common Azure RM service connection issues](overview-of-azure-resource-manager-service-connections.md). You can also explore [Service connection APIs](/rest/api/azure/devops/serviceendpoint/endpoints) to get, create, and update endpoints.
 
 #### Unable to renew the client secret for a service connection created through the automatic method
 

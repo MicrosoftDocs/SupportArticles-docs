@@ -5,7 +5,8 @@ ms.date: 09/28/2022
 ms.custom: sap:Performance
 ms.topic: troubleshooting
 author: PijoCoder 
-ms.author: v-jayaramanp
+ms.author: jopilov
+ms.reviewer: v-jayaramanp
 ---
 
 # Troubleshoot slow SQL Server performance caused by I/O issues

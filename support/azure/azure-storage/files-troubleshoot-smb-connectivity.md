@@ -3,11 +3,9 @@ title: Troubleshoot Azure Files SMB connectivity and access issues
 description: Troubleshoot problems connecting to and accessing SMB Azure file shares from Windows and Linux clients, and see possible resolutions.
 services: storage
 ms.subservice: files
-author: AmandaAZ
 ms.service: storage
 ms.date: 06/26/2023
-ms.author: v-weizhu
-ms.reviewer: kendownie, jarrettr
+ms.reviewer: kendownie, jarrettr, v-weizhu
 ---
 # Troubleshoot Azure Files connectivity and access issues (SMB)
 
@@ -91,7 +89,7 @@ $resourceGroupName = "<your-resource-group-name>"
 $storageAccountName = "<your-storage-account-name>"
 
 # This command requires you to be logged into your Azure account and set the subscription your storage account is under, run:
-# Connect-AzAccount -SubscriptionId ‘xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx’
+# Connect-AzAccount -SubscriptionId 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'
 # if you haven't already logged in.
 $storageAccount = Get-AzStorageAccount -ResourceGroupName $resourceGroupName -Name $storageAccountName
 

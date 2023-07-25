@@ -2,9 +2,7 @@
 title: Azure RM service connection not listed for a task 
 description: This article provides tips for an issue that you might encounter when a service connection is not listed for a task.
 ms.date: 05/19/2023
-author: padmajayaraman
-ms.author: v-jayaramanp
-ms.reviewer: cathmill, kirthishkt
+ms.reviewer: cathmill, kirthishkt, v-jayaramanp
 ms.custom: sap:Pipelines
 ms.service: azure-devops
 ms.subservice: ts-pipelines

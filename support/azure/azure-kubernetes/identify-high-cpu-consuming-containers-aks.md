@@ -2,11 +2,9 @@
 title: Identify CPU saturation in AKS clusters
 description: Troubleshoot high CPU that the node and containers consume in an AKS cluster.
 ms.date: 05/31/2023
-ms.reviewer: chiragpa
+ms.reviewer: chiragpa, v-weizhu
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-cluster-performance
-author: AmandaAZ
-ms.author: v-weizhu
 ---
 # Troubleshoot high CPU usage in AKS clusters
 

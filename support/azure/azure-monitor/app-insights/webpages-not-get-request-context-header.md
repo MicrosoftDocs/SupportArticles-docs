@@ -4,9 +4,7 @@ description: Provides strategies to help fix an issue that involves Azure Monito
 ms.date: 05/30/2023
 ms.service: azure-monitor
 ms.subservice: application-insights
-ms.reviewer: toddfous, v-kainawroth
-author: AmandaAZ
-ms.author: v-weizhu
+ms.reviewer: toddfous, v-kainawroth, v-weizhu
 ---
 # Failed to get Request-Context correlation header as it may be not included in the response or not accessible error
 

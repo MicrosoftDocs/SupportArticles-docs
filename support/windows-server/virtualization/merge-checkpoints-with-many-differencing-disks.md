@@ -2,14 +2,12 @@
 title: How to merge checkpoints that have multiple differencing disks
 description: Describes different methods of merging checkpoints and their associated differencing disks into the related virtual machine.
 ms.date: 9/17/2022
-author: v-tappelgate
-ms.author: v-tappelgate
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, v-tappelgate
 ms.custom: sap:snapshots-checkpoints-and-differencing-disks, csstroubleshoot
 ms.technology: hyper-v
 keywords: differencing disks, avhdx, merge checkpoint, merge vhd

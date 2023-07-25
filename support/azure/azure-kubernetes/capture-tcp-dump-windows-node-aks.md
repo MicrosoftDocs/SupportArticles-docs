@@ -2,9 +2,7 @@
 title: Capture a TCP dump from a Windows node in an AKS cluster
 description: Understand how to capture a TCP dump from a Windows node within an Azure Kubernetes Service (AKS) cluster.
 ms.date: 11/15/2021
-author: DennisLee-DennisLee
-ms.author: v-dele
-ms.reviewer: erbookbi
+ms.reviewer: erbookbi, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: data-collection-guide
 ---

@@ -5,8 +5,7 @@ ms.date: 10/12/2022
 ms.custom: KB3177312
 appliesto:
 - SQL Server 2016
-author: simonxjx
-ms.author: v-six
+ms.reviewer: v-six
 ---
 # KB3177312 - SQL Server 2016 build versions
 
@@ -80,7 +79,7 @@ This article lists the Microsoft SQL Server 2016 builds that were released after
 | CU9| 13.0.4502.0 | [KB4100997](https://support.microsoft.com/help/4100997) | May 30, 2018 |
 | CU8| 13.0.4474.0 | [KB4077064](https://support.microsoft.com/help/4077064) | March 19, 2018 |
 | CU7| 13.0.4466.4 | [KB4057119](https://support.microsoft.com/help/4057119) | January 04, 2018 |
-| GDR| 13.0.4210.6 | [KB4057118](https://support.microsoft.com/help/4057118) | January 03, 2018 |
+| GDR| 13.0.4210.6 | [KB4057118](https://support.microsoft.com/topic/a20280e3-5540-5487-877a-51e0ccc032ae) | January 03, 2018 |
 | CU6| 13.0.4457.0 | [KB4037354](https://support.microsoft.com/help/4037354) | November 21, 2017|
 | CU5| 13.0.4451.0 | [KB4040714](https://support.microsoft.com/help/4040714) | September 18, 2017 |
 | CU4| 13.0.4446.0 | [KB4024305](https://support.microsoft.com/help/4024305) | August 8, 2017 |
@@ -108,7 +107,7 @@ This article lists the Microsoft SQL Server 2016 builds that were released after
 | CU3 + GDR| 13.0.2186.6 | [KB3194717](https://support.microsoft.com/help/3194717) | November 8, 2016 |
 | GDR| 13.0.1722.0 | [KB3194716](https://support.microsoft.com/help/3194716) | November 8, 2016 |
 | CU2| 13.0.2164.0 | [KB3182270](https://support.microsoft.com/help/3182270) | September 22, 2016 |
-| CU1| 13.0.2149.0 | [KB3164674](https://support.microsoft.com/help/3164674) | July 25, 2016|
+| CU1| 13.0.2149.0 | [KB3164674](https://support.microsoft.com/topic/bbbc754f-b215-72d5-7424-ce9743af2401) | July 25, 2016|
 
 ## References
 

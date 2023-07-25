@@ -3,8 +3,7 @@ title: Cumulative update 20 for SQL Server 2019 (KB5024276)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 20 (KB5024276).
 ms.date: 06/30/2023
 ms.custom: KB5024276
-author: Elena068
-ms.author: v-qianli2
+ms.reviewer: v-qianli2
 appliesto:
 - SQL Server 2019 on Windows
 - SQL Server 2019 on Linux

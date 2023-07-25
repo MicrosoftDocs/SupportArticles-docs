@@ -2,9 +2,7 @@
 title: Troubleshooting IIS 7.x installation problems by checking the log files
 description: This article helps you troubleshoot IIS 7.x installation issues.
 ms.date: 04/09/2012
-author: padmajayaraman
-ms.author: v-jayaramanp
-ms.reviewer: puneetg, johnhart, senyum
+ms.reviewer: puneetg, johnhart, senyum, v-jayaramanp
 ms.topic: troubleshooting
 ---
 

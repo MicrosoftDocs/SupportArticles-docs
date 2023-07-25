@@ -3,9 +3,7 @@ title: Client secret key is expired error
 description: Provides a solution for a Client secret key is expired error that occurs when you deploy or terminate virtual machines.
 ms.date: 09/15/2022
 ms.service: cyclecloud
-ms.author: v-weizhu
-author: AmandaAZ
-ms.reviewer: hclvteam
+ms.reviewer: hclvteam, v-weizhu
 ---
 # Client secret key is expired error occurs when deploying or terminating virtual machines
 

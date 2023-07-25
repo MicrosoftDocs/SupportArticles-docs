@@ -2,9 +2,7 @@
 title: Troubleshoot service connections for Azure RM service principal (manual)
 description: This article explains about how to create service principals by using the Azure RM service principal (manual) option and also troubleshoot an error that occurs while verifying manual Azure RM service connection.
 ms.date: 05/19/2023
-author: padmajayaraman
-ms.author: v-jayaramanp
-ms.reviewer: cathmill, kirthishkt
+ms.reviewer: cathmill, kirthishkt, v-jayaramanp
 ms.custom: sap:Pipelines
 ms.service: azure-devops
 ms.subservice: ts-pipelines

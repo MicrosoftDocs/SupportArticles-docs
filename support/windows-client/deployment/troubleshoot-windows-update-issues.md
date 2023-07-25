@@ -2,14 +2,12 @@
 title: Guidance for troubleshooting Windows Update issues
 description: Learn how to troubleshoot scenarios related to Windows Updates
 ms.date: 04/28/2023
-author: v-tappelgate
-ms.author: v-tappelgate
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, v-tappelgate
 ms.custom: csstroubleshoot
 ms.technology: windows-client-deployment
 ---
