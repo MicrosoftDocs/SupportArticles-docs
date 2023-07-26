@@ -22,6 +22,7 @@ _Original KB number:_ &nbsp; 3087759
 
 ## Links to download the Administrative Templates files based on the operating system version
 
+- [Administrative Templates (.admx) for Windows 11 2022 Update (22H2) - v3.0](https://www.microsoft.com/download/details.aspx?id=105390)
 - [Administrative Templates (.admx) for Windows 11 2022 Update (22H2)](https://www.microsoft.com/download/details.aspx?id=104593)
 - [Administrative Templates (.admx) for Windows 11 October 2021 Update (21H2)](https://www.microsoft.com/download/details.aspx?id=103507)
 - [Administrative Templates (.admx) for Windows 10 2022 Update (22H2)](https://www.microsoft.com/download/details.aspx?id=104677) 
@@ -41,7 +42,7 @@ _Original KB number:_ &nbsp; 3087759
 - [Administrative Templates (.admx) for Windows 8.1 Update and Windows Server 2012 R2 Update](https://www.microsoft.com/download/details.aspx?id=43413)
 - [Administrative Templates (.admx) for Windows 8.1 and Windows Server 2012 R2](https://www.microsoft.com/download/details.aspx?id=41193)
 
-To view ADMX spreadsheets of the new settings that are available in later operating system versions, see [Group Policy Settings Reference Spreadsheet for Windows 10 November 2021 Update (21H2)](https://aka.ms/GPsettings/Windows10-21H2).
+To view ADMX spreadsheets of the new settings that are available in later operating system versions, see [Group Policy Settings Reference Spreadsheet for Windows 10 November 2021 Update (21H2)](https://www.microsoft.com/en-us/download/details.aspx?id=103668) or [Group Policy Settings Reference Spreadsheet for Windows 11 October 2021 Update (21H2)](https://www.microsoft.com/en-us/download/details.aspx?id=103506).
 
 ## Overview
 
