@@ -1,5 +1,5 @@
 ---
-title: Solution cannot be deleted due to dependencies from other components 
+title: Solution can't be deleted due to dependencies from other components 
 description: Works around the Solution cannot be deleted due to dependencies from other components in the system message that occurs when you uninstall a solution.
 ms.reviewer: matp
 ms.date: 07/26/2023
