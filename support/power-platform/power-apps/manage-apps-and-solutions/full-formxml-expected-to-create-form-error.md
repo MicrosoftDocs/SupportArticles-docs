@@ -1,24 +1,25 @@
 ---
-title: Full formXml is expected to create a form
-description: Describes an issue where the message full formXml is expected to create a form is displayed during solution import.
+title: Full formXml is expected to create a form error
+description: Provides a workaround for the Full formXml is expected to create a form error that occurs when you import a solution.
 ms.reviewer: matp
-ms.topic: troubleshooting
-ms.date: 06/18/2021
+ms.date: 07/26/2023
 author: nhelgren
 ms.author: nhelgren
 ---
-# Full formXml is expected to create a form
+# "Full formXml is expected to create a form" error when importing a solution
 
 _Applies to:_ &nbsp; Power Platform, Solutions
 
 ## Symptoms
 
-Microsoft.Crm.CrmInvalidOperationException: full formXml is expected to create a form *formid* message is displayed during solution import.
+When you import a solution, you receive the following error message:
+
+> Microsoft.Crm.CrmInvalidOperationException: full formXml is expected to create a form *<Form ID>*.
 
 ## Cause
 
-This error can occur when the form you are importing doesn’t exist in the target environment and the form is imported for the first time. The solution you are importing has only form changes (diff) in the form XML when it should have the full form XML. A solution should only import a diff form XML when the form is already present in the environment and you’re importing the changes. To verify, open your solution’s customizations.xml file and search for the FormXml node using the form ID that appears in the error message. If the form XML contains an attribute named `solutionaction`, then the form XML is a diff.
+This error occurs when the form you're importing doesn't exist in the target environment, and the form is imported for the first time. The solution you're importing has only form changes (diff) in the form XML when it should have a full FormXml. A solution should only import a diff form XML when the form is already present in the environment and you're importing the changes. To verify, open your solution's *customizations.xml* file and search for the `FormXml` node using the form ID that appears in the error message. If the FormXml contains an attribute named `solutionaction`, the form XML is a diff.
 
 ## Workaround
 
-To work around this scenario the form XML must be a full form XML (shouldn't contain the `solutionaction` attribute located in customizations.xml file) and can be obtained from the instance this form was originally created in as unmanaged.
+To work around this issue, the form XML must be a full FormXml (shouldn't contain the `solutionaction` attribute located in the *customizations.xml* file), and can be obtained from the instance in which this form was originally created as an unmanaged form.
