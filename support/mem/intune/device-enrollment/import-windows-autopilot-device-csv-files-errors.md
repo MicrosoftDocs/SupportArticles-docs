@@ -53,7 +53,7 @@ If the device record doesn't exist in Microsoft Store for Business or Intune, yo
   > - The serial number, chassis ID, or other unique identifier of the device must be present in the document. If it isn't, you need to request the vendor for an updated document of ownership which includes these details about the device.
   > - Your company's name must appear in the document.
 
-Customers who use Microsoft Premier Support don't need to provide proof of ownership for device de-registration. However, they still need to prove that the device is in their possession. 
+Customers who use Microsoft Premier Support don't need to provide proof of ownership to deregister a device. However, they still need to prove that the device is in their possession. 
 
 - **Diagnostic logs**:
 
