@@ -2,14 +2,12 @@
 title: SFC flags Windows Defender PowerShell module files as corrupted
 description: Describes an issue where System File Checker incorrectly flags Windows Defender PowerShell module files as corrupted.
 ms.date: 04/28/2023
-author: simonxjx
-ms.author: v-six
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, v-six
 ms.custom: Fix, csstroubleshoot, devx-track-azurepowershell
 ms.technology: windows-client-deployment
 ---

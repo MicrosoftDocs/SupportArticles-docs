@@ -4,13 +4,11 @@ description: Learn how to troubleshoot Remote Procedure Call (RPC) errors that o
 ms.date: 03/10/2023
 ms.prod: windows-client
 ms.topic: troubleshooting
-author: v-tappelgate
-ms.author: v-tappelgate
 manager: dcscontentpm
 ms.collection: highpri
 ms.technology: windows-client-networking
 ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.reviewer: kaushika
+ms.reviewer: kaushika, v-tappelgate
 audience: itpro
 localization_priority: medium
 ---

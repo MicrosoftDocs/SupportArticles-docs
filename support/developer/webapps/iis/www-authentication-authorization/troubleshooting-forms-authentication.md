@@ -2,9 +2,7 @@
 title: Troubleshooting Forms Authentication
 description: This article helps you troubleshoot problems related to Forms Authentication.
 ms.date: 04/09/2012
-author: padmajayaraman
-ms.author: v-jayaramanp
-ms.reviewer: senyum, apurvajo
+ms.reviewer: senyum, apurvajo, v-jayaramanp
 ms.topic: troubleshooting
 ---
 

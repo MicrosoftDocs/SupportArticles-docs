@@ -4,9 +4,7 @@ metadata:
   description: Review a list of frequently asked questions (FAQ) about exporting data from an Azure Log Analytics workspace.
   ms.topic: faq
   ms.date: 5/9/2022
-  author: DennisLee-DennisLee
-  ms.author: v-dele
-  ms.reviewer: josecons, neghuman
+  ms.reviewer: josecons, neghuman, v-leedennis
   ms.service: azure-monitor
   ms.subservice: logs-troubleshoot
 

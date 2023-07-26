@@ -2,14 +2,12 @@
 title: Cluster IP address resources fail on both nodes of a two-node, two-site cluster when one node disconnects from the public VLAN
 description: This article describes the behavior that occurs when one node of a two-node, two-site cluster disconnects from the public cluster VLAN. In this case, the IP address resources and their corresponding cluster groups fail on both nodes.
 ms.date: 12/9/2021
-author: v-tappelgate
-ms.author: v-tappelgate
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, v-tappelgate
 ms.custom: sap:node-removed-from-the-cluster, csstroubleshoot
 ms.technology: windows-server-high-availability
 keywords: multi-site,multisite,cluster,disconnect,cross-subnet,stretched,vlan

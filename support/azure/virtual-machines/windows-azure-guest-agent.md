@@ -5,13 +5,13 @@ services: virtual-machines
 ms.service: virtual-machines
 ms.subservice: vm-extensions-not-operating
 ms.collection: windows
-author: DennisLee-DennisLee
+author: kegregoi
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
-ms.date: 7/14/2023
-ms.author: v-leedennis
+ms.date: 7/21/2023
+ms.author: kegregoi
 editor: v-jsitser
-ms.reviewer: kegregoi, scotro
+ms.reviewer: v-leedennis, scotro
 ---
 # Troubleshoot Azure Windows VM Agent issues
 
@@ -44,9 +44,7 @@ To verify that the VM is started, follow these steps:
 
 1. In the navigation pane of your Azure VM, select **Overview**.
 
-1. Locate the list of actions at the top of the VM overview page, and then verify that the following conditions are true:
-   - The **Start** link is unavailable.
-   - The **Stop** link is enabled.
+1. If the VM isn't turned on already, locate the list of actions at the top of the **Overview** page, and then select the **Start** link.
 
 Also, verify that the operating system (OS) is started and running successfully.
 
@@ -62,7 +60,11 @@ If the Guest Agent status is **Not ready** or blank, then either Guest Agent isn
 
 ### Step 3: Check whether the Guest Agent services are running
 
-1. [Use Remote Desktop Protocol to connect to your VM](/azure/virtual-machines/windows/connect-rdp).
+1. [Use Remote Desktop Protocol (RDP) to connect to your VM](/azure/virtual-machines/windows/connect-rdp).
+
+   > [!NOTE]  
+   > The Guest Agent isn't necessary for RDP connectivity to work successfully. If you experience issues that affect RDP connectivity to your VM, see [Troubleshoot Remote Desktop connections to an Azure virtual machine](./troubleshoot-rdp-connection.md).
+
 1. On your VM, select **Start**, search for *services.msc*, and then select the **Services** app.
 1. In the **Services** window, select the **RdAgent** service.
 1. Select the **Action** menu, and then select **Properties**.

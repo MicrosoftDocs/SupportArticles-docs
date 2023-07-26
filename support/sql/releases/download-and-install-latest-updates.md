@@ -4,8 +4,7 @@ description: This article lists various builds or updates that are available for
 ms.date: 07/13/2023
 ms.custom: sap:Installation, Patching and Upgrade
 ms.topic: how-to
-author: simonxjx
-ms.author: v-six
+ms.reviewer: v-six
 ---
 
 <!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.
@@ -203,7 +202,7 @@ Each of the following links provides information for all of the applicable produ
 |13.0.4502.0|SP1| CU9| [4100997](https://support.microsoft.com/help/4100997)|May 30, 2018|
 |13.0.4474.0|SP1| CU8| [4077064](https://support.microsoft.com/help/4077064)|March 19, 2018|
 |13.0.4466.4|SP1| CU7| [4057119](https://support.microsoft.com/help/4057119)|January 04, 2018|
-|13.0.4210.6|SP1|GDR|[4057118](https://support.microsoft.com/help/4057118)|January 3, 2018|
+|13.0.4210.6|SP1|GDR|[4057118](https://support.microsoft.com/topic/a20280e3-5540-5487-877a-51e0ccc032ae)|January 3, 2018|
 |13.0.4457.0|SP1| CU6| [4037354](https://support.microsoft.com/help/4037354)|November 20, 2017|
 |13.0.4451.0|SP1| CU5| [4040714](https://support.microsoft.com/help/4040714)|September 18, 2017|
 |13.0.4446.0|SP1| CU4| [4024305](https://support.microsoft.com/help/4024305)|August 8, 2017|
@@ -226,7 +225,7 @@ Each of the following links provides information for all of the applicable produ
 |13.0.2186.6|RTM|CU3 + GDR|[3194717](https://support.microsoft.com/help/3194717)|November 8, 2016|
 |13.0.1722.0|RTM|GDR|[3194716](https://support.microsoft.com/help/3194716)|November 8, 2016|
 |13.0.2164.0|RTM| CU2| [3182270](https://support.microsoft.com/help/3182270)|September 22, 2016|
-|13.0.2149.0|RTM| CU1| [3164674](https://support.microsoft.com/help/3164674)|July 25, 2016|
+|13.0.2149.0|RTM| CU1| [3164674](https://support.microsoft.com/topic/bbbc754f-b215-72d5-7424-ce9743af2401)|July 25, 2016|
 |13.0.1601.5|None| RTM|NA|June 1, 2016|
 
 ### SQL Server 2014
@@ -345,7 +344,7 @@ Each of the following links provides information for all of the applicable produ
 |11.0.5655.0|SP2|CU13| [3165266](https://support.microsoft.com/help/3165266)|July 18, 2016|
 |11.0.5649.0|SP2|CU12| [3152637](https://support.microsoft.com/help/3152637)|May 16, 2016|
 |11.0.5646.0|SP2|CU11| [3137745](https://support.microsoft.com/help/3137745)|March 21,2016|
-|11.0.5644.2|SP2|CU10| [3120313](https://support.microsoft.com/help/3120313)|January 19, 2016|
+|11.0.5644.2|SP2|CU10| [3120313](https://support.microsoft.com/topic/98d38302-ab7e-b0f6-dbef-91bd0eb6cbe5)|January 19, 2016|
 |11.0.5641.0|SP2|CU9| [3098512](https://support.microsoft.com/help/3098512)|November 16, 2015|
 |11.0.5634.1|SP2|CU8| [3082561](https://support.microsoft.com/help/3082561)|September 21, 2015|
 |11.0.5623.0|SP2|CU7| [3072100](https://support.microsoft.com/help/3072100)|July 20, 2015|

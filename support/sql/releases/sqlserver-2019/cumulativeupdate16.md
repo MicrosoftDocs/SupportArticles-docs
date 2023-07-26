@@ -3,8 +3,7 @@ title: Cumulative update 16 for SQL Server 2019 (KB5011644)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 16 (KB5011644).
 ms.date: 06/30/2023
 ms.custom: KB5011644
-author: MonicaChenc
-ms.author: v-cuichen
+ms.reviewer: v-cuichen
 appliesto:
 - SQL Server 2019 on Windows
 - SQL Server 2019 on Linux
@@ -86,7 +85,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="14507662">[14507662](#14507662)</a> | The query processor can't produce a query plan if the `USE PLAN` hint specifies a query plan that has a left outer join and an inner join. | SQL Server Engine | Query Optimizer | Windows |
 | <a id="14670801">[14670801](#14670801)</a> | Executing a query where the plan contains an adaptive join may fail together with the following error: </br></br>Msg 8624, Level 16, State 21, Procedure \<ProcedureName>, Line \<LineNumber> [Batch Start Line \<LineNumber>] </br>Internal Query Processor Error: The query processor could not produce a query plan. For more information, contact Customer Support Services. | SQL Server Engine | Query Optimizer | Windows |
 | <a id="14541295">[14541295](#14541295)</a> | [Improvement: Add an XEvent for tracking manual user plan forcing and unforcing (KB5012964)](https://support.microsoft.com/help/5012964) | SQL Server Engine | Query Store | All |
-| <a id="14576382">[14576382](#14576382)</a> | [Improvement: Make the change tracking table lock escalation policy be the same as the base table's (KB5014047)](https://support.microsoft.com/help/5014047) | SQL Server Engine | Replication | Windows |
+| <a id="14576382">[14576382](#14576382)</a> | [Improvement: Make the change tracking table lock escalation policy be the same as the base table's (KB5014047)](https://support.microsoft.com/topic/4987b431-5d71-4030-84de-d514802151fb) | SQL Server Engine | Replication | Windows |
 | <a id="14579161">[14579161](#14579161)</a> | Assume that you have tables with data on the peers and then you set a peer-to-peer publication by using a last-writer conflict detection policy. The distribution agent occurs the following conflict if you delete a row that was present before the publication was created: </br></br>A conflict of type 'Delete-Update' was detected at peer 1 between peer 100 (incoming), transaction id \<TransactionID> and peer (null) (on disk), transaction id (null) for Table \<TableName> with Primary Key(s): PK values, Current Version '(null)', Pre-Version '(null)' and Post-Version \<VersionNumber>. | SQL Server Engine | Replication | Windows |
 | <a id="14487676">[14487676](#14487676)</a> | [FIX: Severe spinlock contention occurs in SQL Server 2019 (KB4538688)](https://support.microsoft.com/help/4538688) | SQL Server Engine | SQL OS | All |
 | <a id="14558430">[14558430](#14558430)</a> | Running `DBCC CHECKDB` will report "corruption" errors when you use SQL Server graph databases that have edge constraints. | SQL Server Engine | SQL Server Engine | All |

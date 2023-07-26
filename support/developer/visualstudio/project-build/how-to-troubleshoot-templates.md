@@ -2,9 +2,7 @@
 title: Troubleshoot project templates and item templates
 description: Learn how to troubleshoot templates when they fail to load in the development environment.
 ms.date: 01/02/2018
-author: padmajayaraman
-ms.author: v-jayaramanp
-ms.reviewer: tglee
+ms.reviewer: tglee, v-jayaramanp
 ---
 
 # Troubleshoot project and item templates

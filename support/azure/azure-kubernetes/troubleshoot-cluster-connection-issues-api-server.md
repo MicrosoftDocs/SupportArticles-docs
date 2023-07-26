@@ -2,9 +2,7 @@
 title: Troubleshoot cluster connection issues with the API server
 description: Troubleshoot issues that occur when you attempt to connect to the API server of an Azure Kubernetes Service (AKS) cluster.
 ms.date: 12/06/2021
-author: DennisLee-DennisLee
-ms.author: v-dele
-ms.reviewer: "rissing,chiragpa"
+ms.reviewer: rissing chiragpa, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: cannot-connect-to-cluster-through-api-server
 #Customer intent: As an Azure Kubernetes user, I want to take basic troubleshooting measures so that I can avoid cluster connectivity issues with the API server.

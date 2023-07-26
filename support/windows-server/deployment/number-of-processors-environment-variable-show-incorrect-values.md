@@ -2,14 +2,12 @@
 title: The %NUMBER_OF_PROCESSORS% environment variable may show incorrect values
 description: Helps resolve the issue in which the %NUMBER_OF_PROCESSORS% environment variable may show incorrect values on systems with more than 64 logical processors.
 ms.date: 06/30/2023
-author: v-lianna
-ms.author: v-lianna
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika, stevepar, praveenr
+ms.reviewer: kaushika, stevepar, praveenr, v-lianna
 ms.custom: sap:devices-and-drivers, csstroubleshoot
 ms.technology: windows-server-deployment
 ---

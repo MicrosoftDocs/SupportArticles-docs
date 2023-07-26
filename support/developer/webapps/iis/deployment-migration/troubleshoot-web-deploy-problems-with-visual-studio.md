@@ -4,9 +4,7 @@ description: The article helps you troubleshoot a series of errors when trying t
 ms.date: 04/09/2012
 ms.custom: sap:Deployment and migration
 ms.technology: iis-deployment-migration
-ms.reviewer: johnhart, hulopesv
-ms.author: v-sidong
-author: sevend2
+ms.reviewer: johnhart, hulopesv, v-sidong
 ---
 # Troubleshoot Web Deploy problems with Visual Studio
 

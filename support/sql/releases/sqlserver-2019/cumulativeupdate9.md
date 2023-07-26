@@ -3,8 +3,7 @@ title: Cumulative update 9 for SQL Server 2019 (KB5000642)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 9 (KB5000642).
 ms.date: 06/30/2023
 ms.custom: KB5000642
-author: MonicaChenc
-ms.author: v-cuichen
+ms.reviewer: v-cuichen
 appliesto:
 - SQL Server 2019 on Windows
 - SQL Server 2019 on Linux
@@ -61,7 +60,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="13888649">[13888649](#13888649)</a> | FIX: When the master SSIS package calls multiple child packages and their connection managers are parameterized, the SSIS package execution fails with UNEXPECTED TERMINATION or INVALID CONNECTION STRING ATTRIBUTE error while updating connection strings. | Integration Services | Tasks_Components | Windows |
 | <a id="13745362">[13745362](#13745362)</a> | [FIX: ISDBUpgradeWizard.exe throws error when you try to upgrade SSISDB after restoring from earlier versions in SQL Server (KB4547890)](https://support.microsoft.com/help/4547890) | Integration Services | Tools | Windows |
 | <a id="13723579">[13723579](#13723579)</a> | Fixes Recursive hierarchy in **explore** page that's not working properly in MDS version 2019. | Master Data Services | Master Data Services | Windows |
-| <a id="13770149">[13770149](#13770149)</a> | [FIX: SQL Server crashes when Afd!DbCreateSocketOperation process fails (KB4588977)](https://support.microsoft.com/help/4588977) | SQL Server Connectivity | Protocols | Linux |
+| <a id="13770149">[13770149](#13770149)</a> | [FIX: SQL Server crashes when Afd!DbCreateSocketOperation process fails (KB4588977)](https://support.microsoft.com/topic/60ac7c2a-7904-4c3b-8bb7-5233cd5c9d85) | SQL Server Connectivity | Protocols | Linux |
 | <a id="13757446">[13757446](#13757446)</a> | Fixes the issue of sending done token before sending the session kill state when session got killed. This fixes the issue of incorrect session state that occurs when a session is killed on SQL Server external data source instance. | SQL Server Connectivity | SQL Connectivity | Windows |
 | <a id="13746925">[13746925](#13746925)</a> | When running a `RESTORE HEADERONLY` of a SQL Server 2016 backup you may notice [error 3285](/sql/relational-databases/errors-events/database-engine-events-and-errors-3000-to-3999) even if the correct block size has been specified. If the error persists after applying this fix, specify the proper block size or contact Microsoft Support for assistance. | SQL Server Engine | Backup Restore | Windows |
 | <a id="13746927">[13746927](#13746927)</a> | FIX: When you try to restore from a compressed or encrypted backup over an existing TDE enabled database, you may notice that the restore operation may take longer time than expected. | SQL Server Engine | Backup Restore | Windows |

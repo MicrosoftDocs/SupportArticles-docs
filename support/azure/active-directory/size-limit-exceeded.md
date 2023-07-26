@@ -5,7 +5,7 @@ ms.date: 5/31/2023
 author: DevOpsStyle
 ms.author: tommasosacco
 editor: v-jsitser
-ms.reviewer: v-dele, nualex
+ms.reviewer: v-leedennis, nualex
 ms.service: active-directory
 ms.subservice: enterprise-users
 ---

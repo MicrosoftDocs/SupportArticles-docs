@@ -4,9 +4,9 @@ description: This article provides a procedure to help you fix high-CPU-usage is
 ms.date: 03/02/2022
 ms.custom: sap:Performance
 ms.topic: troubleshooting
-ms.reviewer: jopilov
+ms.reviewer: jopilov, v-jayaramanp
 author: prmadhes-msft
-ms.author: v-jayaramanp
+ms.author: prmadhes
 ---
 # Troubleshoot high-CPU-usage issues in SQL Server
 

@@ -2,9 +2,7 @@
 title: Troubleshooting 502 errors in ARR
 description: This article provides resolutions for the IIS Failed Request Tracing Network Monitor WinHTTP tracing related to ARR.
 ms.date: 04/09/2012
-author: padmajayaraman
-ms.author: v-jayaramanp
-ms.reviewer: riande, rimarr
+ms.reviewer: riande, rimarr, v-jayaramanp
 ms.topic: troubleshooting
 ---
 

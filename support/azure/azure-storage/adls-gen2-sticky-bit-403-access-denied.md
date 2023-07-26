@@ -4,9 +4,7 @@ description: Helps you understand the sticky bit and describes how to check this
 ms.date: 04/17/2023
 ms.service: azure-storage
 ms.custom: devx-track-azurecli
-ms.author: v-weizhu
-author: AmandaAZ
-ms.reviewer: jiajwu, zhangjerry, azurestocic
+ms.reviewer: jiajwu, zhangjerry, azurestocic, v-weizhu
 ---
 # 403 Access Denied authorization error when the sticky bit is enabled in ADLS Gen2
 

@@ -3,9 +3,7 @@ title: SQL Server upgrade fails with error 4860 when running update database scr
 description: This article discusses error 4860 that causes a SQL Server upgrade to fail when it runs update database scripts.
 ms.date: 01/11/2023
 ms.custom: sap:Installation, Patching and Upgrade
-author: padmajayaraman
-ms.author: v-jayaramanp
-ms.reviewer: ramakoni
+ms.reviewer: ramakoni, v-jayaramanp
 ---
 
 # SQL Server upgrade fails and returns error 4860

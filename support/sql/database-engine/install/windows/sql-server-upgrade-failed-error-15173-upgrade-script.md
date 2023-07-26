@@ -3,9 +3,7 @@ title: SQL Server upgrade fails with error 15173 when executing Update Database 
 description: This article discusses error 15173 or 15559 that causes a SQL Server upgrade to fail when it runs update database scripts.
 ms.date: 01/10/2023
 ms.custom: sap:Installation, Patching and Upgrade
-author: padmajayaraman
-ms.author: v-jayaramanp
-ms.reviewer: ramakoni
+ms.reviewer: ramakoni, v-jayaramanp
 ---
 
 # SQL Server upgrade fails and returns error 15173 or 15559
@@ -24,7 +22,7 @@ When you check the SQL Server error log, you notice one of the following error e
 
 ```output
 Error: 15173, Severity: 16, State: 1.
-Server principal ‘##MS_PolicyEventProcessingLogin##’ has granted one or more permission(s). Revoke the permission(s) before dropping the server principal.
+Server principal '##MS_PolicyEventProcessingLogin##' has granted one or more permission(s). Revoke the permission(s) before dropping the server principal.
 Error: 912, Severity: 21, State: 2.
 Script level upgrade for database 'master' failed because upgrade step 'msdb110_upgrade.sql' encountered error 15173, state 1, severity 16. This is a serious error condition which might interfere with regular operation and the database will be taken offline. If the error happened during upgrade of the 'master' database, it will prevent the entire SQL Server instance from starting. Examine the previous errorlog entries for errors, take the appropriate corrective actions and re-start the database so that the script upgrade steps run to completion.
 EventID 3417
