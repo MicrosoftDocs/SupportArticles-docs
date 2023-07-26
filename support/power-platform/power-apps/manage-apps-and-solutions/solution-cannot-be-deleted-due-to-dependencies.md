@@ -1,19 +1,20 @@
 ---
 title: Solution cannot be deleted due to dependencies from other components 
-description: Describes an issue where the message Solution cannot be deleted due to dependencies from other components in the system is displayed.
+description: Works around the Solution cannot be deleted due to dependencies from other components in the system message that occurs when you uninstall a solution.
 ms.reviewer: matp
-ms.topic: troubleshooting
-ms.date: 06/18/2021
+ms.date: 07/26/2023
 author: nhelgren
 ms.author: nhelgren
 ---
-# Solution cannot be deleted due to dependencies from other components
+# "Solution cannot be deleted due to dependencies from other components" message when you uninstall a solution
 
 _Applies to:_ &nbsp; Power Platform, Solutions
 
 ## Symptoms
 
-Solution cannot be deleted due to dependencies from other components in the system message displayed when uninstalling a solution.
+When you try to uninstall a solution, you receive the following message:
+
+> Solution cannot be deleted due to dependencies from other components in the system.
 
 ## Cause
 
@@ -21,4 +22,4 @@ This issue can occur when the solution contains components that are referenced b
 
 ## Workaround
 
-To work around this issue, either delete the component or remove the dependency from the solution you’re trying to uninstall. More information: [Removing dependencies](/power-platform/alm/removing-dependencies)
+To work around this issue, delete the component or [remove the dependency](/power-platform/alm/removing-dependencies) from the solution you try to uninstall.
