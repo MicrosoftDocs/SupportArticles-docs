@@ -3,9 +3,7 @@ title: Troubleshooting automatic failover problems
 description: This article provides troubleshooting steps for problems that occur during automatic failover in SQL Server.
 ms.date: 01/19/2023
 ms.custom: sap:Availability Groups
-author: padmajayaraman
-ms.author: v-jayaramanp
-ms.reviewer: ramakoni, cmathews
+ms.reviewer: ramakoni, cmathews, v-jayaramanp
 ---
 
 # Troubleshooting automatic failover problems in SQL Server Always On environments

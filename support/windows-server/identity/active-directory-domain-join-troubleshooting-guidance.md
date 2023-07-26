@@ -1,15 +1,13 @@
 ---
 title: Active Directory domain join troubleshooting guidance
 description: Provides guidance to troubleshoot domain join issues.
-ms.date: 11/21/2022
-author: v-lianna
-ms.author: v-lianna
+ms.date: 07/24/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, v-lianna
 ms.custom: sap:domain-join-issues, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
@@ -49,6 +47,7 @@ The following table lists the ports required to be open between the client compu
 |389|TCP|LDAP Server|LSASS|
 |88|TCP|Kerberos|Kerberos Key Distribution Server|
 |135|TCP|RPC|RPC Endpoint Mapper|
+|445|TCP|SMB|LanmanServer|
 |1024-65535|TCP|RPC|RPC Endpoint Mapper for DSCrackNames, SAMR and Netlogon calls between Client and Domain Controller|
 
 ## Common issues and solutions

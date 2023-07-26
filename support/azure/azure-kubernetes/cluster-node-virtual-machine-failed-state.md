@@ -2,9 +2,7 @@
 title: Azure Kubernetes Service cluster/node is in a failed state
 description: Troubleshoot an issue where an Azure Kubernetes Service (AKS) cluster/node is in a failed state.
 ms.date: 6/21/2023
-author: AmandaAZ
-ms.author: v-weizhu
-ms.reviewer: chiragpa, nickoman
+ms.reviewer: chiragpa, nickoman, v-weizhu
 ms.service: azure-kubernetes-service
 ms.subservice: common-issues
 keywords:

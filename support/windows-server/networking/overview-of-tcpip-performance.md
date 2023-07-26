@@ -2,14 +2,12 @@
 title: Troubleshooting guide on TCP/IP performance issues
 description: Gives an overview of TCP/IP performance and describes a testing tool for TCP throughput. The article also describes the bottlenecks for TCP throughput testing and how to create a baseline.
 ms.date: 12/9/2021
-author: v-lianna
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika, rabhardw, anupamk
+ms.reviewer: kaushika, rabhardw, anupamk, v-lianna
 ms.custom: sap:tcp/ip-communications, csstroubleshoot
 ms.technology: networking
 ---

@@ -3,8 +3,7 @@ title: Cumulative update 5 for SQL Server 2019 (KB4552255)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 5 (KB4552255).
 ms.date: 06/30/2023
 ms.custom: KB4552255
-author: MonicaChenc
-ms.author: v-cuichen
+ms.reviewer: v-cuichen
 appliesto:
 - SQL Server 2019 on Windows
 - SQL Server 2019 on Linux
@@ -54,7 +53,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="13421891">[13421891](#13421891)</a> | [FIX: Access violation may occur when enumerating files in a FileTable in SQL Server (KB4540896)](https://support.microsoft.com/help/4540896) | SQL Server Engine | FileStream and FileTable | Windows |
 | <a id="13508776">[13508776](#13508776)</a> | [FIX: Availability Group failover generates lot of dumps as DTC support is toggled between PER_DB and NONE multiple times (KB4562173)](https://support.microsoft.com/help/4562173) | SQL Server Engine | High Availability and Disaster Recovery | Windows |
 | <a id="13522235">[13522235](#13522235)</a> | [FIX: SQL Server may still read data from secondary replica when ALLOW_CONNECTIONS is set to NO (KB4560051)](https://support.microsoft.com/help/4560051) | SQL Server Engine | High Availability and Disaster Recovery | Windows |
-| <a id="13477441">[13477441](#13477441)</a> | [FIX: Credential update frequency option is added to mssql-conf option in SQL Server 2019 on Linux (KB4556244)](https://support.microsoft.com/help/4556244) | SQL Server Engine | Linux | Linux |
+| <a id="13477441">[13477441](#13477441)</a> | [FIX: Credential update frequency option is added to mssql-conf option in SQL Server 2019 on Linux (KB4556244)](https://support.microsoft.com/topic/c6f090f7-2126-d5d1-3f02-6152faeedb82) | SQL Server Engine | Linux | Linux |
 | <a id="13530877">[13530877](#13530877)</a> | [FIX: VDI backup fails with error after applying SQL Server 2019 CU2/CU3/CU4 (KB4563007)](https://support.microsoft.com/help/4563007) | SQL Server Engine | Linux | Linux |
 | <a id="13452649">[13452649](#13452649)</a> | Enable SQL Server Big Data Clusters Active Directory (AD) deployments when domain controllers aren't acting as DNS servers. | SQL Server Engine | Linux | Linux |
 | <a id="13456880">[13456880](#13456880)</a> | Access violation exception occurs when querying `sys.dm_cluster_endpoints` in SQL Server 2019 on Big Data Cluster. | SQL Server Engine | Linux | Linux |

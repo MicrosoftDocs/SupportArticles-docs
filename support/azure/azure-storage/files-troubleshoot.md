@@ -5,8 +5,7 @@ services: storage
 author: AmandaAZ
 ms.service: azure-file-storage
 ms.date: 06/25/2023
-ms.author: v-weizhu
-ms.reviewer: kendownie, jarrettr
+ms.reviewer: kendownie, jarrettr, v-weizhu
 ---
 # Troubleshoot Azure Files
 

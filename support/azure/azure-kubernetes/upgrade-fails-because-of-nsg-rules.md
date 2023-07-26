@@ -2,10 +2,8 @@
 title: AKS cluster upgrade fails because of NSG rules
 description: Learn how to troubleshoot a Kubernetes upgrade failure because of network security group (NSG) rules. 
 ms.date: 7/28/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
 editor: v-jsitser
-ms.reviewer: chiragpa
+ms.reviewer: chiragpa, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-upgrade-operations
 #Customer intent: As an Azure Kubernetes Services (AKS) user, I want to troubleshoot an AKS cluster upgrade that failed because of network security group (NSG) rules so that I can upgrade successfully.

@@ -2,10 +2,8 @@
 title: Uploading blob or block content fails in Azure Blob Storage
 description: Resolve upload failures of blob or block content (BlockCountExceedsLimit, InvalidBlobOrBlock, InvalidBlock, or InvalidBlockList) in Azure Blob Storage.
 ms.date: 11/11/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
 editor: v-jsitser
-ms.reviewer: broder, anradha
+ms.reviewer: broder, anradha, v-leedennis
 ms.service: azure-storage
 #Customer intent: As an Azure Blob Storage user, I want to resolve BlockCountExceedsLimit, InvalidBlobOrBlock, InvalidBlock, or InvalidBlockList errors so that I can successfully upload large blobs or blocks of data in my applications.
 ---
