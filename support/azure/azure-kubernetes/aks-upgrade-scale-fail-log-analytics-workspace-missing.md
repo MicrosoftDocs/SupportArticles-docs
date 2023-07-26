@@ -2,9 +2,7 @@
 title: Unable to get log analytics workspace info
 description: Provides solutions to an error that occurs when you upgrade or scale a Microsoft Azure Kubernetes Service cluster.
 ms.date: 02/20/2023
-author: AmandaAZ
-ms.author: v-weizhu
-ms.reviewer: chiragpa, cssakscic
+ms.reviewer: chiragpa, cssakscic, v-weizhu
 ms.service: azure-kubernetes-service
 ---
 # Failed to upgrade or scale Azure Kubernetes Service cluster due to missing Log Analytics workspace

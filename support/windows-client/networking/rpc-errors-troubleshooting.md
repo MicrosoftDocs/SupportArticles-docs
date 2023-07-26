@@ -4,13 +4,11 @@ description: Learn how to troubleshoot Remote Procedure Call (RPC) errors that o
 ms.date: 03/10/2023
 ms.prod: windows-client
 ms.topic: troubleshooting
-author: v-tappelgate
-ms.author: v-tappelgate
 manager: dcscontentpm
 ms.collection: highpri
 ms.technology: windows-client-networking
 ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.reviewer: kaushika
+ms.reviewer: kaushika, v-tappelgate
 audience: itpro
 localization_priority: medium
 ---
@@ -214,7 +212,7 @@ Before you contact Microsoft support, we recommend that you gather information a
 
 ### Prerequisites
 
-These procedures use the [TroubleShootingScript Version 2 (TSSv2)](../windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2.md) toolset. To use this toolset, you should be aware of the following prerequisites:
+These procedures use the [TroubleShootingScript (TSS)](../windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tss.md) toolset. To use this toolset, you should be aware of the following prerequisites:
 
 - You must have Administrator-level permission on the local computer.
 - The first time that you run the toolset, you have to accept a EULA.
@@ -233,12 +231,12 @@ These procedures use the [TroubleShootingScript Version 2 (TSSv2)](../windows-tr
 
 ### Gather key information before contacting Microsoft support
 
-1. Download [TSSv2](https://aka.ms/getTSSv2) on all nodes, and expand it to the _C:\\tss\_tool_ folder.
-1. Open the _C:\\tss\_tool_ folder in an elevated PowerShell Command Prompt window.
+1. Download [TSS](https://aka.ms/getTSS) on all nodes, and expand it to the _C:\\tss_ folder.
+1. Open the _C:\\tss_ folder in an elevated PowerShell Command Prompt window.
 1. Start traces on the problem computer by running the following cmdlet:
 
     ```powershell
-    TSSv2.ps1 -Start -Scenario NET_RPC
+    TSS.ps1 -Scenario NET_RPC
     ```
 
 1. Respond to the EULA prompt.

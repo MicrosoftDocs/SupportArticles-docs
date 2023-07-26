@@ -22,13 +22,13 @@ _Original KB number:_ &nbsp; 2799178
 
 ## Symptoms
 
-A Windows 8 Desktop computer is automatically waking from sleep or hibernation at a certain time even if there is no "ACPI Wake Alarm" system device found by the operating system.
+A Windows 8 Desktop computer is automatically waking from sleep or hibernation at a certain time even if there's no "ACPI Wake Alarm" system device found by the operating system.
 
 ## Cause
 
 For Windows 8 desktops or All-in-one computers, under **Action Center** > **Automatic Maintenance**, the **Allow scheduled maintenance to wake up my computer at the scheduled time** checkbox is automatically enabled. Also, the power policy/Advanced settings/Sleep/Allow wake timers will default to Enabled for AC power.
 
-If the desktop machine does not have an "ACPI Wake Alarm" device (or if it is disabled in the BIOS), Windows 8 still uses the Real Time Clock (RTC) to program wake events, assuming the power policy/Advanced settings/Sleep/Allow wake timers is Enabled for AC power.
+If the desktop machine doesn't have an "ACPI Wake Alarm" device (or if it's disabled in the BIOS), Windows 8 still uses the Real Time Clock (RTC) to program wake events, assuming the power policy/Advanced settings/Sleep/Allow wake timers is Enabled for AC power.
 
 Windows 8 automatically configures a "Regular Maintenance" event in TaskScheduler to run at 3:00 AM every day. After initial installation of Window 8, Windows Update is preconfigured to initiate the regular maintenance task and wake event to ensure that it is run.
 
@@ -43,7 +43,7 @@ To prevent the Regular Maintenance task from waking the machine at 3:00am, go to
 
 When an application schedules a maintenance trigger (such as Windows Update, if it has downloaded a qualified update to be installed under maintenance), the following actions will take place:
 
-1. From an Administrator command prompt, `Powercfg /waketimers` will indicate that the Regular Maintenance task is scheduled to run at 3:00 AM. For example:
+1. From an Administrator command prompt, `Powercfg /waketimers` indicates that the Regular Maintenance task is scheduled to run at 3:00 AM. For example:
 
     ```console
     C:\\> powercfg /waketimers
@@ -69,4 +69,4 @@ The first application to make use of the Regular Maintenance task scheduling fea
 
 ## Data collection
 
-If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

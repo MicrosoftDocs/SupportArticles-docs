@@ -2,9 +2,7 @@
 title: Fail to delete an existing Azure RM service connection 
 description: This article provides workaround for issues that you might encounter when you can't delete an existing Azure RM service connection. 
 ms.date: 05/19/2023
-author: padmajayaraman
-ms.author: v-jayaramanp
-ms.reviewer: cathmill, kirthishkt
+ms.reviewer: cathmill, kirthishkt, v-jayaramanp
 ms.custom: sap:Pipelines
 ms.service: azure-devops
 ms.subservice: ts-pipelines

@@ -2,9 +2,7 @@
 title: Debug PowerShell scripts run by Custom Script Extension or Run Command
 description: Troubleshoot PowerShell script failures when you run them remotely on a virtual machine by using the Custom Script Extension or Run Command feature.
 ms.date: 3/15/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
-ms.reviewer: clandis 
+ms.reviewer: clandis, v-leedennis
 editor: v-jsitser
 ms.service: virtual-machines
 ms.subservice: vm-troubleshooting-tools

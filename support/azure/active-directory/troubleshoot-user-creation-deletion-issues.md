@@ -2,9 +2,7 @@
 title: Fix user creation and deletion issues in Azure Active Directory
 description: Troubleshoot user creation and deletion issues in Azure Active Directory. Create and delete users in Azure portal, Microsoft Graph, PowerShell, and Azure CLI.
 ms.date: 12/15/2021
-author: DennisLee-DennisLee
-ms.author: v-dele
-ms.reviewer: "tovascon,anhorta"
+ms.reviewer: tovascon, anhorta, v-leedennis
 ms.service: active-directory
 ms.subservice: domain-services
 ms.custom: devx-track-azurecli

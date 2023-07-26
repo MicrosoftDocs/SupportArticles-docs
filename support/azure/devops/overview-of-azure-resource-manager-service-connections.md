@@ -2,9 +2,7 @@
 title: Troubleshoot Azure RM service connection issues
 description: Provides an overview of Azure RM service connection, types of connection modes, and lists the tools used to troubleshoot various scenarios.
 ms.date: 05/19/2023
-author: padmajayaraman
-ms.author: v-jayaramanp
-ms.reviewer: cathmill, kirthishkt
+ms.reviewer: cathmill, kirthishkt, v-jayaramanp
 ms.custom: sap:Pipelines
 ms.service: azure-devops
 ms.subservice: ts-pipelines

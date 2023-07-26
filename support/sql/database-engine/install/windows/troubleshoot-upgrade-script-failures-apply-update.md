@@ -3,9 +3,7 @@ title: Troubleshoot upgrade script failures when applying an update
 description: Helps you troubleshoot and solve upgrade script failures when you apply an update.
 ms.date: 01/11/2023
 ms.custom: sap:Installation, Patching and Upgrade
-ms.reviewer: ramakoni
-author: sevend2
-ms.author: v-sidong
+ms.reviewer: ramakoni, v-sidong
 ---
 
 # Troubleshoot upgrade script failures when applying an update
