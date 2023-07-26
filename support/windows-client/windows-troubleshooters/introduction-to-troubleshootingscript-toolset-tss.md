@@ -1,7 +1,7 @@
 ---
 title: Introduction to TroubleShootingScript toolset (TSS)
 description: Introduces the TroubleShootingScript (TSS) toolset and provides answers to frequently asked questions about the toolset.
-ms.date: 07/13/2023
+ms.date: 07/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -19,48 +19,204 @@ This article introduces the TroubleShootingScript (TSS) toolset and provides ans
 
 _Applies to:_ &nbsp; Supported versions of Windows Server and Windows Client
 
-The TSS toolset includes PowerShell-based tools and a framework for data collection and diagnostics. The toolset aims to resolve customer support cases efficiently and securely.
+The TSS toolset includes PowerShell-based tools and a framework for data collection and diagnostics. The toolset aims to simplify data collection and help resolve cases efficiently and securely.
 
-The toolset includes several PowerShell scripts and executable files, which are all signed by Microsoft. Depending on how the toolset is started, it uses one or more of those scripts and executables to collect the required logs.
+The toolset includes several PowerShell scripts and executable files, which are all signed by Microsoft. Based on the selected switches, TSS uses one or more scripts and executable files to collect the desired logs.
 
-You can download the toolset as a zip file (*TSS.zip*) from https://aka.ms/getTSS.  
+You can download the toolset as a zip file (*TSS.zip*) from https://aka.ms/getTSS.
 
 ## Prerequisites
 
 Here are some prerequisites for the toolset to run properly:
 
-- The TSS toolset must be run by accounts with administrator privileges on the local system, and the end-user license agreement (EULA) must be accepted. Once the EULA is accepted, the TSS toolset won't prompt the EULA again.
+- The TSS toolset must be run in an elevated PowerShell window by accounts with administrator privileges on the local system. Running the TSS toolset in the Windows PowerShell Integrated Scripting Environment (ISE) isn't supported. The end-user license agreement (EULA) must be accepted. Once the EULA is accepted, the TSS toolset won't prompt for the EULA again.
 
-- The PowerShell script execution policy should be set to `RemoteSigned` for the process level by running the cmdlet `Set-ExecutionPolicy -scope Process -ExecutionPolicy RemoteSigned -Force` from an elevated PowerShell command prompt.
+- The PowerShell script execution policy should be set to `RemoteSigned` at the process level by running the cmdlet `Set-ExecutionPolicy -scope Process -ExecutionPolicy RemoteSigned -Force` from an elevated PowerShell command prompt.
 
     > [!NOTE]  
     > The process level changes only affect the current PowerShell session.
 
-## Logs collection and sharing process
+## How to start the TSS toolset
 
-The TSS toolset supports collecting various logs for troubleshooting purposes. Microsoft support representatives may provide you with a certain TSS cmdlet to collect logs for a problem when working on a support case, such as:
+You can start *TSS.ps1* with different switches depending on the scenario. The `-Start` verb is the default and optional verb, and can be replaced with a complementary verb as needed. The complementary `-Start` verbs are `-StartAutoLogger`, `-StartDiag`, `-StartNoWait`, and `-CollectLog`.
 
-- Event logs
-- System configuration
-- Configuration details for installed Microsoft services
-- Performance monitor logs
-- Windows Performance Recorder (WPR) traces
-- Network traces
-- Memory dumps
-- Event Tracing for Windows (ETW) traces for various components
+|Verb  |Description  |
+|---------|---------|
+|`-Start`     |The `-Start` verb starts Event Tracing for Windows (ETW) component traces or support tools such as Windows Performance Recorder (WPR).<br><br>The `[-Start]` verb is optional but can be replaced with complementary `-start` options.         |
+|`-StartAutoLogger`     |To collect these logs at the boot time, use `-StartAutoLogger` to replace `-Start`.<br><br>Use it in combination with the `.\TSS.ps1 -Stop` cmdlet to stop the traces once the issue is reproduced.         |
+|`-StartDiag`     |While this switch doesn't have much use in the present, it's meant to be used in the future in multiple scenarios. As of today, it can be combined with other arguments like `NET_DFSn` to get diagnostics of the DFSN namespace.         |
+|`-StartNoWait`     |This parameter allows the traces to remain active even when you sign out.<br><br>Use it in combination with the `.\TSS.ps1 -Stop` cmdlet to stop the traces once the issue is reproduced.        |
+|`-CollectLog`     |This parameter is commonly used along with the argument `DND_SetupReport`.<br><br>Example:<br>`.\TSS.ps1 -Collectlog DND_SetupReport`         |
 
-Here are the steps for the logs collection and sharing process:
+Logs related to the traces are also automatically collected when you stop data collection.
+
+## Syntax to use TSS toolset
+
+|Parameter  |Description  |
+|---------|---------|
+|`<placeholder>`     |The string in angle brackets (\< \>) for placeholders needs to be substituted with an actual scenario name, trace component, command, or value.         |
+|`[optional]`     |The keyword or value in square brackets ([ ]) is optional. For example, `[module:int]` means the module and interval are optional. The default value is used if `[<xx>:<yy>]` is omitted.         |
+|\|     |This parameter means `'OR'`. You can choose one of the available options.         |
+|`:`     |The separator character between two values.         |
+
+## Cmdlet examples
+
+|PowerShell cmdlet  |Description  |
+|---------|---------|
+|`.\TSS.ps1 -PerfMon [General:10]`     |This parameter means `PerfMon CounterSetName`= `General` and `Interval`= `10` seconds. When `[General:10]` is omitted, the default kicks in, so `-PerfMon` has the same effect as `-PerfMon General -PerfIntervalSec 10`.         |
+|`.\TSS.ps1 [-StopWaitTimeInSec <N>]`      |This parameter means that the argument `-StopWaitTimeInSec` is optional, but if it's specified, a value for `<N>` ="the number of seconds" is mandatory.         |
+
+## Event Tracing for Windows (ETW) trace
+
+|ETW trace  |PowerShell cmdlet  |Description  |
+|---------|---------|---------|
+|Enable a scenario trace.     |`.\TSS.ps1 -Scenario <ScenarioName>`         |The supported scenario names are listed using the `TSSv2.ps1 -ListSupportedScenarioTrace` cmdlet.         |
+|Enable component traces.     |`.\TSS.ps1 <-ComponentName> <-ComponentName> ...`         |The supported `<-componentName>` is listed using the `TSSv2.ps1 -ListSupportedTrace` cmdlet.         |
+|Start traces with no-wait mode.     |`.\TSS.ps1 -StartNoWait -Scenario <ScenarioName>`<br><br>`.\TSS.ps1 -Stop`         |The prompt returns immediately, so you can sign out or use a cmdlet like `Shutdown`.<br><br>The cmdlet `.\TSS.ps1 -Stop` stops the trace.         |
+
+> [!NOTE]  
+> To list all provider GUIDs of components and/or scenarios, use the `-ListETWProviders` cmdlet. For example:
+>
+> ```PowerShell
+> .\TSS.ps1 -ListETWProviders <component-/scenario-name>
+> ```
+
+## Support tools and commands
+
+Start support tools or commands (for example, ProcMon, ProcDump, netsh, Performance Monitor (PerfMon), WPR, or Radar) to enhance log collection with additional tools for specialized captures.
+
+|PowerShell cmdlet|Description|
+|---------|---------|
+|`-Fiddler`|Collect Fiddler trace. It requires Fiddler to be installed.<br><br>Enable the traffic decryption option by selecting **Tools** > **Options** and selecting **Decrypt HTTPS Traffic** on the **HTTPS** tab.|
+|`-GPresult` \<`Start`\|`Stop`\|`Both`>|Collect SysInternals *Handle.exe* output on phase `start`, `stop`, or `both`.|
+|`-Handle` \<`Start`\|`Stop`\|`Both`>|Collect SysInternals *Handle.exe* output on phase `start`, `stop`, or `both`.|
+|`-LiveKD` \<`Start`\|`Stop`\|`Both`>|Start SysInternals LiveKD `-ml` (live kernel dump).<br>`<Start>`: the dump is taken at the start of the repro.<br>`<Stop>`: the dump is taken at stop.<br>`<Both>`: the dump is taken at both start and stop.|
+|`-Netsh`<br>1. `-NetshOptions '<Option string>'`<br>2. `-NetshMaxSizeMB <Int>`<br>3. `-noPacket`|Start network packet capturing.<br><br>1. Specify additional options for `Netsh`. For example, `'capturetype=both captureMultilayer=yes provider=Microsoft-Windows-PrimaryNetworkIcon provider={<GUID>}'`.<br>2. The maximum log size for `Netsh` in megabytes (MB) (for example, `-NetshMaxSizeMB 4096`). The default value is 2048.<br>3. Prevent packets from being captured with `Netsh` (only ETW traces in the `ScenarioName` will be captured).|
+|`-NetshScenario`<br>1. `-NetshOptions '<Option string>'`<br>2. `-NetshMaxSizeMB <Int>`<br>3. `-noPacket`|Start the `Netsh` scenario trace. The supported `<ScenarioName>` is listed using the `-ListSupportedNetshScenario` cmdlet.<br><br>1. Specify additional options for `Netsh`. For example, `'capturetype=both captureMultilayer=yes provider=Microsoft-Windows-PrimaryNetworkIcon provider={<GUID>}'`.<br>2. The maximum log size for `Netsh` in MB (for example, `-NetshMaxSizeMB 4096`). The default value is 2048.<br>3. Prevent packets from being captured with `Netsh` (only ETW traces in the scenario name will be captured).|
+|`-PerfMon <CounterSetName> [-PerfIntervalSec N] [-PerfMonMaxMB <N>] [-PerfMonCNF <[[hh:]mm:]ss>]`<br>1. `-PerfIntervalSec <Interval in sec>`<br>2. `-PerfMonMaxMB <N>`<br>3. `-PerfMonCNF <[[hh:]mm:]ss>`|Start Performance Monitor logs. The `<CounterSetName>` can be listed using the `-ListSupportedPerfCounter` cmdlet.<br><br>1. Set the interval for the `PerfMon` log (the default value is 10 seconds).<br>2. Specify an int value for the maximum `Perfmon` log size in MB (the default value is 2048).<br>3. Create a new file when the specified time has elapsed or when the max size of `<PerfMonMaxMB>` is exceeded.|
+|`-PerfMonLong <CounterSetName> [-PerfLongIntervalMin N] [-PerfMonMaxMB <N>] [-PerfMonCNF <[[hh:]mm:]ss>]`<br>1. `-PerfLongIntervalMin <Interval in min>`|Performance Monitor with a long interval.<br><br>1. Set the interval for the `PerfMonLong` log (the default value is 10 minutes).|
+|`-PktMon`|Collect packet monitoring data (on Windows Server 2019, Windows 10, version 1809, and later versions). `PktMon:Drop` collects only dropped packets.|
+|`-PoolMon` \<`Start`\|`Stop`\|`Both`>|Collect `PoolMon` on `start`, `stop`, or `both`.|
+|`-ProcDump` \<`PID[]`\|`ProcessName.exe[]`\|`ServiceName[]`><br>1. `-ProcDumpOption` \<`Start`\|`Stop`\|`Both`> `-ProcDumpInterval <N>:<Interval in sec>`<br>2. `-ProcDumpInterval <N>:<Interval in sec>`<br>3. `-ProcDumpAppCrash`|Capture user dumps of a single item or comma-separated list of items using SysInternals *ProcDump.exe*. By default, the dump is taken at the start of the repro and stop. Enter `ProcessName`(s) with the `.exe` extension.<br><br>1. `Start`: the dump is taken at the start of the repro.<br>`Stop`: the dump is taken at stop.<br>`Both` (default): the dump is taken at both start and stop.<br>2. Use this option when the dump needs to be captured repeatedly.<br>`N`: the number of dumps<br>`Int`: the interval in seconds<br>The default value is 3:10.<br>3. This switch enables `ProcDump -ma -e`, which writes a full dump when the process encounters an unhandled exception.|
+|`-ProcMon`<br>1. `-ProcmonAltitude <N>`<br>2. `-ProcmonPath <folder path to Procmon.exe>`<br>3. `-ProcmonFilter <filter-file.pmc>`|Start SysInternals *Procmon.exe*.<br><br>1. Specify a string value for `ProcmonAltitude` (the default value is 385200). Use `fltmc instances` to show filter driver altitude. Use a lower number than the suspected specific driver. Value 45100 will show you virtually everything.<br>2. Specify a path to *Procmon.exe* (by default, TSS uses the built-in Procmon).<br>3. Specify a config file for Procmon (for example, *ProcmonConfiguration.pmc*) located in the *\\config* folder.|
+|`-PSR`|Start Problems Steps Recorder.|
+|`-Radar` \<`PID[]`\|`ProcessName[]`\|`ServiceName[]`>|Collect the leak diagnostic information (*rdrleakdiag.exe*).<br><br>For example, `-Radar AppIDSvc`.|
+|`-RASdiag`|Collect trace. The `Netsh` Ras diagnostics set trace is enabled.|
+|`-SDP <SpecialityName[]>`<br>1. `-SkipSDPList "<xxx>","<yyy>"`<br>2. `<SpecialityName>`|Collect Support Diagnostic Package (SDP) for the specified specialty. For the complete list of `SpecialityNames` and `SkipSDPList`, use the `.\tss -help` cmdlet.<br><br>Skip the comma-separated list of SDP module names that hang in your environment while running the SDP report.|
+|`-SysMon`|Collect SysInternals System Monitor (SysMon) logs (*sysmonConfig.xml* in the config folder by default).|
+|`-TTD` \<`PID[]`\|`ProcessName.exe[]`\|`ServiceName[]`><br>1. `-TTDPath <Folder path to tttracer.exe>`<br>2. `-TTDMode` \<`Full`\|`Ring`\|`onLaunch`><br>3. `-TTDMaxFile <size in MB>`<br>4. `-TTDOptions '<String of TTD options>'`|Start Time Travel Debugging (TTD) (TTT/iDNA) with the default `-Full` mode. Enter the `ProcessName`(s) with the `.exe` extension, a single item (PID/name) or a comma-separated list of items.<br><br>Note: <br>Down-level operating system before Windows 10, version 1703 requires the *TSS_TTD.zip* package.<br><br>1. Specify the folder path containing *tttracer.exe* (PartnerTTD). Typically, this switch is only needed if you want to force a specific path.<br>2. `Full` = -dumpfull (=default)<br>`Ring` = ring buffer mode<br>`onLaunch` = -onLaunch (requires TSS_TTD)<br>3. The maximum log file size. The operation depends on `-TTDMode`. `Full` stops when the maximum size is reached, and `Ring` keeps the maximum size in the ring buffer.<br>4. Use this option to add any additional options for TTD (TTT/iDNA).|
+|`-Video`|Start video capturing (requires .NET 3.5 to be installed).|
+|`-WFPdiag`|Collect traces with the `netsh Wfp capture` command.|
+|`-WireShark`|Start WireShark. The following parameters are configurable through the *tss_config.cfg* file. <br><br>1. `WS_IF`: used for `-i`. Specify the interface number (for example, `_WS_IF=1`).<br>2. `WS_Filter`: used for `-f`. Filter for the interface (for example, `_WS_Filter="port 443"`).<br>3. `WS_Snaplen`: used for `-s`. Limit the amount of data for each frame. This parameter has better performance and is helpful for high-load situations (for example, `_WS_Snaplen=128`).<br>4. `WS_TraceBufferSizeInMB`: used for `-b FileSize` (multiplied by 1024). Switch to the next file after the number of megabytes. (for example, `_WS_TraceBufferSizeInMB=512`, default=512 MB)<br>5. `WS_PurgeNrFilesToKeep`: used for `-b files`. Replace after the number of the files. (for example, `_WS_PurgeNrFilesToKeep=20`)<br>6. `WS_Options`: any other options for `-i` (for example, `_WS_Options="-P"`).<br><br>Example:<br>To collect WireShark on interfaces 15 and 11, input when TSS prompts for an interface number: `15 -i 11`.<br><br>By default, Wireshark starts `dumpcap.exe -i <all NICs> -B 1024 -n -t -w _WireShark-packetcapture.pcap -b files:10 -b filesize:524288`.|
+|`-WPR <WPRprofile>`<br>1. `-SkipPdbGen`<br>2. `-WPROptions '<Option string>'`|Start a WPR profile trace. `<WPRprofile>` is one of `General`\|`BootGeneral`\|`CPU`\|`Device`\|`Memory`\|`Network`\|`Registry`\|`Storage`\|`Wait`\|`SQL`\|`Graphic`\|`Xaml`\|`VSOD_CPU`\|`VSOD_Leak`.<br><br>1. Skip generating symbol files (PDB files).<br>2. Specify options for *WPR.exe*. For example, `-WPROptions '-onoffproblemdescription "test description"'`.<br><br>Example 1:<br>`.\TSSv2.ps1 -StartAutoLogger -WPR BootGeneral -WPROptions '-addboot CPU'` will capture WPR boot traces with the `General` and `CPU` profiles.<br><br>Example 2:<br>`.\TSSv2.ps1 -WPR General -WPROptions '-Start CPU -start Network -start Minifilter'` will combine profiles (`General`, `CPU`, `Network`, and `Minifilter`).|
+|`-Xperf <Profile>`<br>1. `-XperfMaxFileMB <Size>`<br>2. `-XperfTag <Pool Tag>`<br>3. `-XperfPIDs <PID>`<br>4. `-XperfOptions <Option string>`|Start Xperf. `<Profile>` is one of `General`\|`CPU`\|`Disk`\|`Leak`\|`Memory`\|`Network`\|`Pool`\|`PoolNPP`\|`Registry`\|`SMB2`\|`SBSL`\|`SBSLboot`.<br><br>1. Specify the maximum log size in MB (the default value is 2048 MB). The default value for SBSL\* scenarios is 16384 (same for ADS_\/NET_SBSL).<br>2. Specify `PoolTag` to be logged. This parameter is used with the `Pool` or `PoolNPP` profile (for example, `-Xperf Pool -XperfTag TcpE+AleE+AfdE+AfdX`).<br>3. Specify `ProcessID`. This parameter is used with the `Leak` profile (for example, `-Xperf Leak -XperfPIDs <PID>`).<br>4. Specify other option strings for `Xperf`.|
+|`-xray`|Start xray to diagnose a system for known issues.|
+
+The following example illustrates how to activate multiple support tools (commands) during the same trace.
+
+```PowerShell
+.\TSS.ps1 -WPR <WPRprofile> -Procmon -Netsh|-NetshScenario <NetshScenario> -PerfMon <CounterSetName> -ProcDump <PID> -PktMon -SysMon -SDP <specialty> -xray -PSR -Video -TTD <PID[]|ProcessName[]|ServiceName[]>  
+```
+
+## Parameters within TSS options
+
+Defines specific parameters within the TSS options to control, enhance, or simplify data collection.
+
+|Parameter  |Description  |
+|---------|---------|
+|`-AcceptEula`     |Don't ask at first; run to accept the Disclaimer (useful for the `-RemoteRun` execution).         |
+|`-AddDescription <description>`     |Add a brief description of the repro issue. The name of the resulting zip file will include such a description.         |
+|`-Assist`     |Accessibility mode.         |
+|`-BasicLog`     |Collect the full basic log (the mini basic log is always collected by default).         |
+|`-CollectComponentLog`     |Use with `-Scenario`. By default, component collect functions aren't called in the `-Scenario` trace. This switch enables the component collect functions to be called.         |
+|`-CollectDump`     |Collect system dump (*memory.dmp*) after stopping all traces. `-CollectDump` can be used with `-Start` and `-Stop`.         |
+|`-CollectEventLog <Eventlog[]>`     |Collect specified event logs. The asterisk (\*) wildcard character can be used for the event log name.<br><br>Example:<br>`-CollectEventLog Security,*Cred*`<br>Collect security and all event logs that match `*Cred*` like `'Microsoft-Windows-CertificateServicesClient-CredentialRoaming/Operational'`.         |
+|`-CommonTask` \<`<POD>`\|`Full`\|`Mini`>     |Run common tasks before starting and after stopping the trace.<br><br>`<POD>`: currently, only "NET" is available. Collect additional information before starting and after stopping the trace.<br>`Full`: the full basic log is collected after stopping the trace.<br>`Mini`: the mini basic log is collected after stopping the trace.         |
+|`-Crash`     |Trigger a system crash with `NotMyFault` at the stop of repro, or after all events are signaled if used with `-WaitEvent`.<br><br>Caution:<br>This switch will force a memory dump (the system will restart), so open files won't be saved.          |
+|`-CustomETL`     |Add custom ETL trace providers. For example, `.\TSSv2.ps1 -WIN_CustomETL -CustomETL '{<GUID>}','Microsoft-Windows-PrimaryNetworkIcon'` (a comma-separated list of single-quoted `'{GUID}'` and/or `'Provider-Name'`).         |
+|`-DebugMode`     |Run with debug mode for a developer.         |
+|`-VerboseMode`     |Show more verbose or informational output while processing TSS functions.         |
+|`-Discard`     |Used to discard a dataset at phase `-Stop`. `*Stop-` or `*Collect-` functions won't run. `xray` and `psSDP` will be skipped.         |
+|`-EnableCOMDebug`     |Module to turn on COM debug mode.         |
+|`-ETLOptions` \<`circular`\|`newfile`>:\<`ETLMaxSizeMB`>:\<`ETLNumberToKeep`>:\<`ETLFileMax`>     |Set options passed to `logman` commands. The default value for `circular ETLMaxSizeMB` is 1024, and the default value for `newfile ETLMaxSizeMB` is 512.<br><br>`-StartAutologger` only supports `-ETLOptions circular:<ETLMaxSize>:<ETLNumberToKeep>:<ETLFileMax>`, but `ETLNumberToKeep` won't be executed expectedly.<br><br>Example.1:<br>`-ETLOptions newfile:2048:5`<br><br>Run `newfile` logs with a size of 2048 MB. Keep only the last five `*.etl` files. The default setting for circular mode is `circular:1024`, and for newfile mode is `newfile:512:10`.<br><br>Example 2:<br>`-StartAutologger -ETLOptions circular:4096`<br>`Autologger` won't obey `:<ETLNumberToKeep>` and it only accepts mode circular.<br><br>Example 3:<br>`-StartAutologger -ETLOptions circular:4096:10:3`<br>`Autologger` won't obey `:<ETLNumberToKeep>` and it only accepts mode circular and "3" as the number of `autologger` generations.          |
+|`-ETWlevel` \<`Info`\|`Warning`\|`Error`>     |Set Event Tracing Level. The default value is 0xFF.         |
+|`-EvtDaysBack <N>`     |Convert event logs only for the last N days. The default value is 30 days. It also applies to the SDP report.<br><br>Note:<br>Security event logs will be skipped.          |
+|`-ExternalScript <path to external PS file>`     |Run the specified PowerShell script before starting the trace.         |
+|`-LogFolderPath <Drive:\path to log folder>`     |Use a different log folder path for the resulting output data instead of the default location (*C:\\MS_DATA*). It's useful when drive *C:* is low on free disk space.         |
+|`-MaxEvents <N>`     |As an argument for `'-WaitEvent Evt:..'`, the parameter will investigate the last N number of events with the same event ID (the default value is 1).         |
+|`-Mini`     |Collect only minimal data. Skip `noPSR`, `noSDP`, `noVideo`, `noXray`, `noZip`, and `noBasicLog`.         |
+|`-Mode` \<`Basic`\|`Medium`\|`Advanced`\|`Full`\|`Verbose`\|`VerboseEx`\|`Hang`\|`Restart`<br>\|`Swarm`\|`Kube`\|`GetFarmdata`\|`Permission`\|`traceMS`>     |Run scripts in `Basic`, `Medium`, `Advanced`, `Full`, or `Verbose(Ex)` mode for data collection. `Restart` will restart the associated service.         |
+|`-RemoteRun`     |Use when TSS is being executed on a remote host, for example, via PsExec, in the Azure Serial Console, or with PowerShell remoting. This parameter will inhibit PSR, video recording, starting TssClock, and opening Explorer with final results. In such a case, also consider `-AcceptEula`.         |
+|`-StartNoWait`     |Don't wait, and prompt will return immediately. This parameter is useful for the scenario where a user needs to log off.         |
+|`-WaitEvent`     |Monitor for the specified event or stop-trigger; if it's signaled, traces will be stopped automatically.<br><br>There's a wide variety of options to trigger an automatic stop. Run `.\TSSv2.ps1 -Find Monitoring` to see the usage.         |
+|`-Update`<br>1. `-UpdMode` \<`Online`\|`Lite`>      |Update the TSS package. It can be used together with `-UpdMode Online|Lite`.<br><br>`Online` is the default, and `Lite` is the `Upd` lite version.         |
+|`-Help`<br>1. `Common`<br>2. `ALL`<br>3. `Monitoring`<br>4. `Config`<br>5. `Keyword`     |Provide help messages on various scenarios.<br><br>1. Common general help message.<br>2.    All available options.<br>3. Show help messages for monitoring and remote features.<br>4. Help with all config parameters.<br>5. You can enter any keyword, and it will show the help information about that keyword.          |
+|`-Status`     |Show the status of the running trace, if any.        |
+
+## Helper scripts and tools included
+
+|Helper script and tool  |Description  |
+|---------|---------|
+|`\scripts\tss_EventCreate.ps1`     |Create an event log entry in event log files with event IDs.         |
+|`\scripts\tss_SMB_Fix-SmbBindings.ps1`     |Useful for fixing corrupted SMB bindings (LanmanServer, LanmanWorkstation, or NetBT). See also `-Collect NET_SMBsrvBinding`.         |
+|`\BINx64\kdbgctrl.exe`     |Use the switch `-sd <dump type>`  to set the kernel crash dump type `Full|Kernel`, for example, `kdbgctrl -sd Full`.         |
+|`\BINx64\NTttcp.exe`     |Performance tests. For more information, see [Test VM network throughput by using NTTTCP](/azure/virtual-network/virtual-network-bandwidth-testing).         |
+|`\BINx64\latte.exe`     |Latency tests. For more information, see [Test network latency between Azure VMs](/azure/virtual-network/virtual-network-test-latency).         |
+|`\BINx64\notmyfaultc.exe`     |Force a memory dump. See [NotMyFault v4.21](/sysinternals/downloads/notmyfault) if the TSS command line includes `-Crash`.         |
+
+## Troubleshoot unexpected PowerShell errors
+
+1. Run this cmdlet after a failure:
+
+    ```PowerShell
+    .\TSSv2.ps1 -Stop -noBasiclog -noXray
+    ```
+
+2. Close the opened elevated PowerShell window and start a new elevated PowerShell window.
+3. Allow PowerShell scripts to run on your system with the proper `ExecutionPolicy`.
+4. If you encounter an error indicating that the running script is disabled, try the following methods.
+
+### Method 1
+
+1. Run the following cmdlet:
+  
+      ```PowerShell
+      Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -force -Scope Process
+      ```
+
+2. Verify the settings with the `Get-ExecutionPolicy -List` cmdlet that no `ExecutionPolicy` with higher precedence is blocking the execution of this script.
+3. Run the `.\TSSv2.ps1 <Desired Parameters>` cmdlet again.
+
+### Method 2 (alternative)
+
+If scripts are blocked by `MachinePolicy`, run the following cmdlets in an elevated PowerShell window:
+
+1. ```PowerShell
+   Set-ItemProperty -Path HKLM:\Software\Policies\Microsoft\Windows\PowerShell -Name ExecutionPolicy -Value RemoteSigned
+   ```
+
+2. ```PowerShell
+   Set-ItemProperty -Path HKLM:\Software\Policies\Microsoft\Windows\PowerShell -Name EnableScripts  -Value 1 -Type DWord
+   ```
+
+### Method 3 (alternative)
+
+If scripts are blocked by `UserPolicy`, run the following cmdlets in an elevated PowerShell window:
+
+1. ```PowerShell
+   Set-ItemProperty -Path HKLM:\Software\Microsoft\PowerShell\1\ShellIds\Microsoft.PowerShell -Name ExecutionPolicy -Value RemoteSigned
+   ```
+
+2. ```PowerShell
+   Set-ItemProperty -Path HKLM:\Software\Microsoft\PowerShell\1\ShellIds\Microsoft.PowerShell -Name EnableScripts  -Value 1 -Type DWord
+   ```
 
 > [!NOTE]
-> The support representative will provide you with complete steps for downloading and data collection.
-
-1. The support representative identifies the problem and provides a certain TSS cmdlet to collect the proper logs.
-2. Download the *TSS.zip* file and copy the file to the affected systems.
-3. Extract the *TSS.zip* file to a local folder in the affected systems, and run the TSS cmdlet(s) from an elevated PowerShell command prompt simultaneously.  
-4. When the issue is reproduced, stop the TSS toolset by pressing any key. The logs are automatically zipped by TSS afterwards.
-5. Upload the logs to a Microsoft secure file transfer site, which the support representative provides.
-
-The support representative will work on the logs for further troubleshooting and provide the next action plan.
+> Method 2 is only a workaround for the Policy `MachinePolicy - RemoteSigned`. If you also see `UserPolicy - RemoteSigned`, ask the domain admin for a temporary Group Policy Object (GPO) exemption.
+>
+> In rare situations, you can try the `-ExecutionPolicy Bypass` cmdlet.
+>
+> If your organization forces the GPO PowerShell constrained language mode (`System.Management.Automation.EngineIntrinsics.SessionState.LanguageMode -ne 'FullLanguage'`), ask the domain admin for a temporary GPO exemption.
 
 ## Frequently asked questions (FAQs)
 
