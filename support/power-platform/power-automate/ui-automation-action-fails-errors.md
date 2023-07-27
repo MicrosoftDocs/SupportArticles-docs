@@ -1,11 +1,11 @@
 ---
-title: Failed to get element or window wasn't found error
+title: Failed to get UI element or Failed to get window error
 description: Provides solutions to the error messages that you receive when a UI automation action fails in Power Automate.
 ms.reviewer: pefelesk, nimoutzo
-ms.date: 07/26/2023
+ms.date: 07/27/2023
 ms.subservice: power-automate-desktop-flows
 ---
-# UI automation action fails with "Failed to get element" or "Window wasn't found" error
+# UI automation action fails with "Failed to get UI element" or "Failed to get window" error
 
 This article helps you resolve error messages that you may receive when a [UI automation action](/power-automate/desktop-flows/actions-reference/uiautomation) fails in Microsoft Power Automate.
 
@@ -16,8 +16,8 @@ _Original KB number:_ &nbsp; 5003385
 
 A UI automation action fails with one of the following error messages in Power Automate:
 
-- > Failed to get element
-- > Window wasn't found
+- > Failed to get UI element
+- > Failed to get window
 
 ## Verifying issue
 
@@ -67,15 +67,15 @@ Surface automation can be used as an alternative way to automate the application
 
 ## Cause 4: Application to interact with runs with elevated rights
 
-The application runs with more elevated privileges than Power Automate for desktop.
+The application runs with more elevated rights than Power Automate for desktop.
 
 #### Resolution
 
-Both the application and Power Automate for desktop should run with the same privileges.
+Both the application and Power Automate for desktop should run with the same rights.
 
-Power Automate for desktop doesn't run elevated privileges by default. Hence, clear the **Run this program as an administrator** checkbox in the **Compatibility** section of the application's **Properties** window.
+By default, Power Automate for desktop doesn't run with elevated rights. You can set Power Automate for desktop to run as administrator as well. For more information, see [Run Power Automate with elevated rights](/power-automate/desktop-flows/how-to/run-power-automate-elevated-rights).
 
-Another option is to set Power Automate for desktop to run as admin as well. For more information, see [Run Power Automate with elevated rights](/power-automate/desktop-flows/how-to/run-power-automate-elevated-rights).
+Another option is to clear the **Run this program as an administrator** checkbox in the **Compatibility** section of the application's **Properties** window.
 
 ## More information
 
