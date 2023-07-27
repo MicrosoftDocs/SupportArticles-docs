@@ -65,7 +65,7 @@ Here are the results:
 
       <sup>*</sup>: Depending on the compromise or backup exact time.
 
-About debugging, you can review Event IDs for System, Security, Directory Services, and Security-Netlogon Eventlog.
+About debugging, you can review Event IDs for System, Security, Directory Services, and Security-Netlogon event log.
 
 For more information about a compromise, see [Use Microsoft and Azure security resources to help recover from systemic identity compromise](/azure/security/fundamentals/recover-from-identity-compromise#on-premises-remediation-activities).
 
@@ -90,7 +90,7 @@ In the domain that holds the gMSAs that you want to repair, follow these steps:
 1. Take a domain controller offline, and isolate it from the network.
 2. Restore the domain controller from a backup that was created prior to the AD DS database exposure.
 
-   If the password interval for the gMSAs is longer than the age of the backup, you may decide to tolerate the window where the previous key material still works. If you can't wait this long and the matching older backup is missing too many gMSAs, you need to switch the plan to case 2.
+   If the password interval for the gMSAs is longer than the age of the backup, you may decide to tolerate the window where the previous key material still works. If you can't wait this long and the matching older backup is missing too many gMSAs, you need to switch the plan to Case 2.
 
 3. Run an authoritative restore operation on the domain's **Managed Service Accounts** container. Make sure that the restore operation includes all the container's child objects that might be associated with this domain controller. This step rolls back the last password update status. The next time that a service retrieves the password, the password updates to a new password that's based on the new KDS Root Key object.
 4. Stop and disable the Microsoft Key Distribution Service on the restored domain controller.
@@ -123,7 +123,7 @@ In the domain that holds the gMSAs that you want to repair, follow these steps:
 10. Reconnect the restored domain controller and bring it online. Make sure the replication is working.
 
       Now the authoritative restore and all the other changes, including the restored gMSAs, replicate.
-11. Reenable and start Microsoft Key Distribution Service on all the domain controllers. The secrets of the restored gMSAs will roll, new passwords will be created based on the new KDS Root Key object when requested.
+11. Reenable and start Microsoft Key Distribution Service on all the domain controllers. The secrets of the restored gMSAs will roll, and new passwords will be created based on the new KDS Root Key object when requested.
 
       > [!NOTE]
       > If the gMSA is restored but not used, and they have the `PrincipalsAllowedToRetrieveManagedPassword` parameter populated, you can run the `Test-ADServiceAccount` cmdlet using a principal that is allowed to trigger internal API, and roll the gMSA to the new KDS Root Key.
@@ -201,7 +201,7 @@ Follow these steps:
 
 ## Case 3: Resignation of a domain administrator, no information was stolen at time and you can wait for passwords to roll
 
-If a high privileged member who has domain administrators or equivalent rights resigns, there's no proof of the KDS Root Key exposure at time and you can afford a time window for password rolling. You don’t have to recreate the gMSAs.
+If a high privileged member who has domain administrators or equivalent rights resigns, there's no proof of the KDS Root Key exposure at time and you can afford a time window for password rolling. You don't have to recreate the gMSAs.
 
 As a preventive measure, the KDS Root Key needs to be rolled to prevent any post-exploitation attack. For example, the former domain administrator has turned out to be rogue and kept some backups.
 
