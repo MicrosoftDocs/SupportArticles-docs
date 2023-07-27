@@ -2,11 +2,10 @@
 title: Troubleshoot Azure File Sync sync group management
 description: Troubleshoot common issues in managing Azure File Sync sync groups, including cloud endpoint creation and server endpoint creation, deletion, and health.
 author: khdownie
-ms.service: storage
+ms.service: azure-file-storage
 ms.topic: troubleshooting
 ms.date: 06/25/2023
 ms.author: kendownie
-ms.subservice: files
 ---
 # Troubleshoot Azure File Sync sync group management
 

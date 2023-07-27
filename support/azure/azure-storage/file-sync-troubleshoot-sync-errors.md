@@ -2,11 +2,10 @@
 title: Troubleshoot sync health and errors in Azure File Sync
 description: Troubleshoot common issues with monitoring sync health and resolving sync errors in an Azure File Sync deployment.
 author: khdownie
-ms.service: storage
+ms.service: azure-file-storage
 ms.topic: troubleshooting
 ms.date: 07/19/2023
 ms.author: kendownie
-ms.subservice: files 
 ms.custom: devx-track-azurepowershell
 ---
 
