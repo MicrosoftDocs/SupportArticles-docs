@@ -33,7 +33,7 @@ If an application requires to run on more than 64 processors by using multiple g
 
 ## Update the system to Windows 11 or Windows Server 2022
 
-You can update the system to Windows 11 or Windows Server 2022. Starting with Windows 11 and Windows Server 2022, on machines with more than 64 processors, the processes and their threads span all processors in the system across multiple groups by default. Additionally, starting with Windows 11, version 22H2, the `%NUMBER_OF_PROCESSORS% environment` variable reflects the total number of processors on the system, even if they are spread across multiple processor groups.
+You can update the system to Windows 11 or Windows Server 2022. Starting with Windows 11 and Windows Server 2022, on machines with more than 64 processors, the processes and their threads span all processors in the system across multiple groups by default. Additionally, starting with Windows 11, version 22H2, the `%NUMBER_OF_PROCESSORS%` environment variable reflects the total number of processors on the system, even if they are spread across multiple processor groups.
 
 ## Set application thread affinities to the desired groups
 
