@@ -18,7 +18,7 @@ contributors:
 
 ## Symptoms
 
-References to data sources aren't updated when importing a Power Apps solution into a different environment. Depending on the cause, the app may continue to run correctly though Power Apps Studio doesn't reflect the correct references. However, Power Apps Studio may not reflect the correct references in the target environment.
+References to data sources aren't updated when importing a Power Apps solution into a different environment. Depending on the cause, the app may continue to run correctly, however, Power Apps Studio may not reflect the correct references in the target environment.
 
 ## Cause
 
