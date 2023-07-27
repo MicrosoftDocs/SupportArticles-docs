@@ -42,31 +42,28 @@ As a proactive measure, auditing can be used to track the exposure of the KDS Ro
 
 You can consider setting the `ManagedPasswordIntervalInDays` parameter to 15 days or choosing an appropriate value when creating a gMSA, as the `ManagedPasswordIntervalInDays` value after gMSA creation becomes a read-only value.
 
-In case of compromission, this setting allows to reduce the next rolling time.
+In case of compromise, this setting allows to reduce the next rolling time.
 
 It will reduce the theorical number of gMSA to be recreated between the date of the restored backup and the end of the database exposure, or at least, the risk window duration until these gMSA rolls, if you stick with the Case 1.
 
-
 Here's an example scenario:
 
-1.	After a database exposure, you are performing the recovery in "Day D".
-2.	The restored backup is from D-15.
+1. After a database exposure, you are performing the recovery in "Day D".
+2.	The restored backup is from the day that is 15 days before "Day D" (D-15).
 3.	The gMSA `ManagedPasswordIntervalInDays` value is 15.
-4.	The gMSA exists and has rolled D-1.
-5.	Newer gMSA has been created from D-10.
-6.	The compromission happens in D-5, and some gMSAs have been created at this date.
+4.	The gMSA exists and has rolled one day before "Day D" (D-1).
+5.	Newer gMSA has been created from the day that is 10 days before "Day D" (D-10).
+6.	The compromise happens in five days before "Day D" (D-5), and some gMSAs have been created at this date.
 
-Here are the Rresults:
+Here are the results:
 
-1.	The gMSA created between D and D-5 are not concerned.*
-2.	The gMSA created between D-15 (backup restored) and D-5 (compromission)*, must be recreated, or the risk windows must be assumed if you can wait:
+1.	The gMSA created between "Day D" and five days before "Day D" (D-5) are not concerned<sup>*</sup>.
+2.	The gMSA created between fifteen days before "Day D" (D-15) (backup restored) and five days before "Day D" (D-5) (compromise)<sup>*</sup> must be recreated, or the risk windows must be assumed if you can wait from five days after "Day D" up to ten days after "Day D". For example:
 
-   1.	From D+5
-      For D-10 “newer gMSA” created in the example.
-   2. Up to D+10
-      For any gMSA created on the D-5 compromission.
+-	On five days after "Day D" (D+5), gMSAs created on ten days before Day D must be recreated.
+-	On ten days after "Day D" (D+10), gMSAs created on five days before Day D must be recreated.
 
-*: Depending on compromission/backup exact time.
+<sup>*</sup>: Depending on the compromise or backup exact time.
 
 About debugging, you can review Event IDs for System, Security, Directory Services, and Security-Netlogon Eventlog.
 
@@ -106,7 +103,7 @@ In the domain that holds the gMSAs that you want to repair, follow these steps:
 7. Create a new gMSA. Make sure that the new gMSA uses the new KDS Root Key object to create the value for the `msds-ManagedPasswordID` attribute.
 
    > [!NOTE]
-   > This step is optional, but it allows to validate the new KDS Root Key is currently in use and cached on the KDS.
+   > This step is optional, but it allows to validate the new KDS Root Key is currently in use and cached on the *kdssvc.dll* file.
 
 8. Check the `msds-ManagedPasswordID` value of the first gMSA that you created. The value of this attribute is binary data that includes the GUID of the matching KDS Root Key object.  
 
@@ -125,13 +122,15 @@ In the domain that holds the gMSAs that you want to repair, follow these steps:
 9.	Disable and stop the Microsoft Key Distribution Service on all domain controllers.
 10. Reconnect the restored domain controller and bring it online. Make sure the replication is working.
 
-   Now the authoritative restore and all the other changes, including the restored gMSAs, replicate.
-11. Reenable and start Microsoft Key Distribution Service on all the domain controllers. The secrets of the restored gMSAs will roll, creating new passwords when requested that are based on the new KDS Root Key object.
-   > [!NOTE]
-   > If the gMSA is restored but not used, and they have the `PrincipalsAllowedToRetrieveManagedPassword` parameter populated, you can run the `Test-ADServiceAccount` cmdlet using a principal that is allowed to trigger internal API, and roll the gMSA to the new KDS Root Key.
+      Now the authoritative restore and all the other changes, including the restored gMSAs, replicate.
+11. Reenable and start Microsoft Key Distribution Service on all the domain controllers. The secrets of the restored gMSAs will roll, new passwords will be created based on the new KDS Root Key object when requested.
+
+      > [!NOTE]
+      > If the gMSA is restored but not used, and they have the `PrincipalsAllowedToRetrieveManagedPassword` parameter populated, you can run the `Test-ADServiceAccount` cmdlet using a principal that is allowed to trigger internal API, and roll the gMSA to the new KDS Root Key.
 12. Verify that all gMSAs have rolled.
-   > [!NOTE]
-   > The gMSA without the `PrincipalsAllowedToRetrieveManagedPassword` parameter populated will never roll.
+
+      > [!NOTE]
+      > The gMSA without the `PrincipalsAllowedToRetrieveManagedPassword` parameter populated will never roll.
 13. Delete the old KDS Root Key object and verify the replications.
 14. Restart the Microsoft Key Distribution Service on all the domain controllers.
 
@@ -161,9 +160,14 @@ Follow these steps:
 
 1. Use a single domain controller to follow these steps:
    1. Follow the steps in [Create the Key Distribution Services KDS Root Key](/windows-server/security/group-managed-service-accounts/create-the-key-distribution-services-kds-root-key) to create a new KDS Root Key object.
-   1. Restart **Microsoft Key Distribution Service**. After it restarts, the service picks up the new object.
+   1. Restart the Microsoft Key Distribution Service. After it restarts, the service picks up the new object.
+   1.	Back up DNS host names and SPNs associated with each gMSA marked to be removed.
    1. Edit the existing gMSAs to remove the service principle names (SPNs) and DNS host names.
-   1. Create new gMSAs to replace the existing gMSAs.
+   1. Create new gMSAs to replace the existing gMSAs. They also need to be configured with the DNS host names and SPNs you just removed.
+
+      > [!NOTE]
+      > You also need to review all permissions entries using directly deleted gMSA SIDs, as they are not resolvable anymore. When replacing an access control entry (ACE), consider using Groups for managing gMSA permissions entries.
+
 1. Check the new gMSAs to make sure that they use the new KDS Root Key object. To do this, follow these steps:
    1. Note the `CN` (GUID) value of the KDS Root Key object.
    1. Check the `msds-ManagedPasswordID` value of the first gMSA that you created. The value of this attribute is binary data that includes the GUID of the matching KDS Root Key object.  
@@ -192,7 +196,57 @@ Follow these steps:
     }
     ```
 
-1. Delete the old KDS Root Key object.
+1. Delete the old KDS Root Key object and verify the replications.
+1. Restart the Microsoft Key Distribution Service on all the domain controllers.
+
+## Case 3: Resignation of a domain administrator, no information was stolen at time and you can wait for passwords to roll
+
+If a high privileged member who has domain administrators or equivalent rights resigns, there is no proof of the KDS Root Key exposure at time and you can afford a time window for password rolling. You don’t have to recreate the gMSAs.
+
+As a preventive measure, the KDS Root Key needs to be rolled to prevent any post-exploitation attack. For example, the former domain administrator has turned out to be rogue and kept some backups.
+
+A new KDS Root Key object is created and gMSAs will roll naturally.
+
+> [!NOTE]
+> For a compromise related to a domain administrator, refer to Case 1 or Case 2 according to what have been exposed, and follow [Use Microsoft and Azure security resources to help recover from systemic identity compromise](/azure/security/fundamentals/recover-from-identity-compromise#on-premises-remediation-activities).
+
+In the domain that holds the gMSAs that you want to roll, follow these steps:
+
+1.	On a domain controller, follow the steps in [Create the Key Distribution Services KDS Root Key](/windows-server/security/group-managed-service-accounts/create-the-key-distribution-services-kds-root-key) to create a new KDS Root Key object.
+
+      > [NOTE]
+      > In the production environment, you need to wait 10 hours to ensure the new KDS Root Key is available. Check the `EffectiveTime` attribute to know when the new KDS Root Key will be usable.
+
+2.	On all the domain controllers, restart the Microsoft Key Distribution Service.
+3.	Create a new gMSA. Make sure that the new gMSA uses the new KDS Root Key object to create the value for the `msds-ManagedPasswordID` attribute.
+
+      > [!NOTE]
+      > This step is optional, but it allows to validate the new KDS Root Key is currently in use and cached on the *kdssvc.dll* file.
+4.	Check the `msds-ManagedPasswordID` value of the first gMSA that you created. The value of this attribute is binary data that includes the GUID of the matching KDS Root Key object.
+
+      For example, assume that the KDS Root Key object has the following `CN`.
+
+      :::image type="content" source="media/recover-from-golden-gmsa-attack/kds-root-key-cn.png" alt-text="Screenshot of the value of the CN attribute of a KDS Root Key object.":::  
+
+      A gMSA that's created by using this object has an `msds-ManagedPasswordID` value that resembles the following image.  
+
+      :::image type="content" source="media/recover-from-golden-gmsa-attack/gmsa-pwid-data.png" alt-text="Screenshot of the value of the msDS-ManagedPasswordId attribute of a gMSA object, showing how it includes the pieces of the KDS root key CN attribute.":::
+
+      In this value, the GUID data starts at offset 24. The parts of the GUID are in a different sequence. In this image, the red, green, and blue sections identify the reordered parts. The orange section identifies the part of the sequence that is the same as the original GUID.
+      
+      If the first gMSA that you created uses the new KDS root key, all subsequent gMSAs also use the new key.
+ 
+5.	Depending on the next password roll, the secrets of the gMSAs will naturally roll, and new passwords will be created based on the new KDS Root Key object when requested.
+
+      > [!NOTE]
+      > If used gMSAs have rolled, but unused gMSAs with the same roll interval haven't, and they have the  `PrincipalsAllowedToRetrieveManagedPassword` parameter populated, you can run the `Test-ADServiceAccount` cmdlet. It uses a principal that is allowed to trigger an internal API, and roll the gMSA to the new KDS Root Key.
+
+6.	Verify that all gMSAs have rolled.
+
+      > [!NOTE]
+      > The gMSA without the `PrincipalsAllowedToRetrieveManagedPassword` parameter will never roll.
+7.	After all the gMSAs have rolled to the new KDS Root Key object, delete the old KDS Root Key object and verify the replications.
+8.	 Restart the Microsoft Key Distribution Service on all the domain controllers.
 
 ## References
 
