@@ -48,7 +48,7 @@ It will reduce the theorical number of gMSA to be recreated between the date of 
 
 Here's an example scenario:
 
-1. After a database exposure, you are performing the recovery in "Day D".
+1. After a database exposure, you are performing the recovery in "Day D."
 2.	The restored backup is from the day that is 15 days before "Day D" (D-15).
 3.	The gMSA `ManagedPasswordIntervalInDays` value is 15.
 4.	The gMSA exists and has rolled one day before "Day D" (D-1).
@@ -57,11 +57,11 @@ Here's an example scenario:
 
 Here are the results:
 
-1.	The gMSA created between "Day D" and five days before "Day D" (D-5) are not concerned<sup>*</sup>.
-2.	The gMSA created between fifteen days before "Day D" (D-15) (backup restored) and five days before "Day D" (D-5) (compromise)<sup>*</sup> must be recreated, or the risk windows must be assumed if you can wait from five days after "Day D" up to ten days after "Day D". For example:
+1.	The gMSA created between "Day D" and five days before "Day D" (D-5) aren't concerned<sup>*</sup>.
+2.	The gMSA created between 15 days before "Day D" (D-15) (backup restored) and five days before "Day D" (D-5) (compromise)<sup>*</sup> must be recreated, or the risk windows must be assumed if you can wait from five days after "Day D" (D+5) up to 10 days after "Day D" (D+10). For example:
 
--	On five days after "Day D" (D+5), gMSAs created on ten days before Day D must be recreated.
--	On ten days after "Day D" (D+10), gMSAs created on five days before Day D must be recreated.
+-	On five days after "Day D" (D+5), gMSAs created on 10 days before "Day D" (D-10) must be recreated.
+-	On 10 days after "Day D" (D+10), gMSAs created on five days before "Day D" (D-5) must be recreated.
 
 <sup>*</sup>: Depending on the compromise or backup exact time.
 
@@ -83,7 +83,7 @@ The gMSA password was rolled after the exposure, and a new KDS Root Key object i
 > [!NOTE]  
 > You do not have to manually repair gMSAs that were created after the Active Directory Domain Services (AD DS) database exposure ended. The attacker does not know the details of these accounts, and the passwords for these accounts will regenerate based on the new KDS Root Key object.
 
-You should consider the gMSA object in “maintenance mode“ until the procedure is completed, and ignore possible errors that are reported with the accounts in System,, Security, Directory Services, and Security-Netlogon event log.
+You should consider the gMSA object in “maintenance mode“ until the procedure is completed, and ignore possible errors that are reported with the accounts in System, Security, Directory Services, and Security-Netlogon event log.
 
 In the domain that holds the gMSAs that you want to repair, follow these steps:
 
@@ -201,7 +201,7 @@ Follow these steps:
 
 ## Case 3: Resignation of a domain administrator, no information was stolen at time and you can wait for passwords to roll
 
-If a high privileged member who has domain administrators or equivalent rights resigns, there is no proof of the KDS Root Key exposure at time and you can afford a time window for password rolling. You don’t have to recreate the gMSAs.
+If a high privileged member who has domain administrators or equivalent rights resigns, there's no proof of the KDS Root Key exposure at time and you can afford a time window for password rolling. You don’t have to recreate the gMSAs.
 
 As a preventive measure, the KDS Root Key needs to be rolled to prevent any post-exploitation attack. For example, the former domain administrator has turned out to be rogue and kept some backups.
 
