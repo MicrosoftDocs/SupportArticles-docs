@@ -8,7 +8,7 @@ ms.subservice: common-issues
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot why attach my node virtual machine is in a failed state so that I can successfully use my Azure Kubernetes Service (AKS) cluster.
 ---
-# Troubleshoot Azure Kubernetes Service cluter/node in a failed state
+# Troubleshoot Azure Kubernetes Service cluster/node in a failed state
 
 This article discusses how to troubleshoot a Microsoft Azure Kubernetes Service (AKS) cluster/node that's entered a failed state.
 
