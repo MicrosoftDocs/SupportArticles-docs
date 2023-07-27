@@ -214,7 +214,7 @@ In the domain that holds the gMSAs that you want to roll, follow these steps:
 
 1. On a domain controller, follow the steps in [Create the Key Distribution Services KDS Root Key](/windows-server/security/group-managed-service-accounts/create-the-key-distribution-services-kds-root-key) to create a new KDS Root Key object.
 
-      > [NOTE]
+      > [!NOTE]
       > In the production environment, you need to wait 10 hours to ensure the new KDS Root Key is available. Check the `EffectiveTime` attribute to know when the new KDS Root Key will be usable.
 
 2. On all the domain controllers, restart the Microsoft Key Distribution Service.
