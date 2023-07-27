@@ -49,21 +49,21 @@ It will reduce the theorical number of gMSA to be recreated between the date of 
 Here's an example scenario:
 
 1. After a database exposure, you are performing the recovery in "Day D."
-2.	The restored backup is from the day that is 15 days before "Day D" (D-15).
-3.	The gMSA `ManagedPasswordIntervalInDays` value is 15.
-4.	The gMSA exists and has rolled one day before "Day D" (D-1).
-5.	Newer gMSA has been created from the day that is 10 days before "Day D" (D-10).
-6.	The compromise happens in five days before "Day D" (D-5), and some gMSAs have been created at this date.
+2. The restored backup is from the day that is 15 days before "Day D" (D-15).
+3. The gMSA `ManagedPasswordIntervalInDays` value is 15.
+4. The gMSA exists and has rolled one day before "Day D" (D-1).
+5. Newer gMSA has been created from the day that is 10 days before "Day D" (D-10).
+6. The compromise happens in five days before "Day D" (D-5), and some gMSAs have been created at this date.
 
 Here are the results:
 
-1.	The gMSA created between "Day D" and five days before "Day D" (D-5) aren't concerned<sup>*</sup>.
-2.	The gMSA created between 15 days before "Day D" (D-15) (backup restored) and five days before "Day D" (D-5) (compromise)<sup>*</sup> must be recreated, or the risk windows must be assumed if you can wait from five days after "Day D" (D+5) up to 10 days after "Day D" (D+10). For example:
+1. The gMSA created between "Day D" and five days before "Day D" (D-5) aren't concerned<sup>*</sup>.
+2. The gMSA created between 15 days before "Day D" (D-15) (backup restored) and five days before "Day D" (D-5) (compromise)<sup>*</sup> must be recreated, or the risk windows must be assumed if you can wait from five days after "Day D" (D+5) up to 10 days after "Day D" (D+10). For example:
 
--	On five days after "Day D" (D+5), gMSAs created on 10 days before "Day D" (D-10) must be recreated.
--	On 10 days after "Day D" (D+10), gMSAs created on five days before "Day D" (D-5) must be recreated.
+      -	On five days after "Day D" (D+5), gMSAs created on 10 days before "Day D" (D-10) must be recreated.
+      -	On 10 days after "Day D" (D+10), gMSAs created on five days before "Day D" (D-5) must be recreated.
 
-<sup>*</sup>: Depending on the compromise or backup exact time.
+      <sup>*</sup>: Depending on the compromise or backup exact time.
 
 About debugging, you can review Event IDs for System, Security, Directory Services, and Security-Netlogon Eventlog.
 
@@ -88,12 +88,12 @@ You should consider the gMSA object in “maintenance mode“ until the procedur
 In the domain that holds the gMSAs that you want to repair, follow these steps:
 
 1. Take a domain controller offline, and isolate it from the network.
-2.	Restore the domain controller from a backup that was created prior to the AD DS database exposure.
+2. Restore the domain controller from a backup that was created prior to the AD DS database exposure.
 
    If the password interval for the gMSAs is longer than the age of the backup, you may decide to tolerate the window where the previous key material still works. If you can't wait this long and the matching older backup is missing too many gMSAs, you need to switch the plan to case 2.
 
 3. Run an authoritative restore operation on the domain's **Managed Service Accounts** container. Make sure that the restore operation includes all the container's child objects that might be associated with this domain controller. This step rolls back the last password update status. The next time that a service retrieves the password, the password updates to a new password that's based on the new KDS Root Key object.
-4.	Stop and disable the Microsoft Key Distribution Service on the restored domain controller.
+4. Stop and disable the Microsoft Key Distribution Service on the restored domain controller.
 5. On a different domain controller, follow the steps in [Create the Key Distribution Services KDS Root Key](/windows-server/security/group-managed-service-accounts/create-the-key-distribution-services-kds-root-key) to create a new KDS Root Key object.
 
    > [!NOTE]
@@ -119,7 +119,7 @@ In the domain that holds the gMSAs that you want to repair, follow these steps:
 
    If the first gMSA that you created uses the new KDS root key, all subsequent gMSAs also use the new key.
 
-9.	Disable and stop the Microsoft Key Distribution Service on all domain controllers.
+9. Disable and stop the Microsoft Key Distribution Service on all domain controllers.
 10. Reconnect the restored domain controller and bring it online. Make sure the replication is working.
 
       Now the authoritative restore and all the other changes, including the restored gMSAs, replicate.
@@ -212,17 +212,17 @@ A new KDS Root Key object is created and gMSAs will roll naturally.
 
 In the domain that holds the gMSAs that you want to roll, follow these steps:
 
-1.	On a domain controller, follow the steps in [Create the Key Distribution Services KDS Root Key](/windows-server/security/group-managed-service-accounts/create-the-key-distribution-services-kds-root-key) to create a new KDS Root Key object.
+1. On a domain controller, follow the steps in [Create the Key Distribution Services KDS Root Key](/windows-server/security/group-managed-service-accounts/create-the-key-distribution-services-kds-root-key) to create a new KDS Root Key object.
 
       > [NOTE]
       > In the production environment, you need to wait 10 hours to ensure the new KDS Root Key is available. Check the `EffectiveTime` attribute to know when the new KDS Root Key will be usable.
 
-2.	On all the domain controllers, restart the Microsoft Key Distribution Service.
-3.	Create a new gMSA. Make sure that the new gMSA uses the new KDS Root Key object to create the value for the `msds-ManagedPasswordID` attribute.
+2. On all the domain controllers, restart the Microsoft Key Distribution Service.
+3. Create a new gMSA. Make sure that the new gMSA uses the new KDS Root Key object to create the value for the `msds-ManagedPasswordID` attribute.
 
       > [!NOTE]
       > This step is optional, but it allows to validate the new KDS Root Key is currently in use and cached on the *kdssvc.dll* file.
-4.	Check the `msds-ManagedPasswordID` value of the first gMSA that you created. The value of this attribute is binary data that includes the GUID of the matching KDS Root Key object.
+4. Check the `msds-ManagedPasswordID` value of the first gMSA that you created. The value of this attribute is binary data that includes the GUID of the matching KDS Root Key object.
 
       For example, assume that the KDS Root Key object has the following `CN`.
 
@@ -236,17 +236,17 @@ In the domain that holds the gMSAs that you want to roll, follow these steps:
       
       If the first gMSA that you created uses the new KDS root key, all subsequent gMSAs also use the new key.
  
-5.	Depending on the next password roll, the secrets of the gMSAs will naturally roll, and new passwords will be created based on the new KDS Root Key object when requested.
+5. Depending on the next password roll, the secrets of the gMSAs will naturally roll, and new passwords will be created based on the new KDS Root Key object when requested.
 
       > [!NOTE]
       > If used gMSAs have rolled, but unused gMSAs with the same roll interval haven't, and they have the  `PrincipalsAllowedToRetrieveManagedPassword` parameter populated, you can run the `Test-ADServiceAccount` cmdlet. It uses a principal that is allowed to trigger an internal API, and roll the gMSA to the new KDS Root Key.
 
-6.	Verify that all gMSAs have rolled.
+6. Verify that all gMSAs have rolled.
 
       > [!NOTE]
       > The gMSA without the `PrincipalsAllowedToRetrieveManagedPassword` parameter will never roll.
-7.	After all the gMSAs have rolled to the new KDS Root Key object, delete the old KDS Root Key object and verify the replications.
-8.	 Restart the Microsoft Key Distribution Service on all the domain controllers.
+7. After all the gMSAs have rolled to the new KDS Root Key object, delete the old KDS Root Key object and verify the replications.
+8. Restart the Microsoft Key Distribution Service on all the domain controllers.
 
 ## References
 
