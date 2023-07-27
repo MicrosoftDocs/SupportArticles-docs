@@ -320,7 +320,7 @@ Recent changes to SMB Multichannel config settings without a remount.
 -	After any changes to Windows SMB client or account SMB multichannel configuration settings, you have to unmount the share, wait for 60 seconds, and remount the share to trigger the multichannel.
 -	For Windows client OS, generate IO load with high queue depth say QD=8, for example copying a file to trigger SMB Multichannel.  For server OS, SMB Multichannel is triggered with QD=1, which means as soon as you start any IO to the share.
 
-## Slow performance when unzipping files in SMB file shares
+## Slow performance when unzipping files
 
 Depending on the exact compression method and unzip operation used, decompression operations may perform more slowly on an Azure file share than on your local disk. This is often because unzipping tools perform a number of metadata operations in the process of performing the decompression of a compressed archive. For the best performance, we recommend copying the compressed archive from the Azure file share to your local disk, unzipping there, and then using a copy tool such as Robocopy (or AzCopy) to copy back to the Azure file share. Using a copy tool like Robocopy can compensate for the decreased performance of metadata operations in Azure Files relative to your local disk by using multiple threads to copy data in parallel. 
 
