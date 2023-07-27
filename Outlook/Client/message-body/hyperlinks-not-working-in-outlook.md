@@ -28,7 +28,7 @@ ms.date: 7/26/2023
 ## Symptoms
 
 > [!NOTE]
-> After you install the Outlook Desktop July 11th security updates, when you open a link in an email, if the path points to a Fully Qualified Domain Name (FQDN) or IP address, you may not be able to open the link or receive the following error message:>  
+> After you install the Outlook Desktop July 11th security updates, when you open a link in an email, if the path points to a Fully Qualified Domain Name (FQDN) or IP address, you may not be able to open the link or receive the following error message:
 >
 > **Something unexpected went wrong with this URL**
 >
