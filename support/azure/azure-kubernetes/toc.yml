@@ -204,6 +204,8 @@
     href: mountoptions-settings-azure-files.md
   - name: Slow attach and detach operations for an Azure Disk
     href: slow-attach-detach-operations-azure-disk.md
+  - name: Troubleshoot common Bring Your Own Key (BYOK) issues
+    href: troubleshoot-common-bring-your-own-key-issues.md
 
 - name: AKS common issues
   items:

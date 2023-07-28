@@ -87,7 +87,7 @@ If any of the following aren't working, try re-creating them. It can be a simpli
 
 ## Find out if the issue occurs when getting data or showing data
 
-When data isn't showing correctly in an app, it could either be a server issue in providing the data, or an app issue in processing and displaying it. To narrow down the cause, you can try [general methods for isolating the problematic layer](isolate-common-issues.md#find out-which-layer-has-data-issues).
+When data isn't showing correctly in an app, it could either be a server issue in providing the data, or an app issue in processing and displaying it. To narrow down the cause, you can try [general methods for isolating the problematic layer](isolate-common-issues.md#find-out-which-layer-has-data-issues).
 
 Model-driven apps have a complex data flow. Here are more advanced things to try.
 
