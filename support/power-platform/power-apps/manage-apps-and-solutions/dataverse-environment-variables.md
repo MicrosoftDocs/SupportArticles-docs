@@ -1,5 +1,5 @@
 ---
-title: Data source references based on environment variables aren't updated during solution import to another environment
+title: Data source references based on environment variables aren't updated during solution import
 description: Describes an issue when importing a solution to a different environment, data source references based on environment variables aren't updated.
 ms.reviewer: tapanm
 ms.date: 6/30/2022
@@ -14,11 +14,11 @@ contributors:
   - tapanm-msft
 ---
 
-# Data source references based on environment variables aren't updated during solution import to another environment
+# Data source references based on environment variables aren't updated during solution import
 
 ## Symptoms
 
-References to data sources aren't updated when importing a Power Apps solution into a different environment. Depending on the cause, the app may continue to run correctly though Power Apps Studio doesn't reflect the correct references. However, Power Apps Studio may not reflect the correct references in the target environment.
+References to data sources aren't updated when importing a Power Apps solution into a different environment. Depending on the cause, the app may continue to run correctly, however, Power Apps Studio may not reflect the correct references in the target environment.
 
 ## Cause
 
