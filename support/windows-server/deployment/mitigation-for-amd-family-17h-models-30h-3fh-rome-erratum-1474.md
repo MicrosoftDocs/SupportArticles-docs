@@ -22,7 +22,7 @@ This issue is due to a processor core failing to exit the hardware CC6 idle slee
 
 Suggested workarounds include rebooting the system before the projected time of failure (and then potentially disabling CC6 in BIOS), or disabling the deep CC6 idle sleep state by programming MSRC001_0296 (using system-OEM-supported methods).
 
-## Use powercfg to fix the issue in Windows
+## Using powercfg to fix the issue in Windows
 
 We recommend using the Windows native [powercfg](/windows-hardware/design/device-experiences/powercfg-command-line-options) utility to fix the issue in Windows. The `powercfg` utility ships as part of Windows and is used to control power schemes on the system. The utility can be used to control processor idle or sleep states.
 
