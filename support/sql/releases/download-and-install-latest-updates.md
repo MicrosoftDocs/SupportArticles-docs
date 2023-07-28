@@ -126,30 +126,30 @@ Each of the following links provides information for all of the applicable produ
 | 14.0.3281.6| None| CU19| [4535007](https://support.microsoft.com/help/4535007)|February 05, 2020|
 |14.0.3257.3|None| CU18| [4527377](https://support.microsoft.com/help/4527377)|December 09, 2019|
 |14.0.3238.1|None| CU17| [4515579](https://support.microsoft.com/help/4515579)|October 08, 2019|
-| 14.0.3223.3|None| CU16| [4508218](https://support.microsoft.com/help/4508218)|August 01, 2019|
+| 14.0.3223.3|None| CU16| [4508218](cumulativeupdate16.md)|August 01, 2019|
 |14.0.3192.2|None| CU15 + GDR| [4505225](https://support.microsoft.com/help/4505225)|July 09, 2019|
 |14.0.2027.2|None| GDR| [4505224](https://support.microsoft.com/help/4505224)|July 09, 2019|
-|14.0.3162.1|None| CU15| [4498951](https://support.microsoft.com/help/4498951)|May 23, 2019|
+|14.0.3162.1|None| CU15| [4498951](cumulativeupdate15.md)|May 23, 2019|
 |14.0.3103.1|None| CU14 + GDR| [4494352](https://support.microsoft.com/help/4494352)|May 14, 2019|
 |14.0.2014.14|None| GDR| [4494351](https://support.microsoft.com/help/4494351)|May 14, 2019|
-|14.0.3076.1|None| CU14| [4484710](https://support.microsoft.com/help/4484710)|March 25, 2019|
-|14.0.3048.4|None| CU13| [4466404](https://support.microsoft.com/help/4466404)|December 18, 2018|
-|14.0.3045.24|None| CU12| [4464082](https://support.microsoft.com/help/4464082)|October 24, 2018|
-|14.0.3038.14|None| CU11| [4462262](https://support.microsoft.com/help/4462262)|September 20, 2018|
-|14.0.3037.1|None| CU10| [4342123](https://support.microsoft.com/help/4342123)|August 27, 2018|
+|14.0.3076.1|None| CU14| [4484710](cumulativeupdate14.md)|March 25, 2019|
+|14.0.3048.4|None| CU13| [4466404](cumulativeupdate13.md)|December 18, 2018|
+|14.0.3045.24|None| CU12| [4464082](cumulativeupdate12.md)|October 24, 2018|
+|14.0.3038.14|None| CU11| [4462262](cumulativeupdate11.md)|September 20, 2018|
+|14.0.3037.1|None| CU10| [4342123](cumulativeupdate10.md)|August 27, 2018|
 |14.0.2002.14|None| GDR| [4293803](https://support.microsoft.com/help/4293803)|August 14, 2018|
 |14.0.3035.2|None| CU9 + GDR| [4293805](https://support.microsoft.com/help/4293805)|August 14, 2018|
-|14.0.3030.27|None| CU9| [4341265](https://support.microsoft.com/help/4341265)|July 18, 2018|
-|14.0.3029.16|None| CU8| [4338363](https://support.microsoft.com/help/4338363)|June 21, 2018|
-|14.0.3026.27|None| CU7| [4229789](https://support.microsoft.com/help/4229789)|May 23, 2018|
-|14.0.3025.34|None| CU6| [4101464](https://support.microsoft.com/help/4101464)|April 17, 2018|
-|14.0.3023.8|None| CU5| [4092643](https://support.microsoft.com/help/4092643)|March 20, 2018|
-|14.0.3022.28|None| CU4| [4056498](https://support.microsoft.com/help/4056498)|February 20, 2018|
+|14.0.3030.27|None| CU9| [4341265](cumulativeupdate9.md)|July 17, 2018|
+|14.0.3029.16|None| CU8| [4338363](cumulativeupdate8.md)|June 21, 2018|
+|14.0.3026.27|None| CU7| [4229789](cumulativeupdate7.md)|May 24, 2018|
+|14.0.3025.34|None| CU6| [4101464](cumulativeupdate6.md)|April 18, 2018|
+|14.0.3023.8|None| CU5| [4092643](cumulativeupdate5.md)|March 21, 2018|
+|14.0.3022.28|None| CU4| [4056498](cumulativeupdate4.md)|February 20, 2018|
 |14.0.3015.40|None| CU3 + GDR| [4058562](https://support.microsoft.com/help/4058562)|January 03, 2018|
-|14.0.3015.40|None| CU3| [4052987](https://support.microsoft.com/help/4052987)|January 03, 2018|
+|14.0.3015.40|None| CU3| [4052987](cumulativeupdate3.md)|January 03, 2018|
 |14.0.2000.63|None| GDR| [4057122](https://support.microsoft.com/help/4057122)|January 03, 2018|
-|14.0.3008.27|None| CU2| [4052574](https://support.microsoft.com/help/4052574)|November 28, 2017|
-|14.0.3006.16|None| CU1| [4038634](https://support.microsoft.com/help/4038634)|October 24, 2017|
+|14.0.3008.27|None| CU2| [4052574](cumulativeupdate2.md)|December 05, 2017|
+|14.0.3006.16|None| CU1| [4038634](cumulativeupdate1.md)|October 25, 2017|
 |14.0.1000.169|None| RTM|NA|September 29, 2017|
 
 ### SQL Server 2016

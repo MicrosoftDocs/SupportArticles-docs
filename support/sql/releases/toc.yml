@@ -149,6 +149,70 @@ items:
     items:
     - name: Cumulative Update 31 (KB5016884)
       href: sqlserver-2017/cumulativeupdate31.md
+  - name: Cumulative Update 16
+    items:
+    - name: Cumulative Update 16 (KB4508218)
+      href: sqlserver-2017/cumulativeupdate16.md
+  - name: Cumulative Update 15
+    items:
+    - name: Cumulative Update 15 (KB4498951)
+      href: sqlserver-2017/cumulativeupdate15.md
+  - name: Cumulative Update 14
+    items:
+    - name: Cumulative Update 14 (KB4484710)
+      href: sqlserver-2017/cumulativeupdate14.md
+  - name: Cumulative Update 13
+    items:
+    - name: Cumulative Update 13 (KB4466404)
+      href: sqlserver-2017/cumulativeupdate13.md
+  - name: Cumulative Update 12
+    items:
+    - name: Cumulative Update 12 (KB4464082)
+      href: sqlserver-2017/cumulativeupdate12.md
+  - name: Cumulative Update 11
+    items:
+    - name: Cumulative Update 11 (KB4462262)
+      href: sqlserver-2017/cumulativeupdate11.md
+  - name: Cumulative Update 10
+    items:
+    - name: Cumulative Update 10 (KB4342123)
+      href: sqlserver-2017/cumulativeupdate10.md
+  - name: Cumulative Update 9
+    items:
+    - name: Cumulative Update 9 (KB4341265)
+      href: sqlserver-2017/cumulativeupdate9.md
+  - name: Cumulative Update 8
+    items:
+    - name: Cumulative Update 8 (KB4338363)
+      href: sqlserver-2017/cumulativeupdate8.md
+  - name: Cumulative Update 7
+    items:
+    - name: Cumulative Update 7 (KB4229789)
+      href: sqlserver-2017/cumulativeupdate7.md
+  - name: Cumulative Update 6
+    items:
+    - name: Cumulative Update 6 (KB4101464)
+      href: sqlserver-2017/cumulativeupdate6.md
+  - name: Cumulative Update 5
+    items:
+    - name: Cumulative Update 5 (KB4092643)
+      href: sqlserver-2017/cumulativeupdate5.md
+  - name: Cumulative Update 4
+    items:
+    - name: Cumulative Update 4 (KB4056498)
+      href: sqlserver-2017/cumulativeupdate4.md
+  - name: Cumulative Update 3
+    items:
+    - name: Cumulative Update 3 (KB4052987)
+      href: sqlserver-2017/cumulativeupdate3.md
+  - name: Cumulative Update 2
+    items:
+    - name: Cumulative Update 2 (KB4052574)
+      href: sqlserver-2017/cumulativeupdate2.md
+  - name: Cumulative Update 1
+    items:
+    - name: Cumulative Update 1 (KB4038634)
+      href: sqlserver-2017/cumulativeupdate1.md
 - name: SQL Server 2016
   items:
   - name: SQL Server 2016 build versions
