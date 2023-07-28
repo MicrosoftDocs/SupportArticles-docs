@@ -103,7 +103,7 @@ The following update is available from the Microsoft Download Center:
 
 The following update is available from the Microsoft Update Catalog:
 
- :::image type="icon" source="../media/download-icon.png" border="false"::: [Download the cumulative update package for SQL Server 2017 CU16 now](https://catalog.s.download.windowsupdate.com/d/msdownload/update/software/updt/2019/05/sqlserver2017-kb4508218-x64_b143d28a48204eb6ebab62394ce45df53d73f286.exe)
+ :::image type="icon" source="../media/download-icon.png" border="false"::: [Download the cumulative update package for SQL Server 2017 CU16 now](https://catalog.s.download.windowsupdate.com/d/msdownload/update/software/updt/2019/07/sqlserver2017-kb4508218-x64_a7fefaa78e201c654262066d84eb5e1c1fbe3282.exe)
 
 </details>
 

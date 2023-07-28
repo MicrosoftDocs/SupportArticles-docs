@@ -22,7 +22,7 @@ This article describes Cumulative Update package 4 (CU4) for Microsoft SQL Serve
 
 ## Known issues in this update
 
-When [Cumulative Update 4 (CU4)](cumulativeupdate4) is installed, customers may experience the following symptoms on SQL Server on Linux deployments with Pacemaker-managed Availability Groups.
+When [Cumulative Update 4 (CU4)](cumulativeupdate4.md) is installed, customers may experience the following symptoms on SQL Server on Linux deployments with Pacemaker-managed Availability Groups.
 
 - Pacemaker immediately demotes the primary replica of the AG resource to a secondary replica, then never promotes any secondary replica back to a primary replica.
 
@@ -34,9 +34,9 @@ To mitigate the problem, either
 
 1. Apply the [mssql-server-ha.cu4.patch](https://github.com/Microsoft/tigertoolbox/blob/master/mssql-server-ha.cu4.patch) to the `/usr/lib/ocf/resource.d/mssql/ag` file on all nodes of the Pacemaker cluster where the `mssql-server-ha` package is installed.
 
-1. Update to [Cumulative Update 5 (CU5)](cumulativeupdate5), which is a recommended option.
+1. Update to [Cumulative Update 5 (CU5)](cumulativeupdate5.md), which is a recommended option.
 
-1. Revert back to [Cumulative Update 3 (CU3)](cumulativeupdate3).
+1. Revert back to [Cumulative Update 3 (CU3)](cumulativeupdate3.md).
 
 ## Improvements and fixes included in this update
 
