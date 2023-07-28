@@ -44,7 +44,7 @@ You can consider setting the `ManagedPasswordIntervalInDays` parameter to 15 day
 
 In case of compromise, this setting can reduce the next rolling time.
 
-It will reduce the theoretical number of gMSA to be recreated between the date of the restored backup and the end of the database exposure, or at least, the risk window duration until these gMSA rolls, if you stick with the **Case 1**.
+It will reduce the theoretical number of gMSA to be recreated between the date of the restored backup and the end of the database exposure, or at least, the risk window duration until these gMSAs roll, if you stick with **Case 1**.
 
 Here's an example scenario:
 
@@ -122,11 +122,11 @@ In the domain holding the gMSAs that you want to repair, follow these steps:
 9. Disable and stop the Microsoft Key Distribution Service on all domain controllers.
 10. Reconnect and bring the restored domain controller back online. Make sure the replication is working.
 
-      Now, the authoritative restore and all the other changes, including the restored gMSAs, are replicated.
+      Now, the authoritative restore and all the other changes (including the restored gMSAs) are replicated.
 11. Re-enable and start Microsoft Key Distribution Service on all the domain controllers. The secrets of the restored gMSAs will roll, and new passwords will be created based on the new KDS Root Key object upon request.
 
       > [!NOTE]
-      > If the gMSAs are restored but not used, and they have the `PrincipalsAllowedToRetrieveManagedPassword` parameter populated, you can run the `Test-ADServiceAccount` cmdlet using a principal that's allowed to trigger an internal API, and roll the gMSAs to the new KDS Root Key.
+      > If the gMSAs are restored but not used, and they have the `PrincipalsAllowedToRetrieveManagedPassword` parameter populated, you can run the `Test-ADServiceAccount` cmdlet using a principal that's allowed to trigger an internal API and roll the gMSAs to the new KDS Root Key.
 12. Verify that all gMSAs have rolled.
 
       > [!NOTE]
@@ -166,7 +166,7 @@ Follow these steps:
    1. Create new gMSAs to replace the existing gMSAs. They also need to be configured with the DNS host names and SPNs you just removed.
 
       > [!NOTE]
-      > You also need to review all permission entries using directly deleted gMSA SIDs, as they aren't resolvable anymore. When replacing an access control entry (ACE), consider using groups to manage gMSA permission entries.
+      > You also need to review all permission entries using the directly removed gMSA SIDs, as they aren't resolvable anymore. When replacing an access control entry (ACE), consider using groups to manage gMSA permission entries.
 
 1. Check the new gMSAs to make sure that they use the new KDS Root Key object. To do this, follow these steps:
    1. Note the `CN` (GUID) value of the KDS Root Key object.
@@ -203,7 +203,7 @@ Follow these steps:
 
 If a highly privileged member with domain administrators or equivalent rights resigns, there's no proof of the KDS Root Key exposure at the time, and you can afford a time window for password rolling. You don't have to recreate the gMSAs.
 
-As a preventive measure, the KDS Root Key needs to be rolled to prevent any post-exploitation attack. For example, the former domain administrator has turned out to be rogue and kept some backups.
+As a preventive measure, the KDS Root Key must be rolled to prevent any post-exploitation attacks. For example, a former domain administrator has turned out to be a rogue and kept some backups.
 
 A new KDS Root Key object is created, and gMSAs will roll naturally.
 
@@ -239,7 +239,7 @@ In the domain holding the gMSAs that you want to roll, follow these steps:
 5. Depending on the next password roll, the secrets of the gMSAs will naturally roll, and new passwords will be created based on the new KDS Root Key object upon request.
 
       > [!NOTE]
-      > If the used gMSAs have rolled, but unused gMSAs with the same roll interval haven't, and they have the  `PrincipalsAllowedToRetrieveManagedPassword` parameter populated, you can run the `Test-ADServiceAccount` cmdlet. It uses a principal that's allowed to trigger an internal API, and roll the gMSA to the new KDS Root Key.
+      > If used gMSAs have rolled, but unused gMSAs with the same roll interval haven't, and they have the `PrincipalsAllowedToRetrieveManagedPassword` parameter populated, you can run the `Test-ADServiceAccount` cmdlet. It uses a principal that's allowed to trigger an internal API and roll the gMSAs to the new KDS Root Key.
 
 6. Verify that all gMSAs have rolled.
 
