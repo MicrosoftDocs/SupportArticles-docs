@@ -145,6 +145,10 @@ items:
   items:
   - name: SQL Server 2017 build versions
     href: sqlserver-2017/build-versions.md
+  - name: Cumulative Update 31
+    items:
+    - name: Cumulative Update 31 (KB5016884)
+      href: sqlserver-2017/cumulativeupdate31.md
 - name: SQL Server 2016
   items:
   - name: SQL Server 2016 build versions
