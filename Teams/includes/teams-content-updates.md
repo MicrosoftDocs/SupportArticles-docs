@@ -2,6 +2,14 @@
 
 
 
+## Week of July 24, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 7/26/2023 | [Fix video display lag issue in Teams](/microsoftteams/troubleshoot/meetings/fix-choppy-video) | added |
+
+
 ## Week of July 10, 2023
 
 
