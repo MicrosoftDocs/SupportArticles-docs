@@ -68,6 +68,58 @@ For AKS cluster, you can use [AKS Diagnose and Solve Problems](/azure/aks/aks-di
 
 Request throttling can be caused by a combination of any cluster in this subscription, not just the request rate for this cluster.
 
+### Example 1: Cluster Auto Scaler throttling
+This example is about analyzing throttling caused by Cluster Auto Scaler.
+If you find "Cluster Auto-Scaler Throttling has been detected" diagnostic in "AKS Diagnose and Solve Problems"\"Known Issues, Availability and Performance"\"Azure Resource Request Throttling", it indicates requests issued by Cluster Auto Scaler have been throttled.
+
+:::image type="content" source="./media/429-too-many-requests-errors/cluster-auto-scaler-throttling.png" alt-text="Diagram of Cluster Auto Scaler requests throttling is detected." lightbox="./media/429-too-many-requests-errors/cluster-auto-scaler-throttling.png" border="false":::
+
+You can find the throttled requests number and when the requests were throttled in next dianostic "Throttling - Azure Resource Manager"
+
+:::image type="content" source="./media/429-too-many-requests-errors/cas-arm-throttling.png" alt-text="Diagram of when Cluster Auto Scaler requests are throttled." lightbox="./media/429-too-many-requests-errors/cas-arm-throttling.png" border="false":::
+
+You can find all ARM requests numbers in the same time period.
+
+:::image type="content" source="./media/429-too-many-requests-errors/cas-arm-all-requests.png" alt-text="Diagram of all ARM requests." lightbox="./media/429-too-many-requests-errors/cas-arm-all-requests.png" border="false":::
+
+You can "View request rate and throttle details" in next diagnotic. Select filter "429s by User Agent", you can find auto scaler requests were throttled from 15:00 to 16:00."
+
+:::image type="content" source="./media/429-too-many-requests-errors/cas-throttling-by-user-agent.png" alt-text="Diagram of throttles by user agent." lightbox="./media/429-too-many-requests-errors/cas-throttling-by-user-agent.png" border="false":::
+
+You can also find the total throttled requests number for auto scaler and other user agents.
+
+:::image type="content" source="./media/429-too-many-requests-errors/cas-total-throttles-by-user-agent.png" alt-text="Diagram of total throttles by user agent." lightbox="./media/429-too-many-requests-errors/cas-total-throttles-by-user-agent.png" border="false":::
+
+You can also filter throttles by operations, it was VMSS VM delete operation throttled in this case.
+
+:::image type="content" source="./media/429-too-many-requests-errors/cas-throttling-by-operation.png" alt-text="Diagram of throttles by operations." lightbox="./media/429-too-many-requests-errors/cas-throttling-by-operation.png" border="false":::
+
+You can find the throttled requests numbers and all requests grouped by operations.
+
+:::image type="content" source="./media/429-too-many-requests-errors/cas-total-throttles-by-operation.png" alt-text="Diagram of total throttles by operations." lightbox="./media/429-too-many-requests-errors/cas-total-throttles-by-operation.png" border="false":::
+
+Then you can follow the suggestions in the "Recommended Action" to reduce the throttles.
+
+:::image type="content" source="./media/429-too-many-requests-errors/cluster-auto-scaler-throttling.png" alt-text="Diagram of Cluster Auto Scaler requests throttling is detected." lightbox="./media/429-too-many-requests-errors/cluster-auto-scaler-throttling.png" border="false":::
+
+
+### Example 2: Cloud Provider throttling
+This example is about the throttles caused by the Cloud Provider. It often happens when operating resources in larger clusters, e.g. provisioning a Azure Load Balancer in clusters having more than 500 nodes.
+If you find throttling happened in your cluster.
+
+:::image type="content" source="./media/429-too-many-requests-errors/cp-arm-throttling.png" alt-text="Diagram of throttling is detected." lightbox="./media/429-too-many-requests-errors/cp-arm-throttling.png" border="false":::
+
+
+You can find the throttling details in "View request rate and throttle details" diagnotic. Select filter "429s by User Agent", you can find cloud provider requests were throttled from 03:00 to 06:00."
+
+:::image type="content" source="./media/429-too-many-requests-errors/cp-throttle-by-user-agent.png" alt-text="Diagram of throttles by user agent." lightbox="./media/429-too-many-requests-errors/cp-throttle-by-user-agent.png" border="false":::
+
+You can also filter by operation to find out the throttled operation was reading load balancer.
+
+:::image type="content" source="./media/429-too-many-requests-errors/cp-throtlle-by-operation.png" alt-text="Diagram of throttles by operation." lightbox="./media/429-too-many-requests-errors/cp-throtlle-by-operation.png" border="false":::
+
+There is new features like [Node IP based Load Balancer](/azure/aks/load-balancer-standard#change-the-inbound-pool-type-preview) coming soon to reduce this throttle.
+
 ## Solution 1: Upgrade to a later version of Kubernetes
 
 Run Kubernetes 1.18.*x* or later. These versions contain many improvements that are described in [AKS throttling/429 errors](https://github.com/Azure/AKS/issues/1413) and [Support large clusters without throttling](https://github.com/kubernetes-sigs/cloud-provider-azure/issues/247). However, if you still see throttling (due to actual load or number of clients in the subscription), you can try the following solutions.
