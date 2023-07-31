@@ -1,76 +1,74 @@
 ---
-title: How to investigate POS suddenly being deactivated
-description: This articles helps you identify causes for why the POS could deactivate. 
+title: Store Commerce app (POS) is suddenly deactivated
+description: This article lists the causes and provides resolutions for the issue that the Store Commerce app (POS) is deactivated.
 author: bstorie
 ms.author: brstor
-ms.topic: troubleshooting-problem-resolution 
-ms.date: 07/25/2023
+ms.date: 07/31/2023
 ---
+# Dynamics 365 Commerce Store Commerce app is suddenly deactivated
 
-# POS is suddenly deactivated
-
-After launching Store Commerce APP (POS) it no longer shows as activated. Instead the POS prompts the user to complete the activation process. This article is intended to help you self-diagnose what can cause this situation and remedial steps you can take to help prevent it. 
+After you start the Microsoft Dynamics 365 Commerce [Store Commerce app (POS)](/dynamics365/commerce/dev-itpro/store-commerce), its status always shows **De-activated**. Additionally, the Store Commerce app prompts the user to complete the activation process. This article helps you self-diagnose the cause and provides resolutions, respectively.
 
 ## Prerequisites
 
-Ensure you have access to **Commerce HQ > Modules > Retail and Commerce > Channel Setup > POS setup > Devices**
+Ensure you have access to **Commerce HQ** > **Modules** > **Retail and Commerce** > **Channel Setup** > **POS setup** > **Devices**.
 
-## Determine the cause
+## Cause 1: The device token has expired
 
-## Cause 1: Device Token has expired
+When the Store Commerce app is activated, a device token is issued and stored in the installation folder. Each time you start the Store Commerce app, the token's issue date is compared to the maximum token lifetime parameter configured in Commerce headquarters.  If the token's age exceeds the configured lifetime, the token is considered invalid, and the Store Commerce app prompts for reactivation.
 
-When the POS is activated a device token is issued and stored in the POS installation folder. Each time the POS is launched this tokens issue date is compared against the maximum token lifetime parameter configured inside Commerce HQ.  If the token is older then this parameter its considered invalid and the POS prompts for re-activation.
+#### Resolution: Check the device token settings in Commerce headquarters
 
-### Solution 1: Check Commerce HQ Device token settings
+1. Sign in to **Commerce HQ** > ** Modules** > **Retail and Commerce** > **HQ Setup** > **Parameters** > **Commerce Shared Parameters**.
+2. Select the **Security** tab.
+3. Review the value in the **Device token lifetime** field.
 
-1. Log into **Commerce HQ > modules > Retail and Commerce > HQ Setup > Parameters > Commerce Shared Parameters**
-2. **Select** the **Security** Tab
-3. Review the value set in the **Device token lifetime** field.
-   > By default this value is 365 days. It can be set as high as 5120 days. This value is the maximum number of days after a POS is activated the token will be valid for.
+     - By default, this value is set to **365 days**, but it can be increased to a maximum of 5,120 days. This value is the maximum number of days the token is valid after activating a Store Commerce app.
+     - If you increase this value, the Store Commerce apps that are currently activated will remain activated until their token lifetime reaches the new value set.
 
-   > If you increase this value, any POS's which are currently activate will remain activate until their token lifetime reaches the new value set. 
+4. Go to **Commerce HQ** > **Modules** > **Retail and Commerce** > **Channel Setup** > **POS setup** > **Devices**.
+5. Select the device record that prompts for activation.
+6. Review the value in the **Activated date and time** field.
 
-4. Go to **Commerce HQ > Modules > Retail and Commerce > Channel Setup > POS setup > Devices**
-5. Select the Device record that is prompting for activation
-6. **Review** the **Activated date and time** field value.
+    - If this date is earlier than the number of days set for the device token lifetime, the token for the Store Commerce app has exceeded its lifetime.
+    - The value in this field updates automatically each time the Store Commerce app is activated. It's important to check this field before triggering a new activation.
 
-   > If this date is older then the number of days set for the Device token lifetime, the POS token has exceeded its lifetime.
+7. If the Store Commerce app's token has expired, you can reactivate the Store Commerce app.
 
-   > The value in this field will automatically update each time the POS is activated, its important to check this field before triggering a new activation .
+## Cause 2: The configuration file in the user profile folder is modified
 
-7. If the POS token has expired you can simply re-activate the POS as the root cause is the token exceeded its lifetime.
+By default, the Store Commerce app stores the configuration settings in a file under the path _C:\Windows\users\{User account}\Appdata\local\packages_.
 
-## Cause 2: Windows App user directory was modified
+Some Windows updates can inadvertently modify or delete files in this path. In this case, the Store Commerce app configuration file is removed, and the Store Commerce app no longer registers as activated.
 
-By default Store Commerce App stores the configuration settings in a file under the path C:\Windows\users\{User account}\Appdata\local\packages
+#### Resolution 1: Check the Windows update history
 
-Some windows updates can inadvertently modify/delete files in this path. In this situation the Store Commerce App configuration file is removed and the POS application no longer registers as being activated. 
+Check if the Windows update history lists any updates that were recently applied to your computer.
 
-### Solution 1: Check Windows Update history
+If this is a reoccurring issue, consider rerunning the Store Commerce app installer together with the `usecommonapplicationdata` flag.
 
-Check Windows update history to see if any recent Windows OS updates were deploy to the PC.  
+> [!NOTE]
+> When the `usecommonapplicationdata` flag is used, the Store Commerce app configuration file will be stored in the _C:\Program Data\_ folder instead.
 
-If this is a re-occurring issue consider re-running the Store Commerce App installer again and include the flag --usecommonapplicationdata
+#### Resolution 2: Check the security software
 
-  > When the flag --usecommonapplicationdata is used the POS configuration file will be stored in C:\Program Data\  folder instead.
+Check if the security software scanned the `C:\Windows\users\{User account}\Appdata\local\packages\Microsoft` directory and detected any files.
 
-### Solution 2: Security software is flagging the configuration file
+If this is a reoccurring issue, consider rerunning the Store Commerce app installer together with the `usecommonapplicationdata` flag.
 
-Check to see if security software is scanning the C:\Windows\users\{User account}\Appdata\local\packages\Microsoft directory and flagging any files.
+> [!NOTE]
+> When the `usecommonapplicationdata` flag is used, the Store Commerce app configuration file will be stored in the _C:\Program Data\_ folder instead.
 
-If this is a re-occurring issue consider re-running the Store Commerce App installer again and include the flag --usecommonapplicationdata
+## Cause 3: The browser history is cleared
 
-  > When the flag --usecommonapplicationdata is used the POS configuration file will be stored in C:\Program Data\  folder instead.
+Store Commerce for web (Cloud POS) is a browser-based access system. It stores the Store Commerce app activation state in the web browser history. If you clear the web browser history, the Store Commerce app will no longer report as activated.
 
-## Cause 3: Browser History was cleared
+If you activate the Store Commerce app using an InPrivate window in a browser, its activation state will be lost once you close the browser. 
 
-As Store Commerce for the Web (Cloud POS) is a browser based access system, it stores the POS activation state in the web browser history.  If you clear the web browser history then the POS will no longer report as activated. 
+#### Resolution: Check the browser settings and extensions
 
-If you activated POS using in-private browser then its activation state will be lost once you close the browser. 
-
-### Solution : Check browser settings and extensions
-
-Check your browsers settings and extensions to make sure they are not clearing the browser history upon exit/closure of the web browser or tab. 
+To solve this issue, check your browser's settings and extensions to make sure they don't clear the browser history when you close the web browser or tab.
 
 ## Reference
-For more information about Store Commerce App Installation parameters please review [this page](https://learn.microsoft.com/dynamics365/commerce/dev-itpro/store-commerce)
+
+For more information about the Store Commerce app installation parameters, see [Store Commerce app](/dynamics365/commerce/dev-itpro/store-commerce).
