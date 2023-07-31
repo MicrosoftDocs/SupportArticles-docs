@@ -114,12 +114,9 @@ For more information about the bugs that are fixed and enhancements that are inc
 
 The following update is available from the Microsoft Download Center:
 
- :::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2017 now](https://www.microsoft.com/download/details.aspx?id=56128)
+:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2017 now](https://www.microsoft.com/download/details.aspx?id=56128)
 
-> [!NOTE]
->
-> - Microsoft Download Center will always present the latest SQL Server 2017 CU release.
-> - If the download page does not appear, contact [Microsoft Customer Service and Support](https://support.microsoft.com/contactus/?ws=support) to obtain the cumulative update package.
+If the download page doesn't appear, contact [Microsoft Customer Service and Support](https://support.microsoft.com/contactus/?ws=support) to obtain the cumulative update package.
 
 </details>
 
@@ -131,7 +128,7 @@ The following update is available from the Microsoft Download Center:
 
 The following update is available from the Microsoft Update Catalog:
 
- :::image type="icon" source="../media/download-icon.png" border="false"::: [Download the cumulative update package for SQL Server 2017 CU1 now](https://catalog.s.download.windowsupdate.com/d/msdownload/update/software/updt/2017/12/sqlserver2017-kb4038634-x64_a75ab79103d72ce094866404607c2e84ae777d43.exe)
+:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the cumulative update package for SQL Server 2017 CU1 now](https://catalog.s.download.windowsupdate.com/d/msdownload/update/software/updt/2017/12/sqlserver2017-kb4038634-x64_a75ab79103d72ce094866404607c2e84ae777d43.exe)
 
 </details>
 
@@ -140,7 +137,7 @@ The following update is available from the Microsoft Update Catalog:
 
 To update SQL Server 2017 on Linux to the latest CU, you must first have the [Cumulative Update repository configured](/sql/linux/sql-server-linux-setup#repositories). Then, update your SQL Server packages by using the appropriate platform-specific update command.
 
-For installation instructions and direct links to the CU package downloads, see the [SQL Server 2017 Release Notes](/sql/linux/sql-server-linux-release-notes-2017).
+For installation instructions and direct links to the CU package downloads, see the [SQL Server 2017 Release Notes](/sql/linux/sql-server-linux-release-notes-2017#cuinstall).
 
 </details>
 
@@ -434,7 +431,7 @@ This article also provides important information about the following situations:
 
 - [**Pacemaker**](#pacemaker): A behavioral change is made in distributions that use the latest available version of Pacemaker. Mitigation methods are provided.
 
-- [**Query Store**](https://support.microsoft.com/help/5008084#bkmk_querystore_notice): You must run this script if you use the Query Store and you have previously installed Microsoft SQL Server 2017 Cumulative Update 2 (CU2).
+- [**Query Store**](#query-store): You must run this script if you use the Query Store and you have previously installed Microsoft SQL Server 2017 Cumulative Update 2 (CU2).
 
 ### Analysis Services CU build version
 
@@ -494,7 +491,7 @@ Revert to Pacemaker version 1.1.16.
 </details>
 
 <details>
-<summary><b>Query Store notice</b></summary>
+<summary><b>Query Store notice</b></summary><a id="query-store"></a>
 
 **IMPORTANT**
 
