@@ -11,7 +11,7 @@ ms.custom:
   - Exchange Online
   - CSSTroubleshoot
   - CI 171106
-ms.reviewer: batre, meerak
+ms.reviewer: batre, meerak, v-trisshores
 appliesto: 
   - Exchange Online
 search.appverid: MET150
@@ -44,7 +44,7 @@ Your choice of method might depend on the size of the Deleted Items folder. For 
 
 ## Method 1: Use Outlook on the web
 
-To create a Microsoft 365 Groups subfolder and access the Deleted Items folder, follow these steps:
+Create a Microsoft 365 Groups subfolder to access the Deleted Items folder. Follow these steps:
 
 1. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -67,7 +67,7 @@ To create a Microsoft 365 Groups subfolder and access the Deleted Items folder, 
 5. Right-click the group, select **Create new subfolder**, enter any name for the folder, and then select **OK**.
 
    > [!NOTE]
-   > If the **Create new subfolder** option is grayed out, check whether you used the group owner credentials to sign in to Outlook on the web. If you are not an owner of the group, contact an owner for support to resolve this issue. Group owners can [grant permission](/microsoft-365/enterprise/manage-folders-and-rules-feature#enable-member-permission-option) for group members to create folders, rename folders, and delete messages.
+   > If the **Create new subfolder** option is grayed out, check whether you used the group owner credentials to sign in to Outlook on the web. If you aren't an owner of the group, contact an owner for support to resolve this issue. Group owners can [grant permission](/microsoft-365/enterprise/manage-folders-and-rules-feature#enable-member-permission-option) for group members to create folders, rename folders, and delete messages.
 
 6. After the built-in Deleted Items folder appears, select the folder, select **Select all messages** at the top of the message list, and then select **Empty folder**.
 
