@@ -137,7 +137,7 @@ The following update is available from the Microsoft Download Center:
 
 - :::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2017 now](https://www.microsoft.com/download/details.aspx?id=56128)
 
-If the download page doesn't appear, contact [Microsoft Customer Service and Support](http://support.microsoft.com/contactus/?ws=support) to obtain the cumulative update package.
+If the download page doesn't appear, contact [Microsoft Customer Service and Support](https://support.microsoft.com/contactus/?ws=support) to obtain the cumulative update package.
 
 </details>
 
@@ -959,9 +959,9 @@ To use one of the hotfixes in this package, you don't have to make any changes t
 
 This article also provides important information about the following situations:
 
-- [Pacemaker](#pacemaker-notice): A behavioral change is made in distributions that use the latest available version of Pacemaker. Mitigation methods are provided.
+- [**Pacemaker**](#pacemaker): A behavioral change is made in distributions that use the latest available version of Pacemaker. Mitigation methods are provided.
 
-- [Query Store](#query-store-notice): You must run this script if you use the Query Store and you have previously installed Microsoft SQL Server 2017 Cumulative Update 2 (CU2).
+- [**Query Store**](#query-store): You must run this script if you use the Query Store and you have previously installed Microsoft SQL Server 2017 Cumulative Update 2 (CU2).
 
 ### Analysis Services CU build version
 
@@ -984,7 +984,7 @@ CU packages for Linux are available at https://packages.microsoft.com/.
 </details>
 
 <details>
-<summary><b>Pacemaker notice</b></summary>
+<summary><b>Pacemaker notice</b></summary><a id="pacemaker"></a>
 
 **IMPORTANT**
 
@@ -1020,7 +1020,7 @@ Revert to Pacemaker version 1.1.16.
 </details>
 
 <details>
-<summary><b>Query Store notice</b></summary>
+<summary><b>Query Store notice</b></summary><a id="query-store"></a>
 
 **IMPORTANT**
 
