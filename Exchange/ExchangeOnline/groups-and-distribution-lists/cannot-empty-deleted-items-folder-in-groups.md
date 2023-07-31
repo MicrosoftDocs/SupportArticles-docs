@@ -13,8 +13,7 @@ ms.custom:
   - CI 171106
 ms.reviewer: batre, meerak
 appliesto: 
-  - Exchange Online via Office 365 E Plans
-  - Exchange Online via Office 365 P Plans
+  - Exchange Online
 search.appverid: MET150
 ms.date: 07/31/2023
 ---
@@ -23,11 +22,11 @@ ms.date: 07/31/2023
 
 ## Symptoms
 
-You want to empty the Deleted Items folder for a group in Microsoft 365 Groups. However, the folder is missing in Microsoft Outlook and Outlook on the web.
+You want to empty the Deleted Items folder for a group in Microsoft 365 Groups. However, the Deleted Items folder is missing in Microsoft Outlook and Outlook on the web.
 
 ## Cause
 
-Outlook on the web doesn't show built-in Microsoft 365 Groups folders, such as the Deleted Items folder, unless one or more user-created folders exist. You can't use the Outlook desktop client to view Microsoft 365 Groups folders.
+Outlook on the web doesn't show the built-in Microsoft 365 Groups folders, such as the Deleted Items folder, unless one or more user-created folders exist. You can't use the Outlook desktop client to view Microsoft 365 Groups folders.
 
 ## Resolution
 
@@ -37,7 +36,7 @@ Your choice of method might depend on the size of the Deleted Items folder. For 
 
 1. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
-2. Get folder size information for the group mailbox by using the [Get-EXOMailboxFolderStatistics](/powershell/module/exchange/get-mailboxfolderstatistics) cmdlet:
+2. Get folder size information for the group mailbox by using the [Get-EXOMailboxFolderStatistics](/powershell/module/exchange/get-exomailboxfolderstatistics) cmdlet:
 
    ```powershell
    Get-EXOMailboxFolderStatistics -Identity "<group name>" -FolderScope NonIPMRoot | Where { $_.TargetQuota -like 'User' } | FT Name,FolderType,FolderAndSubfolderSize
@@ -130,4 +129,4 @@ This method offers a long-term solution for management of the Deleted Items fold
 
      Entries for the most recent errors are at the top of the log.
 
-   For more information about the MFA and how to troubleshoot retention, see [How and what to check when your emails aren't being deleted or archived properly in Exchange Online](https://answers.microsoft.com/msoffice/forum/all/how-and-what-to-check-when-your-emails-are-not/e9087576-fe91-4809-87fc-fff8cbb17c6a).
+   For more information about the MFA and how to troubleshoot retention, see [Resolve email archive and deletion issues when using retention policies](/microsoft-365/troubleshoot/retention/troubleshoot-mrm-email-archive-deletion).
