@@ -69,7 +69,6 @@ For debugging, you can review the event IDs for the System, Security, Directory 
 
 For more information about a compromise, see [Use Microsoft and Azure security resources to help recover from systemic identity compromise](/azure/security/fundamentals/recover-from-identity-compromise#on-premises-remediation-activities).
 
-
 ## Resolution
 
 To resolve this problem, use one of the following approaches, depending on your situation. Both approaches involve creating a new KDS Root Key object and restarting Microsoft Key Distribution Service on all the domain controllers of the domain.
@@ -127,10 +126,12 @@ In the domain holding the gMSAs that you want to repair, follow these steps:
 
       > [!NOTE]
       > If the gMSAs are restored but not used, and they have the `PrincipalsAllowedToRetrieveManagedPassword` parameter populated, you can run the `Test-ADServiceAccount` cmdlet using a principal that's allowed to trigger an internal API and roll the gMSAs to the new KDS Root Key.
+
 12. Verify that all gMSAs have rolled.
 
       > [!NOTE]
       > The gMSA without the `PrincipalsAllowedToRetrieveManagedPassword` parameter populated will never roll.
+
 13. Delete the old KDS Root Key object and verify the replications.
 14. Restart the Microsoft Key Distribution Service on all the domain controllers.
 
@@ -158,19 +159,19 @@ Follow these steps:
     }
     ```
 
-1. Use a single domain controller and follow these steps:
+2. Use a single domain controller and follow these steps:
    1. Follow the steps in [Create the Key Distribution Services KDS Root Key](/windows-server/security/group-managed-service-accounts/create-the-key-distribution-services-kds-root-key) to create a new KDS Root Key object.
-   1. Restart the Microsoft Key Distribution Service. After it restarts, the service picks up the new object.
-   1.	Back up DNS host names and service principal names (SPNs) associated with each gMSA marked to be removed.
-   1. Edit the existing gMSAs to remove the SPNs and DNS host names.
-   1. Create new gMSAs to replace the existing gMSAs. They also need to be configured with the DNS host names and SPNs you just removed.
+   2. Restart the Microsoft Key Distribution Service. After it restarts, the service picks up the new object.
+   3.	Back up DNS host names and service principal names (SPNs) associated with each gMSA marked to be removed.
+   4. Edit the existing gMSAs to remove the SPNs and DNS host names.
+   5. Create new gMSAs to replace the existing gMSAs. They also need to be configured with the DNS host names and SPNs you just removed.
 
       > [!NOTE]
       > You also need to review all permission entries using the directly removed gMSA SIDs, as they aren't resolvable anymore. When replacing an access control entry (ACE), consider using groups to manage gMSA permission entries.
 
-1. Check the new gMSAs to make sure that they use the new KDS Root Key object. To do this, follow these steps:
+3. Check the new gMSAs to make sure that they use the new KDS Root Key object. To do this, follow these steps:
    1. Note the `CN` (GUID) value of the KDS Root Key object.
-   1. Check the `msds-ManagedPasswordID` value of the first gMSA that you created. The value of this attribute is binary data that includes the GUID of the matching KDS Root Key object.  
+   2. Check the `msds-ManagedPasswordID` value of the first gMSA that you created. The value of this attribute is binary data that includes the GUID of the matching KDS Root Key object.  
 
       For example, assume that the KDS Root Key object has the following `CN`.  
 
@@ -184,8 +185,8 @@ Follow these steps:
 
       If the first gMSA that you created uses the new KDS root key, all subsequent gMSAs also use the new key.
 
-1. Update the appropriate services to use the new gMSAs.
-1. Delete the old gMSAs that used the old KDS Root Key object by using the following cmdlet:
+4. Update the appropriate services to use the new gMSAs.
+5. Delete the old gMSAs that used the old KDS Root Key object by using the following cmdlet:
 
     ```powershell
     $Domain = (Get-ADDomain).DistinguishedName
@@ -196,8 +197,8 @@ Follow these steps:
     }
     ```
 
-1. Delete the old KDS Root Key object and verify the replications.
-1. Restart the Microsoft Key Distribution Service on all the domain controllers.
+6. Delete the old KDS Root Key object and verify the replications.
+7. Restart the Microsoft Key Distribution Service on all the domain controllers.
 
 ### Case 3: Resignation of a domain administrator, no information was stolen at the time, and you can wait for passwords to roll
 
@@ -246,6 +247,7 @@ In the domain holding the gMSAs that you want to roll, follow these steps:
 
       > [!NOTE]
       > The gMSA without the `PrincipalsAllowedToRetrieveManagedPassword` parameter will never roll.
+
 7. After all the gMSAs have rolled to the new KDS Root Key object, delete the old KDS Root Key object and verify the replications.
 8. Restart the Microsoft Key Distribution Service on all the domain controllers.
 
