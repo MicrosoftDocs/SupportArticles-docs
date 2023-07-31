@@ -43,7 +43,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id=14056987>[14056987](#14056987) </a> | Fixes a potential issue that causes error 5511 when performing a log backup on a database that has filestream data. | SQL Server Engine | FileStream and FileTable | Windows |
 | <a id=14082570>[14082570](#14082570) </a> | [Improvement: Availability Group listener without the load balancer in SQL Server 2017 and 2019 (KB4578579)](https://support.microsoft.com/help/4578579) | SQL Server Engine |High Availability and Disaster Recovery | Windows |
 | <a id=14030483>[14030483](#14030483) </a> | Fixes an issue that causes the database `log_reuse_wait_desc` to change to `AVAILABILITY_REPLICA` when a database is removed from an availability group. | SQL Server Engine| High Availability and Disaster Recovery | Windows |
-| <a id=14102876>[14102876](#14102876) </a> | Adds improvement to help diagnose replica connection timeout errors. </br></br>**Note**: This improvement adds `sqlserver.ucs_connection_setup` XEvent and 35206, 35201 `ERROR_REPORTED` XEvent to `AlwaysOn_health`, to provide additional logging detail when connection timeout occurs between error log. SSAS does not work with AlwaysOn Availability Groups, but need a different solution for DR unless you are using SQL databases as your data source. | SQL Server Engine | High Availability and Disaster Recovery | Windows |
+| <a id=14102876>[14102876](#14102876) </a> | Adds improvement to help diagnose replica connection timeout errors. </br></br>**Note**: This improvement adds `sqlserver.ucs_connection_setup` XEvent and 35206, 35201 `ERROR_REPORTED` XEvent to `AlwaysOn_health`, to provide additional logging detail when connection timeout occurs between error log. SSAS doesn't work with AlwaysOn Availability Groups, but need a different solution for DR unless you're using SQL databases as your data source. | SQL Server Engine | High Availability and Disaster Recovery | Windows |
 | <a id=14087445>[14087445](#14087445) </a> | Fixes an issue where SQL Server 2017 CU22 using XTP UserDB for staging tables has steady growing trend for "VARHEAP\Storage internal heap" in `dm_db_xtp_memory_consumers` that leads to OOM/41805 errors when it reaches 50/60GB and requires proactive restart/failover to retain stability. | SQL Server Engine | In-Memory OLTP | Windows |
 | <a id=13955890>[13955890](#13955890) </a> | Fixes an issue on how to rotate the service account password without restarting SQL Server. | SQL Server Engine|Linux | Linux|
 | <a id=13975159>[13975159](#13975159) </a> | Adds support for 32 key columns to `system sp_pkeys` and fixes the performance regression that occurs after the installation of Cumulative Update 21 (CU21) for SQL Server 2017.| SQL Server Engine | Metadata | Windows |
@@ -63,7 +63,7 @@ The following update is available from the Microsoft Download Center:
 
 - :::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2017 now](https://www.microsoft.com/download/details.aspx?id=56128)
 
-If the download page does not appear, contact [Microsoft Customer Service and Support](https://support.microsoft.com/contactus/?ws=support) to obtain the cumulative update package.
+If the download page doesn't appear, contact [Microsoft Customer Service and Support](https://support.microsoft.com/contactus/?ws=support) to obtain the cumulative update package.
 
 > [!NOTE]
 >

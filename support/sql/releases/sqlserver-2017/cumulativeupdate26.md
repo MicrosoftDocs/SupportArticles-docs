@@ -54,7 +54,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id=14224387>[14224387](#14224387) </a> | [FIX: Assertion failure may occur when sp_cleanup_history_table is executed in SQL Server 2017 (KB5006029)](https://support.microsoft.com/help/5006029) | SQL Server Engine | Replication | Windows |
 | <a id=14130524>[14130524](#14130524) </a> | Fixes missing data in the Change Data Capture (CDC) side table and adds additional error handling to prevent data loss. | SQL Server Engine|Replication | Windows |
 | <a id=14178360>[14178360](#14178360) </a> | Adds pOwnerSess to the error message to find the owner session Id that runs the Log Reader Agent or log - related procedure in SQL Server 2017. | SQL Server Engine| Replication | Windows |
-| <a id=14193531>[14193531](#14193531) </a> | Fixes the issue where datatype is not included in the warning message instead a 'null' value appears: </br></br>Warning: Article with '(null)' data type column is not supported with memory optimized tables on subscribers running SQL Server 2014 or earlier. | SQL Server Engine | Replication | Windows |
+| <a id=14193531>[14193531](#14193531) </a> | Fixes the issue where datatype isn't included in the warning message instead a 'null' value appears: </br></br>Warning: Article with '(null)' data type column is not supported with memory optimized tables on subscribers running SQL Server 2014 or earlier. | SQL Server Engine | Replication | Windows |
 | <a id=14164877>[14164877](#14164877) </a> | [FIX: SQL Server affinity settings are reset after applying CU for SQL Server 2017 and 2019 (KB5004573)](https://support.microsoft.com/help/5004573) | SQL Server Engine | SQL OS | Windows |
 | <a id=14117711>[14117711](#14117711) </a> | [Improvement: Corrupted statistics can be detected by using extended_logical_checks in SQL Server 2019 (KB4530907)](https://support.microsoft.com/help/4530907) | SQL Server Engine | Storage Management | Windows |
 
@@ -67,7 +67,7 @@ The following update is available from the Microsoft Download Center:
 
 - :::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2017 now](https://www.microsoft.com/download/details.aspx?id=56128)
 
-If the download page does not appear, contact [Microsoft Customer Service and Support](https://support.microsoft.com/contactus/?ws=support) to obtain the cumulative update package.
+If the download page doesn't appear, contact [Microsoft Customer Service and Support](https://support.microsoft.com/contactus/?ws=support) to obtain the cumulative update package.
 
 > [!NOTE]
 >
