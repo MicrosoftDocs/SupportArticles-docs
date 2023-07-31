@@ -432,9 +432,9 @@ To use one of the hotfixes in this package, you don't have to make any changes t
 
 This article also provides important information about the following situations:
 
-- [**Pacemaker**](https://support.microsoft.com/help/5008084#bkmk_pacemaker_notice) : A behavioral change is made in distributions that use the latest available version of Pacemaker. Mitigation methods are provided.
+- [**Pacemaker**](#pacemaker): A behavioral change is made in distributions that use the latest available version of Pacemaker. Mitigation methods are provided.
 
-- [**Query Store**](https://support.microsoft.com/help/5008084#bkmk_querystore_notice) : You must run this script if you use the Query Store and you have previously installed Microsoft SQL Server 2017 Cumulative Update 2 (CU2).
+- [**Query Store**](https://support.microsoft.com/help/5008084#bkmk_querystore_notice): You must run this script if you use the Query Store and you have previously installed Microsoft SQL Server 2017 Cumulative Update 2 (CU2).
 
 ### Analysis Services CU build version
 
@@ -458,7 +458,7 @@ CU packages for Linux are available at https://packages.microsoft.com.
 </details>
 
 <details>
-<summary><b>Pacemaker notice</b></summary>
+<summary><b>Pacemaker notice</b></summary><a name="pacemaker" />
 
 **IMPORTANT**
 
