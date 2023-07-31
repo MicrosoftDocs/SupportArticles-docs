@@ -284,7 +284,7 @@ If you can't upgrade to the latest kernel versions, you can work around this pro
 
 ### "The user name or password is incorrect" error after a customer-initiated failover
 
-In a customer-initiated failover scenario with geo-redundant storage accounts, file handles and leases aren't retained on failover. Clients must unmount and remount the file shares.
+In a customer-initiated failover scenario with geo-redundant storage accounts, file handles and leases aren't retained upon failover. Clients must unmount and remount the file shares.
 
 ### <a id="noaaccessfailureportal"></a>Error "No access" when you try to access or delete an Azure file share
 
