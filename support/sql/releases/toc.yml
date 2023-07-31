@@ -153,6 +153,14 @@ items:
     items:
     - name: Cumulative Update 30 (KB5013756)
       href: sqlserver-2017/cumulativeupdate30.md
+  - name: Cumulative Update 29
+    items:
+    - name: Cumulative Update 29 (KB5010786)
+      href: sqlserver-2017/cumulativeupdate29.md
+  - name: Cumulative Update 28
+    items:
+    - name: Cumulative Update 28 (KB5008084)
+      href: sqlserver-2017/cumulativeupdate28.md
   - name: Cumulative Update 16
     items:
     - name: Cumulative Update 16 (KB4508218)
