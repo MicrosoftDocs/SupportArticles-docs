@@ -9,7 +9,7 @@ metadata:
   ms.service: dynamics-365-commerce
   author: bstorie
   ms.author: brstor
-  ms.date: 07/20/2023
+  ms.date: 07/31/2023
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -21,6 +21,14 @@ landingContent:
         links:
           - text: CDX download jobs can't be downloaded in a sandbox UAT
             url: data-synchronization/uat-cdx-broke-after-debug-aos.md
+
+  # Card
+  - title: Point of sale (POS)
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Store Commerce app (POS) is suddenly deactivated
+            url: point-of-sale/store-commerce-app-pos-deactivated.md
 
 
 
