@@ -78,7 +78,7 @@ For example, consider that for an organization that uses *contoso.com* as the do
     ```powershell
     New-Mailbox -Organization contoso.com -Name room1 -DisplayName "Conference Room 1" -Room
     
-    Set-Place room1@contoso.com -CountryOrRegion "United States of America" -State "Washington" -City "Seattle" -Floor 1 -FloorLabel “Ground” -Capacity 5
+    Set-Place room1@contoso.com -CountryOrRegion "US" -State "Washington" -City "Seattle" -Floor 1 -FloorLabel “Ground” -Capacity 5
     ```
 
 **Note**: In the Set-Place cmdlet,use the **Floor** property to specify the floor where a room or workspace is located. In the Places API room resource type, use the **FloorNumber** parameter.
@@ -88,7 +88,7 @@ For example, consider that for an organization that uses *contoso.com* as the do
     ```powershell
     New-Mailbox -Organization contoso.com -Name workspace1 -DisplayName "Workspace 1" -Room | Set-Mailbox -Type Workspace 
     
-    Set-Place workspace1@contoso.com -CountryOrRegion "United States of America" -State "Washington" -City "Seattle" -Floor 1 -FloorLabel "Ground" -Capacity 5
+    Set-Place workspace1@contoso.com -CountryOrRegion "US" -State "Washington" -City "Seattle" -Floor 1 -FloorLabel "Ground" -Capacity 5
     ```
 
     Also, you can set up automatic workspace capacity evaluation by running the following cmdlet:
