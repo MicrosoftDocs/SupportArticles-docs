@@ -458,7 +458,7 @@ CU packages for Linux are available at https://packages.microsoft.com.
 </details>
 
 <details>
-<summary><b>Pacemaker notice</b></summary><a name="pacemaker"></a>
+<summary><b>Pacemaker notice</b></summary><a id="pacemaker"></a>
 
 **IMPORTANT**
 
