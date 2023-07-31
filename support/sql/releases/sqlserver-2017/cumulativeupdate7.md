@@ -29,7 +29,7 @@ There are no known issues in this cumulative update.
 A downloadable Excel workbook that contains a summary list of builds, together with their current support lifecycle, is available. The Excel file also contains detailed fix lists for SQL Server 2019 and SQL Server 2017. [Select to download this Excel file now](https://aka.ms/sqlserverbuilds).
 
 > [!NOTE]
-> Individual entries in the following table can be referenced directly through a bookmark. If you select any bug reference ID in the table, a bookmark tag is added to the URL by using the "#NNNNNNN" format. You can then share this URL with others so that they can jump directly to the desired fix in the table.
+> Individual entries in the following table can be referenced directly through a bookmark. If you select any bug reference ID in the table, a bookmark tag is added to the URL by using the "#NNNNNNNN" format. You can then share this URL with others so that they can jump directly to the desired fix in the table.
 
 For more information about the bugs that are fixed and enhancements that are included in this cumulative update, see the following Microsoft Knowledge Base articles.
 
@@ -58,10 +58,10 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="11971856">[11971856](#11971856)</a> | [FIX: A memory assertion failure occurs and the server is unable to make any new connections in SQL Server (KB4230516)](https://support.microsoft.com/help/4230516) | SQL Server Engine | Methods to access stored data | Windows |
 | <a id="11967438">[11967438](#11967438)</a> | FIX: A dead latch condition occurs when you perform an online index rebuild or execute a merge command in SQL Server (KB4230730) | SQL Server Engine | Methods to access stored data | Windows |
 | <a id="11951171">[11951171](#11951171)</a> | [FIX: An unexpected communication link error occurs when using datetime2 fields accessing a database in SQL Server 2017 (KB4230465)](https://support.microsoft.com/help/4230465) | SQL Server Engine | Programmability | All |
-| <a id="11708399">[11708399](#11708399)</a> | FIX: DROP_ASYMMETRIC_KEY causes an instance of SQL Server to crash if it's rolled back from a trigger (KB4135045) | SQL Server Engine | Security Infrastructure | All |
-| <a id="11953218">[11953218](#11953218)</a> | [FIX: SQL Server will not start when you run a SQL Server 2017 Linux container image on Docker for Windows (KB4212960)](https://support.microsoft.com/help/4212960) | SQL Server Engine | SQL OS | Linux |
+| <a id="11708399">[11708399](#11708399)</a> | FIX: `DROP_ASYMMETRIC_KEY` causes an instance of SQL Server to crash if it's rolled back from a trigger (KB4135045) | SQL Server Engine | Security Infrastructure | All |
+| <a id="11953218">[11953218](#11953218)</a> | [FIX: SQL Server can't start when you run a SQL Server 2017 Linux container image on Docker for Windows (KB4212960)](https://support.microsoft.com/help/4212960) | SQL Server Engine | SQL OS | Linux |
 | <a id="11823305">[11823305](#11823305)</a> | [FIX: TDE enabled database backup with compression causes database corruption in SQL Server 2016 (KB4101502)](https://support.microsoft.com/help/4101502) | SQL Server Engine | Storage Management | All |
-| <a id="11634330">[11634330](#11634330)</a> | [FIX: "Can't use SAVE TRANSACTION within a distributed transaction" error when you execute a stored procedure in SQL Server (KB4092554)](https://support.microsoft.com/help/4092554) | SQL Server Engine | Transaction Services | Windows |
+| <a id="11634330">[11634330](#11634330)</a> | [FIX: "Cannot use SAVE TRANSACTION within a distributed transaction" error when you execute a stored procedure in SQL Server (KB4092554)](https://support.microsoft.com/help/4092554) | SQL Server Engine | Transaction Services | Windows |
 | <a id="11952929">[11952929](#11952929)</a> | [FIX: Performance is slow for an Always On AG when you process a read query in SQL Server (KB4163087)](https://support.microsoft.com/help/4163087) | SQL Server Engine | Transaction Services | All |
 
 ## How to obtain or download this or the latest cumulative update package

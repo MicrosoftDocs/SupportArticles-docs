@@ -29,7 +29,7 @@ There are no known issues in this cumulative update.
 A downloadable Excel workbook that contains a summary list of builds, together with their current support lifecycle, is available. The Excel file also contains detailed fix lists for SQL Server 2019 and SQL Server 2017. [Select to download this Excel file now](https://aka.ms/sqlserverbuilds).
 
 > [!NOTE]
-> Individual entries in the following table can be referenced directly through a bookmark. If you select any bug reference ID in the table, a bookmark tag is added to the URL by using the "#NNNNNNN" format. You can then share this URL with others so that they can jump directly to the desired fix in the table.
+> Individual entries in the following table can be referenced directly through a bookmark. If you select any bug reference ID in the table, a bookmark tag is added to the URL by using the "#NNNNNNNN" format. You can then share this URL with others so that they can jump directly to the desired fix in the table.
 
 For more information about the bugs that are fixed and enhancements that are included in this cumulative update, see the following Microsoft Knowledge Base articles.
 
@@ -46,8 +46,8 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="11983945">[11983945](#11983945)</a> | FIX: Processing a cube with many partitions generates lots of concurrent data source connections in SSAS 2016 and 2017 (KB4134175) | Analysis Services | Analysis Services | Windows |
 | <a id="11983946">[11983946](#11983946)</a> | FIX: An internal exception access violation occurs and the SSAS server stops responding (KB4162814) | Analysis Services | Analysis Services | Windows |
 | <a id="11886245">[11886245](#11886245)</a> | [FIX: A DAX query that contains SWITCH and nested IF statements take more than an hour to finish in SQL Server (KB4163526)](https://support.microsoft.com/help/4163526) | Analysis Services | Server | Windows |
-| <a id="11677210">[11677210](#11677210)</a> | [FIX: SMS and SSDT do not escape double quotation marks when you export data as CSV (KB4135137)](https://support.microsoft.com/help/4135137) | Integration Services | Tasks_Components | Windows |
-| <a id="11983933">[11983933](#11983933)</a> | [FIX: Wrong user name appears when two users sign in to MDS at different times in SQL Server (KB4164562)](https://support.microsoft.com/help/4164562) | Master Data Services | Client | Windows |
+| <a id="11677210">[11677210](#11677210)</a> | [FIX: SSMS and SSDT don't escape double quotation marks when you export data as CSV (KB4135137)](https://support.microsoft.com/help/4135137) | Integration Services | Tasks_Components | Windows |
+| <a id="11983933">[11983933](#11983933)</a> | [FIX: Wrong user name appears when two users log on to MDS at different times in SQL Server (KB4164562)](https://support.microsoft.com/help/4164562) | Master Data Services | Client | Windows |
 | <a id="11057337">[11057337](#11057337)</a> | [FIX: RESTORE HEADERONLY statement for a TDE compressed backup slow to complete in SQL Server (KB4052135)](https://support.microsoft.com/help/4052135) | SQL Server Engine | Backup Restore | All |
 | <a id="11983956">[11983956](#11983956)</a> | [FIX: Access violation when you run a nested select query against a columnstore index in SQL Server (KB4131960)](https://support.microsoft.com/help/4131960) | SQL Server Engine | Column Stores | Windows |
 | <a id="11953689">[11953689](#11953689)</a> | [FIX: "PAGE_FAULT_IN_NONPAGED_AREA" Stop error when enumerating contents in a SQL Server FileTable directory (KB4338960)](https://support.microsoft.com/help/4338960) | SQL Server Engine | FileStream and FileTable | Windows |
@@ -68,7 +68,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="11983950">[11983950](#11983950)</a> | [FIX: Change tracking record is inconsistent during an update on a table that has a clustered or unique index in SQL Server (KB4135113)](https://support.microsoft.com/help/4135113) | SQL Server Engine | Replication | Windows |
 | <a id="11983935">[11983935](#11983935)</a> | [FIX: Parallel query hangs when a worker thread is aborted in an instance of SQL Server (KB4094706)](https://support.microsoft.com/help/4094706) | SQL Server Engine | Search | Windows |
 | <a id="11983959">[11983959](#11983959)</a> | [FIX: TDE-enabled backup and restore are slow if the encryption key is stored in an EKM provider in SQL Server (KB4058175)](https://support.microsoft.com/help/4058175) | SQL Server Engine | Security Infrastructure | All |
-| <a id="10895916">[10895916](#10895916)</a> | Improvement: Adds Service Broker support for DBCC CLONEDATABASE in SQL Server (KB4092075) | SQL Server Engine | Service Broker | All |
+| <a id="10895916">[10895916](#10895916)</a> | Improvement: Adds Service Broker support for `DBCC CLONEDATABASE` in SQL Server (KB4092075) | SQL Server Engine | Service Broker | All |
 | <a id="11983961">[11983961](#11983961)</a> | [FIX: Performance is slow for an Always On AG when you process a read query in SQL Server (KB4163087)](https://support.microsoft.com/help/4163087) | SQL Server Engine | Transaction Services | Windows |
 | <a id="12038298">[12038298](#12038298)</a> | [FIX: Error 883 occurs when a database that belongs to an availability group is marked as SUSPECT in SQL Server 2017 on Linux (KB4337645)](https://support.microsoft.com/help/4337645) | SQL Server Engine | Transaction Services | Linux |
 

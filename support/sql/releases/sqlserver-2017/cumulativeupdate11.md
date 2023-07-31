@@ -15,7 +15,7 @@ _Version:_ &nbsp; 14.0.3038.14
 
 ## Summary
 
-This article describes Cumulative Update package 11 (CU11) for Microsoft SQL Server 2017. This update contains 15 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2017 Cumulative Update 10, and it updates components in the following builds:
+This article describes Cumulative Update package 11 (CU11) for Microsoft SQL Server 2017. This update contains 14 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2017 Cumulative Update 10, and it updates components in the following builds:
 
 - SQL Server - Product version: **14.0.3038.14**, file version: **2017.140.3038.14**
 - Analysis Services - Product version: **14.0.228.1**, file version: **2017.140.228.1**
@@ -29,7 +29,7 @@ There are no known issues in this cumulative update.
 A downloadable Excel workbook that contains a summary list of builds, together with their current support lifecycle, is available. The Excel file also contains detailed fix lists for SQL Server 2019 and SQL Server 2017. [Select to download this Excel file now](https://aka.ms/sqlserverbuilds).
 
 > [!NOTE]
-> Individual entries in the following table can be referenced directly through a bookmark. If you select any bug reference ID in the table, a bookmark tag is added to the URL by using the "#NNNNNNN" format. You can then share this URL with others so that they can jump directly to the desired fix in the table.
+> Individual entries in the following table can be referenced directly through a bookmark. If you select any bug reference ID in the table, a bookmark tag is added to the URL by using the "#NNNNNNNN" format. You can then share this URL with others so that they can jump directly to the desired fix in the table.
 
 For more information about the bugs that are fixed and enhancements that are included in this cumulative update, see the following Microsoft Knowledge Base articles.
 

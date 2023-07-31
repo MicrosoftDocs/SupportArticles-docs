@@ -29,7 +29,7 @@ There are no known issues in this cumulative update.
 A downloadable Excel workbook that contains a summary list of builds, together with their current support lifecycle, is available. The Excel file also contains detailed fix lists for SQL Server 2019 and SQL Server 2017. [Select to download this Excel file now](https://aka.ms/sqlserverbuilds).
 
 > [!NOTE]
-> Individual entries in the following table can be referenced directly through a bookmark. If you select any bug reference ID in the table, a bookmark tag is added to the URL by using the "#NNNNNNN" format. You can then share this URL with others so that they can jump directly to the desired fix in the table.
+> Individual entries in the following table can be referenced directly through a bookmark. If you select any bug reference ID in the table, a bookmark tag is added to the URL by using the "#NNNNNNNN" format. You can then share this URL with others so that they can jump directly to the desired fix in the table.
 
 For more information about the bugs that are fixed and enhancements that are included in this cumulative update, see the following Microsoft Knowledge Base articles.
 
@@ -51,8 +51,8 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="11789381">[11789381](#11789381)</a> | [Improves the query performance when an optimized bitmap filter is applied to a query plan in SQL Server 2016 and 2017 (KB4089276)](https://support.microsoft.com/help/4089276) | SQL Server Engine | Query Optimizer | All |
 | <a id="11591383">[11591383](#11591383)</a> | [FIX: Access violation occurs when you query a table with an integer column in SQL Server 2017 (KB4091245)](https://support.microsoft.com/help/4091245) | SQL Server Engine | Query Optimizer | Windows |
 | <a id="11632824">[11632824](#11632824)</a> | [FIX: Access violation occurs when Query Store collects runtime statistics in SQL Server 2017 (KB4091063)](https://support.microsoft.com/help/4091063) | SQL Server Engine | Query Store | All |
-| <a id="11552950">[11552950](#11552950)</a> | FIX: Replication not enabled when database collation uses '_SC' collation extension in SQL Server 2016 (KB4092066) | SQL Server Engine | Replication | Windows |
-| <a id="11516257">[11516257](#11516257)</a> | [FIX: Error 9002 when there is no sufficient disk space for critical log growth in SQL Server 2014, 2016, and 2017 (KB4087406)](https://support.microsoft.com/help/4087406) | SQL Server Engine | Transaction Services | All |
+| <a id="11552950">[11552950](#11552950)</a> | FIX: Replication not enabled when database collation uses '`_SC`' collation extension in SQL Server 2016 (KB4092066) | SQL Server Engine | Replication | Windows |
+| <a id="11516257">[11516257](#11516257)</a> | [FIX: Error 9002 when there's no sufficient disk space for critical log growth in SQL Server 2014, 2016, and 2017 (KB4087406)](https://support.microsoft.com/help/4087406) | SQL Server Engine | Transaction Services | All |
 
 ## How to obtain or download this or the latest cumulative update package
 

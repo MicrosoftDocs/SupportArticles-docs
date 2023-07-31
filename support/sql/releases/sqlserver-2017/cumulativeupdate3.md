@@ -38,7 +38,7 @@ There are no known issues in this cumulative update.
 A downloadable Excel workbook that contains a summary list of builds, together with their current support lifecycle, is available. The Excel file also contains detailed fix lists for SQL Server 2019 and SQL Server 2017. [Select to download this Excel file now](https://aka.ms/sqlserverbuilds).
 
 > [!NOTE]
-> Individual entries in the following table can be referenced directly through a bookmark. If you select any bug reference ID in the table, a bookmark tag is added to the URL by using the "#NNNNNNN" format. You can then share this URL with others so that they can jump directly to the desired fix in the table.
+> Individual entries in the following table can be referenced directly through a bookmark. If you select any bug reference ID in the table, a bookmark tag is added to the URL by using the "#NNNNNNNN" format. You can then share this URL with others so that they can jump directly to the desired fix in the table.
 
 For more information about the bugs that are fixed and enhancements that are included in this cumulative update, see the following Microsoft Knowledge Base articles.
 
@@ -52,7 +52,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="11124264">[11124264](#11124264)</a> | [FIX: Alert Engine reads complete Application event log and sends alerts on old events after Windows is restarted (KB4052127)](https://support.microsoft.com/help/4052127) | SQL Server Engine | Management Services | Windows |
 | <a id="11176915">[11176915](#11176915)</a> | [Update to enable PolyBase technology in SQL Server 2017 (KB4053293)](https://support.microsoft.com/help/4053293) | SQL Server Engine | PolyBase | Windows |
 | <a id="11061737">[11061737](#11061737)</a> | [Update adds execution statistics of a scalar-valued, user-defined function to the Showplan XML file in SQL Server 2017 (KB4056154)](https://support.microsoft.com/help/4056154) | SQL Server Engine | Query Execution | All |
-| <a id="11061767">[11061767](#11061767)</a> | [Update adds CPU timeout setting to Resource Governor workgroup REQUEST_MAX_CPU_TIME_SEC in SQL Server 2017 (KB4038419123456)](https://support.microsoft.com/help/4038419) | SQL Server Engine | Query Execution | All |
+| <a id="11061767">[11061767](#11061767)</a> | [Update adds CPU timeout setting to Resource Governor workgroup REQUEST_MAX_CPU_TIME_SEC in SQL Server 2017 (KB4038419)](https://support.microsoft.com/help/4038419) | SQL Server Engine | Query Execution | All |
 | <a id="11061779">[11061779](#11061779)</a> | [Improve tempdb spill diagnostics in DMV and Extended Events in SQL Server 2017 (KB4041814)](https://support.microsoft.com/help/4041814) | SQL Server Engine | Query Execution | All |
 | <a id="11061785">[11061785](#11061785)</a> | [Update adds optimizer row goal information in query execution plans in SQL Server 2017 (KB4051361)](https://support.microsoft.com/help/4051361) | SQL Server Engine | Query Execution | All |
 | <a id="11061781">[11061781](#11061781)</a> | [FIX: Add CXPACKET wait type in showplan XML in SQL Server 2017 (KB4046914)](https://support.microsoft.com/help/4046914) | SQL Server Engine | Query Execution | All |

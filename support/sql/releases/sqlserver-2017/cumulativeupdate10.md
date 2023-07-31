@@ -29,7 +29,7 @@ There are no known issues in this cumulative update.
 A downloadable Excel workbook that contains a summary list of builds, together with their current support lifecycle, is available. The Excel file also contains detailed fix lists for SQL Server 2019 and SQL Server 2017. [Select to download this Excel file now](https://aka.ms/sqlserverbuilds).
 
 > [!NOTE]
-> Individual entries in the following table can be referenced directly through a bookmark. If you select any bug reference ID in the table, a bookmark tag is added to the URL by using the "#NNNNNNN" format. You can then share this URL with others so that they can jump directly to the desired fix in the table.
+> Individual entries in the following table can be referenced directly through a bookmark. If you select any bug reference ID in the table, a bookmark tag is added to the URL by using the "#NNNNNNNN" format. You can then share this URL with others so that they can jump directly to the desired fix in the table.
 
 For more information about the bugs that are fixed and enhancements that are included in this cumulative update, see the following Microsoft Knowledge Base articles.
 
@@ -50,7 +50,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="12150907">[12150907](#12150907)</a> | [Improvement: Update to support QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n in USE HINT option in SQL Server 2017 (KB4342424)](https://support.microsoft.com/help/4342424) | SQL Server Engine | Query Optimizer | All |
 | <a id="12171986">[12171986](#12171986)</a> | [Improvement enables CREATE AVAILABILITY GROUP and ALTER AVAILABILITY GROUP DDLs to set the SESSION_TIMEOUT for a configuration-only replica in SQL Server (KB4344904)](https://support.microsoft.com/help/4344904) | SQL Server Engine | Replication | All |
 | <a id="12249912">[12249912](#12249912)</a> | [FIX: Change Tracking cleanup messages unexpectedly recorded in error log for Always On Availability Groups in SQL Server (KB4456883)](https://support.microsoft.com/help/4456883) | SQL Server Engine | Replication | Windows |
-| <a id="12203152">[12203152](#12203152)</a> | [FIX: Error occurs when you open a symmetric key that is encrypted by an asymmetric key in SQL Server 2017 (KB4340746)](https://support.microsoft.com/help/4340746) | SQL Server Engine | Security Infrastructure | Windows |
+| <a id="12203152">[12203152](#12203152)</a> | [FIX: Error occurs when you open a symmetric key that is encrypted by an asymmetric key in SQL Server 2017 (KB4346812)](https://support.microsoft.com/help/4346812) | SQL Server Engine | Security Infrastructure | Windows |
 | <a id="12248752">[12248752](#12248752)</a> | [FIX: Leakage of sensitive data occurs when you enable DDM function in SQL Server 2016 and 2017 (KB4100582)](https://support.microsoft.com/help/4100582) | SQL Server Engine | Security Infrastructure | All |
 | <a id="12164662">[12164662](#12164662)</a> | [FIX: Event notifications for AUDIT_LOGIN and AUDIT_LOGIN_FAILED events will cause an unusual growth of TempDB in SQL Server 2016 and 2017 (KB4341398)](https://support.microsoft.com/help/4341398) | SQL Server Engine | Service Broker | Windows |
 | <a id="12177844">[12177844](#12177844)</a> | [FIX: A memory leak occurs in sqlwepxxx.dll causes the WmiPrvSe.exe process to crash (KB4133191)](https://support.microsoft.com/help/4133191) | SQL Server Engine | Service Broker | Windows |

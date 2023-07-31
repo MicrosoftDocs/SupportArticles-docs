@@ -29,7 +29,7 @@ There are no known issues in this cumulative update.
 A downloadable Excel workbook that contains a summary list of builds, together with their current support lifecycle, is available. The Excel file also contains detailed fix lists for SQL Server 2019 and SQL Server 2017. [Select to download this Excel file now](https://aka.ms/sqlserverbuilds).
 
 > [!NOTE]
-> Individual entries in the following table can be referenced directly through a bookmark. If you select any bug reference ID in the table, a bookmark tag is added to the URL by using the "#NNNNNNN" format. You can then share this URL with others so that they can jump directly to the desired fix in the table.
+> Individual entries in the following table can be referenced directly through a bookmark. If you select any bug reference ID in the table, a bookmark tag is added to the URL by using the "#NNNNNNNN" format. You can then share this URL with others so that they can jump directly to the desired fix in the table.
 
 For more information about the bugs that are fixed and enhancements that are included in this cumulative update, see the following Microsoft Knowledge Base articles.
 
@@ -44,7 +44,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="11983925">[11983925](#11983925)</a> | FIX: Error when a SQL Server Agent job runs a PowerShell command to enumerate permissions of the database (KB4133164) | SQL Server Client Tools | SMO | Windows |
 | <a id="12162425">[12162425](#12162425)</a> | [FIX: VSS backup fails in secondary replica of Basic Availability Groups in SQL Server 2016 and 2017 (KB4341221)](https://support.microsoft.com/help/4341221) | SQL Server Engine | Backup Restore | Windows |
 | <a id="12186129">[12186129](#12186129)</a> | [FIX: TDE enabled database backup with compression causes database corruption in SQL Server (KB4101502)](https://support.microsoft.com/help/4101502) | SQL Server Engine | Backup Restore | All |
-| <a id="12108225">[12108225](#12108225)</a> | [FIX: Parallel redo does not work after you disable Trace Flag 3459 in an instance of SQL Server (KB4339858)](https://support.microsoft.com/help/4339858) | SQL Server Engine | High Availability and Disaster Recovery | All |
+| <a id="12108225">[12108225](#12108225)</a> | [FIX: Parallel redo doesn't work after you disable Trace Flag 3459 in an instance of SQL Server (KB4339858)](https://support.microsoft.com/help/4339858) | SQL Server Engine | High Availability and Disaster Recovery | All |
 | <a id="12149855">[12149855](#12149855)</a> | [FIX: A split brain scenario occurs after a failover when using AlwaysOn availability groups with external cluster technology in SQL Server 2017 (KB4341219)](https://support.microsoft.com/help/4341219) | SQL Server Engine | High Availability and Disaster Recovery | All |
 | <a id="12144190">[12144190](#12144190)</a> | [FIX: SQL Server 2017 on Linux shuts down unexpectedly during the recovery of an In-Memory OLTP database (KB4340069)](https://support.microsoft.com/help/4340069) | SQL Server Engine | In-Memory OLTP | Linux |
 | <a id="12162067">[12162067](#12162067)</a> | [Improvement: Allow SQL Server Agent jobs to start without waiting for all databases to get recovered in SQL Server 2017 on Linux (KB4341264)](https://support.microsoft.com/help/4341264) | SQL Server Engine | Linux | Linux |
@@ -52,7 +52,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="11922902">[11922902](#11922902)</a> | [FIX: "Corrupted index" message and server disconnection when an update statistics query uses hash aggregate on SQL Server (KB4316858)](https://support.microsoft.com/help/4316858) | SQL Server Engine | Query Optimizer | All |
 | <a id="12111717">[12111717](#12111717)</a> | [FIX: Error 3906 when a hotfix is applied on a SQL Server that has a database snapshot on a pull subscription database (KB4340837)](https://support.microsoft.com/help/4340837) | SQL Server Engine | Replication | Windows |
 | <a id="12107546">[12107546](#12107546)</a> | [FIX: An instance of SQL Server may appear unresponsive then a "Non-yielding Scheduler" error may occur in SQL Server 2016 (KB4338890)](https://support.microsoft.com/help/4338890) | SQL Server Engine | SQL OS | Windows |
-| <a id="12061383">[12061383](#12061383)</a> | FIX: DMVs sys.dm_db_log_stats and sys.dm_db_log_info may return incorrect values for the last database of the SQL Server 2016 instance (KB4341253) | SQL Server Engine | SQL OS | Windows |
+| <a id="12061383">[12061383](#12061383)</a> | FIX: DMVs `sys.dm_db_log_stats` and `sys.dm_db_log_info` may return incorrect values for the last database of the SQL Server 2016 instance (KB4341253) | SQL Server Engine | SQL OS | Windows |
 
 ## How to obtain or download this or the latest cumulative update package
 

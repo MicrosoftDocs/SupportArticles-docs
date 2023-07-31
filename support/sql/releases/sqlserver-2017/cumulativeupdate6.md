@@ -29,7 +29,7 @@ There are no known issues in this cumulative update.
 A downloadable Excel workbook that contains a summary list of builds, together with their current support lifecycle, is available. The Excel file also contains detailed fix lists for SQL Server 2019 and SQL Server 2017. [Select to download this Excel file now](https://aka.ms/sqlserverbuilds).
 
 > [!NOTE]
-> Individual entries in the following table can be referenced directly through a bookmark. If you select any bug reference ID in the table, a bookmark tag is added to the URL by using the "#NNNNNNN" format. You can then share this URL with others so that they can jump directly to the desired fix in the table.
+> Individual entries in the following table can be referenced directly through a bookmark. If you select any bug reference ID in the table, a bookmark tag is added to the URL by using the "#NNNNNNNN" format. You can then share this URL with others so that they can jump directly to the desired fix in the table.
 
 For more information about the bugs that are fixed and enhancements that are included in this cumulative update, see the following Microsoft Knowledge Base articles.
 
@@ -45,11 +45,11 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="11706961">[11706961](#11706961)</a> | [FIX: Memory gets exhausted when you run Power BI report that executes DAX query on SSAS 2016 and 2017 Multidimensional mode (KB4090032)](https://support.microsoft.com/help/4090032) | Analysis Services | Server | Windows |
 | <a id="11751257">[11751257](#11751257)</a> | [FIX: An unexpected exception occurs and SSAS crashes when you execute a particular DAX function in SQL Server 2017 (KB4096258)](https://support.microsoft.com/help/4096258) | Analysis Services | Server | Windows |
 | <a id="11701169">[11701169](#11701169)</a> | [FIX: "Incorrect syntax near the keyword 'KEY'" error when you add an Oracle table with primary column named 'KEY' in SQL Server 2016 and 2017 (KB4057615)](https://support.microsoft.com/help/4057615) | Integration Services | CDC | Windows |
-| <a id="11701155">[11701155](#11701155)</a> | FIX: Change Data Capture functionality does not work in SQL Server (KB4038932) | Integration Services | CDC | Windows |
+| <a id="11701155">[11701155](#11701155)</a> | FIX: Change Data Capture functionality doesn't work in SQL Server (KB4038932) | Integration Services | CDC | Windows |
 | <a id="11701174">[11701174](#11701174)</a> | [FIX: Error when upgrading SSIS catalog database in SQL Server 2016 and 2017 Standard Edition (KB4058747)](https://support.microsoft.com/help/4058747) | Integration Services | Tools | Windows |
 | <a id="11797615">[11797615](#11797615)</a> | [FIX: SQL Server Agent can't connect to SQL Server 2017 on Docker when non-default TCP port is used (KB4100918)](https://support.microsoft.com/help/4100918) | Integration Services | Tools | Linux |
 | <a id="11684530">[11684530](#11684530)</a> | [FIX: Incorrect user name is displayed when a user logs in MDS and accesses Users and Groups functional area in SQL Server 2017 (KB4099334)](https://support.microsoft.com/help/4099334) | Master Data Services | Client | Windows |
-| <a id="11587927">[11587927](#11587927)</a> | False error reporting when you execute the Test-SqlAvailabilityGroup cmdlet in SQL Server (KB4099335) | SQL Server Client Tools | Powershell (SQLPS.exe) | Windows |
+| <a id="11587927">[11587927](#11587927)</a> | False error reporting when you execute the `Test-SqlAvailabilityGroup` cmdlet in SQL Server (KB4099335) | SQL Server Client Tools | Powershell (SQLPS.exe) | Windows |
 | <a id="11701180">[11701180](#11701180)</a> | [FIX: Assertion error when data is bulk-inserted into a table that contains non-clustered and clustered columnstore indexes in SQL Server 2016 and 2017 (KB4074881)](https://support.microsoft.com/help/4074881) | SQL Server Engine | Column Stores | Windows |
 | <a id="11697318">[11697318](#11697318)</a> | Fixes an issue in which the database can't be detached or dropped after its storage is disconnected and reconnected. | SQL Server Engine | DB Management | Windows |
 | <a id="11715371">[11715371](#11715371)</a> | [FIX: R script fails on parallel execution in SQL Server 2017 (KB4098763)](https://support.microsoft.com/help/4098763) | SQL Server Engine | Extensibility | Windows |
@@ -57,7 +57,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="11701210">[11701210](#11701210)</a> | [Latch timeout on Secondary Replica, Deadlock Between Read-only Queries (KB4089819)](https://support.microsoft.com/help/4089819) | SQL Server Engine | High Availability and Disaster Recovery | Windows |
 | <a id="11797978">[11797978](#11797978)</a> | [FIX: Parallel redo in a secondary replica of an availability group that contains heap tables generates a runtime assert dump or the SQL Server crashes with an access violation error (KB4101554)](https://support.microsoft.com/help/4101554) | SQL Server Engine | High Availability and Disaster Recovery | Windows |
 | <a id="11807574">[11807574](#11807574)</a> | [FIX: Automatic seeding fails when you use an Always On availability group in SQL Server (KB4101482)](https://support.microsoft.com/help/4101482) | SQL Server Engine | High Availability and Disaster Recovery | All |
-| <a id="11701162">[11701162](#11701162)</a> | FIX: Assert in "HadrRefcountedObject::Release" when you configure a replica for manual seeding mode in SQL Server (KB4077708) | SQL Server Engine | High Availability and Disaster Recovery | Windows |
+| <a id="11701162">[11701162](#11701162)</a> | FIX: Assert in "`HadrRefcountedObject::Release`" when you configure a replica for manual seeding mode in SQL Server (KB4077708) | SQL Server Engine | High Availability and Disaster Recovery | Windows |
 | <a id="11701217">[11701217](#11701217)</a> | [FIX: Large disk checkpoint usage occurs for an In-Memory optimized filegroup during heavy non-In-Memory workloads (KB3147012)](https://support.microsoft.com/help/3147012) | SQL Server Engine | In-Memory OLTP | Windows |
 | <a id="11804747">[11804747](#11804747)</a> | [FIX: Errors occur when you upgrade to SQL Server 2017 CU4 or later and not enable SQL Server Agent on Linux (KB4101323)](https://support.microsoft.com/help/4101323) | SQL Server Engine | Linux | Linux |
 | <a id="11806534">[11806534](#11806534)</a> | [FIX: Database Mail can't connect to SQL Server 2017 on Linux when non-default TCP port is used (KB4100873)](https://support.microsoft.com/help/4100873) | SQL Server Engine | Linux | Linux |
@@ -71,7 +71,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="11797614">[11797614](#11797614)</a> | [FIX: "Access Violation" error when you execute a complex query with multiple joins and the Adaptive Join feature is enabled in SQL Server (KB4099126)](https://support.microsoft.com/help/4099126) | SQL Server Engine | Query Optimizer | All |
 | <a id="11701170">[11701170](#11701170)</a> | [FIX: ALTER PROCEDURE WITH ENCRYPTION statement fails when you encrypt a non-published stored procedure in SQL Server 2016 and 2017 (KB4058289)](https://support.microsoft.com/help/4058289) | SQL Server Engine | Replication | Windows |
 | <a id="11751554">[11751554](#11751554)</a> | [FIX: Leakage of sensitive data occurs when you enable DDM function in SQL Server 2017 (KB4100582)](https://support.microsoft.com/help/4100582) | SQL Server Engine | Security Infrastructure | All |
-| <a id="11701167">[11701167](#11701167)</a> | FIX: Random masking does not mask BIGINT values correctly in SQL Server (KB4090025) | SQL Server Engine | Security Infrastructure | Windows |
+| <a id="11701167">[11701167](#11701167)</a> | FIX: Random masking doesn't mask `BIGINT` values correctly in SQL Server (KB4090025) | SQL Server Engine | Security Infrastructure | Windows |
 | <a id="11719463">[11719463](#11719463)</a> | [Improvement: Enable "forced flush" mechanism in SQL Server 2017 on Linux (KB4131496)](https://support.microsoft.com/help/4131496) | SQL Server Engine | Transaction Services | All |
 
 ## How to obtain or download this or the latest cumulative update package
