@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2017 build versions (KB4047329)
 description: This article lists cumulative update and GDR builds for SQL Server 2017.
-ms.date: 10/12/2022
+ms.date: 07/31/2023
 ms.custom: KB4047329
 appliesto:
 - SQL Server 2017
@@ -15,21 +15,21 @@ This article lists the Microsoft SQL Server 2017 builds that were released after
 
 | Cumulative update name | SQL Server product version | SQL Server (sqlservr.exe) file version | Analysis Services product version | Analysis Services (msmdsrv.exe) file version | Knowledge Base number | Release date |
 |------------------------|----------------------------|----------------------------------------|-----------------------------------|----------------------------------------------|-----------------------|--------------------|
-| CU31 (Latest)| 14.0.3456.2| 2017.140.3456.2| 14.0.249.94 | 2017.140.249.94| [KB5016884](https://support.microsoft.com/help/5016884) | September 20, 2022 |
-| CU30 | 14.0.3451.2| 2017.140.3451.2| 14.0.249.90 | 2017.140.249.90| [KB5013756](https://support.microsoft.com/help/5013756) | July 13, 2022|
-| CU29 | 14.0.3436.1| 2017.140.3436.1| 14.0.249.90 | 2017.140.249.90| [KB5010786](https://support.microsoft.com/help/5010786) | March 30, 2022 |
-| CU28 | 14.0.3430.2| 2017.140.3430.2| 14.0.249.87 | 2017.140.249.87| [KB5008084](https://support.microsoft.com/help/5008084) | January 13, 2022 |
-| CU27 | 14.0.3421.10 | 2017.140.3421.10 | 14.0.249.83 | 2017.140.249.83| [KB5006944](https://support.microsoft.com/help/5006944) | October 27, 2021 |
-| CU26 | 14.0.3411.3| 2017.140.3411.3| 14.0.249.83 | 2017.140.249.83| [KB5005226](https://support.microsoft.com/help/5005226) | September 14, 2021 |
-| CU25 | 14.0.3401.7| 2017.140.3401.7| 14.0.249.75 | 2017.140.249.75| [KB5003830](https://support.microsoft.com/help/5003830) | July 12, 2021|
-| CU24 | 14.0.3391.2| 2017.140.3391.2| 14.0.249.71 | 2017.140.249.71| [KB5001228](https://support.microsoft.com/help/5001228) | May 10, 2021 |
-| CU23 | 14.0.3381.3| 2017.140.3381.3| 14.0.249.70 | 2017.140.249.70| [KB5000685](https://support.microsoft.com/help/5000685) | February 24, 2021|
-| CU22 | 14.0.3356.20 | 2017.140.3356.20 | 14.0.249.54 | 2017.140.249.54| [KB4577467](https://support.microsoft.com/help/4577467) | September 10, 2020 |
-| CU21 | 14.0.3335.7| 2017.140.3335.7| 14.0.249.51 | 2017.140.249.51| [KB4557397](https://support.microsoft.com/help/4557397) | July 01, 2020|
-| CU20 | 14.0.3294.2| 2017.140.3294.2| 14.0.249.36 | 2017.140.249.36| [KB4541283](https://support.microsoft.com/help/4541283) | April 07, 2020 |
-| CU19 | 14.0.3281.6| 2017.140.3281.6| 14.0.249.28 | 2017.140.249.28| [KB4535007](https://support.microsoft.com/help/4535007) | February 05, 2020|
-| CU18 | 14.0.3257.3| 2017.140.3257.3| 14.0.249.21 | 2017.140.249.21| [KB4527377](https://support.microsoft.com/help/4527377) | December 09, 2019|
-| CU17 | 14.0.3238.1| 2017.140.3238.1| 14.0.249.17 | 2017.140.249.17| [KB4515579](https://support.microsoft.com/help/4515579) | October 08, 2019 |
+| CU31 (Latest)| 14.0.3456.2| 2017.140.3456.2| 14.0.249.94 | 2017.140.249.94| [KB5016884](cumulativeupdate31.md) | September 20, 2022 |
+| CU30 | 14.0.3451.2| 2017.140.3451.2| 14.0.249.90 | 2017.140.249.90| [KB5013756](cumulativeupdate30.md) | July 13, 2022|
+| CU29 | 14.0.3436.1| 2017.140.3436.1| 14.0.249.90 | 2017.140.249.90| [KB5010786](cumulativeupdate29.md) | March 30, 2022 |
+| CU28 | 14.0.3430.2| 2017.140.3430.2| 14.0.249.87 | 2017.140.249.87| [KB5008084](cumulativeupdate28.md) | January 13, 2022 |
+| CU27 | 14.0.3421.10 | 2017.140.3421.10 | 14.0.249.83 | 2017.140.249.83| [KB5006944](cumulativeupdate27.md) | October 27, 2021 |
+| CU26 | 14.0.3411.3| 2017.140.3411.3| 14.0.249.83 | 2017.140.249.83| [KB5005226](cumulativeupdate26.md) | September 14, 2021 |
+| CU25 | 14.0.3401.7| 2017.140.3401.7| 14.0.249.75 | 2017.140.249.75| [KB5003830](cumulativeupdate25.md) | July 12, 2021|
+| CU24 | 14.0.3391.2| 2017.140.3391.2| 14.0.249.71 | 2017.140.249.71| [KB5001228](cumulativeupdate24.md) | May 10, 2021 |
+| CU23 | 14.0.3381.3| 2017.140.3381.3| 14.0.249.70 | 2017.140.249.70| [KB5000685](cumulativeupdate23.md) | February 24, 2021|
+| CU22 | 14.0.3356.20 | 2017.140.3356.20 | 14.0.249.54 | 2017.140.249.54| [KB4577467](cumulativeupdate22.md) | September 10, 2020 |
+| CU21 | 14.0.3335.7| 2017.140.3335.7| 14.0.249.51 | 2017.140.249.51| [KB4557397](cumulativeupdate21.md) | July 01, 2020|
+| CU20 | 14.0.3294.2| 2017.140.3294.2| 14.0.249.36 | 2017.140.249.36| [KB4541283](cumulativeupdate20.md) | April 07, 2020 |
+| CU19 | 14.0.3281.6| 2017.140.3281.6| 14.0.249.28 | 2017.140.249.28| [KB4535007](cumulativeupdate19.md) | February 05, 2020|
+| CU18 | 14.0.3257.3| 2017.140.3257.3| 14.0.249.21 | 2017.140.249.21| [KB4527377](cumulativeupdate18.md) | December 09, 2019|
+| CU17 | 14.0.3238.1| 2017.140.3238.1| 14.0.249.17 | 2017.140.249.17| [KB4515579](cumulativeupdate17.md) | October 08, 2019 |
 | CU16 | 14.0.3223.3 | 2017.140.3223.3 | 14.0.249.14 | 2017.140.249.14| [KB4508218](cumulativeupdate16.md) | August 01, 2019 |
 | CU15 | 14.0.3162.1 | 2017.140.3162.1 | 14.0.249.3 | 2017.140.249.3 | [KB4498951](cumulativeupdate15.md) | May 23, 2019 |
 | CU14 | 14.0.3076.1 | 2017.140.3076.1 | 14.0.245.1 | 2017.140.245.1 | [KB4484710](cumulativeupdate14.md) | March 25, 2019 |
