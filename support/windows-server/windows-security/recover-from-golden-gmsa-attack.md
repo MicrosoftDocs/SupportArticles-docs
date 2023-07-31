@@ -103,7 +103,7 @@ In the domain holding the gMSAs that you want to repair, follow these steps:
 7. Create a new gMSA. Make sure that the new gMSA uses the new KDS Root Key object to create the value for the `msds-ManagedPasswordID` attribute.
 
    > [!NOTE]
-   > This step is optional, but it allows you to validate that the new KDS Root Key is currently in use and cached on the *kdssvc.dll* file.
+   > This step is optional, but it allows you to validate that the new KDS Root Key is currently in use and used in the Microsoft Key Distribution Service.
 
 8. Check the `msds-ManagedPasswordID` value of the first gMSA that you created. The value of this attribute is binary data that includes the GUID of the matching KDS Root Key object.  
 
@@ -221,7 +221,8 @@ In the domain holding the gMSAs that you want to roll, follow these steps:
 3. Create a new gMSA. Make sure that the new gMSA uses the new KDS Root Key object to create the value for the `msds-ManagedPasswordID` attribute.
 
       > [!NOTE]
-      > This step is optional, but it allows you to validate that the new KDS Root Key is currently in use and cached on the *kdssvc.dll* file.
+      > This step is optional, but it allows you to validate that the new KDS Root Key is currently in use and used in the Microsoft Key Distribution Service.
+      
 4. Check the `msds-ManagedPasswordID` value of the first gMSA that you created. The value of this attribute is binary data that includes the GUID of the matching KDS Root Key object.
 
       For example, assume that the KDS Root Key object has the following `CN`.
