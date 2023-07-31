@@ -20,13 +20,19 @@ appliesto:
   - Outlook 2019
   - Outlook for Microsoft 365
 search.appverid: MET150
-ms.date: 3/31/2022
+ms.date: 7/26/2023
 ---
+
 # Hyperlinks are not working in Outlook
 
-_Original KB number:_ &nbsp; 310049
-
 ## Symptoms
+
+> [!NOTE]
+> After you install the Outlook Desktop July 11th security updates, when you open a link in an email, if the path points to a Fully Qualified Domain Name (FQDN) or IP address, you may not be able to open the link or receive the following error message:
+>
+> **Something unexpected went wrong with this URL**
+>
+> For more information about this issue, see [Outlook blocks opening FQDN and IP address hyperlinks after installing protections for Microsoft Outlook Security Feature Bypass Vulnerability released July 11, 2023](https://support.microsoft.com/office/outlook-blocks-opening-fqdn-and-ip-address-hyperlinks-after-installing-protections-for-microsoft-outlook-security-feature-bypass-vulnerability-released-july-11-2023-4a5160b4-76d0-465b-9809-60837bbd35a8).
 
 Assume that you set Internet Explorer as your default browser in Windows. When you select a hyperlink in Microsoft Outlook, you receive one of the following error messages, depending on your Outlook version:
 
@@ -188,3 +194,5 @@ This section is intended for advanced computer users. For help with advanced tro
 4. Make sure that the value of the **String (Default)**  is "htmlfile". If it's not **htmlfile**, right-click **(Default)**, select **Modify**, input *htmlfile* in the **Value data** box, and then select **OK**.
 
 5. Exit Registry Editor.
+
+
