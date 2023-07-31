@@ -4,7 +4,7 @@ description: Troubleshoot problems connecting to and accessing SMB Azure file sh
 services: storage
 author: AmandaAZ
 ms.service: azure-file-storage
-ms.date: 06/26/2023
+ms.date: 07/31/2023
 ms.reviewer: kendownie, jarrettr, v-weizhu
 ---
 # Troubleshoot Azure Files connectivity and access issues (SMB)
@@ -281,6 +281,10 @@ If you can't upgrade to the latest kernel versions, you can work around this pro
 ---
 
 ## Unable to access, modify, or delete an Azure file share (or share snapshot)
+
+### "The user name or password is incorrect" error after a customer-initiated failover
+
+In a customer-initiated failover scenario with geo-redundant storage accounts, file handles and leases aren't retained on failover. Clients must unmount and remount the file shares.
 
 ### <a id="noaaccessfailureportal"></a>Error "No access" when you try to access or delete an Azure file share
 
