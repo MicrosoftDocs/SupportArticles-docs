@@ -72,7 +72,7 @@ For more information about a compromise, see [Use Microsoft and Azure security r
 
 ## Resolution
 
-To resolve this problem, use one of the following approaches, depending on your situation. Both approaches involve creating a new KDS Root Key object and restarting **Microsoft Key Distribution Service** on all the domain controllers of the domain.
+To resolve this problem, use one of the following approaches, depending on your situation. Both approaches involve creating a new KDS Root Key object and restarting Microsoft Key Distribution Service on all the domain controllers of the domain.
 
 ### Case 1: You have reliable information about what information was exposed and when
 
@@ -222,7 +222,7 @@ In the domain holding the gMSAs that you want to roll, follow these steps:
 
       > [!NOTE]
       > This step is optional, but it allows you to validate that the new KDS Root Key is currently in use and used in the Microsoft Key Distribution Service.
-      
+
 4. Check the `msds-ManagedPasswordID` value of the first gMSA that you created. The value of this attribute is binary data that includes the GUID of the matching KDS Root Key object.
 
       For example, assume that the KDS Root Key object has the following `CN`.
