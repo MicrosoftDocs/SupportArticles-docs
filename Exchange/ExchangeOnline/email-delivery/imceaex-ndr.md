@@ -1,10 +1,10 @@
 ---
 title: IMCEAEX non-delivery report when you send email messages to an internal user
 description: Describes an issue in which you receive an NDR when you send email messages to an internal user in Microsoft 365. Provides a resolution.
-author: simonxjx
+author: cloud-writer
+ms.author: meerak
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: v-six
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 
@@ -15,6 +15,7 @@ search.appverid:
 appliesto: 
   - Exchange Online
 ms.date: 3/31/2022
+ms.reviewer: v-six
 ---
 # IMCEAEX non-delivery report when you send email messages to an internal user in Microsoft 365
 

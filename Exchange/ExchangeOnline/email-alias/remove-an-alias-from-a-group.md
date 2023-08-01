@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Remove an alias from a group
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
@@ -24,6 +24,7 @@ search.appverid:
 ms.assetid: d96989c4-6efc-4523-9c89-44ce06e601bf
 description: Learn how to remove the email alias from the group using Exchange Online PowerShell.
 ms.date: 3/31/2022
+ms.reviewer: v-six
 ---
 # Troubleshoot: Remove an alias from a group
 

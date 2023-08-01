@@ -1,8 +1,8 @@
 ---
 title: Inbox rule to forward emails doesn't work
 description: Provides a workaround to an issue in which a forward rule doesn't work for a Microsoft 365 account.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
