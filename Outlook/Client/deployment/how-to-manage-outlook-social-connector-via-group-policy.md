@@ -418,30 +418,30 @@ Facebook: **OscAddin.FacebookProvider**
 
 ### Do not display contact photo (not available in the Outlk14.adm, Outlk15.admx or Outlk16.admx templates)
 
-This policy setting controls the display of photos in the People Pane. If you enable this policy setting, photos are not displayed in the People Pane. If you are using Outlook 2010, this policy also affects the display of contact photos in the header of email messages and the Outlook contact card. The contact photos in the People Pane can come from either Active Directory or an item in your Contacts folder. If you disable or you do not configure this policy setting, photos are displayed in the People Pane if available for a contact.
+This policy setting controls the display of photos in the People Pane. If you enable this policy setting, photos aren't displayed in the People Pane. If you are using Outlook 2010, this policy also affects the display of contact photos in the header of email messages and the Outlook contact card. The contact photos in the People Pane can come from either Active Directory or an item in your Contacts folder. If you disable or you don't configure this policy setting, photos are displayed in the People Pane if available for a contact.
 
 This policy setting is controlled by the following registry information:
 
 Key: `HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\14.0\Common`  
 DWORD: **TurnOffPhotograph**  
 Values:  
-1 = policy enabled. Contact photos are not displayed in the People Pane. If you are using Outlook 2010, they are also not displayed in the header of email messages and the Outlook contact card.  
+1 = policy enabled. Contact photos are not displayed in the People Pane. If you're using Outlook 2010, they're also not displayed in the header of email messages and the Outlook contact card.  
 0 = (default) policy disabled. The Outlook Social Connector displays contact photos in the People Pane.
 
 > [!NOTE]
 > Look carefully at the registry key path for this policy. It is the only policy setting for the OSC under the \Office\14.0 path. Even though this policy path is under the **\14.0** key, it works for Outlook 2003, for Outlook 2007, and for Outlook 2010.
 
-By default in Outlook 2010, when the People Pane is collapsed, the message header displays the contact photo, when they are available (The screenshot for this step is listed below).
+By default in Outlook 2010, when the People Pane is collapsed, the message header displays the contact photo, when they're available (The screenshot for this step is listed below).
 
 And, by default in Outlook 2010, if the People Pane is expanded, the contact photo is displayed only in the People Pane (The screenshot for this step is listed below).
 
-When **TurnOffPhotograph** = 1, contact photos are not displayed, as shown in the following figures.
+When **TurnOffPhotograph** = 1, contact photos aren't displayed, as shown in the following figures.
 
-:::image type="content" source="media/how-to-manage-outlook-social-connector-via-group-policy/contact-photos-not-shown-when-turnoffphotograph-is-set-to-1-example-1.png" alt-text="Example 1 about contact photo is not displayed when Turn Off Photograph is set to 1." border="false":::
+:::image type="content" source="media/how-to-manage-outlook-social-connector-via-group-policy/contact-photos-not-shown-when-turnoffphotograph-is-set-to-1-example-1.png" alt-text="Example 1 about contact photo isn't displayed when Turn Off Photograph is set to 1." border="false":::
 
-:::image type="content" source="media/how-to-manage-outlook-social-connector-via-group-policy/contact-photos-not-shown-when-turnoffphotograph-is-set-to-1-example-2.png" alt-text="Example 2 about contact photo is not displayed when Turn Off Photograph is set to 1." border="false":::
+:::image type="content" source="media/how-to-manage-outlook-social-connector-via-group-policy/contact-photos-not-shown-when-turnoffphotograph-is-set-to-1-example-2.png" alt-text="Example 2 about contact photo isn't displayed when Turn Off Photograph is set to 1." border="false":::
 
-When **TurnOffPhotograph** = 1, contact photos are also not displayed in the Outlook 2010 Contact Card or in the Outlook 2010 Address Book dialog box, as shown in the following figures. Be aware that Outlook 2003 and Outlook 2007 do not have a contact card such as the one that is shown below, and these Outlook versions also don't display photos in the Address Book dialog box.
+When **TurnOffPhotograph** = 1, contact photos are also not displayed in the Outlook 2010 Contact Card or in the Outlook 2010 Address Book dialog box, as shown in the following figures. Outlook 2003 and Outlook 2007 don't have a contact card such as the one that is shown below, and these Outlook versions also don't display photos in the Address Book dialog box.
 
 :::image type="content" source="media/how-to-manage-outlook-social-connector-via-group-policy/contact-card-that-does-not-has-photos-in-outlook-old-versions.png" alt-text="Outlook 2003 and Outlook 2007 don't display photos in the Address Book dialog box." border="false":::
 
