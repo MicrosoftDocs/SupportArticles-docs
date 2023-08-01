@@ -1,8 +1,8 @@
 ---
 title: Shared mailboxes unexpectedly convert to user mailboxes
 description: Describes that mailboxes that were moved from the on-premises environment to Microsoft 365 and converted to shared mailboxes are unexpectedly converted to regular mailboxes after directory synchronization runs. Provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Hybrid
   - CSSTroubleshoot
-ms.reviewer: jhayes, benwinz
+ms.reviewer: jhayes, benwinz, v-six
 appliesto: 
   - Exchange Online
   - Exchange Server 2016 Enterprise Edition

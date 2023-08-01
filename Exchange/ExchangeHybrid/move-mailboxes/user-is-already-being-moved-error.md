@@ -1,8 +1,8 @@
 ---
 title: Can't move mailboxes to Exchange Online
 description: This article fixes an issue in which you cannot move mailboxes from on-premises to Exchange Online in a hybrid deployment.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -18,6 +18,7 @@ appliesto:
   - Exchange Server 2016
   - Exchange Server 2013
 ms.date: 3/31/2022
+ms.reviewer: v-six
 ---
 # Error when you move mailboxes from on-premises to Exchange Online in a hybrid deployment: User is already being moved‎
 

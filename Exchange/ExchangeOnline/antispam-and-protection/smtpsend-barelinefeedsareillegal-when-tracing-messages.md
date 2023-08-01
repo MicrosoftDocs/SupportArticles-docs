@@ -1,8 +1,8 @@
 ---
 title: SMTPSEND BareLineFeedsAreIllegal when tracing a message
 description: Describes a scenario in which Exchange Online users or Exchange Online Protection users receive an NDR that contains a SMTPSEND.BareLinefeedsAreIllegal error.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Online
   - CSSTroubleshoot
-ms.reviewer: delaja
+ms.reviewer: delaja, v-six
 appliesto: 
   - Exchange Online
   - Exchange Online Protection

@@ -1,8 +1,8 @@
 ---
 title: Wrong output when running Get-CASMailbox
 description: Describes an issue in which incorrect output is returned when you run the Get-CASMailbox cmdlet to view the HasActiveSyncDevicePartnership attribute in Exchange Online. Provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Online
   - CSSTroubleshoot
-ms.reviewer: 
+ms.reviewer: v-six
 appliesto: 
   - Exchange Online
   - Exchange Server 2016 Enterprise Edition
