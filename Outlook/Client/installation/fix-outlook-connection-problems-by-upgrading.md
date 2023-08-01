@@ -1,8 +1,8 @@
 ---
 title: Fix Outlook connection issues by upgrading
 description: Describes how to update to the latest version of Microsoft Outlook.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerakk
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,8 +1,8 @@
 ---
 title: Outlook crashes in KERNELBASE.dll due to corrupt data file
 description: Resolves the Outlook 2013 crash issue in KERNELBASE.dll due to corrupt data file.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerakk
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

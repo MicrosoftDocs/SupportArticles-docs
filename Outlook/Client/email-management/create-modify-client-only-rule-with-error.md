@@ -1,8 +1,8 @@
 ---
 title: Error occurs when you create or change client-only rules that apply to messages received from 20 or more people
 description: This article describes an issue in which users cannot create or change client-only rules that apply to email messages that are received from 20 or more people. Provides a workaround.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerakk
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

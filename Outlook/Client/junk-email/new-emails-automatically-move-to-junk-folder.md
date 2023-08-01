@@ -1,8 +1,8 @@
 ---
 title: New emails automatically move to Junk folder
 description: Resolves an issue in which new email messages move to the Junk folder in Microsoft Outlook.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerakk
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,8 +1,8 @@
 ---
 title: Performance issues in Cached Mode on Citrix Virtual Desktop
 description: Documenting an OffCAT rule to identify potential performance issue configuration in Microsoft Outlook 2010.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerakk
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,8 +1,8 @@
 ---
 title: Hyperlinks are not working
 description: You receive an error message when you try to set Internet Explorer as your default browser in Windows. Provides a resolution.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerakk
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

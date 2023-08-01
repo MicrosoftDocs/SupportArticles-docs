@@ -1,8 +1,8 @@
 ---
 title: You are over Junk E-mail list limit
 description: Describes the issue that you are over Junk E-mail list limit, and provides resolutions.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerakk
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
