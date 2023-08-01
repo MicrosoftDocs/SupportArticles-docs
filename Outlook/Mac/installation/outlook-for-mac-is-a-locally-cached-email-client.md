@@ -1,8 +1,8 @@
 ---
 title: Outlook for Mac is a locally cached email client
 description: We do not recommend changing the default location of your mail identity folder or its contents to an external hard disk or to a network location.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

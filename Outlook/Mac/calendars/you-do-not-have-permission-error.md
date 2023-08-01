@@ -1,8 +1,8 @@
 ---
 title: Cannot open a shared Calendar folder
 description: Resolves an Outlook for Mac Calendar issue in which you cannot open a shared folder after the owner assigns permissions for the subcalendar to you.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

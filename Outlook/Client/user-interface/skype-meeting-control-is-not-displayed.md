@@ -1,8 +1,8 @@
 ---
 title: Skype Meeting control is not shown
 description: Resolves an issue that prevents the Skype Meeting control from being displayed on the Outlook 2016 ribbon.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

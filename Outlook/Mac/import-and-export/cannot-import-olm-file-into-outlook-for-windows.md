@@ -1,8 +1,8 @@
 ---
 title: Cannot import (.olm) file into Outlook for Windows
 description: Provides information about how to migrate the data, such as email and contacts, into Outlook for Windows by using Microsoft Exchange Server.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,14 +1,14 @@
 ---
 title: Unexpected Autodiscover behavior if settings under the \Autodiscover key
 description: Explains how to use policy to control the different Autodiscover lookup methods that are used by Outlook.
-author: helenclu
+author: cloud-writer
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 ms.custom: 
   - Outlook for Windows
   - CSSTroubleshoot

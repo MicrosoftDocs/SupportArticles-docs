@@ -1,8 +1,8 @@
 ---
 title: Cannot open calendar with Free/Busy permission
 description: Describes an issue in which a user can't open your Calendar to view your Free/Busy info in Outlook for Mac. Instead, the user receives an error.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
