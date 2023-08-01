@@ -9,7 +9,7 @@ metadata:
   ms.service: dynamics-365-commerce
   author: bstorie
   ms.author: brstor
-  ms.date: 07/20/2023
+  ms.date: 08/01/2023
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -21,6 +21,14 @@ landingContent:
         links:
           - text: CDX download jobs can't be downloaded in a sandbox UAT
             url: data-synchronization/uat-cdx-broke-after-debug-aos.md
+
+  # Card
+  - title: Order management
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot issues with the online store transaction creation process
+            url: order-management/online-order-transaction-creation-failures.md
 
 
 
