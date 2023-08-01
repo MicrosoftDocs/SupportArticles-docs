@@ -2,7 +2,7 @@
 title: Email remains in Outbox if using DelegateSentItemsStyle
 description: This article provides a resolution for the issue that the email message is still in Outbox when you use the DelegateSentItemsStyle registry value.
 author: cloud-writer
-ms.author: meerakk
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

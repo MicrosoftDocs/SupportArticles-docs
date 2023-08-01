@@ -2,7 +2,7 @@
 title: Outlook shut down slowly with RequireShutdownNotification
 description: Provides a resolution for the slow shutdown issue if an add-in is set to use RequireShutdownNotification in Microsoft Outlook.
 author: cloud-writer
-ms.author: meerakk
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

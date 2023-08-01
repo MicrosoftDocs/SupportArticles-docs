@@ -2,7 +2,7 @@
 title: Information about Outlook Sniffer functionality
 description: This article provides information about the Sniffer functionality of Microsoft Outlook.
 author: cloud-writer
-ms.author: meerakk
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

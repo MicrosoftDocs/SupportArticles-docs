@@ -2,7 +2,7 @@
 title: Upgrading to Office 2016 fails
 description: Provides a solution to an issue where upgrading to Office 2016 fails.
 author: cloud-writer
-ms.author: meerakk
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

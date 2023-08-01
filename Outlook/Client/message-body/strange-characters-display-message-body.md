@@ -2,7 +2,7 @@
 title: Strange characters in Outlook email text
 description: Provide a workaround to an issue in which recipients receive messages with a mix of characters in various languages in Outlook.
 author: cloud-writer
-ms.author: meerakk
+ms.author: meerak
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 

@@ -2,7 +2,7 @@
 title: How to emulate Out of Office Assistant
 description: Describes how to emulate the Out of Office Assistant in Microsoft Outlook.
 author: cloud-writer
-ms.author: meerakk
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

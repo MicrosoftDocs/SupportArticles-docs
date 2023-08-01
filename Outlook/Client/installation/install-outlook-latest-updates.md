@@ -2,7 +2,7 @@
 title: Install the latest applicable updates for Outlook
 description: Describes the most recent updates and service packs that apply to Outlook. Because some Outlook functionalities are dependent on Word and Office components, updates for those applications are also listed in this article.
 author: cloud-writer
-ms.author: meerakk
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -2,7 +2,7 @@
 title: Application pauses if having large data file
 description: This article provides a resolution for the issue that application may pause if you have a large Outlook data file.
 author: cloud-writer
-ms.author: meerakk
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

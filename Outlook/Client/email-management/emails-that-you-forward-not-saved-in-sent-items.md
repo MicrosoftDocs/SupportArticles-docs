@@ -2,7 +2,7 @@
 title: Forwarded emails not saved in Sent Items
 description: Provides a resolution for the issue that the emails that you forward are not saved in the Sent Items folder in Microsoft Outlook.
 author: cloud-writer
-ms.author: meerakk
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -2,7 +2,7 @@
 title: Outlook can not be started error
 description: Provides a resolution for the Microsoft Outlook can not be started error that occurs when you open Outlook 2010.
 author: cloud-writer
-ms.author: meerakk
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

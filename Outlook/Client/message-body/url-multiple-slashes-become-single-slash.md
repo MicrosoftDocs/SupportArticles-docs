@@ -2,7 +2,7 @@
 title: URL multiple slashes are changed to a single slash
 description: Two or more consecutive forward slashes in a URL is converted to one forward slash in Word or Outlook. This causes the hyperlink to be invalid.
 author: cloud-writer
-ms.author: meerakk
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

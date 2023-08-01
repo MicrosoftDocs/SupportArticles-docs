@@ -3,7 +3,7 @@ title: Weird folder names after PST migration
 description: Works around an issue in which the mailbox folder names appear with special characters after PST migration from Exchange Server 2003 to Exchange Server 2013.
 ms.date: 08/11/2020
 author: cloud-writer
-ms.author: meerakk
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

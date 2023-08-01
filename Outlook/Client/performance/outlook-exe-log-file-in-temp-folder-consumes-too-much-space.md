@@ -2,7 +2,7 @@
 title: Outlook.exe.log in %Temp% consumes too much disk space
 description: Describes an issue in which a file that's named Outlook.exe.log and that may be larger than 1 GB appears in your %Temp% folder. A resolution is provided.
 author: cloud-writer
-ms.author: meerakk
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
