@@ -83,7 +83,7 @@ The process for managing the Outlook Social Connector varies slightly between th
 >
 > However, if you use the OutlookSocialConnector.adm template to configure Group Policy settings for the Outlook Social Connector on Outlook 2010 clients, do not also configure Outlook Social Connector settings from the Outlk14.adm template. If you configure the same settings for the OSC by using both template files, you might create overlapping or inconsistent policies.
 
-To manage the Outlook Social Connector in Outlook 2010 only if you are using the Outlk14.adm template, follow these steps:
+To manage the Outlook Social Connector in Outlook 2010 only if you're using the Outlk14.adm template, follow these steps:
 
 1. Download the Office 2010 Group Policy templates from the following Microsoft website:
 
@@ -164,7 +164,7 @@ The following items provide details about the Group Policy settings and about th
 
 ### Turn off Outlook Social Connector
 
-This policy setting lets you turn on or turn off the Outlook Social Connector. If you enable this policy setting, the Outlook Social Connector is turned off. If you disable this policy setting or if you do not configure it, the Outlook Social Connector is turned on.
+This policy setting lets you turn on or turn off the Outlook Social Connector. If you enable this policy setting, the Outlook Social Connector is turned off. If you disable this policy setting or if you don't configure it, the Outlook Social Connector is turned on.
 
 This policy setting is controlled by the following registry information:
 
@@ -179,7 +179,7 @@ Values:
 
 ### Do not show the social network info-bar
 
-This policy setting controls whether info-bar messages that prompt you to install social network providers are displayed in the People Pane. If you enable this policy setting, the info-bar messages are not shown in the People Pane. If you disable or do not configure this policy setting, the info-bar messages are shown in the People Pane.
+This policy setting controls whether info-bar messages that prompt you to install social network providers are displayed in the People Pane. If you enable this policy setting, the info-bar messages aren't shown in the People Pane. If you disable or don't configure this policy setting, the info-bar messages are shown in the People Pane.
 
 This policy setting is controlled by the following registry information:
 
@@ -194,13 +194,13 @@ Values:
 >
 > Connect to social networks to show profile photos and activity updates of your colleagues in Outlook. Select here to add networks.
 
-:::image type="content" source="media/how-to-manage-outlook-social-connector-via-group-policy/connect-to-social-networks-to-show-profile-photos-message.png" alt-text="The info-bar message that's affected by this policy setting." border="false":::
+:::image type="content" source="media/how-to-manage-outlook-social-connector-via-group-policy/connect-to-social-networks-to-show-profile-photos-message.png" alt-text="The info-bar message that is affected by this policy setting." border="false":::
 
-You are prompted with this message when you do not have any social network providers configured in your Outlook profile.
+You're prompted with this message when you don't have any social network providers configured in your Outlook profile.
 
 ### Specify activity feed synchronization interval
 
-This policy setting controls how frequently activity feed information is synchronized between Outlook and connected social networks (in minutes). If you enable this policy setting, you can specify the interval in which activity information is synchronized. If you disable or you do not configure this policy setting, activity information is synchronized at the default interval (60 minutes).
+This policy setting controls how frequently activity feed information is synchronized between Outlook and connected social networks (in minutes). If you enable this policy setting, you can specify the interval in which activity information is synchronized. If you disable or you don't configure this policy setting, activity information is synchronized at the default interval (60 minutes).
 
 This policy setting is controlled by the following registry information:
 
@@ -213,7 +213,7 @@ Values: Any integer between 1 and 10080.
 
 ### Set GAL contact synchronization interval
 
-This policy setting controls how frequently contact information is synchronized between Outlook and the global address list (in minutes). If you enable this policy setting, you may specify the specified interval (in minutes) in which contact information is synchronized. If you disable or you do not configure this policy setting, contact information is synchronized at the default interval (one time every 4 days, or 5760 minutes).
+This policy setting controls how frequently contact information is synchronized between Outlook and the global address list (in minutes). If you enable this policy setting, you may specify the specified interval (in minutes) in which contact information is synchronized. If you disable or you don't configure this policy setting, contact information is synchronized at the default interval (one time every 4 days, or 5760 minutes).
 
 This policy setting is controlled by the following registry information:
 
@@ -223,7 +223,7 @@ Values: Any integer between 1 and 10080.
 
 ### Set network contact synchronization interval (not available in the Outlk14.adm template)
 
-This policy setting controls how frequently contact information is synchronized between Outlook and connected social networks (in minutes). If you enable this policy setting, you may specify the specified interval (in minutes) in which contact information is synchronized. If you disable or you do not configure this policy setting, contact information is synchronized at the default interval (one time per day, or 1440 minutes).
+This policy setting controls how frequently contact information is synchronized between Outlook and connected social networks (in minutes). If you enable this policy setting, you may specify the specified interval (in minutes) in which contact information is synchronized. If you disable or you don't configure this policy setting, contact information is synchronized at the default interval (one time per day, or 1440 minutes).
 
 This policy setting is controlled by the following registry information:
 
@@ -233,7 +233,7 @@ Values: Any integer between 1 and 10080.
 
 ### Block network activity synchronization
 
-This policy setting lets you block synchronization of activities and status updates between Outlook and social networks. If you enable this policy setting, social network activity synchronization is blocked. If you disable or you do not configure this policy setting, social network activity synchronization is allowed.
+This policy setting lets you block synchronization of activities and status updates between Outlook and social networks. If you enable this policy setting, social network activity synchronization is blocked. If you disable or you don't configure this policy setting, social network activity synchronization is allowed.
 
 This policy setting is controlled by the following registry information:
 
@@ -252,7 +252,7 @@ The following figure displays the expected results in the People Pane when **Dis
 
 ### Block social network contact synchronization
 
-This policy setting lets you block synchronization of contacts between Outlook and social networks. If you enable this policy setting, social network contact synchronization is blocked. If you disable or you do not configure this policy setting, social network contact synchronization is allowed.
+This policy setting lets you block synchronization of contacts between Outlook and social networks. If you enable this policy setting, social network contact synchronization is blocked. If you disable or you don't configure this policy setting, social network contact synchronization is allowed.
 
 This policy setting is controlled by the following registry information:
 
@@ -266,18 +266,18 @@ When a social network synchronizes network contact information with Outlook, the
 
 :::image type="content" source="media/how-to-manage-outlook-social-connector-via-group-policy/linkedin-contacts-folder.png" alt-text="The LinkedIn contacts folder in your mailbox." border="false":::
 
-This folder is not created if **DisableContactDownload** = 1.
+This folder isn't created if **DisableContactDownload** = 1.
 
 > [!NOTE]
 > Activity synchronization with the social network still occurs when **DisableContactDownload** = 1. This is demonstrated in the following figure.
 
 :::image type="content" source="media/how-to-manage-outlook-social-connector-via-group-policy/activity-synchronization-still-works-when-disablecontactdownload-is-1.png" alt-text="The activity synchronization with the social network still occurs when Disable Contact Download is set to 1." border="false":::
 
-In this scenario, the contact photo is not displayed in the People Pane because the photo is not available when the local contacts folder is not in your mailbox.
+In this scenario, the contact photo isn't displayed in the People Pane because the photo isn't available when the local contacts folder isn't in your mailbox.
 
 ### Block global address list synchronization
 
-This policy setting lets you block the synchronization of contacts between Outlook and the global address list (GAL). If you enable this policy setting, GAL contact synchronization is blocked. If you disable or you do not configure this policy setting, GAL contact synchronization is allowed.
+This policy setting lets you block the synchronization of contacts between Outlook and the global address list (GAL). If you enable this policy setting, GAL contact synchronization is blocked. If you disable or you don't configure this policy setting, GAL contact synchronization is allowed.
 
 This policy setting is controlled by the following registry information:
 
@@ -294,7 +294,7 @@ Values:
 
 ### Prevent social network connectivity or Disable Office connections to social networks
 
-This policy setting lets you prevent social network connectivity in the Outlook Social Connector. If you enable this policy setting, you cannot configure social network accounts using the Outlook Social Connector, and existing social network accounts are disabled. If you disable or you do not configure this policy setting, social network connectivity is allowed.
+This policy setting lets you prevent social network connectivity in the Outlook Social Connector. If you enable this policy setting, you can't configure social network accounts using the Outlook Social Connector, and existing social network accounts are disabled. If you disable or you don't configure this policy setting, social network connectivity is allowed.
 
 This policy setting is controlled by the following registry information:
 
@@ -313,7 +313,7 @@ Values:
 
 ### Do not download details from Active Directory (not available in the Outlk14.adm and Outlk15.admx templates)
 
-This policy setting controls whether contact user details are downloaded from Active Directory. If you enable this policy setting, contact details (photo, title, and company) are not downloaded. If you disable or you do not configure this policy setting, contact details are downloaded and displayed in the People Pane.
+This policy setting controls whether contact user details are downloaded from Active Directory. If you enable this policy setting, contact details (photo, title, and company) aren't downloaded. If you disable or you don't configure this policy setting, contact details are downloaded and displayed in the People Pane.
 
 This policy setting is controlled by the following registry information:
 
@@ -328,34 +328,34 @@ Values:
 
 #### Cached mode
 
-When you are in cached mode and **DownloadDetailsFromAD** = 0, you will see contact details (photo, company name, or title) if it comes from the following sources:
+When you are in cached mode and **DownloadDetailsFromAD** = 0, you'll see contact details (photo, company name, or title) if it comes from the following sources:
 
 Offline Address Book (OAB)  
 Contacts folder in your mailbox  
 Network contact
 
-If the contact details are stored only in Active Directory, such as a photo, the People Pane does not display the details. This can be seen in the following figure where the contact's photo is available only in Active Directory, but their company name (Wingtiptoys) and title (Tester) are available from the OAB.
+If the contact details are stored only in Active Directory, such as a photo, the People Pane doesn't display the details. This can be seen in the following figure where the contact's photo is available only in Active Directory, but their company name (Wingtiptoys) and title (Tester) are available from the OAB.
 
 :::image type="content" source="media/how-to-manage-outlook-social-connector-via-group-policy/contact-detials-not-showing-photo.png" alt-text="The screenshot of the contact details when the contact details are stored only in Active Directory." border="false":::
 
 #### Online mode
 
-When you are in online mode and **DownloadDetailsFromAD** = 0, you will see contact details (photo, company name, or title) if it comes from the following sources:
+When you are in online mode and **DownloadDetailsFromAD** = 0, you'll see contact details (photo, company name, or title) if it comes from the following sources:
 
 Contacts folder in your mailbox  
 Network contact
 
-If the contact details are stored only in Active Directory, the People Pane does not display the contact details. This can be seen in the following figure where the first contact's photo, company name and title are not displayed.
+If the contact details are stored only in Active Directory, the People Pane doesn't display the contact details. This can be seen in the following figure where the first contact's photo, company name and title aren't displayed.
 
 :::image type="content" source="media/how-to-manage-outlook-social-connector-via-group-policy/contact-details-in-online-mode.png" alt-text="The screenshot of the contact details in online mode when the contact details are stored only in Active Directory.":::
 
-In this same figure, the second contact's details are available in the local Contacts folder, so they are displayed in the People Pane. The source of the contact details is confirmed if you put your pointer over the contact photo (The screenshot for this step is listed below).
+In this same figure, the second contact's details are available in the local Contacts folder, so they're displayed in the People Pane. The source of the contact details is confirmed if you put your pointer over the contact photo (The screenshot for this step is listed below).
 
 :::image type="content" source="media/how-to-manage-outlook-social-connector-via-group-policy/contact-details-available-in-local-contacts-folder.png" alt-text="The screenshot of the contact details in online mode when the contact details are stored in the local Contacts folder.":::
 
 ### Do not allow on-demand activity synchronization
 
-This policy setting lets you prevent on-demand synchronization of activity information between Outlook and social networks. If you enable this policy setting, on-demand synchronization is blocked. If you disable or you do not configure this policy setting, on-demand synchronization is allowed.
+This policy setting lets you prevent on-demand synchronization of activity information between Outlook and social networks. If you enable this policy setting, on-demand synchronization is blocked. If you disable or you don't configure this policy setting, on-demand synchronization is allowed.
 
 This policy setting is controlled by the following registry information:
 
@@ -370,13 +370,13 @@ Values:
 
 ### Block specific social network providers
 
-This policy setting lets you specify the list of social network providers that will never be loaded by the Outlook Social Connector. If you enable this policy setting, social network providers added to the list will never be loaded by the Outlook Social Connector. This list is semicolon (;) delimited. If you disable or you do not configure this policy setting, the Outlook Social Connector can load any installed provider.
+This policy setting lets you specify the list of social network providers that will never be loaded by the Outlook Social Connector. If you enable this policy setting, social network providers added to the list will never be loaded by the Outlook Social Connector. This list is semicolon (;) delimited. If you disable or you don't configure this policy setting, the Outlook Social Connector can load any installed provider.
 
 This policy setting is controlled by the following registry information:
 
 Key: `HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\Outlook\SocialConnector`  
 String: **DisabledProvidersList**  
-Value: Semicolon delimited list of currently installed providers (The current list of providers you can specify is provided below. See the vendor of your social connector provider if it is not included in the list below.)
+Value: Semicolon delimited list of currently installed providers (The current list of providers you can specify is provided below. See the vendor of your social connector provider if it isn't included in the list below.)
 
 SharePoint: **OscAddin.SharePointProvider**  
 LinkedIn: **OscAddIn.LinkedInProvider**  
@@ -391,7 +391,7 @@ Facebook: **OscAddin.FacebookProvider**
 
 ### Specify a list of social network providers to load
 
-This policy setting determines the list of social network providers that are loaded by the Outlook Social Connector. If you enable this policy setting, you may enter a list of provider progIDs of social network providers that will be loaded by the Outlook Social Connector. This list is semicolon delimited. If you enable this policy setting, only social network providers that are on this list will be loaded by the Outlook Social Connector. No other social network providers will be loaded. If you disable or you do not configure this policy setting, the Outlook Social Connector can load any installed provider, except those specified under **DisabledProvidersList**.
+This policy setting determines the list of social network providers that are loaded by the Outlook Social Connector. If you enable this policy setting, you may enter a list of provider progIDs of social network providers that will be loaded by the Outlook Social Connector. This list is semicolon delimited. If you enable this policy setting, only social network providers that are on this list will be loaded by the Outlook Social Connector. No other social network providers will be loaded. If you disable or you don't configure this policy setting, the Outlook Social Connector can load any installed provider, except those specified under **DisabledProvidersList**.
 
 This policy setting is controlled by the following registry information (note there are two values):
 
