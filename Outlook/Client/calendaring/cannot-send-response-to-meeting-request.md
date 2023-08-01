@@ -1,8 +1,8 @@
 ---
 title: Cannot send a response to a meeting request
 description: Describes an issue that prevents you from responding to a meeting request in Microsoft Outlook. A workaround is provided.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

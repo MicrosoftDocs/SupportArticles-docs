@@ -1,8 +1,8 @@
 ---
 title: Manager cannot respond to a meeting invite
 description: Provides a resolution for the issue that a manger can't respond to a meeting invitation in Microsoft Outlook.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

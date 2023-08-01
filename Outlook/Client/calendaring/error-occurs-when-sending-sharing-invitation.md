@@ -1,8 +1,8 @@
 ---
 title: Error occurs when sending sharing invitation
 description: Describes an issue in Outlook in which some internal recipients receive an Internet Connection Sharing file instead of a Calendar Sharing message or you receive a Policy does not allow granting permissions error.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
