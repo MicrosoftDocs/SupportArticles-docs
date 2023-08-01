@@ -1,8 +1,8 @@
 ---
 title: Error when decrypting message via 3DES certificate
 description: Discusses a problem that occurs in Outlook when you try to decrypt a message by using a 3DES certificate but the default algorithm encryption is set to AES256. Provides a resolution.
-author: cloud-writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

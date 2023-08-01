@@ -1,8 +1,8 @@
 ---
 title: Can't change shared calendar permissions
 description: Fixes an issue in which you receive an Access Denied error when you change permissions to a calendar shared by another user.
-author: cloud-writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

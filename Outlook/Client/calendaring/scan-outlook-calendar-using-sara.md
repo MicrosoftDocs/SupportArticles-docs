@@ -1,8 +1,8 @@
 ---
 title: Run CalCheck from Microsoft Support and Recovery Assistant to scan Outlook calendar
 description: Use the Outlook Calendar diagnostic to scan the Outlook calendar for issues.
-author: cloud-writer
-ms.author: meerak
+author: v-charloz
+ms.author: v-chazhang
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ ms.custom:
   - Outlook for Windows
   - CSSTroubleshoot
   - CI 158167
-ms.reviewer: meerak; zebamehdi, v-chazhang
+ms.reviewer: meerak; zebamehdi
 appliesto: 
   - Outlook 2016
   - Outlook 2019

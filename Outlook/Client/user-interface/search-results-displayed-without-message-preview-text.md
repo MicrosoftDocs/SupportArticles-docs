@@ -1,8 +1,8 @@
 ---
 title: Search results shown without message preview text
 description: Describes an issue that causes search results to be displayed without Message Preview text in Outlook.
-ms.author: meerak
-author: cloud-writer
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

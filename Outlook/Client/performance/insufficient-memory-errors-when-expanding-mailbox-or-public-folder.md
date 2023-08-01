@@ -1,8 +1,8 @@
 ---
 title: Insufficient memory errors and sent mail stuck
 description: Describes an issue that occurs when you have lots of cached public folders.
-author: cloud-writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

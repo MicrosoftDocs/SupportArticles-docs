@@ -8,9 +8,9 @@ localization_priority: Normal
 ms.custom: CSSTroubleshoot
 appliesto: 
 search.appverid: MET150
-ms.reviewer: v-six
-author: cloud-writer
-ms.author: meerak
+ms.reviewer: 
+author: simonxjx
+ms.author: v-six
 ms.date: 3/31/2022
 ---
 # INFO: Save message to MSG compound file

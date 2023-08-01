@@ -1,8 +1,8 @@
 ---
 title: Specified Message Identity is Invalid error
 description: Fixes an issue that prevents the delivery report tool from working in Microsoft Outlook.
-author: cloud-writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

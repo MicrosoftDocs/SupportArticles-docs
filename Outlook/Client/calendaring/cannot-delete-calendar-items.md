@@ -1,8 +1,8 @@
 ---
 title: Unable to delete calendar items
 description: You can't delete corrupted calendar items in Outlook, even by using the MFCMAPI or EWSEditor tools.
-author: cloud-writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

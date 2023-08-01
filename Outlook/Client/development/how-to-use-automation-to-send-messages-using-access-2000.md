@@ -8,9 +8,9 @@ localization_priority: Normal
 ms.custom: CSSTroubleshoot
 appliesto:
 search.appverid: MET150
-ms.reviewer: meshel, benjak, aruiz, v-six
-author: cloud-writer
-ms.author: meerak
+ms.reviewer: meshel, benjak, aruiz
+author: simonxjx
+ms.author: v-six
 ms.date: 3/31/2022
 ---
 # How to use Automation to send a Microsoft Outlook message using Access 2000

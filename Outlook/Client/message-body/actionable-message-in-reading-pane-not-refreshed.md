@@ -1,8 +1,8 @@
 ---
 title: Actionable message doesn't automatically refresh in the Outlook reading pane
 description: Provides a resolution for an issue in which an actionable message doesn't automatically refresh in the Outlook reading pane.
-author: cloud-writer
-ms.author: meerak
+author: v-trisshores
+ms.author: v-trisshores
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ ms.custom:
   - Outlook for Windows
   - CSSTroubleshoot
   - CI 174591
-ms.reviewer: michael.green, gbratton, meerak, v-trisshores
+ms.reviewer: michael.green, gbratton, meerak
 appliesto: 
   - Outlook for Microsoft 365
 search.appverid: MET150

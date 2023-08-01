@@ -1,14 +1,14 @@
 ---
 title: Only a subset of your Exchange mailbox items is synchronized in Outlook
 description: Discusses that only a subset of your Exchange mailbox items is synchronized in Outlook if you use Cached Exchange Mode. This is expected behavior. Provides a workaround.
-author: cloud-writer
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - Outlook for Windows
   - CSSTroubleshoot

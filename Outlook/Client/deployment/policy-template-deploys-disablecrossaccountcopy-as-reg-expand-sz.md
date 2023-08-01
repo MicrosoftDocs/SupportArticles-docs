@@ -9,9 +9,9 @@ ms.custom: CSSTroubleshoot
 appliesto:
 - Outlook
 search.appverid: MET150
-ms.reviewer: lahren, aruiz, jeffconn, v-six
-author: cloud-writer
-ms.author: meerak
+ms.reviewer: lahren, aruiz, jeffconn
+author: simonxjx
+ms.author: v-six
 ms.date: 3/31/2022
 ---
 # Outlook policy template deploys DisableCrossAccountCopy as REG_EXPAND_SZ instead of REG_MULTI_SZ

@@ -1,8 +1,8 @@
 ---
 title: Known issues when using the object model
 description: Discusses known issues in Outlook 2010 when you use the object model.
-author: cloud-writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

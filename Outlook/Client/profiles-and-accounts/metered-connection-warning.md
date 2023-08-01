@@ -1,14 +1,14 @@
 ---
 title: Can't send or receive email and Metered Connection Warning is triggered
 description: Describes an issue that blocks Outlook 2016 or Outlook 2013 from sending or receiving email and triggers Internal MAPI errors and Metered Connection Warning messages. Provides workarounds.
-author: cloud-writer
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.editor: v-jesits
 ms.custom: 
   - Outlook for Windows

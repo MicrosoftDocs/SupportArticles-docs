@@ -1,8 +1,8 @@
 ---
 title: How to delete nonexistent messages from Microsoft Outlook
 description: Outlook keeps trying to send a nonexistent message while Outbox folder shows zero messages.
-author: cloud-writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

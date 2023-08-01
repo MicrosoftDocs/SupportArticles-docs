@@ -1,8 +1,8 @@
 ---
 title: How to hide columns in Address Book
 description: Describes how to hide columns in Address Book in Outlook.
-author: cloud-writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

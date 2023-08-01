@@ -1,8 +1,8 @@
 ---
 title: DLP policy tips for PDF attachments not shown
 description: Describes an issue in which Outlook 2016 or 2013 does not display a Data Loss Prevention policy tip for PDF attachments in Windows 7. Provides a resolution.
-author: cloud-writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

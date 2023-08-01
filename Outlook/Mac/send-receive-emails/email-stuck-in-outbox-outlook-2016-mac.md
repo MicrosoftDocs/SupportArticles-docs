@@ -1,8 +1,8 @@
 ---
 title: Email messages are stuck in Outbox in Outlook 2016 for Mac
 description: Provide workarounds for the issue that Email messages are stuck in Outbox in Outlook 2016 for Mac.
-author: cloud-writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

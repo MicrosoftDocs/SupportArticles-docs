@@ -1,8 +1,8 @@
 ---
 title: Outlook displays "This information service is not installed on your computer" error message
 description: This article provides a resolution for the error message about the information service that is displayed when trying to start Outlook.
-author: cloud-writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

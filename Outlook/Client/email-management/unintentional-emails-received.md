@@ -1,8 +1,8 @@
 ---
 title: Receiving email messages not intended for you
 description: Fixes an issue in which you receive an email message that wasn't intended for you.
-author: cloud-writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

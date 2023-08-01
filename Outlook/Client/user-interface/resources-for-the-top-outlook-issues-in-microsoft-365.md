@@ -1,8 +1,8 @@
 ---
 title: Resources for the top Outlook issues
 description: Lists resources that were created to help out in areas that customers use most frequently or that generate the most questions.
-author: cloud-writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

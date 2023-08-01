@@ -1,8 +1,8 @@
 ---
 title: Configure rooms and workspaces for Room Finder
 description: Describes common tasks to configure rooms and workspaces for Room Finder in Outlook.
-author: cloud-writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

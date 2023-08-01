@@ -1,8 +1,8 @@
 ---
 title: How to control the Room Finder in Outlook
 description: Provides information about how to hide or display the Room Finder in Outlook.
-author: cloud-writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

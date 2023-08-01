@@ -1,8 +1,8 @@
 ---
 title: Default folder is missing in Outlook and Outlook on the web
 description: Resolves an issue in which folders appear to be missing.
-author: cloud-writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

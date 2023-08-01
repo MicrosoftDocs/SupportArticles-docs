@@ -2,8 +2,8 @@
 title: Share your calendar or open a shared calendar
 description: A reference about shared calendars for various Outlook clients.
 ms.date: 03/29/2023
-author: cloud-writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

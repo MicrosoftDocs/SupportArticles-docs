@@ -13,9 +13,9 @@ appliesto:
 - Microsoft Outlook 2010
 - Outlook 2013
 search.appverid: MET150
-ms.reviewer: aruiz, v-six
-author: cloud-writer
-ms.author: meerak
+ms.reviewer: aruiz
+author: simonxjx
+ms.author: v-six
 ms.date: 3/31/2022
 ---
 # The "Refresh Your PC without affecting your file" option deletes your Outlook profile in Windows 8

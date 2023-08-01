@@ -1,7 +1,7 @@
 ---
 title: Planning considerations to deploy Outlook for Windows
-ms.author: meerak
-author: cloud-writer
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.reviewer: 
 audience: ITPro

@@ -1,8 +1,8 @@
 ---
 title: How to repair personal folder file (.pst)
 description: Describes how to find the Inbox Repair tool (Scanpst.exe) that is designed to repair the personal folder (.pst) files.
-author: cloud-writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

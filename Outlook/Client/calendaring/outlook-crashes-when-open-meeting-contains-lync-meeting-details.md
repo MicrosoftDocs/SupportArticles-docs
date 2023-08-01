@@ -12,9 +12,9 @@ appliesto:
 - Outlook 2013 
 - Microsoft Outlook 2010
 search.appverid: MET150
-ms.reviewer: aruiz, robevans, v-six
-author: cloud-writer
-ms.author: meerak
+ms.reviewer: aruiz, robevans 
+author: simonxjx
+ms.author: v-six
 ms.date: 3/31/2022
 ---
 

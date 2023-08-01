@@ -9,9 +9,9 @@ ms.custom: CSSTroubleshoot
 appliesto: 
 - Microsoft Office Outlook 2007
 search.appverid: MET150
-ms.reviewer: SGRIFFIN, v-six
-author: cloud-writer
-ms.author: meerak
+ms.reviewer: SGRIFFIN
+author: simonxjx
+ms.author: v-six
 ms.date: 3/31/2022
 ---
 # How to list messages in the inbox with MAPI

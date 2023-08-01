@@ -1,8 +1,8 @@
 ---
 title: Cannot open attachments by double-clicking
 description: Describes an issue that prevents you from opening an attachment in Outlook 2016, Outlook 2019, and Outlook for Microsoft 365 by double-clicking it. A resolution is provided.
-author: cloud-writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

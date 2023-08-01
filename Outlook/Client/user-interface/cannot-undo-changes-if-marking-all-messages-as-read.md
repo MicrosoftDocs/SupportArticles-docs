@@ -1,8 +1,8 @@
 ---
 title: Cannot undo changes if all messages marked as read
 description: Fixes an issue in which you cannot undo the changes if you inadvertently select all messages in a folder to be marked as read.
-author: cloud-writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

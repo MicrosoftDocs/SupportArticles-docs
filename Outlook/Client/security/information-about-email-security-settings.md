@@ -1,8 +1,8 @@
 ---
 title: Information about e-mail security settings
 description: Contains information for administrators about e-mail security settings in Outlook 2007. Lists the registry settings that you can use to configure security options in Outlook 2007.
-author: cloud-writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

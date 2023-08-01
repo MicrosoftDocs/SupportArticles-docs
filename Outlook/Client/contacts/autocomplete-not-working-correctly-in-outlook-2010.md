@@ -1,8 +1,8 @@
 ---
 title: AutoComplete not working correctly
 description: AutoComplete not working correctly? Fix AutoComplete not working with a few clicks of the mouse.
-author: cloud-writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -11,9 +11,9 @@ ms.custom:
 appliesto:
 - Outlook 2016 for Mac
 search.appverid: MET150
-ms.reviewer: sercast, v-six
-author: cloud-writer
-ms.author: meerak
+ms.reviewer: sercast
+author: simonxjx
+ms.author: v-six
 ms.date: 3/31/2022
 ---
 # Outlook 2016 for Mac crashes when a Proxy Auto Configuration file is used

@@ -1,8 +1,8 @@
 ---
 title: Wrong search results due to missing MapiPH.dll
 description: Provides a resolution for the issue that search results in Outlook are incorrect if the file Mapiph.dll is missing from your computer.
-author: cloud-writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,8 +1,8 @@
 ---
 title: Operation cannot be performed error
 description: This article fixes an issue in which you receive an error when a delegate creates a Skype or Teams meeting in Outlook.
-author: cloud-writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,8 +1,8 @@
 ---
 title: Cannot add an Internet calendar
 description: Fixes an issue in which you can't add an Internet calendar in Outlook 2016, Outlook 2019, and Outlook for Microsoft 365.
-author: cloud-writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

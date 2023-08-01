@@ -1,8 +1,8 @@
 ---
 title: DisablePST and PSTDisableGrow are ignored
 description: Describes a setting issue that DisablePST and PSTDisableGrow policies ignored when the DisableCrossAccountCopy policy is also used in Microsoft Outlook.
-author: cloud-writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

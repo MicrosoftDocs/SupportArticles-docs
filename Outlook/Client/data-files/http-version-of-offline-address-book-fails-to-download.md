@@ -9,9 +9,9 @@ ms.custom: CSSTroubleshoot
 appliesto:
 - Outlook
 search.appverid: MET150
-ms.reviewer: tasitae, v-six
-author: cloud-writer
-ms.author: meerak
+ms.reviewer: tasitae
+author: simonxjx
+ms.author: v-six
 ms.date: 3/31/2022
 ---
 # HTTP version of the Outlook Offline Address Book (OAB) does not download

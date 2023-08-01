@@ -1,8 +1,8 @@
 ---
 title: Issues that can occur when you add multiple Exchange accounts to the same Outlook profile
 description: This article describes scenarios in which adding multiple accounts can cause unexpected behavior.
-author: cloud-writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

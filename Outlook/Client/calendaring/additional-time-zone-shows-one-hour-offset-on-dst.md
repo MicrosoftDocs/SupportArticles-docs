@@ -13,9 +13,9 @@ appliesto:
 - Outlook for Microsoft 365 
 - Microsoft Outlook 2010
 search.appverid: MET150
-ms.reviewer: randyto, v-six
-author: cloud-writer
-ms.author: meerak
+ms.reviewer: randyto
+author: simonxjx
+ms.author: v-six
 ms.date: 3/31/2022
 ---
 # Additional time zone shows a one-hour offset on DST start day in Outlook

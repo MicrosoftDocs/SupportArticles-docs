@@ -1,8 +1,8 @@
 ---
 title: Calendar shows working hours as grey
 description: This article describes an issue in which the Outlook Calendar displays working hours as grey instead of white.
-author: cloud-writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

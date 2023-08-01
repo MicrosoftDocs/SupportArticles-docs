@@ -1,8 +1,8 @@
 ---
 title: Cannot recover deleted items from non-mail public folder
 description: Discusses an issue in which the Recover Deleted Items option does not appear in Outlook. Provides a workaround.
-author: cloud-writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

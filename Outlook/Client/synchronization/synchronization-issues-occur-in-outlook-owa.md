@@ -14,9 +14,9 @@ appliesto:
 - Microsoft Office Outlook 2007
 - Microsoft Office Outlook 2003
 search.appverid: MET150
-ms.reviewer: aruiz, rakeshs, v-six
-author: cloud-writer
-ms.author: meerak
+ms.reviewer: aruiz, rakeshs
+author: simonxjx
+ms.author: v-six
 ms.date: 3/31/2022
 ---
 # Synchronization problems occur in Outlook and in Outlook Web App

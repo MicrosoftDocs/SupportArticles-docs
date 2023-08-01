@@ -1,8 +1,8 @@
 ---
 title: Outlook shows Disconnected if IPv6 is enabled
 description: Describes a problem that blocks Outlook from accessing your Exchange Server mailbox. The connection status is shown as Disconnected.
-author: cloud-writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

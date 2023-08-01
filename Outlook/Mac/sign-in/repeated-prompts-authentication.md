@@ -1,7 +1,7 @@
 ---
 title: Outlook 2016 for Mac repeatedly prompts for authentication
 description: Describes an issue that causes Outlook 2016 for Mac to repeatedly prompt the user for authentication.  Provides a workaround.
-author: cloud-writer
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -11,7 +11,7 @@ ms.custom:
   - Outlook for Mac
   - CSSTroubleshootCSSTroubleshoot
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 appliesto: 
   - Exchange Online
   - Outlook 2016 for Mac
