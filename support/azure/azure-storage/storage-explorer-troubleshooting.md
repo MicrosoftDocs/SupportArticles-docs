@@ -219,6 +219,27 @@ macOS Keychain can sometimes enter a state that causes issues for the Storage Ex
 1. You're prompted with a message like "Service hub wants to access the Keychain." Type your Mac admin account password and select **Always Allow**. Or select **Allow** if **Always Allow** isn't available.
 1. Try to sign in.
 
+### Linux: No application window or password manager errors at launch
+
+If you launch Storage Explorer on a Linux system, you may encounter issues where no application window appears, or you get error messages about the system's password manager.
+
+Storage Explorer uses your system's credential manager to protect your data, including sign-in credentials and SAS connections. If a compatible credential manager application is not detected, Storage Explorer will not launch.
+
+If your system doesn't have a tool for local credential management installed, you should install a third-party tool compatible with `libsecret`. For example, on systems using GNOME, you can install [Seahorse](https://wiki.gnome.org/Apps/Seahorse/).
+
+Storage Explorer normally creates a default keyring if one doesn't already exist at launch. However, in some cases, this might not occur, resulting in no application window or password manager errors. You can correct this by manually setting a default keyring. For example, if you are using Seahorse:
+
+1. Launch the password manager application (search your applications for "Passwords and Keys").
+1. If there are no existing keyrings, or you want to create a new one, click the + button and select "Password keyring".
+1. Give the new keyring a name and a password.
+1. Right-click the keyring and select "Set as default".
+
+If you are using the Snap installation, you must also make sure the snap is connected to the system password manager. You can connect to the password manager by running the following command:
+
+```bash
+snap connect storage-explorer:password-manager-service :password-manager-service
+```
+
 ### Default browser doesn't open
 
 If your default browser doesn't open when you try to sign in, try all of the following techniques:
