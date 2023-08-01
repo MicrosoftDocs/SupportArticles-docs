@@ -5,7 +5,7 @@ ms.reviewer: nimoutzo
 ms.date: 08/01/2023
 ms.subservice: power-automate-desktop-flows
 ---
-# Error occurs at runtime when the list value specified in the Set drop-down list value action cannot be found.
+# List value specified in the Set drop-down list value action cannot be found at runtime
 
 This article provides a resolution when Set Drop Down List Value action fails because list value cannot be found.
 
