@@ -36,7 +36,7 @@ The issue occurs in the Endpoint Mapper Logic component.
 > [!NOTE]
 > The Remote Registry service is designed to stop running after the connection has been idle for 10 minutes.
 > 
-> This is by design behavior in Windows.
+> This is a by design behavior in Windows.
 
 ## Workaround
 
