@@ -1,8 +1,8 @@
 ---
 title: Inbox rule to redirect messages not working
 description: Describes a scenario in which messages are delivered to the user and to a forwarding address but not to the redirecting address that's specified in an inbox rule.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Online
   - CSSTroubleshoot
-ms.reviewer: 
+ms.reviewer: v-six
 appliesto: 
   - Exchange Online
   - Exchange Server 2013 Enterprise

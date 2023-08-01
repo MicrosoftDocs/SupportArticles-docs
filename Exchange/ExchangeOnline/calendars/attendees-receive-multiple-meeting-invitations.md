@@ -1,8 +1,8 @@
 ---
 title: Attendees receive multiple meeting invitations
 description: Describes an issue in which multiple attendees receive multiple meeting invites for different occurrences of the same meeting from the meeting organizer.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Online
   - CSSTroubleshoot
-ms.reviewer: jmartin
+ms.reviewer: jmartin, v-six
 appliesto: 
   - Exchange Online
   - Exchange Server 2016 Enterprise Edition

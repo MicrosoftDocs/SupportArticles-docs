@@ -1,13 +1,13 @@
 ---
 title: You don't have sufficient permissions when remove or change distribution group
 description: Describes an issue that triggers an error when you try to remove a distribution group or make a change to the group in Exchange Online or in on-premises Exchange Server. Provides two methods of resolution.
-author: simonxjx
+author: cloud-writer
+ms.author: meerak
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
   - Exchange Online
   - CSSTroubleshoot
-ms.author: v-six
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -19,6 +19,7 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
 ms.date: 3/31/2022
+ms.reviewer: v-six
 ---
 # (You don't have sufficient permissions) error when you try to remove or make a change to a distribution group
 

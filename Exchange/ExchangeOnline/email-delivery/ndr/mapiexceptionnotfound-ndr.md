@@ -1,10 +1,10 @@
 ---
 title: NDR errror 554 5.2.0 STOREDRV.Deliver.Exception
 description: Describes an issue that returns a 554.5.2.0 Cannot get ID from name nondelivery report when users send mail to a distribution group in Exchange Online. Provides a workaround.
-author: simonxjx
+author: cloud-writer
+ms.author: meerak
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: v-six
 ms.custom: 
   - Exchange Online
   - CSSTroubleshoot
@@ -16,6 +16,7 @@ search.appverid:
 appliesto: 
   - Exchange Online
 ms.date: 3/31/2022
+ms.reviewer: v-six
 ---
 # "554 5.2.0 STOREDRV.Deliver.Exception" when sending emails in Exchange Online
 

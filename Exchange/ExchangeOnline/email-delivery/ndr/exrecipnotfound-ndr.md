@@ -1,8 +1,8 @@
 ---
 title: NDR error 550 5.1.1 RESOLVER.ADR.ExRecipNotFound
 description: Describes an issue that occurs when you send email messages by using Outlook in Microsoft 365. Provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -12,7 +12,7 @@ ms.custom:
   - CSSTroubleshoot
   - 'Associated content asset: 4555312'
   - CI 167832
-ms.reviewer: jmartin
+ms.reviewer: jmartin, v-six
 appliesto: 
   - Exchange Online
   - Microsoft 365 Apps for enterprise

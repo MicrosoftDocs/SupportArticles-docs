@@ -1,10 +1,10 @@
 ---
 title: Email non-delivery report (NDR) and SMTP errors in Exchange Online
 ms.date: 01/29/2023
-ms.author: v-six
-author: simonxjx
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
-ms.reviewer: 
+ms.reviewer: v-six
 audience: Admin
 ms.topic: troubleshooting
 ms.localizationpriority: high
@@ -255,7 +255,7 @@ Subject: Consumer dmarc reject test
 MIME-Version: 1.0
 Content-Type: text/plain
 Sender: "admin@o365e.onmicrosoft.com"
-	<admin@o365e.onmicrosoft.com>
+    <admin@o365e.onmicrosoft.com>
 ```
 
 - Alignment
@@ -268,7 +268,7 @@ Subject: Consumer auto forward test
 MIME-Version: 1.0
 Content-Type: text/plain
 Sender: "admin@o365e039.onmicrosoft.com"
-	<admin@o365e039.onmicrosoft.com>
+    <admin@o365e039.onmicrosoft.com>
 X-MS-PublicTrafficType: Email
 X-MS-TrafficTypeDiagnostic: AMB3284:EE_|DU0PRMB172:EE
 To: Undisclosed recipients:;

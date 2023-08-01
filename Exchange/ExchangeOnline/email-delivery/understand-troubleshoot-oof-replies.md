@@ -1,8 +1,8 @@
 ---
 title: Understand and troubleshoot Out of Office (OOF) replies
 description: Discusses how OOF works and some of the main reasons why an OOF reply might not get delivered to users.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ ms.custom:
   - Exchange Online
   - CI 119624
   - CSSTroubleshoot
-ms.reviewer: damande
+ms.reviewer: damande, v-six
 appliesto: 
   - Exchange Online
 search.appverid: 

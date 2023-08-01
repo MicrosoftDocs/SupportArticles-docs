@@ -1,10 +1,10 @@
 ---
 title: You can't remove a calendar item or an email message in Outlook in Microsoft 365
 description: Describes an issue in which you can't remove a meeting request or an email message in Microsoft Outlook. Provides a resolution.
-author: simonxjx
+author: cloud-writer
+ms.author: meerak
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: v-six
 ms.custom: 
   - Exchange Online
   - CSSTroubleshoot
@@ -17,6 +17,7 @@ appliesto:
   - Microsoft Business Productivity Online Dedicated
   - Microsoft Business Productivity Online Suite Federal
 ms.date: 3/31/2022
+ms.reviewer: v-six
 ---
 # You can't remove a calendar item or an email message in Outlook in Microsoft 365
 

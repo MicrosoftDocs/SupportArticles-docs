@@ -1,8 +1,8 @@
 ---
 title: Mobile devices not quarantined as expected
 description: Mobile devices are not quarantined and allowed to connect when they're removed either from the Microsoft 365 Exchange Admin Center or PowerShell cmdlet.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Online
   - CSSTroubleshoot
-ms.reviewer: kellybos
+ms.reviewer: kellybos, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150

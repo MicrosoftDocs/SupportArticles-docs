@@ -1,10 +1,10 @@
 ---
 title: Collect ActiveSync device logs to troubleshoot sync issues for mobile devices
 description: Describes how to collect ActiveSync device logs to troubleshoot sync issues between mobile devices and Exchange Online.
-author: simonxjx
+author: cloud-writer
+ms.author: meerak
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: v-six
 ms.custom: 
   - Exchange Online
   - CSSTroubleshoot
@@ -15,6 +15,7 @@ search.appverid:
 appliesto: 
   - Exchange Online
 ms.date: 3/31/2022
+ms.reviewer: v-six
 ---
 # How to collect ActiveSync device logs to troubleshoot sync issues between mobile devices and Exchange Online
 
