@@ -1,8 +1,8 @@
 ---
 title: Can't set up an organization relationship
 description: Fixes an issue in which you receive a Creating Organization Relationships error message when you run the Get-FederatedInformation cmdlet to set up an organization relationship.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Online
   - CSSTroubleshoot
-ms.reviewer: zoltanh
+ms.reviewer: zoltanh, v-six
 appliesto: 
   - Exchange Online
   - Exchange Server 2013 Enterprise

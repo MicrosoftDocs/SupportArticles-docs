@@ -1,8 +1,8 @@
 ---
 title: Extension number can‎'t be generated
 description: Fixes an issue that triggers a MigrationPermanentException error if the mailbox that you're trying to move from the on-premises environment to Exchange Online in Microsoft 365 is missing a primary Exchange Unified Messaging address.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Hybrid
   - CSSTroubleshoot
-ms.reviewer: sgorania
+ms.reviewer: sgorania, v-six
 appliesto: 
   - Exchange Online
   - Exchange Server 2016 Enterprise Edition

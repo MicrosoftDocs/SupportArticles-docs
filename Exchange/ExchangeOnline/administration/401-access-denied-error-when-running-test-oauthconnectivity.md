@@ -1,8 +1,8 @@
 ---
 title: 401 Access denied when running Test-OAuthConnectivity
 description: Describes an issue that occurs when you run the Test-OAuthConnectivity cmdlet to test OAuth authentication for a user.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Online
   - CSSTroubleshoot
-ms.reviewer: timothyh
+ms.reviewer: timothyh, v-six
 appliesto: 
   - Exchange Online
   - Exchange Server 2013 Enterprise

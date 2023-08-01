@@ -1,8 +1,8 @@
 ---
 title: Bad Request when connecting to Exchange Online PowerShell
 description: You cannot connect to Exchange Online PowerShell if the RemotePowerShellEnable parameter value is set to False.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Online
   - CSSTroubleshoot
-ms.reviewer: rroddy
+ms.reviewer: rroddy, v-six
 appliesto: 
   - Exchange Online
   - MSfC O365-Exchange Online

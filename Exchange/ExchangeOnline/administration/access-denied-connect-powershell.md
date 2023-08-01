@@ -1,13 +1,13 @@
 ---
 title: Access is denied when you connect to Exchange Online with Windows PowerShell
 description: Describes an issue in which an incorrect user name or password is entered or the user tries to sign in to the service by using an account that doesn't have access to Exchange Online. Provides a resolution.
-author: simonxjx
+author: cloud-writer
+ms.author: meerak
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
   - Exchange Online
   - CSSTroubleshoot
-ms.author: v-six
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -15,6 +15,7 @@ search.appverid:
 appliesto: 
   - Exchange Online
 ms.date: 3/31/2022
+ms.reviewer: v-six
 ---
 # (Access is denied) error when you connect to Exchange Online by using remote Windows PowerShell
 

@@ -1,8 +1,8 @@
 ---
 title: MigrationPermanentException when moving primary mailbox
 description: Describes a MigrationPermanentException error that's returned when you try to use the Exchange admin center to move a primary mailbox from the on-premises environment to Exchange Online. Provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Hybrid
   - CSSTroubleshoot
-ms.reviewer: lenarudz
+ms.reviewer: lenarudz, v-six
 appliesto: 
   - Exchange Online
   - Exchange Server 2016 Enterprise Edition
