@@ -10,9 +10,9 @@ appliesto:
 - Exchange Server 2010 Enterprise
 - Exchange Server 2010 Standard
 search.appverid: MET150
-ms.reviewer: mataylor, wduff
-author: simonxjx
-ms.author: v-six
+ms.reviewer: mataylor, wduff, v-six
+author: cloud-writer
+ms.author: meerak
 ms.date: 3/31/2022
 ---
 

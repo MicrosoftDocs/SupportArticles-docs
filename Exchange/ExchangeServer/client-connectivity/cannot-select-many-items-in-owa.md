@@ -2,8 +2,8 @@
 title: You have tried to select too many rows error
 description: When you try to select many items in a folder in OWA, you receive an error that states you've tried to select too many rows.
 ms.date: 08/10/2020
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: wduff, mhaque, timothyh
+ms.reviewer: wduff, mhaque, timothyh, v-six
 appliesto: 
   - Exchange Server 2010 Service Pack 1
 search.appverid: MET150

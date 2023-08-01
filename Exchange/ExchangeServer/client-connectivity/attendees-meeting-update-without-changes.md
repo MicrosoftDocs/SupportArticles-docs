@@ -1,13 +1,13 @@
 ---
 title: attendees get a meeting update without changes
 description: Describes an issue in which attendees receive a meeting request that includes the No Response Required option.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
-ms.reviewer: jmartin
+ms.reviewer: jmartin, v-six
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot

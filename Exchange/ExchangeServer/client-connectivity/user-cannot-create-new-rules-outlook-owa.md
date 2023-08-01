@@ -13,8 +13,8 @@ appliesto:
 - Exchange Server 2010 Standard
 search.appverid: MET150
 ms.reviewer: danabeck, v-six
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 ms.date: 3/31/2022
 ---
 # A user cannot create new rules in Outlook or Outlook on the web

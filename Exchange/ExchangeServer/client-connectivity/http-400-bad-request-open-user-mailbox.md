@@ -1,13 +1,13 @@
 ---
 title: Can't open another user's mailbox
 description: Resolves an issue in which you can't open another user's mailbox by using Outlook Web App in an Exchange Server environment.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
-ms.reviewer: batre
+ms.reviewer: batre, v-six
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot

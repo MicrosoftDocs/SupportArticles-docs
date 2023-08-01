@@ -1,10 +1,10 @@
 ---
 title: Error using Remote Connectivity Analyzer to troubleshoot Exchange ActiveSync
 description: Describes an issue in which you receive an error message when you try to use the Remote Connectivity Analyzer tool to troubleshoot Exchange ActiveSync in Microsoft 365. Provides a resolution.
-author: simonxjx
+author: cloud-writer
+ms.author: meerak
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: v-six
 manager: dcscontentpm
 ms.custom: 
   - Exchange Server
@@ -15,6 +15,7 @@ search.appverid:
 appliesto: 
   - Exchange Online
 ms.date: 3/31/2022
+ms.reviewer: v-six
 ---
 
 # "Active Sync URL was in an Invalid format" when using Remote Connectivity Analyzer tool
