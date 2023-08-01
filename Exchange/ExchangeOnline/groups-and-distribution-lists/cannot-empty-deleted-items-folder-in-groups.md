@@ -15,7 +15,7 @@ ms.reviewer: batre, meerak, v-trisshores
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 07/31/2023
+ms.date: 08/01/2023
 ---
 
 # Can't empty Deleted Items folder in Microsoft 365 Groups
@@ -32,7 +32,7 @@ Outlook on the web doesn't show the built-in Microsoft 365 Groups folders, such 
 
 To empty the Deleted Items folder, use one of the following methods.
 
-Your choice of method might depend on the size of the Deleted Items folder. For example, if the Microsoft 365 Groups mailbox reaches the [default storage quota](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#storage-limits), and the Deleted Items folder is large, you might prefer Method 1 for a quick resolution. To determine how much of the group mailbox storage quota is occupied by the Deleted Items folder, follow these steps:
+Your choice of method might depend on the size of the Deleted Items folder. For example, if a Microsoft 365 group mailbox reaches the [default storage quota](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#storage-limits), and the Deleted Items folder is large, you might prefer Method 1 for a quick resolution. To determine how much of the group mailbox storage quota is occupied by the Deleted Items folder, follow these steps:
 
 1. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -44,7 +44,7 @@ Your choice of method might depend on the size of the Deleted Items folder. For 
 
 ## Method 1: Use Outlook on the web
 
-Create a Microsoft 365 Groups subfolder to access the Deleted Items folder. Follow these steps:
+Create a Microsoft 365 group subfolder to access the Deleted Items folder. Follow these steps:
 
 1. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -67,7 +67,7 @@ Create a Microsoft 365 Groups subfolder to access the Deleted Items folder. Foll
 5. Right-click the group, select **Create new subfolder**, enter any name for the folder, and then select **OK**.
 
    > [!NOTE]
-   > If the **Create new subfolder** option is grayed out, check whether you used the group owner credentials to sign in to Outlook on the web. If you aren't an owner of the group, contact an owner for support to resolve this issue. Group owners can [grant permission](/microsoft-365/enterprise/manage-folders-and-rules-feature#enable-member-permission-option) for group members to create folders, rename folders, and delete messages.
+   > If the **Create new subfolder** option is unavailable, check whether you used the group owner credentials to sign in to Outlook on the web. If you aren't an owner of the group, contact an owner for support to resolve this issue. Group owners can [grant permission](/microsoft-365/enterprise/manage-folders-and-rules-feature#enable-member-permission-option) for group members to create folders, rename folders, and delete messages.
 
 6. After the built-in Deleted Items folder appears, select the folder, select **Select all messages** at the top of the message list, and then select **Empty folder**.
 
@@ -93,7 +93,7 @@ This method offers a long-term solution for management of the Deleted Items fold
    ```
 
    > [!NOTE]
-   > The MFA normally processes mailboxes on a schedule. Scheduled mailbox processing can take a few days to finish. However, the [Start-ManagedFolderAssistant](/powershell/module/exchange/start-managedfolderassistant) cmdlet forces the MFA to immediately start processing the specified mailbox to expedite your retention policy.
+   > The MFA typically processes mailboxes on a schedule. Scheduled mailbox processing can take a few days to finish. However, the [Start-ManagedFolderAssistant](/powershell/module/exchange/start-managedfolderassistant) cmdlet forces the MFA to immediately start processing the specified mailbox to expedite your retention policy.
 
 3. Wait for the MFA to finish. To check whether the MFA has finished processing the mailbox, run the following commands:
 
