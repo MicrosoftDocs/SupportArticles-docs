@@ -1,8 +1,8 @@
 ---
 title: HCW8100, HCW8084, or HCW8083 error
 description: Resolves an issue in which you receive an HCW8100, HCW8084, or HCW8083 error message when you run the Hybrid Configuration Wizard.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Hybrid
   - CSSTroubleshoot
-ms.reviewer: timothyh
+ms.reviewer: timothyh, v-six
 appliesto: 
   - Exchange Online
   - Exchange Server 2016 Enterprise Edition

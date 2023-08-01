@@ -1,8 +1,8 @@
 ---
 title: Cannot manage group synced to Microsoft 365
 description: Describes how to grant several users rights to manage a group that is synced from on-premises in a hybrid environment.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Hybrid
   - CSSTroubleshoot
-ms.reviewer: danielsl; Robwhal
+ms.reviewer: danielsl; Robwhal, v-six
 appliesto: 
   - Exchange Online
   - Exchange Server 2016 Enterprise Edition

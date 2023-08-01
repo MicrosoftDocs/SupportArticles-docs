@@ -1,8 +1,8 @@
 ---
 title: Email appears as mail from external contacts
 description: Describes an issue in which email messages that are sent from on-premises Exchange 2013 Edge server to Exchange Online are displayed as external email messages instead of internal email messages. Provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Hybrid
   - CSSTroubleshoot
-ms.reviewer: rrajan
+ms.reviewer: rrajan, v-six
 appliesto: 
   - Exchange Online
   - Exchange Server 2013 Enterprise
