@@ -1,8 +1,8 @@
 ---
 title: Can't finalize a public folder batch migration
 description: When you use the Complete-MigrationBatch cmdlet to finalize a public folder batch migration, you receive a migration batch can't be completed error message.
-author: v-charloz
-ms.author: v-chazhang
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ ms.custom:
   - CI 159691
   - Exchange Online
   - CSSTroubleshoot
-ms.reviewer: meerak; batre
+ms.reviewer: meerak, batre, v-chazhang
 editor: v-jesits
 appliesto: 
   - Exchange Online

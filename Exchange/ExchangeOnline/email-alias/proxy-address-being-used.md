@@ -1,8 +1,8 @@
 ---
 title: Proxy address conflict when adding an email address in Exchange Online
 description: Discusses how to resolve a proxy address conflict that occurs when you try to add an email address for a mail recipient in Exchange Online.
-author: v-trisshores
-ms.author: v-trisshores
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ ms.custom:
   - Exchange Online
   - CSSTroubleshoot
   - CI 165756
-ms.reviewer: alexaca, batre, nualex, meerak
+ms.reviewer: alexaca, batre, nualex, meerak, v-trisshores
 appliesto: 
   - Exchange Online
 search.appverid: MET150

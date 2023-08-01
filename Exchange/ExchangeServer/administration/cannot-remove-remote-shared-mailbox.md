@@ -1,8 +1,8 @@
 ---
 title: Can't remove a remote shared mailbox
 description: Provides a workaround for an issue in which you can't remove a remote shared mailbox in on-premises Exchange admin center because it uses the Remove-Mailbox cmdlet that can't find the specified mailbox object.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

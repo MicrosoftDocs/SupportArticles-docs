@@ -1,8 +1,8 @@
 ---
 title: Public folder permissions in Exchange admin center show GUID instead of name
 description: Provides methods for getting the names of users who are identified by a GUID in a public folder permissions window in the Exchange Online admin center.
-author: v-trisshores
-ms.author: v-trisshores
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ ms.custom:
   - Exchange Online
   - CSSTroubleshoot
   - CI 171142
-ms.reviewer: batre, meerak
+ms.reviewer: batre, meerak, v-trisshores
 appliesto:
   - Exchange Online
 search.appverid: MET150

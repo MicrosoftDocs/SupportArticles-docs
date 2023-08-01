@@ -1,8 +1,8 @@
 ---
 title: In-Place eDiscovery search doesn't search the file names of attached mail items
 description: Provides a workaround for an issue in which an eDiscovery search doesn't search the file names of attached mail items.
-author: v-trisshores
-ms.author: v-trisshores
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ ms.custom:
   - CI 175754
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: svajda, batre, meerak
+ms.reviewer: svajda, batre, meerak, v-trisshores
 appliesto:
   - Exchange Server 2019
 search.appverid: MET150

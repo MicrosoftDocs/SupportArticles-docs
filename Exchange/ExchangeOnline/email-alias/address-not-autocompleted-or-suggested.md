@@ -1,8 +1,8 @@
 ---
 title: Autocomplete and suggestions don't work for internal recipients
 description: Fixes an issue in which a recipient's address isn't autocompleted or suggested for a user who has an address book policy assigned.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

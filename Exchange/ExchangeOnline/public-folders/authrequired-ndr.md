@@ -1,8 +1,8 @@
 ---
 title: 5.7.1 smtp;550 5.7.1 RESOLVER.RST.AuthRequired NDR in Microsoft 365
 description: Describes an issue that triggers a 5.7.1 smtp;550 5.7.1 RESOLVER.RST.AuthRequired nondelivery report when external users try to send mail to mail-enabled public folders in Microsoft 365.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

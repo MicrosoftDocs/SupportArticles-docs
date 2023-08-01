@@ -1,8 +1,8 @@
 ---
 title: Can't access or move a mailbox after mailbox server is added to a DAG
 description: Describes mailbox access or move errors on a newly created database in DAG.
-author: v-charloz
-ms.author: v-chazhang
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ ms.custom:
   - Exchange Server
   - CI 156012
   - CSSTroubleshoot
-ms.reviewer: dpaul; batre; meerak
+ms.reviewer: dpaul, batre, meerak, v-chazhang
 appliesto: 
   - Exchange Server 2019
 search.appverid: MET150
