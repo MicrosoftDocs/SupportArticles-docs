@@ -1,8 +1,8 @@
 ---
 title: Can't use Group Policy to disable items in Backstage view
 description: Describes an issue that blocks you from using Group Policy to disable certain Backstage View items in Outlook.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
