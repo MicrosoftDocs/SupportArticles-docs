@@ -1,8 +1,8 @@
 ---
 title: Only see availability info of resource when scheduling
 description: Describes a scenario in which on-premises users can't view capacity and description information when they try to create a meeting that uses a resource such as a meeting room or company equipment.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Hybrid
   - CSSTroubleshoot
-ms.reviewer: camlat
+ms.reviewer: camlat, v-six
 appliesto: 
   - Exchange Online
   - Exchange Server 2013 Enterprise

@@ -1,8 +1,8 @@
 ---
 title: Can't run HCW without sufficient permissions
 description: Fixes an issue that occurs when the user account that you're using to run the wizard doesn't have sufficient permissions.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Hybrid
   - CSSTroubleshoot
-ms.reviewer: timothyh
+ms.reviewer: timothyh, v-six
 appliesto: 
   - Exchange Online
   - Exchange Server 2016 Enterprise Edition

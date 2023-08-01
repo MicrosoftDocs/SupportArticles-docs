@@ -1,8 +1,8 @@
 ---
 title: Can't use OWA move items in a hybrid deployment
 description: Describes a scenario in an Exchange hybrid deployment in which users can't move items between their primary mailbox in on-premises Exchange Server 2010 and their cloud-based archive by using Outlook Web Access.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -19,6 +19,7 @@ appliesto:
   - Exchange Server 2010 Service Pack 3
 search.appverid: MET150
 ms.date: 3/31/2022
+ms.reviewer: v-six
 ---
 # Can't move items between on-premises Exchange mailboxes and their cloud-based archive in OWA
 

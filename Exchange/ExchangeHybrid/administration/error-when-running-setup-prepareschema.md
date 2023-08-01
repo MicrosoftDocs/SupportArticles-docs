@@ -1,8 +1,8 @@
 ---
 title: Cannot run Setup /PrepareSchema for hybrid
 description: Describes an issue that triggers an error when you try to run Exchange Setup together with the /PrepareSchema switch to prepare the schema for an existing Exchange hybrid deployment. Provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Hybrid
   - CSSTroubleshoot
-ms.reviewer: jmartin
+ms.reviewer: jmartin, v-six
 appliesto: 
   - Exchange Online
   - Exchange Server 2016 Enterprise Edition

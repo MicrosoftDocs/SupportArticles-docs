@@ -1,8 +1,8 @@
 ---
 title: InvalidSmtpDomainName(domain) error connecting to on-premises Exchange
 description: Fixes an issue that returns a DataStrings.InvalidSmtpDomainName( domain) error when you run the Hybrid Configuration wizard. Also, an Exchange server that's no longer available in your environment is listed in the output when you run the Get-ExchangeServer * | FL command.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Hybrid
   - CSSTroubleshoot
-ms.reviewer: jeknight
+ms.reviewer: jeknight, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
