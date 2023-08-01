@@ -1,8 +1,8 @@
 ---
 title: Sending attachment outside of Outlook fails
 description: This article provides a solution to an issue where sending attachments outside of Microsoft Outlook fails.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,8 +1,8 @@
 ---
 title: Delegate gets multiple or duplicate meeting requests
 description: Provides a resolution for the issue that a delegate receives multiple or duplicate meeting requests in their Inbox.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
