@@ -1,8 +1,8 @@
 ---
 title: Only some emails are synchronized
 description: Describes an issue where not all email messages are displayed in shared mailboxes and public folder favorites in Outlook.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

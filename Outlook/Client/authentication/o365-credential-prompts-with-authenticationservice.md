@@ -1,8 +1,8 @@
 ---
 title: O365 credential prompts with AuthenticationService value
 description: Documents a connection issue for Microsoft 365 when the AuthenticationService registry value is configured.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

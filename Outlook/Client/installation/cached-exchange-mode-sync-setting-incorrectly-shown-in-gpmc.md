@@ -1,8 +1,8 @@
 ---
 title: Cached Exchange Mode Sync Setting wrongly shown in GPMC
 description: Describes an issue in which the Outlook 2016 Cache Mode Setting is always displayed as Three days.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

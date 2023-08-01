@@ -1,8 +1,8 @@
 ---
 title: Cannot propose a new time for a meeting
 description: Describes an issue that blocks you from proposing a new time for a meeting in Outlook for Mac. A workaround and a resolution are provided.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,8 +1,8 @@
 ---
 title: HTTPS linked images in HTML emails display the red X
 description: Provides a resolution for the error (The linked image cannot be displayed) that occurs when you try to download an image in Microsoft Outlook.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

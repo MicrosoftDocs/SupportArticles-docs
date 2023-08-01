@@ -12,9 +12,9 @@ appliesto:
 - Outlook for Microsoft 365 
 - Outlook 2019
 search.appverid: MET150
-ms.reviewer: gregmans
-author: simonxjx
-ms.author: v-six
+ms.reviewer: gregmans, v-six
+author: cloud-writer
+ms.author: meerak
 ms.date: 3/31/2022
 ---
 # You experience issues in Outlook when you try to configure free/busy information or when you try to delegate information

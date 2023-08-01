@@ -1,8 +1,8 @@
 ---
 title: Items placed in root folder seem to be lost
 description: Provides a resolution to show the items that's placed in root folder.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

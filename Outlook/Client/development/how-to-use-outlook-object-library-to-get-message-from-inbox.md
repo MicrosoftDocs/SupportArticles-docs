@@ -9,9 +9,9 @@ ms.custom: CSSTroubleshoot
 appliesto:
 - Microsoft Office Outlook 2003
 search.appverid: MET150
-ms.reviewer: 
-author: simonxjx
-ms.author: v-six
+ms.reviewer: v-six
+author: cloud-writer
+ms.author: meerak
 ms.date: 3/31/2022
 ---
 # How to use the Microsoft Outlook Object Library to retrieve a message by using Visual C# from the Inbox

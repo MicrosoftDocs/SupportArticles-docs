@@ -1,8 +1,8 @@
 ---
 title: Remove Get and set up Outlook mobile app on my phone option
 description: Discusses how to disable the Get and set up Outlook mobile app on my phone option from Outlook.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

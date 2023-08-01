@@ -1,14 +1,14 @@
 ---
 title: Additional RSS feeds in Outlook after sign in to Microsoft 365 on a new computer
 description: Describes a scenarion in which RSS feeds are added to a user's account when that user signs in to Microsoft 365 on a different computer.
-author: helenclu
+author: cloud-writer
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 ms.custom: 
   - Outlook for Windows
   - CSSTroubleshoot

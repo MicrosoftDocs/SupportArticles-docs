@@ -1,8 +1,8 @@
 ---
 title: Proxy server causes errors with Free/Busy OOF and Mailtips
 description: Provides a resolution for the errors that occur due to a wrong WinHTTP Proxy is set for Microsoft Outlook.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

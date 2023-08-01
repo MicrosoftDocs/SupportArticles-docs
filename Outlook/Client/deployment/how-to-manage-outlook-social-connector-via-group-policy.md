@@ -9,9 +9,9 @@ ms.custom: CSSTroubleshoot
 appliesto:
 - Outlook
 search.appverid: MET150
-ms.reviewer: gregmans
-author: simonxjx
-ms.author: v-six
+ms.reviewer: gregmans, v-six
+author: cloud-writer
+ms.author: meerak
 ms.date: 3/31/2022
 ---
 # How to manage the Outlook Social Connector by using Group Policy

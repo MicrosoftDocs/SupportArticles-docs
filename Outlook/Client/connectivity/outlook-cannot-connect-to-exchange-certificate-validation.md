@@ -1,8 +1,8 @@
 ---
 title: Outlook connection fails when certificate is required
 description: This article explains that Outlook doesn't support using the Windows certificate store as a credential to connect Exchange Server, and provides a resolution.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

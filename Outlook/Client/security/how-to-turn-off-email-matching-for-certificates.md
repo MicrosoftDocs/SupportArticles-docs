@@ -1,8 +1,8 @@
 ---
 title: How to turn off e-mail matching for certificates
 description: This article provides steps about how to turn off e-mail matching for certificates in Microsoft Outlook.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

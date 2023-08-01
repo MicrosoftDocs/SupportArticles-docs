@@ -1,8 +1,8 @@
 ---
 title: Outlook cannot download the RSS content error
 description: Explains a behavior that may occur when you subscribe to an RSS feed that requires authentication.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

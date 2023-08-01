@@ -1,8 +1,8 @@
 ---
 title: You'll need a new app to open this osf-roaming.16 message
 description: You'll need a new app to open this osf-roaming.16 this message occurs when starting Outlook 2016.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

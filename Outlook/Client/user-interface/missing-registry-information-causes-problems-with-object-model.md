@@ -1,8 +1,8 @@
 ---
 title: Missing registry data causes issues with object model
 description: Description of an error conditions attempting to access the Outlook object model, and steps to resolve them.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

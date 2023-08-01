@@ -1,8 +1,8 @@
 ---
 title: Outlook performance issues in a Cached Exchange Mode .ost or .pst file
 description: Describes performance issues if there are lots of items or folders in a Cached Exchange Mode .ost  or .pst file. Provides a resolution.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

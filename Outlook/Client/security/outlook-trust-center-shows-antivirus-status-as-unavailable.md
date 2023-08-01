@@ -1,8 +1,8 @@
 ---
 title: Outlook Trust Center shows antivirus status as unavailable
 description: Windows Security Center is not supported on server operating system versions. For this reason Outlook is unable to check antivirus status when installed on Server 2012 R2.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
