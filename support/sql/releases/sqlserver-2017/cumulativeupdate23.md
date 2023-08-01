@@ -10,7 +10,7 @@ appliesto:
 
 # KB5000685 - Cumulative Update 23 for SQL Server 2017
 
-_Release Date:_ &nbsp; February 22, 2021  
+_Release Date:_ &nbsp; February 24, 2021  
 _Version:_ &nbsp; 14.0.3381.3
 
 ## Summary

@@ -10,7 +10,7 @@ appliesto:
 
 # KB4577467 - Cumulative Update 22 for SQL Server 2017
 
-_Release Date:_ &nbsp; September 9, 2020  
+_Release Date:_ &nbsp; September 10, 2020  
 _Version:_ &nbsp; 14.0.3356.20
 
 ## Summary
@@ -38,9 +38,9 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id=13594343>[13594343](#13594343) </a> | Fixes an unexpected error when you run a query against Multi Dimensional Instance using DirectQuery mode. </br></br>Unexpected error (file 'FileName', line LineNumber, FunctionName :: start function) | Analysis services | Analysis Services | Windows |
 | <a id=13636106>[13636106](#13636106) </a> | Fixes an error that occurs when you run `DISCOVER_CSDL_METADATA` on a DirectQuery model perspective in SSAS 2017. </br></br>"OLE DB or ODBC error: We're sorry, an error occurred during evaluation.."| Analysis services | Analysis Services | Windows |
 | <a id=13641471>[13641471](#13641471) </a> | Fixes an unexpected exception that occurs on function `XLVariable::WriteVarInfo` in SSAS 2017 when you enable trace or profiler to get DAX query plan.| Analysis services | Analysis Services | Windows|
-| <a id=13598902>[13598902](#13598902) </a> | Fixes long package execution time involving SSIS task of type TransferSqlServerObjectsTask when database contains tens of thousands of tables and the db user isn't db_owner.| Integration services| Tasks_Components | Windows |
+| <a id=13598902>[13598902](#13598902) </a> | Fixes long package execution time involving SSIS task of type TransferSqlServerObjectsTask when database contains tens of thousands of tables and the db user isn't **db_owner**.| Integration services| Tasks_Components | Windows |
 | <a id=13598930>[13598930](#13598930) </a> | [FIX: Concurrent inserts against tables with columnstore indexes may cause queries to stop responding in SQL Server (KB4561305)](https://support.microsoft.com/help/4561305)| SQL Server Engine | Column Stores | All |
-| <a id=13586252>[13586252](#13586252) </a> | [FIX: Error 8992 occurs when you run DBCC CHECKDB on cloned database in SQL Server 2019 (KB4578110)](https://support.microsoft.com/help/4578110)| SQL Server Engine | DB Management | Windows |
+| <a id=13586252>[13586252](#13586252) </a> | [FIX: Error 8992 occurs when you run DBCC CHECKDB on cloned database in SQL Server 2017 (KB4578110)](https://support.microsoft.com/help/4578110)| SQL Server Engine | DB Management | Windows |
 | <a id=13573410>[13573410](#13573410) </a> | [FIX: Access violation occurs when you run INSERT EXEC with sp_execute_external_script on a table that has IDENTITY column in SQL Server 2017 (KB4578887)](https://support.microsoft.com/help/4578887)| SQL Server Engine | Extensibility | All |
 | <a id=13575424>[13575424](#13575424) </a> | [FIX: INSERT EXEC doesn't work when you insert row containing explicit identity value into table with IDENTITY column and IDENTITY_INSERT is OFF by default in SQL Server (KB4568653)](https://support.microsoft.com/help/4568653)| SQL Server Engine | Extensibility | All |
 | <a id=13637079>[13637079](#13637079) </a> | [FIX: Unable to use Filestream on Windows Server 2012 or Windows 8 after applying SQL Server 2017 CU21 (KB4578012)](https://support.microsoft.com/help/4578012) | SQL Server Engine | FileStream and FileTable | Windows |
@@ -70,7 +70,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id=13598908>[13598908](#13598908) </a> | [FIX: Full-Text search auto crawl stops when AG goes offline in SQL Server (KB4511771)](https://support.microsoft.com/help/4511771) | SQL Server Engine | Search | Windows|
 | <a id=13663198>[13663198](#13663198) </a> | Intermittent error 6552 occurs when running Spatial query with `TOP <param> or OFFSET <param1> ROWS FETCH NEXT <param2> ROWS ONLY` clause and parallel plan. | SQL Server Engine | Spatial | All |
 | <a id=13624029>[13624029](#13624029) </a> | SQL Server AG Helper/AG monitoring application waiting more than 30 seconds with epoll and `futex_wait_queue_me` wait type is unable to connect to SQL Server 2017 resulting in timeout and failover. | SQL Server Engine | SQL OS | Linux |
-| <a id=12671877>[12671877](#12671877) </a> | [FIX: "Login failed for user" error occurs when you run Maintenance plan with SQL login account in SQL Server 2016 (KB4486936)](https://support.microsoft.com/help/4486936) | SQL Server Client Tools | SSMS| Windows |
+| <a id=12671877>[12671877](#12671877) </a> | [FIX: "Login failed for user" error occurs when you run Maintenance plan with SQL login account in SQL Server 2017 (KB4486936)](https://support.microsoft.com/help/4486936) | SQL Server Client Tools | SSMS| Windows |
 | <a id=13509282>[13509282](#13509282) </a> | [FIX: Unable to restore SQL Server database from previous versions on NVMe device partitioned in 4K block size (KB4578011)](https://support.microsoft.com/help/4578011) | SQL Server Engine | Storage Management | Linux |
 | <a id=13598884>[13598884](#13598884) </a> | `DBCC CHECKDB` may incorrectly report corruption on Spatial Index if base table has a column called ID. | SQL Server Engine | Storage Management | Windows |
 | <a id=13598924>[13598924](#13598924) </a> | Assertion error occurs on the mirror server during redo process hitting. Assertion: File: \<FilePath\FileName>, line = \<LineNumber> Failed Assertion = 'result == LCK_OK'| SQL Server Engine | Storage Management | Windows |
