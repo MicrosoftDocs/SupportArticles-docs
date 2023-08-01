@@ -1,8 +1,8 @@
 ---
 title: Errors have been detected in .ost file
 description: Describes an issue where you receive Errors have been detected in the .ost file error. Provides a resolution.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

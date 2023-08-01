@@ -1,8 +1,8 @@
 ---
 title: Hybrid Configuration Wizard cannot show digital certificate
 description: Describes an issue in which digital certificates are missing from the Hybrid Configuration Wizard. Provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Hybrid
   - CSSTroubleshoot
-ms.reviewer: shahmul
+ms.reviewer: shahmul, v-six
 appliesto: 
   - Exchange Online
   - Exchange Server 2016 Enterprise Edition

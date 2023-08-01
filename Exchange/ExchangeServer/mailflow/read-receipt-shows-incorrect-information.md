@@ -1,8 +1,8 @@
 ---
 title: Outlook read receipt shows incorrect information
 description: Resolves an issue in which an email read receipt shows incorrect information.
-author: v-trisshores
-ms.author: v-trisshores
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -13,7 +13,7 @@ ms.custom:
   - Outlook for Windows
   - Outlook for Mac
   - CSSTroubleshoot
-ms.reviewer: sofiamenezes, arindamt, meerak
+ms.reviewer: sofiamenezes, arindamt, meerak, v-trisshores
 appliesto:
   - Exchange Server 2019
   - Exchange Server 2016

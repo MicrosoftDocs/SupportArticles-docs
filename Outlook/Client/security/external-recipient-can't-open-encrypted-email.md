@@ -1,15 +1,15 @@
 ---
 title: External recipient can't open encrypted email that uses Microsoft Purview Message Encryption
 description: Provides solutions for an issue in which an external recipient can't open an encrypted email message that uses Microsoft Purview Message Encryption.
-author: v-trisshores
-ms.author: v-trisshores
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
-ms.reviewer: michael.green, gbratton, meerak
+ms.reviewer: michael.green, gbratton, meerak, v-trisshores
 appliesto: 
   - Outlook for Microsoft 365
   - Outlook for Mac for Microsoft 365

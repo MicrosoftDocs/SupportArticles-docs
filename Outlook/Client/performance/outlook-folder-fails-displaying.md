@@ -1,8 +1,8 @@
 ---
 title: Outlook has insufficient memory to display a folder
 description: Fixes an issue in which Outlook folder can't be displayed because of insufficient memory. This issue occurs more frequently if you use add-ins in Outlook.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

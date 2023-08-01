@@ -1,13 +1,13 @@
 ---
 title: RPC over HTTP reaches end of support in Microsoft 365 on October 31, 2017
 description: Explains that RPC over HTTP in Microsoft 365 will be deprecated on October 31, 2017. Contains information about why RPC over HTTP is being replaced by MAPI over HTTP and describes actions that Microsoft 365 customers may have to take.
-author: simonxjx
+author: cloud-writer
+ms.author: meerak
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
   - Exchange Hybrid
   - CSSTroubleshoot
-ms.author: v-six
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -20,6 +20,7 @@ appliesto:
   - Microsoft Outlook 2010
   - Microsoft Office Outlook 2007
 ms.date: 3/31/2022
+ms.reviewer: v-six
 ---
 # RPC over HTTP reaches end of support in Microsoft 365 on October 31, 2017
 

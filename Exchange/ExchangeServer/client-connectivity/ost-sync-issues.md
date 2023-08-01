@@ -1,8 +1,8 @@
 ---
 title: Sync issues with an .ost file
 description: Provides guidance for issues when you synchronize an Exchange Server mailbox with an Offline Outlook Data File.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

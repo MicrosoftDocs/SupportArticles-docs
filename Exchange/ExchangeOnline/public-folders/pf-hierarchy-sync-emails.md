@@ -1,8 +1,8 @@
 ---
 title: Public folder hierarchy synchronization messages
 description: Fixes an issue in which public folder hierarchy synchronization messages are sent incorrectly because of a transport rule.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,8 +1,8 @@
 ---
 title: Email messages are incorrectly quarantined
 description: Fixes an issue in which email messages are incorrectly quarantined or SPF checks fail in Exchange hybrid deployments that use centralized mail control. This problem occurs if header promotion is configured incorrectly.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Hybrid
   - CSSTroubleshoot
-ms.reviewer: alehud
+ms.reviewer: alehud, v-six
 appliesto: 
   - Exchange Online
   - Exchange Online Protection

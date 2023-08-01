@@ -1,8 +1,8 @@
 ---
 title: Messages aren't routed through on-premises in hybrid
 description: Describes a by-design behavior in which some messages aren't routed through the on-premises organization when you use centralized mail transport in a hybrid deployment.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Hybrid
   - CSSTroubleshoot
-ms.reviewer: joelric
+ms.reviewer: joelric, v-six
 appliesto: 
   - Exchange Online
   - Exchange Online Protection

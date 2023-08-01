@@ -1,8 +1,8 @@
 ---
 title: How to configure default message class for new items
 description: Describes how to configure the default message class for new items in an Outlook folder.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,8 +1,8 @@
 ---
 title: Cannot edit message subject
 description: You cannot edit the message subject through Outlook.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

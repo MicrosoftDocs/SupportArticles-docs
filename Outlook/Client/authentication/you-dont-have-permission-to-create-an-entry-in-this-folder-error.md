@@ -1,8 +1,8 @@
 ---
 title: You don't have permission to create an entry in this folder
 description: Describes a permissions issue that occurs when you try to create a new post in a public folder in Outlook 2010 and Outlook 2013.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

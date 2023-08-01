@@ -1,8 +1,8 @@
 ---
 title: Mailboxes are stalled during a migration
 description: Provides a resolution for an issue in which mailboxes are stalled during a migration.
-author: v-trisshores
-ms.author: v-trisshores
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ ms.custom:
   - Exchange Server
   - CSSTroubleshoot
   - CI 171618
-ms.reviewer: matbyrd, ninob, meerak
+ms.reviewer: matbyrd, ninob, meerak, v-trisshores
 appliesto: 
   - Exchange Server 2019
 search.appverid: MET150

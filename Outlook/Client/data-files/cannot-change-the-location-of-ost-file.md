@@ -1,8 +1,8 @@
 ---
 title: Cannot change the location of .ost file
 description: Describes and provides a workaround for an issue in which you can't change the location of the offline Outlook Data File (.ost) in Microsoft Outlook 2013 or later versions.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

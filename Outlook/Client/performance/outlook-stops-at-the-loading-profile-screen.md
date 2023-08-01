@@ -1,8 +1,8 @@
 ---
 title: Outlook 2013 stops at the Loading Profile screen
 description: Outlook may appear to freeze or hang at the start screen (splash screen).
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

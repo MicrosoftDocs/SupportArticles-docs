@@ -1,8 +1,8 @@
 ---
 title: eDiscovery search ignores some keywords in a query
 description: Provides a workaround for an issue in which an eDiscovery search ignores some keywords in a query.
-author: v-trisshores
-ms.author: v-trisshores
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ ms.custom:
   - CI 174132
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: svajda, lindabr, meerak
+ms.reviewer: svajda, lindabr, meerak, v-trisshores
 appliesto:
   - Exchange Server 2019
 search.appverid: MET150

@@ -1,8 +1,8 @@
 ---
 title: Can't attach large files in Outlook on the web
 description: An increase in the message size limit in Exchange Server 2019 still prevents large file attachments in Outlook on the web.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

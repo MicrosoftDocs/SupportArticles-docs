@@ -1,8 +1,8 @@
 ---
 title: Manage Federation Wizard can't roll to a new certificate
 description: Fixes an issue in which the Manage Federation Wizard doesn't update the certificate in Microsoft 365 after you select the Roll certificate to make the next certificate as the current certificate check box.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ ms.custom:
   - Exchange Hybrid
   - CSSTroubleshoot
   - CI 160743
-ms.reviewer: chrisbur, jhayes
+ms.reviewer: chrisbur, jhayes, v-six
 appliesto: 
   - Cloud Services (Web roles/Worker roles)
   - Azure Active Directory

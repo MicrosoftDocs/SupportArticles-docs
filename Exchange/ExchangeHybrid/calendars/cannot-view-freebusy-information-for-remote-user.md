@@ -1,8 +1,8 @@
 ---
 title: Cannot view free/busy information for a remote user
 description: Describes an issue in which a user can't view the free/busy information for a remote user in a hybrid deployment of on-premises Exchange Server and Exchange Online in Microsoft 365. Provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Hybrid
   - CSSTroubleshoot
-ms.reviewer: jmartin, rayfong, austinmc, wduff, jhayes, timothyh
+ms.reviewer: jmartin, rayfong, austinmc, wduff, jhayes, timothyh, v-six
 appliesto: 
   - Exchange Online
   - Exchange Server 2010 Enterprise

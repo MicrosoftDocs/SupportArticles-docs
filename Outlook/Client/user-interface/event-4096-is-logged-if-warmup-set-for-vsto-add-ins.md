@@ -1,8 +1,8 @@
 ---
 title: Event 4096 is logged if WarmUp set for VSTO add-ins
 description: Describes an issue that triggers event 4096 if the WarmUp entry is set for VSTO add-ins in Microsoft Outlook.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

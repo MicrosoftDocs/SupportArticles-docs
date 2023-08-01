@@ -1,8 +1,8 @@
 ---
 title: Can't move or copy public folders
 description: Fixes an issue in which you can't make a copy of a public folder in the same path as the source public folder.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
