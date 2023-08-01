@@ -11,9 +11,9 @@ appliesto:
 - Outlook 2016
 - Outlook for Microsoft 365
 search.appverid: MET150
-ms.reviewer: sbradley, robevans
-author: simonxjx
-ms.author: v-six
+ms.reviewer: sbradley, robevans, v-six
+author: cloud-writer
+ms.author: meerak
 ms.date: 3/31/2022
 ---
 # Error when you add a PST or OST file on a non-local drive in Outlook 2016

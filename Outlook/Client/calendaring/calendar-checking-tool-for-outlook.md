@@ -18,9 +18,9 @@ appliesto:
 - Microsoft Exchange Server 2003 Standard Edition 
 - Outlook for Microsoft 365 Outlook 2019
 search.appverid: MET150
-ms.reviewer: aruiz, randyto
-author: simonxjx
-ms.author: v-six
+ms.reviewer: aruiz, randyto, v-six
+author: cloud-writer
+ms.author: meerak
 ms.date: 3/31/2022
 ---
 # Information about the Calendar Checking Tool for Outlook (CalCheck)
