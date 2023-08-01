@@ -1,8 +1,8 @@
 ---
 title: Service Pack upgrade fails
 description: Provides a solution to an issue where upgrading Microsoft Exchange Server Service Pack fails.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -15,6 +15,7 @@ search.appverid:
 appliesto: 
   - Exchange Server
 ms.date: 3/31/2022
+ms.reviewer: v-six
 ---
 # Exchange Service Pack upgrade fails with an unexpected error in ServiceControl.ps1
 

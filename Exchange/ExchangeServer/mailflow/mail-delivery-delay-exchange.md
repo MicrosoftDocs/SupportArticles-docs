@@ -1,8 +1,8 @@
 ---
 title: Slow mail delivery in Exchange that has transport rules configured
 description: Discusses an issue in which mail delivery is slow in an Exchange environment that has transport rules configured.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: dpaul
+ms.reviewer: dpaul, v-six
 appliesto: 
   - Exchange Server 2016 Enterprise Edition
   - Exchange Server 2016 Standard Edition

@@ -2,8 +2,8 @@
 title: Cumulative Update 20 shown instead of CU22
 description: After you install Exchange Server 2013 Cumulative Update 22, Cumulative Update 20 shows in Programs and Features. Provides a workaround.
 ms.date: 08/11/2020
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: batre
+ms.reviewer: batre, v-six
 appliesto: 
   - Exchange Server 2013 Standard Edition
   - Exchange Server 2013 Enterprise

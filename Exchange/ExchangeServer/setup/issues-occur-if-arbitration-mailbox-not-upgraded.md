@@ -2,8 +2,8 @@
 title: Issues occur if arbitration mailbox isn't upgraded
 description: Describes the issues that may occur after you install a new version of Exchange Server. Occurs if the arbitration mailbox is not moved to new server. A resolution is provided.
 ms.date: 08/11/2020
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: anthonge, jmartin, excontent
+ms.reviewer: anthonge, jmartin, excontent, v-six
 appliesto: 
   - Exchange Server 2016 Enterprise Edition
   - Exchange Server 2016 Standard Edition
