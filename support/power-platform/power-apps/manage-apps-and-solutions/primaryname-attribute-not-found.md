@@ -23,4 +23,4 @@ This error happens when the primary name attribute of a table isn't part of the 
 
 ## Workaround
 
-Remove the table from the solution in the source environment, and then add the table back to the source environment with full assets. This adds the table and necessary metadata.
+Remove the table from the solution in the source environment, and then add the table back to the source environment with full assets. This adds the table and necessary metadata. Export the solution and import again into the target environment.
