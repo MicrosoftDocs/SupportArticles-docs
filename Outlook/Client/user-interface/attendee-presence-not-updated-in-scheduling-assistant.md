@@ -1,8 +1,8 @@
 ---
 title: Attendee's presence isn't updated automatically
 description: Describes an issue in which an attendee's presence is not automatically updated in the Outlook Scheduling Assistant.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

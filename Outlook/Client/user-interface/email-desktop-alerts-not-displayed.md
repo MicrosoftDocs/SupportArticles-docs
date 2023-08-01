@@ -1,8 +1,8 @@
 ---
 title: Can't receive email desktop alerts
 description: Describes an issue that prevents new email desktop alerts (toast notifications) from being displayed in Outlook 2016 or 2013. This issue Occurs when Outlook is running in Windows Server 2012 in a RemoteApp session.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

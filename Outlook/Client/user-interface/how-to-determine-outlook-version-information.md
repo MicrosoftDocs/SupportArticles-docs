@@ -1,8 +1,8 @@
 ---
 title: How to determine Outlook version information
 description: Discusses the different versions of Microsoft Outlook.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

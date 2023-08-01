@@ -1,8 +1,8 @@
 ---
 title: Let ZeroConfigExchange automatically create first profile
 description: Make ZeroConfigExchange automate the creation of the first Outlook profile only in case you want to manually create the second and more profiles.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
