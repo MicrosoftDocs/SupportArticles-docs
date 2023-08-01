@@ -1,7 +1,7 @@
 ---
 title: Memory leak in remote registry service causes Windows to hang
 description: Describes a memory leak issue that causes Windows to hang. This memory leak involves the WnF tag, which consumes all available paged pool memory. A workaround is provided.
-ms.date: 01/04/2021
+ms.date: 08/01/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -20,7 +20,7 @@ This article provides a workaround for a memory leak issue in the remote registr
 > [!NOTE]
 > This issue is fixed in Windows 10.
 
-_Applies to: All supported versions of Windows Server and Windows Client  
+_Applies to:_ &nbsp; Supported versions of Windows Server and Windows Client  
 _Original KB number:_ &nbsp; 3105719
 
 ## Symptoms
@@ -35,6 +35,7 @@ The issue occurs in the Endpoint Mapper Logic component.
 
 > [!NOTE]
 > The Remote Registry service is designed to stop running after the connection has been idle for 10 minutes.
+> 
 > This is by design behavior in Windows.
 
 ## Workaround
