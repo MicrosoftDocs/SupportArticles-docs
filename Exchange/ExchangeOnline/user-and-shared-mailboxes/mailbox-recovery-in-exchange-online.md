@@ -2,8 +2,8 @@
 title: Mailbox recovery in Exchange Online
 description: Help Tenant Administrator to recover a user and mailbox in Exchange online with PowerShell cmdlets.
 ms.date: 10/05/2022
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Online
   - CSSTroubleshoot
-ms.reviewer: 
+ms.reviewer: v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
