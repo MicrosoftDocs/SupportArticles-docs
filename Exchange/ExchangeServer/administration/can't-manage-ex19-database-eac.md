@@ -1,8 +1,8 @@
 ---
 title: Your request couldn't be completed. Please try again in a few minutes error when Exchange 2013 Administrator can't manage Exchange 2019 databases in EAC
 description: This article describes an issue in which Exchange 2013 Administrator can't manage Exchange 2019 databases in EAC. Provides two solutions.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ ms.custom:
   - Exchange Server
   - CI 106436
   - CSSTroubleshoot
-ms.reviewer: sasta, EXOL_Triage
+ms.reviewer: sasta, EXOL_Triage, v-six
 search.appverid: 
   - MET150
 appliesto: 

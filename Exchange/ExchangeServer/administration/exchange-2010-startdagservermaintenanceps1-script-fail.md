@@ -1,8 +1,8 @@
 ---
 title: StartDagServerMaintenance.ps1 script fails in Exchange Server 2010
 description: Resolves an Exchange Server 2010 issue that blocks you from running the StartDagServerMaintenance.ps1 script to take a DAG member out of service for maintenance.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: dpaul, excontent, genli, christys
+ms.reviewer: dpaul, excontent, genli, christys, v-six
 appliesto: 
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard

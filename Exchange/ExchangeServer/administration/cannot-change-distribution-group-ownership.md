@@ -1,8 +1,8 @@
 ---
 title: Can't change the ownership of a distribution group
 description: Describes an issue that can occur when you try to change the ownership of a distribution group in Exchange Server 2010.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -15,6 +15,7 @@ search.appverid:
 appliesto: 
   - Exchange Server 2010 Service Pack 1
 ms.date: 3/31/2022
+ms.reviewer: v-six
 ---
 # You can't change the ownership of a distribution group in Exchange Server 2010 SP1
 

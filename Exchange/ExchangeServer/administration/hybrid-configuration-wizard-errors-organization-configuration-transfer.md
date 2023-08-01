@@ -1,8 +1,8 @@
 ---
 title: HCW errors in Organization Configuration transfer
 description: Describes HCW8109, HCW8110, and HCW8111 errors and the troubleshooting of these errors.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: kchandra
+ms.reviewer: kchandra, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150

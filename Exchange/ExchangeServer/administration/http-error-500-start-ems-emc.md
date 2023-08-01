@@ -1,8 +1,8 @@
 ---
 title: HTTP 500 when you start Exchange Management Shell
 description: Provides resolutions to help resolve the HTTP error 500 when you try to start Exchange Management Shell or Exchange Management Console.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: benwinz
+ms.reviewer: benwinz, v-six
 search.appverid: 
   - MET150
 appliesto: 

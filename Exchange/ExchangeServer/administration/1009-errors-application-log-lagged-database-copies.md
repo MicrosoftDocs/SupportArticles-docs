@@ -1,8 +1,8 @@
 ---
 title: Event ID 1009 flood Application log for lagged database copies in Exchange Server 2016
 description: Describes a scenario in which many Event ID 1009 messages are logged for lagged database copies in Exchange Server 2016.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: v-six, genli, christys, meerak, anthonge, ninob
+ms.reviewer: v-six, genli, christys, meerak, anthonge, ninob, v-six
 appliesto: 
   - Exchange Server 2016 Standard Edition
   - Exchange Server 2016 Enterprise Edition
