@@ -139,17 +139,17 @@ Each of the following links provides information for all of the applicable produ
 |14.0.3037.1|None| CU10| [4342123](sqlserver-2017/cumulativeupdate10.md)|August 27, 2018|
 |14.0.2002.14|None| GDR| [4293803](https://support.microsoft.com/help/4293803)|August 14, 2018|
 |14.0.3035.2|None| CU9 + GDR| [4293805](https://support.microsoft.com/help/4293805)|August 14, 2018|
-|14.0.3030.27|None| CU9| [4341265](sqlserver-2017/cumulativeupdate9.md)|July 17, 2018|
+|14.0.3030.27|None| CU9| [4341265](sqlserver-2017/cumulativeupdate9.md)|July 18, 2018|
 |14.0.3029.16|None| CU8| [4338363](sqlserver-2017/cumulativeupdate8.md)|June 21, 2018|
-|14.0.3026.27|None| CU7| [4229789](sqlserver-2017/cumulativeupdate7.md)|May 24, 2018|
-|14.0.3025.34|None| CU6| [4101464](sqlserver-2017/cumulativeupdate6.md)|April 18, 2018|
-|14.0.3023.8|None| CU5| [4092643](sqlserver-2017/cumulativeupdate5.md)|March 21, 2018|
+|14.0.3026.27|None| CU7| [4229789](sqlserver-2017/cumulativeupdate7.md)|May 23, 2018|
+|14.0.3025.34|None| CU6| [4101464](sqlserver-2017/cumulativeupdate6.md)|April 17, 2018|
+|14.0.3023.8|None| CU5| [4092643](sqlserver-2017/cumulativeupdate5.md)|March 20, 2018|
 |14.0.3022.28|None| CU4| [4056498](sqlserver-2017/cumulativeupdate4.md)|February 20, 2018|
 |14.0.3015.40|None| CU3 + GDR| [4058562](https://support.microsoft.com/help/4058562)|January 03, 2018|
-|14.0.3015.40|None| CU3| [4052987](sqlserver-2017/cumulativeupdate3.md)|January 03, 2018|
+|14.0.3015.40|None| CU3| [4052987](sqlserver-2017/cumulativeupdate3.md)|January 04, 2018|
 |14.0.2000.63|None| GDR| [4057122](https://support.microsoft.com/help/4057122)|January 03, 2018|
-|14.0.3008.27|None| CU2| [4052574](sqlserver-2017/cumulativeupdate2.md)|December 05, 2017|
-|14.0.3006.16|None| CU1| [4038634](sqlserver-2017/cumulativeupdate1.md)|October 25, 2017|
+|14.0.3008.27|None| CU2| [4052574](sqlserver-2017/cumulativeupdate2.md)|November 28, 2017|
+|14.0.3006.16|None| CU1| [4038634](sqlserver-2017/cumulativeupdate1.md)|October 24, 2017|
 |14.0.1000.169|None| RTM|NA|September 29, 2017|
 
 ### SQL Server 2016

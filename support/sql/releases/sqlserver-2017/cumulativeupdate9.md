@@ -10,7 +10,7 @@ appliesto:
 
 # KB4341265 - Cumulative Update 9 for SQL Server 2017
 
-_Release Date:_ &nbsp; July 17, 2018  
+_Release Date:_ &nbsp; July 18, 2018  
 _Version:_ &nbsp; 14.0.3030.27
 
 ## Summary
@@ -51,8 +51,8 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="12128861">[12128861](#12128861)</a> | [FIX: SQLDUMPER.EXE initiated dumps may take a long time to complete dump generation process in SQL Server 2017 on Linux (KB4340747)](https://support.microsoft.com/help/4340747) | SQL Server Engine | Linux | Linux |
 | <a id="11922902">[11922902](#11922902)</a> | [FIX: "Corrupted index" message and server disconnection when an update statistics query uses hash aggregate on SQL Server (KB4316858)](https://support.microsoft.com/help/4316858) | SQL Server Engine | Query Optimizer | All |
 | <a id="12111717">[12111717](#12111717)</a> | [FIX: Error 3906 when a hotfix is applied on a SQL Server that has a database snapshot on a pull subscription database (KB4340837)](https://support.microsoft.com/help/4340837) | SQL Server Engine | Replication | Windows |
-| <a id="12107546">[12107546](#12107546)</a> | [FIX: An instance of SQL Server may appear unresponsive then a "Non-yielding Scheduler" error may occur in SQL Server 2016 (KB4338890)](https://support.microsoft.com/help/4338890) | SQL Server Engine | SQL OS | Windows |
-| <a id="12061383">[12061383](#12061383)</a> | FIX: DMVs `sys.dm_db_log_stats` and `sys.dm_db_log_info` may return incorrect values for the last database of the SQL Server 2016 instance (KB4341253) | SQL Server Engine | SQL OS | Windows |
+| <a id="12107546">[12107546](#12107546)</a> | [FIX: An instance of SQL Server may appear unresponsive then a "Non-yielding Scheduler" error may occur in SQL Server 2017 (KB4338890)](https://support.microsoft.com/help/4338890) | SQL Server Engine | SQL OS | Windows |
+| <a id="12061383">[12061383](#12061383)</a> | FIX: DMVs `sys.dm_db_log_stats` and `sys.dm_db_log_info` may return incorrect values for the last database of the SQL Server 2017 instance (KB4341253) | SQL Server Engine | SQL OS | Windows |
 
 ## How to obtain or download this or the latest cumulative update package
 

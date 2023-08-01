@@ -10,7 +10,7 @@ appliesto:
 
 # KB4052987 - Cumulative Update 3 for SQL Server 2017
 
-_Release Date:_ &nbsp; January 03, 2018  
+_Release Date:_ &nbsp; January 04, 2018  
 _Version:_ &nbsp; 14.0.3015.40
 
 > [!NOTE]

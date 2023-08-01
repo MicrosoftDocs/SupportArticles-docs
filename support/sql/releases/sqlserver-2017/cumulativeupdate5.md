@@ -10,7 +10,7 @@ appliesto:
 
 # KB4092643 - Cumulative Update 5 for SQL Server 2017
 
-_Release Date:_ &nbsp; March 21, 2018  
+_Release Date:_ &nbsp; March 20, 2018  
 _Version:_ &nbsp; 14.0.3023.8
 
 ## Summary
@@ -51,7 +51,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="11789381">[11789381](#11789381)</a> | [Improves the query performance when an optimized bitmap filter is applied to a query plan in SQL Server 2016 and 2017 (KB4089276)](https://support.microsoft.com/help/4089276) | SQL Server Engine | Query Optimizer | All |
 | <a id="11591383">[11591383](#11591383)</a> | [FIX: Access violation occurs when you query a table with an integer column in SQL Server 2017 (KB4091245)](https://support.microsoft.com/help/4091245) | SQL Server Engine | Query Optimizer | Windows |
 | <a id="11632824">[11632824](#11632824)</a> | [FIX: Access violation occurs when Query Store collects runtime statistics in SQL Server 2017 (KB4091063)](https://support.microsoft.com/help/4091063) | SQL Server Engine | Query Store | All |
-| <a id="11552950">[11552950](#11552950)</a> | FIX: Replication not enabled when database collation uses '`_SC`' collation extension in SQL Server 2016 (KB4092066) | SQL Server Engine | Replication | Windows |
+| <a id="11552950">[11552950](#11552950)</a> | FIX: Replication not enabled when database collation uses '`_SC`' collation extension in SQL Server 2017 (KB4092066) | SQL Server Engine | Replication | Windows |
 | <a id="11516257">[11516257](#11516257)</a> | [FIX: Error 9002 when there's no sufficient disk space for critical log growth in SQL Server 2014, 2016, and 2017 (KB4087406)](https://support.microsoft.com/help/4087406) | SQL Server Engine | Transaction Services | All |
 
 ## How to obtain or download this or the latest cumulative update package

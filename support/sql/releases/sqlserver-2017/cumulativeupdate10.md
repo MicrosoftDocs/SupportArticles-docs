@@ -15,7 +15,7 @@ _Version:_ &nbsp; 14.0.3037.1
 
 ## Summary
 
-This article describes Cumulative Update package 10 (CU10) for Microsoft SQL Server 2017. This update contains 22 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2017 Cumulative Update 9, and it updates components in the following builds:
+This article describes Cumulative Update package 10 (CU10) for Microsoft SQL Server 2017. This update contains 21 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2017 Cumulative Update 9, and it updates components in the following builds:
 
 - SQL Server - Product version: **14.0.3037.1**, file version: **2017.140.3037.1**
 - Analysis Services - Product version: **14.0.226.1**, file version: **2017.140.226.1**

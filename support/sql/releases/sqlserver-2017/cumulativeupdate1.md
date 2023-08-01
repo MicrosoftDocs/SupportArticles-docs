@@ -10,7 +10,7 @@ appliesto:
 
 # KB4038634 - Cumulative Update 1 for SQL Server 2017
 
-_Release Date:_ &nbsp; October 25, 2017  
+_Release Date:_ &nbsp; October 24, 2017  
 _Version:_ &nbsp; 14.0.3006.16
 
 ## Summary
@@ -52,7 +52,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="10965982">[10965982](#10965982)</a> | [FIX: Memory spike in LSASS.EXE when you enable Basic Authentication mode in SSRS 2016 or 2017 (KB4039124)](https://support.microsoft.com/help/4039124) | Analysis Services | Reporting Services | Windows |
 | <a id="10965994">[10965994](#10965994)</a> | [FIX: Error when you export an SSRS report on an iOS device in SQL Server 2016 or 2017 (KB4043478)](https://support.microsoft.com/help/4043478) | Analysis Services | Reporting Services | Windows |
 | <a id="10965998">[10965998](#10965998)</a> | [FIX: Horizontal scroll bar missing from Subscription page in SSRS 2016 or 2017 web portal (KB4039126)](https://support.microsoft.com/help/4039126) | Analysis Services | Reporting Services | Windows |
-| <a id="10965999">[10965999](#10965999)</a> | [FIX: "The folder ... does not exist" error when deleting a folder in web portal of SQL Server 2016 Reporting Service (KB4039125)](https://support.microsoft.com/help/4039125) | Analysis Services | Reporting Services | Windows |
+| <a id="10965999">[10965999](#10965999)</a> | [FIX: "The folder ... does not exist" error when deleting a folder in web portal of SQL Server 2017 Reporting Service (KB4039125)](https://support.microsoft.com/help/4039125) | Analysis Services | Reporting Services | Windows |
 | <a id="10966008">[10966008](#10966008)</a> | [FIX: Report Viewer Web Part doesn't allow a full vertical scrollbar after you set a specific web part height (KB4039058)](https://support.microsoft.com/help/4039058) | Analysis Services | Reporting Services | Windows |
 | <a id="10729322">[10729322](#10729322)</a> | FIX: Reporting Services "SortExpression" causes `rsComparisonError` when there's a `NULL` value in a column set as "`DataTimeOffset`" (KB4017827) | Analysis Services | Reporting Services | Windows |
 | <a id="10868736">[10868736](#10868736)</a> | [FIX: Error when you export a DQS knowledge base that contains domains in the DQS client in SQL Server 2014 or 2017 (KB4022483)](https://support.microsoft.com/help/4022483) | Data Quality Services | Import-Export | Windows |
@@ -96,7 +96,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="10691460">[10691460](#10691460)</a> | [FIX: Couldn't disable "change data capture" if any column is encrypted by "Always Encrypted" feature of SQL Server 2016 or 2017 (KB4034376)](https://support.microsoft.com/help/4034376) | SQL Server Engine | Replication | All |
 | <a id="10978904">[10978904](#10978904)</a> | [FIX: Change Tracking manual cleanup fails with table non-existence error in SQL Server 2014 and 2017 (KB4043624)](https://support.microsoft.com/help/4043624) | SQL Server Engine | Replication | All |
 | <a id="10687780">[10687780](#10687780)</a> | [FIX: A data mask on a floating points column isn't applied in SQL Server 2017 and SQL Server 2016 (KB4023995)](https://support.microsoft.com/help/4023995) | SQL Server Engine | Security Infrastructure | All |
-| <a id="10867553">[10867553](#10867553)</a> | [FIX: SUSER_SNAME function returns different results between SQL Server 2014 and SQL Server 2016 (KB4025020)](https://support.microsoft.com/help/4025020) | SQL Server Engine | Security Infrastructure | Windows |
+| <a id="10867553">[10867553](#10867553)</a> | [FIX: SUSER_SNAME function returns different results between SQL Server 2014 and SQL Server 2016 or 2017 (KB4025020)](https://support.microsoft.com/help/4025020) | SQL Server Engine | Security Infrastructure | Windows |
 | <a id="10982548">[10982548](#10982548)</a> | [FIX: Execution fails when a SQL CLR function invokes Transact-SQL statements through impersonation calls in SQL Server 2017 (KB4046918)](https://support.microsoft.com/help/4046918) | SQL Server Engine | Security Infrastructure | All |
 | <a id="10868749">[10868749](#10868749)</a> | [FIX: Access violation for spatial datatypes query via linked server in SQL Server 2014 or 2017 (KB4040401)](https://support.microsoft.com/help/4040401) | SQL Server Engine | SQL OS | Windows |
 | <a id="11008122">[11008122](#11008122)</a> | [Update to enable the new dynamic management views and functions in SQL Server 2017 (KB4046638)](https://support.microsoft.com/help/4046638) | SQL Server Engine | Storage Management | Windows |

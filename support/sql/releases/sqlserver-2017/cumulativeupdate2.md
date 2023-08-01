@@ -10,7 +10,7 @@ appliesto:
 
 # KB4052574 - Cumulative Update 2 for SQL Server 2017
 
-_Release Date:_ &nbsp; December 05, 2017  
+_Release Date:_ &nbsp; November 28, 2017  
 _Version:_ &nbsp; 14.0.3008.27
 
 ## Summary
@@ -103,15 +103,15 @@ For more information about the bugs that are fixed and enhancements that are inc
 | Bug reference | Description | Fix area | Component | Platform |
 |---|---|---|---|---|
 | <a id="11078719">[11078719](#11078719)</a> | [FIX: Bookmarks functionality doesn't work completely when you open a report in MHTML format through Outlook in SSRS (KB4043947)](https://support.microsoft.com/help/4043947) | Analysis Services | Reporting Services | Windows |
-| <a id="10970440">[10970440](#10970440)</a> | [FIX: "An unknown error" for "Show More Members" on Entity Dependencies explorer page in SQL Server 2016 Master Data Services (KB4042962)](https://support.microsoft.com/help/4042962) | Master Data Services | Client | Windows |
+| <a id="10970440">[10970440](#10970440)</a> | [FIX: "An unknown error" for "Show More Members" on Entity Dependencies explorer page in SQL Server 2017 Master Data Services (KB4042962)](https://support.microsoft.com/help/4042962) | Master Data Services | Client | Windows |
 | <a id="11195748">[11195748](#11195748)</a> | [FIX: Incorrect warning message that asks to restart SQL Server when it isn't required in SQL Server 2017 on Linux (KB4053447)](https://support.microsoft.com/help/4053447) | SQL Server Client Tools | Command Line Tools | Linux |
 | <a id="11133452">[11133452](#11133452)</a> | [FIX: Policy-Based Management policy not working after you install CU2 for SQL Server 2016 SP1 (KB4037454)](https://support.microsoft.com/help/4037454) | SQL Server Client Tools | Policy-Based Management | All |
-| <a id="11078705">[11078705](#11078705)</a> | [FIX: Can't change the password for a SQL Server 2014 service account when additional LSA protection is enabled (KB4039592)](https://support.microsoft.com/help/4039592) | SQL Server Client Tools | SQL Server Manageability (SSM) | Windows |
+| <a id="11078705">[11078705](#11078705)</a> | [FIX: Can't change the password for a SQL Server 2017 service account when additional LSA protection is enabled (KB4039592)](https://support.microsoft.com/help/4039592) | SQL Server Client Tools | SQL Server Manageability (SSM) | Windows |
 | <a id="11057322">[11057322](#11057322)</a> | [FIX: Errors 33111 and 3013 when you back up a TDE encrypted database in SQL Server (KB4052134)](https://support.microsoft.com/help/4052134) | SQL Server Engine | Backup Restore | All |
 | <a id="11078729">[11078729](#11078729)</a> | [FIX: "Message 611" error when you use BULK INSERT or INSERT SELECT to insert data into a clustered columnstore index (KB4045814)](https://support.microsoft.com/help/4045814) | SQL Server Engine | Column Stores | Windows |
 | <a id="11187256">[11187256](#11187256)</a> | [FIX: Data retrieval queries using non-clustered index seek take much longer in SQL Server (KB4052625)](https://support.microsoft.com/help/4052625) | SQL Server Engine | Column Stores | Windows |
 | <a id="11195379">[11195379](#11195379)</a> | [FIX: Assertion occurs on accessing memory-optimized table through MARS (KB4046056)](https://support.microsoft.com/help/4046056) | SQL Server Engine | Column Stores | Windows |
-| <a id="11008401">[11008401](#11008401)</a> | [FIX: Memory use with many databases greater in SQL Server 2016 than earlier versions (KB4035062)](https://support.microsoft.com/help/4035062) | SQL Server Engine | DB Management | All |
+| <a id="11008401">[11008401](#11008401)</a> | [FIX: Memory use with many databases greater in SQL Server 2017 than earlier versions (KB4035062)](https://support.microsoft.com/help/4035062) | SQL Server Engine | DB Management | All |
 | <a id="11179674">[11179674](#11179674)</a> | [FIX: External R library is installed or uninstalled repeatedly in SQL Server (KB4053348)](https://support.microsoft.com/help/4053348) | SQL Server Engine | Extensibility | Windows |
 | <a id="11179675">[11179675](#11179675)</a> | [FIX: "sys.external_libraries" catalog views are empty for non-dbo users in SQL Server (KB4053349)](https://support.microsoft.com/help/4053349) | SQL Server Engine | Extensibility | Windows |
 | <a id="11186915">[11186915](#11186915)</a> | [FIX: Deadlock when multiple PREDICT T-SQL functions run concurrently (KB4053329)](https://support.microsoft.com/help/4053329) | SQL Server Engine | Extensibility | Windows |

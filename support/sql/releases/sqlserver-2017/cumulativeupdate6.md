@@ -10,7 +10,7 @@ appliesto:
 
 # KB4101464 - Cumulative Update 6 for SQL Server 2017
 
-_Release Date:_ &nbsp; April 18, 2018  
+_Release Date:_ &nbsp; April 17, 2018  
 _Version:_ &nbsp; 14.0.3025.34
 
 ## Summary
@@ -63,7 +63,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="11806534">[11806534](#11806534)</a> | [FIX: Database Mail can't connect to SQL Server 2017 on Linux when non-default TCP port is used (KB4100873)](https://support.microsoft.com/help/4100873) | SQL Server Engine | Linux | Linux |
 | <a id="11751562">[11751562](#11751562)</a> | [FIX: "Access is denied" error when you try to create a database in SQL Server 2017 Express LocalDB (KB4096875)](https://support.microsoft.com/help/4096875) | SQL Server Engine | LocalDB | Windows |
 | <a id="11701181">[11701181](#11701181)</a> | [FIX: Managed Backup fails when database is renamed with trailing white space in SQL Server 2016 and 2017 (KB4090486)](https://support.microsoft.com/help/4090486) | SQL Server Engine | Management Services | Windows |
-| <a id="11701157">[11701157](#11701157)</a> | [FIX: Error 15665 when you call sp_set_session_context repeatedly with null key value in SQL Server 2016 (KB4089324)](https://support.microsoft.com/help/4089324) | SQL Server Engine | Programmability | Windows |
+| <a id="11701157">[11701157](#11701157)</a> | [FIX: Error 15665 when you call sp_set_session_context repeatedly with null key value in SQL Server 2017 (KB4089324)](https://support.microsoft.com/help/4089324) | SQL Server Engine | Programmability | Windows |
 | <a id="11701190">[11701190](#11701190)</a> | [FIX: Random access violations occur when you run monitoring stored procedure in SQL Server 2016 and 2017 (KB4078596)](https://support.microsoft.com/help/4078596) | SQL Server Engine | Query Execution | Windows |
 | <a id="11701156">[11701156](#11701156)</a> | [Update to support partition elimination in query plans that have spatial indexes in SQL Server 2016 and 2017 (KB4089950)](https://support.microsoft.com/help/4089950) | SQL Server Engine | Query Optimizer | All |
 | <a id="11701215">[11701215](#11701215)</a> | [Improves the query performance when an optimized bitmap filter is applied to a query plan in SQL Server 2016 and 2017 (KB4089276)](https://support.microsoft.com/help/4089276) | SQL Server Engine | Query Optimizer | All |
