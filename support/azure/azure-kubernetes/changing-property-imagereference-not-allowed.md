@@ -2,9 +2,7 @@
 title: Changing property imageReference is not allowed
 description: Troubleshoot the Changing property imageReference is not allowed error message that occurs when you upgrade or scale an Azure Kubernetes Service (AKS) cluster.
 ms.date: 6/1/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
-ms.reviewer: chiragpa, nickoman
+ms.reviewer: chiragpa, nickoman, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: common-issues
 keywords:

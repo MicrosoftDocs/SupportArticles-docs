@@ -2,11 +2,9 @@
 title: Azure Storage Explorer troubleshooting guide
 description: Provides debugging techniques for Azure Storage Explorer.
 services: storage
-author: AmandaAZ
-ms.service: storage
+ms.service: azure-storage
 ms.date: 04/12/2023
-ms.author: v-weizhu
-ms.reviewer: azurestocic, jarrettr
+ms.reviewer: azurestocic, jarrettr, v-weizhu
 ---
 
 # Azure Storage Explorer troubleshooting guide
@@ -521,7 +519,7 @@ Many libraries needed by Storage Explorer may be missing in RHEL environments. I
 ## [SUSE Linux Enterprise Server](#tab/linux-sles)
 
 > [!NOTE]
-> Storage Explorer hasn't been tested for SLES. You may try using Storage Explorer on your system, but we can’t guarantee that Storage Explorer will work as expected.
+> Storage Explorer hasn't been tested for SLES. You may try using Storage Explorer on your system, but we can't guarantee that Storage Explorer will work as expected.
 
 ### Snap
 

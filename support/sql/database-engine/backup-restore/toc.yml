@@ -1,6 +1,4 @@
 items:
-- name: A nonrecoverable I/O error when you use Backup to URL
-  href: nonrecoverable-io-error-backup-url.md
 - name: Access violations and memory dump files
   href: access-violations-memory-dump-files.md
 - name: A TDE-enabled database may not recover

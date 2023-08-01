@@ -5821,7 +5821,51 @@
       "source_path": "support/azure/azure-kubernetes/cluster-provisioning-status-changed-ready-failed.md",
       "redirect_url": "/troubleshoot/azure/azure-kubernetes/cluster-node-virtual-machine-failed-state",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/networking/windows-server-2012-directaccess-hotfixes.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/windows-server-2012-directaccess-hotfixes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/remote/support-policy-windows-virtual-desktop-windows-10-enterprise-multi-session.md",
+      "redirect_url": "/azure/virtual-desktop/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2.md",
+      "redirect_url": "/troubleshoot/windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tss",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/windows-troubleshooters/gather-information-using-tssv2-ad-replication.md",
+      "redirect_url": "/troubleshoot/windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/windows-troubleshooters/gather-information-using-tssv2-deployment.md",
+      "redirect_url": "/troubleshoot/windows-client/windows-troubleshooters/gather-information-using-tss-deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/windows-troubleshooters/gather-information-using-tssv2-group-policy.md",
+      "redirect_url": "/troubleshoot/windows-client/windows-troubleshooters/gather-information-using-tss-group-policy",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/windows-troubleshooters/gather-information-using-tssv2-user-experience.md",
+      "redirect_url": "/troubleshoot/windows-client/windows-troubleshooters/gather-information-using-tss-user-experience",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-engine/performance/performance-issues-using-columstore-indexes-large-pages.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/batch-mode-with-large-page-memory-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-engine/backup-restore/nonrecoverable-io-error-backup-url.md",
+      "redirect_url": "/troubleshoot/sql/welcome-sql-server",
+      "redirect_document_id": false
     }
-
 ]
 }

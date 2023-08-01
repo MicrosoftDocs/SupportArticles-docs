@@ -4,9 +4,7 @@ description: Learn about Internet Protocol version 6 (IPv6) support in Azure Act
 ms.service: active-directory
 ms.subservice: aad-general
 ms.date: 05/29/2023
-ms.author: v-dele
-author: DennisLee-DennisLee
-ms.reviewer: lhuangnorth, gautama, amycolannino, joflore, mariourrutia
+ms.reviewer: lhuangnorth, gautama, amycolannino, joflore, mariourrutia, v-leedennis
 ms.collection: M365-identity-device-management
 ---
 # IPv6 support in Azure Active Directory

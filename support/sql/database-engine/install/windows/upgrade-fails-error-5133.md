@@ -3,9 +3,7 @@ title: SQL Server upgrade fails with error 5133
 description: Troubleshoots and solves an issue where a Cumulative Update or Service Pack for SQL Server reports error 5133 when executing database upgrade scripts.
 ms.date: 01/11/2023
 ms.custom: sap:Installation, Patching and Upgrade
-ms.reviewer: ramakoni
-author: sevend2
-ms.author: v-sidong
+ms.reviewer: ramakoni, v-sidong
 ---
 
 # SQL Server upgrade fails with error 5133 when executing update database scripts
