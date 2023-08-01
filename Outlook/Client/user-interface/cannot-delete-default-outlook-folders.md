@@ -1,8 +1,8 @@
 ---
 title: Cannot delete default Outlook folders
 description: Provides more information about an issue that you can't delete default Outlook folders.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

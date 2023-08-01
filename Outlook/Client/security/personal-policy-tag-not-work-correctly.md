@@ -1,8 +1,8 @@
 ---
 title: Personal tags don't apply correctly for Inbox rule
 description: Discusses an issue in which Exchange personal tags don't work correctly for an Inbox rule in Exchange.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

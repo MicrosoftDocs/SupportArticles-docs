@@ -1,8 +1,8 @@
 ---
 title: MAPI custom solutions do not work as expected
 description: Your custom MAPI solution may not work because Outlook.exe is not properly registered in the Windows registry.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

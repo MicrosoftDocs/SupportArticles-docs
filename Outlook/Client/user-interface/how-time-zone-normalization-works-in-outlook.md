@@ -1,8 +1,8 @@
 ---
 title: How time zone normalization works
 description: This article introduces how time zone normalization works in Microsoft Outlook.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

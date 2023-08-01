@@ -1,8 +1,8 @@
 ---
 title: How to decide where to publish custom form
 description: Describes how to decide where to publish forms. Includes where to publish folder-based forms and where to publish message-based forms. Forms can be published to a Form (or Folder Forms Library), Organizational Forms Library, or Personal Forms Library.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

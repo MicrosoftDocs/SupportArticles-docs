@@ -1,8 +1,8 @@
 ---
 title: Cannot see contact photos
 description: Describes an issue that prevents you from seeing contact photos in Outlook 2016, Outlook 2013, Outlook 2010, Lync 2013, Lync 2010 or Skype for Business. Provides a resolution.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,8 +1,8 @@
 ---
 title: Email stays in Outbox until manually send or receive
 description: This article provides a resolution for the issue that email messages remain in your Outbox until you manually initiate a Send/Receive operation.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

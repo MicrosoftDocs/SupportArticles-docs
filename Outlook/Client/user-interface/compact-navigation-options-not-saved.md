@@ -1,8 +1,8 @@
 ---
 title: Compact Navigation options aren't saved
 description: Fixes an issue in which Compact Navigation settings are not saved when you close Outlook 2013.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,8 +1,8 @@
 ---
 title: Contact and Calendar items are lost after you delete an IMAP account
 description: Fixes an issue in which Contact and Calendar items are lost after you delete an IMAP account in Outlook 2013. This issue occurs even if you have backed up the offline Outlook data file.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
