@@ -118,7 +118,7 @@ When you troubleshoot 8606 errors, think about the following points:
 1. Identify the current value for the forest-wide **TombStoneLifeTime** setting.
 
     ```console
-     c:\>repadmin /showattr. "CN=Directory Service,CN=Windows NT,CN=Services,CN=Configuration,DC=forest root domain,DC=TLD> /atts:tombstonelifetime  
+     repadmin /showattr "CN=Directory Service,CN=Windows NT,CN=Services,CN=Configuration,DC=forest root domain,DC=TLD" /atts:tombstonelifetime  
     ```
 
     See the "Tombstone lifetime and replication of deletions" section in the following article in the Microsoft Knowledge Base:  
@@ -142,7 +142,7 @@ When you troubleshoot 8606 errors, think about the following points:
     The date stamps for LastKnownParent and IsDeleted columns can be determined by running `repadmin /showobjmeta` and referencing the objectguid of the object that is cited in the NTDS replication 1988 event. To do this, use the following syntax:
 
     ```console  
-    c:\>repadmin /showobjmeta <fqdn of source DC from 1988 event> "<GUID=GUID of object cited in the 1988 event>"
+    repadmin /showobjmeta <fqdn of source DC from 1988 event> "<GUID=GUID of object cited in the 1988 event>"
     ```
 
     The date stamp for LastKnownParent identifies the date on which the object was deleted. The date stamp for IsDeleted tells you when the object was last deleted or reanimated. The version number tells you whether the last modification deleted or reanimated the object. An IsDeleteted value of 1 represents an initial delete. Odd-numbered values greater than 1 indicate a reanimation following at least one deletion. For example, an **isDeleted** value of 2 represents an object that was deleted (version 1) and then later undeleted or reanimated (version 2). Later even-numbered values for IsDeleted represent later reanimations or undeletes of the object.
@@ -179,7 +179,7 @@ The following two commands in REPADMIN.EXE can remove lingering objects from dir
 `REPADMIN /REMOVELINGERINGOBJCTS` can be used to remove lingering objects from writable and read-only directory partitions on source domain controllers. The syntax is as follows:
 
 ```console  
-c:\>repadmin /removelingeringobjects <Dest_DSA_LIST> <Source DSA GUID> <NC> [/ADVISORY_MODE]
+repadmin /removelingeringobjects <Dest_DSA_LIST> <Source DSA GUID> <NC> [/ADVISORY_MODE]
 ```
 
 Where:  
@@ -192,7 +192,7 @@ Where:
 `REPADMIN /REHOST` can be used to remove lingering-objects domain controllers that host a *read-only* copy of a domain directory partition from domain controllers. The syntax is as follows:
 
 ```console  
- c:\>repadmin /rehost DSA <Naming Context> <Good Source DSA Address>
+ repadmin /rehost DSA <Naming Context> <Good Source DSA Address>
 ```
 
 Where:  
