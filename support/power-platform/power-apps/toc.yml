@@ -90,11 +90,11 @@
         - name: '"You cannot delete this form because it is the only fallback form" error'
           href: manage-apps-and-solutions/you-cannot-delete-this-form-only-fallback.md
         - name: PrimaryName attribute not found for entity
-          href: primaryname-attribute-not-found.md
+          href: manage-apps-and-solutions/primaryname-attribute-not-found.md
         - name: An entitykey with the selected attributes already exists
-          href: entitykey-selected-attributes-already-exists.md
+          href: manage-apps-and-solutions/entitykey-selected-attributes-already-exists.md
         - name: Maximum row size exceeds the allowed maximum
-          href: maximum-row-size-exceeds.md
+          href: manage-apps-and-solutions/maximum-row-size-exceeds.md
     - name: Support resources
       items:
         - name: Power Apps support
