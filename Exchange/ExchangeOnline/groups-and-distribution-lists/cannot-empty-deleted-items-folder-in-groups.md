@@ -2,7 +2,7 @@
 title: Can't empty Deleted Items folder in Microsoft 365 Groups
 description: Resolves an issue in which you can't empty the Deleted Items folder in Microsoft 365 Groups.
 author: cloud-writer
-ms.author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
