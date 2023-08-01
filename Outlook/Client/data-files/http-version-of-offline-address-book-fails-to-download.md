@@ -18,7 +18,7 @@ ms.date: 3/31/2022
 
 ## Symptoms
 
-You use Microsoft Outlook to connect to a Microsoft Exchange Server mailbox. When you start a manual download of the Offline Address Book (OAB) from an HTTP(S) location, the progress bar that appears in the **Outlook Send/Receive Progress** dialog box seems to freeze or becomes stuck. The download never finishes, and the local OAB files are not updated.
+You use Microsoft Outlook to connect to a Microsoft Exchange Server mailbox. When you start a manual download of the Offline Address Book (OAB) from an HTTP(S) location, the progress bar that appears in the **Outlook Send/Receive Progress** dialog box seems to freeze or becomes stuck. The download never finishes, and the local OAB files aren't updated.
 
 ## Cause
 
@@ -29,10 +29,10 @@ There are a couple of known causes of this problem.
   This issue may occur if old or out-of-date device drivers for wireless peripheral devices are installed. This includes keyboard and mouse drivers.
 - Policies for the Background Intelligent Transfer Service (BITS) are configured on your computer.
 
-  BITS policies allow you to control the download rate for updates. If the policy values are not configured correctly, they could effectively prevent downloads from finishing.
-- The Background Intelligent Transfer Service service is not Started.
+  BITS policies allow you to control the download rate for updates. If the policy values aren't configured correctly, they could effectively prevent downloads from finishing.
+- The Background Intelligent Transfer Service service isn't Started.
 
-  If the **Background Intelligent Transfer Service** service is not running, then the OAB will not download.
+  If the **Background Intelligent Transfer Service** service isn't running, then the OAB will not download.
 
 ## Resolution
 
@@ -48,11 +48,11 @@ To resolve this issue, use one or more of the following solutions.
 
   Or, install the latest IntelliPoint or IntelliType software. To do this, see [PC accessories help & learning](https://support.microsoft.com/pc-accessories).
 
-  If you are using a third-party keyboard or mouse, visit manufacturer's website and download the latest version of the device driver or the latest update for the device.
+  If you're using a third-party keyboard or mouse, visit manufacturer's website and download the latest version of the device driver or the latest update for the device.
 
 - Check your registry for any BITS policies
 
-  If you are using a HTTP(s) location from which to download the OAB, the OAB download process is handled by BITS. In this configuration, you will want to determine if you have any BITS policies configured.
+  If you're using a HTTP(s) location from which to download the OAB, the OAB download process is handled by BITS. In this configuration, you'll want to determine if you have any BITS policies configured.
 
   BITS policies are found under the following key in the registry:
 
@@ -66,21 +66,21 @@ To resolve this issue, use one or more of the following solutions.
   `MaxTransferRateOnSchedule`  
   `MaxTransferRateOffSchedule`
 
-  If you find **EnableBitsMaxBandwith** = **1**, BITS download throttling is in effect and the other values are used by BITS to manage downloads. Contact your system administrator to disable BITS download throttling to see if this resolves your OAB download issue.
+  If you find **EnableBitsMaxBandwith** = **1**, BITS download throttling is in effect, and the other values are used by BITS to manage downloads. Contact your system administrator to disable BITS download throttling to see if this resolves your OAB download issue.
 
 - Make sure the Background Intelligent Transfer Service is started
 
-  If you are using a HTTP(s) location from which to download the OAB, the OAB download process is handled by BITS. In this configuration, you will want to ensure the status of the **Background Intelligent Transfer Service** service is started.
+  If you're using a HTTP(s) location from which to download the OAB, the OAB download process is handled by BITS. In this configuration, you'll want to ensure the status of the **Background Intelligent Transfer Service** service is started.
 
   1. On the **Start** menu, enter _Services.msc_ in the **Search programs and files** box, and then select **Services.msc** in the results pane.
 
   2. In the **Services** dialog box, locate the service called **Background Intelligent Transfer Service**.
 
-  3. Review the status of the service. You will want to make sure the status of the service is **Started**.
+  3. Review the status of the service. You'll want to make sure the status of the service is **Started**.
 
      :::image type="content" source="media/http-version-of-offline-address-book-fails-to-download/background- intelligent-transfer-service-is-started.png" alt-text="Screenshot of the status of the Background Intelligent Transfer Service.":::
 
-     If the Background Intelligent Transfer Service service is not started, continue with these steps to start the service.
+     If the Background Intelligent Transfer Service service isn't started, continue with these steps to start the service.
 
   4. Double-click **Background Intelligent Transfer Service** in the **Services** dialog box.
 
@@ -101,7 +101,7 @@ To resolve this issue, use one or more of the following solutions.
 
 ## More information
 
-For Outlook 2010 and Outlook 2007, you can use the following steps to determine if you are using an HTTP(s) location to download the OAB.
+For Outlook 2010 and Outlook 2007, you can use the following steps to determine if you're using an HTTP(s) location to download the OAB.
 
 1. Start Outlook if it is not currently running.
 2. Hold down the **CTRL** key, right-click the Outlook icon in the notification area on the right side of the taskbar, and then select **Test E-mail AutoConfiguration**.
@@ -110,7 +110,7 @@ For Outlook 2010 and Outlook 2007, you can use the following steps to determine 
 5. If not already entered, type your **email address** and **password**, and then select **Test**.
 6. On the **Results** tab, note the path for **OAB URL**.
 
-If the **OAB URL** value begins with **HTTP**, then you are using an HTTP(s) location to download the OAB. If the **OAB URL** value is **Public Folders**, then you are not using an HTTP(s) location to download the OAB.
+If the **OAB URL** value begins with **HTTP**, then you're using an HTTP(s) location to download the OAB. If the **OAB URL** value is **Public Folders**, then you aren't using an HTTP(s) location to download the OAB.
 
 > [!NOTE]
 > Outlook 2016 and Outlook 2013 only uses an HTTP location to download the OAB.

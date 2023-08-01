@@ -1,6 +1,6 @@
 ---
 title: Invalid file name or Access denied error when adding pst or ost file
-description: You get an error when adding a .pst or .ost file in Outlook 2016 version 16.0.7910.1000 or later if the file is not located on a local hard drive.
+description: You get an error when adding a .pst or .ost file in Outlook 2016 version 16.0.7910.1000 or later if the file isn't located on a local hard drive.
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -28,7 +28,7 @@ When you try to add a personal folder file (.pst) or an offline folder file (.os
 This issue occurs when the following conditions are true:
 
 - The version of Outlook 2016 is 16.0.7910.1000 or later ([how to check what version of Outlook do I have?](https://support.microsoft.com/office/what-version-of-outlook-do-i-have-b3a9568c-edb5-42b9-9825-d48d82b2257c)).
-- The .pst or .ost file is not located on a local hard drive. For example, the file is on a removable drive or a network drive.
+- The .pst or .ost file isn't located on a local hard drive. For example, the file is on a removable drive or a network drive.
 
 ## Cause
 
@@ -40,7 +40,7 @@ Starting with build 16.0.7910.1000, Outlook 2016 makes a specific call to an ope
 
 For example, suppose you have mapped to drive P: \\\Server\Share\Restricted\Everyone and you want to add a .pst file from P:\MyData.pst. In this example, you have permissions to the "Everyone" folder in the path, but have no permissions to the "Restricted" or "Share" folder. In this case, Windows is unable to return the normalized path. As a result, Outlook 2016 can't add the .pst file. After an administrator adds List and Read permissions for you to the "Restricted" folder, Windows can traverse the full path and return a normalized path to Outlook. Then you can successfully add the .pst file.
 
-As a reminder, adding .pst files from a network share is not technically supported in Outlook 2016. While this workaround will allow you to add a .pst file to your profile, you take the risk of any performance or stability problems when you use the .pst file in an unsupported configuration.
+As a reminder, adding .pst files from a network share isn't technically supported in Outlook 2016. While this workaround will allow you to add a .pst file to your profile, you take the risk of any performance or stability problems when you use the .pst file in an unsupported configuration.
 
 ## Workaround
 

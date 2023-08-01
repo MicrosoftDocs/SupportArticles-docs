@@ -441,13 +441,13 @@ When **TurnOffPhotograph** = 1, contact photos are not displayed, as shown in th
 
 :::image type="content" source="media/how-to-manage-outlook-social-connector-via-group-policy/contact-photos-not-shown-when-turnoffphotograph-is-set-to-1-example-2.png" alt-text="Example 2 about contact photo is not displayed when Turn Off Photograph is set to 1." border="false":::
 
-When **TurnOffPhotograph** = 1, contact photos are also not displayed in the Outlook 2010 Contact Card or in the Outlook 2010 Address Book dialog box, as shown in the following figures. Be aware that Outlook 2003 and Outlook 2007 do not have a contact card such as the one that is shown below, and these Outlook versions also do not display photos in the Address Book dialog box.
+When **TurnOffPhotograph** = 1, contact photos are also not displayed in the Outlook 2010 Contact Card or in the Outlook 2010 Address Book dialog box, as shown in the following figures. Be aware that Outlook 2003 and Outlook 2007 do not have a contact card such as the one that is shown below, and these Outlook versions also don't display photos in the Address Book dialog box.
 
-:::image type="content" source="media/how-to-manage-outlook-social-connector-via-group-policy/contact-card-that-does-not-has-photos-in-outlook-old-versions.png" alt-text="Outlook 2003 and Outlook 2007 do not display photos in the Address Book dialog box." border="false":::
+:::image type="content" source="media/how-to-manage-outlook-social-connector-via-group-policy/contact-card-that-does-not-has-photos-in-outlook-old-versions.png" alt-text="Outlook 2003 and Outlook 2007 don't display photos in the Address Book dialog box." border="false":::
 
 ### Maximum number of items displayed in the People Pane (not available in the Outlk14.adm and Outlk15.admx templates)
 
-This policy controls the maximum number of items displayed in the People Pane. The default number is 100 items. If you enable this policy, you may specify a different value for the maximum number of items displayed in the People Pane. If you disable or you do not configure this policy setting, the default value of 100 items is used by the Outlook Social Connector.
+This policy controls the maximum number of items displayed in the People Pane. The default number is 100 items. If you enable this policy, you may specify a different value for the maximum number of items displayed in the People Pane. If you disable or you don't configure this policy setting, the default value of 100 items is used by the Outlook Social Connector.
 
 This policy setting is controlled by the following registry information:
 
