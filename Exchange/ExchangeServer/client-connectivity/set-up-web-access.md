@@ -1,10 +1,10 @@
 ---
 title: How to set up Outlook on the web to access Exchange Server
 description: Describes how to set up Outlook on the web to access Exchange Server.
-author: simonxjx
+author: cloud-writer
+ms.author: meerak
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: v-six
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 
@@ -20,6 +20,7 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
 ms.date: 3/31/2022
+ms.reviewer: v-six
 ---
 
 # How to set up Outlook on the web to access Exchange Server

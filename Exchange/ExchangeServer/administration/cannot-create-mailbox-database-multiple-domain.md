@@ -1,8 +1,8 @@
 ---
 title: Failed to mount a Mailbox database in Exchange Server 2010
 description: Describes an issue in which you can't create a new Exchange Server 2010 Mailbox database in a multiple domain environment.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: raghunp
+ms.reviewer: raghunp, v-six
 appliesto: 
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard

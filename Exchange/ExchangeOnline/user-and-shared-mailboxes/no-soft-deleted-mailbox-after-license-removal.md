@@ -1,8 +1,8 @@
 ---
 title: No soft-deleted mailbox after license removal
 description: Describes an issue that prevents a user from restoring a deleted mailbox in Microsoft 365. A resolution is provided.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Online
   - CSSTroubleshoot
-ms.reviewer: benjak, kellybos
+ms.reviewer: benjak, kellybos, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150

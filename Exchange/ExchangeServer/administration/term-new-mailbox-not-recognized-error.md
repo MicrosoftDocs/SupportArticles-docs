@@ -1,8 +1,8 @@
 ---
 title: The term New-Mailbox is not recognized error when creating a mailbox in Exchange Server 2010
 description: Describes an issue in which The term New-Mailbox is not recognized error occurs when you create a new mailbox that uses RBAC split permissions or Active Directory split permissions.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: charray, russwill, v-9sidal
+ms.reviewer: charray, russwill, v-9sidal, v-six
 appliesto: 
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard

@@ -1,8 +1,8 @@
 ---
 title: Can't manage virtual directories from Exchange Management Console in Exchange Server 2010
 description: Describes an issue in which you can't manage certain virtual directories from Exchange Server 2010 Management Console in a native Exchange Server 2010 environment or in a mixed Exchange Server 2010 and Exchange Server 2007 environment.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: bpeterse
+ms.reviewer: bpeterse, v-six
 appliesto: 
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard

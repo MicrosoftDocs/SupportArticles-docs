@@ -1,8 +1,8 @@
 ---
 title: FBA page shows when accessing Outlook Web App or EAC
 description: Describes a problem in which the forms-based authentication page continues to appear even after the user provides valid credentials. Provides a workaround.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: batre, genli
+ms.reviewer: batre, genli, v-six
 appliesto: 
   - Exchange Server 2016 Enterprise Edition
   - Exchange Server 2016 Standard Edition

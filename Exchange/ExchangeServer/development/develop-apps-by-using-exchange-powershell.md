@@ -2,8 +2,8 @@
 title: Develop apps via Exchange PowerShell and .NET Framework
 description: Describes the recommended and supported methods for developing applications that automate Exchange 2010 cmdlets by using any of the Microsoft .NET Framework languages.
 ms.date: 08/10/2020
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: dvespa
+ms.reviewer: dvespa, v-six
 appliesto: 
   - Exchange Server 2010
 search.appverid: MET150

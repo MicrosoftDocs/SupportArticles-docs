@@ -1,8 +1,8 @@
 ---
 title: Exchange Server transaction logs grow rapidly
 description: Describes an issue in which Exchange Server transaction logs grow fast and disabling Exchange ActiveSync causes reduced transaction log volume.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: jmartin
+ms.reviewer: jmartin, v-six
 appliesto: 
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard

@@ -2,8 +2,8 @@
 title: EWS notification return UnreadCount of -1
 description: EWS push notification always returns incorrect value of UnreadCount property of notification, the issue is under investigation.
 ms.date: 08/10/2020
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: catagh
+ms.reviewer: catagh, v-six
 appliesto: 
   - Exchange Server
   - Exchange Online

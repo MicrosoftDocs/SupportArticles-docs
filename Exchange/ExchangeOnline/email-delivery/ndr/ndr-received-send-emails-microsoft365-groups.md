@@ -1,8 +1,8 @@
 ---
 title: NDR error AggregateGroupMailbox full when sending emails to Microsoft 365 Groups
 description: Provides a workaround to an issue in which an NDR is received when sending emails to Microsoft 365 Groups.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -12,7 +12,7 @@ ms.custom:
   - CSSTroubleshoot
   - Exchange Online
   - CI 167832
-ms.reviewer: batre
+ms.reviewer: batre, v-six
 appliesto: 
   - Exchange Online
 search.appverid: 
@@ -52,6 +52,6 @@ New-TransportRule -SentTo @("AggregateGroupMailbox.A.201708181918@contoso.onmicr
 ```
 **Notes**:
 
-- In this example, `<AggregateGroupMailbox.A.201708181918@contoso.onmicrosoft.com>` represents the SMTP address of the aggregate group mailbox that’s mentioned in the NDR.
+- In this example, `<AggregateGroupMailbox.A.201708181918@contoso.onmicrosoft.com>` represents the SMTP address of the aggregate group mailbox that's mentioned in the NDR.
 - This transport rule deletes email messages before they arrive at the aggregate group mailbox. It doesn't affect email delivery to Microsoft 365 Groups.
 

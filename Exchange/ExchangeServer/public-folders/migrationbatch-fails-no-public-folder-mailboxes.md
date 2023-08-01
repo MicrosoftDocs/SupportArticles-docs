@@ -1,7 +1,8 @@
 ---
 title: Migration batch fails with error message No active public folder mailboxes were found at Complete-MigrationBatch command
 description: This article describes an issue that migration batch will fail with error message No active public folder mailboxes were found at Complete-MigrationBatch command, provides a resolution.
-author: simonxjx
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
@@ -9,7 +10,6 @@ ms.custom:
   - Exchange Server
   - CSSTroubleshoot
 ms.topic: troubleshooting
-ms.author: v-six
 search.appverid: 
   - MET150
 appliesto: 
@@ -18,6 +18,7 @@ appliesto:
   - Exchange Server 2019
   - Exchange Online
 ms.date: 3/31/2022
+ms.reviewer: v-six
 ---
 
 # "No active public folder mailboxes were found" error and migration batch fails at Complete-MigrationBatch command

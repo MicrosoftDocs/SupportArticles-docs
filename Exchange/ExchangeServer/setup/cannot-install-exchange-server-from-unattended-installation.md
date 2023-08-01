@@ -2,8 +2,8 @@
 title: Cannot install Exchange from unattended installation
 description: You cannot install an Exchange Server 2010 Service Pack 1 server from an unattended installation. Provides resolutions.
 ms.date: 08/11/2020
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: anfowler, gugavaro
+ms.reviewer: anfowler, gugavaro, v-six
 appliesto: 
   - Exchange Server 2010 Service Pack 1
 search.appverid: MET150

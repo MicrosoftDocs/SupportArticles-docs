@@ -1,8 +1,8 @@
 ---
 title: Updates to Client Access Rules in Microsoft 365
 description: Describes a procedural update to Client Access Rules in Microsoft 365.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Online
   - CSSTroubleshoot
-ms.reviewer: jmartin, meerak
+ms.reviewer: jmartin, meerak, v-six
 appliesto: 
   - Exchange Online
   - Microsoft Exchange Online Dedicated

@@ -1,8 +1,8 @@
 ---
 title: Distribution group owners can't remove distribution list members in outlook in Exchange Server 2010
 description: Describes an issue in which you receive a (Changes to the distribution list membership cannot be saved) error when you try to remove members from an Exchange Server 2010 distribution list.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: tyronec
+ms.reviewer: tyronec, v-six
 appliesto: 
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard

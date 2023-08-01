@@ -2,8 +2,8 @@
 title: Items are removed by MRM 2.0 unexpectedly
 description: Discusses that items that you do not want removed are removed by MRM 2.0 in Microsoft Exchange Server. Provides a resolution.
 ms.date: 08/10/2020
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: dpaul
+ms.reviewer: dpaul, v-six
 appliesto: 
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition

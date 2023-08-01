@@ -1,8 +1,8 @@
 ---
 title: 554 5.4.14 Hop Count exceeded
 description: Describes a scenario in Exchange Online in which primary SMTP addresses are displayed incorrectly or secondary SMTP addresses are missing.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Online
   - CSSTroubleshoot
-ms.reviewer: jchenau
+ms.reviewer: jchenau, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150

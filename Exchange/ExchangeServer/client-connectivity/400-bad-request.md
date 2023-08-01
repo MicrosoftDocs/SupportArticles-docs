@@ -1,10 +1,10 @@
 ---
 title: HTTP 400 Bad Request when proxying HTTP requests from an Exchange Server
 description: Describes a situation in which you receive an HTTP 400 Bad Request error message when proxying HTTP requests from an Exchange Server to a previous version of Exchange Server.
-author: simonxjx
+author: cloud-writer
+ms.author: meerak
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: v-six
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot
@@ -20,6 +20,7 @@ appliesto:
   - Exchange Server 2010 Standard
   - Exchange Server 2010 Enterprise
 ms.date: 3/31/2022
+ms.reviewer: v-six
 ---
 
 # "HTTP 400 Bad Request" error when proxying HTTP requests from an Exchange Server to a previous version of Exchange Server

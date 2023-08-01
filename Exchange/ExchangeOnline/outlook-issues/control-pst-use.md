@@ -1,10 +1,10 @@
 ---
 title: Policy to control PST use and creation in Microsoft Outlook
 description: Describes how to use Outlook policy to prevent users from adding new items to a .pst file and to prevent users from creating new .pst files.
-author: simonxjx
+author: cloud-writer
+ms.author: meerak
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: v-six
 ms.custom: 
   - CSSTroubleshoot
 manager: dcscontentpm
@@ -17,6 +17,7 @@ appliesto:
   - Outlook 2010
   - Outlook 2007
 ms.date: 5/18/2023
+ms.reviewer: v-six
 ---
 
 # How to implement a policy to control PST use and creation in Microsoft Outlook

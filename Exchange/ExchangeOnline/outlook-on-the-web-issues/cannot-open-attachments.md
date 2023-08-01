@@ -1,10 +1,10 @@
 ---
 title: Microsoft 365 users can't open or view attachments in Outlook Web App
 description: Describes an issue in which Outlook Web App attachments can't be viewed or opened in Microsoft 365. Provides a resolution and a workaround.
-author: simonxjx
+author: cloud-writer
+ms.author: meerak
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: v-six
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 
@@ -15,6 +15,7 @@ search.appverid:
 appliesto: 
   - Exchange Online
 ms.date: 3/31/2022
+ms.reviewer: v-six
 ---
 # Microsoft 365 users can't open or view attachments in Outlook Web App
 

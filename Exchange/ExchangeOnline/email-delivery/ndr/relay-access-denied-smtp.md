@@ -1,10 +1,10 @@
 ---
 title: 550 5.7.64 TenantAttribution when users send mails externally
 description: 550 5.7.64 TenantAttribution; Relay Access Denied SMTP bounce backs for external emails being relayed out through Microsoft 365.
-author: simonxjx
+author: cloud-writer
+ms.author: meerak
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: v-six
 manager: dcscontentpm
 ms.custom: 
   - Exchange Online
@@ -16,6 +16,7 @@ search.appverid:
 appliesto: 
   - Exchange Online
 ms.date: 3/31/2022
+ms.reviewer: v-six
 ---
 # "550 5.7.64 TenantAttribution" when sending mail externally in Microsoft 365
 

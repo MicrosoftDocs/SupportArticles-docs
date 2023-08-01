@@ -2,8 +2,8 @@
 title: Cannot reset Local replica age limit (days)
 description: Provides workarounds for a problem in which you cannot reset the value of the Local replica age limit (days) setting.
 ms.date: 08/05/2020
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: wlong, sidd
+ms.reviewer: wlong, sidd, v-six
 appliesto: 
   - Exchange Server 2010
 search.appverid: MET150

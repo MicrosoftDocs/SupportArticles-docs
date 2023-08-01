@@ -1,8 +1,8 @@
 ---
 title: WinRM times out and error occurs when you add a Mailbox server to an existing DAG
 description: Main KB template.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: mhendric, charray
+ms.reviewer: mhendric, charray, v-six
 appliesto: 
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard

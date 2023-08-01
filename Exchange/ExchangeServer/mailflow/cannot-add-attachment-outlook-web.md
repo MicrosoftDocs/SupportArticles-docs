@@ -1,8 +1,8 @@
 ---
 title: Can't add an attachment in Outlook on the web
 description: Provides a resolution for the issue where users can't add attachments and receive an error message in Outlook on the web.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: hafizk, jmartin
+ms.reviewer: hafizk, jmartin, v-six
 appliesto: 
   - Exchange Server 2016 Enterprise Edition
   - Exchange Server 2016 Standard Edition

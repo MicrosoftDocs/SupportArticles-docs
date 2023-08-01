@@ -2,8 +2,8 @@
 title: Cannot use Autodiscover to connect to mailbox
 description: Error message may occur when you use Autodiscover to connect to a mailbox in Exchange Server 2010 Service Pack 1.
 ms.date: 08/10/2020
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: ninob, opereira, wirall
+ms.reviewer: ninob, opereira, wirall, v-six
 appliesto: 
   - Exchange Server 2010 Service Pack 1
 search.appverid: MET150

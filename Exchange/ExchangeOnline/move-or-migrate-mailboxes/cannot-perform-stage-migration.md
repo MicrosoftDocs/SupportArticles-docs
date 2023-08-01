@@ -1,8 +1,8 @@
 ---
 title: Mailboxes can't be migrated because they contain errors
 description: Fixes an issue in which you receive an error message when you perform a staged Exchange migration to migrate on-premises mailboxes to Exchange Online.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Online
   - CSSTroubleshoot
-ms.reviewer: timothyh
+ms.reviewer: timothyh, v-six
 appliesto: 
   - Exchange Online
   - Azure Active Directory

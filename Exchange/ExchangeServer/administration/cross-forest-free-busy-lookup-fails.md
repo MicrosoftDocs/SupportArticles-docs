@@ -1,13 +1,13 @@
 ---
 title: Cross forest free/busy lookup fails
 description: Resolves an issue in which you can't see the free/busy information for attendees in other organizations. This issue occurs in a mixed Exchange environment.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
-ms.reviewer: excontent, message, exuetr, jmartin, christys, genli
+ms.reviewer: excontent, message, exuetr, jmartin, christys, genli, v-six
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot

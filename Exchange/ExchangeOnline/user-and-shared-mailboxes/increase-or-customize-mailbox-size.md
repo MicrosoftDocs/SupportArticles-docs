@@ -9,9 +9,9 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.reviewer: meerak
-author: simonxjx
-ms.author: v-six
+ms.reviewer: meerak, v-six
+author: cloud-writer
+ms.author: meerak
 ms.date: 3/31/2022
 ---
 

@@ -1,13 +1,13 @@
 ---
 title: HTTP clients are connected after account is disabled
 description: Describes an issue in which an Exchange HTTP client can continue to connect to its mailbox after its account has been disabled or its password has been reset. A fix is provided.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
-ms.reviewer: robevans
+ms.reviewer: robevans, v-six
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot

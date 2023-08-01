@@ -1,8 +1,8 @@
 ---
 title: Outlook can't access public folders hosted on legacy Exchange servers
 description: Describes an issue that user mailboxes on Exchange 2013 or 2016 servers can't access public folders by using Microsoft Outlook. A resolution is provided.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: nickul, jmartin
+ms.reviewer: nickul, jmartin, v-six
 appliesto: 
   - Exchange Server 2016 Enterprise Edition
   - Exchange Server 2016 Standard Edition

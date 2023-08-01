@@ -1,8 +1,8 @@
 ---
 title: Can't send or receive email messages behind a Cisco PIX or Cisco ASA firewall
 description: Explains that you can't send or receive email messages if an Exchange Server is placed behind a Cisco PIX or ASA firewall device and the PIX or ASA firewall has the Mailguard feature turned on.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: alanmalm, v-darmac
+ms.reviewer: alanmalm, v-darmac, v-six
 appliesto: 
   - Exchange Server 2013
   - Exchange Server 2010

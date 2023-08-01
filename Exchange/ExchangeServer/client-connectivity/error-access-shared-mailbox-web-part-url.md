@@ -12,9 +12,9 @@ appliesto:
 - Exchange Server 2013 Enterprise
 - Exchange Server 2013 Standard Edition
 search.appverid: MET150
-ms.reviewer: djball
-author: simonxjx
-ms.author: v-six
+ms.reviewer: djball, v-six
+author: cloud-writer
+ms.author: meerak
 ms.date: 3/31/2022
 ---
 

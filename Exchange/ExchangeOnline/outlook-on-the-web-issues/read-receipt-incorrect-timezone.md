@@ -1,10 +1,10 @@
 ---
 title: Read receipt from Microsoft 365 recipient displays incorrect time zone
 description: Describes an issue in which the wrong time zone info is displayed on the read receipt from a Microsoft 365 recipient.
-author: simonxjx
+author: cloud-writer
+ms.author: meerak
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: v-six
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 
@@ -15,6 +15,7 @@ search.appverid:
 appliesto: 
   - Exchange Online
 ms.date: 3/31/2022
+ms.reviewer: v-six
 ---
 # Read receipt from a Microsoft 365 recipient displays incorrect time zone information
 

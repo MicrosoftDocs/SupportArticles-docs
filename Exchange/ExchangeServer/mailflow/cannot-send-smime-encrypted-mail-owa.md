@@ -1,8 +1,8 @@
 ---
 title: Can't send S/MIME encrypted mails from Outlook Web App
 description: Provides a resolution for the issue where users can't send S/MIME signed or encrypted mails in Outlook Web APP.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: djball, wduff
+ms.reviewer: djball, wduff, v-six
 appliesto: 
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard

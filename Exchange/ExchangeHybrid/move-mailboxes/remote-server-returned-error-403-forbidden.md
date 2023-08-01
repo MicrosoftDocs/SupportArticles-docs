@@ -1,8 +1,8 @@
 ---
 title: 403 Forbidden when moving mailboxes to Exchange Online
 description: Describes an issue that triggers an error when you try to move mailboxes from the on-premises Exchange Server environment to Exchange Online in Microsoft 365. The solution involves enabling MRSProxy.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Hybrid
   - CSSTroubleshoot
-ms.reviewer: 
+ms.reviewer: v-six
 appliesto: 
   - Exchange Online
   - Exchange Server 2013 Enterprise
