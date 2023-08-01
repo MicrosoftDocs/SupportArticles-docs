@@ -1,8 +1,8 @@
 ---
 title: Can't remove an accepted domain
 description: Resolves a problem in which you can't delete an accepted domain in Exchange Server 2007 or Exchange Server 2010.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -16,6 +16,7 @@ appliesto:
   - Exchange Server 2010
   - Exchange Server 2007
 ms.date: 3/31/2022
+ms.reviewer: v-six
 ---
 # Error (Cannot remove the domain) when you remove an accepted domain in Exchange Server 2007 or in Exchange Server 2010
 

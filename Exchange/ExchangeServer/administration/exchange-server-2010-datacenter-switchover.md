@@ -2,8 +2,8 @@
 title: Exchange Server 2010 datacenter switchover
 description: Describes how to perform a datacenter switchover for a database availability group (DAG) in Exchange Server 2010.
 ms.date: 08/13/2020
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: 
+ms.reviewer: v-six
 appliesto: 
   - Exchange Server 2010
 search.appverid: MET150

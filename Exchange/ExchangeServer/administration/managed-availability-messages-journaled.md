@@ -1,8 +1,8 @@
 ---
 title: Managed Availability health monitoring probe messages are journaled in Exchange Server 2013
 description: Describes a by-design behavior in which Managed Availability health monitoring probe email messages are journaled when you enable Global Journaling. Provides a workaround for this behavior.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: lukeds, stephgil, exchblt
+ms.reviewer: lukeds, stephgil, exchblt, v-six
 appliesto: 
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
