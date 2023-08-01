@@ -1,15 +1,15 @@
 ---
 title: Email messages are stuck in Exchange Server queues for several minutes
 description: Provide a resolution to an issue in which email messages sending to Exchange Online is stuck in on-premises message queues for several minutes when the Exchange Server is configured to send to a single destination such as Exchange Online.
-author: simonxjx
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: v-six
-ms.reviewer: sesteven
+ms.reviewer: sesteven, v-six
 ms.custom: 
   - CSSTroubleshoot
   - CI 124314

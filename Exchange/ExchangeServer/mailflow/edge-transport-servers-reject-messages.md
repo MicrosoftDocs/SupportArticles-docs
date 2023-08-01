@@ -1,8 +1,8 @@
 ---
 title: Edge Transport servers reject messages
 description: Describes a problem in which Edge Transport servers reject email messages sent to valid recipients. Provides workarounds.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -15,6 +15,7 @@ search.appverid:
 appliesto: 
   - Exchange Server 2016 Enterprise Edition
 ms.date: 3/31/2022
+ms.reviewer: v-six
 ---
 # Edge Transport servers reject messages sent to valid recipients
 

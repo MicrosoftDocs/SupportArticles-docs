@@ -1,8 +1,8 @@
 ---
 title: Use nslookup to get DNS records for SMTP domain
 description: This article shows how to obtain Internet mail exchanger records for the Simple Mail Transfer Protocol (SMTP) domain by using nslookup.exe.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -15,6 +15,7 @@ search.appverid:
 appliesto: 
   - Exchange Server
 ms.date: 3/31/2022
+ms.reviewer: v-six
 ---
 # Obtain internet mail exchanger records with the nslookup.exe utility
 
