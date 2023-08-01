@@ -1,8 +1,8 @@
 ---
 title: We can't show MailTips right now warning
 description: Describes an issue that occurs after you change the From address to the address of a non-mailbox-enabled recipient.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Online
   - CSSTroubleshoot
-ms.reviewer: kellybos
+ms.reviewer: kellybos, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 3083843
 
 In Outlook in Microsoft 365, you receive a **We can't show MailTips right now** warning after you change the **From** address to the address of a non-mailbox-enabled recipient.
 
-:::image type="content" source="media/we-cant-show-mailtips-right-now-warning/we-cant-show-mailtips-right-now-warning.png" alt-text="Screenshot of the We can’t show MailTips right now warning.":::
+:::image type="content" source="media/we-cant-show-mailtips-right-now-warning/we-cant-show-mailtips-right-now-warning.png" alt-text="Screenshot of the We can't show MailTips right now warning.":::
 
 You may also see a similar warning when you forward a meeting invite for a non-mailbox-enabled recipient.
 

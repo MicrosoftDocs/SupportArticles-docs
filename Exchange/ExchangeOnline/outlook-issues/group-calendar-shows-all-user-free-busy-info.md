@@ -1,8 +1,8 @@
 ---
 title: All members' free/busy data of a group is displayed
 description: Fixes an issue in which free/busy information for all users of a Microsoft 365 modern group is displayed when you try to view the modern group calendar in Outlook.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Online
   - CSSTroubleshoot
-ms.reviewer: tasitae
+ms.reviewer: tasitae, v-six
 appliesto: 
   - Outlook 2016
   - Outlook 2013

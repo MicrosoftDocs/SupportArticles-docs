@@ -1,8 +1,8 @@
 ---
 title: MAPI provider is not supported for mailbox error in Exchange Online
 description: Provides a resolution for an issue that occurs when you run the New-MigrationEndpoint cmdlet to create a PublicFolder or PublicFolderToGroups type of migration endpoint in Exchange Online.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Online
   - CSSTroubleshoot
-ms.reviewer: batre, ninob
+ms.reviewer: batre, ninob, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150

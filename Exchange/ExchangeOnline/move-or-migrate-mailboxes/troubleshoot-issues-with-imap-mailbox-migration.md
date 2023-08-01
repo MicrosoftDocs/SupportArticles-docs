@@ -2,8 +2,8 @@
 title: Troubleshoot issues with IMAP mailbox migration
 description: Troubleshoots issues with migrating a mailbox from an on-premises or third-party IMAP system to Exchange Online.
 ms.date: 08/19/2020
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Online
   - CSSTroubleshoot
-ms.reviewer: 
+ms.reviewer: v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150

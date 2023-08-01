@@ -1,8 +1,8 @@
 ---
 title: Private items aren't displayed in a shared mailbox in Outlook
 description: Provides workarounds to an issue in which Private items aren't displayed in a shared mailbox in Outlook.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ ms.custom:
   - Exchange Online
   - CSSTroubleshoot
   - CI 123194
-ms.reviewer: shmcdani
+ms.reviewer: shmcdani, v-six
 appliesto: 
   - Outlook for Microsoft 365
   - Outlook 2019

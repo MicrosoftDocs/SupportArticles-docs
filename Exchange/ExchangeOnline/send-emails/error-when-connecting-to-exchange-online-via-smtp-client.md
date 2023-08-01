@@ -1,8 +1,8 @@
 ---
 title: Error when connecting via SMTP client
 description: Describes a problem in which you receive an error that states that the Exchange Online server is unknown, cannot be located, or is configured incorrectly.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Online
   - CSSTroubleshoot
-ms.reviewer: 
+ms.reviewer: v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150

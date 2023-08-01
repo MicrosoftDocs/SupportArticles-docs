@@ -1,8 +1,8 @@
 ---
 title: Item count from Get-MailboxStatistics shows more items
 description: Describes a problem that triggers a mismatch between the mailbox item count that's returned by the Get-MailboxFolderStatistics cmdlet versus the Get-MailboxStatistics cmdlet in Exchange Online. This behavior is by design.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Online
   - CSSTroubleshoot
-ms.reviewer: benwinz
+ms.reviewer: benwinz, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150

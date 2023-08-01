@@ -1,10 +1,10 @@
 ---
 title: Outlook and mobile device connectivity troubleshooting resource for Microsoft 365
 description: Lists links to technical resources and support information for troubleshooting Outlook connectivity and mobile device connectivity in Microsoft 365.
-author: simonxjx
+author: cloud-writer
+ms.author: meerak
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: v-six
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 
@@ -16,6 +16,7 @@ search.appverid:
 appliesto: 
   - Exchange Online
 ms.date: 3/31/2022
+ms.reviewer: v-six
 ---
 # Microsoft 365: Outlook and mobile device connectivity troubleshooting resources
 

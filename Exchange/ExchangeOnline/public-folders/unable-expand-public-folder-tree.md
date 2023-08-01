@@ -1,8 +1,8 @@
 ---
 title: Error "Your server administrator has limited the number of items you can open simultaneously" when you expand public folders in Outlook
 description: Provide solutions to an issue in which you can't expand public folders in Outlook or OWA. 
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ ms.custom:
   - Exchange Online
   - CI 125992
   - CSSTroubleshoot
-ms.reviewer: haembab,batre
+ms.reviewer: haembab, batre, v-six
 appliesto: 
   - Exchange Online
   - Exchange Server 2019
