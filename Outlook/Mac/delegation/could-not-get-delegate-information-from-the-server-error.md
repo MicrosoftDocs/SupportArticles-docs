@@ -1,8 +1,8 @@
 ---
 title: Could not get delegate information form the server error
 description: You receive a Could not get delegate information form the server error when make changes to delegate settings. Provides a resolution.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

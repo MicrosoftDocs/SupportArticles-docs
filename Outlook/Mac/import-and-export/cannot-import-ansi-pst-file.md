@@ -1,8 +1,8 @@
 ---
 title: Cannot import an ANSI .pst file
 description: Error occurs when you try to import an ANSI .pst file in Microsoft Outlook for Mac.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

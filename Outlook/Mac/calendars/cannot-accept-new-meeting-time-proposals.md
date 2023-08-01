@@ -1,8 +1,8 @@
 ---
 title: Cannot accept new meeting time proposals
 description: Describes an issue that prevents you from accepting new meeting time proposals in Outlook for Mac. A workaround and a resolution are provided.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
