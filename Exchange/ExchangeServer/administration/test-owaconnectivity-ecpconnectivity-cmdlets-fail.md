@@ -1,8 +1,8 @@
 ---
 title: Test-OwaConnectivity and Test-ECPConnectivity cmdlets fail
 description: Describes an issue in which the Test-OwaConnectivity and Test-ECPConnectivity cmdlets fail randomly.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: jcoiffin
+ms.reviewer: jcoiffin, v-six
 appliesto: 
   - Exchange Server 2010 Standard
   - Exchange Server 2010 Enterprise

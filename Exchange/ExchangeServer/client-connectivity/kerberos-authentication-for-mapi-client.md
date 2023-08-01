@@ -1,10 +1,10 @@
 ---
 title: Kerberos authentication for MAPI client connection to Client Access
 description: Describes how to configure Kerberos authentication for MAPI clients that connect to  a Client Access server array in Exchange Server 2010 Service Pack 1 (SP1).
-author: simonxjx
+author: cloud-writer
+ms.author: meerak
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: v-six
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 
@@ -15,6 +15,7 @@ search.appverid:
 appliesto: 
   - Exchange Server 2010
 ms.date: 3/31/2022
+ms.reviewer: v-six
 ---
 
 # Kerberos authentication for MAPI client connection to a Client Access server array
