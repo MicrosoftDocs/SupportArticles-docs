@@ -27,6 +27,7 @@ Choose one of the following options:
 
 - Delete the entity key for the table and column in the target environment.
 
-  [!NOTE] If the entity key is part of a managed solution. you'll need to perform a solution upgrade for every solution listed above the solution that included the deleted entity key.
+  > [!NOTE]
+  > If the entity key is part of a managed solution. you'll need to perform a solution upgrade for every solution listed above the solution that included the deleted entity key.
 
 - Remove the entity key from the solution before importing.
