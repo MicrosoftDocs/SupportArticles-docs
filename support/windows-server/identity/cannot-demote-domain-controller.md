@@ -36,7 +36,7 @@ This behavior can occur if you installed the domain controller by using the **Co
 If you created the partition by using the **Configure Your Server** wizard, and you used the default name of Mstapi, if this name is not in use, use the Tapicfg.exe tool to remove this name. To do so, run the following command, where <your_domain.com> is your domain DNS name:
 
 ```console
-tapicfg remove /directory:mstapi. <your_domain.com>
+tapicfg remove /directory:mstapi.<your_domain.com>
 ```
 
 If the partition was created manually, or if it was created by using another program, you can remove it by using the Ntdsutil utility:
