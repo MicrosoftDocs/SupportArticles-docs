@@ -1,8 +1,8 @@
 ---
 title: Description of the Connection Status dialog box
 description: Describes the Connection Status dialog box in the June 26, 2012, hotfix packages for Outlook 2007 and Outlook 2010.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
