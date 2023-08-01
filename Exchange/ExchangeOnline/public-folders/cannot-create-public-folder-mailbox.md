@@ -1,8 +1,8 @@
 ---
 title: Can't create public folder mailbox in Exchange Online
 description: Resolves an issue in which you can't create public folder mailboxes in Exchange Online.
-author: v-trisshores
-ms.author: v-trisshores
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ ms.custom:
   - Exchange Online
   - CSSTroubleshoot
   - CI 166459
-ms.reviewer: haembab, batre, meerak
+ms.reviewer: haembab, batre, meerak, v-trisshores
 appliesto: 
   - Exchange Online
 search.appverid: 

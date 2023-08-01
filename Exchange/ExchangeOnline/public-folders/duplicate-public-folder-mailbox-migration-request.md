@@ -1,8 +1,8 @@
 ---
 title: Duplicate public folder mailbox migration request
 description: Fixes an issue in which you can't remove a failed public folder mailbox migration request because it's orphaned or a duplicate.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

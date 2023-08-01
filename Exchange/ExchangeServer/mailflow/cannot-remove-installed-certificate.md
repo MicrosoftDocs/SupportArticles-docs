@@ -1,8 +1,8 @@
 ---
 title: Can't remove a certificate that's installed in Exchange Server
 description: Provides a resolution for an error that occurs when you try to remove a certificate that's installed in Exchange Server.
-author: v-trisshores
-ms.author: v-trisshores
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ ms.custom:
   - CI 170888
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: dugolini, arindamt, batre, meerak
+ms.reviewer: dugolini, arindamt, batre, meerak, v-trisshores
 appliesto:
   - Exchange Server 2019
   - Exchange Server 2016

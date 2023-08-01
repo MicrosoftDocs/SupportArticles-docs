@@ -1,13 +1,13 @@
 ---
 title: Version error when you install Exchange Server in RecoverServer mode
 description: Provides a resolution for a version error that you encounter when you install Exchange Server in RecoverServer mode.
-author: v-trisshores
-ms.author: v-trisshores
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
-ms.reviewer: batre, ninob, meerak
+ms.reviewer: batre, ninob, meerak, v-trisshores
 ms.custom:
   - CI 171721
   - Exchange Server

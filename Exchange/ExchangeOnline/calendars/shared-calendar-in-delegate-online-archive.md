@@ -1,8 +1,8 @@
 ---
 title: Shared calendar appears in a delegate's Online Archive folder
 description: Provides a workaround for an issue in which Outlook displays a shared calendar in a delegate's Online Archive folder.
-author: v-trisshores
-ms.author: v-trisshores
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ ms.custom:
   - Exchange Online
   - CSSTroubleshoot
   - CI 173134
-ms.reviewer: benwinz, tylewis, meerak
+ms.reviewer: benwinz, tylewis, meerak, v-trisshores
 appliesto:
   - Exchange Online
   - Outlook on the web

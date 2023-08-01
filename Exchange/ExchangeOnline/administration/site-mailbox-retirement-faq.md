@@ -1,8 +1,8 @@
 ---
 title: Site mailbox retirement FAQs
 description: Lists frequently asked questions about the retirement of site mailboxes.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

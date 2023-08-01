@@ -1,8 +1,8 @@
 ---
 title: POX Autodiscover not supported with OAuth client credentials grant
 description: Resolves error 500 when you try to use the Plain Old XML (POX) Autodiscover service together with the OAuth 2.0 client credentials grant.
-author: v-lianna
-ms.author: v-lianna
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ ms.custom:
   - Exchange Online
   - CI
   - CSSTroubleshoot
-ms.reviewer: mhaque, meerak, desingh, danab, v-kwaddo, danba, dechiang
+ms.reviewer: mhaque, meerak, desingh, danab, v-kwaddo, danba, dechiang, v-lianna
 appliesto: 
   - Exchange Online
 search.appverid: MET150

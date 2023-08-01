@@ -1,8 +1,8 @@
 ---
 title: Emails sent to Poison queue with Unable to reserve MSAM error
 description: Fixes an issue in which you receive the Unable to reserve MSAM for file parsing error message when email messages are sent to the Poison queue.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

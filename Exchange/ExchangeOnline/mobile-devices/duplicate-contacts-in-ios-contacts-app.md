@@ -1,8 +1,8 @@
 ---
 title: Duplicate Outlook contacts appear in iOS Contacts app
 description: Describes a known issue in which duplicate Outlook contacts might appear in the native iOS Contacts app if the Save Contacts setting is enabled.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,8 +1,8 @@
 ---
 title: Can't delete a mail-enabled public folder
 description: Fixes an issue in which you can't delete a public folder from Outlook clients because the public folder is mail-enabled.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

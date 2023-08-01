@@ -1,8 +1,8 @@
 ---
 title: Can't send emails to a mail-enabled public folder
 description: Fixes an issue in which you can't send email to a mail-enabled public folder after you complete a public folder migration from Exchange Server on-premises to Exchange Online.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

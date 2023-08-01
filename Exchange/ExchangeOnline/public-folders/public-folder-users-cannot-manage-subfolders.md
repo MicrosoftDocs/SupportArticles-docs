@@ -1,8 +1,8 @@
 ---
 title: Public folder users can't rename, move, or delete subfolders
 description: Provides workarounds for an issue in which users can't rename, move, or delete subfolders that they create in a public folder.
-author: v-trisshores
-ms.author: v-trisshores
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ ms.custom:
   - Exchange Online
   - CSSTroubleshoot
   - CI 172447
-ms.reviewer: batre, meerak
+ms.reviewer: batre, meerak, v-trisshores
 appliesto: 
   - Exchange Online
   - Exchange Online via Office 365 E Plans

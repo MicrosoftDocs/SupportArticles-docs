@@ -1,8 +1,8 @@
 ---
 title: Self-help diagnostics for issues in Exchange Online and Outlook
 description: Lists diagnostics to troubleshoot issues in Exchange Online and Outlook.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

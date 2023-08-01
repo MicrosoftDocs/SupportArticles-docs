@@ -1,8 +1,8 @@
 ---
 title: Can't search using Search-Mailbox cmdlet
 description: A retention policy that's applied on a target mailbox affects how the Search-Mailbox cmdlet searches messages from a source mailbox.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
