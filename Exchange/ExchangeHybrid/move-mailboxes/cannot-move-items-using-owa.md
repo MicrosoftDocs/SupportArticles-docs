@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Hybrid
   - CSSTroubleshoot
-ms.reviewer: danielsl
+ms.reviewer: danielsl, v-six
 appliesto: 
   - Exchange Online
   - Exchange Online Archiving
@@ -19,7 +19,6 @@ appliesto:
   - Exchange Server 2010 Service Pack 3
 search.appverid: MET150
 ms.date: 3/31/2022
-ms.reviewer: v-six
 ---
 # Can't move items between on-premises Exchange mailboxes and their cloud-based archive in OWA
 
