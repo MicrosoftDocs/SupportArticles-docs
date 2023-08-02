@@ -1,6 +1,6 @@
 ---
 title: PrimaryName attribute not found for entity
-description: Provides a workaround for the error during solution import - PrimaryName attribute not found for Entity.
+description: Provides a workaround for the error during solution import in Power Apps - PrimaryName attribute not found for Entity.
 ms.reviewer: matp
 ms.date: 08/02/2023
 author: nhelgren
@@ -8,7 +8,7 @@ ms.author: nhelgren
 ---
 # "PrimaryName attribute not found for entity" error occurs during solution import
 
-This article provides a workaround for an error that occurs when you import a solution.
+This article provides a workaround for an error that occurs when you [import a solution](/power-apps/maker/data-platform/import-update-export-solutions) in Power Apps.
 
 _Applies to:_ &nbsp; Power Platform, Solutions
 
@@ -20,7 +20,7 @@ When you import a solution, you receive the following error message:
 
 ## Cause
 
-This error occurs when the primary name attribute of a table isn't included in the solution's *.xml* file.
+This error occurs when the [primary name attribute](/power-apps/developer/data-platform/entity-metadata#primary-name) of a table isn't included in the solution's *.xml* file.
 
 ## Workaround
 
