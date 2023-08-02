@@ -60,7 +60,7 @@ For an example of an application that could potentially exhibit this behavior, s
 The amount of memory allocated to store a request in SQL Server depends on:
 
 - The batch size (number of RPCs per request).
-
+- The number of parameters. 
 - The type of parameters.
 
 For certain types of parameters (for example, [sql_variant](/sql/t-sql/data-types/sql-variant-transact-sql)), SQL Server can save the requests in memory in a potentially inefficient manner. When a client sends a large batch of requests that use these types of parameters, multiple RPCs can be sent in one request. In this scenario, the server accumulates the whole request in memory before it's executed. This could potentially lead to the 701 error discussed in [Symptoms](#symptoms).
