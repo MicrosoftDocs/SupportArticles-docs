@@ -11,7 +11,7 @@ ms.service: azure-devops-server
 
 This article provides information about the processes and folders that may have to be excluded from antivirus scanning on computers that are running Team Foundation Server (TFS), Azure DevOps Server or self-hosted agents of Azure DevOps Services. It also provides links to Microsoft Knowledge Base articles that discuss antivirus exclusions that may be defined on servers hosting deployments of Microsoft SQL Server and SharePoint Server that have been integrated with Azure DevOps Server.
 
-_Original product version:_ &nbsp; Microsoft Team Foundation Server, Azure DevOps Server
+_Original product version:_ &nbsp; Microsoft Team Foundation Server, Azure DevOps Server    
 _Original KB number:_ &nbsp; 2636507
 
 ## Symptoms
