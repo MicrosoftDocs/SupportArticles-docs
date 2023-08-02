@@ -1,6 +1,6 @@
 ---
 title: Maximum row size exceeds the allowed maximum
-description: Provides a workaround for the error during solution import - Maximum row size exceeds the allowed maximum.
+description: Provides a workaround for the error during solution import in Power Apps - Maximum row size exceeds the allowed maximum.
 ms.reviewer: matp
 ms.date: 08/02/2023
 author: nhelgren
@@ -8,7 +8,7 @@ ms.author: nhelgren
 ---
 # Maximum row size exceeds the allowed maximum during solution import
 
-This article provides a workaround for an error that occurs when you import a solution.
+This article provides a workaround for an error that occurs when you [import a solution](/power-apps/maker/data-platform/import-update-export-solutions) in Power Apps.
 
 _Applies to:_ &nbsp; Power Platform, Solutions
 
