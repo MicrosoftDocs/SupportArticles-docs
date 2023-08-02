@@ -1,37 +1,39 @@
 ---
 title: Maximum row size exceeds the allowed maximum
-description: Describes an issue where the message Maximum row size exceeds the allowed maximum occurs during solution import.
+description: Provides a workaround for the error during solution import - Maximum row size exceeds the allowed maximum.
 ms.reviewer: matp
-ms.topic: troubleshooting
-ms.date: 08/01/2023
+ms.date: 08/02/2023
 author: nhelgren
 ms.author: nhelgren
 ---
-# Maximum row size exceeds the allowed maximum
+# Maximum row size exceeds the allowed maximum during solution import
+
+This article provides a workaround for an error that occurs when you import a solution.
 
 _Applies to:_ &nbsp; Power Platform, Solutions
 
 ## Symptoms
 
-During a solution import that includes columns that aren't already present in a target table, the following information is included in an error:
+When you import a solution that contains columns not present in the target table, you receive the following error message:
 
 > Exception type: System.ServiceModel.FaultException`1[Microsoft.Xrm.Sdk.OrganizationServiceFault]
 Creating or altering table [table name] failed because the minimum row size would be 8070, including 1287 bytes of internal overhead. This exceeds the maximum allowable table row size of 8060 bytes.
 
 ## Cause
 
-SQL has a hard row limit of 8060 bytes per row. Each column consumes some of this space, the size varies by data type.
+SQL Server has a row limit of 8,060 bytes per row, and the size consumed by each column varies by data type.
 
 ## Workaround
 
-This limit can't be extended. You have to remove columns in order to successfully import.
+The row limit can't be extended. To work around this issue, you have to remove the columns for the import to succeed.
 
-The following include estimated total columns and size for various data types:
+Here are the estimated total columns and sizes for various data types:
 
-- Choices columns: 4 bytes.
-- Date and Time: 8 bytesID 20 bytes + more depending on unicode values.
-- Lookups: Two to three columns each consuming 16 bytes or more depending on unicode values are added for each lookup depending on if it's a standard lookup or custom polymorphic lookup.
-- Image: Two columns are used one for the image and one for the thumbnail, size may vary depending on pointer size and thumbnail.
-- File: Varies depending on pointer size.
-- Currency: Consumes between two to four columns depending on the decimal conversion. Number of bytes vary depending on the decimal conversion.
+- Choice column: 4 bytes.
+- Date and time: 8 bytes.
+- ID: 20 bytes or more, depending on the Unicode values.
+- Lookup: Two to three columns are added for each lookup, consuming 16 bytes or more, depending on the Unicode values. The number of columns depends on whether it's a standard lookup or a custom polymorphic lookup.
+- Image: Two columns are used, one for images and one for thumbnails. The size may vary depending on the pointer size and thumbnails.
+- File: The size varies depending on the pointer size.
+- Currency: Depending on the decimal conversion, it consumes two to four columns. The number of bytes varies depending on the decimal conversion.
 - Multiline text: Up to 24 bytes.
