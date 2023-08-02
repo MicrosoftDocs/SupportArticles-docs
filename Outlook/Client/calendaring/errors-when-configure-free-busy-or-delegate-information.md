@@ -128,13 +128,13 @@ Follow these steps:
     1. Double-click **Freebusy Data**.
     1. In the upper pane, find the item with the Subject of **LocalFreebusy**. Right-click it, and then select **Delete message**.
     1. For Deletion style, select **Permanent delete passing DELETE_HARD_DELETE (unrecoverable)**, and then select **OK**.
-1. Expand **Top of Information Store** and highlight **Inbox**
-1. Click on **Actions** dropdown from top menu bar, select **Other tables** and **Rules table**
+1. Expand **Top of Information Store** and highlight **Inbox**.
+1. Click on **Actions** dropdown from top menu bar, select **Other tables** and **Rules table**.
 1. Select the Schedule+ EMS Interface (Delegate rule) and delete it. 
 1. Close all the MFCMAPI windows.
 
 > [!NOTE]
-> You may need to manually remove and re-add the delegate(s) in Outlook by navigating to **File**| **Account settings** | **Delegate Access** 
+> You may need to manually remove and re-add the delegate(s) in Outlook by navigating to **File**| **Account settings** | **Delegate Access**. 
 
 
 ### Reconfigure delegates permissions and direct booking
