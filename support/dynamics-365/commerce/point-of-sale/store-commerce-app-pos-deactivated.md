@@ -7,7 +7,11 @@ ms.date: 07/31/2023
 ---
 # Dynamics 365 Commerce Store Commerce app is suddenly deactivated
 
-After you start the Microsoft Dynamics 365 Commerce [Store Commerce app (POS)](/dynamics365/commerce/dev-itpro/store-commerce), its status always shows **De-activated**. Additionally, the Store Commerce app prompts the user to complete the activation process. This article helps you self-diagnose the cause and provides resolutions, respectively.
+This article helps you diagnose and resolve issues that may cause the Store Commerce app (POS) to be deactivated.
+
+## Symptoms
+
+After you start the Microsoft Dynamics 365 Commerce [Store Commerce app (POS)](/dynamics365/commerce/dev-itpro/store-commerce), its status always shows **De-activated**. Additionally, the Store Commerce app prompts you to complete the activation process.
 
 ## Prerequisites
 
