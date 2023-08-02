@@ -288,6 +288,9 @@
     - name: Troubleshoot missing graphic icons
       href: development-website/troubleshoot-missing-graphic-icons.md
 
+    - name: Troubleshoot Internet Explorer Zonemapping failures
+      href: development-website/troubleshoot-ie-zonemapping-process-group-policy.md
+
     - name: Text-overlow ellipsis not working
       href: development-website/textoverlow-ellipsis-not-working.md
 
