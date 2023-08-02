@@ -47,14 +47,14 @@ TFS, Azure DevOps Server:
   - On the server: _C:\Users\\<ServiceAccountName\>\AppData\Local\Microsoft\Azure DevOps\\<VersionNumber\>\Cache_
   - On the client: _C:\Users\\<UserName\>\AppData\Local\Microsoft\Azure DevOps\\<VersionNumber\>\Cache_
 - The `TFSJobAgent.exe` process that is typically located at:
-   - %ProgramFiles%\Microsoft Team Foundation Server \<VersionNumber\>\Application Tier\TFSJobAgent\TFSJobAgent.exe (for TFS)
-   - %ProgramFiles%\Azure DevOps Server \<VersionNumber\>\Application Tier\TFSJobAgent\TFSJobAgent.exe (for Azure DevOps Server)
+   - _%ProgramFiles%\Microsoft Team Foundation Server \<VersionNumber\>\Application Tier\TFSJobAgent\TFSJobAgent.exe_ (for TFS)
+   - _%ProgramFiles%\Azure DevOps Server \<VersionNumber\>\Application Tier\TFSJobAgent\TFSJobAgent.exe_ (for Azure DevOps Server)
 
 Azure DevOps Server, Azure DevOps Services (self-hosted agents):
 
 - Pipeline agent folders
 - `TFSbuildServicehost.exe` process for XAML builds
-- Processes for vNext builds like `Agent.Listener.exe`, `Agent.Worker.exe` and `AgentService.exe`
+- Processes for vNext builds like _Agent.Listener.exe_, _Agent.Worker.exe_, and _AgentService.exe_
 - Self-Hosted Agent folders like _\Builds, \Symbols, \Drop, \bin, \_diag, \_work_
 - _%ProgramFiles%\Microsoft Visual Studio \<VersionNumber\>_
 - _C:\Windows\Microsoft.NET\Framework_
@@ -65,12 +65,12 @@ Azure DevOps Server, Azure DevOps Services (self-hosted agents):
 
 For better performance of source control and other TFS/Azure DevOps Server operations, we recommend adding the Internet Information Services (IIS) worker process (w3wp.exe) to the list of antivirus exclusions. This is not a requirement for TFS/Azure DevOps Server.
 
-The `w3wp.exe` process is typically located at _C:\Windows\System32\inetsrv\w3wp.exe_. You can also locate this process by following these steps:
+The _w3wp.exe_ process is typically located at _C:\Windows\System32\inetsrv\w3wp.exe_. You can also locate this process by following these steps:
 
 1. Make a TFS/Azure DevOps Server web request by connecting to the server using Team Explorer.
 2. On the TFS/Azure DevOps Server application tier or the TFS/Azure DevOps Server proxy machine, open **Task Manager**, and then select the **Details** tab.
-3. In the list of processes that are running, find `w3wp.exe`.
-4. Right-click `w3wp.exe`, and then select **Open file location**.
+3. In the list of processes that are running, find **w3wp.exe**.
+4. Right-click **w3wp.exe**, and then select **Open file location**.
 
 For more information about SQL Server and SharePoint Server folder exclusions, see the following articles:
 
