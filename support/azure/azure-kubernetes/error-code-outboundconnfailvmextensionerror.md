@@ -42,7 +42,8 @@ After you connect to the node, run the `nc` and `dig` commands to test the conne
 nc -vz mcr.microsoft.com 443 
 dig mcr.microsoft.com 443
 ```
-If you're experiencing difficulty accessing the node via Secure Shell Protocol (SSH), you can test the outbound connectivity by using [run-command invoke](/cli/azure/vmss/run-command?view=azure-cli-latest#az-vmss-run-command-invoke) against the Virtual Machine Scale Set (VMSS) instance:
+
+If you're experiencing difficulty accessing the node via SSH, you can test the outbound connectivity by using [run-command invoke](/cli/azure/vmss/run-command?view=azure-cli-latest#az-vmss-run-command-invoke) against the Virtual Machine Scale Set (VMSS) instance:
 
 ``` azurecli
 # Get the VMSS instance IDs:
