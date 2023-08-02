@@ -2,7 +2,7 @@
 title: Troubleshoot common SQL Server cumulative update (CU) installation issues
 description: This article helps you troubleshoot common SQL Server cumulative update issues.
 ms.reviewer: jopilov, v-jayaramanp
-ms.date: 06/30/2023
+ms.date: 07/28/2023
 ms.custom: sap:Connection Issues
 ---
 
@@ -40,8 +40,8 @@ Isolate the error by following these steps:
    1. Go to the subfolder that's named *yyyyMMdd_HHmmss* (for example *20220618_174947*) that corresponds to the reported failure time that you're focusing on. The goal is to examine the feature-specific files, ERRORLOG files, and *Details.txt* file, as necessary.
    1. Go to the \MSSQLSERVER subfolder, and locate the log files that are specific to the feature that failed. For example, *sql_engine_core_inst_Cpu64_1.log*. For upgrade script failures, examine the *SQLServer_ERRORLOG_date_time.txt* files that correspond to the time of the upgrade failure.
    1. Open the *Details.txt* log file, and search on the keyword "Failed." Not every failure is considered critical.
-   
-For more information, see [View and Read SQL Server Setup Log Files](/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files?view=sql-server-ver15&preserve-view=true).
+
+For more information, see [View and Read SQL Server Setup Log Files](/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
 
 In the next few sections, check for a scenario that corresponds to your situation, and then follow the associated troubleshooting steps.
 If there's no matching scenario, look for more pointers in the log files.
@@ -75,7 +75,7 @@ Error: 15151, Severity: 16, State: 1.
 Cannot find the login '##MS_SSISServerCleanupJobLogin##', because it does not exist or you do not have permission.
 ```
 
-This issue may occurs because either the login was dropped manually or these [instructions](/sql/integration-services/catalog/ssis-catalog#backup) are not followed. Follow these steps to solve the issue:
+This issue may occur because either the login was dropped manually or these [instructions](/sql/integration-services/catalog/ssis-catalog#backup) aren't followed. Follow these steps to solve the issue:
 
 1. Start SQL Server with [trace flag 902](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf902).
 1. Recreate the login (server principal) on the server.
@@ -88,34 +88,35 @@ This issue may occurs because either the login was dropped manually or these [in
    CHECK_EXPIRATION=OFF,
    CHECK_POLICY=OFF;
    ```
- 
- 1. Switch to the `SSISDB` database and map the existing user to the newly-created login:
- 
+
+1. Switch to the `SSISDB` database and map the existing user to the newly created login:
+
     ```sql
     USE SSISDB
     GO
     ALTER USER[##MS_SSISServerCleanupJobUser##] WITH LOGIN =[##MS_SSISServerCleanupJobLogin##]
     ```
-  1. Note that in some cases the database user may also be missing. In such cases, recreate the user in the `SSISDB` database and re-run the previous step to map the user to the login:
 
-     ```sql
-     USE [SSISDB]
-     GO
-     DROP USER [##MS_SSISServerCleanupJobLogin##]
-     GO
+1. In some cases, the database user may also be missing. In such cases, recreate the user in the `SSISDB` database and re-run the previous step to map the user to the login:
 
-     CREATE USER [##MS_SSISServerCleanupJobUser##] FOR LOGIN [##MS_SSISServerCleanupJobLogin##]
-     GO
-     
-     ALTER USER [##MS_SSISServerCleanupJobUser##] WITH DEFAULT_SCHEMA=[dbo]
-     GO
+   ```sql
+   USE [SSISDB]
+   GO
+   DROP USER [##MS_SSISServerCleanupJobLogin##]
+   GO
 
-     GRANT EXECUTE ON [internal].[cleanup_server_project_version] TO [##MS_SSISServerCleanupJobUser##]
-     GO
-     GRANT EXECUTE ON [internal].[cleanup_server_retention_window] TO [##MS_SSISServerCleanupJobUser##]
-     GO
-     ```
-     
+   CREATE USER [##MS_SSISServerCleanupJobUser##] FOR LOGIN [##MS_SSISServerCleanupJobLogin##]
+   GO
+   
+   ALTER USER [##MS_SSISServerCleanupJobUser##] WITH DEFAULT_SCHEMA=[dbo]
+   GO
+
+   GRANT EXECUTE ON [internal].[cleanup_server_project_version] TO [##MS_SSISServerCleanupJobUser##]
+   GO
+   GRANT EXECUTE ON [internal].[cleanup_server_retention_window] TO [##MS_SSISServerCleanupJobUser##]
+   GO
+   ```
+
 ### Misconfigured System user/role in msdb database
 
 This section provides steps to resolve a misconfigured system user or role in the `msdb` database.
@@ -178,21 +179,25 @@ Applications such as SQL Server that use Windows Installer technology for the se
 
 ## Setup fails because of incorrect data or log location in registry
 
-The default database and log file paths that you specify during installation are saved in the registry at *HKEY_LOCAL_MACHINE\HKLM\Software\Microsoft\MicrosoftSQL Server\MSSQL{nn}.MyInstance*. When you install a CU or SP, these locations are validated by the Setup process. If the validation fails, you might receive errors that resemble the following messages:
+When you install a CU or SP, if the default data and log folders are invalid, you may receive errors that resemble the following messages:
+
+- `The User Data directory in the registry is not valid. Verify DefaultData key under the instance hive points to a valid directory.`
+
+- `The User Log directory in the registry is not valid. Verify DefaultLog key under the instance hive points to a valid directory.`
 
 - `Error installing SQL Server Database Engine Services Instance Features. The Database Engine system data directory in the registry is not valid.`
-- `The User Log directory in the registry is not valid. Verify DefaultLog key under the instance hive points to a valid directory.`
 
 To fix this issue, follow these steps:
 
 1. Connect to the SQL Server instance by using SQL Server Management Studio (SSMS).
-1. Right-click on SQL Server instance in the Object Browser and choose **Properties**, and select **Database Settings** page on the left side.
-1. Under **Database Default locations**, make sure that `Data` and `Log` are the correct folders.
+1. Right-click the SQL Server instance in **Object Explorer** and select **Properties** > **Database Settings**.
+1. Under **Database Default locations**, make sure that the folders in **Data** and **Log** are correct.
+1. In SQL Server Configuration Manager, select **SQL Server Services**, double-click the affected SQL Server Service, select the **Advanced** tab, and make sure the value of **Data Path** is correct. The value is grayed out and can't be modified from here. However, if you need to correct it, follow Method 2 in [Error that Data or Log directory in the registry is not valid when installing SQL Server Cumulative Update or a Service Pack](user-data-log-directory-invalid.md#method-2-using-registry-editor) to modify **SQLDataRoot** registry entry.
 1. Retry the CU or SP installation.
 
 ## Misconfigured Windows Server Failover Clustering (WSFC) nodes
 
-For smooth functioning and maintenance of a SQL Server Failover Cluster Instance (FCI), follow the best practices that are described in [Before Installing Failover Clustering](/sql/sql-server/failover-clusters/install/before-installing-failover-clustering?view=sql-server-ver15&preserve-view=true) and [Failover Cluster Instance administration & maintenance](/sql/sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance?view=sql-server-ver15&preserve-view=true). If you experience errors when you apply a CU or an SP, check the following conditions:
+For smooth functioning and maintenance of a SQL Server Failover Cluster Instance (FCI), follow the best practices that are described in [Before Installing Failover Clustering](/sql/sql-server/failover-clusters/install/before-installing-failover-clustering) and [Failover Cluster Instance administration & maintenance](/sql/sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance). If you experience errors when you apply a CU or an SP, check the following conditions:
 
 1. Make sure that the **Remote Registry** service is active and running on all nodes of the WSFC cluster.
 1. If the service account for SQL Server isn't an administrator in your Windows cluster, make sure that administrative shares (C$ and so on) are enabled on all the nodes. For more information, see [Overview of problems that may occur when administrative shares are missing](../../../../windows-server/networking/problems-administrative-shares-missing.md). If these shares aren't configured correctly, you might notice one or more of the following symptoms when you try to install a CU or SP:
@@ -206,7 +211,7 @@ For smooth functioning and maintenance of a SQL Server Failover Cluster Instance
 - For a complete list of currently available updates for your SQL Server version and download locations, see [Determine the version, edition, and update level - SQL Server](../../../releases/download-and-install-latest-updates.md).
 - For more information about supportability and servicing timelines for your SQL Server version, see [Microsoft Product Lifecycle Page](/lifecycle/products/?terms=sql).
 - For information about servicing models for different versions of SQL Server, see [Incremental Servicing Model for SQL Server Updates](https://support.microsoft.com/topic/an-incremental-servicing-model-is-available-from-the-sql-server-team-to-deliver-hotfixes-for-reported-problems-6209f7b4-20a5-1a45-5042-5df411263e8b) and [Modern Servicing Model for SQL 2017 and later versions](/archive/blogs/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server).
-- For general information about how to update SQL Server, see [Install SQL Server Servicing Updates](/sql/database-engine/install-windows/install-sql-server-servicing-updates?view=sql-server-ver15&preserve-view=true).
+- For general information about how to update SQL Server, see [Install SQL Server Servicing Updates](/sql/database-engine/install-windows/install-sql-server-servicing-updates).
 - For information about security updates for SQL Server and other products, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
-- For information about the standard terminology that's associated with Microsoft updates, see [Description of the standard terminology that is used to describe Microsoft software updates](/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server?view=sql-server-ver15&preserve-view=true).
+- For information about the standard terminology that's associated with Microsoft updates, see [Description of the standard terminology that is used to describe Microsoft software updates](/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server).
 - To resolve setup issues that might occur in highly secure environments, see [SQL Server installation fails if the Setup account doesn't have certain user rights](installation-fails-if-remove-user-right.md).
