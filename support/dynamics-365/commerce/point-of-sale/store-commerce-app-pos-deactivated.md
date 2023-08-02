@@ -19,7 +19,7 @@ When the Store Commerce app is activated, a device token is issued and stored in
 
 #### Resolution: Check the device token settings in Commerce headquarters
 
-1. Sign in to **Commerce HQ** > ** Modules** > **Retail and Commerce** > **HQ Setup** > **Parameters** > **Commerce Shared Parameters**.
+1. Sign in to **Commerce HQ** > **Modules** > **Retail and Commerce** > **HQ Setup** > **Parameters** > **Commerce Shared Parameters**.
 2. Select the **Security** tab.
 3. Review the value in the **Device token lifetime** field.
 
@@ -67,7 +67,7 @@ If you activate the Store Commerce app using an InPrivate window in a browser, i
 
 #### Resolution: Check the browser settings and extensions
 
-To solve this issue, check your browser's settings and extensions to make sure they don't clear the browser history when you close the web browser or tab.
+Check your browser's settings and extensions to make sure they don't clear the browser history when you close the web browser or tab.
 
 ## Reference
 
