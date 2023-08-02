@@ -1,6 +1,6 @@
 ---
 title: An entitykey with the selected attributes already exists
-description: Provides a workaround for the error during solution import - An entitykey with the selected attributes already exists on entity.
+description: Provides a workaround for the error during solution import in Power Apps - An entitykey with the selected attributes already exists on entity.
 ms.reviewer: matp
 ms.date: 08/02/2023
 author: nhelgren
@@ -8,7 +8,7 @@ ms.author: nhelgren
 ---
 # "An entitykey with the selected attributes already exists" error occurs during solution import
 
-This article provides a workaround for an error that occurs when you import a solution.
+This article provides a workaround for an error that occurs when you [import a solution](/power-apps/maker/data-platform/import-update-export-solutions) in Power Apps.
 
 _Applies to:_ &nbsp; Power Platform, Solutions
 
