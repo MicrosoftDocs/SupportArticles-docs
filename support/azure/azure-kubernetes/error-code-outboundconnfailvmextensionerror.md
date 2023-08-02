@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot the OutboundConnFailVMExtensionError error code (50)
 description: Learn how to troubleshoot the OutboundConnFailVMExtensionError error (50) when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
-ms.date: 3/22/2022
+ms.date: 08/02/2023
 editor: v-jsitser
 ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis
 ms.service: azure-kubernetes-service
@@ -41,7 +41,7 @@ nc -vz mcr.microsoft.com 443
 dig mcr.microsoft.com 443
 ```
 
-If you're experiencing difficulty accessing the node via SSH, you can test the outbound connectivity by using [run-command invoke](/cli/azure/vmss/run-command?view=azure-cli-latest#az-vmss-run-command-invoke) against the Virtual Machine Scale Set (VMSS) instance:
+If you're experiencing difficulty accessing the node via SSH, you can test the outbound connectivity by using [run-command invoke](/cli/azure/vmss/run-command#az-vmss-run-command-invoke) against the Virtual Machine Scale Set (VMSS) instance:
 
 ``` azurecli
 # Get the VMSS instance IDs:
