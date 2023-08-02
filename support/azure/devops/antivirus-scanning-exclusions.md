@@ -31,9 +31,9 @@ Target files will be locked when the antivirus software is scanning. Builds may 
 ## Exclusion list
 
 > [!WARNING]
-> Excluding a file or process from antivirus scanning could make your device or data more vulnerable. You should evaluate the risks and use discretion when implementing exclusions, and only exclude files that you're confident are safe.
+> Excluding a file or process from antivirus scanning could make your device or data more vulnerable. You should evaluate the risks and use discretion when implementing exclusions, and only exclude files that you are confident are safe.
 
-If you encounter the issue described previously, you might have to configure your antivirus software to exclude the following processes, folders and their sub-folders from antivirus scanning.
+If you encounter the issue described previously, you might have to configure your antivirus software to exclude the following processes, folders, and their sub-folders from antivirus scanning.
 
 TFS, Azure DevOps Server:
 
@@ -46,7 +46,7 @@ TFS, Azure DevOps Server:
 - TFS/Azure DevOps Server cache folder
   - On the server: _C:\Users\\<ServiceAccountName\>\AppData\Local\Microsoft\Azure DevOps\\<VersionNumber\>\Cache_
   - On the client: _C:\Users\\<UserName\>\AppData\Local\Microsoft\Azure DevOps\\<VersionNumber\>\Cache_
-- `TFSJobAgent.exe` process that is typically located at
+- `TFSJobAgent.exe` process that is typically located at:
    - %ProgramFiles%\Microsoft Team Foundation Server <VersionNumber>\Application Tier\TFSJobAgent\TFSJobAgent.exe (for TFS)
    - %ProgramFiles%\Azure DevOps Server <VersionNumber>\Application Tier\TFSJobAgent\TFSJobAgent.exe (for Azure DevOps Server)
 
