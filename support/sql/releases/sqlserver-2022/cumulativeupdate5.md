@@ -3,8 +3,7 @@ title: Cumulative update 5 for SQL Server 2022 (KB5026806)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 5 (KB5026806).
 ms.date: 06/15/2023
 ms.custom: KB5026806
-author: Elena068
-ms.author: v-qianli2
+ms.reviewer: v-qianli2
 appliesto:
 - SQL Server 2022 on Windows
 - SQL Server 2022 on Linux

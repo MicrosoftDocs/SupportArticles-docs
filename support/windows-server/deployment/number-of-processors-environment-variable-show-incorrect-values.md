@@ -1,15 +1,13 @@
 ---
 title: The %NUMBER_OF_PROCESSORS% environment variable may show incorrect values
 description: Helps resolve the issue in which the %NUMBER_OF_PROCESSORS% environment variable may show incorrect values on systems with more than 64 logical processors.
-ms.date: 06/30/2023
-author: v-lianna
-ms.author: v-lianna
+ms.date: 08/01/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika, stevepar, praveenr
+ms.reviewer: kaushika, stevepar, praveenr, v-lianna
 ms.custom: sap:devices-and-drivers, csstroubleshoot
 ms.technology: windows-server-deployment
 ---
@@ -35,7 +33,7 @@ If an application requires to run on more than 64 processors by using multiple g
 
 ## Update the system to Windows 11 or Windows Server 2022
 
-You can update the system to Windows 11 or Windows Server 2022. Starting with Windows 11 and Windows Server 2022, on machines with more than 64 processors, the processes and their threads span all processors in the system across multiple groups by default.
+You can update the system to Windows 11 or Windows Server 2022. Starting with Windows 11 and Windows Server 2022, on machines with more than 64 processors, the processes and their threads span all processors in the system across multiple groups by default. Additionally, starting with Windows 11, version 22H2, the `%NUMBER_OF_PROCESSORS%` environment variable reflects the total number of processors on the system, even if they are spread across multiple processor groups.
 
 ## Set application thread affinities to the desired groups
 

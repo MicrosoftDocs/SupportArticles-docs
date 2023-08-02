@@ -2,9 +2,7 @@
 title: Troubleshooting problems with Microsoft Web Platform Installer
 description: This article helps you resolve problems with troubleshooting with Microsoft Web Platform Installer. 
 ms.date: 03/18/2009
-author: padmajayaraman
-ms.author: v-jayaramanp
-ms.reviewer: riande, johnhart
+ms.reviewer: riande, johnhart, v-jayaramanp
 ms.topic: troubleshooting
 ---
 
@@ -14,17 +12,17 @@ _Applies to:_ &nbsp; Internet Information Services 7.0, Internet Information Ser
 
 ## Introduction
 
-Microsoft® Web Platform Installer (Web PI) makes it simple to download and install the latest Microsoft® Web Platform components, including Internet Information Services (IIS), Microsoft® SQL Server® 2008/R2 Express, Microsoft® ASP.NET Model View Controller (MVC3), and Microsoft® Visual Web Developer 2008/SP1 Express Edition. Web PI also helps to install popular Web applications such as WordPress, DasBlog, or Silverstripe. This article presents some troubleshooting advice for issues that may arise with Microsoft Web PI.
+Microsoft&reg; Web Platform Installer (Web PI) makes it simple to download and install the latest Microsoft&reg; Web Platform components, including Internet Information Services (IIS), Microsoft&reg; SQL Server&reg; 2008/R2 Express, Microsoft&reg; ASP.NET Model View Controller (MVC3), and Microsoft&reg; Visual Web Developer 2008/SP1 Express Edition. Web PI also helps to install popular Web applications such as WordPress, DasBlog, or Silverstripe. This article presents some troubleshooting advice for issues that may arise with Microsoft Web PI.
 
 Web PI runs on the following operating systems:
 
-- Windows Server® 2008 and Windows Server® 2008 R2
-- Windows® XP Professional Edition Service Pack 3
-- Windows Server® 2003 SP2
-- Windows Vista® SP 1
-- Windows® 7
+- Windows Server&reg; 2008 and Windows Server&reg; 2008 R2
+- Windows&reg; XP Professional Edition Service Pack 3
+- Windows Server&reg; 2003 SP2
+- Windows Vista&reg; SP 1
+- Windows&reg; 7
 
-While it's possible to install Web PI on Windows® XP Home Edition, this operating system version doesn't include IIS. Web PI is therefore not supported on Windows XP Home Edition.
+While it's possible to install Web PI on Windows&reg; XP Home Edition, this operating system version doesn't include IIS. Web PI is therefore not supported on Windows XP Home Edition.
 
 Web PI tasks can be divided into three phases:
 
@@ -34,9 +32,9 @@ Web PI tasks can be divided into three phases:
 
 Web PI helps you install products using one of three technologies:
 
-- Windows® operating system components (for example, IIS) - Web PI uses Windows operating system [tools and interfaces](https://technet.microsoft.com/library/cc776554(WS.10).aspx) such as [PKGMGR](https://technet.microsoft.com/library/cc749302(WS.10).aspx).
-- Non-operating system platform components, (for example, SQL Server 2008/R2 Express) - Web PI uses the Windows® Installer technology (also known as MSI).
-- Web applications (for example, WordPress, Silverstripe, or DasBlog) - Web PI uses the Microsoft® Web Deployment Tool.
+- Windows&reg; operating system components (for example, IIS) - Web PI uses Windows operating system [tools and interfaces](https://technet.microsoft.com/library/cc776554(WS.10).aspx) such as [PKGMGR](https://technet.microsoft.com/library/cc749302(WS.10).aspx).
+- Non-operating system platform components, (for example, SQL Server 2008/R2 Express) - Web PI uses the Windows&reg; Installer technology (also known as MSI).
+- Web applications (for example, WordPress, Silverstripe, or DasBlog) - Web PI uses the Microsoft&reg; Web Deployment Tool.
 
 ## Problems with Visual Web Developer 2010 or Visual Studio 2010 SP1 install
 
@@ -50,7 +48,7 @@ Most common problems during the Web PI Launch phase involve connectivity. Web PI
 
 ### Unable to download Web Platform error message
 
-- **Behind Proxy**: If the computer is behind a proxy, ensure that the proxy settings for Windows® Internet Explorer® are set correctly and retry accessing the URL through Internet Explorer and then through Web PI.  
+- **Behind Proxy**: If the computer is behind a proxy, ensure that the proxy settings for Windows&reg; Internet Explorer&reg; are set correctly and retry accessing the URL through Internet Explorer and then through Web PI.  
 - **Behind Firewalls**: When third-party firewalls are installed on the computer, try disabling them before launching Web PI. You can also add exceptions for *WebpiLauncher.exe* and *WebPlatformInstaller.exe* to the firewall settings. If the issue isn't resolved, it should be possible to fix the problem by following the steps described in [How to troubleshoot network connectivity problems in Internet Explorer](https://support.microsoft.com/kb/936211).
 
 If the URL can be accessed in Internet Explorer but not through Web PI, use [Fiddler](http://www.fiddlertool.com/fiddler/ "Fiddler Web Debugger"), a Web debugger that monitors which HTTP requests are made from a computer.
@@ -71,7 +69,7 @@ Operating system components, such as IIS, are installed with Windows setup techn
 
 **Windows Vista, Windows 7, Windows Server 2008, and Windows Server 2008 R2**
 
-Operating system components on Windows Vista, Windows 7, Windows Server 2008, and Windows Server 2008 R2 use component-based setup. The log file for operating system components is stored in the `%windir%\logs\cbs` directory. You can open it with the command:
+Operating system components on Windows Vista, Windows 7, Windows Server 2008, and Windows Server 2008 R2 use component-based setup. The log file for operating system components is stored in the *%windir%\logs\cbs* directory. You can open it with the folowing command:
 
 ```Console
 notepad %windir%\logs\cbs\cbs.log
@@ -79,7 +77,7 @@ notepad %windir%\logs\cbs\cbs.log
 
 For more information, see [Optional Component Setup Log Diagnoser](https://technet.microsoft.com/library/cc732334.aspx).
 
-IIS 7.0 (Windows Vista and Windows Server 2008) and IIS 7.5 (Windows 7 and Windows Server 2008 R2) setup generates a separate setup log file, located in the `%windir%` directory. You can open this log file with the command:
+IIS 7.0 (Windows Vista and Windows Server 2008) and IIS 7.5 (Windows 7 and Windows Server 2008 R2) setup generates a separate setup log file, located in the `%windir%` directory. You can open this log file with the following command:
 
 ```Console
 notepad %windir%\iis7.log
@@ -87,17 +85,17 @@ notepad %windir%\iis7.log
 
 ### Products installed using Windows Installer (MSI) technology
 
-You can use the [Windows Installer technology](https://msdn.microsoft.com/library/aa371366(VS.85).aspx) for Web platform components such as Microsoft® SQL Server® and Visual Web Developer 2008 Express Edition. To look at the logs, open Internet Explorer and type the following into the address bar:
+You can use the [Windows Installer technology](https://msdn.microsoft.com/library/aa371366(VS.85).aspx) for Web platform components such as Microsoft&reg; SQL Server&reg; and Visual Web Developer 2008 Express Edition. To look at the logs, open Internet Explorer and type the following path in the address bar:
 
 ```Console
 %localappdata%\Microsoft\Web Platform Installer\logs\install
 ```
 
-Web PI also displays a link to the log file that failed in the summary screen. For more information,  see the [detailed description of Windows Installer error codes](https://msdn.microsoft.com/library/aa372835(VS.85).aspx).
+Web PI also displays a link to the log file that failed in the summary screen. For more information, see the [detailed description of Windows Installer error codes](https://msdn.microsoft.com/library/aa372835(VS.85).aspx).
 
 ### Products installed using the Microsoft Web Deployment Tool technology
 
-The Web Deployment tool offers a way for Web applications to join the Web PI ecosystem by adding a few manifest files to an existing compressed file (Zip) package. Web PI calls the Web Deployment tool and installs the Web application on an IIS Web site. The Web Deployment Tool technology is used for all Web applications found in the Windows Web App Gallery. Note that the Web Deployment Tool logs all its information into a file named *x86_msdeploy.txt* (32-bit system) or *x64_msdeploy.txt* (64-bit system).
+The Web Deployment tool offers a way for Web applications to join the Web PI ecosystem by adding a few manifest files to an existing compressed file (Zip) package. Web PI calls the Web Deployment tool and installs the Web application on an IIS Web site. The Web Deployment Tool technology is used for all Web applications found in the Windows Web App Gallery. Note that the Web Deployment tool logs all its information into a file named *x86_msdeploy.txt* (32-bit system) or *x64_msdeploy.txt* (64-bit system).
 
 ### Known issues
 
@@ -110,15 +108,15 @@ If IIS is configured for Shared Configuration, Web PI can't install most additio
 ### Issues during application installation using Web PI
 
 - **Web PI does not automatically create physical directories when an application is installed to a new site**.
- Create the directory manually or use the '...' button next to the Physical path text box to create a new folder.
+ Create the directory manually or use the '...' button next to the **Physical path** text box to create a new folder.
 - **Web PI requires password fields to be filled in and does not allow them to be empty**.
- If an application allows an empty password, the password does not work when the application is installed in Web PI.
+ If an application allows an empty password, the password doesn't work when the application is installed in Web PI.
 
 ### Issues with Microsoft SQL Server during application installation
 
 - **Applications do not work without SQL "Mixed mode authentication."**
 
-    For most Web applications, SQL Server user accounts are required in order to access a database. If only integrated or Windows authentication for SQL Server are selected, you cannot install some of the applications in the gallery.
+    For most Web applications, SQL Server user accounts are required in order to access a database. If only integrated or Windows authentication for SQL Server are selected, you can't install some of the applications in the gallery.
 
 - **SQL Server passwords are not accepted if they do not meet strength requirements**.
 
@@ -132,17 +130,9 @@ If IIS is configured for Shared Configuration, Web PI can't install most additio
   
   Check the SQL Server log files in the following directory for more information:  
 
-  > "%programfiles%\microsoft sql server\100\setup bootstrap\log"
+   *%programfiles%\microsoft sql server\100\setup bootstrap\log*
 
   For information on how to troubleshoot SQL issues, see [View and Read SQL Server Setup Log Files](/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
-
-- **Custom Installation of SQL Server**  
-
-  For customers who want to customize their SQL Server install outside of Web PI, see <https://blogs.msdn.com/sqlexpress/archive/2009/06/15/installing-sql-server-2008-guidance.aspx>.
-
-### Issues with Visual Web Developer installation
-
-- The following link is a troubleshooting guide for failures during Visual Web Developer Installations <https://blogs.msdn.com/astebner/archive/2007/07/31/4156781.aspx>.
 
 ## Additional troubleshooting tools, tips, and tricks
 
@@ -196,7 +186,7 @@ The trace file called *WebPI.log* file is also written to the *%programfiles%\Mi
 
 ### Cleaning the Web PI Cache
 
-Web PI is caching the product catalog and other files to optimize startup time. If the product catalog seems to be outdated or if incorrect data is displayed in Web PI, delete the cache with:
+Web PI caches the product catalog and other files to optimize startup time. If the product catalog seems to be outdated or if incorrect data is displayed in Web PI, delete the cache using the following command:
 
 ```Console
 del /q "%localappdata%\Microsoft\web platform installer\*"
@@ -204,4 +194,4 @@ del /q "%localappdata%\Microsoft\web platform installer\*"
 
 ## Additional help
 
-If you have exhausted the troubleshooting tips and tricks in this article and are still having problems, visit the Web Platform Installer forum at <https://forums.iis.net/1155.aspx>.
+If you have exhausted the troubleshooting tips and tricks in this article and are still having problems, visit the [Web Platform Installer forum](https://forums.iis.net/1155.aspx).

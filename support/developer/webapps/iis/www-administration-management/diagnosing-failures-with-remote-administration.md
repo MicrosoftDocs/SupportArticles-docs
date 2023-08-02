@@ -2,9 +2,7 @@
 title: Diagnosing failures with remote administration
 description: This article lists the failure messages you see while using RemoteMgr. 
 ms.date: 02/14/2008
-author: padmajayaraman
-ms.author: v-jayaramanp
-ms.reviewer: nitashv, sudixi
+ms.reviewer: nitashv, sudixi, v-jayaramanp
 ---
 
 # Diagnosing failures with remote administration
@@ -35,7 +33,7 @@ Make sure that the port 8172 (the one on which WMSvc is running) has SSL certifi
 
 Here's a sample output:
 
-```Console
+```output
 c:\>netsh http show sslcert 
 SSL Certificate bindings:
 -------------------------
@@ -53,6 +51,7 @@ Ctl Store Name          : (null)
 DS Mapper Usage    : Disabled
 Negotiate Client Certificate    : Disabled
 ```
+
 Then run the following command:
 
 ```Console
@@ -63,7 +62,7 @@ Make sure that the URL `https://*:8172/` (the port on which WMSvc is configured 
   
 Here's a sample output:
 
-```Console
+```output
 c:\>netsh http show urlacl
 
 URL Reservations:
@@ -107,7 +106,7 @@ Make sure the server uses a trusted root certificate for WMSvc. Create a trusted
 
 ## Additional help
 
-If the previous resolutions don't help, capture the exception and call stack using the steps below. Then post the issue on the [IIS.NET forums](https://forums.iis.net/) and include the *eventvwr.msc* log along with exception and call stack.
+If the previous resolutions don't help, capture the exception and call stack using the following steps. Then post the issue on the [IIS.NET forums](https://forums.iis.net/) and include the *eventvwr.msc* log along with exception and call stack.
 
 Here are steps on how to get the exception and call stack:
 

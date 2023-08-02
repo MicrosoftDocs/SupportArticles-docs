@@ -1,7 +1,7 @@
 ---
 title: Solution checker enforcement in Managed Environments (preview) blocks or warns on import
 description: Describes an issue in which importing solutions fails due to solution checker enforcement and provides resolutions and workarounds.
-ms.reviewer: squassina
+ms.reviewer: matp
 ms.date: 07/10/2023
 author: jeparson
 ms.author: jeparson

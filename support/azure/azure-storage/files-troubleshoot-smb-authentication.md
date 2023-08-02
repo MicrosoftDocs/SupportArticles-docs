@@ -2,10 +2,9 @@
 title: Troubleshoot Azure Files identity-based authentication and authorization issues (SMB)
 description: Troubleshoot problems using identity-based authentication to connect to SMB Azure file shares and see possible resolutions.
 author: khdownie
-ms.service: storage
+ms.service: azure-file-storage
 ms.date: 06/26/2023
 ms.author: kendownie
-ms.subservice: files 
 ---
 # Troubleshoot Azure Files identity-based authentication and authorization issues (SMB)
 
@@ -221,7 +220,11 @@ There is currently no workaround for this error.
 You might also encounter this error if you previously enabled Azure AD Kerberos authentication through manual limited preview steps. To delete the existing application, the customer or their IT admin can run the following script. Running this script will remove the old manually created application and allow the new experience to auto-create and manage the newly created application.
 
 > [!IMPORTANT]
-> This script must be run in PowerShell 5 because the AzureAD module doesn't work in PowerShell 7. This PowerShell snippet uses Azure AD Graph.
+> This script must be run in PowerShell 5.1 (Windows PowerShell) because the AzureAD module doesn't work in PowerShell 7. Or you can import the module by using the `-UseWindowsPowerShell` option in a PowerShell 7 session:
+> 
+> `Import-Module AzureAD -UseWindowsPowerShell`
+> 
+> The AzureAD module is scheduled to be deprecated and replaced by Microsoft Graph PowerShell. If you want to use the Microsoft.Graph module instead, see [Upgrade from Azure AD PowerShell to Microsoft Graph PowerShell](/powershell/microsoftgraph/migration-steps) and the [Cmdlet map](/powershell/microsoftgraph/azuread-msoline-cmdlet-map).
 
 ```powershell
 $storageAccount = "exampleStorageAccountName"
@@ -243,7 +246,7 @@ To mitigate this, you have two options: either rotate the service principal pass
 
 #### Option 1: Update the service principal password using PowerShell
 
-1. Install the latest Az.Storage and AzureAD modules. Use PowerShell 5.1, because currently the AzureAD module doesn't work in PowerShell 7. Azure Cloud Shell won't work in this scenario. For more information about installing PowerShell, see [Install Azure PowerShell on Windows with PowerShellGet](/powershell/azure/install-azure-powershell).
+1. Install the latest Az.Storage and AzureAD modules. Use PowerShell 5.1, because the AzureAD module doesn't work in PowerShell 7. Azure Cloud Shell won't work in this scenario. For more information about installing PowerShell, see [Install Azure PowerShell on Windows with PowerShellGet](/powershell/azure/install-azure-powershell).
 
     To install the modules, open PowerShell with elevated privileges and run the following commands:
 

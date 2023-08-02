@@ -3,8 +3,7 @@ title: Cumulative Update 2 for SQL Server 2019 (KB4536075)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 2 (KB4536075).
 ms.date: 06/30/2023
 ms.custom: KB4536075
-author: Elena068
-ms.author: v-qianli2
+ms.reviewer: v-qianli2
 appliesto:
 - SQL Server 2019 on Windows
 - SQL Server 2019 on Linux
@@ -26,9 +25,9 @@ This article describes Cumulative Update package 2 (CU2) for Microsoft SQL Serve
 
 There's a known issue in SQL Server Agent in SQL Server 2019 CU2. This will be fixed in the next CU release (SQL Server 2019 CU3).
 
-- If you're using SQL Server 2019 SQL Server Agent, we recommend that you skip the CU2 update, and install SQL Server 2019 CU3 ([KB4538853](https://support.microsoft.com/help/4538853)) instead.
+- If you're using SQL Server 2019 SQL Server Agent, we recommend that you skip the CU2 update, and install SQL Server 2019 CU3 ([KB4538853](cumulativeupdate3.md)) instead.
 
-- If you have already applied SQL Server 2019 CU2, and you're experiencing issues that affect SQL Server Agent, please install SQL Server 2019 CU3 ([KB4538853](https://support.microsoft.com/help/4538853)).
+- If you have already applied SQL Server 2019 CU2, and you're experiencing issues that affect SQL Server Agent, please install SQL Server 2019 CU3 ([KB4538853](cumulativeupdate3.md)).
 
 ## Improvements and fixes included in this cumulative update
 

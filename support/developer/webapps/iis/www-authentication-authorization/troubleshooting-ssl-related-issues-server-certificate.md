@@ -1,11 +1,9 @@
 ---
 title: Troubleshooting SSL related issues (Server Certificate)
 description: This article provides various troubleshooting scenarios and resolutions related to SSL server certificates.
-author: padmajayaraman
-ms.author: v-jayaramanp
 ms.topic: troubleshooting 
 ms.date: 04/09/2012
-ms.reviewer: kaushalp, johnhart
+ms.reviewer: kaushalp, johnhart, v-jayaramanp
 ---
 
 # Troubleshooting SSL related issues (Server Certificate)
@@ -89,32 +87,34 @@ In this scenario, consider that you have a server certificate that contains the 
 
     Additionally, the following SChannel warning will appear in the system event logs:
 
-    | Event Type: Error |
-    | --- |
-    | Event Source: Schannel |
-    | Event Category: None |
-    | Event ID: 36870 |
-    | Date: 2/11/2012 |
-    | Time: 12:44:55 AM |
-    | User: N/A |
-    | Computer: |
-    | Description: A fatal error occurred when attempting to access the SSL server credential private key. The error code returned from the cryptographic module is 0x80090016. |
+      ```output
+      Event Type: Error 
+      Event Source: Schannel 
+      Event Category: None 
+      Event ID: 36870 
+      Date: 2/11/2012 
+      Time: 12:44:55 AM 
+      User: N/A 
+      Computer: 
+      Description: A fatal error occurred when attempting to access the SSL server credential private key. The error code returned from the cryptographic module is 0x80090016. 
+      ```
 
     This event or error indicates that there was a problem acquiring certificate's private key. So, try the following steps to resolve the warning:
 
   1. First, verify the permissions on the [MachineKeys](../../../../windows-server/windows-security/default-permissions-machinekeys-folders.md) folder. All the private keys are stored within the MachineKeys folder, so make sure you have the necessary permissions.
   1. If the permissions are in place and if the issue is still not fixed, then there might be a problem with the certificate. It might have been corrupted. You may see an error code of 0x8009001a in the following SChannel event log:
 
-        | Event Type: Error |
-        | --- |
-        | Event Source: Schannel |
-        | Event Category: None |
-        | Event ID: 36870 |
-        | Date: 2/11/2012 |
-        | Time: 12:44:55 AM |
-        | User: N/A |
-        | Computer: |
-        | A fatal error occurred when attempting to access the SSL server credential private key. The error code returned from the cryptographic module is 0x8009001a. |
+     ```output
+     Event Type: Error 
+     Event Source: Schannel 
+     Event Category: None 
+     Event ID: 36870 
+     Date: 2/11/2012 
+     Time: 12:44:55 AM 
+     User: N/A 
+     Computer: 
+     A fatal error occurred when attempting to access the SSL server credential private key. The error code returned from the cryptographic module is 0x8009001a. 
+     ```
 
  1. Check if the website works with a test certificate.
  1. Take a backup of the existing certificate and then replace it with a self-signed certificate.
@@ -122,7 +122,7 @@ In this scenario, consider that you have a server certificate that contains the 
 
     :::image type="content" source="media/troubleshooting-ssl-related-issues-server-certificate/ssl-diagnostics-window-error-message.png" alt-text="Screenshot of the SSL Diagnostics window, the error message is highlighted.":::
 
-    **CertVerifyCertificateChainPolicy** will fail with **CERT\_E\_UNTRUSTEDROOT (0x800b0109)**, if the root CA certificate isn't trusted root.
+    `CertVerifyCertificateChainPolicy` will fail with `CERT_E_UNTRUSTEDROOT (0x800b0109)`, if the root CA certificate isn't trusted root.
 
  1. To fix this error, add the CA's certificate to the "Trusted Root CA" store under My computer account on the server. You may also get the following error:
 
@@ -260,9 +260,7 @@ In the non-working scenario, the client was configured to use TLS 1.1 and TLS 1.
 
 Check the registry keys to determine what protocols are enabled or disabled. Here's the path:
 
-```output
-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols
-```
+`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols`
 
 The "Enabled" DWORD should be set to "1". If it's set to 0, then the protocol is disabled.
 
@@ -270,7 +268,7 @@ For example, SSL 2.0 is disabled by default.
 
 ## Scenario 6
 
-If everything has been verified and if you're still running into issues accessing the website over HTTPS, then it most likely is some update which is causing the SSL handshake to fail.
+If everything has been verified and if you're still running into issues accessing the website over HTTPS, then it most likely is some update, which is causing the SSL handshake to fail.
 
 Microsoft has released an update to the implementation of SSL in Windows:
 

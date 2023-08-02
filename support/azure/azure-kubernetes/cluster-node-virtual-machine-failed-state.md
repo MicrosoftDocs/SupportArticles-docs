@@ -1,16 +1,14 @@
 ---
 title: Azure Kubernetes Service cluster/node is in a failed state
 description: Troubleshoot an issue where an Azure Kubernetes Service (AKS) cluster/node is in a failed state.
-ms.date: 6/21/2023
-author: AmandaAZ
-ms.author: v-weizhu
-ms.reviewer: chiragpa, nickoman
+ms.date: 07/28/2023
+ms.reviewer: chiragpa, nickoman, v-weizhu
 ms.service: azure-kubernetes-service
 ms.subservice: common-issues
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot why attach my node virtual machine is in a failed state so that I can successfully use my Azure Kubernetes Service (AKS) cluster.
 ---
-# Troubleshoot Azure Kubernetes Service cluter/node in a failed state
+# Troubleshoot Azure Kubernetes Service cluster/node in a failed state
 
 This article discusses how to troubleshoot a Microsoft Azure Kubernetes Service (AKS) cluster/node that's entered a failed state.
 

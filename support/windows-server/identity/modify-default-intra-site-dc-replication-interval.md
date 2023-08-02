@@ -44,4 +44,4 @@ Value: REG_DWORD
 
 ## Data collection
 
-If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-ad-replication.md).
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).

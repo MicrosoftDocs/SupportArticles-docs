@@ -4,9 +4,7 @@ description: Introduces how to copy blobs between storage accounts with AzCopy a
 ms.date: 04/18/2023
 ms.topic: how-to
 ms.service: azure-storage
-ms.author: v-weizhu
-author: AmandaAZ
-ms.reviewer: jiajwu, jeromeliu, azurestocic
+ms.reviewer: jiajwu, jeromeliu, azurestocic, v-weizhu
 ---
 # Use AzCopy to copy blobs between Azure storage accounts with network restrictions
 

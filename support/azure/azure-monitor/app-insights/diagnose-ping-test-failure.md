@@ -2,10 +2,8 @@
 title: Diagnose common problems that cause your ping tests to fail in Application Insights availability monitoring
 description: This article describes how to diagnose common issues that cause ping tests to fail in Application Insights availability monitoring.
 ms.date: 5/11/2023
-author: DennisLee-DennisLee
-ms.author: v-dele
 editor: v-jsitser
-ms.reviewer: aaronmax
+ms.reviewer: aaronmax, v-leedennis
 ms.service: azure-monitor
 ms.subservice: application-insights
 #Customer intent: As an Azure Application Insights user, I want to determine what's causing my ping tests to fail in Application Insights availability monitoring so that I can effectively monitor Azure applications.

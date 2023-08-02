@@ -2,14 +2,12 @@
 title: Troubleshoot issues that involve the App Insights JavaScript SDK
 description: Learn how to troubleshoot SDK load failure for JavaScript web applications, Azure Application Insights for web pages, and source map support for JavaScript apps.
 ms.date: 06/07/2023
-ms.author: v-dele
-author: DennisLee-DennisLee
 editor: v-jsitser
 ms.service: azure-monitor
 ms.subservice: application-insights
 ms.devlang: javascript
 ms.custom: devx-track-js
-ms.reviewer: mmcc, toddfous, aaronmax
+ms.reviewer: mmcc, toddfous, aaronmax, v-leedennis
 ---
 
 # Application Insights JavaScript SDK troubleshooting
