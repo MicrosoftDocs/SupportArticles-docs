@@ -54,7 +54,7 @@ Dialog message text: The following error occurred during the attempt to synchron
 
 ### Symptom 3
 
-Various REPADMIN.EXE commands fail with error 8606. These commands include but are not limited to the following:  
+Various *repadmin.exe* commands fail with error 8606. These commands include but are not limited to the following:  
 
 `repadmin /add`  `repadmin /replsum`  
 `repadmin /showrepl` `repadmin /showrepl`  
@@ -163,7 +163,7 @@ When you troubleshoot 8606 errors, think about the following points:
 
 ### How to remove lingering objects
 
-While many methods exist to remove lingering objects, there are three primary tools commonly used: repadmin.exe, Lingering Object Liquidator (LoL) and repldiag.  
+While many methods exist to remove lingering objects, there are three primary tools commonly used: *repadmin.exe*, Lingering Object Liquidator (LoL) and repldiag.  
 
 #### Lingering Object Liquidator (LoL)  
 
@@ -171,12 +171,12 @@ The easiest method to clean up Lingering Objects is to use the LoL. The LoL tool
 
 #### Repadmin  
 
-The following two commands in REPADMIN.EXE can remove lingering objects from directory partitions:
+The following two commands in *repadmin.exe* can remove lingering objects from directory partitions:
 
-- `REPADMIN /REMOVELINGERINGOBJECTS`
-- `REPADMIN /REHOST`
+- `repadmin /removelingeringobjects`
+- `repadmin /rehost`
 
-`REPADMIN /REMOVELINGERINGOBJCTS` can be used to remove lingering objects from writable and read-only directory partitions on source domain controllers. The syntax is as follows:
+The `repadmin /removelingeringobjects` command can be used to remove lingering objects from writable and read-only directory partitions on source domain controllers. The syntax is as follows:
 
 ```console  
 repadmin /removelingeringobjects <Dest_DSA_LIST> <Source DSA GUID> <NC> [/ADVISORY_MODE]
@@ -189,7 +189,7 @@ Where:
 
 \<NC> is the DN path of the directory partition that is suspected of containing lingering objects, such as the partition that is specified in a 1988 event.
 
-`REPADMIN /REHOST` can be used to remove lingering-objects domain controllers that host a *read-only* copy of a domain directory partition from domain controllers. The syntax is as follows:
+The `repadmin /rehost` command can be used to remove lingering-objects domain controllers that host a *read-only* copy of a domain directory partition from domain controllers. The syntax is as follows:
 
 ```console  
 repadmin /rehost DSA <Naming Context> <Good Source DSA Address>
@@ -213,7 +213,7 @@ Launch the following TechNet on-demand lab for guided troubleshooting practice o
 
 In the lab, you use both repadmin and *repldiag.exe* to remove lingering objects  
 Troubleshooting Active Directory Replication Errors  
-In this lab, you'll walk through the troubleshooting, analysis and implementation phases of commonly encountered Active Directory replication errors. You'll use a combination of ADREPLSTATUS, repadmin.exe, and other tools to troubleshoot a five DC, three-domain environment.  AD replication errors encountered in the lab include -2146893022, 1256, 1908, 8453 and 8606."
+In this lab, you'll walk through the troubleshooting, analysis and implementation phases of commonly encountered Active Directory replication errors. You'll use a combination of ADREPLSTATUS, *repadmin.exe*, and other tools to troubleshoot a five DC, three-domain environment.  AD replication errors encountered in the lab include -2146893022, 1256, 1908, 8453 and 8606."
 
 ### Monitoring Active Directory replication health daily
 
@@ -287,7 +287,7 @@ If the object should exist on all replicas, the options are as follows:
 Launch the following TechNet on-demand lab for guided troubleshooting practice of this and other AD replication errors:
 
 > Troubleshooting Active Directory Replication Errors  
- In this lab, you will walk through the troubleshooting, analysis, and implementation phases of commonly encountered Active Directory replication errors. You will use a combination of ADREPLSTATUS, repadmin.exe, and other tools to troubleshoot a five DC, three-domain environment. AD replication errors encountered in the lab include -2146893022, 1256, 1908, 8453 and 8606."
+ In this lab, you will walk through the troubleshooting, analysis, and implementation phases of commonly encountered Active Directory replication errors. You will use a combination of ADREPLSTATUS, *repadmin.exe*, and other tools to troubleshoot a five DC, three-domain environment. AD replication errors encountered in the lab include -2146893022, 1256, 1908, 8453 and 8606."
 
 ### Causes of lingering objects
 
