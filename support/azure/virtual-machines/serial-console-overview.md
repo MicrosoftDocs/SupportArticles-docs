@@ -12,7 +12,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: vm
 ms.workload: infrastructure-services
-ms.date: 05/09/2022
+ms.date: 08/03/2023
 ms.author: genli
 ---
 
@@ -23,6 +23,7 @@ Serial Console in the Azure portal provides access to a text-based console for v
 Serial Console works in the same manner for VMs and virtual machine scale set instances. In this doc, all mentions to VMs will implicitly include virtual machine scale set instances unless otherwise stated.
 
 ## Regions
+
 Serial Console is available in the following regions:
 
 - Australia Central
