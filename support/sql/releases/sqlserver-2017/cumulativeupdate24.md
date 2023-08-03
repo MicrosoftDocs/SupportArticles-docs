@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 24 for SQL Server 2017 (KB5001228)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2017 cumulative update 24 (KB5001228).
-ms.date: 07/31/2023
+ms.date: 08/04/2023
 ms.custom: KB5001228
 appliesto:
 - SQL Server 2017 on Windows

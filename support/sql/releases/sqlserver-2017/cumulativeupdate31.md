@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 31 for SQL Server 2017 (KB5016884)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2017 cumulative update 31 (KB5016884).
-ms.date: 07/31/2023
+ms.date: 08/04/2023
 ms.custom: KB5016884
 appliesto:
 - SQL Server 2017 on Windows

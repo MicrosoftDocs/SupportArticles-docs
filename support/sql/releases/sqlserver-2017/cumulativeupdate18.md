@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 18 for SQL Server 2017 (KB4527377)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2017 cumulative update 18 (KB4527377).
-ms.date: 07/31/2023
+ms.date: 08/04/2023
 ms.custom: KB4527377
 appliesto:
 - SQL Server 2017 on Windows

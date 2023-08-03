@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 27 for SQL Server 2017 (KB5006944)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2017 cumulative update 27 (KB5006944).
-ms.date: 07/31/2023
+ms.date: 08/04/2023
 ms.custom: KB5006944
 appliesto:
 - SQL Server 2017 on Windows
@@ -39,7 +39,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id=14080201>[14080201](#14080201) </a> | Fixes the failed assertion that occurs due to implicit conversion where predicate's precision is greater than the value: </br></br>Msg 3624, Level 20, State 1, Line \<LineNumber> </br></br>A system assertion check has failed. Check the SQL Server error log for details. Typically, an assertion failure is caused by a software bug or data corruption. To check for database corruption, consider running DBCC CHECKDB. If you agreed to send dumps to Microsoft during setup, a mini dump is sent to Microsoft. An update might be available from Microsoft in the latest Service Pack or in a Hotfix from Technical Support. </br></br>Msg 596, Level 21, State 1, Line \<LineNumber> </br></br>Cannot continue the execution because the session is in the kill state. </br></br>Msg 0, Level 20, State 0, Line \<LineNumber> </br></br>A severe error occurred on the current command. The results, if any, should be discarded. | SQL Server Engine | Column Stores | Windows 
 | <a id=14269761>[14269761](#14269761) </a> | [FIX: Sp_execute_external_script fails after you configure new runtime and remove a new Cumulative Update patch in SQL Server 2017 (KB5007381)](https://support.microsoft.com/help/5007381) | SQL Server Engine|Extensibility| Windows |
 | <a id=14182231>[14182231](#14182231) </a> | Fixes an issue where an incorrect name entry in `sys.servers` can result in Always On Availability Group (AG) replica being removed when the server name doesn't match Windows hostname. |SQL Server Engine | High Availability and Disaster Recovery | Windows |
-| <a id=14232818>[14232818](#14232818) </a> | Fixes an issue about extended event version in `Alwayson_health` session isn't changed automatically during Cumulative Update upgrade and downgrade. | SQL Server Engine| High Availability and Disaster Recovery | Windows |
+| <a id=14232818>[14232818](#14232818) </a> | Fixes an issue in which the extended event version in the `Alwayson_health` session isn't changed automatically during the Cumulative Update upgrade and downgrade. | SQL Server Engine| High Availability and Disaster Recovery | Windows |
 | <a id=14279542>[14279542](#14279542) </a> | Fixes an access violation exception that may occur when `sp_server_diagnostics` is executed.| SQL Server Engine| High Availability and Disaster Recovery | Windows |
 | <a id=14266687>[14266687](#14266687) </a> | Fixes an issue where the output of `sp_pkeys` `KEY_SEQ` column doesn't conform to the ordering of columns defined in the Primary Key. | SQL Server Engine | Metadata | Windows |
 | <a id=13748048>[13748048](#13748048) </a> | Prevents ghost cleanup from triggering a memory dump during latch time-out in SQL Server 2019.| SQL Server Engine|Methods to access stored data| Windows |

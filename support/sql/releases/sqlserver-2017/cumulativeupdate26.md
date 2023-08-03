@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 26 for SQL Server 2017 (KB5005226)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2017 cumulative update 26 (KB5005226).
-ms.date: 07/31/2023
+ms.date: 08/04/2023
 ms.custom: KB5005226
 appliesto:
 - SQL Server 2017 on Windows
@@ -50,10 +50,10 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id=13952862>[13952862](#13952862) </a> | Fixes an intra-query deadlock that occurs with certain queries when verbose truncation feature is enabled.| SQL Server Engine|Methods to access stored data | Windows |
 | <a id=14134263>[14134263](#14134263) </a> | Fixes an issue in SQL Server 2017 and 2019 where you may encounter an Access Violation or Assertion when using the `sys.dm_exec_query_statistics_xml` Dynamic Management View.| SQL Server Engine|Query Execution | All |
 | <a id=14135181>[14135181](#14135181) </a> | Fixes an issue in SQL Server 2017 where you may encounter an Access Violation or Assertion when using the `sys.dm_exec_query_statistics_xml` Dynamic Management View.| SQL Server Engine| Query Execution| Windows |
-| <a id=14200277>[14200277](#14200277) </a> | Fix to keep 'PERSIST_SAMPLE_PERCENT' value for statistics on an indexed column after index rebuild. | SQL Server Engine| Query Optimizer| Windows|
+| <a id=14200277>[14200277](#14200277) </a> | Fix to keep the `PERSIST_SAMPLE_PERCENT` value for statistics on an indexed column after index rebuild. | SQL Server Engine| Query Optimizer| Windows|
 | <a id=14224387>[14224387](#14224387) </a> | [FIX: Assertion failure may occur when sp_cleanup_history_table is executed in SQL Server 2017 (KB5006029)](https://support.microsoft.com/help/5006029) | SQL Server Engine | Replication | Windows |
 | <a id=14130524>[14130524](#14130524) </a> | Fixes missing data in the Change Data Capture (CDC) side table and adds additional error handling to prevent data loss. | SQL Server Engine|Replication | Windows |
-| <a id=14178360>[14178360](#14178360) </a> | Adds pOwnerSess to the error message to find the owner session Id that runs the Log Reader Agent or log - related procedure in SQL Server 2017. | SQL Server Engine| Replication | Windows |
+| <a id=14178360>[14178360](#14178360) </a> | Adds pOwnerSess to the error message to find the owner session Id that runs the Log Reader Agent or log-related procedure in SQL Server 2017. | SQL Server Engine| Replication | Windows |
 | <a id=14193531>[14193531](#14193531) </a> | Fixes the issue where datatype isn't included in the warning message instead a 'null' value appears: </br></br>Warning: Article with '(null)' data type column is not supported with memory optimized tables on subscribers running SQL Server 2014 or earlier. | SQL Server Engine | Replication | Windows |
 | <a id=14164877>[14164877](#14164877) </a> | [FIX: SQL Server affinity settings are reset after applying CU for SQL Server 2017 and 2019 (KB5004573)](https://support.microsoft.com/help/5004573) | SQL Server Engine | SQL OS | Windows |
 | <a id=14117711>[14117711](#14117711) </a> | [Improvement: Corrupted statistics can be detected by using extended_logical_checks in SQL Server 2017 (KB4530907)](https://support.microsoft.com/help/4530907) | SQL Server Engine | Storage Management | Windows |
