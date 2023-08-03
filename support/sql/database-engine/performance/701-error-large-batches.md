@@ -1,27 +1,27 @@
 ---
 title: Error 701 there is insufficient memory to run this query
-description: Provides resolutions for the error 701 that occurs when executing a large batch of operations in SQL Server.
+description: This article provides resolutions for the error 701 that occurs when you execute a large batch of operations in SQL Server.
 ms.date: 01/20/2021
 ms.custom: sap:Performance
 ms.reviewer: ramakoni, v-sidong
 ---
 # SQL Server reports 701 "There is insufficient memory to run this query" when executing large batches
 
-The article discusses the 701 error that can occur when executing a large batch of operations in SQL Server. For other causes of 701 error, see [MSSQLSERVER_701](/sql/relational-databases/errors-events/mssqlserver-701-database-engine-error).
+The article discusses the 701 error that can occur when you execute a large batch of operations in SQL Server. For other causes of 701 error, see [MSSQLSERVER_701](/sql/relational-databases/errors-events/mssqlserver-701-database-engine-error).
 
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 2001221
 
 ## Symptoms
 
-In SQL Server, when executing a large batch of remote procedure calls (RPC) (for example, tens of thousands of inserts in a single [batch](/previous-versions/sql/sql-server-2008-r2/ms175502(v=sql.105))), the operation may fail with the following errors reported in SQL Server error log:
+In SQL Server, when you execute a large batch of remote procedure calls (RPC) (for example, tens of thousands of inserts in a single [batch](/previous-versions/sql/sql-server-2008-r2/ms175502(v=sql.105))), the operation may fail with the following errors reported in SQL Server error log:
 
 ```Output
 2020-07-04 13:30:45.78 spid56 Error: 701, Severity: 17, State: 193. 
 2020-07-04 13:30:45.78 spid56 There is insufficient system memory to run this query.
 ```
 
-If you look at the output of [DBCC MEMORYSTATUS](dbcc-memorystatus-monitor-memory-usage.md) that is automatically logged to the error log on 701 error messages, it will have entries like the following one:
+If you look at the output of [DBCC MEMORYSTATUS](dbcc-memorystatus-monitor-memory-usage.md) that's automatically logged to the error log on 701 error messages, it will have entries like the following one:
 
 ```Output
 2020-07-04 13:30:45.74 spid56       Failed allocate pages: FAIL_PAGE_ALLOCATION 1 
@@ -76,7 +76,7 @@ To solve the error, use one of the following methods:
 
 The `USERSTORE_SXC` cache is used for connection management level allocations, such as RPC parameters and the memory that is associated with prepared handles. When a client sends a request containing a large batch of RPC calls, each potentially using a large number of certain types of parameters like `sql_variant`, it could result in excessive allocations from this cache, thereby exhausting all the available memory.
 
-The application should also be monitored to ensure we're closing prepared handles in a timely fashion. When you don't close these handles in a timely manner, it will prevent SQL Server from releasing memory for the associated objects on the server side.
+The application should also be monitored to ensure that you are closing prepared handles in a timely manner. When you don't close these handles, it will prevent SQL Server from releasing memory for the associated objects on the server side.
 
 ## More information
 
