@@ -62,7 +62,7 @@ Serial Console is available in the following regions:
 - UAE North
 - UK South
 - UK West
-- West Central Us
+- West Central US
 - West Europe
 - West US 2
 - US Gov Arizona
