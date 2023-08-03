@@ -37,4 +37,4 @@ The following table lists the messages that appear when your agents face issues 
 ### See also
 
 [Azure Communication Services user-facing diagnostics](/azure/communication-services/concepts/voice-video-calling/user-facing-diagnostics)  
-[How to avoid calls from being disconnected](/customer-service/voice-channel-agent-experience#how-to-avoid-call-disconnection)
+[How to avoid calls from being disconnected](/dynamics365/customer-service/voice-channel-agent-experience#how-to-avoid-call-disconnection)
