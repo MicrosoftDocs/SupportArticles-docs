@@ -55,6 +55,12 @@
       "ms.subservice": {
         "Connections/**/*.md": "viva-connections",
         "Learning/**/*.md": "viva-learning"
+      },
+      "author": {
+        "**/*.md": "helenclu"
+      },
+      "ms.author": {
+        "**/*.md": "luche"
       }
     },
     "template": [],

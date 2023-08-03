@@ -73,6 +73,12 @@
         "teams-onenote-integration/**/*.md": "onenote-integration",
         "teams-sign-in/**/*.md": "sign-in",
         "third-party-programs/**/*.md": "third-party-programs"
+      },
+      "author": {
+        "**/*.md": "helenclu"
+      },
+      "ms.author": {
+        "**/*.md": "luche"
       }
     },
     "template": [],

@@ -113,6 +113,12 @@
         "Client/visio/**/*.md": "visio",
         "Client/word/**/*.md": "word",
         "OfficeExperts/word/**/*.md": "word"
+      },
+      "author": {
+        "**/*.md": "helenclu"
+      },
+      "ms.author": {
+        "**/*.md": "luche"
       }
     },
     "template": [],

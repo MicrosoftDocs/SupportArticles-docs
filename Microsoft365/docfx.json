@@ -144,13 +144,23 @@
         "security/o365-security/**/*.md": "o365-security",
         "compliance/archive-mailboxes/**/*.md": "archive-mailboxes",
         "compliance/audit-logs/**/*.md": "audit-logs",
-        "compliance/data-loss-preventiones/**/*.md": "data-loss-prevention",
+        "compliance/data-loss-prevention/**/*.md": "data-loss-prevention",
         "compliance/ediscovery/**/*.md": "ediscovery",
         "compliance/holds/**/*.md": "holds",
         "compliance/information-barriers/**/*.md": "information-barriers",
         "compliance/office-message-encryption/**/*.md": "office-message-encryption",
         "compliance/pst-import-service/**/*.md": "pst-import-service",
         "compliance/retention/**/*.md": "retention"
+      },
+      "author": {
+        "**/*.md": "helenclu",
+        "compliance/**/*.md": "cloud-writer",
+        "security/**/*.md": "cloud-writer"
+      },
+      "ms.author": {
+        "**/*.md": "luche",
+        "compliance/**/*.md": "meerak",
+        "security/**/*.md": "meerak"
       }
     },
     "template": [],
