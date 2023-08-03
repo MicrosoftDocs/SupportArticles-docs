@@ -1,10 +1,10 @@
 ---
 title: Can't send email message when Full Access is granted to a shared mailbox
 description: Describes an issue that prevents email from being sent in an Exchange 2013, Exchange 2016 or Exchange Online environment. Occurs when you have Full Access permissions to a shared mailbox. Resolutions are provided.
-author: simonxjx
+author: cloud-writer
+ms.author: meerak
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: v-six
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 
@@ -22,6 +22,7 @@ appliesto:
   - Exchange Server 2016 Standard Edition
   - Exchange Server 2013 Enterprise
 ms.date: 3/31/2022
+ms.reviewer: v-six
 ---
 
 # Can't send an email message when Full Access permission is granted to a shared mailbox in Exchange Server

@@ -1,8 +1,8 @@
 ---
 title: Emails not show in Cached mode Inbox after synchronized
 description: E-mail messages don't appear in Cached mode Inbox after synchronization. Resolution for problem provided.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,8 +1,8 @@
 ---
 title: TLS negotiation failed with error NoCredentials error
 description: Email messages that are sent to external domains get deferred and generate an error entry that states TLS negotiation failed with error NoCredentials in the Send Connector logs.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: rrajan, batre
+ms.reviewer: rrajan, batre, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150

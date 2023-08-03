@@ -1,8 +1,8 @@
 ---
 title: Outbound email messages are not sent
 description: Outbound email messages for recipients outside your organization are queued and not sent on the Exchange Hub Transport server or the Edge server.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: rrajan, scottlan
+ms.reviewer: rrajan, scottlan, v-six
 appliesto: 
   - Exchange Server 2016 Standard Edition
   - Exchange Server 2016 Enterprise Edition

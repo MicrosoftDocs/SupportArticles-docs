@@ -1,8 +1,8 @@
 ---
 title: Cannot perform an Instant Search
 description: Provides a resolution to make sure you can do an instant search in Microsoft Outlook.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

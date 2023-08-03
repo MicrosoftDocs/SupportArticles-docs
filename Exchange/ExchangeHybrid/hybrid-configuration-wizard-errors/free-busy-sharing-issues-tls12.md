@@ -1,8 +1,8 @@
 ---
 title: Resolve free/busy sharing issues in a hybrid Exchange environment  
 description: How to resolve free/busy sharing issues in a hybrid Exchange environment.
-author: v-trisshores
-ms.author: v-trisshores
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ ms.custom:
   - Exchange Hybrid
   - CSSTroubleshoot
   - CI 168618
-ms.reviewer: ruxandra, lusassl, meerak
+ms.reviewer: ruxandra, lusassl, meerak, v-trisshores
 appliesto: 
   - Exchange Server 2019
   - Exchange Server 2016

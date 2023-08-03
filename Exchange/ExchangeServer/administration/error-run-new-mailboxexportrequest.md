@@ -1,8 +1,8 @@
 ---
 title: Error when you run New-MailboxExportRequest
 description: Describes an issue that can occur when you try to run the New-MailboxExportRequest cmdlet in Exchange Server 2010 SP1 or Exchange Server 2010 SP2, and provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -15,6 +15,7 @@ search.appverid:
 appliesto: 
   - Exchange Server 2010
 ms.date: 3/31/2022
+ms.reviewer: v-six
 ---
 # Error when you run the New-MailboxExportRequest cmdlet in Exchange Server 2010 SP1 or SP2: Couldn't find the Enterprise Organization container
 

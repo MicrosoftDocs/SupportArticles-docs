@@ -1,10 +1,10 @@
 ---
 title: Target mailbox doesn't have an smtp proxy matching in a mailbox migration
 description: Describes an issue that returns a The target mailbox doesn't have an smtp proxy matching '<domain>.mail.onmicrosoft.com error message when you try to move mailboxes from your on-premises Exchange environment to Exchange Online in a hybrid deployment.
-author: simonxjx
+author: cloud-writer
+ms.author: meerak
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: v-six
 manager: dcscontentpm
 ms.custom: 
   - Exchange Online
@@ -15,6 +15,7 @@ search.appverid:
 appliesto: 
   - Exchange Online
 ms.date: 3/31/2022
+ms.reviewer: v-six
 ---
 # Target mailbox doesn't have an smtp proxy matching in a mailbox migration
 

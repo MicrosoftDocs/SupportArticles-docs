@@ -1,8 +1,8 @@
 ---
 title: Cannot send messages to a moved mailbox
 description: Describes an issue in which users can't send messages to a mailbox that was recently moved from an on-premises environment to Exchange Online in Microsoft 365.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Hybrid
   - CSSTroubleshoot
-ms.reviewer: jhayes
+ms.reviewer: jhayes, v-six
 appliesto: 
   - Exchange Online
   - Exchange Server 2013 Enterprise

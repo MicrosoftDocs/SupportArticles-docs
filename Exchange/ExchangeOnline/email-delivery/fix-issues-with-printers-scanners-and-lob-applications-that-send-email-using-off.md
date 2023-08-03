@@ -4,10 +4,10 @@ ms.date: 01/20/2023
 ms.localizationpriority: medium
 description: Fix issues with printers, scanners, and line of business applications that use Microsoft 365 or Office 365 to send email.
 ms.topic: troubleshooting
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 ms.assetid: c75542a8-c792-42c0-a8c5-291df987512d
-ms.reviewer:
+ms.reviewer: v-six
 ms.collection:
 - exchange-online
 - M365-email-calendar

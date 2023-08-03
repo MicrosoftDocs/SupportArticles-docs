@@ -1,8 +1,8 @@
 ---
 title: Can't register a Hybrid Agent in Exchange Server
 description: Provides a resolution for an issue in which you can't register a Hybrid Agent.
-author: v-trisshores
-ms.author: v-trisshores
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ ms.custom:
   - CI 167780
   - Exchange Hybrid
   - CSSTroubleshoot
-ms.reviewer: haembab, ninob, meerak
+ms.reviewer: haembab, ninob, meerak, v-trisshores
 appliesto:
   - Exchange Online
   - Exchange Server 2019

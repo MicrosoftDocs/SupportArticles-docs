@@ -1,8 +1,8 @@
 ---
 title: Stability issues in Citrix environment with AppSense
 description: Provides a resolution if you are experiencing one or more of the issues that are described in the Symptoms section of this article in a Citrix environment with AppSense software installed.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

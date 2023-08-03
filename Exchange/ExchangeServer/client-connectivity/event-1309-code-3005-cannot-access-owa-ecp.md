@@ -1,8 +1,8 @@
 ---
 title: Event ID 1309 and you can't access OWA and ECP after you install Exchange Server 2016 or Exchange Server 2013
 description: Resolves an issue that prevents you from accessing OWA and ECP and generates Event ID 1309 after you successfully install Exchange Server 2016 or Exchange Server 2013.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: jmartin, excontent, batre
+ms.reviewer: jmartin, excontent, batre, v-six
 appliesto: 
   - Exchange Server 2016 Enterprise Edition
   - Exchange Server 2016 Standard Edition

@@ -1,8 +1,8 @@
 ---
 title: Exchange Mailbox Assistants crashes and event 4999 in Exchange
 description: Fixes an issue that causes the Exchange Mailbox Assistant to crash every few minutes in Exchange Server 2013. This affects OAB generation and public folder hierarchy synchronization. A workaround is provided.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: mnanjund, benwinz
+ms.reviewer: mnanjund, benwinz, v-six
 appliesto: 
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition

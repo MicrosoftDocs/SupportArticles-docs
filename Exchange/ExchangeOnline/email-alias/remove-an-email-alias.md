@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Remove an email alias from a user
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
@@ -24,6 +24,7 @@ search.appverid:
 ms.assetid: dde511e8-0719-4b7a-8e56-d4dad0c308b3
 description: Learn how to remove an email alias from a user in the admin center.
 ms.date: 3/31/2022
+ms.reviewer: v-six
 ---
 # Troubleshoot: Remove an email alias from a user
 

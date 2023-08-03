@@ -2,8 +2,8 @@
 title: Managing RBAC roles shows warnings or errors
 description: Discusses that managing RBAC roles might display warnings or errors if Exchange Server 2010 SP1 RU6 or Exchange Server 2010 SP2 are partially deployed in the organization.
 ms.date: 08/05/2020
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: ninob
+ms.reviewer: ninob, v-six
 appliesto: 
   - Exchange Server 2010
 search.appverid: MET150

@@ -1,8 +1,8 @@
 ---
 title: Proxy address number exceeds the current limit
 description: Fixes an issue that triggers an error when you try to add or remove email addresses from an Exchange Online user whose number of proxy addresses exceeds the current limit.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Online
   - CSSTroubleshoot
-ms.reviewer: ninob
+ms.reviewer: ninob, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150

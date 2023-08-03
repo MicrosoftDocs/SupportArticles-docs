@@ -1,8 +1,8 @@
 ---
 title: Federation trust and sharing errors
 description: Resolves an issue in which federated sharing features for an Exchange 2010 organization stop functioning correctly after February 25, 2014.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -16,6 +16,7 @@ appliesto:
   - Exchange Server 2010 Standard
   - Exchange Server 2010 Enterprise
 ms.date: 3/31/2022
+ms.reviewer: v-six
 ---
 # Federation trust and sharing errors for federated Exchange 2010 organizations
 

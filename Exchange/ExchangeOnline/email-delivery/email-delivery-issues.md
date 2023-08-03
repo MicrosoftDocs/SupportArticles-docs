@@ -1,12 +1,12 @@
 ---
 localization_priority: Normal
 ms.topic: troubleshooting
-author: simonxjx
+author: cloud-writer
+ms.author: meerak
 f1_keywords: 
   - O365P_MessageTrace
-ms.author: v-six
 ms.assetid: e7758b99-1896-41db-bf39-51e2dba21de6
-ms.reviewer: 
+ms.reviewer: v-six
 description: Admins can learn how to fix email delivery issues in Exchange Online.
 title: Find and fix email delivery issues as a Microsoft 365 for business admin
 ms.collection: 

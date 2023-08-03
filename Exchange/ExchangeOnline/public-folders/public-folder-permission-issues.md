@@ -1,8 +1,8 @@
 ---
 title: How to diagnose and fix public folder permission issues
 description: This article helps you diagnose and fix public folder permission-related issues.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ ms.custom:
   - Exchange Online
   - CI 115162
   - CSSTroubleshoot
-ms.reviewer: batre
+ms.reviewer: batre, v-six
 appliesto: 
   - Exchange Online
 search.appverid: 

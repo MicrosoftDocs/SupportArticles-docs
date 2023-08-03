@@ -2,8 +2,8 @@
 title: Debug programs user right occurs for groups
 description: The Exchange Servers and Exchange Trusted Subsystem groups unexpectedly receive Debug programs user right under the default domain controller policy.
 ms.date: 06/22/2020
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: btalb, ninob
+ms.reviewer: btalb, ninob, v-six
 appliesto: 
   - Exchange Server 2016 Standard Edition
   - Exchange Server 2016 Enterprise Edition

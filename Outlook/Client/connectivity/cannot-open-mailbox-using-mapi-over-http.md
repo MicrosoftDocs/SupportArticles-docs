@@ -1,8 +1,8 @@
 ---
 title: Can't open a mailbox using MAPI over HTTP
 description: Describes an issue that blocks Outlook users from opening their mailboxes. This issue occurs when they're trying to use MAPI over HTTP in an Exchange Server 2016 environment.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

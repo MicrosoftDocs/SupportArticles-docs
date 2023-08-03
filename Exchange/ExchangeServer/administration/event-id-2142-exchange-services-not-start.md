@@ -1,8 +1,8 @@
 ---
 title: Event ID 2142 when Exchange services don't start
 description: Describes an issue that prevents Microsoft Exchange services from starting. Provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -15,6 +15,7 @@ search.appverid:
 appliesto: 
   - Exchange Server 2013 Standard Edition
 ms.date: 3/31/2022
+ms.reviewer: v-six
 ---
 # Event ID 2142 when Exchange services don't start
 

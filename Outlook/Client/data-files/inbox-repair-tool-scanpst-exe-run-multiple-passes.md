@@ -1,8 +1,8 @@
 ---
 title: Inbox Repair tool (Scanpst.exe) run multiple passes
 description: Discusses that the Inbox Repair tool (Scanpst.exe) can run multiple scans automatically in the Outlook.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

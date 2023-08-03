@@ -1,8 +1,8 @@
 ---
 title: Reminders in Outlook do not appear
 description: This article provides a resolution for the issue that reminders don't show in Microsoft Outlook.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

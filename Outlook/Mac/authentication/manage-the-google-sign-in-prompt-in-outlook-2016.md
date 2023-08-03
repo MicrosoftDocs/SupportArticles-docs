@@ -1,8 +1,8 @@
 ---
 title: Manage the Google sign-in prompt
 description: Describes how administrators can disable the Google account sign-in prompt that appears when users work in Outlook 2016 for Mac.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,8 +1,8 @@
 ---
 title: Outlook doesn't connect when using Modern authentication
 description: Resolves an issue in which the Outlook client can't connect to Exchange Online when Autodiscover points to on-premises Exchange Server.
-author: v-trisshores
-ms.author: v-trisshores
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ ms.custom:
   - Exchange Hybrid
   - CSSTroubleshoot
   - CI 170995
-ms.reviewer: haembab, ninob, meerak
+ms.reviewer: haembab, ninob, meerak, v-trisshores
 appliesto: 
   - Exchange Online
   - Outlook 2016 Professional MSI

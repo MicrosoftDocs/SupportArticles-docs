@@ -1,8 +1,8 @@
 ---
 title: UPN suffix doesn't show up in EAC or EMS in Exchange Server 2013
 description: Fixes an issue UPN suffix isn't showing in Exchange Admin Center or Exchange Management Shell.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: charray, jupierr, junyli, a-rymats, erleixu
+ms.reviewer: charray, jupierr, junyli, a-rymats, erleixu, v-six
 appliesto: 
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition

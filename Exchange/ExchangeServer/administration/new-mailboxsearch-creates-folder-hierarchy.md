@@ -1,8 +1,8 @@
 ---
 title: New-MailboxSearch creates a folder hierarchy in Exchange Server 2010
 description: Fixes an issue in which the New-MailboxSearch cmdlet creates a folder hierarchy of all mailboxes that are searched in the target mailbox in an Exchange Server 2010 environment.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: sidd
+ms.reviewer: sidd, v-six
 appliesto: 
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard

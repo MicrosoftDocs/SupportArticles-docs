@@ -2,8 +2,8 @@
 title: Troubleshoot public folder replication
 description: Troubleshoots issues with public folder replication for Exchange Server 2010, 2007, and 2003.
 ms.date: 08/13/2020
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: 
+ms.reviewer: v-six
 appliesto: 
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
@@ -266,7 +266,7 @@ If Event ID 3079 contains EcReplStartup, this indicates that the replication thr
 Do you see Event ID 9528?
 
 - If yes, see [Remove duplicate accounts](#remove-duplicate-accounts).
-- If no, sorry, We can’t solve unidentified issues with this guide. For more help resolving this issue, contact Microsoft Exchange Server support and tell them that when the database mounts, a 3079 event is logged.
+- If no, sorry, We can't solve unidentified issues with this guide. For more help resolving this issue, contact Microsoft Exchange Server support and tell them that when the database mounts, a 3079 event is logged.
 
 ### Track the message in message tracking; Was the message delivered to the destination server
 
@@ -1115,7 +1115,7 @@ This indicates the folder is a tombstone because of a previous deletion that did
 Is this information helpful?
 
 - If yes, see [Remove duplicate accounts](#remove-duplicate-accounts).
-- If no, sorry, We can’t solve unidentified issues with this guide. For more help resolving this issue, contact Microsoft Exchange Server support and tell them that when the database mounts, a 3079 event is logged.
+- If no, sorry, We can't solve unidentified issues with this guide. For more help resolving this issue, contact Microsoft Exchange Server support and tell them that when the database mounts, a 3079 event is logged.
 
 ### Does performance monitor show a large number of messages queued for submission
 
@@ -1161,7 +1161,7 @@ This is usually the result of a tombstone because of a message deletion that has
 Is this information helpful?
 
 - If yes, see [Remove duplicate accounts](#remove-duplicate-accounts).
-- If no, sorry, we can’t solve unidentified issues with this guide. For more help resolving this issue, contact Microsoft Exchange Server support and tell them that when the database mounts, a 3079 event is logged.
+- If no, sorry, we can't solve unidentified issues with this guide. For more help resolving this issue, contact Microsoft Exchange Server support and tell them that when the database mounts, a 3079 event is logged.
 
 ### Track the Event ID 3027
 
@@ -1170,7 +1170,7 @@ Track the 3027 to see how far it got. If it didn't leave the source server, chec
 Is this information helpful?
 
 - If yes, see [Remove duplicate accounts](#remove-duplicate-accounts).
-- If no, sorry, we can’t solve unidentified issues with this guide. For more help resolving this issue, contact Microsoft Exchange Server support and tell them that when the database mounts, a 3079 event is logged.
+- If no, sorry, we can't solve unidentified issues with this guide. For more help resolving this issue, contact Microsoft Exchange Server support and tell them that when the database mounts, a 3079 event is logged.
 
 ### Possible ReplState problem
 
@@ -1225,12 +1225,12 @@ Usually, the hub transport server will log an event 1020 that describes the prob
 
 **Do you see a 1020 event with source MSExchange Store Driver on that hub transport server?**
 
-- If yes, you see 1020 event and contain the error **The Active Directory user wasn’t found**, follow the instructions given in [Fail to replicate the public folder content to Exchange Server 2010](../migration/public-folders-not-replicate.md). If you contact support about this issue, tell them there is an Empty Servers Container.
+- If yes, you see 1020 event and contain the error **The Active Directory user wasn't found**, follow the instructions given in [Fail to replicate the public folder content to Exchange Server 2010](../migration/public-folders-not-replicate.md). If you contact support about this issue, tell them there is an Empty Servers Container.
 
   Is this information helpful?
 
   - If yes, see [Remove duplicate accounts](#remove-duplicate-accounts).
-  - If no, sorry, We can’t solve unidentified issues with this guide. For more help resolving this issue, contact Microsoft Exchange Server support and tell them that when the database mounts, a 3079 event is logged.
+  - If no, sorry, We can't solve unidentified issues with this guide. For more help resolving this issue, contact Microsoft Exchange Server support and tell them that when the database mounts, a 3079 event is logged.
 - If yes, you see 1020 event and contain the error **The message content has become corrupted**, see [Exchange Server 2007 and Exchange Server 2010 in the path (The message content has become corrupted)](#exchange-server-2007-and-exchange-server-2010-in-the-path-the-message-content-has-become-corrupted).
 - If yes, you see 1020 event but neither of the above error message, see [Exchange Server 2007 and Exchange Server 2010 in the path (see 1020 event but neither of the above error message)](#exchange-server-2007-and-exchange-server-2010-in-the-path-see-1020-event-but-neither-of-the-above-error-message).
 - If no, you don't see 1020 event with source MSExchange Store Driver, sorry, we cannot resolve an unidentified issue using this guide. If you contact support about this issue, tell them that the server is generating outbound hierarchy messages, but those messages do not appear in message tracking, and nothing is being queued for submission.

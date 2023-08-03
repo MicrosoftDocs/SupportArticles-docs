@@ -11,9 +11,9 @@ appliesto:
 - Exchange Online
 - Exchange
 search.appverid: MET150
-ms.reviewer: 
-author: simonxjx
-ms.author: v-six
+ms.reviewer: v-six
+author: cloud-writer
+ms.author: meerak
 ms.date: 3/31/2022
 ---
 # "Operation has timed out" error when using New-MoveRequest to move a mailbox from Exchange Online to on-premises

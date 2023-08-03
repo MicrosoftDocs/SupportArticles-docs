@@ -1,8 +1,8 @@
 ---
 title: Error when importing or exporting files
 description: Describes an issue that occurs if certain translator files or certain database converters are not available because they were not installed during Setup. Provides a resolution.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

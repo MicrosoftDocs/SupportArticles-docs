@@ -1,10 +1,10 @@
 ---
 title: ATTR35 response code when mail is sent to EOP/EXO
 description: Mail sent to EOP or EXO is deferred with the ATTR35 temporary response code.
-author: simonxjx
+author: cloud-writer
+ms.author: meerak
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: v-six
 ms.custom: 
   - Exchange Online
   - CSSTroubleshoot
@@ -16,6 +16,7 @@ appliesto:
   - Exchange Online
   - Exchange Online Protection
 ms.date: 3/31/2022
+ms.reviewer: v-six
 ---
 # ATTR35 response code when mail is sent to EOP/EXO
 

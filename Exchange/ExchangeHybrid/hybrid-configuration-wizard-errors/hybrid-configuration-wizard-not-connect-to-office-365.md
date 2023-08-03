@@ -1,8 +1,8 @@
 ---
 title: Hybrid Configuration wizard doesn't connect to Office 365
 description: Describes an issue in which the Hybrid Configuration wizard doesn't connect to Office 365 and provides a resolution to fix the issue.
-author: v-trisshores
-ms.author: v-trisshores
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -13,7 +13,7 @@ ms.custom:
   - Exchange Hybrid
   - CSSTroubleshoot
   - CI 165936
-ms.reviewer: igserr, janogu, ninob, kaushika, meerak
+ms.reviewer: igserr, janogu, ninob, kaushika, meerak, v-trisshores
 appliesto: 
   - Exchange Server
   - Exchange Online

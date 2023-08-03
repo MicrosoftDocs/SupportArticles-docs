@@ -1,10 +1,10 @@
 ---
 title: Fix NDR error 5.7.700 through 5.7.750 in Exchange Online
-ms.date: 01/29/2023
-ms.author: v-six
-author: simonxjx
+ms.date: 7/26/2023
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
-ms.reviewer: 
+ms.reviewer: v-six
 audience: Admin
 ms.topic: troubleshooting
 ms.localizationpriority: high
@@ -34,7 +34,7 @@ Use the information in the NDR to help you decide how to fix the problem.
 
 ## Why did I get this bounce message?
 
-- **5.7.703 Your message can't be delivered because one or more recipients are blocked by your organization's tenant recipient block policy**: This error occurs when someone in your organization sends mail to an email address or domain that's blocked in the [Tenant Allow/Block List](/microsoft-365/security/office-365-security/tenant-allow-block-list-about#block-entries-in-the-tenant-allowblock-list).
+- **5.7.703 Your message can't be delivered because messages to XXX, YYY are blocked by your organization using Tenant Allow Block List**: This error occurs when someone in your organization sent mail to an email address or domain that's blocked in the [Tenant Allow/Block List](/microsoft-365/security/office-365-security/tenant-allow-block-list-about#block-entries-in-the-tenant-allowblock-list). The entire message is blocked for all internal and external recipients of the message, even if only one recipient email address or domain is defined in a block entry.
 
 - **5.7.705 Access denied, tenant has exceeded threshold**: This error occurs when too much spam or bulk mail has been sent by your organization and we place a block on outgoing mail.
 
@@ -50,9 +50,9 @@ Only an email admin in your organization can fix the issue. Contact your email a
 
 The solutions for specific error codes are described in the following sections.
 
-### 5.7.703 Your message can't be delivered because one or more recipients are blocked by your organization's tenant recipient block policy
+### 5.7.703 Your message can't be delivered because messages to XXX, YYY are blocked by your organization using Tenant Allow Block List
 
-Although the [Tenant Allow/Block List](/microsoft-365/security/office-365-security/tenant-allow-block-list-about) is mostly about preventing outside users from sending email into your organization, users in the organization also can't send mail to those blocked senders or sender domains. The entire message is blocked for all *external* recipients of the message, even if only one recipient email address or domain is defined in a block entry.
+Although the [Tenant Allow/Block List](/microsoft-365/security/office-365-security/tenant-allow-block-list-about) is mostly about preventing outside users from sending email into your organization, users in the organization also can't send mail to those blocked senders or sender domains. The entire message is blocked for all internal and external recipients of the message, even if only one recipient email address or domain is defined in a block entry.
 
 ### 5.7.705 Access denied, tenant has exceeded threshold
 

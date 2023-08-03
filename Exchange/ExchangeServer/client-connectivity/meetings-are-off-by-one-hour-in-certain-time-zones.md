@@ -2,8 +2,8 @@
 title: Meetings are off by one hour in some time zones
 description: Meeting request sent from Exchange to the attendees has an incorrect start time and time zone information. Provides a workaround.
 ms.date: 08/10/2020
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: jmartin
+ms.reviewer: jmartin, v-six
 appliesto: 
   - Exchange Server 2010 Standard
   - Exchange Server 2010 Enterprise
@@ -47,4 +47,4 @@ Modify the time zone on the EAS client to another region with the same time offs
 
 ## More information
 
-To get help with the date and time on your iPhone, iPad, and iPod touch, see [If you can’t change the time or time zone on your iPhone, iPad, or iPod touch](https://support.apple.com/HT203483).
+To get help with the date and time on your iPhone, iPad, and iPod touch, see [If you can't change the time or time zone on your iPhone, iPad, or iPod touch](https://support.apple.com/HT203483).

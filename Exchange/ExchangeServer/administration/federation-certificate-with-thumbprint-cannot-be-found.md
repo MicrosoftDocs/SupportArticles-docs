@@ -1,13 +1,13 @@
 ---
 title: Fail to make changes to federation trust
 description: Provides a workaround to resolve the error (Federation certificate with the thumbprint cannot be found) that occurs when you make changes to federation trust.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
-ms.reviewer: brenle, jmartin
+ms.reviewer: brenle, jmartin, v-six
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot

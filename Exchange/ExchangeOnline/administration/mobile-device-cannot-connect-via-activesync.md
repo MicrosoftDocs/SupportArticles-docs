@@ -1,8 +1,8 @@
 ---
 title: Mobile device can't connect via ActiveSync
 description: Describes a scenario in which a mobile device can't connect to Exchange Online in Microsoft 365 by using Exchange ActiveSync. Provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Online
   - CSSTroubleshoot
-ms.reviewer: willfid
+ms.reviewer: willfid, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150

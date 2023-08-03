@@ -1,8 +1,8 @@
 ---
 title: Format of the Exchange object version is wrong
 description: Provides a workaround for an issue in which you receive an error message when you try to connect to Exchange Online by using the Exchange Management Console in Exchange 2010.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Online
   - CSSTroubleshoot
-ms.reviewer: timothyh
+ms.reviewer: timothyh, v-six
 appliesto: 
   - Exchange Online
   - Exchange Server 2010 Enterprise

@@ -1,8 +1,8 @@
 ---
 title: Export-ModernPublicFolderStatistics.ps1 script fails and returns a ToBytes error
 description: Provides workarounds for an issue in which the Export-ModernPublicFolderStatistics.ps1 script fails with a ToBytes error after you install the November 2022 security updates for Exchange Server.
-author: v-trisshores
-ms.author: v-trisshores
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ ms.custom:
   - CI 171093
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: batre, meerak
+ms.reviewer: batre, meerak, v-trisshores
 appliesto:
   - Exchange Server 2019
   - Exchange Server 2016

@@ -1,8 +1,8 @@
 ---
 title: Cannot establish TLS connection to remote mail server
 description: Describes an issue in which TLS negotiation fails because the signature algorithm in the remote mail server's certificate chain is not secure. Provides a solution.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Online
   - CSSTroubleshoot
-ms.reviewer: sesteven
+ms.reviewer: sesteven, v-six
 appliesto: 
   - Exchange Online
   - Exchange Server 2016 Enterprise Edition

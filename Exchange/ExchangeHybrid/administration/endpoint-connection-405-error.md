@@ -1,8 +1,8 @@
 ---
 title: 405 error in a hybrid deployment
 description: Fixes an issue that occurs when you create the organization relationship by using the Autodiscover option or when you run the Get-FederationInformation Windows PowerShell cmdlet in a hybrid deployment in Microsoft 365.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Hybrid
   - CSSTroubleshoot
-ms.reviewer: timothyh, jmartin, jhayes
+ms.reviewer: timothyh, jmartin, jhayes, v-six
 appliesto: 
   - Exchange Online
   - Exchange Server 2010 Enterprise

@@ -2,8 +2,8 @@
 title: Cannot create items on behalf of delegates
 description: Resolves an Exchange Server 2013 issue in which you cannot create items on behalf of a delegate.
 ms.date: 08/05/2020
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: jasonjoh, jmartin, genli
+ms.reviewer: jasonjoh, jmartin, genli, v-six
 appliesto: 
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition

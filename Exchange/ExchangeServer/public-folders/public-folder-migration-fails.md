@@ -1,8 +1,8 @@
 ---
 title: Exchange public folder migration stops at 95%
 description: Describes an issue in which an Exchange public folder migration stops at 95% because it has failed at syncing mail-enabled public folders from on-premises and provides a workaround.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

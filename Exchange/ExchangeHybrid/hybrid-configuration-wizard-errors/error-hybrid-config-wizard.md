@@ -1,8 +1,8 @@
 ---
 title: ADSTS50011 error when running HCW
 description: Describes an issue in which one of the old reply URLs used has been removed from the service.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Hybrid
   - CSSTroubleshoot
-ms.reviewer: ninob
+ms.reviewer: ninob, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150

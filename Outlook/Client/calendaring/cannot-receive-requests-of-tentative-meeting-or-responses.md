@@ -1,8 +1,8 @@
 ---
 title: Cannot receive tentative meetings requests or responses
 description: Describes an issue in which a user doesn't receive meeting invitations in their inbox but the meetings appear in the user's calendar as Tentative.  Or, meeting responses from other users don't appear in the user's inbox.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

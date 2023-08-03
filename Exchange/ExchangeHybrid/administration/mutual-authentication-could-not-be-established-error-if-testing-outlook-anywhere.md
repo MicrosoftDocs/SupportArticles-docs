@@ -9,9 +9,9 @@ ms.custom: CSSTroubleshoot
 appliesto:
 - Exchange Online
 search.appverid: MET150
-ms.reviewer: 
-author: simonxjx
-ms.author: v-six
+ms.reviewer: v-six
+author: cloud-writer
+ms.author: meerak
 ms.date: 3/31/2022
 ---
 # "Mutual Authentication could not be established" error when using Remote Connectivity Analyzer to test Outlook Anywhere in Microsoft 365

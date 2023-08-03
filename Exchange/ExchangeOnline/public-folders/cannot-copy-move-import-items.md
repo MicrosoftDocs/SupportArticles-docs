@@ -1,8 +1,8 @@
 ---
 title: Can't copy, move, or import more than 1,000 items to a public folder
 description: When you try to copy, move, or import more than 1,000 items to a public folder in Outlook, the operation fails and returns error messages.
-author: v-charloz
-ms.author: v-chazhang
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -12,7 +12,7 @@ ms.custom:
   - CI 159185
   - Exchange Online
   - CSSTroubleshoot
-ms.reviewer: haembab; meerak; batre
+ms.reviewer: haembab, meerak, batre, v-chazhang
 appliesto: 
   - Exchange Online
 search.appverid: MET150

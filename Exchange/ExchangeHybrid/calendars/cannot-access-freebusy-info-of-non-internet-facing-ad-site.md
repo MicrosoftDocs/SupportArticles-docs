@@ -1,8 +1,8 @@
 ---
 title: Cannot access free/busy of non-Internet-facing AD site
 description: Describes an issue in which users who have mailboxes in Exchange Online cannot access free/busy information of users who have mailboxes in a non-Internet-facing Active Directory site in a hybrid environment.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Hybrid
   - CSSTroubleshoot
-ms.reviewer: santoshp
+ms.reviewer: santoshp, v-six
 appliesto: 
   - Exchange Online
   - Exchange Server 2016 Enterprise Edition

@@ -1,7 +1,8 @@
 ---
 title: Error when you move mailboxes to/from Microsoft 365
 description: Discusses an issue in which you receive an error message when you try to move mailboxes to or from Microsoft 365 in a hybrid deployment after you upgrade the on-premises environment to Exchange Server 2010 SP2. Provides a resolution.
-author: simonxjx
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -11,13 +12,13 @@ ms.custom:
   - CSSTroubleshoot
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: v-six
 appliesto: 
   - Office Products
   - Exchange Online
   - Exchange Server 2010 Standard
   - Exchange Server 2010 Enterprise
 ms.date: 3/31/2022
+ms.reviewer: v-six
 ---
 # (Exception has been thrown by the target) error when moving mailboxes to or from Microsoft 365 in a hybrid deployment
 

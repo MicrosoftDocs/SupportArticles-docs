@@ -1,8 +1,8 @@
 ---
 title: Description of the Files folder in Microsoft 365
 description: Description of the Files folder that's listed in the output of Get-MailboxFolderStatistics for a mailbox.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Online
   - CSSTroubleshoot
-ms.reviewer: kerbo, kellybos
+ms.reviewer: kerbo, kellybos, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150

@@ -1,8 +1,8 @@
 ---
 title: How to create and book a workspace
 description: Gives an introduction about workspace and describes how to create and book a workspace in Outlook.
-author: v-lianna
-ms.author: v-lianna
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ ms.custom:
   - Exchange Online
   - CI
   - CSSTroubleshoot
-ms.reviewer: meerak, joew, gbratton
+ms.reviewer: meerak, joew, gbratton, v-lianna
 appliesto: 
   - Exchange Online
   - Outlook for Android

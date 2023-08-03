@@ -1,8 +1,8 @@
 ---
 title: Delegate can't accept meeting request in OWA
 description: Fixes an issue in which a delegate can't accept meeting requests in OWA when the manager is in another forest during coexistence.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Online
   - CSSTroubleshoot
-ms.reviewer: kellybos, mhaque
+ms.reviewer: kellybos, mhaque, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150

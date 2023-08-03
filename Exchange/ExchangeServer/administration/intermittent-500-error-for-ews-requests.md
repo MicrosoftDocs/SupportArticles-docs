@@ -2,8 +2,8 @@
 title: Intermittent 500 error for EWS requests
 description: Discusses an intermittent 500 error that occurs in an Exchange Server 2013 and 2007 coexistence environment. Provides a resolution.
 ms.date: 06/22/2020
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: 
+ms.reviewer: v-six
 appliesto: 
   - Exchange Server 2013 Standard Edition
   - Exchange Server 2013 Enterprise

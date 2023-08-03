@@ -1,8 +1,8 @@
 ---
 title: NDR error 550 5.7.64 TenantAttribution when sending emails through EOP
 description: Describes an issue in which you receive a 550 5.7.64 TenantAttribution; Relay Access Denied SMTP error when sending mail through Exchange Online Protection.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ ms.custom:
   - Exchange Online
   - CSSTroubleshoot
   - CI 167832
-ms.reviewer: rrajan
+ms.reviewer: rrajan, v-six
 appliesto: 
   - Exchange Online
   - Exchange Server 2016 Enterprise Edition

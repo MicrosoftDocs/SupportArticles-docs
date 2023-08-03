@@ -10,9 +10,9 @@ appliesto:
 - Exchange Online
 - Microsoft Exchange Online Dedicated
 search.appverid: MET150
-ms.reviewer: rrajan, v-maqiu, ninob
-author: simonxjx
-ms.author: v-six
+ms.reviewer: rrajan, v-maqiu, ninob, v-six
+author: cloud-writer
+ms.author: meerak
 ms.date: 3/31/2022
 ---
 # MailNickName or Alias attribute in Exchange Online doesn't match what is set in Exchange on-premises

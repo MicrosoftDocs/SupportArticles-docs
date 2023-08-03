@@ -7,8 +7,8 @@ metadata:
   description: Documentation for troubleshooting common issues with Exchange hybrid deployment.
   ms.service: exchange-online
   ms.topic: landing-page
-  author: helenclu
-  ms.author: luche
+  author: cloud-writer
+  ms.author: meerak
   ms.date: 03/27/2023
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new

@@ -14,7 +14,7 @@ appliesto:
   - Microsoft 365 Apps for enterprise
   - Office 2016
   - OneDrive
-ms.date: 3/31/2022
+ms.date: 7/25/2023
 ---
 
 # How to block OneDrive use from within Microsoft 365 Apps for enterprise and Office 2016 applications
@@ -36,6 +36,7 @@ To block OneDrive access for Office 2016 users in your organization, follow thes
 To prevent users from adding their personal OneDrive account, use one of the following methods:
 
 ### Use a Group Policy object
+
 Use the Office 2016 Administrative Templates to configure Group Policy settings.
 
 Under **User configuration** > **Administrative Templates** > **Microsoft Office 2016** > **Miscellaneous**, configure **Hide file locations when opening or saving files** as **Hide OneDrive Personal**.
@@ -43,31 +44,31 @@ Under **User configuration** > **Administrative Templates** > **Microsoft Office
 > [!NOTE]
 > This policy setting only applies to Word, PowerPoint, and Excel.
 
-
 ### Modify the registry
 
-Open registry editor and browse to the following registry key:
+Open the registry editor and browse to the following registry subkey:
 
-```
-HKCU\Software\Policies\Microsoft\Office\16.0\Common\Internet
-```
+`HKCU\Software\Policies\Microsoft\Office\16.0\Common\Internet`
 
-Modify the DWORD value "OnlineStorage".
+Modify the DWORD value **OnlineStorage**. The following table lists the predefined values of **OnlineStorage** and the function of each value:
 
-Available values are:
+| Value of OnlineStorage | Function of the value |
+| -------- | ------- |
+|0: This is the default value|Enables all services.|
+|1|Disables OneDrive Personal.|
+|2|Disables SharePoint Online and OneDrive for Business.|
+|3|Disables SharePoint Online, OneDrive for Business, and OneDrive Personal.|
+|4|Disables This PC.|
+|8|Disables SharePoint On-Premises.|
+|16|Disables Recent Places.|
+|32|Disables SharePoint Online.|
+|64|Disables OneDrive for Business.|
+|128|Disables all third-party services.|
+|4294967295|Disables all optional services.|
 
-* **0** Policy is off (all locations are shown)
+To disable multiple services, add up the corresponding values for these services, and set **OnlineStorage** to the resulting value. For example, to disable OneDrive Personal (1), This PC (4), and all third-party services (128), add 1, 4, and 128, and set the value of **OnlineStorage** to 133.
 
-* **1** Only OneDrive Personal locations are hidden
-
-* **2** All SharePoint Online locations are hidden
-
-* **3** All Microsoft Online Locations are hidden
-
-If you set other values, the policy is off (all locations are shown).
-
-If the value is set to **1**, uses can no longer see their personal OneDrive location under **Add a place**.
-
+If you disable or don't configure this policy setting, users can use any configured Microsoft cloud-based file location to open, save, and share files.
 
 To block the use of OneDrive from within Windows, see [How to block OneDrive.exe from being advertised after you install Office 2016](https://support.microsoft.com/help/3107393). 
 

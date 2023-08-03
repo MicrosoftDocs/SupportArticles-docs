@@ -1,8 +1,8 @@
 ---
 title: A transport rule doesn't match if user mailbox rules automatically forward messages
 description: The transport rule doesn't honor the exclusions, and it rejects the messages. This article provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ ms.custom:
   - Exchange Online
   - CI 116057
   - CSSTroubleshoot
-ms.reviewer: arindamt
+ms.reviewer: arindamt, v-six
 appliesto: 
   - Exchange Online
 search.appverid: 

@@ -1,8 +1,8 @@
 ---
 title: Junk emails are permanently deleted
 description: Provides a resolution for the issue that junk emails are permanently deleted in Microsoft Outlook.
-author: helenclu
-ms.author: luche
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

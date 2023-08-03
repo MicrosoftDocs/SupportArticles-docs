@@ -2,8 +2,8 @@
 title: Accessing other people's mailboxes
 description: Describes how to open other people's mailboxes in Microsoft 365.
 ms.date: 08/13/2020
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Online
   - CSSTroubleshoot
-ms.reviewer: 
+ms.reviewer: v-six
 appliesto: 
   - Microsoft 365
 search.appverid: MET150
@@ -39,7 +39,7 @@ We'll begin by asking you the task you want to do. Then we'll take you through a
 
 Select the scenario that you are trying to configure for your users. Once you select the appropriate scenario below, the step-by-step instructions will be provided.
 
-- [I need to access somebody else’s mailbox](#which-microsoft-365-plan-do-you-use).
+- [I need to access somebody else's mailbox](#which-microsoft-365-plan-do-you-use).
 - [Set up permissions to access multiple mailboxes](#set-up-permissions-to-access-multiple-mailboxes).
 
 ## Which Microsoft 365 plan do you use

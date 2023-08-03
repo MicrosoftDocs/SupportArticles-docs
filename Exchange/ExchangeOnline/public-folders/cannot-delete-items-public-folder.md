@@ -1,8 +1,8 @@
 ---
 title: Can't delete items from public folder
 description: Items in a public folder persist after you try to delete them in Outlook on the web.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -12,7 +12,7 @@ ms.custom:
   - CI 117577
   - CI 165318
   - CSSTroubleshoot
-ms.reviewer: batre, haembab, meerak
+ms.reviewer: batre, haembab, meerak, v-six
 appliesto: 
   - Exchange Online
 search.appverid: 

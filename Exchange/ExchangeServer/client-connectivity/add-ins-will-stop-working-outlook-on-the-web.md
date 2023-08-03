@@ -1,8 +1,8 @@
 ---
 title: Add-ins will stop working in Outlook on the web
 description: Provides the information that users won't be able to launch add-ins in Outlook on the web that's running on Exchange Server 2016 RTM from May 3, 2021.
-author: v-lianna
-ms.author: v-lianna
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ ms.custom:
   - Exchange Server
   - CSSTroubleshoot
   - CI 147160
-ms.reviewer: mhaque
+ms.reviewer: mhaque, v-lianna
 appliesto: 
   - Outlook on the web
   - Exchange Server 2016 RTM

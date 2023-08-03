@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Remove an alias from a shared mailbox
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
@@ -24,6 +24,7 @@ search.appverid:
 ms.assetid: ea585b86-76aa-4cf4-912e-f8271677d1d5
 description: Learn how to remove an email address from a shared mailbox in the admin center so that you can reuse it.
 ms.date: 3/31/2022
+ms.reviewer: v-six
 ---
 # Troubleshoot: Remove an alias from a shared mailbox
 

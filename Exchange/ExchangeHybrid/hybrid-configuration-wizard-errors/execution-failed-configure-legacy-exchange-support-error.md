@@ -1,8 +1,8 @@
 ---
 title: Execution failed Configure Legacy Exchange Support error
 description: Describes an issue that returns an Execution failed error message. Occurs when you use the Hybrid Configuration wizard. Provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Hybrid
   - CSSTroubleshoot
-ms.reviewer: timothyh
+ms.reviewer: timothyh, v-six
 appliesto: 
   - Exchange Online
   - Exchange Server 2010 Enterprise

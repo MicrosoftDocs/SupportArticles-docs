@@ -1,8 +1,8 @@
 ---
 title: Cannot create new user without Exchange Online license
 description: Discusses an issue in Microsoft 365 in which you receive an error message when you create a new user without an Exchange Online license. Provides a workaround.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Online
   - CSSTroubleshoot
-ms.reviewer: tasitae
+ms.reviewer: tasitae, v-six
 appliesto: 
   - Outlook for Microsoft 365
 search.appverid: MET150

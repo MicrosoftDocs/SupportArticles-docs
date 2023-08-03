@@ -2,8 +2,8 @@
 title: Create and manage resource mailboxes
 description: Explains how to use the EAC to create and manage resource mailboxes in Microsoft 365.
 ms.date: 08/19/2020
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Online
   - CSSTroubleshoot
-ms.reviewer: 
+ms.reviewer: v-six
 appliesto: 
   - Microsoft 365
 search.appverid: MET150

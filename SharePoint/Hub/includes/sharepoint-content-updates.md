@@ -2,6 +2,14 @@
 
 
 
+## Week of July 17, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 7/17/2023 | [SharedWith column displays users who no longer have access to a document](/sharepoint/troubleshoot/sharing-and-permissions/shared-with-column-users-no-access) | modified |
+
+
 ## Week of July 10, 2023
 
 

@@ -1,8 +1,8 @@
 ---
 title: Delegate only sees free/busy if manager in another forest
 description: Describes an issue that causes a delegate to only see free/busy information in OWA when the manager is in another forest during coexistence.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Online
   - CSSTroubleshoot
-ms.reviewer: kellybos, mhaque
+ms.reviewer: kellybos, mhaque, v-six
 appliesto: 
   - Outlook on the web (OWA)
   - Exchange Online
