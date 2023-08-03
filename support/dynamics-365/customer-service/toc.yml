@@ -162,4 +162,4 @@
         - name: Voice channel
           items:
             - name: Use diagnostic messages to troubleshoot call issues
-              href: use-diagnostic-messages-in-call-issues.md
+              href: omnichannel-for-customer-service/use-diagnostic-messages-in-call-issues.md
