@@ -144,7 +144,6 @@
         "security/o365-security/**/*.md": "o365-security",
         "compliance/archive-mailboxes/**/*.md": "archive-mailboxes",
         "compliance/audit-logs/**/*.md": "audit-logs",
-        "compliance/data-loss-prevention/**/*.md": "data-loss-prevention",
         "compliance/ediscovery/**/*.md": "ediscovery",
         "compliance/holds/**/*.md": "holds",
         "compliance/information-barriers/**/*.md": "information-barriers",
