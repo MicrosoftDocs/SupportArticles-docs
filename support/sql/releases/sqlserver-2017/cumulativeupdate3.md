@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 3 for SQL Server 2017 (KB4052987)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2017 cumulative update 3 (KB4052987).
-ms.date: 07/31/2023
+ms.date: 08/04/2023
 ms.custom: KB4052987
 appliesto:
 - SQL Server 2017 on Windows

@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 2 for SQL Server 2017 (KB4052574)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2017 cumulative update 2 (KB4052574).
-ms.date: 07/31/2023
+ms.date: 08/04/2023
 ms.custom: KB4052574
 appliesto:
 - SQL Server 2017 on Windows
