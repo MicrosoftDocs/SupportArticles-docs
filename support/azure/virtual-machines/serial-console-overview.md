@@ -34,9 +34,9 @@ Serial Console is available in the following regions:
 - Canada East
 - Central India
 - Central US
-- Central Useuap
+- Central US EUAP 
 - East Asia
-- East US 2 (EUAP)
+- East US 2 EUAP
 - East US 2
 - France Central
 - France South
