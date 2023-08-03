@@ -15,7 +15,7 @@ When your agents are in a voice call, sometimes, they might see warning and erro
 
 ## Troubleshoot network issues
 
-The following table lists the warning messages that appear when your agents face network issues in their voice calls. These messages help agents diagnose the problem and take actions to resolve them. Use the network value to look up for information in Azure Communication Services.
+The following table lists the warning messages that appear when your agents face network issues in their voice calls. These messages help agents diagnose the problem and take actions to resolve them. Use the network value to look up information in Azure Communication Services.
 
 | Message| Description| Network value |
 | -------- | -------- |-----------|
