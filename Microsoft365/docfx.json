@@ -152,12 +152,14 @@
         "compliance/retention/**/*.md": "retention"
       },
       "author": {
-        "**/*.md": "helenclu",
+        "admin/**/*.md": "helenclu",
+        "enterprise/**/*.md": "helenclu",
         "compliance/**/*.md": "cloud-writer",
         "security/**/*.md": "cloud-writer"
       },
       "ms.author": {
-        "**/*.md": "luche",
+        "admin/**/*.md": "luche",
+        "enterprise/**/*.md": "luche",
         "compliance/**/*.md": "meerak",
         "security/**/*.md": "meerak"
       }
