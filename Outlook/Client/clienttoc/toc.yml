@@ -417,7 +417,7 @@
           href: ../message-body/outside-messages-not-include-email-signature.md
         - name: Multiple slashes are changed to one slash
           href: ../message-body/url-multiple-slashes-become-single-slash.md
-        - name: No subject or content in automatically emails
+        - name: No subject or content in automatic emails
           href: ../message-body/no-subject-content-in-automatically-email.md
         - name: Pictures are not shown but displayed as red X
           href: ../message-body/pictures-not-displayed-and-shown-as-red-x.md
@@ -649,6 +649,8 @@
           href: ../synchronization/synchronization-monitor-improvements.md
     - name: User Interface
       items:
+        - name: Access public folders in Outlook for Windows
+          href: ../user-interface/navigate-to-public-folders-in-new-outlook.md      
         - name: Add-ins are registered under \Wow6432Node
           href: ../user-interface/addins-are-registered-under-wow6432node.md
         - name: Apps for Outlook 2013 can't activate in email
@@ -669,7 +671,7 @@
           href: ../user-interface/cannot-delete-default-outlook-folders.md
         - name: Can't import an XLS or CSV file into the Hebrew version
           href: ../user-interface/cannot-map-custom-fields.md
-        - name: Can't open mutiple Excel attachements
+        - name: Can't open multiple Excel attachments
           href: ../user-interface/only-two-excel-attachments-can-open.md
         - name: Can't open Outlook items from Windows Search results
           href: ../user-interface/cannot-open-outlook-items-from-windows-search-results.md
@@ -773,8 +775,6 @@
           href: ../user-interface/missing-registry-information-causes-problems-with-object-model.md
         - name: Missing Weather Bar and Weather settings
           href: ../user-interface/weather-bar-and-weather-settings-are-missing.md
-        - name: Navigate to public folders in new Outlook for Windows
-          href: ../user-interface/navigate-to-public-folders-in-new-outlook.md
         - name: No notifications if Outlook Start menu shortcut is missing
           href: ../user-interface/no-desktop-alerts-(toast-notifications)-if-missing-start-menu-shortcut.md
         - name: No search results or content shown in favorites
