@@ -159,3 +159,7 @@
           items:
             - name: Troubleshoot sync issue with social data
               href: omnichannel-for-customer-service/social-data-sync.md
+        - name: Voice channel
+          items:
+            - name: Use diagnostic messages to troubleshoot call issues
+              href: use-diagnostic-messages-in-call-issues.md
