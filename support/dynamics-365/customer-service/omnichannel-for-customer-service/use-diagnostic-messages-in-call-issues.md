@@ -11,7 +11,7 @@ ms.custom: bap-template
 
 # Use diagnostic messages to troubleshoot issues in voice calls
 
-When your agents are in a voice call, sometimes, they might see warning and error messages on the communication panel. These messages will help them understand the issues that are affecting their call experience. The messages are informative so that the agents can self diagnose and resolve the issues themselves. For example, if agents mute their mic and speak, a message appears to let them know to remove themselves from mute.
+When your agents are in a voice call, sometimes, they might see warning and error messages on the communication panel. These messages will help them understand the issues that are affecting their call experience. Agents can self diagnose and resolve the issues themselves by using the message information. For example, if agents mute their mic and speak, a message appears to let them know to remove themselves from mute.
 
 ## Troubleshoot network issues
 
