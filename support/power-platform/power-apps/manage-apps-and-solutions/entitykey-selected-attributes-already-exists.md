@@ -20,7 +20,7 @@ When you import a solution, you receive the following error message:
 
 ## Cause
 
-This error occurs when a table and column that contains the entity key already exist in the target environment.
+This error occurs when a table and column that contain the entity key already exist in the target environment.
 
 ## Workaround
 
