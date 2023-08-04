@@ -3,7 +3,7 @@
 title: Azure App Service troubleshooting documentation # < 60 chars
 summary: Welcome to Azure App Service troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Azure Monitor. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
 metadata:
-  title: Troubleshoot Azure App Service issues
+  title: Azure App Service troubleshooting documentation
   description: Documentation for troubleshooting common issues with Azure App Service. # Required; article description that is displayed in search results. < 160 chars.
   ms.service: app-service  #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
