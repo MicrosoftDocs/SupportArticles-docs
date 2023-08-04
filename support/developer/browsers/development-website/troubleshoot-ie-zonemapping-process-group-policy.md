@@ -96,6 +96,7 @@ The following blog post includes a granular explanation of domains:
 
 To identify incorrect entries in the policy, download and run the [IEDigest](https://aka.ms/IEDigest) tool. After creating a report and opening it in your web browser, you'll see a **Warnings** section where incorrect entries are named. These entries need to be removed (or corrected) in the Group Policy. Here's an example of how it looks like when trying to add `*.com` to a zone:
 
+**Warnings**
 | Description    |     Key    |     Name    |    Value     |
 |---------|---------|---------|---------|
 |Invalid entry in Site to Zone Assignment List. Click here for [more info](/archive/blogs/askie/description-of-event-id-1085-from-internet-explorer-zonemapping)     |    HKCU\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMapKey     |      *.com is invalid   |         |
