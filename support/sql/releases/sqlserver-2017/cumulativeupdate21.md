@@ -22,7 +22,7 @@ This article describes Cumulative Update package 21 (CU21) for Microsoft SQL Ser
 
 ## Known issues in this update
 
-There's a known issue that affects the Filestream and FileTable features on Windows Server 2012 and Windows 8 operating systems. Don't apply this CU if you use one of these SQL Server features and you're running on one of these identified operating systems. For more information, see the [Filestream notice](https://support.microsoft.com/help/4557397#bkmk_filestream) section.
+There's a known issue that affects the Filestream and FileTable features on Windows Server 2012 and Windows 8 operating systems. Don't apply this CU if you use one of these SQL Server features and you're running on one of these identified operating systems.
 
 ## Improvements and fixes included in this update
 
