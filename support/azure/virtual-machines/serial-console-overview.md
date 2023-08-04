@@ -12,7 +12,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: vm
 ms.workload: infrastructure-services
-ms.date: 05/09/2022
+ms.date: 08/04/2023
 ms.author: genli
 ---
 
@@ -22,7 +22,51 @@ Serial Console in the Azure portal provides access to a text-based console for v
 
 Serial Console works in the same manner for VMs and virtual machine scale set instances. In this doc, all mentions to VMs will implicitly include virtual machine scale set instances unless otherwise stated.
 
-Serial Console is generally available in global Azure regions and in public preview in Azure Government. It is not yet available in the Azure China cloud.
+## Regions
+
+Serial Console is available in the following regions:
+
+- Australia Central
+- Australia East
+- Brazil South
+- Brazil Southeast
+- Canada Central
+- Canada East
+- Central India
+- Central US
+- Central US EUAP 
+- East Asia
+- East US 2 EUAP
+- East US 2
+- France Central
+- France South
+- Germany North
+- Germany West Central
+- Japan East
+- Japan West
+- Korea Central
+- Korea South
+- North Europe
+- Norway East
+- Norway West
+- Qatar Central
+- South Africa North
+- South Africa West
+- Southeast Asia
+- South India
+- Sweden Central
+- Sweden South
+- Switzerland North
+- Switzerland West
+- UAE Central
+- UAE North
+- UK South
+- UK West
+- West Central US
+- West Europe
+- West US 2
+- US Gov Arizona
+- US Gov Virginia
 
 ## Prerequisites to access the Azure Serial Console
 
