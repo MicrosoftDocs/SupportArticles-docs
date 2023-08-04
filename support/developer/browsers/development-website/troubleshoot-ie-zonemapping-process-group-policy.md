@@ -36,7 +36,7 @@ Description:  Windows failed to apply the Internet Explorer Zonemapping settings
 Event Xml:
 <Event xmlns="https://schemas.microsoft.com/win/2004/08/events/event">
 <System>
-<Provider Name="Microsoft-Windows-GroupPolicy" Guid="{GUID}" />
+<Provider Name="Microsoft-Windows-GroupPolicy" Guid="{<GUID>}" />
 <EventID>1085</EventID>
 <Level>3</Level>
 </System>
@@ -44,7 +44,7 @@ Event Xml:
 <Data Name="ErrorCode">87</Data>
 <Data Name="ErrorDescription">The parameter is incorrect. </Data>
 <Data Name="ExtensionName">Internet Explorer Zonemapping</Data>
-<Data Name="ExtensionId">{ExtensionID}</Data>
+<Data Name="ExtensionId">{<ExtensionID>}</Data>
 </EventData>
 </Event> 
 ```
@@ -61,14 +61,14 @@ This event can occur if you enter an invalid entry within the **Site To Zone Ass
 
 The format of the **Site To Zone Assignment List** policy is described within the policy. This policy setting allows you to manage a list of sites that you want to associate with a particular security zone. These zone numbers have associated security settings that apply to all sites in the zone.
 
-Internet Explorer has four security zones, which are used by this policy setting to associate sites with zones. They're numbered `1` to `4` and defined in descending order from most trusted to least trusted:
+Internet Explorer has four security zones, which are used by this policy setting to associate sites with zones. They're numbered `1` to `4` and defined in descending order of most to least trusted:
 
 1. Local Intranet zone  
 1. Trusted Sites zone  
 1. Internet zone  
 1. Restricted Sites zone
 
-Security settings can be set for each of these zones through other policy settings, and their default settings are:
+The security settings can be set for each of these zones through other policy settings, and their default settings are:
 
 - Trusted Sites zone (Low template)
 - Intranet zone (Medium-Low template)
@@ -83,7 +83,7 @@ If you enable this policy setting, you can enter a list of sites and their relat
 
 - `Value`: It's the number of the zone you want to associate the site with security settings. The `Value` of the above Internet Explorer zones is `1` to `4`.
 
-When you enter data in the Group Policy Editor, there's no syntax or logical error checking available. This error checking is performed on the client when the **Internet Explorer Zonemapping** Group Policy Extension converts the registry into the format used by Internet Explorer. During that conversion, the same methods are implemented when you manually add a site to a specific security zone. If an entry is rejected when you add it manually, the conversion also fails if the Group Policy is used and event 1085 is issued. For example, when you try to add a wildcard entry to a top-level domain (TLD) (like `*.com` or `*.co.uk`) while adding a site, the wildcard entry is rejected. Now, the question is, which entries are treated as TLDs; by default, the following schemes are treated as TLDs in Internet Explorer:
+When you enter data in the Group Policy Editor, there's no syntax or logical error checking available. This error checking is performed on the client when the **Internet Explorer Zonemapping** Group Policy Extension converts the registry into the format used by Internet Explorer. During that conversion, the same methods are implemented when you manually add a site to a specific security zone. If an entry is rejected when you add it manually, the conversion also fails if the Group Policy is used and the event 1085 is issued. For example, when you try to add a wildcard entry to a top-level domain (TLD) (like `*.com` or `*.co.uk`) while adding a site, the wildcard entry is rejected. Now, the question is, which entries are treated as TLDs; by default, the following schemes are treated as TLDs in Internet Explorer:
 
 - Flat domains (such as `.com`).
 - Two-letter domains in a two-letter TLD (such as `.co.uk`).
