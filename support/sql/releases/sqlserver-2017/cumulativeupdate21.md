@@ -46,7 +46,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id=13323992>[13323992](#13323992) </a> | [FIX: Non-yielding scheduler condition occurs if large number of row-column values are processed in row groups in SQL Server 2016 and 2017 (KB4521599)](https://support.microsoft.com/help/4521599) | SQL Server Engine | Column Stores | All |
 | <a id=13503404>[13503404](#13503404) </a> | R Setup components fail to download CAB files when TLS 1.0 is disabled. This update includes a new R Setup version to add support for TLS1.2. | SQL Server Engine| Extensibility| Windows|
 | <a id=13421890>[13421890](#13421890) </a> | [FIX: Access violation may occur when enumerating files in a FileTable in SQL Server (KB4540896)](https://support.microsoft.com/help/4540896) | SQL Server Engine | FileStream and FileTable | Windows |
-| <a id=13543457>[13543457](#13543457) </a> | When using FileTables in SQL Server, you may notice dumps being generated periodically that contain an assertion in function `FFtFileObject::ProcessPostCreate`. In some environments, these dumps may trigger a failover `FtFileObject::ProcessPostCreate file = fftfo.cpp line = \<LineNumber>expression = FALSE`. | SQL Server Engine | FileStream and FileTable | Windows |
+| <a id=13543457>[13543457](#13543457) </a> | When using FileTables in SQL Server, you may notice dumps being generated periodically that contain an assertion in function `FFtFileObject::ProcessPostCreate`. In some environments, these dumps may trigger a failover (FtFileObject::ProcessPostCreate file = fftfo.cpp line = \<LineNumber>expression = FALSE). | SQL Server Engine | FileStream and FileTable | Windows |
 | <a id=13578386>[13578386](#13578386) </a> | [Improvement: A manual method to set maximum group commit time in SQL Server 2017 (KB4565944)](https://support.microsoft.com/help/4565944) | SQL Server Engine| High Availability and Disaster Recovery| Windows|
 | <a id=13508566>[13508566](#13508566) </a> | [FIX: Availability Group failover generates lot of dumps as DTC support is toggled between PER_DB and NONE multiple times (KB4562173)](https://support.microsoft.com/help/4562173) | SQL Server Engine| High Availability and Disaster Recovery| Windows|
 | <a id=13477385>[13477385](#13477385) </a> | Fixes an assertion exception (Location:sosmemobj.cpp:LineNumber, Expression: pvb->FInUse ()) while querying the DMV `sys.dm_hadr_automatic_seeding`. | SQL Server Engine| High Availability and Disaster Recovery| All|
@@ -65,7 +65,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id=13603817>[13603817](#13603817) </a> | [FIX: Assertion dump may occur when Implicit Transactions are enabled in SQL Server 2016 and 2017 (KB4563597)](https://support.microsoft.com/help/4563597) | SQL Server Engine | Replication | Windows |
 | <a id=13546338>[13546338](#13546338) </a> | [FIX: High CPU usage causes performance issues in SQL Server 2016 and 2017 (KB3195888)](https://support.microsoft.com/help/3195888) | SQL Server Engine | SQL OS | All |
 | <a id=13502382>[13502382](#13502382) </a> | Fixes self-deadlock with database log flush queue spinlock.| SQL Server Engine| SQL OS | Linux |
-| <a id=13563530>[13563530](#13563530) </a> | Executing `sys.fn_xe_file_target_read_file` may cause SQL Server to. | SQL Server Engine | SQL OS | Windows |
+| <a id=13563530>[13563530](#13563530) </a> | Executing `sys.fn_xe_file_target_read_file` may cause SQL Server to stop responding. | SQL Server Engine | SQL OS | Windows |
 | <a id=13545675>[13545675](#13545675) </a> | [FIX: Script downgrade may fail when Cumulative Update 20 (CU20) is uninstalled from SQL server 2017 (KB4567837)](https://support.microsoft.com/help/4567837)| SQL Setup | Uninstall | Windows |
 
 ## How to obtain or download this or the latest cumulative update package
@@ -315,7 +315,7 @@ SQL Server 2017 Database Services Core Instance
 | Msvcr120.dll                                 | 12.10.40116.18  | 964656    | 17-Apr-20 | 15:45 | x64      |
 | Odsole70.dll                                 | 2017.140.3335.7 | 85912     | 13-Jun-20 | 03:54  | x64      |
 | Opends60.dll                                 | 2017.140.3335.7 | 25992     | 13-Jun-20 | 03:33  | x64      |
-| Qds.dll                                      | 2017.140.3335.7 | 1175944   | 13-Jun-20 | 6:32  | x64      |
+| Qds.dll                                      | 2017.140.3335.7 | 1175944   | 13-Jun-20 | 06:32  | x64      |
 | Rsfxft.dll                                   | 2017.140.3335.7 | 27528     | 13-Jun-20 | 03:32  | x64      |
 | Secforwarder.dll                             | 2017.140.3335.7 | 30608     | 13-Jun-20 | 03:53  | x64      |
 | Sqagtres.dll                                 | 2017.140.3335.7 | 69008     | 13-Jun-20 | 03:46  | x64      |

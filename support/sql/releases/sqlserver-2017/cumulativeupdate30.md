@@ -24,7 +24,7 @@ This article describes Cumulative Update package 30 (CU30) for Microsoft SQL Ser
 
 After applying SQL Server 2017 CU30, you may encounter an access violation when performing a bulk insert operation followed by a select statement in the same transaction. It can only occur when the database's recovery model is either simple or bulk-logged.
 
-To mitigate this issue, you can either uninstall CU30 or apply a temporary workaround of enabling trace flag 805. The trace flag reverts the changes introduced through fix number [14669410](https://support.microsoft.com/help/5013756#bkmk_14669410) in CU30.
+To mitigate this issue, you can either uninstall CU30 or apply a temporary workaround of enabling trace flag 805. The trace flag reverts the changes introduced through fix number [14669410](cumulativeupdate30.md#14669410) in CU30.
 
 This issue will be addressed in a future CU.
 
