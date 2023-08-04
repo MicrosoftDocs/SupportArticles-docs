@@ -3,7 +3,7 @@ title: Azure Storage Explorer troubleshooting guide
 description: Provides debugging techniques for Azure Storage Explorer.
 services: storage
 ms.service: azure-storage
-ms.date: 04/12/2023
+ms.date: 08/04/2023
 ms.reviewer: azurestocic, jarrettr, v-weizhu
 ---
 
@@ -221,20 +221,23 @@ macOS Keychain can sometimes enter a state that causes issues for the Storage Ex
 
 ### Linux: No application window or password manager errors at launch
 
-If you launch Storage Explorer on a Linux system, you may encounter issues where no application window appears, or you get error messages about the system's password manager.
+If you launch Storage Explorer on a Linux system, you may encounter one of the following issues:
 
-Storage Explorer uses your system's credential manager to protect your data, including sign-in credentials and SAS connections. If a compatible credential manager application is not detected, Storage Explorer will not launch.
+- No application window appears.
+- Errors about the system's password manager occur.
 
-If your system doesn't have a tool for local credential management installed, you should install a third-party tool compatible with `libsecret`. For example, on systems using GNOME, you can install [Seahorse](https://wiki.gnome.org/Apps/Seahorse/).
+Storage Explorer uses the system's credential manager to protect your data, including sign-in credentials and SAS connections. If a compatible credential manager application isn’t detected, Storage Explorer won't launch. If your system doesn't have a local credential management tool installed, install a third-party tool compatible with `libsecret`. For example, on Linux systems that use the GNOME desktop environment, you can install [Seahorse](https://wiki.gnome.org/Apps/Seahorse/).
 
-Storage Explorer normally creates a default keyring if one doesn't already exist at launch. However, in some cases, this might not occur, resulting in no application window or password manager errors. You can correct this by manually setting a default keyring. For example, if you are using Seahorse:
+Storage Explorer normally creates a default keyring if one doesn't exist at launch. However, in some cases, this might not occur, resulting in no application window or password manager service errors. To resolve the issues,  manually set a default keyring.
 
-1. Launch the password manager application (search your applications for "Passwords and Keys").
-1. If there are no existing keyrings, or you want to create a new one, click the + button and select "Password keyring".
-1. Give the new keyring a name and a password.
-1. Right-click the keyring and select "Set as default".
+For example, if you are using Seahorse, launch the "Passwords and Keys" application. If there are no existing keyrings, or you want to create a new one, follow these steps:
 
-If you are using the Snap installation, you must also make sure the snap is connected to the system password manager. You can connect to the password manager by running the following command:
+1. Select the "+" button in Passwords and Keys.
+2. Select **Password keyring**.
+3. Set a name and a password for the new keyring.
+4. Right-click the keyring and select **Set as default**.
+
+If you use Snap installation, you must also make sure Snap is connected to your system's password manager. To do this, run the following command:
 
 ```bash
 snap connect storage-explorer:password-manager-service :password-manager-service
