@@ -81,7 +81,7 @@ If you enable this policy setting, you can enter a list of sites and their relat
 
 - `Valuename`: It's used to specify a host for an intranet site, or a fully qualified domain name for other sites. The `valuename` may also include a specific protocol. For example, if you enter *`https://www.contoso.com`* as the `valuename`, other protocols aren't affected. If you just enter *`www.contoso.com`*, all protocols for that site are affected, including http, https, ftp, and so on. The site may also be expressed as an IP address (such as 127.0.0.1) or a range (such as 127.0.0.1-10). To avoid creating conflicting policies, don't include other characters after the domain, such as a trailing slash or URL path. For example, the policy settings for `www.contoso.com` and `www.contoso.com/mail` would be treated as the same policy setting by Internet Explorer, and therefore, conflict.
 
-- `Value`: It's the number of the zone you want to associate the site with security settings. The `Value` of the above Internet Explorer zones are `1` to `4`.
+- `Value`: It's the number of the zone you want to associate the site with security settings. The `Value` of the above Internet Explorer zones is `1` to `4`.
 
 When you enter data in the Group Policy Editor, there's no syntax or logical error checking available. This error checking is performed on the client when the **Internet Explorer Zonemapping** Group Policy Extension converts the registry into the format used by Internet Explorer. During that conversion, the same methods are implemented when you manually add a site to a specific security zone. If an entry is rejected when you add it manually, the conversion also fails if the Group Policy is used and event 1085 is issued. For example, when you try to add a wildcard entry to a top-level domain (TLD) (like `*.com` or `*.co.uk`) while adding a site, the wildcard entry is rejected. Now, the question is, which entries are treated as TLDs; by default, the following schemes are treated as TLDs in Internet Explorer:
 
@@ -94,7 +94,7 @@ The following blog post includes a granular explanation of domains:
 
 ## Resolution
 
-To identify incorrect entries in the policy, download and run the [IEDigest](https://aka.ms/IEDigest) tool. After creating a report and opening it in your web browser, you'll see a **Warnings** section where incorrect entries are named. These entries need to be removed (or corrected) in the Group Policy. Here's an example o how it looks like when trying to add `*.com` to a zone:
+To identify incorrect entries in the policy, download and run the [IEDigest](https://aka.ms/IEDigest) tool. After creating a report and opening it in your web browser, you'll see a **Warnings** section where incorrect entries are named. These entries need to be removed (or corrected) in the Group Policy. Here's an example of how it looks like when trying to add `*.com` to a zone:
 
 |Warnings||||
 |-|-|-|-|
