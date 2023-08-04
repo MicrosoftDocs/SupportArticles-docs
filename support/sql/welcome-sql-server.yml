@@ -3,7 +3,7 @@
 title: SQL Server troubleshooting # < 60 chars
 summary: Welcome to SQL Server troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use SQL Server.
 metadata:
-  title: SQL Server troubleshooting document
+  title: SQL Server troubleshooting documentation
   description: This article lists Knowledge Base (KB) and other Support articles for SQL Server. # Required; article description that is displayed in search results. < 160 chars.
   ms.service: sql
   ms.topic: landing-page # Required
