@@ -25,7 +25,7 @@ The following table lists the warning messages that appear when your agents face
 
 ## Troubleshoot device issues
 
-The following table lists the messages that appear when your agents face issues with their audio device in the voice calls. Your agents can use the information to take actions and resolve the problem. Use the audio value to look up information in [Azure Communication Services](azure/communication-services/concepts/voice-video-calling/user-facing-diagnostics#audio-values).
+The following table lists the messages that appear when your agents face issues with their audio device in the voice calls. Your agents can use the information to take actions and resolve the problem. Use the audio value to look up information in [Azure Communication Services](/azure/communication-services/concepts/voice-video-calling/user-facing-diagnostics#audio-values).
 
 | Message| Description| Audio value |
 | -------- | -------- |-----------|
