@@ -309,7 +309,7 @@ SQL Server 2017 Data Quality
 | Microsoft.practices.enterpriselibrary.common.dll  | 4.1.0.0      | 208648    | 2-Sep-22 | 21:47 | x86      |
 | Microsoft.practices.enterpriselibrary.common.dll  | 4.1.0.0      | 208648    | 2-Sep-22 | 21:50 | x86      |
 | Microsoft.practices.enterpriselibrary.logging.dll | 4.1.0.0      | 264968    | 2-Sep-22 | 21:47 | x86      |
-| Microsoft.practices.enterpriselibrary.logging.dll | 4.1.0.0      | 264968    | 2-Sep-22 | 21:47 | x86      |
+| Microsoft.practices.enterpriselibrary.logging.dll | 4.1.0.0      | 264968    | 2-Sep-22 | 21:50 | x86      |
 
 SQL Server 2017 sql_dreplay_client
 
