@@ -4,7 +4,7 @@ description: Troubleshoot common issues with monitoring sync health and resolvin
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 07/19/2023
+ms.date: 08/04/2023
 ms.author: kendownie
 ms.custom: devx-track-azurepowershell
 ---
@@ -148,6 +148,7 @@ To see these errors, run the *FileSyncErrorsReport.ps1* PowerShell script (locat
 | 0x80C8028A | -2134375798 | ECS_E_SYNC_CONSTRAINT_CONFLICT_ON_FAILED_DEPENDEE | The file or directory change can't be synced yet because a dependent folder isn't yet synced. This item will sync after the dependent changes are synced. | Transient error. If the error persists, use the *FileSyncErrorsReport.ps1* PowerShell script to determine why the dependent folder isn't yet synced. |
 | 0x80c80284 | -2134375804 | ECS_E_SYNC_CONSTRAINT_CONFLICT_SESSION_FAILED | The file or directory change can't be synced yet because a dependent folder isn't yet synced and the sync session failed. This item will sync after the dependent changes are synced. | No action required. If the error persists, investigate the sync session failure. |
 | 0x8007007b | -2147024773 | ERROR_INVALID_NAME | The file or directory name is invalid. | Rename the file or directory in question. See [Handling unsupported characters](?tabs=portal1%252cazure-portal#handling-unsupported-characters) for more information. |
+| 0X80070459 | -2147023783 | ERROR_NO_UNICODE_TRANSLATION | The file or directory name has unsupported surrogate pair characters. | Rename the file or directory in question. See [Handling unsupported characters](?tabs=portal1%252cazure-portal#handling-unsupported-characters) for more information. |
 | 0x80c80255 | -2134375851 | ECS_E_XSMB_REST_INCOMPATIBILITY | The file or directory name is invalid. | Rename the file or directory in question. See [Handling unsupported characters](?tabs=portal1%252cazure-portal#handling-unsupported-characters) for more information. |
 | 0x80c80018 | -2134376424 | ECS_E_SYNC_FILE_IN_USE | The file can't be synced because it's in use. The file will be synced when it's no longer in use. | No action required. Azure File Sync creates a temporary VSS snapshot once a day on the server to sync files that have open handles. |
 | 0x80c8031d | -2134375651 | ECS_E_CONCURRENCY_CHECK_FAILED | The file has changed, but the change hasn't yet been detected by sync. Sync will recover after this change is detected. | No action required. |
@@ -179,7 +180,7 @@ To see these errors, run the *FileSyncErrorsReport.ps1* PowerShell script (locat
 
 ### Handling unsupported characters
 
-If the *FileSyncErrorsReport.ps1* PowerShell script shows per-item sync errors due to unsupported characters (error code 0x8007007b or 0x80c80255), you should remove or rename the characters at fault from the respective file names. PowerShell will likely print these characters as question marks or empty rectangles since most of these characters have no standard visual encoding.
+If the *FileSyncErrorsReport.ps1* PowerShell script shows per-item sync errors due to unsupported characters (error code 0x8007007b, 0x80c80255, or 0X80070459), you should remove or rename the characters at fault from the respective file names. PowerShell will likely print these characters as question marks or empty rectangles since most of these characters have no standard visual encoding.
 
 > [!Note]  
 > The [Evaluation Tool](/azure/storage/file-sync/file-sync-planning#evaluation-cmdlet) can be used to identify characters that are not supported. If your dataset has several files with invalid characters, use the [ScanUnsupportedChars](https://github.com/Azure-Samples/azure-files-samples/tree/master/ScanUnsupportedChars) script to rename files which contain unsupported characters.
