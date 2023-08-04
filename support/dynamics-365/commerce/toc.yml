@@ -8,6 +8,8 @@
     - name: Order management
       items:
         - name: Troubleshoot issues with the online store transaction creation process
-          href: order-management/online-order-transaction-creation-failures.md
-
-        
+          href: order-management/online-order-transaction-creation-failures.md   
+    - name: Point of sale (POS)
+      items:
+        - name: Store Commerce app (POS) is suddenly deactivated
+          href: point-of-sale/store-commerce-app-pos-deactivated.md    
