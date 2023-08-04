@@ -228,16 +228,16 @@ If you launch Storage Explorer on a Linux system, you may encounter one of the f
 
 Storage Explorer uses the system's credential manager to protect your data, including sign-in credentials and SAS connections. If a compatible credential manager application isn’t detected, Storage Explorer won't launch. If your system doesn't have a local credential management tool installed, install a third-party tool compatible with `libsecret`. For example, on Linux systems that use the GNOME desktop environment, you can install [Seahorse](https://wiki.gnome.org/Apps/Seahorse/).
 
-Storage Explorer normally creates a default keyring if one doesn't exist at launch. However, in some cases, this might not occur, resulting in no application window or password manager service errors. To resolve the issues,  manually set a default keyring.
+Storage Explorer normally creates a default keyring if one doesn't exist at launch. However, in some cases, this might not occur, resulting in no application window or password manager service errors. To resolve the issues, manually set a default keyring.
 
-For example, if you are using Seahorse, launch the "Passwords and Keys" application. If there are no existing keyrings, or you want to create a new one, follow these steps:
+If you are using Seahorse and there are no existing keyrings, or you want to create a new one, follow these steps to create a default keyring:
 
-1. Select the "+" button in Passwords and Keys.
-2. Select **Password keyring**.
+1. Launch the "Passwords and Keys" application.
+2. Select the "+" button, then select **Password keyring**.
 3. Set a name and a password for the new keyring.
-4. Right-click the keyring and select **Set as default**.
+4. Right-click the new keyring and select **Set as default**.
 
-If you use Snap installation, you must also make sure Snap is connected to your system's password manager. To do this, run the following command:
+If you are using the Storage Explorer snap, you must also make sure Storage Explorer is connected to your system's password manager. To do this, run the following command:
 
 ```bash
 snap connect storage-explorer:password-manager-service :password-manager-service
