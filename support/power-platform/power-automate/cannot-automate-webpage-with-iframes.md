@@ -9,6 +9,9 @@ ms.subservice: power-automate-desktop-flows
 
 This article provides a workaround to an issue where you can't automate a webpage if a web element is inside a cross-domain iframe in Microsoft Power Automate.
 
+> [!NOTE]
+> Web automation in cross domain iframes is being supported since Power Automate for desktop v2.31 (April 2023). This article refers to older versions than v2.31.
+
 _Applies to:_ &nbsp; Power Automate  
 _Original KB number:_ &nbsp; 4599053
 
