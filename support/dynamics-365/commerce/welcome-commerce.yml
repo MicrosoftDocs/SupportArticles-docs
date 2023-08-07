@@ -29,6 +29,11 @@ landingContent:
         links:
           - text: Troubleshoot issues with the online store transaction creation process
             url: order-management/online-order-transaction-creation-failures.md
-
-
-
+            
+  # Card
+  - title: Point of sale (POS)
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Store Commerce app (POS) is suddenly deactivated
+            url: point-of-sale/store-commerce-app-pos-deactivated.md
