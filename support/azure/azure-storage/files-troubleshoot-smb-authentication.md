@@ -3,7 +3,7 @@ title: Troubleshoot Azure Files identity-based authentication and authorization 
 description: Troubleshoot problems using identity-based authentication to connect to SMB Azure file shares and see possible resolutions.
 author: khdownie
 ms.service: azure-file-storage
-ms.date: 06/26/2023
+ms.date: 08/07/2023
 ms.author: kendownie
 ---
 # Troubleshoot Azure Files identity-based authentication and authorization issues (SMB)
@@ -351,7 +351,7 @@ The solution is to add the privateLink FQDN to the storage account's Azure AD ap
 1. Select the application with the name matching **[Storage Account] $storageAccountName.file.core.windows.net**.
 1. Select **Manifest** in the left pane.
 1. Copy and paste the existing content so you have a duplicate copy.
-1. Edit the JSON manifest: for every  `<storageAccount>.file.core.windows.net` entry, add a corresponding `<storageAccount>.privatelink.file.core.windows.net` entry. For instance, if your manifest has the following value for `identifierUris`:
+1. Edit the JSON manifest. For every  `<storageAccount>.file.core.windows.net` entry, add a corresponding `<storageAccount>.privatelink.file.core.windows.net` entry. For instance, if your manifest has the following value for `identifierUris`:
 
    ```json
    "identifierUris": [
