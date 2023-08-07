@@ -11,7 +11,7 @@ ms.custom: bap-template
 
 When your agents are in a voice call, they might sometimes see warning and error messages on the communication panel. These messages will help them understand the issues that are affecting their call experience. Agents can self-diagnose and resolve the issues themselves by using the message information. For example, if agents speak when their mic is muted, a message appears to let them know to remove themselves from mute.
 
-:::image type="content" source="media/use-diagnostic-messages-in-call-issues/communication-panel.png" alt-text="Screenshot that shows a "You're muted" message to help you solve the issue during a voice call.":::
+:::image type="content" source="media/use-diagnostic-messages-in-call-issues/communication-panel.png" alt-text="Screenshot that shows a You're muted message to help you solve the issue during a voice call.":::
 
 ## Troubleshoot network issues
 
