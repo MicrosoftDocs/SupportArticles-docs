@@ -351,7 +351,7 @@ The solution is to add the privateLink FQDN to the storage account's Azure AD ap
 1. Select the application with the name matching **[Storage Account] $storageAccountName.file.core.windows.net**.
 1. Select **Manifest** in the left pane.
 1. Copy and paste the existing content so you have a duplicate copy.
-1. Edit the JSON manifest. For every  `<storageAccount>.file.core.windows.net` entry, add a corresponding `<storageAccount>.privatelink.file.core.windows.net` entry. For instance, if your manifest has the following value for `identifierUris`:
+1. Edit the JSON manifest. For every `<storageAccount>.file.core.windows.net` entry, add a corresponding `<storageAccount>.privatelink.file.core.windows.net` entry. For instance, if your manifest has the following value for `identifierUris`:
 
    ```json
    "identifierUris": [
@@ -364,7 +364,7 @@ The solution is to add the privateLink FQDN to the storage account's Azure AD ap
    ],
    ```
 
-   then you should edit the `identifierUris` field to the following:
+   Then you should edit the `identifierUris` field to the following:
 
    ```json
    "identifierUris": [
