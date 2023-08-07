@@ -2,7 +2,7 @@
 title: Unable to save an SLA Item due to the error "Nullable object must have a value"
 description: Provides a resolution for the issue where an SLA Item failed to save due to the error "Nullable object must have a value".
 ms.reviewer: sdas
-ms.author: ravimanne
+ms.author: ankugupta
 ms.date: 08/07/2023
 ---
 # Unable to save an SLA Item
