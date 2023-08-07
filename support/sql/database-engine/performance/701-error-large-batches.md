@@ -21,7 +21,7 @@ In SQL Server, when you execute a large batch of remote procedure calls (RPC) (f
 2020-07-04 13:30:45.78 spid56 There is insufficient system memory to run this query.
 ```
 
-If you observe the output of [DBCC MEMORYSTATUS](dbcc-memorystatus-monitor-memory-usage.md) that's automatically logged to the error log on 701 error messages, it will have entries like the following one:
+If you check the output of [DBCC MEMORYSTATUS](dbcc-memorystatus-monitor-memory-usage.md) that's automatically logged to the error log on 701 error messages, you'll find entries like the following ones:
 
 ```Output
 2020-07-04 13:30:45.74 spid56       Failed allocate pages: FAIL_PAGE_ALLOCATION 1 
