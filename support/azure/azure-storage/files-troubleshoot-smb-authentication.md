@@ -3,7 +3,7 @@ title: Troubleshoot Azure Files identity-based authentication and authorization 
 description: Troubleshoot problems using identity-based authentication to connect to SMB Azure file shares and see possible resolutions.
 author: khdownie
 ms.service: azure-file-storage
-ms.date: 06/26/2023
+ms.date: 08/07/2023
 ms.author: kendownie
 ---
 # Troubleshoot Azure Files identity-based authentication and authorization issues (SMB)
@@ -350,7 +350,40 @@ The solution is to add the privateLink FQDN to the storage account's Azure AD ap
 1. Select **All Applications**.
 1. Select the application with the name matching **[Storage Account] $storageAccountName.file.core.windows.net**.
 1. Select **Manifest** in the left pane.
-1. Copy and paste the existing content so you have a duplicate copy. Replace all instances of `<storageaccount>.file.core.windows.net` with `<storageaccount>.privatelink.file.core.windows.net`.
+1. Copy and paste the existing content so you have a duplicate copy.
+1. Edit the JSON manifest. For every `<storageAccount>.file.core.windows.net` entry, add a corresponding `<storageAccount>.privatelink.file.core.windows.net` entry. For instance, if your manifest has the following value for `identifierUris`:
+
+   ```json
+   "identifierUris": [
+       "api://<tenantId>/HOST/<storageaccount>.file.core.windows.net",
+       "api://<tenantId>/CIFS/<storageaccount>.file.core.windows.net",
+       "api://<tenantId>/HTTP/<storageaccount>.file.core.windows.net",
+       "HOST/<storageaccount>.file.core.windows.net",
+       "CIFS/<storageaccount>.file.core.windows.net",
+       "HTTP/<storageaccount>.file.core.windows.net"
+   ],
+   ```
+
+   Then you should edit the `identifierUris` field to the following:
+
+   ```json
+   "identifierUris": [
+       "api://<tenantId>/HOST/<storageaccount>.file.core.windows.net",
+       "api://<tenantId>/CIFS/<storageaccount>.file.core.windows.net",
+       "api://<tenantId>/HTTP/<storageaccount>.file.core.windows.net",
+       "HOST/<storageaccount>.file.core.windows.net",
+       "CIFS/<storageaccount>.file.core.windows.net",
+       "HTTP/<storageaccount>.file.core.windows.net",
+
+       "api://<tenantId>/HOST/<storageaccount>.privatelink.file.core.windows.net",
+       "api://<tenantId>/CIFS/<storageaccount>.privatelink.file.core.windows.net",
+       "api://<tenantId>/HTTP/<storageaccount>.privatelink.file.core.windows.net",
+       "HOST/<storageaccount>.privatelink.file.core.windows.net",
+       "CIFS/<storageaccount>.privatelink.file.core.windows.net",
+       "HTTP/<storageaccount>.privatelink.file.core.windows.net"
+   ],
+   ```
+
 1. Review the content and select **Save** to update the application object with the new identifierUris.
 1. Update any internal DNS references to point to the private link.
 1. Retry mounting the share.
