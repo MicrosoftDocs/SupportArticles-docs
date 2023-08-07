@@ -9,7 +9,7 @@ ms.custom: bap-template
 ---
 # Use diagnostic messages to troubleshoot issues in voice calls
 
-When your agents are on a voice call, they might sometimes see warning or error messages on the **Communication Panel**. These messages will help them understand the issues that are affecting their call experience. Agents can use the information in the message to diagnose and resolve the issues themselves. For example, if an agent speaks when the microphone is muted, a "You're muted" message occurs to let them consider unmuting the microphone.
+When your agents are on a voice call, they might sometimes see warning or error messages on the **Communication Panel**. These messages will help them understand the issues that are affecting their call experience. Agents can use the information in the message to diagnose and resolve the issues themselves. For example, if an agent speaks when the microphone is muted, a "You are muted" message occurs to let them consider unmuting the microphone.
 
 :::image type="content" source="media/use-diagnostic-messages-in-call-issues/communication-panel.png" alt-text="Screenshot that shows a 'You are muted' message to help you solve the issue during a voice call.":::
 
