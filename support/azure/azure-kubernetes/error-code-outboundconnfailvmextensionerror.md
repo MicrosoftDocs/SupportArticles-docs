@@ -29,6 +29,8 @@ When you try to create an AKS cluster, you receive the following error message:
 > Message="VM has reported a failure when processing extension 'vmssCSE'.
 >
 > Error message: "**Enable failed: failed to execute command: command terminated with exit status=50**\n[stdout]\n\n[stderr]\nnc: connect to mcr.microsoft.com port 443 (tcp) failed: Connection timed out\nCommand exited with non-zero status
+>
+> Error details : "vmssCSE error messages : {**vmssCSE exit status=50, output=pt/apt.conf.d/95proxy**...}
 
 ## Cause
 
@@ -51,6 +53,37 @@ az vmss list-instances -g {MC_resourceGroupName} -n {VMSS_NAME} -o table
 az vmss run-command invoke -g {MC_resourceGroupName} -n {VMSS_NAME} --command-id RunShellScript --instance-id {VMSS-instance-ID} -o json --scripts "nc -vz mcr.microsoft.com 443"
 ``` 
 
+If you try to **create an AKS cluster using HTTP proxy**, after you connect to the node, run the `nc`, `dig`, and `curl` commands to test the connectivity on the cluster:
+```shell
+# Test the connectivity to the HTTP proxy server from AKS node:
+nc -vz HTTP/S_PROXY PORT
+
+# Test the traffic from the HTTP proxy server to HTTPs: 
+curl -x http://HTTP_PROXY:PORT/ -I https://mcr.microsoft.com
+
+# Test the traffic from HTTPS proxy server to HTTPS:
+curl -x https://HTTPS_PROXY:PORT/ -I https://mcr.microsoft.com
+
+# Test the DNS functionality:
+dig mcr.microsoft.com 443
+```
+
+If you have difficulty accessing the node via SSH, you can test the outbound connectivity by using [run-command invoke](/cli/azure/vmss/run-command#az-vmss-run-command-invoke) against the Virtual Machine Scale Set (VMSS) instance:
+``` azurecli
+# Get the VMSS instance IDs:
+az vmss list-instances -g {MC_resourceGroupName} -n { VMSS_NAME } -o table
+
+# Use any instance ID to test the connectivity from the HTTP proxy server to HTTPs:
+az vmss run-command invoke -g {MC_resourceGroupName} -n {VMSS_NAME} --command-id RunShellScript --instance-id {VMSS-instance-ID} -o json --scripts "curl -x http://HTTP_PROXY:PORT/ -I https://mcr.microsoft.com"
+
+# Use any instance ID to test the connectivity from the HTTPS proxy server to HTTPs:
+az vmss run-command invoke -g {MC_resourceGroupName} -n {VMSS_NAME} --command-id RunShellScript --instance-id {VMSS-instance-ID} -o json --scripts "curl -x https://HTTPS_PROXY:PORT/ -I https://mcr.microsoft.com"
+
+# Use any instance ID to test the DNS functionality:
+az vmss run-command invoke -g {MC_resourceGroupName} -n {VMSS_NAME} --command-id RunShellScript --instance-id {VMSS-instance-ID} -o json --scripts "dig mcr.microsoft.com 443"
+
+``` 
+
 ## Solution
 
 The following table lists specific reasons why traffic might be blocked, and the corresponding solution for each reason.
@@ -58,6 +91,7 @@ The following table lists specific reasons why traffic might be blocked, and the
 | Issue | Solution |
 | ----- | -------- |
 | Traffic is blocked by firewall rules | In this scenario, a firewall does egress filtering. To verify that all required domains and ports are allowed, see [Control egress traffic for cluster nodes in Azure Kubernetes Service (AKS)](/azure/aks/limit-egress-traffic). |
+| Traffic is blocked by proxy server | In this scenario, a proxy server does egress filtering. To verify that all required domains and ports are allowed, see [Control egress traffic for cluster nodes in Azure Kubernetes Service (AKS)](/azure/aks/limit-egress-traffic). |
 | Traffic is blocked by a cluster network security group (NSG) | On any NSGs that are attached to your cluster, verify that there's no blocking on port 443, port 53, or any other port that might have to be used to connect to the endpoint. For more information, see [Control egress traffic for cluster nodes in Azure Kubernetes Service (AKS)](/azure/aks/limit-egress-traffic). |
 | The AAAA (IPv6) record is blocked on the firewall | On your firewall, verify that there's nothing that would block the endpoint from resolving in Azure DNS. |
 | Private cluster can't resolve internal Azure resources | In private clusters, the Azure DNS IP address (`168.63.129.16`) must be added as an upstream DNS server if custom DNS is being used. Verify that the address is set on your DNS servers. For more information, see [Create a private AKS cluster](/azure/aks/private-clusters) and [What is IP address 168.63.129.16?](/azure/virtual-network/what-is-ip-address-168-63-129-16) |
