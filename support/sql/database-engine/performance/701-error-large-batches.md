@@ -3,7 +3,7 @@ title: Error 701 there is insufficient memory to run this query
 description: This article provides resolutions for the error 701 that occurs when you execute a large batch of operations in SQL Server.
 ms.date: 01/20/2021
 ms.custom: sap:Performance
-ms.reviewer: ramakoni, v-sidong, v-jayaramanp
+ms.reviewer: ramakoni, v-sidong
 ---
 # SQL Server reports 701 "There is insufficient memory to run this query" when executing large batches
 
@@ -76,7 +76,7 @@ To solve the error, use one of the following methods:
 
 The `USERSTORE_SXC` cache is used for connection management level allocations, such as RPC parameters and the memory that is associated with prepared handles. When a client sends a request containing a large batch of RPC calls, each potentially using a large number of certain types of parameters like `sql_variant`, it could result in excessive allocations from this cache, thereby exhausting all the available memory.
 
-The application should also be monitored to make sure that you are closing prepared handles in a timely manner. When you don't close these handles, it will prevent SQL Server from releasing memory for the associated objects on the server side.
+The application should also be monitored to make sure that you're closing prepared handles in a timely manner. When you don't close these handles, it will prevent SQL Server from releasing memory for the associated objects on the server side.
 
 ## More information
 
