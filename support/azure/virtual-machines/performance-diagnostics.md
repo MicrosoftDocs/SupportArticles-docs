@@ -13,7 +13,7 @@ ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
-ms.date: 06/06/2023
+ms.date: 08/07/2023
 ms.author: anandh
 
 ---
@@ -46,8 +46,8 @@ You can run performance diagnostics directly from the Azure portal, where you ca
     |----------------------------|-------------------------------------------------|
     | Oracle Linux Server        | 6.10 [`*`], 7.3, 7.5, 7.6, 7.7, 7.8, 7.9 |
     | CentOS                     | 6.5 [`*`], 7.6, 7.7, 7.8, 7.9                                    |
-    | RHEL                       | 7.2, 7.5, 8.0 [`*`], 8.1, 8.2, 8.6                               |
-    | Ubuntu                     | 14.04, 16.04, 18.04, 20.04                               |
+    | RHEL                       | 7.2, 7.5, 8.0 [`*`], 8.1, 8.2, 8.6, 8.8                               |
+    | Ubuntu                     | 14.04, 16.04, 18.04, 20.04, 22.04                               |
     | Debian                     | 8, 9, 10, 11 [`*`]                                    |
     | SLES                       | 12 SP4 [`*`], 12 SP5 [`*`], 15 [`*`], 15 SP1 [`*`], 15 SP2 [`*`], 15 SP4 [`*`]                                      |
     | AlmaLinux                  | 8.4, 8.5                                               |
