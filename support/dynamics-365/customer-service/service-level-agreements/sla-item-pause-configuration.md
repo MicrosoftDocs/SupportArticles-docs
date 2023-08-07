@@ -7,16 +7,16 @@ ms.date: 07/18/2023
 ---
 # Unable to save an SLA Item
 
-This article provides a resolution for the issue where an SLA Item failed to save due to the error “Nullable object must have a value”.
+This article provides a resolution for the issue Resolves the issue that prevented an SLA Item from saving because of the error “Nullable object must have a value”.
 
 ## Symptoms
 
-The issue was occurring for all the SLA Items which had the value of **msdyn_advancedpauseconfiguratio** set to NULL.
+This issue is occurring for all the SLA Items which had the value of **msdyn_advancedpauseconfiguratio** set to NULL.
 :::image type="content" source="media/sla-item-pause-configuration/sla-item-set-to-null.png" alt-text="Screenshot that shows an error while saving SLA Item." border="false":::
 
 ## Cause
 
-This issue is because of the SLA Items were created before **msdyn_advancedpauseconfiguration** property was introduced. For the SLA Items created later, the default value is False and those records do not have an issue.
+This issue occurs when the SLA Items were created before the msdyn_advancedpauseconfiguration property was added. The SLA Items created after that have a default value of False and do not face this issue.
 
 ## Resolution
 
