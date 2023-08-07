@@ -32,7 +32,7 @@ The following table lists the messages that appear when your agents face issues 
 | No speakers detected. Try connecting one to receive call audio. | Appears when audio output device or speaker isn't detected on the user's system.  | `noSpeakerDevicesEnumerated` |
 | You are muted.  | Appears when the agent is speaking while on mute. | `speakingWhileMicrophoneIsMuted` |
 | No microphone detected. Try connecting one so that others can hear you. | Appears when a microphone isn't detected on the agent's system.  | `noMicrophoneDevicesEnumerated` |
-|Your microphone is not working. Connect to a different device or try reconnecting this one. | Appears when microphone is muted unexpectedly or stops working.  | `microphoneMuteUnexpectedly` |
+|Your microphone is not working. Connect to a different device or try reconnecting this one. | Appears when microphone is muted unexpectedly or stops working.  | `microphoneMuteUnexpectedly`|
 
 ## See also
 
