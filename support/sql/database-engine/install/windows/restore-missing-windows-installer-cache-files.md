@@ -22,6 +22,27 @@ When you install a Microsoft SQL Server service pack or a cumulative update, you
 
 Because SQL Server uses the Windows Installer technology, it can be affected by the issues that are described here. SQL server installation packages (.MSI and .MSP files) will be stored in the Windows Installer Cache. These files are required for uninstalling and updating applications. Missing files cannot be copied between computers because they are unique.
 
+Here are some sample error messages you may encounter:
+
+```output
+SQL Server Setup has encountered the following error:
+
+The cached MSI file 'C:\Windows\Installer\xxxxxx.msi' is missing. The original file is 'sql_xxxxx.msi' for product SQL Server 2017 Database Engine Services from 'D:\SQLSetup', version XXXX, language XXX. To resolve this problem, recover the missing file from the installation media and start setup again.
+```
+
+```output
+The following error has occurred:
+
+Unable to open Windows installer file 'C:\Windows\Installer\xxxxxx.msi'
+
+Click 'Retry' to retry the failed action, or click 'Cancel' to cancel this action and continue setup.
+```
+
+
+```output
+No valid sequence could be found for the set of updates. Error code 1648
+```
+
 ## Cause
 
 These problems may occur when the Windows Installer database file (.msi) or the Windows Installer patch file (.msp) is missing from the Windows Installer cache. The Windows Installer cache is located in the folder: _%windir%\installer_.
@@ -95,7 +116,6 @@ This is a graphical-user-interface (GUI) tool and enables you to identify and fi
 For more information, see [SQL Setup ToolSuite Introduction (1) -FixMissingMSI](/archive/blogs/psssql/sql-setup-toolsuite-introduction-1-fixmissingmsi).
 
 One of the benefits of the FixMissingMSI tools is that you can use it to fix missing MSI/MSPs for all products on Windows, not just SQL Server.
-
 
 ## Solution 3: Use the FindSQLInstalls.vbs script
 
