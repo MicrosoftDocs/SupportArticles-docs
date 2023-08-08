@@ -1,7 +1,7 @@
 ---
 title: Stop 7F, 0x00000008 (double-fault) error
 description: Provides a solution to a STOP 0x0000007F, 0x00000008 error message on your computer because of a specific processor error.
-ms.date: 9/24/2021
+ms.date: 08/08/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -50,9 +50,9 @@ A microcode update corrects errata, or bugs, in a processor's internally impleme
 
 To identify the revision of the microcode update that is currently applied to an Intel processor that is installed on your computer, follow these steps:
 
-1. Download the Intel Processor Frequency ID Utility from the [Intel Web site](http://support.intel.com/support/processors/tools/frequencyid).
+1. Download the [Intel Processor Identification Utility](https://www.intel.com/content/www/us/en/download/12136/intel-processor-identification-utility-windows-version.html?wapkw=Frequency%20ID%20Utility).
 
-2. Install and run the Intel Processor Frequency ID Utility on the computer that is experiencing symptoms.
+2. Install and run the Intel Processor Identification Utility on the computer that is experiencing symptoms.
 
 3. Write down the following CPU information for each processor:
    - CPU Family
