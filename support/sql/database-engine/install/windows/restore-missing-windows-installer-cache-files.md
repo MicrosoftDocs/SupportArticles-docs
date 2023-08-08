@@ -38,10 +38,18 @@ Unable to open Windows installer file 'C:\Windows\Installer\xxxxxx.msi'
 Click 'Retry' to retry the failed action, or click 'Cancel' to cancel this action and continue setup.
 ```
 
-
 ```output
 No valid sequence could be found for the set of updates. Error code 1648
 ```
+
+If you examine the setup logs, you may find messages like this:
+
+```output
+Slp: Package ID sql_xxx_xxx_xxx: NotInstalled
+Slp: Sco: File 'X:\x64\setup\x64\xxx_xxx_xxx.msi' does not exist
+Slp: Sco: File 'X:\x64\setup\x64\xxx_xxx_xxx.msi' does not exist
+```
+
 
 ## Cause
 
