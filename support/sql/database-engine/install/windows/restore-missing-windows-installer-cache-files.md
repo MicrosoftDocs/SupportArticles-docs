@@ -63,11 +63,39 @@ You can download the FixMissingMSI tool from the [GitHub repository](https://git
 
 ### How to use
 
-This is a graphical-user-interface (GUI) tool and enables you to identify and fix the missing MSIs easily.
+This is a graphical-user-interface (GUI) tool and enables you to identify and fix the missing MSIs easily. Here are the steps to follow:
 
-:::image type="content" source="media/restore-missing-windows-installer-cache-files/fix-missing-msi-tool.png" alt-text="Screenshot of the FixMissingMSI tool.":::
+1. Prepare or locate the installation media for the SQL Server version(s) you need to fix
+1. Download and extract the media locally for which you may be missing files. Do this for RTM, Services Packs or Cumulative updates in separate folders. For example:
+
+   ```output
+   c:\sqlsetup\RTM2017
+   c:\sqlsetup\CU31
+   ```
+
+   1. If you downloaded a CU or a Service Pack, be sure to extract using the /X option to a folder. For example:
+
+   ```console
+   SQLServer2016SP3-KB5003279-x64-ENU.exe /X
+   ```
+
+   1. Then choose a directory where to extract the file, for example `c:\sqlsetup\SQL2016SP3`
+
+1. Launch FixMissingMSI.exe
+1. The **Scan** dialog will show up. In the top text box specify a folder where you downloaded setup files in previous steps (for example d:\sqlsetup\RTM2017)
+1. In the Scan Filter you can keep the default "Product name contains: SQL"
+1. Press **Scan Now**
+1. If any items are reported as Missing, the Status column will have a value of "Missing" and the row will be highlighted in red.
+1. You have the option to fix individual missing file by pressing the **Fix It** button at the beginning of the row
+
+   :::image type="content" source="media/restore-missing-windows-installer-cache-files/fix-missing-msi-tool.png" alt-text="Screenshot of the FixMissingMSI tool.":::
+
+1. If you would like to fix all missing MSIs or MSPs, choose the Fix menu and then **Fix All**
 
 For more information, see [SQL Setup ToolSuite Introduction (1) -FixMissingMSI](/archive/blogs/psssql/sql-setup-toolsuite-introduction-1-fixmissingmsi).
+
+One of the benefits of the FixMissingMSI tools is that you can use it to fix missing MSI/MSPs for all products on Windows, not just SQL Server.
+
 
 ## Solution 3: Use the FindSQLInstalls.vbs script
 
