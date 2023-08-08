@@ -19,8 +19,8 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Known issues
-            url: known-issues.md
+          - text: Link destinations lost on buttons when page is edited in design studio
+            url: buttons-losing-href.md
           #- text: Best practices for troubleshooting
             #url: best-practices-troubleshooting.md
 
