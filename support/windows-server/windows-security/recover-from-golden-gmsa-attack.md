@@ -1,7 +1,7 @@
 ---
 title: How to recover from a Golden gMSA attack
 description: Describes how to repair compromised gMSAs after a Golden gMSA attack.
-ms.date: 07/31/2023
+ms.date: 08/08/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -49,19 +49,23 @@ It will reduce the theoretical number of gMSA to be recreated between the date o
 Here's an example scenario:
 
 1. After a database exposure, you perform the recovery in "Day D."
-2. The restored backup is from the day that's 15 days before "Day D" (D-15).
+2. The restored backup is from D-15.
+   
+   > [!NOTE]
+   > D-15 means the day that's 15 days before "Day D".
+   
 3. The gMSA `ManagedPasswordIntervalInDays` value is 15.
-4. The gMSA exists and has rolled one day before "Day D" (D-1).
-5. A new gMSA has been created from the day that's 10 days before "Day D" (D-10).
-6. The compromise happens five days before "Day D" (D-5), and some gMSAs have been created on this date.
+4. gMSAs exist and have rolled D-1.
+5. Newer gMSAs have been created from D-10.
+6. The compromise happens on D-5, and some gMSAs have been created on this date.
 
 Here are the results:
 
-1. The gMSAs created between "Day D" and five days before "Day D" (D-5) aren't concerned<sup>*</sup>.
-2. The gMSAs created between 15 days before "Day D" (D-15) (backup restored) and five days before "Day D" (D-5) (compromise)<sup>*</sup> must be recreated, or the risk windows must be assumed if you can wait from five days after "Day D" (D+5) up to 10 days after "Day D" (D+10). For example:
+1. gMSAs created between D and D-5 aren't concerned<sup>*</sup>.
+2. gMSAs created between D-15 (backup restored) and D-5 (compromise)<sup>*</sup> must be recreated, or the risk windows must be assumed if you can wait from D+5 up to D+10. For example:
 
-      -	On five days after "Day D" (D+5), gMSAs created 10 days before "Day D" (D-10) must be recreated.
-      -	On 10 days after "Day D" (D+10), gMSAs created five days before "Day D" (D-5) must be recreated.
+      -	On D+5, gMSAs created on D-10 must be recreated.
+      -	On D+10, gMSAs created on D-5 must be recreated.
 
       <sup>*</sup>: Depends on the exact time of compromise or backup.
 
