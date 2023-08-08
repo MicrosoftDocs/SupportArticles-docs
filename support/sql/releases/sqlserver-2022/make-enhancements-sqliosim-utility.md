@@ -14,7 +14,7 @@ appliesto:
 
 This improvement makes the following enhancements to the SQLIOSim utility and fixes data integrity issues that might be caused by I/O handling. For more information about the SQLIOSim utility, see the [Introduction of the SQLIOSim utility](../../tools/sqliosim-utility-simulate-activity-disk-subsystem.md#introduction).
 
-### Enhanced Logging
+### Enhanced logging
 
 - Adds a new ring buffer to track errors, in order to make it unlikely that errors in the history ring buffer are replaced because of the rollover.
 - Adds various outputs that contain "tick count" and/or "date and time" to make debugging an issue easier.
@@ -28,7 +28,7 @@ This improvement makes the following enhancements to the SQLIOSim utility and fi
 - Updates the layout of *Sqliosim.log.xml* to make it easier to read the XML file in a text editor.
 - Validated *Sqliosim.log.xml* and *Errorlog.xslt* can be viewed correctly in Microsoft Edge that uses Internet Explorer (IE) mode.
 
-### Page Header Timestamp
+### Page header timestamp
 
 Stores the `GetTickCount64` value in the page header during the write operations. The tick count is useful for tracking when the page is written and filtering the I/O subsystem traces.
 
@@ -38,17 +38,17 @@ The I/O issue causes the read operation to be returned as if the read operation 
 
 The SQLIOSim utility now stamps the read buffers by using the BNR pattern before issuing a read. When the read operation returns successfully but fails to perform the actual read, the validation continues to fail. However, the bytes read shows the *.BNR* pattern that indicates an I/O subsystem issue.
 
-### Write-Retry
+### Write-retry
 
 If the I/O subsystem encounters a reset (more common in direct-attached storage (DAS) installations), the write operation requests might complete incorrectly. The SQLIOSim utility doesn't guarantee write-retry capabilities. In some cases, the SQLIOSim utility tries to read and validate the data that fails to write.
 
 The SQLIOSim utility is enhanced to log a write failure and then perform a write-retry operation.
 
-### Enhanced Locking
+### Enhanced locking
 
 The internal locking mechanisms and page protection (VirtualProtect) activity are optimized and enhanced to ensure that an issue reported by the SQLIOSim utility isn't caused by a logic flaw in the SQLIOSim utility.
 
-### Read-Retry
+### Read-retry
 
 Fixes an issue that causes the read-retry attempt to fail when retrying a failed LDX (log simulation) read.
 
