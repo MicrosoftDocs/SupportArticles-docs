@@ -65,6 +65,8 @@
       items:
         - name: Active unmanaged layer after importing a managed solution
           href: manage-apps-and-solutions/unmanaged-active-layer-created-after-solution-import.md
+        - name: '"An entitykey with the selected attributes already exists" error'
+          href: manage-apps-and-solutions/entitykey-selected-attributes-already-exists.md
         - name: Can't import solutions or publish changes
           href: manage-apps-and-solutions/cannot-import-solutions-publish-changes.md
         - name: Duplicate security roles after solution import
@@ -77,8 +79,12 @@
           href: manage-apps-and-solutions/full-formxml-expected-to-create-form-error.md
         - name: Label text doesn't display in additional languages
           href: manage-apps-and-solutions/label-text-not-displayed.md
+        - name: Maximum row size exceeds the allowed maximum
+          href: manage-apps-and-solutions/maximum-row-size-exceeds.md
         - name: Newly added components don't appear in the app
           href: manage-apps-and-solutions/newly-added-components-dont-appear.md
+        - name: '"PrimaryName attribute not found for entity" error'
+          href: manage-apps-and-solutions/primaryname-attribute-not-found.md
         - name: Required fields are missing in Dataverse records
           href: manage-apps-and-solutions/dataverse-records-missing-required-fields.md
         - name: Solution checker enforcement in Managed Environments (preview) blocks or warns on import

@@ -1,7 +1,7 @@
 ---
 title: Using the PortQry command-line tool
 description: Discusses the features and functionality available in PortQry Command Line Port Scanner version 2.0.
-ms.date: 06/10/2022
+ms.date: 08/01/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -13,11 +13,7 @@ ms.reviewer: kaushika
 ms.custom: sap:tcp/ip-communications, csstroubleshoot
 ms.technology: networking
 ---
-# Using the PortQry command-line tool  
-
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows 8.1, Windows 8, Windows 7, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2008 R2, Windows Server 2008, Windows Server 2003
-
-## Summary
+# Using the PortQry command-line tool
 
 PortQry is a command-line tool that you can use to help troubleshoot TCP/IP connectivity issues. This tool reports the status of target TCP and User Datagram Protocol (UDP) ports on a local computer or on a remote computer. It also provides detailed information about the local computer's port usage.
 
@@ -31,6 +27,8 @@ You can use PortQry from a command prompt in one of several modes:
 
 > [!NOTE]  
 > You can download a separate tool, called PortQryUI, that includes a graphical UI for PortQry. PortQryUI has several features that can make using PortQry easier. To get the PortQryUI tool, see [PortQryUI - User Interface for the PortQry Command Line Port Scanner](https://download.microsoft.com/download/3/f/4/3f4c6a54-65f0-4164-bdec-a3411ba24d3a/portqryui.exe).
+
+_Applies to:_ &nbsp; Supported versions of Windows
 
 ## PortQry tests and results
 
