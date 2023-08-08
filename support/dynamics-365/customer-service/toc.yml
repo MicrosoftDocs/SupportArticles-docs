@@ -49,6 +49,8 @@
               href: service-level-agreements/service-anchor-installation-fails-after-ol-migration.md
             - name: '"Workflow with ID = [GUID] does not exist" error'
               href: service-level-agreements/sla-workflow-does-not-exist.md
+            - name: Other SLA migration failures
+              href: service-level-agreements/sla-migration-issues.md
         - name: SLA time calculation
           items:
             - name: Errors on custom time calculation for SLA
@@ -69,6 +71,8 @@
               href: service-level-agreements/sla-timer-keep-running-or-expired.md
             - name: Warning appears on SLA KPI instances
               href: service-level-agreements/warning-slakpiinstances.md
+            - name: SLAKPIInstance shows a difference in Failure Time and Warning Time 
+              href: service-level-agreements/slakpiinstance-ft-wt-difference.md
         - name: SLA flow
           items:
             - name: '"Disabled users cannot access the system" error'

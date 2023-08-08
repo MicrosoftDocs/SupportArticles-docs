@@ -11,7 +11,7 @@ This article provides a resolution for the issue where you can't use the service
 
 ## Symptoms
 
-Errors occur during the premigration checkup in the migration tool in Dynamics 365 Customer Service.
+Errors may occur in the migration tool or the migration tool may get stuck during the premigration checkup in Dynamics 365 Customer Service.
 
 ## Cause
 

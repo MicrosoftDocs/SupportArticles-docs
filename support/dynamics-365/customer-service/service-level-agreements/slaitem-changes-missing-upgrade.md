@@ -2,8 +2,8 @@
 title: Changes to an SLA Item record through an upgrade solution aren't shown
 description: Provides a resolution for the issue where the changes to an SLA Item record through an upgrade solution don't appear even after a successful upgrade in Dynamics 365 Customer Service.
 ms.reviewer: sdas
-ms.author: ravimanne
-ms.date: 05/23/2023
+ms.author: ankugupta
+ms.date: 07/08/2023
 ---
 # The changes to an SLA Item record through an upgrade solution don't appear even after a successful upgrade
 
@@ -20,3 +20,9 @@ When an SLA is activated, or an SLA Item record is modified manually on the orga
 ## Resolution
 
 We recommend that you make changes to an SLA or an SLA Item record only through an upgrade solution. If the issue persists even after importing the patch solution, you can select the overwrite customization option while importing the full solution. Overwriting customization removes all the active layer customizations on the SLA. Therefore, all the changes in the upgrade solution are reflected. Overwrite customization might only be visible in a "Legacy Solution" import.
+
+1. [Create updates using clone solution and clone to patch](/power-platform/alm/update-solutions-alm#creating-updates-using-clone-solution-and-clone-to-patch). Use the "Clone to solution" steps to create a separate solution and export it as a managed solution.
+
+2. When you import the solution, select the **Upgrade (recommended)** and **Overwrite customizations (not recommended)** options in the pop-up window, as shown in the following screenshot.
+
+      :::image type="content" source="media/slaitem-changes-missing-upgrade/sla-item-solution-import.png" alt-text="Import options in SLA solution import.":::
