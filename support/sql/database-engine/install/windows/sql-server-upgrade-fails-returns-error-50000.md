@@ -1,6 +1,6 @@
 ---
 title: SQL Server upgrade fails and returns error 50000
-description: Troubleshoot error 50000 that occurs when you install a cumulative update or service pack for SQL Server. The error occurs when database upgrade scripts are run.
+description: Troubleshoots error 50000 that occurs when you install a cumulative update or service pack for SQL Server. The error occurs when database upgrade scripts are run.
 ms.date: 08/08/2023
 ms.custom: sap:Installation, Patching and Upgrade
 ms.reviewer: v-sidong
@@ -13,7 +13,9 @@ This article helps you troubleshoot and solve error 50000 that occurs when you i
 
 ## Symptoms
 
-When you apply a CU or an SP for SQL Server, the Setup program reports the following error messages. When you check the SQL Server error log, you notice one of the following error entries:
+When you apply a CU or an SP for SQL Server, the Setup program reports the following error messages:
+
+When you check the SQL Server error log, you notice one of the following error entries:
 
 ```output
 SQL server failed in ‘Script level upgrade’ with the following error:
@@ -34,17 +36,17 @@ SQL Server shutdown has been initiated.
 
 ## Cause
 
-This issue may occur because the SQL Server instance where you try to apply the SP or CU is missing assembly `ISSERVER`.
+This issue may occur because the SQL Server instance where you try to apply a CU or an SP is missing assembly `ISSERVER`.
 
-For more information about database upgrade scripts that run during the CU or SP installation, see [Troubleshoot upgrade script failures when applying an update](troubleshoot-upgrade-script-failures-apply-update.md).
+For more information about database upgrade scripts that run during a CU or an SP installation, see [Troubleshoot upgrade script failures when applying an update](troubleshoot-upgrade-script-failures-apply-update.md).
 
 ## Resolution
 
 Follow these steps to solve the issue:
 
 1. Start SQL Server with [trace flag 902](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf902).
-1. Check into the database, and you'll find the assembly `ISSERVER` is missing.
-1. Check the location *C:\Program Files\Microsoft SQL Server\\\<VersionNumber>\DTS\Bin*, and you'll find *Microsoft.SqlServer.IntegrationServices.Server.dll* present in the SQL binary folder.
+1. Check into the database, and you find the assembly `ISSERVER` is missing.
+1. Check the location *C:\Program Files\Microsoft SQL Server\\\<VersionNumber>\DTS\Bin*, and you find *Microsoft.SqlServer.IntegrationServices.Server.dll* present in the SQL binary folder.
 1. Try to recreate the assembly by using the following query:
 
     ```sql
