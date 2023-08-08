@@ -31,9 +31,9 @@ The **Failure Time** and **Warning Time** of the `slakpiinstance` are calculated
 
 If the calendar time zone differs from the end user's time zone, the calculation is made based on the calendar time zone, and the user may see a difference.
 
-:::image type="content" source="media/slakpiinstance-ft-wt-difference/sla-kpi-instance-different-ft-wt.png" alt-text="Screenshot that shows the Set local time zone option in Set Personal Options.":::
+:::image type="content" source="media/warning-failure-times-incorrect-sla/sla-kpi-instance-different-ft-wt.png" alt-text="Screenshot that shows the Set local time zone option in Set Personal Options.":::
 
-:::image type="content" source="media/slakpiinstance-ft-wt-difference/sla-customer-service-schedule.png" alt-text="Screenshot that shows an SLA customer service schedule.":::
+:::image type="content" source="media/warning-failure-times-incorrect-sla/sla-customer-service-schedule.png" alt-text="Screenshot that shows an SLA customer service schedule.":::
 
 #### Resolution
 
