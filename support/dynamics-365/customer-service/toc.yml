@@ -71,8 +71,6 @@
               href: service-level-agreements/sla-timer-keep-running-or-expired.md
             - name: Warning appears on SLA KPI instances
               href: service-level-agreements/warning-slakpiinstances.md
-            - name: SLAKPIInstance shows a difference in Failure Time and Warning Time 
-              href: service-level-agreements/slakpiinstance-ft-wt-difference.md
         - name: SLA flow
           items:
             - name: '"Disabled users cannot access the system" error'
