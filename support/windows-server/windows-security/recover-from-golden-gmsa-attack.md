@@ -52,7 +52,7 @@ Here's an example scenario:
 2. The restored backup is from D-15.
    
    > [!NOTE]
-   > D-15 means the day that's 15 days before "Day D".
+   > D-15 means the day that's 15 days before "Day D."
    
 3. The gMSA `ManagedPasswordIntervalInDays` value is 15.
 4. gMSAs exist and have rolled D-1.
