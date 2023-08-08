@@ -4,8 +4,8 @@ description: Troubleshoots error 50000 that occurs when you install a cumulative
 ms.date: 08/08/2023
 ms.custom: sap:Installation, Patching and Upgrade
 ms.reviewer: v-sidong
-author:
-ms.author:
+author: prmadhes-msft
+ms.author: prmadhes
 ---
 # SQL Server upgrade fails and returns error 50000
 
