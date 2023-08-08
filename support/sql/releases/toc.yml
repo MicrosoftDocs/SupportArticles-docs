@@ -21,6 +21,8 @@ items:
     items:
     - name: Cumulative Update 7 (KB5028743)
       href: sqlserver-2022/cumulativeupdate7.md
+    - name: 'Improvement: Make several enhancements to the SQLIOSim utility'
+      href: sqlserver-2022/make-enhancements-sqliosim-utility.md
   - name: Cumulative Update 6
     items:
     - name: Cumulative Update 6 (KB5027505)
