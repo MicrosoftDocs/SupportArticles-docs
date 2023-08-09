@@ -20,13 +20,13 @@ This improvement makes the following enhancements to the SQLIOSim utility and fi
 - Adds various outputs that contain "tick count" and/or "date and time" to make debugging an issue easier.
 - Adds the outputs of `fsutil` and volume information to the error file, in order to map the file offset to the offset on the physical disk and filter the I/O subsystem traces easier.
 - Adds the output for Coordinated Universal Time (UTC) and local time.
-- Breaks down the output of the page header to the error file such as PageId, Checksum, and Timestamp.
+- Breaks down the output of the page header to the error file, such as PageId, Checksum, and Timestamp.
 - Displays a list of the pages of the `FILE HISTORY` ring buffer to more easily locate ring buffer entries.
-- Displays Timestamp, Date Time, Logical CPU, and other columns in the *Sqliosim.log.xml* or *Errorlog.xslt* view.
+- Displays Timestamp, Date Time, Logical CPU, and other columns in the *Sqliosim.log.xml* or *ErrorLog.xslt* view.
 - Increases the size of the ring buffers and reduces the frequency of the rollover.
 - Provides hexadecimal and decimal outputs for common outputs such as PageId, Checksum, and Timestamp.
 - Updates the layout of *Sqliosim.log.xml* to make it easier to read the XML file in a text editor.
-- Validated *Sqliosim.log.xml* and *Errorlog.xslt* can be viewed correctly in Microsoft Edge that uses Internet Explorer (IE) mode.
+- Validated *Sqliosim.log.xml* and *ErrorLog.xslt* can be viewed correctly in Microsoft Edge that uses Internet Explorer (IE) mode.
 
 ### Page header timestamp
 
@@ -36,7 +36,7 @@ Stores the `GetTickCount64` value in the page header during the write operations
 
 The I/O issue causes the read operation to be returned as if the read operation is successful, but the actual buffer isn't updated or read. The SQLIOSim utility receives a successful read, but fails the validation checks.
 
-The SQLIOSim utility now stamps the read buffers by using the BNR pattern before issuing a read. When the read operation returns successfully but fails to perform the actual read, the validation continues to fail. However, the bytes read shows the *.BNR* pattern that indicates an I/O subsystem issue.
+The SQLIOSim utility now stamps the read buffers by using the BNR pattern before issuing a read. When the read operation returns successfully but fails to perform the actual read, the validation continues to fail. However, the bytes read shows the .BNR pattern that indicates an I/O subsystem issue.
 
 ### Write-retry
 
