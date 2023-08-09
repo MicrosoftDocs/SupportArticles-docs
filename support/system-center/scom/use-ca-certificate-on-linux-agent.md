@@ -34,7 +34,7 @@ If you have other domain components, make sure they are in the certificate.
 
 ## Use the CA certificate on Linux agent
 
-On a Windows machine, export the certificate with the private key in the PEM format and copy it to a Linux agent:
+On a Windows machine, export the certificate and the private key in the PEM format, and then copy the exported files to a Linux agent:
 
 1. Export the private key by using the following command:
 
@@ -86,7 +86,7 @@ On a Windows machine, export the certificate with the private key in the PEM for
     scxadmin -status
     ```
 
-8. You should see the following output if the service is running:
+    You should see the following output if the service is running:
 
     ```output
     omiagent: x instances running
