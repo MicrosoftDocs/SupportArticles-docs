@@ -2,6 +2,18 @@
 
 
 
+## Week of July 31, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 7/31/2023 | [Hyperlinks are not working](/outlook/troubleshoot/message-body/hyperlinks-not-working-in-outlook) | modified |
+| 8/1/2023 | [Invalid file name or Access denied error when adding pst or ost file](/outlook/troubleshoot/data-files/cannot-add-pst-or-ost-file-on-non-local-drive) | modified |
+| 8/1/2023 | [HTTP version of OAB does not download](/outlook/troubleshoot/data-files/http-version-of-offline-address-book-fails-to-download) | modified |
+| 8/1/2023 | [How to manage Outlook Social Connector by using Group Policy](/outlook/troubleshoot/deployment/how-to-manage-outlook-social-connector-via-group-policy) | modified |
+| 8/1/2023 | [CDO 1.2.1 is not supported with Outlook 2010 and later versions](/outlook/troubleshoot/development/collaboration-data-objects-1-2-1-not-supported-in-outlook-2010-and-later) | modified |
+
+
 ## Week of July 17, 2023
 
 
