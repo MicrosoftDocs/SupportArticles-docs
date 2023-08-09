@@ -960,11 +960,11 @@ When you deploy an update to a hybrid environment (such as Always On, replicatio
 
 - [Upgrade a failover cluster instance](/sql/sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance)
 
-  > [!NOTE]
-  > If you don't want to use the rolling update process, follow these steps to apply an update:
-  >
-      > - Install the update on the passive node.
-      > - Install the update on the active node (requires a service restart).
+    > [!NOTE]
+    > If you don't want to use the rolling update process, follow these steps to apply an update:
+    >
+    > - Install the update on the passive node.
+    > - Install the update on the active node (requires a service restart).
 
 - [Upgrade and update of availability group servers that use minimal downtime and data loss](/sql/database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances)
 
