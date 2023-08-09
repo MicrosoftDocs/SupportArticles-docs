@@ -56,7 +56,7 @@ On a Windows machine, export the certificate with the private key in the PEM for
     openssl rsa -in key.pem -out omikey.pem 
     ```
 
-    This action is needed since the agent wouldn't know the password to the file.
+    This action is needed since the Linux agent wouldn't know the password to the file.
 
 4. Move the certificate file to an appropriate directory by using the following command:
 
@@ -64,7 +64,7 @@ On a Windows machine, export the certificate with the private key in the PEM for
     mv omi.pem /etc/opt/omi/ssl/omi.pem
     ```
 
-    It will ask to override. "omi.pem" is a pointer to the actual certificate file so there's no need to specify the host file name.
+    This command will ask to override existing certificates in the directory. "omi.pem" is a pointer to the actual certificate file so there's no need to specify the host file name.
 
 5. Move the key file to an appropriate directory by using the following command:
 
@@ -72,7 +72,7 @@ On a Windows machine, export the certificate with the private key in the PEM for
     mv omikey.pem /etc/opt/omi/ssl/omikey.pem
     ```
 
-    It will also ask to override.
+    This command will also ask to override existing certificates in the directory.
 
 6. Restart the agent to use the new certificate by using the following command:
 
