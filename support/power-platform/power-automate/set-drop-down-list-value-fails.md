@@ -1,37 +1,50 @@
 ---
-title: Set Drop Down List Value action fails as list value cannot be found
-description: Provides a resolution when Set Drop Down List Value action fails because list value cannot be found.
+title: Set drop-down list value action fails because the list value can't be found
+description: Provides a resolution for an issue where the "Set drop-down list value" action fails because the list value can't be found.
 ms.reviewer: nimoutzo
-ms.date: 08/01/2023
+ms.date: 08/09/2023
 ms.subservice: power-automate-desktop-flows
 ---
-# List value specified in the Set drop-down list value action cannot be found at runtime
+# The list value specified in the "Set drop-down list value" action can't be found at runtime
 
-This article provides a resolution when Set Drop Down List Value action fails because list value cannot be found.
+This article provides a resolution for an issue where the "Set drop-down list value" action fails with the "UIAutomation.SelectOptionInDropDownError" error code because the list value can't be found.
 
 _Applies to:_ &nbsp; Power Automate
 
-## Symptoms
-1. The action Set drop-down list value is failing with an error message "Failed to perform the requested operation on the drop-down list. Drop down list was not found”.
-2. The action runs successfully but the option is not getting selected, and no error is generated during runtime
-## Error code
-UIAutomation.SelectOptionInDropDownError
+## Symptom 1
 
-## Cause
-- Symptom 1: The selector of the drop-down element fails to locate it successfully (the element's selector might not be correct)
-- Symptom 2: For an unspecified reason the action fails to select the option element from the drop down.
+The "Set drop-down list value" action fails with the following error message:
 
-## Resolution
-- Symptom 1:
+> Failed to perform the requested operation on the drop-down list. Drop down list was not found.
 
-Check if the element selector of the drop-down element is correct. You can use the "Test Selector" in Selector Builder to verify this. If the selector is not valid you can use the Repair Selector  to fix the selector Repair Selector. (Applies both actions of the UI automation and Browser automation groups.)
-- Symptom 2:
+#### Cause
 
-1. If you have set the input parameter ‘Operation’ with the value "Select options by name", try using the "Select options by index" by providing the specific index of the element in the drop-down list (Applies both actions of the UI automation and Browser automation groups).
-2. If the above is not fixing the issue, please replace the Set drop-down list value with two successive "Click Element In Window" or “Click link on web page“ actions (Applies for actions of the UI automation and Browser automation groups).
-    - The first "Click Element In Window" (UI Automation) or "Click link on web page" (Browser Automation) should use the element that expands the list of options (usually an arrow button)
-    - The second "Click Element In Window"(UI Automation) or "Click link on web page" (Browser Automation) should use as element the option that needs to be selected
-3. If the above is not fixing the issue, and the drop-down list has filter functionality e.g: we can type text or part of text on the dropdown and suggestions for selection appear (Applies for actions of the UI automation and Browser automation groups).
-    - When using UI automation, use the "Populate text field in window" and set in the Text Box parameter the drop-down list element and in the Text To fill-in parameter the text that is shown in the corresponding option.
-    - When using Browser automation, use the “Populate text field on web page” set in the UI Element parameter the drop-down list element and in the Text parameter the text that is shown in the corresponding option
-4. Use "Click Element In Window" to send a click on the drop down in order to get focus and then "Send Keys" with option Send Keys to: Foreground Window and Text to send the text that is show in the corresponding option followed by {Enter}. (Applies for actions of the UI automation group)
+The selector of the drop-down element fails to locate it successfully. The element's selector might not be correct.
+
+#### Resolution
+
+You can use the test selector feature in the selector builder window to check if the element selector of the drop-down element is correct. If the selector is invalid, use the repair selector feature to fix it. This resolution applies to both actions of the UI automation and Browser automation groups.
+
+## Symptom 2
+
+The "Set drop-down list value" action runs successfully but the option element isn't selected, and no error occurs during runtime.
+
+#### Cause
+
+The "Set drop-down list value" action fails to select the option element from the drop-down list.
+
+#### Resolution
+
+- For actions of the UI automation and Browser automation groups,
+  
+  1. If you have set the **Operation** input parameter with the **Select option(s) by name** value, try to use the **Select options by index** value by providing a specific index of the element in the drop-down list.
+  2. If the above step doesn't fix the issue, replace the "Set drop-down list value" action with two successive "Click element in window" or "Click link on web page" actions. 
+      - The first "Click element in window" (UI automation) or "Click link on web page" (Browser automation) should use an element (usually an arrow button) that can expand the list of options.
+      - The second "Click element in window" (UI automation) or "Click link on web page" (Browser automation) should use an option element that needs to be selected.
+  3. If the above steps don't fix the issue, and the drop-down list has filter functionality, you can type text or part of text in the drop-down list to get some suggestions for selection. 
+      - Use the "Populate text field in window" action in UI automation. Set the **Text Box** parameter using the drop-down list element, and set the **Text to fill-in** parameter using the text that's shown in the corresponding option.
+      - Use the "Populate text field on web page" action in Browser automation. Set the **UI Element** parameter using the drop-down list element, and set the **Text** parameter using the text that's shown in the corresponding option.
+
+- For the actions of the UI automation group,
+
+  Use the "Click element in window" action to send a click to the drop-down list to get focus. Then, use the "Send Keys" action by setting the **Send keys to** option as **Foreground window** and setting the **Text to send** option using the text followed by `{Enter}` that's shown in the corresponding option.
