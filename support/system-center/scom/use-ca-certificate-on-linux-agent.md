@@ -64,7 +64,7 @@ On a Windows machine, export the certificate and the private key in the PEM form
     mv omi.pem /etc/opt/omi/ssl/omi.pem
     ```
 
-    This command will ask to override existing certificates in the directory. "omi.pem" is a pointer to the actual certificate file so there's no need to specify the host file name.
+    This command will ask to override existing certificate files in the directory. "omi.pem" is a pointer to the actual certificate file so there's no need to specify the host file name.
 
 5. Move the key file to an appropriate directory by using the following command:
 
@@ -72,7 +72,7 @@ On a Windows machine, export the certificate and the private key in the PEM form
     mv omikey.pem /etc/opt/omi/ssl/omikey.pem
     ```
 
-    This command will also ask to override existing certificates in the directory.
+    This command will also ask to override existing key files in the directory.
 
 6. Restart the agent to use the new certificate by using the following command:
 
