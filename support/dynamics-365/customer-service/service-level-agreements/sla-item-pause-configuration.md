@@ -1,39 +1,74 @@
 ---
-title: Unable to save an SLA Item due to the error "Nullable object must have a value"
-description: Provides a resolution for the issue where an SLA Item failed to save due to the error "Nullable object must have a value".
+title: Can't save an SLA item due to the Nullable object must have a value error
+description: Provides a resolution for the Nullable object must have a value error that occurs when you save an SLA item.
 ms.reviewer: sdas
 ms.author: ankugupta
-ms.date: 08/07/2023
+ms.date: 08/09/2023
 ---
-# Unable to save an SLA Item
+# Can't save an SLA item
 
-This article provides a resolution for the issue that prevented an SLA Item from saving because of the error "Nullable object must have a value".
+This article provides a resolution for the "Nullable object must have a value" error message that occurs when you try to save a service-level agreement (SLA) item.
 
 ## Symptoms
 
-This issue is occurring for all the SLA Items, which had the value of **msdyn_advancedpauseconfiguratio** set to NULL.
-:::image type="content" source="media/sla-item-pause-configuration/sla-item-set-to-null.png" alt-text="Screenshot that shows an error while saving SLA Item." border="false":::
+When you try to save an SLA item that has the value of `msdyn_advancedpauseconfiguratio` set to **NULL**, the following error message occurs.
+
+> Nullable object must have a value.
+
+:::image type="content" source="media/sla-item-pause-configuration/nullable-object-must-have-a-value-error.png" alt-text="Screenshot that shows the error that occurs when you save an SLA item." border="false":::
 
 ## Cause
 
-This issue occurs when the SLA Items were created before the msdyn_advancedpauseconfiguration property was added. The SLA Items created after that have a default value of False and don't face this issue.
+This issue occurs when the SLA items are created before the `msdyn_advancedpauseconfiguration` property is added. The SLA items that are created after that have a **False** default value and don't have this issue.
 
 ## Resolution
 
-To solve this issue, take the following steps:
+In the **Pause Configurations** section of an SLA item, set the toggle to **Yes** for **Override Criteria** to pause the SLA item, then set it back to **No**, and save the SLA item.
 
-The Override Criteria toggle can be set to Yes, then back to No and saved.
-:::image type="content" source="media/sla-item-pause-configuration/sla-advance-pause-config.png" alt-text="Screenshot that shows how to enable or disable advance pause configuration." border="false":::
+:::image type="content" source="media/sla-item-pause-configuration/sla-advance-pause-config.png" alt-text="Screenshot that shows how to enable or disable the advance pause configuration.":::
 
-In case the Pause Configurations sections isn't visible due to *Allow Pause and Resume* set to No, follow the below steps to set the value to false.
-1. Navigate to SLA
-2. Open any SLA Item records
-3. Open the Developer Tool (press F12)
-4. Go to console
-5. Copy the script from the file [Mitigation-Script.txt](/media/sla-item-pause-configuration/mitigation-script.txt)
-6. Make sure you are passing correct SLAId at line 1
-7. Press enter
-8. Wait for few seconds till the script execution succeeds.
-9. Go back to CRM and Refresh the page (Ctrl +F5)
-10. Edit the SLA Item and Save.
-11. Repeat the same for all SLA's.
+The **Pause Configurations** section doesn't appear when **Allow Pause and Resume** is set to **No**. In this scenario, take the following steps to set the value of the `msdyn_advancedpauseconfiguration` to **False**.
+
+1. Open an SLA item record in an SLA.
+2. Press <kbd>F12</kbd> to open the developer tools window.
+3. Go to console.
+4. Copy the script from the [Mitigation script](#mitigation-script) section of this article.
+5. Make sure you pass the correct `slaId` at line 1.
+6. Press <kbd>Enter</kbd>.
+7. Wait for few seconds until the script execution succeeds.
+8. Go back to Dynamics 365 Customer Service and refresh the page by using <kbd>Ctrl</kbd>+<kbd>F5</kbd>.
+9. Edit the SLA item and save.
+10. Repeat the same steps for all the SLAs.
+
+## Mitigation script
+
+```JavaScript
+var slaId = "d68cec48-610a-eb11-a813-000d3abfb73c";
+Xrm.WebApi.retrieveMultipleRecords("slaitem", "?$select=slaitemid,msdyn_advancedpauseconfiguration&$filter=_slaid_value eq " + slaId).then(
+    function success(result) {
+		// define the data to update a record
+		var data =
+		{
+			"msdyn_advancedpauseconfiguration": false,
+		}
+        for (var i = 0; i < result.entities.length; i++) {
+
+			if(result.entities[i].msdyn_advancedpauseconfiguration === null)
+			{
+				// update the record
+				Xrm.WebApi.updateRecord("slaitem", result.entities[i].slaitemid, data).then(
+					function success(result) {
+						console.log("SLAItem updated");
+					},
+					function (error) {
+						console.log(error.message);
+					}
+				);
+			}
+        }                    
+    },
+    function (error) {
+        console.log(error.message);
+    }
+);
+``````
