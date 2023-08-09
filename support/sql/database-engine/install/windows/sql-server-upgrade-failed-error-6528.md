@@ -1,15 +1,15 @@
 ---
-title: SQL Server upgrade fails and returns error 50000
-description: Troubleshoots error 50000 that occurs when you install a cumulative update or service pack for SQL Server. The error occurs when database upgrade scripts are run.
+title: SQL Server upgrade fails and returns error 6528
+description: Troubleshoots error 6528 that occurs when you install a cumulative update or service pack for SQL Server. The error occurs when database upgrade scripts are run.
 ms.date: 08/08/2023
 ms.custom: sap:Installation, Patching and Upgrade
 ms.reviewer: v-sidong
 author: prmadhes-msft
 ms.author: prmadhes
 ---
-# SQL Server upgrade fails and returns error 50000
+# SQL Server upgrade fails and returns error 6528
 
-This article helps you troubleshoot and solve error 50000 that occurs when you install a cumulative update (CU) or service pack (SP) for Microsoft SQL Server. The error occurs when database upgrade scripts are run.
+This article helps you troubleshoot and solve error 6528 that occurs when you install a cumulative update (CU) or service pack (SP) for Microsoft SQL Server. The error occurs when database upgrade scripts are run.
 
 ## Symptoms
 
@@ -25,6 +25,7 @@ Cannot drop the assembly 'ISSERVER', because it does not exist or you do not hav
 Creating function internal.is_valid_name
 Error: 6528, Severity: 16, State: 1.
 Assembly 'ISSERVER' was not found in the SQL catalog of database 'SSISDB'.
+
 Error: 912, Severity: 21, State: 2.
 Script level upgrade for database 'master' failed because upgrade step 'ISServer_upgrade.sql' encountered error 6528, state 1, severity 16. This is a serious error condition which might interfere with regular operation and the database will be taken offline. If the error happened during upgrade of the 'master' database, it will prevent the entire SQL Server instance from starting. Examine the previous error log entries for errors, take the appropriate corrective actions and re-start the database so that the script upgrade steps run to completion.
 Error: 3417, Severity: 21, State: 3.
@@ -43,9 +44,18 @@ For more information about database upgrade scripts that run during a CU or an S
 Follow these steps to solve the issue:
 
 1. Start SQL Server with [trace flag 902](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf902).
-1. Check into the database, and you find the assembly `ISSERVER` is missing.
-1. Check the location *C:\Program Files\Microsoft SQL Server\\\<VersionNumber>\DTS\Bin*, and you find *Microsoft.SqlServer.IntegrationServices.Server.dll* present in the SQL binary folder.
-1. Try to recreate the assembly by using the following query:
+1. Check if the assembly `ISSERVER` is in the database `SSISDB` by using the following query:
+
+    ```sql
+    Use SSISDB
+    GO
+    SELECT * FROM sys.assemblies WHERE name = 'ISSERVER'
+    ``````
+
+    Or, you can check it by expanding **Databases** > **SSISDB** > **Programmability** > **Assemblies** > **ISSERVER** in SQL Server Management Studio (SSMS).
+
+1. Check the location *C:\Program Files\Microsoft SQL Server\\\<VersionNumber>\DTS\Bin* to see if the assembly *Microsoft.SqlServer.IntegrationServices.Server.dll* is present in the SQL binary folder.
+1. If the assembly is in that folder but missing as an entry in a dynamic management view (DMV) or view, re-create it by using the following query:
 
     ```sql
     DECLARE @asm_bin varbinary(max);
@@ -59,4 +69,3 @@ Follow these steps to solve the issue:
 
 1. Remove trace flag 902 and start the services.
 
-SQL Server services come online, and the issue is resolved.

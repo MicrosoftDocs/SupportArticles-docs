@@ -38,3 +38,4 @@ Once you start SQL Server with trace flag 902, you can select one of the followi
 - [Error 5133: Create temporary database failed](upgrade-fails-error-5133.md)
 - [Error 15173: Issues dropping server principals](sql-server-upgrade-failed-error-15173-upgrade-script.md)
 - [Error 17182: TLS 1.0 disabled](sql-server-upgrade-failed-error-17182-upgrade-script.md)
+- [SQL Server upgrade fails with error 6528](sql-server-upgrade-failed-error-6528.md)
