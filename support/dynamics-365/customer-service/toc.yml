@@ -35,10 +35,14 @@
               href: service-level-agreements/sla-draft-state-post-solution-import.md
         - name: SLA creation
           items:
+            - name: '"Nullable object must have a value" error when saving an SLA item'
+              href: service-level-agreements/sla-item-pause-configuration.md
             - name: Primary entity isn't available when creating SLAs
               href: service-level-agreements/create-slas-primary-entity.md 
         - name: SLA migration
           items:
+            - name: Common SLA migration failures
+              href: service-level-agreements/sla-migration-issues.md
             - name: Can't migrate a large number of SLAs
               href: service-level-agreements/migration-tool-issue-slas.md
             - name: GUID is shown instead of owner name in migrated SLA action flow
@@ -49,8 +53,6 @@
               href: service-level-agreements/service-anchor-installation-fails-after-ol-migration.md
             - name: '"Workflow with ID = [GUID] does not exist" error'
               href: service-level-agreements/sla-workflow-does-not-exist.md
-            - name: Other SLA migration failures
-              href: service-level-agreements/sla-migration-issues.md
         - name: SLA time calculation
           items:
             - name: Errors on custom time calculation for SLA
