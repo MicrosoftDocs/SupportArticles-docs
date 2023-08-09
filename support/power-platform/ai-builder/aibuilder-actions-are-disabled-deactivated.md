@@ -35,6 +35,7 @@ To activate the actions, the administrator of the environment needs to perform t
 
     - IsPaiEnabled
     - Predict
+    - Predict by Reference
     - PredictionSchema
     - Train
     - QuickTest
