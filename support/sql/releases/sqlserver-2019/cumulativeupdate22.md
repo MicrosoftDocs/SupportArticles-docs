@@ -929,7 +929,7 @@ You might have to restart the computer after you apply this cumulative update pa
 <details>
 <summary><b>Registry information</b></summary>
 
-To use one of the hotfixes in this package, you do not have to make any changes to the registry.
+To use one of the hotfixes in this package, you don't have to make any changes to the registry.
 
 </details>
 
@@ -947,8 +947,8 @@ Beginning in Microsoft SQL Server 2017, the Analysis Services build version numb
 - Each new CU contains all the fixes that were included with the previous CU for the installed version of SQL Server.
 - SQL Server CUs are certified to the same levels as service packs, and should be installed at the same level of confidence.
 - We recommend ongoing, proactive installation of CUs as they become available according to these guidelines:
-- Historical data shows that a significant number of support cases involve an issue that has already been addressed in a released CU.
-- CUs may contain added value over and above hotfixes. This includes supportability, manageability, and reliability updates.
+  - Historical data shows that a significant number of support cases involve an issue that has already been addressed in a released CU.
+  - CUs might contain added value over and above hotfixes. This includes supportability, manageability, and reliability updates.
 - We recommend that you test SQL Server CUs before you deploy them to production environments.
 
 </details>
@@ -960,16 +960,16 @@ When you deploy an update to a hybrid environment (such as Always On, replicatio
 
 - [Upgrade a failover cluster instance](/sql/sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance)
 
-> [!NOTE]
-> If you don't want to use the rolling update process, follow these steps to apply an update:
->
-> - Install the update on the passive node.
-> - Install the update on the active node (requires a service restart).
+  > [!NOTE]
+  > If you don't want to use the rolling update process, follow these steps to apply an update:
+  >
+      > - Install the update on the passive node.
+      > - Install the update on the active node (requires a service restart).
 
 - [Upgrade and update of availability group servers that use minimal downtime and data loss](/sql/database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances)
 
-> [!NOTE]
-> If you enabled Always On together with the **SSISDB** catalog, see the [information about SSIS with Always On](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-with-alwayson/ba-p/388091) about how to apply an update in these environments.
+  > [!NOTE]
+  > If you enabled Always On together with the **SSISDB** catalog, see the [information about SSIS with Always On](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-with-alwayson/ba-p/388091) about how to apply an update in these environments.
 
 - [How to apply a hotfix for SQL Server in a transactional replication and database mirroring topology](../../database-engine/replication/install-service-packs-hotfixes.md)
 - [How to apply a hotfix for SQL Server in a replication topology](../../database-engine/replication/apply-hotfix-sql-replication-topology.md)
