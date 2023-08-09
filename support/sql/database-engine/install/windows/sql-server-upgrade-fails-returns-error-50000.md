@@ -13,12 +13,10 @@ This article helps you troubleshoot and solve error 50000 that occurs when you i
 
 ## Symptoms
 
-When you apply a CU or an SP for SQL Server, the Setup program reports the following error messages:
-
-When you check the SQL Server error log, you notice one of the following error entries:
+When you apply a CU or an SP for SQL Server, you notice that the Setup program reports one of the following error messages in the SQL Server error log:
 
 ```output
-SQL server failed in ‘Script level upgrade’ with the following error:
+SQL server failed in 'Script level upgrade' with the following error:
 Error: 50000, Severity: 16, State: 127.
 Cannot drop the assembly 'ISSERVER', because it does not exist or you do not have permission.
 Error: 50000, Severity: 16, State: 127.
