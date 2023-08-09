@@ -16,7 +16,7 @@ _Version:_ &nbsp; 16.0.4065.3
 
 ## Summary
 
-This article describes Cumulative Update package 7 (CU7) for Microsoft SQL Server 2022. This update contains 21 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 6, and it updates components in the following builds:
+This article describes Cumulative Update package 7 (CU7) for Microsoft SQL Server 2022. This update contains 20 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 6, and it updates components in the following builds:
 
 - SQL Server - Product version: **16.0.4065.3**, file version: **2022.160.4065.3**
 - Analysis Services - Product version: **16.0.43.221**, file version: **2022.160.43.221**
@@ -41,7 +41,6 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id=2518605>[2518605](#2518605) </a>| Fixes an issue in which an error may occur when you download an attachment uploaded previously in a Master Data Services model.| Master Data Services | Master Data Services | Windows |
 | <a id=2500053>[2500053](#2500053) </a>| Fixes an access violation in `sqllang!FReadDataDirect` that you encounter during network exchanges between an instance of SQL Server and a client. | SQL Connectivity | SQL Connectivity | All |
 | <a id=1550865>[1550865](#1550865) </a>| Fixes an issue in which the `BACKUP` or `RESTORE` statement doesn't time out even after a long time when the S3 server is unreachable or the hostname/IP address/port number that's given in the URL is incorrect. After applying this fix, backing up or restoring a database to the S3 server fails quickly.| SQL Server Engine| Backup Restore| All|
-| <a id=2470888>[2470888](#2470888) </a>| Fixes an "ex_terminator - Last chance exception handling" dump issue that causes the SQL Server instance to stop responding when calling the `sys.fn_hadr_is_primary_replica` function. | SQL Server Engine | High Availability and Disaster Recovery | Windows |
 | <a id=2491363>[2491363](#2491363) </a>| Fixes an issue in which a checkpoint process on an In-Memory OLTP database may get stuck, and the log size keeps increasing. | SQL Server Engine | In-Memory OLTP | All |
 | <a id=2369109>[2369109](#2369109) </a>| [FIX: Scalar UDF Inlining issues in SQL Server 2022 and 2019 (KB4538581)](https://support.microsoft.com/help/4538581) | SQL Server Engine | Programmability | All |
 | <a id=2423760>[2423760](#2423760) </a>| Fixes the following SQL Server assertion failure: </br></br>Error: 17065, Severity: 16, State: 1. </br>Server Assertion: File: \<typinfo.cpp>, line = 1153 Failed Assertion = 'false' Invalid comparison due to NO COLLATION. | SQL Server Engine | Programmability | All |
