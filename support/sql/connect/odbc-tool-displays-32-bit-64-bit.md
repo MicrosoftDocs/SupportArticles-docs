@@ -49,7 +49,7 @@ To maintain backward compatibility, no resolution for this problem is currently 
 
 ## Workaround
 
-To work around this problem, use the appropriate version of the ODBC Administrator tool. If you build and then run an application as a 32-bit application on a 64-bit operating system, you must create the ODBC data source by using the ODBC Administrator tool `%windir%\SysWOW64\odbcad32.exe`. To indicate the type of DSN, you can add '_32' to the 32-bit user DSNs and '_64' to the 64-bit user DSNs.
+To work around this problem, use the appropriate version of the ODBC Administrator tool. If you build and then run an application as a 32-bit application on a 64-bit operating system, you need to use the `%windir%\SysWOW64\odbcad32.exe` ODBC Administrator tool to create the ODBC data source. To indicate the type of DSN, you can add '_32' to the 32-bit user DSNs and '_64' to the 64-bit user DSNs.
 
 ## More information
 
