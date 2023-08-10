@@ -19,7 +19,7 @@ You can't use AI Builder because the AI Builder actions are disabled or deactiva
 
 ## Resolution
 
-To activate the actions, the administrator of the environment needs to take the following steps.
+To activate the actions, the administrator of the environment needs to perform the following steps:
 
 1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/environments).
 1. Select the environment where the actions are deactivated.
