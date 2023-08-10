@@ -12,7 +12,7 @@ The basic troubleshooting step should be to clean the browser cache and perform 
 #### Chrome
 
 In Google Chrome:
-1. Go to chrome://settings/clearBrowserData (please copy and paste it in the URL in your browser)
+1. Go to chrome://settings/clearBrowserData (copy and paste it in the URL in your browser)
 2. Select "Cached images and files"
 3. Press "Clear data"  
 ![Chrome delete cache](media/dialer-basic-troubleshooting/chrome-delete-cache.png)
@@ -20,7 +20,7 @@ In Google Chrome:
 #### Edge
 
 In Edge:
-1. Go to edge://settings/clearBrowserData (please copy and paste it in the URL in your browser)
+1. Go to edge://settings/clearBrowserData (copy and paste it in the URL in your browser)
 2. Select "Cached images and files"
 3. "Clear now"  
 ![Edge delete cache](media/dialer-basic-troubleshooting/edge-delete-cache.png)

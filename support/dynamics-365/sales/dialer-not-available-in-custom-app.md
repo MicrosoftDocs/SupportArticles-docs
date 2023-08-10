@@ -1,6 +1,6 @@
 ---
 title: Dialer Not Available In Custom App
-description: Troubleshot the problem where the dialer is not available within a custom app.
+description: Troubleshot the problem where the dialer isn't available within a custom app.
 ---
 
 # Dialer Not Available In Custom App
@@ -15,8 +15,8 @@ Seller can't see the dialer on the custom app.
 The problem arises when sellers don't have the necessary Teams license or a phone number assigned to their account.
 
 #### Resolution
-If a seller can't see the dialer he should try to re-add it:
-1. Go to dialer settings page (Dialer settings page will only be shown on the 'Sales Hub' application).
+To resolve the problem, you should try to re-add it:
+1. Go to dialer settings page (Dialer settings page available only on the 'Sales Hub' application).
 2. Remove the custom app from the 'Advanced settings' dropdown.
 3. Click update.
 4. After the page finish saving, refresh the page.

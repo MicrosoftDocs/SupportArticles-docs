@@ -16,13 +16,12 @@ When the seller attempts to make a phone call to a PSTN number, they encounter t
 The problem arises when sellers don't have the necessary Teams license or a phone number assigned to their account.
 
 #### Resolution
-To address this issue, follow these steps:
-1. Try to make a call using Teams desktop or Teams web. 
-2. If the call doesn't connect or if there is no phone number displayed (as shown in the image below), it indicates that you don't have the required Teams license or a phone number assigned to your account.
+Open Microsoft Teams desktop or Microsoft Teams web, you don't have the required Teams license or a phone number assigned to your account in these cases:
+1. When you try to make a call in Microsoft Teams and the call doesn't connect.
+2. If there's no work number displayed on Microsoft Teams as shown here:
+   ![Check teams number](media/cannot-make-phone-calls-to-pstn/check-teams-number.png)
 
-Follow this [documentation](https://learn.microsoft.com/microsoftteams/assign-change-or-remove-a-phone-number-for-a-user).
-
-![Check teams number](media/cannot-make-phone-calls-to-pstn/check-teams-number.png)
+To resolve the problem described, follow this [documentation](https://learn.microsoft.com/microsoftteams/assign-change-or-remove-a-phone-number-for-a-user).
 
 ### Issue 2: Try basic troubleshooting.
 

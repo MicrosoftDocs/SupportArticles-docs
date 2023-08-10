@@ -1,6 +1,6 @@
 ---
 title: Dialer Not Available In CRM
-description: Troubleshot the problem where the dialer is not available.
+description: Troubleshot the problem where the dialer isn't available.
 ---
 
 # Dialer Not Available In CRM
@@ -21,7 +21,7 @@ To see the dialer, the user assigned security roles should have read privileges 
 These privileges should be granted automatically for the Sales Manager and salesperson security roles.
 
 #### Resolution
-In case there is a problem with the privileges, follow the mitigation steps:
+In case there's a problem with the privileges, follow the mitigation steps:
 1. Login into the CRM (orgUrl) with an admin user.
 2. Navigate to Settings --> Advanced Settings:  
    ![Crm advanced settings](media/dialer-not-visible-in-crm/crm-advanced-settings.png)

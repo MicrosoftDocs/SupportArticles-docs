@@ -1,6 +1,6 @@
 ---
 title: Seller Voice Unheard by Other Customer
-description: Troubleshot the problem of being unable to be heard by other customer.
+description: Troubleshot the problem when other customer is unable to hear the seller.
 ---
 
 # Seller Voice Unheard by Other Customer
@@ -15,7 +15,7 @@ When the Seller is speaking during a call, the other customer can't hear their v
 The problem arises from sellers not selecting the correct microphone device in the dialer's device settings.
 
 #### Resolution
-To resolve this, ensure the right microphone device is chosen by following these steps:
+To resolve the problem, ensure the right microphone device is chosen by following these steps:
 1. Click on the three dots menu, and then select "Device Settings":  
    ![Dialer menu](media/seller-voice-unheard-by-other-customer/dialer-menu.png)  
 2. Choose the appropriate microphone device:  
@@ -24,7 +24,7 @@ To resolve this, ensure the right microphone device is chosen by following these
 ### Issue 2: Browser Microphone permissions
 
 #### Root cause
-The issue is often caused by the seller not enabling microphone permissions on the browser.
+The issue is often caused because the seller doesn't enable microphone permissions on the browser.
 
 #### Resolution
 To enable microphone permissions for the browser, follow these steps:

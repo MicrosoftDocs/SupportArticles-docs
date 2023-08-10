@@ -15,7 +15,7 @@ When the other customer is speaking during a call, the seller can't hear their v
 The problem arises from sellers not selecting the correct speaker device in the dialer's device settings.
 
 #### Resolution
-To resolve this, ensure the right speaker device is chosen by following these steps:
+To resolve the problem, ensure the right speaker device is chosen by following these steps:
 1. Click on the three dots menu, and then select "Device Settings":  
    ![Dialer menu](media/cannot-hear-other-customer/dialer-menu.png)  
 2. Choose the appropriate speaker device:  
@@ -24,7 +24,7 @@ To resolve this, ensure the right speaker device is chosen by following these st
 ### Issue 2: Browser Sound permissions
 
 #### Root cause
-The issue is often caused by the seller not enabling sound permissions on the browser.
+The issue is often caused because the seller doesn't enable sound permissions on the browser.
 
 #### Resolution
 To enable sound permissions for the browser, click the lock icon located below to the address bar: 
