@@ -55,7 +55,7 @@ Follow these steps to solve the issue:
     Or, you can check it by expanding **Databases** > **SSISDB** > **Programmability** > **Assemblies** > **ISSERVER** in SQL Server Management Studio (SSMS).
 
 1. Check the location *C:\Program Files\Microsoft SQL Server\\\<VersionNumber>\DTS\Bin* to see if the assembly *Microsoft.SqlServer.IntegrationServices.Server.dll* is present in the SQL binary folder.
-1. If the assembly is in that folder but missing as an entry in the `sys.assemblies` view, re-create it by using the following query:
+1. If the assembly is in that folder but missing as an entry in the [sys.assemblies](/sql/relational-databases/system-catalog-views/sys-assemblies-transact-sql) view, re-create it by using the following query:
 
     ```sql
     DECLARE @asm_bin varbinary(max);
