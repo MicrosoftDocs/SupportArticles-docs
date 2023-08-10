@@ -4,15 +4,6 @@ description: Troubleshot the problem of being unable to hear other customer.
 ---
 
 # Seller Can't hear other customer
-## Who is affected?
-|                |                                 |
-|----------------|---------------------------------|
-| **Platform**   | Web                             |
-| **OS**         | Windows and Mac                 |
-| **Deployment** | User managed and admin managed  |
-| **CRM**        | Dynamics 365                    |
-| **Users**      | All users                       |
-
 
 ## Symptom
 When the other customer is speaking during a call, the seller can't hear their voice.
@@ -41,4 +32,4 @@ To enable sound permissions for the browser, click the lock icon located below t
 ![Chrome enable sound](media/cannot-hear-other-customer/chrome-enable-sound.png)  
 * On Microsoft Edge, click on "Mute" and then select "Automatic(Default)":  
 ![Edge enable sound](media/cannot-hear-other-customer/edge-enable-sound.png)  
-![Edge enable sound](media/cannot-hear-other-customer/edge-enable-sound2.png)  
+![Edge enable sound 2](media/cannot-hear-other-customer/edge-enable-sound2.png)  

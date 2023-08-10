@@ -4,15 +4,6 @@ description: Troubleshot the problem where the dialer is not available within a 
 ---
 
 # Dialer Not Available In Custom App
-## Who is affected?
-|                |                                 |
-|----------------|---------------------------------|
-| **Platform**   | Web                             |
-| **OS**         | Windows and Mac                 |
-| **Deployment** | User managed and admin managed  |
-| **CRM**        | Dynamics 365                    |
-| **Users**      | All users                       |
-
 
 ## Symptom
 Seller can't see the dialer on the custom app.

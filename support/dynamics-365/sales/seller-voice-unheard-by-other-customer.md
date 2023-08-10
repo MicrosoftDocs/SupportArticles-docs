@@ -4,15 +4,6 @@ description: Troubleshot the problem of being unable to be heard by other custom
 ---
 
 # Seller Voice Unheard by Other Customer
-## Who is affected?
-|                |                                 |
-|----------------|---------------------------------|
-| **Platform**   | Web                             |
-| **OS**         | Windows and Mac                 |
-| **Deployment** | User managed and admin managed  |
-| **CRM**        | Dynamics 365                    |
-| **Users**      | All users                       |
-
 
 ## Symptom
 When the Seller is speaking during a call, the other customer can't hear their voice.

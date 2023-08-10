@@ -4,15 +4,6 @@ description: Troubleshot the problem where duplicate phone calls are being creat
 ---
 
 # Duplicate Phone Calls
-## Who is affected?
-|                |                                 |
-|----------------|---------------------------------|
-| **Platform**   | Web                             |
-| **OS**         | Windows and Mac                 |
-| **Deployment** | User managed and admin managed  |
-| **CRM**        | Dynamics 365                    |
-| **Users**      | All users                       |
-
 
 ## Symptom
 User makes calls from Sales Accelerator and notices there are multiple phonecalls being created for the same call.
