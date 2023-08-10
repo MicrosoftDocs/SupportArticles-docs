@@ -32,9 +32,9 @@ In specific, the components of relevance here are:
 
 For other components (client and server) like Srv.sys, mrxsmb.sys, rdbss.sys, ntfs.sys, dfssvc.exe, see the following up-to-date articles:
 
-- [List of currently available hotfixes for the File Services technologies in Windows Server 2008 and in Windows Server 2008 R2](/troubleshoot/windows-server/backup-and-storage/file-services-hotfixes-in-windows-server-2008)
+- [List of currently available hotfixes for the File Services technologies in Windows Server 2008 and in Windows Server 2008 R2](../../windows-server/backup-and-storage/file-services-hotfixes-in-windows-server-2008.md)
 
-- [List of currently available hotfixes for the File Services technologies](/troubleshoot/windows-server/networking/hotfixes-for-file-services-technologies)
+- [List of currently available hotfixes for the File Services technologies](../../windows-server/networking/hotfixes-for-file-services-technologies.md)
 
 - [List of currently available hotfixes for Distributed File System (DFS) technologies in Windows Server 2008 and in Windows Server 2008 R2](https://support.microsoft.com/help/968429)
 

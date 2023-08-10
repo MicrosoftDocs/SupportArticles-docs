@@ -79,7 +79,7 @@ To install the debugging tools, see the [Download and Install Debugging Tools fo
 
 This Web page also provides access to the downloadable symbol packages for Windows. For more information about Windows symbols, see [Debugging with Symbols](/windows/win32/dxtecharts/debugging-with-symbols), and the [Download Windows Symbol Packages](/windows-hardware/drivers/debugger/debugger-download-symbols) webpage.
 
-For more information about dump file options in Windows, see [Overview of memory dump file options for Windows](/troubleshoot/windows-server/performance/memory-dump-file-options).
+For more information about dump file options in Windows, see [Overview of memory dump file options for Windows](../../windows-server/performance/memory-dump-file-options.md).
 
 ## Open the dump file
 

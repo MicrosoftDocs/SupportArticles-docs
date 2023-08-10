@@ -75,7 +75,7 @@ Restore full control to the **SecureStorageManager** parameter for the system us
 > [!WARNING]
 > Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require that you reinstall the operating system. Microsoft can't guarantee that these problems can be solved. Modify the registry at your own risk.
 
-1. (Recommended) [Back up the registry](/troubleshoot/windows-server/performance/windows-registry-advanced-users#back-up-the-registry).
+1. (Recommended) [Back up the registry](../../../windows-server/performance/windows-registry-advanced-users.md#back-up-the-registry).
 
 1. Return to or reopen the Registry Editor.
 

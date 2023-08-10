@@ -108,7 +108,7 @@ Follow these steps to update to a certificate that can be used successfully toge
      Update-AzureRmVM -ResourceGroupName $rg -VM $vm  
      ```
 
-   - Perform a "reapply" operation on your VM by following the instructions in the "Resolution" section of the [Virtual machine stuck in a failed state](/troubleshoot/azure/virtual-machines/vm-stuck-in-failed-state) article.
+   - Perform a "reapply" operation on your VM by following the instructions in the "Resolution" section of the [Virtual machine stuck in a failed state](vm-stuck-in-failed-state.md) article.
 
 1. Retry the extension operation.
 

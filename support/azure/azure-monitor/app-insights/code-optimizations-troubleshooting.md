@@ -29,7 +29,7 @@ In addition to enabling Application Insights Profiler, you should also make sure
 1. On the **Investigate** section, select **Performance**, and then select **Profiler**.
     
     :::image type="content" source="./media/code-optimizations-troubleshooting/performance-page.png" alt-text="Screenshot that shows how to navigate to the app insights profiler.":::
-1. Check the **Recent profiling sessions**. If you don't see any profiling sessions, visit this page for troubleshooting: [Troubleshoot Application Insights Profiler](/troubleshoot/azure/azure-monitor/app-insights/profiler-troubleshooting).
+1. Check the **Recent profiling sessions**. If you don't see any profiling sessions, visit this page for troubleshooting: [Troubleshoot Application Insights Profiler](profiler-troubleshooting.md).
 
     :::image type="content" source="./media/code-optimizations-troubleshooting/profiling-sessions.png" alt-text="Screenshot of the profiling sessions page.":::
 
