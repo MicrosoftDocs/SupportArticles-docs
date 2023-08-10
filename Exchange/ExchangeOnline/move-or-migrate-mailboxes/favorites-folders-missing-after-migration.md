@@ -36,7 +36,7 @@ Outlook on the web isn't affected by this issue.
 
 Each Favorites folder has a `MailboxDN` field value within the `PR_WLINK_STORE_ENTRYID` property value that associates the folder with the mailbox. Prior to mailbox migration, the `MailboxDN` field value reflects the `LegacyExchangeDN` property value of the on-premises mailbox.
 
-When the mailbox is migrated to the cloud, Exchange Online applies a new `LegacyExchangeDN` value to the cloud mailbox. However, Exchange Online doesn't update the `MailboxDN` field value for each Favorites folder to the new `LegacyExchangeDN` value. If the mailbox user continues to use their existing Outlook profile after migration, the Favorites folders appear as usual in the Outlook client. However, if the user creates and uses a new Outlook profile, the mismatch between the `MailboxDN` value of each folder and the `LegacyExchangeDN` value of the Exchange Online mailbox causes the Favorites folders to not appear in the Outlook client.
+When the mailbox is migrated to the cloud, Exchange Online applies a new `LegacyExchangeDN` value to the cloud mailbox. However, Exchange Online doesn't update the `MailboxDN` field value of each Favorites folder to the new `LegacyExchangeDN` value. If the mailbox user continues to use their existing Outlook profile after migration, the Favorites folders appear as usual in the Outlook client. However, if the user creates and uses a new Outlook profile, the mismatch between the `MailboxDN` value of each folder and the `LegacyExchangeDN` value of the Exchange Online mailbox causes the Favorites folders to not appear in the Outlook client.
 
 ## Workaround
 
@@ -58,7 +58,7 @@ Follow these steps:
    Connect-ExchangeOnline
    ```
 
-2. Run the following command to find the `LegacyExchangeDN` value for the Exchange Online mailbox:
+2. Run the following command to find the `LegacyExchangeDN` value of the Exchange Online mailbox:
 
    ```powershell
    Get-Mailbox <mailbox SMTP address> | FL LegacyExchangeDN
@@ -89,7 +89,7 @@ Follow these steps:
 
     2. Double-click the **PR_WLINK_STORE_ENTRYID** entry in the **Name** column to open the **Property Editor** window.
 
-    3. In the **Smart View** section, select the **EntryID** \> **MAPI Message Store Entry ID** \> **MailboxDN** field. The field value corresponds to the `LegacyExchangeDN` value for the on-premises mailbox prior to migration.
+    3. In the **Smart View** section, select the **EntryID** \> **MAPI Message Store Entry ID** \> **MailboxDN** field. The field value corresponds to the `LegacyExchangeDN` value of the on-premises mailbox prior to migration.
 
     4. In the **Text** section, update the **MailboxDN value** to match current `LegacyExchangeDN` value of the mailbox that you obtained in Step 2.
 
