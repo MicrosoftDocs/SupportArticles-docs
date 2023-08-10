@@ -1,3 +1,8 @@
+---
+title: Dialer Basic Troubleshooting
+description: Basic Troubleshooting for Teams Dialer
+---
+
 # Dialer Basic Troubleshooting - Clean Browser Cache
 
 The basic troubleshooting step should be to clean the browser cache and perform a hard refresh.
@@ -10,7 +15,7 @@ In Google Chrome:
 1. Go to chrome://settings/clearBrowserData (please copy and paste it in the URL in your browser)
 2. Select "Cached images and files"
 3. Press "Clear data"  
-![](media/dialer-basic-troubleshooting/chrome-delete-cache.png)
+![Chrome delete cache](media/dialer-basic-troubleshooting/chrome-delete-cache.png)
 
 #### Edge
 
@@ -18,7 +23,7 @@ In Edge:
 1. Go to edge://settings/clearBrowserData (please copy and paste it in the URL in your browser)
 2. Select "Cached images and files"
 3. "Clear now"  
-![](media/dialer-basic-troubleshooting/edge-delete-cache.png)
+![Edge delete cache](media/dialer-basic-troubleshooting/edge-delete-cache.png)
 
 ### Step 2 - Hard Refresh
 

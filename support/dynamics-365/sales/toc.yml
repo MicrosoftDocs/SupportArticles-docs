@@ -494,7 +494,7 @@
         - name: Troubleshoot relationship intelligence
           href: troubleshoot-relationship-intelligence.md
     - name: Microsoft Teams Dialer
-    - items:
+      items:
         - name: Dialer Basic Troubleshooting
           href: dialer-basic-troubleshooting.md
         - name: Can't Enable Dialer

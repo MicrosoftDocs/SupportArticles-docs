@@ -1,3 +1,8 @@
+---
+title: Duplicate Phone Calls
+description: Troubleshot the problem where duplicate phone calls are being created.
+---
+
 # Duplicate Phone Calls
 ## Who is affected?
 |                |                                 |
@@ -20,4 +25,4 @@ The problem arises from both Sales Accelerator and TeamsDialer create a phonecal
 
 #### Resolution
 To resolve this, user will have to turn off the SalesAccelerator creation, by excluding phonecall (checking this box).
-![](media/duplicate-phonecalls/global-settings-sales-accelerator.png)
+![Global settings sales accelerator](media/duplicate-phonecalls/global-settings-sales-accelerator.png)

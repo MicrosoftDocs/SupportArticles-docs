@@ -1,3 +1,8 @@
+---
+title: Dialer Not Available In Custom App
+description: Troubleshot the problem where the dialer is not available within a custom app.
+---
+
 # Dialer Not Available In Custom App
 ## Who is affected?
 |                |                                 |
@@ -28,4 +33,4 @@ If a seller can't see the dialer he should try to re-add it:
 6. Click update.
 7. Go to the custom app and check if the dialer is displaying now.
 
-![](media/dialer-not-available-in-custom-app/dialer-settings-page-advanced-settings.png)
+![Dialer settings page advanced settings](media/dialer-not-available-in-custom-app/dialer-settings-page-advanced-settings.png)

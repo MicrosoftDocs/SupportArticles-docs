@@ -1,3 +1,8 @@
+---
+title: Dialer Not Available In CRM
+description: Troubleshot the problem where the dialer is not available.
+---
+
 # Dialer Not Available In CRM
 ## Who is affected?
 |                |                                 |
@@ -28,13 +33,13 @@ These privileges should be granted automatically for the Sales Manager and sales
 In case there is a problem with the privileges, follow the mitigation steps:
 1. Login into the CRM (orgUrl) with an admin user.
 2. Navigate to Settings --> Advanced Settings:  
-   ![](media/dialer-not-visible-in-crm/crm-advanced-settings.png)
+   ![Crm advanced settings](media/dialer-not-visible-in-crm/crm-advanced-settings.png)
 
 3. Navigate to Security --> Security Roles:  
-   ![](media/dialer-not-visible-in-crm/crm-security.png)
+   ![Crm security](media/dialer-not-visible-in-crm/crm-security.png)
 
 4. Select the relevant security role: Update the entity read permission:  
-   ![](media/dialer-not-visible-in-crm/crm-security-roles.png)
+   ![Crm security roles](media/dialer-not-visible-in-crm/crm-security-roles.png)
 
 5. Update the Teams Dialer Admin settings entity read permission:  
-   ![](media/dialer-not-visible-in-crm/teams-dialer-admin-settings-priviliges.png)
+   ![Teams dialer admin settings Priviliges](media/dialer-not-visible-in-crm/teams-dialer-admin-settings-priviliges.png)

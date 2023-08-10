@@ -1,3 +1,8 @@
+---
+title: Can't Enable Dialer
+description: Troubleshot the problem of being unable to enable the dialer.
+---
+
 # Can't Enable Dialer
 ## Who is affected?
 |                |                                 |
@@ -11,7 +16,7 @@
 
 ## Symptom
 Admin user can't enable Teams calls on Teams Admin Settings:  
-![](media/cannot-enable-dialer/teams-admin-settings.png)
+![Teams admin settings](media/cannot-enable-dialer/teams-admin-settings.png)
 
 ## Root cause and resolution
 ### Issue: Admin user missing licenses
@@ -20,4 +25,4 @@ Admin user can't enable Teams calls on Teams Admin Settings:
 The problem arises due to the absence of the necessary licenses for the admin user.
 
 #### Resolution
-Follow this [documentation](https://learn.microsoft.com/en-us/MicrosoftTeams/setting-up-your-phone-system).
+Follow this [documentation](https://learn.microsoft.com/MicrosoftTeams/setting-up-your-phone-system).
