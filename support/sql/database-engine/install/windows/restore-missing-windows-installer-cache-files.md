@@ -72,7 +72,7 @@ MSI (s)  Source is incorrect. Unable to open or validate MSI package I:\xxxxxxx.
 Here is a list of behaviors one of which you may observe as a symptom:
 
 - You may notice that a particular feature that you want to upgrade is not showing up in the upgrade wizard
-- Attempted to perform an upgrade (including Edition upgrade) but no change takes place
+- You attempt to perform an upgrade (including Edition upgrade) but no change takes place
 
 ## Cause
 
