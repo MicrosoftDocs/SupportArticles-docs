@@ -333,6 +333,8 @@
           href: ../email-management/emails-that-you-forward-not-saved-in-sent-items.md
         - name: How to emulate Out of Office Assistant
           href: ../email-management/how-to-emulate-the-out-of-office-assistant-in-micr.md
+        - name: Inbox rule doesn't appear in Outlook client
+          href: ../email-management/inbox-rule-does-not-appear-in-outlook-client.md
         - name: Issues with OOF replies
           href: /exchange/troubleshoot/send-emails/understand-troubleshoot-oof-replies
         - name: Messages move from the Inbox to a renamed folder

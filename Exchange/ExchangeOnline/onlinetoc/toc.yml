@@ -395,6 +395,8 @@
           href: ../move-or-migrate-mailboxes/cannot-see-free-busy-information.md
         - name: Can't view mailbox folders after an IMAP migration
           href: ../move-or-migrate-mailboxes/cannot-view-mailbox-folders-after-imap-migration.md
+        - name: Favorites folders are missing after migration to Exchange Online
+          href: ../move-or-migrate-mailboxes/favorites-folders-missing-after-migration.md
         - name: How to manage the maximum concurrent migration batches
           href: ../move-or-migrate-mailboxes/how-to-manage-maximum-concurrent-migration-batches.md
         - name: Issue with Add-RecipientPermission
