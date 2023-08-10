@@ -13,12 +13,12 @@ _Original KB number:_ &nbsp; 942976
 
 ## Symptoms
 
-A 64-bit version of the Microsoft Windows operating system includes the following versions of the ODBC Data Source Administrator tool (Odbcad32.exe):
+A 64-bit version of the Microsoft Windows operating system includes the following versions of the ODBC Data Source Administrator tool (_Odbcad32.exe_):
 
-- The 32-bit version of the Odbcad32.exe file is located in the `%systemdrive%\Windows\SysWoW64` folder.
-- The 64-bit version of the Odbcad32.exe file is located in the `%systemdrive%\Windows\System32` folder.
+- The 32-bit version of the _Odbcad32.exe_ file is located in the `%systemdrive%\Windows\System32` folder.
+- The 64-bit version of the _Odbcad32.exe_ file is located in the `%systemdrive%\Windows\SysWoW64` folder.
 
-The Odbcad32.exe file displays the following types of data source names (DSNs):
+The _Odbcad32.exe_ file displays the following types of data source names (DSNs):
 
 - System DSNs
 - User DSNs
