@@ -91,7 +91,7 @@ Follow these steps:
 
     3. In the **Smart View** section, select the **EntryID** \> **MAPI Message Store Entry ID** \> **MailboxDN** field. The field value corresponds to the `LegacyExchangeDN` value of the on-premises mailbox prior to migration.
 
-    4. In the **Text** section, update the **MailboxDN value** to match current `LegacyExchangeDN` value of the mailbox that you obtained in Step 2.
+    4. In the **Text** section, update the **MailboxDN value** to match the current `LegacyExchangeDN` value of the mailbox that you obtained in Step 2.
 
 12. Close all MFCMAPI windows to exit the application.
 
