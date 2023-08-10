@@ -81,7 +81,7 @@ The third example of the enhanced output includes the following enhancements:
 
 ## More information
 
-This improvement is included in the following cumulative updates for SQL Server:
+This improvement is included in the following cumulative update for SQL Server:
 
 [Cumulative Update 7 for SQL Server 2022](cumulativeupdate7.md)
 
