@@ -493,3 +493,21 @@
           href: troubleshoot-table-views-issues.md
         - name: Troubleshoot relationship intelligence
           href: troubleshoot-relationship-intelligence.md
+    - name: Microsoft Teams Dialer
+    - items:
+        - name: Dialer Basic Troubleshooting
+          href: dialer-basic-troubleshooting.md
+        - name: Can't Enable Dialer
+          href: cannot-enable-dialer.md
+        - name: Dialer Not Available In Custom App
+          href: dialer-not-available-in-custom-app.md
+        - name: Dialer Not Available In CRM
+          href: dialer-not-visible-in-crm.md
+        - name: Seller Can't hear other customer
+          href: cannot-hear-other-customer.md
+        - name: Seller Voice Unheard by Other Customer
+          href: seller-voice-unheard-by-other-customer.md
+        - name: Seller Can't Make Phone Calls to PSTN
+          href: cannot-make-phone-calls-to-pstn.md
+        - name: Duplicate Phone Calls
+          href: duplicate-phonecalls.md
