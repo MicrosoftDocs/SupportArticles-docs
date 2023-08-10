@@ -83,13 +83,13 @@ Follow these steps:
 
 10. In the right-pane, double-click **PR_FOLDER_ASSOCIATED_CONTENTS** to open the **Associated contents** table.
 
-11. For each folder that's doesn't appear in the Favorites list, perform the following steps:
+11. For each folder that doesn't appear in the Favorites list, perform the following steps:
 
     1. Double-click the folder name in the **PR_SUBJECT** column to open the **Properties** window for the folder.
 
     2. Double-click the **PR_WLINK_STORE_ENTRYID** entry in the **Name** column to open the **Property Editor** window.
 
-    3. In the **Smart View** section, select the **EntryID** \> **MAPI Message Store Entry ID** \> **MailboxDN** field. The field value corresponds to the `LegacyExchangeDN` value for the on-premises mailbox (prior to migration).
+    3. In the **Smart View** section, select the **EntryID** \> **MAPI Message Store Entry ID** \> **MailboxDN** field. The field value corresponds to the `LegacyExchangeDN` value for the on-premises mailbox prior to migration.
 
     4. In the **Text** section, update the **MailboxDN value** to match current `LegacyExchangeDN` value of the mailbox that you obtained in Step 2.
 
