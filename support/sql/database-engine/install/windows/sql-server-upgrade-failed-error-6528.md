@@ -1,7 +1,7 @@
 ---
 title: SQL Server upgrade fails and returns error 6528
 description: Troubleshoots error 6528 that occurs when you install a cumulative update or service pack for SQL Server. The error occurs when database upgrade scripts are run.
-ms.date: 08/08/2023
+ms.date: 08/10/2023
 ms.custom: sap:Installation, Patching and Upgrade
 ms.reviewer: v-sidong
 author: prmadhes-msft
@@ -55,7 +55,7 @@ Follow these steps to solve the issue:
     Or, you can check it by expanding **Databases** > **SSISDB** > **Programmability** > **Assemblies** > **ISSERVER** in SQL Server Management Studio (SSMS).
 
 1. Check the location *C:\Program Files\Microsoft SQL Server\\\<VersionNumber>\DTS\Bin* to see if the assembly *Microsoft.SqlServer.IntegrationServices.Server.dll* is present in the SQL binary folder.
-1. If the assembly is in that folder but missing as an entry in a dynamic management view (DMV) or view, re-create it by using the following query:
+1. If the assembly is in that folder but missing as an entry in the `sys.assemblies` view, re-create it by using the following query:
 
     ```sql
     DECLARE @asm_bin varbinary(max);
