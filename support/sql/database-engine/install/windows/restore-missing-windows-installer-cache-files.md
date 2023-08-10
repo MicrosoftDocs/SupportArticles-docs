@@ -18,11 +18,13 @@ _Original KB number:_ &nbsp; 969052
 
 ## Symptoms
 
-When you install a Microsoft SQL Server service pack or a cumulative update, you may encounter various error messages that indicate Windows Installer Cache problems. The Windows Installer Cache, located in _c:\windows\installer_ folder, stores critical files for applications installed through the Windows Installer technology. If the installer cache has been compromised by deleting files, you may not immediately encounter problems until you uninstall, repair, or update SQL Server.
+When you install a Microsoft SQL Server service pack or a cumulative update, you may encounter various error messages or unexpected behaviors that indicate Windows Installer Cache problems. The Windows Installer Cache, located in _c:\windows\installer_ folder, stores critical files for applications installed through the Windows Installer technology. If the installer cache has been compromised by deleting files, you may not immediately encounter problems until you uninstall, repair, or update SQL Server.
 
-Because SQL Server uses the Windows Installer technology, it can be affected by the issues that are described here. SQL server installation packages (.MSI and .MSP files) will be stored in the Windows Installer Cache. These files are required for uninstalling and updating applications. Missing files cannot be copied between computers because they are unique.
+Because SQL Server uses the Windows Installer technology, it can be affected by the issues that are described here. SQL server installation packages (.MSI and .MSP files) are be stored in the Windows Installer Cache. These files are required for uninstalling and updating applications. Missing files cannot be copied between computers because they are unique.
 
-Here are some sample error messages you may encounter:
+### Error messages
+
+Here are some possible error messages you may encounter. Typically you see one of these:
 
 ```output
 SQL Server Setup has encountered the following error:
@@ -42,7 +44,11 @@ Click 'Retry' to retry the failed action, or click 'Cancel' to cancel this actio
 No valid sequence could be found for the set of updates. Error code 1648
 ```
 
-If you examine the setup logs, you may find messages like this:
+```output
+ The cached patch file "C:\Windows\Installer\xxxxxxx.msp" is missing. The original file for this cached file is "xxx_xxxx_xxxxxx.msp", which can be installed from "Hotfix xxxxx for SQL Server 20xx (KBxxxxxx) (64-bit)",
+```
+
+If you examine the Detail.txt setup logs, you may find messages like this:
 
 ```output
 Slp: Package ID sql_xxx_xxx_xxx: NotInstalled
@@ -50,6 +56,23 @@ Slp: Sco: File 'X:\x64\setup\x64\xxx_xxx_xxx.msi' does not exist
 Slp: Sco: File 'X:\x64\setup\x64\xxx_xxx_xxx.msi' does not exist
 ```
 
+If you examine the component setup log, you may find errors like this, where OS error 3 (or -2147287038) means `%1 could not be found.`
+
+```output
+MSI (s)  Note: 1: 2203 2: I:\xxxxxxx.msi 3: -2147287038
+MSI (s)  Source is incorrect. Unable to open or validate MSI package I:\xxxxxxx.msi.
+MSI (s)  Note: 1: 2203 2: H:\xxxxxxx.msi 3: -2147287038
+MSI (s)  Source is incorrect. Unable to open or validate MSI package H:\xxxxxxx.msi.
+MSI (s)  Note: 1: 2203 2: I:\xxxxxxx.msi 3: -2147287038
+MSI (s)  Source is incorrect. Unable to open or validate MSI package I:\xxxxxxx.msi.
+```
+
+### Unexpected behaviors
+
+Here is a list of behaviors one of which you may observe as a symptom:
+
+- You may notice that a particular feature that you want to upgrade is not showing up in the upgrade wizard
+- Attempted to perform an upgrade (including Edition upgrade) but no change takes place
 
 ## Cause
 
