@@ -151,7 +151,7 @@ To configure constraint delegations, follow these steps:
         Right-click the user that's configured on the custom identity (Lab\SCOMAppPool) and select **Properties**.
 
 4. In the details pane, select **Delegation**.
-5. On the **Delegation** tab, select **Trust this computer for delegation to specified services only**, and then select one of the following options accordingly::
+5. On the **Delegation** tab, select **Trust this computer for delegation to specified services only**, and then select one of the following options accordingly:
 
     - Kernel-mode authentication is enabled: **Use any authentication protocol**
 
