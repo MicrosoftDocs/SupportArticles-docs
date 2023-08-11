@@ -17,17 +17,17 @@ This article explains how to set up an e-commerce development environment to deb
 
 Microsoft Dynamics 365 Commerce Tier 1 environments are typically deployed for Commerce runtime (CRT) and point of sale (POS) extension development. They are standalone environments. Because of the software as a service (SaaS) nature of the architecture, they don't include e-commerce components.
 
-In some scenarios, you might want to test calls to extensions in a Tier 1 environment, so that you can debug extensions from e-commerce components. For general instructions, see [Debug against a Tier 1 Commerce development environment](/dynamics365/commerce/e-commerce-extensibility/debug-tier-1.md).
+In some scenarios, you might want to test calls to extensions in a Tier 1 environment, so that you can debug extensions from e-commerce components. For general instructions, see [Debug against a Tier 1 Commerce development environment](/dynamics365/commerce/e-commerce-extensibility/debug-tier-1).
 
 When you debug against a Tier 1 environment, because the site is now calling a different Retail Server, cross-server calls might cause various errors that are related to the content security policy.
 
 The following illustration shows an example of an error that might occur when a variant is selected on a product details page.
 
-![Error when a variant is selected on a product details page.](../../../../media/unhandled-rejection-error.jpg)
+![Error when a variant is selected on a product details page.](../../../media/common/unhandled-rejection-error.jpg)
 
 The following illustration shows an example of a similar error in a browser's debugger tools (F12 Developer Tools). The error message mentions violation of the content security policy directive.
 
-![Debugger tools error.](../../../../media/debugger-tools-error.jpg)
+![Debugger tools error.](../../../media/common/debugger-tools-error.jpg)
 
 ## Resolution
 
