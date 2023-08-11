@@ -28,7 +28,7 @@ Check if the operating system where SQL Server is running is responding slowly. 
 
 This issue can also be caused by another service or application. Use Perfmon to troubleshoot.
 
-For other OS performance problems, see [Windows Server performance troubleshooting documentation](/troubleshoot/windows-server/performance/performance-overview).
+For other OS performance problems, see [Windows Server performance troubleshooting documentation](../../../windows-server/performance/performance-overview.md).
 
 Common issues include:
 
@@ -36,7 +36,7 @@ Common issues include:
 
 This issue could be caused by other applications, the OS, or drivers running on the system.
 
-To troubleshoot this issue, use Task Manager, Performance Monitor, or Resource Monitor to identify this issue. For more information, see [High CPU usage troubleshooting guidance](/troubleshoot/windows-server/performance/troubleshoot-high-cpu-usage-guidance).
+To troubleshoot this issue, use Task Manager, Performance Monitor, or Resource Monitor to identify this issue. For more information, see [High CPU usage troubleshooting guidance](../../../windows-server/performance/troubleshoot-high-cpu-usage-guidance.md).
 
 ### [Low physical or virtual memory](#tab/low-physical-or-virtual-memory)
 

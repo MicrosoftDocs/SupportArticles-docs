@@ -242,7 +242,7 @@ For more information about how to obtain the service pack, see [KB2546951 - List
 
 ## Solution 5: Restore from system state backups
 
-You can restore from system state backups as described in [Missing Windows Installer cache requires a computer rebuild](/troubleshoot/windows-client/deployment/missing-windows-installer-cache).
+You can restore from system state backups as described in [Missing Windows Installer cache requires a computer rebuild](../../../../windows-client/deployment/missing-windows-installer-cache.md).
 
 ## More information
 

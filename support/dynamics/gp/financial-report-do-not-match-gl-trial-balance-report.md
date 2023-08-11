@@ -51,7 +51,7 @@ If you need assistance to correct any of the results returned from the scripts b
   > [!IMPORTANT]
   > Make a current backup of the company database before running any scripts that will update data.
 
-- For more information, see [Set up a test company that has a copy of live company data for Microsoft Dynamics GP by using Microsoft SQL Server](/troubleshoot/dynamics/gp/set-up-a-test-company).
+- For more information, see [Set up a test company that has a copy of live company data for Microsoft Dynamics GP by using Microsoft SQL Server](set-up-a-test-company.md).
 
 > [!NOTE]
 > To view the results of each script in Text, you can press ALT - T (or select **Query** in the top menubar, point to **Results To**, and select **Results to Text**) and then execute the script again. This will provide more details for each section of results returned.

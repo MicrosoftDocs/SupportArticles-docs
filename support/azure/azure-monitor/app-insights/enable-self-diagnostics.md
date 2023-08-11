@@ -136,7 +136,7 @@ Here's an example of the *ApplicationInsights.xml* file:
 </SDKLogger>
 ```
 
-For more information, see [Troubleshoot Azure Application Insights in a Java web project](/troubleshoot/azure/azure-monitor/app-insights/java-2x-troubleshoot#no-data).
+For more information, see [Troubleshoot Azure Application Insights in a Java web project](java-2x-troubleshoot.md#no-data).
 
 ## Application Insights Java 3.x
 
