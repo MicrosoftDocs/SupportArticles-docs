@@ -116,7 +116,7 @@ If the computer is no longer frozen and now is running in a good state, use the 
 3. On some physical computers running earlier versions of Windows, you may generate a nonmakeable interruption (NMI) from a web interface feature such as DRAC, iLo, or RSA. However, by default, this setting will stop the system without creating a memory dump.
 
     > [!NOTE]
-    > For currently supported versions of Windows, the `NMICrashDump` registry key is no longer required. An NMI causes a [Stop error that follows a memory dump data collection](/troubleshoot/windows-client/performance/nmi-hardware-failure-error).
+    > For currently supported versions of Windows, the `NMICrashDump` registry key is no longer required. An NMI causes a [Stop error that follows a memory dump data collection](nmi-hardware-failure-error.md).
 
 4. When the computer exhibits the problem, hold down the right Ctrl key, and press the Scroll Lock key two times to generate a memory dump file.
 
