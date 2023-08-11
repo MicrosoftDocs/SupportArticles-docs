@@ -19,4 +19,4 @@ If the number of SLAs being migrated is more than 1,000, SLAs may not pass throu
 
 ## Resolution
 
-To solve this issue, when you select **Miscellaneous** > **ARC and SLA migration** in the Customer Service admin center site map, you can use the `&flags=FCB.SkipPreMigrationCheckUp=true` flag in the URL to skip the premigration checkup.
+To solve this issue, when you select **Miscellaneous** > **ARC and SLA migration** in the [Customer Service admin center](/dynamics365/customer-service/cs-admin-center) site map, you can use the `&flags=FCB.SkipPreMigrationCheckUp=true` flag in the URL to skip the premigration checkup.
