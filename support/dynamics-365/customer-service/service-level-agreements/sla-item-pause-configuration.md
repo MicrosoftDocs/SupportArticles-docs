@@ -17,7 +17,7 @@ When you try to save an SLA item that has the value of `msdyn_advancedpauseconfi
 
 ## Cause
 
-This issue occurs when the SLA item is created before the `msdyn_advancedpauseconfiguration` property is added. SLA items created after that have a default value of **False**, and don't have this issue.
+This issue occurs when the SLA item is created before the `msdyn_advancedpauseconfiguration` property is added. SLA items created after the property is added have a default value of **False**, and don't have this issue.
 
 ## Resolution
 
