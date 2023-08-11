@@ -29,7 +29,7 @@ To fix the issue, perform the following configurations and verifications, and th
 1. [Verify the HTTP SPNs.](#verify-the-http-spns)
 1. [Configure constraint delegations.](#configure-constraint-delegations)
 1. [Verify "Account is sensitive and cannot be delegated" isn't set.](#verify-account-is-sensitive-and-cannot-be-delegated-isnt-set)
-1. [Disable Kernel-mode Authentication in IIS.](#disable-kernel-mode-authentication-in-iis)
+1. [Disable Kernel-mode authentication in IIS.](#disable-kernel-mode-authentication-in-iis)
 
 > [!NOTE]
 > The following sample names are used in the configuration and verification steps. You have to replace them with the names in your environment.
@@ -157,7 +157,7 @@ To configure constraint delegations, follow these steps:
 
     - Kernel-mode authentication is disabled: **Use Kerberos only**
 
-      For more information, see [Disable Kernel-mode Authentication in IIS](#disable-kernel-mode-authentication-in-iis).
+      For more information, see [Disable Kernel-mode authentication in IIS](#disable-kernel-mode-authentication-in-iis).
   
 7. Select **Add**.
 8. In the **Add Services** dialog box, select **Users or Computers**.
@@ -183,9 +183,9 @@ To verify that the user logging into the Web console doesn't have **Account is s
 3. Select **Account**.
 4. In the **Account options** dialogue box, confirm that the **Account is sensitive and cannot be delegated** checkbox isn't selected.
 
-### Disable Kernel-mode Authentication in IIS
+### Disable Kernel-mode authentication in IIS
 
-To disable **Kernel-mode Authentication** for both `MonitoringView` and `OperationsManager` in IIS, follow these steps:
+To disable **Kernel-mode authentication** for both `MonitoringView` and `OperationsManager` in IIS, follow these steps:
 
 1. In IIS Manager, navigate to *Default Web Site\MonitoringView*.
 2. Double-click **Authentication**.
