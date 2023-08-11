@@ -41,13 +41,13 @@ The "Set drop-down list value" action fails to select the option element from th
 
   Option 2: If option 1 doesn't fix the issue, replace the "Set drop-down list value" action with two successive "Click element in window" or "Click link on web page" actions.
 
-      - The first "Click element in window" (UI automation) or "Click link on web page" (Browser automation) should use an element (usually an arrow button) that can expand the list of options.
-      - The second "Click element in window" (UI automation) or "Click link on web page" (Browser automation) should use an option element that needs to be selected.
+  - The first "Click element in window" (UI automation) or "Click link on web page" (Browser automation) should use an element (usually an arrow button) that can expand the list of options.
+  - The second "Click element in window" (UI automation) or "Click link on web page" (Browser automation) should use an option element that needs to be selected.
 
   Option 3: If the above two options don't fix the issue, and the drop-down list has filter functionality, you can type text or part of the text in the drop-down list to get some suggestions for selection.
 
-      - Use the "Populate text field in window" action in UI automation. Set the **Text Box** parameter using the drop-down list element, and set the **Text to fill-in** parameter using the text shown in the corresponding option.
-      - Use the "Populate text field on web page" action in Browser automation. Set the **UI Element** parameter using the drop-down list element, and set the **Text** parameter using the text shown in the corresponding option.
+  - Use the "Populate text field in window" action in UI automation. Set the **Text Box** parameter using the drop-down list element, and set the **Text to fill-in** parameter using the text shown in the corresponding option.
+  - Use the "Populate text field on web page" action in Browser automation. Set the **UI Element** parameter using the drop-down list element, and set the **Text** parameter using the text shown in the corresponding option.
 
 - For the actions of the UI automation group, try these steps:
 
