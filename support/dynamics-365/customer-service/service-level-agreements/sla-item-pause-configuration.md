@@ -69,5 +69,4 @@ Xrm.WebApi.retrieveMultipleRecords("slaitem", "?$select=slaitemid,msdyn_advanced
         console.log(error.message);
     }
 );
-
 ```
