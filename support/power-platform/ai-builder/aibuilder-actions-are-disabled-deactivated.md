@@ -2,10 +2,11 @@
 title: AI Builder actions are disabled or deactivated
 description: Provides a resolution for the issue that AI Builder actions are disabled or deactivated.
 ms.reviewer: angieandrews
-ms.date: 08/10/2023
+ms.date: 08/11/2023
 ms.subservice: 
 ms.author: angieandrews
 author: v-aangie
+ms.reviewer: jelenak
 ---
 # AI Builder actions are disabled or deactivated
 
