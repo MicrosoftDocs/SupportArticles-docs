@@ -22,7 +22,7 @@ These solutions designed to get you started on Windows Update troubleshooting sc
 
 ### Step 1: Run the diagnostic tool for your version of Windows
 
-- **Windows 7, Windows 2008 R2 or Windows 2008 SP2:** Run the System Readiness (CheckSUR) tool. For more information, see [Fix errors that are found in the CheckSUR log file](/troubleshoot/windows-server/deployment/fix-windows-update-errors#how-to-fix-errors-that-are-found-in-the-checksur-log-file).
+- **Windows 7, Windows 2008 R2 or Windows 2008 SP2:** Run the System Readiness (CheckSUR) tool. For more information, see [Fix errors that are found in the CheckSUR log file](../../windows-server/deployment/fix-windows-update-errors.md#fix-errors-found-in-the-checksur-log-file).
 - **Windows 8 and later version of Windows:** Open an administrative command prompt window, and then run the following command:  
 
   ```cmd
@@ -39,7 +39,7 @@ For more information, see [Latest Servicing Stack Updates](https://msrc.microsof
 
 ### Step 4: Check for and fix any Windows file corruption
 
-For more information, see [Fix Windows file corruption](/troubleshoot/windows-server/deployment/fix-windows-update-errors).
+For more information, see [Fix Windows file corruption](../../windows-server/deployment/fix-windows-update-errors.md).
 
 ### Step 5: Download the update package and try to install the update manually
 

@@ -740,4 +740,4 @@ While booted into the shadow drive (disk-1), you must "remove" the broken mirror
 
 If you are using Windows Server 2008, visit the following article to set up a GPT mirror:
 
-[How to set up dynamic boot partition mirroring on GUID partition table (GPT) disks in Windows Server 2008](/troubleshoot/windows-server/backup-and-storage/set-up-dynamic-boot-partition-mirroring)
+[How to set up dynamic boot partition mirroring on GUID partition table (GPT) disks in Windows Server 2008](set-up-dynamic-boot-partition-mirroring.md)

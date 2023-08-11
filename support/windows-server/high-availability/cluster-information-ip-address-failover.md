@@ -47,4 +47,4 @@ When the driver sends these requests, Windows NT specifies the IP address being 
 
 For additional information about related information, click the article number below to view the article in the Microsoft Knowledge Base:
 
-[MAC Address Changes for Virtual Server During a Failover with Clustering](/troubleshoot/windows-server/virtualization/mac-address-changes-for-virtual-server)
+[MAC Address Changes for Virtual Server During a Failover with Clustering](../virtualization/mac-address-changes-for-virtual-server.md)

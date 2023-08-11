@@ -66,7 +66,7 @@ Next
 > [!IMPORTANT]
 > We do not recommend that you pass credentials in Active Directory Service Interfaces by using the Active Directory Service Interfaces WinNT provider.
 
-For more information, see [User authentication issues with the Active Directory Service Interfaces WinNT provider](/troubleshoot/windows-client/admin-development/adsi-winnt-provider-user-authentication-issues).
+For more information, see [User authentication issues with the Active Directory Service Interfaces WinNT provider](../../windows-client/admin-development/adsi-winnt-provider-user-authentication-issues.md).
 
 ## References
  
