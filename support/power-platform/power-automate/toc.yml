@@ -91,7 +91,7 @@
           href: agent-connectivity-issues-pad.md
         - name: Browser automation actions stop working after a browser update
           href: browser-automation-error-after-chromium-update.md
-        - name: Can't automate webpage with iframes
+        - name: Can't automate webpage with cross-domain iframes
           href: cannot-automate-webpage-with-iframes.md
         - name: Can't create a connection from a shared canvas app
           href: cannot-create-desktop-flow-connection-from-a-shared-canvas-app.md
@@ -187,6 +187,8 @@
           href: recorder-not-recording-applications.md
         - name: Some actions appear to be missing or aren't visible
           href: actions-not-available.md
+        - name: The "Set drop-down list value" action fails
+          href: set-drop-down-list-value-fails.md
         - name: Tips on working with SQL queries
           href: troubleshooting-tips-sql-queries.md
         - name: Troubleshoot UI flow Playback
