@@ -151,11 +151,13 @@ To configure constraint delegations, follow these steps:
         Right-click the user that's configured on the custom identity (Lab\SCOMAppPool) and select **Properties**.
 
 4. In the details pane, select **Delegation**.
-5. On the **Delegation** tab, select **Trust this computer for delegation to specified services only** and then select as follows:
+5. On the **Delegation** tab, select **Trust this computer for delegation to specified services only**, and then select one of the following options accordingly::
 
     - Kernel-mode authentication is enabled: **Use any authentication protocol**
 
-    - Kernel-mode authentication is disabled: **Use Kerberos only** (For more information, see [Disable Kernel-mode Authentication in IIS](#disable-kernel-mode-authentication-in-iis).)
+    - Kernel-mode authentication is disabled: **Use Kerberos only**
+
+      For more information, see [Disable Kernel-mode Authentication in IIS](#disable-kernel-mode-authentication-in-iis).
   
 7. Select **Add**.
 8. In the **Add Services** dialog box, select **Users or Computers**.
