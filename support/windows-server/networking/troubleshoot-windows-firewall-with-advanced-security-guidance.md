@@ -143,4 +143,4 @@ The traces will be stored in a zip file in the *C:\\MS_DATA* folder, which can b
 - [Events for Windows Firewall with Advanced Security in Event Viewer](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/ff428140%28v=ws.10%29#to-view-events-for-windows-firewall-with-advanced-security-in-event-viewer)
 - [Best practices for configuring Windows Defender Firewall](/windows/security/threat-protection/windows-firewall/best-practices-configuring)
 - [Filter origin audit log improvements](/windows/security/threat-protection/windows-firewall/filter-origin-documentation)
-- [Use netsh advfirewall firewall](/troubleshoot/windows-server/networking/netsh-advfirewall-firewall-control-firewall-behavior)
+- [Use netsh advfirewall firewall](netsh-advfirewall-firewall-control-firewall-behavior.md)

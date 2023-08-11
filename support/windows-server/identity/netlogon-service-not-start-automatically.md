@@ -64,4 +64,4 @@ Although this action doesn't require a restart, we recommend that you restart th
 
 ## References
 
-[Windows Time Service settings aren't preserved during an in-place upgrade to Windows Server 2016 or Windows 10 Version 1607](/troubleshoot/windows-server/identity/windows-time-service-values-reverted)
+[Windows Time Service settings aren't preserved during an in-place upgrade to Windows Server 2016 or Windows 10 Version 1607](windows-time-service-values-reverted.md)

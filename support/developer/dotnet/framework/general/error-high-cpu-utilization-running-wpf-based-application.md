@@ -53,7 +53,7 @@ To resolve this issue, follow these steps:
 
     - Method 1: Use Windows Update Catalog
 
-      To update the video card drivers, check for updates in the Windows Update Catalog. For more information about how to download drivers from the Windows Update Catalog, see [How to download updates that include drivers and hotfixes from the Windows Update Catalog](/troubleshoot/windows-client/deployment/download-updates-drivers-hotfixes-windows-update-catalog).
+      To update the video card drivers, check for updates in the Windows Update Catalog. For more information about how to download drivers from the Windows Update Catalog, see [How to download updates that include drivers and hotfixes from the Windows Update Catalog](../../../../windows-client/deployment/download-updates-drivers-hotfixes-windows-update-catalog.md).
 
     - Method 2: Download and then install the latest video card drivers
 
