@@ -16,7 +16,7 @@ _Version:_ &nbsp; 15.0.4322.2
 
 ## Summary
 
-This article describes Cumulative Update package 22 (CU22) for Microsoft SQL Server 2019. This update contains 19 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2019 Cumulative Update 21, and it updates components in the following builds:
+This article describes Cumulative Update package 22 (CU22) for Microsoft SQL Server 2019. This update contains 20 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2019 Cumulative Update 21, and it updates components in the following builds:
 
 - SQL Server - Product version: **15.0.4322.2**, file version: **2019.150.4322.2**
 - Analysis Services - Product version: **15.0.35.41**, file version: **2018.150.35.41**
@@ -46,6 +46,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id=2469366>[2469366](#2469366) </a> | Fixes an issue in which the validation of a custom input mask fails. After applying this fix, you can use a custom input mask with the time part. | Master Data Services | Master Data Services| Windows|
 | <a id=2517054>[2517054](#2517054) </a> | Fixes an issue in which you can't see the **Created By** and **Updated By** fields in the **View History** window when you use the Master Data Services (MDS) Add-in for Excel. | Master Data Services |Master Data Services |Windows |
 | <a id=2518620>[2518620](#2518620) </a> | Fixes an issue in which an error may occur when you download an attachment uploaded previously in a Master Data Services model. | Master Data Services | Master Data Services| Windows|
+| <a id=1999783>[1999783](#1999783) </a> | Fixes an access violation in `sqllang!FReadDataDirect` that you encounter during network exchanges between an instance of SQL Server and a client. | SQL Connectivity | SQL Connectivity| All |
 | <a id=2387353>[2387353](#2387353) </a> | Fixes an access violation dump issue that you encounter when dropping a distributed availability group (AG) that has a suspect AG database on a forwarder.| SQL Server Engine| High Availability and Disaster Recovery |All |
 | <a id=2460204>[2460204](#2460204) </a> | Fixes an issue caused by a change introduced in SQL Server 2019 CU20 for the [Managed Instance link](/azure/azure-sql/managed-instance/managed-instance-link-feature-overview) feature. For more information, see [Issue three](cumulativeupdate20.md#issue-three). | SQL Server Engine| High Availability and Disaster Recovery | All|
 | <a id=2504040>[2504040](#2504040) </a> | Fixes a stack overflow in `HaDrUndoMgr::InitSystemPages` that's caused by a loop getting all the Page Free Space (PFS) pages from the primary availability group. | SQL Server Engine| High Availability and Disaster Recovery |All |
