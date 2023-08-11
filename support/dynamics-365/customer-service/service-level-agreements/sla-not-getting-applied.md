@@ -81,7 +81,7 @@ The **Disable SLAs** setting in the **Service Configuration Settings** might be 
 
 #### Resolution
 
-To solve this issue, toggle the **Disable SLAs** setting in the **Service Configuration Settings** to **No** in case it's **Yes**.
+Check the **Disable SLAs** setting in the **Service Configuration Settings**. If it's set to **Yes** toggle it to **No**.
 
 ## Scenario 7: The "Workflow must be in Published state" or "Action must be in published State" error occurs
 
