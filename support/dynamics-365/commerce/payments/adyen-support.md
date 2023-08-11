@@ -35,6 +35,6 @@ Use the following email template to start the support process with the Adyen tea
 
 [Accept payments with the Adyen connector for Dynamics 365 Commerce](https://www.adyen.com/partners/dynamics-365-commerce)
 
-[Dynamics 365 Payment Connector for Adyen](../dev-itpro/adyen-connector)
+[Dynamics 365 Payment Connector for Adyen](/dynamics365/commerce/dev-itpro/adyen-connector)
 
 [Set up the Adyen payment connector for Dynamics 365](https://docs.adyen.com/plugins/microsoft-dynamics)
