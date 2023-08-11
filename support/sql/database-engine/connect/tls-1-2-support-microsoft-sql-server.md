@@ -56,7 +56,7 @@ Use the following table to download the client components and driver updates tha
 
 ## Additional fixes needed for SQL Server to use TLS 1.2
 
-You have to install the following .NET hotfix rollups to enable SQL Server features like Database Mail and certain SSIS components that use .NET endpoints that require TLS 1.2 support, like the Web Service task that uses TLS 1.2.
+You have to install the following .NET hotfix rollups to enable SQL Server features like Database Mail and certain SSIS components that use .NET endpoints that require TLS 1.2 support like the Web Service task to use TLS 1.2.
 
 |Operating System  |.NET Framework version  |Updates with TLS 1.2 support  |
 |---------|---------|---------|
@@ -82,7 +82,7 @@ You have to install the following .NET hotfix rollups to enable SQL Server featu
 
     This article provides download links for the appropriate server and client updates that support TLS 1.2.
 
-- **Will SQL Server 2005 support TLS 1.2?**
+- **Does TLS 1.2 support SQL Server 2005?**
 
     TLS 1.2 support is offered only for SQL Server 2008 and later versions.
 
@@ -117,6 +117,8 @@ You have to install the following .NET hotfix rollups to enable SQL Server featu
     Reporting Services Configuration Manager reports the following error message even after client providers have been updated to a version that supports TLS 1.2:
 
     > Could not connect to server: A connection was successfully established to the server, but then an error occurred during the pre-login handshake.
+
+    :::image type="content" source="media/tls-1-2-support-microsoft-sql-server/test-connection-error.png" alt-text="Screenshot of a test connection error after client providers have been updated to a version that supports TLS 1.2.":::
 
     To resolve this problem, manually create the following registry key on the system that hosts the Reporting Services Configuration Manager:
 
