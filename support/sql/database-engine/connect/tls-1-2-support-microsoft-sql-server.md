@@ -122,7 +122,7 @@ You have to install the following .NET hotfix rollups to enable SQL Server featu
 
     To resolve this problem, manually create the following registry key on the system that hosts the Reporting Services Configuration Manager:
 
-    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Client : "Enabled"=dword:00000001`
+    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Client: "Enabled"=dword:00000001`
 
 - Issue 3
 
