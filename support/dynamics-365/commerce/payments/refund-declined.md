@@ -1,4 +1,4 @@
----
+9---
 title: Refund on a return order is declined
 description: This article provides troubleshooting guidance that can help when a refund on a return order is declined because the credit card that is used for invoicing differs from the card that was used during the original payment authorization.
 author: Reza-Assadi
@@ -28,6 +28,6 @@ To enable blind returns, follow the steps in [Troubleshoot Dynamics 365 Payment 
 
 ## Additional resources
 
-[Dynamics 365 Payment Connector for Adyen](../dev-itpro/adyen-connector.md)
+[Dynamics 365 Payment Connector for Adyen](/dynamics365/commerce/dev-itpro/adyen-connector)
 
 [Set up the Adyen payment connector for Dynamics 365](https://docs.adyen.com/plugins/microsoft-dynamics)
