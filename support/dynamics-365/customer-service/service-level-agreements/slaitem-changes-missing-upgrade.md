@@ -1,13 +1,13 @@
 ---
-title: Changes to an SLA Item record through an upgrade solution aren't shown
-description: Provides a resolution for the issue where the changes to an SLA Item record through an upgrade solution don't appear even after a successful upgrade in Dynamics 365 Customer Service.
+title: Changes to an SLA item record through an upgrade solution aren't shown in Dynamics 365 Customer Service
+description: Provides a resolution for the issue where the changes to an SLA item record through an upgrade solution don't appear even after a successful upgrade in Microsoft Dynamics 365 Customer Service.
 ms.reviewer: sdas
 ms.author: ankugupta
-ms.date: 08/08/2023
+ms.date: 08/11/2023
 ---
-# The changes to an SLA Item record through an upgrade solution don't appear even after a successful upgrade
+# The changes to an SLA item record through an upgrade solution don't appear even after a successful upgrade
 
-This article provides a resolution for the issue where the changes to a service-level agreement (SLA) or an SLA Item record through an upgrade solution aren't shown even if the upgrade is successful in Dynamics 365 Customer Service.
+This article provides a resolution for the issue where the changes to a service-level agreement (SLA) or an SLA item record through an upgrade solution aren't shown even if the upgrade is successful in Dynamics 365 Customer Service.
 
 ## Symptoms
 
@@ -15,14 +15,14 @@ Changes like **Applicable when**, **Success**, **Pause** conditions, or adding a
 
 ## Cause
 
-When an SLA is activated, or an SLA Item record is modified manually on the organization (for example, the **Applicable when** conditions, the **Success**, **Warning**, or **Failure** actions), the upgrade solution changes aren't reflected. This is because the active layer takes precedence over the upgrade solution.
+When an SLA is activated, or an SLA item record is modified manually on the organization (for example, the **Applicable when** conditions, the **Success**, **Warning**, or **Failure** actions), the upgrade solution changes aren't reflected. This is because the active layer takes precedence over the upgrade solution.
 
 ## Resolution
 
-We recommend that you make changes to an SLA or an SLA Item record only through an upgrade solution. If the issue persists even after importing the patch solution, you can select the overwrite customization option while importing the full solution. Overwriting customization removes all the active layer customizations on the SLA. Therefore, all the changes in the upgrade solution are reflected. Overwrite customization might only be visible in a "Legacy Solution" import.
+We recommend that you make changes to an SLA or an SLA item record only through an upgrade solution. If the issue persists even after importing the patch solution, you can select the **Overwrite customizations (not recommended)** option while importing the full solution. Overwriting customization removes all the active layer customizations on the SLA. Therefore, all the changes in the upgrade solution are reflected. Overwrite customization might only be visible in a "Legacy Solution" import.
 
 1. [Create updates using clone solution and clone to patch](/power-platform/alm/update-solutions-alm#creating-updates-using-clone-solution-and-clone-to-patch). Use the "Clone to solution" steps to create a separate solution and export it as a managed solution.
 
 2. When you import the solution, select the **Upgrade (recommended)** and **Overwrite customizations (not recommended)** options in the pop-up window, as shown in the following screenshot.
 
-      :::image type="content" source="media/slaitem-changes-missing-upgrade/sla-item-solution-import.png" alt-text="Import options in SLA solution import.":::
+   :::image type="content" source="media/slaitem-changes-missing-upgrade/sla-item-solution-import.png" alt-text="Import options in SLA solution import.":::

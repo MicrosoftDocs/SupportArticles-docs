@@ -1,9 +1,9 @@
 ---
-title: SLA instances associated with a case don't have mapped SLA item
-description: Provides a resolution for the Object reference not set to an instance of an object error that occurs when updating old cases and entities.
+title: SLA instances associated with a case don't have mapped SLA item in Dynamics 365 Customer Service
+description: Provides a resolution for the Object reference not set to an instance of an object error that occurs when updating old cases and entities in Microsoft Dynamics 365 Customer Service.
 ms.reviewer: sdas
 ms.author: ankugupta
-ms.date: 08/09/2023
+ms.date: 08/11/2023
 ---
 # Can't fill an SLA item for the SLA instances associated with the entity or case
 

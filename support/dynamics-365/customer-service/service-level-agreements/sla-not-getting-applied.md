@@ -1,9 +1,9 @@
 ---
-title: An SLA isn't applied to a case
-description: Provides a resolution for an issue where an SLA isn't applied to a case.
+title: An SLA isn't applied to a case in Dynamics 365 Customer Service
+description: Provides a resolution for an issue where an SLA isn't applied to a case in Microsoft Dynamics 365 Customer Service.
 ms.reviewer: sdas
 ms.author: ankugupta
-ms.date: 08/02/2023
+ms.date: 08/11/2023
 ---
 # SLA isn't getting applied to a case
 
@@ -28,7 +28,7 @@ Make sure that you set an SLA as the default SLA by taking the following steps:
 
 #### Cause
 
-Migration tool may fail to set the SLA KPI **Applicable From** field value during the migration to Unified Interface. Or, the SLA KPI **Applicable From** field is set to a custom field that isn't set to any value.
+Migration tool may fail to set the SLA KPI **Applicable From** field value during the [migration to Unified Interface](/dynamics365/customer-service/migrate-automatic-record-creation-and-sla-agreements#migrate-automatic-record-creation-rules-and-service-level-agreements). Or, the SLA KPI **Applicable From** field is set to a custom field that isn't set to any value.
 
 #### Resolution
 
@@ -41,7 +41,7 @@ Make sure that the SLA KPI **Applicable From** field value isn't set to null. It
 The SLA item's **Applicable when** conditions and entity conditions don't match due to one of the following issues:
 
 - The string value doesn't match for attributes.
-- Different attributes with the same name are used in the SLA items. 
+- Different attributes with the same name are used in the SLA items.
 - The **Option Set** text value is the same, but the GUID is different.
 
 #### Resolution

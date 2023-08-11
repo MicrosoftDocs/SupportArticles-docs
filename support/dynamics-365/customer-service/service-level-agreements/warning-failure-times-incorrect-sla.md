@@ -1,15 +1,15 @@
 ---
-title: Warning and failure duration times are wrong for SLA
-description: Provides a resolution for the issue where the SLA warning and failure duration times are incorrect.
+title: Warning and failure duration times are wrong for SLA in Dynamics 365 Customer Service
+description: Provides a resolution for the issue where the SLA warning and failure duration times are incorrect in Microsoft Dynamics 365 Customer Service.
 ms.reviewer: sdas
 ms.author: ankugupta
-ms.date: 08/07/2023
+ms.date: 08/11/2023
 ---
 # Warning and failure duration times are incorrect for the SLA
 
-This article provides a resolution for the issue where the warning and failure timing calculations are incorrect. 
+This article provides a resolution for the issue where the warning and failure timing calculations are incorrect.
 
-## Scenario 1: Some SLAs don't take into account daylight saving time for the warning and failure duration.
+## Scenario 1: Some SLAs don't take into account daylight saving time for the warning and failure duration
 
 This issue may occur when warning and failure duration times don't consider daylight saving time for the service-level agreement (SLA) in Omnichannel for Customer Service.
 
@@ -21,7 +21,7 @@ If your SLA was created in the web client that's now deprecated, the business sc
 
 To use the daylight saving time functionality and many other new features, migrate your SLAs created in the web client to Unified Interface. For more information, see [Migrate automatic record creation rules and service-level agreements](/dynamics365/customer-service/migrate-automatic-record-creation-and-sla-agreements).
 
-## Scenario 2: An SLA KPI instance shows a difference in Failure Time and Warning Time.
+## Scenario 2: An SLA KPI instance shows a difference in Failure Time and Warning Time
 
 By default, SLAs in the **Succeeded** and **Non-compliance** terminal statuses aren't reevaluated when the success condition changes, and they can't be paused or resumed.
 
@@ -38,4 +38,3 @@ If the calendar time zone differs from the end user's time zone, the calculation
 #### Resolution
 
 Make sure the end user's time zone matches the calendar time zone. For more information, see [Understand time calculation of SLA KPIs](/dynamics365/customer-service/change-schedules#understand-time-calculation-of-sla-kpis).
-

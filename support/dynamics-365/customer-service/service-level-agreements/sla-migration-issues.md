@@ -1,9 +1,9 @@
 ---
-title: Troubleshoot issues with SLA migration
-description: Provides a resolution for an issue where you can't migrate SLAs to Unified Interface.
+title: Troubleshoot issues with SLA migration in Dynamics 365 Customer Service
+description: Provides a resolution for an issue where you can't migrate SLAs to Unified Interface in Microsoft Dynamics 365 Customer Service.
 ms.reviewer: sdas
 ms.author: ankugupta
-ms.date: 08/07/2023
+ms.date: 08/11/2023
 ---
 # Troubleshoot issues with SLA migration to Unified Interface
 

@@ -1,9 +1,9 @@
 ---
-title: SLA migration tool can't migrate a large number of SLAs
-description: Provides a resolution for the issue where the SLA migration tool can't migrate a large number of SLAs in Dynamics 365 Customer Service.
+title: SLA migration tool can't migrate a large number of SLAs in Dynamics 365 Customer Service
+description: Provides a resolution for the issue where the SLA migration tool can't migrate a large number of SLAs in Microsoft Dynamics 365 Customer Service.
 ms.reviewer: sdas
 ms.author: ankugupta
-ms.date: 08/09/2023
+ms.date: 08/11/2023
 ---
 # Can't use the SLA migration tool to migrate a large number of SLAs
 
@@ -11,7 +11,7 @@ This article provides a resolution for the issue where you can't use the service
 
 ## Symptoms
 
-Errors may occur in the migration tool or the migration tool may get stuck during the premigration checkup in Dynamics 365 Customer Service.
+Errors may occur in the migration tool or the migration tool may get stuck during the [premigration checkup](/dynamics365/customer-service/migrate-automatic-record-creation-and-sla-agreements#premigration-checkup) in Dynamics 365 Customer Service.
 
 ## Cause
 
