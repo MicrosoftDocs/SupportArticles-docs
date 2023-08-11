@@ -76,7 +76,7 @@ Microsoft has confirmed that this is a problem in Windows Server 2012 R2.
 
 ## References
 
-[Microsoft support policy for 4K sector hard drives in Windows](/troubleshoot/windows-server/backup-and-storage/support-policy-4k-sector-hard-drives)
+[Microsoft support policy for 4K sector hard drives in Windows](../backup-and-storage/support-policy-4k-sector-hard-drives.md)
 
 ## Data collection
 

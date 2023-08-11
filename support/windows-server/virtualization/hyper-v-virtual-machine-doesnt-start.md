@@ -62,7 +62,7 @@ This is a known issue in McAfee VirusScan Enterprise 8.8 Patch 5.
 >
 > - This section contains information about opening or modifying the registry.
 > - The following information is intended for system administrators. Registry modifications are irreversible and could cause system failure if done incorrectly.
-> - Before you proceed, Intel Security strongly recommends that you back up your registry and understand the restore process. For more information, see [Windows registry information for advanced users](/troubleshoot/windows-server/performance/windows-registry-advanced-users).
+> - Before you proceed, Intel Security strongly recommends that you back up your registry and understand the restore process. For more information, see [Windows registry information for advanced users](../performance/windows-registry-advanced-users.md).
 
 To work around this issue, disable the mfedisk.sys driver in the registry:
 

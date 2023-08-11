@@ -38,7 +38,7 @@ grub rescue>
 1. To troubleshoot a GRUB rescue issue, a rescue/repair VM is required. Use [vm repair commands](repair-linux-vm-using-azure-virtual-machine-repair-commands.md) to create a repair VM that has a copy of the affected VM's OS disk attached. Mount the copy of the OS file systems in the repair VM by using [chroot](chroot-environment-linux.md).
 
     > [!NOTE]
-    > Alternatively, you can create a rescue VM manually by using the Azure portal. For more information, see [Troubleshoot a Linux VM by attaching the OS disk to a recovery VM using the Azure portal](/troubleshoot/azure/virtual-machines/troubleshoot-recovery-disks-portal-linux).
+    > Alternatively, you can create a rescue VM manually by using the Azure portal. For more information, see [Troubleshoot a Linux VM by attaching the OS disk to a recovery VM using the Azure portal](troubleshoot-recovery-disks-portal-linux.md).
 
 2. [Identify GRUB rescue issue](#identify-grub-rescue-issue). When you encounter one of the following GRUB rescue issues, go to the corresponding section to resolve it:
 

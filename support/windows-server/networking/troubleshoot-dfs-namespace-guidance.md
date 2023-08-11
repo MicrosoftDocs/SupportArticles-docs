@@ -50,11 +50,11 @@ Look for the DFS client to resolve DNS (assuming it isn't cached) and make a con
 
 ## Common issues and solutions
 
-- [Unsupported DFSN deployment scenario](/troubleshoot/windows-server/networking/support-policy-for-dfsr-dfsn-deployment)
-- [Recovery process of a DFSN](/troubleshoot/windows-server/networking/recovery-process-of-dfs-namespace)
-- [Troubleshoot DFSN access failures](/troubleshoot/windows-server/networking/dfsn-access-failures)
-- [Fail to create a DFSN](/troubleshoot/windows-server/identity/namespace-not-queried-rpc-server-unavailable)
-- [DFSNs service and its configuration data](/troubleshoot/windows-server/networking/dfs-namespaces-service-configuration-data)
+- [Unsupported DFSN deployment scenario](support-policy-for-dfsr-dfsn-deployment.md)
+- [Recovery process of a DFSN](recovery-process-of-dfs-namespace.md)
+- [Troubleshoot DFSN access failures](dfsn-access-failures.md)
+- [Fail to create a DFSN](../identity/namespace-not-queried-rpc-server-unavailable.md)
+- [DFSNs service and its configuration data](dfs-namespaces-service-configuration-data.md)
 
 ## Data collection
 
