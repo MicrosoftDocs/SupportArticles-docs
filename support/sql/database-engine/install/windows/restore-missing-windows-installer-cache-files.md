@@ -3,7 +3,7 @@ title: Restore the missing Windows Installer cache files
 description: Offers several solutions to fix errors that occur when installing SQL Server service pack or a cumulative update due to corruption of windows installer cache.
 ms.date: 08/11/2023
 ms.custom: sap:Installation, Patching and Upgrade
-ms.reviewer: ramakoni
+ms.reviewer: pijocoder, v-sidong
 ms.topic: how-to
 ---
 # Restore the missing Windows Installer cache files and resolve problems that occur during a SQL Server update
