@@ -55,7 +55,7 @@ One step of the statement posting process is to create customer orders by groupi
 1. After the Excel file is downloaded, enable editing for it, and sign in.
 1. In the Excel file, change the **Validation status** value of the transaction that you have to fix to **None** or **Error**. This step must be completed before you make any changes to the transaction.
 
-    ![Changing the validation status.](../media/Change_validation_status.png)
+    ![Changing the validation status.](../../../media/common/Change_validation_status.png)
 
 1. Identify the entity and field that must be modified. If the field that you're looking for is missing, add it by following the instructions in [Add fields to an Excel workbook to edit retail transactions](/dynamics365/commerce/add-fields-excel).
 1. Update the field values as needed, and then select **Publish** in the Excel workbook.
