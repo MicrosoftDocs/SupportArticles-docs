@@ -113,7 +113,7 @@ The following sample event indicates which URI triggers a coalesced reboot:
 
 `"[ETW [2022-08-02T13:28:10.3350735Z] [Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider] [Informational] - The following URI has triggered a reboot: (./Device/Vendor/MSFT/Policy/Config/Update/ManagePreviewBuilds)"`
 
-For more details on identifying unexpected reboots during the OOBE flow, check out this blog post [Troubleshooting unexpected reboots](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-troubleshooting-unexpected-reboots-during-new-pc/ba-p/3896960 ). 
+For more information about how to identify unexpected reboots during the OOBE flow, see [Troubleshooting unexpected reboots](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-troubleshooting-unexpected-reboots-during-new-pc/ba-p/3896960).
 
 ## Check the registry for app deployment failures during ESP
 
