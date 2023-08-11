@@ -116,7 +116,7 @@ $StorageAccountName = "<storage-account-name-here>"
 
 Update-AzStorageAccountAuthForAES256 -ResourceGroupName $ResourceGroupName -StorageAccountName $StorageAccountName
 ```
-The cmdlet will rotate the Kerberos keys as part of the update, which is necessary to switch to AES-256. There is no need to rotate back unless you want to regenerate both passwords.
+As part of the update, the cmdlet will rotate the Kerberos keys, which is necessary to switch to AES-256. There is no need to rotate back unless you want to regenerate both passwords.
 
 ## User identity formerly having the Owner or Contributor role assignment still has storage account key access
 The storage account Owner and Contributor roles grant the ability to list the storage account keys. The storage account key enables full access to the storage account's data including file shares, blob containers, tables, and queues, and limited access to the Azure Files management operations via the legacy management APIs exposed through the FileREST API. If you're changing role assignments, you should consider that the users being removed from the Owner or Contributor roles may continue to maintain access to the storage account through saved storage account keys.
