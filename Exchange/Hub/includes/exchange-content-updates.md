@@ -2,6 +2,14 @@
 
 
 
+## Week of August 07, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 8/10/2023 | [Favorites folders are missing in the Outlook client after migration to Exchange Online](/exchange/troubleshoot/move-or-migrate-mailboxes/favorites-folders-missing-after-migration) | added |
+
+
 ## Week of July 31, 2023
 
 
