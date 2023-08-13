@@ -2,6 +2,15 @@
 
 
 
+## Week of August 07, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 8/10/2023 | [Issues in Outlook when you try to configure free/busy information or when you try to delegate information](/outlook/troubleshoot/calendaring/errors-when-configure-free-busy-or-delegate-information) | modified |
+| 8/10/2023 | [Inbox rule in Outlook on the web doesn't appear in Outlook for Windows](/outlook/troubleshoot/email-management/inbox-rule-does-not-appear-in-outlook-client) | added |
+
+
 ## Week of July 31, 2023
 
 
