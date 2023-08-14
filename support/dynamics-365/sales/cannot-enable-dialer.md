@@ -1,19 +1,23 @@
 ---
-title: Can't Enable Dialer
-description: Troubleshot the problem of being unable to enable the dialer.
+title: Can't enable Microsoft Teams dialer for Dynamics 365 Sales
+description: Provides a resolution for an issue where you can't enable Microsoft Teams dialer for Dynamics 365 Sales.
+ms.date: 08/14/2023
+ms.reviewer: t-ronioded
 ---
+# Can't enable Microsoft Teams dialer for Dynamics 365 Sales
 
-# Can't Enable Dialer
+This article provides a resolution for an issue where an administrator can't enable [Microsoft Teams dialer](/dynamics365/sales/configure-microsoft-teams-dialer) for Dynamics 365 Sales.
 
-## Symptom
-Admin user can't enable Teams calls on Teams Admin Settings:  
-![Teams admin settings](media/cannot-enable-dialer/teams-admin-settings.png)
+## Symptoms
 
-## Root cause and resolution
-### Issue: Admin user missing licenses
+As an administrator, you can't turn on the **Teams calls** option on the **Microsoft Teams calls** settings page in the [Sales Hub app](/dynamics365/sales/intro-saleshub).
 
-#### Root cause
-The problem arises due to the absence of the necessary licenses for the admin user.
+:::image type="content" source="media/cannot-enable-dialer/teams-admin-settings.png" alt-text="Screenshot that shows the Microsoft Teams calls settings page.":::
 
-#### Resolution
-Follow this [documentation](https://learn.microsoft.com/MicrosoftTeams/setting-up-your-phone-system).
+## Cause
+
+The issue occurs because the administrator doesn't have the necessary license.
+
+## Resolution
+
+To solve this issue, follow the steps in [Set up Teams Phone in your organization](/MicrosoftTeams/setting-up-your-phone-system).

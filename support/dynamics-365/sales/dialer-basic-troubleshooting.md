@@ -1,34 +1,37 @@
 ---
-title: Dialer Basic Troubleshooting
-description: Basic Troubleshooting for Teams Dialer
+title: Teams dialer basic troubleshooting steps in Dynamics 365 Sales
+description: Introduces basic troubleshooting steps for Microsoft Teams dialer in Dynamics 365 Sales.
+ms.date: 08/14/2023
+ms.reviewer: t-ronioded
 ---
+# Teams dialer basic troubleshooting steps
 
-# Dialer Basic Troubleshooting - Clean Browser Cache
+This article introduces the basic troubleshooting steps about how to clean the browser cache and perform a hard refresh for Microsoft Teams dialer in Dynamics 365 Sales.
 
-The basic troubleshooting step should be to clean the browser cache and perform a hard refresh.
-
-### Step 1 - Clear Browsing Data
-
-#### Chrome
+## Step 1 - Clear browsing data
 
 In Google Chrome:
-1. Go to chrome://settings/clearBrowserData (copy and paste it in the URL in your browser)
-2. Select "Cached images and files"
-3. Press "Clear data"  
-![Chrome delete cache](media/dialer-basic-troubleshooting/chrome-delete-cache.png)
 
-#### Edge
+1. Copy and paste `chrome://settings/clearBrowserData` to your browser.
+2. Select **Cached images and files**.
+3. Select **Clear data**.
 
-In Edge:
-1. Go to edge://settings/clearBrowserData (copy and paste it in the URL in your browser)
-2. Select "Cached images and files"
-3. "Clear now"  
-![Edge delete cache](media/dialer-basic-troubleshooting/edge-delete-cache.png)
+:::image type="content" source="media/dialer-basic-troubleshooting/chrome-delete-cache.png" alt-text="Screenshot that shows how to clear browsing data for Google Chrome.":::
 
-### Step 2 - Hard Refresh
+In Microsoft Edge:
 
-**Chrome, Firefox, or Edge for Windows:**  
-Press Ctrl+F5 (If that doesn’t work, try Shift+F5 or Ctrl+Shift+R).
+1. Copy and paste `edge://settings/clearBrowserData` to your browser.
+2. Select **Cached images and files**.
+3. Select **Clear now**.
 
-**Chrome or Firefox for Mac:**  
-Press Shift+Command+R
+:::image type="content" source="media/dialer-basic-troubleshooting/edge-delete-cache.png" alt-text="Screenshot that shows how to clear browsing data for Microsoft Edge.":::
+
+## Step 2 - Hard refresh
+
+For Google Chrome, Firefox, or Microsoft Edge for Windows:
+
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd>. If this doesn't work, try <kbd>Shift</kbd>+<kbd>F5</kbd> or <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd>.
+
+For Google Chrome or Firefox for Mac:
+
+Press <kbd>Shift</kbd>+<kbd>Command</kbd>+<kbd>R</kbd>.
