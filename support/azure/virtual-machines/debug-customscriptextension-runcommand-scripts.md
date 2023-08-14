@@ -29,8 +29,8 @@ The `StdOut` and `StdErr` substatuses are in the certificate registration point 
 | Interface | How to view the substatus |
 | --------- | ------------------------- |
 | [Azure portal](https://portal.azure.com) | <ol><li>Search for and select **Virtual machines**. </li><li>Select your VM from the list. </li><li>On the VM overview page, select **Extensions + applications** > **Extensions**. </li><li>Select the extension that was used to run the command. (It will be named either **CustomScriptExtension** or **RunCommand**.) </li><li>Select **View detailed status**. </li></ol> |
-| Azure PowerShell | <p>Enter the [Get-AzVM](/powershell/module/az.compute/get-azvm) cmdlet to get the properties of an Azure VM, as follows:</p><blockquote>`Get-AzVM -ResourceGroupName <resource-group-name> -Name <vm-name> -Status`</blockquote> |
-| Azure CLI | <p>Enter the [az vm get-instance-view](/cli/azure/vm#az-vm-get-instance-view) command to get instance information about an Azure VM, as follows:</p><blockquote>`az vm get-instance-view --resource-group <resource-group-name> --name <vm-name> --query instanceView.extensions`</blockquote> |
+| Azure PowerShell | <p>Enter the [Get-AzVM](/powershell/module/az.compute/get-azvm) cmdlet to get the properties of an Azure VM, as follows:</p>`Get-AzVM -ResourceGroupName <resource-group-name> -Name <vm-name> -Status` |
+| Azure CLI | <p>Enter the [az vm get-instance-view](/cli/azure/vm#az-vm-get-instance-view) command to get instance information about an Azure VM, as follows:</p>`az vm get-instance-view --resource-group <resource-group-name> --name <vm-name> --query instanceView.extensions` |
 
 The error that usually causes the script to fail appears in the `StdErr` substatus. However, scripts can also fail without logging a fatal error entry in that substatus.
 
