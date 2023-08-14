@@ -133,6 +133,10 @@ Get-ClusterNetwork
 
 Make sure the cluster network isn't configured and that **Allow cluster network communication on this network** is selected. For more information, see [Configuring Network Prioritization on a Failover Cluster](https://techcommunity.microsoft.com/t5/failover-clustering/configuring-network-prioritization-on-a-failover-cluster/ba-p/371683).  
 
+**Workaround**
+
+Use quick migration to perform cross site migration.  
+
 #### Live migration failed with error code (0x8007271D)  
 
 **Description**
