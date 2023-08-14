@@ -295,29 +295,29 @@ This patch package could not be opened. Verify that the patch package exists and
 
 If you examine this setup log carefully, it already gives you the information about the original MSP file that was used by the patch: _sqlrun_sql.msp_.
 
-To find more details about the missing .msp file in the Windows Installer cache, follow these steps:
+To find more details about the missing *.msp* file in the Windows Installer cache, follow these steps:
 
-1. Search for the missing .msp file in the following Windows Installer Patches registry subkey:     `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Installer\UserData\S-1-5-18\Patches\`
+1. Search for the missing *.msp* file in the Windows Installer Patches registry subkey: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Installer\UserData\S-1-5-18\Patches\`.
 1. Find the **Patch GUID**.
-1. Search for the Patch GUID in the following Windows Installer Products registry subkey: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Installer\UserData\S-1-5-18\Products\`
+1. Search for the Patch GUID in the Windows Installer Products registry subkey: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Installer\UserData\S-1-5-18\Products\`.
 
-   For the sample setup log, the missing .msp file and its corresponding patch details are displayed in the following registry entries:
+   For the sample setup log, the missing *.msp* file and its corresponding patch details are displayed in the following registry entries:
 
    ```output
    HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Installer\UserData\S-1-5-18\Patches\A3B085EA74A9A7640A496636F7EF9A44
-    Value: 0
-    Name: LocalPackage
-    Data: `C:\WINDOWS\Installer\145258.msp
+   Value: 0
+   Name: LocalPackage
+   Data: `C:\WINDOWS\Installer\145258.msp
    ```
 
    ```output
    HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Installer\UserData\S-1-5-18\Products\1EB3A031CC585314E87AA527E46EECC2\Patches\A3B085EA74A9A7640A496636F7EF9A44
-    Value: 6
-    Name: DisplayName
-    Data: GDR 2050 for SQL Server Database Services 2005 ENU (KB932555)
+   Value: 6
+   Name: DisplayName
+   Data: GDR 2050 for SQL Server Database Services 2005 ENU (KB932555)
    ```
 
- Now you have all the information points to start the steps to resolve the missing files in the Windows Installer cache.
+ Now, you have all the information points to start the steps to resolve the missing files in the Windows Installer cache.
 
 > [!NOTE]
 > If you use SQL Server 2008 Service Pack 3 (SP3) or a later version, you can also receive a similar error message for the missing .msi files. By using this error message, you can quickly determine which file is missing, what service pack to download, and where to find the download.
@@ -427,7 +427,5 @@ You can restore from system state backups as described in [Missing Windows Insta
 ## References
 
 - [Installer Database](/windows/win32/msi/installer-database)
-
 - [Patch Packages](/windows/win32/msi/patch-packages)
-
 - [GitHub repository](https://github.com/suyouquan/SQLSetupTools#fixmissingmsi-version-20)
