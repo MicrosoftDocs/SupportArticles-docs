@@ -26,7 +26,7 @@ This article assumes that you're familiar with the following topics:
 
 ## Create a console application that reads a configuration file
 
-You can store application settings in the configuration file that is associated with the application. Configuration files are saved in XML format.
+You can store application settings in the configuration file that's associated with the application. Configuration files are saved in XML format.
 
 The `System.Configuration` and the `System.Collections.Specialized` namespaces in the .NET Framework include the necessary classes to retrieve information from a .NET application configuration file during run time.
 
@@ -52,7 +52,7 @@ To create a console application that reads the contents of an associated configu
 
     Add an `<appSettings>` section with `<add>` elements to the configuration file between the `<configuration>` and `</configuration>` tags.
 
-    For example, the following configuration file includes an `<appSettings>` section that specifies three key or value pairs:
+    For example, the following configuration file includes a `<appSettings>` section that specifies three key or value pairs:
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
