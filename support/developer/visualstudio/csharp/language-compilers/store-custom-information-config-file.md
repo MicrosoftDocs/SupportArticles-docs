@@ -3,6 +3,7 @@ title: Store custom information from a configuration file
 description: This article describes how to store and retrieve custom information from an application configuration file by using Visual C#.
 ms.date: 04/28/2020
 ms.topic: how-to
+ms.reviewer: jakob, v--jayaramanp
 ---
 # Use Visual C# to store and retrieve custom information from an application configuration file
 
@@ -25,7 +26,7 @@ This article assumes that you're familiar with the following topics:
 
 ## Create a console application that reads a configuration file
 
-You can store application settings in the configuration file that is associated with the application. Configuration files are saved in XML format.
+You can store application settings in the configuration file that's associated with the application. Configuration files are saved in XML format.
 
 The `System.Configuration` and the `System.Collections.Specialized` namespaces in the .NET Framework include the necessary classes to retrieve information from a .NET application configuration file during run time.
 
@@ -33,17 +34,17 @@ To create a console application that reads the contents of an associated configu
 
 1. Start Visual Studio .NET or Visual Studio.
 2. On the **File** menu, point to **New**, and then select **Project**.
-3. select **Visual C#** under **Project Types**, and then select **Console Application** under **Templates**. Name the project *ConConfig*. By default, Visual C# creates a class that is named *Program*.
+3. Select **Visual C#** under **Project Types**, and then select **Console Application** under **Templates**. Name the project as *ConConfig*. By default, Visual C# creates a class that's named *Program*.
 
     > [!NOTE]
     > In Visual Studio .NET, select **Visual C# Projects** under
-     **Project Types**, and then select **Console Application** under **Templates**. Name the project *ConConfig*. By default, Visual C# creates a class that is named *Class1*.
+     **Project Types**, and then select **Console Application** under **Templates**. Name the project as *ConConfig*. By default, Visual C# creates a class that's named *Class1*.
 
-4. Make sure that the **Solution Explorer** window is visible. If it isn't visible, press the CTRL+ALT+L key combination.
-5. In **Solution Explorer**, right-click the project name, select **Add**, and then select **New Item**.
+4. Make sure that the **Solution Explorer** window is visible. If it isn't visible, press the <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>L</kbd> key combination.
+5. In the **Solution Explorer**, right-click the project name, select **Add**, and then select **New Item**.
 6. In the **Add New Item** list, select **XML File**.
 7. In the **Name** text box, type *App.config*, and then select **Add**.
-8. You can use an application configuration file to collect custom application settings that you save in key/value format. You can include `<add>` elements in the `<appSettings>` section of an associated configuration file. Each key/value pair has one `<add>` element. An `<add>` element has the following format:
+8. Use an application configuration file to collect custom application settings that you save in the key or value format. You can include `<add>` elements in the `<appSettings>` section of an associated configuration file. Each key or value pair has one `<add>` element. An `<add>` element has the following format:
 
     ```xml
     <add key="Key0" value="0" />
@@ -51,7 +52,7 @@ To create a console application that reads the contents of an associated configu
 
     Add an `<appSettings>` section with `<add>` elements to the configuration file between the `<configuration>` and `</configuration>` tags.
 
-    For example, the following configuration file includes an `<appSettings>` section that specifies three key/value pairs:
+    For example, the following configuration file includes a `<appSettings>` section that specifies three key or value pairs:
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -64,7 +65,7 @@ To create a console application that reads the contents of an associated configu
     </configuration>
     ```
 
-9. In **Solution Explorer**, double-click *Program.cs* to display the code window. Add the following statements to your code module.
+9. In the **Solution Explorer**, double-click *Program.cs* to display the code window. Add the following statements to your code module.
 
     > [!NOTE]
     > These statements must appear before any other statements in the file.
@@ -77,16 +78,15 @@ To create a console application that reads the contents of an associated configu
 10. Add a reference to *System.Configuration.dll* by following these steps:
     1. On the **Project** menu, select **Add Reference**.
     2. In the **Add Reference** dialog box, select the **.NET** tab.
-    3. Find and select the Component Name of `System.Configuration`.
-    4. select **OK**.
-11. To hold the value from a configuration file key in the
- `<appSettings>` section of the configuration file, declare a string variable in the `Main` section as follows:
+    3. Find and select the component name of `System.Configuration`.
+    4. Select **OK**.
+11. To hold the value from a configuration file key in the `<appSettings>` section of the configuration file, declare a string variable in the `Main` section as follows:
 
     ```csharp
     string sAttr;
     ```
 
-12. To retrieve a value for a specified key from the `<appSettings>` section of the configuration file, use the `Get` method of the `AppSettings` property of the `ConfigurationManager` class. The `ConfigurationManager` class is in the `System.Configuration` namespace. When the `AppSettings.Get` method receives a string input parameter that contains a key, the application retrieves the value that is associated with the key.
+12. To retrieve a value for a specified key from the `<appSettings>` section of the configuration file, use the `Get` method of the `AppSettings` property of the `ConfigurationManager` class. The `ConfigurationManager` class is in the `System.Configuration` namespace. When the `AppSettings.Get` method receives a string input parameter that contains a key, the application retrieves the value that's associated with the key.
 
     The following code retrieves the value for the `Key0` attribute from the associated configuration file. The code then places this value in the `sAttr` string variable. If a key doesn't exist for this value, nothing is stored in `sAttr`.
 
@@ -100,7 +100,7 @@ To create a console application that reads the contents of an associated configu
     Console.WriteLine("The value of Key0 is "+sAttr);
     ```
 
-14. You can use one reference to the `AppSettings` property to retrieve all the key/value pairs in the `<appSettings>` section. When you use the `AppSettings` property, the application returns all associated key/value pairs. These pairs are stored in a `NameValueCollection` type. The `NameValueCollection` contains key/value entries for each key that the application retrieves. The `NameValueCollection` class is in the `System.Collections.Specialized` namespace.
+14. You can use one reference to the `AppSettings` property to retrieve all the key or value pairs in the `<appSettings>` section. When you use the `AppSettings` property, the application returns all associated key or value pairs. These pairs are stored in a `NameValueCollection` type. The `NameValueCollection` contains key or value entries for each key that the application retrieves. The `NameValueCollection` class is in the `System.Collections.Specialized` namespace.
 
     ```csharp
     NameValueCollection sAll ;
@@ -150,7 +150,7 @@ namespace ConConfig
 ```
 
 > [!NOTE]
-> This code is targeting the .NET Framework 2.0. If you are using the .NET Framework 1.0 or the .NET Framework 1.1, change all instances of the `ConfigurationManager` class to `ConfigurationSettings`.
+> This code targets the .NET Framework 2.0. If you are using the .NET Framework 1.0 or the .NET Framework 1.1, change all instances of the `ConfigurationManager` class to `ConfigurationSettings`.
 
 ## Complete configuration file listing (ConConfig.exe.config)
 
@@ -167,7 +167,7 @@ namespace ConConfig
 
 ## Verify that it works
 
-Press F5 to run the code. The Console window should display the key/value pairs from the `<appSettings>` section of the associated configuration file as follows:
+Press <kbd>F5</kbd> to run the code. The Console window should display the key or value pairs from the `<appSettings>` section of the associated configuration file as follows:
 
 ```console
 The value of Key0: 0
