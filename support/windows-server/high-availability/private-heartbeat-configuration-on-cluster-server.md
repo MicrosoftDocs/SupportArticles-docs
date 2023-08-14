@@ -121,7 +121,7 @@ To eliminate possible communication issues, remove all unnecessary network traff
 
 20. Click to select the **Enable this network for cluster use** check box.
 
-21. Click **Internal cluster communications only (private Network)**. For more information, see [How to use Windows Server cluster nodes as domain controllers](/troubleshoot/windows-server/high-availability/use-cluster-nodes-as-domain-controllers).
+21. Click **Internal cluster communications only (private Network)**. For more information, see [How to use Windows Server cluster nodes as domain controllers](use-cluster-nodes-as-domain-controllers.md).
 
 ## Recommended configuration for the private adapter in Windows NT 4.0
 
@@ -191,4 +191,4 @@ To eliminate possible communication issues, remove all unnecessary network traff
 
 25. Click to select the **Enable this network for cluster use** check box.
 
-26. Click **Internal cluster communications only (private Network)**. For more information, see [How to use Windows Server cluster nodes as domain controllers](/troubleshoot/windows-server/high-availability/use-cluster-nodes-as-domain-controllers).
+26. Click **Internal cluster communications only (private Network)**. For more information, see [How to use Windows Server cluster nodes as domain controllers](use-cluster-nodes-as-domain-controllers.md).

@@ -99,7 +99,7 @@ Remove all stale metadata for any domain controllers and domains in the forest t
 
 After you have verified that the replication between domain controllers is working correctly, determine whether there is an orphaned domain object. You can use the Ntdsutil.exe utility to clear the orphaned domain object. If there is any orphaned domain controller object for that domain, you must also delete the domain controller object. For more information about how to remove an orphaned domain, see the following article:
 
-[How to remove orphaned domains from Active Directory](/troubleshoot/windows-server/identity/remove-orphaned-domains)
+[How to remove orphaned domains from Active Directory](remove-orphaned-domains.md)
 
 For more information about how to remove orphaned domain controller objects, see the following article:
 
@@ -134,6 +134,6 @@ To confirm that the domain controller is a global catalog server, follow these s
 
 For more information, see the following articles:
 
-- [You cannot promote a Windows Server domain controller to be a global catalog server](/troubleshoot/windows-server/identity/cannot-promote-dc-to-global-catalog-server)
+- [You cannot promote a Windows Server domain controller to be a global catalog server](cannot-promote-dc-to-global-catalog-server.md)
 
-- [How to remove orphaned domains from Active Directory](/troubleshoot/windows-server/identity/remove-orphaned-domains)
+- [How to remove orphaned domains from Active Directory](remove-orphaned-domains.md)

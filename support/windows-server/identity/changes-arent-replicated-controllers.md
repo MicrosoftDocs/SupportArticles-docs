@@ -48,7 +48,7 @@ Consider the following scenario. In a Windows Server 2003 environment, you set t
     > [!NOTE]
     > This event is logged when you enable diagnostic logging and set the value for the **5 Replication Events** registry entry to 1 or greater.
 
-    For more information about NTDS diagnostic logging, see [How to configure Active Directory and LDS diagnostic event logging](/troubleshoot/windows-server/identity/configure-ad-and-lds-event-logging).
+    For more information about NTDS diagnostic logging, see [How to configure Active Directory and LDS diagnostic event logging](configure-ad-and-lds-event-logging.md).
 
 These symptoms may occur when changes are made to any LVR-replicated object class that has forward links. (These changes to the LVR-replicated object class are also to the changes that are made to security and distribution groups.)
 

@@ -34,7 +34,7 @@ A4: Yes (in the E-mail Message Setup).
 
 Q5: How do I set this up?
 
-A5: Setup documents are outlined in the [GP2013_Finanicals.zip](https://mbs2.microsoft.com/fileexchange/?fileID=cdf1a9bd-bfe1-4223-8b8c-be4e2dc41817) file under Receivables. Additional enhancements are outlined in [Microsoft Dynamics GP 2013 R2 - Email Document New Features](https://community.dynamics.com/gp/b/dynamicsgp/posts/draft-microsoft-dynamics-gp-2013-r2-email-document-new-features).
+A5: Setup documents are outlined in the [GP2013_Finanicals.zip](https://mbs2.microsoft.com/fileexchange/?fileID=cdf1a9bd-bfe1-4223-8b8c-be4e2dc41817) file under Receivables. Additional enhancements are outlined in [Microsoft Dynamics GP 2013 R2 - Email Document New Features](https://community.dynamics.com/blogs/post/?postid=f3603488-0ed1-4e86-8722-332f9199361c).
 
 ## Option 2 - Microsoft Dynamics GP functionality (using original Dynamics GP functionality)
 
@@ -60,4 +60,4 @@ A4: No.
 
 Q5: How do I set up this email functionality?
 
-A5: For the setup steps, see [Use e-mail messages to send letters, statements, and invoices to customers in Microsoft Dynamics GP](/troubleshoot/dynamics/gp/use-e-mail-messages-send-letters-statements).
+A5: For the setup steps, see [Use e-mail messages to send letters, statements, and invoices to customers in Microsoft Dynamics GP](use-e-mail-messages-send-letters-statements.md).

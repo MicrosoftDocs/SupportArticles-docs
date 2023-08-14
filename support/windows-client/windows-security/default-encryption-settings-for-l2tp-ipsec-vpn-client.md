@@ -72,4 +72,4 @@ There are two modes of operation for IPSec:
 
 ## References
 
-[How to troubleshoot a Microsoft L2TP/IPSec virtual private network client connection](/troubleshoot/windows-client/networking/l2tp-ipsec-vpn-client-connection-issue)
+[How to troubleshoot a Microsoft L2TP/IPSec virtual private network client connection](../networking/l2tp-ipsec-vpn-client-connection-issue.md)

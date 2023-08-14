@@ -32,7 +32,7 @@ If a destination domain controller logs [Event ID 1388](#event-id-1388) or [Even
 This event indicates that a destination domain controller that does not have strict replication consistency enabled received a request to update an object that does not reside in the local copy of the Active Directory database. In response, the destination domain controller requested the full object from the source replication partner. In this way, a lingering object was replicated to the destination domain controller. Therefore, the lingering object was reintroduced into the directory.
 
 > [!IMPORTANT]
-> When Event ID 1388 occurs, if either the source domain controller (the replication partner that is outbound-replicating the lingering object) or the destination domain controller (the inbound replication partner that reports Event ID 1388) is running Windows 2000 Server, you cannot use the Repadmin tool to remove lingering objects. For information about how to remove lingering objects in this case, see [Lingering objects may remain after you bring an out-of-date global catalog server back online](/troubleshoot/windows-server/identity/lingering-objects-remain). The procedures and information in this article apply to the removal of lingering objects from global catalog servers as well as from domain controllers that are not global catalog servers.
+> When Event ID 1388 occurs, if either the source domain controller (the replication partner that is outbound-replicating the lingering object) or the destination domain controller (the inbound replication partner that reports Event ID 1388) is running Windows 2000 Server, you cannot use the Repadmin tool to remove lingering objects. For information about how to remove lingering objects in this case, see [Lingering objects may remain after you bring an out-of-date global catalog server back online](lingering-objects-remain.md). The procedures and information in this article apply to the removal of lingering objects from global catalog servers as well as from domain controllers that are not global catalog servers.
 
 The event text identifies the source domain controller and the outdated (lingering) object. The following is an example of the event text:
 
@@ -131,7 +131,7 @@ Requirements:
 
 ### Use Repadmin to remove lingering objects
 
-If the destination domain controller and source domain controller are running either Windows Server 2003 or Windows Server 2008, you can use this procedure to remove lingering objects with Repadmin. If either domain controller is running Windows 2000 Server, follow the instructions in [Lingering objects may remain after you bring an out-of-date global catalog server back online](/troubleshoot/windows-server/identity/lingering-objects-remain).
+If the destination domain controller and source domain controller are running either Windows Server 2003 or Windows Server 2008, you can use this procedure to remove lingering objects with Repadmin. If either domain controller is running Windows 2000 Server, follow the instructions in [Lingering objects may remain after you bring an out-of-date global catalog server back online](lingering-objects-remain.md).
 
 Requirements:
 

@@ -42,7 +42,7 @@ To resolve this issue, use one of the following methods.
 
 ### Method 1
 
-Configure the firewall devices not to block communications on UDP/TCP port 389. For more information about how to do it, see [Service overview and network port requirements for Windows](/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements).  
+Configure the firewall devices not to block communications on UDP/TCP port 389. For more information about how to do it, see [Service overview and network port requirements for Windows](../networking/service-overview-and-network-port-requirements.md).  
 
 ### Method 2
 
