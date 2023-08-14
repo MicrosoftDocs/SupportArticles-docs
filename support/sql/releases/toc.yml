@@ -59,6 +59,10 @@ items:
   items:
   - name: SQL Server 2019 build versions
     href: sqlserver-2019/build-versions.md
+  - name: Cumulative Update 22
+    items:
+    - name: Cumulative Update 22 (KB5027702)
+      href: sqlserver-2019/cumulativeupdate22.md
   - name: Cumulative Update 21
     items:
     - name: Cumulative Update 21 (KB5025808)
