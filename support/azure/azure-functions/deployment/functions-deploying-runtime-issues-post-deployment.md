@@ -1,11 +1,8 @@
 ---
 title: Function app runtime issues post deployment 
 description: Get answers to frequently asked questions about runtime issues in the Function app after content deployment.
-author: gasridha
-ms.author: gasridha
-ms.service: cloud-services
-ms.date: 11/08/2023
-ms.reviewer: 
+ms.date: 08/15/2023
+ms.reviewer: gasridha
 ---
 # Resolve common runtime issues after deployment
 
@@ -13,23 +10,24 @@ If you're having issues with your application after deployment, it's important t
 
 Use the following guidance to learn about the common causes of runtime issues and to troubleshoot these issues.
 
-[!INCLUDE [support-disclaimer](../../includes/support-disclaimer.md)]
+[!INCLUDE [support-disclaimer](../../../includes/support-disclaimer.md)]
 
 ## What are the common causes for application runtime issues after content deployment
 
 Some of the common reasons for failure include:
+
 * Network connectivity to the secure storage account, resulting in the function host not starting up.
 * Your Azure Functions app may not be configured correctly. For example, incorrect runtime or language version, trigger connection strings, key vault settings, etc., which can lead to the function host not starting up.
 * There could be an external dependency like a database or messaging system that's not set up correctly and is causing time-out errors.
 * Sync triggers failed, which causes incorrect loading of functions.
 * Your code could be making invalid assumptions about paths, like hard-coding something that exists only on your local machine.
 * Something in the Azure Functions runtime sandbox environment might be blocking certain operations that work on your local machine.
- 
+
 ## How can I troubleshoot runtime issues after content deployment
 
 * Try manually restarting the Functions app to see if this resolves the issue.
-* Run the [Azure Functions Diagnostics](https://learn.microsoft.com/azure/azure-functions/functions-diagnostics) to quickly diagnose and solve common function app issues.
-* Runtime issues after deployment can happen if the storage account used for the function app is either not accessible or the storage connection string has been changed or is incorrect. Verify the [storage connections are set up correctly](https://learn.microsoft.com/azure/azure-functions/functions-recover-storage-account).
-* If you've enabled Application Insights, review the [Application Insights logs](https://learn.microsoft.com/azure/azure-functions/functions-monitoring) for your function to learn more about the full exception trace/error message that's causing errors.
+* Run the [Azure Functions Diagnostics](/azure/azure-functions/functions-diagnostics) to quickly diagnose and solve common function app issues.
+* Runtime issues after deployment can happen if the storage account used for the function app is either not accessible or the storage connection string has been changed or is incorrect. Verify the [storage connections are set up correctly](/azure/azure-functions/functions-recover-storage-account).
+* If you've enabled Application Insights, review the [Application Insights logs](/azure/azure-functions/functions-monitoring) for your function to learn more about the full exception trace/error message that's causing errors.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
