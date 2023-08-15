@@ -5861,6 +5861,11 @@
       "source_path": "support/sql/database-engine/backup-restore/nonrecoverable-io-error-backup-url.md",
       "redirect_url": "/troubleshoot/sql/welcome-sql-server",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/azure-functions/index.md",
+      "redirect_url": "/troubleshoot/azure/azure-functions/welcome-azure-functions",
+      "redirect_document_id": true
     }
 ]
 }
