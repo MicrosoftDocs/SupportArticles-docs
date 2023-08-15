@@ -42,7 +42,7 @@ TFS, Azure DevOps Server:
 - _C:\Users\\<TFS_Service_Account\>\AppData\Local\Temp_
 - _C:\inetpub\temp_
 - _%ProgramFiles%\Azure DevOps Server <VersionNumber\>\Application Tier\Web Services\bin_
-- _C:\AzureDevOpsData\ApplicationTier\_fileCache_
+- _C:\AzureDevOpsData\ApplicationTier\\\_fileCache_
 - TFS/Azure DevOps Server cache folder
   - On the server: _C:\Users\\<ServiceAccountName\>\AppData\Local\Microsoft\Azure DevOps\\<VersionNumber\>\Cache_
   - On the client: _C:\Users\\<UserName\>\AppData\Local\Microsoft\Azure DevOps\\<VersionNumber\>\Cache_
@@ -56,7 +56,7 @@ Azure DevOps Server, Azure DevOps Services (self-hosted agents):
 - _TFSbuildServicehost.exe_ process for XAML builds
 - Processes for vNext builds like _Agent.Listener.exe_, _Agent.Worker.exe_, and _AgentService.exe_
 - Self-Hosted Agent folders like _\Builds, \Symbols, \Drop, \bin, \_diag, \_work_
-- _%ProgramFiles%\Microsoft Visual Studio \<VersionNumber\>_
+- _%ProgramFiles%\Microsoft Visual Studio\\<VersionNumber\>_
 - _C:\Windows\Microsoft.NET\Framework_
 - _C:\Windows\Microsoft.NET\Framework\\<VersionNumber\>\Temporary ASP.NET Files_
 - _C:\Windows\Microsoft.NET\Framework64\\<VersionNumber\>\Temporary ASP.NET Files_
