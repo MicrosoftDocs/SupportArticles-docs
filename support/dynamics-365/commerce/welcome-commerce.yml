@@ -15,6 +15,16 @@ metadata:
 
 landingContent:
   # Card
+  - title: Commerce headquarters operations
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Customer records don't appear in Commerce headquarters
+            url: commerce-headquarters-operations/customer-record-not-appearing.md
+          - text: Order summary subtotal doesn't include taxes on charges when using customized order summary modules
+            url: commerce-headquarters-operations/summary-taxes-custom-modules-10.0.27.md
+
+  # Card
   - title: Customer accounts and loyalty
     linkLists:
       - linkListType: how-to-guide
