@@ -3,7 +3,7 @@ title: Troubleshoot Azure Files identity-based authentication and authorization 
 description: Troubleshoot problems using identity-based authentication to connect to SMB Azure file shares and see possible resolutions.
 author: khdownie
 ms.service: azure-file-storage
-ms.date: 08/11/2023
+ms.date: 08/15/2023
 ms.author: kendownie
 ---
 # Troubleshoot Azure Files identity-based authentication and authorization issues (SMB)
@@ -70,16 +70,16 @@ Debug-AzStorageAccountAuth -StorageAccountName $StorageAccountName -ResourceGrou
 
 The cmdlet performs these checks in sequence and provides guidance for failures:
 
-1. CheckADObjectPasswordIsCorrect: Ensure that the password configured on the AD identity that represents the storage account is matching that of the storage account kerb1 or kerb2 key. If the password is incorrect, you can run [Update-AzStorageAccountADObjectPassword](/azure/storage/files/storage-files-identity-ad-ds-update-password) to reset the password.
-2. CheckADObject: Confirm that there is an object in the Active Directory that represents the storage account and has the correct SPN (service principal name). If the SPN isn't correctly set up, run the `Set-AD` cmdlet returned in the debug cmdlet to configure the SPN.
-3. CheckDomainJoined: Validate that the client machine is domain joined to AD. If your machine isn't domain joined to AD, refer to this [article](/windows-server/identity/ad-fs/deployment/join-a-computer-to-a-domain) for domain join instructions.
-4. CheckPort445Connectivity: Check that port 445 is opened for SMB connection. If port 445 isn't open, refer to the troubleshooting tool [AzFileDiagnostics](https://github.com/Azure-Samples/azure-files-samples/tree/master/AzFileDiagnostics/Windows) for connectivity issues with Azure Files.
-5. CheckSidHasAadUser: Check that the logged on AD user is synced to Azure AD. If you want to look up whether a specific AD user is synchronized to Azure AD, you can specify the -UserName and -Domain in the input parameters. For a given SID, it checks if there is an AAD user associated.
-6. CheckAadUserHasSid: Check that the logged on AD user is synced to Azure AD. If you want to look up whether a specific AD user is synchronized to Azure AD, you can specify the -UserName and -Domain in the input parameters. For a given AAD user, it checks for its SID.
-7. CheckGetKerberosTicket: Attempt to get a Kerberos ticket to connect to the storage account. If there isn't a valid Kerberos token, run the `klist get cifs/storage-account-name.file.core.windows.net` cmdlet and examine the error code to root-cause the ticket retrieval failure.
-8. CheckStorageAccountDomainJoined: Check if the AD authentication has been enabled and the account's AD properties are populated. If not, refer to the instructions [here](/azure/storage/files/storage-files-identity-ad-ds-enable) to enable AD DS authentication on Azure Files. 
-9. CheckUserRbacAssignment: Check if the AD identity has the proper RBAC role assignment to provide share level permission to access Azure Files. If not, refer to the instructions [here](/azure/storage/files/storage-files-identity-ad-ds-assign-permissions) to configure the share level permission. (Supported on AzFilesHybrid v0.2.3+ version)
-10. CheckUserFileAccess: Check if the AD identity has the proper directory/file permission (Windows ACLs) to access Azure Files. If not, refer to the instructions [here](/azure/storage/files/storage-files-identity-ad-ds-configure-permissions) to configure the directory/file level permission. (Supported on AzFilesHybrid v0.2.3+ version)
+1. `CheckADObjectPasswordIsCorrect`: Ensure that the password configured on the AD identity that represents the storage account is matching that of the storage account kerb1 or kerb2 key. If the password is incorrect, you can run [Update-AzStorageAccountADObjectPassword](/azure/storage/files/storage-files-identity-ad-ds-update-password) to reset the password.
+2. `CheckADObject`: Confirm that there is an object in the Active Directory that represents the storage account and has the correct SPN (service principal name). If the SPN isn't correctly set up, run the `Set-AD` cmdlet returned in the debug cmdlet to configure the SPN.
+3. `CheckDomainJoined`: Validate that the client machine is domain joined to AD. If your machine isn't domain joined to AD, refer to this [article](/windows-server/identity/ad-fs/deployment/join-a-computer-to-a-domain) for domain join instructions.
+4. `CheckPort445Connectivity`: Check that port 445 is opened for SMB connection. If port 445 isn't open, refer to the troubleshooting tool [AzFileDiagnostics](https://github.com/Azure-Samples/azure-files-samples/tree/master/AzFileDiagnostics/Windows) for connectivity issues with Azure Files.
+5. `CheckSidHasAadUser`: Check that the logged on AD user is synced to Azure AD. If you want to look up whether a specific AD user is synchronized to Azure AD, you can specify the `-UserName` and `-Domain` in the input parameters. For a given SID, it checks if there is an AAD user associated.
+6. `CheckAadUserHasSid`: Check that the logged on AD user is synced to Azure AD. If you want to look up whether a specific AD user is synchronized to Azure AD, you can specify the `-UserName` and `-Domain` in the input parameters. For a given AAD user, it checks for its SID.
+7. `CheckGetKerberosTicket`: Attempt to get a Kerberos ticket to connect to the storage account. If there isn't a valid Kerberos token, run the `klist get cifs/storage-account-name.file.core.windows.net` cmdlet and examine the error code to determine the cause of the ticket retrieval failure.
+8. `CheckStorageAccountDomainJoined`: Check if the AD authentication has been enabled and the account's AD properties are populated. If not, [enable AD DS authentication on Azure Files](/azure/storage/files/storage-files-identity-ad-ds-enable).
+9. `CheckUserRbacAssignment`: Check if the AD identity has the proper RBAC role assignment to provide share level permission to access Azure Files. If not, [configure the share level permission](/azure/storage/files/storage-files-identity-ad-ds-assign-permissions). (Supported on AzFilesHybrid v0.2.3+ version)
+10. `CheckUserFileAccess`: Check if the AD identity has the proper directory/file permission (Windows ACLs) to access Azure Files. If not, [configure the directory/file level permission](/azure/storage/files/storage-files-identity-ad-ds-configure-permissions). (Supported on AzFilesHybrid v0.2.3+ version)
 
 ## Unable to configure directory/file level permissions (Windows ACLs) with Windows File Explorer
 
@@ -102,7 +102,7 @@ This error might occur if a domain controller that holds the RID Master FSMO rol
 
 ### Error: "Cannot bind positional parameters because no names were given"
 
-This error is most likely triggered by a syntax error in the `Join-AzStorageAccountforAuth` command.  Check the command for misspellings or syntax errors and verify that the latest version of the **AzFilesHybrid** module (https://github.com/Azure-Samples/azure-files-samples/releases) is installed.
+This error is most likely triggered by a syntax error in the `Join-AzStorageAccountforAuth` command.Check the command for misspellings or syntax errors and verify that the latest version of the **AzFilesHybrid** module (https://github.com/Azure-Samples/azure-files-samples/releases) is installed.
 
 ## Azure Files on-premises AD DS Authentication support for AES-256 Kerberos encryption
 
