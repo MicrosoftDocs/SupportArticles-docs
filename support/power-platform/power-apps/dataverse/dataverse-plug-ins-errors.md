@@ -24,7 +24,7 @@ This article contains information about errors that can occur during plug-in exe
 > Error Code: -2147220956 
 > Error Message: The conversion could not be completed because the supplied DataTime did not have the Kind property set correctly. For example, when the Kind property is DateTimeKind.Local, the source time zone must be TimeZoneInfo.Local.
 
-This error can ocurr during a <xref:System.TimeZoneInfo.ConvertTimeToUtc(System.DateTime,System.TimeZoneInfo)?displayProperty=fullName> call to convert from either Santiago or Volgograd time zones to UTC will fail when executed in a plug-in.
+This error can ocurr during a <xref:System.TimeZoneInfo.ConvertTimeToUtc(System.DateTime,System.TimeZoneInfo)?displayProperty=fullName> call in plug-in code to convert Santiago or Volgograd time zones to UTC.
 
 This is a known product limitation and there is presently no workaround.
 
