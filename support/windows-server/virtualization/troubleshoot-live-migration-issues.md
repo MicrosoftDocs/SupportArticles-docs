@@ -135,9 +135,10 @@ Make sure the cluster network isn't configured and that **Allow cluster network 
 
 **Workaround**
 
-Currently, live migration cross site does not work in Azure Stack HCI 22H2 and later versions.
+Currently, live migration cross site does not work in Azure Stack HCI 22H2 and later versions. To work around this issue, use one of the following solutions:
 
-Use quick migration to perform cross site migration.  
+- Use quick migration to perform cross site migration.  
+- Set the live migration preferred network to a stretched VLAN (single subnet) that includes all the nodes of the cluster.
 
 #### Live migration failed with error code (0x8007271D)  
 
