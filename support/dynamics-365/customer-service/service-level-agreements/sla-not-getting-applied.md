@@ -3,7 +3,7 @@ title: An SLA isn't applied to a case in Dynamics 365 Customer Service
 description: Provides a resolution for an issue where an SLA isn't applied to a case in Microsoft Dynamics 365 Customer Service.
 ms.reviewer: sdas
 ms.author: ankugupta
-ms.date: 08/11/2023
+ms.date: 08/15/2023
 ---
 # SLA isn't getting applied to a case
 
@@ -66,12 +66,19 @@ The `SdkMessageProcessing` steps might be in an inactive state.
 
 #### Resolution
 
-To solve this issue, activate the `SdkMessageProcessing` steps if they're in a draft or inactive state.
+To solve this issue, activate the following `SdkMessageProcessing` steps if they're in a draft or inactive state.
 
 - `PreOperationIncidentCreateEntitlement` (6742a23a-7102-e711-8112-00155db32104)
 - `PreOperationIncidentUpdateEntitlement` (9e1588ed-62ff-e611-810f-00155db32104)
 - `PostOperationIncidentUpdateEntitlement` (a468c44e-c204-e711-80ca-02155dc812c3)
 - `PostOperationIncidentCreateEntitlement` (8fbadfbe-c104-e711-80ca-02155dc812c3)
+
+To search for the `SdkMessageProcessing` steps,
+
+1. Navigate to **Customizations**.
+2. Select **Customize the System** > **SDK Message Processing Steps**.
+3. Search for the `SdkMessageProcessing` steps mentioned above.
+4. Select the **Activate** button if the steps are in **Deactivated** state.
 
 ## Scenario 6: The "Disable SLAs" in the "Service Configuration Settings" isn't set to "No"
 
@@ -95,12 +102,10 @@ To solve this issue, activate the flow for the SLA item if it's in an inactive s
 
 ## Scenario 8: The "Empty Calendar schedule. Check if Working Hours are set properly" error occurs
 
-This issue might occur when a Unified Interface SLA isn't applied for backdated **Applicable From** condition and you receive the "Empty Calendar schedule. Check if Working Hours are set properly" error.
-
 #### Cause
 
-This issue occurs because working hours are available for the specified calendar in an SLA item. You need to check if the SLA item business hours are configured with a web client calendar.
+This issue occurs because the SLA item's working hours are associated with a calendar that's configured to use a legacy web client calendar interface. As a result, the SLA isn't applied to the backdated **Applicable From** condition in Unified Interface. You need to check if the SLA item's working hours are configured with a legacy web client calendar.
 
 #### Resolution
 
-To solve this issue, create the calendar in Unified Interface and change it in the SLA item. Or, open the same legacy calendar in Unified Interface and then select **Save and Close**. For more information, see [Setting up Calendar](/dynamics365/customer-service/create-customer-service-schedule-define-work-hours).
+To solve this issue, create a calendar in Unified Interface and change it in the SLA item. Or, open the legacy calendar in Unified Interface and then select **Save and Close**. For more information, see [Setting up Calendar](/dynamics365/customer-service/create-customer-service-schedule-define-work-hours).
