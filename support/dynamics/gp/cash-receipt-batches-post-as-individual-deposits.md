@@ -42,7 +42,7 @@ Make sure the **Automatically post cash receipt deposits** option is marked. Wit
 
 ### For Microsoft Dynamics GP 2016 RTM (16.00.0404) and higher versions
 
-The functionality for the company setup option for Automatically post cash receipt deposits was changed to now post a [lump sum deposit](https://community.dynamics.com/gp/b/dynamicsgp/posts/mdgp2016-rm-auto-post-cash-deposits) in bank reconciliation for all the cash receipts in the batch. (**Tools** > **Setup** > **Company** > **Company** > **Options**)
+The functionality for the company setup option for Automatically post cash receipt deposits was changed to now post a [lump sum deposit](https://community.dynamics.com/blogs/post/?postid=a08964fa-e239-4486-9692-f39ae79fbc67) in bank reconciliation for all the cash receipts in the batch. (**Tools** > **Setup** > **Company** > **Company** > **Options**)
 
 Make sure the **Automatically post cash receipt deposits** option is marked. With this option marked, a single "lump sum deposit" for all cash receipts in the batch will update bank reconciliation.
 
@@ -90,3 +90,4 @@ Posting setup (under **Tools** > **setup** > **posting** > **Posting**) for Sale
 **Q3: How do I get cash receipts batches to post as "individual deposits" to bank reconciliation?**
 
 **A3:** On Microsoft Dynamics GP 18.4.1361 or higher, there's a **Post Deposit** field on the cash receipt batch that will allow the user to post the batch in either summary or as individual deposits per transaction to bank reconciliation. The default is to set to **Summary** but the user can edit it as preferred. For any prior Microsoft Dynamics GP versions, review the Resolution section above.
+

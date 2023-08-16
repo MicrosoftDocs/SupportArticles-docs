@@ -17,15 +17,15 @@ Additional information on how currency translation rates are calculated, can be 
 
 - Using the current rate (typically used with Balance Sheet accounts)
 
-  [Management Reporter currency translation using the Current translation type](https://community.dynamics.com/gp/b/dynamicsgp/posts/management-reporter-currency-translation-using-the-current-translation-type)
+  [Management Reporter currency translation using the Current translation type](https://community.dynamics.com/blogs/post/?postid=567e5d44-e1f5-4b9d-8c3f-a5429591a073)
 
 - Using the historical rate (typically used with Retained Earnings, Property, Plant & Equipment, and Equity accounts tha may be required to use this based on FASB or GAAP guidelines):
 
-  [Management Reporter currency translation using the Historical translation type](https://community.dynamics.com/gp/b/dynamicsgp/posts/management-reporter-currency-translation-using-historical-translation-type)
+  [Management Reporter currency translation using the Historical translation type](https://community.dynamics.com/blogs/post/?postid=ce241043-963f-47d4-94a7-7db49300b782)
 
 - Using the average rate (typically used with Income Statement (Profit/Loss) accounts)
 
-  [Management Reporter currency translation using the Average translation type](https://community.dynamics.com/gp/b/dynamicsgp/posts/management-reporter-currency-translation-using-the-average-translation-type)
+  [Management Reporter currency translation using the Average translation type](https://community.dynamics.com/blogs/post/?postid=567e5d44-e1f5-4b9d-8c3f-a5429591a073)
 
 - How to use Cumulative Translation Adjustment (CTA) in Management Reporter:
 
@@ -178,12 +178,15 @@ Additional information can be found here:
 
 - Using the current rate
 
-  [Management Reporter currency translation using the Current translation type](https://community.dynamics.com/gp/b/dynamicsgp/posts/management-reporter-currency-translation-using-the-current-translation-type)
+  [Management Reporter currency translation using the Current translation type](https://community.dynamics.com/blogs/post/?postid=567e5d44-e1f5-4b9d-8c3f-a5429591a073)
 
 - Using the historical rate
 
-  [Management Reporter currency translation using the Historical translation type](https://community.dynamics.com/gp/b/dynamicsgp/posts/management-reporter-currency-translation-using-historical-translation-type)
+  [Management Reporter currency translation using the Historical translation type](https://community.dynamics.com/blogs/post/?postid=ce241043-963f-47d4-94a7-7db49300b782)
 
 - Using the average rate
 
-  [Management Reporter currency translation using the Average translation type](https://community.dynamics.com/gp/b/dynamicsgp/posts/management-reporter-currency-translation-using-the-average-translation-type)
+  [Management Reporter currency translation using the Average translation type](https://community.dynamics.com/blogs/post/?postid=567e5d44-e1f5-4b9d-8c3f-a5429591a073)
+
+
+

@@ -24,13 +24,13 @@ New functionality is in Microsoft Dynamics GP 2013, Microsoft Dynamics GP 2015, 
 
 The Year-End blog article below has an all-inclusive Word document attached to it and basically sums up all the most important information that were included on prior blogs, and covers the most up-to-date changes included in the Year-End release:
 
-Blog: [Microsoft Dynamics GP Year-End Update 2016: Affordable Care Act (ACA)](https://community.dynamics.com/gp/b/dynamicsgp/posts/microsoft-dynamics-gp-year-end-update-2016-affordable-care-act-aca)
+Blog: [Microsoft Dynamics GP Year-End Update 2016: Affordable Care Act (ACA)](https://community.dynamics.com/blogs/post/?postid=aa2ef1de-1a36-44de-82a9-6371b7876aae)
 
 Older blogs:
 
-- Blog: [Microsoft Dynamics GP Year-End Update 2016: Affordable Care Act (ACA)](https://community.dynamics.com/gp/b/dynamicsgp/posts/microsoft-dynamics-gp-year-end-update-2016-affordable-care-act-aca)
+- Blog: [Microsoft Dynamics GP Year-End Update 2016: Affordable Care Act (ACA)](https://community.dynamics.com/blogs/post/?postid=aa2ef1de-1a36-44de-82a9-6371b7876aae)
 
-- Blog: [Microsoft Dynamics GP Year-End Release 2015: Affordable Care Act (ACA)](https://community.dynamics.com/gp/b/dynamicsgp/posts/gpye2015aca)
+- Blog: [Microsoft Dynamics GP Year-End Release 2015: Affordable Care Act (ACA)](https://community.dynamics.com/blogs/post/?postid=ab7e8792-0341-4674-9315-38f964df5688)
 
 - Blog: [Microsoft Dynamics GP Year-End Release 2015: Table and Column Changes in US Year-End Update](https://community.dynamics.com/gp/b/dynamicsgp/posts/microsoft-dynamics-gp-year-end-release-2015-table-and-column-changes-in-us-year-end-update)
 
@@ -44,7 +44,7 @@ Older blogs:
 
 - Blog: ACA Information/Setup: (Nov 19, 2014)
 
-    [Microsoft Dynamics GP Year End Release 2014: Affordable Care Act (ACA)](https://community.dynamics.com/gp/b/dynamicsgp/posts/draft-microsoft-dynamics-gp-2014-year-end-release-affordable-health-care-act-2)
+    [Microsoft Dynamics GP Year End Release 2014: Affordable Care Act (ACA)](https://community.dynamics.com/blogs/post/?postid=f402ea1b-0442-42f7-8b0e-8291b0a983bd)
 
 - Blog: ACA Table/Column changes: (Nov 12, 2014)
 
@@ -68,4 +68,8 @@ Links to IRS forms/FAQ:
 
 - [1095C form](https://www.irs.gov/pub/irs-dft/f1095c--dft.pdf) goes to the employee from the employer (like a W2) Employer Provided Health Insurance Offer and Coverage [instructions](https://www.irs.gov/pub/irs-dft/i109495c--dft.pdf)  
 
-[General link](https://community.dynamics.com/gp/) to Microsoft Dynamics GP Community to access Forums and Blog articles.
+[General link](https://community.dynamics.com/forums/thread/?partialUrl=gp) to Microsoft Dynamics GP Community to access Forums and Blog articles.
+
+
+
+
