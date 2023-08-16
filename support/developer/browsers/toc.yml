@@ -3,7 +3,6 @@
 
 - name: Administration
   items:
-      
     - name: Can't add favorites in enhanced protected mode
       href: administration/cannot-add-favorites-in-enhanced-protected-mode.md
 
@@ -166,7 +165,6 @@
 
 - name: Development and Website Issues
   items:
-
     - name: Add-in window appears behind the main window
       href: development-website/add-in-shows-behind-main-window.md
 
@@ -292,9 +290,6 @@
 
     - name: Troubleshoot missing graphic icons
       href: development-website/troubleshoot-missing-graphic-icons.md
-
-    - name: Troubleshoot Internet Explorer Zonemapping failures
-      href: development-website/troubleshoot-ie-zonemapping-process-group-policy.md
 
     - name: Text-overlow ellipsis not working
       href: development-website/textoverlow-ellipsis-not-working.md
