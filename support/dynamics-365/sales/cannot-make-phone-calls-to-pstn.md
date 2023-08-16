@@ -1,29 +1,36 @@
 ---
-title: Seller Can't Make Phone Calls to PSTN
-description: Troubleshot the problem of being unable to make phone calls to PSTN
+title: Seller can't make a phone call to PSTN in Dynamics 365 Sales
+description: Provides resolutions for an issue where a seller can't make a phone call to a PSTN number in Microsoft Dynamics 365 Sales.
+ms.reviewer: t-ronioded
+ms.date: 08/16/2023
 ---
+# Seller can't make a phone call to a PSTN number
 
-# Seller Can't Make Phone Calls to PSTN
+This article provides resolutions for an issue where a seller can't make a phone call to a Public Switched Telephone Network (PSTN) number using Microsoft Teams dialer.
 
-## Symptom
-When the seller attempts to make a phone call to a PSTN number, they encounter the following error message:  
-![No phone number assigned error](media/cannot-make-phone-calls-to-pstn/no-phone-number-assigned-error.png)
+## Symptoms
 
-## Root cause and resolution
-### Issue 1: Seller doesn't have Teams license or phone number assigned.
+As a seller, when you use Microsoft Teams for desktop or Microsoft Teams on the web, one of the following issues occur:
 
-#### Root cause
-The problem arises when sellers don't have the necessary Teams license or a phone number assigned to their account.
+- You can't make a phone call to a PSTN number through Microsoft Teams dialer, and you receive the following error message:
 
-#### Resolution
-Open Microsoft Teams desktop or Microsoft Teams web, you don't have the required Teams license or a phone number assigned to your account in these cases:
-1. When you try to make a call in Microsoft Teams and the call doesn't connect.
-2. If there's no work number displayed on Microsoft Teams as shown here:
-   ![Check teams number](media/cannot-make-phone-calls-to-pstn/check-teams-number.png)
+  > Something went wrong  
+  > Make sure the record has a valid phone number and try again.
 
-To resolve the problem described, follow this [documentation](https://learn.microsoft.com/microsoftteams/assign-change-or-remove-a-phone-number-for-a-user).
+  :::image type="content" source="media/cannot-make-phone-calls-to-pstn/no-phone-number-assigned-error.png" alt-text="Screenshot that shows the error that occurs when a seller can't make a phone call to a PSTN number.":::
 
-### Issue 2: Try basic troubleshooting.
+- There's no work number displayed in Microsoft Teams.
+
+  :::image type="content" source="media/cannot-make-phone-calls-to-pstn/check-work-number.png" alt-text="Screenshot that shows where the work number should be displayed in Microsoft Teams.":::
+
+## Cause 1: The seller doesn't have a Teams license or phone number assigned
 
 #### Resolution
-Follow the steps in the [basic troubleshooting](dialer-basic-troubleshooting.md).
+
+To resolve this issue, see [Assign a phone number for a user](/microsoftteams/assign-change-or-remove-a-phone-number-for-a-user#assign-a-phone-number-to-a-user).
+
+## Cause 2: Cached browsing data
+
+#### Resolution
+
+To resolve this issue, follow the steps in the [Microsoft Teams dialer basic troubleshooting steps](dialer-basic-troubleshooting.md).
