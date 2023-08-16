@@ -88,7 +88,7 @@ The **Disable SLAs** setting in the **Service Configuration Settings** might be 
 
 #### Resolution
 
-Check the **Disable SLAs** setting in the **Service Configuration Settings**. If it's set to **Yes** toggle it to **No**.
+Check the **Disable SLAs** setting in the **Service Configuration Settings**. If it's set to **Yes** toggle it to **No**. For more information, see [Service Configuration Settings](/power-platform/admin/system-settings-dialog-box-service-tab).
 
 ## Scenario 7: The "Workflow must be in Published state" or "Action must be in published State" error occurs
 
