@@ -395,7 +395,7 @@ Verify that the user account is a member of the group mentioned in the **Add Wor
 
 The GPO setting is located at **Computer Configuration** > **Policies** > **Windows Settings** > **Security Settings** > **Local Policies User Rights Assignment** > **Add workstations to domain**.
 
-To verify the default limit to the number of workstations a user can join to the domain, see [Default limit to number of workstations a user can join to the domain](/troubleshoot/windows-server/identity/default-workstation-numbers-join-domain).
+To verify the default limit to the number of workstations a user can join to the domain, see [Default limit to number of workstations a user can join to the domain](default-workstation-numbers-join-domain.md).
 
 ### Other errors that occur when you join Windows-based computers to a domain
 

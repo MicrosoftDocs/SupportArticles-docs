@@ -76,11 +76,11 @@ The NetNat configuration can be viewed by running the `Get-NetNatTransitionConfi
 
 See the following articles to troubleshoot DirectAccess server console issues:
 
-- [6to4](/troubleshoot/windows-server/networking/troubleshoot-directaccess-server-console-6to4)
-- [DNS](/troubleshoot/windows-server/networking/troubleshoot-directaccess-server-console-dns)
-- [Domain controller and Kerberos](/troubleshoot/windows-server/networking/troubleshoot-directaccess-server-console-dc-kerberos)
-- [IP-HTTPS and IPSec](/troubleshoot/windows-server/networking/troubleshoot-directaccess-server-console-ip-https-ipsec)
-- [Network and high availability](/troubleshoot/windows-server/networking/troubleshoot-directaccess-server-console-networking)
+- [6to4](troubleshoot-directaccess-server-console-6to4.md)
+- [DNS](troubleshoot-directaccess-server-console-dns.md)
+- [Domain controller and Kerberos](troubleshoot-directaccess-server-console-dc-kerberos.md)
+- [IP-HTTPS and IPSec](troubleshoot-directaccess-server-console-ip-https-ipsec.md)
+- [Network and high availability](troubleshoot-directaccess-server-console-networking.md)
 
 ## Data collection
 

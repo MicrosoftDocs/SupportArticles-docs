@@ -138,7 +138,7 @@ The hotfixes and updates are arranged by component areas within Remote Desktop S
 
 - [3091411](https://support.microsoft.com/help/3091411)  User connection fails when many connections are made to Windows Server 2012 R2-based RD Connection Broker
 
-- [Communication issues occur when Remote Desktop Connection Broker connects to SQL Server in Windows Server 2012 R2](/troubleshoot/windows-server/remote/communication-issues)
+- [Communication issues occur when Remote Desktop Connection Broker connects to SQL Server in Windows Server 2012 R2](communication-issues.md)
 
 ## Remote Desktop Gateway
 

@@ -80,4 +80,4 @@ This method also lets you install SQL Server cumulative updates that are relevan
 
 ## References
 
-Learn about the [Description of the standard terminology that is used to describe Microsoft software updates](/troubleshoot/windows-client/deployment/standard-terminology-software-updates).
+Learn about the [Description of the standard terminology that is used to describe Microsoft software updates](../../../windows-client/deployment/standard-terminology-software-updates.md).

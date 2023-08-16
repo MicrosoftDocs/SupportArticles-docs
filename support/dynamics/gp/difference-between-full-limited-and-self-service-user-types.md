@@ -34,5 +34,6 @@ At a high level, the permissions for each user Type are as follows:
 
 The best way to really understand what the users can do is to look at the role-based security inside Microsoft Dynamics GP. For more information, review these blog articles below:
 
-- [What are the SelfServe and Limited Users?](https://community.dynamics.com/gp/b/gpteamblog/archive/2014/12/17/what-are-the-self-serve-and-limited-users)
-- [ESS Security roles in Microsoft Dynamics GP 2013/GP2015 - What do they give users access to?](https://community.dynamics.com/gp/b/dynamicsgp/posts/ess-security-roles-in-microsoft-dynamics-gp-2013-and-microsoft-dynamics-gp-2015-what-do-they-give-users-access-to)
+- [What are the SelfServe and Limited Users?](https://community.dynamics.com/blogs/post/?postid=5dd0d260-fd46-49ef-8ada-43ee2cd4db9d)
+- [ESS Security roles in Microsoft Dynamics GP 2013/GP2015 - What do they give users access to?](https://community.dynamics.com/blogs/post/?postid=5381b125-c9b6-4f1a-9acf-49034f612b6d)
+

@@ -292,4 +292,4 @@ You must decommission and replace the CA if one of the following conditions is t
     6. All the users, the computers, or the services with certificates that were issued by the CA that has stopped working correctly must enroll for certificates from the new CA.
 
 > [!NOTE]
-> If this issue occurs on the Root CA of the public key infrastructure (PKI) hierarchy and if the issue cannot be repaired, you will have to replace the whole PKI hierarchy. For more information about how to remove the PKI hierarchy, see [How to decommission a Windows enterprise certification authority and remove all related objects](/troubleshoot/windows-server/windows-security/decommission-enterprise-certification-authority-and-remove-objects).
+> If this issue occurs on the Root CA of the public key infrastructure (PKI) hierarchy and if the issue cannot be repaired, you will have to replace the whole PKI hierarchy. For more information about how to remove the PKI hierarchy, see [How to decommission a Windows enterprise certification authority and remove all related objects](../windows-security/decommission-enterprise-certification-authority-and-remove-objects.md).

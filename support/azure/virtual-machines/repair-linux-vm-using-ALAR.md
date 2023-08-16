@@ -45,7 +45,7 @@ For more information about issues with a malformed */etc/fstab* file, see [Troub
 
 This action changes the default kernel. The script replaces the broken kernel with the previously installed version.
 
-For more information about messages that might be logged on the serial console for kernel-related startup events, see [How to recover an Azure Linux virtual machine from kernel-related boot issues](/troubleshoot/azure/virtual-machines/kernel-related-boot-issues).
+For more information about messages that might be logged on the serial console for kernel-related startup events, see [How to recover an Azure Linux virtual machine from kernel-related boot issues](kernel-related-boot-issues.md).
 
 ### initrd
 
