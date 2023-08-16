@@ -25,10 +25,10 @@ Ensure that the `MigrateSla` workflow process is activated.
 
 #### Symptoms
 
-This issue occurs after you migrate the SLA item using the "Send Email" template. Here are the repro steps:
+This issue occurs after you migrate the SLA item using the "Send Email" template. Here are steps to reproduce the issue:
 
 1. Create the legacy SLA and SLA item.
-2. Select **set properties** next to **send email** on the SLA item form.
+2. Select **Set Properties** next to **Send Email** on the SLA item form.
 3. In the **Description** field, add the "Send Email" template.
 
    :::image type="content" source="media/sla-migration-issues/email-template.png" alt-text="Screenshot that shows a 'Send Email' template.":::
@@ -37,14 +37,14 @@ This issue occurs after you migrate the SLA item using the "Send Email" template
 5. Activate the SLA, and set it as default.
 6. Create and save the case. Make sure that the SLA is applied. Wait for the SLA status to change to **Nearing non-compliance**, and then resolve the case.
 
-You should receive a warning email after a few minutes. You might find that the details of the warning email show the dynamics expression instead of the actual values.
+You should receive a warning email after a few minutes. You might find that the details of the warning email show the dynamic expressions instead of the actual values.
 
 #### Resolution
 
 Manually update the dynamic expression to the `FormattedValue` option field.
 
 1. In Customer Service admin center, go to **Service level agreements** under **Service Terms**.
-2. Select and expand **migrated SLA from grid**.
+2. Select and expand the migrated SLA from grid.
 3. Select **SLA item** from the **SLA Items** grid and expand it. A Power Automate flow opens.
 4. Expand each step until the email template's message.
 5. Update the dynamic expression to the `FormattedValue` option field.
@@ -66,8 +66,8 @@ This issue occurs if the SLA migration code uses the **Status** field instead of
 To solve this issue, take the following steps:
 
 1. In Customer Service admin center, go to **Service level agreements** under **Service Terms**.
-2. Select and expand migrated SLA from grid.
-3. Select **SLA item** from the **SLA Items** grid and expand it. A Power Automate flow opens.
+2. Select and expand the migrated SLA from grid.
+3. Select the SLA item from the **SLA Items** grid and expand it. A Power Automate flow opens.
 4. Expand each step until the **Is Succeeded** step.
 5. Go to the **Description** field. The **Dynamic content** window opens.
 6. Search for and select the required entity.
@@ -84,7 +84,7 @@ The following screenshot shows an email template that shows the expected text of
 
 :::image type="content" source="media/sla-migration-issues/sla-migration-email.png" alt-text="An email template that shows the text of Status during SLA migration.":::
 
-## Scenario 4: Email "subject" field is empty when the "Send Email with template" action is triggered
+## Scenario 4: Email "Subject" field is empty when the "Send Email with template" action is triggered
 
 #### Cause
 
@@ -95,8 +95,8 @@ This issue occurs when a subject like "Hello,{Case Number(Case);Case Title(Case)
 To solve this issue, take the following steps:
 
 1. In Customer Service admin center, go to **Service level agreements** under **Service Terms**.
-2. Select and expand **migrated SLA from grid**.
-3. Select **SLA item** from the **SLA Items** grid and expand it. A Power Automate flow opens.
+2. Select and expand the migrated SLA from grid.
+3. Select the SLA item from the **SLA Items** grid and expand it. A Power Automate flow opens.
 4. Expand each step until the **Is Succeeded** step.
 5. Go to the **Subject** field. The **Dynamic content** window opens.
 6. Search for and select the required entity.
