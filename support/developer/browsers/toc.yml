@@ -3,9 +3,6 @@
 
 - name: Administration
   items:
-
-    - name: Add-in window appears behind the main window
-      href: development-website/add-in-shows-behind-main-window.md
       
     - name: Can't add favorites in enhanced protected mode
       href: administration/cannot-add-favorites-in-enhanced-protected-mode.md
@@ -63,6 +60,9 @@
 
     - name: 32-bit browser applications don't work as expected
       href: administration/32-bit-browser-applications-not-working-as-expected.md
+
+    - name: Troubleshoot Internet Explorer Zonemapping failures
+      href: development-website/troubleshoot-ie-zonemapping-process-group-policy.md
 
 - name: Connectivity and Navigation
   items:
@@ -166,6 +166,9 @@
 
 - name: Development and Website Issues
   items:
+
+    - name: Add-in window appears behind the main window
+      href: development-website/add-in-shows-behind-main-window.md
 
     - name: ActiveX controls stop receiving focus
       href: development-website/webpage-fails-to-get-focus-ie-9.md
