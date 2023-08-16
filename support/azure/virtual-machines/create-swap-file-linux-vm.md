@@ -1,7 +1,7 @@
 ---
 title: Create a SWAP file for an Azure Linux VM
 description: Describes how to create a SWAP file for an Azure Linux VM.
-ms.date: 04/05/2022
+ms.date: 08/16/2022
 ms.service: virtual-machines
 ms.subservice: vm-linux-setup-configuration
 ms.collection: linux
@@ -111,46 +111,6 @@ mounts:
 EOF
 ```
 
-1. Proceed with the same steps to create the script, but you should notice a different path. Instead of `/mnt`, we use `/azure/resource` as the custom path. You can change the path or SWAPsize based on your situation.
-
-    ```bash
-    #!/bin/sh
-
-    # Percent of space on the ephemeral disk to dedicate to swap. Here 30% is being used. Modify as appropriate.
-    PCT=0.3
-
-    # Location of swap file. Modify as appropriate based on location of ephemeral disk.
-    LOCATION=/azure/resource
-
-    if [ ! -f ${LOCATION}/swapfile ]
-    then
-    
-        # Get size of the ephemeral disk and multiply it by the percent of space to allocate
-        size=$(/bin/df -m --output=target,avail | /usr/bin/awk -v percent="$PCT" -v pattern=${LOCATION} '$0 ~ pattern {SIZE=int($2*percent);print SIZE}')
-        echo "$size MB of space allocated to swap file"
-
-         # Create an empty file first and set correct permissions
-        /bin/dd if=/dev/zero of=${LOCATION}/swapfile bs=1M count=$size
-        /bin/chmod 0600 ${LOCATION}/swapfile
-
-        # Make the file available to use as swap
-        /sbin/mkswap ${LOCATION}/swapfile
-    fi
-
-    # Enable swap
-    /sbin/swapon ${LOCATION}/swapfile
-    /sbin/swapon -a
-
-    # Display current swap status
-    /sbin/swapon -s
-    ```
-
-1. Make sure the file is executable:
-
-    ```bash
-    chmod +x /var/lib/cloud/scripts/per-boot/swap.sh
-    ```
-
-1. Stop and start the VM. Stopping and starting the VM is only necessary the first time after you create the SWAP file.
+3. Stop and start the VM or redeploy to create the swap partition on the resource disk.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
