@@ -49,7 +49,7 @@ Make sure the **Automatically post cash receipt deposits** option is marked. Wit
 An alternate solution: If you wish to have individual deposits per transaction in bank reconciliation, then you must either use transaction level posting for each cash receipt (and manually post the "CMTRX" batch that stopped in GL) or put each cash receipt in its own batch. (One deposit is created per batch.)
 
 > [!NOTE]
-> The new feature for [posting post through to GL files](https://community.dynamics.com/gp/b/dynamicsgp/posts/microsoft-dynamics-gp-2018-r2-transaction-level-post-through-gl) was added for transaction level posting in Microsoft Dynamics GP 2018 R2 (18.00.0628).
+> The new feature for [posting post through to GL files](https://community.dynamics.com/blogs/post/?postid=7628b8bc-7a40-42a2-a2de-8b40dcac1a38) was added for transaction level posting in Microsoft Dynamics GP 2018 R2 (18.00.0628).
 
 ### For Microsoft Dynamics GP 18.4 and higher versions (new feature/enhancement)
 

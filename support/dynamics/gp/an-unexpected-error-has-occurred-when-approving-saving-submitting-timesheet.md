@@ -93,5 +93,5 @@ Also refer to the below article for other possible reasons for this type of mess
 
 The above article was also published externally in this blog:
 
-[An unexpected error has occurred when approving, saving, or submitting a Timesheet in Business Portal](https://community.dynamics.com/gp/b/dynamicsgp/posts/an-unexpected-error-has-occurred-when-approving-saving-or-submitting-a-timesheet-in-business-portal)
+[An unexpected error has occurred when approving, saving, or submitting a Timesheet in Business Portal](https://community.dynamics.com/blogs/post/?postid=55f74235-199a-413f-9476-265627ab563e)
 

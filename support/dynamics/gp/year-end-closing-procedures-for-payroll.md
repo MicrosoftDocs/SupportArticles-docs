@@ -270,7 +270,7 @@ The key to remember is that you have THAT YEAR'S taxes in place when you take an
 
 - Refer to our latest blog article about ACA:
 
-   [Microsoft Dynamics GP Year-End Update 2022: Affordable Care Act (ACA)](https://community.dynamics.com/gp/b/dynamicsgp/posts/microsoft-dynamics-gp-year-end-update-2022-affordable-care-act-aca)
+   [Microsoft Dynamics GP Year-End Update 2022: Affordable Care Act (ACA)](https://community.dynamics.com/blogs/post/?postid=fc90c41e-2721-4bd4-ab84-4e013c1858ee)
 
 - In the Detailed Module Information section of the [Microsoft Dynamics GP Resource](/dynamics-gp/resources) page, select [Affordable Care Act/Year End](https://mbs2.microsoft.com/fileexchange/?fileID=b6386ed9-7351-46b2-8682-6e74ca756d1c) to see the information about complying with ACA and other information about other year-end changes.
 

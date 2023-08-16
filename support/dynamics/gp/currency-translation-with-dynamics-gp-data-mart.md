@@ -29,7 +29,7 @@ Additional information on how currency translation rates are calculated, can be 
 
 - How to use Cumulative Translation Adjustment (CTA) in Management Reporter:
 
-  [How to use a Cumulative Translation Adjustment (CTA) account in Management Reporter](https://community.dynamics.com/gp/b/dynamicsgp/posts/how-to-use-a-cumulative-translation-adjustment-cta-account-in-management-reporter)
+  [How to use a Cumulative Translation Adjustment (CTA) account in Management Reporter](https://community.dynamics.com/blogs/post/?postid=e47a4e6e-99de-4ff8-9af2-f4771ea1c0b6)
 
 > [!NOTE]
 > Only the values in Microsoft Dynamics GP used by Management Reporter 2012 are explained in this article. All other fields not referenced are not used by Management Reporter 2012.
