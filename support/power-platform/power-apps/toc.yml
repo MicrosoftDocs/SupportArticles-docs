@@ -70,7 +70,7 @@
         - name: Can't import solutions or publish changes
           href: manage-apps-and-solutions/cannot-import-solutions-publish-changes.md
         - name: Concurrent solution operation failures
-          href: concurrent-solution-operation-failures.md
+          href: manage-apps-and-solutions/concurrent-solution-operation-failures.md
         - name: Duplicate security roles after solution import
           href: manage-apps-and-solutions/duplicate-security-roles.md
         - name: Data source references not updated after solution import
