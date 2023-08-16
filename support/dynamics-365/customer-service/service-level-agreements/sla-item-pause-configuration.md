@@ -11,7 +11,7 @@ This article provides a resolution for the "Nullable object must have a value" e
 
 ## Symptoms
 
-When you try to save an SLA item that has the value of `msdyn_advancedpauseconfiguratio` set to **NULL**, the following error message occurs:
+When you try to save an SLA item that has the value of `msdyn_advancedpauseconfiguration` set to **NULL**, the following error message occurs:
 
 > Nullable object must have a value.
 
@@ -25,7 +25,7 @@ In the **Pause Configurations** section of an SLA item, set the **Override Crite
 
 :::image type="content" source="media/sla-item-pause-configuration/sla-advance-pause-config.png" alt-text="Screenshot that shows how to enable or disable the advance pause configuration.":::
 
-The **Pause Configurations** section doesn't appear when **Allow Pause and Resume** is set to **No**. In this scenario, follow the steps to set the value of `msdyn_advancedpauseconfiguration` to **False**.
+The **Pause Configurations** section doesn't appear when **Allow Pause and Resume** is set to **No**. In this scenario, follow these steps to set the value of `msdyn_advancedpauseconfiguration` to **False**.
 
 1. Open an SLA item record in an SLA.
 2. Press <kbd>F12</kbd> to open the developer tools window.
