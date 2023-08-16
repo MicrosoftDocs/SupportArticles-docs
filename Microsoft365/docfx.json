@@ -102,15 +102,15 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "breadcrumb_path": "/office365/troubleshoot/breadcrumb/toc.json",
+      "breadcrumb_path": "/microsoft-365/troubleshoot/breadcrumb/toc.json",
       "extendBreadcrumb": true,
       "recommendations": true,
       "feedback_system": "Standard",
       "feedback_product_url": "https://admin.microsoft.com/adminportal/home?showfeedback=DocsMacCampaign",
       "hideEdit": true,
-      "searchScope": "Office 365 Support",
+      "searchScope": ["Microsoft 365 Support"],
       "uhfHeaderId": "MSDocsHeader-M365-IT",
-      "titleSuffix": "Office 365",
+      "titleSuffix": "Microsoft 365",
       "contributors_to_exclude": [ 
         "beccarobins"
       ]

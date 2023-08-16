@@ -123,7 +123,7 @@
       "feedback_product_url": "https://feedbackportal.microsoft.com/feedback/forum/06735c62-321c-ec11-b6e7-0022481f8472",
       "hideEdit": true,
       "uhfHeaderId": "MSDocsHeader-M365-IT",
-      "searchScope": "SharePoint Support",
+      "searchScope": ["SharePoint Support"],
       "titleSuffix": "SharePoint",
       "contributors_to_exclude": [ 
         "beccarobins"
