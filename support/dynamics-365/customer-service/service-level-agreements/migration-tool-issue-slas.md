@@ -7,7 +7,7 @@ ms.date: 08/11/2023
 ---
 # Can't use the SLA migration tool to migrate a large number of SLAs
 
-This article provides a resolution for the issue where you can't use the service-level agreement (SLA) migration tool to migrate a large number of SLAs in Dynamics 365 Customer Service.
+This article provides a resolution for the issue where you can't use the [service-level agreement (SLA) migration tool](/dynamics365/customer-service/migrate-automatic-record-creation-and-sla-agreements) to migrate a large number of SLAs in Dynamics 365 Customer Service.
 
 ## Symptoms
 
