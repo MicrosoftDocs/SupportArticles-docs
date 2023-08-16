@@ -115,10 +115,10 @@ You can download the FixMissingMSI tool from the [GitHub repository](https://git
 
 ### How to use
 
-It's a graphical user interface (GUI) tool that enables you to identify and fix the missing MSIs easily. Follow these steps to use it:
+FixMissingMSI is a graphical user interface (GUI) tool that enables you to identify and fix the missing MSIs easily. Follow these steps to use it:
 
 1. Prepare or locate the installation media for the SQL Server version(s) you need to fix.
-1. Download and extract the media locally where you may be missing files. Do this in separate folders for RTM, services packs, or cumulative updates. For example:
+1. Download and extract the media locally on the computer where you may be missing MSI or MSP files. Do this in separate folders for RTM, services packs, or cumulative updates. For example:
 
    ```output
    c:\sqlsetup\RTM2017
@@ -134,7 +134,7 @@ It's a graphical user interface (GUI) tool that enables you to identify and fix 
    1. Choose a directory where to extract the file, for example, `c:\sqlsetup\SQL2016SP3`.
 
 1. Launch *FixMissingMSI.exe*.
-1. The **Scan** dialog shows. In the top text box, specify a folder where you downloaded the setup files in step 2 (for example, *d:\sqlsetup\RTM2017*).
+1. The **Scan** dialog appears. In the top text box, specify a folder where you downloaded the setup files in step 2 (for example, *d:\sqlsetup\RTM2017*).
 1. In the Scan Filter, you can keep the default "Product name contains: SQL".
 1. Select **Scan Now**.
 1. If any items are reported as **Missing**, the **Status** column will have a value of **Missing**, and the row will be highlighted in red.
