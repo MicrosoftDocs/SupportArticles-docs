@@ -23,4 +23,5 @@ Error code 8004801e indicates a generic error occurred during import of the solu
 
 ## Resolution
 
-Select the **Download Log File** button to find more details about the error. If the error persists and you aren't able to resolve the issue using the details in the log file, contact Microsoft Support for assistance. You can also use the information in the log file to search for potential solutions in the [Dynamics 365 Communities](https://community.dynamics.com/f).
+Select the **Download Log File** button to find more details about the error. If the error persists and you aren't able to resolve the issue using the details in the log file, contact Microsoft Support for assistance. You can also use the information in the log file to search for potential solutions in the [Dynamics 365 Communities](https://community.dynamics.com/forums/thread/).
+
