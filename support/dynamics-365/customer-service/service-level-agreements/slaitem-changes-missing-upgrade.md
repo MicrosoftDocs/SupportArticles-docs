@@ -11,15 +11,15 @@ This article provides a resolution for the issue where the changes to a service-
 
 ## Symptoms
 
-Changes like **Applicable when**, **Success**, **Pause** conditions, or adding action flows through an upgrade solution don't appear in the SLA of the target organization. This is the expected behavior and is applicable to both Unified Interface and legacy SLAs.
+Changes to **Applicable When**, **Success Conditions**, or **Pause Conditions**, or adding action flows through an upgrade solution don't appear in the SLA of the target organization. This is the expected behavior and is applicable to both Unified Interface and legacy SLAs.
 
 ## Cause
 
-When an SLA is activated, or an SLA item record is modified manually on the organization (for example, the **Applicable when** conditions, the **Success**, **Warning**, or **Failure** actions), the upgrade solution changes aren't reflected. This is because the active layer takes precedence over the upgrade solution.
+When an SLA is activated, or an SLA item record is modified manually on the organization (for example, the **Applicable When** conditions, the **Success**, **Warning**, or **Failure** actions), the upgrade solution changes aren't reflected. This is because the active layer takes precedence over the upgrade solution.
 
 ## Resolution
 
-We recommend that you make changes to an SLA or an SLA item record only through an upgrade solution. If the issue persists even after importing the patch solution, you can select the **Overwrite customizations (not recommended)** option while importing the full solution. Overwriting customization removes all the active layer customizations on the SLA. Therefore, all the changes in the upgrade solution are reflected. Overwrite customization might only be visible in a "Legacy Solution" import.
+We recommend that you make changes to an SLA or an SLA item record only through an [upgrade solution](/dynamics365/customer-service/export-import-solution?tabs=customerserviceadmincenter#recommended-procedure-for-upgrading-a-solution). If the issue persists even after importing the patch solution, you can select the **Overwrite customizations (not recommended)** option while importing the full solution. Overwriting customization removes all the active layer customizations on the SLA. Therefore, all the changes in the upgrade solution are reflected. Overwrite customization might only be visible in a "Legacy Solution" import.
 
 1. [Create updates using clone solution and clone to patch](/power-platform/alm/update-solutions-alm#creating-updates-using-clone-solution-and-clone-to-patch). Use the "Clone to solution" steps to create a separate solution and export it as a managed solution.
 
