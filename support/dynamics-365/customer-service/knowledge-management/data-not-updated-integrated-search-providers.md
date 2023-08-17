@@ -1,8 +1,8 @@
 ---
 title: Data isn't updated on the Insights tab for integrated search providers
 description: Provides a resolution for the issue where data isn't updated on the Insights tab for integrated search providers in Dynamics 365 Customer Service.
-ms.author: ravimanne
-ms.reviewer: sdas
+ms.author: sdas
+ms.reviewer: sdas, ankugupta
 ms.date: 07/10/2023
 ---
 # Integrated search provider data on the Insights tab isn't updated after a scheduled refresh
