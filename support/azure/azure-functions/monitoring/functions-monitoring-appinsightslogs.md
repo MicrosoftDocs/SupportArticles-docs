@@ -5,7 +5,7 @@ ms.date: 08/15/2023
 ms.reviewer: gasridha, v-jayaramanp
 ---
 
-# Application Insights logs are missing or incorrect for Azure Function apps
+# Application Insights logs are missing or incorrect for Azure Function Apps
 
 You can closely monitor your Function apps through the integration between [Azure Functions](https://azure.microsoft.com/products/functions) and Application Insights. You can use Application Insights without any custom configuration.
 
@@ -15,7 +15,7 @@ If the Application Insights logs are missing or if the data appears to be partia
 
 ## How can I check if my Function app is configured correctly to emit logs?
 
-The **Diagnose and Solve** option in Azure Functions has a **Function Configuration checks** detector that checks the configuration for Application Insights, particularly the following:
+The **Diagnose and Solve** option in Azure Functions App has a **Function Configuration checks** feature that checks the configuration for Application Insights, particularly the following:
 
 - Only one of the connection settings Application Insights Instrumentation key `APPINSIGHTS_INSTRUMENTATIONKEY` or the `APPLICATIONINSIGHTS_CONNECTION_STRING` connection string exists. We recommend using the [APPLICATIONINSIGHTS_CONNECTION_STRING](/azure/azure-monitor/app/sdk-connection-string?tabs=net#overview) for more stable behavior. Using `APPINSIGHTS_INSTRUMENTATIONKEY` will be deprecated by 2025.
 - The `AzureWebJobsDashboard` built-in logging is disabled, as recommended.
@@ -25,7 +25,7 @@ The **Diagnose and Solve** option in Azure Functions has a **Function Configurat
 
 ## Why are the logs missing or partial? What is sampling?
 
-Application Insights collects log, performance, and error data. [Sampling configuration](/azure/azure-functions/configure-monitoring?tabs=v2#configure-sampling) can be used to reduce the volume of telemetry. The feature Sampling is enabled by default with the settings shown in the example below. Excluded types are not sampled.
+Application Insights collects log, performance, and error data. [Sampling configuration](/azure/azure-functions/configure-monitoring?tabs=v2#configure-sampling) is used to reduce the volume of telemetry. The Sampling feature is enabled by default with the settings shown in the following example. Excluded types aren't sampled.
 
 ```JSON
 host.json
@@ -42,9 +42,9 @@ host.json
 }
 ```
 
-If you observe partially missing logs, this is probably due to sampling. To find out the actual sampling rate, use an Analytics query with the required time interval as shown in the following code snippet. If you see that the `TelemetrySavedPercentage` for any type is less than 100, then that type of telemetry is being sampled.
+If you observe partially missing logs, this is probably due to sampling. To find out the actual sampling rate, use an Analytics query with the required time interval as shown in the following code snippet. If you see that the `TelemetrySavedPercentage` for any sampling type is less than 100, then that type of telemetry is being sampled.
 
-```C#
+```console
 union requests,dependencies,pageViews,browserTimings,exceptions,traces
 | where timestamp > todatetime("mm/dd/yyyy hh:mm:ss") and timestamp < todatetime("mm/dd/yyyy hh:mm:ss")
 | summarize TelemetrySavedPercentage = 100/avg(itemCount), TelemetryDroppedPercentage = 100-100/avg(itemCount) by bin(timestamp, 1d), itemType
@@ -57,14 +57,14 @@ For more information, see [Data collection, retention, and storage in Applicatio
 
 By using a combination of log level and categories configured in *host.json*, you can increase or suppress the logs being written.
 
-The Azure Functions logger includes a category for every log. The category indicates which part of the runtime code or your function code wrote the log. For example:
+The Azure Functions logger includes a category for every log. The category indicates which part of the runtime code or your function code generated the log. For example:
 
 - The `Host.Results` and `Function.<YOUR_FUNCTION_NAME>` are some of the available categories.
 - A log level is assigned to every log. The value indicates relative importance, such as `Warning` or `Information`.
 
 For more information, see the other [categories](/azure/azure-functions/configure-monitoring?tabs=v2#configure-categories) and [log levels](/azure/azure-functions/configure-monitoring?tabs=v2#configure-log-levels) available.
 
-You can configure how your application should write the logs by using the following the sample code snippet as a guide.
+You can configure how your application should write the logs by using the following sample code snippet:
 
 ```JSON
 {
