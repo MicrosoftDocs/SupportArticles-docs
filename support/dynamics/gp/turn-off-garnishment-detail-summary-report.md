@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 4072348
 How can you turn off the Garnishment Detail/Summary reports from printing in Payroll for Microsoft Dynamics GP?  
 They're slowing down our payroll process.
 
-View the new feature in [Microsoft Dynamics GP 2018 Who wants to see those pesky garnishment reports that slow down the process of my payroll? Turn off Garnishment reports in Posting Setup](https://community.dynamics.com/gp/b/dynamicsgp/posts/who-wants-to-see-those-pesky-garnishment-reports-that-slow-down-the-process-of-my-payroll-turn-off-garnishment-reports-in-posting-setup).
+View the new feature in [Microsoft Dynamics GP 2018 Who wants to see those pesky garnishment reports that slow down the process of my payroll? Turn off Garnishment reports in Posting Setup](https://community.dynamics.com/blogs/post/?postid=0228ded7-30bb-4417-94c4-0697971bd21c).
 
 ## Resolution
 

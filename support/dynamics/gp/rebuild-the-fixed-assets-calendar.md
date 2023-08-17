@@ -24,7 +24,7 @@ Steps to rebuild the Fixed Assets calendar can be used as part of the troublesho
 
 In Dynamics GP 2013 RTM, you can set up the FA calendar based on the Company fiscal period setup, a calendar year or an existing FA calendar setup, and also build short/long years. The FA calendar doesn't need to match the Company fiscal period calendar. You can set up an unlimited number of FA Calendar IDs, but only one can be assigned to a Book and is locked down once it has been used. If you need to change the FA calendar from a calendar year to fiscal year or vice versa, it's recommended to edit the existing calendar ID for periods going forward only. You can't change the periods for historical years or a 'reset life' will cause damaged data. Therefore, only change the periods going forward, as outlined in the example in this blog:
 
-[Guidelines for fiscal period/year changes with Fixed Assets in Microsoft Dynamics GP 10 and 2010](https://community.dynamics.com/gp/b/dynamicsgp/posts/guidelines-for-fiscal-period-year-changes-with-fixed-assets-in-dynamics-gp-10-and-2010)
+[Guidelines for fiscal period/year changes with Fixed Assets in Microsoft Dynamics GP 10 and 2010](https://community.dynamics.com/blogs/post/?postid=06009afe-d4fc-42c2-9cdd-bfedacbc273f)
 
 ## Microsoft Dynamics GP 2013 and later versions
 
