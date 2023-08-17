@@ -4377,7 +4377,7 @@
     {
       "source_path": "support/developer/webapps/iis/iis-extensions-tools-addons/troubleshooting-problems-with-microsoft-web-platform-installer.md",
       "redirect_url": "/previous-versions/troubleshoot/iis/troubleshoot-problems-microsoft-web-platform-installer",
-      "redirect_document_id": true
+      "redirect_document_id": false
     }
   ]
 }
