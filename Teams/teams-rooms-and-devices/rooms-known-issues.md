@@ -56,6 +56,12 @@ This article lists the known issues for the Microsoft Teams Rooms app when it's 
 
 ## Teams Rooms on Android
 
+### Issues affecting all devices
+
+| Issue  |  Description | Workaround |
+| --- | --- | --- |
+|The **Report an issue** option in Teams Rooms on Android devices doesn't work|In Teams Rooms on Android devices, Teams phones, Teams panels and Teams displays, the **Report an issue** option under **Settings** is unavailable.|The option to report issues from Teams Rooms on Android devices is being enhanced. The **Report an issue** option will be unavailable until the updated experience is released.</br></br>If you were using the **Report an issue** option to collect device logs to troubleshoot issues, use the Microsoft Teams admin center instead. See [Collect Android Teams device logs](/microsoftteams/troubleshoot/teams-rooms-and-devices/collect-device-logs) for detailed instructions.|
+
 ### Issues with meeting room devices
 
 | Issue  |  Description | Workaround |
@@ -63,6 +69,7 @@ This article lists the known issues for the Microsoft Teams Rooms app when it's 
 | Laser pointer and drawing tools in PowerPoint Live don't display for in-room participants | In-room meeting participants in a Teams meeting who are using Teams Rooms on Android devices aren't able to see the following features during a PowerPoint Live presentation: Laser pointer, pen, highlighter, and eraser. | Join the meeting on your personal device to see the laser pointer and drawing tools in PowerPoint Live. |
 | Teams Admin Settings unavailable on Teams Rooms on Android devices with Teams Rooms Basic license. | The **Teams Admin Settings** option under **Device Settings** is unavailable on devices that have the Teams Rooms Basic license for Teams Rooms on Android CY22 U3 app (version 1449/1.0.96.2022120503). | Admins can either assign a Teams Rooms Pro license to the same device or downgrade the device to use Teams Rooms on Android CCY22 U2B app (version: 1449/1.0.96.2022090606) instead. |
 | Volume of the audio received from Poly Studio X30 or X50 devices is low. | In a Teams meeting that uses either the Poly Studio X30 or Poly Studio X50 Teams Rooms device, the audio that is sent to remote participants might have low volume. <br/><br/>This issue occurs because of a change made to Teams audio processing which causes the audio level of the microphone on the device to be set very low. | Log into the web interface for the affected Poly Studio X30 or X50 device using administrator credentials and use the following steps:<ol><li>Select **Audio / Video** > **Audio**.</li><li>Select the drop-down arrow in the **Transmission Audio Gain (dB)** field.</li><li>Select a number between 14 & 18 to specify the decibels for the audio sent from the microphone.</li></ol>
+|The **Report an issue** option in Teams Rooms on Android devices doesn't work|In Teams Rooms on Android devices, Teams phones, Teams panels and Teams displays, the **Report an issue** option under **Settings** is unavailable.|The option to report issues from Teams Rooms on Android devices is being enhanced. The **Report an issue** option will be unavailable until the updated experience is released.</br></br>If you were using the **Report an issue** option to collect device logs to troubleshoot issues, use the Microsoft Teams admin center instead. See [Collect Android Teams device logs](/microsoftteams/troubleshoot/teams-rooms-and-devices/collect-device-logs) for detailed instructions.|
 
 ### Issues with Teams phones
 
