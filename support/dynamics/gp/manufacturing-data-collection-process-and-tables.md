@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 4054354
 
 The below information can be viewed in this blog article:
 
-[Manufacturing Data Collection Process and Tables](https://community.dynamics.com/gp/b/dynamicsgp/posts/manufacturing-data-collection-process-and-tables)
+[Manufacturing Data Collection Process and Tables](https://community.dynamics.com/blogs/post/?postid=7085e1b9-81cf-40a1-8115-9298f9b87223)
 
 ## More information
 

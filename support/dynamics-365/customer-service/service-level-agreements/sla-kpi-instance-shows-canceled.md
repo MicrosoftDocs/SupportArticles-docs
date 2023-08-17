@@ -1,8 +1,8 @@
 ---
 title: SLA KPI instance status shows as Canceled
 description: Provides a resolution for the issue that occurs when you define the Applicable when or Applicable from changes and Success condition on the same attribute.
-ms.reviewer: sdas
-ms.author: ravimanne
+ms.reviewer: sdas, ankugupta
+ms.author: sdas
 ms.date: 06/28/2023
 ---
 # The SLA KPI instance status shows as Canceled

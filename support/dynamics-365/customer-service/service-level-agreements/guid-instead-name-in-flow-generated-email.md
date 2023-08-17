@@ -1,8 +1,8 @@
 ---
 title: GUID is shown instead of an owner name in the flow-generated email body
 description: Provides a resolution for the issue where the system user lookup is shown as a GUID instead of an owner name in the flow-generated email body.
-ms.reviewer: sdas
-ms.author: ravimanne
+ms.reviewer: sdas, ankugupta
+ms.author: sdas
 ms.date: 06/09/2023
 ---
 # A GUID is populated instead of an owner name in the flow-generated email body

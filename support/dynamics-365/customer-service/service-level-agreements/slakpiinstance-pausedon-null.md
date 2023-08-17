@@ -1,8 +1,8 @@
 ---
 title: SLA KPI instance status is On-Hold (paused) but pausedon is set to null
 description: Provides a resolution for an issue where the SLA KPI instance's pausedon property is set to null when the SLA instance's status is On-Hold (paused).
-ms.reviewer: sdas
-ms.author: ravimanne
+ms.reviewer: sdas, ankugupta
+ms.author: sdas
 ms.date: 07/18/2023
 ---
 # The value of pausedon is null when the SLA KPI instance’s status is On-Hold (paused) 

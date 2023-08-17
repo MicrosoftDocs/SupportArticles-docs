@@ -1,14 +1,14 @@
 ---
 title: SQL Server upgrade fails with error 5133
 description: Troubleshoots and solves an issue where a Cumulative Update or Service Pack for SQL Server reports error 5133 when executing database upgrade scripts.
-ms.date: 01/11/2023
+ms.date: 08/09/2023
 ms.custom: sap:Installation, Patching and Upgrade
 ms.reviewer: ramakoni, v-sidong
 ---
 
 # SQL Server upgrade fails with error 5133 when executing update database scripts
 
-This article helps you troubleshoot and solve an issue where a Cumulative update (CU) or Service Pack (SP) for SQL Server reports error 5133 when executing database upgrade scripts.
+This article helps you troubleshoot and solve an issue where a cumulative update (CU) or service pack (SP) for SQL Server reports error 5133 when executing database upgrade scripts.
 
 ## Symptoms
 
@@ -67,7 +67,8 @@ SQL Server reports error 598 when it runs into an error while executing [CREATE 
 
 1. Restart the SQL Server instance.
 
-Once the SQL Server instance starts, the upgrade script will be executed again.
+      Once the SQL Server instance starts, the upgrade script will be executed again.
 
-- If the SP or CU upgrade script completes successfully, you can check the SQL Server error log and bootstrap folder to verify.
-- If the upgrade script fails again, check the SQL Server error log for other errors and troubleshoot the new errors.
+      - If the SP or CU upgrade script completes successfully, you can check the SQL Server error log and bootstrap folder to verify.
+      - If the upgrade script fails again, check the SQL Server error log for other errors and troubleshoot the new errors.
+    
