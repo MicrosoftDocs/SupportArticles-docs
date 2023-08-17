@@ -1,40 +1,59 @@
 ---
-title: Seller Voice Unheard by Other Customer
-description: Troubleshot the problem when other customer is unable to hear the seller.
+title: Customers can't hear a seller in a call in Dynamics 365 Sales
+description: Provides a resolution for an issue where customers can't hear a seller in a call in Microsoft Dynamics 365 Sales.
+ms.date: 08/17/2023
+ms.reviewer: t-ronioded
 ---
+# Customers can't hear a seller in a call
 
-# Seller Voice Unheard by Other Customer
+This article provides a resolution for an issue where customers can't hear a seller in a call in Microsoft Dynamics 365 Sales.
 
-## Symptom
-When the Seller is speaking during a call, the other customer can't hear their voice.
+## Symptoms
 
-## Root cause and resolution
-### Issue 1: Incorrect Device Selection
+When a seller is speaking in a call in Dynamics 365 Sales, the customers can't hear the seller.
 
-#### Root cause
-The problem arises from sellers not selecting the correct microphone device in the dialer's device settings.
+### Cause 1: An incorrect device is selected
 
-#### Resolution
-To resolve the problem, ensure the right microphone device is chosen by following these steps:
-1. Click on the three dots menu, and then select "Device Settings":  
-   ![Dialer menu](media/seller-voice-unheard-by-other-customer/dialer-menu.png)  
-2. Choose the appropriate microphone device:  
-   ![Dialer device settings](media/seller-voice-unheard-by-other-customer/dialer-device-settings.png)  
-
-### Issue 2: Browser Microphone permissions
-
-#### Root cause
-The issue is often caused because the seller doesn't enable microphone permissions on the browser.
+The issue occurs because the seller doesn't select the correct microphone device in the dialer's device settings.
 
 #### Resolution
-To enable microphone permissions for the browser, follow these steps:
-1. Click on "Allow" in the pop-up window next to the lock icon located below to the address bar:  
-   * On Google Chrome:  
-   ![Chrome allow microphone](media/seller-voice-unheard-by-other-customer/chrome-allow-microphone.png)  
-   * On Microsoft Edge:  
-   ![Edge allow microphone](media/seller-voice-unheard-by-other-customer/edge-allow-microphone.png)
-2. If you have previously disabled the microphone permissions, you can re-enable it by clicking the same lock icon:  
-   * On Google Chrome, click on the toggle located next to "Microphone":  
-   ![Chrome enable microphone](media/seller-voice-unheard-by-other-customer/chrome-enable-microphone.png)   
-   * On Microsoft Edge, click on "Block" and then select "Allow":  
-   ![Edge enable microphone](media/seller-voice-unheard-by-other-customer/edge-enable-microphone.png)
+
+To resolve the issue, ensure the correct microphone device is selected by following these steps:
+
+1. Select the three dots ("...") on the dialer menu, and then select **Device Settings**.
+
+   :::image type="content" source="media/seller-voice-unheard-by-other-customer/dialer-menu.png" alt-text="Screenshot that shows the Device Settings option in the dialer menu.":::
+
+2. Select the appropriate microphone device.
+
+   :::image type="content" source="media/seller-voice-unheard-by-other-customer/dialer-device-settings.png" alt-text="Screenshot that shows the dialer device settings.":::
+
+### Issue 2: Microphone isn't enabled in the web browser
+
+The issue occurs because the web browser doesn't have the access to your microphone.
+
+#### Resolution
+
+To enable the access to your microphone in the web browser, follow these steps:
+
+1. Open the web browser and select the lock icon in the address bar.
+
+1. Select **Allow** in the pop-up window to enable the access. Depending on the browser you're using, the pop-up window may appear slightly different, but the process of enabling the access remains the same. The following screenshots show the **Allow** option in Google Chrome and Microsoft Edge.
+
+   - The **Allow** option in Google Chrome:
+
+     :::image type="content" source="media/seller-voice-unheard-by-other-customer/chrome-allow-microphone.png" alt-text="Screenshot that shows the Allow option to enable your microphone in Google Chrome.":::
+
+   - The **Allow** option in Microsoft Edge:
+
+     :::image type="content" source="media/seller-voice-unheard-by-other-customer/edge-allow-microphone.png" alt-text="Screenshot that shows the Allow option to enable your microphone in Microsoft Edge.":::
+
+If you have previously disabled the access to your microphone in the web browser, you also can re-enable it by selecting the lock icon in the address bar.
+
+- In Google Chrome, turn on the toggle located next to **Microphone**.
+
+   :::image type="content" source="media/seller-voice-unheard-by-other-customer/chrome-enable-microphone.png" alt-text="Screenshot that shows how to re-enable your microphone in Google Chrome.":::
+
+- In Microsoft Edge, select **Block** and then select **Allow**.
+
+   :::image type="content" source="media/seller-voice-unheard-by-other-customer/edge-enable-microphone.png" alt-text="Screenshot that shows how to re-enable your microphone in Microsoft Edge.":::

@@ -1,19 +1,23 @@
 ---
-title: Duplicate Phone Calls
-description: Troubleshot the problem where duplicate phone calls are being created.
+title: Duplicate phone calls are created when using Sales accelerator in Dynamics 365 Sales
+description: Provides a resolution for an issue where duplicate phone calls are created when you use the Sales accelerator in Microsoft Dynamics 365 Sales.
+ms.date: 08/16/2023
+ms.reviewer: t-ronioded
 ---
+# Duplicate phone calls are created when you use Sales accelerator
 
-# Duplicate Phone Calls
+This article provides a resolution for an issue where duplicate phone calls are created when you use the [Sales accelerator](/dynamics365/sales/sales-accelerator-intro) in Dynamics 365 Sales.
 
-## Symptom
-User makes calls from Sales Accelerator and notices there are multiple phone calls being created for the same call.
+## Symptoms
 
-## Root cause and resolution
-### Issue: Both Sales Accelerator and TeamsDialer create a phone call.
+When you make calls from the Sales accelerator in Dynamics 365, there are multiple phone calls are created for the same call.
 
-#### Root cause
-The problem arises from both Sales Accelerator and TeamsDialer create a phone call.
+## Cause
 
-#### Resolution
-To resolve the problem, you have to turn off the SalesAccelerator creation, by excluding phone call (checking this box).
-![Global settings sales accelerator](media/duplicate-phonecalls/global-settings-sales-accelerator.png)
+This issue occurs because both Sales accelerator and Teams dialer create a phone call.
+
+## Resolution
+
+To resolve this issue, you need to select the **Exclude phone call activities** checkbox on the [Sequence activities](/dynamics365/sales/customize-sales-accelerator-sellers#sequence-activities) page to avoid creating a duplicate phone call activity.
+
+:::image type="content" source="media/duplicate-phonecalls/exclude-phone-call-activities.png" alt-text="Screenshot that shows the Exclude phone call activities checkbox on the Sequence activities page of Sales accelerator settings.":::
