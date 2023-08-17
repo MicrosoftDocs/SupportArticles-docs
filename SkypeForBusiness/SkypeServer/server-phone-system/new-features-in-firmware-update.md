@@ -70,7 +70,7 @@ The following table lists the features that are provided in this firmware update
 
 ## More information
 
-- [Polycom Phones FAQ](https://www.polycom.com/polycom-phones-and-microsoft-teams-faq.html)
+- [Polycom Phones FAQ](https://support.poly.com/support/s/article/Poly-Teams-Device-Certification-FAQ)
 - [OAuth 2.0 and third-party application ID](https://techcommunity.microsoft.com/t5/skype-for-business-blog/oauth-2-0-and-third-party-application-id-timeline-extended-to/ba-p/482876)
 - [IP Phones](/skypeforbusiness/certification/devices-ip-phones)
 - [Device update considerations](/skypeforbusiness/what-is-phone-system-in-office-365/getting-phones-for-skype-for-business-online/deploying-skype-for-business-online-phones#step-4---device-update-considerations)
