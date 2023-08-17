@@ -54,10 +54,10 @@ To solve the issue, follow these steps:
 1. Fix the failed transaction according to the information in the [Potential causes and solutions](#potential-causes-and-solutions) section.
 1. Remove trace flag 902 from the **Startup Parameters** item and restart SQL Server.
 
-Once SQL Server starts without trace flag 902, the upgrade script will be executed again.
+   Once SQL Server starts without trace flag 902, the upgrade script will be executed again.
 
-- If the SP/CU upgrade script completes successfully, you can check the SQL Server error log and bootstrap folder to verify.
-- If the upgrade script fails again, check the SQL Server error log for other errors and troubleshoot the new errors.
+    - If the SP/CU upgrade script completes successfully, you can check the SQL Server error log and bootstrap folder to verify.
+    - If the upgrade script fails again, check the SQL Server error log for other errors and troubleshoot the new errors.
 
 ### Example pattern: Issues granting permissions to system role
 

@@ -18,4 +18,4 @@ Human Resource and Payroll Workflow Setup for Microsoft Dynamics GP 2015.
 
 ## Resolution
 
-See [Microsoft Dynamics GP On Demand Learning Series](https://community.dynamics.com/gp/b/dynamicsgp/archive/2015/10/26/draft-microsoft-dynamics-gp-web-series) with links to this video and other on-demand learning opportunities.
+See [Microsoft Dynamics GP On Demand Learning Series](https://community.dynamics.com/blogs/post/?postid=4a4b457d-0fc8-48c6-a1ae-7aa6b2322c14) with links to this video and other on-demand learning opportunities.

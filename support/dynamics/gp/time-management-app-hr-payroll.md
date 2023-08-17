@@ -30,11 +30,11 @@ New functionality.
 
 This App will use the settings within Microsoft Dynamics GP to determine what types of pay codes the user can enter time against.
 
-Refer to [Time Management App for Human Resource and Payroll!!!](https://community.dynamics.com/gp/b/dynamicsgp/archive/2015/06/17/time-management-app-for-human-resource-and-payroll) to download a new features Word document with more information and detailed instructions on install and setup for the Time Management App (and has a video link within the Word document as well).
+Refer to [Time Management App for Human Resource and Payroll!!!](https://community.dynamics.com/blogs/post/?postid=7c298e39-98dc-4f81-94d2-eb43ad7c63e3) to download a new features Word document with more information and detailed instructions on install and setup for the Time Management App (and has a video link within the Word document as well).
 
 ## Troubleshooting
 
-With the release of Microsoft Dynamics GP 2015 R2, the Time Management is now available in the Microsoft, Android, and Apple app stores for your PC and tablet form factor devices. This app allows salaried employees to enter time against pay codes (for example, PTO and Sick) within a simple calendar interface and then submit their timecards for approval. See [Time Management App - Troubleshooting](https://community.dynamics.com/gp/b/dynamicsgp/archive/2015/10/06/time-management-app-troubleshooting)to learn more.
+With the release of Microsoft Dynamics GP 2015 R2, the Time Management is now available in the Microsoft, Android, and Apple app stores for your PC and tablet form factor devices. This app allows salaried employees to enter time against pay codes (for example, PTO and Sick) within a simple calendar interface and then submit their timecards for approval. See [Time Management App - Troubleshooting](https://community.dynamics.com/blogs/post/?postid=aeb43d31-62d7-4ca5-a532-108617874837)to learn more.
 
 ## More information
 

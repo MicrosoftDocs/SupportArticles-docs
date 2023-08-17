@@ -59,6 +59,6 @@ To resolve the 1712 error, follow these steps:
 
 1. After SQL Server starts without TF 902, the upgrade script will run again.
 
-   - If the upgrade script finishes successfully, the SP or CU upgrade is complete. You can check the SQL Server error log and bootstrap folder to verify the completed installation.
+   - If the upgrade script finishes successfully, the Service Pack (SP) or Cumulative Update (CU) upgrade is complete. You can check the SQL Server error log and bootstrap folder to verify the completed installation.
 
    - If the upgrade script fails again, check the SQL Server error log for additional error entries, and then troubleshoot the new errors.
