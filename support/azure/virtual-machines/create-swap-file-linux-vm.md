@@ -1,7 +1,7 @@
 ---
 title: Create a SWAP file for an Azure Linux VM
 description: Describes how to create a SWAP file for an Azure Linux VM.
-ms.date: 08/17/2022
+ms.date: 08/17/2023
 ms.service: virtual-machines
 ms.subservice: vm-linux-setup-configuration
 ms.collection: linux
