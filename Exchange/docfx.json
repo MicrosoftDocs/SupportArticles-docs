@@ -145,6 +145,12 @@
         "ExchangeOnline/send-emails/**/*.md": "send-emails",
         "ExchangeOnline/public-folders/**/*.md": "public-folders",
         "ExchangeOnline/user-and-shared-mailboxes/**/*.md": "user-and-shared-mailboxes"
+      },
+      "author": {
+        "**/*.md": "cloud-writer"
+      },
+      "ms.author": {
+        "**/*.md": "meerak"
       }
     },
     "template": [],

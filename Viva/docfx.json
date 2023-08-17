@@ -50,11 +50,19 @@
     "fileMetadata": {
       "ms.service": {
         "Learning/**/*.md": "viva",
-        "Connections/**/*.md": "viva"        
+        "Connections/**/*.md": "viva",
+        "Glint/**/*.md": "viva"       
       },
       "ms.subservice": {
         "Connections/**/*.md": "viva-connections",
-        "Learning/**/*.md": "viva-learning"
+        "Learning/**/*.md": "viva-learning",
+        "Glint/**/*.md": "viva-glint"
+      },
+      "author": {
+        "**/*.md": "helenclu"
+      },
+      "ms.author": {
+        "**/*.md": "luche"
       }
     },
     "template": [],

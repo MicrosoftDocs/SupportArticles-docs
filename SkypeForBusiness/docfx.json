@@ -135,7 +135,13 @@
         "SkypeServer/server-meetings/**/*.md": "meetings",
         "SkypeServer/server-contacts/**/*.md": "contacts",
         "SkypeServer/server-phone-system/**/*.md": "phone-system"
-      }      
+      },
+      "author": {
+        "**/*.md": "helenclu"
+      },
+      "ms.author": {
+        "**/*.md": "luche"
+      }
     },
     "template": [],
     "dest": "OfficeDocs-Support-Skype",

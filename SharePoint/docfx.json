@@ -123,22 +123,17 @@
       "feedback_product_url": "https://feedbackportal.microsoft.com/feedback/forum/06735c62-321c-ec11-b6e7-0022481f8472",
       "hideEdit": true,
       "uhfHeaderId": "MSDocsHeader-M365-IT",
-      "searchScope": "SharePoint Support",
+      "searchScope": ["SharePoint Support"],
       "titleSuffix": "SharePoint",
       "contributors_to_exclude": [ 
         "beccarobins"
       ]
     },
     "fileMetadata": {
-      "ms.prod": {
-      },
-      "ms.technology": {
-        "SharePointServer/people-pickers/**/*.md": "people-picker"
-      },
       "ms.service": {
         "SharePointHybrid/**/*.md": "sharepoint-online",
         "SharePointOnline/**/*.md": "sharepoint-online",
-        "OneDrive/**/*.md": "one-drive"       ,
+        "OneDrive/**/*.md": "one-drive",
         "SharePointServer/**/*.md": "sharepoint-server-itpro",
         "SharePointExperts/**/*.md": "sharepoint-server-itpro"
       },
@@ -148,7 +143,7 @@
         "SharePointOnline/diagnostics/**/*.md": "diagnostics",
         "SharePointOnline/infopath/**/*.md": "infopath",
         "SharePointOnline/lists-and-libraries/**/*.md": "lists-and-libraries",
-        "SharePointOnline/migration-tools/**/*.md": "migration-tool",
+        "SharePointOnline/migration/**/*.md": "sharepoint-migration",
         "SharePointOnline/performance/**/*.md": "performance",
         "SharePointOnline/search/**/*.md": "search",
         "SharePointOnline/security/**/*.md": "security", 
@@ -191,7 +186,13 @@
         "SharePointExperts/lists-and-libraries/**/*.md": "lists-and-libraries",
         "SharePointServer/installation-and-setup/**/*.md": "installation-and-setup",
         "SharePointServer/infopath/**/*.md": "infopath"
-      }      
+      },
+      "author": {
+        "**/*.md": "helenclu"
+      },
+      "ms.author": {
+        "**/*.md": "luche"
+      }
     },
     "template": [],
     "dest": "OfficeDocs-Support-SharePoint",

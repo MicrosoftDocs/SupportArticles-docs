@@ -102,15 +102,15 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "breadcrumb_path": "/office365/troubleshoot/breadcrumb/toc.json",
+      "breadcrumb_path": "/microsoft-365/troubleshoot/breadcrumb/toc.json",
       "extendBreadcrumb": true,
       "recommendations": true,
       "feedback_system": "Standard",
       "feedback_product_url": "https://admin.microsoft.com/adminportal/home?showfeedback=DocsMacCampaign",
       "hideEdit": true,
-      "searchScope": "Office 365 Support",
+      "searchScope": ["Microsoft 365 Support"],
       "uhfHeaderId": "MSDocsHeader-M365-IT",
-      "titleSuffix": "Office 365",
+      "titleSuffix": "Microsoft 365",
       "contributors_to_exclude": [ 
         "beccarobins"
       ]
@@ -144,13 +144,24 @@
         "security/o365-security/**/*.md": "o365-security",
         "compliance/archive-mailboxes/**/*.md": "archive-mailboxes",
         "compliance/audit-logs/**/*.md": "audit-logs",
-        "compliance/data-loss-preventiones/**/*.md": "data-loss-prevention",
         "compliance/ediscovery/**/*.md": "ediscovery",
         "compliance/holds/**/*.md": "holds",
         "compliance/information-barriers/**/*.md": "information-barriers",
         "compliance/office-message-encryption/**/*.md": "office-message-encryption",
         "compliance/pst-import-service/**/*.md": "pst-import-service",
         "compliance/retention/**/*.md": "retention"
+      },
+      "author": {
+        "admin/**/*.md": "helenclu",
+        "enterprise/**/*.md": "helenclu",
+        "compliance/**/*.md": "cloud-writer",
+        "security/**/*.md": "cloud-writer"
+      },
+      "ms.author": {
+        "admin/**/*.md": "luche",
+        "enterprise/**/*.md": "luche",
+        "compliance/**/*.md": "meerak",
+        "security/**/*.md": "meerak"
       }
     },
     "template": [],

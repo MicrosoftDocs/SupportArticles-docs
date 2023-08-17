@@ -154,7 +154,13 @@
         "Client/synchronization/**/*.md": "synchronization",
         "Client/user-interface/**/*.md": "user-interface",
         "OutlookExperts/outlook-for-mac/**/*.md": "outlook-for-mac"
-      }          
+      },
+      "author": {
+        "**/*.md": "cloud-writer"
+      },
+      "ms.author": {
+        "**/*.md": "meerak"
+      }
     },
     "template": [],
     "dest": "OfficeDocs-Support-Outlook",
