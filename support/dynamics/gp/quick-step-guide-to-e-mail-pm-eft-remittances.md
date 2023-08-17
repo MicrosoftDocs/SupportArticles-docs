@@ -65,4 +65,4 @@ Step 6: If the test above worked successfully, then continue to grant security a
 
 The above article was also published externally on this blog site:
 
-[Quick Step Guide to E-mail PM EFT Remittances in Microsoft Dynamics GP 2013](https://community.dynamics.com/gp/b/dynamicsgp/posts/quick-step-guide-to-e-mail-pm-eft-remittances-in-microsoft-dynamics-gp-2013)
+[Quick Step Guide to E-mail PM EFT Remittances in Microsoft Dynamics GP 2013](https://community.dynamics.com/blogs/post/?postid=abb4eb99-17a3-416b-be4a-c7925a5727cf)
