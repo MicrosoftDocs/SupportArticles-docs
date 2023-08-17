@@ -21,7 +21,7 @@ If the user is missing any of the required licenses, then the flow runs that are
 
 Additionally, the current owner of the flow must have the required permissions with read and write access for the SLA KPI instance.
 
-If a user who is the current owner of the flow needs to be removed from the organization, you should first change the owner of the flow to another user. This new user must also have all the required permissions. Once a new owner is added, you can remove the previous owner. This action will ensure the flow runs continue to be executed without issues.
+If a user who is the current owner of the flow needs to be removed from the organization, you should first change the owner of the flow to another user. This new user must also have all the required permissions. Once a new owner is added, you can remove the previous owner. This action ensures the flow runs continue to be executed without issues.
 
 ## Resolution
 
