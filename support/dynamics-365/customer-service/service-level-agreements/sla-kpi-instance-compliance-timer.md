@@ -1,8 +1,8 @@
 ---
 title: SLA KPI instance doesn't reach Nearing Non-compliance or Non-compliant and the timer continues to run
 description: Provides a resolution for the issue related to the permissions and licenses of the SLAInstanceMonitoringWarningAndExpiryFlow in Dynamics 365 Customer Service.
-ms.reviewer: sdas
-ms.author: ravimanne
+ms.reviewer: sdas, ankugupta
+ms.author: sdas
 ms.date: 05/23/2023
 ---
 # The SLA KPI instance doesn't reach Nearing Non-compliance or Non-compliant and the SLA KPI instance timer continues to run
