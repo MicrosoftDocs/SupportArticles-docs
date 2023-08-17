@@ -2,7 +2,7 @@
 title: Set drop-down list value action fails because the list value can't be found
 description: Provides a resolution for an issue where the Set drop-down list value action fails because the list value can't be found.
 ms.reviewer: nimoutzo
-ms.date: 08/15/2023
+ms.date: 08/17/2023
 ms.subservice: power-automate-desktop-flows
 ---
 # The list value specified in the "Set drop-down list value" action can't be found at runtime
@@ -19,7 +19,7 @@ The "Set drop-down list value" action fails with the following error message:
 
 #### Cause
 
-The selector of the drop-down element fails to locate it successfully. The element's selector might be incorrect.
+The selector of the drop-down element fails to locate the drop-down UI element successfully. The element's selector might be incorrect.
 
 #### Resolution
 
