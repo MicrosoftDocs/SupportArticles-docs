@@ -34,5 +34,5 @@ Dataverse only allows one solution operation at a time. A concurrent request for
 ## Workaround
 
 - You can avoid conflicts by not attempting multiple operations at a time in an environment. Waiting is the only resolution.
-- You can avoid maintenance time and use different service hours. The scenario may include the background updates going on during the maintenance hours and if you're trying to upgrade during the maintenance time and seeing the issue. Try to wait till it completes.
+- You can avoid conflicts by being aware of your [maintenance window](https://learn.microsoft.com/en-us/power-platform/admin/policies-communications#maintenance-timeline) and by scheduling your deployment accordingly. For production environment, you can [change your maintenance window](https://learn.microsoft.com/en-us/power-platform/admin/manage-maintenance-window) by shifting to another time.
 - You can also [watch the solution history page](/power-apps/maker/data-platform/solution-history) to check for completion any other operations on the environment.
