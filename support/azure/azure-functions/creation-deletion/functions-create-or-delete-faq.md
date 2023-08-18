@@ -1,12 +1,12 @@
 ---
-title: Create, delete, or restore function app resources
+title: Create, delete, or restore Azure function app resources
 description: Describes some common issues and solutions for creating, deleting, or restoring Azure Functions apps.
 ms.date: 08/15/2023
 ms.reviewer: gasridha, v-sidong
 ---
-# Common issues and solutions on creating, deleting, or restoring Azure function apps
+# Resolve issues when creating, deleting, or restoring Azure function apps
 
-This article lists some common issues and solutions to help resolve the issues that occur when you create, delete, or restore Azure Functions apps.
+This article lists some common issues that may occur when you create, delete, or restore Azure Functions apps, and steps to resolve the issues.
 
 ## Create function apps
 
@@ -62,7 +62,7 @@ For more information, see [Creating function apps in an existing resource group]
 
 ## Creation of a function app content file share fails with: "The remote server returned an error: (403) Forbidden"
 
-For function apps in Consumption or Elastic Premium, a file share is created on the storage account and referenced by using the app setting `WEBSITE_CONTENT_SHARE`. This error may occur because the storage account has a firewall, private endpoints, or other virtual network security restrictions such as network security group (NSG) rules.
+For function apps in [Consumption plan](/azure/azure-functions/consumption-plan) or [Elastic Premium plan](/azure/azure-functions/functions-premium-plan), a file share is created on the storage account and referenced by using the app setting `WEBSITE_CONTENT_SHARE`. This error may occur because the storage account has a firewall, private endpoints, or other virtual network security restrictions such as network security group (NSG) rules.
 
 To resolve the error, create a file share in advance on the secure storage account, and configure it to `WEBSITE_CONTENT_SHARE`. For more information, see [Restrict your storage account to a virtual network](/azure/azure-functions/configure-networking-how-to#restrict-your-storage-account-to-a-virtual-network).
 
@@ -72,7 +72,7 @@ You can use alternative tools like Azure CLI, PowerShell, and `Az.Functions`. Us
 
 ## Set the function runtime version for Windows and Linux
 
-For Windows apps, set it with the Azure portal (**Settings** > **Configuration** > **Function runtime Settings** > **Runtime version**), or create an application setting `FUNCTIONS_EXTENSION_VERSION` and set it to the major runtime version, for example, `~4` to target V4.
+For Windows apps, set it in the Azure portal (**Settings** > **Configuration** > **Function runtime Settings** > **Runtime version**), or create an application setting `FUNCTIONS_EXTENSION_VERSION` and set it to the major runtime version, for example, `~4` to target V4.
 
 - For more information, see [How to target Azure Functions runtime versions](/azure/azure-functions/set-runtime-version).
 - Pin it to a minor version based on host releases by setting `FUNCTIONS_EXTENSION_VERSIO` to a minor version. Also see [Azure Functions host releases](https://github.com/Azure/azure-functions-host/releases).
@@ -89,7 +89,7 @@ For more information, see:
 - [Azure App Services](/azure/azure-resource-manager/management/azure-subscription-service-limits#app-service-limits)
 
 > [!NOTE]
-> If the issue is frequent, you can buy a different subscription or update the hosting plan to resolve the error. Otherwise, wait and retry.
+> If the issue is infrequent, wait and retry after some time to see if the issue resolves. If the issue is frequent, you can buy a different subscription or update the hosting plan to resolve the error.
 
 ## Resolve issues occurring during function app deletion or restore
 
@@ -101,9 +101,9 @@ For more information, see [Restore (undelete) deleted web apps](https://techcomm
 
 Make sure that you have sufficient permissions to delete an Azure Functions app. There can be no role-based access control (RBAC), policy, or scope violations.
 
-## Collect some data before contacting Microsoft support
+## Collect data before contacting Microsoft support
 
-You can collect some data before opening a support ticket. If the Functions app creation or deletion fails in:
+If the Functions app creation or deletion fails, collect and share the following data when creating a support ticket:
 
 - Azure portal: Reproduce the issue and capture an F12 trace.
 - Azure CLI or Azure PowerShell: Share the command that reported the error and verbose logging.
