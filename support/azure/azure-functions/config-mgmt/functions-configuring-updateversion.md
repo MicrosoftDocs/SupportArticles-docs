@@ -6,15 +6,13 @@ ms.reviewer: gasridha, v-sidong
 ---
 # Upgrade Azure Functions runtime to v4 and resolve common issues during the upgrade
 
-This article describes how to upgrade the Azure Functions runtime to v4 and resolve issues during the upgrade, such as runtime being unreachable and modules not being found. For more information, see the following common issues and recommendations.
-
-[!INCLUDE [support-disclaimer](../../../includes/support-disclaimer.md)]
+This article describes how to upgrade the Azure Functions runtime to v4 and resolve issues during the upgrade, like runtime being unreachable and modules not being found. For more information, see the following common issues and solutions.
 
 ## Received an email "Action recommended: Update your Azure Functions apps to use .NET 6."
 
 - Extended support for Microsoft .NET Core 3.1 ended on December 3, 2022. Azure Functions runtime v3 is based on .NET core 3.1. We recommend that you update your apps to [runtime version 4.x](/azure/azure-functions/dotnet-isolated-process-guide#supported-versions), which uses .NET 6 and has long-term support. After December 3, 2022, your apps aren't eligible for new features, security patches, performance optimizations, or support until you upgrade them to Functions runtime version 4.x.
 
-- Your Functions apps on runtime v3 continue to run, and your applications aren't impacted. You can deploy code to these Functions applications after this date. Still, we may remove the ability for customers to create applications targeting the Functions runtime v3 using common paths.
+- Your Functions apps on runtime v3 continue to run, and your applications aren't impacted. You can deploy code to these Functions applications after this date. But we may remove the ability for customers to create applications targeting the Functions runtime v3 using common paths.
 
 - To avoid potential service disruptions or security vulnerabilities, [update your function app](/azure/azure-functions/set-runtime-version#view-and-update-the-current-runtime-version) to runtime version 4.x, which uses .NET 6, before December 3, 2022.
 
@@ -25,7 +23,7 @@ This article describes how to upgrade the Azure Functions runtime to v4 and reso
   - [Migrate apps from Azure Functions version 3.x to version 4.x](/azure/azure-functions/migrate-version-3-version-4)
   - [Migrate apps from Azure Functions version 1.x to version 4.x](/azure/azure-functions/migrate-version-1-version-4)
 
-## Validate function app's compatibility with runtime v4
+## Validate function app's compatibility for runtime v4
 
 - Azure Functions provides a pre-upgrade validator to help you identify potential issues when migrating your function app to 4.x. In the Azure portal, go to the **Diagnose and solve problems** pane. In **Function App Diagnostics**, run the **Functions 4.x Pre-Upgrade Validator** and follow the recommendations.
 - We strongly recommend upgrading your local project environment to version 4.x. Fully test your app locally using version 4.x of the Azure Functions core tools.
@@ -55,7 +53,7 @@ See the [list of supported languages by the runtime version](/azure/azure-functi
 - Java: Specify the language version by using `-DjavaVersion` as 11 or 17 (Java 17 is in preview). For more information, see [Specify the deployment version](/azure/azure-functions/functions-reference-java#specify-the-deployment-version).
 - Node, JavaScript: For Windows, set the `WEBSITE_NODE_DEFAULT_VERSION` app setting to `~16`. For Linux, set `linuxFxVersion`, by using CLI, to `node|16`. For more information, see [Set the Node version](/azure/azure-functions/functions-reference-node#setting-the-node-version).
 
-## Azure Functions proxies are available in Functions runtime v4
+## Azure Functions Proxies is available in Functions runtime v4
 
 Support for proxies is available again in version 4.x so that you can successfully upgrade your function apps to the latest runtime version. Switch to integrating your function apps with Azure API Management as soon as possible. API Management lets you take advantage of a more complete set of features to define, secure, manage, and monetize your Functions-based APIs. For more information, see [How to migrate to APIM](/azure/azure-functions/functions-proxies#migration) and [Integrate Functions with APIM using Visual Studio](/azure/azure-functions/openapi-apim-integrate-visual-studio).
 
@@ -82,3 +80,4 @@ You can use App Service REST API calls ([GetSiteConfig](/rest/api/appservice/web
 - Review the [troubleshooting guide: Issues when upgrading Azure function apps to V4](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/issues-you-may-meet-when-upgrading-azure-function-app-to-v4/ba-p/3288983).
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+[!INCLUDE [support-disclaimer](../../../includes/support-disclaimer.md)]
