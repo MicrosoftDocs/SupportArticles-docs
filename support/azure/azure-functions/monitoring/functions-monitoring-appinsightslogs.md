@@ -5,13 +5,13 @@ ms.date: 08/18/2023
 ms.reviewer: gasridha, v-jayaramanp
 ---
 
-# Application Insights logs are missing or incorrect for Azure Function Apps
+# Application Insights logs are missing or incorrect for Azure Functions Apps
 
 You can closely monitor the Functions app through the integration between [Azure Functions](https://azure.microsoft.com/products/functions) and [Application Insights](/azure/azure-monitor/app/app-insights-overview?tabs=net). And you can use Application Insights without any custom configuration.
 
 If the Application Insights logs are missing, or if the data appears to be partial or inaccurate, use the following steps to resolve the issue.
 
-## Check thether the Functions app is configured correctly to generate logs
+## Check whether the Functions app is configured correctly to generate logs
 
 The **Diagnose and Solve** option in the Azure Functions app has a **Function Configuration checks** tool that checks the configuration for Application Insights, particularly for the following:
 
@@ -73,7 +73,7 @@ You can configure how your application should write the logs by following the sa
       "default": "Information", // catch all default, with modifications below for individual categories.
       "Function": "Warning", // Warning level from all Functions (except the ones configured below).
       "Host.Aggregator": "Trace", // Log all traces in the 'customMetrics' table of (and shown on Metrics/Alerts blade in AI) - use either this or Host.Results
-      "Host.Results": "Error", // Error and Critical requests are only logged in the 'requests' table of the AI (and shown on Monitor Functions blade in Function App) - use either this or Host.Aggregator
+      "Host.Results": "Error", // Error and Critical requests are only logged in the 'requests' table of the AI (and shown on Monitor Functions blade in Functions App) - use either this or Host.Aggregator
       "Function.Function1": "Information", //Information level logs from Function 1, logged in 'traces', 'dependencies' and 'customMetrics' tables of AI
       "Function.Function2.User": "Information" //user code logs from Function2, logged in 'traces' table of AI 
     },
@@ -92,7 +92,7 @@ To configure these values at the App settings level (to avoid redeployment on *h
 
 For more examples about how to suppress logs, see [functions-log-suppression](https://github.com/anthonychu/functions-log-suppression).
 
-## My Function app that's integrated with VNet doesn't generate logs
+## My Functions app that's integrated with VNet doesn't generate logs
 
 You must open port 443 for outgoing traffic in your server firewall to allow the Application Insights SDK or Application Insights Agent to send data to the portal for the following URLs:
 
