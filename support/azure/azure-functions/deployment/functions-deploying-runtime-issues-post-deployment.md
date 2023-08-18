@@ -7,34 +7,34 @@ ms.reviewer: gasridha, v-jayaramanp
 
 # Resolve common runtime issues after deployment
 
-This article describes the common causes of runtime issues and provides solutions to  resolve these issues.
+This article describes the common causes of runtime issues and provides solutions to resolve these issues.
 
-If you're having issues with your application after deployment, it's important to determine whether the problem is related to deployment or to runtime. A *deployment* issue can cause the wrong set of files to get deployed to your Function app, or it can cause some files to not get deployed at all. On the other hand, a *runtime* issue occurs after deployment. The files in your **wwwroot** directory are exactly as they should be, but the Function app isn't running correctly. When this scenario occurs, it's no longer relevant what technique you used to deploy your site. For a runtime issue, you should focus on what your code is doing at runtime and how it's failing, instead of how you deployed it.
+If your application is experiencing issues after deployment, it's important to determine whether the problem is related to deployment or runtime. A *deployment* issue can cause the wrong set of files to get deployed to your Function app, or it can cause some files not to get deployed at all. A *runtime* issue occurs after deployment. The files in your **wwwroot** directory are exactly as they should be, but the Function app isn't running correctly. When this scenario occurs, the technique that you used to deploy your site is no longer relevant. For a runtime issue, you should, instead, focus on what your code is doing at runtime and how it's failing.
 
 ## Common causes for application runtime issues after content deployment
 
-Some common reasons for failure include the following items:
+Runtime failure can occur for any of the following reasons:
 
 - The function host can't start because there's poor network connectivity to the secure storage account.
   - The storage account that's used for the Function app isn't accessible.
   - The storage connection string was changed or is incorrect.
 - In the runtime sandbox environment of Azure Functions, something is blocking certain operations that work on your local computer.
 - Your Azure Functions app isn't configured correctly. For example, the function host doesn't start up because of incorrect values in the following settings:
-  - Incorrect runtime or language version.
-  - Trigger connection strings.
-  - Key vault settings.
+  - Runtime or language version
+  - Trigger connection strings
+  - Key vault settings
 - An external dependency (such as a database or messaging system) isn't set up correctly and is causing time-out errors.
-- Sync triggers failed, which causes incorrect loading of functions.
+- Sync triggers failed. This causes an incorrect loading of functions.
 - Your code makes invalid assumptions about paths, such as hard-coding a path that exists only on your local computer.
 
 ## Solutions
 
-Try one or more of the following methods to fix runtime issues after the content deployment:
+To fix runtime issues after the content deployment, try one or more of the following methods:
 
 - Manually restart the Function app.
 - Run the [Azure Functions Diagnostics](/azure/azure-functions/functions-diagnostics) to quickly diagnose and solve common Function app problems.
-- If the storage account used for the Function app, verify if the [storage connections are set up correctly](/azure/azure-functions/functions-recover-storage-account).
-- If you've enabled Application Insights for your function, see [Application Insights logs](/azure/azure-functions/functions-monitoring) to learn more about the full exception trace or error message that's causing errors.
+- If the storage account is used for the Function app, verify whether the [storage connections are set up correctly](/azure/azure-functions/functions-recover-storage-account).
+- If you've enabled Application Insights for your function, see [Monitor executions in Azure Functions](/azure/azure-functions/functions-monitoring) to learn more about the full exception trace or error message that's causing errors.
 
 [!INCLUDE [support-disclaimer](../../../includes/support-disclaimer.md)]
 
