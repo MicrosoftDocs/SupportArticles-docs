@@ -6,9 +6,7 @@ ms.reviewer: gasridha, v-sidong
 ---
 # Common issues and solutions on creating, deleting, or restoring Azure function apps
 
-This article describes some common issues and provides solutions to help you resolve the issues that occur when creating, deleting, or restoring Azure Functions apps.
-
-[!INCLUDE [support-disclaimer](../../../includes/support-disclaimer.md)]
+This article lists some common issues and solutions to help resolve the issues that occur when you create, delete, or restore Azure Functions apps.
 
 ## Create function apps
 
@@ -64,13 +62,13 @@ For more information, see [Creating function apps in an existing resource group]
 
 ## Creation of a function app content file share fails with: "The remote server returned an error: (403) Forbidden"
 
-For function apps in Consumption or Elastic Premium, a file share is created on the storage account and referenced by the app setting `WEBSITE_CONTENT_SHARE`. This error may occur because the storage account has a firewall, private endpoints, or other virtual network security restrictions such as network security group (NSG) rules.
+For function apps in Consumption or Elastic Premium, a file share is created on the storage account and referenced by using the app setting `WEBSITE_CONTENT_SHARE`. This error may occur because the storage account has a firewall, private endpoints, or other virtual network security restrictions such as network security group (NSG) rules.
 
 To resolve the error, create a file share in advance on the secure storage account, and configure it to `WEBSITE_CONTENT_SHARE`. For more information, see [Restrict your storage account to a virtual network](/azure/azure-functions/configure-networking-how-to#restrict-your-storage-account-to-a-virtual-network).
 
 ## Alternative tools for creation
 
-You can use alternative tools like Azure CLI, PowerShell, and `Az.Functions`. Use the latest versions of Azure CLI, Azure PowerShell, and the `Az.Functions` module. Also, for example, if there's an issue in the Azure portal, try using Azure CLI.
+You can use alternative tools like Azure CLI, PowerShell, and `Az.Functions`. Use the latest versions of Azure CLI, Azure PowerShell, or the `Az.Functions` module. Also, for example, if there's an issue in the Azure portal, try using Azure CLI.
 
 ## Set the function runtime version for Windows and Linux
 
@@ -108,10 +106,12 @@ Make sure that you have sufficient permissions to delete an Azure Functions app.
 You can collect some data before opening a support ticket. If the Functions app creation or deletion fails in:
 
 - Azure portal: Reproduce the issue and capture an F12 trace.
-- Azure CLI or Azure PowerShell: Share the command that reported the error and include verbose logging.
-- For Azure Resource Manager deployment failures, find the error message in the Azure portal:
+- Azure CLI or Azure PowerShell: Share the command that reported the error and verbose logging.
 
-  1. Select **Resource Group** > **Deployments**.
-  1. Share the failed task correlation ID.
+For Azure Resource Manager deployment failures, find the error message in the Azure portal:
+
+1. Select **Resource Group** > **Deployments**.
+1. Share the failed task correlation ID.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+[!INCLUDE [support-disclaimer](../../../includes/support-disclaimer.md)]
