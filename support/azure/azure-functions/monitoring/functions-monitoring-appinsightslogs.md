@@ -7,26 +7,25 @@ ms.reviewer: gasridha, v-jayaramanp
 
 # Application Insights logs are missing or incorrect for Azure Function Apps
 
-You can closely monitor your Function apps through the integration between [Azure Functions](https://azure.microsoft.com/products/functions) and Application Insights. And you can use Application Insights without any custom configuration.
+You can closely monitor your Function apps through the integration between [Azure Functions](https://azure.microsoft.com/products/functions) and [Application Insights](/azure/azure-monitor/app/app-insights-overview?tabs=net). And you can use Application Insights without any custom configuration.
 
 If the Application Insights logs are missing or if the data appears to be partial or inaccurate, use the following steps to resolve the issue.
 
 ## Check if the Functions app is configured correctly to generate logs
 
-The **Diagnose and Solve** option in Azure Functions App has a **Configuration checks** feature that checks the configuration for Application Insights, particularly the following:
+The **Diagnose and Solve** option in Azure Functions App has a **Function Configuration checks** tool that checks the configuration for Application Insights, particularly the following:
 
 - Only one of the connection settings Application Insights Instrumentation key `APPINSIGHTS_INSTRUMENTATIONKEY` or the `APPLICATIONINSIGHTS_CONNECTION_STRING` connection string exists. We recommend using the [APPLICATIONINSIGHTS_CONNECTION_STRING](/azure/azure-monitor/app/sdk-connection-string?tabs=net#overview) for more stable behavior. Using `APPINSIGHTS_INSTRUMENTATIONKEY` will be deprecated by 2025.
 - The `AzureWebJobsDashboard` built-in logging is disabled, as recommended.
 - Sampling is enabled for the Azure Functions telemetry, which is enabled by default.
 
-> **Recommendation**: The Function app should be on version 4 and the runtime version should be at least 4.15.2xx, because from this version onwards, you can track the log flows from Azure Functions to [Application Insights](/azure/azure-monitor/app/app-insights-overview?tabs=net) service. By monitoring the log flows, you can check for missing logs.
+> **Recommendation**: The Function app should be on version 4 and the runtime version should be at least 4.15.2xx, because from this version onwards, you can track the log flows from Azure Functions to Application Insights service. By monitoring the log flows, you can check for missing logs.
 
 ## Logs are missing or partial
 
-Application Insights collects log, performance, and error data. [Sampling configuration](/azure/azure-functions/configure-monitoring?tabs=v2#configure-sampling) is used to reduce the volume of telemetry. The Sampling feature is enabled by default with the settings shown in the following example. Excluded types aren't sampled.
+Application Insights collects log, performance, and error data. [Sampling configuration](/azure/azure-functions/configure-monitoring?tabs=v2#configure-sampling) is used to reduce the volume of telemetry. The Sampling feature is enabled by default with the settings shown in the following [host.json](/azure/azure-functions/functions-host-json#applicationinsights) example. Excluded types aren't sampled.
 
 ```JSON
-host.json
 {
   "logging": {
     "applicationInsights": {
@@ -42,11 +41,10 @@ host.json
 
 If you find any partially missing logs, it might be due to sampling. To find out the actual sampling rate, use an Analytics query with the required time interval as shown in the following code snippet. If you observe that the `TelemetrySavedPercentage` for any sampling type is less than 100, then that type of telemetry is being sampled.
 
-```sql
-UNION requests,dependencies,pageViews,browserTimings,exceptions,traces
-| WHERE timestamp > todatetime("mm/dd/yyyy hh:mm:ss") AND timestamp < todatetime("mm/dd/yyyy hh:mm:ss")
-| summarize TelemetrySavedPercentage = 100/avg(itemCount), TelemetryDroppedPercentage = 100-100/avg(itemCount) BY bin(timestamp, 1d), itemType
-| sort BY timestamp asc
+```kql
+| where timestamp > todatetime("mm/dd/yyyy hh:mm:ss") and  timestamp < todatetime("mm/dd/yyyy hh:mm:ss") | where timestamp > todatetime("mm/dd/yyyy hh:mm:ss") and timestamp < todatetime("mm/dd/yyyy hh:mm:ss")
+| summarize TelemetrySavedPercentage = 100/avg(itemCount), TelemetryDroppedPercentage = 100-100/avg(itemCount) by bin(timestamp, 1d), itemType | summarize TelemetrySavedPercentage = 100/avg(itemCount), TelemetryDroppedPercentage = 100-100/avg(itemCount) by bin(timestamp, 1d), itemType
+| sort by timestamp asc
 ```
 
 For more information, see [Data collection, retention, and storage in Application Insights](/azure/azure-monitor/app/data-retention-privacy).
