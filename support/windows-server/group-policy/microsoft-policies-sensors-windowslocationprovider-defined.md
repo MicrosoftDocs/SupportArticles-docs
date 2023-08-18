@@ -27,7 +27,7 @@ Consider the following scenarios.
 Scenario 1:
 
 - You have a domain controller that's running Windows Server.
-- You create a central store for Group Policy Administrative Template files (.admx files) on the computer. For more information, see [How to create the Central Store for Group Policy Administrative Template files in Windows Vista](/troubleshoot/windows-server/group-policy/create-central-store-domain-controller).
+- You create a central store for Group Policy Administrative Template files (.admx files) on the computer. For more information, see [How to create the Central Store for Group Policy Administrative Template files in Windows Vista](create-central-store-domain-controller.md).
 - You join a Windows 10-based computer to the domain.
 - On the Windows 10-based computer, you copy the files under the %systemroot%\PolicyDefinitions directory, paste them to the ADMX central store, and overwrite all existing *.admx and *.adml files. Then, you open the Group Policy Management Console (GPMC) to edit a policy.
 - You click the **Policies**  node under **Computer Configuration** or **User Configuration**.

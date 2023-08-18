@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 2601888
 
 This article summarizes the available hotfixes and updates for issues that can occur in Remote Desktop Services (Terminal Services) for Windows Server 2008 R2 environments.
 
-For Windows Server 2012 Remote Desktop Services updates, see [Available updates for Remote Desktop Services in Windows Server 2012](/troubleshoot/windows-server/remote/windows-server-2012-rds-updates).
+For Windows Server 2012 Remote Desktop Services updates, see [Available updates for Remote Desktop Services in Windows Server 2012](windows-server-2012-rds-updates.md).
 
 For Windows Server 2012 R2 Remote Desktop Services updates, see [KB2933664](https://support.microsoft.com/help/2933664).
 

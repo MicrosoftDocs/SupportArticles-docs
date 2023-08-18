@@ -64,4 +64,4 @@ This behavior is by design.
 
 ## More information
 
-Microsoft has published rules for valid characters for various object types that further reduces the freedom of name choice. For more information, see [Naming conventions in Active Directory for computers, domains, sites, and OUs](/troubleshoot/windows-server/identity/naming-conventions-for-computer-domain-site-ou).
+Microsoft has published rules for valid characters for various object types that further reduces the freedom of name choice. For more information, see [Naming conventions in Active Directory for computers, domains, sites, and OUs](naming-conventions-for-computer-domain-site-ou.md).

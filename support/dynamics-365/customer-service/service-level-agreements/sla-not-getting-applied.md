@@ -1,8 +1,8 @@
 ---
 title: An SLA isn't applied to a case
 description: Provides a resolution for an issue where an SLA isn't applied to a case.
-ms.reviewer: sdas
-ms.author: ravimanne
+ms.reviewer: sdas, ankugupta
+ms.author: sdas
 ms.date: 06/30/2023
 ---
 # SLA isn't getting applied to a case

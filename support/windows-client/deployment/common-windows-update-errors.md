@@ -99,7 +99,7 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-| WU_E_SETUP_SKIP_UPDATE | An update to the Windows Update Agent was skipped due to a directive in the Wuident.cab file. | You might encounter this error when WSUS isn't sending the self-update to the clients.<br><br>For more information to resolve the issue, review [KB920659](/troubleshoot/windows-server/deployment/wsus-selfupdate-not-send-automatic-updates). |
+| WU_E_SETUP_SKIP_UPDATE | An update to the Windows Update Agent was skipped due to a directive in the Wuident.cab file. | You might encounter this error when WSUS isn't sending the self-update to the clients.<br><br>For more information to resolve the issue, review [KB920659](../../windows-server/deployment/wsus-selfupdate-not-send-automatic-updates.md). |
 
 ## 0x80244007
 
