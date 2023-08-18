@@ -26,20 +26,20 @@ The Read privilege should be granted automatically to the "Sales Manager" and "S
 
 #### Resolution
 
-To solve the issue with the read privilege, follow the mitigation steps:
+To solve the issue with the Read privilege, follow the mitigation steps:
 
 1. Sign in to the [Sales Hub app](/dynamics365/sales/intro-saleshub) with an administrator account.
 
 2. Navigate to **Settings** > **Advanced Settings**.
 
-   :::image type="content" source="media/dialer-not-visible-in-crm/sales-hub-advanced-settings.png" alt-text="Screenshot that shows the Advanced Settings option in the Sales Hub app.":::
+   :::image type="content" source="media/dialer-not-visible-in-crm/sales-hub-advanced-settings.png" alt-text="Screenshot that shows the Advanced Settings option in the Sales Hub app." lightbox="media/dialer-not-visible-in-crm/sales-hub-advanced-settings.png":::
 
 3. Navigate to **Security** > **Security Roles**.
 
-   :::image type="content" source="media/dialer-not-visible-in-crm/sales-hub-security.png" alt-text="Screenshot that shows the Security Roles option in the Sales Hub app.":::
+   :::image type="content" source="media/dialer-not-visible-in-crm/sales-hub-security.png" alt-text="Screenshot that shows the Security Roles option in the Sales Hub app." lightbox="media/dialer-not-visible-in-crm/sales-hub-security.png":::
 
 4. Select the "Sales Manager" and "Salesperson" security roles, and then enable the Read permission for the **Teams Dialer Admin settings** entity.
 
-   :::image type="content" source="media/dialer-not-visible-in-crm/sales-hub-security-roles.png" alt-text="Screenshot that shows the Sales Manager and Salesperson security roles.":::
+   :::image type="content" source="media/dialer-not-visible-in-crm/sales-hub-security-roles.png" alt-text="Screenshot that shows the Sales Manager and Salesperson security roles." lightbox="media/dialer-not-visible-in-crm/sales-hub-security-roles.png":::
 
-   :::image type="content" source="media/dialer-not-visible-in-crm/teams-dialer-admin-settings-priviliges.png" alt-text="Screenshot that shows how to enable the read permission for the Teams Dialer Admin settings entity.":::
+   :::image type="content" source="media/dialer-not-visible-in-crm/teams-dialer-admin-settings-priviliges.png" alt-text="Screenshot that shows how to enable the read permission for the Teams Dialer Admin settings entity." lightbox="media/dialer-not-visible-in-crm/teams-dialer-admin-settings-priviliges.png":::
