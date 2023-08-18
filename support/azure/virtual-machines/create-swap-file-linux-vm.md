@@ -1,7 +1,7 @@
 ---
 title: Create a SWAP file for an Azure Linux VM
 description: Describes how to create a SWAP file for an Azure Linux VM.
-ms.date: 08/17/2023
+ms.date: 08/18/2023
 ms.service: virtual-machines
 ms.subservice: vm-linux-setup-configuration
 ms.collection: linux
@@ -85,12 +85,12 @@ Then, create the SWAP file under the resource disk path or a custom path.
 
 ## Create a SWAP file under a custom path using cloud-init
 
-1. Create the `CLOUD_CFG` variable in */systemd/system.conf* to set both swap and the resource disk.
+1. Create the `CLOUD_CFG` variable in */systemd/system.conf* to set both SWAP and the resource disk.
 
     ```bash
     sudo echo 'DefaultEnvironment="CLOUD_CFG=/etc/cloud/cloud.cfg.d/00-azure-swap.cfg"' >> /etc/systemd/system.conf
     ```
-2. Create a yaml file that sets SWAP and resource disk creation and custom mount point:
+2. Create a YAML file that sets SWAP, resource disk creation, and custom mount points:
 
     ```bash
     sudo cat > /etc/cloud/cloud.cfg.d/00-azure-swap.cfg << EOF
@@ -111,6 +111,6 @@ Then, create the SWAP file under the resource disk path or a custom path.
     EOF
     ```
 
-3. Stop and start the VM or redeploy it to create the swap partition on the resource disk.
+3. Stop and start the VM or redeploy it to create the SWAP partition on the resource disk.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
