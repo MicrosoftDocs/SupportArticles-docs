@@ -11,17 +11,15 @@ You can closely monitor your Function apps through the integration between [Azur
 
 If the Application Insights logs are missing or if the data appears to be partial or inaccurate, use the following steps to resolve the issue.
 
-[!INCLUDE [support-disclaimer](../../../includes/support-disclaimer.md)]
-
 ## How can I check if my Function app is configured correctly to emit logs?
 
-The **Diagnose and Solve** option in Azure Functions App has a function **Configuration checks** feature that checks the configuration for Application Insights, particularly the following:
+The **Diagnose and Solve** option in Azure Functions App has a **Configuration checks** feature that checks the configuration for Application Insights, particularly the following:
 
 - Only one of the connection settings Application Insights Instrumentation key `APPINSIGHTS_INSTRUMENTATIONKEY` or the `APPLICATIONINSIGHTS_CONNECTION_STRING` connection string exists. We recommend using the [APPLICATIONINSIGHTS_CONNECTION_STRING](/azure/azure-monitor/app/sdk-connection-string?tabs=net#overview) for more stable behavior. Using `APPINSIGHTS_INSTRUMENTATIONKEY` will be deprecated by 2025.
 - The `AzureWebJobsDashboard` built-in logging is disabled, as recommended.
-- Sampling is enabled for the Azure Functions telemetry (enabled by default).
+- Sampling is enabled for the Azure Functions telemetry, which is enabled by default.
 
-> **Recommendation**: The Function app should be on version 4 and the runtime version should be at least 4.15.2xx, because from this version onwards, you can track the log flows from Azure Functions to Application Insights service. By monitoring the log flows, you can check for missing logs.
+> **Recommendation**: The Function app should be on version 4 and the runtime version should be at least 4.15.2xx, because from this version onwards, you can track the log flows from Azure Functions to [Application Insights](/azure/azure-monitor/app/app-insights-overview?tabs=net) service. By monitoring the log flows, you can check for missing logs.
 
 ## Why are the logs missing or partial? What is sampling?
 
@@ -42,7 +40,7 @@ host.json
 }
 ```
 
-If you observe partially missing logs, this is probably due to sampling. To find out the actual sampling rate, use an Analytics query with the required time interval as shown in the following code snippet. If you observe that the `TelemetrySavedPercentage` for any sampling type is less than 100, then that type of telemetry is being sampled.
+If you find any partially missing logs, it might be due to sampling. To find out the actual sampling rate, use an Analytics query with the required time interval as shown in the following code snippet. If you observe that the `TelemetrySavedPercentage` for any sampling type is less than 100, then that type of telemetry is being sampled.
 
 ```sql
 UNION requests,dependencies,pageViews,browserTimings,exceptions,traces
@@ -55,7 +53,7 @@ For more information, see [Data collection, retention, and storage in Applicatio
 
 ## How can I control the volume or verbosity of the logs being written?
 
-By using a combination of log level and categories configured in *host.json*, you can increase or suppress the logs being written.
+You can increase or suppress the logs being written, by using a combination of log level and categories configured in *host.json*.
 
 The Azure Functions logger includes a category for every log. The category indicates which part of the runtime code or your function code generated the log. For example:
 
@@ -64,7 +62,7 @@ The Azure Functions logger includes a category for every log. The category indic
 
 For more information, see the other [categories](/azure/azure-functions/configure-monitoring?tabs=v2#configure-categories) and [log levels](/azure/azure-functions/configure-monitoring?tabs=v2#configure-log-levels) available.
 
-You can configure how your application should write the logs by using the following sample code snippet:
+You can configure how your application should write the logs by following the sample code snippet:
 
 ```JSON
 {
@@ -103,5 +101,7 @@ You must open port 443 for outgoing traffic in your server's firewall to allow t
 - **.in.applicationinsights.azure.com*
 
 For more information, see [IP addresses used by Azure Monitor](/azure/azure-monitor/app/ip-addresses#outgoing-ports).
+
+[!INCLUDE [support-disclaimer](../../../includes/support-disclaimer.md)]
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

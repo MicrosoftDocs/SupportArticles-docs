@@ -27,15 +27,14 @@ Some common reasons for failure include the following items:
 - Sync triggers failed, which causes incorrect loading of functions.
 - Your code makes invalid assumptions about paths, such as hard-coding a path that exists only on your local computer.
 
+## Solutions
 
-### Solution
+Try one or more of the following methods to fix runtime issues after the content deployment:
 
-Here are some possible actions that can fix runtime issues after content deployment:
-
-1. Manually restart the Function app.
-1. Run the [Azure Functions Diagnostics](/azure/azure-functions/functions-diagnostics) to quickly diagnose and solve common Function app problems.
-1. If the storage account used for the function app, verify if the [storage connections are set up correctly](/azure/azure-functions/functions-recover-storage-account).
-1. If you've enabled Application Insights for your function, see [Application Insights logs](/azure/azure-functions/functions-monitoring) to learn more about the full exception trace or error message that's causing errors.
+- Manually restart the Function app.
+- Run the [Azure Functions Diagnostics](/azure/azure-functions/functions-diagnostics) to quickly diagnose and solve common Function app problems.
+- If the storage account used for the Function app, verify if the [storage connections are set up correctly](/azure/azure-functions/functions-recover-storage-account).
+- If you've enabled Application Insights for your function, see [Application Insights logs](/azure/azure-functions/functions-monitoring) to learn more about the full exception trace or error message that's causing errors.
 
 [!INCLUDE [support-disclaimer](../../../includes/support-disclaimer.md)]
 
