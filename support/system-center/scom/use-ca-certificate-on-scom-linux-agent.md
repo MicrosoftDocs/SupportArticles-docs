@@ -1,17 +1,17 @@
 ---
 title: Convert self-signed SCX certificates to CA certificates
-description: Introduces how to convert the self-signed certificate on a SCOM Linux agent (SCX) to a Certificate Authority (CA) signed certificate.
+description: Introduces how to convert the self-signed certificate on a SCX agent to a Certificate Authority (CA) signed certificate.
 ms.date: 08/18/2023
 ms.reviewer: alexkre, blakedrumm, edpaca, stparker, udmudiar, v-weizhu
 ms.topic: how-to
 ---
-# How to use CA certificates on SCOM Linux agent
+# How to use a CA certificate on a SCX agent
 
-This article introduces how to convert the self-signed certificate on a SCOM Linux agent (SCX) to a Certificate Authority (CA) signed certificate.
+This article introduces how to convert the self-signed certificate on a System Center Operations Manager (SCOM) Unix/Linux (SCX) agent to a Certificate Authority (CA) signed certificate.
 
 ## Create a CA certificate template
 
-On a CA server in your System Center Operations Manager (SCOM) environment, follow these steps to create a certificate template:
+On a CA server in your SCOM environment, follow these steps to create a certificate template:
 
 1. Open **Certification Authority** from **Server Manager**.
 1. Right Click **Certificate Templates** and select **Manage**.
@@ -72,9 +72,9 @@ On a CA server in your System Center Operations Manager (SCOM) environment, foll
 1. Right click the certificate and export it with a private key. Finally, there should be a .pfx file.
 1. Export the CA and Intermediate CA certificate (if applicable) to the *root* store of all the management servers/gateways in the UNIX/Linux resource pool.
 
-## Copy and edit the certificate on the X-Plat server
+## Copy and edit the certificate on the Unix/Linux server
 
-1. Copy the certificate to the X-Plat server for which the certificate was issued.
+1. Copy the certificate to the Unix/Linux server for which the certificate was issued.
 1. Export the private key by using the following command:
 
     ```console
