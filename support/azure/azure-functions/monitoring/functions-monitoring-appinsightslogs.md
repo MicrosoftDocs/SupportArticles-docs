@@ -11,7 +11,7 @@ You can closely monitor your Function apps through the integration between [Azur
 
 If the Application Insights logs are missing or if the data appears to be partial or inaccurate, use the following steps to resolve the issue.
 
-## How can I check if my Function app is configured correctly to emit logs?
+## Check if the Functions app is configured correctly to generate logs
 
 The **Diagnose and Solve** option in Azure Functions App has a **Configuration checks** feature that checks the configuration for Application Insights, particularly the following:
 
@@ -21,7 +21,7 @@ The **Diagnose and Solve** option in Azure Functions App has a **Configuration c
 
 > **Recommendation**: The Function app should be on version 4 and the runtime version should be at least 4.15.2xx, because from this version onwards, you can track the log flows from Azure Functions to [Application Insights](/azure/azure-monitor/app/app-insights-overview?tabs=net) service. By monitoring the log flows, you can check for missing logs.
 
-## Why are the logs missing or partial? What is sampling?
+## Logs are missing or partial
 
 Application Insights collects log, performance, and error data. [Sampling configuration](/azure/azure-functions/configure-monitoring?tabs=v2#configure-sampling) is used to reduce the volume of telemetry. The Sampling feature is enabled by default with the settings shown in the following example. Excluded types aren't sampled.
 
@@ -51,7 +51,7 @@ UNION requests,dependencies,pageViews,browserTimings,exceptions,traces
 
 For more information, see [Data collection, retention, and storage in Application Insights](/azure/azure-monitor/app/data-retention-privacy).
 
-## How can I control the volume or verbosity of the logs being written?
+## Control the volume or verbosity of the logs being written
 
 You can increase or suppress the logs being written, by using a combination of log level and categories configured in *host.json*.
 
@@ -91,7 +91,7 @@ To configure these values at the App settings level (to avoid redeployment on *h
 
 For more examples about how to suppress logs, see [functions-log-suppression](https://github.com/anthonychu/functions-log-suppression).
 
-## Why is my Function app that's integrated with VNet not generating logs?
+## My Function app that's integrated with VNet isn't generating logs
 
 You must open port 443 for outgoing traffic in your server's firewall to allow the Application Insights SDK or Application Insights Agent to send data to the portal for the following URLs:
 
