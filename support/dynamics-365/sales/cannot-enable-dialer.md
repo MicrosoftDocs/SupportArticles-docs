@@ -1,12 +1,12 @@
 ---
 title: Can't enable Microsoft Teams dialer for Dynamics 365 Sales
 description: Provides a resolution for an issue where you can't enable Microsoft Teams dialer for Dynamics 365 Sales.
-ms.date: 08/14/2023
+ms.date: 08/18/2023
 ms.reviewer: t-ronioded
 ---
 # Can't enable Microsoft Teams dialer for Dynamics 365 Sales
 
-This article provides a resolution for an issue where an administrator can't enable [Microsoft Teams dialer](/dynamics365/sales/configure-microsoft-teams-dialer) for Dynamics 365 Sales.
+This article provides a resolution for an issue where an administrator can't [enable Microsoft Teams dialer](/dynamics365/sales/configure-microsoft-teams-dialer) for Microsoft Dynamics 365 Sales.
 
 ## Symptoms
 

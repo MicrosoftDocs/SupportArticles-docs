@@ -1,18 +1,18 @@
 ---
 title: Teams dialer basic troubleshooting steps in Dynamics 365 Sales
 description: Introduces basic troubleshooting steps for Microsoft Teams dialer in Dynamics 365 Sales.
-ms.date: 08/14/2023
+ms.date: 08/18/2023
 ms.reviewer: t-ronioded
 ---
-# Teams dialer basic troubleshooting steps
+# Basic troubleshooting steps for Microsoft Teams dialer
 
-This article introduces the basic troubleshooting steps about how to clean the browser cache and perform a hard refresh for Microsoft Teams dialer in Dynamics 365 Sales.
+This article introduces the basic troubleshooting steps to clear the browser cache and perform a hard refresh for Microsoft Teams dialer in Microsoft Dynamics 365 Sales.
 
 ## Step 1 - Clear browsing data
 
 In Google Chrome:
 
-1. Copy and paste `chrome://settings/clearBrowserData` to your browser.
+1. Copy and paste `chrome://settings/clearBrowserData` to your browser, and press <kbd>Enter</kbd>.
 2. Select **Cached images and files**.
 3. Select **Clear data**.
 
@@ -20,7 +20,7 @@ In Google Chrome:
 
 In Microsoft Edge:
 
-1. Copy and paste `edge://settings/clearBrowserData` to your browser.
+1. Copy and paste `edge://settings/clearBrowserData` to your browser, and press <kbd>Enter</kbd>.
 2. Select **Cached images and files**.
 3. Select **Clear now**.
 
@@ -28,10 +28,12 @@ In Microsoft Edge:
 
 ## Step 2 - Hard refresh
 
-For Google Chrome, Firefox, or Microsoft Edge for Windows:
+- For Google Chrome, Firefox, or Microsoft Edge for Windows:
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd>. If this doesn't work, try <kbd>Shift</kbd>+<kbd>F5</kbd> or <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd>.
+  Press <kbd>Ctrl</kbd>+<kbd>F5</kbd>. If this doesn't work, try <kbd>Shift</kbd>+<kbd>F5</kbd> or <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd>.
 
-For Google Chrome or Firefox for Mac:
+- For Google Chrome or Firefox for Mac:
 
-Press <kbd>Shift</kbd>+<kbd>Command</kbd>+<kbd>R</kbd>.
+  Press <kbd>Shift</kbd>+<kbd>Command</kbd>+<kbd>R</kbd>.
+
+[!INCLUDE [Third-party information disclaimer](../../includes/third-party-disclaimer.md)]

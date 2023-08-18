@@ -1,10 +1,10 @@
 ---
-title: Seller can't make a phone call to PSTN in Dynamics 365 Sales
+title: Sellers can't make a phone call to PSTN in Dynamics 365 Sales
 description: Provides resolutions for an issue where a seller can't make a phone call to a PSTN number in Microsoft Dynamics 365 Sales.
 ms.reviewer: t-ronioded
-ms.date: 08/16/2023
+ms.date: 08/18/2023
 ---
-# Seller can't make a phone call to a PSTN number
+# Sellers can't make a phone call to a PSTN number
 
 This article provides resolutions for an issue where a seller can't make a phone call to a Public Switched Telephone Network (PSTN) number using Microsoft Teams dialer.
 
@@ -27,10 +27,10 @@ As a seller, when you use Microsoft Teams for desktop or Microsoft Teams on the 
 
 #### Resolution
 
-To resolve this issue, see [Assign a phone number for a user](/microsoftteams/assign-change-or-remove-a-phone-number-for-a-user#assign-a-phone-number-to-a-user).
+To resolve this issue, [assign a phone number for a user](/microsoftteams/assign-change-or-remove-a-phone-number-for-a-user#assign-a-phone-number-to-a-user).
 
 ## Cause 2: Cached browsing data
 
 #### Resolution
 
-To resolve this issue, follow the steps in the [Microsoft Teams dialer basic troubleshooting steps](dialer-basic-troubleshooting.md).
+To resolve this issue, follow the [Microsoft Teams dialer basic troubleshooting steps](dialer-basic-troubleshooting.md).
