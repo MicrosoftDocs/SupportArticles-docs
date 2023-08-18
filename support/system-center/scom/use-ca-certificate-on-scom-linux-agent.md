@@ -16,9 +16,7 @@ On a CA server in your System Center Operations Manager (SCOM) environment, foll
 1. Open **Certification Authority** from **Server Manager**.
 1. Right Click **Certificate Templates** and select **Manage**.
 1. Select the template **Computer** and select **Duplicate Template**.
-1. On the **General** tab, make the following changes:
-    - Change the **Template display name** to a name easily distinguished for SCOM Linux certificates.
-    - Change the value of the **Validity period** field to match your standards.
+1. On the **General** tab, set a name for the template and change the **Validity period** as per standards.
 
     :::image type="content" source="media/use-ca-certificate-on-scom-linux-agent/change-template-display-name-validity-period.png" alt-text="Screenshot that shows how to change the display name and validity period of a template.":::
 
@@ -37,6 +35,9 @@ On a CA server in your System Center Operations Manager (SCOM) environment, foll
 1. Select **OK**.
 1. Select the created template, and go to the **Properties**.
 1. Select **Security**. Add the computer object of the server where the certificate will be enrolled.
+
+    :::image type="content" source="media/use-ca-certificate-on-scom-linux-agent/add-server.png" alt-text="Screenshot that shows how to add the computer object.":::
+
 1. Select the permissions as **Read**, **Write**, **Enroll**.
 
     :::image type="content" source="media/use-ca-certificate-on-scom-linux-agent/select-permissions.png" alt-text="Screenshot that shows the 'Read', 'Write' and 'Enroll' permissions are selected.":::
@@ -46,7 +47,7 @@ On a CA server in your System Center Operations Manager (SCOM) environment, foll
 
 ## Issue a CA certificate from the template
 
-1. On the server that was given the permission on the template, open the computer certificate store.
+1. On the Windows Server that was given the permission on the template, open the computer certificate store.
 1. Under **Personal**, right click **Certificates** and select **All Tasks** > **Request New Certificate**.
 
     :::image type="content" source="media/use-ca-certificate-on-scom-linux-agent/request-new-certificate.png" alt-text="Screenshot that shows how to request a new certificate.":::
@@ -57,9 +58,9 @@ On a CA server in your System Center Operations Manager (SCOM) environment, foll
 
     :::image type="content" source="media/use-ca-certificate-on-scom-linux-agent/select-certificate-to-enroll.png" alt-text="Screenshot of the warning that requests more information for enrollment.":::
 
-1. Add the following details preferably in the order.
-    1. CN=\<ServerNameFQDN>
-    2. CN=\<ServerName>
+1. Add the following details preferably in the order:
+    1. CN=\<Server Name FQDN>
+    2. CN=\<Server Name>
     3. DC=\<domain component>, for example, `Contoso`
     4. DC=\<domain component>, for example, `com`
 
@@ -71,10 +72,10 @@ On a CA server in your System Center Operations Manager (SCOM) environment, foll
 1. Right click the certificate and export it with a private key. Finally, there should be a .pfx file.
 1. Export the CA and Intermediate CA certificate (if applicable) to the *root* store of all the management servers/gateways in the UNIX/Linux resource pool.
 
-## Copy and edit the certificate on the X-Plat machine
+## Copy and edit the certificate on the X-Plat server
 
 1. Copy the certificate to the X-Plat server for which the certificate was issued.
-1. Export the private key to a *key.pem* file by using the following command:
+1. Export the private key by using the following command:
 
     ```console
     openssl pkcs12 -in <FileName>.pfx -nocerts -out key.pem
@@ -94,7 +95,7 @@ On a CA server in your System Center Operations Manager (SCOM) environment, foll
     openssl pkcs12 -in <FileName>.pfx -clcerts -nokeys -out omi.pem
     ```
 
-    While exporting the certificate from certificate store, you have to enter the password of the */<FileName>.pfx* file.
+    While exporting the certificate from certificate store, you have to enter the password to the *\<FileName>.pfx* file.
 
     :::image type="content" source="media/use-ca-certificate-on-scom-linux-agent/command-export-certificate.png" alt-text="Screenshot that shows the command to export the certificate.":::
 
@@ -130,7 +131,7 @@ On a CA server in your System Center Operations Manager (SCOM) environment, foll
     ps -ef | grep omi | grep -v grep
     ```
 
-    :::image type="content" source="media/use-ca-certificate-on-scom-linux-agent/command-validate-omi-processes.png" alt-text="Screenshot that shows the command to validate omi processes running.":::
+    :::image type="content" source="media/use-ca-certificate-on-scom-linux-agent/command-validate-omi-processes.png" alt-text="Screenshot that shows the command to validate omi processes running." lightbox="media/use-ca-certificate-on-scom-linux-agent/command-validate-omi-processes.png":::
 
 ## Validate the certificate is signed by the CA
 
@@ -166,4 +167,4 @@ On a CA server in your System Center Operations Manager (SCOM) environment, foll
 1. On the network trace, filter with the IP of the agent.
 1. In the *Certificate, Server Hello Done* packet, you should see the CA signed certificate rather than the self-signed certificate used.
 
-    :::image type="content" source="media/use-ca-certificate-on-scom-linux-agent/validate-ca-signed-certificate-used.png" alt-text="Screenshot that shows the CA signed certificate.":::
+    :::image type="content" source="media/use-ca-certificate-on-scom-linux-agent/validate-ca-signed-certificate-used.png" alt-text="Screenshot that shows the CA signed certificate." lightbox="media/use-ca-certificate-on-scom-linux-agent/validate-ca-signed-certificate-used.png":::
