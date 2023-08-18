@@ -1,9 +1,9 @@
 ---
 title: Changes to an SLA item record through an upgrade solution aren't shown in Dynamics 365 Customer Service
 description: Provides a resolution for the issue where the changes to an SLA item record through an upgrade solution don't appear even after a successful upgrade in Microsoft Dynamics 365 Customer Service.
-ms.reviewer: sdas
-ms.author: ankugupta
-ms.date: 08/11/2023
+ms.reviewer: sdas, ankugupta
+ms.author: sdas
+ms.date: 08/18/2023
 ---
 # The changes to an SLA item record through an upgrade solution don't appear even after a successful upgrade
 

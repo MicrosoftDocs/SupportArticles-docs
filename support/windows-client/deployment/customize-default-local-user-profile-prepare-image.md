@@ -32,7 +32,7 @@ After you deploy the image, these settings are applied to all new users who log 
 > [!NOTE]
 > This article supersedes all previously published procedures for customizing default local user profiles when you prepare images.
 
-For more information about the steps to customize the default local user profile for Windows Vista or later operating systems, see [How to customize default user profiles in Windows Vista, Windows Server 2008, Windows 7, and in Windows Server 2008 R2](/troubleshoot/windows-client/deployment/customize-default-local-user-profile).
+For more information about the steps to customize the default local user profile for Windows Vista or later operating systems, see [How to customize default user profiles in Windows Vista, Windows Server 2008, Windows 7, and in Windows Server 2008 R2](customize-default-local-user-profile.md).
 
 ## How to customize the default local user profile in Windows XP or in Windows Server 2003
 

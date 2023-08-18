@@ -3,7 +3,7 @@ title: Azure Storage Explorer troubleshooting guide
 description: Provides debugging techniques for Azure Storage Explorer.
 services: storage
 ms.service: azure-storage
-ms.date: 04/12/2023
+ms.date: 08/08/2023
 ms.reviewer: azurestocic, jarrettr, v-weizhu
 ---
 
@@ -218,6 +218,30 @@ macOS Keychain can sometimes enter a state that causes issues for the Storage Ex
 1. Open Storage Explorer.
 1. You're prompted with a message like "Service hub wants to access the Keychain." Type your Mac admin account password and select **Always Allow**. Or select **Allow** if **Always Allow** isn't available.
 1. Try to sign in.
+
+### Linux: No application window or password manager errors at startup
+
+If you start Storage Explorer on a Linux system, you may encounter one of the following issues:
+
+- No application window appears.
+- Errors about the system's password manager occur.
+
+Storage Explorer uses the system's credential manager to protect your data, including sign-in credentials and SAS connections. If no compatible credential manager application is detected, Storage Explorer won't start. If your system doesn't have a local credential management tool installed, install a third-party tool compatible with `libsecret`. For example, on Linux systems that use the GNOME desktop environment, you can install [Seahorse](https://wiki.gnome.org/Apps/Seahorse/).
+
+Storage Explorer usually creates a default keyring if it doesn't exist at startup. However, in some cases, this might not occur, resulting in no application window or password manager service errors. To resolve the issues, manually set a default keyring.
+
+If you're using Seahorse and there are no existing keyrings, or you want to create a new one, follow these steps to create a default keyring:
+
+1. Start the "Passwords and Keys" application.
+2. Select the "+" button, and then select **Password keyring**.
+3. Set a name and a password for the new keyring.
+4. Right-click the new keyring and select **Set as default**.
+
+If you use the Storage Explorer snap, you must also make sure Storage Explorer is connected to your system's password manager. To do this, run the following command:
+
+```bash
+snap connect storage-explorer:password-manager-service :password-manager-service
+```
 
 ### Default browser doesn't open
 

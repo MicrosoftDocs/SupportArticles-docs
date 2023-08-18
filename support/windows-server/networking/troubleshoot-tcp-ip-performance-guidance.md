@@ -30,13 +30,13 @@ Tips to enhance the throughput:
 - Select security features based on the actual organizations' requirements.
 - Create a baseline.
 
-For more information, see [Bottlenecks for TCP throughput](/troubleshoot/windows-server/networking/overview-of-tcpip-performance#bottlenecks-for-tcp-throughput).
+For more information, see [Bottlenecks for TCP throughput](overview-of-tcpip-performance.md#bottlenecks-for-tcp-throughput).
 
-For more information on how to create a baseline, see [How to create a baseline](/troubleshoot/windows-server/networking/overview-of-tcpip-performance#how-to-create-a-baseline).
+For more information on how to create a baseline, see [How to create a baseline](overview-of-tcpip-performance.md#how-to-create-a-baseline).
 
-When the throughput falls below a given baseline, use a packet capturing tool to take a network trace and detect network issues. [Use the ctsTraffic tool to analyze the network trace](/troubleshoot/windows-server/networking/troubleshooting-tcpip-performance-underlying-network#use-the-ctstraffic-tool-to-analyze-the-network-trace)
+When the throughput falls below a given baseline, use a packet capturing tool to take a network trace and detect network issues. [Use the ctsTraffic tool to analyze the network trace](troubleshooting-tcpip-performance-underlying-network.md#use-the-ctstraffic-tool-to-analyze-the-network-trace)
 
-[Check Performance Monitor logs](/troubleshoot/windows-server/networking/troubleshooting-tcpip-performance-underlying-network#check-performance-monitor-logs)
+[Check Performance Monitor logs](troubleshooting-tcpip-performance-underlying-network.md#check-performance-monitor-logs)
 
 ## Common issues and solutions
 

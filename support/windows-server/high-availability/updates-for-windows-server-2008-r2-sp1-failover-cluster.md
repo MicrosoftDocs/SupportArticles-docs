@@ -21,7 +21,7 @@ _Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1
 _Original KB number:_ &nbsp; 2545685
 
 > [!NOTE]
-> We recommend that you evaluate each fix to determine whether it applies to your environment. If you determine that Failover Clusters in your environment may be affected by the problem(s) that a fix addresses, install the fix on each cluster node by using the procedures that are described in [How to update Windows Server failover clusters](/troubleshoot/windows-server/high-availability/windows-server-failover-clusters-service-packs-hotfixes).
+> We recommend that you evaluate each fix to determine whether it applies to your environment. If you determine that Failover Clusters in your environment may be affected by the problem(s) that a fix addresses, install the fix on each cluster node by using the procedures that are described in [How to update Windows Server failover clusters](windows-server-failover-clusters-service-packs-hotfixes.md).
 >
 > Use the information in the More information section to help you determine whether a particular fix applies to the cluster. Before you install a particular fix, we recommend that you review the original Microsoft Knowledge Base (KB) article that describes the fix.
 

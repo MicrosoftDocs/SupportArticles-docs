@@ -67,7 +67,7 @@ If you are running an Active Directory forest and using a file system security p
 
 The events are logged because the file system security settings of one policy contain an environment variable that is unknown on the client computer. To find out more about the problem, enable logging of the security configuration client-side extension:
 
-[Troubleshoot SCECLI 1202 events](/troubleshoot/windows-server/group-policy/scecli-1202-events).
+[Troubleshoot SCECLI 1202 events](scecli-1202-events.md).
 
 In the %windir%\security\logs\winlogon.log file, you will see an entry such as:
 

@@ -446,6 +446,6 @@ The following table contains information about how to use a firewall with SQL Se
 
 ## More information
 
-- For more information on performance issues caused by third-party modules and drivers to SQL Server, see [Performance and consistency issues when certain modules or filter drivers are loaded](/troubleshoot/sql/database-engine/performance/performance-consistency-issues-filter-drivers-modules).
+- For more information on performance issues caused by third-party modules and drivers to SQL Server, see [Performance and consistency issues when certain modules or filter drivers are loaded](../performance/performance-consistency-issues-filter-drivers-modules.md).
 - To find general information about SQL Server security, see [Securing SQL Server](/sql/relational-databases/security/securing-sql-server).
 - For general recommendations from Microsoft for scanning on Enterprise systems, see [Virus scanning recommendations for Enterprise computers that are running Windows or Windows Server (KB822158)](https://support.microsoft.com/help/822158).

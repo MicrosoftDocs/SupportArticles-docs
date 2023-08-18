@@ -29,4 +29,4 @@ To work around this problem, restore the database on a volume that has enough sp
 
 ## References
 
-Learn about the [Description of the standard terminology that is used to describe Microsoft software updates](/troubleshoot/windows-client/deployment/standard-terminology-software-updates) that Microsoft uses to describe software updates.
+Learn about the [Description of the standard terminology that is used to describe Microsoft software updates](../../windows-client/deployment/standard-terminology-software-updates.md) that Microsoft uses to describe software updates.

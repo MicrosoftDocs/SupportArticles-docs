@@ -8,7 +8,7 @@ ms.reviewer: ramakoni, v-jayaramanp
 
 # SQL Server upgrade fails and returns error 15173 or 15559
 
-This article helps you troubleshoot error 15173 or 15559 that occur when you install a cumulative update (CU) or service pack (SP) for Microsoft SQL Server. The error occurs when database upgrade scripts are run.
+This article helps you troubleshoot error 15173 or 15559 that occur when you install a Cumulative Update (CU) or Service Pack (SP) for Microsoft SQL Server. The error occurs when database upgrade scripts are run.
 
 ## Symptoms
 
