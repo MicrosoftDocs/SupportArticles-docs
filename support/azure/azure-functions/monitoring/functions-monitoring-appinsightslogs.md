@@ -7,19 +7,22 @@ ms.reviewer: gasridha, v-jayaramanp
 
 # Application Insights logs are missing or incorrect for Azure Function Apps
 
-You can closely monitor your Function apps through the integration between [Azure Functions](https://azure.microsoft.com/products/functions) and [Application Insights](/azure/azure-monitor/app/app-insights-overview?tabs=net). And you can use Application Insights without any custom configuration.
+You can closely monitor the Functions app through the integration between [Azure Functions](https://azure.microsoft.com/products/functions) and [Application Insights](/azure/azure-monitor/app/app-insights-overview?tabs=net). And you can use Application Insights without any custom configuration.
 
-If the Application Insights logs are missing or if the data appears to be partial or inaccurate, use the following steps to resolve the issue.
+If the Application Insights logs are missing, or if the data appears to be partial or inaccurate, use the following steps to resolve the issue.
 
-## Check if the Functions app is configured correctly to generate logs
+## Check thether the Functions app is configured correctly to generate logs
 
-The **Diagnose and Solve** option in Azure Functions App has a **Function Configuration checks** tool that checks the configuration for Application Insights, particularly the following:
+The **Diagnose and Solve** option in the Azure Functions app has a **Function Configuration checks** tool that checks the configuration for Application Insights, particularly for the following:
 
-- Only one of the connection settings Application Insights Instrumentation key `APPINSIGHTS_INSTRUMENTATIONKEY` or the `APPLICATIONINSIGHTS_CONNECTION_STRING` connection string exists. We recommend using the [APPLICATIONINSIGHTS_CONNECTION_STRING](/azure/azure-monitor/app/sdk-connection-string?tabs=net#overview) for more stable behavior. Using `APPINSIGHTS_INSTRUMENTATIONKEY` will be deprecated by 2025.
+- Only one of the following connection settings exists: 
+   -  `APPINSIGHTS_INSTRUMENTATIONKEY` Application Insights Instrumentation key
+   -  `APPLICATIONINSIGHTS_CONNECTION_STRING` connection
+  We recommend that you use the [APPLICATIONINSIGHTS_CONNECTION_STRING](/azure/azure-monitor/app/sdk-connection-string?tabs=net#overview) for more stable behavior. The ability to use `APPINSIGHTS_INSTRUMENTATIONKEY` will be deprecated by 2025.
 - The `AzureWebJobsDashboard` built-in logging is disabled, as recommended.
-- Sampling is enabled for the Azure Functions telemetry, which is enabled by default.
+- By default, sampling is enabled for the Azure Functions telemetry.
 
-> **Recommendation**: The Function app should be on version 4 and the runtime version should be at least 4.15.2xx, because from this version onwards, you can track the log flows from Azure Functions to Application Insights service. By monitoring the log flows, you can check for missing logs.
+> **Recommendation**: The Functions app should be on version 4 and the runtime version should be at least 4.15.2*xx*. This is because, from this version onwards, you can track the log flows from Azure Functions to the Application Insights service. By monitoring the log flows, you can check for missing logs.
 
 ## Logs are missing or partial
 
@@ -39,7 +42,7 @@ Application Insights collects log, performance, and error data. [Sampling config
 }
 ```
 
-If you find any partially missing logs, it might be due to sampling. To find out the actual sampling rate, use an Analytics query with the required time interval as shown in the following code snippet. If you observe that the `TelemetrySavedPercentage` for any sampling type is less than 100, then that type of telemetry is being sampled.
+If you notice any partially missing logs, this might occur because of sampling. To determine the actual sampling rate, use an Analytics query that uses the required time interval that's shown in the following code snippet. If you observe that the `TelemetrySavedPercentage` for any sampling type is less than 100, then that type of telemetry is being sampled.
 
 ```kql
 | where timestamp > todatetime("mm/dd/yyyy hh:mm:ss") and  timestamp < todatetime("mm/dd/yyyy hh:mm:ss") | where timestamp > todatetime("mm/dd/yyyy hh:mm:ss") and timestamp < todatetime("mm/dd/yyyy hh:mm:ss")
@@ -51,7 +54,7 @@ For more information, see [Data collection, retention, and storage in Applicatio
 
 ## Control the volume or verbosity of the logs being written
 
-You can increase or suppress the logs being written, by using a combination of log level and categories configured in *host.json*.
+You can increase or suppress the logs that are written. To do this, you can use a combination of log level and categories as configured in *host.json*.
 
 The Azure Functions logger includes a category for every log. The category indicates which part of the runtime code or your function code generated the log. For example:
 
@@ -89,9 +92,9 @@ To configure these values at the App settings level (to avoid redeployment on *h
 
 For more examples about how to suppress logs, see [functions-log-suppression](https://github.com/anthonychu/functions-log-suppression).
 
-## My Function app that's integrated with VNet isn't generating logs
+## My Function app that's integrated with VNet doesn't generate logs
 
-You must open port 443 for outgoing traffic in your server's firewall to allow the Application Insights SDK or Application Insights Agent to send data to the portal for the following URLs:
+You must open port 443 for outgoing traffic in your server firewall to allow the Application Insights SDK or Application Insights Agent to send data to the portal for the following URLs:
 
 - *dc.applicationinsights.azure.com*
 - *dc.applicationinsights.microsoft.com*
