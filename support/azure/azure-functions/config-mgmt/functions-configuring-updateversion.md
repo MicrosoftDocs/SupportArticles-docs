@@ -4,7 +4,7 @@ description: Describes how to upgrade the Azure Functions runtime to v4 and reso
 ms.date: 08/16/2023
 ms.reviewer: gasridha, v-sidong
 ---
-# Upgrade Azure Functions runtime and resolve common issues during the upgrade
+# Troubleshoot common issues during Azure Runtime upgrade
 
 This article describes how to upgrade the Azure Functions runtime to v4, and resolve some of the common issues that may occur during the upgrade, like runtime being unreachable and modules not being found.
 
