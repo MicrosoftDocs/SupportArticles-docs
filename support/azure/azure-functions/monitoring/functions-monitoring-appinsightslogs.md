@@ -1,7 +1,7 @@
 ---
 title: Application Insights logs are missing or incorrect
 description: Get answers to frequently asked questions about missing or incorrect logs for AI logs in Azure Functions.
-ms.date: 08/15/2023
+ms.date: 08/18/2023
 ms.reviewer: gasridha, v-jayaramanp
 ---
 
@@ -15,7 +15,7 @@ If the Application Insights logs are missing or if the data appears to be partia
 
 ## How can I check if my Function app is configured correctly to emit logs?
 
-The **Diagnose and Solve** option in Azure Functions App has a **Function Configuration checks** feature that checks the configuration for Application Insights, particularly the following:
+The **Diagnose and Solve** option in Azure Functions App has a function **Configuration checks** feature that checks the configuration for Application Insights, particularly the following:
 
 - Only one of the connection settings Application Insights Instrumentation key `APPINSIGHTS_INSTRUMENTATIONKEY` or the `APPLICATIONINSIGHTS_CONNECTION_STRING` connection string exists. We recommend using the [APPLICATIONINSIGHTS_CONNECTION_STRING](/azure/azure-monitor/app/sdk-connection-string?tabs=net#overview) for more stable behavior. Using `APPINSIGHTS_INSTRUMENTATIONKEY` will be deprecated by 2025.
 - The `AzureWebJobsDashboard` built-in logging is disabled, as recommended.
@@ -42,13 +42,13 @@ host.json
 }
 ```
 
-If you observe partially missing logs, this is probably due to sampling. To find out the actual sampling rate, use an Analytics query with the required time interval as shown in the following code snippet. If you see that the `TelemetrySavedPercentage` for any sampling type is less than 100, then that type of telemetry is being sampled.
+If you observe partially missing logs, this is probably due to sampling. To find out the actual sampling rate, use an Analytics query with the required time interval as shown in the following code snippet. If you observe that the `TelemetrySavedPercentage` for any sampling type is less than 100, then that type of telemetry is being sampled.
 
-```console
-union requests,dependencies,pageViews,browserTimings,exceptions,traces
-| where timestamp > todatetime("mm/dd/yyyy hh:mm:ss") and timestamp < todatetime("mm/dd/yyyy hh:mm:ss")
-| summarize TelemetrySavedPercentage = 100/avg(itemCount), TelemetryDroppedPercentage = 100-100/avg(itemCount) by bin(timestamp, 1d), itemType
-| sort by timestamp asc
+```sql
+UNION requests,dependencies,pageViews,browserTimings,exceptions,traces
+| WHERE timestamp > todatetime("mm/dd/yyyy hh:mm:ss") AND timestamp < todatetime("mm/dd/yyyy hh:mm:ss")
+| summarize TelemetrySavedPercentage = 100/avg(itemCount), TelemetryDroppedPercentage = 100-100/avg(itemCount) BY bin(timestamp, 1d), itemType
+| sort BY timestamp asc
 ```
 
 For more information, see [Data collection, retention, and storage in Application Insights](/azure/azure-monitor/app/data-retention-privacy).
