@@ -1,7 +1,7 @@
 ---
 title: Duplicate phone calls are created when using Sales accelerator in Dynamics 365 Sales
 description: Provides a resolution for an issue where duplicate phone calls are created when you use the Sales accelerator in Microsoft Dynamics 365 Sales.
-ms.date: 08/16/2023
+ms.date: 08/18/2023
 ms.reviewer: t-ronioded
 ---
 # Duplicate phone calls are created when you use Sales accelerator
@@ -10,14 +10,14 @@ This article provides a resolution for an issue where duplicate phone calls are 
 
 ## Symptoms
 
-When you make calls from the Sales accelerator in Dynamics 365, there are multiple phone calls are created for the same call.
+When you make a call from the Sales accelerator in Dynamics 365, multiple phone calls are created for the same call.
 
 ## Cause
 
-This issue occurs because both Sales accelerator and Teams dialer create a phone call.
+This issue occurs because both the Sales accelerator and Teams dialer create a phone call.
 
 ## Resolution
 
-To resolve this issue, you need to select the **Exclude phone call activities** checkbox on the [Sequence activities](/dynamics365/sales/customize-sales-accelerator-sellers#sequence-activities) page to avoid creating a duplicate phone call activity.
+To resolve this issue, select the **Exclude phone call activities** checkbox on the [Sequence activities](/dynamics365/sales/customize-sales-accelerator-sellers#sequence-activities) page to avoid creating a duplicate phone call activity.
 
 :::image type="content" source="media/duplicate-phonecalls/exclude-phone-call-activities.png" alt-text="Screenshot that shows the Exclude phone call activities checkbox on the Sequence activities page of Sales accelerator settings.":::
