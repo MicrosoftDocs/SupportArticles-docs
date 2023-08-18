@@ -6,7 +6,7 @@ ms.reviewer: t-ronioded
 ---
 # Microsoft Teams dialer isn't visible in a custom app
 
-This article provides a resolution for an issue where the Microsoft Teams dialer isn't visible in a custom app in Microsoft Dynamics 365 Sales.
+This article provides a resolution for an issue where the [Microsoft Teams dialer](/dynamics365/sales/configure-microsoft-teams-dialer) isn't visible in a custom app in Microsoft Dynamics 365 Sales.
 
 ## Symptoms
 

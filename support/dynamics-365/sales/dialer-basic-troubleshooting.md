@@ -1,12 +1,12 @@
 ---
 title: Teams dialer basic troubleshooting steps in Dynamics 365 Sales
-description: Introduces basic troubleshooting steps for Microsoft Teams dialer in Dynamics 365 Sales.
+description: Introduces basic troubleshooting steps for Microsoft Teams dialer in Microsoft Dynamics 365 Sales.
 ms.date: 08/18/2023
 ms.reviewer: t-ronioded
 ---
 # Basic troubleshooting steps for Microsoft Teams dialer
 
-This article introduces the basic troubleshooting steps to clear the browser cache and perform a hard refresh for Microsoft Teams dialer in Microsoft Dynamics 365 Sales.
+This article introduces the basic troubleshooting steps to clear the browser cache and perform a hard refresh for [Microsoft Teams dialer](/dynamics365/sales/configure-microsoft-teams-dialer) in Microsoft Dynamics 365 Sales.
 
 ## Step 1 - Clear browsing data
 

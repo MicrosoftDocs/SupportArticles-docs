@@ -6,7 +6,7 @@ ms.date: 08/18/2023
 ---
 # Teams dialer isn't visible in Dynamics 365 Sales
 
-This article provides resolutions for an issue where the Microsoft Teams dialer isn't visible in Microsoft Dynamics 365 Sales.
+This article provides resolutions for an issue where the [Microsoft Teams dialer](/dynamics365/sales/configure-microsoft-teams-dialer) isn't visible in Microsoft Dynamics 365 Sales.
 
 ## Symptoms
 

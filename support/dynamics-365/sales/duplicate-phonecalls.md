@@ -14,7 +14,7 @@ When you make a call from the Sales accelerator in Dynamics 365, multiple phone 
 
 ## Cause
 
-This issue occurs because both the Sales accelerator and Teams dialer create a phone call.
+This issue occurs because both the Sales accelerator and [Microsoft Teams dialer](/dynamics365/sales/configure-microsoft-teams-dialer) create a phone call.
 
 ## Resolution
 

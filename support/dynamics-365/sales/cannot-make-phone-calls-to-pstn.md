@@ -6,7 +6,7 @@ ms.date: 08/18/2023
 ---
 # Sellers can't make a phone call to a PSTN number
 
-This article provides resolutions for an issue where a seller can't make a phone call to a Public Switched Telephone Network (PSTN) number using Microsoft Teams dialer.
+This article provides resolutions for an issue where a seller can't make a phone call to a Public Switched Telephone Network (PSTN) number using [Microsoft Teams dialer](/dynamics365/sales/configure-microsoft-teams-dialer).
 
 ## Symptoms
 
