@@ -7,7 +7,7 @@ ms.reviewer: gasridha, v-jayaramanp
 
 # Application Insights logs are missing or incorrect for Azure Function Apps
 
-You can closely monitor your Function apps through the integration between [Azure Functions](https://azure.microsoft.com/products/functions) and Application Insights. You can use Application Insights without any custom configuration.
+You can closely monitor your Function apps through the integration between [Azure Functions](https://azure.microsoft.com/products/functions) and Application Insights. And you can use Application Insights without any custom configuration.
 
 If the Application Insights logs are missing or if the data appears to be partial or inaccurate, use the following steps to resolve the issue.
 
