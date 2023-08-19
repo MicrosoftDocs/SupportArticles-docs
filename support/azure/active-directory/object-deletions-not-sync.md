@@ -5,6 +5,7 @@ ms.date: 07/06/2020
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: enterprise-users
+ms.custom: has-azure-ad-ps-ref
 ---
 # Object deletions aren't synchronized to Azure AD when using the Azure Active Directory Sync tool
 
