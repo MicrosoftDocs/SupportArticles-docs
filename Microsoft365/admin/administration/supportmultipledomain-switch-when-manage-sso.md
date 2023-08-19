@@ -7,7 +7,7 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
-ms.custom: CSSTroubleshoot
+ms.custom: CSSTroubleshoot, has-azure-ad-ps-ref
 ms.reviewer: 
 appliesto: 
   - Microsoft 365
