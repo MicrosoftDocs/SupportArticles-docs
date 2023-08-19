@@ -4,6 +4,7 @@ description: Using conditional access has an unexpected effect on users who use 
 ms.reviewer: sranjan, hamenon
 ms.date: 3/31/2021
 ms.subservice: power-automate-flows
+ms.custom: has-azure-ad-ps-ref
 ---
 # Recommendations for conditional access and multi-factor authentication in Microsoft Flow
 
