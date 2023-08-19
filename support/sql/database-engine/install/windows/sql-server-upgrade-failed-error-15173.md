@@ -57,7 +57,7 @@ To resolve the 15173 or 15559 error, follow these steps:
 1. Connect to SQL Server, and run one of the following queries, depending on the server principal that's mentioned in the error message:
 
     ```sql
-    SELECT   a.name, ,b.permission_name  
+    SELECT   a.name,b.permission_name  
     FROM  sys.server_principals a 
     INNER JOIN sys.server_permissions b ON a.principal_id = b.grantee_principal_id 
     INNER JOIN sys.server_principals c ON b.grantor_principal_id = c.principal_id 
