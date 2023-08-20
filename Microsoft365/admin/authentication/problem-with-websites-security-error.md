@@ -8,7 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: willfid
-ms.custom: CSSTroubleshoot
+ms.custom: CSSTroubleshoot, has-azure-ad-ps-ref
 search.appverid: 
   - MET150
 appliesto: 
