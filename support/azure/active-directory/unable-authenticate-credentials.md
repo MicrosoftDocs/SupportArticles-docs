@@ -5,6 +5,7 @@ ms.date: 05/11/2020
 ms.reviewer: willfid
 ms.service: active-directory
 ms.subservice: enterprise-users
+ms.custom: has-azure-ad-ps-ref
 ---
 # "Unable to authenticate your credentials" error when you try to connect to Azure Active Directory
 
