@@ -6,6 +6,7 @@ ms.reviewer: jarrettr, nualex, v-leedennis
 editor: v-jsitser
 ms.service: active-directory
 ms.subservice: enterprise-users
+ms.custom: has-azure-ad-ps-ref
 keywords:
 #Customer intent: As an Azure Active Directory administrator, I want to understand how to troubleshoot password writeback issues better so that I can more quickly resolve problems that affect password writeback.
 ---
