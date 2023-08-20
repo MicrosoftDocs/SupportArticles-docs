@@ -12,9 +12,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft Teams
-ms.custom: 
-  - CI 113425
-  - CSSTroubleshoot
+ms.custom: CI 113425, CSSTroubleshoot, has-azure-ad-ps-ref
 ms.reviewer: scapero
 description: Resolves a multi-factor authentication error in a Teams form.
 ---
