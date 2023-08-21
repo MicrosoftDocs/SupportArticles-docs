@@ -1,8 +1,8 @@
 ---
-title: Concurrent solution operation failures 
-description: Solution operations like import, delete, publish customization, create solution component and background ribbon calculation, these can result in failure because of Concurrent operations. Only one operation can be done at a time, customer needs retry later if they still see failure.
+title: Concurrent solution operation failures in Power Apps
+description: Works around the Cannot start the requested operation because there is another running error that occurs when you perform multiple solution operations at a time in Microsoft Power Apps.
 ms.reviewer: jdaly
-ms.date: 08/16/2023
+ms.date: 08/21/2023
 author: swatimadhukargit
 ms.author: swatim
 ---
@@ -10,29 +10,31 @@ ms.author: swatim
 
 _Applies to:_ &nbsp; Power Platform, Solutions
 
+This article provides a workaround for an issue that occurs when you perform multiple solution operations simultaneously in Microsoft Power Apps. These concurrent operations can cause failures because only one operation can be performed at a time. If you encounter a failure, retry the operation later.
+
 ## Symptoms
 
-When you try to do any of these solution operations:
+When you try to perform multiple solution operations simultaneously, such as:
 
-- Import solution
-- Delete solution
-- Publish customizations
-- Create solution component
+- [Import a solution](/power-apps/maker/data-platform/import-update-export-solutions)
+- [Delete a solution](/power-apps/maker/model-driven-apps/delete-model-driven-app#delete-a-model-driven-app-that-was-installed-as-part-of-a-managed-solution)
+- [Publish customizations](/power-apps/developer/model-driven-apps/publish-customizations)
+- [Create a solution component]( /power-apps/maker/data-platform/create-solution#add-solution-components)
 - Background ribbon calculation
 
-You get an error: **Please try again later**.
-
-## Error example
+You receive an error message like the following one:
 
 > Microsoft.Crm.ObjectModel.CustomizationLockException: Cannot start the requested operation [PublishAll] because there is another [Import] running at this moment. Use Solution History for more details. -- The solution installation or removal failed due to the installation or removal of another solution at the same time. Please try again later.
 
-
 ## Cause
 
-Dataverse only allows one solution operation at a time. A concurrent request for different solution operations returns this error until the previous operation is completed.
+Dataverse allows only one solution operation at a time. A concurrent request for different solution operations returns the error until the previous operation is completed.
 
 ## Workaround
 
-- You can avoid conflicts by not attempting multiple operations at a time in an environment. Waiting is the only resolution.
-- You can avoid conflicts by being aware of your [maintenance window](/power-platform/admin/policies-communications#maintenance-timeline) and by scheduling your deployment accordingly. For production environment, you can [change your maintenance window](/power-platform/admin/manage-maintenance-window) by shifting to another time.
-- You can also [watch the solution history page](/power-apps/maker/data-platform/solution-history) to check for completion any other operations on the environment.
+Performing multiple operations simultaneously in an environment can lead to conflicts, so it's best to avoid doing so. 
+
+To prevent conflicts,
+
+- Be aware of your [maintenance window](/power-platform/admin/policies-communications#maintenance-timeline) and schedule your deployment accordingly. If you're working in a production environment, you can [change your maintenance window](/power-platform/admin/manage-maintenance-window) by shifting to a different time.
+- [Use the solution history page](/power-apps/maker/data-platform/solution-history) to check the status of operations in the environment.
