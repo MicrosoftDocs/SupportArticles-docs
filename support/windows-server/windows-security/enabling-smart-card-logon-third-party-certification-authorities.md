@@ -98,7 +98,7 @@ As with any PKI implementation, all parties must trust the Root CA to which the 
        [1]CRL Distribution Point  
        Distribution Point Name:  
        Full Name:  
-       URL=http://server1.name.com/CertEnroll/caname.crlbuhu
+       URL=http://server1.name.com/CertEnroll/caname.crl
        ```
 
    - Key Usage = Digital Signature
