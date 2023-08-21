@@ -446,7 +446,7 @@
         - name: Teams dialer isn't visible in custom app
           href: dialer-not-available-in-custom-app.md
         - name: Teams dialer isn't visible in the Sales Hub
-          href: dialer-not-visible-in-crm.md
+          href: dialer-not-visible-in-sales.md
     - name: Mobile Apps
       items:
         - name: We can't find any apps for your role
