@@ -1,5 +1,5 @@
 ---
-title: How to remove a disabled Azure AD user's device from Intune
+title: "How to remove a disabled Azure AD user's device from Intune"
 description: Fixes a problem in which a device becomes orphaned/unidentifiable if its owner is removed from Azure Active Directory before the device is removed from Microsoft Intune.
 ms.date: 09/22/2021
 search.appverid: MET150
