@@ -31,7 +31,7 @@ Backup and restore operations are I/O intensive. Backup/Restore throughput depen
 
 - Use the [estimate_backup_restore](https://github.com/microsoft/mssql-support/blob/master/sample-scripts/backup_restore/estimate_backup_restore.sql) script to get an estimate of backup times.
 
-- Refer to [How It Works: What is Restore/Backup Doing?](https://techcommunity.microsoft.com/t5/sql-server-support/how-it-works-what-is-restore-backup-doing/ba-p/315442) This blog post provides insight into the current stage of backup or restore operations.
+- Refer to [How It Works: What is Restore/Backup Doing?](https://techcommunity.microsoft.com/t5/sql-server-support/how-it-works-what-is-restore-backup-doing/ba-p/315442) This blog post provides insight into the current stage of backup or restore operations.
 
 **Things to check**
 
@@ -39,7 +39,7 @@ Backup and restore operations are I/O intensive. Backup/Restore throughput depen
 
     |Knowledge Base or Books Online link|Explanation and recommended actions|
     |---|---|
-    | [Optimizing Backup and Restore Performance in SQL Server](https://technet.microsoft.com/library/ms190954%28v=sql.105%29.aspx)|The Books Online topic covers various best practices that you can use to improve the performance of Backup/Restore operations. For example, you can assign the SE_MANAGE_VOLUME_NAME special privilege to the Windows account that's running SQL Server to enable instant initialization of data files. This can produce significant performance gains.|
+    | [Optimizing Backup and Restore Performance in SQL Server](https://technet.microsoft.com/library/ms190954%28v=sql.105%29.aspx)|The Books Online topic covers various best practices that you can use to improve the performance of Backup/Restore operations. For example, you can assign the `SE_MANAGE_VOLUME_NAME` special privilege to the Windows account that's running SQL Server to enable instant initialization of data files. This can produce significant performance gains.|
     | [2920151 Recommended hotfixes and updates for Windows Server 2012 R2-based failover clusters](https://support.microsoft.com/help/2920151) <br/><br/> [2822241 Windows 8 and Windows Server 2012 update rollup: April 2013](https://support.microsoft.com/help/2822241)|Current system rollups can include fixes for known issues at the system level that can cause degrade the performance of programs such as SQL Server. Installing these updates can help prevent such issues.|
     | [2878182 FIX: User mode processes in an application are unresponsive on servers that are running Windows Server 2012](https://support.microsoft.com/help/2878182) <br/><br/>|Backup operations are I/O intensive and can be affected by this bug. Apply this fix to help prevent these issues.|
     | [Configure antivirus software to work with SQL Server](../security/antivirus-and-sql-server.md)|Antivirus software may hold locks on .bak files. This can affect the performance of backup and restore operations. Follow the guidance in this article to exclude backup files from virus scans.|
@@ -53,11 +53,11 @@ Backup and restore operations are I/O intensive. Backup/Restore throughput depen
 
 3. If you're using either third-party software or database maintenance plans to do simultaneous backups, consider whether you should change the schedules to minimize contention on the drive to which the backups are being written.
 
-4. Work with your windows administrator to check for firmware updates for your hardware.  
+4. Work with your Windows administrator to check for firmware updates for your hardware.  
 
 ## Issues that affect database restoration between different SQL Server versions
 
-A SQL Server backup can't be restored to an earlier version of SQL Server than the version at which the backup was created. For example, you can't restore a backup that's taken on a SQL Server 2019 instance to a SQL Server 2017 instance. Trying to do this will cause the following error message to be generated:
+A SQL Server backup can't be restored to an earlier version of SQL Server than the version at which the backup was created. For example, you can't restore a backup that's taken on a SQL Server 2019 instance to a SQL Server 2017 instance. If you try to restore a backup, the following error message appears:
 
 > Error 3169: The database was backed up on a server running version %ls. That version is incompatible with this server, which is running version %ls. Either restore the database on a server that supports the backup, or use a backup that is compatible with this server.
 
@@ -85,7 +85,7 @@ For more information about how to generate scripts for your database, see [Scrip
 
 If you encounter problems that affect backup jobs or maintenance plans in Always On environments, note the following:
 
-- By default, the automatic backup preference is set to **Prefer Secondary**. This specifies that backups should occur on a secondary replica — except if the primary replica is the only replica online. You can't take differential backups of your database by using this setting. To change this setting, use SSMS on your current primary replica, and navigate to **Backup Preferences** page under **Properties** of your Availability group.
+- By default, the automatic backup preference is set to **Prefer Secondary**. This specifies that backups should occur on a secondary replica - except if the primary replica is the only replica online. You can't take differential backups of your database by using this setting. To change this setting, use SSMS on your current primary replica, and navigate to **Backup Preferences** page under **Properties** of your Availability group.
 - If you're using a maintenance plan or scheduled jobs to generate backups of your databases, make sure to create the jobs for each availability database on every server instance that hosts an availability replica for the availability group.
 
 For more information about backups in an Always On environment, see the following topics:
@@ -110,7 +110,7 @@ To prevent these errors, enable the **Backup CHECKSUM** option when you run a ba
 
 You can also enable trace flag 3023 to enable a checksum when you run backups by using backup tools. For more information, see [How to enable the CHECKSUM option if backup utilities do not expose the option](https://support.microsoft.com/topic/how-to-enable-the-checksum-option-if-backup-utilities-do-not-expose-the-option-0d5efb4c-5dfc-0122-c7e3-312a5dd5af3b).
 
-To fix these issues, you have to either locate another usable backup file or create a new backup set. Microsoft does not offer any solutions that can help retrieve data from a corrupted backup set.
+To fix these issues, you have to either locate another usable backup file or create a new backup set. Microsoft doesn't offer any solutions that can help retrieve data from a corrupted backup set.
 
 > [!NOTE]
 > If a backup file restores successfully on one server but not on another, try different ways to copy the file between the servers. For example, try [robocopy](/windows-server/administration/windows-commands/robocopy) instead of a regular copy operation.
