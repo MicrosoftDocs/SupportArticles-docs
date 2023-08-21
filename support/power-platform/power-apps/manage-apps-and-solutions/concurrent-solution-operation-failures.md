@@ -16,10 +16,10 @@ This article provides a workaround for an issue that occurs when you perform mul
 
 When you try to perform multiple solution operations simultaneously, such as:
 
-- [Import a solution](/power-apps/maker/data-platform/import-update-export-solutions)
-- [Delete a solution](/power-apps/maker/model-driven-apps/delete-model-driven-app#delete-a-model-driven-app-that-was-installed-as-part-of-a-managed-solution)
-- [Publish customizations](/power-apps/developer/model-driven-apps/publish-customizations)
-- [Create a solution component]( /power-apps/maker/data-platform/create-solution#add-solution-components)
+- Import a solution
+- Delete a solution
+- Publish customizations
+- Create a solution component
 - Background ribbon calculation
 
 You receive an error message like the following one:
