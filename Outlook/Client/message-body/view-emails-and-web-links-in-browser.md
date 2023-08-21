@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Outlook for Windows
   - CSSTroubleshoot
-ms.reviewer: gquintin, aruiz, eric meerak
+ms.reviewer: gquintin, aruiz, van.eric; meerak
 appliesto: 
   - Outlook for Microsoft 365
 search.appverid: MET150
