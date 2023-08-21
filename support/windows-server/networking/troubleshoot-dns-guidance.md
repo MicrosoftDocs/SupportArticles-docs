@@ -90,7 +90,7 @@ A DNS query request may time out if the DNS server forwards the query to unreach
 Event message:  
 > DNS server was unable to open Active Directory. This DNS server is configured to use directory service information and cannot operate without access to the directory. The DNS server will wait for the directory to start. If the DNS server is started but the appropriate event has not been logged, then the DNS server is still waiting for the directory to start.
 
-To troubleshoot this issue, see [Troubleshoot AD DS and restart the DNS Server service](/troubleshoot/windows-server/networking/troubleshoot-dns-event-id-4013#resolution).
+To troubleshoot this issue, see [Troubleshoot AD DS and restart the DNS Server service](troubleshoot-dns-event-id-4013.md#resolution).
 
 ### DNS Server geo-location policy doesn't work as expected
 
@@ -190,6 +190,6 @@ The traces are stored in a compressed file in the *C:\\MS_DATA* folder. This can
 - [DNS Policies overview](/windows-server/networking/dns/deploy/dns-policies-overview)
 - [DNS Active Directory-Integrated Zones](/windows-server/identity/ad-ds/plan/active-directory-integrated-dns-zones)
 - [DNS zone replication in Active Directory](/previous-versions/windows/it-pro/windows-server-2003/cc779655%28v%3dws.10%29)
-- [Verify that SRV DNS records have been created](/troubleshoot/windows-server/networking/verify-srv-dns-records-have-been-created)
-- [Configure DNS dynamic updates](/troubleshoot/windows-server/networking/configure-dns-dynamic-updates-windows-server-2003)
+- [Verify that SRV DNS records have been created](verify-srv-dns-records-have-been-created.md)
+- [Configure DNS dynamic updates](configure-dns-dynamic-updates-windows-server-2003.md)
 - [Reviewing DNS concepts](/windows-server/identity/ad-ds/plan/reviewing-dns-concepts)

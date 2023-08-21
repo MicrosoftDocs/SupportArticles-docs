@@ -50,4 +50,4 @@ Verify that correct permission is assigned to the RD Connection Broker Server on
 ## References
 
 - [Add the RD Connection Broker server to the deployment and configure high availability](/windows-server/remote/remote-desktop-services/rds-connection-broker-cluster)
-- [Useful log files for troubleshooting RDS issues](/troubleshoot/windows-server/remote/log-files-to-troubleshoot-rds-issues)
+- [Useful log files for troubleshooting RDS issues](log-files-to-troubleshoot-rds-issues.md)

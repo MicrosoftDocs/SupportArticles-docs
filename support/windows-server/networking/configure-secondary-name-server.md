@@ -91,7 +91,7 @@ To configure the reverse lookup zone on the secondary name server, follow these 
     > [!NOTE]
     > The network ID is that portion of the TCP/IP address that pertains to the network.
 
-    For more information about TCP/IP networks, see [Understand TCP/IP Addressing and Subnetting Basics](/troubleshoot/windows-client/networking/tcpip-addressing-and-subnetting).
+    For more information about TCP/IP networks, see [Understand TCP/IP Addressing and Subnetting Basics](../../windows-client/networking/tcpip-addressing-and-subnetting.md).
 
 8. On the **Zone File** page, click **Next**, and then click **Finish**.
 

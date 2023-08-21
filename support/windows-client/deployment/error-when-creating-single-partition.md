@@ -69,7 +69,7 @@ Windows doesn't support booting of GPT initialized volumes with UEFI systems on 
 
 For details on Windows support for large drives, see the following articles:
 
-- [Windows support for hard disks that are larger than 2 TB](/troubleshoot/windows-server/backup-and-storage/support-for-hard-disks-exceeding-2-tb)
+- [Windows support for hard disks that are larger than 2 TB](../../windows-server/backup-and-storage/support-for-hard-disks-exceeding-2-tb.md)
 - [How to establish and boot to GPT mirrors on 64-bit Windows](https://support.microsoft.com/help/814070)
 - [Configure UEFI/GPT-Based Hard Drive Partitions](/previous-versions/windows/it-pro/windows-8.1-and-8/hh824839(v=win.10))
 

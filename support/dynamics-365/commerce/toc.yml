@@ -1,6 +1,10 @@
 - name: Dynamics 365 Commerce
   href: welcome-commerce.yml
   items:
+    - name: Customer accounts and loyalty
+      items:
+        - name: Welcome email isn't sent when new customers are created
+          href: customer-accounts-loyalty/email-not-sent-when-new-customer-created.md
     - name: Data synchronization
       items:
         - name: CDX download jobs can't be downloaded in a sandbox UAT

@@ -1,8 +1,8 @@
 ---
 title: Deleting SLAs or SLA items shows an error during solution upgrade or manual deletion
 description: Provides a resolution for the issue where the deletion of SLAs or SLA items shows error messages in Unified Interface during a solution upgrade or manual deletion in Dynamics 365 Customer Service.
-ms.reviewer: sdas
-ms.author: ravimanne
+ms.reviewer: sdas, ankugupta
+ms.author: sdas
 ms.date: 05/23/2023
 ---
 # Deleting SLAs or SLA items shows an error in Unified Interface during a solution upgrade or manual deletion

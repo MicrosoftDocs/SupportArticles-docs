@@ -42,6 +42,9 @@ You can run performance diagnostics directly from the Azure portal, where you ca
 
 * The following distributions are currently supported:
 
+  > [!NOTE]  
+  > Microsoft has only tested the versions that are listed in the table. If a version isn't listed in the table, then it isn't explicitly tested by Microsoft, but the version might still work.
+
     | Distribution               | Version                                         |
     |----------------------------|-------------------------------------------------|
     | Oracle Linux Server        | 6.10 [`*`], 7.3, 7.5, 7.6, 7.7, 7.8, 7.9 |

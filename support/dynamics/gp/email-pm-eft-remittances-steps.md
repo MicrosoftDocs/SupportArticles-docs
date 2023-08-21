@@ -58,4 +58,5 @@ Anything beyond what is outlined in this KB article may be considered a consulti
 
 The above article has also been published externally on the blog site:
 
-[Quick Step Guide to E-mail PM EFT Remittances in Microsoft Dynamics GP 2010](https://community.dynamics.com/gp/b/dynamicsgp/archive/2012/06/19/quick-step-guide-to-e-mail-eft-remittances-in-payables-management-for-microsoft-dynamics-gp-2010.aspx)
+[Quick Step Guide to E-mail PM EFT Remittances in Microsoft Dynamics GP 2010](https://community.dynamics.com/blogs/post/?postid=11e9fb89-af60-4af7-82ab-1455def05a16)
+
