@@ -13,7 +13,7 @@ If the Application Insights logs are missing, or if the data appears to be parti
 
 ## Check whether the Functions app is configured correctly to generate logs
 
-The **Diagnose and Solve** option in the Azure Functions app has a **Function Configuration Checks** tool that checks the configuration for Application Insights, particularly for the following:
+The **Diagnose and solve problems** option in the Azure Functions app has a **Function Configuration Checks** tool that checks the configuration for Application Insights, particularly for the following:
 
 - Only one of the following connection settings exists:
    - `APPINSIGHTS_INSTRUMENTATIONKEY` Application Insights Instrumentation key
