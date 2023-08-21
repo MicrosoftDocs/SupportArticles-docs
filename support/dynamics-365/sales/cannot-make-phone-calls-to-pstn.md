@@ -27,7 +27,7 @@ As a seller, when you use Microsoft Teams for desktop or Microsoft Teams on the 
 
 #### Resolution
 
-To resolve this issue, [assign a phone number for a user](/microsoftteams/assign-change-or-remove-a-phone-number-for-a-user#assign-a-phone-number-to-a-user).
+To resolve this issue, [assign Teams add-on licenses to users](/microsoftteams/teams-add-on-licensing/assign-teams-add-on-licenses) or [assign a phone number for a user](/microsoftteams/assign-change-or-remove-a-phone-number-for-a-user#assign-a-phone-number-to-a-user).
 
 ## Cause 2: Cached browsing data
 
