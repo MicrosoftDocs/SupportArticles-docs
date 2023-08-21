@@ -1,6 +1,6 @@
 ---
-title: View emails and web links side-by-side with Outlook and Microsoft Edge
-description: Describes the productivity benefits of Outlook opening web links in Microsoft Edge and how you can manage this feature in your organization.
+title: Web links from Outlook and Teams open in Microsoft Edge in side-by-side view
+description: Describes how to manage web links from Outlook and Teams opening in Microsoft Edge.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -10,27 +10,20 @@ localization_priority: Normal
 ms.custom: 
   - Outlook for Windows
   - CSSTroubleshoot
-ms.reviewer: gquintin, aruiz, meerak
+ms.reviewer: gquintin, aruiz, eric meerak
 appliesto: 
   - Outlook for Microsoft 365
 search.appverid: MET150
-ms.date: 07/20/2023
+ms.date: 08/21/2023
 ---
 
-# Web links from Outlook emails and Teams chats open using Microsoft Edge browser in a side-by-side feature experience
-Open web links from Outlook or Teams in Microsoft Edge in side-by-side view
+# Web links from Outlook and Teams open in Microsoft Edge in side-by-side view
 
 When you select a web link in a Microsoft Outlook for Windows email or in a Microsoft Teams for Windows chat, it will open in Microsoft Edge. When the link opens in Edge, the associated email or chat will open next to it in the Edge sidebar. This side-by-side feature experience is designed to minimize switching between windows so that you can continue to stay in the flow of your work when referencing web links.
 
-The side-by-side experience doesn't require you to use Edge. You're not required to use Edge to use the side-by-side experience. While M can manage the choice of browser that is used to open web links from Outlook emails and Teams chats
-(Organizations can manage which browser is used to open web links from Outlook emails and Teams chats using the _Choose Which Browser Opens Web Links_ policy. Individual users can also manage this feature through each application’s individual settings.
+This feature requires Outlook Build 16.0.16227.20280 or later. It was previously announced in the blog post [Discover new ways to multitask with Microsoft 365 and Microsoft Edge](https://www.microsoft.com/microsoft-365/blog/2023/02/16/discover-new-ways-to-multitask-with-microsoft-365-and-edge/).)
 
-Managing this setting only applies to the Outlook for Windows and Teams desktop client for Windows and does not change the system default browser for Windows.)
-
-This feature requires Outlook Build 16.0.16227.20280 or later.
-
-(For more information, see: [Discover new ways to multitask with Microsoft 365 and Microsoft Edge](https://www.microsoft.com/microsoft-365/blog/2023/02/16/discover-new-ways-to-multitask-with-microsoft-365-and-edge/).)
-
+You can manage the choice of browser that's used to open web links from Outlook and Teams. You can also allow individual users to manage this feature by using each app's settings. 
 
 ## Manage the new feature for Outlook and Teams by configuring a policy
 
@@ -49,7 +42,7 @@ To manage this change in your organization for both Outlook and Teams, you need 
 If you want Outlook or Teams to open web links using the system default browser, you need to enable this policy and select **System default browser**.
 
 Notes:
-- This policy applies to the desktop clients for Outlook for Windows and Teams for Windows only and does not affect the system default browser for Windows.
+- This policy applies to the desktop clients for Outlook for Windows and Teams for Windows only and doesn't affect the system default browser for Windows.
 - Configuring this policy enables the feature experience for both Outlook and Teams. You can't use this policy to enable the feature experience for these apps individually.
 
 You have two options where you can manage this policy:
@@ -104,8 +97,6 @@ Follow these steps to manage the policy in the [Cloud Policy service for Microso
 ## Allow users to manage the new feature
 
 If you prefer to let your users manage this feature, then either leave the _Choose Which Browser Opens Web Links_ policy unconfigured or disable the policy. Microsoft Edge will open as the new default experience when users open a web links from either Outlook or Teams for the first time, and then they can manage this behavior by using the appropriate app settings or through a banner notification:
-
-(The Microsoft Edge browser will be used when users open a web link from either Outlook or Teams for the first time, and then they can manage this behavior using the app settings or through a banner notification:)
 
 - Outlook settings: **File** \> **Options** \> **Advanced** \> **File and browser preferences**.
 - Teams settings: **Settings** \> **Files and links** \> **Link open preference**.
