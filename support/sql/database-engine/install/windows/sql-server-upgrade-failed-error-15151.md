@@ -1,7 +1,7 @@
 ---
 title: SQL Server upgrade fails with error 15151 when executing Update Database scripts
 description: This article describes error 15151 that stops a SQL Server upgrade when update database scripts are run.
-ms.date: 08/21/2023
+ms.date: 08/17/2023
 ms.custom: sap:Installation, Patching and Upgrade
 ms.reviewer: jopilov, v-jayaramanp
 ---

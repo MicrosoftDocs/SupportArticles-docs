@@ -1,7 +1,7 @@
 ---
 title: SQL Server upgrade fails if certificate-based principals own user objects
 description: This article helps you resolve an issue in which a cumulative update or service pack for SQL Server reports errors caused by certificate-based principals that own user objects.
-ms.date: 08/21/2023
+ms.date: 08/17/2023
 ms.custom: sap:Installation, Patching and Upgrade
 ms.reviewer: jopilov, v-jayaramanp
 ---
