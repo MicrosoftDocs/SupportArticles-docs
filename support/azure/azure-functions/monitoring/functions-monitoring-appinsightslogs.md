@@ -45,8 +45,9 @@ Application Insights collects log, performance, and error data. [Sampling config
 If you notice any partially missing logs, this might occur because of sampling. To determine the actual sampling rate, use an Analytics query that uses the required time interval that's shown in the following code snippet. If you observe that the `TelemetrySavedPercentage` for any sampling type is less than 100, then that type of telemetry is being sampled.
 
 ```Kusto
-| where timestamp > todatetime("mm/dd/yyyy hh:mm:ss") and  timestamp < todatetime("mm/dd/yyyy hh:mm:ss") | where timestamp > todatetime("mm/dd/yyyy hh:mm:ss") and timestamp < todatetime("mm/dd/yyyy hh:mm:ss")
-| summarize TelemetrySavedPercentage = 100/avg(itemCount), TelemetryDroppedPercentage = 100-100/avg(itemCount) by bin(timestamp, 1d), itemType | summarize TelemetrySavedPercentage = 100/avg(itemCount), TelemetryDroppedPercentage = 100-100/avg(itemCount) by bin(timestamp, 1d), itemType
+union requests,dependencies,pageViews,browserTimings,exceptions,traces
+| where timestamp > todatetime("mm/dd/yyyy hh:mm:ss") and  timestamp < todatetime("mm/dd/yyyy hh:mm:ss")
+| summarize TelemetrySavedPercentage = 100/avg(itemCount), TelemetryDroppedPercentage = 100-100/avg(itemCount) by bin(timestamp, 1d), itemType
 | sort by timestamp asc
 ```
 
