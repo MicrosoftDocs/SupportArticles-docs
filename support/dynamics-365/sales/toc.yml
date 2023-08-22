@@ -434,7 +434,7 @@
         - name: Customers can't hear a seller 
           href: seller-voice-unheard-by-other-customer.md
         - name: Duplicate phone calls in Sales accelerator
-          href: duplicate-phonecalls.md
+          href: duplicate-phone-calls.md
         - name: Seller can't hear customers
           href: cannot-hear-other-customer.md
         - name: Seller can't make phone calls to PSTN
