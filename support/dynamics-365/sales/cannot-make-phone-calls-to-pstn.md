@@ -1,8 +1,10 @@
 ---
 title: Sellers can't make a phone call to PSTN in Dynamics 365 Sales
 description: Provides resolutions for an issue where a seller can't make a phone call to a PSTN number in Microsoft Dynamics 365 Sales.
-ms.reviewer: t-ronioded
-ms.date: 08/18/2023
+ms.date: 08/22/2023
+ms.reviewer: asaftzuk, ilanak
+author: t-ronioded
+ms.author: t-ronioded
 ---
 # Sellers can't make a phone call to a PSTN number
 

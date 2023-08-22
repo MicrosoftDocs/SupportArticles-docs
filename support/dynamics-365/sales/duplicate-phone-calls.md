@@ -1,8 +1,10 @@
 ---
 title: Duplicate phone calls are created when using Sales accelerator in Dynamics 365 Sales
 description: Provides a resolution for an issue where duplicate phone calls are created when you use the Sales accelerator in Microsoft Dynamics 365 Sales.
-ms.date: 08/18/2023
-ms.reviewer: t-ronioded
+ms.date: 08/22/2023
+ms.reviewer: asaftzuk, ilanak
+author: t-ronioded
+ms.author: t-ronioded
 ---
 # Duplicate phone calls are created when you use Sales accelerator
 

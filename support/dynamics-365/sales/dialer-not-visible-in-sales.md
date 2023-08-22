@@ -1,8 +1,10 @@
 ---
 title: Teams dialer isn't visible in Dynamics 365 Sales
 description: Provides a resolution for an issue where a seller can't see the Microsoft Teams dialer in Dynamics 365 Sales due to cached browsing data or the Read privilege.
-ms.reviewer: t-ronioded
-ms.date: 08/18/2023
+ms.date: 08/22/2023
+ms.reviewer: asaftzuk, ilanak
+author: t-ronioded
+ms.author: t-ronioded
 ---
 # Teams dialer isn't visible in Dynamics 365 Sales
 

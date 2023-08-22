@@ -1,8 +1,10 @@
 ---
 title: Teams dialer basic troubleshooting steps in Dynamics 365 Sales
 description: Introduces basic troubleshooting steps for Microsoft Teams dialer in Microsoft Dynamics 365 Sales.
-ms.date: 08/18/2023
-ms.reviewer: t-ronioded
+ms.date: 08/22/2023
+ms.reviewer: asaftzuk, ilanak
+author: t-ronioded
+ms.author: t-ronioded
 ---
 # Basic troubleshooting steps for Microsoft Teams dialer
 

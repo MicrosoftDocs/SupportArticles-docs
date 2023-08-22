@@ -1,8 +1,10 @@
 ---
 title: Sellers can't hear customers in a call in Dynamics 365 Sales
 description: Provides a resolution for an issue where a seller can't hear customers in a call in Microsoft Dynamics 365 Sales.
-ms.date: 08/18/2023
-ms.reviewer: t-ronioded
+ms.date: 08/22/2023
+ms.reviewer: asaftzuk, ilanak
+author: t-ronioded
+ms.author: t-ronioded
 ---
 # A seller can't hear customers in a call
 
