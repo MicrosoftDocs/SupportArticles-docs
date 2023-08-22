@@ -215,3 +215,11 @@
       items:
         - name: Can't import solutions or publish changes
           href: ../power-apps/cannot-import-solutions-publish-changes.md?context=/troubleshoot/power-platform/power-automate/context/context
+    - name: Support resources
+      items:
+        - name: Power Automate support
+          href: https://powerautomate.microsoft.com/support/
+        - name: Power Automate Community forum
+          href: https://powerusers.microsoft.com/t5/Microsoft-Power-Automate/ct-p/MPACommunity
+        - name: Power Automate Ideas forum
+          href: https://ideas.powerautomate.com/d365community/forum/086dd68e-597f-ec11-8d21-0022482e8f9f
