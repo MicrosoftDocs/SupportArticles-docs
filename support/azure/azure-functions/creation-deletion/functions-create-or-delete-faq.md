@@ -6,11 +6,11 @@ ms.reviewer: gasridha, v-sidong
 ---
 # Resolve issues when creating, deleting, or restoring Azure function apps
 
-This article lists some common issues that may occur when you create, delete, or restore Azure Functions apps, and steps to resolve the issues.
+This article lists some common issues that may occur when you create, delete, or restore Azure function apps, and steps to resolve the issues.
 
 ## Create function apps
 
-Azure function apps use the Azure App Service infrastructure. You can create an Azure Functions app by using:
+Azure function apps use the Azure App Service infrastructure. You can create an Azure functions apps by using:
 
 - [Azure portal](/azure/azure-functions/functions-create-function-app-portal)
 - [Azure CLI](/azure/azure-functions/functions-create-first-azure-function-azure-cli#create-a-function-app)
@@ -28,15 +28,15 @@ When creating a function app, you can create or link to a general-purpose Azure 
 
 ### Secure the Azure Storage account used by Azure Functions
 
-You can create an Azure Functions app and a new storage account secured with private endpoints. Host the Functions app on a plan supporting virtual-network integration.
+You can create an Azure function app and a new storage account secured with private endpoints. Host the function app on a plan supporting virtual-network integration.
 
 - For information on creation from the portal, see the [networking tutorial](/azure/azure-functions/functions-create-vnet).
 - For Azure Resource Manager templates, see [Azure/azure-quickstart-templates](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.web/function-app-storage-private-endpoints).
 - You can also update an existing Functions app to point to a new secure storage account. For more information, see [Restrict your storage account to a virtual network](/azure/azure-functions/configure-networking-how-to#restrict-your-storage-account-to-a-virtual-network).
 
-### Migrate an Azure Functions app across different hosting plans
+### Migrate an Azure function app across different hosting plans
 
-In Windows, you can use Azure CLI commands to migrate a Functions app between a Consumption and a Premium plan, or vice versa. For more information, see [Plan migration](/azure/azure-functions/functions-how-to-use-azure-function-app-settings#plan-migration).
+In Windows, you can use Azure CLI commands to migrate a function app between a Consumption and a Premium plan, or vice versa. For more information, see [Plan migration](/azure/azure-functions/functions-how-to-use-azure-function-app-settings#plan-migration).
 
 - Direct migration from/to a dedicated (App Service) plan to/from a Consumption/Premium plan isn't supported because features for event-driven scaling and using serverless features differ across hosting plans.
 
@@ -47,7 +47,7 @@ Review hosting plan (Consumption, Premium, Dedicated) offerings like virtual net
 
 ### Resolve the error "This region has quota of 0 instances for your subscription. Try selecting different region or SKU"
 
-If you're consistently experiencing resource creation issues in a particular region, you might also try to create the resource in a geographically paired region if your business allows it. For example, *West US 2* and *West Central US* are paired regions. *East Asia (Hong Kong)* and *Southeast Asia (Singapore)* are also paired regions.
+If you're consistently experiencing resource creation issues in a particular region, try to create the resource in a geographically paired region if your business allows it. For example, *West US 2* and *West Central US* are paired regions. *East Asia (Hong Kong)* and *Southeast Asia (Singapore)* are also paired regions.
 
 For more information, see:
 
@@ -66,16 +66,13 @@ For function apps in [Consumption plan](/azure/azure-functions/consumption-plan)
 
 To resolve the error, create a file share in advance on the secure storage account, and configure it to `WEBSITE_CONTENT_SHARE`. For more information, see [Restrict your storage account to a virtual network](/azure/azure-functions/configure-networking-how-to#restrict-your-storage-account-to-a-virtual-network).
 
-## Alternative tools for creation
+### Alternative tools for creation
 
-You can use alternative tools like Azure CLI, PowerShell, and `Az.Functions`. Use the latest versions of Azure CLI, Azure PowerShell, or the `Az.Functions` module. Also, for example, if there's an issue in the Azure portal, try using Azure CLI.
+You can use alternative tools like Azure CLI, PowerShell, and `Az.Functions`. Make sure to use the latest versions of of the tools. If there's an issue when using one of the tools, like Azure portal, try using another, like Azure CLI.
 
 ### Set the function runtime version for Windows and Linux
 
-For Windows apps, set it in the Azure portal (**Settings** > **Configuration** > **Function runtime Settings** > **Runtime version**), or create an application setting `FUNCTIONS_EXTENSION_VERSION` and set it to the major runtime version, for example, `~4` to target V4.
-
-- For more information, see [How to target Azure Functions runtime versions](/azure/azure-functions/set-runtime-version).
-- Pin it to a minor version based on host releases by setting `FUNCTIONS_EXTENSION_VERSIO` to a minor version. Also see [Azure Functions host releases](https://github.com/Azure/azure-functions-host/releases).
+For Windows apps, set the runtime version in the Azure portal (**Settings** > **Configuration** > **Function runtime Settings** > **Runtime version**), or create an application setting `FUNCTIONS_EXTENSION_VERSION` and set it to the major runtime version, for example, `~4` to target V4. For more information, see [How to target Azure Functions runtime versions](/azure/azure-functions/set-runtime-version). Pin it to a minor version based on host releases by setting `FUNCTIONS_EXTENSION_VERSION` to a minor version. Also see [Azure Functions host releases](https://github.com/Azure/azure-functions-host/releases).
 
 For Linux apps, see [Manual version updates on Linux](/azure/azure-functions/set-runtime-version#manual-version-updates-on-linux).
 
@@ -95,7 +92,7 @@ For more information, see:
 
 After you publish code from Visual Studio and use `WEBSITE_RUN_FROM_PACKAGE`, the Azure portal sets functions as *read-only* to prevent editing precompiled assets in the portal. To delete functions in a Functions app, remove the unwanted functions from your code, enable the **Remove additional files at destination** option in profile settings, and redeploy your code.
 
-Restoring Azure Functions apps hosted on a Consumption plan or Elastic Premium plan isn't supported. If you have the Functions app content or can access the storage account, update the app settings or create a new function app, and use the content. You can restore Azure Functions apps on a Dedicated App service plan if it isn't using Azure Files for content storage.
+Restoring Azure Functions apps hosted on a Consumption plan or Elastic Premium plan isn't supported. If you have the Functions app content or can access the storage account, update the app settings or create a new function app, and use the content. You can restore Azure functions apps on a Dedicated App service plan if it isn't using Azure Files for content storage.
 
 For more information, see [Restore (undelete) deleted web apps](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/restore-undelete-deleted-web-apps/ba-p/2922088).
 
@@ -103,7 +100,7 @@ Make sure that you have sufficient permissions to delete an Azure Functions app.
 
 ## Collect data before contacting Microsoft support
 
-If the Functions app creation or deletion fails, collect and share the following data when creating a support ticket:
+If the function app creation or deletion fails, collect and share the following data when creating a support ticket:
 
 - Azure portal: Reproduce the issue and capture an F12 trace.
 - Azure CLI or Azure PowerShell: Share the command that reported the error and verbose logging.
