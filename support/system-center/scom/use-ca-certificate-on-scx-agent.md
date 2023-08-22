@@ -1,20 +1,20 @@
 ---
 title: Convert self-signed SCX certificates to CA certificates
-description: Introduces how to convert the self-signed certificate on a SCX agent to a Certificate Authority (CA) signed certificate.
+description: Introduces how to convert a self-signed certificate on an SCX agent to a Certificate Authority (CA) signed certificate.
 ms.date: 08/18/2023
 ms.reviewer: alexkre, blakedrumm, edpaca, stparker, udmudiar, v-weizhu
 ms.topic: how-to
 ---
-# How to use a CA certificate on a SCX agent
+# How to use a CA certificate on an SCX agent
 
-This article introduces how to convert the self-signed certificate on a System Center Operations Manager (SCOM) Unix/Linux (SCX) agent to a Certificate Authority (CA) signed certificate.
+This article introduces how to convert a self-signed certificate on a System Center Operations Manager (SCOM) Unix/Linux (SCX) agent to a Certificate Authority (CA) signed certificate.
 
 ## Create a CA certificate template
 
 On a CA server in your SCOM environment, follow these steps to create a certificate template:
 
 1. Open **Certification Authority** from **Server Manager**.
-1. Right Click **Certificate Templates** and select **Manage**.
+1. Right-click **Certificate Templates** and select **Manage**.
 1. Select the template **Computer** and select **Duplicate Template**.
 1. On the **General** tab, set a name for the template and change the **Validity period** as per standards.
 
@@ -33,22 +33,22 @@ On a CA server in your SCOM environment, follow these steps to create a certific
     :::image type="content" source="media/use-ca-certificate-on-scom-linux-agent/select-supply-in-the-request.png" alt-text="Screenshot that shows how to select the 'Supply in the request' option.":::
 
 1. Select **OK**.
-1. Select the created template, and go to the **Properties**.
+1. Select the created template and go to **Properties**.
 1. Select **Security**. Add the computer object of the server where the certificate will be enrolled.
 
     :::image type="content" source="media/use-ca-certificate-on-scom-linux-agent/add-server.png" alt-text="Screenshot that shows how to add the computer object.":::
 
-1. Select the permissions as **Read**, **Write**, **Enroll**.
+1. Select the permissions as **Read**, **Write**, and **Enroll**.
 
     :::image type="content" source="media/use-ca-certificate-on-scom-linux-agent/select-permissions.png" alt-text="Screenshot that shows the 'Read', 'Write' and 'Enroll' permissions are selected.":::
 
-1. Right click **Certificate templates**. Select **New** > **Certificate Template to Issue**.
+1. Right-click **Certificate templates**. Select **New** > **Certificate Template to Issue**.
 1. Select the created template and select **OK**.
 
 ## Issue a CA certificate from the template
 
-1. On the Windows Server that was given the permission on the template, open the computer certificate store.
-1. Under **Personal**, right click **Certificates** and select **All Tasks** > **Request New Certificate**.
+1. On the Windows Server that has been given the permission to the template, open the computer certificate store.
+1. Under **Personal**, right-click **Certificates** and select **All Tasks** > **Request New Certificate**.
 
     :::image type="content" source="media/use-ca-certificate-on-scom-linux-agent/request-new-certificate.png" alt-text="Screenshot that shows how to request a new certificate.":::
 
@@ -58,7 +58,7 @@ On a CA server in your SCOM environment, follow these steps to create a certific
 
     :::image type="content" source="media/use-ca-certificate-on-scom-linux-agent/select-certificate-to-enroll.png" alt-text="Screenshot of the warning that requests more information for enrollment.":::
 
-1. Add the following details preferably in the order:
+1. Add the following details, preferably in the order:
     1. CN=\<Server Name FQDN>
     2. CN=\<Server Name>
     3. DC=\<domain component>, for example, `Contoso`
@@ -69,7 +69,7 @@ On a CA server in your SCOM environment, follow these steps to create a certific
     If you have other domain components, make sure they are in the certificate.
 
 1. Select **Finish** after the successful enrollment.
-1. Right click the certificate and export it with a private key. Finally, there should be a .pfx file.
+1. Right-click the certificate and export it with a private key. Finally, there should be a .pfx file.
 1. Export the CA and Intermediate CA certificate (if applicable) to the *root* store of all the management servers/gateways in the UNIX/Linux resource pool.
 
 ## Copy and edit the certificate on the Unix/Linux server
@@ -81,7 +81,7 @@ On a CA server in your SCOM environment, follow these steps to create a certific
     openssl pkcs12 -in <FileName>.pfx -nocerts -out key.pem
     ```
 
-    While exporting the private key from certificate store, a new password has to be set for the new key file.
+    While exporting the private key from the certificate store, a new password has to be set for the new key file.
 
     :::image type="content" source="media/use-ca-certificate-on-scom-linux-agent/command-export-private-key.png" alt-text="Screenshot that shows the command to export the private key.":::
 
@@ -95,7 +95,7 @@ On a CA server in your SCOM environment, follow these steps to create a certific
     openssl pkcs12 -in <FileName>.pfx -clcerts -nokeys -out omi.pem
     ```
 
-    While exporting the certificate from certificate store, you have to enter the password to the *\<FileName>.pfx* file.
+    While exporting the certificate from the certificate store, you have to enter the password to the *\<FileName>.pfx* file.
 
     :::image type="content" source="media/use-ca-certificate-on-scom-linux-agent/command-export-certificate.png" alt-text="Screenshot that shows the command to export the certificate.":::
 
@@ -133,9 +133,9 @@ On a CA server in your SCOM environment, follow these steps to create a certific
 
     :::image type="content" source="media/use-ca-certificate-on-scom-linux-agent/command-validate-omi-processes.png" alt-text="Screenshot that shows the command to validate omi processes running." lightbox="media/use-ca-certificate-on-scom-linux-agent/command-validate-omi-processes.png":::
 
-## Validate the certificate is signed by the CA
+## Validate that the certificate is signed by the CA
 
-1. Run the following command on the agent to verify the certificate is signed by the CA:
+1. Run the following command on the agent to verify that the certificate is signed by the CA:
 
     ```console
     openssl x509 -noout -in /etc/opt/microsoft/scx/ssl/scx.pem -subject -issuer -dates
@@ -158,13 +158,13 @@ On a CA server in your SCOM environment, follow these steps to create a certific
     ```
 
 1. Run a network trace on one of the management servers/gateways in the UNIX/Linux resource pool.
-1. Run the following WinRM command against the agent and make sure you get the instance output:
+1. Run the following `WinRM` command against the agent and make sure you get the instance output:
 
     ```console
     winrm enumerate http://schemas.microsoft.com/wbem/wscim/1/cim-schema/2/SCX_Agent?__cimnamespace=root/scx -auth:basic -remote:https://<server name>:1270 -username:<username> -encoding:utf-8
     ```
 
 1. On the network trace, filter with the IP of the agent.
-1. In the *Certificate, Server Hello Done* packet, you should see the CA signed certificate rather than the self-signed certificate used.
+1. In the *Certificate, Server Hello Done* packet, you should see the CA-signed certificate rather than the self-signed certificate used.
 
     :::image type="content" source="media/use-ca-certificate-on-scom-linux-agent/validate-ca-signed-certificate-used.png" alt-text="Screenshot that shows the CA signed certificate." lightbox="media/use-ca-certificate-on-scom-linux-agent/validate-ca-signed-certificate-used.png":::
