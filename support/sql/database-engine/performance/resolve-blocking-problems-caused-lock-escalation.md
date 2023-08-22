@@ -4,7 +4,6 @@ description: This article describes how to determine if lock escalation is causi
 ms.date: 4/7/2021
 ms.custom: sap:Performance
 ms.reviewer: BARTD
-ms.prod: sql
 ---
 # Resolve blocking problems caused by lock escalation in SQL Server
 

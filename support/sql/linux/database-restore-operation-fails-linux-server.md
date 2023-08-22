@@ -3,10 +3,8 @@ title: Restore operation fails on Linux servers
 description: This article provides a workaround for the problem where a SQL database restore operation fails on Linux servers.
 ms.date: 01/15/2021
 ms.custom: sap:SQL Server on Linux
-ms.technology: 
 ms.reviewer: houdu, pradm, mikehab, ramakoni
-ms.topic: article
-ms.prod: sql 
+ms.topic: article 
 ---
 # SQL database restore operation fails on Linux servers
 
@@ -31,4 +29,4 @@ To work around this problem, restore the database on a volume that has enough sp
 
 ## References
 
-Learn about the [Description of the standard terminology that is used to describe Microsoft software updates](/troubleshoot/windows-client/deployment/standard-terminology-software-updates) that Microsoft uses to describe software updates.
+Learn about the [Description of the standard terminology that is used to describe Microsoft software updates](../../windows-client/deployment/standard-terminology-software-updates.md) that Microsoft uses to describe software updates.

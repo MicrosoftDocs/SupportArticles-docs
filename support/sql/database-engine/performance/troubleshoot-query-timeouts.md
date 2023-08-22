@@ -1,10 +1,9 @@
 ---
 title: Troubleshoot query time-out errors
 description: This article describes how to troubleshoot the time-out errors when you run slow-running queries.
-ms.date: 08/01/2022
+ms.date: 07/03/2023
 ms.custom: sap:Performance
 ms.topic: troubleshooting
-ms.prod: sql
 author: pijocoder
 ms.author: jopilov
 ---
@@ -21,7 +20,7 @@ Assume that an application queries data from a SQL Server database. If the query
 
 ## Explanation
 
-These errors occur on the application side. The application sets a time-out value and if the time out is reached, it cancels the query. On the SQL Server side, a query cancellation from the client side causes an Attention event, error 3617 ([MSSQLSERVER_3617](/sql/relational-databases/errors-events/mssqlserver-3617-database-engine-error)). If the time-out value on the application side is set to *0* (no time limit), the Database Engine will execute the query until it's completed.
+These errors occur on the application side. The application sets a time-out value and if the time out is reached, it cancels the query. On the SQL Server side, a query cancellation from the client side causes an Attention event, error 3617 ([MSSQLSERVER_3617](/sql/relational-databases/errors-events/mssqlserver-3617-database-engine-error)). If the time-out value on the application side is set to *0* (no time limit), the Database Engine executes the query until it's completed.
 
 - In .NET Framework [System.Data.SqlClient](/dotnet/api/system.data.sqlclient), the time-out value is set on the [CommandTimeout](/dotnet/api/system.data.sqlclient.sqlcommand.commandtimeout) property.
 - In ODBC API, it's set through the `SQL_ATTR_QUERY_TIMEOUT` attribute in the [SQLSetStmtAttr](/sql/odbc/reference/syntax/sqlsetstmtattr-function) function.
@@ -33,9 +32,9 @@ Query time-out is different from a connection time-out property. The latter cont
 
 ## Troubleshooting steps
 
-By far, the most common reason for query time-outs is underperforming queries. That means that the query runs longer than the pre-defined query time-out value. Making the query run faster is the recommended first target of your troubleshooting. Here's how to check queries:
+By far, the most common reason for query time-outs is underperforming queries. That means that the query runs longer than the predefined query time-out value. Making the query run faster is the recommended first target of your troubleshooting. Here's how to check queries:
 
-1. Use [Extended Events](/sql/relational-databases/extended-events/extended-events) or [SQL Trace](/sql/relational-databases/sql-trace/sql-trace) to identify the queries that cause the time-out errors. You can trace the [attention](/sql/relational-databases/event-classes/attention-event-class) event together with the `sql_batch_completed` and `rpc_completed` extended events, and correlate them on the same `session_id`. If you observe a completed event is immediately followed by an attention event, and the duration of the completed event corresponds approximately to the time-out setting, you've identified the query. Here's an example:
+1. Use [Extended Events](/sql/relational-databases/extended-events/extended-events) or [SQL Trace](/sql/relational-databases/sql-trace/sql-trace) to identify the queries that cause the time-out errors. You can trace the [attention](/sql/relational-databases/event-classes/attention-event-class) event together with the `sql_batch_completed` and `rpc_completed` extended events, and correlate them on the same `session_id`. If you observe that a completed event is immediately followed by an attention event, and the duration of the completed event corresponds approximately to the time-out setting, then you've identified the query. Here's an example:
 
    > [!NOTE]
    > In the example, the `SELECT` query ran for almost exactly 30 seconds and stopped. The attention event having the same session ID indicates that the query was canceled by the application.
@@ -48,7 +47,7 @@ By far, the most common reason for query time-outs is underperforming queries. T
 
 3. Execute and test the queries in SQLCMD or in SQL Server Management Studio (SSMS).
 
-3. If the queries are also slow in SQLCMD and SSMS, troubleshoot and improve the performance of the queries.
+3. If the queries are also slow in SQLCMD and SSMS, troubleshoot and improve the performance of the queries. For detailed information, see [Troubleshoot slow-running queries in SQL Server](troubleshoot-slow-running-queries.md)
 
    > [!NOTE]
    > In SQLCMD and SSMS, the time-out value is set to *0* (no time limit) and the queries can be tested and investigated.
@@ -108,7 +107,7 @@ By far, the most common reason for query time-outs is underperforming queries. T
 
 ## Query time-out is not the same as connection time-out
 
-A query time-out is different from a connection time-out or login time-out. The connection or login timeout occurs when the initial connection to the database server reaches a predefined time-out period. At this stage, no query has been submitted to the server. These are examples of connection or login time-out error messages:
+A query time-out is different from a connection time-out or login time-out. The connection or login timeout occurs when the initial connection to the database server reaches a predefined time-out period. At this stage, no query has been submitted to the server. These messages are examples of connection or login time-out error:
 
 - > Connection Timeout Expired. The timeout period elapsed while attempting to consume the pre-login handshake acknowledgment. This could be because the pre-login handshake failed or the server was unable to respond back in time. The duration spent while attempting to connect to this server was [Pre-Login] initialization=23; handshake=14979;
 

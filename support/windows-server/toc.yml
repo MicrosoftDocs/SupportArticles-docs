@@ -960,6 +960,8 @@
       href: ./deployment/stop-0x0000007b-error-group-policy-setting.md
     - name: '"This device cannot start" error when deploying a hot plug NVMe SSD'
       href: ./deployment/device-cannot-start-error-hot-plug-nvme-ssd.md
+    - name: '%NUMBER_OF_PROCESSORS% environment variable shows incorrect values'
+      href: ./deployment/number-of-processors-environment-variable-show-incorrect-values.md
     - name: Can't find the Microsoft Loopback Adapter
       href: ./deployment/microsoft-loopback-adapter-rename.md
     - name: Can't install a VMWare driver on Windows Server 2008 R2
@@ -1090,6 +1092,8 @@
       href: ./deployment/mdt-media-deployment-isnt-bootable.md
     - name: Microsoft Deployment Toolkit support life cycle
       href: ./deployment/deployment-toolkit-support.md
+    - name: Mitigation for AMD Family 17h Models 30h-3Fh/Rome Erratum 1474
+      href: ./deployment/mitigation-for-amd-family-17h-models-30h-3fh-rome-erratum-1474.md
     - name: Post-Deployment Configuration task fails
       href: ./deployment/post-deployment-configuration-task-fail.md
     - name: Setup fails on a VM with error 0xE0000100
@@ -1740,8 +1744,6 @@
       href: ./networking/rras-doesnt-start.md
     - name: Troubleshoot error 720 when establishing a VPN connection
       href: ./networking/troubleshoot-error-720-when-establishing-a-vpn-connection.md
-    - name: Updates for Windows Server 2012 and 2012 R2 DirectAccess
-      href: ./networking/windows-server-2012-directaccess-hotfixes.md
     - name: 'Troubleshoot DirectAccess Server console: 6to4'
       href: ./networking/troubleshoot-directaccess-server-console-6to4.md
     - name: 'Troubleshoot DirectAccess Server console: DNS'
@@ -2888,6 +2890,8 @@
       href: ./windows-security/clients-cant-authenticate-server.md
     - name: Crypt32 8 events continuously reported
       href: ./windows-security/crypt32-event-8.md
+    - name: Error 0x80090022 when CEP/CES autoenrollment using KBR fails
+      href: ./windows-security/error-0x80090022-nte-silent-context-cep-ces-autoenrollment-kbr-fails.md
     - name: Event ID 4107 or Event ID 11 is logged
       href: ./windows-security/event-id-4107-or-event-id-11-is-logged.md
     - name: How to decommission Windows enterprise CA and remove related objects
@@ -3074,15 +3078,15 @@
     href: ./windows-server-eos-faq/end-of-support-windows-server-2008-2008r2.yml
 - name: Windows Troubleshooters
   items:
-  - name: TroubleShootingScript toolset (TSSv2)
+  - name: TroubleShootingScript toolset (TSS)
     items:
-    - name: Introduction to TroubleShootingScript toolset (TSSv2)
-      href: ../windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2.md?context=/troubleshoot/windows-server/context/context
+    - name: Introduction to TroubleShootingScript toolset (TSS)
+      href: ../windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tss.md?context=/troubleshoot/windows-server/context/context
     - name: Gather information for Active Directory replication issues
-      href: ../windows-client/windows-troubleshooters/gather-information-using-tssv2-ad-replication.md?context=/troubleshoot/windows-server/context/context
+      href: ../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md?context=/troubleshoot/windows-server/context/context
     - name: Gather information for deployment-related issues
-      href: ../windows-client/windows-troubleshooters/gather-information-using-tssv2-deployment.md?context=/troubleshoot/windows-server/context/context
+      href: ../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md?context=/troubleshoot/windows-server/context/context
     - name: Gather information for Group Policy issues
-      href: ../windows-client/windows-troubleshooters/gather-information-using-tssv2-group-policy.md?context=/troubleshoot/windows-server/context/context
+      href: ../windows-client/windows-troubleshooters/gather-information-using-tss-group-policy.md?context=/troubleshoot/windows-server/context/context
     - name: Gather information for user experience-related issues
-      href: ../windows-client/windows-troubleshooters/gather-information-using-tssv2-user-experience.md?context=/troubleshoot/windows-server/context/context
+      href: ../windows-client/windows-troubleshooters/gather-information-using-tss-user-experience.md?context=/troubleshoot/windows-server/context/context

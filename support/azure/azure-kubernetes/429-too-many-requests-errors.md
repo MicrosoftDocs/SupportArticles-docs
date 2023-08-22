@@ -2,9 +2,7 @@
 title: 429 Too Many Requests errors
 description: Troubleshoot why you receive 429 Too Many Requests errors on your Kubernetes clusters.
 ms.date: 08/22/2023
-author: DennisLee-DennisLee
-ms.author: v-dele
-ms.reviewer: chiragpa, nickoman
+ms.reviewer: chiragpa, nickoman, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
 ms.subservice: common-issues
 keywords:
@@ -44,7 +42,7 @@ You receive errors that resemble the following text:
 
 A Kubernetes cluster on Azure (with or without AKS) that does a frequent scale up or scale down, or uses the cluster autoscaler, can cause a large volume of HTTP calls. This call volume can result in failure, because it exceeds the assigned quota for your Azure subscription.
 
-For more information about these errors, see [Throttling Azure Resource Manager requests](/azure/azure-resource-manager/management/request-limits-and-throttling) and [Troubleshooting API throttling errors](/troubleshoot/azure/virtual-machines/troubleshooting-throttling-errors). About how to analyze and identify the cause of these errors and get recommendations to resolve them, see [Analyze and identify errors by using AKS Diagnose and Solve Problems](#analyze-and-identify-errors-by-using-aks-diagnose-and-solve-problems).
+For more information about these errors, see [Throttling Azure Resource Manager requests](/azure/azure-resource-manager/management/request-limits-and-throttling) and [Troubleshooting API throttling errors](../virtual-machines/troubleshooting-throttling-errors.md). About how to analyze and identify the cause of these errors and get recommendations to resolve them, see [Analyze and identify errors by using AKS Diagnose and Solve Problems](#analyze-and-identify-errors-by-using-aks-diagnose-and-solve-problems).
 
 ## Solution 1: Upgrade to a later version of Kubernetes
 

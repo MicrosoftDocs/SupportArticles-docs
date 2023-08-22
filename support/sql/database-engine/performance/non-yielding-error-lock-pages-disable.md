@@ -6,7 +6,6 @@ ms.custom: sap:Administration and Management
 ms.reviewer: ramakoni, pahaefel
 author: HaiyingYu
 ms.author: haiyingyu
-ms.prod: sql
 ---
 # Non-yielding scheduler error in large memory server if the lock pages in memory option is disabled
 

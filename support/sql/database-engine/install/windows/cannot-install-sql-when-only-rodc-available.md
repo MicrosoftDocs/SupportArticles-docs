@@ -2,10 +2,7 @@
 title: Can't install SQL Server when only an RODC is reachable
 description: This article discusses an issue in which you can't install SQL Server when only a read-only domain controller (RODC) is available.
 ms.date: 11/8/2022
-author: padmajayaraman
-ms.author: v-jayaramanp
-ms.reviewer: ramakoni1
-ms.prod: sql
+ms.reviewer: ramakoni1, v-jayaramanp
 ms.custom: sap:Database Engine
 ---
 

@@ -4,7 +4,6 @@ description: Provides steps to help you identify and resolve issues where a quer
 ms.date: 05/15/2023
 ms.custom: sap:Performance
 ms.topic: troubleshooting
-ms.prod: sql
 ms.reviewer: shaunbe
 author: pijocoder
 ms.author: jopilov

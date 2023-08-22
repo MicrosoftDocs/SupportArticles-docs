@@ -4,7 +4,7 @@ description: Provides guidance on how to use antivirus software with SQL Server.
 author: pijocoder
 ms.author: jopilov
 ms.reviewer: jopilov
-ms.date: 05/24/2023
+ms.date: 06/25/2023
 ms.custom: sap:Security Issues
 ---
 # Configure antivirus software to work with SQL Server
@@ -368,6 +368,70 @@ For Power BI Report Server, the following exclusions can be made:
 - *%ProgramFiles%\\Microsoft Power BI Report Server\\PBIRS*
 - *%ProgramFiles%\\Microsoft Power BI Report Server\\Shared Tools*
 
+## How to check which volumes are scanned by antivirus programs
+
+Antivirus programs use filter drivers to attach to the I/O path on a computer and scan the I/O packets for known virus patterns. In Windows, you can use the [Fltmc utility](/windows-hardware/drivers/ifs/development-and-testing-tools#fltmcexe-command) to enumerate the filter drivers and the volumes they're configured to scan. The `fltmc instances` output may guide you through excluding volumes or folders from scanning.
+
+### 1. Run run this command from a Command Prompt or PowerShell prompt in elevated mode
+
+```console
+fltmc instances
+```
+
+### 2. Use the output to identify which driver is installed and used by the antivirus program on your computer
+
+Here's a sample output. You need the [Allocated filter altitudes document](/windows-hardware/drivers/ifs/allocated-altitudes) to look up filter drivers by using the uniquely assigned altitude. For example, you may find that the altitude `328010` is in the [320000 - 329998: FSFilter Anti-Virus](/windows-hardware/drivers/ifs/allocated-altitudes#320000---329998-fsfilter-anti-virus) table in the document. Therefore, based on the table name in the document, you know that the `WdFilter.sys` driver is used by the antivirus program on your computer and that it's developed by Microsoft.
+
+```output
+Filter                Volume Name                              Altitude        Instance Name       Frame   SprtFtrs  VlStatus
+--------------------  -------------------------------------  ------------  ----------------------  -----   --------  --------
+CldFlt                C:                                        180451     CldFlt                    0     0000000f
+CldFlt                \Device\HarddiskVolumeShadowCopy3         180451     CldFlt                    0     0000000f
+FileInfo                                                         40500     FileInfo                  0     0000000f
+FileInfo              C:                                         40500     FileInfo                  0     0000000f
+FileInfo                                                         40500     FileInfo                  0     0000000f
+FileInfo              \Device\HarddiskVolumeShadowCopy3          40500     FileInfo                  0     0000000f
+FileInfo              X:\MSSQL15.SQL10\MSSQL\DATA                40500     FileInfo                  0     0000000f
+FileInfo              \Device\Mup                                40500     FileInfo                  0     0000000f
+FileInfo              \Device\RsFx0603                           40500     FileInfo                  0     0000000f
+MsSecFlt                                                        385600     MsSecFlt Instance         0     0000000f
+MsSecFlt              C:                                        385600     MsSecFlt Instance         0     0000000f
+MsSecFlt                                                        385600     MsSecFlt Instance         0     0000000f
+MsSecFlt              \Device\HarddiskVolumeShadowCopy3         385600     MsSecFlt Instance         0     0000000f
+MsSecFlt              \Device\Mailslot                          385600     MsSecFlt Instance         0     0000000f
+MsSecFlt              \Device\Mup                               385600     MsSecFlt Instance         0     0000000f
+MsSecFlt              \Device\NamedPipe                         385600     MsSecFlt Instance         0     0000000f
+MsSecFlt              \Device\RsFx0603                          385600     MsSecFlt Instance         0     0000000f
+RsFx0603              C:                                         41006.03  RsFx0603 MiniFilter Instance    0     00000000
+RsFx0603              \Device\Mup                                41006.03  RsFx0603 MiniFilter Instance    0     00000000
+WdFilter                                                        328010     WdFilter Instance         0     0000000f
+WdFilter              C:                                        328010     WdFilter Instance         0     0000000f
+WdFilter                                                        328010     WdFilter Instance         0     0000000f
+WdFilter              X:\MSSQL15.SQL10\MSSQL\DATA               328010     WdFilter Instance         0     0000000f
+WdFilter              \Device\HarddiskVolumeShadowCopy3         328010     WdFilter Instance         0     0000000f
+WdFilter              \Device\Mup                               328010     WdFilter Instance         0     0000000f
+WdFilter              \Device\RsFx0603                          328010     WdFilter Instance         0     0000000f
+Wof                   C:                                         40700     Wof Instance              0     0000000f
+Wof                                                              40700     Wof Instance              0     0000000f
+Wof                   \Device\HarddiskVolumeShadowCopy3          40700     Wof Instance              0     0000000f
+bfs                                                             150000     bfs                       0     0000000f
+bfs                   C:                                        150000     bfs                       0     0000000f
+bfs                                                             150000     bfs                       0     0000000f
+bfs                   \Device\HarddiskVolumeShadowCopy3         150000     bfs                       0     0000000f
+bfs                   \Device\Mailslot                          150000     bfs                       0     0000000f
+bfs                   \Device\Mup                               150000     bfs                       0     0000000f
+bfs                   \Device\NamedPipe                         150000     bfs                       0     0000000f
+bfs                   \Device\RsFx0603                          150000     bfs                       0     0000000f
+bindflt               C:                                        409800     bindflt Instance          0     0000000f
+luafv                 C:                                        135000     luafv                     0     0000000f
+npsvctrig             \Device\NamedPipe                          46000     npsvctrig                 0     00000008
+storqosflt            C:                                        244000     storqosflt                0     0000000f
+```
+
+### 3. Find the volumes scanned by the antivirus driver
+
+In the sample output, you may notice that the `WdFilter.sys` driver scans the *X:\MSSQL15.SQL10\MSSQL\DATA* folder, which appears to be a SQL Server data folder. This folder is a good candidate to be excluded from antivirus scanning.
+
 ## Configure a firewall with SQL Server products
 
 The following table contains information about how to use a firewall with SQL Server:
@@ -382,6 +446,6 @@ The following table contains information about how to use a firewall with SQL Se
 
 ## More information
 
-- For more information on performance issues caused by third-party modules and drivers to SQL Server, see [Performance and consistency issues when certain modules or filter drivers are loaded](/troubleshoot/sql/database-engine/performance/performance-consistency-issues-filter-drivers-modules).
+- For more information on performance issues caused by third-party modules and drivers to SQL Server, see [Performance and consistency issues when certain modules or filter drivers are loaded](../performance/performance-consistency-issues-filter-drivers-modules.md).
 - To find general information about SQL Server security, see [Securing SQL Server](/sql/relational-databases/security/securing-sql-server).
 - For general recommendations from Microsoft for scanning on Enterprise systems, see [Virus scanning recommendations for Enterprise computers that are running Windows or Windows Server (KB822158)](https://support.microsoft.com/help/822158).

@@ -3,7 +3,6 @@ title: MDS Validate Version command fails
 description: This article provides resolutions for the problem where MDS Validate Version command fails with a server error in SQL Server 2012 and SQL Server 2014.
 ms.date: 02/22/2021
 ms.custom: sap:Master Data Services
-ms.prod: sql
 ---
 # MDS Validate Version command fails with a server error in SQL Server 2012 and SQL Server 2014
 

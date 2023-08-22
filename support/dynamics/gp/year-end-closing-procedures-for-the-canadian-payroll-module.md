@@ -210,7 +210,7 @@ To verify that the pay periods are set correctly for the upcoming new year, in M
 
 **Q1: Are there any new features/changes that I should be aware of for Year-End?**
 
-A1: Refer to the Year-End [Microsoft Dynamics GP Year-End Update: Canadian Payroll](https://community.dynamics.com/gp/b/dynamicsgp/posts/microsoft-dynamics-gp-year-end-update-canadian-payroll) article for the most up-to-date information.
+A1: Refer to the Year-End [Microsoft Dynamics GP Year-End Update: Canadian Payroll](https://community.dynamics.com/blogs/) article for the most up-to-date information.
 
 **Q2: When should I install the Year-End Update?**
 

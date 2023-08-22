@@ -214,9 +214,9 @@ Root servers may be created by the DCpromo Wizard. If the "." zone exists, a roo
 
 ## References
 
-- [DNS namespace planning](/troubleshoot/windows-server/networking/dns-namespace-design)
+- [DNS namespace planning](../networking/dns-namespace-design.md)
 
-- [Unable to select DNS Server role when adding a domain controller into an existing Active Directory domain](/troubleshoot/windows-server/identity/auto-install-dns-server-role-disabled-promte-domain-controller)
+- [Unable to select DNS Server role when adding a domain controller into an existing Active Directory domain](auto-install-dns-server-role-disabled-promte-domain-controller.md)
 
 - [ADMT Guide: Migrating and Restructuring Active Directory Domains](https://www.microsoft.com/download/details.aspx?id=19188)
 

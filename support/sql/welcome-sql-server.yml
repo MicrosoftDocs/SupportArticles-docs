@@ -3,9 +3,9 @@
 title: SQL Server troubleshooting # < 60 chars
 summary: Welcome to SQL Server troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use SQL Server.
 metadata:
-  title: SQL Server troubleshooting document
+  title: SQL Server troubleshooting documentation
   description: This article lists Knowledge Base (KB) and other Support articles for SQL Server. # Required; article description that is displayed in search results. < 160 chars.
-  ms.prod: sql
+  ms.service: sql
   ms.topic: landing-page # Required
   author: HaiyingYu  #Required; your GitHub user alias, with correct capitalization.
   ms.author: HaiyingYu #Required; microsoft alias of author; optional team alias.
@@ -157,4 +157,6 @@ landingContent:
         - text: DBCC commands
           url: /sql/t-sql/database-console-commands/dbcc-transact-sql
         - text: Database Engine events and errors
-          url: /sql/relational-databases/errors-events/database-engine-events-and-errors         
+          url: /sql/relational-databases/errors-events/database-engine-events-and-errors   
+        - text: SQL Server product documentation
+          url: /sql 

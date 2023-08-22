@@ -2,9 +2,7 @@
 title: Troubleshoot the failed deployment of a Kubernetes application offer
 description: Troubleshoot the failed deployment of a Kubernetes application offer that was made on the Azure Marketplace.
 ms.date: 4/19/2023
-author: DennisLee-DennisLee
-ms.author: v-dele
-ms.reviewer: chiragpa, atchub
+ms.reviewer: chiragpa, atchub, v-leedennis
 editor: v-jsitser
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-extensions-add-ons

@@ -123,4 +123,4 @@ To work around this issue, follow these steps:
 
 ## Data collection
 
-If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for User Experience issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-user-experience.md#remote-desktop-session).
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-user-experience.md#remote-desktop-session).

@@ -26,7 +26,7 @@ To avoid or resolve installation errors, follow these steps:
 
     Windows Server 2003
 
-    For more information about how to enable network DTC access in Windows Server 2003, see [How to enable network DTC access](/troubleshoot/windows-server/application-management/enable-network-dtc-access).
+    For more information about how to enable network DTC access in Windows Server 2003, see [How to enable network DTC access](../../windows-server/application-management/enable-network-dtc-access.md).
 
     Windows Server 2008
 

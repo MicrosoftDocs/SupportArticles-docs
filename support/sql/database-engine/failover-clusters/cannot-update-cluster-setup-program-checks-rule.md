@@ -4,8 +4,8 @@ description: This article provides a resolution for the problem that occurs when
 ms.date: 10/23/2020
 ms.custom: sap:Database Engine 
 ms.reviewer: ramakoni, clivec
-ms.prod: sql
 ---
+
 # You can't update a SQL Server 2012 cluster when the Setup program checks the Cluster_IsOnlineIfClustered rule
 
 This article helps you resolve the problem that occurs when the Setup program checks the `Cluster_IsOnlineIfClustered` rule.
@@ -40,7 +40,7 @@ at Microsoft.SqlServer.Configuration.RulesEngineExtension.RulesEngine.Execute(Bo
 ```
 
 > [!NOTE]
-> The Detail.txt file is located at `%ProgramFiles%\Microsoft SQL Server\110\Setup Bootstrap\Log\<YYYYMMDD_HHMM>`.
+> The *Detail.txt* file is located at `%ProgramFiles%\Microsoft SQL Server\110\Setup Bootstrap\Log\<YYYYMMDD_HHMM>`.
 
 ## Cause
 
@@ -51,20 +51,20 @@ This issue occurs because of an invalid MSCluster namespace in Windows Managemen
 To resolve this issue, follow these steps:
 
 1. At an administrative command prompt, type `cd %systemroot%\system32\wbem`, and then press **Enter**.
-2. Type the command: `regsvr32 cluswmi.dll`, and press **Enter**.
+2. Type the command `regsvr32 cluswmi.dll`, and press **Enter**.
 
-3. Type the following command: `mofcomp.exe ClusWMI.mof`, and press **Enter**.
+3. Type the command `mofcomp.exe ClusWMI.mof`, and press **Enter**.
 
-4. Rerun the Setup of the service packs or cumulative updates on the server.
+4. Rerun the setup of the service packs or cumulative updates on the server.
 
 ## More information
 
 To identify that this issue is caused by the WMI namespace for the cluster, follow these steps:
 
 1. Log on as the account that is administrator on the cluster and is running SQL Server Setup.
-2. Run the command at an administrative command prompt: `wbemtest`
+2. Run the command `wbemtest` at an administrative command prompt.
 3. On the **Windows Management Instrumentation Tester** window, select **Connect...**.
-4. Type *root\MSCluster* in **Namespace**, and then click the **Connect** button. In this situation, you may receive an error message that resembles the following one:
+4. Type *root\MSCluster* in **Namespace**, and then select the **Connect** button. In this situation, you may receive an error message that resembles the following one:
 
    > Number: 0x8004100e  
    Facility: WMI  
@@ -72,12 +72,12 @@ To identify that this issue is caused by the WMI namespace for the cluster, foll
 
    > [!NOTE]
    > As an additional test, you can run the following query in Windows PowerShell:
-
-    ```powershell
-    select name from <MSCluster_Cluster>
-    ```
-
-If the issue isn't caused by an invalid MSCluster namespace, the expected result is that the cluster network name is returned.
+   >
+   > ```powershell
+   >    SELECT name FROM <MSCluster_Cluster>
+   >  ```
+   >
+   > If the issue isn't caused by an invalid MSCluster namespace, the expected result is that the cluster network name is returned.
 
 ## Applies to
 

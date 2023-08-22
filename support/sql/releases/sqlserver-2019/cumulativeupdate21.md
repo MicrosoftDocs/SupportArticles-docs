@@ -1,10 +1,9 @@
 ---
 title: Cumulative update 21 for SQL Server 2019 (KB5025808)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 21 (KB5025808).
-ms.date: 06/15/2023
+ms.date: 07/03/2023
 ms.custom: KB5025808
-author: Elena068
-ms.author: v-qianli2
+ms.reviewer: v-qianli2
 appliesto:
 - SQL Server 2019 on Windows
 - SQL Server 2019 on Linux
@@ -98,7 +97,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="2391556">[2391556](#2391556)</a> | Fixes inconsistent results that are caused by the parallel spool in the plan for the `INSERT`, `UPDATE`, or `DELETE` query. | SQL Server Engine | Query Optimizer | All |
 | <a id="2266806">[2266806](#2266806)</a> | Adds a new error 673 that helps avoid the assertion failure (Location: IndexRowScanner.cpp:1449; Expression: m_versionStatus.IsVisible ()) that you may encounter when you enable change tracking on a database. </br></br>Error message: </br></br>Failure to access row object in snapshot isolation. | SQL Server Engine | Replication | All |
 | <a id="2320889">[2320889](#2320889)</a> | Fixes an issue where applying an update on a secondary replica or performing an in-place upgrade fails when the distribution database is in an availability group. The following error is returned: </br></br>Error: There was an error executing the Replication upgrade scripts. See the SQL Server error log for details. </br></br>You can see the following error details in the SQL Server error log: </br></br>Executing sp_vupgrade_replication. </br>Could not open distribution database distribution because it is offline or being recovered. Replication settings and system objects could not be upgraded. Be sure this database is available and run sp_vupgrade_replication again. | SQL Server Engine | Replication | Windows |
-| <a id="2421435">[2421435](#2421435)</a>| Resolves a query performance issue that affects change tracking autocleanup and manual cleanup queries. </br></br>**Note**: You need to turn on trace flags 8286 and 8287, as this forces the cleanup query to use the `FORCE ORDER` and `FORCESEEK` hints to speed up the performance. | SQL Server Engine | Replication | All |
+| <a id="2421435">[2421435](#2421435)</a>| Fixes a manual cleanup issue where the repeated lock escalations on the tables cause contention and slowness in cleaning up the expired change tracking metadata. </br></br>**Note**: You need to turn on trace flag 8284. | SQL Server Engine | Replication | All |
 | <a id="2397659">[2397659](#2397659)</a> | [FIX: SQL Server Audit Events fail to write to the Security log (KB4052136)](https://support.microsoft.com/help/4052136) | SQL Server Engine | Security Infrastructure | Windows |
 | <a id="2409008">[2409008](#2409008)</a> | Fixes error 207 (Invalid column name '\<ColumnName>') that you encounter when you run a user-defined function (UDF), which references a dropped column that uses dynamic data masking (DDM). | SQL Server Engine | Security Infrastructure | All |
 | <a id="2330957">[2330957](#2330957)</a> | Fixes the following error that you encounter on the target instance when configuring a Service Broker communication with transport security: </br></br>The certificate serial number size is 19, however it must be no greater than 16 bytes in length. This occurred in the message with Conversation ID , Initiator: 1, and Message sequence number: 0. | SQL Server Engine | SQL Server Engine | All |

@@ -4,7 +4,6 @@ description: This article provides resolutions for the problem that the SQLDescr
 ms.date: 09/25/2020
 ms.custom: sap:MDAC and ADO
 ms.reviewer: sunilbs, ramakoni
-ms.prod: sql
 ---
 # SQLDescribeCol returns the wrong column length and data type in a complex union query that has parameters
 

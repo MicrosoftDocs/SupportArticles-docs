@@ -1,10 +1,9 @@
 ---
 title: Cumulative update 5 for SQL Server 2022 (KB5026806)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 5 (KB5026806).
-ms.date: 06/15/2023
+ms.date: 08/03/2023
 ms.custom: KB5026806
-author: Elena068
-ms.author: v-qianli2
+ms.reviewer: v-qianli2
 appliesto:
 - SQL Server 2022 on Windows
 - SQL Server 2022 on Linux
@@ -17,7 +16,7 @@ _Version:_ &nbsp; 16.0.4045.3
 
 ## Summary
 
-This article describes Cumulative Update package 5 (CU5) for Microsoft SQL Server 2022. This update contains 31 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 4, and it updates components in the following builds:
+This article describes Cumulative Update package 5 (CU5) for Microsoft SQL Server 2022. This update contains 32 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 4, and it updates components in the following builds:
 
 - SQL Server - Product version: **16.0.4045.3**, file version: **2022.160.4045.3**
 - Analysis Services - Product version: **16.0.43.218**, file version: **2022.160.43.218**
@@ -41,6 +40,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="2400346">[2400346](#2400346)</a> | Fixes an issue where a hierarchy created in Master Data Services (MDS) doesn't expand correctly (on both the **Edit Derived Hierarchy** page and the **Hierarchy** page in the Explorer area). | Master Data Services | Master Data Services | Windows |
 | <a id="2400389">[2400389](#2400389)</a> | Adds an option for the Master Data Services (MDS) configuration tool to decide whether to enable the **PerformanceImprovementEnable** performance improvement setting. |Master Data Services | Master Data Services | Windows|
 | <a id="2400415">[2400415](#2400415)</a> | Fixes the following error that you may encounter when selecting any cell of a domain-based attribute column that has a different name and display name in a Master Data Services (MDS) entity and then selecting the drop-down arrow: </br></br>The current cell column title was not found. If the column title was changed, close the sheet and try again. | Master Data Services | Master Data Services | Windows |
+| <a id="2342416">[2342416](#2342416)</a>| Adds the `sp_validate_certificate_ca_chain` stored procedure for checking the validity of the certificate chain used for certificate-based authentication on endpoints of Service Broker, availability groups, and Managed Instance link. | SQL Server Engine | Security infrastructure| All |
 | <a id="2384656">[2384656](#2384656)</a>| Updates the support for predicate pushdown when filtering on the `session_id` column of the `sys.dm_exec_connections` dynamic management view (DMV). | SQL Connectivity | SQL Connectivity| All |
 | <a id="2396496">[2396496](#2396496)</a> | Fixes a network socket crash that affects SQL connectivity during a large number of connections. |SQL Connectivity |SQL Connectivity | Linux |
 | <a id="2402260">[2402260](#2402260)</a> | Updates the version of the Microsoft ODBC driver to 17.10.4.1. For more information, see [Release Notes for Microsoft ODBC Driver for SQL Server on Windows](/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows). | SQL Connectivity | SQL Connectivity | Windows |

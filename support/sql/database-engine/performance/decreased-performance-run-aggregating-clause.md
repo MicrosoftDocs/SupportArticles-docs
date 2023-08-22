@@ -4,7 +4,6 @@ description: Provides workarounds for the problem in which you encounter decreas
 ms.date: 09/25/2020
 ms.custom: sap:Performance
 ms.reviewer: ramakoni
-ms.prod: sql
 ---
 # Decreased performance for SQL Server when you run a TOP, MAX, or MIN aggregating clause on columns other than the partitioning column
 

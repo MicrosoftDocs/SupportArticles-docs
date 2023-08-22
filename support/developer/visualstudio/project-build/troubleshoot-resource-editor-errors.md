@@ -6,9 +6,7 @@ f1_keywords:
 - msvse_settingsdesigner.err.formatvalue
 - msvse_resedit.err.nameblank
 - msvse_resedit.err.duplicatename
-author: padmajayaraman
-ms.author: v-jayaramanp
-ms.reviewer: tglee
+ms.reviewer: tglee, v-jayaramanp
 ---
 
 # Troubleshoot errors in the Resource Editor

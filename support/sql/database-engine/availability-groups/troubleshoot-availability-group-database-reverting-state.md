@@ -3,10 +3,7 @@ title: Troubleshoot an availability group database in reverting state
 description: This article helps you troubleshoot an availability group database in reverting state where Not Synchronizing is reported on the primary.
 ms.date: 02/22/2023
 ms.custom: sap:Performance
-ms.reviewer: cmathews
-author: sevend2
-ms.author: v-sidong
-ms.prod: sql
+ms.reviewer: cmathews, v-sidong
 ---
 
 # Troubleshoot an Availability Group database in reverting state

@@ -47,10 +47,12 @@
       items:
         - name: Common issues and resolutions
           href: isolate-and-troubleshoot-common-issues/common-issues-and-resolutions.md
-        - name: Create a minimal repro canvas app
-          href: isolate-and-troubleshoot-common-issues/minimal-canvas-app-repro.md
         - name: General Power Apps debugging strategies
           href: isolate-and-troubleshoot-common-issues/isolate-common-issues.md
+        - name: How to create a minimal repro canvas app
+          href: isolate-and-troubleshoot-common-issues/minimal-canvas-app-repro.md
+        - name: How to create a vanilla repro model-driven app
+          href: isolate-and-troubleshoot-common-issues/vanilla-model-driven-app-repro.md
         - name: Isolate issues in canvas apps
           href: isolate-and-troubleshoot-common-issues/isolate-canvas-app-issues.md
         - name: Isolate issues in model-driven apps
@@ -61,14 +63,40 @@
           href: isolate-and-troubleshoot-common-issues/troubleshooting-startup-issues.md
     - name: Manage apps and solutions
       items:
+        - name: Active unmanaged layer after importing a managed solution
+          href: manage-apps-and-solutions/unmanaged-active-layer-created-after-solution-import.md
+        - name: '"An entitykey with the selected attributes already exists" error'
+          href: manage-apps-and-solutions/entitykey-selected-attributes-already-exists.md
         - name: Can't import solutions or publish changes
           href: manage-apps-and-solutions/cannot-import-solutions-publish-changes.md
+        - name: Concurrent solution operation failures
+          href: manage-apps-and-solutions/concurrent-solution-operation-failures.md
+        - name: Duplicate security roles after solution import
+          href: manage-apps-and-solutions/duplicate-security-roles.md
         - name: Data source references not updated after solution import
           href: manage-apps-and-solutions/dataverse-environment-variables.md
+        - name: Form doesn't appear in target environment after import
+          href: manage-apps-and-solutions/form-not-appear-after-import.md
+        - name: '"Full formXml is expected to create a form" error'
+          href: manage-apps-and-solutions/full-formxml-expected-to-create-form-error.md
+        - name: Label text doesn't display in other languages
+          href: manage-apps-and-solutions/label-text-not-displayed.md
+        - name: Maximum row size exceeds the allowed maximum
+          href: manage-apps-and-solutions/maximum-row-size-exceeds.md
+        - name: Newly added components don't appear in the app
+          href: manage-apps-and-solutions/newly-added-components-dont-appear.md
+        - name: '"PrimaryName attribute not found for entity" error'
+          href: manage-apps-and-solutions/primaryname-attribute-not-found.md
         - name: Required fields are missing in Dataverse records
           href: manage-apps-and-solutions/dataverse-records-missing-required-fields.md
+        - name: Solution checker enforcement in Managed Environments (preview) blocks or warns on import
+          href: manage-apps-and-solutions/solution-checker-enforcement-import-issues.md
+        - name: '"Solution cannot be deleted due to dependencies" error'
+          href: manage-apps-and-solutions/solution-cannot-be-deleted-due-to-dependencies.md
         - name: Troubleshoot wrap issues
           href: manage-apps-and-solutions/wrap-issues.md
+        - name: '"You cannot delete this form because it is the only fallback form" error'
+          href: manage-apps-and-solutions/you-cannot-delete-this-form-only-fallback.md
     - name: Support resources
       items:
         - name: Power Apps support

@@ -52,4 +52,4 @@ Microsoft has confirmed that this is a problem.
 
 ## References
 
-[How to configure Active Directory and LDS diagnostic event logging](/troubleshoot/windows-server/identity/configure-ad-and-lds-event-logging)
+[How to configure Active Directory and LDS diagnostic event logging](configure-ad-and-lds-event-logging.md)

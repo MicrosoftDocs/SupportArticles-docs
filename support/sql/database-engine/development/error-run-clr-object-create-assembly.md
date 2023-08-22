@@ -4,7 +4,6 @@ description: This article helps you resolve two different problems that occur wh
 ms.date: 09/19/2022
 ms.custom: sap:Administration and Management  
 ms.reviewer: jackli
-ms.prod: sql
 ---
 
 # Error when you run an existing CLR object or create an assembly

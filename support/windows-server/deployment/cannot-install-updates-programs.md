@@ -171,7 +171,7 @@ To verify certificates in the certificate path for a Windows or Internet Explore
 8. On the **Certification Path** tab, verify that either **This certificate has expired or is not yet valid** or **This certificate is OK** appears under **Certificate Status**.
 
     > [!NOTE]
-    > Although this certificate is expired, the certificate will continue to work. The operating system may not work correctly if the certificate is missing or revoked. For more information, view [Required trusted root certificates](/troubleshoot/windows-server/identity/trusted-root-certificates-are-required).
+    > Although this certificate is expired, the certificate will continue to work. The operating system may not work correctly if the certificate is missing or revoked. For more information, view [Required trusted root certificates](../identity/trusted-root-certificates-are-required.md).
 
 9. Click **OK**, and then double-click the **GTE CyberTrust Root** certificate. You may have more than one of these certificates with the same name. Check the certificate that has an expiration date of 2/23/2006.
 10. On the **General** tab, make sure that the **Valid from** dates are 2/23/1996 to 2/23/2006.
@@ -248,4 +248,4 @@ If all these methods do not resolve your problem, you may have to perform an in-
 
 ## Data collection
 
-If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-deployment.md).
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

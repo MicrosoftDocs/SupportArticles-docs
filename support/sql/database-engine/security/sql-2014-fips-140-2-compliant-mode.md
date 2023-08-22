@@ -3,7 +3,6 @@ title: Use SQL 2014 in FIPS 140-2-compliant mode
 description: Discusses Federal Information Processing Standard Publication 140-2 (FIPS 140-2) instructions and how to use Microsoft SQL Server 2014 in the FIPS 140-2-compliant mode.
 ms.date: 02/17/2020
 ms.custom: sap:Security Issues
-ms.prod: sql
 ---
 # Instructions for using SQL Server 2014 in the FIPS 140-2-compliant mode
 

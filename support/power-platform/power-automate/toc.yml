@@ -161,6 +161,8 @@
           href: how-to-get-power-automate-desktop-installer-logs.md
         - name: '"Invalid Private key file" error in Open secure FTP connection action'
           href: invalid-private-key-file-error.md
+        - name: Internet connection is interrupted after installing Power Automate
+          href: no-ethernet-after-pad-install.md
         - name: Keyboard and mouse click combinations not working
           href: key-and-mouse-click-combo-not-working.md
         - name: Known limitations of Selenium IDE
@@ -171,10 +173,14 @@
           href: multi-screen-recording-is-not-working.md
         - name: Module or action wasn't found error
           href: module-action-wasnt-found-error.md
+        - name: '"Power Automate needs an update" occurs when opening Power Automate for desktop'
+          href: cannot-update-Power-Automate-for-desktop.md
         - name: Power Automate for desktop console doesn't show any flows
           href: console-not-show-desktop-flows.md
         - name: Power Automate service doesn't start automatically after restarting
           href: windows-services-not-start-after-restart.md
+        - name: Proxy server related errors in Power Automate for desktop
+          href: proxy-error-console.md
         - name: Restart UI flows to recover from a bad state
           href: reset-ui-flow-service-when-bad-state.md
         - name: Recorder not recording applications
@@ -209,3 +215,11 @@
       items:
         - name: Can't import solutions or publish changes
           href: ../power-apps/cannot-import-solutions-publish-changes.md?context=/troubleshoot/power-platform/power-automate/context/context
+    - name: Support resources
+      items:
+        - name: Power Automate support
+          href: https://powerautomate.microsoft.com/support/
+        - name: Power Automate Community forum
+          href: https://powerusers.microsoft.com/t5/Microsoft-Power-Automate/ct-p/MPACommunity
+        - name: Power Automate Ideas forum
+          href: https://ideas.powerautomate.com/d365community/forum/086dd68e-597f-ec11-8d21-0022482e8f9f

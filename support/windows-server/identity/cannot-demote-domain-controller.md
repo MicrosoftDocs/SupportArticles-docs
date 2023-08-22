@@ -1,7 +1,7 @@
 ---
 title: Error when you demote a domain controller
 description: Resolves an issue where demoting a domain controller by using the Active Directory Installation wizard (Dcpromo.exe) fails.
-ms.date: 9/24/2021
+ms.date: 08/01/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -24,8 +24,8 @@ _Original KB number:_ &nbsp; 282272
 
 When you demote a Windows domain controller by using the Dcpromo.exe, you may receive the following error message:
 
-> This domain controller holds the last replica of the following application directory partitions:
-DC=MSTAPI,DC= **yourdomain**,DC=com
+> This domain controller holds the last replica of the following application directory partitions:  
+> DC=MSTAPI,DC= **yourdomain**,DC=com
 
 ## Cause
 
@@ -36,13 +36,13 @@ This behavior can occur if you installed the domain controller by using the **Co
 If you created the partition by using the **Configure Your Server** wizard, and you used the default name of Mstapi, if this name is not in use, use the Tapicfg.exe tool to remove this name. To do so, run the following command, where <your_domain.com> is your domain DNS name:
 
 ```console
-tapicfg remove /directory:mstapi. <your_domain.com>
+tapicfg remove /directory:mstapi.<your_domain.com>
 ```
 
 If the partition was created manually, or if it was created by using another program, you can remove it by using the Ntdsutil utility:
 
 1. Open a command prompt, and then type *ntdsutil*.
-2. From the Ntdsutil prompt, type `domain management`.
+2. From the Ntdsutil prompt, type `partition management`.
 3. In the **Domain Management** window, type `connections`.
 4. Type `connect to server <yourservername>`.
 

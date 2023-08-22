@@ -30,4 +30,4 @@ The following are general recommendations for troubleshooting solution import er
 
 - Community and support
 
-  You can also use the information in the error message to search for potential solutions in the [Microsoft Dynamics 365 Community Forums](https://community.dynamics.com/f). If the error persists and you are not able to resolve the issue using the details available in the error, you can contact Microsoft Support for assistance.
+  You can also use the information in the error message to search for potential solutions in the [Microsoft Dynamics 365 Community Forums](https://community.dynamics.com/forums/thread/). If the error persists and you are not able to resolve the issue using the details available in the error, you can contact Microsoft Support for assistance.
