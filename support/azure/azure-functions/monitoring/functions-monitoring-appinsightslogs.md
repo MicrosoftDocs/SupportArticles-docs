@@ -20,7 +20,7 @@ The **Diagnose and solve problems** option in the Azure Functions app has a **Fu
    - `APPLICATIONINSIGHTS_CONNECTION_STRING` connection
   We recommend that you use the [APPLICATIONINSIGHTS_CONNECTION_STRING](/azure/azure-monitor/app/sdk-connection-string?tabs=net#overview) for more stable behavior. The ability to use `APPINSIGHTS_INSTRUMENTATIONKEY` will be deprecated by 2025.
 - The `AzureWebJobsDashboard` built-in logging is disabled, as recommended.
-- By default, sampling is enabled for the Azure Functions telemetry.
+- Sampling is enabled for the Azure Functions telemetry (enabled by default).
 
 > **Recommendation**: The Functions app should be on version 4 and the runtime version should be at least 4.15.2*xx*. This is because, from this version onwards, you can track the log flows from Azure Functions to the Application Insights service. By monitoring the log flows, you can check for missing logs.
 
