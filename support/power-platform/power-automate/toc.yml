@@ -187,7 +187,7 @@
           href: recorder-not-recording-applications.md
         - name: Some actions appear to be missing or aren't visible
           href: actions-not-available.md
-        - name: The "Set drop-down list value on web page" action fails
+        - name: Set drop-down list value in window/on web page action fails
           href: set-drop-down-list-value-fails.md
         - name: Tips on working with SQL queries
           href: troubleshooting-tips-sql-queries.md
