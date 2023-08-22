@@ -31,7 +31,7 @@ The **Set drop-down list value on web page** or **Set drop-down list value in wi
 
 #### Cause
 
-The The **Set drop-down list value on web page** or **Set drop-down list value in window** action fails to select the option element from the drop-down list.
+The **Set drop-down list value on web page** or **Set drop-down list value in window** action fails to select the option element from the drop-down list.
 
 #### Resolution
 
