@@ -35,7 +35,7 @@ The `msds-ManagedPasswordID` attribute is present only on a writable copy of the
 
 To protect additional domains of your forest after one domain has been exposed, you have to replace all the gMSAs in the exposed domain before the attacker can use the information. Usually, you don't know the details of what was exposed. Therefore, it's suggested to apply the resolution to all domains of the forest.
 
-As a proactive measure, auditing can be used to track the exposure of the KDS Root Key object. A system access control list (SACL) with successful reads can be placed on the Master Root Keys container, which allows auditing of successful reads on the `msKds-RootKeyData` attribute of the `msKds-ProvRootKey` object class. This action determines the object's exposure landscape regarding a Golden gMSA attack.
+As a proactive measure, auditing can be used to track the exposure of the KDS Root Key object. A system access control list (SACL) with successful reads can be placed on the Master Root Keys container, which allows auditing of successful reads on the `msKds-RootKeyData` attribute of the `msKds-ProvRootKey` class. This action determines the object's exposure landscape regarding a Golden gMSA attack.
 
 > [!NOTE]
 > Auditing only helps to detect an online attack on the KDS Root Key data.
