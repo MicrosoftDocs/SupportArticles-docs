@@ -10,36 +10,31 @@ This article describes how to upgrade the Azure Functions runtime to v4, and res
 
 ## Received an email "Action recommended: Update your Azure Functions apps to use .NET 6."
 
-- Extended support for Microsoft .NET Core 3.1 ended on December 3, 2022. Azure Functions runtime v3 is based on .NET core 3.1. We recommend that you update your apps to [runtime version 4.x](/azure/azure-functions/dotnet-isolated-process-guide#supported-versions), which uses .NET 6 and has long-term support. After December 3, 2022, your apps aren't eligible for new features, security patches, performance optimizations, or support until you upgrade them to Functions runtime version 4.x.
+- Extended support for Microsoft .NET Core 3.1 ended on December 3, 2022. Azure Functions runtime v3 is based on .NET core 3.1. We recommend that you [update your function app](/azure/azure-functions/set-runtime-version#view-and-update-the-current-runtime-version) to runtime version 4.x, which uses .NET 6 and has long-term support. After December 3, 2022, your apps aren't eligible for new features, security patches, performance optimizations, or support until you upgrade them to Functions runtime version 4.x.
 
 - Your Functions apps on runtime v3 will continue to run, and your applications aren't impacted. You can deploy code to these Functions applications after this date. But we may remove the ability for you to create applications targeting the Functions runtime v3 using common paths.
 
-- To avoid potential service disruptions or security vulnerabilities, [update your function app](/azure/azure-functions/set-runtime-version#view-and-update-the-current-runtime-version) to runtime version 4.x, which uses .NET 6, before December 3, 2022.
-
-- For more information, see [Functions runtime versions](/azure/azure-functions/functions-versions).
-
-- Migration guidance can be found here:
-
+- For more information and migration guidance, see
+  - [Functions runtime versions](/azure/azure-functions/functions-versions)
   - [Migrate apps from Azure Functions version 3.x to version 4.x](/azure/azure-functions/migrate-version-3-version-4)
   - [Migrate apps from Azure Functions version 1.x to version 4.x](/azure/azure-functions/migrate-version-1-version-4)
 
 ## Validate function app's compatibility for runtime v4
 
-- Azure Functions provides a [pre-upgrade validator](/azure/azure-functions/migrate-version-3-version-4#run-the-pre-upgrade-validator) to help you identify potential issues when migrating your function app to 4.x. In the [Azure portal](portal.azure.com], go to the **Diagnose and solve problems** pane. In **Function App Diagnostics**, run the **Functions 4.x Pre-Upgrade Validator**. After validation completes, follow the recommendations and address any issues in your app.
+- Azure Functions provides a [pre-upgrade validator](/azure/azure-functions/migrate-version-3-version-4#run-the-pre-upgrade-validator) to help you identify potential issues when migrating your function app to 4.x. In the [Azure portal](https://portal.azure.com), go to the **Diagnose and solve problems** pane. In **Function App Diagnostics**, run the **Functions 4.x Pre-Upgrade Validator**. After validation completes, follow the recommendations and address any issues in your app.
 - We strongly recommend [upgrading your local project environment](/azure/azure-functions/migrate-version-3-version-4#upgrade-your-local-project) to version 4.x. Fully test your app locally using version 4.x of the Azure Functions core tools.
-- Consider using a staging slot to test and verify your app in Azure on the new runtime version before deploying to a production slot. Remember to set `WEBSITE_OVERRIDE_STICKY_EXTENSION_VERSIONS=0` for [migration with slots]( /azure/azure-functions/functions-versions#migrate-using-slots).
+- Consider using a [staging slot](/azure/azure-functions/migrate-version-3-version-4#upgrade-using-slots) to test and verify your app in Azure on the new runtime version before deploying to a production slot. Remember to set `WEBSITE_OVERRIDE_STICKY_EXTENSION_VERSIONS=0` for migration with slots.
 
 ## Change the Functions runtime version for Windows
 
-- You need to set [FUNCTIONS_EXTENSION_VERSION](/azure/azure-functions/functions-app-settings), which is an app setting in the Azure portal **Configuration** pane, to `~4`. For more information, see [Change the runtime version](/azure/azure-functions/set-runtime-version#view-and-update-the-current-runtime-version).
+- Set [FUNCTIONS_EXTENSION_VERSION](/azure/azure-functions/functions-app-settings), which is an app setting in the Azure portal **Configuration** pane, to `~4`. For more information, see [Change the runtime version](/azure/azure-functions/set-runtime-version#view-and-update-the-current-runtime-version).
 - Also, set the `netFrameworkVersion` site setting to target .NET 6. `netFrameworkVersion` is a SiteConfig setting, not an app setting. And it's not directly available in the Azure portal. But you can set it by using [Azure Resource Explorer](https://azure.microsoft.com/blog/azure-resource-explorer-a-new-tool-to-discover-the-azure-api/) or [Azure CLI/PowerShell](/azure/azure-functions/functions-versions#migrate-without-slots).
 - For more information, see [Functions runtime versions](/azure/azure-functions/functions-versions).
 
 ## Change the Functions runtime version for Linux
 
-- You need to set [FUNCTIONS_EXTENSION_VERSION](/azure/azure-functions/functions-app-settings), which is an app setting in the Azure portal **Configuration** pane, to `~4`. For more information, see [Change the runtime version](/azure/azure-functions/set-runtime-version#view-and-update-the-current-runtime-version).
-- Additionally, set `LinuxFxVersion`, by using Command Line Interface (CLI), to `language|language version`, based on the language used. For more information, see [Change the runtime version](https://github.com/Azure/azure-functions-host/wiki/Using-LinuxFxVersion-for-Linux-Function-Apps).
-- For example, to update to .NET 6, you can set `LinuxFxVersion` to `dotnet|6.0` and `FUNCTIONS_EXTENSION_VERSION` to `~4`.
+- Set [FUNCTIONS_EXTENSION_VERSION](/azure/azure-functions/functions-app-settings), which is an app setting in the Azure portal **Configuration** pane, to `~4`. For more information, see [Change the runtime version](/azure/azure-functions/set-runtime-version#view-and-update-the-current-runtime-version).
+- Additionally, set `LinuxFxVersion`, by using Command Line Interface (CLI), to `language|language version`, based on the language used. For more information, see [Change the runtime version](https://github.com/Azure/azure-functions-host/wiki/Using-LinuxFxVersion-for-Linux-Function-Apps). For example, to update to .NET 6, you can set `LinuxFxVersion` to `dotnet|6.0` and `FUNCTIONS_EXTENSION_VERSION` to `~4`.
 - For more information, see [Functions runtime versions](/azure/azure-functions/functions-versions).
 
 ## Get a list of supported languages by the runtime version
@@ -48,18 +43,18 @@ See the [list of supported languages by the runtime version](/azure/azure-functi
 
 ## Update the language version setting for the function app after updating the code
 
-- PowerShell: In the [Azure portal](portal.azure.com], set the `PowerShell Core version`. For more information, see [Change the PowerShell version](/azure/azure-functions/functions-reference-powershell#changing-the-powershell-version).
+- PowerShell: In the [Azure portal](https://portal.azure.com), set the `PowerShell Core version`. For more information, see [Change the PowerShell version](/azure/azure-functions/functions-reference-powershell#changing-the-powershell-version).
 - Python: Set `linuxFxVersion` to `python|3.x`. For more information, see [Change the Python version](/azure/azure-functions/functions-reference-python#changing-python-version).
 - Java: Specify the language version by using `-DjavaVersion` as 11 or 17 (Java 17 is in preview). For more information, see [Specify the deployment version](/azure/azure-functions/functions-reference-java#specify-the-deployment-version).
 - Node, JavaScript: For Windows, set the `WEBSITE_NODE_DEFAULT_VERSION` app setting to `~16`. For Linux, set `linuxFxVersion`, by using CLI, to `node|16`. For more information, see [Set the Node version](/azure/azure-functions/functions-reference-node#setting-the-node-version).
 
 ## Azure Functions Proxies is available in Functions runtime v4
 
-Support for proxies is available again in version 4.x so that you can successfully upgrade your function apps to the latest runtime version. Switch to integrating your function apps with Azure API Management as soon as possible. API Management lets you take advantage of a more complete set of features to define, secure, manage, and monetize your Functions-based APIs. For more information, see [How to migrate to APIM](/azure/azure-functions/functions-proxies#migration) and [Integrate Functions with APIM using Visual Studio](/azure/azure-functions/openapi-apim-integrate-visual-studio).
+Support for proxies is available again in version 4.x so that you can successfully upgrade your function apps to the latest runtime version. We recommend that you switch to integrating your function apps with Azure API Management as soon as possible. API Management lets you take advantage of a more complete set of features to define, secure, manage, and monetize your Functions-based APIs. For more information, see [How to migrate to APIM](/azure/azure-functions/functions-proxies#migration) and [Integrate Functions with APIM using Visual Studio](/azure/azure-functions/openapi-apim-integrate-visual-studio).
 
 ## Get a list of all the Azure Functions apps that use runtime version 1.x, 2.x, or 3.x
 
-You can use App Service REST API calls ([GetSiteConfig](/rest/api/appservice/web-apps/get-configuration)) to figure out this issue. `LinuxFxVersion` and `WindowsFxVersion` provide the version.
+You can use App Service REST API calls ([GetSiteConfig](/rest/api/appservice/web-apps/get-configuration)) to determine this. `LinuxFxVersion` and `WindowsFxVersion` provide the version information.
 
 ## Move a .NET Framework 4.6.1 app from Functions runtime v1 to v4
 
@@ -68,7 +63,7 @@ You can use App Service REST API calls ([GetSiteConfig](/rest/api/appservice/web
 ## A migrated function app isn't starting or has some runtime issues
 
 - For .NET apps, remember to update the code to .NET 6 before building and deploying.
-- Double-check the runtime version of the app in the Azure portal.
+- Double-check the runtime version of the app in the [Azure portal](https://portal.azure.com).
 - For Windows apps, you must also set `netFrameworkVersion` by using CLI or PowerShell.
 - Make sure you're using the 2.x or later [extension bundles](/azure/azure-functions/functions-versions#minimum-extension-versions), as recommended. Version 4.x of the Functions runtime requires versions 2.x or 3.0.0.
 - Logging in to Azure Storage using *AzureWebJobsDashboard* is no longer supported in 4.x. Instead, use [Application Insights](/azure/azure-functions/functions-monitoring) for monitoring.
