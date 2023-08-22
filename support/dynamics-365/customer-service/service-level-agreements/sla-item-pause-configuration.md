@@ -3,7 +3,7 @@ title: Can't save an SLA item due to Nullable object must have a value error in 
 description: Provides a resolution for the Nullable object must have a value error that occurs when you save an SLA item in Microsoft Dynamics 365 Customer Service.
 ms.reviewer: sdas
 ms.author: ankugupta
-ms.date: 08/11/2023
+ms.date: 08/18/2023
 ---
 # "Nullable object must have a value" error occurs when saving an SLA item
 
