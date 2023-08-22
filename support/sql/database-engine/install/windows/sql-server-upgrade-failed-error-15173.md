@@ -58,7 +58,7 @@ To resolve the 15173 or 15559 error, follow these steps:
 
     ```sql
     SELECT a.name, b.permission_name  
-    FROM  sys.server_principals a 
+    FROM sys.server_principals a 
     INNER JOIN sys.server_permissions b ON a.principal_id = b.grantee_principal_id 
     INNER JOIN sys.server_principals c ON b.grantor_principal_id = c.principal_id 
     WHERE c.name = '##MS_PolicyEventProcessingLogin##'
