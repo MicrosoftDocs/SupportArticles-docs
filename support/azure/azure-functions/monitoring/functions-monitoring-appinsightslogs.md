@@ -16,8 +16,8 @@ If the Application Insights logs are missing, or if the data appears to be parti
 The **Diagnose and solve problems** option in the Azure Functions app has a **Function Configuration Checks** tool that checks the configuration for Application Insights, particularly for the following:
 
 - Only one of the following connection settings exists:
-   - `APPINSIGHTS_INSTRUMENTATIONKEY` Application Insights Instrumentation key
-   - `APPLICATIONINSIGHTS_CONNECTION_STRING` connection
+  - `APPINSIGHTS_INSTRUMENTATIONKEY` Application Insights Instrumentation key
+  - `APPLICATIONINSIGHTS_CONNECTION_STRING` connection
   We recommend that you use the [APPLICATIONINSIGHTS_CONNECTION_STRING](/azure/azure-monitor/app/sdk-connection-string?tabs=net#overview) for more stable behavior. The ability to use `APPINSIGHTS_INSTRUMENTATIONKEY` will be deprecated by 2025.
 - The `AzureWebJobsDashboard` built-in logging is disabled, as recommended.
 - Sampling is enabled for the Azure Functions telemetry (enabled by default).
@@ -46,7 +46,7 @@ If you notice any partially missing logs, this might occur because of sampling. 
 
 ```Kusto
 union requests,dependencies,pageViews,browserTimings,exceptions,traces
-| where timestamp > todatetime("mm/dd/yyyy hh:mm:ss") and  timestamp < todatetime("mm/dd/yyyy hh:mm:ss")
+| where timestamp > todatetime("mm/dd/yyyy hh:mm:ss") and timestamp < todatetime("mm/dd/yyyy hh:mm:ss")
 | summarize TelemetrySavedPercentage = 100/avg(itemCount), TelemetryDroppedPercentage = 100-100/avg(itemCount) by bin(timestamp, 1d), itemType
 | sort by timestamp asc
 ```
@@ -68,7 +68,7 @@ You can configure how your application should write the logs by following the sa
 
 ```JSON
 {
-  "version": "2.0",  
+  "version": "2.0",
   "logging": {
     "logLevel": {
       "default": "Information", // catch all default, with modifications below for individual categories.
@@ -76,7 +76,7 @@ You can configure how your application should write the logs by following the sa
       "Host.Aggregator": "Trace", // Log all traces in the 'customMetrics' table of (and shown on Metrics/Alerts blade in AI) - use either this or Host.Results
       "Host.Results": "Error", // Error and Critical requests are only logged in the 'requests' table of the AI (and shown on Monitor Functions blade in Functions App) - use either this or Host.Aggregator
       "Function.Function1": "Information", //Information level logs from Function 1, logged in 'traces', 'dependencies' and 'customMetrics' tables of AI
-      "Function.Function2.User": "Information" //user code logs from Function2, logged in 'traces' table of AI 
+      "Function.Function2.User": "Information" //user code logs from Function2, logged in 'traces' table of AI
     },
     "applicationInsights": {
       "samplingSettings": {
@@ -86,7 +86,7 @@ You can configure how your application should write the logs by following the sa
       }
     }
   }
-} 
+}
 ```
 
 To configure these values at the App settings level (to avoid redeployment on *host.json* changes), override specific *host.json* values by creating an equivalent value as an application setting. For more information, see [Override host.json values](/azure/azure-functions/functions-host-json#override-hostjson-values).

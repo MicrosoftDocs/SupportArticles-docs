@@ -1,5 +1,5 @@
 ---
-title: Function app runtime issues post deployment 
+title: Function app runtime issues post deployment
 description: Get answers to frequently asked questions about runtime issues in the function app after content deployment.
 ms.date: 08/17/2023
 ms.reviewer: gasridha, v-jayaramanp
