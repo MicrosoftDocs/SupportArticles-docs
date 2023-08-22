@@ -1,19 +1,19 @@
 ---
-title: Set drop-down list value on web page action fails because the list value can't be found
-description: Provides a resolution for an issue where the Set drop-down list value on web page action fails because the list value can't be found.
+title: Set drop-down list value in window/on web page action fails because the list value can't be found
+description: Provides a resolution for an issue where the Set drop-down list value in window/on web page action fails because the list value can't be found in Microsoft Power Automate.
 ms.reviewer: nimoutzo
-ms.date: 08/21/2023
+ms.date: 08/22/2023
 ms.subservice: power-automate-desktop-flows
 ---
-# The list value specified in the "Set drop-down list value on web page" action can't be found at runtime
+# The list value specified in the "Set drop-down list value in window/on web page" action can't be found at runtime
 
-This article provides a resolution for an issue where the [Set drop-down list value on web page](/power-automate/desktop-flows/automation-web#enter-data-on-webpages) action fails with the "UIAutomation.SelectOptionInDropDownError" error code because the list value can't be found.
+This article provides a resolution for an issue where the [Set drop-down list value in window](/power-automate/desktop-flows/actions-reference/uiautomation#setdropdownlistvalueinwindow) action fails with the "UIAutomation.SelectOptionInDropDownError" error code or the [Set drop-down list value on web page](/power-automate/desktop-flows/automation-web#enter-data-on-webpages) action fails with the "WebAutomation.SetDropDownListValueError" error code because the list value in both actions can't be found.
 
 _Applies to:_ &nbsp; Power Automate
 
 ## Symptom 1
 
-The **Set drop-down list value on web page** action fails with the following error message:
+The **Set drop-down list value on web page** or **Set drop-down list value in window** action fails with the following error message:
 
 > Failed to perform the requested operation on the drop-down list. Drop down list was not found.
 
@@ -27,11 +27,11 @@ Use [Test selector](/power-automate/desktop-flows/test-selectors) in the selecto
 
 ## Symptom 2
 
-The **Set drop-down list value on web page** action runs successfully, but the option element isn't selected, and no error occurs during runtime.
+The **Set drop-down list value on web page** or **Set drop-down list value in window** action runs successfully, but the option element isn't selected, and no error occurs during runtime.
 
 #### Cause
 
-The **Set drop-down list value on web page** action fails to select the option element from the drop-down list.
+The The **Set drop-down list value on web page** or **Set drop-down list value in window** action fails to select the option element from the drop-down list.
 
 #### Resolution
 
