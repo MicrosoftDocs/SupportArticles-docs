@@ -19,14 +19,14 @@ Azure function apps use the Azure App Service infrastructure. You can create an 
 
 You can also create an app while deploying a function project from Visual Studio or Visual Studio Code.
 
-## Considerations for an Azure Storage account used by Azure Functions
+### Considerations for an Azure Storage account used by Azure Functions
 
 When creating a function app, you can create or link to a general-purpose Azure Storage account that supports blob, queue, and table storage. Azure Functions relies on Azure Storage for operations, such as managing triggers and logging function executions. For more information, see [Storage considerations for Azure Functions](/azure/azure-functions/storage-considerations).
 
 - Make sure that you have permissions to create a storage account and other resources. There can be no role-based access control (RBAC), policy, or scope violations.
 - Use Managed Identity for Azure Storage account connection string, only for `AzureWebJobsStorage`. For more information, see [Connecting to host storage with an identity (Preview)](/azure/azure-functions/functions-reference#connecting-to-host-storage-with-an-identity-preview).
 
-## Secure the Azure Storage account used by Azure Functions
+### Secure the Azure Storage account used by Azure Functions
 
 You can create an Azure Functions app and a new storage account secured with private endpoints. Host the Functions app on a plan supporting virtual-network integration.
 
@@ -34,7 +34,7 @@ You can create an Azure Functions app and a new storage account secured with pri
 - For Azure Resource Manager templates, see [Azure/azure-quickstart-templates](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.web/function-app-storage-private-endpoints).
 - You can also update an existing Functions app to point to a new secure storage account. For more information, see [Restrict your storage account to a virtual network](/azure/azure-functions/configure-networking-how-to#restrict-your-storage-account-to-a-virtual-network).
 
-## Migrate an Azure Functions app across different hosting plans
+### Migrate an Azure Functions app across different hosting plans
 
 In Windows, you can use Azure CLI commands to migrate a Functions app between a Consumption and a Premium plan, or vice versa. For more information, see [Plan migration](/azure/azure-functions/functions-how-to-use-azure-function-app-settings#plan-migration).
 
@@ -45,7 +45,7 @@ In Windows, you can use Azure CLI commands to migrate a Functions app between a 
 
 Review hosting plan (Consumption, Premium, Dedicated) offerings like virtual network connectivity, time-out, billing, and so on. For more information, see [Azure Functions hosting options](/azure/azure-functions/functions-scale).
 
-## Resolve the error "This region has quota of 0 instances for your subscription. Try selecting different region or SKU"
+### Resolve the error "This region has quota of 0 instances for your subscription. Try selecting different region or SKU"
 
 If you're consistently experiencing resource creation issues in a particular region, you might also try to create the resource in a geographically paired region if your business allows it. For example, *West US 2* and *West Central US* are paired regions. *East Asia (Hong Kong)* and *Southeast Asia (Singapore)* are also paired regions. 
 
@@ -54,13 +54,13 @@ For more information, see:
 - [Azure regions decision guide - Cloud Adoption Framework](/azure/cloud-adoption-framework/migrate/azure-best-practices/multiple-regions)
 - [Cross-region replication in Azure](/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies)
 
-## Resolve the error "The pricing tier is not allowed in this resource group" or "SkuNotAllowedForResourceGroup"
+### Resolve the error "The pricing tier is not allowed in this resource group" or "SkuNotAllowedForResourceGroup"
 
 We recommend that you create the plan in a new resource group. Different SKUs require unique machines. When you create an app in a resource group, it's mapped and assigned to a pool of resources. If you create another plan in that resource group and the mapped pool lacks the required resources, the error appears.
 
 For more information, see [Creating function apps in an existing resource group](https://github.com/Azure/Azure-Functions/wiki/Creating-Function-Apps-in-an-existing-Resource-Group).
 
-## Creation of a function app content file share fails with: "The remote server returned an error: (403) Forbidden"
+### Creation of a function app content file share fails with: "The remote server returned an error: (403) Forbidden"
 
 For function apps in [Consumption plan](/azure/azure-functions/consumption-plan) or [Elastic Premium plan](/azure/azure-functions/functions-premium-plan), a file share is created on the storage account and referenced by using the app setting `WEBSITE_CONTENT_SHARE`. This error may occur because the storage account has a firewall, private endpoints, or other virtual network security restrictions such as network security group (NSG) rules.
 
@@ -70,7 +70,7 @@ To resolve the error, create a file share in advance on the secure storage accou
 
 You can use alternative tools like Azure CLI, PowerShell, and `Az.Functions`. Use the latest versions of Azure CLI, Azure PowerShell, or the `Az.Functions` module. Also, for example, if there's an issue in the Azure portal, try using Azure CLI.
 
-## Set the function runtime version for Windows and Linux
+### Set the function runtime version for Windows and Linux
 
 For Windows apps, set it in the Azure portal (**Settings** > **Configuration** > **Function runtime Settings** > **Runtime version**), or create an application setting `FUNCTIONS_EXTENSION_VERSION` and set it to the major runtime version, for example, `~4` to target V4.
 
@@ -79,7 +79,7 @@ For Windows apps, set it in the Azure portal (**Settings** > **Configuration** >
 
 For Linux apps, see [Manual version updates on Linux](/azure/azure-functions/set-runtime-version#manual-version-updates-on-linux).
 
-## Troubleshoot HTTP 429 errors
+### Troubleshoot HTTP 429 errors
 
 Throttling happens at two levels: Azure Resource Manager and resource provider (Microsoft.Web). The level depends on the subscription type and the hosting plan.
 For more information, see:
@@ -91,7 +91,7 @@ For more information, see:
 > [!NOTE]
 > If the issue is infrequent, wait and retry after some time to see if the issue resolves. If the issue is frequent, you can buy a different subscription or update the hosting plan to resolve the error.
 
-## Resolve issues occurring during function app deletion or restore
+## Delete or restore function apps
 
 After you publish code from Visual Studio and use `WEBSITE_RUN_FROM_PACKAGE`, the Azure portal sets functions as *read-only* to prevent editing precompiled assets in the portal. To delete functions in a Functions app, remove the unwanted functions from your code, enable the **Remove additional files at destination** option in profile settings, and redeploy your code.
 

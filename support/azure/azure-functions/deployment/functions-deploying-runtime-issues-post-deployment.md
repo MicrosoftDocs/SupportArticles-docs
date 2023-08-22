@@ -34,7 +34,7 @@ To fix runtime issues after the content deployment, try one or more of the follo
 - Manually restart the Function app.
 - Run the [Azure Functions Diagnostics](/azure/azure-functions/functions-diagnostics) to quickly diagnose and solve common Function app problems.
 - If the storage account is used for the Function app, verify whether the [storage connections are set up correctly](/azure/azure-functions/functions-recover-storage-account).
-- If you've enabled Application Insights for your function, see [Monitor executions in Azure Functions](/azure/azure-functions/functions-monitoring) to learn more about the full exception trace or error message that's causing errors.
+- If you've enabled Application Insights for your function, see [Application Insights logs](/azure/azure-functions/functions-monitoring) to learn more about the full exception trace or error message that's causing errors.
 
 [!INCLUDE [support-disclaimer](../../../includes/support-disclaimer.md)]
 
