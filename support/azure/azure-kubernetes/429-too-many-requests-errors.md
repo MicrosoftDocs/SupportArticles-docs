@@ -50,11 +50,11 @@ Run Kubernetes 1.18.*x* or later. These versions contain many improvements that 
 
 ## Solution 2: Increase the auto scaler scan interval
 
-If you find the **Cluster Auto-Scaler Throttling has been detected** diagnostic reports throttling caused by the cluster autoscaler, you can try to increase the [auto scaler scan interval](/azure/aks/cluster-autoscaler) to reduce the number of calls to virtual machine scale sets from the cluster autoscaler.
+If you [find the "Cluster Auto-Scaler Throttling has been detected" diagnostic reports throttling](#analyze-and-identify-errors-by-using-aks-diagnose-and-solve-problems) caused by the cluster autoscaler, you can try to increase the [auto scaler scan interval](/azure/aks/cluster-autoscaler) to reduce the number of calls to virtual machine scale sets from the cluster autoscaler.
 
 ## Solution 3: Reconfigure third-party applications to make fewer calls
 
-When you filter by user agent in the **View request rate and throttle details** diagnostic, if you find third-party applications (such as monitoring applications) that make an excessive number of GET requests, change the settings of these applications to reduce the frequency of the GET calls. In addition, make sure that the application clients are using exponential backoff when calling Azure APIs.
+When you [filter by user agent in the "View request rate and throttle details" diagnostic](#analyze-and-identify-errors-by-using-aks-diagnose-and-solve-problems), if you find third-party applications (such as monitoring applications) that make an excessive number of GET requests, change the settings of these applications to reduce the frequency of the GET calls. In addition, make sure that the application clients are using exponential backoff when calling Azure APIs.
 
 ## Solution 4: Split your clusters into different subscriptions or regions
 
