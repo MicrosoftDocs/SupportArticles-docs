@@ -81,7 +81,7 @@ To resolve this problem, use one of the following approaches, depending on your 
 
 If you know that the exposure occurred before a certain date, and this date is earlier than the oldest gMSA password that you have, you can resolve the problem without re-creating the gMSAs, as shown in the procedure below.
 
-The approach is to create a new KDS Root Key object that's unknown to the attacker. When the gMSAs roll their password, they will move to use the new KDS Root Key object. To fix gMSAs that have recently rolled their password using the old KDS Root Key, an authoritative restore is required to force a password update immediately after the restore.
+The approach is to create a new KDS Root Key object that's unknown to the attacker. When the gMSAs roll their password, they will move to using the new KDS Root Key object. To fix gMSAs that have recently rolled their password using the old KDS Root Key, an authoritative restore is required to force a password update immediately after the restore.
 
 > [!NOTE]
 >  
