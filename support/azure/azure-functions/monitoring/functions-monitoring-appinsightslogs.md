@@ -7,11 +7,11 @@ ms.reviewer: gasridha, v-jayaramanp
 
 # Application Insights logs are missing or incorrect for Azure Functions Apps
 
-You can closely monitor the Functions app through the integration between [Azure Functions](https://azure.microsoft.com/products/functions) and [Application Insights](/azure/azure-monitor/app/app-insights-overview?tabs=net). And you can use Application Insights without any custom configuration.
+You can closely monitor the function app through the integration between [Azure Functions](https://azure.microsoft.com/products/functions) and [Application Insights](/azure/azure-monitor/app/app-insights-overview?tabs=net). And you can use Application Insights without any custom configuration.
 
 If the Application Insights logs are missing, or if the data appears to be partial or inaccurate, use the following steps to resolve the issue.
 
-## Check whether the Functions app is configured correctly to generate logs
+## Check whether the function app is configured correctly to generate logs
 
 The **Diagnose and solve problems** option in the Azure Functions app has a **Function Configuration Checks** tool that checks the configuration for Application Insights, particularly for the following:
 
@@ -22,7 +22,7 @@ The **Diagnose and solve problems** option in the Azure Functions app has a **Fu
 - The `AzureWebJobsDashboard` built-in logging is disabled, as recommended.
 - Sampling is enabled for the Azure Functions telemetry (enabled by default).
 
-> **Recommendation**: The Functions app should be on version 4 and the runtime version should be at least 4.15.2*xx*. This is because, from this version onwards, you can track the log flows from Azure Functions to the Application Insights service. By monitoring the log flows, you can check for missing logs.
+> **Recommendation**: The function app should be on version 4 and the runtime version should be at least 4.15.2*xx*. This is because, from this version onwards, you can track the log flows from Azure Functions to the Application Insights service. By monitoring the log flows, you can check for missing logs.
 
 ## Logs are missing or partial
 
@@ -93,7 +93,7 @@ To configure these values at the App settings level (to avoid redeployment on *h
 
 For more examples about how to suppress logs, see [functions-log-suppression](https://github.com/anthonychu/functions-log-suppression).
 
-## My Functions app that's integrated with VNet doesn't generate logs
+## My function app that's integrated with VNet doesn't generate logs
 
 You must open port 443 for outgoing traffic in your server firewall to allow the Application Insights SDK or Application Insights Agent to send data to the portal for the following URLs:
 

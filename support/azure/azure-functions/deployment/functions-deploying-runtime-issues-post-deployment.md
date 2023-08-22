@@ -1,6 +1,6 @@
 ---
 title: Function app runtime issues post deployment 
-description: Get answers to frequently asked questions about runtime issues in the Function app after content deployment.
+description: Get answers to frequently asked questions about runtime issues in the function app after content deployment.
 ms.date: 08/17/2023
 ms.reviewer: gasridha, v-jayaramanp
 ---
@@ -9,14 +9,14 @@ ms.reviewer: gasridha, v-jayaramanp
 
 This article describes the common causes of runtime issues and provides solutions to resolve these issues.
 
-If your application is experiencing issues after deployment, it's important to determine whether the problem is related to deployment or runtime. A *deployment* issue can cause the wrong set of files to get deployed to your Function app, or it can cause some files not to get deployed at all. A *runtime* issue occurs after deployment. The files in your **wwwroot** directory are exactly as they should be, but the Function app isn't running correctly. When this scenario occurs, the technique that you used to deploy your site is no longer relevant. For a runtime issue, you should, instead, focus on what your code is doing at runtime and how it's failing.
+If your application is experiencing issues after deployment, it's important to determine whether the problem is related to deployment or runtime. A *deployment* issue can cause the wrong set of files to get deployed to your function app, or it can cause some files not to get deployed at all. A *runtime* issue occurs after deployment. The files in your **wwwroot** directory are exactly as they should be, but the function app isn't running correctly. When this scenario occurs, the technique that you used to deploy your site is no longer relevant. For a runtime issue, you should, instead, focus on what your code is doing at runtime and how it's failing.
 
 ## Common causes for application runtime issues after content deployment
 
 Runtime failure can occur for any of the following reasons:
 
 - The function host can't start because there's poor network connectivity to the secure storage account.
-  - The storage account that's used for the Function app isn't accessible.
+  - The storage account that's used for the function app isn't accessible.
   - The storage connection string was changed or is incorrect.
 - In the runtime sandbox environment of Azure Functions, something is blocking certain operations that work on your local computer.
 - Your Azure Functions app isn't configured correctly. For example, the function host doesn't start up because of incorrect values in the following settings:
@@ -31,9 +31,9 @@ Runtime failure can occur for any of the following reasons:
 
 To fix runtime issues after the content deployment, try one or more of the following methods:
 
-- Manually restart the Function app.
-- Run the [Azure Functions Diagnostics](/azure/azure-functions/functions-diagnostics) to quickly diagnose and solve common Function app problems.
-- If the storage account is used for the Function app, verify whether the [storage connections are set up correctly](/azure/azure-functions/functions-recover-storage-account).
+- Manually restart the function app.
+- Run the [Azure Functions Diagnostics](/azure/azure-functions/functions-diagnostics) to quickly diagnose and solve common function app problems.
+- If the storage account is used for the function app, verify whether the [storage connections are set up correctly](/azure/azure-functions/functions-recover-storage-account).
 - If you've enabled Application Insights for your function, see [Application Insights logs](/azure/azure-functions/functions-monitoring) to learn more about the full exception trace or error message that's causing errors.
 
 [!INCLUDE [support-disclaimer](../../../includes/support-disclaimer.md)]
