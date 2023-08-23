@@ -1,8 +1,8 @@
 ---
 title: SLA KPI instance doesn't reach Nearing Non-compliance or Non-compliant and the timer continues to run
 description: Provides a resolution for the issue related to the permissions and licenses of the SLAInstanceMonitoringWarningAndExpiryFlow in Dynamics 365 Customer Service.
-ms.reviewer: sdas
-ms.author: ravimanne
+ms.reviewer: sdas, ankugupta
+ms.author: sdas
 ms.date: 05/23/2023
 ---
 # The SLA KPI instance doesn't reach Nearing Non-compliance or Non-compliant and the SLA KPI instance timer continues to run
@@ -21,7 +21,7 @@ If the user is missing any of the required licenses, then the flow runs that are
 
 Additionally, the current owner of the flow must have the required permissions with read and write access for the SLA KPI instance.
 
-If a user who is the current owner of the flow needs to be removed from the organization, you should first change the owner of the flow to another user. This new user must also have all the required permissions. Once a new owner is added, you can remove the previous owner. This action will ensure the flow runs continue to be executed without issues.
+If a user who is the current owner of the flow needs to be removed from the organization, you should first change the owner of the flow to another user. This new user must also have all the required permissions. Once a new owner is added, you can remove the previous owner. This action ensures the flow runs continue to be executed without issues.
 
 ## Resolution
 

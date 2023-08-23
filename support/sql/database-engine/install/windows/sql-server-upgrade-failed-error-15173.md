@@ -8,7 +8,7 @@ ms.reviewer: ramakoni, v-jayaramanp
 
 # SQL Server upgrade fails and returns error 15173 or 15559
 
-This article helps you troubleshoot error 15173 or 15559 that occur when you install a cumulative update (CU) or service pack (SP) for Microsoft SQL Server. The error occurs when database upgrade scripts are run.
+This article helps you troubleshoot error 15173 or 15559 that occur when you install a Cumulative Update (CU) or Service Pack (SP) for Microsoft SQL Server. The error occurs when database upgrade scripts are run.
 
 ## Symptoms
 
@@ -57,16 +57,16 @@ To resolve the 15173 or 15559 error, follow these steps:
 1. Connect to SQL Server, and run one of the following queries, depending on the server principal that's mentioned in the error message:
 
     ```sql
-    SELECT   a.name, ,b.permission_name  
-    FROM  sys.server_principals a 
+    SELECT a.name, b.permission_name  
+    FROM sys.server_principals a 
     INNER JOIN sys.server_permissions b ON a.principal_id = b.grantee_principal_id 
     INNER JOIN sys.server_principals c ON b.grantor_principal_id = c.principal_id 
     WHERE c.name = '##MS_PolicyEventProcessingLogin##'
     ```
 
     ```sql
-    SELECT   a.name,b.permission_name  
-    FROM  sys.server_principals a 
+    SELECT a.name, b.permission_name  
+    FROM sys.server_principals a 
     INNER JOIN sys.server_permissions b ON a.principal_id = b.grantee_principal_id 
     INNER JOIN sys.server_principals c ON b.grantor_principal_id = c.principal_id 
     WHERE c.name = '##MS_AgentSigningCertificate##'

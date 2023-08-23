@@ -112,11 +112,6 @@ items:
   - name: Set multiple site bindings and SSL
     href: iisadmin-service-inetinfo/ssl-multiple-web-sites-shared-configuration.md
 
-- name: IIS Extensions, Tools, and Add-Ons
-  items:
-  - name: Troubleshooting problems with Microsoft Web Platform Installer
-    href: iis-extensions-tools-addons/troubleshooting-problems-with-microsoft-web-platform-installer.md
-
 - name: Site behavior and performance
   items:
   - name: 0-byte file is returned

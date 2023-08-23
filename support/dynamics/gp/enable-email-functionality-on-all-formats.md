@@ -38,4 +38,4 @@ To enable this new feature using the Web Client functionality, follow the steps 
 
 ## More Information
 
-The above information is also published externally on [Microsoft Dynamics GP 2015 R2 New Features - Enable Email Functionality On All Sales and Purchasing Document Formats](https://community.dynamics.com/gp/b/dynamicsgp/posts/microsoft-dynamics-gp-2015-r2-new-features-enable-email-functionality-on-all-sales-and-purchasing-document-formats).
+The above information is also published externally on [Microsoft Dynamics GP 2015 R2 New Features - Enable Email Functionality On All Sales and Purchasing Document Formats](https://community.dynamics.com/blogs/post/?postid=07296067-525e-40d2-9014-09beb62dd0b6).
