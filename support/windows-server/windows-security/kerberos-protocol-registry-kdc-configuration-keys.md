@@ -183,7 +183,7 @@ The registry entries that are listed in this section must be added to the follow
 
     This value indicates whether there are more options that must be sent as KDC options in Ticket Granting Service requests (TGS_REQ).
 
-- Entry: ClientIpAddress
+- Entry: ClientIpAddresses
 
   - Type: REG_DWORD
   - Default value: 0 (This setting is 0 because of Dynamic Host Configuration Protocol and network address translation issues.)
