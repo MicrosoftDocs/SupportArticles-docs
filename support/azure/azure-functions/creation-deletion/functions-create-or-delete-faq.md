@@ -68,7 +68,7 @@ To resolve the error, create a file share in advance on the secure storage accou
 
 ### Alternative tools for creation
 
-You can use alternative tools like Azure CLI, PowerShell, and `Az.Functions`. Make sure to use the latest versions of of the tools. If there's an issue when using one of the tools, like Azure portal, try using another, like Azure CLI.
+You can use alternative tools like Azure CLI, PowerShell, and `Az.Functions`. Make sure to use the latest versions of the tools. If there's an issue when using one of the tools, like Azure portal, try using another, like Azure CLI.
 
 ### Set the function runtime version for Windows and Linux
 
