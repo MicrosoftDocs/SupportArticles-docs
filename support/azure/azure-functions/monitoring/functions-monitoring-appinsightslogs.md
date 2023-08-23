@@ -1,7 +1,7 @@
 ---
 title: Application Insights logs are missing or incorrect
 description: Get answers to frequently asked questions about missing or incorrect logs for AI logs in Azure Functions.
-ms.date: 08/18/2023
+ms.date: 08/23/2023
 ms.reviewer: gasridha, v-jayaramanp
 ---
 
@@ -11,14 +11,15 @@ You can closely monitor the function app through the integration between [Azure 
 
 If the Application Insights logs are missing, or if the data appears to be partial or inaccurate, use the following steps to resolve the issue.
 
-## Check whether the function app is configured correctly to generate logs
+## Check configuration of function app
 
 The **Diagnose and solve problems** option in the Azure Functions app has a **Function Configuration Checks** tool that checks the configuration for Application Insights, particularly for the following:
 
 - Only one of the following connection settings exists:
   - `APPINSIGHTS_INSTRUMENTATIONKEY` Application Insights Instrumentation key
-  - `APPLICATIONINSIGHTS_CONNECTION_STRING` connection
-  We recommend that you use the [APPLICATIONINSIGHTS_CONNECTION_STRING](/azure/azure-monitor/app/sdk-connection-string?tabs=net#overview) for more stable behavior. The ability to use `APPINSIGHTS_INSTRUMENTATIONKEY` will be deprecated by 2025.
+  - `APPLICATIONINSIGHTS_CONNECTION_STRING` connection.
+
+    We recommend that you use the [APPLICATIONINSIGHTS_CONNECTION_STRING](/azure/azure-monitor/app/sdk-connection-string?tabs=net#overview) for more stable behavior. The ability to use `APPINSIGHTS_INSTRUMENTATIONKEY` will be deprecated by 2025.
 - The `AzureWebJobsDashboard` built-in logging is disabled, as recommended.
 - Sampling is enabled for the Azure Functions telemetry (enabled by default).
 
@@ -53,7 +54,7 @@ union requests,dependencies,pageViews,browserTimings,exceptions,traces
 
 For more information, see [Data collection, retention, and storage in Application Insights](/azure/azure-monitor/app/data-retention-privacy).
 
-## Control the volume or verbosity of the logs being written
+## Control volume and verbosity of logs
 
 You can increase or suppress the logs that are written. To do this, you can use a combination of log level and categories as configured in *host.json*.
 
@@ -93,7 +94,7 @@ To configure these values at the App settings level (to avoid redeployment on *h
 
 For more examples about how to suppress logs, see [functions-log-suppression](https://github.com/anthonychu/functions-log-suppression).
 
-## My function app that's integrated with VNet doesn't generate logs
+## My function app doesn't generate logs
 
 You must open port 443 for outgoing traffic in your server firewall to allow the Application Insights SDK or Application Insights Agent to send data to the portal for the following URLs:
 
