@@ -49,13 +49,13 @@ On a CA server in your SCOM environment, follow these steps to create a certific
 ## Issue a CA certificate from the template
 
 1. On the Windows Server that has been given the permission to the template, open the computer certificate store.
-1. Under **Personal**, right-click **Certificates** and select **All Tasks** > **Request New Certificate**.
+1. Under **Personal**, right-click **Certificates** and select **All Tasks** > **Request New Certificate...**
 
     :::image type="content" source="media/use-ca-certificate-on-scom-linux-agent/request-new-certificate.png" alt-text="Screenshot that shows how to request a new certificate.":::
 
 1. Select **Next** > **Next**.
 1. Find the template.
-1. Select **More information is required to enroll for this certificate. Click here to configure settings**.
+1. Select **More information is required to enroll for this certificate. Click here to configure settings.**
 
     :::image type="content" source="media/use-ca-certificate-on-scom-linux-agent/select-certificate-to-enroll.png" alt-text="Screenshot of the warning that requests more information for enrollment.":::
 
