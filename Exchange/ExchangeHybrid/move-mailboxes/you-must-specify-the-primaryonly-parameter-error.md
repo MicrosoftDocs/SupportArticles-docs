@@ -77,9 +77,9 @@ The Exchange admin center doesn't have the option to move only a primary mailbox
 
 To move only a primary mailbox, follow these steps:
 
-Connect to Exchange Online by using remote PowerShell. For more information about how to do this, see Connect to Exchange Online PowerShell.
+1. Connect to Exchange Online by using remote PowerShell. For more information about how to do this, see Connect to Exchange Online PowerShell.
 
-Run the following command:
+2. Run the following command:
 
    ```powershell
    New-MoveRequest  -Identity <user@contoso.com> -Outbound -RemoteTargetDatabase "mdb on-premises" -RemoteHostName  'on-premises mrsproxy url' -PrimaryOnly -ArchiveDomain <mail.onmicrosoft.com domain> -TargetDeliveryDomain <contoso.com domain> -RemoteCredential (Get-Credential)
