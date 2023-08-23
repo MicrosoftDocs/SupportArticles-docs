@@ -1,6 +1,6 @@
 ---
 title: Create, delete, or restore Azure function app resources
-description: Describes some common issues and solutions for creating, deleting, or restoring Azure Functions apps.
+description: Describes some common issues and solutions for creating, deleting, or restoring Azure function apps.
 ms.date: 08/15/2023
 ms.reviewer: gasridha, v-sidong
 ---
@@ -10,7 +10,7 @@ This article lists some common issues that may occur when you create, delete, or
 
 ## Create function apps
 
-Azure function apps use the Azure App Service infrastructure. You can create an Azure functions apps by using:
+Azure function apps use the Azure App Service infrastructure. You can create an Azure function app by using:
 
 - [Azure portal](/azure/azure-functions/functions-create-function-app-portal)
 - [Azure CLI](/azure/azure-functions/functions-create-first-azure-function-azure-cli#create-a-function-app)
@@ -90,13 +90,13 @@ For more information, see:
 
 ## Delete or restore function apps
 
-After you publish code from Visual Studio and use `WEBSITE_RUN_FROM_PACKAGE`, the Azure portal sets functions as *read-only* to prevent editing precompiled assets in the portal. To delete functions in a Functions app, remove the unwanted functions from your code, enable the **Remove additional files at destination** option in profile settings, and redeploy your code.
+After you publish code from Visual Studio and use `WEBSITE_RUN_FROM_PACKAGE`, the Azure portal sets functions as *read-only* to prevent editing precompiled assets in the portal. To delete functions in a function app, remove the unwanted functions from your code, enable the **Remove additional files at destination** option in profile settings, and redeploy your code.
 
-Restoring Azure Functions apps hosted on a Consumption plan or Elastic Premium plan isn't supported. If you have the Functions app content or can access the storage account, update the app settings or create a new function app, and use the content. You can restore Azure functions apps on a Dedicated App service plan if it isn't using Azure Files for content storage.
+Restoring Azure function apps hosted on a Consumption plan or Elastic Premium plan isn't supported. If you have the function app content or can access the storage account, update the app settings or create a new function app, and use the content. You can restore Azure function apps on a Dedicated App service plan if it isn't using Azure Files for content storage.
 
 For more information, see [Restore (undelete) deleted web apps](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/restore-undelete-deleted-web-apps/ba-p/2922088).
 
-Make sure that you have sufficient permissions to delete an Azure Functions app. There can be no role-based access control (RBAC), policy, or scope violations.
+Make sure that you have sufficient permissions to delete an Azure function app. There can be no role-based access control (RBAC), policy, or scope violations.
 
 ## Collect data before contacting Microsoft support
 

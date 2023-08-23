@@ -14,7 +14,8 @@ This article describes how to upgrade the Azure Functions runtime to v4, and res
 
 - Your Functions apps on runtime v3 will continue to run, and your applications aren't impacted. You can deploy code to these Functions applications after this date. But we may remove the ability for you to create applications targeting the Functions runtime v3 using common paths.
 
-- For more information and migration guidance, see
+- For more information and migration guidance, see:
+
   - [Functions runtime versions](/azure/azure-functions/functions-versions)
   - [Migrate apps from Azure Functions version 3.x to version 4.x](/azure/azure-functions/migrate-version-3-version-4)
   - [Migrate apps from Azure Functions version 1.x to version 4.x](/azure/azure-functions/migrate-version-1-version-4)
@@ -27,15 +28,17 @@ This article describes how to upgrade the Azure Functions runtime to v4, and res
 
 ## Change the Functions runtime version for Windows
 
-- Set [FUNCTIONS_EXTENSION_VERSION](/azure/azure-functions/functions-app-settings), which is an app setting in the Azure portal **Configuration** pane, to `~4`. For more information, see [Change the runtime version](/azure/azure-functions/set-runtime-version#view-and-update-the-current-runtime-version).
-- Also, set the `netFrameworkVersion` site setting to target .NET 6. `netFrameworkVersion` is a SiteConfig setting, not an app setting. And it's not directly available in the Azure portal. But you can set it by using [Azure Resource Explorer](https://azure.microsoft.com/blog/azure-resource-explorer-a-new-tool-to-discover-the-azure-api/) or [Azure CLI/PowerShell](/azure/azure-functions/functions-versions#migrate-without-slots).
-- For more information, see [Functions runtime versions](/azure/azure-functions/functions-versions).
+1. Set [FUNCTIONS_EXTENSION_VERSION](/azure/azure-functions/functions-app-settings), which is an app setting in the Azure portal **Configuration** pane, to `~4`. For more information, see [Change the runtime version](/azure/azure-functions/set-runtime-version#view-and-update-the-current-runtime-version).
+1. Set the `netFrameworkVersion` site setting to target .NET 6. `netFrameworkVersion` is a SiteConfig setting, not an app setting. And it's not directly available in the Azure portal. But you can set it by using [Azure Resource Explorer](https://azure.microsoft.com/blog/azure-resource-explorer-a-new-tool-to-discover-the-azure-api/) or [Azure CLI/PowerShell](/azure/azure-functions/functions-versions#migrate-without-slots).
+
+For more information, see [Functions runtime versions](/azure/azure-functions/functions-versions).
 
 ## Change the Functions runtime version for Linux
 
-- Set [FUNCTIONS_EXTENSION_VERSION](/azure/azure-functions/functions-app-settings), which is an app setting in the Azure portal **Configuration** pane, to `~4`. For more information, see [Change the runtime version](/azure/azure-functions/set-runtime-version#view-and-update-the-current-runtime-version).
-- Additionally, set `LinuxFxVersion`, by using Command Line Interface (CLI), to `language|language version`, based on the language used. For more information, see [Change the runtime version](https://github.com/Azure/azure-functions-host/wiki/Using-LinuxFxVersion-for-Linux-Function-Apps). For example, to update to .NET 6, you can set `LinuxFxVersion` to `dotnet|6.0` and `FUNCTIONS_EXTENSION_VERSION` to `~4`.
-- For more information, see [Functions runtime versions](/azure/azure-functions/functions-versions).
+1. Set [FUNCTIONS_EXTENSION_VERSION](/azure/azure-functions/functions-app-settings), which is an app setting in the Azure portal **Configuration** pane, to `~4`. For more information, see [Change the runtime version](/azure/azure-functions/set-runtime-version#view-and-update-the-current-runtime-version).
+1. Set `LinuxFxVersion`, by using Command Line Interface (CLI), to `language|language version`, based on the language used. For more information, see [Change the runtime version](https://github.com/Azure/azure-functions-host/wiki/Using-LinuxFxVersion-for-Linux-Function-Apps). For example, to update to .NET 6, you can set `LinuxFxVersion` to `dotnet|6.0` and `FUNCTIONS_EXTENSION_VERSION` to `~4`.
+
+For more information, see [Functions runtime versions](/azure/azure-functions/functions-versions).
 
 ## Get a list of supported languages by the runtime version
 
