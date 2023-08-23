@@ -38,7 +38,9 @@ You have a hybrid deployment of on-premises Exchange Server and Exchange Online 
 
 Primary mailboxes are located in the on-premises environment and archive mailboxes are located in Exchange Online. When you try to move only a primary mailbox from the on-premises environment to Exchange Online by using the Exchange admin center in Microsoft 365, you receive the following error message.
 
-> Error: MigrationPermanentException: You must specify the PrimaryOnly parameter
+> Error: MigrationPermanentException
+>
+> ErrorSummary: You must specify the PrimaryOnly parameter
 
 #### Cause
 
@@ -63,9 +65,9 @@ To move only a primary mailbox, follow these steps:
 
 The primary mailbox and archive mailbox is hosted in Exchange Online and the admin tries to offboard Primary Mailbox Only to on-premises, you receive the following error message.
 
-> ErrorSummary : You must specify the ArchiveDomain parameter.
+> Error: ParameterValueRequiredPermanentException
 >
-> Error: ParameterValueRequiredPermanentException: You must specify the ArchiveDomain parameter.
+> ErrorSummary: You must specify the ArchiveDomain parameter
 
 #### Cause
 
