@@ -22,24 +22,29 @@ appliesto:
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
-# You must specify the PrimaryOnly parameter error when moving a primary mailbox to Exchange Online in a hybrid deployment
+
+# "You must specify the PrimaryOnly parameter" or "You must specify the ArchiveDomain parameter" error when moving a primary mailbox to or from Exchange Online in a hybrid deployment
 
 _Original KB number:_ &nbsp; 3160413
 
 > [!NOTE]
 > The Hybrid Configuration wizard that's included in the Exchange Management Console in Microsoft Exchange Server 2010 is no longer supported. Therefore, you should no longer use the old Hybrid Configuration wizard. Instead, use the Microsoft 365 Hybrid Configuration wizard that's available at [https://aka.ms/HybridWizard](https://aka.ms/hybridwizard). For more information, see [Microsoft 365 Hybrid Configuration wizard for Exchange 2010](https://blogs.technet.com/b/exchange/archive/2016/02/17/office-365-hybrid-configuration-wizard-for-exchange-2010.aspx).
 
-## Symptoms
+## Scenarios
 
-You have a hybrid deployment of on-premises Exchange Server and Exchange Online in Microsoft 365 in which primary mailboxes are located in the on-premises environment and archive mailboxes are located in Exchange Online. When you try to move only a primary mailbox from the on-premises environment to Exchange Online by using the Exchange admin center in Microsoft 365, you receive the following error message.
+You have a hybrid deployment of on-premises Exchange Server and Exchange Online in Microsoft 365.
+
+### Scenario 1: Onboarding
+
+Primary mailboxes are located in the on-premises environment and archive mailboxes are located in Exchange Online. When you try to move only a primary mailbox from the on-premises environment to Exchange Online by using the Exchange admin center in Microsoft 365, you receive the following error message.
 
 > Error: MigrationPermanentException: You must specify the PrimaryOnly parameter
 
-## Cause
+#### Cause
 
 The Exchange admin center doesn't have the option to move only a primary mailbox. To do this, you must use the `New-MoveRequest` cmdlet.
 
-## Resolution
+#### Resolution
 
 To move only a primary mailbox, follow these steps:
 
@@ -47,12 +52,36 @@ To move only a primary mailbox, follow these steps:
 
 2. Run the following command:
 
-    ```powershell
-    New-MoveRequest -Identity <user@contoso.com> -RemoteCredential (Get-Credential) -Remote -RemoteHostName 'on-premises mrsproxy url' -BatchName <Name of Batch> -PrimaryOnly -TargetDeliveryDomain <mail.onmicrosoft.com domain>
+   ```powershell
+   New-MoveRequest -Identity <user@contoso.com> -RemoteCredential (Get-Credential) -Remote -RemoteHostName 'on-premises mrsproxy url' -BatchName <Name of Batch> -PrimaryOnly -TargetDeliveryDomain <mail.onmicrosoft.com domain>
     ```
 
     > [!NOTE]
     > When you're prompted for credentials, enter your on-premises Exchange credentials.
+
+### Scenario 2: Offboarding
+
+The primary mailbox and archive mailbox is hosted in Exchange Online and the admin tries to offboard Primary Mailbox Only to on-premises, you receive the following error message.
+
+> ErrorSummary : You must specify the ArchiveDomain parameter.
+>
+> Error: ParameterValueRequiredPermanentException: You must specify the ArchiveDomain parameter.
+
+#### Cause
+
+The Exchange admin center doesn't have the option to move only a primary mailbox. To do this, you must use the `New-MoveRequest` cmdlet.
+
+#### Resolution
+
+To move only a primary mailbox, follow these steps:
+
+Connect to Exchange Online by using remote PowerShell. For more information about how to do this, see Connect to Exchange Online PowerShell.
+
+Run the following command:
+
+   ```powershell
+   New-MoveRequest  -Identity <user@contoso.com> -Outbound -RemoteTargetDatabase "mdb on-premises" -RemoteHostName  'on-premises mrsproxy url' -PrimaryOnly -ArchiveDomain <mail.onmicrosoft.com domain> -TargetDeliveryDomain <contoso.com domain> -RemoteCredential (Get-Credential)
+   ```
 
 For more information about the `New-MoveRequest` cmdlet, see [New-MoveRequest](/powershell/module/exchange/new-moverequest?view=exchange-ps&preserve-view=true).
 
