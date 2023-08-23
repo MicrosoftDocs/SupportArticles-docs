@@ -43,7 +43,7 @@ Procedure to resolve the problem on SQL Servers running on Windows Server 2008 R
 
     For more information, see [File Locations for Default and Named Instances of SQL Server](/sql/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server).
 
-2. Edit _SQLMSSearch.reg_ file with notepad and replace all occurrences of _xmlfilt.dll_ by `C:\Windows\system32\xmlfilter.dll` and then save the changes.
+2. Edit _SQLMSSearch.reg_ file with Notepad and replace all occurrences of _xmlfilt.dll_ by `C:\Windows\system32\xmlfilter.dll` and then save the changes.
 
     > [!NOTE]
     >
@@ -51,7 +51,7 @@ Procedure to resolve the problem on SQL Servers running on Windows Server 2008 R
     > - You need to enter each backslash in the new path twice!
 
 3. Click the file _SQLMSSearch.reg_ to import the content into the registry.
-4. Execute the following T-SQL commands to enable the new setting in SQL Server:
+4. Run the following T-SQL commands to enable the new setting in SQL Server:
 
     ```sql
     EXEC sp_fulltext_service 'load_os_resources', 1
@@ -71,7 +71,7 @@ Procedure to resolve the problem on SQL Servers running on Windows Server 2008 R
 
 ## More information
 
-Steps to repro:
+Steps to reproduce the problem:
 
 1. Create a simple table as follows:
 

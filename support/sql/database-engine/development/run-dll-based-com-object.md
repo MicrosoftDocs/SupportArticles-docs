@@ -49,14 +49,14 @@ By changing the way that you invoke the COM object, you can request that the obj
 
 If you cannot modify the COM client to request that the object be created out of process, two different methods exist to force the object to be created out of process.
 
-- Use the OLE/COM Object viewer (*oleview.exe*) that's shipped with Visual C++ and locate the ProgID in the form of `OLEComponent.Object` under All Objects. Select the COM object, and then from the **Object** menu, select `CoCreateInstance` Flags. Make sure that only `CLSCTX_LOCAL_SERVER` is selected. Next, under the **Implementation and Inproc Server** tabs select **Use Surrogate Process** and leave the **Path to Custom Surrogate** blank, which allows the *dllhost.exe* file to be loaded and the COM DLL brought within its process space.
+- Use the OLE/COM Object viewer (*oleview.exe*) that's shipped with Visual C++ and locate the ProgID in the form of `OLEComponent.Object` under **All Objects**. Select the COM object, and then from the **Object** menu, select `CoCreateInstance` Flags. Make sure that only `CLSCTX_LOCAL_SERVER` is selected. Next, under the **Implementation** and **Inproc Server** tabs, select **Use Surrogate Process** and leave the **Path to Custom Surrogate** blank, which allows the *dllhost.exe* file to be loaded and the COM DLL brought within its process space.
 
 - Use the following steps to manually update the registry.
 
     > [!WARNING]
-    > Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require that you reinstall your operating system. Microsoft cannot guarantee that these problems can be solved. Modify the registry at your own risk.
+    > Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require that you reinstall your operating system. Microsoft can't guarantee that these problems can be solved. Modify the registry at your own risk.
 
-    1. Obtain the Class Identifier (CLSID) of the COM object. The CLSID is a 128-bit number and considered a Globally Unique Identifier (GUID) that is used to uniquely identify the component, module, or file that contains this COM object. When creating COM objects using the OLE Automation stored procedures, the first parameter to the stored procedure is a programmatic identifier or the ProgID of the OLE object is used to derive the CLSID. This character string describes the class of the OLE object and has the following form:
+    1. Obtain the Class Identifier (CLSID) of the COM object. The CLSID is a 128-bit number and considered a Globally Unique Identifier (GUID) that's used to uniquely identify the component, module, or file that contains this COM object. When creating COM objects using the OLE Automation stored procedures, the first parameter to the stored procedure is a programmatic identifier or the ProgID of the OLE object is used to derive the CLSID. This character string describes the class of the OLE object and has the following form:
 
         ```sql
         OLEComponent.Object
@@ -89,15 +89,15 @@ If you cannot modify the COM client to request that the object be created out of
 
     7. Add a new subkey under the `HKEY_CLASSES_ROOT\AppID` and set its name to the same class identifier or GUID number with the brackets as inserted in the preceding step.
 
-    8. Highlight the GUID name. From the Edit menu, click **New**, and then select **String Value**. Under the **Name** column, type *DllSurrogate*.
+    8. Highlight the GUID name. From the **Edit** menu, select **New**, and then select **String Value**. Under the **Name** column, type *dllSurrogate*.
 
-       Leave the Data column blank for this value. Because the data column is blank, this informs DCOM to run the default executable file, Dllhost.exe, and load the COM object within its process space.
+       Leave the Data column blank for this value. Because the data column is blank, this informs DCOM to run the default executable file, *dllhost.exe*, and load the COM object within its process space.
 
     9. Close the Registry Editor. Click **Start**, and then click **Run**. In the **Run** dialog box, type *DCOMCNFG*.
 
        Press the **ENTER** key to open the **Distributed COM Configuration Properties** dialog box. Click the **Default Properties** tab, and make sure that **Enable Distributed COM** on this computer is selected. If it is not, select it, and then click **Apply**.
 
-    10. Make sure that the Windows NT user account that SQL Server is running under has **Full Control** permission on the registry keys for this object. If the permissions are not sufficient or the registry keys are input incorrectly the following errors may occur when you are creating the COM object:
+    10. Make sure that the Windows NT user account that SQL Server is running under has **Full Control** permission on the registry keys for this object. If the permissions aren't sufficient or the registry keys are input incorrectly the following errors may occur when you're creating the COM object:
 
         > OLE Automation Error Information  
         HRESULT: 0x80040154  
@@ -120,9 +120,9 @@ If you cannot modify the COM client to request that the object be created out of
         WAITFOR DELAY '000:00:20'
         ```
 
-        Run the script and immediately navigate to the command prompt and run the Tlist.exe file. Note the Dllhost.exe PID. Rerun Tlist.exe and pass the PID as a parameter. This shows the DLLs that are loaded within the Dllhost.exe process space. The DLL-based COM object should be listed as running within this process. After the script returns, running Tlist.exe again reveals that the Dllhost.exe process is no longer running.
+        Run the script and immediately navigate to the command prompt and run the *tlist.exe* file. Note the *dllhost.exe* PID. Rerun *tlist.exe* and pass the PID as a parameter. This shows the DLLs that are loaded within the *dllhost.exe* process space. The DLL-based COM object should be listed as running within this process. After the script returns, running *tlist.exe* again reveals that the *dllhost.exe* process is no longer running.
 
-        In the following sample output, the ADODB. Connection object is created outside of the SQL Server process space. This snapshot using Tlist.exe was performed while the COM object existed in the Dllhost.exe process space. Notice that the module Msado15.dll, which is the module that contains the COM object, is loaded.
+        In the following sample output, the ADODB. Connection object is created outside of the SQL Server process space. This snapshot using *tlist.exe* was performed while the COM object existed in the *dllhost.exe* process space. Notice that the module *msado15.dll*, which is the module that contains the COM object, is loaded.
 
         ```console
         C:\>tlist dllhost
