@@ -75,4 +75,3 @@ You can use App Service REST API calls ([GetSiteConfig](/rest/api/appservice/web
 - Review the blog [Issues when upgrading Azure function apps to V4](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/issues-you-may-meet-when-upgrading-azure-function-app-to-v4/ba-p/3288983) for additional troubleshooting tips.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
-[!INCLUDE [support-disclaimer](../../../includes/support-disclaimer.md)]

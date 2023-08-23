@@ -104,6 +104,4 @@ You must open port 443 for outgoing traffic in your server firewall to allow the
 
 For more information, see [IP addresses used by Azure Monitor](/azure/azure-monitor/app/ip-addresses#outgoing-ports).
 
-[!INCLUDE [support-disclaimer](../../../includes/support-disclaimer.md)]
-
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

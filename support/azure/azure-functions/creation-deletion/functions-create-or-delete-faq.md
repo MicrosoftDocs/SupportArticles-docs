@@ -111,4 +111,3 @@ For Azure Resource Manager deployment failures, find the error message in the Az
 1. Share the failed task correlation ID.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
-[!INCLUDE [support-disclaimer](../../../includes/support-disclaimer.md)]
