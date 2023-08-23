@@ -25,7 +25,7 @@ In the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.micros
 
 ## Cause
 
-This issue occurs if the following power setting on the Teams Rooms device is set to a value a value other than 0:
+This issue occurs if the following power setting on the Teams Rooms device is set to a value other than 0:
 
 **Power Options** > **Advanced settings** > **Sleep** > **Sleep after** > **Plugged in (Minutes)**
 
@@ -35,7 +35,7 @@ By default, this setting is explicitly disabled on Windows-based Teams Rooms dev
 - Through Mobile Device Management (MDM) policies
 - Manually by administrators
 
-If this setting is set to a value other than 0, it might affect how Teams Rooms responds to wakeup signals, and also affect regular monitoring and maintenance operations.  In this case, the Teams Rooms Pro agent detects and reports the status of **Sleep timer** as **Unhealthy**.
+If this setting is set to a value other than 0, it might affect how Teams Rooms responds to wakeup signals, and might also affect regular monitoring and maintenance operations.  In this case, the Teams Rooms Pro agent detects and reports the status of **Sleep timer** as **Unhealthy**.
 
 ## Resolution
 
