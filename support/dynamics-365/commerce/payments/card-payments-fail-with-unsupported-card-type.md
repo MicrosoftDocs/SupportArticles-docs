@@ -83,4 +83,4 @@ Follow these steps to turn the **Funding Source** on or off in the Adyen portal:
 
 For more information, see [Payment methods setup](/dynamics365/commerce/payment-methods).
 
-[!INCLUDE [Third-party information disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-disclaimer.md)]
