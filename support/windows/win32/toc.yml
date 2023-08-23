@@ -24,6 +24,8 @@
       href: vari8fromcy-produces-incorrect-value.md
   - name: Desktop app UI development
     items:
+    - name: CreateProcessWithLogonW fails when called on a Microsoft Entra ID account
+      href: createprocesswithlogonw-fails-microsoft-entra-id-account.md
     - name: Hook procedure doesn't receive the VK_CONVERT message
       href: hook-procedure-not-receiving-vk-convert-message.md
     - name: Apps using message filters may not respond in Windows 10
