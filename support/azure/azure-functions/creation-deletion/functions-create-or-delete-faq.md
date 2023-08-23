@@ -83,7 +83,7 @@ For more information, see:
 
 - [Azure Resource Manager throttling](/azure/azure-resource-manager/management/request-limits-and-throttling)
 - [Azure subscription and service limits, quotas, and constraints](/azure/azure-resource-manager/management/azure-subscription-service-limits#azure-functions-limits)
-- [Azure App Services](/azure/azure-resource-manager/management/azure-subscription-service-limits#app-service-limits)
+- [Azure App Services limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#app-service-limits)
 
 > [!NOTE]
 > If the issue is infrequent, wait and retry after some time to see if the issue resolves. If the issue is frequent, you can buy a different subscription or update the hosting plan to resolve the error.
@@ -102,10 +102,9 @@ Make sure that you have sufficient permissions to delete an Azure function app. 
 
 If the function app creation or deletion fails, collect and share the following data when creating a support ticket:
 
-- Azure portal: Reproduce the issue and capture an F12 trace.
+- Azure portal: Reproduce the issue and [capture a browser trace.](/azure/azure-portal/capture-browser-trace)
 - Azure CLI or Azure PowerShell: Share the command that reported the error and verbose logging.
-
-For Azure Resource Manager deployment failures, find the error message in the Azure portal:
+- For Azure Resource Manager deployment failures, find the error message in the Azure portal:
 
 1. Select **Resource Group** > **Deployments**.
 1. Share the failed task correlation ID.
