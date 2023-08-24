@@ -3,7 +3,7 @@ title: Importing solution but not effective in Power Apps
 description: Works around the scenario where import solution succeeded but runtime behavior isn't consistent with new solution expected behavior.
 ms.reviewer: jdaly
 ms.topic: troubleshooting
-ms.date: 8/23/2023
+ms.date: 8/24/2023
 author: swatimadhukargit
 ms.author: swatim
 ---
@@ -20,14 +20,14 @@ When you try to Update or Upgrade to an existing solution but the runtime behavi
 
 ## Cause
 
-This issue occurs when the solution updated isn't the Current layer, which could be result of one of the two scenarios:
+This issue occurs when the solution updated isn't the Top layer, which could be result of one of the two scenarios:
 
-- There's unmanaged active customization on the top layer in the target environment.
+- There is unmanaged active customization on the top layer in the target environment.
 - There are other layers from managed solution on the top.
 
 ## Workaround
 
-### There are unmanaged active customization on the top layer in the target environment.
+### There is unmanaged active customization on the top layer in the target environment.
 - Remove the active customization on the top in the target environment.
 - Or upgrade the solution again with override customization. The override customization copies the incoming value to the active layer. The active layer still exists.
 
@@ -36,6 +36,8 @@ This issue occurs when the solution updated isn't the Current layer, which could
 The following example scenarios illustrate what happens to the solution layers in target when upgrade is done with active customization on the top layer.
 
 ##### Initial State of solution in target
+Here top layer has active customizations.
+
 ![Initial State of Solution with Active layer.](media/solutions-issues/initial-state.png "Initial State of Solution with Active layer")
 
 ##### Upgrade solution without Override Customization
@@ -64,7 +66,7 @@ Here top layer is another managed layer.
 ![Initial State of Solution with top Managed layer.](media/solutions-issues/Initial-state-managed-top-layer.png "Initial State of Solution with top Managed layer")
 
 ##### Upgrade solution without Override Customization
-Layer "B" from Solution 2 is below managed layer "C" is upgraded from "B" to "D", the top layer still remains managed layer "C". "D" isn't effective  after upgrade.
+Layer "B" from Solution 2 is below managed layer "C" is upgraded from "B" to "D", the top layer still remains layer "C". "D" isn't effective  after upgrade.
 
 ![Upgrade without override customization without Active.](media/solutions-issues/upgrade-without-override-another-managed-top.png "Upgrade without override customization without Active")
 
@@ -73,7 +75,7 @@ Layer "B" from Solution 2 is below managed layer "C" is upgraded from "B" to "D"
 
 ![Upgrade with override customization without Active.](media/solutions-issues/upgrade-with-override-another-managed-top.png "Upgrade with override customization without Active")
 
-##### Update the top managed layer with upgraded layer
-Layer "B" from Solution 2 is below layer "C" from Solution 3, upgrade of "B" to "D" isn't effective. To make "D" as top layer either delete the top layer "C". Or make changes in Solution 3 to have value as "D" and then export/import Solution 3.
+##### Update the top managed layer matching the upgraded layer
+Layer "B" from Solution 2 is below layer "C" from Solution 3, upgrade from "B" to "D" isn't effective. To make "D" as top layer either delete the top layer "C". Or make changes in Solution 3 to have value as "D" and then export/import Solution 3.
 
 ![Update top managed layer to match upgraded layer.](media/solutions-issues/update-top-managed-another-managed-top.png "Update top managed layer to match upgraded layer")
