@@ -76,7 +76,9 @@
         - name: Form doesn't appear in target environment after import
           href: manage-apps-and-solutions/form-not-appear-after-import.md
         - name: '"Full formXml is expected to create a form" error'
-          href: manage-apps-and-solutions/full-formxml-expected-to-create-form-error.md
+          href: manage-apps-and-solutions/full-formxml-expected-to-create-form-error.md          
+        - name: Importing Solution but not effective
+          href: manage-apps-and-solutions/importing-solution-but-not-effective.md
         - name: Label text doesn't display in additional languages
           href: manage-apps-and-solutions/label-text-not-displayed.md
         - name: Maximum row size exceeds the allowed maximum
