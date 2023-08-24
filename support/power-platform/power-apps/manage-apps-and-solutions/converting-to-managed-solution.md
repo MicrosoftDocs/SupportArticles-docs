@@ -17,7 +17,7 @@ This article provides a workaround for an issue that occurs when trying to conve
 - The solution is already installed on the target environment as an unmanaged solution and the package supplied is attempting to install it in managed mode. Import can only update solutions when the modes match.
 - Customer has previously shipped as unmanaged solution; now they want to move it to managed solution.
 
-You receive an error message like one of the following:
+You receive an error message like the following ones:
 
 > Microsoft.Crm. Tools.ImportExportPublish.ImportSolutionException: Solution manifest import: FAILURE: The solution is already installed on this system as an unmanaged solution and the package supplied is attempting to install it in managed mode. Import can only update solutions when the modes match. Uninstall the current solution and try again.
 
@@ -27,7 +27,7 @@ You receive an error message like one of the following:
 
 ## Cause
 
-By design, the dataverse platform blocks the managed solution import on an environment for which unmanaged solution is present. This helps to avoid overriding unmanaged solution and for customer to loose the ability to further develop on the solution.
+By design, the Dataverse platform blocks the managed solution import on an environment for which unmanaged solution is present. Blocking helps to avoid overriding unmanaged solution and for customer to lose the ability to further develop on the solution.
 
 ## Workaround
 
