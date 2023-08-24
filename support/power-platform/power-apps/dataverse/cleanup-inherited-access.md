@@ -117,11 +117,71 @@ OData-Version: 4.0
 
 If [Re-creating the system job to remove access](#re-create-the-system-job-to-remove-access) fails, a developer with system administrator or system customizer privileges can use the `ResetInheritedAccess` message to target a subset of matching records. You may need to use this message several times to remove access for all the records.
 
+# [SDK for .NET](#tab/sdk)
+
+```csharp
+/// <summary>
+/// Resets the inherited access for the matching records.
+/// </summary>
+/// <param name="service">The authenticated IOrganizationService instance to use.</param>
+/// <param name="fetchXml">The fetchxml query.</param>
+public static void OutputResetInheritedAccess(IOrganizationService service, string fetchXml)
+{
+    var parameters = new ParameterCollection()
+    {
+        { "FetchXml", fetchXml}
+    };
+
+    var request = new OrganizationRequest()
+    {
+        RequestName = "ResetInheritedAccess",
+        Parameters = parameters
+    };
+
+    var response = service.Execute(request);
+
+    Console.WriteLine(response.Results["ResetInheritedAccessResponse"]);
+}
+```
+[Learn more about using messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages?tabs=sdk)
+
+# [Web API](#tab/webapi)
+
+**Request**:
+
+```http
+GET [Organization URI]/api/data/v9.0/ResetInheritedAccess(FetchXml=@fetchXml)?@fetchXml=%3Cfetch%3E%3Centity%20name%3D%22principalobjectaccess%22%3E%3Cattribute%20name%3D%22principalobjectaccessid%22%2F%3E%3Cfilter%20type%3D%22and%22%3E%3Ccondition%20attribute%3D%22principalid%22%20operator%3D%22eq%22%20value%3D%229b5f621b-584e-423f-99fd-4620bb00bf1f%22%20%2F%3E%3Ccondition%20attribute%3D%22objectid%22%20operator%3D%22eq%22%20value%3D%22B52B7A48-EAFB-ED11-884B-00224809B6C7%22%20%2F%3E%3C%2Ffilter%3E%3C%2Fentity%3E%3C%2Ffetch%3E
+Accept: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0
+```
+
+**Response**:
+
+```http
+HTTP/1.1 200 OK  
+Content-Type: application/json; odata.metadata=minimal  
+OData-Version: 4.0  
+{
+   "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.ResetInheritedAccessResponse",
+   "ResetInheritedAccessResponse": "Resetting the inherited access job is successfully created. ExecutionMode : Sync"
+}
+```
+
+[Learn more about Web API functions](/power-apps/developer/data-platform/webapi/use-web-api-functions).
+
+---
+
+<!-- TODO: Seokmin, what is the name of the system job created? Please replace TBD below -->
+
+`ResetInheritedAccess` will try to execute synchronously when there are not many matching records. Then the `ResetInheritedAccessResponse` value will end with `ExecutionMode : Sync`. If there are many matching records, the operation will take longer and the value will end with `ExecutionMode : Async`. A system job named `TBD` is created and you can monitor the success of that job. Learn more about [monitoring system jobs](/power-platform/admin/manage-dataverse-auditing#monitoring-system-jobs) or [managing system jobs with code](/power-apps/developer/data-platform/asynchronous-service#managing-system-jobs).
+
+
 `ResetInheritedAccess` requires a Fetch query to identify the records. This query must meet the following requirements:
 
 - Use the `principalobjectaccess`(POA) table.
 - Return only the `principalobjectaccessid` column.
-- Must not include any `link-entity` elements.
+- Must not include any `link-entity` elements. You can't add a join to another table.
 - Only filter on columns of the `principalobjectaccess` table.
 
 This table is available to the Web API as the [principalobjectaccess entity type](xref:Microsoft.Dynamics.CRM.principalobjectaccess). It is not included in the [Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference) because the POA table doesn't support any kind of direct data modification operation. You will need to know about the columns of this table to compose the FetchXml query.
@@ -130,13 +190,15 @@ This table is available to the Web API as the [principalobjectaccess entity type
 
 You will need to compose a FetchXml query using only these columns.
 
+<!-- Adding these descriptions here b/c they aren't found anywhere else. -->
+
 |LogicalName |Type|Description|
 |---------|---------|---------|
 |`accessrightsmask`|Integer|Contains the combined [AccessRights enum](xref:Microsoft.Dynamics.CRM.AccessRights) member values for the access rights that the principal has directly. |
 |`changedon`|DateTime|The last date that the principal's access to the record changed.|
 |`inheritedaccessrightsmask`|Integer|Contains the combined [AccessRights enum](xref:Microsoft.Dynamics.CRM.AccessRights) member values for the access rights that are applied due to inheritance.|
 |`objectid`|Unique Identifier|The ID of the record that the principal has access to.|
-|`objecttypecode`|Integer|The [EntityMetadata.ObjectTypeCode](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.ObjectTypeCode) value that corresponds to the table. This value is not necessarily the same for different environments. For custom tables, it is assigned based on the order the table was created.|
+|`objecttypecode`|Integer|The [EntityMetadata.ObjectTypeCode](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.ObjectTypeCode) value that corresponds to the table. This value is not necessarily the same for different environments. For custom tables, it is assigned based on the order the table was created. To get this value, you may need to view the metadata for the table. There are several community tools to find this. There is a solution from Microsoft here: [Browse table definitions in your environment](/power-apps/developer/data-platform/browse-your-metadata)|
 |`principalid` |Unique Identifier|The ID of the user or team who has access|
 |`principalobjectaccessid`|Unique Identifier|The primary key of the POA table.|
 |`principaltypecode`|Integer|The type code of the principal. SystemUser = 8, Team = 9|
@@ -156,11 +218,48 @@ The following [AccessRights enum](xref:Microsoft.Dynamics.CRM.AccessRights) memb
 |Share|262,144|The right to share a record|
 |Assign|524,288|The right to assign the specified record to another user or team.|
 
-You may see that the `inheritedaccessrightsmask` value is commonly 135,069,719. This value includes all the access types except for create, which isn't necessary because the record is already created.
+You may see that the `inheritedaccessrightsmask` value is commonly 135,069,719. This value includes all the access types except for create, which isn't necessary because these rights only apply to records already created.
 
+#### FetchXml examples
 
+This section includes some example FetchXml queries you might use with the `ResetInheritedAccess` message. [Learn more about creating FetchXml queries](/power-apps/developer/data-platform/use-fetchxml-construct-query).
 
+##### Reset inherited access given to a certain user for a specific account
 
+```xml
+<fetch>
+    <entity name="principalobjectaccess">
+        <attribute name="principalobjectaccessid"/>
+        <filter type="and">
+            <condition attribute="principalid" operator="eq" value="9b5f621b-584e-423f-99fd-4620bb00bf1f" />
+            <condition attribute="objectid" operator="eq" value="B52B7A48-EAFB-ED11-884B-00224809B6C7" />
+        </filter>
+    </entity>
+</fetch>
+```
 
+##### Reset inherited access given to all child rows for a specified object type
 
+```xml
+<fetch>
+    <entity name="principalobjectaccess">
+        <attribute name="principalobjectaccessid"/>
+        <filter type="and">
+            <condition attribute="objecttypecode" operator="eq" value="10042" />
+        </filter>
+    </entity>
+</fetch>
+```
 
+##### Reset inherited access given to a specified user for all object types
+
+```xml
+<fetch>
+    <entity name="principalobjectaccess">
+        <attribute name="principalobjectaccessid"/>
+        <filter type="and">
+            <condition attribute="principalid" operator="eq" value="9b5f621b-584e-423f-99fd-4620bb00bf1f" />
+        </filter>
+    </entity>
+</fetch>
+```
