@@ -75,7 +75,7 @@ To resolve the issue, install CredSSP updates for both client and server so that
   
 3. Type `cmd` to start a channel that has a CMD instance.
 
-4. Type `ch-si 1` to switch to the channel that is running the CMD instance. You receive the following output:
+4. Type `ch -si 1` to switch to the channel that is running the CMD instance. You receive the following output:
 
     :::image type="content" source="media/credssp-encryption-oracle-remediation/launch-cmd.svg" alt-text="Screenshot of launching CMD in SAC." border="false":::
 
