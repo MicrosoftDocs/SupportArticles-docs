@@ -13,7 +13,7 @@ If the Application Insights logs are missing, or if the data appears to be parti
 
 ## Check configuration of function app
 
-The **Diagnose and solve problems** option in the Azure Functions app has a **Function Configuration Checks** tool that checks the configuration for Application Insights, particularly for the following:
+Navigate to your function app in the [Azure portal](https://portal.azure.com). Select **Diagnose and solve problems** to open [Azure Functions diagnostics](/azure/azure-functions/functions-diagnostics). In the **Search** bar, type *Function Configuration Checks* and open it. You see a diagnostic report of all Function app configuration checks. In particular for Application Insights, the following checks are performed:
 
 - Only one of the following connection settings exists:
   - `APPINSIGHTS_INSTRUMENTATIONKEY` Application Insights Instrumentation key
@@ -45,7 +45,7 @@ Application Insights collects log, performance, and error data. [Sampling config
 
 If you notice any partially missing logs, this might occur because of sampling. To determine the actual sampling rate, use an Analytics query that uses the required time interval that's shown in the following code snippet. If you observe that the `TelemetrySavedPercentage` for any sampling type is less than 100, then that type of telemetry is being sampled.
 
-```Kusto
+```kusto
 union requests,dependencies,pageViews,browserTimings,exceptions,traces
 | where timestamp > todatetime("mm/dd/yyyy hh:mm:ss") and timestamp < todatetime("mm/dd/yyyy hh:mm:ss")
 | summarize TelemetrySavedPercentage = 100/avg(itemCount), TelemetryDroppedPercentage = 100-100/avg(itemCount) by bin(timestamp, 1d), itemType
@@ -94,9 +94,9 @@ To configure these values at the App settings level (to avoid redeployment on *h
 
 For more examples about how to suppress logs, see [functions-log-suppression](https://github.com/anthonychu/functions-log-suppression).
 
-## My function app doesn't generate logs
+## My Virtual network integrated function app doesn't generate any logs
 
-You must open port 443 for outgoing traffic in your server firewall to allow the Application Insights SDK or Application Insights Agent to send data to the portal for the following URLs:
+If a function app is integrated with a virtual network, you must open port 443 for outgoing traffic in your server firewall to allow the Application Insights SDK or Application Insights Agent to send data to the portal for the following URLs:
 
 - *dc.applicationinsights.azure.com*
 - *dc.applicationinsights.microsoft.com*
