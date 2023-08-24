@@ -5,6 +5,7 @@ ms.date: 08/23/2023
 ms.reviewer: alexkre, blakedrumm, edpaca, stparker, udmudiar, v-weizhu
 ms.topic: how-to
 ---
+
 # How to use a CA certificate on an SCX agent
 
 This article introduces how to convert a self-signed certificate on a System Center Operations Manager (SCOM) Unix/Linux (SCX) agent to a Certificate Authority (CA) signed certificate.
@@ -48,13 +49,13 @@ On a CA server in your SCOM environment, follow these steps to create a certific
 ## Issue a CA certificate from the template
 
 1. On the Windows Server that has been given the permission to the template, open the computer certificate store.
-1. Under **Personal**, right-click **Certificates** and select **All Tasks** > **Request New Certificate**.
+1. Under **Personal**, right-click **Certificates** and select **All Tasks** > **Request New Certificate...**
 
     :::image type="content" source="media/use-ca-certificate-on-scom-linux-agent/request-new-certificate.png" alt-text="Screenshot that shows how to request a new certificate.":::
 
 1. Select **Next** > **Next**.
 1. Find the template.
-1. Select **More information is required to enroll for this certificate. Click here to configure settings**.
+1. Select **More information is required to enroll for this certificate. Click here to configure settings.**
 
     :::image type="content" source="media/use-ca-certificate-on-scom-linux-agent/select-certificate-to-enroll.png" alt-text="Screenshot of the warning that requests more information for enrollment.":::
 
@@ -168,3 +169,5 @@ On a CA server in your SCOM environment, follow these steps to create a certific
 1. In the *Certificate, Server Hello Done* packet, you should see the CA-signed certificate rather than the self-signed certificate used.
 
     :::image type="content" source="media/use-ca-certificate-on-scom-linux-agent/validate-ca-signed-certificate-used.png" alt-text="Screenshot that shows the CA signed certificate." lightbox="media/use-ca-certificate-on-scom-linux-agent/validate-ca-signed-certificate-used.png":::
+
+
