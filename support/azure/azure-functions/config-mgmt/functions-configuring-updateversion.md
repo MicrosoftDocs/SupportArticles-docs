@@ -1,7 +1,7 @@
 ---
 title: Upgrade the Azure Functions app runtime version or language version
 description: Describes how to upgrade the Azure Functions runtime to v4 and resolve issues during the upgrade.
-ms.date: 08/16/2023
+ms.date: 08/24/2023
 ms.reviewer: gasridha, v-sidong
 ---
 # Troubleshoot common issues during Azure Runtime upgrade
@@ -58,7 +58,11 @@ Support for proxies is available again in version 4.x so that you can successful
 
 ## Get a list of all the Azure Functions apps that use runtime version 1.x, 2.x, or 3.x
 
-Navigate to your function app in the Azure portal. Select **Diagnose and solve problems** to open [Azure Functions diagnostics](/azure/azure-functions/functions-diagnostics). In the Search bar, type **Updating Function App Language or Runtime Version** to run it directly. In the diagnostic report, scroll down and choose **List All Function App** and click on View Details. Set the search filters and click on Show to get the list of functions apps in the current subscription. 
+1. Navigate to your function app in the [Azure portal](https://portal.azure.com).
+1. Select **Diagnose and solve problems** to open [Azure Functions diagnostics](/azure/azure-functions/functions-diagnostics).
+1. In the **Search** bar, type *Updating Function App Language or Runtime Version* to run it directly.
+1. In the diagnostic report, scroll down and select **List All Function App** > **View Details**.
+1. Set the search filters and select **Show** to get the list of functions apps in the current subscription. 
 
 Alternately, you can use App Service REST API calls ([GetConfiguration](/rest/api/appservice/web-apps/get-configuration)) to determine this. `LinuxFxVersion` and `WindowsFxVersion` provide the version information.
 
@@ -76,7 +80,7 @@ Alternately, you can use App Service REST API calls ([GetConfiguration](/rest/ap
 - If you receive a message that Azure Functions runtime is unreachable and you're sharing storage accounts, see [Host ID considerations](/azure/azure-functions/storage-considerations#host-id-considerations).
 - Azure Functions 4.x doesn't support Node.js 10 and 12, Python 3.6, and PowerShell 6. For more information, see [Language versions supported for the v4 runtime](/azure/azure-functions/supported-languages#languages-by-runtime-version).
 - For Python functions, if there are errors related to module collision and module not found, try setting `PYTHON_ISOLATE_WORKER_DEPENDENCIES` to *1* in app settings.
-- Review [language-wise breaking changes](/azure/azure-functions/functions-versions#breaking-changes-between-3x-and-4x).
+- Review [language-wise breaking changes](/azure/azure-functions/functions-versions#migrating-existing-function-apps).
 - For runtime issues, from the **Diagnose and Solve Problems** option on the portal , search for **Function app down or reporting errors** and review diagnostic report for error messages and solutions. Also review the **Function Configuration checks** detector to make sure that the configuration is correct.
 - Review the blog [Issues when upgrading Azure function apps to V4](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/issues-you-may-meet-when-upgrading-azure-function-app-to-v4/ba-p/3288983) for additional troubleshooting tips.
 
