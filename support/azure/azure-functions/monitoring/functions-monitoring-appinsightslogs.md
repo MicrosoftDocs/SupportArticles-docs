@@ -22,16 +22,16 @@ If the Application Insights logs are missing, or if the data appears to be parti
       - `APPINSIGHTS_INSTRUMENTATIONKEY` Application Insights Instrumentation key
       - `APPLICATIONINSIGHTS_CONNECTION_STRING` connection.
 
-        We recommend that you use the [APPLICATIONINSIGHTS_CONNECTION_STRING](/azure/azure-monitor/app/sdk-connection-string?tabs=net#overview) for more stable behavior. The ability to use `APPINSIGHTS_INSTRUMENTATIONKEY` will be deprecated by 2025.
+        We recommend that you use the [APPLICATIONINSIGHTS_CONNECTION_STRING](/azure/azure-monitor/app/sdk-connection-string#overview) for more stable behavior. The ability to use `APPINSIGHTS_INSTRUMENTATIONKEY` will be deprecated by 2025.
 
     - The `AzureWebJobsDashboard` built-in logging is disabled, as recommended.
     - Sampling is enabled for the Azure Functions telemetry (enabled by default).
 
-> **Recommendation**: The function app should be on version 4 and the runtime version should be at least 4.15.2*xx*. This is because, from this version onwards, you can track the log flows from Azure Functions to the Application Insights service. By monitoring the log flows, you can check for missing logs.
+    **Recommendation**: The function app should be on version 4 and the runtime version should be at least 4.15.2*xx*. This is because, from this version onwards, you can track the log flows from Azure Functions to the Application Insights service. By monitoring the log flows, you can check for missing logs.
 
 ## Logs are missing or partial
 
-Application Insights collects log, performance, and error data. [Sampling configuration](/azure/azure-functions/configure-monitoring?tabs=v2#configure-sampling) is used to reduce the volume of telemetry. The Sampling feature is enabled by default with the settings shown in the following [host.json](/azure/azure-functions/functions-host-json#applicationinsights) example. Excluded types aren't sampled.
+Application Insights collects log, performance, and error data. [Sampling configuration](/azure/azure-functions/configure-monitoring#configure-sampling) is used to reduce the volume of telemetry. The Sampling feature is enabled by default with the settings shown in the following [host.json](/azure/azure-functions/functions-host-json#applicationinsights) example. Excluded types aren't sampled.
 
 ```JSON
 {
@@ -67,7 +67,7 @@ The Azure Functions logger includes a category for every log. The category indic
 - The `Host.Results` and `Function.<YOUR_FUNCTION_NAME>` are some of the available categories.
 - A log level is assigned to every log. The value indicates relative importance, such as `Warning` or `Information`.
 
-For more information, see the other [categories](/azure/azure-functions/configure-monitoring?tabs=v2#configure-categories) and [log levels](/azure/azure-functions/configure-monitoring?tabs=v2#configure-log-levels) available.
+For more information, see the other [categories](/azure/azure-functions/configure-monitoring#configure-categories) and [log levels](/azure/azure-functions/configure-monitoring#configure-log-levels) available.
 
 You can configure how your application should write the logs by following the sample code snippet:
 
