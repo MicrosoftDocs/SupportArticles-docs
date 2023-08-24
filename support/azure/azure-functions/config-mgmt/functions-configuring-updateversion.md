@@ -23,7 +23,7 @@ This article describes how to resolve some of the common issues that may occur d
 ## Validate function app's compatibility for runtime v4
 
 - Navigate to your function app in the [Azure portal](https://portal.azure.com). Select **Diagnose and solve problems** to open [Azure Functions diagnostics](/azure/azure-functions/functions-diagnostics). In the **Search** bar, type *Updating Function App Language or Runtime Version* to run it directly. The diagnostic report includes guidance on the update. After validation completes, follow the recommendations and address any issues in your app.
-- We also provide a [pre-upgrade validator](/azure/azure-functions/migrate-version-3-version-4#run-the-pre-upgrade-validator) to help you identify potential issues when migrating your function app to 4.x. From the same diagnostics search bar, type **Functions 4.x Pre-Upgrade Validator** to run it directly. After validation completes, follow the recommendations and address any issues in your app.
+- We also provide a [pre-upgrade validator](/azure/azure-functions/migrate-version-3-version-4#run-the-pre-upgrade-validator) to help you identify potential issues when migrating your function app to 4.x. From the same diagnostics search bar, type *Functions 4.x Pre-Upgrade Validator* to run it directly. After validation completes, follow the recommendations and address any issues in your app.
 - We strongly recommend [upgrading your local project environment](/azure/azure-functions/migrate-version-3-version-4#upgrade-your-local-project) to version 4.x. Fully test your app locally using version 4.x of the Azure Functions core tools.
 - Consider using a [staging slot](/azure/azure-functions/migrate-version-3-version-4#upgrade-using-slots) to test and verify your app in Azure on the new runtime version before deploying to a production slot. Remember to set `WEBSITE_OVERRIDE_STICKY_EXTENSION_VERSIONS=0` for migration with slots.
 
@@ -37,7 +37,7 @@ For more information, see [Functions runtime versions](/azure/azure-functions/fu
 ## Change the Functions runtime version for Linux
 
 1. Set [FUNCTIONS_EXTENSION_VERSION](/azure/azure-functions/functions-app-settings), which is an app setting in the Azure portal **Configuration** pane, to `~4`. For more information, see [Change the runtime version](/azure/azure-functions/set-runtime-version#view-and-update-the-current-runtime-version).
-1. Set `LinuxFxVersion`, by using Command Line Interface (CLI), to `<Language>|<LanguageVersion>`, based on the language used. For more information, see [usage guidance for LinuxFxVersion](https://github.com/Azure/azure-functions-host/wiki/Using-LinuxFxVersion-for-Linux-Function-Apps). For example, to update to .NET 6, you can set `LinuxFxVersion` to `dotnet|6.0` and `FUNCTIONS_EXTENSION_VERSION` to `~4`.
+1. Set `LinuxFxVersion`, by using Command Line Interface (CLI), to `<Language>|<LanguageVersion>`, based on the language used. For more information, see [Using LinuxFxVersion for Linux Function Apps](https://github.com/Azure/azure-functions-host/wiki/Using-LinuxFxVersion-for-Linux-Function-Apps). For example, to update to .NET 6, you can set `LinuxFxVersion` to `dotnet|6.0` and `FUNCTIONS_EXTENSION_VERSION` to `~4`.
 
 For more information, see [Functions runtime versions](/azure/azure-functions/functions-versions).
 
