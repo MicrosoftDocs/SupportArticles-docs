@@ -15,7 +15,7 @@ ms.reviewer: batre, meerak, v-trisshores
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 08/01/2023
+ms.date: 08/24/2023
 ---
 
 # Can't empty Deleted Items folder in Microsoft 365 Groups
@@ -26,7 +26,7 @@ You want to empty the Deleted Items folder for a group in Microsoft 365 Groups. 
 
 ## Cause
 
-Outlook on the web doesn't show the built-in Microsoft 365 Groups folders, such as the Deleted Items folder, unless one or more user-created folders exist. You can't use the Outlook desktop client to view Microsoft 365 Groups folders.
+Outlook on the web doesn't show the built-in Microsoft 365 Groups folders, such as the Deleted Items folder, unless one or more user-created folders exist. You can't use the classic Outlook for Windows to view Microsoft 365 Groups folders.
 
 ## Resolution
 
@@ -42,7 +42,7 @@ Your choice of method might depend on the size of the Deleted Items folder. For 
    Get-EXOMailboxFolderStatistics -Identity "<group name>" -FolderScope NonIPMRoot | Where { $_.TargetQuota -like 'User' } | FT Name,FolderType,FolderAndSubfolderSize
    ```
 
-## Method 1: Use Outlook on the web
+## Method 1: Use Outlook on the web or the new Outlook for Windows
 
 Create a Microsoft 365 group subfolder to access the Deleted Items folder. Follow these steps:
 
@@ -60,7 +60,7 @@ Create a Microsoft 365 group subfolder to access the Deleted Items folder. Follo
    Set-OrganizationConfig -IsGroupFoldersAndRulesEnabled $True
    ```
 
-3. Sign in to Outlook on the web by using the *owner* credentials for the group.
+3. Sign in to Outlook on the web by using the *owner* credentials for the group, or open the new Outlook for Windows.
 
 4. Locate the group under **Groups**.
 
