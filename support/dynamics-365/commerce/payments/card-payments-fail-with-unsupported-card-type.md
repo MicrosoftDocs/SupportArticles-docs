@@ -32,7 +32,7 @@ Card types are matched by a combination of bin range, card type ID (for example,
 
 To solve this issue, make sure the card types are configured correctly for the tender type and channel.
 
-1. Check the [event log on the POS](/dynamics365/commerce/dev-itpro/retail-component-events-diagnostics-troubleshooting) or the [POS client log in Microsoft Dynamics Lifecycle Services (LCS)](/dynamics365/commerce/dev-itpro/retail-component-events-diagnostics-troubleshooting#access-lcs-log-search) for the following event names:
+1. Check the [event log on the POS](/dynamics365/commerce/dev-itpro/retail-component-events-diagnostics-troubleshooting) or the [POS client log in Microsoft Dynamics Lifecycle Services (LCS)](/dynamics365/commerce/dev-itpro/retail-component-events-diagnostics-troubleshooting#access-lcs-log-search) for the following event names to see what card type values are being used.
 
    - `posPaymentCardTypeFilterByBinRangeIsDebitOrCredit`
 
@@ -43,9 +43,12 @@ To solve this issue, make sure the card types are configured correctly for the t
       This event indicates whether the user selected to swipe or manually enter the card through the POS. If the card type with a matching bin range doesn't allow a manual entry, but the card was entered through a swipe entry, this could result in no matching card types.
 
    > [!NOTE]
-   > The POS looks for a matching bin range based on the card type returned by the payment processor or connector. If the card type is "Credit card," the POS looks for all the card types set for the store as "International credit card" and looks for a bin range match within these card types. If the card type is "Debit card," the POS looks for all the card types set for the store as "International debit card" and matches within these bin ranges. If the payment connector doesn't set a card type, the POS considers it by default as a credit card and looks for a match within the "International credit card" type.
+   > The POS looks for a matching bin range based on the card type returned by the payment processor or connector.
+   - If the card type is "Credit card," the POS looks for all the card types set for the store as "International credit card" and looks for a bin range match within these card types.
+   - If the card type is "Debit card," the POS looks for all the card types set for the store as "International debit card" and matches within these bin ranges. 
+   - If the payment connector doesn't set a card type, the POS considers it by default as a credit card and looks for a match within the "International credit card" type.
 
-2. In Commerce headquarters, navigate to the **Card types** page, and
+2. In Commerce headquarters, navigate to **Retail and Commerce > Channel Setup > Payment methods > **Card types** 
 
      - Check if a card brand exists. Add a card brand if it's missing.
      - Check if the card type (**International credit card** or **International debit card**) is correctly assigned to the brand.
@@ -55,23 +58,24 @@ To solve this issue, make sure the card types are configured correctly for the t
    > If a credit or debit card is properly set but you still receive an error, the error can be caused by the payment connector returning the wrong card type ID. For example, the payment connector returns the "Debit card" type, but only the "Credit card" type is set in Commerce headquarters. In this situation, create a card type with the same bin range for both credit and debit cards.
 
 3. In Commerce headquarters, navigate to the channel or store form that has the issue.
-4. Select **Setup** > **Payment methods** and select the payment method used by the cards.
-5. Select **Electronic payment setup** and add both credit and debit card types to the payment method.
-6. Run the CDX 1090 job and verify that its status is shown as **applied**.
+   A. Select **Setup** > **Payment methods** and select the payment method used by the cards.
+   B. Select **Electronic payment setup** and add both credit and debit card types to the payment method.
+
+If any changes to Card Types or Payment method was made, run the CDX 1090 job and verify that its status showns as **applied**.
 
 ## Resolution 2
 
-To solve this issue, check the `fundingSource` property set in [Adyen](https://www.adyen.com/).
+To solve this issue, check the `fundingSource` identifier set in [Adyen](https://www.adyen.com/).
 
-In the Dynamics 365 Payment Connector for Adyen, a card type is set based on the `fundingSource` property in the Adyen authorization response. If the `fundingSource` property isn't set by Adyen in authorization responses, a card type won't be set in the connector. However, the POS defaults to "credit" when looking for bin ranges.
+In the Dynamics 365 Payment Connector for Adyen, a card type is set based on the `fundingSource` identifier in the Adyen authorization response. If the `fundingSource` identifier isn't set by Adyen in authorization responses, a card type won't be set in the connector. However, the POS defaults to "credit" when looking for bin ranges.
 
 If you have a "missing bin range" issue, but you haven't changed the card type bin range settings recently, the issue might be caused by one of the following reasons:
 
-1. A recent Adyen firmware upgrade has started sending the `fundingSource` property.
-2. The `fundingSource` property has recently been enabled in the Adyen portal.
+1. A recent Adyen firmware upgrade has started sending the `fundingSource` identifier.
+2. The `fundingSource` identifier has recently been enabled in the Adyen portal.
 3. The bin range isn't set for that specific card or card type.
 
-In Adyen firmware version 1.42.4 and earlier versions, the `fundingSource` property isn't mandatory, and Adyen used not to send it. In Adyen firmware version 1.44 and later versions, the funding source will be sent back in the authorization response as a mandatory field for a POS terminal, and the property isn't controlled by any configuration in the Adyen portal.
+In Adyen firmware version 1.42.4 and earlier versions, the `fundingSource` identifier isn't mandatory, and Adyen used not to send it. In Adyen firmware version 1.44 and later versions, the funding source will be sent back in the authorization response as a mandatory field for a POS terminal, and the property isn't controlled by any configuration in the Adyen portal.
 
 Follow these steps to turn the **Funding Source** on or off in the Adyen portal:
 
