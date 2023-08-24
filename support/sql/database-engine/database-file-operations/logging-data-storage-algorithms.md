@@ -97,8 +97,7 @@ Although SQL Server database pages are 8 KB, disks perform I/O operations by usi
 By using battery-backed disk controller caches, you can make sure that data is successfully written to disk or not written at all. In this situation, don't set torn page detection to "true" because this isn't necessary.
 
 > [!NOTE]
-> Torn page detection isn't enabled by default in SQL Server. For more information, see 
-[ALTER DATABASE SET Options (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-set-options).
+> Torn page detection isn't enabled by default in SQL Server. For more information, see [ALTER DATABASE SET Options (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-set-options).
 
 ## Log parity
 

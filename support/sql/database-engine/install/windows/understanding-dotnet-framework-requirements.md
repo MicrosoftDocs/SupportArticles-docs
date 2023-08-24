@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 2027770
 
 ## Summary
 
-Different versions of Microsoft SQL Server have different .NET Framework versions as a prerequisite for setup, and the procedure to install the .NET Framework may be different on different operating systems. For newer versions of SQL Server, this information is covered as part of Hardware and Software Requirements articles as listed below:
+Different versions of Microsoft SQL Server have different .NET Framework versions as a prerequisite for setup, and the procedure to install the .NET Framework may be different on different operating systems. For newer versions of SQL Server, this information is covered as part of Hardware and Software Requirements in the following articles:
 
 - [Hardware and Software Requirements for SQL Server 2019](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15)
 
