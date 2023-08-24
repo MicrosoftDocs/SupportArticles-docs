@@ -36,6 +36,7 @@ For more information, see [Functions runtime versions](/azure/azure-functions/fu
 
 ## Change the Functions runtime version for Linux
 
+1. Set [FUNCTIONS_EXTENSION_VERSION](/azure/azure-functions/functions-app-settings), which is an app setting in the Azure portal **Configuration** pane, to `~4`. For more information, see [Change the runtime version](/azure/azure-functions/set-runtime-version#view-and-update-the-current-runtime-version).
 1. Set `LinuxFxVersion`, by using Command Line Interface (CLI), to `<Language>|<LanguageVersion>`, based on the language used. For more information, see [usage guidance for LinuxFxVersion](https://github.com/Azure/azure-functions-host/wiki/Using-LinuxFxVersion-for-Linux-Function-Apps). For example, to update to .NET 6, you can set `LinuxFxVersion` to `dotnet|6.0` and `FUNCTIONS_EXTENSION_VERSION` to `~4`.
 
 For more information, see [Functions runtime versions](/azure/azure-functions/functions-versions).
