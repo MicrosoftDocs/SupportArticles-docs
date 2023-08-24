@@ -41,12 +41,12 @@ The following example scenarios illustrate what happens to the solution layers i
 ##### Upgrade solution without Override Customization
 Layer "B" from Solution 2 is below Active layer "C" is upgraded from "B" to "D". The Active top layer still remains "C" and "D" isn't effective after upgrade.
 
-![Upgrade without override customization.](media/solutions-issues/upgrade-without-override-customization.png "Upgrade without override customization")
+![Upgrade without override customization with Active.](media/solutions-issues/upgrade-without-override-customization.png "Upgrade without override customization with Active")
 
 ##### Upgrade solution with Override Customization
 Layer "B" from Solution 2 is below Active layer "C" is upgraded from "B" to "D" with override customization. "B" is upgraded to "D", and override customization copied the value of "D" to Active layer, making Active as "D".
 
-![Upgrade with override customization.](media/solutions-issues/upgrade-with-override-customization.png "Upgrade with override customization")
+![Upgrade with override customization with Active.](media/solutions-issues/upgrade-with-override-customization.png "Upgrade with override customization with Active")
 
 ### There's another layer from a managed solution on the top
 
@@ -66,12 +66,12 @@ Here top layer is another managed layer.
 ##### Upgrade solution without Override Customization
 Layer "B" from Solution 2 is below managed layer "C" is upgraded from "B" to "D", the top layer still remains managed layer "C". "D" isn't effective  after upgrade.
 
-![Upgrade without override customization.](media/solutions-issues/upgrade-without-override-another-managed-top.png "Upgrade without override customization")
+![Upgrade without override customization without Active.](media/solutions-issues/upgrade-without-override-another-managed-top.png "Upgrade without override customization without Active")
 
 ##### Upgrade solution with Override Customization
 Layer "B" from Solution 2 is below managed layer "C" is upgraded from "B" to "D" with override customization. "B" is upgraded to "D". But there's no Active layer, override customization doesn't help to update the top layer. "C" remains the top layer and "D" isn't effective after upgrade.
 
-![Upgrade with override customization.](media/solutions-issues/upgrade-with-override-another-managed-top.png "Upgrade with override customization")
+![Upgrade with override customization without Active.](media/solutions-issues/upgrade-with-override-another-managed-top.png "Upgrade with override customization without Active")
 
 ##### Update the top managed layer with upgraded layer
 Layer "B" from Solution 2 is below layer "C" from Solution 3, upgrade of "B" to "D" isn't effective. To make "D" as top layer either delete the top layer "C". Or make changes in Solution 3 to have value as "D" and then export/import Solution 3.
