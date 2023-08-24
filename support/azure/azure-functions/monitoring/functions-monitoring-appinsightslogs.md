@@ -98,7 +98,7 @@ To configure these values at the App settings level (to avoid redeployment on *h
 
 For more examples about how to suppress logs, see [functions-log-suppression](https://github.com/anthonychu/functions-log-suppression).
 
-## My Virtual network integrated function app doesn't generate any logs
+## The virtual network integrated function app doesn't generate any logs
 
 If a function app is integrated with a virtual network, you must open port 443 for outgoing traffic in your server firewall to allow the Application Insights SDK or Application Insights Agent to send data to the portal for the following URLs:
 
