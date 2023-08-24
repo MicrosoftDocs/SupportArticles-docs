@@ -1,7 +1,7 @@
 ---
 title: Application Insights logs are missing or incorrect
 description: Get answers to frequently asked questions about missing or incorrect logs for AI logs in Azure Functions.
-ms.date: 08/23/2023
+ms.date: 08/24/2023
 ms.reviewer: gasridha, v-jayaramanp
 ---
 
@@ -13,7 +13,7 @@ If the Application Insights logs are missing, or if the data appears to be parti
 
 ## Check configuration of function app
 
-Navigate to your function app in the [Azure portal](https://portal.azure.com). Select **Diagnose and solve problems** to open [Azure Functions diagnostics](/azure/azure-functions/functions-diagnostics). In the **Search** bar, type *Function Configuration Checks* and open it. You see a diagnostic report of all Function app configuration checks. In particular for Application Insights, the following checks are performed:
+Navigate to your function app in the [Azure portal](https://portal.azure.com). Select **Diagnose and solve problems** to open [Azure Functions diagnostics](/azure/azure-functions/functions-diagnostics). In the **Search** bar, type *Function Configuration Checks* and open it. You see a diagnostic report of all function app configuration checks. In particular for Application Insights, the following checks are performed:
 
 - Only one of the following connection settings exists:
   - `APPINSIGHTS_INSTRUMENTATIONKEY` Application Insights Instrumentation key
