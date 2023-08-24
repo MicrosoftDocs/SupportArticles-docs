@@ -1,7 +1,7 @@
 ---
 title: Create, delete, or restore Azure function app resources
 description: Describes some common issues and solutions for creating, deleting, or restoring Azure function apps.
-ms.date: 08/15/2023
+ms.date: 08/24/2023
 ms.reviewer: gasridha, v-sidong
 ---
 # Resolve issues when creating, deleting, or restoring Azure function apps
