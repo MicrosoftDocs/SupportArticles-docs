@@ -16,25 +16,23 @@ appliesto:
   - Microsoft Teams
 ms.custom: CI167102
 ---
-# The Display status is Unhealthy
+
+# The Front of Room status is Unhealthy
 
 ## Symptoms
 
-In the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/), the **Display** signal of a Microsoft Teams Rooms device is shown as **Unhealthy**, and users experience one or more of the following issues:
+In the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/), the **Display - Front of Room** signal of a Microsoft Teams Rooms device is shown as **Unhealthy**, and users experience one or more of the following issues:
 
 - One or more Front of Room displays show nothing or show "No Signal".
-- The room console shows nothing or shows "No Signal".
 - The room console shows a warning banner at the top that indicates that a display was disconnected.
 
-Additionally, Event ID 3001 is logged under **Applications and Services Logs** > **Skype Room System** in **Event Viewer**. For example, the following event is logged:
+## Signal Logic
 
-> {"Description":"Conference Microphone status : Healthy. Conference Speaker status : Healthy. Default Speaker status : Healthy. Camera status : Healthy. **Front of Room Display status : Unhealthy.** Motion Sensor status : Healthy. HDMI Ingest status : Healthy. Content Camera status : Healthy. ","ResourceState":"Unhealthy","OperationName":"HardwareCheckEngine","OperationResult":"Fail","OS":"Windows 10","OSVersion":"10.0.19044.1889","Alias":"lab@contoso.com ","DisplayName":"Lenovo Hub 500 - Rally Plus - 2FoR","AppVersion":"4.13.132.0","IPv4Address":"1.2.3.4","IPv6Address":""}
+This signal indicates one or more front of room displays are no longer detected. The count of available displays is compared against the Dual Display configuration within the Microsoft Teams Rooms application. Although the console is a display, this signal filters out certified consoles to count any remaining as a Front of Room display. If you are using a console that is not certified, this signal will not alert correctly.
 
 > [!NOTE]
-> Although the event log shows the signal as **Front of Room Display**, the room console status is also monitored. The count of available displays is checked against the expected count. This value depends on whether dual monitor mode is enabled. If dual monitor mode is enabled, the expected count is three: one for the room console and two for the Front of Room displays. Otherwise, the expected count is two.
->
+> 
 > This signal should remain as **Healthy** even when Teams Rooms allows the displays to *sleep* after 10 minutes (default value) of no activity.
-
 ## Resolution
 
 Display issues can occur for different reasons. To fix common issues, try the following options.
@@ -62,12 +60,6 @@ If possible, use the native HDMI output of your device. Otherwise, choose the mo
 
 If EDID control or emulator devices are used, they may be faulty or configured incorrectly. Some HDMI extenders also emulate EDID. Verify that the EDID device is working correctly. If possible, bypass the device as a test. If necessary, replace the EDID device.
 
-### Check whether the room console is disconnected
-
-See the OEM documentation to learn how the room console is connected, such as by using cables. Cable issues can cause a disconnection between the touchscreen console and the compute module. For example, some consoles use hybrid fiber or copper USB cables to connect to the compute module. As for all fiber optic cables, these cables can be damaged and cause intermittent disconnections. In this situation, replace the cable.
-
-Some consoles require external power. In this case, make sure that the power supply is connected.
-
 ## Other display issues that don't affect signal health status
 
 Users might report that the Front of Room displays remain off or in standby mode when the room console wakes up as they enter the room or touch the console. In most cases, this doesn't affect the display's health signal because the HDMI cable is still connected from the compute module to the display.
@@ -79,4 +71,7 @@ In these situations, try the following options:
   Investigate and test all power-related settings on the Front of Room displays. Each display, manufacturer, and model can be different. Therefore, field testing of various power settings might be necessary. We recommend that you standardize the display brand, model, and settings as much as possible. Many commercial displays allow configuration profiles to be imported and exported through a USB flash drive.
 - Check whether the display supports the "wake on signal" feature.
 
-  Most consumer TVs, and even many commercial displays, don't automatically wake up when the Teams Rooms device wakes up and sends a video signal. In these cases, Consumer Electronics Control (CEC) must be supported on the display, and additional hardware might be required to send these CEC signals. For more information, see [Front of Room display settings](/microsoftteams/rooms/rooms-operations#front-of-room-display-settings).
+- Most consumer TVs, and even many commercial displays, don't automatically wake up when the Teams Rooms device wakes up and sends a video signal. In these cases, Consumer Electronics Control (CEC) must be supported on the display, and additional hardware might be required to send these CEC signals. Some PC's used in certified Microsoft Teams Rooms include integrated CEC support. Contact the OEM of the PC for further information. For more information, see [Front of Room display settings](/microsoftteams/rooms/rooms-operations#front-of-room-display-settings).
+
+
+
