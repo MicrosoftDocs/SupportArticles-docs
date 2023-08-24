@@ -8,12 +8,12 @@ brand: m365
 metadata:
   title: Microsoft 365 troubleshooting for admins and IT professionals # Required; page title displayed in search results. Include the brand. < 60 chars.
   description: Microsoft 365 provides online services and server products for your business with solutions for small to enterprise scale. This page provides guidance for troubleshooting issues with these products and services. # < 160 chars
-  ms.prod: outlook
   ms.topic: hub-page # Required
   audience: ITPro
   author: cloud-writer #Required; your GitHub user alias, with correct capitalization.
   ms.author: meerak #Required; microsoft alias of author; optional team alias.
   ms.date: 07/03/2019 #Required; mm/dd/yyyy format.
+  ms.service: outlook
 
 # productDirectory section (optional)
 productDirectory:
