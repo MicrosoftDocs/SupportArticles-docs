@@ -7,21 +7,25 @@ ms.reviewer: gasridha, v-jayaramanp
 
 # Application Insights logs are missing or incorrect for Azure Functions Apps
 
-You can closely monitor the function app through the integration between [Azure Functions](https://azure.microsoft.com/products/functions) and [Application Insights](/azure/azure-monitor/app/app-insights-overview?tabs=net). And you can use Application Insights without any custom configuration.
+You can closely monitor the function app through the integration between [Azure Functions](https://azure.microsoft.com/products/functions) and [Application Insights](/azure/azure-monitor/app/app-insights-overview). And you can use Application Insights without any custom configuration.
 
 If the Application Insights logs are missing, or if the data appears to be partial or inaccurate, use the following steps to resolve the issue.
 
 ## Check configuration of function app
 
-Navigate to your function app in the [Azure portal](https://portal.azure.com). Select **Diagnose and solve problems** to open [Azure Functions diagnostics](/azure/azure-functions/functions-diagnostics). In the **Search** bar, type *Function Configuration Checks* and open it. You see a diagnostic report of all function app configuration checks. In particular for Application Insights, the following checks are performed:
+1. Navigate to your function app in the [Azure portal](https://portal.azure.com).
+1. Select **Diagnose and solve problems** to open [Azure Functions diagnostics](/azure/azure-functions/functions-diagnostics).
+1. In the **Search** bar, type *Function Configuration Checks* and open it.
+1. You see a diagnostic report of all function app configuration checks. In particular for Application Insights, the following checks are performed:
 
-- Only one of the following connection settings exists:
-  - `APPINSIGHTS_INSTRUMENTATIONKEY` Application Insights Instrumentation key
-  - `APPLICATIONINSIGHTS_CONNECTION_STRING` connection.
+    - Only one of the following connection settings exists:
+      - `APPINSIGHTS_INSTRUMENTATIONKEY` Application Insights Instrumentation key
+      - `APPLICATIONINSIGHTS_CONNECTION_STRING` connection.
 
-    We recommend that you use the [APPLICATIONINSIGHTS_CONNECTION_STRING](/azure/azure-monitor/app/sdk-connection-string?tabs=net#overview) for more stable behavior. The ability to use `APPINSIGHTS_INSTRUMENTATIONKEY` will be deprecated by 2025.
-- The `AzureWebJobsDashboard` built-in logging is disabled, as recommended.
-- Sampling is enabled for the Azure Functions telemetry (enabled by default).
+        We recommend that you use the [APPLICATIONINSIGHTS_CONNECTION_STRING](/azure/azure-monitor/app/sdk-connection-string?tabs=net#overview) for more stable behavior. The ability to use `APPINSIGHTS_INSTRUMENTATIONKEY` will be deprecated by 2025.
+
+    - The `AzureWebJobsDashboard` built-in logging is disabled, as recommended.
+    - Sampling is enabled for the Azure Functions telemetry (enabled by default).
 
 > **Recommendation**: The function app should be on version 4 and the runtime version should be at least 4.15.2*xx*. This is because, from this version onwards, you can track the log flows from Azure Functions to the Application Insights service. By monitoring the log flows, you can check for missing logs.
 
