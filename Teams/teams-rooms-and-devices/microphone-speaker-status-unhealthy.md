@@ -14,17 +14,18 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft Teams
-ms.custom: CI167310 
+ms.custom: CI167310
 ---
+
 # The microphone or speaker status is Unhealthy
 
 ## Symptoms
 
 In the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/), one or more of the following signals of a Microsoft Teams Rooms device are shown as **Unhealthy**:
 
-- Conference microphone
-- Conference speaker
-- Default speaker
+- Conferencing Microphone
+- Conferencing Speaker
+- Default Speaker
 
 Users experience one or more of the following issues:
 
@@ -33,10 +34,13 @@ Users experience one or more of the following issues:
 - In-room participants can't hear the ringtone for incoming calls.
 - Audio from an HDMI ingest source, such as a laptop, can't be heard from room speakers.
 
-Additionally, Event ID 3001 is logged under **Applications and Services Logs** > **Skype Room System** in **Event Viewer**. For example, the following event is logged:
+## Signal Logic
 
-> {"Description":"**Conference Microphone status : Unhealthy. Conference Speaker status : Unhealthy. Default Speaker status : Unhealthy.** Camera status : Healthy. Front of Room Display status : Healthy. Motion Sensor status : Healthy. HDMI Ingest status : Healthy. Content Camera status : Healthy. ","ResourceState":"Unhealthy","OperationName":"HardwareCheckEngine","OperationResult":"Fail","OS":"Windows 10","OSVersion":"10.0.19044.1889","Alias":"lab@contoso.com ","DisplayName":"Lenovo Hub 500 - Rally Plus - 2FoR","AppVersion":"4.13.132.0","IPv4Address":"1.2.3.4","IPv6Address":""}
+This alert is triggered when the system reports that no viable speaker or mic peripheral is in-use. If the configured default device is unavailable but another, viable, device is in use, this signal will not alert and instead a separate warning signal will alert.
 
+> [!NOTE]
+> Since Teams will fall back to any available speaker or microphone when the configured device is unavailable, the Pro Portal filters out "non-viable" devices such as on-board headphone connectors and small speakers found inside some certified consoles. If those are found in-use, the Pro Portal should still fire this alert since they would not allow for a viable meeting experience.
+> If the Microsoft Teams Rooms application is explicitly configured to use the speakers inside of a Front of Room display (HDMI audio), this alert will be locked in a healthy state. Another warning "Misconfigured Conferencing/Default Speaker" will alert you in this scenario. HDMI audio becomes disconnected when the display sleeps and would otherwise cause critical alerts to open and close throughout the day.
 ## Resolution
 
 Audio peripheral issues can occur for different reasons. To fix common issues, try the following options.
@@ -71,5 +75,6 @@ These signals are handled differently in the Teams Rooms Pro Management portal a
 
 **Teams Rooms Pro Management portal**: If the configured audio peripheral isn't available, the next available microphone or speaker is automatically selected. The portal reports the signal as **Unhealthy** if the following conditions are met:
 
-- The configured default peripheral is missing.
-- There is no available certified integrated audio, such as the Lenovo Hub, Lenovo Hub 500, or HP Slice integrated audio.
+- There is no viable (see above) speaker or mic currently in use.
+
+
