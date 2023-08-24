@@ -5,11 +5,11 @@ summary: This library of articles provides guidance to troubleshoot and fix erro
 metadata:
   title: Outlook for Windows troubleshooting
   description: Documentation for troubleshooting common issues with Outlook for Windows.
-  ms.prod: outlook
   ms.topic: landing-page
   author: cloud-writer
   ms.author: meerak
   ms.date: 07/26/2022
+  ms.service: outlook
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
