@@ -9,7 +9,7 @@ metadata:
   ms.topic: landing-page # Required
   author: HaiyingYu  #Required; your GitHub user alias, with correct capitalization.
   ms.author: haiyingyu #Required; microsoft alias of author; optional team alias.
-  ms.date: 8/15/2023
+  ms.date: 8/24/2023
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -41,5 +41,5 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Application Insights
+          - text: Application Insights logs missing or incorrect
             url: monitoring/functions-monitoring-appinsightslogs.md
