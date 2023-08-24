@@ -25,7 +25,9 @@ In the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.micros
 
 - Conferencing Microphone
 - Conferencing Speaker
-- Default Speaker
+- Configured Default Speaker
+- Configured Conferencing Microphone
+- Configured Conferencing Speaker
 
 Users experience one or more of the following issues:
 
@@ -36,11 +38,17 @@ Users experience one or more of the following issues:
 
 ## Signal Logic
 
-This alert is triggered when the system reports that no viable speaker or mic peripheral is in-use. If the configured default device is unavailable but another, viable, device is in use, this signal will not alert and instead a separate warning signal will alert.
+**Conferencing Speaker and Conferencing Microphone**
+
+- This alert is triggered when the system reports that no viable speaker or mic peripheral is in-use. If the configured default device is unavailable but another, viable, device is in use, this signal will not alert and instead a separate warning signal will alert.
 
 > [!NOTE]
 > Since Teams will fall back to any available speaker or microphone when the configured device is unavailable, the Pro Portal filters out "non-viable" devices such as on-board headphone connectors and small speakers found inside some certified consoles. If those are found in-use, the Pro Portal should still fire this alert since they would not allow for a viable meeting experience.
 > If the Microsoft Teams Rooms application is explicitly configured to use the speakers inside of a Front of Room display (HDMI audio), this alert will be locked in a healthy state. Another warning "Misconfigured Conferencing/Default Speaker" will alert you in this scenario. HDMI audio becomes disconnected when the display sleeps and would otherwise cause critical alerts to open and close throughout the day.
+**Configured Default Speaker, Configured Conferencing Microphone and Configured Conferencing Speaker**
+
+- This warning is triggered when the system reports that the configured default device is not available, but another viable device is in use.
+
 ## Resolution
 
 Audio peripheral issues can occur for different reasons. To fix common issues, try the following options.
