@@ -27,7 +27,7 @@ If the Application Insights logs are missing, or if the data appears to be parti
     - The `AzureWebJobsDashboard` built-in logging is disabled, as recommended.
     - Sampling is enabled for the Azure Functions telemetry (enabled by default).
 
-    **Recommendation**: The function app should be on version 4 and the runtime version should be at least 4.15.2*xx*. This is because, from this version onwards, you can track the log flows from Azure Functions to the Application Insights service. By monitoring the log flows, you can check for missing logs.
+  **Recommendation**: The function app should be on version 4 and the runtime version should be at least 4.15.2*xx*. This is because, from this version onwards, you can track the log flows from Azure Functions to the Application Insights service. By monitoring the log flows, you can check for missing logs.
 
 ## Logs are missing or partial
 
