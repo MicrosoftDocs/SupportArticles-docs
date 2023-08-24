@@ -24,7 +24,7 @@ In this scenario, a failure occurs during the update process, and you receive th
 
 > Attempted to perform an unauthorized operation.
 
-Additionally, an entry is logged in the SQL Server Setup log file, Detail.txt, that indicates that the failure occurred while **Attempting to open registry subkey Microsoft Edge**.
+Additionally, an entry is logged in the SQL Server Setup log file, *Detail.txt*, that indicates that the failure occurred while **Attempting to open registry subkey Microsoft Edge**.
 
 ## Cause
 

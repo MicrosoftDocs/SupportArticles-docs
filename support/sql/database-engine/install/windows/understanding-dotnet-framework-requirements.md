@@ -27,11 +27,11 @@ Different versions of Microsoft SQL Server have different .NET Framework version
 
 - [Hardware and Software Requirements for SQL Server 2012](/previous-versions/sql/sql-server-2012/ms143506(v=sql.110))
 
-For versions SQL Server 2008R2 and earlier, the .NET Framework requirements vary based on the edition of SQL Server that you're installing. This article describes these requirements and gives you the necessary information so that you can install the correct .NET Framework that is required.
+For versions SQL Server 2008 R2 and earlier, the .NET Framework requirements vary based on the edition of SQL Server that you're installing. This article describes these requirements and gives you the necessary information so that you can install the correct .NET Framework that's required.
 
 1. Use `Table 1` in the [Microsoft DotNET Framework prerequisites for SQL Server](#microsoft-net-framework-prerequisites-for-sql-server-2008-r2-and-earlier-versions-of-sql-server) section to check the .NET Framework requirements for the version and the edition that you're installing.
-2. Check whether the .NET Framework is already included as part of the operating system or whether you must download it separately from Microsoft downloads that are listed in `Table 2` in the [.NET Frameworks for SQL Server on various operating systems and download links](#net-frameworks-for-sql-server-on-windows-server-2008-r2-and-earlier-operating-systems) section.
-3. Use the last column in `Table 2` to check whether any special procedures are required to install the Framework on the target operating system. If the entry is Yes, check the later sections of this document for the necessary procedures. If the entry is No, you can download the corresponding Framework from the corresponding link in `Table 2` and install it on the target operating system.
+1. Check whether the .NET Framework is already included as part of the operating system or whether you must download it separately from Microsoft downloads that are listed in `Table 2` in the [.NET Frameworks for SQL Server on various operating systems and download links](#net-frameworks-for-sql-server-on-windows-server-2008-r2-and-earlier-operating-systems) section.
+1. Use the last column in `Table 2` to check whether any special procedures are required to install the Framework on the target operating system. If the entry is Yes, check the later sections of this document for the necessary procedures. If the entry is No, you can download the corresponding Framework from the corresponding link in `Table 2` and install it on the target operating system.
 
 > [!NOTE]
 >
@@ -76,34 +76,34 @@ In Windows Server 2008 R2, the .NET Framework is a feature, and installing it's 
 
 To determine whether the .NET Framework 3.5.1 is installed on Windows Server 2008 R2, follow these steps:
 
-1. Select **Start** -\> **Administrative Tools** -\> **Server Manager**.
-2. Select **Features** to display all the installed features in the pane on the right side.
-3. Verify that .NET Framework 3.5.1  is listed as an installed feature.
+1. Select **Start** > **Administrative Tools** > **Server Manager**.
+1. Select **Features** to display all the installed features in the pane on the right side.
+1. Verify that .NET Framework 3.5.1 is listed as an installed feature.
 
 If .NET Framework 3.5.1 isn't listed as an installed feature, use one of the following methods to install it.
 
 ### Method 1: Use Server Manager  
 
-1. In **Server Manager,**  select **Add Features** to display a list of possible features.
-2. In the **Select Features** interface, expand the .NET Framework 3.5.1 Features entry.
-3. After you expand .NET Framework 3.5.1 Features, you see two check boxes. One check box is for **.NET Framework 3.5.1**  and other check box is for **WCF Activation**. Click to select the check box next to **.NET Framework 3.5.1**, and then select **Next**.
+1. In **Server Manager,** select **Add Features** to display a list of possible features.
+1. In the **Select Features** interface, expand the **.NET Framework 3.5.1 Features** entry.
+1. After you expand **.NET Framework 3.5.1 Features**, you see two check boxes. One check box is for **.NET Framework 3.5.1** and other check box is for **WCF Activation**. Select the check box next to **.NET Framework 3.5.1**, and then select **Next**.
 
     > [!NOTE]
-    > If you do not expand the **.NET Framework 3.5.1 Features**  item and check it, the following Add Features Wizard  is started:
+    > If you don't expand the **.NET Framework 3.5.1 Features** item and check it, the following **Add Features Wizard** is started:
 
     :::image type="content" source="media/understanding-dotnet-framework-requirements/add-features-wizard.png" alt-text="Screenshot of the Add Features Wizard window." border="false":::
 
-    If the wizard starts, select **Cancel**, expand **.NET Framework 3.5.1 Features**, and then click to select the .NET Framework 3.5.1  check box.
+    If the wizard starts, select **Cancel**, expand **.NET Framework 3.5.1 Features**, and then  select the **.NET Framework 3.5.1** check box.
 
-4. You can't install **.NET Framework 3.5.1 Features** unless the required role services and features are also installed.
-5. In the Confirm Installation Selections, review the selections, and then select **Install**.
-6. Let the installation process complete, and then select **Close**.
+1. You can't install **.NET Framework 3.5.1 Features** unless the required role services and features are also installed.
+1. In the Confirm Installation Selections, review the selections, and then select **Install**.
+1. Let the installation process complete, and then select **Close**.
 
 ### Method 2: Use Windows PowerShell  
 
-1. Select **Start** -\> **All Programs** -\> **Accessories**.
-2. Expand **Windows PowerShell,**  right-click **Windows PowerShell**, and select Run as administrator. select **Yes** in the User Account Control box.
-3. At the PowerShell command prompt, type the following commands, and then press ENTER after each command:
+1. Select **Start** > **All Programs** > **Accessories**.
+1. Expand **Windows PowerShell**, right-click **Windows PowerShell**, and select **Run as administrator**. Select **Yes** in the **User Account Control** box.
+1. At the PowerShell command prompt, type the following commands, and then press <kbd>ENTER</kbd> after each command:
 
 ```powershell
 Import-Module ServerManager
@@ -111,7 +111,7 @@ Add-WindowsFeature as-net-framework
 ```
 
 > [!NOTE]
-> See the screen shot for more information:
+> See the screenshot for more information:
 
 :::image type="content" source="media/understanding-dotnet-framework-requirements/windows-powershell.png" alt-text="Screenshot shows the output of the command in Windows PowerShell." border="false":::
 
