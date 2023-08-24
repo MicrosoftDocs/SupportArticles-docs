@@ -57,9 +57,9 @@ To solve this issue, make sure the card types are configured correctly for the t
    > [!NOTE]
    > If a credit or debit card is properly set but you still receive an error, the error can be caused by the payment connector returning the wrong card type ID. For example, the payment connector returns the "Debit card" type, but only the "Credit card" type is set in Commerce headquarters. In this situation, create a card type with the same bin range for both credit and debit cards.
 
-3. In Commerce headquarters, navigate to the channel or store form that has the issue.
-   A. Select **Setup** > **Payment methods** and select the payment method used by the cards.
-   B. Select **Electronic payment setup** and add both credit and debit card types to the payment method.
+3. In Commerce headquarters, navigate to the channel or store form that has the issue.  
+     A. Select **Setup** > **Payment methods** and select the payment method used by the cards.  
+     B. Select **Electronic payment setup** and add both credit and debit card types to the payment method.  
 
 If any changes to Card Types or Payment method was made, run the CDX 1090 job and verify that its status showns as **applied**.
 
