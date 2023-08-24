@@ -45,6 +45,7 @@ Layer "B" from Solution 2 is below Active layer "C" is upgraded from "B" to "D".
 
 ##### Upgrade solution with Override Customization
 Layer "B" from Solution 2 is below Active layer "C" is upgraded from "B" to "D" with override customization. "B" is upgraded to "D", and override customization copied the value of "D" to Active layer, making Active as "D".
+
 ![Upgrade with override customization.](media/solutions-issues/upgrade-with-override-customization.png "Upgrade with override customization")
 
 ### There's another layer from a managed solution on the top
