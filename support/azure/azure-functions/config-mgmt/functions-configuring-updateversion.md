@@ -8,7 +8,7 @@ ms.reviewer: gasridha, v-sidong
 
 This article describes how to resolve some of the common issues that may occur during the update of the function app language or runtime version, like runtime being unreachable and modules not being found.
 
-## Action to take if you received an email "Action recommended: Update your Azure Functions apps to use .NET 6."
+## Actions to take if you receive an email "Action recommended: Update your Azure Functions apps to use .NET 6."
 
 - Extended support for Microsoft .NET Core 3.1 ended on December 3, 2022. Azure Functions runtime v3 is based on .NET core 3.1. We recommend that you [update your function app](/azure/azure-functions/set-runtime-version#view-and-update-the-current-runtime-version) to runtime version 4.x, which uses .NET 6 and has long-term support. After December 3, 2022, your apps aren't eligible for new features, security patches, performance optimizations, or support until you upgrade them to Functions runtime version 4.x.
 
@@ -37,7 +37,7 @@ For more information, see [Functions runtime versions](/azure/azure-functions/fu
 ## Change the Functions runtime version for Linux
 
 1. Set [FUNCTIONS_EXTENSION_VERSION](/azure/azure-functions/functions-app-settings), which is an app setting in the Azure portal **Configuration** pane, to `~4`. For more information, see [Change the runtime version](/azure/azure-functions/set-runtime-version#view-and-update-the-current-runtime-version).
-1. Set `LinuxFxVersion`, by using Command Line Interface (CLI), to `language|language version`, based on the language used. For more information, refer to the [usage guidance for LinuxFxVersion](https://github.com/Azure/azure-functions-host/wiki/Using-LinuxFxVersion-for-Linux-Function-Apps). For example, to update to .NET 6, you can set `LinuxFxVersion` to `dotnet|6.0` and `FUNCTIONS_EXTENSION_VERSION` to `~4`.
+1. Set `LinuxFxVersion`, by using Command Line Interface (CLI), to `language|language version`, based on the language used. For more information, see [usage guidance for LinuxFxVersion](https://github.com/Azure/azure-functions-host/wiki/Using-LinuxFxVersion-for-Linux-Function-Apps). For example, to update to .NET 6, you can set `LinuxFxVersion` to `dotnet|6.0` and `FUNCTIONS_EXTENSION_VERSION` to `~4`.
 
 For more information, see [Functions runtime versions](/azure/azure-functions/functions-versions).
 
@@ -62,7 +62,7 @@ Support for proxies is available again in version 4.x so that you can successful
 1. Select **Diagnose and solve problems** to open [Azure Functions diagnostics](/azure/azure-functions/functions-diagnostics).
 1. In the **Search** bar, type *Updating Function App Language or Runtime Version* to run it directly.
 1. In the diagnostic report, scroll down and select **List All Function App** > **View Details**.
-1. Set the search filters and select **Show** to get the list of functions apps in the current subscription. 
+1. Set the search filters and select **Show** to get the list of functions apps in the current subscription.
 
 Alternately, you can use App Service REST API calls ([GetConfiguration](/rest/api/appservice/web-apps/get-configuration)) to determine this. `LinuxFxVersion` and `WindowsFxVersion` provide the version information.
 
@@ -81,7 +81,7 @@ Alternately, you can use App Service REST API calls ([GetConfiguration](/rest/ap
 - Azure Functions 4.x doesn't support Node.js 10 and 12, Python 3.6, and PowerShell 6. For more information, see [Language versions supported for the v4 runtime](/azure/azure-functions/supported-languages#languages-by-runtime-version).
 - For Python functions, if there are errors related to module collision and module not found, try setting `PYTHON_ISOLATE_WORKER_DEPENDENCIES` to *1* in app settings.
 - Review [language-wise breaking changes](/azure/azure-functions/functions-versions#migrating-existing-function-apps).
-- For runtime issues, from the **Diagnose and Solve Problems** option in the [portal](https://portal.azure.com), search for **Function app down or reporting errors** and review diagnostic report for error messages and solutions. Also review the **Function Configuration checks** detector to make sure that the configuration is correct.
+- For runtime issues, from the **Diagnose and Solve Problems** option in the [Azure portal](https://portal.azure.com), search for **Function app down or reporting errors** and review the diagnostic report for error messages and solutions. Also review the **Function Configuration checks** detector to make sure that the configuration is correct.
 - Review the blog [Issues when upgrading Azure function apps to V4](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/issues-you-may-meet-when-upgrading-azure-function-app-to-v4/ba-p/3288983) for additional troubleshooting tips.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -102,7 +102,7 @@ Make sure that you have sufficient permissions to delete an Azure function app. 
 
 If the function app creation or deletion fails, collect and share the following data when creating a support ticket:
 
-- Azure portal: Reproduce the issue and [capture a browser trace.](/azure/azure-portal/capture-browser-trace)
+- Azure portal: Reproduce the issue and [capture a browser trace](/azure/azure-portal/capture-browser-trace).
 - Azure CLI or Azure PowerShell: Share the command that reported the error and verbose logging.
 - For Azure Resource Manager deployment failures, find the error message in the Azure portal:
 

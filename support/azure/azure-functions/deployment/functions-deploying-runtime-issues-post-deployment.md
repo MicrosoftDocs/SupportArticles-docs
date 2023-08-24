@@ -15,7 +15,7 @@ If your application is experiencing issues after deployment, it's important to d
 
 Runtime failure can occur for any of the following reasons:
 
-- The functions runtime can't start because the function app has lost access to the storage account. 
+- The function runtime can't start because the function app has lost access to the storage account.
 - In the runtime sandbox environment of Azure Functions, something is blocking certain operations that work on your local computer.
 - Your Azure Functions app isn't configured correctly. For example, the function host doesn't start up because of incorrect values in the following settings:
   - Runtime or language version
@@ -33,6 +33,6 @@ To fix runtime issues after the content deployment, try one or more of the follo
 - Run the [Azure Functions Diagnostics](/azure/azure-functions/functions-diagnostics) to quickly diagnose and solve common function app problems.
 - Verify whether [storage connections are set up correctly and that the storage account is accessible](/azure/azure-functions/functions-recover-storage-account).
 - If you've enabled Application Insights for your function, see [Application Insights logs](/azure/azure-functions/functions-monitoring) to learn more about the full exception trace or error message that's causing errors.
-- Review the Function runtime [migration guides](/azure/azure-functions/migrate-version-3-version-4) if your deployment is updating the function app runtime or language version. 
+- Review the function runtime [migration guides](/azure/azure-functions/migrate-version-3-version-4) if your deployment is updating the function app runtime or language version.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
