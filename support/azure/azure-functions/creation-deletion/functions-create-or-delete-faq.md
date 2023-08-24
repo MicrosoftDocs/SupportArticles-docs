@@ -106,7 +106,7 @@ If the function app creation or deletion fails, collect and share the following 
 - Azure CLI or Azure PowerShell: Share the command that reported the error and verbose logging.
 - For Azure Resource Manager deployment failures, find the error message in the Azure portal:
 
-1. Select **Resource Group** > **Deployments**.
-1. Share the failed task correlation ID.
+  1. Select **Resource Group** > **Deployments**.
+  1. Share the failed task correlation ID.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
