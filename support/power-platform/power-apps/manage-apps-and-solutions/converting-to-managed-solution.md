@@ -23,7 +23,7 @@ You receive an error message like the following ones:
 
 > Microsoft.Crm.CrmException: A managed solution cannot overwrite the [Component Name] component  with Id=[Component Id] which has an unmanaged base instance.  The most likely scenario for this error is that an unmanaged solution has installed a new unmanaged [Component Name] component on the target system, and now a managed solution from the same publisher is trying to install that same [Component Name] component as managed.  This will cause an invalid layering of solutions on the target system and is not allowed.
 
-> Microsoft.Crm.CrmException: The import has failed because the system cannot transition the entity form {Form Id} from unmanaged to managed. Add at least one full (root) component to the managed solution, and then try to import it again.
+> Microsoft.Crm.CrmException: The import has failed because the system cannot transition the entity form [Form Id] from unmanaged to managed. Add at least one full (root) component to the managed solution, and then try to import it again.
 
 ## Cause
 
@@ -31,4 +31,4 @@ By design, the Dataverse platform blocks the managed solution import on an envir
 
 ## Workaround
 
-To convert the unmanaged solution to managed solution, uninstall the unmanaged solution, import the solution with convert to managed flag using PACCLI.
+To convert the unmanaged solution to managed solution, uninstall the unmanaged solution, import the solution with [convert to managed](/power-platform/developer/cli/reference/solution#--convert-to-managed--cm) flag using PACCLI.
