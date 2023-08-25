@@ -9,7 +9,7 @@ metadata:
   ms.service: dynamics-365-commerce
   author: bstorie
   ms.author: brstor
-  ms.date: 08/07/2023
+  ms.date: 08/25/2023
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -22,7 +22,7 @@ landingContent:
           - text: Customer records don't appear in Commerce headquarters
             url: commerce-headquarters-operations/customer-record-not-appearing.md
           - text: Order summary subtotal doesn't include taxes on charges when using customized order summary modules
-            url: commerce-headquarters-operations/summary-taxes-custom-modules-10.0.27.md
+            url: commerce-headquarters-operations/summary-taxes-custom-modules-10-0-27.md
 
   # Card
   - title: Customer accounts and loyalty

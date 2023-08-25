@@ -6,7 +6,7 @@
         - name: Customer records don't appear in Commerce headquarters
           href: commerce-headquarters-operations/customer-record-not-appearing.md
         - name: Order summary subtotal doesn't include taxes on charges when using customized order summary modules
-          href: commerce-headquarters-operations/summary-taxes-custom-modules-10.0.27.md
+          href: commerce-headquarters-operations/summary-taxes-custom-modules-10-0-27.md
     - name: Customer accounts and loyalty
       items:
         - name: Welcome email isn't sent when new customers are created
