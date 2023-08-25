@@ -138,7 +138,7 @@ This issue can occur for the following reasons:
 - The server is unable to authenticate with the Azure File Sync service due to an expired or deleted certificate.
 - The Telemetry event log on the server is corrupted.
 
-On the server that is showing as "Appears offline" in the portal, look at Event ID 9301 in the Telemetry event log (located under *Applications and Services\Microsoft\FileSync\Agent* in Event Viewer) to determine why the server is unable to access the Azure File Sync service.
+On the server that is showing as "Appears offline" in the portal, look at Event ID 9301 in the Telemetry event log (located under *Applications and Services\Microsoft\FileSync\Agent* in Event Viewer) to determine why this issue is occurring.
 
 - If "GetNextJob completed with status: 0" is logged, the server can communicate with the Azure File Sync service
 
@@ -180,6 +180,7 @@ On the server that is showing as "Appears offline" in the portal, look at Event 
     ```powershell
     Reset-AzStorageSyncServerCertificate -ResourceGroupName <string> -StorageSyncServiceName <string>
     ```
+
 - If the Telemetry event log is empty, this means the event log is more than likely corrupted. 
 
     Run the following PowerShell commands on the server to confirm the Telemetry event log is corrupted:
