@@ -1,6 +1,6 @@
 ---
 title: Remove a partial installation of SQL server
-description: This article describes the procedure to remove a partial installation of SQL server.
+description: This article describes the procedure to remove a partial installation of SQL Server.
 ms.date: 09/25/2020
 ms.custom: sap:Installation, Patching and Upgrade
 ms.reviewer: amylewis
@@ -8,7 +8,7 @@ ms.topic: how-to
 ---
 # Remove a partial installation of SQL server
 
-This article describes the procedure to remove a partial installation of SQL server.
+This article describes the procedure to remove a partial installation of SQL Server.
 
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 955404

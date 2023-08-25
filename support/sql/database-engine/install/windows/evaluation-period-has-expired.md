@@ -45,7 +45,7 @@ The problem usually occurs when you are running an evaluation instance of SQL Se
   - [Supported version & edition upgrades (SQL Server 2016)](/sql/database-engine/install-windows/supported-version-and-edition-upgrades)
 
     > [!NOTE]
-    > In either of these topics, you can select the version picker tool at the top to pick a topic that's relevant to your environment. For SQL Server 2008 you can also refer to the KB article: [Upgrade to a Different Edition of SQL Server (Setup)](/sql/database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup). For SQL Server 2005, check the following KB article [Upgrade to a Different Edition of SQL Server (Setup)](/sql/database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup)
+    > In either of these topics, you can select the version picker tool at the top to pick a topic that's relevant to your environment. For SQL Server 2008 you can also refer to the KB article: [Upgrade to a Different Edition of SQL Server (Setup)](/sql/database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup). For SQL Server 2005, check the following KB article [Upgrade to a Different Edition of SQL Server (Setup)](/sql/database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup).
 
 - **Case 2 - Moving from an enterprise evaluation edition to an express edition**
 
@@ -81,14 +81,14 @@ The problem usually occurs when you are running an evaluation instance of SQL Se
     Apply Service Pack 1 for SQL Server 2008 before upgrading the evaluation edition to a licensed edition.
 
     > [!NOTE]
-    > If you had already performed the edition upgrade before applying Service Pack 1 for SQL server 2008, you will be required to go through all the steps mentioned in the Option 2 section to resolve the problem. The service pack will only prevent issues that involve future edition upgrades.
+    > If you had already performed the edition upgrade before applying Service Pack 1 for SQL Server 2008, you will be required to go through all the steps mentioned in the Option 2 section to resolve the problem. The service pack will only prevent issues that involve future edition upgrades.
 
   - Option 2
 
     Use the following procedure to fix the issue:
 
     > [!IMPORTANT]
-    > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see the following article: [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).
+    > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).
 
     1. Select **Start** > **Run**, enter *Regedt32*, and then select **OK**.
     1. Locate and then click the following key in the Registry Editor:
