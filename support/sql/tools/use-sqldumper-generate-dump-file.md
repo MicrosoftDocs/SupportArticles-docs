@@ -222,7 +222,7 @@ When capturing a SQL Server process dump file (especially a filtered dump file o
 
 ## Product improvements to reduce the impact on SQL Server
 
-Three major improvements have been added to recent versions of SQL Server to reduce the size of the dump file and/or time for generating the memory dump:
+Four major improvements have been added to recent versions of SQL Server to reduce the size of the dump file and/or time for generating the memory dump:
 
 - Bitmap filtering mechanism.
 
@@ -230,7 +230,9 @@ Three major improvements have been added to recent versions of SQL Server to red
 
 - Shortened output in the error log.
 
-**Bitmap filtering mechanism:** SQL Server allocates a bitmap that keeps track of memory pages to be excluded from a filtered dump. Sqldumper.exe reads the bitmap and filters out pages without the need to read any other memory manager metadata. You'll see the following messages in the SQL Server error log when the bitmap is enabled or disabled respectively:
+#### Bitmap filtering mechanism
+
+SQL Server allocates a bitmap that keeps track of memory pages to be excluded from a filtered dump. Sqldumper.exe reads the bitmap and filters out pages without the need to read any other memory manager metadata. You'll see the following messages in the SQL Server error log when the bitmap is enabled or disabled respectively:
 
 `Page exclusion bitmap is enabled.` and `Page exclusion bitmap is disabled.`
 
@@ -248,9 +250,13 @@ Three major improvements have been added to recent versions of SQL Server to red
 
     This is enabled by default in SQL Server 2019 RTM. It can be disabled via T8095.
 
-**Elimination of repeated dumps on the same issue:**  Repeated memory dumps on the same problem are eliminated. Using a stack signature, the SQL engine keeps track if an exception has already occurred and won't produce a new memory dump if there's one already. This applies to access violations, stack overflow, asserts, and index corruption exceptions. This significantly reduces the amount of disk space used by memory dumps and doesn't freeze the process temporarily to generate a dump. This was added in SQL Server 2019.
+#### Elimination of repeated dumps on the same issue
 
-**Shortened output in the Error log:** The content generated in the SQL Server Error log from a single memory dump can't only be overwhelming, but it also slowed down the process of generating a memory dump due to the time all this information had to be serialized into a text format in the Error log. In SQL Server 2019, the content stored in the Error log upon dump generation has been greatly reduced and it may look like this:
+Repeated memory dumps on the same problem are eliminated. Using a stack signature, the SQL engine keeps track if an exception has already occurred and won't produce a new memory dump if there's one already. This applies to access violations, stack overflow, asserts, and index corruption exceptions. This significantly reduces the amount of disk space used by memory dumps and doesn't freeze the process temporarily to generate a dump. This was added in SQL Server 2019.
+
+#### Shortened output in the Error log
+
+ The content generated in the SQL Server Error log from a single memory dump can't only be overwhelming, but it also slowed down the process of generating a memory dump due to the time all this information had to be serialized into a text format in the Error log. In SQL Server 2019, the content stored in the Error log upon dump generation has been greatly reduced and it may look like this:
 
 ```console
 DateTimespidS pid    **Dump thread - spid = 0, EC = 0x0000015C7169BF40
@@ -263,6 +269,33 @@ External dump process returned no errors.
 ```
 
 Previously SQL Server would print information for each session/thread when a manual dump was triggered by the user for example.
+
+#### Parallel compression of memory dumps
+
+To generate dumps faster and make them smaller in size, a compressed memory dump feature was introduced in SQL Server 2022 CU8 and SQL 2019 CU23. When activated, Sqldumper.exe creates multiple threads to read a process's memory simultaneously, compresses it, and then saves it to the dump file. This multi-thread, parallel compression reduces file size and speeds up the dumping process when used with full and filtered dumps.
+You turn on trace flag 2610 to enable compressed memory dump:
+
+```sql
+DBCC TRACEON (2610,-1)
+GO
+DBCC STACKDUMP with FILTERED_DUMP
+GO
+DBCC TRACEOFF (2610,-1)
+```
+
+Alternatively, you can add `-T2610` as a startup parameter to your SQL Server instance so it always creates compressed memory dumps.
+
+If you manually run Sqldumper.exe, you can use the `-zdmp` parameter to capture a compressed memory dump. For example:
+
+```Console
+Sqldumper.exe <pid> 0 0x8100 0 d:\temp -zdmp 
+```
+
+You can also limit how many cores Sqldumper.exe can use to create the compressed dump by using the `-cpu:X` parameter, where X is the number of CPUs. This parameter is only available when you manually run Sqldumper.exe from command-line:
+
+```dos
+Sqldumper.exe <pid> 0 0x8100 0 d:\temp -zdmp -cpu:8
+```
 
 ## Factors that prevent or delay creation of memory dumps
 
