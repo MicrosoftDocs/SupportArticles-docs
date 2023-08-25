@@ -133,7 +133,7 @@ Set-AzStorageSyncServerEndpoint `
 <a id="server-endpoint-noactivity"></a>**Server endpoint has a health status of "No Activity" or "Pending" and the server state on the registered servers blade is "Appears offline"**
 
 This issue can occur for the following reasons:
-- The Storage Sync Monitor process (AzureStorageSyncMonitor.exe) isn't running or the server has insufficient system resources.
+- The Storage Sync Monitor process (AzureStorageSyncMonitor.exe) isn't running on the server or the server has insufficient system resources.
 - The server is unable to communicate with the Azure File Sync service.
 - The server is unable to authenticate with the Azure File Sync service due to an expired or deleted certificate.
 - The Telemetry event log on the server is corrupted.
