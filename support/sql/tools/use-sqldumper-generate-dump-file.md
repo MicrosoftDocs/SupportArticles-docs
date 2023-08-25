@@ -1,10 +1,10 @@
 ---
 title: Use Sqldumper.exe to generate dump files
 description: This article introduces the Sqldumper.exe utility included with SQL Server. This utility generates different kinds of dump files.
-ms.date: 09/21/2020
-ms.custom: sap:Other tools
 ms.reviewer: sureshka, jopilov
+ms.date: 08/25/2023
 ms.topic: how-to
+ms.custom: sap:Other tools
 ---
 # Use the Sqldumper.exe utility to generate a dump file in SQL Server
 
@@ -28,7 +28,7 @@ Run the Sqldumper.exe utility under the context of the folder where SQL Server o
 
 `<SQLServerInstall Drive>:\Program Files\Microsoft SQL Server\90\Shared\SQLDumper.exe`
 
-> [!NOTE]
+> [!NOTE]  
 > \<SQLServerInstall Drive\> is a placeholder for the drive where you installed SQL Server 2005.
 
 To generate a dump file by using the Sqldumper.exe utility, follow these steps:
@@ -37,9 +37,9 @@ To generate a dump file by using the Sqldumper.exe utility, follow these steps:
 
     `<SQLServerInstall Drive>:\Program Files\Microsoft SQL Server\<number>\Shared`
 
-    > [!NOTE]
+    > [!NOTE]  
     > In this folder path, \<number\> is a placeholder for one of the following:
-    >
+    >  
     > - 150 for SQL Server 2019
     > - 140 for SQL Server 2017
     > - 130 for SQL Server 2016
@@ -48,18 +48,18 @@ To generate a dump file by using the Sqldumper.exe utility, follow these steps:
     > - 100 for SQL Server 2008
     > - 90 for SQL Server 2005
 
-2. Make sure that the _Dbghelp.dll_ file is in this folder.
-3. Select **Start** > **Run**, type _cmd_, and then select **OK**.
-4. At the command prompt, type the following command, and then press **Enter**:
+1. Make sure that the _Dbghelp.dll_ file is in this folder.
+1. Select **Start** > **Run**, type _cmd_, and then select **OK**.
+1. At the command prompt, type the following command, and then press **Enter**:
 
     ```dos
     cd <SQLServerInstall Drive>:\Program Files\Microsoft SQL Server\<number>\Shared
     ```
 
-    > [!NOTE]
+    > [!NOTE]  
     > In this folder path, \<number\> is the same placeholder changing with SQL Server version as described earlier.
 
-5. To generate a specific kind of dump file, type the corresponding command at the command prompt, and then press **Enter**:
+1. To generate a specific kind of dump file, type the corresponding command at the command prompt, and then press **Enter**:
    - Full dump file
 
         ```dos
@@ -84,14 +84,14 @@ To generate a dump file by using the Sqldumper.exe utility, follow these steps:
         Sqldumper.exe <ProcessID> 0 0x8100
         ```
 
-    > [!NOTE]
+    > [!NOTE]  
     > \<ProcessID\> is a placeholder for the process identifier of the Windows application for which you want to generate a dump file.
 
 If the Sqldumper.exe utility runs successfully, the utility generates a dump file in the folder where the utility is installed.
 
 The dump file that the Sqldumper.exe utility generates has a file name pattern that resembles the following:  
 *SQLDmpr\<xxxx\>.mdmp*
-  
+
 In this pattern, \<xxxx\> is an increasing number that is determined based on other files that have a similar file name in the same folder. If you already have files in the folder that have file names in the specified pattern, you may have to compare the date and the time that the file was created to identify the file that you want.
 
 #### How to obtain a Microsoft Windows application process identifier
@@ -99,17 +99,17 @@ In this pattern, \<xxxx\> is an increasing number that is determined based on ot
 To generate a dump file by using the Sqldumper.exe utility, you must have the process identifier of the Windows application you want to generate a dump file for. Here's how to obtain the process identifier:
 
 1. Press **Ctrl+Alt+Delete**, and select **Task Manager**.
-2. In the **Windows Task Manager** dialog box, select the **Processes** tab.
-3. On the **View** menu, select **Select Columns**.
-4. In the **Select Columns** dialog box, select the **PID (Process Identifier)** check box, and select **OK**.
-5. Take note of the process identifier of the Windows application you want to generate a dump file for. For the SQL Server application, take note of the process identifier of the _Sqlservr.exe_ process.
-6. Close the **Task Manager**.
+1. In the **Windows Task Manager** dialog box, select the **Processes** tab.
+1. On the **View** menu, select **Select Columns**.
+1. In the **Select Columns** dialog box, select the **PID (Process Identifier)** check box, and select **OK**.
+1. Take note of the process identifier of the Windows application you want to generate a dump file for. For the SQL Server application, take note of the process identifier of the _Sqlservr.exe_ process.
+1. Close the **Task Manager**.
 
 Alternatively, use the SQL Server error log file to obtain the process identifier of the SQL Server application running on your computer. A part of the SQL Server error log file resembles this:
 
 ```output
-2021-09-15 11:50:32.690 Server       Microsoft SQL Server 2019 (RTM-CU12) (KB5004524) - 15.0.4153.1 (X64) 
-    Jul 19 2021 15:37:34 
+2021-09-15 11:50:32.690 Server       Microsoft SQL Server 2019 (RTM-CU12) (KB5004524) - 15.0.4153.1 (X64)
+    Jul 19 2021 15:37:34
     Copyright (C) 2019 Microsoft Corporation
     Enterprise Edition (64-bit) on Windows 10 Pro 10.0 <X64> (Build 19043: ) (Hypervisor)
 2021-09-15 11:50:32.690 Server       UTC adjustment: -5:00
@@ -128,11 +128,11 @@ SQLDumper.exe exists primarily to generate memory dumps for the SQL Server proce
 
 If in some cases the dump size is too large, for example, you can modify the path by doing the following:
 
-1. Open **SQL Server Configuration Manager**.  
-2. Under **SQL Server Services**, locate the SQL Server under investigation.
-3. Right-click it, select **Properties** and go to the **Advanced** tab.
-4. Modify that Dump Directory to the desired path and select **OK**.
-5. Restart SQL Server (when possible) for the new setting to take effect.
+1. Open **SQL Server Configuration Manager**.
+1. Under **SQL Server Services**, locate the SQL Server under investigation.
+1. Right-click it, select **Properties** and go to the **Advanced** tab.
+1. Modify that Dump Directory to the desired path and select **OK**.
+1. Restart SQL Server (when possible) for the new setting to take effect.
 
 When the Sqldumper.exe utility is used manually to generate a dump file for any Windows application, the dump file may be as large as the memory that the Windows application is currently using. Make sure that sufficient disk space is available on the drive to which the Sqldumper.exe utility is writing the dump file.
 
@@ -141,19 +141,19 @@ When the Sqldumper.exe utility is used manually to generate a dump file for any 
 You can specify the directory where you want the Sqldumper.exe utility to write the dump file. The directory must already exist before you run the Sqldumper.exe utility. Otherwise, the Sqldumper.exe utility will fail. Don't use a UNC path as a location for the dump file. The following is an example of how to specify the dump file location of the mini-dump file:
 
 1. Select **Start** > **Run**, type _cmd_, and then select **OK**.
-2. At the command prompt, type the following command, and then press **Enter**:
+1. At the command prompt, type the following command, and then press **Enter**:
 
     ```dos
     cd <SQLServerInstall Drive>:\Program Files\Microsoft SQL Server\<number>\Shared
     ```
 
-3. Type the following command at the command prompt, and then press **Enter**:
+1. Type the following command at the command prompt, and then press **Enter**:
 
     ```dos
     Sqldumper.exe ProcessID 0 0x0128 0 <MdumpPath>
     ```
 
-    > [!NOTE]
+    > [!NOTE]  
     > \<MdumpPath\> is a placeholder for the directory where you want the Sqldumper.exe utility to write the dump file. By default, the file is written to the current folder.
 
 If you specify a full dump file or a filtered dump file to be generated, the Sqldumper.exe utility may take several minutes to generate the dump file. The time depends on the following variables:
@@ -188,7 +188,7 @@ If you notice that no dump file has been generated in the current folder after y
 
 If an error message that resembles one of the following is generated, you can safely ignore this message:
 
->Unknown callback type during minidump 6  
+> Unknown callback type during minidump 6  
 Unknown callback type during minidump 7
 
 ## Impact of dump generation
@@ -279,7 +279,7 @@ The methods described are able to generate three different types of dumps: [mini
 
 This type of memory dump is a snapshot of all active threads of the process ("thread stacks"), along with a limited extract of the memory referenced by the thread stacks and some other key process/thread data. They're typically a few megabytes in size, and are fast to generate (from less than a second to a couple of seconds). Even larger server systems (with hundreds of CPU indirectly driving massive number of threads in SQL Server process) will rarely exceed 20-30 MB: the size of a mini dump doesn't grow with the size of SQL Server process. This dump type is the default type used by SQL Server when generating memory dumps automatically on exceptions, scheduler issues, latch issues, etc.
 
-> [!NOTE]
+> [!NOTE]  
 > SQL Server, as part of its built-in instrumentation, will generate automated "diagnostic mini dumps" in some specific situations. This operation is therefore considered safe enough that SQL Server can trigger it automatically when needed.
 
 #### Full dumps
@@ -293,7 +293,7 @@ As the RAM size of typical servers running SQL Server steadily increases, full d
 You can use the following query to get a rough estimate of the filtered dump size. Though the expectation is that most data/index pages are excluded from the dump, the ones that are exclusively latched and being modified won't be left out.
 
 ```sql
-SELECT SUM(pages_kb) 
+SELECT SUM(pages_kb)
 FROM sys.dm_os_memory_clerks
 WHERE type != 'MEMORYCLERK_SQLBUFFERPOOL'
 ```
@@ -314,9 +314,9 @@ In cluster failover scenarios, the SQL Server resource DLL can obtain a dump fil
 
 - SqlDumperDumpTimeOut
     A user-specified time-out. The resource DLL waits for the dump file to be completed before the resource DLL stops the SQL Server service.
-- SqlDumperDumpPath  
+- SqlDumperDumpPath
     The location where the Sqldumper.exe utility generates the dump file.
-- SqlDumperDumpFlags  
+- SqlDumperDumpFlags
     Flags that the Sqldumper.exe utility uses.
 
 If any one of the properties isn't set, the Sqldumper.exe utility can't generate the dump file. A warning message will be logged both in the event log and in the cluster log whenever the resource is brought online.
@@ -350,7 +350,7 @@ Get-ClusterResource -Name "SQL Server (SQL2017AG)" | Get-ClusterParameter
 To set the Sqldumper.exe utility properties for cluster failover, follow these steps:
 
 1. Select **Start** > **Run**, type _cmd_, and then select **OK**.
-2. For each property, type the corresponding command at the command prompt, and then press **Enter**:
+1. For each property, type the corresponding command at the command prompt, and then press **Enter**:
    - The `SqlDumperDumpFlags` property
 To set the `SqlDumperDumpFlags` property for a specific kind of dump file, type the corresponding command at the command prompt, and then press **Enter**:
      - All thread full dump file
@@ -395,19 +395,19 @@ To set the `SqlDumperDumpFlags` property for a specific kind of dump file, type 
    - The `SqlDumperDumpPath` property
 
      ```dos
-     cluster resource "SQL Server" /priv SqlDumperDumpPath= DirectoryPath     
+     cluster resource "SQL Server" /priv SqlDumperDumpPath= DirectoryPath
      ```
 
-     > [!NOTE]
+     > [!NOTE]  
      > `DirectoryPath` is a placeholder for the directory in which the dump file will be generated, and it should be specified in quotation marks (" ").
 
    - The `SqlDumperDumpTimeOut` property
 
      ```dos
-     cluster resource "SQL Server" /priv SqlDumperDumpTimeOut = <Timeout>  
+     cluster resource "SQL Server" /priv SqlDumperDumpTimeOut = <Timeout>
      ```
 
-     > [!NOTE]
+     > [!NOTE]  
      > \<Timeout\> is a placeholder for the time-out in milliseconds (ms).
 
 The time that the utility takes to generate a dump file of a SQL Server process depends on the computer configuration. For a computer that has lots of memories, the time could be significant. To obtain an estimate of the time that the process takes, use the Sqldumper.exe utility to manually generate a dump file. The valid values for the `SqlDumperDumpTimeOut` property are from **10,000 ms** to **MAXDWORD.MAXDWORD** represents the highest value in the range of the DWORD data type (4294967295).
@@ -423,7 +423,7 @@ cluster resource "SQL Server" /priv "
 To remove the Sqldumper.exe utility properties for cluster failover, follow these steps:
 
 1. Select **Start** > **Run**, type _cmd_, and then select **OK**.
-2. For a specific property, type the corresponding command at the command prompt, and then press **Enter**:
+1. For a specific property, type the corresponding command at the command prompt, and then press **Enter**:
    - The `SqlDumperDumpFlags` property
      - Default instance
 
@@ -438,20 +438,20 @@ To remove the Sqldumper.exe utility properties for cluster failover, follow thes
         ```
 
    - The `SqlDumperDumpPath` property
-     - Default instance  
+     - Default instance
 
         ```dos
         cluster resource "SQL Server" /priv:SqlDumperDumpPath /usedefault
         ```
 
-     - Named instance  
+     - Named instance
 
         ```dos
         cluster resource "SQL Server (INSTANCE1)" /priv:SqlDumperDumpPath /usedefault
         ```
 
    - The `SqlDumperDumpTimeOut` property
-     - Default instance  
+     - Default instance
 
         ```dos
         cluster resource "SQL Server" /priv:SqlDumperDumpTimeOut /usedefault
@@ -483,7 +483,7 @@ dbcc stackdump
 
 To create a full dump, use trace flag 2544.
 
-> [!NOTE]
+> [!NOTE]  
 > After you get the dump file, you should disable the trace flag by using the following command to avoid inadvertently upgrading all further SQL Server self-diagnostic minidumps to larger dumps:
 
 ```SQL
@@ -500,11 +500,11 @@ In case you're unsure of which trace flag remains active, you can execute:
 
 An empty result set indicates no trace flag is active. Conversely, if 2551 is still active you would see:
 
-|TraceFlag|Status| Global| Session|
-|---|---|---|---|
-|2551|      1|      1|      0|
-  
-> [!NOTE]
+| TraceFlag | Status | Global | Session |
+| --- | --- | --- | --- |
+| 2551 | 1 | 1 | 0 |
+
+> [!NOTE]  
 > The `traceflag` enabled by `DBCC TRACEON` are reset (removed) after a service restart.
 
 #### Extended DBCC STACKDUMP functionality introduced in SQL Server 2019
@@ -520,7 +520,7 @@ The `TEXT_DUMP = LIMITED` is the default option. If you would like to receive de
 To generate a filtered dump with limited output in the .txt file, you can execute the following command:
 
 ```sql
-DBCC STACKDUMP WITH FILTERED_DUMP , TEXT_DUMP = LIMITED 
+DBCC STACKDUMP WITH FILTERED_DUMP , TEXT_DUMP = LIMITED
 ```
 
 ## How to use a PowerShell script to generate a dump file with SQLDumper
@@ -535,7 +535,7 @@ DBCC STACKDUMP WITH FILTERED_DUMP , TEXT_DUMP = LIMITED
     $isIntValDelay = $false
     $SqlPidInt = 0
     $NumFoler =""
-    $OneThruFour = "" 
+    $OneThruFour = ""
     $SqlDumpTypeSelection = ""
     $SSASDumpTypeSelection = ""
     $SSISDumpTypeSelection = ""
@@ -548,9 +548,9 @@ DBCC STACKDUMP WITH FILTERED_DUMP , TEXT_DUMP = LIMITED
     $YesNo =""
     $ProductNumber=""
     $ProductStr = ""
-    
+
     Write-Host ""
-    Write-Host "`**********************************************************************"
+    Write-Host "`******************************************************************"
     Write-Host "This script helps you generate one or more SQL Server memory dumps"
     Write-Host "It presents you with choices on:`
                 -target SQL Server process (if more than one)
@@ -558,16 +558,16 @@ DBCC STACKDUMP WITH FILTERED_DUMP , TEXT_DUMP = LIMITED
                 -count and time interval (if multiple memory dumps)
     You can interrupt this script using CTRL+C"
     Write-Host "***********************************************************************"
-    
+
     #check for administrator rights
     #debugging tools like SQLDumper.exe require Admin privileges to generate a memory dump
-    
+
     if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator))
     {
          Write-Warning "Administrator rights are required to generate a memory dump!`nPlease re-run this script as an Administrator!"
          #break
     }
-    
+
     #what product would you like to generate a memory dump
     while(($ProductNumber -ne "1") -and ($ProductNumber -ne "2") -and ($ProductNumber -ne "3") -and ($ProductNumber -ne "4") -and ($ProductNumber -ne "5"))
     {
@@ -579,7 +579,7 @@ DBCC STACKDUMP WITH FILTERED_DUMP , TEXT_DUMP = LIMITED
         Write-Host "5) SQL Server Agent"
         Write-Host ""
         $ProductNumber = Read-Host "Enter 1-5>"
-    
+
         if (($ProductNumber -ne "1") -and ($ProductNumber -ne "2") -and ($ProductNumber -ne "3") -and ($ProductNumber -ne "4")-and ($ProductNumber -ne "5"))
         {
             Write-Host ""
@@ -588,7 +588,7 @@ DBCC STACKDUMP WITH FILTERED_DUMP , TEXT_DUMP = LIMITED
             Start-Sleep -Milliseconds 300
         }
     }
-    
+
     if ($ProductNumber -eq "1")
     {
         $SqlTaskList = Tasklist /SVC /FI "imagename eq sqlservr*" /FO CSV | ConvertFrom-Csv
@@ -614,37 +614,37 @@ DBCC STACKDUMP WITH FILTERED_DUMP , TEXT_DUMP = LIMITED
         $SqlTaskList = Tasklist /SVC /FI "imagename eq sqlagent*" /FO CSV | ConvertFrom-Csv
         $ProductStr = "SQL Server Agent"
     }
-    
+
     if ($SqlTaskList.Count -eq 0)
     {
         Write-Host "There are curerntly no running instances of $ProductStr. Exiting..." -ForegroundColor Green
         break
     }
-    
+
     #if multiple SQL Server instances, get the user to input PID for desired SQL Server
-    if ($SqlTaskList.Count -gt 1) 
+    if ($SqlTaskList.Count -gt 1)
     {
-        Write-Host "More than one $ProductStr instance found." 
-    
-        $SqlTaskList | Select-Object  PID, "Image name", Services |Out-Host 
-    
+        Write-Host "More than one $ProductStr instance found."
+
+        $SqlTaskList | Select-Object  PID, "Image name", Services |Out-Host
+
         #check input and make sure it is a valid integer
         while(($isInt -eq $false) -or ($ValidPid -eq $false))
         {
             Write-Host "Please enter the PID for the desired SQL service from list above" -ForegroundColor Yellow
-            $SqlPidStr = Read-Host ">" 
-        
+            $SqlPidStr = Read-Host ">"
+
             try{
                     $SqlPidInt = [convert]::ToInt32($SqlPidStr)
                     $isInt = $true
                 }
-    
+
             catch [FormatException]
                 {
                      Write-Host "The value entered for PID '",$SqlPidStr,"' is not an integer"
                 }
-        
-            #validate this PID is in the list discovered 
+
+            #validate this PID is in the list discovered
             for($i=0;$i -lt $SqlTaskList.Count;$i++)
             {
                 if($SqlPidInt -eq [int]$SqlTaskList.PID[$i])
@@ -657,37 +657,37 @@ DBCC STACKDUMP WITH FILTERED_DUMP , TEXT_DUMP = LIMITED
                     $ValidPid = $false
                 }
             }
-         }   
-    
-     
+         }
+
+
         Write-Host "Using PID=$SqlPidInt for generating a $ProductStr memory dump" -ForegroundColor Green
         Write-Host ""
-        
+
     }
     else #if only one SQL Server/SSAS on the box, go here
     {
         $SqlTaskList | Select-Object PID, "Image name", Services |Out-Host
         $SqlPidInt = [convert]::ToInt32($SqlTaskList.PID)
-     
+
         Write-Host "Using PID=", $SqlPidInt, " for generating a $ProductStr memory dump" -ForegroundColor Green
         Write-Host ""
     }
-    
+
     #dump type
-    
+
     if ($ProductNumber -eq "1")  #SQL Server memory dump
     {
-        #ask what type of SQL Server memory dump 
+        #ask what type of SQL Server memory dump
         while(($SqlDumpTypeSelection  -ne "1") -and ($SqlDumpTypeSelection -ne "2") -And ($SqlDumpTypeSelection -ne "3") -And ($SqlDumpTypeSelection -ne "4" ))
         {
             Write-Host "Which type of memory dump would you like to generate?" -ForegroundColor Yellow
             Write-Host "1) Mini-dump"
-            Write-Host "2) Mini-dump with referenced memory " -NoNewLine; Write-Host "(Recommended)" 
+            Write-Host "2) Mini-dump with referenced memory " -NoNewLine; Write-Host "(Recommended)"
             Write-Host "3) Filtered dump " -NoNewline; Write-Host "(Not Recommended)" -ForegroundColor Red
             Write-Host "4) Full dump  " -NoNewline; Write-Host "(Do Not Use on Production systems!)" -ForegroundColor Red
             Write-Host ""
             $SqlDumpTypeSelection = Read-Host "Enter 1-4>"
-    
+
             if (($SqlDumpTypeSelection -ne "1") -and ($SqlDumpTypeSelection -ne "2") -And ($SqlDumpTypeSelection -ne "3") -And ($SqlDumpTypeSelection -ne "4" ))
             {
                 Write-Host ""
@@ -696,9 +696,9 @@ DBCC STACKDUMP WITH FILTERED_DUMP , TEXT_DUMP = LIMITED
                 Start-Sleep -Milliseconds 300
             }
         }
-    
+
         Write-Host ""
-    
+
         switch ($SqlDumpTypeSelection)
         {
             "1" {$DumpType="0x0120";break}
@@ -708,10 +708,10 @@ DBCC STACKDUMP WITH FILTERED_DUMP , TEXT_DUMP = LIMITED
             default {"0x0120"; break}
         }
     }
-    elseif ($ProductNumber -eq "2")  #SSAS dump 
+    elseif ($ProductNumber -eq "2")  #SSAS dump
     {
-    
-        #ask what type of SSAS memory dump 
+
+        #ask what type of SSAS memory dump
         while(($SSASDumpTypeSelection  -ne "1") -and ($SSASDumpTypeSelection -ne "2"))
         {
             Write-Host "Which type of memory dump would you like to generate?" -ForegroundColor Yellow
@@ -719,7 +719,7 @@ DBCC STACKDUMP WITH FILTERED_DUMP , TEXT_DUMP = LIMITED
             Write-Host "2) Full dump  " -NoNewline; Write-Host "(Do Not Use on Production systems!)" -ForegroundColor Red
             Write-Host ""
             $SSASDumpTypeSelection = Read-Host "Enter 1-2>"
-    
+
             if (($SSASDumpTypeSelection -ne "1") -and ($SSASDumpTypeSelection -ne "2"))
             {
                 Write-Host ""
@@ -728,9 +728,9 @@ DBCC STACKDUMP WITH FILTERED_DUMP , TEXT_DUMP = LIMITED
                 Start-Sleep -Milliseconds 300
             }
         }
-    
+
         Write-Host ""
-    
+
         switch ($SSASDumpTypeSelection)
         {
             "1" {$DumpType="0x0";break}
@@ -738,18 +738,18 @@ DBCC STACKDUMP WITH FILTERED_DUMP , TEXT_DUMP = LIMITED
             default {"0x0120"; break}
         }
     }
-    
+
     elseif ($ProductNumber -eq "3" -or $ProductNumber -eq "4" -or $ProductNumber -eq "5")  #SSIS/SSRS/SQL Agent dump
     {
-        #ask what type of SSIS memory dump 
+        #ask what type of SSIS memory dump
         while(($SSISDumpTypeSelection   -ne "1") -and ($SSISDumpTypeSelection  -ne "2"))
         {
             Write-Host "Which type of memory dump would you like to generate?" -ForegroundColor Yellow
             Write-Host "1) Mini-dump"
-            Write-Host "2) Full dump" 
+            Write-Host "2) Full dump"
             Write-Host ""
             $SSISDumpTypeSelection = Read-Host "Enter 1-2>"
-    
+
             if (($SSISDumpTypeSelection  -ne "1") -and ($SSISDumpTypeSelection  -ne "2"))
             {
                 Write-Host ""
@@ -758,9 +758,9 @@ DBCC STACKDUMP WITH FILTERED_DUMP , TEXT_DUMP = LIMITED
                 Start-Sleep -Milliseconds 300
             }
         }
-    
+
         Write-Host ""
-    
+
         switch ($SSISDumpTypeSelection)
         {
             "1" {$DumpType="0x0";break}
@@ -768,7 +768,7 @@ DBCC STACKDUMP WITH FILTERED_DUMP , TEXT_DUMP = LIMITED
             default {"0x0120"; break}
         }
     }
-    
+
     # Sqldumper.exe PID 0 0x0128 0 c:\temp
     #output folder
     while($OutputFolder -eq "" -or !(Test-Path -Path $OutputFolder))
@@ -781,47 +781,47 @@ DBCC STACKDUMP WITH FILTERED_DUMP , TEXT_DUMP = LIMITED
             Write-Host "'" $OutputFolder "' is not a valid folder. Please, enter a valid folder location" -ForegroundColor Yellow
         }
     }
-    
+
     #strip the last character of the Output folder if it is a backslash "\". Else Sqldumper.exe will fail
     if ($OutputFolder.Substring($OutputFolder.Length-1) -eq "\")
     {
         $OutputFolder = $OutputFolder.Substring(0, $OutputFolder.Length-1)
         Write-Host "Stripped the last '\' from output folder name. Now folder name is  $OutputFolder"
     }
-    
+
     #find the highest version of SQLDumper.exe on the machine
     $NumFolder = dir "c:\Program Files\microsoft sql server\1*" | Select-Object @{name = "DirNameInt"; expression={[int]($_.Name)}}, Name, Mode | Where-Object Mode -Match "da*" | Sort-Object DirNameInt -Descending
-    
+
     for($j=0;($j -lt $NumFolder.Count); $j++)
     {
         $SQLNumfolder = $NumFolder.DirNameInt[$j]   #start with the highest value from sorted folder names - latest version of dumper
         $SQLDumperDir = "c:\Program Files\microsoft sql server\"+$SQLNumfolder.ToString()+"\Shared\"
-        $TestPathDumperDir = $SQLDumperDir+"sqldumper.exe" 
-        
-        $TestPathResult = Test-Path -Path $SQLDumperDir 
-        
+        $TestPathDumperDir = $SQLDumperDir+"sqldumper.exe"
+
+        $TestPathResult = Test-Path -Path $SQLDumperDir
+
         if ($TestPathResult -eq $true)
         {
             break;
         }
      }
-    
+
     #build the SQLDumper.exe command e.g. (Sqldumper.exe 1096 0 0x0128 0 c:\temp\)
-    
+
     $cmd = "$([char]34)"+$SQLDumperDir + "sqldumper.exe$([char]34)"
     $arglist = $SqlPidInt.ToString() + " 0 " +$DumpType +" 0 $([char]34)" + $OutputFolder + "$([char]34)"
     Write-Host "Command for dump generation: ", $cmd, $arglist -ForegroundColor Green
-    
+
     #do-we-want-multiple-dumps section
     Write-Host ""
     Write-Host "This utility can generate multiple memory dumps, at a certain interval"
     Write-Host "Would you like to collect multiple memory dumps (2 or more)?" -ForegroundColor Yellow
-    
+
     #validate Y/N input
     while (($YesNo -ne "y") -and ($YesNo -ne "n"))
     {
         $YesNo = Read-Host "Enter Y or N>"
-    
+
         if (($YesNo -eq "y") -or ($YesNo -eq "n") )
         {
             break
@@ -831,7 +831,7 @@ DBCC STACKDUMP WITH FILTERED_DUMP , TEXT_DUMP = LIMITED
             Write-Host "Not a valid 'Y' or 'N' response"
         }
     }
-    
+
     #get input on how many dumps and at what interval
     if ($YesNo -eq "y")
     {
@@ -840,87 +840,86 @@ DBCC STACKDUMP WITH FILTERED_DUMP , TEXT_DUMP = LIMITED
             {
                 Write-Host "How many dumps would you like to generate for this $ProductStr ?" -ForegroundColor Yellow
                 $DumpCountStr = Read-Host ">"
-        
+
                 try{
                         $DumpCountInt = [convert]::ToInt32($DumpCountStr)
-    
+
                         if(1 -ge $DumpCountInt)
                         {
                             Write-Host "Please enter a number greater than one." -ForegroundColor Red
                         }
                     }
-    
+
                 catch [FormatException]
                     {
                          Write-Host "The value entered for dump count '",$DumpCountStr,"' is not an integer" -ForegroundColor Red
                     }
             }
-    
+
         [int]$DelayIntervalInt=0
         while(0 -ge $DelayIntervalInt)
             {
                 Write-Host "How frequently (in seconds) would you like to generate the memory dumps?" -ForegroundColor Yellow
                 $DelayIntervalStr = Read-Host ">"
-        
+
                 try{
                         $DelayIntervalInt = [convert]::ToInt32($DelayIntervalStr)
-                        
+
                         if(0 -ge $DelayIntervalInt)
                         {
                             Write-Host "Please enter a number greater than zero." -ForegroundColor Red
                         }
                     }
-    
+
                 catch [FormatException]
                     {
                          Write-Host "The value entered for frequency (in seconds) '",$DelayIntervalStr,"' is not an integer" -ForegroundColor Red
                     }
             }
-    
+
         Write-Host "Generating $DumpCountInt memory dumps at a $DelayIntervalStr-second interval" -ForegroundColor Green
-    
-        #loop to generate multiple dumps    
+
+        #loop to generate multiple dumps
         $cntr = 0
         while($true)
         {
-            Start-Process -FilePath $cmd -Wait -Verb runAs -ArgumentList $arglist 
+            Start-Process -FilePath $cmd -Wait -Verb runAs -ArgumentList $arglist
             $cntr++
-    
+
             Write-Host "Generated $cntr memory dump(s)." -ForegroundColor Green
-    
+
             if ($cntr -ge $DumpCountInt)
             {
                 break
             }
             Start-Sleep -S $DelayIntervalInt
         }
-    
+
         #print what files exist in the output folder
         Write-Host ""
         Write-Host "Here are all the memory dumps in the output folder '$OutputFolder'" -ForegroundColor Green
         $MemoryDumps = $OutputFolder + "\SQLDmpr*"
         Get-ChildItem -Path $MemoryDumps
-    
+
         Write-Host ""
         Write-Host "Process complete"
     }
-    
+
     else #produce just a single dump
     {
-        Start-Process -FilePath $cmd -Wait -Verb runAs -ArgumentList $arglist 
-    
+        Start-Process -FilePath $cmd -Wait -Verb runAs -ArgumentList $arglist
+
         #print what files exist in the output folder
         Write-Host ""
         Write-Host "Here are all the memory dumps in the output folder '$OutputFolder'" -ForegroundColor Green
         $MemoryDumps = $OutputFolder + "\SQLDmpr*"
         Get-ChildItem -Path $MemoryDumps
-    
+
         Write-Host ""
         Write-Host "Process complete"
     }
-    
-    Write-Host "For errors and completion status, review SQLDUMPER_ERRORLOG.log created by SQLDumper.exe in the output folder '$OutputFolder'. `Or if SQLDumper.exe failed look in the folder from which you are running this script"
 
+    Write-Host "For errors and completion status, review SQLDUMPER_ERRORLOG.log created by SQLDumper.exe in the output folder '$OutputFolder'. `Or if SQLDumper.exe failed look in the folder from which you are running this script"
     ```
 
 - Run it from Command Prompt as administrator by using the following command:
@@ -935,19 +934,19 @@ DBCC STACKDUMP WITH FILTERED_DUMP , TEXT_DUMP = LIMITED
     .\SQLDumpHelper.ps1
     ```
 
-> [!NOTE]
+> [!NOTE]  
 > If you have never executed PowerShell scripts on your system, you may receive the error message:
->
+>  
 > "File ...SQLDumpHelper.ps1 cannot be loaded because running scripts is disabled on this system."
 
 You have to enable the ability to run them by the following steps:
 
 1. Start Windows PowerShell console with the **Run as Administrator** option. Only members of the administrators group on the computer can change the execution policy.
-2. Enable running unsigned scripts by the following command:
+1. Enable running unsigned scripts by the following command:
 
     ```powershell
     Set-ExecutionPolicy RemoteSigned
     ```
 
-    > [!NOTE]
+    > [!NOTE]  
     > This will allow you to run unsigned scripts that you create on your local computer and signed scripts from Internet.
