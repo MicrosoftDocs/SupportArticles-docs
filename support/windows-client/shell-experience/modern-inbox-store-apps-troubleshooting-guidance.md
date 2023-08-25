@@ -1,7 +1,7 @@
 ---
 title: Modern, Inbox, and Microsoft Store Apps troubleshooting guidance
 description: Provides guidance to troubleshoot Modern, Inbox, and Microsoft Store Apps.
-ms.date: 06/02/2023
+ms.date: 08/25/2023
 author: v-lianna
 ms.author: v-lianna
 manager: dcscontentpm
@@ -25,12 +25,12 @@ Modern Apps or Microsoft Store Apps can sometimes fail to start or launch and th
 1. [Verify if the application is registered or installed for your user.](#checklist-1)
 2. [Re-register the application for the user may resolve activation issues.](#checklist-2)
 3. [If you receive no response to the Get-AppxPackage cmdlet, you can still use the Add-AppxPackage cmdlet.](#checklist-3)
-4. [For a System Application, the path is slightly different.](#checklist-4)
-5. [For the XML path, you need to check which version you have installed.](#checklist-5)
-6. [If the application still fails to start after registration, perhaps the package for the application is corrupted or missing some components.](#checklist-6)
-7. [For a single application, you can use the winget command.](#checklist-7)
-8. [Check if the system setup has appropriate settings to download and install AppX packages.](#checklist-8)
-9. [If Microsoft Store has issues starting or was previously removed, try reinstalling it.](#checklist-9)
+4. [For the XML path, you need to check which version you have installed.](#checklist-4)
+5. [If the application still fails to start after registration, perhaps the package for the application is corrupted or missing some components.](#checklist-5)
+6. [For a single application, you can use the winget command.](#checklist-6)
+7. [Check if the system setup has appropriate settings to download and install AppX packages.](#checklist-7)
+8. [If Microsoft Store has issues starting or was previously removed, try reinstalling it.](#checklist-8)
+9. [If the application still fails, some event logs might be helpful.](#checklist-9)
 
 Here's the detailed troubleshooting checklist:
 
@@ -75,9 +75,27 @@ Here's the detailed troubleshooting checklist:
     ```
 
     > [!NOTE]
-    > Notice how we return the output from the 'get-appxpackage' cmdlet to feed into the `Add-AppxPackage' cmdlet using the pipe `|` cmdlet. This only works if the package is already registered.
+    > Notice how we return the output from the `Get-AppxPackage` cmdlet to feed into the `Add-AppxPackage` cmdlet using the pipe `|` cmdlet. This only works if the package is already registered.
 
-3. <a id="checklist-3"></a>If you receive no response to the `Get-AppxPackage` cmdlet, you can still use the `Add-AppxPackage` cmdlet by using the family name or the path to the *AppxManifest.xml* file:
+3. <a id="checklist-3"></a>If you receive no response to the `Get-AppxPackage` cmdlet, you can still use the `Add-AppxPackage` cmdlet by using the family name or the path to the *AppxManifest.xml* file.
+
+    This is possible because although this user doesn't have the package registered, other users might. This means that the package will still exist on the machine.
+
+    To check this, add `-AllUsers` to the same `Get-AppxPackage` cmdlet we used before in an elevated PowerShell prompt:
+
+    ```powershell
+    Get-AppxPackage *calculator* -AllUsers
+    ```
+
+    A successful return of the app details confirms that the package is present:
+
+    ```powershell
+    PS C:\WINDOWS\system32> Get-AppxPackage *calculator* -AllUsers
+    ```
+
+    Use one of the following cmdlets to try to register the app for this user.
+
+    Be sure not to use the elevated PowerShell prompt unless you wish the app registered to the administrator instead of the user.
 
     ```powershell
     Add-AppxPackage -RegisterByFamilyName -MainPackage Microsoft.WindowsCalculator_8wekyb3d8bbwe
@@ -87,7 +105,7 @@ Here's the detailed troubleshooting checklist:
     Add-AppxPackage -path "c:\Program Files\WindowsApps\Microsoft.WindowsCalculator_11.2210.0.0_x64__8wekyb3d8bbwe\AppxManifest.xml" -DisableDevelopmentMode -Register
     ```
 
-4. <a id="checklist-4"></a>For a System Application, the path is slightly different:
+    For a System Application, the XML path is slightly different:
 
     ```powershell
     Add-AppxPackage -Path "C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy\AppXManifest.xml" -DisableDevelopmentMode -Register
@@ -96,7 +114,7 @@ Here's the detailed troubleshooting checklist:
     > [!NOTE]
     > Be sure to use the `Add-AppxPackage` cmdlet from a non-elevated prompt, or the package will be registered to the admin instead of the user.
 
-5. <a id="checklist-5"></a>For the XML path, you need to check which version you have installed. You can do this from an elevated PowerShell prompt with a `dir` cmdlet:
+4. <a id="checklist-4"></a>For the XML path, you need to check which version you have installed. You can do this from an elevated PowerShell prompt with a `dir` cmdlet:
 
     ```powershell
     dir "c:\Program Files\WindowsApps\Microsoft.WindowsCalculator*"
@@ -111,9 +129,9 @@ Here's the detailed troubleshooting checklist:
     d-----        <Date>     <Time>                Microsoft.WindowsCalculator_11.2210.0.0_x64__8wekyb3d8bbwe
     ```
 
-6. <a id="checklist-6"></a>If the application still fails to start after registration, perhaps the package for the application is corrupted or missing some components. Get a new package for the machine by using Microsoft Store (public or private) or Windows Package Manager (winget). For more information, see [Troubleshoot Apps failing to start using Windows Package Manager](troubleshoot-apps-start-failure-use-windows-package-manager.md).
+5. <a id="checklist-5"></a>If the application still fails to start after basic re-registration, try using the [Reset-AppxPackage](/powershell/module/appx/reset-appxpackage) cmdlet to restore the app to the original configuration. If the app is still not working, perhaps the package for the application is corrupted or missing some components. Get a new package for the machine by using Microsoft Store (public or private) or Windows Package Manager (winget). For more information, see [Troubleshoot Apps failing to start using Windows Package Manager](troubleshoot-apps-start-failure-use-windows-package-manager.md).
 
-7. <a id="checklist-7"></a>For a single application, you can use the `winget` command. To search for an application, use the following command:
+6. <a id="checklist-6"></a>For a single application, you can use the `winget` command. To search for an application, use the following command:
 
     ```console
     winget search <AppName>
@@ -189,7 +207,7 @@ Here's the detailed troubleshooting checklist:
     } 
     ```
 
-8. <a id="checklist-8"></a>Check if the system setup has appropriate settings to download and install AppX packages.
+7. <a id="checklist-7"></a>Check if the system setup has appropriate settings to download and install AppX packages.
 
     Use the following script to check more common Store configuration settings to see if downloads are possible.
 
@@ -538,7 +556,7 @@ Here's the detailed troubleshooting checklist:
 
     ```
 
-9. <a id="checklist-9"></a>If Microsoft Store has issues starting or was previously removed, try reinstalling it.
+8. <a id="checklist-8"></a>If Microsoft Store has issues starting or was previously removed, try reinstalling it.
 
     > [!NOTE]
     > Removing Microsoft Store is not supported. For more information, see [Removing, uninstalling, or reinstalling Microsoft Store app isn't supported](cannot-remove-uninstall-or-reinstall-microsoft-store-app.md).
@@ -680,7 +698,7 @@ Here's the detailed troubleshooting checklist:
 
     ```
 
-10. If the application still fails, the following event logs might be helpful.
+9. <a id="checklist-9"></a>If the application still fails, the following event logs might be helpful.
 
     - Application Event Log
     - System Event Log
