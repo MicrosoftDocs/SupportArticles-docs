@@ -3,10 +3,8 @@ title: Azure Application Insights Agent troubleshooting and known issues
 description: Review Application Insights Agent known issues and troubleshooting examples. Works with ASP.NET web apps hosted on-premises, in virtual machines, or on Azure.
 ms.topic: conceptual
 ms.date: 6/21/2022
-ms.author: v-dele
-author: DennisLee-DennisLee
 editor: v-jsitser
-ms.reviewer: aaronmax
+ms.reviewer: aaronmax, v-leedennis
 ms.service: azure-monitor
 ms.subservice: application-insights
 #Customer intent: As an Application Insights user I want to understand known issues for the Application Insights Agent and how to troubleshoot common issues so I can use Application Insights and the Agent effectively.

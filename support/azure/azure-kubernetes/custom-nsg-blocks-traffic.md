@@ -2,9 +2,7 @@
 title: Fix time-out errors caused by a custom NSG that blocks traffic
 description: Troubleshoot time-out errors that occur because a custom network security group (NSG) blocks traffic to an app hosted on an Azure Kubernetes Service cluster.
 ms.date: 8/23/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
-ms.reviewer: chiragpa
+ms.reviewer: chiragpa, v-leedennis
 editor: v-jsitser
 ms.service: azure-kubernetes-service
 ms.subservice: cannot-connect-to-app-on-cluster

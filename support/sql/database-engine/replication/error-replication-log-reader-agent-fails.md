@@ -4,7 +4,6 @@ description: This article describes troubleshooting steps that might help resolv
 ms.date: 11/12/2020
 ms.custom: sap:Replication, change tracking, change data capture
 ms.reviewer: ramakoni
-ms.prod: sql
 ---
 # 20011 error messages in SQL Server when the Replication Log Reader Agent fails
 

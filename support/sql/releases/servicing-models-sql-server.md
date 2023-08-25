@@ -2,10 +2,7 @@
 title: Servicing models for SQL Server
 description: This article describes the information regarding servicing channels for currently supported versions of SQL Server.
 ms.date: 02/15/2023
-ms.reviewer: ramakoni
-ms.author: v-sidong
-author: sevend2
-ms.prod: sql
+ms.reviewer: ramakoni, v-sidong
 ---
 
 # Servicing models for SQL Server
@@ -15,7 +12,7 @@ _Original KB number:_ &nbsp; 935897
 
 This article provides more information about servicing channels for currently supported versions of Microsoft SQL Server. The criteria for fixes includes workaround availability, customer effect, reproducibility, the complexity of the code that must be changed, and so on.  
 
-To determine the version, edition, and the latest updates of your SQL Server instance, review [Determine the version, edition, and update level of SQL Server and its components](../releases/download-and-install-latest-updates.md). For details about the support cycle for each product, check [mainstream lifecycle](/lifecycle/products/?products=sql-server). To understand the various options that are available for SQL Server products that have reached the end of support, review [SQL Server end of support options](/sql/sql-server/end-of-support/sql-server-end-of-support-overview).
+To determine the version, edition, and the latest updates of your SQL Server instance, review [Determine the version, edition, and update level of SQL Server and its components](download-and-install-latest-updates.md). For details about the support cycle for each product, check [mainstream lifecycle](/lifecycle/products/?products=sql-server). To understand the various options that are available for SQL Server products that have reached the end of support, review [SQL Server end of support options](/sql/sql-server/end-of-support/sql-server-end-of-support-overview).
 
 ## Delivery mechanisms for SQL Server updates
 
@@ -111,11 +108,11 @@ If you're using CUs for your SQL Server instance, you can check whether there's 
 
 ## Security fixes and security updates
 
-**Security fixes:** Fixes that are generally shipped in a CU for which components in a fix list table for the corresponding CU are set to **SQL Security**. (For more information, see [Explanation of Fix areas column in the Fix list KB articles for cumulative updates and service packs](/troubleshoot/sql/database-engine/install/windows/naming-schema-and-fix-area#explanation-of-fix-areas-column-in-the-fix-list-kb-articles-for-cumulative-updates-and-service-packs)). Or, for which a component for the corresponding fix is set to Security Infrastructure in the detailed fix list table in the [builds spreadsheet](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fdownload.microsoft.com%2Fdownload%2Fd%2F3%2Fe%2Fd3e28f3d-6a4f-47ce-aaa5-9d74c5590ed6%2FSQLServerBuilds.xlsx&wdOrigin=BROWSELINK). These are the fixes that are made to the security components of a SQL Server database engine.
+**Security fixes:** Fixes that are generally shipped in a CU for which components in a fix list table for the corresponding CU are set to **SQL Security**. (For more information, see [Explanation of Fix areas column in the Fix list KB articles for cumulative updates and service packs](../database-engine/install/windows/naming-schema-and-fix-area.md#explanation-of-fix-areas-column-in-the-fix-list-kb-articles-for-cumulative-updates-and-service-packs)). Or, for which a component for the corresponding fix is set to Security Infrastructure in the detailed fix list table in the [builds spreadsheet](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fdownload.microsoft.com%2Fdownload%2Fd%2F3%2Fe%2Fd3e28f3d-6a4f-47ce-aaa5-9d74c5590ed6%2FSQLServerBuilds.xlsx&wdOrigin=BROWSELINK). These are the fixes that are made to the security components of a SQL Server database engine.
 
 **Security updates:** A security fix to address vulnerabilities that can be used to compromise your SQL Server installation. These are released through a GDR (either an RTM-GDR or a CU-GDR). Subsequent CUs or GDRs include these security updates. Microsoft advises customers to install the latest product releases, security updates, service packs, and cumulative updates to remain as secure as possible. For more information, see [Fixed Lifecycle Policy](/lifecycle/policies/fixed).
 
-To check whether a GDR is a security update, you should review the release documentation for the corresponding GDR. Security updates always have an associated Common Vulnerability and Exposure (CVE) note. For example, the documentation for CU29-GDR ("[KB5014553 - Description of the security update for SQL Server 2017 CU29: June 14, 2022](https://support.microsoft.com/topic/kb5014553-description-of-the-security-update-for-sql-server-2017-cu29-june-14-2022-024a90f1-1173-4ade-9c18-816ee7150458)") has a link to [CVE-2022-29143](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-29143) that opens in the Security Update Guide on the Microsoft - MSRC website. For more information, see [Coming Soon: New Security Update Guide Notification System](https://msrc.microsoft.com/blog/2022/01/coming-soon-new-security-update-guide-notification-system/).
+To check whether a GDR is a security update, you should review the release documentation for the corresponding GDR. Security updates always have an associated Common Vulnerability and Exposure (CVE) note. For example, the documentation for CU29-GDR ("[KB5014553 - Description of the security update for SQL Server 2017 CU29: June 14, 2022](https://support.microsoft.com/topic/024a90f1-1173-4ade-9c18-816ee7150458)") has a link to [CVE-2022-29143](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-29143) that opens in the Security Update Guide on the Microsoft - MSRC website. For more information, see [Coming Soon: New Security Update Guide Notification System](https://msrc.microsoft.com/blog/2022/01/coming-soon-new-security-update-guide-notification-system/).
 
 > [!NOTE]
 > GDRs don't necessarily have to be security updates. For example, "[KB4517790 - Servicing Update for SQL Server 2019 RTM](https://support.microsoft.com/topic/kb4517790-servicing-update-for-sql-server-2019-rtm-7faa2daf-df06-276d-40c2-9d33961de5f6)" is a non-security GDR release.

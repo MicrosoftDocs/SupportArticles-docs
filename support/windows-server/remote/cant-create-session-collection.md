@@ -53,4 +53,4 @@ Microsoft has confirmed that it's a problem in the Microsoft products that are l
 
 ## More information
 
-For more information, see [Description of the standard terminology that is used to describe Microsoft software updates](/troubleshoot/windows-client/deployment/standard-terminology-software-updates).
+For more information, see [Description of the standard terminology that is used to describe Microsoft software updates](../../windows-client/deployment/standard-terminology-software-updates.md).

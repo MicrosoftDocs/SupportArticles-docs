@@ -196,13 +196,13 @@ Windows client devices can receive updates from various sources, including Windo
 
     ```powershell
     
-    \$MUSM = New-Object -ComObject "Microsoft.Update.ServiceManager"
+    $MUSM = New-Object -ComObject "Microsoft.Update.ServiceManager"
     ```
 
 3. Run the cmdlet:
 
     ```powershell
-    \$MUSM.Services
+    $MUSM.Services
     ```
 
 Check the output for the Name and OffersWindowsUPdates parameters, which you can interpret according to this table.
@@ -285,4 +285,4 @@ In these cases, users that programmatically call into the Windows Update Agent A
 
 ## Data collection
 
-If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

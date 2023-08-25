@@ -4,9 +4,7 @@ description: Troubleshoot common errors related to SubscriptionPolicyCountExceed
 ms.service: cloud-services
 ms.subservice: troubleshoot-deployment-classic
 ms.date: 09/26/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
-ms.reviewer: chiragpa
+ms.reviewer: chiragpa, v-leedennis
 articleID: 1eb5e3dd-a286-45d4-b653-7f87972b103e
 ---
 # Troubleshoot Cloud Service (classic) SubscriptionPolicyCountExceeded exceptions
@@ -27,10 +25,10 @@ For more information, see [Azure subscription limits and quotas - Azure Resource
 The Azure Cloud Service subscription failed to deploy. Either of the following error messages are displayed:
 
 > "code":"DomainNameOperationFailed",
-"message":"Unable to create domain name 'CloudServiceName': 'The subscription policy limit for resource type 'hosted service count' was exceeded. The limit for resource type 'hosted service count' is 20 per subscription, the current count is 20, and the requested increment is 1.”
+"message":"Unable to create domain name 'CloudServiceName': 'The subscription policy limit for resource type 'hosted service count' was exceeded. The limit for resource type 'hosted service count' is 20 per subscription, the current count is 20, and the requested increment is 1."
 
-> “code”:“OperationFailed”,
-“message”:“The operation 'operation-id' failed: The subscription policy limit for resource type 'cores count' was exceeded. The limit for resource type 'cores count' is 350 per subscription, the current count is 345, and the requested increment is 10.”
+> "code":"OperationFailed",
+"message":"The operation 'operation-id' failed: The subscription policy limit for resource type 'cores count' was exceeded. The limit for resource type 'cores count' is 350 per subscription, the current count is 345, and the requested increment is 10."
 
 ## Cause 1: Too many hosted cloud services
 

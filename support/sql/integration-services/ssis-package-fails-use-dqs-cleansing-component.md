@@ -4,7 +4,6 @@ description: This article provides a workaround for the problem that occurs when
 ms.date: 09/21/2020
 ms.custom: sap:Integration Services
 ms.reviewer: jasonh
-ms.prod: sql
 ---
 # Error message when you deploy an SSIS package to a different server in SQL Server
 

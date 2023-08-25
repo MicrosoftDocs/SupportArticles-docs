@@ -32,7 +32,7 @@ After you deploy the image, these settings are applied to all new users who log 
 > [!NOTE]
 > This article supersedes all previously published procedures for customizing default local user profiles when you prepare images.
 
-For more information about the steps to customize the default local user profile for Windows Vista or later operating systems, see [How to customize default user profiles in Windows Vista, Windows Server 2008, Windows 7, and in Windows Server 2008 R2](/troubleshoot/windows-client/deployment/customize-default-local-user-profile).
+For more information about the steps to customize the default local user profile for Windows Vista or later operating systems, see [How to customize default user profiles in Windows Vista, Windows Server 2008, Windows 7, and in Windows Server 2008 R2](customize-default-local-user-profile.md).
 
 ## How to customize the default local user profile in Windows XP or in Windows Server 2003
 
@@ -96,4 +96,4 @@ You can automate the procedure in Knowledge Base article 284193 by using the Reg
 
 ## Data collection
 
-If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

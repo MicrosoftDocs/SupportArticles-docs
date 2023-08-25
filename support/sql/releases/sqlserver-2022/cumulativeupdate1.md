@@ -3,8 +3,7 @@ title: Cumulative update 1 for SQL Server 2022 (KB5022375)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 1 (KB5022375).
 ms.date: 2/16/2023
 ms.custom: KB5022375
-author: Elena068
-ms.author: v-qianli2
+ms.reviewer: v-qianli2
 appliesto:
 - SQL Server 2022 on Windows
 - SQL Server 2022 on Linux
@@ -457,7 +456,7 @@ To use one of the hotfixes in this package, you don't have to make any changes t
 <details>
 <summary><b>Important notices</b></summary>
 
-This article also provides the following important information:
+This article also provides the following important information.
 
 ### Analysis Services CU build version
 
@@ -516,7 +515,7 @@ One CU package includes all available updates for all SQL Server 2022 components
 <details>
 <summary><b>Support for this update</b></summary>
 
-If additional issues occur, or if any troubleshooting is required, you might have to create a service request. The usual support costs will apply to additional support questions and to issues that don't qualify for this specific cumulative update package. For a complete list of Microsoft Customer Service and Support telephone numbers, or to create a separate service request, go to the [Microsoft support website](https://support.microsoft.com/contactus/?ws=support).
+If other issues occur, or if any troubleshooting is required, you might have to create a service request. The usual support costs will apply to additional support questions and to issues that don't qualify for this specific cumulative update package. For a complete list of Microsoft Customer Service and Support telephone numbers, or to create a separate service request, go to the [Microsoft support website](https://support.microsoft.com/contactus/?ws=support).
 </details>
 
 ## How to uninstall this update

@@ -1,7 +1,7 @@
 ---
 title: Guidance for troubleshooting DirectAccess
 description: Introduces general guidance for troubleshooting scenarios related to DirectAccess.
-ms.date: 5/10/2022
+ms.date: 07/13/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -76,11 +76,11 @@ The NetNat configuration can be viewed by running the `Get-NetNatTransitionConfi
 
 See the following articles to troubleshoot DirectAccess server console issues:
 
-- [6to4](/troubleshoot/windows-server/networking/troubleshoot-directaccess-server-console-6to4)
-- [DNS](/troubleshoot/windows-server/networking/troubleshoot-directaccess-server-console-dns)
-- [Domain controller and Kerberos](/troubleshoot/windows-server/networking/troubleshoot-directaccess-server-console-dc-kerberos)
-- [IP-HTTPS and IPSec](/troubleshoot/windows-server/networking/troubleshoot-directaccess-server-console-ip-https-ipsec)
-- [Network and high availability](/troubleshoot/windows-server/networking/troubleshoot-directaccess-server-console-networking)
+- [6to4](troubleshoot-directaccess-server-console-6to4.md)
+- [DNS](troubleshoot-directaccess-server-console-dns.md)
+- [Domain controller and Kerberos](troubleshoot-directaccess-server-console-dc-kerberos.md)
+- [IP-HTTPS and IPSec](troubleshoot-directaccess-server-console-ip-https-ipsec.md)
+- [Network and high availability](troubleshoot-directaccess-server-console-networking.md)
 
 ## Data collection
 
@@ -88,35 +88,35 @@ Before contacting Microsoft support, you can gather information about your issue
 
 ### Prerequisites
 
-1. TSSv2 must be run by accounts with administrator privileges on the local system, and EULA must be accepted (once EULA is accepted, TSSv2 won't prompt again).
+1. TSS must be run by accounts with administrator privileges on the local system, and EULA must be accepted (once EULA is accepted, TSS won't prompt again).
 2. We recommend the local machine `RemoteSigned` PowerShell execution policy.
 
 > [!NOTE]
-> If the current PowerShell execution policy doesn't allow running TSSv2, take the following actions:
+> If the current PowerShell execution policy doesn't allow running TSS, take the following actions:
 >
 > - Set the `RemoteSigned` execution policy for the process level by running the cmdlet `PS C:\> Set-ExecutionPolicy -scope Process -ExecutionPolicy RemoteSigned`.
 > - To verify if the change takes effect, run the cmdlet `PS C:\> Get-ExecutionPolicy -List`.
-> - Because the process level permissions only apply to the current PowerShell session, once the given PowerShell window in which TSSv2 runs is closed, the assigned permission for the process level will also go back to the previously configured state.
+> - Because the process level permissions only apply to the current PowerShell session, once the given PowerShell window in which TSS runs is closed, the assigned permission for the process level will also go back to the previously configured state.
 
 ### Gather key information before contacting Microsoft support
 
-1. Download [TSSv2](https://aka.ms/getTSSv2) on all nodes and unzip it in the *C:\\tss_tool* folder.
-2. Open the *C:\\tss_tool* folder from an elevated PowerShell command prompt.
+1. Download [TSS](https://aka.ms/getTSS) on all nodes and unzip it in the *C:\\tss* folder.
+2. Open the *C:\\tss* folder from an elevated PowerShell command prompt.
 3. Start the traces on the client and the server by using the following cmdlets:
 
     > [!NOTE]
-	> If you are using an NLB scenario, then start the logs on all servers.
+    > If you are using an NLB scenario, then start the logs on all servers.
 
     - DA client:  
 
         ```powershell
-        TSSv2.ps1 -Start -Scenario NET_Dacli
+        TSS.ps1 -Scenario NET_Dacli
         ```
 
     - DA server:  
 
         ```powershell
-        TSSv2.ps1 -Start -Scenario NET_DAsrv
+        TSS.ps1 -Scenario NET_DAsrv
         ```
 
 4. Accept the EULA if the traces are run for the first time on the server or the client.
@@ -128,7 +128,7 @@ Before contacting Microsoft support, you can gather information about your issue
 
 7. Enter *Y* to finish the log collection after the issue is reproduced.
 
-The traces will be stored in a zip file in the *C:\\MSDATA* folder, which can be uploaded to the workspace for analysis.
+The traces will be stored in a zip file in the *C:\\MS_DATA* folder, which can be uploaded to the workspace for analysis.
 
 ## Reference
 

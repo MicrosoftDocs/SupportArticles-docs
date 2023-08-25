@@ -1,6 +1,9 @@
 - name: Welcome
   href: welcome-azure-kubernetes.yml
 
+- name: AKS cluster/node is in failed state
+  href: cluster-node-virtual-machine-failed-state.md
+
 - name: Troubleshoot create operations
   items:
   - name: Basic troubleshooting
@@ -96,10 +99,17 @@
 
 - name: Troubleshoot scale operations
   items:
+  - name: Cannot scale cluster autoscaler enabled node pool
+    href: cannot-scale-cluster-autoscaler-enabled-node-pool.md
   - name: Common issues with running or scaling large AKS clusters
     href: aks-at-scale-troubleshoot-guide.md
   - name: Failed to fix node group sizes
     href: cluster-autoscaler-fails-to-scale.md
+
+- name: Troubleshoot Kubernetes control plane
+  items:
+  - name: Troubleshoot API server and etcd
+    href: troubleshoot-apiserver-etcd.md
 
 - name: Troubleshoot node not ready
   items:
@@ -194,6 +204,8 @@
     href: mountoptions-settings-azure-files.md
   - name: Slow attach and detach operations for an Azure Disk
     href: slow-attach-detach-operations-azure-disk.md
+  - name: Troubleshoot common Bring Your Own Key (BYOK) issues
+    href: troubleshoot-common-bring-your-own-key-issues.md
 
 - name: AKS common issues
   items:
@@ -211,24 +223,26 @@
     href: cannot-view-resources-kubernetes-resource-viewer-portal.md
   - name: "Changing property 'imageReference' is not allowed"
     href: changing-property-imagereference-not-allowed.md
-  - name: Cluster provisioning status changed from Ready to Failed
-    href: cluster-provisioning-status-changed-ready-failed.md
   - name: Cluster upgrading and scaling errors
     href: upgrading-or-scaling-does-not-succeed.md
+  - name: OperationIsNotAllowed errors
+    href: operationisnotallowed.md
   - name: '"Error from server: error dialing backend: dial tcp" messages'
     href: error-from-server-error-dialing-backend-dial-tcp.md
   - name: Errors using features that require virtual machine scale sets
     href: error-using-feature-requiring-virtual-machine-scale-set.md
   - name: insufficientSubnetSize error
     href: insufficientsubnetsize-error-advanced-networking.md
+  - name: Memory saturation occurs in pods after cluster upgrade
+    href: aks-memory-saturation-after-upgrade.md
+  - name: Increased memory usage reported in Kubernetes 1.25 or later versions
+    href: aks-increased-memory-usage-cgroup-v2.md
   - name: Missing or invalid service principal
     href: missing-or-invalid-service-principal.md
   - name: Network watch is stale after egress traffic restriction
     href: stale-watch-azure-ad-pod-identity-nmi-status-500.md
   - name: Node count isn't in autoscaler min and max range
     href: node-count-is-not-in-autoscaler-min-max-range.md
-  - name: Node VM is in failed state
-    href: cluster-node-virtual-machine-failed-state.md
   - name: Pod is stuck in CrashLoopBackOff mode
     href: pod-stuck-crashloopbackoff-mode.md
   - name: '"Quota exceeded" error during creation or upgrade'

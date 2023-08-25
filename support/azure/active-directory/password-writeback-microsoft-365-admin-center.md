@@ -2,9 +2,7 @@
 title: Troubleshoot admin password reset on Microsoft 365 admin center
 description: Troubleshoot failed sign-in attempts that occur after an administrator resets a user password in the Microsoft 365 admin center.
 ms.date: 2/25/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
-ms.reviewer: jarrettr, nualex
+ms.reviewer: jarrettr, nualex, v-leedennis
 ms.service: active-directory
 ms.subservice: enterprise-users
 keywords:

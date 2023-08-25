@@ -2,9 +2,7 @@
 title: Troubleshoot VPN profile issues
 description: Understand and troubleshoot VPN profile issues on Android, iOS, and Windows devices in Microsoft Intune. Review logs and see some common issues and resolutions.
 ms.date: 12/06/2022
-ms.reviewer: jarrettr
-author: simonxjx
-ms.author: v-six
+ms.reviewer: jarrettr, v-six
 ---
 # Troubleshooting VPN profile issues in Microsoft Intune
 
@@ -79,7 +77,7 @@ This scenario uses an Android device enrolled as a Personally owned work profile
 
     :::image type="content" source="media/troubleshoot-vpn-profiles/notification-install-vpn-profile-android.png" alt-text="Screenshot that shows the notification to install the VPN profile.":::
 
-1. In the AnyConnect app, tap the **Change Settings** button to enable the **External Control** option.
+   If you don't receive the notification, tap the **Change Settings** button to enable the **External Control** option in the AnyConnect app. Then, you will receive the notification.
 
     :::image type="content" source="media/troubleshoot-vpn-profiles/change-settings-android.png" alt-text="Screenshot that shows the Change Settings button.":::
 

@@ -34,7 +34,7 @@ Also exclude items from the following location:
 
 For information about recommended exclusions for Cluster Services, see the following article:
 
-[Antivirus software that isn't cluster-aware may cause problems with Cluster Services](/troubleshoot/windows-server/high-availability/not-cluster-aware-antivirus-software-cause-issue)
+[Antivirus software that isn't cluster-aware may cause problems with Cluster Services](../../windows-server/high-availability/not-cluster-aware-antivirus-software-cause-issue.md)
 
 #### Azure Site Recovery Hyper-V to Azure deployment: Antivirus exclusion guidance
 

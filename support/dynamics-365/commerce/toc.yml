@@ -1,0 +1,19 @@
+- name: Dynamics 365 Commerce
+  href: welcome-commerce.yml
+  items:
+    - name: Customer accounts and loyalty
+      items:
+        - name: Welcome email isn't sent when new customers are created
+          href: customer-accounts-loyalty/email-not-sent-when-new-customer-created.md
+    - name: Data synchronization
+      items:
+        - name: CDX download jobs can't be downloaded in a sandbox UAT
+          href: data-synchronization/uat-cdx-broke-after-debug-aos.md
+    - name: Order management
+      items:
+        - name: Troubleshoot issues with the online store transaction creation process
+          href: order-management/online-order-transaction-creation-failures.md   
+    - name: Point of sale (POS)
+      items:
+        - name: Store Commerce app (POS) is suddenly deactivated
+          href: point-of-sale/store-commerce-app-pos-deactivated.md    

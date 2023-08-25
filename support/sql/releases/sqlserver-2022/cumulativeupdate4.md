@@ -1,10 +1,9 @@
 ---
 title: Cumulative update 4 for SQL Server 2022 (KB5026717)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 4 (KB5026717).
-ms.date: 05/25/2023
+ms.date: 06/02/2023
 ms.custom: KB5026717
-author: Elena068
-ms.author: v-qianli2
+ms.reviewer: v-qianli2
 appliesto:
 - SQL Server 2022 on Windows
 - SQL Server 2022 on Linux
@@ -17,7 +16,7 @@ _Version:_ &nbsp; 16.0.4035.4
 
 ## Summary
 
-This article describes Cumulative Update package 4 (CU4) for Microsoft SQL Server 2022. This update contains 16 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 3, and it updates components in the following builds:
+This article describes Cumulative Update package 4 (CU4) for Microsoft SQL Server 2022. This update contains 21 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 3, and it updates components in the following builds:
 
 - SQL Server - Product version: **16.0.4035.4**, file version: **2022.160.4035.4**
 - Analysis Services - Product version: **16.0.43.211**, file version: **2022.160.43.211**
@@ -42,7 +41,7 @@ To work around this issue, you can uninstall this cumulative update or add the D
 
 After you install this cumulative update, you may receive incorrect results from queries that meet all of the following conditions:
 
-1. You have indexes that explicitly specify the sort order. Here's an example:
+1. You have indexes that explicitly specify a descending sort order. Here's an example:
 
     ```sql
     CREATE NONCLUSTERED INDEX [nci_table_column1] ON [dbo].[table1] (column1 DESC)
@@ -78,8 +77,13 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="2299195">[2299195](#2299195)</a> | Fixes an issue where SQL Server Agent job steps fail with the following error after the management data warehouse (MDW) is configured on a server: </br></br>Executed as user: NT Service\SQLSERVERAGENT. SSIS error. Component name: GenerateTSQLPackageTask, Code: -1073548540, Subcomponent: Generate T-SQL Package Task, Description: An error occurred with the following error message: "The given key was not present in the dictionary.".&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;SSIS error. Component name: GenerateTSQLPackageTask, Code: -1073548540, Subcomponent: Generate T-SQL Package Task, Description: An error occurred with the following error message: "The given key was not present in the dictionary.".&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;The master package exited with error, previous error messages should explain the cause.&nbsp;&nbsp;Process Exit Code 5.&nbsp;&nbsp;The step failed. | SQL Server Engine | Management Services | All |
 | <a id="2280423">[2280423](#2280423)</a> | [FIX: Scalar UDF Inlining issues in SQL Server 2022 and 2019 (KB4538581)](https://support.microsoft.com/help/4538581) | SQL Server Engine | Query Execution | All |
 | <a id="2306513">[2306513](#2306513)</a> | Fixes access violations and `INVALID_POINTER_READ_c0000005_sqlmin.dll!CProfileList::FGetPartitionSummaryXML` exceptions that you may encounter during the execution of `sys.dm_exec_query_plan_stats`. | SQL Server Engine | Query Execution | Windows |
+| <a id="2306669">[2306669](#2306669)</a> | Fixes an issue where parameter sensitive plan (PSP) optimization produces a dispatcher expression but fails to create a query variant when an application attempts to use the `SET FMTONLY ON` T-SQL statement to return only metadata. | SQL Server Engine | Query Execution | All |
 | <a id="2310201">[2310201](#2310201)</a> | Fixes an issue where running the `ALTER ASSEMBLY` command for a complex common language runtime (CLR) assembly can cause some of the other commands that are executed in parallel to time out. | SQL Server Engine | Query Execution | All |
+| <a id="2329208">[2329208](#2329208)</a> | Fixes an issue where parameter sensitive plan (PSP) optimization can't successfully remove a query from the in-memory portion of the Query Store when PSP optimization has Query Store integration enabled. | SQL Server Engine | Query Execution| All |
 | <a id="2344871">[2344871](#2344871)</a> | Adds two new trace flags (TF) to the automatic plan correction (APC) feature of automatic tuning. TF 12618 introduces a new plan regression detection model that includes multiple consecutive checks. TF 12656 introduces the ability to use a time-based plan regression check that will occur five minutes after a plan change is discovered, which avoids biasing the regression checks by queries that execute quickly. | SQL Server Engine | Query Execution | All |
+| <a id="2344940">[2344940](#2344940)</a> | Fixes an access violation when parameter sensitive plan (PSP) optimization has Query Store integration enabled under certain conditions when query variants and dispatcher plans are being flushed from the in-memory portion of the Query Store data to disk. | SQL Server Engine | Query Execution | All |
+| <a id="2344943">[2344943](#2344943)</a> | Fixes an access violation when parameter sensitive plan (PSP) optimization has Query Store integration enabled when an inconsistent state exists within the PSP-related Query Store. An improvement has also been made to the `sp_query_store_consistency_check` stored procedure, which will fix query variant and dispatch plan consistency issues. | SQL Server Engine | Query Execution | All|
+| <a id="2344945">[2344945](#2344945)</a> | Fixes an issue when parameter sensitive plan (PSP) optimization has Query Store integration enabled when a dispatcher plan is removed from the Query Store. | SQL Server Engine | Query Execution | All |
 | <a id="2278800">[2278800](#2278800)</a> | Fixes an issue where incorrect results are returned when you use the `LAG` or `LEAD` window functions while using the `IGNORE NULLS` clause. | SQL Server Engine | Query Optimizer | All |
 | <a id="2297428">[2297428](#2297428)</a> | Fixes an issue where the `KILL STATS JOB` process leaks reference counts on some items when multiple asynchronous statistics jobs are running, which causes those items to remain in the queue (visible via `sys.dm_exec_background_job_queue`) until the SQL Server instance is restarted. | SQL Server Engine | Query Optimizer | All |
 | <a id="2307893">[2307893](#2307893)</a> | Fixes incorrect results for queries that filter on `ROW_NUMBER` and involve nullable columns. | SQL Server Engine | Query Optimizer | All |
@@ -514,7 +518,7 @@ To use one of the hotfixes in this package, you don't have to make any changes t
 <details>
 <summary><b>Important notices</b></summary>
 
-This article also provides the following important information:
+This article also provides the following important information.
 
 ### Analysis Services CU build version
 
@@ -573,7 +577,7 @@ One CU package includes all available updates for all SQL Server 2022 components
 <details>
 <summary><b>Support for this update</b></summary>
 
-If another issues occur, or if any troubleshooting is required, you might have to create a service request. The usual support costs will apply to additional support questions and to issues that don't qualify for this specific cumulative update package. For a complete list of Microsoft Customer Service and Support telephone numbers, or to create a separate service request, go to the [Microsoft support website](https://support.microsoft.com/contactus/?ws=support).
+If other issues occur, or if any troubleshooting is required, you might have to create a service request. The usual support costs will apply to additional support questions and to issues that don't qualify for this specific cumulative update package. For a complete list of Microsoft Customer Service and Support telephone numbers, or to create a separate service request, go to the [Microsoft support website](https://support.microsoft.com/contactus/?ws=support).
 </details>
 
 ## How to uninstall this update

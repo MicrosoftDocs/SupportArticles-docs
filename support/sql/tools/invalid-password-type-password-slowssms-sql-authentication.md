@@ -3,10 +3,7 @@ title: Invalid password error and slow response to typed password in SSMS
 description: This article provides workarounds for the Invalid password error and slow response to typed password in SQL Server Management Studio.
 ms.date: 11/22/2022
 ms.custom: sap:Other tools
-author: padmajayaraman
-ms.author: v-jayaramanp
-ms.reviewer: ramakoni1
-ms.prod: sql
+ms.reviewer: ramakoni1, v-jayaramanp
 ---
 
 # "Invalid password" error and slow response to typed password in SSMS

@@ -1,12 +1,11 @@
 ---
 title: SQL Server 2022 build versions (KB5023451)
 description: This article lists cumulative update and GDR builds for SQL Server 2022.
-ms.date: 05/11/2023
+ms.date: 08/10/2023
 ms.custom: KB5023451
 appliesto:
 - SQL Server 2022
-author: simonxjx
-ms.author: v-six
+ms.reviewer: v-six
 ---
 # KB5023451 - SQL Server 2022 build versions
 
@@ -16,6 +15,9 @@ This article lists the Microsoft SQL Server 2022 builds that were released after
 
 | CU Name | SQL Server build version | SQL Server (sqlservr.exe) file version | Analysis Services build version | Analysis Services (msmdsrv.exe) file version | Knowledge Base number | Release date |
 |---------------|--------------------------|----------------------------------------|---------------------------------|----------------------------------------------|-----------------------|--------------------|
+| CU7 (Latest) | 16.0.4065.3 | 2022.160.4065.3 | 16.0.43.221 | 2022.160.43.221 | [KB5028743](cumulativeupdate7.md) | August 10, 2023|
+| CU6 | 16.0.4055.4 | 2022.160.4055.4 | 16.0.43.219 | 2022.160.43.219 | [KB5027505](cumulativeupdate6.md) | July 13, 2023|
+| CU5 | 16.0.4045.3 | 2022.160.4045.3 | 16.0.43.218 | 2022.160.43.218 | [KB5026806](cumulativeupdate5.md) | June 15, 2023|
 | CU4 | 16.0.4035.4 | 2022.160.4035.4 | 16.0.43.211 | 2022.160.43.211 | [KB5026717](cumulativeupdate4.md) | May 11, 2023|
 | CU3 | 16.0.4025.1 | 2022.160.4025.1 | 16.0.43.211 | 2022.160.43.211 | [KB5024396](cumulativeupdate3.md) | April 13, 2023|
 | CU2 | 16.0.4015.1 | 2022.160.4015.1 | 16.0.43.208 | 2022.160.43.208 | [KB5023127](cumulativeupdate2.md) | March 15, 2023|

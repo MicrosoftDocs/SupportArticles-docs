@@ -91,7 +91,7 @@
           href: agent-connectivity-issues-pad.md
         - name: Browser automation actions stop working after a browser update
           href: browser-automation-error-after-chromium-update.md
-        - name: Can't automate webpage with iframes
+        - name: Can't automate webpage with cross-domain iframes
           href: cannot-automate-webpage-with-iframes.md
         - name: Can't create a connection from a shared canvas app
           href: cannot-create-desktop-flow-connection-from-a-shared-canvas-app.md
@@ -161,6 +161,8 @@
           href: how-to-get-power-automate-desktop-installer-logs.md
         - name: '"Invalid Private key file" error in Open secure FTP connection action'
           href: invalid-private-key-file-error.md
+        - name: Internet connection is interrupted after installing Power Automate
+          href: no-ethernet-after-pad-install.md
         - name: Keyboard and mouse click combinations not working
           href: key-and-mouse-click-combo-not-working.md
         - name: Known limitations of Selenium IDE
@@ -171,16 +173,22 @@
           href: multi-screen-recording-is-not-working.md
         - name: Module or action wasn't found error
           href: module-action-wasnt-found-error.md
+        - name: '"Power Automate needs an update" occurs when opening Power Automate for desktop'
+          href: cannot-update-Power-Automate-for-desktop.md
         - name: Power Automate for desktop console doesn't show any flows
           href: console-not-show-desktop-flows.md
         - name: Power Automate service doesn't start automatically after restarting
           href: windows-services-not-start-after-restart.md
+        - name: Proxy server related errors in Power Automate for desktop
+          href: proxy-error-console.md
         - name: Restart UI flows to recover from a bad state
           href: reset-ui-flow-service-when-bad-state.md
         - name: Recorder not recording applications
           href: recorder-not-recording-applications.md
         - name: Some actions appear to be missing or aren't visible
           href: actions-not-available.md
+        - name: Set drop-down list value in window/on web page action fails
+          href: set-drop-down-list-value-fails.md
         - name: Tips on working with SQL queries
           href: troubleshooting-tips-sql-queries.md
         - name: Troubleshoot UI flow Playback
@@ -209,3 +217,11 @@
       items:
         - name: Can't import solutions or publish changes
           href: ../power-apps/cannot-import-solutions-publish-changes.md?context=/troubleshoot/power-platform/power-automate/context/context
+    - name: Support resources
+      items:
+        - name: Power Automate support
+          href: https://powerautomate.microsoft.com/support/
+        - name: Power Automate Community forum
+          href: https://powerusers.microsoft.com/t5/Microsoft-Power-Automate/ct-p/MPACommunity
+        - name: Power Automate Ideas forum
+          href: https://ideas.powerautomate.com/d365community/forum/086dd68e-597f-ec11-8d21-0022482e8f9f

@@ -38,7 +38,7 @@ _Original KB number:_ &nbsp; 4456128
 
     To reset the portal host, follow the steps listed in [Reset a portal](/powerapps/maker/portals/admin/reset-portal). It's important to note that resetting the portal host doesn't affect the configuration done in your Dynamics 365 organization.
 
-    To delete the portal solutions, you'll have to delete solutions from the Dynamics 365 solutions area. You can navigate to the Solutions area within the Dynamics 365 web application by selecting **Settings**, and then selecting **Solutions**. The order in which portal solutions should be uninstalled is provided in [Portal Troubleshooting, Part Three: Uninstalling Portal Solutions](https://community.dynamics.com/365/b/dynamics365portalssupport/archive/2017/02/27/portal-troubleshooting-part-three-uninstalling-portal-solutions).
+    To delete the portal solutions, you'll have to delete solutions from the Dynamics 365 solutions area. You can navigate to the Solutions area within the Dynamics 365 web application by selecting **Settings**, and then selecting **Solutions**. The order in which portal solutions should be uninstalled is provided in [Portal Troubleshooting, Part Three: Uninstalling Portal Solutions](https://community.dynamics.com/blogs/post/?postid=30cb2a9f-fbfe-4c92-9166-3b60bf98b731).
 
 ## Dynamics 365 organization lifecycle
 
@@ -123,3 +123,4 @@ _Original KB number:_ &nbsp; 4456128
 - **How can I rebuild the search index?**
 
     See [Rebuild full search index](/powerapps/maker/portals/configure/search#rebuild-full-search-index)
+

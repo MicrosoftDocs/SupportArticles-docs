@@ -1,7 +1,7 @@
 ---
 title: LDAP and Kerberos Server reset TCP sessions
 description: Fixes an issue where TCP sessions created to the server ports 88, 389 and 3268 are reset. Sessions using Secure Sockets Layer or Transport Layer Security on ports 636 and 3269 are also affected.
-ms.date: 9/24/2021
+ms.date: 07/10/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article provides a solution to an issue where TCP sessions created to the server ports 88, 389 and 3268 are reset. Sessions using Secure Sockets Layer (SSL) or Transport Layer Security (TLS) on ports 636 and 3269 are also affected.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2000061
 
 ## Symptoms
@@ -46,4 +46,4 @@ For the KDC ports, many clients, including the Windows Kerberos client, will per
 
 If you want to avoid the resets on ports 22528 and 53249, you have to exclude them from the ephemeral ports range. For more information, see [The default dynamic port range for TCP/IP has changed in Windows Vista and in Windows Server 2008](https://support.microsoft.com/help/929851), which also applies to Windows Vista and later versions.
 
-When you set **NewConnectionTimeout** to 40 or higher, you receive a time-out window of 30-90 seconds. When you use 70 or higher, you receive 60-120 seconds for the time-out. For more information about the **NewConnectionTimeout** registry value, see [Kerberos protocol registry entries and KDC configuration keys in Windows](/troubleshoot/windows-server/windows-security/kerberos-protocol-registry-kdc-configuration-keys).
+When you set **NewConnectionTimeout** to 40 or higher, you receive a time-out window of 30-90 seconds. When you use 70 or higher, you receive 60-120 seconds for the time-out. For more information about the **NewConnectionTimeout** registry value, see [Kerberos protocol registry entries and KDC configuration keys in Windows](../windows-security/kerberos-protocol-registry-kdc-configuration-keys.md).

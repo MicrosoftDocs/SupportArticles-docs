@@ -5,7 +5,6 @@ ms.date: 09/21/2020
 ms.custom: sap:Other tools
 ms.reviewer: sureshka, jopilov
 ms.topic: how-to
-ms.prod: sql
 ---
 # Use the Sqldumper.exe utility to generate a dump file in SQL Server
 

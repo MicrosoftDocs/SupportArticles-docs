@@ -878,10 +878,6 @@
       href: ./remote/invalid-client-ip-address-port-number-event-4624.md
     - name: Troubleshoot RDP Client connection problems
       href: ./remote/terminal-server-client-connection-failures.md
-  - name: Virtual Desktop Infrastructure (VDI)
-    items:
-    - name: Support policy for Azure Virtual Desktop and Windows 10 Enterprise multi-session
-      href: ./remote/support-policy-windows-virtual-desktop-windows-10-enterprise-multi-session.md
 - name: Shell Experience
   items:
   - name: Shell Experience
@@ -910,10 +906,10 @@
       href: ./shell-experience/standard-user-cannot-run-commnad-via-runonce.md
     - name: Fail to register a DLL by using Regsvr32.exe
       href: ./shell-experience/dllregisterserver-error.md
-    - name: HotStart buttons doesn't work
-      href: ./shell-experience/disabling-autoplay-cause-hotstart-buttons-not-working.md
     - name: How to modify the command line string limitation
       href: ./shell-experience/command-line-string-limitation.md
+    - name: Issues after Autoplay is disabled in Group Policy
+      href: ./shell-experience/issues-autoplay-disabled-group-policy.md
     - name: UPX is displayed in the UI on managed device
       href: ./shell-experience/upx-displayed-in-UI-on-managed-device.md
   - name: DPI and Display Issues
@@ -1300,15 +1296,15 @@
     href: ./windows-troubleshooters/windows-troubleshooters-overview.md
   - name: Active and retired Windows 10 troubleshooters
     href: ./windows-troubleshooters/active-and-retired-troubleshooters-windows-10.md
-  - name: TroubleShootingScript toolset (TSSv2)
+  - name: TroubleShootingScript toolset (TSS)
     items:
-    - name: Introduction to TroubleShootingScript toolset (TSSv2)
-      href: ./windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2.md
+    - name: Introduction to TroubleShootingScript toolset (TSS)
+      href: ./windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tss.md
     - name: Gather information for Active Directory replication issues
-      href: ./windows-troubleshooters/gather-information-using-tssv2-ad-replication.md
+      href: ./windows-troubleshooters/gather-information-using-tss-ad-replication.md
     - name: Gather information for deployment-related issues
-      href: ./windows-troubleshooters/gather-information-using-tssv2-deployment.md
+      href: ./windows-troubleshooters/gather-information-using-tss-deployment.md
     - name: Gather information for Group Policy issues
-      href: ./windows-troubleshooters/gather-information-using-tssv2-group-policy.md
+      href: ./windows-troubleshooters/gather-information-using-tss-group-policy.md
     - name: Gather information for user experience-related issues
-      href: ./windows-troubleshooters/gather-information-using-tssv2-user-experience.md
+      href: ./windows-troubleshooters/gather-information-using-tss-user-experience.md

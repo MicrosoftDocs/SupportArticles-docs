@@ -1,0 +1,12 @@
+- name: Docs
+  tocHref: /
+  topicHref: /index
+  items:
+
+  - name: Troubleshoot
+    tocHref: /cpp/
+    topicHref: /troubleshoot/index
+    items:
+    - name: Visual Studio
+      tocHref: /cpp/windows/
+      topicHref: /troubleshoot/developer/visualstudio/welcome-visual-studio

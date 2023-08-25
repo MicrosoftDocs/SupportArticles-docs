@@ -36,4 +36,4 @@ You can safely ignore the event.
 
 ## More information
 
-For more information about other Windows Server 2012 startup errors, see [Event ID 46 is logged when you start a computer](/troubleshoot/windows-server/performance/event-id-46-start-a-computer).
+For more information about other Windows Server 2012 startup errors, see [Event ID 46 is logged when you start a computer](../performance/event-id-46-start-a-computer.md).

@@ -5,7 +5,6 @@ ms.date: 09/25/2020
 ms.custom: sap:Security Issues
 ms.reviewer: bartd
 ms.topic: how-to
-ms.prod: sql
 ---
 
 # Transfer logins and passwords between instances of SQL Server

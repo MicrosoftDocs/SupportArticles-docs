@@ -4,7 +4,6 @@ description: This article provides a resolution for the problem that occurs when
 ms.date: 09/30/2022
 ms.custom: sap:Administration and Management
 ms.reviewer: jackli, rbeene
-ms.prod: sql
 ---
 # Error 0x80040e97 occurs when you use integrated full-text search in SQL Server
 

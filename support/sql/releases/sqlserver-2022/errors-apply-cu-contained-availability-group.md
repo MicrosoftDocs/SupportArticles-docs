@@ -1,11 +1,9 @@
 ---
 title: Errors after you apply a cumulative update to a contained availability group
 description: Fixes the errors that occur after you apply a cumulative update to an instance of SQL Server that has a contained availability group.
-ms.date: 05/11/2023
+ms.date: 06/27/2023
 ms.custom: KB5027331
-author: MonicaChenc
-ms.author: v-cuichen
-ms.reviewer: matteot, dliao, sureshka, jaferebe
+ms.reviewer: matteot, dliao, sureshka, jaferebe, v-cuichen
 appliesto:
 - SQL Server 2022 on Windows
 - SQL Server 2022 on Linux
@@ -45,6 +43,17 @@ After you create a contained availability group, you see the following error mes
 After Database Mail stops working, trying to run the `sysmail` stored procedure will report an error message that resembles the following one:
 
 > The object '[dbo].[sp_syspolicy_events_reader]' does not exist in database 'master' or is invalid for this operation.
+
+### Error 4
+
+After you create a contained availability group, if you connect to the contained availability group listener and create a SQL Server login principal, you will receive the following error in SQL Server Management Studio (SSMS) when you connect by using the login principal:
+
+> Error connecting to _\<your listener>_  
+> Failed to retrieve data for this request. (Microsoft.SqlServer.Management.Sdk.Sfc)  
+> An exception occurred while executing a Transact-SQL statement or batch. (Microsoft.SqlServer.ConnectionInfo)  
+> The EXECUTE permission was denied on the object 'xp_msver', database 'mssqlsystemresource', schema 'sys'. (Microsoft SQL Server, Error: 229)
+
+This error occurs because the `public` role isn't granted the `EXECUTE` permission on the `xp_msver` extended stored procedure on the contained availability group (AG) master.
 
 ## Resolution
 

@@ -5,7 +5,6 @@ ms.date: 06/16/2022
 ms.custom: sap:Connection issues
 author: HaiyingYu
 ms.author: haiyingyu
-ms.prod: sql
 ---
 # A network-related or instance-specific error occurred while establishing a connection to SQL Server
 
@@ -168,13 +167,13 @@ If the instance is stopped, right-click the instance and select **Start**. Then,
 You can use the following command in PowerShell to check the status of SQL Server services on the system:
 
 ```powershell
-Get-Service | Where {$_.status -eq 'running' -and $_.DisplayName -match "sql server*"}
+Get-Service | Where {$_.status -eq 'running' -and $_.DisplayName -like "sql server*"}
 ```
 
 You can use the following command to search the error log file for the specific string "SQL Server is now ready for client connections. This is an informational message; no user action is required.":
 
 ```powershell
-Get-ChildItem -Path "c:\program files\microsoft sql server\mssql*" -Recurse -Include Errorlog |select-string "SQL Server is now ready for client connections."
+Get-ChildItem -Path "c:\program files\microsoft sql server\mssql*" -Recurse -Include Errorlog | Select-String "SQL Server is now ready for client connections."
 ```
 
 ## Step 2: Verify that the SQL Server Browser service is running
@@ -281,7 +280,7 @@ If your SQL instance is a named instance, it may be configured to use either dyn
     1. Try to connect to the named instance by using the port number appended to the server name in the format `<servername\instancename>,<portnumber>` and see if that works. For example, if your SQL instance name is *MySQL\Namedinstance* and it's running on port 3000, specify the server name as *MySQL\Namedinstance,3000*.
         - If it does work, it indicates the firewall is blocking the UDP port 1434 or the instance is [hidden](/sql/database-engine/configure-windows/hide-an-instance-of-sql-server-database-engine) from SQL Server Browser.
         - If it doesn't work, it indicates one of the following situations:
-          - Either UDP port 1434 is blocked or the static port is blocked, or both. To confirm whether it's the UDP port or the static port, use [Portqry](/troubleshoot/windows-server/networking/portqry-command-line-port-scanner-v2).
+          - Either UDP port 1434 is blocked or the static port is blocked, or both. To confirm whether it's the UDP port or the static port, use [Portqry](../../../windows-server/networking/portqry-command-line-port-scanner-v2.md).
           - The instance is [hidden](/sql/database-engine/configure-windows/hide-an-instance-of-sql-server-database-engine) from the SQL Server Browser service.
 - Method 2: Check the connection by using the PortQryUI tool.
 

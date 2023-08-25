@@ -2,9 +2,7 @@
 title: Tenant attach components fail to connect to backend cloud service
 description: Provides a solution to an issue where Configuration Manager components for tenant attach fail to connect to the backend cloud service.
 ms.date: 07/05/2022
-ms.reviewer: kaushika, brianhun, umaikhan
-author: AmandaAZ
-ms.author: v-weizhu
+ms.reviewer: kaushika, brianhun, umaikhan, v-weizhu
 ---
 
 # Mismatch certificate subject name error when running client action for Configuration Manager device
