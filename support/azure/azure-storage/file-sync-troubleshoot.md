@@ -17,7 +17,7 @@ You can use Azure File Sync to centralize your organization's file shares in Azu
 
 ## Common troubleshooting subject areas
 
-Review the following Troubleshooting documents, based on the issue you're exeriencing:
+Based on the issue you're exeriencing, review the appropriate Troubleshooting document:
 
 - Agent installation or server registration issues, see [Troubleshoot Azure File Sync agent installation and server registration](file-sync-troubleshoot-installation.md)
 - Cloud endpoint or server endpoint creation issues or registered server offline, see [Troubleshoot Azure File Sync sync group management](file-sync-troubleshoot-sync-group-management.md)
