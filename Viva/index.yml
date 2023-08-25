@@ -102,7 +102,7 @@ productDirectory:
           text: Microsoft Viva Learning
         - url: ./connections/viva-connections-welcome.yml
           text: Microsoft Viva Connections
-        - url: ./connections/viva-glint-welcome.yml
+        - url: ./glint/viva-glint-welcome.yml
           text: Microsoft Viva Glint  
     # Card
     - title: Endpoint management
