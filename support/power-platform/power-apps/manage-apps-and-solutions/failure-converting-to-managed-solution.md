@@ -27,11 +27,11 @@ You receive an error message like the following ones:
 
 ## Cause
 
-By design, some solution components don't support automatic conversion of unmanaged to managed state without the use of [ConvertToManaged](https://learn.microsoft.com/en-us/dotnet/api/microsoft.crm.sdk.messages.importsolutionrequest.converttomanaged?view=dataverse-sdk-latest) import property.
+By design, some solution components don't support automatic conversion of unmanaged to managed state without the use of [ConvertToManaged](/dotnet/api/microsoft.crm.sdk.messages.importsolutionrequest.converttomanaged?view=dataverse-sdk-latest) import property.
 
 ## Workaround
 
 To successfully convert the unmanaged component to managed state:
 
 - Either delete the unmanaged component and import the solution again.
-- Or import the solution with [convert-to-managed](/power-platform/developer/cli/reference/solution?branch=main&branchFallbackFrom=pr-en-us-4823#--convert-to-managed--cm) flag enabled using Microsoft Power Platform CLI.
+- Or import the solution with [convert-to-managed](/power-platform/developer/cli/reference/solution#--convert-to-managed--cm) flag enabled using Microsoft Power Platform CLI.

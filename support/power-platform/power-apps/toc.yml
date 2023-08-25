@@ -71,8 +71,8 @@
           href: manage-apps-and-solutions/cannot-import-solutions-publish-changes.md
         - name: Concurrent solution operation failures
           href: manage-apps-and-solutions/concurrent-solution-operation-failures.md
-        - name: Converting to managed solution
-          href: manage-apps-and-solutions/converting-to-managed-solution.md
+        - name: Failure converting to managed solution
+          href: manage-apps-and-solutions/failure-converting-to-managed-solution.md
         - name: Duplicate security roles after solution import
           href: manage-apps-and-solutions/duplicate-security-roles.md
         - name: Data source references not updated after solution import
