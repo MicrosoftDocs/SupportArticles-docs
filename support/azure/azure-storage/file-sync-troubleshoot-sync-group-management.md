@@ -171,9 +171,9 @@ On the server that is showing as "Appears offline" in the portal, look at Event 
   Run the following PowerShell commands on the server to confirm the server certificate is missing or expired:
   
     ```powershell
-		Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"  
+    Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"  
     Debug-StorageSyncServer -Diagnose
- 		```
+    ```
 
   Run the following PowerShell command on the server to reset the certificate used for authentication:
 
@@ -185,15 +185,15 @@ On the server that is showing as "Appears offline" in the portal, look at Event 
     Run the following PowerShell commands on the server to confirm the Telemetry event log is corrupted:
 
     ```powershell
-		Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"  
+    Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"  
     Debug-StorageSyncServer -Diagnose
- 		```
+    ```
     Run the following PowerShell commands on the server to fix the event log corruption:
 
     ```powershell
-		Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"  
+    Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"  
     Debug-StorageSyncServer -FixAfsEventsCorruption
- 		```
+    ```
  
 <a id="endpoint-noactivity-sync"></a>**Server endpoint has a health status of "No Activity" and the server state on the registered servers blade is "Online"**
 
