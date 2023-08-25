@@ -90,7 +90,7 @@ You can set the default data directory and log directory values to valid folder 
 > This section, method, or task contains steps that tell you how to modify the registry. Serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).
 
 1. Start Registry Editor (*Regedit.exe*) from the command line.
-1. Locate and then select the registry subkey: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL{nn}.Instance\MSSQLServer`.
+1. Locate and then select the registry subkey `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL{nn}.Instance\MSSQLServer`.
 
    > [!NOTE]
    > In this registry subkey, `MSSQL{nn}.Instance` represents the corresponding value for your system. To obtain this value, locate and then select the registry subkey: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\Instance Names\SQL\`.
@@ -100,7 +100,7 @@ You can set the default data directory and log directory values to valid folder 
 1. Locate and then select the registry subkey `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL{nn}.Instance\Setup`.
 1. In the right panel, select the **SQLDataRoot** registry entry and enter a valid path, if it's pointing to an incorrect location.
 
-#### Step 2: Retry the installation of Service Pack or Cumulative Updat
+#### Step 2: Retry the installation of Service Pack or Cumulative Update
 
 Once you have corrected the data and log paths for the affected instance, you can retry the installation.
 

@@ -18,7 +18,7 @@ To learn more about the underlying concepts of the engines and about Algorithm f
 
 External link: [ARIES: A Transaction Recovery method Supporting Fine-Granularity Locking and Partial Rollbacks Using Write-Ahead Logging](https://dl.acm.org/doi/10.1145/128765.128770)
 
-The lead writer of this document is C. Mohan. The document addresses the SQL Server techniques to extend data reliability and integrity as related to failures.
+The document addresses the SQL Server techniques to extend data reliability and integrity as related to failures.
 
 We recommend that you read the following articles in the Microsoft Knowledge Base for more information about caching and alternative failure mode discussions:
 

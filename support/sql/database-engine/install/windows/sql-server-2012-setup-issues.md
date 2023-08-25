@@ -34,7 +34,7 @@ _Original KB number:_ &nbsp; 2681562
 
     - [Enable .NET Framework 3.5 by using the Add Roles and Features Wizard](/windows-hardware/manufacture/desktop/enable-net-framework-35-by-using-the-add-roles-and-features-wizard)  
 
-- Some SQL Server 2012 installation and setup issues are fixed in the latest cumulative updates for SQL Server 2012. Therefore, we recommend that you create a slipstream installation package that includes SQL Server 2012 and CU3 or a later update using [/Update parameter](/sql/database-engine/install-windows/install-sql-server-from-the-command-prompt#Upgrade). For more information about how to do this, see [SQL Server 2012 Setup just got smarter](https://techcommunity.microsoft.com/t5/sql-server-support/sql-server-2012-setup-just-got-smarter-8230/ba-p/317440) or [How to patch SQL Server 2012 Setup with an updated setup package (using UpdateSource to get a smart setup)](/archive/blogs/jason_howell/how-to-patch-sql-server-2012-setup-with-an-updated-setup-package-using-updatesource-to-get-a-smart-setup).
+- Some SQL Server 2012 installation and setup issues are fixed in the latest cumulative updates for SQL Server 2012. Therefore, we recommend that you create a slipstream installation package that includes SQL Server 2012 and CU3 or a later update using [/Update parameter](/sql/database-engine/install-windows/install-sql-server-from-the-command-prompt#Upgrade). For more information about how to do this, see [SQL Server 2012 Setup just got smarter](https://techcommunity.microsoft.com/t5/sql-server-support/sql-server-2012-setup-just-got-smarter-8230/ba-p/317440) or [How to patch SQL Server 2012 Setup with an updated setup package (using UpdateSource to get a smart setup)](/archive/blogs/jason_howell/how-to-patch-sql-server-2012-setup-with-an-updated-setup-package-using-updatesource-to-get-a-smart-setup).
 
 ## SQL Server 2012 setup issues that can occur when the .NET Framework 3.5 is not enabled
 
@@ -42,12 +42,12 @@ _Original KB number:_ &nbsp; 2681562
 
   Symptoms
 
-  On servers where the .NET Framework 3.5 is not already installed or servers where Internet access is restricted, the SQL Server 2012 installation program does not install components that depend on the .NET Framework 3.5. Therefore, the SQL Server 2012 installation may be incomplete.
+  On servers where the .NET Framework 3.5 isn't already installed or servers where Internet access is restricted, the SQL Server 2012 installation program does not install components that depend on the .NET Framework 3.5. Therefore, the SQL Server 2012 installation may be incomplete.
 
   > [!NOTE]
   > Windows 8.1 or Windows Server 2012 R2 will not let you continue with the installation.
 
-  An error message that resembles the following may be displayed during SQL Server 2012 installation when the .NET Framework is not enabled.
+  An error message that resembles the following may be displayed during SQL Server 2012 installation when the .NET Framework isn't enabled.
 
   :::image type="content" source="media/sql-server-2012-setup-issues/dotnet-framework-not-enabled-error.png" alt-text="Screenshot of the SQL Server 2012 setup error message: Error while enabling Windows feature." border="false":::
 
@@ -62,15 +62,15 @@ _Original KB number:_ &nbsp; 2681562
   To resolve this issue in a clustered environment, uninstall the incomplete SQL Server 2012 instances, enable the .NET Framework 3.5, and then reinstall SQL Server 2012.
 
   > [!NOTE]
-  > In a clustered environment, you cannot add the features that were skipped by running SQL Server 2012 Setup again.
+  > In a clustered environment, you can't add the features that were skipped by running SQL Server 2012 Setup again.
 
   To resolve this issue on a stand-alone server, enable the .NET Framework 3.5, and then run SQL Server Setup again.
 
 - **Issue 2 - Users incorrectly are prompted to download and install the .NET Framework 3.5**
 
-  Symptoms
+ Symptoms
 
-  Users incorrectly may be prompted to download and install the .NET Framework 3.5 when they try to install CU1 or CU2. This issue can occur even though the installed components do not depend on the .NET Framework 3.5.
+  Users incorrectly may be prompted to download and install the .NET Framework 3.5 when they try to install CU1 or CU2. This issue can occur even though the installed components don't depend on the .NET Framework 3.5.
 
   In this situation, users may receive an error message that resembles the following.
 
@@ -90,7 +90,7 @@ _Original KB number:_ &nbsp; 2681562
   - Enable the .NET Framework 3.5, apply the CU1 update package or the CU2 update package, and then disable the .NET Framework 3.5.
 
   > [!NOTE]
-  > You should only disable the .NET Framework 3.5 if your installation does not include components that depend on the .NET Framework 3.5.
+  > You should only disable the .NET Framework 3.5 if your installation doesn't include components that depend on the .NET Framework 3.5.
 
   - Install SQL Server 2012 from a slipstreamed installation package that includes SQL Server 2012 and CU3 or a later version.
   - Apply Cumulative Update 3 or a later version. For more information, see [The SQL Server 2012 builds that were released after SQL Server 2012 was released](https://support.microsoft.com/help/2692828).
@@ -122,7 +122,7 @@ _Original KB number:_ &nbsp; 2681562
 
 - **Issue 1: A .NET Framework unhandled exception may be generated when you try to install a second instance of SQL Server 2012**
 
-  Symptoms
+ Symptoms
 
   Consider the following scenario:
 
@@ -159,22 +159,22 @@ _Original KB number:_ &nbsp; 2681562
   > [!NOTE]
   > This issue is fixed in Microsoft SQL Server 2012 Service Pack 1 (SP1).
 
-  If the first instance already has Service Pack 1 installed, you should not experience this issue. If you cannot install Service Pack 1 on the first instance, do one of the following:
+  If the first instance already has Service Pack 1 installed, you shouldn't experience this issue. If you can't install Service Pack 1 on the first instance, do one of the following:
 
-  - Install the second SQL Server 2012 instance from a [slipstreamed installation package](https://www.microsoft.com/download/details.aspx?id=35575) that includes SQL Server 2012 and Microsoft SQL Server 2012 Service Pack 1. After installation of the new instance, you must apply SQL Server 2012 Service Pack 4 or a later update. For more information, see [How to obtain the latest service pack for SQL Server 2012](https://support.microsoft.com/help/2755533).
+  - Install the second SQL Server 2012 instance from a [slipstreamed installation package](https://www.microsoft.com/download/details.aspx?id=35575) that includes SQL Server 2012 and Microsoft SQL Server 2012 Service Pack 1. After installation of the new instance, you must apply SQL Server 2012 Service Pack 4 or a later update. For more information, see [How to obtain the latest service pack for SQL Server 2012](https://support.microsoft.com/help/2755533).
 
   - Pre-patch by using the SQL Server 2012 SP4 files and then install SQL Server 2012:
 
-    - On a computer where SQL Server 2012 RTM is not installed:
+    - On a computer where SQL Server 2012 RTM isn't installed:
 
         1. Download and install [SQL Server 2012 SP4](https://www.microsoft.com/download/details.aspx?id=56040).
 
-        2. On the License Terms screen, click the **I accept the license terms** check box and then click **Next**.
+        1. On the **License Terms** screen, click the **I accept the license terms** check box and then click **Next**.
 
            > [!NOTE]
            > The setup files are installed and the installation wizard automatically close.
 
-        3. Verify the installation. To do this, start **Add or Remove Programs** and verify that the following are listed:
+        1. Verify the installation. To do this, start **Add or Remove Programs** and verify that the following are listed:
 
            - Microsoft SQL Server 2012 Setup, version 11.0.7001.0
            - Two entries for Microsoft Visual C++.
@@ -182,18 +182,18 @@ _Original KB number:_ &nbsp; 2681562
     - On a computer that has an existing instance of SQL Server 2012 RTM:
 
         1. Download and install [SQL Server 2012 SP4](https://www.microsoft.com/download/details.aspx?id=56040).
-        2. Extract the SP4 files to a local folder. For example, extract the SP4 files to `c:\sp4`.
+        1. Extract the SP4 files to a local folder. For example, extract the SP4 files to *c:\sp4*.
 
            > [!NOTE]
-           > You cannot run SQL Server 2012 SP4 setup in this scenario.
+           > You can't run SQL Server 2012 SP4 setup in this scenario.
 
-        3. In the folder that you extracted the SP4 files to, double-click **SqlSupport.msi** and then click **Yes**.
-        4. Verify the installation. To do this, start **Add or Remove Programs** and verify that Microsoft SQL Server 2012 Setup, version 11.0.7001.0 is listed.
+        1. In the folder that you extracted the SP4 files to, double-click **SqlSupport.msi** and then click **Yes**.
+        1. Verify the installation. To do this, start **Add or Remove Programs** and verify that Microsoft SQL Server 2012 Setup, version 11.0.7001.0 is listed.
 
     > [!NOTE]
     > Check the **Installation Instructions** section on the SQL Server 2012 SP4 download page to determine the correct download for your server.
 
-- **Issue 2: You cannot install a SQL Server 2012 Failover Cluster with the File Stream Share feature enabled on Windows Server 2012 R2 or Windows Server 2012**
+- **Issue 2: You can't install a SQL Server 2012 Failover Cluster with the File Stream Share feature enabled on Windows Server 2012 R2 or Windows Server 2012**
 
   Symptoms
 
@@ -235,7 +235,7 @@ _Original KB number:_ &nbsp; 2681562
 
     Prevention
 
-    To prevent this issue, install the IIS ASP.NET 3.5 component by using Server Manager before you install SQL Server 2012. For more information, see [ASP.NET 2.0 and ASP.NET 3.5 do not work after you uninstall ASP.NET 4.5 in Windows 8 or Windows Server 2012](https://support.microsoft.com/help/2748719).
+    To prevent this issue, install the IIS ASP.NET 3.5 component by using Server Manager before you install SQL Server 2012. For more information, see [ASP.NET 2.0 and ASP.NET 3.5 don't work after you uninstall ASP.NET 4.5 in Windows 8 or Windows Server 2012](https://support.microsoft.com/help/2748719).
 
 - **Issue 4: You cannot install a SQL Server 2012 Enterprise Edition failover cluster instance**
 
@@ -319,6 +319,6 @@ In this scenario, you receive an error message that resembles the following:
 
 - For more information about how to install fail over clustering in Windows Server 2012, see [Installing the Failover Cluster Feature and Tools in Windows Server 2012](https://techcommunity.microsoft.com/t5/failover-clustering/installing-the-failover-cluster-feature-and-tools-in-windows/ba-p/371733).
 
-### See Also
+### See also
 
 [Understand the .NET Framework requirements for various versions of SQL Server](/troubleshoot/sql/install/understanding-dotnet-framework-requirements).

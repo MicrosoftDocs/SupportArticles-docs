@@ -231,7 +231,7 @@ Missing patches may result in entries that resemble those in Example 1. Most of 
 This output indicates the following information about the patch installation:
 
 - The original patch was installed by double-clicking the patch's executable file.
-- The installer for the patch used a temp folder, `c:\0ca91e857a4f12dd390f0821a3`, during the installation of the patch.
+- The installer for the patch used a temp folder, *c:\0ca91e857a4f12dd390f0821a3*, during the installation of the patch.
 - To re-create the path, you must run the same executable and add the parameter: `/x:c:\0ca91e857a4f12dd390f0821a3`.
 
 > [!NOTE]
@@ -251,7 +251,7 @@ To manually restore the files that are missing from the Windows Installer cache,
 
     - PatchName: "Hotfix 1702 for SQL Server 2008 R2 (KB981355) (64-bit)"  
     - Original MSP file that is used by the Patch: _sql_engine_core_inst.msp_  
-    - Cached MSP file: `c:\Windows\Installer\1fdb1aec.msp`
+    - Cached MSP file: *c:\Windows\Installer\1fdb1aec.msp*
 
 1. If you don't have all the details, see the first step to collect these details.
 1. Visit [Queries](https://support.microsoft.com), and search for the KB article that is associated with this patch. In this example, you must search for _KB981355_.
@@ -354,7 +354,7 @@ You can restore from system state backups as described in [Missing Windows Insta
 
     |Product version| Error message when the Installer Package (MSI) is missing| Error message when the Installer Cache Package (MSP) is missing |
     |---|---|---|
-    |SQL Server 2008 SP3|The cached MSI file `C:\Windows\Installer\FileName.msi` is missing. Its original file is `sql_engine_core_inst.msi` and it was installed for product SQL Server 2008 Database Engine Services from `NetworkPath`, version `VersionNumber`, language `ENU`.<br/>|The cached patch file `C:\Windows\Installer\FileName.msp` is missing. The original file for this cached file is `sql_engine_core_inst.msp`, which can be installed from Service Pack 3 for SQL Server 2008 (KB2546951) (64-bit), version `VersionNumber`<br/>|
+    |SQL Server 2008 SP3|The cached MSI file *C:\Windows\Installer\FileName.msi* is missing. Its original file is *sql_engine_core_inst.msi* and it was installed for product SQL Server 2008 Database Engine Services from `NetworkPath`, version `VersionNumber`, language `ENU`.<br/>|The cached patch file `C:\Windows\Installer\FileName.msp` is missing. The original file for this cached file is *sql_engine_core_inst.msp*, which can be installed from Service Pack 3 for SQL Server 2008 (KB2546951) (64-bit), version `VersionNumber`<br/>|
 
     > [!NOTE]
     > You receive the following error message when you perform an upgrade:  

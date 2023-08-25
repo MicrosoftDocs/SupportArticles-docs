@@ -104,7 +104,7 @@ The problem usually occurs when you are running an evaluation instance of SQL Se
 ## Check whether SSMS will expire
 
 1. Start **SQL Server Management Studio**.
-1. Select the **Help** menu and then the **About...** submenu from the list. You will run into the problem discussed in the article if the component **Microsoft SQL Server Management Studio** has **expires in 'x' days** next to it.
+1. Select the **Help** menu and then select the **About...** submenu from the list. You will run into the problem discussed in the article if the component **Microsoft SQL Server Management Studio** has **expires in 'x' days** next to it.
 
 ## Applies to
 
