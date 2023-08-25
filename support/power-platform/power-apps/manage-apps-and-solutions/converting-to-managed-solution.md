@@ -1,21 +1,21 @@
 ---
-title: Converting to Managed Solution
+title: Failure to install Managed Solution when previously deployed as Unmanaged
 description: Works when an unmanaged solution is already installed and attempting to install a newer version of the solution in managed mode in Microsoft Power Apps.
 ms.reviewer: jdaly
 ms.date: 08/25/2023
 author: swatimadhukargit
 ms.author: swatim
 ---
-# Converting to Managed Solution
+# Failure to install Managed Solution when previously deployed as Unmanaged
 
 _Applies to:_ &nbsp; Power Platform, Solutions
 
-This article provides a workaround for an issue that occurs when trying to convert an unmanaged solution to a managed solution.
+This article provides a workaround for an issue that occurs when importing a managed solution, which includes components that already exist in an unmanaged state.
 
 ## Symptoms
 
-- The solution is already installed on the target environment as an unmanaged solution and the package supplied is attempting to install it in managed mode. Import can only update solutions when the modes match.
-- Customer has previously shipped as unmanaged solution; now they want to move it to managed solution.
+- An unmanaged component is already present on the target environment and the solution supplied during import is attempting to install as managed.
+- The solution may have been previously shipped as unmanaged solution; now the desire is to ship managed solutions.
 
 You receive an error message like the following ones:
 
@@ -27,8 +27,11 @@ You receive an error message like the following ones:
 
 ## Cause
 
-By design, the Dataverse platform blocks the managed solution import on an environment for which unmanaged solution is present. Blocking helps to avoid overriding unmanaged solution and for customer to lose the ability to further develop on the solution.
+By design, some solution components don't support automatic conversion of unmanaged to managed state without the use of [ConvertToManaged](https://learn.microsoft.com/en-us/dotnet/api/microsoft.crm.sdk.messages.importsolutionrequest.converttomanaged?view=dataverse-sdk-latest) import property.
 
 ## Workaround
 
-To convert the unmanaged solution to managed solution, uninstall the unmanaged solution, import the solution with [convert to managed](/power-platform/developer/cli/reference/solution#--convert-to-managed--cm) flag using PACCLI.
+To successfully convert the unmanaged component to managed state:
+
+- Either delete the unmanaged component and import the solution again.
+- Or import the solution with [convert-to-managed](/power-platform/developer/cli/reference/solution?branch=main&branchFallbackFrom=pr-en-us-4823#--convert-to-managed--cm) flag enabled using Microsoft Power Platform CLI.
