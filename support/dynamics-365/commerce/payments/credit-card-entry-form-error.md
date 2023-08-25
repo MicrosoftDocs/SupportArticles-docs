@@ -1,29 +1,28 @@
 ---
-title: Credit card entry page shows an error at checkout
-description: This article provides troubleshooting guidance that can help when the Payment method section isn't loaded and shows an error message.
+title: Credit card entry page shows an error at checkout in Dynamics 365 Commerce
+description: Provides a resolution for an issue where the PAYMENT METHOD section isn't loaded and shows an error message in Microsoft Dynamics 365 Commerce.
 author: Reza-Assadi
 ms.author: josaw
-ms.topic: troubleshooting
-ms.date: 03/11/2021
-
+ms.date: 08/25/2023
 ---
-
 # Credit card entry page shows an error at checkout
 
-This article provides troubleshooting guidance that can help when the **Payment method** section isn't loaded and shows an error message.
+This article provides a resolution for an issue where the **PAYMENT METHOD** section isn't loaded on an e-commerce site's [checkout page](/dynamics365/commerce/quick-tour-cart-checkout#checkout-page) and shows an error message in Microsoft Dynamics 365 Commerce.
 
-## Description
+## Symptoms
 
-When you open the checkout page of an online store, the **Payment method** section isn't loaded, and the following error message is shown: "Something went wrong. Please try again later."
+When you open the checkout page of an online store, the **PAYMENT METHOD** section isn't loaded, and the following error message occurs:
 
-![Payment module error.](../../../media/common/payment-module-error.jpg)
+> Something went wrong. Please try again later.
+
+:::image type="content" source="media/credit-card-entry-form-error/payment-module-error.png" alt-text="Screenshot that shows the error that occurs on the checkout page.":::
 
 ## Resolution
 
-### Wait for the Commerce Scale Unit cache to expire
+To solve this issue, wait for the Commerce Scale Unit cache to expire.
 
 The payment service settings on the online store's checkout page are cached on the Commerce Scale Unit and can take up to 15 minutes to appear on the e-commerce site. These payment service settings include changes to the merchant account ID, cloud API key, and various configuration settings that are related to the payment method.
 
-## Additional resources
+## More information
 
 [Set up an online channel](/dynamics365/commerce/channel-setup-online)
