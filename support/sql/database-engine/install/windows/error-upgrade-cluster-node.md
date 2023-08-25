@@ -47,31 +47,31 @@ This section covers the following actions:
 
 Before you begin this process, be aware of the following:
 
-- You cannot remove node A by using the **Remove Node** operation. This operation will delete the SQL Server failover cluster instance. Therefore, you cannot repair it.
+- You can't remove node A by using the **Remove Node** operation. This operation will delete the SQL Server failover cluster instance. Therefore, you can't repair it.
 
-- You cannot uninstall the SQL Server failover cluster instance by using **Uninstall a program**. This operation does not work.
+- You can't uninstall the SQL Server failover cluster instance by using **Uninstall a program**. This operation doesn't work.
 
 - You cannot use an incorrect edition of the Setup media (for example, SQL Server 2008 or SQL Server 2008 R2) to run the **Remove Node** operation. This operation will corrupt the state of the computer.
 
 To complete the upgrade for node A, there are two phases:
 
-- Phase 1: Clean up after the failed upgrade attempt on node A to restore the pre-upgrade state
+- Phase 1: Clean up after the failed upgrade attempt on node A to restore the pre-upgrade state.
 
-  1. Close the Setup program and the error dialog if they are not already closed, and let the upgrade program finish and report that the upgrade operation failed.
+  1. Close the Setup program and the error dialog if they aren't already closed, and let the upgrade program finish and report that the upgrade operation failed.
 
   2. Remove node A from the possible owners list in order to prevent accidentally failing over back to it. To change the possible owners list, do the following:
 
-     1. Start the Failover Cluster Manager snap-in on any failover node.
-     2. Under **Roles**, select the SQL Server failover cluster instance in the top pane.
-     3. Click **Resources** in the bottom pane, right-click the **Server Name** resource, and then select **Properties**.
-     4. Click **Advanced Policies** in the **Properties** dialog box.
-     5. Select or clear the necessary check boxes for each node to add or remove the nodes.
+    a. Start the Failover Cluster Manager snap-in on any failover node.
+    b. Under **Roles**, select the SQL Server failover cluster instance in the top pane.
+    c. Click **Resources** in the bottom pane, right-click the **Server Name** resource, and then select **Properties**.
+    d. Click **Advanced Policies** in the **Properties** dialog box.
+    e. Select or clear the necessary check boxes for each node to add or remove the nodes.
 
-  3. Open the *summary.txt* file in the following location: `%Program Files%\Microsoft SQL Server\110\Setup Bootstrap\Log`.
+  3. Open the *summary.txt* file in the following location *%Program Files%\Microsoft SQL Server\110\Setup Bootstrap\Log*.
 
      Find the following troubleshooting command in the *summary.txt* file: `setup /q /action=uninstall /instanceid=FOOINST /features=AS`
 
-  4. Open a command prompt as an administrator and use the troubleshooting command together with the path of the SQL Server 2012 Setup file (setup.exe). For example, you use a command that resembles the following:
+  4. Open a command prompt as an administrator and use the troubleshooting command together with the path of the SQL Server 2012 Setup file (*setup.exe*). For example, you use a command that resembles the following:
 
      `*SQL Server 2012 media path* \setup.exe /q /action=uninstall /instanceid=FOOINST /features=AS`
 
@@ -79,8 +79,8 @@ To complete the upgrade for node A, there are two phases:
      >
      > - **SQL Server 2012 media path** is a placeholder for the path of the SQL Server 2012 media.
      > - This command runs silently, and is typically complete within five minutes.
-     > - You can copy and paste the command-line arguments from the summary.txt file to prevent inputting mistakes. However, the `AS` feature has to be passed as a parameter that is exactly as suggested in the summary.txt file. Incorrect input of this command (especially the `instanceid` parameter) will cause the cleanup operation to fail, and potentially leave the computer in a corrupted state.
-     > - Check the summary.txt file to confirm that the cleanup operation completed successfully.
+     > - You can copy and paste the command-line arguments from the *summary.txt* file to prevent inputting mistakes. However, the `AS` feature has to be passed as a parameter that is exactly as suggested in the *summary.txt* file. Incorrect input of this command (especially the `instanceid` parameter) will cause the cleanup operation to fail, and potentially leave the computer in a corrupted state.
+     > - Check the *summary.txt* file to confirm that the cleanup operation completed successfully.
 
 - Phase 2: Upgrade node A to SQL Server 2012
 

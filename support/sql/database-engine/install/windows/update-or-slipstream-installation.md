@@ -24,7 +24,7 @@ There are two situations to consider:
 
 It is recommended that you update or slipstream the original SQL Server 2008 by using Service Pack 1 because Service Pack enables to update the entire product. A CU that is based on the original SQL Server 2008 release can only update the SQL Support component.
 
-For answers to frequently asked questions about slipstreaming, see the *SQL Server 2008 Slipstream Frequently Asked Questions* topic on [SQL Server Setup](/archive/blogs/petersad).
+For answers to frequently asked questions about slipstreaming, see the **SQL Server 2008 Slipstream Frequently Asked Questions** topic on [SQL Server Setup](/archive/blogs/petersad).
 
 > [!IMPORTANT]
 > For SQL Server 2012 and later versions, you need to use /UpdateSource parameter to update your SQL Server installation files. For an example on how to do this, see [How to patch SQL Server 2012 Setup with an updated setup package (using UpdateSource to get a smart setup)](/archive/blogs/jason_howell/how-to-patch-sql-server-2012-setup-with-an-updated-setup-package-using-updatesource-to-get-a-smart-setup).
@@ -33,7 +33,7 @@ For answers to frequently asked questions about slipstreaming, see the *SQL Serv
 
 When you run the original release version of SQL Server 2008 Setup, the Setup program copies itself on the local computer, and then reruns from the local copy. Therefore, if there is a later version of the support files on the computer, the Setup program will run these updated files. Therefore, you can update the SQL Server 2008 Setup support files before you run the *Setup.exe* file.
 
-Starting from SQL Server 2008 Service Pack 1, you can update SQL Server 2008 by using the slipstream infrastructure. When you install Service Pack 1 by using the slipstream procedure or install to an existing SQL Server 2008 installation, an entry is created for the Service Pack in Add or Remove Programs. You can uninstall the service pack by using this entry.
+Starting from SQL Server 2008 Service Pack 1, you can update SQL Server 2008 by using the slipstream infrastructure. When you install Service Pack 1 by using the slipstream procedure or install to an existing SQL Server 2008 installation, an entry is created for the Service Pack in **Add or Remove Programs**. You can uninstall the service pack by using this entry.
 
 To verify whether a service pack is installed correctly, run the SQL Discovery report that is available in the SQL Server 2008 Installation Center. You should see the features are version 10. **n**. **xxxx**, where **n** represents the service pack version. For example, 10.1. **xxxx** represents Service Pack 1.
 
@@ -47,7 +47,7 @@ The following steps describe how to update SQL Server 2008 Setup when a Setup is
 
 1. If the SQL Server 2008 Setup support files are not installed, see the "Proactively running setup" section.
 
-To determine whether the SQL Server 2008 Setup support files are installed on the computer, view the entry by using Add or Remove Programs in Control Panel in operating systems that are earlier than Windows Vista. In Windows Vista or later versions of Windows, view the entry by using Programs and Features in Control Panel. To apply a CU or a hotfix and run the Setup program, follow these steps:
+To determine whether the SQL Server 2008 Setup support files are installed on the computer, view the entry by using **Add or Remove Programs** in Control Panel in operating systems that are earlier than Windows Vista. In Windows Vista or later versions of Windows, view the entry by using Programs and Features in Control Panel. To apply a CU or a hotfix and run the Setup program, follow these steps:
 
 1. If a fix is available through a hotfix, download the CU or the hotfix, and then install it on the computer by running the .exe file or by using the command line. The package detects the SQL Server 2008 Setup support files on the computer and then applies a new version of the SQLSupport.msi file.
 
@@ -236,7 +236,7 @@ This option is best for running a patched setup on a small number of computers.
    >
    > - On x86 and x64 platforms, you must install the .NET Framework 3.5 SP1.
 
-1. Double-click the hotfix package to install the SQL Server 2008 Setup support files. After you extract the contents of the package, the updated SQL Server 2008 Setup support files will be installed. The hotfix package will complete the installation without notifying you when it is completed. To confirm that the files are installed, view the entry by using the Add or Remove Programs item in Control Panel in operating systems that are earlier than Windows Vista. In Windows Vista or later versions of Windows, view the entry by using the Programs and Features item in Control Panel.
+1. Double-click the hotfix package to install the SQL Server 2008 Setup support files. After you extract the contents of the package, the updated SQL Server 2008 Setup support files will be installed. The hotfix package will complete the installation without notifying you when it is completed. To confirm that the files are installed, view the entry by using the **Add or Remove Programs** item in Control Panel in operating systems that are earlier than Windows Vista. In Windows Vista or later versions of Windows, view the entry by using the Programs and Features item in Control Panel.
 
 1. Start the Setup program from the DVD or from the network share.
 
@@ -246,7 +246,7 @@ This option is best for running a patched setup on many computers, large deploym
 
 1. Download the hotfix that includes the updated SQL Server 2008 Setup support files that you want to use to update the original media files. You must download the hotfixes for x86, x64, and IA-64 platforms because the original media contains the files for each platform.
 
-1. At a command prompt, type the following command, and then press ENTER to extract the contents of the package: `hotfix_package_name/x:c:\kb _number_of_hotfix package\architecture`.  
+1. At a command prompt, type the following command, and then press <kbd>ENTER</kbd> to extract the contents of the package: `hotfix_package_name/x:c:\kb _number_of_hotfix package\architecture`.  
 
    The **architecture** placeholder represents the different hardware platforms. For example, it can represent one of the following folders:
 
@@ -266,9 +266,9 @@ This option is best for running a patched setup on many computers, large deploym
 
     - Copy the *Setup.exe* and *Setup.rll* files from the *C:\kb_number_of_hotfix package\folder* to the Folder that contains the local copy of *media\* folder.
   
-    - Copy all files (not the subfolders) in the **architecture** folder, except the Microsoft.SQL.Chainer.PackageData.dll file, from the `C:\kb_number_of_hotfix package\architecture\architecture\` folder to the Folder that contains the local copy of `media\architecture\` folder.
+    - Copy all files (not the subfolders) in the **architecture** folder, except the *Microsoft.SQL.Chainer.PackageData.dll* file, from the `C:\kb_number_of_hotfix package\architecture\architecture\` folder to the Folder that contains the local copy of `media\architecture\` folder.
 
-5. Start the Setup program from the local folder.
+1. Start the Setup program from the local folder.
 
 > [!NOTE]
 > Due to schema changes that have been introduced in RTM based-cumulative update packages for SQL Server 2008 that start with Cumulative Update Package 8, you may receive the following error message when you run the Setup program. You may receive the following error message after you update the Setup support files by using the procedure that is described in option 2:
@@ -280,19 +280,19 @@ This option is best for running a patched setup on many computers, large deploym
 >
 > 2010-01-14 15:34:36 Slp: The 'Path' attribute is not declared.
 
-To avoid this validation issue, we recommend that you copy the Microsoft.SQL.Chainer.PackageData.dll file from the RTM media and keep the original *Microsoft.SQL.Chainer.Package.dll* file in the same location as the *Microsoft.SQL.Chainer.Package.Package.xsd* file. Do this to make sure that the two .dll files are in sync. This combination of .dll files will install the RTM version of SqlSupport.msi (10.00.1600.22). To benefit from the bug fixes that are present in the cumulative update, use one of the following methods:
+To avoid this validation issue, we recommend that you copy the *Microsoft.SQL.Chainer.PackageData.dll* file from the RTM media and keep the original *Microsoft.SQL.Chainer.Package.dll* file in the same location as the *Microsoft.SQL.Chainer.Package.Package.xsd* file. Do this to make sure that the two .dll files are in sync. This combination of .dll files will install the RTM version of SqlSupport.msi (10.00.1600.22). To benefit from the bug fixes that are present in the cumulative update, use one of the following methods:
 
 - Method 1
 
-  Manually install the SQL Support .msi file for the particular architecture from the following cumulative update package extraction location: `CU8\<CPU>\setup\sqlsupport.msi`.
+  Manually install the SQL Support .msi file for the particular architecture from the following cumulative update package extraction location: *CU8\<CPU>\setup\sqlsupport.msi*.
 
 - Method 2
 
-  In addition to the files that are listed in step 4 in option 2, the files that are described in the following steps should be copied before you start setup from a local folder. To copy the files, following these steps.
+  In addition to the files that are listed in step 4 in option 2, the files that are described in the following steps should be copied before you start setup from a local folder. To copy the files, follow these steps:
 
   1. Copy the *Microsoft.SQL.Chainer.Package.dll* file from the RTM folder to the local copy of the `<media>\<architecture folder>` folder.
 
-  2. Copy the Sqlsupport.msi file. Of the following locations, copy the file from the first location to the local copy of the second location:
+  1. Copy the *Sqlsupport.msi* file. Of the following locations, copy the file from the first location to the local copy of the second location:
      - `C:\<kb_number_of_hotfix package>\<architecture>\setup\Sqlsupport.msi`
      - `<media>\<architecture folder>\setup\`
 
