@@ -87,11 +87,7 @@ Here's the detailed troubleshooting checklist:
     Get-AppxPackage *calculator* -AllUsers
     ```
 
-    A successful return of the app details confirms that the package exists:
-
-    ```powershell
-    PS C:\WINDOWS\system32> Get-AppxPackage *calculator* -AllUsers
-    ```
+    If there's a successful return of the app details, it means that the package exists.
 
     Use one of the following cmdlets to try to register the app for this user.
 
