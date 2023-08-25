@@ -4,7 +4,7 @@ description: Troubleshoot common issues in managing Azure File Sync sync groups,
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 06/25/2023
+ms.date: 08/25/2023
 ms.author: kendownie
 ---
 # Troubleshoot Azure File Sync sync group management
@@ -132,13 +132,17 @@ Set-AzStorageSyncServerEndpoint `
 
 <a id="server-endpoint-noactivity"></a>**Server endpoint has a health status of "No Activity" or "Pending" and the server state on the registered servers blade is "Appears offline"**
 
-This issue can occur if the Storage Sync Monitor process (AzureStorageSyncMonitor.exe) isn't running or the server is unable to access the Azure File Sync service.
+This issue can occur for the following reasons:
+- The Storage Sync Monitor process (AzureStorageSyncMonitor.exe) isn't running or the server has insufficient system resources.
+- The server is unable to communicate with the Azure File Sync service.
+- The server is unable to authenticate with the Azure File Sync service due to an expired or deleted certificate.
+- The Telemetry event log on the server is corrupted.
 
 On the server that is showing as "Appears offline" in the portal, look at Event ID 9301 in the Telemetry event log (located under *Applications and Services\Microsoft\FileSync\Agent* in Event Viewer) to determine why the server is unable to access the Azure File Sync service.
 
 - If "GetNextJob completed with status: 0" is logged, the server can communicate with the Azure File Sync service
 
-    Open Task Manager on the server and verify the Storage Sync Monitor (AzureStorageSyncMonitor.exe) process is running. If the process isn't running, first try restarting the server. If restarting the server doesn't resolve the issue, upgrade to the latest Azure File Sync [agent version](/azure/storage/file-sync/file-sync-release-notes).
+    Open Task Manager on the server and verify the Storage Sync Monitor (AzureStorageSyncMonitor.exe) process is running. If the process isn't running, first try restarting the server. If restarting the server doesn't resolve the issue, upgrade to the latest Azure File Sync [agent version](/azure/storage/file-sync/file-sync-release-notes) and verify the server has sufficient system resources.
 
 - If "GetNextJob completed with status: -2134347756" is logged, the server is unable to communicate with the Azure File Sync service due to a firewall, proxy, or TLS cipher suite order configuration.
 
@@ -162,14 +166,35 @@ On the server that is showing as "Appears offline" in the portal, look at Event 
     > [!Note]
     > Different Windows vesions support different TLS cipher suites and priority order. See [TLS Cipher Suites in Windows](/windows/win32/secauthn/cipher-suites-in-schannel) for the corresponding Windows version and the supported cipher suites and default order in which they are chosen by the Microsoft Schannel Provider.
 
-- If "GetNextJob completed with status: -2134347764" is logged, the server is unable to communicate with the Azure File Sync service due to an expired or deleted certificate.  
+- If "GetNextJob completed with status: -2134347764" is logged, the server is unable to authenticate with the Azure File Sync service due to an expired or deleted certificate.  
 
-    Run the following PowerShell command on the server to reset the certificate used for authentication:
+  Run the following PowerShell commands on the server to confirm the server certificate is missing or expired:
+  
+    ```powershell
+		Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"  
+    Debug-StorageSyncServer -Diagnose
+ 		```
+
+  Run the following PowerShell command on the server to reset the certificate used for authentication:
 
     ```powershell
     Reset-AzStorageSyncServerCertificate -ResourceGroupName <string> -StorageSyncServiceName <string>
     ```
+- If the Telemetry event log is empty, this means the event log is more than likely corrupted. 
 
+    Run the following PowerShell commands on the server to confirm the Telemetry event log is corrupted:
+
+    ```powershell
+		Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"  
+    Debug-StorageSyncServer -Diagnose
+ 		```
+    Run the following PowerShell commands on the server to fix the event log corruption:
+
+    ```powershell
+		Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"  
+    Debug-StorageSyncServer -FixAfsEventsCorruption
+ 		```
+ 
 <a id="endpoint-noactivity-sync"></a>**Server endpoint has a health status of "No Activity" and the server state on the registered servers blade is "Online"**
 
 A server endpoint health status of "No Activity" means the server endpoint hasn't logged sync activity in the past two hours.
