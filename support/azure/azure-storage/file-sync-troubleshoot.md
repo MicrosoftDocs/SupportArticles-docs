@@ -30,7 +30,7 @@ If you are unsure where to start, see [General troubleshooting first steps](#gen
 
 If you are experiencing issues with Azure File Sync, start by completing the following steps:
 
-1. Use the Azure portal or event logs on the server to check for any errors. The [Monitor Azure File Sync](/azure/storage/file-sync/file-sync-monitoring.md) documentation covers how to view the health of your Azure File Sync environment using the portal and event logs.
+1. Use the Azure portal or event logs on the server to check for any errors. The [Monitor Azure File Sync](/azure/storage/file-sync/file-sync-monitoring#storage-sync-service) documentation covers how to view the health of your Azure File Sync environment using the portal and event logs.
 2. Verify the Azure File Sync service is running on the server:
     - Open the Services MMC snap-in and verify the Storage Sync Agent service (FileSyncSvc) is running.
 3. Verify the Azure File Sync filter drivers (*StorageSync.sys* and *StorageSyncGuard.sys*) are running on the server:
