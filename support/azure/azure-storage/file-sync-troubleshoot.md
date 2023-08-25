@@ -17,7 +17,7 @@ You can use Azure File Sync to centralize your organization's file shares in Azu
 
 ## Common troubleshooting subject areas
 
-If you are encountering issues with Azure File Sync, review the following Troubleshooting documents based on the issue you're exeriencing:
+Based on the issue you're exeriencing, review the following Troubleshooting documents:
 
 - Agent installation or server registration issues, see [Troubleshoot Azure File Sync agent installation and server registration](file-sync-troubleshoot-installation.md)
 - Cloud endpoint or server endpoint creation issues or registered server offline, see [Troubleshoot Azure File Sync sync group management](file-sync-troubleshoot-sync-group-management.md)
@@ -28,12 +28,12 @@ If you are unsure where to start, see [General troubleshooting first steps](#gen
 
 ## General troubleshooting first steps
 
-If you are experiencing issues with Azure File Sync, start by:
+If you are experiencing issues with Azure File Sync, start by completing the following steps:
 
-1. Following the steps in the [Monitor Azure File Sync](https://learn.microsoft.com/azure/storage/file-sync/file-sync-monitoring) documentation to view the health of your Azure File Sync environment.
-2. Verifying the Azure File Sync service is running on the server:
+1. Use the Azure portal or event logs on the server to check for any errors. The [Monitor Azure File Sync](https://learn.microsoft.com/azure/storage/file-sync/file-sync-monitoring) documentation covers how to view the health of your Azure File Sync environment using the portal and event logs.
+2. Verify the Azure File Sync service is running on the server:
     - Open the Services MMC snap-in and verify the Storage Sync Agent service (FileSyncSvc) is running.
-3. Verifying the Azure File Sync filter drivers (*StorageSync.sys* and *StorageSyncGuard.sys*) are running on the server:
+3. Verify the Azure File Sync filter drivers (*StorageSync.sys* and *StorageSyncGuard.sys*) are running on the server:
     - At an elevated command prompt, run `fltmc`. Verify the *StorageSync.sys* and *StorageSyncGuard.sys* file system filter drivers are listed.
 4. Use the [debug-storagesyncserver cmdlet](#debug-storagesyncserver-cmdlet) on the server to check for common issues.
 
