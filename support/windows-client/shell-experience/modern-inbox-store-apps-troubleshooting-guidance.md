@@ -26,7 +26,7 @@ Modern Apps or Microsoft Store Apps can sometimes fail to start or launch and th
 2. [Re-register the application for the user may resolve activation issues.](#checklist-2)
 3. [If you receive no response to the Get-AppxPackage cmdlet, you can still use the Add-AppxPackage cmdlet.](#checklist-3)
 4. [For the XML path, you need to check which version you have installed.](#checklist-4)
-5. [If the application still fails to start after registration, perhaps the package for the application is corrupted or missing some components.](#checklist-5)
+5. [If the application still fails to start after re-registration, perhaps the package for the application is corrupted or missing some components.](#checklist-5)
 6. [For a single application, you can use the winget command.](#checklist-6)
 7. [Check if the system setup has appropriate settings to download and install AppX packages.](#checklist-7)
 8. [If Microsoft Store has issues starting or was previously removed, try reinstalling it.](#checklist-8)
@@ -81,13 +81,13 @@ Here's the detailed troubleshooting checklist:
 
     This is possible because although this user doesn't have the package registered, other users might. This means that the package will still exist on the machine.
 
-    To check this, add `-AllUsers` to the same `Get-AppxPackage` cmdlet we used before in an elevated PowerShell prompt:
+    To check this, add `-AllUsers` to the same `Get-AppxPackage` cmdlet we used earlier in an elevated PowerShell prompt:
 
     ```powershell
     Get-AppxPackage *calculator* -AllUsers
     ```
 
-    A successful return of the app details confirms that the package is present:
+    A successful return of the app details confirms that the package exists:
 
     ```powershell
     PS C:\WINDOWS\system32> Get-AppxPackage *calculator* -AllUsers
@@ -95,7 +95,7 @@ Here's the detailed troubleshooting checklist:
 
     Use one of the following cmdlets to try to register the app for this user.
 
-    Be sure not to use the elevated PowerShell prompt unless you wish the app registered to the administrator instead of the user.
+    Be sure not to use the elevated PowerShell prompt unless you wish to register the app to the administrator instead of the user.
 
     ```powershell
     Add-AppxPackage -RegisterByFamilyName -MainPackage Microsoft.WindowsCalculator_8wekyb3d8bbwe
