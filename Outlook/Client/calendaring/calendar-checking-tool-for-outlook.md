@@ -64,7 +64,7 @@ The Assistant fully automates all the steps required to perform Outlook calendar
 
 ### Method 2: Manual installation
 
-Go to the [latest release](https://github.com/rtopken/CalCheck/releases), download and install the Calendar Checking Tool for Outlook.
+Go to the [latest release](https://www.microsoft.com/download/details.aspx?id=28786), download and install the Calendar Checking Tool for Outlook.
 
 > [!NOTE]
 > The 64-bit version of this tool is for use together with only the 64-bit version of Microsoft Outlook.
