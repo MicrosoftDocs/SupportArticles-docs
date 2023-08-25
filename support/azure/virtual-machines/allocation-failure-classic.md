@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting Azure VM allocation failures in classic deployment model
-description: Troubleshoot allocation failures when you create, restart, or resize a classic VM in Azure
+description: Troubleshoot allocation failures when you create, restart, or resize a classic VM in Azure.
 services: azure-service-management
 documentationcenter: ''
 author: genlin
@@ -9,7 +9,7 @@ tags: top-support-issue,azure-resource-manager,azure-service-management
 ms.service: virtual-machines
 ms.subservice: vm-cannot-start-stop
 ms.topic: troubleshooting
-ms.date: 11/01/2018
+ms.date: 08/25/2023
 ms.author: genli
 
 ---
@@ -122,8 +122,8 @@ Before regional virtual networks were introduced, you were required to associate
 
 **Workaround**
 
-If you do not need an affinity group, create a new regional virtual network for the new resources you're adding, and then [connect your existing virtual network to the new virtual network](https://azure.microsoft.com/blog/vnet-to-vnet-connecting-virtual-networks-in-azure-across-different-regions/). See more about [regional virtual networks](https://azure.microsoft.com/blog/2014/05/14/regional-virtual-networks/).
+If you do not need an affinity group, create a new regional virtual network for the new resources you're adding, and then [connect your existing virtual network to the new virtual network](https://azure.microsoft.com/blog/vnet-to-vnet-connecting-virtual-networks-in-azure-across-different-regions/).
 
-Alternatively, you can [migrate your affinity-group-based virtual network to a regional virtual network](https://azure.microsoft.com/blog/2014/11/26/migrating-existing-services-to-regional-scope/), and then add the desired resources again.
+Alternatively, you can [Migrate a virtual network (classic) from an affinity group to a region](/previous-versions/azure/virtual-network/virtual-networks-migrate-to-regional-vnet), and then add the desired resources again.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
