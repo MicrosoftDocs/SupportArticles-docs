@@ -447,6 +447,8 @@
       items:
         - name: Develop apps via Exchange Powershell and .NET Framework
           href: ../development/develop-apps-by-using-exchange-powershell.md
+        - name: MAPI applications can't access archive mailboxes
+          href: ../development/mapi-apps-cannot-access-archive-mailboxes.md
         - name: Support limitations for open standards
           href: ../development/public-protocols-support-limitations.md
     - name: Distribution Lists

@@ -13,7 +13,7 @@
           href: ../authentication/how-to-force-outlook-to-resolve-proxy-addresses-and-custom-properties.md
         - name: Looking for credential tiles message occurs
           href: ../authentication/looking-for-credential-tiles-message.md
-        - name: O365 credential prompts with AuthenticationService value
+        - name: Microsoft 365 credential prompts with AuthenticationService value
           href: ../authentication/o365-credential-prompts-with-authenticationservice.md
         - name: Outlook doesn't connect when using Modern authentication
           href: /exchange/troubleshoot/administration/outlook-does-not-connect-with-modern-authentication?context=/outlook/troubleshoot/context/client-context
@@ -333,6 +333,8 @@
           href: ../email-management/emails-that-you-forward-not-saved-in-sent-items.md
         - name: How to emulate Out of Office Assistant
           href: ../email-management/how-to-emulate-the-out-of-office-assistant-in-micr.md
+        - name: Inbox rule doesn't appear in Outlook client
+          href: ../email-management/inbox-rule-does-not-appear-in-outlook-client.md
         - name: Issues with OOF replies
           href: /exchange/troubleshoot/send-emails/understand-troubleshoot-oof-replies
         - name: Messages move from the Inbox to a renamed folder

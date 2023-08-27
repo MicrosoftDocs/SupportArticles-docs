@@ -343,6 +343,8 @@
           href: ../groups-and-distribution-lists/mailtip-shows-wrong-number-of-recipients.md
         - name: Can't determine group type
           href: ../groups-and-distribution-lists/cannot-determine-group-type-error.md
+        - name: Can't empty Deleted Items folder in Microsoft 365 Groups
+          href: ../groups-and-distribution-lists/cannot-empty-deleted-items-folder-in-groups.md
         - name: Can't manage a group hidden from GAL
           href: ../groups-and-distribution-lists/cannot-manage-hidden-group.md
         - name: Can't remove members that exceed the limit
@@ -395,6 +397,8 @@
           href: ../move-or-migrate-mailboxes/cannot-see-free-busy-information.md
         - name: Can't view mailbox folders after an IMAP migration
           href: ../move-or-migrate-mailboxes/cannot-view-mailbox-folders-after-imap-migration.md
+        - name: Favorites folders are missing after migration to Exchange Online
+          href: ../move-or-migrate-mailboxes/favorites-folders-missing-after-migration.md
         - name: How to manage the maximum concurrent migration batches
           href: ../move-or-migrate-mailboxes/how-to-manage-maximum-concurrent-migration-batches.md
         - name: Issue with Add-RecipientPermission

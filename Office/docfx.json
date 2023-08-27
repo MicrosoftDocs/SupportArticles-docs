@@ -73,10 +73,10 @@
       "recommendations": true,
       "feedback_system": "Standard",
       "feedback_product_url": "https://techcommunity.microsoft.com/",
-      "titleSuffix": "Office",
+      "titleSuffix": "Microsoft 365 Apps",
       "uhfHeaderId": "MSDocsHeader-M365-IT",
       "hideEdit": true,
-      "searchScope": ["Office Support"],
+      "searchScope": ["Microsoft 365 Apps Support"],
       "contributors_to_exclude": [ 
         "beccarobins"
       ]
@@ -113,6 +113,12 @@
         "Client/visio/**/*.md": "visio",
         "Client/word/**/*.md": "word",
         "OfficeExperts/word/**/*.md": "word"
+      },
+      "author": {
+        "**/*.md": "helenclu"
+      },
+      "ms.author": {
+        "**/*.md": "luche"
       }
     },
     "template": [],

@@ -15,7 +15,7 @@ search.appverid: MET150
 ms.reviewer: gregmans, v-six
 author: cloud-writer
 ms.author: meerak
-ms.date: 3/31/2022
+ms.date: 8/8/2023
 ---
 # You experience issues in Outlook when you try to configure free/busy information or when you try to delegate information
 
@@ -26,7 +26,7 @@ In Microsoft Outlook, you experience one of the following issues when you try to
 - When you accept a meeting request or when you add a delegate to your mailbox, you receive the following error message:
     > Unable to save free/busy information
 
-- When you use the **outlook.exe /cleanfreebusy** command-line switch to start Outlook, you receive the following error message:
+- When you use the `outlook.exe /cleanfreebusy` command-line switch to start Outlook, you receive the following error message:
     > Unable to clean your local free/busy information.
 
 - When you try to add a delegate, you receive one of the following error messages:
@@ -65,14 +65,14 @@ These issues occur because a mailbox property does not correctly reference a hid
 
 To resolve this issue, use one of the following methods to force the regeneration of hidden free/busy information in the mailbox.
 
-The steps in this section must be applied on the mailbox of the user who owns the Calendar folder. This is the mailbox on which you try to create the calendar items, use the **/cleanfreebusy** switch, or configure the delegate settings.
+The steps in this section must be applied to the mailbox of the user who owns the Calendar folder. This is the mailbox on which you try to create the calendar items, use the **/cleanfreebusy** switch, or configure the delegate settings.
 
 > [!NOTE]
 > The **/cleanfreebusy** switch is not available in Outlook 2016 and later versions. Instead, you can use the **/cleanroamedprefs** switch.
 
 After you follow these steps, you may have to reconfigure settings that are related to the delegates and direct booking features.
 
-### Method 1: Use PowerShell cmdlet
+### Method 1: Use the PowerShell cmdlet
 
 You must have the administrator permission to run the PowerShell cmdlets to delete the free/busy configuration on the mailbox, and then add or recreate any necessary delegate permissions:
 
@@ -128,7 +128,13 @@ Follow these steps:
     1. Double-click **Freebusy Data**.
     1. In the upper pane, find the item with the Subject of **LocalFreebusy**. Right-click it, and then select **Delete message**.
     1. For Deletion style, select **Permanent delete passing DELETE_HARD_DELETE (unrecoverable)**, and then select **OK**.
-1. Close all the MFCMAPI windows.
+1. In the navigation pane, select **Top of Information Store** > **Inbox**.
+1. On the **Actions** menu, point to **Other tables**, and then select **Rules table**.
+1. Find the rule whose PR_RULE_PROVIDER option is set to **SCHEDULE+ EMS Interface**, and then delete it.
+1. Exit MFCMAPI.
+
+> [!NOTE]
+> You may need to manually remove and re-add the delegate(s) in Outlook by using **File** > **Account settings** > **Delegate Access**. 
 
 ### Reconfigure delegates permissions and direct booking
 
