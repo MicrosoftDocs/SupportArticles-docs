@@ -8,7 +8,9 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.custom: CSSTroubleshoot, has-azure-ad-ps-ref
+ms.custom:
+  - CSSTroubleshoot
+  - has-azure-ad-ps-ref
 ms.author: luche
 ms.reviewer: v-lanac
 appliesto: 
