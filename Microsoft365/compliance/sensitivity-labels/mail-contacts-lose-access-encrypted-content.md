@@ -8,7 +8,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
-ms.custom: CI 162121, CSSTroubleshoot, has-azure-ad-ps-ref
+ms.custom: 
+  - CI 162121
+  - CSSTroubleshoot
 ms.reviewer: cabailey
 appliesto: 
   - Microsoft 365 (Enterprise, Business, Government, Education)

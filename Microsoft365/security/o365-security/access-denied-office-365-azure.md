@@ -9,7 +9,9 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.custom: CSSTroubleshoot, CI 109573, has-azure-ad-ps-ref
+ms.custom: 
+  - CSSTroubleshoot
+  - CI 109573
 ms.author: luche
 appliesto: 
   - Cloud Services (Web roles/Worker roles)

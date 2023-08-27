@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
-ms.custom: CSSTroubleshoot, has-azure-ad-ps-ref
+ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Online
 ms.date: 3/31/2022

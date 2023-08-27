@@ -7,7 +7,7 @@ localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
-ms.custom: CSSTroubleshoot, has-azure-ad-ps-ref
+ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche
 appliesto: 

@@ -6,11 +6,11 @@ metadata:
   title: Microsoft 365 security troubleshooting
   description: Documentation for troubleshooting common issues with Microsoft 365 security.
   ms.service: microsoft-365-security
-  ms.custom: has-azure-ad-ps-ref
   ms.topic: landing-page
   author: helenclu
   ms.author: luche
   ms.date: 07/26/2022
+
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
