@@ -2,6 +2,14 @@
 
 
 
+## Week of August 21, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 8/22/2023 | [Web links from Outlook and Teams open in Microsoft Edge in side-by-side view](/outlook/troubleshoot/message-body/view-emails-and-web-links-in-browser) | modified |
+
+
 ## Week of August 07, 2023
 
 
@@ -21,20 +29,3 @@
 | 8/1/2023 | [HTTP version of OAB does not download](/outlook/troubleshoot/data-files/http-version-of-offline-address-book-fails-to-download) | modified |
 | 8/1/2023 | [How to manage Outlook Social Connector by using Group Policy](/outlook/troubleshoot/deployment/how-to-manage-outlook-social-connector-via-group-policy) | modified |
 | 8/1/2023 | [CDO 1.2.1 is not supported with Outlook 2010 and later versions](/outlook/troubleshoot/development/collaboration-data-objects-1-2-1-not-supported-in-outlook-2010-and-later) | modified |
-
-
-## Week of July 17, 2023
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 7/20/2023 | [Access public folders in Outlook for Windows](/outlook/troubleshoot/user-interface/navigate-to-public-folders-in-new-outlook) | modified |
-| 7/20/2023 | [Cannot expose permissions to generate OAuth tokens for Extended MAPI access](/outlook/troubleshoot/authentication/expose-permissions-issue-with-mapi-oauth-tokens) | modified |
-
-
-## Week of July 10, 2023
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 7/11/2023 | [Send updates prompt not displayed](/outlook/troubleshoot/calendaring/send-updates-prompt-not-displayed) | modified |
