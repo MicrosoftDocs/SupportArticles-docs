@@ -4,7 +4,9 @@ author: helenclu
 ms.author: luche
 manager: dcscontentpm
 localization_priority: Normal
-ms.custom: CSSTroubleshoot, has-azure-ad-ps-ref
+ms.custom:
+  - CSSTroubleshoot
+  - has-azure-ad-ps-ref
 search.appverid: 
   - MET150
 audience: ITPro
