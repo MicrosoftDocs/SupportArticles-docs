@@ -6,7 +6,7 @@ manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
-ms.custom: CSSTroubleshoot, has-azure-ad-ps-ref
+ms.custom: CSSTroubleshoot
 ms.author: luche
 search.appverid: 
   - MET150

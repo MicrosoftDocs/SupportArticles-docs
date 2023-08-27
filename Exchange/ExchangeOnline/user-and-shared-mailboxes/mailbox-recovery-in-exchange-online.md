@@ -8,7 +8,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
-ms.custom: Exchange Online, CSSTroubleshoot, has-azure-ad-ps-ref
+ms.custom: 
+  - Exchange Online
+  - CSSTroubleshoot
 ms.reviewer: v-six
 appliesto: 
   - Exchange Online

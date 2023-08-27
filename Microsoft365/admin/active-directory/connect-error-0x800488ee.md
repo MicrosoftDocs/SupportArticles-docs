@@ -8,7 +8,7 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.custom: CSSTroubleshoot, has-azure-ad-ps-ref
+ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - Cloud Services (Web roles/Worker roles)
