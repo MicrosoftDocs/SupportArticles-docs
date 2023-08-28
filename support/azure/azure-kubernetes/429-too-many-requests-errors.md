@@ -50,7 +50,7 @@ Run Kubernetes 1.18.*x* or later. These versions contain many improvements that 
 
 ## Solution 2: Increase the autoscaler scan interval
 
-If you [find the "Cluster Auto-Scaler Throttling has been detected" diagnostic reports throttling](#analyze-and-identify-errors-by-using-aks-diagnose-and-solve-problems) caused by the cluster autoscaler, you can try to increase the [autoscaler scan interval](/azure/aks/cluster-autoscaler) to reduce the number of calls to virtual machine scale sets from the cluster autoscaler.
+If you [find the "Cluster Auto-Scaler Throttling has been detected" diagnostic reports throttling](#analyze-and-identify-errors-by-using-aks-diagnose-and-solve-problems) caused by the cluster autoscaler, you can try to increase the [autoscaler scan interval](/azure/aks/cluster-autoscaler) to reduce the number of calls to virtual machine scale sets (VMSS) from the cluster autoscaler.
 
 ## Solution 3: Reconfigure third-party applications to make fewer calls
 
@@ -96,7 +96,7 @@ If you find the **Cluster Auto-Scaler Throttling has been detected** diagnostic 
 
 You can find the number of throttled requests and when the requests are throttled in the **Throttling - Azure Resource Manager** diagnostic.
 
-:::image type="content" source="media/429-too-many-requests-errors/cas-arm-throttling.png" alt-text="Diagram that shows when cluster auto-scaler requests are throttled." lightbox="media/429-too-many-requests-errors/cas-arm-throttling.png" border="false":::
+:::image type="content" source="media/429-too-many-requests-errors/cas-arm-throttling.png" alt-text="Diagram that shows when cluster autoscaler requests are throttled." lightbox="media/429-too-many-requests-errors/cas-arm-throttling.png" border="false":::
 
 You can find the number of all ARM requests in the same time period.
 
