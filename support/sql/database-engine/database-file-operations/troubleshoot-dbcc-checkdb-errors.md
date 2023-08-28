@@ -18,7 +18,7 @@ _Original KB number:_ &nbsp; 2015748
 When the [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) (or other similar commands like [DBCC CHECKTABLE](/sql/t-sql/database-console-commands/dbcc-checktable-transact-sql)) is executed, a message like the following one is written to the SQL Server error log:
 
 ```output
-DBCC CHECKDB (mydb) executed by MYDOMAIN\theuser found 15 errors and repaired errors.
+DBCC CHECKDB (mydb) executed by MYDOMAIN\theuser found 15 errors and repaired 3 errors.
 Elapsed time: 0 hours 0 minutes 0 seconds.
 Internal database snapshot has split point LSN = 00000026:0000089d:0001 and first LSN = 00000026:0000089c:0001.
 This is an informational message only. No user action is required.
@@ -55,7 +55,8 @@ The cause of these problems can range from file system corruption, underlying ha
     > CHECKDB found 0 allocation errors and 15 consistency errors in database 'mydb'.  
      `REPAIR_ALLOW_DATA_LOSS` is the minimum repair level for the errors found by `DBCC CHECKDB` (mydb).
 
-    The repair recommendation is the minimum level of repair to attempt to resolve all errors from `CHECKDB`. The minimum repair level doesn't mean that this repair option fixes all errors. Some errors simply can't be fixed, so you might need to run the repair process more than once. Not all errors reported may require this level of repair to be resolved. This means that not all errors reported by `CHECKDB` when `REPAIR_ALLOW_DATA_LOSS` is recommended might cause loss in data. Repair must be run to determine if the resolution to an error results in data loss. One technique to help narrow down what the repair level is for each table is to use `DBCC CHECKTABLE` for any table reporting an error. This shows the minimum level of repair for a given table.
+    The repair recommendation is the minimum level of repair to attempt to resolve all errors from `CHECKDB`. The minimum repair level doesn't mean that this repair option fixes all errors. Some errors simply can't be fixed. Also you might need to run the repair process more than once.
+   Not all errors reported require the use of this repail level to be resolved. This means that not all repairs by `CHECKDB` with `REPAIR_ALLOW_DATA_LOSS` result in data loss. Repair must be run to determine if the resolution to an error results in data loss. One technique to help narrow down what the repair level is for each table is to use `DBCC CHECKTABLE` for any table reporting an error. This shows the minimum level of repair for a given table.
 
    > [!WARNING]  
    > You must perform manual data validation after `CHECKDB` repair or data export or import is complete. For more information, see [DBCC CHECKDB arguments](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql#arguments). The data might not be logically consistent after the repair. For example, repair (particularly `REPAIR_ALLOW_DATA_LOSS` option) might remove entire data pages that contain inconsistent data. In such cases, a table with a foreign key relationship to another table may end up with rows that don't have corresponding primary key rows in the parent table.
