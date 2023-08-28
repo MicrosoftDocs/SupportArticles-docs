@@ -1,5 +1,5 @@
 ---
-title: Importing solution but not effective in Power Apps
+title: Changes are not effective after solution import in Power Apps
 description: Works around the scenario where import solution succeeded but runtime behavior isn't consistent with new solution expected behavior.
 ms.reviewer: jdaly
 ms.topic: troubleshooting
@@ -8,7 +8,7 @@ author: swatimadhukargit
 ms.author: swatim
 ---
 
-# Importing Solution but not effective
+# Changes are not effective after solution import
 
 _Applies to:_ &nbsp; Power Platform, Solutions
 
@@ -16,7 +16,7 @@ This article provides a workaround for an issue that occurs when you perform upd
 
 ## Symptoms
 
-When you try to Update or Upgrade to an existing solution but the runtime behavior isn't consistent with the expected behavior of the solution.
+When you try to update or upgrade to an existing solution, but the runtime behavior isn't consistent with the expected behavior of the solution.
 
 ## Cause
 
@@ -36,17 +36,17 @@ This issue occurs when the solution updated isn't the Top layer, which could be 
 The following example scenarios illustrate what happens to the solution layers in target when upgrade is done with active customization on the top layer.
 
 ##### Initial State of solution in target
-Here top layer has active customizations.
+Here "A", "B", "C" are values in base, middle and top layers coming from Solution 1, Solution 2 and Active.
 
 ![Initial State of Solution with Active layer.](media/solutions-issues/initial-state.png "Initial State of Solution with Active layer")
 
 ##### Upgrade solution without Override Customization
-Layer "B" from Solution 2 is below Active layer "C" is upgraded from "B" to "D". The Active top layer still remains "C" and "D" isn't effective after upgrade.
+Solution 2 is imported with a new value "D" without override customization. The value "D" isn't effective after the upgrade because the effective top layer still remains "C".
 
 ![Upgrade without override customization with Active.](media/solutions-issues/upgrade-without-override-customization.png "Upgrade without override customization with Active")
 
 ##### Upgrade solution with Override Customization
-Layer "B" from Solution 2 is below Active layer "C" is upgraded from "B" to "D" with override customization. "B" is upgraded to "D", and override customization copied the value of "D" to Active layer, making Active as "D".
+Solution 2 is imported with a new value "D" with override customization. The value "D" is effective after the upgrade because override customization copied the value of "D" to Active layer.
 
 ![Upgrade with override customization with Active.](media/solutions-issues/upgrade-with-override-customization.png "Upgrade with override customization with Active")
 
@@ -58,24 +58,24 @@ Layer "B" from Solution 2 is below Active layer "C" is upgraded from "B" to "D" 
 
 #### Example Scenarios:
 
-The following example scenarios illustrate what happens to the solution layers in target when upgrade is done with another managed layer on the top.
+The following example scenarios illustrate what happens to the solution layers in target when upgrade is done with another managed layer on the top of upgraded layer.
 
 ##### Initial State of solution in target
-Here top layer is another managed layer.
+Here "A", "B", "C" are values in base, middle and top layers coming from Solution 1, Solution 2 and Solution 3.
 
 ![Initial State of Solution with top Managed layer.](media/solutions-issues/Initial-state-managed-top-layer.png "Initial State of Solution with top Managed layer")
 
 ##### Upgrade solution without Override Customization
-Layer "B" from Solution 2 is below managed layer "C" is upgraded from "B" to "D", the top layer still remains layer "C". "D" isn't effective  after upgrade.
+Solution 2 is imported with a new value "D" without override customization. The value "D" isn't effective after the upgrade because the effective top layer still remains "C" from Solution 2.
 
 ![Upgrade without override customization without Active.](media/solutions-issues/upgrade-without-override-another-managed-top.png "Upgrade without override customization without Active")
 
 ##### Upgrade solution with Override Customization
-Layer "B" from Solution 2 is below managed layer "C" is upgraded from "B" to "D" with override customization. "B" is upgraded to "D". But there's no Active layer, override customization doesn't help to update the top layer. "C" remains the top layer and "D" isn't effective after upgrade.
+Solution 2 is imported with a new value "D" with override customization. The value "D" isn't effective after the upgrade because override customization copies the value to top active layer only. The value "C" from managed Solution 3 remains the top effective layer.
 
 ![Upgrade with override customization without Active.](media/solutions-issues/upgrade-with-override-another-managed-top.png "Upgrade with override customization without Active")
 
 ##### Update the top managed layer matching the upgraded layer
-Layer "B" from Solution 2 is below layer "C" from Solution 3, upgrade from "B" to "D" isn't effective. To make "D" as top layer either delete the top layer "C". Or make changes in Solution 3 to have value as "D" and then export/import Solution 3.
+Solution 2 is imported with a new value "D". To make value "D" as effective top layer either delete the top layer "C". Or make changes in Solution 3 to have value as "D" and then export/import Solution 3.
 
 ![Update top managed layer to match upgraded layer.](media/solutions-issues/update-top-managed-another-managed-top.png "Update top managed layer to match upgraded layer")
