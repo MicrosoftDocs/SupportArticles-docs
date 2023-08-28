@@ -4,7 +4,7 @@ description: Troubleshoot common issues in managing Azure File Sync sync groups,
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 08/25/2023
+ms.date: 08/28/2023
 ms.author: kendownie
 ---
 # Troubleshoot Azure File Sync sync group management
