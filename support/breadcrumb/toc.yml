@@ -1,3 +1,4 @@
+items:
 - name: Docs
   tocHref: /
   topicHref: /
@@ -137,6 +138,9 @@
       - name: Azure Synapse Analytics
         tocHref: /troubleshoot/azure/synapse-analytics
         topicHref: /troubleshoot/azure/synapse-analytics/welcome-synapse-analytics
+      - name: Azure Functions
+        tocHref: /troubleshoot/azure/azure-functions
+        topicHref: /troubleshoot/azure/azure-functions/welcome-azure-functions
 
     - name: Microsoft Dynamics 365
       tocHref: /troubleshoot/dynamics-365/
