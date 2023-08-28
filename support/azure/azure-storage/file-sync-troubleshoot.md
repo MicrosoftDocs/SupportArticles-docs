@@ -15,24 +15,24 @@ You can use Azure File Sync to centralize your organization's file shares in Azu
 - [Azure Community Feedback](https://feedback.azure.com/d365community/forum/a8bb4a47-3525-ec11-b6e6-000d3a4f0f84?c=c860fa6b-3525-ec11-b6e6-000d3a4f0f84).
 - Microsoft Support. To create a new support request, in the Azure portal, on the **Help** tab, select the **Help + support** button, and then select **New support request**.
 
-## Common troubleshooting documents
+## Common troubleshooting documentation
 
-Based on the issue you're exeriencing, review the appropriate troubleshooting document:
+Based on the issue you're experiencing, review the appropriate troubleshooting document:
 
-|Issues|Troubleshooting document|
+|Issues|Troubleshooting documentation|
 |---|---|
 |Agent installation or server registration issues|[Troubleshoot Azure File Sync agent installation and server registration](file-sync-troubleshoot-installation.md)|
-|Cloud endpoint or server endpoint creation issues or the registered server is offline|[Troubleshoot Azure File Sync sync group management](file-sync-troubleshoot-sync-group-management.md)|
-|Server endpoint has an error status or files are failing to sync|[Troubleshoot Azure File Sync sync health and errors](file-sync-troubleshoot-sync-errors.md)|
-|Files are failing to tier or recall|[Troubleshoot Azure File Sync cloud tiering](file-sync-troubleshoot-cloud-tiering.md)|
+|Cloud endpoint or server endpoint creation issues, or the registered server is offline|[Troubleshoot Azure File Sync sync group management](file-sync-troubleshoot-sync-group-management.md)|
+|Server endpoint has an error status, or files fail to sync|[Troubleshoot Azure File Sync sync health and errors](file-sync-troubleshoot-sync-errors.md)|
+|Files fail to tier or recall|[Troubleshoot Azure File Sync cloud tiering](file-sync-troubleshoot-cloud-tiering.md)|
 
 To start the troubleshooting, see [General troubleshooting first steps](#general-troubleshooting-first-steps).
 
 ## General troubleshooting first steps
 
-If you are experiencing issues with Azure File Sync, start by completing the following steps:
+If you're experiencing issues with Azure File Sync, start by completing the following steps:
 
-1. Use the Azure portal or event logs on the server to check any errors. About how to view the health of your Azure File Sync environment by using the Azure portal or event logs, see [Monitor Azure File Sync](/azure/storage/file-sync/file-sync-monitoring#storage-sync-service).
+1. Check for any errors using the Azure portal or event logs on the server. For information about how to view the health of your Azure File Sync environment by using the Azure portal or event logs, see [Monitor Azure File Sync](/azure/storage/file-sync/file-sync-monitoring#storage-sync-service).
 2. Verify the Azure File Sync service is running on the server:
     - Open the Services MMC snap-in and verify the Storage Sync Agent service (FileSyncSvc) is running.
 3. Verify the Azure File Sync filter drivers (*StorageSync.sys* and *StorageSyncGuard.sys*) are running on the server:
@@ -41,7 +41,7 @@ If you are experiencing issues with Azure File Sync, start by completing the fol
 
 ### Debug-StorageSyncServer cmdlet
 
-The `Debug-StorageSyncServer` cmdlet will diagnose common issues on the Azure File Sync server such as certificate misconfiguration and incorrect server time. We have also simplified Azure File Sync troubleshooting by merging the functionality of some existing scripts and cmdlets (*AFSDiag.ps1*, *FileSyncErrorsReport.ps1*, `Test-StorageSyncNetworkConnectivity`) into the `Debug-StorageSyncServer` cmdlet.
+The `Debug-StorageSyncServer` cmdlet will diagnose common issues on the Azure File Sync server, such as certificate misconfiguration and incorrect server time. We've also simplified Azure File Sync troubleshooting by merging the functionality of some existing scripts and cmdlets (*AFSDiag.ps1*, *FileSyncErrorsReport.ps1*, and `Test-StorageSyncNetworkConnectivity`) into the `Debug-StorageSyncServer` cmdlet.
  
 To run diagnostics on the server, run the following PowerShell commands:
 
@@ -49,13 +49,13 @@ To run diagnostics on the server, run the following PowerShell commands:
 Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"
 Debug-StorageSyncServer -Diagnose
 ```
-To test network connectivity on the server, run the following PowerShell commands:
+To test the network connectivity on the server, run the following PowerShell commands:
 ```powershell
 Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"
 Debug-StorageSyncServer -TestNetworkConnectivity
 ```
 
-To identify files that are failing to sync on the server, run the following PowerShell commands:
+To identify files that fail to sync on the server, run the following PowerShell commands:
 
 ```powershell
 Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"
@@ -71,7 +71,7 @@ Debug-StorageSyncServer -AFSDiag -OutputDirectory C:\output -KernelModeTraceLeve
 
 ## How to collect logs and traces on the Azure File Sync server
 
-If your issue isn't resolved after following the steps in the Troubleshooting documentation, run the AFSDiag tool and send its .zip file output to the support engineer assigned to your case for further diagnosis.
+If your issue isn't resolved after following the steps in the troubleshooting documentation, run the AFSDiag tool and send its .zip file output to the support engineer assigned to your case for further diagnosis.
 
 To run AFSDiag, perform the steps below:
 
