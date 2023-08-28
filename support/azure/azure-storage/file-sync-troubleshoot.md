@@ -26,7 +26,7 @@ Based on the issue you're experiencing, review the appropriate troubleshooting d
 |Server endpoint has an error status, or files fail to sync|[Troubleshoot Azure File Sync sync health and errors](file-sync-troubleshoot-sync-errors.md)|
 |Files fail to tier or recall|[Troubleshoot Azure File Sync cloud tiering](file-sync-troubleshoot-cloud-tiering.md)|
 
-To start the troubleshooting, see [General troubleshooting first steps](#general-troubleshooting-first-steps).
+If you're unsure where to start, see [General troubleshooting first steps](#general-troubleshooting-first-steps).
 
 ## General troubleshooting first steps
 
