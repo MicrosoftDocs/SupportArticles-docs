@@ -1,7 +1,7 @@
 ---
 title: 429 Too Many Requests errors
 description: Troubleshoot why you receive 429 Too Many Requests errors on your Kubernetes clusters.
-ms.date: 08/22/2023
+ms.date: 08/28/2023
 ms.reviewer: chiragpa, nickoman, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
 ms.subservice: common-issues
@@ -71,7 +71,7 @@ For an AKS cluster, you can use [AKS Diagnose and Solve Problems](/azure/aks/aks
   To reduce the volume of requests from the cluster autoscaler, use the following methods:
 
   - Increase the autoscaler scan interval to reduce the number of calls from the cluster autoscaler to virtual machine scale sets. This method may have a negative latency impact on the time taken to scale up because the cluster autoscaler waits longer before calling Azure Compute Resource Provider (CRP) for a new virtual machine.
-  - Make sure the cluster is on a minimal Kubernetes version of 1.18. Kubernetes version 1.18 and later versions handle request rate backoff better when 429 throttling responses are received. We highly recommend staying within supported Kubernetes versions to receive security patches.
+  - Make sure the cluster is on a minimum Kubernetes version of 1.18. Kubernetes version 1.18 and later versions handle request rate backoff better when 429 throttling responses are received. We highly recommend staying within supported Kubernetes versions to receive security patches.
 
 - **Throttling - Azure Resource Manager**: This diagnostic shows the number of throttled requests in the specified time range in the AKS cluster.
 
