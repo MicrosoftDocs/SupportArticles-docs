@@ -1,40 +1,33 @@
 ---
-
-title: Save for my next payment option doesn't appear
-description: This article provides troubleshooting guidance that can help when the Save for my next payment check box doesn't appear under Payment method on an e-commerce site's checkout page.
+title: Save for my next payment option doesn't appear in Dynamics 365 Commerce
+description: Provides a resolution for an issue where the Save for my next payment option doesn't appear under PAYMENT METHOD on an e-commerce site's checkout page in Microsoft Dynamics 365 Commerce.
 author: Reza-Assadi
 ms.author: josaw
-ms.topic: troubleshooting
-ms.date: 03/11/2021
-
+ms.date: 08/28/2023
 ---
-
 # "Save for my next payment" option doesn't appear
 
-This article provides troubleshooting guidance that can help when the **Save for my next payment** check box doesn't appear under **Payment method** on an e-commerce site's checkout page.
+This article provides a resolution for an issue where the **Save for my next payment** option doesn't appear under the **PAYMENT METHOD** section on an e-commerce site's [checkout page](/dynamics365/commerce/quick-tour-cart-checkout#checkout-page) in Microsoft Dynamics 365 Commerce.
 
-## Description
+## Symptoms
 
-The **Save for my next payment** check box doesn't appear in the **Payment method** section on an e-commerce site's checkout page.
+The **Save for my next payment** option doesn't appear in the **PAYMENT METHOD** section on an e-commerce site's checkout page.
 
-The following illustration shows an example of a checkout page that includes the **Save for my next payment** check box.
+The following screenshot shows an example of a checkout page that includes the **Save for my next payment** option.
 
-![Save for my next payment check box in the Payment module.](../../../media/common/payment-module-save-payment.jpg)
+:::image type="content" source="media/next-payment-link-not-appearing/payment-module-save-payment.png" alt-text="Screenshot that shows the Save for my next payment option under the PAYMENT METHOD section on the checkout page.":::
 
 ## Resolution
 
-### Verify that the Dynamics 365 Payment Connector for Adyen is correctly configured in Commerce headquarters
+To solve this issue, follow these steps to make sure that the Dynamics 365 Payment Connector for Adyen is correctly configured in Commerce headquarters:
 
-To verify that the Dynamics 365 Payment Connector for Adyen is correctly configured in Commerce headquarters, follow these steps.
-
-1. Go to **Retail and Commerce \> Channels \> Online Stores**.
+1. Go to **Retail and Commerce** > **Channels** > **Online Stores**.
 1. Select the online store.
 1. On the **Payment accounts** FastTab, make sure that the **Allow saving payment information in e-commerce** field is set to **True**.
 
-![Allow saving payment information in e-commerce field in Commerce headquarters.](../../../media/common/payment-connector-save-payment.jpg)
+:::image type="content" source="media/next-payment-link-not-appearing/payment-connector-save-payment.png" alt-text="Screenshot that shows the Allow saving payment information in e-commerce field in Commerce headquarters.":::
 
-## Additional resources
+## More information
 
-[Payment module](/dynamics365/commerce/payment-module)
-
-[Saving online payment instruments with the Adyen connector](/dynamics365/commerce/dev-itpro/adyen-connector-listpi)
+- [Payment module](/dynamics365/commerce/payment-module)
+- [Saving online payment instruments with the Adyen connector](/dynamics365/commerce/dev-itpro/adyen-connector-listpi)
