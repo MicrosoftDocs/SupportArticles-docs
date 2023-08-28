@@ -69,7 +69,7 @@
           href: manage-apps-and-solutions/entitykey-selected-attributes-already-exists.md
         - name: Can't import solutions or publish changes
           href: manage-apps-and-solutions/cannot-import-solutions-publish-changes.md
-          - name: Changes not effective after solution import
+        - name: Changes not effective after solution import
           href: manage-apps-and-solutions/changes-not-effective-solution-import.md
         - name: Concurrent solution operation failures
           href: manage-apps-and-solutions/concurrent-solution-operation-failures.md
@@ -80,8 +80,8 @@
         - name: Form doesn't appear in target environment after import
           href: manage-apps-and-solutions/form-not-appear-after-import.md
         - name: '"Full formXml is expected to create a form" error'
-          href: manage-apps-and-solutions/full-formxml-expected-to-create-form-error.md          
-        - name: Label text doesn't display in additional languages
+          href: manage-apps-and-solutions/full-formxml-expected-to-create-form-error.md
+        - name: Label text doesn't display in other languages
           href: manage-apps-and-solutions/label-text-not-displayed.md
         - name: Maximum row size exceeds the allowed maximum
           href: manage-apps-and-solutions/maximum-row-size-exceeds.md
