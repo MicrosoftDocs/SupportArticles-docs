@@ -25,7 +25,7 @@ This issue occurs when the solution updated isn't the Top layer, which could be 
 - There is unmanaged active customization on the top layer in the target environment.
 - There are other layers from managed solution on the top.
 
-## Workaround
+## Workaround: Unmanaged active customization on top
 
 ### There is unmanaged active customization on the top layer in the target environment.
 - Remove the active customization on the top in the target environment.
@@ -46,9 +46,11 @@ Solution 2 is imported with a new value "D" without overwrite customization. The
 ![Upgrade without overwrite customization with Active.](media/solutions-issues/upgrade-without-override-customization.png "Upgrade without overwrite customization with Active")
 
 ##### Upgrade solution with Overwrite Customization
-Solution 2 is imported with a new value "D" with overwrite customization. The value "D" is effective after the upgrade because overwrite customization copied the value of "D" to Active layer.
+Solution 2 is imported with a new value "D" with overwrite customization, changing "B" to "D". The value "D" is effective after the upgrade because overwrite customization copied the value of "D" to Active layer.
 
 ![Upgrade with overwrite customization with Active.](media/solutions-issues/upgrade-with-override-customization.png "Upgrade with overwrite customization with Active")
+
+## Workaround: Another managed layer on top
 
 ### There's another layer from a managed solution on the top
 
