@@ -1,27 +1,25 @@
 ---
-title: Issues with the data reconciliation of a Z report
-description: This article describes issues that users might experience with the data reconciliation of a Z report in Commerce headquarters. It also describes possible root causes and solutions that can help prevent future occurrences.
+title: Issues with the data reconciliation of a Z report in Dynamics 365 Commerce
+description: Porvides a resolution for issues with the data reconciliation of a Z report in Microsoft Dynamics 365 Commerce headquarters.
 author: shajain
 ms.author: josaw
-ms.topic: troubleshooting
-ms.date: 02/09/2023
+ms.date: 08/28/2023
 ms.search.form: RetailStatements_Posting, RetailStatements_CustomerOrderCreation
-
 ---
-
 # Issues with the data reconciliation of a Z report
+
 Error code: SYS103633
 
-This article provides troubleshooting guidance that can help if you encounter issues with the data reconciliation of a Z report in Microsoft Dynamics 365 Commerce headquarters. It describes issues that users might experience with the data reconciliation, possible root causes, and solutions that can help prevent future occurrences.
+This article provides a resolution for issues with the data reconciliation of a [Z report](/dynamics365/commerce/localizations/emea-fra-cash-registers#x-and-z-reports) in Microsoft Dynamics 365 Commerce headquarters.
 
-## Description
+## Symptoms
 
 - There's a mismatch between the amounts that are shown on the Z report and the totals that are shown on the calculated statement.
 - The transaction in headquarters has an incorrect number of line items, or there's a mismatch between the line total and the total for the transaction.
 - The number of transactions that are shown in a shift in headquarters is less than the number of transactions on the Z report.
-- Statement posting failed for one of the preceding reasons.
+- Statement posting fails for one of the preceding reasons.
 
-### Root cause
+## Cause
 
 The most common root cause of the previously described symptoms is the generation of duplicate transaction IDs in the channel database. Duplicate transaction IDs can be generated for the following reasons:
 
@@ -31,8 +29,8 @@ The most common root cause of the previously described symptoms is the generatio
 
 ## Resolution
 
-Usually, Commerce relies on a number sequence to generate sequential transaction IDs. If the system can't determine that a number sequence was used for any reason, a duplicate transaction ID is generated. 
+Usually, Commerce relies on a number sequence to generate sequential transaction IDs. If the system can't determine whether a number sequence was used for any reason, a duplicate transaction ID is generated.
 
 To fix the duplicate transaction ID issue, create a support ticket to check whether the transaction data can be fixed. In some cases, such as when there's no data loss in headquarters, no data fix is possible or required.
 
-To help prevent this issue in the future, you must enable the **Enable new transaction id to avoid duplicate transaction ids** feature in headquarters. This feature was introduced in Commerce version 10.0.19. It helps prevent the creation of sequential transaction IDs by ensuring that a unique transaction ID is created for each transaction. For more information about this feature, see [Prevent duplicate transaction IDs](/dynamics365/commerce/channel-setup-retail#ensure-unique-transaction-ids).
+To help prevent this issue in the future, you must enable the **Enable new transaction id to avoid duplicate transaction ids** feature in headquarters. This feature was introduced in Microsoft Dynamics 365 Commerce version 10.0.19. It helps prevent the creation of sequential transaction IDs by ensuring that a unique transaction ID is created for each transaction. For more information about this feature, see [Prevent duplicate transaction IDs](/dynamics365/commerce/channel-setup-retail#ensure-unique-transaction-ids).
