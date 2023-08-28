@@ -27,11 +27,20 @@ You receive an error message like the following ones:
 
 ## Cause
 
-By design, some solution components don't support automatic conversion of unmanaged to managed state without the use of [ConvertToManaged](/dotnet/api/microsoft.crm.sdk.messages.importsolutionrequest.converttomanaged?view=dataverse-sdk-latest) import property.
+By design, some solution components don't support automatic conversion of unmanaged to managed state without setting the `ConvertToManaged` property.
 
 ## Workaround
 
 To successfully convert the unmanaged component to managed state:
 
 - Either delete the unmanaged component and import the solution again.
-- Or import the solution with [convert-to-managed](/power-platform/developer/cli/reference/solution#--convert-to-managed--cm) flag enabled using Microsoft Power Platform CLI.
+- Or import the solution with the *convert to managed* option applied. There are several ways to import a solution using this setting:
+
+   - Use Microsoft Power Platform CLI [pac solution import](/power-platform/developer/cli/reference/solution#pac-solution-import) command with the [convert-to-managed](/power-platform/developer/cli/reference/solution#--convert-to-managed--cm) flag set.
+   - Use the Dataverse SDK for .NET [ImportSolutionRequest class](xref:Microsoft.Crm.Sdk.Messages.ImportSolutionRequest) setting the [ConvertToManaged property](xref:Microsoft.Crm.Sdk.Messages.ImportSolutionRequest.ConvertToManaged) to `true`.
+   - Use the Dataverse Web API [ImportSolution action](xref:Microsoft.Dynamics.CRM.ImportSolution) with the `ConvertToManaged` parameter set to `true`.
+   - Use [Power Platform Import Solution build task](/power-platform/alm/devops-build-tool-tasks#power-platform-import-solution) with `ConvertToManaged` parameter set to true.
+
+### See also
+
+[Learn about moving from unmanaged to managed solutions](/power-platform/alm/move-from-unmanaged-managed-alm)
