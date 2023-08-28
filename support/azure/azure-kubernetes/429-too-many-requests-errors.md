@@ -102,7 +102,7 @@ You can find the number of all ARM requests in the same time period.
 
 :::image type="content" source="media/429-too-many-requests-errors/cas-arm-all-requests.png" alt-text="Diagram of all ARM requests." lightbox="media/429-too-many-requests-errors/cas-arm-all-requests.png" border="false":::
 
-You can check the **View request rate and throttle details** diagnotic to find the throttling details. Select **429s by User Agent** from the **Select filter** drop-down list, and you can see that autoscaler requests are throttled from 15:00 to 16:00.
+You can check the **View request rate and throttle details** diagnostic to find the throttling details. Select **429s by User Agent** from the **Select filter** drop-down list, and you can see that autoscaler requests are throttled from 15:00 to 16:00.
 
 :::image type="content" source="media/429-too-many-requests-errors/cas-throttling-by-user-agent.png" alt-text="Diagram of throttles by user agent." lightbox="media/429-too-many-requests-errors/cas-throttling-by-user-agent.png" border="false":::
 
