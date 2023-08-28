@@ -133,16 +133,16 @@ Set-AzStorageSyncServerEndpoint `
 <a id="server-endpoint-noactivity"></a>**Server endpoint has a health status of "No Activity" or "Pending" and the server state on the registered servers blade is "Appears offline"**
 
 This issue can occur for the following reasons:
-- The Storage Sync Monitor process (AzureStorageSyncMonitor.exe) isn't running on the server or the server has insufficient system resources.
+- The Storage Sync Monitor process (*AzureStorageSyncMonitor.exe*) isn't running on the server, or the server has insufficient system resources.
 - The server is unable to communicate with the Azure File Sync service.
 - The server is unable to authenticate with the Azure File Sync service due to an expired or deleted certificate.
 - The Telemetry event log on the server is corrupted.
 
-On the server that is showing as "Appears offline" in the portal, look at Event ID 9301 in the Telemetry event log (located under *Applications and Services\Microsoft\FileSync\Agent* in Event Viewer) to determine why this issue is occurring.
+On the server that's showing as "Appears offline" in the portal, look at event ID 9301 in the Telemetry event log (located under *Applications and Services\Microsoft\FileSync\Agent* in Event Viewer) to determine the cause of this issue.
 
-- If "GetNextJob completed with status: 0" is logged, the server can communicate with the Azure File Sync service
+- If "GetNextJob completed with status: 0" is logged, the server can communicate with the Azure File Sync service.
 
-    Open Task Manager on the server and verify the Storage Sync Monitor (AzureStorageSyncMonitor.exe) process is running. If the process isn't running, first try restarting the server. If restarting the server doesn't resolve the issue, upgrade to the latest Azure File Sync [agent version](/azure/storage/file-sync/file-sync-release-notes) and verify the server has sufficient system resources.
+    Open Task Manager on the server and verify the Storage Sync Monitor (*AzureStorageSyncMonitor.exe*) process is running. If the process isn't running, first try restarting the server. If restarting the server doesn't resolve the issue, upgrade to the latest Azure File Sync [agent version](/azure/storage/file-sync/file-sync-release-notes) and verify the server has sufficient system resources.
 
 - If "GetNextJob completed with status: -2134347756" is logged, the server is unable to communicate with the Azure File Sync service due to a firewall, proxy, or TLS cipher suite order configuration.
 
@@ -181,7 +181,7 @@ On the server that is showing as "Appears offline" in the portal, look at Event 
     Reset-AzStorageSyncServerCertificate -ResourceGroupName <string> -StorageSyncServiceName <string>
     ```
 
-- If the Telemetry event log is empty, this means the event log is more than likely corrupted. 
+- If the Telemetry event log is empty, it means the event log is more than likely corrupted. 
 
     Run the following PowerShell commands on the server to confirm the Telemetry event log is corrupted:
 
