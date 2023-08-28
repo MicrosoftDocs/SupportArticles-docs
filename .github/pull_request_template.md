@@ -1,6 +1,6 @@
 # Pull request guidance
 
-Thank you for submitting your contribution to our support content. Our team works closely with subject matter experts in CSS and PMs in the product group to review all content requests to ensure technical accuracy and the best customer experience. This process can sometimes take one or more days, so we greatly appreciate your patience.
+Thank you for submitting your contribution to our support content! Our team works closely with subject matter experts in CSS and PMs in the product group to review all content requests to ensure technical accuracy and the best customer experience. This process can sometimes take one or more days, so we greatly appreciate your patience.
 
 We also need your help in order to process your request as soon as possible:
 
