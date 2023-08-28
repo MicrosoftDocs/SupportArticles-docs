@@ -3,7 +3,7 @@ title: Product IDs that are supported by the Office Deployment Tool for Click-to
 description: Describes Product IDs that are supported by the Office Deployment Tool for Click-to-Run。
 author: helenclu
 ms.author: luche
-ms.date: 10/4/2021
+ms.date: 8/28/2023
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -141,8 +141,6 @@ For managing the Lync or Skype for Business clients, the following table lists t
 
 |**Product**                       |**Version of the Office Deployment Tool**      |**Product ID**     |
 |----------------------------------|-----------------------------------------------|-------------------|
-|Skype for Business Basic 2015     |[Office 2013 Deployment Tool for Click-to-Run](https://www.microsoft.com/download/details.aspx?id=36778)             |LyncEntryRetail     |
-|Skype for Business 2015           |[Office 2013 Deployment Tool for Click-to-Run](https://www.microsoft.com/download/details.aspx?id=36778)             |LyncRetail          |
 |Skype for Business 2016     |[Office Deployment Tool](https://go.microsoft.com/fwlink/p/?LinkID=626065)      |SkypeforBusinessRetail       |
 |Skype for Business Basic 2016     |[Office Deployment Tool](https://go.microsoft.com/fwlink/p/?LinkID=626065)      |SkypeforBusinessEntryRetail       |
 |Skype for Business 2019           |[Office Deployment Tool](https://go.microsoft.com/fwlink/p/?LinkID=626065)      |SkypeforBusiness2019Retail            |
