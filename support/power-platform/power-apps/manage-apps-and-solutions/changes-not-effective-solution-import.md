@@ -29,7 +29,7 @@ This issue occurs when the solution updated isn't the Top layer, which could be 
 
 ### There is unmanaged active customization on the top layer in the target environment.
 - Remove the active customization on the top in the target environment.
-- Or upgrade the solution again with override customization. The override customization copies the incoming value to the active layer. The active layer still exists.
+- Or upgrade the solution again with overwrite customization. The overwrite customization copies the incoming value to the active layer. The active layer still exists.
 
 #### Example Scenarios
 
@@ -40,15 +40,15 @@ Here "A", "B", "C" are values in base, middle and top layers coming from Solutio
 
 ![Initial State of Solution with Active layer.](media/solutions-issues/initial-state.png "Initial State of Solution with Active layer")
 
-##### Upgrade solution without Override Customization
-Solution 2 is imported with a new value "D" without override customization. The value "D" isn't effective after the upgrade because the effective top layer still remains "C".
+##### Upgrade solution without Overwrite Customization
+Solution 2 is imported with a new value "D" without overwrite customization. The value "D" isn't effective after the upgrade because the effective top layer still remains "C".
 
-![Upgrade without override customization with Active.](media/solutions-issues/upgrade-without-override-customization.png "Upgrade without override customization with Active")
+![Upgrade without overwrite customization with Active.](media/solutions-issues/upgrade-without-override-customization.png "Upgrade without overwrite customization with Active")
 
-##### Upgrade solution with Override Customization
-Solution 2 is imported with a new value "D" with override customization. The value "D" is effective after the upgrade because override customization copied the value of "D" to Active layer.
+##### Upgrade solution with Overwrite Customization
+Solution 2 is imported with a new value "D" with overwrite customization. The value "D" is effective after the upgrade because overwrite customization copied the value of "D" to Active layer.
 
-![Upgrade with override customization with Active.](media/solutions-issues/upgrade-with-override-customization.png "Upgrade with override customization with Active")
+![Upgrade with overwrite customization with Active.](media/solutions-issues/upgrade-with-override-customization.png "Upgrade with overwrite customization with Active")
 
 ### There's another layer from a managed solution on the top
 
@@ -65,15 +65,15 @@ Here "A", "B", "C" are values in base, middle and top layers coming from Solutio
 
 ![Initial State of Solution with top Managed layer.](media/solutions-issues/Initial-state-managed-top-layer.png "Initial State of Solution with top Managed layer")
 
-##### Upgrade solution without Override Customization
-Solution 2 is imported with a new value "D" without override customization. The value "D" isn't effective after the upgrade because the effective top layer still remains "C" from Solution 2.
+##### Upgrade solution without Overwrite Customization
+Solution 2 is imported with a new value "D" without overwrite customization. The value "D" isn't effective after the upgrade because the effective top layer still remains "C" from Solution 2.
 
-![Upgrade without override customization without Active.](media/solutions-issues/upgrade-without-override-another-managed-top.png "Upgrade without override customization without Active")
+![Upgrade without overwrite customization without Active.](media/solutions-issues/upgrade-without-override-another-managed-top.png "Upgrade without overwrite customization without Active")
 
-##### Upgrade solution with Override Customization
-Solution 2 is imported with a new value "D" with override customization. The value "D" isn't effective after the upgrade because override customization copies the value to top active layer only. The value "C" from managed Solution 3 remains the top effective layer.
+##### Upgrade solution with Overwrite Customization
+Solution 2 is imported with a new value "D" with overwrite customization. The value "D" isn't effective after the upgrade because overwrite customization copies the value to top active layer only. The value "C" from managed Solution 3 remains the top effective layer.
 
-![Upgrade with override customization without Active.](media/solutions-issues/upgrade-with-override-another-managed-top.png "Upgrade with override customization without Active")
+![Upgrade with overwrite customization without Active.](media/solutions-issues/upgrade-with-override-another-managed-top.png "Upgrade with overwrite customization without Active")
 
 ##### Update the top managed layer matching the upgraded layer
 Solution 2 is imported with a new value "D". To make value "D" as effective top layer either delete the top layer "C". Or make changes in Solution 3 to have value as "D" and then export/import Solution 3.
