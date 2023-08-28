@@ -16,7 +16,7 @@ This article provides a workaround for an issue that occurs when you perform upd
 
 ## Symptoms
 
-When you try to update or upgrade to an existing solution, but the runtime behavior isn't consistent with the expected behavior of the solution.
+When you try to [upgrade or update](power-apps/maker/data-platform/update-solutions) to an existing solution, but the runtime behavior isn't consistent with the expected behavior of the solution.
 
 ## Cause
 
