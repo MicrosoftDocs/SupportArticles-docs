@@ -17,7 +17,7 @@ You can use Azure File Sync to centralize your organization's file shares in Azu
 
 ## Common troubleshooting documentation
 
-Based on the issue you're experiencing, review the appropriate troubleshooting document:
+Based on the issue you're experiencing, review the appropriate troubleshooting documentation:
 
 |Issues|Troubleshooting documentation|
 |---|---|
