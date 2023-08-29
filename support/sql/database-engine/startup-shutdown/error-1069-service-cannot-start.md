@@ -85,6 +85,7 @@ In the log entries that are event ID 7038 related, you may find the following er
 - [The user's password must be changed before signing in](#the-users-password-must-be-changed-before-signing-in).
 - [The user name or password is incorrect](#the-user-name-or-password-is-incorrect).
 - [The referenced account is currently locked out and may not be logged on to](#the-referenced-account-is-currently-locked-out-and-may-not-be-logged-on-to).
+- [The specified domain either does not exist or could not be contacted](#the-specified-domain-either-does-not-exist-or-could-not-be-contacted).
 
 ### This user can't sign in because this account is currently disabled
 
@@ -277,3 +278,41 @@ To fix this issue, use one of the following methods based on your scenario:
   1. If the account is locked, check the Unlock account box and select **OK**, set a strong password.
   1. Then use same credentials for the SQL Server service account configuration in **SQL Server Configuration Manager**, **Services**, and **SQL Server**.
   1. Restart the SQL Server service.
+
+### The specified domain either does not exist or could not be contacted
+
+The complete message entry in event log resembles the following one:
+
+```output
+Log Name:      System
+Source:        Service Control Manager
+Date:          <Datetime>
+Event ID:      7038
+Task Category: None
+Level:         Error
+Keywords:      Classic
+User:          N/A
+Computer:      <Server name>
+Description:
+The MSSQLSERVER service was unable to log on as xxx with the currently configured password due to the following error:
+The specified domain either does not exist or could not be contacted.
+
+To ensure that the service is configured properly, use the Services snap-in in Microsoft Management Console (MMC).
+```
+
+To fix this issue, use one of the following methods based on your scenario:
+
+- Configure the SQL Server startup to delayed start for particular Windows servers, which ensures other Windows services such as NetLogon complete first and SQL Server starts without problems. This is the default configuration by SQL Setup starting with SQL Server 2022.
+- If the delayed start option does not address the issue for your scenario, an alternative option is to change the Recovery options for the SQL Server services. Specify 'Restart the service' as the action for the failure options. You can perform this option from the Services applet of Administrative Tools using the familiar Service Control Manager interfaces.
+  - This option is not recommended for SQL Failover Cluster Instances (FCIs) or Availability Groups (AGs) as setting this could result in delays during automatic failover scenarios.
+- If neither of the above options are feasible, you can configure the SQL Server service to have a dependency on the NETLOGON service using the command below in an elevated command-line console:
+  
+   ```cmd
+   sc config <YourSQLServiceName> depend=keyiso/netlogon
+   ```
+   
+   An example for a SQL Server named instance SQLPROD:
+
+   ```cmd
+   sc config MSSQL$SQLPROD depend=keyiso/netlogon
+   ```
