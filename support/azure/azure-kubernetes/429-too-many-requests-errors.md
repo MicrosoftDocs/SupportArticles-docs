@@ -104,7 +104,7 @@ You can find the number of all ARM requests in the same time period.
 
 You can check the **View request rate and throttle details** diagnostic to find the throttling details. Select **429s by User Agent** from the **Select filter** drop-down list, and you can see that autoscaler requests are throttled from 15:00 to 16:00.
 
-:::image type="content" source="media/429-too-many-requests-errors/cas-throttling-by-user-agent.png" alt-text="Diagram of throttles by user agent." lightbox="media/429-too-many-requests-errors/cas-throttling-by-user-agent.png" border="false":::
+:::image type="content" source="media/429-too-many-requests-errors/cas-throttling-by-user-agent.png" alt-text="Diagram of throttles by user agents." lightbox="media/429-too-many-requests-errors/cas-throttling-by-user-agent.png" border="false":::
 
 You can also find the total number of throttled requests for the cluster autoscaler and other user agents.
 
