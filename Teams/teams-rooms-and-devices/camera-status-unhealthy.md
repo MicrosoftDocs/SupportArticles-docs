@@ -1,9 +1,9 @@
 ---
-title: The Camera status of a Teams Rooms device is Unhealthy
-description: Resolve the issue that causes the Camera signal of a Teams Rooms device to appear as Unhealthy.
+title: The Room Camera status of a Teams Rooms device is Unhealthy
+description: Resolve the issue that causes the Room Camera signal of a Teams Rooms device to appear as Unhealthy.
 ms.reviewer: lamos
 ms.topic: troubleshooting
-ms.date: 9/23/2022
+ms.date: 8/29/2023
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -21,18 +21,19 @@ ms.custom: CI167249
 
 ## Symptoms
 
-In the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/), the **Room** **Camera** signal of a Microsoft Teams Rooms device is shown as **Unhealthy**. Users also experience the following issues during a Teams meeting:
+In the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/), the **Room Camera** signal of a Microsoft Teams Rooms device is shown as **Unhealthy**. Users also experience the following issues during a Teams meeting:
 
 - The camera icon on the room console is unavailable.
 - The video of in-room participants is unavailable to remote participants.
 - The tile that shows a preview of the room's camera isn't presented in the Front of Room display.
 
-## Signal Logic
+## Cause
 
-This alert is triggered when the Microsoft Teams Rooms application reports that no room camera is detected. If the configured default room camera is unavailable, but another camera is available, this signal will not alert and instead, the **Default Room Camera** signal will alert as a warning only.
+This issue occurs when Teams Rooms reports that no room camera is detected. If the configured default room camera isn't available, but another camera is available, this signal won't alert. Instead, the **Default Room Camera** signal is shown as **Unhealthy**, and the incident severity value is shown as **Warning**.
 
 > [!NOTE]
-> The **Room** **Camera** signal reports the status of the video camera for in-room participants. The report doesn't include the status of the [content camera](/microsoftteams/rooms/content-camera).
+> The **Room Camera** signal reports the status of the video camera for in-room participants. The report doesn't include the status of the [content camera](/microsoftteams/rooms/content-camera).
+
 ## Resolution
 
 Camera issues can occur for different reasons. To fix common issues that affect the camera, try the following options.
@@ -63,10 +64,8 @@ Try the following options:
 
 If possible, avoid using USB extenders for audio and video equipment. If you must use a USB extender, use one that's supported by the peripheral device and meets the requirements, such as length and USB specification. For more information, contact your peripheral manufacturer.
 
-If the camera is not using an extender. Verify that the USB cable used is securely plugged in and meets the specifications of the camera. Replace the cable if needed.
+If the camera doesn't use a USB extender, verify that the USB cable is securely connected and meets the specifications of the camera. Replace the cable if needed.
 
-### Check camera power supply
+### Check the power supply
 
-Many cameras require external power supplies. Check that the power supply is plugged in and supplying power to the camera.
-
-
+Many cameras require external power supplies. In this case, make sure that the power supply is connected.
