@@ -23,7 +23,7 @@ ms.date: 08/29/2023
 
 ## Symptoms
 
-You create a [shared mailbox](/microsoft-365/admin/email/about-shared-mailboxes?view=o365-worldwide) or a [resource mailbox](/exchange/recipients-in-exchange-online/manage-resource-mailboxes#create-a-resource-mailbox-room-or-equipment-mailbox) in the Exchange admin center (EAC) or by using the [New-Mailbox](/powershell/module/exchange/new-mailbox) PowerShell cmdlet. When you create the mailbox, you don't specify the [UserPrincipalName](/powershell/module/exchange/new-mailbox#-userprincipalname) (UPN) and [SamAccountName](/powershell/module/exchange/new-mailbox#-samaccountname) property values. When you check the default `UserPrincipalName` and `SamAccountName` values that Microsoft Exchange Server assigns to the new mailbox, you see that they each contain a GUID.
+You create a [shared mailbox](/microsoft-365/admin/email/about-shared-mailboxes) or a [resource mailbox](/exchange/recipients-in-exchange-online/manage-resource-mailboxes#create-a-resource-mailbox-room-or-equipment-mailbox) in the Exchange admin center (EAC) or by using the [New-Mailbox](/powershell/module/exchange/new-mailbox) PowerShell cmdlet. When you create the mailbox, you don't specify the [UserPrincipalName](/powershell/module/exchange/new-mailbox#-userprincipalname) (UPN) and [SamAccountName](/powershell/module/exchange/new-mailbox#-samaccountname) property values. When you check the default `UserPrincipalName` and `SamAccountName` values that Microsoft Exchange Server assigns to the new mailbox, you see that they each contain a GUID.
 
 For example, you run the following PowerShell commands:
 
