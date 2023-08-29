@@ -31,7 +31,7 @@ The allocation for Windows RE must also include sufficient free space for backup
    - If the partition is smaller than 500 MB, it must have at least 50 MB of free space.
    - If the partition is 500 MB or larger, it must have at least 320 MB of free space.
 
-- If the partition is larger than 1 GB, it must have at least 1 GB of free space.
+- If the partition is larger than 1 gigabyte (GB), it must have at least 1 GB of free space.
 - For Windows operating systems later than Windows 10, version 2004 or Windows Server 2022:
 
    - The partition must have at least 200 MB of free space.
