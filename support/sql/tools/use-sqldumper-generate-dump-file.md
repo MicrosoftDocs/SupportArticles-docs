@@ -366,7 +366,7 @@ Get-ClusterResource -Name "SQL Server (SQL2017AG)" | Get-ClusterParameter
 
 #### Cluster configuration for SQLDumper on SQL Server 2008/2008 R2 or Windows 2012 and earlier versions
 
-To set the Sqldumper.exe utility properties for [cluster failover](/previous-versions/windows/it-pro/windows-server-2003/cc785087(v=ws.10)), follow these steps:
+To set the Sqldumper.exe utility properties for cluster failover by using the [cluster resource](/previous-versions/windows/it-pro/windows-server-2003/cc785087(v=ws.10)) command, follow these steps:
 
 1. Select **Start** > **Run**, type _cmd_, and then select **OK**.
 1. For each property, type the corresponding command at the command prompt, and then press **Enter**:
