@@ -17,7 +17,7 @@ This article provides a workaround for an issue that occurs when you perform [up
 
 When you try to upgrade or update to an existing solution, the component runtime behavior isn't consistent with the expected behavior of the solution.
 
-This issue occurs when the solution isn't updated on the top layer for one of the following two reasons. In order to determine if the solution component's top layer is Active or Managed, go to the Solution, select the Solution Component, from the Advanced drop down from the top panel select "See solution layers". If the Layer Status of top is Active then the top layer is active otherwise it is managed. To learn more about solution layering refer to [solution layers](/power-platform/alm/solution-layers-alm)
+This issue occurs when the solution component value isn't updated on the top layer for one of the following two causes. To determine if the solution component's top layer is Active or Managed, [view the solution layers for the component](/power-apps/maker/data-platform/solution-layers#view-the-solution-layers-for-a-component). If the Layer Status of top is Active then the top layer is Active otherwise it is managed. To learn more about solution layering refer to [solution layers](/power-platform/alm/solution-layers-alm)
 
 ## Cause 1: There's an unmanaged active customization on the top layer in the target environment
 
@@ -79,7 +79,7 @@ Order   |Solution   |Publisher|Layer Status|
 |2|Solution 2 <br/> (**B**)   |Publisher B|  |
 |1|Solution 1 <br/>(**A**)  |Publisher A|  |
 
-##### An upgrade solution without Overwrite Customization
+##### Upgrade solution without Overwrite Customization
 After importing Solution 2 with a new value **D** without overwrite customization. The value **D** isn't effective after the upgrade because the effective top layer remains "C" from Solution 2.
 
 Order   |Solution   |Publisher|Layer Status|
@@ -88,7 +88,7 @@ Order   |Solution   |Publisher|Layer Status|
 |2|Solution 2 <br/> (**D**)   |Publisher B|  |
 |1|Solution 1 <br/>(**A**)  |Publisher A|  |
 
-##### An upgrade solution with Overwrite Customization
+##### Upgrade solution with Overwrite Customization
 After importing Solution 2 with a new value **D** with overwrite customization. However, the value **D** isn't effective after the upgrade because overwrite customization only copies the value to top active layer. The value "C" from managed Solution 3 remains the top effective layer.
 
 Order   |Solution   |Publisher|Layer Status|
