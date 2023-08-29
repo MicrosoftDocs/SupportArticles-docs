@@ -57,7 +57,7 @@
           href: payments/payments-auto-settled.md 
         - name: Refund on a return order is declined
           href: payments/refund-declined.md
-        - name: Refundable charges are miscalculated based on the quantity returned
+        - name: Refundable charges are miscalculated based on returned quantity
           href: payments/refund-miscalculated-partial-return.md
         - name: Save for my next payment option doesn't appear
           href: payments/next-payment-link-not-appearing.md
@@ -77,7 +77,7 @@
           href: point-of-sale/store-commerce-sign-in.md
     - name: Ratings and reviews 
       items:
-        - name: Ratings refiner appears on search results and category pages when the ratings and reviews solution isn't enabled
+        - name: Ratings refiner appears when the ratings and reviews solution isn't enabled
           href: ratings-reviews/hide-ratings-refiner.md
     - name: Site builder content management
       items:
