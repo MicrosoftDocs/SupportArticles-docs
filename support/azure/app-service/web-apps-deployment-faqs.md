@@ -5,7 +5,7 @@ author: genlin
 ms.author: genli
 ms.service: cloud-services
 ms.date: 03/09/2022
-ms.reviewer: msangapu, toan, shrahman
+ms.reviewer: toan, shrahman
 ---
 # Deployment FAQs for Web Apps in Azure
 
