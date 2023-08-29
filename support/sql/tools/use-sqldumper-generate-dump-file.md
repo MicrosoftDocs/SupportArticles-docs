@@ -207,10 +207,10 @@ When capturing a SQL Server process dump file (especially a filtered dump file o
 
 Four major improvements have been added to recent versions of SQL Server to reduce the size of the dump file and/or time for generating the memory dump:
 
-- Bitmap filtering mechanism.
-- Elimination of repeated dumps on the same issue.
-- Shortened output in the error log.
-- Parallel compression of memory dumps.
+- [Bitmap filtering mechanism](#bitmap-filtering-mechanism)
+- [Elimination of repeated dumps on the same issue](#elimination-of-repeated-dumps-on-the-same-issue)
+- [Shortened output in the error log](#shortened-output-in-the-error-log)
+- [Parallel compression of memory dumps](#parallel-compression-of-memory-dumps)
 
 #### Bitmap filtering mechanism
 
@@ -271,13 +271,13 @@ Alternatively, you can add `-T2610` as a startup parameter to your SQL Server in
 If you manually run Sqldumper.exe, you can use the `-zdmp` parameter to capture a compressed memory dump. For example:
 
 ```cmd
-Sqldumper.exe <pid> 0 0x8100 0 d:\temp -zdmp
+Sqldumper.exe ProcessID 0 0x8100 0 d:\temp -zdmp
 ```
 
 You can also limit how many cores Sqldumper.exe can use to create the compressed dump by using the `-cpu:X` parameter, where _X_ is the number of CPUs. This parameter is only available when you manually run Sqldumper.exe from the command line:
 
 ```cmd
-Sqldumper.exe <pid> 0 0x8100 0 d:\temp -zdmp -cpu:8
+Sqldumper.exe ProcessID 0 0x8100 0 d:\temp -zdmp -cpu:8
 ```
 
 ## Factors that prevent or delay creation of memory dumps
@@ -501,7 +501,11 @@ DBCC STACKDUMP
 
 To create a full dump, use trace flag 2544.
 
-After you get the dump file, you should disable the trace flag by using the command `DBCC TRACEOFF (<TraceNumber>, -1);` to avoid inadvertently upgrading all further SQL Server self-diagnostic minidumps to larger dumps. In the command, \<TraceNumber\> is the trace flag you have previously enabled like 2551 or 2544.
+After you get the dump file, you should disable the trace flag by using the command `DBCC TRACEOFF (<TraceNumber>, -1);` to avoid inadvertently upgrading all further SQL Server self-diagnostic minidumps to larger dumps. In the command, \<TraceNumber\> is the trace flag you have previously enabled like 2551 or 2544. For example:
+
+```sql
+DBCC TRACEOFF(2551, -1)
+```
 
 In case you're unsure of which trace flag remains active, you can execute:
 
