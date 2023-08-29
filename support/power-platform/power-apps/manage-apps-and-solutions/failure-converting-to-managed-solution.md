@@ -10,7 +10,7 @@ ms.author: swatim
 
 _Applies to:_ &nbsp; Power Platform, Solutions
 
-This article provides a workaround for an issue that occurs when importing a [managed solution](/dynamics365/customerengagement/on-premises/developer/introduction-solutions#unmanaged-and-managed-solutions) that includes components that already exist in an unmanaged state in Microsoft Power Apps.
+This article provides a workaround for an issue that occurs when importing a [managed solution](/power-platform/alm/solution-concepts-alm#managed-and-unmanaged-solutions) that includes components that already exist in an unmanaged state in Microsoft Power Apps.
 
 ## Symptoms
 
@@ -26,7 +26,7 @@ You see the following errors when installing a managed solution:
 
 This behavior is by design. You can't install a managed solution when the following are true:
 
-- An component of the managed solution already exists as part of an unmanaged solution in the target environment.
+- A component of the managed solution already exists as part of an unmanaged solution in the target environment.
 - The solution has been previously installed as an unmanaged solution, or the managed solution was exported from an unmanaged solution in the target environment.
 
 Some solution components don't support automatic conversion of unmanaged to managed state without setting the `ConvertToManaged` property.
