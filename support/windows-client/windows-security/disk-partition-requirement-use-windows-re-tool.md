@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 3135522
 
 ## More information
 
-The disk partition for Windows RE tools must be at least 300 MB. Typically, between 500-700 MB is allocated for the Windows RE tools image (Winre.wim), depending on base language and added customizations.
+The disk partition for Windows RE tools must be at least 300 megabytes (MB). Typically, between 500-700 MB is allocated for the Windows RE tools image (Winre.wim), depending on base language and added customizations.
 
 The allocation for Windows RE must also include sufficient free space for backup utilities to capture the partition. Follow these guidelines to create the partition:
 
