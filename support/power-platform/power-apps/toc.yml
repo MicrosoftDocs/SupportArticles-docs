@@ -89,8 +89,6 @@
           href: manage-apps-and-solutions/primaryname-attribute-not-found.md
         - name: Required fields are missing in Dataverse records
           href: manage-apps-and-solutions/dataverse-records-missing-required-fields.md
-        - name: Solution checker enforcement in Managed Environments (preview) blocks or warns on import
-          href: manage-apps-and-solutions/solution-checker-enforcement-import-issues.md
         - name: '"Solution cannot be deleted due to dependencies" error'
           href: manage-apps-and-solutions/solution-cannot-be-deleted-due-to-dependencies.md
         - name: Troubleshoot wrap issues
