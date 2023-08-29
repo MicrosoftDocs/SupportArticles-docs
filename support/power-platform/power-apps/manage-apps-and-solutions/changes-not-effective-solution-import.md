@@ -1,83 +1,83 @@
 ---
-title: Changes are not effective after solution import in Power Apps
-description: Works around the scenario where import solution succeeded but runtime behavior isn't consistent with new solution expected behavior.
+title: Changes aren't effective after solution import in Power Apps
+description: Works around an issue where importing a solution succeeds but the component runtime behavior isn't consistent with the new solution in Microsoft Power Apps.
 ms.reviewer: jdaly
-ms.topic: troubleshooting
-ms.date: 8/24/2023
+ms.date: 8/29/2023
 author: swatimadhukargit
 ms.author: swatim
 ---
-
-# Changes are not effective after solution import
+# Changes aren't effective after solution import
 
 _Applies to:_ &nbsp; Power Platform, Solutions
 
-This article provides a workaround for an issue that occurs when you perform update or upgrade of a solution in the target environment. The runtime behavior doesn't behave as expected by the latest solution.
+This article provides workarounds for an issue where the component runtime behavior doesn't behave as expected when you [update or upgrade a solution](/power-apps/maker/data-platform/update-solutions) in the target environment in Power Apps.
 
 ## Symptoms
 
-When you try to [upgrade or update](power-apps/maker/data-platform/update-solutions) to an existing solution, but the runtime behavior isn't consistent with the expected behavior of the solution.
+When you try to update or upgrade an existing solution, the component runtime behavior isn't consistent with the expected behavior of the solution.
 
-## Cause
+This issue occurs when the solution isn't updated on the top layer for one of the following two reasons.
 
-This issue occurs when the solution updated isn't the Top layer, which could be result of one of the two scenarios:
+## Cause 1: There's an unmanaged active customization on the top layer in the target environment
 
-- There is unmanaged active customization on the top layer in the target environment.
-- There are other layers from managed solution on the top.
+#### Workaround
 
-## Workaround: Unmanaged active customization on top
+Use one of the following workarounds:
 
-### There is unmanaged active customization on the top layer in the target environment.
-- Remove the active customization on the top in the target environment.
-- Or upgrade the solution again with overwrite customization. The overwrite customization copies the incoming value to the active layer. The active layer still exists.
+- Remove the active customization on the top layer in the target environment. 
+- Upgrade the solution again by [overwriting the customization](/power-apps/maker/data-platform/update-solutions#overwrite-customizations-option). The overwritten customization copies the incoming value to the active layer. The active layer still exists.
 
-#### Example Scenarios
+The following example scenarios demonstrate what happens to the solution layers in the target environment after an upgrade is done with an active customization on the top layer.
 
-The following example scenarios illustrate what happens to the solution layers in target when upgrade is done with active customization on the top layer.
+##### Initial state of the solutions in the target environment
 
-##### Initial State of solution in target
-Here "A", "B", "C" are values in base, middle and top layers coming from Solution 1, Solution 2 and Active.
+In the following screenshot, **A**, **B**, and **C** are values in the base, middle, and top layers, respectively, coming from Solution 1, Solution 2, and Active.
 
-![Initial State of Solution with Active layer.](media/solutions-issues/initial-state.png "Initial State of Solution with Active layer")
+:::image type="content" source="media/importing-solution-but-not-effective/initial-state.png" alt-text="Screenshot that shows the initial state of the solution with an active layer.":::
 
-##### Upgrade solution without Overwrite Customization
-Solution 2 is imported with a new value "D" without overwrite customization. The value "D" isn't effective after the upgrade because the effective top layer still remains "C".
+##### An upgrade solution without an overwritten customization
 
-![Upgrade without overwrite customization with Active.](media/solutions-issues/upgrade-without-override-customization.png "Upgrade without overwrite customization with Active")
+After importing Solution 2 with a new value **D**, the previous customization for **B** isn't overwritten. The value **D** isn't effective after the upgrade because the effective top layer remains **C**.
 
-##### Upgrade solution with Overwrite Customization
-Solution 2 is imported with a new value "D" with overwrite customization, changing "B" to "D". The value "D" is effective after the upgrade because overwrite customization copied the value of "D" to Active layer.
+:::image type="content" source="media/importing-solution-but-not-effective/upgrade-without-override-customization.png" alt-text="Screenshot that shows an upgrade solution without an overwritten customization with Active.":::
 
-![Upgrade with overwrite customization with Active.](media/solutions-issues/upgrade-with-override-customization.png "Upgrade with overwrite customization with Active")
+##### An upgrade solution with an overwritten customization
 
-## Workaround: Another managed layer on top
+Solution 2 is imported with a new value **D** that overwrites the previous customization for **B**. After the upgrade, the value **D** becomes effective because the overwritten customization copies it to the Active layer.
 
-### There's another layer from a managed solution on the top
+:::image type="content" source="media/importing-solution-but-not-effective/upgrade-with-override-customization.png" alt-text="Screenshot that shows an upgrade solution with an overwritten customization with Active.":::
 
-- Go to the source environment of the top managed layer:
-  - Make the required changes in the solution then export the new version of the solution and then import again in the target environment.
-  - Or remove that component from the solution, then export the new version of the solution and then import as upgrade in the target environment.
+## Cause 2: There's another layer from a managed solution on the top layer
 
-#### Example Scenarios:
+#### Workaround
 
-The following example scenarios illustrate what happens to the solution layers in target when upgrade is done with another managed layer on the top of upgraded layer.
+Go to the source environment of the top managed layer, and then perform one of the following actions:
 
-##### Initial State of solution in target
-Here "A", "B", "C" are values in base, middle and top layers coming from Solution 1, Solution 2 and Solution 3.
+- Make the required changes to the solution, export the new version of the solution, and then import it again into the target environment.
+- Remove that component from the solution, export the new version of the solution, and then import it as an upgrade solution into the target environment.
 
-![Initial State of Solution with top Managed layer.](media/solutions-issues/Initial-state-managed-top-layer.png "Initial State of Solution with top Managed layer")
+The following example scenarios demonstrate what happens to the solution layers in the target environment after an upgrade is done with another managed layer on the top layer.
 
-##### Upgrade solution without Overwrite Customization
-Solution 2 is imported with a new value "D" without overwrite customization. The value "D" isn't effective after the upgrade because the effective top layer still remains "C" from Solution 2.
+##### Initial state of the solution in the target environment
 
-![Upgrade without overwrite customization without Active.](media/solutions-issues/upgrade-without-override-another-managed-top.png "Upgrade without overwrite customization without Active")
+In the following screenshot, **A**, **B**, and **C** are values in the base, middle, and top layers, respectively, coming from Solution 1, Solution 2, and Solution 3.
 
-##### Upgrade solution with Overwrite Customization
-Solution 2 is imported with a new value "D" with overwrite customization. The value "D" isn't effective after the upgrade because overwrite customization copies the value to top active layer only. The value "C" from managed Solution 3 remains the top effective layer.
+:::image type="content" source="media/importing-solution-but-not-effective/initial-state-managed-top-layer.png" alt-text="Screenshot that shows the initial state of the solution with a top managed layer.":::
 
-![Upgrade with overwrite customization without Active.](media/solutions-issues/upgrade-with-override-another-managed-top.png "Upgrade with overwrite customization without Active")
+##### An upgrade solution without an overwritten customization
 
-##### Update the top managed layer matching the upgraded layer
-Solution 2 is imported with a new value "D". To make value "D" as effective top layer either delete the top layer "C". Or make changes in Solution 3 to have value as "D" and then export/import Solution 3.
+Solution 2 is imported with a new value **D** without overwriting the customization. The value **D** isn't effective after the upgrade because the effective top layer remains **C** from Solution 2.
 
-![Update top managed layer to match upgraded layer.](media/solutions-issues/update-top-managed-another-managed-top.png "Update top managed layer to match upgraded layer")
+:::image type="content" source="media/importing-solution-but-not-effective/upgrade-without-override-another-managed-top.png" alt-text="Screenshot that shows an upgrade solution without an overwritten customization isn't active.":::
+
+##### An upgrade solution with an overwritten customization
+
+Solution 2 is imported with a new value **D** that overwrites the customization. However, the value **D** isn't effective after the upgrade because the overwritten customization only copies the value to the top active layer. As a result, the value **C** from managed Solution 3 remains on the top effective layer.
+
+:::image type="content" source="media/importing-solution-but-not-effective/upgrade-without-override-another-managed-top.png" alt-text="Screenshot that shows an upgrade solution with an overwritten customization isn't active.":::
+
+##### Update the top managed layer to match the upgraded layer
+
+Solution 2 is imported with a new value **D**. To make value **D** effective on the top layer, you can either delete **C** from the top layer or modify Solution 3 to have a value of **D**, and then export and import Solution 3.
+
+:::image type="content" source="media/importing-solution-but-not-effective/upgrade-without-override-another-managed-top.png" alt-text="Screenshot that shows how to update the top managed layer to match the upgraded layer.":::
