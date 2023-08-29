@@ -10,7 +10,7 @@ ms.author: swatim
 
 _Applies to:_ &nbsp; Power Platform, Solutions
 
-This article provides a workaround for an issue that occurs when importing a [managed solution](/dynamics365/customerengagement/on-premises/developer/introduction-solutions?view=op-9-1#unmanaged-and-managed-solutions) that includes components that already exist in an unmanaged state in Microsoft Power Apps.
+This article provides a workaround for an issue that occurs when importing a [managed solution](/dynamics365/customerengagement/on-premises/developer/introduction-solutions#unmanaged-and-managed-solutions) that includes components that already exist in an unmanaged state in Microsoft Power Apps.
 
 ## Symptoms
 
