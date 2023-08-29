@@ -1,7 +1,7 @@
 ---
 title: 429 Too Many Requests errors
 description: Troubleshoot why you receive 429 Too Many Requests errors on your Kubernetes clusters.
-ms.date: 08/28/2023
+ms.date: 08/29/2023
 ms.reviewer: chiragpa, nickoman, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
 ms.subservice: common-issues
@@ -132,7 +132,7 @@ If you find throttling in your cluster, you can see the throttling details in th
 
 :::image type="content" source="media/429-too-many-requests-errors/cp-throttle-by-user-agent.png" alt-text="Diagram of throttles by user agent." lightbox="media/429-too-many-requests-errors/cp-throttle-by-user-agent.png" border="false":::
 
-You can also filter by operations to find out the throttled operation that was reading the load balancer.
+You can also filter by operations to find out that the throttled operation is "Network/loadBalancers/read".
 
 :::image type="content" source="media/429-too-many-requests-errors/cp-throtlle-by-operation.png" alt-text="Diagram of throttles by operation." lightbox="media/429-too-many-requests-errors/cp-throtlle-by-operation.png" border="false":::
 
