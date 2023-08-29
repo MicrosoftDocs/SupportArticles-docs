@@ -1,14 +1,13 @@
 ---
-title: Changes are not effective after solution import in Power Apps
-description: Works around the scenario where import solution succeeded but runtime behavior isn't consistent with new solution expected behavior.
+title: Changes aren't effective after solution import in Power Apps
+description: Works around an issue where importing a solution succeeds but the component runtime behavior isn't consistent with the new solution in Microsoft Power Apps.
 ms.reviewer: jdaly
 ms.topic: troubleshooting
 ms.date: 8/29/2023
 author: swatimadhukargit
 ms.author: swatim
 ---
-
-# Changes are not effective after solution import
+# Changes aren't effective after solution import
 
 _Applies to:_ &nbsp; Power Platform, Solutions
 
@@ -28,7 +27,7 @@ Use one of the following workarounds:
 - Remove the active customization on the top in the target environment.
 - Upgrade the solution again with [overwrite customization](/power-apps/maker/data-platform/update-solutions#overwrite-customizations-option). The overwrite customization copies the incoming value to the active layer. The active layer still exists.
 
-#### Example Scenarios
+The following example scenarios demonstrate what happens to the solution layers in the target environment after an upgrade is done with an active customization on the top layer.
 
 The following example scenarios demonstrate what happens to the solution layers in the target environment after an upgrade is done with an active customization on the top layer.
 
