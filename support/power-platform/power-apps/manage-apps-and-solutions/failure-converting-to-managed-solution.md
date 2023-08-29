@@ -1,46 +1,47 @@
 ---
-title: Failure to install Managed Solution when previously deployed as Unmanaged
-description: Works when an unmanaged solution is already installed and attempting to install a newer version of the solution in managed mode in Microsoft Power Apps.
+title: Can't install a managed solution that's previously deployed as unmanaged in Power Apps
+description: Works around an issue that occurs when an unmanaged solution is already installed and you try to install a later version of it in managed mode in Microsoft Power Apps. 
 ms.reviewer: jdaly
-ms.date: 08/25/2023
+ms.date: 08/29/2023
 author: swatimadhukargit
 ms.author: swatim
 ---
-# Failure to install Managed Solution when previously deployed as Unmanaged
+# Can't install a managed solution when it was previously deployed as unmanaged
 
 _Applies to:_ &nbsp; Power Platform, Solutions
 
-This article provides a workaround for an issue that occurs when importing a managed solution, which includes components that already exist in an unmanaged state.
+This article provides a workaround for an issue that occurs when importing a [managed solution](/dynamics365/customerengagement/on-premises/developer/introduction-solutions?view=op-9-1#unmanaged-and-managed-solutions) that includes components that already exist in an unmanaged state in Microsoft Power Apps.
 
 ## Symptoms
 
-- An unmanaged component is already present on the target environment and the solution supplied during import is attempting to install as managed.
-- The solution may have been previously shipped as unmanaged solution; now the desire is to ship managed solutions.
+You can't install a managed solution in the following scenario:
 
-You receive an error message like the following ones:
+- An unmanaged component already exists in the target environment, and the solution supplied during import is attempting to install as a managed solution.
+- The solution has been previously installed as an unmanaged solution.
 
-> Microsoft.Crm. Tools.ImportExportPublish.ImportSolutionException: Solution manifest import: FAILURE: The solution is already installed on this system as an unmanaged solution and the package supplied is attempting to install it in managed mode. Import can only update solutions when the modes match. Uninstall the current solution and try again.
+Additionally, you receive one of the following error messages:
 
-> Microsoft.Crm.CrmException: A managed solution cannot overwrite the [Component Name] component  with Id=[Component Id] which has an unmanaged base instance.  The most likely scenario for this error is that an unmanaged solution has installed a new unmanaged [Component Name] component on the target system, and now a managed solution from the same publisher is trying to install that same [Component Name] component as managed.  This will cause an invalid layering of solutions on the target system and is not allowed.
+- > Microsoft.Crm. Tools.ImportExportPublish.ImportSolutionException: Solution manifest import: FAILURE: The solution is already installed on this system as an unmanaged solution and the package supplied is attempting to install it in managed mode. Import can only update solutions when the modes match. Uninstall the current solution and try again.
 
-> Microsoft.Crm.CrmException: The import has failed because the system cannot transition the entity form [Form Id] from unmanaged to managed. Add at least one full (root) component to the managed solution, and then try to import it again.
+- > Microsoft.Crm.CrmException: A managed solution cannot overwrite the [Component Name] component  with Id=[Component ID] which has an unmanaged base instance.  The most likely scenario for this error is that an unmanaged solution has installed a new unmanaged [Component Name] component on the target system, and now a managed solution from the same publisher is trying to install that same [Component Name] component as managed.  This will cause an invalid layering of solutions on the target system and is not allowed.
+
+- > Microsoft.Crm.CrmException: The import has failed because the system cannot transition the entity form [Form ID] from unmanaged to managed. Add at least one full (root) component to the managed solution, and then try to import it again.
 
 ## Cause
 
-By design, some solution components don't support automatic conversion of unmanaged to managed state without setting the `ConvertToManaged` property.
+This behavior is by design. Some solution components don't support automatic conversion of unmanaged to managed state without setting the `ConvertToManaged` property.
 
 ## Workaround
 
-To successfully convert the unmanaged component to managed state:
+To successfully convert the unmanaged component to a managed state, use one of the following workarounds:
 
-- Either delete the unmanaged component and import the solution again.
-- Or import the solution with the *convert to managed* option applied. There are several ways to import a solution using this setting:
+- Delete the unmanaged component and import the solution again.
+- Import the solution with the **convert to managed** option applied. There are several ways to import a solution using this setting:
+  - Use the Microsoft Power Platform CLI [pac solution import](/power-platform/developer/cli/reference/solution#pac-solution-import) command with the [convert-to-managed](/power-platform/developer/cli/reference/solution#--convert-to-managed--cm) flag set.
+  - Use the Dataverse SDK for .NET [ImportSolutionRequest class](xref:Microsoft.Crm.Sdk.Messages.ImportSolutionRequest) to set the [ConvertToManaged property](xref:Microsoft.Crm.Sdk.Messages.ImportSolutionRequest.ConvertToManaged) to `true`.
+  - Use the Dataverse Web API [ImportSolution action](xref:Microsoft.Dynamics.CRM.ImportSolution) with the `ConvertToManaged` parameter set to `true`.
+  - Use the [Power Platform Import Solution build task](/power-platform/alm/devops-build-tool-tasks#power-platform-import-solution) with the `ConvertToManaged` parameter set to `true`.
 
-   - Use Microsoft Power Platform CLI [pac solution import](/power-platform/developer/cli/reference/solution#pac-solution-import) command with the [convert-to-managed](/power-platform/developer/cli/reference/solution#--convert-to-managed--cm) flag set.
-   - Use the Dataverse SDK for .NET [ImportSolutionRequest class](xref:Microsoft.Crm.Sdk.Messages.ImportSolutionRequest) setting the [ConvertToManaged property](xref:Microsoft.Crm.Sdk.Messages.ImportSolutionRequest.ConvertToManaged) to `true`.
-   - Use the Dataverse Web API [ImportSolution action](xref:Microsoft.Dynamics.CRM.ImportSolution) with the `ConvertToManaged` parameter set to `true`.
-   - Use [Power Platform Import Solution build task](/power-platform/alm/devops-build-tool-tasks#power-platform-import-solution) with `ConvertToManaged` parameter set to true.
-
-### See also
+### More information
 
 [Learn about moving from unmanaged to managed solutions](/power-platform/alm/move-from-unmanaged-managed-alm)
