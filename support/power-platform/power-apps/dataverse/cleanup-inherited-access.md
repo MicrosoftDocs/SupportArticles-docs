@@ -109,9 +109,7 @@ OData-Version: 4.0
 
 ---
 
-<!-- TODO: Seokmin: please replace TBD with the name of the system job created -->
-
-`CreateAsyncJobToRevokeInheritedAccess` will create a new asynchronous job named "TBD". You can monitor the success of this job. Learn more about [monitoring system jobs](/power-platform/admin/manage-dataverse-auditing#monitoring-system-jobs) or [managing system jobs with code](/power-apps/developer/data-platform/asynchronous-service#managing-system-jobs).
+`CreateAsyncJobToRevokeInheritedAccess` will create a new asynchronous job named "RevokeInheritedAccess". You can monitor the success of this job. Learn more about [monitoring system jobs](/power-platform/admin/manage-dataverse-auditing#monitoring-system-jobs) or [managing system jobs with code](/power-apps/developer/data-platform/asynchronous-service#managing-system-jobs).
 
 ### Reset Inherited Access
 
@@ -172,9 +170,7 @@ OData-Version: 4.0
 
 ---
 
-<!-- TODO: Seokmin, what is the name of the system job created? Please replace TBD below -->
-
-`ResetInheritedAccess` will try to execute synchronously when there are not many matching records. Then the `ResetInheritedAccessResponse` value will end with `ExecutionMode : Sync`. If there are many matching records, the operation will take longer and the value will end with `ExecutionMode : Async`. A system job named `TBD` is created and you can monitor the success of that job. Learn more about [monitoring system jobs](/power-platform/admin/manage-dataverse-auditing#monitoring-system-jobs) or [managing system jobs with code](/power-apps/developer/data-platform/asynchronous-service#managing-system-jobs).
+`ResetInheritedAccess` will try to execute synchronously when there are not many matching records. Then the `ResetInheritedAccessResponse` value will end with `ExecutionMode : Sync`. If there are many matching records, the operation will take longer and the value will end with `ExecutionMode : Async`. A system job named `Denormalization_PrincipalObjectAccess_principalobjectaccess:<caller ID>` is created and you can monitor the success of that job. Learn more about [monitoring system jobs](/power-platform/admin/manage-dataverse-auditing#monitoring-system-jobs) or [managing system jobs with code](/power-apps/developer/data-platform/asynchronous-service#managing-system-jobs).
 
 
 `ResetInheritedAccess` requires a Fetch query to identify the records. This query must meet the following requirements:
