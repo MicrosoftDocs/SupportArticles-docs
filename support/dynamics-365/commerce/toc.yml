@@ -17,7 +17,7 @@
           href: data-synchronization/uat-cdx-broke-after-debug-aos.md
     - name: Development and SDKs
       items:
-        - name: Set up an e-commerce development environment to debug against a Tier 1 Retail Server virtual machine
+        - name: Errors when debugging against a Tier 1 Retail Server virtual machine
           href: development-sdks/set-up-dev-environment-debugging.md
     - name: E-commerce storefront
       items:
@@ -35,15 +35,15 @@
       items:
         - name: Fix common statement posting issues by editing transactions
           href: financial-statements/fix-common-posting-issues.md
-        - name: Statement posting errors due to unavailable inventory or update conflicts
-          href: financial-statements/inventory-errors-posting.md
         - name: Issues with the data reconciliation of a Z report
           href: financial-statements/z-report-issues.md
+        - name: Statement posting errors due to unavailable inventory or update conflicts
+          href: financial-statements/inventory-errors-posting.md
     - name: Order management
       items:
         - name: Asynchronous order synchronization issues
           href: order-management/synchronization-error.md
-        - name: Payment type must be credit card error on the sales order page
+        - name: '"Payment type must be credit card" error on the sales order page'
           href: order-management/payment-type-credit-card-error.md 
         - name: Taxes on online orders are incorrectly calculated
           href: order-management/tax-miscalculated-online-order.md
