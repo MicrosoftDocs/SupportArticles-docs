@@ -82,7 +82,7 @@ You can set the default data directory and log directory values to valid folder 
 1. Open SQL Server Configuration Manager and select **SQL Server Services**.
 1. Double-click your instance and select the **Advanced** tab.
 1. Review the **Data Path** property and see if the value is correct. The value is grayed out and can't be modified from here.
-1. If the value is incorrect, use [Method 2](#method-2-using-registry-editor) to update it to the correct path.
+1. If the value is incorrect, use [Method 2](#method-2-use-registry-editor) to update it to the correct path.
 
 ##### Method 2: Use registry editor
 

@@ -72,9 +72,9 @@ _Original KB number:_ &nbsp; 2681562
 
   Users incorrectly may be prompted to download and install the .NET Framework 3.5 when they try to install CU1 or CU2. This issue can occur even though the installed components don't depend on the .NET Framework 3.5.
 
-  In this situation, users may receive an error message that resembles the following.
+  In this situation, you might receive an error message that resembles the following.
 
-    :::image type="content" source="media/sql-server-2012-setup-issues/install-dotnet-framework-3.5-error.png" alt-text="Screenshot of the .Net Framework 3.5 installation error message: The following feature couldn't be installed." border="false":::
+   :::image type="content" source="media/sql-server-2012-setup-issues/install-dotnet-framework-3.5-error.png" alt-text="Screenshot of the .Net Framework 3.5 installation error message: The following feature couldn't be installed." border="false":::
 
   Cause
 

@@ -47,12 +47,12 @@ REPLICATION <your_cdc_database>
 1. Run the following command in a query window that's connected to the CDC-enabled database in SQL Server:
 
     ```sql
-    exec sp_repltrans
+    EXEC sp_repltrans
     ```
 
     You should receive output that resembles the following:
 
-    ```console
+    ```output
     xdesid xact_seqno xact_seqno
     0x000000260000012C0001 0x0000002A000001B50001
     ```
@@ -72,7 +72,7 @@ REPLICATION <your_cdc_database>
 
     This returns output that resembles the following:
 
-    ```console
+    ```output
     No active open transactions.
     DBCC execution completed. If DBCC printed error messages, contact your system administrator.
     ```
@@ -80,12 +80,12 @@ REPLICATION <your_cdc_database>
 4. To make sure that the transaction log can be reused, confirm that there is no other reuse reason indicated on the database:
   
     ```sql
-    select log_reuse_wait_desc, name from sys.databases where name = 'your_cdc_database'
+    SELECT log_reuse_wait_desc, NAME FROM sys.databases WHERE NAME = 'your_cdc_database'
     ```
 
     This returns output that resembles the following:
 
-    ```console
+    ```output
     log_reuse_wait_desc name
     NOTHING your_cdc_database
     ```

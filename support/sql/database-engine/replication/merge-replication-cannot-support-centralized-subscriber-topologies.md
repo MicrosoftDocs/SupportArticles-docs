@@ -5,16 +5,17 @@ ms.date: 07/22/2020
 ms.custom: sap:Replication, change tracking, change data capture
 ms.reviewer: hnunes, jmneto, jeanyd, lakshmij, holgerl, syele, gemason
 ---
+
 # Merge replication doesn't support centralized subscriber topologies
 
-This article helps you work around the problem that merge replication does not support centralized subscriber topologies.
+This article helps you work around the problem where merge replication doesn't support centralized subscriber topologies.
 
 _Original product version:_ &nbsp; SQL Server 2012, SQL Server 2008, SQL Server 2005  
 _Original KB number:_ &nbsp; 2750005
 
 ## Summary
 
-Merge replication does not support centralized subscriber topologies. A single merge subscriber database can subscribe to only a single merge publication. Therefore, any kind of centralized subscriber topology is not supported in merge replication.
+Merge replication doesn't support centralized subscriber topologies. A single merge subscriber database can subscribe to only a single merge publication. Therefore, any kind of centralized subscriber topology isn't supported in merge replication.
 
 > [!NOTE]
 > This limitation applies to all the currently supported versions of SQL server but does not apply to Microsoft SQL Server Compact subscribers.
@@ -69,28 +70,16 @@ You may have problems if you implement a central merge subscriber model. Example
 
 ## References
 
-- For more information about how to integrate data from multiple sites in Microsoft SQL Server 2008 R2, see: [Integrating Data from Multiple Sites (Client)](/previous-versions/sql/sql-server-2008-r2/ms151790(v=sql.105))
+- For more information about how to integrate data from multiple sites in Microsoft SQL Server 2008 R2, see [Integrating Data from Multiple Sites (Client)](/previous-versions/sql/sql-server-2008-r2/ms151790(v=sql.105)).
 
-- For more information about how to integrate data from multiple sites in Microsoft SQL Server 2008, see: [Integrating Data from Multiple Sites (Client)](/previous-versions/sql/sql-server-2008/ms151790(v=sql.100))
+- For more information about how to integrate data from multiple sites in Microsoft SQL Server 2008, see [Integrating Data from Multiple Sites (Client)](/previous-versions/sql/sql-server-2008/ms151790(v=sql.100)).
 
-- For more information about how to integrate data from multiple sites in Microsoft SQL Server 2005, see: [Integrating Data from Multiple Sites (Client)](/previous-versions/sql/sql-server-2005/ms151790(v=sql.90))
+- For more information about how to integrate data from multiple sites in Microsoft SQL Server 2005, see [Integrating Data from Multiple Sites (Client)](/previous-versions/sql/sql-server-2005/ms151790(v=sql.90)).
 
-- For more information about publishing data and database objects in SQL Server 2012, go to the following MSDN website.
+- For more information about publishing data and database objects in SQL Server 2012, see the **Publishing Tables in More Than One Publication** topic in [Publish Data and Database Objects](/sql/relational-databases/replication/publish/publish-data-and-database-objects).
 
-    > [!NOTE]
-    > Refer to the **Publishing Tables in More Than One Publication** topic in this article. [Publish Data and Database Objects](/sql/relational-databases/replication/publish/publish-data-and-database-objects)
+- For more information about publishing data and database objects in SQL Server 2008 R2, see the **Publishing Tables in More Than One Publication** topic in [Publishing Data and Database Objects](/previous-versions/sql/sql-server-2008-r2/ms152559(v=sql.105)).
 
-- For more information about publishing data and database objects in SQL Server 2008 R2, go to the following MSDN website:
+- For more information about publishing data and database objects in SQL Server 2008, see the **Publishing Tables in More Than One Publication** topic in [Publishing Data and Database Objects](/previous-versions/sql/sql-server-2008/ms152559(v=sql.100)).
 
-    > [!NOTE]
-    > Refer to the **Publishing Tables in More Than One Publication** topic in this article. [Publishing Data and Database Objects](/previous-versions/sql/sql-server-2008-r2/ms152559(v=sql.105))
-
-- For more information about publishing data and database objects in SQL Server 2008, go to the following MSDN website:
-
-    > [!NOTE]
-    > Refer to the **Publishing Tables in More Than One Publication** topic in this article. [Publishing Data and Database Objects](/previous-versions/sql/sql-server-2008/ms152559(v=sql.100))
-
-- For more information about publishing data and database objects in SQL Server 2005, go to the following MSDN website:
-
-    > [!NOTE]
-    > Refer to the **Publishing Tables in More Than One Publication** topic in this article. [Publishing Data and Database Objects](/previous-versions/sql/sql-server-2005/ms152559(v=sql.90))
+- For more information about publishing data and database objects in SQL Server 2005, see the **Publishing Tables in More Than One Publication** topic in [Publishing Data and Database Objects](/previous-versions/sql/sql-server-2005/ms152559(v=sql.90)).
