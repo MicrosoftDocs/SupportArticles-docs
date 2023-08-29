@@ -14,12 +14,7 @@ This article provides a workaround for an issue that occurs when importing a [ma
 
 ## Symptoms
 
-You can't install a managed solution in the following scenario:
-
-- An unmanaged component already exists in the target environment, and the solution supplied during import is attempting to install as a managed solution.
-- The solution has been previously installed as an unmanaged solution.
-
-Additionally, you receive one of the following error messages:
+You see the following errors when installing a managed solution:
 
 - > Microsoft.Crm. Tools.ImportExportPublish.ImportSolutionException: Solution manifest import: FAILURE: The solution is already installed on this system as an unmanaged solution and the package supplied is attempting to install it in managed mode. Import can only update solutions when the modes match. Uninstall the current solution and try again.
 
@@ -29,7 +24,12 @@ Additionally, you receive one of the following error messages:
 
 ## Cause
 
-This behavior is by design. Some solution components don't support automatic conversion of unmanaged to managed state without setting the `ConvertToManaged` property.
+This behavior is by design. You can't install a managed solution when the following are true:
+
+- An component of the managed solution already exists as part of an unmanaged solution in the target environment
+- The solution has been previously installed as an unmanaged solution, or the unmanaged solution was created in the target environment
+
+Some solution components don't support automatic conversion of unmanaged to managed state without setting the `ConvertToManaged` property.
 
 ## Workaround
 
