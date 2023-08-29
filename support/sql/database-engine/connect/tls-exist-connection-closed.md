@@ -1,10 +1,11 @@
 ---
 title: An existing connection was forcibly closed (OS error 10054)
 description: Describes scenarios in which an existing connection was forcibly closed by the remote host and provides resolutions for these scenarios
-ms.date: 12/02/2022
+ms.date: 08/29/2023
 ms.custom: sap:Connection issues
 author: HaiyingYu
 ms.author: haiyingyu
+ms.reviewer: pijocoder
 ---
 # An existing connection was forcibly closed by the remote host (OS error 10054)
 
@@ -48,7 +49,7 @@ To resolve this issue, use one of the following methods:
 
 This scenario occurs when you or your administrator restricted certain algorithms on the client or the server for extra security.
 
-The client and server TLS versions, [cipher suites](/windows/win32/secauthn/cipher-suites-in-schannel) can be easily examined in the **Client Hello** and **Server Hello** packets in a network trace. The **Client Hello** packet advertises all the client cipher suites, while the **Server Hello** packet specifies one of them. If there are no matching suites, the server will close the connection instead of responding to the **Server Hello** packet.
+The client and server TLS versions, [cipher suites](/windows/win32/secauthn/cipher-suites-in-schannel) can be easily examined in the **Client Hello** and **Server Hello** packets in a network trace. The **Client Hello** packet advertises all the client cipher suites, while the **Server Hello** packet specifies one of them. If there are no matching suites, the server closes the connection instead of responding to the **Server Hello** packet.
 
 ### Resolution
 
@@ -68,7 +69,7 @@ For more information, see [TLS 1.2 Upgrade Workflow](https://github.com/microsof
 
 ## Scenario 3: SQL Server uses a certificate signed by a weak-hash algorithm, such as MD5, SHA224, or SHA512
 
-SQL Server always encrypts network packets that are related to sign in. For this purpose, it uses a manually provisioned certificate or a [self-signed certificate](/dotnet/core/additional-tools/self-signed-certificates-guide). If SQL Server finds a certificate that supports the server authentication function in the certificate store, it will use the certificate. SQL Server will use this certificate even if it hasn't been manually provisioned. If these certificates use a weak-hash algorithm (thumbprint algorithm) such as [MD5](/dotnet/api/system.security.cryptography.md5), SHA224, or SHA512, they won't work with TLS 1.2 and cause the previously mentioned error.
+SQL Server always encrypts network packets that are related to sign in. For this purpose, it uses a manually provisioned certificate or a [self-signed certificate](/dotnet/core/additional-tools/self-signed-certificates-guide). If SQL Server finds a certificate that supports the server authentication function in the certificate store, it uses the certificate. SQL Server uses this certificate even if it hasn't been manually provisioned. If these certificates use a weak-hash algorithm (thumbprint algorithm) such as [MD5](/dotnet/api/system.security.cryptography.md5), SHA224, or SHA512, they won't work with TLS 1.2 and cause the previously mentioned error.
 
 > [!NOTE]
 > Self-signed certificates are not affected by this issue.
@@ -97,6 +98,14 @@ For more information about this scenario, see [Applications experience forcibly 
 
 > [!NOTE]
 > If this article has not resolved your issue, you can check if the [common connectivity issues articles](../connect/resolve-connectivity-errors-overview.md#common-connectivity-issues) can help.
+
+## Scenario 5: TCP Three-Way Handshake Timeout (SYN Fail, TCP Rejection) due to shortage of IOCP  workers
+
+In systems with very high workloads on SQL Server 2017 and earlier you may observe intermittent 10054 error caused by TCP three-way handshake failures, leading to TCP rejections. The root cause of this issue may be in the delay in processing TCPAcceptEx requests. This delay may be caused by a shortage of [IOCP (Input/Output Completion Port) listener](https://techcommunity.microsoft.com/t5/sql-server-support-blog/is-the-iocp-listener-actually-listening/ba-p/333989) workers responsible for managing the acceptance of incoming connections. The insufficient number of IOCP workers, busy servicing other requests, leads to delayed processing of connection requests, ultimately resulting in handshake failures and TCP rejections. You may also observe login timeouts during the start SSL handshake (if any) or the processing of login requests, which involve authentication checking. 
+
+### Resolution
+
+The TCP three-way handshake timeouts and additional login timeouts, are primarily due to a shortage of IOCP workers and SOS Worker resources allocated to handling authentication and encryption tasks. SQL Server 2019 includes several performance improvements in this area. One notable enhancement is the implementation of a dedicated login dispatcher pool. This optimizes the allocation of resources for login-related tasks, which reduces the occurrence of timeouts and improves overall system performance.
 
 ## See also
 
