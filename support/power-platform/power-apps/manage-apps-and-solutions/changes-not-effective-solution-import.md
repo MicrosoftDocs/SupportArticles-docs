@@ -79,38 +79,39 @@ The following example scenarios demonstrate what happens to the solution layers 
 
 Here **A**, **B**, **C** are values of the Solution component from Solution 1, Solution 2 and Solution 3.
 
-Order   |Solution   |Publisher|Layer Status|
-|----------|-----------|------------|-------|
-|3|Solution 3 <br/> (**C**) |Publisher C|  |
-|2|Solution 2 <br/> (**B**)   |Publisher B|  |
-|1|Solution 1 <br/> (**A**)  |Publisher A|  |
+|Order   |Solution   |Publisher|
+|----------|-----------|------------|
+|3|Solution 3 <br/> (**C**) |Publisher C|
+|2|Solution 2 <br/> (**B**)   |Publisher B|
+|1|Solution 1 <br/> (**A**)  |Publisher A|
 
 #### Upgrade solution without Overwrite Customization for Cause 2
 
 After importing Solution 2 with a new value **D** without overwrite customization. The value **D** isn't effective after the upgrade because the effective top layer remains **C** from Solution 2.
 
-Order   |Solution   |Publisher|Layer Status|
-|----------|-----------|------------|-------|
-|3|Solution 3 <br/> (**C**) |Publisher C|  |
-|2|Solution 2 <br/> (**D**)   |Publisher B|  |
-|1|Solution 1 <br/> (**A**)  |Publisher A|  |
+|Order   |Solution   |Publisher|
+|----------|-----------|------------|
+|3|Solution 3 <br/> (**C**) |Publisher C|
+|2|Solution 2 <br/> (**D**)   |Publisher B|
+|1|Solution 1 <br/> (**A**)  |Publisher A|
 
 #### Upgrade solution with Overwrite Customization
 
 After importing Solution 2 with a new value **D** with overwrite customization. However, the value **D** isn't effective after the upgrade because overwrite customization only copies the value to top active layer. The value **C** from managed Solution 3 remains the top effective layer.
 
-Order   |Solution   |Publisher|Layer Status|
-|----------|-----------|------------|-------|
-|3|Solution 3 <br/> (**C**) |Publisher C|  |
-|2|Solution 2 <br/> (**D**)   |Publisher B|  |
-|1|Solution 1 <br/> (**A**)  |Publisher A|  |
+|Order   |Solution   |Publisher|
+|----------|-----------|------------|
+|3|Solution 3 <br/> (**C**) |Publisher C|
+|2|Solution 2 <br/> (**D**)   |Publisher B|
+|1|Solution 1 <br/> (**A**)  |Publisher A|
 
 #### Update the top managed layer matching the upgraded layer
 
 After importing Solution 2 with a new value **D**. To make value **D** as effective top layer either delete the top layer **C** or modify Solution 3 to have value as **D**, and then export and import Solution 3.
 
-Order   |Solution   |Publisher|Layer Status|
-|----------|-----------|------------|-------|
-|3|Solution 3 <br/> (**D**) |Publisher C|  |
-|2|Solution 2 <br/> (**D**)   |Publisher B|  |
-|1|Solution 1 <br/> (**A**)  |Publisher A|  |
+
+|Order   |Solution   |Publisher|
+|----------|-----------|------------|
+|3|Solution 3 <br/> (**D**) |Publisher C|
+|2|Solution 2 <br/> (**D**)   |Publisher B|
+|1|Solution 1 <br/> (**A**)  |Publisher A|
