@@ -17,7 +17,7 @@ This article provides a workaround for an issue that occurs when you perform [up
 
 When you try to upgrade or update to an existing solution, the component runtime behavior isn't consistent with the expected behavior of the solution.
 
-This issue occurs when the solution component value isn't updated on the top layer for one of the following two causes. To determine if the solution component's top layer is **Active** or **Managed**, [view the solution layers for the component](/power-apps/maker/data-platform/solution-layers#view-the-solution-layers-for-a-component). If the **Layer Status** of top is **Active** then the top layer is **Active** otherwise it is **Managed**. To learn more about solution layering refer to [solution layers](/power-platform/alm/solution-layers-alm)
+This issue occurs when the solution component value isn't updated on the top layer for one of the following two causes. To determine if the solution component's top layer is **Active** or **Managed**, [view the solution layers for the component](/power-apps/maker/data-platform/solution-layers#view-the-solution-layers-for-a-component). If the **Layer Status** of top is **Active** then the top layer is **Active** otherwise it is **Managed**. [Learn more about solution layering ](/power-platform/alm/solution-layers-alm).
 
 ## Cause 1: Unmanaged active customization on top
 
@@ -64,7 +64,7 @@ After importing Solution 2 with a new value **D** with overwrite customization. 
 
 ## Cause 2: Layer from another managed solution on top
 
-There's another layer from a managed solution on the top layer.
+Another layer from a managed solution is the top layer.
 
 ### Workaround for Cause 2
 
@@ -73,11 +73,9 @@ Go to the source environment of the top managed layer, and then perform one of t
 - Make the required changes in the solution, export the new version of the solution and then import again into the target environment.
 - Remove the component from the solution,  export the new version of the solution and then import it as an upgrade solution into the target environment.
 
-#### Example Scenarios
-
 The following example scenarios demonstrate what happens to the solution layers in target after an upgrade is done with another managed layer on the top.
 
-##### Initial State of solution in target for Cause 2
+#### Initial State of solution in target for Cause 2
 
 Here **A**, **B**, **C** are values of the Solution component from Solution 1, Solution 2 and Solution 3.
 
@@ -87,7 +85,7 @@ Order   |Solution   |Publisher|Layer Status|
 |2|Solution 2 <br/> (**B**)   |Publisher B|  |
 |1|Solution 1 <br/> (**A**)  |Publisher A|  |
 
-##### Upgrade solution without Overwrite Customization for Cause 2
+#### Upgrade solution without Overwrite Customization for Cause 2
 
 After importing Solution 2 with a new value **D** without overwrite customization. The value **D** isn't effective after the upgrade because the effective top layer remains **C** from Solution 2.
 
@@ -97,7 +95,7 @@ Order   |Solution   |Publisher|Layer Status|
 |2|Solution 2 <br/> (**D**)   |Publisher B|  |
 |1|Solution 1 <br/> (**A**)  |Publisher A|  |
 
-##### Upgrade solution with Overwrite Customization
+#### Upgrade solution with Overwrite Customization
 
 After importing Solution 2 with a new value **D** with overwrite customization. However, the value **D** isn't effective after the upgrade because overwrite customization only copies the value to top active layer. The value **C** from managed Solution 3 remains the top effective layer.
 
@@ -107,7 +105,7 @@ Order   |Solution   |Publisher|Layer Status|
 |2|Solution 2 <br/> (**D**)   |Publisher B|  |
 |1|Solution 1 <br/> (**A**)  |Publisher A|  |
 
-##### Update the top managed layer matching the upgraded layer
+#### Update the top managed layer matching the upgraded layer
 
 After importing Solution 2 with a new value **D**. To make value **D** as effective top layer either delete the top layer **C** or modify Solution 3 to have value as **D**, and then export and import Solution 3.
 
