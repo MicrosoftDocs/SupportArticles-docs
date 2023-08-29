@@ -11,7 +11,7 @@ ms.author: swatim
 
 _Applies to:_ &nbsp; Power Platform, Solutions
 
-This article provides a workaround for an issue that occurs when you perform [upgrade or update](power-apps/maker/data-platform/update-solutions) in the target environment. The runtime behavior doesn't behave as expected by the latest solution.
+This article provides a workaround for an issue that occurs when you perform [upgrade or update](/power-apps/maker/data-platform/update-solutions) in the target environment. The runtime behavior doesn't behave as expected by the latest solution.
 
 ## Symptoms
 
