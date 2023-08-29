@@ -30,15 +30,13 @@ The allocation for Windows RE must also include sufficient free space for backup
 
    - If the partition is smaller than 500 MB, it must have at least 50 MB of free space.
    - If the partition is 500 MB or larger, it must have at least 320 MB of free space.
+   - If the partition is larger than 1 gigabyte (GB), it must have at least 1 GB of free space.
 
-- If the partition is larger than 1 gigabyte (GB), it must have at least 1 GB of free space.
-- For Windows operating systems later than Windows 10, version 2004 or Windows Server 2022:
+- For Windows operating systems later than Windows 10, version 2004 or Windows Server 2022, the partition must have at least 200 MB of free space.
+- The partition must use the following Type ID:
 
-   - The partition must have at least 200 MB of free space.
-   - The partition must use the following Type ID:
-
-     DE94BBA4-06D1-4D40-A16A-BFD50179D6AC
-   - The Windows RE tools should be in a partition that's separate from the Windows partition. This separation supports automatic failover and the startup of partitions that are encrypted by using Windows BitLocker Drive Encryption.
+  DE94BBA4-06D1-4D40-A16A-BFD50179D6AC
+- The Windows RE tools should be in a partition that's separate from the Windows partition. This separation supports automatic failover and the startup of partitions that are encrypted by using Windows BitLocker Drive Encryption.
 
 > [!IMPORTANT]
 > If Windows RE doesn't work as expected, double the specified free space for the partition. For example, if your partition is less than 500 MB and has 50 MB of free space, increase the free space to 100 MB.
