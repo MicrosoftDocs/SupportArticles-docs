@@ -42,6 +42,3 @@ The allocation for Windows RE must also include sufficient free space for backup
 
 > [!IMPORTANT]
 > If Windows RE doesn't work as expected, double the specified free space for the partition. For example, if your partition is less than 500 MB and has 50 MB of free space, increase the free space to 100 MB.
-
-
-
