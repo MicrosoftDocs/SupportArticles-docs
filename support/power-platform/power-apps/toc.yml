@@ -1,3 +1,4 @@
+items:
 - name: Power Apps Troubleshooting
   href: welcome-power-apps.yml
   items:
@@ -71,7 +72,7 @@
           href: manage-apps-and-solutions/cannot-import-solutions-publish-changes.md
         - name: Concurrent solution operation failures
           href: manage-apps-and-solutions/concurrent-solution-operation-failures.md
-        - name: Can't convert an unmanaged solution to managed
+        - name: Can't install managed solution previously deployed as unmanaged
           href: manage-apps-and-solutions/failure-converting-to-managed-solution.md
         - name: Duplicate security roles after solution import
           href: manage-apps-and-solutions/duplicate-security-roles.md
