@@ -17,7 +17,7 @@ This article provides a workaround for an issue that occurs when you perform [up
 
 When you try to upgrade or update to an existing solution, the component runtime behavior isn't consistent with the expected behavior of the solution.
 
-This issue occurs when the solution component value isn't updated on the top layer for one of the following two causes. To determine if the solution component's top layer is **Active** or **Managed**, [view the solution layers for the component](/power-apps/maker/data-platform/solution-layers#view-the-solution-layers-for-a-component). If the **Layer Status** of top is **Active** then the top layer is **Active** otherwise it is **Managed**. [Learn more about solution layering](/power-platform/alm/solution-layers-alm).
+This issue occurs when the solution component value isn't updated on the top layer for one of the following two causes. To determine if the solution component's top layer is **Active** or **Managed**, [view the solution layers for the component](/power-apps/maker/data-platform/solution-layers#view-the-solution-layers-for-a-component). If the **Layer Status** of top is **Active** then the top layer is **Active**; otherwise, it is **Managed**. [Learn more about solution layering](/power-platform/alm/solution-layers-alm).
 
 ## Cause 1: Unmanaged active customization on top
 
@@ -28,13 +28,13 @@ There's an unmanaged active customization on the top layer in the target environ
 Use one of the following workarounds:
 
 - [Remove the active customization](/power-apps/maker/data-platform/solution-layers#remove-an-unmanaged-layer) on the top in the target environment.
-- Upgrade the solution again with the [overwrite customization option](/power-apps/maker/data-platform/update-solutions#overwrite-customizations-option). The overwrite customization option copies the incoming value to the active layer. The active layer still exists.
+- Upgrade the solution again with the [Overwrite Customizations option](/power-apps/maker/data-platform/update-solutions#overwrite-customizations-option). The **Overwrite Customizations** option copies the incoming value to the active layer. The active layer still exists.
 
 The following example scenarios demonstrate what happens to the solution layers in the target environment after an upgrade is done with an active customization on the top layer.
 
-#### Initial State of solution in target for Cause 1
+#### Initial state of solutions in target for Cause 1
 
-Here **A**, **B**, **C** are values of the solution component from Solution 1, Solution 2 and the unmanaged Active layer.
+Here, **A**, **B**, and **C** are values of the solution component from Solution 1, Solution 2, and the unmanaged Active layer.
 
 |Order   |Solution   |Publisher|Layer Status|
 |----------|-----------|------------|-------|
@@ -42,9 +42,9 @@ Here **A**, **B**, **C** are values of the solution component from Solution 1, S
 |2|Solution 2 <br/> (**B**)   |Publisher B|  |
 |1|Solution 1 <br/> (**A**)  |Publisher A|  |
 
-#### Upgrade solution without Overwrite Customization for Cause 1
+#### Upgrade solution without Overwrite Customizations for Cause 1
 
-After importing Solution 2 with a new value "D" without overwrite customization. The value **D** isn't effective after the upgrade of Solution 2 from value **B** to **D** because the effective top layer still remains **C**.
+After importing Solution 2 with a new value **D** without **Overwrite Customizations**. The value **D** isn't effective after the upgrade of Solution 2 from value **B** to **D** because the effective top layer still remains **C**.
 
 |Order   |Solution   |Publisher|Layer Status|
 |----------|-----------|------------|-------|
@@ -52,9 +52,9 @@ After importing Solution 2 with a new value "D" without overwrite customization.
 |2|Solution 2 <br/> (**D**)   |Publisher B|  |
 |1|Solution 1 <br/> (**A**)  |Publisher A|  |
 
-#### Upgrade solution with Overwrite Customization for Cause 1
+#### Upgrade solutions with Overwrite Customizations for Cause 1
 
-After importing Solution 2 with a new value **D** with overwrite customization. The value **D** is effective after the upgrade of Solution **B** to **D** because upgrade with overwrite customization copies the value of **D** to Active layer.
+After importing Solution 2 with a new value **D** with **Overwrite Customizations**. The value **D** is effective after the upgrade of Solution 2 from value **B** to **D** because the upgrade with **Overwrite Customizations** copies the value **D** to the Active layer.
 
 |Order   |Solution   |Publisher|Layer Status|
 |----------|-----------|------------|-------|
@@ -70,14 +70,14 @@ Another layer from a managed solution is the top layer.
 
 Go to the source environment of the top managed layer, and then perform one of the following actions:
 
-- Make the required changes in the solution, export the new version of the solution and then import again into the target environment.
-- Remove the component from the solution, export the new version of the solution and then import it as an upgrade solution into the target environment.
+- Make the required changes in the solution, export the new version of the solution, and then import it again into the target environment.
+- Remove the component from the solution, export the new version of the solution, and then import it as an upgrade solution into the target environment.
 
 The following example scenarios demonstrate what happens to the solution layers in target after an upgrade is done with another managed layer on the top.
 
-#### Initial State of solution in target for Cause 2
+#### Initial state of solutions in target for Cause 2
 
-Here **A**, **B**, **C** are values of the Solution component from Solution 1, Solution 2 and Solution 3.
+Here, **A**, **B**, and **C** are values of the solution component from Solution 1, Solution 2, and Solution 3.
 
 |Order   |Solution   |Publisher|
 |----------|-----------|------------|
@@ -85,9 +85,9 @@ Here **A**, **B**, **C** are values of the Solution component from Solution 1, S
 |2|Solution 2 <br/> (**B**)   |Publisher B|
 |1|Solution 1 <br/> (**A**)  |Publisher A|
 
-#### Upgrade solution without Overwrite Customization for Cause 2
+#### Upgrade solutions without Overwrite Customizations for Cause 2
 
-After importing Solution 2 with a new value **D** without overwrite customization. The value **D** isn't effective after the upgrade because the effective top layer remains **C** from Solution 2.
+After importing Solution 2 with a new value **D** without **Overwrite Customizations**. The value **D** isn't effective after the upgrade because the effective top layer remains **C** from Solution 2.
 
 |Order   |Solution   |Publisher|
 |----------|-----------|------------|
@@ -95,9 +95,9 @@ After importing Solution 2 with a new value **D** without overwrite customizatio
 |2|Solution 2 <br/> (**D**)   |Publisher B|
 |1|Solution 1 <br/> (**A**)  |Publisher A|
 
-#### Upgrade solution with Overwrite Customization
+#### Upgrade solutions with Overwrite Customizations
 
-After importing Solution 2 with a new value **D** with overwrite customization. However, the value **D** isn't effective after the upgrade because overwrite customization only copies the value to top active layer. The value **C** from managed Solution 3 remains the top effective layer.
+After importing Solution 2 with a new value **D** with **Overwrite Customizations**. However, the value **D** isn't effective after the upgrade because **Overwrite Customizations** only copies the value to the top active layer. The value **C** from managed Solution 3 remains the top effective layer.
 
 |Order   |Solution   |Publisher|
 |----------|-----------|------------|
@@ -107,7 +107,7 @@ After importing Solution 2 with a new value **D** with overwrite customization. 
 
 #### Update the top managed layer matching the upgraded layer
 
-After importing Solution 2 with a new value **D**. To make value **D** as effective top layer either delete the top layer **C** or modify Solution 3 to have value as **D**, and then export and import Solution 3.
+After importing Solution 2 with a new value **D**. To make value **D** the effective top layer, either delete the top layer **C** or modify Solution 3 to have a value of **D**, and then export and import Solution 3.
 
 |Order   |Solution   |Publisher|
 |----------|-----------|------------|
