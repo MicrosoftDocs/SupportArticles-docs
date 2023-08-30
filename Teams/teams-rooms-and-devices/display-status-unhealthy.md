@@ -1,9 +1,9 @@
 ---
-title: The Display status of a Teams Rooms device is Unhealthy
-description: Resolve the issue that causes the Display signal of a Microsoft Teams Rooms device to appear as Unhealthy.
+title: The Front of Room status of a Teams Rooms device is Unhealthy
+description: Resolve the issue that causes the Front of Room signal of a Microsoft Teams Rooms device to appear as Unhealthy.
 ms.reviewer: lamos
 ms.topic: troubleshooting
-ms.date: 9/26/2022
+ms.date: 8/29/2023
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -23,16 +23,17 @@ ms.custom: CI167102
 
 In the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/), the **Display - Front of Room** signal of a Microsoft Teams Rooms device is shown as **Unhealthy**, and users experience one or more of the following issues:
 
-- One or more Front of Room displays show nothing or show "No Signal".
+- One or more front-of-room displays show nothing or show "No Signal".
 - The room console shows a warning banner at the top that indicates that a display was disconnected.
 
-## Signal Logic
+## Cause
 
-This signal indicates one or more front of room displays are no longer detected. The count of available displays is compared against the Dual Display configuration within the Microsoft Teams Rooms application. Although the console is a display, this signal filters out certified consoles to count any remaining as a Front of Room display. If you are using a console that is not certified, this signal will not alert correctly.
+This issue occurs when one or more front-of-room displays are no longer detected. The count of available displays is checked against the dual display configuration in the Microsoft Teams Rooms app. Although the consoles are displays, this signal filters out the certified consoles and counts the remaining consoles as front-of-room displays. If you use a non-certified console, this signal won't alert correctly.
 
 > [!NOTE]
 > 
 > This signal should remain as **Healthy** even when Teams Rooms allows the displays to *sleep* after 10 minutes (default value) of no activity.
+
 ## Resolution
 
 Display issues can occur for different reasons. To fix common issues, try the following options.
@@ -70,8 +71,4 @@ In these situations, try the following options:
 
   Investigate and test all power-related settings on the Front of Room displays. Each display, manufacturer, and model can be different. Therefore, field testing of various power settings might be necessary. We recommend that you standardize the display brand, model, and settings as much as possible. Many commercial displays allow configuration profiles to be imported and exported through a USB flash drive.
 - Check whether the display supports the "wake on signal" feature.
-
-- Most consumer TVs, and even many commercial displays, don't automatically wake up when the Teams Rooms device wakes up and sends a video signal. In these cases, Consumer Electronics Control (CEC) must be supported on the display, and additional hardware might be required to send these CEC signals. Some PC's used in certified Microsoft Teams Rooms include integrated CEC support. Contact the OEM of the PC for further information. For more information, see [Front of Room display settings](/microsoftteams/rooms/rooms-operations#front-of-room-display-settings).
-
-
-
+- Most consumer TVs, and even many commercial displays, don't automatically wake up when the Teams Rooms device wakes up and sends a video signal. In these cases, Consumer Electronics Control (CEC) must be supported on the display, and additional hardware might be required to send these CEC signals. Some PCs certified for use in Microsoft Teams Rooms include integrated CEC support, contact your PC's OEM for more information. For more information, see [Front of Room display settings](/microsoftteams/rooms/rooms-operations#front-of-room-display-settings).
