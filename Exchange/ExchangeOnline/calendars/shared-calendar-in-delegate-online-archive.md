@@ -109,9 +109,9 @@ To work around this issue, choose from the following options:
  
       **Note:** If you have additional calendars to hide, follow steps 9-11 for each one.
        
-  13. Exit the application by closing all MFCMAPI windows.
+  12. Exit the application by closing all MFCMAPI windows.
   
-  14. Start Outlook and verify that the delegate's Online Archive folder no longer displays the shared calendar.
+  13. Start Outlook and verify that the delegate's Online Archive folder no longer displays the shared calendar.
 
 ## Status
 
