@@ -4373,6 +4373,11 @@
       "source_path": "support/developer/visualstudio/cpp/libraries/minimum-service-pack-levels.md",
       "redirect_url": "/cpp/windows/latest-supported-vc-redist",
       "redirect_document_id": false
+    },    
+    {
+      "source_path": "support/developer/webapps/iis/iis-extensions-tools-addons/troubleshooting-problems-with-microsoft-web-platform-installer.md",
+      "redirect_url": "/previous-versions/troubleshoot/iis/troubleshoot-problems-microsoft-web-platform-installer",
+      "redirect_document_id": false
     }
   ]
 }

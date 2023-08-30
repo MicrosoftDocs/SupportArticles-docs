@@ -1,8 +1,8 @@
 ---
 title: Can't apply active SLA to case because SLA item's ChangedAttributeList is null
 description: Provides a resolution for an issue where you can't apply an active SLA to a case if the SLA item's ChangedAttributeList is null.
-ms.reviewer: sdas
-ms.author: ravimanne
+ms.reviewer: sdas, ankugupta
+ms.author: sdas
 ms.date: 06/25/2023
 ---
 # Fails to apply an active SLA to a case if the SLA item's ChangedAttributeList is null
