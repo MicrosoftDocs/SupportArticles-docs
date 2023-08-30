@@ -7,9 +7,10 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
-ms.custom: 
+ms.custom:
   - Exchange Online
   - CSSTroubleshoot
+  - has-azure-ad-ps-ref
 ms.reviewer: benjak, kellybos, v-six
 appliesto: 
   - Exchange Online
@@ -65,5 +66,3 @@ If the on-premises account no longer exists and is not listed in the **Active Us
 6. After some minutes, the mailbox becomes active in Exchange.
 
 7. When you finish the search and export, run the `Remove-Mailbox` cmdlet to change the object to a soft-deleted mailbox. The soft-deleted mailbox will be available for 30 days. It can be returned to an active state by using the `Undo-SoftDeletedMailbox` cmdlet.
-
-
