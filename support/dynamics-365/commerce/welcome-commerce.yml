@@ -95,6 +95,8 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: A card payment fails due to an unsupported card type
+            url: payments/card-payments-fail-with-unsupported-card-type.md
           - text: Credit card entry page shows an error at checkout
             url: payments/credit-card-entry-form-error.md
           - text: Payments are automatically settled before orders are invoiced or shipped

@@ -7,7 +7,7 @@ ms.author: milanmil
 author: mrmilanmm
 ms.prod: windows-client
 ms.technology: windows-client-system-management-components
-ms.custom: Fix, csstroubleshoot, devx-track-azurepowershell
+ms.custom: Fix, csstroubleshoot
 audience: itpro
 localization_priority: medium
 ---

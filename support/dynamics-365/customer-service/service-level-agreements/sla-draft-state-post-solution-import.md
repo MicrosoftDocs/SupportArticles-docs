@@ -1,8 +1,8 @@
 ---
 title: SLA's state changes to Draft after importing a solution
 description: Resolves an issue where an SLA defined in an organization goes into a draft state after you import an upgrade solution containing the SLA.
-ms.reviewer: sdas
-ms.author: ravimanne
+ms.reviewer: sdas, ankugupta
+ms.author: sdas
 ms.date: 07/19/2023
 ---
 # SLA's state changes from Active to Draft after importing an upgrade solution that contains the SLA

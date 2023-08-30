@@ -51,6 +51,8 @@
           href: order-management/online-order-transaction-creation-failures.md   
     - name: Payments
       items:
+        - name: A card payment fails due to an unsupported card type
+          href: payments/card-payments-fail-with-unsupported-card-type.md
         - name: Credit card entry page shows an error at checkout
           href: payments/credit-card-entry-form-error.md
         - name: Payments are automatically settled before orders are invoiced or shipped
@@ -87,3 +89,7 @@
           href: site-builder-content-management/missing-products-categories.md
         - name: Products and categories don't appear in Commerce site builder after a new site is mapped
           href: site-builder-content-management/products-categories-unavailable.md
+    - name: Point of sale (POS)
+      items:
+        - name: Store Commerce app (POS) is suddenly deactivated
+          href: point-of-sale/store-commerce-app-pos-deactivated.md
