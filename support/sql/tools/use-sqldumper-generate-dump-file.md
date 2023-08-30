@@ -271,13 +271,13 @@ Alternatively, you can add `-T2610` as a startup parameter to your SQL Server in
 If you manually run Sqldumper.exe, you can use the `-zdmp` parameter to capture a compressed memory dump. For example:
 
 ```cmd
-Sqldumper.exe ProcessID 0 0x8100 0 d:\temp -zdmp
+Sqldumper.exe <ProcessID> 0 0x8100 0 d:\temp -zdmp
 ```
 
 You can also limit how many cores Sqldumper.exe can use to create the compressed dump by using the `-cpu:X` parameter, where _X_ is the number of CPUs. This parameter is only available when you manually run Sqldumper.exe from the command line:
 
 ```cmd
-Sqldumper.exe ProcessID 0 0x8100 0 d:\temp -zdmp -cpu:8
+Sqldumper.exe <ProcessID> 0 0x8100 0 d:\temp -zdmp -cpu:8
 ```
 
 ## Factors that prevent or delay creation of memory dumps
@@ -574,16 +574,16 @@ DBCC STACKDUMP WITH FILTERED_DUMP , TEXT_DUMP = LIMITED
     You can interrupt this script using CTRL+C"
     Write-Host "***********************************************************************"
 
-    #check for administrator rights
-    #debugging tools like SQLDumper.exe require Admin privileges to generate a memory dump
+    # check for administrator rights
+    # debugging tools like SQLDumper.exe require Admin privileges to generate a memory dump
 
     if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator))
     {
         Write-Warning "Administrator rights are required to generate a memory dump!`nPlease re-run this script as an Administrator!"
-        #break
+        return
     }
 
-    #what product would you like to generate a memory dump
+    # what product would you like to generate a memory dump
     while ($true)
     {
         Write-Host "Which product would you like to generate a memory dump of?" -ForegroundColor Yellow
@@ -635,14 +635,14 @@ DBCC STACKDUMP WITH FILTERED_DUMP , TEXT_DUMP = LIMITED
         break
     }
 
-    #if multiple SQL Server instances, get the user to input PID for desired SQL Server
+    # if multiple SQL Server instances, get the user to input PID for desired SQL Server
     if ($SqlTaskList.Count -gt 1)
     {
         Write-Host "More than one $ProductStr instance found."
 
         $SqlTaskList | Select-Object PID, "Image name", Services | Out-Host
 
-        #check input and make sure it is a valid integer
+        # check input and make sure it is a valid integer
         while ($true)
         {
             Write-Host "Please enter the PID for the desired SQL service from list above" -ForegroundColor Yellow
@@ -659,7 +659,7 @@ DBCC STACKDUMP WITH FILTERED_DUMP , TEXT_DUMP = LIMITED
         Write-Host ""
 
     }
-    else #if only one SQL Server/SSAS on the box, go here
+    else # if only one SQL Server/SSAS on the box, go here
     {
         $SqlTaskList | Select-Object PID, "Image name", Services | Out-Host
         $SqlPidInt = [convert]::ToInt32($SqlTaskList.PID)
@@ -668,11 +668,11 @@ DBCC STACKDUMP WITH FILTERED_DUMP , TEXT_DUMP = LIMITED
         Write-Host ""
     }
 
-    #dump type
+    # dump type
 
-    if ($ProductNumber -eq "1")  #SQL Server memory dump
+    if ($ProductNumber -eq "1")  # SQL Server memory dump
     {
-        #ask what type of SQL Server memory dump
+        # ask what type of SQL Server memory dump
         while($true)
         {
             Write-Host "Which type of memory dump would you like to generate?" -ForegroundColor Yellow
@@ -702,9 +702,9 @@ DBCC STACKDUMP WITH FILTERED_DUMP , TEXT_DUMP = LIMITED
             default { "0x0120"; break }
         }
     }
-    elseif ($ProductNumber -eq "2")  #SSAS dump
+    elseif ($ProductNumber -eq "2")  # SSAS dump
     {
-        #ask what type of SSAS memory dump
+        # ask what type of SSAS memory dump
         while($true)
         {
             Write-Host "Which type of memory dump would you like to generate?" -ForegroundColor Yellow
@@ -730,9 +730,9 @@ DBCC STACKDUMP WITH FILTERED_DUMP , TEXT_DUMP = LIMITED
             default {"0x0120"; break}
         }
     }
-    elseif ($ProductNumber -in 3,4,5)  #SSIS/SSRS/SQL Agent dump
+    elseif ($ProductNumber -in 3,4,5)  # SSIS/SSRS/SQL Agent dump
     {
-        #ask what type of SSIS memory dump
+        # ask what type of SSIS memory dump
         while($true)
         {
             Write-Host "Which type of memory dump would you like to generate?" -ForegroundColor Yellow
@@ -772,19 +772,19 @@ DBCC STACKDUMP WITH FILTERED_DUMP , TEXT_DUMP = LIMITED
         }
     }
 
-    #strip the last character of the Output folder if it is a backslash "\". Else Sqldumper.exe will fail
+    # strip the last character of the Output folder if it is a backslash "\". Else Sqldumper.exe will fail
     if ($OutputFolder.Substring($OutputFolder.Length-1) -eq "\")
     {
         $OutputFolder = $OutputFolder.Substring(0, $OutputFolder.Length-1)
         Write-Host "Stripped the last '\' from output folder name. Now folder name is  $OutputFolder"
     }
 
-    #find the highest version of SQLDumper.exe on the machine
+    # find the highest version of SQLDumper.exe on the machine
     $NumFolder = dir "C:\Program Files\Microsoft SQL Server\1*" | Select-Object @{name = "DirNameInt"; expression={[int]($_.Name)}}, Name, Mode | Where-Object Mode -Match "da*" | Sort-Object DirNameInt -Descending
 
     for( $j=0; $j -lt $NumFolder.Count; $j++)
     {
-        $SQLNumfolder = $NumFolder.DirNameInt[$j]   #start with the highest value from sorted folder names - latest version of dumper
+        $SQLNumfolder = $NumFolder.DirNameInt[$j]   # start with the highest value from sorted folder names - latest version of dumper
         $SQLDumperDir = "C:\Program Files\Microsoft SQL Server\" + $SQLNumfolder.ToString() + "\Shared\"
         $TestPathDumperDir = $SQLDumperDir + "sqldumper.exe"
 
@@ -794,18 +794,18 @@ DBCC STACKDUMP WITH FILTERED_DUMP , TEXT_DUMP = LIMITED
         }
     }
 
-    #build the SQLDumper.exe command e.g. (Sqldumper.exe 1096 0 0x0128 0 c:\temp\)
+    # build the SQLDumper.exe command e.g. (Sqldumper.exe 1096 0 0x0128 0 c:\temp\)
 
     $cmd = "$([char]34)"+$SQLDumperDir + "sqldumper.exe$([char]34)"
     $arglist = $SqlPidInt.ToString() + " 0 " +$DumpType +" 0 $([char]34)" + $OutputFolder + "$([char]34)"
     Write-Host "Command for dump generation: ", $cmd, $arglist -ForegroundColor Green
 
-    #do-we-want-multiple-dumps section
+    # do-we-want-multiple-dumps section
     Write-Host ""
     Write-Host "This utility can generate multiple memory dumps, at a certain interval"
     Write-Host "Would you like to collect multiple memory dumps (2 or more)?" -ForegroundColor Yellow
 
-    #validate Y/N input
+    # validate Y/N input
     while ($true)
     {
         $YesNo = Read-Host "Enter Y or N>"
@@ -817,7 +817,7 @@ DBCC STACKDUMP WITH FILTERED_DUMP , TEXT_DUMP = LIMITED
         Write-Host "Not a valid 'Y' or 'N' response"
     }
 
-    #get input on how many dumps and at what interval
+    # get input on how many dumps and at what interval
     if ($YesNo -eq "y")
     {
         [int]$DumpCountInt=0
@@ -848,7 +848,7 @@ DBCC STACKDUMP WITH FILTERED_DUMP , TEXT_DUMP = LIMITED
 
         Write-Host "Generating $DumpCountInt memory dumps at a $DelayIntervalStr-second interval" -ForegroundColor Green
 
-        #loop to generate multiple dumps
+        # loop to generate multiple dumps
         $cntr = 0
         while ($true)
         {
@@ -864,7 +864,7 @@ DBCC STACKDUMP WITH FILTERED_DUMP , TEXT_DUMP = LIMITED
             Start-Sleep -S $DelayIntervalInt
         }
 
-        #print what files exist in the output folder
+        # print what files exist in the output folder
         Write-Host ""
         Write-Host "Here are all the memory dumps in the output folder '$OutputFolder'" -ForegroundColor Green
         $MemoryDumps = $OutputFolder + "\SQLDmpr*"
@@ -873,11 +873,11 @@ DBCC STACKDUMP WITH FILTERED_DUMP , TEXT_DUMP = LIMITED
         Write-Host ""
         Write-Host "Process complete"
     }
-    else #produce just a single dump
+    else # produce just a single dump
     {
         Start-Process -FilePath $cmd -Wait -Verb runAs -ArgumentList $arglist
 
-        #print what files exist in the output folder
+        # print what files exist in the output folder
         Write-Host ""
         Write-Host "Here are all the memory dumps in the output folder '$OutputFolder'" -ForegroundColor Green
         $MemoryDumps = $OutputFolder + "\SQLDmpr*"
