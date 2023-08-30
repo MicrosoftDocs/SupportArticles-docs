@@ -32,7 +32,7 @@ Use one of the following workarounds:
 
 The following example scenarios demonstrate what happens to the solution layers in the target environment after an upgrade is done with an active customization on the top layer.
 
-#### Initial state of solutions in target for Cause 1
+#### Initial state of solution in target for Cause 1
 
 Here, **A**, **B**, and **C** are values of the solution component from Solution 1, Solution 2, and the unmanaged Active layer.
 
@@ -52,7 +52,7 @@ After importing Solution 2 with a new value **D** without **Overwrite Customizat
 |2|Solution 2 <br/> (**D**)   |Publisher B|  |
 |1|Solution 1 <br/> (**A**)  |Publisher A|  |
 
-#### Upgrade solutions with Overwrite Customizations for Cause 1
+#### Upgrade solution with Overwrite Customizations for Cause 1
 
 After importing Solution 2 with a new value **D** with **Overwrite Customizations**. The value **D** is effective after the upgrade of Solution 2 from value **B** to **D** because the upgrade with **Overwrite Customizations** copies the value **D** to the Active layer.
 
@@ -75,7 +75,7 @@ Go to the source environment of the top managed layer, and then perform one of t
 
 The following example scenarios demonstrate what happens to the solution layers in target after an upgrade is done with another managed layer on the top.
 
-#### Initial state of solutions in target for Cause 2
+#### Initial state of solution in target for Cause 2
 
 Here, **A**, **B**, and **C** are values of the solution component from Solution 1, Solution 2, and Solution 3.
 
@@ -85,7 +85,7 @@ Here, **A**, **B**, and **C** are values of the solution component from Solution
 |2|Solution 2 <br/> (**B**)   |Publisher B|
 |1|Solution 1 <br/> (**A**)  |Publisher A|
 
-#### Upgrade solutions without Overwrite Customizations for Cause 2
+#### Upgrade solution without Overwrite Customizations for Cause 2
 
 After importing Solution 2 with a new value **D** without **Overwrite Customizations**. The value **D** isn't effective after the upgrade because the effective top layer remains **C** from Solution 2.
 
@@ -95,7 +95,7 @@ After importing Solution 2 with a new value **D** without **Overwrite Customizat
 |2|Solution 2 <br/> (**D**)   |Publisher B|
 |1|Solution 1 <br/> (**A**)  |Publisher A|
 
-#### Upgrade solutions with Overwrite Customizations
+#### Upgrade solution with Overwrite Customizations
 
 After importing Solution 2 with a new value **D** with **Overwrite Customizations**. However, the value **D** isn't effective after the upgrade because **Overwrite Customizations** only copies the value to the top active layer. The value **C** from managed Solution 3 remains the top effective layer.
 
