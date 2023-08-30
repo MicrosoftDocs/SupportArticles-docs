@@ -3,7 +3,7 @@ title: Changes aren't effective after solution import in Power Apps
 description: Works around an issue where importing a solution succeeds but the component runtime behavior isn't consistent with the new solution in Microsoft Power Apps.
 ms.reviewer: jdaly
 ms.topic: troubleshooting
-ms.date: 8/29/2023
+ms.date: 08/30/2023
 author: swatimadhukargit
 ms.author: swatim
 ---
@@ -17,7 +17,7 @@ This article provides a workaround for an issue that occurs when you perform [up
 
 When you try to upgrade or update to an existing solution, the component runtime behavior isn't consistent with the expected behavior of the solution.
 
-This issue occurs when the solution component value isn't updated on the top layer for one of the following two causes. To determine if the solution component's top layer is **Active** or **Managed**, [view the solution layers for the component](/power-apps/maker/data-platform/solution-layers#view-the-solution-layers-for-a-component). If the **Layer Status** of top is **Active** then the top layer is **Active** otherwise it is **Managed**. [Learn more about solution layering ](/power-platform/alm/solution-layers-alm).
+This issue occurs when the solution component value isn't updated on the top layer for one of the following two causes. To determine if the solution component's top layer is **Active** or **Managed**, [view the solution layers for the component](/power-apps/maker/data-platform/solution-layers#view-the-solution-layers-for-a-component). If the **Layer Status** of top is **Active** then the top layer is **Active** otherwise it is **Managed**. [Learn more about solution layering](/power-platform/alm/solution-layers-alm).
 
 ## Cause 1: Unmanaged active customization on top
 
@@ -27,7 +27,7 @@ There's an unmanaged active customization on the top layer in the target environ
 
 Use one of the following workarounds:
 
-- Remove the active customization on the top in the target environment.
+- [Remove the active customization](/power-apps/maker/data-platform/solution-layers#remove-an-unmanaged-layer) on the top in the target environment.
 - Upgrade the solution again with the [overwrite customization option](/power-apps/maker/data-platform/update-solutions#overwrite-customizations-option). The overwrite customization option copies the incoming value to the active layer. The active layer still exists.
 
 The following example scenarios demonstrate what happens to the solution layers in the target environment after an upgrade is done with an active customization on the top layer.
@@ -46,7 +46,7 @@ Here **A**, **B**, **C** are values of the solution component from Solution 1, S
 
 After importing Solution 2 with a new value "D" without overwrite customization. The value **D** isn't effective after the upgrade of Solution 2 from value **B** to **D** because the effective top layer still remains **C**.
 
-Order   |Solution   |Publisher|Layer Status|
+|Order   |Solution   |Publisher|Layer Status|
 |----------|-----------|------------|-------|
 |3|Unmanaged layer <br/> (**C**) |Default Publisher|Active|
 |2|Solution 2 <br/> (**D**)   |Publisher B|  |
@@ -71,7 +71,7 @@ Another layer from a managed solution is the top layer.
 Go to the source environment of the top managed layer, and then perform one of the following actions:
 
 - Make the required changes in the solution, export the new version of the solution and then import again into the target environment.
-- Remove the component from the solution,  export the new version of the solution and then import it as an upgrade solution into the target environment.
+- Remove the component from the solution, export the new version of the solution and then import it as an upgrade solution into the target environment.
 
 The following example scenarios demonstrate what happens to the solution layers in target after an upgrade is done with another managed layer on the top.
 
@@ -108,7 +108,6 @@ After importing Solution 2 with a new value **D** with overwrite customization. 
 #### Update the top managed layer matching the upgraded layer
 
 After importing Solution 2 with a new value **D**. To make value **D** as effective top layer either delete the top layer **C** or modify Solution 3 to have value as **D**, and then export and import Solution 3.
-
 
 |Order   |Solution   |Publisher|
 |----------|-----------|------------|
