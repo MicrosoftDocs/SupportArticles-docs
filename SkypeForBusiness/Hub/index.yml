@@ -38,12 +38,12 @@ productDirectory:
         - url: /microsoftteams/troubleshoot/teams-welcome
           text: Microsoft Teams
     # Card
-    - title: Microsoft 365 apps
+    - title: Microsoft 365 Apps
       # imageSrc should be square in ratio with no whitespace
       imageSrc: /support/media/hub-landing/logo-m365-app.png
       links:
         - url: /office/troubleshoot/office-client-welcome
-          text: Microsoft 365 apps (Office products)
+          text: Microsoft 365 Apps (Office products)
         - url: /office/troubleshoot/office-experts-welcome
           text: From the Office Experts
     # Card
@@ -101,7 +101,9 @@ productDirectory:
         - url: /viva/troubleshoot/learning/viva-learning-welcome
           text: Microsoft Viva Learning
         - url: /viva/troubleshoot/connections/viva-connections-welcome
-          text: Microsoft Viva Connections       
+          text: Microsoft Viva Connections
+        - url: /viva/troubleshoot/glint/viva-glint-welcome
+          text: Microsoft Viva Glint      
     # Card
     - title: Endpoint management
       imageSrc: /media/logos/logo-ms-social.png
