@@ -3,7 +3,7 @@ title: Troubleshoot Store Commerce extension issues in Dynamics 365 Commerce Sto
 description: Explains how to troubleshoot extension issues in the Microsoft Dynamics 365 Commerce Store Commerce app.
 author: josaw1
 ms.author: josaw
-ms.date: 08/29/2023
+ms.date: 08/30/2023
 ---
 # Troubleshoot issues with Store Commerce extension 
 
@@ -13,7 +13,7 @@ This article explains how to troubleshoot extension issues in the Microsoft Dyna
 
 Commerce runtime (CRT) triggers might not have been updated to include the extension package, or they aren't deployed. For more information, see [Commerce runtime (CRT) extensibility and triggers](/dynamics365/commerce/dev-itpro/commerce-runtime-extensibility-trigger).
 
-## Issue 2:  Extension packages appear on the POS Settings page, but the manifest isn't loaded
+## Issue 2: Extension packages appear on the POS Settings page, but the manifest isn't loaded
 
 Confirm that the extension package exists in the *C:\\Program Files\\Microsoft Dynamics 365\\10.0\\Store Commerce\\Extensions* folder. If the packages exist, there should be a *POS* folder that contains the manifest.
 

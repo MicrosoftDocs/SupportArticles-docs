@@ -3,7 +3,7 @@ title: Refund on a return order is declined in Dynamics 365 Commerce
 description: Resolves an issue where a refund on a return order is declined if the credit card differs from that used for the original payment authorization in Microsoft Dynamics 365 Commerce.
 author: Reza-Assadi
 ms.author: josaw
-ms.date: 08/29/2023
+ms.date: 08/30/2023
 ---
 # Refund on a return order is declined
 
@@ -29,3 +29,5 @@ To solve this issue, contact the Adyen support team and request to enable blind 
 
 - [Dynamics 365 Payment Connector for Adyen](/dynamics365/commerce/dev-itpro/adyen-connector)
 - [Set up the Adyen payment connector for Dynamics 365](https://docs.adyen.com/plugins/microsoft-dynamics)
+
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-disclaimer.md)]

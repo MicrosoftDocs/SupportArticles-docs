@@ -3,7 +3,7 @@ title: Errors when debugging against a Tier 1 Retail Server virtual machine
 description: Resolves errors that occur when you debug a Tier 1 Retail Server VM in an e-commerce development environment in Microsoft Dynamics 365 Commerce.
 author: Reza-Assadi
 ms.author: josaw
-ms.date: 08/25/2023
+ms.date: 08/30/2023
 ---
 # Errors when you debug against a Tier 1 Retail Server virtual machine in an e-commerce development environment
 
@@ -29,7 +29,7 @@ The following screenshot shows an example of a similar error in a browser's debu
 
 ## Resolution
 
-To solve this issue, disable the [content security policy](/dynamics365/commerce/manage-csp) for the site in Dynamics 365 Commerce site builder.
+To solve this issue, disable the [content security policy (CSP)](/dynamics365/commerce/manage-csp) for the site in Dynamics 365 Commerce site builder.
 
 1. Select the site that you're working on.
 1. Select **Settings** > **Extensions**.
@@ -41,5 +41,4 @@ To solve this issue, disable the [content security policy](/dynamics365/commerce
 
 ## More information
 
-- [Get started with e-commerce online extensibility development](/dynamics365/commerce/e-commerce-extensibility/sdk-getting-started)
-- [Manage content security policy (CSP) on e-commerce site](/dynamics365/commerce/manage-csp)
+[Get started with e-commerce online extensibility development](/dynamics365/commerce/e-commerce-extensibility/sdk-getting-started)

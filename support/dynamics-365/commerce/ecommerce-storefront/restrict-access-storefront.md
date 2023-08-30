@@ -3,7 +3,7 @@ title: Restrict access to a storefront during testing or development in Dynamics
 description: Introduces how to restrict access to a Microsoft Dynamics 365 Commerce storefront while performing internal testing or development.
 author: Reza-Assadi
 ms.author: josaw
-ms.date: 08/28/2023
+ms.date: 08/30/2023
 ---
 # How to restrict access to a storefront during testing or development
 
@@ -34,5 +34,4 @@ To block the creation of new users in Azure AD, follow these steps:
 
 ## More information
 
-- [Set up a B2C tenant in Commerce](/dynamics365/commerce/set-up-b2c-tenant)
-- [Set up custom pages for user sign-ins](/dynamics365/commerce/custom-pages-user-logins)
+[Set up custom pages for user sign-ins](/dynamics365/commerce/custom-pages-user-logins)

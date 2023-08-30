@@ -3,7 +3,7 @@ title: Save for my next payment option doesn't appear in Dynamics 365 Commerce
 description: Provides a resolution for an issue where the Save for my next payment option doesn't appear under PAYMENT METHOD on an e-commerce site's checkout page in Microsoft Dynamics 365 Commerce.
 author: Reza-Assadi
 ms.author: josaw
-ms.date: 08/28/2023
+ms.date: 08/30/2023
 ---
 # "Save for my next payment" option doesn't appear
 
@@ -31,3 +31,5 @@ To solve this issue, follow these steps to make sure that the Dynamics 365 Payme
 
 - [Payment module](/dynamics365/commerce/payment-module)
 - [Saving online payment instruments with the Adyen connector](/dynamics365/commerce/dev-itpro/adyen-connector-listpi)
+
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-disclaimer.md)]

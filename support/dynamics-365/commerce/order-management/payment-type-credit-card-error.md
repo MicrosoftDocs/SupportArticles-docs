@@ -3,7 +3,7 @@ title: Payment type must be credit card error on the sales order page in Dynamic
 description: Solves the payment type must be credit card error that occurs after an order is synchronized in Microsoft Dynamics 365 Commerce.
 author: Reza-Assadi
 ms.author: josaw
-ms.date: 08/28/2023
+ms.date: 08/30/2023
 ---
 # "Payment type must be credit card" error on the sales order page
 

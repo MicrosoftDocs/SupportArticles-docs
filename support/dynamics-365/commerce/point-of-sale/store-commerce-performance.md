@@ -3,7 +3,7 @@ title: Troubleshoot Store Commerce performance issues in Dynamics 365 Commerce S
 description: Explains how to troubleshoot performance issues in the Microsoft Dynamics 365 Commerce Store Commerce app.
 author: josaw1
 ms.author: josaw
-ms.date: 08/29/2023
+ms.date: 08/30/2023
 ---
 # Troubleshoot issues with Store Commerce performance 
 

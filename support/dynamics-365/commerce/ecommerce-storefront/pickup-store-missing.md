@@ -3,7 +3,7 @@ title: Retail store doesn't appear in the list of stores to pick up from in Dyna
 description: Provides a resolution for an issue where a retail store doesn't appear in the list of stores where items can be picked up in Microsoft Dynamics 365 Commerce.
 author: Reza-Assadi
 ms.author: josaw
-ms.date: 08/28/2023
+ms.date: 08/30/2023
 ---
 # A retail store doesn't appear in the list of stores to pick up from
 

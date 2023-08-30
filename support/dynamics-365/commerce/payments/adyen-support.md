@@ -3,7 +3,7 @@ title: Troubleshoot issues with Dynamics 365 Payment Connector for Adyen
 description: Provides a resolution to help you get support when you have issues with the Microsoft Dynamics 365 Payment Connector for Adyen.
 author: Reza-Assadi
 ms.author: josaw
-ms.date: 08/25/2023
+ms.date: 08/30/2023
 ---
 # Troubleshoot issues with Dynamics 365 Payment Connector for Adyen 
 
@@ -33,3 +33,5 @@ Use the following email template to start the support process with the Adyen tea
 - [Accept payments with the Adyen connector for Dynamics 365 Commerce](https://www.adyen.com/partners/dynamics-365-commerce)
 - [Dynamics 365 Payment Connector for Adyen](/dynamics365/commerce/dev-itpro/adyen-connector)
 - [Set up the Adyen payment connector for Dynamics 365](https://docs.adyen.com/plugins/microsoft-dynamics)
+
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-disclaimer.md)]

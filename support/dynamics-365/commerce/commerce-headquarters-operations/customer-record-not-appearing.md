@@ -3,7 +3,7 @@ title: Customer records don't appear in Commerce headquarters
 description: Provides a resolution for an issue where customer records don't immediately appear in Commerce headquarters.
 author: Reza-Assadi
 ms.author: josaw
-ms.date: 08/25/2023
+ms.date: 08/30/2023
 ---
 # Customer records don't appear in Commerce headquarters
 

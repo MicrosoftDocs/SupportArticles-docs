@@ -3,7 +3,7 @@ title: Products and categories don't appear in Commerce site builder after mappi
 description: Provides a resolution for an issue where products and categories aren't shown in Commerce site builder after a new site is mapped in Microsoft Dynamics 365 Commerce.
 author: Reza-Assadi
 ms.author: josaw
-ms.date: 08/29/2023
+ms.date: 08/30/2023
 ---
 # Products and categories don't appear in Commerce site builder after a new site is mapped
 

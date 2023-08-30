@@ -3,7 +3,7 @@ title: Asynchronous order synchronization issues in Dynamics 365 Commerce
 description: Describes common reasons for asynchronous order creation failure in Microsoft Dynamics 365 Commerce and provides troubleshooting steps to help system users and partners understand what went wrong.
 author: Shajain
 ms.author: josaw
-ms.date: 08/28/2023
+ms.date: 08/30/2023
 ---
 # Asynchronous order synchronization issues
 

@@ -3,7 +3,7 @@ title: Taxes on online orders are incorrectly calculated in Dynamics 365 Commerc
 description: Resolves an issue where the taxes on online orders are incorrectly calculated, or the tax group on the sales line isn't correctly set in Microsoft Dynamics 365 Commerce.
 author: Reza-Assadi
 ms.author: josaw
-ms.date: 08/28/2023
+ms.date: 08/30/2023
 ---
 # Taxes on online orders are incorrectly calculated or the tax group on the sales line isn't correctly set
 

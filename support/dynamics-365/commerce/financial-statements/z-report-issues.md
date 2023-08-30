@@ -3,7 +3,7 @@ title: Issues with the data reconciliation of a Z report in Dynamics 365 Commerc
 description: Porvides a resolution for issues with the data reconciliation of a Z report in Microsoft Dynamics 365 Commerce headquarters.
 author: shajain
 ms.author: josaw
-ms.date: 08/28/2023
+ms.date: 08/30/2023
 ms.search.form: RetailStatements_Posting, RetailStatements_CustomerOrderCreation
 ---
 # Issues with the data reconciliation of a Z report

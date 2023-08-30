@@ -3,7 +3,7 @@ title: Statement posting errors due to unavailable inventory or update conflicts
 description: Provides workarounds for inventory-related issues during statement posting in Microsoft Dynamics 365 Commerce.
 author: shajain
 ms.author: josaw
-ms.date: 08/28/2023
+ms.date: 08/30/2023
 ms.search.form: RetailStatementTable_InvoiceFailed
 ---
 # Statement posting errors due to unavailable inventory or update conflicts
