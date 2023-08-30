@@ -15,6 +15,11 @@ This article discusses how to access the Application Insights troubleshooting re
 
 :::image type="content" source="./media/diagnose-ping-test-failure/availability-to-troubleshooter.gif" alt-text="Azure portal animation that shows how to view the end-to-end transaction details to find the troubleshooting report in Application Insights." lightbox="./media/diagnose-ping-test-failure/availability-to-troubleshooter.gif":::
 
+> [!NOTE]
+> Many webtest-related issues are caused by stale or outdated DNS records. As a first troubleshooting step, we recommend to flush the DNS cache on your local machine.
+>
+> In Windows, run the command `ipconfig /flushdns`. This command will be different for other operating systems.
+
 ## View the Application Insights troubleshooting report
 
 To view the Application Insights troubleshooting report, follow these steps:
