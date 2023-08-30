@@ -26,8 +26,6 @@ As a global admin, you might get an email with one of the following messages:
 
 > There is not enough storage space on SharePoint Online
 
-> Your storage is almost full
-
 The amount of Microsoft SharePoint storage for your organization is based on your number of licenses.
 
 Your organization has total storage of 1 TB plus 10 GB per license of eligible plan purchased, plus any Microsoft 365 Extra File Storage add-on purchased.

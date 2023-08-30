@@ -2,6 +2,14 @@
 
 
 
+## Week of August 21, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 8/25/2023 | [Can't empty Deleted Items folder in Microsoft 365 Groups](/exchange/troubleshoot/groups-and-distribution-lists/cannot-empty-deleted-items-folder-in-groups) | added |
+
+
 ## Week of August 14, 2023
 
 

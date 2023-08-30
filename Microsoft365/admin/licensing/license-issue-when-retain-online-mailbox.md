@@ -44,6 +44,6 @@ NoteTo assign a license to a user, double-click the user. On the "Assign license
 
 ## More information
 
-Users must be assigned a license, or the mailbox is deleted. From the time that the user mailbox is created in the Exchange admin center, admins have 60 days to assign the user a license in the Microsoft 365 portal.
+Users must be assigned a license, or the mailbox is deleted. From the time that the user mailbox is created in the Exchange admin center, admins have 30 days to assign the user a license in the Microsoft 365 portal.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
