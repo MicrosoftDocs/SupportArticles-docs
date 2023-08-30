@@ -1,6 +1,6 @@
 ---
 title: Product IDs that are supported by the Office Deployment Tool for Click-to-Run
-description: Describes Product IDs that are supported by the Office Deployment Tool for Click-to-Run。
+description: Lists product IDs that the Office Deployment Tool for Click-to-Run supports.
 author: helenclu
 ms.author: luche
 ms.date: 8/28/2023
@@ -18,13 +18,7 @@ appliesto:
 - Microsoft Office Deployment Tool
 ---
 
-# List of Product IDs which are supported by the Office Deployment Tool for Click-to-Run
-
-## Summary
-
-This article lists product IDs that are supported by the Microsoft Office Deployment Tool.
-
-## More Information
+# List of Product IDs that are supported by the Office Deployment Tool for Click-to-Run
 
 The following product IDs are supported by the Office Deployment Tool in Microsoft 365 and Microsoft 365 deployments:
 
