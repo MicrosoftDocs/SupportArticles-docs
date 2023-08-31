@@ -1,7 +1,7 @@
 ---
 title: CreateProcessWithLogonW fails when called on a Microsoft Entra ID account 
 description: Describes an error that may occur when an application calls CreateProcessWithLogonW on a Microsoft Entra ID account in UPN format.
-author: davean
+author: cts-davean
 ms.author: davean
 ms.reviewer: mihayash, v-sidong
 ms.custom: sap:Desktop app UI development
