@@ -23,12 +23,12 @@ ms.custom: CI167102
 
 In the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/), the **Display - Front of Room** signal of a Microsoft Teams Rooms device is shown as **Unhealthy**, and users experience one or more of the following issues:
 
-- One or more front-of-room displays show nothing or show "No Signal".
+- One or more Front of Room displays show nothing or show "No Signal".
 - The room console shows a warning banner at the top that indicates that a display was disconnected.
 
 ## Cause
 
-This issue occurs when one or more front-of-room displays are no longer detected. The count of available displays is checked against the dual display configuration in the Microsoft Teams Rooms app. Although the consoles are displays, this signal filters out the certified consoles and counts the remaining consoles as front-of-room displays. If you use a non-certified console, this signal won't alert correctly.
+This issue occurs when one or more Front of Room displays are no longer detected. The count of available displays is checked against the dual display configuration in the Microsoft Teams Rooms app. Although the consoles are displays, this signal filters out the certified consoles and counts the remaining consoles as Front of Room displays. If you use a non-certified console, this signal won't alert correctly.
 
 > [!NOTE]
 > 
