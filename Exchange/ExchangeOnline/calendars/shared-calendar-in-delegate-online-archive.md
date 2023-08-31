@@ -74,7 +74,7 @@ To work around this issue, choose from the following options:
 
   **Note**: If shared calendar items are already archived, removing the MRM policy or disabling shared calendar improvements won't remove the archived shared calendar items or the archived shared calendar folders.
 
-- To hide shared calendars that appear in a delegate's Online Archive folder in Outlook, follow these steps for each calendar:
+- To hide shared calendars that appear in a delegate's Online Archive folder in Outlook, follow these steps:
 
   > [!NOTE]
   >
@@ -107,7 +107,7 @@ To work around this issue, choose from the following options:
   
   11. Select the **Boolean** checkbox, and then select **OK**.
  
-      **Note:** If you have additional calendars to hide, follow steps 9-11 for each one.
+      **Note:** If you need to hide additional calendars, repeat steps 9 to 11 for each calendar.
        
   12. Exit the application by closing all MFCMAPI windows.
   
