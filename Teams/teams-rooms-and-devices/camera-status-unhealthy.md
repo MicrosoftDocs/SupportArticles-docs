@@ -29,7 +29,7 @@ In the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.micros
 
 ## Cause
 
-This issue occurs when Teams Rooms reports that no room camera is detected. If the configured default room camera isn't available, but another camera is available, this signal won't alert. Instead, the **Default Room Camera** signal is shown as **Unhealthy**, and the incident severity value is shown as **Warning**.
+This signal alerts when Teams Rooms reports that no room cameras are detected. If the configured default room camera isn't available, but another camera is available, this signal won't alert. Instead, the **Default Room Camera** signal is shown as **Unhealthy**, and the incident severity value is shown as **Warning**.
 
 > [!NOTE]
 > The **Room Camera** signal reports the status of the video camera for in-room participants. The report doesn't include the status of the [content camera](/microsoftteams/rooms/content-camera).
