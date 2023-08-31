@@ -28,7 +28,7 @@ In the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.micros
 
 ## Cause
 
-This issue occurs when one or more Front of Room displays are no longer detected. The count of available displays is checked against the dual display configuration in the Microsoft Teams Rooms app. Although the consoles are displays, this signal filters out the certified consoles and counts the remaining consoles as Front of Room displays. If you use a non-certified console, this signal won't alert correctly.
+This signal alerts when one or more Front of Room displays are no longer detected. The count of available displays is checked against the dual display configuration in the Microsoft Teams Rooms app. Although the consoles are displays, this signal filters out the certified consoles and counts the remaining consoles as Front of Room displays. If you use a non-certified console, this signal won't alert correctly.
 
 > [!NOTE]
 > 
