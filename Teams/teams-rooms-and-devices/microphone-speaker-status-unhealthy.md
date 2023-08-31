@@ -3,7 +3,7 @@ title: The microphone or speaker status of a Teams Rooms device is unhealthy
 description: Fixes the issue that causes the microphone or speaker signal of a Microsoft Teams Rooms device to appear as Unhealthy.
 ms.reviewer: lamos
 ms.topic: troubleshooting
-ms.date: 9/23/2022
+ms.date: 8/30/2023
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -36,19 +36,17 @@ Users experience one or more of the following issues:
 - In-room participants can't hear the ringtone for incoming calls.
 - Audio from an HDMI ingest source, such as a laptop, can't be heard from room speakers.
 
-## Signal Logic
+## Cause
 
-**Conferencing Speaker and Conferencing Microphone**
-
-- This alert is triggered when the system reports that no viable speaker or mic peripheral is in-use. If the configured default device is unavailable but another, viable, device is in use, this signal will not alert and instead a separate warning signal will alert.
+The **Conferencing Speaker** and **Conferencing Microphone** signals alert when Teams Rooms reports that no speaker or microphone peripherals are available and in use. If the configured default device isn't available, but another viable device is in use, this signal won't alert, but a separate warning signal will alert.  
 
 > [!NOTE]
-> Since Teams will fall back to any available speaker or microphone when the configured device is unavailable, the Pro Portal filters out "non-viable" devices such as on-board headphone connectors and small speakers found inside some certified consoles. If those are found in-use, the Pro Portal should still fire this alert since they would not allow for a viable meeting experience.
-> If the Microsoft Teams Rooms application is explicitly configured to use the speakers inside of a Front of Room display (HDMI audio), this alert will be locked in a healthy state. Another warning "Misconfigured Conferencing/Default Speaker" will alert you in this scenario. HDMI audio becomes disconnected when the display sleeps and would otherwise cause critical alerts to open and close throughout the day.
-**Configured Default Speaker, Configured Conferencing Microphone and Configured Conferencing Speaker**
-
-- This warning is triggered when the system reports that the configured default device is not available, but another viable device is in use.
-
+> 
+> - Since Teams will fall back to any available speakers or microphones when the configured device isn't available, Teams Rooms Pro filters out non-viable devices, such as onboard headphone connectors and small speakers found inside some certified consoles. If the non-viable devices are found to be in use, these signals will still alert, because the devices can't provide a viable conferencing experience.
+> - If the Teams Rooms app is explicitly configured to use the speakers in a Front of Room display (HDMI audio), the **Conferencing Speaker** signal will remain **Healthy**. In this case, the **Conference misconfiguration/default speaker** signal will alert. HDMI audio is disconnected when the display sleeps, which would otherwise cause critical alerts to turn on and off throughout the day.
+    
+The **Configured Default Speaker**, **Configured Conferencing Microphone** and **Configured Conferencing Speaker** signals alert when Teams Rooms reports that the configured default device isn't available, but another viable device is in use.
+ 
 ## Resolution
 
 Audio peripheral issues can occur for different reasons. To fix common issues, try the following options.
@@ -83,6 +81,4 @@ These signals are handled differently in the Teams Rooms Pro Management portal a
 
 **Teams Rooms Pro Management portal**: If the configured audio peripheral isn't available, the next available microphone or speaker is automatically selected. The portal reports the signal as **Unhealthy** if the following conditions are met:
 
-- There is no viable (see above) speaker or mic currently in use.
-
-
+- There is no speaker or microphone available.
