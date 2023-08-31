@@ -21,7 +21,13 @@ ms.custom: CI167249
 
 ## Symptoms
 
-In the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/), the **Room Camera** signal of a Microsoft Teams Rooms device is shown as **Unhealthy**. Users also experience the following issues during a Teams meeting:
+In the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/), one or more of the following signals of a Microsoft Teams Rooms device are shown as **Unhealthy**:
+
+- Room Camera
+- Default Room Camera
+- Content Camera
+
+Users may also experience the following issues during a Teams meeting:
 
 - The camera icon on the room console is unavailable.
 - The video of in-room participants is unavailable to remote participants.
@@ -29,11 +35,18 @@ In the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.micros
 
 ## Cause
 
-This signal alerts when Teams Rooms reports that no room cameras are detected. If the configured default room camera isn't available, but another camera is available, this signal won't alert. Instead, the **Default Room Camera** signal is shown as **Unhealthy**, and the incident severity value is shown as **Warning**.
+The **Room Camera** signal alerts when Teams Rooms reports that no room camera is available. If the configured default room camera isn't available, but another camera is available, this signal won't alert.
 
 > [!NOTE]
-> The **Room Camera** signal reports the status of the video camera for in-room participants. The report doesn't include the status of the [content camera](/microsoftteams/rooms/content-camera).
+> The **Room Camera** signal reports the status of the video camera for in-room participants. The report doesn't include the status of the [content camera](/microsoftteams/rooms/content-camera). If a connected camera is configured as the Content Camera, it will not be available as a Room Camera.
+The **Default Room Camera** signal alerts when the configured default room camera isn't available, but another camera is available. The incident severity value is shown as **Warning**.
 
+> [!IMPORTANT]
+> If the room camera is replaced, even with a camera of the same make and model, this signal will alert. The camera is tracked by its hardware id, which is unique to a specific camera when enumerated by Windows. In this case, the default camera needs re-selected and saved within the Teams Rooms app settings.
+The **Content Camera** signal alerts when the configured content camera isn't available.
+
+> [!NOTE]
+> Some certified cameras can be used as either a room or content camera so, in order to function as, and alert as, a content camera, it must be configured within the Teams Rooms app settings.
 ## Resolution
 
 Camera issues can occur for different reasons. To fix common issues that affect the camera, try the following options.
@@ -69,3 +82,4 @@ If the camera doesn't use a USB extender, verify that the USB cable is securely 
 ### Check the power supply
 
 Many cameras require external power supplies. In this case, make sure that the power supply is connected.
+
