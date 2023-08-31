@@ -22,7 +22,7 @@ The following conditions describe the use of network database files that are sto
 
 - This use is enabled by default in Microsoft SQL Server 2008 R2 and later versions.
 
-- This use requires the **-T1807** startup trace flag to work in Microsoft SQL Server 2008 and earlier versions. For more information about how to enable startup trace flags, review [Database Engine Service Startup Options](/sql/database-engine/configure-windows/database-engine-service-startup-options).
+- This use requires the **-T1807** startup trace flag to work in Microsoft SQL Server 2008 and 2008 R2. Starting on SQL 2012, the trace flag is no longer required. For more information about how to enable startup trace flags, review [Database Engine Service Startup Options](/sql/database-engine/configure-windows/database-engine-service-startup-options).
 
 ## Windows Hardware Quality Lab (WHQL)-qualified devices
 
