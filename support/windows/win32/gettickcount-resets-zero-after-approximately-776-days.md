@@ -1,6 +1,6 @@
 ---
 title: GetTickCount resets to zero after approximately 776 days
-description: Describes a problem where the value returned by GetTickCount resets to zero after about 776 days.
+description: Describes a problem where the value returned by GetTickCount resets to zero after approximately 776 days.
 author: cts-davean
 ms.author: davean
 ms.reviewer: v-sidong
@@ -8,7 +8,6 @@ ms.custom: sap:System Services Development
 ms.technology: windows-dev-apps-system-services-dev
 ms.date: 08/31/2023
 ---
-
 # GetTickCount resets to zero after approximately 776 days
 
 This article describes a problem where the value returned by `GetTickCount` resets to `zero` after approximately 776 days.
