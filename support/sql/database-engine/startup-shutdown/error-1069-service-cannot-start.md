@@ -111,7 +111,7 @@ To ensure that the service is configured properly, use the Services snap-in in M
 
 To fix this issue, use one of the following methods based on your scenario:
 
-- If SQL Server Startup account is a Local User Account on the computer, open ***Computer Management** (compmgmt.msc) and verify that the service account is disabled in **Local Users & Groups**. If it's disabled, enable the account, and restart the SQL Server Service.
+- If SQL Server Startup account is a Local User Account on the computer, open ***Computer Management** (compmgmt.msc) and verify that the service account is disabled in **Local Users and Groups**. If it's disabled, enable the account, and restart the SQL Server Service.
 
 - If SQL Server Startup account is a Windows Domain Account, check whether the account is disabled in **Active Directory Users and Computers**. If it's disabled, enable the account, and restart the SQL Server Service.
 
@@ -267,7 +267,7 @@ To fix this issue, use one of the following methods based on your scenario:
 - If the SQL Server Startup account is a Local User Account on the computer:
 
   1. Open **Computer Management** (compmgmt.msc) and go to **Local Users and Groups**. Then select **Users**.
-  1. Clear the **Account is Locked Out** checkbox for the SQL Server Startup Account under **Local Users & Groups** and select **OK**.
+  1. Clear the **Account is Locked Out** checkbox for the SQL Server Startup Account under **Local Users and Groups** and select **OK**.
   1. Restart the SQL Server Service.
 
 - If the SQL Server Startup account is a Windows Domain Account:
