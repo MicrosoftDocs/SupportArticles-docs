@@ -11,6 +11,7 @@ ms.custom:
   - CI 167780
   - Exchange Hybrid
   - CSSTroubleshoot
+  - has-azure-ad-ps-ref
 ms.reviewer: haembab, ninob, meerak, v-trisshores
 appliesto:
   - Exchange Online

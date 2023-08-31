@@ -9,7 +9,9 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
-ms.custom: CSSTroubleshoot
+ms.custom:
+  - CSSTroubleshoot
+  - has-azure-ad-ps-ref
 appliesto: 
   - Microsoft 365
 ms.date: 3/31/2022

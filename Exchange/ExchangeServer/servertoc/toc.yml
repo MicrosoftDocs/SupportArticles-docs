@@ -199,6 +199,8 @@
           href: ../administration/low-disk-space-on-database-logs-drivers.md
         - name: Mailbox quarantine issue
           href: ../administration/exchange-mailbox-quarantine-issue.md
+        - name: Mailbox UPN and SamAccountName contain a GUID
+          href: ../administration/mailbox-upn-samaccountname-contain-guid.md
         - name: Mailboxes are quarantined and databases fail over
           href: ../administration/mailboxes-quarantined-databases-fail-over.md
         - name: Managed Availability messages are journaled

@@ -7,9 +7,10 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
-ms.custom: 
+ms.custom:
   - Exchange Hybrid
   - CSSTroubleshoot
+  - has-azure-ad-ps-ref
 ms.reviewer: scotro, v-six
 appliesto: 
   - Exchange Online
