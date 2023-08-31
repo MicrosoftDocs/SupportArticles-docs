@@ -43,15 +43,15 @@ Procedure to resolve the problem on SQL Servers running on Windows Server 2008 R
 
     For more information, see [File Locations for Default and Named Instances of SQL Server](/sql/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server).
 
-2. Edit _SQLMSSearch.reg_ file with Notepad and replace all occurrences of _xmlfilt.dll_ by `C:\Windows\system32\xmlfilter.dll` and then save the changes.
+1. Edit _SQLMSSearch.reg_ file with Notepad and replace all occurrences of _xmlfilt.dll_ by `C:\Windows\system32\xmlfilter.dll` and then save the changes.
 
     > [!NOTE]
     >
     > - This assumes your Windows folder is located at `C:\Windows`.
     > - You need to enter each backslash in the new path twice!
 
-3. Click the file _SQLMSSearch.reg_ to import the content into the registry.
-4. Run the following T-SQL commands to enable the new setting in SQL Server:
+1. Click the file _SQLMSSearch.reg_ to import the content into the registry.
+1. Run the following T-SQL commands to enable the new setting in SQL Server:
 
     ```sql
     EXEC sp_fulltext_service 'load_os_resources', 1
@@ -60,7 +60,7 @@ Procedure to resolve the problem on SQL Servers running on Windows Server 2008 R
     EXEC sp_fulltext_service 'restart_all_fdhosts'
     ```
 
-5. Check the availability of the new settings with this T-SQL command:
+1. Check the availability of the new settings with this T-SQL command:
 
     ```sql
     EXEC sp_help_fulltext_system_components 'fullpath','c:\windows\system32\xmlfilter.dll'
@@ -80,8 +80,8 @@ Steps to reproduce the problem:
     [xmlField] [xml] NOT NULL)
     ```
 
-2. Enable FTS on the xmlField field (the word breaking language that you select here is not relevant to the repro).
-3. Insert one record on that table, as follows:
+1. Enable FTS on the xmlField field (the word breaking language that you select here is not relevant to the repro).
+1. Insert one record on that table, as follows:
 
     ```sql
     INSERT INTO testFTS (idField, xmlField) values
@@ -101,7 +101,7 @@ Steps to reproduce the problem:
     </TopNode>')
     ```
 
-4. By querying `fts_index_keywords` for this particular table - `select * from sys.dm_fts_index_keywords(db_id(),object_id('testFTS'))`, the following results are obtained:
+1. By querying `fts_index_keywords` for this particular table - `select * from sys.dm_fts_index_keywords(db_id(),object_id('testFTS'))`, the following results are obtained:
 
     | keyword| display_term| column_id| document_count |
     |---|---|---|---|
@@ -115,7 +115,7 @@ Steps to reproduce the problem:
     | 0x0077006800650074006800650072|whether|2|1|
     | 0xFF|END OF FILE|2|1|
 
-    These display terms appear to be restrict to:
+    These display terms appear to be restricted to:
 
     - Node values, regardless of how deeply they are nested within the XML document.
     - Attribute values only for the top node and not from any of the inner nodes that would be expected.

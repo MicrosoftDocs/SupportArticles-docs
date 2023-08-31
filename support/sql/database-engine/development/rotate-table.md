@@ -62,6 +62,7 @@ GROUP BY YEAR
 For large tables, this query will be faster:
 
 ```sql
+SELECT YEAR,
 YEAR=q.year,
 SUM(CASE quarter WHEN 1 THEN amount ELSE 0 END) AS Q1,
 SUM(CASE quarter WHEN 2 THEN amount ELSE 0 END) AS Q2,

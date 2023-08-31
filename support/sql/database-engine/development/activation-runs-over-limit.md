@@ -29,16 +29,16 @@ In this scenario, you notice that more activated tasks are running than the valu
 This problem can occur if the Service Broker database is switched from single-user mode (`RESTRICTED_USER`) to multi-user mode (`MULTI_USER`) by running the following:
 
 ```sql
-ALTER DATABASE <dbname> SET multi_user
+ALTER DATABASE <dbname> SET MULTI_USER
 ```
 
 When the user mode is changed on the database, Service Broker is shut down and restarted. During this process, the existing `QueueMonitor` object is dropped, and another instance of `QueueMonitor` object is created. If the activation process is running a long operation while Service Broker is shutting down, the status of the `QueueMonitor` object is changed to **dropped**.
 
-However, the existing `QueueMonitor` object instance is not deleted because its reference count has not reached zero. If the activation procedure is still running when Service Broker restarts, the new instance of the `QueueMonitor` object and the dropped `QueueMonitor` object will coexist in the same queue. The dropped `QueueMonitor` object instance will be deleted the next time that Service Broker starts.
+However, the existing `QueueMonitor` object instance isn't deleted because its reference count hasn't reached zero. If the activation procedure is still running when Service Broker restarts, the new instance of the `QueueMonitor` object and the dropped `QueueMonitor` object will coexist in the same queue. The dropped `QueueMonitor` object instance will be deleted the next time that Service Broker starts.
 
 ## Workaround
 
-To work around this issue, make sure that you run `alter database [dbname] set multi_user` when no activated procedure is running. To do this, use one of the following methods:
+To work around this issue, make sure that you run `ALTER DATABASE [dbname] SET MULTI_USER` when no activated procedure is running. To do this, use one of the following methods:
 
 - Before you change the user mode, disable all the queues in the database, and then re-enable all the queues.
 - Before you change the user mode, disable the activation procedure for all the affected queues by running the following command, and then re-enable the activation procedure:

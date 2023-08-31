@@ -47,7 +47,7 @@ By changing the way that you invoke the COM object, you can request that the obj
 
 ## Modify registry to force remoting of the object
 
-If you cannot modify the COM client to request that the object be created out of process, two different methods exist to force the object to be created out of process.
+If you can't modify the COM client to request that the object be created out of process, two different methods exist to force the object to be created out of process.
 
 - Use the OLE/COM Object viewer (*oleview.exe*) that's shipped with Visual C++ and locate the ProgID in the form of `OLEComponent.Object` under **All Objects**. Select the COM object, and then from the **Object** menu, select `CoCreateInstance` Flags. Make sure that only `CLSCTX_LOCAL_SERVER` is selected. Next, under the **Implementation** and **Inproc Server** tabs, select **Use Surrogate Process** and leave the **Path to Custom Surrogate** blank, which allows the *dllhost.exe* file to be loaded and the COM DLL brought within its process space.
 
@@ -70,7 +70,7 @@ If you cannot modify the COM client to request that the object be created out of
 
         Make a note of this value or copy it to Notepad. Include the brackets.
 
-    3. Navigate under the `HKEY_CLASSES_ROOT\CLSID` key and find the subkey with this GUID number. After you highlight the `HKEY_CLASSES_ROOT\CLSID` key, you can use the Find function in Registry Editor (under the **Edit** menu) and paste the GUID into the **Find** dialog box. Make sure that you have found the proper interface by inspecting the InprocServer32 subkey under this key, which points to the location of your COM DLL file. If there is a TypeLib key, check this GUID value. This should be different than what you noted in step 1. Otherwise, you have the TypeLib GUID and not the GUID for the COM object. The ProgID subkey will have a value of 'OLEComponent.Object.1'. The one on the end is for this sample only and is used for versioning information.
+    3. Navigate under the `HKEY_CLASSES_ROOT\CLSID` key and find the subkey with this GUID number. After you highlight the `HKEY_CLASSES_ROOT\CLSID` key, you can use the Find function in Registry Editor (under the **Edit** menu) and paste the GUID into the **Find** dialog box. Make sure that you have found the proper interface by inspecting the InprocServer32 subkey under this key, which points to the location of your COM DLL file. If there is a TypeLib key, check this GUID value. This should be different than what you noted in step 1. Otherwise, you have the TypeLib GUID and not the GUID for the COM object. The ProgID subkey will have a value of `OLEComponent.Object.1`. The one on the end is for this sample only and is used for versioning information.
 
     4. While under the GUID's InprocServer32 subkey, make sure that a `ThreadingModel` value exists and that it is set to either Both or Free to make sure the marshaling understands the threading model of the COM object to enable execution of COM out of SQL Server process space. If there isn't a `ThreadingModel` value or it's set to Apartment, COM object instantiation may not be consistent.
 
@@ -97,7 +97,7 @@ If you cannot modify the COM client to request that the object be created out of
 
        Press the **ENTER** key to open the **Distributed COM Configuration Properties** dialog box. Click the **Default Properties** tab, and make sure that **Enable Distributed COM** on this computer is selected. If it is not, select it, and then click **Apply**.
 
-    10. Make sure that the Windows NT user account that SQL Server is running under has **Full Control** permission on the registry keys for this object. If the permissions aren't sufficient or the registry keys are input incorrectly the following errors may occur when you're creating the COM object:
+    10. Make sure that the Windows NT user account that SQL Server is running under has **Full Control** permission on the registry keys for this object. If the permissions aren't sufficient or the registry keys are input incorrectly, the following errors may occur when you're creating the COM object:
 
         > OLE Automation Error Information  
         HRESULT: 0x80040154  

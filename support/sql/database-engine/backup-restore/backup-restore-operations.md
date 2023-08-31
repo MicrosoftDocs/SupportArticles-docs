@@ -85,7 +85,7 @@ For more information about how to generate scripts for your database, see [Scrip
 
 If you encounter problems that affect backup jobs or maintenance plans in Always On environments, note the following:
 
-- By default, the automatic backup preference is set to **Prefer Secondary**. This specifies that backups should occur on a secondary replica - except if the primary replica is the only replica online. You can't take differential backups of your database by using this setting. To change this setting, use SSMS on your current primary replica, and navigate to **Backup Preferences** page under **Properties** of your Availability group.
+- By default, the automatic backup preference is set to **Prefer Secondary**. This specifies that backups should occur on a secondary replica - except if the primary replica is the only replica online. You can't take differential backups of your database by using this setting. To change this setting, use SSMS on your current primary replica, and navigate to **Backup Preferences** page under **Properties** of your availability group.
 - If you're using a maintenance plan or scheduled jobs to generate backups of your databases, make sure to create the jobs for each availability database on every server instance that hosts an availability replica for the availability group.
 
 For more information about backups in an Always On environment, see the following topics:
@@ -104,7 +104,7 @@ If you receive error messages that indicate a file issue, this is symptomatic of
 > [!NOTE]
 > You can use the [Restore Header](/sql/t-sql/statements/restore-statements-headeronly-transact-sql) statement to check your backups.
 
-These issues can occur because of issues that affect the underlying hardware (hard disks, network storage, and so on) or that are related to a virus or malware. Review Windows System event logs and hardware logs for reported errors, and take appropriate action (for example: upgrade firmware, or fix networking issues).
+These issues can occur because of issues that affect the underlying hardware (hard disks, network storage, and so on) or that are related to a virus or malware. Review Windows System event logs and hardware logs for reported errors, and take appropriate action (for example, upgrade firmware, or fix networking issues).
 
 To prevent these errors, enable the **Backup CHECKSUM** option when you run a backup to avoid backing up a corrupted database. For more information, see [Possible Media Errors During Backup and Restore (SQL Server)](/sql/relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server).
 
@@ -187,7 +187,7 @@ SQL Server provides a Virtual Backup Device Interface (VDI) tool. This API enabl
 
 #### Can I restore database backups from older program versions on newer versions, and vice-versa?
 
-  SQL Server backup cannot be restored by using a version of SQL Server that's later than the version that created the backup. For more information, see [Compatibility Support](/sql/t-sql/statements/restore-statements-transact-sql).
+  SQL Server backup can't be restored by using a version of SQL Server that's later than the version that created the backup. For more information, see [Compatibility Support](/sql/t-sql/statements/restore-statements-transact-sql).
 
 #### How do I verify my SQL Server database backups?
 
