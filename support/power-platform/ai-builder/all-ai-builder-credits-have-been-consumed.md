@@ -139,4 +139,4 @@ If 'Allow users to consume unassigned credit' setting is disabled in Power Platf
 
 ## Resources
 
-For more information, see [AI Builder licensing](https://learn.microsoft.com/en-us/ai-builder/administer-licensing).
+For more information, see [AI Builder licensing](/ai-builder/administer-licensing).
