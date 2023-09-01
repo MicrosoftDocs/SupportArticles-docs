@@ -69,7 +69,7 @@ Many security hardening practices can lead to difficulties in maintaining system
 
 If the auditd configuration causes the system shutdown on audit log failures, temporarily disabling the `HALT` configuration will allow the VM to boot to the full OS for remediation.
 
-The steps to fix this common auditd issue, as well as several other common problems, can be run automatically by using the `az vm repair` extension to the az cli with the [Azure Linux Automatic Repair (ALAR)](repair-linux-vm-using-alar.md#auditd) tool and the auditd action in this case.  To manually perform the same procedure, use the following steps.
+To fix this common auditd issue and several other common problems, run the [az vm repair](/cli/azure/vm/repair) extension automatically in the Azure CLI by using the [Azure Linux Automatic Repair (ALAR)](repair-linux-vm-using-alar.md#auditd) tool and the auditd action. To do the same procedure manually, follow these steps:
 
 1. Take a snapshot of the OS disk to provide a recovery state.
 
