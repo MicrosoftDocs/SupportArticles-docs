@@ -9,7 +9,7 @@ metadata:
   ms.service: dynamics-365-commerce
   author: bstorie
   ms.author: brstor
-  ms.date: 08/07/2023
+  ms.date: 08/30/2023
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -71,10 +71,10 @@ landingContent:
         links:
           - text: Fix common statement posting issues by editing transactions
             url: financial-statements/fix-common-posting-issues.md
-          - text: Statement posting errors due to unavailable inventory or update conflicts
-            url: financial-statements/inventory-errors-posting.md
           - text: Issues with the data reconciliation of a Z report
             url: financial-statements/z-report-issues.md
+          - text: Statement posting errors due to unavailable inventory or update conflicts
+            url: financial-statements/inventory-errors-posting.md
 
   # Card
   - title: Order management
@@ -86,7 +86,7 @@ landingContent:
           - text: Payment type must be credit card error on the sales order page
             url: order-management/payment-type-credit-card-error.md 
           - text: Taxes on online orders are incorrectly calculated
-            url: order-management/tax-miscalculated-online-order.md                   
+            url: order-management/tax-miscalculated-online-order.md 
           - text: Troubleshoot issues with the online store transaction creation process
             url: order-management/online-order-transaction-creation-failures.md
 
@@ -95,13 +95,15 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: A card payment fails due to an unsupported card type
+            url: payments/card-payments-fail-with-unsupported-card-type.md
           - text: Credit card entry page shows an error at checkout
             url: payments/credit-card-entry-form-error.md
           - text: Payments are automatically settled before orders are invoiced or shipped
             url: payments/payments-auto-settled.md 
           - text: Refund on a return order is declined
             url: payments/refund-declined.md                   
-          - text: Refundable charges are miscalculated based on the quantity returned
+          - text: Refundable charges are miscalculated based on returned quantity
             url: payments/refund-miscalculated-partial-return.md
           - text: Save for my next payment option doesn't appear
             url: payments/next-payment-link-not-appearing.md                   
@@ -129,7 +131,7 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Ratings refiner appears on search results and category pages when the ratings and reviews solution isn't enabled
+          - text: Ratings refiner appears when the ratings and reviews solution isn't enabled
             url: ratings-reviews/hide-ratings-refiner.md
 
 # Card

@@ -1,48 +1,45 @@
 ---
-
-title: Set up an e-commerce development environment to debug against a Tier 1 Retail Server virtual machine
-description: This article explains how to set up an e-commerce development environment to debug against a Tier 1 Retail Server virtual machine (VM).
-author: Reza-Assadi
+title: Errors when debugging against a Tier 1 Retail Server virtual machine
+description: Resolves errors that occur when you debug a Tier 1 Retail Server VM in an e-commerce development environment in Microsoft Dynamics 365 Commerce.
+author: josaw1 
 ms.author: josaw
-ms.topic: troubleshooting
-ms.date: 03/11/2021
-
+ms.reviewer: rassadi, brstor
+ms.date: 09/01/2023
 ---
+# Errors when you debug against a Tier 1 Retail Server virtual machine in an e-commerce development environment
 
-# Set up an e-commerce development environment to debug against a Tier 1 Retail Server virtual machine
+This article provides a resolution for an issue where you might receive an error when you debug against a Tier 1 Retail Server virtual machine (VM) in an e-commerce development environment in Microsoft Dynamics 365 Commerce.
 
-This article explains how to set up an e-commerce development environment to debug against a Tier 1 Retail Server virtual machine (VM).
+## Introduction
 
-## Description
+Microsoft Dynamics 365 Commerce Tier 1 environments are typically deployed for [Commerce runtime (CRT)](/dynamics365/commerce/dev-itpro/crt-services) and [point of sale (POS) extension](/dynamics365/commerce/dev-itpro/pos-extension/pos-extension-overview) development. They are standalone environments. Because of the software as a service (SaaS) nature of the architecture, they don't include e-commerce components.
 
-Microsoft Dynamics 365 Commerce Tier 1 environments are typically deployed for Commerce runtime (CRT) and point of sale (POS) extension development. They are standalone environments. Because of the software as a service (SaaS) nature of the architecture, they don't include e-commerce components.
+In some scenarios, you might need to test calls to extensions in a Tier 1 environment so that you can debug extensions from e-commerce components. For general instructions, see [Debug against a Tier 1 Commerce development environment](/dynamics365/commerce/e-commerce-extensibility/debug-tier-1).
 
-In some scenarios, you might want to test calls to extensions in a Tier 1 environment, so that you can debug extensions from e-commerce components. For general instructions, see [Debug against a Tier 1 Commerce development environment](/dynamics365/commerce/e-commerce-extensibility/debug-tier-1).
+## Symptoms
 
 When you debug against a Tier 1 environment, because the site is now calling a different Retail Server, cross-server calls might cause various errors that are related to the content security policy.
 
-The following illustration shows an example of an error that might occur when a variant is selected on a product details page.
+The following screenshot shows an example of an error that might occur when a variant is selected on a product details page.
 
-![Error when a variant is selected on a product details page.](../../../media/common/unhandled-rejection-error.jpg)
+:::image type="content" source="media/set-up-dev-environment-debugging/unhandled-rejection-error.png" alt-text="Screenshot that shows an Unhandled Rejection Action error.":::
 
-The following illustration shows an example of a similar error in a browser's debugger tools (F12 Developer Tools). The error message mentions violation of the content security policy directive.
+The following screenshot shows an example of a similar error in a browser's debugger tools (F12 Developer Tools). The error message mentions a violation of the content security policy directive.
 
-![Debugger tools error.](../../../media/common/debugger-tools-error.jpg)
+:::image type="content" source="media/set-up-dev-environment-debugging/debugger-tools-error.png" alt-text="Screenshot that shows an error that mentions a violation of the content security policy directive in a browser's debugger tools.":::
 
 ## Resolution
 
-### Disable the content security policy for the site in Commerce site builder
+To solve this issue, disable the [content security policy (CSP)](/dynamics365/commerce/manage-csp) for the site in Dynamics 365 Commerce site builder.
 
 1. Select the site that you're working on.
-1. Select **Settings**, and then select **Extensions**.
+1. Select **Settings** > **Extensions**.
 1. On the **Content security policy** tab, select **Disable content security policy**.
 1. Select **Save and publish**.
 
 > [!NOTE]
 > Business-to-consumer (B2C) sign-in won't work in a local development environment. However, you can use guest checkouts or build page mocks to simulate a user sign-in as required.
 
-## Additional resources
+## More information
 
 [Get started with e-commerce online extensibility development](/dynamics365/commerce/e-commerce-extensibility/sdk-getting-started)
-
-[Manage content security policy (CSP) on e-commerce site](/dynamics365/commerce/manage-csp)

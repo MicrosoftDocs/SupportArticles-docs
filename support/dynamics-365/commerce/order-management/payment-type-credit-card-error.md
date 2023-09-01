@@ -1,32 +1,31 @@
 ---
-
-title: Payment type must be credit card error on the sales order page
-description: This article provides troubleshooting guidance that can help when an error message is shown on the sales order page after an order is synced.
-author: Reza-Assadi
+title: Payment type must be credit card error on the sales order page in Dynamics 365 Commerce
+description: Solves the payment type must be credit card error that occurs after an order is synchronized in Microsoft Dynamics 365 Commerce.
+author: josaw1 
 ms.author: josaw
-ms.topic: troubleshooting
-ms.date: 03/11/2021
-
+ms.reviewer: rassadi, brstor
+ms.date: 09/01/2023
 ---
-
 # "Payment type must be credit card" error on the sales order page
 
-This article provides troubleshooting guidance that can help when an error message is shown on the sales order page after an order is synced.
+This article provides a resolution for the "payment type must be credit card" error message shown on the sales order page after an order is synchronized in Microsoft Dynamics 365 Commerce.
 
-## Description
+## Symptoms
 
-When you open the sales order page after you sync an order, you receive the following error message: "The payment type must be credit card, since the credit card number has been specified."
+When you open the sales order page after you synchronize an order, you receive the following error message:
 
-![Payment type must be credit card error.](../../../media/common/payment-type-must-be-credit-card.jpg)
+> The payment type must be credit card, since the credit card number has been specified.
+
+:::image type="content" source="media/payment-type-credit-card-error/payment-type-must-be-credit-card.png" alt-text="Screenshot that shows the payment type must be credit card error.":::
 
 ## Resolution
 
-### Set the payment type in Commerce headquarters
+To solve this issue, set the **Payment type** to **Credit card** in Commerce headquarters:
 
-1. Go to **Accounts receivable \> Payment setup \> Terms of payment**.
+1. Go to **Accounts receivable** > **Payment setup** > **Terms of payment**.
 1. In the left navigation, select your terms of payment.
 1. In the **Payment type** field, make sure that **Credit card** is selected.
 
-## Additional resources
+## More information
 
 [Posting of online sales and payments](/dynamics365/commerce/tasks/posting-online-sales-payments)
