@@ -14,11 +14,11 @@ This article helps Intune administrators understand and troubleshoot problems wi
 >
 > **Jamf macOS device support for Conditional Access is being deprecated**.
 >
-> Beginning on September 1, 2024, the platform that Jamf Pro’s Conditional Access feature is built on will no longer be supported.
+> Starting from September 1, 2024, the platform that Jamf Pro's Conditional Access feature is built on will no longer be supported.
 >
-> If you use Jamf Pro’s Conditional Access integration for macOS devices, follow Jamf’s documented guidelines to migrate your devices to Device Compliance integration at ***[Migrating from macOS Conditional Access to macOS Device Compliance – Jamf Pro Documentation](https://learn.jamf.com/bundle/jamf-pro-documentation-current/page/Conditional_Access.html#ariaid-title6)***.
+> If you use Jamf Pro's Conditional Access integration for macOS devices, follow Jamf's documented guidelines to [migrate your devices from macOS Conditional Access to macOS Device Compliance](https://learn.jamf.com/bundle/jamf-pro-documentation-current/page/Conditional_Access.html#ariaid-title6).
 >
-> If you need help, contact ***[Jamf Customer Success](https://jamf.service-now.com/csm)***. For more information, see the blog post at **[https://aka.ms/Intune/Jamf-Device-Compliance](https://aka.ms/Intune/Jamf-Device-Compliance)**.
+> If you have questions or need help, contact [Jamf Customer Success](https://jamf.service-now.com/csm). For more information, see [Transitioning Jamf macOS devices from Conditional Access to Device Compliance](https://aka.ms/Intune/Jamf-Device-Compliance).
 
 ## Prerequisites
 
