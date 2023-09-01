@@ -29,7 +29,7 @@ To troubleshoot the boot issues and to complete system repairs, the following re
 
     In this article, data or disks are altered, so having the ability to revert the VM to a previous state is a critical component of safe system administration.
 
-- [Boot diagnostics](/azure/virtual-machines/boot-diagnostics) should be enabled and configured.
+- [Boot diagnostics](/azure/virtual-machines/boot-diagnostics) that are enabled and configured.
 
     Having this configuration in place allows for future reviewing of the storage of the console log, and interaction with the serial console interface of the VM.
 
@@ -70,7 +70,7 @@ Many security hardening practices can lead to difficulties in maintaining system
 
 If the auditd configuration causes the system shutdown on audit log failures, temporarily disabling the `HALT` configuration allows the VM to boot to the full OS for remediation.
 
-To fix this common auditd issue and several other common problems, run the `az vm repair` extension automatically in the Azure CLI by using the [Azure Linux Automatic Repair (ALAR)](repair-linux-vm-using-alar.md#auditd) tool and the auditd action. To do the same procedure manually, follow these steps:
+To fix this common auditd issue and several other common problems, run the `az vm repair` extension automatically in the Azure CLI by using the [auditd action in the Azure Linux Automatic Repair (ALAR) tool](repair-linux-vm-using-alar.md#auditd). To do the same procedure manually, follow these steps:
 
 1. Take a snapshot of the OS disk to provide a recovery state.
 
@@ -89,15 +89,15 @@ To fix this common auditd issue and several other common problems, run the `az v
 
 - If you're using a recovery VM, follow the instructions in [Unmount and detach original virtual hard disk](troubleshoot-recovery-disks-portal-linux.md#unmount-and-detach-original-virtual-hard-disk) to swap the OS disk back to the problematic VM, and try to boot the VM normally. If you're using single user mode, exit, and then the VM reboots.
 
-- Once the VM is fully booted, browse the filesystem and free some spaces by using command-line tools such as `df` and `du`. About 10% of the filesystem containing the */var/log/audit* directory should be a good initial target.
+- Once the VM is fully booted, browse the filesystem and free some space by using command-line tools such as `df` and `du`. About 10% of the filesystem containing the */var/log/audit* directory should be a good initial target.
 
-Once the issue is resolved, revert the contents in the */etc/audit/auditd.conf* file to the original values and reboot the VM.
+Once the issue is resolved, revert the contents in the */etc/audit/auditd.conf* file to their original values and reboot the VM.
 
 ## Scenario 2: VM disk is resized in Azure, but OS can't be resized, and VM doesn't fully boot
 
-After a full disk is identified and the VM has been shut down to resize the OS disk, the VM might not boot successfully. This scenario might be confusing on some distributions where the OS tries to automatically resize the root (`/`) filesystem on reboot. If the disk is full, the resize operation might fail because the process requires a few free spaces to expand the filesystem. Having no free space can cause cloud-init to fail, and then the VM doesn't finish booting.
+After a full disk is identified and the VM has been shut down to resize the OS disk, the VM might not boot successfully. This scenario might be confusing on some distributions where the OS tries to automatically resize the root (`/`) filesystem on reboot. If the disk is full, the resize operation might fail because the process requires some free space to expand the filesystem. Having no free space can cause cloud-init to fail, and then the VM doesn't finish booting.
 
-To identify this issue, review the boot logs in the serial console and check if lines like the following are present:
+To identify this issue, review the boot logs in the serial console and check whether lines that resemble the following text are present:
 
 ```output
 [   15.384699] cloud-init[1142]: OSError: [Errno 28] No space left on device
@@ -120,7 +120,7 @@ A VM that seems to boot completely might have the following issues:
 
 During the boot, multiple messages such as "[Errno 28] No space left on device" or other types of messages indicate that the root filesystem is full.
 
-If a VM boots but appears unavailable, check the serial log within the boot diagnostics to view the boot messages, or use the [serial console](/azure/virtual-machines/boot-diagnostics) to interact with the VM. If the space is insufficient, [clear unneeded data](#resolution1) to free spaces or [expand the disks](#resolution2).
+If a VM boots but appears unavailable, check the serial log within the boot diagnostics to view the boot messages, or use the [serial console](/azure/virtual-machines/boot-diagnostics) to interact with the VM. If the space is insufficient, [clear unneeded data](#resolution1) to free space or [expand the disks](#resolution2).
 
 If the console log contains many messages stating "ERROR ExtHandler /proc/net/route contains no routes," a full OS disk might also be the cause, because the networking services are unable to start completely.
 
@@ -150,6 +150,6 @@ If no data can be cleared from the OS filesystem, we recommend expanding the dis
 
 ## Next steps
 
-In case the specific boot error isn't a Linux boot issue due to a full OS disk, refer to the [Troubleshoot Azure Linux Virtual Machines boot errors](boot-error-troubleshoot-linux.md) for further troubleshooting.
+In case the specific boot error isn't a Linux boot issue due to a full OS disk, see [Troubleshoot Azure Linux virtual machine boot errors](boot-error-troubleshoot-linux.md) for further troubleshooting.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
