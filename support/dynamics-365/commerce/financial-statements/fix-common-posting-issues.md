@@ -1,9 +1,10 @@
 ---
 title: Fix common statement posting issues by editing transactions in Dynamics 365 Commerce
 description: Provides resolutions to help you fix common statement posting issues that require edits to transactions in Microsoft Dynamics 365 Commerce.
-author: shajain
+author: josaw1 
 ms.author: josaw
-ms.date: 08/30/2023
+ms.reviewer: shajain, brstor
+ms.date: 09/01/2023
 ms.search.form: RetailStatementTable_SOCreateFailed, RetailStatementTable_InvoiceFailed, RetailStatementTable_PaymentPosted, RetailStatementTable_Aggregated, RetailStatementTable_CustomerOrderCreated, RetailStatementTable_Invoiced
 ---
 # Fix common statement posting issues by editing transactions

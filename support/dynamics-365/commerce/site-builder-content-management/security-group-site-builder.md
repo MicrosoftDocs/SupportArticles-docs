@@ -1,9 +1,10 @@
 ---
 title: Can't configure a security group for Commerce site builder during initial deployment
 description: Resolves an issue where the Azure AD security group for Commerce site builder doesn't appear as an option when creating e-commerce components in Dynamics LCS during initial deployment of a new e-commerce tenant.
-author: Reza-Assadi
+author: josaw1 
 ms.author: josaw
-ms.date: 08/30/2023
+ms.reviewer: rassadi, brstor
+ms.date: 09/01/2023
 ---
 # Can't configure a security group for Commerce site builder during initial deployment
 

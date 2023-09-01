@@ -1,9 +1,10 @@
 ---
 title: Refund on a return order is declined in Dynamics 365 Commerce
 description: Resolves an issue where a refund on a return order is declined if the credit card differs from that used for the original payment authorization in Microsoft Dynamics 365 Commerce.
-author: Reza-Assadi
+author: josaw1 
 ms.author: josaw
-ms.date: 08/30/2023
+ms.reviewer: rassadi, brstor
+ms.date: 09/01/2023
 ---
 # Refund on a return order is declined
 

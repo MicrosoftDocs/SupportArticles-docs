@@ -1,9 +1,10 @@
 ---
 title: Pick this up option doesn't appear on cart or product details pages in Dynamics 365 Commerce
 description: Provides a resolution for an issue where the option for in-store pickup doesn't appear on the cart page or product details page in Microsoft Dynamics 365 Commerce.
-author: Reza-Assadi
+author: josaw1 
 ms.author: josaw
-ms.date: 08/30/2023
+ms.reviewer: rassadi, brstor
+ms.date: 09/01/2023
 ---
 # The "Pick this up" option doesn't appear on cart or product details pages 
 

@@ -1,9 +1,10 @@
 ---
 title: Ratings refiner appears on search results and category pages unexpectedly
 description: Resolves an issue where the ratings refiner appears on search results and category pages when the Microsoft Dynamics 365 Commerce ratings and reviews solution isn't enabled for an e-commerce site.
-author: gvrmohanreddy
+author: josaw1 
 ms.author: josaw
-ms.date: 08/30/2023
+ms.reviewer: brstor
+ms.date: 09/01/2023
 ---
 # Ratings refiner appears on search results and category pages when the ratings and reviews solution isn't enabled
 

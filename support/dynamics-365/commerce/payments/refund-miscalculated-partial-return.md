@@ -1,9 +1,10 @@
 ---
 title: Refundable charges are miscalculated based on the quantity returned in Dynamics 365 Commerce
 description: Resolves an issue where cashiers see incorrect refundable charges in point of sale (POS) for the quantity of items returned in Microsoft Dynamics 365 Commerce.
-author: gvrmohanreddy
+author: josaw1 
 ms.author: josaw
-ms.date: 08/30/2023
+ms.reviewer: brstor
+ms.date: 09/01/2023
 ---
 # Refundable charges are miscalculated based on the quantity returned
 

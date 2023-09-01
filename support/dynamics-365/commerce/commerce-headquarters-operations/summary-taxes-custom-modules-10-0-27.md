@@ -1,9 +1,10 @@
 ---
 title: Order summary subtotal doesn't include taxes on charges when using customized order summary modules
 description: Resolves an issue where the order summary subtotal doesn't include taxes on charges in the price includes sales tax scenario in Microsoft Dynamics Commerce.
-author: gvrmohanreddy
+author: josaw1
 ms.author: josaw
-ms.date: 08/30/2023
+ms.reviewer: brstor
+ms.date: 09/01/2023
 ---
 # Order summary subtotal doesn't include taxes on charges when using customized order summary modules
 

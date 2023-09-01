@@ -1,9 +1,10 @@
 ---
 title: Credit card entry page shows an error at checkout in Dynamics 365 Commerce
 description: Provides a resolution for an issue where the PAYMENT METHOD section isn't loaded and shows an error message in Microsoft Dynamics 365 Commerce.
-author: Reza-Assadi
+author: josaw1 
 ms.author: josaw
-ms.date: 08/25/2023
+ms.reviewer: rassadi, brstor
+ms.date: 09/01/2023
 ---
 # Credit card entry page shows an error at checkout
 

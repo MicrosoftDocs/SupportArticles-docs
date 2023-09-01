@@ -1,9 +1,10 @@
 ---
 title: Troubleshoot Store Commerce setup and installation issues 
 description: Explains how to solve the setup and installation issues in the Microsoft Dynamics 365 Commerce Store Commerce app.
-author: josaw1
+author: josaw1 
 ms.author: josaw
-ms.date: 08/30/2023
+ms.reviewer: brstor
+ms.date: 09/01/2023
 ---
 # Troubleshoot issues with Store Commerce setup and installation 
 
