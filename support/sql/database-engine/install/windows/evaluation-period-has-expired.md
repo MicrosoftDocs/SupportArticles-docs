@@ -15,9 +15,9 @@ _Original KB number:_ &nbsp; 971268
 
 You may encounter the following error message when using SQL Server tools such as SQL Server Management Studio (SSMS) or SQL Profiler:
 
-Evaluation period has expired. For information on how to upgrade your evaluation software please go to [https://www.microsoft.com/sql/howtobuy](https://www.microsoft.com/sql/howtobuy)
+Evaluation period has expired. For information on how to upgrade your evaluation software please go to [https://www.microsoft.com/sql/howtobuy](https://www.microsoft.com/sql/howtobuy).
 
-Additionally you may see the following error message when you try to connect to an expired installation of SQL Server instance:
+Additionally, you may see the following error message when you try to connect to an expired installation of SQL Server instance:
 
 > A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
 
@@ -40,9 +40,9 @@ The problem usually occurs when you are running an evaluation instance of SQL Se
 
     To upgrade the Evaluation Edition to a retail edition, you can consult the following topics in Books Online:
 
-  - [Upgrade to a Different Edition of SQL Server 2012 (Setup)](/previous-versions/sql/sql-server-2012/cc707783(v=sql.110))
+    - [Upgrade to a Different Edition of SQL Server 2012 (Setup)](/previous-versions/sql/sql-server-2012/cc707783(v=sql.110))
 
-  - [Supported version & edition upgrades (SQL Server 2016)](/sql/database-engine/install-windows/supported-version-and-edition-upgrades)
+    - [Supported version & edition upgrades (SQL Server 2016)](/sql/database-engine/install-windows/supported-version-and-edition-upgrades)
 
     > [!NOTE]
     > In either of these topics, you can select the version picker tool at the top to pick a topic that's relevant to your environment. For SQL Server 2008 you can also refer to the KB article: [Upgrade to a Different Edition of SQL Server (Setup)](/sql/database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup). For SQL Server 2005, check the following KB article [Upgrade to a Different Edition of SQL Server (Setup)](/sql/database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup).

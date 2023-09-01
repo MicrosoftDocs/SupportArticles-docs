@@ -49,15 +49,15 @@ Table 1:
 | SQL version or Edition|. NET Framework version| Included with the product?| Installed as part of setup? |
 |---|---|---|---|
 |SQL Server 2005 (all Editions)|2.0|Yes|No|
-|SQL Server 2008 express (core)|2.0 SP2|No|No|
+|SQL Server 2008 Express (core)|2.0 SP2|No|No|
 |SQL Server 2008 on Windows Server 2003, (64-bit), IA-64|2.0 SP2|Yes|Yes|
 |SQL Server 2008 (all other Editions)|3.5 SP1|Yes|Yes|
   
-For SQL Server 2008 and for SQL Server 2008 R2 Failover Cluster and Express Edition installations, the Setup program doesn't install the .NET Framework 3.5 Service Pack 1 on systems that run Windows Server 2008 R2 Edition. For more information about how to enable the .NET Framework 3.5 SP1 on these systems, see the [How to install or enable .NET Framework 3.5 SP1 on Windows](#how-to-install-or-enable-net-framework-35-sp1-on-windows) section.
+The Setup program doesn't install the.NET Framework 3.5 Service Pack 1 on computers running Windows Server 2008 R2 Edition for SQL Server 2008 and SQL Server 2008 R2 Failover Cluster and Express Edition installations. For more information about how to enable the .NET Framework 3.5 SP1 on these systems, see [How to install or enable .NET Framework 3.5 SP1 on Windows](#how-to-install-or-enable-net-framework-35-sp1-on-windows).
 
 ## .NET Frameworks for SQL Server on Windows Server 2008 R2 and earlier operating systems
 
-The following table indicates whether the .NET Framework that is required for the SQL Edition and version that you're installing is included as part of the target operating system. The table also indicates whether any additional steps are required to install or enable the Framework on the corresponding operating system and the table provides a download link for the corresponding .NET Framework redistributable files.
+The following table indicates whether the .NET Framework that is required for the SQL Edition and version that you're installing is included as part of the target operating system. The table also provides a download link for the associated .NET Framework redistributable files and indicates whether any another steps are required to install or enable the Framework on the associated operating system.
 
 Table 2:
 
@@ -117,5 +117,5 @@ Add-WindowsFeature as-net-framework
 
 ## References  
 
-- [Aaron Stebner's WebLog](/archive/blogs/astebner/)
+- [Aaron Sterner's WebLog](/archive/blogs/astebner/)
 - [.NET Framework Support in Windows Server 2008](/previous-versions/windows/server-2008/cc531167(v=msdn.10))
