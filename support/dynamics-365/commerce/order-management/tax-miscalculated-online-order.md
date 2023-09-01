@@ -15,7 +15,9 @@ When an e-commerce order is placed, the taxes are incorrectly calculated, or the
 
 ## Resolution
 
-#### Configure general sales tax groups in Commerce headquarters
+To solve the issue, follow these steps:
+
+#### Step 1: Configure general sales tax groups in Commerce headquarters
 
 To configure general sales tax groups in Commerce headquarters, follow these steps:
 
@@ -26,7 +28,7 @@ To configure general sales tax groups in Commerce headquarters, follow these ste
 > [!NOTE]
 > For shipping that doesn't include sales tax that is determined by the customer's address, the delivery address of the line and the destination-based taxes that are configured for the tax group determine the tax group. For more information, see [Set up taxes for online stores based on destination](/dynamicsax-2012/appuser-itpro/set-up-taxes-for-online-stores-based-on-destination).
 
-#### Configure the sales tax for a retail store in Commerce headquarters
+#### Step 2: Configure the sales tax for a retail store in Commerce headquarters
 
 To configure the sales tax for a retail store in Commerce headquarters, follow these steps:
 
@@ -37,7 +39,7 @@ To configure the sales tax for a retail store in Commerce headquarters, follow t
 > [!NOTE]
 > For product pickup from a store, the tax group comes from the store that is selected for pickup. For more information, see [Set other tax options for stores](/dynamicsax-2012/appuser-itpro/set-other-tax-options-for-stores).
 
-#### Configure the sales tax for a customer's address in Commerce headquarters
+#### Step 3: Configure the sales tax for a customer's address in Commerce headquarters
 
 To configure the sales tax for a customer's address in Commerce headquarters, follow these steps:
 
