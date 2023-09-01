@@ -42,8 +42,7 @@ To resolve this issue, use one of the following methods:
 - Upgrade your SQL Server or your client providers to a version that supports TLS 1.2. For more information, see [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/topic/kb3135244-tls-1-2-support-for-microsoft-sql-server-e4472ef8-90a9-13c1-e4d8-44aad198cdbe).
 - Ask your system administrators to temporarily enable TLS 1.0 or TLS 1.1 on both the client and the server computers by performing one of the following actions:
   - Use the [IIS Crypto](https://www.nartac.com/Products/IISCrypto/) tool (Ciphers suites section) to validate and make changes to the current TLS settings.
-  - Start Registry Editor, and locate the Schannel-specific registry keys: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL`.  
-      For more information, see [TLS 1.2 Upgrade Workflow](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/0700-TLS-1.2-Upgrade-Workflow) and [SSL Errors after Upgrading to TLS 1.2](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/0710-SSL-Errors-after-Upgrading-to-TLS-1.2).
+  - Start Registry Editor, and locate the Schannel-specific registry keys: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL`. For more information, see [TLS 1.2 Upgrade Workflow](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/0700-TLS-1.2-Upgrade-Workflow) and [SSL Errors after Upgrading to TLS 1.2](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/0710-SSL-Errors-after-Upgrading-to-TLS-1.2).
 
 ## Scenario 2: Matching TLS protocols on the client and the server, but no matching TLS cipher suites
 
@@ -101,7 +100,7 @@ For more information about this scenario, see [Applications experience forcibly 
 
 ## Scenario 5: TCP Three-Way Handshake Timeout (SYN Fail, TCP Rejection) due to shortage of IOCP workers
 
-In systems with high workloads on SQL Server 2017 and earlier, you might observe intermittent 10054 error caused by TCP three-way handshake failures, leading to TCP rejections. The root cause of this issue might be in the delay in processing TCPAcceptEx requests. This delay can be due to a shortage of [IOCP (Input/Output Completion Port) listener](https://techcommunity.microsoft.com/t5/sql-server-support-blog/is-the-iocp-listener-actually-listening/ba-p/333989) workers responsible for managing the acceptance of incoming connections. The insufficient number of IOCP workers and busy servicing other requests, leads to delayed processing of connection requests, ultimately resulting in handshake failures and TCP rejections. You may also observe login timeouts during the start SSL handshake (if any) or the processing of login requests, which involve in authentication checks.
+In systems with high workloads on SQL Server 2017 and earlier, you might observe intermittent 10054 error caused by TCP three-way handshake failures, leading to TCP rejections. The root cause of this issue might be in the delay in processing TCPAcceptEx requests. This delay can be due to a shortage of [IOCP (Input/Output Completion Port) listener](https://techcommunity.microsoft.com/t5/sql-server-support-blog/is-the-iocp-listener-actually-listening/ba-p/333989) workers responsible for managing the acceptance of incoming connections. The insufficient number of IOCP workers and busy servicing other requests leads to delayed processing of connection requests, ultimately resulting in handshake failures and TCP rejections. You may also observe login timeouts during the start SSL handshake (if any) or the processing of login requests, which involve in authentication checks.
 
 ### Resolution
 
