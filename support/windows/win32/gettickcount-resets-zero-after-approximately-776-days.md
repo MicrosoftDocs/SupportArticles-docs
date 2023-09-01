@@ -30,4 +30,4 @@ Use the [GetTickCount64](/windows/win32/api/sysinfoapi/nf-sysinfoapi-gettickcoun
 
 This problem isn't related to the behavior described in the [GetTickCount](/windows/win32/api/sysinfoapi/nf-sysinfoapi-gettickcount) function documentation, where the time wraps around from `0xFFFFFFFF` to `zero` if the system runs continuously for 49.7 days.
 
-Based on the hardware where Windows is installed, and the time between clock interrupts, the problem may also occur with a duration other than 776 days.
+The number of days before this problem occurs may vary depending on the resolution of the system timer. The problem occurs after approximately 776 days on systems whose system timer resolution is 15.6 milliseconds.
