@@ -71,7 +71,7 @@ check with your domain administrator to find out if a Group Policy object associ
 
 To fix this issue, check which user rights are assigned to the SQL Server service account.
 
-1. Start the **Local Security Policy**(Start -> Secpol.msc).
+1. Start the **Local Security Policy** (Start -> Secpol.msc).
 1. Expand **Local Policy** and then select **User Rights Assignment**.
 1. Verify the required user rights are assigned to the service account by following the instructions in [Windows Privileges and Rights](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions#Windows). Manually assign any missing permissions.
 1. Check if the service account was assigned any **Deny**\* permissions. Remove any **Deny**\* permissions from the SQL Service service account and then retest.
@@ -111,7 +111,7 @@ To ensure that the service is configured properly, use the Services snap-in in M
 
 To fix this issue, use one of the following methods based on your scenario:
 
-- If SQL Server Startup account is a Local User Account on the computer, open ***Computer Management** (compmgmt.msc) and verify that the service account is disabled in **Local Users and Groups**. If it's disabled, enable the account, and restart the SQL Server Service.
+- If SQL Server Startup account is a Local User Account on the computer, open ***Computer Management** (compmgmt.msc) and check if the service account is disabled in **Local Users and Groups**. If it's disabled, enable the account, and restart the SQL Server Service.
 
 - If SQL Server Startup account is a Windows Domain Account, check whether the account is disabled in **Active Directory Users and Computers**. If it's disabled, enable the account, and restart the SQL Server Service.
 
@@ -200,7 +200,7 @@ The error message entry indicates that the current login name or password set is
 
 #### Scenario 2: gMSA IsManagedAccount Flag is set improperly
 
-If you're using a group Managed Service Accounts (gMSA) account to run the SQL Server Service and the IsManagedAccount flag for the given service is set to **false**, you may receive a Service Control Manager event ID 7038 as soon as the cached secret is invalid.
+If you're using a group Managed Service Accounts (gMSA) account to run the SQL Server Service and the `IsManagedAccount` flag for the given service is set to **false**, you may receive a Service Control Manager event ID 7038 as soon as the cached secret is invalid.
 
 To identify and resolve the issue, follow these steps:
   
@@ -215,7 +215,7 @@ To identify and resolve the issue, follow these steps:
 
    For more information, see [Check the gMSA account](/virtualization/windowscontainers/manage-containers/gmsa-troubleshooting#check-the-gmsa-account).
 
-1. Run the following command in **Command Prompt** and check the status of IsManagedAccount. The desired outcome is true. If false, proceed further.
+1. Run the following command in **Command Prompt** and check the status of `IsManagedAccount`. The desired outcome is **true**. If it is **false**, proceed further.
 
    ```cmd
    sc qmanagedaccount <YourSQLServiceName>
@@ -227,7 +227,7 @@ To identify and resolve the issue, follow these steps:
    sc qmanagedaccount MSSQL$SQLPROD
    ```
 
-1. Set the flag to true as is desired.
+1. Set the flag to true as desired.
 
    ```cmd
    sc managedaccount <YourSQLServiceName> TRUE
