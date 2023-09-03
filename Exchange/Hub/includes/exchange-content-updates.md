@@ -2,6 +2,14 @@
 
 
 
+## Week of August 28, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 8/30/2023 | [Shared or resource mailbox UPN and SamAccountName contain a GUID](/exchange/troubleshoot/administration/mailbox-upn-samaccountname-contain-guid) | added |
+
+
 ## Week of August 21, 2023
 
 
