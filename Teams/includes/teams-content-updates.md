@@ -2,6 +2,14 @@
 
 
 
+## Week of August 28, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 8/28/2023 | [Known issues in Teams Rooms and devices](/microsoftteams/troubleshoot/teams-rooms-and-devices/rooms-known-issues) | modified |
+
+
 ## Week of August 21, 2023
 
 
@@ -17,11 +25,3 @@
 | Published On |Topic title | Change |
 |------|------------|--------|
 | 8/10/2023 | [Known issues in Teams Rooms and devices](/microsoftteams/troubleshoot/teams-rooms-and-devices/rooms-known-issues) | modified |
-
-
-## Week of July 24, 2023
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 7/26/2023 | [Fix video display lag issue in Teams](/microsoftteams/troubleshoot/meetings/fix-choppy-video) | added |
