@@ -5,6 +5,7 @@ ms.date: 06/22/2020
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: authentication
+ms.custom: has-azure-ad-ps-ref
 ---
 # Error when you try to set up another federated domain in Office 365, Azure, or Intune: Federation service identifier specified in the AD FS 2.0 server is already in use
 

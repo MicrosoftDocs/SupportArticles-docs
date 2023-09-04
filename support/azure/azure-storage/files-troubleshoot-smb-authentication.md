@@ -3,6 +3,7 @@ title: Troubleshoot Azure Files identity-based authentication and authorization 
 description: Troubleshoot problems using identity-based authentication to connect to SMB Azure file shares and see possible resolutions.
 author: khdownie
 ms.service: azure-file-storage
+ms.custom: has-azure-ad-ps-ref
 ms.date: 08/16/2023
 ms.author: kendownie
 ---
