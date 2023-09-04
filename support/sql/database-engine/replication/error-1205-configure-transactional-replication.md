@@ -72,14 +72,14 @@ When the issue that's mentioned in the [Symptoms](#symptoms) section occurs, the
     To use SQL Server Management Studio to check the rowcount value for the `MSreplication_subscriptions` system table, follow these steps:
 
     1. Start SQL Server Management Studio, and then connect to the subscriber server instance.
-    2. Expand **Databases**, and then expand the subscriber database.
-    3. Expand **Tables**, and then expand **System Tables**.
-    4. Right-click **dbo.MSreplication_subscriptions**, and then select **Properties**.
-    5. Select **Storage**, and then verify the rowcount value in the **Row count** field.
+    1. Expand **Databases**, and then expand the subscriber database.
+    1. Expand **Tables**, and then expand **System Tables**.
+    1. Right-click **dbo.MSreplication_subscriptions**, and then select **Properties**.
+    1. Select **Storage**, and then verify the rowcount value in the **Row count** field.
 
 - Method 2: Use a query statement.
 
-    To check the rowcount value for the MSreplication_subscriptions system table, run the following query:
+    To check the rowcount value for the `MSreplication_subscriptions` system table, run the following query:
 
     ```sql
     SELECT rows, * FROM sys.partitions WHERE object_id = object_id('MSreplication_subscriptions')

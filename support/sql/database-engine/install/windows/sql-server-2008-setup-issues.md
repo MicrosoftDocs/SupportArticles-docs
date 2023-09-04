@@ -12,7 +12,7 @@ This article discusses setup and migration issues that are specific to SQL Serve
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 2681562
 
-## Issue 1: You cannot uninstall SQL Server 2008 Express Edition or SQL Server 2008 R2 Express Edition
+## Issue 1: You can't uninstall SQL Server 2008 Express Edition or SQL Server 2008 R2 Express Edition
 
 ### Symptoms
 

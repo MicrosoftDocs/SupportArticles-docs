@@ -18,7 +18,7 @@ _Original KB number:_ &nbsp; 2750005
 Merge replication doesn't support centralized subscriber topologies. A single merge subscriber database can subscribe to only a single merge publication. Therefore, any kind of centralized subscriber topology isn't supported in merge replication.
 
 > [!NOTE]
-> This limitation applies to all the currently supported versions of SQL server but does not apply to Microsoft SQL Server Compact subscribers.
+> This limitation applies to all the currently supported versions of SQL server but doesn't apply to Microsoft SQL Server Compact subscribers.
 
 ## Workaround
 
@@ -38,7 +38,7 @@ In a central subscriber model, the subscriber database synchronizes with two or 
 - Two or more publications in two or more publisher databases at the same publishing server instance.
 - Two or more publications in two or more publisher databases at different publishing server instances.
 
-Merge replication does not support the central subscriber model. The merge agents were not designed or tested to work in this scenario. The only supported topology is the topology in which each subscriber database synchronizes with a single merge publication. Consider the following:
+Merge replication doesn't support the central subscriber model. The merge agents were not designed or tested to work in this scenario. The only supported topology is the topology in which each subscriber database synchronizes with a single merge publication. Consider the following:
 
 > [!NOTE]
 > This applies to all versions of Microsoft SQL Server.

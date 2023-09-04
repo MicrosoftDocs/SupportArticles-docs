@@ -43,7 +43,7 @@ This article describes the known issues when you install Microsoft SQL Server on
 
 - SQL Server 2008 installation may fail on Windows Server 2008 R2
 
-  The SQL Server 2008 installation may fail on Windows Server 2008 R2 if the .NET Framework is not enabled. This problem occurs because installation of the .NET Framework 3.5 is a prerequisite to this installation.
+  The SQL Server 2008 installation may fail on Windows Server 2008 R2 if the .NET Framework isn't enabled. This problem occurs because installation of the .NET Framework 3.5 is a prerequisite to this installation.
 
   On Windows Server 2008 R2, the .NET Framework 3.5 is included as a Windows component. By default, the .NET Framework 3.5 isn't enabled. To avoid this installation failure, you must enable the .NET Framework 3.5 from the Windows Features component before you run the SQL Server 2008 installation.
 

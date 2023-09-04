@@ -51,7 +51,7 @@ Before you begin this process, be aware of the following:
 
 - You can't uninstall the SQL Server failover cluster instance by using **Uninstall a program**. This operation doesn't work.
 
-- You cannot use an incorrect edition of the Setup media (for example, SQL Server 2008 or SQL Server 2008 R2) to run the **Remove Node** operation. This operation will corrupt the state of the computer.
+- You can't use an incorrect edition of the Setup media (for example, SQL Server 2008 or SQL Server 2008 R2) to run the **Remove Node** operation. This operation will corrupt the state of the computer.
 
 To complete the upgrade for node A, there are two phases:
 
@@ -59,7 +59,7 @@ To complete the upgrade for node A, there are two phases:
 
   1. Close the Setup program and the error dialog if they aren't already closed, and let the upgrade program finish and report that the upgrade operation failed.
 
-  2. Remove node A from the possible owners list in order to prevent accidentally failing over back to it. To change the possible owners list, do the following:
+  1. Remove node A from the possible owners list in order to prevent accidentally failing over back to it. To change the possible owners list, do the following:
 
     a. Start the Failover Cluster Manager snap-in on any failover node.
     b. Under **Roles**, select the SQL Server failover cluster instance in the top pane.
@@ -67,11 +67,11 @@ To complete the upgrade for node A, there are two phases:
     d. Click **Advanced Policies** in the **Properties** dialog box.
     e. Select or clear the necessary check boxes for each node to add or remove the nodes.
 
-  3. Open the *summary.txt* file in the following location *%Program Files%\Microsoft SQL Server\110\Setup Bootstrap\Log*.
+  1. Open the *summary.txt* file in the following location *%Program Files%\Microsoft SQL Server\110\Setup Bootstrap\Log*.
 
      Find the following troubleshooting command in the *summary.txt* file: `setup /q /action=uninstall /instanceid=FOOINST /features=AS`
 
-  4. Open a command prompt as an administrator and use the troubleshooting command together with the path of the SQL Server 2012 Setup file (*setup.exe*). For example, you use a command that resembles the following:
+  1. Open a command prompt as an administrator and use the troubleshooting command together with the path of the SQL Server 2012 Setup file (*setup.exe*). For example, you use a command that resembles the following:
 
      `*SQL Server 2012 media path* \setup.exe /q /action=uninstall /instanceid=FOOINST /features=AS`
 
@@ -85,35 +85,36 @@ To complete the upgrade for node A, there are two phases:
 - Phase 2: Upgrade node A to SQL Server 2012
 
   1. Start the SQL Server 2012 Setup media in UI mode.
-  2. Select the **Upgrade** option under the **Installation** menu from the landing page, and then go to the **Instance Configuration** dialog box.
-  3. Select the correct instance name, and then input the correct value in the **Instance ID** field.
+  1. Select the **Upgrade** option under the **Installation** menu from the landing page, and then go to the **Instance Configuration** dialog box.
+  1. Select the correct instance name, and then input the correct value in the **Instance ID** field.
 
      > [!NOTE]
      >
      > - Continuing the example in phase 1, the instance ID value is **FOOINST** .
-     > - The Setup program does not automatically determine the instance ID. Therefore, you cannot use the default prepopulated instance ID in the **Instance ID** field.
+     > - The Setup program doesn't automatically determine the instance ID. Therefore, you can't use the default prepopulated instance ID in the **Instance ID** field.
      > - You can review the *summary.txt* file to find the correct instance ID.
 
-  4. Complete the upgrade process.
-  5. After node A is successfully upgraded, add it back to the possible owners list on the **Server Name** resource of the SQL Server failover cluster instance.
+  1. Complete the upgrade process.
+  1. After node A is successfully upgraded, add it back to the possible owners list on the **Server Name** resource of the SQL Server failover cluster instance.
 
 ## Prevent the issue from affecting new upgrades
 
 To prevent this issue, use one of the following options:
 
 - Option 1
-  1. Upgrade no more than half of the passive nodes first, to avoid crossing the majority threshold.
+
+   1. Upgrade no more than half of the passive nodes first, to avoid crossing the majority threshold.
 
      > [!NOTE]
      >
      > - If you have an even number of cluster nodes, upgrade no more than half of the passive nodes.
      > - If you have an odd number of cluster nodes, make sure that you upgrade less than half of the nodes in the cluster. If the majority of nodes in the cluster are upgraded, this issue will occur when the cluster resource group fails over.
 
-  2. Manually add the upgraded passive nodes back to the possible owners list for the Server Name resource.
-  3. Remove the non-upgraded nodes from the possible owners list.
-  4. Manually fail over the SQL Server cluster group to one of the upgraded nodes.
-  5. Upgrade the remaining non-upgraded nodes.
-  6. When all the non-upgraded nodes are upgraded, manually add them back to the possible owners list on the Server Name resource.
+   1. Manually add the upgraded passive nodes back to the possible owners list for the Server Name resource.
+   1. Remove the non-upgraded nodes from the possible owners list.
+   1. Manually fail over the SQL Server cluster group to one of the upgraded nodes.
+   1. Upgrade the remaining non-upgraded nodes.
+   1. When all the non-upgraded nodes are upgraded, manually add them back to the possible owners list on the Server Name resource.
 
 - Option 2
 
@@ -122,15 +123,15 @@ To prevent this issue, use one of the following options:
   - Method A
 
     1. Download SQL Server 2012 SP1 to a local hard disk (for example to `c:\sp1`) or to a network share (for example, `\\share name\sp1`) that can be accessed by all the nodes.
-    2. Start a command prompt as an administrator and run one of the following commands:
+    1. Start a command prompt as an administrator and run one of the following commands:
 
        - `<Download path>\setup.exe/action=upgrade/updatesource=c:\sp1`
        - `<Download path>\setup.exe/action=upgrade/updatesource=\\share name\sp1`
 
-    3. Complete all the steps in the Setup program.
+    1. Complete all the steps in the Setup program.
 
        > [!NOTE]
-       > You can confirm whether the upgrade is using SQL Server 2012 SP1 Setup binaries by checking the detail.log file in the following location: `%Program Files%\Microsoft SQL Server\110\Setup Bootstrap\Log\<Time stamped folder>`
+       > You can confirm whether the upgrade is using SQL Server 2012 SP1 Setup binaries by checking the *detail.log* file in the following location: `%Program Files%\Microsoft SQL Server\110\Setup Bootstrap\Log\<Time stamped folder>`
 
        Confirm that the version information that is located near the beginning of the log file shows that the SQL Server 2012 version is later than 11.0.2100.60. For example, the log file may contain the following:
 
@@ -138,7 +139,7 @@ To prevent this issue, use one of the following options:
 
     1. Download SQL Server 2012 SP1 to a local hard disk (for example to `c:\sp1`) or to a network share (for example, `\\share name\sp1`) that can be accessed by all the nodes.
 
-    2. Start a command prompt as an administrator and run the following command:
+    1. Start a command prompt as an administrator and run the following command:
 
        ```console
        Download path\SQL Server 2012 Service Pack 1 Package Name.exe/Q
@@ -147,9 +148,9 @@ To prevent this issue, use one of the following options:
        This command will pre-patch the node with SQL Server 2012 SP1 setup binaries.
 
         > [!NOTE]
-        > You cannot install the *SqlSupport.msi* file by itself, because it will cause the SQL Server 2012 Setup operation to fail, and an error about not having the MSVCR100.dll will be displayed. Use the`/Q` parameter to avoid this error. This parameter installs both the *Sqlsupport.msi* file and the Visual C++ runtime components.
+        > You can't install the *SqlSupport.msi* file by itself, because it will cause the SQL Server 2012 Setup operation to fail, and an error about not having the *MSVCR100.dll* will be displayed. Use the`/Q` parameter to avoid this error. This parameter installs both the *Sqlsupport.msi* file and the Visual C++ runtime components.
 
-    3. Complete all the steps in the Setup program.
+    1. Complete all the steps in the Setup program.
 
 ## More information
 
