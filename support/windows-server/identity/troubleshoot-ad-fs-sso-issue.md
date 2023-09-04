@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: 'sap:active-directory-federation-services-ad-fs', csstroubleshoot, has-azure-ad-ps-ref
+ms.custom: sap:active-directory-federation-services-ad-fs, csstroubleshoot, has-azure-ad-ps-ref
 ms.technology: windows-server-active-directory
 ---
 # Troubleshoot SSO issues with Active Directory Federation Services (AD FS)
@@ -53,7 +53,7 @@ If you use Firefox, Chrome or Safari, make sure the equivalent settings in these
 
 3. Examine the value of the **WindowsIntegratedFallbackEnabled** attribute.
 
-If the value is **True**, forms-based authentication is expected. This means that the authentication request comes from a browser that doesn’t support Windows Integrated Authentication. See the next section about how to get your browser supported.
+If the value is **True**, forms-based authentication is expected. This means that the authentication request comes from a browser that doesn't support Windows Integrated Authentication. See the next section about how to get your browser supported.
 
 If the value is **False**, Windows Integrated Authentication should be expected.
 
@@ -138,7 +138,7 @@ If the authentication request sent to Azure AD include [the prompt=login paramet
 Set-MsolDomainFederationSettings –DomainName DomainName -PromptLoginBehavior Disabled
 ```
 
-After you run this command, Office 365 applications won’t include the prompt=login parameter in each authentication request.
+After you run this command, Office 365 applications won't include the prompt=login parameter in each authentication request.
 
 ### Non Azure AD scenario
 
@@ -152,7 +152,7 @@ If SSO is disabled, enable it and test if the issue is resolved.
 
 To troubleshoot this issue, check if the claim rules in the relying party are correctly set for multi-factor authentication.
 
-Multi-factor authentication can be enabled at an AD FS server, at a relying party, or specified in an authentication request parameter. Check the configurations to see if they are correctly set. If multi-factor authentication is expected but you’re repeatedly prompted for it, check the relying party issuance rules to see if multi-factor authentication claims are passed through to the application.
+Multi-factor authentication can be enabled at an AD FS server, at a relying party, or specified in an authentication request parameter. Check the configurations to see if they are correctly set. If multi-factor authentication is expected but you're repeatedly prompted for it, check the relying party issuance rules to see if multi-factor authentication claims are passed through to the application.
 
 For more information about multi-factor authentication in AD FS, see the following articles:
 
@@ -208,7 +208,7 @@ If the user repeatedly receives multi-factor authentication prompts after they p
 2. Observe the rule set defined in the IssuanceAuthorizationRules or IssuanceAuthorizationRulesFile attributes.
 
 The rule set should include the following issuance rule to pass through the multi-factor authentication claims:  
-`C:[Type==http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod, Value==” http://schemas.microsoft.com/claims/multipleauthn”]=>issue(claim = c)`
+`C:[Type==http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod, Value==" http://schemas.microsoft.com/claims/multipleauthn"]=>issue(claim = c)`
 
 ### Check the authentication request parameter
 
@@ -326,7 +326,7 @@ If Azure AD Connect is not installed, check if the SSL certificate meets the fol
   `Get-AdfsProperties | select hostname`
 - The certificate is not revoked.
 
-  Check for certificate revocation. If the certificate is revoked, SSL connection can’t be trusted and will be blocked by clients.
+  Check for certificate revocation. If the certificate is revoked, SSL connection can't be trusted and will be blocked by clients.
 
 If the SSL certificate does not meet these requirements, try to get a qualified certificate for SSL communication. We recommend that you use Azure AD Connect which makes SSL certificate management easier. See [Update the TLS/SSL certificate for an Active Directory Federation Services (AD FS) farm](/azure/active-directory/connect/active-directory-aadconnectfed-ssl-update).
 
@@ -385,7 +385,7 @@ If the wrong certificate is listed, set the correct certificate, and then grant 
 
 ###### Check if Device Registration Service (DRS) is configured in AD FS
 
-If you’ve configured AD FS with DRS, make sure that the SSL certificate is also properly configured for RDS. For example, if there are two UPN suffixes `contoso.com` and `fabrikam.com`, the certificate must have `enterpriseregistration.contoso.com` and `enterpriseregistration.fabrikma.com` as the Subject Alternative Names (SANs).
+If you've configured AD FS with DRS, make sure that the SSL certificate is also properly configured for RDS. For example, if there are two UPN suffixes `contoso.com` and `fabrikam.com`, the certificate must have `enterpriseregistration.contoso.com` and `enterpriseregistration.fabrikma.com` as the Subject Alternative Names (SANs).
 
 To check if the SSL certificate has the correct SANs, follow these steps:
 
@@ -632,7 +632,7 @@ If the user is not in the list, sync the user to Azure AD.
 
 ##### Check immutableID and UPN in issuance claim rule
 
-Azure AD requires immutableID and the user’s UPN to authenticate the user.
+Azure AD requires immutableID and the user's UPN to authenticate the user.
 
 > [!NOTE]
 > immutableID is also called sourceAnchor in the following tools:
@@ -705,7 +705,7 @@ If there are certificate mismatches, ensure that the partners are using the new 
 
   If the partners can access the federation metadata, ask the partners to use the new certificates.
 
-- The partners can’t access the federation metadata
+- The partners can't access the federation metadata
 
   In this case, you must manually send the partners the public keys of the new certificates. To do this, follow these steps:
   1. Export the public keys as .cert files, or as .p7b files to include the entire certificate chains.
@@ -735,7 +735,7 @@ If the two algorithms match, check if the Name ID format matches what the applic
    (Get-AdfsRelyingPartyTrust -Name RPName).IssuanceTransformRules
    ```
 
-2. Locate the rule that issues the NameIdentifier claim. If such a rule doesn’t exist, skip this step.  
+2. Locate the rule that issues the NameIdentifier claim. If such a rule doesn't exist, skip this step.  
 
    Here is an example of the rule:
 
@@ -754,7 +754,7 @@ If the two algorithms match, check if the Name ID format matches what the applic
 
 3. Ask the application owner for the NameIdentifier format required by the application.
 4. Verify if the two NameIdentifier formats match.
-5. If the formats don’t match, configure the NameIdentifier claim to use the format that the application requires. To do this, follow these steps:
+5. If the formats don't match, configure the NameIdentifier claim to use the format that the application requires. To do this, follow these steps:
 
    1. Open the AD FS management console.
    2. Click **Relying Party Trusts**, select the appropriate federation partner, and then click **Edit Claims Issuance Policy** in the **Actions** pane.
@@ -774,7 +774,7 @@ If the two algorithms mismatch, update the signing algorithm used by the relying
 
 If the token signing certificate or token decrypting certificate are self-signed, AutoCertificateRollover is enabled by default on these certificates and AD FS manages the auto renewal of the certificates when they are close to expiration.
 
-To determine if you’re using self-signed certificates, follow these steps:
+To determine if you're using self-signed certificates, follow these steps:
 
 1. Run the following command:
 
@@ -1045,12 +1045,12 @@ The IP:port binding takes the highest precedence. If an IP:port binding is in th
 
 3. Set AdfsTrustedDevices as the CTL Store for the IP:port binding
 
-   This is the last resort if you can’t use the methods above. But it is better to understand the following conditions before you change the default CTL store to AdfsTrustedDevices:
+   This is the last resort if you can't use the methods above. But it is better to understand the following conditions before you change the default CTL store to AdfsTrustedDevices:
 
    - Why the IP:port binding is there.
    - If the binding relies on the default CTL store for client certificate authentication.
 
-### Problem 2: The AD FS certificate binding doesn’t have CTL Store Name set to AdfsTrustedDevices
+### Problem 2: The AD FS certificate binding doesn't have CTL Store Name set to AdfsTrustedDevices
 
 If Azure AD Connect is installed, use AAD Connect to set CTL Store Name to AdfsTrustedDevices for the SSL certificate bindings on all AD FS servers. If Azure AD Connect is not installed, regenerate the AD FS certificate bindings by running the following command on all AD FS servers.
 
@@ -1071,7 +1071,7 @@ Therefore, delete any CA issued certificate from the AdfsTrustedDevices certific
 
 ### Problem 4: Install KB2964735 or re-run the script with -syncproxytrustcerts
 
-When a proxy trust relationship is established with an AD FS server, the client certificate is written to the AD FS configuration database and added to the AdfsTrustedDevices certificate store on the AD FS server. For an AD FS farm deployment, the client certificate is expected to be synced to the other AD FS servers. If the sync doesn’t happen for some reason, a proxy trust relationship will only work against the AD FS server the trust was established with, but not against the other AD FS servers.
+When a proxy trust relationship is established with an AD FS server, the client certificate is written to the AD FS configuration database and added to the AdfsTrustedDevices certificate store on the AD FS server. For an AD FS farm deployment, the client certificate is expected to be synced to the other AD FS servers. If the sync doesn't happen for some reason, a proxy trust relationship will only work against the AD FS server the trust was established with, but not against the other AD FS servers.
 
 To solve this problem, use one of the following methods.
 
@@ -1088,7 +1088,7 @@ Run the script with the – syncproxytrustcerts switch to manually sync the clie
 
 ### Problem 5: All checks are passed. But the problem persists
 
-Check if there is a time or time zone mismatch. If time matches but the time zone doesn’t, proxy trust relationship will also fail to be established.
+Check if there is a time or time zone mismatch. If time matches but the time zone doesn't, proxy trust relationship will also fail to be established.
 
 Check if there is SSL termination between the AD FS server and the WAP server
 
@@ -1177,7 +1177,7 @@ $rp.IssuanceAuthorizationRules shows the authorization rules of the relying part
 
 In Windows Server 2016 and later versions, you can use $rp. AccessControlPolicyName to configure authentication and authorization policy. If $rp. AccessControlPolicyName has value, an access control policy is in place which governs the authorization policy. In that case, $rp.IssuanceAuthorizationRules is empty. Use $rp.ResultantPolicy to find out details about the access control policy.
 
-If $rp.ResultantPolicy doesn’t have the details about the policy, look into the actual claim rules. To get the claim rules, follow these steps:
+If $rp.ResultantPolicy doesn't have the details about the policy, look into the actual claim rules. To get the claim rules, follow these steps:
 
 1. Set the access control policy to $null by running the following command:  
    `Set-AdfsRelyingPartyTrust -TargetRelyingParty $rp -AccessControlPolicyName $null`
