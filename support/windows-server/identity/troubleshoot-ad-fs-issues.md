@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, abizerh, fszita, meerak
-ms.custom: sap:active-directory-federation-services-ad-fs, csstroubleshoot
+ms.custom: sap:active-directory-federation-services-ad-fs, csstroubleshoot, has-azure-ad-ps-ref
 ms.technology: windows-server-active-directory
 ---
 # Troubleshoot AD FS issues in Azure Active Directory and Office 365

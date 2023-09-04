@@ -5,6 +5,7 @@ ms.date: 06/05/2023
 ms.reviewer: dahans, abizerh, v-leedennis
 ms.service: active-directory
 ms.subservice: authentication
+ms.custom: has-azure-ad-ps-ref
 ---
 # Enable support for TLS 1.2 in your environment for Azure AD TLS 1.1 and 1.0 deprecation
 
