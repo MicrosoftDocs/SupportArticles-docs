@@ -5,6 +5,7 @@ ms.date: 07/06/2020
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: domain-services
+ms.custom: has-azure-ad-ps-ref
 ---
 # Error when you try to run Azure Active Directory for Windows PowerShell cmdlets: The term \<cmdlet name> is not recognized
 
