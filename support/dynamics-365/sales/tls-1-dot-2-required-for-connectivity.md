@@ -91,7 +91,7 @@ If you want to continue to use older versions of Unified Service desk, you will 
 
 Dynamics 365 (online) Government version 8.2
 
-- Download and install from [Dynamics 365 Update 2.2 for TLS 1.2 supported clients](https://go.microsoft.com/fwlink/?linkid=874756).
+- Download and install from [Dynamics 365 Update 2.2 for TLS 1.2 supported clients](https://www.microsoft.com/download/details.aspx?id=57079).
 
 Dynamics 365 (online) version 9.x
 
@@ -101,7 +101,7 @@ Dynamics 365 (online) version 9.x
 
 Dynamics 365 (online) Government version 8.2
 
-- Download and install from [Dynamics 365 Update 2.2 for TLS 1.2 supported clients](https://go.microsoft.com/fwlink/?linkid=874756).
+- Download and install from [Dynamics 365 Update 2.2 for TLS 1.2 supported clients](https://www.microsoft.com/download/details.aspx?id=57079).
 
 Dynamics 365 (online) version 9.x
 
