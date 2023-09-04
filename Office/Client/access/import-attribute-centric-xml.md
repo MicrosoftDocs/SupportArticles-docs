@@ -18,7 +18,7 @@ appliesto:
   - Access 2007
   - Access 2003
   - Access 2002
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # You cannot import attribute-centric XML in Access

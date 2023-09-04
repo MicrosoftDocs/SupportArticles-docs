@@ -4,7 +4,7 @@ description: Outlines best practices for Quality of Service configurations in Sk
 ms.author: v-six
 author: simonxjx
 manager: dcscontentpm
-ms.date: 8/27/2019
+ms.date: 08/27/2019
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal

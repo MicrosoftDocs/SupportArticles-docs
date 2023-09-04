@@ -14,7 +14,7 @@ ms.custom:
 appliesto: 
   - SharePoint Server 2013 Service Pack 1
   - SharePoint Server 2013
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # "Something went wrong" when you access a site  

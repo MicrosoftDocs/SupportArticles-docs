@@ -15,7 +15,7 @@ appliesto:
   - Exchange Server 2013 Standard Edition
   - Exchange Server 2013 Enterprise
 search.appverid: MET150
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 # Error in Outlook Web App after an upgrade to Exchange Server 2013 CU 11 or later: Your request cannot be completed right now
 
@@ -31,7 +31,7 @@ In a Microsoft Exchange Server 2013 environment that has been upgraded to Cumula
 Additionally, the following event is logged repeatedly in the Windows Application log:
 
 ```console
-Time:     7/5/2016 2:20:24 PM
+Time:     7/05/2016 2:20:24 PM
 ID:       4999
 Level:    Error
 Source: MSExchange Common

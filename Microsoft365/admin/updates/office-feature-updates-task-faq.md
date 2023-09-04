@@ -12,7 +12,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft 365 Apps for enterprise
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Description of the Office Feature Updates task

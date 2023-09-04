@@ -18,7 +18,7 @@ appliesto:
   - Microsoft Office Access 2007
   - Microsoft Office Access 2003
 search.appverid: MET150
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 # "Error in loading DLL" error when you run a Microsoft Access wizard
 

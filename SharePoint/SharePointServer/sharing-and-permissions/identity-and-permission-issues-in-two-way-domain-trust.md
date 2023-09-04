@@ -12,7 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Microsoft SharePoint
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # SharePoint identity and permission issues in two-way domain trust

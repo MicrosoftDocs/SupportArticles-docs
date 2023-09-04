@@ -12,7 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - Office for Mac
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Cannot pass the Welcome Screen in Office for Mac

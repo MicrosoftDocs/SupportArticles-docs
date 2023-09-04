@@ -14,7 +14,7 @@ ms.reviewer: borget, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 # Custom messages in NDRs are replaced by default system messages in Microsoft 365
 

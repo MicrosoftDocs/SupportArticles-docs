@@ -14,7 +14,7 @@ ms.reviewer: wduff, mhaque, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 # Exchange ActiveSync doesn't download attachments to Calendar items on mobile devices
 

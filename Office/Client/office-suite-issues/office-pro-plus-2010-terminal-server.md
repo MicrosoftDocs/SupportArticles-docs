@@ -12,7 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - Office Professional Plus 2010
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # How to enable Office Professional Plus 2010 to run on a terminal server

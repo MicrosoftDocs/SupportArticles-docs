@@ -16,7 +16,7 @@ appliesto:
   - Exchange Server 2016
   - Exchange Server 2019
 search.appverid: MET150
-ms.date: 6/23/2022
+ms.date: 06/23/2022
 ---
 # RopFastTransferSourceCopyTo operation fails on messages
 

@@ -16,7 +16,7 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Exchange Server 2016 Enterprise Edition
 search.appverid: MET150
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 # Avoid unsupported integration methods for Exchange
 

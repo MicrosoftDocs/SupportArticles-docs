@@ -16,7 +16,7 @@ appliesto:
   - Outlook for Microsoft 365
 search.appverid: 
   - MET150
-ms.date: 6/9/2022
+ms.date: 06/09/2022
 ---
 
 # Microsoft 365 groups don't synchronize in Outlook

@@ -15,7 +15,7 @@ ms.collection: SPO_Content
 ms.author: luche
 appliesto: 
   - SharePoint Online
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Unexpected error in SharePoint admin center Content type gallery

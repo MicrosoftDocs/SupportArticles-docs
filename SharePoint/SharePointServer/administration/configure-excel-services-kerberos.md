@@ -12,7 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Excel Services in SharePoint Server 2010
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # How to configure Excel Services in SharePoint Server 2010 for Kerberos authentication

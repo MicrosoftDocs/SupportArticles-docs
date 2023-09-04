@@ -2,7 +2,7 @@
 title: The Teams for Surface Hub won't start from the Microsoft Store
 ms.author: luche
 author: helenclu
-ms.date: 4/9/2020
+ms.date: 04/09/2020
 audience: ITPro
 ms.topic: troubleshooting
 manager: dcscontentpm

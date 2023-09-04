@@ -12,7 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - Microsoft Excel
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Using a worksheet function in a Visual Basic macro in Excel

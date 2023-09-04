@@ -18,7 +18,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft 365
-ms.date: 4/27/2023
+ms.date: 04/27/2023
 ---
 
 # Microsoft 365 apps activation error "Another account from your organization is already signed in on this computer"

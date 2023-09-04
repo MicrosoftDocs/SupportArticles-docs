@@ -14,7 +14,7 @@ ms.reviewer: arungedela; meerak
 appliesto: 
   - Microsoft Purview
 search.appverid: MET150
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Can't retain cloud attachments

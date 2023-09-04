@@ -3,7 +3,7 @@ title: Can't create alerts for views in SharePoint
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 6/4/2020
+ms.date: 06/04/2020
 audience: Admin
 ms.topic: troubleshooting
 localization_priority: Normal

@@ -20,7 +20,7 @@ appliesto:
   - Microsoft Office Outlook 2003
   - Outlook for Microsoft 365
 search.appverid: MET150
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 # How to use the Internet Free/Busy feature in Outlook
 

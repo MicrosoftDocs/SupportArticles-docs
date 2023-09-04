@@ -16,7 +16,7 @@ appliesto:
   - Exchange Online
   - Microsoft Lync 2013
   - Skype for Business Online
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Info about AllowAdalForNonLyncIndependentOfLync setting in Skype for Business, Lync 2013, and Exchange Online

@@ -12,7 +12,7 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business Server 2015
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # You cannot move users from a different AD domain in hybrid Skype for Business Server to Skype for Business Online from Control Panel

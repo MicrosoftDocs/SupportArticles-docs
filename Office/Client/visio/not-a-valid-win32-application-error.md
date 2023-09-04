@@ -14,7 +14,7 @@ appliesto:
   - Microsoft 365 Apps for enterprise
   - Visio Pro for Microsoft 365
   - Project for Microsoft 365
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # "This is not a valid win32 application" when you install Microsoft 365 Apps for enterprise, Visio Pro for Microsoft 365, or Project for Microsoft 365

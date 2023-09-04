@@ -13,7 +13,7 @@ ms.topic: troubleshooting
 ms.custom: sap:office-experts, CSSTroubleshoot
 appliesto: 
   - Excel Online
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Compatibility Report about text queries in Excel Online

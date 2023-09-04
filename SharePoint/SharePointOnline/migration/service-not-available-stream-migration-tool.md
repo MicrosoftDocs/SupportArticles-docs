@@ -15,7 +15,7 @@ ms.custom:
 - CI172876
 appliesto: 
   - SharePoint Online
-ms.date: 3/10/2023
+ms.date: 03/10/2023
 ---
 
 # "Service is not available" error when you use the Stream migration tool

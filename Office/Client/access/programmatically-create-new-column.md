@@ -16,7 +16,7 @@ appliesto:
   - Microsoft Office Access 2007
   - Microsoft Office Access 2003
 search.appverid: MET150
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 # How to programmatically create a new column in an Access report
 

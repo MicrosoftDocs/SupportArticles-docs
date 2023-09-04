@@ -15,7 +15,7 @@ appliesto:
   - Microsoft Intune
   - Azure Backup
   - Microsoft 365
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Problems when signing out of Microsoft 365, Azure, or Intune in a web browser

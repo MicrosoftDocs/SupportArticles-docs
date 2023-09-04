@@ -18,7 +18,7 @@ appliesto:
   - Microsoft Intune
   - Azure Backup
   - Microsoft 365
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Update or repair the settings of a federated domain in Microsoft 365, Azure, or Intune

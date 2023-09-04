@@ -16,7 +16,7 @@ appliesto:
   - Microsoft Intune
   - Azure Backup
   - Microsoft 365
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Microsoft Online Services Directory Synchronization tool stops syncing objects and triggers a Directory Synchronization error

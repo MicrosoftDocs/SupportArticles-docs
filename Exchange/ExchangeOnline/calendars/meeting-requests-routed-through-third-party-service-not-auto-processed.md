@@ -15,7 +15,7 @@ ms.reviewer: alexaca, tylewis
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 6/7/2022
+ms.date: 06/07/2022
 ---
 # Room mailbox doesn't process meeting requests routed through a third-party mail service
 

@@ -3,7 +3,7 @@ title: Your organization has disabled this device when trying to activate Micros
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 9/4/2020
+ms.date: 09/04/2020
 audience: Admin
 ms.topic: troubleshooting
 localization_priority: Normal

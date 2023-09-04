@@ -15,7 +15,7 @@ appliesto:
   - Microsoft Intune
   - Azure Backup
   - Microsoft 365 User and Domain Management
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # "Invalid Security Code" error when you reset your admin password for Microsoft 365, Intune, or Azure

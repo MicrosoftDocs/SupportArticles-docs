@@ -14,7 +14,7 @@ search.appverid:
 appliesto: 
   - Office Web Apps Server 2013
   - Office Online Server
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # "File not found" error when you try to open an Office file from a UNC share

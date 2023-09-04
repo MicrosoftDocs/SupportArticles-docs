@@ -15,7 +15,7 @@ appliesto:
   - Word 2016
   - Word 2013
   - Word 2010
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # "Word cannot open this file because it is larger than 512 Megabytes" when opening a document in Word 

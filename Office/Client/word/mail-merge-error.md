@@ -16,7 +16,7 @@ appliesto:
   - Word 2013
   - Word 2016
   - Word 2010
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Mail merge error when a data source is accessed by multiple users in Word

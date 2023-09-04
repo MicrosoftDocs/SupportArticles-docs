@@ -12,7 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Microsoft 365 Apps for enterprise
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # How do I keep on running Microsoft 365 Apps for enterprise 2013?

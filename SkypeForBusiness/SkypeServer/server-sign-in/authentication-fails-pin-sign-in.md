@@ -13,7 +13,7 @@ ms.reviewer: jefzhang
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Lync Phone Edition
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Authentication fails during Lync Phone Edition PIN sign-in

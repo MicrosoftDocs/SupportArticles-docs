@@ -12,7 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Microsoft 365 Planner
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # How to use Microsoft 365 PowerShell to manage Microsoft Planner licenses

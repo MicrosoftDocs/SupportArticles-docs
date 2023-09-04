@@ -12,7 +12,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft 365 User and Domain Management
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Microsoft 365 Desktop Setup Tool cannot download updates or you receive an "Your computer is not allowed to connect to the Microsoft Update service" error message

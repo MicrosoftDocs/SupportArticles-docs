@@ -19,7 +19,7 @@ appliesto:
   - Word 2013
   - Outlook for Microsoft 365
 search.appverid: MET150
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 # Graphics file attachment grows larger in the recipient's email message after you change to a high DPI setting
 

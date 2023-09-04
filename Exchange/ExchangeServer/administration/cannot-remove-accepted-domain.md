@@ -15,7 +15,7 @@ search.appverid:
 appliesto: 
   - Exchange Server 2010
   - Exchange Server 2007
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ms.reviewer: v-six
 ---
 # Error (Cannot remove the domain) when you remove an accepted domain in Exchange Server 2007 or in Exchange Server 2010

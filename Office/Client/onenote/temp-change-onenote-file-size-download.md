@@ -3,7 +3,7 @@ title: OneNote temporary limit to file size download
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 4/1/2020
+ms.date: 04/01/2020
 audience: Admin
 ms.topic: troubleshooting
 localization_priority: Normal

@@ -18,7 +18,7 @@ appliesto:
   - Microsoft Intune
   - Azure Backup
   - Microsoft 365 Identity Management
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 # Fix pending state issue with Directory synchronization for Microsoft 365, Azure, or Intune
 

@@ -3,7 +3,7 @@ title: Unable to add guest users in M365 admin center
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 3/25/2020
+ms.date: 03/25/2020
 audience: Admin
 ms.topic: troubleshooting
 localization_priority: High

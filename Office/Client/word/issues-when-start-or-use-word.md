@@ -3,7 +3,7 @@ title: How to troubleshoot problems that occur when you start or use Word
 description: Provides a guide to identify and resolve problems that you experience when you start Word.
 author: helenclu
 manager: dcscontentpm
-ms.date: 5/5/2020
+ms.date: 05/05/2020
 localization_priority: Normal
 search.appverid: 
   - MET150

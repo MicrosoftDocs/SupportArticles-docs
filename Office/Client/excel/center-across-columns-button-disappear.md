@@ -14,7 +14,7 @@ appliesto:
   - Microsoft Excel 2000
   - Microsoft Excel 2002
   - Microsoft Office Excel 2003
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # The "Center Across Columns" button doesn't appear on the toolbar or on the Ribbon in Excel

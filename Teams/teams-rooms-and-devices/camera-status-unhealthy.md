@@ -3,7 +3,7 @@ title: The Camera status of a Teams Rooms device is Unhealthy
 description: Resolve the issue that causes the Camera signal of a Teams Rooms device to appear as Unhealthy.
 ms.reviewer: lamos
 ms.topic: troubleshooting
-ms.date: 9/23/2022
+ms.date: 09/23/2022
 author: helenclu
 ms.author: luche
 manager: dcscontentpm

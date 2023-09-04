@@ -15,7 +15,7 @@ appliesto:
   - Outlook for Microsoft 365
   - Exchange Online
 search.appverid: MET150
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 # Contacts folder empty and contacts are in a different folder in Outlook for Microsoft 365
 

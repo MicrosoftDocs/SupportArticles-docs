@@ -19,7 +19,7 @@ appliesto:
   - Azure Backup
   - Microsoft 365
   - User and Domain Management
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # "We could not verify your account" error when you try to reset your admin password in Microsoft 365, Intune, or Azure

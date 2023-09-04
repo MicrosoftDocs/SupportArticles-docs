@@ -13,7 +13,7 @@ ms.custom: CSSTroubleshoot
 ms.reviewer: jalalb
 appliesto: 
   - Microsoft 365 for Mac
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # "Office 365 Enterprise E3 setup is incomplete" error in Microsoft 365 for Mac

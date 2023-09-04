@@ -16,7 +16,7 @@ ms.reviewer: salarson
 appliesto: 
   - SharePoint Online
   - OneDrive
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # "Unable to reach the server" error when sharing files or folders in SharePoint or OneDrive

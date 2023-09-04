@@ -17,7 +17,7 @@ appliesto:
   - Microsoft Intune
   - CRM Online via Office 365 E Plans
   - Azure Backup
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Error 80048163 when a federated user tries to sign in to Microsoft 365, Azure, or Intune

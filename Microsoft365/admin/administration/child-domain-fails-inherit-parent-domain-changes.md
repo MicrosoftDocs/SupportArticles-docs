@@ -15,7 +15,7 @@ appliesto:
   - Microsoft Intune
   - Azure Backup
   - Microsoft 365
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # A child domain doesn't inherit parent domain changes in Microsoft 365, Azure, or Intune

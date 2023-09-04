@@ -14,7 +14,7 @@ ms.custom:
   - has-azure-ad-ps-ref
 appliesto: 
   - User and Domain Management
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # "Domain has associated subdomains" when removing a domain from Microsoft 365

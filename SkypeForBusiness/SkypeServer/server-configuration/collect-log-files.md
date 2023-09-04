@@ -14,7 +14,7 @@ appliesto:
   - Microsoft Office Communicator 2007 R2
   - Lync 2010
 search.appverid: MET150
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 # Collect log files from Office Communicator, Lync, and Skype for Business Client
 

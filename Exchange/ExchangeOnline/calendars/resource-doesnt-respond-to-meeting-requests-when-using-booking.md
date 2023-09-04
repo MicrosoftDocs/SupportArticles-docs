@@ -14,7 +14,7 @@ ms.reviewer: v-mosha, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 # A resource doesn't respond to meeting requests when using Resource Booking to schedule the resource
 

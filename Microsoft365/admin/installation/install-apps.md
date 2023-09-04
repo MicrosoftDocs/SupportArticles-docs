@@ -17,7 +17,7 @@ search.appverid:
 ms.assetid: c4f63dc5-9944-40aa-9618-3b2007f17003
 ROBOTS: NOINDEX
 description: Learn how to install Microsoft 365 apps.
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Install Microsoft 365 apps

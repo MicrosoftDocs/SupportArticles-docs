@@ -12,7 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - Microsoft Outlook
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Cannot configure the default email client using Group Policy

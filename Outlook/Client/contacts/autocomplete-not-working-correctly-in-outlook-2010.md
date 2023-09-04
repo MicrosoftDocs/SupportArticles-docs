@@ -14,7 +14,7 @@ ms.reviewer:
 appliesto: 
   - Microsoft Outlook 2010
 search.appverid: MET150
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 # AutoComplete not working correctly in Outlook 2010
 

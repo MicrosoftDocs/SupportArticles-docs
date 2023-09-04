@@ -16,7 +16,7 @@ appliesto:
   - Outlook 2016
   - Outlook 2013 Service Pack 1
 search.appverid: MET150
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 # You cannot edit the message subject through Outlook
 

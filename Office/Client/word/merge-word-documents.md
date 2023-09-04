@@ -12,7 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - Microsoft Word
-ms.date: 4/5/2023
+ms.date: 04/05/2023
 ---
 
 # How to merge Word documents

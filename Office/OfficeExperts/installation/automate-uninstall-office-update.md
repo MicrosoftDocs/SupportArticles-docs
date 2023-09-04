@@ -16,7 +16,7 @@ ms.reviewer: ericspli
 ms.author: luche
 appliesto: 
   - Microsoft Office
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # How to automate the uninstallation of an Office update programmatically

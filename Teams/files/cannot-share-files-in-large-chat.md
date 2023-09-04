@@ -15,7 +15,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 7/4/2023
+ms.date: 07/04/2023
 ---
 # Can't share files in a large group chat or meeting chat
 

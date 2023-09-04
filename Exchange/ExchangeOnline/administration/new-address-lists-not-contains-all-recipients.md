@@ -14,7 +14,7 @@ ms.reviewer: svincent, timothyh, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 # New address lists that you create in Exchange Online don't contain all the expected recipients
 

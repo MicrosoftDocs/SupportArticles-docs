@@ -13,7 +13,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Online
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ms.reviewer: v-six
 ---
 # Microsoft 365 users can't connect to Exchange Online because of incorrect service settings

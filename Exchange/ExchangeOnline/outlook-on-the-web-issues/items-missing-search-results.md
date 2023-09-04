@@ -14,7 +14,7 @@ ms.reviewer: alinastr, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 # Items are missing from search results when Microsoft 365 users search their mailbox in Outlook on the web
 

@@ -12,7 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Server 2013
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # System.ArgumentException exception when you sign out of a web application  

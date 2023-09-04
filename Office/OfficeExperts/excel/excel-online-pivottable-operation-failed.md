@@ -13,7 +13,7 @@ ms.custom: sap:office-experts, CSSTroubleshoot
 ms.reviewer: randring
 appliesto: 
   - Excel Online
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # "PivotTable Operation Failed" when you click a slicer in an Excel Online PowerPivot workbook

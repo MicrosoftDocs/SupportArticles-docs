@@ -12,7 +12,7 @@ ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
   - Microsoft 365 Apps for enterprise
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Fixes for issues on devices with App-V enabled and Microsoft 365 Apps for enterprise installed

@@ -12,7 +12,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Project Online
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Cannot Access Newly Purchased Project Online with One License

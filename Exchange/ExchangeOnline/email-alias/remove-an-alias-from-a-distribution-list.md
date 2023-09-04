@@ -23,7 +23,7 @@ search.appverid:
   - MOE150
 ms.assetid: b8c5f0f6-eefd-4d9d-b508-7ef2d84b626b
 description: Learn how to remove an email alias from a distribution list using Exchange Online PowerShell.
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ms.reviewer: v-six
 ---
 # Troubleshoot: Remove an alias from a distribution list

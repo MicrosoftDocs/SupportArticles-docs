@@ -14,7 +14,7 @@ ms.reviewer: timothyh, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 # (The Web Services External Url is not set on the On-Premises server) error when running Hybrid Configuration wizard
 

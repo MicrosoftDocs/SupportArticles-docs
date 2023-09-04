@@ -14,7 +14,7 @@ ms.custom:
   - has-azure-ad-ps-ref
 appliesto: 
   - Microsoft 365
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # "A user with this name could not be found" when resetting a password for a user in Microsoft 365
