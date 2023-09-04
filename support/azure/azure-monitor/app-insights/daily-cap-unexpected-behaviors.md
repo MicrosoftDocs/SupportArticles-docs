@@ -1,7 +1,7 @@
 ---
 title: Daily cap unexpected behaviors in Application Insights
 description: Learn about daily cap unexpected behaviors in Azure Monitor Application Insights. Review why actual ingested data differs from the specified daily cap limit.
-ms.date: 5/18/2023
+ms.date: 05/18/2023
 editor: v-jsitser
 ms.reviewer: toddfous, v-leedennis
 ms.service: azure-monitor

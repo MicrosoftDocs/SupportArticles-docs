@@ -1,7 +1,7 @@
 ---
 title: Offline defragmentation of Active Directory database
 description: Describes how to How to perform offline defragmentation of the Active Directory database.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -8,7 +8,7 @@ ms.reviewer: hannahhunter, v-leedennis
 ms.service: azure-monitor
 ms.subservice: optimization-insights
 ms.topic: troubleshooting
-ms.date: 8/15/2023
+ms.date: 08/15/2023
 ---
 
 # Troubleshoot Code Optimizations (Preview)

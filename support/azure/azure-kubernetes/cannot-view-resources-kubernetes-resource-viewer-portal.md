@@ -1,7 +1,7 @@
 ---
 title: Can't view resources in Kubernetes resource viewer on Azure portal
 description: Troubleshoot why you can't view resources in the Kubernetes resource viewer on the Azure portal for a cluster configured with API server-authorized IP ranges.
-ms.date: 6/8/2022
+ms.date: 06/08/2022
 ms.reviewer: chiragpa, nickoman, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: common-issues

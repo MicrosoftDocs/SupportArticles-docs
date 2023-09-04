@@ -1,7 +1,7 @@
 ---
 title: Event ID 7000 and SQL Server doesn't start
 description: This article provides resolutions for the problem where SQL Server fails to start and Event ID 7000 is logged in the System log.
-ms.date: 1/28/2020
+ms.date: 01/28/2020
 author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: ramakoni

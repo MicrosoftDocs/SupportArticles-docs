@@ -3,7 +3,7 @@ title: A general mailbox access error occurred
 description: Provides a solution to the 0x80004005 error that occurs when you attempt to test and enable a mailbox in Microsoft Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-email-office-integration
 ---
 # A general mailbox access error occurred while receiving email error appears when testing and enabling a mailbox in Microsoft Dynamics 365

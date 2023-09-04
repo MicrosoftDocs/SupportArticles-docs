@@ -1,7 +1,7 @@
 ---
 title: Tunnel connectivity issues
 description: Resolve communication issues that are related to tunnel connectivity in an Azure Kubernetes Service (AKS) cluster.
-ms.date: 7/14/2022
+ms.date: 07/14/2022
 ms.reviewer: chiragpa, andbar, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: cannot-connect-to-cluster-through-api-server

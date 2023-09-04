@@ -1,7 +1,7 @@
 ---
 title: Error code 80080005 when you start many COM+ applications
 description: Explains that you may receive an error message when you start lots of COM+ applications manually from a Component Services MMC snap-in. Provides a resolution to change the value of a registry key that allows more COM+ applications to run.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot connectivity and registration for SUSE SLES VMs
 description: Troubleshoot scenarios in which an Azure VM that has a SUSE Linux Enterprise Server image can't connect to the SUSE Subscription Management Tool (SMT) repository.
-ms.date: 4/29/2023
+ms.date: 04/29/2023
 author: DennisLee-DennisLee
 ms.author: hokamath
 ms.reviewer: adelgadohell, mahuss, esanchezvela, scotro

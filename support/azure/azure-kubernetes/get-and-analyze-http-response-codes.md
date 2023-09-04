@@ -1,7 +1,7 @@
 ---
 title: Get and analyze HTTP response codes to determine app behavior
 description: Learn how to get HTTP response codes using cURL or a browser to analyze the behavior of an app that's hosted on an Azure Kubernetes Service (AKS) cluster.
-ms.date: 3/17/2022
+ms.date: 03/17/2022
 ms.reviewer: chiragpa, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: cannot-connect-to-app-on-cluster

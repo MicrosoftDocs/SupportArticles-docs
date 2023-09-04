@@ -3,7 +3,7 @@ title: Your browser is currently unsupported
 description: Provides a solution to an error that occurs when accessing the Dynamics 365 App for Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-client-outlook
 ---
 # "Your browser is currently unsupported" when accessing the Dynamics 365 App for Outlook

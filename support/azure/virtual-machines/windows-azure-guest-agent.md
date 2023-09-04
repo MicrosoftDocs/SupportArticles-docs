@@ -8,7 +8,7 @@ ms.collection: windows
 author: kegregoi
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
-ms.date: 7/21/2023
+ms.date: 07/21/2023
 ms.author: kegregoi
 editor: v-jsitser
 ms.reviewer: v-leedennis, scotro
@@ -320,7 +320,7 @@ Windows Guest Agent stops responding upon startup, and the following Application
 ```output
 Log Name:      Application
 Source:        .NET Runtime
-Date:          3/7/2023 10:25:59 AM
+Date:          3/07/2023 10:25:59 AM
 Event ID:      1026
 Task Category: None
 Level:         Error

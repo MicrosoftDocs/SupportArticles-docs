@@ -1,7 +1,7 @@
 ---
 title: How to disable the SAN for UPN mapping
 description: Describes how to disable the Subject Alternative Name for UPN mapping through Registry Editor.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

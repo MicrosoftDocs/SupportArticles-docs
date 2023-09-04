@@ -1,7 +1,7 @@
 ---
 title: How to send Notification Details to Microsoft support
 description: Learn how to send Notification Details to Microsoft support.
-ms.date: 5/8/2023
+ms.date: 05/08/2023
 author: bernawy
 ms.author: bernaw
 editor: v-jsitser
