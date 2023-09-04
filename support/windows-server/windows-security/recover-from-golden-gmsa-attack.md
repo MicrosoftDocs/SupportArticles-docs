@@ -88,6 +88,7 @@ The approach is to create a new KDS Root Key object that's unknown to the attack
 > - You don't have to manually repair gMSAs that were created after the Active Directory Domain Services (AD DS) database exposure ended. The attacker doesn't know the details of these accounts, and the passwords for these accounts will regenerate based on the new KDS Root Key object.
 > - You should consider the gMSA object in "maintenance mode" until the procedure is completed, and ignore possible errors that are reported with the accounts in the System, Security, Directory Services, and Security-Netlogon event log.
 > - The guide assumes that the gMSAs are child objects of the **Managed Service Accounts** container. If you have moved the accounts to custom parent containers, you need to run the steps related to the **Managed Service Accounts** container on the gMSA in these containers.
+> - An authoritative restore rolls back all attributes to the rime of backup, including the accounts that are allowed to retrieve the gMSA credentials (PrincipalsAllowedToRetrieveManagedPassword).
 
 In the domain holding the gMSAs that you want to repair, follow these steps:
 
