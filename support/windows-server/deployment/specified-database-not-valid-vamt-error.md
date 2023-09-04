@@ -33,7 +33,7 @@ The issue occurs because the account that you use to log on to the computer does
 
 To resolve the issue, log on to the computer as the local administrator, and then try to create the database. If the issue still occurs, install Microsoft SQL Server 2008 R2 Management Studio Express (SSMSE), and then grant yourself the relevant permissions.
 
-For more information about downloading SSMSE, see [Download SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms).
+For more information about downloading SSMS, see [Download SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms).
 
 For more information about SQL Server permissions, see [Security and Protection (Database Engine)](/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database).
 
