@@ -9,7 +9,7 @@ metadata:
   ms.service: dynamics-365-commerce
   author: bstorie
   ms.author: brstor
-  ms.date: 08/07/2023
+  ms.date: 08/23/2023
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -37,6 +37,14 @@ landingContent:
         links:
           - text: Troubleshoot issues with the online store transaction creation process
             url: order-management/online-order-transaction-creation-failures.md
+  
+  # Card
+  - title: Payments
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: A card payment fails due to an unsupported card type
+            url: payments/card-payments-fail-with-unsupported-card-type.md
             
   # Card
   - title: Point of sale (POS)

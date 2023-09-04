@@ -5896,6 +5896,21 @@
       "source_path": "support/sql/database-engine/install/windows/upgrade-fails-error-code-574.md",
       "redirect_url": "/troubleshoot/sql/database-engine/install/windows/sql-server-upgrade-failed-error-574",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/azure-functions/index.md",
+      "redirect_url": "/troubleshoot/azure/azure-functions/welcome-azure-functions",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/azure-kubernetes/small-file-handling-high-latency.md",
+      "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/azure-kubernetes/troubleshoot-upgrade-errors.md",
+      "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
+      "redirect_document_id": false
     }
 ]
 }
