@@ -1,7 +1,7 @@
 ---
 title: Error when you post or print in Payables Management
 description: Provides a solution to an error that occurs when you post or print in Payables Management in Microsoft Dynamics GP.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 09/04/2023
 ---
