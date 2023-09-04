@@ -12,7 +12,7 @@ _Original KB number:_ &nbsp; 4100822
 
 There are two ways to send customer statements in current versions of Microsoft Dynamics GP:
 
-## Option 1 - Using the [Word Template functionality](/dynamics-gp/installation/word-templates)
+## Option 1 - Use the [Word Template functionality](/dynamics-gp/installation/word-templates)
 
 #### General questions and answers
 
@@ -36,12 +36,12 @@ There are two ways to send customer statements in current versions of Microsoft 
 
   A5: The setup documents are outlined in the [GP2013_Finanicals.zip](https://mbs2.microsoft.com/fileexchange/?fileID=cdf1a9bd-bfe1-4223-8b8c-be4e2dc41817) file under Receivables. Additional enhancements are outlined in [Microsoft Dynamics GP 2013 R2 - Email Document New Features](https://community.dynamics.com/blogs/post/?postid=f3603488-0ed1-4e86-8722-332f9199361c).
 
-## Option 2 - Using original Microsoft Dynamics GP functionality
+## Option 2 - Use the original Microsoft Dynamics GP functionality
 
 > [!IMPORTANT]
-> This option doesn't work with [Multi-factor Authentication (MFA) required for Dynamics GP email](/dynamics-gp/installation/email-troubleshooting-guide#mfa---multi-factor-authentication-modern-authentication).
+> This option doesn't work with the [Multi-factor Authentication (MFA) required for Dynamics GP email](/dynamics-gp/installation/email-troubleshooting-guide#mfa---multi-factor-authentication-modern-authentication).
 
-You can send customer statements in HTML, PDF, XPS, and DOCX format in Microsoft Dynamics GP. However, Adobe PDF Writer is required to be able to send the statement in PDF format using the Microsoft Dynamics GP way.
+You can send customer statements in HTML, PDF, XPS, and DOCX formats in Microsoft Dynamics GP. However, Adobe PDF Writer is required to send the statement in PDF format using the Microsoft Dynamics GP method.
 
 #### General questions and answers
 
@@ -51,7 +51,7 @@ You can send customer statements in HTML, PDF, XPS, and DOCX format in Microsoft
 
 - Q2: Can I edit the Subject line of the email message?
 
-  A2: Yes. You can edit it in the **mail Options** tab in the **Print Receivables Statements** window.
+  A2: Yes. You can edit it in the **E-mail Options** tab of the **Print Receivables Statements** window.
 
 - Q3: Can I edit the body of the email message?
 
