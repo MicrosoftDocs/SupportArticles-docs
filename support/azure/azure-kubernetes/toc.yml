@@ -1,9 +1,6 @@
 - name: Welcome
   href: welcome-azure-kubernetes.yml
 
-- name: AKS cluster/node is in failed state
-  href: cluster-node-virtual-machine-failed-state.md
-
 - name: Troubleshoot create operations
   items:
   - name: Basic troubleshooting
@@ -179,6 +176,8 @@
 
 - name: Troubleshoot AKS cluster performance issues
   items:
+  - name: AKS cluster/node is in failed state
+    href: cluster-node-virtual-machine-failed-state.md
   - name: Identify nodes and containers consuming high CPU
     href: identify-high-cpu-consuming-containers-aks.md
   - name: Identify memory saturation in AKS clusters

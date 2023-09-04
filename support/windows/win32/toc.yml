@@ -24,6 +24,8 @@
       href: vari8fromcy-produces-incorrect-value.md
   - name: Desktop app UI development
     items:
+    - name: CreateProcessWithLogonW fails when called on a Microsoft Entra ID account
+      href: createprocesswithlogonw-fails-microsoft-entra-id-account.md
     - name: Hook procedure doesn't receive the VK_CONVERT message
       href: hook-procedure-not-receiving-vk-convert-message.md
     - name: Apps using message filters may not respond in Windows 10
@@ -152,6 +154,8 @@
       href: custom-virtual-channel-not-supported.md
     - name: File copy operation deletes content
       href: file-copy-operation-deletes-content.md
+    - name: GetTickCount resets to zero after approximately 776 days
+      href: gettickcount-resets-zero-after-approximately-776-days.md
     - name: Heap manager may not decommit memory
       href: heap-manager-may-not-decommit-memory.md
     - name: Get formatted strings for an event
