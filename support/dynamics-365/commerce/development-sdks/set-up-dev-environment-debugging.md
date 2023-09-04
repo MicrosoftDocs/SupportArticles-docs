@@ -4,7 +4,7 @@ description: Resolves errors that occur when you debug a Tier 1 Retail Server VM
 author: josaw1 
 ms.author: josaw
 ms.reviewer: rassadi, brstor
-ms.date: 09/01/2023
+ms.date: 09/04/2023
 ---
 # Errors when you debug against a Tier 1 Retail Server virtual machine in an e-commerce development environment
 
@@ -21,6 +21,8 @@ In some scenarios, you might need to test calls to extensions in a Tier 1 enviro
 When you debug against a Tier 1 environment, because the site is now calling a different Retail Server, cross-server calls might cause various errors that are related to the content security policy.
 
 The following screenshot shows an example of an error that might occur when a variant is selected on a product details page.
+
+> Unhandled Rejection (ActionError): Error
 
 :::image type="content" source="media/set-up-dev-environment-debugging/unhandled-rejection-error.png" alt-text="Screenshot that shows an Unhandled Rejection Action error.":::
 

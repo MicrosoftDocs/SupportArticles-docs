@@ -4,7 +4,7 @@ description: Provides workarounds for inventory-related issues during statement 
 author: josaw1 
 ms.author: josaw
 ms.reviewer: shajain, brstor
-ms.date: 09/01/2023
+ms.date: 09/04/2023
 ms.search.form: RetailStatementTable_InvoiceFailed
 ---
 # Statement posting errors due to unavailable inventory or update conflicts
@@ -27,7 +27,7 @@ For a consistent posting experience, Microsoft recommends that you enable physic
 
 For example, no inventory is available for an item, but a cashier returns the item and then adds it back to the same transaction at a reduced price to mimic a price match. In this case, both the return transaction and the sales transaction will be pulled into the same statement of the single customer order. However, because there's no guarantee that the return line (which increases the inventory) will be posted before the sales line (which reduces the inventory) is posted, inventory errors can occur. If physical negative inventory is enabled in this scenario, transaction posting isn't negatively affected, and the system correctly reflects the inventory.
 
-To enable negative physical inventory for an item model group in Commerce headquarters, follow these steps:
+To enable physical negative inventory for an item model group in Commerce headquarters, follow these steps:
 
 1. Go to **Inventory management** > **Setup** > **Inventory**.
 1. In the left navigation pane, select the item model group.

@@ -4,11 +4,11 @@ description: Resolves an issue where a payment is settled in the Adyen portal im
 author: josaw1 
 ms.author: josaw
 ms.reviewer: rassadi, brstor
-ms.date: 09/01/2023
+ms.date: 09/04/2023
 ---
 # Payments are automatically settled before orders are invoiced or shipped
 
-This article provides a resolution for an issue where a payment is settled in the Adyen portal immediately before the sales order is invoiced or shipped in Microsoft Dynamics 365 Commerce.
+This article provides a resolution for an issue where a payment is settled in the Adyen portal immediately after an order is placed, even though the sales order hasn't been invoiced or shipped in Microsoft Dynamics 365 Commerce.
 
 ## Symptoms
 

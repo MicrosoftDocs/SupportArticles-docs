@@ -4,7 +4,7 @@ description: Provides resolutions to help you fix common statement posting issue
 author: josaw1 
 ms.author: josaw
 ms.reviewer: shajain, brstor
-ms.date: 09/01/2023
+ms.date: 09/04/2023
 ms.search.form: RetailStatementTable_SOCreateFailed, RetailStatementTable_InvoiceFailed, RetailStatementTable_PaymentPosted, RetailStatementTable_Aggregated, RetailStatementTable_CustomerOrderCreated, RetailStatementTable_Invoiced
 ---
 # Fix common statement posting issues by editing transactions
@@ -22,7 +22,7 @@ Sometimes, statement posting fails because the data in one or more transactions 
 
 The data is corrected by editing the necessary transactions. The steps that are required to edit the transactions vary, depending on which stage of statement posting an issue occurs during. This article first lists the generic steps that are required to edit a transaction, depending on the stage of statement posting. It then lists common errors that occur during the stages and provides the specific steps that are required to fix each issue.
 
-> [NOTE]
+> [!NOTE]
 > For information about the structure of the Excel files that are downloaded when transactions are edited, see [Edit and audit cash and carry and cash management transactions](/dynamics365/commerce/edit-cash-trans).
 
 ## Issues during statement calculation
@@ -65,7 +65,7 @@ One step of the statement posting process is to create customer orders by groupi
 
   **Cause**: This issue occurs because the **Site** and **Warehouse** fields are configured as mandatory for the transactions, but some of the transactions are missing values or have incorrect values for those fields. This error is generated for transactions that are imported from external systems where validation might have missed the issue, or in cases where the values that are specified for the fields aren't valid.
 
-  **Resolution**: To fix the issue, follow the steps in the preceding procedure. In step 6, on the **Transactions** and **SalesTransactions** tabs of the Excel file (if those tabs are present), correct the **Site** and **Warehouse** values.
+  **Resolution**: To fix the issue, follow the steps in the [preceding procedure](#issues-during-order-creation). In step 6, on the **Transactions** and **SalesTransactions** tabs of the Excel file (if those tabs are present), correct the **Site** and **Warehouse** values.
 
   > [!NOTE]
   > The **Site** and **Warehouse** fields aren't available by default in Excel. To add them, follow the instructions in [Add fields to an Excel workbook to edit retail transactions](/dynamics365/commerce/add-fields-excel).
@@ -74,7 +74,7 @@ One step of the statement posting process is to create customer orders by groupi
 
   **Cause**: This issue occurs because the batch number is configured as mandatory for an item, but it isn't provided.
 
-  **Resolution**: To fix the issue, follow the steps in the preceding procedure. In step 6, on the **Lines** or **Sales transaction** tab of the Excel file, update the **Batch number** value for the item.
+  **Resolution**: To fix the issue, follow the steps in the [preceding procedure](#issues-during-order-creation). In step 6, on the **Lines** or **Sales transaction** tab of the Excel file, update the **Batch number** value for the item.
 
   > [!NOTE]
   > The **Batch number** field isn't available by default in Excel. To add it, follow the instructions in [Add fields to an Excel workbook to edit retail transactions](/dynamics365/commerce/add-fields-excel).
@@ -100,19 +100,19 @@ After customer orders are created, the next statement posting step is to try to 
 
   **Cause**: This issue occurs because the transaction date belongs to a fiscal period that's no longer open. This error is generated when transactions haven't been posted for a long time.
 
-  **Resolution**: To fix the issue, follow the steps in the preceding procedure. In step 8, on the **Statement aggregations** tab of the Excel file, update the **Business date** field to a value that corresponds to an open fiscal period.
+  **Resolution**: To fix the issue, follow the steps in the [preceding procedure](#issues-during-customer-order-invoicing). In step 8, on the **Statement aggregations** tab of the Excel file, update the **Business date** field to a value that corresponds to an open fiscal period.
 
 - > While processing the state Payments posted, generic exception encountered in retail statement in the controller : Posting results for journal batch number \<batch number> Voucher \<Voucher> Voucher \<Voucher> Period for 1/1/2000 does not exist. Posting results for journal batch number \<batch number> Voucher \<Voucher> Voucher \<Voucher> Fiscal year for 1/1/2000 does not exist.
 
   **Cause**: This issue is similar to the previous one.
 
-  **Resolution**: To fix the issue, follow the steps in the preceding procedure. In step 8, on the **Transactions**, **Sales Transactions**, and **Payment Transactions** tabs of the Excel file, update the **Business date** field to a value that corresponds to an open fiscal period.
+  **Resolution**: To fix the issue, follow the steps in the [preceding procedure](#issues-during-customer-order-invoicing). In step 8, on the **Transactions**, **Sales Transactions**, and **Payment Transactions** tabs of the Excel file, update the **Business date** field to a value that corresponds to an open fiscal period.
 
 - > While processing the state Customer order invoiced, generic exception encountered in retail statement \<> in the controller : Posting Posting Sales order: \<> Item: \<> Inventory dimension Location must be specified.
 
   **Cause**: This issue occurs because the **Site** and **Warehouse** fields are configured as mandatory for the transactions, but some of the transactions are missing values or have incorrect values for those fields. This error is generated for transactions that are imported from external systems where validation might have missed the issue, or in cases where the values that are specified for the fields aren't valid.
 
-  **Resolution**: To fix the issue, follow the steps in the preceding procedure. In step 8, on the **Transactions** and **SalesTransactions** tabs of the Excel file (if those tabs are present), correct **Site** and **Warehouse** values.
+  **Resolution**: To fix the issue, follow the steps in the [preceding procedure](#issues-during-customer-order-invoicing). In step 8, on the **Transactions** and **SalesTransactions** tabs of the Excel file (if those tabs are present), correct **Site** and **Warehouse** values.
 
   > [!NOTE]
   > The **Site** and **Warehouse** fields aren't available by default in Excel. To add them, follow the instructions in [Add fields to an Excel workbook to edit retail transactions](/dynamics365/commerce/add-fields-excel).
@@ -121,8 +121,8 @@ After customer orders are created, the next statement posting step is to try to 
 
   **Cause**: This issue occurs because a required field for statement posting is missing a value.
 
-  **Resolution**: To fix the issue, follow the steps in the preceding procedure. In step 8, correct the values for the fields that are mentioned in the error message.
+  **Resolution**: To fix the issue, follow the steps in the [preceding procedure](#issues-during-customer-order-invoicing). In step 8, correct the values for the fields that are mentioned in the error message.
 
 - > While processing aggregation state Sales order is invoiced for this aggregation. Transaction state Customer order invoiced, the invoice couldn't be found for the manually invoiced sales order for this aggregation \<>.
 
-  **Resolution**: To fix the issue, follow the steps in the preceding procedure. In step 8, on the **Statement aggregations** tab of the Excel file, check whether the **Business date** value for the aggregation matches the invoice date of the manually invoiced sales order for the aggregation. If the values don't match, update the **Business date** value to the invoice date of the order.
+  **Resolution**: To fix the issue, follow the steps in the [preceding procedure](#issues-during-customer-order-invoicing). In step 8, on the **Statement aggregations** tab of the Excel file, check whether the **Business date** value for the aggregation matches the invoice date of the manually invoiced sales order for the aggregation. If the values don't match, update the **Business date** value to the invoice date of the order.
