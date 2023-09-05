@@ -2,10 +2,9 @@
 
 
 
-## Week of March 27, 2023
+## Week of August 28, 2023
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 3/29/2023 | Troubleshoot issues for Viva Connections | removed |
-| 3/29/2023 | Troubleshoot issues for Viva Learning | removed |
+| 8/30/2023 | [Resolve manager hierarchy error in Viva Glint](/viva/troubleshoot/glint/fix-manager-hierarchy-circular-reporting) | added |
