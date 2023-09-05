@@ -72,7 +72,7 @@ To resolve connectivity issues on your computer or a remote computer, follow the
   
 **Type of instance**: Default instance
 
-**Output from PortQry**: `TCP port 1433 (ms-sql-s service): LISTENING`
+**Output from PortQry**: `TCP port 1433 (ms-sql-s service): LISTENING`
 
 **Possible cause**: This issue indicates that the client library can connect to the SQL Server-based computer, but something else in the application layer could be causing the problem.
 
@@ -84,7 +84,7 @@ To resolve connectivity issues on your computer or a remote computer, follow the
 
 **Type of instance**: Named instance
 
-**Output from PortQry**: `UDP port 1434 (ms-sql-m service): FILTERED`
+**Output from PortQry**: `UDP port 1434 (ms-sql-m service): FILTERED`
 
 **Possible causes**: This issue could have any of the following causes:
 
@@ -102,7 +102,7 @@ To resolve connectivity issues on your computer or a remote computer, follow the
 
 **Type of instance**: Named instance
 
-**Output from PortQry**: `UDP port 1434 is LISTENING`
+**Output from PortQry**: `UDP port 1434 is LISTENING`
 
 **Possible causes**: This issue indicates that the client library can connect to the SQL Server-based computer. However, something else in the application layer could be causing the problem.
 
