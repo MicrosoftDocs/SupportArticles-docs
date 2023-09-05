@@ -10,7 +10,7 @@ ms.service: virtual-machines
 ms.subservice: vm-common-errors-issues
 ms.topic: troubleshooting
 ms.workload: infrastructure
-ms.date: 5/22/2017
+ms.date: 05/22/2017
 ms.author: xujing
 
 ---

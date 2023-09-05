@@ -5,7 +5,7 @@ author: pagienge
 ms.author: pagienge
 ms.reviewer: v-leedennis
 ms.topic: troubleshooting
-ms.date: 9/1/2023
+ms.date: 09/01/2023
 ms.service: virtual-machines
 ms.subservice: vm-cannot-start-stop
 ms.collection: linux

@@ -4,7 +4,7 @@ description: Introduces the Windows mitigation for AMD Family 17h Models 30h-3Fh
 author: Deland-Han
 ms.author: delhan
 ms.topic: troubleshooting
-ms.date: 7/30/2023
+ms.date: 07/30/2023
 ms.prod: windows-server
 ms.technology: windows-server-deployment
 ms.custom: sap:setup, csstroubleshoot

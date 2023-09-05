@@ -1,7 +1,7 @@
 ---
 title: Unable to delete an application due to disabled Delete button
 description: Understand why you're unable to delete an application due to disabled Delete button.
-ms.date: 5/8/2023
+ms.date: 05/08/2023
 author: bernawy
 ms.author: bernaw
 editor: v-jsitser

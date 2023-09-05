@@ -3,7 +3,7 @@ title: Email address that we do not recognize error when accessing Dynamics 365 
 description: It looks like you're trying to access the Microsoft Dynamics 365 App for Outlook from an email address that we don't recognize - this error occurs when you try to access the Microsoft Dynamics 365 App for Outlook. Provides a resolution.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-email-office-integration
 ---
 # Cannot access Microsoft Dynamics 365 App for Outlook due to email address is not recognized
