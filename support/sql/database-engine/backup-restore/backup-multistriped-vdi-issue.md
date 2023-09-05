@@ -13,7 +13,7 @@ This article helps you resolve an issue that occurs when you use Volume Shadow C
 
 ## Symptoms
 
-When you restore a multi-striped [virtual device interface](/sql/relational-database/backup-restore/vdi-reference/reference-virtual-device-interface) (VDI) full backup, you may get the error [MSSQLSERVER_3456](/sql/relational-databases/errors-events/mssqlserver-3456-database-engine-error):
+When you restore a multi-striped [virtual device interface](/sql/relational-databases/backup-restore/vdi-reference/reference-virtual-device-interface) (VDI) full backup, you may get the error [MSSQLSERVER_3456](/sql/relational-databases/errors-events/mssqlserver-3456-database-engine-error):
 
 ```output
 Could not redo log record (120600:18965748:1), for transaction ID (0:1527178398), on page (14:1987189), allocation unit 72057761533001728, database 'DB1_STRIPE' (database ID 8).
