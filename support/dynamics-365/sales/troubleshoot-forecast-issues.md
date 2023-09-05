@@ -226,19 +226,20 @@ Verify the following:
 
 ### Cause
 
-The issue can be causes due to the following reasons:
+The issue can be caused due to the following reasons:
 * The forecasting application user "**# Dynamics 365 Sales Forecasting**" doesn't have read access to rollup entity records.
 * The fields in the rollup entity have field-level security. 
 
 ### Resolution
 
-To solve the issue, you need to provide read access to the user “**# Dynamics 365 Sales Forecasting**” in the field security profile. Otherwise, the column will show zero values for all users except system administrators. Follow these steps to configure the field security profiles:
+To solve the first issue, you need to provide read access to the user “**# Dynamics 365 Sales Forecasting**” in the field security profile. Follow these steps to configure the field security profiles:
 1. Go to **Settings**> **Security** > **Field Security Profiles**.
 1. Select an existing profile or create a new one.
 1. Click **Users** or **Teams** to add the users or teams that you want to grant access to the secure fields.
 1. Click **Field Permissions** to set the permissions for each field. You can choose **Read**, **Create**, or **Update**, or a combination of them.
 1. Save and close the profile.
 
+To solve the second issue, ensure that the user “**# Dynamics 365 Sales Forecasting**” has read access to the roll up entity that has field-level security.
 
 
 ## Issue 12 - Unable to manually recalculate the prediction column in the Forecast.
