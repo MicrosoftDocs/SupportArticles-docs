@@ -1,7 +1,7 @@
 ---
 title: Azure virtual machine (VM) is unavailable for 15 minutes
 description: Learn what it means when you receive an alert in Resource Health or the activity log stating that your VM is unavailable for 15 minutes. 
-ms.date: 8/3/2022
+ms.date: 08/03/2022
 ms.reviewer: v-leedennis
 editor: v-jsitser
 ms.service: virtual-machines

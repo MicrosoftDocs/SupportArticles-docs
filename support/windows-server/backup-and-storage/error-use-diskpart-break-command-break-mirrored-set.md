@@ -1,7 +1,7 @@
 ---
 title: Error message when you use the DiskPart break command
 description: Describes an issue where an error occurs when you use the DiskPart break command to break a mirrored set.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

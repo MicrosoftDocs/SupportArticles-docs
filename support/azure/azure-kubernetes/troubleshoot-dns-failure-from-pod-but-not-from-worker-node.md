@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot DNS resolution failures from inside the pod
 description: Troubleshoot DNS resolution failures from inside the pod but not from the worker node within an Azure Kubernetes Service (AKS) cluster.
-ms.date: 11/4/2022
+ms.date: 11/04/2022
 ms.reviewer: chiragpa, rissing, v-leedennis
 editor: v-jsitser
 ms.service: azure-kubernetes-service

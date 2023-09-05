@@ -1,7 +1,7 @@
 ---
 title: Services do not automatically restart on a computer that uses NIC Teaming
 description: Resolves a problem in which services do not automatically restart on a computer that uses NIC Teaming.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

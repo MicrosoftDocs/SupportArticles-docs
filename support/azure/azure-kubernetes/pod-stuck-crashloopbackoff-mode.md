@@ -1,7 +1,7 @@
 ---
 title: Pod is stuck in CrashLoopBackOff mode
 description: Troubleshoot a scenario in which a pod is stuck in CrashLoopBackOff mode on an Azure Kubernetes Service (AKS) cluster.
-ms.date: 7/8/2022
+ms.date: 07/08/2022
 editor: v-jsitser
 ms.reviewer: chiragpa, nickoman, v-leedennis
 ms.service: azure-kubernetes-service

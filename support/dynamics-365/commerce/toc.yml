@@ -13,7 +13,12 @@
       items:
         - name: Troubleshoot issues with the online store transaction creation process
           href: order-management/online-order-transaction-creation-failures.md   
+    - name: Payments
+      items:
+        - name: A card payment fails due to an unsupported card type
+          href: payments/card-payments-fail-with-unsupported-card-type.md
     - name: Point of sale (POS)
       items:
         - name: Store Commerce app (POS) is suddenly deactivated
-          href: point-of-sale/store-commerce-app-pos-deactivated.md    
+          href: point-of-sale/store-commerce-app-pos-deactivated.md
+

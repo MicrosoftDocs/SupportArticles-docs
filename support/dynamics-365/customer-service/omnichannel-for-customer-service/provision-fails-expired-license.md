@@ -4,6 +4,7 @@ description: Provides a resolution for the issue where you can't provision Omnic
 ms.reviewer: laalexan
 ms.author: nahadda
 ms.date: 05/23/2023
+ms.custom: has-azure-ad-ps-ref
 ---
 # Provisioning fails due to an expired license
 

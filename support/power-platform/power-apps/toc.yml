@@ -72,6 +72,10 @@ items:
           href: manage-apps-and-solutions/entitykey-selected-attributes-already-exists.md
         - name: Can't import solutions or publish changes
           href: manage-apps-and-solutions/cannot-import-solutions-publish-changes.md
+        - name: Can't install managed solution previously deployed as unmanaged
+          href: manage-apps-and-solutions/failure-converting-to-managed-solution.md          
+        - name: Changes not effective after solution import
+          href: manage-apps-and-solutions/changes-not-effective-solution-import.md
         - name: Concurrent solution operation failures
           href: manage-apps-and-solutions/concurrent-solution-operation-failures.md
         - name: Duplicate security roles after solution import

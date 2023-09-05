@@ -3,7 +3,7 @@ title: Error 2147209462 logged in mailbox record
 description: This article provides a resolution for the problem that occurs when the corresponding Queue record in Dynamics 365 is owned by a team that does not have any security roles assigned.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-email-office-integration
 ---
 # Error code -2147209462 logged in Microsoft Dynamics 365 mailbox record

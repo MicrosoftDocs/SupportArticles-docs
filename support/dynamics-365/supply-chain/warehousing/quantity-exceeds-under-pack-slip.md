@@ -2,7 +2,7 @@
 title: Quantity exceeds under-delivery percentage during packing slip generation
 description: Provides a resolution for the issue that you can't create a packing slip if the outbound load contains a quantity that exceeds the under-delivery percentage.
 author: Mirzaab
-ms.date: 5/31/2021
+ms.date: 05/31/2021
 ms.topic: troubleshooting
 ms.search.form: WHSLoadTable_WHSSalesPackingSlipPost,WHSLoadPlanningListPage_WHSSalesPackingSlipPost,WHSLoadPlanningWorkbench_WHSSalesPackingSlipPost
 audience: Application User

@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot missing heartbeats in Linux agents
 description: "Troubleshoot scenarios in which a Linux Log Analytics agent doesn't report heartbeats to the Log Analytics workspace."
-ms.date: 3/29/2022
+ms.date: 03/29/2022
 ms.reviewer: irfanr, nali2, arboisse, v-leedennis
 editor: v-jsitser
 ms.service: azure-monitor

@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot the ZonalAllocationFailed or AllocationFailed error
 description: Learn how to troubleshoot the ZonalAllocationFailed or AllocationFailed error when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
-ms.date: 3/10/2022
+ms.date: 03/10/2022
 editor: v-jsitser
 ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis
 ms.service: azure-kubernetes-service

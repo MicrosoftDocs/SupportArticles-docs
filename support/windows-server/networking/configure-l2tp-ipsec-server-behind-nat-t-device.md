@@ -1,7 +1,7 @@
 ---
 title: Configure L2TP/IPsec server behind NAT-T device
 description: Discusses how to configure an L2TP/IPsec server behind a NAT-T device in Windows Vista and in Windows Server 2008.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

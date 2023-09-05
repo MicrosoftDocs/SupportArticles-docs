@@ -1,7 +1,7 @@
 ---
 title: Can't set the uid and gid mounting options on an Azure disk
 description: Troubleshoot Kubernetes failures that are caused when you try to set the uid and GID mounting options on an Azure disk.
-ms.date: 5/25/2022
+ms.date: 05/25/2022
 ms.reviewer: chiragpa, nickoman, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-azure-storage-issues

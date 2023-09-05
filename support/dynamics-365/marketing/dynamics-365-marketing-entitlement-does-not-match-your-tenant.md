@@ -3,7 +3,7 @@ title: Dynamics 365 Marketing entitlement doesn't match your tenant
 description: Your selected Dynamics 365 organization entitlement doesn't match your tenant. This message may occur when you install the Microsoft Dynamics 365 marketing application.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-marketing-marketing
 ---
 # Microsoft Dynamics 365 Marketing entitlement does not match your tenant

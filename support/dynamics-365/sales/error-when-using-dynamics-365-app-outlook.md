@@ -3,7 +3,7 @@ title: This email is saved in another mailbox when you use Dynamics 365 App for 
 description: This article provides a resolution for the problem that occurs when you use Dynamics 365 App for Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-email-office-integration
 ---
 # This email is saved in another mailbox. Please select the right sender mailbox using the "From" field to view related information

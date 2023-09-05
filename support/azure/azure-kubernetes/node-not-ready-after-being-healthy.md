@@ -1,7 +1,7 @@
 ---
 title: Node Not Ready status after node is in a healthy state
 description: Troubleshoot scenarios in which an Azure Kubernetes Service (AKS) cluster node goes to a Not Ready status after is in a healthy state.
-ms.date: 4/15/2022
+ms.date: 04/15/2022
 ms.reviewer: rissing, chiragpa, momajed, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-node-not-ready

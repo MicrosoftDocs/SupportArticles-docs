@@ -5,6 +5,7 @@ ms.date: 05/11/2020
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: authentication
+ms.custom: has-azure-ad-ps-ref
 ---
 # Federated users in Azure AD are forced to sign in frequently
 

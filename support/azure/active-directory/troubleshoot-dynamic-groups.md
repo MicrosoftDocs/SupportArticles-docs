@@ -4,6 +4,7 @@ description: Diagnose and resolve issues with dynamic groups.
 ms.date: 12/10/2020
 ms.service: active-directory
 ms.subservice: domain-services
+ms.custom: has-azure-ad-ps-ref
 ---
 # Troubleshoot dynamic groups
 

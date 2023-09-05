@@ -1,7 +1,7 @@
 ---
 title: SSPR_0029 - Your organization hasn't properly set up the on-premises configuration for password reset
 description: Troubleshoot password writeback generic error code SSPR_0029 - Your organization hasn't properly set up the on-premises configuration for password reset.
-ms.date: 8/17/2022
+ms.date: 08/17/2022
 ms.reviewer: jarrettr, nualex, v-leedennis
 ms.service: active-directory
 ms.subservice: enterprise-users
