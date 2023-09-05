@@ -5,6 +5,7 @@ ms.date: 05/22/2020
 ms.reviewer: willfid
 ms.service: active-directory
 ms.subservice: enterprise-users
+ms.custom: has-azure-ad-ps-ref
 ---
 # Password isn't synced from Azure AD to on-premises after the password is changed or reset
 
