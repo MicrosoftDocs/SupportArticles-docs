@@ -173,7 +173,7 @@ This issue can occur when the "**# Dynamics 365 Sales Forecasting**" user doesn'
 
 To solve the issue, follow the steps:
 1. Go to **Advanced settings**, and then select **Settings** > **System** > **Security** > **Security roles**.
-1. Open the **Forecast AppUser** role and then select tab where the entity type is present.![](media/troubleshoot-forecast-issues/activation-1.png).
+1. Open the **Forecast AppUser** role and then select tab where the entity type is present.![Screenshot of the Forecast App User role](media/troubleshoot-forecast-issues/activation-1.png).
 
 1. Enable the **read** permission at organization level for the lookup field's entity type.
 1. Save the changes.
@@ -189,7 +189,7 @@ Forecast activation can fail due to multiple reasons. Verify each of the followi
 
 To solve the above issue, follow the steps:
 1. Make sure that you have done all the mandatory configurations for your forecast model. 
-1. Ensure that the hierarchy filters in the forecast configuration does not filter out the entire hierarchy. Verify the Preview section in the General step to ensure that the hierarchy exists. For more information see,[ Add additional filters to a forecast](https://learn.microsoft.com/en-us/dynamics365/sales/add-additional-filters) 
+1. Ensure that the hierarchy filters in the forecast configuration does not filter out the entire hierarchy. Verify the Preview section in the General step to ensure that the hierarchy exists. For more information see,[ Add additional filters to a forecast](/dynamics365/sales/add-additional-filters) 
 
 
 ## Issue 9 - Can't find the forecast configuration option in App Settings.
@@ -203,7 +203,7 @@ The forecast configuration option may not be visible in the App Settings of Sale
 
 To solve the above issue, follow the steps:
 1. Assign Forecast Manager security roles for the user who should be able to create and manage Forecast configurations.
-1. In the Forecast Configuration, Forecasts navigation pane items must be added in a custom app. For more information see,[ Add forecast grid and configuration to sitemap | Microsoft Learn](https://learn.microsoft.com/en-us/dynamics365/sales/add-forecast-site-map#add-forecast-grid-and-forecast-configuration-options-to-sitemap)
+1. In the Forecast Configuration, Forecasts navigation pane items must be added in a custom app. For more information see,[ Add forecast grid and configuration to sitemap | Microsoft Learn](/dynamics365/sales/add-forecast-site-map#add-forecast-grid-and-forecast-configuration-options-to-sitemap)
 
 
 ## Issue 10 - Unable to view the forecasts for user hierarchy.
@@ -216,7 +216,7 @@ This issue can be due to insufficient permission to view the forecast.
 Verify the following:
 1. Ensure that one of the following conditions is satisfied:
    * You are  the owner of the forecast, based on the owner field in the Permission step of the forecast configuration.
-     ![permission](media/troubleshoot-forecast-issues/permission.png)
+     ![Screenshot of the permission step.](media/troubleshoot-forecast-issues/permission.png)
    * You are part of the security roles that have read permissions, as configured in the Permission step of the forecast configuration.
    * Someone shared the forecast with you. For more information please see, [Enable or disable forecast sharing](/dynamics365/sales/provide-permissions-forecast)
 1. Ensure that the Owner lookup field is not set to **None** in permissions step. If it's set to **None**, no one can view the forecast.
