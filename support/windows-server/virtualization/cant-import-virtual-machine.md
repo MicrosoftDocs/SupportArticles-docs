@@ -1,7 +1,7 @@
 ---
 title: Can't import a virtual machine by using Hyper-V Manager or SCVMM on a Hyper-V server
 description: Fixes an issue where you may receive a 0x80070057 error message when you import a virtual machine on a Hyper-V server.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

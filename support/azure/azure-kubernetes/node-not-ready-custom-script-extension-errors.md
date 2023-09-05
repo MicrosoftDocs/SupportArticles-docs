@@ -1,7 +1,7 @@
 ---
 title: Node Not Ready because of custom script extension (CSE) errors
 description: Troubleshoot scenarios in which custom script extension (CSE) errors cause Node Not Ready states in an Azure Kubernetes Service (AKS) cluster node pool.
-ms.date: 4/15/2022
+ms.date: 04/15/2022
 ms.reviewer: rissing, chiragpa, momajed, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-node-not-ready

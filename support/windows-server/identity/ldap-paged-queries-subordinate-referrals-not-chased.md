@@ -1,7 +1,7 @@
 ---
 title: LDAP Paged Queries with subordinate referrals are not chased properly
 description: Provides some approaches to avoid the problem that LDAP Paged Queries with subordinate referrals are not chased properly
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

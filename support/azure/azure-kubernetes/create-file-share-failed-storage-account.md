@@ -1,7 +1,7 @@
 ---
 title: Failed to create file share on storage account
 description: Troubleshoot why you can't create a file share on a storage account for an Azure Kubernetes Service (AKS) cluster.
-ms.date: 5/25/2022
+ms.date: 05/25/2022
 ms.reviewer: chiragpa, nickoman, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-azure-storage-issues

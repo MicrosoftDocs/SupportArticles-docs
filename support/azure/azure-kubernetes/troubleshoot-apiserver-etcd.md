@@ -3,7 +3,7 @@ title: Troubleshoot API server and etcd problems in AKS
 description: Provides a troubleshooting guide for API server and etcd problems in Azure Kubernetes Services.
 author: seguler
 ms.author: segule
-ms.date: 8/17/2023
+ms.date: 08/17/2023
 ms.service: azure-kubernetes-service
 ms.reviewer: mikerooney, v-weizhu, axelg, v-leedennis
 ---

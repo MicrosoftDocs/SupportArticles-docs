@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot password writeback access rights and permissions
 description: Learn about preparatory troubleshooting steps involving the required access rights and permissions for password writeback.
-ms.date: 6/2/2022
+ms.date: 06/02/2022
 ms.reviewer: jarrettr, nualex, v-leedennis
 ms.service: active-directory
 ms.subservice: enterprise-users

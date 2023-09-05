@@ -1,7 +1,7 @@
 ---
 title: Resolve Microsoft Monitoring Agent startup failure
 description: Troubleshoot the error message "The Microsoft Monitoring Agent service terminated with service-specific error Access is denied."
-ms.date: 1/31/2022
+ms.date: 01/31/2022
 ms.reviewer: irfanr, v-leedennis
 editor: v-jsitser
 ms.service: azure-monitor

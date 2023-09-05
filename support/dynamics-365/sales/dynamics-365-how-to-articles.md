@@ -2,7 +2,7 @@
 title: Microsoft Dynamics 365 How to articles
 description: Contains the links to documentation on How to perform specific operations in Microsoft Dynamics 365.
 ms.reviewer: 
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-apps-addons
 ---
 # Microsoft Dynamics 365 "How to" articles

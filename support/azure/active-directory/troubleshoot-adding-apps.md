@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot common problems adding or removing an application to Azure Active Directory
 description: Troubleshoot the common problems people face when adding or removing an app in Azure Active Directory.
-ms.date: 6/25/2023
+ms.date: 06/25/2023
 author: bernawy
 ms.author: bernaw
 editor: v-jsitser

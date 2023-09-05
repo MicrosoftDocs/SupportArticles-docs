@@ -5,7 +5,7 @@ author: msaenzbosupport
 ms.author: msaenzbo
 ms.reviewer: divargas-msft
 editor: v-jsitser
-ms.date: 3/15/2023
+ms.date: 03/15/2023
 ms.service: virtual-machines
 ms.subservice: redhat
 ---

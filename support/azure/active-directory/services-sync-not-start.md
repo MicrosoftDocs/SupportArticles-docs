@@ -1,7 +1,7 @@
 ---
 title: Azure Active Directory Connect services don't start
 description: Describes an issue that prevents Azure Active Directory Connect services from starting. Provides a resolution.
-ms.date: 5/26/2022
+ms.date: 05/26/2022
 ms.reviewer: riantu, nualex, reviei, v-leedennis
 ms.service: active-directory
 ms.subservice: enterprise-users
