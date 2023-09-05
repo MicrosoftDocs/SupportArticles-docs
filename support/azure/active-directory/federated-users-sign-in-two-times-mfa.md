@@ -5,6 +5,7 @@ ms.date: 05/22/2020
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: authentication
+ms.custom: has-azure-ad-ps-ref
 ---
 # Federated users in Azure Active Directory may have to sign in two times before being prompted for MFA
 

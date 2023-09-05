@@ -5,6 +5,7 @@ ms.date: 05/11/2020
 ms.reviewer: willfid
 ms.service: active-directory
 ms.subservice: enterprise-users
+ms.custom: has-azure-ad-ps-ref
 ---
 # How to use UPN matching for identity synchronization in Office 365, Azure, or Intune
 

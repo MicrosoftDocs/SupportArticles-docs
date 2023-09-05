@@ -5,6 +5,7 @@ ms.reviewer: hamenon, mansong
 ms.topic: troubleshooting
 ms.date: 03/07/2023
 ms.subservice: power-automate-flows
+ms.custom: has-azure-ad-ps-ref
 ---
 # Power Automate Approval Dataverse provisioning errors and recommendations
 

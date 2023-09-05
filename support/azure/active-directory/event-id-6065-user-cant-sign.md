@@ -5,6 +5,7 @@ ms.date: 06/08/2020
 ms.reviewer: cpuckett
 ms.service: active-directory
 ms.subservice: authentication
+ms.custom: has-azure-ad-ps-ref
 ---
 # Error when Windows 10 devices settings fail to sync: This user can't sign in because this account is currently disabled
 

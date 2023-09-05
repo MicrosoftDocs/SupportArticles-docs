@@ -6,6 +6,7 @@ ms.reviewer: nualex
 editor: v-jesits
 ms.service: active-directory
 ms.subservice: enterprise-users
+ms.custom: has-azure-ad-ps-ref
 ---
 
 # End-to-end troubleshooting of Azure AD Connect objects and attributes
