@@ -1,7 +1,7 @@
 ---
 title: Instance-level public IP address configuration in Cloud Services
 description: Learn more about instance-level public IP address configuration in Microsoft Azure Cloud Services.
-ms.date: 3/15/2023
+ms.date: 03/15/2023
 editor: v-jsitser
 ms.topic: how-to
 ms.reviewer: maheshallu, piw, v-frpan, v-leedennis

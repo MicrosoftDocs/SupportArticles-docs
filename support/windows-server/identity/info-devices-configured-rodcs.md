@@ -1,7 +1,7 @@
 ---
 title: Information about devices from Riverbed Technology that are configured as RODCs
 description: Describes the information about devices from Riverbed Technology that are configured as RODCs.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

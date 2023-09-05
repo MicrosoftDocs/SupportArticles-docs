@@ -1,7 +1,7 @@
 ---
 title: Active Directory Flexible Single Master Operation (FSMO) roles in Windows
 description: This article talks about the Active Directory FSMO roles in Windows.
-ms.date: 12/1/2021
+ms.date: 12/01/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

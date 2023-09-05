@@ -1,7 +1,7 @@
 ---
 title: Windows stop error 0xC0000102 Status File Corrupt
 description: Fixes error 0xC0000102 (Status File Corrupt) that occurs on an Azure virtual machine (VM).
-ms.date: 12/8/2020
+ms.date: 12/08/2020
 ms.reviewer: jarrettr
 ms.service: virtual-machines
 ms.subservice: vm-cannot-start-stop

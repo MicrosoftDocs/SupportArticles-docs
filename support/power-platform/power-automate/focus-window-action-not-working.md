@@ -2,7 +2,7 @@
 title: Focus window can't bring a specific window to focus
 description: Provides a workaround to make sure that application windows become focused in Power Automate.
 ms.reviewer: pefelesk
-ms.date: 9/21/2022
+ms.date: 09/21/2022
 ms.subservice: power-automate-desktop-flows
 ---
 # The Focus window action can't bring a specific window to focus

@@ -1,7 +1,7 @@
 ---
 title: Error 2147944102 when you start BITS service
 description: Provides a solution to an error 2147944102 that occurs when you start the Background Intelligent Transfer Service (BITS) Service.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

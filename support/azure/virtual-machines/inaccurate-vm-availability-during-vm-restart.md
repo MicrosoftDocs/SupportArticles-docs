@@ -1,7 +1,7 @@
 ---
 title: VM availability might be inaccurate during VM restarts
 description: Understand why VM availability might be reported inaccurately during virtual machine restarts in Azure.
-ms.date: 5/12/2023
+ms.date: 05/12/2023
 editor: v-jsitser
 ms.reviewer: macla, azurevmcptcic, v-leedennis
 ms.service: virtual-machines

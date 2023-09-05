@@ -1,7 +1,7 @@
 ---
 title: LDS service startup fails
 description: Introduce the solution for LDS Service startup failure after you manually change msDS-Behavior-Version attribute.
-ms.date: 12/9/2021
+ms.date: 12/09/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

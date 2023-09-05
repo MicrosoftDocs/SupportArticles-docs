@@ -2,7 +2,7 @@
 title: Location profile disallows negative inventory, but negative on-hand inventory is permitted
 description: Provides a resolution for the issue that the system still allows negative on-hand inventory even though the Allow negative inventory option for the location profile is set to No.
 author: Mirzaab
-ms.date: 4/11/2021
+ms.date: 04/11/2021
 ms.topic: troubleshooting
 ms.search.form: WHSLocationProfile
 audience: Application User

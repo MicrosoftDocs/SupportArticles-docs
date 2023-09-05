@@ -1,7 +1,7 @@
 ---
 title: Fix connection issues to an app that's hosted on an AKS cluster
 description: Learn about basic troubleshooting steps if you experience connection issues to an application that's hosted on an Azure Kubernetes Service (AKS) cluster.
-ms.date: 8/19/2022
+ms.date: 08/19/2022
 ms.reviewer: chiragpa, pkc, rissing, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: cannot-connect-to-app-on-cluster

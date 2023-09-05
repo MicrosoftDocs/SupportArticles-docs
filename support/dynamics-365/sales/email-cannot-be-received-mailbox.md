@@ -3,7 +3,7 @@ title: Email cannot be received for the mailbox
 description: Fix an issue that occurs when you try to test and enable a mailbox in Microsoft Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-email-office-integration
 ---
 # "The email server location or the incoming email port specified in the associated email server profile [profile name] is incorrect" error occurs in Microsoft Dynamics 365

@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot failed Linux compute node agent extension installation
 description: Troubleshoot a failed Linux compute node agent extension installation from Microsoft HPC Pack on a high-performance computing (HPC) cluster.
-ms.date: 10/5/2022
+ms.date: 10/05/2022
 editor: v-jsitser
 ms.reviewer: cargonz, v-leedennis
 ms.prod: hpcpack
