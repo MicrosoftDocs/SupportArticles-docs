@@ -3,18 +3,17 @@ title: Troubleshoot issues with forecasting
 description: Provides resolutions for the known issues that are related to forecasting in Dynamics 365 Sales.
 author: sbmjais
 ms.author: shjais
-ms.topic: troubleshooting
-ms.date: 02/28/2022
+ms.reviewer: ladirohit 
+ms.date: 09/05/2023
 ms.subservice: d365-sales-sales
 ---
-
 # Troubleshoot issues with forecasting
 
-This article helps you troubleshoot and resolve issues related to forecasting.
+This article helps you troubleshoot and resolve issues related to forecasting in Microsoft Dynamics 365 Sales.
 
 ## Issue 1 - An error is displayed when you try to create a territory-based forecast
 
-### Symptom
+### Symptoms
 
 When you try to create a territory-based forecast, an error is displayed. Also, the data in a territory-based forecast might not be refreshed.
 
@@ -149,117 +148,128 @@ To resolve this error, your administrator must provide read privileges on **Fore
 
 ### Cause
 
-In a forecast, after updating the forecast category field to Won or Lost, the opportunities are still appearing in the previous pipeline bucket. This error is occurring due to the **Opportunity Forecast Category Mapping Process** workflow is disabled in your organization.
+In a forecast, after updating the forecast category field to **Won** or **Lost**, the opportunities are still appearing in the previous pipeline bucket. This error is occurring due to the **Opportunity Forecast Category Mapping Process** workflow is disabled in your organization.
 
 ### Resolution
 
 To resolve the error, activate the **Opportunity Forecast Category Mapping Process** workflow. Follow these steps:
 
 1. Go to **Advanced settings**, and then select **Settings** > **Customizations** > **Customize the System**.
-1. From the sitemap, select **Processes**.
-1. Select the **Opportunity Forecast Category Mapping Process** workflow and select **Activate**.
- :::image type="content" source="media/troubleshoot-forecast-issues/activate-opportunity-forecast-category-process.png" alt-text="Activate the Opportunity Forecast Category Mapping Process workflow.":::
- The forecast categories in the opportunities will be updated properly. For opportunities that were changed before activating the workflow must be manually changed. Also, open the **Opportunity Forecast Category Mapping Process** workflow and verify that the conditions are properly defined for each forecast category.
- :::image type="content" source="media/troubleshoot-forecast-issues/opportunity-forecast-category-process-conditions.png" alt-text="The Opportunity Forecast Category Mapping Process workflow conditions.":::
+1. In the sitemap, select **Processes**.
+1. Select the **Opportunity Forecast Category Mapping Process** workflow and then select **Activate**.
+
+   :::image type="content" source="media/troubleshoot-forecast-issues/activate-opportunity-forecast-category-process.png" alt-text="Activate the Opportunity Forecast Category Mapping Process workflow.":::
+
+    The forecast categories in the opportunities will be updated properly. The opportunities that were changed before activating the workflow must be manually changed. Also, open the **Opportunity Forecast Category Mapping Process** workflow and verify that the conditions are properly defined for each forecast category.
+
+   :::image type="content" source="media/troubleshoot-forecast-issues/opportunity-forecast-category-process-conditions.png" alt-text="The Opportunity Forecast Category Mapping Process workflow conditions.":::
+
 1. Save and close the settings.
 
+## Issue 7 - Can't activate a forecast that has a hierarchy-related column of lookup type
 
-## Issue 7 - Unable to activate forecast with a hierarchy-related column as lookup type.
 ### Cause
 
-This issue can occur when the "**# Dynamics 365 Sales Forecasting**" user doesn't have read permissions for hierarchy-related lookup entity.
+This issue occurs because the "Dynamics 365 Sales Forecasting" user doesn't have the read permission to the entity type of a hierarchy-related lookup entity.
 
 ### Resolution
 
 To solve the issue, follow the steps:
-1. Go to **Advanced settings**, and then select **Settings** > **System** > **Security** > **Security roles**.
-1. Open the **Forecast AppUser** role and then select tab where the entity type is present.![Screenshot of the Forecast App User role](media/troubleshoot-forecast-issues/activation-1.png).
 
-1. Enable the **read** permission at organization level for the lookup field's entity type.
-1. Save the changes.
+1. Go to **Advanced settings**, and select **Settings** > **System** > **Security** > **Security roles**.
 
+1. Open the **Forecast AppUser** role and select the tab where the entity type is present.
 
-## Issue 8 - Unable to activate a forecast.
+   :::image type="content" source="media/troubleshoot-forecast-issues/set-up-read-permission.png" alt-text="Screenshot that shows how to find and assign the read permission to the entity type.":::
 
-### Cause
+1. Enable the **Read** permission at the organization level for the lookup field's entity type.
+1. Save and close the role.
 
-Forecast activation can fail due to multiple reasons. Verify each of the following steps in resolution:
-
-### Resolution
-
-To solve the above issue, follow the steps:
-1. Make sure that you have done all the mandatory configurations for your forecast model. 
-1. Ensure that the hierarchy filters in the forecast configuration does not filter out the entire hierarchy. Verify the Preview section in the General step to ensure that the hierarchy exists. For more information see,[ Add additional filters to a forecast](/dynamics365/sales/add-additional-filters) 
-
-
-## Issue 9 - Can't find the forecast configuration option in App Settings.
-### Cause
-
-The forecast configuration option may not be visible in the App Settings of Sales Hub app due to the following reasons:
-* You don't have read permissions for the Forecast configuration entity.
-* Your administrator has not added the forecast grid or configuration page manually under the Performance Management section.
-
-### Resolution
-
-To solve the above issue, follow the steps:
-1. Assign Forecast Manager security roles for the user who should be able to create and manage Forecast configurations.
-1. In the Forecast Configuration, Forecasts navigation pane items must be added in a custom app. For more information see,[ Add forecast grid and configuration to sitemap | Microsoft Learn](/dynamics365/sales/add-forecast-site-map#add-forecast-grid-and-forecast-configuration-options-to-sitemap)
-
-
-## Issue 10 - Unable to view the forecasts for user hierarchy.
-### Cause
-
-This issue can be due to insufficient permission to view the forecast. 
-
-### Resolution
-
-Verify the following:
-1. Ensure that one of the following conditions is satisfied:
-   * You are  the owner of the forecast, based on the owner field in the Permission step of the forecast configuration.
-     ![Screenshot of the permission step.](media/troubleshoot-forecast-issues/permission.png)
-   * You are part of the security roles that have read permissions, as configured in the Permission step of the forecast configuration.
-   * Someone shared the forecast with you. For more information please see, [Enable or disable forecast sharing](/dynamics365/sales/provide-permissions-forecast)
-1. Ensure that the Owner lookup field is not set to **None** in permissions step. If it's set to **None**, no one can view the forecast.
-
-
-## Issue 11 - Forecast field values are showing 0 or blank in forecast grid.
+## Issue 8 - Can't activate a forecast
 
 ### Cause
 
-The issue can be caused due to the following reasons:
-* The forecasting application user "**# Dynamics 365 Sales Forecasting**" doesn't have read access to rollup entity records.
-* The fields in the rollup entity have field-level security. 
+The forecast activation fails due to multiple reasons.
 
 ### Resolution
 
-To solve the first issue, you need to provide read access to the user “**# Dynamics 365 Sales Forecasting**” in the field security profile. Follow these steps to configure the field security profiles:
+To solve the issue, follow the steps:
+
+1. Make sure that you have done all the mandatory configurations for your forecast model.
+1. Make sure that the hierarchy filters defined by the forecasting application user don't filter the entire hierarchy. For more information, see [Add additional filters to a forecast](/dynamics365/sales/add-additional-filters).
+
+## Issue 9 - Can't see the forecast configuration navigation pane item in the App settings under the Performance Management section in the Sales Hub app
+
+### Cause
+
+The forecast configuration isn't visible due to multiple reasons:
+
+1. A sign-in user deson't have the read permission to the Forecast configuration entity.
+1. The forecasting application user doesn't manually [add the forecast grid and configuration]((/dynamics365/sales/add-forecast-site-map#add-forecast-grid-and-forecast-configuration-options-to-sitemap)) in the **App settings** under the **Performance Management** section.
+
+### Resolution
+
+To solve the issue, follow these steps:
+
+1. Assign the Forecast Manager security roles to the user who should be able to create and manage forecast configurations.
+1. In the **Forecast configuration**, the forecast navigation pane items must be added in a custom app.
+
+## Issue 10 - Can't view the forecasts for user hierarchy in the forecasting grid page
+
+### Cause
+
+This issue occurs due to multiple reasons.
+
+### Resolution
+
+To solve the issue, follow these steps:
+
+1. You can view forecasts for a forecast configuration only when one of these conditions are satisfied:
+
+   1. You're the owner of a forecast, which is shown in the **Owner lookup field** field in the **Permissions** step of the forecast configuration.
+
+      :::image type="content" source="media/troubleshoot-forecast-issues/permission.png" alt-text="Screenshot that shows the Permissions step of the forecast configuration.":::
+
+   2. You're assigned security roles that have the read permission in the **Permissions** step of the forecast configuration.
+   3. Forecasts have been shared with you. For more information, see [Enable or disable forecast sharing](/dynamics365/sales/provide-permissions-forecast).
+
+1. Check if the **Owner lookup field** is set to **None** in the **Permissions** step of the forecast configuration. If it's set to **None**, no one can view the forecasts.
+
+## Issue 11 - Forecast field values show zero or blank in the forecast grid
+
+### Cause
+
+This issue occurs due to multiple reasons:
+
+1. The Dynamics 365 Sales Forecasting user in the forecasting application doesn't have the read permission to the rollup entity records.
+1. The fields in the rollup entity have the field-level security.
+
+### Resolution
+
+To solve the issue, you need to provide the read permission to the Dynamics 365 Sales Forecasting user in the field security profiles. Otherwise, the column will show **zero** to all users except system administrators. Follow these steps to configure the field security profiles:
+
 1. Go to **Settings**> **Security** > **Field Security Profiles**.
 1. Select an existing profile or create a new one.
-1. Click **Users** or **Teams** to add the users or teams that you want to grant access to the secure fields.
-1. Click **Field Permissions** to set the permissions for each field. You can choose **Read**, **Create**, or **Update**, or a combination of them.
+1. Select **Users** or **Teams** to add the users or teams that you want to grant access to the secure fields.
+1. Select **Field Permissions** to set the permissions for each field. You can select **Read**, **Create**, or **Update**, or a combination of them.
 1. Save and close the profile.
 
-To solve the second issue, ensure that the user “**# Dynamics 365 Sales Forecasting**” has read access to the roll up entity that has field-level security.
-
-
-## Issue 12 - Unable to manually recalculate the prediction column in the Forecast.
+## Issue 12 - Can't manually recalculate the prediction column on the Forecasts page
 
 ### Cause
 
-The prediction column in the Forecast cannot be manually recalculated. 
+The prediction column on the **Forecasts** page can't be [manually recalculated](/dynamics365/sales/keep-forecast-data-up-to-date#recalculate-and-refresh-forecast-data-manually).
 
 ### Resolution
 
-The prediction column in the Forecast is automatically recalculated after every seven days and it doesn't support manual recalculation. This is because predictions are based on AI-driven models that look at historical data and the open sales pipeline to predict future revenue outcome. The prediction column shows the predicted revenue for each seller and manager based on the Status field of an opportunity. To optimize the accuracy of the predictions, ensure the Forecast Category values are kept in sync with the Status field. For the out-of-the-box forecast category, a workflow ensures that when an opportunity is closed as Won or Lost, the forecast category is updated with the proper value.
+The prediction column on the **Forecasts** page that's recalculated after every seven days can't be manually recalculated. This is because predictions are based on AI-driven models that look at historical data and the open sales pipeline to predict future revenue outcome. The prediction column shows the predicted revenue for each seller and manager based on the **Status** field of an opportunity. To optimize the accuracy of the predictions, ensure the **Forecast Category** values are kept in sync with the **Status** field. For the out-of-the-box forecast category, a workflow ensures that when an opportunity is closed as **Won** or **Lost**, the forecast category is updated with the proper value.
 
-
-## Issue 13 - Forecast underlying grid view is disabled (read only) when the page is loading.
+## Issue 13 - Forecast underlying grid view is disabled (read-only) when the page is loading
 
 ### Cause
 
-There could be a custom Javascript configured in the Forecast configuration which is preventing the grid from being editable.
+The [custom Javascript configured in the forecast configuration](/dynamics365/sales/forecast-configure-advanced-settings#upload-the-javascript-library-to-your-forecast) prevents the grid to be editable.
 
 ### Resolution
 
-To solve the issue, make sure to review the custom javascript code and check whether it is disabling the underlying records grid view.
-
+To solve the issue, review the custom javascript code and check if it disables the underlying records grid view.
