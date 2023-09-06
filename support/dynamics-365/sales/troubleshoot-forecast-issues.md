@@ -205,7 +205,7 @@ To solve the issue, follow the steps:
 The forecast configuration isn't visible due to multiple reasons:
 
 1. A sign-in user deson't have the read permission to the Forecast configuration entity.
-1. The forecasting application user doesn't manually [add the forecast grid and configuration]((/dynamics365/sales/add-forecast-site-map#add-forecast-grid-and-forecast-configuration-options-to-sitemap)) in the **App settings** under the **Performance Management** section.
+1. The forecasting application user doesn't manually [add the forecast grid and configuration](/dynamics365/sales/add-forecast-site-map#add-forecast-grid-and-forecast-configuration-options-to-sitemap) in the **App settings** under the **Performance Management** section.
 
 ### Resolution
 
