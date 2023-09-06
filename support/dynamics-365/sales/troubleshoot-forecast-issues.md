@@ -148,7 +148,7 @@ To resolve this error, your administrator must provide read privileges on **Fore
 
 ### Cause
 
-In a forecast, after updating the forecast category field to **Won** or **Lost**, the opportunities are still appearing in the previous pipeline bucket. This error is occurring due to the **Opportunity Forecast Category Mapping Process** workflow is disabled in your organization.
+In a forecast, after updating the forecast category field to **Won** or **Lost**, the opportunities still appear in the previous pipeline bucket. This error occurs because the **Opportunity Forecast Category Mapping Process** workflow is disabled in your organization.
 
 ### Resolution
 
@@ -170,7 +170,7 @@ To resolve the error, activate the **Opportunity Forecast Category Mapping Proce
 
 ### Cause
 
-This issue occurs because the "Dynamics 365 Sales Forecasting" user doesn't have the read permission to a hierarchy-related lookup entity.
+This issue occurs because the "Dynamics 365 Sales Forecasting" user doesn't have the read permission to the hierarchy-related lookup entity.
 
 ### Resolution
 
@@ -204,21 +204,21 @@ To solve the issue, follow the steps:
 
 The forecast configuration option might not be visible in the App Settings of the Sales Hub app due to the following reasons:
 
-- You don't have the read permission to the Forecast configuration entity.
+- You don't have the read permission to the forecast configuration entity.
 - Your administrator didn't manually [add the forecast grid and configuration](/dynamics365/sales/add-forecast-site-map#add-forecast-grid-and-forecast-configuration-options-to-sitemap) under the **Performance Management** section.
 
 ### Resolution
 
 To solve the issue, follow these steps:
 
-1. Assign the Forecast Manager security roles to the user who should be able to create and manage forecast configurations.
-1. In the **Forecast configuration**, the forecast navigation pane items must be added in a custom app.
+1. Assign the Forecast Manager security role to the user who should be able to create and manage forecast configurations.
+1. In **Forecast configuration**, the forecast navigation pane items must be added in a custom app.
 
-## Issue 10 - Can't view the forecasts for user hierarchy
+## Issue 10 - Can't view forecasts for user hierarchy
 
 ### Cause
 
-This issue occurs due to insufficient permission to view the forecasts.
+This issue occurs due to insufficient permissions to view the forecast.
 
 ### Resolution
 
@@ -226,35 +226,30 @@ To solve the issue, make sure that:
 
 1. One of these conditions is satisfied:
 
-   - You're the owner of a forecast, which is shown in the **Owner lookup field** field in the **Permissions** step of the forecast configuration.
+   - You're the owner of the forecast. The **Owner lookup field** in the **Permissions** step of the forecast configuration shows who the owner is.
 
       :::image type="content" source="media/troubleshoot-forecast-issues/permission.png" alt-text="Screenshot that shows the Permissions step of the forecast configuration.":::
 
    - You're part of the security roles that have the read permission, as configured in the **Permissions** step of the forecast configuration.
-   - Someone shared the forecast with you. For more information, see [Enable or disable forecast sharing](/dynamics365/sales/provide-permissions-forecast).
+   - Someone has shared the forecast with you. For more information, see [Enable or disable forecast sharing](/dynamics365/sales/provide-permissions-forecast).
 
-1. The **Owner lookup field** isn't set to **None** in the **Permissions** step of the forecast configuration. If it's set to **None**, no one can view the forecasts.
+1. The **Owner lookup field** in the **Permissions** step of the forecast configuration isn't set to **None**. If it's set to **None**, no one can view the forecast.
 
 ## Issue 11 - Forecast field values show zero or blank in the forecast grid
 
 ### Cause
 
-The issue occurs due to one of the following reasons:
-
-1. The "Dynamics 365 Sales Forecasting" user in the forecasting application doesn't have the read permission to rollup entity records.
-2. The fields in the rollup entity have the field-level security.
+The fields in the rollup entity have field-level security.
 
 ### Resolution
 
-To solve the first issue, you need to provide the read permission to the Dynamics 365 Sales Forecasting user in the field security profiles. Follow these steps to configure the field security profiles:
+To solve the first issue, you need to provide the read permission to the Dynamics 365 Sales Forecasting user in the field security profiles. Otherwise, the column will show **0** to all users except system administrators. Follow these steps to configure the field security profiles:
 
 1. Go to **Settings**> **Security** > **Field Security Profiles**.
 1. Select an existing profile or create a new one.
 1. Select **Users** or **Teams** to add the users or teams that you want to grant access to the secure fields.
 1. Select **Field Permissions** to set the permissions for each field. You can select **Read**, **Create**, or **Update**, or a combination of them.
 1. Save and close the profile.
-
-To solve the second issue, ensure that the "Dynamics 365 Sales Forecasting" user has read permission to the rollup entity that has the field-level security.
 
 ## Issue 12 - Can't manually recalculate the prediction column on the Forecasts page
 
@@ -264,14 +259,14 @@ The prediction column on the **Forecasts** page can't be [manually recalculated]
 
 ### Resolution
 
-The prediction column in the Forecast is automatically recalculated after every seven days and it doesn't support manual recalculation. This is because predictions are based on AI-driven models that look at historical data and the open sales pipeline to predict future revenue outcome. The prediction column shows the predicted revenue for each seller and manager based on the **Status** field of an opportunity. To optimize the accuracy of the predictions, ensure the **Forecast Category** values are kept in sync with the **Status** field. For the out-of-the-box forecast category, a workflow ensures that when an opportunity is closed as **Won** or **Lost**, the forecast category is updated with the proper value.
+The prediction column in the Forecast is automatically recalculated after every seven days, and it doesn't support manual recalculation. This is because predictions are based on AI-driven models that look at historical data and the open sales pipeline to predict future revenue outcome. The prediction column shows the predicted revenue for each seller and manager based on the **Status** field of an opportunity. To optimize the accuracy of the predictions, ensure the **Forecast Category** values are kept in sync with the **Status** field. For the out-of-the-box forecast category, a workflow ensures that when an opportunity is closed as **Won** or **Lost**, the forecast category is updated with the proper value.
 
 ## Issue 13 - Forecast underlying grid view is disabled (read-only) when the page is loading
 
 ### Cause
 
-A [custom Javascript configured in the forecast configuration](/dynamics365/sales/forecast-configure-advanced-settings#upload-the-javascript-library-to-your-forecast) prevents the grid from being editable.
+A [custom JavaScript configured in the forecast configuration](/dynamics365/sales/forecast-configure-advanced-settings#upload-the-javascript-library-to-your-forecast) prevents the grid from being editable.
 
 ### Resolution
 
-To solve the issue, review the custom javascript code and check if it disables the underlying records grid view.
+To solve the issue, review the custom JavaScript code and check if it disables the underlying records grid view.
