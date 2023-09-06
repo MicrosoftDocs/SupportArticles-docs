@@ -62,7 +62,7 @@ Check whether the camera is mistakenly configured as a content camera. A content
 
 ### If you use an all-in-one video bar, reset the bar
 
-All-in-one video bars use only one USB cable to connect to the Teams Rooms device. In this case, reset the power of the device. Some bars might have a reset button to reset the devices.
+All-in-one video bars use only one USB cable to connect to the Teams Rooms device. In this case, reset the power of the device. Some bars might have a reset button.
 
 If the issue persists, contact your peripheral manufacturer to troubleshoot any hardware or firmware issues.
 
@@ -70,7 +70,7 @@ If the issue persists, contact your peripheral manufacturer to troubleshoot any 
 
 Try the following methods:
 
-- If the peripheral device was recently updated, the firmware update might not be completed. In this situation, the device is in an unusable state. Try to reset the power of the device. Some devices might have a reset button to reset the devices.
+- If the peripheral device was recently updated, the firmware update might not be completed. In this situation, the device is in an unusable state. Try to reset the power of the device. Some devices might have a reset button.
 - Contact your peripheral manufacturer to verify that the device is running the latest firmware version. Or, work with the manufacturer to fix any known issues.
 
 ### Check for issues in USB extenders and USB cables
