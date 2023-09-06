@@ -1,6 +1,6 @@
 ---
-title: MigrationPermanentException when moving primary mailbox
-description: Describes a MigrationPermanentException error that's returned when you try to use the Exchange admin center to move a primary mailbox from the on-premises environment to Exchange Online. Provides a resolution.
+title: Errors about missing parameters when moving only a primary mailbox either to or from Exchange Online
+description: Provides resolutions for errors about missing parameters when you use the EAC to onboard or offboard a primary mailbox in a hybrid Exchange environment.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -10,28 +10,20 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Hybrid
   - CSSTroubleshoot
-ms.reviewer: lenarudz, v-six
+ms.reviewer: lenarudz, v-six, tonymathew, v-trisshores 
 appliesto: 
   - Exchange Online
   - Exchange Server 2016 Enterprise Edition
   - Exchange Server 2016 Standard Edition
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
-  - Exchange Server 2010 Enterprise
-  - Exchange Server 2010 Standard
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
 
-# "You must specify the PrimaryOnly parameter" or "You must specify the ArchiveDomain parameter" error when moving a primary mailbox to or from Exchange Online in a hybrid deployment
-
-# Errors about missing parameters when moving only a primary mailbox either to or from Exchange Online"
-# Missing parameter errors when moving only a primary mailbox either to or from Exchange Online
+# Errors about missing parameters when moving only a primary mailbox either to or from Exchange Online
 
 _Original KB number:_ &nbsp; 3160413
-
-> [!NOTE]
-> The Hybrid Configuration wizard that's included in the Exchange Management Console in Microsoft Exchange Server 2010 is no longer supported. Therefore, you should no longer use the old Hybrid Configuration wizard. Instead, use the Microsoft 365 Hybrid Configuration wizard that's available at [https://aka.ms/HybridWizard](https://aka.ms/hybridwizard). For more information, see [Microsoft 365 Hybrid Configuration wizard for Exchange 2010](https://blogs.technet.com/b/exchange/archive/2016/02/17/office-365-hybrid-configuration-wizard-for-exchange-2010.aspx).
 
 ## Onboard only a primary mailbox from Exchange on-premises to Exchange Online
 
@@ -58,7 +50,7 @@ To move only a primary mailbox, use the [New-MoveRequest](/powershell/module/exc
 2. Run the following command to initiate a mailbox migration from the on-premises environment to Exchange Online:
 
    ```powershell
-   New-MoveRequest -Identity <mailbox ID> -RemoteCredential (Get-Credential) -Remote -RemoteHostName 'on-premises MRS proxy URL' -BatchName <Name of Batch> -PrimaryOnly -TargetDeliveryDomain <mail.onmicrosoft.com domain>
+   New-MoveRequest -Identity <mailbox ID> -RemoteCredential (Get-Credential) -Remote -RemoteHostName <on-premises MRS proxy URL> -BatchName <name of batch> -PrimaryOnly -TargetDeliveryDomain <mail.onmicrosoft.com domain>
     ```
    
    **Note**: When you're prompted for credentials, enter your credentials for on-premises Exchange.
@@ -89,7 +81,7 @@ To move only a primary mailbox, use the [New-MoveRequest](/powershell/module/exc
 2. Run the following command:
 
    ```powershell
-   New-MoveRequest  -Identity <mailbox ID> -Outbound -RemoteTargetDatabase "on-premises mailbox database" -RemoteHostName  'on-premises MRS proxy URL' -BatchName <Name of Batch> -PrimaryOnly -ArchiveDomain <mail.onmicrosoft.com domain> -TargetDeliveryDomain <on-premises domain> -RemoteCredential (Get-Credential)
+   New-MoveRequest  -Identity <mailbox ID> -Outbound -RemoteTargetDatabase <on-premises mailbox database> -RemoteHostName  <on-premises MRS proxy URL> -BatchName <name of batch> -PrimaryOnly -ArchiveDomain <mail.onmicrosoft.com domain> -TargetDeliveryDomain <on-premises domain> -RemoteCredential (Get-Credential)
    ```
 
 ## More information
