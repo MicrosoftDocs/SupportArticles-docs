@@ -2,7 +2,7 @@
 title: All AI Builder credits have been consumed
 description: Provides a resolution for the issue that all AI Builder credits have been consumed in Microsoft Power Platform.
 ms.reviewer: chplanty, cdbellar
-ms.date: 09/05/2023
+ms.date: 09/06/2023
 ms.subservice: 
 ms.author: antode
 author: Antoine2F
@@ -42,8 +42,8 @@ This issue occurs because AI Builder actions consume AI Builder credits. These c
 The environment's consumption is computed each day from the beginning of the month.  
 
 - When the consumption is close to the allocated credits, a banner is displayed on the **Capacity** page in the Power Platform admin center, and a notification email is sent to the administrator.
-- When the consumption exceeds the allocated credits, a banner is displayed on the AI Builder page, and Maker actions are blocked.
-- When the consumption is much higher than the allocated credits (some overage is allowed), AI Builder actions in flows and apps are blocked, and an error might occur in flows and apps.
+- When the consumption starts exceeding the tenant-level or environment-level credits ("simple overage"), a banner is displayed on the AI Builder page, and Maker actions are blocked. In "simple overage", AI Builder actions in flows and apps are still allowed and continue consuming credits.
+- When the consumption is much higher than the tenant-level or environment-level credits ("important overage"), AI Builder actions in flows and apps are blocked, and an error might occur in flows and apps.
 
 ## Resolution
 
@@ -54,7 +54,7 @@ If credits come from the tenant level (unassigned credits), you need to add cred
 If credits come from the environment level, you need to allocate more credits to your environment. This can be done by using the existing tenant-level environment or by adding credits at the tenant level first (using purchase or environment deallocation).
 
 > [!NOTE]
-> If the **Allow users to consume unassigned credit** setting is disabled, the unassigned credits can't be used. To find this setting, go to the Power Platform admin center, and then select **Settings** on the AI Builder credit page.
+> If the **Allow users to consume unassigned credit** setting is disabled, the unassigned credits can't be used. You can go to the Power Platform admin center, select **Settings**, and then open the **AI Builder credit** page to enable this setting.
 
 #### How to determine the source and number of allocated, unassigned, and owned credits
 
@@ -95,6 +95,7 @@ You need to be the administrator of your environment to perform these actions.
 
 > [!NOTE]
 > If the **Allow users to consume unassigned credit** setting is disabled, the unassigned credits can't be used. To find this setting, go to the Power Platform admin center, and then select **Settings** on the AI Builder credit page.
+> If the **Allow users to consume unassigned credit** setting is disabled, the unassigned credits can't be used. You can go to the Power Platform admin center, select **Settings**, and then open the **AI Builder credit** page to enable this setting.
 
 #### How to change the number of tenant-level credits (unassigned credits) by purchasing more AI Builder credits
 
@@ -109,6 +110,7 @@ You need to be the billing administrator of your tenant to perform these actions
 
 > [!NOTE]
 > If the **Allow users to consume unassigned credit** setting is disabled, the unassigned credits can't be used. To find this setting, go to the Power Platform admin center, and then select **Settings** on the AI Builder credit page.
+> If the **Allow users to consume unassigned credit** setting is disabled, the unassigned credits can't be used. You can go to the Power Platform admin center, select **Settings**, and then open the **AI Builder credit** page to enable this setting.
 
 #### How to evaluate the amount of credits to add
 
@@ -136,7 +138,8 @@ You can find the **Request extension** button to add 200,000 extension credits f
 > - These credits can't be allocated or assigned and can be used directly by any environment in overage.
 > - The number of extension requests per month and per year is limited.
 > - Each extension request sends a notification email to the Power Platform admin informing that extension credits have been requested and granted.
-> - If the **Allow users to consume unassigned credit** setting is disabled in the Power Platform admin center, the environment without assigned credits is blocked, and extension credits won't help.
+> - If the **Allow users to consume unassigned credit** setting is disabled in the Power Platform admin center, the environment without assigned credits is blocked, and extension credits won't help. You can go to the Power Platform admin center, select **Settings**, and then open the **AI Builder credit** page to enable this setting.
 
 ## Resources
+
 For more information, see [AI Builder licensing](/ai-builder/administer-licensing).
