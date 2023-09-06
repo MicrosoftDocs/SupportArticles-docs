@@ -33,11 +33,12 @@ If the SWAP creation is configured in *Waagent.config*, you must disable it.
     ResourceDisk.SWAPSizeMB=0
     ```
 
-1. Restart the Azure Linux Agent. See [How to update the Azure Linux Agent on a VM](/azure/virtual-machines/extensions/update-linux-agent) for information about the restart commands for different Linux distributions.
+2. Restart the Azure Linux Agent. See [How to update the Azure Linux Agent on a VM](/azure/virtual-machines/extensions/update-linux-agent) for information about the restart commands for different Linux distributions.
 
-Then, create the SWAP file under the resource disk path or a custom path.
+<details>
+<summary>Option 1. create the SWAP file under the resource disk path or a custom path using a script.</summary>
 
-## Create a SWAP file under the resource disk path
+## Create a SWAP file under the resource or custom disk path
 
 1. Create a new file named swap.sh under `/var/lib/cloud/scripts/per-boot` with the following script:
 
@@ -82,8 +83,42 @@ Then, create the SWAP file under the resource disk path or a custom path.
     ```
 
 1. Stop and start the VM. Stopping and starting the VM is only necessary the first time after you create the SWAP file.
+</details>
 
-## Create a SWAP file under a custom path using cloud-init
+<details>
+<summary>Option 2, Create a SWAP file under standard mnt path using cloud-init</summary>
+
+1. Create the `CLOUD_CFG` variable in */systemd/system.conf* to set both SWAP and the resource disk.
+
+    ```bash
+    sudo echo 'DefaultEnvironment="CLOUD_CFG=/etc/cloud/cloud.cfg.d/00-azure-swap.cfg"' >> /etc/systemd/system.conf
+    ```
+2. Create a YAML file that sets SWAP, resource disk creation, and custom mount points:
+
+    ```bash
+    sudo cat > /etc/cloud/cloud.cfg.d/00-azure-swap.cfg << EOF
+    #cloud-config
+    disk_setup:
+      ephemeral0:
+        table_type: mbr
+        layout: [66, [33, 82]]
+        overwrite: True
+    fs_setup:
+      - device: ephemeral0.1
+        filesystem: ext4
+      - device: ephemeral0.2
+        filesystem: swap
+    mounts:
+      - ["ephemeral0.1", "/mnt/resource"]
+      - ["ephemeral0.2", "none", "swap", "sw,nofail,x-systemd.requires=cloud-init.service,x-systemd.device-timeout=2", "0", "0"]
+    EOF
+    ```
+
+3. Stop and start the VM or redeploy it to create the SWAP partition on the resource disk.
+</details>
+
+<details>
+<summary>Option 3, Create a SWAP file under a custom path using cloud-init</summary>
 
 1. Create the `CLOUD_CFG` variable in */systemd/system.conf* to set both SWAP and the resource disk.
 
