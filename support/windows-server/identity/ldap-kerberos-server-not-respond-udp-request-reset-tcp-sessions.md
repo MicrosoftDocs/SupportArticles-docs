@@ -47,7 +47,7 @@ You're running the Windows Server role AD DS. The client sends a Kerberos authen
 > [!NOTE]
 > The Microsoft Kerberos client uses TCP Kerberos authentication by default since Windows Vista. Therefore, this issue likely occurs only with third-party products that use UDP for Kerberos requests.
 
-The KDC has a built-in protection against request loops and blocks Kerberos authentication requests on source ports 88/udp and 464/UDP. However, the implementation has a bug in byte ordering, so source ports 22528/UDP and 53249/UDP are blocked.
+The KDC has a built-in protection against request loops and blocks Kerberos authentication requests on source ports 88/UDP and 464/UDP. However, the implementation has a bug in byte ordering, so source ports 22528/UDP and 53249/UDP are blocked.
 
 You have to exclude 22528/UDP and 53249/UDP from the ephemeral port range of UDP on the client.
 
