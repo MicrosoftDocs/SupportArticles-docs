@@ -2,7 +2,7 @@
 title: Accept and Decline buttons missing in a task request
 description: Describes an issue in which Outlook doesn't show the Accept and Decline buttons in a task request.
 author: cloud-writer
-ms.author: meerak
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

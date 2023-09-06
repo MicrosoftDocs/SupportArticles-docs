@@ -2,7 +2,7 @@
 title: Resolve search errors in eDiscovery (Standard)
 description: Resolve common search errors in Microsoft Purview eDiscovery (Standard).
 author: v-trisshores
-ms.author: v-trisshores
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

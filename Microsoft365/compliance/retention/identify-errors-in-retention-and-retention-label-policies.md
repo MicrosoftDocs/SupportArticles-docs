@@ -2,7 +2,7 @@
 title: Identify errors in Microsoft 365 retention and retention label policies
 description: How to identify errors in Microsoft 365 retention and retention label policies.
 author: v-trisshores
-ms.author: v-trisshores
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

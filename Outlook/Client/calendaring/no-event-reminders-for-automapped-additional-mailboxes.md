@@ -2,7 +2,7 @@
 title: Outlook doesn't show event reminders for automapped or additional mailboxes
 description: Discusses an issue in which Outlook doesn't show event reminders for automapped or additional mailboxes.
 author: cloud-writer
-ms.author: meerak
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

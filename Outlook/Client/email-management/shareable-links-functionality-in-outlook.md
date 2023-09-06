@@ -2,7 +2,7 @@
 title: Shareable links overview and troubleshooting
 description: Provides an overview of shareable links in Outlook and resolutions for common issues.
 author: cloud-writer
-ms.author: meerak
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

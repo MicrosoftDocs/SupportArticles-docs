@@ -2,7 +2,7 @@
 title: Resolve errors in Microsoft 365 retention and retention label policies
 description: Resolves errors in Microsoft 365 retention and retention label policies.
 author: v-trisshores
-ms.author: v-trisshores
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
