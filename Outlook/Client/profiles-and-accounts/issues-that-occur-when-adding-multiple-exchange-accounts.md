@@ -129,6 +129,6 @@ To prevent this issue, use one of the following methods:
 
 ### Disable Auto-Mapping for shared Exchange mailboxes
 
-The administrator must use Exchange Management Shell to disable Auto-Mapping. For information about how to disable Auto-Mapping for Exchange mailboxes, see [How to remove automapping for a shared mailbox in Outlook for Microsoft 365](MicrosoftDocs/OfficeDocs-Support-pr/Outlook/Client/profiles-and-accounts/remove-automapping-for-shared-mailbox.md).
+The administrator must use Exchange Management Shell to disable Auto-Mapping. For information about how to disable Auto-Mapping for Exchange mailboxes, see [How to remove automapping for a shared mailbox in Outlook for Microsoft 365](Outlook/Client/profiles-and-accounts/remove-automapping-for-shared-mailbox.md).
 
 
