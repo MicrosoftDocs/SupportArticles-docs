@@ -239,10 +239,7 @@ To solve the issue, follow these steps:
 
 ### Cause
 
-This issue occurs due to multiple reasons:
-
-1. The Dynamics 365 Sales Forecasting user in the forecasting application doesn't have the read permission to the rollup entity records.
-1. The fields in the rollup entity have the field-level security.
+The fields in the rollup entity have the field-level security.
 
 ### Resolution
 
