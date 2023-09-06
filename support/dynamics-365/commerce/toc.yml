@@ -17,7 +17,7 @@
           href: data-synchronization/uat-cdx-broke-after-debug-aos.md
     - name: Development and SDKs
       items:
-        - name: Set up an e-commerce development environment to debug against a Tier 1 Retail Server virtual machine
+        - name: Errors when debugging against a Tier 1 Retail Server virtual machine
           href: development-sdks/set-up-dev-environment-debugging.md
     - name: E-commerce storefront
       items:
@@ -35,15 +35,15 @@
       items:
         - name: Fix common statement posting issues by editing transactions
           href: financial-statements/fix-common-posting-issues.md
-        - name: Statement posting errors due to unavailable inventory or update conflicts
-          href: financial-statements/inventory-errors-posting.md
         - name: Issues with the data reconciliation of a Z report
           href: financial-statements/z-report-issues.md
+        - name: Statement posting errors due to unavailable inventory or update conflicts
+          href: financial-statements/inventory-errors-posting.md
     - name: Order management
       items:
         - name: Asynchronous order synchronization issues
           href: order-management/synchronization-error.md
-        - name: Payment type must be credit card error on the sales order page
+        - name: '"Payment type must be credit card" error on the sales order page'
           href: order-management/payment-type-credit-card-error.md 
         - name: Taxes on online orders are incorrectly calculated
           href: order-management/tax-miscalculated-online-order.md
@@ -51,13 +51,15 @@
           href: order-management/online-order-transaction-creation-failures.md   
     - name: Payments
       items:
+        - name: A card payment fails due to an unsupported card type
+          href: payments/card-payments-fail-with-unsupported-card-type.md
         - name: Credit card entry page shows an error at checkout
           href: payments/credit-card-entry-form-error.md
         - name: Payments are automatically settled before orders are invoiced or shipped
           href: payments/payments-auto-settled.md 
         - name: Refund on a return order is declined
           href: payments/refund-declined.md
-        - name: Refundable charges are miscalculated based on the quantity returned
+        - name: Refundable charges are miscalculated based on returned quantity
           href: payments/refund-miscalculated-partial-return.md
         - name: Save for my next payment option doesn't appear
           href: payments/next-payment-link-not-appearing.md
@@ -77,7 +79,7 @@
           href: point-of-sale/store-commerce-sign-in.md
     - name: Ratings and reviews 
       items:
-        - name: Ratings refiner appears on search results and category pages when the ratings and reviews solution isn't enabled
+        - name: Ratings refiner appears when the ratings and reviews solution isn't enabled
           href: ratings-reviews/hide-ratings-refiner.md
     - name: Site builder content management
       items:
@@ -87,3 +89,7 @@
           href: site-builder-content-management/missing-products-categories.md
         - name: Products and categories don't appear in Commerce site builder after a new site is mapped
           href: site-builder-content-management/products-categories-unavailable.md
+    - name: Point of sale (POS)
+      items:
+        - name: Store Commerce app (POS) is suddenly deactivated
+          href: point-of-sale/store-commerce-app-pos-deactivated.md
