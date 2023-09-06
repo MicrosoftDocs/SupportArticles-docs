@@ -94,7 +94,6 @@ You need to be the administrator of your environment to perform these actions.
 1. Reduce the number of AI Builder credits.
 
 > [!NOTE]
-> If the **Allow users to consume unassigned credit** setting is disabled, the unassigned credits can't be used. To find this setting, go to the Power Platform admin center, and then select **Settings** on the AI Builder credit page.
 > If the **Allow users to consume unassigned credit** setting is disabled, the unassigned credits can't be used. You can go to the Power Platform admin center, select **Settings**, and then open the **AI Builder credit** page to enable this setting.
 
 #### How to change the number of tenant-level credits (unassigned credits) by purchasing more AI Builder credits
@@ -109,7 +108,6 @@ You need to be the billing administrator of your tenant to perform these actions
 1. Once purchased, follow the steps in [How to change the number of environment-allocated credits](#how-to-change-the-number-of-environment-allocated-credits) if the credits come from the environment level.
 
 > [!NOTE]
-> If the **Allow users to consume unassigned credit** setting is disabled, the unassigned credits can't be used. To find this setting, go to the Power Platform admin center, and then select **Settings** on the AI Builder credit page.
 > If the **Allow users to consume unassigned credit** setting is disabled, the unassigned credits can't be used. You can go to the Power Platform admin center, select **Settings**, and then open the **AI Builder credit** page to enable this setting.
 
 #### How to evaluate the amount of credits to add
