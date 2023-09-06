@@ -243,7 +243,7 @@ The fields in the rollup entity have field-level security.
 
 ### Resolution
 
-To solve the first issue, you need to provide the read permission to the Dynamics 365 Sales Forecasting user in the field security profiles. Otherwise, the column will show **0** to all users except system administrators. Follow these steps to configure the field security profiles:
+To solve the issue, you need to provide the read permission to the Dynamics 365 Sales Forecasting user in the field security profiles. Otherwise, the column will show **0** to all users except system administrators. Follow these steps to configure the field security profiles:
 
 1. Go to **Settings**> **Security** > **Field Security Profiles**.
 1. Select an existing profile or create a new one.
