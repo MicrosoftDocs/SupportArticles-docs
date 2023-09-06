@@ -3,7 +3,7 @@ title: Error when connecting CRM for Outlook
 description: Provides a solution to an error that occurs when you try to connect Microsoft Dynamics CRM 2013 for Microsoft Office Outlook to a CRM Online 2015 organization.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-email-office-integration
 ---
 # Error occurs when you try to connect Microsoft Dynamics CRM 2013 for Microsoft Office Outlook to a CRM Online 2015 organization

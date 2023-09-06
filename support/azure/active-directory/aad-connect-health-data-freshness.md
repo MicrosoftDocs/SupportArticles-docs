@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot data freshness alerts in Azure AD Connect Health
 description: Troubleshoot data freshness alerts in Azure Active Directory (Azure AD) Connect Health. Use agents for Sync, Azure AD Domain Services, and AD Federation Services.
-ms.date: 1/27/2021
+ms.date: 01/27/2021
 ms.reviewer: brheld, calazlo, v-leedennis
 ms.service: active-directory
 ms.subservice: hybrid

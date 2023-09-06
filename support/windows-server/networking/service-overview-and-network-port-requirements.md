@@ -1,7 +1,7 @@
 ---
 title: Service overview and network port requirements
 description: A roadmap of ports, protocols, and services that are required by Microsoft client and server operating systems, server-based applications, and their subcomponents to function in a segmented network.
-ms.date: 2/8/2023
+ms.date: 02/08/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

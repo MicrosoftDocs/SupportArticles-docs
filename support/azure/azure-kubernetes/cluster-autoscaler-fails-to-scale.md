@@ -1,7 +1,7 @@
 ---
 title: Cluster autoscaler fails to scale with failed to fix group sizes error
 description: Learn how to troubleshoot the failed to fix group sizes error that occurs when your autoscaler isn't scaling up or down.
-ms.date: 5/17/2022
+ms.date: 05/17/2022
 editor: v-jsitser
 ms.reviewer: chiragpa, nickoman, v-leedennis
 ms.service: azure-kubernetes-service

@@ -3,7 +3,7 @@ title: Dynamics 365 App for Outlook didn't load and window.Office not available
 description: Provides a solution to an error that occurs when trying to use the Dynamics 365 App for Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-email-office-integration
 ---
 # Dynamics 365 App for Outlook didn't load completely error occurs in Microsoft Dynamics 365 App for Outlook

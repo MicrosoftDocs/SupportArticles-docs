@@ -1,7 +1,7 @@
 ---
 title: Cluster pending operation (OperationIsNotAllowed) errors
 description: Learn to resolve OperationIsNotAllowed errors that occur when you try to start, upgrade, or scale an Azure Kubernetes Service (AKS) cluster.
-ms.date: 8/17/2023
+ms.date: 08/17/2023
 author: axelgMS
 ms.author: axelg
 editor: v-jsitser

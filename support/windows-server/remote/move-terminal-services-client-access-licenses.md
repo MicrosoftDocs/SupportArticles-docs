@@ -1,7 +1,7 @@
 ---
 title: Move Terminal Services CALs from one license server to another
 description: Describes how to move Terminal Services CALs from one license server to another in Windows. You must have the original license documents to perform this operation.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

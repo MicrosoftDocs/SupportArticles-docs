@@ -1,7 +1,7 @@
 ---
 title: Software Defined Data Center and Software Defined Networking
 description: Software Defined Data Center and Software Defined Networking
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

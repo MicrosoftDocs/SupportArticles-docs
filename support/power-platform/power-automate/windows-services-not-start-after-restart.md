@@ -4,7 +4,7 @@ description: Provides a resolution for the issue where the Power Automate-relate
 ms.reviewer: guco, tapanm
 author: johndund
 ms.author: johndund
-ms.date: 3/31/2023
+ms.date: 03/31/2023
 ms.subservice: power-automate-desktop-flows
 ---
 # Power Automate service won't start automatically after restarting

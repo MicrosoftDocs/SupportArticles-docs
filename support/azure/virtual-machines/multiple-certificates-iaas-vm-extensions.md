@@ -1,7 +1,7 @@
 ---
 title: Multiple certificates on an Azure IaaS VM that uses extensions
 description: Fix an issue that involves multiple certificates generated on an Azure infrastructure as a service virtual machine that uses extensions.
-ms.date: 5/5/2023
+ms.date: 05/05/2023
 editor: v-jsitser
 ms.reviewer: kegregoi, axelg, scotro, v-leedennis
 ms.service: virtual-machines
