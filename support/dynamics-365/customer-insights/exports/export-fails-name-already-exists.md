@@ -12,8 +12,8 @@ If an export tries to create a new segment in the export destination, but there 
 
 ## Prerequisites
 
-- Administrator permissions in Dynamics 365 Customer Insights or Contributor permissions with the ability to share access to the connection used for this export
-- The name mentioned in the error message 
+- Administrator permissions in Dynamics 365 Customer Insights - Data or Contributor permissions with the ability to share access to the connection used for this export
+- The name mentioned in the error message
 
 ## Symptoms
 
@@ -21,7 +21,7 @@ A specific export run fails, and you receive the "the following name already exi
 
 ## Cause
 
-If this error message repeatedly occurs across Customer Insights' system refreshes, then it's likely that your exports from Customer Insights are set up to export the same segment several times to the same destination, which in rare cases can cause this error message.
+If this error message repeatedly occurs across system refreshes, then it's likely that your exports from are set up to export the same segment several times to the same destination, which in rare cases can cause this error message.
 
 ## Resolution
 

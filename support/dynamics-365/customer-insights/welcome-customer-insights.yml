@@ -1,7 +1,7 @@
 ### YamlMime:Landing
 
 title: Microsoft Dynamics 365 Customer Insights troubleshooting
-summary: Welcome to Microsoft Dynamics 365 Customer Insights troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Customer Insights. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+summary: Welcome to Microsoft Dynamics 365 Customer Insights troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Customer Insights - Data and Customer Insights - Journeys. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
 metadata:
   title: Microsoft Dynamics 365 Customer Insights troubleshooting
   description: Landing page for Microsoft Dynamics 365 Customer Insights troubleshooting articles.
@@ -19,9 +19,9 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Customer Insights environment doesn't show in Power BI
+          - text: Environment doesn't show in Power BI
             url: exports/environment-not-showing-in-power-bi.md
-          - text: Errors on date fields when loading Customer Insights entities in Power BI Desktop
+          - text: Errors on date fields when loading entities in Power BI Desktop
             url: exports/error-date-fields-power-bi-connector.md
           - text: Exports fail with error stating that the following name already exists
             url: exports/export-fails-name-already-exists.md
@@ -61,7 +61,7 @@ landingContent:
     linkLists:
       - linkListType: reference
         links:
-          - text: Customer Insights community
+          - text: Customer Insights forum
             url: https://go.microsoft.com/fwlink/?linkid=2073991
           - text: Share your ideas
             url: https://go.microsoft.com/fwlink/?linkid=2074172
