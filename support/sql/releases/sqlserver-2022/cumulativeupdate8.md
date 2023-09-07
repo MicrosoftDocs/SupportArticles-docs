@@ -60,14 +60,14 @@ The following update is available from the Microsoft Download Center:
 > [!NOTE]
 >
 > - Microsoft Download Center will always present the latest SQL Server 2022 CU release.
-> - If the download page does not appear, contact [Microsoft Customer Service and Support](https://support.microsoft.com/contactus/?ws=support) to obtain the cumulative update package.
+> - If the download page doesn't appear, contact [Microsoft Customer Service and Support](https://support.microsoft.com/contactus/?ws=support) to obtain the cumulative update package.
 
 </details>
 
 <details>
 <summary><b>How to obtain or download this cumulative update package for Windows from Microsoft Update Catalog</b></summary>
 
-This cumulative update package is not yet available on [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=sql%20server%202022). This article will be updated after the package is made available on this channel.
+This cumulative update package isn't yet available on [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=sql%20server%202022). This article will be updated after the package is made available on this channel.
 
 </details>
 
