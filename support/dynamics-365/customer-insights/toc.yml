@@ -25,4 +25,10 @@
             href: insights/segment-no-results.md
       - name: Customer Insights - Journeys
         items: 
+        - name: Applications and Add-ons
+          items:
+          - name: Organization entitlement doesn't match your tenant
+            href: dynamics-365-marketing-entitlement-does-not-match-your-tenant.md
+          - name: Problem with deploying the application
+            href: dynamics-365-marketing-problem-with-deployment.md
         
