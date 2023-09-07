@@ -27,7 +27,7 @@ It is recommended that you update or slipstream the original SQL Server 2008 by 
 For answers to frequently asked questions about slipstreaming, see the **SQL Server 2008 Slipstream Frequently Asked Questions** topic on [SQL Server Setup](/archive/blogs/petersad/?branch=main).
 
 > [!IMPORTANT]
-> For SQL Server 2012 and later versions, you need to use /UpdateSource parameter to update your SQL Server installation files. For an example on how to do this, see [How to patch SQL Server 2012 Setup with an updated setup package (using UpdateSource to get a smart setup)](/archive/blogs/jason_howell/how-to-patch-sql-server-2012-setup-with-an-updated-setup-package-using-updatesource-to-get-a-smart-setup?branch=main).
+> For SQL Server 2012 and later versions, you need to use `/UpdateSource` parameter to update your SQL Server installation files. For an example on how to do this, see [How to patch SQL Server 2012 Setup with an updated setup package (using UpdateSource to get a smart setup)](/archive/blogs/jason_howell/how-to-patch-sql-server-2012-setup-with-an-updated-setup-package-using-updatesource-to-get-a-smart-setup?branch=main).
 
 ## More information
 

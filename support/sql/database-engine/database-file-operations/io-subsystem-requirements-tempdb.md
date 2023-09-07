@@ -126,24 +126,21 @@ The following example elaborates the data security that is required by SQL Serve
 
 Assume a RAM disk vendor uses an in-memory compression implementation. The implementation must be correctly encapsulated by providing the physical appearance of the file stream as if the sector was aligned and sized so SQL Server is unaware and correctly secured from the underlying implementation. Look at the compression example closer.
 
-| Action |
-|---|
-|Sector 1 is written to the device and is compressed to save space.|
-|Sector 2 is written to the device and is compressed with sector 1 to save space.|
-||
+**Actions**
+
+- Sector 1 is written to the device and is compressed to save space.
+- Sector 2 is written to the device and is compressed with sector 1 to save space.
 
 The device may perform the following actions to help secure sector 1's data when it is combined with sector 2's data.
 
-| Action |
-|---|
-|Block all writes to sectors 1 and 2.|
-|Uncompress sector 1 into a scratch area, leaving current sector 1 storage as the active data to be retrieved.|
-|Compress sectors 1 and 2 into a new storage format.|
-|Block all reads and writes of sectors 1 and 2.|
-|Exchange old storage for sectors 1 and 2 with new storage.|
-|If the exchange attempt fails (rollback):<br/> Restore the original storage for sectors 1 and 2.<br/> Remove the sectors 1 and 2 combined data from the scratch area.<br/> Fail the sector 2 write operation.|
-|Unblock reads and writes for sectors 1 and 2.|
-||
+**Actions**
+
+- Block all writes to sectors 1 and 2.
+- Uncompress sector 1 into a scratch area, leaving current sector 1 storage as the active data to be retrieved.
+- Compress sectors 1 and 2 into a new storage format.
+- Block all reads and writes of sectors 1 and 2.
+- Exchange old storage for sectors 1 and 2 with new storage. If the exchange attempt fails (rollback):<br/> Restore the original storage for sectors 1 and 2.<br/> Remove the sectors 1 and 2 combined data from the scratch area.<br/> Fail the sector 2 write operation.
+- Unblock reads and writes for sectors 1 and 2.
 
 The ability to provide locking mechanisms around the sector modifications and roll back the changes when the sector exchange attempt fails is considered transitionally compliant. For implementations that use physical storage for extended backing, it would include the appropriate transaction log aspects to help secure and rollback changes that were applied to the on-disk structures to maintain the integrity of the SQL Server database files.
 
