@@ -1,6 +1,6 @@
 ---
 title: How to clean up inherited access
-description: Introduces how to remove inherited access for records when the cascade configuration of a table changes in Microsoft Power Apps.
+description: Introduces how to remove inherited access to records when the cascade configuration of a table changes in Microsoft Power Apps.
 ms.date: 09/07/2023
 author: paulliew
 ms.author: paulliew
@@ -21,26 +21,26 @@ This article introduces how to remove inherited access for records when the casc
 
 ## Symptoms
 
-After the [cascading behavior of a table relationship](/power-apps/developer/data-platform/configure-entity-relationship-cascading-behavior#reset-cascade-inherited-access) for the **Reparent** or **Share** actions is changed to **No Cascade**, users continue to have access to related records that should be removed.
+After the [cascading behavior of a table relationship](/power-apps/developer/data-platform/configure-entity-relationship-cascading-behavior#reset-cascade-inherited-access) for the **Reparent** or **Share** action is changed to **No Cascade**, you continue to have access to the related records that should be removed.
 
 ## How to verify the access to related records
 
-Users may report that they have unexpected access to records. There are two ways to verify the access to related records:
+When you find that you have unexpected access to records, you can use the **Check Access** feature or the `RetrieveAccessOrigin message` to verify the access to the related records. 
 
 #### Use the Check Access feature
 
-Use the [Check Access](/power-apps/user/access-checker) in model-driven apps to check who has access to a record. Administrators can use this feature to check individual users or all users who have access to a record.
+Use the [Check Access](/power-apps/user/access-checker) feature in model-driven apps to check who has access to a record. Administrators can use this feature to check individual users or all users who have access to a record.
 
 When using the access checker, you see a list of reasons why a user has access. Some of these reasons indicate that the sharing was granted due to access to a related record. For example:
 
 - Record was shared with me because I have access to related record.
-- Record was shared with a team(s) that I'm a member of because the team has access to related record.
+- Record was shared with team(s) that I'm a member of because the team has access to related record.
 
 #### Use the RetrieveAccessOrigin message
 
-Developers can use the `RetrieveAccessOrigin` message to detect which users have access to a record. This message returns a sentence describing why the user has the access. Any of following results indicate that the access was granted due to the sharing of a related record:
+Developers can use the `RetrieveAccessOrigin` message to detect which users have access to a record. This message returns a sentence describing why the user has the access. Any of the following results indicate that the access was granted due to the sharing of a related record:
 
-```console
+```output
 PrincipalId is owner of a parent entity of object (<record ID>)
 PrincipalId is member of team (<team ID>) who is owner of a parent entity of object (<record ID>)
 PrincipalId is member of organization (<organization ID>) who is owner of a parent entity of object (<record ID>)
@@ -51,15 +51,15 @@ For more information, see [Determine why a user has access with code](/power-app
 
 ## Cause
 
-When the cascading behavior for a table relationship changes, Dataverse starts an asynchronous job to remove the access users were previously granted. However, this job may fail, which could result in users retaining access.
+When the cascading behavior for a table relationship changes, Dataverse starts an asynchronous job to remove the access users were previously granted. However, this job may fail, resulting in users retaining access.
 
 ## Resolution
 
-The first step to resolve this issue is to recreate the system job to remove access. If the job fails, a developer can use the `ResetInheritedAccess` message to apply the change for a specified set of records.
+The first step to resolve this issue is to recreate the system job to remove access. If the job fails, a developer can use the `ResetInheritedAccess` message to apply the change to a specified set of records.
 
 ### Recreate the system job to remove access
 
-Developers can use the `CreateAsyncJobToRevokeInheritedAccess` message to try creating the asynchronous job again.
+Developers can use the `CreateAsyncJobToRevokeInheritedAccess` message to try creating an asynchronous job again.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -113,11 +113,11 @@ OData-Version: 4.0
 
 ---
 
-The `CreateAsyncJobToRevokeInheritedAccess` action creates a new asynchronous job named "RevokeInheritedAccess". You can monitor the success of this job. For more information, see [monitoring system jobs](/power-platform/admin/manage-dataverse-auditing#monitoring-system-jobs) or [managing system jobs with code](/power-apps/developer/data-platform/asynchronous-service#managing-system-jobs).
+The `CreateAsyncJobToRevokeInheritedAccess` action creates a new asynchronous job named `RevokeInheritedAccess`. You can monitor the success of this job. For more information, see [monitoring system jobs](/power-platform/admin/manage-dataverse-auditing#monitoring-system-jobs) or [managing system jobs with code](/power-apps/developer/data-platform/asynchronous-service#managing-system-jobs).
 
 ### Reset inherited access
 
-If [Recreating the system job to remove access](#recreate-the-system-job-to-remove-access) fails, a developer with system administrator or system customizer privileges can use the `ResetInheritedAccess` message to target a subset of matching records. You may need to use this message several times to remove access for all the records.
+If [recreating the system job to remove access](#recreate-the-system-job-to-remove-access) fails, a developer with system administrator or system customizer privileges can use the `ResetInheritedAccess` message to target a subset of matching records. You may need to use this message several times to remove access to all the records.
 
 # [SDK for .NET](#tab/sdk)
 
@@ -177,49 +177,49 @@ OData-Version: 4.0
 
 The `ResetInheritedAccess` message tries to execute synchronously when there aren't many matching records. Then the `ResetInheritedAccessResponse` value ends with `ExecutionMode : Sync`. If there are many matching records, the operation takes longer, and the value ends with `ExecutionMode : Async`. A system job named `Denormalization_PrincipalObjectAccess_principalobjectaccess:<caller ID>` is created, and you can monitor the success of that job. For more information, see [monitoring system jobs](/power-platform/admin/manage-dataverse-auditing#monitoring-system-jobs) or [managing system jobs with code](/power-apps/developer/data-platform/asynchronous-service#managing-system-jobs).
 
-The `ResetInheritedAccess` message requires a Fetch query to identify the records. This query must meet the following requirements:
+The `ResetInheritedAccess` message requires a `Fetch` query to identify the records. This query must meet the following requirements:
 
 - Use the `principalobjectaccess`(POA) table.
 - Return only the `principalobjectaccessid` column.
 - Must not include any `link-entity` elements. You can't add a join to another table.
 - Only filter on columns of the `principalobjectaccess` table.
 
-This table is available to the Web API as the [principalobjectaccess entity type](xref:Microsoft.Dynamics.CRM.principalobjectaccess). It isn't included in the [Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference) because the POA table doesn't support any kind of direct data modification operation. You need to know about the columns of this table to compose the FetchXml query.
+This table is available to the Web API as the [principalobjectaccess entity type](xref:Microsoft.Dynamics.CRM.principalobjectaccess). It isn't included in the [Dataverse table/entity reference](/power-apps/developer/data-platform/reference/about-entity-reference) because the POA table doesn't support any kind of direct data modification operation. You need to know the columns of this table to compose the FetchXml query.
 
 #### POA table columns
 
 You need to compose a FetchXml query using only these columns.
 
-|LogicalName |Type|Description|
+|Logical name |Type|Description|
 |---------|---------|---------|
 |`accessrightsmask`|Integer|Contains the combined [AccessRights enum](xref:Microsoft.Dynamics.CRM.AccessRights) member values for the access rights that the principal has directly. |
 |`changedon`|DateTime|The last date that the principal's access to the record changed.|
 |`inheritedaccessrightsmask`|Integer|Contains the combined [AccessRights enum](xref:Microsoft.Dynamics.CRM.AccessRights) member values for the access rights that are applied due to inheritance.|
 |`objectid`|Unique Identifier|The ID of the record that the principal has access to.|
-|`objecttypecode`|Integer|The [EntityMetadata.ObjectTypeCode](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.ObjectTypeCode) value that corresponds to the table. This value isn't necessarily the same for different environments. For custom tables, it's assigned based on the order the table was created. To get this value, you may need to view the metadata for the table. There are several community tools to find this. There's a solution from Microsoft: [Browse table definitions in your environment](/power-apps/developer/data-platform/browse-your-metadata).|
-|`principalid` |Unique Identifier|The ID of the user or team who has access.|
+|`objecttypecode`|Integer|The [EntityMetadata.ObjectTypeCode](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.ObjectTypeCode) value that corresponds to the table. This value isn't necessarily the same for different environments. For custom tables, it's assigned based on the order in which the table was created. To get this value, you may need to view the metadata for the table. There are several community tools to find this. Here's a solution from Microsoft: [Browse table definitions in your environment](/power-apps/developer/data-platform/browse-your-metadata).|
+|`principalid` |Unique Identifier|The ID of the user or team that has access.|
 |`principalobjectaccessid`|Unique Identifier|The primary key of the POA table.|
 |`principaltypecode`|Integer|The type code of the principal. `SystemUser` = 8, `Team` = 9.|
 
-The following [AccessRights enum](xref:Microsoft.Dynamics.CRM.AccessRights) member values apply for the `accessrightsmask` and `inheritedaccessrightsmask` columns:
+The following [AccessRights enum](xref:Microsoft.Dynamics.CRM.AccessRights) member values apply to the `accessrightsmask` and `inheritedaccessrightsmask` columns:
 
 |Access type|Value|Description|
 |---------|---------|---------|
-|None|0|No access.|
-|Read|1|The right to read a record.|
-|Write|2|The right to update a record.|
-|Append|4|The right to append the specified record to another record. |
-|AppendTo|16|The right to append another record to the specified record. |
-|Create|32|The right to create a record.|
-|Delete|65,536|The right to delete a record.|
-|Share|262,144|The right to share a record.|
-|Assign|524,288|The right to assign the specified record to another user or team.|
+|`None`|0|No access.|
+|`Read`|1|The right to read a record.|
+|`Write`|2|The right to update a record.|
+|`Append`|4|The right to append the specified record to another record. |
+|`Append`To|16|The right to append another record to the specified record. |
+|`Create`|32|The right to create a record.|
+|`Delete`|65,536|The right to delete a record.|
+|`Share`|262,144|The right to share a record.|
+|`Assign`|524,288|The right to assign the specified record to another user or team.|
 
-You may see that the `inheritedaccessrightsmask` value is commonly 135,069,719. This value includes all the access types except for create, which isn't necessary because these rights only apply to records already created.
+You may see that the `inheritedaccessrightsmask` value is commonly 135,069,719. This value includes all the access types except for `Create`, which isn't necessary because these rights only apply to records already created.
 
 #### FetchXml examples
 
-This section includes some example FetchXml queries you might use with the `ResetInheritedAccess` message. [Learn more about creating FetchXml queries](/power-apps/developer/data-platform/use-fetchxml-construct-query).
+This section includes some examples of FetchXml queries you might use with the `ResetInheritedAccess` message. For more information, see [Use FetchXML to construct a query](/power-apps/developer/data-platform/use-fetchxml-construct-query).
 
 ##### Reset inherited access given to a certain user for a specific account
 
