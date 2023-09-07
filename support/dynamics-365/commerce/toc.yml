@@ -89,7 +89,3 @@
           href: site-builder-content-management/missing-products-categories.md
         - name: Products and categories don't appear in Commerce site builder after a new site is mapped
           href: site-builder-content-management/products-categories-unavailable.md
-    - name: Point of sale (POS)
-      items:
-        - name: Store Commerce app (POS) is suddenly deactivated
-          href: point-of-sale/store-commerce-app-pos-deactivated.md
