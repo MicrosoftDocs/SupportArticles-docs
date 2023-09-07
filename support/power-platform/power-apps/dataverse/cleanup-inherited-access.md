@@ -1,6 +1,6 @@
 ---
 title: How to clean up inherited access
-description: Introduces how to remove inherited access to records when the cascade configuration of a table changes in Microsoft Power Apps.
+description: Introduces how to remove inherited access to records when the cascade configuration of a table changes in Microsoft Dataverse..
 ms.date: 09/07/2023
 author: paulliew
 ms.author: paulliew
@@ -17,7 +17,7 @@ contributors:
 ---
 # How to clean up inherited access
 
-This article introduces how to remove inherited access for records when the cascade configuration of a table changes in Microsoft Power Apps.
+This article introduces how to remove inherited access for records when the cascade configuration of a table changes in Microsoft Dataverse.
 
 ## Symptoms
 
@@ -25,7 +25,7 @@ After the [cascading behavior of a table relationship](/power-apps/developer/dat
 
 ## How to verify the access to related records
 
-When you find that you have unexpected access to records, you can use the **Check Access** feature or the `RetrieveAccessOrigin` message to verify the access to the related records. 
+When you find that you have unexpected access to records, you can use the **Check Access** feature or the `RetrieveAccessOrigin` message to verify the access to the related records.
 
 #### Use the Check Access feature
 
@@ -177,7 +177,7 @@ OData-Version: 4.0
 
 The `ResetInheritedAccess` message tries to execute synchronously when there aren't many matching records. Then the `ResetInheritedAccessResponse` value ends with `ExecutionMode : Sync`. If there are many matching records, the operation takes longer, and the value ends with `ExecutionMode : Async`. A system job named `Denormalization_PrincipalObjectAccess_principalobjectaccess:<caller ID>` is created, and you can monitor the success of that job. For more information, see [monitoring system jobs](/power-platform/admin/manage-dataverse-auditing#monitoring-system-jobs) or [managing system jobs with code](/power-apps/developer/data-platform/asynchronous-service#managing-system-jobs).
 
-The `ResetInheritedAccess` message requires a `Fetch` query to identify the records. This query must meet the following requirements:
+The `ResetInheritedAccess` message requires a FetchXml query to identify the records. This query must meet the following requirements:
 
 - Use the `principalobjectaccess`(POA) table.
 - Return only the `principalobjectaccessid` column.
