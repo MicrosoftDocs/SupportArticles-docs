@@ -24,10 +24,10 @@ There are two situations to consider:
 
 It is recommended that you update or slipstream the original SQL Server 2008 by using Service Pack 1 because Service Pack enables to update the entire product. A CU that is based on the original SQL Server 2008 release can only update the SQL Support component.
 
-For answers to frequently asked questions about slipstreaming, see the **SQL Server 2008 Slipstream Frequently Asked Questions** topic on [SQL Server Setup](/archive/blogs/petersad).
+For answers to frequently asked questions about slipstreaming, see the **SQL Server 2008 Slipstream Frequently Asked Questions** topic on [SQL Server Setup](/archive/blogs/petersad/?branch=main).
 
 > [!IMPORTANT]
-> For SQL Server 2012 and later versions, you need to use /UpdateSource parameter to update your SQL Server installation files. For an example on how to do this, see [How to patch SQL Server 2012 Setup with an updated setup package (using UpdateSource to get a smart setup)](/archive/blogs/jason_howell/how-to-patch-sql-server-2012-setup-with-an-updated-setup-package-using-updatesource-to-get-a-smart-setup).
+> For SQL Server 2012 and later versions, you need to use /UpdateSource parameter to update your SQL Server installation files. For an example on how to do this, see [How to patch SQL Server 2012 Setup with an updated setup package (using UpdateSource to get a smart setup)](/archive/blogs/jason_howell/how-to-patch-sql-server-2012-setup-with-an-updated-setup-package-using-updatesource-to-get-a-smart-setup?branch=main).
 
 ## More information
 
@@ -58,11 +58,11 @@ To determine whether the SQL Server 2008 Setup support files are installed on th
 The following limitations apply when you update the Setup program or use the slipstream procedure:
 
 - > [!IMPORTANT]
-  > You must uninstall a failed installation if the Summary.txt log file indicates that you must uninstall.
+  > You must uninstall a failed installation if the *Summary.txt* log file indicates that you must uninstall.
 
 - If you use the slipstream procedure to upgrade an installation to a Wow64 installation, you must perform one of the following additional steps:
 
-  - Specify the /Action parameter on the command line in addition to the /x86 parameter.
+  - Specify the `/Action` parameter on the command line in addition to the `/x86` parameter.
 
   - On the **Options** page of the Installation Center, select **x86**.
 
@@ -97,7 +97,7 @@ Follow these steps to create a slipstream drop that you can use for installing t
 
    - .NET Framework 3.5 SP1 for other editions
 
-     To download and install the .NET Framework 3.5 SP1, see [Microsoft .NET Framework 3.5 Service Pack 1](https://go.microsoft.com/fwlink/?linkid=120550).
+     To download and install the .NET Framework 3.5 SP1, see [Microsoft .NET Framework 3.5 Service Pack 1](https://www.microsoft.com/download/details.aspx?id=25150).
 
    - Windows Installer 4.5
 
@@ -107,9 +107,9 @@ Follow these steps to create a slipstream drop that you can use for installing t
 
 1. Extract the service pack by running the command `SQLServer2008SP1-KB968369-x64-ENU.exe /x:C:\SP1`.  
 
-1. Run the service pack to install Setup files on the computer. You will receive a **Setup Support Files** dialog box if the setup support files have not been installed. You can also run the following file to install the setup support files *C:\SP1\x64\setup\1033\sqlsupport.msi*.
+1. Run the service pack to install Setup files on the computer. You will receive a **Setup Support Files** dialog box if the setup support files have not been installed. You can also run the following file to install the setup support files `C:\SP1\x64\setup\1033\sqlsupport.msi`.
 
-1. Run the *Setup.exe* file from the SQL Server 2008 source media by specifying the **/PCUSource** parameter. For example, `Setup.exe /PCUSource=C:\SP1`.
+1. Run the *Setup.exe* file from the SQL Server 2008 source media by specifying the `PCUSource` parameter. For example, `Setup.exe /PCUSource=C:\SP1`.
 
 ## Procedure 2: Create a merged drop
 
@@ -148,7 +148,7 @@ This procedure describes how to create a new source media that will slipstream t
     robocopy C:\SQLServer2008_FullSP1\PCU c:\SQLServer2008_FullSP1 Setup.rll
     ```
 
-1. Run the following commands to copy all files (not the folders), except the *Microsoft.SQL.Chainer.PackageData.dll* file, in *C:\SQLServer2008_FullSP1\PCU\Architecture* to *C:\SQLServer2008_FullSP1\Architecture* to update the original files.
+1. Run the following commands to copy all files (not the folders), except the *Microsoft.SQL.Chainer.PackageData.dll* file, in `C:\SQLServer2008_FullSP1\PCU\Architecture` to `C:\SQLServer2008_FullSP1\Architecture` to update the original files.
 
    ```console
    robocopy C:\SQLServer2008_FullSP1\pcu\x86 C:\SQLServer2008_FullSP1\x86 /XF Microsoft.SQL.Chainer.PackageData.dll  
@@ -189,7 +189,7 @@ This procedure describes how to create a new source media that will slipstream t
    PCUSOURCE=".\PCU"
    ```
 
-   If you do not have the *Defaultsetup.ini* file in the folders, create the *Defaultsetup.ini* file in the folders, and add the following content to the file:
+   If you don't have the *Defaultsetup.ini* file in the folders, create the *Defaultsetup.ini* file in the folders, and add the following content to the file:
 
    ```console
    ;SQLSERVER2008 Configuration File
@@ -232,7 +232,7 @@ This option is best for running a patched setup on a small number of computers.
 
    > [!NOTE]
    >
-   > - On the IA-64 platform, the .NET Framework 3.5 isn't supported, and the .NET Framework 2.0 SP2 is required. You can install the .NET Framework 2.0 SP2 from the source media. The .NET Framework 2.0 SP2 is located in the following folder on the source media: *Drive_Letter:\ia64\redist\2.0\NetFx20SP2_ia64.exe*.
+   > - On the IA-64 platform, the .NET Framework 3.5 isn't supported, and the .NET Framework 2.0 SP2 is required. You can install the .NET Framework 2.0 SP2 from the source media. The .NET Framework 2.0 SP2 is located in the following folder on the source media: `Drive_Letter:\ia64\redist\2.0\NetFx20SP2_ia64.exe`.
    >
    > - On x86 and x64 platforms, you must install the .NET Framework 3.5 SP1.
 
@@ -264,9 +264,9 @@ This option is best for running a patched setup on many computers, large deploym
 
 1. Copy the following files:
 
-    - Copy the *Setup.exe* and *Setup.rll* files from the *C:\kb_number_of_hotfix package\folder* to the folder that contains the local copy of *media\*.
+    - Copy the *Setup.exe* and *Setup.rll* files from the `C:\kb_number_of_hotfix package\folder` to the folder that contains the local copy of `media\`.
   
-    - Copy all files (not the subfolders) in the **architecture** folder, except the *Microsoft.SQL.Chainer.PackageData.dll* file, from the *C:\kb_number_of_hotfix package\architecture\architecture\* folder to the folder that contains the local copy of *media\architecture\*.
+    - Copy all files (not the subfolders) in the **architecture** folder, except the *Microsoft.SQL.Chainer.PackageData.dll* file, from the `C:\kb_number_of_hotfix package\architecture\architecture\* folder to the folder that contains the local copy of *media\architecture\`.
 
 1. Start the Setup program from the local folder.
 
@@ -284,17 +284,17 @@ To avoid this validation issue, we recommend that you copy the *Microsoft.SQL.Ch
 
 - Method 1
 
-  Manually install the SQL Support .msi file for the particular architecture from the following cumulative update package extraction location: *CU8\<CPU>\setup\sqlsupport.msi*.
+  Manually install the SQL Support .msi file for the particular architecture from the following cumulative update package extraction location: `CU8\<CPU>\setup\sqlsupport.msi.`
 
 - Method 2
 
   In addition to the files that are listed in step 4 in option 2, the files that are described in the following steps should be copied before you start setup from a local folder. To copy the files, follow these steps:
 
-  1. Copy the *Microsoft.SQL.Chainer.Package.dll* file from the RTM folder to the local copy of the *<media>\<architecture folder>* folder.
+  1. Copy the *Microsoft.SQL.Chainer.Package.dll* file from the RTM folder to the local copy of the `<media>\<architecture folder>` folder.
 
   1. Copy the *Sqlsupport.msi* file. Of the following locations, copy the file from the first location to the local copy of the second location:
-     - *C:\<kb_number_of_hotfix package>\<architecture>\setup\Sqlsupport.msi*
-     - *<media>\<architecture folder>\setup\*
+     - `C:\<kb_number_of_hotfix package>\<architecture>\setup\Sqlsupport.msi`
+     - `<media>\<architecture folder>\setup\`
 
 ## SQL Server 2008 setup hotfixes
 
