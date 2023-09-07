@@ -6,29 +6,29 @@
       - name: Data ingestion
         items:
           - name: Power Query data source refresh issues
-            href: data-ingestion/power-query-data-source-refresh-issues-dataflows.md
+            href: data/data-ingestion/power-query-data-source-refresh-issues-dataflows.md
       - name: Exports
         items:
           - name: Controls from Customer Card Add-in if they don't find data
-            href: exports/controls-customer-card-add-in.md
+            href: data/exports/controls-customer-card-add-in.md
           - name: Environment doesn't show in Power BI
-            href: exports/environment-not-showing-in-power-bi.md
+            href: data/exports/environment-not-showing-in-power-bi.md
           - name: Errors on date fields when loading entities in Power BI Desktop
-            href: exports/error-date-fields-power-bi-connector.md
+            href: data/exports/error-date-fields-power-bi-connector.md
           - name: Exports fail with error stating that the following name already exists
-            href: exports/export-fails-name-already-exists.md
+            href: data/exports/export-fails-name-already-exists.md
           - name: Troubleshoot segment not eligible for export
-            href: exports/ineligible-segments-b-to-b.md
+            href: data/exports/ineligible-segments-b-to-b.md
       - name: Insights
         items:
           - name: Segments return no members
-            href: insights/segment-no-results.md
+            href: data/insights/segment-no-results.md
       - name: Customer Insights - Journeys
         items: 
         - name: Applications and Add-ons
           items:
           - name: Organization entitlement doesn't match your tenant
-            href: dynamics-365-marketing-entitlement-does-not-match-your-tenant.md
+            href: journeys/dynamics-365-marketing-entitlement-does-not-match-your-tenant.md
           - name: Problem with deploying the application
-            href: dynamics-365-marketing-problem-with-deployment.md
+            href: journeys/dynamics-365-marketing-problem-with-deployment.md
         
