@@ -101,7 +101,7 @@ Follow these steps to create a slipstream drop that you can use for installing t
 
    - Windows Installer 4.5
 
-     To download and install Windows Installer 4.5, visit the following Microsoft Web site: [https://go.microsoft.com/fwlink/?LinkID=49112](https://go.microsoft.com/fwlink/?linkid=49112)
+     To download and install Windows Installer 4.5, visit the following Microsoft Web site: [https://go.microsoft.com/fwlink/?LinkID=49112](https://archive.org/details/windows-installer-4.5.7z_202212).
 
 1. Download the service pack package that matches you system architecture. For example, download the x64 package of SQL Server 2008 Service Pack 1 if your system is an x64-based system.
 
