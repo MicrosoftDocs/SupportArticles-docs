@@ -1,7 +1,7 @@
 ---
-title: Clean up inherited access
-description: Learn how to remove inherited access for records when the cascade configuration of a table changes.
-ms.date: 09/05/2023
+title: How to clean up inherited access
+description: Introduces how to remove inherited access for records when the cascade configuration of a table changes in Microsoft Power Apps.
+ms.date: 09/07/2023
 author: paulliew
 ms.author: paulliew
 ms.reviewer: jdaly
@@ -15,45 +15,49 @@ contributors:
   - phecke
   - SEOKK-MSFT
 ---
-# Clean up inherited access
+# How to clean up inherited access
+
+This article introduces how to remove inherited access for records when the cascade configuration of a table changes in Microsoft Power Apps.
 
 ## Symptoms
 
-After anyone changes the cascading behavior of a table relationship for the **Reparent** or **Share** actions to **No Cascade**, users retain access to related records that should be removed.
+After the [cascading behavior of a table relationship](/power-apps/developer/data-platform/configure-entity-relationship-cascading-behavior#reset-cascade-inherited-access) for the **Reparent** or **Share** actions is changed to **No Cascade**, users continue to have access to related records that should be removed.
 
-Users may report that they have unexpected access to records. There are two ways that you can verify that the user's continue to have access to related records: using the access checker feature or the `RetrieveAccessOrigin` message.
+## How to verify the access to related records
 
-### Use access checker to verify access to a record
+Users may report that they have unexpected access to records. There are two ways to verify the access to related records:
 
-Use the [check access command](/power-apps/user/access-checker) in model-driven apps to check  which users have access to a record. Administrators can use the check access command to check individual users who have access to a record or all users who have access to a record.
+#### Use the Check Access feature
 
-When using the access checker, you see a list of reasons why a user has access. Some of these reasons indicate that the sharing was due to access to a related record. For example:
+Use the [Check Access](/power-apps/user/access-checker) in model-driven apps to check who has access to a record. Administrators can use this feature to check individual users or all users who have access to a record.
+
+When using the access checker, you see a list of reasons why a user has access. Some of these reasons indicate that the sharing was granted due to access to a related record. For example:
 
 - Record was shared with me because I have access to related record.
-- Record with shared with team(s) that I'm a member of because the team has access to related record.
+- Record was shared with a team(s) that I'm a member of because the team has access to related record.
 
-### Use the RetrieveAccessOrigin message to verify access to a record
+#### Use the RetrieveAccessOrigin message
 
-Developers can use the `RetrieveAccessOrigin` message to detect which users have access to a record. This message returns a sentence describing why the user has the access they do. Any of following results indicate that the access was due to sharing of a related record:
+Developers can use the `RetrieveAccessOrigin` message to detect which users have access to a record. This message returns a sentence describing why the user has the access. Any of following results indicate that the access was granted due to the sharing of a related record:
 
-```
+```console
 PrincipalId is owner of a parent entity of object (<record ID>)
 PrincipalId is member of team (<team ID>) who is owner of a parent entity of object (<record ID>)
 PrincipalId is member of organization (<organization ID>) who is owner of a parent entity of object (<record ID>)
 PrincipalId has access to (<parent record ID>) through hierarchy security. (<parent record ID>) is owner of a parent entity of object (<record ID>)
 ```
 
-More information: [Determine why a user has access with code](/power-apps/developer/data-platform/security-sharing-assigning#determine-why-a-user-has-access)
+For more information, see [Determine why a user has access with code](/power-apps/developer/data-platform/security-sharing-assigning#determine-why-a-user-has-access).
 
 ## Cause
 
-When the table cascading behavior for a table changes, Dataverse starts an asynchronous job to remove the access users were previously entitled to. This job may fail, resulting in user's continuing to have access.
+When the cascading behavior for a table relationship changes, Dataverse starts an asynchronous job to remove the access users were previously granted. However, this job may fail, which could result in users retaining access.
 
 ## Resolution
 
-The first step to resolve this is to re-create the system job to remove access. If that fails, a developer can use the `ResetInheritedAccess` message to apply the change for a specified set of records.
+The first step to resolve this issue is to recreate the system job to remove access. If the job fails, a developer can use the `ResetInheritedAccess` message to apply the change for a specified set of records.
 
-### Re-create the system job to remove access
+### Recreate the system job to remove access
 
 Developers can use the `CreateAsyncJobToRevokeInheritedAccess` message to try creating the asynchronous job again.
 
@@ -78,11 +82,11 @@ public static void CreateAsyncJobToRevokeInheritedAccessExample(IOrganizationSer
 }
 ```
 
-[Learn more about using messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages?tabs=sdk)
+[Learn more about using messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages?tabs=sdk).
 
 #### [Web API](#tab/webapi)
 
-Use the [CreateAsyncJobToRevokeInheritedAccess action](xref:Microsoft.Dynamics.CRM.CreateAsyncJobToRevokeInheritedAccess)
+Use the [CreateAsyncJobToRevokeInheritedAccess action](xref:Microsoft.Dynamics.CRM.CreateAsyncJobToRevokeInheritedAccess).
 
 **Request**:
 
@@ -109,11 +113,11 @@ OData-Version: 4.0
 
 ---
 
-`CreateAsyncJobToRevokeInheritedAccess` creates a new asynchronous job named "RevokeInheritedAccess". You can monitor the success of this job. Learn more about [monitoring system jobs](/power-platform/admin/manage-dataverse-auditing#monitoring-system-jobs) or [managing system jobs with code](/power-apps/developer/data-platform/asynchronous-service#managing-system-jobs).
+The `CreateAsyncJobToRevokeInheritedAccess` action creates a new asynchronous job named "RevokeInheritedAccess". You can monitor the success of this job. For more information, see [monitoring system jobs](/power-platform/admin/manage-dataverse-auditing#monitoring-system-jobs) or [managing system jobs with code](/power-apps/developer/data-platform/asynchronous-service#managing-system-jobs).
 
-### Reset Inherited Access
+### Reset inherited access
 
-If [Re-creating the system job to remove access](#re-create-the-system-job-to-remove-access) fails, a developer with system administrator or system customizer privileges can use the `ResetInheritedAccess` message to target a subset of matching records. You may need to use this message several times to remove access for all the records.
+If [Recreating the system job to remove access](#recreate-the-system-job-to-remove-access) fails, a developer with system administrator or system customizer privileges can use the `ResetInheritedAccess` message to target a subset of matching records. You may need to use this message several times to remove access for all the records.
 
 # [SDK for .NET](#tab/sdk)
 
@@ -141,7 +145,8 @@ public static void OutputResetInheritedAccess(IOrganizationService service, stri
     Console.WriteLine(response.Results["ResetInheritedAccessResponse"]);
 }
 ```
-[Learn more about using messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages?tabs=sdk)
+
+[Learn more about using messages with the SDK for .NET](/power-apps/developer/data-platform/org-service/use-messages?tabs=sdk).
 
 # [Web API](#tab/webapi)
 
@@ -170,10 +175,9 @@ OData-Version: 4.0
 
 ---
 
-`ResetInheritedAccess` tries to execute synchronously when there aren't many matching records. Then the `ResetInheritedAccessResponse` value ends with `ExecutionMode : Sync`. If there are many matching records, the operation takes longer, and the value ends with `ExecutionMode : Async`. A system job named `Denormalization_PrincipalObjectAccess_principalobjectaccess:<caller ID>` is created and you can monitor the success of that job. Learn more about [monitoring system jobs](/power-platform/admin/manage-dataverse-auditing#monitoring-system-jobs) or [managing system jobs with code](/power-apps/developer/data-platform/asynchronous-service#managing-system-jobs).
+The `ResetInheritedAccess` message tries to execute synchronously when there aren't many matching records. Then the `ResetInheritedAccessResponse` value ends with `ExecutionMode : Sync`. If there are many matching records, the operation takes longer, and the value ends with `ExecutionMode : Async`. A system job named `Denormalization_PrincipalObjectAccess_principalobjectaccess:<caller ID>` is created, and you can monitor the success of that job. For more information, see [monitoring system jobs](/power-platform/admin/manage-dataverse-auditing#monitoring-system-jobs) or [managing system jobs with code](/power-apps/developer/data-platform/asynchronous-service#managing-system-jobs).
 
-
-`ResetInheritedAccess` requires a Fetch query to identify the records. This query must meet the following requirements:
+The `ResetInheritedAccess` message requires a Fetch query to identify the records. This query must meet the following requirements:
 
 - Use the `principalobjectaccess`(POA) table.
 - Return only the `principalobjectaccessid` column.
@@ -192,24 +196,23 @@ You need to compose a FetchXml query using only these columns.
 |`changedon`|DateTime|The last date that the principal's access to the record changed.|
 |`inheritedaccessrightsmask`|Integer|Contains the combined [AccessRights enum](xref:Microsoft.Dynamics.CRM.AccessRights) member values for the access rights that are applied due to inheritance.|
 |`objectid`|Unique Identifier|The ID of the record that the principal has access to.|
-|`objecttypecode`|Integer|The [EntityMetadata.ObjectTypeCode](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.ObjectTypeCode) value that corresponds to the table. This value isn't necessarily the same for different environments. For custom tables, it's assigned based on the order the table was created. To get this value, you may need to view the metadata for the table. There are several community tools to find this. There's a solution from Microsoft here: [Browse table definitions in your environment](/power-apps/developer/data-platform/browse-your-metadata)|
-|`principalid` |Unique Identifier|The ID of the user or team who has access|
+|`objecttypecode`|Integer|The [EntityMetadata.ObjectTypeCode](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.ObjectTypeCode) value that corresponds to the table. This value isn't necessarily the same for different environments. For custom tables, it's assigned based on the order the table was created. To get this value, you may need to view the metadata for the table. There are several community tools to find this. There's a solution from Microsoft: [Browse table definitions in your environment](/power-apps/developer/data-platform/browse-your-metadata).|
+|`principalid` |Unique Identifier|The ID of the user or team who has access.|
 |`principalobjectaccessid`|Unique Identifier|The primary key of the POA table.|
-|`principaltypecode`|Integer|The type code of the principal. SystemUser = 8, Team = 9|
+|`principaltypecode`|Integer|The type code of the principal. `SystemUser` = 8, `Team` = 9.|
 
 The following [AccessRights enum](xref:Microsoft.Dynamics.CRM.AccessRights) member values apply for the `accessrightsmask` and `inheritedaccessrightsmask` columns:
-
 
 |Access type|Value|Description|
 |---------|---------|---------|
 |None|0|No access.|
-|Read|1|The right to read a record|
-|Write|2|The right to update a record|
+|Read|1|The right to read a record.|
+|Write|2|The right to update a record.|
 |Append|4|The right to append the specified record to another record. |
 |AppendTo|16|The right to append another record to the specified record. |
-|Create|32|The right to create a record|
-|Delete|65,536|The right to delete a record|
-|Share|262,144|The right to share a record|
+|Create|32|The right to create a record.|
+|Delete|65,536|The right to delete a record.|
+|Share|262,144|The right to share a record.|
 |Assign|524,288|The right to assign the specified record to another user or team.|
 
 You may see that the `inheritedaccessrightsmask` value is commonly 135,069,719. This value includes all the access types except for create, which isn't necessary because these rights only apply to records already created.
