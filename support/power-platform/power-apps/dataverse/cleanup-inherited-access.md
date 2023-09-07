@@ -25,7 +25,7 @@ After the [cascading behavior of a table relationship](/power-apps/developer/dat
 
 ## How to verify the access to related records
 
-When you find that you have unexpected access to records, you can use the **Check Access** feature or the `RetrieveAccessOrigin message` to verify the access to the related records. 
+When you find that you have unexpected access to records, you can use the **Check Access** feature or the `RetrieveAccessOrigin` message to verify the access to the related records. 
 
 #### Use the Check Access feature
 
@@ -209,7 +209,7 @@ The following [AccessRights enum](xref:Microsoft.Dynamics.CRM.AccessRights) memb
 |`Read`|1|The right to read a record.|
 |`Write`|2|The right to update a record.|
 |`Append`|4|The right to append the specified record to another record. |
-|`Append`To|16|The right to append another record to the specified record. |
+|`AppendTo`|16|The right to append another record to the specified record. |
 |`Create`|32|The right to create a record.|
 |`Delete`|65,536|The right to delete a record.|
 |`Share`|262,144|The right to share a record.|
