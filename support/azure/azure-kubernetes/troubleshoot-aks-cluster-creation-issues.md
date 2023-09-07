@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Azure Kubernetes Service cluster creation issues
 description: Learn about basic troubleshooting methods to use when you can't create or deploy an Azure Kubernetes Service (AKS) cluster.
-ms.date: 4/29/2022
+ms.date: 04/29/2022
 editor: v-jsitser
 ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis
 ms.service: azure-kubernetes-service

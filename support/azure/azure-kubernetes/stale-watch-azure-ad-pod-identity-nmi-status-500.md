@@ -1,7 +1,7 @@
 ---
 title: Stale watch or HTTP status 500 in Azure AD Pod Identity NMI
 description: Troubleshoot a stale watch or status 500 message that's returned by an Azure Active Directory Pod Identity Node Managed identity (NMI) in Azure Kubernetes Service (AKS).
-ms.date: 7/8/2022
+ms.date: 07/08/2022
 editor: v-jsitser
 ms.reviewer: chiragpa, nickoman, v-leedennis
 ms.service: azure-kubernetes-service

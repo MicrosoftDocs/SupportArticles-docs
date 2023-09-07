@@ -1,7 +1,7 @@
 ---
 title: Computer record is rejected in MBAM
 description: Describe how to resolve the warning message "Computer Record is Rejected" in MBAM.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

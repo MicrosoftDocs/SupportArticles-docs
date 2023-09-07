@@ -1,7 +1,7 @@
 ---
 title: Event ID 10000 when Terminal Server is enabled
 description: Describes a problem where event ID 10000 is logged in the Application log when you use a Terminal Server computer that is running Windows Server 2003. To resolve this problem, you must modify the registry, as described here.
-ms.date: 3/24/2022
+ms.date: 03/24/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

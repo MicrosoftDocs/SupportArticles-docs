@@ -1,7 +1,7 @@
 ---
 title: Internal error during replication phase of dcpromo
 description: Describes how to troubleshoot an internal error that you receive during the replication phase of the Active Directory Installation Wizard (Dcpromo)
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot delays after user is forced to change password
 description: 'Troubleshoot delays after a user is forced to change their password, and then signs in and gets this message: "Our servers take a little time to catch up."'
-ms.date: 2/18/2022
+ms.date: 02/18/2022
 ms.reviewer: jarrettr, nualex, v-leedennis
 ms.service: active-directory
 ms.subservice: enterprise-users

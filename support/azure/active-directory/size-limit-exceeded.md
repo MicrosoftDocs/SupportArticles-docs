@@ -1,7 +1,7 @@
 ---
 title: Size Limit Exceeded - Error Code 0x4 during delta import
 description: Learn how to resolve the Size Limit Exceeded - Error Code 0x4 error during the delta import step for an on-premises connector in Azure Active Directory Connect.
-ms.date: 5/31/2023
+ms.date: 05/31/2023
 author: DevOpsStyle
 ms.author: tommasosacco
 editor: v-jsitser

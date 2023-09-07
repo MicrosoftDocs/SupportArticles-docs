@@ -1,7 +1,7 @@
 ---
 title: Active Route removed
 description: This article provides a solution to an issue that the Active route is removed when you add a static persistent route to a network adapter.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

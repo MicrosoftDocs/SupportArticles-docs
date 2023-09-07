@@ -4,7 +4,7 @@ description: Troubleshoot a cloud-init-enabled Azure Virtual Machine deployment 
 editor: v-jsitser
 ms.service: virtual-machines
 ms.subservice: vm-deploy
-ms.date: 2/3/2022
+ms.date: 02/03/2022
 ms.reviewer: srijangupta, v-leedennis
 ---
 # Cloud–init-enabled VM takes a long time to start up

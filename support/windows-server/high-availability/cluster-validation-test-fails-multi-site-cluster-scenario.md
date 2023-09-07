@@ -1,7 +1,7 @@
 ---
 title: Cluster validation test fails in a multi-site cluster scenario
 description: The Active Directory configuration validation may fail in a multi-site cluster scenario. Ignore it if domain communication and DC replication are OK.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

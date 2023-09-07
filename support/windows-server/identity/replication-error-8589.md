@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot AD replication error 8589
 description: Describes how to troubleshoot AD operations failure with Win32 error 8589.
-ms.date: 3/24/2022
+ms.date: 03/24/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

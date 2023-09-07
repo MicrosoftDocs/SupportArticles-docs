@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot extension certificate issues on a Windows VM in Azure
 description: Learn how to troubleshoot issues that involve certificates on a Windows virtual machine (VM) that uses an extension in Azure.
-ms.date: 5/5/2023
+ms.date: 05/05/2023
 editor: v-jsitser
 ms.reviewer: kegregoi, axelg, scotro, v-leedennis
 ms.service: virtual-machines

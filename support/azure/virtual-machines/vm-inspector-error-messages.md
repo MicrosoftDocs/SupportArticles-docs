@@ -1,7 +1,7 @@
 ---
 title: VM Inspector error messages and common solutions
 description: Review a reference table that describes the error codes for the VM Inspector for Azure virtual machines.
-ms.date: 6/6/2022
+ms.date: 06/06/2022
 ms.reviewer: mimckitt, v-leedennis
 ms.service: virtual-machines
 ms.subservice: vm-troubleshooting-tools
