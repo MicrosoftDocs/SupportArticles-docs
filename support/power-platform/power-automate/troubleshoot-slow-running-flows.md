@@ -76,3 +76,4 @@ If you need more actions than what Power Automate provides on a daily basis, con
 
 - [Types of Power Automate licenses](/power-platform/admin/power-automate-licensing/types)
 - [Frequently Asked Questions on Power Platform requests](/power-platform/admin/power-automate-licensing/types#power-platform-requests-faqs)
+- Training module - [Troubleshoot slow-running flows in Power Automate](https://learn.microsoft.com/en-us/training/modules/troubleshoot-slow-flows)
