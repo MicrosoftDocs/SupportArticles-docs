@@ -5898,6 +5898,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "support/windows-server/identity/ldap-kerberos-server-reset-tcp-sessions.md",
+      "redirect_url": "/troubleshoot/windows-server/identity/ldap-kerberos-server-not-respond-udp-request-reset-tcp-sessions",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "support/azure/azure-functions/index.md",
       "redirect_url": "/troubleshoot/azure/azure-functions/welcome-azure-functions",
       "redirect_document_id": true
