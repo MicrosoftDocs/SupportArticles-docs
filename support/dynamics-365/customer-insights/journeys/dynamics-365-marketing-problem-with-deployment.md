@@ -1,25 +1,25 @@
 ---
-title: Dynamics 365 Marketing problem with the deployment
-description: Problem with the deployment for Microsoft Dynamics 365 Marketing application. Provides a resolution.
+title: Dynamics 365 Customer Insights - Journeys problem with the deployment
+description: Problem with the deployment for Microsoft Dynamics 365 Customer Insights - Journeys application. Provides a resolution.
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
 ms.subservice: d365-marketing-marketing
 ---
-# Problem with the deployment for Microsoft Dynamics 365 Marketing application
+# Problem with the deployment
 
-This article provides a resolution for the **problem with deployment** error that occurs when deploying Microsoft Dynamics 365 Marketing application.
+This article provides a resolution for the **problem with deployment** error that occurs when deploying the Dynamics 365 Customer Insights - Data application.
 
-_Applies to:_ &nbsp; Microsoft Dynamics 365 for Marketing  
+_Applies to:_ &nbsp; Microsoft Dynamics 365 Customer Insights - Journeys  
 _Original KB number:_ &nbsp; 4558059
 
 ## Symptoms
 
-**There was a problem with deployment. Restart the setup process to try again** error message occurs in First Run Experience for deploying Microsoft Dynamics 365 Marketing application.
+**There was a problem with deployment. Restart the setup process to try again** error message occurs in First Run Experience for deploying the application.
 
 ## Cause
 
-One of the reasons why First Run Experience for deploying Microsoft Dynamics 365 Marketing application could lead to the error is when change tracking is not enabled for some required for logical entity name(s) on your Microsoft Dynamics CRM organization where you are deploying the Marketing application.
+One of the reasons why First Run Experience for deploying the application could lead to the error is when change tracking is not enabled for some required for logical entity name(s) on your Microsoft Dynamics CRM organization where you are deploying the Customer Insights - Data application.
 
 ## Resolution
 

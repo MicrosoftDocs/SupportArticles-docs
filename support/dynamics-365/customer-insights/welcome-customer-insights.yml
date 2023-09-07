@@ -45,6 +45,15 @@ landingContent:
         links:
           - text: Segments return no members
             url: insights/segment-no-results.md
+  
+  - title: Customer Insights - Journeys issues
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Organization entitlement doesn't match your tenant
+            url: dynamics-365-marketing-entitlement-does-not-match-your-tenant.md
+          - text: Problem with deploying application
+            url: dynamics-365-marketing-problem-with-deployment.md
 
   # Card
   - title: Documentation and training

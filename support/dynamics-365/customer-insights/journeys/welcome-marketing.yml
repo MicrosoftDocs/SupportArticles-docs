@@ -15,11 +15,4 @@ metadata:
 
 landingContent:
   # Card
-  - title: Microsoft Dynamics 365 Marketing issues
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Organization entitlement doesn't match your tenant
-            url: dynamics-365-marketing-entitlement-does-not-match-your-tenant.md
-          - text: Problem with deploying Marketing application
-            url: dynamics-365-marketing-problem-with-deployment.md
+
