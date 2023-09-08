@@ -44,7 +44,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Segments return no members
-            url: insights/segment-no-results.md
+            url: data/insights/segment-no-results.md
   
 
   # Card
@@ -63,6 +63,6 @@ landingContent:
       - linkListType: reference
         links:
           - text: Customer Insights forum
-            url: https://go.microsoft.com/fwlink/?linkid=2073991
+            url: https://community.dynamics.com/forums/thread/?partialUrl=aicustomerinsights
           - text: Share your ideas
             url: https://go.microsoft.com/fwlink/?linkid=2074172
