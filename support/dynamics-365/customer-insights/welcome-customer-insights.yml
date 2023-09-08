@@ -20,15 +20,15 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Environment doesn't show in Power BI
-            url: exports/environment-not-showing-in-power-bi.md
+            url: data/exports/environment-not-showing-in-power-bi.md
           - text: Errors on date fields when loading entities in Power BI Desktop
-            url: exports/error-date-fields-power-bi-connector.md
+            url: data/exports/error-date-fields-power-bi-connector.md
           - text: Exports fail with error stating that the following name already exists
-            url: exports/export-fails-name-already-exists.md
+            url: data/exports/export-fails-name-already-exists.md
           - text: Troubleshoot controls from Customer Card Add-in
-            url: exports/controls-customer-card-add-in.md
+            url: data/exports/controls-customer-card-add-in.md
           - text: Troubleshoot segment not eligible for export
-            url: exports/ineligible-segments-b-to-b.md
+            url: data/exports/ineligible-segments-b-to-b.md
 
   # Card
   - title: Data ingestion
@@ -36,7 +36,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Troubleshoot Power Query data source refresh issues
-            url: data-ingestion/power-query-data-source-refresh-issues-dataflows.md
+            url: data/data-ingestion/power-query-data-source-refresh-issues-dataflows.md
 
   # Card
   - title: Insights
@@ -46,14 +46,6 @@ landingContent:
           - text: Segments return no members
             url: insights/segment-no-results.md
   
-  - title: Customer Insights - Journeys issues
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Organization entitlement doesn't match your tenant
-            url: dynamics-365-marketing-entitlement-does-not-match-your-tenant.md
-          - text: Problem with deploying application
-            url: dynamics-365-marketing-problem-with-deployment.md
 
   # Card
   - title: Documentation and training
