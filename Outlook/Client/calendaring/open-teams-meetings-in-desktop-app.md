@@ -1,8 +1,6 @@
 ---
 title: Configure Teams meeting links to open in Teams desktop app
 description: How to configure Teams meeting links in Outlook to open in the Teams desktop app.
-author: cloud-writer
-ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

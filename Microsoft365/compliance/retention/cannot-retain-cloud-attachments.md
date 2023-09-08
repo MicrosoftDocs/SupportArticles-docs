@@ -1,8 +1,6 @@
 ---
 title: Can't retain cloud attachments
 description: Provides a table to identify which sharing mechanisms are cloud attachments in Outlook and Teams for retention and which aren't.
-author: v-charloz
-ms.author: v-chazhang
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
