@@ -2,7 +2,7 @@
 title: Troubleshoot slow running flows
 description: Describes possible reasons for slow running flows and suggestions for alleviating the issue.
 ms.reviewer: prkoduku, hinas
-ms.date: 09/01/2023
+ms.date: 09/08/2023
 ms.subservice: power-automate-flows
 ---
 # Troubleshoot slow running flows
@@ -76,4 +76,4 @@ If you need more actions than what Power Automate provides on a daily basis, con
 
 - [Types of Power Automate licenses](/power-platform/admin/power-automate-licensing/types)
 - [Frequently Asked Questions on Power Platform requests](/power-platform/admin/power-automate-licensing/types#power-platform-requests-faqs)
-- Training module - [Troubleshoot slow-running flows in Power Automate](https://learn.microsoft.com/en-us/training/modules/troubleshoot-slow-flows)
+- Training module - [Troubleshoot slow-running flows in Power Automate](/training/modules/troubleshoot-slow-flows)
