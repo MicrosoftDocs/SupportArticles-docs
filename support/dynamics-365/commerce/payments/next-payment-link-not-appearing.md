@@ -4,7 +4,7 @@ description: Provides a resolution for an issue where the Save for my next payme
 author: josaw1 
 ms.author: josaw
 ms.reviewer: rassadi, brstor
-ms.date: 09/01/2023
+ms.date: 09/08/2023
 ---
 # "Save for my next payment" option doesn't appear
 
@@ -16,7 +16,7 @@ The **Save for my next payment** option doesn't appear in the **PAYMENT METHOD**
 
 The following screenshot shows an example of a checkout page that includes the **Save for my next payment** option.
 
-:::image type="content" source="media/next-payment-link-not-appearing/payment-module-save-payment.png" alt-text="Screenshot that shows the Save for my next payment option under the PAYMENT METHOD section on the checkout page.":::
+:::image type="content" source="media/next-payment-link-not-appearing/payment-module-save-payment.png" alt-text="Screenshot that shows the Save for my next payment option under the PAYMENT METHOD section on the checkout page." lightbox="media/next-payment-link-not-appearing/payment-module-save-payment.png":::
 
 ## Resolution
 
@@ -26,7 +26,7 @@ To solve this issue, follow these steps to make sure that the Dynamics 365 Payme
 1. Select the online store.
 1. On the **Payment accounts** FastTab, make sure that the **Allow saving payment information in e-commerce** field is set to **True**.
 
-:::image type="content" source="media/next-payment-link-not-appearing/payment-connector-save-payment.png" alt-text="Screenshot that shows the Allow saving payment information in e-commerce field in Commerce headquarters.":::
+:::image type="content" source="media/next-payment-link-not-appearing/payment-connector-save-payment.png" alt-text="Screenshot that shows the Allow saving payment information in e-commerce field in Commerce headquarters." lightbox="media/next-payment-link-not-appearing/payment-connector-save-payment.png":::
 
 ## More information
 
