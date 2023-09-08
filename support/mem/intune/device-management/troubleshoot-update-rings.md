@@ -51,7 +51,7 @@ The best practice for troubleshooting policy issues is to always check its statu
 
 Navigate to **Devices** > **Windows** > **Update rings for Windows 10 and later** and select the Update ring policy to review. You’ll see the **Overview** of that policy with colored charts reflecting the profile deployment information.
 
-PLACEHOLDER FOR IMAGE - Caption: A screenshot of the Default Update Ring Overview pane in the Intune admin center.
+:::image type="content" source="media/Troubleshoot-Update-rings/1.UpdateRingOverviewPane.jpg" alt-text="A screenshot of the Default Update Ring Overview pane in the Intune admin center.":::
 
 Check the individual device to confirm that the Update rings policy has been successfully applied.
 
@@ -60,31 +60,31 @@ Check the individual device to confirm that the Update rings policy has been suc
 
 When reviewing the Update rings policy for an affected device, there may be two entries for it depending on the type of user devices being managed. This happens because, when Intune deploys a policy (any policy, not just Update rings), the settings are delivered against both the logged-on user and the system context of the device, causing the two entries, which is normal. However, if you manage Kiosk-type devices with Auto-logon or a local-account user type, only the system account will be displayed.
 
-PLACEHOLDER FOR IMAGE - Caption: A screenshot of the Device status pane on the Default_UpdateRing page.
+:::image type="content" source="media/Troubleshoot-Update-rings/2.DeviceStatusPane.jpg" alt-text="A screenshot of the Device status pane on the Default_UpdateRing page.":::
 
 For more information, see the [Drill down for more details](/mem/intune/protect/compliance-policy-monitor#drill-down-for-more-details) section of [Monitor results of your Intune Device compliance policies | Microsoft Learn](/mem/intune/protect/compliance-policy-monitor).
 
 Refer to the **Device Configuration** report to see whether a policy has been applied successfully to the device. If there are issues, or to simply confirm, verify the settings on the target device itself.
 
-PLACEHOLDER FOR IMAGE - Caption: A screenshot of the Profile settings report for the example device.
+:::image type="content" source="media/Troubleshoot-Update-rings/3.ProfileSettingsReport.jpg" alt-text="A screenshot of the Profile settings report for the example device.":::
 
 ## Verifying settings on the device
 
 To confirm that the policies have applied to the device locally, navigate to Windows (10/11) **Settings** > **Accounts** and select the **Work or School account**. You’ll see which policies are applied to the device from Intune and whether they’re managed by your organization.
 
-PLACEHOLDER FOR IMAGE - Caption: A screenshot of the policies on the device in the “Managed by Organization” pane.
+:::image type="content" source="media/Troubleshoot-Update-rings/4.PoliciesOnTheDevice.jpg" alt-text="A screenshot of the policies on the device in the “Managed by Organization” pane.":::
 
 On the Windows device, navigate to **Settings** > **Windows Updates** > **View Configured Update Policies** to view the policies managed by your organization.
 
-PLACEHOLDER FOR IMAGE - Caption: A screenshot of the Windows Update pane, Advanced options, highlighting the "Configured update policies" option.
+:::image type="content" source="media/Troubleshoot-Update-rings/5.ViewConfigureUpdatePolicies.jpg" alt-text="A screenshot of the Windows Update pane, Advanced options, highlighting the "Configured update policies" option.":::
 
 Verify that the **Policy type** is *mobile device management*.
 
-PLACEHOLDER FOR IMAGE - Caption: A screenshot of the Configured update policies pane with the "Set when Active Hours start” setting showing Mobile Device Management as the type.
+:::image type="content" source="media/Troubleshoot-Update-rings/6.MDMasType.jpg" alt-text="A screenshot of the Configured update policies pane with the "Set when Active Hours start” setting showing Mobile Device Management as the type.":::
 
 The update policies are configured by your mobile device management (MDM) solution, which is Intune in this scenario. However, it's possible that the update policy is coming from the on-premises Active Directory, which would have *Group Policy* as the **Policy type**.
 
-PLACEHOLDER FOR IMAGE - Caption: A screenshot of the Configured update policies pane with the "Allow updates to be downloaded automatically over metered connections” setting showing the Group Policy as the type.
+:::image type="content" source="media/Troubleshoot-Update-rings/7.AllowUpdatesToBeManagedBy.jpg" alt-text="A screenshot of the Configured update policies pane with the "Allow updates to be downloaded automatically over metered connections” setting showing the Group Policy as the type.":::
 
 ### Common conflicts between MDM and group policies
 
@@ -92,7 +92,7 @@ Mixed deployments between Intune MDM policies and group policies (GPO) can creat
 
 The best way to validate what policies are delivered through GPO is with the "gpresult” command. To learn more, see [gpresult | Microsoft Learn](/windows-server/administration/windows-commands/gpresult).
 
-PLACEHOLDER FOR IMAGE - Caption: A screenshot of the gpresultoutput from an example device.
+:::image type="content" source="media/Troubleshoot-Update-rings/8.GPResultOutput.jpg" alt-text="A screenshot of the gpresultoutput from an example device.":::
 
 If the policy source is "Local Group Policy," it's likely being set by SCCM. If it's not, you'll see the group policy object from the Active Directory infrastructure and can edit it to remove the conflicting values.
 
@@ -104,7 +104,7 @@ Some of these conflicts can be resolved using the ControlPolicyConflict CSP. Gen
 
 If the Windows Update ring policies are successfully deployed by Intune to the target device, you’ll be able to see those settings in the Registry under HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\current\device\Update.
 
-PLACEHOLDER FOR IMAGE - Caption: A screenshot of an example registry showing the successfully deployed policies in the Update folder.
+:::image type="content" source="media/Troubleshoot-Update-rings/9.RegistryDeployment.jpg" alt-text="A screenshot of an example registry showing the successfully deployed policies in the Update folder.":::
 
 These values should match the [Policy CSP description](/windows/client-management/mdm/policy-csp-update) and the configuration deployed in the Update ring policy from Intune.
 
@@ -112,13 +112,13 @@ These values should match the [Policy CSP description](/windows/client-managemen
 
 Another method to verify whether the Update ring policy was deployed to the device is to check the MDM diagnostic report. On the Windows device, navigate to **Settings** > **Accounts** > **Access work or school** and then select the **Export** button. The report includes the Intune deployed policies. If the Update ring policy is in the report, the policy was successfully deployed.
 
-PLACEHOLDER FOR IMAGE - Caption: A screenshot of an example MDM diagnostic report.
+:::image type="content" source="media/Troubleshoot-Update-rings/10.MDMReport.jpg" alt-text="A screenshot of an example MDM diagnostic report.":::
 
 ### Review the Event Viewer log for Intune events
 
 Review the Event Viewer log to see how the PolicyCSP data is being delivered to the device in real-time. On the device, navigate to the **Event Viewer** application and then go to **Applications and Services** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostics** > **Admin**.
 
-PLACEHOLDER FOR IMAGE - Caption: A screenshot of the Admin pane for MDM Policy Manager in the Event Viewer with the policies deployed to the device highlighted.
+:::image type="content" source="media/Troubleshoot-Update-rings/11.EventViewer.jpg" alt-text="A screenshot of the Admin pane for MDM Policy Manager in the Event Viewer with the policies deployed to the device highlighted.":::
 
 If the policy was successfully deployed (for example, look for the Set action), there won't be any errors or warnings.
 
@@ -132,9 +132,9 @@ When using the Windows Update Client, you might find errors that could help pinp
 
 To access Event Viewer, on the device, find the **Event Viewer** app in the Windows Start menu and then select **Applications and Services logs** > **Microsoft** > **Windows** > **Windows Update Client**.
 
-PLACEHOLDER FOR IMAGE - Caption: A screenshot of the Event Viewer showing the message, "Windows Update successfully found 6 updates.”
+:::image type="content" source="media/Troubleshoot-Update-rings/12.EventViewerUpdates.jpg" alt-text="A screenshot of the Event Viewer showing the message, "Windows Update successfully found 6 updates.”":::
 
-PLACEHOLDER FOR IMAGE - Caption: A screenshot of the WindowsUpdateClient with a notification about error 0x80072EE6 preventing update checks.
+:::image type="content" source="media/Troubleshoot-Update-rings/13.EventViewerUpdatesExample.jpg" alt-text="A screenshot of the WindowsUpdateClient with a notification about error 0x80072EE6 preventing update checks.":::
 
 ### Check the Windows Update Registry Keys source
 
@@ -142,9 +142,9 @@ Monitor the Windows side of things by reviewing the Windows Update source regist
 
 To review other configured settings for Windows Update on the device, access the Registry Editor app and navigate to: Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate or Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU.
 
-PLACEHOLDER FOR IMAGE - Caption: A screenshot of the Registry Editor for Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU.
+:::image type="content" source="media/Troubleshoot-Update-rings/14.UpdatesRegistryKeys.jpg" alt-text="A screenshot of the Registry Editor for Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU.":::
 
-PLACEHOLDER FOR IMAGE - Caption: A screenshot of the Registry Editor for Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate.
+:::image type="content" source="media/Troubleshoot-Update-rings/15.UpdatesRegistryKeys2.jpg" alt-text="A screenshot of the Registry Editor for Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate.":::
 
 From here, find additional information about the deployed policies that might come from group policy. For example, you might see the registry keys and the Windows Update (WU) service pointing towards WSUS rather than towards WU servers while also having Dual Scan Disabled. This would result in the device scanning against WSUS instead of WU. See [Use Windows Update for Business and WSUS together | Microsoft Learn](/windows/deployment/update/wufb-wsus), for more details.
 
@@ -157,26 +157,23 @@ If the previous options didn’t provide the results needed to identify the issu
 - Is there an active network connection on the device? If the device is in airplane mode, turned off, or the user has the device in a location with no service, the policy will not apply until network connectivity is established.
 - Does the device not upgrade past a specific version? Check for a conflicting [TargetReleaseVersion](/windows/client-management/mdm/policy-csp-update#targetreleaseversion) value through other means, such as Group policy or Settings catalog, found in the Windows Update registry keys mentioned below.
 - Verify that feature and quality updates are configured to be delivered by Windows Update. If UpdateServiceUrl (see screenshot below) is populated in the Registry, verify that DisableDualScan is set to 0. On the device, access the Registry Editor app and navigate to Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate.
-
-PLACEHOLDER FOR IMAGE - Caption: A screenshot of the Registry Editor for Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate.
-
 - Is the device co-managed? Make sure the [workload for Windows Updates has been switched to Intune](/mem/configmgr/comanage/workloads#windows-update-policies).
 
-PLACEHOLDER FOR IMAGE - Caption: A screenshot of the Properties dialog highlighting the Windows Update policies slider on the Workloads tab.
+:::image type="content" source="media/Troubleshoot-Update-rings/16.Workloads.png" alt-text="A screenshot of the Properties dialog highlighting the Windows Update policies slider on the Workloads tab.":::
 
 - Make sure you’re not deploying conflicting Windows Update for Business (WUfB) settings from another Update ring or from a Settings Catalog policy. Confirm your assigned Settings Catalog policies for WUfB settings that may end up being deployed.
   - For Update ring policies, you should see a “Conflict” reporting in the Device Configuration pane for the device or in the colored charts.
 
-PLACEHOLDER FOR IMAGE - Caption: A screenshot of the colored Profile assignment status – Windows 10 and later devices chart with the Succeeded and Conflict data highlighted.
+:::image type="content" source="media/Troubleshoot-Update-rings/17.ConflictReport.png" alt-text="A screenshot of the colored Profile assignment status – Windows 10 and later devices chart with the Succeeded and Conflict data highlighted.":::
 
 - Be sure that the Windows Update ring policy is deployed to the correct user/device group. This is a fairly common issue that’s easy to correct.
 - Determine whether the entire policy deployment fails or only certain settings aren’t being applied. Do this by navigating to **Device** > **Device Configuration** > **Update ring report**. You might see a specific setting in the list that shows an error rather than a success message (similar to the image below).
 
-PLACEHOLDER FOR IMAGE - Caption: A screenshot of the Profile Settings, “Automatic update behavior” and "Microsoft Product Updates,” showing a Setting status as "Conflict."
+:::image type="content" source="media/Troubleshoot-Update-rings/18.ErrorExample.jpg" alt-text="A screenshot of the Profile Settings, “Automatic update behavior” and "Microsoft Product Updates,” showing a Setting status as "Conflict."":::
 
 - Check the actual wording for the setting that’s getting the error status. For example, there may be some specific values applicable only on certain Windows versions or editions.
 
-PLACEHOLDER FOR IMAGE - Caption: A screenshot of the SetDisableUXWUAccess setting with the “User” value for Scope showing as an error.
+:::image type="content" source="media/Troubleshoot-Update-rings/19.CSPExample.jpg" alt-text="A screenshot of the Profile Settings, “A screenshot of the SetDisableUXWUAccess setting with the “User” value for Scope showing as an error.":::
 
 See the description of each setting in [Settings for Windows Update that you can manage through Intune policy for Update rings | Microsoft Learn](/mem/intune/protect/windows-update-settings).
 
