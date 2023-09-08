@@ -96,7 +96,7 @@ The following steps demonstrate two problems that may occur if manager and deleg
 1. Right-click anywhere on the manager's calendar and select **New Meeting Request**.
 1. Examine the account in the **From** field. The account that is listed is the manager's account. However, this should have been the delegate's account, because the delegate is creating the meeting on behalf of the manager.
 
-### Scenario 2: The mailbox that you add manually is also added by Exchange Auto-Mapping
+## Scenario 2: The mailbox that you add manually is also added by Exchange Auto-Mapping
 
 In Exchange Server 2010 Service Pack 1 (SP1) or later versions, the Auto-Mapping feature automatically adds mailboxes to the Outlook Navigation Pane if you have Full Access permission to the mailboxes. Outlook manages these additional mailboxes by using a specific permission set. If you previously configured these mailboxes as multiple Exchange accounts in the same Outlook profile, you may experience unexpected behavior when you send mail by using these mailboxes. This is because the mailboxes that are accessed by using the multiple Exchange accounts functionality in Outlook use a different permissions set from the mailboxes that are added by Exchange Auto-Mapping. Outlook tries to use both permission sets at the same time which is not a supported functionality.
 
