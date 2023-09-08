@@ -5,8 +5,8 @@
       items:
         - name: Customer records don't appear in Commerce headquarters
           href: commerce-headquarters-operations/customer-record-not-appearing.md
-        - name: Order summary subtotal doesn't include taxes on charges when using customized order summary modules
-          href: commerce-headquarters-operations/summary-taxes-custom-modules-10.0.27.md
+        - name: Order summary subtotal doesn't include taxes on charges with customized order summary modules
+          href: commerce-headquarters-operations/summary-taxes-custom-modules-10-0-27.md
     - name: Customer accounts and loyalty
       items:
         - name: Welcome email isn't sent when new customers are created
@@ -23,7 +23,7 @@
       items:
         - name: Items without inventory can be checked out
           href: ecommerce-storefront/items-without-inventory-checked-out.md
-        - name: Pick this up option doesn't appear on cart or product details pages
+        - name: '"Pick this up" option doesn't appear on cart or product details pages'
           href: ecommerce-storefront/pickup-store-link-missing.md
         - name: Retail store doesn't appear in the list of stores to pick up from
           href: ecommerce-storefront/pickup-store-missing.md
@@ -61,7 +61,7 @@
           href: payments/refund-declined.md
         - name: Refundable charges are miscalculated based on returned quantity
           href: payments/refund-miscalculated-partial-return.md
-        - name: Save for my next payment option doesn't appear
+        - name: '"Save for my next payment" option doesn't appear'
           href: payments/next-payment-link-not-appearing.md
         - name: Troubleshoot Dynamics 365 Payment Connector for Adyen issues
           href: payments/adyen-support.md
@@ -87,5 +87,5 @@
           href: site-builder-content-management/security-group-site-builder.md    
         - name: Products and categories are missing after environment copy
           href: site-builder-content-management/missing-products-categories.md
-        - name: Products and categories don't appear in Commerce site builder after a new site is mapped
+        - name: Products and categories don't appear after a new site is mapped
           href: site-builder-content-management/products-categories-unavailable.md
