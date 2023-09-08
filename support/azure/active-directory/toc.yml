@@ -40,6 +40,15 @@
   items:
   - name: Troubleshoot adding apps
     href: troubleshoot-adding-apps.md
+    items: 
+      - name: Application takes a long time to appear
+        href: app-takes-long-time-appear.md
+      - name: Application doesn't appear
+        href: app-doesnt-appear.md
+      - name: Unable to delete an application
+        href: unable-delete-app.md
+      - name: Send notification details to Microsoft support
+        href: send-notification-details.md
   - name: Troubleshoot sign-in to apps
     items:
       - name: Error AADSTS50003 - certificate or key not configured
@@ -78,8 +87,14 @@
   - name: Server Error in '/' Application error in application
     href: server-error-application.md
 
-- name: Directories, Domains, and Objects
+- name: Azure AD Directories, Domains, and Objects
   items:
+  - name: Devices
+    items:
+      - name: No local administrator group privileges on Azure AD-joined device
+        href: no-local-admin-privileges-azure-ad-joined-device.md
+      - name: Pending devices
+        href: pending-devices.md
   - name: Can't delete a directory using portal
     href: cannot-delete-directory-azure-portal.md
   - name: Can't open Azure AD Module PowerShell
@@ -90,8 +105,6 @@
     href: method-invocation-failed-error.md
   - name: Password changes aren't saved
     href: pwd-change-not-save.md
-  - name: Pending devices
-    href: pending-devices.md
   - name: Perform a Workplace Join using DRS
     href: cant-perform-workplace-join.md
   - name: Remove user from recycle bin
@@ -111,7 +124,6 @@
     items:
       - name: Unknown Actors in Audit Reports
         href: unknown-actors-in-audit-reports.md
-
   - name: Sign-in Activity Reports
     items:
       - name: Verify 1st party Microsoft apps in sign-in reports
@@ -127,6 +139,8 @@
     href: adal-authenticate-android-devices-fail.md
   - name: Can't perform a Workplace Join
     href: confirm-signin-info-workplace-join.md
+  - name: MFA fails because five registered devices already use authenticator apps
+    href: cant-set-up-mfa-five-devices-registered.md
   - name: Can't sync SystemMailbox or DiscoveryMailboxSearch accounts
     href: unable-sync-system-discovery-mailbox.md
   - name: Can't verify account when resetting password
@@ -203,9 +217,9 @@
   - name: Azure AD Connect won't work after upgrading
     href: cannot-work-automatic-upgrade.md
   - name: Can't connect to Azure RMS
-    href: fail-connect-azure-information-protection-PowerShell.md
+    href: fail-connect-azure-information-protection-powerShell.md
   - name: Can't enable Device writeback
-    href: Cannot-enable-device-writeback.md
+    href: cannot-enable-device-writeback.md
   - name: Can't manage or remove objects
     href: cannot-manage-objects.md
   - name: Can't run DirSyncConfigShell.psc1
@@ -266,6 +280,8 @@
     href: pwd-not-sync.md
   - name: Password sync fails with event ID 611 
     href: pwd-hash-sync-stops-work.md
+  - name: Permission-issue 8344 (insufficient access rights to perform the operation)
+    href: troubleshoot-permission-issue-sync-service-manager.md
   - name: ProxyAddresses attribute in Azure AD
     href: proxyaddresses-attribute-populate.md
   - name: Request isn't processed when resetting password
@@ -276,6 +292,8 @@
     href: cannot-run-scripts-powershell.md
   - name: Separate passwords required
     href: separate-pwds-required-computer-work-account.md
+  - name: Size limit was exceeded
+    href: size-limit-exceeded.md
   - name: Slow performance and high CPU usage
     href: slow-performance-high-cpu-usage.md
   - name: Troubleshoot Azure AD Connect version upgrading issues

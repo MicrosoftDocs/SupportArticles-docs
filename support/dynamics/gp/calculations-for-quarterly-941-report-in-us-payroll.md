@@ -13,4 +13,4 @@ _Original KB number:_ &nbsp; 3004032
 
 See the following Microsoft Dynamics GP blog article that contains this information:
 
-[The Quarterly 941 Decoded!!](https://community.dynamics.com/gp/b/dynamicsgp/posts/the-quarterly-941-decoded)
+[The Quarterly 941 Decoded!!](https://community.dynamics.com/blogs/post/?postid=d0470094-c58b-4229-846e-6bef4e099bea)

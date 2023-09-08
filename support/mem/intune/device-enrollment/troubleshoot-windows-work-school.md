@@ -24,7 +24,7 @@ In this scenario, the device is recognized as a *personal* device. If you have p
 
 To fix this issue, you can allow personal enrollment of Windows devices either for all users or for a subset of users you want to be allowed to enroll personal devices. We recommend limiting the number of users you allow to enroll personal windows devices to only the users who will need this capability. This will ensure that other users in your organization don't accidentally enroll their personal devices.
 
-To allow personal device enrollment, sign-in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices** > **Enroll devices** > **Enrollment device platform restrictions**.
+To allow personal device enrollment, sign-in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices** > **Enroll devices** > **Enrollment device platform restrictions**.
 
 :::image type="content" source="media/troubleshoot-windows-work-school/enrollment-restrictions.png" alt-text="Enrollment device platform restrictions option in Intune.":::
 

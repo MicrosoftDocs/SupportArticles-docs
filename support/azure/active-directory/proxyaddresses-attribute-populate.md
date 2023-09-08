@@ -1,7 +1,7 @@
 ---
 title: How the proxyAddresses attribute is populated in Azure AD
 description: Describes how the proxyAddresses attribute is populated in Azure AD. Provides example scenarios.
-ms.date: 05/23/2022
+ms.date: 06/08/2023
 ms.reviewer: "willfid,riantu,nualex,reviei"
 ms.service: active-directory
 ms.subservice: enterprise-users
@@ -156,7 +156,7 @@ In this scenario, the following operation is performed as a result of proxy calc
   - `smtp:user3new2@Contoso.onmicrosoft.com`
   - `smtp:user3new3@Fabrikam.microsoftonline.com`
 - Replace the new primary SMTP address that's specified in the proxyAddresses attribute.
-- Update the mail attribute by using the value of te new primary SMTP address specified in the proxyAddresses attribute.
+- Update the mail attribute by using the value of the new primary SMTP address specified in the proxyAddresses attribute.
 - Keep the old mailNickName since the on-premises mailNickName is not set nor its value have changed.
 - Keep the old MOERA as a secondary smtp address in the proxyAddresses attribute.
 - Keep the UPN as a secondary SMTP address in the proxyAddresses attribute.

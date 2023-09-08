@@ -1,7 +1,7 @@
 ---
 title: How to create a virtual directory on an existing Web site to a folder that resides on a remote computer
 description: Describes steps to create a virtual directory on an existing Web site to a folder that resides on a remote computer.
-ms.date: 09/27/2020
+ms.date: 03/24/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

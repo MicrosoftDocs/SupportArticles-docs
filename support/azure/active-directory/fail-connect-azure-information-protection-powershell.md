@@ -5,6 +5,7 @@ ms.date: 10/06/2020
 ms.reviewer: willfid
 ms.service: active-directory
 ms.subservice: enterprise-users
+ms.custom:
 ---
 # Unable to connect to Azure Information Protection using Windows PowerShell
 

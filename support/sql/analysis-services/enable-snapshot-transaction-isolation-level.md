@@ -3,7 +3,6 @@ title: Enable the snapshot transaction isolation level
 description: This article describes the steps that you must follow to enable the snapshot transaction isolation level in Analysis Services.
 ms.date: 09/22/2020
 ms.custom: sap:Analysis Services
-ms.prod: sql
 ---
 # Enable the snapshot transaction isolation level in SQL Server 2005 Analysis Services
 

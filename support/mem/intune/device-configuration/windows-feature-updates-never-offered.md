@@ -25,7 +25,7 @@ In this scenario, servicing and definition updates are installed successfully. H
 > Agent&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ServiceID = {855E8A7C-ECB4-4CA3-B045-1DFA50104289} Third party service  
 > Agent&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Search Scope = {Current User}  
 > Agent&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Caller SID for Applicability: S-1-12-1-2933642503-1247987907-1399130510-4207851353  
-> Misc&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Got 855E8A7C-ECB4-4CA3-B045-1DFA50104289 redir Client/Server URL: <https://fe3.delivery.mp.microsoft.com/ClientWebService/client.asmx>""  
+> Misc&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Got 855E8A7C-ECB4-4CA3-B045-1DFA50104289 redir Client/Server URL: <`https://fe3.delivery.mp.microsoft.com/ClientWebService/client.asmx`>""  
 > Misc&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Token Requested with 0 category IDs.  
 > Misc&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; GetUserTickets: No user tickets found. Returning WU_E_NO_USERTOKEN.  
 > Misc&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; \*FAILED* [80070426] Method failed [AuthTicketHelper::GetDeviceTickets:570]  
@@ -54,7 +54,7 @@ This issue occurs if the Microsoft Account sign-in assistant (MSA or wlidsvc) se
 
 To fix this issue, follow these steps:
 
-1. Sign in to [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/), and select **Device configuration** > **Profiles**.
+1. Sign in to [Microsoft Intune admin center](https://endpoint.microsoft.com/), and select **Device configuration** > **Profiles**.
 
 1. Select the profile that's assigned to the affected Windows 10 devices, and then select **Properties** > **Device restrictions** > **Cloud and Storage**.
 

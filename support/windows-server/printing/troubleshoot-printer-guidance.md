@@ -1,7 +1,7 @@
 ---
 title: Guidance for troubleshooting printing issues
 description: Introduces general guidance for troubleshooting scenarios related to printers.
-ms.date: 03/03/2022
+ms.date: 05/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -17,6 +17,9 @@ ms.technology: windows-server-printing
 
 This article is designed to get you started on troubleshooting issues encountered when using printers.
 
+> [!div class="nextstepaction"]
+> <a href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806275" target='_blank'>Try our Virtual Agent</a> - It can help you quickly identify and fix common Print related issues.
+
 ## Troubleshooting checklist
 
 Here's a list of basic steps to resolve most printing issues:
@@ -25,7 +28,7 @@ Here's a list of basic steps to resolve most printing issues:
 - Verify that the printer on the print server is using the correct printer driver. If print clients are using other operating systems, make sure that you installed all necessary drivers for the other platforms.
 - Verify the following:
   - The print server is operational.
-  - There is sufficient disk space for spooling.
+  - There's sufficient disk space for spooling.
   - The print spool service is running.
 - Verify that the client computer has the correct printer driver.
 - Check whether the physical printer is in the ready state (ready to print). Most printers can print a test page to confirm correct operation.
@@ -56,7 +59,7 @@ A network client connects to that share.
 The client application creates a print job.
 
 1. Check whether the document that the client is trying to print consists of text only or includes graphics. Check the printer driver and the fonts settings.
-2. Check whether there is a problem that affects the separator page selection.
+2. Check whether there's a problem that affects the separator page selection.
 3. Try to reproduce the same print job from another client. If the job prints correctly from the other client, the problem is most likely not caused by this process.
 4. Check whether the client system sends the print job to the printer share on the print server.
 5. Check the network transport. For example, check the TCP/IP or NWLink status.
@@ -87,15 +90,15 @@ After installation of [KB5006674](https://support.microsoft.com/help/5006674), W
 - > 0x0000007c (ERROR_INVALID_LEVEL)
 - > 0x00000709 (ERROR_INVALID_PRINTER_NAME)
 
-The printer connection issues described in this issue are specific to print servers and are not commonly observed in devices designed for home use. Printing environments affected by this issue are more commonly found in enterprises and organizations.
+The printer connection issues described in this issue are specific to print servers and aren't commonly observed in devices designed for home use. Printing environments affected by this issue are more commonly found in enterprises and organizations.
 
 Workaround: You can take steps to workaround this issue on print servers that meet the prerequisite. See [Windows 11 known issues and notifications](/windows/release-health/status-windows-11-21h2#2737msgdesc)
 
 ### Point and Print default behavior change requires administrator credentials to print
 
-After installing [KB5005033](https://support.microsoft.com/topic/kb5005652-manage-new-point-and-print-default-driver-installation-behavior-cve-2021-34481-873642bf-2634-49c5-a23b-6d8e9a302872) or a later update, certain printer drivers using Point and Print might be prompted for administrator credentials every time an app attempts to print to a print server or a print client connects to a print server. This is caused by a print driver on the print client and the print server using the same filename, but the server has a newer version of the driver file. When the print client connects to the print server, it finds a newer driver file and is prompted to update the drivers on the print client, but the file in the package it is offered for installation does not include the later file version. 
+After installing [KB5005033](https://support.microsoft.com/topic/kb5005652-manage-new-point-and-print-default-driver-installation-behavior-cve-2021-34481-873642bf-2634-49c5-a23b-6d8e9a302872) or a later update, certain printer drivers using Point and Print might be prompted for administrator credentials every time an app attempts to print to a print server or a print client connects to a print server. This is caused by a print driver on the print client and the print server using the same filename, but the server has a newer version of the driver file. When the print client connects to the print server, it finds a newer driver file and is prompted to update the drivers on the print client, but the file in the package it's offered for installation doesn't include the later file version. 
 
-Resolution: Verify that you are using the latest drivers for all your printing devices and where possible, use the same version of the print driver on the print client and print server.
+Resolution: Verify that you're using the latest drivers for all your printing devices and where possible, use the same version of the print driver on the print client and print server.
 
 ### Printing and scanning might fail when these devices use smart-card authentication
 
@@ -122,7 +125,11 @@ Resolution: For more information, see [KB5005010: Restricting installation of ne
 
 - [Troubleshooting various scenarios for printing](troubleshoot-printing-scenarios.md)
 - [Known issues for printing](troubleshoot-printing-known-issues.md)
-- [Point and Print Default Behavior Change](https://msrc-blog.microsoft.com/2021/08/10/point-and-print-default-behavior-change/)
+- [Point and Print Default Behavior Change](https://msrc.microsoft.com/blog/2021/08/point-and-print-default-behavior-change/)
 - [Windows Print Spooler Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-34527)
 - [Windows Release Health: Take action: Out-of-band update to address a remote code execution exploit in the Windows Print Spooler service](/windows/release-health/windows-message-center#1646)
 - [Windows Key Distribution Center Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-33764)
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-user-experience.md#printing).

@@ -1,5 +1,5 @@
 - name: Welcome
-  href: welcome-identity-manager.md
+  href: welcome-identity-manager.yml
 - name: Configure load balancing to use session persistence
   href: configure-load-balancing-to-use-session-persistence.md
 - name: SQL Server availability solutions

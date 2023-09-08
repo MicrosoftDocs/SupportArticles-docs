@@ -28,7 +28,7 @@ Your Intune tenant is configured to only allow corporate-owned devices.
 
 **Solution:**
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Select **Devices** > **Enroll devices** > **Enrollment restrictions**.
 1. Under **Device Type Restrictions**, select the restriction that you want to set > **Properties**.
 1. Choose **Edit** > **Select platforms** > select **Allow** for **iOS**, and then click **OK**.

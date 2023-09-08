@@ -5,6 +5,7 @@ ms.date: 05/22/2020
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: enterprise-users
+ms.custom: has-azure-ad-ps-ref
 ---
 # Troubleshoot Azure AD Certificate-Based Authentication issues
 
@@ -46,7 +47,7 @@ _Original KB number:_ &nbsp; 4032987
 2. To create a trusted certificate authority, use the [New-AzureADTrustedCertificateAuthority](/powershell/module/azuread/new-azureadtrustedcertificateauthority?view=azureadps-2.0&preserve-view=true) cmdlet, and set the **crlDistributionPoint** attribute to a correct value.
 
     > [!NOTE]
-    > When you create the **TrustedRootCertificateAuthority** objects in Azure AD, the CRL URLs that are defined within the .CER file are not used. The **CrlDistributionPoin** and **DeltaCrlDistributionPoint** values must be manually populated by a web location where Azure AD can access the CRLs. The CRL paths within the issued certificates do not have to contain the URLs that are accessible to Azure AD. Also, large CRLs that take more than 15 seconds to download should be put on a faster link, such as Azure Storage, to avoid caching delays that can cause intermediate authentication failures.
+    > When you create the **TrustedRootCertificateAuthority** objects in Azure AD, the CRL URLs that are defined within the .CER file are not used. The **CrlDistributionPoint** and **DeltaCrlDistributionPoint** values must be manually populated by a web location where Azure AD can access the CRLs. The CRL paths within the issued certificates do not have to contain the URLs that are accessible to Azure AD. Also, large CRLs that take more than 15 seconds to download should be put on a faster link, such as Azure Storage, to avoid caching delays that can cause intermediate authentication failures.
 
     ```powershell
     $cert=Get-Content -Encoding byte "[LOCATION OF THE CER FILE]"
@@ -56,7 +57,7 @@ _Original KB number:_ &nbsp; 4032987
     ```
 
 3. Make sure that the following values are correctly defined on the **TrustedCertificateAuthority** objects according to the following guidelines:
-   - All **CrlDistributionPoin** and **DeltaCrlDistributionPoint** URLs must be accessible from the Internet by the client devices and the ADFS and Web Application Proxy servers.
+   - All **CrlDistributionPoint** and **DeltaCrlDistributionPoint** URLs must be accessible from the Internet by the client devices and the ADFS and Web Application Proxy servers.
    - The *.CER for the Root CA should be listed as **AuthorityType = RootAuthority**.
    - The *.CER for the Intermediate CA should be listed as follows:
 

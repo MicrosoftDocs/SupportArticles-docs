@@ -2,9 +2,7 @@
 title: Check statistics accuracy on a dedicated SQL pool
 description: Provides methods of assessing statistics accuracy on a dedicated SQL pool.
 ms.date: 12/16/2022
-author: sevend2
-ms.author: v-sidong
-ms.reviewer: scepperl
+ms.reviewer: scepperl, v-sidong
 ---
 
 # Check statistics accuracy on a dedicated SQL pool

@@ -23,7 +23,7 @@ SCEP certificate profiles for Android come down to the device as a SyncML and ar
 
 ### Validate that the Android device was sent the policy
 
-To validate a profile was sent to the device you expect, in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Troubleshooting + Support** > **Troubleshoot**.  On the *Troubleshoot* window, set **Assignments** to **Configuration profiles** and then validate the following configurations:
+To validate a profile was sent to the device you expect, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Troubleshooting + Support** > **Troubleshoot**.  On the *Troubleshoot* window, set **Assignments** to **Configuration profiles** and then validate the following configurations:
 
 1. Specify the user who should receive the SCEP certificate profile.
 
@@ -50,7 +50,7 @@ Examples of key entries:
 
 ### Validate that the iOS/iPadOS device was sent the policy
 
-To validate a profile was sent to the device you expect, in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Troubleshooting + Support** > **Troubleshoot**.  On the *Troubleshoot* window, set **Assignments** to **Configuration profiles** and then validate the following configurations:
+To validate a profile was sent to the device you expect, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Troubleshooting + Support** > **Troubleshoot**.  On the *Troubleshoot* window, set **Assignments** to **Configuration profiles** and then validate the following configurations:
 
 1. Specify the user who should receive the SCEP certificate profile.
 
@@ -77,7 +77,7 @@ Examples of key entries:
 
 ### Validate that the Windows device was sent the policy
 
-To validate the profile was sent to the device you expect, in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Troubleshooting + Support** > **Troubleshoot**.  On the *Troubleshoot* window, set **Assignments** to **Configuration profiles** and then validate the following configurations:
+To validate the profile was sent to the device you expect, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Troubleshooting + Support** > **Troubleshoot**.  On the *Troubleshoot* window, set **Assignments** to **Configuration profiles** and then validate the following configurations:
 
 1. Specify the user who should receive the SCEP certificate profile.
 

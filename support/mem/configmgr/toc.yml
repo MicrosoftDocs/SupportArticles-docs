@@ -77,6 +77,8 @@ items:
           href: client-management/cannot-download-content-from-cmg.md
         - name: Clients can't communicate with CMG
           href: client-management/cmg-communication-error-403.md
+        - name: CMG creation fails after signing in Configuration Manager
+          href: client-management/new-cmg-creation-fails-after-sign-in-configuration-manager.md  
         - name: Tenant attach components fail to connect to backend cloud service
           href: client-management/tenant-attach-component-not-connect-to-gateway.md
     - name: Collections

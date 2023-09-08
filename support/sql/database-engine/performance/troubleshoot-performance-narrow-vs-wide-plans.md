@@ -4,7 +4,6 @@ description: Provides information to understand and troubleshoot update statemen
 ms.date: 10/28/2022
 ms.custom: sap:Performance
 ms.topic: troubleshooting
-ms.prod: sql
 ms.reviewer: jopilov, shaunbe
 author: liwei-yin
 ms.author: liweiyin
@@ -355,3 +354,4 @@ The following screenshot shows that the wide plan is used when the partition sch
 - If the expected query plan isn't used, it may be due to stale statistics (not reporting correct data size), max server memory setting, or other unrelated issues like parameter-sensitive plans.
 - The duration of `UPDATE` statements using a wide plan depends on several factors, and in some cases, it may take longer than narrow plans.
 - Trace flag [8790](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf8790) will force a wide plan; trace flag [2338](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf2338) will force a narrow plan.
+

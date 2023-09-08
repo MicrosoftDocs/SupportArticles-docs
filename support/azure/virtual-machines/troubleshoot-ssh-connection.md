@@ -4,10 +4,10 @@ description: How to troubleshoot issues such as 'SSH connection failed' or 'SSH 
 keywords: ssh connection refused, ssh error, azure ssh, SSH connection failed
 services: virtual-machines
 ms.subservice: vm-cannot-connect
-documentationcenter: ''
 author: genlin
 manager: dcscontentpm
 tags: top-support-issue,azure-service-management,azure-resource-manager
+ms.custom: devx-track-azurecli
 ms.service: virtual-machines
 ms.collection: linux
 ms.workload: infrastructure-services
@@ -15,7 +15,6 @@ ms.tgt_pltfrm: vm-linux
 ms.topic: troubleshooting
 ms.date: 05/30/2017
 ms.author: genli
-
 ---
 # Troubleshoot SSH connections to an Azure Linux VM that fails, errors out, or is refused
 
@@ -27,9 +26,10 @@ After each troubleshooting step, try reconnecting to the VM.
 
 1. [Reset the SSH configuration](#reset-the-ssh-configuration).
 2. [Reset the credentials](#reset-ssh-credentials-for-a-user) for the user.
-3. Verify the [network security group](/azure/virtual-network/network-security-groups-overview) rules permit SSH traffic.
+3. Verify the [network security group](/azure/virtual-network/network-security-groups-overview) rules permit SSH traffic and role assignment.
    * Ensure that a [Network Security Group rule](#check-security-rules) exists to permit SSH traffic (by default, TCP port 22).
    * You cannot use port redirection / mapping without using an Azure load balancer.
+   * If you are using Azure Active Directory (Azure AD) to manage SSH logins, the user must be assigned the **Virtual Machine Administrator Login** or **Virtual Machine User Login** role on the resource group that contains the VM and its associated resources. Otherwise, the "Permission denied (publickey)" error will be received. For more information, see [Configure role assignments for the VM that uses Azure AD login](/azure/active-directory/devices/howto-vm-sign-in-azure-ad-linux#configure-role-assignments-for-the-vm).
 4. Check the [VM resource health](/azure/service-health/resource-health-overview).
    * Ensure that the VM reports as being healthy.
    * If you have [boot diagnostics enabled](boot-diagnostics.md), verify the VM is not reporting boot errors in the logs.

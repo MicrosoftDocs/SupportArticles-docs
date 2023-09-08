@@ -1,7 +1,7 @@
 ---
 title: Can't turn off a computer from Audit mode
 description: Discusses that a local administrator account is disabled when you turn off a computer by using the Start menu in Audit mode.
-ms.date: 09/08/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -13,7 +13,7 @@ ms.reviewer: kaushika
 ms.custom: sap:setup, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
-# Erroe after you turn off a Windows 10-based computer from Audit mode: Your account has been disabled
+# Error after you turn off a Windows 10-based computer from Audit mode: Your account has been disabled
 
 This article helps fix an error (our account has been disabled) that occurs after you turn off a Windows 10-based computer from Audit mode.
 
@@ -51,3 +51,7 @@ To work around this behavior, disable hybrid shutdown. To do this, follow these 
     ```console
     shutdown /s /t 00
     ``` 
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

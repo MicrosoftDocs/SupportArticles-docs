@@ -1,9 +1,8 @@
 ---
 title: Agent Service fails to start on standalone server
-description: This article provides the resolutions for the problems where the SQL Server service and the SQL Server Agent Service may not start on a stand-alone server.
+description: Provides the resolutions for the problems where the SQL Server service and the SQL Server Agent Service may not start on a stand-alone server.
 ms.date: 12/01/2020
 ms.custom: sap:Security Issues
-ms.prod: sql
 ---
 # The SQL Server service and the SQL Server Agent Service fail to start on a standalone server
 

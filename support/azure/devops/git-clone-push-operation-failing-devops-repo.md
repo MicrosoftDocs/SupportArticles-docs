@@ -3,8 +3,9 @@ title: Git clone or Git push fails to an Azure DevOps repository
 description: This article discusses problems that might occur when you try to perform Git clone or Git push function to an Azure DevOps repository.
 author: HaiyingYu
 ms.author: haiyingyu
+ms.reviewer: kirt
 ms.topic: troubleshooting 
-ms.date: 05/25/2022
+ms.date: 05/19/2023
 ms.service: azure-devops
 ms.subservice: ts-repos
 ---
@@ -66,7 +67,7 @@ If Git is using a local self-signed certificate, you might see the error "SSL ce
 
 ### Solution 1: Disable the TLS/SSL verification
 
-If you've installed a local Team Foundation Server (TFS) and if you want to disable the TLS/SSL verification that Git performs, run the following command.
+If you've installed a local Team Foundation Server (TFS) and if you want to disable the TLS/SSL verification that Git performs, run the following command:
 
 `git config --global http.sslVerify false`
 
@@ -75,59 +76,47 @@ If you've installed a local Team Foundation Server (TFS) and if you want to disa
 If you want to continue the TLS/SSL verification that Git does, follow these steps to add the root certificate in the local Git:
 
 1. Export the root certificate as Base-64 encoded X.509 (.CER) file by following these steps:
-
     1. Open Microsoft Edge browser and enter the URL of your TFS server in the address bar such as `https://<servername>/tfs`.
-
-    2. On the address bar, select the :::image type="icon" source="media/git-clone-push-operation-failing-devops/lock-icon.png"::: icon, and then select the **Connection is secure** link.
-    
-    3. Select the :::image type="icon" source="media/git-clone-push-operation-failing-devops/certificate-icon.png"::: icon to open the **Certification** window.
-
-    4. In the **Certification Path** tab, select the upper-left certificate, which is the root certificate.
+    1. On the address bar, select the :::image type="icon" source="media/git-clone-push-operation-failing-devops/lock-icon.png"::: icon, and then select the **Connection is secure** link.
+    1. Select the :::image type="icon" source="media/git-clone-push-operation-failing-devops/certificate-icon.png"::: icon to open the **Certification** window.
+    1. In the **Certification Path** tab, select the upper-left certificate, which is the root certificate.
 
         :::image type="content" source="media/git-clone-push-operation-failing-devops/viewing-root-certificate-path.png" alt-text="Selecting Certification Path tab in the Certification window.":::
 
-    5. Select **View Certificate** to open **Certificate** window for the root certificate.
-
-    6. On the **Details** tab, select **Copy to File...** .
+    1. Select **View Certificate** to open **Certificate** window for the root certificate.
+    1. On the **Details** tab, select **Copy to File...** .
 
         :::image type="content" source="media/git-clone-push-operation-failing-devops/copying-certificate-details-file.png" alt-text="Selecting Details tab in the Certification window.":::
 
-    7. On the **Certificate Export Wizard**, select **Next**, and then select **Base-64 encoded X.509 (.CER)** file format to export.
+    1. On the **Certificate Export Wizard**, select **Next**, and then select **Base-64 encoded X.509 (.CER)** file format to export.
 
         :::image type="content" source="media/git-clone-push-operation-failing-devops/selecting-export-file-format.png" alt-text="Selecting file format on the Certificate Export Wizard.":::
 
-    8. Save the root certificate on the local disk.
-
+    1. Save the root certificate on the local disk.
 1. Configure Git to use local directory for Git certificates store by following these steps:
-
-    1. Go to the *C:\Program Files\Git\bin* path on your local disk, and then make a copy of the *curl-ca-bundle.crt* file.
+    1. Go to the _C:\Program Files\Git\bin_ path on your local disk, and then make a copy of the _curl-ca-bundle.crt_ file.
 
         > [!NOTE]
         >
-        >- When you install Git for Windows (`msysgit`) on your device, a *curl-ca-bundle.crt* file is stored in your Program Files directory. This file is the root certificate store for git.exe that contains all the certificates that Git trusts.
-        >- The *curl-ca-bundle.crt* file, which stores on a per-device basis, is private to your local Windows client. The text file has UNIX (`\n`) line endings.
-        >- In the Git for Windows 2.x series, the path will change to *C:\Program Files (x86)\Git\mingw32\ssl\certs\ca-bundle.crt* or *C:\Program Files\Git\mingw64\ssl\certs\ca-bundle.crt*. If you are using a 32-bit Windows client, you can fix the folder path such that the Program Files part doesn't appear with *x86*.
+        >- When you install Git for Windows (`msysgit`) on your device, a _curl-ca-bundle.crt_ file is stored in your Program Files directory. This file is the root certificate store for git.exe that contains all the certificates that Git trusts.
+        >- The _curl-ca-bundle.crt_ file, which stores on a per-device basis, is private to your local Windows client. The text file has UNIX (`\n`) line endings.
+        >- In the Git for Windows 2.x series, the path will change to _C:\Program Files (x86)\Git\mingw32\ssl\certs\ca-bundle.crt_ or _C:\Program Files\Git\mingw64\ssl\certs\ca-bundle.crt_. If you are using a 32-bit Windows client, you can fix the folder path such that the Program Files part doesn't appear with _x86_.
 
-    2. Copy the *curl-ca-bundle.crt* file to your user profile directory (*C:\Users\\<yourname\>*). Or run a copy command similar to the `copy "C:\Program Files (x86)\Git\bin\curl-ca-bundle.crt" C:\Users\<yourname>` example.
-
-    3. Run the following command to configure Git to use local copy of certificate store from your Windows client:
+    1. Copy the _curl-ca-bundle.crt_ file to your user profile directory (_C:\Users\\<yourname\>_). Or run a copy command similar to the `copy "C:\Program Files (x86)\Git\bin\curl-ca-bundle.crt" C:\Users\<yourname>` example.
+    1. Run the following command to configure Git to use local copy of certificate store from your Windows client:
 
         `git config --global http.sslCAInfo C:/Users/<yourname>/curl-ca-bundle.crt`
 
 1. Add the exported root certificate to the local copy of Git certificate store by following these steps:
-
     1. Open the exported root certificate in Notepad, and then copy entire contents on to the clipboard.
-
-    2. Open the *curl-ca-bundle.crt* file by going to the *C:/Users/\<yourname\>/curl-ca-bundle.crt* path in a text editor.
+    1. Open the _curl-ca-bundle.crt_ file by going to the _C:/Users/\<yourname\>/curl-ca-bundle.crt_ path in a text editor.
 
         > [!TIP]
-        > You can use the *unix2dos* tool to change the line endings in the file from \n to \r\n and be able to open the file in Notepad.
+        > You can use the _unix2dos_ tool to change the line endings in the file from _\n_ to _\r\n_ and be able to open the file in Notepad.
 
-    3. Add an entry for the root certificate at the end, and then paste the certificate contents into the *curl-ca-bundle.crt* file.
-
-    4. Save the *curl-ca-bundle.crt* file.
-
-    5. Perform the cloning operation to verify if the SSL error is resolved.
+    1. Add an entry for the root certificate at the end, and then paste the certificate contents into the _curl-ca-bundle.crt_ file.
+    1. Save the _curl-ca-bundle.crt_ file.
+    1. Perform the cloning operation to verify if the SSL error is resolved.
 
 ## Cause 3: Authentication error or credential cache issues
 
@@ -137,18 +126,21 @@ If your account name or domain password has changed, or you're getting an authen
 
 To resolve the authentication error or credentials cache issues, begin by following the [Troubleshooting checklist](#troubleshooting-checklist) to get the error information, and then follow these steps:
 
-1. Run the `git config --list` command, and then check if you're using Git Credentials Manager (GCM). If the *credential.helper* is set to manager, then GCM is in use.
-
+1. Run the `git config --list` command, and then check if you're using Git Credentials Manager (GCM). If the `credential.helper` is set to manager, then GCM is in use.
 1. Reset the GCM by following these steps:
-
     1. Run the `git config --global --unset credential.helper` command to unset the GCM.
-
     1. Run the `git config credential.helper manager` command to set the GCM back. Alternatively, follow these steps to delete the credentials cache first:
-
         1. When unset, search for **Credentials Manager** in Windows search, select **Open**, and then remove any credential that is for a Git repo.
-    
-        1. Go to *%localappdata%/GitCredentialManager* path, and then delete the *tenant.cache* file.
-    
+        1. Go to _%localappdata%/GitCredentialManager_ path, and then delete the _tenant.cache_ file.
         1. Set the GCM back by running the `git config credential.helper manager` command.
-    
 1. Perform the cloning operation to verify if the issue is resolved.
+
+**Note:** Depending on the version of Git for Windows, the `credential.helper` value would be different. See the following table for details:
+
+|Versions of Git for Windows|Git Credential Manager for Windows|Git Credential Manager Core|Git Credential Manager (Renamed from GCM Core)|
+|--|--|--|--|
+|2.27 and earlier|`manager` |||
+|2.28 to 2.33.0|`manager` (optional)|`manager-core`(optional)||
+|2.33.1 to 2.34.0||`manager-core`||
+|2.34.1 to 2.38|||`manager-core`|
+|2.39 and later|||`manager`|

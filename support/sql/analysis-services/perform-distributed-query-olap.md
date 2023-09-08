@@ -4,7 +4,6 @@ description: This article describes how to perform a SQL Server distributed quer
 ms.date: 09/21/2020
 ms.custom: sap:Analysis Services
 ms.topic: how-to
-ms.prod: sql
 ---
 # How to perform a SQL Server distributed query with OLAP Server  
 

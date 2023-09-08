@@ -5,7 +5,6 @@ ms.date: 10/30/2020
 ms.custom: sap:Failover Clusters
 ms.reviewer: MICHWE
 ms.topic: how-to
-ms.prod: sql
 ---
 # Create databases or change disk file locations on a shared cluster drive on which SQL Server was not originally installed
 
@@ -38,8 +37,8 @@ To move the shared cluster disk, select the disk you want to move to the SQL Ser
 
 1. Open the Cluster Administrator.
 2. Make sure that all the physical disk resources that contain SQL Server databases are in the same group as the SQL Server resource.
-3. Right-click the SQL Server resource, and then bring the resource into an Offline state by clicking **Bring Offline**.
-4. Right-click the SQL Server resource, and then click **Properties**.
-5. Click the **Dependencies** tab.
-6. Click **Modify** to add the disk to the dependencies list for that resource.
+3. Right-click the SQL Server resource, and then bring the resource into an Offline state by selecting **Bring Offline**.
+4. Right-click the SQL Server resource, and then select **Properties**.
+5. Select the **Dependencies** tab.
+6. Select **Modify** to add the disk to the dependencies list for that resource.
 7. Bring the SQL Server resource back online, and then put the SQL Server files on that shared cluster disk.

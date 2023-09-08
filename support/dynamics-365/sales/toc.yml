@@ -219,6 +219,8 @@
           href: receiving-error-accessing-ws-metadata-exchange-failed-during-configuration.md
         - name: Alert appears in the user's mailbox record
           href: alert-appears-users-dynamics-365-mailbox-record.md
+        - name: An appointment is canceled or deleted during server-side synchronization
+          href: an-appointment-is-canceled-deleted.md
         - name: An email fails to be created with an error
           href: email-fails-be-created-error.md
         - name: An email fails to be created with InternalEmailReject sync
@@ -241,7 +243,7 @@
           href: appointments-do-not-sync-to-exchange-for-some-users.md
         - name: Appointments, contacts, and tasks can't be synchronized
           href: error-when-you-test-enable-a-mailbox.md
-        - name: Attachments aren't tracked after Office 365 ATP is enabled
+        - name: Attachments aren't tracked after Microsoft Defender for Office 365 is enabled
           href: attachments-not-tracked-to-dynamics-365-after-office-365-atp-is-enabled.md
         - name: Business unit is disabled when using App for Outlook
           href: error-use-dynamics-365-app-outlook.md
@@ -427,8 +429,24 @@
           href: you-do-not-have-the-required-role-or-privilege-to-complete-this-action-error.md
     - name: Microsoft Teams Integration
       items:
+        - name: Can't enable Teams dialer
+          href: cannot-enable-dialer.md
+        - name: Customers can't hear a seller 
+          href: seller-voice-unheard-by-other-customer.md
+        - name: Duplicate phone calls in Sales accelerator
+          href: duplicate-phone-calls.md
+        - name: Seller can't hear customers
+          href: cannot-hear-other-customer.md
+        - name: Seller can't make phone calls to PSTN
+          href: cannot-make-phone-calls-to-pstn.md
         - name: Troubleshoot Microsoft Teams chat integration with Dynamics 365
           href: troubleshoot-dynamics365-embedcollab-issues.md
+        - name: Teams dialer basic troubleshooting
+          href: dialer-basic-troubleshooting.md
+        - name: Teams dialer isn't visible in custom app
+          href: dialer-not-available-in-custom-app.md
+        - name: Teams dialer isn't visible in the Sales Hub
+          href: dialer-not-visible-in-sales.md
     - name: Mobile Apps
       items:
         - name: We can't find any apps for your role
@@ -489,3 +507,5 @@
           href: troubleshoot-unified-interface-issues.md
         - name: Troubleshoot views
           href: troubleshoot-table-views-issues.md
+        - name: Troubleshoot relationship intelligence
+          href: troubleshoot-relationship-intelligence.md

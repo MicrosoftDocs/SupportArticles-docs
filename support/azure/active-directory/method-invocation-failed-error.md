@@ -5,6 +5,7 @@ ms.date: 05/22/2020
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: domain-services
+ms.custom: devx-track-azurepowershell
 ---
 # Error when you run Azure PowerShell cmdlets: Method invocation failed
 

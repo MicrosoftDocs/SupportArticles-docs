@@ -1,7 +1,7 @@
 ---
 title: 80072EE6 error code when you download an update
 description: Resolve the 80072EE6 error code that occurs when you download an update from Windows Server Update Services.
-ms.date: 09/08/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -50,3 +50,7 @@ To resolve this issue, follow steps below:
 The above group policy setting lets you specify a server on your network to function as an internal update service. Automatic Updates will search this service for updates that apply to the computers on your network.
 
 To use this setting, you must set two server name values: the server from which Automatic Updates detects and downloads updates, and the server to which updated workstations upload statistics. You can set both values to be the same server.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

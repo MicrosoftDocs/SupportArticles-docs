@@ -40,4 +40,4 @@ For environments that do have the correct licensing to host Microsoft Office, th
 
 For more information about licensing software in Azure, reference the [Virtual Machine Volume Licensing FAQ](https://azure.microsoft.com/pricing/licensing-faq/) 
 
-For more information about how to apply for service provider licensing, reference the [Volume Licensing Product Reference](http://www.microsoftvolumelicensing.com/documentsearch.aspx?mode=3&documenttypeid=2)
+For more information about how to apply for service provider licensing, reference the [Volume Licensing Product Reference](https://www.microsoftvolumelicensing.com/documentsearch.aspx?mode=3&documenttypeid=2)

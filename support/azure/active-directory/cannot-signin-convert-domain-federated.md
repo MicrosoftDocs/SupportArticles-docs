@@ -5,6 +5,7 @@ ms.date: 07/06/2020
 ms.reviewer: dahans
 ms.service: active-directory
 ms.subservice: enterprise-users
+ms.custom: has-azure-ad-ps-ref
 ---
 # Users can no longer sign in after you run the Convert-MSOLDomaintoFederated command to convert an existing domain
 

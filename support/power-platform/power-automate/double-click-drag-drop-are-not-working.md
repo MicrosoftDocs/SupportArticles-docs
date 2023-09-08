@@ -3,8 +3,8 @@ title: Double-Click, Drag and drop aren't working
 description: Provides a solution to an issue where Double-Click, Drag and Drop aren't working.
 ms.reviewer: rajeyara
 ms.topic: troubleshooting
-ms.date: 3/31/2021
-ms.subservice: power-automate-flows
+ms.date: 03/31/2021
+ms.subservice: power-automate-desktop-flows
 ---
 # Double-Click, Drag and Drop aren't working
 

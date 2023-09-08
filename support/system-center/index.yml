@@ -7,26 +7,27 @@ metadata:
    services: service
    ms.service: system-center
    ms.author: luche
+   ms.date: 04/15/2020
 
 productDirectory:
   items:
   - title: Data Protection Manager
-    imageSrc: "../media/hub-landing/system-center-dpm.png"
+    imageSrc: "../media/hub-landing/microsoft.png"
     summary: Troubleshooting articles for Data Protection Manager
     url: dpm/welcome-dpm.yml
   - title: Operations Manager
-    imageSrc: "../media/hub-landing/system-center-operations-manager.png"
+    imageSrc: "../media/hub-landing/microsoft.png"
     summary: Troubleshooting articles for Operations Manager
     url: scom/welcome-scom.yml   
   - title: Orchestrator
-    imageSrc: "../media/hub-landing/system-center-orchestrator.png"
+    imageSrc: "../media/hub-landing/microsoft.png"
     summary: Troubleshooting articles for Orchestrator
     url: orchestrator/welcome-orchestrator.yml
   - title: Service Manager
-    imageSrc: "../media/hub-landing/system-center-service-manager.png"
+    imageSrc: "../media/hub-landing/microsoft.png"
     summary: Troubleshooting articles for Service Manager
     url: scsm/welcome-scsm.yml
   - title: Virtual Machine Manager
-    imageSrc: "../media/hub-landing/system-center-vmm.png"
+    imageSrc: "../media/hub-landing/microsoft.png"
     summary: Troubleshooting articles for Virtual Machine Manager
     url: vmm/welcome-vmm.yml   

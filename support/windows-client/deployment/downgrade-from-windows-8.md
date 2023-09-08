@@ -1,7 +1,7 @@
 ---
 title: How to downgrade from Windows 8
 description: Describes the factors that determine whether you can downgrade Windows 8 to an earlier version of Windows.
-ms.date: 10/22/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -88,3 +88,7 @@ The Microsoft Volume Licensing Service Center (VLSC) provides download access to
 > In addition to the VLSC download software access, all Volume Licensing customers may decide to buy physical media (CD/DVD) copies of their licensed software through their Microsoft reseller.
 
 If you legally obtained physical media (CD/DVD) of earlier Microsoft products that your organization is currently licensed to use through downgrade rights, you can use these prior software versions at your discretion.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

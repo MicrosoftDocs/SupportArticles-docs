@@ -1,7 +1,7 @@
 ---
 title: TCP/IP connectivity issues troubleshooting
 description: Learn how to troubleshoot TCP/IP connectivity and what you should do if you come across TCP reset in a network capture.
-ms.date: 08/22/2022
+ms.date: 03/10/2023
 ms.prod: windows-client
 ms.topic: troubleshooting
 author: dansimp
@@ -15,6 +15,9 @@ audience: itpro
 localization_priority: medium
 ---
 # Troubleshoot TCP/IP connectivity
+
+> [!div class="nextstepaction"]
+> <a href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806409" target='_blank'>Try our Virtual Agent</a> - It can help you quickly identify and fix common Active Directory replication issues.
 
 _Applies to:_ &nbsp; Windows 10
 
@@ -47,17 +50,17 @@ If the initial TCP handshake is failing because of packet drops, then you would 
 
 Source side connecting on port 445:
 
-:::image type="content" source="media/tcp-ip-connectivity-issues-troubleshooting/source-side-port-445.png" alt-text="Screenshot of frame summary in Network Monitor." border="false":::
+:::image type="content" source="media/tcp-ip-connectivity-issues-troubleshooting/source-side-port-445.png" alt-text="Screenshot of frame summary in Network Monitor.":::
 
 Destination side: applying the same filter, you don't see any packets.
 
-:::image type="content" source="media/tcp-ip-connectivity-issues-troubleshooting/destination-side-same-filter.png" alt-text="Screenshot of frame summary with filter in Network Monitor." border="false":::
+:::image type="content" source="media/tcp-ip-connectivity-issues-troubleshooting/destination-side-same-filter.png" alt-text="Screenshot of frame summary with filter in Network Monitor.":::
 
 For the rest of the data, TCP will retransmit the packets five times.
 
 Source 192.168.1.62 side trace:
 
-:::image type="content" source="media/tcp-ip-connectivity-issues-troubleshooting/source-192-168-1-62.png" alt-text="Screenshot showing packet side trace." border="false":::
+:::image type="content" source="media/tcp-ip-connectivity-issues-troubleshooting/source-192-168-1-62.png" alt-text="Screenshot showing packet side trace.":::
 
 Destination 192.168.1.2 side trace:
 
@@ -81,15 +84,15 @@ In the below screenshots, you see that the packets seen on the source and the de
 
 Source Side
 
-:::image type="content" source="media/tcp-ip-connectivity-issues-troubleshooting/source-side-packets.png" alt-text="Screenshot of packets on source side in Network Monitor." border="false":::
+:::image type="content" source="media/tcp-ip-connectivity-issues-troubleshooting/source-side-packets.png" alt-text="Screenshot of packets on source side in Network Monitor.":::
 
 On the destination-side trace
 
-:::image type="content" source="media/tcp-ip-connectivity-issues-troubleshooting/destination-side-packets.png" alt-text="Screenshot of packets on destination side in Network Monitor." border="false":::
+:::image type="content" source="media/tcp-ip-connectivity-issues-troubleshooting/destination-side-packets.png" alt-text="Screenshot of packets on destination side in Network Monitor.":::
 
 You also see an ACK+RST flag packet in a case when the TCP establishment packet SYN is sent out. The TCP SYN packet is sent when the client wants to connect on a particular port, but if the destination/server for some reason doesn't want to accept the packet, it would send an ACK+RST packet.  
 
-:::image type="content" source="media/tcp-ip-connectivity-issues-troubleshooting/ack-rst-flag-packet.png" alt-text="Screenshot of packet with ACK RSK flag." border="false":::
+:::image type="content" source="media/tcp-ip-connectivity-issues-troubleshooting/ack-rst-flag-packet.png" alt-text="Screenshot of packet with ACK RSK flag.":::
 
 The application that's causing the reset (identified by port numbers) should be investigated to understand what is causing it to reset the connection.
 
@@ -114,4 +117,4 @@ You can then review the Security event logs to see for a packet drop on a partic
 
 Now, run the command `netsh wfp show state`, this execution will generate a *wfpstate.xml* file. After you open this file and filter for the ID that you find in the above event (2944008), you'll be able to see a firewall rule name that's associated with this ID that's blocking the connection.
 
-:::image type="content" source="media/tcp-ip-connectivity-issues-troubleshooting/wfpstate-file.png" alt-text="Screenshot of the wfpstate xml file which includes the firewall rule name that's associated with the filter id that's blocking the connection." border="false":::
+:::image type="content" source="media/tcp-ip-connectivity-issues-troubleshooting/wfpstate-file.png" alt-text="Screenshot of the wfpstate xml file which includes the firewall rule name that's associated with the filter id that's blocking the connection.":::

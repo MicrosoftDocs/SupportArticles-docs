@@ -27,6 +27,8 @@
 
 - name: Troubleshooting deployment failures in Cloud Services (classic)
   items:
+  - name: Configure instance-level public IP addresses (PIPs)
+    href: instance-level-public-ip-address-configuration.md
   - name: InvalidModel exception
     href: troubleshoot-mismatched-config.md
   - name: Role recycle threshold exceptions
@@ -35,7 +37,7 @@
     href: troubleshoot-subscription-policy.md
   - name: Update failed during migration from classic to extended support
     href: failed-update-ongoing-migration-process.md
-  - name: VIP swap failures
+  - name: Virtual IP address (VIP) swap failures
     href: troubleshoot-vip-swap.md
 
 - name: Troubleshooting Cloud Services (extended support)
@@ -44,6 +46,8 @@
     href: allocation-failure.md
   - name: Application pool is crashing
     href: application-pool-crashes.md
+  - name: Configure instance-level public IP addresses (PIPs)
+    href: instance-level-public-ip-address-configuration.md
   - name: Disk partition preservation
     href: disk-partition-preservation.md
   - name: Enable HTTPS communication
@@ -54,6 +58,8 @@
     href: gather-log-files-offline-analysis-preservation.md
   - name: Grant a virtual network sole access to your cloud service
     href: grant-virtual-network-sole-access.md
+  - name: Manage virtual IP address (VIP) swaps using PowerShell
+    href: manage-vip-swap-powershell.md
   - name: No space on the E or F drive
     href: no-space-e-f-drive.md
   - name: RDP connections fail occasionally

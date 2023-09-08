@@ -3,10 +3,9 @@ title: Troubleshoot the Kubernetes Event-driven Autoscaling (KEDA) add-on
 description: Learn how to troubleshoot the Kubernetes Event-driven Autoscaling (KEDA) add-on to the Azure Kubernetes Service (AKS).
 ms.service: azure-kubernetes-service
 ms.date: 12/22/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
 editor: v-jsitser
-ms.reviewer: nickoman
+ms.reviewer: nickoman, v-leedennis
+ms.subservice: troubleshoot-extensions-add-ons
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot problems that involve the Kubernetes Event-driven Autoscaling (KEDA) add-on so that I can successfully use event-driven autoscaling on Azure Kubernetes Service (AKS).
 ---
 

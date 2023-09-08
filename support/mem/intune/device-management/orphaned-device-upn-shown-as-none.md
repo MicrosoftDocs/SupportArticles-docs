@@ -1,9 +1,9 @@
 ---
-title: How to remove a disabled Azure AD user's device from Intune
+title: "How to remove a disabled Azure AD user's device from Intune"
 description: Fixes a problem in which a device becomes orphaned/unidentifiable if its owner is removed from Azure Active Directory before the device is removed from Microsoft Intune.
 ms.date: 09/22/2021
 search.appverid: MET150
-ms.custom: sap:Remove devices
+ms.custom: sap:Remove devices, has-azure-ad-ps-ref
 ms.reviewer: kaushika, patlewis
 ---
 
@@ -13,7 +13,7 @@ This article explains how to remove an orphaned device in Intune if its owner ha
 
 ## Symptoms
 
-If you view an enrolled device in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) under **Devices** > **All Devices**, you see that the UPN is **None**.
+If you view an enrolled device in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) under **Devices** > **All Devices**, you see that the UPN is **None**.
 
 ## Cause
 

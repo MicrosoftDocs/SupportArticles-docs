@@ -1,7 +1,7 @@
 ---
 title: Windows 10 upgrade issues troubleshooting
 description: Understanding the Windows 10 upgrade process can help you troubleshoot errors when something goes wrong. Find out more with this guide.
-ms.date: 08/19/2022
+ms.date: 04/28/2023
 manager: dcscontentpm
 ms.author: aaroncz
 ms.prod: windows-client
@@ -13,14 +13,14 @@ ms.reviewer: dougeby
 audience: itpro
 localization_priority: medium
 ---
-# Troubleshooting upgrade errors
+# Windows 10 upgrade issues troubleshooting
 
 <p class="alert is-flex is-primary"><span class="has-padding-left-medium has-padding-top-extra-small"><a class="button is-primary" href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806293" target='_blank'><b>Try our Virtual Agent</b></a></span><span class="has-padding-small"> - It can help you quickly identify and fix common Windows boot issues</span>
 
 > [!NOTE]
 > This is a 300 level topic (moderately advanced).
 >
-> See [Resolve Windows 10 upgrade errors](/windows/deployment/upgrade/resolve-windows-10-upgrade-errors) for a full list of topics in this article.
+> For IT professionals, check more information in [Resolve Windows 10 upgrade errors](/windows/deployment/upgrade/resolve-windows-10-upgrade-errors).
 
 If a Windows 10 upgrade isn't successful, it can be helpful to understand when an error occurred in the upgrade process.
 
@@ -93,6 +93,10 @@ When performing an operating system upgrade, Windows Setup uses phases described
     DU = Driver/device updates.  
     OOBE = Out of box experience.  
     WIM = Windows image (Microsoft)
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).
 
 ## More information
 

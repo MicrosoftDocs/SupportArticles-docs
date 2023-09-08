@@ -2,9 +2,7 @@
 title: Resolve Windows Agent installation issues 
 description: Follow these steps to resolve Windows Log Analytics Agent (Windows Agent) installation issues.
 ms.date: 01/24/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
-ms.reviewer: aaronmax
+ms.reviewer: aaronmax, v-leedennis
 editor: v-jsitser
 ms.service: azure-monitor
 ms.subservice: logs-troubleshoot

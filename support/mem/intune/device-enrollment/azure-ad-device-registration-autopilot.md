@@ -34,7 +34,7 @@ For more information about Azure AD device registration, see the [Azure AD devic
 
 ## Windows Autopilot
 
-To add [Windows Autopilot](/mem/autopilot/windows-autopilot) devices in Microsoft Intune, import a CSV file that contains the device information. To import the CSV file, open the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then select **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**) > **Import**.
+To add [Windows Autopilot](/mem/autopilot/windows-autopilot) devices in Microsoft Intune, import a CSV file that contains the device information. To import the CSV file, open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then select **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**) > **Import**.
 
 You can use the [Get-WindowsAutoPilotInfo](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo) PowerShell script to generate the CSV file. You can either manually download the script or run the following command to install the script:
 

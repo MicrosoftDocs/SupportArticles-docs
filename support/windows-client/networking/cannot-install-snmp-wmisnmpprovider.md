@@ -1,7 +1,7 @@
 ---
 title: Can't install the SNMP and WMI SNMP Provider features
 description: Works around the issue in which the SNMP and WMI SNMP Provider features can't be installed using the DISM.exe tool in Windows 10 or Windows 11.
-ms.date: 11/17/2021
+ms.date: 05/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -71,3 +71,7 @@ Get-WindowsCapability -Online -Name "WMI-SNMP-Provider.Client~~~~0.0.1.0"
 ```
 
 The state is **Installed** if these features are installed correctly.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../windows-troubleshooters/gather-information-using-tss-user-experience.md#wmi).

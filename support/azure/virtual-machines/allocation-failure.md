@@ -29,7 +29,7 @@ When you create a virtual machine (VM), start stopped (deallocated) VMs, or resi
 
 This article explains the causes of some of the common allocation failures and suggests possible remedies.
 
-If your Azure issue is not addressed in this article, visit the [Azure forums on MSDN and Stack Overflow](https://azure.microsoft.com/support/forums/). You can post your issue on these forums or to @AzureSupport on Twitter. Also, you can file an Azure support request by selecting Get support on the [Azure support](https://azure.microsoft.com/support/options/) site.
+If your Azure issue is not addressed in this article, visit the [Azure forums on Q&A and Stack Overflow](https://azure.microsoft.com/support/forums/). You can post your issue on these forums or to @AzureSupport on Twitter. Also, you can file an Azure support request by selecting Get support on the [Azure support](https://azure.microsoft.com/support/options/) site.
 
 Until your preferred VM type is available in your preferred region, we advise customers who encounter deployment issues to consider the guidance in the following table as a temporary workaround.
 

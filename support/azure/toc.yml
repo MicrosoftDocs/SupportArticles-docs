@@ -3,6 +3,10 @@
   items:
   - name: Azure Active Directory
     href: active-directory/welcome-azure-ad.yml
+  - name: Microsoft Entra
+    href: microsoft-entra/welcome-microsoft-entra.yml
+  - name: Azure Active Directory
+    href: active-directory/welcome-azure-ad.yml
   - name: Azure Kubernetes Services
     href: azure-kubernetes/welcome-azure-kubernetes.yml
   - name: Azure Monitor

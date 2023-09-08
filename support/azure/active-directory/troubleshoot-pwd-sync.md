@@ -97,6 +97,8 @@ The following tables list event ID messages in the Application log that are rela
 
 |Event ID  |Description  |Cause  |
 |---------|---------|---------|
+| 622|Full password hash synchronization completed for domain: contoso.local|Full password synchronization cycle finishes retrieving the recent passwords from the on-premises AD DS domain.|
+| 623|Full password hash synchronization completed for forest: contoso.local|Full password synchronization cycle finishes retrieving the recent passwords from the on-premises AD DS forest.|
 | 650|Provision credentials batch start. Count: 1|Password synchronization starts retrieving updated passwords from the on-premises AD DS.|
 | 651|Provision credentials batch end. Count: 1|Password synchronization finishes retrieving updated passwords from the on-premises AD DS.|
 | 653|Provision credentials ping start.|Password synchronization starts informing Azure AD that there are no passwords to be synced. It occurs every 30 minutes if no passwords have been updated in the on-premises AD DS.|

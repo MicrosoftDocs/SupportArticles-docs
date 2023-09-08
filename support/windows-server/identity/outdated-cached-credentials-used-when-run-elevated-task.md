@@ -1,15 +1,13 @@
 ---
 title: Outdated cached credentials are used when you run an elevated task
 description: Helps to resolve the issue in which the outdated cached credentials are used when you run an elevated task.
-ms.date: 12/15/2022
-author: v-lianna
-ms.author: v-lianna
+ms.date: 12/19/2022
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika, herbertm
+ms.reviewer: kaushika, herbertm, v-lianna
 ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
@@ -17,7 +15,7 @@ ms.technology: windows-server-active-directory
 
 This article helps to resolve the issue in which outdated cached credentials are used when you run an elevated task.
 
-_Applies to:_ &nbsp; Supported versions of Windows Server and Windows Client  
+_Applies to:_ &nbsp; Supported versions of Windows Server and Windows Client
 
 You log on to a Windows computer using a non-administrator account and run an elevated task by selecting the **Run as Administrator** option. Then, you are prompted for an administrator credential, and you enter an administrator account credential to continue the operation.
 

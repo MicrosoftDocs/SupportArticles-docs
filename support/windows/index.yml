@@ -7,6 +7,7 @@ metadata:
    services: service
    ms.service: windows
    ms.author: delhan
+   ms.date: 09/08/2020
 
 productDirectory:
   items:
@@ -23,9 +24,9 @@ productDirectory:
   - title:  Application Developer
     imageSrc: "../media/hub-landing/windows-logo.png"
     summary: Troubleshooting articles for Windows application developers
-    url: win32/welcome-windowsdeveloper.md
+    url: win32/welcome-windowsdeveloper.yml
 
   - title:  Hardware Developer
     imageSrc: "../media/hub-landing/windows-logo.png"
     summary: Troubleshooting articles for Windows hardware developers
-    url: ../windows-hardware/drivers/welcome-windowshardware.md
+    url: ../windows-hardware/drivers/welcome-windowshardware.yml

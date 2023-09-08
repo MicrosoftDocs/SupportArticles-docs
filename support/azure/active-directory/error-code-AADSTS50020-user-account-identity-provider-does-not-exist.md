@@ -1,13 +1,12 @@
 ---
 title: Error AADSTS50020 - User account from identity provider does not exist in tenant
 description: Troubleshoot scenarios in which a guest user unsuccessfully tries to sign in to the resource tenant and error code AADSTS50020 is returned.
-ms.date: 04/15/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
+ms.date: 03/28/2023
 ms.editor: v-jsitser
-ms.reviewer: "rrajan,haelshab,sungow"
+ms.reviewer: rrajan, haelshab, sungow, v-leedennis
 ms.service: active-directory
 ms.subservice: app-mgmt
+ms.custom: has-azure-ad-ps-ref
 keywords:
 #Customer intent: As an Azure Active Directory administrator, I want to figure out why error code AADSTS50020 occurs so that I can make sure that my guest users from an identity provider can sign in to a resource tenant.
 ---

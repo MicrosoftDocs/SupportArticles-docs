@@ -155,11 +155,11 @@ This section provides troubleshooting guidance for the following scenarios:
 
 - Confirm the Wi-Fi profile is assigned to the correct group:
 
-    1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles**.
+    1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles**.
     2. Select your profile > **Assignments**. Confirm the selected groups are correct.
-    3. In the Endpoint Manager, select **Troubleshooting + Support**. Review the **Assignments** information.
+    3. In the Intune, select **Troubleshooting + Support**. Review the **Assignments** information.
 
-- In the Endpoint Manager, select **Troubleshooting + Support**. Confirm the device can sync with Intune by checking the **Last check in** time.
+- In the Intune, select **Troubleshooting + Support**. Confirm the device can sync with Intune by checking the **Last check in** time.
 
 - If the Wi-Fi profile is linked to the Trusted Root and SCEP profiles, confirm both profiles are deployed to the device. The Wi-Fi profile has a dependency on these profiles.
 

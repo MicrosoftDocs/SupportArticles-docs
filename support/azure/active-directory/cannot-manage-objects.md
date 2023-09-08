@@ -5,6 +5,7 @@ ms.date: 08/30/2021
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: enterprise-users
+ms.custom: has-azure-ad-ps-ref
 ---
 # Can't manage or remove objects that were synchronized through the Azure Active Directory Sync tool
 

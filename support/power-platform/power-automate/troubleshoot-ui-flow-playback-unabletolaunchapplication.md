@@ -3,8 +3,8 @@ title: Troubleshoot UI flow playback UnableToLaunchApplication
 description: This article helps to solve the UI flow playback error UnableToLaunchApplication when trying to run a UI flow during Test run or Flow run.
 ms.reviewer: ambham
 ms.topic: troubleshooting
-ms.date: 3/31/2021
-ms.subservice: power-automate-flows
+ms.date: 03/31/2021
+ms.subservice: power-automate-desktop-flows
 ---
 # Troubleshoot UI flow Playback - Unable To Launch Application
 

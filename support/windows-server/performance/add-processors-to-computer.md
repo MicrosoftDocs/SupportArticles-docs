@@ -1,7 +1,7 @@
 ---
 title: Add processors to a computer
 description: Describes how to add processors to a computer.
-ms.date: 09/17/2020
+ms.date: 03/24/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

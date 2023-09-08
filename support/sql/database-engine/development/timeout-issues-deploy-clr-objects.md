@@ -4,9 +4,10 @@ description: This article provides resolutions for the timeout issues that occur
 ms.date: 01/20/2021
 ms.custom: sap:Database Design and Development
 ---
+
 # You may experience timeout issues when deploying SQL CLR objects through Visual Studio
 
-This article helps you resolve the timeout problem that occurs when deploying SQL CLR objects through Visual Studio.
+This article helps you resolve the timeout problem that occurs when deploying SQL Common Language Runtime (CLR) objects through Visual Studio.
 
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 2011805
@@ -25,7 +26,7 @@ When you deploy SQL CLR objects from Visual Studio to SQL Server, you may experi
     > Deploying file: TEstAssembly.dll, Path: E:\cases\CL MY\TEstAssembly\TEstAssembly\obj\Debug\TEstAssembly.dll ...
      Error: Timeout expired. The timeout period elapsed prior to completion of the operation or the server is not responding.  
 
-But if you deploy the same CLR objects using `CREATE ASSEMBLY` command in SQL Server Management Studio you do not experience any issues.
+But if you deploy the same CLR objects using `CREATE ASSEMBLY` command in SQL Server Management Studio you don't experience any issues.
 
 ## Cause
 
@@ -33,20 +34,20 @@ The issue occurs when the SQL CLR objects are so large that it takes a long time
 
 ## Resolution
 
-Increase the Query timeout and Connection timeout values in Visual Studio using the procedures documented below.
+Increase the Query timeout and Connection timeout values in Visual Studio using the following procedures.
 
 ### Changing the Query Timeout
 
 1. In Visual Studio IDE, navigate to **Tools** -> **Options** -> **Database Tools** -> **Query and View Designers**.  
 
-2. You can either uncheck the option **Cancel long running query** or change the value of **Cancel after** option **** to a higher value.
+1. You can either uncheck the option **Cancel long running query** or change the value of the **Cancel after** option **** to a higher value.
 
 ### Changing the Connection Timeout
 
 1. In Visual Studio IDE, enable Server Explorer by navigating to **View** -> **Server Explorer**.  
 
-2. In the Server Explorer, right click on the connection to SQL Server where the CLR objects are being deployed and choose **Modify Connection**.
+1. In the Server Explorer, right click on the connection to SQL Server where the CLR objects are being deployed and select **Modify Connection**.
 
-3. Click on **Advanced** button on the **Modify Connection** window.
+1. Select the **Advanced** button in the **Modify Connection** window.
 
-4. In the **Advanced Properties** window, change the **Connect Timeout** value under **Initialization** section to a higher value.
+1. In the **Advanced Properties** window, change the **Connect Timeout** value under the **Initialization** section to a higher value.

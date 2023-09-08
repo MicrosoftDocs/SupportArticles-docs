@@ -1,12 +1,12 @@
 ---
-title: UI Flows cannot launch recorder
+title: UI Flows can't launch recorder
 description: Troubleshooting recorder launch for UI Flows in Power Automate.
 ms.reviewer: jokovace
 ms.topic: troubleshooting
-ms.date: 3/31/2021
-ms.subservice: power-automate-flows
+ms.date: 03/31/2021
+ms.subservice: power-automate-desktop-flows
 ---
-# UI flows cannot launch recorder
+# UI flows can't launch recorder
 
 This article provides a solution to an issue where UI flows recorder won't launch.
 
@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 4555735
 
 ## Symptoms
 
-UI flows recorder won't launch. Instead, the UI flows wizard will prompt you to download the installation package.
+UI flows recorder won't launch. Instead, the UI flows wizard prompts you to download the installation package.
 
 :::image type="content" source="media/ui-flows-cannot-launch-recorder/download-install-package.png" alt-text="Screenshot of the U I Flows installation package message.":::
 

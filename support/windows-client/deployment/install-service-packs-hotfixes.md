@@ -1,7 +1,7 @@
 ---
 title: Install Service Packs and Hotfixes
 description: Describes how to best install and remove service packs and hotfix updates on Windows-based computers that are running in Safe mode.
-ms.date: 10/10/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -45,3 +45,7 @@ Because of it, Microsoft recommends that you don't install service packs or upda
 Microsoft recommends that you don't remove Windows service packs or hotfix updates when Windows is running in Safe mode.
 
 Because the removal (uninstall) program for a service pack or hotfix update only restores settings (file replacements and registry changes) that it previously changed, and because the removal program maintains a record of these changes, no problems are expected to occur when you remove a service pack or hotfix when Windows is running in Safe mode. However, Microsoft recommends that you remove a service pack or hotfix while Windows is running in normal mode, where possible.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

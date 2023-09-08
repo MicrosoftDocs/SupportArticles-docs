@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting RDP Client connection problems
 description: Describes various causes for Terminal Server Client connection failures.
-ms.date: 09/08/2020
+ms.date: 05/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -44,3 +44,7 @@ All the steps are documented in these articles, based on the server operating sy
 Additionally, we have more symptoms documented in the following Microsoft TechNet article:  
 
 [Troubleshooting General Remote Desktop Error messages](https://technet.microsoft.com/library/cc780927%28ws.10%29.aspx)
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../windows-troubleshooters/gather-information-using-tss-user-experience.md#remote-desktop-client-connection).

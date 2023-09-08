@@ -3,7 +3,6 @@ title: Considerations for the autogrow and autoshrink
 description: This article provides information regarding what happens when you select the autogrow and autoshrink for your environment.
 ms.date: 10/10/2022
 ms.custom: sap:Administration and Management
-ms.prod: sql
 ---
 
 # Considerations for the autogrow and autoshrink settings in SQL Server

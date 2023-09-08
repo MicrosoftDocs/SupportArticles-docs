@@ -2,9 +2,7 @@
 title: Fails to modify or remove VM guest from protection group in DPM
 description: Provides a solution for an error that occurs when you modify a protection group or remove a VM from a protection group.
 ms.date: 12/02/2022
-author: AmandaAZ
-ms.author: v-weizhu
-ms.reviewer: jarrettr, scdpmcsscontent
+ms.reviewer: jarrettr, scdpmcsscontent, v-weizhu
 ---
 # VM guest can't be modified or removed from a protection group in Data Protection Manager
 

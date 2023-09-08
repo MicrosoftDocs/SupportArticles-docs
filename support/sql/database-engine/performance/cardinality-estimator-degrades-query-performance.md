@@ -1,9 +1,8 @@
 ---
 title: Join containment assumption in the New Cardinality Estimator degrades query performance
-description: This article helps you resolve performance problems that can occur in SQL Server 2014 and later versions when you compile your queries using the new cardinality estimator.
+description: This article helps you resolve performance problems that occur in SQL Server 2014 and later versions when you compile your queries using the new cardinality estimator.
 ms.date: 08/12/2022
 ms.custom: sap:Performance
-ms.prod: sql
 ---
 # Join containment assumption in the New Cardinality Estimator degrades query performance
 
@@ -60,6 +59,3 @@ You can enable this trace flag globally, at the session level, or at the query l
 
 > [!NOTE]
 > Using trace flags incorrectly can degrade your workload performance. For more information, see [Hints (Transact-SQL) - Query](/sql/t-sql/queries/hints-transact-sql-query).
-
-
-

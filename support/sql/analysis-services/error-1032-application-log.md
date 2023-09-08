@@ -4,7 +4,6 @@ description: This article provides a workaround for the problem that occurs when
 ms.date: 11/04/2020
 ms.reviewer: ramakoni
 ms.custom: sap:Analysis Services
-ms.prod: sql
 ---
 # Error 1032 messages in the application log in Windows Server 2012
 

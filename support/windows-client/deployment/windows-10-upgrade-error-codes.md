@@ -1,7 +1,7 @@
 ---
 title: Windows 10 upgrade error codes
 description: Understand the error codes that may come up if something goes wrong during the Windows 10 upgrade process.
-ms.date: 10/19/2022
+ms.date: 04/28/2023
 manager: dcscontentpm
 ms.author: aaroncz
 ms.prod: windows-client
@@ -14,14 +14,14 @@ ms.reviewer: dougeby
 audience: itpro
 localization_priority: medium
 ---
-# Upgrade error codes
+# Windows 10 upgrade error codes
 
 _Applies to:_ &nbsp; Windows 10
 
 > [!NOTE]
 > This is a 400 level topic (advanced).
 >
-> See [Resolve Windows 10 upgrade errors](/windows/deployment/upgrade/resolve-windows-10-upgrade-errors) for a full list of topics in this article.
+> For IT professionals, check more information in [Resolve Windows 10 upgrade errors](/windows/deployment/upgrade/resolve-windows-10-upgrade-errors).
 
 If the upgrade process isn't successful, Windows Setup will return two codes:
 
@@ -144,6 +144,10 @@ The following tables provide the corresponding phase and operation for values of
 |20|SP_EXECUTION_OP_ADD_PROVISIONING_PACKAGE|
 
 For example: An extend code of 0x4000D, represents a problem during phase 4 (0x4) with data migration (000D).
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).
 
 ## More information
 

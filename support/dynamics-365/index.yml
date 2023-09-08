@@ -5,17 +5,24 @@ summary: Technical content to troubleshoot issues in Microsoft Dynamics 365
 metadata:
   ms.topic: hub-page
   services: service
-  ms.prod: dynamics-365
+  ms.date: 04/01/2021
+  ms.service: dynamics-365
 
 additionalContent:
   sections:
     - items:
+        - title: Dynamics 365 Customer Insights
+          summary: Troubleshooting articles for Dynamics 365 Customer Insights
+          url: customer-insights/welcome-customer-insights.yml
+        - title: Dynamics 365 Customer Service
+          summary: Troubleshooting articles for Dynamics 365 Customer Service
+          url: customer-service/welcome-customer-service.yml
+        - title: Dynamics 365 Commerce
+          summary: Troubleshooting articles for Dynamics 365 Commerce
+          url: commerce/welcome-commerce.yml
         - title: Dynamics 365 Finance
           summary: Troubleshooting articles for Dynamics 365 Finance
           url: finance/welcome-finance.yml
-        - title: Dynamics 365 Fraud Protection
-          summary: Troubleshooting articles for Dynamics 365 Fraud Protection
-          url: fraud-protection/welcome-fraud-protection.yml
         - title: Dynamics 365 Marketing
           summary: Troubleshooting articles for Dynamics 365 Marketing
           url: marketing/welcome-marketing.yml

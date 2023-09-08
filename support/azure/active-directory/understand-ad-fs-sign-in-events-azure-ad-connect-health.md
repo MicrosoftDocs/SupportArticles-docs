@@ -1,10 +1,8 @@
 ---
 title: Understand AD FS sign-in events in Azure AD with Connect Health
 description: Understand how to correlate sign-in events in Active Directory Federation Services (AD FS) security logs into one sign-in event in Azure for parsing.
-ms.date: 12/14/2021
-author: DennisLee-DennisLee
-ms.author: v-dele
-ms.reviewer: brheld
+ms.date: 05/18/2023
+ms.reviewer: brheld, v-leedennis
 ms.service: active-directory
 ms.subservice: hybrid
 #Customer intent: As an Azure Active Directory user, I want to know how sign-in events in AD FS security logs relate to a single Azure sign-in event so that I can parse sign-in data in Azure.
@@ -21,7 +19,7 @@ This article shows how to use the Connect Health for AD FS agent, Azure Monitor,
 
 ## Prerequisites
 
-- [Azure AD Connect Health](/azure/active-directory/hybrid/reference-connect-health-faq) for AD FS installed and upgraded to latest version (3.1.95.0 or greater).
+- [Azure AD Connect Health](/azure/active-directory/hybrid/connect/how-to-connect-health-agent-install) for AD FS installed and upgraded to latest version (3.1.95.0 or greater).
 - The [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) or [Reports Reader](/azure/active-directory/roles/permissions-reference#reports-reader) role to view the Azure AD sign-ins.
 - At least one Azure AD Premium (P1 or P2) license for the first Connect Health agent.
 - 25 extra Azure AD Premium (P1 or P2) licenses for each extra registered agent.

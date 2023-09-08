@@ -43,6 +43,10 @@ items:
       href: app-management/error-0x87d13ba2-deploy-macos-lob-app.md
     - name: Can't install apps and run shell scripts in macOS
       href: app-management/cannot-install-macos-apps-and-run-shell-scripts.md
+    - name: Microsoft 365 apps for macOS close and reinstall without notification
+      href: app-management/no-notification-microsoft365-apps-macos-reinstall.md
+    - name: No notification when Microsoft 365 apps deployed with Intune are updated
+      href: app-management/no-notification-microsoft365-apps-macos-update.md
   - name: Android apps
     items:
     - name: Can't wrap Android LOB app with Intune App Wrapping Tool
@@ -77,12 +81,16 @@ items:
       href: app-protection-policies/troubleshoot-app-protection-policy-deployment.md
     - name: Troubleshoot APP user issues
       href: app-protection-policies/troubleshoot-mam.md
-    - name: Troubleshoot data transfer between apps
-      href: app-protection-policies/troubleshoot-data-transfer.md
-    - name: Troubleshoot exemptions to data transfer policies
-      href: app-protection-policies/troubleshoot-data-transfer-exemptions.md
-    - name: Common data transfer issues
-      href: app-protection-policies/data-transfer-scenarios.md
+    - name: Troubleshoot data transfer
+      items:
+      - name: Troubleshoot data transfer between apps
+        href: app-protection-policies/troubleshoot-data-transfer.md
+      - name: Troubleshoot cut, copy, and paste
+        href: app-protection-policies/troubleshoot-cut-copy-paste.md
+      - name: Troubleshoot exemptions to data transfer policies
+        href: app-protection-policies/troubleshoot-data-transfer-exemptions.md
+      - name: Common data transfer issues
+        href: app-protection-policies/data-transfer-scenarios.md
     - name: Fingerprint authentication on Samsung Note 4
       href: app-protection-policies/no-prompt-for-fingerprint-identity.md
 - name: Certificates
@@ -323,7 +331,7 @@ items:
   items:
   - name: Things to try before calling Intune support
     href: get-support/before-you-call-intune-support.md
-  - name: Get support in Endpoint Manager
+  - name: Get support in Intune
     href: /mem/get-support
   - name: Help and support blade doesn't load
     href: get-support/cannot-load-help-and-support-blade.md

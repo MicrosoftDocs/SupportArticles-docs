@@ -1,12 +1,10 @@
 ---
 title: 'Enforcing BitLocker policies by using Intune: known issues'
 description: provides assistance for issues that you may see if you use Microsoft Intune policy to manage silent BitLocker encryption on devices.
-ms.date: 11/21/2022
-ms.reviewer: kaushika
+ms.date: 03/13/2023
+ms.reviewer: kaushika, v-tappelgate
 ms.technology: windows-client-security
 ms.prod: windows-client
-author: Teresa-Motiv
-ms.author: v-tappelgate
 manager: dcscontentpm
 ms.collection:
 - Windows Security Technologies\BitLocker
@@ -113,7 +111,7 @@ list volume
 
 If the status of any of the volumes isn't healthy or if the recovery partition is missing, Windows may need to be reinstalled. Before reinstalling Windows, check the configuration of the Windows image that is being provisioned. Make sure that the image uses the correct disk configuration. The image configuration should resemble the following (this example is from Microsoft Configuration Manager):
 
-![Screenshot of Windows image configuration in Microsoft Configuration Manager.](media/enforcing-bitlocker-policies-by-using-intune-known-issues/config-mgr-image-config.png)
+ :::image type="content" source="media/enforcing-bitlocker-policies-by-using-intune-known-issues/config-mgr-image-config.png" alt-text="Screenshot of Windows image configuration in Microsoft Configuration Manager.":::
 
 #### Step 2: Verify the status of WinRE
 

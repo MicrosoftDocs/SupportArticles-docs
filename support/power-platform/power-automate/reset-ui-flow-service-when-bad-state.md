@@ -3,8 +3,8 @@ title: Reset UI Flow service when in bad state
 description: Provides a solution to an issue where you're consistently experiencing an error when doing a UI flow run, recording, or test.
 ms.reviewer: quseleba
 ms.topic: troubleshooting
-ms.date: 3/31/2021
-ms.subservice: power-automate-flows
+ms.date: 03/31/2021
+ms.subservice: power-automate-desktop-flows
 ---
 # How to restart UI flows to recover from a bad state
 

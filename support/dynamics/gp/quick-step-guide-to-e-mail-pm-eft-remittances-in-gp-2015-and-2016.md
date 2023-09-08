@@ -83,13 +83,13 @@ If the test above worked successfully, then continue to grant security access to
 
 ## More information
 
-To access the blog article for Microsoft Dynamics GP 2010, see [Quick Step Guide to E-mail PM EFT Remittances in Microsoft Dynamics GP 2010](https://community.dynamics.com/gp/b/dynamicsgp/posts/quick-step-guide-to-e-mail-eft-remittances-in-payables-management-for-microsoft-dynamics-gp-2010).
+To access the blog article for Microsoft Dynamics GP 2010, see [Quick Step Guide to E-mail PM EFT Remittances in Microsoft Dynamics GP 2010](https://community.dynamics.com/blogs/post/?postid=11e9fb89-af60-4af7-82ab-1455def05a16).
 
-To access the blog article for Microsoft Dynamics GP 2013, see [Quick Step Guide to E-mail PM EFT Remittances in Microsoft Dynamics GP 2013](https://community.dynamics.com/gp/b/dynamicsgp/posts/quick-step-guide-to-e-mail-pm-eft-remittances-in-microsoft-dynamics-gp-2013).
+To access the blog article for Microsoft Dynamics GP 2013, see [Quick Step Guide to E-mail PM EFT Remittances in Microsoft Dynamics GP 2013](https://community.dynamics.com/blogs/post/?postid=abb4eb99-17a3-416b-be4a-c7925a5727cf).
 
 ## References
 
 For further assistance or troubleshooting tips for modifying Word templates, please search our blog site or the communities for other helpful articles published.  Here are the links to a few helpful blogs, and there are many more out there:
 
-- [How to display more than four line item comments in the SOP Blank Invoice Word Template](https://community.dynamics.com/gp/b/dynamicsgp/posts/how-to-display-more-than-four-line-item-comments-in-the-sop-blank-invoice-word-template)
-- [Word Template borders not printing correctly after making modifications?](https://community.dynamics.com/gp/b/dynamicsgp/posts/word-template-borders-not-printing-correctly-after-making-modifications)
+- [How to display more than four line item comments in the SOP Blank Invoice Word Template](https://community.dynamics.com/blogs/post/?postid=c723196c-830c-4fed-b567-c4d12ba4d83d)
+- [Word Template borders not printing correctly after making modifications?](https://community.dynamics.com/blogs/post/?postid=2e7e1421-b3e5-4f76-b269-e5d3322b8650)

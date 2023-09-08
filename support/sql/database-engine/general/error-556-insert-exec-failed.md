@@ -4,9 +4,8 @@ description: This article helps you work around the periodic failure of a stored
 ms.date: 09/02/2020
 ms.custom: sap:Database Design and Development
 ms.reviewer: nathansc, dajiro
-ms.prod: sql
 ---
-# INSERT EXEC fails because the stored procedure altered the schema of the target table error in SQL Server 2016
+# "INSERT EXEC fails because the stored procedure altered the schema of the target table" error in SQL Server 2016
 
 This article helps you work around a problem that occurs because a stored procedure in a database that's using the Query Data Store feature periodically fails.
 
@@ -19,7 +18,7 @@ Consider the following scenario:
 
 - You have a Microsoft SQL Server 2016 database that's using the Query Data Store feature.
 
-- You have a stored procedure that makes a call to another stored procedure by using the *INSERT...EXEC* syntax.
+- You have a stored procedure that makes a call to another stored procedure by using the `INSERT...EXEC` syntax.
 
 - The Query Data Store feature periodically runs auto-cleanup as it increases to its maximum configured size. Additionally, the Query Data Store state changes from `READ_WRITE` to `READ_ONLY`.
 
@@ -34,15 +33,15 @@ The auto-cleanup process flushes the plan out of Query Data Store. The query enc
 
 ## Resolution
 
-### Service Pack Information for SQL Server 2016
+### Service Pack information for SQL Server 2016
 
-This issue is fixed in the following service pack for SQL Server:  
+This issue is fixed in the following service pack for SQL Server:  
 
-[Service Pack 3 for SQL Server 2016](https://support.microsoft.com/help/5003279)
+[Service Pack 3 for SQL Server 2016](https://support.microsoft.com/help/5003279)
 
 **About service packs for SQL Server:**  
 
-Service packs are cumulative. Each new service pack contains all the fixes that are in previous service packs, together with any new fixes. We recommend that you apply the latest service pack and the latest cumulative update for that service pack. You do not have to install a previous service pack before you install the latest service pack. Refer to Table 1 in the following article for more information about the latest service pack and latest cumulative update:
+Service packs are cumulative. Each new service pack contains all the fixes that are in previous service packs, together with any new fixes. We recommend that you apply the latest service pack and the latest cumulative update for that service pack. You don't have to install a previous service pack before you install the latest service pack. Refer to Table 1 in the following article for more information about the latest service pack and latest cumulative update:
 
 [How to determine the version, edition and update level of SQL Server and its components](../../releases/download-and-install-latest-updates.md)
 
@@ -50,7 +49,7 @@ Service packs are cumulative. Each new service pack contains all the fixes that 
 
 To work around this issue, follow these steps:
 
-1. Increase the size of the Query Data Store. This will reduce the frequency or likelihood of the Query Data Store clearing out the plan and entering `READ_ONLY` operating mode.
+1. Increase the size of the Query Data Store. This will reduce the frequency or likelihood of the Query Data Store clearing out the plan and entering the `READ_ONLY` operating mode.
 
 2. Add error handling to your code to catch error 556, and then resubmit the `INSERT EXEC` query.
 
@@ -58,4 +57,4 @@ To work around this issue, follow these steps:
 
 ## Additional information
 
-Because of the changes that were made to Query Data Store in Microsoft SQL Server 2017, this problem does not occur in SQL Server 2017. This problem won't be fixed in SQL Server 2016.
+Because of the changes that were made to Query Data Store in Microsoft SQL Server 2017, this problem doesn't occur in SQL Server 2017. This problem won't be fixed in SQL Server 2016.

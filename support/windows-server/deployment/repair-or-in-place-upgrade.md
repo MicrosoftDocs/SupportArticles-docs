@@ -1,7 +1,7 @@
 ---
 title: How to do an in-place upgrade
 description: This article introduces how to do a repair/in-place upgrade of the existing installation for Windows.
-ms.date: 09/08/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -15,9 +15,9 @@ ms.technology: windows-server-deployment
 ---
 # How to do an in-place upgrade on Windows
 
-After you've done the emergency repair process, the computer still doesn't operate normally. In this situation, you may want to do a repair or in-place upgrade of the existing installation.
+After you've done the emergency repair process, the computer still doesn't operate normally. In this situation, you may want to do a repair in-place upgrade or an in-place upgrade to a newer operating system version. A repair in-place upgrade means performing an in-place upgrade to the same OS version as the existing one.
 
-_Applies to:_ &nbsp; All Windows versions
+_Applies to:_ &nbsp; All Windows versions  
 _Original KB number:_ &nbsp; 2255099
 
 ## More information
@@ -57,3 +57,7 @@ To do a repair installation of Windows, follow these steps:
 7. select **Yes** to accept the Microsoft Software License Terms.
 8. On the **Which type of installation do you want?** screen, select **Upgrade**.
 9. When the installation is complete, restart your computer.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

@@ -1,7 +1,7 @@
 ---
 title: Running Sysprep /generalize returns error
 description: Describes how to work around the issue that may occur if the Windows Software Licensing Rearm program has run more than three times in a single Windows image.
-ms.date: 09/08/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -77,3 +77,7 @@ To run the Rearm process in Windows 7, use one of the following methods:
 
 > [!NOTE]
 > Administrative credentials are required to run the Rearm process. The Rearm process can be run a maximum of three times in a Windows image.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

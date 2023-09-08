@@ -1,7 +1,7 @@
 ---
 title: Install RDS role service without Connection Broker
 description: Guidelines for installing the RDSH  and RD license server role services on a computer running Windows Server (DC or workgroup) without the RD Connection Broker role service.
-ms.date: 09/08/2020
+ms.date: 04/06/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -79,7 +79,7 @@ Unless otherwise noted, these steps apply to both workgroup computer and DC case
 
 1. Change the local policy of the computer to add your remote desktop users to the **Allow logon through Remote Desktop Services** local policy object. To do this, follow these steps:
 
-    1. Open Local Security Policy.
+    1. Open Local Group Policy.
     2. Navigate to **Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\User Rights Assignment**.
     3. Double-click **Allow log on through Remote Desktop Services**, and then select **Add User or Group**.
     4. Type **Remote Desktop Users** (or the user names of each user account that you want to add, separated by semicolons), and then select **OK** two times.

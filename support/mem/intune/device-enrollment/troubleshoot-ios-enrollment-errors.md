@@ -113,7 +113,7 @@ iPhone mobileassetd[83] <Notice>: 0x1a49aebc0 Client connection: XPC_TYPE_ERROR 
 
 **Solution:**
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Enroll devices** > **Enrollment restrictions**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Enroll devices** > **Enrollment restrictions**.
 2. Under **Device type restrictions**, select **All Users** > **Properties**.
 3. Select **Edit** next to the **Platform settings**.
 4. On the **Edit restriction** page, select **Allow** for **iOS/iPadOS** and proceed to the **Review + save** page, then select **Save**.
@@ -127,7 +127,7 @@ When you turn on an ADE-managed device that is assigned an enrollment profile, t
 **Solution:**
 
 1. Edit the enrollment profile. You can make any change to the profile. The purpose is to update the modification time of the profile.
-2. Synchronize ADE-managed devices: In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS** > **iOS enrollment** > **Enrollment program tokens** > choose a token > **Sync now**. A sync request is sent to Apple.
+2. Synchronize ADE-managed devices: In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS** > **iOS enrollment** > **Enrollment program tokens** > choose a token > **Sync now**. A sync request is sent to Apple.
 
 ### ADE enrollment stuck at user login
 

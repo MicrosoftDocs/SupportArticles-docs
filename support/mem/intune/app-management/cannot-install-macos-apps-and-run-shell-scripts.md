@@ -4,9 +4,7 @@ description: Resolves a known issue in which applications don't install and shel
 ms.date: 06/16/2021
 search.appverid: MET150
 ms.custom: sap:App management
-ms.reviewer: kaushika, markstan
-author: simonxjx
-ms.author: v-six
+ms.reviewer: kaushika, markstan, v-six
 ---
 # Apps don't install and shell scripts don't run in macOS 11.2
 
@@ -15,7 +13,7 @@ ms.author: v-six
 You experience the following issues on a macOS Big Sur 11.2._x_-based device:
 
 - Apps can't be downloaded and installed.
-- The app installation status shows **Install Pending** in the Microsoft Endpoint Manager admin center indefinitely.
+- The app installation status shows **Install Pending** in the Microsoft Intune admin center indefinitely.
 - Shell scripts don't run because the Microsoft Intune management agent can't be installed successfully.
 
 > [!NOTE]

@@ -3,7 +3,7 @@ title: Can't get to your Dynamics 365 environment
 description: Provides a solution to an error that occurs when you access your Common Data Service environment for the first time.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-access
 ---
 # You cannot get to your Dynamics 365 environment using the above URL. Error message displays when you access your Common Data Service environment for the first time
@@ -54,7 +54,7 @@ The deprecated redirector service is called <cloudredirector.crm.dynamics.com>.
 And it's replaced by something like `bn1 -- namcrlivesg614.crm.dynamics.com`.
 
 > [!NOTE]
-> It's just an example and this URL is different based on the region your tenant resides.
+> It's just an example and this URL is different based on where your tenant resides.
 
 Example (new):
 

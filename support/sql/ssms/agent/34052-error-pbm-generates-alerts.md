@@ -4,7 +4,6 @@ description: This article helps you resolve the problem where a SQL Agent job ge
 ms.date: 09/14/2020
 ms.custom: sap:Administration and Management
 ms.reviewer: ramakoni
-ms.prod: sql
 ---
 # 34052 error message and PBM generates alerts on policies that have an evaluation mode in SQL Server
 

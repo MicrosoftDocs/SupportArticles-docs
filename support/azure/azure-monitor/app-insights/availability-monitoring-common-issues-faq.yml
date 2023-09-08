@@ -3,9 +3,8 @@ metadata:
   title: Azure Application Insights availability monitoring common issues FAQ
   description: Review a list of frequently asked questions (FAQ) about common issues that occur when you use Application Insights availability monitoring.
   ms.topic: faq
-  ms.date: 8/15/2022
-  author: DennisLee-DennisLee
-  ms.author: v-dele
+  ms.date: 08/15/2022
+  ms.reviewer: v-leedennis
   ms.service: azure-monitor
   ms.subservice: application-insights
 
@@ -75,7 +74,13 @@ sections:
       - question: |
           Can I run a test by using client certificates?
         answer: |
-          No. This scenario isn't currently supported. 		  
+          No. This scenario isn't currently supported. 	
+          
+      - question: |
+          Why does my availability test continue to run after it is paused or disabled?
+        answer: |
+          It is an expected behavior. Depending on how close the deadline for the scheduled execution of the next iteration is, availability tests may not be stopped in time before they perform the next iteration. In the same way, when you create, disable, or manipulate new tests, there is a delay.
+
 
 additionalContent: |
 

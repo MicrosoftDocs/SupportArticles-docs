@@ -4,7 +4,6 @@ description: This article provides a resolution for the problem where Database m
 ms.date: 09/10/2020
 ms.custom: sap:Administration and Management
 ms.reviewer: nathansc
-ms.prod: sql
 ---
 
 # 'The transaction not longer valid' error when Database mail fails to send a message in SQL Server
@@ -78,7 +77,7 @@ However, the root cause of the problem is that Error 1934 occurs because of an i
 
 ## Verify the error message
 
-- Check whether the error message in the Database Mail log is same message (**The Transaction not longer valid**).
+- Check whether the error message in the Database Mail log is the same message (**The Transaction not longer valid**).
 
 - Gather a profiler trace by having Statement-level events, Errors and Warnings, and Broker events enabled.
 

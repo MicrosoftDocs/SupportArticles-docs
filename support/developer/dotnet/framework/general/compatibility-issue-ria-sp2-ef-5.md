@@ -38,4 +38,6 @@ There are two ways to add RIA Services functionality to a Microsoft Silverlight 
 
 ## More information
 
-[One set of NuGet packages](http://jeffhandley.com/archive/2012/12/10/ria-services-nuget-package-updates-ndash-including-support-for-entityframework.aspx) supports Entity Framework 5. Other NuGet packages are provided by [open RIA Services](http://www.openriaservices.net) that is open-source project. For more information about RIA Services, see [RIA Services is Getting Open-Sourced](https://jeffhandley.com/2013-07-03/ria-services-is-getting-open-sourced).
+For more information about RIA Services, see [RIA Services is Getting Open-Sourced](https://jeffhandley.com/2013-07-03/ria-services-is-getting-open-sourced). For NuGet packages, see the repository at [NuGet.org](https://www.nuget.org).
+
+[!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]

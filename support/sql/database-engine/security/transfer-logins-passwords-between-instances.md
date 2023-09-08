@@ -5,8 +5,8 @@ ms.date: 09/25/2020
 ms.custom: sap:Security Issues
 ms.reviewer: bartd
 ms.topic: how-to
-ms.prod: sql
 ---
+
 # Transfer logins and passwords between instances of SQL Server
 
  This article describes how to transfer the logins and the passwords between different instances of SQL Server running on Windows.
@@ -166,7 +166,7 @@ To transfer the logins, use one of the following methods, as appropriate for you
         
                         IF (@type IN ( 'G', 'U'))
                         BEGIN -- NT authenticated account/group 
-                          SET @tmpstr = 'CREATE LOGIN ' + QUOTENAME( @name ) + ' FROM WINDOWS WITH DEFAULT_DATABASE = [' + @defaultdb + ']'
+                          SET @tmpstr = 'CREATE LOGIN ' + QUOTENAME( @name ) + ' FROM WINDOWS WITH DEFAULT_DATABASE = [' + @defaultdb + ']' + ', DEFAULT_LANGUAGE = [' + @defaultlanguage + ']'
                         END
                         ELSE 
                         BEGIN -- SQL Server authentication

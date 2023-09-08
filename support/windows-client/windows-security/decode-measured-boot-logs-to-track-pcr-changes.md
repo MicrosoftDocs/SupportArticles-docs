@@ -1,12 +1,10 @@
 ---
 title: Decode Measured Boot logs to track PCR changes
 description: Provides instructions for installing and using a tool for analyzing log information to identify changes to PCRs.
-ms.date: 11/21/2022
-ms.reviewer: kaushika
+ms.date: 03/13/2023
+ms.reviewer: kaushika, v-tappelgate
 ms.technology: windows-client-security
 ms.prod: windows-client
-author: Teresa-Motiv
-ms.author: v-tappelgate
 manager: dcscontentpm
 ms.collection: Windows Security Technologies\BitLocker
 ms.topic: troubleshooting
@@ -45,11 +43,11 @@ To install the tool, follow these steps:
 
 3. Accept the default installation path.
 
-   ![Screenshot of the Specify Location page of the Windows Hardware Lab Kit installation wizard.](media/decode-measured-boot-logs-to-track-pcr-changes/install-windows-hardware-lab-kit.png)
+    :::image type="content" source="media/decode-measured-boot-logs-to-track-pcr-changes/install-windows-hardware-lab-kit.png" alt-text="Screenshot of the Specify Location page of the Windows Hardware Lab Kit installation wizard." border="false":::
 
 4. Under **Select the features you want to install**, select **Windows Hardware Lab Kit&mdash;Controller + Studio**.
 
-   ![Screenshot of the Select features page of the Windows Hardware Lab Kit installation wizard.](media/decode-measured-boot-logs-to-track-pcr-changes/windows-hardware-lab-kit-controller-studio.png)
+    :::image type="content" source="media/decode-measured-boot-logs-to-track-pcr-changes/windows-hardware-lab-kit-controller-studio.png" alt-text="Screenshot of the Select features page of the Windows Hardware Lab Kit installation wizard.":::
 
 5. Finish the installation.
 
@@ -61,7 +59,7 @@ To use *TBSLogGenerator.exe*, follow these steps:
 
    This folder contains the *TBSLogGenerator.exe* file.
 
-   ![Screenshot of the properties and location of the TBSLogGenerator.exe file.](media/decode-measured-boot-logs-to-track-pcr-changes/tbsloggenerator-file.png)
+    :::image type="content" source="media/decode-measured-boot-logs-to-track-pcr-changes/tbsloggenerator-file.png" alt-text="Screenshot of the properties and location of the TBSLogGenerator.exe file.":::
 
 2. Run the following command:
 
@@ -82,19 +80,19 @@ To use *TBSLogGenerator.exe*, follow these steps:
     TBSLogGenerator.exe -LF C:\MeasuredBoot\0000000005-0000000000.log > C:\MeasuredBoot\0000000005-0000000000.txt
     ```
 
-   ![Screenshot of the Command Prompt window that shows an example of how to use TBSLogGenerator.](media/decode-measured-boot-logs-to-track-pcr-changes/measured-boot-logs.png)
+    :::image type="content" source="media/decode-measured-boot-logs-to-track-pcr-changes/measured-boot-logs.png" alt-text="Screenshot of the Command Prompt window that shows an example of how to use TBSLogGenerator." border="false":::
 
    The command produces a text file that uses the specified name. In this example, the file is *0000000005-0000000000.txt*. The file is located in the same folder as the original *.log* file.
 
-   ![Screenshot of the Windows Explorer window that shows the text file that TBSLogGenerator produces.](media/decode-measured-boot-logs-to-track-pcr-changes/text-original-log-file.png)
+    :::image type="content" source="media/decode-measured-boot-logs-to-track-pcr-changes/text-original-log-file.png" alt-text="Screenshot of the Windows Explorer window that shows the text file that TBSLogGenerator produces."border="false":::
 
    The content of this text file is similar to the following text:
 
-   ![Screenshot of the contents of the text file, as shown in NotePad.](media/decode-measured-boot-logs-to-track-pcr-changes/text-file-content.png)
+    :::image type="content" source="media/decode-measured-boot-logs-to-track-pcr-changes/text-file-content.png" alt-text="Screenshot of the contents of the text file, as shown in NotePad."border="false":::
 
    To find the PCR information, go to the end of the file.
 
-   ![Screenshot of the text file that shows the PCR information at the end.](media/decode-measured-boot-logs-to-track-pcr-changes/pcr-information.png)
+    :::image type="content" source="media/decode-measured-boot-logs-to-track-pcr-changes/pcr-information.png" alt-text="Screenshot of the text file that shows the PCR information at the end."border="false":::
 
 ## Use PCPTool.exe to decode Measured Boot logs
 
@@ -120,4 +118,4 @@ where the variables represent the following values:
 
 The content of the XML file will be similar to the following XML:
 
-![Screenshot of the Command Prompt window that shows an example of how to use PCPTool.](media/decode-measured-boot-logs-to-track-pcr-changes/pcptool-output.png)
+ :::image type="content" source="media/decode-measured-boot-logs-to-track-pcr-changes/pcptool-output.png" alt-text="Screenshot of the Command Prompt window that shows an example of how to use PCPTool.":::

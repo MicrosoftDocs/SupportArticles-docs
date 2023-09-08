@@ -9,7 +9,7 @@ ms.date: 03/31/2021
 
 This article introduces how to add the Tracking numbers to our Sales Order Processing Orders and Invoice forms in Microsoft Dynamics GP.
 
-You can see the full [BLOG](https://community.dynamics.com/gp/b/dynamicsgp/posts/adding-tracking-number-to-the-sop-order-and-invoice-forms-in-microsoft-dynamics-gp) article.
+You can see the full [BLOG](https://community.dynamics.com/blogs/post/?postid=cd4b596e-8373-4bb2-a315-fb08d69bff58) article.
 
 _Applies to:_ &nbsp; Microsoft Dynamics GP  
 _Original KB number:_ &nbsp; 4100256

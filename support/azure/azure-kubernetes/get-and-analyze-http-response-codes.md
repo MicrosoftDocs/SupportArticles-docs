@@ -1,10 +1,8 @@
 ---
 title: Get and analyze HTTP response codes to determine app behavior
 description: Learn how to get HTTP response codes using cURL or a browser to analyze the behavior of an app that's hosted on an Azure Kubernetes Service (AKS) cluster.
-ms.date: 3/17/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
-ms.reviewer: chiragpa
+ms.date: 03/17/2022
+ms.reviewer: chiragpa, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: cannot-connect-to-app-on-cluster
 #Customer intent: As an Azure Kubernetes user, I want to get HTTP response codes by using the Client ULR (cURL) command or a browser so that I can analyze the behavior of an application that's hosted on an Azure Kubernetes Service (AKS) cluster.
@@ -15,13 +13,13 @@ If an application responds to HTTP or HTTPS requests, you can check the HTTP res
 
 ## Prerequisites
 
-- The Client URL ([cURL](https://www.tecmint.com/install-curl-in-linux/)) tool, or another similar command-line tool.
+- The Client URL ([cURL](https://curl.se)) tool, or another similar command-line tool.
 
 - The Kubernetes [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) tool, or a similar tool to connect to the cluster. To install kubectl by using [Azure CLI](/cli/azure/install-azure-cli), run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
 
 ## Get HTTP response codes by using cURL
 
-The [cURL](https://www.mit.edu/afs.new/sipb/user/ssen/src/curl-7.11.1/docs/curl.html) command-line tool can send an HTTP request to an application endpoint and get the response. For a load balancer service (that responds on the path "/" on port 80), a curl request can be initiated by running the following command:
+The [cURL](https://curl.se) command-line tool can send an HTTP request to an application endpoint and get the response. For a load balancer service (that responds on the path "/" on port 80), a curl request can be initiated by running the following command:
 
 ```bash
 curl -Iv http://<load-balancer-service-ip-address>:80/

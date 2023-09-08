@@ -1,9 +1,8 @@
 ---
 title: SchemaMgr Store entries degrade performance 
-description: This article provides a resolution for the problem where you may experience a performance degradation issue in SQL Server.
+description: Provides a resolution for the problem where you may experience a performance degradation issue in SQL Server.
 ms.date: 09/10/2020
 ms.custom: sap:Performance
-ms.prod: sql
 ---
 # Many CMEMTHREAD waits when many SchemaMgr Store entries exist in SQL Server
 

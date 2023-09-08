@@ -1,7 +1,7 @@
 ---
 title: Common Windows Update errors
 description: Describes some common issues you might experience with Windows Update and steps to resolve them.
-ms.date: 08/19/2022
+ms.date: 05/31/2023
 ms.prod: windows-client
 author: aczechowski
 ms.author: aaroncz
@@ -39,7 +39,7 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-| ERROR_FAIL_REBOOT_REQUIRED | The requested operation failed. Restart the system to roll back changes made. | Ensure that you don't have any policies that control the start behavior for the Windows Module Installer. This service should be managed by the operating system. |
+| ERROR_FAIL_REBOOT_REQUIRED | The requested operation failed. Restart the system to roll back changes made. | Ensure that you don't have any policies that control the start behavior of the Windows Installer service. This service should be managed by the operating system. The default **Startup type** of the Windows Installer service is **Manual**.|
 
 ## 0x80200053
 
@@ -99,7 +99,7 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-| WU_E_SETUP_SKIP_UPDATE | An update to the Windows Update Agent was skipped due to a directive in the Wuident.cab file. | You might encounter this error when WSUS isn't sending the self-update to the clients.<br><br>For more information to resolve the issue, review [KB920659](/troubleshoot/windows-server/deployment/wsus-selfupdate-not-send-automatic-updates). |
+| WU_E_SETUP_SKIP_UPDATE | An update to the Windows Update Agent was skipped due to a directive in the Wuident.cab file. | You might encounter this error when WSUS isn't sending the self-update to the clients.<br><br>For more information to resolve the issue, review [KB920659](../../windows-server/deployment/wsus-selfupdate-not-send-automatic-updates.md). |
 
 ## 0x80244007
 
@@ -195,7 +195,7 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-| WININET_E_TIMEOUT; The operation timed out | Unable to scan for updates due to a connectivity issue to Windows Update, Configuration Manager, or WSUS. | This error generally means that the Windows Update Agent was unable to connect to the update servers or your own source, such as WSUS, Configuration Manager, or Microsoft Endpoint Manager. <br> Check with your network team to ensure that the device can reach the update sources. For more info, see [Troubleshoot software update scan failures in Configuration Manager](/troubleshoot/mem/configmgr/troubleshoot-software-update-scan-failures). <br> If you're using the public Microsoft update servers, check that your device can access the following Windows Update endpoints: <br> `http://windowsupdate.microsoft.com` <br> `https://*.windowsupdate.microsoft.com` <br> `https://update.microsoft.com` <br> `https://*.update.microsoft.com` <br> `https://windowsupdate.com` <br> `https://*.windowsupdate.com` <br> `https://download.windowsupdate.com` <br> `https://*.download.windowsupdate.com` <br> `https://download.microsoft.com` <br> `https://*.download.windowsupdate.com` <br> `https://wustat.windows.com` <br> `https://*.wustat.windows.com` <br> `https://ntservicepack.microsoft.com` |
+| WININET_E_TIMEOUT; The operation timed out | Unable to scan for updates due to a connectivity issue to Windows Update, Configuration Manager, or WSUS. | This error generally means that the Windows Update Agent was unable to connect to the update servers or your own source, such as WSUS, Configuration Manager, or Microsoft Intune. <br> Check with your network team to ensure that the device can reach the update sources. For more info, see [Troubleshoot software update scan failures in Configuration Manager](/troubleshoot/mem/configmgr/troubleshoot-software-update-scan-failures). <br> If you're using the public Microsoft update servers, check that your device can access the following Windows Update endpoints: <br> `http://windowsupdate.microsoft.com` <br> `https://*.windowsupdate.microsoft.com` <br> `https://update.microsoft.com` <br> `https://*.update.microsoft.com` <br> `https://windowsupdate.com` <br> `https://*.windowsupdate.com` <br> `https://download.windowsupdate.com` <br> `https://*.download.windowsupdate.com` <br> `https://download.microsoft.com` <br> `https://*.download.windowsupdate.com` <br> `https://wustat.windows.com` <br> `https://*.wustat.windows.com` <br> `https://ntservicepack.microsoft.com` |
 
 ## 0x80240022
 
@@ -207,10 +207,38 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-| WU_E_PT_HTTP_STATUS_PROXY_AUTH_REQ; Same as HTTP status 407 - proxy authentication is required. | Unable to authenticate through a proxy server. | Either the Winhttp proxy or WinInet proxy settings aren't configured correctly. This error generally means that the Windows Update Agent was unable to connect to the update servers or your own update source, such as WSUS, Configuration Manager, or Microsoft Endpoint Manager, due to a proxy error. <br> Verify the proxy settings on the client. The Windows Update Agent uses WinHTTP to scan for available updates. When there's a proxy server between the client and the update source, the proxy settings must be configured correctly on the clients to enable them to communicate by using the source's FQDN. <br> Check with your network and proxy teams to confirm that the device can the update source without the proxy requiring user authentication. |
+| WU_E_PT_HTTP_STATUS_PROXY_AUTH_REQ; Same as HTTP status 407 - proxy authentication is required. | Unable to authenticate through a proxy server. | Either the Winhttp proxy or WinInet proxy settings aren't configured correctly. This error generally means that the Windows Update Agent was unable to connect to the update servers or your own update source, such as WSUS, Configuration Manager, or Microsoft Intune, due to a proxy error. <br> Verify the proxy settings on the client. The Windows Update Agent uses WinHTTP to scan for available updates. When there's a proxy server between the client and the update source, the proxy settings must be configured correctly on the clients to enable them to communicate by using the source's FQDN. <br> Check with your network and proxy teams to confirm that the device can the update source without the proxy requiring user authentication. |
 
 ## 0x80244022
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
 | WU_E_PT_HTTP_STATUS_SERVICE_UNAVAILABLE; Same as HTTP status 503 - the service is temporarily overloaded. | Unable to connect to the configured update source. | Network troubleshooting needed to resolve the connectivity issue. Check with your network and proxy teams to confirm that the device can the update source without the proxy requiring user authentication. |
+
+## 0x80070490
+
+| Message | Description | Mitigation |
+|---------|-------------|------------|
+|ERROR_NOT_FOUND|This error occurs during driver installation as part of the update.|This issue occurs because details such as the architecture for a driver that's being updated are missing in the registry. Manually add the missing inf file **Arch** value in the Driver operations registry by following these steps:<br/>1. Open *regedit* and navigate to `HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\ComponentBasedServicing\DriverOperations\0\2(SequenceID)`<br/>2. Review the **Identity** value to determine the value that is missing.<br/>3. Manually add the missing value referring to the information in the **Identity** value. For example, Name: Arch; Type: REG_SZ (String Value); Data: amd64.<br/>4. Proceed with installing the failing update.|
+
+## 0x800f0922
+
+| Message | Description | Mitigation |
+|---------|-------------|------------|
+|CBS_E_INSTALLERS_FAILED|The July cumulative update failed to be installed on Windows Server 2016|In the CBS.log, you may find that updates sometimes roll back when License and Product key tokens fail to be updated. This issue can be resolved by adding write permissions for the "User" and "Network Service" accounts to the _C:\\Windows\\System32\\spp\\_ folder.|
+
+## 0x80070bc9
+
+| Message | Description | Mitigation |
+|---------|-------------|------------|
+|ERROR_FAIL_REBOOT_REQUIRED|The TrustedInstaller service startup type is set to "Manual" by Group Policy (GPO), which prevented it from starting to complete pending operations.|The TrustedInstaller service changes the startup type from Manual to Automatic when it encounters an update that has to process a transaction after a restart. When the value is set back to Manual before the restart, the transaction cannot be applied. This transaction will be pending and block all other update installations.<br/>To fix this issue, change the TrustedInstaller policy to **Automatic** and restart the computer. If it doesn't work, start the computer to WinRE to revert the pending actions. For example, `dism /Image:C:\ /Cleanup-Image /RevertPendingActions`. If it doesn't work either, start the computer to WinRE, rename *\WinSxS\Pending.xml*, and remove the PendingXMLIdentifier from COMPONENTS Hive.|
+
+## 0x800706be
+
+| Message | Description | Mitigation |
+|---------|-------------|------------|
+|Failed to install cumulative updates|Windows Server 2016 Std failed to install cumulative packages by using the .msu package. No error is returned. When installing the packages with dism.exe, it returned the error 0x800706be.|The last cumulative update failed to install and was corrupted. To resolve this issue, navigate to the registry key for the corrupted update package. Change the “current state” value to 000020 hex (32 dec) - resolved, or 000040 hex (64 dec) - staged, or 000070 hex (112 dec) - installed.|
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).
