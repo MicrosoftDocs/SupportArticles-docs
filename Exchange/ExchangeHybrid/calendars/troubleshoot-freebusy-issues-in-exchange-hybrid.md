@@ -18,11 +18,9 @@ search.appverid: MET150
 ---
 # Troubleshoot free/busy issues in Exchange hybrid environment
 
-_Original KB number:_ &nbsp; 10092
-
 **Who is it for?**
 
-Tenant administrators. Elevated access will be required for many of the steps.
+Tenant administrators. Elevated access is required for many of the steps.
 
 **How does it work?**
 
@@ -96,7 +94,7 @@ Were you able to see the Free/busy information?
 
 ### You have an on-premises free/busy issue
 
-This troubleshooter is used to diagnose free/busy issues in a hybrid environment. This does not seem to be your immediate issue. After the on-premises free/busy issues are addressed, restart this troubleshooter.
+This troubleshooter is used to diagnose free/busy issues in a hybrid environment. This doesn't seem to be your immediate issue. After the on-premises free/busy issues are addressed, restart this troubleshooter.
 For information about how to troubleshoot some common on-premises free/busy issues, see [Troubleshooting Free/Busy Information for Outlook 2007](/previous-versions/office/exchange-server-2007/bb397225(v=exchg.80)).
 
 ### Cloud user can't see On-premises user's Free/Busy
@@ -115,10 +113,10 @@ Use the following methods to verify that Autodiscover can be resolved from an ex
 #### Method 2: Verify that you can send an Autodiscover POST request to potential Autodiscover URLs
 
 1. Go to [Microsoft Remote Connectivity Analyzer](https://testconnectivity.microsoft.com/tests/o365).
-2. On Microsoft Office Outlook Connectivity Tests select Outlook Autodiscover, and then select **Next**.
+2. On Microsoft Office Outlook Connectivity Tests, select Outlook Autodiscover, and then select **Next**.
 3. Complete the Outlook Autodiscover form (Email address, User Name and password), then select **Perform Test**.
 
-If the Exchange connectivity tests fail for autodiscover, check the on-premises Autodiscover Internet Access configuration. For more information about how to do this, see [the Microsoft TechNet topic Configure the Autodiscover Service for Internet Access](/previous-versions/office/exchange-server-2010/aa995928(v=exchg.141)).
+If the Exchange connectivity tests fail for autodiscover, check the on-premises Autodiscover Internet Access configuration. For more information, see [the Microsoft TechNet topic Configure the Autodiscover Service for Internet Access](/previous-versions/office/exchange-server-2010/aa995928(v=exchg.141)).
 
 **Did this solve your issue?**
 
@@ -151,7 +149,7 @@ Is the domain name present in the org relationship?
 
 To verify the domain name value in the Organization Relationship, follow these steps:
 
-1. Connect to Exchange Online by using Windows PowerShell. For more information about how to do this, see [Connect to Exchange Online using remote PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+1. [Connect to Exchange Online by using Windows PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 2. In Windows PowerShell, run the following command:
 
     ```powershell
@@ -214,7 +212,7 @@ Follow these steps to verify if EWS has External URL set:
 
 Verify that the Microsoft Exchange Web Services (EWS) is resolvable and there are no firewall issues.
 
-Check IIS logs on the Exchange 2010/2013 CAS server(s) to confirm that Web Services request is being received by this server. To do this, follow these steps:
+Check IIS logs on the Exchange 2010/2013 CAS server(s) to confirm that Web Services request is being received by this server:
 
 1. On the Exchange 2010/2013 CAS server, select **Start** > **Run**, type *%SystemDrive%\inetpub\logs\LogFiles*, and then press ENTER.
 2. Open the W3SVC1 folder, and then open the latest IIS log file.
@@ -275,7 +273,7 @@ Verify Org Relationship settings are configured correctly to enable Free/busy fo
 
 #### For Online Settings
 
-1. Connect to Exchange Online by using Windows PowerShell. For more information about how to do this, see [Connect to Exchange Online using remote PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+1. [Connect to Exchange Online by using Windows PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 2. In Windows PowerShell, run the following command:
 
     ```powershell
@@ -363,7 +361,7 @@ Verify that the `ms-Exch-Folder-Affinity-List` attribute on the **Exchange Serve
 
 Is the External Free/busy present and replicated correctly?
 
-Add the OU=EXTERNAL (FYDIBOHF25SPDLT) public folder. To do this, follow these steps:
+Add the OU=EXTERNAL (FYDIBOHF25SPDLT) public folder:
 
 1. Connect to the on-premises Exchange 2010 SP1 or later public folder server.
 2. Open Windows PowerShell.
@@ -461,7 +459,7 @@ Can you repro with an on-premises Exchange 2010 or 2013 mailbox?
 
 ### Your Exchange 2007 user can't access cloud user's free/busy
 
-Check the availability address space to make sure that it has the correct settings. This might be a misconfiguration of the AvailabilityAddressSpace. Check that ProxyURL value on AvailabilityAddressSpace configuration matches the InternalURL of the Exchange 2010/2013 CAS Web Service virtual directory. To do this, follow these steps:
+Check the availability address space to make sure that it has the correct settings. This might be a misconfiguration of the AvailabilityAddressSpace. Check that ProxyURL value on AvailabilityAddressSpace configuration matches the InternalURL of the Exchange 2010/2013 CAS Web Service virtual directory. To do so, follow these steps:
 
 1. On the on-premises server, run the following commands in Exchange Management Shell:
 
@@ -598,7 +596,7 @@ The output should resemble the following:
 - FreeBusyAccessEnabled: True
 - FreeBusyAccessLevel: LimitedDetails
 
-If a value must be changed, use the `set-OrganizationRelationship` cmdlet to fix the property. For more information about syntax and options to do this, see [Set-OrganizationRelationship](/powershell/module/exchange/set-organizationrelationship).
+If a value must be changed, use the `set-OrganizationRelationship` cmdlet to fix the property. For more information about syntax and options, see [Set-OrganizationRelationship](/powershell/module/exchange/set-organizationrelationship).
 
 #### For on-premises settings
 
@@ -616,7 +614,7 @@ The output should resemble the following:
 - FreeBusyAccessEnabled: True
 - FreeBusyAccessLevel: LimitedDetails
 
-If a value must be changed, use the `set-OrganizationRelationship` cmdlet to fix the property. For more information about syntax and options to do this, see [Set-OrganizationRelationship](/powershell/module/exchange/set-organizationrelationship).
+If a value must be changed, use the `set-OrganizationRelationship` cmdlet to fix the property. For more information about syntax and options, see [Set-OrganizationRelationship](/powershell/module/exchange/set-organizationrelationship).
 
 **Did this solve your issue?**
 
@@ -627,7 +625,7 @@ If a value must be changed, use the `set-OrganizationRelationship` cmdlet to fix
 
 Verify that a token can be created that has test-federation trust.
 
-From the on-premises environment, verify that you can retrieve a delegation token that will be used for Free/busy authorization. To do this, follow these steps:
+From the on-premises environment, verify that you can retrieve a delegation token that will be used for Free/busy authorization:
 
 1. Open the Exchange Management Shell from the on-premises Exchange 2010 or 2013 server.
 2. Run the command `Test-FederationTrust -UserIdentity User@company.com -verbose` where User is the on-premises user who has issues viewing the cloud user's free/busy information.
