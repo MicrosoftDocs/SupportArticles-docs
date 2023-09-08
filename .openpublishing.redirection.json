@@ -5916,6 +5916,21 @@
       "source_path": "support/azure/azure-kubernetes/troubleshoot-upgrade-errors.md",
       "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/marketing/welcome-marketing.yml",
+      "redirect_url": "/troubleshoot/dynamics-365/customer-insights/welcome-customer-insights",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/marketing/dynamics-365-marketing-entitlement-does-not-match-your-tenant.md",
+      "redirect_url": "/troubleshoot/dynamics-365/customer-insights/welcome-customer-insights",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/marketing/dynamics-365-marketing-problem-with-deployment.md",
+      "redirect_url": "/troubleshoot/dynamics-365/customer-insights/welcome-customer-insights",
+      "redirect_document_id": false
     }
 ]
 }
