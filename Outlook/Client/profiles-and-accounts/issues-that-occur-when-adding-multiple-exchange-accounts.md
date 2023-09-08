@@ -18,12 +18,9 @@ appliesto:
   - Microsoft Outlook 2010
   - Outlook for Microsoft 365
 search.appverid: MET150
-ms.date: 3/31/2022
+ms.date: 09/08/2023
 ---
-
 # Issues that can occur when you add multiple Exchange accounts to the same Outlook profile
-
-_Original KB number:_ &nbsp; 981245
 
 In Microsoft Outlook 2010, Outlook 2013, Outlook 2016, Outlook 2019 and Outlook for Microsoft 365, you can add multiple Microsoft Exchange accounts to the same profile if one of the following conditions is true:
 
@@ -81,54 +78,26 @@ The following steps demonstrate two problems that may occur if manager and deleg
 
 1. In Outlook 2010, Outlook 2013, Outlook 2016, Outlook 2019 or Outlook for Microsoft 365, use a profile for a manager's mailbox to configure a delegate for the manager's mailbox with default settings.
 
- **Note**: The default delegate settings don't provide the delegate access to items that are owned by the manager and marked as private.
-
+   **Note**: The default delegate settings don't provide the delegate access to items that are owned by the manager and marked as private.
 1. Add an appointment to the manager's calendar, and then enable the **Private** option on the **Tags** section of the Ribbon.
-
 1. Exit Outlook.
-
 1. Start Outlook by using a profile for the delegate.
-
 1. On the **File** tab, select **Add Account** on the **Info** tab.
-
 1. In the **Add New Account** dialog box, enter the manager's account information, and then select **Next**.
-
 1. Select **Finish** after the account is added successfully.
-
 1. Select **OK** at the prompt that instructs you to restart Outlook.
-
 1. Exit Outlook, and then restart it by using the delegate's profile.
-
 1. Enter the delegate's credentials if prompted.
-
 1. In the navigation pane, select the **Calendar** module.
-
 1. Under **My Calendars**, cancel the selection of the manager's calendar.
-
 1. Select **Open Calendar** on the Ribbon, and then select **Open Shared Calendar**.
-
 1. Enter the name of the manager's mailbox, and then select **OK**.
-
-1. In the manager's calendar, open the appointment created in step 2.
-
-1.  The appointment opens and the delegate is able to view the private item. However, this should not have been possible because of the default delegate settings used to configure the delegate for the manager's mailbox.
-
-
+1. In the manager's calendar, open the appointment created in step 2. The appointment opens and the delegate is able to view the private item. However, this should not have been possible because of the default delegate settings used to configure the delegate for the manager's mailbox.
 1. Right-click anywhere on the manager's calendar and select **New Meeting Request**.
-
-1. Examine the account in the **From** field.
-
-1.  The account that is listed is the manager's account. However, this should have been the delegate's account, because the delegate is creating the meeting on behalf of the manager.
-
+1. Examine the account in the **From** field. The account that is listed is the manager's account. However, this should have been the delegate's account, because the delegate is creating the meeting on behalf of the manager.
 
 ### Scenario 2: The mailbox that you add manually is also added by Exchange Auto-Mapping
 
-In Exchange Server 2010 Service Pack 1 (SP1) or newer, the Auto-Mapping feature automatically adds mailboxes to the Outlook Navigation Pane if you have Full Access permission to the mailboxes. Outlook manages these additional mailboxes by using a specific permission set. If you previously configured these mailboxes as multiple Exchange accounts in the same Outlook profile, you may experience unexpected behavior when you send mail by using these mailboxes. This is because the mailboxes that are accessed by using the multiple Exchange accounts functionality in Outlook use a different permissions set from the mailboxes that are added by Exchange Auto-Mapping. Outlook tries to use both permission sets at the same time which is not a supported functionality.
+In Exchange Server 2010 Service Pack 1 (SP1) or later versions, the Auto-Mapping feature automatically adds mailboxes to the Outlook Navigation Pane if you have Full Access permission to the mailboxes. Outlook manages these additional mailboxes by using a specific permission set. If you previously configured these mailboxes as multiple Exchange accounts in the same Outlook profile, you may experience unexpected behavior when you send mail by using these mailboxes. This is because the mailboxes that are accessed by using the multiple Exchange accounts functionality in Outlook use a different permissions set from the mailboxes that are added by Exchange Auto-Mapping. Outlook tries to use both permission sets at the same time which is not a supported functionality.
 
-To prevent this issue, use one of the following methods:
-
-### Disable Auto-Mapping for shared Exchange mailboxes
-
-The administrator must use Exchange Management Shell to disable Auto-Mapping. For information about how to disable Auto-Mapping for Exchange mailboxes, see [How to remove automapping for a shared mailbox in Outlook for Microsoft 365](Outlook/Client/profiles-and-accounts/remove-automapping-for-shared-mailbox.md).
-
-
+To prevent this issue, disable Auto-Mapping for shared Exchange mailboxes. The administrator must use Exchange Management Shell to disable Auto-Mapping. For more information about how to disable Auto-Mapping for Exchange mailboxes, see [How to remove automapping for a shared mailbox in Outlook for Microsoft 365](./remove-automapping-for-shared-mailbox.md).
