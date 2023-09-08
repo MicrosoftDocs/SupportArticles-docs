@@ -1,9 +1,9 @@
 ---
 title: The Camera status of a Teams Rooms device is Unhealthy
-description: Resolve the issue that causes the Camera signal of a Teams Rooms device to appear as Unhealthy.
+description: Resolve the issue that causes the Room Camera, Default Room Camera, or Content Camera signals of a Teams Rooms device to appear as Unhealthy.
 ms.reviewer: lamos
 ms.topic: troubleshooting
-ms.date: 9/23/2022
+ms.date: 08/29/2023
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -16,22 +16,37 @@ appliesto:
   - Microsoft Teams
 ms.custom: CI167249
 ---
+
 # The Camera status is Unhealthy
 
 ## Symptoms
 
-In the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/), the **Camera** signal of a Microsoft Teams Rooms device is shown as **Unhealthy**. Users also experience the following issues during a Teams meeting:
+In the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/), one or more of the following signals of a Microsoft Teams Rooms device are shown as **Unhealthy**:
+
+- Room Camera
+- Default Room Camera
+- Content Camera
+
+Users might also experience the following issues during a Teams meeting:
 
 - The camera icon on the room console is unavailable.
 - The video of in-room participants is unavailable to remote participants.
 - The tile that shows a preview of the room's camera isn't presented in the Front of Room display.
 
-Additionally, Event ID 3001 is logged under **Applications and Services Logs** > **Skype Room System** in **Event Viewer**. The entry resembles the following entry:
+## Cause
 
-> {"Description":"Conference Microphone status : Healthy. Conference Speaker status : Healthy. Default Speaker status : Healthy. **Camera status : Unhealthy.** Front of Room Display status : Healthy. Motion Sensor status : Healthy. HDMI Ingest status : Healthy. Content Camera status : Healthy. ","ResourceState":"Unhealthy","OperationName":"HardwareCheckEngine","OperationResult":"Fail","OS":"Windows 10","OSVersion":"10.0.19044.1889","Alias":"lab@contoso.com ","DisplayName":"Lenovo Hub 500 - Rally Plus - 2FoR","AppVersion":"4.13.132.0","IPv4Address":"1.2.3.4","IPv6Address":""}
+- The **Room Camera** signal sends an alert if Teams Rooms reports that no room camera is available. If the configured default room camera isn't available, but another camera is available, an alert isn't sent.
 
-> [!NOTE]
-> The **Camera** signal reports the status of the default video camera that's configured in Teams Rooms app settings. The report doesn't include the status of the [content camera](/microsoftteams/rooms/content-camera).
+  > [!NOTE]
+  > The **Room Camera** signal reports the status of the video camera for in-room participants. The report doesn't include the status of the [content camera](/microsoftteams/rooms/content-camera). If a connected camera is configured as a content camera, it can't be used as a room camera.
+- The **Default Room Camera** signal sends an alert if the configured default room camera isn't available, but another camera is available. The incident severity value is shown as **Warning**.
+
+  > [!IMPORTANT]
+  > When you replace the default room camera, this signal will send an alert, even if you use the same make and model. Cameras are tracked by their hardware ID. The ID is unique to a specific camera when enumerated by Windows. In this case, reselect and save the default camera in the Teams Rooms app settings after you replace it.
+- The **Content Camera** signal sends an alert if the configured content camera isn't available.
+
+  > [!NOTE]
+  > Some certified cameras can be used as room cameras or content cameras. Therefore, in order to act as a content camera and send alerts, the camera must be configured in the Teams Rooms app settings.
 
 ## Resolution
 
@@ -46,36 +61,25 @@ Camera issues can occur for different reasons. To fix common issues that affect 
 
 Check whether the camera is mistakenly configured as a content camera. A content camera is used to stream a traditional whiteboard into meetings. In this case, set content camera to none in Teams Rooms app settings.
 
-### Check whether the default camera instance is changed
-
-The Teams Rooms app tracks the default camera by using a specific camera instance ID. This is a combination of a specific camera (according to a serial number) and a specific USB port. The instance ID will change in either of the following situations:
-
-- You replace the camera with another camera, even with the same brand and model.
-- You change the connection from one USB port to another.
-
-In this case, select the new camera instance as the default camera in Teams Rooms app setting.
-
-> [!NOTE]
-> In Teams Rooms app version 4.13.*, the default camera is automatically set in the following scenario:
->
-> - The default camera isn't configured.
-> - An administrator opens **Settings** > **Peripherals**, configures any settings other than the default camera, saves the settings, and then exits.
->
-> In this scenario, the first available camera is automatically selected as the default video camera.
-
 ### If you use an all-in-one video bar, reset the bar
 
-All-in-one video bars use only one USB cable to connect to the Teams Rooms device. In this case, reset the power of the device. Some bars may have a reset button to reset the devices.
+All-in-one video bars use only one USB cable to connect to the Teams Rooms device. In this case, reset the power of the device. Some bars might have a reset button.
 
 If the issue persists, contact your peripheral manufacturer to troubleshoot any hardware or firmware issues.
 
 ### Check firmware issues
 
-Try the following options:
+Try the following methods:
 
-- If the peripheral device was recently updated, the firmware update might not be completed. In this situation, the device is in an unusable state. Try to reset the power of the device. Some devices may have a reset button to reset the devices.
-- Verify with your peripheral manufacturer that the device is running the latest firmware version. Or, work with the manufacturer to fix any known issues.
+- If the peripheral device was recently updated, the firmware update might not be completed. In this situation, the device is in an unusable state. Try to reset the power of the device. Some devices might have a reset button.
+- Contact your peripheral manufacturer to verify that the device is running the latest firmware version. Or, work with the manufacturer to fix any known issues.
 
-### Check for issues in USB extenders
+### Check for issues in USB extenders and USB cables
 
-If possible, avoid using USB extenders for audio and video equipment. If you must use a USB extender, use one that's supported by the peripheral device and meets the requirements, such as length and USB specification. For more information, contact your peripheral manufacturer.
+If possible, avoid using USB extenders for audio and video equipment. If you must use a USB extender, use one that's supported by the peripheral device and meets the device requirements, such as length and USB specification. For more information, contact your peripheral manufacturer.
+
+If the camera doesn't use a USB extender, verify that the USB cable is securely connected and meets the specifications of the camera. Replace the cable if necessary.
+
+### Check the power supply
+
+Many cameras require external power supplies. In this case, make sure that the power supply is connected.
