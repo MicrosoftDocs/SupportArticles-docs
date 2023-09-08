@@ -23,7 +23,7 @@
       items:
         - name: Items without inventory can be checked out
           href: ecommerce-storefront/items-without-inventory-checked-out.md
-        - name: '"Pick this up" option doesn't appear on cart or product details pages'
+        - name: Pick this up option doesn't appear on cart or product details pages
           href: ecommerce-storefront/pickup-store-link-missing.md
         - name: Retail store doesn't appear in the list of stores to pick up from
           href: ecommerce-storefront/pickup-store-missing.md
