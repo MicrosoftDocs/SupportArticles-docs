@@ -1,8 +1,6 @@
 ---
 title: Litigation Hold mailbox doesn't turn into an inactive mailbox after license removal
 description: Fixes an issue in which a Litigation Hold enabled mailbox doesn't turn into an inactive mailbox after the license is removed.
-author: v-charloz
-ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

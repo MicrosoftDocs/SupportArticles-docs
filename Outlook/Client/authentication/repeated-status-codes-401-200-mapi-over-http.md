@@ -1,8 +1,6 @@
 ---
 title: Status codes 401 and 200 with MAPI over HTTP
 description: Works around an expected behavior in which 401 and 200 HTTP status codes are continually logged in the server's IIS log or the network capture of client traffic.
-author: cloud-writer
-ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

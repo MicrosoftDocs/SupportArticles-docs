@@ -1,8 +1,6 @@
 ---
 title: Outlook doesn't show a reminder for a Google Calendar event invitation
 description: Describes an issue in which Outlook doesn't show a reminder for a Google Calendar event invitation.
-author: cloud-writer
-ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
