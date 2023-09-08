@@ -4,7 +4,6 @@ description: This article describes how to determine the first or last member wi
 ms.date: 09/21/2020
 ms.custom: sap:Analysis Services
 ms.topic: how-to
-ms.prod: sql
 ---
 # Determine the first or last member with data
 

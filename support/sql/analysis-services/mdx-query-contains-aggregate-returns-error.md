@@ -4,7 +4,6 @@ description: This article describes a problem that occurs if the set in the Aggr
 ms.date: 11/10/2020
 ms.custom: sap:Analysis Services
 ms.reviewer: yinnw
-ms.prod: sql
 ---
 # An MDX query that contains an Aggregate function returns error for the cell values in SQL Server Analysis Services
 

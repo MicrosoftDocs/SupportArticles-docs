@@ -1,7 +1,7 @@
 ---
 title: How to download updates that include drivers and hotfixes from the Windows Update Catalog
 description: Describes how to obtain updates, WHQL drivers, and hotfixes from the Windows Update Catalog. This information is for advanced users only.
-ms.date: 12/04/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -170,3 +170,7 @@ For Windows Media Player downloads, visit the following Microsoft Web site:
 
 For Office updates, visit the following Microsoft Web site:  
 [Install Office updates](https://support.microsoft.com/office/2ab296f3-7f03-43a2-8e50-46de917611c5)
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

@@ -1,7 +1,7 @@
 ---
 title: Deleting Active Directory objects that have many links causes replication failures
 description: Discusses an issue in which deleting Active Directory objects that have many links causes replication failures. Provides a workaround.
-ms.date: 09/07/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -109,7 +109,7 @@ While this update is pending, admins may see write conflicts and transaction fai
 > - Garbage collection isn't related to the processing of group membership link deletions.
 > - Decreasing TSL isn't a valid method of accelerating link deletions.
 > - The legacy value for **Links process batch size**  is 1,000 in versions before Windows Server 2008 R2. In later versions, the batch size is increased to 10,000 to improve the performance of undeleting in forests that have the Recycle Bin enabled.
-> - Check values of the **Links process batch size** parameter. If it's nondefault, set the value back to its default or an even smaller value such as 1,000, 100, or even 10.
+> - Check values of the **Links process batch size** parameter. If it's nondefault, set the value back to its default or an even smaller value such as 1,000 or 100.
 >
 > Smaller values decrease version store usage by deleting a smaller number of objects per deleting thereby reducing the total time to perform a single delete transaction. This has the positive side effect of reducing version store and time window for write conflicts while you increase the time that's required to accurately reflect the group membership in the directory.
 
@@ -123,7 +123,7 @@ For AD LDS:
 
 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\<adam instance>\Parameters\Links process batch size`  
 **Type**: DWORD  
-**Min Value**: 1000  
+**Min Value**: 100  
 **Max Value**: 10000  
 
 This value overrides the default value of 10,000 as the number of atomic links to process at one time. You don't have to restart the NTDS or LDS instance service, or restart the computer to make the setting effective.
@@ -138,6 +138,10 @@ For more information, see the following articles:
 ## Workaround
 
 To work around this issue, set the value of **Links process batch size** lower than 10,000. This decreases the potential for an object access collision to occur. By doing this, you make the replication process of large object deletion more reliable. Also, it now takes a longer time to complete the whole transaction. This also helps you avoid version store depletion.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).
 
 ## References
 

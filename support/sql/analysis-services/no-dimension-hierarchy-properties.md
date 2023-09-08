@@ -4,7 +4,6 @@ description: This article provides a workaround for the no results error that oc
 ms.date: 08/05/2020
 ms.custom: sap:Analysis Services
 ms.reviewer: deepeshs, jburchel
-ms.prod: sql
 ---
 # No results for XMLA script query for properties/members of a Dimension Hierarchy
 

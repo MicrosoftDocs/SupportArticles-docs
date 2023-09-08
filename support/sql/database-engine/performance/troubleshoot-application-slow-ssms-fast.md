@@ -5,8 +5,7 @@ ms.date: 06/20/2022
 ms.custom: sap:Performance
 ms.reviewer: jopilov
 author: PiJoCoder
-ms author: jopilov
-ms.prod: sql
+ms.author: jopilov
 ---
 
 # Troubleshoot query performance difference between database application and SSMS

@@ -33,7 +33,7 @@ Windows uses the shutdown process to perform system maintenance operations, and 
 
 ### Collect a Process memory dump
 
-1. Download [Procdump tool](http://download.sysinternals.com/files/Procdump.zip) into a new or existing data disk, which is attached to a working VM from the same region.
+1. Download [Procdump tool](https://download.sysinternals.com/files/Procdump.zip) into a new or existing data disk, which is attached to a working VM from the same region.
 
 2. Detach the disk containing the files needed from the working VM and attach the disk to your broken VM. We are calling this disk the **Utility disk**.
 

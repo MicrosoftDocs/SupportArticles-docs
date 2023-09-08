@@ -1,7 +1,7 @@
 ---
 title: Language packs no longer available
 description: Discusses that previously installed language packs are no longer available after you upgrade from Windows 8 to Windows 8.1. Provides a resolution.
-ms.date: 10/19/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -74,3 +74,7 @@ There are advanced language settings that may block the download of language pac
 During the upgrade from Windows 8 to Windows 8.1, Windows Setup detects whether the display language is the localized language of the operating system. It then displays the following message window to indicate that you might have to reinstall any language packs that were previously installed.
 
 :::image type="content" source="media/language-packs-no-longer-available-after-upgrade/what-needs-your-attention.png" alt-text="The message window indicates that you might have to reinstall any language packs that were previously installed." border="false":::
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

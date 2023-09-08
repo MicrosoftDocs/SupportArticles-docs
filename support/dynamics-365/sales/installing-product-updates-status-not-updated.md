@@ -3,7 +3,7 @@ title: Installing product updates seems to stay in Installing
 description: Installing Product Updates in Microsoft Dynamics CRM Online appears to stay in Installing updates phase. Provides a workaround.
 ms.reviewer: dmartens
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-admin-center
 ---
 # Installing product updates in Microsoft Dynamics CRM Online appears to stay in Installing updates phase

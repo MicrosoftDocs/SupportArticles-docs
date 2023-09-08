@@ -1,9 +1,8 @@
 ---
 title: SQL Server fails to start with error 17182 
-description: This article provides a resolution for the problem that occurs when server is configured to use SSL.
+description: Provides a resolution for the problem that occurs when server is configured to use SSL.
 ms.date: 01/14/2021
-ms.custom: sap:Security Issues
-ms.prod: sql 
+ms.custom: sap:Security Issues 
 ---
 # SQL Server fails to start with when server is configured to use SSL
 
@@ -69,11 +68,11 @@ You can then copy this value (without spaces - for the above example it will be 
 A status code **0x38** in error message 17182 means that SQL Server experienced an error during the initialization of SSL. See [SQL Protocols](/archive/blogs/sql_protocols/) for more details.  
 
 The return code **0xd** denotes OS error 0xd (13) which translates to "The data is invalid"
-The above error **17182 "TDSSNIClient initialization failed with error 0xd, status code 0x38**" occurs specifically because of the fact that the string under **Certificate** value cannot be properly converted back to a valid thumbprint of the certificate.
+The above error **17182 "TDSSNIClient initialization failed with error 0xd, status code 0x38**" occurs specifically because of the fact that the string under **Certificate** value can't be properly converted back to a valid thumbprint of the certificate.
 
-This GUI issue with Certificates snap-in does not occur on older versions of Windows (for example, Windows XP, Windows Server 2003), as they do not use a rich edit control in the Certificates snap-in
+This GUI issue with Certificates snap-in doesn't occur on older versions of Windows (for example, Windows XP, Windows Server 2003), as they don't use a rich edit control in the Certificates snap-in
 
-To check whether you are running into the issue documented in this article you can use the following procedure:
+To check whether you're running into the issue documented in this article you can use the following procedure:
 
 1. Open regedit and navigate to the following registry key and export the key to SSLKey.reg file:
 
@@ -88,7 +87,7 @@ To check whether you are running into the issue documented in this article you c
 
 1. Close the SSLKey.reg file and reopen it using Notepad.
 
-1. If you now see a questions mark or any other invalid character in the thumbprint of your certificate, it is an indication that you are probably running into the issue documented in this article:
+1. If you now see a questions mark or any other invalid character in the thumbprint of your certificate, it's an indication that you're probably running into the issue documented in this article:
 
    An example entry may look similar to the following:
 

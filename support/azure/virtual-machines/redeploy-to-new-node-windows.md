@@ -6,6 +6,7 @@ documentationcenter: virtual-machines
 author: genlin
 manager: dcscontentpm
 tags: azure-resource-manager,top-support-issue
+ms.custom: devx-track-azurepowershell, devx-track-azurecli
 ms.service: virtual-machines
 ms.subservice: vm-common-errors-issues
 ms.collection: windows
@@ -14,7 +15,6 @@ ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
 ms.date: 11/03/2021
 ms.author: genli
-
 ---
 # Redeploy Windows virtual machine to new Azure node
 

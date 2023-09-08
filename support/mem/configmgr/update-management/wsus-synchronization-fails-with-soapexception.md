@@ -50,11 +50,11 @@ Additionally, an error message that resembles the following is logged in the WSU
 
 ## Cause
 
-This issue occurs if the WSUS servers are configured to use the old synchronization endpoint, **<https://fe2.update.microsoft.com/v6>**. This endpoint was fully decommissioned and is no longer reachable after July 8, 2019.
+This issue occurs if the WSUS servers are configured to use the old synchronization endpoint, `https://fe2.update.microsoft.com/v6`. This endpoint was fully decommissioned and is no longer reachable after July 8, 2019.
 
 ## Resolution
 
-To fix the issue, change the synchronization endpoint in WSUS configuration to **<https://sws.update.microsoft.com>**.
+To fix the issue, change the synchronization endpoint in WSUS configuration to `https://sws.update.microsoft.com`.
 
 To do this, follow these steps on the topmost WSUS server that connects directly to Microsoft Update, such as the root WSUS server in a WSUS hierarchy:
 
@@ -81,7 +81,7 @@ To do this, follow these steps on the topmost WSUS server that connects directly
    Restart-Service *Wsus* -v
    ```
 
-   WSUS servers that are running Windows Server 2008 (without the latest update) or earlier versions may be using the **<https://update.microsoft.com/v6>** or **<https://www.update.microsoft.com>** synchronization endpoints. Because these versions of Windows don't support SHA256 certificate authentication, use the following settings in the PowerShell scripts:
+   WSUS servers that are running Windows Server 2008 (without the latest update) or earlier versions may be using the `https://update.microsoft.com/v6` or `https://www.update.microsoft.com` synchronization endpoints. Because these versions of Windows don't support SHA256 certificate authentication, use the following settings in the PowerShell scripts:
 
    ```powershell
    $config.MUUrl = " https://sws1.update.microsoft.com"

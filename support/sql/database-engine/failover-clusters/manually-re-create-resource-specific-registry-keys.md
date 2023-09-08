@@ -4,7 +4,6 @@ description: This article describes how to manually re-create the resource-speci
 ms.date: 07/22/2020
 ms.custom: sap:High Availability and Disaster Recovery features
 ms.topic: how-to
-ms.prod: sql
 ---
 # Manually re-create the resource-specific registry keys for SQL Server cluster resources
 
@@ -73,5 +72,5 @@ cluster res "ResourceName" /priv KeyName = KeyValue:STR
 
 > [!NOTE]
 > - You must replace **ResourceName** with the name of the appropriate SQL Server resource, the SQL Server Agent resource, or the Full-Text Search resource.
-> - You must replace **KeyName** with the appropriate registry key names. For example, InstanceName, VirtualServerName are registry key names.
+> - You must replace **KeyName** with the appropriate registry key names. For example, InstanceName and VirtualServerName are registry key names.
 > - You must replace **KeyValue** with the appropriate value for the key. For the InstanceName registry key, you can assign the name of the instance of SQL Server that the virtual server represents for the key value. You may use MSSQLSERVER as the name of the instance for the default instance.

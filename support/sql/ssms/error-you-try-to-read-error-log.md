@@ -3,7 +3,6 @@ title: Error when you try to read error log
 description: This article lists various problems that occur in SSMS when using an older version of MS ODBC 13 driver and the resolution for these problems.
 ms.date: 09/15/2020
 ms.custom: sap:Tools
-ms.prod: sql
 ---
 # SQL Server 2016 Agent fails to start or 'Failed to retrieve data' error when you try to read error log from SSMS 2016
 

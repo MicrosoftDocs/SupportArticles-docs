@@ -2,16 +2,16 @@
 title: Known limitations of Selenium IDE
 description: Describes the known limitations of Selenium IDE.
 ms.reviewer: ashvinis, gtrantzas
-ms.date: 12/01/2022
+ms.date: 02/24/2023
 ms.subservice: power-automate-desktop-flows
 ---
 # Known limitations of Selenium IDE
 
 > [!IMPORTANT]
 >
-> - As of February 28, 2022, Selenium IDE will no longer be supported.
-> - As of November 30, 2021, Windows recorder (V1) no longer works.
-> - Migrate your flows created with Selenium IDE and Windows recorder (V1) to Power Automate for desktop or delete them.
+> - Selenium IDE is deprecated and no longer works as of February 28, 2023.
+> - Windows recorder (V1) is deprecated and no longer works.
+> - Migrate your flows created with these solutions to Power Automate for desktop or delete them.
 
 This article describes the known limitations of Selenium IDE.
 

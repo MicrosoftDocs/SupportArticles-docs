@@ -1,21 +1,19 @@
 ---
 title: How to retain .bak files for AD logs
 description: Introduces a PowerShell script to retain .bak files. This script monitors .bak files at regular time intervals and renames them with a current timestamp.
-ms.date: 7/20/2021
-author: v-lianna
-ms.author: delhan
+ms.date: 09/24/2021
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika, herbertm
+ms.reviewer: kaushika, herbertm, v-lianna
 ms.custom: sap:permissions-access-control-and-auditing, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # .bak log files are deleted and lost
 
-_Applies to:_ &nbsp; Supported versions of Windows Server and Windows Client  
+_Applies to:_ &nbsp; Supported versions of Windows Server and Windows Client
 
 Assume that you're using the options of the following components to get text-based log files (`.log` files).
 

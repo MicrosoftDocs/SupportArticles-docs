@@ -1,11 +1,9 @@
 ---
 title: Missing or invalid service principal when creating an AKS cluster
 description: Troubleshoot a missing or invalid service principal when you try to create an Azure Kubernetes Service (AKS) cluster.
-ms.date: 7/8/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
+ms.date: 07/08/2022
 editor: v-jsitser
-ms.reviewer: chiragpa, nickoman
+ms.reviewer: chiragpa, nickoman, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: common-issues
 keywords:

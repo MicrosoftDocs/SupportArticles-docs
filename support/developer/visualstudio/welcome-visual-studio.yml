@@ -21,9 +21,9 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Troubleshoot installation and upgrade issues
-            url: /visualstudio/install/troubleshooting-installation-issues     
+            url: ./installation/troubleshoot-installation-issues.md     
           - text: Troubleshoot network related errors
-            url: /visualstudio/install/troubleshooting-network-related-errors-in-visual-studio
+            url: ./installation/troubleshoot-network-related-errors.md
           - text: Uninstall third-party applications
             url: ./installation/secondary-installer-third-party-app.md
           - text: OS requirements for Visual Studio 2022
@@ -54,10 +54,24 @@ landingContent:
         links:
           - text: Latest Visual C++ Redistributable downloads 
             url: /cpp/windows/latest-supported-vc-redist
-          - text: Supported OS for Visual C++ Redistributable 
-            url: ./cpp/libraries/minimum-service-pack-levels.md
           - text: Runtime framework packages for Desktop Bridge
             url: ./cpp/libraries/c-runtime-packages-desktop-bridge.md
+  - title: Project and build system
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot .NET Framework Targeting errors 
+            url: ./project-build/troubleshooting-dotnet-framework-targeting-errors.md
+          - text: Troubleshoot broken references
+            url: ./project-build/troubleshooting-broken-references.md
+  - title: Debuggers
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot breakpoints 
+            url: ./debuggers/troubleshooting-breakpoints.md
+          - text: Troubleshoot remote debugging
+            url: ./debuggers/troubleshooting-remote-debugging.md
   - title: Documentation, Training and Support
     linkLists:      
       - linkListType: reference

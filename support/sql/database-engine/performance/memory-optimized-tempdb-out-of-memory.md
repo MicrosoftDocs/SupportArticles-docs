@@ -1,12 +1,11 @@
 ---
 title: Memory-optimized tempdb metadata out of memory errors
 description: Provides resolutions to troubleshoot out of memory issues with memory-optimized tempdb metadata.
-ms.date: 2/22/2022
+ms.date: 06/01/2023
 ms.custom: sap:Database Engine
 ms.reviewer: jopilov, hesha
 author: Hemin-msft
 ms.author: jopilov
-ms.prod: sql
 ---
 
 # Memory-optimized tempdb metadata (HkTempDB) out of memory errors
@@ -45,15 +44,22 @@ To collect data to diagnose the issue, follow these steps:
 1. Collect the output of the following DMVs to analyze further.
 
    ```sql
-   SELECT * FROM  sys.dm_os_memory_clerks
-   SELECT * FROM  sys.dm_tran_database_transactions
-   SELECT * FROM  sys.dm_tran_active_transactions
+   SELECT * FROM sys.dm_os_memory_clerks
+   SELECT * FROM sys.dm_exec_requests
+   SELECT * FROM sys.dm_exec_sessions
+   
    -- from tempdb
-   SELECT * FROM  tempdb.sys.dm_xtp_system_memory_consumers 
-   SELECT * FROM  tempdb.sys.dm_xtp_transaction_stats
-   SELECT * FROM  tempdb.sys.dm_xtp_gc_queue_stats
-   SELECT * FROM  tempdb.sys.dm_db_xtp_object_stats
-   SELECT * FROM  tempdb.sys.dm_db_xtp_memory_consumers
+   SELECT * FROM tempdb.sys.dm_xtp_system_memory_consumers 
+   SELECT * FROM tempdb.sys.dm_db_xtp_memory_consumers
+   
+   SELECT * FROM tempdb.sys.dm_xtp_transaction_stats
+   SELECT * FROM tempdb.sys.dm_xtp_gc_queue_stats
+   SELECT * FROM tempdb.sys.dm_db_xtp_object_stats
+   
+   SELECT * FROM tempdb.sys.dm_db_xtp_transactions
+   SELECT * FROM tempdb.sys.dm_tran_session_transactions
+   SELECT * FROM tempdb.sys.dm_tran_database_transactions
+   SELECT * FROM tempdb.sys.dm_tran_active_transactions
    ```
 
 ## Cause and resolution
@@ -66,7 +72,10 @@ By using the DMVs to verify the cause, you may see different scenarios of the is
 
     The DMV [tempdb.sys.dm_xtp_system_memory_consumers](/sql/relational-databases/system-dynamic-management-views/sys-dm-xtp-system-memory-consumers-transact-sql) or [tempdb.sys.dm_db_xtp_memory_consumers](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-memory-consumers-transact-sql) shows a large difference between allocated bytes and used bytes.
 
-    **Resolution**: To resolve the issue, you can run the following commands in [SQL Server 2019 CU13](https://support.microsoft.com/topic/kb5005679-cumulative-update-13-for-sql-server-2019-5c1be850-460a-4be4-a569-fe11f0adc535) or a later version that has a new procedure `sys.sp_xtp_force_gc` to free up allocated but unused bytes.
+    **Resolution**: To resolve the issue, you can run the following commands in [SQL Server 2019 CU13](https://support.microsoft.com/topic/kb5005679-cumulative-update-13-for-sql-server-2019-5c1be850-460a-4be4-a569-fe11f0adc535), [SQL Server 2022 CU1](../../releases/sqlserver-2022/cumulativeupdate1.md), or a later version that has a new procedure `sys.sp_xtp_force_gc` to free up allocated but unused bytes.
+
+    > [!NOTE]
+    > Starting with [SQL Server 2022 CU1](../../releases/sqlserver-2022/cumulativeupdate1.md), you need to execute the stored procedure only once.
 
     ```sql
     /* Yes, 2 times for both*/
@@ -204,3 +213,4 @@ LOOKASIDE                     Transaction                                0      
 - Table heap is used for system tables rows.
 
 High values for used bytes could be the indicator of constant heavy tempdb workload and/or long-running open transaction that uses temporary objects.
+

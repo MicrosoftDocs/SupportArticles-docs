@@ -1,7 +1,7 @@
 ---
 title: Validate the OEM activation key
 description: Describes how to validate the OEM activation key in Windows 10, version 1703 and later versions.
-ms.date: 09/08/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -54,3 +54,7 @@ The Windows activation system is designed to use the product key that's injected
 ## Why did Microsoft remove the ability to check the last five digits of the product by using slmgr
 
 SLMGR is a legacy tool. Although we haven't updated slmgr, and because of updates in successive system builds, the last five digits of the product key that are shown by `slmgr /dlv` or `/dli` don't match the product key injected into the system BIOS. It's by design. We have no intentions of validating SLMGR for every Windows 10 release or making any other changes. We are very open to feedback regarding the OA3 tool and more capabilities we can add to it to improve the manufacturing flow.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

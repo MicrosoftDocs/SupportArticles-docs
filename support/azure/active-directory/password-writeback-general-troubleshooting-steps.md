@@ -1,13 +1,12 @@
 ---
 title: General password writeback troubleshooting steps
 description: Review general steps to help you troubleshoot password writeback issues in Azure Active Directory (Azure AD).
-ms.date: 2/25/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
-ms.reviewer: jarrettr, nualex
+ms.date: 02/25/2022
+ms.reviewer: jarrettr, nualex, v-leedennis
 editor: v-jsitser
 ms.service: active-directory
 ms.subservice: enterprise-users
+ms.custom: has-azure-ad-ps-ref
 keywords:
 #Customer intent: As an Azure Active Directory administrator, I want to understand how to troubleshoot password writeback issues better so that I can more quickly resolve problems that affect password writeback.
 ---

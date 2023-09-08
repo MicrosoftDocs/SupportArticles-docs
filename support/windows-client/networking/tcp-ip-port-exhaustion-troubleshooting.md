@@ -1,7 +1,7 @@
 ---
 title: TCP/IP port exhaustion troubleshooting
 description: Learn how to troubleshoot port exhaustion issues. Port exhaustion occurs when all the ports on a machine are used.
-ms.date: 08/23/2022
+ms.date: 03/10/2023
 ms.prod: windows-client
 ms.topic: troubleshooting
 author: dansimp
@@ -109,7 +109,7 @@ If you suspect that the machine is in a state of port exhaustion:
 
     1. Event ID 4227
 
-        :::image type="content" source="media/tcp-ip-port-exhaustion-troubleshooting/event-id-4227.png" alt-text="Screenshot of event ID 4227 in Event Viewer." border="false":::
+        :::image type="content" source="media/tcp-ip-port-exhaustion-troubleshooting/event-id-4227.png" alt-text="Screenshot of event ID 4227 in Event Viewer.":::
 
     2. Event ID 4231
 
@@ -182,7 +182,7 @@ Steps to use Process explorer:
 
     File   \Device\AFD
 
-    :::image type="content" source="media/tcp-ip-port-exhaustion-troubleshooting/process-explorer-higher-handle-counts.png" alt-text="Screenshot of Process Explorer with the processes sorted by handles." border="false":::
+    :::image type="content" source="media/tcp-ip-port-exhaustion-troubleshooting/process-explorer-higher-handle-counts.png" alt-text="Screenshot of Process Explorer with the processes sorted by handles.":::
 
 9. Some are normal, but large numbers of them aren't (hundreds to thousands). Close the process in question. If that restores outbound connectivity, then you've further proven that the app is the cause. Contact the vendor of that app.
 

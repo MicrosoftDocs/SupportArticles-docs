@@ -1,11 +1,12 @@
 ---
-title: HTTP 500 error connecting to the OpsMgr web console
+title: HTTP 500 error when connecting to the OpsMgr web console remotely
 description: Fixes an issue in which you receive HTTP 500 error when you remotely connect to a stand-alone Operations Manager web console.
-ms.date: 06/30/2020
+ms.date: 02/16/2023
+ms.prod-support-area-path: 
 ---
-# HTTP 500 error when you connect to the Operations Manager web console
+# HTTP 500 error when you connect to the Operations Manager web console remotely
 
-This article provides a resolution to solve the HTTP 500 error that occurs when you remotely connect to the Operations Manager web console.
+This article provides a resolution to solve the HTTP 500 error that occurs when you connect to the Operations Manager web console remotely.
 
 _Original product version:_ &nbsp; System Center Operations Manager  
 _Original KB number:_ &nbsp; 4487099
@@ -20,87 +21,175 @@ This issue doesn't occur if you connect to the web console from the web console 
 
 ## Resolution
 
-To fix the issue, verify the following settings, and then connect to the web console again:
+To fix the issue, perform the following configurations and verifications, and then connect to the web console again:
 
-1. The SDK (Data Access) Service Principal Names (SPNs) are registered correctly.
+1. [Register the SDK SPNs.](#register-the-sdk-spns)
+1. [Verify the SDK SPNs.](#verify-the-sdk-spns)
+1. [Register the HTTP SPNs.](#register-the-http-spns)
+1. [Verify the HTTP SPNs.](#verify-the-http-spns)
+1. [Configure constraint delegations.](#configure-constraint-delegations)
+1. [Verify "Account is sensitive and cannot be delegated" isn't set.](#verify-account-is-sensitive-and-cannot-be-delegated-isnt-set)
+1. [Disable Kernel-mode authentication in IIS.](#disable-kernel-mode-authentication-in-iis)
 
-   The SPNs must be registered to the account under which the SDK service is running.
+> [!NOTE]
+> The following sample names are used in the configuration and verification steps. You have to replace them with the names in your environment.
+>
+> - *SCOMMS.Lab.Local* - The fully qualified domain name (FQDN) of the System Center Operations Manager (SCOM) management server
+> - *SCOMWeb.Lab.Local* - The FQDN of the server that hosts the SCOM Web console
+> - *Lab\SDKSvc* - SCOM Data Access Service account (Optional)
+> - *Lab\SCOMAppPool* - SCOM Application Pool Identity account (Optional)
+> - `https://mySCOM.Lab.Local/OperationsManager` - URL that's used to access the Operations Manager Web console (If there's no URL, substitute this with the Operations Manager Web console server name.)
 
-    - If the SDK service is running under a domain account, SPNs must be registered to this domain account. To check whether SPNs are registered correctly, run the following command:
+---
 
-         ```console
-         setspn -L DOMAIN\sdkdomainaccount
-         ```
+### SDK SPNs
 
-      Here is sample output in which there are two management servers, *SCOM1* and *SCOM2*, and the SDK service is running under domain service account *CONTOSO\SCOMSdk*:
+#### Register the SDK SPNs
 
-      > Registered ServicePrincipalNames for CN= SCOMSdk,OU=SCOMAccounts,DC= CONTOSO,DC=COM:  
-      > MSOMSdkSvc/SCOM1  
-      > MSOMSdkSvc/SCOM1.CONTOSO.COM  
-      > MSOMSdkSvc/SCOM2  
-      > MSOMSdkSvc/SCOM2.CONTOSO.COM
+To register the System Center Data Access (SDK) Service Principal Names (SPNs), run the following commands according to different scenarios:
 
-       In the output, `MSOMSdkSvc` SPN is registered for both management servers. For each management server, there's one entry for the NetBIOS name and another entry for the fully qualified domain name (FQDN).
+- ##### Scenario 1
 
-       Additionally, when you run the following command for each management server, the output mustn't contain any SPN for MSOMSdkSvc:
-
-         ```console
-         setspn -L servername
-         ```
-
-    - If the SDK service is running under LocalSystem account, the SPNs must be registered to the computer account of the management server.
-
-      To check whether SPNs are registered correctly, repeat the following command for each management server:
-
-        ```console
-        setspn -L servername
-        ```
-
-        The output for each management server must contain the following entries:
-
-        > MSOMSdkSvc/serverNETBIOSname  
-        > MSOMSdkSvc/serverFQDN
-
-2. The SPN for the HTTP service is registered for the web console server.
-
-    When you use default settings for the web console application pools, run the following commands to register the HTTP service SPN for the web console server computer account:
+  The SDK service runs under a LocalSystem account
 
     ```console
-    setspn -S HTTP/serverFQDN serverAccount
-    setspn -S HTTP/serverNETBIOSname serverAccount
+    Setspn.exe -S MSOMSdkSvc/SCOMMS SCOMMS
+    Setspn.exe -S MSOMSdkSvc/SCOMMS.Lab.Local SCOMMS
     ```
 
-    *serverFQDN* and *serverNETBIOSname* are the FQDN and NetBIOS name of the web console server. And *serverAccount* is the computer account of the web console server.
+- ##### Scenario 2
 
-    To check whether the SPNs are registered correctly, run the following command:
+  The SDK service runs under a domain account (SDKSvc)
 
     ```console
-    Setspn -L webconsoleservername
+    Setspn.exe -S MSOMSdkSvc/SCOMMS SDKSvc
+    Setspn.exe -S MSOMSdkSvc/SCOMMS.Lab.Local SDKSvc
     ```
 
-    The output must contain the following entries:
+#### Verify the SDK SPNs
 
-    > HTTP/serverFQDN  
-    > HTTP/serverNETBIOSname
+To verify if the SDK service is registered, run the following command according to different scenarios:
 
-3. The delegation for the web console is configured correctly in Active Directory. To do this, follow these steps:
+- ##### Scenario 1
 
-      1. Start the **Active Directory Users and Computers** MMC.
-      2. In the console tree, select **Computers**.
-      3. In the details pane, right-click the computer on which the web console is installed, and then select **Properties**.
-      4. Select the **Delegation** tab.
-      5. Select **Trust this computer for delegation to specified services only**, select **Use any authentication protocol**, and then select **Add**.
+  The SDK service runs under a LocalSystem account
 
-          :::image type="content" source="media/http-500-error-connecting-to-web-console/delegation.png" alt-text="Screenshot of the options on the Delegation tab.":::
+    ```console
+    Setspn.exe -L SCOMMS
+    ```
 
-      6. In the **Add Services** dialog box, select **Users or Computers**.
+- ##### Scenario 2
 
-      7. In the **Select Users or Computers** dialog box, specify the domain account that the SDK service is running under, and then click **OK**.
+  The SDK service runs under a domain account (SDKSvc)
+
+    ```console
+    Setspn.exe -L SDKSvc
+    ```
+
+---
+
+### HTTP SPNs
+
+#### Register the HTTP SPNs
+
+To register the HTTP SPNs, run the following commands according to different scenarios:
+
+- ##### Scenario 1
+
+  The Web console application pool runs under the default identity (ApplicationPoolIdentity)
+
+    ```console
+    Setspn.exe -S HTTP/mySCOM SCOMWeb 
+    Setspn.exe -S HTTP/mySCOM.Lab.Local SCOMWeb
+    ```
+
+- ##### Scenario 2
+
+  The Web console application pool runs under a custom identity (Lab\SCOMAppPool)
+
+    ```console
+    Setspn.exe -S HTTP/mySCOM SCOMAppPool 
+    Setspn.exe -S HTTP/mySCOM.Lab.Local SCOMAppPool
+    ```
+
+#### Verify the HTTP SPNs
+
+To verify if the HTTP service is registered, run the following command according to different scenarios:
+
+- ##### Scenario 1
+
+  The Web console application pool runs under the default identity (ApplicationPoolIdentity)
+
+    ```console
+    Setspn.exe -L SCOMWeb
+    ```
+
+- ##### Scenario 2
+
+  The Web console application pool runs under a custom identity (Lab\SCOMAppPool)
+
+    ```console
+    Setspn.exe -L SCOMAppPool
+    ```
+
+---
+
+### Configure constraint delegations
+
+To configure constraint delegations, follow these steps:
+
+1. Start the Active Directory Users and Computers console.
+2. In the console tree, select **Computers**.
+3. Open the properties according to different scenarios:
+
+    - Scenario 1: The Operations Manager web application pool runs under the default identity (ApplicationPoolIdentity)
+
+        Right-click the computer where the web console is installed (SCOM Web) and select **Properties**.
+
+    - Scenario 2: The Operations Manager web application pool runs under a custom identity (Lab\SCOMAppPool)
+
+        Right-click the user that's configured on the custom identity (Lab\SCOMAppPool) and select **Properties**.
+
+4. In the details pane, select **Delegation**.
+5. On the **Delegation** tab, select **Trust this computer for delegation to specified services only**, and then select one of the following options accordingly:
+
+    - Kernel-mode authentication is enabled: **Use any authentication protocol**
+
+    - Kernel-mode authentication is disabled: **Use Kerberos only**
+
+      For more information, see [Disable Kernel-mode authentication in IIS](#disable-kernel-mode-authentication-in-iis).
   
-      8. In the **Add Services** dialog box, select service type `MSOMSdkSvc`, and then click **OK**.
-  
-      9. If you have multiple management servers, verify that MSOMSdkSvc SPNs for all management servers are listed.
-  
-     10. Select **Expanded**, and then verify that there are two entries for each management server (both NetBIOS name and FQDN).
-  
-     11. Click **OK** to close the **Properties** dialog box.
+7. Select **Add**.
+8. In the **Add Services** dialog box, select **Users or Computers**.
+9. In the **Select Users or Computers** dialogue box, specify the account according to different scenarios:
+
+    - Scenario 1: The SDK service runs under a LocalSystem account
+
+         Select the computer account of the SCOM management server (SCOMMS) and select **OK**.
+
+    - Scenario 2: The SDK service runs under a domain account (SDKSvc)
+
+         Select the domain account that the SDK service runs under and select **OK**.
+
+10. In the **Add Services** dialog box, select the service type **MSOMSdkSvc** and then select **OK**.
+11. Select **OK** to close the **Properties** dialog box.
+
+### Verify "Account is sensitive and cannot be delegated" isn't set
+
+To verify that the user logging into the Web console doesn't have **Account is sensitive and cannot be delegated** set, follow these steps:
+
+1. Start the Active Directory Users and Computers console.
+2. Right-click the user account that's used to connect to the Web console, and then select **Properties**.
+3. Select **Account**.
+4. In the **Account options** dialogue box, confirm that the **Account is sensitive and cannot be delegated** checkbox isn't selected.
+
+### Disable Kernel-mode authentication in IIS
+
+To disable **Kernel-mode authentication** for both `MonitoringView` and `OperationsManager` in IIS, follow these steps:
+
+1. In IIS Manager, navigate to *Default Web Site\MonitoringView*.
+2. Double-click **Authentication**.
+3. Select **Windows Authentication**.
+4. In the **Actions** pane on the right, select **Advanced Settings**.
+5. Clear the **Enable Kernel-mode authentication** checkbox.
+6. Navigate to *Default Web Site\OperationsManager*, and repeat steps 2 through 5.

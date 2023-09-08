@@ -1,11 +1,12 @@
 ---
 title: Troubleshoot Azure AD Connect objects and attributes
 description: Describes how to determine why an object is not syncing in Azure AD.
-ms.date: 2/3/2021
+ms.date: 02/03/2021
 ms.reviewer: nualex
 editor: v-jesits
 ms.service: active-directory
 ms.subservice: enterprise-users
+ms.custom: has-azure-ad-ps-ref
 ---
 
 # End-to-end troubleshooting of Azure AD Connect objects and attributes
@@ -528,7 +529,7 @@ Fortunately, the issues that affect these components usually generate an error i
 
   Together with this update, Azure AD also sets a **DirSyncOverrides** on the object to flag that this user has the mobile phone number "overwritten" in Azure AD. From this point on, any update to the mobile attribute that originates from on-premises will be ignored because this attribute will no longer be managed by on-premises AD.
 
-  A support engineer can file an internal escalation request to revert the mobile SoA to on-premises by providing the **objectId** of the target users. However, this method is not recommended because this issue might occur again if a user or admin updates the **Mobile** attribute in the Office Portal or through PowerShell.
+  For more information about the BypassDirSyncOverrides feature and how to restore synchronization of Mobile and otherMobile attributes from Azure AD to on-premises Active Directory, see [How to use the BypassDirSyncOverrides feature of an Azure AD tenant](/azure/active-directory/hybrid/how-to-bypassdirsyncoverrides).
 
 - **UserPrincipalName changes do not update in Azure AD**
 
@@ -541,9 +542,9 @@ Fortunately, the issues that affect these components usually generate an error i
 
    **UserPrincipalName** updates will work if the user is NOT licensed. However, without the [SynchronizeUpnForManagedUsers](/azure/active-directory/hybrid/how-to-connect-syncservice-features#synchronize-userprincipalname-updates) feature, **UserPrincipalName** changes after the user is provisioned and is assigned a licensed that will NOT be updated in AAD. Notice that Microsoft does not disable this feature on behalf of the customer.
 
-- **Invisible characters and ProxyCalc internals**
+- **Invalid characters and ProxyCalc internals**
 
-   Issues that involve invalid characters that don't produce any sync error are more troublesome in **UserPrincipalName** and **ProxyAddresses** attributes because of the cascading effect in ProxyCalc processing that will **silently** discard the value from on-premises AD. This situation occurs as follows:
+   Issues that involve invalid characters that don't produce any sync error are more troublesome in **UserPrincipalName** and **ProxyAddresses** attributes because of the cascading effect in ProxyCalc processing that will **silently** discard the value synchronized from on-premises AD. This situation occurs as follows:
 
    1. The resulting **UserPrincipalName** in Azure AD will be the **MailNickName** or **CommonName** @ (at) initial domain. For example, instead of John.Smith@Contoso.com, the **UserPrincipalName** in AAD might become smithj@Contoso.onmicrosoft.com because there's an invisible character in the UPN value from on-premises AD.
 
@@ -551,7 +552,7 @@ Fortunately, the issues that affect these components usually generate an error i
 
    3. Either a **UserPrincipalName** that includes a space character or a **ProxyAddress** that includes an invisible character will cause the same issue.
 
-      To troubleshoot a space character in the **UserPrincipalName** or **ProxyAddress**, examine the value that's stored in the local AD from an LDIFDE or PowerShell exported to a file. An easy trick is to copy the contents of the exported file, and then paste it into a PowerShell window. The invisible character will be replaced by a question mark (?), as shown in the following example.
+      To troubleshoot an invalid character in the **UserPrincipalName** or **ProxyAddress**, examine the value that's stored in the local AD from an LDIFDE or PowerShell exported to a file. An easy trick to detect an invisible character is to copy the contents of the exported file, and then paste it into a PowerShell window. The invisible character will be replaced by a question mark (?), as shown in the following example.
 
       :::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/userprinciplename.png" alt-text="Screenshot shows an example to troubleshoot UserPrincipalName or ProxyAddress." border="false":::
 

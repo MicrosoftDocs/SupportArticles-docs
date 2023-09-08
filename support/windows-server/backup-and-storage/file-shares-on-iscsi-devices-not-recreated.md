@@ -1,7 +1,7 @@
 ---
 title: File shares on iSCSI devices aren't re-created
 description: Provides a resolution for an issue that may prevent file shares from being re-created. This issue occurs when you restart the computer.
-ms.date: 09/08/2020
+ms.date: 03/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -49,10 +49,8 @@ To resolve the issue in iSCSI Initiator 2.x, follow these steps on the affected 
   
     Method 2: Use the Command Prompt window  
 
-      1. Select **Start**, select  
-     **Run**, type cmd, and then select  
-     **OK**.
-      2. At the command prompt, type the following command, and then press ENTER:  
+      1. Select **Start** > **Run**, type *cmd*, and then select **OK**.
+      2. At the command prompt, type the following command, and then press Enter:
       `iscsicli persistentlogintarget **target_iqn** T * * * * * * * * * * * * * * * 0`  
 
     > [!NOTE]
@@ -69,9 +67,8 @@ To resolve the issue in iSCSI Initiator 2.x, follow these steps on the affected 
   
     Method 2: Use the Command Prompt window  
 
-      1. Select **Start**, select
-     **Run**, type cmd, and then press ENTER.
-      2. Type iscsicli BindPersistentVolumes, and then press ENTER.
+      1. Select **Start** > **Run**, type *cmd*, and then press Enter.
+      2. Type `iscsicli BindPersistentVolumes`, and then press Enter.
 
           > [!NOTE]
           > This is the same as selecting the **Bind All** option in Method 1.  
@@ -88,10 +85,14 @@ Use one of the following methods to make the Server service dependent on the iSC
 > [!NOTE]
 > You do not have to modify the registry when you use this method. Therefore, this method is the preferred way to set the service dependency.
 
-1. Click **Start**, click **Run**, type cmd, and then press ENTER.
-2. Type sc config LanManServer depend= Samss/Srv/MSiSCSI, and then press ENTER.
+1. Select **Start** > **Run**, type *cmd*, and then press Enter.
+2. Type `sc config LanManServer depend= Samss/Srv2/MSiSCSI`, and then press Enter.
 
-    If you have administrative access to the server, you can run this command from a network computer. Type the following command, and then press ENTER: sc \\\\**computer_name**  config LanManServer depend= Samss/Srv/MSiSCSI  
+    If you have administrative access to the server, you can run this command from a network computer. Type the following command, and then press Enter:
+
+    ```console
+     sc \\computer_name config LanManServer depend= Samss/Srv2/MSiSCSI
+    ```  
 
 #### Method 2: Use Registry Editor
 
@@ -102,16 +103,12 @@ Use one of the following methods to make the Server service dependent on the iSC
 Microsoft Windows 2000  
 
 1. Start Registry Editor.
-2. Locate and then click the following registry subkey:  
+2. Locate and then select the following registry subkey:  
 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanManServer`  
 
-3. On the **Edit** menu, click **Add Value**.
-4. Type DependOnService in the
- **Value Name** box, click **REG_MULTI_SZ** in the
- **Data Type** box, and then press ENTER.
-5. In the **Multi-String Editor** window, type
- MSiSCSI in the **data** box, and then click
- **OK**.
+3. On the **Edit** menu, select **Add Value**.
+4. Type *DependOnService* in the **Value Name** box, select **REG_MULTI_SZ** in the **Data Type** box, and then press Enter.
+5. In the **Multi-String Editor** window, type *MSiSCSI* in the **data** box, and then select **OK**.
 6. Exit Registry Editor.
 
 ## More information
@@ -123,7 +120,7 @@ Microsoft provides programming examples for illustration only, without warranty 
 To script the whole operation that is described in the "Resolution" section, create a batch file that contains the following text:  
 
 ```console
-sc config LanManServer depend= Samss/Srv/MSiSCSI  
+sc config LanManServer depend= Samss/Srv2/MSiSCSI  
 iscsicli BindPersistentVolumes
 ```
 

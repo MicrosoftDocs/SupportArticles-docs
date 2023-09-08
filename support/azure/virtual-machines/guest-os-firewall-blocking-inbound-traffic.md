@@ -62,31 +62,31 @@ Connect to the [Serial Console, and then open a PowerShell instance](serial-con
 
     * If the previous steps don’t work, manually reset the firewall rule. To do this, query all the rules that contain the name "Remote Desktop" by running the following command:
 
-        ```cmd
+        ```powershell
         netsh advfirewall firewall show rule dir=in name=all | select-string -pattern "(Name.*Remote Desktop)" -context 9,4 | more
         ```
 
         If the RDP port was set to any other port other than 3389, you have to find any custom rule that might have been created and set to this port. To query for all the inbound rules that have a custom port, run the following command:
 
-        ```cmd
+        ```powershell
         netsh advfirewall firewall show rule dir=in name=all | select-string -pattern "(LocalPort.*<CUSTOM PORT>)" -context 9,4 | more
         ```
 
 3. If you see that the rule is disabled, enable it. To open a whole group, such as the built-in Remote Desktop group, run the following command:
 
-    ```cmd
+    ```powershell
     netsh advfirewall firewall set rule group="Remote Desktop" new enable=yes
     ```
 
     Otherwise, to open the specific Remote Desktop (TCP-In) rule, run the following command:
 
-    ```cmd
+    ```powershell
     netsh advfirewall firewall set rule name="<CUSTOM RULE NAME>" new enable=yes
     ```
 
 4. For troubleshooting, you can turn the firewall profiles to OFF:
 
-    ```cmd
+    ```powershell
     netsh advfirewall set allprofiles state off
     ```
 
@@ -101,7 +101,7 @@ Connect to the [Serial Console, and then open a PowerShell instance](serial-con
 
 1. Query the firewall profiles to determine whether the inbound firewall policy is set to *BlockInboundAlways*:
 
-    ```cmd
+    ```powershell
     netsh advfirewall show allprofiles | more
     ```
 
@@ -115,13 +115,13 @@ Connect to the [Serial Console, and then open a PowerShell instance](serial-con
 
 2. Set the *DefaultInboundAction* to not always blocked traffic. To do this, run the following command:
 
-    ```cmd
+    ```powershell
     netsh advfirewall set allprofiles firewallpolicy blockinbound,allowoutbound
     ```
 
 3. Query the profiles again to make sure that your change was made successfully. To do this, run the following command:
 
-    ```cmd
+    ```powershell
     netsh advfirewall show allprofiles | more
     ```
 
@@ -151,9 +151,9 @@ See [How to Enable-Disable a Firewall rule on a Guest OS](enable-disable-firewa
 
 3. After the system disk is attached to the recovery VM, make sure that the disk is flagged as **Online** in the Disk Management console. Note the drive letter that is assigned to the attached OS disk.
 
-4. Open an elevated CMD instance, and then run the following script:
+4. Open an elevated PowerShell instance, and then run the following script:
 
-    ```cmd
+    ```powershell
     REM Backup the registry prior doing any change
     robocopy f:\windows\system32\config f:\windows\system32\config.BACK /MT
 

@@ -3,7 +3,7 @@ title: Azure Linux virtual machine boot enters dracut emergency shell
 description: Provides solutions to an issue in which a Linux virtual machine (VM) can't boot because the OS file system isn't accessible from RAMdisk.
 author: divargas-msft
 ms.author: divargas
-ms.date: 10/10/2022
+ms.date: 03/06/2023
 ms.reviewer: jofrance
 ms.service: virtual-machines
 ms.subservice: vm-cannot-start-stop
@@ -84,6 +84,7 @@ The serial console is the fastest method to resolve issues. It allows you to dir
     3. Select <kbd>E</kbd> to modify the first kernel entry in the GRUB menu.
     4. Go to the `linux16` line, and then validate and correct [GRUB misconfiguration](#dracut-grub-misconf) as follows:
         * [Wrong root device path in the GRUB configuration file](#dracut-grub-misconf-wrong-root), wrong UUID or root volume name.
+        * [Wrong swap device path in GRUB configuration file](#dracut-grub-misconf-wrong-swap).
         * [Duplicated parameters in the GRUB configuration file](#dracut-grub-misconf-dup-params).
         * Any obvious typo.
 
@@ -103,7 +104,7 @@ The serial console is the fastest method to resolve issues. It allows you to dir
 1. In case the [Azure serial console](serial-console-linux.md) doesn't work in the specific VM or isn't an option in your subscription, troubleshoot this issue by using a rescue/repair VM. Use [vm repair commands](repair-linux-vm-using-azure-virtual-machine-repair-commands.md) to create a repair VM that has a copy of the affected VM's OS disk attached. Mount the copy of the OS file systems in the repair VM by using [chroot](chroot-environment-linux.md).
 
     > [!NOTE]
-    > Alternatively, you can create a rescue VM manually by using the Azure portal. For more information, see [Troubleshoot a Linux VM by attaching the OS disk to a recovery VM using the Azure portal](/troubleshoot/azure/virtual-machines/troubleshoot-recovery-disks-portal-linux).
+    > Alternatively, you can create a rescue VM manually by using the Azure portal. For more information, see [Troubleshoot a Linux VM by attaching the OS disk to a recovery VM using the Azure portal](troubleshoot-recovery-disks-portal-linux.md).
 
 2. Go to the following sections to resolve specific issues:
 
@@ -111,6 +112,7 @@ The serial console is the fastest method to resolve issues. It allows you to dir
     * [Hyper-V drivers are missing](#dracut-hyperv-drivers-disabled).
     * [GRUB misconfiguration](#dracut-grub-misconf).
         * [Wrong root device path in the GRUB configuration file](#dracut-grub-misconf-wrong-root).
+        * [Wrong swap device path in GRUB configuration file](#dracut-grub-misconf-wrong-swap).
         * [Duplicated parameters in the GRUB configuration file](#dracut-grub-misconf-dup-params).
     * [Root file system corruption](#dracut-rootfs-corruption).
     * [Issues with LVM activation](#dracut-lvm-issues).
@@ -126,11 +128,11 @@ The serial console is the fastest method to resolve issues. It allows you to dir
 
 ## <a id="dracut-ade-without-vfat"></a>ADE encrypted VM fails to boot because VFAT is disabled
 
-For more information,see [ADE encrypted VMs fail to boot](/troubleshoot/azure/virtual-machines/vfat-disabled-boot-issues#offline-troubleshooting-encrypted).
+For more information,see [ADE encrypted VMs fail to boot](vfat-disabled-boot-issues.md#offline-troubleshooting-encrypted).
 
 ## <a id="dracut-hyperv-drivers-disabled"></a>Hyper-V drivers are missing
 
-If the Hyper-V drivers included in the Linux kernel of all modern Linux distributions are disabled, re-enable them and regenerate the initramfs/initrd image. For more information, see [Scenario 3: Other Hyper-V drivers are disabled](/troubleshoot/azure/virtual-machines/linux-hyperv-issue#hyperv-drivers-disabled).
+If the Hyper-V drivers included in the Linux kernel of all modern Linux distributions are disabled, re-enable them and regenerate the initramfs/initrd image. For more information, see [Scenario 3: Other Hyper-V drivers are disabled](linux-hyperv-issue.md#hyperv-drivers-disabled).
 
 If the VM is Red Hat and is migrated from on-premises, enable the required Hyper-V drivers in the initramfs image. For more information, see [The Hyper-V driver could not be included in the initial RAM disk when using a non-Hyper-V hypervisor](/azure/virtual-machines/linux/redhat-create-upload-vhd#the-hyper-v-driver-could-not-be-included-in-the-initial-ram-disk-when-using-a-non-hyper-v-hypervisor).
 
@@ -157,8 +159,35 @@ During this validation, make sure the following things:
 
 * In Ubuntu VMs with OS encryption, make sure the device name is `/dev/mapper/osencrypt`.
 * In VMs with Logical Volume Manager (LVM) in the OS disk, the root volume is `/dev/mapper/rootvg-rootlv`. The same path is used in RHEL VMs with ADE OS disk encrypted.
-* Make sure no device names in the form of `/dev/sdX` are used, as they'll change across reboots, and they aren't persistent in Linux. For more information, see [Troubleshoot Linux VM device name changes](/troubleshoot/azure/virtual-machines/troubleshoot-device-names-problems).
+* Make sure no device names in the form of `/dev/sdX` are used, as they'll change across reboots, and they aren't persistent in Linux. For more information, see [Troubleshoot Linux VM device name changes](troubleshoot-device-names-problems.md).
 * If UUIDs are used, make sure the proper root file system UUID is used and the syntax is `root=UUID=xxx-yyy-zzz`.
+
+### <a id="dracut-grub-misconf-wrong-swap"></a>Wrong swap device path in GRUB configuration file
+
+In this scenario, A VM fails to complete the boot process and enters the **dracut** emergency shell with an error similar to the following:
+
+```output
+[  188.000765] dracut-initqueue[324]: Warning: /dev/VG/SwapVol does not exist
+         Starting Dracut Emergency Shell...
+Warning: /dev/VG/SwapVol does not exist
+```
+
+The GRUB configuration file in this example is set to load a Logical Volume (LV) as swap with the parameter `rd.lvm.lv=VG/SwapVol`. However, the VM is unable to locate  this LV during the boot process.
+
+It's important to note that using a swap device in this way in Azure Linux VMs is not recommended. For more information, see [Create a SWAP file for an Azure Linux VM](create-swap-file-linux-vm.md).
+
+To resolve this issue, locate the swap path `rd.lvm.lv=VG/SwapVol` in the GRUB configuration file (`/etc/default/grub`) and remove it. To do this, use one of the following methods:
+
+* If you're inside chroot in a repair/rescue VM:
+    1. Follow step 1 in [Offline troubleshooting](#offline-troubleshooting).
+    2. Edit the `/etc/default/grub` file, go to the `GRUB_CMDLINE_LINUX` entry, locate the `rd.lvm.lv=VG/SwapVol` parameter, and then remove it from the configuration.
+    3. [Reinstall GRUB and regenerate GRUB configuration file](troubleshoot-vm-boot-error.md#reinstall-grub-regenerate-grub-configuration-file).
+
+* If you're in the Azure serial console:
+    1. Follow step 3 in [Online troubleshooting](#online-troubleshooting).
+    2. Go to the line starting with `linux`, locate the `rd.lvm.lv=VG/SwapVol` parameter and remove it.
+    3. Select `<kbd>Ctrl</kbd>+<kbd>X</kbd>` to boot the VM.
+    4. Once the VM successfully boots, modify the `/etc/default/grub` file, remove the `rd.lvm.lv=VG/SwapVol` parameter, and then update the GRUB configuration file, as instructed in [Reinstall GRUB and regenerate GRUB configuration file](troubleshoot-vm-boot-error.md#reinstall-grub-regenerate-grub-configuration-file) section.
 
 ### <a id="dracut-grub-misconf-dup-params"></a>Duplicated parameters in GRUB configuration file
 

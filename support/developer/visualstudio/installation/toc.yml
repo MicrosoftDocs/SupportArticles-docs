@@ -1,3 +1,5 @@
+- name: Troubleshoot installation and upgrade issues
+  href: ./troubleshoot-installation-issues.md
 - name: Running Parallels on Mac may cause error 1606
   href: ./error-1606-psf-folder.md
 - name: Visual Studio 2015 is stuck while installing KB2999226
@@ -48,12 +50,10 @@
   href: ./msiapplymultiplepatches-error-1601.md
 - name: Known issues for Visual Studio 2012 and updates
   href: ./known-issues-visual-studio-2012-update.md
-- name: Secondary Installer uninstallation instructions
+- name: Uninstall third-party applications in Visual Studio 2015
   href: ./secondary-installer-third-party-app.md
 - name: Setup crashes due to certain fonts
   href: ./fonts-cause-setup-crash.md
-- name: Uninstall third-party applications
-  href: ./uninstall-third-party-app.md
 - name: Uninstall Visual Studio 2012
   href: ./uninstall-visual-studio-2012.md
 - name: Visual Studio 2015 and 2013 features doesn't work
@@ -80,4 +80,5 @@
   href: ./packages-fail-local-administrator-not-rights.md
 - name: Invalid entries passed to switch
   href: ./invalid-entries-passed-switch.md
-  
+- name: Network or proxy errors
+  href: ./troubleshoot-network-related-errors.md

@@ -1,11 +1,9 @@
 ---
 title: The certificate chain was issued by an authority that isn't trusted
 description: This article provides resolutions for the error that occurs when you upgrade SNAC applications.
-ms.date: 09/13/2022
-author: ramakoni1
-ms.author: v-jayaramanp
+ms.date: 02/28/2023
+ms.reviewer: v-jayaramanp
 ms.custom: sap:Connection issues
-ms.prod: sql
 ---
 
 # "The certificate chain was issued by an authority that is not trusted" error after upgrading SNAC applications
@@ -36,7 +34,11 @@ The error occurs because of a change in the default behavior of the client drive
 
 - **Solution 2:** If the application connection string property already specifies a value of **Yes** or **Mandatory** for the **Encrypt/Use Encryption for Data setting**, change the value to **No** or **Optional**. For example, **Use Encryption for Data=Optional**. If the connection string doesn't specify any value for **Encrypt/Use Encryption for Data**, add **Use Encryption for Data=Optional** to the connection string. For more information, see [Encryption and certificate validation](/sql/connect/oledb/features/encryption-and-certificate-validation).
 
-- **Solution 3:** Add `;Trust Server Certificate=true` to the connection string. This will force the client to trust the certificate without validation.
+- **Solution 3:** Add `;TrustServerCertificate=true` to the connection string. This will force the client to trust the certificate without validation.
+
+- > [!NOTE]
+    > Currently, MSOLEDBSQL19 prevents the creation of linked servers without encryption and a trusted certificate (a self-signed certificate is insufficient). If linked servers are required, use the existing supported version of MSOLEDBSQL.
+        
 
 ## [Upgraded to Microsoft ODBC Driver 18.*x* for SQL Server](#tab/odbc-driver-18x)
 

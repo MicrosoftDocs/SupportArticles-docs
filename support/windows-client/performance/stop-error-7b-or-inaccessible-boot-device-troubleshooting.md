@@ -1,7 +1,7 @@
 ---
 title: Stop error 7B or Inaccessible_Boot_Device troubleshooting
 description: Learn how to troubleshoot Stop error 7B or Inaccessible_Boot_Device. This error might occur after some changes are made to the computer.
-ms.date: 08/24/2022
+ms.date: 03/10/2023
 ms.prod: windows-client
 ms.topic: troubleshooting
 author: dansimp
@@ -49,7 +49,7 @@ At the WinRE Command prompt, run `diskpart`, and then run `list disk`.
 
 A list of the physical disks that are attached to the computer should be displayed and resemble the following display:
 
-```console
+```output
   Disk ###  Status         Size     Free     Dyn  Gpt
 
   --------  -------------  -------  -------  ---  ---
@@ -57,9 +57,9 @@ A list of the physical disks that are attached to the computer should be display
   Disk 0    Online         **size*  GB      0 B        *
 ```
 
-If the computer uses a Unified Extensible Firmware Interface (UEFI) startup interface, there will be an asterisk (<em>) in the **GPT</em>*  column.
+If the computer uses a Unified Extensible Firmware Interface (UEFI) startup interface, there will be an asterisk (`*`) in the `GPT` column.
 
-If the computer uses a basic input/output system (BIOS) interface, there won't be an asterisk in the **Dyn**  column.
+If the computer uses a basic input/output system (BIOS) interface, there won't be an asterisk in the `Dyn` column.
 
 #### Step 2
 
@@ -67,7 +67,7 @@ If the `list disk` command lists the OS disks correctly, run the `list vol` comm
 
 `list vol` generates an output that resembles the following display:
 
-```console
+```output
   Volume ###  Ltr  Label        Fs     Type        Size     Status     Info
 
   ----------  ---  -----------  -----  ----------  -------  ---------  --------
@@ -184,9 +184,9 @@ After you run this command, you'll see the **Install pending** and **Uninstall P
 6. Expand `HKEY_LOCAL_MACHINE\OfflineComponentHive`, and check whether the **PendingXmlIdentifier** key exists. Create a backup of the **OfflineComponentHive** key, and then delete the **PendingXmlIdentifier** key.
 7. Unload the hive. To do this unloading, highlight **OfflineComponentHive**, and then select **File** > **Unload hive**.
 
-    :::image type="content" source="media/stop-error-7b-or-inaccessible-boot-device-troubleshooting/unload-hive-offlinehive.png" alt-text="Screenshot of Registry Editor with the OfflineHive selected." border="false":::
+    :::image type="content" source="media/stop-error-7b-or-inaccessible-boot-device-troubleshooting/unload-hive-offlinehive.png" alt-text="Screenshot of Registry Editor with the OfflineHive selected.":::
 
-    :::image type="content" source="media/stop-error-7b-or-inaccessible-boot-device-troubleshooting/unload-hive-selected.png" alt-text="Screenshot of Registry Editor with the Unload Hive option selected." border="false":::
+    :::image type="content" source="media/stop-error-7b-or-inaccessible-boot-device-troubleshooting/unload-hive-selected.png" alt-text="Screenshot of Registry Editor with the Unload Hive option selected.":::
 
 8. Select **HKEY_LOCAL_MACHINE**, go to **File** > **Load Hive**, navigate to *OSdriveLetter:\\Windows\\System32\\config*, select the file that's named **SYSTEM** (with no extension), and then select **Open**. When you're prompted, enter the name **OfflineSystemHive** for the new hive.
 9. Expand **HKEY_LOCAL_MACHINE\OfflineSystemHive**, and then select the **Select** key. Check the data for the **Default** value.
@@ -235,7 +235,7 @@ Check whether there are any non-Microsoft upper and lower filter drivers on the 
    - `\Control\Class\{4D36E97B-E325-11CE-BFC1-08002BE10318}`
    - `\Control\Class\{71A27CDD-812A-11D0-BEC7-08002BE2092F}`
 
-    :::image type="content" source="media/stop-error-7b-or-inaccessible-boot-device-troubleshooting/controlset-entries.png" alt-text="Screenshot of Registry Editor showing entries under ControlSet." border="false":::
+    :::image type="content" source="media/stop-error-7b-or-inaccessible-boot-device-troubleshooting/controlset-entries.png" alt-text="Screenshot of Registry Editor showing entries under ControlSet.":::
 
    If an **UpperFilters** or **LowerFilters** entry is non-standard (for example, it's not a Windows default filter driver, such as PartMgr), remove the entry. To remove it, double-click it in the right pane, and then delete only that value.
 

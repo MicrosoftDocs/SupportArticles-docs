@@ -1,7 +1,7 @@
 ---
 title: Power management option isn't selected
 description: Provides a solution to an issue that the **Allow the computer to turn off this device to save power** option doesn't remain selected after you restart the computer.
-ms.date: 10/15/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -53,3 +53,7 @@ To view the **Allow the computer to turn off this device to save power** check b
     If you're prompted for an administrator password or confirmation, type your password or select **Continue**.
 2. In the **Device Manager** dialog box, expand **Universal Serial Bus controllers**, right-click **USB Root Hub**, and then select **Properties**.
 3. In the **USB Root Hub Properties** dialog box, select the **Power Management** tab. The **Allow the computer to turn off this device to save power** check box is displayed.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

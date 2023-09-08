@@ -1,9 +1,11 @@
 ---
 title: BizTalkMsgBoxDb database connection issues
 description: Discusses an issue where you experience blocking, deadlocks, or other connection issues when you try to connect to the BizTalkMsgBoxDb database. This issue may occur in BizTalk Server.
-ms.date: 03/06/2020
+ms.date: 05/08/2023
+ms.reviewer: v-jayaramanp
 ms.custom: sap:Management and Operations
 ---
+
 # Blocking, deadlock conditions, or other SQL Server issues when you connect to the BizTalkMsgBoxDb database in BizTalk Server
 
 This article provides information about resolving SQL Server issues when you connect to the `BizTalkMsgBoxDb` database in Microsoft BizTalk Server.
@@ -21,16 +23,16 @@ This issue may occur if one or more of the following conditions are true:
 
 - The **Auto Create Statistics** option is enabled on the `BizTalkMsgBoxDb` database.
 - The **Auto Update Statistics** option is enabled on the `BizTalkMsgBoxDb` database.
-- The **max degree of parallelism** option is set to a value other than 1 on the computer that is running SQL Server and that is hosting the `BizTalkMsgBoxDb` database.
+- The **max degree of parallelism** option is set to a value other than 1 for the `BizTalkMsgBoxDb` database or the SQL instance hosting this database.
 - You defragment or rebuild an index in the `BizTalkMsgBoxDb` database when BizTalk Server is processing data.
 
 ## Resolution 1: Disable the Auto Create Statistics option and the Auto Update Statistics option
 
-To resolve this issue, disable the **Auto Create Statistics** option and the **Auto Update Statistics** option on the `BizTalkMsgBoxDb` database in SQL Server.
+To resolve this issue, disable the **Auto Create Statistics** and the **Auto Update Statistics** options on the `BizTalkMsgBoxDb` database in SQL Server.
 
 ## Resolution 2: Set the max degree of parallelism option to 1
 
-To resolve this issue, set the **max degree of parallelism** option to 1 on the computer that is running SQL Server.
+To resolve this issue, set the **max degree of parallelism** option to **1** in the `BizTalkMsgBoxDb` database setting or the SQL instance hosting this database.
 
 ## Resolution 3: Don't rebuild an index when BizTalk Server is processing data
 

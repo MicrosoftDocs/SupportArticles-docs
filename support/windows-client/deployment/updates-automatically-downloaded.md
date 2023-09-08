@@ -1,7 +1,7 @@
 ---
 title: Updates are automatically downloaded
 description: Explains that if you select the default Windows Update option when you install Windows Vista, important updates are automatically downloaded and installed.
-ms.date: 10/12/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -36,3 +36,7 @@ To manually update Windows Vista by using Windows Update, follow these steps:
 2. In the upper-left corner of the **Windows Update** window, select **Check for updates**.
 3. Select **View available updates** when you're presented with a summary of available updates.
 4. In the **View available updates** window, click to select the updates that you want to install, and then select **Install**.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

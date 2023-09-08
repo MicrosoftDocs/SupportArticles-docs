@@ -25,7 +25,7 @@ This article provides steps to resolve issues where Windows cannot boot and need
 When you use [Boot diagnostics](./boot-diagnostics.md) to view the screenshot of the VM, you'll see that the screenshot displays the Windows stop code **#0x00000074** or **BAD_SYSTEM_CONFIG_INFO**.
 
 > Your PC ran into a problem and needs to restart. You can restart.
-> For more information about this issue and possible fixes, visit <http://windows.com/stopcode>
+> For more information about this issue and possible fixes, visit <https://windows.com/stopcode>
 > If you call a support person, give them this info:
 > Stop code: BAD_SYSTEM_CONFIG_INFO
 
@@ -35,7 +35,7 @@ When you use [Boot diagnostics](./boot-diagnostics.md) to view the screenshot of
 
 The **BAD_SYSTEM_CONFIG_INFO** stop code occurs if the **SYSTEM** registry hive appears to be corrupted. This error can be caused by any of these reasons:
 
-- The registry hive wasn’t closed properly.
+- The registry hive wasn't closed properly.
 - The registry hive is corrupt.
 - There are missing registry keys or values.
 
@@ -66,9 +66,9 @@ The **BAD_SYSTEM_CONFIG_INFO** stop code occurs if the **SYSTEM** registry hive 
 
 ### Check for hive corruption
 
-The instructions below will help you determine if the cause was due to hive corruption, or if the hive wasn’t closed correctly. If the hive wasn’t closed correctly, then you'll be able to unlock the file and fix your VM.
+The instructions below will help you determine if the cause was due to hive corruption, or if the hive wasn't closed correctly. If the hive wasn't closed correctly, then you'll be able to unlock the file and fix your VM.
 
-1. On your repair VM, open the **Registry Editor** application. Type “REGEDIT” in the Windows search bar to find it.
+1. On your repair VM, open the **Registry Editor** application. Type "REGEDIT" in the Windows search bar to find it.
 1. In Registry Editor, select **HKEY_LOCAL_MACHINE** to highlight it, then select **File > Load Hive…** from the menu.
 1. Browse to `<VOLUME LETTER OF BROKEN OS DISK>:\windows\system32\config\SYSTEM` and select **Open**.
 1. When prompted to enter a name, enter **BROKENSYSTEM**.
@@ -77,9 +77,9 @@ The instructions below will help you determine if the cause was due to hive corr
 
       :::image type="content" source="media/windows-stop-error-bad-system-config-info/load-hive-error.png" alt-text="Screenshot shows an error occurs stating that the Registry Editor can't load the hive.":::
 
-   1. If the hive opens normally, then the hive wasn’t closed properly. Continue to step 5.
+   1. If the hive opens normally, then the hive wasn't closed properly. Continue to step 5.
 
-1. To fix a hive that wasn’t closed properly, highlight **BROKENSYSTEM** then select **File > Unload Hive…** to unlock the file.
+1. To fix a hive that wasn't closed properly, highlight **BROKENSYSTEM** then select **File > Unload Hive…** to unlock the file.
 
 ### Enable the serial console and memory dump collection
 

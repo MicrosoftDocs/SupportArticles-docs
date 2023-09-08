@@ -4,13 +4,11 @@ description: Provides guidance for troubleshooting known issues that may prevent
 ms.date: 11/21/2022
 ms.technology: windows-client-security
 ms.prod: windows-client
-author: Teresa-Motiv
-ms.author: v-tappelgate
 manager: dcscontentpm
 ms.collection: Windows Security Technologies\BitLocker
 ms.topic: troubleshooting
 ms.custom: sap:bitlocker, csstroubleshoot
-ms.reviewer: kaushika
+ms.reviewer: kaushika, v-tappelgate
 audience: itpro
 localization_priority: medium
 ---

@@ -4,7 +4,6 @@ description: This article provides a resolution for the problem when a Multidime
 ms.date: 01/14/2021
 ms.reviewer: yinnw
 ms.topic: troubleshooting
-ms.prod: sql 
 ---
 # MDX queries with calculated measure using the "/" operator run slowly in SSAS
 
@@ -27,4 +26,4 @@ Use the DIVIDE function instead of the `/` operator in the calculation.
 
 ## References
 
-[terminDescription of the standard terminology that is used to describe Microsoft software updatesology](/troubleshoot/windows-client/deployment/standard-terminology-software-updates)
+[terminDescription of the standard terminology that is used to describe Microsoft software updatesology](../../windows-client/deployment/standard-terminology-software-updates.md)

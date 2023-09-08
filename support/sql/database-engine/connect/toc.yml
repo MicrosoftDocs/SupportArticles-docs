@@ -1,0 +1,35 @@
+items:
+- name: Common Connection Issues
+  href: resolve-connectivity-errors-overview.md
+- name: Cannot generate SSPI context
+  href: cannot-generate-sspi-context-error.md
+- name: Existing connection forcibly closed
+  href: tls-exist-connection-closed.md
+- name: Login failed for user
+  href: /sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?context=/troubleshoot/sql/context/context
+- name: Network-related or instance-specific error
+  href: network-related-or-instance-specific-error-occurred-while-establishing-connection.md
+- name: Pre-reqs for connectivity troubleshooting
+  href: resolve-connectivity-errors-checklist.md
+- name: The certificate chain was issued by an authority that isn't trusted
+  href: certificate-chain-not-trusted.md
+- name: Timeout expired errors
+  href: timeout-expired-error.md
+- name: TLS 1.2 support for Microsoft SQL Server
+  href: tls-1-2-support-microsoft-sql-server.md
+- name: Token-based server access validation failed
+  href: cannot-connect-remotely.md
+- name: Untrusted certificate authority error
+  href: error-message-when-you-connect.md
+- name: Winsock LSP results in network or stability issues
+  href: winsock-lsp-network-problem.md
+- name: Connectivity How Tos
+  items:
+  - name: Dynamic vs Static ports
+    href: static-or-dynamic-port-config.md
+  - name: Kerberos Configuration Manager
+    href: using-kerberosmngr-sqlserver.md
+  - name: Testing using UDL file 
+    href: test-oledb-connectivity-use-udl-file.md
+  - name: Using PortQryUI tool
+    href: using-portqrytool-sqlserver.md

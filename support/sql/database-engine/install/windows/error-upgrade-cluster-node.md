@@ -4,7 +4,6 @@ description: This article provides a resolution for the problem that occurs when
 ms.date: 10/23/2020
 ms.custom: sap:Database Engine
 ms.reviewer: ramakoni
-ms.prod: sql
 ---
 # Error when you try to upgrade the cluster node to SQL Server 2012
 

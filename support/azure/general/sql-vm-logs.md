@@ -47,11 +47,11 @@ If you select **Allow access to logs** when you create a Microsoft SQL Server on
 
 | Wmi query| Columns| Frequency-once every...| Link |
 |---|---|---|---|
-| MSFT_Volume| DriveType, DriveLetter, Size, SizeRemaining, FileSystemLabel, HealthStatus, FileSystem|Day| [MSFT_Volume](/previous-versions/windows/desktop/stormgmt/msft-volume?redirectedfrom=MSDN) |
-| MSFT_VirtualDisk| FriendlyName, ResiliencySettingName, NumberOfColumns, Interleave, NumberOfAvailableCopies, OperationalStatus, UniqueIdFormat, HealthStatus, IsManualAttach, Size|Day| [MSFT_VirtualDisk](/previous-versions/windows/desktop/stormgmt/msft-virtualdisk?redirectedfrom=MSDN) |
-| MSFT_PhysicalDisk| FriendlyName, CanPool, OperationalStatus, HealthStatus, Usage, Size|Day| [MSFT_PhysicalDisk](/previous-versions/windows/desktop/stormgmt/msft-physicaldisk?redirectedfrom=MSDN) |
-| MSFT_Disk| Number, NumberOfPartitions, SerialNumber|Day| [MSFT_Disk](/previous-versions/windows/desktop/stormgmt/msft-disk?redirectedfrom=MSDN) |
-| MSFT_Partition| DiskNumber, PartitionNumber, DriveLetter, GptType, IsBoot, IsSystem, Size|Day| [MSFT_Partition](/previous-versions/windows/desktop/stormgmt/msft-partition?redirectedfrom=MSDN) |
+| MSFT_Volume| DriveType, DriveLetter, Size, SizeRemaining, FileSystemLabel, HealthStatus, FileSystem|Day| [MSFT_Volume](/windows-hardware/drivers/storage/msft-volume) |
+| MSFT_VirtualDisk| FriendlyName, ResiliencySettingName, NumberOfColumns, Interleave, NumberOfAvailableCopies, OperationalStatus, UniqueIdFormat, HealthStatus, IsManualAttach, Size|Day| [MSFT_VirtualDisk](/windows-hardware/drivers/storage/msft-virtualdisk) |
+| MSFT_PhysicalDisk| FriendlyName, CanPool, OperationalStatus, HealthStatus, Usage, Size|Day| [MSFT_PhysicalDisk](/windows-hardware/drivers/storage/msft-physicaldisk) |
+| MSFT_Disk| Number, NumberOfPartitions, SerialNumber|Day| [MSFT_Disk](/windows-hardware/drivers/storage/msft-disk) |
+| MSFT_Partition| DiskNumber, PartitionNumber, DriveLetter, GptType, IsBoot, IsSystem, Size|Day| [MSFT_Partition](/windows-hardware/drivers/storage/msft-partition) |
   
 ## More information
 

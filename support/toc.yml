@@ -3,29 +3,31 @@
 - name: Welcome
   href: developer/dotnet/welcome-dotnet-landing.yml
 - name: Welcome
-  href: developer/host-integration-server/welcome-host-integration-server.md
+  href: developer/host-integration-server/welcome-host-integration-server.yml
 - name: Welcome
   href: developer/visualstudio/welcome-visual-studio.yml
 - name: Welcome
-  href: developer/webapps/welcome-webapps.yml
+  href: developer/webapps/aspnet-welcome.yml
 - name: Welcome
-  href: windows/win32/welcome-windowsdeveloper.md
+  href: developer/webapps/iis/iis-welcome.yml
+- name: Welcome
+  href: windows/win32/welcome-windowsdeveloper.yml
 - name: Welcome
   href: windows/index.yml
 - name: Welcome
-  href: windows-hardware/drivers/welcome-windowshardware.md
-- name: Microsoft Endpoint Manager
+  href: windows-hardware/drivers/welcome-windowshardware.yml
+- name: Microsoft Intune
   href: mem/index.yml
 - name: System Center
   href: system-center/index.yml
 - name: Welcome
-  href: developer/biztalk/welcome-biztalk-server.md
+  href: developer/biztalk/welcome-biztalk-server.yml
 - name: Welcome
-  href: developer/browsers/welcome-browsers.md
+  href: developer/browsers/welcome-browsers.yml
 - name: Welcome
   href: azure/index.yml
 - name: Welcome
-  href: sql/welcome-sql-server.md
+  href: sql/welcome-sql-server.yml
 - name: Welcome
   href: dynamics-365/index.yml
 - name: Welcome

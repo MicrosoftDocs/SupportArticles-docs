@@ -4,7 +4,6 @@ description: This article provides resolutions for the error that occurs when mo
 ms.date: 08/04/2020
 ms.custom: sap:Administration and Management
 ms.reviewer: akbarf, ramakoni
-ms.prod: sql
 ---
 # Max_Queue_Readers property is ignored when you try to limit activation tasks in Service Broker
 

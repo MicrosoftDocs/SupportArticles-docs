@@ -4,13 +4,12 @@ description: This article troubleshoots SQL Server installation or startup failu
 ms.date: 12/20/2022
 ms.custom: sap:Administration and Management
 ms.reviewer: ramakoni, dplessMSFT, briancarrig, suresh-kandoth 
-ms.prod: sql
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
 # Troubleshoot errors related to system disk sector size greater than 4 KB
 
-This article provides solutions for troubleshooting errors during installation or starting an instance of SQL Server on Windows 11. This article is valid for all released versions of SQL Server.
+This article provides solutions for troubleshooting errors during installation or starting an instance of SQL Server on Windows 11 and Windows Server 2022. This article is valid for all released versions of SQL Server.
 
 The errors discussed in this article are related to system disk sector size greater than 4 KB.
 
@@ -102,16 +101,16 @@ Consider _one_ of the following solutions:
 
 - If you have multiple drives on this system, you can specify a different location for the database files after installation of SQL Server is complete. Make sure that drive reflects a supported sector size when querying the `fsutil` commands. SQL Server currently supports sector storage sizes of 512 bytes and 4096 bytes.
 
-- You can add a registry key, which will cause the behavior of Windows 11 and later to be similar to Windows 10. This will force the sector size to be emulated as 4 KB. To add the `ForcedPhysicalSectorSizeInBytes` registry key, use the [Registry Editor](#registryeditor) or run commands as described in the [PowerShell as Administrator](#powershellasadmin) section.
+- You can add a registry key, which will cause the behavior of Windows 11 and later to be similar to Windows 10. This will force the sector size to be emulated as 4 KB. To add the `ForcedPhysicalSectorSizeInBytes` registry key, use the [Registry Editor](#registryeditor) or run commands as described in the [PowerShell as Administrator](#powershellasadmin) section. You must reboot the device after adding the registry key in order for this change to take effect.
   
   > [!IMPORTANT]
-  > This section contains steps that tell you how to modify the Windows registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see the [How to back up and restore the registry in Windows](/troubleshoot/windows-server/performance/windows-registry-advanced-users#back-up-the-registry) article.
+  > This section contains steps that tell you how to modify the Windows registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see the [How to back up and restore the registry in Windows](../../../windows-server/performance/windows-registry-advanced-users.md#back-up-the-registry) article.
   
     <a id="registryeditor"></a>**Registry Editor**
   
     1. Navigate to `Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device`.
     1. On the **Edit** menu, point to **New**, and then select **Multi-String value**. Name it `ForcedPhysicalSectorSizeInBytes`.
-    1. Modify the new value, type in `* 4095`. Click **OK** and close the Registry editor.
+    1. Modify the new value, type in `* 4095`. Select **OK** and close the Registry editor.
   
     <a id="commandpromptadmin"></a>**Command Prompt as Administrator**
 

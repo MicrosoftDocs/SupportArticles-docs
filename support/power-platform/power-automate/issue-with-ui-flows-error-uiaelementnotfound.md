@@ -3,8 +3,8 @@ title: Issue with UI flows error UIAElementNotFound
 description: Provides a resolution to solve the UIAElementNotFound error during UI flows running.
 ms.reviewer: priyase
 ms.topic: troubleshooting
-ms.date: 3/31/2021
-ms.subservice: power-automate-flows
+ms.date: 03/31/2021
+ms.subservice: power-automate-desktop-flows
 ---
 # Issue with UI flows UIAElementNotFound error
 
@@ -23,7 +23,7 @@ When trying to run UI flows, you may see this error:
 
 ## Verifying issue
 
-This error occurs if your UI flows has the property **Use coordinates** set to **true** and UI flows is unable to locate the element using coordinates and the display resolution and scale on your playback machine does not match the scale and resolution of the machine on which the UI flows was recorded. The issue can be verified by following these steps:
+This error occurs if your UI flows have the property **Use coordinates** set to **true** and UI flows can't locate the element using coordinates and the display resolution and scale on your playback machine doesn't match the scale and resolution of the machine on which the UI flows were recorded. The issue can be verified by following these steps:
 
 1. Select and expand the Launch \<Application Name> step in your UI flow.
 1. Select the **Show more** link.
@@ -40,5 +40,5 @@ This error occurs if your UI flows has the property **Use coordinates** set to *
 
 ## Solving steps
 
-1. If your UI flows has the property **Use coordinates** set to **true**, it is required that the screen resolution & scale while recording should be the same as the screen resolution & scale during playback.
+1. If your UI flows have the property **Use coordinates** set to **true**, it's required that the screen resolution & scale while recording should be the same as the screen resolution & scale during playback.
 2. Keep the app maximized while recording to get an optimum performance.

@@ -1,15 +1,13 @@
 ---
 title: Guidance for troubleshooting Windows Update issues
 description: Learn how to troubleshoot scenarios related to Windows Updates
-ms.date: 05/13/2022
-author: v-tappelgate
-ms.author: v-tappelgate
+ms.date: 04/28/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, v-tappelgate
 ms.custom: csstroubleshoot
 ms.technology: windows-client-deployment
 ---
@@ -24,7 +22,7 @@ These solutions designed to get you started on Windows Update troubleshooting sc
 
 ### Step 1: Run the diagnostic tool for your version of Windows
 
-- **Windows 7, Windows 2008 R2 or Windows 2008 SP2:** Run the System Readiness (CheckSUR) tool. For more information, see [Fix errors that are found in the CheckSUR log file](/troubleshoot/windows-server/deployment/fix-windows-update-errors#how-to-fix-errors-that-are-found-in-the-checksur-log-file).
+- **Windows 7, Windows 2008 R2 or Windows 2008 SP2:** Run the System Readiness (CheckSUR) tool. For more information, see [Fix errors that are found in the CheckSUR log file](../../windows-server/deployment/fix-windows-update-errors.md#fix-errors-found-in-the-checksur-log-file).
 - **Windows 8 and later version of Windows:** Open an administrative command prompt window, and then run the following command:  
 
   ```cmd
@@ -41,7 +39,7 @@ For more information, see [Latest Servicing Stack Updates](https://msrc.microsof
 
 ### Step 4: Check for and fix any Windows file corruption
 
-For more information, see [Fix Windows file corruption](/troubleshoot/windows-server/deployment/fix-windows-update-errors).
+For more information, see [Fix Windows file corruption](../../windows-server/deployment/fix-windows-update-errors.md).
 
 ### Step 5: Download the update package and try to install the update manually
 
@@ -126,6 +124,10 @@ To troubleshoot this issue, follow these steps:
 1. **Feature updates only:** Check that the device is successfully enrolled in feature update management by the deployment service.  
 
    A device that isn't successfully enrolled might receive different updates according to its feature update deferral period. A device that's successfully enrolled is represented by an Azure AD device resource. That resource documents an update management enrollment for feature updates, and has no Azure AD device registration errors.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).
 
 ## References
 

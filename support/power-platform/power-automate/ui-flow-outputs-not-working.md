@@ -1,10 +1,10 @@
 ---
 title: UI flow outputs not working
-description: Troubleshooting the issue that output is not successfully captured from the field that was selected.
+description: Troubleshooting the issue that output isn't successfully captured from the field that was selected.
 ms.reviewer: abmehr
 ms.topic: troubleshooting
-ms.date: 3/31/2021
-ms.subservice: power-automate-flows
+ms.date: 03/31/2021
+ms.subservice: power-automate-desktop-flows
 ---
 # UI flow outputs not working
 
@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 4555745
 
 ## Symptoms
 
-Output is not successfully captured from the field that was selected.
+Output isn't successfully captured from the field that was selected.
 
 ## Verifying issue
 
@@ -24,7 +24,7 @@ Check [Known issues and solutions](/power-automate/desktop-flows/create-desktop#
 ## Solving steps
 
 - Make sure that the output text is in a readable field.
-- Make sure there is not an extra click action between selecting the recorder and selecting the field.
+- Make sure there's not an extra click action between selecting the recorder and selecting the field.
 - If it does happen, you can identify and delete the extra step in the recorder later. For more information, see [Edit Windows recorder (V1) flows](/power-automate/desktop-flows/edit-desktop).
 
 ## Best practices
@@ -39,6 +39,6 @@ Check [Known issues and solutions](/power-automate/desktop-flows/create-desktop#
   3. Press Ctrl+A to select the text in the output field.
   4. Press Ctrl+C to select the text in the output field.
   5. Paste the text by pressing Ctrl+V.
-  6. If you are not able to see any text here, the field cannot be used to read text using Use Output.
+  6. If you aren't able to see any text here, the field can't be used to read text using Use Output.
 
 - Getting started: [Use inputs and outputs in Windows recorder (V1) flows](/power-automate/desktop-flows/inputs-outputs-desktop).

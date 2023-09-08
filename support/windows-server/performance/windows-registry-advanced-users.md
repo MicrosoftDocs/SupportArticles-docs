@@ -1,7 +1,7 @@
 ---
 title: Windows registry for advanced users
 description: Describes the Windows registry and provides information about how to edit it.
-ms.date: 09/08/2020
+ms.date: 04/06/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -15,7 +15,7 @@ ms.technology: windows-server-performance
 ---
 # Windows registry information for advanced users
 
-This article describes the Windows registry and provides information about how to edit and back up it.
+This article describes the Windows registry and provides information about how to edit and back it up.
 
 _Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 256986

@@ -1,10 +1,9 @@
 ---
 title: Error when you run CLR object or create assembly
-description: This article helps you resolve two different problems that can occur when working with CLR objects on a database that has been moved from a different instance of SQL Server.
+description: This article helps you resolve two different problems that occur when working with CLR objects on a database that has been moved from a different instance of SQL Server.
 ms.date: 09/19/2022
 ms.custom: sap:Administration and Management  
 ms.reviewer: jackli
-ms.prod: sql
 ---
 
 # Error when you run an existing CLR object or create an assembly

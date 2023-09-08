@@ -1,7 +1,7 @@
 ---
 title: Extranet Smart Lockout feature in Windows Server 2016
 description: Describes the Extranet Smart Lockout feature in Windows Server 2016.
-ms.date: 12/07/2020
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 4096478
 
 ## Overview
 
-As of the March 2018 update for Windows Server 2016, Active Directory Federation Services (AD FS) has a new feature that is namedExtranet Smart Lockout (ESL). In an era of increased attacks on authentication services, ESL enables AD FS t o differentiate between sign-in attempts from a valid user and sign-ins from what may be an attacker. As a result, AD FS can lock out attackers while letting valid users continue to use their accounts. This prevents denial of service for users and protects against targeted attacks against known user accounts.
+As of the March 2018 update for Windows Server 2016, Active Directory Federation Services (AD FS) has a new feature that is namedExtranet Smart Lockout (ESL). In an era of increased attacks on authentication services, ESL enables AD FS to differentiate between sign-in attempts from a valid user and sign-ins from what may be an attacker. As a result, AD FS can lock out attackers while letting valid users continue to use their accounts. This prevents denial of service for users and protects against targeted attacks against known user accounts.
 
 The ESL feature is available for AD FS in Windows Server 2016.
 

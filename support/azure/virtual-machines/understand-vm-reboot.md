@@ -1,6 +1,6 @@
 ---
 title: Understand a system reboot for an Azure VM
-description: Lists the events that can cause a VM to reboot
+description: Lists the events that can cause a VM to reboot.
 services: virtual-machines
 documentationcenter: ''
 author: genlin
@@ -11,7 +11,7 @@ ms.subservice: vm-cannot-start-stop
 ms.topic: troubleshooting
 ms.tgt_pltfrm: na
 ms.workload: infrastructure-services
-ms.date: 10/31/2018
+ms.date: 05/15/2023
 ms.author: genli
 
 ---
@@ -102,7 +102,7 @@ Because some host server faults can be specific to that server, a repeated VM re
 
 If the host server cannot reboot for any reason, the Azure platform initiates an auto-recovery action to take the faulty host server out of rotation for further investigation.
 
-All VMs on that host are automatically relocated to a different, healthy host server. This process is usually complete within 15 minutes. To learn more about the auto-recovery process, see [Auto-recovery of VMs](https://azure.microsoft.com/blog/service-healing-auto-recovery-of-virtual-machines).
+All VMs on that host are automatically relocated to a different, healthy host server. Although this process typically completes within 15 minutes, the time needed for recovery may vary depending on several factors, including the size of the host memory and the recovery methods employed. To learn more about the auto-recovery process, see [Auto-recovery of VMs](https://azure.microsoft.com/blog/service-healing-auto-recovery-of-virtual-machines).
 
 ### Unplanned maintenance
 
@@ -127,6 +127,6 @@ In rare circumstances, a widespread issue can affect multiple servers in an Azur
 
 ## Diagnose VM Restarts
 
-You can use the Diagnose and Solve blade on the VM blade to run additional diagnostics. This may uncover more specific reasons for your recent VM restart.
+You can use the Diagnose and Solve blade on the VM blade to run additional diagnostics. This may uncover more specific reasons for your recent VM restart. If there is any Guest OS issue, please collect memory dump and contact support.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

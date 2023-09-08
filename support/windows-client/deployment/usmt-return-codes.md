@@ -1,21 +1,21 @@
 ---
-title: USMT return codes
+title: User State Migration Tool (USMT) return codes
 description: Learn about User State Migration Tool (USMT) 10.0 return codes and error messages. Also view a list of USMT return codes and their associated migration steps.
 ms.reviewer: frankroj
 manager: dcscontentpm
 ms.author: delhan
 ms.prod: windows-client
 author: Deland-Han
-ms.date: 11/22/2022
+ms.date: 04/28/2023
 ms.topic: troubleshooting
 ms.technology: windows-client-deployment
 ms.custom: sap:usmt, csstroubleshoot
 audience: itpro
 localization_priority: medium
 ---
-# USMT return codes
+# User State Migration Tool (USMT) return codes
 
-This article describes User State Migration Tool (USMT) 10.0 return codes and error messages. Also included is a table listing the USMT return codes with their associated mitigation steps. In addition, this article provides tips to help you use the logfiles to determine why you received an error.
+This article describes USMT 10.0 return codes and error messages. Also included is a table listing the USMT return codes with their associated mitigation steps. In addition, this article provides tips to help you use the logfiles to determine why you received an error.
 
 Understanding the requirements for running USMT can help minimize errors in your USMT migrations. For more information, see [USMT Requirements](/windows/deployment/usmt/usmt-requirements).
 
@@ -333,6 +333,10 @@ The following information lists each return code by numeric value, along with th
 | **An error occurred in the gather process** | Data transfer has begun, and there was an error during migration-store creation or during the apply phase. Review the ScanState log or LoadState log for details. |
 | **Out of disk space while writing the store** | Data transfer has begun, and there was an error during migration-store creation or during the apply phase. Review the ScanState log or LoadState log for details. |
 | **Out of temporary disk space on the local system** | Data transfer has begun, and there was an error during migration-store creation or during the apply phase. Review the ScanState log or LoadState log for details. |
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).
 
 ## Related articles
 

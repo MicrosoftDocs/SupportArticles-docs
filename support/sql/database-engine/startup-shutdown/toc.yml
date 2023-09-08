@@ -1,0 +1,33 @@
+items:
+- name: Access is denied error and SQL Server doesn't start
+  href: event-id-7000-access-denied.md
+- name: Error 17113 when you start SQL Server service
+  href: error-17113-start-service.md
+- name: Error 1068 when starting SQL Server
+  href: agent-service-fails-start-stand-alone-server.md
+- name: Error 1069 when starting SQL Server
+  href: error-1069-service-cannot-start.md
+- name: Error 17182 when you start SQL Server service
+  href: error-17182-protocols-disabled-start-failure.md
+- name: Event ID 17058 and SQL Server doesn't start
+  href: event-id-17058-start-sql-server.md
+- name: Event ID 1814 and SQL Server doesn't start
+  href: event-id-1814-fail-start.md
+- name: Event ID 33565 and SQL Server doesn't start
+  href: event-id-33565-start-sql-server.md
+- name: Event ID 33566 and SQL Server doesn't start
+  href: event-id-33566-start-sql-server.md
+- name: Event ID 7000 and SQL Server doesn't start
+  href: event-id-7000-fail-start.md
+- name: Fails to start with error 17182
+  href: fails-start-error-17182.md
+- name: Manage the error log
+  href: manage-error-log.md
+- name: SQL Server startup errors
+  href: sql-server-startup-errors.md
+- name: SQL Service cannot start after configuring SSL certificate
+  href: service-cannot-start.md
+- name: SQL can't start with a domain account
+  href: sql-cannot-start-with-domain-account.md
+- name: SQL Server agent may not start or crash 
+  href: sql-server-agent-crashes-upon-start.md

@@ -1,7 +1,7 @@
 ---
 title: Fix errors found in CheckSUR.log
 description: Describes how to fix errors that are logged by the System Update Readiness tool (CheckSUR) but remain unresolved.
-ms.date: 10/10/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -21,7 +21,7 @@ _Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2
 _Original KB number:_ &nbsp; 2700601
 
 > [!NOTE]
-> Make sure you download and run the most recent version of CheckSUR.exe because the tool is updated periodically. To to this, see [Fix Windows Update errors by using the DISM or System Update Readiness tool](/troubleshoot/windows-server/deployment/fix-windows-update-errors).
+> Make sure you download and run the most recent version of CheckSUR.exe because the tool is updated periodically. To to this, see [Fix Windows Update errors by using the DISM or System Update Readiness tool](../../windows-server/deployment/fix-windows-update-errors.md).
 
 ## Use the CheckSur log
 
@@ -100,3 +100,7 @@ The following commands take ownership of this folder, grant Full Control of the 
 takeown /f C:\Windows\winsxs\ x86_microsoft-windows-ie-adminkitmostfiles_31bf3856ad364e35_6.0.6000.16386_none_abfb5fd109dad8b8
 icacls C:\Windows\winsxs\x86_microsoft-windows-ie-adminkitmostfiles_31bf3856ad364e35_6.0.6000.16386_none_abfb5fd109dad8b8 /grant Administrators:F copy C:\Temp\admparse.dll c:\Windows\winsxs\x86_microsoft-windows-ieadminkitmostfiles_31bf3856ad364e35_6.0.6000.16386_none_abfb5fd109dad8b8\admparse.dll
 ```
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

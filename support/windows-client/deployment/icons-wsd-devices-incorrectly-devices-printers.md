@@ -1,7 +1,7 @@
 ---
 title: Icons for WSD devices show up incorrectly as a different class
 description: This article describes an issue with Web Services for Devices, and includes an automated FixIt solution.
-ms.date: 09/21/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -38,3 +38,7 @@ To resolve this problem, clear out the Device Stage Metadata Store and download 
 4. You may need to type *Y* to confirm several more deletions, depending on the number of Device Stage packages currently on your computer. (all of them will be freshly downloaded by Windows)
 
 These steps will delete the cache contents containing the incorrect package and prompt Windows 7 to redownload the appropriate packages with the correct Device Metadata.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

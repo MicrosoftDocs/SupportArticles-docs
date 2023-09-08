@@ -29,3 +29,13 @@ landingContent:
             url: ./rename-service-url.md
           - text: Server specified can't be reached error
             url: ./server-specified-could-not-be-reached-error-occurs.md
+  - title: Documentation and Support
+    linkLists:      
+      - linkListType: reference
+        links:          
+          - text: Azure DevOps documentation 
+            url: /azure/devops
+          - text: Azure DevOps Services support
+            url: https://azure.microsoft.com/en-us/support/devops
+          - text: Developer Community 
+            url: https://developercommunity.visualstudio.com/home

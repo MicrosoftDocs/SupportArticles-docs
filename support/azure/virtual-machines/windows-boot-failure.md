@@ -1,7 +1,7 @@
 ---
 title: Windows boot error (INACCESSIBLE_BOOT_DEVICE) or (Boot failure) in an Azure VM
-description: Provides a solution to an issue where Windows VM doesn't start with error INACCESSIBLE_BOOT_DEVICE or Boot failure.
-ms.date: 07/21/2020
+description: Provides a solution to an issue where a Windows VM doesn't start with error INACCESSIBLE_BOOT_DEVICE or Boot failure.
+ms.date: 05/18/2023
 ms.reviewer: 
 ms.service: virtual-machines
 ms.subservice: vm-cannot-start-stop
@@ -9,14 +9,14 @@ ms.collection: windows
 ---
 # Windows boot error INACCESSIBLE_BOOT_DEVICE in an Azure VM
 
-This article provides a solution to an issue where Windows VM doesn't start with error "INACCESSIBLE_BOOT_DEVICE" or "Boot failure".
+This article provides a solution to an issue where a Windows virtual machine (VM) doesn't start with the error "INACCESSIBLE_BOOT_DEVICE" or "Boot failure".
 
 _Original product version:_ &nbsp; Virtual Machine running Windows  
 _Original KB number:_ &nbsp; 4010143
 
-## Symptom
+## Symptoms
 
-Windows doesn't start and generates the following errors:
+A Windows VM doesn't start and generates one of the following errors:
 
 > Boot failure. Reboot and Select proper Boot device or Insert Boot Media in selected Boot device.
 
@@ -39,9 +39,12 @@ To fix the issue, stop (de-allocate) and start the VM then recheck to see if iss
 
 ## Verify if the Windows partition is marked as active
 
-1. Delete the virtual machine (VM). Make sure that you select the **Keep the disks** option when you do this.
+> [!NOTE]
+> This section applies only to Generation 1 VMs because Generation 2 VMs that use UEFI don't use an active partition.
+
+1. Delete the VM. Make sure that you select the **Keep the disks** option when you do this.
 2. Attach the OS disk as a data disk to another VM (a troubleshooting VM). For more information, see [How to attach a data disk to a Windows VM in the Azure portal](/azure/virtual-machines/windows/attach-managed-disk-portal).
-3. Connect to the troubleshooting VM. Open **Computer management** > **Disk management**. Make sure that the OS disk is online and that its partitions have drive letters assigned
+3. Connect to the troubleshooting VM. Open **Computer management** > **Disk management**. Make sure that the OS disk is online and that its partitions have drive letters assigned.
 4. Identify the Boot partition and the Windows partition. If there's only one partition on the OS disk, this partition is the Boot partition and the Windows partition.
 
     If the OS disk contains more than one partition, you can identify them by viewing the folders in the partitions:  
@@ -71,21 +74,21 @@ To fix the issue, stop (de-allocate) and start the VM then recheck to see if iss
         sel disk <number of the disk>
         ```
 
-    3. List the volume, and then select the volume that contains Windows folder.
+    3. List the volume, and then select the volume that contains the Windows folder.
 
         ```console
         list vol
         sel vol <number of the volume>
         ```
 
-    4. List the partition on the disk, and then select the partition contains Windows folder.
+    4. List the partition on the disk, and then select the partition contains the Windows folder.
 
         ```console
         list partition
         sel partition <number of the Windows partition>
         ```
 
-    5. View the  status  of the partition:
+    5. View the status of the partition:
 
         ```console
         detail partition
@@ -95,7 +98,7 @@ To fix the issue, stop (de-allocate) and start the VM then recheck to see if iss
 
         If the partition is active, go to the step 2.
 
-        If the partition is not active, run the following command line to active it:
+        If the partition isn't active, run the following command line to active it:
 
         ```console
         active
@@ -105,7 +108,7 @@ To fix the issue, stop (de-allocate) and start the VM then recheck to see if iss
 
 7. Detach the repaired disk from the troubleshooting VM. Then, create a VM from the OS disk.
 
-## Repair the Boot Configuration data
+## Repair the Boot Configuration Data
 
 1. Run the following command line as an administrator to verifies the file system integrity and fixes logical file system errors.
 
@@ -115,34 +118,60 @@ To fix the issue, stop (de-allocate) and start the VM then recheck to see if iss
 
 2. Run the following command line as an administrator, and then record the identifier of Windows Boot Loader (not Windows Boot Manager). The identifier is a 32-character code and it looks like this: xxxxxxxx-xxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. You will use this identifier in the next step.
 
-    ```console
-    bcdedit /store <Boot partition>:\boot\bcd /enum
-    ```  
+   1. For Generation 1 VMs:
 
-3. Repair the Boot Configuration data by running the following command lines. You must replace these placeholders by the actual values:
+       ```console
+       bcdedit /store <Boot partition>:\boot\bcd /enum
+       ```  
+   2. For Generation 2 VMs:
+ 
+       ```console
+       bcdedit /store <Volume Letter of EFI System Partition>:EFI\Microsoft\boot\bcd /enum /v
+       ``` 
+
+3. Repair the Boot Configuration Data by running the following command lines. You must replace these placeholders by the actual values:
 
     > [!NOTE]
-    > This step is applied to most Boot configuration data corruption issues. You need perform this step even if you see the **Device** and **OSDevice** are pointing to the correct partition.  
+    > This step is applied to most Boot Configuration Data corruption issues. You need perform this step even if you see the **Device** and **OSDevice** are pointing to the correct partition.  
 
-    - \<Windows partition> is the partition that contains a folder named "Windows."
-    - \<Boot partition> is the partition that contains a hidden system folder named "Boot."
-    - \<Identifier> is the identifier of Windows Boot Loader you found in the previous step.
+    - `<Windows partition` is the partition that contains a folder named "Windows."
+    - `<Boot partition>` is the partition that contains a hidden system folder named "Boot."
+    - `<Identifier>` is the identifier of Windows Boot Loader you found in the previous step.
 
-    ```console
-    bcdedit /store <Boot partition>:\boot\bcd /set {bootmgr} device partition=<boot partition>:
+   1. For Generation 1 VMs:
 
-    bcdedit /store <Boot partition>:\boot\bcd /set {bootmgr} integrityservices enable
+      ```console
+      bcdedit /store <Boot partition>:\boot\bcd /set {bootmgr} device partition=<boot partition>:
+      bcdedit /store <Boot partition>:\boot\bcd /set {bootmgr} integrityservices enable
+      bcdedit /store <Boot partition>:\boot\bcd /set {<Identifier>} device partition=<Windows partition>:
+      bcdedit /store <Boot partition>:\boot\bcd /set {<Identifier>} integrityservices enable
+      bcdedit /store <Boot partition>:\boot\bcd /set {<identifier>} recoveryenabled Off
+      bcdedit /store <Boot partition>:\boot\bcd /set {<identifier>} osdevice partition=<Windows partition>:
+      bcdedit /store <Boot partition>:\boot\bcd /set {<identifier>} bootstatuspolicy IgnoreAllFailures
+      ```
 
-    bcdedit /store <Boot partition>:\boot\bcd /set {<Identifier>} device partition=<Windows partition>:
+      If the VHD has a single partition and both the BCD folder and Windows folder are in the same volume, and if the previous setup didn't work, then try replacing the partition values with `boot`, as shown below:
 
-    bcdedit /store <Boot partition>:\boot\bcd /set {<Identifier>} integrityservices enable
+      ```console
+      bcdedit /store <BCD FOLDER - DRIVE LETTER>:\boot\bcd /set {bootmgr} device boot
+      bcdedit /store <BCD FOLDER - DRIVE LETTER>:\boot\bcd /set {bootmgr} integrityservices enable
+      bcdedit /store <BCD FOLDER - DRIVE LETTER>:\boot\bcd /set {<IDENTIFIER>} device boot
+      bcdedit /store <BCD FOLDER - DRIVE LETTER>:\boot\bcd /set {<IDENTIFIER>} integrityservices enable
+      bcdedit /store <BCD FOLDER - DRIVE LETTER>:\boot\bcd /set {<IDENTIFIER>} recoveryenabled Off
+      bcdedit /store <BCD FOLDER - DRIVE LETTER>:\boot\bcd /set {<IDENTIFIER>} osdevice boot
+      bcdedit /store <BCD FOLDER - DRIVE LETTER>:\boot\bcd /set {<IDENTIFIER>} bootstatuspolicy IgnoreAllFailures
+      ```
+   2. For Generation 2 VMs:
 
-    bcdedit /store <Boot partition>:\boot\bcd /set {<identifier>} recoveryenabled Off
-
-    bcdedit /store <Boot partition>:\boot\bcd /set {<identifier>} osdevice partition=<Windows partition>:
-
-    bcdedit /store <Boot partition>:\boot\bcd /set {<identifier>} bootstatuspolicy IgnoreAllFailures
-    ```
+     ```console
+     bcdedit /store <Volume Letter of EFI System Partition>:EFI\Microsoft\boot\bcd /set {bootmgr} device partition=<Volume Letter of EFI System Partition>:
+     bcdedit /store <Volume Letter of EFI System Partition>:EFI\Microsoft\boot\bcd /set {bootmgr} integrityservices enable
+     bcdedit /store <Volume Letter of EFI System Partition>:EFI\Microsoft\boot\bcd /set {<IDENTIFIER>} device partition=<WINDOWS FOLDER - DRIVE LETTER>:
+     bcdedit /store <Volume Letter of EFI System Partition>:EFI\Microsoft\boot\bcd /set {<IDENTIFIER>} integrityservices enable
+     bcdedit /store <Volume Letter of EFI System Partition>:EFI\Microsoft\boot\bcd /set {<IDENTIFIER>} recoveryenabled Off
+     bcdedit /store <Volume Letter of EFI System Partition>:EFI\Microsoft\boot\bcd /set {<IDENTIFIER>} osdevice partition=<WINDOWS FOLDER - DRIVE LETTER>:
+     bcdedit /store <Volume Letter of EFI System Partition>:EFI\Microsoft\boot\bcd /set {<IDENTIFIER>} bootstatuspolicy IgnoreAllFailures
+     ```
 
 4. Detach the repaired OS disk from the troubleshooting VM. Then, create a new VM from the OS disk.
 

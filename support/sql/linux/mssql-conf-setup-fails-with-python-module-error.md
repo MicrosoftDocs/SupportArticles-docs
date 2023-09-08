@@ -4,9 +4,8 @@ description: This article helps you resolve the mssql-conf setup fails with Pyth
 ms.date: 03/14/2022
 ms.custom: sap:SQL Server 2019 on Linux 
 author: ronking-zhu
-ms.author: v-jayaramanp
-ms.reviewer: rl-msft
-ms.prod: sql
+ms.author: roz
+ms.reviewer: rl-msft, v-jayaramanp
 ms.topic: troubleshooting
 ---
 

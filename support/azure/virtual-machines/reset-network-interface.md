@@ -2,10 +2,10 @@
 title: How to reset network interface for Azure Windows VM
 description: Shows how to reset network interface for Azure Windows VM
 services: virtual-machines, azure-resource-manager
-documentationcenter: ''
 author: genlin
 manager: dcscontentpm
 tags: top-support-issue, azure-resource-manager
+ms.custom: devx-track-azurepowershell
 ms.service: virtual-machines
 ms.subservice: vm-cannot-connect
 ms.collection: windows
@@ -13,7 +13,6 @@ ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
 ms.date: 05/26/2022
 ms.author: genli
-
 ---
 # How to reset network interface for Azure Windows VM
 

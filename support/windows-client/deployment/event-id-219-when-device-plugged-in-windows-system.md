@@ -1,7 +1,7 @@
 ---
 title: Event ID 219 is logged when a device is plugged into a Windows-based system
 description: Describes a scenario in which event ID 219 is logged when a device is plugged into a Windows-based system.
-ms.date: 12/03/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -41,3 +41,7 @@ However, for some cases, when the system tries to load the driver, Windows Drive
 The driver that Windows tries to load will be retried. Unless the events are logged continuously there is no need to do anything, the events are safe to ignore.
 
 You can confirm the driver is loaded successfully in the **System Information**, and you can confirm the devices are running correctly in the **Device Manager**.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

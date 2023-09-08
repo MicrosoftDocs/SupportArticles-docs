@@ -1,7 +1,7 @@
 ---
 title: .NET Framework 4.5.1 (web installer) for Windows 7 SP1 and Windows Server 2008 R2 SP1
 description: Describes the Microsoft .NET Framework 4.5.1 (web installer) for Windows 7 SP1 and Windows Server 2008 R2 SP1.
-ms.date: 09/15/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -59,3 +59,7 @@ You may have to restart the computer after you install this software if any affe
 ## Status
 
 Microsoft has confirmed that this is a problem.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

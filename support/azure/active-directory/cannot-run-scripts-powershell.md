@@ -5,6 +5,7 @@ ms.date: 10/26/2021
 ms.reviewer: willfid, willfid
 ms.service: active-directory
 ms.subservice: enterprise-users
+ms.custom:
 ---
 # Can't run scripts in Azure Active Directory Module for Windows PowerShell
 

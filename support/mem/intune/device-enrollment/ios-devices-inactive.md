@@ -8,7 +8,7 @@ ms.reviewer: kaushika
 
 # iOS or iPadOS devices aren't checking in with the Intune service
 
-This article fixes an issue where iOS/iPadOS devices are inactive or the Microsoft Endpoint Manager admin console can't communicate with them. Devices must check in periodically with Intune to maintain access to protected corporate resources. If devices don't check in:
+This article fixes an issue where iOS/iPadOS devices are inactive or the Microsoft Intune admin console can't communicate with them. Devices must check in periodically with Intune to maintain access to protected corporate resources. If devices don't check in:
 
 - They can't receive policy, apps, and remote commands from the Intune service.
 - They show a Management State of **Unhealthy** in the administrator console.

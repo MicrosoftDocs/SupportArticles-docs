@@ -4,7 +4,6 @@ description: This article provides some guidance regarding defragmentation of SQ
 ms.date: 09/28/2022
 ms.custom: sap:Administration and Management
 ms.reviewer: ramakoni
-ms.prod: sql
 ---
 # Defragmenting SQL Server database disk drives
 

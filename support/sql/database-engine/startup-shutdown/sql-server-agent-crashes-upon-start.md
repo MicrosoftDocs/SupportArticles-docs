@@ -2,10 +2,7 @@
 title: SQL Server agent crashes when you try to start it
 description: This article discusses the issues experienced by SQL Server agent service when you create multiple jobs in your SQL Server instance.
 ms.date: 11/08/2022
-author: padmajayaraman
-ms.author: v-jayaramanp
-ms.reviewer: ramakoni1
-ms.prod: sql
+ms.reviewer: ramakoni1, v-jayaramanp
 ms.custom: sap:Administration and Management
 ---
 
@@ -61,7 +58,8 @@ A SQL Server agent crashes when you try to start it or takes longer than expecte
     <Time Stamp> - ? [128] Subsystem 'PowerShell' stopped (exit code 1)\
     <Time Stamp> - ? [128] Subsystem 'SSIS' stopped (exit code 1)\
     <Time Stamp> - ? [175] Job scheduler engine stopped\
-    ``` 
+    ```
+
 - **Scenario 3**: The database engine server displays a SQL Server process ID (SPID) from the "SQLAgent - Generic Refresher" service. Additionally, the following job is displayed as running in the input buffer of the SPID: 
 
 ```sql
@@ -89,4 +87,5 @@ To work around this issue, delete the jobs that you don't require.
 
 - For more information about how to delete a job, see [Delete One or More Jobs](/sql/ssms/agent/delete-one-or-more-jobs).
 - For more information on managing your reporting services subscriptions, see [Create and Manage Subscriptions for Native Mode Report Servers](/sql/reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers?redirectedfrom=MSDN).
--  For more information about various wait types, see [SQL Server wait types](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql).
+- For more information about various wait types, see [SQL Server wait types](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql).
+

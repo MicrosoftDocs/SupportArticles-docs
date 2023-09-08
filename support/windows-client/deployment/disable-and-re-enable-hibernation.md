@@ -1,7 +1,7 @@
 ---
 title: How to disable and re-enable hibernation
 description: Explains how to turn off the hibernation feature in Windows.
-ms.date: 09/08/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -49,3 +49,7 @@ The computer uses the Hiberfil.sys file to store a copy of the system memory on 
 ## Reference
 
 To add the Hibernate option to Start menu, see the Hibernate section of [Shut down, sleep, or hibernate your PC](https://support.microsoft.com/windows/2941d165-7d0a-a5e8-c5ad-8c972e8e6eff).
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

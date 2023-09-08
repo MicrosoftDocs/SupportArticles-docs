@@ -1,7 +1,7 @@
 ---
 title: Azure App Service virtual network integration troubleshooting guide
 description: How to troubleshoot virtual network integration on Windows and Linux apps.
-ms.date: 10/21/2022
+ms.date: 06/16/2023
 ms.service: app-service
 author: hepiet
 ms.author: hepiet
@@ -101,6 +101,43 @@ curl -v https://hostname
 curl hostname:[port]
 ```
 
+## Debug access to virtual network-hosted resources
+
+A number of factors can prevent your app from reaching a specific host and port. Most of the time, it's one of the following:
+
+* **A firewall is in the way.** If you have a firewall in the way, you hit the TCP timeout. The TCP timeout is 21 seconds in this case. Use the **tcpping** tool to test connectivity. TCP timeouts can be caused by many things beyond firewalls, but start there.
+* **DNS isn't accessible.** The DNS timeout is three seconds per DNS server. If you have two DNS servers, the timeout is six seconds. Use nameresolver to see if the DNS is working. You can't use nslookup because that doesn't use the DNS your virtual network is configured with. If inaccessible, you could have a firewall or NSG blocking access to DNS, or it could be down. Some DNS architectures that use custom DNS servers can be complex and may occasionally experience timeouts. To determine if this is the case, the environment variable `WEBSITE_DNS_ATTEMPTS` can be set. For more information about DNS in App Services, see [Name resolution (DNS) in App Service](/azure/app-service/overview-name-resolution).
+
+If those items don't answer your problems, look first for things like:
+
+**Regional virtual network integration**
+
+* Is your destination a non-RFC1918 address and you don't have **Route All** enabled?
+* Is there an NSG blocking egress from your integration subnet?
+* If you're going across Azure ExpressRoute or a VPN, is your on-premises gateway configured to route traffic back up to Azure? If you can reach endpoints in your virtual network but not on-premises, check your routes.
+* Do you have enough permissions to set delegation on the integration subnet? During regional virtual network integration configuration, your integration subnet is delegated to Microsoft.Web/serverFarms. The VNet integration UI delegates the subnet to Microsoft.Web/serverFarms automatically. If your account doesn't have sufficient networking permissions to set delegation, you'll need someone who can set attributes on your integration subnet to delegate the subnet. To manually delegate the integration subnet, go to the Azure Virtual Network subnet UI and set the delegation for Microsoft.Web/serverFarms.
+
+Debugging networking issues is a challenge because you can't see what's blocking access to a specific host:port combination. Some causes include:
+
+* You have a firewall up on your host that prevents access to the application port from your point-to-site IP range. Crossing subnets often requires public access.
+* Your target host is down.
+* Your application is down.
+* You had the wrong IP or hostname.
+* Your application is listening on a different port than what you expected. You can match your process ID with the listening port by using "netstat -aon" on the endpoint host.
+* Your network security groups are configured in such a manner that they prevent access to your application host and port from your point-to-site IP range.
+
+You don't know what address your app actually uses. It could be any address in the integration subnet or point-to-site address range, so you need to allow access from the entire address range.
+
+More debug steps include:
+
+* Connect to a VM in your virtual network and attempt to reach your resource host:port from there. To test for TCP access, use the PowerShell command **Test-NetConnection**. The syntax is:
+   
+```powershell
+Test-NetConnection hostname [optional: -Port]
+```
+
+* Bring up an application on a VM and test access to that host and port from the console from your app by using **tcpping**.
+
 ## Network troubleshooter
 
 You can also use the Network troubleshooter to troubleshoot the connection issues for the apps in the App Service. To open the network troubleshooter, go to the app service in the Azure portal. Select **Diagnostic and solve problem**, and then search for **Network troubleshooter**.
@@ -122,6 +159,59 @@ You can also use the Network troubleshooter to troubleshoot the connection issue
 
 :::image type="content" source="./media/troubleshoot-vnet-integration-apps/deletion-issue.png" alt-text="Screenshot that shows how to run troubleshooter for subnet or virtual network deletion issues.":::
 
+## Collect network traces
+
+Collecting network traces can be helpful in analyzing issues. In Azure App Services, network traces are taken from the application process. To obtain accurate information, reproduce the issue while starting the network trace collection.
+
+### Windows App Services
+
+To collect network traces for Windows App Services, follow these steps:
+
+1. In the Azure portal, navigate to your Web App.
+1. In the left navigation, select **Diagnose and Solve Problems**.
+1. In the search box, type *Collect Network Trace* and select **Collect Network Trace** to start the network trace collection.
+
+:::image type="content" source="media/troubleshoot-vnet-integration-apps/collect-network-trace-windows.png" alt-text="Screenshot that shows how to capture a network trace." lightbox="media/troubleshoot-vnet-integration-apps/collect-network-trace-windows.png":::
+
+To get the trace file for each instance serving a Web App, on your browser, go to the Kudu console for the Web App (`https://<sitename>.scm.azurewebsites.net`). Download the trace file from the *C:\home\LogFiles\networktrace* or *D:\home\LogFiles\networktrace* folder.
+
+### Linux App Services
+
+To collect network traces for Linux App Services that don't use a custom container, follow these steps:
+
+1. Install the `tcpdump` command line utility by running the following commands:
+
+   ```bash
+   apt-get update
+   apt install tcpdump
+   ```
+1. Connect to the container via the Secure Shell Protocol (SSH).
+
+1. Identify the interface that's up and running by running the following command (for example, `eth0`):
+
+   ```bash
+   root@<hostname>:/home# tcpdump -D
+   
+   1.eth0 [Up, Running, Connected]
+   2.any (Pseudo-device that captures on all interfaces) [Up, Running]
+   3.lo [Up, Running, Loopback]
+   4.bluetooth-monitor (Bluetooth Linux Monitor) [Wireless]
+   5.nflog (Linux netfilter log (NFLOG) interface) [none]
+   6.nfqueue (Linux netfilter queue (NFQUEUE) interface) [none]
+   7.dbus-system (D-Bus system bus) [none]
+   8.dbus-session (D-Bus session bus) [none]
+   ```
+1. Start the network trace collection by running the following command:
+
+   ```bash
+   root@<hostname>:/home# tcpdump -i eth0 -w networktrace.pcap
+   ```
+   Replace `eth0` with the name of the actual interface.
+   
+To download the trace file, connect to the Web App via methods such as Kudu, FTP, or a Kudu API request. Here's a request example for triggering the file download:
+
+`https://<sitename>.scm.azurewebsites.net/api/vfs/<path to the trace file in the /home directory>/filename`
+
+[!INCLUDE [Third-party information disclaimer](../../includes/third-party-disclaimer.md)]
+
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
-
-

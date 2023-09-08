@@ -1,7 +1,7 @@
 ---
 title: Windows Server support and installation instructions for AMD EPYC 7000 Series server processors
 description: Lists the AMD EPYC 7000 Series server processors that are supported by Windows Server 2019, Windows Server 2016, and Windows Server 2012 R2. Additionally lists support caveats and installation instructions.
-ms.date: 01/17/2023
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -80,3 +80,7 @@ For example, for a single-CPU one-socket system, **Task Manager** displays two s
 ### Task Manager displays an incorrect number of NUMA nodes with more than 64 logical processors enabled
 
 For example, for a one-socket system, **Task Manager** displays two NUMA nodes. For a two-socket system, **Task Manager** displays four NUMA nodes.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

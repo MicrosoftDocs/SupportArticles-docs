@@ -1,0 +1,8 @@
+- name: Docs
+  tocHref: /
+  topicHref: /index
+  items:
+
+  - name: Troubleshoot
+    tocHref: /surface-hub/
+    topicHref: /troubleshoot/index

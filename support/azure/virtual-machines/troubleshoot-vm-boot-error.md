@@ -38,7 +38,7 @@ grub rescue>
 1. To troubleshoot a GRUB rescue issue, a rescue/repair VM is required. Use [vm repair commands](repair-linux-vm-using-azure-virtual-machine-repair-commands.md) to create a repair VM that has a copy of the affected VM's OS disk attached. Mount the copy of the OS file systems in the repair VM by using [chroot](chroot-environment-linux.md).
 
     > [!NOTE]
-    > Alternatively, you can create a rescue VM manually by using the Azure portal. For more information, see [Troubleshoot a Linux VM by attaching the OS disk to a recovery VM using the Azure portal](/troubleshoot/azure/virtual-machines/troubleshoot-recovery-disks-portal-linux).
+    > Alternatively, you can create a rescue VM manually by using the Azure portal. For more information, see [Troubleshoot a Linux VM by attaching the OS disk to a recovery VM using the Azure portal](troubleshoot-recovery-disks-portal-linux.md).
 
 2. [Identify GRUB rescue issue](#identify-grub-rescue-issue). When you encounter one of the following GRUB rescue issues, go to the corresponding section to resolve it:
 
@@ -115,20 +115,12 @@ This error might be associated with one of the following issues:
 
       If the VM is running CentOS, replace `redhat` with `centos` in the *grub.cfg* file absolute path */boot/efi/EFI/centos/grub.cfg*.
 
-    * **SLES 12/15 without EUFI (BIOS based - Gen1)**
+    * **SLES 12/15 Gen1 and Gen2**
 
         ```bash
         # grub2-install /dev/sdX
         # grub2-mkconfig -o /boot/grub2/grub.cfg
         # sed -i 's/hd2/hd0/g' /boot/grub2/grub.cfg
-        ```
-
-    * **SLES 12/15 with EUFI (Gen2)**
-
-        ```bash
-        # grub2-install /dev/sdX
-        # grub2-mkconfig -o /boot/efi/EFI/BOOT/grub.cfg
-        # sed -i 's/hd2/hd0/g' /boot/efi/EFI/BOOT/grub.cfg
         ```
 
     * **Ubuntu 18.04/20.04**

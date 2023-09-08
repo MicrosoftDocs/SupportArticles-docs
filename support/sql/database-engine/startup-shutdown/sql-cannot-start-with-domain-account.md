@@ -3,10 +3,7 @@ title: SQL Server services using domain credentials fail to start
 description: This article provides a workaround to troubleshoot an issue when SQL Server fails to start when the startup account doesn't have the right permissions.
 ms.date: 12/12/2022
 ms.custom: sap:Administration and Management
-author: padmajayaraman
-ms.author: v-jayaramanp
-ms.reviewer: ramakoni
-ms.prod: sql
+ms.reviewer: ramakoni, v-jayaramanp
 ---
 
 # SQL Server services using domain credentials fail to start
@@ -54,3 +51,4 @@ For more information, see [Service Permissions](/sql/database-engine/configure-w
 ## Resolution
 
 To resolve the issue, grant the missing permissions to the SQL Service domain account by using the **User Rights Assignment** pane in the [Local Security Policy](/windows/security/threat-protection/security-policy-settings/how-to-configure-security-policy-settings) MMC snap-in.
+

@@ -8,6 +8,7 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.service: virtual-machine-scale-sets
+ms.subservice: troubleshoot-extension-issues
 ---
 
 # VM extension provisioning errors in Virtual Machine Scale Sets

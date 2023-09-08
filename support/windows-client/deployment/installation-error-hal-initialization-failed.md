@@ -1,7 +1,7 @@
 ---
 title: HAL_INITIALIZATION_FAILED error on VMware VM
 description: Provides a solution to fix a HAL_INITIALIZATION_FAILED error that occurs when you install Windows 8 or Microsoft Windows Server 2012 on VMware VM.
-ms.date: 09/09/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -69,3 +69,7 @@ For more information on support for operating systems in VMware Guests, see the 
 
 Hardware requirements for Windows 8 and Windows Server 2012:  
 [PAE/NX/SSE2 Support Requirement Guide for Windows 8](/previous-versions/windows/it-pro/windows-8.1-and-8/dn482072(v=win.10))
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

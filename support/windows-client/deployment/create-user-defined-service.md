@@ -1,7 +1,7 @@
 ---
 title: Create a user-defined service
 description: Describes how to create a Windows NT user-defined service.
-ms.date: 09/08/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -97,3 +97,7 @@ By default, a newly created service is configured to run automatically when the 
     where \<path> is the drive and directory of the Windows NT Resource Kit (for example, `C:\Reskit`).
 
 For more information on installing and removing a user-defined service, see the Srvany.wri document provided with the Windows NT Resource Kit utilities (for example, `C:\Reskit\Srvany.wri`). This document can also be found on the Windows NT Resource Kit CD in the `Common\Config` directory.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

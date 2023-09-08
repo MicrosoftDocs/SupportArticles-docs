@@ -27,7 +27,7 @@ To fix this issue, follow these steps:
 
 1. Make sure that an enrollment profile exists and is assigned to the device. For more information about how to create and assign an ADE enrollment profile, see [Create an Apple enrollment profile](/mem/intune/enrollment/device-enrollment-program-enroll-ios#create-an-apple-enrollment-profile).
 1. If an enrollment profile exists and is assigned to the device, update the modification time of the enrollment profile by editing the profile and making any change.
-1. Synchronize the ADE device; in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Enrollment Program Tokens**.
+1. Synchronize the ADE device; in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Enrollment Program Tokens**.
 1. Select the token in the list, and then select **Devices** > **Sync**.
 1. After the synchronization finishes, turn on the ADE device.
 

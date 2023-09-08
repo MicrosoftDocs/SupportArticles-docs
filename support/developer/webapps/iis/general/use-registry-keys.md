@@ -1,7 +1,7 @@
 ---
 title: Use registry keys
 description: This article describes the registry keys that are used by Microsoft Internet Information Services (IIS) on Windows.
-ms.date: 07/21/2020
+ms.date: 02/16/2023
 ms.reviewer: finbarr
 ms.technology: iis-general
 ---
@@ -46,16 +46,6 @@ This article also contains information about how to modify the registry. This li
   This registry key controls the length of time that IIS caches a user token before IIS releases the cache and re-creates it. The default value for the cache time is 900 seconds. This key is used by the token cache module in the worker process and by the Windows Process Activation Service (WAS).
 
 ## Registry keys that apply to the WAS
-
-- `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\WAS\Parameters\ConfigIsolationEnabled (REG_DWORD)`  
-
-  The default value for this registry key is one that specifies configuration isolation enabled.
-
-  - If you set this registry key to a 0, you disable configuration isolation, and the worker process tries to read the *ApplicationHost.config* file directly. The default value is any value other than 0 or 1.
-
-  - If you disable configuration isolation, you must change the System Access Control List (SACL) of the `%windir%\system32\inetsrv\config` folder to grant the worker processes read access to the *ApplicationHost.config* file.
-
-  - The configuration isolation feature is not available in the release version of Windows Vista. This registry key does not function in the release version of Windows Vista.
 
 - `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\WAS\Parameters\ConfigIsolationPath (REG_SZ)`  
 

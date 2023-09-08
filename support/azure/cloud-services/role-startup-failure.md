@@ -3,9 +3,7 @@ title: Troubleshoot role instance startup failure in Azure Cloud Services
 description: Troubleshoot role instance startup failure (RoleInstanceStartupTimeoutError error) in Azure Cloud Services (extended support).
 ms.service: cloud-services
 ms.subservice: troubleshoot-extended-support
-author: DennisLee-DennisLee
-ms.author: v-dele
-ms.reviewer: jaygong
+ms.reviewer: jaygong, v-leedennis
 ms.date: 09/26/2022
 keywords: role instance, startup task, startup task script, Startup.cmd, RoleEntryPoint class
 ---
@@ -98,11 +96,11 @@ If you go to the website now, you'll see error messages that contain more inform
 >
 > **Exception Details:** System.IO.FileNotFoundException
   
-### Option 5: Use the compute emulator
+### Option 5: Use the Compute Emulator
 
-You can use the Azure compute emulator to diagnose and troubleshoot issues of missing dependencies and *Web.config* errors. For best results when you use this method to diagnose issues, use a computer or VM that has a clean installation of Windows.
+You can use the Azure Compute Emulator to diagnose and troubleshoot issues of missing dependencies and *Web.config* errors. For best results when you use this method to diagnose issues, use a computer or VM that has a clean installation of Windows.
 
-To diagnose issues by using the Azure compute emulator:
+To diagnose issues by using the Azure Compute Emulator:
 
 1. Install the [Azure SDK](https://azure.microsoft.com/downloads/).
 1. On the development computer, build the cloud service project.

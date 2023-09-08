@@ -1,7 +1,7 @@
 ---
 title: Restore missing Windows Installer cache files
 description: Windows Installer cache (by default, c:\windows\installer) is used to store important files for applications that are installed using the MSI Windows Installer. The cache should not be deleted manually.
-ms.date: 10/21/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -73,3 +73,7 @@ We strongly encourage you to download this package from the portal instead of re
 The report is available immediately after you run this tool without submitting the results to Microsoft. The report is an XML file. It will be located in the user profile Temp folder in a path that resembles the following:
 
 `C:\Users\<UserName>\AppData\Local\Temp\WICFIX_MAIN_Report.xml`
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

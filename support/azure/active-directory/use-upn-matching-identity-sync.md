@@ -5,6 +5,7 @@ ms.date: 05/11/2020
 ms.reviewer: willfid
 ms.service: active-directory
 ms.subservice: enterprise-users
+ms.custom: has-azure-ad-ps-ref
 ---
 # How to use UPN matching for identity synchronization in Office 365, Azure, or Intune
 
@@ -20,7 +21,7 @@ Sometimes you may have to transfer the source of authority for a user account if
 - Azure Management Portal
 - Intune portal
 
-You can transfer the source of authority，so the account can be managed through your local directory service when using identity synchronization with Azure Active Directory (Azure AD).
+You can transfer the source of authority, so the account can be managed through your local directory service when using identity synchronization with Azure Active Directory (Azure AD).
 
 This article discusses how to perform the transfer by using a process known as **UPN matching**. This process uses the user principal name (UPN) to match the on-premises user account to a work or school account in Azure AD.
 

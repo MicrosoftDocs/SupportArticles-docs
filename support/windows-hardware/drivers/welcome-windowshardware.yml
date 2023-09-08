@@ -1,0 +1,77 @@
+### YamlMime:Landing
+
+title: Windows hardware developer troubleshooting # < 60 chars
+summary: Welcome to Windows hardware troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Windows hardware.
+metadata:
+  title: Windows hardware developer troubleshooting documentation
+  description: This article lists Knowledge Base (KB) and other Support articles for Windows hardware developer. # Required; article description that is displayed in search results. < 160 chars.
+  ms.prod: windows-hardware
+  ms.topic: landing-page # Required
+  author: HaiyingYu  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: HaiyingYu #Required; microsoft alias of author; optional team alias.
+  ms.date: 03/27/2023
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: Bus Driver
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Interrupt and DPC time streaming Isoch data
+            url: increase-interrupt-dpc-time-streaming-isoch-data.md
+
+  - title: Display Driver
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+        - text: Loading and starting a graphics Mirror driver
+          url: loading-starting-graphics-mirror-driver.md
+        - text: Windows 7 parsing MCCS information
+          url: windows-7-parsing-mccs-information.md
+
+  - title: General
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Bug check 0x7E occurs when Device Guard is active
+            url: bug-check-0x7e-when-device-guard-active.md
+          - text: Commands under GuiRunOnce doesn't run
+            url: commands-under-guirunonce-not-run.md
+          - text: Disabling File Based Write Filter causes a crash
+            url: disabling-fbwf-causes-crash.md
+          - text: Failed to redirect connected UDP traffic
+            url: redirection-connected-udp-traffic-local-proxy-fail.md
+          - text: IVssBackupComponents returns a value of 0x1 or S_FALSE
+            url: ivssbackupcomponents-returns-value-0x1.md
+
+  - title: Human Interface Device (HID) Driver
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+        - text: Bluetooth and POS peripherals fail to connect
+          url: bluetooth-pos-peripherals-fail-connect.md
+
+  - title: Network Driver
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+        - text: Device can't be removed in Device Manager
+          url: device-not-removed-device-manager.md
+        - text: LWF could cause 90-second delay
+          url: lwf-causse-90-second-delay.md
+        - text: Wi-Fi connection settings are lost
+          url: wi-fi-connection-settings-lost.md
+
+  - title: Other Driver
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+        - text: Applications don't find a new scanning device
+          url: applications-dont-find-new-scanning-device.md
+        - text: I/O timeout is 10 times shorter
+          url: io-timeout-shorter-specified-value.md
+        - text: Unowned driver updates are installed unexpectedly
+          url: unowned-driver-updates-installed-unexpectedly.md

@@ -2,12 +2,12 @@
 title: Operating System errors 665 and 1450 are reported for database files
 description: This article provides resolutions for the problem where OS errors 1450 and 665 are reported for SQL Server database files.
 author: PiJoCoder 
-ms.author: v-jayaramanp
+ms.author: jopilov
 ms.date: 12/12/2022
-ms.reviewer: jopilov 
+ms.reviewer: v-jayaramanp
 ms.custom: sap:Administration and Management
-ms.prod: sql
 ---
+
 # OS errors 665 and 1450 are reported for SQL Server files
 
 This article helps you resolve the problem where OS errors 1450 and 665 are reported for database files while executing `DBCC CHECKDB`, creating a Database Snapshot, or file growth.
@@ -55,7 +55,7 @@ In rare cases, you may observe a non-yielding scheduler issue reported in the SQ
 
 ## Cause
 
-This problem occurs if a large number of `ATTRIBUTE_LIST_ENTRY` instances are needed to maintain a heavily fragmented file in NFTS. If the space is next to a cluster that's already tracked by the file system, then the attributes are compressed into a single entry. However, if the space is fragmented, it has to be tracked with multiple attributes. Thus, heavy file fragmentation can lead to attribute exhaustion and the resulting 665 error. This behavior is explained in the following KB article: [A heavily fragmented file in an NTFS volume may not grow beyond a certain size](https://support.microsoft.com/help/967351).
+This problem occurs if a large number of `ATTRIBUTE_LIST_ENTRY` instances are needed to maintain a heavily fragmented file in NTFS. If the space is next to a cluster that's already tracked by the file system, then the attributes are compressed into a single entry. However, if the space is fragmented, it has to be tracked with multiple attributes. Thus, heavy file fragmentation can lead to attribute exhaustion and the resulting 665 error. This behavior is explained in the following KB article: [A heavily fragmented file in an NTFS volume may not grow beyond a certain size](https://support.microsoft.com/help/967351).
 
 Both regular and sparse files created by SQL Server or other applications can get fragmented to these levels when large amounts of data modifications happen for the life of these snapshot files.
 
@@ -103,16 +103,9 @@ Consider using one or more of the following options to resolve this issue:
 ## More information
 
 - [How It Works: SQL Server 2005 Database Snapshots (Replica)](/archive/blogs/psssql/how-it-works-sql-server-2005-database-snapshots-replica)
-
 - [SQL Server reports operating system error 1450 or 1452 or 665 (retries)](https://techcommunity.microsoft.com/t5/sql-server-support/sql-server-reports-operating-system-error-1450-or-1452-or-665/ba-p/315507)
-
 - [How It Works: SQL Server Sparse Files (DBCC and Snapshot Databases) Revisited](/archive/blogs/psssql/how-it-works-sql-server-sparse-files-dbcc-and-snapshot-databases-revisited)
-
 - [How Database Snapshots Work](/sql/relational-databases/databases/database-snapshots-sql-server)
-
 - [DBCC CHECKDB (Transact-SQL) [See "Internal Database Snapshot" section]](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)
-
 - [New extended event to track writes to the snapshot sparse file](/archive/blogs/psssql/new-extended-event-to-track-writes-to-the-snapshot-sparse-file)
-
 - [Sparse File Errors: 1450 or 665 due to file fragmentation: Fixes and Workarounds](/archive/blogs/psssql/sparse-file-errors-1450-or-665-due-to-file-fragmentation-fixes-and-workarounds)
-

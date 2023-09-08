@@ -1,7 +1,7 @@
 ---
 title: Configure Windows to automate logon
 description: This article describes how to turn on the automatic logon feature in Windows by editing the registry.
-ms.date: 09/08/2020
+ms.date: 11/08/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -34,8 +34,12 @@ To use Registry Editor to turn on automatic logon, follow these steps:
 1. Click **Start**, and then click **Run**.
 2. In the **Open** box, type *Regedit.exe*, and then press Enter.
 3. Locate the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon` subkey in the registry.
-4. Double-click the **DefaultUserName** entry, type your user name, and then click **OK**.
-5. Double-click the **DefaultPassword** entry, type your password, and then click **OK**.
+4. On the **Edit** menu, click **New**, and then point to **String Value**.
+5. Type *AutoAdminLogon*, and then press Enter.
+6. Double-click **AutoAdminLogon**.
+7. In the **Edit String** dialog box, type **1** and then click **OK**.
+8. Double-click the **DefaultUserName** entry, type your user name, and then click **OK**.
+9. Double-click the **DefaultPassword** entry, type your password, and then click **OK**.
 
     If the **DefaultPassword** value does not exist, it must be added. To add the value, follow these steps:
 
@@ -47,10 +51,7 @@ To use Registry Editor to turn on automatic logon, follow these steps:
         > [!NOTE]
         > If no DefaultPassword string is specified, Windows automatically changes the value of the `AutoAdminLogon` key from 1 (true) to 0 (false), disabling the AutoAdminLogon feature.
 
-6. On the **Edit** menu, click **New**, and then point to **String Value**.
-7. Type *AutoAdminLogon*, and then press Enter.
-8. Double-click **AutoAdminLogon**.
-9. In the **Edit String** dialog box, type **1** and then click **OK**.
+
 10. If you have joined the computer to a domain, you should add the **DefaultDomainName** value, and the data for the value should be set as the fully qualified domain name (FQDN) of the domain, for example `contoso.com.`.
 11. Exit Registry Editor.
 12. Click **Start**, click **Shutdown**, and then type a reason in the **Comment** text box.

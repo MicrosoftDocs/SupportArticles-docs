@@ -1,10 +1,9 @@
 ---
 title: Resource Monitor non-yielding condition
-description: This article provides more information regarding non yielding Resource Monitor..
+description: Provides more information regarding non yielding Resource Monitor..
 ms.date: 02/12/2020
 ms.custom: sap:Performance
 ms.reviewer: ramakoni
-ms.prod: sql
 ---
 # Resource Monitor enters a non-yielding condition on a server running SQL Server
 
@@ -54,14 +53,14 @@ These memory events may be _external_ to SQL Server. External events include not
 
 If certain memory consumers use a large amount of memory, the trimming that the consumers perform may take a long time to prepare.
 
-The Scheduler Monitor task runs every 5 seconds. The Schedule Monitor checks whether the Resource Monitor has moved from one consumer to another during the past 60 seconds. When the Scheduler Monitor detects that the Resource Monitor has not moved past a consumer for 60 seconds, the Schedule Monitor interprets this scenario as the Resource Monitor entering a non-yielding state. This interpretation causes the Schedule Monitor to log the error message that is mentioned in the Symptoms section.
+The Scheduler Monitor task runs every 5 seconds. The Schedule Monitor checks whether the Resource Monitor has moved from one consumer to another during the past 60 seconds. When the Scheduler Monitor detects that the Resource Monitor hasn't moved past a consumer for 60 seconds, the Schedule Monitor interprets this scenario as the Resource Monitor entering a non-yielding state. This interpretation causes the Schedule Monitor to log the error message that is mentioned in the Symptoms section.
 
 > [!NOTE]
 > Starting with SQL Server 2019, the 60-second interval is increased to 120 seconds. This increase reduces the frequency of these diagnostic notifications. And it reduces the generation of memory dump files.
 
 These messages are also raised if the rate at which the Resource Monitor frees memory is less than 2 MB every 5 seconds.
 
-These messages are only an indication that the Resource Monitor is busy cleaning up large consumers. These messages do not necessarily indicate a problem with the Resource Monitor itself.
+These messages are only an indication that the Resource Monitor is busy cleaning up large consumers. These messages don't necessarily indicate a problem with the Resource Monitor itself.
 
 ## Resolution
 
@@ -76,7 +75,7 @@ The new message will resemble the following example:
 
 The following are descriptions of the various fields that are used in this message:
 
-- **Memory freed:** This field is how much memory is freed by Resource Monitor for the specified interval. It is measured in kilobytes. If the rate at which the memory is freed does not exceed 2 MB every 5 seconds, the Scheduler Monitor detects this condition as a non-yielding condition.
+- **Memory freed:** This field is how much memory is freed by Resource Monitor for the specified interval. It's measured in kilobytes. If the rate at which the memory is freed doesn't exceed 2 MB every 5 seconds, the Scheduler Monitor detects this condition as a non-yielding condition.
 
 - **Last wait:** This field is the last wait type for the Resource Monitor thread. You can use this field in combination with the `Approx CPU Used` field. This field combination can identify whether the Resource Monitor thread is running or waiting for a significant part of the interval.
 

@@ -3,8 +3,8 @@ title: UI flows fails with UIAElementMismatch
 description: UI flows fails with the UIAElementMismatch error. Provides steps to solve this issue.
 ms.reviewer: priyase
 ms.topic: troubleshooting
-ms.date: 3/31/2021
-ms.subservice: power-automate-flows
+ms.date: 03/31/2021
+ms.subservice: power-automate-desktop-flows
 ---
 # UI flows fails with error UIAElementMismatch
 
@@ -23,9 +23,9 @@ When trying to run UI flows, you may see this error:
 
 ## Verifying issue
 
-This error usually occurs if your UI flows has the property **Use coordinates** set to **true** and UI flows is unable to locate the right element using coordinates. It is possible that the version of the recorded app is different from version of the app used while playing back, which may cause this discrepancy.
+This error usually occurs if your UI flows have the property **Use coordinates** set to **true** and UI flows is unable to locate the right element using coordinates. It's possible that the version of the recorded app is different from version of the app used while playing back, which may cause this discrepancy.
 
-Check that the version of the app that you are using while recording and the version of the app that is being used for playback are the same.
+Check that the version of the app that you're using while recording and the version of the app that is being used for playback are the same.
 
 ## Solving steps
 

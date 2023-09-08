@@ -4,7 +4,6 @@ description: This article discusses a problem that occurs when you run a multi s
 ms.date: 07/22/2020
 ms.custom: sap:Analysis Services
 ms.reviewer: Yinn Wong, Ramu Konidena
-ms.prod: sql
 ---
 # '#N/A' returns when you run a multi-subselect query in SQL Server Analysis Services
 

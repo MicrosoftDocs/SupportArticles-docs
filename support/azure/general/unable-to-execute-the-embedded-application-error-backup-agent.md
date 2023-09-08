@@ -3,8 +3,8 @@ title: Unable to execute the embedded application error when install Microsoft A
 description: Describes how to fix the "Unable to execute the embedded application" error that occurs when you install Microsoft Azure backup agent.
 author: genlin
 ms.author: genli
-ms.service: storage
-ms.subservice: common
+ms.service: azure-storage
+ms.subservice: storage-common-concepts
 ms.date: 08/14/2020
 ms.reviewer: shamv
 ---

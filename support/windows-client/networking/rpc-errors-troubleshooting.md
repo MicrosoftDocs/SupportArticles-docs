@@ -1,16 +1,14 @@
 ---
 title: RPC error troubleshooting guidance
 description: Learn how to troubleshoot Remote Procedure Call (RPC) errors that occur during computer-to-computer communication. Such communication can involve Windows Management Instrumentation (WMI), SQL Server, Active Directory operations, or remote connections.
-ms.date: 12/30/2022
+ms.date: 03/10/2023
 ms.prod: windows-client
 ms.topic: troubleshooting
-author: v-tappelgate
-ms.author: v-tappelgate
 manager: dcscontentpm
 ms.collection: highpri
 ms.technology: windows-client-networking
 ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.reviewer: kaushika
+ms.reviewer: kaushika, v-tappelgate
 audience: itpro
 localization_priority: medium
 ---
@@ -51,7 +49,7 @@ By default, EPM allocates dynamic ports randomly from the range that's configure
 
 Many Windows server applications that rely on RPC provide options (such as registry keys) to customize the allowed ports. Windows services use the **HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Rpc\\Internet** subkey for this task.
 
-When you specify a port or port range, use ports that are outside the range of commonly used ports. You can find a comprehensive list of server ports that are used in Windows and major Microsoft products in [Service overview and network port requirements for Windows](/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements). The article also lists RPC server applications, and mentions which RPC server applications can be configured to use custom server ports beyond the capabilities of the RPC runtime.
+When you specify a port or port range, use ports that are outside the range of commonly used ports. You can find a comprehensive list of server ports that are used in Windows and major Microsoft products in [Service overview and network port requirements for Windows](../../windows-server/networking/service-overview-and-network-port-requirements.md). The article also lists RPC server applications, and mentions which RPC server applications can be configured to use custom server ports beyond the capabilities of the RPC runtime.
 
 [!INCLUDE [Registry warning](../../includes/registry-important-alert.md)]
 
@@ -150,7 +148,7 @@ By examining this output, you can determine the following information:
 
 If any of these steps fail, you can usually start collecting simultaneous network traces, as described in the next section.
 
-For more information about PortQry, see [Using the PortQry command-line tool](/troubleshoot/windows-server/networking/portqry-command-line-port-scanner-v2).
+For more information about PortQry, see [Using the PortQry command-line tool](../../windows-server/networking/portqry-command-line-port-scanner-v2.md).
 
 ### Netsh
 
@@ -176,7 +174,7 @@ Now, try to reproduce your issue on the client computer. Then, run the following
 Netsh trace stop
 ```
 
-Open the trace files in [Microsoft Network Monitor 3.4](/troubleshoot/windows-client/networking/collect-data-using-network-monitor) or Message Analyzer, and filter the trace data for the IP address of the server or client computers and TCP port 135. For example, use filter strings such as the following:
+Open the trace files in [Microsoft Network Monitor 3.4](collect-data-using-network-monitor.md) or Message Analyzer, and filter the trace data for the IP address of the server or client computers and TCP port 135. For example, use filter strings such as the following:
 
 - **Ipv4.address==\<_client-ip_> and ipv4.address==\<_server-ip_> and tcp.port==135**  
   
@@ -188,11 +186,11 @@ In the filtered data, look for the **EPM** entry in the **Protocol** column.
 
 Look for a response from EPM (on the server) that includes a dynamic port number. If the dynamic port number is present, note it for future reference.
 
-:::image type="content" source="media/rpc-errors-troubleshooting/dynamic-port-number.png" alt-text="Screenshot of Network Monitor that shows dynamic port highlighted." border="false":::
+:::image type="content" source="media/rpc-errors-troubleshooting/dynamic-port-number.png" alt-text="Screenshot of Network Monitor that shows dynamic port highlighted.":::
 
 Refilter the trace data for the dynamic port number and the server IP address. For example, use a filter string such as **tcp.port==\<_dynamic-port-allocated_> and ipv4.address==\<_server-ip_>**. In this filter string, \<_dynamic-port-allocated_> represents the dynamic port number and \<_server-ip_> represents the IP address of the server.
 
-:::image type="content" source="media/rpc-errors-troubleshooting/filtered-trace.png" alt-text="Screenshot of Network Monitor that has a filter applied." border="false":::
+:::image type="content" source="media/rpc-errors-troubleshooting/filtered-trace.png" alt-text="Screenshot of Network Monitor that has a filter applied.":::
 
 In the filtered data, look for evidence that the client connected successfully to the dynamic port, or look for any network issues that might have occurred.
 
@@ -200,7 +198,7 @@ In the filtered data, look for evidence that the client connected successfully t
 
 The most common cause of "RPC server unavailable" errors is that the client can't connect to the dynamic port that was allocated. The client-side trace would then show TCP SYN retransmits for the dynamic port.
 
-:::image type="content" source="media/rpc-errors-troubleshooting/tcp-syn-retransmit.png" alt-text="Screenshot of Network Monitor that shows TCP SYN retransmits." border="false":::
+:::image type="content" source="media/rpc-errors-troubleshooting/tcp-syn-retransmit.png" alt-text="Screenshot of Network Monitor that shows TCP SYN retransmits.":::
 
 This behavior indicates that one of the following conditions is blocking communication:
 
@@ -214,7 +212,7 @@ Before you contact Microsoft support, we recommend that you gather information a
 
 ### Prerequisites
 
-These procedures use the [TroubleShootingScript Version 2 (TSSv2)](../windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2.md) toolset. To use this toolset, you should be aware of the following prerequisites:
+These procedures use the [TroubleShootingScript (TSS)](../windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tss.md) toolset. To use this toolset, you should be aware of the following prerequisites:
 
 - You must have Administrator-level permission on the local computer.
 - The first time that you run the toolset, you have to accept a EULA.
@@ -233,12 +231,12 @@ These procedures use the [TroubleShootingScript Version 2 (TSSv2)](../windows-tr
 
 ### Gather key information before contacting Microsoft support
 
-1. Download [TSSv2](https://aka.ms/getTSSv2) on all nodes, and expand it to the _C:\\tss\_tool_ folder.
-1. Open the _C:\\tss\_tool_ folder in an elevated PowerShell Command Prompt window.
+1. Download [TSS](https://aka.ms/getTSS) on all nodes, and expand it to the _C:\\tss_ folder.
+1. Open the _C:\\tss_ folder in an elevated PowerShell Command Prompt window.
 1. Start traces on the problem computer by running the following cmdlet:
 
     ```powershell
-    TSSv2.ps1 -Start -Scenario NET_RPC
+    TSS.ps1 -Scenario NET_RPC
     ```
 
 1. Respond to the EULA prompt.

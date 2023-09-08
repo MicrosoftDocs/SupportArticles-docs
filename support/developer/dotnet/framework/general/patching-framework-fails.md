@@ -49,7 +49,7 @@ This problem can be avoided by ensuring processes are not running that can put a
 
 To detect whether assemblies are being used, follow these steps:
 
-1. Download [procexp.exe](http://live.sysinternals.com/procexp.exe) to discover process that are locking assemblies.
+1. Download [procexp.exe](https://live.sysinternals.com/procexp.exe) to discover process that are locking assemblies.
 2. Launch procexp.exe and then press Ctrl+F to open the **Process Explorer Search** window.
 3. In the **Handle or DLL substring** textbox, type *Assembly* and then select **Search**.
 

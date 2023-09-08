@@ -111,7 +111,7 @@ If you've set up GRUB and root access by using the preceding instructions, you c
 
 1. To enter GRUB, press Esc as you restart the VM.
 1. In GRUB, press E to edit the OS that you want to boot into. The OS is usually listed on the first line.
-1. Find the kernel line. In Azure, it starts with *linux16*.
+1. Find the kernel line. In Azure, it starts with **linux** or **linux16**.
 1. Press Ctrl+E to go to the end of the line.
 1. At the end of the line, add *systemd.unit=rescue.target*.
 
@@ -270,7 +270,7 @@ To enable single-user mode in Oracle Linux, follow the earlier instructions for 
 To learn more about Serial Console, see:
 
 * [Linux Serial Console documentation](serial-console-linux.md)
-* [Use Serial Console to enable GRUB in various distributions](http://linuxonazure.azurewebsites.net/why-proactively-ensuring-you-have-access-to-grub-and-sysrq-in-your-linux-vm-could-save-you-lots-of-down-time/)
+* [Use Serial Console to enable GRUB in various distributions](https://linuxonazure.azurewebsites.net/why-proactively-ensuring-you-have-access-to-grub-and-sysrq-in-your-linux-vm-could-save-you-lots-of-down-time/)
 * [Use Serial Console for NMI and SysRq calls](serial-console-nmi-sysrq.md)
 * [Serial Console for Windows VMs](serial-console-windows.md)
 * [Boot diagnostics](boot-diagnostics.md)
