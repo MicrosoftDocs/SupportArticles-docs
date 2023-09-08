@@ -1,7 +1,7 @@
 ---
 title: How to clean up inherited access
-description: Introduces how to remove inherited access to records when the cascade configuration of a table changes in Microsoft Dataverse..
-ms.date: 09/07/2023
+description: Introduces how to remove inherited access to records when the cascade configuration of a table changes in Microsoft Dataverse.
+ms.date: 09/08/2023
 author: paulliew
 ms.author: paulliew
 ms.reviewer: jdaly
@@ -25,7 +25,7 @@ After the [cascading behavior of a table relationship](/power-apps/developer/dat
 
 ## How to verify the access to related records
 
-When you find that you have unexpected access to records, you can use the **Check Access** feature or the `RetrieveAccessOrigin` message to verify the access to the related records.
+Users may report that they have unexpected access to records. There are two ways that you can verify the access to the related records: using the **Check Access** feature or the `RetrieveAccessOrigin` message.
 
 #### Use the Check Access feature
 
