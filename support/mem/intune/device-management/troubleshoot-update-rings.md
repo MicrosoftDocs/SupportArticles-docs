@@ -76,7 +76,7 @@ To confirm that the policies have applied to the device locally, navigate to Win
 
 On the Windows device, navigate to **Settings** > **Windows Updates** > **View Configured Update Policies** to view the policies managed by your organization.
 
-:::image type="content" source="media/Troubleshoot-Update-rings/5.ViewConfigureUpdatePolicies.jpg" alt-text="A screenshot of the Windows Update pane, Advanced options, highlighting the "Configured update policies" option.":::
+:::image type="content" source="media/Troubleshoot-Update-rings/5.ViewConfiguredUpdatePolicies.jpg" alt-text="A screenshot of the Windows Update pane, Advanced options, highlighting the "Configured update policies" option.":::
 
 Verify that the **Policy type** is *mobile device management*.
 
