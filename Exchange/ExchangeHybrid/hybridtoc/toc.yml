@@ -234,7 +234,7 @@
         - name: Can't use OWA move items in a hybrid deployment
           href: ../move-mailboxes/cannot-move-items-using-owa.md
         - name: Error when moving only a primary mailbox to or from Exchange Online
-          href: ../move-mailboxes/you-must-specify-the-primaryonly-parameter-error.mdd          
+          href: ../move-mailboxes/you-must-specify-the-primaryonly-parameter-error.md          
         - name: Error when you move mailboxes to or from Microsoft 365
           href: ../move-mailboxes/error-move-mailboxes-to-from-o365.md
         - name: Extension number can't be generated
