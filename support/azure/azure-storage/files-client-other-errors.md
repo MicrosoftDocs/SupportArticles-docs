@@ -37,7 +37,7 @@ The following table lists common ClientOtherErrors, along with an explanation of
 
 | **Operation** | **Status** | **Explanation of error** |
 |-----------|--------|----------------------|
-| QueryFullEaInformation | STATUS_NOT_IMPLEMENTED | This failure is returned because Azure Files doesn't implement this API. Azure Files [doesn't support](https://docs.microsoft.com/rest/api/storageservices/features-not-supported-by-the-azure-file-service) extended attributes currently. |
+| QueryFullEaInformation | STATUS_NOT_IMPLEMENTED | This failure is returned because Azure Files doesn't implement this API. Azure Files [doesn't support](/rest/api/storageservices/features-not-supported-by-the-azure-file-service) extended attributes currently. |
 | UnknownFileClass=48 | STATUS_NOT_SUPPORTED | This is the `FileNormalizedNameInformation` API call. This is new support for Windows Server, and currently Azure Files doesn't support this API. |
 | FileOpen | 492 STATUS_ACCESS_DENIED | The caller doesn't have permission needed to open the file. In the case of Kerberos access, the ACL denies the caller access. |
 | FileOpen | 257 STATUS_OBJECT_NAME_INVALID | The path for the open request is invalid, for example too long or too deep. |
@@ -63,5 +63,3 @@ If you still need help, [contact support](https://portal.azure.com/?#blade/Micro
 
 - [Troubleshoot Azure Files](files-troubleshoot.md)
 - [Monitor Azure Files](/azure/storage/files/storage-files-monitoring)
-
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)
