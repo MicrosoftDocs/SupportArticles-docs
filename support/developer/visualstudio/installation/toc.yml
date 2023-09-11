@@ -86,7 +86,7 @@
   href: ./error-test-deploy-minimal-layout.md
 - name: Update deployed via Configuration Manager fails to install
   href: ./update-deployed-via-configuration-manager-fails-install.md
- - name: Unable to update Visual Studio using the help menu
+- name: Unable to update Visual Studio using the help menu
   href: ./unable-update-using-help-menu.md
 - name: Unable to install VS Admin updates through SCCM and WSUS
   href: ./unable-install-vs-admin-updates-sccm-wsus.md

@@ -27,12 +27,12 @@ This issue can occur if the Visual Studio instance on the machine is corrupt.
 
 ## Solution
 
-If you've been unsuccessful in your previous attempts to repair or update Visual Studio, you can run the [InstallCleanup.exe](uninstall-visual-studio.md#remove-all-with-installcleanupexe) tool to remove installation files and product information for all installed instances of Visual Studio, and then reinstall Visual Studio 2022. This process ensures a fresh installation of Visual Studio, which should allow for successful repairs or updates.
+If you've been unsuccessful in your previous attempts to repair or update Visual Studio, you can run the [InstallCleanup.exe](/visualstudio/install/uninstall-visual-studio#remove-all-with-installcleanupexe) tool to remove installation files and product information for all installed instances of Visual Studio, and then reinstall Visual Studio 2022. This process ensures a fresh installation of Visual Studio, which should allow for successful repairs or updates.
 
-To solve this issue, follow these steps: 
+To solve this issue, follow these steps:
 
 1. Open a command prompt with administrator privileges.
-1. Run the following command to execute the [InstallCleanup](uninstall-visual-studio.md#remove-all-with-installcleanupexe) tool:
+1. Run the following command to execute the [InstallCleanup](/visualstudio/install/uninstall-visual-studio#remove-all-with-installcleanupexe) tool:
 
    `"C:\Program Files (x86)\Microsoft Visual Studio\Installer\InstallCleanup.exe" -f`
 
