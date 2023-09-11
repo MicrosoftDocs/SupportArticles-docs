@@ -17,7 +17,7 @@ appliesto:
   - Outlook 2013
   - Outlook for Microsoft 365
 search.appverid: MET150
-ms.date: 6/6/2022
+ms.date: 06/06/2022
 ---
 # Manage download settings for shared mail folders in Cached Exchange mode in Outlook
 

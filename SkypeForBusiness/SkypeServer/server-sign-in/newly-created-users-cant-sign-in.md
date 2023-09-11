@@ -14,7 +14,7 @@ ms.reviewer: lynccic, corbinm, abgm
 appliesto: 
   - Lync Server 2010 Enterprise Edition
   - Lync Server 2013
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Newly created users can't sign in to a Lync client

@@ -13,7 +13,7 @@ search.appverid: MET150
 ms.reviewer: meshel, benjak, aruiz, v-six
 author: cloud-writer
 ms.author: meerak
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 # How to remove duplicate folders in Outlook when connected to an Exchange Server mailbox
 

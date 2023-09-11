@@ -12,7 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - Office 2007
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # "Files necessary to run the Office Customization Tool were not found" when you open the tool

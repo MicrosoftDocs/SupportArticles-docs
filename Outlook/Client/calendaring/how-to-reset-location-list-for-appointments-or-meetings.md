@@ -14,7 +14,7 @@ ms.reviewer: CHRISBUR
 appliesto: 
   - Outlook
 search.appverid: MET150
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 # How to reset location list for appointments or meetings
 

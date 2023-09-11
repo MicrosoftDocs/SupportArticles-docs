@@ -14,7 +14,7 @@ ms.reviewer: meerak
 appliesto: 
   - Microsoft Purview
 search.appverid: MET150
-ms.date: 2/23/2023
+ms.date: 02/23/2023
 ---
 
 # Resolve issues with information protection scanner deployment

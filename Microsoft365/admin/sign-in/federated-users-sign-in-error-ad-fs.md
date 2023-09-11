@@ -17,7 +17,7 @@ appliesto:
   - Azure Backup
   - Microsoft Intune
   - Microsoft 365
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # "There was a problem accessing the site" error from AD FS when a federated user signs in to Microsoft 365, Azure, or Intune

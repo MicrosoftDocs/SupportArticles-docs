@@ -16,7 +16,7 @@ appliesto:
   - PowerPoint 2013
   - PowerPoint 2010
   - Microsoft Office PowerPoint 2007
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # How to troubleshoot a damaged presentation in PowerPoint

@@ -12,7 +12,7 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business Server 2015
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Can't perform a CMS failover in Skype for Business Server 2015

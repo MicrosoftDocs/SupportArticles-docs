@@ -12,7 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Microsoft 365 Apps for enterprise
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # "We are unable to connect right now" error when users try to activate Microsoft 365 Apps for enterprise

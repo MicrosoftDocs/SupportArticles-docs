@@ -3,7 +3,7 @@ title: Invitation sent to a distribution list in SharePoint works for only one u
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 10/8/2020
+ms.date: 10/08/2020
 audience: Admin
 ms.topic: troubleshooting
 localization_priority: Normal

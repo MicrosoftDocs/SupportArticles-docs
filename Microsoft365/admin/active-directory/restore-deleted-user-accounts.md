@@ -18,7 +18,7 @@ appliesto:
   - Cloud Services (Web roles/Worker roles)
   - Azure Active Directory
   - Microsoft 365 User and Domain Management
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 # How to restore deleted user accounts in Microsoft 365, Azure, and Intune
 

@@ -15,7 +15,7 @@ appliesto:
   - Excel 2003
   - Excel 2002
   - Excel 2000
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Create application-level event handlers in Excel

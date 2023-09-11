@@ -13,7 +13,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft 365
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # User passwords aren't synced, and "Password Synchronization has not been activated for this company" error is logged in Event Viewer

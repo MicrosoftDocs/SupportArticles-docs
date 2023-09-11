@@ -13,7 +13,7 @@ ms.topic: troubleshooting
 ms.custom: sap:spsexperts, CSSTroubleshoot
 appliesto: 
   - Microsoft SharePoint
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # PowerPivot Configuration Tool shows "The user is not a farm administrator" error

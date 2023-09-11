@@ -17,7 +17,7 @@ appliesto:
   - Outlook 2016
   - Outlook 2013
   - Outlook 2010
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 # Connection issues between Outlook and Exchange when MAPI is disabled for a user
 

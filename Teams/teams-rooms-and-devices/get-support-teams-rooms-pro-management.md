@@ -3,7 +3,7 @@ title: Get support for Microsoft Teams Rooms Pro Management
 description: Describes how to create a support request and collect required information for Microsoft Support to resolve issues in the Teams Rooms Pro Management portal.
 ms.reviewer: aageorge
 ms.topic: troubleshooting
-ms.date: 9/29/2022
+ms.date: 09/29/2022
 author: helenclu
 ms.author: luche
 manager: dcscontentpm

@@ -13,7 +13,7 @@ ms.custom: sap:office-experts, CSSTroubleshoot
 ms.reviewer: jalalb
 appliesto: 
   - Office 2013
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # How to manage the First Run screens that appear when Office 2013 applications are first started

@@ -12,7 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto: 
   - Skype for Business Online
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # The telephone contact number isn't updated for users who migrate to Skype for Business Online

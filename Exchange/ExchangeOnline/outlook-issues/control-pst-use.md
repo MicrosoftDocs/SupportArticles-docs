@@ -16,7 +16,7 @@ appliesto:
   - Outlook 2013
   - Outlook 2010
   - Outlook 2007
-ms.date: 5/18/2023
+ms.date: 05/18/2023
 ms.reviewer: v-six
 ---
 

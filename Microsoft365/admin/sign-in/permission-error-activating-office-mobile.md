@@ -13,7 +13,7 @@ search.appverid:
 appliesto: 
   - Office Mobile for iPhone
   - Office Mobile for Android
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Errors when trying to activate or sign in to Office Mobile on iPhone or Office Mobile on Android

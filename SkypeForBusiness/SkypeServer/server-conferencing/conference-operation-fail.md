@@ -14,7 +14,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business 2015
   - Lync Server 2013
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Conference creation, modification, or deletion fails for some application endpoints in Lync or Skype for Business

@@ -14,7 +14,7 @@ ms.reviewer: gmuntean, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 # Primary SMTP proxy address is replaced by targetAddress value in a hybrid environment
 

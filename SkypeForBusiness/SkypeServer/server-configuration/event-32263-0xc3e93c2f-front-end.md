@@ -14,7 +14,7 @@ appliesto:
   - Lync 2010
   - Lync 2013
   - Skype for Business Server 2015
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Event 32263 error 0xC3E93C2F on Front-End servers in Skype for Business Server

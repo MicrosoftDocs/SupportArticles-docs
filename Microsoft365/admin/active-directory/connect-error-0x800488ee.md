@@ -18,7 +18,7 @@ appliesto:
   - Microsoft Intune
   - Azure Backup
   - Microsoft 365
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # 0x800488EE when connecting to Microsoft 365, Azure, or Intune in the Azure AD Module for PowerShell

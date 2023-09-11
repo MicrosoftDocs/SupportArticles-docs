@@ -18,7 +18,7 @@ appliesto:
   - Project Standard 2010
   - Project Professional 2013
   - Project 2013 Standard
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # "Cannot save to Global.mpt" when exiting Microsoft Project

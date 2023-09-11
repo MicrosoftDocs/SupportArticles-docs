@@ -16,7 +16,7 @@ appliesto:
   - Exchange Server 2016
   - Exchange Server 2019
 search.appverid: MET150
-ms.date: 5/23/2022
+ms.date: 05/23/2022
 ---
 # Can't remove a remote shared mailbox by using the Exchange admin center on Exchange Server
 

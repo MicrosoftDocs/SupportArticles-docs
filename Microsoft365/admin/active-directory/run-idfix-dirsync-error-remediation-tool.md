@@ -17,7 +17,7 @@ appliesto:
   - Microsoft Intune
   - Azure Backup
   - Microsoft 365
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # "Duplicate" is displayed in the ERROR column for two or more objects after you run the IdFix tool

@@ -12,7 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Microsoft Office
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Description of task panes in Office programs

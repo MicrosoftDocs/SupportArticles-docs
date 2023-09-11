@@ -14,7 +14,7 @@ search.appverid:
 appliesto: 
   - Excel 2010
   - Excel 2013
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Connection to ODBC driver fails in PowerPivot for Excel 2010 or PowerPivot for Excel 2013

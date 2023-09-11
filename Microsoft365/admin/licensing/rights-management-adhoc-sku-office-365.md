@@ -12,7 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Azure Active Directory
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # 50,000 seats are assigned to the RIGHTSMANAGEMENT_ADHOC SKU in your Microsoft 365 organization

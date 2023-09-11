@@ -14,7 +14,7 @@ appliesto:
   - Microsoft 365 Apps for enterprise
   - Microsoft 365 Family
   - Microsoft 365 Personal
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # You receive a "0x80041015" error message when you try to start an Office program

@@ -3,7 +3,7 @@ title: Error when changing O365 site logo in SharePoint
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 4/16/2020
+ms.date: 04/16/2020
 audience: Admin
 ms.topic: troubleshooting
 localization_priority: Normal

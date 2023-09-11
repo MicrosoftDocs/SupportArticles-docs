@@ -22,7 +22,7 @@ appliesto:
   - Microsoft Business Productivity Online Suite Federal
   - Outlook for Microsoft 365
 search.appverid: MET150
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 # Email remains in the Outbox when you use the DelegateSentItemsStyle registry value
 

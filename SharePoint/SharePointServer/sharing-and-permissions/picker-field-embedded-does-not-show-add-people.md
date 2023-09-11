@@ -12,7 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - Microsoft SharePoint
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # People Picker field embedded in Office documents does not show "Add People" dialog box

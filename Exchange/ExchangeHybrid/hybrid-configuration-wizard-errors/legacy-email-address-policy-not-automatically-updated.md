@@ -14,7 +14,7 @@ ms.reviewer: timothyh, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 # The Legacy Email Address Policy cannot be automatically updated and must be manually upgraded
 

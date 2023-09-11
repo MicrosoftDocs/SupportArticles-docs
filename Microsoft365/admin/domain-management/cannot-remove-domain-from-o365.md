@@ -13,7 +13,7 @@ ms.author: luche
 appliesto: 
   - SharePoint Online
   - Microsoft 365 domain management
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # "Cannot Remove Domain" error when you try to remove a domain from Microsoft 365

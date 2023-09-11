@@ -14,7 +14,7 @@ ms.reviewer: denniwil
 appliesto: 
   - Access
 search.appverid: MET150
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Format or DatePart functions can return wrong week number for last Monday in Year

@@ -14,7 +14,7 @@ ms.reviewer: rrajan, batre, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 # TLS negotiation failed with error NoCredentials error if messages to external domains are deferred
 

@@ -12,7 +12,7 @@ ms.custom: sap:spsexperts, CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - Office Online Server
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Behavior when using Office Online Server and SharePoint with multiple zones

@@ -16,7 +16,7 @@ appliesto:
   - SharePoint Server 2019
   - SharePoint Server Subscription Edition
   - SharePoint Online
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # SharePoint on-premises content isn't displayed in SharePoint Online search results  

@@ -12,7 +12,7 @@ ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
   - Microsoft 365
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # "The Installation of This Package Failed" When you install Office Pro Plus 2010 from Microsoft 365 Subscription Portal

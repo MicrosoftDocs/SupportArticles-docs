@@ -3,7 +3,7 @@ title: The SharePoint Online Modern admin center does not display (Advanced) and
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 11/2/2020
+ms.date: 11/02/2020
 audience: Admin
 ms.topic: troubleshooting
 localization_priority: Normal

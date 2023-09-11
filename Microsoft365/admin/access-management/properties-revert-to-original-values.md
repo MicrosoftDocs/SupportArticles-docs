@@ -15,7 +15,7 @@ appliesto:
   - Microsoft 365
   - Windows Server 2012 Essentials
   - Windows Server 2012 R2 Essentials
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Properties of Microsoft 365 users revert to original values when running Windows Server Essentials

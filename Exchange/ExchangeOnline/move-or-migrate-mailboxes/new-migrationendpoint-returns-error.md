@@ -14,7 +14,7 @@ ms.reviewer: batre, ninob, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 8/31/2023
+ms.date: 08/31/2023
 ---
 # New-MigrationEndpoint returns error in Exchange Online: MAPI provider is not supported for mailbox
 
