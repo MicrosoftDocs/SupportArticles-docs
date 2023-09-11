@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Hybrid
   - CSSTroubleshoot
-ms.reviewer: lenarudz, v-six, tonymathew, v-trisshores 
+ms.reviewer: lenarudz, v-six, tonymathew 
 appliesto: 
   - Exchange Online
   - Exchange Server 2016 Enterprise Edition
@@ -18,7 +18,7 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
 search.appverid: MET150
-ms.date: 3/31/2022
+ms.date: 09/11/2023
 ---
 
 # Errors about missing parameters when moving only a primary mailbox either to or from Exchange Online
@@ -83,9 +83,5 @@ To move only a primary mailbox, use the [New-MoveRequest](/powershell/module/exc
    ```powershell
    New-MoveRequest  -Identity <mailbox ID> -Outbound -RemoteTargetDatabase <on-premises mailbox database> -RemoteHostName  <on-premises MRS proxy URL> -BatchName <name of batch> -PrimaryOnly -ArchiveDomain <mail.onmicrosoft.com domain> -TargetDeliveryDomain <on-premises domain> -RemoteCredential (Get-Credential)
    ```
-
-## More information
-
-You can also use the `New-MigrationBatch` cmdlet together with the `-PrimaryOnly` parameter to move only a primary mailbox. For more information, about this cmdlet, see [New-MigrationBatch](/powershell/module/exchange/new-migrationbatch?view=exchange-ps&preserve-view=true).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Microsoft Q&A](/answers/products/?WT.mc_id=msdnredirect-web-msdn).
