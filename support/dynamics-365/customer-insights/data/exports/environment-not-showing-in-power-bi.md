@@ -4,9 +4,8 @@ description: Learn how to address issues with relationships in the Power BI conn
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
-ms.date: 01/23/2023
+ms.date: 09/11/2023
 ---
-
 # Environment doesn't show in Power BI
 
 This article resolves issues with the Power BI connector for Dynamics 365 Customer Insights - Data.

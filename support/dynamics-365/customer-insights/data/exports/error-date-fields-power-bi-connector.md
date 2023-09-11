@@ -4,9 +4,8 @@ description: Learn how to address issues with loading errors in the Power BI con
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
-ms.date: 01/23/2023
+ms.date: 09/11/2023
 ---
-
 # Errors on date fields when loading entities in Power BI Desktop
 
 This article resolves an issue in Power BI Desktop related to the Power BI connector for Dynamics 365 Customer Insights - Data.

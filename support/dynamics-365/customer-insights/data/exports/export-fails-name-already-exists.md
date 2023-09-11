@@ -4,7 +4,7 @@ description: Provides a resolution for the issue where exports fail because the 
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
-ms.date: 04/05/2023
+ms.date: 09/11/2023
 ---
 # "the following name already exists" error occurs during exports
 
@@ -21,14 +21,14 @@ A specific export run fails, and you receive the "the following name already exi
 
 ## Cause
 
-If this error message repeatedly occurs across system refreshes, then it's likely that your exports from are set up to export the same segment several times to the same destination, which in rare cases can cause this error message.
+If this error message repeatedly occurs across system refreshes, then it's likely that your exports are set up to export the same segment several times to the same destination, which in rare cases can cause this error message.
 
 ## Resolution
 
 To resolve this issue,
 
-1. Note the name mentioned in the error message. 
-1. Review the list of exported segments for all exports to the export destination that shows the error message. 
+1. Note the name mentioned in the error message.
+1. Review the list of exported segments for all exports to the export destination that shows the error message.
 1. If you find the same segment selected in different exports, change the exports so that each segment is exported only once.
 1. Save changes to exports.
 1. The next time all exports run, confirm that the error doesn't occur.
