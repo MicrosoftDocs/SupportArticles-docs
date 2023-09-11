@@ -13,7 +13,7 @@ ms.custom: CSSTroubleshoot
 ms.reviewer: willfid
 appliesto: 
   - Microsoft 365
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # You can't send email messages in Microsoft 365 from a domain that's set up for full redelegation

@@ -18,7 +18,7 @@ appliesto:
   - Outlook for Mac
   - Exchange Server 2013
 search.appverid: MET150
-ms.date: 1/10/2023
+ms.date: 01/10/2023
 ---
 
 # Outlook for Mac users can't access public folders in Exchange Server 2013

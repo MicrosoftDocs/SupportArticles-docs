@@ -15,7 +15,7 @@ ms.author: luche
 ms.reviewer: GURPALH
 appliesto: 
   - Access 2002
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # How to use ADOX to create an SQL pass-through query in Access

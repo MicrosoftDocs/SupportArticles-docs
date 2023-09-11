@@ -12,7 +12,7 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Skype for Business client stops responding when receiving a toast notification of an IM or an incoming call in Citrix VDI environment

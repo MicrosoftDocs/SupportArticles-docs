@@ -17,7 +17,7 @@ appliesto:
   - Outlook 2019 for Mac
   - Outlook for Microsoft 365 for Mac
 search.appverid: MET150
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 # "Access Denied" error when you change shared calendar permissions in Outlook for Mac
 

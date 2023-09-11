@@ -15,7 +15,7 @@ ms.custom:
 ms.author: luche
 appliesto: 
   - SharePoint Online
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # SharePoint 2013 Workflow Error: “To try again, reload the page and then start the workflow”

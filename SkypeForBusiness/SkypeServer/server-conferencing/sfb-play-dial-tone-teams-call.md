@@ -16,7 +16,7 @@ appliesto:
   - Teams
 search.appverid: 
   - MET150
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 # Skype for Business plays a dial tone during a Teams call
 

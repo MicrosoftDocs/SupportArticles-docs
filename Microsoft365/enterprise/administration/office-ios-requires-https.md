@@ -16,7 +16,7 @@ ms.custom:
   - CI 161252
 appliesto: 
   - Office app for iOS
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Office apps for iOS require HTTPS to connect to server resources

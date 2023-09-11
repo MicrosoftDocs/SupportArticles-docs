@@ -14,7 +14,7 @@ search.appverid:
   - MOE150
 ms.assetid: 79e180b1-6290-48ff-8003-fb3e6a3f70af
 description: Learn how to solve distribution group issues in Microsoft 365 like emails not being delivered to the group, or external members not getting emails.
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Distribution group issues

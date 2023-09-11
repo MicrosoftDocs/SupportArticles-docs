@@ -15,7 +15,7 @@ appliesto:
   - Microsoft Purview
   - Azure Information Protection 
 search.appverid: MET150
-ms.date: 9/9/2022
+ms.date: 09/09/2022
 ---
 # "Too many users" error when adding many recipients to encrypted email
 

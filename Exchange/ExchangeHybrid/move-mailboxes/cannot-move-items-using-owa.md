@@ -18,7 +18,7 @@ appliesto:
   - Exchange Server 2010 Standard
   - Exchange Server 2010 Service Pack 3
 search.appverid: MET150
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 # Can't move items between on-premises Exchange mailboxes and their cloud-based archive in OWA
 

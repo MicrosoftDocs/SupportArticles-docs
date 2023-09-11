@@ -14,7 +14,7 @@ ms.reviewer: timothyh, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 # No Federation trust is configured for this organization error when you run the Hybrid Configuration Wizard
 

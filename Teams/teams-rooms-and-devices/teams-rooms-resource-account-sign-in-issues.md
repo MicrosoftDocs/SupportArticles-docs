@@ -3,7 +3,7 @@ title: Fix Teams Rooms resource account sign-in issues
 description: Troubleshoot common sign-in issues that occur when Microsoft Teams Rooms signs in to Exchange, and Microsoft Teams or Skype for Business.
 ms.reviewer: matart
 ms.topic: troubleshooting
-ms.date: 9/30/2022
+ms.date: 09/30/2022
 author: helenclu
 ms.author: luche
 manager: dcscontentpm

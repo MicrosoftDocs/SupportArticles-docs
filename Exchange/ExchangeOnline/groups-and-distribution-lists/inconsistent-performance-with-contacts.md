@@ -16,7 +16,7 @@ appliesto:
   - Outlook
 search.appverid: 
   - MET150
-ms.date: 3/3/2023
+ms.date: 03/03/2023
 ---
 # Inconsistent performance when working with contacts
 

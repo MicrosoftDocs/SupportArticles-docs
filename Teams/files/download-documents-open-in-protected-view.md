@@ -2,7 +2,7 @@
 title: Documents open in protected view when downloaded from Teams desktop
 ms.author: luche
 author: helenclu
-ms.date: 5/8/2020
+ms.date: 05/08/2020
 audience: ITPro
 ms.topic: troubleshooting
 manager: dcscontentpm

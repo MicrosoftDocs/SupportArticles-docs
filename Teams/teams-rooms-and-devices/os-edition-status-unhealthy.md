@@ -3,7 +3,7 @@ title: The OS Edition status of a Teams Rooms device is Unhealthy
 description: Resolve the issue that causes the OS Edition signal of a Teams Rooms device to appear as Unhealthy.
 ms.reviewer: joolive
 ms.topic: troubleshooting
-ms.date: 9/29/2022
+ms.date: 09/29/2022
 author: helenclu
 ms.author: luche
 manager: dcscontentpm

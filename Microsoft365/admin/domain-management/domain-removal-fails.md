@@ -12,7 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - Azure Active Directory Directories, Domains, and Objects
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # "An Error Occurred" error and domain removal fails in Microsoft 365

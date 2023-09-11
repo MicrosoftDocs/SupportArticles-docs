@@ -2,7 +2,7 @@
 title: When setting up a Meet Now in Teams, the CVI information does not autopopulate
 ms.author: luche
 author: helenclu
-ms.date: 4/9/2020
+ms.date: 04/09/2020
 audience: ITPro
 ms.topic: troubleshooting
 manager: dcscontentpm

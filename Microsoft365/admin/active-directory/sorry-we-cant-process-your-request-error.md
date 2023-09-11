@@ -16,7 +16,7 @@ appliesto:
   - Microsoft Intune
   - Azure Backup
   - Microsoft 365
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # "Sorry! We can't process your request" error when you try to set up security verification settings for Azure Multi-Factor Authentication

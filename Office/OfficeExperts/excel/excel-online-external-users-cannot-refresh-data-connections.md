@@ -13,7 +13,7 @@ ms.author: luche
 ms.reviewer: warrenr
 appliesto: 
   - Excel Online
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # External users can't refresh data connections from Excel Online

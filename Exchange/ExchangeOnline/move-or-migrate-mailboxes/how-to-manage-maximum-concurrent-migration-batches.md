@@ -14,7 +14,7 @@ ms.reviewer: v-lanac, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 # How to manage the maximum concurrent migration batches in Exchange Online in Microsoft 365
 

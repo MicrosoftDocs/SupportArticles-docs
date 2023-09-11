@@ -2,7 +2,7 @@
 title: We couldn't add member error when adding users to Teams
 ms.author: luche
 author: helenclu
-ms.date: 4/8/2020
+ms.date: 04/08/2020
 audience: ITPro
 ms.topic: troubleshooting
 manager: dcscontentpm

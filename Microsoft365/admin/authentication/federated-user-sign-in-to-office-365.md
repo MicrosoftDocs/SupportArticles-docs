@@ -16,7 +16,7 @@ appliesto:
   - Microsoft Intune
   - Azure Backup
   - Microsoft 365
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # "Sorry, but we're having trouble signing you in" and "8004789A" error when a federated user sign in to Microsoft 365, Azure, or Intune

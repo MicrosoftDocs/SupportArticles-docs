@@ -3,7 +3,7 @@ title: (Class not registered) error when updating PowerPivot data
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 1/12/2021
+ms.date: 01/12/2021
 audience: Admin
 ms.topic: troubleshooting
 localization_priority: Normal

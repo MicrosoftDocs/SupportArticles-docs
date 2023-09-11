@@ -14,7 +14,7 @@ ms.reviewer: samwilli, ctronent
 appliesto: 
   - Word Web App
   - IIS Media Services 3.0
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # You can't find any clip art in Word Online or OneNote Online to insert 

@@ -13,7 +13,7 @@ ms.topic: troubleshooting
 ms.custom: sap:office-experts, CSSTroubleshoot
 appliesto: 
   - Office Online Server
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Test viewing Office documents by using Office Online Server viewer

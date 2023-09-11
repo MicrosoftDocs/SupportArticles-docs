@@ -20,7 +20,7 @@ appliesto:
   - Word 2016
   - Word 2013
   - Word 2010
-ms.date: 3/27/2023
+ms.date: 03/27/2023
 ---
 
 # How to recover unsaved Word documents

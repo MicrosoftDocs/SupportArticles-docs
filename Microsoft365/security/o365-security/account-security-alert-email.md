@@ -13,7 +13,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Office 365 Dedicated/ITAR
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # You receive a Microsoft account security alert email message in Office 365 Dedicated/ITAR (vNext)

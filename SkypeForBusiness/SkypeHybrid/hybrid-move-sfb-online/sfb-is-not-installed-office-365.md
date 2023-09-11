@@ -13,7 +13,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business 2016
   - Skype for Business Online
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Skype for Business 2016 isn't installed when you switch from Microsoft 365 Small Business Premium to Microsoft 365 Business Standard

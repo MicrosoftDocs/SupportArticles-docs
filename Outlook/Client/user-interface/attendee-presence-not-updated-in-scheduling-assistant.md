@@ -14,7 +14,7 @@ ms.reviewer: randyto
 appliesto: 
   - Outlook 2013
 search.appverid: MET150
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 # Attendee's presence isn't updated in the Outlook Scheduling Assistant
 

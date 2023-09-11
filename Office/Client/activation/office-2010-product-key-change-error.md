@@ -17,7 +17,7 @@ appliesto:
   - Office Home and Business 2010
   - Office Professional 2010
   - Office Professional Plus 2010
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Office 2010 product key change error step by step

@@ -20,7 +20,7 @@ appliesto:
   - Windows Server 2016
   - Windows Server 2019
   - Windows Server 2022
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # SharePoint crawler has insufficient permissions to crawl file shares

@@ -14,7 +14,7 @@ appliesto:
   - Microsoft 365 Apps for enterprise
   - Office 2016
   - OneDrive
-ms.date: 7/25/2023
+ms.date: 07/25/2023
 ---
 
 # How to block OneDrive use from within Microsoft 365 Apps for enterprise and Office 2016 applications

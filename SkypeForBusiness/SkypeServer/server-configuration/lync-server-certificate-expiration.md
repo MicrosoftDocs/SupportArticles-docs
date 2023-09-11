@@ -16,7 +16,7 @@ appliesto:
   - Lync Server 2010 Enterprise Edition
   - Lync Server 2010
   - Group ChatLync Server 2013
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Preventing Lync Server certificate expiration

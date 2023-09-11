@@ -17,7 +17,7 @@ appliesto:
   - Office Home and Business 2013
   - Office Home and Student 2013
   - Office Standard 2013
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Cannot activate Office 2013 on a new computer

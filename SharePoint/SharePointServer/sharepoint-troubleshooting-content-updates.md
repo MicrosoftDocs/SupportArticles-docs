@@ -12,7 +12,7 @@ search.appverid:
 ms.custom: 
   - CI 147469
   - CSSTroubleshoot
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 # SharePoint troubleshooting content updates
 

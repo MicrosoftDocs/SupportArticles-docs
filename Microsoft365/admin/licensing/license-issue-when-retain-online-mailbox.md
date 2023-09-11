@@ -13,7 +13,7 @@ ms.author: luche
 appliesto: 
   - Exchange Online
   - Microsoft 365
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # You receive a "One or more users need an assigned license in order to retain an Exchange Online mailbox or archive" message on the Users page of the Microsoft 365 portal

@@ -18,7 +18,7 @@ appliesto:
   - Skype for Business 2016
   - Lync 2013
   - Lync Server 2013
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Skype for Business Online users in a Microsoft 365 domain can't IM or detect users in an on-premises domain

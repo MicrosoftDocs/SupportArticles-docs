@@ -12,7 +12,7 @@ ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
   - Office Mobile for iPhone
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # "Can't Verify Subscription" or "No Subscription Found" error messages in Office Mobile

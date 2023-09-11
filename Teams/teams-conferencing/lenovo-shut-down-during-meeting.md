@@ -13,7 +13,7 @@ ms.custom:
 ms.reviewer: lauram, SfB_Triage
 appliesto: 
   - Microsoft Teams
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Lenovo Yoga L13 might shut down during Teams meetings

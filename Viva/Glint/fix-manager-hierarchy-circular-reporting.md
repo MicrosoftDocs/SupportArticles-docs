@@ -3,7 +3,7 @@ title: Resolve manager hierarchy error in Viva Glint
 description: Fix issues that cause circular reporting in a manager hierarchy when you upload employee attribute data to Microsoft Viva Glint.
 manager: dcscontentpm
 ms.reviewer: aweixelman
-ms.date: 8/25/2023
+ms.date: 08/25/2023
 audience: ITPro
 ms.topic: troubleshooting
 search.appverid: MET150

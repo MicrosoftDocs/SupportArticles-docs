@@ -12,7 +12,7 @@ ms.topic: troubleshooting
 description: OData Connection to Project Online from SSIS is failing if TLS is not enabled.
 appliesto: 
   - Project Online
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # You can't connect to Project Online OData from SSIS

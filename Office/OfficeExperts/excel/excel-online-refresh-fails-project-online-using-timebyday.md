@@ -13,7 +13,7 @@ ms.author: luche
 ms.reviewer: thempel
 appliesto: 
   - Excel Online
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # "External Data Refresh Failed" when refreshing Project Online data in Excel Online

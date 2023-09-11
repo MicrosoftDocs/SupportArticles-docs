@@ -19,7 +19,7 @@ appliesto:
   - Microsoft Intune
   - Azure Backup
   - Microsoft
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # "Access Denied" error when you use the connect-MSOLService cmdlet to connect to Microsoft 365

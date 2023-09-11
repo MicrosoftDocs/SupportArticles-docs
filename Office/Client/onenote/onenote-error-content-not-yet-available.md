@@ -3,7 +3,7 @@ title: Content Not Yet Available error in OneNote
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 4/24/2020
+ms.date: 04/24/2020
 audience: Admin
 ms.topic: troubleshooting
 localization_priority: Normal

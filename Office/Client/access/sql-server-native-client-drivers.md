@@ -12,7 +12,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Access 2010
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Download information about the SQL Server Native Client drivers that are used by Access

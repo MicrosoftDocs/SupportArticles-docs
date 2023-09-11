@@ -21,7 +21,7 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2010 Standard
   - Exchange Server 2010 Enterprise
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 # The Exchange Edge Transport server version is incorrect in EAC or ECP after an upgrade
 

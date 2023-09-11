@@ -13,7 +13,7 @@ search.appverid:
 appliesto: 
   - Azure Active Directory
   - Microsoft 365
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Certificate-based authentication for iOS fails to prompt for user certificates
