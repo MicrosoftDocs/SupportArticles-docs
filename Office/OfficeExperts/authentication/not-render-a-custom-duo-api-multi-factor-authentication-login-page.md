@@ -13,7 +13,7 @@ ms.topic: troubleshooting
 ms.custom: sap:office-experts, CSSTroubleshoot
 appliesto: 
   - Microsoft Office
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Office doesn't render a custom DUO API multifactor authentication login page

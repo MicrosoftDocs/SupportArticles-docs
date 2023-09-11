@@ -13,7 +13,7 @@ ms.topic: troubleshooting
 ms.custom: sap:office-experts, CSSTroubleshoot
 appliesto: 
   - Microsoft Word
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Force a Word document to open in edit mode from an email link

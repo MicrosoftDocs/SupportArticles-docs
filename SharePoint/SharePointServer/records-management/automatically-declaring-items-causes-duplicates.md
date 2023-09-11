@@ -14,7 +14,7 @@ appliesto:
   - SharePoint Server 2010
   - SharePoint Server 2013
 search.appverid: MET150
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 # Automatically declaring items as records causes duplicates in SharePoint Server
 

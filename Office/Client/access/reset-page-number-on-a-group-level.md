@@ -15,7 +15,7 @@ ms.author: luche
 ms.reviewer: V-SHIRAP
 appliesto: 
   - Access 2007
-ms.date: 6/27/2023
+ms.date: 06/27/2023
 ---
 
 # How to reset the page number on a group level in an Access report

@@ -16,7 +16,7 @@ appliesto:
   - Microsoft Intune
   - Azure Backup
   - Microsoft 365
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # How to troubleshoot AD FS endpoint connection issues when users sign in to Microsoft 365, Intune, or Azure

@@ -3,7 +3,7 @@ title: Error (A subscription wasn't found for this user) when migrating a public
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-ms.date: 10/7/2020
+ms.date: 10/07/2020
 audience: Admin
 ms.topic: troubleshooting
 localization_priority: Normal

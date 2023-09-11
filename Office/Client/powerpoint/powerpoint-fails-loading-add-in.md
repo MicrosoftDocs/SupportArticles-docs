@@ -12,7 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - Microsoft PowerPoint
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # PowerPoint cannot load an add-in when you lower the macro security level

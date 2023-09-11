@@ -12,7 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - Microsoft Access
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # "Runtime error 2147319779 (8002801d) library not registered" when setting a company as default

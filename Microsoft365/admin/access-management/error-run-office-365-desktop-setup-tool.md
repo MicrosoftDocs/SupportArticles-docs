@@ -12,7 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - Microsoft 365 User and Domain Management
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Error message when you run the Microsoft 365 Desktop Setup Tool: "Application configuration incomplete"

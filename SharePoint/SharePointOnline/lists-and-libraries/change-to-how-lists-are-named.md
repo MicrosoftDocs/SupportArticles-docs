@@ -3,7 +3,7 @@ title: Update to default content type setting for new lists in Modern Lists, Tea
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 11/9/2020
+ms.date: 11/09/2020
 audience: Admin
 ms.topic: troubleshooting
 localization_priority: Normal

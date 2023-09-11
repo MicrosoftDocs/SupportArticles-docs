@@ -14,7 +14,7 @@ ms.reviewer: timothyh, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 # Execution of the Set-WebServicesVirtualDirectory cmdlet had thrown an exception when running the Hybrid Configuration wizard
 

@@ -20,7 +20,7 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
 search.appverid: MET150
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 # Can't create a mail profile on an iOS device by using Autodiscover
 

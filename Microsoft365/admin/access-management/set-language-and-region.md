@@ -14,7 +14,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft 365
-ms.date: 6/27/2022
+ms.date: 06/27/2022
 ---
 
 # How to set language and regional settings for Microsoft 365

@@ -12,7 +12,7 @@ ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
   - Excel 2013
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # "The following connection failed to refresh" error in an Excel 2013 workbook on a WAC server

@@ -21,7 +21,7 @@ appliesto:
   - Office Professional Plus 2010 Home Use Program
   - Office Standard 2010
   - Office Starter 2010
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # "To install and use this product..." error when you install Office 2010

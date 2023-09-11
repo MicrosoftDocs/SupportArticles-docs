@@ -2,7 +2,7 @@
 title: You need a phone system license error when you assign a toll service number
 ms.author: luche
 author: helenclu
-ms.date: 4/9/2020
+ms.date: 04/09/2020
 audience: ITPro
 ms.topic: troubleshooting
 manager: dcscontentpm

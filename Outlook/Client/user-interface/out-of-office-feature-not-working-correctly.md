@@ -12,7 +12,7 @@ search.appverid: MET150
 ms.reviewer: kellybos, rjewell, v-six
 author: cloud-writer
 ms.author: meerak
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 # The Out of Office feature in Outlook doesn't function correctly in Microsoft 365
 

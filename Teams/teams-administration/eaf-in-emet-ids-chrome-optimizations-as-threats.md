@@ -2,7 +2,7 @@
 title: Chromium sandbox optimizations incorrectly identified as threats by EAF policy in the Enhanced Mitigation Experience Toolkit (EMET)
 ms.author: luche
 author: helenclu
-ms.date: 4/8/2020
+ms.date: 04/08/2020
 audience: ITPro
 ms.topic: troubleshooting
 manager: dcscontentpm

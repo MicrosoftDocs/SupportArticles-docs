@@ -3,7 +3,7 @@ title: Known issues for Teams when run on Linux
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 7/1/2020
+ms.date: 07/01/2020
 audience: Admin
 ms.topic: troubleshooting
 localization_priority: Normal

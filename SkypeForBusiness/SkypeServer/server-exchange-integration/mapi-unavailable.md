@@ -12,7 +12,7 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business 2016
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # "MAPI unavailable" error in Skype for Business 2016 client

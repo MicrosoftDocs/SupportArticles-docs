@@ -12,7 +12,7 @@ ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
   - Microsoft 365
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # How to troubleshoot issues when you use Cortana with Microsoft 365

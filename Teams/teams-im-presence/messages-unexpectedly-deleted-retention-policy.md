@@ -16,7 +16,7 @@ appliesto:
   - Viva Engage
 search.appverid: 
   - MET150
-ms.date: 7/8/2022
+ms.date: 07/08/2022
 ---
 # Messages in the Teams and Viva Engage apps are unexpectedly deleted by retention policies
 

@@ -19,7 +19,7 @@ appliesto:
   - Exchange Server 2013 Standard Edition
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ms.reviewer: v-six
 ---
 

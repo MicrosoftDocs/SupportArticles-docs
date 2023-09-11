@@ -12,7 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Online
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Template-generated list doesn't display correct data for a column in SharePoint Online

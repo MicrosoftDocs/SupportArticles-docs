@@ -15,7 +15,7 @@ search.appverid: MET150
 ms.reviewer: tasitae, v-six
 author: cloud-writer
 ms.author: meerak
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 # Outlook doesn't connect or web services don't work after migration to Microsoft 365
 

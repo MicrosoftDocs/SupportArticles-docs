@@ -14,7 +14,7 @@ ms.reviewer: rrajan, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 # Microsoft 365 users can't add new apps to Outlook Web App
 

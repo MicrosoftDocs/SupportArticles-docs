@@ -15,7 +15,7 @@ ms.custom:
 ms.author: luche
 appliesto: 
   - Microsoft 365
-ms.date: 8/29/2022
+ms.date: 08/29/2022
 ---
 # Microsoft Office Authentication/Identity Diagnostic (MSOAID)
 

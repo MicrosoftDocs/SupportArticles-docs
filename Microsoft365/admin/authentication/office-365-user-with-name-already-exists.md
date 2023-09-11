@@ -12,7 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - Microsoft 365
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # "A user with this name already exists. Use a different name." error in the Microsoft 365 portal

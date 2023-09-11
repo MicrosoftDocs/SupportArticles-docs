@@ -16,7 +16,7 @@ appliesto:
   - Exchange Online
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ms.reviewer: v-six
 ---
 # Move operation fails when moving a mailbox from Microsoft 365 back to the on-premises environment

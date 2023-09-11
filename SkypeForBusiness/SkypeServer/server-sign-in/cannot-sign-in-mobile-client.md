@@ -12,7 +12,7 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Lync Server 2013
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Lync Mobile users cannot sign in after they update to client version 5.4

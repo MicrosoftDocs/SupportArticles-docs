@@ -18,7 +18,7 @@ appliesto:
   - Microsoft Intune
   - Azure Backup
   - Microsoft 365
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Forgot password to sign in to Microsoft 365, Intune, or Azure

@@ -13,7 +13,7 @@ ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 appliesto: 
   - InfoPath 2013
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # InfoPath 2013 crashes when you connect to an Access database

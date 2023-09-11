@@ -5,7 +5,7 @@ ms.author: luche
 author: helenclu
 manager: dcscontentpm
 ms.reviewer: chrisarnoldmsft
-ms.date: 8/9/2022
+ms.date: 08/09/2022
 audience: ITPro
 ms.topic: troubleshooting
 ms.service: viva

@@ -15,7 +15,7 @@ ms.author: luche
 appliesto: 
   - Azure Active Directory
   - Microsoft 365
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Duplicate or invalid attributes prevent directory synchronization in Microsoft 365

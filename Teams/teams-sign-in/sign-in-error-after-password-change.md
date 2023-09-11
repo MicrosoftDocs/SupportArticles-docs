@@ -2,7 +2,7 @@
 title: After password change in Teams you receive a sign-in error
 ms.author: luche
 author: helenclu
-ms.date: 4/9/2020
+ms.date: 04/09/2020
 audience: ITPro
 ms.topic: troubleshooting
 manager: dcscontentpm

@@ -13,7 +13,7 @@ ms.author: luche
 ms.reviewer: mmaxey, tomol, doakm, trevormc, bobbied, swebster, andyfel
 appliesto: 
   - Office 2013
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Microsoft 365 or Office 2013 installation process stops at the "10% - Configuring" stage

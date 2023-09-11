@@ -13,7 +13,7 @@ ms.author: luche
 ms.reviewer: nical, smcgrath, bradh, jason
 appliesto: 
   - Microsoft 365
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # "To authenticate to Microsoft 365, you must enter your Microsoft account" when you run the Remote Connectivity Analyzer tool to test connectivity to Microsoft 365

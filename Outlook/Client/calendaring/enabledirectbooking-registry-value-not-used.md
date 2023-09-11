@@ -14,7 +14,7 @@ ms.reviewer: gregmans, aruiz
 appliesto: 
   - Outlook 2013
 search.appverid: MET150
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 # The EnableDirectBooking registry value isn't used by Outlook 2013
 

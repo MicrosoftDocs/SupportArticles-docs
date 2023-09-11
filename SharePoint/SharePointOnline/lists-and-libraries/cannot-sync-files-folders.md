@@ -13,7 +13,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Online
   - OneDrive for Business
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # You can't sync files or folders in Microsoft 365, or receive errors when you open files in Office Online

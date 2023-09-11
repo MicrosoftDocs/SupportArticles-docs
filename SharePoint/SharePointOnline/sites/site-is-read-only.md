@@ -16,7 +16,7 @@ ms.custom:
 appliesto: 
   - SharePoint Online
   - OneDrive for Business
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # SharePoint or OneDrive read-only error messages

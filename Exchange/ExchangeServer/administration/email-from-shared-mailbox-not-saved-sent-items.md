@@ -21,7 +21,7 @@ appliesto:
   - Exchange Server 2007
   - Outlook 2016 for Mac
   - Outlook for Microsoft 365 for Mac
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 # Email messages that you send from a shared mailbox aren't saved in the Sent Items folder in Outlook for Mac
 

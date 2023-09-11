@@ -14,7 +14,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Outlook on the web
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ms.reviewer: v-six
 ---
 

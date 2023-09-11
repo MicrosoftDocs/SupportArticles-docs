@@ -10,7 +10,7 @@ ms.author: meerak
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business Online
-ms.date: 4/7/2023
+ms.date: 04/07/2023
 ---
 
 # Support for Skype for Business Online has ended

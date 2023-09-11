@@ -18,7 +18,7 @@ appliesto:
   - Access 2019
   - Access 2016
   - Access 2013
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # "File sharing lock count exceeded…" error during large transaction processing

@@ -14,7 +14,7 @@ ms.reviewer: kellybos, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 # Can't add a Room or Resource mailbox in a Microsoft 365 hybrid environment
 

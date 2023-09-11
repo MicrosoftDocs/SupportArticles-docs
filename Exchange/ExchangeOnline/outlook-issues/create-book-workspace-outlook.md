@@ -20,7 +20,7 @@ appliesto:
   - Outlook for Microsoft 365
   - Outlook on the web
 search.appverid: MET150
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Create and book a workspace in Outlook

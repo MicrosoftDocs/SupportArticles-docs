@@ -9,10 +9,10 @@ ms.custom: CSSTroubleshoot
 appliesto: 
 - Exchange Online
 search.appverid: MET150
-ms.reviewer: kellybos, v-maqiu, v-jeffbo, v-six
+ms.reviewer: kellybos, v-jeffbo, v-six
 author: cloud-writer
 ms.author: meerak
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 # "550 5.1.11 RESOLVER.ADR.ExRecipNotFound" when delegate sends update to meeting after manager moved to Microsoft 365 hybrid environment
 
@@ -33,7 +33,7 @@ In this scenario, the delegate receives a non-delivery report that includes the 
 
 ## Cause
 
-The **legacyExchangeDN** attribute value of the invitee's cloud object is stored in the calendar item. If the Azure Active Directory Connect (AAD Connect) Exchange hybrid deployment settings are not enabled, the **legacyExchangeDN** attribute values in the cloud are not written back to the on-premises.
+The **legacyExchangeDN** attribute value of the invitee's cloud object is stored in the calendar item. If the Azure Active Directory Connect (AAD Connect) Exchange hybrid deployment settings aren't enabled, the **legacyExchangeDN** attribute values in the cloud aren't written back to the on-premises.
 
 ## Resolution
 

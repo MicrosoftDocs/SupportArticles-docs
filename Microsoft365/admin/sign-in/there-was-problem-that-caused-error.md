@@ -17,7 +17,7 @@ appliesto:
   - Microsoft Intune
   - Azure Backup
   - Microsoft 365
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # You receive a "There was a problem that caused parts of the Microsoft Online Services Sign-in Assistant to be disabled" error

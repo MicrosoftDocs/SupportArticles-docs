@@ -15,7 +15,7 @@ ms.custom:
   - CI 110761
 appliesto: 
   - SharePoint Workspace 2010
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # How to delete temporary and permanent data in SharePoint Workspace 2010

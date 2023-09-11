@@ -13,7 +13,7 @@ ms.custom: sap:office-experts, CSSTroubleshoot
 ms.reviewer: ericspli
 appliesto: 
   - Office 2010
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Activate Office 2010 KMS host through phone activation

@@ -3,7 +3,7 @@ title: Error in SharePoint Something went wrong when configuring SPFx component 
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 4/16/2020
+ms.date: 04/16/2020
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal

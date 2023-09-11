@@ -12,7 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Microsoft Excel
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Set page setup attributes for more than one sheet in Excel

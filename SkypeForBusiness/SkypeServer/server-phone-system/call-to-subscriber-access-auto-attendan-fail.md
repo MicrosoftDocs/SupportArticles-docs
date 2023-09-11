@@ -12,7 +12,7 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business Server 2019
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # "500 Server Internal" error and calls to Subscriber Access or Auto Attendant fail after moving contact objects to Skype for Business Server 2019

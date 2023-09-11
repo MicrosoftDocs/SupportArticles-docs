@@ -15,7 +15,7 @@ ms.reviewer: v-six
 appliesto: 
 - Exchange Online
 search.appverid: MET150
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 # Outlook for Mac 2011 doesn't connect to Exchange Online
 

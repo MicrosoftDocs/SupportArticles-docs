@@ -15,7 +15,7 @@ ms.custom:
   - CI 157728
 appliesto: 
   - SharePoint Online
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # SharePoint Online out of storage space

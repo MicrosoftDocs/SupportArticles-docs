@@ -12,7 +12,7 @@ ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
   - Microsoft 365 for business
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # "Another DNS record already exists with this host name" when adding an Address or CNAME record

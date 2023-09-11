@@ -14,7 +14,7 @@ appliesto:
   - SharePoint Server 2019
   - SharePoint Server 2016
   - SharePoint Server 2013
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Change the compatibility level of content databases for migration

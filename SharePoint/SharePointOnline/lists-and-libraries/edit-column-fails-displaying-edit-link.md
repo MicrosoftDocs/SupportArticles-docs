@@ -12,7 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Online
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # "Edit (link to edit item)" column in a SharePoint Online list doesn't display the edit link

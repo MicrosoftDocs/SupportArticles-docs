@@ -12,7 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto: 
   - Skype for Business 2016
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # How to disable Automatic Gain Control in Skype for Business on Windows

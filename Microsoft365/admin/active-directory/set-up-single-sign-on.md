@@ -16,7 +16,7 @@ appliesto:
   - Microsoft Intune
   - Azure Backup
   - Microsoft 365
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Supported scenarios for using AD FS to set up single sign-on in Microsoft 365, Azure, or Intune

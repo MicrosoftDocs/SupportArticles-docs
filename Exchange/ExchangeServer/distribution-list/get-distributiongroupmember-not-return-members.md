@@ -16,7 +16,7 @@ appliesto:
   - Exchange Server 2013
   - Exchange Server 2010
 ms.reviewer: v-six
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 # The Get-DistributionGroupMember command does not return all the members of distribution group if there are multiple Active Directory domains in your topology environment
 

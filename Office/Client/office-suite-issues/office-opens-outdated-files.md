@@ -3,7 +3,7 @@ title: Microsoft 365 apps open files from SharePoint on-premises that aren’t t
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 3/8/2021
+ms.date: 03/08/2021
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal

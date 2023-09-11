@@ -13,7 +13,7 @@ ms.author: luche
 ms.reviewer: thempel
 appliesto: 
   - Excel Online
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # "Request Was Taking Too Long" when you open a workbook in Excel Online

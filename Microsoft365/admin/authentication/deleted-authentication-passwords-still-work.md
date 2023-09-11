@@ -16,7 +16,7 @@ appliesto:
   - Microsoft Intune
   - Azure Backup
   - Microsoft 365
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Deleted app passwords for Multi-Factor Authentication still work in Microsoft 365, Azure, or Intune

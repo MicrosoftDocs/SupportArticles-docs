@@ -12,7 +12,7 @@ ms.reviewer: meerak, jonl, gbratton, mhaque, v-lianna
 appliesto: 
   - Outlook for Microsoft 365
 search.appverid: MET150
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 # Repeated status codes "401" and "200" when using MAPI over HTTP
 

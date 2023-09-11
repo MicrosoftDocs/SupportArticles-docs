@@ -12,7 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Microsoft 365
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # How to determine whether your Microsoft 365 account has been compromised

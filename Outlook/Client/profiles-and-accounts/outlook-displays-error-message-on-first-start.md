@@ -18,7 +18,7 @@ author: cloud-writer
 ms.author: meerak
 search.appverid: MET150
 ms.reviewer: pedrocorreia, gbratton
-ms.date: 6/23/2022
+ms.date: 06/23/2022
 ---
 # Outlook displays an error message on first start
 

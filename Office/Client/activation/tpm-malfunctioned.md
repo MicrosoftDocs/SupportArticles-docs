@@ -15,7 +15,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft 365
-ms.date: 5/17/2023
+ms.date: 05/17/2023
 ---
 
 # Microsoft 365 Apps activation error: “Trusted Platform Module malfunctioned”

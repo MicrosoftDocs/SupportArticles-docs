@@ -12,7 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - PowerPoint for Mac
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # "Microsoft PowerPoint has encountered a problem and needs to close" in PowerPoint for Mac startup

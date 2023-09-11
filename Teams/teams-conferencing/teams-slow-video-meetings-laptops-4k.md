@@ -13,7 +13,7 @@ ms.custom:
 ms.reviewer: SfB_Triage
 appliesto: 
   - Microsoft Teams
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Teams is slow during video meetings on laptops docked to 4K/UHD monitors

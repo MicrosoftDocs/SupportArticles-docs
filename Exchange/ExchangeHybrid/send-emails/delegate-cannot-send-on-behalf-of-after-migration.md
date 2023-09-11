@@ -14,7 +14,7 @@ ms.reviewer: kellybos, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 # Delegate can't send on behalf of after migration to Microsoft 365 hybrid environment
 

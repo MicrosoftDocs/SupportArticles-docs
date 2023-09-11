@@ -15,7 +15,7 @@ ms.custom:
 ms.reviewer: paotten
 appliesto: 
   - SharePoint Online
-ms.date: 4/15/2022
+ms.date: 04/15/2022
 ---
 
 # Can't schedule page publishing after changing a content type

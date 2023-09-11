@@ -12,7 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Online
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Error when you delete a SharePoint Online list item attachment and then attach a file with the same name

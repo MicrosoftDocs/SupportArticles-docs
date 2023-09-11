@@ -14,7 +14,7 @@ ms.reviewer: scottlan, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 # You receive a warning about possible NDR of email messages when running Hybrid Configuration Wizard
 

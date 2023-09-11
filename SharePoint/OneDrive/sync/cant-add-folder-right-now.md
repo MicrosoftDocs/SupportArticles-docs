@@ -15,7 +15,7 @@ search.appverid:
   - MET150
 appliesto: 
   - OneDrive for Business
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # OneDrive sync error “Sorry, OneDrive can’t add your folder right now”

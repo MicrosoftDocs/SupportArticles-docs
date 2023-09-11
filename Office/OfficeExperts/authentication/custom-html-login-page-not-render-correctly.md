@@ -13,7 +13,7 @@ ms.topic: troubleshooting
 ms.custom: sap:office-experts, CSSTroubleshoot
 appliesto: 
   - Microsoft Office
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # A custom HTML login page doesn't render correctly in an Office application

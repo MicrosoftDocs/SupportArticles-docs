@@ -18,7 +18,7 @@ appliesto:
   - Microsoft 365 Personal
   - Project Pro for Microsoft 365
   - Visio Pro for Microsoft 365
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Microsoft 365 is changing its build numbers to a five-digit format

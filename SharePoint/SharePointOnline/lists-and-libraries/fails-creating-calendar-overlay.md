@@ -12,7 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Online
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Error in SharePoint Online when you create a calendar overlay

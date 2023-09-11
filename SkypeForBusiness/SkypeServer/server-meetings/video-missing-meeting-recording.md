@@ -12,7 +12,7 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business 2015
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 
 # Video is missing in a Skype for Business 2015 meeting recording after the latest update is installed

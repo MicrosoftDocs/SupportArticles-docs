@@ -14,7 +14,7 @@ ms.reviewer: alinastr, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 3/31/2022
+ms.date: 03/31/2022
 ---
 # Can't open a calendar from a sharing invitation in Outlook on the web
 
