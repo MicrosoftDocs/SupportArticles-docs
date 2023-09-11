@@ -34,4 +34,4 @@ With each release of Microsoft Visio, we evaluate the set of shapes that are inc
 
 To download these stencils, visit the Microsoft Download Center: 
 
-[Software and Database Shapes for Microsoft Visio](https://www.microsoft.com/downloads/details.aspx?displaylang=en&familyid=6297cf81-c071-4bea-bd9d-fde692536e5a)
+[Software and Database Shapes for Microsoft Visio](https://www.microsoft.com/download/details.aspx?familyid=6297cf81-c071-4bea-bd9d-fde692536e5a)
