@@ -221,6 +221,8 @@
           href: ../move-mailboxes/remote-server-returned-error-403-forbidden.md
         - name: Access is denied error when moving mailboxes
           href: ../move-mailboxes/access-is-denied-error-when-moving-mailboxes.md
+        - name: Can't find a recipient that has mailbox GUID error
+          href: ../move-mailboxes/migrationpermanentexception-when-moving-mailboxes.md             
         - name: Can't migrate on-premises primary mailbox with cloud-based archive
           href: ../move-mailboxes/cannot-migrate-on-premises-primary-mailbox.md
         - name: Can't move Exchange Online mailboxes to Exchange Server 2010
@@ -232,7 +234,7 @@
         - name: Can't use OWA move items in a hybrid deployment
           href: ../move-mailboxes/cannot-move-items-using-owa.md
         - name: Error when moving only a primary mailbox to or from Exchange Online
-          href: ../move-mailboxes/migrationpermanentexception-when-moving-mailboxes.md          
+          href: ../move-mailboxes/you-must-specify-the-primaryonly-parameter-error.mdd          
         - name: Error when you move mailboxes to or from Microsoft 365
           href: ../move-mailboxes/error-move-mailboxes-to-from-o365.md
         - name: Extension number can't be generated
@@ -247,8 +249,6 @@
           href: ../move-mailboxes/mailbox-move-to-cloud-fail-with-error.md
         - name: MigrationPermanentException error when moving mailboxes
           href: ../move-mailboxes/migrationpermanentexception-error-when-moving-mailboxes.md
-        - name: MigrationPermanentException when moving a primary mailbox
-          href: ../move-mailboxes/you-must-specify-the-primaryonly-parameter-error.md
         - name: Move mailbox operation fails
           href: ../move-mailboxes/hybrid-move-fails.md
         - name: '"Multiple entries" error when a remote move migration fails'
