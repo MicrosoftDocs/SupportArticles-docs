@@ -4,7 +4,7 @@ description: Resolves an issue where cashiers see incorrect refundable charges i
 author: josaw1 
 ms.author: josaw
 ms.reviewer: brstor
-ms.date: 09/01/2023
+ms.date: 09/08/2023
 ---
 # Refundable charges are miscalculated based on the quantity returned
 
@@ -24,6 +24,6 @@ As of Microsoft Dynamics 365 Commerce version 10.0.26, the **Enable refunding ch
 
 To enable the **Enable refunding charges based on the refunded quantity** feature in Commerce headquarters, follow these steps:
 
-1. Navigate to **System administrator** > **Workspaces**> **Feature management* to open the **Feature management** workspace .
+1. Navigate to **System administrator** > **Workspaces**> **Feature management** to open the **Feature management** workspace.
 1. In the list of available features, search for and select the **Enable refunding charges based on the refunded quantity** feature.
 1. In the right pane, select **Enable now**.
