@@ -1,8 +1,6 @@
 - name: Power Pages Troubleshooting
   href: welcome-power-pages.yml
   items:
-    - name: Link destinations lost on buttons when page is edited in design studio
-      href: buttons-losing-href.md
     - name: Support resources
       items:
         - name: Power Pages support
