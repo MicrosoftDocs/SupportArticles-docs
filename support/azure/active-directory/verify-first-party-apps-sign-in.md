@@ -5,6 +5,7 @@ ms.date: 07/20/2023
 ms.reviewer: bernaw
 ms.service: active-directory
 ms.subservice: compliance
+ms.custom: has-azure-ad-ps-ref
 ---
 # Verify first-party Microsoft applications in sign-in reports
 

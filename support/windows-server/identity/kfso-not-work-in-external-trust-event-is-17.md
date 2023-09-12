@@ -1,7 +1,7 @@
 ---
 title: KFSO doesn't work in external trust
 description: Describes a situation in which Kerberos Forest Search Order may not work in an external trust. In this situation, Kerberos authentication is not offered.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

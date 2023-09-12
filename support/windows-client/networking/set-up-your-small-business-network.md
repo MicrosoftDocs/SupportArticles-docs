@@ -1134,7 +1134,7 @@ If you have a combined modem and router, follow these instructions:
 
 #### Complete the modem and router setup
 
-To complete the modem and router setup， follow the instructions:
+To complete the modem and router setup,  follow the instructions:
 
 1. Click **Start**.
 2. Click **Control Panel**.

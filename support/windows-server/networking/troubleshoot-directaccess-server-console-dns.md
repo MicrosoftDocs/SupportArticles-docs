@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot DNS server for DirectAccess server
 description: This article discusses how to troubleshoot DNS server issues for DirectAccess server.
-ms.date: 1/19/2022
+ms.date: 01/19/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

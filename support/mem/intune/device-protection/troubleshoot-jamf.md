@@ -1,13 +1,24 @@
 ---
 title: Troubleshooting Jamf Pro integration with Microsoft Intune
 description: Suggestions for troubleshooting some of the most common problems when you integrate Jamf Pro for Mac devices, with Microsoft Intune.
-ms.date: 12/06/2021
+ms.date: 09/04/2023
 ms.reviewer: kaushika, taveil
 search.appverid: MET150
 ---
+
 # Troubleshooting integration of Jamf Pro with Microsoft Intune
 
 This article helps Intune administrators understand and troubleshoot problems with integration of Jamf Pro for macOS with Microsoft Intune. Each of the following sections describes a common issue, and offers a potential cause and troubleshooting steps for a resolution.
+
+> [!IMPORTANT] 
+>
+> **Jamf macOS device support for Conditional Access is being deprecated**.
+>
+> Starting from September 1, 2024, the platform that Jamf Pro's Conditional Access feature is built on will no longer be supported.
+>
+> If you use Jamf Pro's Conditional Access integration for macOS devices, follow Jamf's documented guidelines to [migrate your devices from macOS Conditional Access to macOS Device Compliance](https://learn.jamf.com/bundle/jamf-pro-documentation-current/page/Conditional_Access.html#ariaid-title6).
+>
+> If you have questions or need help, contact [Jamf Customer Success](https://jamf.service-now.com/csm). For more information, see [Transitioning Jamf macOS devices from Conditional Access to Device Compliance](https://aka.ms/Intune/Jamf-Device-Compliance).
 
 ## Prerequisites
 
@@ -253,3 +264,4 @@ The required ports aren't open on your network.
 
 **Solution**
 Review the information for network ports in [Prerequisites](/mem/intune/protect/conditional-access-jamf-cloud-connector#prerequisites) for integrating Jamf Pro with Intune.
+

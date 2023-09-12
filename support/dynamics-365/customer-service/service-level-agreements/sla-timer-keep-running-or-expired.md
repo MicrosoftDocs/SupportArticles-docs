@@ -1,8 +1,8 @@
 ---
 title: SLA Timer keeps running or expires before the Timer failure time
 description: Provides a resolution for an issue where the SLA Timer keeps running or expires prior to the failure time on Timer.
-ms.reviewer: sdas
-ms.author: ravimanne
+ms.reviewer: sdas, ankugupta
+ms.author: sdas
 ms.date: 07/18/2023
 ---
 # Updating failure and warning times for SLA KPI instances in workflows isn't supported 

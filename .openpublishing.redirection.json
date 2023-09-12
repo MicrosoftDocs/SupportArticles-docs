@@ -41,6 +41,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/dynamics-365/commerce/commerce-headquarters-operations/summary-taxes-custom-modules-10.0.27.md",
+      "redirect_url": "/troubleshoot/dynamics-365/commerce/commerce-headquarters-operations/summary-taxes-custom-modules-10-0-27",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "support/power-platform/ai-builder/aibuilder-form-processing-is-not-extracting-tables-that-span-across-multiple-pages.md",
       "redirect_url": "/ai-builder/create-form-processing-model#multipage-tables",
       "redirect_document_id": false
@@ -5865,6 +5870,61 @@
     {
       "source_path": "support/sql/database-engine/backup-restore/nonrecoverable-io-error-backup-url.md",
       "redirect_url": "/troubleshoot/sql/welcome-sql-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/database-engine/install/windows/sql-server-upgrade-failed-error-15173-upgrade-script.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/sql-server-upgrade-failed-error-15173",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-engine/install/windows/sql-server-upgrade-failed-error-1712-upgrade-script.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/sql-server-upgrade-failed-error-1712",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-engine/install/windows/sql-server-upgrade-failed-error-17182-upgrade-script.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/sql-server-upgrade-failed-error-17182",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-engine/install/windows/sql-server-upgrade-failed-error-4860-upgrade-script.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/sql-server-upgrade-failed-error-4860",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-engine/install/windows/upgrade-fails-error-5133.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/sql-server-upgrade-failed-error-5133",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-engine/install/windows/upgrade-fails-error-code-2714.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/sql-server-upgrade-failed-error-2714",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-engine/install/windows/upgrade-fails-error-code-574.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/sql-server-upgrade-failed-error-574",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/ldap-kerberos-server-reset-tcp-sessions.md",
+      "redirect_url": "/troubleshoot/windows-server/identity/ldap-kerberos-server-not-respond-udp-request-reset-tcp-sessions",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/azure-functions/index.md",
+      "redirect_url": "/troubleshoot/azure/azure-functions/welcome-azure-functions",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/azure-kubernetes/small-file-handling-high-latency.md",
+      "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/azure-kubernetes/troubleshoot-upgrade-errors.md",
+      "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
       "redirect_document_id": false
     }
 ]

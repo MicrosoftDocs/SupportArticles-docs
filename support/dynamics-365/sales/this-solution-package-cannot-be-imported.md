@@ -3,7 +3,7 @@ title: This solution package cannot be imported
 description: Describes a solution to the 8004801a error that occurs when you try to import a solution in Microsoft Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-custom-solutions
 ---
 # This solution package cannot be imported because it contains invalid XML error occurs in Microsoft Dynamics 365
@@ -33,7 +33,7 @@ A solution package contains Dynamics 365 customizations that are stored as XML. 
 **Check if the details match a known issue**  
     Select the option to view the Technical Details, and see if it matches any of the following known issues:
 
-- [Solution import failure: The element 'general' has invalid child element 'enablelivepersonacarduci'](https://community.dynamics.com/365/f/761/t/319718)
+- [Solution import failure: The element 'general' has invalid child element 'enablelivepersonacarduci'](https://community.dynamics.com/forums/thread/)
 - ["The element 'Workflow' has invalid child element 'ProcessTriggers'" error occurs when importing a Dynamics 365 solution](https://support.microsoft.com/help/4462895)
 - ["The element 'savedquery' has incomplete content](https://support.microsoft.com/help/4463330)
 
@@ -44,3 +44,4 @@ For more information, see [Edit the customizations XML file with schema validati
 
 **If you received the solution from a solution provider**  
 Contact your solution provider.
+

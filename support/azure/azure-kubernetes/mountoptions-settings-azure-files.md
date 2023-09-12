@@ -1,7 +1,7 @@
 ---
 title: Recommended and useful mountOptions settings on Azure Files
 description: Learn about the useful and recommended mountOptions settings when you configure the storage class object on Azure Files.
-ms.date: 5/25/2022
+ms.date: 05/25/2022
 ms.reviewer: chiragpa, nickoman, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-azure-storage-issues

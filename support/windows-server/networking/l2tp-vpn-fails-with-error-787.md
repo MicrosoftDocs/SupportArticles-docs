@@ -1,7 +1,7 @@
 ---
 title: L2TP VPN fails with error 787
 description: L2TP VPN fails with 787 because of RRAS choosing the wrong certificate.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

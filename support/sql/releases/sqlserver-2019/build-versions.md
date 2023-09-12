@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2019 build versions (KB4518398)
 description: This article lists cumulative update and GDR builds for SQL Server 2019.
-ms.date: 06/15/2023
+ms.date: 08/14/2023
 ms.custom: KB4518398
 appliesto:
 - SQL Server 2019
@@ -15,7 +15,8 @@ This article lists the Microsoft SQL Server 2019 builds that were released after
 
 | CU Name | SQL Server build version | SQL Server (sqlservr.exe) file version | Analysis Services build version | Analysis Services (msmdsrv.exe) file version | Knowledge Base number | Release date |
 |---------------|--------------------------|----------------------------------------|---------------------------------|----------------------------------------------|-----------------------|--------------------|
-| CU21 (Latest) | 15.0.4316.3 | 2019.150.4316.3 | 15.0.35.39 | 2018.150.35.39 | [KB5025808](cumulativeupdate21.md) | June 15, 2023 |
+| CU22 (Latest) | 15.0.4322.2 | 2019.150.4322.2 | 15.0.35.41 | 2018.150.35.41 | [KB5027702](cumulativeupdate22.md) | August 14, 2023 |
+| CU21 | 15.0.4316.3 | 2019.150.4316.3 | 15.0.35.39 | 2018.150.35.39 | [KB5025808](cumulativeupdate21.md) | June 15, 2023 |
 | CU20 | 15.0.4312.2 | 2019.150.4312.2 | 15.0.35.39 | 2018.150.35.39 | [KB5024276](cumulativeupdate20.md) | April 13, 2023 |
 | CU19 | 15.0.4298.1| 2019.150.4298.1| 15.0.35.35| 2018.150.35.35 | [KB5023049](cumulativeupdate19.md) | February 16, 2023 |
 | CU18 | 15.0.4261.1| 2019.150.4261.1| 15.0.35.33| 2018.150.35.33 | [KB5017593](cumulativeupdate18.md) | September 28, 2022 |

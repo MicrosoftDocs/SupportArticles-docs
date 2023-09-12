@@ -4,7 +4,7 @@ description: Introduces a workaround for an issue in which shadow copy volume is
 author: Deland-Han
 ms.author: delhan
 ms.topic: troubleshooting
-ms.date: 5/20/2023
+ms.date: 05/20/2023
 ms.prod: windows-server
 ms.reviewer: kaushika, cdascoli, bechinch, khoffman
 ms.technology: windows-server-backup-and-storage

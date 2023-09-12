@@ -1,7 +1,7 @@
 ---
 title: Application does not appear after clicking the add button
 description: Understand why an application does not appear after clicking the add button.
-ms.date: 5/8/2023
+ms.date: 05/08/2023
 author: bernawy
 ms.author: bernaw
 editor: v-jsitser

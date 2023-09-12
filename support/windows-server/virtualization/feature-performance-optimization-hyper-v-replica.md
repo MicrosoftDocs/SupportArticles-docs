@@ -1,7 +1,7 @@
 ---
 title: Feature and performance optimization of Hyper-V Replica (HVR)
 description: This article describes the registry keys that apply to Hyper-V Replica feature
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

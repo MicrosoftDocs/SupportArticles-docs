@@ -3,7 +3,7 @@ title: Fields couldn't be loaded for this document error in a document processin
 description: Provides a resolution for the error that occurs when fields couldn't be loaded in a document processing model.
 ms.reviewer: angieandrews
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: 
 ms.author: angieandrews
 author: v-aangie

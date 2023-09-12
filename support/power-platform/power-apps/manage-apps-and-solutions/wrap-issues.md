@@ -3,6 +3,7 @@ title: Troubleshoot wrap issues in Power Apps
 description: Provides resolutions for issues related to the wrap feature in Power Apps.
 ms.reviewer: makolomi
 ms.date: 07/24/2023
+ms.custom: has-azure-ad-ps-ref
 ---
 # Troubleshoot issues with the wrap feature in Power Apps
 

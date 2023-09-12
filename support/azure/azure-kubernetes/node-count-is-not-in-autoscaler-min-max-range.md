@@ -1,7 +1,7 @@
 ---
 title: Current node count isn't in the autoscaler min and max range
 description: Troubleshoot why the current node count isn't in the autoscaler minimum and maximum range when you resume an Azure Kubernetes Service cluster after a stop operation.
-ms.date: 7/6/2022
+ms.date: 07/06/2022
 editor: v-jsitser
 ms.reviewer: chiragpa, nickoman, v-leedennis
 ms.service: azure-kubernetes-service

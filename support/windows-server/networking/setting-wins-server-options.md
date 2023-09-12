@@ -1,7 +1,7 @@
 ---
 title: Setting WINS server options
 description: Provides a solution to an error that occurs when you try to specify the same WINS address in the Secondary WINS address.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

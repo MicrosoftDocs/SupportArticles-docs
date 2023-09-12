@@ -1,7 +1,7 @@
 ---
 title: Cannot generate SSPI context when connecting to SQL Server
 description: Troubleshoots the cannot generate SSPI context error when you connect to SQL Server. Provides frequently asked questions and steps to fix the error.
-ms.date: 06/16/2022
+ms.date: 06/19/2023
 ms.custom: sap:Connection issues
 author: HaiyingYu
 ms.author: haiyingyu

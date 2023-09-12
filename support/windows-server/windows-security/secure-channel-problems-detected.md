@@ -1,7 +1,7 @@
 ---
 title: Secure Channel Problems Detected
 description: Provides a solution to detected secure channel problems.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -42,7 +42,7 @@ To resolve this issue if the cause is only network difficulties:
 
 Verify that the network connectivity between the local computer and the domain controller(s) has the required ports open on both client (local computer) and server (domain controller).
 
-Many methods may be used to verify that connectivity is sufficient since there are many causes of network problems. A common cause is network ports being inadvertently restricted. To resolve that common concern, review the ports required for Active Directory in [Service overview and network port requirements for Windows](/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements) and then to use the Port Query tool (PortQry.exe) to examine the ports that are in user or available for use on local computer and domain controller.
+Many methods may be used to verify that connectivity is sufficient since there are many causes of network problems. A common cause is network ports being inadvertently restricted. To resolve that common concern, review the ports required for Active Directory in [Service overview and network port requirements for Windows](../networking/service-overview-and-network-port-requirements.md) and then to use the Port Query tool (PortQry.exe) to examine the ports that are in user or available for use on local computer and domain controller.
 
 PortQry.exe is a free download from Microsoft.
 

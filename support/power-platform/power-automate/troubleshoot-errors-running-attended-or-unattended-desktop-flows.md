@@ -1,9 +1,8 @@
 ---
 title: Error code occurs when running an attended or unattended desktop flow
 description: Provides mitigation steps for the error codes that occur when running attended or unattended desktop flows.
-ms.reviewer: cefriant, kenseongtan, guco
-ms.topic: troubleshooting
-ms.date: 04/06/2023
+ms.reviewer: cefriant, kenseongtan, guco, johndund
+ms.date: 09/11/2023
 ms.subservice: power-automate-desktop-flows
 ---
 # Error code occurs when running an attended or unattended desktop flow
@@ -51,3 +50,5 @@ _Original KB number:_ &nbsp; 4555406
 |DesktopFlowMalformedMachineResponse|500|Attended</br>Unattended|This error code occurs when the target machine provides an unexpected response to the cloud orchestrator. </br>- Verify that the machine has sufficient compute and memory resources while running the automation.</br>- Ensure that the network connection is stable during the automation. </br>- Ensure that you have the latest version of Power Automate for desktop installed.|
 |WcfServerCrash|500|Attended</br>Unattended|This error code occurs when the machine encounters an unexpected error while answering the cloud orchestrator. </br>- Verify that the machine has sufficient compute and memory resources while running the automation.</br>- Ensure that the network connection is stable during the automation. </br>- Ensure that you have the latest version of Power Automate for desktop installed.|
 |RdpPermissionNotGranted|400|Unattended|This error occurs when the user specified in the connection doesn't have permissions to create remote desktop sessions on the machine. </br>- Verify that the user in question is included in either the Administrators or Remote Desktop Users group on the machine.|
+|XrmMachineGroupNotFound|404|Attended</br>Unattended|This error occurs when the machine group has been deleted. Please re-create the group and update the connection.|
+|SessionCreationInvalidCredentials|400|Unattended|This error occurs when the unattended session couldn't be created with the provided credentials. This issue might occur due to an incorrectly formatted username. For Azure Active Directory (AAD)-joined machines, ensure the username is in the `user@domain.com` format. For domain-joined machines, the username should be in the `domain\user` format.|

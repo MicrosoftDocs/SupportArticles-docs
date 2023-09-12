@@ -1,7 +1,7 @@
 ---
 title: Servers can't be used as print servers
 description: Describes why Network Load Balancing (NLB) failover cluster servers can't be used as print servers in Microsoft Windows Server-based computers. Also describes the best practices for efficient print servers.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

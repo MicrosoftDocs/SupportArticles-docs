@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot installation and upgrade issues
 description: Introduces resolutions for common issues with Visual Studio installation and upgrade.
-ms.date: 5/29/2023
+ms.date: 05/29/2023
 author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: meghaanand

@@ -243,4 +243,4 @@ If you need assistance from Microsoft support, we recommend you collect the info
 
 ## More information
 
-[Active Directory changes do not replicate](/troubleshoot/windows-server/identity/active-directory-changes-not-replicate)
+[Active Directory changes do not replicate](active-directory-changes-not-replicate.md)

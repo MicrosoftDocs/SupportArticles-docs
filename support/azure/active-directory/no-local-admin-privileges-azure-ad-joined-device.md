@@ -1,7 +1,7 @@
 ---
 title: No local administrator group privileges on Azure AD joined device
 description: Resolve a scenario in which you don't receive local administrator group privileges after you sign in to an Azure AD joined device.
-ms.date: 7/25/2023
+ms.date: 07/25/2023
 author: ilyalushnikov
 ms.author: ilyal
 ms.editor: v-jsitser

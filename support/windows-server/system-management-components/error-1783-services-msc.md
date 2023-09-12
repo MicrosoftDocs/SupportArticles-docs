@@ -1,7 +1,7 @@
 ---
 title: Error 1783 when you open Services.msc
 description: Provides a solution to an issue where you get the error 1783 when you open Services.msc.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
