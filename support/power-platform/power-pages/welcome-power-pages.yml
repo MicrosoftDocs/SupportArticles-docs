@@ -15,12 +15,10 @@ metadata:
 
 landingContent:
   # Card
-  - title: Troubleshoot common Power Pages issues
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Link destinations lost on buttons when page is edited in design studio
-            url: buttons-losing-href.md
+  # - title: Troubleshoot common Power Pages issues
+  #  linkLists:
+  #    - linkListType: how-to-guide
+  #      links:
           #- text: Best practices for troubleshooting
             #url: best-practices-troubleshooting.md
 
