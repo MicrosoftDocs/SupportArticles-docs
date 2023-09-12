@@ -33,7 +33,7 @@ at Microsoft.VisualStudio.Setup.Installer.Services.ProductsProviderService.TryGe
 
 ## Cause
 
-This issue occurs when using an outdated version of the Visual Studio installer (earlier than 3.1.2188) that's incompatible with Visual Studio 2022. Eror code 0x80070057 indicates that the installer can't read certain parameters. The older version of the Visual Studio installer can't recognize and process the new parameters introduced in the latest updates.
+This issue occurs when using an outdated version of the Visual Studio installer (earlier than 3.1.2188) that's incompatible with Visual Studio 2022. Error code 0x80070057 indicates that the installer can't read certain parameters. The older version of the Visual Studio installer can't recognize and process the new parameters introduced in the latest updates.
 
 ## Resolution
 

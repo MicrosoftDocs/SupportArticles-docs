@@ -17,7 +17,7 @@ You can't install Visual Studio 2022 [administrator updates](/visualstudio/insta
 
 ## Resolution
 
-To enable Visual Studio client machines to receive updates through WSUS, make sure to prepare the client machines by setting up a few prerequisites.
+To enable your Visual Studio client machine to receive updates through WSUS, make sure to prepare the client machine by setting up a few prerequisites.
 
 1. Ensure that the Visual Studio administrator update (for example, the Visual Studio 2022 version 17.5.4 update) is [imported into WSUS](/mem/configmgr/sum/get-started/synchronize-software-updates) and approved.
 
@@ -32,11 +32,11 @@ To enable Visual Studio client machines to receive updates through WSUS, make su
 
 1. The Visual Studio Client Detector Utility ([KB5001148 - Visual Studio Client Detector Utility for Administrator Updates](https://support.microsoft.com/topic/kb5001148-visual-studio-client-detector-utility-for-administrator-updates-ad593454-547c-43c3-b5a3-6f201ae63f03)) must be installed on the client machine in order for the administrator updates to be properly recognized and received.
 
-   Search for the following product in the **Control Panel** > **Programs and Features** window to confirm if Visual Studio Client Detector Utility is installed.
+   Search for the following product by navigating to the **Control Panel** > **Programs** > **Programs and Features** windows to confirm if Visual Studio Client Detector Utility is installed.
 
    Product name: Microsoft Visual Studio Setup WMI Provider  
    Version: \<Latest\>
 
 1. The ChannelURI in *C:\ProgramData\Microsoft\VisualStudio\Packages\_Instances\\<RandomID\>\state.json* must point to the [release channel](https://aka.ms/vs/17/release/channel).
 
-1. The client machine's SYSTEM account downloads and installs the Visual Studio administrator updates. This means that the SYSTEM account must have administrative privileges to the machine, and it must also have access to the internet or the network layout location to download the updated product bits.
+1. The client machine's SYSTEM account download and install the Visual Studio administrator updates. This means that the SYSTEM account must have administrative privileges to the machine, and it must also have access to the internet or the network layout location to download the updated product bits.

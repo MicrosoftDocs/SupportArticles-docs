@@ -1,6 +1,6 @@
 ---
 title: Error when testing or deploying a minimal layout
-description: Provides a solution to an issue that occurs when you test or deploy a minimal layout.
+description: Provides a resolution to an issue that occurs when you test or deploy a minimal layout.
 ms.date: 09/12/2023
 author: khushg
 ms.author: khgupta
@@ -26,7 +26,7 @@ Snippet from the log:
 
 ## Cause
 
-The issue can occur if the upgrade is performed from a new profile, or if the content under the *%localappdata%\Microsoft\VisualStudio* folder is missing or corrupted. This folder hosts the channel manifest file, which contains details about the product and its upgrades.
+The issue can occur if the upgrade is performed from a new profile, or the content under the *%localappdata%\Microsoft\VisualStudio* folder is missing or corrupt. This folder hosts the channel manifest file, which contains details about the product and its upgrades.
 
 Ideally, this behavior shouldn't occur when installing and updating Visual Studio using the same user account. Visual Studio creates the *_Channels* folder during the initial installation under *C:\ProgramData\Microsoft\VisualStudio\Packages* and *%localappdata%\Microsoft\VisualStudio\Packages*. During the update process, Visual Studio compares the catalog and channel manifest files from these locations to ensure a smooth update.
 

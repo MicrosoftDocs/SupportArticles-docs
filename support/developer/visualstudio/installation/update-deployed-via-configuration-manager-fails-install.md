@@ -7,7 +7,7 @@ author: khushg
 ms.author: khgupta
 ms.custom: sap:installation
 ---
-# Visual Studio update deployed via Configuration Manager fails to install
+# The Visual Studio update deployed via Configuration Manager fails to install
 
 _Applies to:_ &nbsp; Visual Studio 2022
 
