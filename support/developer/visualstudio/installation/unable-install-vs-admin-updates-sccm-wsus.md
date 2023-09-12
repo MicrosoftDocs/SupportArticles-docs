@@ -1,27 +1,27 @@
 ---
-title: Unable to install VS Admin updates through SCCM and WSUS
-description: Provides a resolution for an issue where you can't install VS Admin updates through SCCM and WSUS.
+title: Can't install Visual Studio administrator updates through SCCM and WSUS
+description: Provides a resolution for an issue where you can't install Visual Studio administrator updates through SCCM and WSUS.
 ms.date: 09/08/2023
 author: khushg
 ms.author: khgupta
 ms.reviewer: raviuppa, aartigoyle, v-sidong
 ms.custom: sap:installation
 ---
-# Unable to install VS Admin updates through SCCM and WSUS
+# Unable to install Visual Studio administrator updates through SCCM and WSUS
 
 _Applies to:_ &nbsp; Visual Studio 2022
 
 ## Symptoms
 
-Unable to install Visual Studio 2022 [administrator updates](/visualstudio/install/applying-administrator-updates) through SCCM and [Windows Server Update Services](/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus) (WSUS).
+You can't install Visual Studio 2022 [administrator updates](/visualstudio/install/applying-administrator-updates) through Microsoft System Center Configuration Manager (SCCM) and [Windows Server Update Services](/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus) (WSUS).
 
 ## Resolution
 
 To enable Visual Studio client machines to receive updates through WSUS, make sure to prepare the client machines by setting up a few prerequisites.
 
-1. Ensure that Visual Studio administrator update (for example: Visual Studio 2022 Version 17.5.4 Update) is [imported into WSUS](/mem/configmgr/sum/get-started/synchronize-software-updates), and it's approved.
+1. Ensure that the Visual Studio administrator update (for example, the Visual Studio 2022 version 17.5.4 update) is [imported into WSUS](/mem/configmgr/sum/get-started/synchronize-software-updates) and approved.
 
-1. Enable the client machine to receive administrator updates by setting a registry key on the client machines.
+1. Enable the client machine to receive administrator updates by setting a registry key on the client machine.
 
    - *HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\Setup*
    - *HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\VisualStudio\Setup* (on 64-bit operating systems)
@@ -30,13 +30,13 @@ To enable Visual Studio client machines to receive updates through WSUS, make su
 
    For more information, see [Enabling administrator updates to Visual Studio with Microsoft Endpoint Configuration Manager](/visualstudio/install/enabling-administrator-updates).
 
-1. The Visual Studio Client Detector Utility ([KB5001148 - Visual Studio Client Detector Utility for Administrator Updates](https://support.microsoft.com/topic/kb5001148-visual-studio-client-detector-utility-for-administrator-updates-ad593454-547c-43c3-b5a3-6f201ae63f03)) must be installed on the client machines in order for the administrator updates to be properly recognized and received.
+1. The Visual Studio Client Detector Utility ([KB5001148 - Visual Studio Client Detector Utility for Administrator Updates](https://support.microsoft.com/topic/kb5001148-visual-studio-client-detector-utility-for-administrator-updates-ad593454-547c-43c3-b5a3-6f201ae63f03)) must be installed on the client machine in order for the administrator updates to be properly recognized and received.
 
-   Search for the following product in **Control Panel** > **Programs and Features** windows to confirm if Visual Studio Client Detector Utility is installed.
+   Search for the following product in the **Control Panel** > **Programs and Features** window to confirm if Visual Studio Client Detector Utility is installed.
 
-   Product Name: Microsoft Visual Studio Setup WMI Provider
+   Product Name: Microsoft Visual Studio Setup WMI Provider  
    Version: \<Latest\>
 
-1. ChannelURI in "C:\ProgramData\Microsoft\VisualStudio\Packages\_Instances\\<RandomID\>\state.json" must be pointing to the [release channel](https://aka.ms/vs/17/release/channel).
+1. The ChannelURI in *C:\ProgramData\Microsoft\VisualStudio\Packages\_Instances\\<RandomID\>\state.json* must point to the [release channel](https://aka.ms/vs/17/release/channel).
 
-1. The client machine's SYSTEM account downloads and installs the Visual Studio administrator updates, which means that the SYSTEM account must have administrative privileges to the machine, and it must also have access to the internet or the network layout location in order to download the updated product bits.
+1. The client machine's SYSTEM account downloads and installs the Visual Studio administrator updates. This means that the SYSTEM account must have administrative privileges to the machine, and it must also have access to the internet or the network layout location to download the updated product bits.

@@ -1,13 +1,13 @@
 ---
-title: Installer fails to perform repair or update
+title: Visual Studio Installer fails to perform repair or update
 description: Provides a resolution for an issue that occurs when you try to repair or update Visual Studio.
-ms.date: 09/08/2023
+ms.date: 09/12/2023
 author: khushg
 ms.author: khgupta
 ms.reviewer: raviuppa, aartigoyle, v-sidong
 ms.custom: sap:installation
 ---
-# Installer fails to perform repair or update
+# Visual Studio Installer fails to perform repair or update
 
 _Applies to:_ &nbsp; Visual Studio 2022
 
@@ -23,11 +23,11 @@ productId: Microsoft.VisualStudio.Product.Enterprise
 
 ## Cause
 
-This issue can occur if the Visual Studio instance on the machine is corrupt.
+This issue can occur if the Visual Studio instance on the machine is corrupted.
 
 ## Resolution
 
-If you've been unsuccessful in your previous attempts to repair or update Visual Studio, you can run the [InstallCleanup.exe](/visualstudio/install/uninstall-visual-studio#remove-all-with-installcleanupexe) tool to remove installation files and product information for all installed instances of Visual Studio, and then reinstall Visual Studio 2022. This process ensures a fresh installation of Visual Studio, which should allow for successful repairs or updates.
+If your previous attempts to repair or update Visual Studio failed, you can run the [InstallCleanup.exe](/visualstudio/install/uninstall-visual-studio#remove-all-with-installcleanupexe) tool to remove the installation files and product information for all installed instances of Visual Studio, and then reinstall Visual Studio 2022. This process ensures a fresh installation of Visual Studio, which should allow for successful repairs or updates.
 
 To solve this issue, follow these steps:
 
@@ -37,7 +37,7 @@ To solve this issue, follow these steps:
    `"C:\Program Files (x86)\Microsoft Visual Studio\Installer\InstallCleanup.exe" -f`
 
    > [!NOTE]
-   > The `-f` option removes the main installation directory, product information, and most other features installed outside the installation directory, that might also be shared with other Visual Studio installations or other products.
+   > The `-f` option removes the main installation directory, product information, and most other features installed outside the installation directory. These features might also be shared with other Visual Studio installations or products.
 
    This command will perform a cleanup of the Visual Studio installation, removing any corrupted or incomplete components.
 

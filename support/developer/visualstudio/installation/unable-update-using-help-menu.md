@@ -1,21 +1,21 @@
 ---
-title: Unable to update Visual Studio using the help menu
-description: Provides a resolution for an issue where you can't update Visual Studio using the help menu.
-ms.date: 09/11/2023
+title: Unable to update Visual Studio using the Help menu
+description: Provides a resolution for an issue where you can't update Visual Studio using the Help menu.
+ms.date: 09/12/2023
 author: khushg
 ms.author: khgupta
 ms.reviewer: raviuppa, aartigoyle, v-sidong
 ms.custom: sap:installation
 ---
-# Unable to update using the Help menu
+# Unable to update Visual Studio using the Help menu
 
 _Applies to:_ &nbsp; Visual Studio Professional 2022
 
 ## Symptoms
 
-Unable to update Visual Studio to the latest version using the **Help** menu in the IDE: **Help** > **Check for Updates** > **Update option**.
+You can't update Visual Studio to the latest version using the **Help** menu in the IDE (by selecting **Help** > **Check for Updates** > **Update option**).
 
-You may also see following error in the logs:
+You may also see the following error in the logs:
 
 ```output
 Error 0x80070057: Failed to read instance f9a94122 
@@ -27,16 +27,16 @@ at Microsoft.VisualStudio.Setup.Installer.Models.Readers.ChannelReader.ReadFromC
 at Microsoft.VisualStudio.Setup.Installer.Models.Readers.ProductSummaryReader.ReadFromInstance(IInstance instance) 
 at Microsoft.VisualStudio.Setup.Installer.Services.ProductsProviderService.TryGetInstalledProductSummary(IInstance instance) 
 
-[4b94:000d][2022-11-23T12:02:45] Warning: Failed to initialize the update dialog: No instance registered for path "C:\Program Files\Microsoft Visual Studio\2022\Professional" 
-[4b94:0001][2022-11-23T12:02:45] Navigate to Page: Final, Action: None, Message: The operation did not complete successfully 
+[4b94:000d][<DateTime>] Warning: Failed to initialize the update dialog: No instance registered for path "C:\Program Files\Microsoft Visual Studio\2022\Professional" 
+[4b94:0001][<DateTime>] Navigate to Page: Final, Action: None, Message: The operation did not complete successfully 
 ```
 
 ## Cause
 
-This issue occurs when using an outdated version of the Visual Studio installer (older than 3.1.2188) that's not compatible with the Visual Studio 2022. The error code 0x80070057 indicates that the installer is unable to read certain parameters. The older version of the Visual Studio installer is unable to recognize and process the new parameters introduced in the latest updates.
+This issue occurs when using an outdated version of the Visual Studio installer (earlier than 3.1.2188) that's incompatible with Visual Studio 2022. Eror code 0x80070057 indicates that the installer can't read certain parameters. The older version of the Visual Studio installer can't recognize and process the new parameters introduced in the latest updates.
 
 ## Resolution
 
-1. Download [vs_Professional.exe](https://aka.ms/vs/17/release/vs_Professional.exe) and save it to the *C:\Temp folder.menu*.
-1. Delete the *C:\Program Files (x86)\Microsoft Visual Studio\Installer* folder or update the Visual Studio installer by right-clicking on *C:\Temp\vs_Professional.exe* and selecting **Run as Administrator**.
-1. Select the **Update** button to initiate the update process.
+1. Download [vs_Professional.exe](https://aka.ms/vs/17/release/vs_Professional.exe) and save it to the *C:\Temp* folder.
+1. Delete the *C:\Program Files (x86)\Microsoft Visual Studio\Installer* folder, or update the Visual Studio installer by right-clicking *C:\Temp\vs_Professional.exe* and selecting **Run as Administrator**.
+1. Select the **Update** button to start the update process.
