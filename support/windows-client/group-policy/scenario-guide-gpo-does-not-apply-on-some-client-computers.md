@@ -1,0 +1,112 @@
+---
+title: 'Scenario Guide: GPO does not apply on some client computers'
+description: This article introduces a troubleshooting scenario in which Wallpaper GPO does not apply on some client computers.
+author: Deland-Han
+ms.author: delhan
+ms.topic: troubleshooting
+ms.date: 9/20/2023
+ms.prod: windows-client
+ms.technology: windows-client-group-policy
+ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
+---
+# Scenario Guide: Wallpaper GPO does not apply on some client computers
+
+This scenario guide explains how to troubleshoot the issues that Wallpaper Group Policy Object (GPO) does not apply on some client computers.
+
+## How Group Policy is applied on client computers
+
+1. Group Policy service on the client computer enumerates the distinguished name (DN) of the user account.
+2. Group Policy service enumerates the **GPLINK** and **GPOptions** attributes where the user account resides, in the order of local GPO, site GPO, domain and organizational unit (OU).
+3. Group Policy service makes a list of GPOs to apply or deny.
+
+## Environment
+
+- Domain name: `contoso.com`
+- Active Directory sites: 4 sites (2 domain controllers per site) (Phoenix, London, Tokyo and Mumbai)
+- Number of domain controllers: 8
+- Domain controller operating system: Windows Server 2019
+- Client computer operating system: Windows 11, version 22H2
+
+:::image type="content" source="media/scenario-guide-gpo-does-not-apply-on-some-client-computers/diagram-of-environment-topology.png" alt-text="The diagram of the topology of the environment." border="true":::
+
+## In this scenario
+
+You have created a new GPO on the Phoenix site named "Wallpaper-GPO-Tokyo" and linked to an OU named "Tokyo".
+
+The GPO applies the following settings:
+
+- Path: User Configuration | Administrative templates | Desktop | Desktop | Desktop Wallpaper
+- GPO Setting: Enabled
+- Wallpaper location: \contoso.com\netlogon\home.jpg
+- Wallpaper style: Fit
+
+:::image type="content" source="media/scenario-guide-gpo-does-not-apply-on-some-client-computers/screenshot-of-the-gpo-settings.png" alt-text="The screenshot of the GPO settings." border="false":::
+
+When a user signs in by using a client computer on the Tokyo site, the GPO is not applied. However, if the same user signs in from a client computer on the Phoenix site, the GPO applies fine.
+
+Besides, you observe the following symptoms:
+
+1. No errors when you run `gpupdate /force` on the working or the failing client computers.
+2. Old GPOs are applied and only this GPO is not applied.
+
+## Troubleshooting
+
+First, we need to collect data on both a client computer in Phoenix and a client computer in Tokyo. Follow these steps on each computer:
+
+1. Download [TSS](https://aka.ms/gettss), extract the ZIP file to a folder: C:\temp.
+2. Sign-in with the user account who is experiencing the issue.
+3. Open an elevated PowerShell command and run the command below:
+
+   ```powershell
+   Set-ExecutionPolicy unrestricted
+   ```
+
+   :::image type="content" source="media/scenario-guide-gpo-does-not-apply-on-some-client-computers/screenshot-of-the-set-executionpolicy-command-result.png" alt-text="The screenshot of Set-ExecutionPolicy command result." border="false":::
+
+4. Go to c:\temp\TSS, where you have extracted the TSS Zip file.
+5. Run `.\TSS.ps1 -Start -Scenario ADS_GPOEx`. Accept the Eula agreement and wait till the TSS starts collecting data.
+
+   :::image type="content" source="media/scenario-guide-gpo-does-not-apply-on-some-client-computers/screenshot-of-the-tss-tool.png" alt-text="The screenshot of the TSS tool." border="false":::
+
+6. Open a normal command prompt as the user and run `gpupdate /force /target:user`
+7. Once the processing is complete now press "Y" on the PowerShell command where you are running TSS.
+
+   :::image type="content" source="media/scenario-guide-gpo-does-not-apply-on-some-client-computers/screenshot-of-the-tss-tool-result.png" alt-text="The screenshot of the TSS tool result." border="false":::
+
+8. TSS would stop collecting data and the collected data would be located in the C:\MSDATA folder as a Zip file or folder with the name TSS_\<Machinename\>_\<Time\>_ADS_GPOEx
+
+For more information about TSS, see [Introduction to TroubleShootingScript toolset (TSS)](../windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tss.md).
+
+### Compare GPResult
+
+On both computers, go to c:\msdata folder where TSS has saved all the reports and extract the contents of the ZIP file. Review the file with the name \<Clientmachinename\>_\<Time\>GPResult-H_Stop.
+
+Go to the section of **User details**. As you observe the GPO in question "Wallpaper-GPO-Tokyo" is in the applied list on the Working machine and not present in the broken machine.
+
+> [!NOTE]
+> There are other GPO's like Mapped-drives and Phoenix-SiteGPO on the applied machines but those 2 GPO's are site level GPO's and would apply only if the Group policy client detect if the client machine is in Phoenix site hence they are not relevant to our scope of troubleshooting.
+
+:::image type="content" source="media/scenario-guide-gpo-does-not-apply-on-some-client-computers/screenshot-of-the-gpresult-command-results.png" alt-text="The screenshot of the gpresult command results." border="true":::
+
+### Compare event logs
+
+Group Policy operational logs provide more information about the processing. Open both the GPO operational logs to compare the \<Machinename\>-Microsoft-Windows-GroupPolicy-Operational.evtx file from the TSS output.
+
+> [!TIP]
+> Group Policy start event ID is 4116 and Group Policy end event is 8005.
+
+Search for the event 4116 and walk some of the important events in the Upward direction. The only difference when after reviewing the working and the failing client is that the failing client machine is getting its group policy from DC6.contoso.com in the Tokyo site.
+
+:::image type="content" source="media/scenario-guide-gpo-does-not-apply-on-some-client-computers/screenshot-of-the-operational-event-logs.png" alt-text="The screenshot of the operational event logs." border="true":::
+
+Reviewing the event ID 5312, the group policy service detected that it has to process 5 GPOs on the working computer and 3 GPOs on the failing computer. As we already discussed, the Phoenix-SiteGPO and Mapped-Drive GPO are Phoenix site level GPO's and the only difference is that the "Wallpaper-GPO-Tokyo" GPO is not getting applied.
+
+## Conclusion
+
+When we compare the event ID: 5312 from working and failing computers, we observe that the Group Policy client service did not enumerate the "Wallpaper-GPO-Tokyo" when it connected to DC6.
+There could be 2 Primary reasons for the above scenario:
+
+1. Verify the scope of the GPO.
+2. Active Directory Replication issue.
+
+In this scenario guide, we confirmed that the scope of the GPO was correct, and we found out an Active directory replication issue due to a bad router which was blocking RPC port to the Tokyo site. See [Active Directory replication error 1722: The RPC server is unavailable](../../windows-server/identity/replication-error-1722-rpc-server-unavailable.md).
