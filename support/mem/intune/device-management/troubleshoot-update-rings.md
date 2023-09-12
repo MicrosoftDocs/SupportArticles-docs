@@ -76,15 +76,15 @@ To confirm that the policies have applied to the device locally, navigate to Win
 
 On the Windows device, navigate to **Settings** > **Windows Updates** > **View Configured Update Policies** to view the policies managed by your organization.
 
-:::image type="content" source="media/Troubleshoot-Update-rings/5.ViewConfiguredUpdatePolicies.jpg" alt-text="A screenshot of the Windows Update pane, Advanced options, highlighting the "Configured update policies" option.":::
+:::image type="content" source="media/Troubleshoot-Update-rings/5.ViewConfiguredUpdatePolicies.jpg" alt-text="A screenshot of the Advanced options in the Windows Update pane, highlighting the Configured update policies option.":::
 
 Verify that the **Policy type** is *mobile device management*.
 
-:::image type="content" source="media/Troubleshoot-Update-rings/6.MDMasType.jpg" alt-text="A screenshot of the Configured update policies pane with the "Set when Active Hours start” setting showing Mobile Device Management as the type.":::
+:::image type="content" source="media/Troubleshoot-Update-rings/6.MDMasType.jpg" alt-text="A screenshot of the Configured update policies pane with the 'Set when Active Hours start setting showing Mobile Device Management' as the type.":::
 
 The update policies are configured by your mobile device management (MDM) solution, which is Intune in this scenario. However, it's possible that the update policy is coming from the on-premises Active Directory, which would have *Group Policy* as the **Policy type**.
 
-:::image type="content" source="media/Troubleshoot-Update-rings/7.AllowUpdatesToBeManagedBy.jpg" alt-text="A screenshot of the Configured update policies pane with the "Allow updates to be downloaded automatically over metered connections” setting showing the Group Policy as the type.":::
+:::image type="content" source="media/Troubleshoot-Update-rings/7.AllowUpdatesToBeManagedBy.jpg" alt-text="A screenshot of the Configured update policies pane with the 'Allow updates to be downloaded automatically over metered connections' setting showing the Group Policy as the type.":::
 
 ### Common conflicts between MDM and group policies
 
@@ -132,7 +132,7 @@ When using the Windows Update Client, you might find errors that could help pinp
 
 To access Event Viewer, on the device, find the **Event Viewer** app in the Windows Start menu and then select **Applications and Services logs** > **Microsoft** > **Windows** > **Windows Update Client**.
 
-:::image type="content" source="media/Troubleshoot-Update-rings/12.EventViewerUpdates.jpg" alt-text="A screenshot of the Event Viewer showing the message, "Windows Update successfully found 6 updates.”":::
+:::image type="content" source="media/Troubleshoot-Update-rings/12.EventViewerUpdates.jpg" alt-text="A screenshot of the 'Windows Update successfully found 6 updates' message in the Event Viewer.":::
 
 :::image type="content" source="media/Troubleshoot-Update-rings/13.EventViewerUpdatesExample.jpg" alt-text="A screenshot of the WindowsUpdateClient with a notification about error 0x80072EE6 preventing update checks.":::
 
@@ -169,11 +169,11 @@ If the previous options didn’t provide the results needed to identify the issu
 - Be sure that the Windows Update ring policy is deployed to the correct user/device group. This is a fairly common issue that’s easy to correct.
 - Determine whether the entire policy deployment fails or only certain settings aren’t being applied. Do this by navigating to **Device** > **Device Configuration** > **Update ring report**. You might see a specific setting in the list that shows an error rather than a success message (similar to the image below).
 
-:::image type="content" source="media/Troubleshoot-Update-rings/18.ErrorExample.jpg" alt-text="A screenshot of the Profile Settings, “Automatic update behavior” and "Microsoft Product Updates,” showing a Setting status as "Conflict."":::
+:::image type="content" source="media/Troubleshoot-Update-rings/18.ErrorExample.jpg" alt-text="A screenshot of the 'Automatic update behavior' and 'Microsoft Product Updates' Profile Settings showing a Conflict status.":::
 
 - Check the actual wording for the setting that’s getting the error status. For example, there may be some specific values applicable only on certain Windows versions or editions.
 
-:::image type="content" source="media/Troubleshoot-Update-rings/19.CSPExample.jpg" alt-text="A screenshot of the Profile Settings, “A screenshot of the SetDisableUXWUAccess setting with the “User” value for Scope showing as an error.":::
+:::image type="content" source="media/Troubleshoot-Update-rings/19.CSPExample.jpg" alt-text="A screenshot of the Profile Settings, “A screenshot of the SetDisableUXWUAccess setting with the Scope User value showing as an error.":::
 
 See the description of each setting in [Settings for Windows Update that you can manage through Intune policy for Update rings | Microsoft Learn](/mem/intune/protect/windows-update-settings).
 
