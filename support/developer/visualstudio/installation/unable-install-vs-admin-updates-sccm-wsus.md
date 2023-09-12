@@ -34,7 +34,7 @@ To enable Visual Studio client machines to receive updates through WSUS, make su
 
    Search for the following product in the **Control Panel** > **Programs and Features** window to confirm if Visual Studio Client Detector Utility is installed.
 
-   Product Name: Microsoft Visual Studio Setup WMI Provider  
+   Product name: Microsoft Visual Studio Setup WMI Provider  
    Version: \<Latest\>
 
 1. The ChannelURI in *C:\ProgramData\Microsoft\VisualStudio\Packages\_Instances\\<RandomID\>\state.json* must point to the [release channel](https://aka.ms/vs/17/release/channel).
