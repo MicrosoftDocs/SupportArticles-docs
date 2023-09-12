@@ -1,6 +1,6 @@
 ---
 title: Update deployed via Configuration Manager fails to install
-description: Learn how to install update deployed via Configuration Manager.
+description: Provides a resolution for an issue where the Visual Studio update deployed using Microsoft Configuration Manager fails to install.
 ms.date: 09/11/2023
 ms.reviewer: raviuppa, aartigoyle, v-sidong
 author: khushg
@@ -13,7 +13,7 @@ _Applies to:_ &nbsp; Visual Studio 2022
 
 ## Symptoms
 
-Visual Studio update deployed using Microsoft Configuration Manager fails to install.
+The Visual Studio update deployed using Microsoft Configuration Manager fails to install.
 
 You may also see the following message in the installation log:
 
@@ -23,7 +23,7 @@ You may also see the following message in the installation log:
 
 ## Cause
 
-The update process requires all Visual Studio-related processes listed below to be closed before installation.
+The update process requires all the following Visual Studio-related processes to be closed before installation.
 
 - node
 - devenv
@@ -32,9 +32,9 @@ The update process requires all Visual Studio-related processes listed below to 
 - vstest.console
 - Visual Studio Standard Collector Service 150 (VSStandardCollectorService150)
 
-If one or more of these processes are running on the machine, that may prevent the update from being installed.
+If one or more of these processes are running on the machine, the update won't be installed.
 
-## Solution
+## Resolution
 
 To resolve the issue, follow these steps:
 

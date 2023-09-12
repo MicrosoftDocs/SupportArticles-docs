@@ -1,6 +1,6 @@
 ---
 title: Unable to update Visual Studio using the help menu
-description: Learn how to update Visual Studio using the help menu.
+description: Provides a resolution for an issue where you can't update Visual Studio using the help menu.
 ms.date: 09/11/2023
 author: khushg
 ms.author: khgupta
@@ -33,9 +33,9 @@ at Microsoft.VisualStudio.Setup.Installer.Services.ProductsProviderService.TryGe
 
 ## Cause
 
-This issue occurs when using an outdated version of the Visual Studio installer (older than 3.1.2188) that is not compatible with the Visual Studio 2022. The error code 0x80070057 indicates that the installer is unable to read certain parameters. The older version of the Visual Studio installer is unable to recognize and process the new parameters introduced in the latest updates.
+This issue occurs when using an outdated version of the Visual Studio installer (older than 3.1.2188) that's not compatible with the Visual Studio 2022. The error code 0x80070057 indicates that the installer is unable to read certain parameters. The older version of the Visual Studio installer is unable to recognize and process the new parameters introduced in the latest updates.
 
-## Solution
+## Resolution
 
 1. Download [vs_Professional.exe](https://aka.ms/vs/17/release/vs_Professional.exe) and save it to the *C:\Temp folder.menu*.
 1. Delete the *C:\Program Files (x86)\Microsoft Visual Studio\Installer* folder or update the Visual Studio installer by right-clicking on *C:\Temp\vs_Professional.exe* and selecting **Run as Administrator**.

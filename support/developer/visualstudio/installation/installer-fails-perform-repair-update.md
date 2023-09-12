@@ -1,6 +1,6 @@
 ---
 title: Installer fails to perform repair or update
-description: Learn how to repair or update Visual Studio.
+description: Provides a resolution for an issue that occurs when you try to repair or update Visual Studio.
 ms.date: 09/08/2023
 author: khushg
 ms.author: khgupta
@@ -25,7 +25,7 @@ productId: Microsoft.VisualStudio.Product.Enterprise
 
 This issue can occur if the Visual Studio instance on the machine is corrupt.
 
-## Solution
+## Resolution
 
 If you've been unsuccessful in your previous attempts to repair or update Visual Studio, you can run the [InstallCleanup.exe](/visualstudio/install/uninstall-visual-studio#remove-all-with-installcleanupexe) tool to remove installation files and product information for all installed instances of Visual Studio, and then reinstall Visual Studio 2022. This process ensures a fresh installation of Visual Studio, which should allow for successful repairs or updates.
 
