@@ -1,5 +1,5 @@
 ---
-title: 'Scenario Guide: GPO doesn't apply on some client computers'
+title: Scenario Guide: GPO doesn't apply on some client computers
 description: This article introduces a troubleshooting scenario in which Wallpaper GPO doesn't apply on some client computers.
 author: Deland-Han
 ms.author: delhan
