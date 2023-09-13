@@ -115,8 +115,6 @@
       href: ../server-im-presence/presence-privacy-mode-update-presence-status.md
     - name: Lync conversation window doesn't contain IM
       href: ../server-im-presence/blank-conversation-window.md
-    - name: Presence not show in Outlook
-      href: ../server-im-presence/presence-not-show-outlook.md
   - name: Install/Uninstall
     items:
     - name: '"Get-VM" is not recognized during install of Cloud Connector Edition'
