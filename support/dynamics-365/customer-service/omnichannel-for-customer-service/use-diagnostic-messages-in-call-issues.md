@@ -2,9 +2,10 @@
 title: Use diagnostic messages to troubleshoot issues in voice calls
 description: Learn how to interpret the error and warning messages that may appear when you have problems with your voice call.
 ms.author: araghunath
+author: araghunath08
 ms.reviewer: nenellim 
 ms.collection: 
-ms.date: 08/07/2023
+ms.date: 09/13/2023
 ms.custom: bap-template
 ---
 # Use diagnostic messages to troubleshoot issues in voice calls
@@ -34,7 +35,6 @@ The following table lists the messages that appear when your agents have issues 
 | No microphone detected. Try connecting one so that others can hear you. | Appears when no microphone is detected on the agent's system.  | `noMicrophoneDevicesEnumerated` |
 |Your microphone is not working. Open More -> Device settings to connect to a different device or try reconnecting this one.  |Appears when the microphone is muted unexpectedly or stops working.| `microphoneMuteUnexpectedly`|
 |Your microphone is not working. Open More -> Device settings to connect to a different device or try reconnecting this one.  |Appears when the microphone is not functioning.| `microphoneNotFunctioning`|
-
 
 ## See also
 
