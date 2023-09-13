@@ -1,7 +1,7 @@
 ---
 title: Error 3456 when backing up a SQL Server database using a VDI application with multi-striping
 description: This article provides a resolution for an issue that occurs when you back up a SQL Server database using VDI applications with multi-striping.
-ms.date: 09/08/2023
+ms.date: 09/13/2023
 ms.custom: sap:Database Engine
 ms.author: jopilov
 author: PiJoCoder
@@ -28,11 +28,9 @@ When you stripe a backup to VDI, multiple backup devices together make up the co
 
 ## Resolution
 
-1. Enable trace flag 3471 or 3475 as a startup parameter. Trace flag 3471 (`DBCC TRACEON(3471,-1)`) disables the feature delayed log pinning for a full backup. Trace flag 3475 (`DBCC TRACEON(3475,-1)`) disables the feature delayed log pinning for a differential backup.
+1. Enable trace flag 3471 or 3475 as a startup parameter. Trace flag 3471 disables the feature delayed log pinning for a full backup. Trace flag 3475 disables the feature delayed log pinning for a differential backup.
 1. Restart SQL Server.
 
 ## More information
 
 SQL Server 2019 introduces a feature called delayed log pinning. Prior to the introduction of this feature, during a full database backup, SQL Server blocks any transactions from happening (pins the log), copies the data and the log, and then removes the pin right at the beginning. With the feature present, SQL Server delays transactions from happening (pins the log) towards the end of the backup duration, instead of right at the beginning. This feature is designed to avoid a full transaction log issue ([MSSQLSERVER_9002](/sql/relational-databases/errors-events/mssqlserver-9002-database-engine-error) error) during a full backup that's taking a long time to complete. Because the log pinning is delayed, transactions are still allowed to be applied to the database's data pages while the backup is ongoing. SQL Server maintains a bitmap to identify the pages that have changed since the start time of the ongoing full backup, so that it can take a mini differential backup of them. In this way, it gets an updated copy of each data page that was changed while it's backing up the entire database. This causes an extra copy of some data pages. Additionally, this extra section of the full backup is created.
-
-So far, this issue has been observed in Veritas VDI backup solutions. Other VDI backup providers may exhibit the same issue.
