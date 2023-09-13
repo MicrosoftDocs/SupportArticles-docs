@@ -254,7 +254,7 @@ Previously SQL Server would print information for each session/thread when a man
 
 #### Parallel compression of memory dumps
 
-To generate dumps faster and make them smaller in size, a compressed memory dump feature was introduced in SQL Server 2022 CU8 and SQL 2019 CU23. When activated, Sqldumper.exe creates multiple threads to read a process's memory simultaneously, compresses it, and then saves it to the dump file. This multi-thread, parallel compression reduces file size and speeds up the dumping process when used with full and filtered dumps.
+To generate dumps faster and make them smaller in size, a compressed memory dump feature was introduced in SQL Server 2022 CU8. When activated, Sqldumper.exe creates multiple threads to read a process's memory simultaneously, compresses it, and then saves it to the dump file. This multi-thread, parallel compression reduces file size and speeds up the dumping process when used with full and filtered dumps.
 
 You can turn on trace flag 2610 to enable compressed memory dump:
 
