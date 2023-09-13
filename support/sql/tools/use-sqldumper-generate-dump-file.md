@@ -211,7 +211,7 @@ Four major improvements have been added to recent versions of SQL Server to redu
 - [Elimination of repeated dumps on the same issue](#elimination-of-repeated-dumps-on-the-same-issue)
 - [Shortened output in the error log](#shortened-output-in-the-error-log)
 - [Parallel compression of memory dumps](#parallel-compression-of-memory-dumps)
-- 
+ 
 #### Bitmap filtering mechanism
 
 SQL Server allocates a bitmap that keeps track of memory pages to be excluded from a filtered dump. Sqldumper.exe reads the bitmap and filters out pages without the need to read any other memory manager metadata. You'll see the following messages in the SQL Server error log when the bitmap is enabled or disabled respectively:
