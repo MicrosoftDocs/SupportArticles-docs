@@ -13,9 +13,7 @@ _Applies to:_ &nbsp; Visual Studio 2022
 
 ## Symptoms
 
-The Visual Studio update deployed using Microsoft Configuration Manager fails to install.
-
-You may also see the following message in the installation log:
+The Visual Studio update deployed using Microsoft Configuration Manager fails to install. You may also see the following message in the installation log:
 
 ```output
 [5600:0007][2022-11-03T03:10:10] Warning: Pre-check verification: Save your work before continuing.
@@ -32,13 +30,13 @@ The update process requires all the following Visual Studio-related processes to
 - vstest.console
 - Visual Studio Standard Collector Service 150 (VSStandardCollectorService150)
 
-If one or more of these processes are running on the machine, the update won't be installed.
+If one or more of these processes are running on your machine, the update won't be installed.
 
 ## Resolution
 
 To resolve the issue, follow these steps:
 
-1. Close all Visual Studio-related processes running on the machine.
+1. Close all Visual Studio-related processes running on your machine.
 1. Reboot the machine to ensure a clean state.
 1. Install the Visual Studio update again.
 

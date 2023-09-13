@@ -41,7 +41,7 @@ To solve this issue, follow these steps:
 
    This command will perform a cleanup of the Visual Studio installation, removing any corrupted or incomplete components.
 
-1. Once the cleanup process is completed, reinstall Visual Studio 2022. You can download the Visual Studio 2022 installer from the Visual Studio download page.
+1. Once the cleanup process is completed, reinstall [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/).
 1. Launch the Visual Studio 2022 installer and follow the prompts to reinstall Visual Studio. Make sure to select the desired workloads and components during the installation.
 
 ## More information
