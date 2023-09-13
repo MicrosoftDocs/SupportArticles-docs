@@ -24,10 +24,11 @@ To enable your Visual Studio client machine to receive updates through WSUS, mak
 1. Enable the client machine to receive administrator updates by setting a registry key on the client machine:
 
     a. Open **Registry Editor** by typing *regedit* in the **Start** menu.
+
     b. Navigate to the registry key depending on the version of Visual Studio you're using:
 
-       - If you're using a 64-bit version of Visual Studio on a 64-bit operating system, use *HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\Setup*.
-       - If you're using a 32-bit version of Visual Studio on a 64-bit operating system, use *HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\VisualStudio\Setup*.
+      - If you're using a 64-bit version of Visual Studio on a 64-bit operating system, use *HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\Setup*.
+      - If you're using a 32-bit version of Visual Studio on a 64-bit operating system, use *HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\VisualStudio\Setup*.
 
     c. Set the `AdministratorUpdatesEnabled` (type `REG_DWORD`) key to `1`.
 
