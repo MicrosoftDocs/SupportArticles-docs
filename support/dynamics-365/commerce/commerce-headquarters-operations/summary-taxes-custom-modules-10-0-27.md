@@ -4,7 +4,7 @@ description: Resolves an issue where the order summary subtotal doesn't include 
 author: josaw1
 ms.author: josaw
 ms.reviewer: brstor
-ms.date: 09/01/2023
+ms.date: 09/08/2023
 ---
 # Order summary subtotal doesn't include taxes on charges when using customized order summary modules
 

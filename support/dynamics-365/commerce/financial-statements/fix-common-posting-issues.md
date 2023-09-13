@@ -4,7 +4,7 @@ description: Provides resolutions to help you fix common statement posting issue
 author: josaw1 
 ms.author: josaw
 ms.reviewer: shajain, brstor
-ms.date: 09/04/2023
+ms.date: 09/08/2023
 ms.search.form: RetailStatementTable_SOCreateFailed, RetailStatementTable_InvoiceFailed, RetailStatementTable_PaymentPosted, RetailStatementTable_Aggregated, RetailStatementTable_CustomerOrderCreated, RetailStatementTable_Invoiced
 ---
 # Fix common statement posting issues by editing transactions
@@ -51,7 +51,7 @@ One step of the statement posting process is to create customer orders by groupi
 1. After the Excel file is downloaded, enable editing for it and sign in.
 1. In the Excel file, change the **Validation status** value of the transaction that you have to fix to **None** or **Error**. This step must be completed before you make any changes to the transaction.
 
-    :::image type="content" source="media/fix-common-posting-issues/change-validation-status.png" alt-text="Screenshot that shows how to change the validation status.":::
+    :::image type="content" source="media/fix-common-posting-issues/change-validation-status.png" alt-text="Screenshot that shows how to change the validation status." lightbox="media/fix-common-posting-issues/change-validation-status.png":::
 
 1. Identify the entity and field that must be modified. If the field that you're looking for is missing, add it by following the instructions in [Add fields to an Excel workbook to edit retail transactions](/dynamics365/commerce/add-fields-excel).
 1. Update the field values as needed, and then select **Publish** in the Excel workbook.
@@ -108,7 +108,7 @@ After customer orders are created, the next statement posting step is to try to 
 
   **Resolution**: To fix the issue, follow the steps in the [preceding procedure](#issues-during-customer-order-invoicing). In step 8, on the **Transactions**, **Sales Transactions**, and **Payment Transactions** tabs of the Excel file, update the **Business date** field to a value that corresponds to an open fiscal period.
 
-- > While processing the state Customer order invoiced, generic exception encountered in retail statement \<> in the controller : Posting Posting Sales order: \<> Item: \<> Inventory dimension Location must be specified.
+- > While processing the state Customer order invoiced, generic exception encountered in retail statement in the controller : Posting Posting Sales order: Item: Inventory dimension Location must be specified.
 
   **Cause**: This issue occurs because the **Site** and **Warehouse** fields are configured as mandatory for the transactions, but some of the transactions are missing values or have incorrect values for those fields. This error is generated for transactions that are imported from external systems where validation might have missed the issue, or in cases where the values that are specified for the fields aren't valid.
 
@@ -117,12 +117,12 @@ After customer orders are created, the next statement posting step is to try to 
   > [!NOTE]
   > The **Site** and **Warehouse** fields aren't available by default in Excel. To add them, follow the instructions in [Add fields to an Excel workbook to edit retail transactions](/dynamics365/commerce/add-fields-excel).
 
-- > While processing the state Customer order invoiced, generic exception encountered in retail statement \<> in the controller : Posting Posting Sales order: \<> You must select a value in the [Field name] field in combination with the following dimensions values that are valid.
+- > While processing the state Customer order invoiced, generic exception encountered in retail statement in the controller : Posting Posting Sales order: You must select a value in the \<Field name> field in combination with the following dimensions values that are valid.
 
   **Cause**: This issue occurs because a required field for statement posting is missing a value.
 
   **Resolution**: To fix the issue, follow the steps in the [preceding procedure](#issues-during-customer-order-invoicing). In step 8, correct the values for the fields that are mentioned in the error message.
 
-- > While processing aggregation state Sales order is invoiced for this aggregation. Transaction state Customer order invoiced, the invoice couldn't be found for the manually invoiced sales order for this aggregation \<>.
+- > While processing aggregation state Sales order is invoiced for this aggregation. Transaction state Customer order invoiced, the invoice couldn't be found for the manually invoiced sales order for this aggregation.
 
   **Resolution**: To fix the issue, follow the steps in the [preceding procedure](#issues-during-customer-order-invoicing). In step 8, on the **Statement aggregations** tab of the Excel file, check whether the **Business date** value for the aggregation matches the invoice date of the manually invoiced sales order for the aggregation. If the values don't match, update the **Business date** value to the invoice date of the order.

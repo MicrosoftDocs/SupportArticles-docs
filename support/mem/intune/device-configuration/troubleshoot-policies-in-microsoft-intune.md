@@ -47,7 +47,7 @@ You can use the built-in troubleshooting feature to review different compliance 
 
         For more information, see [get started with device compliance policies](/mem/intune/protect/device-compliance-get-started).
 
-    - **Last check in**: Should be a recent time and date. By default, Intune devices check in every 8 hours.
+    - **Last check in**: Should be a recent time and date. By default, Intune devices check in every 8 hours and the **Last check-in** value also updates every 8 hours in the Intune portal.
 
         - If **Last check in** is more than 24 hours, there may be an issue with the device. A device that can't check in can't receive your policies from Intune.
 
