@@ -20,6 +20,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 03/31/2022
 ---
+
 # SMTP address in user's profile doesn't change when primary email address is changed in Exchange Server
 
 _Original KB number:_ &nbsp; 3040795
@@ -38,10 +39,11 @@ However, if the user's primary SMTP email address is changed to `alias@subdomain
 
 ## Cause
 
-This behavior is by design. The email address that's stamped in the root folder is determined at the time of profile creation and should reflect the primary SMTP address that's stamped on the user. The email address is strictly cosmetic and can't be changed when the user's primary SMTP email address changes.
+This behavior is expected. The primary email address in Outlook will change after a few days. This delay is caused by the time it takes for the Offline Address Book (OAB) in Exchange to update, followed by the time it takes for Outlook to download the OAB. The email address will only update for the primary mailbox. The SMTP address for shared mailboxes will not change without a new Outlook profile.
 
 ## Workaround
 
-To work around this behavior, re-create the profile for the user.
+To work around this behavior for shared mailboxes, re-create the Outlook profile for the user. The time period for the OAB update still applies.
 
 Learn how to [Create an Outlook profile](https://support.microsoft.com/office/create-an-outlook-profile-f544c1ba-3352-4b3b-be0b-8d42a540459d) and set up an email account in Outlook.
+
