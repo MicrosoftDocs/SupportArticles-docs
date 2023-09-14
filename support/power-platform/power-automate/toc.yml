@@ -85,6 +85,8 @@
           href: troubleshooting-flow-connections.md
         - name: Troubleshoot Flow Custom Connectors
           href: troubleshooting-flow-custom-connectors.md
+        - name: Troubleshoot slow running flows
+          href: troubleshoot-slow-running-flows.md
     - name: Desktop flows
       items:
         - name: Agent-related errors when running attended or unattended desktop flows
