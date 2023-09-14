@@ -95,7 +95,7 @@ For more information about backups in an Always On environment, see the followin
 
 ## Media-related errors when you restore a database from a backup
 
-If you receive error messages that indicate a file issue, this is symptomatic of a corrupted backup file. Examples of errors that you might experience if a backup set is corrupted include, but aren't limited to, the following:
+If you receive error messages that indicate a file issue, this is symptomatic of a corrupted backup file. The following are some examples of errors that you could get if a backup set is corrupted:
 
 - > 3241: The media family on device '%ls' is incorrectly formed. SQL Server cannot process this media family.
 - > 3242: The file on device '%ls' is not a valid Microsoft Tape Format backup set.
@@ -104,7 +104,7 @@ If you receive error messages that indicate a file issue, this is symptomatic of
 > [!NOTE]
 > You can use the [Restore Header](/sql/t-sql/statements/restore-statements-headeronly-transact-sql) statement to check your backups.
 
-These issues can occur because of issues that affect the underlying hardware (hard disks, network storage, and so on) or that are related to a virus or malware. Review Windows System event logs and hardware logs for reported errors, and take appropriate action (for example, upgrade firmware, or fix networking issues).
+These issues can occur because of issues that affect the underlying hardware (hard disks, network storage, and so on) or that are related to a virus or malware. Review Windows System event logs and hardware logs for reported errors, and take appropriate action (for example, upgrade firmware or fix networking issues).
 
 To prevent these errors, enable the **Backup CHECKSUM** option when you run a backup to avoid backing up a corrupted database. For more information, see [Possible Media Errors During Backup and Restore (SQL Server)](/sql/relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server).
 
