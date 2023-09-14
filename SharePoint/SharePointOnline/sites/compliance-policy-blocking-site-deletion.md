@@ -49,7 +49,7 @@ Each of these error messages is generated when a retention policy on the affecte
 To verify the validity of the retention policy or grace eDiscovery hold and delete it if it's invalid, run the following test in the Microsoft 365 admin center. You must have **Global** or **Compliance** administrator permissions to use the following steps.
 
 > [!NOTE]
-> This test isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
+> This diagnostic isn’t currently supported for GCC High, DoD, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany customers.
 
 1. Select the **Run Tests: Invalid Retention or grace eDiscovery Hold** button to populate the associated test in the Microsoft 365 admin center:
 
