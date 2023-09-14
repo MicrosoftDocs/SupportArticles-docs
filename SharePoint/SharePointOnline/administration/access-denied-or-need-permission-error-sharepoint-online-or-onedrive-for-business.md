@@ -48,7 +48,7 @@ These errors can occur for various reasons, such as:
 ## Resolution option 1: Run the Check User Access diagnostic
 
 > [!NOTE]
-> This diagnostic isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
+> This diagnostic isn’t currently supported for GCC High, DoD, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany customers.
 
 Microsoft 365 administrators can run diagnostics within the tenant to identify possible issues that affect user access.
 
