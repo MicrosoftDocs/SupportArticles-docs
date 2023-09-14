@@ -107,7 +107,7 @@ Search for the event 4116 and walk some of the important events in the Upward di
 
 The event ID 5312 indicates that the group policy service detected that it has to process 5 GPOs on the working computer and 3 GPOs on the failing computer. As we already discussed, the Phoenix-SiteGPO and Mapped-Drive GPO are Phoenix site level GPOs and the only difference is that the "Wallpaper-GPO-Tokyo" GPO isn't getting applied.
 
-### Cause and solution
+### Cause and resolution
 
 When we compare the event ID: 5312 from working and failing computers, we observe that the Group Policy client service didn't enumerate the "Wallpaper-GPO-Tokyo" when it connected to DC6.
 There could be two Primary reasons for the above scenario:
