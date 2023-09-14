@@ -53,12 +53,12 @@ Navigate to **Devices** > **Windows** > **Update rings for Windows 10 and later*
 
 :::image type="content" source="media/Troubleshoot-Update-rings/1.UpdateRingOverviewPane.jpg" alt-text="A screenshot of the Default Update Ring Overview pane in the Intune admin center.":::
 
-Check the individual device to confirm that the Update rings policy has been successfully applied.
+Check the individual device to confirm that the Update ring policy has been successfully applied.
 
 - Navigate to **Device status**, **User Status**, or **End user update status** for an overview of the list of devices the policy has been applied to. This list is useful for quickly identifying whether a specific device has received the update policy.
-- Navigate to the device in the Intune admin center, then to **Device Configuration status** > **Update rings policy** to see whether a specific device has the Update Ring policy applied.
+- Navigate to the device in the Intune admin center, then to **Device Configuration status** > **Update ring policy** to see whether a specific device has the Update ring policy applied.
 
-Review the Update rings policy for an affected device. There may be two entries for the policy depending on the type of user device being managed. When Intune deploys a policy (any policy, not just Update rings), the settings are delivered against both the logged-on user and the system context of the device. This causes the two entries, which is a normal occurrence. However, if you manage Kiosk-type devices with Autologon or a local-account user type, only the system account is displayed.
+Review the Update ring policy for an affected device. There may be two entries for the policy depending on the type of user device being managed. When Intune deploys a policy (any policy, not just Update rings), the settings are delivered against both the logged-on user and the system context of the device. This causes the two entries, which is a normal occurrence. However, if you manage Kiosk-type devices with Autologon or a local-account user type, only the system account is displayed.
 
 :::image type="content" source="media/Troubleshoot-Update-rings/2.DeviceStatusPane.jpg" alt-text="A screenshot of the Device status pane on the Default_UpdateRing page.":::
 

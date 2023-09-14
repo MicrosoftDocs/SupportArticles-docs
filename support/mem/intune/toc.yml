@@ -265,6 +265,8 @@ items:
       href: device-enrollment/windows-failed-to-apply-mdm-policy.md
 - name: Device management
   items:
+  - name: Troubleshoot Update ring policies for Windows 10/11
+    href: device-management/troubleshoot-update-rings.md
   - name: Troubleshoot device actions
     href: device-management/troubleshoot-device-actions.md
   - name: Remove duplicate mobile device management objects
