@@ -50,7 +50,7 @@ If you receive this error message, contact your [Microsoft 365 Administrator](/m
 ### Administrators
 
 > [!NOTE]
-> This feature is not available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
+> This diagnostic isn’t currently supported for GCC High, DoD, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany customers.
 
 If you are an administrator, and you have locked yourself out of SharePoint and OneDrive because of a location-based policy, follow these steps to unlock the tenant:
 
