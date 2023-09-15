@@ -194,7 +194,7 @@ We observe that GPScrpit.exe is the parent process of the cmd.exe process. Using
 2. CMD.exe is processing a .bat file deletedrives.bat and its parent process is Gpscript.exe.
 
    ```console
-   C:\Windows\system32\cmd.exe /c ""\contoso.com\SysVol\contoso.com\Policies{E347CA05-D21D-433D-9BCA-2FE555336749}\User\Scripts\Logon\deletedrives.bat
+   C:\Windows\system32\cmd.exe /c "\contoso.com\SysVol\contoso.com\Policies{E347CA05-D21D-433D-9BCA-2FE555336749}\User\Scripts\Logon\deletedrives.bat"
    ```
 
 3. GPScript.exe is the process that runs during logon to process any logon scripts.
