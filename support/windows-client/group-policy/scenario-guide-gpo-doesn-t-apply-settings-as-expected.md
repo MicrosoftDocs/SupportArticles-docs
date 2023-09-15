@@ -1,14 +1,13 @@
 ---
 title: "Scenario Guide: GPO doesn't apply settings as expected"
-description: 
-author: 
-ms.author: 
+description: This article introduces a troubleshooting scenario in which network drive cannot be mapped by using GPO.
+author: Deland-Han
+ms.author: delhan
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 09/20/2023
 ms.prod: windows-client
 ms.technology: windows-client-group-policy
 ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
-old_title: ''
 ---
 # Scenario Guide: GPO doesn't apply settings as expected
 
@@ -166,7 +165,7 @@ Then, set up another filter to identify who spawned net.exe using the Parent pro
 1. Go to Filter - Filter and click on RESET.
 2. Now apply the filter below using the PID of the parent.
 
-   :::image type="content" source="media/scenario-guide-gpo-doesn-t-apply-settings-as-expected/filter-the-trace-by-using-the-pid-is-13436-condition.png" alt-text="Filter the trace by using the "PID is 13436" condition." border="true":::
+   :::image type="content" source="media/scenario-guide-gpo-doesn-t-apply-settings-as-expected/filter-the-trace-by-using-the-pid-is-13436-condition.png" alt-text="Filter the trace by using the PID is 13436 condition." border="true":::
 
 We observe that the PID is cmd.exe and it appears its processing a GPO with below parameters:
 

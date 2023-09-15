@@ -4,7 +4,7 @@ description: This article introduces a troubleshooting scenario in which Wallpap
 author: Deland-Han
 ms.author: delhan
 ms.topic: troubleshooting
-ms.date: 9/20/2023
+ms.date: 09/20/2023
 ms.prod: windows-client
 ms.technology: windows-client-group-policy
 ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
