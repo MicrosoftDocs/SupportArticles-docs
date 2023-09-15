@@ -17,8 +17,8 @@ _Original KB number:_ &nbsp; 943471
 In Microsoft SQL Server, you create a snapshot backup of many databases at the same time. To do this, you use the Volume Shadow Copy Service (VSS), or you use the Virtual Backup Device Interface (VDI). In this scenario, the snapshot backup operation fails. Additionally, you receive the following error message if you use the VSS to create the snapshot backup:
 
 > ERROR: Selected writer 'Microsoft Writer (Service State)' is in failed state!
-> - Status: 8 (`VSS_WS_FAILED_AT_PREPARE_SNAPSHOT`)
-> - Writer Failure code: 0x800423f4 (\<Unknown error code>)  
+> - Status: 8 (VSS_WS_FAILED_AT_PREPARE_SNAPSHOT)
+> - Writer Failure code: 0x800423f4 (\<Unknown error code>)
 > - Writer ID: { **WriterID** }
 > - Instance ID: { **InstanceID** }
 

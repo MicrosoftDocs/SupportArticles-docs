@@ -56,7 +56,7 @@ Recycle the endpoint on the database mirror. To do this, follow these steps:
     > If communication between the endpoints doesn't restart after you execute the scripts, run the scripts on the database mirror. However, the database may enter a **Suspended** state after you do this. If this issue occurs, run the following SQL script:
 
     ```sql
-    ALTER DATABASE < **Database Name** > SET PARTNER RESUME
+    ALTER DATABASE < Database Name > SET PARTNER RESUME
     ```
 
 ## Method 2

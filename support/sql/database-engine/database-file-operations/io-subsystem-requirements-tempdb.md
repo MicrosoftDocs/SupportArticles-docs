@@ -126,14 +126,10 @@ The following example elaborates the data security that is required by SQL Serve
 
 Assume a RAM disk vendor uses an in-memory compression implementation. The implementation must be correctly encapsulated by providing the physical appearance of the file stream as if the sector was aligned and sized so SQL Server is unaware and correctly secured from the underlying implementation. Look at the compression example closer.
 
-**Actions**
-
 - Sector 1 is written to the device and is compressed to save space.
 - Sector 2 is written to the device and is compressed with sector 1 to save space.
 
 The device may perform the following actions to help secure sector 1's data when it is combined with sector 2's data.
-
-**Actions**
 
 - Block all writes to sectors 1 and 2.
 - Uncompress sector 1 into a scratch area, leaving current sector 1 storage as the active data to be retrieved.

@@ -38,13 +38,13 @@ However, the existing `QueueMonitor` object instance isn't deleted because its r
 
 ## Workaround
 
-To work around this issue, make sure that you run `ALTER DATABASE [dbname] SET MULTI_USER` when no activated procedure is running. To do this, use one of the following methods:
+To work around this issue, make sure that you run `ALTER DATABASE <dbname> SET MULTI_USER` when no activated procedure is running. To do this, use one of the following methods:
 
 - Before you change the user mode, disable all the queues in the database, and then re-enable all the queues.
 - Before you change the user mode, disable the activation procedure for all the affected queues by running the following command, and then re-enable the activation procedure:
 
     ```sql
-    ALTER QUEUE <queueName> WITH activation (status = off)
+    ALTER QUEUE <queueName> WITH ACTIVATION (STATUS = OFF)
     ```
 
 ## More information

@@ -27,7 +27,7 @@ Backup and restore operations are I/O intensive. Backup/Restore throughput depen
 
 - You can use the `percent_complete` column of [sys.dm_exec_requests](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql) to track the progress of in-flight backup and restore operations.
 
-- You can measure backup and restore throughput information by using the **Device throughput Bytes/sec** and **Backup/Restore throughput/sec** performance monitor counters. For more information, see [SQL Server, Backup Device Object](/sql/relational-databases/performance-monitor/sql-server-backup-device-object).
+- You can measure backup and restore throughput information by using the `Device throughput Bytes/sec` and `Backup/Restore throughput/sec` performance monitor counters. For more information, see [SQL Server, Backup Device Object](/sql/relational-databases/performance-monitor/sql-server-backup-device-object).
 
 - Use the [estimate_backup_restore](https://github.com/microsoft/mssql-support/blob/master/sample-scripts/backup_restore/estimate_backup_restore.sql) script to get an estimate of backup times.
 
@@ -40,7 +40,7 @@ Backup and restore operations are I/O intensive. Backup/Restore throughput depen
     |Knowledge Base or Books Online link|Explanation and recommended actions|
     |---|---|
     | [Optimizing Backup and Restore Performance in SQL Server](https://technet.microsoft.com/library/ms190954%28v=sql.105%29.aspx)|The Books Online topic covers various best practices that you can use to improve the performance of Backup/Restore operations. For example, you can assign the `SE_MANAGE_VOLUME_NAME` special privilege to the Windows account that's running SQL Server to enable instant initialization of data files. This can produce significant performance gains.|
-    | [2920151 Recommended hotfixes and updates for Windows Server 2012 R2-based failover clusters](https://support.microsoft.com/help/2920151) <br/><br/> [2822241 Windows 8 and Windows Server 2012 update rollup: April 2013](https://support.microsoft.com/help/2822241)|Current system rollups can include fixes for known issues at the system level that can  degrade the performance of programs such as SQL Server. Installing these updates can help prevent such issues.|
+    | [2920151 Recommended hotfixes and updates for Windows Server 2012 R2-based failover clusters](https://support.microsoft.com/help/2920151) <br/><br/> [2822241 Windows 8 and Windows Server 2012 update rollup: April 2013](https://support.microsoft.com/help/2822241)|Current system rollups can include fixes for known issues at the system level that can degrade the performance of programs such as SQL Server. Installing these updates can help prevent such issues.|
     | [2878182 FIX: User mode processes in an application are unresponsive on servers that are running Windows Server 2012](https://support.microsoft.com/help/2878182) <br/><br/>|Backup operations are I/O intensive and can be affected by this bug. Apply this fix to help prevent these issues.|
     | [Configure antivirus software to work with SQL Server](../security/antivirus-and-sql-server.md)|Antivirus software may hold locks on .bak files. This can affect the performance of backup and restore operations. Follow the guidance in this article to exclude backup files from virus scans.|
     | [2820470 Delayed error message when you try to access a shared folder that no longer exists in Windows](https://support.microsoft.com/help/2820470)|Discusses an issue that occurs when you try to access a shared folder that no longer exists in Windows 2012 and later versions.|
@@ -57,7 +57,7 @@ Backup and restore operations are I/O intensive. Backup/Restore throughput depen
 
 ## Issues that affect database restoration between different SQL Server versions
 
-A SQL Server backup can't be restored to an earlier version of SQL Server than the version at which the backup was created. For example, you can't restore a backup that's taken on a SQL Server 2019 instance to a SQL Server 2017 instance. If you try to restore a backup, the following error message appears:
+A SQL Server backup can't be restored to an earlier version of SQL Server than the version at which the backup was created. For example, you can't restore a backup that's taken on a SQL Server 2019 instance to a SQL Server 2017 instance. Otherwise, the following error message appears:
 
 > Error 3169: The database was backed up on a server running version %ls. That version is incompatible with this server, which is running version %ls. Either restore the database on a server that supports the backup, or use a backup that is compatible with this server.
 
@@ -152,7 +152,7 @@ SQL Server provides a Virtual Backup Device Interface (VDI) tool. This API enabl
 
 - For SQL Server 2012 and later versions, a new login that's named [NT SERVICE\SQLWriter] is created and provisioned as a login during setup. Make sure that this login exists in SQL Server and is part of the Sysadmin server role.
 
-- Make sure that SqlServerWriter is listed when the VSSADMIN LIST WRITERS command is run at a command prompt on the server that's running SQL Server. This writer must be listed as a writer and should be in the **Stable** state to enable VSS backups to finish successfully.
+- Make sure that SqlServerWriter is listed when the `VSSADMIN LIST WRITERS` command is run at a command prompt on the server that's running SQL Server. This writer must be listed as a writer and should be in the **Stable** state to enable VSS backups to finish successfully.
 
 - For more information, check the logs from the corresponding backup software and their support sites.
 
