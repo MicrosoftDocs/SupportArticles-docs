@@ -50,9 +50,7 @@ Use the following steps to install the VM Agent in offline mode.
 
 5. Browse to the \windows\system32\config\SYSTEM folder on the OS disk that you attached. For the name of the hive, enter **BROKENSYSTEM**. The new registry hive is displayed under the **HKEY_LOCAL_MACHINE** key.
 
-6. Browse to the \windows\system32\config\SOFTWARE folder on the OS disk that you attached. For the name of the hive software, enter **BROKENSOFTWARE**.
-
-7. If the Attached OS disk has the VM agent installed, perform a backup of the current configuration. If it does not have VM agent installed, move to the next step.
+6. If the Attached OS disk has the VM agent installed, perform a backup of the current configuration. If it does not have VM agent installed, move to the next step.
 
     1. Rename the \windowsazure folder to \windowsazure.old.
 
@@ -60,7 +58,7 @@ Use the following steps to install the VM Agent in offline mode.
         - HKEY_LOCAL_MACHINE\BROKENSYSTEM\ControlSet001\Services\WindowsAzureGuestAgent
         - HKEY_LOCAL_MACHINE\BROKENSYSTEM\ControlSet001\Services\RdAgent
 
-8. Use the existing files on the troubleshooter VM as a repository for the VM Agent installation. Complete the following steps:
+7. Use the existing files on the troubleshooter VM as a repository for the VM Agent installation. Complete the following steps:
 
     1. From the troubleshooter VM, export the following subkeys in registry format (.reg):
         - HKEY_LOCAL_MACHINE  \SYSTEM\ControlSet001\Services\WindowsAzureGuestAgent
@@ -86,13 +84,11 @@ Use the following steps to install the VM Agent in offline mode.
 
              :::image type="content" source="media/install-vm-agent-offline/copy-files.png" alt-text="Screenshot of an example GuestAgent folder in the attached OS disk." border="false":::
 
-9. Select **BROKENSYSTEM**. From the menu, select **File** > **Unload Hive**​.
+8. Select **BROKENSYSTEM**. From the menu, select **File** > **Unload Hive**​.
 
-10. Select **BROKENSOFTWARE**. From the menu, select **File** > **Unload Hive**​.
+9. Detach the OS disk, and then [change the OS disk for the affected VM](troubleshoot-recovery-disks-portal-windows.md#swap-the-failed-vms-os-disk-with-the-repaired-disk). For the classic VM, create a new VM by using the repaired OS disk.
 
-11. Detach the OS disk, and then [change the OS disk for the affected VM](troubleshoot-recovery-disks-portal-windows.md#swap-the-failed-vms-os-disk-with-the-repaired-disk). For the classic VM, create a new VM by using the repaired OS disk.
-
-12. Access the VM. Notice that the RdAgent is running and the logs are being generated.
+11. Access the VM. Notice that the RdAgent is running and the logs are being generated.
 
 If you created the VM by using the Resource Manager deployment model, you're done.
 
