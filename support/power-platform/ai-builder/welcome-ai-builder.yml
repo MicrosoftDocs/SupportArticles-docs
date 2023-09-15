@@ -19,10 +19,16 @@ landingContent:
     linkLists:
       - linkListType: reference
         links:
+          - text: All AI Builder credits have been consumed
+            url: all-ai-builder-credits-have-been-consumed.md
           - text: Actions are disabled or deactivated
             url: aibuilder-actions-are-disabled-deactivated.md
+          - text: AI Builder trial license still displays in the top banner after you've purchased an AI Builder license
+            url: aibuilder-show-trial-license-but-license-purchased.md
           - text: Current environment doesn't meet the minimum requirements
             url: the-current-environment-donot-meet-the-minimum-requirements-error-message.md
+          - text: Prevent users from creating AI Builder custom models
+            url: prevent-users-from-creating-ai-builder-custom-models.md
 
   # Card
   - title: Models
@@ -31,6 +37,44 @@ landingContent:
         links:
           - text: AI models fail to be imported in a new environment
             url: aimodels-fail-to-be-imported-in-a-new-environment.md
+          - text: Fields couldn't be loaded for this document error in a document processing model
+            url: fields-could-not-be-loaded-for-this-document-error-in-form-processing.md
+          - text: Training document isn't displayed
+            url: the-training-document-is-not-displayed-on-the-form-processing-model-details-page.md
+            
+  # Card
+  - title: Use  in Power Automate
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Dependency timeout error
+            url: dependency-timeout-error-when-using-a-form-processing-model-in-power-automate.md
+          - text: Output of an AI Builder action is empty in Power Automate or the next action returns an error
+            url: the-output-of-an-ai-builder-action-is-empty-in-power-automate-or-the-next-action-returns-an-error.md
+          - text: Pages parameter generates an error when saving a document processing flow
+            url: pages-parameter-generates-an-error-when-saving-a-form-processing-flow.md
+          - text: Training failed and the model can't be used in a document processing model
+            url: training-failed-and-the-model-cannot-be-used-error-in-form-processing.md
+          - text: Too many requests error in Power Automate
+            url: too-many-requests-error-in-power-automate.md
+            
+  # Card
+  - title: Use  in Power Apps
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Business card reader doesn't work for some users
+            url: business-card-reader-do-not-work-for-some-users.md
+          - text: When I scan images using AI Builder components in Power Apps, the output image rotation is wrong
+            url: when-i-scan-images-using-aibuilder-components-in-powerapps-the-output-image-rotation-is-wrong.md
+
+  # Card
+  - title: Other
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: AI Builder processes and plug-in steps are turned off in default solution
+            url: aibuilder-processes-and-plug-in-steps-are-turned-off-in-default-solution.md
 
   # Card
   - title: Documentation and training
