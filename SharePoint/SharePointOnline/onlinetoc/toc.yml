@@ -82,17 +82,19 @@
   - name: Apps
     items:
     - name: Issue when clicking .mov or .mp4 files
-      href: ../Apps/windows-media-player-cannot-connect-to-server.md
+      href: ../apps/windows-media-player-cannot-connect-to-server.md
     - name: Issue when clicking a guest link to an online item
-      href: ../Apps/guest-link-fails-accessing-shared-resource.md
+      href: ../apps/guest-link-fails-accessing-shared-resource.md
     - name: Issue when opening an Access desktop database
-      href: ../Apps/fails-opening-access-desktop-database.md
+      href: ../apps/fails-opening-access-desktop-database.md
     - name: Issue with updating a SharePoint app
-      href: ../Apps/fails-updating-sharepoint-app.md
+      href: ../apps/fails-updating-sharepoint-app.md
     - name: MSN Weather Service API is retired
-      href: ../Apps/msn-weather-service-api-retired.md
+      href: ../apps/msn-weather-service-api-retired.md
+    - name: Site collection admins can't register apps or update permissions
+      href: ../apps/cannot-register-app-update-permissions.md
     - name: This content cannot be displayed in a frame
-      href: ../Apps/view-owa-page-viewer-web-part.md
+      href: ../apps/view-owa-page-viewer-web-part.md
   - name: InfoPath
     items:
     - name: '"Access Denied" error (Event ID 5566) when you open a form in the browser'
