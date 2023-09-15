@@ -91,7 +91,7 @@ The problem usually occurs when you are running an evaluation instance of SQL Se
     > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).
 
     1. Select **Start** > **Run**, enter *Regedt32*, and then select **OK**.
-    1. Locate and then click the following key in the Registry Editor:
+    1. Locate and then select the following key in the Registry Editor:
 
         `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\ConfigurationState`
 
