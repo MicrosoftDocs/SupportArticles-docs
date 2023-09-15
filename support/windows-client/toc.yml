@@ -534,8 +534,6 @@
       href: ./networking/redirect-users-documents-folder-to-their-home-directory-fail.md
     - name: Change the location of CSC folder
       href: ./networking/change-csc-folder-location-with-cachelocation-registry.md
-    - name: CSCCMD tool Version 1.1. functions and features
-      href: ./networking/client-side-caching-command-line-options-v1dot1.md
     - name: Current hotfixes have folder redirection enabled
       href: ./networking/current-hotfixes-have-folder-redirection.md
     - name: Errors when having a large "Folder Redirection" policy settings file
