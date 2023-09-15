@@ -109,15 +109,17 @@ We recommend that you add the following real-time protection exclusions to preve
 
 Process exclusions are necessary only if aggressive antivirus programs consider Configuration Manager executables (.exe) to be high-risk processes.
 
-Site and Site systems:
+Site and site systems:
+
 - *ConfigMgr installation folder*\bin\x64\Smsexec.exe
 - *ConfigMgr installation folder*\bin\x64\Sitecomp.exe
 - *ConfigMgr installation folder*\bin\x64\Smswriter.exe (site server only)
-- - *ConfigMgr installation folder*\bin\x64\Cmupdate.exe (site server only)
+- *ConfigMgr installation folder*\bin\x64\Cmupdate.exe (site server only)
 - *ConfigMgr installation folder*\bin\x64\Smssqlbkup.exe, or *SQLFQDN*\bin\x64\Smssqlbkup.exe (site database server only)
 - *MP installation folder*\Ccmexec.exe
 
 Client:
+
 - *Client installation folder*\Ccmexec.exe
 - *Client installation folder*\Ccmrepair.exe
 - *Client installation folder*\ScClient.exe
@@ -126,8 +128,8 @@ Client:
 - *%windir%*\CCMSetup\Ccmsetup.exe
 - *%windir%*\CCMSetup\autoupgrade\Ccmsetup*.exe 
 
-   > [!NOTE]
-   > Starting in Configuration Manager current branch version 1910, this file name has been changed to *Ccmsetup.\<Packageid>.\<PackageVersion>.exe*.
+> [!NOTE]
+> Starting in Configuration Manager current branch version 1910, this file name has been changed to *Ccmsetup.\<Packageid>.\<PackageVersion>.exe*.
 
 ## References
 
