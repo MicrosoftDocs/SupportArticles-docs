@@ -40,6 +40,8 @@ items:
               href: create-and-use-apps/no-navigation-when-selecting-button.md
     - name: Dataverse
       items:
+        - name: Clean up inherited access
+          href: dataverse/cleanup-inherited-access.md
         - name: Dataverse plug-ins
           href: dataverse/dataverse-plug-ins-errors.md
         - name: Web API client errors
