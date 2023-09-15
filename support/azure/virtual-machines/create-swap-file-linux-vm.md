@@ -122,12 +122,12 @@ You can create a SWAP partition by using one of the options below.
 <details>
 <summary>Option 3: Create a SWAP partition under the custom resource disk path</summary>
 
-2. Create the `CLOUD_CFG` variable in */systemd/system.conf* to set both SWAP and the resource disk.
+1. Create the `CLOUD_CFG` variable in */systemd/system.conf* to set both SWAP and the resource disk.
 
     ```bash
     sudo echo 'DefaultEnvironment="CLOUD_CFG=/etc/cloud/cloud.cfg.d/00-azure-swap.cfg"' >> /etc/systemd/system.conf
     ```
-3. Create a YAML file that sets SWAP, resource disk creation, and custom mount points ("azure" is an example):
+2. Create a YAML file that sets SWAP, resource disk creation, and custom mount points ("azure" is an example):
 
     ```bash
     sudo cat > /etc/cloud/cloud.cfg.d/00-azure-swap.cfg << EOF
