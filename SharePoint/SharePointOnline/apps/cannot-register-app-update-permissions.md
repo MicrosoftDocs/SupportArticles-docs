@@ -33,7 +33,7 @@ These errors occur because of enhancements that have been made to the security m
 
 ## Resolution
 
-To change the new default behavior, the SharePoint admin must run the following [Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant?view=sharepoint-ps#-siteownermanagelegacyserviceprincipalenabled&preserve-view=true) cmdlet to also allow site collection admins to manage the Azure Access Control (ACS) service principal:
+To change the new default behavior, the SharePoint admin must run the following [Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant?view=sharepoint-ps&preserve-view=true#-siteownermanagelegacyserviceprincipalenabled) cmdlet to also allow site collection admins to manage the Azure Access Control (ACS) service principal:
 
 ```powershell
 Set-SPOTenant -SiteOwnerManageLegacyServicePrincipalEnabled $true
