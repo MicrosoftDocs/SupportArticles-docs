@@ -5,7 +5,7 @@ ms.subservice: power-automate-desktop-flows
 ---
 # Machine registration failure
 
-This article provides a set of troubleshooting steps for when you are unable to register your machine using the Power Automate desktop application
+This article provides a set of troubleshooting steps for when you are unable to register your machine using the Power Automate runtime application.
 
 ## Symptoms
 
