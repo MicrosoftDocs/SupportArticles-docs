@@ -10,6 +10,8 @@ ms.technology: windows-client-group-policy
 ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
 old_title: ''
 ---
+# Scenario Guide: GPO doesn't apply settings as expected
+
 This scenario guide explains how to troubleshoot when you find a GPO setting does not take efforts as expected.
 
 ## Troubleshooting workflow
@@ -27,7 +29,6 @@ Before you proceed, refer [Applying Group Policy troubleshooting guidance](../..
 - Client machine operating system: Windows 11, version 22H2
 
 :::image type="content" source="media/scenario-guide-gpo-doesn-t-apply-settings-as-expected/diagram-of-environment-topology.png" alt-text="The diagram of the topology of the environment." border="true":::
-
 
 ### In this scenario
 
