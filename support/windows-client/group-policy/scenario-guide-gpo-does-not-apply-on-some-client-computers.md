@@ -29,7 +29,7 @@ Before you proceed, refer [Applying Group Policy troubleshooting guidance](../..
 
 - Domain name: `contoso.com`
 - Active Directory sites: Four sites (two domain controllers per site) (Phoenix, London, Tokyo and Mumbai)
-- Number of domain controllers: 8
+- Number of the domain controllers: 8
 - Domain controller operating system: Windows Server 2019
 - Client computer operating system: Windows 11, version 22H2
 
@@ -107,7 +107,7 @@ Search for the event 4116 and walk some of the important events in the Upward di
 
 The event ID 5312 indicates that the group policy service detected that it has to process 5 GPOs on the working computer and 3 GPOs on the failing computer. As we already discussed, the Phoenix-SiteGPO and Mapped-Drive GPO are Phoenix site level GPOs and the only difference is that the "Wallpaper-GPO-Tokyo" GPO isn't getting applied.
 
-### Cause and resolution
+### Summary
 
 When we compare the event ID: 5312 from working and failing computers, we observe that the Group Policy client service didn't enumerate the "Wallpaper-GPO-Tokyo" when it connected to DC6.
 There could be two Primary reasons for the above scenario:
