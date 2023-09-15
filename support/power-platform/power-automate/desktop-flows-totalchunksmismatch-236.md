@@ -13,7 +13,7 @@ After installing Power Automate version 2.36, all your attended or unattended ru
 
 ## Resolution
 
-To resolve this failure, you will need to need administrator permissions. First, stop runs from executing on the machine. Then, you will need to  delete the contents of the following folders:
+To resolve this failure, you will need administrator permissions. First, stop runs from executing on the machine. Then, you will need to  delete the contents of the following folders:
 
 * C:\Windows\ServiceProfiles\UIFlowService\AppData\Local\Microsoft\Power Automate Desktop\Cache\metadata
 * C:\Windows\ServiceProfiles\UIFlowService\AppData\Local\Microsoft\Power Automate Desktop\Cache\storage
