@@ -75,9 +75,9 @@ If you can't modify the COM client to request that the object be created out of 
     4. While under the GUID's InprocServer32 subkey, make sure that a `ThreadingModel` value exists and that it is set to either Both or Free to make sure the marshaling understands the threading model of the COM object to enable execution of COM out of SQL Server process space. If there isn't a `ThreadingModel` value or it's set to Apartment, COM object instantiation may not be consistent.
 
         > [!NOTE]
-        > If you add the `ThreadingModel` value make sure that you test your COM object before implementing.
+        > If you add the `ThreadingModel` value, make sure that you test your COM object before implementing.
 
-    5. Highlight the GUID number/subkey under the `HKEY_CLASSES_ROOT\CLSID` key. From the **Edit** menu, click **New**, and then select **String Value**. Under the **Name** column, type the following: AppID
+    5. Highlight the GUID number/subkey under the `HKEY_CLASSES_ROOT\CLSID` key. From the **Edit** menu, select **New**, and then select **String Value**. Under the **Name** column, type *AppID*.
 
     6. Press <kbd>ENTER</kbd> and then insert the class identifier or GUID number you noted from step 1 as the value. The GUID should be inside the curly brackets as in the following example:
 
@@ -93,7 +93,7 @@ If you can't modify the COM client to request that the object be created out of 
 
        Leave the Data column blank for this value. Because the data column is blank, this informs DCOM to run the default executable file, *dllhost.exe*, and load the COM object within its process space.
 
-    9. Close the Registry Editor. Click **Start**, and then click **Run**. In the **Run** dialog box, type *DCOMCNFG*.
+    9. Close the Registry Editor. Click **Start**, and then select **Run**. In the **Run** dialog box, type *DCOMCNFG*.
 
        Press the **ENTER** key to open the **Distributed COM Configuration Properties** dialog box. Click the **Default Properties** tab, and make sure that **Enable Distributed COM** on this computer is selected. If it is not, select it, and then click **Apply**.
 

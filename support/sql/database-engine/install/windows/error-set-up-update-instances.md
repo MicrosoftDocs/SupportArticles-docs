@@ -63,7 +63,7 @@ To resolve this problem, use one of the following methods, as appropriate:
 subkey, and then select **Permissions**.
   1. In the **Permissions** window that opens, select **Advanced**.
   1. At the top of the **Advanced Security Settings** window, select **Change** next to the listed owner.
-  1. In the **Select User, Computer, Service Account, or Group**  window, type the name of your Windows user account (or your email address if you have a Microsoft account) in the **Enter the object name to select** box, and then select **Check Names** to validate the account name.
+  1. In the **Select User, Computer, Service Account, or Group** window, type the name of your Windows user account (or your email address if you have a Microsoft account) in the **Enter the object name to select** box, and then select **Check Names** to validate the account name.
   1. Select **OK** two times.
   1. In the **Permissions** window, select the **Users** group, and then select the **Allow** check box for the **Full Control** permissions.
 
