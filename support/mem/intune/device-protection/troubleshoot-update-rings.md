@@ -5,7 +5,7 @@ ms.date: 09/09/2023
 ms.reviewer: chauntain, helenclu, simonxjx
 search.appverid: MET150
 ---
-# Troubleshooting Update rings policies for Windows 10 and 11 devices in Microsoft Intune
+# Troubleshooting Update rings for Windows 10 and later in Microsoft Intune
 
 This article provides guidelines for addressing issues with Windows Update rings settings to ensure they’re successfully delivered to your organization’s Windows 10 and 11 devices. Update rings settings manage how and when Windows devices install operating system (OS) updates. To learn more about Update ring policies, see [Update rings for Windows 10 and later policy in Intune | Microsoft Learn](/mem/intune/protect/windows-10-update-rings).
 

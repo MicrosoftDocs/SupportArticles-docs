@@ -265,8 +265,6 @@ items:
       href: device-enrollment/windows-failed-to-apply-mdm-policy.md
 - name: Device management
   items:
-  - name: Troubleshoot Update ring policies for Windows 10/11
-    href: device-management/troubleshoot-update-rings.md
   - name: Troubleshoot device actions
     href: device-management/troubleshoot-device-actions.md
   - name: Remove duplicate mobile device management objects
@@ -297,6 +295,8 @@ items:
       href: device-protection/troubleshoot-jamf.md
     - name: Unable to connect Jamf console to Intune
       href: device-protection/unable-to-connect-send-inventory-information.md
+  - name: Troubleshoot Update rings policy
+    href: device-protection/troubleshoot-update-rings.md
   - name: Troubleshoot encryption on client side
     href: device-protection/troubleshoot-bitlocker-policies.md
   - name: Troubleshoot encryption in Intune
