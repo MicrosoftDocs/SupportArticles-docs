@@ -88,7 +88,7 @@ You can create a SWAP partition by using one of the options below.
 </details>
 
 <details>
-<summary>Option 2: Create a SWAP partition under the resource disk path</summary>
+<summary>Option 2: Create a SWAP partition under the resource disk path by using cloud-init</summary>
 
 1. Create the `CLOUD_CFG` variable in */systemd/system.conf* to set both SWAP and the resource disk.
 
@@ -120,7 +120,7 @@ You can create a SWAP partition by using one of the options below.
 </details>
 
 <details>
-<summary>Option 3: Create a SWAP partition under the custom resource disk path</summary>
+<summary>Option 3: Create a SWAP partition under the custom resource disk path by using cloud-init</summary>
 
 1. Create the `CLOUD_CFG` variable in */systemd/system.conf* to set both SWAP and the resource disk.
 
