@@ -46,7 +46,7 @@ To resolve this issue, you must rename the document library to “Documents” b
 ### Method 1: Use the Microsoft Admin site
 
 > [!NOTE]
-> This diagnostic isn’t currently supported for GCC High, DoD, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany customers.
+> This diagnostic isn’t currently supported for GCC High, DoD, or Microsoft 365 operated by 21Vianet.
 
 1. Select **Run Tests** below, which will populate the diagnostic in the Microsoft 365 Admin Center. 
 
