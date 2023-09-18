@@ -4,7 +4,7 @@ ms.author: luche
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
-ms.date: 11/24/2020
+ms.date: 09/15/2023
 audience: Admin
 ms.topic: troubleshooting
 ms.custom: 
@@ -50,7 +50,7 @@ If you receive this error message, contact your [Microsoft 365 Administrator](/m
 ### Administrators
 
 > [!NOTE]
-> This diagnostic isn’t currently supported for GCC High, DoD, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany customers.
+> This diagnostic isn't currently supported for GCC High, DoD, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany customers.
 
 If you are an administrator, and you have locked yourself out of SharePoint and OneDrive because of a location-based policy, follow these steps to unlock the tenant:
 
