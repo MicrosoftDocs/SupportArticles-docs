@@ -25,7 +25,7 @@ landingContent:
             url: aibuilder-actions-are-disabled-deactivated.md
           - text: AI Builder trial license still displays after you've purchased one
             url: aibuilder-show-trial-license-but-license-purchased.md
-          - text: '"Current environment doesn't meet the minimum requirements" error'
+          - text: Current environment doesn't meet the minimum requirements error
             url: the-current-environment-donot-meet-the-minimum-requirements-error-message.md
           - text: Prevent users from creating AI Builder custom models
             url: prevent-users-from-creating-ai-builder-custom-models.md
@@ -37,7 +37,7 @@ landingContent:
         links:
           - text: AI models fail to be imported in a new environment
             url: aimodels-fail-to-be-imported-in-a-new-environment.md
-          - text: '"Fields couldn't be loaded for this document" error'
+          - text: Fields couldn't be loaded for this document error
             url: fields-could-not-be-loaded-for-this-document-error-in-form-processing.md
           - text: Training document isn't displayed
             url: the-training-document-is-not-displayed-on-the-form-processing-model-details-page.md
@@ -55,7 +55,7 @@ landingContent:
             url: pages-parameter-generates-an-error-when-saving-a-form-processing-flow.md
           - text: Output of an AI Builder action is empty or the next action returns an error
             url: the-output-of-an-ai-builder-action-is-empty-in-power-automate-or-the-next-action-returns-an-error.md
-          - text: '"Training failed and the model can't be used" error'
+          - text: Training failed and the model can't be used error
             url: training-failed-and-the-model-cannot-be-used-error-in-form-processing.md
             
   # Card
