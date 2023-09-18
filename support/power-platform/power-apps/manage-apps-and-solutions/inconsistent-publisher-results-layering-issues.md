@@ -14,38 +14,29 @@ This article provides a workaround for an issue that occurs when you perform mul
 
 ## Symptoms
 
-When you try to perform an upgrade or delete of a solution, it can result in faiure due to:
-
-- Failed Upgrade or Failed to delete a Solution due to dependencies errors.
-- Multiple layers involved with same component.
-- Different publishers bring different layers.
+When you try to perform an upgrade or delete of the base layer in a solution, it can result in a faiure due to different publisher owning the base layer and the layer above base layer of a component.
 
 You receive an error message like the following one:
 
-> Microsoft.Crm.CrmException: The uninstall operation will delete the base layer for the component ‘<Component Name>’ with id '<Component Id>’. The operation cannot continue because there are other managed layers over the base layer. You can use the solution layers to find out which other solutions are blocking the operation.
+> Microsoft.Crm.CrmException: The uninstall operation will delete the base layer for the component ‘&lt;Component Name&gt;’ with id '&lt;Component Id&gt;’. The operation cannot continue because there are other managed layers over the base layer. You can use the solution layers to find out which other solutions are blocking the operation.
 
 ## Cause
 
-When different publishers use the same component and bring different layers.  
+The reason behind this error is due to having multiple publishers bringing different layers of the same component.
 
-When the first layer from a publisher owns the base layer, and another publisher brings another layer through another version. 
+For example, if the first layer of a component is from a publisher who owns the base layer, and there is another publisher who brings in another layer of the same component through another solution. Now, when delete of base layer of a component is initiated but the layer above the base layer is owned by another publisher through another solution that is not active solution then this delete is not allowed and it fails.
 
-When delete of bottom layer of a component is initiated but the above layer is owned by another publisher through another solution, not active solution then this delete is not allowed and it fails.
-
-When upgrade of base layer but above layer is owned by another publisher. 
-
-This scenario is only affecting when delete/upgrade is happening in base layer. 
+Another example, when upgrade of base layer which is owned by a publisher is initiated but the layer above is owned by another publisher, upgrade results in unexpected behavior.
 
 ## Workaround
 
-Remove the layers above the base layer, by removing the component through solution. In the source environment of the solution, remove the component, export the solution by removing the above layer, import in the target environment.  
+To work around this issue, remove the layers above the base layer which are from different publisher by removing the component through solution. To perform this in the source environment of the solution, remove the component, export the solution by removing the above layer, import in the target environment.  Few things to keep in mind:
 
-Only need to remove layers above from different publishers. If all the layers above is through different publishers, then remove all layers. 
+- You need to remove layer above the base layer, only if the above layer is from different publishers. If there are multiple layer above base layer through different publishers, then remove all of those layers.
+- The active layer need not be accounted for in this scenario, if the active layer is through another publisher, it continues to works for both delete/upgrade.
+- The layer above the base layer is through same publisher, then no action is required. In this scenario the operation will be successful and the above layer from same publisher becomes the base layer.
+- If you are deleting a layer which is not base layer but a layer in the middle of stack, no action is required. This is not a problem for removing layer in the middle of stack.
 
-The active layer does not count here, if the active layer is through another publisher, it still works for both delete/upgrade 
+Learn more about [multiple solution layering and dependencies](/power-platform/alm/organize-solutions#multiple-solution-layering-and-dependencies).
 
-If layers above base are through same publisher, then operation will be successful. So, the layer above becomes the base layer. 
-
-This is not a problem for removing layer in the middle of stack. 
-
-Authoring the same solution through different publishers, give reference to doc, which says do not use different publisher solutions and use environment separation for layer. 
+The following examples demonstrate what happens when upgrade or delete is initiated for base layer which has different publisher then the layer above:
