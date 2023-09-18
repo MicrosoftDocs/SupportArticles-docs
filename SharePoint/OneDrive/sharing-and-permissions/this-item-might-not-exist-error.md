@@ -3,7 +3,7 @@ title: (This item might not exist or is no longer available) error when using On
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 12/16/2020
+ms.date: 09/15/2023
 audience: Admin
 ms.topic: troubleshooting
 localization_priority: Normal
@@ -46,7 +46,7 @@ To resolve this issue, you must rename the document library to “Documents” b
 ### Method 1: Use the Microsoft Admin site
 
 > [!NOTE]
-> This feature is not available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
+> This diagnostic isn't currently supported for GCC High, DoD, or Microsoft 365 operated by 21Vianet.
 
 1. Select **Run Tests** below, which will populate the diagnostic in the Microsoft 365 Admin Center. 
 
