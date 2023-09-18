@@ -1,7 +1,7 @@
 ---
 title: Syskey.exe utility is no longer supported
 description: Syskey.exe utility is no longer supported in Windows 10, Windows Server 2016, and later versions.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

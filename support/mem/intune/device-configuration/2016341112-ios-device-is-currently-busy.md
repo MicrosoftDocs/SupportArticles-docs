@@ -14,7 +14,7 @@ This article discusses the **2016341112 -iOS device is currently busy** error th
 
 When you try to deploy a device configuration profile to iOS devices in Intune, you notice the following behavior:
 
-- When the iOS device is locked, the device profile isn't applied to the device. In the Microsoft Endpoint Manager admin center, the device is marked as noncompliant, and you see the following error message:
+- When the iOS device is locked, the device profile isn't applied to the device. In the Microsoft Intune admin center, the device is marked as noncompliant, and you see the following error message:
 
     > 2016341112 -iOS device is currently busy
 

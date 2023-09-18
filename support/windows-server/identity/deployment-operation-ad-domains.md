@@ -1,7 +1,7 @@
 ---
 title: Deployment and operation of AD domains
 description: This article provides information about the deployment and operation of Windows member computers and domain controllers that are joined to Active Directory domains that are configured by using single-label DNS names.
-ms.date: 3/24/2022
+ms.date: 03/24/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -214,9 +214,9 @@ Root servers may be created by the DCpromo Wizard. If the "." zone exists, a roo
 
 ## References
 
-- [DNS namespace planning](/troubleshoot/windows-server/networking/dns-namespace-design)
+- [DNS namespace planning](../networking/dns-namespace-design.md)
 
-- [Unable to select DNS Server role when adding a domain controller into an existing Active Directory domain](/troubleshoot/windows-server/identity/auto-install-dns-server-role-disabled-promte-domain-controller)
+- [Unable to select DNS Server role when adding a domain controller into an existing Active Directory domain](auto-install-dns-server-role-disabled-promte-domain-controller.md)
 
 - [ADMT Guide: Migrating and Restructuring Active Directory Domains](https://www.microsoft.com/download/details.aspx?id=19188)
 

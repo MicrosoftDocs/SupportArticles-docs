@@ -1,11 +1,10 @@
 ---
 title: SQL Server backup and restore operation issues
 description: This article troubleshoots SQL Server backup and restore operation issues, such as the operation taking a long time, issues between different SQL Server versions.
-ms.date: 9/10/2021
+ms.date: 09/10/2021
 ms.custom: sap:Administration and Management
 ms.reviewer: ramakoni
 editor: v-jesits
-ms.prod: sql
 ---
 # Troubleshoot SQL Server backup and restore operations  
 
@@ -43,7 +42,7 @@ Backup and restore operations are I/O intensive. Backup/Restore throughput depen
     | [Optimizing Backup and Restore Performance in SQL Server](https://technet.microsoft.com/library/ms190954%28v=sql.105%29.aspx)|The Books Online topic covers various best practices that you can use to improve the performance of Backup/Restore operations. For example, you can assign the SE_MANAGE_VOLUME_NAME special privilege to the Windows account that's running SQL Server to enable instant initialization of data files. This can produce significant performance gains.|
     | [2920151 Recommended hotfixes and updates for Windows Server 2012 R2-based failover clusters](https://support.microsoft.com/help/2920151) <br/><br/> [2822241 Windows 8 and Windows Server 2012 update rollup: April 2013](https://support.microsoft.com/help/2822241)|Current system rollups can include fixes for known issues at the system level that can cause degrade the performance of programs such as SQL Server. Installing these updates can help prevent such issues.|
     | [2878182 FIX: User mode processes in an application are unresponsive on servers that are running Windows Server 2012](https://support.microsoft.com/help/2878182) <br/><br/>|Backup operations are I/O intensive and can be affected by this bug. Apply this fix to help prevent these issues.|
-    | [309422 How to choose antivirus software to run on computers that are running SQL Server](https://support.microsoft.com/help/309422)|Antivirus software may hold locks on .bak files. This can affect the performance of backup and restore operations. Follow the guidance in this article to exclude backup files from virus scans.|
+    | [Configure antivirus software to work with SQL Server](../security/antivirus-and-sql-server.md)|Antivirus software may hold locks on .bak files. This can affect the performance of backup and restore operations. Follow the guidance in this article to exclude backup files from virus scans.|
     | [2820470 Delayed error message when you try to access a shared folder that no longer exists in Windows](https://support.microsoft.com/help/2820470)|Discusses an issue that occurs when you try to access a shared folder that no longer exists in Windows 2012 and later versions.|
     | [967351 A heavily fragmented file in an NTFS volume may not grow beyond a certain size](https://support.microsoft.com/help/967351)|Discusses an issue that occurs when an NTFS file system is heavily fragmented.|
     | [304101 Backup program is unsuccessful when you back up a large system volume](https://support.microsoft.com/help/304101)||

@@ -1,12 +1,11 @@
 ---
 title: Memory-optimized tempdb metadata out of memory errors
 description: Provides resolutions to troubleshoot out of memory issues with memory-optimized tempdb metadata.
-ms.date: 2/16/2023
+ms.date: 06/01/2023
 ms.custom: sap:Database Engine
 ms.reviewer: jopilov, hesha
 author: Hemin-msft
 ms.author: jopilov
-ms.prod: sql
 ---
 
 # Memory-optimized tempdb metadata (HkTempDB) out of memory errors
@@ -45,15 +44,22 @@ To collect data to diagnose the issue, follow these steps:
 1. Collect the output of the following DMVs to analyze further.
 
    ```sql
-   SELECT * FROM  sys.dm_os_memory_clerks
-   SELECT * FROM  sys.dm_tran_database_transactions
-   SELECT * FROM  sys.dm_tran_active_transactions
+   SELECT * FROM sys.dm_os_memory_clerks
+   SELECT * FROM sys.dm_exec_requests
+   SELECT * FROM sys.dm_exec_sessions
+   
    -- from tempdb
-   SELECT * FROM  tempdb.sys.dm_xtp_system_memory_consumers 
-   SELECT * FROM  tempdb.sys.dm_xtp_transaction_stats
-   SELECT * FROM  tempdb.sys.dm_xtp_gc_queue_stats
-   SELECT * FROM  tempdb.sys.dm_db_xtp_object_stats
-   SELECT * FROM  tempdb.sys.dm_db_xtp_memory_consumers
+   SELECT * FROM tempdb.sys.dm_xtp_system_memory_consumers 
+   SELECT * FROM tempdb.sys.dm_db_xtp_memory_consumers
+   
+   SELECT * FROM tempdb.sys.dm_xtp_transaction_stats
+   SELECT * FROM tempdb.sys.dm_xtp_gc_queue_stats
+   SELECT * FROM tempdb.sys.dm_db_xtp_object_stats
+   
+   SELECT * FROM tempdb.sys.dm_db_xtp_transactions
+   SELECT * FROM tempdb.sys.dm_tran_session_transactions
+   SELECT * FROM tempdb.sys.dm_tran_database_transactions
+   SELECT * FROM tempdb.sys.dm_tran_active_transactions
    ```
 
 ## Cause and resolution

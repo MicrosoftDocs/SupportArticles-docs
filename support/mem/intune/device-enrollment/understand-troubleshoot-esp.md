@@ -8,6 +8,7 @@ ms.date: 12/23/2021
 search.appverid: MET150
 ms.custom: sap:Windows enrollment
 ---
+
 # Troubleshooting the Enrollment Status Page
 
 This article gives guidance for troubleshooting the Enrollment Status Page (ESP). The ESP can be used as part of any Windows Autopilot provisioning scenario. It can also be used separately from Windows Autopilot as part of the default out-of-box experience (OOBE) for Azure Active Directory (Azure AD) Join. For more information about how to configure the ESP, see [Set up the Enrollment Status Page](/mem/intune/enrollment/windows-enrollment-status).
@@ -111,6 +112,8 @@ value="2800"
 The following sample event indicates which URI triggers a coalesced reboot:
 
 `"[ETW [2022-08-02T13:28:10.3350735Z] [Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider] [Informational] - The following URI has triggered a reboot: (./Device/Vendor/MSFT/Policy/Config/Update/ManagePreviewBuilds)"`
+
+For more information about how to identify unexpected reboots during the OOBE flow, see [Troubleshooting unexpected reboots](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-troubleshooting-unexpected-reboots-during-new-pc/ba-p/3896960).
 
 ## Check the registry for app deployment failures during ESP
 
@@ -243,9 +246,9 @@ The ESP lists the installation status for all enrollment methods, including:
 - when any new user logs into the device that has ESP policy applied for the first time
 - when the **Only show page to devices provisioned by out-of-box experience (OOBE)** setting is on and the policy is set, only the first user who signs into the device gets the ESP
 
-### How can I disable the ESP if it has been configured on the device?
+### How can I disable the user ESP portion of the Enrollment Status Page (ESP) if an ESP has been configured on the device?
 
-ESP policy is set on a device at the time of enrollment. To disable the ESP, you must disable the user Enrollment Status Page section. To disable the section, create custom OMA-URI settings by using the following configurations:
+ESP policy is set on a device at the time of enrollment. To disable the user ESP portion of the Enrollment Status Page (ESP), create a custom OMA-URI setting by using the following configuration:
 
 - Disable user Enrollment Status Page:
 
@@ -254,3 +257,4 @@ ESP policy is set on a device at the time of enrollment. To disable the ESP, you
   OMA-URI:  ./Vendor/MSFT/DMClient/Provider/MS DM Server/FirstSyncStatus/SkipUserStatusPage  
   Data type:  Boolean  
   Value:  True  
+

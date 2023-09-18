@@ -1,7 +1,7 @@
 ---
 title: Available updates for RDS in Windows Server 2012 R2
 description: Describes available hotfixes and updates for issues that can occur in Remote Desktop Services for Microsoft Windows Server 2012 R2 environments.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -138,7 +138,7 @@ The hotfixes and updates are arranged by component areas within Remote Desktop S
 
 - [3091411](https://support.microsoft.com/help/3091411)  User connection fails when many connections are made to Windows Server 2012 R2-based RD Connection Broker
 
-- [Communication issues occur when Remote Desktop Connection Broker connects to SQL Server in Windows Server 2012 R2](/troubleshoot/windows-server/remote/communication-issues)
+- [Communication issues occur when Remote Desktop Connection Broker connects to SQL Server in Windows Server 2012 R2](communication-issues.md)
 
 ## Remote Desktop Gateway
 

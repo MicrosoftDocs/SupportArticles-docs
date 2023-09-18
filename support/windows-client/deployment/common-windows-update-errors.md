@@ -1,7 +1,7 @@
 ---
 title: Common Windows Update errors
 description: Describes some common issues you might experience with Windows Update and steps to resolve them.
-ms.date: 04/28/2023
+ms.date: 05/31/2023
 ms.prod: windows-client
 author: aczechowski
 ms.author: aaroncz
@@ -39,7 +39,7 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-| ERROR_FAIL_REBOOT_REQUIRED | The requested operation failed. Restart the system to roll back changes made. | Ensure that you don't have any policies that control the start behavior for the Windows Module Installer. This service should be managed by the operating system. |
+| ERROR_FAIL_REBOOT_REQUIRED | The requested operation failed. Restart the system to roll back changes made. | Ensure that you don't have any policies that control the start behavior of the Windows Installer service. This service should be managed by the operating system. The default **Startup type** of the Windows Installer service is **Manual**.|
 
 ## 0x80200053
 
@@ -99,7 +99,7 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-| WU_E_SETUP_SKIP_UPDATE | An update to the Windows Update Agent was skipped due to a directive in the Wuident.cab file. | You might encounter this error when WSUS isn't sending the self-update to the clients.<br><br>For more information to resolve the issue, review [KB920659](/troubleshoot/windows-server/deployment/wsus-selfupdate-not-send-automatic-updates). |
+| WU_E_SETUP_SKIP_UPDATE | An update to the Windows Update Agent was skipped due to a directive in the Wuident.cab file. | You might encounter this error when WSUS isn't sending the self-update to the clients.<br><br>For more information to resolve the issue, review [KB920659](../../windows-server/deployment/wsus-selfupdate-not-send-automatic-updates.md). |
 
 ## 0x80244007
 
@@ -195,7 +195,7 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-| WININET_E_TIMEOUT; The operation timed out | Unable to scan for updates due to a connectivity issue to Windows Update, Configuration Manager, or WSUS. | This error generally means that the Windows Update Agent was unable to connect to the update servers or your own source, such as WSUS, Configuration Manager, or Microsoft Endpoint Manager. <br> Check with your network team to ensure that the device can reach the update sources. For more info, see [Troubleshoot software update scan failures in Configuration Manager](/troubleshoot/mem/configmgr/troubleshoot-software-update-scan-failures). <br> If you're using the public Microsoft update servers, check that your device can access the following Windows Update endpoints: <br> `http://windowsupdate.microsoft.com` <br> `https://*.windowsupdate.microsoft.com` <br> `https://update.microsoft.com` <br> `https://*.update.microsoft.com` <br> `https://windowsupdate.com` <br> `https://*.windowsupdate.com` <br> `https://download.windowsupdate.com` <br> `https://*.download.windowsupdate.com` <br> `https://download.microsoft.com` <br> `https://*.download.windowsupdate.com` <br> `https://wustat.windows.com` <br> `https://*.wustat.windows.com` <br> `https://ntservicepack.microsoft.com` |
+| WININET_E_TIMEOUT; The operation timed out | Unable to scan for updates due to a connectivity issue to Windows Update, Configuration Manager, or WSUS. | This error generally means that the Windows Update Agent was unable to connect to the update servers or your own source, such as WSUS, Configuration Manager, or Microsoft Intune. <br> Check with your network team to ensure that the device can reach the update sources. For more info, see [Troubleshoot software update scan failures in Configuration Manager](/troubleshoot/mem/configmgr/troubleshoot-software-update-scan-failures). <br> If you're using the public Microsoft update servers, check that your device can access the following Windows Update endpoints: <br> `http://windowsupdate.microsoft.com` <br> `https://*.windowsupdate.microsoft.com` <br> `https://update.microsoft.com` <br> `https://*.update.microsoft.com` <br> `https://windowsupdate.com` <br> `https://*.windowsupdate.com` <br> `https://download.windowsupdate.com` <br> `https://*.download.windowsupdate.com` <br> `https://download.microsoft.com` <br> `https://*.download.windowsupdate.com` <br> `https://wustat.windows.com` <br> `https://*.wustat.windows.com` <br> `https://ntservicepack.microsoft.com` |
 
 ## 0x80240022
 
@@ -207,7 +207,7 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-| WU_E_PT_HTTP_STATUS_PROXY_AUTH_REQ; Same as HTTP status 407 - proxy authentication is required. | Unable to authenticate through a proxy server. | Either the Winhttp proxy or WinInet proxy settings aren't configured correctly. This error generally means that the Windows Update Agent was unable to connect to the update servers or your own update source, such as WSUS, Configuration Manager, or Microsoft Endpoint Manager, due to a proxy error. <br> Verify the proxy settings on the client. The Windows Update Agent uses WinHTTP to scan for available updates. When there's a proxy server between the client and the update source, the proxy settings must be configured correctly on the clients to enable them to communicate by using the source's FQDN. <br> Check with your network and proxy teams to confirm that the device can the update source without the proxy requiring user authentication. |
+| WU_E_PT_HTTP_STATUS_PROXY_AUTH_REQ; Same as HTTP status 407 - proxy authentication is required. | Unable to authenticate through a proxy server. | Either the Winhttp proxy or WinInet proxy settings aren't configured correctly. This error generally means that the Windows Update Agent was unable to connect to the update servers or your own update source, such as WSUS, Configuration Manager, or Microsoft Intune, due to a proxy error. <br> Verify the proxy settings on the client. The Windows Update Agent uses WinHTTP to scan for available updates. When there's a proxy server between the client and the update source, the proxy settings must be configured correctly on the clients to enable them to communicate by using the source's FQDN. <br> Check with your network and proxy teams to confirm that the device can the update source without the proxy requiring user authentication. |
 
 ## 0x80244022
 
@@ -241,5 +241,4 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 
 ## Data collection
 
-If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).
-
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

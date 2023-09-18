@@ -2,14 +2,12 @@
 title: Certificates are missing after you update a device to a newer version of Windows 10
 description: Works around an issue in which a device loses its system and user certificates after an update.
 ms.date: 04/28/2023
-author: v-tappelgate
-ms.author: v-tappelgate
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, v-tappelgate
 ms.custom: sap:deployment, csstroubleshoot
 ms.technology: windows-client-deployment
 keywords: managed devices, certificates, WSUS, MECM, Windows Update
@@ -68,7 +66,7 @@ To add the latest LCU to the update source, follow these steps:
    > [!NOTE]  
    >
    > - If you're using WSUS to manage updates, see [WSUS and the Catalog Site](/windows-server/administration/windows-server-update-services/manage/wsus-and-the-catalog-site#the-microsoft-update-catalog-site). This article describes how to use WSUS to download updates from the Microsoft Update Catalog.
-   > - If you are using Microsoft Endpoint Manager to manage updates, see [Software update management documentation](/mem/configmgr/sum/).
+   > - If you are using Microsoft Intune to manage updates, see [Software update management documentation](/mem/configmgr/sum/).
 
 4. To add the LCU to the image, open an administrative Command Prompt window, and then run the following command:
 
@@ -97,7 +95,7 @@ To add the latest LCU to the update source, follow these steps:
 7. (Optional) Use the updated file to re-create the image. To do this, run the following command:
 
    ```console
-   Oscdimg –n –d –m “<Source>” “<Target.iso>”
+   Oscdimg –n –d –m "<Source>" "<Target.iso>"
    ```
 
    > [!NOTE]  
@@ -105,7 +103,7 @@ To add the latest LCU to the update source, follow these steps:
 
 ## Data collection
 
-If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).
 
 ## Reference
 

@@ -1,0 +1,25 @@
+items:
+- name: Answers questions about the MSDT
+  href: answers-questions-msdt.md
+- name: Connectivity Diagnostics Collector
+  href: connectivity-diagnostics-collector.md
+- name: Detours or similar techniques cause issues
+  href: issue-detours-similar-techniques.md
+- name: End of support for SQL Server 2008
+  href: end-support-sql-server-2008.md
+- name: Information about MATS and SDP
+  href: information-mats-sdp.md
+- name: Issues when upgrading to SQL Server 2022
+  href: issues-upgrading-sql-server-2022.md
+- name: RS Diagnostics Collector collects information
+  href: rs-diagnostics-collector-information.md
+- name: Setup data collection diagnostic tool
+  href: setup-data-collection-diagnostic-tool.md
+- name: SQL Base Diagnostics Collector
+  href: sql-base-diagnostics-collector.md
+- name: SQL Server in Windows operating system
+  href: use-sql-server-in-windows.md
+- name: Support policy for hardware virtualization product
+  href: support-policy-hardware-virtualization-product.md
+- name: Support policy for SQL Server
+  href: support-policy-sql-server.md

@@ -3,7 +3,6 @@ title: Words are not returned by an English word breaker
 description: This article provides workarounds for the problem where a search by using an English word breaker does not return words that have leading decimal points in SQL Server 2017 on Windows, SQL Server 2016, 2014, and 2012.
 ms.date: 09/09/2020
 ms.custom: sap:Administration and Management
-ms.prod: sql
 ---
 # Words that have leading decimal points are not returned by an English word breaker in SQL Server
 

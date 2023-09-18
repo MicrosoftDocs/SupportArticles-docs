@@ -1,7 +1,7 @@
 ---
 title: How to establish a striped volume (RAID 0) in Windows Server 2003
 description: Describes the steps to establish a striped volume (RAID 0) in Windows Server 2003.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

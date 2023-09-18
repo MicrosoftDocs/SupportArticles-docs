@@ -3,7 +3,7 @@ title: UI flow outputs not working
 description: Troubleshooting the issue that output isn't successfully captured from the field that was selected.
 ms.reviewer: abmehr
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: power-automate-desktop-flows
 ---
 # UI flow outputs not working

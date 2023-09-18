@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting BitLocker with the Intune encryption report
-description: How to troubleshoot encryption failures using the Intune encryption report from the Microsoft Endpoint Manager admin center.
+description: How to troubleshoot encryption failures using the Intune encryption report from the Microsoft Intune admin center.
 ms.reviewer: kaushika, luker
 ms.date: 12/01/2021
 search.appverid: MET150
@@ -43,7 +43,7 @@ BitLocker encryption failures on Intune enrolled Windows 10 devices can fall int
 - The Intune BitLocker policy is misconfigured, causing Group Policy Object (GPO) conflicts.
 - The device is already encrypted, and the encryption method doesn't match policy settings.
 
-To identify the category of a device encryption failure, sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices** > **Monitor** > **Encryption report**. The report will show a list of enrolled devices and show if a device is encrypted or ready to be encrypted, and if it has a TPM chip.
+To identify the category of a device encryption failure, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices** > **Monitor** > **Encryption report**. The report will show a list of enrolled devices and show if a device is encrypted or ready to be encrypted, and if it has a TPM chip.
 
 :::image type="content" source="media\troubleshoot-bitlocker-admin-center\encryption-report.png" alt-text="Intune encryption report example.":::
 
@@ -100,7 +100,7 @@ There are several reasons that a device targeted with silent encryption is ready
 
 **Encryption status explained:**
 
-One explanation is that WinRE is not enabled on the device, which is a prerequisite. You can validate the status of WinRE on the device using the reagentc.exe/info command as an administrator. 
+One explanation is that WinRE is not enabled on the device, which is a prerequisite. You can validate the status of WinRE on the device using the reagentc.exe/info command as an administrator.
 
 :::image type="content" source="media\troubleshoot-bitlocker-admin-center\reagentc-output.png" alt-text="Command Prompt output of reagentc.exe/info.":::
 
@@ -128,7 +128,7 @@ In this common scenario, if the Intune policy is configured for XTS-AES 128-bit 
 
 **Encryption status explained:**
 
-This happens when a device that has already been encrypted using another method&mdash;either manually by the user, with Microsoft BitLocker Administration and Monitoring (MBAM), or by the Microsoft Endpoint Configuration Manager before enrollment.
+This happens when a device that has already been encrypted using another method&mdash;either manually by the user, with Microsoft BitLocker Administration and Monitoring (MBAM), or by the Microsoft Configuration Manager before enrollment.
 
 To correct this, decrypt the device manually or with Windows PowerShell. Then let the Intune BitLocker policy encrypt the device again the next time the policy reaches it.
 

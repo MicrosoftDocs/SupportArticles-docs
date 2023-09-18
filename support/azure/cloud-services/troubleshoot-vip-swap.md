@@ -4,9 +4,7 @@ description: Troubleshoot cloud service VIP swap failures (VipSwapNotAllowedAsRo
 ms.service: cloud-services
 ms.subservice: troubleshoot-deployment-classic
 ms.date: 09/26/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
-ms.reviewer: chiragpa
+ms.reviewer: chiragpa, v-leedennis
 articleID: 85d6aaad-fed9-48c4-88e2-8d93e8eecedd
 ---
 # Troubleshoot Azure Cloud Service (classic) cloud service VIP swap failures
@@ -65,7 +63,7 @@ An attempt to add, change, or remove a reserved IP address was made during an up
 
 ### Solution: Check for static IP address usage
 
-Determine whether the service is using a static IP address for both staging and production environments. Make sure the cloud service’s configuration blade shows the correct value for the deployment's reserved IP addresses. If the reserved IP addresses are incorrect, update the configuration file with the correct values.
+Determine whether the service is using a static IP address for both staging and production environments. Make sure the cloud service's configuration blade shows the correct value for the deployment's reserved IP addresses. If the reserved IP addresses are incorrect, update the configuration file with the correct values.
 
 ## Cause 4: A service is in self-healing state
 

@@ -4,7 +4,6 @@ description: This article describes how to disable ad hoc queries that use the O
 ms.date: 10/01/2022
 ms.custom: sap:Administration and Management
 ms.reviewer: ericbu
-ms.prod: sql
 ---
 
 # Configuring permissions to access remote data from an OLEDB datasource in SQL Server

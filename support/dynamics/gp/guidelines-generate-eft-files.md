@@ -37,20 +37,20 @@ Follow these guidelines to generate EFT files or EFT prenote files:
 
 - **OPTION 2: EFT Payment does not pull for vendor**
 
-    Certain fields between the checkbook and vendor (or customer) must match in order for the EFT file or EFT prenote file to generate. These fields include the Currency ID (if you have multicurrency installed), Country Code, and Bank Country/Region. These fields aren't required, but if they're filled in on either side, the other side must match. To verify, use one the following steps:
+    Certain fields between the checkbook and vendor (or customer) must match in order for the EFT file or EFT prenote file to generate. These fields include the Currency ID (if you have multicurrency installed), Country/Region Code, and Bank Country/Region. These fields aren't required, but if they're filled in on either side, the other side must match. To verify, use one the following steps:
 
     1. On the **Cards** menu, point to **Financial**, and then select **Checkbook**.
     2. In the Checkbook Maintenance window, select the appropriate checkbook ID in the **Checkbook ID** box.
     3. Verify if a Currency ID is filled in or not on the Checkbook Maintenance window. Take note of the Currency ID field.
     4. Select **EFT Bank**.
-    5. In the Checkbook EFT Bank Maintenance window, take note of what the Bank Country/Region field is set to, and if a Country Code is filled in.
+    5. In the Checkbook EFT Bank Maintenance window, take note of what the Bank Country/Region field is set to, and if a Country/Region Code is filled in.
     6. Select **OK** to close the window, and then select **Save**.
     7. Now verify that these fields have the same values on the Vendor or Customer. Follow the method below depending on whether you're trying to generate an EFT file for Payables or Receivables:
         - Payables: On the **Cards** menu, select **Purchasing** and select **Vendor**.
         - Receivables: On the **Cards** menu, select **Sales** and select **Customer**.
     8. In the Vendor Maintenance (or Customer Maintenance) window, select the appropriate Vendor ID (or Customer ID).
     9. Select the **Address** button and select the appropriate Address ID used for EFT.
-    10. Verify the value in the Country Code field matches what you found on the checkbook above. (It isn't a required field, so it must match or be blank on both sides.)
+    10. Verify the value in the Country/Region Code field matches what you found on the checkbook above. (It isn't a required field, so it must match or be blank on both sides.)
     11. Select **EFT Bank**.
     12. In the Vendor (or Customer) EFT Bank Maintenance window, verify what value is in the Bank Country/Region field and the Currency ID field to make sure these values match what you found on the checkbook. Change any values as needed.
     13. Select **OK** to close the Vendor (or Customer) EFT Bank Maintenance window. Select **Save** to close the Vendor (or Customer) Address Maintenance window.
@@ -146,7 +146,7 @@ Follow these guidelines to generate EFT files or EFT prenote files:
 
     If you recently upgraded to Microsoft Dynamics GP 10.0 or GP 2010, you may receive the following error message:
 
-    > The bank/country assigned to the vendors remit to address is missing or inactive. Assign the bank/country region to the address or activate the format.
+    > The bank country/region assigned to the vendor's remit-to address is missing or inactive. Assign the bank country/region to the address or activate the format.
 
     If you receive this error message, check the PM20000 (PM_Transaction_Open) table to make sure that the vendor addresses in the VADCDTRO column are the same addresses for the vendors in the earlier version. The VADCDTRO column in the PM20000 table must match the VADCDTRO column in the PM00200 (PM_Vendor_Master) table for each vendor. To determine which vendor generates the error message, use one of the following methods.
 

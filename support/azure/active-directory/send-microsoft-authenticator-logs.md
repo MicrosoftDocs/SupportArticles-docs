@@ -1,10 +1,8 @@
 ---
 title: Send Microsoft Authenticator logs and get an incident ID for customer support
 description: Follow these steps to send Microsoft Authenticator logs and the incident ID to customer support.
-ms.date: 9/1/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
-ms.reviewer: jarrettr
+ms.date: 09/01/2022
+ms.reviewer: jarrettr, v-leedennis
 ms.service: active-directory
 ms.subservice: authentication
 keywords:

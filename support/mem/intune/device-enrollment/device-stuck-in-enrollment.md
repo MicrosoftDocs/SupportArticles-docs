@@ -39,7 +39,7 @@ To fix the problem, complete the procedures in this section:
 
 ### Determine if there's something wrong with the VPP token
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS** > **iOS enrollment** > **Enrollment program tokens** > token name > **Profiles** > profile name > **Manage** > **Properties**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS** > **iOS enrollment** > **Enrollment program tokens** > token name > **Profiles** > profile name > **Manage** > **Properties**.
 2. Review the properties to see if any errors similar to the following appear:
     - This token has expired.
     - This token is out of Company Portal licenses.
@@ -50,7 +50,7 @@ To fix the problem, complete the procedures in this section:
 
 ### Identify which devices are blocked by the VPP token
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS**k > **iOS enrollment** > **Enrollment program tokens** > token name > **Devices**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS**k > **iOS enrollment** > **Enrollment program tokens** > token name > **Devices**.
 2. Filter the **Profile status** column by **Blocked**.
 3. Make a note of the serial numbers for all the devices that are **Blocked**.
 
@@ -58,7 +58,7 @@ To fix the problem, complete the procedures in this section:
 
 After you've fixed the issues with the VPP token, you must wipe the devices that are blocked.
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **All devices** > **Columns** > **Serial number** > **Apply**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **All devices** > **Columns** > **Serial number** > **Apply**.
 2. For each blocked device, choose it in the **All devices** list and then choose **Wipe** > **Yes**.
 
 ### Tell the users to restart the enrollment process

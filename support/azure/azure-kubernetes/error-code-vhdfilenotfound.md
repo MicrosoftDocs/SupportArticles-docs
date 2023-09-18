@@ -1,11 +1,9 @@
 ---
 title: Troubleshoot the ERR_VHD_FILE_NOT_FOUND error code
 description: Learn how to troubleshoot the ERR_VHD_FILE_NOT_FOUND error (124) when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
-ms.date: 5/3/2023
-author: DennisLee-DennisLee
-ms.author: v-dele
+ms.date: 05/03/2023
 editor: v-jsitser
-ms.reviewer: axelg, chiragpa
+ms.reviewer: axelg, chiragpa, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-create-operations
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the ERR_VHD_FILE_NOT_FOUND error code (or error code OutboundConnFailVMExtensionError, error number 50 - or error code ERR_K8S_API_SERVER_CONN_FAIL, error number 51) so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.

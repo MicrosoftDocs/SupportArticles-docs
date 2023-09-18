@@ -32,23 +32,6 @@
 
 - name: Pipelines
   items:
-  - name: Access denied when you connect to Source Control
-    href: access-denied-error-when-connect-source-control.md
-  - name: Azure Web App tasks and deployments
-    items:
-    - name: Troubleshoot Azure Web App tasks and deployments
-      href: troubleshoot-azure-web-apps-tasks-deployments.md
-    - name: Azure Web App and services related issues
-      href: azure-web-app-services-related-issues.md
-    - name: Issues with the service connection in Azure Web App tasks
-      href: issues-service-connection-task.md
-    - name: Resource doesn't exist error with services deployment
-      href: resource-not-exist-error-services-deployment.md
-    - name: Failure scenarios related to Azure Web App tasks
-      href: failure-scenarios-related-azure-web-app-tasks.md
-  - name: Release Management component doesn't work
-    href: other-release-management-component-no-work.md
-
   - name: Azure Resource Manager service connection
     items: 
     - name: Azure RM service connection and trace tools
@@ -63,6 +46,22 @@
       href: azure-rm-service-connection-not-listed-for-a-task.md
     - name: Fail to delete existing Azure RM service connection
       href: fail-to-delete-existing-service-connection.md
+  - name: Azure Web App tasks and deployments
+    items:
+    - name: Troubleshoot Azure Web App tasks and deployments
+      href: troubleshoot-azure-web-apps-tasks-deployments.md
+    - name: Azure Web App and services related issues
+      href: azure-web-app-services-related-issues.md
+    - name: Issues with the service connection in Azure Web App tasks
+      href: issues-service-connection-task.md
+    - name: Resource doesn't exist error with services deployment
+      href: resource-not-exist-error-services-deployment.md
+    - name: Failure scenarios related to Azure Web App tasks
+      href: failure-scenarios-related-azure-web-app-tasks.md
+  - name: Access denied when you connect to Source Control
+    href: access-denied-error-when-connect-source-control.md
+  - name: Release Management component doesn't work
+    href: other-release-management-component-no-work.md
 
 - name: Repos
   items:

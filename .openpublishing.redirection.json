@@ -41,6 +41,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/dynamics-365/commerce/commerce-headquarters-operations/summary-taxes-custom-modules-10.0.27.md",
+      "redirect_url": "/troubleshoot/dynamics-365/commerce/commerce-headquarters-operations/summary-taxes-custom-modules-10-0-27",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "support/power-platform/ai-builder/aibuilder-form-processing-is-not-extracting-tables-that-span-across-multiple-pages.md",
       "redirect_url": "/ai-builder/create-form-processing-model#multipage-tables",
       "redirect_document_id": false
@@ -763,11 +768,6 @@
     {
       "source_path": "support/azure/virtual-machines/index.md",
       "redirect_url": "/support/azure/virtual-machines/welcome-virtual-machines",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/azure/general/index.md",
-      "redirect_url": "/support/azure/virtual-machines/welcome-general",
       "redirect_document_id": false
     },
     {
@@ -2441,11 +2441,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "support/azure/azure-kubernetes/small-file-handling-high-latency.md",
-      "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
-      "redirect_document_id": true
-    },
-    {
       "source_path": "support/azure/general/web-apps-performance-faqs.md",
       "redirect_url": "/troubleshoot/azure/app-service/web-apps-performance-faqs",
       "redirect_document_id": true
@@ -2579,11 +2574,6 @@
       "source_path": "support/azure/log-analytics/workspace-data-export-faq.yml",
       "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/workspace-data-export-faq",
       "redirect_document_id": true
-    },
-    {
-      "source_path": "support/azure/azure-kubernetes/troubleshoot-upgrade-errors.md",
-      "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
-      "redirect_document_id": false
     },
     {
       "source_path": "support/azure/azure-monitor/app-insights/troubleshoot-availability.md",
@@ -5746,12 +5736,22 @@
       "source_path": "support/windows-server/identity/password-change-conflict-resolution-function.md",
       "redirect_url": "/troubleshoot/windows-server/identity/password-change-processing-conflict-resolution-function",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/system-management-components/high-cpu-usage-wmiprvse-process-regular-intervals.md",
+      "redirect_url": "/troubleshoot/windows-server/system-management-components/troubleshoot-wmi-high-cpu-issues",
+      "redirect_document_id": true
     }, 
     {
       "source_path": "support/sql/general/servicing-models-sql-server.md",
       "redirect_url": "/troubleshoot/sql/releases/servicing-models-sql-server",
       "redirect_document_id": true
     },
+    {
+      "source_path": "support/azure/azure-kubernetes/troubleshoot-common-mariner-aks.md",
+      "redirect_url": "/troubleshoot/azure/azure-kubernetes/troubleshoot-common-azure-linux-aks",
+      "redirect_document_id": true
+    }, 
     {
       "source_path": "support/azure/virtual-machines/connect-linux-vm-sshconnection.md",
       "redirect_url": "/troubleshoot/azure/virtual-machines/linux-vm-sshconnectionissue-perms",
@@ -5761,6 +5761,171 @@
       "source_path": "support/azure/app-service/web-apps-configuration-and-management-faqs.md",
       "redirect_url": "/troubleshoot/azure/app-service/create-delete-resources-faq",
       "redirect_document_id": true
+    }, 
+    {
+      "source_path": "support/sql/linux/release-history-2017.md",
+      "redirect_url": "/troubleshoot/sql/releases/linux/release-history-2017",
+      "redirect_document_id": true
+    }, 
+    {
+      "source_path": "support/sql/linux/release-history-2019.md",
+      "redirect_url": "/troubleshoot/sql/releases/linux/release-history-2019",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/shell-experience/disabling-autoplay-cause-hotstart-buttons-not-working.md",
+      "redirect_url": "/troubleshoot/windows-client/shell-experience/issues-autoplay-disabled-group-policy",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/linux/release-history-2022.md",
+      "redirect_url": "/troubleshoot/sql/releases/linux/release-history-2022",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/virtual-machine-scale-sets/index.md",
+      "redirect_url": "/troubleshoot/azure/virtual-machine-scale-sets/welcome-virtual-machine-scale-sets",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/azure-kubernetes/index.md",
+      "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/log-analytics/index.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/general/index.md",
+      "redirect_url": "/troubleshoot/azure/general/welcome-general",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/azure-monitor/app-insights/index.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/azure-monitor/log-analytics/index.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/synapse-analytics/index.md",
+      "redirect_url": "/troubleshoot/azure/synapse-analytics/welcome-synapse-analytics",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/azure-kubernetes/cluster-provisioning-status-changed-ready-failed.md",
+      "redirect_url": "/troubleshoot/azure/azure-kubernetes/cluster-node-virtual-machine-failed-state",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/networking/windows-server-2012-directaccess-hotfixes.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/windows-server-2012-directaccess-hotfixes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/remote/support-policy-windows-virtual-desktop-windows-10-enterprise-multi-session.md",
+      "redirect_url": "/azure/virtual-desktop/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2.md",
+      "redirect_url": "/troubleshoot/windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tss",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/windows-troubleshooters/gather-information-using-tssv2-ad-replication.md",
+      "redirect_url": "/troubleshoot/windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/windows-troubleshooters/gather-information-using-tssv2-deployment.md",
+      "redirect_url": "/troubleshoot/windows-client/windows-troubleshooters/gather-information-using-tss-deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/windows-troubleshooters/gather-information-using-tssv2-group-policy.md",
+      "redirect_url": "/troubleshoot/windows-client/windows-troubleshooters/gather-information-using-tss-group-policy",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/windows-troubleshooters/gather-information-using-tssv2-user-experience.md",
+      "redirect_url": "/troubleshoot/windows-client/windows-troubleshooters/gather-information-using-tss-user-experience",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-engine/performance/performance-issues-using-columstore-indexes-large-pages.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/batch-mode-with-large-page-memory-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-engine/backup-restore/nonrecoverable-io-error-backup-url.md",
+      "redirect_url": "/troubleshoot/sql/welcome-sql-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/database-engine/install/windows/sql-server-upgrade-failed-error-15173-upgrade-script.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/sql-server-upgrade-failed-error-15173",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-engine/install/windows/sql-server-upgrade-failed-error-1712-upgrade-script.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/sql-server-upgrade-failed-error-1712",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-engine/install/windows/sql-server-upgrade-failed-error-17182-upgrade-script.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/sql-server-upgrade-failed-error-17182",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-engine/install/windows/sql-server-upgrade-failed-error-4860-upgrade-script.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/sql-server-upgrade-failed-error-4860",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-engine/install/windows/upgrade-fails-error-5133.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/sql-server-upgrade-failed-error-5133",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-engine/install/windows/upgrade-fails-error-code-2714.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/sql-server-upgrade-failed-error-2714",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-engine/install/windows/upgrade-fails-error-code-574.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/sql-server-upgrade-failed-error-574",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/ldap-kerberos-server-reset-tcp-sessions.md",
+      "redirect_url": "/troubleshoot/windows-server/identity/ldap-kerberos-server-not-respond-udp-request-reset-tcp-sessions",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/azure-functions/index.md",
+      "redirect_url": "/troubleshoot/azure/azure-functions/welcome-azure-functions",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/azure-kubernetes/small-file-handling-high-latency.md",
+      "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/networking/client-side-caching-command-line-options-v1dot1.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/client-side-caching-command-line-options-v1dot1",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/azure-kubernetes/troubleshoot-upgrade-errors.md",
+      "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
+      "redirect_document_id": false
     }
 ]
 }

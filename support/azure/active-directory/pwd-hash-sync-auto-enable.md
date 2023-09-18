@@ -5,6 +5,7 @@ ms.date: 05/28/2020
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: enterprise-users
+ms.custom: has-azure-ad-ps-ref
 ---
 # Password Hash Sync is automatically enabled during Azure AD Connect Pass-through Authentication
 

@@ -2,9 +2,7 @@
 title: Client IP address can't access the API server
 description: Troubleshoot issues caused when the client IP address can't access the API server on an Azure Kubernetes Service (AKS) cluster.
 ms.date: 12/06/2021
-author: DennisLee-DennisLee
-ms.author: v-dele
-ms.reviewer: "rissing,chiragpa"
+ms.reviewer: rissing, chiragpa, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: cannot-connect-to-cluster-through-api-server
 #Customer intent: As an Azure Kubernetes user, I want the AKS API server to allow access to my client IP address so that I can successfully connect to my AKS cluster.

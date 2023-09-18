@@ -1,11 +1,9 @@
 ---
 title: Troubleshoot extension certificate issues on a Windows VM in Azure
 description: Learn how to troubleshoot issues that involve certificates on a Windows virtual machine (VM) that uses an extension in Azure.
-ms.date: 5/5/2023
-author: DennisLee-DennisLee
-ms.author: v-dele
+ms.date: 05/05/2023
 editor: v-jsitser
-ms.reviewer: kegregoi, axelg, scotro
+ms.reviewer: kegregoi, axelg, scotro, v-leedennis
 ms.service: virtual-machines
 ms.subservice: vm-extensions-not-operating
 ---
@@ -110,7 +108,7 @@ Follow these steps to update to a certificate that can be used successfully toge
      Update-AzureRmVM -ResourceGroupName $rg -VM $vm  
      ```
 
-   - Perform a "reapply" operation on your VM by following the instructions in the "Resolution" section of the [Virtual machine stuck in a failed state](/troubleshoot/azure/virtual-machines/vm-stuck-in-failed-state) article.
+   - Perform a "reapply" operation on your VM by following the instructions in the "Resolution" section of the [Virtual machine stuck in a failed state](vm-stuck-in-failed-state.md) article.
 
 1. Retry the extension operation.
 

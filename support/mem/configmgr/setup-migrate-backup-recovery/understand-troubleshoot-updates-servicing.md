@@ -122,7 +122,7 @@ The file displacement manager (FDM) moves the `.CMU` file from the service conne
 
 If you haven't configured your hierarchy to have a Microsoft Intune subscription, the following entry is logged in Hman.log:
 
-> Validate CMU file C:\Program Files\Microsoft Configuration Manager\inboxes\hman.box\CFD\e8e74b72-504a-4202-9167-8749c223d2a5.CMU with no intune subscription.
+> Validate CMU file C:\Program Files\Microsoft Configuration Manager\inboxes\hman.box\CFD\e8e74b72-504a-4202-9167-8749c223d2a5.CMU with no Intune subscription.
 
 If you've configured a subscription, the package is processed and no log entry is created.
 

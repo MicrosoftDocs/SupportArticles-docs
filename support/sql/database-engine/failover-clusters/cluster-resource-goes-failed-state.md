@@ -3,8 +3,8 @@ title: Failed state and doesn't come online
 description: This article provides a resolution for the problem that occurs if resource-specific registry keys are missing.
 ms.date: 10/30/2020
 ms.custom: sap:Failover Clusters
-ms.prod: sql
 ---
+
 # A SQL Server cluster resource goes to a "failed" state when you try to bring the resource online in SQL Server
 
 This article helps you resolve the problem that occurs if resource-specific registry keys are missing.
@@ -32,7 +32,7 @@ When you try to bring a SQL Server cluster resource online for a virtual instanc
     User: N/A  
     Computer: \<Computer Name>
     Description:  
-    Cluster resource 'SQL Server (\<SQL Server instance name>)' in Resource Group '\<Cluster group name>'  failed.
+    Cluster resource 'SQL Server (\<SQL Server instance name>)' in Resource Group '\<Cluster group name>' failed.
 
   - Error message 2
 
@@ -99,10 +99,10 @@ To resolve this problem, you must manually re-create the resource-specific regis
         Value Type: REG_SZ  
         Value Data: \<Name of the virtual SQL server>
 
-4. Quit Registry Editor.After you create the resource-specific registry keys, you can bring the SQL Server cluster resource online successfully.
+4. Quit Registry Editor. After you create the resource-specific registry keys, you can bring the SQL Server cluster resource online successfully.
 
    If you notice that a SQL Server Agent cluster resource can't be brought online, you must create the same set of resource-specific keys that correspond to the SQL Server Agent cluster resource.
 
 ## More information
 
-[How to manually re-create the resource-specific registry keys for SQL Server cluster resources](https://support.microsoft.com/help/810056)
+[How to manually re-create the resource-specific registry keys for SQL Server cluster resources](manually-re-create-resource-specific-registry-keys.md)

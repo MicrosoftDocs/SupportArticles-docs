@@ -1,7 +1,7 @@
 ---
 title: Give users access to Group Policy Objects
 description: Describes how to give users permission to access the Group Policy object if the Access Control List (ACL) has been modified so that Read and Apply permissions are restricted.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

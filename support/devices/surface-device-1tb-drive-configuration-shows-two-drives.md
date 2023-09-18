@@ -1,15 +1,13 @@
 ---
 title: Surface Device that has a 1-TB drive configuration shows two drives
 description: Helps resolve the issue in which a Surface device that has a 1-TB drive configuration shows two drives.
-ms.date: 05/12/2023
-author: v-lianna
-ms.author: v-lianna
+ms.date: 05/31/2023
 manager: dcscontentpm
 audience: itpro
-ms.topic: how-to
+ms.topic: troubleshooting
 ms.prod: surface
 localization_priority: medium
-ms.reviewer: delhan
+ms.reviewer: delhan, v-lianna
 ms.custom: csstroubleshoot
 ms.technology: windows
 ---

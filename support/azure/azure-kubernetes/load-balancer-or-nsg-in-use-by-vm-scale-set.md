@@ -1,11 +1,9 @@
 ---
 title: Troubleshoot the LoadBalancerInUseByVirtualMachineScaleSet or NetworkSecurityGroupInUseByVirtualMachineScaleSet error code
 description: Learn how to troubleshoot the LoadBalancerInUseByVirtualMachineScaleSet or NetworkSecurityGroupInUseByVirtualMachineScaleSet error when you try to delete an Azure Kubernetes Service (AKS) cluster.
-ms.date: 4/1/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
+ms.date: 04/01/2022
 editor: v-jsitser
-ms.reviewer: rissing, chiragpa, edneto
+ms.reviewer: rissing, chiragpa, edneto, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-delete-operations
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the LoadBalancerInUseByVirtualMachineScaleSet or NetworkSecurityGroupInUseByVirtualMachineScaleSet error code so that I can successfully delete an Azure Kubernetes Service (AKS) cluster.

@@ -2,9 +2,7 @@
 title: Issues in Configuration Manager after installing June 2022 Windows security updates
 description: This article provides solutions for the issues that may occur in Configuration Manager after you install the June 2022 security updates for Windows.
 ms.date: 09/07/2022
-ms.reviewer: kaushika, payur
-author: AmandaAZ
-ms.author: v-weizhu
+ms.reviewer: kaushika, payur, v-weizhu
 ---
 # Issues in Configuration Manager after installing June 2022 security updates for Windows
 

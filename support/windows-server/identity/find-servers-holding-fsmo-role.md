@@ -1,7 +1,7 @@
 ---
 title: Find servers that hold FSMO roles
 description: Describe how to find the servers that hold the Flexible Single Master Operation (FSMO) roles in a forest.
-ms.date: 1/27/2022
+ms.date: 01/27/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

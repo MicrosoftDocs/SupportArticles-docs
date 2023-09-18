@@ -1,11 +1,9 @@
 --- 
 title: Troubleshoot memory saturation in AKS clusters
 description: Troubleshoot memory saturation in Azure Kubernetes Service (AKS) clusters across namespaces and containers. Learn how to identify the hosting node.
-ms.date: 3/7/2023
-author: DennisLee-DennisLee
-ms.author: v-dele
+ms.date: 05/31/2023
 editor: v-jsitser
-ms.reviewer: chiragpa, aritraghosh
+ms.reviewer: chiragpa, aritraghosh, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-cluster-performance
 #Customer intent: As an Azure Kubernetes user, I want to understand how to identify memory saturation in my Azure Kubernetes Service (AKS) clusters so that I don't experience service interruption or other memory saturation issues. 
@@ -66,6 +64,9 @@ Container Insights is a feature within AKS that monitors container workload perf
       The Azure portal screenshot shows a table of nodes, and the first node is expanded to display an **Other processes** heading and a sublist of processes that are running within the first node. As for the nodes themselves, the table column values for the processes include **Name**, **Status**, **Max %** (the percentage of memory capacity that's used), **Max** (memory usage), **Containers**, **UpTime**, **Controller**, and **Trend Max % (1 bar = 15m)**. The processes also have an expand/collapse arrow icon next to their names.
       Nine processes are listed under the node. The statuses are all **Ok**, the maximum percentage of memory used for the processes ranges from 16 to 0.3 percent, the maximum memory used is from 0.7 mc to 22 mc, the number of containers used is 1 to 3, and the uptime is 3 to 4 days. Unlike for the node, the processes all have a corresponding controller listed. In this screenshot, the controller names are prefixes of the process names, and they're hyperlinked.
    :::image-end:::
+
+    > [!NOTE]
+    > The percentage of CPU or memory usage for pods is based on the CPU request specified for the container. It doesn't represent the percentage of the CPU or memory usage for the node. So, look at the actual CPU or memory usage rather than the percentage of CPU or memory usage for pods.
 
 ### [Command Line](#tab/command-line)
 
@@ -152,6 +153,9 @@ This procedure uses the kubectl commands in a console. It displays only the curr
    Allocated resources:
      ...
    ```
+
+    > [!NOTE]
+    > The percentage of CPU or memory usage for the node is based on the allocatable resources on the node rather than the actual node capacity.
 
 ---
 

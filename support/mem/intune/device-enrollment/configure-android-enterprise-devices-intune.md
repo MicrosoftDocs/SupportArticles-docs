@@ -4,7 +4,7 @@ description: This guide describes how to configure Android enterprise devices in
 keywords:
 author: helenclu
 ms.author: luche
-ms.date: 3/4/2020
+ms.date: 03/04/2020
 ms.reviewer: kaushika, mandia
 search.appverid: MET150
 ms.custom: 
@@ -92,7 +92,7 @@ The first step to configure Android enterprise in your environment is to connect
    > [!NOTE]
    > This account will be associated with all Android enterprise management tasks for your tenant. It is the Google account that your company's IT admins will share to manage and publish apps in the Google Play console. You can use an existing Google account or create a new one. The account that you use must not be associated with a G-Suite domain.
 
-2. Sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/) by using your Intune-licensed Global Administrator account.
+2. Sign in to the [Microsoft Intune admin center](https://endpoint.microsoft.com/) by using your Intune-licensed Global Administrator account.
 
 3. Go to **Devices** > **Android** > **Android Enrollment** > **Managed Google Play**, select **I agree**, and then select **Launch Google to connect now** to open the Managed Google Play website.
 
@@ -118,7 +118,7 @@ For more information, see [Connect your Intune account to your Managed Google Pl
 
 After your Intune account is connected to your Android enterprise account, you can deploy some applications by following these steps: 
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/) by using your Intune-licensed Global Administrator account.
+1. Sign in to the [Microsoft Intune admin center](https://endpoint.microsoft.com/) by using your Intune-licensed Global Administrator account.
 
 2. Go to **Apps** > **All apps** > **Add**. 
 
@@ -152,9 +152,9 @@ After your Intune account is connected to your Android enterprise account, you c
     > [!NOTE]
     > The app sync between Intune and the Managed Google Play store is manual. Therefore, you must select the **Sync** button each time that you approve a new app.
 
-12. After the app is added to Microsoft Intune, you can assign the app to users and devices. From the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/), go to **Apps** > **All Apps**. Look under **Manage** to see the app displayed in the list.
+12. After the app is added to Microsoft Intune, you can assign the app to users and devices. From the [Microsoft Intune admin center](https://endpoint.microsoft.com/), go to **Apps** > **All Apps**. Look under **Manage** to see the app displayed in the list.
 
-    :::image type="content" source="media/configure-android-enterprise-devices-intune/all-apps.png" alt-text="All Apps page in the Microsoft Endpoint Manager admin center." lightbox="media/configure-android-enterprise-devices-intune/all-apps.png":::
+    :::image type="content" source="media/configure-android-enterprise-devices-intune/all-apps.png" alt-text="All Apps page in the Microsoft Intune admin center." lightbox="media/configure-android-enterprise-devices-intune/all-apps.png":::
 
 13. To assign the app to a group, select the app that you want to assign. In the **Manage** section of the menu, select **Properties**, and then select **Edit** next to **Assignments** to open the **Add group** pane.
 

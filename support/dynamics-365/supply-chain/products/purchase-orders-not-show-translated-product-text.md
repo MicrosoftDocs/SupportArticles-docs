@@ -2,7 +2,7 @@
 title: Purchase orders don't show translated product text
 description: Purchase orders don't show translated product text.
 author: t-benebo
-ms.date: 4/11/2021
+ms.date: 04/11/2021
 ms.topic: troubleshooting
 ms.search.form: EcoResProductDetailsExtended, SysTranslationDetail
 audience: Application User

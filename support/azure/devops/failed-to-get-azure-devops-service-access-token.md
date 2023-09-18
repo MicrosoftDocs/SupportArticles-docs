@@ -2,10 +2,10 @@
 title: Troubleshooting tips for problems while verifying Azure RM service connection
 description: This article explains about the problems that might occur when users verify the automatic Azure RM service connection.
 ms.date: 05/19/2023
-author: padmajayaraman
-ms.author: v-jayaramanp
+ms.reviewer: v-jayaramanp
 ms.custom: sap:Pipelines
 ms.service: azure-devops
+ms.subservice: ts-pipelines
 ---
 
 # "Failed to get Azure DevOps Service access token" error
@@ -34,7 +34,7 @@ When you run a service connection update call from the UI, the body of the `PUT`
 
 1. Go to the service connection page, and then select the affected service connection.
 1. Select **Edit**.
-1. Press **F12**, and then open the network trace window. If possible, select the **Disable cache** option in the panel under the **Network** tab.
+1. Press <kbd>F12</kbd>, and then open the network trace window. If possible, select the **Disable cache** option in the panel under the **Network** tab.
 1. Update the description.
 1. Select the **Save** button.
 1. If you are prompted for authorization, enter the required credentials.

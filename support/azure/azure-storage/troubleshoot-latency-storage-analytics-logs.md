@@ -1,11 +1,9 @@
 ---
 title: Troubleshoot latency using Storage Analytics logs
 description: Identifies and troubleshoots latency issues using Azure Storage Analytics logs and optimizes the client application.
-author: AmandaAZ
-ms.author: v-weizhu
 ms.date: 04/12/2023
-ms.service: storage
-ms.reviewer: v-miegge, kartup, azurestocic, jarrettr
+ms.service: azure-storage
+ms.reviewer: v-miegge, kartup, azurestocic, jarrettr, v-weizhu
 ---
 
 # Troubleshoot latency using Storage Analytics logs

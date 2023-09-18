@@ -275,7 +275,7 @@ Information that is logged in the Application log on the computer that is runnin
 
 ## More information
 
-For Performance issues, see [Performance with Microsoft Dynamics GP: Where do I Start?](https://community.dynamics.com/gp/b/dynamicsgp/posts/performance-with-dynamics-gp-where-do-i-start).
+For Performance issues, see [Performance with Microsoft Dynamics GP: Where do I Start?](https://community.dynamics.com/blogs/post/?postid=b0ee4783-d6d4-46b9-8601-f152d5b04aac).
 
 > [!NOTE]
 > Select **System Manager-SQL** as the subcategory selection.

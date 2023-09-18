@@ -16,7 +16,7 @@ This article gives a solution to the following error message when you deploy a m
 
 ## Symptoms
 
-You publish a macOS LOB app using Intune. When you select the app in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), the **Device install status** shows the following information about the app:
+You publish a macOS LOB app using Intune. When you select the app in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), the **Device install status** shows the following information about the app:
 
 - **Status**: Failed
 - **Status details**: One or more apps contain invalid bundleIDs. (0x87D13BA2)

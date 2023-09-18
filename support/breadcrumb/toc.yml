@@ -1,3 +1,4 @@
+items:
 - name: Docs
   tocHref: /
   topicHref: /
@@ -65,7 +66,7 @@
       tocHref: /troubleshoot/microsoft-identity-manager/
       topicHref: /troubleshoot/microsoft-identity-manager/welcome-identity-manager
 
-    - name: Microsoft Endpoint Manager
+    - name: Microsoft Intune
       tocHref: /troubleshoot/mem/
       topicHref: /troubleshoot/mem/
       items:
@@ -137,6 +138,9 @@
       - name: Azure Synapse Analytics
         tocHref: /troubleshoot/azure/synapse-analytics
         topicHref: /troubleshoot/azure/synapse-analytics/welcome-synapse-analytics
+      - name: Azure Functions
+        tocHref: /troubleshoot/azure/azure-functions
+        topicHref: /troubleshoot/azure/azure-functions/welcome-azure-functions
 
     - name: Microsoft Dynamics 365
       tocHref: /troubleshoot/dynamics-365/
@@ -145,6 +149,12 @@
       - name: Dynamics 365 Customer Insights
         tocHref: /troubleshoot/dynamics-365/customer-insights/
         topicHref: /troubleshoot/dynamics-365/customer-insights/welcome-customer-insights
+      - name: Dynamics 365 Customer Service
+        tocHref: /troubleshoot/dynamics-365/customer-service/
+        topicHref: /troubleshoot/dynamics-365/customer-service/welcome-customer-service
+      - name: Dynamics 365 Commerce
+        tocHref: /troubleshoot/dynamics-365/commerce/
+        topicHref: /troubleshoot/dynamics-365/commerce/welcome-commerce
       - name: Dynamics 365 Finance
         tocHref: /troubleshoot/dynamics-365/finance/
         topicHref: /troubleshoot/dynamics-365/finance/welcome-finance

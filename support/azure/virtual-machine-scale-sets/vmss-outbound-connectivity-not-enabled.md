@@ -2,11 +2,9 @@
 title: No outbound connectivity configured for virtual machine
 description: Learn how to resolve the OutboundConnectivityNotEnabledOnVM error when you deploy a Virtual Machine Scale Set by using Flexible orchestration mode.
 ms.date: 01/31/2023
-author: DennisLee-DennisLee
-ms.author: v-dele
 ms.service: virtual-machine-scale-sets
 ms.subservice: troubleshoot-deployment-errors
-ms.reviewer: mimckitt
+ms.reviewer: mimckitt, v-leedennis
 ---
 # "OutboundConnectivityNotEnabledOnVM. No outbound connectivity configured for virtual machine"
 

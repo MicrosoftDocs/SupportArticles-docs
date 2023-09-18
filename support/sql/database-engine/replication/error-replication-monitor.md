@@ -4,7 +4,6 @@ description: This article provides a workaround for a problem that occurs when y
 ms.date: 07/22/2020
 ms.custom: sap:Replication, change tracking, change data capture
 ms.reviewer: cmathews
-ms.prod: sql
 ---
 # Error message in SQL Server 2008 Replication Monitor: An error occurred while retrieving the publication data
 

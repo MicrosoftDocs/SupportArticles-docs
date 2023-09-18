@@ -4,7 +4,6 @@ description: This article provides a resolution for the problem where Database m
 ms.date: 09/10/2020
 ms.custom: sap:Administration and Management
 ms.reviewer: nathansc
-ms.prod: sql
 ---
 
 # 'The transaction not longer valid' error when Database mail fails to send a message in SQL Server

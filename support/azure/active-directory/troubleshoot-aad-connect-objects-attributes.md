@@ -1,11 +1,12 @@
 ---
 title: Troubleshoot Azure AD Connect objects and attributes
 description: Describes how to determine why an object is not syncing in Azure AD.
-ms.date: 2/3/2021
+ms.date: 02/03/2021
 ms.reviewer: nualex
 editor: v-jesits
 ms.service: active-directory
 ms.subservice: enterprise-users
+ms.custom: has-azure-ad-ps-ref
 ---
 
 # End-to-end troubleshooting of Azure AD Connect objects and attributes

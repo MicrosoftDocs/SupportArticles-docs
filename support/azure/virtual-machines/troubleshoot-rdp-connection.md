@@ -13,7 +13,7 @@ ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
-ms.date: 12/27/2021
+ms.date: 06/09/2023
 ms.author: genli
 ---
 # Troubleshoot Remote Desktop connections to an Azure virtual machine

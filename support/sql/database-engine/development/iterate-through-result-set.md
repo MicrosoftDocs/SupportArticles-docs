@@ -4,8 +4,8 @@ description: This article describes various methods that you can use to iterate 
 ms.date: 10/29/2020
 ms.custom: sap:Administration and Management
 ms.topic: how-to
-ms.prod: sql
 ---
+
 # Iterate through a result set by using Transact-SQL in SQL Server
 
 This article describes various methods that you can use to iterate through a result set by using Transact-SQL in SQL Server.
@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 111401
 
 ## Summary
 
-This article describes various methods that you can use to simulate a cursor-like FETCH-NEXT logic in a stored procedure, trigger, or Transact-SQL batch.
+This article describes various methods that you can use to simulate a cursor-like `FETCH`-`NEXT` logic in a stored procedure, trigger, or Transact-SQL batch.
 
 ## Use Transact-SQL Statements to Iterate Through a Result Set
 
@@ -25,26 +25,26 @@ One method is the use of temp tables. With this method, you create a snapshot of
 
 ```SQL
 /********** example 1 **********/
-declare @au_id char( 11 )
+DECLARE @au_id char( 11 )
 
-set rowcount 0
-select * into #mytemp from authors
+SET rowcount 0
+SELECT * INTO #mytemp FROM authors
 
-set rowcount 1
+SET rowcount 1
 
-select @au_id = au_id from #mytemp
+SELECT @au_id = au_id FROM #mytemp
 
-while @@rowcount <> 0
+WHILE @@rowcount <> 0
 
-begin
-set rowcount 0
-select * from #mytemp where au_id = @au_id
-delete #mytemp where au_id = @au_id
+BEGIN
+SET rowcount 0
+SELECT * FROM #mytemp WHERE au_id = @au_id
+DELETE #mytemp WHERE au_id = @au_id
 
-set rowcount 1
-select @au_id = au_id from #mytemp
-end
-set rowcount 0
+SET rowcount 1
+SELECT @au_id = au_id FROM #mytemp
+END
+SET rowcount 0
 
 ```
 
@@ -52,37 +52,37 @@ A second method is to use the `min` function to walk a table one row at a time. 
 
 ```SQL
 /********** example 2 **********/
-declare @au_id char( 11 )
+DECLARE @au_id char( 11 )
 
-select @au_id = min( au_id ) from authors
-while @au_id is not null
+SELECT @au_id = min( au_id ) FROM authors
+WHILE @au_id IS NOT NULL
 
-begin
-select * from authors where au_id = @au_id
-select @au_id = min( au_id ) from authors where au_id > @au_id
-end
+BEGIN
+SELECT * FROM authors WHERE au_id = @au_id
+SELECT @au_id = min( au_id ) FROM authors WHERE au_id > @au_id
+END
 ```
 
 > [!NOTE]
-> Both example 1 and 2 assume that a unique identifier exists for each row in the source table. In some cases, no unique identifier may exist. If that is the case, you can modify the temp table method to use a newly created key column. For example:
+> Both example 1 and 2 assume that a unique identifier exists for each row in the source table. In some cases, no unique identifier may exist. If that's the case, you can modify the temp table method to use a newly created key column. For example:
 
 ```SQL
 /********** example 3 **********/
-set rowcount 0
-select NULL mykey, * into #mytemp from authors
+SET rowcount 0
+SELECT NULL mykey, * INTO #mytemp FROM authors
 
-set rowcount 1
-update #mytemp set mykey = 1
+SET rowcount 1
+UPDATE #mytemp SET mykey = 1
 
-while @@rowcount > 0
-begin
-set rowcount 0
-select * from #mytemp where mykey = 1
-delete #mytemp where mykey = 1
-set rowcount 1
-update #mytemp set mykey = 1
-end
-set rowcount 0
+WHILE @@rowcount > 0
+BEGIN
+SET rowcount 0
+SELECT * FROM #mytemp WHERE mykey = 1
+DELETE #mytemp WHERE mykey = 1
+SET rowcount 1
+UPDATE #mytemp SET mykey = 1
+END
+SET rowcount 0
 ```
 
 ## References

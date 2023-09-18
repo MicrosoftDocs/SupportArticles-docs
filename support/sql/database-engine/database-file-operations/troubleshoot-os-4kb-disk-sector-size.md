@@ -4,7 +4,6 @@ description: This article troubleshoots SQL Server installation or startup failu
 ms.date: 12/20/2022
 ms.custom: sap:Administration and Management
 ms.reviewer: ramakoni, dplessMSFT, briancarrig, suresh-kandoth 
-ms.prod: sql
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
@@ -105,7 +104,7 @@ Consider _one_ of the following solutions:
 - You can add a registry key, which will cause the behavior of Windows 11 and later to be similar to Windows 10. This will force the sector size to be emulated as 4 KB. To add the `ForcedPhysicalSectorSizeInBytes` registry key, use the [Registry Editor](#registryeditor) or run commands as described in the [PowerShell as Administrator](#powershellasadmin) section. You must reboot the device after adding the registry key in order for this change to take effect.
   
   > [!IMPORTANT]
-  > This section contains steps that tell you how to modify the Windows registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see the [How to back up and restore the registry in Windows](/troubleshoot/windows-server/performance/windows-registry-advanced-users#back-up-the-registry) article.
+  > This section contains steps that tell you how to modify the Windows registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see the [How to back up and restore the registry in Windows](../../../windows-server/performance/windows-registry-advanced-users.md#back-up-the-registry) article.
   
     <a id="registryeditor"></a>**Registry Editor**
   

@@ -43,11 +43,11 @@ For more information on Android work profile, see [Introduction to Android work 
 
 ## Confirm the expected APP settings are applied to the apps
 
-Check app protection policy settings in both Intune and on those configured on the device side. The table in the Review APP settings in Endpoint Manager section of this document provides general guidelines to confirm that you've correctly configured settings in the admin center.  Once confirmed, verify that the same settings are applied to apps on the devices.
+Check app protection policy settings in both Intune and on those configured on the device side. The table in the Review APP settings in Intune section of this document provides general guidelines to confirm that you've correctly configured settings in the admin center.  Once confirmed, verify that the same settings are applied to apps on the devices.
 
-### Review APP settings in Endpoint Manager
+### Review APP settings in Intune
 
-In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can create and manage your app protection policies under **Apps** > **App protection policies**. The **Data protection** section includes important settings for data-transfer scenarios, which you should review if you're seeing unexpected behavior. The following table lists common APP settings for data protection and their use cases.
+In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can create and manage your app protection policies under **Apps** > **App protection policies**. The **Data protection** section includes important settings for data-transfer scenarios, which you should review if you're seeing unexpected behavior. The following table lists common APP settings for data protection and their use cases.
 
 |Setting name   |OS   |Setting value   |Use case   |
 |------------|-----|------|-----------------|
@@ -79,7 +79,7 @@ Run Intune diagnostics in Microsoft Edge to check the APP setting applied to eac
 
 1. Tap **View Intune App Status** (iOS/iPadOS) or **VIEW APP INFO** (Android) to see APP settings applied to each app on the device.
 
-1. Compare setting values in this view with those configured in Endpoint Manager.
+1. Compare setting values in this view with those configured in Intune.
 
     For an explanation of these settings' values, see [Review client app protection logs](/mem/intune/apps/app-protection-policy-settings-log).
 

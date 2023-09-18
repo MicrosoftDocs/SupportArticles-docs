@@ -5,7 +5,6 @@ ms.date: 09/14/2020
 ms.custom: sap:Performance
 ms.reviewer: ramakoni, Sureshka
 ms.topic: how-to
-ms.prod: sql
 ---
 # Recommended updates and configuration options for SQL Server with high-performance workloads
 
