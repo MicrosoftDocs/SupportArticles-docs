@@ -9,7 +9,7 @@ metadata:
   ms.topic: landing-page # Required
   author: #Required; your GitHub user alias, with correct capitalization.
   ms.author: #Required; microsoft alias of author; optional team alias.
-  ms.date: 05/04/2023
+  ms.date: 09/18/2023
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -22,7 +22,7 @@ landingContent:
           - text: Invoice automation exception processing
             url: /dynamics365/finance/accounts-payable/vendor-invoice-automation#exception-processing
 # Card
-  - title: Business performance analytics
+  - title: Business performance analytics (preview)
     linkLists:
       - linkListType: how-to-guide
         links:
