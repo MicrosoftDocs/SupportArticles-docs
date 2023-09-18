@@ -65,7 +65,7 @@ Review the update ring policy for an affected device. There may be two entries f
 
 :::image type="content" source="media/troubleshoot-update-rings/device-status-pane.png" alt-text="A screenshot of the Device status pane on the Default_UpdateRing page.":::
 
-For more information, see the [Drill down for more details](/mem/intune/protect/compliance-policy-monitor#drill-down-for-more-details) section of [Monitor results of your Intune Device compliance policies](/mem/intune/protect/compliance-policy-monitor).
+For more information, see the [View report](/mem/intune/protect/compliance-policy-monitor#view-report) section of [Monitor results of your Intune Device compliance policies](/mem/intune/protect/compliance-policy-monitor).
 
 Refer to the **Device Configuration** report to see whether a policy has been applied successfully to the device. If there are issues, or to confirm, verify the settings on the target device itself.
 
