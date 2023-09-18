@@ -173,6 +173,8 @@
           href: login-windows-keep-appearing.md
         - name: Multi-screen recording isn't working
           href: multi-screen-recording-is-not-working.md
+        - name: Machine registration failure
+          href: desktop-flow-machine-registration-troubleshooting.md
         - name: Module or action wasn't found error
           href: module-action-wasnt-found-error.md
         - name: '"Power Automate needs an update" occurs when opening Power Automate for desktop'
@@ -191,6 +193,8 @@
           href: actions-not-available.md
         - name: Set drop-down list value in window/on web page action fails
           href: set-drop-down-list-value-fails.md
+        - name: TotalChunksMismatch error on Power Automate version 2.36
+          href: desktop-flows-totalchunksmismatch-2-36.md
         - name: Tips on working with SQL queries
           href: troubleshooting-tips-sql-queries.md
         - name: Troubleshoot UI flow Playback
