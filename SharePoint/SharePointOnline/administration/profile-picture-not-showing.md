@@ -15,7 +15,7 @@ ms.custom:
   - CI 150415
 appliesto: 
   - SharePoint Online
-ms.date: 03/31/2022
+ms.date: 09/15/2023
 ---
 
 # Profile picture not showing in SharePoint Online
@@ -25,7 +25,7 @@ Your SharePoint Online profile picture isn't displayed on SharePoint sites or in
 ## Resolution Option 1: Run the Picture Sync diagnostic
 
 > [!NOTE]
-> This feature requires a Microsoft 365 administrator account. This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
+> This feature requires a Microsoft 365 administrator account. This diagnostic isn't currently supported for GCC High, DoD, or Microsoft 365 operated by 21Vianet.
 
 Microsoft 365 admin users have access to diagnostics that can be run within the tenant to verify possible issues with user photos.
 
