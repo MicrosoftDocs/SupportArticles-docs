@@ -3,7 +3,7 @@ title: Self-help diagnostics for SharePoint Online and OneDrive administrators
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 08/28/2020
+ms.date: 09/15/2023
 audience: Admin
 ms.topic: troubleshooting
 localization_priority: Normal
@@ -27,7 +27,7 @@ description: SharePoint Online and OneDrive Diagnostics
 It's important that administrators can diagnose and resolve issues quickly in SharePoint Online and OneDrive. To support this effort, the SharePoint support team has released features in the Microsoft 365 admin center to resolve common issues. 
 
 > [!NOTE]
-> This feature is not available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
+> These diagnostics are not currently supported for GCC High, DoD, or Microsoft 365 operated by 21Vianet.
 
 ## More information
 
