@@ -5,7 +5,7 @@ ms.author: luche
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
-ms.date: 04/13/2023
+ms.date: 09/15/2023
 audience: Admin
 ms.topic: troubleshooting
 ms.custom: 
@@ -48,7 +48,7 @@ These errors can occur for various reasons, such as:
 ## Resolution option 1: Run the Check User Access diagnostic
 
 > [!NOTE]
-> This diagnostic isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
+> This diagnostic isn't currently supported for GCC High, DoD, or Microsoft 365 operated by 21Vianet.
 
 Microsoft 365 administrators can run diagnostics within the tenant to identify possible issues that affect user access.
 
