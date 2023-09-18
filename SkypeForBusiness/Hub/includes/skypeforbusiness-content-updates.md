@@ -2,9 +2,9 @@
 
 
 
-## Week of June 26, 2023
+## Week of September 11, 2023
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 6/29/2023 | [+<Country/Region code> is automatically added to all calls](/skypeforbusiness/troubleshoot/server-phone-system/country-code-automatically-added-to-calls) | modified |
+| 9/12/2023 | Presence information of Lync Server 2010 may not show in Outlook | removed |

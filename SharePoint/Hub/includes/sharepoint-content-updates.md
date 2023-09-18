@@ -2,18 +2,9 @@
 
 
 
-## Week of July 17, 2023
+## Week of September 11, 2023
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 7/17/2023 | [SharedWith column displays users who no longer have access to a document](/sharepoint/troubleshoot/sharing-and-permissions/shared-with-column-users-no-access) | modified |
-
-
-## Week of July 10, 2023
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 7/10/2023 | [Update the DST information manually in SharePoint Server](/sharepoint/troubleshoot/administration/manually-update-dst-sharepoint-server) | added |
-| 7/13/2023 | [SharedWith column displays users who no longer have access to a document](/sharepoint/troubleshoot/sharing-and-permissions/shared-with-column-users-no-access) | modified |
+| 9/14/2023 | [SharePoint site collection admins can't register apps or update permissions](/sharepoint/troubleshoot/apps/cannot-register-app-update-permissions) | added |

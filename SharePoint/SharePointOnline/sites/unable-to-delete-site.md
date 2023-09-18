@@ -3,7 +3,7 @@ title: Unable to delete a SharePoint site
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 10/22/2021
+ms.date: 09/15/2023
 audience: Admin
 ms.topic: troubleshooting
 localization_priority: Normal
@@ -33,7 +33,7 @@ The above errors are a sample of the possible errors. There are several other er
 Microsoft 365 admins can use the following diagnostic tool to help determine why the site can't be deleted.
 
 > [!NOTE]
-> This feature requires a Microsoft 365 administrator account. This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
+> This diagnostic isn't currently supported for GCC High, DoD, or Microsoft 365 operated by 21Vianet.
 
 > [!div class="nextstepaction"]
 > [Run Tests: Site deletion](https://aka.ms/PillarSiteDeletion)
