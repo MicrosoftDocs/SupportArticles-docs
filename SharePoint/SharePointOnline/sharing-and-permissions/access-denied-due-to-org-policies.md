@@ -4,7 +4,7 @@ ms.author: luche
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
-ms.date: 11/24/2020
+ms.date: 09/15/2023
 audience: Admin
 ms.topic: troubleshooting
 ms.custom: 
@@ -14,7 +14,7 @@ search.appverid:
   - SPO160
   - MET150
 ms.assetid: 
-description: Describe a resolution to an (Access Denied due to organizational policies) error in SharePoint and OneDrive
+description: Describe a resolution to an (Access Denied due to organizational policies) error in SharePoint and OneDrive.
 appliesto: 
   - SharePoint Online
   - OneDrive for Business
@@ -31,13 +31,12 @@ Users receive the following error message when they try to sign in to SharePoint
 
 ## Cause
 
-There are similar errors with different root causes so please ensure you check below before proceeding. 
+There are similar errors with different root causes, make sure that you check the following information before proceeding:
 
-- If you are receiving an error message that states "Due to organizational policies, **you can't access this resource**" it may be due to [Information Barriers](/sharepoint/information-barriers).
-
-- If you are receiving an error message that states "Due to organizational policies, you can't access this resource from this **untrusted device**" it may be due to an [Unmanaged Device Policy](/sharepoint/control-access-from-unmanaged-devices).
-
-- If you are receiving an error message that states "Due to organizational policies, you can't access this resource from this **network location**." please continue with solution provided below. 
+- If you're receiving an error message that states "Due to organizational policies, **you can't access this resource**" it may be due to [Information Barriers](/sharepoint/information-barriers).
+- If you're receiving an error message that states "Due to organizational policies, you can't access this resource from this **untrusted device**" it may be due to an [Unmanaged Device Policy](/sharepoint/control-access-from-unmanaged-devices).
+- If you're receiving an error message that states "Due to organizational policies, you can't access this resource from this **network location**.", continue with the 
+ [resolution](#resolution). 
 
 ## Resolution
 
@@ -50,11 +49,11 @@ If you receive this error message, contact your [Microsoft 365 Administrator](/m
 ### Administrators
 
 > [!NOTE]
-> This feature is not available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
+> This diagnostic isn't currently supported for GCC High, DoD, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany customers.
 
 If you are an administrator, and you have locked yourself out of SharePoint and OneDrive because of a location-based policy, follow these steps to unlock the tenant:
 
-1. Select **Run Tests** below, which will populate the diagnostic in the Microsoft 365 Admin Center. 
+1. Select **Run Tests**, which will populate the diagnostic in the Microsoft 365 Admin Center. 
 
     > [!div class="nextstepaction"]
     > [Run Tests: Access Denied due to Network Location](https://aka.ms/AccessDeniedDuetoNetworkLocation)
