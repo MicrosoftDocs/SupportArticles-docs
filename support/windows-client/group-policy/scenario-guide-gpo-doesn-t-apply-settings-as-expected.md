@@ -21,7 +21,7 @@ Before you proceed, refer [Applying Group Policy troubleshooting guidance](../..
 
 ### Environment
 
-- Domain name: contoso.com
+- Domain name: `contoso.com`
 - Active Directory sites: four Sites (two domain controllers per site) (Phoenix, London, Tokyo and Mumbai)
 - Number of the domain controllers: eight
 - Domain controller operating system: Windows Server 2019
