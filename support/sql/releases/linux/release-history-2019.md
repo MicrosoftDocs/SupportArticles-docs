@@ -4,7 +4,8 @@ description: This article contains the release history for SQL Server 2019 runni
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, vanto
-ms.date: 08/14/2023
+ms.date: 09/15/2023
+ms.custom: linux-related-content
 ---
 # <a id="release-history"></a> Release history for SQL Server 2019 on Linux
 
