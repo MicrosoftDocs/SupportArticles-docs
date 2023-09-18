@@ -182,7 +182,7 @@ If the previous options didn't provide the results needed to identify the issue 
 
 - Check the actual wording for the setting that's getting the error status. For example, there may be some specific values applicable only on certain Windows versions or editions.
 
-    :::image type="content" source="media/troubleshoot-update-rings/csp-example.png" alt-text="A screenshot of the Profile Settings, "A screenshot of the SetDisableUXWUAccess setting with the Scope User value showing as an error.":::
+    :::image type="content" source="media/troubleshoot-update-rings/csp-example.png" alt-text="A screenshot of the SetDisableUXWUAccess setting with the Scope User value showing as an error.":::
 
 See the description of each setting in [Settings for Windows Update that you can manage through Intune policy for update rings](/mem/intune/protect/windows-update-settings).
 
