@@ -19,7 +19,7 @@ This scenario guide explains how to troubleshoot the issues that Group Policy Ob
 2. Group Policy service enumerates the **GPLINK** and **GPOptions** attributes where the user account resides, in the order of local GPO, site GPO, domain and organizational unit (OU).
 3. Group Policy service makes a list of GPOs to apply or deny.
 
-## Troubleshooting workflow
+## Troubleshooting guide
 
 Before you proceed, refer [Applying Group Policy troubleshooting guidance](../../windows-server/group-policy/applying-group-policy-troubleshooting-guidance.md).
 

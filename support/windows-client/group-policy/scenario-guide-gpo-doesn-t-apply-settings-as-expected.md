@@ -13,7 +13,7 @@ ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, css
 
 This scenario guide explains how to troubleshoot when you find a GPO setting doesn't take efforts as expected.
 
-## Troubleshooting workflow
+## Troubleshooting guide
 
 Before you proceed, refer [Applying Group Policy troubleshooting guidance](../../windows-server/group-policy/applying-group-policy-troubleshooting-guidance.md).
 
