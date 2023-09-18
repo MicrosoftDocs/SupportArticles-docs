@@ -15,7 +15,7 @@ ms.custom:
   - CI 157728
 appliesto: 
   - SharePoint Online
-ms.date: 03/31/2022
+ms.date: 09/15/2023
 ---
 
 # SharePoint Online out of storage space
@@ -33,7 +33,7 @@ Your organization has total storage of 1 TB plus 10 GB per license of eligible
 If you suspect you should have more storage than is displayed in the Microsoft 365 admin center, Microsoft 365 admins can run the following diagnostic tool. It will identify any issues with your SharePoint Online tenant storage quota, and show how the quota is allocated.
 
 > [!NOTE]
-> This feature requires a Microsoft 365 administrator account. This diagnostic isn’t currently supported for GCC High, DoD, or Microsoft 365 operated by 21Vianet.
+> This feature requires a Microsoft 365 administrator account. This diagnostic isn't currently supported for GCC High, DoD, or Microsoft 365 operated by 21Vianet.
 
 > [!div class="nextstepaction"]
 > [Run Tests: Tenant Storage](https://aka.ms/PillarTenantStorage)
