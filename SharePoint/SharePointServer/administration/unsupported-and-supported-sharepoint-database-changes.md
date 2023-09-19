@@ -43,7 +43,10 @@ Unsupported database changes include, but are not limited to, the following exam
   - [[MS-WSSFOB]: Windows SharePoint Services (WSS): File Operations Database Communications Base Protocol](/openspecs/sharepoint_protocols/ms-wssfob/252d2086-6571-430f-863d-bcaf9d267e62)  
   - [[MS-WSSFO3]: Windows SharePoint Services (WSS): File Operations Database Communications Version 3 Protocol](/openspecs/sharepoint_protocols/ms-wssfo3/46249efd-d184-42cc-baad-a605875ef783)
 
-- Adding new stored procedures.
+- Adding new stored procedures, except the stored procedures that are described in the following article:
+
+  - [GDPR for SharePoint Server](/compliance/regulatory/gdpr-for-sharepoint-server)
+
 - Adding, changing, or deleting any data in any table of SharePoint Server databases.
 - Adding, changing, or deleting any columns in any table of SharePoint Server databases. 
 - Changing the database schema.
