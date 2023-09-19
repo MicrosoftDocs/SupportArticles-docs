@@ -2,7 +2,7 @@
 title: All AI Builder credits have been consumed
 description: Provides a resolution for the issue that all AI Builder credits have been consumed in Microsoft Power Platform.
 ms.reviewer: chplanty, cdbellar
-ms.date: 09/06/2023
+ms.date: 09/18/2023
 ms.subservice: 
 ms.author: antode
 author: Antoine2F
