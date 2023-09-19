@@ -16,7 +16,7 @@ _Version:_ &nbsp; 15.0.4316.3
 
 ## Summary
 
-This article describes Cumulative Update package 21 (CU21) for Microsoft SQL Server 2019. This update contains 28 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2019 Cumulative Update 20, and it updates components in the following builds:
+This article describes Cumulative Update package 21 (CU21) for Microsoft SQL Server 2019. This update contains 29 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2019 Cumulative Update 20, and it updates components in the following builds:
 
 - SQL Server - Product version: **15.0.4316.3**, file version: **2019.150.4316.3**
 - Analysis Services - Product version: **15.0.35.39**, file version: **2018.150.35.39**
