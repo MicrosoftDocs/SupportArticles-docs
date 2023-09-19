@@ -282,17 +282,17 @@ To avoid this validation issue, we recommend that you copy the *Microsoft.SQL.Ch
 
 - Method 1
 
-  Manually install the SQL Support .msi file for the particular architecture from the following cumulative update package extraction location: *CU8\<CPU>\setup\sqlsupport.msi*.
+  Manually install the SQL Support .msi file for the particular architecture from the following cumulative update package extraction location: *CU8\<CPU\>\setup\sqlsupport.msi*.
 
 - Method 2
 
   In addition to the files that are listed in step 4 in option 2, the files that are described in the following steps should be copied before you start setup from a local folder. To copy the files, follow these steps:
 
-  1. Copy the *Microsoft.SQL.Chainer.Package.dll* file from the RTM folder to the local copy of the <media>\<architecture folder\> folder.
+  1. Copy the *Microsoft.SQL.Chainer.Package.dll* file from the RTM folder to the local copy of the \<media\>\<architecture folder\> folder.
 
   1. Copy the *Sqlsupport.msi* file. Of the following locations, copy the file from the first location to the local copy of the second location:
-     - *C:\<kb_number_of_hotfix package>\<architecture>\setup\Sqlsupport.msi*
-     - *<media>\<architecture folder\>\setup\*
+     - *C:\<kb_number_of_hotfix package\>\<architecture\>\setup\Sqlsupport.msi*
+     - *\<media\>\<architecture folder\>\setup\*
 
 ## SQL Server 2008 setup hotfixes
 
