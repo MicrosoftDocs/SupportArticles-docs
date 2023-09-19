@@ -36,7 +36,7 @@ To enable Command checker, append the `&ribbondebug=true` parameter to the URL o
 
 ### Inspect a command
 
-Once Command checker is enabled, you'll find a new button named **Command Checker** :::image type="icon" source="media/ribbon-issues-button-hidden/command-checker-button-icon.png" border="false"::: in [various command bars](/power-apps/maker/model-driven-apps/command-designer-overview#command-bar-locations) (global, main form, main grid, and subgrid). You may have to expand the menu bar to see this button.
+Once Command checker is enabled, you'll find a new button named **Command Checker** :::image type="icon" source="media/ribbon-issues/command-checker-button-icon.png" border="false"::: in [various command bars](/power-apps/maker/model-driven-apps/command-designer-overview#command-bar-locations) (global, main form, main grid, and subgrid). You may have to expand the menu bar to see this button.
 
 > [!NOTE]
 > Command checker isn't available for commands in [Quick actions](/power-apps/maker/model-driven-apps/command-designer-overview#command-bar-locations).
