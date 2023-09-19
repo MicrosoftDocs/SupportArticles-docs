@@ -54,7 +54,7 @@ The best practice for troubleshooting policy issues is to always check its statu
 
 Navigate to **Devices** > **Windows** > **Update rings for Windows 10 and later**, and then select the update ring policy to review. The policy **Overview** appears with colored charts reflecting the profile deployment information.
 
-:::image type="content" source="media/troubleshoot-update-rings/update-ring-overview-pane.png" alt-text="A screenshot of the default update ring overview pane in the Intune admin center.":::
+:::image type="content" source="media/troubleshoot-update-rings/update-ring-overview-pane.png" alt-text="A screenshot of the default update ring overview pane in the Intune admin center." lightbox="media/troubleshoot-update-rings/update-ring-overview-pane.png":::
 
 Check the individual device to confirm that the update ring policy has been successfully applied.
 
@@ -63,7 +63,7 @@ Check the individual device to confirm that the update ring policy has been succ
 
 Review the update ring policy for an affected device. There may be two entries for the policy depending on the type of user device being managed. When Intune deploys a policy (any policy, not just update rings), the settings are delivered against both the logged-on user and the system context of the device. This causes the two entries, which is a normal occurrence. However, if you manage Kiosk-type devices with Autologon or a local-account user type, only the system account is displayed.
 
-:::image type="content" source="media/troubleshoot-update-rings/device-status-pane.png" alt-text="A screenshot of the Device status pane on the Default_UpdateRing page.":::
+:::image type="content" source="media/troubleshoot-update-rings/device-status-pane.png" alt-text="A screenshot of the Device status pane on the Default_UpdateRing page." lightbox="media/troubleshoot-update-rings/device-status-pane.png":::
 
 For more information, see the [View report](/mem/intune/protect/compliance-policy-monitor#view-report) section of [Monitor results of your Intune Device compliance policies](/mem/intune/protect/compliance-policy-monitor).
 
@@ -73,7 +73,7 @@ Refer to the **Device Configuration** report to see whether a policy has been ap
 
 ## Verify settings on the device
 
-To confirm that the policies have applied to the device locally, navigate to **Settings** > **Accounts** and select the **Access work or school**. The list of policies applied to the device from Intune will include whether they're managed by your organization.
+To confirm that the policies have applied to the device locally, navigate to **Settings** > **Accounts**, and then select **Access work or school**. The list of policies applied to the device from Intune will include whether they're managed by your organization.
 
 :::image type="content" source="media/troubleshoot-update-rings/policies-on-the-device.png" alt-text="A screenshot of the policies on the device in the Managed by Organization pane.":::
 
@@ -95,7 +95,7 @@ Mixed deployments between Intune MDM policies and group policies (GPO) can creat
 
 The best way to validate what policies are delivered through GPO is with the [gpresult](/windows-server/administration/windows-commands/gpresult) command.
 
-:::image type="content" source="media/troubleshoot-update-rings/gpresult-output.png" alt-text="A screenshot of the gpresult output from an example device.":::
+:::image type="content" source="media/troubleshoot-update-rings/gpresult-output.png" alt-text="A screenshot of the gpresult output from an example device." lightbox="media/troubleshoot-update-rings/gpresult-output.png":::
 
 If the policy source is "Local Group Policy," SCCM could have set it. If it's not, edit the group policy object from the Active Directory infrastructure to remove the conflicting values.
 
@@ -115,13 +115,13 @@ These values should match the [Policy CSP description](/windows/client-managemen
 
 Another method to verify whether the update ring policy was deployed to the device is to check the MDM diagnostic report. On the Windows device, navigate to **Settings** > **Accounts** > **Access work or school**, and then select the **Export** button. The report includes the Intune deployed policies. If the update ring policy is in the report, the policy was successfully deployed.
 
-:::image type="content" source="media/troubleshoot-update-rings/mdm-report.png" alt-text="A screenshot of an example MDM diagnostic report.":::
+:::image type="content" source="media/troubleshoot-update-rings/mdm-report.png" alt-text="A screenshot of an example MDM diagnostic report." lightbox="media/troubleshoot-update-rings/mdm-report.png":::
 
 ### Review the Event Viewer log for Intune events
 
 Review the Event Viewer log to see how the Policy CSP data is being delivered to the device in real-time. On the device, navigate to the **Event Viewer** application and then go to **Applications and Services logs** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostics-Provider** > **Admin**.
 
-:::image type="content" source="media/troubleshoot-update-rings/event-viewer.png" alt-text="A screenshot of the Admin pane for MDM Policy Manager in the Event Viewer with 'policies deployed to the device' highlighted.":::
+:::image type="content" source="media/troubleshoot-update-rings/event-viewer.png" alt-text="A screenshot of the Admin pane for MDM Policy Manager in the Event Viewer with 'policies deployed to the device' highlighted." lightbox="media/troubleshoot-update-rings/event-viewer.png":::
 
 Successfully deployed policies (Set action) won't have errors or warnings.
 
@@ -135,9 +135,9 @@ When you use the Windows Update Client, there may be errors that could help pinp
 
 To access Event Viewer, on the device, find the **Event Viewer** app in the Windows Start menu and then select **Applications and Services logs** > **Microsoft** > **Windows** > **WindowsUpdateClient**.
 
-:::image type="content" source="media/troubleshoot-update-rings/event-viewer-updates.png" alt-text="A screenshot of the 'Windows Update successfully found six updates' message in the Event Viewer.":::
+:::image type="content" source="media/troubleshoot-update-rings/event-viewer-updates.png" alt-text="A screenshot of the 'Windows Update successfully found six updates' message in the Event Viewer." lightbox="media/troubleshoot-update-rings/event-viewer-updates.png":::
 
-:::image type="content" source="media/troubleshoot-update-rings/event-viewer-updates-example.png" alt-text="A screenshot of the Windows Update client with a notification about error 0x80072EE6 preventing update checks.":::
+:::image type="content" source="media/troubleshoot-update-rings/event-viewer-updates-example.png" alt-text="A screenshot of the Windows Update client with a notification about error 0x80072EE6 preventing update checks." lightbox="media/troubleshoot-update-rings/event-viewer-updates-example.png":::
 
 ### Check the Windows Update registry keys source
 
@@ -178,7 +178,7 @@ If the previous options didn't provide the results needed to identify the issue 
 - Be sure that the Windows update ring policy is deployed to the correct user/device group.
 - Determine whether the entire policy deployment fails or only certain settings aren't being applied. Navigate to **Device** > **Device configuration** > **Update ring report**. There may be a specific setting in the list that shows an error rather than a success message.
 
-    :::image type="content" source="media/troubleshoot-update-rings/error-example.png" alt-text="A screenshot of the 'Automatic update behavior' and 'Microsoft Product Updates' profile settings showing a conflict status.":::
+    :::image type="content" source="media/troubleshoot-update-rings/error-example.png" alt-text="A screenshot of the 'Automatic update behavior' and 'Microsoft Product Updates' profile settings showing a conflict status." lightbox="media/troubleshoot-update-rings/error-example.png":::
 
 - Check the actual wording for the setting that's getting the error status. For example, there may be some specific values applicable only on certain Windows versions or editions.
 
