@@ -35,8 +35,9 @@ These protocols and ciphers are being deprecated for the following reasons:
 
 The services are being deprecated on the following dates:
 
-- **TLS 1.0**, **1.1** and **3DES Cipher suite** in U.S. government instances starting on **March 31, 2021**.
-- **TLS 1.0**, **1.1** and **3DES Cipher suite** in public instances starting **January 31, 2022**. (This date has been postponed from **June 30th, 2021** to **January 31st, 2022**, to give administrators more time to remove the dependency on legacy TLS protocols and ciphers (TLS 1.0,1.1 and 3DES).)
+- **TLS 1.0**, **1.1** and **3DES Cipher suite** in U.S. government instances starting on March 31, 2021 - **COMPLETED**
+- **TLS 1.0**, **1.1** and **3DES Cipher suite** in public instances starting January 31, 2022 - **COMPLETED**
+- **TLS 1.0**, **1.1** and **3DES Cipher suite** in Azure AD instances operated by 21Vianet in China starting June 2023 - **ONGOING**
 
 ## Enable support for TLS 1.2 in your environment
 
