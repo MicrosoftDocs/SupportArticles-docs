@@ -57,7 +57,7 @@ Besides, you observe the following symptoms:
 
 First, we need to collect data on both a client computer in Phoenix and a client computer in Tokyo. Follow these steps on each computer:
 
-1. Download [TSS](https://aka.ms/gettss), extract the ZIP file to a folder: C:\temp.
+1. Download [TSS](https://aka.ms/gettss), extract the ZIP file to a folder: C:\temp. Create the folder if it does not exist.
 2. Sign-in with the user account who is experiencing the issue.
 3. Open an elevated PowerShell command and run the command:
 

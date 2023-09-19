@@ -36,7 +36,7 @@ You deploy a GPO named "Mapped drives" by using Group policy preferences mapped 
 The GPO has worked before. Since several days ago, drive Z is no longer mapped.
 Besides, you observe the following symptoms:
 
-- You can manually map the drive by using the net use command.
+- You can manually map the drive by using the `net use` command. For more information about the `net use` command, see [Net use | Microsoft Learn](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/gg651155%28v=ws.11%29).
 - When you run GPRESULT /h, the output indicates that the GPO "Mapped drives" is in the applied list.
   
   :::image type="content" source="media/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected/screenshot-of-the-applied-gpos.png" alt-text="The screenshot of the applied GPOs." border="true":::
@@ -49,7 +49,13 @@ Besides, you observe the following symptoms:
 
 First, collect the following data for troubleshooting. Because we need to trace the login/sign-in, we need to perform the following tasks as a local administrator or any other user account with local administrator credentials.
 
-1. Download [TSS](https://aka.ms/gettss), extract the ZIP file to a folder: C:\temp.
+> [!NOTE]
+> These steps require fast user switching to be enabled. If you encounter problems when trying to switch user, check if the following policy or registry value is set:
+>
+> - Group policy: Under Computer Configuration\\Administrative Templates\\System\\Logon, the **Hide entry points for Fast User Switching** group policy.
+> - Registy key: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System`. Registry value: HideFastUserSwitching
+
+1. Download [TSS](https://aka.ms/gettss), extract the ZIP file to a folder: C:\\temp. Create the folder if it does not exist.
 2. Open an elevated PowerShell command and run the command:
 
    ```powershell
@@ -58,7 +64,7 @@ First, collect the following data for troubleshooting. Because we need to trace 
 
    :::image type="content" source="media/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected/screenshot-of-set-executionpolicy-command-result.png" alt-text="The screenshot of Set-ExecutionPolicy command result." border="true":::
 
-3. Go to c:\temp\TSS, where you have extracted the TSS Zip file.
+3. Go to c:\\temp\\TSS, where you have extracted the TSS Zip file.
 4. Run `.\TSS.ps1 -Start -Scenario ADS_GPOEx -Procmon`, Accept the agreement and wait until the TSS starts collecting data.
 
    :::image type="content" source="media/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected/screenshot-of-the-tss-tool.png" alt-text="The screenshot of the TSS tool." border="true":::
@@ -66,7 +72,7 @@ First, collect the following data for troubleshooting. Because we need to trace 
 5. Switch user, and then sign in with the user account who doesn't see the drive Z getting mapped.
 6. Once the sign-in is successful, open a command prompt and run `gpresult /h appliedgpo.htm`. Confirm that the GPO "Mapped drives" is in the applied list.
 7. Switch user again, and then sign in with the user account who has started the TSS Logging. Press Y.
-8. TSS will stop collecting data and the collected data will be located in the C:\MSDATA folder as a Zip file or folder with the name TSS_\<Machinename\>_\<Time\>_ADS_GPOEx.
+8. TSS will stop collecting data and the collected data will be located in the C:\\MSDATA folder as a Zip file or folder with the name TSS_\<Machinename\>_\<Time\>_ADS_GPOEx.
 
 For more information about TSS, see [Introduction to TroubleShootingScript toolset (TSS)](introduction-to-troubleshootingscript-toolset-tss.md).
 
@@ -101,12 +107,12 @@ From the Group policy operational logs, we observe that the group policy was pro
 Group policy preferences tracing is an extra logging that we can enable for any group policy preferences client-side extension. The TSS GPOEx tracing is enabled by default.
 
 > [!NOTE]
-> If you wish to manually enable then follow the article [Enabling Group Policy Preferences Debug Logging using the RSAT](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/enabling-group-policy-preferences-debug-logging-using-the-rsat/ba-p/395555).
+> If you wish to manually enable the GPSVC logging, follow [Enabling Group Policy Preferences Debug Logging using the RSAT](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/enabling-group-policy-preferences-debug-logging-using-the-rsat/ba-p/395555).
 
 In \<Clientmachinename\>_\<Date_Time\>_GPPREF_User.txt, we observe that the GPP Mapped drives extension is starting the processing:
 
 > [!NOTE]
-> The analysis only contains snippets of troubleshooting data and not the full analysis.
+> For brevity and readability purposes, the analysis only contains snippets of relevant troubleshooting data and not all data in the log.
 
 ```log
 yyyy-mm-dd hh:mm::ss:sss [pid=0x3134,tid=0x4fc] Entering ProcessGroupPolicyExDrives()
