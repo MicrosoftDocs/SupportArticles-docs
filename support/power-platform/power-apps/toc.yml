@@ -76,6 +76,8 @@ items:
           href: manage-apps-and-solutions/failure-converting-to-managed-solution.md          
         - name: Changes not effective after solution import
           href: manage-apps-and-solutions/changes-not-effective-solution-import.md
+        - name: Circular dependencies between solutions
+          href: manage-apps-and-solutions/circular-dependencies-between-solutions.md
         - name: Concurrent solution operation failures
           href: manage-apps-and-solutions/concurrent-solution-operation-failures.md
         - name: Duplicate security roles after solution import
