@@ -162,7 +162,9 @@ From here, find additional information about the deployed policies that might co
 If the previous options didn't provide the results needed to identify the issue and the devices are still not updating, or are doing it erratically, then consider the following questions:
 
 - Is reporting and telemetry enabled for the devices? Intune can deliver telemetry to the device in multiple ways. However, the most common method is with a [Device Restriction policy](/mem/intune/configuration/device-restrictions-windows-10#reporting-and-telemetry), either through Intune or group policy.
-  - For more information, see the [Manage diagnostic data using Group Policy and MDM](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#manage-diagnostic-data-using-group-policy-and-mdm) section of [Configure Windows diagnostic data in your organization](/windows/privacy/configure-windows-diagnostic-data-in-your-organization).
+
+    For more information, see the [Manage diagnostic data using Group Policy and MDM](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#manage-diagnostic-data-using-group-policy-and-mdm) section of [Configure Windows diagnostic data in your organization](/windows/privacy/configure-windows-diagnostic-data-in-your-organization).
+
 - Is there an active network connection on the device? If the device is in airplane mode, is turned off, or the user has the device in a location with no service, the policy won't apply until it's connected to a network.
 - Does the device not upgrade past a specific version? Check for a conflicting [TargetReleaseVersion](/windows/client-management/mdm/policy-csp-update#targetreleaseversion) value through other means, such as Group policy or Settings catalog, found in the Windows Update registry keys.
 - Verify that Windows Update is configured to deliver feature and quality updates. If `UpdateServiceUrl` is populated in the Registry, verify that `DisableDualScan` is set to `0`. On the device, access the Registry Editor app and navigate to `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate`.
@@ -171,7 +173,8 @@ If the previous options didn't provide the results needed to identify the issue 
     :::image type="content" source="media/troubleshoot-update-rings/workloads.png" alt-text="A screenshot of the Properties dialog highlighting the Windows Update policies slider on the Workloads tab.":::
 
 - Make sure you're not deploying conflicting Windows Update for Business settings from another update ring or from a Settings Catalog policy. Confirm your assigned Settings Catalog policies for Windows Update for Business settings that may end up being deployed.
-  - For update ring policies, you should see a "Conflict" reporting in the Device Configuration pane for the device or in the colored charts.
+
+    For update ring policies, you should see a "Conflict" reporting in the Device Configuration pane for the device or in the colored charts.
 
     :::image type="content" source="media/troubleshoot-update-rings/conflict-report.png" alt-text="A screenshot of the colored Profile assignment status - Windows 10 and later devices chart with the Succeeded and Conflict data highlighted.":::
 
