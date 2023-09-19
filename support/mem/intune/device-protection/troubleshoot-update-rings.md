@@ -15,7 +15,7 @@ Some deployment insights are included in this guide to highlight how OS and poli
 
 ## What Windows update ring policies do
 
-Windows update ring policies define only an update strategy, such as blocking driver installation, setting deferral periods, or setting maintenance times. The update ring policy doesn't update the infrastructure itself. This means that it needs an existing update solution to obtain the actual updates, such as Windows Updates for Business (WUFB).
+Windows update ring policies define only an update strategy, such as blocking driver installation, setting deferral periods, or setting maintenance times. The update ring policy doesn't update the infrastructure itself. This means that it needs an existing update solution to obtain the actual updates, such as Windows Updates for Business.
 
 Windows update ring policies created in Intune use the [Windows Policy CSP](/windows/client-management/mdm/policy-configuration-service-provider) for updating Windows devices. Once Intune deploys the Windows Update rings policy to an assigned device, the policy Configuration Services Provider (CSP) writes the appropriate values to the Windows registry to make the policy take effect.
 
@@ -73,7 +73,7 @@ Refer to the **Device Configuration** report to see whether a policy has been ap
 
 ## Verify settings on the device
 
-To confirm that the policies have applied to the device locally, navigate to **Settings** > **Accounts**, and then select **Access work or school**. The list of policies applied to the device from Intune will include whether they're managed by your organization.
+To confirm that the policies have applied to the device locally, navigate to **Settings** > **Accounts** > **Access work or school**. The list of policies applied to the device from Intune will include whether they're managed by your organization.
 
 :::image type="content" source="media/troubleshoot-update-rings/policies-on-the-device.png" alt-text="A screenshot of the policies on the device in the Managed by Organization pane.":::
 
@@ -170,7 +170,7 @@ If the previous options didn't provide the results needed to identify the issue 
 
     :::image type="content" source="media/troubleshoot-update-rings/workloads.png" alt-text="A screenshot of the Properties dialog highlighting the Windows Update policies slider on the Workloads tab.":::
 
-- Make sure you're not deploying conflicting Windows Update for Business (WUfB) settings from another update ring or from a Settings Catalog policy. Confirm your assigned Settings Catalog policies for WUfB settings that may end up being deployed.
+- Make sure you're not deploying conflicting Windows Update for Business settings from another update ring or from a Settings Catalog policy. Confirm your assigned Settings Catalog policies for Windows Update for Business settings that may end up being deployed.
   - For update ring policies, you should see a "Conflict" reporting in the Device Configuration pane for the device or in the colored charts.
 
     :::image type="content" source="media/troubleshoot-update-rings/conflict-report.png" alt-text="A screenshot of the colored Profile assignment status - Windows 10 and later devices chart with the Succeeded and Conflict data highlighted.":::
