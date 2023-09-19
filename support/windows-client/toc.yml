@@ -1307,7 +1307,7 @@ items:
       href: ./windows-troubleshooters/gather-information-using-tss-group-policy.md
     - name: Gather information for user experience-related issues
       href: ./windows-troubleshooters/gather-information-using-tss-user-experience.md
-    - name: 'Scenario Guide: GPO does not apply on some client computers'
-      href: ./windows-troubleshooters/scenario-guide-gpo-does-not-apply-on-some-client-computers.md
-    - name: "Scenario Guide: GPO doesn't apply settings as expected"
-      href: ./windows-troubleshooters/scenario-guide-gpo-doesn-t-apply-settings-as-expected.md
+    - name: 'Scenario Guide: Wallpaper GPO does not apply on some client computers'
+      href: ./windows-troubleshooters/scenario-guide-wallpaper-gpo-does-not-apply-on-some-client-computers.md
+    - name: "Scenario Guide: GPO to map network drive doesn't apply as expected"
+      href: ./windows-troubleshooters/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected.md

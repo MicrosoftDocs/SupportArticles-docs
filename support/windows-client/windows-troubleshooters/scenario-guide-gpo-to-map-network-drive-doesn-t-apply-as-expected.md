@@ -1,5 +1,5 @@
 ---
-title: "Scenario Guide: GPO doesn't apply settings as expected"
+title: "Scenario Guide: GPO to map network drive doesn't apply as expected"
 description: This article introduces a troubleshooting scenario in which network drive can't be mapped by using GPO.
 author: Deland-Han
 ms.author: delhan
@@ -9,17 +9,15 @@ ms.prod: windows-client
 ms.technology: windows-client-troubleshooter
 ms.custom: sap:windows-troubleshooters, csstroubleshoot
 ---
-# Scenario Guide: GPO doesn't apply settings as expected
+# Scenario Guide: GPO to map network drive doesn't apply as expected
 
-This scenario guide explains how to troubleshoot when you find a GPO setting doesn't take efforts as expected.
+This scenario guide explains how to use TSS to collect data to troubleshoot the issue in which GPO to map network drive doesn't apply as expected.
 
 ## Troubleshooting guide
 
 Before you proceed, refer [Applying Group Policy troubleshooting guidance](../../windows-server/group-policy/applying-group-policy-troubleshooting-guidance.md).
 
-## Scenario: Network drive can't be mapped by using GPO
-
-### Environment
+## Environment
 
 - Domain name: `contoso.com`
 - Active Directory sites: four Sites (two domain controllers per site) (Phoenix, London, Tokyo and Mumbai)
@@ -27,13 +25,13 @@ Before you proceed, refer [Applying Group Policy troubleshooting guidance](../..
 - Domain controller operating system: Windows Server 2019
 - Client machine operating system: Windows 11, version 22H2
 
-:::image type="content" source="media/scenario-guide-gpo-doesn-t-apply-settings-as-expected/diagram-of-environment-topology.png" alt-text="The diagram of the topology of the environment." border="true":::
+:::image type="content" source="media/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected/diagram-of-environment-topology.png" alt-text="The diagram of the topology of the environment." border="true":::
 
-### In this scenario
+## In this scenario
 
 You deploy a GPO named "Mapped drives" by using Group policy preferences mapped drives extension. The GPO is used to map drive Z on client computers. See the following screenshot:
 
-:::image type="content" source="media/scenario-guide-gpo-doesn-t-apply-settings-as-expected/screenshot-of-the-group-policy-result.png" alt-text="The screenshot of the group policy result." border="true":::
+:::image type="content" source="media/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected/screenshot-of-the-group-policy-result.png" alt-text="The screenshot of the group policy result." border="true":::
 
 The GPO has worked before. Since several days ago, drive Z is no longer mapped.
 Besides, you observe the following symptoms:
@@ -41,13 +39,13 @@ Besides, you observe the following symptoms:
 - You can manually map the drive by using the net use command.
 - When you run GPRESULT /h, the output indicates that the GPO "Mapped drives" is in the applied list.
   
-  :::image type="content" source="media/scenario-guide-gpo-doesn-t-apply-settings-as-expected/screenshot-of-the-applied-gpos.png" alt-text="The screenshot of the applied GPOs." border="true":::
+  :::image type="content" source="media/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected/screenshot-of-the-applied-gpos.png" alt-text="The screenshot of the applied GPOs." border="true":::
   
-  :::image type="content" source="media/scenario-guide-gpo-doesn-t-apply-settings-as-expected/screenshot-shows-gpo-is-applied-successfully.png" alt-text="The screenshot that shows the GPO is applied successfully." border="true":::
+  :::image type="content" source="media/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected/screenshot-shows-gpo-is-applied-successfully.png" alt-text="The screenshot that shows the GPO is applied successfully." border="true":::
 
 - The GPO is set up with default settings and there are no changes made to the GPO from the perspective of Security filtering, WMI filter or set up any **Deny** permissions.
 
-### Troubleshooting
+## Troubleshooting
 
 First, collect the following data for troubleshooting. Because we need to trace the login/sign-in, we need to perform the following tasks as a local administrator or any other user account with local administrator credentials.
 
@@ -58,12 +56,12 @@ First, collect the following data for troubleshooting. Because we need to trace 
    Set-ExecutionPolicy unrestricted
    ```
 
-   :::image type="content" source="media/scenario-guide-gpo-doesn-t-apply-settings-as-expected/screenshot-of-set-executionpolicy-command-result.png" alt-text="The screenshot of Set-ExecutionPolicy command result." border="true":::
+   :::image type="content" source="media/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected/screenshot-of-set-executionpolicy-command-result.png" alt-text="The screenshot of Set-ExecutionPolicy command result." border="true":::
 
 3. Go to c:\temp\TSS, where you have extracted the TSS Zip file.
 4. Run `.\TSS.ps1 -Start -Scenario ADS_GPOEx -Procmon`, Accept the agreement and wait until the TSS starts collecting data.
 
-   :::image type="content" source="media/scenario-guide-gpo-doesn-t-apply-settings-as-expected/screenshot-of-the-tss-tool.png" alt-text="The screenshot of the TSS tool." border="true":::
+   :::image type="content" source="media/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected/screenshot-of-the-tss-tool.png" alt-text="The screenshot of the TSS tool." border="true":::
 
 5. Switch user, and then sign in with the user account who doesn't see the drive Z getting mapped.
 6. Once the sign-in is successful, open a command prompt and run `gpresult /h appliedgpo.htm`. Confirm that the GPO "Mapped drives" is in the applied list.
@@ -72,31 +70,31 @@ First, collect the following data for troubleshooting. Because we need to trace 
 
 For more information about TSS, see [Introduction to TroubleShootingScript toolset (TSS)](introduction-to-troubleshootingscript-toolset-tss.md).
 
-### Data Analysis
+## Data Analysis
 
 Go to the *c:\msdata* folder where TSS has saved all the reports and extract the contents of the ZIP file. Review the file with the name <Client_machinename>-<Time>_Microsoft-Windows-GroupPolicy-Operational.evtx.
 
-#### Starting event: 4001
+### Starting event: 4001
 
-:::image type="content" source="media/scenario-guide-gpo-doesn-t-apply-settings-as-expected/screenshot-of-the-event-id-4001.png" alt-text="The screenshot of the event ID 4001." border="true":::
+:::image type="content" source="media/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected/screenshot-of-the-event-id-4001.png" alt-text="The screenshot of the event ID 4001." border="true":::
 
-#### Event: 5017 showing us the Users OU
+### Event: 5017 showing us the Users OU
 
 The GPO "Mapped drives" is linked to the User OU
 
-:::image type="content" source="media/scenario-guide-gpo-doesn-t-apply-settings-as-expected/screenshot-of-the-event-id-5017.png" alt-text="The screenshot of the event ID 5017." border="true":::
+:::image type="content" source="media/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected/screenshot-of-the-event-id-5017.png" alt-text="The screenshot of the event ID 5017." border="true":::
 
-#### Event: 5312 showing the list of applicable Group Policy objects
+### Event: 5312 showing the list of applicable Group Policy objects
 
 We do see that the GPO "Mapped drive" is in the applicable list.
 
-:::image type="content" source="media/scenario-guide-gpo-doesn-t-apply-settings-as-expected/screenshot-of-the-event-id-5312.png" alt-text="The screenshot of the event ID 5312." border="true":::
+:::image type="content" source="media/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected/screenshot-of-the-event-id-5312.png" alt-text="The screenshot of the event ID 5312." border="true":::
 
-#### Event: 4016 showing that the Group policy drive maps extension processed and successful
+### Event: 4016 showing that the Group policy drive maps extension processed and successful
 
-:::image type="content" source="media/scenario-guide-gpo-doesn-t-apply-settings-as-expected/screenshot-of-the-event-id-4016.png" alt-text="The screenshot of the event ID 4016." border="true":::
+:::image type="content" source="media/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected/screenshot-of-the-event-id-4016.png" alt-text="The screenshot of the event ID 4016." border="true":::
 
-#### Group Policy preferences tracing
+### Group Policy preferences tracing
 
 From the Group policy operational logs, we observe that the group policy was processed and the group policy preferences were applied successfully. In addition to the above we could also review the group policy preferences logging/tracing collected by the TSS tool.
 
@@ -148,11 +146,11 @@ The procmon trace can be overwhelming. Follow these steps to set up a filter to 
 2. Select on **Filter** - **Filter**
 3. Add the filter: **Detail** - Contains - *Z:*.
 
-   :::image type="content" source="media/scenario-guide-gpo-doesn-t-apply-settings-as-expected/screenshot-of-the-process-monitor-filter.png" alt-text="The screenshot of the process monitor filter." border="true":::
+   :::image type="content" source="media/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected/screenshot-of-the-process-monitor-filter.png" alt-text="The screenshot of the process monitor filter." border="true":::
 
 4. The output of the filter shows two process: **cmd.exe** and **net.exe**.
 
-   :::image type="content" source="media/scenario-guide-gpo-doesn-t-apply-settings-as-expected/screenshot-of-the-filter-result-that-show-cmd-exe-and-net-exe.png" alt-text="The screenshot of the filter result that shows cmd.exe and net.exe." border="true":::
+   :::image type="content" source="media/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected/screenshot-of-the-filter-result-that-show-cmd-exe-and-net-exe.png" alt-text="The screenshot of the filter result that shows cmd.exe and net.exe." border="true":::
 
 5. Double-click the net.exe and go to the **Process** tab that includes the following parameters:
 
@@ -160,14 +158,14 @@ The procmon trace can be overwhelming. Follow these steps to set up a filter to 
    - Parent PID: Parent process of net.exe is 13436.
    - User: The name of the User in who's context this process was run and in our example it's the user account itself.
 
-   :::image type="content" source="media/scenario-guide-gpo-doesn-t-apply-settings-as-expected/screenshot-of-the-process-tab-of-the-event-properties-in-procmon.png" alt-text="The screenshot of the Process tab of the event properties in Procmon." border="true":::
+   :::image type="content" source="media/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected/screenshot-of-the-process-tab-of-the-event-properties-in-procmon.png" alt-text="The screenshot of the Process tab of the event properties in Procmon." border="true":::
 
 Then, set up another filter to identify who spawned net.exe using the Parent process filter.
 
 1. Go to **Filter** - **Filter** and select **RESET**.
 2. Now apply the filter below using the PID of the parent.
 
-   :::image type="content" source="media/scenario-guide-gpo-doesn-t-apply-settings-as-expected/filter-the-trace-by-using-the-pid-is-13436-condition.png" alt-text="Filter the trace by using the PID is 13436 condition." border="true":::
+   :::image type="content" source="media/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected/filter-the-trace-by-using-the-pid-is-13436-condition.png" alt-text="Filter the trace by using the PID is 13436 condition." border="true":::
 
 We observe that the PID is cmd.exe and it appears its processing a GPO with below parameters:
 
@@ -175,17 +173,17 @@ We observe that the PID is cmd.exe and it appears its processing a GPO with belo
 - Parent PID: Parent process of cmd.exe is 14900
 - User: The name of the User in who's context this process was run and in our example, it’s the User itself.
 
-:::image type="content" source="media/scenario-guide-gpo-doesn-t-apply-settings-as-expected/screenshot-of-the-process-tab-of-the-process-13436.png" alt-text="The screenshot of the Process tab of the process 13436." border="true":::
+:::image type="content" source="media/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected/screenshot-of-the-process-tab-of-the-process-13436.png" alt-text="The screenshot of the Process tab of the process 13436." border="true":::
 
 Now, use the same mechanism and use the PID Filter again by going to **Filter** - **Filter** and then select on **RESET** and apply the below filter:
 
-:::image type="content" source="media/scenario-guide-gpo-doesn-t-apply-settings-as-expected/screenshot-of-the-process-tab-of-the-process-14900.png" alt-text="The screenshot of the Process tab of the process 14900." border="true":::
+:::image type="content" source="media/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected/screenshot-of-the-process-tab-of-the-process-14900.png" alt-text="The screenshot of the Process tab of the process 14900." border="true":::
 
 We observe that GPScrpit.exe is the parent process of the cmd.exe process. Using this hint, we observe that there's a Group Policy script that is deleting the mapped drive.
 
-:::image type="content" source="media/scenario-guide-gpo-doesn-t-apply-settings-as-expected/screenshot-of-the-process-14900-the-group-policy-script-application-process.png" alt-text="The screenshot of the process 14900, which is the Group Policy Script Application process." border="true":::
+:::image type="content" source="media/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected/screenshot-of-the-process-14900-the-group-policy-script-application-process.png" alt-text="The screenshot of the process 14900, which is the Group Policy Script Application process." border="true":::
 
-### Summary
+## Summary
 
 1. Net.exe is deleting the mapped drive and its parent process is cmd.exe. The following command is executed:
 
@@ -203,21 +201,21 @@ We observe that GPScrpit.exe is the parent process of the cmd.exe process. Using
 
 We need to identify the GPO that contains this Logon script. Here are two methods.
 
-#### Method 1: Gpresult /h output collected during log collection
+### Method 1: Gpresult /h output collected during log collection
 
-:::image type="content" source="media/scenario-guide-gpo-doesn-t-apply-settings-as-expected/screenshot-of-the-gpresult-h-output.png" alt-text="The screenshot of the Gpresult /h output." border="true":::
+:::image type="content" source="media/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected/screenshot-of-the-gpresult-h-output.png" alt-text="The screenshot of the Gpresult /h output." border="true":::
 
-#### Method 2: Using Group Policy management snap-in (GPMC.msc)
+### Method 2: Using group policy management snap-in (GPMC.msc)
 
 1. Open *GPMC.msc* on a Domain controller or a machine where you have the snap-in installed.
 2. Right click the domain and select **Search**.
 3. In the search items, select GUID, and then enter the GPO GUID that we found in the command of cmd.exe.
 
-:::image type="content" source="media/scenario-guide-gpo-doesn-t-apply-settings-as-expected/search-gpo-by-guid.png" alt-text="Search GPO by GUID." border="true":::
+:::image type="content" source="media/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected/search-gpo-by-guid.png" alt-text="Search GPO by GUID." border="true":::
 
 We identified that the **DomainWideSettings** GPO has the logon script.
 
-:::image type="content" source="media/scenario-guide-gpo-doesn-t-apply-settings-as-expected/find-the-gpo-that-caused-the-issue.png" alt-text="Find the GPO that caused the issue." border="true":::
+:::image type="content" source="media/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected/find-the-gpo-that-caused-the-issue.png" alt-text="Find the GPO that caused the issue." border="true":::
 
 If you don't want the **DomainWideSettings** GPO to delete the mapped drive, use one of these methods:
 
