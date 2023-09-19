@@ -89,7 +89,7 @@ To work around this problem, use one of the following methods:
     Now, searching on `.325` works as expected.
 
     ```sql
-    SELECT * FROM sys.dm_fts_parser('.325', 0, 0,0) Specifying Neutral word breaker.
+    SELECT * FROM sys.dm_fts_parser('.325', 0, 0,0) -- Specifying Neutral word breaker.
     ```
 
     Results
