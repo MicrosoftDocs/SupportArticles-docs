@@ -23,7 +23,7 @@ Use Command checker to diagnose common issues like:
 - [A button on the command bar is hidden when it should be visible](ribbon-issues-button-hidden.md)
 - [A button on the command bar is visible when it should be hidden](ribbon-issues-button-visible.md)
 - [A button on the command bar isn't working correctly](ribbon-issues-button-not-working-correctly.md)
-- [A button on the command bar has the wrong label](ribbon-issues-button-wrong-label.md)
+- [A button on the command bar has wrong labels](ribbon-issues-button-wrong-label.md)
 
 > [!IMPORTANT]
 > These issues are often caused by missing or incorrect ribbon metadata. Typically, this situation can be resolved by regenerating all ribbon metadata. Command checker has a feature that enables you to [trigger the regeneration of all ribbon metadata](regenerate-ribbon-metadata.md). Only system administrators, system customizers, and makers have the permissions to regenerate metadata.
@@ -32,7 +32,7 @@ Use Command checker to diagnose common issues like:
 
 To enable Command checker, append the `&ribbondebug=true` parameter to the URL of the app. For example: `https://yourorgname.crm.dynamics.com/main.aspx?appid=<ID>&ribbondebug=true`.
 
-:::image type="content" source="media/ribbon-issues/enable-command-checker.png" alt-text="Screenshot shows the parameter is appended to a Dynamics 365 application U R L." lightbox="media/ribbon-issues/enable-command-checker.png":::
+:::image type="content" source="media/ribbon-issues/enable-command-checker.png" alt-text="Screenshot shows the parameter is appended to a Dynamics 365 application URL." lightbox="media/ribbon-issues/enable-command-checker.png":::
 
 ### Inspect a command
 

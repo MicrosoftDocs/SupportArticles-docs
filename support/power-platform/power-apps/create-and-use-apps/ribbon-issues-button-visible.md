@@ -20,7 +20,7 @@ A button will be made visible if all the [enable rules](/powerapps/developer/mod
 > Do not remove the `Mscrm.HideOnModern` display rule from a command to force a button to appear in the Unified Interface. Commands that have the `Mscrm.HideOnModern` display rule are intended for the legacy Web Client interface and are not supported in the Unified Interface, and may not work correctly.
 
 1. [Enable Command checker and select the command button to inspect](/troubleshoot/power-platform/power-apps/create-and-use-apps/ribbon-issues#use-commmand-checker).
-1. The following example shows there are two **Appointment** buttons on the activities grid page, and one is expected to be hidden.
+1. The following example shows two **Appointment** buttons on the activities grid page, and one is expected to be hidden.
 
     :::image type="content" source="media/ribbon-issues-button-visible/appointment-button.png" alt-text="Screenshot shows there are two Appointment buttons on the activities grid page.":::
 
@@ -82,7 +82,7 @@ Based on our example scenario, we identified the entity is **activitypointer** a
 1. Select the entity your command is defined on (In our example, this is **activitypointer**) and select **OK**.
 1. Make sure you uncheck the **Include entity metadata** and **uncheck Add all assets** options before selecting **Finish**.
 1. Select **Save**.
-1. Select **Export Solution** and export unmanaged solution.
+1. Select **Export Solution** and export the unmanaged solution.
 1. Extract the .zip file.
 1. Open the _customizations.xml_ file.
 1. Locate the `<Entity>` node child of the entity node you wish to edit and locate its child `<RibbonDiffXml>` node.
@@ -108,7 +108,7 @@ If the command isn't entity-specific, rather it's applicable to "All Entities" d
 1. Select **New** to create a new solution, set Publisher to the value shown in the Command Checker's solution layers listing for the command and the Active solution layer.
 1. Select **Client Extensions** > **Add Existing** > **Application Ribbons**.
 1. Select **Save**.
-1. Select **Export Solution** and export unmanaged solution.
+1. Select **Export Solution** and export the unmanaged solution.
 1. Extract the .zip file.
 1. Open the _customizations.xml_ file.
 1. Locate the root `<RibbonDiffXml>` node.
@@ -170,7 +170,7 @@ Based on our example scenario, we identified the entity is **activitypointer** a
 1. Select the entity your command is defined on (In our example, this is **activitypointer**) and select **OK**.
 1. Make sure you uncheck the **Include entity metadata** and **Add all assets** options before selecting **Finish**.
 1. Select **Save**.
-1. Select **Export Solution** and export unmanaged solution.
+1. Select **Export Solution** and export the unmanaged solution.
 1. Extract the .zip file.
 1. Open the _customizations.xml_ file.
 1. Locate the `<Entity>` node child of the entity node that you want to edit, and locate its child `<RibbonDiffXml>` node.
@@ -195,7 +195,7 @@ If the command isn't entity-specific, rather it's applicable to "All entities" d
 1. Select **New** to create a new solution, set Publisher to the value shown in the Command Checker's solution layers listing for the command and the Active solution layer.
 1. Select **Client Extensions** > **Add Existing** > **Application Ribbons**.
 1. Select **Save**.
-1. Select **Export Solution** and export unmanaged solution.
+1. Select **Export Solution** and export the unmanaged solution.
 1. Extract the .zip file.
 1. Open the _customizations.xml_ file.
 1. Locate the root `<RibbonDiffXml>` node.
@@ -281,7 +281,7 @@ Based on our example scenario, we identified the entity is **contact** and the e
 1. Select the entity your enable/display rule is defined on (In our example, this is **contact**) and select **OK**.
 1. Make sure you uncheck the **Include entity metadata** and **Add all assets** options before selecting **Finish**.
 1. Select **Save**.
-1. Select **Export Solution** and export unmanaged solution.
+1. Select **Export Solution** and export the unmanaged solution.
 1. Extract the .zip file.
 1. Open the _customizations.xml_ file.
 1. Locate the `<Entity>` node child of the entity node you wish to edit and locate its child `<RibbonDiffXml>` node.
@@ -306,7 +306,7 @@ If the enable/display rule isn't entity-specific, rather it's applicable to "All
 1. Select **New** to create a new solution, set Publisher to the value shown in the Command Checker's solution layers listing for the enable/display rule and the Active solution layer.
 1. Select **Client Extensions** > **Add Existing** > **Application Ribbons**.
 1. Select **Save**.
-1. Select **Export Solution** and export unmanaged solution.
+1. Select **Export Solution** and export the unmanaged solution.
 1. Extract the .zip file.
 1. Open the _customizations.xml_ file.
 1. Locate the root `<RibbonDiffXml>` node.

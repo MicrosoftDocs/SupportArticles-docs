@@ -356,7 +356,7 @@ Select the option that reflects your scenario:
 
   <!-- **Fix Script Error "Invalid JavaScript Action Library" from the unmanaged Active solution** -->
 
-    To fix a command in the **Active** unmanaged solution layer, you'll export an unmanaged solution containing the entity or Application Ribbon and edit the `<RibbonDiffXml>` node in the _customizations.xml_ file, and then import a new version of this solution containing the fixed command definition. See Export, prepare to edit, and import the ribbon.
+    To fix a command in the **Active** unmanaged solution layer, you'll export an unmanaged solution containing the entity or Application Ribbon and edit the `<RibbonDiffXml>` node in the _customizations.xml_ file, and then import a new version of this solution containing the fixed command definition. See [Export, prepare to edit, and import the ribbon](/powerapps/developer/model-driven-apps/export-prepare-edit-import-ribbon).
 
     > [!WARNING]
     > Do not remove `Mscrm.HideOnModern` display rule from a command to force a button to appear in the Unified Interface. Commands that have the `Mscrm.HideOnModern` display rule are intended for the legacy Web Client interface and are not supported in the Unified Interface, and might not work correctly.
