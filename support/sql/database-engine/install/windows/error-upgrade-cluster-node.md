@@ -61,11 +61,11 @@ To complete the upgrade for node A, there are two phases:
 
   1. Remove node A from the possible owners list in order to prevent accidentally failing over back to it. To change the possible owners list, do the following:
 
-    1. Start the Failover Cluster Manager snap-in on any failover node.
-    1. Under **Roles**, select the SQL Server failover cluster instance in the top pane.
-    1. Click **Resources** in the bottom pane, right-click the **Server Name** resource, and then select **Properties**.
-    1. Click **Advanced Policies** in the **Properties** dialog box.
-    1. Select or clear the necessary check boxes for each node to add or remove the nodes.
+        1. Start the Failover Cluster Manager snap-in on any failover node.
+        1. Under **Roles**, select the SQL Server failover cluster instance in the top pane.
+        1. Click **Resources** in the bottom pane, right-click the **Server Name** resource, and then select **Properties**.
+        1. Click **Advanced Policies** in the **Properties** dialog box.
+        1. Select or clear the necessary check boxes for each node to add or remove the nodes.
 
   1. Open the *summary.txt* file in the following location *%Program Files%\Microsoft SQL Server\110\Setup Bootstrap\Log*.
 

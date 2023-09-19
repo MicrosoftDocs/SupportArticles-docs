@@ -47,10 +47,10 @@ When you try to install a SQL Server 2008 R2 failover cluster instance, the inst
 
 ### Cause
 
-This issue occurs if the COM-based *MSClus.dll* library isn't enabled.
+This issue occurs if the COM-based MSClus.dll library isn't enabled.
 
 > [!NOTE]
-> The SQL Server 2008 and SQL Server 2008 R2 cluster Setup programs depend on the COM-based *MSClus.dll* library. If this library isn't enabled on the cluster node, the Setup fails.
+> The SQL Server 2008 and SQL Server 2008 R2 cluster Setup programs depend on the COM-based MSClus.dll library. If this library isn't enabled on the cluster node, the Setup fails.
 
 ### Resolution
 
