@@ -71,7 +71,7 @@ Here are the results:
 
 Here's an example timeline:
 
-:::image type="content" source="media/recover-from-golden-gmsa-attack/gmsas-timeline.png" alt-text="Diagram of an example gMSAs timeline.":::
+:::image type="content" source="media/recover-from-golden-gmsa-attack/gmsas-timeline.png" alt-text="Diagram of an example gMSAs timeline." lightbox="media/recover-from-golden-gmsa-attack/gmsas-timeline.png":::
 
 For debugging, you can review the event IDs for the System, Security, Directory Services, and Security-Netlogon event log.
 
