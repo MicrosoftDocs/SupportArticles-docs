@@ -19,21 +19,8 @@ A button will be made visible if all the [enable rules](/powerapps/developer/mod
 > [!WARNING]
 > Do not remove the `Mscrm.HideOnModern` display rule from a command to force a button to appear in the Unified Interface. Commands that have the `Mscrm.HideOnModern` display rule are intended for the legacy Web Client interface and are not supported in the Unified Interface, and may not work correctly.
 
-The in-app tool, Command Checker, will be used to inspect the ribbon component definitions to help us determine why the button is visible unexpectedly.
-
-To enable the Command Checker tool, you must append a `&ribbondebug=true` parameter to your Dynamics 365 application URL. For example: `https://yourorgname.crm.dynamics.com/main.aspx?appid=<ID>&ribbondebug=true`.
-
-:::image type="content" source="media/ribbon-issues-button-visible/enable-command-checker.png" alt-text="Screenshot shows the parameter is appended to your Dynamics 365 application U R L." lightbox="media/ribbon-issues-button-visible/enable-command-checker.png":::
-
-> [!NOTE]
-> Currently the Command Checker tool only works in a web browser and does not work in Android and iOS apps. A future update is planned to make this work in these mobile apps.
-
-Once the Command Checker tool has been enabled, within the application in each of the various command bars (global, form, grid, subgrid), there will be a new special "Command checker" :::image type="icon" source="media/ribbon-issues-button-visible/command-checker-button-icon.png" border="false"::: button to open the tool (it may be listed in the **More** overflow flyout menu).
-
-1. Navigate to the page in the application where the button is displayed.
-1. Locate the command bar that the button is visible in.
-1. Select the "Command checker" :::image type="icon" source="media/ribbon-issues-button-visible/command-checker-button-icon.png" border="false"::: button (it may be listed in the **More** overflow flyout menu).
-1. Find and select your button in the list of buttons displayed in the left-most pane of the Command Checker tool. Buttons that aren't visible will be denoted by de-emphasized and italicized font along with the **(hidden)** term. Buttons that are visible will be displayed with the label in the normal font. The following example shows there are two **Appointment** buttons on the activities grid page, and one is expected to be hidden.
+1. [Enable Command checker and select the command button to inspect](ribbon-issues#use-commmand-checker).
+1. The following example shows there are two **Appointment** buttons on the activities grid page, and one is expected to be hidden.
 
     :::image type="content" source="media/ribbon-issues-button-visible/appointment-button.png" alt-text="Screenshot shows there are two Appointment buttons on the activities grid page.":::
 

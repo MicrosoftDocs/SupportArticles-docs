@@ -26,6 +26,8 @@ items:
               href: create-and-use-apps/ribbon-issues-button-visible.md
             - name: Button isn't working correctly
               href: create-and-use-apps/ribbon-issues-button-not-working-correctly.md
+            - name: Button has the wrong label
+              href: create-and-use-apps/ribbon-issues-button-wrong-label.md
             - name: Non-customizable buttons in ribbon
               href: create-and-use-apps/ribbon-non-customizable-buttons.md
             - name: Regenerate ribbon metadata

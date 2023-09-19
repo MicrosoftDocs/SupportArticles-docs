@@ -19,21 +19,8 @@ A button can be hidden due to an [enable rule](/powerapps/developer/model-driven
 > - Any display rule of the **EntityPrivilegeRule** type with a **PrivilegeType** value of one of the following (**Create**, **Write**, **Delete**, **Assign**, **Share**) will evaluate to false if the entity has the **Read-Only in Mobile** option enabled, which will force the entity to only permit **Read** privilege. Examples of some of the most common default system rules that will evaluate to false when the **Read-Only in Mobile** flag is enabled on the entity, are as follows, but not limited only to this list (`Mscrm.CreateSelectedEntityPermission`, `Mscrm.CanSavePrimary`, `Mscrm.CanWritePrimary`, `Mscrm.CanWriteSelected`, `Mscrm.WritePrimaryEntityPermission`, `Mscrm.WriteSelectedEntityPermission`, `Mscrm.CanDeletePrimary`, `Mscrm.DeletePrimaryEntityPermission`, `Mscrm.DeleteSelectedEntityPermission`, `Mscrm.AssignSelectedEntityPermission`, `Mscrm.SharePrimaryPermission`, `Mscrm.ShareSelectedEntityPermission`). You can edit the entity and uncheck the **Read-Only in Mobile** option to permit these rules to evaluate to true, provided the privilege being tested by the rule is also granted to the user.
 > - Do not remove the `Mscrm.HideOnModern` display rule from a command to force a button to appear in the Unified Interface. Commands that have the `Mscrm.HideOnModern` display rule are intended for the legacy Web Client interface and are not supported in the Unified Interface, and may not work correctly.
 
-The in-app tool, Command Checker, will be used to inspect the ribbon component definitions to help us determine why the button is hidden.
-
-To enable the Command Checker tool, you must append a `&ribbondebug=true` parameter to your Dynamics 365 application URL. For example: `https://yourorgname.crm.dynamics.com/main.aspx?appid=<ID>&ribbondebug=true`.
-
-:::image type="content" source="media/ribbon-issues-button-hidden/enable-command-checker.png" alt-text="Screenshot shows the parameter is appended to a Dynamics 365 application U R L." lightbox="media/ribbon-issues-button-hidden/enable-command-checker.png":::
-
-> [!NOTE]
-> Currently, the Command Checker tool only works in a web browser and does not work in Android and iOS apps. A future update is planned to make this work in these mobile apps.
-
-Once the Command Checker tool has been enabled, within the application in each of the various command bars (global, form, grid, subgrid), there will be a new special "Command Checker" :::image type="icon" source="media/ribbon-issues-button-hidden/command-checker-button-icon.png" border="false"::: button to open the tool (it may be listed in the **More** overflow flyout menu).
-
-1. Navigate to the page in the application where the button should be displayed.
-1. Locate the command bar that the button is expected to be shown in.
-1. Click the "Command checker" :::image type="icon" source="media/ribbon-issues-button-hidden/command-checker-button-icon.png" border="false"::: button (it may be listed in the **More** overflow flyout menu).
-1. Find and click your button in the list of buttons displayed in the left-most pane of the Command Checker tool. Buttons that are not visible will be denoted by de-emphasized and italicized font along with the **(hidden)** term. The following example shows the **New** button on the contact entity's grid page is not visible and is represented by an item labeled **New (hidden)**.
+1. [Enable Command checker and select the command button to inspect](ribbon-issues#use-commmand-checker).
+1. The following example shows the **New** button on the contact entity's grid page is not visible and is represented by an item labeled **New (hidden)**.
 
     > [!NOTE]
     > If your button is not listed, it could be due to a [HideCustomAction](/powerapps/developer/model-driven-apps/define-custom-actions-modify-ribbon#hide-custom-actions) customization that may have been installed, or the associated command has a `Mscrm.HideOnModern` display rule. At the time of writing this guide, the Command Checker tool does not list buttons that have been hidden by a `HideCustomAction` or `Mscrm.HideOnModern` display rule. We are currently working to augment this listing to include this information in a future update.

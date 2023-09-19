@@ -40,21 +40,8 @@ If these configurations are correct, a JavaScript code error might be the cause.
 
 Identify what the button command is and which solution installed the bad definition.
 
-You'll use the in-app tool, Command Checker, to inspect the ribbon component definitions to help determine why selecting the button causes an error.
-
-To enable the Command Checker tool, you must append a `&ribbondebug=true` parameter to your Dynamics 365 application URL. For example: `https://yourorgname.crm.dynamics.com/main.aspx?appid=<ID>&ribbondebug=true`
-
-:::image type="content" source="media/ribbon-issues-button-not-working-correctly/enable-command-checker.png" alt-text="Screenshot shows the parameter is appended to the Dynamics 365 application U R L." lightbox="media/ribbon-issues-button-not-working-correctly/enable-command-checker.png":::
-
-> [!NOTE]
-> Currently the Command Checker tool works only in a web browser. It does not work in Android and iOS apps. A future update is planned to make this tool work in these mobile apps.
-
-After the Command Checker tool is enabled, look within the application on each of the various command bars (global, form, grid, subgrid). You'll see a new special "Command checker" :::image type="icon" source="media/ribbon-issues-button-not-working-correctly/command-checker-button-icon.png" border="false"::: button to open the tool (it might be listed on the **More** overflow flyout menu).
-
-1. Navigate to the page in the application on which the button is displayed.
-1. Locate the command bar on which the button is displayed.
-1. Select the "Command checker" :::image type="icon" source="media/ribbon-issues-button-not-working-correctly/command-checker-button-icon.png" border="false"::: button (it might be listed in the **More** overflow flyout menu).
-1. Find and select your button in the list of buttons displayed in the left-most pane of the Command Checker tool. Buttons that are not visible will be denoted by a de-emphasized and italicized font together with the **(hidden)** term. Buttons that are visible will be displayed by having the label in a normal font. Select the **Command Properties** tab to display the details of the command for this button.
+1. [Enable Command checker and select the command button to inspect](ribbon-issues#use-commmand-checker).
+1. Select the **Command Properties** tab to display the details of the command for this button.
 
     :::image type="content" source="media/ribbon-issues-button-not-working-correctly/command-properties.png" alt-text="Screenshot of the Command Properties tab of a button.":::
 
@@ -270,21 +257,8 @@ You might receive a script error message that resembles the following:
 
 This is caused by an invalid ribbon command customization that has declared an incorrect Library on the command's `JavaScriptFunction`.
 
-The in-app tool, Command Checker, will be used to inspect the ribbon component definitions to help us determine how to fix this issue.
-
-To enable the Command Checker tool, you must append a `&ribbondebug=true` parameter to your Dynamics 365 application URL. For example: `https://yourorgname.crm.dynamics.com/main.aspx?appid=<ID>&ribbondebug=true`
-
-:::image type="content" source="media/ribbon-issues-button-not-working-correctly/enable-command-checker.png" alt-text="Screenshot shows the parameter is appended to a Dynamics 365 application U R L." lightbox="media/ribbon-issues-button-not-working-correctly/enable-command-checker.png":::
-
-> [!NOTE]
-> Currently the Command Checker tool only works in a web browser and does not work in Android and iOS apps. A future update is planned to make this work in these mobile apps.
-
-Once the Command Checker tool has been enabled, within the application in each of the various command bars (global, form, grid, subgrid), there will be a new special "Command checker" :::image type="icon" source="media/ribbon-issues-button-not-working-correctly/command-checker-button-icon.png" border="false"::: button to open the tool (it might be listed in the **More** overflow flyout menu).
-
-1. Navigate to the page in the application where the button is displayed.
-1. Locate the command bar that the button visible in.
-1. Select the "Command checker" :::image type="icon" source="media/ribbon-issues-button-not-working-correctly/command-checker-button-icon.png" border="false"::: button (it might be listed in the **More** overflow flyout menu).
-1. Find and select your button in the list of buttons displayed in the left-most pane of the Command Checker tool to show the button and command properties. The following example shows the **New** button on the account entity's form page is visible and is represented by an item labeled **New**.
+1. [Enable Command checker and select the command button to inspect](ribbon-issues#use-commmand-checker).
+1. The following example shows the **New** button on the account entity's form page is visible and is represented by an item labeled **New**.
 
     :::image type="content" source="media/ribbon-issues-button-not-working-correctly/new-button.png" alt-text="Screenshot shows the New button on the account entity's form page.":::
 
@@ -496,21 +470,8 @@ When a button is selected and an error occurs, it might be caused by an incorrec
 
 Let's identify what the button's command is and what solution installed the definition.
 
-The in-app tool, Command Checker will be used to inspect the ribbon component definitions to help us determine why selecting the button results in an error.
-
-To enable the Command Checker tool, you must append a `&ribbondebug=true` parameter to your Dynamics 365 application URL. For example: `https://yourorgname.crm.dynamics.com/main.aspx?appid=<ID>&ribbondebug=true`
-
-:::image type="content" source="media/ribbon-issues-button-not-working-correctly/enable-command-checker.png" alt-text="Screenshot shows the parameter is appended to your Dynamics 365 application U R L." lightbox="media/ribbon-issues-button-not-working-correctly/enable-command-checker.png":::
-
-> [!NOTE]
-> Currently the Command Checker tool only works in a web browser and does not work in Android and iOS apps. A future update is planned to make this work in these mobile apps.
-
-Once the Command Checker tool has been enabled, within the application in each of the various command bars (global, form, grid, subgrid), there will be a new special "Command checker" :::image type="icon" source="media/ribbon-issues-button-not-working-correctly/command-checker-button-icon.png" border="false"::: button to open the tool (it might be listed in the **More** overflow flyout menu).
-
-1. Navigate to the page in the application where the button is displayed.
-1. Locate the command bar that the button visible in.
-1. Select the "Command checker" :::image type="icon" source="media/ribbon-issues-button-not-working-correctly/command-checker-button-icon.png" border="false"::: button (it might be listed in the **More** overflow flyout menu).
-1. Find and select your button in the list of buttons displayed in the left-most pane of the Command Checker tool. Buttons that are not visible will be denoted by de-emphasized and italicized font along with the **(hidden)** term. Buttons that are visible will be displayed with the label in the normal font. Select the **Command Properties** tab to display the details of the command for this button.
+1. [Enable Command checker and select the command button to inspect](ribbon-issues#use-commmand-checker).
+1. Select the **Command Properties** tab to display the details of the command for this button.
 
     :::image type="content" source="media/ribbon-issues-button-not-working-correctly/command-properties.png" alt-text="Screenshot of the Command Properties tab of the Delete button.":::
 
