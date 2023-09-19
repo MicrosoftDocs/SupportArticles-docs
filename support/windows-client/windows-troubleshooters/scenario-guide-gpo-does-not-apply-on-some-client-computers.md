@@ -81,7 +81,7 @@ First, we need to collect data on both a client computer in Phoenix and a client
 
 8. TSS would stop collecting data and the collected data would be located in the C:\MSDATA folder as a Zip file or folder with the name TSS_\<Machinename\>_\<Time\>_ADS_GPOEx
 
-For more information about TSS, see [Introduction to TroubleShootingScript toolset (TSS)](../windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tss.md).
+For more information about TSS, see [Introduction to TroubleShootingScript toolset (TSS)](introduction-to-troubleshootingscript-toolset-tss.md).
 
 #### Compare GPResult
 

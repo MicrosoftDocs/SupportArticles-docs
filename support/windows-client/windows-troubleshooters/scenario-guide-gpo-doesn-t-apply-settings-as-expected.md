@@ -70,6 +70,8 @@ First, collect the following data for troubleshooting. Because we need to trace 
 7. Switch user again, and then sign in with the user account who has started the TSS Logging. Press Y.
 8. TSS will stop collecting data and the collected data will be located in the C:\MSDATA folder as a Zip file or folder with the name TSS_\<Machinename\>_\<Time\>_ADS_GPOEx.
 
+For more information about TSS, see [Introduction to TroubleShootingScript toolset (TSS)](introduction-to-troubleshootingscript-toolset-tss.md).
+
 ### Data Analysis
 
 Go to the *c:\msdata* folder where TSS has saved all the reports and extract the contents of the ZIP file. Review the file with the name <Client_machinename>-<Time>_Microsoft-Windows-GroupPolicy-Operational.evtx.
