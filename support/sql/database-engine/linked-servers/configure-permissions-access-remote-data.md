@@ -41,7 +41,7 @@ After a linked server is saved, the `DisallowAdHocAccess` property can be set on
 To add the `DisallowAdHocAccess` value, follow these steps:
 
 1. Start Registry Editor.
-2. Locate and then click the key in the registry: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Providers\<ProviderName>**  
+2. Locate and then select the key in the registry: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Providers\<ProviderName>**  
 
    Example:
    If you're trying to change this for Microsoft OLEDB Provider for ODBC Drivers, the key will be:
@@ -66,7 +66,7 @@ After ensuring that the **Ad Hoc Distributed Queries** advanced configuration op
 To modify an existing `DisallowAdHocAccess` value, follow these steps:
 
 1. Start Registry Editor.
-2. Locate and then click the `DisallowAdHocAccess` value under the key in the registry: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Providers\<ProviderName>**  
+2. Locate and then select the `DisallowAdHocAccess` value under the key in the registry: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Providers\<ProviderName>**  
 
    Example:
    `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Providers\Microsoft.ACE.OLEDB.12.0`

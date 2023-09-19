@@ -76,10 +76,10 @@ You may have problems if you implement a central merge subscriber model. Example
 
 - For more information about how to integrate data from multiple sites in Microsoft SQL Server 2005, see [Integrating Data from Multiple Sites (Client)](/previous-versions/sql/sql-server-2005/ms151790(v=sql.90)).
 
-- For more information about publishing data and database objects in SQL Server 2012, see the **Publishing Tables in More Than One Publication** topic in [Publish Data and Database Objects](/sql/relational-databases/replication/publish/publish-data-and-database-objects).
+- For more information about publishing data and database objects in SQL Server 2012, see the **Publishing Tables in More Than One Publication** topic in [Publish Data and Database Objects](/sql/relational-databases/replication/publish/publish-data-and-database-objects#publishing-tables-in-more-than-one-publication).
 
-- For more information about publishing data and database objects in SQL Server 2008 R2, see the **Publishing Tables in More Than One Publication** topic in [Publishing Data and Database Objects](/previous-versions/sql/sql-server-2008-r2/ms152559(v=sql.105)).
+- For more information about publishing data and database objects in SQL Server 2008 R2, see the **Publishing Tables in More Than One Publication** topic in [Publishing Data and Database Objects](/previous-versions/sql/sql-server-2008-r2/ms152559(v=sql.105)#publishing-tables-in-more-than-one-publication).
 
-- For more information about publishing data and database objects in SQL Server 2008, see the **Publishing Tables in More Than One Publication** topic in [Publishing Data and Database Objects](/previous-versions/sql/sql-server-2008/ms152559(v=sql.100)).
+- For more information about publishing data and database objects in SQL Server 2008, see the **Publishing Tables in More Than One Publication** topic in [Publishing Data and Database Objects](/previous-versions/sql/sql-server-2008/ms152559(v=sql.100)#publishing-tables-in-more-than-one-publication).
 
-- For more information about publishing data and database objects in SQL Server 2005, see the **Publishing Tables in More Than One Publication** topic in [Publishing Data and Database Objects](/previous-versions/sql/sql-server-2005/ms152559(v=sql.90)).
+- For more information about publishing data and database objects in SQL Server 2005, see the **Publishing Tables in More Than One Publication** topic in [Publishing Data and Database Objects](/previous-versions/sql/sql-server-2005/ms152559(v=sql.90)#publishing-tables-in-more-than-one-publication).

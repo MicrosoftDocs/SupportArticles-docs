@@ -175,7 +175,7 @@ To resolve these problems by using a script, follow these steps:
     > [!NOTE]
     > Look for more information about these steps in the [FindSQLInstalls.vbs examples](#findsqlinstallsvbs-examples) section.
 
-1. Repeat steps 2 through 4 until the text file created in step 2 is free of text referencing invalid paths or incorrect files for the component being changed.
+1. Repeat steps 2 through 4 until the text file created in step 2 is free of text referencing invalid paths or missing files for the component being changed.
 
 ### FindSQLInstalls.vbs examples
 
@@ -275,7 +275,7 @@ You can start the Setup program for the update that resulted in the error and re
 
 To obtain a list of all the missing Windows Installer cache files that are related to the SQL Server product components, you can download the SQL Server 2008 R2 BPA tool that is mentioned in the [More information](#more-information) section.
 
-If the error message references a missing Windows Installer database file (.msi), you don't have to perform steps 2 through 4. Instead, you can go directly to step 5. You have to locate the .msi from the original media that you used to install the product. If this error message was generated for _sql_engine_core_inst.msi_, then you have to locate this file from the setup media under the folder structure: `\x64\setup\sql_engine_core_inst_msi\`. The other steps are the same.
+If the error message references a missing Windows Installer database file (.msi), you don't have to perform steps 2 through 4. Instead, you can go directly to step 5. You have to locate the .msi from the original media that you used to install the product. If this error message was generated for _sql_engine_core_inst.msi_, then you have to locate this file from the setup media under the folder structure *\x64\setup\sql_engine_core_inst_msi\*. The other steps are the same.
 
 ### Find the patch package and the product details for a missing .msp file
 
@@ -316,10 +316,10 @@ To find more details about the missing *.msp* file in the Windows Installer cach
    Data: GDR 2050 for SQL Server Database Services 2005 ENU (KB932555)
    ```
 
- Now, you have all the information points to start the steps to resolve the missing files in the Windows Installer cache.
+   Now, you have all the information points to start the steps to resolve the missing files in the Windows Installer cache.
 
-> [!NOTE]
-> If you use SQL Server 2008 Service Pack 3 (SP3) or a later version, you can also receive a similar error message for the missing .msi files. By using this error message, you can quickly determine which file is missing, what service pack to download, and where to find the download.
+   > [!NOTE]
+   > If you use SQL Server 2008 Service Pack 3 (SP3) or a later version, you can also receive a similar error message for the missing .msi files. By using this error message, you can quickly determine which file is missing, what service pack to download, and where to find the download.
 
 For more information about how to obtain the service pack, see [KB2546951 - List of issues that are fixed by SQL Server 2008 Service Pack 3](https://support.microsoft.com/help/2546951).
 
@@ -332,8 +332,8 @@ You can restore from system state backups as described in [Missing Windows Insta
 > [!NOTE]
 > The following error messages can be found as text messages in the event log or in the Setup logs that are located in one of the following folders, and they indicate that you should repair your affected instance being proceeding further:
 >
-> - For SQL Server 2008 and SQL Server 2008 R2: `C:\Program Files\Microsoft SQL Server\100\Setup Bootstrap`
-> - For SQL Server 2012: `C:\Program Files\Microsoft SQL Server\110\Setup Bootstrap`
+> - For SQL Server 2008 and SQL Server 2008 R2: *C:\Program Files\Microsoft SQL Server\100\Setup Bootstrap*
+> - For SQL Server 2012: *C:\Program Files\Microsoft SQL Server\110\Setup Bootstrap*
 
 - **For SQL 2005 (all branches)**
 
@@ -342,19 +342,19 @@ You can restore from system state backups as described in [Missing Windows Insta
     |SQL Server 2005|1636 Unable to install Windows Installer MSI file<br/>|1636 Unable to install Windows Installer MSP file<br/>|
 
     > [!NOTE]
-    > You must review the setup log files to identify whether any cache files are missing. For more information about how to do this, go to the [Resolution](#solution-1-repair-the-sql-server-installation) sections.
+    > You must review the setup log files to identify whether any cache files are missing. For more information about how to do this, see the [Resolution](#solution-1-repair-the-sql-server-installation) section.
 
 - **For SQL Server 2008 SP1**
 
     |Product version| Error message when the Installer Package (MSI) is missing| Error message when the Installer Cache Package (MSP) is missing |
     |---|---|---|
-    |SQL Server 2008 SP1|No error message|TITLE: SQL Server Setup failure.<br/>------------------------------<br/>SQL Server Setup has encountered the error: **The patch file cannot be opened. The file is: c:\WINNT\Installer\FileName.msp. Error code 0x84B20001.**<br/>------------------------------<br/>|
+    |SQL Server 2008 SP1|No error message|TITLE: SQL Server Setup failure.<br/>------------------------------<br/>SQL Server Setup has encountered the error: "The patch file cannot be opened. The file is: c:\WINNT\Installer\FileName.msp. Error code 0x84B20001."<br/>------------------------------<br/>|
 
 - **For SQL Server 2008 SP3 build-only (CU/GDR branches are not applicable)**
 
     |Product version| Error message when the Installer Package (MSI) is missing| Error message when the Installer Cache Package (MSP) is missing |
     |---|---|---|
-    |SQL Server 2008 SP3|The cached MSI file *C:\Windows\Installer\FileName.msi* is missing. Its original file is *sql_engine_core_inst.msi* and it was installed for product SQL Server 2008 Database Engine Services from `NetworkPath`, version `VersionNumber`, language `ENU`.<br/>|The cached patch file `C:\Windows\Installer\FileName.msp` is missing. The original file for this cached file is *sql_engine_core_inst.msp*, which can be installed from Service Pack 3 for SQL Server 2008 (KB2546951) (64-bit), version `VersionNumber`<br/>|
+    |SQL Server 2008 SP3 | The cached MSI file *C:\Windows\Installer\FileName.msi* is missing. Its original file is *sql_engine_core_inst.msi* and it was installed for product SQL Server 2008 Database Engine Services from \<NetworkPath>, version \<VersionNumber>, language \<ENU>.|The cached patch file *C:\Windows\Installer\FileName.msp* is missing. The original file for this cached file is *sql_engine_core_inst.msp*, which can be installed from Service Pack 3 for SQL Server 2008 (KB2546951) (64-bit), version \<VersionNumber>.|
 
     > [!NOTE]
     > You receive the following error message when you perform an upgrade:  
@@ -364,7 +364,7 @@ You can restore from system state backups as described in [Missing Windows Insta
 
     |Product version| Error message when the Installer Package (MSI) is missing| Error message when the Installer Cache Package (MSP) is missing |
     |---|---|---|
-    |SQL Server 2008 R2 SP1|TITLE: SQL Server Setup failure.<br/>------------------------------<br/>SQL Server Setup has encountered the following error: **C:\Windows\Installer\FileName.msi**.<br/>------------------------------<br/>|The cached patch file `C:\Windows\Installer\FileName.msp` is missing. The original file for this cached file is `sql_engine_core_inst_loc.msp`, which can be installed from Service Pack 1 for SQL Server 2008 R2 (KB2528583) (64-bit), version `VersionNumber`.<br/>|
+    |SQL Server 2008 R2 SP1|TITLE: SQL Server Setup failure.<br/>------------------------------<br/>SQL Server Setup has encountered the following error: "C:\Windows\Installer\FileName.msi".<br/>------------------------------<br/>|The cached patch file *C:\Windows\Installer\FileName.msp* is missing. The original file for this cached file is *sql_engine_core_inst_loc.msp*, which can be installed from Service Pack 1 for SQL Server 2008 R2 (KB2528583) (64-bit), version \<VersionNumber>.<br/>|
 
     > [!NOTE]
     > You receive the following error message when you perform an upgrade:
@@ -374,7 +374,7 @@ You can restore from system state backups as described in [Missing Windows Insta
 
     |Product version| Error message when the Installer Package (MSI) is missing| Error message when the Installer Cache Package (MSP) is missing |
     |---|---|---|
-    |SQL Server 2008 R2 SP1|The cached MSI file `C:\Windows\Installer\FileName.msi` is missing. Its original file is _sql_engine_core_inst.msi_ and it was installed for product SQL Server 2008 R2 SP1 Database Engine Services from `NetworkPath`, version `VersionNumber`, language `LanguageName`.<br/>|The cached patch file `C:\Windows\Installer\FileName.msp` is missing. The original file for this cached file is _sql_engine_core_inst_loc.msp_, which can be installed from Service Pack 1 for SQL Server 2008 R2 (KB2528583) (64-bit), version `VersionNumber`.<br/>|
+    |SQL Server 2008 R2 SP1|The cached MSI file *C:\Windows\Installer\FileName.msi* is missing. Its original file is _sql_engine_core_inst.msi_ and it was installed for product SQL Server 2008 R2 SP1 Database Engine Services from \<NetworkPath\>, version \<VersionNumber\>, language \<LanguageName>.<br/>|The cached patch file *C:\Windows\Installer\FileName.msp* is missing. The original file for this cached file is _sql_engine_core_inst_loc.msp_, which can be installed from Service Pack 1 for SQL Server 2008 R2 (KB2528583) (64-bit), version \<VersionNumber\>.<br/>|
 
     > [!NOTE]
     > You receive the following error message when you perform an upgrade:
@@ -418,7 +418,7 @@ You can restore from system state backups as described in [Missing Windows Insta
 
     |Product version| Error message when the Installer Package (MSI) is missing| Error message when the Installer Cache Package (MSP) is missing |
     |---|---|---|
-    |SQL Server 2008 R2 SP1|The cached MSI file `C:\Windows\Installer\FileName.msi` is missing. Its original file is `C:\Windows\Installer\sql_FeatureName.msi` and it was installed for product Microsoft SQL ServerVersion from `C:\originalfolder`, version `VersionNumber`, language `Language`.<br/>|The cached patch file `c:\Windows\Installer\FileName.msp` is missing. Its original file is `sql_engine_core_inst.msp`, which can be installed from `Hotfix 2316 for SQL Server 2012 (KB2679368) (64-bit)`, version `VersionNumber`. The cached patch file `C:\Windows\Installer\FileName.msp` is missing. Its original file is `C:\Windows\Installer\sql_FeatureName.msp`, which can be installed from Hotfix \<HotfixNumber> for SQL Server 2012 KB Number, version `VersionNumber`.<br/>|
+    |SQL Server 2008 R2 SP1|The cached MSI file *C:\Windows\Installer\FileName.msi* is missing. Its original file is *C:\Windows\Installer\sql_FeatureName.msi* and it was installed for product Microsoft SQL ServerVersion from *C:\originalfolder*, version \<VersionNumber\>, language \<Language\>.|The cached patch file *c:\Windows\Installer\FileName.msp* is missing. Its original file is *sql_engine_core_inst.msp*, which can be installed from `Hotfix 2316 for SQL Server 2012 (KB2679368) (64-bit)`, version \<VersionNumber\>. The cached patch file *C:\Windows\Installer\FileName.msp* is missing. Its original file is *C:\Windows\Installer\sql_FeatureName.msp*, which can be installed from Hotfix \<HotfixNumber\> for SQL Server 2012 KB Number, version \<VersionNumber\>.|
 
     > [!NOTE]
     > Under certain conditions in SQL Server 2012, RTM media may not be registered correctly. When you uninstall a cumulative update or service pack, under those circumstances, setup may prompt you for RTM media. To work around this issue, provide the RTM media path during the patch removal process.

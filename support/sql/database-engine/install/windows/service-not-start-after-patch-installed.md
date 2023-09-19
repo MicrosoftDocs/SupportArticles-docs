@@ -29,4 +29,4 @@ If you receive a message that a SQL Server service failed to start, to troublesh
 
 - Verify that the account and password is valid and hasn't expired. A service could have been running previously with an invalid account or password.
 
-- If the Database engine service will not start, after checking service credentials and startup, check the ERRORLOG. The ERRORLOG can be located at *C:\Program Files\Microsoft SQL Server\<Instance ID>\MSSQL\LOG*.
+- If the Database engine service will not start, after checking service credentials and startup, check the ERRORLOG. The ERRORLOG can be located at *C:\Program Files\Microsoft SQL Server\\\<Instance ID>\MSSQL\LOG*.

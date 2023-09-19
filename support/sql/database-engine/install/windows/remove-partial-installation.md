@@ -6,6 +6,7 @@ ms.custom: sap:Installation, Patching and Upgrade
 ms.reviewer: amylewis
 ms.topic: how-to
 ---
+
 # Remove a partial installation of SQL Server
 
 This article describes the procedure to remove a partial installation of SQL Server.
@@ -34,9 +35,9 @@ Use the following procedure to resolve the problem:
     > [!NOTE]
     > It's very important to ensure you are running the commands against the right instance or else you may end up uninstalling a working instance.
 
-1. Launch the Installation Center wizard GUI from either the SQL Server Program group or by rerunning the setup program.
+1. Launch the **Installation Center** wizard GUI from either the SQL Server Program group or by rerunning the setup program.
 
-1. Navigate to the **Tools** menu and click on Installed SQL Server features discovery report  and verify there are no more \<instance name>.INACTIVE instances shown in the report.
+1. Navigate to the **Tools** menu and click on the installed **SQL Server features discovery report** and verify there are no more \<instance name>.INACTIVE instances shown in the report.
 
 1. Retry the setup program that was originally failing to complete.
 

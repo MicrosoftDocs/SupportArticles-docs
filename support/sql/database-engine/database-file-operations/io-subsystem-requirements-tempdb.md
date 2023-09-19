@@ -135,7 +135,10 @@ The device may perform the following actions to help secure sector 1's data when
 - Uncompress sector 1 into a scratch area, leaving current sector 1 storage as the active data to be retrieved.
 - Compress sectors 1 and 2 into a new storage format.
 - Block all reads and writes of sectors 1 and 2.
-- Exchange old storage for sectors 1 and 2 with new storage. If the exchange attempt fails (rollback):<br/> Restore the original storage for sectors 1 and 2.<br/> Remove the sectors 1 and 2 combined data from the scratch area.<br/> Fail the sector 2 write operation.
+- Exchange old storage for sectors 1 and 2 with new storage. If the exchange attempt fails (rollback):
+  - Restore the original storage for sectors 1 and 2.
+  - Remove the sectors 1 and 2 combined data from the scratch area.
+  - Fail the sector 2 write operation.
 - Unblock reads and writes for sectors 1 and 2.
 
 The ability to provide locking mechanisms around the sector modifications and roll back the changes when the sector exchange attempt fails is considered transitionally compliant. For implementations that use physical storage for extended backing, it would include the appropriate transaction log aspects to help secure and rollback changes that were applied to the on-disk structures to maintain the integrity of the SQL Server database files.

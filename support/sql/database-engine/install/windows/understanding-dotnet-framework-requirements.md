@@ -57,7 +57,7 @@ The Setup program doesn't install the.NET Framework 3.5 Service Pack 1 on comput
 
 ## .NET Frameworks for SQL Server on Windows Server 2008 R2 and earlier operating systems
 
-The following table indicates whether the .NET Framework that is required for the SQL Edition and version that you're installing is included as part of the target operating system. The table also provides a download link for the associated .NET Framework redistributable files and indicates whether any another steps are required to install or enable the Framework on the associated operating system.
+The following table indicates whether the .NET Framework that is required for the SQL Edition and version that you're installing is included as part of the target operating system. The table also indicates whether any additional steps are required to install or enable the Framework on the corresponding operating system and the table provides a download link for the corresponding .NET Framework redistributable files.
 
 Table 2:
 

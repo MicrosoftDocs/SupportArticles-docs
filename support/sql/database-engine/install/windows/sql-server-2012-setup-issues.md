@@ -5,6 +5,7 @@ ms.date: 09/17/2020
 ms.custom: sap:Installation, Patching and Upgrade
 ms.reviewer: ramakoni
 ---
+
 # Known SQL Server 2012 setup and migration issues
 
 This article describes the SQL Server 2012 setup and migration issues.
@@ -169,7 +170,7 @@ _Original KB number:_ &nbsp; 2681562
 
         1. Download and install [SQL Server 2012 SP4](https://www.microsoft.com/download/details.aspx?id=56040).
 
-        1. On the **License Terms** screen, click the **I accept the license terms** check box and then click **Next**.
+        1. On the **License Terms** screen, click the **I accept the license terms** checkbox and then select **Next**.
 
            > [!NOTE]
            > The setup files are installed and the installation wizard automatically close.

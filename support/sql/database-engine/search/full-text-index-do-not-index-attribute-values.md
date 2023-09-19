@@ -50,7 +50,7 @@ Procedure to resolve the problem on SQL Servers running on Windows Server 2008 R
     > - This assumes your Windows folder is located at `C:\Windows`.
     > - You need to enter each backslash in the new path twice!
 
-1. Click the file _SQLMSSearch.reg_ to import the content into the registry.
+1. Select the file _SQLMSSearch.reg_ to import the content into the registry.
 1. Run the following T-SQL commands to enable the new setting in SQL Server:
 
     ```sql
@@ -67,7 +67,7 @@ Procedure to resolve the problem on SQL Servers running on Windows Server 2008 R
     ```
 
     > [!NOTE]
-    > You need to adapt the above command to suit the correct Windows system path on your system. Also, ensure that all the languages (respectively their lcid), that should show the new behavior are listed in the column "componentname" in the output.
+    > You need to adapt the above command to suit the correct Windows system path on your system. Also, make sure that all the languages (respectively their lcid), that should show the new behavior are listed in the column "componentname" in the output.
 
 ## More information
 

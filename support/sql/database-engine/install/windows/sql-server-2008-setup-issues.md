@@ -5,6 +5,7 @@ ms.date: 09/17/2020
 ms.custom: sap:Installation, Patching and Upgrade
 ms.reviewer: ramakoni
 ---
+
 # Known SQL Server 2008 R2 and SQL Server 2008 setup issues
 
 This article discusses setup and migration issues that are specific to SQL Server 2008 R2 and SQL Server 2008 on a computer that is running Windows Server 2012 R2, Windows Server 2012, Windows 8.1, or Windows 8.
@@ -55,7 +56,7 @@ This issue occurs if the COM-based *MSClus.dll* library isn't enabled.
 
 To resolve this issue, do one of the following:
 
-- Enable the Failover Cluster Automation Server feature on each node by using Server Manager. In Server Manager, expand **Remote Server Administration Tools**, expand **Feature Administration Tools**, expand **Failover Clustering Tools**, and then click to select **Failover Cluster Automation Server**.
+- Enable the Failover Cluster Automation Server feature on each node by using Server Manager. In Server Manager, expand **Remote Server Administration Tools**, expand **Feature Administration Tools**, expand **Failover Clustering Tools**, and then select **Failover Cluster Automation Server**.
 
 - Run the following Windows PowerShell cmdlet on each node to enable the Failover Cluster Automation Server feature:
 
