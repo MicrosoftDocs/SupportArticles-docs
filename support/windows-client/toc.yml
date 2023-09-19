@@ -1,3 +1,4 @@
+items:
 - name: Windows Client
   href: welcome-windows-client.yml
 - name: Active Directory
@@ -474,10 +475,6 @@
       href: ./group-policy/point-print-restrictions-policies-ignored.md
     - name: Save documents to OneDrive by default
       href: ./group-policy/save-documents-to-onedrive-by-default.md
-    - name: 'Scenario Guide: GPO does not apply on some client computers'
-      href: ./group-policy/scenario-guide-gpo-does-not-apply-on-some-client-computers.md
-    - name: "Scenario Guide: GPO doesn't apply settings as expected"
-      href: ./group-policy/scenario-guide-gpo-doesn-t-apply-settings-as-expected.md
     - name: Use Group Policy to deploy a Known Issue Rollback
       href: ./group-policy/use-group-policy-to-deploy-known-issue-rollback.md
 - name: High Availability
@@ -1310,3 +1307,7 @@
       href: ./windows-troubleshooters/gather-information-using-tss-group-policy.md
     - name: Gather information for user experience-related issues
       href: ./windows-troubleshooters/gather-information-using-tss-user-experience.md
+    - name: 'Scenario Guide: GPO does not apply on some client computers'
+      href: ./windows-troubleshooters/scenario-guide-gpo-does-not-apply-on-some-client-computers.md
+    - name: "Scenario Guide: GPO doesn't apply settings as expected"
+      href: ./windows-troubleshooters/scenario-guide-gpo-doesn-t-apply-settings-as-expected.md

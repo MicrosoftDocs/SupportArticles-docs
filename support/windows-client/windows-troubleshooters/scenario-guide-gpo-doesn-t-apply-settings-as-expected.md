@@ -6,8 +6,8 @@ ms.author: delhan
 ms.topic: troubleshooting
 ms.date: 09/20/2023
 ms.prod: windows-client
-ms.technology: windows-client-group-policy
-ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
+ms.technology: windows-client-troubleshooter
+ms.custom: sap:windows-troubleshooters, csstroubleshoot
 ---
 # Scenario Guide: GPO doesn't apply settings as expected
 
