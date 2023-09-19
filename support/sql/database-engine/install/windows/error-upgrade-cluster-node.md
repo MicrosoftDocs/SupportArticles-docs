@@ -73,7 +73,7 @@ To complete the upgrade for node A, there are two phases:
 
   1. Open a command prompt as an administrator and use the troubleshooting command together with the path of the SQL Server 2012 Setup file (*setup.exe*). For example, you use a command that resembles the following:
 
-     `<SQL Server 2012 media path> \setup.exe /q /action=uninstall /instanceid=FOOINST /features=AS`
+     `<SQL Server 2012 media path>\setup.exe /q /action=uninstall /instanceid=FOOINST /features=AS`
 
      > [!NOTE]
      >
