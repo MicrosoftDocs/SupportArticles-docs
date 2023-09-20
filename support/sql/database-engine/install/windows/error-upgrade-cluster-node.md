@@ -125,7 +125,7 @@ To prevent this issue, use one of the following options:
     1. Download SQL Server 2012 SP1 to a local hard disk (for example to `c:\sp1`) or to a network share (for example, `\\share name\sp1`) that can be accessed by all the nodes.
     1. Start a command prompt as an administrator and run one of the following commands:
 
-       - `<Download path>\setup.exe/action=upgrade/updatesource=c:\sp1`
+       - `<Download path>\setup.exe /action=upgrade /updatesource=c:\sp1`
        - `<Download path>\setup.exe/action=upgrade/updatesource=\\share name\sp1`
 
     1. Complete all the steps in the Setup program.
