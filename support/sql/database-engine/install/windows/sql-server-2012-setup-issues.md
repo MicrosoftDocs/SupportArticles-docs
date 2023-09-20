@@ -45,8 +45,8 @@ _Original KB number:_ &nbsp; 2681562
 
   On servers where the .NET Framework 3.5 isn't already installed or servers where Internet access is restricted, the SQL Server 2012 installation program does not install components that depend on the .NET Framework 3.5. Therefore, the SQL Server 2012 installation may be incomplete.
 
-  > [!NOTE]
-  > Windows 8.1 or Windows Server 2012 R2 will not let you continue with the installation.
+      > [!NOTE]
+      > Windows 8.1 or Windows Server 2012 R2 will not let you continue with the installation.
 
   An error message that resembles the following may be displayed during SQL Server 2012 installation when the .NET Framework isn't enabled.
 
@@ -69,7 +69,7 @@ _Original KB number:_ &nbsp; 2681562
 
 ### Issue 2 - Users incorrectly are prompted to download and install the .NET Framework 3.5
 
- **Symptoms**
+  **Symptoms**
 
   Users incorrectly may be prompted to download and install the .NET Framework 3.5 when they try to install CU1 or CU2. This issue can occur even though the installed components don't depend on the .NET Framework 3.5.
 
@@ -90,8 +90,8 @@ _Original KB number:_ &nbsp; 2681562
 
   - Enable the .NET Framework 3.5, apply the CU1 update package or the CU2 update package, and then disable the .NET Framework 3.5.
 
-  > [!NOTE]
-  > You should only disable the .NET Framework 3.5 if your installation doesn't include components that depend on the .NET Framework 3.5.
+       > [!NOTE]
+       > You should only disable the .NET Framework 3.5 if your installation doesn't include components that depend on the .NET Framework 3.5.
 
   - Install SQL Server 2012 from a slipstreamed installation package that includes SQL Server 2012 and CU3 or a later version.
   - Apply Cumulative Update 3 or a later version. For more information, see [The SQL Server 2012 builds that were released after SQL Server 2012 was released](https://support.microsoft.com/help/2692828).
@@ -191,8 +191,8 @@ _Original KB number:_ &nbsp; 2681562
         1. In the folder that you extracted the SP4 files to, double-click **SqlSupport.msi** and then select **Yes**.
         1. Verify the installation. To do this, start **Add or Remove Programs** and verify that Microsoft SQL Server 2012 Setup, version 11.0.7001.0 is listed.
 
-    > [!NOTE]
-    > Check the **Installation Instructions** section on the SQL Server 2012 SP4 download page to determine the correct download for your server.
+            > [!NOTE]
+            > Check the **Installation Instructions** section on the SQL Server 2012 SP4 download page to determine the correct download for your server.
 
 ### Issue 2: You can't install a SQL Server 2012 Failover Cluster with the File Stream Share feature enabled on Windows Server 2012 R2 or Windows Server 2012
 
@@ -203,6 +203,7 @@ _Original KB number:_ &nbsp; 2681562
   > There was an error setting private property 'Security0x20Descriptor' to value 'System.Byte[]' for resource 'SQL Server Filestream share (FILESTREAM)'. Error: There was a failure to call cluster code from a provider. Exception message: Not found.
 
   **Cause**
+
   This issue occurs because support for the Security Descriptor property was dropped in Windows Server 2012.
 
   **Prevention**
@@ -222,7 +223,7 @@ _Original KB number:_ &nbsp; 2681562
 
   Consider the following scenario:
 
-  - You install a 64-bit version of Windows 10, Windows 8.1 or Windows 8.
+  - You install a 64-bit version of Windows 10, Windows 8.1, or Windows 8.
   - You try to install SQL Server 2012 in Windows-on-Windows (WoW) mode.
   - The SQL Server 2012 installation includes Reporting Services.
 
@@ -250,13 +251,13 @@ _Original KB number:_ &nbsp; 2681562
   
   - You install SQL Server 2012 by using the **UIMODE=EnableUIOnServerCore** option.
   
-  In this scenario, the installation fails. You receive an error message that resembles the following.
+    In this scenario, the installation fails. You receive an error message that resembles the following.
   
-  :::image type="content" source="media/sql-server-2012-setup-issues/install-sql-server-failover-cluster-error.png" alt-text="Screenshot of the Feature Rules page, which shows Windows Server Core Supported Feature(s) Check failed." border="false":::
+    :::image type="content" source="media/sql-server-2012-setup-issues/install-sql-server-failover-cluster-error.png" alt-text="Screenshot of the Feature Rules page, which shows Windows Server Core Supported Feature(s) Check failed." border="false":::
 
-  The details of the error resemble the following.
+    The details of the error resemble the following.
   
-  :::image type="content" source="media/sql-server-2012-setup-issues/rule-check-result.png" alt-text="Screenshot shows details of the error in the Rule Check Result dialog." border="false":::
+    :::image type="content" source="media/sql-server-2012-setup-issues/rule-check-result.png" alt-text="Screenshot shows details of the error in the Rule Check Result dialog." border="false":::
   
  **Cause**
   
@@ -303,13 +304,13 @@ In this scenario, you receive an error message that resembles the following:
   
   To work around this issue, use Registry Editor to re-create the following registry key:
 
-  ```console
-  HKLM\System\CurrentControlSet\Services\LanmanServer\Parameters\FsctlAllowList
-  Dword: FSCTL_SQL_FILESTREAM_FETCH_OLD_CONTENT
-  Value: 0x92560
-  ```
+   ```console
+    HKLM\System\CurrentControlSet\Services\LanmanServer\Parameters\FsctlAllowList
+    Dword: FSCTL_SQL_FILESTREAM_FETCH_OLD_CONTENT
+    Value: 0x92560
+    ```
 
-### See also
+## See also
 
 - [Microsoft .NET Framework 3.5 Deployment Considerations](/previous-versions/windows/it-pro/windows-8.1-and-8/dn482066(v=win.10)).
 

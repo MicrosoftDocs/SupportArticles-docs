@@ -37,7 +37,7 @@ Use the following procedure to resolve the problem:
 
 1. Launch the **Installation Center** wizard GUI from either the SQL Server Program group or by rerunning the setup program.
 
-1. Navigate to the **Tools** menu and select the installed **SQL Server features discovery report** and verify there are no more \<instance name\>.INACTIVE instances shown in the report.
+1. Navigate to the **Tools** menu and select the **Installed SQL Server features discovery report** and verify there are no more \<instance name\>.INACTIVE instances shown in the report.
 
 1. Retry the setup program that was originally failing to complete.
 

@@ -122,19 +122,19 @@ This procedure describes how to create a new source media that will slipstream t
 1. Copy the original SQL Server 2008 source media to *c:\SQLServer2008_FullSP1*.
 1. Download the Service Pack 1 package. The package names are as follows:
 
-   - SQLServer2008SP1-KB968369-IA64-ENU.exe
+   - *SQLServer2008SP1-KB968369-IA64-ENU.exe*
 
-   - SQLServer2008SP1-KB968369-x64-ENU.exe
+   - *SQLServer2008SP1-KB968369-x64-ENU.exe*
 
-   - SQLServer2008SP1-KB968369-x86-ENU.exe
+   - *SQLServer2008SP1-KB968369-x86-ENU.exe*
 
 1. Extract the packages as follows:
 
-    - SQLServer2008SP1-KB968369-IA64-ENU.exe/x:c:\SQLServer2008_FullSP1\PCU
+    - `SQLServer2008SP1-KB968369-IA64-ENU.exe/x:c:\SQLServer2008_FullSP1\PCU`
 
-    - SQLServer2008SP1-KB968369-x64-ENU.exe/x:c:\SQLServer2008_FullSP1\PCU
+    - `SQLServer2008SP1-KB968369-x64-ENU.exe/x:c:\SQLServer2008_FullSP1\PCU`
 
-    - SQLServer2008SP1-KB968369-x86-ENU.exe/x:c:\SQLServer2008_FullSP1\PCU
+    - `SQLServer2008SP1-KB968369-x86-ENU.exe/x:c:\SQLServer2008_FullSP1\PCU`
 
     > [!NOTE]
     > Make sure that you complete this step for all architectures to ensure the original media is updated correctly.
@@ -230,7 +230,7 @@ This option is best for running a patched setup on a small number of computers.
 
    > [!NOTE]
    >
-   > - On the IA-64 platform, the .NET Framework 3.5 isn't supported, and the .NET Framework 2.0 SP2 is required. You can install the .NET Framework 2.0 SP2 from the source media. The .NET Framework 2.0 SP2 is located in the following folder on the source media: *Drive_Letter:\ia64\redist\2.0\NetFx20SP2_ia64.exe*.
+   > - On the IA-64 platform, the .NET Framework 3.5 isn't supported, and the .NET Framework 2.0 SP2 is required. You can install the .NET Framework 2.0 SP2 from the source media. The .NET Framework 2.0 SP2 is located in the following folder on the source media: *\<Drive_Letter\>:\ia64\redist\2.0\NetFx20SP2_ia64.exe*.
    >
    > - On x86 and x64 platforms, you must install the .NET Framework 3.5 SP1.
 
@@ -254,9 +254,9 @@ This option is best for running a patched setup on many computers, large deploym
 
    The following examples represent how you can use this command:
 
-   - *SQLServer2008-KB956717-IA64.exe /x:c:\kb956717\ia64*
-   - *SQLServer2008-KB956717-x64.exe /x:c:\kb956717\x64*
-   - *SQLServer2008-KB956717-x86.exe /x:c:\kb956717\x86*
+   - `SQLServer2008-KB956717-IA64.exe /x:c:\kb956717\ia64`
+   - `SQLServer2008-KB956717-x64.exe /x:c:\kb956717\x64`
+   - `SQLServer2008-KB956717-x86.exe /x:c:\kb956717\x86`
 
 1. Copy the contents of the SQL Server 2008 DVD to the local hard disk.
 
@@ -264,7 +264,7 @@ This option is best for running a patched setup on many computers, large deploym
 
     - Copy the *Setup.exe* and *Setup.rll* files from the *C:\kb_number_of_hotfix package\folder* to the folder that contains the local copy of `media\`.
   
-    - Copy all files (not the subfolders) in the **architecture** folder, except the *Microsoft.SQL.Chainer.PackageData.dll* file, from the *C:\kb_number_of_hotfix package\architecture\architecture\** folder to the folder that contains the local copy of *media\architecture\`.
+    - Copy all files (not the subfolders) in the **architecture** folder, except the *Microsoft.SQL.Chainer.PackageData.dll* file, from the *C:\\\<kb_number_of_hotfix package\>\architecture\architecture\* folder to the folder that contains the local copy of *media\architecture\\*.
 
 1. Start the Setup program from the local folder.
 
