@@ -28,8 +28,6 @@ If resetting the data doesn't fix the errors, you can:
 - Remove `%ProgramFiles%\Azure Cosmos DB Emulator` directory
 - Reinstall the emulator
 
-For more information on removing the emulator, see [uninstall the emulator](emulator.md#uninstall)
-
 Alternatively, if resetting the data doesn't work, navigate to `%LOCALAPPDATA%\CosmosDBEmulator` location and delete the folder.
 
 ## Review corrupted windows performance counters
