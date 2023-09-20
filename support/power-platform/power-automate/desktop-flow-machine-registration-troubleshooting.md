@@ -13,7 +13,10 @@ This article provides a set of troubleshooting steps for an issue where you can'
 
 ## Symptoms
 
-When you register your machine, you get an error such as "There was an error connecting to the Power Automate cloud services," or "Error during machine registration. Check your internet connection and try again. If the issue persists, contact your administrator."
+When you register your machine, you get one of the following errors
+* "There was an error connecting to the Power Automate cloud services"
+* "Error during machine registration. Check your internet connection and try again. If the issue persists, contact your administrator."
+* "We didn't get a response when trying to register your machine. Please click learn more for more details"
 
 ## Resolution
 
@@ -24,3 +27,5 @@ To register your computer to run desktop flows through a Power Automate cloud fl
 1. If your network uses a proxy, you must [configure the Power Automate runtime application for use with a proxy](https://support.microsoft.com/topic/power-automate-for-desktop-proxy-setup-8a79d690-1c02-416f-8af1-f057df5fe9b7).
 
 1. Verify that the Power Automate service itself can connect to the required services. This may require you to change the account that's running the Power Automate service on your computer. For more information, see the [runtime application troubleshooting tool](/power-automate/desktop-flows/troubleshoot#change-the-on-premises-service-account) that allows you to change the account.
+
+If you have verified all of these and still occasionally get "We didn't get a response when trying to register your machine", you may be having trouble connecting to your Dataverse organization. This may be due to temporary network insability or latency reaching your dataverse organization. You can check the latency of your Dataverse organization by going to the following URL, https://[myorg].crm.dynamics.com/tools/diagnostics/diag.aspx (where [myorg].crm.dynamics.com is the URL of your organization) and clicking run. If you see extremely high latencies on the order of tens of seconds, you can try again when this improves or talk to your network administrator.
