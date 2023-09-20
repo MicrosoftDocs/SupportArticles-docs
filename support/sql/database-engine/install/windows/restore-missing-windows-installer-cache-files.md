@@ -349,7 +349,7 @@ You can restore from system state backups as described in [Missing Windows Insta
 
     |Product version| Error message when the Installer Package (MSI) is missing| Error message when the Installer Cache Package (MSP) is missing |
     |---|---|---|
-    |SQL Server 2008 SP1|No error message|TITLE: SQL Server Setup failure.<br/>------------------------------<br/>SQL Server Setup has encountered the error: "The patch file cannot be opened. The file is: c:\WINNT\Installer\FileName.msp. Error code 0x84B20001."<br/>------------------------------<br/>|
+    |SQL Server 2008 SP1|No error message|TITLE: SQL Server Setup failure.<br/>------------------------------<br/>SQL Server Setup has encountered the error: **The patch file cannot be opened. The file is: c:\WINNT\Installer\FileName.msp. Error code 0x84B20001.**<br/>------------------------------<br/>|
 
 - **For SQL Server 2008 SP3 build-only (CU/GDR branches are not applicable)**
 

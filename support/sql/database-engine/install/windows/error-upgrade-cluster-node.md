@@ -126,7 +126,7 @@ To prevent this issue, use one of the following options:
     1. Start a command prompt as an administrator and run one of the following commands:
 
        - `<Download path>\setup.exe /action=upgrade /updatesource=c:\sp1`
-       - `<Download path>\setup.exe/action=upgrade/updatesource=\\share name\sp1`
+       - `<Download path>\setup.exe /action=upgrade /updatesource=\\share name\sp1`
 
     1. Complete all the steps in the Setup program.
 
