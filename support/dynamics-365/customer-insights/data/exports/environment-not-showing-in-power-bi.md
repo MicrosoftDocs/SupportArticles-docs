@@ -8,6 +8,8 @@ ms.date: 09/11/2023
 ---
 # Environment doesn't show in Power BI
 
+[!INCLUDE [consolidated-sku](../../includes/consolidated-sku.md)]
+
 This article resolves issues with the Power BI connector for Dynamics 365 Customer Insights - Data.
 
 ## Prerequisites

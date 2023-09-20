@@ -9,6 +9,8 @@ ms.date: 09/11/2023
 
 # Controls from Customer Card Add-in if they don't find data
 
+[!INCLUDE [consolidated-sku](../../includes/consolidated-sku.md)]
+
 If the GUID (Globally Unique Identifier) of the contact ID contains capital letters, you need to transform them in the Power Query editor.
 
 ## Prerequisites

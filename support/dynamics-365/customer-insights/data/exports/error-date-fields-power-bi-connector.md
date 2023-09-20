@@ -8,6 +8,8 @@ ms.date: 09/11/2023
 ---
 # Errors on date fields when loading entities in Power BI Desktop
 
+[!INCLUDE [consolidated-sku](../../includes/consolidated-sku.md)]
+
 This article resolves an issue in Power BI Desktop related to the Power BI connector for Dynamics 365 Customer Insights - Data.
 
 ## Prerequisites
