@@ -1,20 +1,20 @@
 ---
-title: Solution upgrade or delete fails due to circular dependencies between two solutions.
-description: Works around the issue where solution upgrade or delete fails due to having a circular dependendencies between two solutions.
+title: Solution uninstall or upgrade fails due to circular dependencies between two solutions.
+description: Works around the issue where solution uninstall or upgrade fails due to having a circular dependendencies between two solutions.
 ms.reviewer: jdaly
 ms.date: 09/21/2023
 author: swatimadhukargit
 ms.author: swatim
 ---
-# Solution upgrade or delete fails due to circular dependencies between two solutions
+# Solution uninstall or upgrade fails due to circular dependencies between two solutions
 
 _Applies to:_ &nbsp; Power Platform, Solutions
 
-This article provides a workaround for an issue that occurs when solution upgrade or delete fails due to having a circular dependendencies between two solutions.
+This article provides a workaround for an issue that occurs when solution upgrade or delete fails due to having a circular dependendencies between two solutions. Circular dependenciers exists when the two solution, each have dependencies on a component from the other solution.
 
 ## Symptoms
 
-When you try to delete a component or remove a component during solution import, the operation results in failure. When this situation happens due to inter solution dependencies of same component by two different solutions, deletion of either solution is not allowed by the Dataverse.
+When you try to uninstall a solution or remove a component during solution upgrade, the operation results in failure. This situation happens both solution has dependencies on the component from the other solution, uninstall of either solution is not allowed by the Dataverse and results in failure.
 
 ## Cause
 
@@ -53,4 +53,4 @@ To resolve the circular dependencies:
 - Or, in the target environment, edit Component 4 and remove dependency on Component 1 which can be done in the active layer. Deletion of Solution A is allowed after this. Once the Solution A is deleted, Solution B can be deleted too.
 
 >[!TIP]
->To avoid circular dependencies between two solution, use different environments for developing different solutions. Isolation of environment become more critical when using components like data, entitites, etc.
+>To avoid circular dependencies between the two solutions, use different environments for [developing different solutions](/power-platform/alm/organize-solutions#multiple-solution-layering-and-dependencies). Isolation of environment become more critical when using components like data, entitites, etc.
