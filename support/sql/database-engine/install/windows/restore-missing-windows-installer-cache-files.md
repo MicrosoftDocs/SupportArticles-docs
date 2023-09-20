@@ -212,7 +212,7 @@ Action needed, re-establish the path to G:\x64\setup\sql_engine_core_inst_msi\
 
 The `Action needed` line shows you the full path that must exist in order to update missing files for the original installation media:
 
-Installer Cache File: `C:\WINDOWS\Installer\19b4d2.msi`
+Installer Cache File: *C:\WINDOWS\Installer\19b4d2.msi*
 
 The `Installer Cache File` line confirms the name of the installer cache file:
 
@@ -265,6 +265,7 @@ To manually restore the files that are missing from the Windows Installer cache,
 1. Locate the original msp file _sql_engine_core_inst.msp_ file. The file should be in the following folder:
 
     _C:\Temp\SQLServer2008R2-KB981355-x64\x64\setup\sql_engine_core_inst_msi\\_.
+
 1. Copy the original msp file to the following Windows Installer cache:
 
     _%windir%\installer\\_

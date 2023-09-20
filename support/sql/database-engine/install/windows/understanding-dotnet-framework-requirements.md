@@ -86,14 +86,14 @@ If .NET Framework 3.5.1 isn't listed as an installed feature, use one of the fol
 
 1. In **Server Manager,** select **Add Features** to display a list of possible features.
 1. In the **Select Features** interface, expand the **.NET Framework 3.5.1 Features** entry.
-1. After you expand **.NET Framework 3.5.1 Features**, you see two check boxes. One check box is for **.NET Framework 3.5.1** and other check box is for **WCF Activation**. Select the check box next to **.NET Framework 3.5.1**, and then select **Next**.
+1. After you expand **.NET Framework 3.5.1 Features**, you see two checkboxes. One checkbox is for **.NET Framework 3.5.1** and other checkbox is for **WCF Activation**. Select the checkbox next to **.NET Framework 3.5.1**, and then select **Next**.
 
     > [!NOTE]
     > If you don't expand the **.NET Framework 3.5.1 Features** item and check it, the following **Add Features Wizard** is started:
 
     :::image type="content" source="media/understanding-dotnet-framework-requirements/add-features-wizard.png" alt-text="Screenshot of the Add Features Wizard window." border="false":::
 
-    If the wizard starts, select **Cancel**, expand **.NET Framework 3.5.1 Features**, and then  select the **.NET Framework 3.5.1** check box.
+    If the wizard starts, select **Cancel**, expand **.NET Framework 3.5.1 Features**, and then  select the **.NET Framework 3.5.1** checkbox.
 
 1. You can't install **.NET Framework 3.5.1 Features** unless the required role services and features are also installed.
 1. In the Confirm Installation Selections, review the selections, and then select **Install**.

@@ -26,7 +26,7 @@ Assume that you have Microsoft SQL Server installed on a server. Consider the fo
     You rebuild one or more full-text catalogs in which several of the indexes finish populating at or near the same time.
 - Scenario 4:
 
-    You manually run `[ALTER FULLTEXT CATALOG REORGANIZE](/sql/t-sql/statements/alter-index-transact-sql?view=sql-server-ver16)` for a catalog that contains many full-text indexes.
+    You manually run `ALTER FULLTEXT CATALOG REORGANIZE` for a catalog that contains many full-text indexes.
 
 In any of those situations, if you turn on trace flag (TF) 7603 to output the verbose logging for full-text population to the SQL Server error log, you see messages that resemble the following:
 
