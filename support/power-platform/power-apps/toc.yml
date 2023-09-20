@@ -90,7 +90,7 @@ items:
           href: manage-apps-and-solutions/label-text-not-displayed.md
         - name: Maximum row size exceeds the allowed maximum
           href: manage-apps-and-solutions/maximum-row-size-exceeds.md
-        - name: Missing dependencies on solution import
+        - name: Missing dependencies during solution import
           href: manage-apps-and-solutions/missing-dependency-on-solution-import.md
         - name: Newly added components don't appear in the app
           href: manage-apps-and-solutions/newly-added-components-dont-appear.md
