@@ -86,8 +86,6 @@ items:
           href: manage-apps-and-solutions/form-not-appear-after-import.md
         - name: '"Full formXml is expected to create a form" error'
           href: manage-apps-and-solutions/full-formxml-expected-to-create-form-error.md
-        - name: Install failue due to priviledge not assigned
-          href: manage-apps-and-solutions/install-failure-priviledge-not-assigned.md
         - name: Label text doesn't display in other languages
           href: manage-apps-and-solutions/label-text-not-displayed.md
         - name: Maximum row size exceeds the allowed maximum
@@ -98,6 +96,8 @@ items:
           href: manage-apps-and-solutions/primaryname-attribute-not-found.md
         - name: Required fields are missing in Dataverse records
           href: manage-apps-and-solutions/dataverse-records-missing-required-fields.md
+        - name: Solution import or app installation fails due to missing privileges
+          href: manage-apps-and-solutions/install-failure-priviledge-not-assigned.md
         - name: Solution checker enforcement in Managed Environments (preview) blocks or warns on import
           href: manage-apps-and-solutions/solution-checker-enforcement-import-issues.md
         - name: '"Solution cannot be deleted due to dependencies" error'
