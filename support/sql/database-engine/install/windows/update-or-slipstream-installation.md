@@ -202,8 +202,8 @@ This procedure describes how to create a new source media that will slipstream t
 
 1. Start the Setup program.
 
-> [!NOTE]
-> You shouldn't perform the slipstream procedure to apply SQL Server 2008 Service Pack 1 for the SQL Server 2008 Express edition. SQL Server 2008 Express Edition SP1 is already a merged drop. However, you can use the slipstream procedure to apply a cumulative update for the SQL Server 2008 Express edition.
+    > [!NOTE]
+    > You shouldn't perform the slipstream procedure to apply SQL Server 2008 Service Pack 1 for the SQL Server 2008 Express edition. SQL Server 2008 Express Edition SP1 is already a merged drop. However, you can use the slipstream procedure to apply a cumulative update for the SQL Server 2008 Express edition.
 
 ## Verify if you have completed a slipstream update
 
@@ -268,15 +268,15 @@ This option is best for running a patched setup on many computers, large deploym
 
 1. Start the Setup program from the local folder.
 
-> [!NOTE]
-> Due to schema changes that have been introduced in RTM based-cumulative update packages for SQL Server 2008 that start with Cumulative Update Package 8, you may receive the following error message when you run the Setup program. You may receive the following error message after you update the Setup support files by using the procedure that is described in option 2:
-
-> 2010-01-14 15:34:36 Slp: Exception type:
-> Microsoft.SqlServer.Chainer.Infrastructure.ChainerInfrastructureException
->
-> 2010-01-14 15:34:36 Slp: Message:
->
-> 2010-01-14 15:34:36 Slp: The 'Path' attribute is not declared.
+    > [!NOTE]
+    > Due to schema changes that have been introduced in RTM based-cumulative update packages for SQL Server 2008 that start with Cumulative Update Package 8, you may receive the following error message when you run the Setup program. You may receive the following error message after you update the Setup support files by using the procedure that is described in option 2:
+    
+    > 2010-01-14 15:34:36 Slp: Exception type:
+    > Microsoft.SqlServer.Chainer.Infrastructure.ChainerInfrastructureException
+    >
+    > 2010-01-14 15:34:36 Slp: Message:
+    >
+    > 2010-01-14 15:34:36 Slp: The 'Path' attribute is not declared.
 
 To avoid this validation issue, we recommend that you copy the *Microsoft.SQL.Chainer.PackageData.dll* file from the RTM media and keep the original *Microsoft.SQL.Chainer.Package.dll* file in the same location as the *Microsoft.SQL.Chainer.Package.Package.xsd* file. Do this to make sure that the two .dll files are in sync. This combination of .dll files will install the RTM version of *SqlSupport.msi (10.00.1600.22)*. To benefit from the bug fixes that are present in the cumulative update, use one of the following methods:
 

@@ -45,8 +45,8 @@ _Original KB number:_ &nbsp; 2681562
 
   On servers where the .NET Framework 3.5 isn't already installed or servers where Internet access is restricted, the SQL Server 2012 installation program does not install components that depend on the .NET Framework 3.5. Therefore, the SQL Server 2012 installation may be incomplete.
 
-      > [!NOTE]
-      > Windows 8.1 or Windows Server 2012 R2 will not let you continue with the installation.
+   > [!NOTE]
+   > Windows 8.1 or Windows Server 2012 R2 will not let you continue with the installation.
 
   An error message that resembles the following may be displayed during SQL Server 2012 installation when the .NET Framework isn't enabled.
 
@@ -308,7 +308,7 @@ In this scenario, you receive an error message that resembles the following:
     HKLM\System\CurrentControlSet\Services\LanmanServer\Parameters\FsctlAllowList
     Dword: FSCTL_SQL_FILESTREAM_FETCH_OLD_CONTENT
     Value: 0x92560
-    ```
+   ```
 
 ## See also
 
