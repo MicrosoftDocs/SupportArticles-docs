@@ -22,12 +22,12 @@ When a user tries to import a solution or install an application in the [Power P
 
 This error occurs for the following reasons:
 
-- The [access mode](/power-apps/developer/data-platform/reference/entities/systemuser#BKMK_AccessMode) of the user performing the import or installation is set to **Administrative** instead of **Read-Write**. Additionally, if a user doesn't have a valid Power Platform license, their access mode is **Administrative**.
+- The [access mode](/power-apps/developer/data-platform/reference/entities/systemuser#BKMK_AccessMode) of the user performing the import or installation is set to **Administrative** instead of [**Read-Write**](/power-platform/admin/create-users#create-a-read-write-user-account). Additionally, if a user doesn't have a valid Power Platform license, their access mode is **Administrative**.
 - The user doesn't have sufficient privileges to import the solution that includes all the components in the solution.
 
 ## Workaround
 
 To work around this issue, use the following methods:
 
-- If the access mode of the user performing the import or installation is **Administrative**, update it to **Read-Write** and [assign the user a valid license](/power-platform/admin/assign-licenses).
+- If the access mode of the user performing the import or installation is **Administrative**, update it to [**Read-Write**](/power-platform/admin/create-users#create-a-read-write-user-account) and [assign the user a valid license](/power-platform/admin/assign-licenses).
 - Review the security roles for the user, and check if the user has **Create** and **Update** privileges for all the tables used by the components included in the solution. If not, [assign the user a security role](/power-platform/admin/assign-security-roles) that contains these privileges. The **System Administrator**, **System Customizer**, and **Environment Maker** security roles have these privileges. 
