@@ -1,10 +1,10 @@
 ---
-title: A button in the command bar isn't working correctly
-description: Fixes an issue in which a button in the command bar isn't working correctly in Microsoft Power Apps.
+title: A button on the command bar isn't working correctly
+description: Fixes an issue in which a button on the command bar isn't working correctly in Microsoft Power Apps.
 ms.reviewer: krgoldie, srihas, tahoon
-ms.date: 09/19/2023
+ms.date: 09/20/2023
 ---
-# A button in the command bar isn't working correctly in Power Apps
+# A button on the command bar isn't working correctly in Power Apps
 
 _Applies to:_ &nbsp; Power Apps  
 _Original KB number:_ &nbsp; 4552163

@@ -1,8 +1,8 @@
 ---
-title: A button in the command bar is visible
-description: Fixes an issue in which a button in the command bar is visible when it should be hidden.
+title: A button on the command bar is visible
+description: Fixes an issue in which a button on the command bar is visible when it should be hidden.
 ms.reviewer: krgoldie, srihas, brflood, tahoon
-ms.date: 09/19/2023
+ms.date: 09/20/2023
 ---
 # A button on the command bar is visible when it should be hidden
 

@@ -2,7 +2,7 @@
 title: Troubleshooting ribbon issues in Power Apps
 description: Provides a resolution for ribbon issues in Microsoft Power Apps.
 ms.reviewer: krgoldie, srihas, tahoon
-ms.date: 09/19/2023
+ms.date: 09/20/2023
 ---
 # Troubleshooting ribbon issues in Power Apps
 

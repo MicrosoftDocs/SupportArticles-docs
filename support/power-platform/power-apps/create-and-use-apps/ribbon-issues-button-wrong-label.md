@@ -1,7 +1,7 @@
 ---
 title: A button on the command bar has incorrect labels
 description: Introduces how to troubleshoot issues with command buttons not showing the correct label text in Microsoft Power Apps.
-ms.date: 09/19/2023
+ms.date: 09/20/2023
 ms.reviewer: tahoon
 ---
 # A button on the command bar has wrong labels or translations
@@ -12,7 +12,7 @@ This article resolves the wrong label or translation issue with a modern or clas
 
 You can customize labels and create translations for [modern commands](/power-apps/maker/model-driven-apps/use-command-designer) the same way as for forms and tables. If a modern command shows incorrect text, its label might not have been configured correctly.
 
-### Chck if correct translations are present in the solution
+#### Check if correct translations are present in the solution
 
 [Export translations](/power-apps/maker/model-driven-apps/translate-localizable-text) for the [solution that contains the modern command](/power-apps/maker/model-driven-apps/manage-commands-in-solutions). Open the XML file and verify that the label has the correct translations.
 
@@ -20,7 +20,7 @@ The following screenshot shows a translation file opened in Microsoft Excel. The
 
 :::image type="content" source="media/ribbon-issues-button-wrong-label/modern-command-label-translations.png" alt-text="Screenshot shows an example of a translation file." lightbox="media/ribbon-issues-button-wrong-label/modern-command-label-translations.png":::
 
-### Check solution layering
+#### Check solution layering
 
 If the correct text is present in the translation file, there might be other solutions that override it. [View the solution layers for the label](/power-apps/maker/data-platform/solution-layers#view-the-solution-layers-for-a-component) to check if there's text defined for the same label in a higher solution.
 
@@ -28,12 +28,12 @@ If the correct text is present in the translation file, there might be other sol
 
 You can [customize labels and create translations for classic commands](/power-apps/developer/model-driven-apps/use-localized-labels-ribbons) by adding them to the `<RibbonDiffXml>` element of a *customization.xml* file and [importing the XML file into a solution](/power-apps/developer/model-driven-apps/export-prepare-edit-import-ribbon).
 
-### Check if correct translations are present
+#### Check if correct translations are present
 
 1. [Enable Command checker and select the command button to inspect](/troubleshoot/power-platform/power-apps/create-and-use-apps/ribbon-issues#use-commmand-checker).
 1. The right pane shows four kinds of text that can be customized for a command button.
 
-    :::image type="content" source="media/ribbon-issues-button-wrong-label/button-properties-with-labels.png" alt-text="Screenshot shows the text that can be customized for a commmand button." lightbox="media/ribbon-issues-button-wrong-label/button-properties-with-labels.png":::
+    :::image type="content" source="media/ribbon-issues-button-wrong-label/button-properties-with-labels.png" alt-text="Screenshot shows the text that can be customized for a command button." lightbox="media/ribbon-issues-button-wrong-label/button-properties-with-labels.png":::
 
     - **Alt**: The label used by screen readers.
     - **LabelText**: The label displayed for the command button.
@@ -57,6 +57,6 @@ You can [customize labels and create translations for classic commands](/power-a
 
     :::image type="content" source="media/ribbon-issues-button-wrong-label/translations-in-ribbondiff.png" alt-text="Screenshot shows the Command checker's loclabel pane." lightbox="media/ribbon-issues-button-wrong-label/translations-in-ribbondiff.png" border="false":::
 
-### Check solution layering
+#### Check solution layering
 
 If the correct LocLabel is present in a solution, there might be other solutions that override it. [View label solution layers](#check-if-correct-translations-are-present) and check if a higher solution has defined the same LocLabel.
