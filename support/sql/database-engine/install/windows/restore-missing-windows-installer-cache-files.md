@@ -275,7 +275,7 @@ You can start the Setup program for the update that resulted in the error and re
 
 To obtain a list of all the missing Windows Installer cache files that are related to the SQL Server product components, you can download the SQL Server 2008 R2 BPA tool that is mentioned in the [More information](#more-information) section.
 
-If the error message references a missing Windows Installer database file (.msi), you don't have to perform steps 2 through 4. Instead, you can go directly to step 5. You have to locate the .msi from the original media that you used to install the product. If this error message was generated for _sql_engine_core_inst.msi_, then you have to locate this file from the setup media under the folder structure *\x64\setup\sql_engine_core_inst_msi\*. The other steps are the same.
+If the error message references a missing Windows Installer database file (.msi), you don't have to perform steps 2 through 4. Instead, you can go directly to step 5. You have to locate the .msi from the original media that you used to install the product. If this error message was generated for _sql_engine_core_inst.msi_, then you have to locate this file from the setup media under the folder structure *\x64\setup\sql_engine_core_inst_msi\\*. The other steps are the same.
 
 ### Find the patch package and the product details for a missing .msp file
 
