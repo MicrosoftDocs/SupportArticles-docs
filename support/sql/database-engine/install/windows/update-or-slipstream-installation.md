@@ -175,7 +175,7 @@ This procedure describes how to create a new source media that will slipstream t
 
    - *C:\SQLServer2008_FullSP1\ia64*
 
-    If you have the *Defaultsetup.ini* file in the folders, open the *Defaultsetup.ini* file, and then add PCUSOURCE=".\PCU" to the file as follows:
+    If you have the *Defaultsetup.ini* file in the folders, open the *Defaultsetup.ini* file, and then add `PCUSOURCE=".\PCU"` to the file as follows:
 
    ```console
    ;SQLSERVER2008 Configuration File
@@ -292,7 +292,7 @@ To avoid this validation issue, we recommend that you copy the *Microsoft.SQL.Ch
 
   1. Copy the *Sqlsupport.msi* file. Of the following locations, copy the file from the first location to the local copy of the second location:
      - *C:\<kb_number_of_hotfix package\>\<architecture\>\setup\Sqlsupport.msi*
-     - *\<media\>\<architecture folder\>\setup\*
+     - *\<media\>\<architecture folder\>\setup\\\*
 
 ## SQL Server 2008 setup hotfixes
 

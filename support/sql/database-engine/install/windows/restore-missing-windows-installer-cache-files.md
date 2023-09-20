@@ -276,7 +276,7 @@ You can start the Setup program for the update that resulted in the error and re
 
 To obtain a list of all the missing Windows Installer cache files that are related to the SQL Server product components, you can download the SQL Server 2008 R2 BPA tool that is mentioned in the [More information](#more-information) section.
 
-If the error message references a missing Windows Installer database file (.msi), you don't have to perform steps 2 through 4. Instead, you can go directly to step 5. You have to locate the .msi from the original media that you used to install the product. If this error message was generated for _sql_engine_core_inst.msi_, then you have to locate this file from the setup media under the folder structure *\x64\setup\sql_engine_core_inst_msi\*. The other steps are the same.
+If the error message references a missing Windows Installer database file (.msi), you don't have to perform steps 2 through 4. Instead, you can go directly to step 5. You have to locate the .msi from the original media that you used to install the product. If this error message was generated for _sql_engine_core_inst.msi_, then you have to locate this file from the setup media under the folder structure *\x64\setup\sql_engine_core_inst_msi\\*. The other steps are the same.
 
 ### Find the patch package and the product details for a missing .msp file
 
@@ -317,7 +317,7 @@ To find more details about the missing *.msp* file in the Windows Installer cach
    Data: GDR 2050 for SQL Server Database Services 2005 ENU (KB932555)
    ```
 
-   Now, you have all the information points to start the steps to resolve the missing files in the Windows Installer cache.
+1. Now, you have all the information points to start the steps to resolve the missing files in the Windows Installer cache.
 
    > [!NOTE]
    > If you use SQL Server 2008 Service Pack 3 (SP3) or a later version, you can also receive a similar error message for the missing .msi files. By using this error message, you can quickly determine which file is missing, what service pack to download, and where to find the download.
