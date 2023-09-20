@@ -6,8 +6,8 @@ ms.author: delhan
 ms.topic: troubleshooting
 ms.date: 09/20/2023
 ms.prod: windows-client
-ms.technology: windows-client-troubleshooter
-ms.custom: sap:windows-troubleshooters, csstroubleshoot
+ms.technology: windows-client-group-policy
+ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
 ---
 # Scenario Guide: GPO to map network drive doesn't apply as expected
 
@@ -74,7 +74,7 @@ First, collect the following data for troubleshooting. Because we need to trace 
 7. Switch user again, and then sign in with the user account who has started the TSS Logging. Press Y.
 8. TSS will stop collecting data and the collected data will be located in the C:\\MSDATA folder as a Zip file or folder with the name TSS_\<Machinename\>_\<Time\>_ADS_GPOEx.
 
-For more information about TSS, see [Introduction to TroubleShootingScript toolset (TSS)](introduction-to-troubleshootingscript-toolset-tss.md).
+For more information about TSS, see [Introduction to TroubleShootingScript toolset (TSS)](../windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tss.md).
 
 ## Data Analysis
 
@@ -102,12 +102,14 @@ We do see that the GPO "Mapped drive" is in the applicable list.
 
 ### Group Policy preferences tracing
 
-From the Group policy operational logs, we observe that the group policy was processed and the group policy preferences were applied successfully. In addition to the above we could also review the group policy preferences logging/tracing collected by the TSS tool.
+From the Group policy operational logs, we observe that the group policy was processed and the group policy preferences were applied successfully. In addition to the above, we could also review the group policy preferences logging/tracing collected by the TSS tool.
 
 Group policy preferences tracing is an extra logging that we can enable for any group policy preferences client-side extension. The TSS GPOEx tracing is enabled by default.
 
 > [!NOTE]
 > If you wish to manually enable the GPSVC logging, follow [Enabling Group Policy Preferences Debug Logging using the RSAT](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/enabling-group-policy-preferences-debug-logging-using-the-rsat/ba-p/395555).
+
+Here, we introduce how to review and search the GPSVC log to confirms the group policy was applied to the client successfully.
 
 In \<Clientmachinename\>_\<Date_Time\>_GPPREF_User.txt, we observe that the GPP Mapped drives extension is starting the processing:
 

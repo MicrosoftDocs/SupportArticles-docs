@@ -6,8 +6,8 @@ ms.author: delhan
 ms.topic: troubleshooting
 ms.date: 09/20/2023
 ms.prod: windows-client
-ms.technology: windows-client-troubleshooter
-ms.custom: sap:windows-troubleshooters, csstroubleshoot
+ms.technology: windows-client-group-policy
+ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
 ---
 # Scenario Guide: Wallpaper GPO doesn't apply on some client computers
 
@@ -79,7 +79,7 @@ First, we need to collect data on both a client computer in Phoenix and a client
 
 8. TSS would stop collecting data and the collected data would be located in the C:\MSDATA folder as a Zip file or folder with the name TSS_\<Machinename\>_\<Time\>_ADS_GPOEx
 
-For more information about TSS, see [Introduction to TroubleShootingScript toolset (TSS)](introduction-to-troubleshootingscript-toolset-tss.md).
+For more information about TSS, see [Introduction to TroubleShootingScript toolset (TSS)](../windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tss.md).
 
 ### Compare GPResult
 
@@ -88,7 +88,7 @@ On both computers, go to c:\msdata folder where TSS has saved all the reports an
 Go to the section of **User details**. The GPO in question "Wallpaper-GPO-Tokyo" is in the applied list on the Working machine and not present in the broken machine.
 
 > [!NOTE]
-> There are other GPO's like Mapped-drives and Phoenix-SiteGPO on the applied machines but those 2 GPO's are site level GPO's and would apply only if the Group policy client detect if the client machine is in Phoenix site hence they are not relevant to our scope of troubleshooting.
+> There are other GPO's like "Mapped-drives" and "Phoenix-SiteGPO" on the applied machines. However, those two GPOs are site level GPOs and would apply only when the group policy client detect the client machine is in Phoenix site. Therefore, they are not relevant to our scope of troubleshooting.
 
 :::image type="content" source="media/scenario-guide-wallpaper-gpo-does-not-apply-on-some-client-computers/screenshot-of-the-gpresult-command-results.png" alt-text="The screenshot of the gpresult command results." border="true":::
 
