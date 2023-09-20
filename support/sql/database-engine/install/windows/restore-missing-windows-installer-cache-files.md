@@ -316,7 +316,7 @@ To find more details about the missing *.msp* file in the Windows Installer cach
    Data: GDR 2050 for SQL Server Database Services 2005 ENU (KB932555)
    ```
 
-   Now, you have all the information points to start the steps to resolve the missing files in the Windows Installer cache.
+1. Now, you have all the information points to start the steps to resolve the missing files in the Windows Installer cache.
 
    > [!NOTE]
    > If you use SQL Server 2008 Service Pack 3 (SP3) or a later version, you can also receive a similar error message for the missing .msi files. By using this error message, you can quickly determine which file is missing, what service pack to download, and where to find the download.
