@@ -193,8 +193,6 @@
           href: actions-not-available.md
         - name: Set drop-down list value in window/on web page action fails
           href: set-drop-down-list-value-fails.md
-        - name: TotalChunksMismatch error on Power Automate version 2.36
-          href: desktop-flows-totalchunksmismatch-2-36.md
         - name: Tips on working with SQL queries
           href: troubleshooting-tips-sql-queries.md
         - name: Troubleshoot UI flow Playback
