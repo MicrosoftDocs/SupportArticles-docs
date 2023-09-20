@@ -175,7 +175,7 @@ This procedure describes how to create a new source media that will slipstream t
 
    - *C:\SQLServer2008_FullSP1\ia64*
 
-    If you have the *Defaultsetup.ini* file in the folders, open the *Defaultsetup.ini* file, and then add PCUSOURCE=".\PCU" to the file as follows:
+    If you have the *Defaultsetup.ini* file in the folders, open the *Defaultsetup.ini* file, and then add `PCUSOURCE=".\PCU"` to the file as follows:
 
    ```console
    ;SQLSERVER2008 Configuration File
