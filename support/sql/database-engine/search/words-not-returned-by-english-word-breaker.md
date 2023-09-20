@@ -49,7 +49,7 @@ To work around this problem, use one of the following methods:
 3. Try to search on `.325` (including the decimal point):
 
     ```sql
-    SELECT * FROM sys.dm_fts_parser('.325', 1033, 0,0) USING English word breaker TO specify the ".325" search term.
+    SELECT * FROM sys.dm_fts_parser('.325', 1033, 0,0) -- Using English word breaker to specify the ".325" search term.
     ```
 
     > [!NOTE]

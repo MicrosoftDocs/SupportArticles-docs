@@ -364,7 +364,7 @@ You can restore from system state backups as described in [Missing Windows Insta
 
     |Product version| Error message when the Installer Package (MSI) is missing| Error message when the Installer Cache Package (MSP) is missing |
     |---|---|---|
-    |SQL Server 2008 R2 SP1|TITLE: SQL Server Setup failure.<br/>------------------------------<br/>SQL Server Setup has encountered the following error: "C:\Windows\Installer\FileName.msi".<br/>------------------------------<br/>|The cached patch file *C:\Windows\Installer\FileName.msp* is missing. The original file for this cached file is *sql_engine_core_inst_loc.msp*, which can be installed from Service Pack 1 for SQL Server 2008 R2 (KB2528583) (64-bit), version \<VersionNumber\>.<br/>|
+    |SQL Server 2008 R2 SP1|TITLE: SQL Server Setup failure.<br/>------------------------------<br/>SQL Server Setup has encountered the following error: "C:\Windows\Installer\FileName.msi".<br/>------------------------------<br/>|The cached patch file *C:\Windows\Installer\FileName.msp* is missing. The original file for this cached file is *sql_engine_core_inst_loc.msp*, which can be installed from Service Pack 1 for SQL Server 2008 R2 (KB2528583) (64-bit), version \<VersionNumber\>.|
 
     > [!NOTE]
     > You receive the following error message when you perform an upgrade:
@@ -374,7 +374,7 @@ You can restore from system state backups as described in [Missing Windows Insta
 
     |Product version| Error message when the Installer Package (MSI) is missing| Error message when the Installer Cache Package (MSP) is missing |
     |---|---|---|
-    |SQL Server 2008 R2 SP1|The cached MSI file *C:\Windows\Installer\FileName.msi* is missing. Its original file is _sql_engine_core_inst.msi_ and it was installed for product SQL Server 2008 R2 SP1 Database Engine Services from \<NetworkPath\>, version \<VersionNumber\>, language \<LanguageName>.<br/>|The cached patch file *C:\Windows\Installer\FileName.msp* is missing. The original file for this cached file is _sql_engine_core_inst_loc.msp_, which can be installed from Service Pack 1 for SQL Server 2008 R2 (KB2528583) (64-bit), version \<VersionNumber\>.<br/>|
+    |SQL Server 2008 R2 SP1|The cached MSI file *C:\Windows\Installer\FileName.msi* is missing. Its original file is _sql_engine_core_inst.msi_ and it was installed for product SQL Server 2008 R2 SP1 Database Engine Services from \<NetworkPath\>, version \<VersionNumber\>, language \<LanguageName\>.<br/>|The cached patch file *C:\Windows\Installer\FileName.msp* is missing. The original file for this cached file is _sql_engine_core_inst_loc.msp_, which can be installed from Service Pack 1 for SQL Server 2008 R2 (KB2528583) (64-bit), version \<VersionNumber\>.<br/>|
 
     > [!NOTE]
     > You receive the following error message when you perform an upgrade:

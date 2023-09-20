@@ -244,13 +244,13 @@ This option is best for running a patched setup on many computers, large deploym
 
 1. Download the hotfix that includes the updated SQL Server 2008 Setup support files that you want to use to update the original media files. You must download the hotfixes for x86, x64, and IA-64 platforms because the original media contains the files for each platform.
 
-1. At a command prompt, type the following command, and then press <kbd>ENTER</kbd> to extract the contents of the package: `hotfix_package_name/x:c:\kb _number_of_hotfix package\architecture`.  
+1. At a command prompt, type the following command, and then press <kbd>ENTER</kbd> to extract the contents of the package: *<hotfix_package_name> /x:c:\<kb _number_of_hotfix package>\<architecture>*.  
 
    The \<architecture\> placeholder represents the different hardware platforms. For example, it can represent one of the following folders:
 
-   - x86
-   - x64
-   - IA64
+   - *x86*
+   - *x64*
+   - *IA64*
 
    The following examples represent how you can use this command:
 

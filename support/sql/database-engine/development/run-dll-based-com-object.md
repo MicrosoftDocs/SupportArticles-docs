@@ -95,7 +95,7 @@ If you can't modify the COM client to request that the object be created out of 
 
     9. Close the Registry Editor. Click **Start**, and then select **Run**. In the **Run** dialog box, type *DCOMCNFG*.
 
-       Press the **ENTER** key to open the **Distributed COM Configuration Properties** dialog box. Click the **Default Properties** tab, and make sure that **Enable Distributed COM** on this computer is selected. If it is not, select it, and then click **Apply**.
+       Press the **ENTER** key to open the **Distributed COM Configuration Properties** dialog box. Click the **Default Properties** tab, and make sure that **Enable Distributed COM** on this computer is selected. If it is not, select it, and then select **Apply**.
 
     10. Make sure that the Windows NT user account that SQL Server is running under has **Full Control** permission on the registry keys for this object. If the permissions aren't sufficient or the registry keys are input incorrectly, the following errors may occur when you're creating the COM object:
 
