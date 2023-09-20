@@ -93,7 +93,7 @@ If .NET Framework 3.5.1 isn't listed as an installed feature, use one of the fol
 
     :::image type="content" source="media/understanding-dotnet-framework-requirements/add-features-wizard.png" alt-text="Screenshot of the Add Features Wizard window." border="false":::
 
-    If the wizard starts, select **Cancel**, expand **.NET Framework 3.5.1 Features**, and then  select the **.NET Framework 3.5.1** check box.
+    If the wizard starts, select **Cancel**, expand **.NET Framework 3.5.1 Features**, and then select the **.NET Framework 3.5.1** check box.
 
 1. You can't install **.NET Framework 3.5.1 Features** unless the required role services and features are also installed.
 1. In the Confirm Installation Selections, review the selections, and then select **Install**.
