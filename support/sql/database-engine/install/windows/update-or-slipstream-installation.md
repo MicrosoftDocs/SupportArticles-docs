@@ -47,7 +47,7 @@ The following steps describe how to update SQL Server 2008 Setup when a Setup is
 
 1. If the SQL Server 2008 Setup support files aren't installed, see the [Proactively running setup](#proactively-running-setup) section.
 
-To determine whether the SQL Server 2008 Setup support files are installed on the computer, view the entry by using **Add or Remove Programs** in Control Panel in operating systems that are earlier than Windows Vista. In Windows Vista or later versions of Windows, view the entry by using **Programs** in Control Panel. To apply a CU or a hotfix and run the Setup program, follow these steps:
+To determine whether the SQL Server 2008 Setup support files are installed on the computer, view the entry by using **Add or Remove Programs** in Control Panel in operating systems that are earlier than Windows Vista. In Windows Vista or later versions of Windows, view the entry by using **Programs and Features** in Control Panel. To apply a CU or a hotfix and run the Setup program, follow these steps:
 
 1. If a fix is available through a hotfix, download the CU or the hotfix, and then install it on the computer by running the .exe file or by using the command line. The package detects the SQL Server 2008 Setup support files on the computer and then applies a new version of the SQLSupport.msi file.
 
@@ -244,7 +244,7 @@ This option is best for running a patched setup on many computers, large deploym
 
 1. Download the hotfix that includes the updated SQL Server 2008 Setup support files that you want to use to update the original media files. You must download the hotfixes for x86, x64, and IA-64 platforms because the original media contains the files for each platform.
 
-1. At a command prompt, type the following command, and then press <kbd>ENTER</kbd> to extract the contents of the package: *<hotfix_package_name> /x:c:\<kb _number_of_hotfix package>\<architecture>*.  
+1. At a command prompt, type the following command, and then press <kbd>ENTER</kbd> to extract the contents of the package: `<hotfix_package_name> /x:c:\<kb_number_of_hotfix package>\<architecture>`.  
 
    The \<architecture\> placeholder represents the different hardware platforms. For example, it can represent one of the following folders:
 
@@ -288,7 +288,7 @@ To avoid this validation issue, we recommend that you copy the *Microsoft.SQL.Ch
 
   In addition to the files that are listed in step 4 in option 2, the files that are described in the following steps should be copied before you start setup from a local folder. To copy the files, follow these steps:
 
-  1. Copy the *Microsoft.SQL.Chainer.Package.dll* file from the RTM folder to the local copy of the \<media\>\<architecture folder\> folder.
+  1. Copy the *Microsoft.SQL.Chainer.Package.dll* file from the RTM folder to the local copy of the *\<media\>\<architecture folder\>* folder.
 
   1. Copy the *Sqlsupport.msi* file. Of the following locations, copy the file from the first location to the local copy of the second location:
      - *C:\<kb_number_of_hotfix package\>\<architecture\>\setup\Sqlsupport.msi*
