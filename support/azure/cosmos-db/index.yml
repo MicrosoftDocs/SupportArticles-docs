@@ -8,14 +8,14 @@ metadata:
   ms.service: cosmos-db
   author: oury-msft
   ms.author: ouryba
-  ms.reviewer: sidandrews
+  ms.reviewer: sidandrews, v-jayaramanp
   ms.topic: landing-page
-  ms.date: 09/20/2023
+  ms.date: 09/21/2023
 
 landingContent:
   - title: General troubleshooting
     linkLists:
       - linkListType: reference
         links:
-          - text: Troubleshoot emulator
-            url: emulator.md
+          - text: Troubleshoot Azure Cosmos DB emulator
+            url: troubleshoot-azure-cosmos-db-emulator
