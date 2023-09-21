@@ -2,7 +2,7 @@
 title: Missing dependencies during solution import in Power Apps
 description: Works around an issue about missing dependencies that occurs when you import a solution in the target environment in Microsoft Power Apps.
 ms.reviewer: jdaly
-ms.date: 09/20/2023
+ms.date: 09/21/2023
 author: swatimadhukargit
 ms.author: swatim
 ---
