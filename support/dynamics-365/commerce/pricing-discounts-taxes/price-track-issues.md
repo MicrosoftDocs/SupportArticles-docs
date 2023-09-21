@@ -20,9 +20,9 @@ The Commerce price change tracking feature triggers batch jobs that run in the b
 - The price change tracking batch job takes too long.
 - Too many price change tracking batch jobs are triggered and waiting in the queue.
 
-## Mitigation
+## Resolution
 
-The mitigation for price change tracking issues usually consists of two parts:
+The resolution for price change tracking issues usually consists of two parts:
 
 - Stop creating more batch jobs.
 - Stop and clear existing batch jobs.
