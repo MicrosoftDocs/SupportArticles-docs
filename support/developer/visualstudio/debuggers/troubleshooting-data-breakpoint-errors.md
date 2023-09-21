@@ -3,7 +3,7 @@ title: Troubleshooting .NET data breakpoints
 description: Provides explanations, solutions, and workarounds for Unable to set data breakpoint errors that occur when using Break when Value Changes (C# only).
 ms.date: 09/21/2023
 author: Mikejo5000 
-ms.author: waan
+ms.author: mikejo
 ms.reviewer: khgupta, raviuppa, waan, v-sidong
 ms.custom: sap:Debuggers and analyzers
 f1_keywords:
@@ -35,7 +35,7 @@ The following errors may occur when you use managed data breakpoints. This artic
 
     **Workaround**: Set breakpoints on lines where the variable is used.
 
-  - "Break when Value changes" on a variable that's not expanded from a dropdown.
+  - "Break when Value changes" on a variable that's not expanded from a dropdown menu.
 
     The debugger internally needs to know the object containing the field you want to track. The Garbage Collector may move your object around in the heap, so the debugger needs to know the object that holds the variable you wish to track.
 
