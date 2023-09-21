@@ -22,4 +22,4 @@
   - name: Azure DevOps
     href: devops/welcome-azure-devops.yml
   - name: Azure Cosmos DB
-    href: cosmos-db/index.yml
+    href: cosmos-db/welcome.yml

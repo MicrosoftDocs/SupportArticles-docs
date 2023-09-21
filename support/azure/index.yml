@@ -24,7 +24,7 @@ productDirectory:
   - title: Azure Cosmos DB
     imageSrc: "https://static.docs.com/ui/media/product/azure/cosmos-db.svg"
     links:
-    - url: cosmos-db/index.yml
+    - url: cosmos-db/welcome.yml
       text: Troubleshooting articles for Azure Cosmos DB
   - title: Azure DevOps
     imageSrc: "/azure/devops/media/index/devopsiconboards96.svg"

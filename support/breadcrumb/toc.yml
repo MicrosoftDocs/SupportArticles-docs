@@ -143,7 +143,7 @@ items:
         topicHref: /troubleshoot/azure/azure-functions/welcome-azure-functions
       - name: Azure Cosmos DB
         tocHref: /troubleshoot/azure/cosmos-db/
-        topicHref: /troubleshoot/azure/cosmos-db/index
+        topicHref: /troubleshoot/azure/cosmos-db/welcome
 
     - name: Microsoft Dynamics 365
       tocHref: /troubleshoot/dynamics-365/
