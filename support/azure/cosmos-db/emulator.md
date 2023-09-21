@@ -4,9 +4,9 @@ description: Learn how to troubleshot service unavailable, certificate, encrypti
 ms.service: cosmos-db
 author: oury-msft
 ms.author: ouryba
-ms.reviewer: sidandrews, v-jayaramanp
+ms.reviewer: v-jayaramanp
 ms.topic: landing-page
-ms.date: 09/20/2023
+ms.date: 09/21/2023
 ---
 
 # Troubleshoot the Azure Cosmos DB emulator
