@@ -2,7 +2,7 @@
 title: How to regenerate ribbon metadata
 description: Describes how to start the regeneration ribbon metadata operation and check the status.
 ms.reviewer: krgoldie, srihas, tahoon
-ms.date: 09/19/2023
+ms.date: 09/21/2023
 ---
 # How to regenerate ribbon metadata
 
@@ -50,3 +50,7 @@ In **Ribbon Metadata Generation Operations** view, a **RibbonMetadataGeneration*
 :::image type="content" source="media/regenerate-ribbon-metadata/ribbon-metadata-generation-status.png" alt-text="Screenshot of the RibbonMetadataGeneration operation status." lightbox="media/regenerate-ribbon-metadata/ribbon-metadata-generation-status.png":::
 
 After the **RibbonMetadataGeneration** operation is completed successfully, clear your browser cache, and then reopen your application to check for the issue again. If the issue isn't resolved, you can follow the steps that are provided in [ribbon troubleshoot guidelines](ribbon-issues.md) for additional mitigation information.
+
+## Reference
+
+[Introducing Command Checker for model-app ribbons](https://powerapps.microsoft.com/blog/introducing-command-checker-for-model-app-ribbons/)

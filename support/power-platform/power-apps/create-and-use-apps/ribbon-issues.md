@@ -2,7 +2,7 @@
 title: Troubleshooting ribbon issues in Power Apps
 description: Provides a resolution for ribbon issues in Microsoft Power Apps.
 ms.reviewer: krgoldie, srihas, tahoon
-ms.date: 09/20/2023
+ms.date: 09/21/2023
 ---
 # Troubleshooting ribbon issues in Power Apps
 
@@ -44,3 +44,7 @@ Once Command checker is enabled, you'll find a new button named **Command Checke
 1. Find the command bar that has the command you want to investigate.
 2. Select the **Command Checker** button. The Command checker panel opens.
 3. Select the command you want to examine in the list of commands. Commands that aren't visible are displayed in italics and end with **(hidden)**.
+
+## Reference
+
+[Introducing Command Checker for model-app ribbons](https://powerapps.microsoft.com/blog/introducing-command-checker-for-model-app-ribbons/)

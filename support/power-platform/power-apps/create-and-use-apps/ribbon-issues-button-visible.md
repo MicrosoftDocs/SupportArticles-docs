@@ -2,7 +2,7 @@
 title: A button on the command bar is visible
 description: Fixes an issue in which a button on the command bar is visible when it should be hidden.
 ms.reviewer: krgoldie, srihas, brflood, tahoon
-ms.date: 09/20/2023
+ms.date: 09/21/2023
 ---
 # A button on the command bar is visible when it should be hidden
 
@@ -349,3 +349,7 @@ To fix an enable/display rule that was installed by a custom-managed solution th
 To fix an enable/display rule that was installed by a Microsoft published managed solution, you may need a newer version of the solution to be installed, which would typically be done during a release update. It's possible that you've identified a bug that still needs to be fixed. Contact customer support for assistance.
 
 </details>
+
+## Reference
+
+[Introducing Command Checker for model-app ribbons](https://powerapps.microsoft.com/blog/introducing-command-checker-for-model-app-ribbons/)

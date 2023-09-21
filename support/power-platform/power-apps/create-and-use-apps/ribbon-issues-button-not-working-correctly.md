@@ -2,7 +2,7 @@
 title: A button on the command bar isn't working correctly
 description: Fixes an issue in which a button on the command bar isn't working correctly in Microsoft Power Apps.
 ms.reviewer: krgoldie, srihas, tahoon
-ms.date: 09/20/2023
+ms.date: 09/21/2023
 ---
 # A button on the command bar isn't working correctly in Power Apps
 
@@ -660,3 +660,7 @@ To fix a command that was installed by a custom-managed solution that was create
 To fix a command that was installed by a Microsoft-published managed solution, you might need to have a newer version of the solution be installed. This would typically be done during a release update. It's possible that you have identified a bug that still has to be fixed. Contact Customer Support for assistance.
 
 </details>
+
+## Reference
+
+[Introducing Command Checker for model-app ribbons](https://powerapps.microsoft.com/blog/introducing-command-checker-for-model-app-ribbons/)
