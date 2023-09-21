@@ -2,7 +2,6 @@
 title: Troubleshoot Azure Files SMB connectivity and access issues
 description: Troubleshoot problems connecting to and accessing SMB Azure file shares from Windows and Linux clients, and see possible resolutions.
 services: storage
-author: AmandaAZ
 ms.service: azure-file-storage
 ms.custom: devx-track-azurepowershell
 ms.date: 07/31/2023

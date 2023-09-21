@@ -92,6 +92,8 @@ items:
           href: manage-apps-and-solutions/maximum-row-size-exceeds.md
         - name: Failure when multiple publisher has shared compoennent
           href: manage-apps-and-solutions/multiple-publisher-shared-component-failure.md
+        - name: Missing dependencies during solution import
+          href: manage-apps-and-solutions/missing-dependency-on-solution-import.md
         - name: Newly added components don't appear in the app
           href: manage-apps-and-solutions/newly-added-components-dont-appear.md
         - name: '"PrimaryName attribute not found for entity" error'
