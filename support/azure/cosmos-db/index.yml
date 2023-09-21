@@ -18,4 +18,4 @@ landingContent:
       - linkListType: reference
         links:
           - text: Troubleshoot Azure Cosmos DB emulator
-            url: emulator
+            url: emulator.md
