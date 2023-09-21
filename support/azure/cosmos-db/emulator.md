@@ -25,14 +25,14 @@ If resetting the data doesn't fix the errors, you can:
 
 - Uninstall the emulator.
 - Uninstall any older versions of the emulator (if they exist).
-- Remove *%ProgramFiles%\Azure Cosmos DB Emulator* directory.
+- Remove `%ProgramFiles%\Azure Cosmos DB Emulator` directory.
 - Reinstall the emulator.
 
-Alternatively, if resetting the data doesn't work, go to *%LOCALAPPDATA%\CosmosDBEmulator* location and delete the folder.
+Alternatively, if resetting the data doesn't work, go to `%LOCALAPPDATA%\CosmosDBEmulator` location and delete the folder.
 
 ## Review corrupted windows performance counters
 
-- If the Azure Cosmos DB emulator crashes, collect the dump files from *%LOCALAPPDATA%\CrashDumps* folder, compress them, and open a support ticket from the [Azure portal](https://portal.azure.com).
+- If the Azure Cosmos DB emulator crashes, collect the dump files from `%LOCALAPPDATA%\CrashDumps` folder, compress them, and open a support ticket from the [Azure portal](https://portal.azure.com).
 
 - If you experience crashes in `Microsoft.Azure.Cosmos.ComputeServiceStartupEntryPoint.exe`, these crashes might be a symptom where the performance counters are in a corrupted state. Usually, the issue is fixed when you run the following command from an admin command prompt:
 
