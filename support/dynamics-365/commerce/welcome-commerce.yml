@@ -127,6 +127,14 @@ landingContent:
             url: point-of-sale/store-commerce-sign-in.md
 
  # Card
+  - title: Pricing, discounts, and taxes
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Price change tracking issues
+            url: pricing-discounts-taxes/price-track-issues.md
+
+ # Card
   - title: Ratings and reviews
     linkLists:
       - linkListType: how-to-guide
