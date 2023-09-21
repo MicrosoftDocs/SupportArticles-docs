@@ -67,9 +67,9 @@ To restore a deleted Outlook form from the dumpster folder for the organizationa
 
    5. Select both the following options, and then select **OK**:
 
-      - Use the **MDB_ONLINE** flag when calling OpenMsgStore
+      - Use the MDB_ONLINE flag when calling OpenMsgStore
 
-      - Use the **MAPI_NO_CACHE** flag when calling OpenEntry
+      - Use the MAPI_NO_CACHE flag when calling OpenEntry
 
    6. Select **Session** \> **Logon** to open the **Choose Profile** window.
 
