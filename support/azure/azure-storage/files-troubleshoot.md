@@ -2,7 +2,6 @@
 title: Troubleshoot Azure Files
 description: Troubleshoot issues with Azure file shares. See common issues and explore possible resolutions.
 services: storage
-author: AmandaAZ
 ms.service: azure-file-storage
 ms.date: 06/25/2023
 ms.reviewer: kendownie, jarrettr, v-weizhu
