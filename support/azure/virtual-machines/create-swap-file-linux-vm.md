@@ -1,7 +1,7 @@
 ---
 title: Create a SWAP file for an Azure Linux VM
 description: Describes how to create a SWAP file for an Azure Linux VM.
-ms.date: 09/15/2023
+ms.date: 09/21/2023
 ms.service: virtual-machines
 ms.subservice: vm-linux-setup-configuration
 ms.collection: linux
@@ -37,7 +37,7 @@ If the SWAP creation is configured in */etc/waagent.conf*, you must disable it.
 
 ## Create a SWAP partition
 
-You can create a SWAP partition by using one of the options below.
+You can create a SWAP partition by using one of the options below. When a SWAP partition is created, a swap file is also created on it.
 
 <details>
 <summary>Option 1: Create a SWAP partition under the resource or custom disk path by scripts</summary>
