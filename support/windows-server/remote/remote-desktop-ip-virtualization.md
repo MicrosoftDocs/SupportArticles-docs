@@ -13,7 +13,7 @@ ms.reviewer: kaushika, v-jesits
 ms.custom: sap:remote-desktop-sessions, csstroubleshoot
 ms.technology: windows-server-rds
 ---
-# Remote Desktop IP Virtualization in Windows Server
+# Remote Desktop IP Virtualization in Windows Server 2019 and Windows Server 2022
 
 This article discusses about Remote Desktop IP Virtualization in Windows Server.
 
@@ -23,9 +23,9 @@ This article discusses about Remote Desktop IP Virtualization in Windows Server.
 _Applies to:_ &nbsp; Windows Server 2019, Windows Server 2022  
 _Original KB number:_ &nbsp; 4501072
 
-## How to use IP virtualization in Windows Server 2019 and Windows Server 2022
+## How to use IP virtualization
 
-If you want to use IP virtualization, follow these steps:
+To use IP virtualization, follow these steps:
 
 1. Start an elevated PowerShell window, and run the following cmdlet to rename the registry key:
 
