@@ -37,7 +37,10 @@ If the SWAP creation is configured in */etc/waagent.conf*, you must disable it.
 
 ## Create a SWAP partition
 
-You can create a SWAP partition by using one of the options below. When a SWAP partition is created, a swap file is also created on it.
+You can create a SWAP partition by using one of the options below.
+
+> [!NOTE]
+> When a SWAP partition is created, a swap file is also created on it.
 
 <details>
 <summary>Option 1: Create a SWAP partition under the resource or custom disk path by scripts</summary>
