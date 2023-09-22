@@ -1,7 +1,7 @@
 ---
 title: A button on the command bar has incorrect labels
 description: Introduces how to troubleshoot issues with command buttons not showing the correct label text in Microsoft Power Apps.
-ms.date: 09/21/2023
+ms.date: 09/22/2023
 ms.reviewer: tahoon
 ---
 # A button on the command bar has wrong labels or translations
@@ -63,4 +63,4 @@ If the correct LocLabel is present in a solution, there might be other solutions
 
 ## Reference
 
-[Introducing Command Checker for model-app ribbons](https://powerapps.microsoft.com/blog/introducing-command-checker-for-model-app-ribbons/)
+[Command checker for model-driven app ribbons](https://powerapps.microsoft.com/blog/introducing-command-checker-for-model-app-ribbons/)

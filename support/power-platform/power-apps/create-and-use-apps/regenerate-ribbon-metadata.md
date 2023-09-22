@@ -2,7 +2,7 @@
 title: How to regenerate ribbon metadata
 description: Describes how to start the regeneration ribbon metadata operation and check the status.
 ms.reviewer: krgoldie, srihas, tahoon
-ms.date: 09/21/2023
+ms.date: 09/22/2023
 ---
 # How to regenerate ribbon metadata
 
@@ -53,4 +53,4 @@ After the **RibbonMetadataGeneration** operation is completed successfully, clea
 
 ## Reference
 
-[Introducing Command Checker for model-app ribbons](https://powerapps.microsoft.com/blog/introducing-command-checker-for-model-app-ribbons/)
+[Command checker for model-driven app ribbons](https://powerapps.microsoft.com/blog/introducing-command-checker-for-model-app-ribbons/)

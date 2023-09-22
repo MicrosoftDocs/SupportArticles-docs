@@ -2,7 +2,7 @@
 title: Troubleshooting ribbon issues in Power Apps
 description: Provides a resolution for ribbon issues in Microsoft Power Apps.
 ms.reviewer: krgoldie, srihas, tahoon
-ms.date: 09/21/2023
+ms.date: 09/22/2023
 ---
 # Troubleshooting ribbon issues in Power Apps
 
@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 4552163
 
 ## Use Command checker
 
-[Command checker](/troubleshoot/power-platform/power-apps/create-and-use-apps/ribbon-issues#use-commmand-checker) is a tool for examining command (ribbon) definitions and troubleshooting common issues. It's built into every Power Apps model-driven app and Dynamics 365 app.
+Command checker is a tool for examining command (ribbon) definitions and troubleshooting common issues. It's built into every Power Apps model-driven app and Dynamics 365 app.
 
 > [!NOTE]
 > Command checker only works in a web browser. We're adding support to Android and iOS apps soon. As a workaround, check if the same issue occurs when the app is opened in an Android or iOS browser. If it does, you can use Command checker to investigate.
@@ -47,4 +47,4 @@ Once Command checker is enabled, you'll find a new button named **Command Checke
 
 ## Reference
 
-[Introducing Command Checker for model-app ribbons](https://powerapps.microsoft.com/blog/introducing-command-checker-for-model-app-ribbons/)
+[Command checker for model-driven app ribbons](https://powerapps.microsoft.com/blog/introducing-command-checker-for-model-app-ribbons/)

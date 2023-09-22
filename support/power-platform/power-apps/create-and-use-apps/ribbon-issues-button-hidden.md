@@ -2,7 +2,7 @@
 title: A button on the command bar is hidden
 description: Fixes an issue in which a button on the command bar is hidden when it should be visible in Microsoft Power Apps.
 ms.reviewer: krgoldie, srihas, tahoon
-ms.date: 09/21/2023
+ms.date: 09/22/2023
 ---
 # A button on the command bar is hidden when it should be visible in Power Apps
 
@@ -387,4 +387,4 @@ To fix a command that was installed by a Microsoft published managed solution, y
 
 ## Reference
 
-[Introducing Command Checker for model-app ribbons](https://powerapps.microsoft.com/blog/introducing-command-checker-for-model-app-ribbons/)
+[Command checker for model-driven app ribbons](https://powerapps.microsoft.com/blog/introducing-command-checker-for-model-app-ribbons/)
