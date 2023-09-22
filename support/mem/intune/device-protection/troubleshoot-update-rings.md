@@ -1,23 +1,23 @@
 ---
-title: Troubleshoot update ring policies for Windows 11 and 10 devices
+title: Troubleshoot update ring policies for Windows devices
 description: Provides troubleshooting guidance for configuring update ring policies for Windows 11 and Windows 10 devices in Intune.
-ms.date: 09/18/2023
+ms.date: 09/22/2023
 ms.reviewer: chauntain, helenclu, simonxjx
 search.appverid: MET150
 ---
 # Troubleshoot update rings for Windows 11 and Windows 10 in Microsoft Intune
 
-This article provides guidelines for addressing issues with Windows Update rings settings to ensure they're successfully delivered to your organization's Windows 10 and 11 devices. Update rings settings manage how and when Windows devices install operating system (OS) updates. For more information about update ring policies, see [Update rings for Windows 10 and later policy in Intune](/mem/intune/protect/windows-10-update-rings).
+This article provides guidelines for troubleshooting issues with the Windows update ring settings to ensure they're successfully delivered to your organization's Windows 11 or Windows 10 devices. Update ring settings manage how and when Windows devices install operating system (OS) updates. For more information about update ring policies, see [Update rings for Windows 10 and later policy in Intune](/mem/intune/protect/windows-10-update-rings).
 
 If you experience an issue while deploying update ring policies to Windows 11 or Windows 10 devices using Microsoft Intune, determine whether the issue is Intune or Windows-related. Therefore, it's important to consider whether the Intune policy has been successfully deployed to the target device.
 
-Some deployment insights are included in this guide to highlight how OS and policy updates work. The following steps may be performed independently of others for times when other troubleshooting efforts aren't providing the desired results.
+Some deployment insights are included in this guide to highlight how OS and policy updates work. The following steps may be performed independently of others for times when other troubleshooting efforts don't provide the desired results.
 
 ## What Windows update ring policies do
 
 Windows update ring policies define only an update strategy, such as blocking driver installation, setting deferral periods, or setting maintenance times. The update ring policy doesn't update the infrastructure itself. This means that it needs an existing update solution to obtain the actual updates, such as Windows Updates for Business.
 
-Windows update ring policies created in Intune use the [Windows Policy CSP](/windows/client-management/mdm/policy-configuration-service-provider) for updating Windows devices. Once Intune deploys the Windows Update rings policy to an assigned device, the policy Configuration Services Provider (CSP) writes the appropriate values to the Windows registry to make the policy take effect.
+Windows update ring policies created in Intune use the [Windows Policy CSP](/windows/client-management/mdm/policy-configuration-service-provider) for updating Windows devices. Once Intune deploys the Windows update ring policy to an assigned device, the Policy configuration services provider (CSP) writes the appropriate values to the Windows registry to make the policy take effect.
 
 Now that you know what these policies do, you can verify if the update ring settings have been successfully applied.
 
@@ -46,7 +46,7 @@ Versions:
   - Only a subset of settings apply. For more information, see [Windows 10 Enterprise LTSC](/windows/whats-new/ltsc/overview).
 
 > [!NOTE]
-> Update rings can also be used to upgrade your eligible Windows 10 devices to Windows 11. When creating a policy, navigate to **Devices** > **Windows** > **Update rings for Windows 10 and later**, and then configure the **Upgrade Windows 10 devices to Latest Windows 11 release** setting to **Yes**.
+> Update rings can also be used to upgrade your eligible Windows 10 devices to Windows 11. When creating a policy, navigate to **Devices** > **Windows** > **Update rings for Windows 10 and later**, and then configure the **Upgrade Windows 10 devices to latest Windows 11 release** setting to **Yes**.
 
 ## Troubleshoot in the Intune admin center
 
@@ -59,7 +59,7 @@ Navigate to **Devices** > **Windows** > **Update rings for Windows 10 and later*
 Check the individual device to confirm that the update ring policy has been successfully applied.
 
 - Navigate to **Device status**, **User status**, or **End user update status** for an overview of the list of devices the policy has been applied to. This list is useful for quickly identifying whether a specific device has received the update policy.
-- Navigate to the device in the Intune admin center, then to **Device Configuration status** > **Update ring policy** to see whether a specific device has the update ring policy applied.
+- Navigate to the device in the Intune admin center, then to **Device configuration status** > **Update ring policy** to see whether a specific device has the update ring policy applied.
 
 Review the update ring policy for an affected device. There may be two entries for the policy depending on the type of user device being managed. When Intune deploys a policy (any policy, not just update rings), the settings are delivered against both the logged-on user and the system context of the device. This causes the two entries, which is a normal occurrence. However, if you manage Kiosk-type devices with Autologon or a local-account user type, only the system account is displayed.
 
@@ -67,13 +67,13 @@ Review the update ring policy for an affected device. There may be two entries f
 
 For more information, see the [View report](/mem/intune/protect/compliance-policy-monitor#view-report) section of [Monitor results of your Intune Device compliance policies](/mem/intune/protect/compliance-policy-monitor).
 
-Refer to the **Device Configuration** report to see whether a policy has been applied successfully to the device. If there are issues, or to confirm, verify the settings on the target device itself.
+Refer to the **Device configuration** report to see whether a policy has been applied successfully to the device. If there are issues, or to confirm, verify the settings on the target device itself.
 
 :::image type="content" source="media/troubleshoot-update-rings/profile-settings-report.png" alt-text="A screenshot of the Profile settings report for the example device.":::
 
 ## Verify settings on the device
 
-To confirm that the policies have applied to the device locally, navigate to **Settings** > **Accounts** > **Access work or school**. The list of policies applied to the device from Intune will include whether they're managed by your organization.
+To confirm that the policies have been applied to the device locally, navigate to **Settings** > **Accounts** > **Access work or school**. The list of policies applied to the device from Intune will include whether they're managed by your organization.
 
 :::image type="content" source="media/troubleshoot-update-rings/policies-on-the-device.png" alt-text="A screenshot of the policies on the device in the Managed by Organization pane.":::
 
@@ -141,21 +141,21 @@ To access Event Viewer, on the device, find the **Event Viewer** app in the Wind
 
 ### Check the Windows Update registry keys source
 
-Monitor the Windows side of things by reviewing the Windows Update source registry keys. Intune is responsible solely for deploying the values to the following registry hive:
+Monitor the Windows side of things by reviewing the Windows Update (WU) source registry keys. Intune is responsible solely for deploying the values to the following registry hive:
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\current\device\Update`
 
 To review other configured settings for Windows Update on the device, access the Registry Editor app and navigate to the following registry keys:
 
-`Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU`
+`HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU`
 
-:::image type="content" source="media/troubleshoot-update-rings/updates-registry-keys.png" alt-text="A screenshot of the Registry Editor for Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU.":::
+:::image type="content" source="media/troubleshoot-update-rings/updates-registry-keys.png" alt-text="A screenshot of the Registry Editor for HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU.":::
 
-`Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate`
+`HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate`
 
-:::image type="content" source="media/troubleshoot-update-rings/second-updates-registry-keys.png" alt-text="A screenshot of the Registry Editor for Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate.":::
+:::image type="content" source="media/troubleshoot-update-rings/second-updates-registry-keys.png" alt-text="A screenshot of the Registry Editor for HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate.":::
 
-From here, find additional information about the deployed policies that might come from group policy. For example, the registry keys and the Windows Update (WU) service may point towards WSUS rather than towards WU servers while also having dual-scan disabled. The service misdirection would result in the device scanning against WSUS instead of WU. For more information, see [Use Windows Update for Business and WSUS together](/windows/deployment/update/wufb-wsus).
+From here, find additional information about the deployed policies that might come from group policy. For example, the registry keys and the Windows Update service may point towards WSUS rather than towards WU servers while also having dual-scan disabled. The service misdirection would result in the device scanning against WSUS instead of WU. For more information, see [Use Windows Update for Business and WSUS together](/windows/deployment/update/wufb-wsus).
 
 ## Considerations
 
@@ -167,7 +167,7 @@ If the previous options didn't provide the results needed to identify the issue 
 
 - Is there an active network connection on the device? If the device is in airplane mode, is turned off, or the user has the device in a location with no service, the policy won't apply until it's connected to a network.
 - Does the device not upgrade past a specific version? Check for a conflicting [TargetReleaseVersion](/windows/client-management/mdm/policy-csp-update#targetreleaseversion) value through other means, such as Group policy or Settings catalog, found in the Windows Update registry keys.
-- Verify that Windows Update is configured to deliver feature and quality updates. If `UpdateServiceUrl` is populated in the Registry, verify that `DisableDualScan` is set to `0`. On the device, access the Registry Editor app and navigate to `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate`.
+- Verify that Windows Update is configured to deliver feature and quality updates. If `UpdateServiceUrl` is populated in the Registry, verify that `DisableDualScan` is set to `0`. On the device, access the Registry Editor app and navigate to `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate`.
 - Is the device co-managed? Make sure the [workload for Windows Updates has been switched to Intune](/mem/configmgr/comanage/workloads#windows-update-policies).
 
     :::image type="content" source="media/troubleshoot-update-rings/workloads.png" alt-text="A screenshot of the Properties dialog highlighting the Windows Update policies slider on the Workloads tab.":::
