@@ -17,11 +17,13 @@ The flow can't be enabled automatically through the expert notification card on 
 
 Take the following troubleshooting steps to diagnose and fix the issue:
 
-1. Access the Power automate page by clicking the following link:
-2. 
+1. On the swarm form **Expert notifications** card, open Power Automate by selecting the **Edit in Power Automate** link under **Activiate notifications for experts**. 
+2. In the Power Automate sitemap, select **Connnections** under **Data**.
+3. Remove the connection: Select the vertical ellipsis next to it, and then select **Delete** from the dropdown menu.
+4. Return to the swarm form and select **Activate notifcations** to reactivate the flow.
 
 If the issue persists, contact Microsoft Support to raise a ticket.
 
 ## See also
 
-For more information about configuring customer support swarming, see [Manage integrated search providers](/dynamics365/customer-service/add-search-provider#manage-integrated-search-providers).
+For more information about configuring customer support swarming, see [Configure customer support swarming for complex cases](/dynamics365/customer-service/configure-customer-support-swarming).
