@@ -29,15 +29,15 @@ You experience the following issues in SharePoint:
 
 ## Cause
 
-These errors occur because of enhancements that have been made to the security measures for administrative governance. The enhancements have changed the default procedures for app registration through AppRegNew.aspx and permission updates through AppInv.aspx. Because of this change, site collection admins can no longer register apps or update app permissions unless explicitly authorized by the SharePoint admin.
+These errors occur because of enhancements that were made to the security measures for administrative governance. The enhancements changed the default procedures for app registration through AppRegNew.aspx and permission updates through AppInv.aspx. Because of this change, site collection admins can no longer register apps or update app permissions unless they are explicitly authorized to do this by the SharePoint admin.
 
 ## Resolution
 
-To change the new default behavior, the SharePoint admin must run the following [Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant?view=sharepoint-ps&preserve-view=true#-siteownermanagelegacyserviceprincipalenabled) cmdlet to also allow site collection admins to manage the Azure Access Control (ACS) service principal:
+To change the new default behavior, the SharePoint admin must run the following [Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant?view=sharepoint-ps&preserve-view=true#-siteownermanagelegacyserviceprincipalenabled) cmdlet to allow site collection admins to manage the Azure Access Control (ACS) service principal:
 
 ```powershell
 Set-SPOTenant -SiteOwnerManageLegacyServicePrincipalEnabled $true
 ``````
 
 > [!NOTE]
-> The `SiteOwnerManageLegacyServicePrincipalEnabled` property becomes visible in tenant settings in SharePoint Online Management Shell version 16.0.23710.12000 or later. Its new default value is **FALSE**. Before the enhancements were made, its value was always **TRUE** and couldn't be changed.
+> The `SiteOwnerManageLegacyServicePrincipalEnabled` property becomes visible in tenant settings in SharePoint Online Management Shell version 16.0.23710.12000 or later versions. The new default value of the property is **FALSE**. Before the enhancements were made, the default value was always **TRUE** and couldn't be changed.
