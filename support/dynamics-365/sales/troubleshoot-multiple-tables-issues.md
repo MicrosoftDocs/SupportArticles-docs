@@ -151,7 +151,7 @@ You must verify the improper customizations and resolve them. Perform the follow
 > [!NOTE]
 > If the issue occurs, activate the **Processes** that you deactivated now and try to [Deactivate a custom plug-in](#deactivate-a-custom-plug-in) or [Disable custom JavaScript](#disable-custom-javascript).
 
-# Issue: 3: Custom plug-in handling by using a shared variable 
+## Issue: 3: Custom plug-in handling by using a shared variable
 
 ## Issue
 
