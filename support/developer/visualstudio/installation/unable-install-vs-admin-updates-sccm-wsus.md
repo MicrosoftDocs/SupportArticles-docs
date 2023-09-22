@@ -19,7 +19,7 @@ You can't install Visual Studio 2022 [administrator updates](/visualstudio/insta
 
 To enable your Visual Studio client machine to receive updates through WSUS, make sure to prepare the client machine by setting up a few prerequisites.
 
-1. Ensure that the Visual Studio administrator update (for example, the Visual Studio 2022 version 17.5.4 update) is [imported into WSUS](/mem/configmgr/sum/get-started/synchronize-software-updates) and approved.
+1. Ensure that the Visual Studio administrator update (for example, the Visual Studio 2022 version 17.7.4 or above update) is [imported into WSUS](/mem/configmgr/sum/get-started/synchronize-software-updates) and approved.
 
 1. Enable the client machine to receive administrator updates by setting a registry key on the client machine:
 
