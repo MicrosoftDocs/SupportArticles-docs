@@ -12,7 +12,6 @@ This article provides a workaround for an issue about missing dependencies that 
 
 _Applies to:_ &nbsp; Power Platform, Solutions
 
-
 ## Symptoms
 
 When you try to import a solution in [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), you receive an error message like the following one:
@@ -35,7 +34,7 @@ To work around this issue, follow these steps:
 
 2. Resolve this issue based on the different types of dependencies described in the following sections:
 
-### Dependencies on solutions coming from an application
+### Missing Dependencies coming from a Dynamics 365 Application
 
 You can find these dependencies in the **Managed Solution** tab of the **Missing dependencies** page. To resolve this issue:
 
@@ -48,13 +47,13 @@ The image captures the link provided in the **Missing dependencies** page.
 Click the link to go to the Power Platform admin center update application page.
     :::image type="content" source="media/application-update.png" alt-text="This is example for upgrade application":::
 
-### Dependencies on solutions coming from another managed solution
+### Missing Dependencies coming from another managed solution
 
 You can find these dependencies in the **Managed Solution** tab of the **Missing dependencies** page. To resolve this issue, import the same version of the solution that's installed in the source environment into the target environment.
 
-### Dependencies on "Active" solutions indicating unmanaged customizations in the source environment
+### Missing Dependencies on the "Active" solutions
 
-You can find these dependencies in the **Objects** tab. To resolve this issue, return to the source environment, include the missing components, export the solution again, and then import it into the target environment.
+You can find these dependencies in the **Objects** tab. This indicates that the dependency is from unmanaged customization in the source environment. To resolve this issue, return to the source environment, include the missing components, export the solution again, and then import it into the target environment.
 
 > [!TIP]
 > Another method to find dependencies of components is to open the solution file, unzip it, and then open the *solution.xml* file. In the *solution.xml* file, look for a `<MissingDependencies>` element. All the missing dependencies are listed within this node.
