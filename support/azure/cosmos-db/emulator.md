@@ -95,4 +95,4 @@ To collect debugging traces, run the following commands from an administrative c
 
 1. Navigate to `%ProgramFiles%\Azure Cosmos DB Emulator` path and find the *docdbemulator_000001.etl* file.
 
-1. Open a support ticket in the [Azure portal](https://portal.azure.com) and include the .etl file along with repro steps.
+1. Open a support ticket in the [Azure portal](https://portal.azure.com) and include the .etl file along with any steps required to reproduce your issue.
