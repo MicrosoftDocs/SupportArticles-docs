@@ -55,7 +55,7 @@ Set-AdminFlowOwnerRole -EnvironmentName <env name> -FlowName <flow name> -Princi
 ```
 
 > [!NOTE]
-> You can get the AAD principal object id of a user by running [Get-AzureADUser](/powershell/module/azuread/get-azureaduser) cmdlet (which is from AzureAD module).
+> You can get the AAD principal object id of a user by running [Get-AzureADUser](/powershell/module/azuread/get-azureaduser) cmdlet (which is from AzureAD module). You need to call Connect-AzureAD before runing Get-AzureADUser.
 
 Run `Get-AdminFlowOwnerRole` again to verify the new owner is in the list.
 
@@ -72,6 +72,7 @@ Get-AdminFlow -EnvironmentName <env name> -CreatedBy <user AAD object id>
 To get all flows that don't have valid users, loop through all flows in one environment, and verify there's at least one owner or co-owner that exists in AAD. The following script provides an example:
 
 ```csharp
+Connect-AzureAD
 $env = "<your environment name>"
 $flows = Get-AdminFlow -EnvironmentName $env
 foreach ($flow in $flows)
