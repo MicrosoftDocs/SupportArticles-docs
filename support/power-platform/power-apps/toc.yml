@@ -86,12 +86,12 @@ items:
           href: manage-apps-and-solutions/form-not-appear-after-import.md
         - name: '"Full formXml is expected to create a form" error'
           href: manage-apps-and-solutions/full-formxml-expected-to-create-form-error.md
+        - name: Failure when multiple publishers have shared components
+          href: manage-apps-and-solutions/multiple-publisher-shared-component-failure.md
         - name: Label text doesn't display in other languages
           href: manage-apps-and-solutions/label-text-not-displayed.md
         - name: Maximum row size exceeds the allowed maximum
           href: manage-apps-and-solutions/maximum-row-size-exceeds.md
-        - name: Failure when multiple publisher has shared compoennent
-          href: manage-apps-and-solutions/multiple-publisher-shared-component-failure.md
         - name: Missing dependencies during solution import
           href: manage-apps-and-solutions/missing-dependency-on-solution-import.md
         - name: Newly added components don't appear in the app
