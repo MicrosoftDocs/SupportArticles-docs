@@ -16,9 +16,9 @@ _Original KB number:_ &nbsp; 2490051
 
 Consider the following scenario:
 
-- You have a computer that is running a secondary instance of Microsoft SQL Server in a two-server database mirror.
+- You have a computer that's running a secondary instance of Microsoft SQL Server in a two-server database mirror.
 
-- CPU usage reaches 100 percent on the computer, and you cannot stop the SQL Server service by using SQL Server Management Tools.
+- CPU usage reaches 100 percent on the computer, and you can't stop the SQL Server service by using SQL Server Management Tools.
 
 - You end the process of the SQL Server secondary instance by using Task Manager.
 
@@ -34,13 +34,13 @@ This issue occurs because of problems in the SQL Server database mirroring endpo
 
 ## Resolution
 
-To resolve this issue, use the following methods. If the first method does not resolve the issue, use the second method.
+To resolve this issue, use the following methods. If the first method doesn't resolve the issue, use the second method.
 
 ## Method 1
 
 Recycle the endpoint on the database mirror. To do this, follow these steps:
 
-1. On the principal database, execute the following SQL script to stop the endpoint:
+1. On the principal database, run the following SQL script to stop the endpoint:
 
     ```sql
     ALTER ENDPOINT <Endpoint Name> STATE=STOPPED
@@ -53,10 +53,10 @@ Recycle the endpoint on the database mirror. To do this, follow these steps:
     ```
 
     > [!NOTE]
-    > If communication between the endpoints does not restart after you execute the scripts, execute the scripts on the database mirror. However, the database may enter a Suspended state after you do this. If this issue occurs, execute the following SQL script:
+    > If communication between the endpoints doesn't restart after you execute the scripts, run the scripts on the database mirror. However, the database may enter a **Suspended** state after you do this. If this issue occurs, run the following SQL script:
 
     ```sql
-    ALTER DATABASE < **Database Name** > SET PARTNER RESUME
+    ALTER DATABASE <Database Name> SET PARTNER RESUME
     ```
 
 ## Method 2

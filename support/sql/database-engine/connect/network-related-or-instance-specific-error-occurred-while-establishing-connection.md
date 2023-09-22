@@ -10,11 +10,11 @@ ms.author: haiyingyu
 
 _Applies to:_ &nbsp; SQL Server
 
-When connecting to a SQL Server instance, you may encounter one or more of the [error messages](#error-messages) below. This article provides some steps to help you troubleshoot these errors, which are provided in order of the issues from simple to complex.
+When connecting to a SQL Server instance, you may encounter one or more of the following [error messages](#error-messages). This article provides some steps to help you troubleshoot these errors, which are provided in order of the issues from simple to complex.
 
 ## Error messages
 
-The complete error messages vary depending on the client library that is used in the application and the server environment. You can check the following details to see if you're encountering one of the following error messages:
+The complete error messages vary depending on the client library that's used in the application and the server environment. You can check the following details to see if you're encountering one of the following error messages:
 
 ### "A network-related or instance-specific error occurred while establishing a connection to SQL Server. Verify that the instance name is correct and that SQL Server is configured to allow remote connections"
 
@@ -137,9 +137,9 @@ In most cases, you connect to the Database Engine on another computer by using t
 
 1. Use SQL Server Management Studio on the computer running SQL Server and connect to the instance of SQL Server. In **Object Explorer**, expand **Management**, expand **SQL Server Logs**, and then double-click the current log.
 1. In the **Log File Viewer**, select **Filter** on the toolbar. In the **Message contains text** box, type *server is listening on*, select **Apply filter**, and then select **OK**.
-1. A message like **Server is listening on [ 'any' \<ipv4> 1433]** should be listed.
+1. A message like "Server is listening on [ 'any' \<ipv4> 1433]" should be listed.
 
-    This message indicates that the instance of SQL Server is listening on all IP addresses on this computer (for IP version 4) and TCP port 1433. (TCP port 1433 is usually the port that's used by the Database Engine or the default instance of SQL Server. Only one instance of SQL Server can use this port. If more than one instance of SQL Server is installed, some instances must use other port numbers.) Note down the port number used by the SQL Server instance that you're trying to connect to.
+   This message indicates that the instance of SQL Server is listening on all IP addresses on this computer (for IP version 4) and TCP port 1433. (TCP port 1433 is usually the port that's used by the Database Engine or the default instance of SQL Server. Only one instance of SQL Server can use this port. If more than one instance of SQL Server is installed, some instances must use other port numbers.) Note down the port number used by the SQL Server instance that you're trying to connect to.
 
     > [!NOTE]
     > - IP address 127.0.0.1 is probably listed. It's called the loopback adapter address. Only processes on the same computer can use the IP address to connect.
@@ -230,7 +230,7 @@ Alias Name   Protocol   Server Name     Port   32-bit
 prodsql      TCP        prod_sqlserver  1430      
 ```
 
-The output indicates that `prodsql` is an alias for a SQL Server called `prod_sqlserver` that is running on port 1430.
+The output indicates that `prodsql` is an alias for a SQL Server called `prod_sqlserver` that's running on port 1430.
 
 ### Option 2: Check aliases in SQL Server Configuration Manager
 
