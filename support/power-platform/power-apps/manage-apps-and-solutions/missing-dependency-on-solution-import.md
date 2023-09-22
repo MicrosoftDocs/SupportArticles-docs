@@ -39,8 +39,14 @@ To work around this issue, follow these steps:
 
 You can find these dependencies in the **Managed Solution** tab of the **Missing dependencies** page. To resolve this issue:
 
-- If the application isn't installed in the target environment, install it from the [Power Platform admin center](https://admin.powerplatform.microsoft.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-- If the application is installed but has an outdated version, a link is provided next to the solution. This link will redirect you to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) where you can update the application to resolve the issue.
+- If the application isn't installed in the target environment, [install the application](/power-platform/admin/manage-apps#install-an-app) from the Power Platform admin center.
+- If the application is installed but has an outdated version, a link is provided next to the solution. This link will redirect you to the Power Platform admin center update page for the environmentwhere where you can update the application to resolve the issue.
+
+The image captures the link provided in the Missing dependencies page.  
+    :::image type="content" source="media/missing-dependency.png" alt-text="This is example for missing dependency application update link":::
+
+When the link is clicked, it takes you to the Power Platform admin center update application page.
+    :::image type="content" source="media/application-update.png" alt-text="This is example for upgrade application":::
 
 ### Dependencies on solutions coming from another managed solution
 
