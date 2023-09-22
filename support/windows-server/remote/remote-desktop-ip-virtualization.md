@@ -17,9 +17,6 @@ ms.technology: windows-server-rds
 
 This article discusses about Remote Desktop IP Virtualization in Windows Server.
 
-> [!NOTE]
-> Remote Desktop IP Virtualization on Windows Server 2019 is only supported in on-premises environments.
-
 _Applies to:_ &nbsp; Windows Server 2019, Windows Server 2022  
 _Original KB number:_ &nbsp; 4501072
 
