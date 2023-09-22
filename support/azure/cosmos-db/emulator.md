@@ -28,7 +28,7 @@ If resetting the data doesn't fix the errors, you can:
 - Remove `%ProgramFiles%\Azure Cosmos DB Emulator` directory.
 - Reinstall the emulator.
 
-Alternatively, if resetting the data doesn't work, go to `%LOCALAPPDATA%\CosmosDBEmulator` location and delete the folder.
+Alternatively, if resetting the data doesn't work, go to the `%LOCALAPPDATA%\CosmosDBEmulator` location and delete the folder.
 
 ## Review corrupted windows performance counters
 
@@ -50,7 +50,7 @@ Alternatively, if resetting the data doesn't work, go to `%LOCALAPPDATA%\CosmosD
 
 For example:
 
-1. Navigate to **Sites -> Default Web Sites** in the **IIS Manager**.
+1. In the **IIS Manager**, go to **Sites -> Default Web Sites**.
 1. Locate the **Site Bindings** for port **8081** and edit them to disable TLS 1.3. You can also update the settings for the Web browser by using the **Settings** option.
 
   While the emulator is running, if your computer goes to sleep mode or runs any OS updates, you might see a "Service is currently unavailable" message.
@@ -67,7 +67,7 @@ To collect debugging traces, run the following commands from an administrative c
    cd /d "%ProgramFiles%\Azure Cosmos DB Emulator"
    ```
 
-1. Shut down the emulator and watch the system tray to make sure the program has shut down. It may take a minute to complete. You can also select **Exit** in the Azure Cosmos DB emulator user interface.
+1. Shut down the emulator and watch the system tray to make sure the program has shutdown. It may take a minute to complete. You can also select **Exit** in the Azure Cosmos DB emulator user interface.
 
    ```bash
    Microsoft.Azure.Cosmos.Emulator.exe /shutdown
@@ -79,13 +79,13 @@ To collect debugging traces, run the following commands from an administrative c
    Microsoft.Azure.Cosmos.Emulator.exe /startwprtraces
    ```
 
-1. Launch the emulator
+1. Launch the emulator.
 
    ```bash
    Microsoft.Azure.Cosmos.Emulator.exe
    ```
 
-1. Reproduce the problem. If the data explorer isn't working, you only need to wait for the browser to open for a few seconds to catch the error.
+1. Reproduce the problem. If the data explorer isn't working, you only need to wait for the browser to load for a few seconds to detect the error.
 
 1. Stop logging with the following command:
 
