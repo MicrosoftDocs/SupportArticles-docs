@@ -1,46 +1,49 @@
 ---
-title: Solution uninstall or upgrade fails due to circular dependencies between two solutions.
-description: Works around the issue where solution uninstall or upgrade fails due to having a circular dependendencies between two solutions.
+title: Solution uninstall fails due to circular dependencies between two solutions.
+description: Works around the issue where solution uninstall fails due to having a circular dependendencies between two solutions.
 ms.reviewer: jdaly
 ms.date: 09/21/2023
 author: swatimadhukargit
 ms.author: swatim
 ---
-# Solution uninstall or upgrade fails due to circular dependencies between two solutions
+# Solution uninstall fails due to circular dependencies between two solutions
 
 _Applies to:_ &nbsp; Power Platform, Solutions
 
-This article provides a workaround for an issue that occurs when solution uninstall or upgrade fails due to having a circular dependendencies between two solutions. Circular dependencies exist when the two solutions, each have dependencies on a component from the other solution.
+This article provides a workaround for an issue that occurs when solution uninstall fails due to having a circular dependendencies between two solutions. Circular dependencies exist when the two solutions, each have dependencies on a component from the other solution.
 
 ## Symptoms
 
-When you try to uninstall a solution or remove a component during solution upgrade, the operation results in failure. This situation happens both solution has dependencies on the component from the other solution, uninstall of either solution isn't allowed by the Dataverse and results in failure.
+When you try to uninstall a solution the operation results in failure. This situation happens both when solution has dependencies on the component from the other solution, uninstall of either solution isn't allowed and results in failure.
 
 ## Cause
 
-The circular dependencies between two solutions can happen due to lack of isolation of development environment for different solution. This can result in unintentional component dependencies between two solutions being developed in same environment. The issue surface in the scenario when both the solutions take dependencies on the other solution and deletion of either solution isn't allowed until dependencies are removed. The problem becomes many fold complicated when both solutions are using different publishers.
+The circular dependencies between two solutions can happen due to lack of isolation of development environment for different solutions. This can result in unintentional component dependencies between two solutions being developed in same environment. The issue surface in the scenario when both the solutions take dependencies on the other solution and deletion of either solution isn't allowed until dependencies are removed.
 
 ## Workaround
 
-The workaround to resolve the circular dependencies between the two solutions are:
+To workaround the circular dependencies between the two solutions is to understand the dependencies on the solution 
 
-#### Make both solutions healthy by removing the circular dependencies
+#### Upgrade to remove dependencies
+
 
 Circular dependencies between two solutions can be resolved, by working on any one of the solutions involved and updating it to remove dependency. To perform that, remove the dependency on first solution on the second solution (or remove dependency of second solution on the first solution), republish the first solution (or second solution) and import to the target environment again. By doing this, the lifecycle management of the solution becomes healthy and future upgrade or deletion become possible.
+In the solution explorer, go to Show dependencies, check for all the solutions dependent on the Solution.
 
 ##### Example
 
 Solution A and Solution B are two different solutions, both taking dependencies on each other.
 Solution A has two components Component 1 and Component 2. Solution B has two components Component 3 and Component 4.
 Component 2 from Solution A takes dependency on Component 3 from Solution B. And Component 4 from Solution B takes dependency on Component 1 from Solution A.
+When attempting to delete either Solution A or Solution B, it fails due to dependencies on each other.
 
 To resolve the circular dependencies:
 
-- Either go to the source environment of Solution A, edit Component 2 to remove dependency on Component 3. Export the Solution A as a new version and import to the target environment. This allows to delete Solution B, the other way isn't allowed yet, as Solution A still have dependency on Solution B.
+- Go to the source environment of Solution A, edit Component 2 to remove dependency on Component 3. Export the Solution A as a new version and upgrade to the target environment. This allows to delete Solution B, as Solution A still have dependency on Solution B.
 
 - Or go to the source environment of Solution B, edit Component 4 to remove dependency on Component 1. Export the Solution B as a new version and import to the target environment. This allows to delete Solution A, the other way isn't allowed yet, as Solution B still have dependency on Solution A.
 
-#### Delete solutions if maintaining of both solutions for future isn't needed
+#### Active change to remove dependencies
 
 If the intent is to remove the dependencies to be able to delete the solution. It can be achieved by removing the dependencies in the active layer and then deleting the solution.
 
