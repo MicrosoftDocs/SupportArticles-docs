@@ -27,19 +27,16 @@ This issue can occur if the Visual Studio instance on the machine is corrupt.
 
 ## Resolution
 
-If your previous attempts to repair or update Visual Studio failed, you can run the [InstallCleanup.exe](/visualstudio/install/uninstall-visual-studio#remove-all-with-installcleanupexe) tool to remove installation files and product information for all installed instances of Visual Studio, and then reinstall Visual Studio 2022. This process ensures a fresh installation of Visual Studio, which should allow for successful repairs or updates.
+If your previous attempts to repair or update Visual Studio failed, you can run the [InstallCleanup.exe](/visualstudio/install/uninstall-visual-studio#remove-all-with-installcleanupexe) tool to remove installation files and product information, and then reinstall Visual Studio 2022. This process ensures a fresh installation of Visual Studio, which should allow for successful repairs or updates.
 
 To solve this issue, follow these steps:
 
 1. Open a command prompt with administrator privileges.
 1. Run the following command to execute the [InstallCleanup](/visualstudio/install/uninstall-visual-studio#remove-all-with-installcleanupexe) tool:
 
-   `"C:\Program Files (x86)\Microsoft Visual Studio\Installer\InstallCleanup.exe" -f`
+   `"C:\Program Files (x86)\Microsoft Visual Studio\Installer\InstallCleanup.exe" -i 17`
 
-   > [!NOTE]
-   > The `-f` option removes the main installation directory, product information, and most other features installed outside the installation directory. These features might also be shared with other Visual Studio installations or products.
-
-   This command will perform a cleanup of the Visual Studio installation, removing any corrupted or incomplete components.
+   This command will perform a cleanup of the Visual Studio installation, removing any corrupted or incomplete components. The version value, in this case `17`, specifies the version of product to be removed. 
 
 1. Once the cleanup process is completed, reinstall [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/).
 1. Launch the Visual Studio 2022 installer and follow the prompts to reinstall Visual Studio. Make sure to select the desired workloads and components during the installation.
