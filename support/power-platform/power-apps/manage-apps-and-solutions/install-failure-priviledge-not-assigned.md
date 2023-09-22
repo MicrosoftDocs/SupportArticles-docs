@@ -2,7 +2,7 @@
 title: Can't import a solution or install an application due to missing privileges
 description: Provides a workaround for an issue where solution import or application installation in Power Platform admin center fails due to missing privileges in Microsoft Power Apps.
 ms.reviewer: jdaly
-ms.date: 09/20/2023
+ms.date: 09/22/2023
 author: swatimadhukargit
 ms.author: swatim
 ---
@@ -22,7 +22,7 @@ When a user tries to import a solution or install an application in the [Power P
 
 This error occurs for the following reasons:
 
-- The [access mode](/power-apps/developer/data-platform/reference/entities/systemuser#BKMK_AccessMode) of the user performing the import or installation is set to **Administrative** instead of [**Read-Write**](/power-platform/admin/create-users#create-a-read-write-user-account). Additionally, if a user doesn't have a valid Power Platform license, their access mode is **Administrative**.
+- The [access mode](/power-apps/developer/data-platform/reference/entities/systemuser#BKMK_AccessMode) of the user performing the import or installation is set to **Administrative** instead of [**Read-Write**](/power-platform/admin/create-users#create-a-read-write-user-account). Users that don't have a valid Power Platform license will have a default access mode of **Administrative**.
 - The user doesn't have sufficient privileges to import the solution that includes all the components in the solution.
 
 ## Workaround
