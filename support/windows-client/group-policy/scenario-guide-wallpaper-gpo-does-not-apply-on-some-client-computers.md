@@ -19,6 +19,8 @@ This scenario guide explains how to use TSS to collect data to troubleshoot the 
 2. Group Policy service enumerates the **GPLINK** and **GPOptions** attributes where the user account resides, in the order of local GPO, site GPO, domain and organizational unit (OU).
 3. Group Policy service makes a list of GPOs to apply or deny.
 
+For more information, see [Applying Group Policy](/previous-versions/windows/desktop/policy/applying-group-policy) and [Filtering the Scope of a GPO](/previous-versions/windows/desktop/policy/filtering-the-scope-of-a-gpo).
+
 ## Troubleshooting guide
 
 Before you proceed, refer [Applying Group Policy troubleshooting guidance](../../windows-server/group-policy/applying-group-policy-troubleshooting-guidance.md).
@@ -107,10 +109,11 @@ The event ID 5312 indicates that the group policy service detected that it has t
 
 ## Summary
 
-When we compare the event ID: 5312 from working and failing computers, we observe that the Group Policy client service didn't enumerate the "Wallpaper-GPO-Tokyo" when it connected to DC6.
-There could be two Primary reasons for the above scenario:
+When we compare the event ID: 5312 from working and failing computers, we observe that the Group Policy client service didn't enumerate the "Wallpaper-GPO-Tokyo" when it connected to DC6. We also confirm that the GPO scope is correct. Therefore, the cause for the above scenario can be an issue with Active Directory (AD) Replication.
 
-1. Verify the scope of the GPO.
-2. Active Directory Replication issue.
+The Distributed File System Replication (DFSR) engine is dependent on the AD Replication. If Active Directory Replication breaks, the DFSR replication also breaks. This could lead to the issue in our scenario, that the GPO is not in either the Applied or Denied list.
 
-In this scenario guide, we confirmed that the scope of the GPO was correct. Additionally, we found out an Active directory replication issue due to a bad router that blocks RPC port to the Tokyo site. See [Active Directory replication error 1722: The RPC server is unavailable](../../windows-server/identity/replication-error-1722-rpc-server-unavailable.md).
+> [!NOTE]
+> If AD Replication was working fine and DFSR broken, we could encounter another issue where GPO is in the Deny list.  
+
+To troubleshoot the AD Replication issue, see [Active Directory replication error 1722: The RPC server is unavailable](../../windows-server/identity/replication-error-1722-rpc-server-unavailable.md). In this scenario guide, we found out a bad router that blocks RPC port to the Tokyo site, which caused an Active directory replication issue.
