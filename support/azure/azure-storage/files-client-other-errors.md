@@ -1,10 +1,9 @@
 ---
 title: Troubleshoot ClientOtherErrors in Azure Files
 description: Troubleshoot ClientOtherErrors in SMB Azure file shares. ClientOtherErrors are requests that fail, but the system still behaves as expected.
-author: khdownie
 ms.service: azure-file-storage
 ms.date: 09/11/2023
-ms.author: kendownie
+ms.reviewer: kendownie
 ---
 
 # Troubleshoot ClientOtherErrors in Azure Files
