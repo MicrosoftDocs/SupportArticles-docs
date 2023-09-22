@@ -1,5 +1,5 @@
 ---
-title: Can't import a solution or install an application due to missing privileges
+title: Solution import or application installation failure due to missing privileges
 description: Provides a workaround for an issue where solution import or application installation in Power Platform admin center fails due to missing privileges in Microsoft Power Apps.
 ms.reviewer: jdaly
 ms.date: 09/22/2023
