@@ -53,7 +53,8 @@ For example:
 1. In the **IIS Manager**, go to **Sites -> Default Web Sites**.
 1. Locate the **Site Bindings** for port **8081** and edit them to disable TLS 1.3. You can also update the settings for the Web browser by using the **Settings** option.
 
-  While the emulator is running, if your computer goes to sleep mode or runs any OS updates, you might see a "Service is currently unavailable" message.
+    > [!NOTE]
+    > If your computer goes to sleep mode or runs any OS updates while the emulator is running, you might see a "Service is currently unavailable" message.
 
 1. Reset the emulator's data, by right-clicking on the icon that appears on the Windows notification tray and select **Reset Data**.
 
