@@ -43,11 +43,11 @@ To resolve the circular dependencies, work on any one of the solutions involved 
 
 - Either, go to the source environment of Solution A, edit Component 2 to remove dependency on Component 3. Export the Solution A as a new version and upgrade to the target environment. You're allowed to delete Solution B now, as Solution A does not have dependency on Solution B anymore.
 
-:::image type="content" source="media/solutionB-dependency-on-solutionA.png" alt-text="Example of two solutions having dependencies on each other." lightbox="media/solutionB-dependency-on-solutionA.png":::
+:::image type="content" source="media/solutionB-dependency-on-solutionA.png" alt-text="Example of Solution A removed dependency on Solution B." lightbox="media/solutionB-dependency-on-solutionA.png":::
 
 - Or, go to the source environment of Solution B, edit Component 4 to remove dependency on Component 1. Export the Solution B as a new version and import to the target environment. You're allowed to delete Solution A now, as Solution B does not have dependency on Solution A.
 
-:::image type="content" source="media/solutionA-dependency-on-solutionB.png" alt-text="Example of two solutions having dependencies on each other." lightbox="media/solutionA-dependency-on-solutionB.png":::
+:::image type="content" source="media/solutionA-dependency-on-solutionB.png" alt-text="Example of Solution B removed dependency on Solution A." lightbox="media/solutionA-dependency-on-solutionB.png":::
 
 #### Active change to remove dependencies
 
