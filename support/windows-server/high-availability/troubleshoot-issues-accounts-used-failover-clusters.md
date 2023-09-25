@@ -62,7 +62,7 @@ For more information about the related events (Event ID 1193, 1194, 1206, and 12
 To resolve these issues, follow the steps:
 
 1. On a domain controller, select **Start**, go to **Administrative Tools**, and then select **Active Directory Users and Computers**. If the **User Account Control** dialog box appears, confirm that the action it displays is what you want, and then select **Yes**.
-2. Expand the default **Computers** container or the folder in which the cluster name account (the computer account for the cluster) is located. The **Computers** container is located in Active Directory Users and *Computers/\<domain-node\>/Computers*.
+2. Expand the default **Computers** container or the folder in which the cluster name account (the computer account for the cluster) is located. The **Computers** container is located in **Active Directory Users and Computers**/\<domain-node\>/**Computers**.
 3. Examine the icon for the cluster name account. The account shouldn't be disabled by having a downward-pointing arrow on it. If it's disabled, right-click it and select **Enable Account** if possible.
 4. On the **View** menu, make sure that the **Advanced Features** option is selected.
 
