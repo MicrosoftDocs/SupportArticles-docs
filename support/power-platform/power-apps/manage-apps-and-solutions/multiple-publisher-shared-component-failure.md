@@ -1,5 +1,5 @@
 ---
-title: Can't upgrade or delete the base layer of a component with multiple publishers
+title: Solution upgrade or deletion fails when a shared component has multiple publishers
 description: Works around an issue where you can't upgrade or delete the base layer of components that have multiple publishers in Microsoft Power Apps.
 ms.reviewer: jdaly
 ms.date: 09/22/2023
@@ -24,24 +24,20 @@ To check if the solution component's base layer and the layer immediately above 
 
 ## Cause
 
-The owner of a component is determined by the [solution publisher](/power-platform/alm/solution-concepts-alm#solution-publisher) that owns the base layer of the solution. The solution system doesn't allow users to change component ownership from one publisher to another. Therefore, upgrade or deletion operations that change the publisher of the base layer will fail.
+The owner of a component is determined by the [solution publisher](/power-platform/alm/solution-concepts-alm#solution-publisher) that owns the base layer of the solution. The solution system doesn't allow users to change component ownership from one publisher to another. Therefore, upgrade or deletion operations that change the publisher of the base layer fails.
 
-For example, publisher A owns the base layer of a component. Another managed solution from publisher B adds another layer to the same component. In this case, attempts to delete the base layer will fail because there's another layer above it from a different publisher. If publisher A tries to upgrade the base layer by removing the component that publisher B depends on, it will also fail.
+For example, publisher A owns the base layer of a component. Another managed solution from publisher B adds another layer to the same component. In this case, attempts to delete the base layer fails because there's another layer above it from a different publisher. If publisher A tries to upgrade the base layer by removing the component that publisher B depends on, it also fails.
 
 ## Workaround
 
 To work around this issue, use one of the following options:
 
 - Uninstall the solution.
-- Remove the layers that are from different publishers above the base layer by deleting the component through the above layer solution.
+- Remove the layers that are from different publishers above the base layer by deleting the component through the above layer solution. To do so, in the source environment of the above layer solution, remove the component, export the solution by removing the above layer, and then import the solution using [upgrade or stage for upgrade](/power-apps/maker/data-platform/update-solutions) into the target environment.
 
-  In the source environment of the above layer solution, remove the component, export the solution by removing the above layer, and then import the solution using [upgrade or stage for upgrade](/power-apps/maker/data-platform/update-solutions) into the target environment.
-
-### Examples
+### Example
 
 The following example demonstrates what happens when you try to remove the base layer by upgrading or deleting a solution.
-
-#### Delete the base layer when the base and the layer above have different publishers
 
 There are multiple publishers for the base layer and the layers above it. Layer order 2 and order 3 are managed layers coming from publisher B and publisher C, and need to be removed.  
 
@@ -51,12 +47,12 @@ There are multiple publishers for the base layer and the layers above it. Layer 
 |2| Solution 2 | Publisher B|
 |1| Solution 1 | Publisher A|
 
-After you delete all the managed layers, delete the base layer.
+After you delete all the managed layers, the only layer remains is the base layer.
 
 |Order | Solution | Publisher|
 |------|-------|--------|
 |1| Solution 1 | Publisher A|
 
-After you delete the base layer and there are no layers above it, the component is deleted.
+After you delete the base layer and there are no layers remaining, the component is deleted.
 
 For more information, see [multiple solution layering and dependencies](/power-platform/alm/organize-solutions#multiple-solution-layering-and-dependencies).
