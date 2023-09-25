@@ -1,20 +1,20 @@
 ---
-title: Solution uninstall fails due to circular dependencies between two solutions.
-description: Works around the issue where solution uninstall fails due to having a circular dependendencies between two solutions.
+title: Solution delete fails due to circular dependencies between two solutions.
+description: Works around the issue where solution delete fails due to having a circular dependendencies between two solutions.
 ms.reviewer: jdaly
 ms.date: 09/25/2023
 author: swatimadhukargit
 ms.author: swatim
 ---
-# Solution uninstall fails due to circular dependencies between two solutions
+# Solution delete fails due to circular dependencies between two solutions
 
 _Applies to:_ &nbsp; Power Platform, Solutions
 
-This article provides a workaround for an issue that occurs when solution uninstall fails due to having a circular dependendencies between two solutions. Circular dependencies exist when the two solutions, each have dependencies on a component from the other solution.
+This article provides a workaround for an issue that occurs when solution delete fails due to having a circular dependendencies between two solutions. Circular dependencies exist when the two solutions, each have dependencies on a component from the other solution.
 
 ## Symptoms
 
-When you try to delete a solution the operation results in failure due to dependency on this solution from another solution. When you try to uninstall the other solution, it fails too due to dependency on the other solution from this solution. Delete of either solution isn't allowed and results in failure.
+When you try to delete a solution the operation results in failure due to dependency on this solution from another solution. When you try to delete the other solution, it fails too due to dependency on the other solution from this solution. Delete of either solution isn't allowed and results in failure.
 > **Failed deleting solution \<solution name\>. Solution dependencies exist, cannot uninstall**
 
 ## Cause
