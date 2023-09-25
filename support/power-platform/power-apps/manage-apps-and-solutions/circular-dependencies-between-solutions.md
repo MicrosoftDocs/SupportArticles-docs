@@ -16,8 +16,6 @@ This article provides a workaround for an issue that occurs when solution uninst
 
 When you try to uninstall a solution the operation results in failure due to dependency on this solution from another solution. When you try to uninstall the other solution, it fails too due to dependency on the other solution from this solution. This situation happens when both solution has dependencies on the component from the other solution, uninstall of either solution isn't allowed and results in failure.
 
-## ToDo: Error
-
 ## Cause
 
 Failure of uninstall solutions can be due to circular dependencies between two solutions. Circular dependencies between solutions can happen due to lack of isolation of development environment for different solutions. It results in unintentional component dependencies between two solutions being developed in same environment. The issue surface in the scenario when both the solutions take dependencies on the other solution and deletion of either solution isn't allowed until dependencies are removed.
