@@ -3,14 +3,13 @@ title: Troubleshoot issues with multiple tables
 description: Provides resolutions for the known issues that are related to multiple tables such as opportunity, quote, order, or invoice in Dynamics 365 Sales.
 author: sbmjais
 ms.author: shjais
-ms.topic: troubleshooting
-ms.date: 02/28/2022
+ms.reviewer: lavanyakr
+ms.date: 09/25/2023
 ms.subservice: d365-sales-sales
 ---
-
 # Troubleshoot common issues with multiple tables
 
-This article helps you troubleshoot and resolve common issues across multiple tables like opportunity, quote, order, or invoice.
+This article helps you troubleshoot and resolve common issues across multiple tables like opportunity, quote, order, or invoice in Microsoft Dynamics 365 Sales.
 
 ## Issue 1 - In Context Form may appear in the form selector
 
@@ -30,7 +29,7 @@ If the appearance of **In Context Form** leads to confusion, you can deactivate 
 
 ## Issue 2 - Error or unexpected behavior while working on tables
 
-### Symptom
+### Symptoms
 
 While working on tables (such as opportunities, quote, order, invoice, quote product, and order product), you observe unexpected behavior or an error in Dynamics 365 for Sales. The following are some of the errors that you might encounter while working on opportunities, and they might apply to other tables:
 
@@ -151,23 +150,23 @@ You must verify the improper customizations and resolve them. Perform the follow
 > [!NOTE]
 > If the issue occurs, activate the **Processes** that you deactivated now and try to [Deactivate a custom plug-in](#deactivate-a-custom-plug-in) or [Disable custom JavaScript](#disable-custom-javascript).
 
-## Issue: 3: Custom plug-in handling by using a shared variable
+## Issue 3 - Custom plug-in handling by using a shared variable
 
-## Issue
+### Symptoms
 
-- Create and update operations on Opportunity, Quote, Order, and Invoice tables are triggering updates on their parent tables.
-- Retrieving details about Opportunity, Quote, Order, and Invoice tables internally trigger the Price Calculation service, which subsequently triggers custom plug-ins created by customers. 
+- Create and update operations on Opportunity, Quote, Order, and Invoice tables trigger updates on their parent tables.
+- Retrieving details about Opportunity, Quote, Order, and Invoice tables internally triggers the Price Calculation service, which subsequently triggers the custom plug-ins created by customers.
 
-## Resolution
+### Resolution
 
-Custom plug-ins execute create, update, and save operations on Opportunity, Quote, Order, and Invoice tables. Create and update operations on these tables internally trigger the Price Calculation service, which then updates associated price-related fields or attributes of their parent tables.
+Custom plug-ins execute create, update, and save operations on Opportunity, Quote, Order, and Invoice tables. The create and update operations on these tables internally trigger the Price Calculation service, which then updates associated price-related fields or attributes of their parent tables.
 
 You can identify or differentiate any updates in Opportunity, Quote, Order, or Invoice tables or parent Opportunity, Quote, Order, or Invoice tables by using the internal Price Calculation service or by using your own custom plug-in. The Boolean shared variable `InternalSystemPriceCalculationEvent`, which is accessible through `IPluginExecutionContext`, is available within the plug-in code. Any create or update event processed by using the Price Calculation service will set the value of the variable `InternalSystemPriceCalculationEvent` to `true`. The default value of `InternalSystemPriceCalculationEvent` is `false`. You can access this variable from your custom plug-in code to control the flow of your existing business logic.
 
 > [!NOTE]
 > To perform custom plug-in operations by using a shared variable, make sure that the out-of-the-box Price Calculation service is disabled.
 
-### Sample code
+#### Sample code
 
 ```csharp
 public void Execute(IServiceProvider serviceProvider)
@@ -194,4 +193,3 @@ public void Execute(IServiceProvider serviceProvider)
 
 }
 ```
-
