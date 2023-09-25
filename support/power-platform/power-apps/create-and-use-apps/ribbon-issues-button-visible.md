@@ -2,7 +2,7 @@
 title: A button on the command bar is visible
 description: Fixes an issue in which a button on the command bar is visible when it should be hidden.
 ms.reviewer: krgoldie, srihas, brflood, tahoon
-ms.date: 09/22/2023
+ms.date: 09/25/2023
 ---
 # A button on the command bar is visible when it should be hidden
 

@@ -2,7 +2,7 @@
 title: How to regenerate ribbon metadata
 description: Describes how to start the regeneration ribbon metadata operation and check the status.
 ms.reviewer: krgoldie, srihas, tahoon
-ms.date: 09/22/2023
+ms.date: 09/25/2023
 ---
 # How to regenerate ribbon metadata
 
