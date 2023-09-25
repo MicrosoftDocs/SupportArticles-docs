@@ -85,5 +85,5 @@ To resolve these issues, follow the steps:
 14. Repeat steps 12-13 for each clustered service and application configured in the cluster.
 15. Make sure that the domain-wide quota for creating computer objects (by default, `10`) hasn't been reached (consulting with a domain administrator if applicable). If the previous items in this procedure have all been reviewed and corrected, and if the quota has been reached, consider increasing the quota. To change the quota, open a command prompt as an administrator and run the `ADSIEdit.msc` command.
 16. Right-click **ADSI Edit**, select **Connect to**, and then select **OK**. **Default naming context** is added to the console tree.
-17. Double-click Default naming context, right-click the domain object underneath it, and then select **Properties**.
+17. Double-click **Default naming context**, right-click the domain object underneath it, and then select **Properties**.
 18. Scroll to **ms-DS-MachineAccountQuota** and select it. Select **Edit**, change the value, and then select **OK**.
