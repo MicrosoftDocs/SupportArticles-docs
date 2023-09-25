@@ -23,7 +23,7 @@ Failure of delete solutions can be due to circular dependencies between two solu
 
 ## Workaround
 
-To work around the circular dependencies between the two solutions, first you need to understand the dependencies between different solutions. When the solution deletion fails with **Failed deleting solution \<solution name\>. Solution dependencies exist, cannot uninstall** along with **View dependencies** button in the notification. The Dependencies show all the components which are dependent on the solution you're trying to uninstall. You can click each component in the list and use the **See solution layers** to find the dependent solutions from which the component is coming. While trying to delete the dependent solution, if you encounter same issue and find that dependent solution also has dependency on the current solution, it's circular dependency.
+To work around the circular dependencies between the two solutions, first you need to understand the dependencies between different solutions. When the solution deletion fails with **Failed deleting solution \<solution name\>. Solution dependencies exist, cannot uninstall** along with **View dependencies** button in the notification. The Dependencies show all the components that are dependent on the solution you're trying to uninstall. You can click each component in the list and use the **See solution layers** to find the dependent solutions from which the component is coming. While trying to delete the dependent solution, if you encounter same issue and find that dependent solution also has dependency on the current solution, then its circular dependency.
 
 > [!TIP]
 > You can also check solution dependencies in the solution explorer by clicking [**Show dependencies**](/power-apps/maker/data-platform/view-component-dependencies). This can help to catch the issue before trying solution delete.
@@ -41,11 +41,11 @@ When attempting to delete Solution A, it fails due to Solution B having dependen
 
 To resolve the circular dependencies, work on any one of the solutions involved and update it to [remove dependency](/power-platform/alm/removing-dependencies) on the other one.
 
-- Either, go to the source environment of Solution A, edit Component 2 to remove dependency on Component 3. Export the Solution A as a new version and upgrade to the target environment. You're allowed to delete Solution B now, as Solution A does not have dependency on Solution B anymore.
+- Either, go to the source environment of Solution A, edit Component 2 to remove dependency on Component 3. Export the Solution A as a new version and upgrade to the target environment. You're allowed to delete Solution B now, as Solution A doesn't have dependency on Solution B anymore.
 
 :::image type="content" source="media/solutionB-dependency-on-solutionA.png" alt-text="Example of Solution A removed dependency on Solution B." lightbox="media/solutionB-dependency-on-solutionA.png":::
 
-- Or, go to the source environment of Solution B, edit Component 4 to remove dependency on Component 1. Export the Solution B as a new version and import to the target environment. You're allowed to delete Solution A now, as Solution B does not have dependency on Solution A.
+- Or, go to the source environment of Solution B, edit Component 4 to remove dependency on Component 1. Export the Solution B as a new version and import to the target environment. You're allowed to delete Solution A now, as Solution B doesn't have dependency on Solution A.
 
 :::image type="content" source="media/solutionA-dependency-on-solutionB.png" alt-text="Example of Solution B removed dependency on Solution A." lightbox="media/solutionA-dependency-on-solutionB.png":::
 
