@@ -17,7 +17,7 @@ ms.technology: windows-server-high-availability
 
 This article provides troubleshooting guidance to issues with accounts used by failover clusters.
 
-When you create a failover cluster and [configure clustered services or applications](https://learn.microsoft.com/windows-server/failover-clustering/configure-ad-accounts), the failover cluster wizards create the necessary Active Directory accounts and give them the correct permissions. If a needed account is deleted, or necessary permissions are changed, issues can occur. The following sections provide steps to troubleshoot these issues.
+When you create a failover cluster and [configure clustered services or applications](/windows-server/failover-clustering/configure-ad-accounts), the failover cluster wizards create the necessary Active Directory accounts and give them the correct permissions. If a needed account is deleted, or necessary permissions are changed, issues can occur. The following sections provide steps to troubleshoot these issues.
 
 ## Troubleshoot password issues with the cluster name account
 
@@ -35,9 +35,9 @@ The event messages indicate that the password for the cluster name account and t
 > - Your account should be a member of the local Administrators group (or equivalent) at a minimum. In addition, your account should be given Reset password permission for the cluster name account (unless it's a Domain Admins account or is the Creator Owner of the cluster name account).
 > - You can use the account that was used to install the cluster.
 >
-> For more information about using the appropriate accounts and group memberships, see [Local and Domain Default Groups]( https://learn.microsoft.com/en-us/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
+> For more information about using the appropriate accounts and group memberships, see [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
 >
-> For more information about ensuring the cluster administrators have the correct permissions, see [Planning ahead for password resets and other account maintenance](https://learn.microsoft.com/en-us/windows-server/failover-clustering/configure-ad-accounts#planning-ahead-for-password-resets-and-other-account-maintenance).
+> For more information about ensuring the cluster administrators have the correct permissions, see [Planning ahead for password resets and other account maintenance](/windows-server/failover-clustering/configure-ad-accounts#planning-ahead-for-password-resets-and-other-account-maintenance).
 
 To resolve these issues, follow the steps:
 
