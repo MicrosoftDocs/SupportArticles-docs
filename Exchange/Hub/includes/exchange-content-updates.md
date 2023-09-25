@@ -2,6 +2,14 @@
 
 
 
+## Week of September 18, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 9/22/2023 | [Can't restore an Outlook form that's deleted from the organizational forms library](/exchange/troubleshoot/public-folders/cannot-restore-deleted-outlook-form) | added |
+
+
 ## Week of September 11, 2023
 
 
@@ -25,11 +33,3 @@
 | Published On |Topic title | Change |
 |------|------------|--------|
 | 8/25/2023 | [Can't empty Deleted Items folder in Microsoft 365 Groups](/exchange/troubleshoot/groups-and-distribution-lists/cannot-empty-deleted-items-folder-in-groups) | added |
-
-
-## Week of August 14, 2023
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 8/17/2023 | [MAPI applications can't access archive mailboxes in Exchange Server 2016 and later versions](/exchange/troubleshoot/development/mapi-apps-cannot-access-archive-mailboxes) | added |

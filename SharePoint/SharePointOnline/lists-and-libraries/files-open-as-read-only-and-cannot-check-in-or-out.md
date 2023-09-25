@@ -30,7 +30,7 @@ At times, you may find that when you open files from SharePoint or OneDrive for 
 
 There are several reasons why a file may open as read only:
 
-- Antivirus programs may open potentially unsafe files as read-only. Check with your antivirus provider to learn how to adjust these settings. BitDefender, for example, has content on adding application exclusions here: [How to add application or process exclusions in Bitdefender Control Center](https://www.bitdefender.com/support/how-to-add-application-or-process-exclusions-in-bitdefender-control-center-1119.html).
+- Antivirus programs may open potentially unsafe files as read-only. Check with your antivirus provider to learn how to adjust these settings.
 - If you have libraries with **Checkout Required**, or **Validation** columns or metadata, or when **Draft Item Security** is set to either **Only users who can edit** or **Only users who can approve items** in Version Settings of the library, these items will be synchronized as read-only. For more information, see [Libraries with specific columns or metadata](https://support.microsoft.com/office/restrictions-and-limitations-in-onedrive-and-sharepoint-64883a5d-228e-48f5-b3d2-eb39e07630fa#librariesspecificcolumns).
 - An Office document opens in Protected View even though you enable the "Open Office documents as read/write while browsing" policy setting. For more information, see [An Office document opens in Protected View even though you enable the "Open Office documents as read/write while browsing" policy setting](https://support.microsoft.com/help/983047).
 

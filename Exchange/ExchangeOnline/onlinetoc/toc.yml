@@ -555,6 +555,8 @@
           href: ../public-folders/cannot-delete-public-folder.md
         - name: Can't finalize a public folder batch migration
           href: ../public-folders/cannot-finalize-migration-batch.md
+        - name: Can't restore a deleted Outlook form
+          href: ../public-folders/cannot-restore-deleted-outlook-form.md
         - name: Can't send email to public folder contact list
           href: ../public-folders/cannot-send-email-to-contact-list-public-folder.md
         - name: Can't send emails to mail-enabled public folder
