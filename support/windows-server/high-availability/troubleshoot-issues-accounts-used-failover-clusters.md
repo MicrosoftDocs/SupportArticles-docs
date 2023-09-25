@@ -33,7 +33,7 @@ The event message indicates that the password for the cluster name account no lo
 > To complete the following steps:
 >
 > - Your account should be at least a member of the local Administrators group (or equivalent). In addition, your account should be given the **Reset password** permission for the cluster name account (unless it's a Domain Admins account or the Creator Owner of the cluster name account).
-> - You can use the account that's used to install the cluster.
+> - You can use the account that was used to install the cluster.
 >
 > For more information about using the appropriate accounts and group memberships, see [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
 >
@@ -62,7 +62,7 @@ For more information about the related events (Event IDs 1193, 1194, 1206, and 1
 To resolve these issues, follow the steps:
 
 1. On a domain controller, select **Start**, go to **Administrative Tools**, and then select **Active Directory Users and Computers**. If the **User Account Control** dialog box appears, confirm that the action it displays is what you want, and then select **Yes**.
-2. Expand the default **Computers** container or the folder in which the cluster name account (the computer account for the cluster) is located. The **Computers** container is located in *Active Directory Users and Computers/\<domain-node\>/Computers*.
+2. Expand the default **Computers** container or the folder in which the cluster name account (the computer account for the cluster) is located. The **Computers** container is located in **Active Directory Users and Computers**\\\<domain-node\>\\**Computers**.
 3. Examine the icon for the cluster name account. The account shouldn't be disabled by having a downward-pointing arrow on it. If it's disabled, right-click it and select **Enable Account** if possible.
 4. On the **View** menu, make sure that the **Advanced Features** option is selected.
 
@@ -78,13 +78,13 @@ To resolve these issues, follow the steps:
 10. Review domain policies (consult a domain administrator if applicable) related to the creation of computer accounts (objects). Ensure that the cluster name account can create a computer account each time you configure a clustered service or application. For example, if your domain administrator has configured settings that cause all new computer accounts to be created in a specialized container rather than the default **Computers** container, make sure that these settings also allow the cluster name account to create new computer accounts in that container.
 11. Expand the default **Computers** container or the container in which the computer account for one of the clustered services or applications is located.
 12. Right-click the computer account for one of the clustered services or applications, and then select **Properties**.
-13. On the **Security** tab, confirm that the cluster name account is listed among the accounts that have permissions, and select it. Confirm that the cluster name account has the **Full control** permission (the **Allow** check box is selected). If it doesn't, add the cluster name account to the list and give it the **Full control** permission.
+13. On the **Security** tab, confirm that the cluster name account is listed among the accounts that have permissions, and select it. Confirm that the cluster name account has the **Full control** permission (the **Allow** checkbox is selected). If it doesn't, add the cluster name account to the list and give it the **Full control** permission.
 
     :::image type="content" source="media/troubleshoot-issues-accounts-used-failover-clusters/application-properties-full-control.png" alt-text="Screenshot showing that the cluster name account is listed and has the Full control permission.":::
 
 14. Repeat steps 12-13 for each clustered service and application configured in the cluster.
 15. Make sure that the domain-wide quota (by default, `10`) for creating computer objects hasn't been reached (consult a domain administrator if applicable). If the previous items in this procedure have all been reviewed and corrected, and the quota has been reached, consider increasing the quota. To change the quota, follow these steps: 
     1. Open a command prompt as an administrator and run the `ADSIEdit.msc` command.
-    2. Right-click **ADSI Edit**, and then select **Connect to** > **OK**. The **Default naming context** is added to the console tree.
+    2. Right-click **ADSI Edit**, and then select **Connect to** > **OK**. Then, **Default naming context** is added to the console tree.
     3. Double-click **Default naming context**, right-click the domain object under it, and then select **Properties**.
     4. Scroll to **ms-DS-MachineAccountQuota** and select it. Select **Edit**, change the value, and then select **OK**.
