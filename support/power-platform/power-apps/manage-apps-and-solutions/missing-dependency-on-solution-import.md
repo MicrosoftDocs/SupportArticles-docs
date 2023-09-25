@@ -43,11 +43,11 @@ You can find these dependencies in the **Managed Solution** tab of the **Missing
 
   The following screenshot shows the link provided on the **Missing dependencies** page.  
 
-    :::image type="content" source="media/missing-dependency.png" alt-text="An example of the application upgrade link for a missing dependencies component.":::
+  :::image type="content" source="media/missing-dependency-on-solution-import/missing-dependency.png" alt-text="Example of the application upgrade link for a component with missing dependencies." lightbox="media/missing-dependency.png:::
 
   Select the link to open the upgrade application page in the Power Platform admin center.
 
-  :::image type="content" source="media/application-update.png" alt-text="An example of the upgrade application page in the Power Platform admin center.":::
+  :::image type="content" source="media/missing-dependency-on-solution-import/application-update.png" alt-text="Example of the upgrade application page in the Power Platform admin center." lightbox="media/application-update.png":::
 
 ### Missing dependencies coming from another managed solution
 
