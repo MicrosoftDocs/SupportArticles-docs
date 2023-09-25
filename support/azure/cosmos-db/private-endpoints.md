@@ -1,6 +1,6 @@
 ---
 title: Azure Cosmos DB private endpoints deployment fails
-description: Learn how to troubleshoot problems related to private endpoints created using Azure Private Link.
+description: Troubleshoot failed Azure Resource Manager deployments related to private endpoints created inline with Azure Cosmos DB accounts.
 ms.service: cosmos-db
 author: oury-msft
 ms.author: ouryba
