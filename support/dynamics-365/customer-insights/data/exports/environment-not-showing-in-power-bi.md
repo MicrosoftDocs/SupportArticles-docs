@@ -1,23 +1,24 @@
 ---
-title: Customer Insights environment doesn't show in Power BI
+title: Environment doesn't show in Power BI
 description: Learn how to address issues with relationships in the Power BI connection for Dynamics 365 Customer Insights.
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
-ms.date: 01/23/2023
+ms.date: 09/25/2023
 ---
+# Environment doesn't show in Power BI
 
-# Customer Insights environment doesn't show in Power BI
+[!INCLUDE [consolidated-sku](../../includes/consolidated-sku.md)]
 
-This article resolves issues with the Power BI connector for Dynamics 365 Customer Insights.
+This article resolves issues with the Power BI connector for Dynamics 365 Customer Insights - Data.
 
 ## Prerequisites
 
-You need the Administrator permissions in Customer Insights.
+You need the Administrator permissions in Customer Insights - Data.
 
 ## Symptoms
 
-If an environment has more than one [relationship](/dynamics365/customer-insights/relationships) defined between two identical entities in Customer Insights, it won't be available in the Power BI connector.
+If an environment has more than one [relationship](/dynamics365/customer-insights/relationships) defined between two identical entities in Customer Insights - Data, it won't be available in the Power BI connector.
 
 ## Resolution
 

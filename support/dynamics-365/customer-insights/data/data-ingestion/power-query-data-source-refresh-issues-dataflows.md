@@ -1,13 +1,14 @@
 ---
 title: Power Query data source refresh issues for data sources based on Power Platform dataflows
-description: Learn how to address issues with data sources based on Power Platform dataflows in Dynamics 365 Customer Insights.
+description: Learn how to address issues with data sources based on Power Platform dataflows in Dynamics 365 Customer Insights - Data.
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
-ms.date: 01/23/2023
+ms.date: 09/25/2023
 ---
-
 # Power Query data source refresh issues for data sources based on Power Platform dataflows
+
+[!INCLUDE [consolidated-sku](../../includes/consolidated-sku.md)]
 
 This article can resolve issues if data is stale or you see errors after a data source refresh for Power Query data sources that are based on Power Platform dataflows.
 
