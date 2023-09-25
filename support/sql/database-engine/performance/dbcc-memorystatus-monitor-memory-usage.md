@@ -15,20 +15,15 @@ _Original KB number:_ &nbsp; 907877
 
 ## Summary
 
-This article discusses the output of the `DBCC MEMORYSTATUS` command. This command is frequently used to troubleshoot Microsoft SQL Server memory consumption issues.
-
-This article describes the elements of the output for Memory Manager, the summary of memory usage, the aggregate memory information, the buffer pool information, and the procedure cache information. It also describes the output of global memory objects, query memory objects, optimization, and memory brokers.
+This article discusses the output of the `DBCC MEMORYSTATUS` command. The output includes sections for Memory Manager, summary of memory usage, the aggregate memory information, the buffer pool information, and the procedure cache information. It also describes the output of global memory objects, query memory objects, optimization, and memory brokers. 
 
 ## Introduction
 
-The `DBCC MEMORYSTATUS` command provides a snapshot of the current memory status of SQL Server. You can use the output from this command to troubleshoot memory consumption issues in SQL Server or to troubleshoot specific out of memory errors (many out of memory errors automatically print this output in the error log). You may run this command and provide the output when you contact Microsoft Support for an error that may be associated with a low-memory condition.
+The `DBCC MEMORYSTATUS` command provides a snapshot of the current memory status of SQL Server. The command provides one of the most detailed output of memory distribution and usage in SQL Server. You can use the output from this command to troubleshoot memory consumption issues in SQL Server or to troubleshoot specific out of memory errors (many out of memory errors automatically print this output in the error log). You may run this command and provide the output when you contact Microsoft Support for an error that may be associated with a low-memory condition.
 
 > [!NOTE]
-> Performance Monitor (PerfMon) and Task Manager don't account for memory correctly if Address Windowing Extensions (AWE) support is enabled.
+> Performance Monitor (PerfMon) and Task Manager don't account for full memory usage if Locked Pages in Memory - Address Windowing Extensions (AWE) - is enabled.
 
-This article describes some of the data that you can obtain from the output of the `DBCC MEMORYSTATUS` command.
-
-## More information
 
 > [!IMPORTANT]
 > The `DBCC MEMORYSTATUS` command is intended to be a diagnostic tool for Microsoft Customer Support Services. The format of the output and the level of detail that is provided are subject to change between service packs and product releases. The functionality that the `DBCC MEMORYSTATUS` command provides may be replaced by a different mechanism in later product versions. Therefore, in later product versions, this command may no longer function. No additional warnings will be made before this command is changed or removed. Therefore, applications that use this command may break without warning.
@@ -56,12 +51,13 @@ Process virtual memory low           0
 
 For more information about the elements in this output, see:
 
-- Available Physical Memory: This value shows the overall amount of free memory on the system is 5,060,247,552 bytes.
-- Available Virtual Memory: This value shows the overall amount of free virtual memory for SQL, or any process is 140,710,048,014,336 bytes (128 TB). For more information, see [Memory and Address Space Limits](/windows/win32/memory/memory-limits-for-windows-releases#memory-and-address-space-limits).
-- Available Paging File: This value shows the free paging file space is 7,066,804,224 bytes.
-- Working Set: This value shows the overall amount of virtual memory that the SQL Server process has in RAM is 430,026,752 bytes.
-- Percent of Committed Memory in WS: This value shows the percentage of virtual memory allocated to running processes or applications compared to the total amount of virtual memory available is 100%.
-- Page Faults: This value shows the overall amount of page faults for all processes is 151,138.
+- **Available Physical Memory**: This value shows the overall amount of free memory on the computer. In the example the free memory is 5,060,247,552 bytes.
+- **Available Virtual Memory**: This value shows the overall amount of free virtual memory for SQL Server process is 140,710,048,014,336 bytes (128 TB). For more information, see [Memory and Address Space Limits](/windows/win32/memory/memory-limits-for-windows-releases#memory-and-address-space-limits).
+- **Available Paging File**: This value shows the free paging file space. In the example the value is 7,066,804,224 bytes.
+- **Working Set**: This value shows the overall amount of virtual memory that the SQL Server process has in RAM (isn't paged out) is 430,026,752 bytes.
+- **Percent of Committed Memory in WS**: This value shows the percentage of virtual memory allocated to the SQL Server process compared how much of this memory is in RAM (or is Working Set). The value of 100% shows that all of the committed memory is stored in RAM and 0% of it is paged out.
+- **Page Faults**: This value shows the overall amount of hard and soft page faults for the SQL Server. In the example the value is 151,138.
+- The remaining four values are binary or boolean. **System physical memory high** value of 1 indicates that SQL Server consider the available physical memory on the computer is high. Consequently the value of **System physical memory low** is 0, which means no low memory. Similar logic is applied to **Process physical memory low** and **Process virtual memory low**, where 0 means it is false, and 1 is true. In this example both values are 0, which means there's plenty of physical and virtal memory for the SQL Server process.
 
 ## Memory Manager
 
@@ -90,13 +86,15 @@ Last OS Error              0
 
 For more information about the elements in this output, see:
 
-- VM Reserved: This value shows the overall amount of virtual address space (VAS) that SQL Server has reserved.
-- VM Committed: This value shows the overall amount of VAS that SQL Server has committed. VAS that is committed has been associated with physical memory.
-- Pages Allocated: This value shows the total number of memory pages allocated to a process.
-- Locked Pages Allocated: This value represents the amount of memory, in kilobytes (KB), that SQL Server has allocated and locked in physical RAM using the AWE API. It indicates how much memory SQL Server is actively using and has requested to be kept in memory to optimize performance. By locking pages in memory, SQL Server ensures that critical database pages are readily available and not swapped to disk. For more information, see [Address Windows Extensions (AWE) memory](/sql/relational-databases/memory-management-architecture-guide#address-windows-extensions-awe-memory). A value of zero indicates that the "locked pages in memory" feature is currently disabled and SQL Server uses virtual memory instead.
-- Large Pages Allocated: This value represents the amount of memory allocated by SQL Server using Large Pages. Large Pages is a memory management feature provided by the operating system. Instead of using the standard page size (typically 4 KB), this feature uses a larger page size, such as 2 MB or 4 MB. A value of zero indicates that the feature isn't enabled.
-- Target Committed: This value indicates the target amount of memory that SQL Server aims to have committed, an ideal amount of memory SQL Server could consume, based on recent workload.
-- Current Committed: This value indicates the amount of the operating system's memory (in KB) the SQL Server memory manager currently has committed. This value includes either "locked pages in memory" (AWE) or virtual memory. Therefore, this value is close to VM Committed or Locked Pages Allocated.
+- **VM Reserved**: This value shows the overall amount of virtual address space (VAS) or virtual memory (VM) that SQL Server has reserved. Virtual memory reservation of memory doesn't actually use physical memory; it simply means that virtual addresses are set aside from within the large VAS. For more information, see [VirtualAlloc(), MEM_RESERVE](/windows/win32/api/memoryapi/nf-memoryapi-virtualalloc#:~:text=be%20MEM_COMMIT.-,MEM_RESERVE,-0x00002000)
+- **VM Committed**: This value shows the overall amount of virtual memory that SQL Server has committed. VM that is committed is memory actually used by the process that is backed by physical memory or less frequently by page file. The previously-reserved memory addresses are now backed by a physical storage; they are allocated. If Locked Pages in Memory is enabled, SQL Server will use an alternative method to allocate memory - AWE and the majority of the memory will not be reflected here. See Locked Pages Allocated for those allocations. For more information, see [VirtualAlloc(), MEM_COMMIT](/windows/win32/api/memoryapi/nf-memoryapi-virtualalloc#:~:text=Meaning-,MEM_COMMIT,-0x00001000)
+- **Pages Allocated**: This value shows the total number of memory pages allocated by SQL Server. 
+- **Locked Pages Allocated**: This value represents the amount of memory, in kilobytes (KB), that SQL Server has allocated and locked in physical RAM using the AWE API. It indicates how much memory SQL Server is actively using and has requested to be kept in memory to optimize performance. By locking pages in memory, SQL Server ensures that critical database pages are readily available and not swapped to disk. For more information, see [Address Windows Extensions (AWE) memory](/sql/relational-databases/memory-management-architecture-guide#address-windows-extensions-awe-memory). A value of zero indicates that the "locked pages in memory" feature is currently disabled and SQL Server uses virtual memory instead. In that case the VM Committed value would represent the allocated memory to SQL Server.  
+- **Large Pages Allocated**: This value represents the amount of memory allocated by SQL Server using Large Pages. Large Pages is a memory management feature provided by the operating system. Instead of using the standard page size (typically 4 KB), this feature uses a larger page size, such as 2 MB or 4 MB. A value of zero indicates that the feature isn't enabled. For more information, see [Virtual Alloc(), MEM_LARGE_PAGES](/windows/win32/api/memoryapi/nf-memoryapi-virtualalloc#:~:text=Meaning-,MEM_LARGE_PAGES,-0x20000000)
+- **Target Committed**: This value indicates the target amount of memory that SQL Server aims to have committed, an ideal amount of memory SQL Server could consume, based on recent workload.
+- **Current Committed**: This value indicates the amount of the operating system's memory (in KB) the SQL Server memory manager hsa currently committed (allocated in physical store). This value includes either "locked pages in memory" (AWE API) or virtual memory. Therefore, this value is close to or the same as VM Committed or Locked Pages Allocated. Note that when SQL Server uses the AWE API, some memory is still allocated by the OS Virtual Memory Manager and will be reflected as VM Committed.
+- **NUMA Growth Phase**: This value indicates whether SQL Server is currently in a NUMA growth phase. For more information about this initial ramp up of memory when NUMA nodes exist on the machine, see [How It Works: SQL Server (NUMA Local, Foreign and Away Memory Blocks)](https://techcommunity.microsoft.com/t5/sql-server-support-blog/how-it-works-sql-server-numa-local-foreign-and-away-memory/ba-p/317461)
+- **Last OS Error**: This value shows the last OS error that occurred when there was a memory pressure on the system. SQL Server records that OS error and shows it in the output here. For a full list of OS error, see [System Error Codes](windows/win32/debug/system-error-codes--0-499-)
 
 ## Summary of memory usage
 
