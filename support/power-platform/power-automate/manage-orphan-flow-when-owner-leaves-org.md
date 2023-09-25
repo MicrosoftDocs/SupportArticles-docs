@@ -3,7 +3,7 @@ title: Manage orphan flow when owner leaves org
 description: Describes how to manage orphan flows when the owner leaves the organization.
 ms.reviewer: tomche
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 09/25/2023
 ms.subservice: power-automate-flows
 ms.custom: has-azure-ad-ps-ref
 ---
@@ -55,7 +55,7 @@ Set-AdminFlowOwnerRole -EnvironmentName <env name> -FlowName <flow name> -Princi
 ```
 
 > [!NOTE]
-> You can get the AAD principal object id of a user by running [Get-AzureADUser](/powershell/module/azuread/get-azureaduser) cmdlet (which is from AzureAD module). You need to call Connect-AzureAD before runing Get-AzureADUser.
+> You can get the AAD principal object id of a user by running [Get-AzureADUser](/powershell/module/azuread/get-azureaduser) cmdlet (which is from AzureAD module). You need to call `Connect-AzureAD` before runing `Get-AzureADUser`.
 
 Run `Get-AdminFlowOwnerRole` again to verify the new owner is in the list.
 
@@ -71,7 +71,7 @@ Get-AdminFlow -EnvironmentName <env name> -CreatedBy <user AAD object id>
 
 To get all flows that don't have valid users, loop through all flows in one environment, and verify there's at least one owner or co-owner that exists in AAD. The following script provides an example:
 
-```csharp
+```powershell
 Connect-AzureAD
 $env = "<your environment name>"
 $flows = Get-AdminFlow -EnvironmentName $env
