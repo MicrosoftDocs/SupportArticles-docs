@@ -53,6 +53,8 @@ Alternatively, if resetting the data doesn't work, go to the `%LOCALAPPDATA%\Cos
   1. In the **IIS Manager**, go to **Sites -> Default Web Sites**.
   1. Locate the **Site Bindings** for port **8081** and edit them to disable TLS 1.3. You can also update the settings for the web browser by using the **Settings** option.
 
+    > [!NOTE]
+    > If your computer goes to sleep mode or runs any OS updates while the emulator is running, you might see a "Service is currently unavailable" message.
         While the emulator is running, if your computer goes to sleep mode or runs any OS updates, you might see a "Service is currently unavailable" message.
 
   1. Reset the emulator's data, by right-clicking on the icon that appears on the Windows notification tray and select **Reset Data**.
@@ -95,4 +97,4 @@ To collect debugging traces, run the following commands from an administrative c
 
 1. Navigate to `%ProgramFiles%\Azure Cosmos DB Emulator` path and find the *docdbemulator_000001.etl* file.
 
-1. Open a support ticket in the [Azure portal](https://portal.azure.com) and include the .etl file along with repro steps.
+1. Open a support ticket in the [Azure portal](https://portal.azure.com) and include the .etl file along with any steps required to reproduce your issue.
