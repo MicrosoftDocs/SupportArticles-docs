@@ -34,7 +34,7 @@ Alternatively, if resetting the data doesn't work, go to the `%LOCALAPPDATA%\Cos
 
 - If the Azure Cosmos DB Emulator crashes, collect the dump files from `%LOCALAPPDATA%\CrashDumps` folder, compress them, and open a support ticket from the [Azure portal](https://portal.azure.com).
 
-- The `Microsoft.Azure.Cosmos.ComputeServiceStartupEntryPoint.exe` crashes you experience could be an indication that the performance counters are corrupted.
+- The `Microsoft.Azure.Cosmos.ComputeServiceStartupEntryPoint.exe` crashes could be an indication that the performance counters are corrupted.
 
   ```cmd
   lodctr /R
