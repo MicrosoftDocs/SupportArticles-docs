@@ -166,13 +166,13 @@ If the previous options didn't provide the results needed to identify the issue,
     For more information, see the [Manage diagnostic data using Group Policy and MDM](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#manage-diagnostic-data-using-group-policy-and-mdm) section of [Configure Windows diagnostic data in your organization](/windows/privacy/configure-windows-diagnostic-data-in-your-organization).
 
 - Is there an active network connection on the device? If the device is in airplane mode, is turned off, or the user places the device in a location with no service, the policy won't apply until it's connected to the network.
-- Is the device not upgraded to a specific previous version? Check for a conflicting [TargetReleaseVersion](/windows/client-management/mdm/policy-csp-update#targetreleaseversion) value through other means, such as Group Policy or Settings Catalog, in the Windows Update registry keys.
+- Is the device not upgraded to a specific previous version? Check for a conflicting [TargetReleaseVersion](/windows/client-management/mdm/policy-csp-update#targetreleaseversion) value through other means, such as Group Policy or settings catalog, in the Windows Update registry keys.
 - Verify that Windows Update is configured to deliver feature and quality updates. If `UpdateServiceUrl` is populated in the registry, verify that `DisableDualScan` is set to `0`. On the device, access the Registry Editor app and navigate to `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate`.
 - Is the device co-managed? Make sure the [workload for Windows Updates has been switched to Intune](/mem/configmgr/comanage/workloads#windows-update-policies).
 
     :::image type="content" source="media/troubleshoot-update-rings/workloads.png" alt-text="Screenshot of the Properties dialog highlighting the Windows Update policies slider on the Workloads tab.":::
 
-- Make sure you're not deploying conflicting Windows Update for Business settings from another update ring or a Settings Catalog policy. Confirm the assigned policies in the Settings Catalog for Windows Update for Business settings that may be deployed.
+- Make sure you're not deploying conflicting Windows Update for Business settings from another update ring or a Settings Catalog policy. Confirm the assigned policies in the settings catalog for Windows Update for Business settings that may end up being deployed.
 
     For update ring policies, you should see a "Conflict" reporting in the **Device Configuration** pane for the device or in the colored charts.
 
