@@ -2,7 +2,7 @@
 title: Converting time zone in Power Automate
 description: Provides a solution to an issue where you find a datetime in the wrong time zone.
 ms.reviewer: anaggar
-ms.date: 09/22/2023
+ms.date: 09/25/2023
 ms.subservice: power-automate-connections
 ---
 # Converting time zone in Microsoft Power Automate
@@ -14,9 +14,9 @@ _Original KB number:_ &nbsp; 4557244
 
 ## Symptoms
 
-When passing datetimes through triggers and actions in Power Automate flows, you might find that the time zone isn't what you expected, or you might wish to convert the time zone (frequently in UTC) to your local time. You can do this using the **Convert time zone** action or `convertTimeZone` expression.
+When passing datetimes through triggers and actions in Power Automate flows, you might find that the time zone isn't what you expected, or you might wish to convert the time zone (frequently in Coordinated Universal Time (UTC)) to your local time. You can do this using the **Convert time zone** action or the `convertTimeZone` expression.
 
-Dates are passed through services in varying formats or time zones, hence each connector might use a different datetime format or time zone. Some services strictly use UTC time to avoid confusion.
+Dates are passed through services in varying formats or time zones, so each connector might use a different datetime format or time zone. Some services strictly use UTC time to avoid confusion.
 
 ## Convert time zone using an action
 
@@ -65,7 +65,7 @@ For more information about this expression function, see the [convertTimeZone](/
 
 ## More information
 
-**Deciphering a datetime**
+**Decipher a datetime**
 
 Datetimes might come in different formats. If your datetime has a **Z** at the end, it means it's in UTC time.
 
@@ -75,21 +75,21 @@ For more information about datetime formats, see [Standard date and time format 
 
 You may get errors where your date time string isn't in the correct format. For example:
 
-> "The date time string must match ISO8601 format".
+> The date time string must match ISO8601 format.
 
 For more information about how to correctly format your datetime string, see [formatDateTime](/azure/logic-apps/workflow-definition-language-functions-reference#formatDateTime).
 
-**Checking the time zone of an output**
+**Check the time zone of an output**
 
-If you're unsure what format the datetime time zone is currently in, you can run your flow and take a look at the datetime output format.
+If you're unsure what format the datetime time zone is currently in, you can run your flow and see the datetime output format.
 
 In this example, the **Get forecast for today** operation outputs the timestamp for when we got the forecast.
 
 :::image type="content" source="media/converting-time-zone-power-automate/get-forest-today.png" alt-text="Screenshot shows an example of checking the datetime output format.":::
 
-This datetime is using the ISO-8601 datetime format. This operation outputs the datetime in the UTC time zone.
+This datetime uses the ISO-8601 datetime format. This operation outputs the datetime in the UTC time zone.
 
-**Convert timestamp to or from Universal Time Coordinated (UTC)**
+**Convert a timestamp to or from UTC**
 
 To convert a timestamp from the source time zone to UTC or from UTC to the target time zone, use the [convertFromUtc](/azure/logic-apps/workflow-definition-language-functions-reference#convertfromutc) and [convertToUtc](/azure/logic-apps/workflow-definition-language-functions-reference#converttoutc) expression functions.
 
