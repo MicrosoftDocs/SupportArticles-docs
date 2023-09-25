@@ -1,6 +1,6 @@
 ---
 title: ResponseStatusNotOK when sharing a SharePoint or OneDrive site
-description: Fix error ResponseStatusNotOK when users in your organization try to share a site with external users. This error is caused by restrictions in B2B collaboration settings.
+description: Fix the ResponseStatusNotOK error when users in your organization try to share a site with external users. This error is caused by restrictions in B2B collaboration settings.
 manager: dcscontentpm
 localization_priority: Normal
 ms.date: 09/25/2023
@@ -28,11 +28,11 @@ When users in your organization try to share a SharePoint or OneDrive site with 
 
 ## Cause
 
-These errors usually occur because of restrictions in the [B2B collaboration](/azure/active-directory/external-identities/what-is-b2b) settings in your organization.
+This error usually occurs because of restrictions in the [B2B collaboration](/azure/active-directory/external-identities/what-is-b2b) settings in your organization.
 
 ## Resolution
 
-To fix the issues, make sure that the settings that are appropriate for your organization’s needs are configured correctly for external and B2B collaboration:
+To fix the error, make sure that the appropriate settings for your organization’s needs are configured for external and B2B collaboration:
 
 - [External collaboration settings](/azure/active-directory/external-identities/external-collaboration-settings-configure)
 - [Microsoft cloud settings](/azure/active-directory/external-identities/cross-cloud-settings)
