@@ -4,7 +4,7 @@ description: Learn how to address issues with loading errors in the Power BI con
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
-ms.date: 09/11/2023
+ms.date: 09/25/2023
 ---
 # Errors on date fields when loading entities in Power BI Desktop
 

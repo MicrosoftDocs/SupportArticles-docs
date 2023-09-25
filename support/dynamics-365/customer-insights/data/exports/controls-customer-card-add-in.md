@@ -4,9 +4,8 @@ description: Learn how to fix an issue with capitalization in customer ID fields
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
-ms.date: 09/11/2023
+ms.date: 09/25/2023
 ---
-
 # Controls from Customer Card Add-in if they don't find data
 
 [!INCLUDE [consolidated-sku](../../includes/consolidated-sku.md)]

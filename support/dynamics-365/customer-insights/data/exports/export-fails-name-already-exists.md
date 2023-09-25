@@ -4,7 +4,7 @@ description: Provides a resolution for the issue where exports fail because the 
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
-ms.date: 09/11/2023
+ms.date: 09/25/2023
 ---
 # "the following name already exists" error occurs during exports
 

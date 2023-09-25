@@ -4,7 +4,7 @@ description: Learn how to address export issues with ineligible segments in Dyna
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
-ms.date: 09/11/2023
+ms.date: 09/25/2023
 ---
 # Segment not eligible for export for B-to-B audiences
 

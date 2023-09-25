@@ -4,7 +4,7 @@ description: Learn how to find out why a segment has no members in Dynamics 365 
 author: ashwini-puranik
 ms.author: aspuranik
 ms.reviewer: mhart, jimsonc
-ms.date: 09/11/2023
+ms.date: 09/25/2023
 ---
 # Segments return no or zero members
 
