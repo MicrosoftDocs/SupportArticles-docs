@@ -6,7 +6,7 @@ author: oury-msft
 ms.author: ouryba
 ms.reviewer: v-jayaramanp
 ms.topic: landing-page
-ms.date: 09/21/2023
+ms.date: 09/25/2023
 ---
 
 # Troubleshoot the Azure Cosmos DB Emulator
