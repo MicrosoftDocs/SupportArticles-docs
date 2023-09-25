@@ -2,7 +2,7 @@
 title: Missing dependencies during solution import in Power Apps
 description: Works around an issue about missing dependencies that occurs when you import a solution in the target environment in Microsoft Power Apps.
 ms.reviewer: jdaly
-ms.date: 09/21/2023
+ms.date: 09/25/2023
 author: swatimadhukargit
 ms.author: swatim
 ---
@@ -34,24 +34,26 @@ To work around this issue, follow these steps:
 
 2. Resolve this issue based on the different types of dependencies described in the following sections:
 
-### Missing Dependencies coming from a Dynamics 365 Application
+### Missing dependencies coming from a Dynamics 365 application
 
 You can find these dependencies in the **Managed Solution** tab of the **Missing dependencies** page. To resolve this issue:
 
 - If the application isn't installed in the target environment, [install the application](/power-platform/admin/manage-apps#install-an-app) from the Power Platform admin center.
-- If the application is installed but has an outdated version, a link is provided next to the solution. This link will redirect you to the Power Platform admin center update page for the environmentwhere where you can update the application to resolve the issue.
+- If the application is installed but has an outdated version, a link is provided next to the solution. This link will redirect you to the Power Platform admin center update page for the environment where you can update the application to resolve the issue.
 
-The image captures the link provided in the **Missing dependencies** page.  
-    :::image type="content" source="media/missing-dependency.png" alt-text="This is example for missing dependency application update link":::
+  The following screenshot shows the link provided on the **Missing dependencies** page.  
 
-Click the link to go to the Power Platform admin center update application page.
-    :::image type="content" source="media/application-update.png" alt-text="This is example for upgrade application":::
+    :::image type="content" source="media/missing-dependency.png" alt-text="An example of the application upgrade link for a missing dependencies component.":::
 
-### Missing Dependencies coming from another managed solution
+  Select the link to open the upgrade application page in the Power Platform admin center.
+
+  :::image type="content" source="media/application-update.png" alt-text="An example of the upgrade application page in the Power Platform admin center.":::
+
+### Missing dependencies coming from another managed solution
 
 You can find these dependencies in the **Managed Solution** tab of the **Missing dependencies** page. To resolve this issue, import the same version of the solution that's installed in the source environment into the target environment.
 
-### Missing Dependencies on the "Active" solutions
+### Missing dependencies on the "Active" solutions
 
 You can find these dependencies in the **Objects** tab. This indicates that the dependency is from unmanaged customization in the source environment. To resolve this issue, return to the source environment, include the missing components, export the solution again, and then import it into the target environment.
 
