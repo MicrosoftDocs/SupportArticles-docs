@@ -29,7 +29,7 @@ Before you proceed, refer [Applying Group Policy troubleshooting guidance](../..
 
 ## In this scenario
 
-You deploy a GPO named "Mapped drives" by using Group policy preferences mapped drives extension. The GPO is used to map drive Z on client computers. See the following screenshot:
+You deploy a GPO named "Mapped drives" by using Group policy preferences mapped drives extension. The GPO is used to map drive Z on client computers. The mapped drive is located on a Linux server. See the following screenshot:
 
 :::image type="content" source="media/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected/screenshot-of-the-group-policy-result.png" alt-text="The screenshot of the group policy result." border="true":::
 
