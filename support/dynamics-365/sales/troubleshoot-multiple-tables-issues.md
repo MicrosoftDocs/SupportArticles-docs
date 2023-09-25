@@ -155,11 +155,11 @@ You must verify the improper customizations and resolve them. Perform the follow
 ### Symptoms
 
 - Create and update operations on Opportunity, Quote, Order, and Invoice tables trigger updates on their parent tables.
-- Retrieving details about Opportunity, Quote, Order, and Invoice tables internally triggers the Price Calculation service, which subsequently triggers the custom plug-ins created by customers.
+- Retrieving details about Opportunity, Quote, Order, and Invoice tables internally triggers the Price Calculation service, which subsequently triggers custom plug-ins created by customers.
 
 ### Resolution
 
-Custom plug-ins execute create, update, and save operations on Opportunity, Quote, Order, and Invoice tables. The create and update operations on these tables internally trigger the Price Calculation service, which then updates associated price-related fields or attributes of their parent tables.
+Custom plug-ins execute create, update, and save operations on Opportunity, Quote, Order, and Invoice tables. The create and update operations on these tables internally trigger the Price Calculation service, which then updates the associated price-related fields or attributes of their parent tables.
 
 You can identify or differentiate any updates in Opportunity, Quote, Order, or Invoice tables or parent Opportunity, Quote, Order, or Invoice tables by using the internal Price Calculation service or by using your own custom plug-in. The Boolean shared variable `InternalSystemPriceCalculationEvent`, which is accessible through `IPluginExecutionContext`, is available within the plug-in code. Any create or update event processed by using the Price Calculation service will set the value of the variable `InternalSystemPriceCalculationEvent` to `true`. The default value of `InternalSystemPriceCalculationEvent` is `false`. You can access this variable from your custom plug-in code to control the flow of your existing business logic.
 
