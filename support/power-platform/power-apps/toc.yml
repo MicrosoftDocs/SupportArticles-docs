@@ -90,12 +90,16 @@ items:
           href: manage-apps-and-solutions/label-text-not-displayed.md
         - name: Maximum row size exceeds the allowed maximum
           href: manage-apps-and-solutions/maximum-row-size-exceeds.md
+        - name: Missing dependencies during solution import
+          href: manage-apps-and-solutions/missing-dependency-on-solution-import.md
         - name: Newly added components don't appear in the app
           href: manage-apps-and-solutions/newly-added-components-dont-appear.md
         - name: '"PrimaryName attribute not found for entity" error'
           href: manage-apps-and-solutions/primaryname-attribute-not-found.md
         - name: Required fields are missing in Dataverse records
           href: manage-apps-and-solutions/dataverse-records-missing-required-fields.md
+        - name: Solution import or app installation fails due to missing privileges
+          href: manage-apps-and-solutions/install-failure-priviledge-not-assigned.md
         - name: Solution checker enforcement in Managed Environments (preview) blocks or warns on import
           href: manage-apps-and-solutions/solution-checker-enforcement-import-issues.md
         - name: '"Solution cannot be deleted due to dependencies" error'

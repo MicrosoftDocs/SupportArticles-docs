@@ -5918,6 +5918,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/windows-client/networking/client-side-caching-command-line-options-v1dot1.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/client-side-caching-command-line-options-v1dot1",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/azure/azure-kubernetes/troubleshoot-upgrade-errors.md",
       "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
       "redirect_document_id": false
