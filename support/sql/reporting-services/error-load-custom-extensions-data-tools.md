@@ -4,8 +4,7 @@ description: This article provides a resolution for the problem where you receiv
 ms.date: 01/14/2021
 ms.custom: sap:Reporting Services
 ms.reviewer: ramakoni, muddin
-ms.topic: troubleshooting
-ms.prod: sql 
+ms.topic: troubleshooting 
 ---
 # Error (The selected data extension \<Custom Extension Name> is not installed or cannot be loaded) when you load custom extensions in SQL Server 2012 Data Tools
 

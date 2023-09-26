@@ -3,7 +3,7 @@ title: Data mart integration error Index was out of range
 description: Describes an error message that occurs in the Management Reporter 2012 data mart integration with Microsoft Dynamics GP. Provides a resolution.
 ms.reviewer: aeric, jopankow
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 09/01/2023
 ---
 # Management Reporter 2012 Data mart integration error "Index was out of range"
 
@@ -92,6 +92,6 @@ This error can occur if there are references to accounts in the account segment 
     16. Select **Add Microsoft Dynamics GP Data Mart**.
     17. Follow the steps for the Microsoft Dynamics GP provider at:
 
-        [Management Reporter 2012 for Microsoft Dynamics ERP: Installation, Migration, and Configuration Guides](https://www.microsoft.com/download/details.aspx?displaylang=en&id=5916)
+        [Management Reporter 2012 for Microsoft Dynamics ERP: Installation, Migration, and Configuration Guides](https://www.microsoft.com/download/details.aspx?id=5916)
 
    18. When you have finished, select **Enable Integration** in the Configuration Console.

@@ -1,10 +1,9 @@
 ---
 title: Updates to the Microsoft Update detection logic 
 description: This article describes the updates to the Microsoft Update detection logic for SQL Service servicing.
-ms.date: 1/11/2021
+ms.date: 01/11/2021
 ms.custom: sap:Database Engine
-ms.reviewer: jeffwil
-ms.prod: sql 
+ms.reviewer: jeffwil 
 ---
 
 # Updates to the Microsoft Update detection logic for SQL Server servicing

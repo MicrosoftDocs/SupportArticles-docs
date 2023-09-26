@@ -4,9 +4,7 @@ description: Learn about Internet Protocol version 6 (IPv6) support in Azure Act
 ms.service: active-directory
 ms.subservice: aad-general
 ms.date: 05/29/2023
-ms.author: v-dele
-author: DennisLee-DennisLee
-ms.reviewer: lhuangnorth, gautama, amycolannino, joflore, mariourrutia
+ms.reviewer: lhuangnorth, gautama, amycolannino, joflore, mariourrutia, v-leedennis
 ms.collection: M365-identity-device-management
 ---
 # IPv6 support in Azure Active Directory
@@ -78,7 +76,7 @@ For the IP ranges that are specified for Azure AD, make sure that you allow outb
 
 ### Device configuration
 
-By default, both IPv6 and IPv4 traffic is supported on Windows and most other operating system (OS) platforms. Changes to the standard IPv6 configuration may result in unintended consequences. For more information, see [Guidance for configuring IPv6 in Windows for advanced users](/troubleshoot/windows-server/networking/configure-ipv6-in-windows).
+By default, both IPv6 and IPv4 traffic is supported on Windows and most other operating system (OS) platforms. Changes to the standard IPv6 configuration may result in unintended consequences. For more information, see [Guidance for configuring IPv6 in Windows for advanced users](../../windows-server/networking/configure-ipv6-in-windows.md).
 
 ### Service endpoints
 

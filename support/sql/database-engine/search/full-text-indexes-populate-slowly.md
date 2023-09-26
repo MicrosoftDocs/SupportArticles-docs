@@ -3,7 +3,6 @@ title: Full-text indexes populate slowly
 description: This article introduces you to issues that can occur when working with multiple full-text indexes and solutions to workaround those problems.
 ms.date: 09/25/2020
 ms.custom: sap:Administration and Management
-ms.prod: sql
 ---
 # Full-text indexes stop populating for 30 minutes in SQL Server
 
@@ -16,18 +15,18 @@ _Original KB number:_ &nbsp; 4045273
 
 Assume that you have Microsoft SQL Server installed on a server. Consider the following scenarios:  
 
-- Scenarios 1:
+- Scenario 1:
 
     You have several full-text indexes across one or more databases, and population of these full-text indexes finishes near the same time.
-- Scenarios 2:
+- Scenario 2:
 
     You create a full-text catalog that contains many full-text indexes, and population of these full-text indexes finish near the same time.
-- Scenarios 3:
+- Scenario 3:
 
     You rebuild one or more full-text catalogs in which several of the indexes finish populating at or near the same time.
-- Scenarios 4:
+- Scenario 4:
 
-    You manually run Alter Full-Text Catalog Reorganize for a catalog that contains many full-text indexes.
+    You manually run `ALTER FULLTEXT CATALOG REORGANIZE` for a catalog that contains many full-text indexes.
 
 In any of those situations, if you turn on trace flag (TF) 7603 to output the verbose logging for full-text population to the SQL Server error log, you see messages that resemble the following:
 
@@ -35,7 +34,7 @@ In any of those situations, if you turn on trace flag (TF) 7603 to output the ve
  Date/Time SPID CFTMasterMergeListManager::QueueMasterMerge queued MM item for DBid 7, catalog 5, tblid 13847411  
  Date/Time SPID IFTS: CFTWIAutoCrawlFullPass::ExecUnit::DoUnitWork: Found existing crawl, so return without the autocrawl full pass, DBid 7 Catid 5 Objid 13847411
 
-Additionally, you see a 30-minute wait for master merge, and the log reports that master merge as aborted:
+Additionally, you see a 30-minute wait for master merge, and the log reports that master merge has aborted:
 
 > Date/Time SPID IFTS: Master Merge work items were aborted because it waited in preinit for more than 30 minutes m_DBid 7, m_objid 13847411  
  Date/Time SPID Warning Master Merge operation was not done for DBid 7, objid 13847411, so querying index will be slow. Please run alter fulltext catalog reorganize.  

@@ -1,7 +1,7 @@
 ---
 title: Distributed File System Replication (DFSR) SYSVOL fails to migrate or replicate
 description: Provides a solution to issues where DFSR SYSVOL fails to migrate or replicate, or SYSVOL isn't shared.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

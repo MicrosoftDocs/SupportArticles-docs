@@ -5,7 +5,6 @@ ms.date: 11/03/2020
 ms.custom: sap:Log Shipping
 ms.reviewer: PANKAJA
 ms.topic: how-to
-ms.prod: sql
 ---
 # Configure security for SQL Server log shipping
 

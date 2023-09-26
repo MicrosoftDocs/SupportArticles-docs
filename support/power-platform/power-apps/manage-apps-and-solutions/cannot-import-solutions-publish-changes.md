@@ -1,10 +1,10 @@
 ---
 title: Can't import solutions or publish changes
 description: Describes an issue in which import solutions or publish changes fail in Power Platform. Provides workarounds.
-ms.reviewer: squassina
+ms.reviewer: matp
 ms.topic: troubleshooting
 ms.date: 06/18/2021
-author: squassina
+author: nhelgren
 ms.author: risquass
 ---
 # Can't import solutions or publish unmanaged changes in Power Platform

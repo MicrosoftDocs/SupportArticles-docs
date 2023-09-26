@@ -1,7 +1,7 @@
 ---
 title: System logs events that specify Event ID 640
 description: Describes a situation in which system logs many instances of Event ID 640
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

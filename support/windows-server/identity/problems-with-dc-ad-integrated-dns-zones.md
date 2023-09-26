@@ -1,15 +1,13 @@
 ---
 title: Problems occur with DCs in AD integrated DNS zones
 description: Describes problems that can occur with many Domain Controllers in Active Directory integrated DNS zones.
-ms.date: 9/24/2021
-author: v-lianna
-ms.author: delhan
+ms.date: 09/24/2021
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika, herbertm
+ms.reviewer: kaushika, herbertm, v-lianna
 ms.custom: sap:active-directory-lightweight-directory-services-ad-lds-and-active-directory-application-mode-adam, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
@@ -168,7 +166,7 @@ The list of mnemonics includes:
 > [!NOTE]
 > It is not necessary to restart the Netlogon service. If the DnsAvoidRegisterRecords registry value is created or modified while the Netlogon service is stopped or within the first 15 minutes after Netlogon is started, appropriate DNS updates take place with a short delay (however, the delay is no later than 15 minutes after Netlogon starts).
 
-DNS registrations of A records performed by Netlogon can be also be modified by using the RegisterDnsARecords registry value. For more information, see [How to enable or disable DNS updates in Windows](/troubleshoot/windows-server/networking/enable-disable-dns-dynamic-registration).
+DNS registrations of A records performed by Netlogon can be also be modified by using the RegisterDnsARecords registry value. For more information, see [How to enable or disable DNS updates in Windows](../networking/enable-disable-dns-dynamic-registration.md).
 
 Be aware that both the DnsAvoidRegisterRecords and the RegisterDnsARecords registry values need to allow registering the host (A) record:
 

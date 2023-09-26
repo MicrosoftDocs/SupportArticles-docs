@@ -4,9 +4,9 @@ title: Azure Storage troubleshooting documentation
 summary: Welcome to Azure Storage troubleshooting. These articles explain how to determine, diagnose, and fix various issues that you might encounter when you use Azure Storage. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
 
 metadata:
-  title: Troubleshoot Azure Storage issues 
+  title: Troubleshoot Azure Storage issues
   description: Documentation for troubleshooting common issues with Azure Storage. # Required; article description that is displayed in search results. < 160 chars.
-  ms.service: storage #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.service: azure-storage #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.

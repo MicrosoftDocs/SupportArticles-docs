@@ -93,7 +93,7 @@
     href: health-diagnostic-performance/performance-call-web-service.md
   - name: Troubleshoot OutOfMemoryException
     href: health-diagnostic-performance/troubleshoot-outofmemoryexception.md
-  - name: Troubleshoot the View state is invalid error
+  - name: Troubleshoot the invalid viewstate issues
     href: health-diagnostic-performance/troubleshooting-view-state-is-invalid-error.md
 
 - name: IISAdmin service and Inetinfo process operation

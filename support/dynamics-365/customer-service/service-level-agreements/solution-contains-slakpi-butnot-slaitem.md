@@ -1,9 +1,9 @@
 ---
 title: A managed solution cannot overwrite the SLAItem component
 description: Provides a resolution for the issue that occurs when importing a solution that only contains SLA KPIs and no SLA item referring to it.
-ms.reviewer: sdas
-ms.author: ravimanne
-ms.date: 06/07/2023
+ms.reviewer: sdas, ankugupta
+ms.author: sdas
+ms.date: 06/09/2023
 ---
 # "A managed solution cannot overwrite the SLAItem component" error
 

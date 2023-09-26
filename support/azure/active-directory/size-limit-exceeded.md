@@ -1,11 +1,11 @@
 ---
 title: Size Limit Exceeded - Error Code 0x4 during delta import
 description: Learn how to resolve the Size Limit Exceeded - Error Code 0x4 error during the delta import step for an on-premises connector in Azure Active Directory Connect.
-ms.date: 5/31/2023
+ms.date: 05/31/2023
 author: DevOpsStyle
 ms.author: tommasosacco
 editor: v-jsitser
-ms.reviewer: v-dele, nualex
+ms.reviewer: v-leedennis, nualex
 ms.service: active-directory
 ms.subservice: enterprise-users
 ---
@@ -70,7 +70,7 @@ If you don't want to run a full import on the AD DS connector, you can temporari
 
 To increase the 1,000-record limit, increase the maximum page size (`MaxPageSize`) setting to accommodate the number of objects that the delta import step returns. For example, if you restored an Organization Unit (OU) that has 5,000 users, we recommend that you temporarily increase `MaxPageSize` to a value of 5,000. Then, after the Azure AD Connect issue is resolved, restore `MaxPageSize` to the default value of 1,000.
 
-To change the `MaxPageSize` setting, run the [Ntdsutil](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc753343(v=ws.11)) command, as shown in the following procedure. For more information about `MaxPageSize`, see [LDAP administration limits](/troubleshoot/windows-server/identity/view-set-ldap-policy-using-ntdsutil#ldap-administration-limits).
+To change the `MaxPageSize` setting, run the [Ntdsutil](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc753343(v=ws.11)) command, as shown in the following procedure. For more information about `MaxPageSize`, see [LDAP administration limits](../../windows-server/identity/view-set-ldap-policy-using-ntdsutil.md#ldap-administration-limits).
 
 > [!IMPORTANT]  
 > Follow the steps in this section carefully. Serious problems might occur if you modify the default AD configuration incorrectly. When the issue is resolved, you can restore the default values.
@@ -79,7 +79,7 @@ To change the `MaxPageSize` setting, run the [Ntdsutil](/previous-versions/windo
 
 2. At the command prompt, enter `ntdsutil` to start an Ntdsutil console session.
 
-3. In the [View and set LDAP policy in Active Directory by using Ntdsutil.exe](/troubleshoot/windows-server/identity/view-set-ldap-policy-using-ntdsutil) article, follow the instructions in the [View current policy settings](/troubleshoot/windows-server/identity/view-set-ldap-policy-using-ntdsutil#view-current-policy-settings) section to learn what the policy settings currently are.
+3. In the [View and set LDAP policy in Active Directory by using Ntdsutil.exe](../../windows-server/identity/view-set-ldap-policy-using-ntdsutil.md) article, follow the instructions in the [View current policy settings](../../windows-server/identity/view-set-ldap-policy-using-ntdsutil.md#view-current-policy-settings) section to learn what the policy settings currently are.
 
 4. To change the maximum page size, enter `set MaxPageSize to <new-maximum-page-size-value>`.
 

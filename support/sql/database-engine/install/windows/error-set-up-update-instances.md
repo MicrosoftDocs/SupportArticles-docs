@@ -3,8 +3,7 @@ title: Attempted to perform an unauthorized operation error
 description: This article provides a resolution for the problem where setting up or updating SQL Server instances fails and returns an error message.
 ms.date: 01/15/2021
 ms.custom: sap:Installation, Patching and Upgrade
-ms.reviewer: 
-ms.prod: sql 
+ms.reviewer:  
 ---
 # Attempted to perform an unauthorized operation error when you set up or update SQL Server instances
 
@@ -25,7 +24,7 @@ In this scenario, a failure occurs during the update process, and you receive th
 
 > Attempted to perform an unauthorized operation.
 
-Additionally, an entry is logged in the SQL Server Setup log file, Detail.txt, that indicates that the failure occurred while **Attempting to open registry subkey Microsoft Edge**.
+Additionally, an entry is logged in the SQL Server Setup log file, *Detail.txt*, that indicates that the failure occurred while **Attempting to open registry subkey Microsoft Edge**.
 
 ## Cause
 
@@ -64,7 +63,7 @@ To resolve this problem, use one of the following methods, as appropriate:
 subkey, and then select **Permissions**.
   1. In the **Permissions** window that opens, select **Advanced**.
   1. At the top of the **Advanced Security Settings** window, select **Change** next to the listed owner.
-  1. In the **Select User, Computer, Service Account, or Group**  window, type the name of your Windows user account (or your email address if you have a Microsoft account) in the **Enter the object name to select** box, and then select **Check Names** to validate the account name.
+  1. In the **Select User, Computer, Service Account, or Group** window, type the name of your Windows user account (or your email address if you have a Microsoft account) in the **Enter the object name to select** box, and then select **Check Names** to validate the account name.
   1. Select **OK** two times.
   1. In the **Permissions** window, select the **Users** group, and then select the **Allow** check box for the **Full Control** permissions.
 

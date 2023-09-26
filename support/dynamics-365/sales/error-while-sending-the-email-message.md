@@ -3,7 +3,7 @@ title: Error while sending the email message
 description: Provides a solution to an error that occurs when you test and enable a mailbox.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-email-office-integration
 ---
 # An unknown error occurred while sending the email message error appears when testing and enabling a mailbox in Microsoft Dynamics 365

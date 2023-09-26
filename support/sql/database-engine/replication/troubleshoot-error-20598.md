@@ -4,8 +4,8 @@ description: This article describes how to troubleshoot error 20598 in transacti
 ms.date: 11/05/2020
 ms.custom: sap:Replication, change tracking, change data capture
 ms.reviewer: SYELE, TZAKIR
-ms.prod: sql
 ---
+
 # Troubleshoot error 20598 in transactional replication
 
 This article describes how to troubleshoot error 20598 in transactional replication and provides workarounds for the problem.
@@ -30,7 +30,7 @@ To troubleshoot this issue, follow these steps:
 
    :::image type="content" source="media/troubleshoot-error-20598/get-command.png" alt-text="Screenshot of the commands that map to the transaction sequence number on the distributor server.":::
 
-3. From the output of step 2, identify the command that is failing by using the command ID from step 1. Refer to the **command_id** column in the result set.
+3. From the output of step 2, identify the command that is failing by using the command ID from step 1. Refer to the `command_id` column in the result set.
 
 4. Validate the article information on the publisher. Use the article ID that you obtain from step 2, and check the details of the article that you are trying to update:
 
@@ -68,9 +68,9 @@ If this problem occurs repeatedly, you should collect the following data for ana
 
 - The backup of the distribution database when this problem occurs. (This should be after the error is reported and before the subscription is reinitialized.)
 
-- Transaction log backups of the publisher and the subscriber. (These should be for at least the 24 hours that led up to the time of the problem.)
+- Transaction log backups of the publisher and the subscriber. (Collect the data for a minimum of 24 hours prior to the time when the problem occurred.)
 
-- Profiler traces that show the activity of the replication agents on the publisher, the subscriber, and the distributor. (Please make sure that the profiler is running even before the problem starts. Ideally, you want to start the profiler around the same time as the reindex job start time.)
+- Profiler traces that show the activity of the replication agents on the publisher, the subscriber, and the distributor. (Make sure that the profiler is running even before the problem starts. Ideally, you need to start the profiler around the same time as the reindex job start time).
 
 - Outputs from the previous five steps for identifying the affected table and the primary key value that is missing.
 
@@ -80,7 +80,7 @@ If this problem occurs repeatedly, you should collect the following data for ana
   - sys.allocation_units
   - sys.objects
 
-- Verbose outputs of replication agent logs
+- Verbose outputs of replication agent logs.
 
 ## Known issues that are addressed
 

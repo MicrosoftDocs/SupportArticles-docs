@@ -1,7 +1,7 @@
 ---
 title: Available updates for Terminal Services
 description: Lists the available updates for Terminal Services (Remote Desktop Services) in Windows Server 2008. Arranges the hotfixes and updates by component areas within Terminal Services.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 2312539
 
 ## Summary
 
-For Windows Server 2008 R2 Remote Desktop Services updates, see [Available updates for Remote Desktop Services (Terminal Services) on Windows Server 2008 R2 SP1](/troubleshoot/windows-server/remote/remote-desktop-services-updates).
+For Windows Server 2008 R2 Remote Desktop Services updates, see [Available updates for Remote Desktop Services (Terminal Services) on Windows Server 2008 R2 SP1](remote-desktop-services-updates.md).
 
 > [!CAUTION]
 > This list is an aggregate of common issues seen with Terminal Services in Windows Server 2008. Don't proactively install the following patches unless instructed by a Microsoft Support Professional. If you believe that you are experiencing one of the issues in this list, install only the hotfix for that specific issue. If a specific hotfix is listed for your issue, we recommend that you evaluate these hotfixes and updates to determine whether they apply to a specific Windows version and service pack level.
@@ -111,4 +111,4 @@ These hotfixes and updates are arranged by component areas within Terminal Servi
 
 ## TS Web Access
 
-[951607](/troubleshoot/windows-server/remote/cannot-connect-to-remote-computer) You cannot connect to a remote computer or start a remote application when you use Terminal Services Web Access or Remote Web Workspace on a Windows XP SP3-based or Windows Small Business Server 2003 SP1-based computer
+[951607](cannot-connect-to-remote-computer.md) You cannot connect to a remote computer or start a remote application when you use Terminal Services Web Access or Remote Web Workspace on a Windows XP SP3-based or Windows Small Business Server 2003 SP1-based computer

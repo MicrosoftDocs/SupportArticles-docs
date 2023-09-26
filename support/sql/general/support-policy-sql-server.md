@@ -1,10 +1,9 @@
 ---
 title: Support policy for SQL Server
 description: This article describes the support policy for Microsoft SQL Server.
-ms.date: 12/10/2021
+ms.date: 06/30/2023
 ms.custom: sap:General
 ms.reviewer: sureshka
-ms.prod: sql
 ---
 # Technical support policy for Microsoft SQL Server
 
@@ -46,6 +45,10 @@ The host operating system vendors publish supported hypervisors for their system
 - [Supported SUSE virtual machines on Hyper-V](/windows-server/virtualization/hyper-v/supported-suse-virtual-machines-on-hyper-v)
 
 Look in the operating system documentation for the current and updated hypervisor that is supported on specific versions of the operating system.
+
+Microsoft also supports deploying SQL Server on VMware vSphere, allowing users to take advantage of the software-defined data center (SDDC) platform and capabilities such as network and storage virtualization. To learn more about how to best deploy SQL Server using vSphere, including right-sizing your SQL Server VMs and managing your vCenter Server configuration, see [Architecting Microsoft SQL Server on VMware vSphere](https://core.vmware.com/resource/architecting-microsoft-sql-server-vmware-vsphere#introduction).
+
+[Azure VMware Solution](https://azure.microsoft.com/products/azure-vmware#overview) is Microsoft's first-party solution that allows customers to run VMware workloads natively on Azure and also supports running SQL Server deployments on the same vSphere infrastructure you are used to running on VMware on-premises.
 
 ## SQL Server running in Linux containers
 

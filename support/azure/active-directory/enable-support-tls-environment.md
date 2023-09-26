@@ -2,11 +2,10 @@
 title: Enable TLS 1.2 support as Azure AD TLS 1.0/1.1 is deprecated
 description: This article describes how to enable support for TLS 1.2 in your environment, in preparation for upcoming Azure AD TLS 1.0/1.1 deprecation.
 ms.date: 06/05/2023
-author: DennisLee-DennisLee
-ms.author: v-dele
-ms.reviewer: dahans, abizerh
+ms.reviewer: dahans, abizerh, v-leedennis
 ms.service: active-directory
 ms.subservice: authentication
+ms.custom: has-azure-ad-ps-ref
 ---
 # Enable support for TLS 1.2 in your environment for Azure AD TLS 1.1 and 1.0 deprecation
 
@@ -56,7 +55,7 @@ How do you maintain a secure connection to Azure Active Directory (Azure AD) and
 For more information, see the following articles:
 
 - [How to enable TLS 1.2 on clients](/mem/configmgr/core/plan-design/security/enable-tls-1-2-client)
-- [Preparing for TLS 1.2 in Office 365 and Office 365 GCC - Microsoft 365 Compliance](/microsoft-365/compliance/prepare-tls-1.2-in-office-365)
+- [Preparing for TLS 1.2 in Office 365 and Office 365 GCC - Microsoft 365 Compliance](/purview/prepare-tls-1.2-in-office-365)
 
 ### Update the Windows OS and the default TLS that you use for WinHTTP
 
@@ -80,9 +79,9 @@ You can configure those values to add TLS 1.2 and TLS 1.1 to the default secure 
 For more information, see [How to enable TLS 1.2 on clients](/mem/configmgr/core/plan-design/security/enable-tls-1-2-client).
 
 > [!NOTE]
-> By default, an OS that supports TLS 1.2 (for example, Windows 10) also supports legacy versions of the TLS protocol. When a connection is made by using TLS 1.2 and it doesn’t get a timely response, or when the connection is reset, the OS might try to connect to the target web service by using an older TLS protocol (such as TLS 1.0 or 1.1). This usually occurs if the network is busy, or if a packet drops in the network. After the temporary fallback to the legacy TLS, the OS will try again to make a TLS 1.2 connection.
+> By default, an OS that supports TLS 1.2 (for example, Windows 10) also supports legacy versions of the TLS protocol. When a connection is made by using TLS 1.2 and it doesn't get a timely response, or when the connection is reset, the OS might try to connect to the target web service by using an older TLS protocol (such as TLS 1.0 or 1.1). This usually occurs if the network is busy, or if a packet drops in the network. After the temporary fallback to the legacy TLS, the OS will try again to make a TLS 1.2 connection.
 >
-> What will be the status of such fallback traffic after Microsoft stops supporting the legacy TLS? The OS might still try to make a TLS connection by using the legacy TLS protocol. But if the Microsoft service is no longer supporting the older TLS protocol, the legacy TLS-based connection won’t succeed. This will force the OS to try the connection again by using TLS 1.2 instead.
+> What will be the status of such fallback traffic after Microsoft stops supporting the legacy TLS? The OS might still try to make a TLS connection by using the legacy TLS protocol. But if the Microsoft service is no longer supporting the older TLS protocol, the legacy TLS-based connection won't succeed. This will force the OS to try the connection again by using TLS 1.2 instead.
 
 ### Identify and reduce dependency on clients that don't support TLS 1.2
 
@@ -201,7 +200,7 @@ For more information, see the following articles:
 
 ## Overview of new telemetry in the sign-in logs
 
-To help you identify any clients or apps that still use legacy TLS in your environment, view the Azure AD sign-in logs. For clients or apps that sign in over legacy TLS, Azure AD marks the **Legacy TLS** field in **Additional Details** with **True**. The Legacy TLS field only appears if the sign-in occurred over legacy TLS. If you don’t see any legacy TLS in your logs, you're ready to switch to TLS 1.2.
+To help you identify any clients or apps that still use legacy TLS in your environment, view the Azure AD sign-in logs. For clients or apps that sign in over legacy TLS, Azure AD marks the **Legacy TLS** field in **Additional Details** with **True**. The Legacy TLS field only appears if the sign-in occurred over legacy TLS. If you don't see any legacy TLS in your logs, you're ready to switch to TLS 1.2.
 
 To find the sign-in attempts that used legacy TLS protocols, an administrator can review the logs by:
 

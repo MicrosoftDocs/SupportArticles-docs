@@ -1,7 +1,7 @@
 ---
 title: Recommendations for managing Group Policy administrative template (.adm) files
 description: Describes how ADM files work, the policy settings that are available to manage their operation, and recommendations about how to handle common ADM file management scenarios
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -26,7 +26,7 @@ _Original KB number:_ &nbsp; 816662
 > For more information, visit the following Web sites:
 >
 > - [Deploying Group Policy Using Windows Vista](/previous-versions/windows/it-pro/windows-vista/cc766208(v=ws.10))
-> - [How to create the Central Store for Group Policy Administrative Template files in Windows Vista](/troubleshoot/windows-server/group-policy/create-central-store-domain-controller)
+> - [How to create the Central Store for Group Policy Administrative Template files in Windows Vista](create-central-store-domain-controller.md)
 >
 > If you must use Windows XP-based or Windows Server 2003-based computers to manage the Group Policy infrastructure, see the recommendations in this article.
 

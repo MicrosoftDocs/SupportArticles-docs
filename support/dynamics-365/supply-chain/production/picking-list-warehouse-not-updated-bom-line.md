@@ -2,7 +2,7 @@
 title: The warehouse in the picking list journal isn't updated on a BOM line
 description: Introduces a by-design behavior where the warehouse in the picking list journal isn't updated on a bill of materials (BOM) line.
 author: johanhoffmann
-ms.date: 4/11/2021
+ms.date: 04/11/2021
 ms.topic: troubleshooting
 ms.search.form: ProdJournalTransBOM
 audience: Application User

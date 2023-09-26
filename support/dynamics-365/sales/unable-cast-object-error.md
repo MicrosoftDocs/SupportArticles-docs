@@ -3,7 +3,7 @@ title: Unable to cast object error
 description: Fixes an communication issue that occurs when you configure Microsoft Dynamics CRM for Microsoft Office Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-email-office-integration
 ---
 # Unable to cast object error when configuring Microsoft Dynamics CRM for Microsoft Office Outlook

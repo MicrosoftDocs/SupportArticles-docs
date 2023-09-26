@@ -18,7 +18,7 @@ When printing, the **Template** option is missing in the Report destination wind
 
 ## Cause
 
-They can be several causes. See below troubleshooting steps in Resolution section. Refer to the original [Blog article](https://community.dynamics.com/gp/b/dynamicsgp/posts/template-option-in-report-destination-window-when-printing-documents) for same information with screen prints.
+They can be several causes. See below troubleshooting steps in Resolution section. Refer to the original [Blog article](https://community.dynamics.com/blogs/post/?postid=65ce8906-8d71-481c-9318-96e5bdd7f838) for same information with screen prints.
 
 ## Resolution
 

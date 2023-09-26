@@ -1,11 +1,9 @@
 ---
 title: Using Kerberos Configuration Manager for SQL Server
 description: Microsoft Kerberos Configuration Manager for SQL Server is a diagnostic tool that's used with SQL Server to troubleshoot Kerberos-related connectivity issues. 
-author: ramakoni1
-ms.author: v-jayaramanp
+ms.reviewer: v-jayaramanp
 ms.date: 06/16/2022
-ms.custom: sap:Connection Issues
-ms.prod: sql 
+ms.custom: sap:Connection Issues 
 ---
 
 # Overview of the Kerberos Configuration Manager for SQL Server
@@ -61,7 +59,7 @@ To troubleshoot connectivity issues that affect SQL, SSRS, and SSAS, connect to 
 
 After the installation is finished, start the *KerberosConfigMgr.exe* binary by navigating to the installation folder. By default, the location is *C:\Program Files\Microsoft\Kerberos Configuration Manager for SQL Server*.
 
-For information about how to start an app as an administrator or a different user, see [Use Run to start an app as an admin](/troubleshoot/windows-server/shell-experience/use-run-as-start-app-admin).
+For information about how to start an app as an administrator or a different user, see [Use Run to start an app as an admin](../../../windows-server/shell-experience/use-run-as-start-app-admin.md).
 
 Use one of the following options to start troubleshooting:
 
@@ -73,7 +71,7 @@ Use one of the following options to start troubleshooting:
 - To connect to a local server, select **Connect** to analyze your Kerberos configuration. In this case, you don't have to specify the server name, domain username, or password.
 
   > [!NOTE]
-  > The account that starts the tool should be a local administrator account. For information about how to start an app as an administrator or a different user, see [Use Run to start an app as an admin](/troubleshoot/windows-server/shell-experience/use-run-as-start-app-admin).
+  > The account that starts the tool should be a local administrator account. For information about how to start an app as an administrator or a different user, see [Use Run to start an app as an admin](../../../windows-server/shell-experience/use-run-as-start-app-admin.md).
 
 After the connection succeeds, all the related SPNs are shown in the following screenshot.
 

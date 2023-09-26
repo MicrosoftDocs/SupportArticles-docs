@@ -3,7 +3,7 @@
 title: Microsoft Identity Manager troubleshooting # < 60 chars
 summary: Welcome to Microsoft Identity Manager troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Microsoft Identity Manager.
 metadata:
-  title: Microsoft Identity Manager troubleshooting document
+  title: Microsoft Identity Manager troubleshooting documentation
   description: This article lists Knowledge Base (KB) and other Support articles for Microsoft Identity Manager. # Required; article description that is displayed in search results. < 160 chars.
   ms.prod: microsoft-identity-manager
   ms.topic: landing-page # Required

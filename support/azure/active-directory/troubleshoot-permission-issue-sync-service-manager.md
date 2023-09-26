@@ -1,10 +1,8 @@
 ---
 title: Permission-issue error 8344 in Synchronization Service Manager
 description: Learn how to diagnose and fix permission-issue error 8344 (insufficient access rights to perform the operation) in Synchronization Service Manager.
-ms.date: 6/14/2023
-author: DennisLee-DennisLee
-ms.author: v-dele
-ms.reviewer: calazlo, nualex
+ms.date: 06/14/2023
+ms.reviewer: calazlo, nualex, v-leedennis
 ms.service: active-directory
 ms.subservice: enterprise-users
 ---
@@ -30,7 +28,7 @@ If you select one of the **permission-issue** export errors, the **Connector Spa
 
 ## Cause
 
-The on-premises Active Directory connector account (`MSOL_<hex-digits>`) doesn’t have permissions in Active Directory to write back the object’s properties that are being synchronized with Azure AD.
+The on-premises Active Directory connector account (`MSOL_<hex-digits>`) doesn't have permissions in Active Directory to write back the object's properties that are being synchronized with Azure AD.
 
 ## Solution 1: Grant permissions by using the AADConnect Troubleshooting console
 
@@ -87,7 +85,7 @@ The output is a table that displays the `Name`, `Forest`, `Domain`, and `Usernam
 
 </details>
 
-### Part 2: Determine which attributes the on-premises Active Directory connector account doesn’t have permissions for
+### Part 2: Determine which attributes the on-premises Active Directory connector account doesn't have permissions for
 
 1. Select **Start**, and then search for and select **Synchronization Service Manager**.
 1. In the **Synchronization Service Manager** app, select the **Operations** tab.
@@ -124,7 +122,7 @@ The output is a table that displays the `Name`, `Forest`, `Domain`, and `Usernam
 1. In the **Microsoft Azure Active Directory Connect** dialog box, select the **Configure** button.
 1. In the **Additional tasks** pane, select the **Troubleshoot** task, and then select the **Next** button.
 1. On the **Welcome to AADConnect Troubleshooting** page, select the **Launch** button to start the troubleshooting menu in a console.
-1. In the `AADConnect Troubleshooting` menu in the console, enter `4` to configure the Active Directory Domain Services (AD DS) connector account permissions.
+1. In the `AADConnect Troubleshooting` menu in the console, enter *4* to configure the Active Directory Domain Services (AD DS) connector account permissions.
 
    ```console
    ----------------------------------------AADConnect Troubleshooting-----------------------------------------
@@ -140,7 +138,7 @@ The output is a table that displays the `Name`, `Forest`, `Domain`, and `Usernam
            Please make a selection: 4_
    ```
 
-1. In the `Configure Permissions` menu, enter the option that you're interested in. In this example, enter `4` to set the Exchange Hybrid permissions.
+1. In the `Configure Permissions` menu, enter the option that you're interested in. In this example, enter *4* to set the Exchange Hybrid permissions.
 
    ```console
    --------------------------------------------Configure Permissions------------------------------------------
@@ -164,7 +162,7 @@ The output is a table that displays the `Name`, `Forest`, `Domain`, and `Usernam
            Please make a selection: 4_
    ```
 
-1. In the `Account to Configure` screen, when you're prompted by the message, "Would you like to configure an existing connector account or a custom account?," enter `E` for an existing connector account (the default response):
+1. In the `Account to Configure` screen, when you're prompted by the message, "Would you like to configure an existing connector account or a custom account?," enter *E* for an existing connector account (the default response):
 
    ```console
    Account to Configure
@@ -196,7 +194,7 @@ The output is a table that displays the `Name`, `Forest`, `Domain`, and `Usernam
    object. Giving no input will set root permissions for all Domains in the Forest: _
    ```
 
-1. In the `Update AdminSdHolders` screen, when you're prompted whether to "Update [AdminSDHolder](/windows-server/identity/ad-ds/plan/security-best-practices/appendix-c--protected-accounts-and-groups-in-active-directory#adminsdholder) container when updating with these permissions?," enter <kbd>Y</kbd> for `Yes` only if you're synchronizing [Protected Accounts in Active Directory](/windows-server/identity/ad-ds/plan/security-best-practices/appendix-c--protected-accounts-and-groups-in-active-directory) to Azure AD. Otherwise, enter <kbd>N</kbd> for `No` (the default response).
+1. In the `Update AdminSdHolders` screen, when you're prompted whether to "Update [AdminSDHolder](/windows-server/identity/ad-ds/plan/security-best-practices/appendix-c--protected-accounts-and-groups-in-active-directory#adminsdholder) container when updating with these permissions?," enter *Y* for `Yes` only if you're synchronizing [Protected Accounts in Active Directory](/windows-server/identity/ad-ds/plan/security-best-practices/appendix-c--protected-accounts-and-groups-in-active-directory) to Azure AD. Otherwise, enter *N* for `No` (the default response).
 
    ```console
    Update AdminSdHolders
@@ -207,7 +205,7 @@ The output is a table that displays the `Name`, `Forest`, `Domain`, and `Usernam
    > [!NOTE]  
    > We recommend that you don't synchronize your on-premises AD administrator accounts to Azure AD. For more information, see the [Administrator password setting](/azure/active-directory/authentication/howto-sspr-deployment#administrator-password-setting) section of [Plan an Azure AD self-service password reset deployment](/azure/active-directory/authentication/howto-sspr-deployment).
 
-1. In the `Confirm` screen, enter <kbd>Y</kbd> for `Yes` to confirm your choice (the default response):
+1. In the `Confirm` screen, enter *Y* for `Yes` to confirm your choice (the default response):
 
    ```console
    Confirm
@@ -247,7 +245,7 @@ For information about this solution, see the ["Using the ADSyncConfig PowerShell
    | **Applies to** list | Select **Descendant User objects** to show the list of permissions that are allowed for the selected principal. |
    | **Properties** options | Select the check box for each permission property option that you want. Scroll through the list of properties to find the attributes that you need. Property option names can include **Read all properties**, **Write all properties**, **Read msDS-OperationsForAzTaskBL**, **Read msDS-parentdistname**, and so on. |
 
-   :::image type="content" source="./media/troubleshoot-permission-issue-sync-service-manager/permission-entry-dialog-box.png" alt-text="Screenshot of the Permission Entry dialog box in the Active Directory Users and Computers snap-in." lightbox="./media/troubleshoot-permission-issue-sync-service-manager/permission-entry-dialog-box.png":::
+   :::image type="content" source="./media/troubleshoot-permission-issue-sync-service-manager/permission-entry-dialog-box.png" alt-text="Screenshot of the Permission Entry dialog box in the Active Directory Users and Computers snap-in." lightbox="./media/troubleshoot-permission-issue-sync-service-manager/permission-entry-dialog-box.png" border="false":::
 
 1. To exit the dialog boxes and apply the changes, select the **OK** button three times.
 

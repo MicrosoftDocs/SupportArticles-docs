@@ -4,11 +4,9 @@ description: Learn how to manage VIP swaps in Azure Cloud Services (extended sup
 ms.service: cloud-services
 ms.subservice: troubleshoot-extended-support
 ms.custom: devx-track-azurepowershell
-ms.date: 2/8/2023
-author: DennisLee-DennisLee
-ms.author: v-dele
+ms.date: 02/08/2023
 editor: v-jsitser
-ms.reviewer: maheshallu, piw, v-frpan
+ms.reviewer: maheshallu, piw, v-frpan, v-leedennis
 ms.topic: how-to
 ---
 # Use PowerShell to manage VIP swaps in Azure Cloud Services (extended support)
@@ -193,7 +191,7 @@ In the [Azure portal][ap], you can view details about the new production cloud s
 
 ### Step 2: Create a staging cloud service to map the staging IP address
 
-When you have a new version of the cloud service, you can create it as the staging cloud service for step 2. In this step, we search for the production cloud service by using the production public IP address’s front-end setting. To implement this step, when you define the network profile for the staging cloud service, make sure that you set the ID of its swappable cloud service property to the ID of the production cloud service.
+When you have a new version of the cloud service, you can create it as the staging cloud service for step 2. In this step, we search for the production cloud service by using the production public IP address's front-end setting. To implement this step, when you define the network profile for the staging cloud service, make sure that you set the ID of its swappable cloud service property to the ID of the production cloud service.
 
 ```azurepowershell
 # Define basic variables.

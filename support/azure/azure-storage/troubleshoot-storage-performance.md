@@ -1,11 +1,9 @@
 ---
 title: Troubleshoot performance issues in Azure storage accounts
 description: Identifies and troubleshoots performance issues in Azure storage accounts.
-author: AmandaAZ
-ms.author: v-weizhu
-ms.reviewer: normesta, azurestocic, jarrettr
+ms.reviewer: normesta, azurestocic, jarrettr, v-weizhu
 ms.date: 04/12/2023
-ms.service: storage
+ms.service: azure-storage
 ---
 
 # Troubleshoot performance in Azure storage accounts

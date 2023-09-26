@@ -2,11 +2,9 @@
 title: 'BitLocker configuration: known issues'
 description: Describes common issues that involve your BitLocker configuration and BitLocker's general functionality, and provides guidance for addressing those issues.
 ms.date: 11/21/2022
-ms.reviewer: kaushika
+ms.reviewer: kaushika, v-tappelgate
 ms.technology: windows-client-security
 ms.prod: windows-client
-author: Teresa-Motiv
-ms.author: v-tappelgate
 manager: dcscontentpm
 ms.collection: Windows Security Technologies\BitLocker
 ms.topic: troubleshooting

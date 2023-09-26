@@ -5,6 +5,7 @@ ms.date: 05/22/2020
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: enterprise-users
+ms.custom: has-azure-ad-ps-ref
 ---
 # Troubleshoot Azure AD Certificate-Based Authentication issues
 

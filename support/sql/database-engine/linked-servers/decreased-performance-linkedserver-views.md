@@ -6,7 +6,6 @@ ms.custom: sap:Performance
 ms.reviewer: ramakoni, jopilov
 author: pijocoder
 ms.author: jopilov
-ms.prod: sql
 ms.topic: troubleshooting
 ---
 
@@ -49,13 +48,13 @@ Linked server queries against views don't utilize statistics-based cardinality e
     SELECT * FROM Sales.SalesOrderDetail;
     ```
 
-2. Query the view remotely.
+1. Query the view remotely.
 
     ```tsql
     SELECT * FROM LS1.AdventureWorks2019.dbo.view1;
     ```
 
-3. The cardinality estimation of the query shows exactly **10,000** rows.
+1. The cardinality estimation of the query shows exactly **10,000** rows.
 
     :::image type="content" source="media/decreased-performance-linkedserver-views/linked-server-query-view.png" alt-text="Screenshot of the query for view in linked server.":::
 
@@ -89,7 +88,7 @@ See the following cardinality estimation of the queries for an example.
 
 In most cases, no action is needed because most application workloads won't be impacted by the cardinality estimation on views when queried from linked servers. If the workload is impacted, use one of the following methods:
 
-1. Update and change the view as an [indexed view](/sql/relational-databases/views/create-indexed-views). The indexed view has at least one index with corresponding statistics. See the following queries to create and query an indexed view.
+- Update and change the view as an [indexed view](/sql/relational-databases/views/create-indexed-views). The indexed view has at least one index with corresponding statistics. See the following queries to create and query an indexed view.
 
     > [!NOTE]
     > This method will expose actual statistics that represent the underlying data.
@@ -129,12 +128,12 @@ In most cases, no action is needed because most application workloads won't be i
 
     :::image type="content" source="media/decreased-performance-linkedserver-views/linked-server-query-indexed-view.png" alt-text="Screenshot of the query for indexed view in linked server.":::
 
-2. If you execute a query with the `WHERE` clause, you can increase the cardinality estimation by using the `Query Hint OPTION` (`USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')`). This approach may help in some cases especially when joining with large tables.
+- If you execute a query with the `WHERE` clause, you can increase the cardinality estimation by using the `Query Hint OPTION` (`USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')`). This approach may help in some cases especially when joining with large tables.
 
     > [!NOTE]
     > This method is appropriate for cases where the view exposes many rows.
 
-3. Execute the query directly against the base tables instead of views on the linked server if appropriate.
+- Execute the query directly against the base tables instead of views on the linked server if appropriate.
 
 ## See also
 

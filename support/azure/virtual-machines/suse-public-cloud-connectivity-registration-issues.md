@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot connectivity and registration for SUSE SLES VMs
 description: Troubleshoot scenarios in which an Azure VM that has a SUSE Linux Enterprise Server image can't connect to the SUSE Subscription Management Tool (SMT) repository.
-ms.date: 4/29/2023
+ms.date: 04/29/2023
 author: DennisLee-DennisLee
 ms.author: hokamath
 ms.reviewer: adelgadohell, mahuss, esanchezvela, scotro
@@ -252,7 +252,7 @@ If you require further help, see [Support and troubleshooting for Azure VMs](/az
 
 ## More information
 
-For more information about [Endorsed Linux distributions](/azure/virtual-machines/linux/endorsed-distros) and open-source technologies in Azure, see [Support for Linux and open source technology in Azure](/troubleshoot/azure/cloud-services/support-linux-open-source-technology).
+For more information about [Endorsed Linux distributions](/azure/virtual-machines/linux/endorsed-distros) and open-source technologies in Azure, see [Support for Linux and open source technology in Azure](../cloud-services/support-linux-open-source-technology.md).
 
 ## Third-party information disclaimer
 

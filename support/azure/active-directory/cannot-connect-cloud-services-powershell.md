@@ -5,7 +5,7 @@ ms.date: 05/11/2020
 ms.reviewer: willfid
 ms.service: active-directory
 ms.subservice: authentication
-ms.custom: devx-track-azurepowershell
+ms.custom: devx-track-azurepowershell, has-azure-ad-ps-ref
 ---
 # Can't connect to Office 365, Azure, or Intune using the Azure Active Directory Module for Windows PowerShell
 

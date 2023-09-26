@@ -534,8 +534,6 @@
       href: ./networking/redirect-users-documents-folder-to-their-home-directory-fail.md
     - name: Change the location of CSC folder
       href: ./networking/change-csc-folder-location-with-cachelocation-registry.md
-    - name: CSCCMD tool Version 1.1. functions and features
-      href: ./networking/client-side-caching-command-line-options-v1dot1.md
     - name: Current hotfixes have folder redirection enabled
       href: ./networking/current-hotfixes-have-folder-redirection.md
     - name: Errors when having a large "Folder Redirection" policy settings file
@@ -878,10 +876,6 @@
       href: ./remote/invalid-client-ip-address-port-number-event-4624.md
     - name: Troubleshoot RDP Client connection problems
       href: ./remote/terminal-server-client-connection-failures.md
-  - name: Virtual Desktop Infrastructure (VDI)
-    items:
-    - name: Support policy for Azure Virtual Desktop and Windows 10 Enterprise multi-session
-      href: ./remote/support-policy-windows-virtual-desktop-windows-10-enterprise-multi-session.md
 - name: Shell Experience
   items:
   - name: Shell Experience
@@ -1298,15 +1292,15 @@
     href: ./windows-troubleshooters/windows-troubleshooters-overview.md
   - name: Active and retired Windows 10 troubleshooters
     href: ./windows-troubleshooters/active-and-retired-troubleshooters-windows-10.md
-  - name: TroubleShootingScript toolset (TSSv2)
+  - name: TroubleShootingScript toolset (TSS)
     items:
-    - name: Introduction to TroubleShootingScript toolset (TSSv2)
-      href: ./windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2.md
+    - name: Introduction to TroubleShootingScript toolset (TSS)
+      href: ./windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tss.md
     - name: Gather information for Active Directory replication issues
-      href: ./windows-troubleshooters/gather-information-using-tssv2-ad-replication.md
+      href: ./windows-troubleshooters/gather-information-using-tss-ad-replication.md
     - name: Gather information for deployment-related issues
-      href: ./windows-troubleshooters/gather-information-using-tssv2-deployment.md
+      href: ./windows-troubleshooters/gather-information-using-tss-deployment.md
     - name: Gather information for Group Policy issues
-      href: ./windows-troubleshooters/gather-information-using-tssv2-group-policy.md
+      href: ./windows-troubleshooters/gather-information-using-tss-group-policy.md
     - name: Gather information for user experience-related issues
-      href: ./windows-troubleshooters/gather-information-using-tssv2-user-experience.md
+      href: ./windows-troubleshooters/gather-information-using-tss-user-experience.md

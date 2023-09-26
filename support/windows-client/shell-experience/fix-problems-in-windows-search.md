@@ -46,7 +46,7 @@ msdt.exe -ep WindowsHelp id SearchDiagnostic
 
  For more information about Search and Indexing, see the following articles:
 
-- [Performance issues that affect Windows Search and Search indexing](/troubleshoot/windows-client/shell-experience/windows-search-performance-issues).
+- [Performance issues that affect Windows Search and Search indexing](windows-search-performance-issues.md).
 - FAQs on [Search indexing in Windows 10](https://support.microsoft.com/help/4098843).
 
 ## Solution 3: Restart Windows Search

@@ -4,7 +4,6 @@ description: This article provides workarounds for the problem that occurs when 
 ms.date: 03/16/2020
 ms.custom: sap:Replication, change tracking, change data capture
 ms.reviewer: akshaym
-ms.prod: sql
 ---
 # Some SQL Server replication agents can't run when you configure many replication agents to run on a server
 
