@@ -38,9 +38,9 @@ DBCC MEMORYSTATUS is typically used to investigate low memory issues reported by
 1. Use the **Process/System Counts**  and **Memory Manager** sections to establish if there's external memory pressure, for example if the computer is low on physical or virtual memory or if SQL Server working set is paged out. Also use these sections to determine how much memory has the SQL Server database engine allocated in comparison with overall memory on the system.
 1. If you establish that there's external memory pressure, then address that by reducing other applications' memory usage, OS usage, or by adding more RAM. 
 1. If you establish that SQL Server engine is using most the memory, that is you have found internal memory pressure, then you can use the remaining sections of DBCC MEMORYSTATUS to identify which component(s) (Memory clerk, Userstore, or Cachestore) is the largest contributor to this memory usage.
-1. Examine each MEMORYCLEARK, CACHESTORE, USERSTORE, or OBJECTSTORE and look at its Pages Allocated to determine how much memory that component is consuming inside SQL Server. For a brief description of most database engine memory components, see the following table [Memory Clerk types](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql?view=sql-server-ver16#types)
+1. Examine each MEMORYCLEARK, CACHESTORE, USERSTORE, or OBJECTSTORE and look at its Pages Allocated to determine how much memory that component is consuming inside SQL Server. For a brief description of most database engine memory components, see the following table [Memory Clerk types](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql#types)
     1. In rare cases the allocation is direct virtual allocation, so look at the VM Committed value under the specific component
-    1. If your machine uses NUMA, then some memory components are broken out per node. In those cases, you can see for example OBJECTSTORE_LOCK_MANAGER (node 0), OBJECTSTORE_LOCK_MANAGER (node 1), OBJECTSTORE_LOCK_MANAGER (node 2), and so on, and finally a total summed value of each node in OBJECTSTORE_LOCK_MANAGER (Total). The best place to start is with the section reporting the total value and only later look at the break down if necessary.
+    1. If your machine uses NUMA, then some memory components are broken out per node. In those cases, you can see for example OBJECTSTORE_LOCK_MANAGER (node 0), OBJECTSTORE_LOCK_MANAGER (node 1), OBJECTSTORE_LOCK_MANAGER (node 2), and so on, and finally a total summed value of each node in OBJECTSTORE_LOCK_MANAGER (Total). The best place to start is with the section reporting the total value and only later look at the break down if necessary. For more information, see [Memory usage with NUMA nodes](#memory-usage-with-numa-nodes). 
 1. There are sections in the DBCC MEMORYSTATUS with detailed, specialized information about particular memory allocators. You can use those if you need to understand more details, and further breakdown of the allocations within a memory clerk. Examples, with such detailed information include Buffer Pool (data and index cache), Procedure Cache/ plan cache, Query Memory Objects (memory grants), Optimization Queue  and small, medium and big gateways (optimizer memory), and a few others.
 
 The remainder of this article describes some of the useful counters in the DBCC MEMORYSTATUS output that can allow you to diagnose memory issues more effectively.
@@ -111,9 +111,9 @@ For more information about the elements in this output, see:
 - **NUMA Growth Phase**: This value indicates whether SQL Server is currently in a NUMA growth phase. For more information about this initial ramp up of memory when NUMA nodes exist on the machine, see [How It Works: SQL Server (NUMA Local, Foreign and Away Memory Blocks)](https://techcommunity.microsoft.com/t5/sql-server-support-blog/how-it-works-sql-server-numa-local-foreign-and-away-memory/ba-p/317461)
 - **Last OS Error**: This value shows the last OS error that occurred when there was a memory pressure on the system. SQL Server records that OS error and shows it in the output here. For a full list of OS error, see [System Error Codes](/windows/win32/debug/system-error-codes--0-499-)
 
-## Summary of memory usage
+## Memory usage with NUMA nodes
 
-The `Memory Manager` table is followed by a summary of memory usage for each memory node. In a non-uniform memory access (NUMA) enabled system, there's a corresponding Memory node entry for each hardware NUMA node. In an SMP system, there's a single Memory node entry.
+The `Memory Manager` table is followed by a summary of memory usage for each memory node. In a non-uniform memory access (NUMA) enabled system, there's a corresponding Memory node entry for each hardware NUMA node. In an SMP system, there's a single Memory node entry. The same patter is applied to other memory sections. 
 
 ```output
 Memory node Id = 0      KB
@@ -137,15 +137,12 @@ Taken Away Committed    0
 
 For more information about the elements in this output, see:
 
-- VM Reserved: This value shows the VAS that is reserved by threads that are running on this node.
+- VM Reserved: This value shows the virtual address space (VAS) that is reserved by threads that are running on this node.
 - VM Committed: This value shows the VAS that is committed by threads that are running on this node.
 
 ## Aggregate memory
 
 The next table contains aggregate memory information for each clerk type and for each NUMA node. For a NUMA-enabled system, you may see output that is similar to the following one:
-
-> [!NOTE]
-> The following table contains only part of the output.
 
 ```output
 MEMORYCLERK_SQLGENERAL (node 0) KB
