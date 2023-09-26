@@ -5973,6 +5973,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/windows-server/remote/fair-share-enabled-by-default-in-rds.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/fair-share-enabled-by-default-rds?toc=%2Fazure%2Fvirtual-desktop%2Ftoc.json&bc=%2Fazure%2Fvirtual-desktop%2Fbreadcrumb%2Ftoc.json",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "support/dynamics-365/customer-insights/insights/segment-no-results.md ",
       "redirect_url": "/troubleshoot/dynamics-365/customer-insights/data/insights/segment-no-results",
       "redirect_document_id": false
