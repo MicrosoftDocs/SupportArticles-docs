@@ -573,7 +573,7 @@
           "powerapps-docs",
           "powerautomate-docs"
         ],
-        "dynamics-365/customer-insights/data/**.*": [
+        "dynamics-365/customer-insights/data/**/**.*": [
           "customerinsightsdata-docs"
         ],
         "dynamics-365/customer-insights/journeys/**.*": [
