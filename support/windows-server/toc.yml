@@ -2192,8 +2192,6 @@
       href: ./remote/deny-user-permissions-to-logon-to-rd-session-host.md
     - name: Error 2147944102 when you start BITS service
       href: ./remote/service-specific-error-code-2147944102.md
-    - name: Fair Share is enabled by default in RDS
-      href: ./remote/fair-share-enabled-by-default-in-rds.md
     - name: How to add a user to Terminal Services RDP permissions
       href: ./remote/add-user-services-rdp-permissions.md
     - name: How to enable Windows Remote Shell
