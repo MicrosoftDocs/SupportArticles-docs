@@ -39,9 +39,9 @@ The following table lists common ClientOtherErrors, along with an explanation of
 | QueryFullEaInformation | STATUS_NOT_IMPLEMENTED | This failure is returned because Azure Files doesn't implement this API. Azure Files [doesn't support](/rest/api/storageservices/features-not-supported-by-the-azure-file-service) extended attributes currently. |
 | UnknownFileClass=48 | STATUS_NOT_SUPPORTED | This is the `FileNormalizedNameInformation` API call. This is new support for Windows Server, and currently Azure Files doesn't support this API. |
 | FileOpen | 492 STATUS_ACCESS_DENIED | The caller doesn't have the required permissions to open the file. In the case of Kerberos access, the ACL denies the caller access. |
-| FileOpen | 257 STATUS_OBJECT_NAME_INVALID | The path for the open request is invalid (for example, too long or too deep). |
+| FileOpen | 257 STATUS_OBJECT_NAME_INVALID | The path for the open request is invalid (for example, the path is too long or too deep). |
 | FileOpen | 12 STATUS_FILE_IS_ADIRECTORY | The caller is opening a directory without using the correct `CreateFile` parameters (for example, Backup intent). |
-| FileOpen | 8 STATUS_SHARING_VIOLATION | The caller is opening a file that is already opened with restrictions (for example, exclusive or others can only read). |
+| FileOpen | 8 STATUS_SHARING_VIOLATION | The caller is opening a file that's already opened with restrictions (for example, exclusive or others can only read). |
 | FileOpen | 6 STATUS_OBJECT_NAME_NOT_FOUND | The caller is opening a file that doesn't exist. |
 | FSCTL_QUERY_NETWORK_INTERFACE_INFO (IOCTL) | STATUS_INVALID_DEVICE_REQUEST | This is used only for Azure Files when customers have enabled the *multichannel* feature. In other cases, it's not needed, and we return an invalid device request when queried from the client. |
 | QueryStreamInformation | STATUS_NOT_IMPLEMENTED | Some file systems have the concept of [alternate data streams](/windows/win32/fileio/file-streams?redirectedfrom=MSDN#stream-types) or other streams like reparse point streams. Azure Files doesn't have this concept, so we don't support the API. |
