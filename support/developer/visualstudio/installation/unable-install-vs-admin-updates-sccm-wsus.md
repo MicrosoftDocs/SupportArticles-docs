@@ -38,7 +38,7 @@ To enable your Visual Studio client machine to receive updates through WSUS, mak
 
    Ensure that you execute the following command line via an admin PowerShell cmdlet to ensure that it populates the Visual Studio instances installed on the machine:
 
-   `Get-Ciminstnace MSTF_VSInstance`
+   `Get-CimInstance MSFT_VSInstance`
 
 1. The ChannelURI in *C:\ProgramData\Microsoft\VisualStudio\Packages\_Instances\\<RandomID\>\state.json* must point to the [release channel](https://aka.ms/vs/17/release/channel).
 
