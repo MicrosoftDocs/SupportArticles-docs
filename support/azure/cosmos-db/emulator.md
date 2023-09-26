@@ -9,7 +9,7 @@ ms.topic: landing-page
 ms.date: 09/26/2023
 ---
 
-# Troubleshoot the Azure Cosmos DB Emulator
+# Troubleshoot the Azure Cosmos DB emulator
 
 The Azure Cosmos DB emulator provides an environment that emulates the cloud service for development purposes. Use the tips in this article to help troubleshoot problems you experience when installing or using the emulator.
 
@@ -46,7 +46,7 @@ Alternatively, if resetting the data doesn't work, go to the `%LOCALAPPDATA%\Cos
 
 - If you receive a "Service Unavailable" message, the emulator might be failing to initialize the network stack. Check to see if you have the **Pulse Secure Client** or **Juniper Networks Client** installed, as their network filter drivers might cause the problem. Uninstalling third-party network filter drivers typically fixes the problem. Alternatively, start the emulator with `/DisableRIO`, which switches the emulator network communication to regular Winsock.
 
-- If you experience a connectivity error such as **"Forbidden","message":"Request is being made with a forbidden encryption in transit protocol or cipher. Check account SSL/TLS minimum allowed protocol setting..."**, it might be caused by global changes in the OS (for example Insider Preview Build 20170) or the browser settings that enable TLS 1.3 as default. A similar error such as **Microsoft.Azure.Documents.DocumentClientException: Request is being made with a forbidden encryption in transit protocol or cipher. Check account SSL/TLS minimum allowed protocol setting** might occur when you use SDK to execute a request against the Azure Cosmos DB Emulator. This error might also occur as the Azure Cosmos DB Emulator only supports the TLS 1.2 protocol. The recommended workaround is to change the settings and set the default to TLS 1.2.
+- If you experience a connectivity error such as **"Forbidden","message":"Request is being made with a forbidden encryption in transit protocol or cipher. Check account SSL/TLS minimum allowed protocol setting..."**, it might be caused by global changes in the OS (for example Insider Preview Build 20170) or the browser settings that enable TLS 1.3 as default. A similar error such as **Microsoft.Azure.Documents.DocumentClientException: Request is being made with a forbidden encryption in transit protocol or cipher. Check account SSL/TLS minimum allowed protocol setting** might occur when you use SDK to execute a request against the Azure Cosmos DB emulator. This error might also occur as the Azure Cosmos DB emulator only supports the TLS 1.2 protocol. The recommended workaround is to change the settings and set the default to TLS 1.2.
 
   For example:
 
