@@ -88,6 +88,8 @@ items:
           href: manage-apps-and-solutions/form-not-appear-after-import.md
         - name: '"Full formXml is expected to create a form" error'
           href: manage-apps-and-solutions/full-formxml-expected-to-create-form-error.md
+        - name: Failure when multiple publishers have shared components
+          href: manage-apps-and-solutions/multiple-publisher-shared-component-failure.md
         - name: Label text doesn't display in other languages
           href: manage-apps-and-solutions/label-text-not-displayed.md
         - name: Maximum row size exceeds the allowed maximum
