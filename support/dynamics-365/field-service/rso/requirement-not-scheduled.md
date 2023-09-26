@@ -1,5 +1,5 @@
 ---
-title:  Error message: Requirements not scheduled in the Resource Scheduling Optimization add-in
+title: Requirements not scheduled in the Resource Scheduling Optimization add-in
 description: Troubleshoot issues with unscheduled requirements.
 ms.author: feifeiqiu
 author: feifeiqiu
