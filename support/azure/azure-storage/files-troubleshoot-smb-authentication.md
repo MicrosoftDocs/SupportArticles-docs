@@ -404,10 +404,6 @@ If you set up "assignment required" for the corresponding enterprise application
 
 Don't select **Assignment required for Azure AD application** for the storage account because we don't populate entitlements in the Kerberos ticket that's returned back to the requestor. For more information, see [Error AADSTS50105 - The signed in user is not assigned to a role for the application](../active-directory/error-code-aadsts50105-user-not-assigned-role.md).
 
-## Need help?
-
-If you still need help, [contact support](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) to get your problem resolved quickly.
-
 ## See also
 
 - [Troubleshoot Azure Files](files-troubleshoot.md)
