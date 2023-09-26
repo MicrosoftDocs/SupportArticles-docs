@@ -2,7 +2,7 @@
 title: Solution upgrade or deletion fails when a shared component has multiple publishers
 description: Works around an issue where you can't upgrade or delete the base layer of components that have multiple publishers in Microsoft Power Apps.
 ms.reviewer: jdaly
-ms.date: 09/22/2023
+ms.date: 09/26/2023
 author: swatimadhukargit
 ms.author: swatim
 ---
