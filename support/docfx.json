@@ -573,8 +573,11 @@
           "powerapps-docs",
           "powerautomate-docs"
         ],
-        "dynamics-365/customer-insights/**/**.*": [
-          "customerinsights-docs"
+        "dynamics-365/customer-insights/data/**.*": [
+          "customerinsightsdata-docs"
+        ],
+        "dynamics-365/customer-insights/journeys/**.*": [
+          "customerinsightsjourneys-docs"
         ],
         "dynamics-365/customer-service/**/**.*": [
           "D365CE",
@@ -585,11 +588,6 @@
         "dynamics-365/finance/**/**.*": [
           "FinanceAndOperations",
           "financeandoperations-docs"
-        ],
-        "dynamics-365/marketing/**/**.*": [
-          "D365CE",
-          "D365Mktg",
-          "marketing-docs"
         ],
         "dynamics-365/sales/**/**.*": [
           "D365CE",
