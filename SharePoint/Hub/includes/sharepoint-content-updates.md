@@ -2,6 +2,14 @@
 
 
 
+## Week of September 18, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 9/18/2023 | [SharePoint Online or OneDrive for Business access denied due to organizational policies error message](/sharepoint/troubleshoot/sharing-and-permissions/access-denied-due-to-org-policies) | modified |
+
+
 ## Week of September 11, 2023
 
 

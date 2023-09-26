@@ -2,6 +2,14 @@
 
 
 
+## Week of September 18, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 9/19/2023 | [SMTP address in user's profile doesn't change](/outlook/troubleshoot/user-interface/smtp-address-in-users-profile-not-change) | modified |
+
+
 ## Week of September 04, 2023
 
 
@@ -16,12 +24,3 @@
 | Published On |Topic title | Change |
 |------|------------|--------|
 | 8/22/2023 | [Web links from Outlook and Teams open in Microsoft Edge in side-by-side view](/outlook/troubleshoot/message-body/view-emails-and-web-links-in-browser) | modified |
-
-
-## Week of August 07, 2023
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 8/10/2023 | [Issues in Outlook when you try to configure free/busy information or when you try to delegate information](/outlook/troubleshoot/calendaring/errors-when-configure-free-busy-or-delegate-information) | modified |
-| 8/10/2023 | [Inbox rule in Outlook on the web doesn't appear in Outlook for Windows](/outlook/troubleshoot/email-management/inbox-rule-does-not-appear-in-outlook-client) | added |
