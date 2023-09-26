@@ -1,13 +1,14 @@
 ---
 title: CDC capture job fails when processing changes
-description: This article provides two workarounds for the problem where a CDC capture job fails when you process changes for a table that has a system CLR datatype (geometry, geography or hierarchyid).
+description: This article provides two workarounds for the problem where a CDC capture job fails when you process changes for a table that has a system CLR datatype (geometry, geography, or hierarchyid).
 ms.date: 01/15/2021
 ms.custom: sap:Replication, change tracking, change data capture
 ms.reviewer: akbarf 
 ---
+
 # CDC capture job fails when processing changes for a table with system CLR datatype (geometry, geography, or hierarchyid)
 
-This article helps you work around the problem where a CDC capture job fails when you process changes for a table that has a system CLR datatype (geometry, geography or hierarchyid).
+This article helps you work around the problem where a CDC capture job fails when you process changes for a table that has a system CLR datatype (geometry, geography, or hierarchyid).
 
 _Applies to:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 4538384
@@ -16,7 +17,7 @@ _Original KB number:_ &nbsp; 4538384
 
 Consider the following scenario:
 
-- You enable the Change Data Capture (CDC) feature on a table that has system CLR datatype, such as geometry, geography, or hierarchyid .
+- You enable the Change Data Capture (CDC) feature on a table that has system CLR datatype, such as geometry, geography, or hierarchyid.
 - The CDC capture (scan) job is processing changes that are related to other tables. The process hasn't yet reached the table that has system CLR datatype.
 - You make some Data Manipulation Language (DML) changes on the table that has system CLR datatype. Then, you make Data Definition Language (DDL) changes on the same table (for example, you add a column).
 
@@ -44,8 +45,8 @@ This issue does not occur if the CDC capture job initially processes only the DM
 
 To work around this issue, try either of the following methods:
 
-- Avoid using the problematic datatypes ( geometry, geography, hierarchyid ) together with CDC.
-- Make sure that you have no inflight DML changes when you make DDL changes on tables that have g eometry, geography, or hierarchyid datatypes . To avoid this issue, follow these steps:
+- Avoid using the problematic datatypes (geometry, geography, hierarchyid) together with CDC.
+- Make sure that you have no inflight DML changes when you make DDL changes on tables that have geometry, geography, or hierarchyid datatypes. To avoid this issue, follow these steps:
 
     1. Quiesce all DML to the table.
     1. Run a capture job to process the changes.

@@ -1,11 +1,10 @@
 ---
 title: Troubleshoot Azure Files identity-based authentication and authorization issues (SMB)
 description: Troubleshoot problems using identity-based authentication to connect to SMB Azure file shares and see possible resolutions.
-author: khdownie
 ms.service: azure-file-storage
 ms.custom: has-azure-ad-ps-ref
 ms.date: 08/16/2023
-ms.author: kendownie
+ms.reviewer: kendownie
 ---
 # Troubleshoot Azure Files identity-based authentication and authorization issues (SMB)
 
@@ -390,6 +389,18 @@ The solution is to add the privateLink FQDN to the storage account's Azure AD ap
 1. Review the content and select **Save** to update the application object with the new identifierUris.
 1. Update any internal DNS references to point to the private link.
 1. Retry mounting the share.
+
+### Error AADSTS50105
+
+The request was interrupted by the following challenge: AADSTS50105: Your administrator has configured the application "Enterprise application name" to block users unless they are specifically granted (assigned) access to the application. The signed in user '{EmailHidden}' is blocked because they are not a direct member of a group with access, nor had access directly assigned by an administrator. Please contact your administrator to assign access to this application.
+
+#### Cause
+
+If you set up "assignment required" for the corresponding enterprise application, you won't be able to get a Kerberos ticket, and Azure AD sign-in logs will show an error even though users or groups are assigned to the application.
+
+#### Solution
+
+Don't select **Assignment required for Azure AD application** for the storage account because we don't populate entitlements in the Kerberos ticket that's returned back to the requestor. For more information, see [Error AADSTS50105 - The signed in user is not assigned to a role for the application](../active-directory/error-code-aadsts50105-user-not-assigned-role.md).
 
 ## Need help?
 If you still need help, [contact support](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) to get your problem resolved quickly.

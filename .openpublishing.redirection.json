@@ -5918,8 +5918,63 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/windows-client/networking/client-side-caching-command-line-options-v1dot1.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/client-side-caching-command-line-options-v1dot1",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/azure/azure-kubernetes/troubleshoot-upgrade-errors.md",
       "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/marketing/welcome-marketing.yml",
+      "redirect_url": "/troubleshoot/dynamics-365/customer-insights/welcome-customer-insights",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/marketing/dynamics-365-marketing-entitlement-does-not-match-your-tenant.md",
+      "redirect_url": "/troubleshoot/dynamics-365/customer-insights/welcome-customer-insights",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/marketing/dynamics-365-marketing-problem-with-deployment.md",
+      "redirect_url": "/troubleshoot/dynamics-365/customer-insights/welcome-customer-insights",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/customer-insights/data-ingestion/power-query-data-source-refresh-issues-dataflows.md ",
+      "redirect_url": "/troubleshoot/dynamics-365/customer-insights/data/data-ingestion/power-query-data-source-refresh-issues-dataflows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/customer-insights/exports/controls-customer-card-add-in.md ",
+      "redirect_url": "/troubleshoot/dynamics-365/customer-insights/data/exports/controls-customer-card-add-in",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/customer-insights/exports/environment-not-showing-in-power-bi.md ",
+      "redirect_url": "/troubleshoot/dynamics-365/customer-insights/data/exports/environment-not-showing-in-power-bi",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/customer-insights/exports/error-date-fields-power-bi-connector.md ",
+      "redirect_url": "/troubleshoot/dynamics-365/customer-insights/data/exports/error-date-fields-power-bi-connector",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/customer-insights/exports/export-fails-name-already-exists.md ",
+      "redirect_url": "/troubleshoot/dynamics-365/customer-insights/data/exports/export-fails-name-already-exists",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/customer-insights/exports/ineligible-segments-b-to-b.md ",
+      "redirect_url": "/troubleshoot/dynamics-365/customer-insights/data/exports/ineligible-segments-b-to-b",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/customer-insights/insights/segment-no-results.md ",
+      "redirect_url": "/troubleshoot/dynamics-365/customer-insights/data/insights/segment-no-results",
       "redirect_document_id": false
     }
 ]
