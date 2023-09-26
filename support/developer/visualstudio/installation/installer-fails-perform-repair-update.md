@@ -2,9 +2,7 @@
 title: Visual Studio Installer fails to perform repair or update
 description: Provides a resolution for an issue that occurs when you try to repair or update Visual Studio.
 ms.date: 09/26/2023
-author: khushg
-ms.author: khgupta
-ms.reviewer: raviuppa, aartigoyle, v-sidong
+ms.reviewer: khgupta, raviuppa, aartigoyle, v-sidong
 ms.custom: sap:installation
 ---
 # Visual Studio Installer fails to perform repair or update
@@ -45,4 +43,4 @@ To solve this issue, follow these steps:
 
 - [Update Visual Studio](/visualstudio/install/update-visual-studio)
 - [Repair Visual Studio](/visualstudio/install/repair-visual-studio)
-- [Troubleshoot installation and upgrade issues](/troubleshoot/developer/visualstudio/installation/troubleshoot-installation-issues)
+- [Troubleshoot installation and upgrade issues](troubleshoot-installation-issues.md)

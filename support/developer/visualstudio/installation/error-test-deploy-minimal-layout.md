@@ -2,9 +2,7 @@
 title: Error when testing or deploying a minimal layout
 description: Provides a resolution for an issue that occurs when you test or deploy a minimal layout.
 ms.date: 09/26/2023
-author: khushg
-ms.author: khgupta
-ms.reviewer: raviuppa, aartigoyle, v-sidong
+ms.reviewer: khgupta, raviuppa, aartigoyle, v-sidong
 ms.custom: sap:installation
 ---
 # Error when testing or deploying a minimal layout in Visual Studio

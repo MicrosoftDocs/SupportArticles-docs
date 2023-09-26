@@ -2,9 +2,7 @@
 title: Update deployed via Configuration Manager fails to install
 description: Provides a resolution for an issue where the Visual Studio update deployed using Microsoft Configuration Manager fails to install.
 ms.date: 09/26/2023
-ms.reviewer: raviuppa, aartigoyle, v-sidong
-author: khushg
-ms.author: khgupta
+ms.reviewer: khgupta, raviuppa, aartigoyle, v-sidong
 ms.custom: sap:installation
 ---
 # The Visual Studio update deployed via Configuration Manager fails to install

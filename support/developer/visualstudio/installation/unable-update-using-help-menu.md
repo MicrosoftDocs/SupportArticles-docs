@@ -2,9 +2,7 @@
 title: Unable to update Visual Studio using the Help menu
 description: Provides a resolution for an issue where you can't update Visual Studio using the Help menu.
 ms.date: 09/26/2023
-author: khushg
-ms.author: khgupta
-ms.reviewer: raviuppa, aartigoyle, v-sidong
+ms.reviewer: khgupta, raviuppa, aartigoyle, v-sidong
 ms.custom: sap:installation
 ---
 # Unable to update Visual Studio using the Help menu
