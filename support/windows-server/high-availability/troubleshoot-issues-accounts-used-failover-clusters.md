@@ -74,6 +74,9 @@ To resolve these issues, follow the steps:
     > If the cluster name account isn't listed, select **Add** and add it to the list.
 
 8. For the cluster name account (also known as the cluster name object or CNO), ensure that the **Allow** checkbox is selected for the **Create Computer objects** and **Read all properties** permissions.
+
+    :::image type="content" source="media/troubleshoot-issues-accounts-used-failover-clusters/permission-entry-for-computers.png" alt-text="Screenshot of the Permission Entry for Computers window showing the Create Computer objects and Read all properties permissions.":::
+
 9. Select **OK** until you return to the **Active Directory Users and Computers** snap-in.
 10. Review domain policies (consult a domain administrator if applicable) related to the creation of computer accounts (objects). Ensure that the cluster name account can create a computer account each time you configure a clustered service or application. For example, if your domain administrator has configured settings that cause all new computer accounts to be created in a specialized container rather than the default **Computers** container, make sure that these settings also allow the cluster name account to create new computer accounts in that container.
 11. Expand the default **Computers** container or the container in which the computer account for one of the clustered services or applications is located.
