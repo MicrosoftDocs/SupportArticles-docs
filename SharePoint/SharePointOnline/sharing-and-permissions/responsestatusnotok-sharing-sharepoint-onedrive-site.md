@@ -32,7 +32,7 @@ This error usually occurs because of restrictions in the [B2B collaboration](/az
 
 ## Resolution
 
-To fix the error, make sure that the appropriate settings for your organization’s needs are configured for external and B2B collaboration:
+To fix the error, make sure that the appropriate settings for your organization's needs are configured correctly for external and B2B collaboration:
 
 - [External collaboration settings](/azure/active-directory/external-identities/external-collaboration-settings-configure)
 - [Microsoft cloud settings](/azure/active-directory/external-identities/cross-cloud-settings)
