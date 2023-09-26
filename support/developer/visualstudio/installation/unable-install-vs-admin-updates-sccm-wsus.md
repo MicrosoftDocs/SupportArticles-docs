@@ -1,7 +1,7 @@
 ---
 title: Can't install Visual Studio administrator updates through SCCM and WSUS
 description: Provides a resolution for an issue where you can't install Visual Studio administrator updates through SCCM and WSUS.
-ms.date: 09/08/2023
+ms.date: 09/26/2023
 author: khushg
 ms.author: khgupta
 ms.reviewer: raviuppa, aartigoyle, v-sidong
@@ -36,10 +36,9 @@ To enable your Visual Studio client machine to receive updates through WSUS, mak
 
 1. The Visual Studio Client Detector Utility ([KB5001148 - Visual Studio Client Detector Utility for Administrator Updates](https://support.microsoft.com/topic/kb5001148-visual-studio-client-detector-utility-for-administrator-updates-ad593454-547c-43c3-b5a3-6f201ae63f03)) must be installed on the client machine in order for the administrator updates to be properly recognized and received.
 
-   Search for the following product by navigating to the **Control Panel** > **Programs** > **Programs and Features** windows to confirm if the Visual Studio Client Detector Utility is installed.
+   Ensure that you execute the following command line via an admin PowerShell cmdlet to ensure that it populates the Visual Studio instances installed on the machine:
 
-   Product name: Microsoft Visual Studio Setup WMI Provider  
-   Version: \<Latest\>
+   `Get-Ciminstnace MSTF_VSInstance`
 
 1. The ChannelURI in *C:\ProgramData\Microsoft\VisualStudio\Packages\_Instances\\<RandomID\>\state.json* must point to the [release channel](https://aka.ms/vs/17/release/channel).
 

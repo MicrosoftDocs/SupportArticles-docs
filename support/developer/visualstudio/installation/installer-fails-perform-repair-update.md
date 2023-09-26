@@ -1,7 +1,7 @@
 ---
 title: Visual Studio Installer fails to perform repair or update
 description: Provides a resolution for an issue that occurs when you try to repair or update Visual Studio.
-ms.date: 09/12/2023
+ms.date: 09/26/2023
 author: khushg
 ms.author: khgupta
 ms.reviewer: raviuppa, aartigoyle, v-sidong
