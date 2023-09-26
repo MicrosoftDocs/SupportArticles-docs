@@ -1,4 +1,4 @@
-- name: Troubleshoot Azure Cosmos DB
+- name: Troubleshoot Azure Cosmos DB emulator
   href: index.yml
 - name: Troubleshoot emulator
   href: emulator.md

@@ -1,25 +1,25 @@
 ---
-title: Troubleshoot the Azure Cosmos DB Emulator
-description: Learn how to troubleshoot problems related to service unavailability, certificate encryption, and versioning when you use the Azure Cosmos DB Emulator. 
+title: Troubleshoot the Azure Cosmos DB emulator
+description: Learn how to troubleshoot problems related to service unavailability, certificate encryption, and versioning when you use the Azure Cosmos DB emulator. 
 ms.service: cosmos-db
 author: oury-msft
 ms.author: ouryba
 ms.reviewer: v-jayaramanp
 ms.topic: landing-page
-ms.date: 09/21/2023
+ms.date: 09/26/2023
 ---
 
 # Troubleshoot the Azure Cosmos DB Emulator
 
-The Azure Cosmos DB Emulator provides an environment that emulates the cloud service for development purposes. Use the tips in this article to help troubleshoot problems you experience when installing or using the emulator.
+The Azure Cosmos DB emulator provides an environment that emulates the cloud service for development purposes. Use the tips in this article to help troubleshoot problems you experience when installing or using the emulator.
 
 ## Troubleshooting checklist
 
-Here's a list of common troubleshooting steps to follow when the Azure Cosmos DB Emulator isn't working as expected.
+Here's a list of common troubleshooting steps to follow when the Azure Cosmos DB emulator isn't working as expected.
 
 ## Reset data
 
-If you installed a new version of the emulator and are experiencing errors, make sure you reset your data. You can reset your data by opening the Azure Cosmos DB Emulator's context menu from the system tray, and then selecting **Reset Data…**.
+If you installed a new version of the emulator and are experiencing errors, make sure you reset your data. You can reset your data by opening the Azure Cosmos DB emulator's context menu from the system tray, and then selecting **Reset Data**.
 
 If resetting the data doesn't fix the errors, you can:
 
@@ -32,7 +32,7 @@ Alternatively, if resetting the data doesn't work, go to the `%LOCALAPPDATA%\Cos
 
 ## Review corrupted windows performance counters
 
-- If the Azure Cosmos DB Emulator crashes, collect the dump files from `%LOCALAPPDATA%\CrashDumps` folder, compress them, and open a support ticket from the [Azure portal](https://portal.azure.com).
+- If the Azure Cosmos DB emulator crashes, collect the dump files from the `%LOCALAPPDATA%\CrashDumps` folder, compress them, and open a support ticket from the [Azure portal](https://portal.azure.com).
 
 - The `Microsoft.Azure.Cosmos.ComputeServiceStartupEntryPoint.exe` crashes you experience could be an indication that the performance counters are corrupted.
 
@@ -68,7 +68,7 @@ To collect debugging traces, run the following commands from an administrative c
    cd /d "%ProgramFiles%\Azure Cosmos DB Emulator"
    ```
 
-1. Shut down the emulator and watch the system tray to make sure the program has shut down. It may take a minute to complete. You can also select **Exit** in the Azure Cosmos DB Emulator user interface.
+1. Shut down the emulator and watch the system tray to make sure the program has shut down. It may take a minute to complete. You can also select **Exit** in the Azure Cosmos DB emulator user interface.
 
    ```bash
    Microsoft.Azure.Cosmos.Emulator.exe /shutdown
@@ -94,6 +94,6 @@ To collect debugging traces, run the following commands from an administrative c
    Microsoft.Azure.Cosmos.Emulator.exe /stopwprtraces
    ```
 
-1. Navigate to `%ProgramFiles%\Azure Cosmos DB Emulator` path and find the *docdbemulator_000001.etl* file.
+1. Navigate to the `%ProgramFiles%\Azure Cosmos DB Emulator` path and locate the *docdbemulator_000001.etl* file.
 
 1. Open a support ticket in the [Azure portal](https://portal.azure.com) and include the .etl file along with any steps required to reproduce your issue.
