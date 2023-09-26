@@ -3,8 +3,8 @@ title: Troubleshoot Azure Files identity-based authentication and authorization 
 description: Troubleshoot problems using identity-based authentication to connect to SMB Azure file shares and see possible resolutions.
 ms.service: azure-file-storage
 ms.custom: has-azure-ad-ps-ref
-ms.date: 08/16/2023
-ms.reviewer: kendownie
+ms.date: 09/26/2023
+ms.reviewer: kendownie, v-weizhu
 ---
 # Troubleshoot Azure Files identity-based authentication and authorization issues (SMB)
 
@@ -206,7 +206,7 @@ If this is the case, ask your Azure AD admin to grant admin consent to the new A
 
 ### Error - "The request to AAD Graph failed with code BadRequest"
 
-####  Cause 1: an application management policy is preventing credentials from being created
+#### Cause 1: an application management policy is preventing credentials from being created
 
 When enabling Azure AD Kerberos authentication, you might encounter this error if the following conditions are met:
 
@@ -392,7 +392,9 @@ The solution is to add the privateLink FQDN to the storage account's Azure AD ap
 
 ### Error AADSTS50105
 
-The request was interrupted by the following challenge: AADSTS50105: Your administrator has configured the application "Enterprise application name" to block users unless they are specifically granted (assigned) access to the application. The signed in user '{EmailHidden}' is blocked because they are not a direct member of a group with access, nor had access directly assigned by an administrator. Please contact your administrator to assign access to this application.
+The request was interrupted by the following error AADSTS50105:
+
+> Your administrator has configured the application "Enterprise application name" to block users unless they are specifically granted (assigned) access to the application. The signed in user '{EmailHidden}' is blocked because they are not a direct member of a group with access, nor had access directly assigned by an administrator. Please contact your administrator to assign access to this application.
 
 #### Cause
 
@@ -403,6 +405,7 @@ If you set up "assignment required" for the corresponding enterprise application
 Don't select **Assignment required for Azure AD application** for the storage account because we don't populate entitlements in the Kerberos ticket that's returned back to the requestor. For more information, see [Error AADSTS50105 - The signed in user is not assigned to a role for the application](../active-directory/error-code-aadsts50105-user-not-assigned-role.md).
 
 ## Need help?
+
 If you still need help, [contact support](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) to get your problem resolved quickly.
 
 ## See also
