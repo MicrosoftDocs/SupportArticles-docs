@@ -20,20 +20,20 @@
   href: ./error-restart-computer-and-run-setup.md
 - name: Error - Product version that is being installed is old
   href: ./error-product-version-is-old.md
-- name: Error - This update requires Visual Studio 2015 Update 3 to be installed
-  href: ./error-visual-studio-2015-update-3-to-be-installed.md
 - name: Error - There is not enough space on the disk
   href: ./error-not-enough-space-on-disk.md
+- name: Error - This update requires Visual Studio 2015 Update 3 to be installed
+  href: ./error-visual-studio-2015-update-3-to-be-installed.md
 - name: Error when testing or deploying a minimal layout
   href: ./error-test-deploy-minimal-layout.md
-- name: Fix DIA SDK install location
-  href: ./fix-dia-sdk-install-location.md
 - name: Fail to install Web Deploy 3.0
   href: ./web-deploy-issue-visual-studio-2012.md
-- name: Installer fails to perform repair or update
-  href: ./installer-fails-perform-repair-update.md
+- name: Fix DIA SDK install location
+  href: ./fix-dia-sdk-install-location.md
 - name: Install Windows SDK 7.1 in Silent Mode
   href: ./install-windows-sdk-silent-mode.md
+- name: Installer fails to perform repair or update
+  href: ./installer-fails-perform-repair-update.md
 - name: Invalid entries passed to switch
   href: ./invalid-entries-passed-switch.md
 - name: Issues and workarounds in Visual Studio setup
@@ -54,24 +54,24 @@
   href: ./issues-workarounds-visual-studio-2013-setup.md
 - name: SQL packages may fail in the local administrator account
   href: ./packages-fail-local-administrator-not-rights.md
+- name: The installation hangs when you try to install a KB update
+  href: ./installation-hangs-install-kb-update.md
 - name: The specified program requires a newer version of Windows
   href: ./specified-program-requires-newer-version-windows.md
-- name:  The installation hangs when you try to install a KB update
-  href: ./installation-hangs-install-kb-update.md
 - name: The trial will expire after you sign in to the IDE
   href: ./sign-into-ide-trial-expire.md
 - name: The version of Visual Studio requires the April 2014 update
   href: ./visual-studio-requires-computer-newer-version-windows.md
 - name: Troubleshoot installation and upgrade issues
   href: ./troubleshoot-installation-issues.md
-- name:  Update requires a member to be present or is blocked by another condition
-  href: ./member-visual-studio-family-present.md
 - name: Uninstall third-party applications in Visual Studio 2015
   href: ./secondary-installer-third-party-app.md
 - name: Uninstall Visual Studio 2012
   href: ./uninstall-visual-studio-2012.md
 - name: Update deployed via Configuration Manager fails to install
   href: ./update-deployed-via-configuration-manager-fails-install.md
+- name: Update requires a member to be present or is blocked by another condition
+  href: ./member-visual-studio-family-present.md
 - name: Visual Studio 2013 known issues
   href: ./known-issues-visual-studio-2013.md
 - name: Visual Studio 2015 and 2013 features doesn't work
@@ -82,13 +82,9 @@
   href: ./visual-studio-requires-computer-newer-version-windows.md
 - name: Visual Studio requires the April 2014 update
   href: ./version-visual-studio-requires-april-2014-update.md
-- name: Warnings about an untrusted certificate
-  href: ./warnings-untrusted-certificate.md
 - name: Wait for setup to finish before trying again
   href: ./another-setup-already-running-wait-finish.md
-- name:  We recommend you close Visual Studio now before setup continues
+- name: We recommend you close Visual Studio now before setup continues
   href: ./we-recommend-you-close-visual-studio.md
-- name: Windows Installer may display inaccurate progress
-  href: ./windows-installer-display-inaccurate-progress.md
 - name: Windows Program Compatibility mode is on
   href: ./windows-program-compatibility-mode-on.md
