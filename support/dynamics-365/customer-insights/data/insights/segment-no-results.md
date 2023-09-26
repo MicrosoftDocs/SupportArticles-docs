@@ -1,13 +1,14 @@
 ---
 title: Segments return no members
-description: Learn how to find out why a segment has no members in Dynamics 365 Customer Insights.
+description: Learn how to find out why a segment has no members in Dynamics 365 Customer Insights - Data.
 author: ashwini-puranik
 ms.author: aspuranik
 ms.reviewer: mhart, jimsonc
-ms.date: 03/21/2023
+ms.date: 09/25/2023
 ---
-
 # Segments return no or zero members
+
+[!INCLUDE [consolidated-sku](../../includes/consolidated-sku.md)]
 
 This article provides a resolution for an issue where a [segment](/dynamics365/customer-insights/segments) doesn't return any members as expected.
 
@@ -26,7 +27,7 @@ A segment runs and refreshes successfully but doesn't include any members.
 
 You can take the following steps to investigate the root cause and fix the issue.
 
-#### Validate basic logic for contradictory conditions or rules
+### Validate basic logic for contradictory conditions or rules
 
 Contradictory `AND` conditions or rules on the same attribute always generate empty segments. For example, `FirstName = Joe` `AND` `FirstName = Frank`.
 
@@ -58,7 +59,7 @@ If the value of the attribute used in a segment rule or condition is missing for
 
   - Download the `.csv` file for a table on the table view to validate the first 100,000 records.
 
-  - Use the [Customer Insights Power BI connector](/dynamics365/customer-insights/export-power-bi) to explore the Customer Insights entity in Power BI.
+  - Use the [Power BI connector](/dynamics365/customer-insights/export-power-bi) to explore the entity in Power BI.
 
     > [!NOTE]
     > All entities, especially source entities from an Azure Data Lake Storage data source, won't be available with this connector. It's also recommended to use it on tables with less than 1 million rows.
