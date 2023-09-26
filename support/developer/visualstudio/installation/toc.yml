@@ -84,7 +84,11 @@
   href: ./version-visual-studio-requires-april-2014-update.md
 - name: Wait for setup to finish before trying again
   href: ./another-setup-already-running-wait-finish.md
+- name: Warnings about an untrusted certificate
+  href: ./warnings-untrusted-certificate.md
 - name: We recommend you close Visual Studio now before setup continues
   href: ./we-recommend-you-close-visual-studio.md
+- name: Windows Installer may display inaccurate progress
+  href: ./windows-installer-display-inaccurate-progress.md
 - name: Windows Program Compatibility mode is on
   href: ./windows-program-compatibility-mode-on.md
