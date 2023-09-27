@@ -32,16 +32,18 @@ The output of the `DBCC MEMORYSTATUS` command has changed from earlier releases 
 
 ## How to use DBCC MEMORYSTATUS 
 
-DBCC MEMORYSTATUS is typically used to investigate low memory issues reported by SQL Server. Low memory can occur either if there's external memory pressure that comes from outside of the SQL Server process or internal pressure, coming from within the process. Internal pressure may come from SQL Server database engine, or from other components that run inside the process (linked servers, XPs, SQLCLR, intrusion protection or anti-virus software, etc.). For more information on troubleshooting memory pressure, see [Troubleshoot out of memory or low memory issues in SQL Server](troubleshoot-memory-issues.md).
+DBCC MEMORYSTATUS is typically used to investigate low memory issues reported by SQL Server. Low memory can occur if there's either external memory pressure that comes from outside of the SQL Server process or internal pressure that originates within the process. Internal pressure on its part, may stem from SQL Server database engine, or from other components that run inside the process (linked servers, XPs, SQLCLR, intrusion protection or anti-virus software, etc.). For more information on troubleshooting memory pressure, see [Troubleshoot out of memory or low memory issues in SQL Server](troubleshoot-memory-issues.md).
+
+Here are the general steps on how to use the command and interpret its results. Specific scenarios may require that you approach the output a bit differently, but the overall approach is outlined here.
 
 1. Run the DBCC MEMORYSTATUS command 
-1. Use the **Process/System Counts**  and **Memory Manager** sections to establish if there's external memory pressure, for example if the computer is low on physical or virtual memory or if SQL Server working set is paged out. Also use these sections to determine how much memory has the SQL Server database engine allocated in comparison with overall memory on the system.
+1. Use the **Process/System Counts**  and **Memory Manager** sections to establish if there's external memory pressure, for example if the computer is low on physical or virtual memory or if SQL Server working set is paged out. Also use these sections to determine how much memory the SQL Server database engine hasallocated in comparison with overall memory on the system.
 1. If you establish that there's external memory pressure, then address that by reducing other applications' memory usage, OS usage, or by adding more RAM. 
-1. If you establish that SQL Server engine is using most the memory, that is you have found internal memory pressure, then you can use the remaining sections of DBCC MEMORYSTATUS to identify which component(s) (Memory clerk, Userstore, or Cachestore) is the largest contributor to this memory usage.
+1. If you establish that SQL Server engine is using most the memory (internal memory pressure), then you can use the remaining sections of DBCC MEMORYSTATUS to identify which component(s) (Memory clerk, Userstore, Cachestore, or Objectstore) is the largest contributor to this memory usage.
 1. Examine each MEMORYCLEARK, CACHESTORE, USERSTORE, or OBJECTSTORE and look at its Pages Allocated to determine how much memory that component is consuming inside SQL Server. For a brief description of most database engine memory components, see the following table [Memory Clerk types](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql#types)
-    1. In rare cases the allocation is direct virtual allocation, so look at the VM Committed value under the specific component
+    1. In rare cases the allocation is direct virtual allocation, so look at the VM Committed value under the specific component, instead of Pages Allocated.
     1. If your machine uses NUMA, then some memory components are broken out per node. In those cases, you can see for example OBJECTSTORE_LOCK_MANAGER (node 0), OBJECTSTORE_LOCK_MANAGER (node 1), OBJECTSTORE_LOCK_MANAGER (node 2), and so on, and finally a total summed value of each node in OBJECTSTORE_LOCK_MANAGER (Total). The best place to start is with the section reporting the total value and only later look at the break down if necessary. For more information, see [Memory usage with NUMA nodes](#memory-usage-with-numa-nodes). 
-1. There are sections in the DBCC MEMORYSTATUS with detailed, specialized information about particular memory allocators. You can use those if you need to understand more details, and further breakdown of the allocations within a memory clerk. Examples, with such detailed information include Buffer Pool (data and index cache), Procedure Cache/ plan cache, Query Memory Objects (memory grants), Optimization Queue  and small, medium and big gateways (optimizer memory), and a few others.
+1. There are sections in the DBCC MEMORYSTATUS with detailed, specialized information about particular memory allocators. You can use those if you need to understand more details, and further breakdown of the allocations within a memory clerk. Examples, with such detailed information include Buffer Pool (data and index cache), Procedure Cache/ plan cache, Query Memory Objects (memory grants), Optimization Queue  and small, medium and big gateways (optimizer memory), and a few others. If you already know that a particular component of memory in SQL Server is the source of memory pressure, you may choose to dive directly into the specific section. For example, if you established in some other way that there's a high usage of working set/memory grants which leads to memory errors, you can examine the Query memory objects sections directly. 
 
 The remainder of this article describes some of the useful counters in the DBCC MEMORYSTATUS output that can allow you to diagnose memory issues more effectively.
 
@@ -117,7 +119,7 @@ The `Memory Manager` table is followed by a summary of memory usage for each mem
 
 ```output
 Memory node Id = 0      KB
------------------------------- --------------------
+----------------------  -----------
 VM Reserved             21289792
 VM Committed            272808
 Locked Pages Allocated  0
@@ -134,6 +136,7 @@ Taken Away Committed    0
 > - The `Memory node Id` may not correspond to the hardware node ID.
 > - These values show the memory that is allocated by threads that are running on this NUMA node. These values are not the memory that is local to the NUMA node.
 > - The sums of the VM Reserved values and the VM Committed values on all memory nodes will be slightly less than the corresponding values that are reported in the Memory Manager table.
+> - NUMA node 64 (node 64) is reserved for DAC and is rarely of interest in memory investigation since this connection uses limited memory resources. For more information about dedicated administrator connection (DAC), see [Diagnostic connection for database administrators](/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators)
 
 For more information about the elements in this output, see:
 
@@ -196,28 +199,27 @@ Other information in these tables is about shared memory:
 - SM Reserved: This value shows the VAS that is reserved by all clerks of this kind that are using the memory-mapped files API. This API is also known as *shared memory*.
 - SM Committed: This value shows the VAS that is committed by all clerks of this kind that are using memory-mapped files API.
 
-You can obtain summary information for each clerk type for all memory nodes by using the [sys.dm_os_memory_clerks](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql) dynamic management view (DMV). To do this, run the following query:
+As an alternative method, you can obtain summary information for each clerk type for all memory nodes by using the [sys.dm_os_memory_clerks](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql) dynamic management view (DMV). To do this, run the following query:
 
 ```sql
 SELECT
- TYPE,
- SUM(virtual_memory_reserved_kb) AS [VM Reserved],
- SUM(virtual_memory_committed_kb) AS [VM Committed],
- SUM(awe_allocated_kb) AS [AWE Allocated],
- SUM(shared_memory_reserved_kb) AS [SM Reserved],
- SUM(shared_memory_committed_kb) AS [SM Committed],
- -- SUM(multi_pages_kb) AS [MultiPage Allocator],          /*Applies to: SQL Server 2008  (10.0.x) through SQL Server 2008 R2 (10.50.x).*/
- -- SUM(single_pages_kb) AS [SinlgePage Allocator],        /*Applies to: SQL Server 2008  (10.0.x) through SQL Server 2008 R2 (10.50.x).*/
- SUM(pages_kb) AS [Page Allocated]                      /*Applies to: SQL Server 2012 (11. x) and later.*/
+  TYPE,
+  SUM(virtual_memory_reserved_kb) AS [VM Reserved],
+  SUM(virtual_memory_committed_kb) AS [VM Committed],
+  SUM(awe_allocated_kb) AS [AWE Allocated],
+  SUM(shared_memory_reserved_kb) AS [SM Reserved],
+  SUM(shared_memory_committed_kb) AS [SM Committed],
+  -- SUM(multi_pages_kb) AS [MultiPage Allocator],          /*Applies to: SQL Server 2008   (10.0.x) through SQL Server 2008 R2 (10.50.x).*/
+  -- SUM(single_pages_kb) AS [SinlgePage Allocator],        /*Applies to: SQL Server 2008   (10.0.x) through SQL Server 2008 R2 (10.50.x).*/
+  SUM(pages_kb) AS [Page Allocated]                      /*Applies to: SQL Server 2012 (11.  x) and later.*/
 FROM sys.dm_os_memory_clerks
 GROUP BY TYPE
 ```
 
 ## Buffer pool details
 
-You can obtain detailed information about buffer pool buffers for database pages by using the `sys.dm_os_buffer_descriptors` DMV. And you can obtain detailed information about buffer pool pages that are being used for miscellaneous server purposes by using the `sys.dm_os_memory_clerks` DMV.
-
-The next table lists details about the buffer pool plus additional information.
+This is a specialized section that provides a breakdown of different states data and index pages inside the Buffer pool, also known as data cache. 
+This table lists details about the buffer pool plus additional information.
 
 ```output
 Buffer Pool                                        Pages
@@ -235,17 +237,20 @@ Page Life Expectancy                              3965
 
 For more information about the elements in this output, see:
 
-- Database: This value shows the number of buffers that have database content (data and index pages).
-- Target: This value shows the target size of the buffer pool (buffer count).
-- Dirty: This value shows the buffers that have database content and that have been modified. These buffers contain changes that must be flushed to disk.
-- In IO: This value shows the buffers that are waiting for a pending I/O operation.
-- Latched: This value shows the latched buffers. A buffer is latched when a thread is reading or modifying the contents of a page. A buffer is also latched when the page is being read from disk or written to disk. A latch is used to maintain the physical consistency of the data on the page while it's being read or modified. A lock is used to maintain logical and transactional consistency.
+- Database: This value shows the number of buffers (pages) that have database content (data and index pages).
+- Target: This value shows the target size of the buffer pool (buffer count). See Target Committed memory discussion in previous sections of this article. 
+- Dirty: This value shows the pages that have database content and have been modified. These buffers contain changes that must be flushed to disk typically by the checkpoint process.
+- In IO: This value shows the buffers that are waiting for a pending I/O operation. This means the contents of these pages is either being written to or read from storage. 
+- Latched: This value shows the latched buffers. A buffer is latched when a thread is reading or modifying the contents of a page. A buffer is also latched when the page is being read from disk or written to disk. A latch is used to maintain the physical consistency of the data on the page while it's being read or modified. In contrast, a lock is used to maintain logical and transactional consistency. 
 - IO error: This value shows the count of buffers that may have encountered any I/O-related OS errors (this doesn't necessarily indicate a problem).
-- Page Life Expectancy: This counter measures the amount of time in seconds that the oldest page stays in the buffer pool.
+- Page Life Expectancy: This counter measures the amount of time in seconds that the oldest page has stayed in the buffer pool.
 
-## Procedure cache
 
-The next table describes the makeup of the procedure cache.
+You can obtain detailed information about buffer pool for database pages by using the `sys.dm_os_buffer_descriptors` DMV. But use this DMV with caution as it can run a long time and produce a huge output if your SQL Server is allowed to have lots of RAM at its disposal.  
+
+## Plan cache
+
+The next table describes the makeup of the plan cache (used to be referred to as procedure cache).
 
 ```output
 Procedure Cache         Value
@@ -262,7 +267,7 @@ For more information about the elements in this output, see:
   > [!NOTE]
   > Because of the dynamic nature of this information, the match may not be exact. You can use PerfMon to monitor the SQL Server: Plan Cache object and the `sys.dm_exec_cached_plans` DMV for detailed information about the type of cached objects, such as triggers, procedures, and ad hoc objects.
 
-- TotalPages: This value shows the cumulative pages that you must have to store all the cached objects in the procedure cache.
+- TotalPages: This value shows the cumulative pages used to store all the cached objects in the plan/procedure cache.
 - InUsePages: This value shows the pages in the procedure cache that belong to procedures that are currently running. These pages can't be discarded.
 
 ## Global memory objects
@@ -294,7 +299,7 @@ For more information about the elements in this output, see:
 - Resource: This value shows the memory that the Resource object uses. The Resource object is used by the storage engine and for various server-wide structures.
 - Locks: This value shows the memory that Lock Manager uses.
 - XDES: This value shows the memory that Transaction Manager uses.
-- SETLS: This value shows the memory that is used to allocate the Storage Engine-specific per-thread structure that uses thread local storage.
+- SETLS: This value shows the memory that is used to allocate the Storage Engine-specific per-thread structure that uses thread local storage (TLS). For more information, see [Thread Local Storage](/windows/win32/procthread/thread-local-storage)
 - SubpDesc Allocators: This value shows the memory that is used for managing subprocesses for parallel queries, backup operations, restore operations, database operations, file operations, mirroring, and asynchronous cursors. These subprocesses are also known as *parallel processes*.
 - SE SchemaManager: This value shows the memory that Schema Manager uses to store Storage Engine-specific metadata.
 - SQLCache: This value shows the memory that is used to store the text of ad hoc statements and of prepared statements.
@@ -325,7 +330,7 @@ Wait Time                                 0
 
 If the size and the cost of a query satisfy "small" query memory thresholds, the query is put in a small query queue. This behavior prevents smaller queries from being delayed behind larger queries that are already in the queue.
 
-For more information about the elements in this output, see:
+For information about the elements in this output:
 
 - Grants: This value shows the running queries that have memory grants.
 - Waiting: This value shows the queries that are waiting to obtain memory grants.
@@ -337,9 +342,11 @@ For more information about the elements in this output, see:
 - Wait Time: This value shows the elapsed time, in milliseconds, since the next waiting query was put in the queue.
 - Current Max: This value shows the overall memory limit for query execution. This value is the combined limit for both the large query queue and the small query queue.
 
-## Optimization
+For more information on how what memory grants are, what many of these values mean, and how to troubleshoot memory grants, see [Troubleshoot slow performance or low memory issues caused by memory grants in SQL Server](troubleshoot-memory-grant-issues.md). 
 
-The next table is a summary for the users who are trying to optimize queries at the same time.
+## Optimization memory
+
+The next table provides details of memory waits happening due to insufficient memory for query optimization.
 
 ```output
 Optimization Queue (internal)      Value
