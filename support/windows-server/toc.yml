@@ -1438,6 +1438,8 @@
       href: ./high-availability/smb-features-dont-work-non-default-cluster-network-name-configuration.md
     - name: Third-party storage software solutions support policy
       href: ./high-availability/3rd-party-storage-software-solutions-support.md
+    - name: Troubleshoot issues with accounts used by failover clusters
+      href: ./high-availability/troubleshoot-issues-accounts-used-failover-clusters.md      
     - name: Unexpected warning messages in a virtualized failover cluster
       href: ./high-availability/errors-windows-failover-cluster-run-as-guest.md
     - name: Use Windows Server cluster nodes as DCs
