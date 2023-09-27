@@ -2,8 +2,8 @@
 title: Troubleshoot ClientOtherErrors in Azure Files
 description: Troubleshoots ClientOtherErrors in SMB Azure file shares. ClientOtherErrors are requests that fail, but the system still behaves as expected.
 ms.service: azure-file-storage
-ms.date: 09/26/2023
-ms.reviewer: kendownie
+ms.date: 09/27/2023
+ms.reviewer: kendownie, v-weizhu
 ---
 
 # Troubleshoot ClientOtherErrors in Azure Files
@@ -44,7 +44,7 @@ The following table lists common ClientOtherErrors, along with an explanation of
 | FileOpen | 8 STATUS_SHARING_VIOLATION | The caller is opening a file that's already opened with restrictions (for example, exclusive or others can only read). |
 | FileOpen | 6 STATUS_OBJECT_NAME_NOT_FOUND | The caller is opening a file that doesn't exist. |
 | FSCTL_QUERY_NETWORK_INTERFACE_INFO (IOCTL) | STATUS_INVALID_DEVICE_REQUEST | This is used only for Azure Files when customers have enabled the *multichannel* feature. In other cases, it's not needed, and we return an invalid device request when queried from the client. |
-| QueryStreamInformation | STATUS_NOT_IMPLEMENTED | Some file systems have the concept of [alternate data streams](/windows/win32/fileio/file-streams?redirectedfrom=MSDN#stream-types) or other streams like reparse point streams. Azure Files doesn't have this concept, so we don't support the API. |
+| QueryStreamInformation | STATUS_NOT_IMPLEMENTED | Some file systems have the concept of [alternate data streams](/windows/win32/fileio/file-streams?redirectedfrom=MSDN#stream-types) or other streams like reparse point stream. Azure Files doesn't have this concept, so we don't support the API. |
 | Unexpected (IOCTL) | STATUS_INVALID_DEVICE_REQUEST | This is `FSCTL_QUERY_FILE_REGIONS`, a [region concept](/openspecs/windows_protocols/ms-fscc/4630b33f-a955-4ce0-91b6-fd4ba4aac1ce) that's specific to NTFS/refs and doesn't make sense in relation to Azure Files. So we don't implement this FSCTL code. |
 | ChangeNotify | STATUS_CANCELLED | Applications like Windows Shell Explorer subscribe to change notifications for files. This way, when properties change on a file, Windows Shell Explorer automatically updates in the view. The client can choose to cancel this subscription (for example, if the user has changed views in Explorer and no longer needs it). In that case, we send `STATUS_CANCELLED` back to the client to acknowledge that the subscription has been canceled. |
 | FSCTL_DFS_GET_REFERRALS (IOCTL) | STATUS_FS_DRIVER_REQUIRED | This is a DFS referral request. Azure Files doesn't support DFS, and this is the correct status to return when the system doesn't support DFS. |
