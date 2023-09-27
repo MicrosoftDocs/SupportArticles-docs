@@ -1,0 +1,76 @@
+### YamlMime:Landing
+
+title: Microsoft Dynamics 365 Guides troubleshooting
+summary: Welcome to Microsoft Dynamics 365 Guides troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Guides. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+metadata:
+  title: Microsoft Dynamics 365 Guides troubleshooting
+  description: Landing page for Microsoft Dynamics 365 Guides troubleshooting articles.
+  ms.topic: landing-page
+  ms.service: guides
+  author: v-wendysmith
+  ms.author: v-wendysmith
+  ms.date: 09/27/2023
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+  # Card
+  - title: Install and migrate
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: The solution installation or update fails repeatedly
+            url: install-migrate/install-update-fails.md
+          - text: Import failed when moving content with the Dynamics 365 Guides Content Migration Tool
+            url: install-migrate/migrate-troubleshoot.md
+          - text: Can't sign in to the Guides PC or HoloLens app
+            url: install-migrate/sign-in-error.md
+
+  # Card
+  - title: PC app
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Convert a 3D model into an object anchor fails
+            url: pc-app/anchors-3d-model-conversion-fails.md
+          - text: Detect an object anchor on HoloLens fails
+            url: pc-app/anchors-object-anchor-fails.md
+
+  # Card
+  - title: HoloLens app
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Can't make a video call in the HoloLens app
+            url: hololens-app/cant-make-video-call.md
+          - text: Can't find a guide on a shared HoloLens device
+            url: hololens-app/device-license-cant-find-guide.md
+          - text: Sign-in error when trying to sign into Guides on a shared HoloLens device
+            url: hololens-app/device-license-sign-in-error.md
+          - text: Step content failed to load message in the HoloLens app
+            url: hololens-app/step-content-fail-load.md
+          - text: Hazard sign appears when I load a step
+            url: hololens-app/step-content-hazard.md
+          - text: High step memory usage message in the HoloLens app
+            url: hololens-app/step-content-warning-memory.md
+  
+
+  # Card
+  - title: Documentation and training
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Guides documentation
+            url: /dynamics365/mixed-reality/guides/
+          - text: Guides training
+            url: /training/dynamics365/
+
+  # Card
+  - title: Support Resources
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Dynamics 365 Guides forum
+            url: https://community.dynamics.com/forums/thread/?partialUrl=guides
+          - text: Submit feedback
+            url: /dynamics365/mixed-reality/guides/submit-feedback

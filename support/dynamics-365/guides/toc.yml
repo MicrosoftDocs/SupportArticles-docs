@@ -1,0 +1,33 @@
+- name: Dynamics 365 Guides
+  href: welcome-guides.yml
+  items:
+    - name: Guides
+      items: 
+      - name: Install and migrate
+        items:
+          - name: The solution installation or update fails repeatedly
+            href: install-migrate/install-update-fails.md
+          - name: 
+            href: 
+          - name: 
+            href: 
+      - name: PC app
+        items:
+          - name: Convert a 3D model into an object anchor fails
+            href: pc-app/anchors-3d-model-conversion-fails.md
+          - name: Detect an object anchor on HoloLens fails
+            href: pc-app/anchors-object-anchor-fails.md
+      - name: HoloLens app
+        items:
+          - name: Can't make a video call in the HoloLens app
+            href: hololens-app/cant-make-video-call.md
+          - name: Can't find a guide on a shared HoloLens device
+            href: hololens-app/device-license-cant-find-guide.md
+          - name: Sign-in error when trying to sign into Guides on a shared HoloLens device
+            href: hololens-app/device-license-sign-in-error.md
+          - name: Step content failed to load message in the HoloLens app
+            href: hololens-app/step-content-fail-load.md
+          - name: Hazard sign appears when I load a step
+            href: hololens-app/step-content-hazard.md
+          - name: High step memory usage message in the HoloLens app
+            href: hololens-app/step-content-warning-memory.md
