@@ -19,7 +19,7 @@ Here's a list of common troubleshooting steps to follow if the Azure Cosmos DB e
 
 ## Reset data
 
-If you installed a new version of the emulator, and you are experiencing errors, make sure that you reset the data. To do this, open the Azure Cosmos DB emulator context menu from the system tray, and then select **Reset Data**.
+If you installed a new version of the emulator, and you're experiencing errors, make sure that you reset the data. To reset the data, open the Azure Cosmos DB emulator context menu from the system tray, and then select **Reset Data**.
 
 If resetting the data doesn't fix the errors, you can:
 
@@ -34,7 +34,7 @@ Alternatively, if resetting the data doesn't work, go to the `%LOCALAPPDATA%\Cos
 
 - If the Azure Cosmos DB emulator stops responding, collect the dump files from the `%LOCALAPPDATA%\CrashDumps` folder, compress the files, and then open a support ticket in [the Azure portal](https://portal.azure.com).
 
-- If `Microsoft.Azure.Cosmos.ComputeServiceStartupEntryPoint.exe` stops responding, this could indicate that the performance counters are corrupted. To check the counter status, run the following command:
+- If `Microsoft.Azure.Cosmos.ComputeServiceStartupEntryPoint.exe` stops responding, this crash could indicate that the performance counters are corrupted. To check the counter status, run the following command:
 
   ```cmd
   lodctr /R
@@ -46,7 +46,7 @@ Alternatively, if resetting the data doesn't work, go to the `%LOCALAPPDATA%\Cos
 
 - If you receive a "Service Unavailable" message, the emulator might not be initializing the network stack. Check to see whether you have the **Pulse Secure Client** or **Juniper Networks Client** installed because their network filter drivers might be causing the problem. You can also try uninstalling third-party network filter drivers to fix the problem. Alternatively, start the emulator by using `/DisableRIO` to switch the emulator network communication to regular Winsock.
 
-- If you receive a connectivity error message such as **"Forbidden","message":"Request is being made with a forbidden encryption in transit protocol or cipher. Check account SSL/TLS minimum allowed protocol setting..."**, this might indicate global changes in the OS (for example Insider Preview Build 20170) or changes in the browser settings that enable TLS 1.3 as the default protocol. A similar error message, such as **Microsoft.Azure.Documents.DocumentClientException: Request is being made with a forbidden encryption in transit protocol or cipher. Check account SSL/TLS minimum allowed protocol setting** might be generated if you use the SDK to run a request against the Azure Cosmos DB emulator. This error might also occur because the Azure Cosmos DB emulator supports only the TLS 1.2 protocol. The recommended workaround is to set TLS 1.2 as the default.
+- If you receive a connectivity error message such as **"Forbidden","message":"Request is being made with a forbidden encryption in transit protocol or cipher. Check account SSL/TLS minimum allowed protocol setting..."**, this error message might indicate global changes in the OS (for example Insider Preview Build 20170) or changes in the browser settings that enable TLS 1.3 as the default protocol. A similar error message, such as **Microsoft.Azure.Documents.DocumentClientException: Request is being made with a forbidden encryption in transit protocol or cipher. Check account SSL/TLS minimum allowed protocol setting** might be generated if you use the SDK to run a request against the Azure Cosmos DB emulator. This error might also occur because the Azure Cosmos DB emulator supports only the TLS 1.2 protocol. The recommended workaround is to set TLS 1.2 as the default.
 
   For example:
 
@@ -88,7 +88,7 @@ To collect debugging traces, run the following commands at an administrative com
    Microsoft.Azure.Cosmos.Emulator.exe
    ```
 
-1. Reproduce the problem. If the data explorer isn't working, you will have to wait only a few seconds for the browser to load to be able to detect the error.
+1. Reproduce the problem. If the data explorer isn't working, you have to wait only a few seconds for the browser to load to be able to detect the error.
 
 1. Stop logging:
 
