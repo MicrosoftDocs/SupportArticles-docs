@@ -51,7 +51,7 @@ Browse in these forums and consider submitting a post:
 
 **No-cost Office Developer support**
 
-For developer support, you can ask questions directly to the Office developer community about your code on [Stack Overflow](https://stackoverflow.com/tags). Self-help is available by exploring solutions and browsing for answers on the [Office Dev Center documentation hub](https://learn.microsoft.com/office/dev/add-ins/).
+For developer support, you can ask questions directly to the Office developer community about your code on [Stack Overflow](https://stackoverflow.com/tags). Self-help is available by exploring solutions and browsing for answers on the [Office Dev Center documentation hub](/office/dev/add-ins/).
 
 For SharePoint support, check out [SharePoint Dev open source on GitHub](https://github.com/sharepoint).
 
