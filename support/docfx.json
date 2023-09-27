@@ -574,9 +574,11 @@
           "powerautomate-docs"
         ],
         "dynamics-365/customer-insights/data/**/**.*": [
+          "customerinsights-docs",
           "customerinsightsdata-docs"
         ],
         "dynamics-365/customer-insights/journeys/**.*": [
+          "marketing-docs",
           "customerinsightsjourneys-docs"
         ],
         "dynamics-365/customer-service/**/**.*": [
