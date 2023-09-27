@@ -23,7 +23,7 @@ You can use [AzFileDiagnostics](https://github.com/Azure-Samples/azure-files-sam
 | Standard file shares (GPv2), GRS/GZRS | :::image type="icon" source="media/files-troubleshoot-smb-authentication/yes-icon.png" border="false"::: | :::image type="icon" source="media/files-troubleshoot-smb-authentication/no-icon.png" border="false"::: |
 | Premium file shares (FileStorage), LRS/ZRS | :::image type="icon" source="media/files-troubleshoot-smb-authentication/yes-icon.png" border="false"::: | :::image type="icon" source="media/files-troubleshoot-smb-authentication/no-icon.png" border="false"::: |
 
-## <a id="timestampslost"></a>Time stamps were lost in copying files from Windows to Linux
+## <a id="timestampslost"></a>Time stamps were lost when copying files
 
 On Linux/Unix platforms, the `cp -p` command fails if different users own file 1 and file 2.
 
