@@ -1,7 +1,7 @@
 ---
 title: Windows Server support and installation instructions for AMD EPYC 7000 Series server processors
 description: Lists the AMD EPYC 7000 Series server processors that are supported by Windows Server 2019, Windows Server 2016, and Windows Server 2012 R2. Additionally lists support caveats and installation instructions.
-ms.date: 04/28/2023
+ms.date: 09/27/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -13,7 +13,6 @@ ms.reviewer: kaushika, yuvraja
 ms.custom: sap:setup, csstroubleshoot
 ms.technology: windows-server-deployment
 ---
-
 # Windows Server support and installation instructions for the AMD EPYC 7000 Series server processors
 
 This article introduces the Windows Server operating system (OS) installation instructions and support statements for AMD EPYC series server processors. Additionally, this article describes several known limitations to the support for these processors.
@@ -66,7 +65,7 @@ For servers configured to enable 256 processor threads and that are running eith
 
 Attempting to boot into WinRE for Windows Server 2019 may result in a blue screen error 0x5C HAL_INITIALIZATION_FAILED. The WinRE image must be updated to support configurations with 256 or more processors and the x2APIC mode enabled. To enable this support, apply the latest cumulative update for Windows Server 2019 to the WinRE image. For more information, see [Add an update package to Windows RE](/windows-hardware/manufacture/desktop/add-update-to-winre).
 
-## Known UI limitations for Windows Server 2012R2/2016/2019 Task Manager, WMI, or PowerShell queries to pull CPU information
+## Known UI limitations for Windows Server 2012 R2/2016/2019 Task Manager, WMI, or PowerShell queries to pull CPU information
 
 > [!NOTE]
 > The following UI limitations are not limited to the AMD EPYC 7000 series and may occur on all AMD EPYC platforms.
@@ -88,4 +87,3 @@ For example, for a one-socket system, **Task Manager** displays two NUMA nodes. 
 ## Data collection
 
 If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).
-
