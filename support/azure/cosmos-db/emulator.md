@@ -5,7 +5,7 @@ ms.service: cosmos-db
 author: oury-msft
 ms.author: ouryba
 ms.reviewer: v-jayaramanp
-ms.topic: landing-page
+ms.topic: troubleshooting
 ms.date: 09/26/2023
 ---
 
