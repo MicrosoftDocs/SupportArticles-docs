@@ -263,6 +263,8 @@
           href: ../data-files/http-version-of-offline-address-book-fails-to-download.md
         - name: Inbox Repair tool (Scanpst.exe) can run multiple passes
           href: ../data-files/inbox-repair-tool-scanpst-exe-run-multiple-passes.md
+        - name: Incorrect search results for date filter in search bar
+          href: ../data-files/incorrect-search-results-for-search-bar-date-filter.md
         - name: Invalid file name or Access denied when adding pst or ost file on non-local drive
           href: ../data-files/cannot-add-pst-or-ost-file-on-non-local-drive.md
         - name: Limits to using .pst files over LAN and WAN links
