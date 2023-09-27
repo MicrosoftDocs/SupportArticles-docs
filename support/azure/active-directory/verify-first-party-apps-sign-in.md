@@ -92,6 +92,7 @@ The following table lists some, but not all, first-party Microsoft applications.
 |IrisSelectionFrontDoor|16aeb910-ce68-41d1-9ac3-9e1673ac9575|
 |MCAPI Authorization Prod|d73f4b35-55c9-48c7-8b10-651f6f2acb2e|
 |Media Analysis and Transformation Service|944f0bd1-117b-4b1c-af26-804ed95e767e<br>0cd196ee-71bf-4fd6-a57c-b491ffd4fb1e|
+|Microsoft 365 Security and Compliance Center|80ccca67-54bd-44ab-8625-4b79c4dc7775|
 |Microsoft 365 Support Service|ee272b19-4411-433f-8f28-5c13cb6fd407|
 |Microsoft App Access Panel|0000000c-0000-0000-c000-000000000000|
 |Microsoft Approval Management|65d91a3d-ab74-42e6-8a2f-0add61688c74<br>38049638-cc2c-4cde-abe4-4479d721ed44|
