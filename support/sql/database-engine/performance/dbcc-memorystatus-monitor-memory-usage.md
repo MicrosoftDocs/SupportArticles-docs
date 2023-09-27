@@ -32,18 +32,18 @@ The output of the `DBCC MEMORYSTATUS` command has changed from earlier releases 
 
 ## How to use DBCC MEMORYSTATUS 
 
-DBCC MEMORYSTATUS is typically used to investigate low memory issues reported by SQL Server. Low memory can occur if there's either external memory pressure that comes from outside of the SQL Server process or internal pressure that originates within the process. Internal pressure on its part, may stem from SQL Server database engine, or from other components that run inside the process (linked servers, XPs, SQLCLR, intrusion protection or anti-virus software, etc.). For more information on troubleshooting memory pressure, see [Troubleshoot out of memory or low memory issues in SQL Server](troubleshoot-memory-issues.md).
+DBCC MEMORYSTATUS is typically used to investigate low memory issues reported by SQL Server. Low memory can occur if there's either external memory pressure that comes from outside of the SQL Server process or internal pressure that originates within the process. Internal pressure on its part may stem from SQL Server database engine, or from other components that run inside the process (linked servers, XPs, SQLCLR, intrusion protection or anti-virus software, etc.). For more information on troubleshooting memory pressure, see [Troubleshoot out of memory or low memory issues in SQL Server](troubleshoot-memory-issues.md).
 
 Here are the general steps on how to use the command and interpret its results. Specific scenarios may require that you approach the output a bit differently, but the overall approach is outlined here.
 
 1. Run the DBCC MEMORYSTATUS command 
-1. Use the **Process/System Counts**  and **Memory Manager** sections to establish if there's external memory pressure, for example if the computer is low on physical or virtual memory or if SQL Server working set is paged out. Also use these sections to determine how much memory the SQL Server database engine hasallocated in comparison with overall memory on the system.
+1. Use the **Process/System Counts**  and **Memory Manager** sections to establish if there's external memory pressure, for example if the computer is low on physical or virtual memory or if SQL Server working set is paged out. Also use these sections to determine how much memory the SQL Server database engine has allocated in comparison with overall memory on the system.
 1. If you establish that there's external memory pressure, then address that by reducing other applications' memory usage, OS usage, or by adding more RAM. 
 1. If you establish that SQL Server engine is using most the memory (internal memory pressure), then you can use the remaining sections of DBCC MEMORYSTATUS to identify which component(s) (Memory clerk, Userstore, Cachestore, or Objectstore) is the largest contributor to this memory usage.
 1. Examine each MEMORYCLEARK, CACHESTORE, USERSTORE, or OBJECTSTORE and look at its Pages Allocated to determine how much memory that component is consuming inside SQL Server. For a brief description of most database engine memory components, see the following table [Memory Clerk types](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql#types)
     1. In rare cases the allocation is direct virtual allocation, so look at the VM Committed value under the specific component, instead of Pages Allocated.
-    1. If your machine uses NUMA, then some memory components are broken out per node. In those cases, you can see for example OBJECTSTORE_LOCK_MANAGER (node 0), OBJECTSTORE_LOCK_MANAGER (node 1), OBJECTSTORE_LOCK_MANAGER (node 2), and so on, and finally a total summed value of each node in OBJECTSTORE_LOCK_MANAGER (Total). The best place to start is with the section reporting the total value and only later look at the break down if necessary. For more information, see [Memory usage with NUMA nodes](#memory-usage-with-numa-nodes). 
-1. There are sections in the DBCC MEMORYSTATUS with detailed, specialized information about particular memory allocators. You can use those if you need to understand more details, and further breakdown of the allocations within a memory clerk. Examples, with such detailed information include Buffer Pool (data and index cache), Procedure Cache/ plan cache, Query Memory Objects (memory grants), Optimization Queue  and small, medium and big gateways (optimizer memory), and a few others. If you already know that a particular component of memory in SQL Server is the source of memory pressure, you may choose to dive directly into the specific section. For example, if you established in some other way that there's a high usage of working set/memory grants which leads to memory errors, you can examine the Query memory objects sections directly. 
+    1. If your machine uses NUMA, then some memory components are broken out per node. In those cases, you can see for example OBJECTSTORE_LOCK_MANAGER (node 0), OBJECTSTORE_LOCK_MANAGER (node 1), OBJECTSTORE_LOCK_MANAGER (node 2), and so on, and finally a total summed value of each node in OBJECTSTORE_LOCK_MANAGER (Total). The best place to start is with the section reporting the total value and only later look at the breakdown if necessary. For more information, see [Memory usage with NUMA nodes](#memory-usage-with-numa-nodes). 
+1. There are sections in the DBCC MEMORYSTATUS with detailed, specialized information about particular memory allocators. You can use those sections if you need to understand more details, and further breakdown of the allocations within a memory clerk. Examples, with such detailed information include Buffer Pool (data and index cache), Procedure Cache/ plan cache, Query Memory Objects (memory grants), Optimization Queue  and small, medium and big gateways (optimizer memory), and a few others. If you already know that a particular component of memory in SQL Server is the source of memory pressure, you may choose to dive directly into the specific section. For example, if you established in some other way that there's a high usage of memory grants memory that leads to memory errors, you can examine the Query memory objects sections directly. 
 
 The remainder of this article describes some of the useful counters in the DBCC MEMORYSTATUS output that can allow you to diagnose memory issues more effectively.
 
@@ -346,7 +346,18 @@ For more information on how what memory grants are, what many of these values me
 
 ## Optimization memory
 
-The next table provides details of memory waits happening due to insufficient memory for query optimization.
+Queries are submitted to the server for compilation. The compilation process includes parsing, algebraization, and optimization. Queries are classified based on the memory each query consumes during the compilation process.
+
+> [!NOTE]
+> This amount doesn't include the memory that is required to run the query.
+
+When a query starts, there's no limit on how many queries can be compiled. As the memory consumption increases and reaches a threshold, the query must pass a gateway to continue. There's a progressively decreasing limit of simultaneously compiled queries after each gateway. The size of each gateway depends on the platform and the load. Gateway sizes are chosen to maximize scalability and throughput.
+
+If the query can't pass a gateway, it waits until memory is available or returns a time-out error (Error 8628). Additionally, the query may not acquire a gateway if the user cancels the query or if a deadlock is detected. If the query passes several gateways, it doesn't release the smaller gateways until the compilation process has completed.
+
+This behavior lets only a few memory-intensive compilations occur at the same time. Additionally, this behavior maximizes throughput for smaller queries.
+
+The next table provides details of memory waits happening due to insufficient memory for query optimization. The internal memory accounts for optimizer memory used by system queries, whereas the default reports optimization memory for user or application queries. 
 
 ```output
 Optimization Queue (internal)      Value
@@ -404,7 +415,7 @@ Threshold                          380000
 Medium Gateway (default)           Value
 ---------------------------------------------------
 Configured Units                   8
-Available Units                    82
+Available Units                    8
 Acquires                           0
 Waiters                            2
 Threshold Factor                   12
@@ -420,16 +431,15 @@ Threshold Factor                   8
 Threshold                          -1
 ```
 
-Queries are submitted to the server for compilation. The compilation process includes parsing, algebraization, and optimization. Queries are classified based on the memory each query consumes during the compilation process.
+Here's a description of some of these values:
 
-> [!NOTE]
-> This amount doesn't include the memory that is required to run the query.
-
-When a query starts, there's no limit on how many queries can be compiled. As the memory consumption increases and reaches a threshold, the query must pass a gateway to continue. There's a progressively decreasing limit of simultaneously compiled queries after each gateway. The size of each gateway depends on the platform and the load. Gateway sizes are chosen to maximize scalability and throughput.
-
-If the query can't pass a gateway, it waits until memory is available or returns a time-out error (Error 8628). Additionally, the query may not acquire a gateway if the user cancels the query or if a deadlock is detected. If the query passes several gateways, it doesn't release the smaller gateways until the compilation process has completed.
-
-This behavior lets only a few memory-intensive compilations occur at the same time. Additionally, this behavior maximizes throughput for smaller queries.
+- **Configured Units** - how many concurrent queries can be using compilation memory from the gateway. In the example, 32 concurrent queries can be using memory from the Small gateway (default), 8 concurrent queries from the Medium gateway, and 1 query from the Big gateway. As mentioned earlier, if a query needs more memory than the Small gateway can allocate, it would go to Medium gateway and that query is counted to have taken a unit in both gateways. The larger amount of compilation memory a query needs the fewer configured units in a gateway.
+- **Available Units** - how many slots or units are available for concurrent queries to compile from the list of Configured units. For example if 32 units are available, but 3 queries are currently using compilation memory, then Available units would be 32 minus 3, or 29 units. 
+- **Acquires** - the number of units or slots acquired by queries to compile. If three queries are currently using memory from a gatware, then Acquires = 3. 
+- **Waiters** - indicates how many queries are waiting for compilation memory in a gateway. If all the units in a gateway are exhausted, the Waiters value is nonzero showing the count of waiting queries.
+- **Threshold** - a gateway memory limit that determines where a query gets its memory from, or which gateway it stays in. If a query needs no more than the threshold value, it stays in the small gateway (a query always starts with the small gateway). If it needs more memory for compilation, it would go to the medium one, and if that threshold is still insufficient, it goes to the big gateway. For the small gateway, the threshold factor is 380,000 bytes (could be subject to change in future versions).
+- **Threshold Factor**:  the factor value determines the threshold value for each gateway. For the small gateway since the threshold is predefined, the factor is also set to the same value. The threshold factors for the medium and big gateway are fractions of the total optimizer memory (Overall Memory in the optimization queue) and are set to 12 and 8, respectively. So if the overall memory is adjusted due to other memory consumers inside SQL Server needing memory, then the threshold factors would cause the thresholds to be dynamically adjusted as well. 
+- **Timeout**: the value in minutes that defines how long a query waits for optimizer memory. If this timeout value is reached the session stops waiting and raise error 8628 - `A time out occurred while waiting to optimize the query. Rerun the query.`
 
 ## Memory brokers
 
