@@ -16,7 +16,7 @@ ms.date: 09/27/2023
 ---
 # Support limitations for issues with Microsoft 365 Apps for enterprise or Microsoft 365 Apps for business
 
-This article describes support limitations for problems when using Microsoft 365 Apps  (Word, Excel, PowerPoint, Access, OneNote, Publisher, and Visio) and you have requested support through the Microsoft 365 admin center.
+This article describes support limitations for problems when using Microsoft 365 Apps  (Word, Excel, PowerPoint, Access, OneNote, Publisher, and Visio) and you have requested [support](/microsoft-365/admin/get-help-support) through the Microsoft 365 admin center.
 
 ## Microsoft 365 technical support
 
