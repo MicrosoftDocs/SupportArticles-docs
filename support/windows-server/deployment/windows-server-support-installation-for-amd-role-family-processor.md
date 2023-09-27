@@ -70,6 +70,7 @@ Attempting to boot into WinRE for Windows Server 2019 may result in a blue scree
 
 > [!NOTE]
 > The following UI limitations are not limited to the AMD EPYC 7000 series and may occur on all AMD EPYC platforms.
+
 ### Task Manager does not display L2 and L3 cache sizes, or displays incorrect L2 and L3 cache sizes
 
 For example, see the following figure.
