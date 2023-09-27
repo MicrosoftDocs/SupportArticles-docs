@@ -140,8 +140,8 @@ Taken Away Committed    0
 
 For more information about the elements in this output, see:
 
-- VM Reserved: This value shows the virtual address space (VAS) that is reserved by threads that are running on this node.
-- VM Committed: This value shows the VAS that is committed by threads that are running on this node.
+- **VM Reserved**: This value shows the virtual address space (VAS) that is reserved by threads that are running on this node.
+- **VM Committed**: This value shows the VAS that is committed by threads that are running on this node.
 
 ## Aggregate memory
 
@@ -196,8 +196,8 @@ Pages Allocated                    2928
 
 Other information in these tables is about shared memory:
 
-- SM Reserved: This value shows the VAS that is reserved by all clerks of this kind that are using the memory-mapped files API. This API is also known as *shared memory*.
-- SM Committed: This value shows the VAS that is committed by all clerks of this kind that are using memory-mapped files API.
+- **SM Reserved**: This value shows the VAS that is reserved by all clerks of this kind that are using the memory-mapped files API. This API is also known as *shared memory*.
+- **SM Committed**: This value shows the VAS that is committed by all clerks of this kind that are using memory-mapped files API.
 
 As an alternative method, you can obtain summary information for each clerk type for all memory nodes by using the [sys.dm_os_memory_clerks](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql) dynamic management view (DMV). To do this, run the following query:
 
@@ -237,13 +237,13 @@ Page Life Expectancy                              3965
 
 For more information about the elements in this output, see:
 
-- Database: This value shows the number of buffers (pages) that have database content (data and index pages).
-- Target: This value shows the target size of the buffer pool (buffer count). See Target Committed memory discussion in previous sections of this article. 
-- Dirty: This value shows the pages that have database content and have been modified. These buffers contain changes that must be flushed to disk typically by the checkpoint process.
-- In IO: This value shows the buffers that are waiting for a pending I/O operation. This means the contents of these pages is either being written to or read from storage. 
-- Latched: This value shows the latched buffers. A buffer is latched when a thread is reading or modifying the contents of a page. A buffer is also latched when the page is being read from disk or written to disk. A latch is used to maintain the physical consistency of the data on the page while it's being read or modified. In contrast, a lock is used to maintain logical and transactional consistency. 
-- IO error: This value shows the count of buffers that may have encountered any I/O-related OS errors (this doesn't necessarily indicate a problem).
-- Page Life Expectancy: This counter measures the amount of time in seconds that the oldest page has stayed in the buffer pool.
+- **Database**: This value shows the number of buffers (pages) that have database content (data and index pages).
+- **Target**: This value shows the target size of the buffer pool (buffer count). See Target Committed memory discussion in previous sections of this article. 
+- **Dirty**: This value shows the pages that have database content and have been modified. These buffers contain changes that must be flushed to disk typically by the checkpoint process.
+- **In IO**: This value shows the buffers that are waiting for a pending I/O operation. This means the contents of these pages is either being written to or read from storage. 
+- **Latched**: This value shows the latched buffers. A buffer is latched when a thread is reading or modifying the contents of a page. A buffer is also latched when the page is being read from disk or written to disk. A latch is used to maintain the physical consistency of the data on the page while it's being read or modified. In contrast, a lock is used to maintain logical and transactional consistency. 
+- **IO error**: This value shows the count of buffers that may have encountered any I/O-related OS errors (this doesn't necessarily indicate a problem).
+- **Page Life Expectancy**: This counter measures the amount of time in seconds that the oldest page has stayed in the buffer pool.
 
 
 You can obtain detailed information about buffer pool for database pages by using the `sys.dm_os_buffer_descriptors` DMV. But use this DMV with caution as it can run a long time and produce a huge output if your SQL Server is allowed to have lots of RAM at its disposal.  
@@ -262,13 +262,13 @@ InUsePages              0
 
 For more information about the elements in this output, see:
 
-- TotalProcs: This value shows the total cached objects currently in the procedure cache. This value matches the entries in the `sys.dm_exec_cached_plans` DMV.
+- **TotalProcs**: This value shows the total cached objects currently in the procedure cache. This value matches the entries in the `sys.dm_exec_cached_plans` DMV.
 
   > [!NOTE]
   > Because of the dynamic nature of this information, the match may not be exact. You can use PerfMon to monitor the SQL Server: Plan Cache object and the `sys.dm_exec_cached_plans` DMV for detailed information about the type of cached objects, such as triggers, procedures, and ad hoc objects.
 
-- TotalPages: This value shows the cumulative pages used to store all the cached objects in the plan/procedure cache.
-- InUsePages: This value shows the pages in the procedure cache that belong to procedures that are currently running. These pages can't be discarded.
+- **TotalPages**: This value shows the cumulative pages used to store all the cached objects in the plan/procedure cache.
+- **InUsePages**: This value shows the pages in the procedure cache that belong to procedures that are currently running. These pages can't be discarded.
 
 ## Global memory objects
 
@@ -296,17 +296,17 @@ SortTables                          3
 
 For more information about the elements in this output, see:
 
-- Resource: This value shows the memory that the Resource object uses. The Resource object is used by the storage engine and for various server-wide structures.
-- Locks: This value shows the memory that Lock Manager uses.
-- XDES: This value shows the memory that Transaction Manager uses.
-- SETLS: This value shows the memory that is used to allocate the Storage Engine-specific per-thread structure that uses thread local storage (TLS). For more information, see [Thread Local Storage](/windows/win32/procthread/thread-local-storage)
-- SubpDesc Allocators: This value shows the memory that is used for managing subprocesses for parallel queries, backup operations, restore operations, database operations, file operations, mirroring, and asynchronous cursors. These subprocesses are also known as *parallel processes*.
-- SE SchemaManager: This value shows the memory that Schema Manager uses to store Storage Engine-specific metadata.
-- SQLCache: This value shows the memory that is used to store the text of ad hoc statements and of prepared statements.
-- Replication: This value shows the memory that the server uses for internal replication subsystems.
-- ServerGlobal: This value shows the global server memory object that is used generically by several subsystems.
-- XP Global: This value shows the memory that extended stored procedures use.
-- SortTables: This value shows the memory that sort tables use.
+- **Resource**: This value shows the memory that the Resource object uses. The Resource object is used by the storage engine and for various server-wide structures.
+- **Locks**: This value shows the memory that Lock Manager uses.
+- **XDES**: This value shows the memory that Transaction Manager uses.
+- **SETLS**: This value shows the memory that is used to allocate the Storage Engine-specific per-thread structure that uses thread local storage (TLS). For more information, see [Thread Local Storage](/windows/win32/procthread/thread-local-storage)
+- **SubpDesc Allocators**: This value shows the memory that is used for managing subprocesses for parallel queries, backup operations, restore operations, database operations, file operations, mirroring, and asynchronous cursors. These subprocesses are also known as *parallel processes*.
+- **SE SchemaManager**: This value shows the memory that Schema Manager uses to store Storage Engine-specific metadata.
+- **SQLCache**: This value shows the memory that is used to store the text of ad hoc statements and of prepared statements.
+- **Replication**: This value shows the memory that the server uses for internal replication subsystems.
+- **ServerGlobal**: This value shows the global server memory object that is used generically by several subsystems.
+- **XP Global**: This value shows the memory that extended stored procedures use.
+- **SortTables**: This value shows the memory that sort tables use.
 
 ## Query memory objects
 
@@ -332,15 +332,15 @@ If the size and the cost of a query satisfy "small" query memory thresholds, the
 
 For information about the elements in this output:
 
-- Grants: This value shows the running queries that have memory grants.
-- Waiting: This value shows the queries that are waiting to obtain memory grants.
-- Available: This value shows the buffers that are available to queries for use as hash workspace and as sort workspace. The Available value is updated periodically.
-- Next Request: This value shows the memory request size, in buffers, for the next waiting query.
-- Waiting For: This value shows the amount of memory that must be available to run the query to which the Next Request value refers. The Waiting For value is the Next Request value multiplied by a headroom factor. This value effectively guarantees that a specific amount of memory will be available when the next waiting query is run.
+- **Grants**: This value shows the running queries that have memory grants.
+- **Waiting**: This value shows the queries that are waiting to obtain memory grants.
+- **Available**: This value shows the buffers that are available to queries for use as hash workspace and as sort workspace. The Available value is updated periodically.
+- **Next Request**: This value shows the memory request size, in buffers, for the next waiting query.
+- **Waiting For**: This value shows the amount of memory that must be available to run the query to which the Next Request value refers. The Waiting For value is the Next Request value multiplied by a headroom factor. This value effectively guarantees that a specific amount of memory will be available when the next waiting query is run.
 - Cost: This value shows the cost of the next waiting query.
-- Timeout: This value shows the time-out, in seconds, for the next waiting query.
-- Wait Time: This value shows the elapsed time, in milliseconds, since the next waiting query was put in the queue.
-- Current Max: This value shows the overall memory limit for query execution. This value is the combined limit for both the large query queue and the small query queue.
+- **Timeout**: This value shows the time-out, in seconds, for the next waiting query.
+- **Wait Time**: This value shows the elapsed time, in milliseconds, since the next waiting query was put in the queue.
+- **Current Max**: This value shows the overall memory limit for query execution. This value is the combined limit for both the large query queue and the small query queue.
 
 For more information on how what memory grants are, what many of these values mean, and how to troubleshoot memory grants, see [Troubleshoot slow performance or low memory issues caused by memory grants in SQL Server](troubleshoot-memory-grant-issues.md). 
 
