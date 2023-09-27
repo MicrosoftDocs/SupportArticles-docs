@@ -1,6 +1,6 @@
 ---
 title: Incorrect search results when using a date filter in the Outlook search bar
-description: Works around an issue in which you receive incorrect search results when you enter a "received" or "sent" date filter in the Outlook search bar.
+description: Provides a workaround for an issue in which you receive incorrect search results when you enter a "received" or "sent" date filter in the Outlook search bar.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -54,12 +54,12 @@ If these conditions are true, Outlook doesn't include your time zone when it sen
 
 ## Workaround
 
-To work around the issue, run your search in the Outlook advanced search window. Follow these steps:
+To work around the issue, run your search in the Outlook Advanced Search window. Follow these steps:
 
-1. Select the Outlook search box, and then select the down arrow to open the **Advanced Search** window.
+1. Select the Outlook search box, and then select the down arrow to open the Advanced Search window.
 
 2. Set the search criteria. If you want to search received email messages, set the **Received** date range by using the drop-down calendars for the start and end dates of the **Received** field. If you want to search sent email messages, select **Add more options** \> **Sent** \> **Apply**, and then set the **Sent** period.
 
 3. Select **Search**.
 
-For searches that are initiated in the advanced search window, Outlook includes your time zone when it sends your search query to Exchange Server.
+For searches that are initiated in the Advanced Search window, Outlook includes your time zone when it sends your search query to Exchange Server.
