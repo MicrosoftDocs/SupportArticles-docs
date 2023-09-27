@@ -263,6 +263,8 @@
       href: ../sharing-and-permissions/access-denied-shared-folder.md
     - name: '"Error 403 Forbidden" in OneDrive or SharePoint'
       href: ../sharing-and-permissions/error-403-forbidden.md
+    - name: Error ResponseStatusNotOK when sharing a site
+      href: ../sharing-and-permissions/responsestatusnotok-sharing-sharepoint-onedrive-site.md
     - name: '"Everyone except external users" group is removed'
       href: ../sharing-and-permissions/everyone-except-external-user-removed.md
     - name: '"External sharing is disabled for the site" error with Online Admin Center'
