@@ -22,9 +22,9 @@ This article describes support limitations for problems when using Microsoft 365
 
 Microsoft 365 includes technical support. However, Microsoft 365 subscription support has the following limitations for Microsoft 365 Apps for enterprise or Microsoft 365 Apps for business when purchased individually or as part of a Microsoft 365 service plan.
 
-Professional support primarily covers break-fix issues, which are technical problems you experience while using Microsoft 365 Apps. "Break-fix" is an industry term, which refers to "work involved in supporting a technology when it fails in the normal course of its function, which requires intervention by a support organization to be restored to working order."
+Microsoft 365 Subscription support primarily covers break-fix issues, which are technical problems you experience while using Microsoft 365 Apps. "Break-fix" is an industry term, which refers to "work involved in supporting a technology when it fails in the normal course of its function, which requires intervention by a support organization to be restored to working order."
 
-Professional support doesn't cover the following issues:
+Microsoft 365 Subscription support doesn't cover the following issues:
 
 - Customer proposals for product features
 - Onsite support
