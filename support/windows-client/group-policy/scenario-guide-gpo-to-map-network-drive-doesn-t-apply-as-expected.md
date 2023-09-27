@@ -29,21 +29,34 @@ Before you proceed, refer [Applying Group Policy troubleshooting guidance](../..
 
 ## In this scenario
 
-You deploy a GPO named "Mapped drives" by using Group policy preferences mapped drives extension. The GPO is used to map drive Z on client computers. The mapped drive is located on a Linux server. See the following screenshot:
+Before we start troubleshooting, here are some scoping questions which can help us understand the situation and narrow down the cause of the issue:
 
-:::image type="content" source="media/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected/screenshot-of-the-group-policy-result.png" alt-text="The screenshot of the group policy result." border="true":::
+1. What is the Client and Server operating systems?  
+   **Answer**: Client machines are Windows11-22H2 and File server where the mapped drive is located is on Linux Server
 
-The GPO has worked before. Since several days ago, drive Z is no longer mapped.
-Besides, you observe the following symptoms:
+2. How have you configured the group policy preferences?  
+   **Answer**: We have an GPO named "Mapped drives" and this GPO is configured by using group policy preferences mapped drives extension.
 
-- You can manually map the drive by using the `net use` command. For more information about the `net use` command, see [Net use | Microsoft Learn](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/gg651155%28v=ws.11%29).
-- When you run GPRESULT /h, the output indicates that the GPO "Mapped drives" is in the applied list.
+   :::image type="content" source="media/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected/screenshot-of-the-group-policy-result.png" alt-text="The screenshot of the group policy result." border="true":::
+
+3. Are all users under the scope of the GPO "Mapped drives" impacted?  
+   **Answer**: We have configured this GPO to the IT Users OU. We tested with 4-5 users. For all of them, drive Z is not mapped.
+
+4. What happens if you manually map the drive instead of using group policy preferences?  
+   **Answer**: We can successfully map drive Z by using the `net use` command to the same file server.
+
+5. Is this GPO a new GPO, or did the GPO work before?  
+   **Answer**: This GPO was working earlier and all users used to get mapped drives. It was from last couple of days that the Mapped drives are not working.
+
+6. When you run `gpresult /h` and review the output do you observe that the GPO "Mapped drives" is in the applied list?  
+   **Answer**: Yes we do observe in the applied list we do observe that the Mapped drives GPO is applied.
+
+   :::image type="content" source="media/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected/screenshot-of-the-applied-gpos.png" alt-text="The screenshot of the applied GPOs." border="true":::
   
-  :::image type="content" source="media/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected/screenshot-of-the-applied-gpos.png" alt-text="The screenshot of the applied GPOs." border="true":::
-  
-  :::image type="content" source="media/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected/screenshot-shows-gpo-is-applied-successfully.png" alt-text="The screenshot that shows the GPO is applied successfully." border="true":::
+   :::image type="content" source="media/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected/screenshot-shows-gpo-is-applied-successfully.png" alt-text="The screenshot that shows the GPO is applied successfully." border="true":::
 
-- The GPO is set up with default settings and there are no changes made to the GPO from the perspective of Security filtering, WMI filter or set up any **Deny** permissions.
+7. Have you configured any security filtering, WMI filter or setup any Deny (Apply) settings to the user or a group?  
+   **Answer**: The GPO is set up with default settings and there is no changes made to the GPO from an perspective of Security filtering, WMI filter or setup any Deny permissions.
 
 ## Troubleshooting
 

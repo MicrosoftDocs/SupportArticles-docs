@@ -37,23 +37,35 @@ Before you proceed, refer [Applying Group Policy troubleshooting guidance](../..
 
 ## In this scenario
 
-You have created a new GPO on the Phoenix site named "Wallpaper-GPO-Tokyo" and linked to an OU named "Tokyo".
+Before we start troubleshooting, here are some scoping questions which can help us understand the situation and narrow down the cause of the issue:
 
-The GPO applies the following settings:
+1. What is the client and server operating systems?  
+   **Answer**: Windows Server 2019 domain controllers and Windows 11, version 22H2 client computers.
 
-- Path: User Configuration | Administrative templates | Desktop | Desktop | Desktop Wallpaper
-- GPO Setting: Enabled
-- Wallpaper location: \contoso.com\netlogon\home.jpg
-- Wallpaper style: Fit
+2. Are all users experiencing the issue or only some users?  
+   **Answer**: When a user signs in on a client computer in Tokyo site, the issue occurs. However, if the same user signs in from a client computer in Phoenix site, the wallpaper policy applies fine.
 
-:::image type="content" source="media/scenario-guide-wallpaper-gpo-does-not-apply-on-some-client-computers/screenshot-of-the-gpo-settings.png" alt-text="The screenshot of the GPO settings." border="false":::
+3. What settings are configured by using the "Wallpaper-GPO-Tokyo" GPO?  
+   **Answer**: There are some settings, and the most important one is a user side setting with the following configuration:
 
-When a user signs in by using a client computer on the Tokyo site, the GPO isn't applied. However, if the same user signs in from a client computer on the Phoenix site, the GPO applies fine.
+   - Path: User Configuration | Administrative templates | Desktop | Desktop | Desktop Wallpaper
+   - GPO Setting: Enabled
+   - Wallpaper location: \contoso.com\netlogon\home.jpg
+   - Wallpaper style: Fit
 
-Besides, you observe the following symptoms:
+   :::image type="content" source="media/scenario-guide-wallpaper-gpo-does-not-apply-on-some-client-computers/screenshot-of-the-gpo-settings.png" alt-text="The screenshot of the GPO settings." border="false":::
 
-1. No errors when you run `gpupdate /force` on the working or the failing client computers.
-2. Old GPOs are applied and only this GPO isn't applied.
+4. Is the "Wallpaper-GPO-Tokyo" GPO a new GPO or an old GPO in the scope for the Tokyo OU?  
+   **Answer**: This is a new GPO that we configured in the Phoenix site and this GPO was created a couple of days ago.
+
+5. When you run `gpupdate /force /target:user`, do you observe any error messages on the working and failing computers?  
+   **Answer**: There is no errors when we run `gpupdate /force` on the working or the failing client computer.
+
+6. Did the older GPOs applied and only this GPO is not getting applied?  
+   **Answer**: We observe that the old GPOs are applied, and only this new wallpaper GPO is not applied.
+
+7. Do you observe that all users under the scope of this GPO from Tokyo not getting applied or its only some subset of users who are observing this problem?  
+   **Answer**: All users who are in the scope of this GPO from Tokyo site are experiencing this issue but the same users if they sign-in from a client machine in Phoenix site do not experience the issue.
 
 ## Troubleshooting
 
