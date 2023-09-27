@@ -22,7 +22,7 @@ adobe-target: true
 
 This article describes how to examine a small memory dump file. A small memory dump file can help you determine why your computer crashed.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 315263
 
 > [!NOTE]
@@ -37,7 +37,7 @@ If your computer crashes, how can you find out what happened, fix the issue and 
 - A list of loaded drivers
 - The processor context (PRCB) for the processor that stopped
 - The process information and kernel context (EPROCESS) for the process that stopped
-- The process information and kernel context (ETHREAD) for the thread that stopped
+- The process information and kernel context (THREAD) for the thread that stopped
 - The Kernel-mode call stack for the thread that stopped
 
 To create a memory dump file, Windows requires a paging file on the boot volume that is at least 2 megabytes (MB) in size. On computers that are running Microsoft Windows 2000, or a later version of Windows, a new memory dump file is created each time that a computer crash may occur. A history of these files is stored in a folder. If a second problem occurs and if Windows creates a second small memory dump file, Windows preserves the previous file. Windows gives each file a distinct, date-encoded file name. For example, Mini022900-01.dmp is the first memory dump file that was generated on February 29, 2000. Windows keeps a list of all the small memory dump files in the `%SystemRoot%\Minidump` folder.
@@ -89,7 +89,7 @@ To open the dump file after the installation is complete, follow these steps:
 2. Change to the Debugging Tools for Windows folder. To do this, type the following at the command prompt, and then press ENTER:
 
     ```console
-    cd c:\program files\debugging tools for windows
+    cd C:\Program Files\Debugging Tools For Windows
     ```
 
 3. To load the dump file into a debugger, type one of the following commands, and then press ENTER:
@@ -101,7 +101,7 @@ To open the dump file after the installation is complete, follow these steps:
     or
 
     ```console
-    kd -y SymbolPath -i ImagePat -z *DumpFilePath
+    kd -y SymbolPath -i ImagePath -z DumpFilePath
     ```
 
 The following table explains the use of the placeholders that are used in these commands.
@@ -122,13 +122,13 @@ You can use the following sample commands to open the dump file. These commands 
 Sample 1:
 
 ```console
-kd -y srv*c:\symbols*http://msdl.microsoft.com/download/symbols -i c:\windows\i386 -z c:\windows\minidump\minidump.dmp
+kd -y srv*C:\Symbols*https://msdl.microsoft.com/download/symbols -i C:\Windows\i386 -z C:\Windows\Minidump\minidump.dmp
 ```
 
 Sample 2. If you prefer the graphical version of the debugger instead of the command-line version, type the following command instead:
 
 ```console
-windbg -y srv*c:\symbols*http://msdl.microsoft.com/download/symbols -i c:\windows\i386 -z c:\windows\minidump\minidump.dmp
+windbg -y srv*C:\Symbols*https://msdl.microsoft.com/download/symbols -i C:\Windows\i386 -z C:\Windows\Minidump\minidump.dmp
 ```
 
 ## Examine the dump file
@@ -154,13 +154,13 @@ For help with other commands and for complete command syntax, see the debugging 
 After you identify the command that you must have to load memory dumps, you can create a batch file to examine a dump file. For example, create a batch file and name it Dump.bat. Save it in the folder where the debugging tools are installed. Type the following text in the batch file:
 
 ```console
-cd "c:\program files\debugging tools for windows"
+cd "C:\Program Files\Debugging Tools for Windows"
 
-kd -y srv*c:\symbols*http://msdl.microsoft.com/download/symbols -i c:\windows\i386 -z %1
+kd -y srv*C:\Symbols*https://msdl.microsoft.com/download/symbols -i C:\Windows\i386 -z %1
 ```
 
 When you want to examine a dump file, type the following command to pass the dump file path to the batch file:
 
 ```console
-dump c:\windows\minidump\minidump.dmp
+dump C:\Windows\Minidump\minidump.dmp
 ```
