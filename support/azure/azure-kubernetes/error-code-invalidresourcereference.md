@@ -18,7 +18,11 @@ When you try to create an AKS cluster, you receive the following error message:
 
 > Code="InvalidResourceReference"
 >
-> Message="Resource /subscriptions/*\<subscription-id-guid>*/resourceGroups/MyResourceGroup/providers/Microsoft.Network/virtualNetworks/vnet-otcom/subnets/Subnet-AKS referenced by resource /subscriptions/*\<subscription-id-guid>*/resourceGroups/MC_MyResourceGroup_MyCluster-AKS_JAPANEAST/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-13686447-vmss was not found. Please make sure that the referenced resource exists, and that both resources are in the same region."
+> Message="Resource<br>
+> **/subscriptions/*\<subscription-id-guid>*/resourceGroups/MyResourceGroup/providers/Microsoft.Network/virtualNetworks/vnet-otcom/subnets/Subnet-AKS**<br>
+> referenced by resource<br>
+> **/subscriptions/*\<subscription-id-guid>*/resourceGroups/MC_MyResourceGroup_MyCluster-AKS_JAPANEAST/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool-vmss**<br>
+> was not found. Please make sure that the referenced resource exists, and that both resources are in the same region."
 >
 > Details=[]
 
