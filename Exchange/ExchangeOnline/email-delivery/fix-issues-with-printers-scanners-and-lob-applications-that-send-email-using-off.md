@@ -71,7 +71,7 @@ The following list describes the available configuration options:
 
 2. If your printer didn't require a password for the username/email address that you entered, then your printer is trying to send email without logging on to Microsoft 365 or Office 365. SMTP AUTH client submission requires your printer to sign in to Microsoft 365 or Office 365. Direct send and Microsoft 365 or Office 365 SMTP relay don't require a logon; consider one of these options instead.
 
-3. Your printer or application must send email from the same email address that you entered as logon credentials during email setup. If the printer or application wants to send email from a different account, then the logonon account should have Send As as permission over that account. Otherwise, the result is an error similar to:
+3. Your printer or application must send email from the same email address that you entered as logon credentials during email setup. If the printer or application wants to send email from a different account, then the logon account should have Send As as permission over that account. Otherwise, the result is an error similar to:
 
    > 5.7.60 SMTP; Client does not have permissions to send as this sender.
 
