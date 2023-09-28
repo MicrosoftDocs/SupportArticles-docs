@@ -173,6 +173,8 @@
           href: login-windows-keep-appearing.md
         - name: Multi-screen recording isn't working
           href: multi-screen-recording-is-not-working.md
+        - name: Machine registration failure
+          href: desktop-flow-machine-registration-troubleshooting.md
         - name: Module or action wasn't found error
           href: module-action-wasnt-found-error.md
         - name: '"Power Automate needs an update" occurs when opening Power Automate for desktop'

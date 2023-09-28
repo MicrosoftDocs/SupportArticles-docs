@@ -299,6 +299,8 @@ items:
     href: device-protection/troubleshoot-bitlocker-policies.md
   - name: Troubleshoot encryption in Intune
     href: device-protection/troubleshoot-bitlocker-admin-center.md
+  - name: Troubleshoot update rings policy
+    href: device-protection/troubleshoot-update-rings.md
   - name: BitLocker-encrypted device shows as Not compliant
     href: device-protection/bitlocker-encrypted-device-not-compliant.md
   - name: Secure boot enabled device shows as Not Compliant
