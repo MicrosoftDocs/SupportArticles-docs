@@ -11,7 +11,7 @@ ms.prod: windows-server
 ms.reviewer: hasokol,georgeri,gbock,jtierney,arrenc,roberg,kaushika
 ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
 ms.technology: windows-server-security
-ms.date: 09/26/2023
+ms.date: 09/28/2023
 ---
 # Removal of the U.S. Federal Common Policy CA certificate from the Microsoft trusted root
 
