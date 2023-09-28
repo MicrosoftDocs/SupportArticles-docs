@@ -3,7 +3,7 @@ title: Troubleshoot Azure Files identity-based authentication and authorization 
 description: Troubleshoot problems using identity-based authentication to connect to SMB Azure file shares and see possible resolutions.
 ms.service: azure-file-storage
 ms.custom: has-azure-ad-ps-ref
-ms.date: 09/26/2023
+ms.date: 09/27/2023
 ms.reviewer: kendownie, v-weizhu
 ---
 # Troubleshoot Azure Files identity-based authentication and authorization issues (SMB)
@@ -219,24 +219,18 @@ There is currently no workaround for this error.
 
 #### Cause 2: an application already exists for the storage account
 
-You might also encounter this error if you previously enabled Azure AD Kerberos authentication through manual limited preview steps. To delete the existing application, the customer or their IT admin can run the following script. Running this script will remove the old manually created application and allow the new experience to auto-create and manage the newly created application.
-
-> [!IMPORTANT]
-> This script must be run in PowerShell 5.1 (Windows PowerShell) because the AzureAD module doesn't work in PowerShell 7. Or you can import the module by using the `-UseWindowsPowerShell` option in a PowerShell 7 session:
-> 
-> `Import-Module AzureAD -UseWindowsPowerShell`
-> 
-> The AzureAD module is scheduled to be deprecated and replaced by Microsoft Graph PowerShell. If you want to use the Microsoft.Graph module instead, see [Upgrade from Azure AD PowerShell to Microsoft Graph PowerShell](/powershell/microsoftgraph/migration-steps) and the [Cmdlet map](/powershell/microsoftgraph/azuread-msoline-cmdlet-map).
+You might also encounter this error if you previously enabled Azure AD Kerberos authentication through manual limited preview steps. To delete the existing application, the customer or their IT admin can run the following script. Running this script will remove the old manually created application and allow the new experience to auto-create and manage the newly created application. After initiating the connection to Microsoft Graph, you'll need to sign in to the Microsoft Graph Command Line Tools application on your device and grant permissions to the app.
 
 ```powershell
 $storageAccount = "exampleStorageAccountName"
 $tenantId = "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"
-Import-Module AzureAD
-Connect-AzureAD -TenantId $tenantId
+Install-Module Microsoft.Graph
+Import-Module Microsoft.Graph
+Connect-MgGraph -TenantId $tenantId -Scopes "User.Read","Application.Read.All"
 
-$application = Get-AzureADApplication -Filter "DisplayName eq '${storageAccount}'"
+$application = Get-MgApplication -Filter "DisplayName eq '${storageAccount}'"
 if ($null -ne $application) {
-   Remove-AzureADApplication -ObjectId $application.ObjectId
+   Remove-MgApplication -ObjectId $application.ObjectId
 }
 ```
 
