@@ -206,7 +206,7 @@ If this is the case, ask your Azure AD admin to grant admin consent to the new A
 
 ### Error - "The request to AAD Graph failed with code BadRequest"
 
-#### Cause 1: an application management policy is preventing credentials from being created
+#### Cause 1: An application management policy is preventing credentials from being created
 
 When enabling Azure AD Kerberos authentication, you might encounter this error if the following conditions are met:
 
@@ -217,9 +217,9 @@ When enabling Azure AD Kerberos authentication, you might encounter this error i
 
 There is currently no workaround for this error.
 
-#### Cause 2: an application already exists for the storage account
+#### Cause 2: An application already exists for the storage account
 
-You might also encounter this error if you previously enabled Azure AD Kerberos authentication through manual limited preview steps. To delete the existing application, the customer or their IT admin can run the following script. Running this script will remove the old manually created application and allow the new experience to auto-create and manage the newly created application. After initiating the connection to Microsoft Graph, you'll need to sign in to the Microsoft Graph Command Line Tools application on your device and grant permissions to the app.
+You might also encounter this error if you previously enabled Azure AD Kerberos authentication through manual limited preview steps. To delete the existing application, the customer or their IT admin can run the following script. Running this script will remove the old manually created application and allow the new experience to auto-create and manage the newly created application. After initiating the connection to Microsoft Graph, you need to sign in to the Microsoft Graph command-line interface (CLI) application on your device and grant permissions to the app.
 
 ```powershell
 $storageAccount = "exampleStorageAccountName"
