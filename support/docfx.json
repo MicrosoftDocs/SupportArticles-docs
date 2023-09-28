@@ -51,7 +51,9 @@
       ],
       "recommendations": true
     },
-    "fileMetadata": {
+    "fileMetadata": {      "uhfHeaderId": {
+      "azure/**.*": "Azure"
+    },
       "feedback_product_url": {
         "dynamics/gp/*.md": "https://experience.dynamics.com/ideas/categories/?forum=771cc5ac-c117-e811-8105-3863bb2e0320&forumName=Dynamics%20GP",
         "dynamics-365/customer-insights/**/*.md": "https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights",
