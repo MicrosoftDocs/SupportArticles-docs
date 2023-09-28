@@ -179,7 +179,7 @@ We recommend that you increase the `read_ahead_kb` kernel parameter value to 15 
    , ATTR{read_ahead_kb}="15360"
    ```
 
-1. In a console, apply the udev rule by running the [udevadm](https://www.man7.org/linux/man-pages/man8/udevadm.8.html) command as a superuser and reloading the rules files and other databases. To make udev aware of the new file, run this command only once.
+1. In a console, apply the udev rule by running the [udevadm](https://www.man7.org/linux/man-pages/man8/udevadm.8.html) command as a superuser and reloading the rules files and other databases. To make udev aware of the new file, you only need to run this command once.
 
    ```bash
    sudo udevadm control --reload
