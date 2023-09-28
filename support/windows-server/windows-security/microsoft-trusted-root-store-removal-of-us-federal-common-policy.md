@@ -139,7 +139,7 @@ For disconnected environments in which Windows devices are not allowed to access
    2. Run `certutil -verifyctl -v c:\roots\disallowedstl.cab c:\roots\disallowedcert.sst`.
    3. When you select disallowedcert.sst, this should open the Certificate Manager snap-in to display all roots in the Disallowed list.
 3. To evaluate settings that are not shown in the UI, convert the SST file to a text file. To do this, run `certutil -dump -gmt -v c:\roots\trustedcerts.sst > c:\roots\trustedcerts.txt`.
-4. Download the "G2" root certificate from [Obtain and verify a copy of the Federal Common Policy CA G2 certificate](https://www.idmanagement.gov/implement/trust-fcpca/#download-a-copy-of-the-fcpca-root-certificate) and add it to your personal CTL.
+4. Download the "G2" root certificate from [Obtain and verify the FCPCA root certificate](https://www.idmanagement.gov/implement/trust-fcpca/#download-a-copy-of-the-fcpca-root-certificate) and add it to your personal CTL.
 
 ## Troubleshoot and analyze root chaining issues
 
