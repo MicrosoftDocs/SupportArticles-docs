@@ -157,7 +157,7 @@ In this step, configure the failure definitions for your URL, including what are
 
     :::image type="content" source="media/troubleshoot-failed-requests-using-tracing-in-iis-85/frtr-www-server-404-2.png" alt-text="Screenshot of Failed Request Tracing Rules page showing W W W Server entered as Associated Provider and 404 point 2 as Status Code.":::
 
-IIS Manager writes the configuration to the `%systemdrive%\config inetpub\wwwroot\web.config` file by using a `<location>` tag. The configuration should look as:
+IIS Manager writes the configuration to the `%systemdrive%\inetpub\wwwroot\web.config` file by using a `<location>` tag. The configuration should look as:
 
 ```xml
 <configuration> 
@@ -166,9 +166,9 @@ IIS Manager writes the configuration to the `%systemdrive%\config inetpub\wwwroo
             <traceFailedRequests> 
                 <add path="*"> 
                     <traceAreas> 
-                        <add provider="WWW Server" s="Security" osity="Verbose" /> 
+                        <add provider="WWW Server" areas="Security" verbosity="Verbose" /> 
                     </traceAreas> 
-                    <failureDefinitions usCodes="404.2" /> 
+                    <failureDefinitions statusCodes="404.2" /> 
                 </add> 
             </traceFailedRequests> 
         </tracing> 
