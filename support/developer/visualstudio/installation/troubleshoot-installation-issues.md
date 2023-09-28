@@ -44,7 +44,10 @@ If you encountered an issue when updating, try deleting the Visual Studio Instal
 
 #### 5. Report the problem to support
 
-In some situations, such as when there are corrupted files, issues might require case-by-case troubleshooting. Follow these steps to submit the problem to Microsoft Support:
+In some situations, such as when there are corrupted files, issues might require case-by-case troubleshooting. 
+Report product issues to us via the [Report a Problem](/visualstudio/ide/how-to-report-a-problem-with-visual-studio) tool that appears both in the Visual Studio Installer and in the Visual Studio IDE. If you're an IT Administrator and don't have Visual Studio installed, you can submit [IT Admin feedback here](https://aka.ms/vs/admin/feedback).
+
+Follow these steps to submit the problem to Microsoft Support:
 
 - For Visual Studio 2022:
 
@@ -103,6 +106,13 @@ To resolve issues with a [network installation](/visualstudio/install/create-a-n
 ## Administrator Updates
 
 Administrator updates may not be applied correctly due to various situations. For more information, see [Administrator updates troubleshooting error codes](/visualstudio/install/applying-administrator-updates#verification-reports-and-troubleshooting-error-codes).
+
+You can use the following methods to provide feedback about Visual Studio administrator updates or report issues that affect the updates:
+
+* Ask questions to the community at the [Visual Studio Setup Q&A Forum](/answers/topics/vs-setup.html).
+* Go to the [Visual Studio support page](https://visualstudio.microsoft.com/vs/support/), and check whether your issue is listed in the FAQ.
+* [Provide feature feedback or report a problem](https://aka.ms/vs/wsus/feedback) to the Visual Studio team regarding your experience.
+* Contact your organization’s technical account manager for Microsoft.
 
 ## Collect installation logs for Microsoft Support
 
