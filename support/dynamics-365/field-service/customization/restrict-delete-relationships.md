@@ -7,7 +7,7 @@ ms.reviewer: mhart
 ms.date: 06/15/2023
 ---
 
-# Can't delete record because of an restrict-delete relationships
+# Can't delete record because of a restrict-delete relationships
 
 This article helps resolve issues with deleting records with a restrict-delete association in Dynamics 365 Field Service.
 
