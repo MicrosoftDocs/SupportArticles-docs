@@ -51,7 +51,9 @@
       ],
       "recommendations": true
     },
-    "fileMetadata": {
+    "fileMetadata": {      "uhfHeaderId": {
+      "azure/**.*": "Azure"
+    },
       "feedback_product_url": {
         "dynamics/gp/*.md": "https://experience.dynamics.com/ideas/categories/?forum=771cc5ac-c117-e811-8105-3863bb2e0320&forumName=Dynamics%20GP",
         "dynamics-365/customer-insights/**/*.md": "https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights",
@@ -574,8 +576,13 @@
           "powerapps-docs",
           "powerautomate-docs"
         ],
-        "dynamics-365/customer-insights/**/**.*": [
-          "customerinsights-docs"
+        "dynamics-365/customer-insights/data/**/**.*": [
+          "customerinsights-docs",
+          "customerinsightsdata-docs"
+        ],
+        "dynamics-365/customer-insights/journeys/**.*": [
+          "marketing-docs",
+          "customerinsightsjourneys-docs"
         ],
         "dynamics-365/customer-service/**/**.*": [
           "D365CE",
@@ -586,11 +593,6 @@
         "dynamics-365/finance/**/**.*": [
           "FinanceAndOperations",
           "financeandoperations-docs"
-        ],
-        "dynamics-365/marketing/**/**.*": [
-          "D365CE",
-          "D365Mktg",
-          "marketing-docs"
         ],
         "dynamics-365/sales/**/**.*": [
           "D365CE",

@@ -2,7 +2,7 @@
 title: Solution upgrade or deletion fails when a shared component has multiple publishers
 description: Works around an issue where you can't upgrade or delete the base layer of components that have multiple publishers in Microsoft Power Apps.
 ms.reviewer: jdaly
-ms.date: 09/26/2023
+ms.date: 09/27/2023
 author: swatimadhukargit
 ms.author: swatim
 ---
@@ -24,9 +24,9 @@ To check if the solution component's base layer and the layer immediately above 
 
 ## Cause
 
-The owner of a component is determined by the [solution publisher](/power-platform/alm/solution-concepts-alm#solution-publisher) that owns the base layer of the solution. The solution system doesn't allow users to change component ownership from one publisher to another. Therefore, upgrade or deletion operations that change the publisher of the base layer fails.
+The owner of a component is determined by the [solution publisher](/power-platform/alm/solution-concepts-alm#solution-publisher) that owns the base layer of the solution. The solution system doesn't allow users to change component ownership from one publisher to another. Therefore, upgrade or deletion operations that change the publisher of the base layer fail.
 
-For example, publisher A owns the base layer of a component. Another managed solution from publisher B adds another layer to the same component. In this case, attempts to delete the base layer fails because there's another layer above it from a different publisher. If publisher A tries to upgrade the base layer by removing the component that publisher B depends on, it also fails.
+For example, publisher A owns the base layer of a component. Another managed solution from publisher B adds another layer to the same component. In this case, attempts to delete the base layer fail because there's another layer above it from a different publisher. If publisher A tries to upgrade the base layer by removing the component that publisher B depends on, it also fails.
 
 ## Workaround
 
@@ -47,7 +47,7 @@ There are multiple publishers for the base layer and the layers above it. Layer 
 |2| Solution 2 | Publisher B|
 |1| Solution 1 | Publisher A|
 
-After you delete all the managed layers, the only layer remains is the base layer.
+After you delete all the managed layers, the only layer that remains is the base layer.
 
 |Order | Solution | Publisher|
 |------|-------|--------|
