@@ -28,7 +28,9 @@ You receive a notification from Microsoft [System Center Operations Manager](/sy
 When you search the Microsoft Windows Applications and Services event log on the affected servers, you find that some events that are listed under **Microsoft** \> **Exchange** \> **ActiveMonitoring** \> **ProbeResult** contain the following error message:
 
 ```output
-System.ApplicationException: monitoring mailbox <UPN of health mailbox account> not found! at Microsoft.Exchange.Monitoring.ActiveMonitoring.Common.CommonAccessTokenHelper.ResolveRootOrgUser(String emailAddress, IRecipientSession& recipientSession)
+System.ApplicationException: monitoring mailbox <UPN of health mailbox account> not found!
+at Microsoft.Exchange.Monitoring.ActiveMonitoring.Common.CommonAccessTokenHelper.
+ResolveRootOrgUser(String emailAddress, IRecipientSession& recipientSession)
 ```
 
 Also, the Active Monitoring trace logs that are located in the `ActiveMonitoringTraceLogs` folder on the affected servers contain an entry that displays the following information:
@@ -38,7 +40,10 @@ Component: "Common"
 LogLevel: "Warning"
 Method: "CreateMonitoringMailbox"
 Source: "DirectoryAccessor.cs:1380"
-Message: "Exception is caught trying to disable email address policy in OnPrem for monitoring mailbox: <UPN of health mailbox account>, error : Microsoft.Exchange.Data.Directory.ADNoSuchObjectException: Active Directory operation failed on <FQDN of domain controller>. The object <DN of health mailbox account> does not exist."
+Message: "Exception is caught trying to disable email address policy in OnPrem for monitoring mailbox: 
+<UPN of health mailbox account>, error : Microsoft.Exchange.Data.Directory.ADNoSuchObjectException: 
+Active Directory operation failed on <FQDN of domain controller>. The object <DN of health mailbox account> 
+does not exist."
 ```
 
 **Note**: The ActiveMonitoringTraceLogs folder is located at `%ExchangeInstallPath%\Logging\Monitoring\Monitoring\MSExchangeHMWorker\ActiveMonitoringTraceLogs`.
@@ -51,7 +56,7 @@ When the Exchange Health Manager Worker process (MSExchangeHMWorker.exe) creates
 
 - The email address policy remains enabled because the Exchange Health Manager Worker process doesn't retry the failed operation. Depending on your organization's email address policy, the SMTP address of the mailbox could be assigned a different value than the UPN.
 
-- Some [Active Monitoring](/exchange/high-availability/managed-availability/managed-availability) probes generate errors in the Applications and Services event log if the SMTP address of a mailbox doesn't match the UPN. For example, the `RpsDeepTestPSProxyProbe/CertificateSid.\<CN of health mailbox\>` probe generates the Applications and Services event log error message that's displayed in the "Symptoms" section. Such errors cause Operations Manager to report some health sets as unhealthy.
+- Some [Active Monitoring](/exchange/high-availability/managed-availability/managed-availability) probes generate errors in the Applications and Services event log if the SMTP address of a mailbox doesn't match the UPN. For example, the `RpsDeepTestPSProxyProbe/CertificateSid.<CN of health mailbox>` probe generates the Applications and Services event log error message that's displayed in the "Symptoms" section. Such errors cause Operations Manager to report some health sets as unhealthy.
 
 ## Resolution
 
@@ -59,12 +64,12 @@ To fix the issue, follow these steps:
 
 1. Run the following command to set the `EmailAddressPolicyEnabled` parameter value of each health mailbox to `False`:
 
-```powershell
-Get-Mailbox -Monitoring | Set-Mailbox -EmailAddressPolicyEnabled $False
-```
+   ```powershell
+   Get-Mailbox -Monitoring | Set-Mailbox -EmailAddressPolicyEnabled $False
+   ```
 
 2. Run the following command to make sure that the primary SMTP address of each health mailbox matches the UPN:
 
-```powershell
-Get-Mailbox -Monitoring | Select-Object UserPrincipalName | foreach {Set-Mailbox -Identity $\_.UserPrincipalName -PrimarySmtpAddress $\_.UserPrincipalName}
-```
+   ```powershell
+   Get-Mailbox -Monitoring | Select-Object UserPrincipalName | foreach {Set-Mailbox -Identity $_.UserPrincipalName -PrimarySmtpAddress $_.UserPrincipalName}
+   ```
