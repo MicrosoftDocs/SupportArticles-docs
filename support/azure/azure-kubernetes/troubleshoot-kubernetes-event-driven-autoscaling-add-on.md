@@ -17,6 +17,10 @@ This article discusses how to troubleshoot the Kubernetes Event-driven Autoscali
 
 - The Kubernetes [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) tool. To install kubectl by using the [Azure CLI](/cli/azure/install-azure-cli), run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
 
+## KEDA add-on support
+
+The KEDA add-on follows a similar support model to other [AKS add-on](/azure/aks/integrations.md). All [Azure scalers](https://keda.sh/docs/scalers/) are supported, but AKS does not support third party scalers. If you experience an issue with third party scalers, open an issue in the official [KEDA GitHub repository](https://github.com/kedacore/keda).
+
 ## Troubleshooting checklist
 
 Verify and troubleshoot KEDA components by using the instructions in the following sections.
