@@ -19,7 +19,7 @@ This article discusses how to troubleshoot the Kubernetes Event-driven Autoscali
 
 ## KEDA add-on support
 
-The KEDA add-on follows a similar support model to other [AKS add-on](/azure/aks/integrations.md). All [Azure scalers](https://keda.sh/docs/scalers/) are supported, but AKS does not support third party scalers. If you experience an issue with third party scalers, open an issue in the official [KEDA GitHub repository](https://github.com/kedacore/keda).
+The KEDA add-on follows a similar support model to other [AKS add-on](/azure/aks/integrations). All [Azure scalers](https://keda.sh/docs/scalers/) are supported, but AKS does not support third party scalers. If you experience an issue with third party scalers, open an issue in the official [KEDA GitHub repository](https://github.com/kedacore/keda).
 
 ## Troubleshooting checklist
 
