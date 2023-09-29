@@ -1,7 +1,7 @@
 ---
 title:  "Resource Scheduling Optimization add-in error message: User lacks privileges"
 description: Resolve errors with privileges in the Resource Scheduling Optimization add-in for Dynamics 365 Field Service
-ms.author: feifeiqiu
+ms.author: feiqiu
 author: feifeiqiu
 ms.reviewer: mhart
 ms.date: 06/15/2023

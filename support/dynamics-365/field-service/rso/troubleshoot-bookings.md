@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot bookings from the Resource Scheduling Optimization add-in for Dynamics 365 Field Service
 description: Resolve errors with privileges in the Resource Scheduling Optimization add-in for Dynamics 365 Field Service
-ms.author: feifeiqiu
+ms.author: feiqiu
 author: feifeiqiu
 ms.reviewer: mhart
 ms.date: 06/15/2023
@@ -23,9 +23,9 @@ This article helps troubleshoot issues bookings created by the Resource Scheduli
 
 After optimization runs, Resource Scheduling Optimization can make decisions to create, update, or delete bookings as needed based on objective and constraints settings. Hence, it's expected to find booking deleted to optimize results throughout the schedule. If you don't want Resource Scheduling Optimization to delete existing bookings, try the following options:
 
-- [Configure the scheduling method for the booking status](rso-configuration.md#make-data-changes-to-prepare-for-optimizations).
-- [Exclude bookings from the optimization scope](rso-optimization-scope.md).
-- [Configure a booking lock](booking-lock-options.md).
+- [Configure the scheduling method for the booking status](/dynamics365/field-service/rso-configuration#make-data-changes-to-prepare-for-optimizations).
+- [Exclude bookings from the optimization scope](/dynamics365/field-service/rso-optimization-scope).
+- [Configure a booking lock](/dynamics365/field-service/booking-lock-options).
 
 ### Scheduling method mapping to booking status
 

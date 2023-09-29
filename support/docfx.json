@@ -285,6 +285,7 @@
         "dynamics-365/finance/**/**.*": "dynamics-365-finance",
         "dynamics-365/commerce/**/**.*": "dynamics-365-commerce",
         "dynamics-365/supply-chain/**/**.*": "dynamics-365-supply-chain",
+        "dynamics-365/field-service/**/**.*": "dynamics-365-field-service",
         "mem/intune/**/*.md": "microsoft-intune",
         "power-platform/ai-builder/*.md": "aibuilder",
         "sql/**/*.md": "sql",

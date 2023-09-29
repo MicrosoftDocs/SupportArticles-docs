@@ -1,7 +1,7 @@
 ---
 title: Optimization request failed to modify some bookings
 description: Resolve issues with optimization requests in the Resource Scheduling Optimization add-in for Dynamics 365 Field Service.
-ms.author: feifeiqiu
+ms.author: feiqiu
 author: feifeiqiu
 ms.reviewer: mhart
 ms.date: 06/28/2023
