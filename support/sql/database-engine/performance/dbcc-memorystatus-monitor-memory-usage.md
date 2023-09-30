@@ -51,7 +51,7 @@ This section provides a sample output in a tabular format and describes its valu
 
 ```output
 Process/System Counts                Value
---------------------------------------------------
+------------------------------------ ------------
 Available Physical Memory            5060247552
 Available Virtual Memory             140710048014336
 Available Paging File                7066804224
@@ -83,7 +83,7 @@ This section provides a sample output of the Memory Manager that shows the overa
 
 ```output
 Memory Manager             KB
------------------------------- --------------------
+-------------------------- --------------------
 VM Reserved                36228032
 VM Committed               326188
 Locked Pages Allocated     0
@@ -128,7 +128,7 @@ The Memory Manager section is followed by a summary of memory usage for each mem
 
 ```output
 Memory node Id = 0      KB
-----------------------  -----------
+----------------------- -----------
 VM Reserved             21289792
 VM Committed            272808
 Locked Pages Allocated  0
@@ -158,7 +158,7 @@ The following table contains aggregate memory information for each clerk type an
 
 ```output
 MEMORYCLERK_SQLGENERAL (node 0) KB
----------------------------------------------------------------- --------------------
+------------------------------  --------------------
 VM Reserved                     0
 VM Committed                    0
 Locked Pages Allocated          0
@@ -167,7 +167,7 @@ SM Commited                     0
 Pages Allocated                 5416
 
 MEMORYCLERK_SQLGENERAL (node 1) KB
----------------------------------------------------------------- --------------------
+------------------------------- --------------------
 VM Reserved                     0
 VM Committed                    0
 Locked Pages Allocated          0
@@ -176,7 +176,7 @@ SM Commited                     0
 Pages Allocated                 136
 
 MEMORYCLERK_SQLGENERAL (Total)  KB
----------------------------------------------------------------- --------------------
+------------------------------- --------------------
 VM Reserved                     0
 VM Committed                    0
 Locked Pages Allocated          0
@@ -194,7 +194,7 @@ For an SMP system, you see only one table for each clerk type, not counting node
 
 ```output
 MEMORYCLERK_SQLGENERAL (Total)     KB
----------------------------------------------------------------- --------------------
+--------------------------------- --------------------
 VM Reserved                        0
 VM Committed                       0
 AWE Allocated                      0
@@ -231,7 +231,7 @@ This is an important section that provides a breakdown of different states data 
 
 ```output
 Buffer Pool                                       Pages
-----------------------------------------------    ---------
+------------------------------------------------- ---------
 Database                                          5404
 Simulated                                         0
 Target                                            16384000
@@ -261,7 +261,7 @@ This section discusses the plan cache that was previously referred to as a proce
 
 ```output
 Procedure Cache         Value
------------------------------- -----------
+----------------------- -----------
 TotalProcs              4
 TotalPages              25
 InUsePages              0
@@ -283,7 +283,7 @@ This section contains information about various global memory objects and the am
 
 ```output
 Global Memory Objects               Buffers
----------------------------------------------------
+----------------------------------  ----------------
 Resource                            576
 Locks                               96
 XDES                                61
@@ -321,7 +321,7 @@ This section describes Query Memory grant information. It also includes a snapsh
 
 ```output
 Query Memory Objects (default)           Value
-------------------------------------------------
+---------------------------------------- -------
 Grants                                    0
 Waiting                                   0
 Available                                 436307
@@ -368,7 +368,7 @@ The next table provides details of memory waits that occur because of insufficie
 
 ```output
 Optimization Queue (internal)      Value
----------------------------------------------------
+---------------------------------- ----------------
 Overall Memory                     4013162496
 Target Memory                      3673882624
 Last Notification                  1
@@ -376,7 +376,7 @@ Timeout                            6
 Early Termination Factor           5
 
 Small Gateway (internal)           Value
----------------------------------------------------
+---------------------------------- ----------------
 Configured Units                   32
 Available Units                    32
 Acquires                           0
@@ -385,7 +385,7 @@ Threshold Factor                   380000
 Threshold                          380000
 
 Medium Gateway (internal)          Value
----------------------------------------------------
+---------------------------------- ----------------
 Configured Units                   8
 Available Units                    8
 Acquires                           0
@@ -394,7 +394,7 @@ Threshold Factor                   12
 Threshold                          -1
 
 Big Gateway (internal)             Value
----------------------------------------------------
+---------------------------------- ----------------
 Configured Units                   1
 Available Units                    1
 Acquires                           0
@@ -403,7 +403,7 @@ Threshold Factor                   8
 Threshold                          -1
 
 Optimization Queue (default)       Value
----------------------------------------------------
+---------------------------------- ----------------
 Overall Memory                     4013162496
 Target Memory                      3542319104
 Last Notification                  1
@@ -411,7 +411,7 @@ Timeout                            6
 Early Termination Factor           5
 
 Small Gateway (default)            Value
----------------------------------------------------
+---------------------------------- ----------------
 Configured Units                   32
 Available Units                    32
 Acquires                           0
@@ -420,7 +420,7 @@ Threshold Factor                   380000
 Threshold                          380000
 
 Medium Gateway (default)           Value
----------------------------------------------------
+---------------------------------- ----------------
 Configured Units                   8
 Available Units                    8
 Acquires                           0
@@ -429,7 +429,7 @@ Threshold Factor                   12
 Threshold                          -1
 
 Big Gateway (default)              Value
----------------------------------------------------
+---------------------------------- ----------------
 Configured Units                   1
 Available Units                    1
 Acquires                           0
@@ -454,7 +454,7 @@ This section provides information about memory brokers that control cached memor
 
 ```output
 MEMORYBROKER_FOR_CACHE (internal)       Value
------------------------------------------------------
+--------------------------------------- -------------
 Allocations                             20040
 Rate                                    0
 Target Allocations                      3477904
@@ -463,7 +463,7 @@ Overall                                 3919104
 Last Notification                       1
 
 MEMORYBROKER_FOR_STEAL (internal)       Value
------------------------------------------------------
+--------------------------------------- -------------
 Allocations                             129872
 Rate                                    40
 Target Allocations                      3587776
@@ -471,8 +471,8 @@ Future Allocations                      0
 Overall                                 3919104
 Last Notification                       1
 
-MEMORYBROKER_FOR_RESERVE (internal)      Value
------------------------------------------------------
+MEMORYBROKER_FOR_RESERVE (internal)     Value
+--------------------------------------- -------------
 Allocations                             0
 Rate                                    0
 Target Allocations                      3457864
@@ -481,7 +481,7 @@ Overall                                 3919104
 Last Notification                       1
 
 MEMORYBROKER_FOR_CACHE (default)        Value
------------------------------------------------------
+--------------------------------------- -------------
 Allocations                             44592
 Rate                                    8552
 Target Allocations                      3511008
@@ -490,7 +490,7 @@ Overall                                 3919104
 Last Notification                       1
 
 MEMORYBROKER_FOR_STEAL (default)        Value
------------------------------------------------------
+--------------------------------------- -------------
 Allocations                             1432
 Rate                                    -520
 Target Allocations                      3459296
@@ -499,7 +499,7 @@ Overall                                 3919104
 Last Notification                       1
 
 MEMORYBROKER_FOR_RESERVE (default)      Value
------------------------------------------------------
+--------------------------------------- -------------
 Allocations                             0
 Rate                                    0
 Target Allocations                      3919104
