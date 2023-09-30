@@ -70,7 +70,7 @@ The following list discusses values and their descriptions:
 - **Available Virtual Memory**: This value shows the overall amount of free virtual memory for SQL Server process is 140,710,048,014,336 bytes (128 TB). For more information, see [Memory and Address Space Limits](/windows/win32/memory/memory-limits-for-windows-releases#memory-and-address-space-limits).
 - **Available Paging File**: This value shows the free paging file space. In the example, the value is 7,066,804,224 bytes.
 - **Working Set**: This value shows the overall amount of virtual memory that the SQL Server process has in RAM (isn't paged out) is 430,026,752 bytes.
-- **Percent of Committed Memory in WS**: This value shows the percentage of virtual memory allocated to the SQL Server process compared how much of this memory is in RAM (or is Working Set). The value of 100 percent shows that all of the committed memory is stored in RAM and 0 percent of it is paged out.
+- **Percent of Committed Memory in WS**: This value shows what percent of SQL Server allocated virtual memory is resides in in RAM (or is Working Set). The value of 100 percent shows that all of the committed memory is stored in RAM and 0 percent of it is paged out.
 - **Page Faults**: This value shows the overall amount of hard and soft page faults for the SQL Server. In the example, the value is 151,138.
 
 The remaining four values are binary or boolean.
@@ -108,7 +108,7 @@ The following list discusses values in the output and their descriptions:
 
 - **VM Committed**: This value shows the overall amount of virtual memory (VM) that SQL Server has committed (in KB). This means that memory used by the process is backed by physical memory or less frequently by page file. The previously reserved memory addresses are now backed by a physical storage; that is they're allocated. If Locked Pages in Memory is enabled, SQL Server uses an alternative method to allocate memory, AWE API and most the memory isn't reflected in this counter. See [Locked Pages Allocated](#Locked Pages Allocated) for those allocations. For more information, see [VirtualAlloc(), MEM_COMMIT](/windows/win32/api/memoryapi/nf-memoryapi-virtualalloc#:~:text=Meaning-,MEM_COMMIT,-0x00001000).
 
-- **Pages Allocated**: This value shows the total number of memory pages that are allocated by SQL Server.
+- **Pages Allocated**: This value shows the total number of memory pages that are allocated by SQL Server database engine.
 
 - **Locked Pages Allocated**: This value represents the amount of memory, in kilobytes (KB), that SQL Server has allocated and locked in physical RAM using the AWE API. It indicates how much memory SQL Server is actively using and has requested to be kept in memory to optimize performance. By locking pages in memory, SQL Server ensures that critical database pages are readily available and not swapped to disk. For more information, see [Address Windows Extensions (AWE) memory](/sql/relational-databases/memory-management-architecture-guide#address-windows-extensions-awe-memory). A value of zero indicates that the "locked pages in memory" feature is currently disabled and SQL Server uses virtual memory instead. In such a case the VM Committed value would represent the  memory allocated to SQL Server.
 
@@ -185,12 +185,12 @@ SM Commited                     0
 Pages Allocated                 5552
 ```
 
-The value of `Pages Allocated` shows the overall number of memory pages that are allocated to a process.
+The value of `Pages Allocated` shows the overall number of memory pages that are allocated to by a specific component (memory clerk, userstore, objectstore or cache store).
 
 > [!NOTE]
 > These node IDs correspond to the NUMA node configuration of the computer that's running SQL Server. The node IDs include possible software NUMA nodes that are defined on top of hardware NUMA nodes or on top of an SMP system. To find mapping between node IDs and CPUs for each node, see Information Event ID 17152. This event is logged in the Application log in Event Viewer when you start SQL Server.
 
-For an SMP system, you see only one table for each clerk type. This table resembles the following example.
+For an SMP system, you see only one table for each clerk type, not counting node = 64 used by DAC. This table resembles the following example.
 
 ```output
 MEMORYCLERK_SQLGENERAL (Total)     KB
@@ -230,8 +230,8 @@ GROUP BY TYPE
 This is an important section that provides a breakdown of different states data and index pages within the buffer pool, also known as data cache. The following output table lists details about the buffer pool and other information.
 
 ```output
-Buffer Pool                                        Pages
---------------------------------------------------------
+Buffer Pool                                       Pages
+----------------------------------------------    ---------
 Database                                          5404
 Simulated                                         0
 Target                                            16384000
@@ -269,12 +269,12 @@ InUsePages              0
 
 The following list discusses values in the output and their descriptions:
 
-- **TotalProcs**: This value shows the total cached objects currently in the procedure cache. This value matches the entries in the `sys.dm_exec_cached_plans` DMV.
+- **TotalProcs**: This value shows the total cached objects currently in the procedure cache. This value matches the number of entries in the `sys.dm_exec_cached_plans` DMV.
 
   > [!NOTE]
   > Because of the dynamic nature of this information, the match might not be exact. You can use PerfMon to monitor the SQL Server: Plan Cache object and the `sys.dm_exec_cached_plans` DMV for detailed information about the type of cached objects, such as triggers, procedures, and ad hoc objects.
 
-- **TotalPages**: Shows the cumulative pages used to store all the cached objects in the plan or procedure cache.
+- **TotalPages**: Shows the cumulative pages used to store all the cached objects in the plan or procedure cache. You can multiply this number by 8 KB, to get the value expressed in KBs. 
 - **InUsePages**: Shows the pages in the procedure cache that belong to procedures that are currently active. These pages can't be discarded.
 
 ## Global Memory Objects
@@ -444,7 +444,7 @@ Here's a description of some of these values:
 - **Available Units** - Indicates the number of slots or units available for concurrent queries to compile from the list of configured units. For example, if 32 units are available, but three queries are currently using compilation memory, then `Available Units` would be 32 minus 3, or 29 units.
 - **Acquires** - Indicates the number of units or slots acquired by queries to compile. If three queries are currently using memory from a gateway, then Acquires = 3.
 - **Waiters** - Indicates how many queries are waiting for compilation memory in a gateway. If all the units in a gateway are exhausted, the Waiters value is non-zero that shows the count of waiting queries.
-- **Threshold** - Indicates a gateway memory limit that determines where a query gets its memory from, or which gateway it stays in. If a query needs no more than the threshold value, it stays in the small gateway (a query always starts with the small gateway). If it needs more memory for compilation, it would go to the medium one, and if that threshold is still insufficient, it goes to the big gateway. For the small gateway, the threshold factor is 380,000 bytes (could be subject to change in future versions).
+- **Threshold** - Indicates a gateway memory limit that determines where a query gets its memory from, or which gateway it stays in. If a query needs no more than the threshold value, it stays in the small gateway (a query always starts with the small gateway). If it needs more memory for compilation, it would go to the medium one, and if that threshold is still insufficient, it goes to the big gateway. For the small gateway, the threshold factor is 380,000 bytes (could be subject to change in future versions) for x64 platform.
 - **Threshold Factor**: Determines the threshold value for each gateway. For the small gateway, since the threshold is predefined, the factor is also set to the same value. The threshold factors for the medium and big gateway are fractions of the total optimizer memory (Overall Memory in the optimization queue) and are set to 12 and 8, respectively. So, if the overall memory is adjusted because other SQL Server memory consumers require memory, the threshold factors would cause the thresholds to be dynamically adjusted as well.
 - **Timeout**: Indicates the value in minutes that defines how long a query waits for optimizer memory. If this timeout value is reached, the session stops waiting and raise error 8628 - `A time out occurred while waiting to optimize the query. Rerun the query.`
 
