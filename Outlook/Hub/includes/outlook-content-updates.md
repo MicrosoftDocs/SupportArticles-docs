@@ -2,6 +2,14 @@
 
 
 
+## Week of September 25, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 9/27/2023 | [Incorrect search results when using a date filter in the Outlook search bar](/outlook/troubleshoot/data-files/incorrect-search-results-for-search-bar-date-filter) | added |
+
+
 ## Week of September 18, 2023
 
 
@@ -16,11 +24,3 @@
 | Published On |Topic title | Change |
 |------|------------|--------|
 | 9/8/2023 | [Issues that can occur when you add multiple Exchange accounts to the same Outlook profile](/outlook/troubleshoot/profiles-and-accounts/issues-that-occur-when-adding-multiple-exchange-accounts) | modified |
-
-
-## Week of August 21, 2023
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 8/22/2023 | [Web links from Outlook and Teams open in Microsoft Edge in side-by-side view](/outlook/troubleshoot/message-body/view-emails-and-web-links-in-browser) | modified |
