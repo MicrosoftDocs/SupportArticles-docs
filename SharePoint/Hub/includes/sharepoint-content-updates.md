@@ -2,6 +2,14 @@
 
 
 
+## Week of September 25, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 9/25/2023 | [ResponseStatusNotOK when sharing a SharePoint or OneDrive site](/sharepoint/troubleshoot/sharing-and-permissions/responsestatusnotok-sharing-sharepoint-onedrive-site) | added |
+
+
 ## Week of September 18, 2023
 
 
