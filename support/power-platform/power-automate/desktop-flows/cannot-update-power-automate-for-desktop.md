@@ -28,7 +28,7 @@ When you try to open Power Automate for desktop for the first time, you receive 
 
 This issue might occur because the **Windows Update** service isn't running or is disabled.
 
-## Resolution 
+## Resolution
 
 To solve this issue, take one of these options:
 
