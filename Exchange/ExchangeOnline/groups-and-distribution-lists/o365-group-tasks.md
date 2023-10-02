@@ -306,11 +306,11 @@ Set-MailboxAutoReplyConfiguration -Identity <groupmailbox> -AutoReplyState Enabl
 ```
 
 > [!NOTE]
-> If your group mailbox has reached its allotted quota, you will see the "Microsoft.Exchange.Data.Storage.QuotaExceededException" error when you run the Set-MailboxAutoReplyConfiguration cmdlet. To resolve the error, use the following steps:
+> If your group mailbox has reached its allotted quota, you will receive a "Microsoft.Exchange.Data.Storage.QuotaExceededException" error when you run the Set-MailboxAutoReplyConfiguration cmdlet. To resolve the error, use the following steps:
 
 > 1. [Reduce the size of your group mailbox](/microsoft-365/admin/create-groups/group-mailbox-size-management).
 > 1. Wait 1 hour for the changes to take effect.
-> 1. Run the Set-MailboxAutoReplyConfiguration cmdlet again.
+> 1. Re-run the Set-MailboxAutoReplyConfiguration cmdlet.
 
 [Back to top](#summary)
 
