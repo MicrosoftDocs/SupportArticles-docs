@@ -1,6 +1,6 @@
 ---
 title:  Troubleshoot issues with IoT capabilities
-description: Resolve issues with read-only forms in Field Service.
+description: Resolve issues with IoT capabilities in Field Service.
 ms.author: vhorvath
 author: vhorvathms
 ms.reviewer: mhart

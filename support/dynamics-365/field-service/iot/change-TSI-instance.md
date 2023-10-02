@@ -2,7 +2,7 @@
 title: Can't change Time Series Insights instance
 description: Find out how to get your Time Series Insights instance changed for IoT capabilities in Field Service.
 ms.author: vhorvath
-author: vhorvathmss
+author: vhorvathms
 ms.reviewer: mhart
 ms.date: 06/15/2023
 ---
