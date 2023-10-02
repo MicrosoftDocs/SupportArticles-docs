@@ -2,6 +2,15 @@
 
 
 
+## Week of September 25, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 9/26/2023 | [Support limitations for Microsoft 365 Apps issues](/microsoft-365/troubleshoot/miscellaneous/issue-support-limitations) | added |
+| 9/28/2023 | [Support limitations for issues with Microsoft 365 Apps](/microsoft-365/troubleshoot/miscellaneous/issue-support-limitations) | modified |
+
+
 ## Week of August 28, 2023
 
 
