@@ -20,6 +20,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 03/31/2022
 ---
+
 # Outlook Calendar displays working hours as grey
 
 In the Calendar module of Microsoft Outlook and when you use the Scheduling Assistant, some calendars of shared mailboxes or rooms display working hours as having a grey background while other calendars display working hours as having a white background. This issue occurs while Outlook is connected to Microsoft Exchange Server. In other clients, such as Outlook Web App (OWA), the working hours of all calendars are displayed as white.
@@ -37,4 +38,6 @@ For more information about the new elements in Exchange Server, see [DaysOfWeek 
 
 ## Status
 
-Microsoft is aware of this issue and will update this article when a fix becomes available.
+This issue is fixed with build 16.0.16626.20196. This change is in all production channels except Semi-Annual Enterprise Channel. Semi-Annual Enterprise Channel should get the fix in January 2024.
+
+
