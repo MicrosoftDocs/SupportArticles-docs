@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot bookings from the Resource Scheduling Optimization add-in for Dynamics 365 Field Service
-description: Resolve errors with privileges in the Resource Scheduling Optimization add-in for Dynamics 365 Field Service
+description: Resolve issues with bookings in the Resource Scheduling Optimization add-in for Dynamics 365 Field Service.
 ms.author: feiqiu
 author: feifeiqiu
 ms.reviewer: mhart
