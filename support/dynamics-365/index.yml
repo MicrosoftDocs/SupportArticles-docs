@@ -20,6 +20,9 @@ additionalContent:
         - title: Dynamics 365 Commerce
           summary: Troubleshooting articles for Dynamics 365 Commerce
           url: commerce/welcome-commerce.yml
+        - title: Dynamics 365 Field Service
+          summary: Troubleshooting articles for Dynamics 365 Field Service
+          url: field-service/welcome-field-service.yml
         - title: Dynamics 365 Finance
           summary: Troubleshooting articles for Dynamics 365 Finance
           url: finance/welcome-finance.yml
