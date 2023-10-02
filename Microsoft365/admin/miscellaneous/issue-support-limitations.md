@@ -34,7 +34,7 @@ Microsoft 365 subscription support doesn't cover the following issues:
 - Extensive troubleshooting of performance issues
 - Extensive troubleshooting when a product stops responding or crashes
 
-If you would like this level of support, you can evaluate [Unified Support](https://www.microsoft.com/unifiedsupport).
+If you want this level of support, you can evaluate [Unified Support](https://www.microsoft.com/unifiedsupport).
 
 ## Other support options
 
