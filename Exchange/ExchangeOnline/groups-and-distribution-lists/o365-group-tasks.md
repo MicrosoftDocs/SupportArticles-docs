@@ -1,6 +1,6 @@
 ---
 title: Common tasks to manage Microsoft 365 groups
-description: Describes common tasks about how to manage Microsoft 365 groups. For example, groups and teams, group delegation, group email management, and some other tasks.
+description: Describes common tasks to manage Microsoft 365 groups. 
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -304,6 +304,13 @@ To configure automatic reply messages for a specific Microsoft 365 group mailbox
 ```powershell
 Set-MailboxAutoReplyConfiguration -Identity <groupmailbox> -AutoReplyState Enabled -InternalMessage "<Internal auto-reply message>" -ExternalMessage "<External auto-reply message>"
 ```
+
+> [!NOTE]
+> If your group mailbox has reached its allotted quota, you will receive a "Microsoft.Exchange.Data.Storage.QuotaExceededException" error when you run the Set-MailboxAutoReplyConfiguration cmdlet. To resolve the error, use the following steps:
+
+> 1. [Reduce the size of your group mailbox](/microsoft-365/admin/create-groups/group-mailbox-size-management).
+> 1. Wait 1 hour for the changes to take effect.
+> 1. Re-run the Set-MailboxAutoReplyConfiguration cmdlet.
 
 [Back to top](#summary)
 
