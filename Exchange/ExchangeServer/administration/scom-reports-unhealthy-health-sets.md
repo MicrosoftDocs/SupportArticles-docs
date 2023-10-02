@@ -16,7 +16,7 @@ appliesto:
   - Exchange Server 2019
   - Exchange Server 2016
 search.appverid: MET150
-ms.date: 09/30/2023
+ms.date: 10/02/2023
 ---
 
 # SCOM reports unhealthy health sets
@@ -56,7 +56,7 @@ When the Exchange Health Manager Worker process (MSExchangeHMWorker.exe) creates
 
 - The email address policy remains enabled because the Exchange Health Manager Worker process doesn't retry the failed operation. Depending on your organization's email address policy, the SMTP address of the mailbox could be assigned a different value than the UPN.
 
-- Some [Active Monitoring](/exchange/high-availability/managed-availability/managed-availability) probes generate errors in the Applications and Services event log if the SMTP address of a mailbox doesn't match the UPN. For example, the `RpsDeepTestPSProxyProbe/CertificateSid.<CN of health mailbox>` probe generates the Applications and Services event log error message that's displayed in the "Symptoms" section. Such errors cause Operations Manager to report some health sets as unhealthy.
+- Some [Active Monitoring](/exchange/high-availability/managed-availability/managed-availability) probes generate errors in the Applications and Services event log if the SMTP address of a mailbox doesn't match the UPN. For example, the `RpsDeepTestPSProxyProbe/CertificateSid.<CN of health mailbox>` probe generates the error message in the Applications and Services event log that's displayed in the "Symptoms" section. Such errors cause Operations Manager to report some health sets as unhealthy.
 
 ## Resolution
 
