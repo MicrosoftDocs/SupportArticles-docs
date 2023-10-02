@@ -1,5 +1,5 @@
 ---
-title: Operations Manager reports unhealthy health sets
+title: SCOM reports unhealthy health sets
 description: Resolves an issue in which Active Monitoring probes can't find a Managed Availability health mailbox, and SCOM reports unhealthy health sets.
 author: cloud-writer
 ms.author: meerak
