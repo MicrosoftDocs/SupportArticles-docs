@@ -241,4 +241,4 @@ This article provides a resolution to the issues related to Power Automate brows
     1. In the tree on the left side, go to **Event Viewer (Local)** > **Windows Logs** > **Application**.
     1. Look for the errors related to Power Automate for desktop.
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
