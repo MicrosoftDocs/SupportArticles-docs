@@ -1,11 +1,12 @@
 ---
 title: Troubleshoot installation and upgrade issues
 description: Introduces resolutions for common issues with Visual Studio installation and upgrade.
-ms.date: 05/29/2023
+ms.date: 10/03/2023
 author: HaiyingYu
 ms.author: haiyingyu
-ms.reviewer: meghaanand
+ms.reviewer: meghaanand, v-jayaramanp
 ---
+
 # Troubleshoot Visual Studio installation and upgrade issues
 
 _Applies to:_&nbsp;Visual Studio
@@ -44,8 +45,8 @@ If you encountered an issue when updating, try deleting the Visual Studio Instal
 
 #### 5. Report the problem to support
 
-In some situations, such as when there are corrupted files, issues might require case-by-case troubleshooting. 
-Report product issues to us via the [Report a Problem](/visualstudio/ide/how-to-report-a-problem-with-visual-studio) tool that appears both in the Visual Studio Installer and in the Visual Studio IDE. If you're an IT Administrator and don't have Visual Studio installed, you can submit [IT Admin feedback here](https://aka.ms/vs/admin/feedback).
+Troubleshooting may be necessary on a case-by-case basis in specific situations, like when there are corrupted files.
+Report product issues to us using the [Report a Problem](/visualstudio/ide/how-to-report-a-problem-with-visual-studio) tool that appears both in the Visual Studio Installer and in the Visual Studio IDE. If you are an IT Administrator and don't have Visual Studio installed, you can submit [IT Admin feedback here](https://aka.ms/vs/admin/feedback).
 
 Follow these steps to submit the problem to Microsoft Support:
 
@@ -103,16 +104,16 @@ If none of the previous steps help you successfully install or upgrade Visual St
 
 To resolve issues with a [network installation](/visualstudio/install/create-a-network-installation-of-visual-studio), see [Error Codes](/visualstudio/install/create-a-network-installation-of-visual-studio#error-codes) or [Troubleshoot network-related errors when you install or use Visual Studio](troubleshoot-network-related-errors.md).
 
-## Administrator Updates
+## Administrator updates
 
 Administrator updates may not be applied correctly due to various situations. For more information, see [Administrator updates troubleshooting error codes](/visualstudio/install/applying-administrator-updates#verification-reports-and-troubleshooting-error-codes).
 
 You can use the following methods to provide feedback about Visual Studio administrator updates or report issues that affect the updates:
 
-* Ask questions to the community at the [Visual Studio Setup Q&A Forum](/answers/topics/vs-setup.html).
-* Go to the [Visual Studio support page](https://visualstudio.microsoft.com/vs/support/), and check whether your issue is listed in the FAQ.
-* [Provide feature feedback or report a problem](https://aka.ms/vs/wsus/feedback) to the Visual Studio team regarding your experience.
-* Contact your organization’s technical account manager for Microsoft.
+- Ask questions to the community at the [Visual Studio Setup Q&A Forum](/answers/topics/vs-setup.html).
+- Go to the [Visual Studio support page](https://visualstudio.microsoft.com/vs/support/), and check whether your issue is listed in the FAQ.
+- [Provide feature feedback or report a problem](https://aka.ms/vs/wsus/feedback) to the Visual Studio team regarding your experience.
+- Contact your organization's technical account manager for Microsoft.
 
 ## Collect installation logs for Microsoft Support
 
