@@ -16,7 +16,7 @@ appliesto:
   - Exchange Online
 search.appverid: 
   - MET150
-ms.date: 03/31/2022
+ms.date: 10/03/2023
 ---
 # Delays in provisioning of user/mailbox or synchronizing changes in Exchange Online
 
@@ -36,7 +36,7 @@ Select the button below to launch a diagnostic in the Microsoft 365 admin center
 
 The service typically takes less than 30 minutes to provision a user or to sync changes for a user. However, in some situations these processes can take up to 24 hours.
 
-If the issue is not resolved by the diagnostic, use the following steps:
+If the diagnostic doesn't resolve the issue, use the following steps:
 
 1. Verify that the user is assigned a valid Exchange Online license in the Microsoft 365 admin center.
 2. [Resolve](https://support.microsoft.com/help/2741233) any validation errors that the user receives.
