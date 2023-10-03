@@ -263,8 +263,6 @@
       href: ../miscellaneous/issue-support-limitations.md
     - name: Third-party network solutions on Microsoft 365 traffic
       href: ../miscellaneous/office-365-third-party-network-devices.md
-    - name: Troubleshoot Cortana issues
-      href: ../miscellaneous/issues-in-cortana.md
     - name: Web sites lose SSL certificate bindings
       href: ../miscellaneous/web-sites-lose-ssl-certificate-bindings.md
   - name: Sign-in
