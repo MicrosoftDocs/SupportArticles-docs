@@ -1,6 +1,6 @@
 ---
-title: Delays in provisioning of user/mailbox or synchronizing changes in Exchange Online
-description: Describes an issue in which provisioning of user/mailbox or synchronizing changes in Exchange Online delays. Provides a solution.
+title: Delays in provisioning a user or mailbox
+description: Provides a resolution for an issue in which there are delays when provisioning a user or mailbox, or synchronizing changes in Exchange Online.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -16,20 +16,30 @@ appliesto:
   - Exchange Online
 search.appverid: 
   - MET150
-ms.date: 03/31/2022
+ms.date: 10/03/2023
 ---
 # Delays in provisioning of user/mailbox or synchronizing changes in Exchange Online
 
 ## Symptoms
 
-When a user is created or changed in Microsoft 365, or synced to Azure Active Directory from the on-premises environment, no mailbox is provisioned for the user, or the change isn't reflected in Exchange Online.
+When a user is created or changed in Microsoft 365, or synced to Azure Active Directory from the on-premises environment, either no mailbox is provisioned for the user, or the change isn't reflected in Exchange Online.
 
 ## Resolution
 
-Here's how to fix this issue:
+> [!NOTE]
+> This feature requires a Microsoft 365 administrator account. This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
 
-1. If a mailbox hasn't been created, make sure the user was assigned a valid Exchange Online license in the Microsoft 365 Admin Portal.
-2. After the license has been assigned or the user's properties modified, allow 30 minutes for the change to apply.
-3. Make sure the user doesn't receive a validation error. For more information about viewing validation errors, see this [article](https://support.microsoft.com/help/2741233).
-4. Check if a Service Health notification in the Microsoft 365 admin portal applies.
-5. The service typically takes less than 30 minutes to provision a user or to sync changes for a user. It could take up to 24 hours for provisioning to occur or for changes to sync. If the issue persists after 24 hours, submit a support service request.
+Select the button below to launch a diagnostic in the Microsoft 365 admin center. The diagnostic will guide you to resolve various error conditions that can cause mailboxes to not be created.
+
+>[!div class="nextstepaction"]
+>[Run Tests: EXO Recipient Object Failures](https://aka.ms/PillarEXORecipients)
+
+The service typically takes less than 30 minutes to provision a user or to sync changes for a user. However, in some situations these processes can take up to 24 hours.
+
+If the diagnostic doesn't resolve the issue, use the following steps:
+
+1. Verify that the user is assigned a valid Exchange Online license in the Microsoft 365 admin center.
+2. [Resolve](https://support.microsoft.com/help/2741233) any validation errors that the user receives.
+3. Check whether a Service Health notification in the Microsoft 365 admin center applies to your environment.
+
+If the issue persists after 24 hours, contact [Microsoft Support](https://support.microsoft.com/contactus/).
