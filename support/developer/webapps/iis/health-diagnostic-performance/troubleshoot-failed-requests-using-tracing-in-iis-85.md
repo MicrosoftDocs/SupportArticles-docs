@@ -35,14 +35,14 @@ Install IIS 8.5 before you can perform the tasks described in this article. Brow
 
 ### Sign in as administrator
 
-Make sure that the account that you use to sign in is the administrator account or is in the administrators group.
+Ensure that the account that you use to sign in is the administrator account or is in the administrators group.
 
 > [!NOTE]
 > Being in the administrators group doesn't grant you complete administrator user rights by default. You must run applications as administrator by right-clicking on the application icon and selecting **Run as administrator**.
 
 ### Make a backup
 
-Take a backup of the configuration files before performing the following tasks:
+Make a backup of the configuration files before performing the following tasks:
 
 1. Select the Windows logo key and the **X** key simultaneously, select **Command Prompt (Admin)**, and then select **Yes**.
 
@@ -99,29 +99,29 @@ After you enable Failed Request Tracing, you need to configure the path where th
 
 1. In the **Edit Website Failed Request Tracing Settings** dialog box, configure the following:
 
-   1. Select the **Enable** checkbox.
-   2. Keep the defaults for the other settings.
+    - Select the **Enable** checkbox.
+    - Keep the defaults for the other settings.
 
     :::image type="content" source="media/troubleshoot-failed-requests-using-tracing-in-iis-85/edit-web-site-frt-settings-dialog.png" alt-text="Screenshot displays Edit Web Site Failed Request Tracing Settings dialog box with command populating Directory field and Enable checkbox selected.":::
 
 1. Select **OK**.
 
-Failed Request Tracing logging is now enabled for the Default Web Site. Check the _%windir%\\system32\\inetsrv\\config\\applicationHost.config_ file to confirm that the configuration looks as follows:
+    Failed Request Tracing logging is now enabled for the Default Web Site. Check the _%windir%\\system32\\inetsrv\\config\\applicationHost.config_ file to confirm that the configuration looks as follows:
 
-```xml
-<system.applicationHost>
-   <!-- other system configuration --> 
-   <sites> 
-      <site name="Default Web Site" id="1"> 
-         <!-- other site configuration --> 
-         <traceFailedRequestsLogging  enabled="true" /> 
-      </site> 
-      <!-- site & app defaults --> 
-      <!-- other sites configuration --> 
-   </sites> 
-   <!-- other system configuration --> 
-</system.applicationHost>
-```
+    ```xml
+    <system.applicationHost>
+       <!-- other system configuration --> 
+       <sites> 
+          <site name="Default Web Site" id="1"> 
+             <!-- other site configuration --> 
+             <traceFailedRequestsLogging  enabled="true" /> 
+          </site> 
+          <!-- site & app defaults --> 
+          <!-- other sites configuration --> 
+       </sites> 
+       <!-- other system configuration --> 
+    </system.applicationHost>
+    ```
 
 ### Step 2: Configure your failure definitions
 
@@ -150,31 +150,31 @@ In this step, configure the failure definitions for your URL, including what are
     > [!NOTE]
     > When you install the Tracing role service, IIS installs the WWW Server, ASP, and ISAPI Extension trace providers by default. If you install ASP.NET 2.0 or above, IIS automatically adds the ASPNET trace provider. Additional providers are installed by the Application Request Routing (ARR) installer package, which also installs the URL Rewrite module, Web Farm Management, and External Cache. You can add more trace providers by using the `<add>` element within the `<traceProviderDefinitions>` element.
 
-    :::image type="content" source="media/troubleshoot-failed-requests-using-tracing-in-iis-85/add-frtr-www-server-security-selected.png" alt-text="Screenshot of Add Failed Request Tracing Rule Wizard showing W W W Server selected from Providers list and Security being selected from the Areas menu.":::
+    :::image type="content" source="media/troubleshoot-failed-requests-using-tracing-in-iis-85/add-frtr-www-server-security-selected.png" alt-text="Screenshot of Add Failed Request Tracing Rule Wizard showing WWW Server selected from Providers list and Security being selected from the Areas menu.":::
 1. Select **Finish**.
 
 1. You see the following definition for the **Default Web Site**:
 
     :::image type="content" source="media/troubleshoot-failed-requests-using-tracing-in-iis-85/frtr-www-server-404-2.png" alt-text="Screenshot of Failed Request Tracing Rules page showing WWW Server entered as Associated Provider and 404 point 2 as Status Code.":::
 
-IIS Manager writes the configuration to the `%systemdrive%\inetpub\wwwroot\web.config` file by using a `<location>` tag. The configuration should resemeble the following:
-
-```xml
-<configuration> 
-    <system.webServer> 
-        <tracing> 
-            <traceFailedRequests> 
-                <add path="*"> 
-                    <traceAreas> 
-                        <add provider="WWW Server" areas="Security" verbosity="Verbose" /> 
-                    </traceAreas> 
-                    <failureDefinitions statusCodes="404.2" /> 
-                </add> 
-            </traceFailedRequests> 
-        </tracing> 
-    </system.webServer> 
-</configuration>
-```
+    IIS Manager writes the configuration to the `%systemdrive%\inetpub\wwwroot\web.config` file by using a `<location>` tag. The configuration should resemeble the following:
+    
+    ```xml
+    <configuration> 
+        <system.webServer> 
+            <tracing> 
+                <traceFailedRequests> 
+                    <add path="*"> 
+                        <traceAreas> 
+                            <add provider="WWW Server" areas="Security" verbosity="Verbose" /> 
+                        </traceAreas> 
+                        <failureDefinitions statusCodes="404.2" /> 
+                    </add> 
+                </traceFailedRequests> 
+            </tracing> 
+        </system.webServer> 
+    </configuration>
+    ```
 
 ## Test and view the failure request log file
 
@@ -182,7 +182,7 @@ This section helps you to generate a failed request and view the resulting trace
 
 ### Step 1: Generate an error and the failure request log file
 
-1. Open a new Internet Explorer window. 
+1. Open a new Internet Explorer window.
 1. Enter the `http://localhost/test.asp` and press <kbd>ENTER</kbd>.
    The "HTTP Error 404.2 - Not Found" error message is displayed.
 
@@ -194,10 +194,13 @@ This section helps you to generate a failed request and view the resulting trace
 
     :::image type="content" source="media/troubleshoot-failed-requests-using-tracing-in-iis-85/w3svc1-fr-log.png" alt-text="Screenshot of W 3 S V C 1 folder in failed Req Log Files directory.":::
 
-    **Note:** When IIS writes the failed request log file, it writes one file per failed request. A _freb.xsl_ style sheet is also written, one per directory. This helps when you view the resulting failure request log files (such as _fr000001.xml_ in this sample).
+    > [!NOTE]
+    > When IIS writes the failed request log file, it writes one file per failed request. A _freb.xsl_ style sheet is also written, one per directory. This helps when you view the resulting failure request log files (such as _fr000001.xml_ in this sample).
+
 1. Right-click the log file for the 404.2 error, and select **Open With** -> **Internet Explorer**. If this is the first time that you're opening a Failed Request Tracing file, you must add **about:internet** to the list of trusted sites, since Internet Explorer's Enhanced Security Configuration is enabled by default. If so, you see the following:  
 
     :::image type="content" source="media/troubleshoot-failed-requests-using-tracing-in-iis-85/ie-blocked-dialog.png" alt-text="Screenshot of Internet Explorer dialog box with Continue to prompt when website content is blocked option selected.":::
+
 1. In the **Internet Explorer** dialog box, add **about:internet** to the list of trusted sites by the following steps:
     1. Select the **Tools** menu, and then select **Internet Options**.
     1. Select the **Security** tab.
