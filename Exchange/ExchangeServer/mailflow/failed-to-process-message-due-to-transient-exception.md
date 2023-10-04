@@ -1,6 +1,6 @@
 ---
-title: "Failed to process message due to a transient exception" error in the message tracking logs
-description: Works around an issue in which Exchange Server logs a "Failed to process message due to a transient exception" error when you send an email message that has an attachment.
+title: '"Failed to process message due to a transient exception" error in message tracking logs'
+description: 'Works around an issue in which Exchange Server logs a "Failed to process message due to a transient exception" error when you send an email message that has an attachment.'
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -19,7 +19,7 @@ search.appverid: MET150
 ms.date: 10/04/2023
 ---
 
-# "Failed to process message due to a transient exception" error in the message tracking logs
+# "Failed to process message due to a transient exception" error in message tracking logs
 
 ## Symptoms
 
@@ -38,17 +38,18 @@ IOException: There is not enough space on the disk.], [DeliveryPriority,Normal]}
 ```
 
 > [!NOTE]
-> To search the message tracking logs on a specific server, run the following command that uses the [Get-MessageTrackingLog](/powershell/module/exchange/get-messagetrackinglog#-server) cmdlet:
+> To search the message tracking logs on a specific server, run the following command:
 >
 > ```PowerShell
-> OutputGet-MessageTrackingLog -Server <server name> -Start <start of date range> -End <end of date range> -Sender <SMTP address> -EventId "SUBMITDEFER" -Source "STOREDRIVER" | Select -Property Timestamp,EventId,Source,EventData | FL
+> Get-MessageTrackingLog -Server <server name> -Start <start of date range> -End <end of date range> -Sender <SMTP address> -EventId "SUBMITDEFER" -Source "STOREDRIVER" | Select -Property Timestamp,EventId,Source,EventData | FL
 > ```
 
 Similarly, if you search the Exchange Server [connectivity logs](/exchange/mail-flow/transport-logs/connectivity-logging), you find an entry that displays the following information:
 
 ```Output
 Direction: ">"
-Description: "Failed; HResult: 1140850693; DiagnosticInfo: Stage:CreateMailItem, SmtpResponse:431-4.3.1 STOREDRV; disk is full
+Description: "Failed; HResult: 1140850693; DiagnosticInfo: Stage:CreateMailItem,
+SmtpResponse:431-4.3.1 STOREDRV; disk is full
 431 4.3.1 STOREDRV.Submit.Exception:StorageTransientException.IOException;
 Failed to process message due to a transient exception with message The message content has become corrupted.
 IOException: There is not enough space on the disk."
@@ -58,7 +59,7 @@ IOException: There is not enough space on the disk."
 
 ## Cause
 
-When you send an email message that has an attachment that exceeds 128 KB, the [MailboxSubmission service](/exchange/mail-flow/mail-flow#understanding-the-transport-pipeline) on Exchange Server 2016 and later versions creates a temporary file in the system temporary folder to process the attachment. However, if the drive that contains the system temporary folder has insufficient disk space to create the temporary file, Exchange Server drops the email message. In that scenario, Exchange Server doesn't send a non-delivery report (NDR) to the sender and doesn't retry delivery.
+When you send an email message that has an attachment that exceeds 128 KB, the [Mailbox Transport Submission service](/exchange/mail-flow/mail-flow#understanding-the-transport-pipeline) on Exchange Server 2016 and later versions creates a temporary file in the system temporary folder to process the attachment. However, if the drive that contains the system temporary folder has insufficient disk space to create the temporary file, Exchange Server drops the email message. In that scenario, Exchange Server doesn't send a non-delivery report (NDR) to the sender and doesn't retry delivery.
 
 ## Workaround
 

@@ -517,7 +517,7 @@
           href: ../mailflow/external-or-application-created-emails-cannot-be-delivered.md
         - name: External users can't send emails to distribution group
           href: ../mailflow/external-user-cannot-send-email-to-distribution-group.md
-        - name: "Failed to process message due to a transient exception" error
+        - name: '"Failed to process message due to a transient exception" error'
           href: ../mailflow/failed-to-process-message-due-to-transient-exception.md
         - name: Messages aren't evenly distributed
           href: ../mailflow/uneven-distribution-messages-basicauth-basicauthrequiretls.md
