@@ -1,6 +1,6 @@
 ---
 title: '"Failed to process message due to a transient exception" error in message tracking logs'
-description: 'Works around an issue in which Exchange Server logs a "Failed to process message due to a transient exception" error when you send an email message that has an attachment.'
+description: Works around an issue in which Exchange Server logs an error message when you send an email message that has an attachment.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
