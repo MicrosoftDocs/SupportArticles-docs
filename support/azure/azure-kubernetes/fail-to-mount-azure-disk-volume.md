@@ -59,10 +59,10 @@ Refer to the following script as an example:
 
 ```yml
 affinity:
-nodeAffinity:
+  nodeAffinity:
     requiredDuringSchedulingIgnoredDuringExecution:
-    nodeSelectorTerms:
-    - matchExpressions:
+      nodeSelectorTerms:
+      - matchExpressions:
         - key: topology.disk.csi.azure.com/zone
         operator: In
         values:
