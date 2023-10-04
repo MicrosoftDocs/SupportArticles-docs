@@ -141,6 +141,9 @@ items:
       - name: Azure Functions
         tocHref: /troubleshoot/azure/azure-functions
         topicHref: /troubleshoot/azure/azure-functions/welcome-azure-functions
+      - name: Azure Cosmos DB
+        tocHref: /troubleshoot/azure/cosmos-db/
+        topicHref: ../azure/cosmos-db/index.yml
 
     - name: Microsoft Dynamics 365
       tocHref: /troubleshoot/dynamics-365/
