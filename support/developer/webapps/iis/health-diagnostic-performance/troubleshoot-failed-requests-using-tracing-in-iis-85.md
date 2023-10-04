@@ -12,11 +12,11 @@ _Applies to:_ &nbsp; Internet Information Services 8.5
 
 ## Introduction
 
-Request-based tracing is available both in stand-alone IIS Servers and on Microsoft Azure Web Sites (WAWS) and provides a way to determine what exactly is happening with your requests and why it's happening, if you can reproduce the problem that you're experiencing. Problems like poor performance on some requests, or authentication-related failures on other requests, or the server 500 error from ASP or ASP.NET can often be difficult to troubleshoot, unless you have captured the trace of the problem when it occurs. This article discusses Failed Request Tracing on IIS Server. For information about doing this with Microsoft Azure Web Sites, see [Troubleshoot an app in Azure App Service using Visual Studio](/azure/app-service/troubleshoot-dotnet-visual-studio).
+Request-based tracing is available both in stand-alone IIS Servers and on Microsoft Azure Web Sites (WAWS). If you can reproduce the problem that you're experiencing, Request-based tracing provides a way to determine what exactly is happening with your requests and why it's happening. Problems such as poor performance on some requests, authentication-related failures on other requests, or the server 500 error from ASP or ASP.NET can often be difficult to troubleshoot, unless you have captured the trace of the problem when it occurs. This article discusses Failed Request Tracing on IIS Server. For information about doing this with Microsoft Azure Web Sites, see [Troubleshoot an app in Azure App Service using Visual Studio](/azure/app-service/troubleshoot-dotnet-visual-studio).
 
 Failed Request Tracing is designed to buffer the trace events for a request and only flush them to disk if the request fails, where you provide the definition of _failure_. If you want to know why your requests are returning a specific HTTP status code, for example, 401 or 404, or if a request is taking a while to process or isn't responding, then you can use Failed Request Tracing.
 
-The tasks that are illustrated in this article include:
+The tasks that are explained in this article include:
 
 - Enabling the Failed Request Tracing module.
 - Configuring Failed Request Tracing log-file semantics.
@@ -27,7 +27,7 @@ The tasks that are illustrated in this article include:
 
 ### Install IIS
 
-Install IIS 8.5 before you can perform the tasks in this article. Browse to `http://localhost/` and verify that the Internet Information Services splash screen is displayed. If IIS isn't installed, see [Installing IIS 8.5 on Windows Server 2012 R2](/iis//install/installing-iis-85/installing-iis-85-on-windows-server-2012-r2) for installation instructions. When installing IIS, make sure that you also install the following features:
+Install IIS 8.5 before you can perform the tasks described in this article. Browse to `http://localhost/` and verify that the Internet Information Services splash screen is displayed. If IIS isn't installed, see [Installing IIS 8.5 on Windows Server 2012 R2](/iis//install/installing-iis-85/installing-iis-85-on-windows-server-2012-r2) for installation instructions. When installing IIS, make sure that you also install the following features:
 
 - ASP.NET 3.5 (under **Web Server (IIS)**/**Web Server**/**Application Development Features**/**ASP.NET 3.5**)
 - ASP.NET 4.5 (under **Web Server (IIS)**/**Web Server**/**Application Development Features**/**ASP.NET 4.5**)
@@ -35,20 +35,20 @@ Install IIS 8.5 before you can perform the tasks in this article. Browse to `htt
 
 ### Sign in as administrator
 
-Ensure that the account that you use to sign in is the administrator account or is in the administrators group.
+Make sure that the account that you use to sign in is the administrator account or is in the administrators group.
 
 > [!NOTE]
 > Being in the administrators group doesn't grant you complete administrator user rights by default. You must run applications as administrator by right-clicking on the application icon and selecting **Run as administrator**.
 
 ### Make a backup
 
-Make a backup of the configuration before doing the following tasks in this article. To do this, follow these steps:
+Take a backup of the configuration files before performing the following tasks:
 
 1. Select the Windows logo key and the **X** key simultaneously, select **Command Prompt (Admin)**, and then select **Yes**.
 
     :::image type="content" source="media/troubleshoot-failed-requests-using-tracing-in-iis-85/cmd-admin-in-task-bar.png" alt-text="Screenshot of Command Prompt Admin in Windows task bar.":::
 
-1. In the command prompt, run the following command:
+1. At the command prompt, run the following command:
 
     ```console
     %windir%\system32\inetsrv\appcmd add backup cleanInstall
@@ -86,7 +86,7 @@ To disable ASP, follow these steps:
 
 ## Enable Failed Request Tracing
 
-After you enable Failed Request Tracing, you need to configure where the log files will reside. In this section, you will enable Failed Request Tracing for the default web site and specify where to put the log files, and then configure the failure for which to generate failure logs.
+After you enable Failed Request Tracing, you need to configure the path where the log files will reside. In this section, you will enable Failed Request Tracing for the default web site and specify where to store the log files, and then configure the failure for which to generate failure logs.
 
 ### Step 1: Enable Failed Request Tracing for the site and configure the log file directory
 
@@ -99,8 +99,8 @@ After you enable Failed Request Tracing, you need to configure where the log fil
 
 1. In the **Edit Website Failed Request Tracing Settings** dialog box, configure the following:
 
-    - Select the **Enable** checkbox.
-    - Keep the defaults for the other settings.
+   1. Select the **Enable** checkbox.
+   2. Keep the defaults for the other settings.
 
     :::image type="content" source="media/troubleshoot-failed-requests-using-tracing-in-iis-85/edit-web-site-frt-settings-dialog.png" alt-text="Screenshot displays Edit Web Site Failed Request Tracing Settings dialog box with command populating Directory field and Enable checkbox selected.":::
 
@@ -125,7 +125,7 @@ Failed Request Tracing logging is now enabled for the Default Web Site. Check th
 
 ### Step 2: Configure your failure definitions
 
-In this step, configure the failure definitions for your URL, including what areas to trace. You will troubleshoot a 404.2 status code that is returned by IIS for any requests to extensions that haven't yet been enabled. It helps you determine which particular extensions you need to enable. For more information, see [HTTP status codes in IIS](../www-administration-management/http-status-code.md).
+In this step, configure the failure definitions for your URL, including what areas to trace. You will troubleshoot a 404.2 status code that's returned by IIS for any requests to extensions that haven't yet been enabled. It helps you determine which particular extensions you need to enable. For more information, see [HTTP status codes in IIS](../www-administration-management/http-status-code.md).
 
 1. Open a command prompt with administrator user rights, and navigate to _%systemdrive%\\windows\\system32\\inetsrv_.
 1. Run `inetmgr` to open IIS Manager.
@@ -155,9 +155,9 @@ In this step, configure the failure definitions for your URL, including what are
 
 1. You see the following definition for the **Default Web Site**:
 
-    :::image type="content" source="media/troubleshoot-failed-requests-using-tracing-in-iis-85/frtr-www-server-404-2.png" alt-text="Screenshot of Failed Request Tracing Rules page showing W W W Server entered as Associated Provider and 404 point 2 as Status Code.":::
+    :::image type="content" source="media/troubleshoot-failed-requests-using-tracing-in-iis-85/frtr-www-server-404-2.png" alt-text="Screenshot of Failed Request Tracing Rules page showing WWW Server entered as Associated Provider and 404 point 2 as Status Code.":::
 
-IIS Manager writes the configuration to the `%systemdrive%\inetpub\wwwroot\web.config` file by using a `<location>` tag. The configuration should look as:
+IIS Manager writes the configuration to the `%systemdrive%\inetpub\wwwroot\web.config` file by using a `<location>` tag. The configuration should resemeble the following:
 
 ```xml
 <configuration> 
@@ -178,13 +178,13 @@ IIS Manager writes the configuration to the `%systemdrive%\inetpub\wwwroot\web.c
 
 ## Test and view the failure request log file
 
-In this section, generate a failed request and view the resulting trace log. You already configured IIS to capture trace logs for `http://localhost/*.asp` requests that fail with an HTTP response code of 404.2. Now verify that it works.
+This section helps you to generate a failed request and view the resulting trace log. You already configured IIS to capture trace logs for `http://localhost/*.asp` requests that fail with an HTTP response code of 404.2. Now verify that it works.
 
 ### Step 1: Generate an error and the failure request log file
 
-1. Open a new Internet Explorer window.
-1. Enter the following address: `http://localhost/test.asp`.
-1. You get an "HTTP Error 404.2 - Not Found" error.
+1. Open a new Internet Explorer window. 
+1. Enter the `http://localhost/test.asp` and press <kbd>ENTER</kbd>.
+   The "HTTP Error 404.2 - Not Found" error message is displayed.
 
     :::image type="content" source="media/troubleshoot-failed-requests-using-tracing-in-iis-85/ie-http-404-2-error.png" alt-text="Screenshot of Internet Explorer window displaying H T T P Error 404 point 2 dash Not Found message page.":::
 
