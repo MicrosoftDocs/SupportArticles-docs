@@ -136,7 +136,7 @@ If files fail to tier to Azure Files:
 
 To troubleshoot files that fail to recall, perform the following steps:
 1. In Event Viewer, go to the Microsoft-FileSync-Agent/RecallResults event log.
-2. There is an event logged for each file that is recalled. If the DataTransferHresult is 0, the file recall was successful. If DataTransferHresult has an error code, check the [Recall errors and remediation](#recall-errors-and-remediation) section to see if remediation steps are listed for the error code.
+2. There is an event logged for each file that is recalled. If the DataTransferHresult field is 0, the file recall was successful. If DataTransferHresult field has an error code, check the [Recall errors and remediation](#recall-errors-and-remediation) section to see if remediation steps are listed for the error code.
 
 Basic troubleshooting steps if content does not exist for the error code:  
 1. Verify the file exists in the Azure file share.
