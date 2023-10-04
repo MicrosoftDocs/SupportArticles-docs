@@ -139,7 +139,7 @@ To troubleshoot files that fail to recall, perform the following steps:
 2. There is an event logged for each file that is recalled. If the DataTransferHresult is 0, the file recall was successful. If DataTransferHresult has an error code, check the [Recall errors and remediation](#recall-errors-and-remediation) section to see if remediation steps are listed for the error code.
 
 Basic troubleshooting steps if content does not exist for the error code:  
-1. Verify the files exist in the Azure file share.
+1. Verify the file exists in the Azure file share.
 2. Verify the server has internet connectivity.
 3. Open the Services MMC snap-in and verify the Storage Sync Agent service (FileSyncSvc) is running.
 4. Verify the Azure File Sync filter drivers (StorageSync.sys and StorageSyncGuard.sys) are running:
