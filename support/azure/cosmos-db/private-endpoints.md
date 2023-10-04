@@ -6,7 +6,7 @@ author: oury-msft
 ms.author: ouryba
 ms.reviewer: v-jayaramanp
 ms.topic: landing-page
-ms.date: 09/25/2023
+ms.date: 10/04/2023
 ---
 
 # Azure Cosmos DB private endpoints deployment fails
@@ -25,4 +25,4 @@ This issue only occurs when the private endpoint is deployed inline with the Azu
 
 ## Solution
 
-Ensure the deploying principal is granted the `microsoft.network/virtualnetworks/write` granular permission prior to deploying an Azure Cosmos DB account with an inline private endpoint.
+Ensure the deploying principal is granted the `microsoft.network/virtualnetworks/write` granular permission prior to deploying an Azure Cosmos DB account with an inline private endpoint using an Azure Resource Manager template.
