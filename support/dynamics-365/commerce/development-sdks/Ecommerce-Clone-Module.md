@@ -24,13 +24,13 @@ E-Commerce SDK provides CLI commands provides the ability to clone a module from
 # Known issues: 
 
 -  **Error: Can't resolve '@msdyn365-commerce-modules/<moduleName>'**   
-  After cloning a module, you get build error saying "Cant resolve <moduleName>". Upon investigation, it was noticed that the module had incorrect package.json. As you can see from below picture, the main should always point to the entry file of the module, which is typically index.js. For errors that say Can't resolve < moduleName> where the package exists, validate if the path of the entry js file is correct.
- :::image type="content" source="media/.png" alt-text="Screenshot that shows an incorrect entry in the package.json file.":::
+  After cloning a module, you get build error saying "Cant resolve <moduleName>". Upon investigation, it was noticed that the module had incorrect package.json. As you can see from below picture, the main should always point to the entry file of the module, which is typically index.js. For errors that say Can't resolve < moduleName> where the package exists, validate if the path of the entry js file is correct.  
+ :::image type="content" source="invalidjsonpacakgeexample.png" alt-text="Screenshot that shows an incorrect entry in the package.json file.":::
 
 - **When building a custom module, you might get errors such as "export 'IFullProductsSearchResultsWithCount' was not found in './get-full-products-by-collection'"**  despite the interface existing in the given path.  
-   A good resource to understand the background of this issue can be found on this [Stackoverflow thread](https://stackoverflow.com/questions/40841641/cannot-import-exported-interface-export-not-found). To summarize this thread, its recommended to have an interface in its own file. If you have interface and class in the same file, you cannot import or export them like this.
-
-  In above screenshot, IFullProductSearchResultWithCount and GetFiullProductsByCollectionInput are in the same class and cannot be imported like this. Instead, it should be imported as below with a type keyword. 
-
+   A good resource to understand the background of this issue can be found on this [Stackoverflow thread](https://stackoverflow.com/questions/40841641/cannot-import-exported-interface-export-not-found). To summarize this thread, its recommended to have an interface in its own file. If you have interface and class in the same file, you cannot import or export them like this.  
+ :::image type="content" source="importmoduleinterfacesinsameclass.png" alt-text="Screenshot that shows an having interface and class in same file.":::  
+  In above screenshot, IFullProductSearchResultWithCount and GetFiullProductsByCollectionInput are in the same class and cannot be imported like this. Instead, it should be imported as below with a type keyword.   
+:::image type="content" source="correctwaytoimportmodules.png" alt-text="Screenshot that shows the correct processe to import each object individually.":::
 
 
