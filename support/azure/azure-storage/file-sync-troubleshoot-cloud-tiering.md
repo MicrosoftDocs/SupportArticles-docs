@@ -56,6 +56,13 @@ To troubleshoot files that fail to tier, perform the following steps:
 1. In Event Viewer, go to the Microsoft-FileSync-Agent/TieringResults event log.
 2. There is an event logged for each file that fails to tier. Check the [Tiering errors and remediation](#tiering-errors-and-remediation) section to see if remediation steps are listed for the error code.
 
+    You can also use PowerShell to view the events that are logged to the TieringResults event log:
+
+    ```powershell
+    Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"
+    Get-StorageSyncFileTieringResult
+    ```    
+
 General troubleshooting steps if content does not exist for the error code:  
 1. Verify the file exists in the Azure file share.
       > [!NOTE]
