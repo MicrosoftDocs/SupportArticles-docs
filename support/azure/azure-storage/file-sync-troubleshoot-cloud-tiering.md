@@ -37,7 +37,7 @@ The following sections indicate how to troubleshoot cloud tiering issues and det
 
 To monitor tiering activity on a server, use Event ID 9003, 9016, and 9029 in the Telemetry event log (located under `Applications and Services\Microsoft\FileSync\Agent` in Event Viewer).
 
-- Event ID 9003 provides error distribution for a server endpoint. For example, Total Error Count, ErrorCode, etc. Note, one event is logged per error code.
+- Event ID 9003 provides error distribution for a server endpoint. For example, Total Error Count, ErrorCode, etc. Note, one event is logged per error code per hour.
 - Event ID 9016 provides ghosting results for a volume. For example, Free space percent is, Number of files ghosted in session, Number of files failed to ghost, etc.
 - Event ID 9029 provides ghosting session information for a server endpoint. For example, Number of files attempted in the session, Number of files tiered in the session, Number of files already tiered, etc.
 
@@ -46,7 +46,7 @@ To monitor tiering activity on a server, use Event ID 9003, 9016, and 9029 in th
 To monitor recall activity on a server, use Event ID 9005, 9006, 9009, and 9059 in the Telemetry event log (located under Applications and Services\Microsoft\FileSync\Agent in Event Viewer).
 
 - Event ID 9005 provides recall reliability for a server endpoint. For example, Total unique files accessed, Total unique files with failed access, etc.
-- Event ID 9006 provides recall error distribution for a server endpoint. For example, Total Failed Requests, ErrorCode, etc. Note, one event is logged per error code.
+- Event ID 9006 provides recall error distribution for a server endpoint. For example, Total Failed Requests, ErrorCode, etc. Note, one event is logged per error code per hour.
 - Event ID 9009 provides recall session information for a server endpoint. For example, DurationSeconds, CountFilesRecallSucceeded, CountFilesRecallFailed, etc.
 - Event ID 9059 provides application recall distribution for a server endpoint. For example, ShareId, Application Name, and TotalEgressNetworkBytes.
 
@@ -65,7 +65,7 @@ General troubleshooting steps if content does not exist for the error code:
    - At an elevated command prompt, run `fltmc`. Verify that the StorageSync.sys and StorageSyncGuard.sys file system filter drivers are listed.
 
 > [!NOTE]
-> An Event ID 9003 is logged once an hour in the Telemetry event log if a file fails to tier (one event is logged per error code). Check the [Tiering errors and remediation](#tiering-errors-and-remediation) section to see if remediation steps are listed for the error code.
+> If the server has a lot of tiering activity, some errors may be missing from the TieringResults event log due to wrapping. To prevent this issue, go to Event Viewer and increase the TieringResults event log size.
 
 ## Tiering errors and remediation
 
@@ -138,6 +138,11 @@ To troubleshoot files that fail to recall, perform the following steps:
 1. In Event Viewer, go to the Microsoft-FileSync-Agent/RecallResults event log.
 2. There is an event logged for each file that is recalled. If the DataTransferHresult field is 0, the file recall was successful. If DataTransferHresult field has an error code, check the [Recall errors and remediation](#recall-errors-and-remediation) section to see if remediation steps are listed for the error code.
 
+    You can also use PowerShell to view the events that are logged to the RecallResults event log:
+    ```powershell
+    Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"
+    Get-StorageSyncFileRecallResult
+    ```
 General troubleshooting steps if content does not exist for the error code:  
 1. Verify the file exists in the Azure file share.
 2. Verify the server has internet connectivity.
@@ -146,7 +151,7 @@ General troubleshooting steps if content does not exist for the error code:
    - At an elevated command prompt, run `fltmc`. Verify that the StorageSync.sys and StorageSyncGuard.sys file system filter drivers are listed.
 
 > [!NOTE]
-> An Event ID 9006 is logged once per hour in the Telemetry event log if a file fails to recall (one event is logged per error code). Check the [Recall errors and remediation](#recall-errors-and-remediation) section to see if remediation steps are listed for the error code.
+> If the server has a lot of recall activity, some errors may be missing from the RecallResults event log due to wrapping. To prevent this issue, go to Event Viewer and increase the RecallResults event log size.
 
 ## Recall errors and remediation
 
