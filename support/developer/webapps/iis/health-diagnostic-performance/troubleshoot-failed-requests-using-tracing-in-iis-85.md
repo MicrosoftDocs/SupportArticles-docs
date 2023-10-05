@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot failed requests using tracing in IIS 8.5
 description: Describes request-based tracing and how to troubleshoot failed requests with tracing in IIS 8.5.
-ms.date: 02/20/2014
+ms.date: 10/05/2023
 ms.author: haiyingyu
 author: HaiyingYu
 ms.reviewer: johnhart, riande,
@@ -48,7 +48,7 @@ Make a backup of the configuration files before performing the following tasks:
 
     :::image type="content" source="media/troubleshoot-failed-requests-using-tracing-in-iis-85/cmd-admin-in-task-bar.png" alt-text="Screenshot of Command Prompt Admin in Windows task bar.":::
 
-1. At the command prompt, run the following command:
+1. In the command prompt, run the following command:
 
     ```console
     %windir%\system32\inetsrv\appcmd add backup cleanInstall
@@ -86,7 +86,7 @@ To disable ASP, follow these steps:
 
 ## Enable Failed Request Tracing
 
-After you enable Failed Request Tracing, you need to configure the path where the log files will reside. In this section, you will enable Failed Request Tracing for the default web site and specify where to store the log files, and then configure the failure for which to generate failure logs.
+After you enable Failed Request Tracing, you need to configure the path of the log files. In this section, you will enable Failed Request Tracing for the default web site and specify where to store the log files, and then configure the failure for which to generate failure logs.
 
 ### Step 1: Enable Failed Request Tracing for the site and configure the log file directory
 
