@@ -5,6 +5,7 @@ author: bstorie
 ms.author: brstor
 ms.date: 10/05/2023
 ---
+
  # Introduction
  Receiving a generic error in POS such as "*Something went wrong*" is not very helpful determining what the underlying issue is when you encounter the error. Before opening a support case for more details behind this error, customers do have the ability log into LCS to review Telemetry data on this failure.
 
