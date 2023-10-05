@@ -4,7 +4,7 @@ description: Troubleshoot common issues with cloud tiering in an Azure File Sync
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 06/26/2023
+ms.date: 10/04/2023
 ms.author: kendownie
 ---
 # Troubleshoot Azure File Sync cloud tiering
