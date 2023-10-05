@@ -45,7 +45,7 @@ If you encountered an issue when updating, try deleting the Visual Studio Instal
 
 #### 5. Report the problem to support
 
-Troubleshooting may be necessary on a case-by-case basis in specific situations, like when there are corrupted files.
+In some situations, when there are corrupted files, issues might require case-by-case troubleshooting.
 
 Follow these steps to submit the problem to Microsoft Support:
 
