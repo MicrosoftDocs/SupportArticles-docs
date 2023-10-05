@@ -9,13 +9,13 @@ search.appverid: MET150
 
 This article provides guidelines for troubleshooting issues with the Windows update ring settings to ensure they're successfully delivered to your organization's Windows 11 or Windows 10 devices. Update ring settings manage how and when Windows devices install operating system (OS) updates. For more information about update ring policies, see [Update rings for Windows 10 and later policy in Intune](/mem/intune/protect/windows-10-update-rings).
 
-If you experience an issue while deploying update ring policies to Windows 11 or Windows 10 devices using Microsoft Intune, determine whether the issue is Intune or Windows-related. Therefore, it's important to consider whether the Intune policy has been successfully deployed to the target device.
+If you experience an issue while deploying update ring policies to Windows 10 or Windows 11 devices using Microsoft Intune, it's best to determine whether the issue is Intune or Windows-related first. Therefore, it's important to consider whether the Intune policy has been successfully deployed to the target device.
 
 Some deployment insights are included in this guide to highlight how OS and policy updates work. The following steps can be performed independently of others for times when other troubleshooting efforts don't provide the desired results.
 
 ## What Windows update ring policies do
 
-Windows update ring policies define only an update strategy, such as blocking driver installation, setting deferral periods, or setting maintenance times. The update ring policy doesn't update the infrastructure itself. This means that it needs an existing update solution to obtain the actual updates, such as Windows Updates for Business.
+Windows update ring policies define only an update strategy, such as blocking driver installation, setting deferral periods, or setting maintenance times. The Update ring policy doesn't provide the updated infrastructure itself, meaning that it needs to use an existing update solution, such as Windows Updates for Business (WUFB), to obtain the actual updates.
 
 Windows update ring policies created in Intune use the [Windows Policy CSP](/windows/client-management/mdm/policy-configuration-service-provider) for updating Windows devices. Once Intune deploys the Windows update ring policy to an assigned device, the Policy configuration services provider (CSP) writes the appropriate values to the Windows registry to make the policy take effect.
 
@@ -61,7 +61,7 @@ Check the individual device to confirm that the update ring policy has been succ
 - Navigate to **Device status**, **User status**, or **End user update status** for an overview of the list of devices to which the policy has been applied. This list is useful for quickly identifying whether a specific device has received the update policy.
 - Navigate to the device in the Intune admin center, and then go to **Device configuration status** > **Update ring policy** to see whether a specific device has the update ring policy applied.
 
-Review the update ring policy for an affected device. There may be two entries for the policy depending on the type of user device being managed. When Intune deploys a policy (any policy, not just update rings), the settings are delivered against both the logged-on user and the system context of the device. This causes the two entries, which is a normal occurrence. However, if you manage Kiosk-type devices with Autologon or a local account user type, only the system account is displayed.
+Review the update ring policy for an affected device. There may be two entries for the policy depending on the type of devices being managed. When Intune deploys a policy (any policy, not just update rings), the settings are delivered against both the logged-on user and the system context of the device. This causes the two entries, which is a normal occurrence. However, if you manage Kiosk-type devices with Autologon or a local account user type, only the system account is displayed.
 
 :::image type="content" source="media/troubleshoot-update-rings/device-status-pane.png" alt-text="Screenshot of the Device status pane on the Default_UpdateRing page." lightbox="media/troubleshoot-update-rings/device-status-pane.png":::
 
@@ -73,7 +73,7 @@ Refer to the **Device configuration** report to see whether a policy has been ap
 
 ## Verify the settings on the device
 
-To confirm that the policies have been applied to the device locally, navigate to **Settings** > **Accounts** > **Access work or school**. The list of policies applied to the device from Intune will include whether they're managed by your organization.
+To confirm that the policies have been applied to the device locally, navigate to **Settings** > **Accounts** > **Access work or school**. The list of policies applied to the device from Intune will be included if they're managed by your organization.
 
 :::image type="content" source="media/troubleshoot-update-rings/policies-on-the-device.png" alt-text="Screenshot of the policies on the device in the Managed by Organization pane.":::
 
