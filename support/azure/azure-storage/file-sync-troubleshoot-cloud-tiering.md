@@ -57,7 +57,7 @@ To troubleshoot files that fail to tier, perform the following steps:
 2. There is an event logged for each file that fails to tier. Check the [Tiering errors and remediation](#tiering-errors-and-remediation) section to see if remediation steps are listed for the error code.
 
 Basic troubleshooting steps if content does not exist for the error code:  
-1. Verify the files exist in the Azure file share.
+1. Verify the file exists in the Azure file share.
       > [!NOTE]
       > A file must be synced to an Azure file share before it can be tiered.
 2. Verify the server has internet connectivity. 
