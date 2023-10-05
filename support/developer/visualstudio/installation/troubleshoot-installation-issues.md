@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot installation and upgrade issues
 description: Introduces resolutions for common issues with Visual Studio installation and upgrade.
-ms.date: 10/03/2023
+ms.date: 10/05/2023
 author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: meghaanand, v-jayaramanp
@@ -46,7 +46,6 @@ If you encountered an issue when updating, try deleting the Visual Studio Instal
 #### 5. Report the problem to support
 
 Troubleshooting may be necessary on a case-by-case basis in specific situations, like when there are corrupted files.
-Report product issues to us using the [Report a Problem](/visualstudio/ide/how-to-report-a-problem-with-visual-studio) tool that appears both in the Visual Studio Installer and in the Visual Studio IDE. If you are an IT Administrator and don't have Visual Studio installed, you can submit [IT Admin feedback here](https://aka.ms/vs/admin/feedback).
 
 Follow these steps to submit the problem to Microsoft Support:
 
@@ -79,7 +78,7 @@ As a last resort, you can remove all Visual Studio installation files and produc
 
 Before you try to roll back, learn more about the [rollback feature in Visual Studio](https://aka.ms/vs/rollback).
 
-If none of the previous steps helped you successfully upgrade Visual Studio, you can try to roll back to your previously installed version. Since Visual Studio 2022 version 17.4, you can roll back to your previously installed version if your original version was on the Current channel version 17.1.7 or higher, or on the 17.0 Fall 2021 LTSC channel 17.0.10 or higher.  
+If none of the previous steps helped you successfully upgrade Visual Studio, you can try to roll back to your previously installed version. Since Visual Studio 2022 version 17.4, you can roll back to your previously installed version if your original version was on the current channel version 17.1.7 or higher, or on the 17.0 Fall 2021 LTSC channel 17.0.10 or higher.  
 
 You can roll back to your previously installed version by using the Visual Studio Installer or by using the command line.
 
@@ -128,6 +127,8 @@ To collect the logs, follow these steps:
    The tool must be run under the same user account that the failed installation was run under. If you're running the tool from a different user account, set the `-user:<name>` option to specify the user account under which the failed installation was run. Run `Collect.exe -?` from an administrator command prompt for more options and usage information.
 
 The tool generates a _vslogs.zip_ file in your _%TEMP%_ folder, typically at _C:\Users\YourName\AppData\Local\Temp\vslogs.zip_.
+
+Report product issues to us using the [Report a Problem](/visualstudio/ide/how-to-report-a-problem-with-visual-studio) tool that appears both in the Visual Studio Installer and in the Visual Studio IDE. If you are an IT Administrator and don't have Visual Studio installed, you can submit [IT Admin feedback here](https://aka.ms/vs/admin/feedback).
 
 ## Problems installing WebView2
 
