@@ -36,17 +36,22 @@ To check the status of the cloud change enumeration job, go the **Cloud Endpoint
 
 ### [Portal](#tab/portal1)
 
-To view the health of a **server endpoint** in the portal, navigate to the **Sync groups** section of the **Storage Sync Service** and select a **sync group**. The server endpoint status (health and activity) is based on Telemetry events that are sent from the server to the service and are updated every 15 minutes in the portal. A **Healthy** status and a **Persistent sync errors** value of 0 indicate that sync is working as expected. If **Persistent sync errors** has a value greater than 0, see [How do I see if there are specific files or folders that are not syncing](#how-do-i-see-if-there-are-specific-files-or-folders-that-are-not-syncing) to troubleshoot why files are failing to sync. If the server endpoint has a **Health status** other than **Healthy**, follow the guidance in the table below.  
+To view the health of a **server endpoint** in the portal, navigate to the **Sync groups** section of the **Storage Sync Service** and select a **sync group**. 
+
+:::image type="content" source="media/file-sync-troubleshoot-sync-errors/portal-sync-health.png" alt-text="Screenshot that shows the Azure portal." lightbox="media/file-sync-troubleshoot-sync-errors/portal-sync-health.png":::
+
+A **Healthy** status and a **Persistent sync errors** value of 0 indicate that sync is working as expected. If **Persistent sync errors** has a value greater than 0, see [How do I see if there are specific files or folders that are not syncing](#how-do-i-see-if-there-are-specific-files-or-folders-that-are-not-syncing) to troubleshoot why files are failing to sync. If the server endpoint has a **Health status** other than **Healthy**, follow the guidance in the table below.  
 
 | Health status | Description | Remediation |
 |---------|-------------------|--------------|
-| Healthy | Healthy status means sync is working as expected. Check Persistent sync errors to confirm no files require action. | N/A |
+| Healthy | Healthy status means the sync session completed successfully or the in-progress sync session is making progress (files are applied). | N/A |
 | Pending | Pending status is expected after creating a server endpoint. Once sync telemetry for the server endpoint is sent to the service, the Health status will update. | If the Health status does not change for several hours, see [Server endpoint health is in a pending state for several hours](#serverendpoint-pending) |
 | No Activity | No Activity status means the server endpoint has not sent sync telemetry to the service in the past two hours. | To resolve, follow the steps in [Troubleshoot Azure File Sync sync group management](file-sync-troubleshoot-sync-group-management.md#server-endpoint-noactivity). |
 | Error | Error status means that sync sessions are continously failing and sync is not making progress. | To resolve, click the Error status in the portal to get the error code and remediation steps. If the remediation steps are not listed in the portal or do not resolve the issue, search for the error code in this document for more guidance. |
 | Low disk mode | Low disk mode status means the volume where the server endpoint is located is low on disk space. | To resolve, free disk space on the volume. To learn more about low disk space mode, see [Cloud tiering overview](/azure/storage/file-sync/file-sync-cloud-tiering-overview#low-disk-space-mode) documentation. |
 
-:::image type="content" source="media/file-sync-troubleshoot-sync-errors/portal-sync-health.png" alt-text="Screenshot that shows the Azure portal." lightbox="media/file-sync-troubleshoot-sync-errors/portal-sync-health.png":::
+> [!Note]  
+> The server endpoint status (health and activity) is refreshed every 15 minutes and is based on the Telemetry events that are sent from the server to the service.
 
 ### [Server](#tab/server)
 
