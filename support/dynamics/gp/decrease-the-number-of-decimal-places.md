@@ -3,7 +3,7 @@ title: Decrease the number of decimal places in Currency Setup
 description: Describes an issue in which you receive an error message and you cannot decrease the number of decimal places for a currency.
 ms.reviewer:
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 10/6/2023
 ---
 # How to decrease the number of decimal places in Currency Setup
 
@@ -57,5 +57,7 @@ To resolve this issue, follow these steps.
     |4|5|
     |5|6|
 
-> [!NOTE]
-> If you are using SQL Server Desktop Engine (also known as MSDE 2000), use the Support Administrator Console. For more information about how to do this, contact Microsoft Business Solutions Technical Support at 1-888-477-7877.
+4. In Microsoft Dynamics GP open the Currency Setup window.  (Administration >> Setup >> System >> Currency)
+Select the currency id that you fixed.
+Make a change to the description and click Save to roll down the change with the code.  
+This will update any other company setups if you are fixing an functional currency.  
