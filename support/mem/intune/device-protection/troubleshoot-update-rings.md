@@ -130,7 +130,7 @@ Policies that couldn't be deployed (Set action) will show errors or warnings.
 
 ## Optional troubleshooting methods
 
-Certain instances may require troubleshooting the update ring policies from the device side instead of, or in addition to Intune.
+Certain instances may require troubleshooting the Update ring policies from the device side instead of, or in addition to Intune.
 
 ### Review the Windows Update Client
 
@@ -175,13 +175,13 @@ If the previous options didn't provide the results needed to identify the issue,
 
     :::image type="content" source="media/troubleshoot-update-rings/workloads.png" alt-text="Screenshot of the Properties dialog highlighting the Windows Update policies slider on the Workloads tab.":::
 
-- Make sure you're not deploying conflicting Windows Update for Business settings from another update ring or a Settings Catalog policy. Confirm the assigned policies in the settings catalog for Windows Update for Business settings that may end up being deployed.
+- Make sure you're not deploying conflicting Windows Update for Business settings from another Update ring or a Settings Catalog policy. Confirm the assigned policies in the settings catalog for Windows Update for Business settings that may end up being deployed.
 
     For Update ring policies, you should see a "Conflict" reporting in the **Device Configuration** pane for the device or in the colored charts.
 
     :::image type="content" source="media/troubleshoot-update-rings/conflict-report.png" alt-text="Screenshot of the colored Profile assignment status - Windows 10 and later devices chart with the Succeeded and Conflict data highlighted.":::
 
-- Be sure that the Windows update ring policy is deployed to the correct user or device group.
+- Be sure that the Windows Update ring policy is deployed to the correct user or device group.
 - Determine whether the entire policy deployment fails or only certain settings aren't applied. Navigate to **Device** > **Device configuration** > **Update ring report**. There may be a specific setting in the list that shows an error rather than a success message.
 
     :::image type="content" source="media/troubleshoot-update-rings/error-example.png" alt-text="Screenshot of the 'Automatic update behavior' and 'Microsoft Product Updates' profile settings showing a conflict status." lightbox="media/troubleshoot-update-rings/error-example.png":::
@@ -194,7 +194,7 @@ See the description of each setting in [Settings for Windows Update that you can
 
 ## Other considerations
 
-If you've completed this troubleshooting guide, and are still having issues, it may be an issue between the local device and the Windows Update services. Refer to the following resources to troubleshoot Windows Update policy issues:
+If you've completed this troubleshooting guide, and still have issues, it may be an issue between the local device and the Windows Update services. Refer to the following resources to troubleshoot Windows Update policy issues:
 
 - [Windows Update issues troubleshooting](../../../windows-client/deployment/windows-update-issues-troubleshooting.md)
 - [Windows Update common errors and mitigation](../../../windows-client/deployment/common-windows-update-errors.md)
