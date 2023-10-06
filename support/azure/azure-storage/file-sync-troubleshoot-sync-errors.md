@@ -38,7 +38,7 @@ To check the status of the cloud change enumeration job, go the **Cloud Endpoint
 
 To view the health of a **server endpoint** in the portal, navigate to the **Sync groups** section of the **Storage Sync Service** and select a **sync group**. 
 
-:::image type="content" source="media/file-sync-troubleshoot-sync-errors/serverendpoint_health.png" alt-text="Screenshot that shows the server endpoint health in the Azure portal." border="false":::
+:::image type="content" source="media/file-sync-troubleshoot-sync-errors/serverendpoint-health.png" alt-text="Screenshot that shows the server endpoint health in the Azure portal." border="false":::
 
 A **Healthy** status and a **Persistent sync errors** count of 0 indicate that sync is working as expected. If **Persistent sync errors** has a count greater than 0, see [How do I see if there are specific files or folders that are not syncing](#how-do-i-see-if-there-are-specific-files-or-folders-that-are-not-syncing) to troubleshoot why files are failing to sync. If the server endpoint has a **Health status** other than **Healthy**, follow the guidance in the table below.  
 
@@ -92,7 +92,7 @@ Sometimes sync sessions fail overall or have a non-zero `PerItemErrorCount` but 
 
 Within your sync group, go to the server endpoint properties and look at the **Sync status** section to see the count of files uploaded or downloaded in the current sync session. Keep in mind that this status will be delayed by about 15 minutes. If your sync session is small enough to be completed within this period, it might not be reported in the portal.
 
-:::image type="content" source="media/file-sync-troubleshoot-sync-errors/serverendpoint_syncstatus.png" alt-text="Screenshot that shows the sync progress in the Azure portal." border="false":::
+:::image type="content" source="media/file-sync-troubleshoot-sync-errors/serverendpoint-syncstatus.png" alt-text="Screenshot that shows the sync progress in the Azure portal." border="false":::
 
 > [!Note]  
 > If the **Estimated completion** is blank, this means sync has not finished counting the number of files in the sync session.
