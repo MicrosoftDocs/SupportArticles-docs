@@ -4,7 +4,7 @@ description: Troubleshoot common issues with monitoring sync health and resolvin
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 09/26/2023
+ms.date: 10/06/2023
 ms.author: kendownie
 ms.custom: devx-track-azurepowershell
 ms.reviewer: v-weizhu
@@ -36,7 +36,7 @@ To check the status of the cloud change enumeration job, go the **Cloud Endpoint
 
 ### [Portal](#tab/portal1)
 
-Within each sync group, you can drill down into its individual server endpoints to see the status of the last completed sync sessions. A green **Health** column and a **Files not syncing** value of 0 indicate that sync is working as expected. If not, see the following screenshot for a list of common sync errors and how to handle files that aren't syncing.
+To view the health of a **server endpoint** in the portal, navigate to the **Sync groups** section of the **Storage Sync Service** and select a **sync group**. The server endpoint health and status are based on Telemetry events that are sent from the server to the service every 15 minutes. A **Healthy** status and a **Persistent sync errors** value of 0 indicate that sync is working as expected.
 
 :::image type="content" source="media/file-sync-troubleshoot-sync-errors/portal-sync-health.png" alt-text="Screenshot that shows the Azure portal." lightbox="media/file-sync-troubleshoot-sync-errors/portal-sync-health.png":::
 
@@ -76,7 +76,7 @@ Sometimes sync sessions fail overall or have a non-zero `PerItemErrorCount` but 
 
 ### [Portal](#tab/portal1)
 
-Within your sync group, go to the server endpoint in question and look at the Sync Activity section to see the count of files uploaded or downloaded in the current sync session. Keep in mind that this status will be delayed by about five minutes. If your sync session is small enough to be completed within this period, it might not be reported in the portal.
+Within your sync group, go to the server endpoint in question and look at the Sync status section to see the count of files uploaded or downloaded in the current sync session. Keep in mind that this status will be delayed by about five minutes. If your sync session is small enough to be completed within this period, it might not be reported in the portal.
 
 ### [Server](#tab/server)
 
@@ -100,10 +100,10 @@ PerItemErrorCount: 1006.
 
 For each server in a given sync group, make sure:
 
-- The timestamps for the **Last Attempted Sync**  for both upload and download are recent.
+- The timestamps for the **Upload to cloud** and **Download to server** are recent.
 - The status is green for both upload and download.
-- The **Sync Activity** field shows very few or no files remaining to sync.
-- The **Files Not Syncing** field is 0 for both upload and download.
+- The **Sync status** section within the server endpoint properties shows very few or no files remaining to sync.
+- The **Persistent sync errors** and **Transient sync errors** fields within the server endpoint properties have a value of 0.
 
 ### [Server](#tab/server)
 
@@ -123,7 +123,7 @@ If you made changes directly in your Azure file share, Azure File Sync won't det
 
 ### How do I see if there are specific files or folders that are not syncing?
 
-If your `PerItemErrorCount` on the server or **Files Not Syncing** count in the portal are greater than 0 for any given sync session, that means some items are failing to sync. Files and folders can have characteristics that prevent them from syncing. These characteristics can be persistent and require explicit action to resume sync, for example removing unsupported characters from the file or folder name. They can also be transient, meaning the file or folder will automatically resume sync; for example, files with open handles will automatically resume sync when the file is closed. When the Azure File Sync engine detects such a problem, an error log is produced that can be parsed to list the items currently not syncing properly.
+If your `PerItemErrorCount` on the server or **Persistent sync errors** and **Transient sync errors** count in the portal are greater than 0 for any given sync session, that means some items are failing to sync. Files and folders can have characteristics that prevent them from syncing. These characteristics can be persistent and require explicit action to resume sync, for example removing unsupported characters from the file or folder name. They can also be transient, meaning the file or folder will automatically resume sync; for example, files with open handles will automatically resume sync when the file is closed. When the Azure File Sync engine detects such a problem, an error log is produced that can be parsed to list the items currently not syncing properly.
 
 To see these errors, run the *FileSyncErrorsReport.ps1* PowerShell script (located in the agent installation directory of the Azure File Sync agent) to identify files that failed to sync because of open handles, unsupported characters, or other issues. The `ItemPath` field tells you the location of the file in relation to the root sync directory. See the list of common sync errors for remediation steps.
 
