@@ -19,5 +19,5 @@ landingContent:
         links:
           - text: Troubleshoot Azure Cosmos DB Emulator
             url: ./emulator.md
-          - text: Troubleshoot private endpoints
+          - text: Failed private endpoints deployment
             url: ./private-endpoints.md

@@ -1,5 +1,5 @@
 ---
-title: Azure Cosmos DB private endpoints deployment fails
+title: Deployment of private endpoints for Azure Cosmos DB fails
 description: Troubleshoot failed Azure Resource Manager deployments that are related to private endpoints created inline for Azure Cosmos DB accounts.
 ms.service: cosmos-db
 author: seesharprun
@@ -9,7 +9,7 @@ ms.reviewer: ouryba, v-leedennis
 ms.date: 10/06/2023
 ---
 
-# Azure Cosmos DB private endpoints deployment fails
+# Deployment of private endpoints for Azure Cosmos DB fails
 
 Azure Private Link endpoints can be deployed inline for an Azure Cosmos DB account through an Azure Resource Manager template (ARM template), but this deployment might fail if particular prerequisites aren't met.
 

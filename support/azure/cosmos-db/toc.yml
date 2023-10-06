@@ -2,5 +2,5 @@
   href: index.yml
 - name: Troubleshoot emulator
   href: emulator.md
-- name: Troubleshoot private endpoints
+- name: Failed private endpoints deployment
   href: private-endpoints.md
