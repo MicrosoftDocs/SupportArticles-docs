@@ -124,19 +124,26 @@ Now that you've learned how to start, stop, and restart the Nginx service, you'l
 Here's the required configuration. Some of the key parts are highlighted.
 
 ```nginx
-server {
+http {
+  map $http_connection $connection_upgrade {
+    "~*Upgrade" $http_connection;
+    default keep-alive;
+  }
+
+  server {
     listen        80;
     server_name _;
     location / {
         proxy_pass         http://localhost:5000;
         proxy_http_version 1.1;
         proxy_set_header   Upgrade $http_upgrade;
-        proxy_set_header   Connection keep-alive;
+        proxy_set_header   Connection $connection_upgrade;
         proxy_set_header   Host $host;
         proxy_cache_bypass $http_upgrade;
         proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
         proxy_set_header   X-Forwarded-Proto $scheme;
     }
+  }
 }
 ```
 
