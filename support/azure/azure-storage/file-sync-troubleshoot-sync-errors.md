@@ -90,7 +90,7 @@ Sometimes sync sessions fail overall or have a non-zero `PerItemErrorCount` but 
 
 ### [Portal](#tab/portal1)
 
-Within your sync group, go to the server endpoint in question and look at the Sync status section to see the count of files uploaded or downloaded in the current sync session. Keep in mind that this status will be delayed by about 15 minutes. If your sync session is small enough to be completed within this period, it might not be reported in the portal.
+Within your sync group, go to the server endpoint properties and look at the Sync status section to see the count of files uploaded or downloaded in the current sync session. Keep in mind that this status will be delayed by about 15 minutes. If your sync session is small enough to be completed within this period, it might not be reported in the portal.
 
 :::image type="content" source="media/file-sync-troubleshoot-sync-errors/serverendpoint_syncstatus.png" alt-text="Screenshot that shows the sync progress in the Azure portal." border="false":::
 
