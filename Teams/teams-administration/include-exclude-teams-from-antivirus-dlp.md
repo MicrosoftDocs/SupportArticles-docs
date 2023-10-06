@@ -1,5 +1,5 @@
 ---
-title: Exclude Teams from being blocked by antivirus or DLP applications
+title: Exclude antivirus and DLP applications from blocking Teams 
 ms.author: meerak
 author: cloud-writer
 manager: dcscontentpm
@@ -21,7 +21,7 @@ ms.reviewer: davidsle
 description: Provides instructions to add Teams to antivirus and DLP applications so that it can start correctly.
 ---
 
-# Exclude Teams from being blocked by antivirus or DLP applications
+# Exclude antivirus and DLP applications from blocking Teams
 
 Third-party antivirus and data loss prevention (DLP) applications can interfere with the Microsoft Teams app and prevent it from starting correctly. When you use non-Microsoft antivirus or DLP applications in PCs, you can include or approve the use of the Teams app on the computers. This action helps to enhance the performance of the PCs and mitigate the effect of the antivirus and DLP applications on security.
 
@@ -34,7 +34,7 @@ To prevent issues with starting the classic Teams app, add the following process
 - `C:\Users\*\AppData\Local\Microsoft\Teams\current\squirrel.exe`
 - `C:\Users\*\AppData\Local\Microsoft\TeamsMeetingAddin`
 
-Alternatively, you can add the processes to the Safe list or the Allow list for programs in your DLP application. The method to accomplish this addition varies. For specific instructions, contact your DLP application’s manufacturer.
+Alternatively, you can add the processes to the allowlist for programs in your DLP application. The method to accomplish this addition varies. For specific instructions, contact your DLP application’s manufacturer.
 
 ## New Teams
 
@@ -49,7 +49,7 @@ To prevent issues with starting the new Teams app, add the following processes t
 - `ms-teams.exe`
 - `ms-teamsupdate.exe`
 
-Alternatively, you can add the processes to the Safe list or the Allow list for programs in your DLP application. The method to accomplish this addition varies. For specific instructions, contact your DLP application’s manufacturer.
+Alternatively, you can add the processes to the allowlist for programs in your DLP application. The method to accomplish this addition varies. For specific instructions, contact your DLP application’s manufacturer.
 
 ### Location of the Teams installation folder
 
@@ -58,7 +58,7 @@ To add the Teams processes to either the exclusion list or the Safe list/Allow l
 1. Open Windows PowerShell and type the following cmdlet to determine the location of the installation files:
    `Get-AppPackage -name "msteams"`
 
-   The output will include the value of the InstallLocation parameter such as C:\Program Files\WindowsApps\ MSTeams_23247.1112.2396.409_x64_8wekyb3d8bbwe.
+   The output includes the value of the **InstallLocation** parameter such as C:\Program Files\WindowsApps\ MSTeams_23247.1112.2396.409_x64_8wekyb3d8bbwe.
 1. To view the individual files, open **Task Manager** and select **More details**.
 1. On the **Details** tab, locate and right-click **ms-teams.exe** and select **Open file location**.
 
