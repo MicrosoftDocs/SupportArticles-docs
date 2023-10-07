@@ -91,7 +91,7 @@ For more information about TSS, see [Introduction to TroubleShootingScript tools
 
 ## Data Analysis
 
-Go to the *c:\msdata* folder where TSS has saved all the reports and extract the contents of the ZIP file. Review the file with the name <Client_machinename>-<Time>_Microsoft-Windows-GroupPolicy-Operational.evtx.
+Go to the *c:\msdata* folder where TSS has saved all the reports and extract the contents of the ZIP file. Review the file with the name \<Client_machinename\>-\<Time\>_Microsoft-Windows-GroupPolicy-Operational.evtx.
 
 ### Starting event: 4001
 
