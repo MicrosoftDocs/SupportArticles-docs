@@ -77,6 +77,10 @@
           href: point-of-sale/store-commerce-setup-installation.md
         - name: Troubleshoot Store Commerce sign-in issues
           href: point-of-sale/store-commerce-sign-in.md
+    - name: Pricing, discounts, and taxes 
+      items:
+        - name: Price change tracking issues
+          href: pricing-discounts-taxes/price-track-issues.md        
     - name: Ratings and reviews 
       items:
         - name: Ratings refiner appears when the ratings and reviews solution isn't enabled
