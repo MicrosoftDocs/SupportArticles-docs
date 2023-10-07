@@ -3,7 +3,8 @@ title: Price change tracking batch job issues in Dynamics 365 Commerce
 description: Resolves batch job issues with the price change tracking feature in Microsoft Dynamics 365 Commerce.
 author: leshe
 ms.author: leshe
-ms.date: 09/26/2023
+ms.reviewer: josaw, brstor
+ms.date: 10/07/2023
 ---
 # Batch job issues with the price change tracking feature
 
