@@ -8,7 +8,7 @@ ms.date: 10/07/2023
 ---
 # "SAS Key hasn't been configured" error occurs in Resource Scheduling Optimization
 
-This article helps administrators resolve an issue in the [Resource Scheduling Optimization add-in](dynamics365/field-service/rso-overview) for Microsoft Dynamics 365 Field Service.
+This article helps administrators resolve an issue in the [Resource Scheduling Optimization add-in](/dynamics365/field-service/rso-overview) for Microsoft Dynamics 365 Field Service.
 
 ## Symptoms
 

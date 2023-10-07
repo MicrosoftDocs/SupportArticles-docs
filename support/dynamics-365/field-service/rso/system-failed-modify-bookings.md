@@ -8,7 +8,7 @@ ms.date: 10/07/2023
 ---
 # An optimization request fails to modify some bookings
 
-This article helps administrators troubleshoot optimization requests in the [Resource Scheduling Optimization add-in](dynamics365/field-service/rso-overview) for Microsoft Dynamics 365 Field Service.
+This article helps administrators troubleshoot optimization requests in the [Resource Scheduling Optimization add-in](/dynamics365/field-service/rso-overview) for Microsoft Dynamics 365 Field Service.
 
 ## Symptoms
 

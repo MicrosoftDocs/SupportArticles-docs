@@ -8,7 +8,7 @@ ms.date: 10/07/2023
 ---
 # Troubleshoot issues with Resource Scheduling Optimization add-in deployments
 
-This article helps administrators resolve issues with deployments of the [Resource Scheduling Optimization add-in](dynamics365/field-service/rso-overview) for Microsoft Dynamics 365 Field Service.
+This article helps administrators resolve issues with deployments of the [Resource Scheduling Optimization add-in](/dynamics365/field-service/rso-overview) for Microsoft Dynamics 365 Field Service.
 
 ## Symptoms
 

@@ -35,7 +35,7 @@
           href: rso/object-reference-not-set-instance-object.md
         - name: Requirements not scheduled
           href: rso/requirement-not-scheduled.md
-        - name: '"SAS Key hasn't been configured" error'
+        - name: '"SAS Key has not been configured" error'
           href: rso/sas-key-not-configured.md
         - name: Troubleshoot issues with bookings
           href: rso/troubleshoot-bookings.md

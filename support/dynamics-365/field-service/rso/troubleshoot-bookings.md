@@ -8,7 +8,7 @@ ms.date: 10/07/2023
 ---
 # Troubleshoot issues with bookings in Resource Scheduling Optimization
 
-This article helps troubleshoot issues with bookings created by the [Resource Scheduling Optimization add-in](dynamics365/field-service/rso-overview) for Microsoft Dynamics 365 Field Service.
+This article helps troubleshoot issues with bookings created by the [Resource Scheduling Optimization add-in](/dynamics365/field-service/rso-overview) for Microsoft Dynamics 365 Field Service.
 
 ## Symptoms
 
