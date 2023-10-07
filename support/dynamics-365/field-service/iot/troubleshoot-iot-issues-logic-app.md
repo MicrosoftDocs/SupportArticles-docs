@@ -1,23 +1,22 @@
 ---
 title:  Troubleshoot issues with IoT capabilities
-description: Resolve issues with IoT capabilities in Field Service.
+description: Provides a resolution to solve issues with IoT capabilities in Dynamics 365 Field Service.
 ms.author: vhorvath
 author: vhorvathms
 ms.reviewer: mhart
-ms.date: 06/15/2023
+ms.date: 10/07/2023
 ---
+# Troubleshoot issues with IoT capabilities in Dynamics 365 Field Service
 
-# Troubleshoot issues with IoT capabilities
-
-This article helps resolve issues with IoT capabilities in Dynamics 365 Field Service.
+This article helps resolve issues with the Internet of Things (IoT) capabilities in Microsoft Dynamics 365 Field Service.
 
 ## Symptoms
 
-You encounter unexpected behavior with IoT capabilities in Field Service. For example, a device that won't register, or a failure to pull device data.
+You encounter unexpected behavior with IoT capabilities in Dynamics 365 Field Service. For example, a device that won't register, or a failure to pull device data.
 
 ## Resolution
 
-Review Azure IoT Logic Apps to help diagnose the issue.
+Review the Azure IoT logic apps to help diagnose the issue.
 
 1. Go to the [Azure portal](https://portal.azure.com) and sign in. Go to **Resource Groups** and select the resource group where Azure IoT is deployed.
 
@@ -27,7 +26,7 @@ Review Azure IoT Logic Apps to help diagnose the issue.
 
 4. Select a failed run and view the logic app to understand where an error may have occurred.
 
-Use the information in failed logic apps to diagnose the issue. If you need to option a support ticket, that information is also helpful for the Microsoft support team. [Create a Dynamics 365 support ticket](https://dynamics.microsoft.com/contact-us/).
+Use the information in failed logic apps to diagnose the issue. If you need to [create a Dynamics 365 support ticket](https://dynamics.microsoft.com/contact-us/), that information is also helpful for the Microsoft support team.
 
 > [!NOTE]
 > We don't recommend editing the logic apps that are deployed by the solution.

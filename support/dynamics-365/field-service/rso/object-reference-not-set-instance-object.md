@@ -1,19 +1,20 @@
 ---
-title: "Error message: Object reference not set to an instance of an object"
-description: Resolve issues with an error message in in the Resource Scheduling Optimization add-in for Dynamics 365 Field Service.
+title: Object reference not set to an instance of an object error
+description: Resolves issues with an error message in the Resource Scheduling Optimization add-in for Dynamics 365 Field Service.
 ms.author: feiqiu
 author: feifeiqiu
 ms.reviewer: mhart
-ms.date: 06/28/2023
+ms.date: 10/07/2023
 ---
+# "Object reference not set to an instance of an object" error in Resource Scheduling Optimization
 
-# Error message: Object reference not set to an instance of an object
-
-This article helps administrators resolve issues with an error message in the Resource Scheduling Optimization add-in for Dynamics 365 Field Service.
+This article helps administrators resolve issues with an error message in the [Resource Scheduling Optimization add-in](dynamics365/field-service/rso-overview) for Microsoft Dynamics 365 Field Service.
 
 ## Symptoms
 
-An optimization request failed and gave the message “Object reference not set to an instance of an object”.
+An optimization request failed and you recieve the following error message:
+
+> Object reference not set to an instance of an object.
 
 ## Resolution
 
@@ -22,4 +23,4 @@ Typically, a custom plug-in ran into an unhandled null value. It can occur becau
 System customizers can use the plug-in trace log capability to identify which plug-in is failing and address the issue.
 
 > [!CAUTION]
-> Disable plug-in trace logging as soon as you are done with debugging to avoid overloading the organization’s database.
+> Disable plug-in trace logging as soon as you are done with debugging to avoid overloading the organization's database.

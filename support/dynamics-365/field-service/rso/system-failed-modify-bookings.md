@@ -1,19 +1,18 @@
 ---
-title: Optimization request failed to modify some bookings
-description: Resolve issues with optimization requests in the Resource Scheduling Optimization add-in for Dynamics 365 Field Service.
+title: Optimization request fails to modify some bookings
+description: Resolves issues with optimization requests in the Resource Scheduling Optimization add-in for Dynamics 365 Field Service.
 ms.author: feiqiu
 author: feifeiqiu
 ms.reviewer: mhart
-ms.date: 06/28/2023
+ms.date: 10/07/2023
 ---
+# An optimization request fails to modify some bookings
 
-# Optimization request failed to modify some bookings
-
-This article helps administrators troubleshoot optimization requests in the Resource Scheduling Optimization add-in for Dynamics 365 Field Service.
+This article helps administrators troubleshoot optimization requests in the [Resource Scheduling Optimization add-in](dynamics365/field-service/rso-overview) for Microsoft Dynamics 365 Field Service.
 
 ## Symptoms
 
-An optimization request failed with the message “System failed to modify some bookings".
+An optimization request fails with the "System failed to modify some bookings" error message.
 
 ## Resolution
 

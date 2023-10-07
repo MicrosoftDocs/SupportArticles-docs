@@ -1,19 +1,18 @@
 ---
-title:  "Resource Scheduling Optimization add-in error message: User lacks privileges"
-description: Resolve errors with privileges in the Resource Scheduling Optimization add-in for Dynamics 365 Field Service
+title: User lacks privileges error in Resource Scheduling Optimization
+description: Resolves errors with privileges in the Resource Scheduling Optimization add-in for Dynamics 365 Field Service.
 ms.author: feiqiu
 author: feifeiqiu
 ms.reviewer: mhart
-ms.date: 06/15/2023
+ms.date: 10/07/2023
 ---
+# "User lacks privileges" error occurs in Resource Scheduling Optimization
 
-# Resource Scheduling Optimization add-in error message: User lacks privileges
-
-This article helps administrators resolve errors with privileges in the Resource Scheduling Optimization add-in for Dynamics 365 Field Service.
+This article helps administrators resolve errors with privileges in the [Resource Scheduling Optimization add-in](dynamics365/field-service/rso-overview) for Microsoft Dynamics 365 Field Service.
 
 ## Symptoms
 
-You experience an optimization job failure with the error message "Related failed to update bookings". Go to the Bookings tab and search for failed bookings. Bookings show a more detailed error message: "User lacks privileges".
+You experience an optimization job failure with the "Related failed to update bookings" error message. Go to the **Bookings** tab and search for failed bookings. The failed bookings show a more detailed error message "User lacks privileges."
 
 ## Resolution
 
@@ -30,7 +29,7 @@ Field security:
 
 ### Copy security user roles
 
-1. Sign into the environment as administrator.
+1. Sign in to the environment as administrator.
 
 1. Go to **Settings** > **Security** > **Users** and choose the **Application Users** view.
 
@@ -42,7 +41,7 @@ Field security:
 
 ### Copy field security profiles
 
-1. Sign into the environment as an administrator.
+1. Sign in to the environment as an administrator.
 
 1. Go to **Settings** > **Security** > **Field Security Profiles** view.
 

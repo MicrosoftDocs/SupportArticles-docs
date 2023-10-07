@@ -3,23 +3,19 @@
   items:
     - name: Administration and settings
       items:
+        - name: Date Window Start/End fields don't exist
+          href: administration/date-window-fields-missing.md
         - name: Error with AttributeMap when upgrading
           href: administration/attibutemap-error-upgrade.md
-        - name: Date window start/end field don't exist
-          href: administration/date-window-fields-missing.md
         - name: Entity record names have duplicated numbers
           href: administration/entity-names-duplicated-numbers.md
     - name: Customization
       items:
-        - name: Forms show an error about being read-only
-          href: customization/forms-error-read-only.md
         - name: Can't delete record because of an restrict-delete relationships
           href: customization/restrict-delete-relationships.md
+        - name: Forms show an error about being read-only
+          href: customization/forms-error-read-only.md
 
-    - name: Scheduling
-      items: 
-        - name: Issue with cascading crew changes when assigning a booking
-          href: scheduling/cascade-crew-changes-booking.md
     - name: IoT and Connected Field Service
       items:
         - name: Can't change Time Series Insights instance
@@ -33,18 +29,22 @@
 
     - name: Resource Scheduling Optimization add-in
       items: 
-        - name: Object reference not set to an instance of an object
-          href: rso/object-reference-not-set-instance-object.md
-        - name: Requirements not scheduled in the Resource Scheduling Optimization add-in
-          href: rso/requirement-not-scheduled.md
-        - name: SAS Key hasn't been configured
-          href: rso/sas-key-not-configured.md
-        - name: Optimization request failed to modify some bookings
+        - name: Optimization request fails to modify some bookings
           href: rso/system-failed-modify-bookings.md
+        - name: '"Object reference not set to an instance of an object" error'
+          href: rso/object-reference-not-set-instance-object.md
+        - name: Requirements not scheduled
+          href: rso/requirement-not-scheduled.md
+        - name: '"SAS Key hasn't been configured" error'
+          href: rso/sas-key-not-configured.md
         - name: Troubleshoot issues with bookings
           href: rso/troubleshoot-bookings.md
         - name: Troubleshoot issues with deployments
           href: rso/troubleshoot-rso-deployment.md
-        - name: User lacks privilege
+        - name: '"User lacks privileges" error'
           href: rso/user-lacks-privileges-error.md
 
+    - name: Scheduling
+      items: 
+        - name: Issue with cascading crew changes when assigning a booking
+          href: scheduling/cascade-crew-changes-booking.md

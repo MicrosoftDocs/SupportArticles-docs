@@ -1,19 +1,18 @@
 ---
-title: Troubleshoot bookings from the Resource Scheduling Optimization add-in for Dynamics 365 Field Service
-description: Resolve issues with bookings in the Resource Scheduling Optimization add-in for Dynamics 365 Field Service.
+title: Troubleshoot bookings from Resource Scheduling Optimization
+description: Resolves issues with bookings in the Resource Scheduling Optimization add-in for Dynamics 365 Field Service.
 ms.author: feiqiu
 author: feifeiqiu
 ms.reviewer: mhart
-ms.date: 06/15/2023
+ms.date: 10/07/2023
 ---
+# Troubleshoot issues with bookings in Resource Scheduling Optimization
 
-# Troubleshoot issues with bookings in the Resource Scheduling Optimization add-in for Dynamics 365 Field Service
-
-This article helps troubleshoot issues bookings created by the Resource Scheduling Optimization add-in for Dynamics 365 Field Service.
+This article helps troubleshoot issues with bookings created by the [Resource Scheduling Optimization add-in](dynamics365/field-service/rso-overview) for Microsoft Dynamics 365 Field Service.
 
 ## Symptoms
 
-- Completed, canceled, or other bookings get optimized or removed although they shouldn’t be moved.
+- Completed, canceled, or other bookings get optimized or removed although they shouldn't be moved.
 - Past or future bookings that are outside of the optimization start and end range get removed.
 - Bookings show in a simulation status.
 
@@ -31,9 +30,9 @@ After optimization runs, Resource Scheduling Optimization can make decisions to 
 
 Booking status has a **Scheduling Method** field that dictates how Resource Scheduling Optimization should consider booking records of that status:
 
-- If Booking Status is set to **Optimize**, Resource Scheduling Optimization moves those bookings around.
-- If Booking Status is set to **Don't Move**, Resource Scheduling Optimization doesn't move or optimize those bookings. Use this option for booking statuses that indicate work is in progress or completed.
-- If Booking Status is set to **Ignore**, Resource Scheduling Optimization doesn't consider that booking record. Use this option booking statuses that indicate work got canceled.
+- If Booking status is set to **Optimize**, Resource Scheduling Optimization moves those bookings around.
+- If Booking status is set to **Don't Move**, Resource Scheduling Optimization doesn't move or optimize those bookings. Use this option for booking statuses that indicate work is in progress or completed.
+- If Booking status is set to **Ignore**, Resource Scheduling Optimization doesn't consider that booking record. Use this option booking statuses that indicate work got canceled.
 
 ### Block Resource Scheduling Optimization from moving past bookings
 

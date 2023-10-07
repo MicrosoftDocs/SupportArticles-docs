@@ -1,30 +1,22 @@
 ---
 title: Error with AttributeMap when upgrading
-description: Resolve AttributeMap errors in Field Service by following the steps outlined in this article.
+description: Provides a resolution to resolve the AttributeMap errors in Dynamics 365 Field Service.
 author: jshotts
 ms.author: jasonshotts
 ms.reviewer: mhart
-ms.date: 06/15/2023
+ms.date: 10/07/2023
 ---
+# Error with AttributeMap when upgrading Dynamics 365 Field Service
 
-# Error with AttributeMap when upgrading
+This article helps resolve the "AttributeMap" error messages when upgrading Microsoft Dynamics 365 Field Service.
 
-This article helps resolve issues with AttributeMap errors in Dynamics 365 Field Service.
+## Error with customerid and msdyn_serviceaccount
 
-## Symptoms
+> An AttributeMap, with ID: GUID, between attribute customerid and *msdyn_serviceaccount* of entity incident and msdyn_workorder, has an unmanaged base instance and therefore cannot be updated by a managed solution.
 
-You get an "AttributeMap" error when upgrading Field Service.
+#### Resolution
 
-There are two types of errors:
-
-- "An AttributeMap, with ID: GUID, between attribute customerid and *msdyn_serviceaccount* of entity incident and msdyn_workorder, has an unmanaged base instance and therefore cannot be updated by a managed solution."
-- "An AttributeMap, with ID: GUID, between attribute customerid and *msdyn_billingaccount* of entity incident and msdyn_workorder, has an unmanaged base instance and therefore cannot be updated by a managed solution."
-
-## Resolution
-
-You can resolve this issue by following the steps outlined below. The attribute maps will be automatically recreated by upgrading to a newer version. Review these two attribute maps and delete them in your environment.
-
-### Error with customerid and msdyn_serviceaccount
+You can follow these steps to resolve this issue. The attribute map will be automatically recreated by upgrading to a newer version. Review the attribute map and delete it in your environment.
 
 1. Go to **Settings** > **Customization** > **Customize the System**.
 2. Go to **Entities** > **Work Orders** > **N:1 Relationships**.
@@ -33,7 +25,13 @@ You can resolve this issue by following the steps outlined below. The attribute 
 5. Select the **Service Account** mapping and delete it.
 6. Run upgrade again.
 
-### Error with customerid and msdyn_billingaccount
+## Error with customerid and msdyn_billingaccount
+
+> An AttributeMap, with ID: GUID, between attribute customerid and *msdyn_billingaccount* of entity incident and msdyn_workorder, has an unmanaged base instance and therefore cannot be updated by a managed solution.
+
+#### Resolution
+
+You can follow these steps to resolve this issue. The attribute map will be automatically recreated by upgrading to a newer version. Review the attribute map and delete it in your environment.
 
 1. Go to **Settings** > **Customization** > **Customize the System**.
 2. Go to **Entities** > **Work Orders** > **N:1 Relationships**.
