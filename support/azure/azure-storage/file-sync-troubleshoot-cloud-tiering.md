@@ -4,8 +4,9 @@ description: Troubleshoot common issues with cloud tiering in an Azure File Sync
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 10/04/2023
+ms.date: 10/07/2023
 ms.author: kendownie
+ms.reviewer: v-weizhu
 ---
 # Troubleshoot Azure File Sync cloud tiering
 
@@ -52,8 +53,9 @@ To monitor recall activity on a server, use Event ID 9005, 9006, 9009, and 9059 
 
 ## How to troubleshoot files that fail to tier
 
-To troubleshoot files that fail to tier, perform the following steps:  
-1. In Event Viewer, go to the Microsoft-FileSync-Agent/TieringResults event log.
+To troubleshoot files that fail to tier, perform the following steps:
+
+1. In Event Viewer, go to the *Microsoft-FileSync-Agent/TieringResults* event log.
 2. There is an event logged for each file that fails to tier. Check the [Tiering errors and remediation](#tiering-errors-and-remediation) section to see if remediation steps are listed for the error code.
 
     You can also use PowerShell to view the events that are logged to the TieringResults event log:
@@ -61,18 +63,21 @@ To troubleshoot files that fail to tier, perform the following steps:
     ```powershell
     Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"
     Get-StorageSyncFileTieringResult
-    ```    
+    ```
 
-General troubleshooting steps if content does not exist for the error code:  
+If content doesn't exist for the error code, perform the general troubleshooting steps below:
+
 1. Verify the file exists in the Azure file share.
-      > [!NOTE]
-      > A file must be synced to an Azure file share before it can be tiered.
-2. Verify the server has internet connectivity. 
-3. Verify the Azure File Sync filter drivers (StorageSync.sys and StorageSyncGuard.sys) are running:
-   - At an elevated command prompt, run `fltmc`. Verify that the StorageSync.sys and StorageSyncGuard.sys file system filter drivers are listed.
+
+    > [!NOTE]
+    > A file must be synced to an Azure file share before it can be tiered.
+
+1. Verify the server has internet connectivity.
+1. Verify the Azure File Sync filter drivers (*StorageSync.sys* and *StorageSyncGuard.sys*) are running:
+   - At an elevated command prompt, run `fltmc`. Verify that the *StorageSync.sys* and *StorageSyncGuard.sys* file system filter drivers are listed.
 
 > [!NOTE]
-> If the server has a lot of tiering activity, some errors may be missing from the TieringResults event log due to wrapping. To prevent this issue, go to Event Viewer and increase the TieringResults event log size.
+> If the server has a lot of tiering activities, some errors may be missing from the TieringResults event log due to wrapping. To prevent this issue, go to Event Viewer and increase the TieringResults event log size.
 
 ## Tiering errors and remediation
 
@@ -142,23 +147,27 @@ General troubleshooting steps if content does not exist for the error code:
 ## How to troubleshoot files that fail to be recalled
 
 To troubleshoot files that fail to recall, perform the following steps:
-1. In Event Viewer, go to the Microsoft-FileSync-Agent/RecallResults event log.
-2. There is an event logged for each file that is recalled. If the DataTransferHresult field is 0, the file recall was successful. If DataTransferHresult field has an error code, check the [Recall errors and remediation](#recall-errors-and-remediation) section to see if remediation steps are listed for the error code.
+
+1. In Event Viewer, go to the *Microsoft-FileSync-Agent/RecallResults* event log.
+2. There is an event logged for each file that is recalled. If the `DataTransferHresult` field is 0, the file recall is successful. If the `DataTransferHresult` field has an error code, check the [Recall errors and remediation](#recall-errors-and-remediation) section to see if remediation steps are listed for the error code.
 
     You can also use PowerShell to view the events that are logged to the RecallResults event log:
+
     ```powershell
     Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"
     Get-StorageSyncFileRecallResult
     ```
-General troubleshooting steps if content does not exist for the error code:  
+
+If content doesn't exist for the error code, perform the general troubleshooting steps below:
+
 1. Verify the file exists in the Azure file share.
 2. Verify the server has internet connectivity.
-3. Open the Services MMC snap-in and verify the Storage Sync Agent service (FileSyncSvc) is running.
-4. Verify the Azure File Sync filter drivers (StorageSync.sys and StorageSyncGuard.sys) are running:
-   - At an elevated command prompt, run `fltmc`. Verify that the StorageSync.sys and StorageSyncGuard.sys file system filter drivers are listed.
+3. Open the Services MMC snap-in and verify the Storage Sync Agent service (*FileSyncSvc*) is running.
+4. Verify the Azure File Sync filter drivers (*StorageSync.sys* and *StorageSyncGuard.sys*) are running:
+   - At an elevated command prompt, run `fltmc`. Verify that the *StorageSync.sys* and *StorageSyncGuard.sys* file system filter drivers are listed.
 
 > [!NOTE]
-> If the server has a lot of recall activity, some errors may be missing from the RecallResults event log due to wrapping. To prevent this issue, go to Event Viewer and increase the RecallResults event log size.
+> If the server has a lot of recall activities, some errors may be missing from the RecallResults event log due to wrapping. To prevent this issue, go to Event Viewer and increase the RecallResults event log size.
 
 ## Recall errors and remediation
 
