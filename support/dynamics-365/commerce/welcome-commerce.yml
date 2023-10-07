@@ -9,7 +9,7 @@ metadata:
   ms.service: dynamics-365-commerce
   author: bstorie
   ms.author: brstor
-  ms.date: 09/08/2023
+  ms.date: 10/07/2023
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -125,6 +125,14 @@ landingContent:
             url: point-of-sale/store-commerce-setup-installation.md
           - text: Troubleshoot Store Commerce sign-in issues
             url: point-of-sale/store-commerce-sign-in.md
+
+ # Card
+  - title: Pricing, discounts, and taxes
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Price change tracking issues
+            url: pricing-discounts-taxes/price-track-issues.md
 
  # Card
   - title: Ratings and reviews
