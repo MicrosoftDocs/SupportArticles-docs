@@ -1,34 +1,37 @@
 ---
-title: Upgrade fails due to previous pending upgrade.
-description: Works around the upgrade failure due to previous pending upgrade.
+title: Solution upgrade fails due to a previously pending upgrade
+description: Works around the solution upgrade failure due to a previously pending upgrade in Power Apps.
 ms.reviewer: jdaly
-ms.date: 09/18/2023
+ms.date: 10/08/2023
 author: swatimadhukargit
 ms.author: swatim
 ---
-# Upgrade fails due to previous pending upgrade
+# Solution upgrade fails due to a previously pending upgrade
 
 _Applies to:_ &nbsp; Power Platform, Solutions
 
-This article provides a workaround for an issue that occurs when you attempt an [upgrade](/power-apps/maker/data-platform/update-solutions) but it fails due to pending upgrade from a previous attempt.
-
-The solution history page shows exception message for failed upgrade.
-> Solution manifest import: FAILURE: Holding solution \<Solution name\>_Upgrade exists. Cannot update solution.
-
-You may see a notification error: The imported solution and the existing solution must both be managed for upgrade.
+This article provides a workaround for an issue where a [solution upgrade](/power-apps/maker/data-platform/update-solutions) fails due to a previously pending upgrade in Microsoft Power Apps.
 
 ## Symptoms
 
-When you try to attempt an [upgrade](/power-apps/maker/data-platform/update-solutions), it fails due to an already pending upgrade that didn't complete successfully.
+A solution upgrade fails when a previous upgrade doesn't complete successfully.
+
+The solution history page shows the following exception message for the failed upgrade:
+
+> Solution manifest import: FAILURE: Holding solution \<Solution name\>_Upgrade exists. Cannot update solution.
+
+You might also see the following notification error message:
+
+> The imported solution and the existing solution must both be managed for upgrade.
 
 ## Cause
 
-The reason behind this kind of failure is that the environment has a pending upgrade solution \<Solution name\>_Upgrade from previous attempt and you're trying to bring a new upgrade solution. When a pending upgrade exists, bringing in a new upgrade or a new patch is blocked until the pending upgrade is resolved.
+This issue occurs because the environment has a pending upgrade solution "\<Solution name\>_Upgrade" from a previous attempt, and you're trying to apply a new upgrade solution. When a pending upgrade exists, applying a new upgrade or a new patch is blocked until the pending upgrade is resolved.
 
 ## Workaround
 
-In order to work around the issue, it's necessary to either complete the previous pending upgrade by resolving any errors. Or you can delete the previous upgrade solution, where delete might result in loss of data if new data came through table and relationships in the upgrade. Once the pending upgrade is either completed or deleted, you can attempt the upgrade again.
+To work around the issue, it's necessary to complete the previously pending upgrade by resolving any errors. Or, you can delete the previous upgrade solution. However, this might lead to data loss if new data comes through tables and relationships in the upgrade. Once the pending upgrade is either completed or deleted, you can proceed with the new upgrade.
 
->[!TIP]
-> Don't leave pending upgrades.  
-> If failed to upgrade, consider immediately deleting the upgrade. And go back to source environment to fix the problem and try the upgrade again.
+> [!TIP]
+> Don't leave pending upgrades.
+> If an upgrade fails, consider immediately deleting the upgrade. Then, go back to the source environment to fix the problem, and reapply the upgrade.
