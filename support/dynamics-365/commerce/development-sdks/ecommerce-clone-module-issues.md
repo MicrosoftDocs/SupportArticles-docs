@@ -5,6 +5,8 @@ author: Bstorie
 ms.author: Brstor
 ms.date: 10/08/2023
 ---
+# Known issues with e-commerce SDK clone modules
+
 This article provides information about the clone module process and known issues associated with this process in Microsoft Dynamics 365 Commerce.
 
 ## Introduction
