@@ -2,7 +2,7 @@
 title: Decrease the number of decimal places in Currency Setup
 description: Describes an issue in which you receive an error message and you can't decrease the number of decimal places for a currency.
 ms.reviewer:
-ms.date: 10/07/2023
+ms.date: 10/08/2023
 ---
 # Can't decrease the number of decimal places in Currency Setup
 
@@ -62,4 +62,4 @@ To resolve this issue, follow these steps.
    1. Select the currency ID that you fixed.
    2. Make a change to the description and select **Save** to roll down the change with the code.
 
-This will update any other company setups if you're fixing an functional currency.
+   This will update any other company's setups if you're fixing a functional currency.
