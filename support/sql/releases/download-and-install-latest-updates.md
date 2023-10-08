@@ -75,8 +75,8 @@ Each of the following links provides information for all of the applicable produ
 
 |Build number or version|Service pack|Update|KB article|Release date|
 |---|---|---|---|---|
-| 13.0.7029.3|None|Azure Connect Pack + GDR|[5029187](https://support.microsoft.com/help/5029187)|October 10, 2023 |
-| 13.0.6435.1|None|SP3 + GDR| [5029186](https://support.microsoft.com/help/5029186)|October 10, 2023|
+|13.0.7029.3|None|Azure Connect Pack + GDR|[5029187](https://support.microsoft.com/help/5029187)|October 10, 2023|
+|13.0.6435.1|None|SP3 + GDR| [5029186](https://support.microsoft.com/help/5029186)|October 10, 2023|
 |15.0.4322.2|None|CU22| [5027702](sqlserver-2019/cumulativeupdate22.md)|August 14, 2023|
 |15.0.4316.3|None|CU21| [5025808](sqlserver-2019/cumulativeupdate21.md)|June 15, 2023|
 |15.0.4312.2|None|CU20| [5024276](sqlserver-2019/cumulativeupdate20.md)|April 13, 2023|
@@ -132,10 +132,10 @@ Each of the following links provides information for all of the applicable produ
 |14.0.3356.20|None| CU22| [4577467](sqlserver-2017/cumulativeupdate22.md)|September 10, 2020|
 |14.0.3335.7|None| CU21| [4557397](sqlserver-2017/cumulativeupdate21.md)|July 01, 2020|
 |14.0.3294.2| None| CU20| [4541283](sqlserver-2017/cumulativeupdate20.md)|April 07, 2020|
-| 14.0.3281.6| None| CU19| [4535007](sqlserver-2017/cumulativeupdate19.md)|February 05, 2020|
+|14.0.3281.6| None| CU19| [4535007](sqlserver-2017/cumulativeupdate19.md)|February 05, 2020|
 |14.0.3257.3|None| CU18| [4527377](sqlserver-2017/cumulativeupdate18.md)|December 09, 2019|
 |14.0.3238.1|None| CU17| [4515579](sqlserver-2017/cumulativeupdate17.md)|October 08, 2019|
-| 14.0.3223.3|None| CU16| [4508218](sqlserver-2017/cumulativeupdate16.md)|August 01, 2019|
+|14.0.3223.3|None| CU16| [4508218](sqlserver-2017/cumulativeupdate16.md)|August 01, 2019|
 |14.0.3192.2|None| CU15 + GDR| [4505225](https://support.microsoft.com/help/4505225)|July 09, 2019|
 |14.0.2027.2|None| GDR| [4505224](https://support.microsoft.com/help/4505224)|July 09, 2019|
 |14.0.3162.1|None| CU15| [4498951](sqlserver-2017/cumulativeupdate15.md)|May 23, 2019|
@@ -165,7 +165,7 @@ Each of the following links provides information for all of the applicable produ
 
 |Build number or version|Service pack|Update|KB article|Release date|
 |---|---|---|---|---|
-|13.0.7029.3|None|Azure Connect Pack + GDR|[5029187](https://support.microsoft.com/help/5029187)|October 10, 2023 |
+|13.0.7029.3|None|Azure Connect Pack + GDR|[5029187](https://support.microsoft.com/help/5029187)|October 10, 2023|
 |13.0.6435.1|None|SP3 + GDR| [5029186](https://support.microsoft.com/help/5029186)|October 10, 2023|
 |13.0.6430.49|SP3|GDR|[5021129](https://support.microsoft.com/help/5021129)|February 14, 2023|
 |13.0.7024.30|SP3|Azure Connect pack + GDR|[5021128](https://support.microsoft.com/help/5021128)|February 14, 2023|
