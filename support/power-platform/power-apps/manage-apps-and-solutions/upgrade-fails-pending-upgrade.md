@@ -26,7 +26,7 @@ You might also see the following notification error message:
 
 ## Cause
 
-This issue occurs because the environment has a pending upgrade solution "\<Solution name\>_Upgrade" from a previous attempt, and you're trying to apply a new upgrade solution. When a pending upgrade exists, applying a new upgrade or a new patch is blocked until the pending upgrade is resolved.
+This issue occurs because the environment has a pending upgrade solution `<Solution name>_Upgrade` from a previous attempt, and you're trying to apply a new upgrade solution. When a pending upgrade exists, applying a new upgrade or a new patch is blocked until the pending upgrade is resolved.
 
 ## Workaround
 
