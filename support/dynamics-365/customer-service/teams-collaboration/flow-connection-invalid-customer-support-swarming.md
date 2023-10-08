@@ -3,7 +3,7 @@ title: Flow connection isn't valid
 description: Provides a resolution for the issue where the flow connection isn't valide for customer support swarming in Dynamics 365 Customer Service.
 ms.author: jinywang
 ms.reviewer: laalexan
-ms.date: 09/20/2023
+ms.date: 10/08/2023
 ---
 # Flow connection isn't valid when configuring expert notifications in customer support swarming
 
