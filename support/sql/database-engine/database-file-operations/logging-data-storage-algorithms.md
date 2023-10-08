@@ -18,7 +18,7 @@ To learn more about the underlying concepts of the engines and about Algorithm f
 
 External link: [ARIES: A Transaction Recovery method Supporting Fine-Granularity Locking and Partial Rollbacks Using Write-Ahead Logging](https://dl.acm.org/doi/10.1145/128765.128770)
 
-The lead writer of this document is C. Mohan. The document addresses the SQL Server techniques to extend data reliability and integrity as related to failures.
+The document addresses the SQL Server techniques to extend data reliability and integrity as related to failures.
 
 We recommend that you read the following articles in the Microsoft Knowledge Base for more information about caching and alternative failure mode discussions:
 
@@ -34,18 +34,18 @@ Before we begin the in-depth discussion, some of the terms that are used through
 |---|---|
 |Battery-backed|Separate and localized battery Backup facility directly available and controlled by the caching mechanism to prevent data loss.<br/> This isn't an uninterruptible power supply (UPS). A UPS doesn't guarantee any write activities and can be disconnected from the caching device.|
 |Cache|Intermediary storage mechanism used to optimize physical I/O operations and improve performance.|
-|Dirty Page|Page containing data modifications that are yet to be flushed to stable storage. For more information about dirty page buffers, see the [Writing Pages](/previous-versions/sql/sql-server-2008-r2/aa337560(v=sql.105)) topic at SQL Server Books Online.<br/>The content also applies to Microsoft SQL Server 2012 and later versions.|
+|Dirty Page|Page containing data modifications that are yet to be flushed to stable storage. For more information about dirty page buffers, see [Writing Pages](/previous-versions/sql/sql-server-2008-r2/aa337560(v=sql.105)) at SQL Server Books Online.<br/>The content also applies to Microsoft SQL Server 2012 and later versions.|
 |Failure|Anything that might cause an unexpected outage of the SQL Server process. Examples include: power outage, computer reset, memory errors, other hardware issues, bad sectors, drive outages, system failures, and so on.|
 |Flush|Forcing of a cache buffer to stable storage.|
 |Latch|Synchronization object used to protect physical consistency of a resource.|
 |Nonvolatile storage|Any medium that remains available across system failures.|
 |Pinned page|Page that remains in data cache and can't be flushed to stable storage until all associated log records are secured in a stable storage location.|
 |Stable storage|Same as nonvolatile storage.|
-|Volatile storage|Any medium that won't remain intact across failures.<br/>|
+|Volatile storage|Any medium that will not remain intact across failures.<br/>|
   
 ## Write-Ahead Logging (WAL) protocol
 
-The term protocol is an excellent way to describe WAL. It's a specific and defined set of implementation steps necessary to make sure that data is stored and exchanged correctly and can be recovered to a known state in the event of a failure. Just as a network contains a defined protocol to exchange data in a consistent and protected manner, so too does the WAL describe the protocol to protect data.
+The term protocol is an excellent way to describe WAL. It's a specific and defined set of implementation steps necessary to make sure that data is stored and exchanged correctly and can be recovered to a known state if there is a failure. Just as a network contains a defined protocol to exchange data in a consistent and protected manner, so too does the WAL describe the protocol to protect data.
 
 The ARIES document defines the WAL as follows:
 
@@ -84,9 +84,9 @@ Looking at the example in more detail, you might ask what happens when the LazyW
 
 SQL Server enhances log and data page operations by including the knowledge of disk sector sizes (commonly 4,096 bytes or 512 bytes).
 
-To maintain the ACID properties of a transaction, the SQL Server must account for failure points. During a failure, many disk drive specifications only guarantee a limited amount of sector write operations. Most specifications guarantee completion of a single sector write when a failure occurs.
+To maintain the ACID properties of a transaction, the SQL Server must account for failure points. During a failure, many disk drive specifications only guarantee a limited number of sector write operations. Most specifications guarantee completion of a single sector write when a failure occurs.
 
-SQL Server uses 8-KB data pages and the log (if flushed) on multiples of the sector size. (Most disk drives use 512 bytes as the default sector size.) In the case of a failure, SQL Server can account for write operations larger than a sector by employing log parity and torn write techniques.
+SQL Server uses 8-KB data pages and the log (if flushed) on multiples of the sector size. (Most disk drives use 512 bytes as the default sector size.) If there is a failure, SQL Server can account for write operations larger than a sector by employing log parity and torn write techniques.
 
 ## Torn page detection
 
@@ -97,8 +97,7 @@ Although SQL Server database pages are 8 KB, disks perform I/O operations by usi
 By using battery-backed disk controller caches, you can make sure that data is successfully written to disk or not written at all. In this situation, don't set torn page detection to "true" because this isn't necessary.
 
 > [!NOTE]
-> Torn page detection isn't enabled by default in SQL Server. For more information, see 
-[ALTER DATABASE SET Options (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-set-options).
+> Torn page detection isn't enabled by default in SQL Server. For more information, see [ALTER DATABASE SET Options (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-set-options).
 
 ## Log parity
 
