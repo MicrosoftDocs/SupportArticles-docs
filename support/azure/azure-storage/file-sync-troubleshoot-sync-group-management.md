@@ -67,6 +67,9 @@ If you see this message and the Azure file share currently isn't in use by a clo
 
 ## Server endpoint creation and deletion errors
 
+<a id="server-endpoint-provisioningcanceled"></a>**Server endpoint has a health status of "Provisioning canceled"**  
+A server endpoint health status of "Provisioning canceled" means the server endpoint creation failed. To troubleshoot why the server endpoint creation failed, click the "Provisioning canceled" status to view the error code and search this document for the error. Once the cause is understood, delete the server endpoint that failed to create before attempting to create the server endpoint again. To delete the server endpoint that has a health status of "Provisioning canceled," right-click the server endpoint and select Delete.
+
 <a id="-2134375898"></a>**Server endpoint creation fails, with this error: "MgmtServerJobFailed" (Error code: -2134375898 or 0x80c80226)**
   
 This error occurs if the server endpoint path is on the system volume and cloud tiering is enabled. Cloud tiering isn't supported on the system volume. To create a server endpoint on the system volume, disable cloud tiering when creating the server endpoint.

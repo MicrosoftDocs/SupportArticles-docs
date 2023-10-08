@@ -51,7 +51,9 @@
       ],
       "recommendations": true
     },
-    "fileMetadata": {
+    "fileMetadata": {      "uhfHeaderId": {
+      "azure/**.*": "Azure"
+    },
       "feedback_product_url": {
         "dynamics/gp/*.md": "https://experience.dynamics.com/ideas/categories/?forum=771cc5ac-c117-e811-8105-3863bb2e0320&forumName=Dynamics%20GP",
         "dynamics-365/customer-insights/**/*.md": "https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights",
@@ -63,6 +65,7 @@
         "dynamics-365/supply-chain/**/*.md": "https://experience.dynamics.com/ideas/categories/?forum=515617a5-dedb-e911-a814-000d3a4f1244&forumName=Dynamics%20365%20Supply%20Chain%20Management",
         "power-platform/power-apps/**/*.md": "https://ideas.powerapps.com/d365community/forum/f1458c72-ae29-ed11-9db2-000d3a8c451e",
         "power-platform/power-automate/*.md": "https://ideas.powerautomate.com/d365community/forum/086dd68e-597f-ec11-8d21-0022482e8f9f",
+        "power-platform/power-automate/**/*.md": "https://ideas.powerautomate.com/d365community/forum/086dd68e-597f-ec11-8d21-0022482e8f9f",
         "power-platform/ai-builder/*.md": "https://powerusers.microsoft.com/t5/AI-Builder/bd-p/AIBuilder1",
         "windows-server/**/*.md": "https://techcommunity.microsoft.com/t5/windows-server-for-it-pro/bd-p/WindowsServer",
         "windows-client/**/*.md": "https://support.microsoft.com/windows/f59187f8-8739-22d6-ba93-f66612949332",
@@ -83,6 +86,7 @@
         "azure/azure-kubernetes/*.md": "https://feedback.azure.com/d365community/forum/aabe212a-f724-ec11-b6e6-000d3a4f0da0",
         "azure/site-recovery/*.md": "https://feedback.azure.com/d365community/forum/3ccca344-2d25-ec11-b6e6-000d3a4f0f84",
         "azure/synapse-analytics/**/*.md": "https://feedback.azure.com/d365community/forum/9b9ba8e4-0825-ec11-b6e6-000d3a4f07b8",
+        "azure/cosmos-db/**/*.md": "https://feedback.azure.com/d365community/forum/3002b3be-0d25-ec11-b6e6-000d3a4f0858",
         "azure/general/*.md": "https://learn.microsoft.com/answers/tags/133/azure",
         "azure/virtual-desktop/*.md": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop-feedback/idb-p/AzureVirtualDesktop"
       },
@@ -101,6 +105,7 @@
         "azure/devops/**/*.md": "HaiyingYu",
         "azure/azure-functions/**/*.md": "haiyingyu",
         "azure/synapse-analytics/**/*.md": "HaiyingYu",
+        "azure/cosmos-db/**/*.md": "haiyingyu",
         "developer/**/*.md": "HaiyingYu",
         "sql/**/*.md": "HaiyingYu",
         "windows/win32/**/*.md": "HaiyingYu",
@@ -127,6 +132,7 @@
         "azure/devops/**/*.md": "haiyingyu",
         "azure/azure-functions/**/*.md": "haiyingyu",
         "azure/synapse-analytics/**/*.md": "haiyingyu",
+        "azure/cosmos-db/**/*.md": "haiyingyu",
         "developer/**/*.md": "haiyingyu",
         "sql/**/*.md": "haiyingyu",
         "windows/win32/**/*.md": "haiyingyu",
@@ -272,8 +278,10 @@
         "azure/cloud-services/*.md": "cloud-services",
         "azure/azure-functions/**/*.md": "azure-functions",
         "azure/synapse-analytics/**/*.md": "synapse-analytics",
+        "azure/cosmos-db/**/*.md": "cosmos-db",
         "power-platform/power-apps/**/**.*": "powerapps",
         "power-platform/power-automate/*.md": "power-automate",
+        "power-platform/power-automate/**/*.md": "power-automate",
         "dynamics-365/customer-insights/**/**.*": "customer-insights",
         "dynamics-365/customer-service/**/**.*": "dynamics-365-customerservice",
         "dynamics-365/marketing/*.md": "dynamics-365-marketing",
@@ -403,6 +411,7 @@
         "azure/active-directory/*.md": "Active Directory",
         "azure/devops/*.md": "Azure DevOps",
         "azure/synapse-analytics/**/*.md": "Azure Synapse Analytics",
+        "azure/cosmos-db/**/*.md": "Azure Cosmos DB",
         "dynamics-365/customer-insights/**/*.md": "Dynamics 365 Customer Insights",
         "dynamics-365/customer-service/**/*.md": "Dynamics 365 Customer Service",
         "dynamics-365/marketing/*.md": "Dynamics 365 Marketing",
@@ -412,6 +421,7 @@
         "dynamics-365/supply-chain/**/*.md": "Dynamics 365 Supply Chain Management",
         "power-platform/power-apps/**/*.md": "Power Apps",
         "power-platform/power-automate/*.md": "Power Automate",
+        "power-platform/power-automate/**/*.md": "Power Automate",
         "power-platform/ai-builder/*.md": "AI Builder",
         "dynamics/gp/*.md": "Dynamics GP"
       },
@@ -537,6 +547,11 @@
           "Power Platform",
           "Power Apps"
         ],
+        "power-platform/power-automate/**/*.md": [
+          "Troubleshoot",
+          "Power Platform",
+          "Power Automate"
+        ],
         "power-platform/power-automate/*.md": [
           "Troubleshoot",
           "Power Platform",
@@ -562,14 +577,23 @@
           "Flow",
           "powerautomate-docs"
         ],
+        "power-platform/power-automate/**/*.md": [
+          "Flow",
+          "powerautomate-docs"
+        ],
         "power-platform/ai-builder/*.md": [
           "PowerApps",
           "Flow",
           "powerapps-docs",
           "powerautomate-docs"
         ],
-        "dynamics-365/customer-insights/**/**.*": [
-          "customerinsights-docs"
+        "dynamics-365/customer-insights/data/**/**.*": [
+          "customerinsights-docs",
+          "customerinsightsdata-docs"
+        ],
+        "dynamics-365/customer-insights/journeys/**.*": [
+          "marketing-docs",
+          "customerinsightsjourneys-docs"
         ],
         "dynamics-365/customer-service/**/**.*": [
           "D365CE",
@@ -580,11 +604,6 @@
         "dynamics-365/finance/**/**.*": [
           "FinanceAndOperations",
           "financeandoperations-docs"
-        ],
-        "dynamics-365/marketing/**/**.*": [
-          "D365CE",
-          "D365Mktg",
-          "marketing-docs"
         ],
         "dynamics-365/sales/**/**.*": [
           "D365CE",

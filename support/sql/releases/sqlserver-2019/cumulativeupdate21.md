@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 21 for SQL Server 2019 (KB5025808)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 21 (KB5025808).
-ms.date: 09/05/2023
+ms.date: 09/19/2023
 ms.custom: KB5025808
 ms.reviewer: v-qianli2
 appliesto:
@@ -16,7 +16,7 @@ _Version:_ &nbsp; 15.0.4316.3
 
 ## Summary
 
-This article describes Cumulative Update package 21 (CU21) for Microsoft SQL Server 2019. This update contains 28 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2019 Cumulative Update 20, and it updates components in the following builds:
+This article describes Cumulative Update package 21 (CU21) for Microsoft SQL Server 2019. This update contains 29 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2019 Cumulative Update 20, and it updates components in the following builds:
 
 - SQL Server - Product version: **15.0.4316.3**, file version: **2019.150.4316.3**
 - Analysis Services - Product version: **15.0.35.39**, file version: **2018.150.35.39**
@@ -95,11 +95,12 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="2313620">[2313620](#2313620)</a> | Fixes the following errors and access violations that are caused by an incorrect plan in the case of multiple occurrences of the same scalar subquery: </br></br>Msg 596, Level 21, State 1, Line \<LineNumber> </br>Cannot continue the execution because the session is in the kill state. </br></br>Msg 0, Level 20, State 0, Line \<LineNumber> </br>A severe error occurred on the current command.&nbsp;&nbsp;The results, if any, should be discarded. | SQL Server Engine | Query Optimizer | All |
 | <a id="2363303">[2363303](#2363303)</a> | Improves the cardinality estimation (CE) for "`AND`" conjunctions that are composed of point predicates when the predicates have a multi-column statistic covering them, and the predicate values are outside the histogram bounds. | SQL Server Engine | Query Optimizer | All |
 | <a id="2391556">[2391556](#2391556)</a> | Fixes inconsistent results that are caused by the parallel spool in the plan for the `INSERT`, `UPDATE`, or `DELETE` query. | SQL Server Engine | Query Optimizer | All |
-| <a id="2266806">[2266806](#2266806)</a> | Adds a new error 673 that helps avoid the assertion failure (Location: IndexRowScanner.cpp:1449; Expression: m_versionStatus.IsVisible ()) that you may encounter when you enable change tracking on a database. </br></br>Error message: </br></br>Failure to access row object in snapshot isolation. | SQL Server Engine | Replication | All |
+| <a id="2266806">[2266806](#2266806)</a> | Adds a new error 673 that helps avoid the assertion failure (Location: IndexRowScanner.cpp:1449; Expression: m_versionStatus.IsVisible ()) that you might encounter when you enable change tracking on a database that has snapshot isolation turned on. </br></br>Error message: </br></br>Failure to access row object in snapshot isolation. </br></br>**Note**: You need to turn on trace flag 8285. | SQL Server Engine | Replication | All |
 | <a id="2320889">[2320889](#2320889)</a> | Fixes an issue where applying an update on a secondary replica or performing an in-place upgrade fails when the distribution database is in an availability group. The following error is returned: </br></br>Error: There was an error executing the Replication upgrade scripts. See the SQL Server error log for details. </br></br>You can see the following error details in the SQL Server error log: </br></br>Executing sp_vupgrade_replication. </br>Could not open distribution database distribution because it is offline or being recovered. Replication settings and system objects could not be upgraded. Be sure this database is available and run sp_vupgrade_replication again. | SQL Server Engine | Replication | Windows |
 | <a id="2421435">[2421435](#2421435)</a>| Fixes a manual cleanup issue where the repeated lock escalations on the tables cause contention and slowness in cleaning up the expired change tracking metadata. </br></br>**Note**: You need to turn on trace flag 8284. | SQL Server Engine | Replication | All |
 | <a id="2397659">[2397659](#2397659)</a> | [FIX: SQL Server Audit Events fail to write to the Security log (KB4052136)](https://support.microsoft.com/help/4052136) | SQL Server Engine | Security Infrastructure | Windows |
 | <a id="2409008">[2409008](#2409008)</a> | Fixes error 207 (Invalid column name '\<ColumnName>') that you encounter when you run a user-defined function (UDF), which references a dropped column that uses dynamic data masking (DDM). | SQL Server Engine | Security Infrastructure | All |
+| <a id="2410400">[2410400](#2410400)</a> | `SOS_BLOCKALLOCPARTIALLIST` spinlock contention and elevated CPU utilization occur on large-memory machines. </br></br>`DBCC DROPCLEANBUFFERS` provides temporary mitigation for this issue when encountered. </br></br>This occurs when multiple threads concurrently attempt to gain access to a spinlock-protected list used by the SQL operating system for memory management purposes. </br></br>The following trace flags are required to enable the fix: </br></br>- TF 8142 partitions list by count of CPU, up to 64 partitions </br></br>- TF 8145 modifies the partitioning to be count of soft-NUMA nodes </br></br>These trace flags must be applied as startup parameters to take effect. </br></br>If `SOS_BLOCKALLOCPARTIALLIST` spinlock contention is encountered and `DBCC DROPCLEANBUFFERS` provides temporary mitigation, it's recommended to apply this fix first with both trace flags, and remove Trace Flag 8145 only if symptoms persist. | SQL Server Engine | SQL OS | All |
 | <a id="2330957">[2330957](#2330957)</a> | Fixes the following error that you encounter on the target instance when configuring a Service Broker communication with transport security: </br></br>The certificate serial number size is 19, however it must be no greater than 16 bytes in length. This occurred in the message with Conversation ID , Initiator: 1, and Message sequence number: 0. | SQL Server Engine | SQL Server Engine | All |
 
 ## How to obtain or download this or the latest cumulative update package
