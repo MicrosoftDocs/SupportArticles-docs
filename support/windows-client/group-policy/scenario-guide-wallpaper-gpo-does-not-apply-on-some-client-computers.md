@@ -48,7 +48,7 @@ Before we start troubleshooting, here are some scoping questions that can help u
 3. What settings are configured by using the **Wallpaper-GPO-Tokyo** GPO?  
    **Answer**: There are some settings, and the most important one is a user-side setting with the following configuration:
 
-   - Path: **User Configuration\Administrative templates\Desktop\Desktop\Desktop Wallpaper**
+   - Path: *User Configuration\Administrative templates\Desktop\Desktop\Desktop Wallpaper*
    - GPO setting: **Enabled**
    - Wallpaper location: *\contoso.com\netlogon\home.jpg*
    - Wallpaper style: **Fit**

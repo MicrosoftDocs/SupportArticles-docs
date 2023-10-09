@@ -32,7 +32,7 @@ Before you proceed, refer to the [Applying Group Policy troubleshooting guidance
 Before we start troubleshooting, here are some scoping questions that can help us understand the situation and narrow down the cause of the issue:
 
 1. What are the client and server operating systems?  
-   **Answer**: The client machines are Windows 11-22H2, and the File server where the mapped drive is located is on the Linux Server.
+   **Answer**: The client machines are Windows 11, version 22H2, and the File server where the mapped drive is located is on the Linux Server.
 
 2. How do you configure the Group Policy preferences?  
    **Answer**: We have a GPO named **Mapped-Drive** and this GPO is configured by using Group Policy preferences mapped drives extension.
@@ -104,7 +104,7 @@ The GPO **Mapped-Drive** is linked to the "Users" OU
 
 :::image type="content" source="media/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected/screenshot-of-the-event-id-5017.png" alt-text="Screenshot of the event ID 5017." border="true":::
 
-### Event: 5312 showing the list of applicable GPOs
+### Event 5312 showing the list of applicable GPOs
 
 We do see that the GPO **Mapped-Drive** is in the applicable list.
 
@@ -162,7 +162,7 @@ At this moment, we know that the Group Policy preferences are applied, but drive
 
 Next, we need to analyze the procmon trace to observe what deleted the mapped drive. The TSS tool also collects the procmon trace with the `-Procmon` switch that we used to collect the data. Open the file *\<Clientmachinename\>_\<date_time\>_Procmon_0.pml*.
 
-The procmon trace can be overwhelming. Follow these steps to set up a filter to view the data. The filter can be used to troubleshoot any issues realted to mapped drives.
+The procmon trace can be overwhelming. Follow these steps to set up a filter to view the data. The filter can be used to troubleshoot any issues related to mapped drives.
 
 1. Open the file *Procmon_0.pml*.
 2. Select **Filter** - **Filter**.
@@ -225,7 +225,7 @@ We need to identify the GPO that contains this logon script. Here are two method
 
 ### Method 1: Gpresult /h output collected during log collection
 
-:::image type="content" source="media/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected/screenshot-of-the-gpresult-h-output.png" alt-text="Screenshot of the Gpresult /h output." border="true":::
+:::image type="content" source="media/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected/screenshot-of-the-gpresult-h-output.png" alt-text="Screenshot of the Gpresult /h output." border="true" lightbox="media/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected/screenshot-of-the-gpresult-h-output.png":::
 
 ### Method 2: Using the Group Policy management snap-in (GPMC.msc)
 
