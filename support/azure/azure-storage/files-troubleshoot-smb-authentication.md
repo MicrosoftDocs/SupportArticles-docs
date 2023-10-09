@@ -3,8 +3,8 @@ title: Troubleshoot Azure Files identity-based authentication and authorization 
 description: Troubleshoot problems using identity-based authentication to connect to SMB Azure file shares and see possible resolutions.
 ms.service: azure-file-storage
 ms.custom: has-azure-ad-ps-ref
-ms.date: 08/16/2023
-ms.reviewer: kendownie
+ms.date: 09/28/2023
+ms.reviewer: kendownie, v-weizhu
 ---
 # Troubleshoot Azure Files identity-based authentication and authorization issues (SMB)
 
@@ -206,7 +206,7 @@ If this is the case, ask your Azure AD admin to grant admin consent to the new A
 
 ### Error - "The request to AAD Graph failed with code BadRequest"
 
-####  Cause 1: an application management policy is preventing credentials from being created
+#### Cause 1: An application management policy is preventing credentials from being created
 
 When enabling Azure AD Kerberos authentication, you might encounter this error if the following conditions are met:
 
@@ -217,26 +217,20 @@ When enabling Azure AD Kerberos authentication, you might encounter this error i
 
 There is currently no workaround for this error.
 
-#### Cause 2: an application already exists for the storage account
+#### Cause 2: An application already exists for the storage account
 
-You might also encounter this error if you previously enabled Azure AD Kerberos authentication through manual limited preview steps. To delete the existing application, the customer or their IT admin can run the following script. Running this script will remove the old manually created application and allow the new experience to auto-create and manage the newly created application.
-
-> [!IMPORTANT]
-> This script must be run in PowerShell 5.1 (Windows PowerShell) because the AzureAD module doesn't work in PowerShell 7. Or you can import the module by using the `-UseWindowsPowerShell` option in a PowerShell 7 session:
-> 
-> `Import-Module AzureAD -UseWindowsPowerShell`
-> 
-> The AzureAD module is scheduled to be deprecated and replaced by Microsoft Graph PowerShell. If you want to use the Microsoft.Graph module instead, see [Upgrade from Azure AD PowerShell to Microsoft Graph PowerShell](/powershell/microsoftgraph/migration-steps) and the [Cmdlet map](/powershell/microsoftgraph/azuread-msoline-cmdlet-map).
+You might also encounter this error if you previously enabled Azure AD Kerberos authentication through manual limited preview steps. To delete the existing application, the customer or their IT admin can run the following script. Running this script will remove the old manually created application and allow the new experience to auto-create and manage the newly created application. After initiating the connection to Microsoft Graph, sign in to the Microsoft Graph Command Line Tools application on your device and grant permissions to the app.
 
 ```powershell
 $storageAccount = "exampleStorageAccountName"
 $tenantId = "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"
-Import-Module AzureAD
-Connect-AzureAD -TenantId $tenantId
+Install-Module Microsoft.Graph
+Import-Module Microsoft.Graph
+Connect-MgGraph -TenantId $tenantId -Scopes "User.Read","Application.Read.All"
 
-$application = Get-AzureADApplication -Filter "DisplayName eq '${storageAccount}'"
+$application = Get-MgApplication -Filter "DisplayName eq '${storageAccount}'"
 if ($null -ne $application) {
-   Remove-AzureADApplication -ObjectId $application.ObjectId
+   Remove-MgApplication -ObjectId $application.ObjectId
 }
 ```
 
@@ -392,7 +386,9 @@ The solution is to add the privateLink FQDN to the storage account's Azure AD ap
 
 ### Error AADSTS50105
 
-The request was interrupted by the following challenge: AADSTS50105: Your administrator has configured the application "Enterprise application name" to block users unless they are specifically granted (assigned) access to the application. The signed in user '{EmailHidden}' is blocked because they are not a direct member of a group with access, nor had access directly assigned by an administrator. Please contact your administrator to assign access to this application.
+The request was interrupted by the following error AADSTS50105:
+
+> Your administrator has configured the application "Enterprise application name" to block users unless they are specifically granted (assigned) access to the application. The signed in user '{EmailHidden}' is blocked because they are not a direct member of a group with access, nor had access directly assigned by an administrator. Please contact your administrator to assign access to this application.
 
 #### Cause
 
@@ -401,9 +397,6 @@ If you set up "assignment required" for the corresponding enterprise application
 #### Solution
 
 Don't select **Assignment required for Azure AD application** for the storage account because we don't populate entitlements in the Kerberos ticket that's returned back to the requestor. For more information, see [Error AADSTS50105 - The signed in user is not assigned to a role for the application](../active-directory/error-code-aadsts50105-user-not-assigned-role.md).
-
-## Need help?
-If you still need help, [contact support](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) to get your problem resolved quickly.
 
 ## See also
 

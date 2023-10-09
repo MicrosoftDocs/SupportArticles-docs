@@ -1,7 +1,7 @@
 ---
 title: Enable TLS 1.2 support as Azure AD TLS 1.0/1.1 is deprecated
 description: This article describes how to enable support for TLS 1.2 in your environment, in preparation for upcoming Azure AD TLS 1.0/1.1 deprecation.
-ms.date: 06/05/2023
+ms.date: 09/27/2023
 ms.reviewer: dahans, abizerh, v-leedennis
 ms.service: active-directory
 ms.subservice: authentication
@@ -33,10 +33,13 @@ These protocols and ciphers are being deprecated for the following reasons:
 - To follow the latest compliance standards for the [Federal Risk and Authorization Management Program (FedRAMP)](https://www.fedramp.gov/).
 - To improve security when users interact with our cloud services.
 
-The services are being deprecated on the following dates:
+The **TLS 1.0**, **TLS 1.1**, and **3DES Cipher suite** services are being deprecated on the following schedule.
 
-- **TLS 1.0**, **1.1** and **3DES Cipher suite** in U.S. government instances starting on **March 31, 2021**.
-- **TLS 1.0**, **1.1** and **3DES Cipher suite** in public instances starting **January 31, 2022**. (This date has been postponed from **June 30th, 2021** to **January 31st, 2022**, to give administrators more time to remove the dependency on legacy TLS protocols and ciphers (TLS 1.0,1.1 and 3DES).)
+| Instance type                                    | Deprecation date | Status        |
+|--------------------------------------------------|------------------|---------------|
+| U.S. government instances                        | March 31, 2021   | **COMPLETED** |
+| Public instances                                 | January 31, 2022 | **COMPLETED** |
+| Azure AD instances operated by 21Vianet in China | June 2023        | **ONGOING**   |
 
 ## Enable support for TLS 1.2 in your environment
 
