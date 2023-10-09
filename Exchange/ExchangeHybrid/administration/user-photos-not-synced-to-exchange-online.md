@@ -16,11 +16,9 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
 search.appverid: MET150
-ms.date: 9/29/2023
+ms.date: 09/29/2023
 ---
 # User photos aren't synced from the on-premises environment to Exchange Online in a hybrid deployment
-
-_Original KB number:_ &nbsp; 3062745
 
 ## Symptoms
 
@@ -28,17 +26,14 @@ You have a hybrid deployment of on-premises Microsoft Exchange Server and Exchan
 
 ## Cause
 
-Although the `thumbnailPhoto` attribute is synced from the on-premises environment to Azure Active Directory (Azure AD), the following issues could cause this problem:
+Although the `thumbnailPhoto` attribute is synced from the on-premises environment to Azure Active Directory (Azure AD), the following behaviors could cause this problem:
 
-> [!NOTE]
-> - The `thumbnailPhoto` attribute can store a user photo as large as 100 kilobytes (KB).
-> - Exchange Online accepts only a photo that's no larger than 10 KB from Azure AD.
+- The `thumbnailPhoto` attribute can store a user photo as large as 100 kilobytes (KB).
+- Exchange Online accepts only a photo that's no larger than 10 KB from Azure AD.
 
 ## Resolution
 
-Use the Microsoft 365 admin center or Microsoft Graph PowerShell to change the user's photo. These methods enable admins to upload a photo that's as large as 4 MB.
-
-For instructions, see [Change user profile photos](/microsoft-365/admin/add-users/change-user-profile-photos).
+Use the Microsoft 365 admin center or Microsoft Graph PowerShell to change the user's photo. These methods enable admins to upload a photo that's as large as 4 MB. For instructions, see [Change user profile photos](/microsoft-365/admin/add-users/change-user-profile-photos).
 
 ## References
 
