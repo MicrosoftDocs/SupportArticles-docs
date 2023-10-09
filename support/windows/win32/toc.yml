@@ -93,7 +93,9 @@
     - name: Get status of printer and print job
       href: printer-print-job-status.md
     - name: GetICMProfile might leak one or more handles on Windows 10
-      href: geticmprofile-might-leak-one-or-more-handles-on-windows10.md      
+      href: geticmprofile-might-leak-one-or-more-handles-on-windows10.md
+    - name: Graphics::DrawImage appears slow when drawing a JPEG or PNG to a printer
+      href: graphicsdrawimage-slow-drawing-jpeg-png-printer.md
     - name: Interoperability between GDI and GDI+
       href: mix-gdi-and-gdi-plus-drawing.md
     - name: Modify printer settings by using SetPrinter
