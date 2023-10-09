@@ -18,7 +18,7 @@ You can't delete (uninstall) a solution and the error indicates a dependency on 
 
 > **Failed deleting solution \<solution name\>. Solution dependencies exist, cannot uninstall**
 
-The same error occurs when you try to delete the other solution named in the error deleting the first solution. This is a *circular dependency*.
+The same error occurs when you try to delete the other solution named in the error while deleting the first solution. This is a *circular dependency*.
 
 ## Cause
 
@@ -36,9 +36,6 @@ The dependencies show all the components that are dependent on the solution you'
 -->
 
 While trying to delete the dependent solution, if you encounter same issue and find that dependent solution also has dependency on the current solution, then its circular dependency.
-
-> [!TIP]
-> You can also check solution dependencies in the solution explorer by clicking [**Show dependencies**](/power-apps/maker/data-platform/view-component-dependencies). This can help to catch the issue before trying solution delete.
 
 ### Example
 
@@ -77,7 +74,7 @@ I wish the power-platform/alm/removing-dependencies article was clearer. I just 
 
 #### Active change to remove dependencies
 
-If you want to remove the dependencies to be able to delete the solutions, remove the dependencies in the active layer and then deleting the solution.
+If you want to remove the dependencies to be able to delete the solutions, remove the dependencies in the active layer and then delete the solution.
 
 - Either, in the target environment, edit Component 2 and remove dependency on Component 3 that can be done in the active layer. Deletion of Solution B is allowed now. Once the Solution B is deleted, Solution A can be deleted too.
 
