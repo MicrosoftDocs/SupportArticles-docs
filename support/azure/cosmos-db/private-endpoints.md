@@ -4,9 +4,10 @@ description: Troubleshoot failed Azure Resource Manager deployments that are rel
 ms.service: cosmos-db
 author: seesharprun
 ms.author: sidandrews
+ms.topic: troubleshooting
 editor: v-jsitser
-ms.reviewer: ouryba, v-leedennis
-ms.date: 10/06/2023
+ms.reviewer: ouryba, v-jayaramanp
+ms.date: 10/09/2023
 ---
 
 # Deployment of private endpoints for Azure Cosmos DB fails
