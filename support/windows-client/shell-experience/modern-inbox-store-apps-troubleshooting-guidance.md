@@ -768,7 +768,7 @@ Permission problems often happen on folders or registry hives, including:
 - *C:\\ProgramData\\Microsoft\\Windows\\AppRepository*
 - *C:\\Users*
 - `HKCU\Software\Classes`
-- `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders`
+- `HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders`
 - `HKLM\SOFTWARE\Microsoft\OLE`
 
 You can use the following `Get-Acl` cmdlet in PowerShell to check folder permissions:
