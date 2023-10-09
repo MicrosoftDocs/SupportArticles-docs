@@ -1,6 +1,6 @@
 ---
 title: Fix issues with printers, scanners, and LOB apps that send email using Microsoft 365
-ms.date: 01/20/2023
+ms.date: 10/09/2023
 ms.localizationpriority: medium
 description: Fix issues with printers, scanners, and line of business applications that use Microsoft 365 or Office 365 to send email.
 ms.topic: troubleshooting
@@ -71,11 +71,11 @@ The following list describes the available configuration options:
 
 2. If your printer didn't require a password for the username/email address that you entered, then your printer is trying to send email without logging on to Microsoft 365 or Office 365. SMTP AUTH client submission requires your printer to sign in to Microsoft 365 or Office 365. Direct send and Microsoft 365 or Office 365 SMTP relay don't require a logon; consider one of these options instead.
 
-3. Your printer or application must send email from the same email address that you entered as logon credentials during email setup. If the printer or application tries to send email from a different account, the result is an error similar to:
+3. Your printer or application must send email from the same email address that you entered as logon credentials during email setup. If the printer or application wants to send email from another account, the login account should have **Send As** permission for that account. Otherwise, the result is an error similar to:
 
    > 5.7.60 SMTP; Client does not have permissions to send as this sender.
 
-   For example, if you entered login credentials for sales@contoso.com in your printer or application settings, but the printer tries to send email from salesperson1@contoso.com, this configuration isn't supported. For this scenario, use Microsoft 365 or Office 365 SMTP relay instead.
+   For example, if you entered login credentials for `sales@contoso.com` in your printer or application settings, but the printer tries to send email from `salesperson1@contoso.com`, then `sales@contoso.com` should have **Send As** permission for `salesperson1@contoso.com`. Otherwise, this configuration isn't supported. For this scenario, use Microsoft 365 or Office 365 SMTP relay instead.
 
 4. Test the username and password by logging on to Outlook on the web, and try to send a test email to make sure the account isn't blocked. If the user is blocked, see, [Remove blocked users from the Restricted Users portal](/microsoft-365/security/office-365-security/removing-user-from-restricted-users-portal-after-spam).
 
