@@ -1,28 +1,35 @@
 ---
-title: Azure Cosmos DB private endpoints deployment fails
-description: Troubleshoot failed Azure Resource Manager deployments related to private endpoints created inline with Azure Cosmos DB accounts.
+title: Deployment of private endpoints for Azure Cosmos DB fails
+description: Troubleshoot failed Azure Resource Manager deployments that are related to private endpoints created inline for Azure Cosmos DB accounts.
 ms.service: cosmos-db
-author: oury-msft
-ms.author: ouryba
-ms.reviewer: v-jayaramanp
-ms.topic: landing-page
-ms.date: 09/25/2023
+author: seesharprun
+ms.author: sidandrews
+editor: v-jsitser
+ms.reviewer: ouryba, v-leedennis
+ms.date: 10/06/2023
 ---
 
-# Azure Cosmos DB private endpoints deployment fails
+# Deployment of private endpoints for Azure Cosmos DB fails
 
-Azure Private Link endpoints can be deployed inline with an Azure Cosmos DB account through an Azure Resource Manager template. This deployment may not succeed if particular prerequisites aren't met.
+Azure Private Link endpoints can be deployed inline for an Azure Cosmos DB account through an Azure Resource Manager template (ARM template). However, this deployment might fail if particular prerequisites aren't met.
 
 ## Symptoms
 
-When deploying the Azure Resource Manager template, you observe an error that the `microsoft.network/virtualnetworks/write` permission is required.
+When you try to deploy an ARM template, you receive an error message that states that the `Microsoft.Network/virtualNetworks/write` permission is required.
 
 ## Cause
 
-This permission is required to deploy a private endpoint inline with an Azure Cosmos DB account. This permission isn't listed in the list of required permissions for deploying a private endpoint on its own. For more information, see [role-based access control permissions for private endpoints](/azure/private-link/rbac-permissions#private-endpoint).
+The `Microsoft.Network/virtualNetworks/write` permission is required to deploy a private endpoint inline for an Azure Cosmos DB account. This permission isn't shown in the list of required permissions to deploy a private endpoint on its own. For more information, see [role-based access control permissions for private endpoints](/azure/private-link/rbac-permissions#private-endpoint).
 
-This issue only occurs when the private endpoint is deployed inline with the Azure Cosmos DB account.
+This issue occurs only if the private endpoint is deployed inline for the Azure Cosmos DB account.
 
 ## Solution
 
-Ensure the deploying principal is granted the `microsoft.network/virtualnetworks/write` granular permission prior to deploying an Azure Cosmos DB account with an inline private endpoint.
+Make sure that the deploying principal is granted the `Microsoft.Network/virtualNetworks/write` granular permission before you use an ARM template to deploy an Azure Cosmos DB account that has an inline private endpoint.
+
+## Reference
+
+- [What is a private endpoint?](/azure/private-link/private-endpoint-overview)
+- [Create an Azure Cosmos DB Account with a private endpoint](/samples/azure/azure-quickstart-templates/cosmosdb-private-endpoint/)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
