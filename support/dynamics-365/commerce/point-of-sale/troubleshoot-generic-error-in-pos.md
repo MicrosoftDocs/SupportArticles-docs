@@ -55,4 +55,4 @@ If you find some requests in the POS logs that were sent to the RCSU (Retail Ser
 6. Select **Search**.
 7. You can now review the RCSU search result logs as shown below.
 
-![Image showing Environment Monitoring Search results](Example-of-environment-monitoring-search-results.png)
+   :::image type="content" source="media/troubleshoot-generic-error-in-pos/example-of-environment-monitoring-search-results.png" alt-text="Screenshot that shows the environment monitoring search results.":::
