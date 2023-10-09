@@ -4,7 +4,7 @@ description: This article introduces a troubleshooting scenario in which network
 author: Deland-Han
 ms.author: delhan
 ms.topic: troubleshooting
-ms.date: 10/09/2023
+ms.date: 10/10/2023
 ms.prod: windows-client
 ms.technology: windows-client-group-policy
 ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
@@ -146,7 +146,7 @@ yyyy-mm-dd hh:mm::ss:sss [pid=0x3134,tid=0x4fc] GPO Name : {6D6CECFD-C75A-43FA-8
 
 We observe that drive Z is successfully mapped:
 
-```log
+```output
 yyyy-mm-dd hh:mm::ss:sss [pid=0x3134,tid=0x4fc] Starting class <Drive> - Z:.
 yyyy-mm-dd hh:mm::ss:sss [pid=0x3134,tid=0x4fc] Policy is not flagged for removal.
 yyyy-mm-dd hh:mm::ss:sss [pid=0x3134,tid=0x4fc] Completed class <Drive> - Z:.
