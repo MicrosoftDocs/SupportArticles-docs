@@ -1,59 +1,58 @@
 ---
-title: How to Troubleshoot generic errors displayed on the POS
-description: This article lists the steps you can take to investigate a generic error displayed on the POS
+title: Troubleshoot generic errors displayed on the POS
+description: Lists the steps you can take to investigate a generic error displayed on the POS in Dynamics 365 Commerce.
 author: bstorie
 ms.author: brstor
-ms.date: 10/05/2023
+ms.date: 10/09/2023
 ---
-# Introduction
+# Troubleshoot generic errors displayed on the POS
 
-Receiving a generic error in POS such as "*Something went wrong*" is not very helpful determining what the underlying issue is when you encounter the error. Before opening a support case for more details behind this error, customers do have the ability log into LCS to review Telemetry data on this failure.
+Encountering a generic error message like "Something went wrong" on the Point of Sale (POS) can be frustrating as it doesn't provide specific details about the underlying issue. However, before reaching out to Microsoft Support for more information, you can sign in to [Lifecycle Services (LCS)](https://lcs.dynamics.com/Logon/Index) to review the telemetry data related to this failure. This might provide more insight into the problem.
 
-## Prerequisities
+## Prerequisites
 
-First, gather the following details from POS:
+First, collect the following details from the POS:
 
-1. Date/time that this occurred
-2. Application Session ID
-3. User Session ID
-4. Awareness of what was being done to encounter this error so you can follow the flow
+1. The date and time when the error occurred.
+2. The Application Session ID.
+3. The User Session ID.
+4. The actions that led to the error so you can follow the flow.
 
-> Note: These same details are great to provide in a support ticket if you need additional assistance on the issue.
+> [!NOTE]
+> Including these details in your support ticket would be helpful if you need further assistance with the issue.
 
-## Troubleshooting
+## Troubleshooting steps
 
-1. Go to: LCS &gt; \*yourcompany\* &gt; Monitoring &gt; Environment monitoring &gt; Activity
-2. Set the following:
-     - Query name: Retail Channel events
-     - Date/time in UTC: (this is the specific time of the failure, you can expand out the timeframe as needed until you locate the error)
-       > Example:  If the specific error occurred on POS at **2023-07-15 01:07:34 UTC**
-       > Set Start Time to:  2023/07/15 01:07:00  
-       > Set End time to:   2023/07/15 01:08:00
+1. Sign in to [Lifecycle Services (LCS)](https://lcs.dynamics.com/Logon/Index) using your company account. Navigate to **Monitoring** > **Environment monitoring** > **Activity**.
 
-    - Log Source: Retail Cloud POS or Retail Modern POS
-    - Search terms: you can enter part of the error message to help narrow the search, or leave it blank for a general search result
-    - AppSessionID:   enter ID
-    - UserSessionID:  enter ID
-    - Show options &gt; Row limit: 500
+2. Configure the following fields:
 
-3. Click Search
+     - **Query name**: Set this to **Retail Channel events**.
+     - **Date/time in UTC**: Enter the specific time of the failure. You can adjust the timeframe as necessary until you find the error.
 
-4. Order the results by the Event time
+       For example, if the specific error occurred on the POS at **2023-07-15 01:07:34 UTC**, you should:
 
-5. Review logs results for your error
+       - Set the **Start Time** to: 2023/07/15 01:07:00  
+       - Set the **End time** to: 2023/07/15 01:08:00
 
-When reviewing the POS Logs, if you find any requests that were sent to the RCSU (Retail Server) that you want to investigate them, since the error could have come from the RCSU, you can perform the following additional steps:
+     - **Log Source**: Select either **Retail Cloud POS** or **Retail Modern POS**.
+     - **Search terms**: Enter a part of the error message to narrow down the search, or leave it blank for a broader search result.
+     - **AppSessionID**: Input an ID.
+     - **UserSessionID**: Input an ID.
+     - **Show options** > **Row limit**: Set this to 500.
 
-1. In the POS Log search results, find the value in the **requestId** column and copy its value
+3. Select **Search**.
+4. Order the results by the **Event time**.
+5. Review logs results for your error.
 
-2. Change the **Log Source to Retail Cloud Scale Unit**
+If you find some requests in the POS logs that were sent to the RCSU (Retail Server) and you want to investigate them (since the error could have originated from the RCSU), follow these steps:
 
-3. Clear the App and User session fields
+1. In the POS log search results, find the value in the **requestId** column and copy it.
+2. Change the **Log Source** to **Retail Cloud Scale Unit**.
+3. Clear the App and User session fields.
+4. Paste the copied value in the **Request ID** field. This returns the start/finish of this request ID. To see more details, locate the **Activity ID** column and copy its value.
+5. Paste the **Activity ID** into the left search **Activity ID** field. Remember to clear the **Request ID** field.
+6. Select **Search**.
+7. You can now review the RCSU search result logs as shown below.
 
-4. Enter the copied value into the **Request ID** field
-
-5. This returns the start/finish of this Request ID, to see more details, located the the **Activity ID** column and copy its value
-6. Paste the Activity ID into the left search Activity ID field (Remember to clear the Request ID field)
-7. Click search
-8. You can then review RCSU search result logs as shown below. 
 ![Image showing Environment Monitoring Search results](Example-of-environment-monitoring-search-results.png)

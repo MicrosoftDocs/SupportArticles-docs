@@ -77,6 +77,8 @@
           href: point-of-sale/store-commerce-setup-installation.md
         - name: Troubleshoot Store Commerce sign-in issues
           href: point-of-sale/store-commerce-sign-in.md
+        - name: Troubleshoot generic errors displayed on the POS
+          href: point-of-sale/troubleshoot-generic-error-in-pos.md
     - name: Pricing, discounts, and taxes 
       items:
         - name: Price change tracking issues
