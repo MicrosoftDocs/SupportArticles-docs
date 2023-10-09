@@ -125,7 +125,7 @@ Group Policy preferences tracing is an extra logging that we can enable for any 
 
 Here, we introduce how to review and search the GPSVC log to confirm the Group Policy was applied to the client successfully.
 
-In *\<Clientmachinename\>_\<Date_Time\>_GPPREF_User.txt*, we observe that the GPP Mapped drives extension is starting the processing:
+In *\<Clientmachinename\>_\<Date_Time\>_GPPREF_User.txt*, we observe that the GPP Mapped Drives extension is starting the processing.
 
 > [!NOTE]
 > For brevity and readability purposes, the analysis only contains snippets of relevant troubleshooting data and not all data in the log.
