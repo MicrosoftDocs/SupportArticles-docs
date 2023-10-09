@@ -15,7 +15,7 @@ This scenario guide explains how to use TroubleShootingScript (TSS) to collect d
 
 ## Troubleshooting guide
 
-Before you proceed, refer the [Applying Group Policy troubleshooting guidance](../../windows-server/group-policy/applying-group-policy-troubleshooting-guidance.md).
+Before you proceed, refer to the [Applying Group Policy troubleshooting guidance](../../windows-server/group-policy/applying-group-policy-troubleshooting-guidance.md).
 
 ## Environment
 
@@ -69,7 +69,7 @@ First, collect the following data for troubleshooting. Because we need to trace 
 > - Registry key: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System`. 
 > - Registry value: `HideFastUserSwitching`
 
-1. Download [TSS](https://aka.ms/gettss), and extract the ZIP file to the _C:\\temp_ folder. Create the folder if it doesn't exist.
+1. Download [TSS](https://aka.ms/gettss) and extract the ZIP file to the _C:\\temp_ folder. Create the folder if it doesn't exist.
 2. Open an elevated PowerShell command and run the command:
 
    ```powershell
@@ -78,15 +78,15 @@ First, collect the following data for troubleshooting. Because we need to trace 
 
    :::image type="content" source="media/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected/screenshot-of-set-executionpolicy-command-result.png" alt-text="Screenshot of Set-ExecutionPolicy command result." border="true":::
 
-3. Go to _c:\\temp\\TSS_ where you have extracted the TSS Zip file.
+3. Go to _c:\\temp\\TSS_, where you have extracted the TSS Zip file.
 4. Run `.\TSS.ps1 -Start -Scenario ADS_GPOEx -Procmon`. Accept the agreement, and wait until the TSS starts collecting data.
 
    :::image type="content" source="media/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected/screenshot-of-the-tss-tool.png" alt-text="Screenshot of the TSS tool." border="true":::
 
-5. Switch the user, and then sign in with the user account that doesn't see drive Z getting mapped.
+5. Switch the user, and then sign in with the user account that doesn't see drive Z mapped.
 6. Once the sign-in is successful, open a command prompt and run `gpresult /h appliedgpo.htm`. Confirm that the GPO **Mapped-Drive** is in the applied list.
 7. Switch the user again, and then sign in with the user account that has started the TSS Logging. Press <kbd>Y</kbd>.
-8. TSS will stop collecting data and the collected data will be located in the _C:\\MSDATA_ folder as a Zip file or a folder named *TSS_\<Machinename\>_\<Time\>_ADS_GPOEx*.
+8. TSS will stop collecting data, and the collected data will be located in the _C:\\MSDATA_ folder as a Zip file or a folder named *TSS_\<Machinename\>_\<Time\>_ADS_GPOEx*.
 
 For more information about TSS, see [Introduction to TroubleShootingScript toolset (TSS)](../windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tss.md).
 
