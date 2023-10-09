@@ -2,7 +2,7 @@
 title: Solution upgrade fails due to a previously pending upgrade
 description: Works around the solution upgrade failure due to a previously pending upgrade in Power Apps.
 ms.reviewer: jdaly
-ms.date: 10/08/2023
+ms.date: 10/09/2023
 author: swatimadhukargit
 ms.author: swatim
 ---
@@ -20,9 +20,7 @@ The solution history page shows the following exception message for the failed u
 
 > Solution manifest import: FAILURE: Holding solution \<Solution name\>_Upgrade exists. Cannot update solution.
 
-You might also see the following notification error message:
-
-> The imported solution and the existing solution must both be managed for upgrade.
+You might see a notification error: The imported solution and the existing solution must both be managed for upgrade.
 
 ## Cause
 
