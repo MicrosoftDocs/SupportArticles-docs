@@ -27,13 +27,13 @@ appliesto:
 ms.date: 10/10/2023
 ---
 
-# Mailbox Quota Information isn't displayed on the Status bar in Outlook
+# Mailbox quota information isn't displayed on the Status bar in Outlook
 
 ## Symptoms
 
 Your mailbox is located on a server that's running Microsoft Exchange Server. You right-click the Microsoft Outlook status bar, and then you select **Quota Information** in the **Customize Status Bar** menu. However, the **Quota Information** status in the menu remains **Off** and the status bar doesn't display any mailbox quota information, as shown in the following screenshot.
 
-:::image type="content" source="./media/mailbox-quota-information-not-displayed/customize-status-bar.png" alt-text="Screenshot of the Quota Information menu item in the Customize Status Bar menu.":::
+:::image type="content" source="./media/mailbox-quota-information-not-displayed/customize-status-bar.png" alt-text="Screenshot of the Quota Information menu item in the Customize Status Bar menu." border="true":::
 
 ## Cause
 
@@ -132,14 +132,14 @@ In order for the status bar to display mailbox quota information, the relevant q
    - Switch the active mailbox database to another server (DAG required). Run the following command:
 
      ```PowerShell
-     Move-ActiveMailboxDatabase \<mailbox database name\> -ActivateOnServer \<other server name\>
+     Move-ActiveMailboxDatabase <mailbox database name> -ActivateOnServer <other server name>
      ```
 
 ## More information
 
 - The following screenshot shows mailbox quota information in the Outlook status bar. When you hover your mouse cursor over the quota information, more quota information appears in a tooltip.
 
-  :::image type="content" source="./media/mailbox-quota-information-not-displayed/quota-information-display-on-status-bar.png" alt-text="Screenshot of the Status bar with quota information." border="false":::
+  :::image type="content" source="./media/mailbox-quota-information-not-displayed/quota-information-display-on-status-bar.png" alt-text="Screenshot of the Status bar with quota information." border="true":::
 
 - For more information about how to set mailbox quotas, see [Configure storage quotas for a mailbox in Exchange Server](/exchange/recipients/user-mailboxes/storage-quotas).
 
