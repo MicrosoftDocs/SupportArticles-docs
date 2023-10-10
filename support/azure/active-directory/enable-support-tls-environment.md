@@ -1,8 +1,8 @@
 ---
 title: Enable TLS 1.2 support as Azure AD TLS 1.0/1.1 is deprecated
 description: This article describes how to enable support for TLS 1.2 in your environment, in preparation for upcoming Azure AD TLS 1.0/1.1 deprecation.
-ms.date: 09/27/2023
-ms.reviewer: dahans, abizerh, v-leedennis
+ms.date: 10/10/2023
+ms.reviewer: dahans, abizerh, v-leedennis, v-weizhu
 ms.service: active-directory
 ms.subservice: authentication
 ms.custom: has-azure-ad-ps-ref
@@ -43,7 +43,7 @@ The **TLS 1.0**, **TLS 1.1**, and **3DES Cipher suite** services are being depre
 
 ## Enable support for TLS 1.2 in your environment
 
-How do you maintain a secure connection to Azure Active Directory (Azure AD) and Microsoft 365 services? You enable your client apps and client and server operating system (OS) for TLS 1.2 and modern cipher suites.
+To ensure a secure connection to Azure Active Directory (Azure AD) and Microsoft 365 services, configure your client apps and both the client and server operating systems to support TLS 1.2 and contemporary cipher suites.
 
 ### Guidelines for enabling TLS 1.2 on clients
 
@@ -64,11 +64,10 @@ For more information, see the following articles:
 
 These operating systems natively support TLS 1.2 for client-server communications over WinHTTP:
 
-- Windows 10
 - Windows 8.1
-- Windows Server 2016
 - Windows Server 2012 R2
-- Later versions of Windows and Windows Server
+- Windows Server 2016
+- Windows 10 and later versions of Windows and Windows Server
 
 Verify that you haven't explicitly disabled TLS 1.2 on these platforms.
 
@@ -127,9 +126,9 @@ For more information, see [Handshake Simulation for various clients connecting t
 
 ### Registry strings
 
-To manually configure and enable TLS 1.2 at the operating system level, you can add the following DWORD values.
+For Windows 2012 R2, Windows 8.1, and later operating systems, TLS 1.2 is enabled by default. Thus, the following registry values aren't displayed unless they were set with different values.
 
-For Windows 2012 R2, Windows 8.1, and later OS, TLS 1.2 is enabled by default. Thus, the following registry values aren't required unless they were set with different values.
+To manually configure and enable TLS 1.2 at the operating system level, you can add the following DWORD values:
 
 - **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Client**
   - "DisabledByDefault": **00000000**
@@ -141,6 +140,21 @@ For Windows 2012 R2, Windows 8.1, and later OS, TLS 1.2 is enabled by default. T
   - "SchUseStrongCrypto": **00000001**
 
 To enable TLS 1.2 by using a PowerShell script, see [TLS 1.2 enforcement for Azure AD Connect](/azure/active-directory/hybrid/reference-connect-tls-enforcement).
+
+## How to check which TSL protocol is being used
+
+Here're two ways to check which TSL is being used:
+
+- Browser security settings.
+- Internet Properties in Windows.
+
+To check which TSL protocol is being used by using Internet Properties, follow these steps:
+
+1. Press <kbd>Windows</kbd>+<kbd>R</kbd> to open the **Run** box.
+2. Type *inetcpl.cpl* and then select **OK**. The **Internet Properties** window is opened.
+3. In the **Internet Properties** window, select the **Advanced** tab and scroll down to check TSL related settings.
+
+    :::image type="content" source="media/article-folder-name/image-file-inline.png" alt-text="Image alt text." lightbox="media/article-folder-name/image-file-expanded.png":::
 
 ## Update and configure .NET Framework to support TLS 1.2 <a name="update-configure-tls-12"></a>
 
