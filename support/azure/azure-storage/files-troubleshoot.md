@@ -3,7 +3,7 @@ title: Troubleshoot Azure Files
 description: Troubleshoot issues with Azure file shares. See common issues and explore possible resolutions.
 services: storage
 ms.service: azure-file-storage
-ms.date: 06/25/2023
+ms.date: 10/10/2023
 ms.reviewer: kendownie, jarrettr, v-weizhu
 ---
 # Troubleshoot Azure Files
@@ -26,7 +26,7 @@ If you can't find an answer to your question, you can contact us through the fol
 
 ## General troubleshooting first steps
 
-If you encounter problems with Azure Files, start with these steps. You can also use the [Azure file shares troubleshooter](https://support.microsoft.com/help/4022301/troubleshooter-for-azure-files-shares), which can help with problems connecting, mapping, and mounting Azure file shares.
+If you encounter problems with Azure Files, start with the following steps.
 
 ### Check DNS resolution and connectivity to your Azure file share
 
