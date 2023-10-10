@@ -1,9 +1,9 @@
 ---
 title: Install Nginx and configure it as a reverse proxy server
 description: This article describes how to install Nginx and configure it as a reverse proxy server.
-ms.date: 03/18/2021
+ms.date: 10/10/2023
 ms.prod: aspnet-core
-ms.reviewer: ramakoni, ahmetmb
+ms.reviewer: ahmetmb
 ms.technology: aspnetcore-practice-troubleshoot-linux
 author: ahmetmithat
 ---
