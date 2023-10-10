@@ -58,8 +58,8 @@ Each of the following links provides information for all of the applicable produ
 
 |Build number or version|Service pack|Update|KB article|Release date|
 |---|---|---|---|---|
-|12.0.6449.1|None|SQL Server 2014 SP3 CU4 + GDR|[5029185](https://support.microsoft.com/help/5029185)|October 10, 2023|
-|12.0.6179.1|None|SQL Server 2014 SP3 GDR|[5029184](https://support.microsoft.com/help/5029184)|October 10, 2023|
+|16.0.4080.1|None|CU8 + GDR|[5029503](https://support.microsoft.com/help/5029503)|October 10, 2023|
+|16.0.1105.1|None|GDR|[5029379](https://support.microsoft.com/help/5029379)|October 10, 2023|
 |16.0.4075.1|None|CU8|[5029666](sqlserver-2022/cumulativeupdate8.md)|September 14, 2023|
 |16.0.4065.3|None|CU7|[5028743](sqlserver-2022/cumulativeupdate7.md)|August 10, 2023|
 |16.0.4055.4|None|CU6|[5027505](sqlserver-2022/cumulativeupdate6.md)|July 13, 2023|
@@ -75,8 +75,8 @@ Each of the following links provides information for all of the applicable produ
 
 |Build number or version|Service pack|Update|KB article|Release date|
 |---|---|---|---|---|
-|13.0.7029.3|None|Azure Connect Pack + GDR|[5029187](https://support.microsoft.com/help/5029187)|October 10, 2023|
-|13.0.6435.1|None|SP3 + GDR| [5029186](https://support.microsoft.com/help/5029186)|October 10, 2023|
+|15.0.4326.1|None|CU22 + GDR|[5029378](https://support.microsoft.com/help/5029378)|October 10, 2023|
+|15.0.2104.1|None|GDR| [5029377](https://support.microsoft.com/help/5029377)|October 10, 2023|
 |15.0.4322.2|None|CU22| [5027702](sqlserver-2019/cumulativeupdate22.md)|August 14, 2023|
 |15.0.4316.3|None|CU21| [5025808](sqlserver-2019/cumulativeupdate21.md)|June 15, 2023|
 |15.0.4312.2|None|CU20| [5024276](sqlserver-2019/cumulativeupdate20.md)|April 13, 2023|
