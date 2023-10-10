@@ -24,7 +24,7 @@ This issue occurs because the Power Automate for desktop application isn't prope
 
 ## Resolution
 
-First, you should uninstall Power Automate for desktop from the machine and make sure the related files, located in *C:\Program Files (x86)\Power Automate Desktop*, are deleted.
+First, uninstall Power Automate for desktop from the machine and make sure the related files, located in *C:\Program Files (x86)\Power Automate Desktop*, are deleted.
 
 Then, reset the user profile manually.
 
@@ -35,13 +35,13 @@ Then, reset the user profile manually.
        *Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList\S-1-5-80-3017052307-2994996872-1615411526-3164924635-3391446484*
 
        If a second key exists with the `.bak` extension, you can delete it.
-a
+
    2. Go to the location of `ProfileImagePath`.
 
-   3. Verify that the *UIFlowService* folder is present in that directory via File Explorer. By default, it's located in *%SystemRoot%\ServiceProfiles*.
+   3. Verify that the *UIFlowService* folder is present in that directory. By default, it's located in *%SystemRoot%\ServiceProfiles*.
 
-   4. Modify the `ProfileImagePath` value to point the existing *UIFlowService* folder. By default, it should be *%SystemRoot%\ServiceProfiles\UIFlowService*.
+   4. Modify the `ProfileImagePath` value to point to the existing *UIFlowService* folder. By default, it should be *%SystemRoot%\ServiceProfiles\UIFlowService*.
 
 2. Restart your machine.
 
-3. Retry installing Power Automate for desktop again.
+3. Install Power Automate for desktop again.
