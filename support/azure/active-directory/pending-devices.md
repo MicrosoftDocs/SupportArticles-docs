@@ -49,7 +49,7 @@ To fix the problem, unregister the device by running `dsregcmd /leave` at an ele
 
 ## Get a list of pending devices
 
-1. The [Microsoft Graph PowerShell SDK](/powershell/microsoftgraph/installation?view=graph-powershell-1.0) must be installed to execute Microsoft Graph commands.
+1. The [Microsoft Graph PowerShell SDK](/powershell/microsoftgraph/installation?view=graph-powershell-1.0) must be installed to execute Microsoft Graph PowerShell commands.
 2. Use the `Connect-MgGraph` command to sign in to your Entra ID (formerly Azure AD) tenant. For more information, see [Get started with the Microsoft Graph PowerShell SDK](/powershell/microsoftgraph/get-started?view=graph-powershell-1.0).
 3. Count all pending devices:
 
