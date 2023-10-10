@@ -43,7 +43,7 @@ The **TLS 1.0**, **TLS 1.1**, and **3DES Cipher suite** services are being depre
 
 ## Enable support for TLS 1.2 in your environment
 
-To ensure a secure connection to Azure Active Directory (Azure AD) and Microsoft 365 services, configure your client apps and both the client and server operating systems to support TLS 1.2 and contemporary cipher suites.
+To ensure a secure connection to Azure Active Directory (Azure AD) and Microsoft 365 services, configure your client apps and both the client and server operating systems (OS) to support TLS 1.2 and contemporary cipher suites.
 
 ### Guidelines for enabling TLS 1.2 on clients
 
@@ -151,10 +151,10 @@ Here're two ways to check which TSL is being used:
 To check which TSL protocol is being used by using Internet Properties, follow these steps:
 
 1. Press <kbd>Windows</kbd>+<kbd>R</kbd> to open the **Run** box.
-2. Type *inetcpl.cpl* and then select **OK**. The **Internet Properties** window is opened.
+2. Type *inetcpl.cpl* and then select **OK**. Then, the **Internet Properties** window is opened.
 3. In the **Internet Properties** window, select the **Advanced** tab and scroll down to check TSL related settings.
 
-    :::image type="content" source="media/enable-support-tls-environment/used-tls-protocol.png" alt-text="Screenshot that shows TSL related settings in Internet Properties." lightbox="media/enable-support-tls-environment/used-tls-protocol.png":::
+    :::image type="content" source="media/enable-support-tls-environment/used-tls-protocol.png" alt-text="Screenshot that shows TSL related settings in Internet Properties.":::
 
 ## Update and configure .NET Framework to support TLS 1.2 <a name="update-configure-tls-12"></a>
 
