@@ -168,7 +168,7 @@ Debug-StorageSyncServer -FileSyncErrorsReport
 If a file or directory fails to sync (per-item error), an event is logged in the Microsoft-FileSync-Agent/ItemResults event log. This section covers common error codes and remediation steps for per-item errors.
 
 > [!Note]  
-> If a file fails to sync, it can take up to 30 minutes before Azure File Sync retries syncing the file. Azure File Sync initiates a sync session every 30 minutes if no changes are detected within the server endpoint location. To force a sync session, restart the Storage Sync Agent (FileSyncSvc) service or make a change to a file or directory within the server endpoint location.
+> If a file or directory fails to sync, it can take up to 30 minutes before Azure File Sync retries syncing that item. Azure File Sync initiates a sync session every 30 minutes if no changes are detected within the server endpoint location. To force a sync session, restart the Storage Sync Agent (FileSyncSvc) service or make a change to a file or directory within the server endpoint location.
 
 **ItemResults log - per-item sync errors**
 
