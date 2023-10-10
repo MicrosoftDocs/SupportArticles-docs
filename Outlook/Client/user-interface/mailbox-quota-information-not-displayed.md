@@ -1,5 +1,5 @@
 ---
-title: Mailbox Quota Information isn't displayed on the Status bar in Outlook
+title: Mailbox quota information isn't displayed on the Status bar in Outlook
 description: Resolves an issue in which mailbox quota information isn't displayed on the status bar in Outlook.
 author: cloud-writer
 ms.author: meerak
