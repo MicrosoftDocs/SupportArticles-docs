@@ -202,7 +202,7 @@
         - name: Troubleshoot issues with Power Automate browser extensions
           href: desktop-flows/web-extensions-policies.md
         - name: Temporary profile error during machine registration
-          href: desktop-flows/temporary-profile-error-machine- registration.md
+          href: desktop-flows/temporary-profile-error-machine-registration.md
         - name: UI flow playback error KeyboardIdMismatch
           href: desktop-flows/ui-flow-playback-error-keyboardidmismatch.md
         - name: UI flow playback error UnableToLaunchApplication
