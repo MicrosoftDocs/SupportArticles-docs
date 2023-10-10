@@ -154,7 +154,7 @@ To check which TSL protocol is being used by using Internet Properties, follow t
 2. Type *inetcpl.cpl* and then select **OK**. The **Internet Properties** window is opened.
 3. In the **Internet Properties** window, select the **Advanced** tab and scroll down to check TSL related settings.
 
-    :::image type="content" source="media/article-folder-name/image-file-inline.png" alt-text="Image alt text." lightbox="media/article-folder-name/image-file-expanded.png":::
+    :::image type="content" source="media/enable-support-tls-environment/used-tls-protocol.png" alt-text="Screenshot that shows TSL related settings in Internet Properties." lightbox="media/enable-support-tls-environment/used-tls-protocol.png":::
 
 ## Update and configure .NET Framework to support TLS 1.2 <a name="update-configure-tls-12"></a>
 
