@@ -40,7 +40,7 @@ Before we start troubleshooting, here are some scoping questions that can help u
    :::image type="content" source="media/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected/screenshot-of-the-group-policy-result.png" alt-text="Screenshot of the group policy result." border="true" lightbox="media/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected/screenshot-of-the-group-policy-result.png":::
 
 3. Are all users under the scope of the GPO **Mapped-Drive** impacted?  
-   **Answer**: We have configured this GPO to the "IT Users" OU. We tested it with 4-5 users. For all of them, drive Z isn't mapped.
+   **Answer**: We have configured this GPO to the "IT Users" organizational unit (OU). We tested it with four to five users. For all of them, drive Z isn't mapped.
 
 4. What happens if you manually map the drive instead of using Group Policy preferences?  
    **Answer**: We can successfully map drive Z by using the `net use` command to the same file server.
@@ -60,7 +60,7 @@ Before we start troubleshooting, here are some scoping questions that can help u
 
 ## Troubleshooting
 
-First, collect the following data for troubleshooting. Because we need to trace the login/sign-in, we need to perform the following tasks as a local administrator or any other user account with local administrator credentials.
+First, collect the following data for troubleshooting. Because we need to trace the logon or sign-in, we need to perform the following tasks as a local administrator or any other user account with local administrator credentials.
 
 > [!NOTE]
 > These steps require fast user switching to be enabled. If you encounter problems when trying to switch users, check if the following policy or registry value is set:
@@ -100,7 +100,7 @@ Go to the *c:\msdata* folder where TSS has saved all the reports, and then extra
 
 ### Event 5017 showing the "Users" OU
 
-The GPO **Mapped-Drive** is linked to the "Users" OU
+The GPO **Mapped-Drive** is linked to the "Users" OU.
 
 :::image type="content" source="media/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected/screenshot-of-the-event-id-5017.png" alt-text="Screenshot of the event ID 5017." border="true":::
 
@@ -110,7 +110,7 @@ We do see that the GPO **Mapped-Drive** is in the applicable list.
 
 :::image type="content" source="media/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected/screenshot-of-the-event-id-5312.png" alt-text="Screenshot of the event ID 5312." border="true":::
 
-### Event 4016 showing that the Group Policy Drive Maps extension was processed and successful
+### Event 4016 showing the Group Policy Drive Maps extension was processed and successful
 
 :::image type="content" source="media/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected/screenshot-of-the-event-id-4016.png" alt-text="Screenshot of the event ID 4016." border="true":::
 
@@ -160,11 +160,11 @@ yyyy-mm-dd hh:mm::ss:sss [pid=0x3134,tid=0x4fc] Completed class <Drives>
 
 At this moment, we know that the Group Policy preferences are applied, but drive Z isn't visible. We can manually map the drive, but the drive will be deleted during sign-in or logon. Therefore, there are some other settings that delete drive Z on the computer during logon.
 
-Next, we need to analyze the procmon trace to observe what deleted the mapped drive. The TSS tool also collects the procmon trace with the `-Procmon` switch that we used to collect the data. Open the file *\<Clientmachinename\>_\<date_time\>_Procmon_0.pml*.
+Next, we need to analyze the procmon trace to observe what deleted the mapped drive. The TSS tool also collects the procmon trace with the `-Procmon` switch that we used to collect the data.
 
 The procmon trace can be overwhelming. Follow these steps to set up a filter to view the data. The filter can be used to troubleshoot any issues related to mapped drives.
 
-1. Open the file *Procmon_0.pml*.
+1. Open the file *\<Clientmachinename\>_\<date_time\>_Procmon_0.pml*.
 2. Select **Filter** - **Filter**.
 3. Add the filter: **Detail** - **Contains** - **Z:**.
 
@@ -189,7 +189,7 @@ Then, set up another filter to identify who spawned *net.exe* using the parent p
 
    :::image type="content" source="media/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected/filter-the-trace-by-using-the-pid-is-13436-condition.png" alt-text="Filter the trace by using the PID is 13436 condition." border="true":::
 
-We observe that the PID is *cmd.exe* and it appears it's processing a GPO with the following parameters:
+We observe that the PID is *cmd.exe*, and it appears it's processing a GPO with the following parameters:
 
 - Command line: `C:\Windows\system32\cmd.exe /c "\contoso.com\SysVol\contoso.com\Policies{E347CA05-D21D-433D-9BCA-2FE555336749}\User\Scripts\Logon\deletedrives.bat"`
 - Parent PID: The parent process of *cmd.exe* is 14900.
@@ -197,7 +197,7 @@ We observe that the PID is *cmd.exe* and it appears it's processing a GPO with t
 
 :::image type="content" source="media/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected/screenshot-of-the-process-tab-of-the-process-13436.png" alt-text="Screenshot of the Process tab of the process 13436." border="true":::
 
-Now, use the same mechanism and use the PID filter again by going to **Filter** - **Filter**, selecting **Reset**, and applying the following filter:
+Now, use the same mechanism and the PID filter again by going to **Filter** - **Filter**, selecting **Reset**, and applying the following filter:
 
 :::image type="content" source="media/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected/screenshot-of-the-process-tab-of-the-process-14900.png" alt-text="Screenshot of the Process tab of the process 14900." border="true":::
 
@@ -213,7 +213,7 @@ We observe that *GPScrpit.exe* is the parent process of the *cmd.exe* process. U
    net use z: /delete
    ```
 
-2. *CMD.exe* is processing a .bat file *deletedrives.bat*, and its parent process is *Gpscript.exe*.
+2. *CMD.exe* is processing a .bat file *deletedrives.bat*, and its parent process is *GPScript.exe*.
 
    ```console
    C:\Windows\system32\cmd.exe /c "\contoso.com\SysVol\contoso.com\Policies{E347CA05-D21D-433D-9BCA-2FE555336749}\User\Scripts\Logon\deletedrives.bat"
@@ -223,11 +223,11 @@ We observe that *GPScrpit.exe* is the parent process of the *cmd.exe* process. U
 
 We need to identify the GPO that contains this logon script. Here are two methods.
 
-### Method 1: Gpresult /h output collected during log collection
+### Method 1: Use the Gpresult /h output collected during log collection
 
 :::image type="content" source="media/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected/screenshot-of-the-gpresult-h-output.png" alt-text="Screenshot of the Gpresult /h output." border="true" lightbox="media/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected/screenshot-of-the-gpresult-h-output.png":::
 
-### Method 2: Using the Group Policy management snap-in (GPMC.msc)
+### Method 2: Use the Group Policy management snap-in (GPMC.msc)
 
 1. Open *GPMC.msc* on a domain controller or machine where you have the snap-in installed.
 2. Right-click the domain and select **Search**.

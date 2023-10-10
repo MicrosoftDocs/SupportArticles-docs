@@ -4,14 +4,14 @@ description: This article introduces a troubleshooting scenario in which the Wal
 author: Deland-Han
 ms.author: delhan
 ms.topic: troubleshooting
-ms.date: 10/09/2023
+ms.date: 10/10/2023
 ms.prod: windows-client
 ms.technology: windows-client-group-policy
 ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
 ---
 # Scenario guide: Wallpaper GPO doesn't apply on some client computers
 
-This scenario guide explains how to use TroubleShootingScript (TSS) to collect data to troubleshoot the issue in which the wallpaper Group Policy Object (GPO) doesn't apply on some client computers.
+This scenario guide explains how to use TroubleShootingScript (TSS) to collect data to troubleshoot an issue in which the wallpaper Group Policy Object (GPO) doesn't apply on some client computers.
 
 ## How Group Policy is applied on client computers
 
@@ -29,7 +29,7 @@ Before you proceed, refer to the [Applying Group Policy troubleshooting guidance
 
 - Domain name: `contoso.com`
 - Active Directory sites: four sites (two domain controllers per site) (Phoenix, London, Tokyo, and Mumbai)
-- Number of the domain controllers: 8
+- Number of domain controllers: eight
 - Domain controller operating system: Windows Server 2019
 - Client computer operating system: Windows 11, version 22H2
 
@@ -97,7 +97,7 @@ For more information about TSS, see [Introduction to TroubleShootingScript tools
 
 ### Compare GPResult
 
-On both computers, go to the *c:\msdata* folder where TSS has saved all the reports, and then extract the contents of the ZIP file. Review the file with the name *\<Clientmachinename\>_\<Time\>GPResult-H_Stop.html*.
+On both computers, go to the *c:\msdata* folder where TSS has saved all the reports, and then extract the contents of the ZIP file. Review the file named *\<Clientmachinename\>_\<Time\>GPResult-H_Stop.html*.
 
 Go to the **User details** section. The GPO in question, **Wallpaper-GPO-Tokyo**, is in the applied list on the working machine and not present in the broken machine.
 
@@ -113,17 +113,17 @@ Group Policy operational logs provide more information about the processing. Ope
 > [!TIP]
 > The Group Policy starting event ID is 4116, and the Group Policy ending event is 8005.
 
-Sort the event logs in chronological order. Search for event 4116 and walk some important events in the upward direction. When reviewing the working and the failing clients, the only difference is that the failing client machine gets its group policy from DC6.contoso.com on the Tokyo site.
+Sort the event logs in chronological order. Search for event 4116 and walk some important events in the upward direction. When reviewing the working and the failing clients, the only difference is that the failing client machine gets its Group Policy from DC6.contoso.com on the Tokyo site.
 
 :::image type="content" source="media/scenario-guide-wallpaper-gpo-does-not-apply-on-some-client-computers/screenshot-of-the-operational-event-logs.png" alt-text="Screenshot of the operational event logs." border="true" lightbox="media/scenario-guide-wallpaper-gpo-does-not-apply-on-some-client-computers/screenshot-of-the-operational-event-logs.png":::
 
-Event ID 5312 indicates that the Group Policy service detected that it has to process five GPOs on the working computer and three GPOs on the failing computer. As we have already discussed, the **Phoenix-SiteGPO** and **Mapped-Drive** GPOs are Phoenix site-level GPOs, and the only difference is that the **Wallpaper-GPO-Tokyo** GPO isn't applied.
+Event ID 5312 indicates that the Group Policy service detected that it has to process five GPOs on the working computer and three GPOs on the failing computer. As we have already discussed, the **Phoenix-SiteGPO** and **Mapped-Drive** GPOs are site-level GPOs, and the only difference is that the **Wallpaper-GPO-Tokyo** GPO isn't applied.
 
 ## Summary
 
 When we compare event ID 5312 from the working computer to the failing computer, we observe that the Group Policy client service didn't enumerate the **Wallpaper-GPO-Tokyo** when it connected to DC6. We also confirm that the GPO scope is correct. Therefore, the cause of the above scenario can be an issue with Active Directory (AD) replication.
 
-The Distributed File System Replication (DFSR) engine is dependent on the AD replication. If Active Directory replication breaks, the DFSR replication also breaks. This could lead to the issue in our scenario where the GPO isn't in either the "Applied" or "Denied" list.
+The Distributed File System Replication (DFSR) engine is dependent on the AD replication. If AD replication breaks, the DFSR replication also breaks. This could lead to the issue in our scenario where the GPO isn't in either the "Applied" or "Denied" list.
 
 > [!NOTE]
 > If AD replication works fine and DFSR breaks, we might encounter another issue where the GPO is in the Deny list.  
