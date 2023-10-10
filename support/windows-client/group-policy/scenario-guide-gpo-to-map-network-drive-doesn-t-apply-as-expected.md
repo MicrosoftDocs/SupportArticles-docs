@@ -48,8 +48,8 @@ Before we start troubleshooting, here are some scoping questions that can help u
 5. Is this GPO a new GPO, or did the GPO work before?  
    **Answer**: This GPO was working earlier and was used by all users to get mapped drives. Since the last couple of days, the mapped drives aren't working.
 
-6. When you run `gpresult /h` and review the output, do you observe that the GPO **Mapped-Drive** is in the applied list?  
-   **Answer**: Yes, we do observe that the **Mapped-Drive** GPO is applied in the applied list.
+6. When you run `gpresult /h` and review the output, do you observe that the GPO **Mapped-Drive** is in the applicable list?  
+   **Answer**: Yes, we do observe that the **Mapped-Drive** GPO is applied in the applicable list.
 
    :::image type="content" source="media/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected/screenshot-of-the-applied-gpos.png" alt-text="Screenshot of the applied GPOs." border="true":::
   
@@ -84,7 +84,7 @@ First, collect the following data for troubleshooting. Because we need to trace 
    :::image type="content" source="media/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected/screenshot-of-the-tss-tool.png" alt-text="Screenshot of the TSS tool." border="true":::
 
 5. Switch the user, and then sign in with the user account that doesn't see drive Z mapped.
-6. Once the sign-in is successful, open a command prompt and run `gpresult /h appliedgpo.htm`. Confirm that the GPO **Mapped-Drive** is in the applied list.
+6. Once the sign-in is successful, open a command prompt and run `gpresult /h appliedgpo.htm`. Confirm that the GPO **Mapped-Drive** is in the applicable list.
 7. Switch the user again, and then sign in with the user account that has started the TSS Logging. Press <kbd>Y</kbd>.
 8. TSS will stop collecting data, and the collected data will be located in the _C:\\MSDATA_ folder as a Zip file or a folder named *TSS_\<Machinename\>_\<Time\>_ADS_GPOEx*.
 
