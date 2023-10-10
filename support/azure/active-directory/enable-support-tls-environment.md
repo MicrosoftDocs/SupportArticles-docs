@@ -64,10 +64,8 @@ For more information, see the following articles:
 
 These operating systems natively support TLS 1.2 for client-server communications over WinHTTP:
 
-- Windows 8.1
-- Windows Server 2012 R2
-- Windows Server 2016
-- Windows 10 and later versions of Windows and Windows Server
+- Windows 8.1, Windows 10 and later versions
+- Windows Server 2012 R2, Windows Server 2016 and later versions
 
 Verify that you haven't explicitly disabled TLS 1.2 on these platforms.
 
