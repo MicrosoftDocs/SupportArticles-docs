@@ -1,8 +1,8 @@
 ---
 title: Decrease the number of decimal places in Currency Setup
 description: Describes an issue in which you receive an error message and you can't decrease the number of decimal places for a currency.
-ms.reviewer:
-ms.date: 10/08/2023
+ms.reviewer: theley
+ms.date: 10/10/2023
 ---
 # Can't decrease the number of decimal places in Currency Setup
 
@@ -26,14 +26,14 @@ This issue occurs because you can only increase the number of decimal places in 
 To resolve this issue, follow these steps.
 
 > [!IMPORTANT]
-> Use this method if you have to change the decimal places back to **2** (or to another number) and if you have not entered any transactions by using the additional decimal places.
+> Use this method if you have to change the decimal places back to **2** (or another number) and if you haven't entered any transactions by using the additional decimal places.
 
 > [!NOTE]
 > Before you follow the instructions in this article, make sure that you have a complete backup copy of the database that you can restore if a problem occurs.
 
-1. If you are using Microsoft SQL Server 2000, select **Start**, point to **Programs**, point to **Microsoft SQL Server**, and then select **Query Analyzer**.
+1. If you're using Microsoft SQL Server 2000, select **Start**, point to **Programs** > **Microsoft SQL Server**, and then select **Query Analyzer**.
 
-    If you are using Microsoft SQL Server 2005, select **Start**, point to **Programs**, point to **Microsoft SQL Server 2005**, select **SQL Server Management Studio**, and then select **New Query**.
+   If you're using Microsoft SQL Server 2005, select **Start**, point to **Programs** > **Microsoft SQL Server 2005**, and then select **SQL Server Management Studio** > **New Query**.
 
 2. Select the DYNAMICS database.
 
