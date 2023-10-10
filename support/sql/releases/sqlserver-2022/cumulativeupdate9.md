@@ -81,7 +81,15 @@ The following update is available from the Microsoft Download Center:
 <details>
 <summary><b>How to obtain or download this cumulative update package for Windows from Microsoft Update Catalog</b></summary>
 
-This cumulative update package isn't yet available on [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5030731). This article will be updated after the package is made available on this channel.
+The following update is available from the Microsoft Update Catalog:
+
+- :::image type="icon" source="../media/download-icon.png" border="false"::: [Download the cumulative update package for SQL Server 2022 CU9 now](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5030731)
+
+> [!NOTE]
+>
+> - [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=sql%20server%202022) contains this SQL Server 2022 CU and previously released SQL Server 2022 CU releases.
+> - This CU is also available through Windows Server Update Services (WSUS).
+> - We recommend that you always install the latest cumulative update that is available.
 
 </details>
 
