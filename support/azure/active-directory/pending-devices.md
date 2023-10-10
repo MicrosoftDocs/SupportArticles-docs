@@ -3,7 +3,7 @@ title: Pending devices in Azure Active Directory
 description: Explains why a device is in the pending state in Azure Active Directory.
 author: genlin
 ms.author: genli
-ms.date: 07/18/2023
+ms.date: 10/10/2023
 ms.service: active-directory
 ms.subservice: domain-services
 ---
@@ -49,16 +49,18 @@ To fix the problem, unregister the device by running `dsregcmd /leave` at an ele
 
 ## Get a list of pending devices
 
-- Count all pending devices:
+1. The [Microsoft Graph PowerShell SDK](/powershell/microsoftgraph/installation?view=graph-powershell-1.0) must be installed to execute Microsoft Graph commands.
+2. Use the `Connect-MgGraph` command to sign in to your Entra ID (formerly Azure AD) tenant. For more information, see [Get started with the Microsoft Graph PowerShell SDK](/powershell/microsoftgraph/get-started?view=graph-powershell-1.0).
+3. Count all pending devices:
 
-  ```powershell
-  (Get-MgDevice -All -Filter "TrustType eq 'ServerAd'" | Where-Object{($_.ProfileType -ne "RegisteredDevice") -and (-not $_.AlternativeSecurityIds)}).count
-  ```
+    ```powershell
+    (Get-MgDevice -All -Filter "TrustType eq 'ServerAd'" | Where-Object{($_.ProfileType -ne "RegisteredDevice") -and (-not $_.AlternativeSecurityIds)}).count
+    ```
 
-- Get all pending devices, and save the returned data in a CSV file:
+    You can also save the returned data in a CSV file:
 
-  ```powershell
-  Get-MgDevice -All -Filter "TrustType eq 'ServerAd'" | Where-Object{($_.ProfileType -ne "RegisteredDevice") -and (-not $_.AlternativeSecurityIds)} | select-object -Property AccountEnabled, Id, DeviceId, DisplayName, OperatingSystem, OperatingSystemVersion, TrustType | export-csv pendingdevicelist-summary.csv -NoTypeInformation
-  ```
+    ```powershell
+    Get-MgDevice -All -Filter "TrustType eq 'ServerAd'" | Where-Object{($_.ProfileType -ne "RegisteredDevice") -and (-not $_.AlternativeSecurityIds)} | select-object -Property AccountEnabled, Id, DeviceId, DisplayName, OperatingSystem, OperatingSystemVersion, TrustType | export-csv pendingdevicelist-summary.csv -NoTypeInformation
+    ```
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
