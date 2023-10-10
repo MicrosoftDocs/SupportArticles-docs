@@ -4,12 +4,12 @@ description: Learn how to resolve a problem when incoming call notifications are
 ms.author: davepinch
 ms.date: 09/26/2023
 ms.topic: troubleshooting-problem-resolution
-title: Incoming call notifications aren't received
+title: Not receiving incoming call notifications
 ms.reviewer: v-wendysmith
 ms.custom: bap-template
 ---
 
-# Incoming call notifications aren't received
+# Not receiving incoming call notifications
 
 ## Symptoms
 

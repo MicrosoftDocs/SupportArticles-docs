@@ -44,4 +44,4 @@ Your device or network might not be set up properly.
 
 ### Resolution
 
-If you still can't sign-in, check with your administrator to make sure your device and network are set up to work with Dynamics 365 Remote Assist.
+If you still can't sign-in, check with your admin to make sure your device and network are set up to work with Dynamics 365 Remote Assist.

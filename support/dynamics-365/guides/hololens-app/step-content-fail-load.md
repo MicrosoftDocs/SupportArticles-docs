@@ -15,7 +15,7 @@ ms.custom: bap-template
 
 The following message displays in the HoloLens app:
 
-![Screenshot of Step content failed to load message.](media/step-content-failed-load.jpg "Screenshot of Step content failed to load message")
+![Screenshot of Step content failed to load message.](../media/step-content-failed-load.jpg "Screenshot of Step content failed to load message")
 
 ## Cause
 
@@ -23,4 +23,4 @@ The amount and complexity of content added to the step has reached HoloLens' mem
 
 ## Resolution
 
-[!INCLUDE [HoloLens-memory-limit](../includes/hololens-memory-limit.md]
+[!INCLUDE [HoloLens-memory-limit](../includes/hololens-memory-limit.md)]

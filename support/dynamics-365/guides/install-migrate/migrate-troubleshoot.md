@@ -26,6 +26,6 @@ Before running the PowerShell script, unblock the *zipped* folder containing the
 
 1. In the **Properties** dialog box, on the **General** tab, select the **Unblock** check box, and then select **Apply**.
 
-   :::image type="content" source="media/migration-unblock.PNG" alt-text="Unblock check box and Apply button":::
+   :::image type="content" source="../media/migration-unblock.PNG" alt-text="Unblock check box and Apply button":::
 
 1. Then extract the contents and run the script. For more information, see [Migrate Dynamics 365 Guides content from one Microsoft Dataverse instance to another using the Content Migration Tool](dynamics365/mixed-reality/guides/migrate).

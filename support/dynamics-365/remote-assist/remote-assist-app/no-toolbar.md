@@ -25,4 +25,4 @@ Restart your PC.
 
 ### Resolution
 
-The Dynamics 365 Remote Assist HoloLens user should [review tips for restoring tracking](dynamics365/mixed-reality/remote-assist/mobile-app/mobile-tutorial#what-happens-if-the-app-loses-tracking)
+The Dynamics 365 Remote Assist HoloLens user should [review tips for restoring tracking.](dynamics365/mixed-reality/remote-assist/mobile-app/mobile-tutorial#what-happens-if-the-app-loses-tracking)

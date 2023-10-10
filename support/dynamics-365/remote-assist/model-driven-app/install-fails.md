@@ -13,15 +13,21 @@ ms.custom: bap-template
 
 There are several reasons why the installation of the Dynamics 365 Remote Assist model-driven app might fail.
 
+## Prerequisites
+
+- Admin access to the [Microsoft Power Platform admin center](https://admin.powerplatform.microsoft.com/)
+- Admin access to the [Microsoft 365 admin center](https://admin.microsoft.com/AdminPortal)
+- Admin access to the environment Dynamics 365 Remote Assist is installed in
+
 ## Symptom 1: The Remote Assist model-driven app installation fails because of missing dependencies
 
 ### Cause
 
-You try to install Dynamics 365 Remote Assist in an environment that isn't enabled for Dynamics 365 apps.
+You try to install the Dynamics 365 Remote Assist model-driven app in an environment that isn't enabled for Dynamics 365 apps.
 
 ### Resolution
 
-Install the app in an environment where other Dynamics 365 apps, such as Dynamics 365 Field Service or Dynamics 365 Sales, are installed. Or [create a new environment](#install-the-dynamics-365-remote-assist-model-driven-app) that's enabled for Dynamics 365 apps.
+Install the app in an environment where other Dynamics 365 apps, such as Dynamics 365 Field Service or Dynamics 365 Sales, are installed. Or [create a new environment](dynamics365/mixed-reality/remote-assist/install-the-dynamics-365-remote-assist-model-driven-app) that's enabled for Dynamics 365 apps.
 
 ## Symptom 2: Can't enable Dynamics 365 apps when creating an environment
 

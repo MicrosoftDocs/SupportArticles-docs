@@ -27,7 +27,7 @@ Missing one or all of the following requirements:
 
 1. Make sure you have the [System Administrator](/power-platform/admin/database-security) role AND a [Power Apps license](/power-platform/admin/signup-question-and-answer) (or a license that includes a Power Apps license) and then try the install.
 
-   ![Dynamics 365 Guides license selected.](media/dynamics-365-guides-license.PNG "Dynamics 365 Guides license selected")
+   ![Dynamics 365 Guides license selected.](../media/dynamics-365-guides-license.PNG "Dynamics 365 Guides license selected")
 
 1. Go to the [solution history page](/power-apps/maker/data-platform/solution-history). Review details about solution installations to see if you can find the source of the error.
 

@@ -1,10 +1,10 @@
 ---
-title: Sign-in error when trying to sign into Guides on a shared HoloLens device 
-description: Learn how to resolve an error when trying to sign into Dynamics 365 Guides on a shared device license
+title: Can't sign in to the Guides PC or HoloLens app 
+description: Learn how to resolve an error when trying to sign into Dynamics 365 Guides on the PC or HoloLens app
 author: davepinch
 ms.author: davepinch
 ms.topic: troubleshooting-general 
-ms.date: 09/09/2023
+ms.date: 09/29/2023
 ms.custom: bap-template
 ---
 
@@ -44,7 +44,7 @@ Your client app version doesn't support your Guides solution version.
 
 ### Resolution
 
-Update your client app or contact your admin.
+[Update your client app](dynamics365/mixed-reality/guides/upgrade) or contact your admin.
 
 ## Cause 4: No license
 

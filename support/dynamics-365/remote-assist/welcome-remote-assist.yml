@@ -23,9 +23,9 @@ landingContent:
             url: remote-assist-app/sign-in-error.md
           - text: Asset tab indicates contact IT admin
             url: remote-assist-app/no-assets-admin.md
-          - text: No assets appear or assets aren't what I expected
+          - text: Assets don't appear or assets aren't what I expected
             url: remote-assist-app/no-assets.md
-          - text: Contacts don't appear in Dynamics 365 Remote Assist
+          - text: Contacts don't appear or aren't what I expected
             url: remote-assist-app/no-contacts.md
           - text: Incoming call notifications aren't received
             url: remote-assist-app/no-incoming-call-notification.md

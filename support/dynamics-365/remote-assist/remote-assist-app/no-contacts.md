@@ -9,7 +9,7 @@ ms.reviewer: v-wendysmith
 ms.custom: bap-template
 ---
 
-# Contacts don't appear in Dynamics 365 Remote Assist
+# Contacts don't appear or aren't what I expected
 
 ## Symptoms
 
@@ -19,7 +19,7 @@ The contacts I see aren't what I expected to see or no contacts appear in Dynami
 
 ### Resolution
 
-Make sure you’ve signed in to Teams at least once with the account you’re using on your HoloLens.
+Make sure you’ve signed in to Teams with the account you’re using on your HoloLens.
 
 ## Cause 2: Dynamics 365 Remote Assist isn't refreshing
 

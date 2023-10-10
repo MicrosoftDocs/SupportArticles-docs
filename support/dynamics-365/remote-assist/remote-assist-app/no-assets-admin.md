@@ -11,11 +11,9 @@ ms.custom: bap-template
 
 # Asset tab indicates contact IT admin
 
-Learn how to resolve a problem when the Asset tab informs a user to contact IT admin.
-
 ## Symptoms
 
-In the HoloLens app, when I select the **Assets** tab, Dynamics 365 Remote Assist says to contact IT admin.
+In the HoloLens app, when a user selects the **Assets** tab, Dynamics 365 Remote Assist says to contact IT admin.
 
 ## Prerequisites
 

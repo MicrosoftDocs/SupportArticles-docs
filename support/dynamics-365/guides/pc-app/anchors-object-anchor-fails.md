@@ -29,7 +29,7 @@ You might find one or more of the following causes:
 
 1. Confirm object measurements and **Length Unit** type by double-clicking the object anchor in the PC app to open the **Properties** tab.
   
-   ![Properties tab with My chair measurements](media/AOA-chair-properties.PNG "Properties tab with My chair measurements")
+   ![Properties tab with My chair measurements](../media/AOA-chair-properties.PNG "Properties tab with My chair measurements")
 
    - If the dimensions of the object in the **Properties** tab are different from the actual object dimensions by a factor of 2 or more, an incorrect **Length Unit** type was likely used.
 

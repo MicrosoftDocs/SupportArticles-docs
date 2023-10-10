@@ -9,9 +9,7 @@ ms.reviewer: v-wendysmith
 ms.custom: bap-template
 ---
 
-# No assets appear or assets aren't what I expected
-
-Learn how to resolve issues if no assets appear or the assets that do appear aren't what I expected to see.
+# Assets don't appear or assets aren't what I expected
 
 ## Symptoms
 

@@ -15,7 +15,7 @@ ms.custom: bap-template
 
 The following message displays in the HoloLens app:
 
-![Screenshot of warning message.](media/step-content-warning.jpg "Screenshot of warning message about high step memory usage")
+![Screenshot of warning message.](../media/step-content-warning.jpg "Screenshot of warning message about high step memory usage")
 
 ## Cause
 
@@ -25,4 +25,4 @@ If you continue to add 3D models and HoloLens reaches its memory limit, the [Ste
 
 ## Resolution
 
-[!INCLUDE [HoloLens-memory-limit](../includes/hololens-memory-limit.md]
+[!INCLUDE [HoloLens-memory-limit](../includes/hololens-memory-limit.md)]
