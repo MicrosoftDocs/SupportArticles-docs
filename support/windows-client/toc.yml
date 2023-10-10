@@ -1304,3 +1304,5 @@
       href: ./windows-troubleshooters/gather-information-using-tss-group-policy.md
     - name: Gather information for user experience-related issues
       href: ./windows-troubleshooters/gather-information-using-tss-user-experience.md
+    - name: Gather information for Windows Update for Business reports-related issues
+      href: ./windows-troubleshooters/gather-information-using-tss-wufb-reports.md
