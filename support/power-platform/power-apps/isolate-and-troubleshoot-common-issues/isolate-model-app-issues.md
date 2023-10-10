@@ -26,7 +26,7 @@ The following features can affect normal operation. Try disabling or removing th
 
 **Affects**: Form pages
 
-[Business rules](/dynamics365/customerengagement/on-premises/customize/create-business-rules-recommendations-apply-logic-form?view=op-9-1&preserve-view=true) change a form's behavior based on the state of a record. Try disabling or simplifying the rule and check if the form still works as expected.
+[Business rules](/power-apps/maker/data-platform/data-platform-create-business-rule) change a form's behavior based on the state of a record. Try disabling or simplifying the rule and check if the form still works as expected.
 
 ### Client scripts
 
