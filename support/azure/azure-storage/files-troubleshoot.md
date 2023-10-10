@@ -70,7 +70,7 @@ $hostName = "mystorageaccount.file.core.windows.net"
 Resolve-DnsName -Name $hostName | Format-List
 ```
 
-The output returned by `Resolve-DnsName` may be different depending on your environment and desired networking configuration. For example, If you're trying to reach a public endpoint of a storage account that has private endpoints, you might see the following result. In the output below, `x.x.x.x` is the IP address of the cluster `file.phx10prdstf01a.store.core.windows.net` of the Azure storage platform that serves your storage account.
+The output returned by `Resolve-DnsName` may be different depending on your environment and desired networking configuration. For example, if you're trying to access a public endpoint of a storage account that doesn't have any private endpoints configured, you will see the following output. In this output, `x.x.x.x` is the IP address of the cluster `file.phx10prdstf01a.store.core.windows.net` of the Azure storage platform that serves your storage account.
 
 ```output
 Name       : mystorageaccount.file.core.windows.net
@@ -86,9 +86,7 @@ Section    : Answer
 IP4Address : x.x.x.x
 ```
 
-
-
-If you're trying to access the public endpoint of a storage account that has one or more private endpoints configured, you would expect to see a result that looked something like the following. Note that an extra CNAME record for `mystorageaccount.privatelink.file.core.windows.net` has been inserted in between the normal FQDN of the storage account and the name of storage cluster. This enables name resolution to the public endpoint's IP address when the user is accessing from the internet, and resolution to the private endpoint's IP address when the user is accessing from inside of an Azure virtual network (or peered network).
+If you're trying to access the public endpoint of a storage account that has one or more private endpoints configured, you will see the following output. The output includes an extra CNAME record for `mystorageaccount.privatelink.file.core.windows.net`, positioned between the usual FQDN of the storage account and the name of the storage cluster. This enables name resolution to the public endpoint's IP address when the user is accessing from the internet, and resolution to the private endpoint's IP address when the user is accessing from inside of an Azure virtual network (or peered network).
 
 ```output
 Name       : mystorageaccount.file.core.windows.net
