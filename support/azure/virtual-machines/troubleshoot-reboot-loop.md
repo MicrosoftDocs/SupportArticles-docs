@@ -11,8 +11,9 @@ ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
-ms.date: 10/07/2023
+ms.date: 10/08/2023
 ms.author: genli
+ms.reviewer: v-weizhu
 ---
 
 # Windows reboot loop on an Azure VM
@@ -45,7 +46,7 @@ To resolve this issue, see [Solution for cause 2](#solution-for-cause-2).
 
 ### Cause 3
 
-Registry hive corruption could cause this issue. To resolve this issue, see [Solution for cause 3](#solution-for-cause-3).
+A registry hive corruption could cause this issue. To resolve this issue, see [Solution for cause 3](#solution-for-cause-3).
 
 ## Solution
 
