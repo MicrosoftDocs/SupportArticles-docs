@@ -38,22 +38,22 @@ The following sections indicate how to troubleshoot cloud tiering issues and det
 
 To monitor tiering activity on a server, use Event ID 9003, 9016, and 9029 in the Telemetry event log (located under `Applications and Services\Microsoft\FileSync\Agent` in Event Viewer).
 
-- Event ID 9003 provides error distribution for a server endpoint. For example, Total Error Count, ErrorCode, etc. Note, one event is logged per error code per hour.
-- Event ID 9016 provides ghosting results for a volume. For example, Free space percent is, Number of files ghosted in session, Number of files failed to ghost, etc.
-- Event ID 9029 provides ghosting session information for a server endpoint. For example, Number of files attempted in the session, Number of files tiered in the session, Number of files already tiered, etc.
+- Event ID 9003 provides error distribution for a server endpoint. For example, Total Error Count and ErrorCode. Note, one event is logged per error code per hour.
+- Event ID 9016 provides ghosting results for a volume. For example, Free space percent is, Number of files ghosted in session, and Number of files failed to ghost.
+- Event ID 9029 provides ghosting session information for a server endpoint. For example, Number of files attempted in the session, Number of files tiered in the session, and Number of files already tiered.
 
 ## How to monitor recall activity on a server
 
 To monitor recall activity on a server, use Event ID 9005, 9006, 9009, and 9059 in the Telemetry event log (located under Applications and Services\Microsoft\FileSync\Agent in Event Viewer).
 
-- Event ID 9005 provides recall reliability for a server endpoint. For example, Total unique files accessed, Total unique files with failed access, etc.
-- Event ID 9006 provides recall error distribution for a server endpoint. For example, Total Failed Requests, ErrorCode, etc. Note, one event is logged per error code per hour.
-- Event ID 9009 provides recall session information for a server endpoint. For example, DurationSeconds, CountFilesRecallSucceeded, CountFilesRecallFailed, etc.
+- Event ID 9005 provides recall reliability for a server endpoint. For example, Total unique files accessed and Total unique files with failed access.
+- Event ID 9006 provides recall error distribution for a server endpoint. For example, Total Failed Requests and ErrorCode. Note, one event is logged per error code per hour.
+- Event ID 9009 provides recall session information for a server endpoint. For example, DurationSeconds, CountFilesRecallSucceeded, and CountFilesRecallFailed.
 - Event ID 9059 provides application recall distribution for a server endpoint. For example, ShareId, Application Name, and TotalEgressNetworkBytes.
 
 ## How to troubleshoot files that fail to tier
 
-To troubleshoot files that fail to tier, perform the following steps:
+To troubleshoot files that fail to tier, follow the steps:
 
 1. In Event Viewer, go to the *Microsoft-FileSync-Agent/TieringResults* event log.
 2. There is an event logged for each file that fails to tier. Check the [Tiering errors and remediation](#tiering-errors-and-remediation) section to see if remediation steps are listed for the error code.
@@ -65,14 +65,14 @@ To troubleshoot files that fail to tier, perform the following steps:
     Get-StorageSyncFileTieringResult
     ```
 
-If content doesn't exist for the error code, perform the general troubleshooting steps below:
+If content doesn't exist for the error code, follow the general troubleshooting steps:
 
 1. Verify the file exists in the Azure file share.
 
     > [!NOTE]
-    > A file must be synced to an Azure file share before it can be tiered.
+    > A file must be synced with an Azure file share before it can be tiered.
 
-1. Verify the server has internet connectivity.
+1. Verify the server has Internet connectivity.
 1. Verify the Azure File Sync filter drivers (*StorageSync.sys* and *StorageSyncGuard.sys*) are running:
    - At an elevated command prompt, run `fltmc`. Verify that the *StorageSync.sys* and *StorageSyncGuard.sys* file system filter drivers are listed.
 
@@ -146,7 +146,7 @@ If content doesn't exist for the error code, perform the general troubleshooting
 
 ## How to troubleshoot files that fail to be recalled
 
-To troubleshoot files that fail to recall, perform the following steps:
+To troubleshoot files that fail to recall, follow the steps:
 
 1. In Event Viewer, go to the *Microsoft-FileSync-Agent/RecallResults* event log.
 2. There is an event logged for each file that is recalled. If the `DataTransferHresult` field is 0, the file recall is successful. If the `DataTransferHresult` field has an error code, check the [Recall errors and remediation](#recall-errors-and-remediation) section to see if remediation steps are listed for the error code.
@@ -158,10 +158,10 @@ To troubleshoot files that fail to recall, perform the following steps:
     Get-StorageSyncFileRecallResult
     ```
 
-If content doesn't exist for the error code, perform the general troubleshooting steps below:
+If content doesn't exist for the error code, follow the general troubleshooting steps:
 
 1. Verify the file exists in the Azure file share.
-2. Verify the server has internet connectivity.
+2. Verify the server has Internet connectivity.
 3. Open the Services MMC snap-in and verify the Storage Sync Agent service (*FileSyncSvc*) is running.
 4. Verify the Azure File Sync filter drivers (*StorageSync.sys* and *StorageSyncGuard.sys*) are running:
    - At an elevated command prompt, run `fltmc`. Verify that the *StorageSync.sys* and *StorageSyncGuard.sys* file system filter drivers are listed.
