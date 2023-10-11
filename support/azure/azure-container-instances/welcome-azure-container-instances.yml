@@ -7,8 +7,8 @@ metadata:
   description: Documentation for troubleshooting common issues with Azure Container Instances. # Required; article description that is displayed in search results. < 160 chars.
   ms.service: container-instances  #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
-  author: tomcassidy  #Required; your GitHub user alias, with correct capitalization.
-  ms.author: tomcassidy #Required; microsoft alias of author; optional team alias.
+  author: tysonfms  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: tysonfms #Required; microsoft alias of author; optional team alias.
   ms.date: 10/11/2023
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
