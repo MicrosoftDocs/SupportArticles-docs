@@ -16,7 +16,7 @@ _Version:_ &nbsp; 15.0.4335.1
 
 ## Summary
 
-This article describes Cumulative Update package 23 (CU23) for Microsoft SQL Server 2019. This update contains 22 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2019 Cumulative Update 22, and it updates components in the following builds:
+This article describes Cumulative Update package 23 (CU23) for Microsoft SQL Server 2019. This update contains 24 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2019 Cumulative Update 22, and it updates components in the following builds:
 
 - SQL Server - Product version: **15.0.4335.1**, file version: **2019.150.4335.1**
 - Analysis Services - Product version: **15.0.35.41**, file version: **2018.150.35.41**
@@ -46,6 +46,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id=2654352>[2654352](#2654352) </a> | Fixes an issue in which you search for a specific node and then fail to expand the node in the hierarchy page. | Master Data Services | Master Data Services| Windows|
 | <a id=2633976>[2633976](#2633976) </a> | Updates the version of the Microsoft ODBC driver to 17.10.5.1. For more information, see [Release Notes for Microsoft ODBC Driver for SQL Server on Windows](/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows). | SQL Connectivity | SQL Connectivity| Windows|
 | <a id=2633979>[2633979](#2633979) </a> | Updates the version of the Microsoft OLE DB driver to 18.6.7. For more information, see [Release notes for the Microsoft OLE DB Driver for SQL Server](/sql/connect/oledb/release-notes-for-oledb-driver-for-sql-server).| SQL Connectivity | SQL Connectivity| Windows|
+| <a id=1992459>[1992459](#1992459) </a> | Fixes an issue in which restoring a transaction log backup to the specific point in time fails with the following error: </br></br>Msg 9003, Level 20, State 9, Line \<LineNumber> </br>The log scan number (xxx:xxx:xxx) passed to log scan in database 'DatabaseName' is not valid. | SQL Server Engine| Backup Restore| All|
 | <a id=2584049>[2584049](#2584049) </a> | Enables IO error mode history in retail builds by using trace flag 3139 to allow the investigation of the assertion failure (Location: readEncoded.cpp:2988; Expression: m_pDecodeSplitInput->GetAvailableFreeSize () >= lengthInNext) that may occur while restoring transaction log backups. |SQL Server Engine | Backup Restore| All|
 | <a id=2374314>[2374314](#2374314) </a> | Fixes an issue in which an `INSERT` (or any Data Manipulation Language (DML)) statement is blocked if you run the statement before a clustered columnstore index (CCI) online rebuild or drop and then run the statement during the online rebuild or drop if the statement is still in the procedure cache. | SQL Server Engine| Column Stores | All|
 | <a id=2690338>[2690338](#2690338) </a> | Updates the design of `IDENTITY` to improve the stability when `SET IDENTITY_INSERT` is `ON` for a table. </br></br>**Note**: To apply this update, you need to set the `QUERY_OPTIMIZER_HOTFIXES` database scoped configuration to `ON`. Otherwise, you can turn on trace flag 13193 to make this update unavailable.| SQL Server Engine| DB Management | All|
@@ -63,7 +64,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id=2674865>[2674865](#2674865) </a> | Fixes error 207 (Invalid column name '\<ColumnName>') that you encounter when you run a user-defined function (UDF), which references a dropped column that uses data classification.| SQL Server Engine| Security Infrastructure | All|
 | <a id=2639915>[2639915](#2639915) </a> | Adds a compressed memory dump feature that helps create a compressed memory stream to replace the conventional memory stream to speed up the dump process and reduce the size of the dump file. For more information, see [Use the Sqldumper.exe tool to generate a dump file in SQL Server](../../tools/use-sqldumper-generate-dump-file.md#parallel-compression-of-memory-dumps). | SQL Server Engine| SQL OS| Windows|
 | <a id=2640296>[2640296](#2640296) </a> | Fixes an issue in which SQL Server continues to generate new dump files when the dump file size is larger than 2 gigabytes (GB). | SQL Server Engine| SQL OS| Windows|
-| <a id=2651628>[2651628](#2651628) </a> | Starting in SQL Server 2019 CU23, Azul Java is no longer available, and the Microsoft Build of OpenJDK 11.0.19 is provided instead.| SQL Setup| Deployment Platform | Windows|
+| <a id=2651628>[2651628](#2651628) </a> </br><a id=2746708>[2746708](#2746708) </a> | Starting in SQL Server 2019 CU23, Azul Java is no longer available, and the Microsoft Build of OpenJDK 11 is provided instead.| SQL Setup| Deployment Platform | All |
 
 ## How to obtain or download this or the latest cumulative update package
 
