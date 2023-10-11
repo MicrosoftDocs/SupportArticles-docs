@@ -57,6 +57,6 @@ To resolve the circular dependencies, work on one of the solutions involved and 
 
 If you want to remove the dependencies to be able to delete the solutions, remove the dependencies in the active layer, and then delete the solution.
 
-- Option1: In the target environment, edit Component 2 and remove the dependency on Component 3 in the active layer. Deletion of Solution B is allowed now. Once Solution B is deleted, Solution A can be deleted too.
+- Option 1: In the target environment, edit Component 2 and remove the dependency on Component 3 in the active layer. Deletion of Solution B is allowed now. Once Solution B is deleted, Solution A can be deleted too.
 
-- Option2: In the target environment, edit Component 4 and remove the dependency on Component 1 in the active layer. Deletion of Solution A is allowed now. Once Solution A is deleted, Solution B can be deleted too.
+- Option 2: In the target environment, edit Component 4 and remove the dependency on Component 1 in the active layer. Deletion of Solution A is allowed now. Once Solution A is deleted, Solution B can be deleted too.
