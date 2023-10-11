@@ -1,6 +1,6 @@
 ---
-title: Mailbox Quota Information isn't displayed
-description: Describes an issue in Outlook 2010 in which mailbox Quota Information is not displayed on the Status bar in Outlook 2010.
+title: Mailbox quota information isn't displayed on the Status bar in Outlook
+description: Resolves an issue in which mailbox quota information isn't displayed on the status bar in Outlook.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -10,115 +10,137 @@ localization_priority: Normal
 ms.custom: 
   - Outlook for Windows
   - CI 119623
+  - CI 171268
   - CSSTroubleshoot
-ms.reviewer: gregmans
+ms.reviewer: batre, meerak, v-trisshores
 search.appverid: 
   - MET150
 appliesto: 
   - Outlook for Microsoft 365
+  - Outlook 2021
   - Outlook 2019
   - Outlook 2016
   - Outlook 2013
-  - Outlook 2010
-ms.date: 03/31/2022
+  - Exchange Server 2019
+  - Exchange Server 2016
+  - Exchange Server 2013
+ms.date: 10/10/2023
 ---
-# Mailbox Quota Information is not displayed on the Status bar in Outlook
 
-_Original KB number:_ &nbsp; 982997
+# Mailbox quota information isn't displayed on the Status bar in Outlook
 
 ## Symptoms
 
-After you configure Outlook 2010 or later versions to display Quota Information on the Status bar, you should see something that resembles the following example when you right-click the Status bar:
+Your mailbox is located on a server that's running Microsoft Exchange Server. You right-click the Microsoft Outlook status bar, and then you select **Quota Information** in the **Customize Status Bar** menu. However, the **Quota Information** status in the menu remains **Off** and the status bar doesn't display any mailbox quota information, as shown in the following screenshot.
 
-:::image type="content" source="./media/mailbox-quota-information-not-displayed/customize-status-bar.png" alt-text="Screenshot of Customize Status Bar.":::
-
-However, Quota Information may not be displayed on the Status bar. When this occurs, you see a Status bar that resembles the following example:
-
-:::image type="content" source="./media/mailbox-quota-information-not-displayed/quota-infor-not-displayed-on-status-bar.png" alt-text="Screenshot of the Status bar of Outlook 2010." border="false":::
+:::image type="content" source="./media/mailbox-quota-information-not-displayed/customize-status-bar.png" alt-text="Screenshot of the Quota Information menu item in the Customize Status Bar menu." border="true":::
 
 ## Cause
 
-This issue may occur for one of the following causes.
+The mailbox quota settings in Exchange Server aren't configured correctly.
 
-### Cause 1
+## Resolution
 
-Your mailbox is located on Microsoft Exchange Server 2003.
+To resolve this issue, use either of the following methods.
 
-### Cause 2
+> [!NOTE]
+> To use the following methods, you must have administrator permissions.
 
-Your mailbox is located on Microsoft Exchange Server 2007 or on Microsoft Exchange Server 2010. Additionally, you don't have certain mailbox or store limits configured (depending on your Outlook profile configuration):
+### Method 1: Use the Exchange admin center
 
-- *Cached mode profile configuration*  
+Use the following table to determine the relevant quotas in Exchange Server based on the [Cached Exchange mode](/outlook/troubleshoot/installation/cached-exchange-mode#comparison-of-cached-exchange-mode-and-online-mode) setting in the Outlook profile.
 
-    If your Outlook profile is configured in cached mode, you will need to have the following three properties configured for your mailbox:
+| Cached Exchange mode | Relevant quotas |
+|---|:---|
+| Enabled | <ul><li>Issue warning at</li><li>Prohibit send at</li><li>Prohibit send and receive at</li></ul> |
+| Disabled | <ul><li>Prohibit send and receive at</li></ul> |
 
-  - Issue warning at
-  - Prohibit send at
-  - Prohibit send and receive at
+In order for the status bar to display mailbox quota information, the relevant quotas that are listed in the table must resolve to numeric values. Follow these steps:
 
-- *Online mode profile configuration*  
+1. Check and update the mailbox quotas:
 
-    If your Outlook profile is configured in online mode, you will want to have the following two properties configured for your mailbox:
+    1. In the Exchange admin center (EAC), select **recipients** \> **mailboxes**, double-click the user mailbox, and then select the **mailbox usage** tab.
 
-  - Prohibit send at
-  - Prohibit send and receive at
+    2. On the **mailbox usage** tab, select **More options**.
 
-To examine these settings, follow these steps:
+    3. Check whether the relevant quotas resolve to numeric values:
 
-- On an individual mailbox
+       - If the **Customize the quota settings for this mailbox** option is selected, make sure that the relevant quota values are numeric and not set to `unlimited`, and then go to step 3.
 
-  - Exchange Management Console
+       - If the **Use the default quota settings from the mailbox database** option is selected, go to the next step.
 
-      1. Under **Recipient Configuration**, select **Mailbox**.
-      2. Select the mailbox, and in the **Actions** pane, click **Properties**.
-      3. On the **Mailbox Settings** tab, select **Storage Quotas**, and then click **Properties**.
+2. Check and update the default mailbox quotas that are set on the mailbox database:
 
-            The following example shows a mailbox that does not have any specific limits set on it ("Use mailbox database defaults" = *enabled*).
+    1. Select **servers** \> **databases**, double-click the database that contains the user mailbox, and then select the **limits** tab.
 
-            :::image type="content" source="./media/mailbox-quota-information-not-displayed/storage-quotas.png" alt-text="Screenshot of the Storage Quotas dialog box." border="false":::
+    2. On the **limits** tab, make sure that the relevant quota values are numeric and not set to `unlimited`.
 
-  - Exchange Management Shell
+3. Remount the mailbox database:
 
-    Run a command that resembles the following example:
+    1. Select **servers** \> **databases**.
 
-    ```powershell
-    Get-Mailbox <mailbox_identity> | FL *quota*
-    ```
+    2. Select the More actions (…) menu, and then select **Dismount**.
 
-    In the following example, the results indicate a mailbox that does not have specific limits set on it ("UseDatabaseQuotaDefaults" = True).
+    3. Select the More actions menu, and then select **Mount**.
 
-    :::image type="content" source="./media/mailbox-quota-information-not-displayed/command-prompt-example.png" alt-text="Screenshot of the command prompt example." border="false":::
+### Method 2: Use the Exchange Management Shell
 
-- On a mailbox store
+Use the following table to determine the relevant quota parameters in Exchange Server based on the [Cached Exchange mode](/outlook/troubleshoot/installation/cached-exchange-mode#comparison-of-cached-exchange-mode-and-online-mode) setting in the Outlook profile.
 
-  - Exchange Management Console
+| Cached Exchange mode | Relevant quota parameters |
+|---|:---|
+| Enabled | <ul><li>IssueWarningQuota</li><li>ProhibitSendQuota</li><li>ProhibitSendReceiveQuota</li></ul> |
+| Disabled | <ul><li>ProhibitSendReceiveQuota</li></ul> |
 
-    1. Under **Server Configuration**, select **Mailbox**.
-    2. In the top pane, select the mailbox server.
-    3. In the bottom pane, on the **Database Management** tab, select the **Mailbox Database** object.
-    4. Under **Mailbox Database**, in the **Actions** pane, select **Properties**.
-    5. On the **Limits** tab, examine the limits that are configured for the database.
+In order for the status bar to display mailbox quota information, the relevant quota parameters that are listed in the table must resolve to numeric values. Follow these steps:
 
-        In the following example, only the Issue warning at and **Prohibit send at**  limits are set.
+1. Check and update the mailbox quotas:
 
-        :::image type="content" source="./media/mailbox-quota-information-not-displayed/mailbox-database-properties.png" alt-text="Screenshot of the Mailbox Database Properties dialog box." border="false":::
+   1. Run the following command to get the quota parameter values:
 
-  - Exchange Management Shell
+      ```PowerShell
+      Get-Mailbox -Identity <mailbox ID> | FL *Quota*
+      ```
 
-    Run a command that resembles the following example:
+   1. Check whether the relevant quotas resolve to numeric values:
 
-    ```powershell
-    Get-MailboxDatabase <mailbox_database_identity> | FL ProhibitSend*,IssueWarning*
-    ```
+      - If the **UseDatabaseQuotaDefaults** property value is `False`, make sure that the relevant quota values are numeric and not set to `unlimited`, and then go to step 3.
 
-    In the following example, the results indicate that the mailbox database does not have a Send and Receive quota set on it ("ProhibitSendReceiveQuota" = unlimited).
+      - If the **UseDatabaseQuotaDefaults** property value is `True`, go to the next step.
 
-    :::image type="content" source="./media/mailbox-quota-information-not-displayed/command-issuewarning-example.png" alt-text="Screenshot of this command prompt example." border="false":::
+2. Check and update the default mailbox quotas that are set on the mailbox database:
+
+   1. Run the following command to get the quota parameter values:
+
+      ```PowerShell
+      Get-MailboxDatabase -Identity (Get-Mailbox <mailbox ID> | Select -Expand Database).Name | FL *Quota*
+      ```
+
+   1. Make sure that the relevant quota values are numeric and not set to `unlimited`.
+
+3. Use one of the following options to remount the mailbox database:
+
+   - Run the following commands:
+
+     ```PowerShell
+     Dismount-Database -Identity (Get-Mailbox <mailbox ID> | Select -Expand Database).Name
+     Mount-Database -Identity (Get-Mailbox <mailbox ID> | Select -Expand Database).Name
+     ```
+
+     Note: The Status bar can take from 3 to 24 hours to update.
+
+   - Switch the active mailbox database to another server (DAG required). Run the following command:
+
+     ```PowerShell
+     Move-ActiveMailboxDatabase <mailbox database name> -ActivateOnServer <other server name>
+     ```
 
 ## More information
 
-The following example demonstrates the Quota Information that is displayed on the Status bar in Outlook when the necessary quotas are configured for a mailbox on Exchange Server 2007 or on Exchange Server 2010. The tool tip below the Status bar is displayed when you move the mouse pointer over the quota text on the Status bar.
+- The following screenshot shows mailbox quota information in the Outlook status bar. When you hover your mouse cursor over the quota information, more quota information appears in a tooltip.
 
-:::image type="content" source="./media/mailbox-quota-information-not-displayed/quota-information-display-on-status-bar.png" alt-text="Screenshot of the Status bar with quota information." border="false":::
+  :::image type="content" source="./media/mailbox-quota-information-not-displayed/quota-information-display-on-status-bar.png" alt-text="Screenshot of the Status bar with quota information." border="true":::
 
-For additional symptoms when you are working with mailbox limits and quotas, see [The Mailbox Cleanup Wizard does not start in Outlook 2010 or Outlook 2013 when the mailbox is full](https://support.microsoft.com/help/2632283).
+- For more information about how to set mailbox quotas, see [Configure storage quotas for a mailbox in Exchange Server](/exchange/recipients/user-mailboxes/storage-quotas).
+
+- For more information about how to set mailbox database quotas, see [Manage mailbox databases in Exchange Server](/exchange/architecture/mailbox-servers/manage-databases).

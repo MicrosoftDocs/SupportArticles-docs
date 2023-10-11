@@ -765,7 +765,7 @@
           href: ../user-interface/known-issues-using-object-model.md
         - name: Lync Meeting control isn't displayed
           href: ../user-interface/lync-meeting-control-not-displayed.md
-        - name: Mailbox Quota Information isn't displayed
+        - name: Mailbox quota information isn't displayed
           href: ../user-interface/mailbox-quota-information-not-displayed.md
         - name: MAPI applications can't access archive mailboxes
           href: ../user-interface/mapi-apps-cannot-access-archive-mailboxes.md
