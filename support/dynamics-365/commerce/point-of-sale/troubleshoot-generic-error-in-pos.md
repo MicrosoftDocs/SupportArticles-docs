@@ -18,8 +18,6 @@ First, collect the following details from the POS:
 3. The User session ID.
 4. The actions that led to the error so that you can follow the flow.
 
-> [!NOTE]
-> Including these details in your support ticket will be helpful if you need further assistance with the issue.
 
 ## Troubleshooting steps
 
@@ -56,3 +54,6 @@ If you find some requests that were sent to the RCSU (Retail Server) in the POS 
 7. You can now review the RCSU search result logs as shown below.
 
    :::image type="content" source="media/troubleshoot-generic-error-in-pos/example-of-environment-monitoring-search-results.png" alt-text="Screenshot that shows the environment monitoring search results." lightbox="media/troubleshoot-generic-error-in-pos/example-of-environment-monitoring-search-results.png":::
+
+   ## Engaging Microsoft Support
+   When opening a Support ticket for issues on the POS including the details listed in the Prequisite section of this documentation will help speed up the troubleshooting process. 
