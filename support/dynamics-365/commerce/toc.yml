@@ -19,6 +19,8 @@
       items:
         - name: Errors when debugging against a Tier 1 Retail Server virtual machine
           href: development-sdks/set-up-dev-environment-debugging.md
+        - name: E-commerce SDK clone modules known issues
+          href: development-sdks/ecommerce-clone-module-issues.md
     - name: E-commerce storefront
       items:
         - name: Items without inventory can be checked out
