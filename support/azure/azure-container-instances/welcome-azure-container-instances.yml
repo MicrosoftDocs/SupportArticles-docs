@@ -14,6 +14,13 @@ metadata:
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
+ # Card
+  - title: Learn how to use ACI with these quickstarts, tutorials, and samples
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: ACI Documentation
+            url: /azure/container-instances/
 
  # Card
   - title: Troubleshoot Container Group Start Up 
