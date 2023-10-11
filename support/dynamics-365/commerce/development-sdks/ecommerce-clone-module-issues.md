@@ -22,7 +22,7 @@ The Dynamics 365 e-commerce software development kit (SDK) provides the clone [c
 5. Attempt to update the data action file path so the references are correct.
 
 > [!NOTE]
-> Both steps 4 and 5 are prone to errors, so it's recommended to review these files manually and fix broken references. Microsoft strives to achieve a 100 percent success rate, but a lot depends on the code being written, so we still have scenarios where this can result in broken references. However, it should be easy to fix these references.
+> Both steps 4 and 5 are prone to errors, so it's recommended to review these files manually and fix broken references. 
 
 ## Known issues
 
