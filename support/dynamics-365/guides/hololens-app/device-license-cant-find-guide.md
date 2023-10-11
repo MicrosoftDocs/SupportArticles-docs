@@ -20,4 +20,4 @@ The shared account doesn't have access to the guide.
 
 ## Resolution
 
-[Assign](dynamics365/mixed-reality/guides/admin-access-assign) or [share](dynamics365/mixed-reality/guides/admin-access-teams) the guide to the shared account.
+[Assign](**/*dynamics365/mixed-reality/guides/admin-access-assign) or [share](**/*dynamics365/mixed-reality/guides/admin-access-teams) the guide to the shared account.

@@ -22,7 +22,7 @@ A sign-in error occurs when trying to sign into Dynamics 365 Guides from a share
 
 ### Resolution
 
-[Create a shared account.](dynamics365/mixed-reality/guides/device-license)
+[Create a shared account.](**/*dynamics365/mixed-reality/guides/device-license)
 
 ## Cause 2: The right roles weren't assigned
 

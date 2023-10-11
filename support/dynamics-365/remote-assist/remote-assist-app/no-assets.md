@@ -27,7 +27,7 @@ In the HoloLens app, when I select the **Assets** tab, the assets I see aren't w
 
 ## Cause 2: Asset records weren't created in the environment
 
-1. Ensure that the environment you're using has [asset records created](dynamics365/mixed-reality/remote-assist/asset-capture-create-asset) in it.
+1. Ensure that the environment you're using has [asset records created](**/*dynamics365/mixed-reality/remote-assist/asset-capture-create-asset) in it.
 
 2. Select **Retry** if you're prompted to on the **Assets** tab.
 

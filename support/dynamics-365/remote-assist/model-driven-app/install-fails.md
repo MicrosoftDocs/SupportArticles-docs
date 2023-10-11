@@ -27,7 +27,7 @@ You try to install the Dynamics 365 Remote Assist model-driven app in an environ
 
 ### Resolution
 
-Install the app in an environment where other Dynamics 365 apps, such as Dynamics 365 Field Service or Dynamics 365 Sales, are installed. Or [create a new environment](dynamics365/mixed-reality/remote-assist/install-the-dynamics-365-remote-assist-model-driven-app) that's enabled for Dynamics 365 apps.
+Install the app in an environment where other Dynamics 365 apps, such as Dynamics 365 Field Service or Dynamics 365 Sales, are installed. Or [create a new environment](**/*dynamics365/mixed-reality/remote-assist/install-the-dynamics-365-remote-assist-model-driven-app) that's enabled for Dynamics 365 apps.
 
 ## Symptom 2: Can't enable Dynamics 365 apps when creating an environment
 

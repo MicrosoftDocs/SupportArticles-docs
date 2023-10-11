@@ -28,7 +28,7 @@ Connection through a proxy or VPN isn't configured correctly.
 
 ### Resolution
 
-[Configure a VPN or proxy for Dynamics 365 Guides](/dynamics365/mixed-reality/guides/admin-deployment-playbook#vpn-or-proxy-configuration).
+[Configure a VPN or proxy for Dynamics 365 Guides](**/*dynamics365/mixed-reality/guides/admin-deployment-playbook#vpn-or-proxy-configuration).
 
 ## Cause 3: Don't have permission
 
@@ -44,7 +44,7 @@ Your client app version doesn't support your Guides solution version.
 
 ### Resolution
 
-[Update your client app](dynamics365/mixed-reality/guides/upgrade) or contact your admin.
+[Update your client app](**/*dynamics365/mixed-reality/guides/upgrade) or contact your admin.
 
 ## Cause 4: No license
 
@@ -52,4 +52,4 @@ You don't have a license to use Guides.
 
 ### Resolution
 
-Contact your admin or [sign up for a free trial subscription](dynamics365/mixed-reality/guides/setup).
+Contact your admin or [sign up for a free trial subscription](**/*dynamics365/mixed-reality/guides/setup).
