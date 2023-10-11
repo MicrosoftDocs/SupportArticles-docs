@@ -2,14 +2,12 @@
 title: Troubleshoot WMI high CPU usage issues
 description: Describes how to diagnose Windows Management Instrumentation (WMI) high CPU issues on any Windows operating system.
 ms.date: 06/01/2023
-author: v-lianna
-ms.author: v-lianna
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
-ms.reviewer: kaushika, krpg, warrenw, anleito, mistoyan
+ms.reviewer: kaushika, krpg, warrenw, anleito, mistoyan, v-lianna
 ms.custom: sap:wmi, csstroubleshoot
 ms.technology: windows-client-system-management-components
 ---
@@ -424,7 +422,7 @@ Here are some scenarios where disabling it can validate your observations.
 
 ## Data collection
 
-If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for User Experience issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-user-experience.md#wmi).
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-user-experience.md#wmi).
 
 You can also gather information by using the WMI-Collect tool. Here are the steps:
 

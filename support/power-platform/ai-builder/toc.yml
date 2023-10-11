@@ -3,6 +3,8 @@
   items:
     - name: Administration and licensing
       items:
+        - name: All AI Builder credits have been consumed
+          href: all-ai-builder-credits-have-been-consumed.md
         - name: Actions are disabled or deactivated
           href: aibuilder-actions-are-disabled-deactivated.md
         - name: AI Builder trial license still displays after you've purchased an AI Builder license
@@ -19,6 +21,8 @@
           href: fields-could-not-be-loaded-for-this-document-error-in-form-processing.md
         - name: Training document isn't displayed
           href: the-training-document-is-not-displayed-on-the-form-processing-model-details-page.md
+        - name: Your model uses a preview functionality which has expired
+          href: your-model-uses-a-preview-functionality-which-has-expired.md
     - name: Use in Power Automate
       items:
         - name: Dependency timeout error

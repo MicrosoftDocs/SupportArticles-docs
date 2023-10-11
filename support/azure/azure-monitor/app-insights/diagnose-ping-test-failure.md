@@ -1,14 +1,11 @@
 --- 
 title: Diagnose common problems that cause your ping tests to fail in Application Insights availability monitoring
 description: This article describes how to diagnose common issues that cause ping tests to fail in Application Insights availability monitoring.
-ms.date: 5/11/2023
-author: DennisLee-DennisLee
-ms.author: v-dele
+ms.date: 09/01/2023
 editor: v-jsitser
-ms.reviewer: aaronmax
+ms.reviewer: aaronmax, v-leedennis
 ms.service: azure-monitor
 ms.subservice: application-insights
-#Customer intent: As an Azure Application Insights user, I want to determine what's causing my ping tests to fail in Application Insights availability monitoring so that I can effectively monitor Azure applications.
 ---
 
 # Diagnose ping test failure in Application Insights availability monitoring
@@ -16,6 +13,11 @@ ms.subservice: application-insights
 This article discusses how to access the Application Insights troubleshooting report. This report enables you to easily diagnose common problems that cause your ping tests to fail.  
 
 :::image type="content" source="./media/diagnose-ping-test-failure/availability-to-troubleshooter.gif" alt-text="Azure portal animation that shows how to view the end-to-end transaction details to find the troubleshooting report in Application Insights." lightbox="./media/diagnose-ping-test-failure/availability-to-troubleshooter.gif":::
+
+> [!NOTE]
+> Many webtest-related issues are caused by stale or outdated DNS records. As a first troubleshooting step, we recommend that you flush the DNS cache on your local computer.
+>
+> In Windows, run the [ipconfig /flushdns](/windows-server/administration/windows-commands/ipconfig) command. For other operating systems, the equivalent command is different.
 
 ## View the Application Insights troubleshooting report
 
@@ -52,14 +54,14 @@ The following table lists the steps, error messages, and possible causes that yo
 > [!NOTE]
 > If the connection reuse step is present, then the following steps won't be present:
 >
-> * DNS resolution
-> * Connection establishment
-> * TLS transport
+> - DNS resolution
+> - Connection establishment
+> - TLS transport
 
 ## Next steps
 
-* Use [TrackAvailability](xref:Microsoft.ApplicationInsights.TelemetryClient.TrackAvailability%2A) to submit [custom availability tests](/azure/azure-monitor/app/availability-azure-functions).
+- Use [TrackAvailability](xref:Microsoft.ApplicationInsights.TelemetryClient.TrackAvailability%2A) to submit [custom availability tests](/azure/azure-monitor/app/availability-azure-functions).
 
-* Learn about [URL ping tests](/azure/azure-monitor/app/monitor-web-app-availability).
+- Learn about [URL ping tests](/azure/azure-monitor/app/monitor-web-app-availability).
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

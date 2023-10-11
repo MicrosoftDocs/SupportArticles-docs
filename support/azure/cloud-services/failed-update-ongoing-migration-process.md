@@ -2,10 +2,8 @@
 title: Failed cloud service update because of ongoing migration progress
 description: Resolve a cloud service update failure that occurs during a migration from Azure Cloud Services (classic) to Azure Cloud Services (extended support).
 ms.date: 09/26/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
 editor: v-jsitser
-ms.reviewer: v-maallu, piw, prpillai
+ms.reviewer: v-maallu, piw, prpillai, v-leedennis
 ms.service: cloud-services
 ms.subservice: troubleshoot-deployment-classic
 #Customer intent: As a cloud service user, I want to resolve a cloud service update failure that occurs when I migrate from Azure Cloud Services (classic) to Azure Cloud Services (extended support) so that I can avoid or reduce downtime.

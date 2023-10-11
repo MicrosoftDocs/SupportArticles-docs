@@ -309,7 +309,7 @@ To resolve this issue, back up and then remove the X509 Certificate registry key
 
 ## References
 
-- [How to limit the number of connections on a terminal server that runs Windows Server 2003](/troubleshoot/windows-server/remote/limit-connections-terminal-server)
+- [How to limit the number of connections on a terminal server that runs Windows Server 2003](limit-connections-terminal-server.md)
 
 - [Troubleshooting General Remote Desktop Error Messages](/previous-versions/windows/it-pro/windows-server-2003/cc780927(v=ws.10))
 
@@ -319,4 +319,4 @@ If this article does not help you resolve the problem or if you experience sympt
 
 ## Data collection
 
-If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for User Experience issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-user-experience.md#remote-desktop-disconnection).
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-user-experience.md#remote-desktop-disconnection).

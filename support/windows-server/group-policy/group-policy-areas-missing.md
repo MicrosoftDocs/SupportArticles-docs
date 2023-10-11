@@ -55,6 +55,6 @@ When you focus on the local GPO with the MMC Group Policy Editor snap-in, it is 
 
 ## Data collection
 
-If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for Group Policy issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-group-policy.md).
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Group Policy issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-group-policy.md).
 
 [!INCLUDE [Community Solutions Content Disclaimer](../../includes/community-solutions-content-disclaimer.md)]

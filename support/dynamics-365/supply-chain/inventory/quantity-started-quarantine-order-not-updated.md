@@ -2,7 +2,7 @@
 title: Quantity on a started quarantine order isn't updated when the order is split
 description: Provides a resolution for the issue that the order quantity isn't updated to the split remaining quantity when you create a quarantine order and try to split it.
 author: sherry-zheng
-ms.date: 4/11/2021
+ms.date: 04/11/2021
 ms.topic: troubleshooting
 ms.search.form: InventQuarantineOrder
 audience: Application User

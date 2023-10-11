@@ -5,6 +5,7 @@ ms.date: 07/20/2020
 ms.reviewer: willfid, maxv, nmanis
 ms.service: active-directory
 ms.subservice: authentication
+ms.custom: has-azure-ad-ps-ref
 ---
 # Authorization_RequestDenied error when you try to change a password using Graph API
 

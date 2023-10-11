@@ -1,10 +1,8 @@
 ---
 title: Permission-issue error 8344 in Synchronization Service Manager
 description: Learn how to diagnose and fix permission-issue error 8344 (insufficient access rights to perform the operation) in Synchronization Service Manager.
-ms.date: 6/14/2023
-author: DennisLee-DennisLee
-ms.author: v-dele
-ms.reviewer: calazlo, nualex
+ms.date: 06/14/2023
+ms.reviewer: calazlo, nualex, v-leedennis
 ms.service: active-directory
 ms.subservice: enterprise-users
 ---
@@ -30,7 +28,7 @@ If you select one of the **permission-issue** export errors, the **Connector Spa
 
 ## Cause
 
-The on-premises Active Directory connector account (`MSOL_<hex-digits>`) doesn’t have permissions in Active Directory to write back the object’s properties that are being synchronized with Azure AD.
+The on-premises Active Directory connector account (`MSOL_<hex-digits>`) doesn't have permissions in Active Directory to write back the object's properties that are being synchronized with Azure AD.
 
 ## Solution 1: Grant permissions by using the AADConnect Troubleshooting console
 
@@ -87,7 +85,7 @@ The output is a table that displays the `Name`, `Forest`, `Domain`, and `Usernam
 
 </details>
 
-### Part 2: Determine which attributes the on-premises Active Directory connector account doesn’t have permissions for
+### Part 2: Determine which attributes the on-premises Active Directory connector account doesn't have permissions for
 
 1. Select **Start**, and then search for and select **Synchronization Service Manager**.
 1. In the **Synchronization Service Manager** app, select the **Operations** tab.

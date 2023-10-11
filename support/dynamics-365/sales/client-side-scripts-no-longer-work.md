@@ -3,7 +3,7 @@ title: Script errors after applying update
 description: Fixes script errors after your Microsoft Dynamics CRM Online organization is updated to the December 2012 Service Update.
 ms.reviewer: dmartens
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-server
 ---
 # Client-side scripts no longer work in Microsoft Dynamics CRM Online after the December 2012 Service Update
@@ -89,5 +89,6 @@ The following crmForm properties require HTC:
 
 The crmForm API was deprecated with the Microsoft Dynamics CRM 2011 release. For more information about this topic and other potential causes of script errors after the December 2012 Service Update, see the following Blog posts:
 
-- [Resolve Breaking Script Issues When Upgrading Microsoft Dynamics CRM](https://community.dynamics.com/365/b/365teamblog/posts/resolve-breaking-script-issues-when-upgrading-to-the-next-release-of-microsoft-dynamics-crm)
+- [Resolve Breaking Script Issues When Upgrading Microsoft Dynamics CRM](https://community.dynamics.com/blogs/post/?postid=6983b51b-486e-4c3a-8a9c-de1419d0a706)
 - [Microsoft Dynamics CRM 2011 Custom Code Validation Tool Released](https://cloudblogs.microsoft.com/dynamics365/no-audience/2012/06/21/microsoft-dynamics-crm-2011-custom-code-validation-tool-released/)
+

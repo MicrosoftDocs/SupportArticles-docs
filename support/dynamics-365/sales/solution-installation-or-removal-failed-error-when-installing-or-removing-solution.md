@@ -3,7 +3,7 @@ title: The solution installation or removal failed error when installing or remo
 description: The solution installation or removal failed due to the installation or removal of another solution at the same time - this error occurs when you try to install or remove a solution in Microsoft Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-custom-solutions
 ---
 # "The solution installation or removal failed" when installing or removing a solution

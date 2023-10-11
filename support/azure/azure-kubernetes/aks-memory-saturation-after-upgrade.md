@@ -1,11 +1,9 @@
 ---
 title: Memory saturation occurs after upgrade to Kubernetes 1.25
 description: Resolve pod failures caused by memory saturation and out-of-memory errors after you upgrade an Azure Kubernetes Service (AKS) cluster to Kubernetes 1.25.x.
-ms.date: 6/14/2023
-author: DennisLee-DennisLee
-ms.author: v-dele
+ms.date: 06/14/2023
 editor: v-jsitser
-ms.reviewer: aritraghosh, cssakscic
+ms.reviewer: aritraghosh, cssakscic, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: common-issues
 ---

@@ -1,7 +1,7 @@
 ---
 title: Use Directory Service to manage AD objects
 description: Describes how to use the Directory Service command-line tools to perform administrative tasks for Active Directory in Windows Server 2003.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes how to use the Directory Service command-line tools to perform administrative tasks for Active Directory in Windows Server 2003. The following tasks are broken down into task groups.
 
-_Applies to:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Supported versions of Windows Server  
 _Original KB number:_ &nbsp; 322684
 
 ## How to manage users
@@ -31,18 +31,18 @@ The following sections provide detailed steps to manage groups.
 3. At the command prompt, type the following command:
 
     ```console
-    dsadd user userdn -samid sam_name
+    dsadd user <user_dn> -samid <sam_name>
     ```
 
     The following values are used in this command:
 
-    - **userdn** specifies the distinguished name (also known as the DN) of the user object that you want to add.
+    - **user_dn** specifies the distinguished name (also known as the DN) of the user object that you want to add.
     - **sam_name** specifies the security account manager (SAM) name used as the unique SAM account name for this user (for example, Linda).
 
 4. To specify the user account password, type the following command, where **password** is the password that is to be used for the user account:
 
     ```console
-    dsadd user userdn -pwd password
+    dsadd user <user_dn> -pwd password
     ```
 
 > [!NOTE]
@@ -55,7 +55,7 @@ The following sections provide detailed steps to manage groups.
 3. At the command prompt, type the following command:
 
     ```console
-    dsmod user user_dn -pwd new_password
+    dsmod user <user_dn> -pwd <new_password>
     ```
 
     This command uses the following values:
@@ -66,7 +66,7 @@ The following sections provide detailed steps to manage groups.
 4. If you want to require the user to change this password at the next logon process, type the following command:
 
     ```console
-    dsmod user user_dn -mustchpwd {yes|no}
+    dsmod user <user_dn> -mustchpwd {yes|no}
     ```
 
 If a password is not assigned, the first time the user tries to log on (by using a blank password), the following logon message is displayed:
@@ -87,7 +87,7 @@ You must reset the services that are authenticated with a user account if the pa
 3. At the command prompt, type the following command:
 
     ```console
-    dsmod user user_dn -disabled {yes|no}
+    dsmod user <user_dn> -disabled {yes|no}
     ```
 
     This command uses the following values:
@@ -102,7 +102,7 @@ You must reset the services that are authenticated with a user account if the pa
 
 1. Click **Start**, and then click **Run**.
 2. In the **Open** box, type *cmd*.
-3. At the command prompt, type the `dsrm user_dn` command, where **user_dn** specifies the distinguished name of the user object to be deleted.  
+3. At the command prompt, type the `dsrm <user_dn>` command, where **user_dn** specifies the distinguished name of the user object to be deleted.  
 
 After you delete a user account, all of the permissions and memberships that are associated with that user account are permanently deleted. Because the security identifier (SID) for each account is unique, if you create a new user account that has the same name as a previously deleted user account, the new account does not automatically assume the permissions and memberships of the previously deleted account. To duplicate a deleted user account, you must manually re-create all permissions and memberships.
 
@@ -120,15 +120,15 @@ The following sections provide detailed steps to manage groups.
 3. At the command prompt, type the following command:
 
     ```console
-    dsadd group group_dn -samid sam_name -secgrp yes | no -scope l | g | u
+    dsadd group <group_dn> -samid <sam_name> -secgrp {yes|no} -scope {l|g|u}
     ```
 
     This command uses the following values:
 
     - **group_dn** specifies the distinguished name of the group object that you want to add.
     - **sam_name** specifies the SAM name that is the unique SAM account name for this group (for example, operators).
-    - **yes | no** specifies whether the group you want to add is a security group (yes) or a distribution group (no).
-    - **l | g | u** specifies the scope of the group you want to add (domain local [l], global [g], or universal [u]).
+    - **{yes|no}** specifies whether the group you want to add is a security group (yes) or a distribution group (no).
+    - **{l|g|u}** specifies the scope of the group you want to add (domain local [l], global [g], or universal [u]).
 
 If the domain in which you are creating the group is set to the domain functional level of Windows 2000 mixed, you can select only security groups with domain local scopes or global scopes.
 
@@ -141,7 +141,7 @@ To view the complete syntax for this command, and to obtain more information abo
 3. At the command prompt, type the following command:
 
     ```console
-    dsmod group group_dn -addmbr member_dn
+    dsmod group <group_dn> -addmbr <member_dn>
     ```
 
     This command uses the following values:
@@ -160,7 +160,7 @@ To view the complete syntax for this command, and to obtain more information abo
 3. At the command prompt, type the following command:
 
     ```console
-    dsmod group group_dn -secgrp {yes|no}
+    dsmod group <group_dn> -secgrp {yes|no}
     ```
 
     This command uses the following values:
@@ -179,13 +179,13 @@ To view the complete syntax for this command, at a command prompt, type `dsmod g
 3. At the command prompt, type the following command:
 
     ```console
-    dsmod group **group_dn** -scope l|g|u
+    dsmod group <group_dn> -scope {l|g|u}
     ```
 
     This command uses the following values:
 
     - **group_dn** specifies the distinguished names of the group object to which the scope will be changed.
-    - **l|g|u** specifies the scope that the group is to be set to (local, global, or universal). If the domain is still set to Windows 2000 mixed, the universal scope is not supported. Also, it is not possible to convert a domain local group to global group or vice versa.
+    - **{l|g|u}** specifies the scope that the group is to be set to (local, global, or universal). If the domain is still set to Windows 2000 mixed, the universal scope is not supported. Also, it is not possible to convert a domain local group to global group or vice versa.
 
 > [!NOTE]
 > You can only change group scopes when the domain functional level is set to Windows 2000 native or higher.
@@ -194,7 +194,7 @@ To view the complete syntax for this command, at a command prompt, type `dsmod g
 
 1. Click **Start**, and then click **Run**.
 2. In the **Open** box, type *cmd*.
-3. At the command prompt, type the command `dsrm group_dn`.
+3. At the command prompt, type the command `dsrm <group_dn>`.
 
     The **group_dn** specifies the distinguished name of the group object to be deleted.
 
@@ -212,7 +212,7 @@ To view the complete syntax for this command, at a command prompt, type `dsrm /?
 3. At the command prompt, type the following command:
 
     ```console
-    dsget user user_dn -memberof
+    dsget user <user_dn> -memberof
     ```
 
     The **user_dn** specifies the distinguished name of the user object for which you want to display group membership.
@@ -230,7 +230,7 @@ The following sections provide detailed steps to manage computers.
 3. At the command prompt, type the following command:
 
     ```console
-    dsadd computer computer_dn
+    dsadd computer <computer_dn>
     ```
 
     The **computer_dn** specifies the distinguished name of the computer you want to add. The distinguished name indicates the folder location.
@@ -246,7 +246,7 @@ To modify the properties of a computer account, use the dsmod computer command.
 3. At the command prompt, type the following command:
 
     ```console
-    dsmod group group_dn -addmbr computer_dn
+    dsmod group <group_dn> -addmbr <computer_dn>
     ```
 
     This command uses the following values:
@@ -265,7 +265,7 @@ To view the complete syntax for this command, at a command prompt, type `dsmod g
 3. At the command prompt, type the following command:
 
     ```console
-    dsmod computer computer_dn -reset
+    dsmod computer <computer_dn> -reset
     ```
 
     The **computer_dn** specifies the distinguished names of one or more computer objects that you want to reset.
@@ -282,7 +282,7 @@ To view the complete syntax for this command, at a command prompt, type dsmod co
 3. At the command prompt, type the following command:
 
     ```console
-    dsmod computer computer_dn -disabled {yes|no}
+    dsmod computer <computer_dn> -disabled {yes|no}
     ```
 
     This command uses the following values:
@@ -305,7 +305,7 @@ The following sections provide detailed steps to manage organizational units.
 3. At the command prompt, type the following command:
 
     ```console
-    dsadd ou organizational_unit_dn
+    dsadd ou <organizational_unit_dn>
     ```
 
     The **organizational_unit_dn** specifies the distinguished name of the organizational unit to be added.
@@ -319,7 +319,7 @@ To view the complete syntax for this command, at a command prompt, type `dsadd o
 
 1. Click **Start**, and then click **Run**.
 2. In the **Open** box, type *cmd*.
-3. At the command prompt, type the command `dsrm organizational_unit_dn`.  
+3. At the command prompt, type the command `dsrm <organizational_unit_dn>`.  
 
     The **organizational_unit_dn** specifies the distinguished name of the organizational unit to be deleted.
 
@@ -336,7 +336,7 @@ The following sections provide detailed steps to search Active Directory.
 
 1. Click **Start**, and then click **Run**.
 2. In the **Open** box, type *cmd*.
-3. At the command prompt, type the command `dsquery user parameter`.
+3. At the command prompt, type the command `dsquery user <parameter>`.
 
     The **parameter** specifies the parameter to use. For the list of parameters, see the online help for the d`squery user` command.
 
@@ -346,7 +346,7 @@ To view the complete syntax for this command, at a command prompt, type `dsquery
 
 1. Click **Start**, and then click **Run**.
 2. In the **Open** box, type *cmd*.
-3. At the command prompt, type the command `dsquery contact parameter`.
+3. At the command prompt, type the command `dsquery contact <parameter>`.
 
     The **parameter** specifies the parameter to use. For the list of parameters, see the online help for the dsquery user command.
 
@@ -354,7 +354,7 @@ To view the complete syntax for this command, at a command prompt, type `dsquery
 
 1. Click **Start**, and then click **Run**.
 2. In the **Open** box, type *cmd*.
-3. At the command prompt, type the command `dsquery group parameter`.
+3. At the command prompt, type the command `dsquery group <parameter>`.
 
     The **parameter** specifies the parameter to use. For the list of parameters, see the online help for the dsquery user command.
 
@@ -364,7 +364,7 @@ By default, local groups that are provided automatically in domain controllers t
 
 1. Click **Start**, and then click **Run**.
 2. In the **Open** box, type *cmd*.
-3. At the command prompt, type the command `dsquery computer -name name`.
+3. At the command prompt, type the command `dsquery computer -name <name>`.
 
     The **name** specifies the computer name that the command searches for. This command searches for computers whose name attributes (value of CN attribute) match **name**.
 
@@ -374,7 +374,7 @@ To view the complete syntax for this command, at a command prompt, type `dsquery
 
 1. Click **Start**, and then click **Run**.
 2. In the **Open** box, type *cmd*.
-3. At the command prompt, type the command `dsquery ou parameter`.
+3. At the command prompt, type the command `dsquery ou <parameter>`.
 
     The **parameter** specifies the parameter to use. For the list of parameters, see the online help for `dsquery ou`.
 
@@ -384,7 +384,7 @@ To view the complete syntax for this command, at a command prompt, type `dsquery
 
 1. Click **Start**, and then click **Run**.
 2. In the **Open** box, type *cmd*.
-3. At the command prompt, type the command `dsquery server parameter`.  
+3. At the command prompt, type the command `dsquery server <parameter>`.  
 
     The **parameter** specifies the parameter to use. There are several attributes of a server that you can search by using this command. For the list of parameters, see online help for `dsquery server.`
 
@@ -392,7 +392,7 @@ To view the complete syntax for this command, at a command prompt, type `dsquery
 
 1. Click **Start**, and then click **Run**.
 2. In the **Open** box, type *cmd*.
-3. At the command prompt, type the command `dsquery * parameter`.
+3. At the command prompt, type the command `dsquery * <parameter>`.
 
     The **parameter** specifies the parameter to use. There are several attributes that you can search by using this command. For more information about LDAP searches, see the Windows Server 2003 Resource Kit.
 

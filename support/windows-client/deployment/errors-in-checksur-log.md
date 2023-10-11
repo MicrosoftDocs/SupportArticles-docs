@@ -21,7 +21,7 @@ _Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2
 _Original KB number:_ &nbsp; 2700601
 
 > [!NOTE]
-> Make sure you download and run the most recent version of CheckSUR.exe because the tool is updated periodically. To to this, see [Fix Windows Update errors by using the DISM or System Update Readiness tool](/troubleshoot/windows-server/deployment/fix-windows-update-errors).
+> Make sure you download and run the most recent version of CheckSUR.exe because the tool is updated periodically. To to this, see [Fix Windows Update errors by using the DISM or System Update Readiness tool](../../windows-server/deployment/fix-windows-update-errors.md).
 
 ## Use the CheckSur log
 
@@ -103,4 +103,4 @@ icacls C:\Windows\winsxs\x86_microsoft-windows-ie-adminkitmostfiles_31bf3856ad36
 
 ## Data collection
 
-If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

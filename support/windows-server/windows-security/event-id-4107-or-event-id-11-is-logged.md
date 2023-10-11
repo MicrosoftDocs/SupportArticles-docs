@@ -1,7 +1,7 @@
 ---
 title: Event ID 4107 or ID 11 is logged
 description: Fixes a problem in which Event ID 4107 or Event ID 11 is logged in the Application log.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -9,7 +9,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika，egomes
+ms.reviewer: kaushika, egomes
 ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
 ms.technology: windows-server-security
 ---

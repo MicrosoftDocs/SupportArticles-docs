@@ -1,7 +1,7 @@
 ---
-title: Use Run as to start an app as an admin
-description: Describes how to use the Run as command to start an application as an administrator.
-ms.date: 9/24/2021
+title: Start an application as an administrator account
+description: Describes how to start an application as an administrator account.
+ms.date: 06/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -13,28 +13,26 @@ ms.reviewer: kaushika, BOBQIN
 ms.custom: sap:desktop-shell, csstroubleshoot
 ms.technology: windows-server-shell-experience
 ---
-# How to use Run as to start an application as an administrator in Windows Server 2003  
+# How to use Run as to start an application as an administrator account
 
-This article describes how to use the `Run as` command to start an application as an administrator.
+This article introduce how to start an application as an administrator account. For example, you can perform administrative tasks when you are logged on as a member of another group, such as the Users or Power Users group.
 
-_Applies to:_ &nbsp; Windows Server 2003  
+> [!NOTE]
+> Some applications may not support running as a different user.
+
+_Applies to:_ &nbsp; All supported versions of Windows  
 _Original KB number:_ &nbsp; 325362
 
-## Summary
+## Steps to start an application as an administrator account
 
-You can use `Run as` to start an application as an administrator if you want to perform administrative tasks when you are logged on as a member of another group, such as the Users or Power Users group.
-
-## Steps to start an application as an administrator
-
-To use `Run as` to start an application as an administrator, follow these steps:
-
-1. Locate the application that you want to start in Windows Explorer, the Microsoft Management Console (MMC), or Control Panel.
-2. Press and hold down the SHIFT key while you right-click the executable file or the icon for the application, and then select **Run as**.
-3. Select **The following user**.
-4. In the **User name** and **Password** boxes, type the administrator account and password, and then select **OK**.
+1. Locate the application that you want to start.
+2. Press and hold down the Shift key, and then right-click the executable file or the shortcut for the application, and then select **Run as different user**.
+3. In the **Windows Security** window, type the administrator account's user name and password, and then select **OK**.
 
 > [!NOTE]
 >
-> - Some applications may not support the use of the `Run as` command.
-> - You may not be able to start an application, MMC console, or Control Panel tool from a network location by using the `Run as` command if the credentials that are used to connect to the network share are different from those used to start the application. The credentials that are used to run the application may not permit you access to the same network share.
-> - You can also use the `Run as` command from the command line. For more information, select **Start**, and then select **Run**. In the Open box type cmd, and then select **OK**. At the command prompt, type runas /?, and then press **ENTER**.
+> You may be unable to start an application, MMC console, or Control Panel tool from a network location as a different user if the credentials that are used to connect to the network share are different from those used to start the application. The credentials that are used to run the application may not permit you access to the same network share.
+
+## More information
+
+You can also start an application as a different user from the command line. For more information, see [Runas](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc771525%28v=ws.11%29).

@@ -1,10 +1,8 @@
 ---
 title: Azure batch pool resizing failure
 description: An Azure batch pool resizing failure occurs. You can review the symptoms, understand the causes, and apply solutions to this problem.
-ms.date: 11/24/2022
-author: AmandaAZ
-ms.author: v-weizhu
-ms.reviewer: biny
+ms.date: 07/11/2023
+ms.reviewer: biny, v-weizhu
 ms.service: batch
 ---
 # Azure batch pool resizing failure
@@ -136,5 +134,31 @@ If you created a Batch account with pool allocation mode set to **user subscript
     - Select **All accounts in this region** to request quota increases that apply to all Batch accounts in a region. For example, use this option to increase the number of Batch accounts per region per subscription.
 
     After you submit your support request, Azure support will contact you. Quota requests may be completed within a few minutes or up to two business days. Once the quota request is completed or fulfilled, the pool creation should be successful.
+
+## Scenario 4: Transient internal server error during batch pool resizing
+
+### Symptom for Scenario 4
+
+The batch pool has been operating normally for some time. However, the resize operation unexpectedly failed with an internal server error, or the resize operation remained in the resizing state.
+
+Here's the error message:
+
+> **Code:** AllocationFailed  
+> **Message:**  
+> Desired number of dedicated nodes could not be allocated  
+> **Values:**  
+> Reason - The server encountered an internal error.
+
+### Cause: Transient internal server issue
+
+The Batch service may experience occasional glitches or regional infrastructure issues that can affect its performance.
+
+### Solution: Retry the resize operation, create a new pool, or use another region
+
+To reduce the impact on your production, use the following methods:
+
+- Retry your resize request after a few minutes.
+- Create a new pool.
+- Use the Batch service in another available region as a failover if the methods above aren't helpful.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

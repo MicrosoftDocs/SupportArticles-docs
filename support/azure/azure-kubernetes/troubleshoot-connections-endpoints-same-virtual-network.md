@@ -1,10 +1,8 @@
 ---
 title: Troubleshoot connections to endpoints in the same virtual network
 description: Troubleshoot connections to endpoints in the same virtual network from an Azure Kubernetes Service (AKS) cluster.
-ms.date: 11/4/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
-ms.reviewer: chiragpa, rissing
+ms.date: 11/04/2022
+ms.reviewer: chiragpa, rissing, v-leedennis
 editor: v-jsitser
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-outbound-connections

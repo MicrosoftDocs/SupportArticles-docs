@@ -1,10 +1,8 @@
 ---
 title: Resolve Model database corruption in SQLLocalDB
 description: This article describes how to resolve a known issue in SQLLocalDB that can prevent the ADSync service from starting because of a corrupted "Model" database.
-ms.date: 7/21/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
-ms.reviewer: nualex
+ms.date: 07/21/2022
+ms.reviewer: nualex, v-leedennis
 editor: v-jsitser
 ms.service: active-directory
 ms.subservice: enterprise-users

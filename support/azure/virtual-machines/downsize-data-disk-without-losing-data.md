@@ -1,10 +1,8 @@
 ---
 title: Decrease the size of an Azure data disk without losing data
 description: Learn how to decrease the size of a disk in Azure without losing any data even though downsizing a disk directly isn't supported.
-ms.date: 6/1/2023
-author: DennisLee-DennisLee
-ms.author: v-dele
-ms.reviewer: scotro, uarshadkhan
+ms.date: 06/01/2023
+ms.reviewer: scotro, uarshadkhan, v-leedennis
 ms.topic: how-to
 ms.service: virtual-machines
 ms.subservice: vm-disk
