@@ -37,6 +37,6 @@ You might find one or more of the following causes:
 
    - 3D models that are converted correctly may not be detected on HoloLens if their model geometries differ greatly from the surfaces detected by HoloLens. You can view the object anchor geometry in the **Properties** tab and compare that with the Surface Reconstruction (SR) mesh of the object as seen by HoloLens. To view the object’s SR mesh, air tap while viewing the object in the HoloLens shell. A large difference in geometry between the anchor geometry and SR mesh indicates potential difficulty with object anchoring.
 
-1. Follow [best practices for choosing a target object for your object anchor](**/*dynamics365/mixed-reality/guides/pc-app-anchor-azure-object#best-practices-for-choosing-a-target-object-for-your-object-anchor).
+1. Follow [best practices for choosing a target object for your object anchor](/dynamics365/mixed-reality/guides/pc-app-anchor-azure-object#best-practices-for-choosing-a-target-object-for-your-object-anchor).
 
-1. Make any necessary adustments to your model and then [convert the file](**/*dynamics365/mixed-reality/guides/pc-app-anchor-azure-object#convert-the-file-in-the-guides-model-driven-app).
+1. Make any necessary adustments to your model and then [convert the file](/dynamics365/mixed-reality/guides/pc-app-anchor-azure-object#convert-the-file-in-the-guides-model-driven-app).

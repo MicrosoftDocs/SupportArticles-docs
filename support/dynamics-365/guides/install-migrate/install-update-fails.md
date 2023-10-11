@@ -20,8 +20,8 @@ When trying to install or update the Guides solution, the message "Installation 
 Missing one or all of the following requirements:
 
 - [System Administrator](/power-platform/admin/database-security) role
-- A [Dynamics 365 Guides license assigned to your account](**/*dynamics365/mixed-reality/guides/add-users#assign-a-dynamics-365-guides-license-to-an-existing-user)
-- [Power Apps license](/power-platform/admin/signup-question-and-answer) (or a license like a [Dynamics 365 Guides license](**/*dynamics365/mixed-reality/guides/setup-step-one) that includes a Power Apps license)
+- A [Dynamics 365 Guides license assigned to your account](/dynamics365/mixed-reality/guides/add-users#assign-a-dynamics-365-guides-license-to-an-existing-user)
+- [Power Apps license](/power-platform/admin/signup-question-and-answer) (or a license like a [Dynamics 365 Guides license](/dynamics365/mixed-reality/guides/setup-step-one) that includes a Power Apps license)
 
 ## Resolution
 

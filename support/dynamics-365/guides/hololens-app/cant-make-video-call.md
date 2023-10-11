@@ -19,7 +19,7 @@ I can't make a video call in the HoloLens app.
 
 ### Resolution
 
-[Update your client app](**/*dynamics365/mixed-reality/guides/upgrade) or contact your admin.
+[Update your client app](/dynamics365/mixed-reality/guides/upgrade) or contact your admin.
 
 ## Cause 2: Your admin has [disabled the option directly from the Guides web portal](dynamics365/mixed-reality/guides/admin-enable-calls)
 
@@ -31,7 +31,7 @@ Contact your admin.
 
 ### Resolution
 
-Contact your admin. [Learn more about licensing requirements](**/*dynamics365/mixed-reality/guides/requirements).
+Contact your admin. [Learn more about licensing requirements](/dynamics365/mixed-reality/guides/requirements).
 
 ## Cause 4: You're currently offline
 
