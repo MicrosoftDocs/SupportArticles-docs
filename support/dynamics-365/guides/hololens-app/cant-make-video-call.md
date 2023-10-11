@@ -31,7 +31,7 @@ Contact your admin.
 
 ### Resolution
 
-Contact your admin. [Learn more about licensing requirements](dynamics365/mixed-reality/guides/requirements).
+Contact your admin. [Learn more about licensing requirements](**/*dynamics365/mixed-reality/guides/requirements).
 
 ## Cause 4: You're currently offline
 
