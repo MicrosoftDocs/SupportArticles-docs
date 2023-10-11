@@ -1,3 +1,4 @@
+items:
 - name: Windows Client
   href: welcome-windows-client.yml
 - name: Active Directory
@@ -474,6 +475,10 @@
       href: ./group-policy/point-print-restrictions-policies-ignored.md
     - name: Save documents to OneDrive by default
       href: ./group-policy/save-documents-to-onedrive-by-default.md
+    - name: "Scenario guide: Wallpaper GPO doesn't apply on some client computers"
+      href: ./group-policy/scenario-guide-wallpaper-gpo-does-not-apply-on-some-client-computers.md
+    - name: "Scenario guide: GPO to map network drives doesn't apply as expected"
+      href: ./group-policy/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected.md
     - name: Use Group Policy to deploy a Known Issue Rollback
       href: ./group-policy/use-group-policy-to-deploy-known-issue-rollback.md
 - name: High Availability
@@ -1061,7 +1066,7 @@
   - name: WinRM
     items:
     - name: Can't establish a PowerShell remote session using WinRM
-      href: ./system-management-components/can-not-establish-ps-remote-session-winrm-aad-only-joined-machines.md    
+      href: ./system-management-components/can-not-establish-ps-remote-session-winrm-aad-only-joined-machines.md
     - name: Errors when you run WinRM commands
       href: ./system-management-components/errors-when-you-run-winrm-commands.md
     - name: How to configure WINRM for HTTPS
