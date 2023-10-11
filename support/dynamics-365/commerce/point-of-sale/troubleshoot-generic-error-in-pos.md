@@ -55,5 +55,5 @@ If you find some requests that were sent to the RCSU (Retail Server) in the POS 
 
    :::image type="content" source="media/troubleshoot-generic-error-in-pos/example-of-environment-monitoring-search-results.png" alt-text="Screenshot that shows the environment monitoring search results." lightbox="media/troubleshoot-generic-error-in-pos/example-of-environment-monitoring-search-results.png":::
 
-   ## Engaging Microsoft Support
-   When opening a Support ticket for issues on the POS including the details listed in the Prequisite section of this documentation will help speed up the troubleshooting process. 
+## Engaging Microsoft Support
+When opening a support ticket for issues on the POS, include the details listed in the [Prequisites](#prerequisites) section of this document to help speed up the troubleshooting process. 
