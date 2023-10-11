@@ -29,10 +29,10 @@ After you move a database from the instance of SQL Server on server A to the ins
 
 > Login failed for user '**MyUser**'. (Microsoft SQL Server, Error: 18456)
 
-This problem occurs because you did not transfer the logins and the passwords from the instance of SQL Server on server A to the instance of SQL Server on server B.
+This problem occurs because you didn't transfer the logins and the passwords from the instance of SQL Server on server A to the instance of SQL Server on server B.
 
 > [!NOTE]
-> The 18456-error message also occurs due to other reasons. For additional information on these causes and potential resolutions review [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
+> The 18456-error message also occurs due to other reasons. For additional information on these causes and potential resolutions, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
 
 To transfer the logins, use one of the following methods, as appropriate for your situation.
 
@@ -273,10 +273,10 @@ To transfer the logins, use one of the following methods, as appropriate for you
         EXEC sp_help_revlogin
         ```
 
-  4. The output script that the `sp_help_revlogin` stored procedure generates is the login script. This login script creates the logins that have the original Security Identifier (SID) and the original password.
+ The output script that the `sp_help_revlogin` stored procedure generates is the login script. This login script creates the logins that have the original Security Identifier (SID) and the original password.
 
 > [!IMPORTANT]
-> Review the information in the [Remarks](#remarks) section below before you proceed with implementing steps on the destination server.
+> Review the information in the [Remarks](#remarks) section before you proceed with implementing steps on the destination server.
 
 ## Steps on the destination server (Server B)
 
@@ -300,12 +300,12 @@ Review the following information before you run the output script on the instanc
 - Sort orders on source and destination servers:
 
   - **Case-insensitive server A and case-sensitive server B**: The sort order of server A may be case-insensitive, and the sort order of server B may be case-sensitive. In this case, users must type the passwords in all uppercase letters after you transfer the logins and the passwords to the instance on server B.
-  - **Case-sensitive server A and case-insensitive server B:** The sort order of server A may be case-sensitive, and the sort order of server B may be case-insensitive. In this case, users cannot log in by using the logins and the passwords that you transfer to the instance on server B unless one of the following conditions is true:
+  - **Case-sensitive server A and case-insensitive server B:** The sort order of server A may be case-sensitive, and the sort order of server B may be case-insensitive. In this case, users can't log in by using the logins and the passwords that you transfer to the instance on server B unless one of the following conditions is true:
 
     - The original passwords contain no letters.
     - All letters in the original passwords are uppercase letters.
 
-  - **Case-sensitive or case-insensitive on both servers**: The sort order of both server A and server B may be case-sensitive, or the sort order of both server A and server B may be case-insensitive. In these cases, the users do not experience a problem.
+  - **Case-sensitive or case-insensitive on both servers**: The sort order of both server A and server B may be case-sensitive, or the sort order of both server A and server B may be case-insensitive. In these cases, the users don't experience a problem.
 
 - A login that's already in the instance on server B may have a name that is the same as a name in the output script. In this case, you receive the following error message when you run the output script on the instance on server B:
 
