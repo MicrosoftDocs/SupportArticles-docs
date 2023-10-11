@@ -4,7 +4,7 @@ description: Troubleshoot common issues with cloud tiering in an Azure File Sync
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 10/07/2023
+ms.date: 10/011/2023
 ms.author: kendownie
 ms.reviewer: v-weizhu
 ---
@@ -70,7 +70,7 @@ If content doesn't exist for the error code, follow the general troubleshooting 
 1. Verify the file exists in the Azure file share.
 
     > [!NOTE]
-    > A file must be synced with an Azure file share before it can be tiered.
+    > A file must be synced to an Azure file share before it can be tiered.
 
 1. Verify the server has Internet connectivity.
 1. Verify the Azure File Sync filter drivers (*StorageSync.sys* and *StorageSyncGuard.sys*) are running:
