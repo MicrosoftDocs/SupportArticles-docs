@@ -108,6 +108,8 @@ items:
           href: manage-apps-and-solutions/solution-checker-enforcement-import-issues.md
         - name: '"Solution cannot be deleted due to dependencies" error'
           href: manage-apps-and-solutions/solution-cannot-be-deleted-due-to-dependencies.md
+        - name: Solution upgrade fails due to a pending upgrade
+          href: manage-apps-and-solutions/upgrade-fails-pending-upgrade.md
         - name: Troubleshoot wrap issues
           href: manage-apps-and-solutions/wrap-issues.md
         - name: '"You cannot delete this form because it is the only fallback form" error'
