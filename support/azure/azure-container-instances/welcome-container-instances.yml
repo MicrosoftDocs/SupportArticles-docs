@@ -21,11 +21,3 @@ landingContent:
         links:
           - text: ACI Documentation
             url: /azure/container-instances/
-
- # Card
-  - title: Troubleshoot Container Group Start Up 
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Image Pull fails with Managed Identity Authentication 
-            url: ./#
