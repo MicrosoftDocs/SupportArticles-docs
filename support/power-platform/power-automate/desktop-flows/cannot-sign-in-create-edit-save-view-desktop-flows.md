@@ -52,22 +52,4 @@ Approve the [Desktop flows services required for runtime](/power-automate/ip-add
 
 ## Resolution for the proxy authentication issue
 
-Right-click the Power Automate for desktop icon in the system tray and then exit Power Automate for desktop.
-
-You need administrator rights to do the following changes:
-
-1. Navigate to Power Automate for desktop installation folder (_C:\Program Files (x86)\Power Automate Desktop_).
-
-2. Back up the _PAD.Designer.exe.config_ and _PAD.Console.Host.exe.config_ two files to recover them if any issues occur.
-
-3. For both files, edit each file with administrator rights, and at the end of the root xml node (\<configuration>), add the following child xml node:
-
-   ```xml
-     <system.net>
-          <defaultProxy enabled="true" useDefaultCredentials="true"> 
-          </defaultProxy> 
-     </system.net>
-     ```
-
-4. Save the files.
-5. Restart Power Automate for desktop.
+Follow the steps as described in the [Proxy server related errors in Power Automate for desktop](/troubleshoot/power-platform/power-automate/desktop-flows/proxy-error-console) article.
