@@ -1,22 +1,22 @@
 ---
-title: Graphics::DrawImage appears slow when drawing a JPEG or PNG to a printer
-description: Provides a resolution for an issue that Graphics::DrawImage appears slow when you call it to draw a JPEG or PNG image to a printer. 
+title: Graphics::DrawImage appears slow when drawing a JPEG or PNG image to a printer
+description: Provides a resolution for an issue where Graphics::DrawImage appears slow when you call it to draw a JPEG or PNG image to a printer. 
 ms.reviewer: ishimada, v-sidong
-ms.date: 10/09/2023
+ms.date: 10/11/2023
 ms.technology: windows-dev-apps-graphics-multimedia-dev
 ms.custom: sap:Graphics and multimedia development
 ---
-# Graphics::DrawImage with an ImageAttributes is slow when drawing a PNG or JPEG to a printer
+# Graphics::DrawImage with ImageAttributes is slow when drawing a PNG or JPEG image to a printer
 
-This article provides a resolution for an issue where the `Graphics::DrawImage` method appears slow when you call it with an `ImageAttributes` object to draw a JPEG or PNG to a printer.
+This article provides a resolution for an issue where the `Graphics::DrawImage` method appears slow when you call it with an `ImageAttributes` object to draw a JPEG or PNG image to a printer.
 
 ## Cause
 
-The `Graphics::DrawImage` method converts the source image to Device Independent Bitmap (DIB) when you call it with an `ImageAttributes` object.
+The `Graphics::DrawImage` method converts the source image to a device-independent bitmap (DIB) when you call it with an `ImageAttributes` object.
 
 ## Resolution
 
-To solve the issue, call `Graphics::DrawImage` with the `ImageAttributes` parameter set to `NULL`, unless specifying an `ImageAttributes` object is necessary.
+To solve the issue, call `Graphics::DrawImage` with the `ImageAttributes` parameter set to `NULL` unless specifying an `ImageAttributes` object is necessary.
 
 When supported by the printer, calling `Graphics::DrawImage` with the `ImageAttributes` parameter set to `NULL` will pass the source JPEG or PNG directly to the printer.
 
