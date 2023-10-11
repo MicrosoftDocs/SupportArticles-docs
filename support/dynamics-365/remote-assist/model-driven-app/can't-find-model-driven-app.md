@@ -33,6 +33,6 @@ A user isn't using the right environment or doesn't have the correct security ro
 
 2. Ensure that the [app was installed to the right environment.](/dynamics365/mixed-reality/remote-assist/ra-webapp-install#install-the-dynamics-365-remote-assist-model-driven-app)
 
-3. Verify that you have the **Remote Assist - App User** or the **Remote Assist - Administrator** and **Basic User** [security roles assigned.](d/dynamics365/mixed-reality/remote-assist/asset-capture-add-users#assign-dynamics-365-security-roles)
+3. Verify that you have the **Remote Assist - App User** or the **Remote Assist - Administrator** and **Basic User** [security roles assigned.](/dynamics365/mixed-reality/remote-assist/asset-capture-add-users#assign-dynamics-365-security-roles)
 
 4. Verify that the [app is enabled](/dynamics365/mixed-reality/remote-assist/asset-capture-add-users#manage-app-roles) for the **Remote Assist - App User** and **Remote Assist - Administrator** security roles.
