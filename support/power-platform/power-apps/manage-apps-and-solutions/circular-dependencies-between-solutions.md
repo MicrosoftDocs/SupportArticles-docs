@@ -2,7 +2,7 @@
 title: Failed deleting solution error due to circular dependencies between two solutions
 description: Works around an issue where you can't delete a solution due to circular dependencies between two solutions in Power Apps.
 ms.reviewer: jdaly
-ms.date: 10/11/2023
+ms.date: 10/12/2023
 author: swatimadhukargit
 ms.author: swatim
 ---
@@ -13,11 +13,11 @@ _Applies to:_ &nbsp; Power Platform, Solutions
 This article provides a workaround for an issue where deleting a solution fails due to circular dependencies between two solutions. Circular dependencies exist when the two solutions each have dependencies on a component from the other solution.
 
 > [!TIP]
-> To avoid circular dependencies between the two solutions, use different environments for [developing different solutions](/power-platform/alm/organize-solutions#multiple-solution-layering-and-dependencies). Isolation of environments is critical when using components like data, tables, and so on.
+> To avoid circular dependencies between the two solutions, use different environments for [developing different solutions](/power-platform/alm/organize-solutions#multiple-solution-layering-and-dependencies). Isolation of environments is critical when using components like data and tables.
 
 ## Symptoms
 
-When you delete (uninstall) a solution, you receive the following error that indicates that a dependency exists on another solution:
+When you delete (uninstall) a solution, you receive the following error indicating that a dependency exists on another solution:
 
 > Failed deleting solution \<solution name\>. Solution dependencies exist, cannot uninstall.
 
@@ -29,7 +29,7 @@ Circular dependencies between solutions can happen due to lack of isolation of d
 
 ## Workaround
 
-To work around the circular dependencies between the two solutions, first you need to understand the dependencies between different solutions. When you have errors indicating a circular dependency, select the **View dependencies** button in the notification.
+To work around the circular dependencies between the two solutions, first you need to understand the dependencies between different solutions. When you encounter errors indicating a circular dependency, select the **View dependencies** button in the notification.
 
 The dependencies show all the components that are dependent on the solution you're trying to uninstall. You can select each component in the list and select **See solution layers** to find the dependent solutions the component comes from.
 
@@ -37,7 +37,7 @@ If you encounter the same issue when trying to delete the dependent solution, an
 
 ### Example
 
-For example, Solution A and Solution B have dependencies on each other. As shown in the diagram, Solution A has two components, Component 1 and Component 2. Solution B has two components, Component 3 and Component 4. Component 2 from Solution A is dependent on Component 3 from Solution B. And Component 4 from Solution B is dependent on Component 1 from Solution A. You can't delete either solution due to the circular dependencies.
+For example, Solution A and Solution B have dependencies on each other. As shown in the diagram, Solution A has two components, Component 1 and Component 2. Solution B has two components, Component 3 and Component 4. Component 2 from Solution A is dependent on Component 3 from Solution B. Component 4 from Solution B is dependent on Component 1 from Solution A. You can't delete either solution due to the circular dependencies.
 
 :::image type="content" source="media/circular-dependencies-between-solutions/circular-dependency.png" alt-text="Example of two solutions having dependencies on each other.":::
 
@@ -57,6 +57,6 @@ To resolve the circular dependencies, work on one of the solutions involved and 
 
 If you want to remove the dependencies to be able to delete the solutions, remove the dependencies in the active layer, and then delete the solution.
 
-- Option 1: In the target environment, edit Component 2 and remove the dependency on Component 3 in the active layer. Deletion of Solution B is allowed now. Once Solution B is deleted, Solution A can be deleted too.
+- Option 1: In the target environment, edit Component 2 and remove the dependency on Component 3 in the active layer. Deletion of Solution B is allowed now. Once Solution B is deleted, Solution A can also be deleted.
 
-- Option 2: In the target environment, edit Component 4 and remove the dependency on Component 1 in the active layer. Deletion of Solution A is allowed now. Once Solution A is deleted, Solution B can be deleted too.
+- Option 2: In the target environment, edit Component 4 and remove the dependency on Component 1 in the active layer. Deletion of Solution A is allowed now. Once Solution A is deleted, Solution B can also be deleted.
