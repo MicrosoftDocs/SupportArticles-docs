@@ -10,7 +10,7 @@ ms.subservice: authentication
 
 This article describes an issue in which Azure Active Directory Authentication Library (ADAL) authentication from Android devices fails if additional certificate downloads are required.
 
-_Original product version:_ &nbsp; Azure Active Directory  
+_Original product version:_ &nbsp; Microsoft Entra ID  
 _Original KB number:_ &nbsp; 3203929
 
 ## Symptoms

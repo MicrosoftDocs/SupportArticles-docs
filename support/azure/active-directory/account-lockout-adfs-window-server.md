@@ -15,8 +15,8 @@ _Original KB number:_ &nbsp; 4471013
 
 You may experience an account lockout issue in AD FS on Windows Server. To troubleshoot this issue, check the following points first:
 
-- If you have [Azure Active Directory (Azure AD) Connect Health](/azure/active-directory/connect-health/active-directory-aadconnect-health) configured for AD FS servers, go to the [Use Connect Health to generate data for user login activities](#use-connect-health-to-generate-data-for-user-login-activities) section.
-- If you don't have [Azure Active Directory (Azure AD) Connect Health](/azure/active-directory/connect-health/active-directory-aadconnect-health) configured for AD FS servers, go to the [Collect AD FS event logs from AD FS and Web Application Proxy servers](#collect-ad-fs-event-logs-from-ad-fs-and-web-application-proxy-servers) section.
+- If you have [Microsoft Entra Connect Health](/azure/active-directory/connect-health/active-directory-aadconnect-health) configured for AD FS servers, go to the [Use Connect Health to generate data for user login activities](#use-connect-health-to-generate-data-for-user-login-activities) section.
+- If you don't have [Microsoft Entra Connect Health](/azure/active-directory/connect-health/active-directory-aadconnect-health) configured for AD FS servers, go to the [Collect AD FS event logs from AD FS and Web Application Proxy servers](#collect-ad-fs-event-logs-from-ad-fs-and-web-application-proxy-servers) section.
 
 ## Use Connect Health to generate data for user login activities
 
@@ -106,7 +106,7 @@ The following non-password-based authentication types are available for AD FS an
   - Because users do not use their passwords over the Internet, those passwords are less susceptible to disclosure. User name and password endpoints can be blocked completely at the firewall. This removes the attack vector for lockout or brute force attacks.
   - Even if user name and password endpoints are kept available at the firewall, malicious user name and password-based requests that cause a lockout do not affect access requests that use certificates. Therefore, the legitimate user's access is preserved.
 
-    For more information about certificate-based authentication for Azure Active Directory and Office 365, see [this Azure Active Directory Identity Blog article](https://blogs.technet.microsoft.com/enterprisemobility/2016/12/14/azuread-certificate-based-authentication-is-generally-available/).
+    For more information about certificate-based authentication for Microsoft Entra ID and Office 365, see [this Microsoft Entra identity Blog article](https://blogs.technet.microsoft.com/enterprisemobility/2016/12/14/azuread-certificate-based-authentication-is-generally-available/).
 
 - Azure Multi-Factor Authentication (MFA)
 
