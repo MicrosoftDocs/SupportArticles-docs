@@ -141,6 +141,12 @@ items:
       - name: Azure Functions
         tocHref: /troubleshoot/azure/azure-functions
         topicHref: /troubleshoot/azure/azure-functions/welcome-azure-functions
+      - name: Azure Cosmos DB
+        tocHref: /troubleshoot/azure/cosmos-db/
+        topicHref: /troubleshoot/azure/cosmos-db/
+      - name: Azure Storage
+        tocHref: /troubleshoot/azure/azure-storage/
+        topicHref: /troubleshoot/azure/azure-storage/welcome-azure-storage
 
     - name: Microsoft Dynamics 365
       tocHref: /troubleshoot/dynamics-365/

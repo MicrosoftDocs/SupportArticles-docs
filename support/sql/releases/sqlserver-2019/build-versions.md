@@ -43,11 +43,13 @@ This article lists the Microsoft SQL Server 2019 builds that were released after
 
 | GDR Name| SQL Server build version | SQL Server (sqlservr.exe) file version | Analysis Services build version | Analysis Services (msmdsrv.exe) file version | Knowledge Base number | Release date|
 |-------------------------|--------------------------|----------------------------------------|---------------------------------|----------------------------------------------|-----------------------|-------------------|
-| CU18 GDR| 15.0.4280.7 | 2019.150.4280.7 | 15.0.35.35 | 2018.150.35.35 | [KB5021124](https://support.microsoft.com/help/5021124) | February 14, 2023 |
+| CU22 + GDR| 15.0.4326.1 | 2019.150.4326.1 | 15.0.35.41 | 2018.150.35.41 | [KB5029378](https://support.microsoft.com/help/5029378) | October 10, 2023 |
+| GDR| 15.0.2104.1 | 2019.150.2104.1 | 15.0.32.62 | 2018.150.32.62 | [KB5029377](https://support.microsoft.com/help/5029377) | October 10, 2023 |
+| CU18 + GDR| 15.0.4280.7 | 2019.150.4280.7 | 15.0.35.35 | 2018.150.35.35 | [KB5021124](https://support.microsoft.com/help/5021124) | February 14, 2023 |
 | GDR| 15.0.2101.7 | 2019.150.2101.7 | 15.0.32.61 | 2018.150.32.61 | [KB5021125](https://support.microsoft.com/help/5021125) | February 14, 2023 |
-| CU16 GDR| 15.0.4236.7| 2019.150.4236.7| 15.0.35.23| 2018.150.35.23 | [KB5014353](https://support.microsoft.com/help/5014353) | June 14, 2022 |
+| CU16 + GDR| 15.0.4236.7| 2019.150.4236.7| 15.0.35.23| 2018.150.35.23 | [KB5014353](https://support.microsoft.com/help/5014353) | June 14, 2022 |
 | GDR | 15.0.2095.3| 2019.150.2095.3| 15.0.32.57| 2018.150.32.57 | [KB5014356](https://support.microsoft.com/help/5014356) | June 14, 2022 |
-| CU8 GDR | 15.0.4083.2| 2019.150.4083.2| 15.0.34.29| 2018.150.34.29 | [KB4583459](https://support.microsoft.com/help/4583459) | January 12, 2021|
+| CU8 + GDR | 15.0.4083.2| 2019.150.4083.2| 15.0.34.29| 2018.150.34.29 | [KB4583459](https://support.microsoft.com/help/4583459) | January 12, 2021|
 | GDR | 15.0.2080.9| 2019.150.2080.9| 15.0.32.55| 2018.150.32.55 | [KB4583458](https://support.microsoft.com/help/4583458) | January 12, 2021|
 | Servicing Update (GDR1) | 15.0.2070.41 | 2019.150.2070.41 | 15.0.32.52| 2018.150.32.52 | [KB4517790](https://support.microsoft.com/help/4517790) | November 04, 2019 |
 | RTM | 15.0.2000.5| 2019.150.2000.5| 15.0.32.50| 2018.150.32.50 | NA| November 04, 2019 |

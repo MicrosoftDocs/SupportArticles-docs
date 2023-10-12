@@ -51,8 +51,15 @@
       ],
       "recommendations": true
     },
-    "fileMetadata": {      "uhfHeaderId": {
-      "azure/**.*": "Azure"
+    "fileMetadata": {
+      "uhfHeaderId": {
+        "azure/**.*": "Azure",
+        "developer/webapps/iis/**.*": "MSDocsHeader-Windows",
+        "power-platform/**.*": "MSDocsHeader-PowerPlatform",
+        "power-platform/power-apps/**.*": "MSDocsHeader-MSPowerApps",
+        "power-platform/power-automate/**.*": "MSDocsHeader-MSPowerAutomate",
+        "system-center/**/*.*": "MSDocsHeader-SystemCenter",
+        "windows-server/**/*.*": "MSDocsHeader-WindowsServer"
     },
       "feedback_product_url": {
         "dynamics/gp/*.md": "https://experience.dynamics.com/ideas/categories/?forum=771cc5ac-c117-e811-8105-3863bb2e0320&forumName=Dynamics%20GP",
