@@ -141,6 +141,12 @@ items:
       - name: Azure Functions
         tocHref: /troubleshoot/azure/azure-functions
         topicHref: /troubleshoot/azure/azure-functions/welcome-azure-functions
+      - name: Azure Cosmos DB
+        tocHref: /troubleshoot/azure/cosmos-db/
+        topicHref: /troubleshoot/azure/cosmos-db/
+      - name: Azure Storage
+        tocHref: /troubleshoot/azure/azure-storage/
+        topicHref: /troubleshoot/azure/azure-storage/welcome-azure-storage
 
     - name: Microsoft Dynamics 365
       tocHref: /troubleshoot/dynamics-365/
@@ -158,9 +164,6 @@ items:
       - name: Dynamics 365 Finance
         tocHref: /troubleshoot/dynamics-365/finance/
         topicHref: /troubleshoot/dynamics-365/finance/welcome-finance
-      - name: Dynamics 365 Marketing
-        tocHref: /troubleshoot/dynamics-365/marketing/
-        topicHref: /troubleshoot/dynamics-365/marketing/welcome-marketing
       - name: Dynamics 365 Sales
         tocHref: /troubleshoot/dynamics-365/sales/
         topicHref: /troubleshoot/dynamics-365/sales/welcome-sales

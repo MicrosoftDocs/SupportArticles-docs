@@ -1,8 +1,8 @@
 ---
 title: Enable TLS 1.2 support as Azure AD TLS 1.0/1.1 is deprecated
 description: This article describes how to enable support for TLS 1.2 in your environment, in preparation for upcoming Azure AD TLS 1.0/1.1 deprecation.
-ms.date: 06/05/2023
-ms.reviewer: dahans, abizerh, v-leedennis
+ms.date: 10/12/2023
+ms.reviewer: dahans, abizerh, v-leedennis, v-weizhu
 ms.service: active-directory
 ms.subservice: authentication
 ms.custom: has-azure-ad-ps-ref
@@ -33,14 +33,17 @@ These protocols and ciphers are being deprecated for the following reasons:
 - To follow the latest compliance standards for the [Federal Risk and Authorization Management Program (FedRAMP)](https://www.fedramp.gov/).
 - To improve security when users interact with our cloud services.
 
-The services are being deprecated on the following dates:
+The **TLS 1.0**, **TLS 1.1**, and **3DES Cipher suite** services are being deprecated on the following schedule.
 
-- **TLS 1.0**, **1.1** and **3DES Cipher suite** in U.S. government instances starting on **March 31, 2021**.
-- **TLS 1.0**, **1.1** and **3DES Cipher suite** in public instances starting **January 31, 2022**. (This date has been postponed from **June 30th, 2021** to **January 31st, 2022**, to give administrators more time to remove the dependency on legacy TLS protocols and ciphers (TLS 1.0,1.1 and 3DES).)
+| Instance type                                    | Deprecation date | Status        |
+|--------------------------------------------------|------------------|---------------|
+| U.S. government instances                        | March 31, 2021   | **COMPLETED** |
+| Public instances                                 | January 31, 2022 | **COMPLETED** |
+| Azure AD instances operated by 21Vianet in China | June 2023        | **ONGOING**   |
 
 ## Enable support for TLS 1.2 in your environment
 
-How do you maintain a secure connection to Azure Active Directory (Azure AD) and Microsoft 365 services? You enable your client apps and client and server operating system (OS) for TLS 1.2 and modern cipher suites.
+To ensure a secure connection to Azure AD and Microsoft 365 services, configure your client apps and both the client and server operating systems (OS) to support TLS 1.2 and contemporary cipher suites.
 
 ### Guidelines for enabling TLS 1.2 on clients
 
@@ -61,11 +64,8 @@ For more information, see the following articles:
 
 These operating systems natively support TLS 1.2 for client-server communications over WinHTTP:
 
-- Windows 10
-- Windows 8.1
-- Windows Server 2016
-- Windows Server 2012 R2
-- Later versions of Windows and Windows Server
+- Windows 8.1, Windows 10, and later versions
+- Windows Server 2012 R2, Windows Server 2016, and later versions
 
 Verify that you haven't explicitly disabled TLS 1.2 on these platforms.
 
@@ -124,20 +124,35 @@ For more information, see [Handshake Simulation for various clients connecting t
 
 ### Registry strings
 
-To manually configure and enable TLS 1.2 at the operating system level, you can add the following DWORD values.
+For Windows 2012 R2, Windows 8.1, and later operating systems, TLS 1.2 is enabled by default. Thus, the following registry values aren't displayed unless they were set with different values.
 
-For Windows 2012 R2, Windows 8.1, and later OS, TLS 1.2 is enabled by default. Thus, the following registry values aren't required unless they were set with different values.
+To manually configure and enable TLS 1.2 at the operating system level, you can add the following DWORD values:
 
 - **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Client**
-  - "DisabledByDefault": **00000000**
-  - "Enabled": **00000001**
+  - `DisabledByDefault`: **00000000**
+  - `Enabled`: **00000001**
 - **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Server**
-  - "DisabledByDefault": **00000000**
-  - "Enabled": **00000001**
+  - `DisabledByDefault`: **00000000**
+  - `Enabled`: **00000001**
 - **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft&#92;.NETFramework\v4.0.30319**
-  - "SchUseStrongCrypto": **00000001**
+  - `SchUseStrongCrypto`: **00000001**
 
 To enable TLS 1.2 by using a PowerShell script, see [TLS 1.2 enforcement for Azure AD Connect](/azure/active-directory/hybrid/reference-connect-tls-enforcement).
+
+## How to check which TLS protocol is being used
+
+Here are two ways to check which TLS is being used:
+
+- Browser security settings
+- Internet Properties in Windows
+
+To check which TLS protocol is being used by using Internet Properties, follow these steps:
+
+1. Press <kbd>Windows</kbd>+<kbd>R</kbd> to open the **Run** box.
+2. Type *inetcpl.cpl* and then select **OK**. Then, the **Internet Properties** window is opened.
+3. In the **Internet Properties** window, select the **Advanced** tab and scroll down to check the settings related to TLS.
+
+    :::image type="content" source="media/enable-support-tls-environment/used-tls-protocol.png" alt-text="Screenshot that shows TLS-related settings in Internet Properties.":::
 
 ## Update and configure .NET Framework to support TLS 1.2 <a name="update-configure-tls-12"></a>
 
@@ -171,19 +186,19 @@ For any computer that communicates across the network and runs a TLS 1.2-enabled
 - For 32-bit applications that are running on a 32-bit OS and 64-bit applications that are running on a 64-bit OS, update the following subkey values:
 
   - **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft&#92;.NETFramework\v2.0.50727**
-    - "SystemDefaultTlsVersions": **00000001**
-    - "SchUseStrongCrypto": **00000001**
+    - `SystemDefaultTlsVersions`: **00000001**
+    - `SchUseStrongCrypto`: **00000001**
   
   - **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft&#92;.NETFramework\v4.0.30319**
-    - "SystemDefaultTlsVersions": **00000001**
-    - "SchUseStrongCrypto": **00000001**
+    - `SystemDefaultTlsVersions`: **00000001**
+    - `SchUseStrongCrypto`: **00000001**
 - For 32-bit applications that are running on 64-bit OSs, update the following subkey values:
   - **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft&#92;.NETFramework\v2.0.50727**
-    - "SystemDefaultTlsVersions": **dword:00000001**
-    - "SchUseStrongCrypto": **dword:00000001**
+    - `SystemDefaultTlsVersions`: **dword:00000001**
+    - `SchUseStrongCrypto`: **dword:00000001**
   - **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft&#92;.NETFramework\v4.0.30319**
-    - "SystemDefaultTlsVersions": **dword:00000001**
-    - "SchUseStrongCrypto": **dword:00000001**
+    - `SystemDefaultTlsVersions`: **dword:00000001**
+    - `SchUseStrongCrypto`: **dword:00000001**
 
 For example, set these values on:
 
