@@ -37,7 +37,7 @@ Set the **Authentication method** to **Company Portal** in the enrollment profil
 3. In the **Authentication method** list, select **Company Portal**.
 
     > [!NOTE]
-    > After you change the authentication method from **Setup Assistant** to **Company Portal**, Intune skips user authentication through the iOS Setup Assistant and, instead, uses modern authentication. This enables the user to use Azure Active Directory multi-factor authentication (MFA). This method can be enforced without blocking Apple ADE enrollment.
+    > After you change the authentication method from **Setup Assistant** to **Company Portal**, Intune skips user authentication through the iOS Setup Assistant and, instead, uses modern authentication. This enables the user to use Microsoft Entra multifactor authentication (MFA). This method can be enforced without blocking Apple ADE enrollment.
 
     :::image type="content" source="media/cannot-access-company-resources-on-dep/select-where-users-must-authenticate.png" alt-text="Screenshot of the Select where users must authenticate option.":::
 

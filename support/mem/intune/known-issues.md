@@ -159,12 +159,14 @@ We are aware of an issue when [enrolling and iOS devices with Apple Configurator
 
 There are issues with certificate-based authentication when using the Pulse Secure VPN client for iOS, version 7.0 and Check Point Capsule Connect version 1.600 for iOS. Specifically, both VPN clients may report that the certificate is missing from the device, even when the certificate has been properly delivered. These issues impact Intune in addition to other Enterprise Mobility Management providers. For more information and workarounds, see [Known issue: Certificate-based authentication issue with Pulse Secure 7.0.0 for iOS and Check Point Capsule Connect versions 1.600 for iOS](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-certificate-based-authentication-issue-with-pulse/ba-p/280162) on the Intune Customer Success blog.
 
-## "Rename device" setting disabled for hybrid Azure AD joined Windows devices
+<a name='rename-device-setting-disabled-for-hybrid-azure-ad-joined-windows-devices'></a>
+
+## "Rename device" setting disabled for Microsoft Entra hybrid joined Windows devices
 
 - **Status:** Feature disabled
 - **Blog post:** [Known issue with "Rename device" setting for Windows 10 devices in the Intune console](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-with-rename-device-setting-for-windows-10-devices-in/ba-p/390868)
 
-In the Intune admin center, we've disabled the "Rename device setting" for Windows devices that are hybrid Azure AD joined. This is to prevent device single sign-on errors that might occur after a user changes their password. Device renaming is available for co-managed devices that are Azure AD joined. For details, see [Known issue with "Rename device" setting for Windows 10 devices in the Intune console](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-with-rename-device-setting-for-windows-10-devices-in/ba-p/390868) on the Intune Customer Success blog.
+In the Intune admin center, we've disabled the "Rename device setting" for Windows devices that are Microsoft Entra hybrid joined. This is to prevent device single sign-on errors that might occur after a user changes their password. Device renaming is available for co-managed devices that are Microsoft Entra joined. For details, see [Known issue with "Rename device" setting for Windows 10 devices in the Intune console](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-with-rename-device-setting-for-windows-10-devices-in/ba-p/390868) on the Intune Customer Success blog.
 
 ## iOS/iPadOS or macOS device unenrollment through management profile deletion may not be reflected in Microsoft Intune
 
