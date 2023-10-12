@@ -165,10 +165,11 @@ Debug-StorageSyncServer -FileSyncErrorsReport
 ## Sync errors
 
 ### Troubleshooting per file/directory sync errors
-If a file or directory fails to sync (per-item error), an event is logged in the Microsoft-FileSync-Agent/ItemResults event log. This section covers common error codes and remediation steps for per-item errors.
+
+If a file or directory fails to sync due to per-item errors, an event is logged in the *Microsoft-FileSync-Agent/ItemResults* event log. This section covers common error codes and remediation steps for per-item errors.
 
 > [!Note]  
-> If a file or directory fails to sync, it can take up to 30 minutes before Azure File Sync retries syncing that item. Azure File Sync initiates a sync session every 30 minutes if no changes are detected within the server endpoint location. To force a sync session, restart the Storage Sync Agent (FileSyncSvc) service or make a change to a file or directory within the server endpoint location.
+> If a file or directory fails to sync, it can take up to 30 minutes before Azure File Sync retries syncing that item. If no changes are detected within the server endpoint location, Azure File Sync initiates a sync session every 30 minutes. To force a sync session, restart the Storage Sync Agent (*FileSyncSvc*) service or make a change to a file or directory within the server endpoint location.
 
 **ItemResults log - per-item sync errors**
 
@@ -231,9 +232,10 @@ The table below contains all of the unicode characters Azure File Sync doesn't y
 | Files or directories that end with a period | 1 |
 
 ### Common sync errors
-This section covers common error codes and remediation steps when a sync session fails with an error. 
 
-<a id="-2147023673"></a>**The sync session was canceled.**  
+This section covers common error codes and remediation steps when a sync session fails with an error.
+
+<a id="-2147023673"></a>**The sync session was canceled.**
 
 | Error | Code |
 |-|-|
