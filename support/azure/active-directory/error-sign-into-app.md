@@ -10,12 +10,12 @@ ms.subservice: B2C
 
 This article describes an error that occurs when you try to sign in to an app that's set up for Azure AD B2C.
 
-_Original product version:_ &nbsp; Azure Active Directory  
+_Original product version:_ &nbsp; Microsoft Entra ID  
 _Original KB number:_ &nbsp; 3092587
 
 ## Symptoms
 
-When you try to sign in to an app that is set up for Microsoft Azure Active Directory (AD) business to consumer (B2C), you receive the following error message:
+When you try to sign in to an app that is set up for Microsoft Entra business to consumer (B2C), you receive the following error message:
 
 > Sorry, but we're having trouble signing you in  
  We track these errors automatically, but if the problem persists feel free to contact us. In the meantime, please try again.  
