@@ -1,6 +1,6 @@
 ---
 title: Incorrect search results when using a date filter in the Outlook search bar
-description: Provides a workaround for an issue in which you receive incorrect search results when you enter a "received" or "sent" date filter in the Outlook search bar.
+description: Provides a workaround for an issue in which you receive incorrect search results when you enter a received or sent date filter in the Outlook search bar.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
