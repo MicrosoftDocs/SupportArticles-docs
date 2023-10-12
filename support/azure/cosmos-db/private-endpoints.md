@@ -7,7 +7,7 @@ ms.author: sidandrews
 ms.topic: troubleshooting
 editor: v-jsitser
 ms.reviewer: ouryba, v-jayaramanp
-ms.date: 10/09/2023
+ms.date: 10/12/2023
 ---
 
 # Deployment of private endpoints for Azure Cosmos DB fails
