@@ -58,6 +58,7 @@
         "power-platform/**.*": "MSDocsHeader-PowerPlatform",
         "power-platform/power-apps/**.*": "MSDocsHeader-MSPowerApps",
         "power-platform/power-automate/**.*": "MSDocsHeader-MSPowerAutomate",
+        "system-center/**/*.*": "MSDocsHeader-SystemCenter",
         "windows-server/**/*.*": "MSDocsHeader-WindowsServer"
     },
       "feedback_product_url": {
