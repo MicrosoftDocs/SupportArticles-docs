@@ -54,7 +54,7 @@ These event IDs occur when the infrastructure isn't prepared for [Hybrid join](/
 
 If the infrastructure is in a non-Hybrid join environment, these event IDs are expected during Windows 10 deployment. They can be ignored.
 
-If you have a Hybrid scenario, see [Troubleshooting hybrid Azure Active Directory joined Windows 10 and Windows Server 2016 devices](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current) for troubleshooting steps.
+If you have a Hybrid scenario, see [Troubleshooting Microsoft Entra hybrid joined Windows 10 and Windows Server 2016 devices](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current) for troubleshooting steps.
 
 ## Data collection
 

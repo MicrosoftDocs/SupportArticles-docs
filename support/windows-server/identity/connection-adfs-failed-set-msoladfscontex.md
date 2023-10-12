@@ -20,7 +20,7 @@ _Original KB number:_ &nbsp; 2587730
 
 ## Symptoms
 
-When you run the `Set-MsolADFSContext -Computer` command in the Microsoft Azure Active Directory Module for Windows PowerShell, you receive the following error:
+When you run the `Set-MsolADFSContext -Computer` command in the Microsoft Azure Active Directory module for Windows PowerShell, you receive the following error:
 
 > Set-MsolADFSContext : The connection to \<ServerName> Active Directory Federation Services 2.0 server failed due to invalid credentials.
 
@@ -28,9 +28,9 @@ When you run the `Set-MsolADFSContext -Computer` command in the Microsoft Azure 
 
 This error occurs if Remote PowerShell isn't enabled on the Active Directory Federation Services (AD FS) federation server that the `-computer` parameter references.
 
-When a domain is added correctly and verified in the portal, you can use the Azure Active Directory Module for Windows PowerShell to set up single sign-on (SSO) from a management workstation by using Remote PowerShell.
+When a domain is added correctly and verified in the portal, you can use the Azure Active Directory module for Windows PowerShell to set up single sign-on (SSO) from a management workstation by using Remote PowerShell.
 
-However, the Azure Active Directory Module for Windows PowerShell can only be installed on Windows 7 and on Windows Server 2008 SR2. The Azure Active Directory Module for Windows PowerShell can't be installed on Windows Server 2008 Service Pack 2 (SP2). Therefore, this problem is especially relevant where AD FS is installed on a Windows Server 2008 SP2 platform. In this case, the Azure Active Directory Module for Windows PowerShell command that's related to AD FS must be issued from a remote computer.
+However, the Azure Active Directory module for Windows PowerShell can only be installed on Windows 7 and on Windows Server 2008 SR2. The Azure Active Directory module for Windows PowerShell can't be installed on Windows Server 2008 Service Pack 2 (SP2). Therefore, this problem is especially relevant where AD FS is installed on a Windows Server 2008 SP2 platform. In this case, the Azure Active Directory module for Windows PowerShell command that's related to AD FS must be issued from a remote computer.
 
 ## Resolution
 
@@ -50,4 +50,4 @@ For more information about Remote PowerShell requirements, see [About_Remote_Req
 
 For more information about Remote PowerShell functionality, see [Windows PowerShell: Dive Deep into Remoting](/previous-versions/technet-magazine/gg981683(v=msdn.10)).
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums) website.
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Microsoft Entra Forums](https://social.msdn.microsoft.com/Forums) website.
