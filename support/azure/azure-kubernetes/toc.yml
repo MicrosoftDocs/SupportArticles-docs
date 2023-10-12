@@ -214,7 +214,7 @@
     href: 429-too-many-requests-errors.md
   - name: Argument list too long
     href: application-fails-argument-list-too-long.md
-  - name: Azure AD Pod Identity NMI returns 500 Internal Server Error
+  - name: Microsoft Entra Pod Identity NMI returns 500 Internal Server Error
     href: stale-watch-azure-ad-pod-identity-nmi-status-500.md
   - name: Can't access the cluster API server using authorized IP ranges
     href: cannot-access-cluster-api-server-using-authorized-ip-ranges.md

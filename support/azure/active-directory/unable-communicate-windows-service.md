@@ -1,25 +1,25 @@
 ---
-title: Error (Unable to communicate with the Windows Azure Active Directory service) when Azure AD Connect cannot authenticate to Azure AD
-description: Provides information about troubleshooting a problem in which your identity sync client cannot authenticate to Microsoft Azure Active Directory if there is an unauthenticated proxy server.
+title: Error (Unable to communicate with the Windows Azure Active Directory service) when Microsoft Entra Connect cannot authenticate to Microsoft Entra ID
+description: Provides information about troubleshooting a problem in which your identity sync client cannot authenticate to Microsoft Entra ID if there is an unauthenticated proxy server.
 ms.date: 05/11/2020
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: enterprise-users
 ---
-# Error when Azure AD Connect cannot authenticate to Azure AD: Unable to communicate with the Windows Azure Active Directory service
+# Error when Microsoft Entra Connect cannot authenticate to Microsoft Entra ID: Unable to communicate with the Windows Azure Active Directory service
 
-This article provides information about troubleshooting a problem in which your identity sync client cannot authenticate to Microsoft Azure Active Directory if there is an unauthenticated proxy server.
+This article provides information about troubleshooting a problem in which your identity sync client cannot authenticate to Microsoft Entra ID if there is an unauthenticated proxy server.
 
-_Original product version:_ &nbsp; Azure Active Directory  
+_Original product version:_ &nbsp; Microsoft Entra ID  
 _Original KB number:_ &nbsp; 3013032
 
 ## Symptoms
 
-If your environment includes an unauthenticated proxy server, your identity sync client may not authenticate to Microsoft Azure Active Directory.
+If your environment includes an unauthenticated proxy server, your identity sync client may not authenticate to Microsoft Entra ID.
 
-For example, you experience this issue when you use an identity sync client such as Azure AD Connect, Azure Active Directory Sync Services (Azure AD Sync), or the Azure Active Directory Sync Tool.
+For example, you experience this issue when you use an identity sync client such as Microsoft Entra Connect, Azure Active Directory Sync Services (Azure AD Sync), or the Azure Active Directory Sync Tool.
 
-If you're using Azure AD Connect or Azure AD Sync:
+If you're using Microsoft Entra Connect or Azure AD Sync:
 
 The wizard displays the following configuration error message:
 
@@ -27,7 +27,7 @@ The wizard displays the following configuration error message:
 We have gathered enough information to configure Azure AD Sync and will now create a default configuration.  
 Failed even after 5 retries. Action: PingProvisioningServiceEndPoint, Exception: Unable to communicate with the Windows Azure Active Directory service. Tracking ID: 01601250-7951-469c-8973-34e2a8e1ca10 See the event log for more details.
 
-When this problem occurs, an "Error 906" entry that resembles the following is logged in the Azure AD Connect or Azure AD Sync log. This entry indicates that the identity sync appliance tries to make a direct connection to the Internet.
+When this problem occurs, an "Error 906" entry that resembles the following is logged in the Microsoft Entra Connect or Azure AD Sync log. This entry indicates that the identity sync appliance tries to make a direct connection to the Internet.
 
 > AzureActiveDirectoryDirectorySyncTool Error: 906 : System.Management.Automation.CmdletInvocationException: Failed even after 5 retries. Action: PingProvisioningServiceEndPoint, Exception: Unable to communicate with the Windows Azure Active Directory service. Tracking ID: 90edf657-f63e-46cc-94ec-df88817f4c73 See the event log for more details.. ---> Microsoft.IdentityManagement.PowerShell.ObjectModel.SynchronizationConfigurationValidationException: Failed even after 5 retries. Action: PingProvisioningServiceEndPoint, Exception: Unable to communicate with the Windows Azure Active Directory service. Tracking ID: 90edf657-f63e-46cc-94ec-df88817f4c73 See the event log for more details..
 
