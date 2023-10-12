@@ -38,7 +38,7 @@ To check the status of the cloud change enumeration job, go the **Cloud Endpoint
 
 To view the health of a **server endpoint** in the portal, navigate to the **Sync groups** section of the **Storage Sync Service** and select a **sync group**.
 
-:::image type="content" source="media/file-sync-troubleshoot-sync-errors/serverendpoint-health.png" alt-text="Screenshot that shows the server endpoint health in the Azure portal."  lightbox="media/file-sync-troubleshoot-sync-errors/serverendpoint-health.png" border="false":::
+:::image type="content" source="media/file-sync-troubleshoot-sync-errors/serverendpoint-health.png" alt-text="Screenshot that shows the server endpoint health in the Azure portal." lightbox="media/file-sync-troubleshoot-sync-errors/serverendpoint-health.png" border="false":::
 
 A **Healthy** status and a **Persistent sync errors** count of 0 indicate that sync is working as expected. If **Persistent sync errors** has a count greater than 0, see [How do I see if there are specific files or folders that are not syncing](#how-do-i-see-if-there-are-specific-files-or-folders-that-are-not-syncing) to troubleshoot why files are failing to sync. If the server endpoint has a **Health status** other than **Healthy**, follow the guidance in the table below.  
 
