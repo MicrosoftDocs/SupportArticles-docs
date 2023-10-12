@@ -33,7 +33,7 @@
           href: check-if-gateway-is-the-right-region.md
         - name: Common errors creating and assigning flow approvals
           href: common-errors-creating-and-assigning-flow-approvals.md
-        - name: Desktop flow invalid credentials error using AAD account
+        - name: Desktop flow invalid credentials error using Microsoft Entra account
           href: troubleshoot-ui-flow-invalid-credentials-error-using-aad-account.md
         - name: Differences between flow approval actions
           href: differences-between-flow-approval-actions.md

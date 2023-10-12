@@ -19,7 +19,7 @@ Your unattended desktop flows run failed with the error code **AadLogonFailure**
 
 ## Cause
 
-UI flows failed to validate your Azure Active Directory credentials on the machine.
+UI flows failed to validate your Microsoft Entra credentials on the machine.
 
 ## Resolution
 
