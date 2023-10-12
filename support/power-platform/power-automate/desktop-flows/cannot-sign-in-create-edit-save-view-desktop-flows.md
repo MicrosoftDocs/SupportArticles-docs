@@ -1,8 +1,8 @@
 ---
-title: Cannot sign in or create or edit or save or view desktop flows
+title: Can't sign in or create or edit or save or view desktop flows
 description: Provides a resolution for the error message that occurs when you try to sign in, create, edit, save, or view desktop flows in Power Automate.
 ms.reviewer: pefelesk
-ms.date: 09/21/2022
+ms.date: 10/12/2023
 ms.subservice: power-automate-desktop-flows
 ---
 # Can't sign in, create, edit, save, or view desktop flows
@@ -42,7 +42,7 @@ Try to do the same operation in the [Power Automate Portal](https://flow.microso
 
 The machine that hosts Power Automate for desktop can't connect to the required domains. This issue could happen either because the domains are blocked on the network, or because you're using a proxy server that requires authentication.
 
-For the latter, Power Automate for desktop can't authenticate with the proxy server, thus the communication fails. Note that the Proxy server should be using automatic authentication with the user's Active Directory account.
+For the latter, Power Automate for desktop can't authenticate with the proxy server, thus the communication fails. Note that the proxy server should be using automatic authentication with the user's Active Directory account.
 
 ## Resolution for the blocked domains issue
 
@@ -50,6 +50,6 @@ Approve the [Required services](/power-automate/ip-address-configuration#require
 
 Approve the [Desktop flows services required for runtime](/power-automate/ip-address-configuration#desktop-flows-services-required-for-runtime) to enable the connection from the local machine for the desktop flows runs.
 
-## Resolution for the proxy authentication issue
+## Resolution and workaround for the proxy authentication issue
 
-Follow the steps as described in the [Proxy server related errors in Power Automate for desktop](/troubleshoot/power-platform/power-automate/desktop-flows/proxy-error-console) article.
+To solve this issue, follow the steps described in [Proxy server related errors in Power Automate for desktop](proxy-error-console.md).
