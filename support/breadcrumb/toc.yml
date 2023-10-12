@@ -146,7 +146,7 @@ items:
         topicHref: /troubleshoot/azure/cosmos-db/
       - name: Azure Storage
         tocHref: /troubleshoot/azure/azure-storage/
-        topicHref: /troubleshoot/azure-storage/welcome-azure-storage
+        topicHref: /troubleshoot/azure/azure-storage/welcome-azure-storage
 
     - name: Microsoft Dynamics 365
       tocHref: /troubleshoot/dynamics-365/
