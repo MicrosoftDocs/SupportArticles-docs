@@ -1,5 +1,5 @@
 ---
-title: '"Failed to process message due to a transient exception" error in message tracking logs'
+title: Failed to process message due to a transient exception error in message tracking logs
 description: Works around an issue in which Exchange Server logs an error message when you send an email message that has an attachment.
 author: cloud-writer
 ms.author: meerak
@@ -65,4 +65,4 @@ When you send an email message that has an attachment that exceeds 128 KB, the [
 
 Monitor the free disk space on the drive that contains the system temporary folder to make sure that the drive has at least 1 GB of free disk space. The system temporary folder path is specified by the `TMP` system environment variable.
 
-Because Exchange Server automatically monitors disk space on the drive that contains the Exchange Server [mail.que](/exchange/mail-flow/queues/queues#queue-database-files) file, consider setting the path value of the `TMP` system environment variable to a folder on the drive that contains the mail.que file. In the event of low free disk space on a drive that Exchange Server monitors, Exchange Server records [back pressure events](/exchange/mail-flow/back-pressure#back-pressure-logging-information) in the application log.
+Because Exchange Server automatically monitors disk space on the drive that contains the Exchange Server [mail.que](/exchange/mail-flow/queues/queues#queue-database-files) file, consider setting the path value of the `TMP` system environment variable to a folder on the drive that contains the *mail.que* file. In the event of low free disk space on a drive that Exchange Server monitors, Exchange Server records [back pressure events](/exchange/mail-flow/back-pressure#back-pressure-logging-information) in the application log.
