@@ -60,7 +60,7 @@ The **Device and user check-in status** section is the best option for accessing
 
 The recommended method for confirming that the Update ring policy has been successfully applied to the device, is to select the **View report** button on the specific Update ring policy page. The report displays the list of all devices with the policy assigned to them and their respective statuses. The list is useful for quickly identifying whether a specific device has received the update policy.
 
-For more information about the reporting experience for Update ring policies, see the [Reports for Update rings for Windows 10 and later policy](mem/intune/protect/windows-update-reports#reports-for-update-rings-for-windows-10-and-later-policy) section of [Windows Update reports for Microsoft Intune | Microsoft Learn](mem/intune/protect/windows-update-reports).
+For more information about the reporting experience for Update ring policies, see the [Reports for Update rings for Windows 10 and later policy](https://learn.microsoft.com/mem/intune/protect/windows-update-reports#reports-for-update-rings-for-windows-10-and-later-policy) section of [Windows Update reports for Microsoft Intune | Microsoft Learn](https://learn.microsoft.com/mem/intune/protect/windows-update-reports).
 
 :::image type="content" source="media/troubleshoot-update-rings/update-ring-report.jpg" alt-text="A screenshot of the Update ring policy report." lightbox="media/troubleshoot-update-rings/update-ring-report.jpg":::
 
