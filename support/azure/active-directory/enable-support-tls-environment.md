@@ -1,7 +1,7 @@
 ---
 title: Enable TLS 1.2 support as Azure AD TLS 1.0/1.1 is deprecated
 description: This article describes how to enable support for TLS 1.2 in your environment, in preparation for upcoming Azure AD TLS 1.0/1.1 deprecation.
-ms.date: 10/10/2023
+ms.date: 10/12/2023
 ms.reviewer: dahans, abizerh, v-leedennis, v-weizhu
 ms.service: active-directory
 ms.subservice: authentication
@@ -139,20 +139,20 @@ To manually configure and enable TLS 1.2 at the operating system level, you can 
 
 To enable TLS 1.2 by using a PowerShell script, see [TLS 1.2 enforcement for Azure AD Connect](/azure/active-directory/hybrid/reference-connect-tls-enforcement).
 
-## How to check which TSL protocol is being used
+## How to check which TLS protocol is being used
 
-Here're two ways to check which TSL is being used:
+Here're two ways to check which TLS is being used:
 
 - Browser security settings.
 - Internet Properties in Windows.
 
-To check which TSL protocol is being used by using Internet Properties, follow these steps:
+To check which TLS protocol is being used by using Internet Properties, follow these steps:
 
 1. Press <kbd>Windows</kbd>+<kbd>R</kbd> to open the **Run** box.
 2. Type *inetcpl.cpl* and then select **OK**. Then, the **Internet Properties** window is opened.
-3. In the **Internet Properties** window, select the **Advanced** tab and scroll down to check TSL related settings.
+3. In the **Internet Properties** window, select the **Advanced** tab and scroll down to check TLS related settings.
 
-    :::image type="content" source="media/enable-support-tls-environment/used-tls-protocol.png" alt-text="Screenshot that shows TSL related settings in Internet Properties.":::
+    :::image type="content" source="media/enable-support-tls-environment/used-tls-protocol.png" alt-text="Screenshot that shows TLS related settings in Internet Properties.":::
 
 ## Update and configure .NET Framework to support TLS 1.2 <a name="update-configure-tls-12"></a>
 
