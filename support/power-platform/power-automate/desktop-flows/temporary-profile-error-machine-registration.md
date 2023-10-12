@@ -2,7 +2,7 @@
 title: Temporary profile error during machine registration
 description: Provides a resolution for an issue where you can't register a machine due to an error when using the Power Automate machine runtime application.
 ms.reviewer: fanedjad
-ms.date: 10/10/2023
+ms.date: 10/11/2023
 ms.subservice: power-automate-desktop-flows
 ---
 # Temporary profile error during machine registration
@@ -24,13 +24,15 @@ This issue occurs because the Power Automate for desktop application isn't prope
 
 ## Resolution
 
-First, uninstall Power Automate for desktop from the machine and make sure the related files, located in *C:\Program Files (x86)\Power Automate Desktop*, are deleted.
+To solve this issue,
 
-Then, reset the user profile manually.
+1. Uninstall Power Automate for desktop from the machine and make sure the related files, located in *C:\Program Files (x86)\Power Automate Desktop*, are deleted.
 
-1. Verify settings for the "UIFlowService" profile:
+2. Reset the user profile manually.
 
-   1. Open the Registry editor and go to the key folder:
+   1. Verify the settings of the "UIFlowService" profile:
+
+       Open the Registry Editor and go to the key folder:
 
        *Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList\S-1-5-80-3017052307-2994996872-1615411526-3164924635-3391446484*
 
@@ -42,6 +44,5 @@ Then, reset the user profile manually.
 
    4. Modify the `ProfileImagePath` value to point to the existing *UIFlowService* folder. By default, it should be *%SystemRoot%\ServiceProfiles\UIFlowService*.
 
-2. Restart your machine.
-
-3. Install Power Automate for desktop again.
+3. Restart your machine.
+4. Install Power Automate for desktop again.
