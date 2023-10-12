@@ -7,7 +7,7 @@ ms.topic: troubleshooting
 ms.date: 10/04/2023
 ms.author: kendownie
 ---
-# Troubleshoot Azure File Sync cloud tiering-Updated
+# Troubleshoot Azure File Sync cloud tiering
 
 Cloud tiering, an optional feature of Azure File Sync, decreases the amount of local storage required while keeping the performance of an on-premises file server. When enabled, this feature stores only frequently accessed (hot) files on your local server. Infrequently accessed (cool) files are split into namespace (file and folder structure) and file content. 
 
