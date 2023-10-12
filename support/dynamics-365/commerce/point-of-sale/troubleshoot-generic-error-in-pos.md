@@ -3,7 +3,7 @@ title: Troubleshoot generic errors displayed on the POS
 description: Lists the steps you can take to investigate a generic error displayed on the POS in Dynamics 365 Commerce.
 author: bstorie
 ms.author: brstor
-ms.date: 10/11/2023
+ms.date: 10/12/2023
 ---
 # Troubleshoot generic errors displayed on the POS
 
@@ -17,7 +17,6 @@ First, collect the following details from the POS:
 2. The Application session ID.
 3. The User session ID.
 4. The actions that led to the error so that you can follow the flow.
-
 
 ## Troubleshooting steps
 
@@ -56,4 +55,5 @@ If you find some requests that were sent to the RCSU (Retail Server) in the POS 
    :::image type="content" source="media/troubleshoot-generic-error-in-pos/example-of-environment-monitoring-search-results.png" alt-text="Screenshot that shows the environment monitoring search results." lightbox="media/troubleshoot-generic-error-in-pos/example-of-environment-monitoring-search-results.png":::
 
 ## Engaging Microsoft Support
-When opening a support ticket for issues on the POS, include the details listed in the [Prerequisites](#prerequisites) section of this document to help speed up the troubleshooting process. 
+
+When opening a support ticket for issues on the POS, include the details listed in the [Prerequisites](#prerequisites) section of this document to help speed up the troubleshooting process.
