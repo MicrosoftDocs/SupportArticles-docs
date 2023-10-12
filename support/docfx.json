@@ -55,7 +55,6 @@
       "uhfHeaderId": {
         "azure/**.*": "Azure",
         "developer/webapps/iis/**.*": "MSDocsHeader-Windows",
-        "dynamics-365/**.*": "MSDocsHeader-Dynamics365",
         "dynamics-365/commerce/**.*": "MSDocsHeader-Dynamics365-Commerce",
         "dynamics-365/customer-insights/**.*": "MSDocsHeader-Dynamics365-Customer-Insights",
         "dynamics-365/customer-service/**.*": "MSDocsHeader-Dynamics365-CustomerService",
