@@ -10,7 +10,7 @@ ms.subservice: authentication
 
 This article contains information to help you troubleshoot common issues that you may encounter when you use Windows Multi-Factor Authentication for Microsoft Office 365 or Microsoft Azure.
 
-_Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Azure Active Directory, Microsoft Intune, Azure Backup, Office 365 Identity Management  
+_Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 Identity Management  
 _Original KB number:_ &nbsp; 2937344
 
 ## Summary
