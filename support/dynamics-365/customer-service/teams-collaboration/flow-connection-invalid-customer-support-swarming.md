@@ -11,7 +11,7 @@ This article provides a resolution for an issue where the flow connection isn't 
 
 ## Symptoms
 
-The flow can't be enabled automatically through the **Expert notifications** card on the customer support swarming form, or there's an issue with the flow connection.
+The flow can't be enabled automatically through the **Expert notifications** card on the [customer support swarming form](/dynamics365/customer-service/configure-customer-support-swarming#overview-of-the-customer-support-swarming-page), or there's an issue with the flow connection.
 
 ## Resolution
 
