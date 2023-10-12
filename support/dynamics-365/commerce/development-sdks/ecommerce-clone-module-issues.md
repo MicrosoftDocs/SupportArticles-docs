@@ -3,7 +3,7 @@ title: E-commerce SDK clone module known issues
 description: Provides information about the clone module process and known issues associated with this process in Dynamics 365 Commerce.
 author: Bstorie
 ms.author: Brstor
-ms.date: 10/10/2023
+ms.date: 10/12/2023
 ---
 # Known issues with e-commerce SDK clone modules
 
@@ -26,20 +26,20 @@ The Dynamics 365 e-commerce software development kit (SDK) provides the clone [c
 
 ## Known issues
 
-- **Error: Can't resolve '@msdyn365-commerce-modules/\<moduleName>'**
+#### Error: Can't resolve '@msdyn365-commerce-modules/\<moduleName>'
 
-  After cloning a module, you get a build error stating "Can't resolve \<moduleName>." This issue occurs because the module has an incorrect *package.json* file. The following screenshot shows that `"main"` should always point to the entry file of the module, which is typically *index.js*. For errors stating "Can't resolve \<moduleName> where the package exists," check if the path of the entry file *.js* is correct.
+After cloning a module, you get a build error stating "Can't resolve \<moduleName>." This issue occurs because the module has an incorrect *package.json* file. The following screenshot shows that `"main"` should always point to the entry file of the module, which is typically *index.js*. For errors stating "Can't resolve \<moduleName> where the package exists," check if the path of the entry file *.js* is correct.
 
-  :::image type="content" source="media/ecommerce-clone-module-issues/invalid-json-pacakge-example.png" alt-text="Screenshot that shows an incorrect entry in the package.json file.":::
+:::image type="content" source="media/ecommerce-clone-module-issues/invalid-json-pacakge-example.png" alt-text="Screenshot that shows an incorrect entry in the package.json file.":::
 
-- **Error: Export 'IFullProductsSearchResultsWithCount' was not found in './get-full-products-by-collection'**
+#### Error: Export 'IFullProductsSearchResultsWithCount' was not found in './get-full-products-by-collection'
+
+When building a custom module, you might get this error even though the interface exists in the given path.
+
+A good resource to understand the background of this issue is the [Stackoverflow thread](https://stackoverflow.com/questions/40841641/cannot-import-exported-interface-export-not-found). To summarize this thread, it's recommended to have an interface in its own file. If the interface and class are in the same file, you can't import or export them like this:
+
+:::image type="content" source="media/ecommerce-clone-module-issues/import-module-interfaces-in-same-class.png" alt-text="Screenshot that shows the interface and class are in the same file." lightbox="media/ecommerce-clone-module-issues/import-module-interfaces-in-same-class.png":::
   
-  When building a custom module, you might get this error even though the interface exists in the given path.
+The screenshot above shows that`IFullProductsSearchResultsWithCount` and `GetFullProductsByCollectionInput` are in the same class and can't be imported like that. Instead, it should be imported with the `type` keyword, as shown in the following screenshot:
 
-  A good resource to understand the background of this issue is the [Stackoverflow thread](https://stackoverflow.com/questions/40841641/cannot-import-exported-interface-export-not-found). To summarize this thread, it's recommended to have an interface in its own file. If the interface and class are in the same file, you can't import or export them like this:
-
-  :::image type="content" source="media/ecommerce-clone-module-issues/import-module-interfaces-in-same-class.png" alt-text="Screenshot that shows the interface and class are in the same file." lightbox="media/ecommerce-clone-module-issues/import-module-interfaces-in-same-class.png":::
-  
-  The screenshot above shows that`IFullProductsSearchResultsWithCount` and `GetFullProductsByCollectionInput` are in the same class and can't be imported like that. Instead, it should be imported with the `type` keyword, as shown in the following screenshot:
-
-  :::image type="content" source="media/ecommerce-clone-module-issues/correct-way-to-import-modules.png" alt-text="Screenshot that shows the correct process to import each object individually." lightbox="media/ecommerce-clone-module-issues/correct-way-to-import-modules.png":::
+:::image type="content" source="media/ecommerce-clone-module-issues/correct-way-to-import-modules.png" alt-text="Screenshot that shows the correct process to import each object individually." lightbox="media/ecommerce-clone-module-issues/correct-way-to-import-modules.png":::
