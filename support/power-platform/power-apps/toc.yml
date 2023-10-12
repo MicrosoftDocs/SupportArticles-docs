@@ -113,7 +113,7 @@ items:
         - name: '"Solution cannot be deleted due to dependencies" error'
           href: solutions/solution-cannot-be-deleted-due-to-dependencies.md
         - name: Solution upgrade fails due to a pending upgrade
-          href: manage-apps-and-solutions/upgrade-fails-pending-upgrade.md
+          href: solutions/upgrade-fails-pending-upgrade.md
         - name: '"You cannot delete this form because it is the only fallback form" error'
           href: solutions/you-cannot-delete-this-form-only-fallback.md
     - name: Support resources
