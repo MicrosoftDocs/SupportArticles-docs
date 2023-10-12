@@ -31,7 +31,7 @@ To resolve this issue, use one of the following methods:
 
 1. Sign in to the Azure portal by using Global Administrator.
 2. If applicable, switch to the directory where the guest user was added.
-3. Go to **Azure Active Directory**.
+3. Go to **Microsoft Entra ID**.
 4. Go to **User Settings**.
 5. Change the **Guest users permissions are limited**  setting to **No**, and then select **Save**.
 
@@ -44,7 +44,7 @@ To resolve this issue, use one of the following methods:
     Import-Module AzureAd
     ```
 
-     Make sure that the Azure AD for Graph is installed. For more information, see [Azure Active Directory PowerShell for Graph](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0&preserve-view=true).
+     Make sure that the Microsoft Entra ID for Graph is installed. For more information, see [Azure Active Directory PowerShell for Graph](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0&preserve-view=true).
 
 3. As a global administrator of the directory where the guest user was added, connect to Azure AD PowerShell and the directory:
 
@@ -52,7 +52,7 @@ To resolve this issue, use one of the following methods:
     Connect-AzureAD -TenantId 'Tenant_Directory_Id'
     ```
 
-    You can get the Directory ID by looking at your Azure Active Directory Properties in the Azure portal.
+    You can get the Directory ID by looking at your Microsoft Entra Properties in the Azure portal.
 
 4. Run the following cmdlet:
 
