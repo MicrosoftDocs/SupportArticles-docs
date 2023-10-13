@@ -18,7 +18,7 @@ appliesto:
   - Outlook 2013
   - Outlook 2010
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 10/13/2023
 ---
 
 # Outlook Calendar displays working hours as grey
@@ -38,6 +38,4 @@ For more information about the new elements in Exchange Server, see [DaysOfWeek 
 
 ## Status
 
-This issue is fixed with build 16.0.16626.20196. This change is in all production channels except Semi-Annual Enterprise Channel. Semi-Annual Enterprise Channel should get the fix in January 2024.
-
-
+This issue is fixed in Outlook build 16.0.16626.20196. The fix has been rolled out to all production channels except the Semi-Annual Enterprise Channel.
