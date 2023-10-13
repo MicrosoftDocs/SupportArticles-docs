@@ -1,4 +1,6 @@
-- name: Troubleshoot Azure Cosmos DB emulator
+- name: Welcome
   href: index.yml
 - name: Troubleshoot emulator
   href: emulator.md
+- name: Failed private endpoints deployment
+  href: private-endpoints.md
