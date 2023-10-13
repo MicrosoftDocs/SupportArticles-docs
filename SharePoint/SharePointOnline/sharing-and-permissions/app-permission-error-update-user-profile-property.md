@@ -30,4 +30,4 @@ This issue occurs because the app doesn't have the required permissions to make 
 
 ## Resolution
 
-To fix this issue, [grant the User.ReadWrite.All permission](/sharepoint/dev/solution-guidance/security-apponly-azuread) to the app in the Azure portal. If you need to update taxonomic properties, also grant the `TermStore.Readwrite.All` permission.
+To fix this issue, [grant the User.ReadWrite.All permission](/sharepoint/dev/solution-guidance/security-apponly-azuread) to the app in the Azure portal. If you have to update taxonomic properties, also grant the `TermStore.Readwrite.All` permission.
