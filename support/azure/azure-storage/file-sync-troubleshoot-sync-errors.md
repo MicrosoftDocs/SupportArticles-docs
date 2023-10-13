@@ -226,6 +226,8 @@ The table below contains all of the unicode characters Azure File Sync doesn't y
 
 | Character set | Character count |
 |---------------|-----------------|
+|0x00000000 - 0x0000001F (control characters) |32 |
+|<ul><li>0x00000022 (quotation mark)</li><li>0x0000002A (asterisk)</li><li>0x0000002F (forward slash)</li><li>0x0000003A (colon)</li><li>0x0000003C (less than)</li><li>0x0000003E (greater than)</li><li>0x0000003F (question mark)</li><li>0x0000005C (backslash)</li><li>0x0000007C (pipe or bar)</li></ul> |9 |
 | <ul><li>0x0000009D (`osc` operating system command)</li><li>0x00000090 (dcs device control string)</li><li>0x0000008F (ss3 single shift three)</li><li>0x00000081 (high octet preset)</li><li>0x0000007F (del delete)</li><li>0x0000008D (ri reverse line feed)</li></ul> | 6 |
 | 0x0000FFFE, 0x0000FFFF (specials) | 2 |
 | Files or directories that end with a period | 1 |
