@@ -67,7 +67,7 @@ This article lists the known issues for the Microsoft Teams Rooms app when it's 
 | Issue  |  Description | Workaround |
 | --- | --- | --- |
 |The **Report an issue** option in Teams Rooms on Android devices doesn't work|In Teams Rooms on Android devices, Teams phones, Teams panels and Teams displays, the **Report an issue** option under **Settings** is unavailable.|The option to report issues from Teams Rooms on Android devices is being enhanced. The **Report an issue** option will be unavailable until the updated experience is released.</br></br>If you were using the **Report an issue** option to collect device logs to troubleshoot issues, use the Microsoft Teams admin center instead. See [Collect Android Teams device logs](/microsoftteams/troubleshoot/teams-rooms-and-devices/collect-device-logs) for detailed instructions.|
-|Teams phones sign out automatically, and Teams Rooms on Android devices become unpaired|On Teams phones that are running AudioCodes firmware 1.19.516, the phones sign out automatically.<br/><br/>Also, Teams Rooms on Android devices that are running the Teams Rooms app version U2A, the touch console becomes unpaired.|Microsoft is investigating this issue. No workaround is available at this time.|
+|Teams phones sign out automatically, and Teams Rooms on Android devices become unpaired|On Teams phones that are running AudioCodes firmware 1.19.516, the phones sign out automatically.<br/><br/>Also, on Teams Rooms on Android devices that are running the Teams Rooms app version U2A, the touch console becomes unpaired.|Microsoft is investigating this issue. No workaround is available at this time.|
 
 ### Issues with meeting room devices
 
