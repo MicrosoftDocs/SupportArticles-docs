@@ -1,7 +1,7 @@
 ---
 title: Gather information by using TSS for Windows Update for Business reports-related issues
 description: Introduces how to gather information by using the TroubleShootingScript (TSS) toolset for Windows Update for Business reports-related issues.
-ms.date: 10/10/2023
+ms.date: 10/13/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, warrenw, v-lianna
-ms.custom: sap:windows-troubleshooters, csstroubleshoot
+ms.custom: sap:windows-tss-dnd, csstroubleshoot
 ms.technology: windows-client-troubleshooter
 ---
 # Gather information by using TSS for Windows Update for Business reports-related issues
