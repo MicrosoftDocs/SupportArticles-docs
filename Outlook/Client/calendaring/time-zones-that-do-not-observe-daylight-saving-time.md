@@ -67,7 +67,7 @@ The following is a list of time zones that do not observe daylight saving time.
 - (UTC+05:30) Chennai, Kolkata, Mumbai, New Delhi
 - (UTC+05:30) Sri Jayawardenepura
 - (UTC+05:45) Kathmandu
-- (UTC+06:00) Nur-Sultan
+- (UTC+06:00) Astana
 - (UTC+06:00) Dhaka
 - (UTC+06:30) Yangon (Rangoon)
 - (UTC+07:00) Bangkok, Hanoi, Jakarta
