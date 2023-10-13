@@ -56,7 +56,7 @@ Navigate to **Devices** > **Windows** > **Update rings for Windows 10 and later*
 
 To access a specific device and troubleshoot the Update ring policy assigned to it, the **Device and user check-in status** section is the best option.
 
-:::image type="content" source="media/troubleshoot-update-rings/update-ring-overview-pane.png" alt-text="Screenshot of the Update ring overview page in the Intune admin center." lightbox="media/troubleshoot-update-rings/update-ring-overview-pane.png":::
+:::image type="content" source="media/troubleshoot-update-rings/update-ring-overview-pane.png" alt-text="Screenshot of the Update ring overview page in the Intune admin center.":::
 
 The recommended method for confirming that the Update ring policy has been successfully applied to the device, is to select the **View report** button on the specific Update ring policy page. The report displays the list of all devices with the policy assigned to them and their respective statuses. The list is useful for quickly identifying whether a specific device has received the update policy.
 
