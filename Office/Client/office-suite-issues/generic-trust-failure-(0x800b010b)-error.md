@@ -21,7 +21,7 @@ ms.date: 03/31/2022
 
 ## Symptoms
 
-When you try to install [Visual Studio 2010 Tools for Office Runtime](https://www.microsoft.com/download/details.aspx?id=48217), you receive the following error message:
+When you try to install [Visual Studio 2010 Tools for Office Runtime](https://www.microsoft.com/download/details.aspx?id=105522), you receive the following error message:
 
 > Generic Trust Failure (0x800B010B)
 
@@ -31,7 +31,7 @@ Additionally, an error message that resembles the following is logged in the MSI
 
 ## Cause
 
-This problem occurs because Visual Studio 2010 Tools for Office Runtime is being signed by using a set of new certificates that require updating. Typically, the Windows root certificate program automatically downloads these new root certificates. However, the Windows root certificate program may not function as expected if the computer is disconnected from the Internet or if the root certificates update is disabled through Group Policy.
+This problem occurs because Visual Studio 2010 Tools for Office Runtime are being signed by using a set of new certificates that require updating. Typically, the Windows root certificate program automatically downloads these new root certificates. However, the Windows root certificate program may not function as expected if the computer is disconnected from the Internet or if the root certificates update is disabled through Group Policy.
 
 ## Resolution
 
