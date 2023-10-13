@@ -52,21 +52,21 @@ Versions:
 
 The best practice for troubleshooting policy issues is always to check its status in the Intune admin center.
 
-Navigate to **Devices** > **Windows** > **Update rings for Windows 10 and later**, and then select the Update ring policy to review. You'll see the default view for the Update ring policy including the essential details about the policy, **Device and user check-in status** reporting options, the policy's **Properties**, its **Assignments**, and the groups of devices **Included** and **Excluded** from the policy.
+Navigate to **Devices** > **Windows** > **Update rings for Windows 10 and later**, and then select the Update ring policy to review. You'll find the default view for the Update ring policy, which includes the essential details about the policy, reporting options for **Device and user check-in status**, the policy's **Properties**, its **Assignments**, and the groups of devices that are either **Included** and **Excluded** from the policy.
 
-The **Device and user check-in status** section is the best option for accessing a specific device and troubleshooting the Update ring policy assigned to it.
+To access a specific device and troubleshoot the Update ring policy assigned to it, the **Device and user check-in status** section is the best option.
 
-:::image type="content" source="media/troubleshoot-update-rings/update-ring-overview-pane.jpg" alt-text="Screenshot of the Update ring overview page in the Intune admin center." lightbox="media/troubleshoot-update-rings/update-ring-overview-pane.jpg":::
+:::image type="content" source="media/troubleshoot-update-rings/update-ring-overview-pane.png" alt-text="Screenshot of the Update ring overview page in the Intune admin center." lightbox="media/troubleshoot-update-rings/update-ring-overview-pane.png":::
 
 The recommended method for confirming that the Update ring policy has been successfully applied to the device, is to select the **View report** button on the specific Update ring policy page. The report displays the list of all devices with the policy assigned to them and their respective statuses. The list is useful for quickly identifying whether a specific device has received the update policy.
 
-For more information about the reporting experience for Update ring policies, see the [Reports for Update rings for Windows 10 and later policy](/mem/intune/protect/windows-update-reports#reports-for-update-rings-for-windows-10-and-later-policy) section of [Windows Update reports for Microsoft Intune | Microsoft Learn](/mem/intune/protect/windows-update-reports).
+For more information about the reporting experience for Update ring policies, see the [Reports for Update rings for Windows 10 and later policy](/mem/intune/protect/windows-update-reports#reports-for-update-rings-for-windows-10-and-later-policy) section of [Windows Update reports for Microsoft Intune](/mem/intune/protect/windows-update-reports).
 
-:::image type="content" source="media/troubleshoot-update-rings/update-ring-report.jpg" alt-text="A screenshot of the Update ring policy report." lightbox="media/troubleshoot-update-rings/update-ring-report.jpg":::
+:::image type="content" source="media/troubleshoot-update-rings/update-ring-report.png" alt-text="Screenshot of the Update ring policy report." lightbox="media/troubleshoot-update-rings/update-ring-report.png":::
 
-Review the Update ring policy for an affected device. There can be two entries for the policy depending on the type of devices being managed. When Intune deploys a policy (any policy, not just Update rings), the settings are delivered against both the logged-on user and the system context of the device. This causes the two entries, which is a normal occurrence. However, if you manage Kiosk-type devices with Autologon or a local account user type, only the system account is displayed.
+Review the Update ring policy for an affected device. There can be two entries for the policy depending on the type of devices being managed. When Intune deploys a policy (any policy, not just Update ring policies), the settings are delivered against both the logged-on user and the system context of the device. This causes the two entries, which is a normal occurrence. However, if you manage kiosk devices with the Autologon feature or a local account user type, only the system account is displayed.
 
-For more information, see the [View report](/mem/intune/protect/compliance-policy-monitor#view-report) section of [Monitor results of your Intune Device compliance policies](/mem/intune/protect/compliance-policy-monitor). Refer to the **Device configuration** report to see whether a policy has been applied successfully to the device. If there are issues, or to confirm that the policy has been successfully applied, verify the settings on the target device itself.
+For more information, see the [View report](/mem/intune/protect/compliance-policy-monitor#view-report) section of [Monitor results of your Intune Device compliance policies](/mem/intune/protect/compliance-policy-monitor). To check whether a policy has been applied successfully to the device, refer to the **Device configuration** report. If there are issues, or to confirm that the policy has been successfully applied, verify the settings on the target device itself.
 
 ## Verify the settings on the device
 
@@ -176,7 +176,7 @@ If the previous options didn't provide the results needed to identify the issue,
 
     For Update ring policies, you should see a "Conflict" reporting in the **Device Configuration** pane for the device or in the colored charts.
 
-    :::image type="content" source="media/troubleshoot-update-rings/conflict-report.jpg" alt-text="A screenshot of the Device and user check-in status showing two conflicts.":::
+    :::image type="content" source="media/troubleshoot-update-rings/conflict-report.png" alt-text="Screenshot of the Device and user check-in status showing two conflicts.":::
 
 - Be sure that the Windows Update ring policy is deployed to the correct user or device group.
 - Determine whether the entire policy deployment fails or only certain settings aren't applied. Navigate to **Device** > **Device configuration** > **Update ring report**. A specific setting in the list will show an error rather than a success message.
