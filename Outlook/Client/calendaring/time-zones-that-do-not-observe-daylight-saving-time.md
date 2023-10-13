@@ -1,6 +1,6 @@
 ---
 title: Time zones that do not observe daylight saving time
-description: Describes how to optimally configure Windows in those time zones that do not observe daylight saving time. By disabling daylight saving time in Windows, this may trigger incorrect times for Outlook calendar events and appointments for recipients in time zones that do observe daylight saving time.
+description: Describes how to optimally configure Windows in those time zones that do not observe daylight saving time. By disabling daylight saving time in Windows, it may trigger incorrect times for Outlook calendar events and appointments for recipients in time zones that do observe daylight saving time.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -16,11 +16,9 @@ appliesto:
   - Microsoft Outlook 2010
   - Outlook 2010 with Business Contact Manager
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 10/13/2023
 ---
 # Time zones that do not observe daylight saving time
-
-_Original KB number:_ &nbsp; 982987
 
 ## Summary
 
@@ -46,7 +44,7 @@ To change your time zone setting, follow these steps:
 
 ### Time Zones that do not observe daylight saving time
 
-The following is a list of time zones that do not observe daylight saving time.
+The following is a list of time zones that don't observe daylight saving time.
 
 > [!NOTE]
 > This list may change at any time. Time zone observance is subject to local government jurisdiction, and this list is current as of August, 2010. For more information, see [Daylight Saving Time Help and Support Center](https://support.microsoft.com/help/22803/daylight-saving-time).
@@ -67,7 +65,7 @@ The following is a list of time zones that do not observe daylight saving time.
 - (UTC+05:30) Chennai, Kolkata, Mumbai, New Delhi
 - (UTC+05:30) Sri Jayawardenepura
 - (UTC+05:45) Kathmandu
-- (UTC+06:00) Nur-Sultan
+- (UTC+06:00) Astana
 - (UTC+06:00) Dhaka
 - (UTC+06:30) Yangon (Rangoon)
 - (UTC+07:00) Bangkok, Hanoi, Jakarta
