@@ -31,7 +31,7 @@ Additionally, an error message that resembles the following is logged in the MSI
 
 ## Cause
 
-This problem occurs because Visual Studio 2010 Tools for Office Runtime is being signed by using a set of new certificates that require updating. Typically, the Windows root certificate program automatically downloads these new root certificates. However, the Windows root certificate program may not function as expected if the computer is disconnected from the Internet or if the root certificates update is disabled through Group Policy.
+This problem occurs because Visual Studio 2010 Tools for Office Runtime are being signed by using a set of new certificates that require updating. Typically, the Windows root certificate program automatically downloads these new root certificates. However, the Windows root certificate program may not function as expected if the computer is disconnected from the Internet or if the root certificates update is disabled through Group Policy.
 
 ## Resolution
 
