@@ -143,7 +143,7 @@ By using the DMVs to verify the cause, you may see different scenarios of the is
 
    This change requires a restart to take effect, even if memory-optimized tempdb metadata is already enabled. For more information, see:
 
-    - [Configuring memory-optimized tempdb metadata](/sql/relational-databases/databases/tempdb-database#configuring-and-using-memory-optimized-tempdb-metadata)
+    - [Configure and use memory-optimized tempdb metadata](/sql/relational-databases/databases/tempdb-database#configure-and-use-memory-optimized-tempdb-metadata)
 
     - [Create a Resource Pool](/sql/relational-databases/resource-governor/create-a-resource-pool)
 
