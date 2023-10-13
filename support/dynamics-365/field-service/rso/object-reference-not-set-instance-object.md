@@ -1,26 +1,31 @@
 ---
 title: Object reference not set to an instance of an object error
-description: Resolves issues with an error message in the Resource Scheduling Optimization add-in for Dynamics 365 Field Service.
+description: Resolves issues related to an error message in the Resource Scheduling Optimization add-in for Dynamics 365 Field Service.
 ms.author: feiqiu
 author: feifeiqiu
 ms.reviewer: mhart
-ms.date: 10/07/2023
+ms.date: 10/13/2023
 ---
 # "Object reference not set to an instance of an object" error in Resource Scheduling Optimization
 
-This article helps administrators resolve issues with an error message in the [Resource Scheduling Optimization add-in](/dynamics365/field-service/rso-overview) for Microsoft Dynamics 365 Field Service.
+This article helps administrators resolve issues related to an error message in the [Resource Scheduling Optimization add-in](/dynamics365/field-service/rso-overview) for Microsoft Dynamics 365 Field Service.
 
 ## Symptoms
 
-An optimization request failed and you recieve the following error message:
+An [optimization request](/dynamics365/field-service/rso-schedule-optimization#monitoring-optimization-requests) fails, and you receive the following error message:
 
 > Object reference not set to an instance of an object.
 
 ## Resolution
 
-Typically, a custom plug-in ran into an unhandled null value. It can occur because of a custom plug-in that is triggered synchronously on the creation of a booking, the update of a work order, or other booking-related record, or one of the other records that could be impacted when the results are returned by an optimization run.
+Typically, this issue occurs when a custom plug-in runs into an unhandled null value. It can occur because of:
 
-System customizers can use the plug-in trace log capability to identify which plug-in is failing and address the issue.
+- A custom plug-in that's triggered synchronously on the creation of a booking.
+- A work order update.
+- A booking-related record.
+- A record that could be impacted when the results are returned by an optimization run.
+
+System customizers can use the plug-in trace log capability to identify which plug-in fails and address the issue.
 
 > [!CAUTION]
-> Disable plug-in trace logging as soon as you are done with debugging to avoid overloading the organization's database.
+> After the debugging is completed, disable the plug-in trace logging as soon as possible to avoid overloading the organization's database.
