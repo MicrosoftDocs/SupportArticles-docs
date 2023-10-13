@@ -143,9 +143,9 @@ By using the DMVs to verify the cause, you may see different scenarios of the is
 
    This change requires a restart to take effect, even if memory-optimized tempdb metadata is already enabled. For more information, see:
 
-    - [Configuring memory-optimized tempdb metadata](/sql/relational-databases/databases/tempdb-database#configuring-and-using-memory-optimized-tempdb-metadata).
+    - [Configuring memory-optimized tempdb metadata](/sql/relational-databases/databases/tempdb-database#configuring-and-using-memory-optimized-tempdb-metadata)
 
-    - [Create a Resource Pool](/sql/relational-databases/resource-governor/create-a-resource-pool).
+    - [Create a Resource Pool](/sql/relational-databases/resource-governor/create-a-resource-pool)
 
    > [!WARNING]
    > After binding HktempDB to a pool, the pool may reach its maximum setting and any queries that use `tempdb` may fail with out of memory errors. The SQL Server service will continue functioning, but any queries that use `tempdb` may fail. You might see the following error:
