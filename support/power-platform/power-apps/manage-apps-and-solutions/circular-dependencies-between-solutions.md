@@ -2,7 +2,7 @@
 title: Failed deleting solution error due to circular dependencies between two solutions
 description: Works around an issue where you can't delete a solution due to circular dependencies between two solutions in Power Apps.
 ms.reviewer: jdaly
-ms.date: 10/12/2023
+ms.date: 10/13/2023
 author: swatimadhukargit
 ms.author: swatim
 ---
@@ -51,23 +51,23 @@ For example, Solution A and Solution B have dependencies on each other. As shown
 
 To resolve the circular dependencies, work on one of the solutions involved and update it to [remove dependency](/power-platform/alm/removing-dependencies) on the other one.
 
-##### Solution 1
+##### Option 1
 
 1. Go to the source environment of Solution A and edit Component 2 to remove the dependency on Component 3.
 1. Export Solution A as a new version, and upgrade it to the target environment.
 
-You're allowed to delete Solution B now, as Solution A doesn't have a dependency on Solution B anymore.
+You're allowed to delete Solution B now, as Solution A doesn't have a dependency on Solution B.
 
-  :::image type="content" source="media/circular-dependencies-between-solutions/solutionB-dependency-on-solutionA.png" alt-text="Example of removing the dependency on Solution B for Solution A.":::
+:::image type="content" source="media/circular-dependencies-between-solutions/solutionB-dependency-on-solutionA.png" alt-text="Example of removing the dependency on Solution B for Solution A.":::
 
-##### Solution 2
+##### Option 2
 
 1. Go to the source environment of Solution B and edit Component 4 to remove the dependency on Component 1.
 1. Export Solution B as a new version, and import it to the target environment.
 
 You're allowed to delete Solution A now, as Solution B doesn't have a dependency on Solution A.
 
-  :::image type="content" source="media/circular-dependencies-between-solutions/solutionA-dependency-on-solutionB.png" alt-text="Example of removing the dependency on Solution A for Solution B.":::
+:::image type="content" source="media/circular-dependencies-between-solutions/solutionA-dependency-on-solutionB.png" alt-text="Example of removing the dependency on Solution A for Solution B.":::
 
 #### Active change to remove dependencies
 
