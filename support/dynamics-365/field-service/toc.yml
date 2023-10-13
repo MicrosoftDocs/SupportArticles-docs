@@ -14,12 +14,12 @@
         - name: Can't delete record because of an restrict-delete relationships
           href: customization/restrict-delete-relationships.md
         - name: Forms show an error about being read-only
-          href: customization/forms-error-read-only.md
+          href: customization/forms-record-read-only-error.md
 
     - name: IoT and Connected Field Service
       items:
         - name: Can't change Time Series Insights instance
-          href: iot/change-TSI-instance.md
+          href: iot/change-time-series-insights-instance.md
         - name: IoT Edge modules data is aggregated in charts
           href: iot/edge-module-data-aggregated.md
         - name: No records after pulling IoT device data
@@ -30,15 +30,15 @@
     - name: Resource Scheduling Optimization add-in
       items: 
         - name: Optimization request fails to modify some bookings
-          href: rso/system-failed-modify-bookings.md
+          href: rso/system-failed-modify-bookings-error.md
         - name: '"Object reference not set to an instance of an object" error'
           href: rso/object-reference-not-set-instance-object.md
         - name: Requirements not scheduled
-          href: rso/requirement-not-scheduled.md
+          href: rso/requirement-not-scheduled-in-rso.md
         - name: '"SAS Key has not been configured" error'
-          href: rso/sas-key-not-configured.md
+          href: rso/sas-key-not-configured-error.md
         - name: Troubleshoot issues with bookings
-          href: rso/troubleshoot-bookings.md
+          href: rso/troubleshoot-bookings-in-rso.md
         - name: Troubleshoot issues with deployments
           href: rso/troubleshoot-rso-deployment.md
         - name: '"User lacks privileges" error'
