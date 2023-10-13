@@ -64,7 +64,7 @@ For more information about the reporting experience for Update ring policies, se
 
 :::image type="content" source="media/troubleshoot-update-rings/update-ring-report.png" alt-text="Screenshot of the Update ring policy report." lightbox="media/troubleshoot-update-rings/update-ring-report.png":::
 
-Review the Update ring policy for an affected device. There can be two entries for the policy depending on the type of devices being managed. When Intune deploys a policy (any policy, not just Update ring policies), the settings are delivered against both the logged-on user and the system context of the device. This causes the two entries, which is a normal occurrence. However, if you manage kiosk devices with the Autologon feature or a local account user type, only the system account is displayed.
+Review the Update ring policy for an affected device. There can be two entries for the policy depending on the type of devices being managed. When Intune deploys a policy (any policy, not just Update ring policies), the settings are delivered against both the logged-on user and the system context of the device. This causes the two entries, which is a normal occurrence. However, if you manage kiosk devices with Autologon or a local account user type, only the system account is displayed.
 
 For more information, see the [View report](/mem/intune/protect/compliance-policy-monitor#view-report) section of [Monitor results of your Intune Device compliance policies](/mem/intune/protect/compliance-policy-monitor). To check whether a policy has been applied successfully to the device, refer to the **Device configuration** report. If there are issues, or to confirm that the policy has been successfully applied, verify the settings on the target device itself.
 
