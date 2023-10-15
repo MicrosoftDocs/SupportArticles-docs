@@ -89,9 +89,6 @@
           href: troubleshoot-slow-running-flows.md
     - name: Desktop flows
       items:
-        - name: Troubleshoot desktop flow run queue errors
-          href: ./desktop-flows/troubleshoot-desktop-flow-run-queue-errors.md
-          displayName: run queue errors
         - name: Agent-related errors when running attended or unattended desktop flows
           href: desktop-flows/agent-connectivity-issues-pad.md
         - name: Browser automation actions stop working after a browser update
@@ -202,6 +199,9 @@
           href: desktop-flows/troubleshooting-ui-flow-playback.md
         - name: Troubleshoot direct connectivity issues
           href: desktop-flows/troubleshoot-direct-connectivity-issues.md
+        - name: Troubleshoot desktop flow run queue errors
+          href: ./desktop-flows/troubleshoot-desktop-flow-run-queue-errors.md
+          displayName: run queue errors
         - name: Troubleshoot issues with Power Automate browser extensions
           href: desktop-flows/web-extensions-policies.md
         - name: UI flow playback error KeyboardIdMismatch
