@@ -89,6 +89,9 @@
           href: troubleshoot-slow-running-flows.md
     - name: Desktop flows
       items:
+        - name: Troubleshoot desktop flow run queue errors
+          href: ./desktop-flows/troubleshoot-desktop-flow-run-queue-errors.md
+          displayName: run queue errors
         - name: Agent-related errors when running attended or unattended desktop flows
           href: desktop-flows/agent-connectivity-issues-pad.md
         - name: Browser automation actions stop working after a browser update
