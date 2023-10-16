@@ -1,7 +1,7 @@
 ---
 title: Understanding Remote Desktop Protocol (RDP)
 description: This article introduces the Remote Desktop Protocol (RDP).
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

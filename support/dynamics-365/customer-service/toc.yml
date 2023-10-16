@@ -107,6 +107,10 @@
               href: service-level-agreements/slaitem-not-mapped-to-sla-instance.md
             - name: SLA KPI instance pausedon is null when status is On-Hold (paused)
               href: service-level-agreements/slakpiinstance-pausedon-null.md
+    - name: Teams collaboration
+      items:
+        - name: Flow connection isn't valid in customer support swarming
+          href: teams-collaboration/flow-connection-invalid-customer-support-swarming.md
     - name: Omnichannel for Customer Service
       items:
         - name: Agent Scripts and Macros

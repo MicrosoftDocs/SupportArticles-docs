@@ -17,6 +17,14 @@ items:
   items:
   - name: SQL Server 2022 build versions
     href: sqlserver-2022/build-versions.md
+  - name: Cumulative Update 9
+    items:
+    - name: Cumulative Update 9 (KB5030731)
+      href: sqlserver-2022/cumulativeupdate9.md
+  - name: Cumulative Update 8
+    items:
+    - name: Cumulative Update 8 (KB5029666)
+      href: sqlserver-2022/cumulativeupdate8.md
   - name: Cumulative Update 7
     items:
     - name: Cumulative Update 7 (KB5028743)
@@ -59,6 +67,10 @@ items:
   items:
   - name: SQL Server 2019 build versions
     href: sqlserver-2019/build-versions.md
+  - name: Cumulative Update 23
+    items:
+    - name: Cumulative Update 23 (KB5030333)
+      href: sqlserver-2019/cumulativeupdate23.md
   - name: Cumulative Update 22
     items:
     - name: Cumulative Update 22 (KB5027702)

@@ -2,7 +2,7 @@
 title: Packing station doesn't show product notes
 description: Introduces a by-design behavior where the packing station doesn't show product notes.
 author: Mirzaab
-ms.date: 4/11/2021
+ms.date: 04/11/2021
 ms.topic: troubleshooting
 ms.search.form: WHSPack
 audience: Application User

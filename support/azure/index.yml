@@ -7,7 +7,7 @@ metadata:
    services: service
    ms.service: azure-common-issues-support
    ms.author: genlin
-   ms.date: 05/10/2023
+   ms.date: 09/20/2023
 
 productDirectory:
   items:
@@ -21,6 +21,16 @@ productDirectory:
     links:
     - url: azure-storage/welcome-azure-storage.yml
       text: Troubleshooting articles for Azure Blob Storage
+  - title: Azure Cosmos DB
+    imageSrc: "https://static.docs.com/ui/media/product/azure/cosmos-db.svg"
+    links:
+    - url: cosmos-db/index.yml
+      text: Troubleshooting articles for Azure Cosmos DB
+  - title: Azure Container Instances
+    imageSrc: "https://static.docs.com/ui/media/product/azure/container-instances.svg"
+    links:
+    - url: azure-container-instances/welcome-container-instances.yml
+      text: Troubleshooting articles for Azure Container Instances
   - title: Azure DevOps
     imageSrc: "/azure/devops/media/index/devopsiconboards96.svg"
     links:
@@ -64,7 +74,7 @@ productDirectory:
   - title: Microsoft Entra
     imageSrc: "./microsoft-entra/media/microsoft-entra.svg"
     links:
-    - url: microsoft-entra/index.yml
+    - url: microsoft-entra/welcome-microsoft-entra.yml
       text: Troubleshooting articles for Microsoft Entra
   - title: Site Recovery
     imageSrc: "https://static.docs.com/ui/media/product/azure/recovery-services-vaults.svg"

@@ -1,7 +1,7 @@
 ---
 title: Terminal Server user's Home Directory is not set correctly
 description: Provides a resolution to an issue where Terminal Server user's Home Directory is not set correctly
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: Domain controllers don't demote
 description: Fixes the problem where domain controllers may not demote gracefully when you use the Active Directory Installation Wizard (Dcpromo.exe) to force demotion if a required dependency or operation fails in Windows Server 2003 or in Windows 2000 Server.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

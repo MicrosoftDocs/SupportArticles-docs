@@ -1,7 +1,7 @@
 ---
 title: Errors when applications try to connect to SQL Server in Windows
 description: Fixes an issue that occurs when an application tries to open a connection to a SQL Server.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

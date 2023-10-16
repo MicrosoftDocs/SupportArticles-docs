@@ -3,7 +3,7 @@ title: The view is not available error when opening an email
 description: The view is not available error occurs when you try to open an email in Microsoft Dynamics 365 App for Outlook. Provides a resolution.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-email-office-integration
 ---
 # The view is not available error when opening an email in Microsoft Dynamics 365 App for Outlook
