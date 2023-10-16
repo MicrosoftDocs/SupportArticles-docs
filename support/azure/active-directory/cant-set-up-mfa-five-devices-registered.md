@@ -1,11 +1,9 @@
 ---
 title: MFA fails because five registered devices use authenticator apps
 description: Learn how to resolve a scenario in which you can't set up multifactor authentication (MFA) because you already registered five devices to use authenticator apps.
-ms.date: 6/23/2023
-author: DennisLee-DennisLee
-ms.author: v-leedennis
+ms.date: 06/23/2023
 ms.editor: v-jsitser
-ms.reviewer: gudlapreethi, bemey, filuz, robgarcia, azureidcic
+ms.reviewer: gudlapreethi, bemey, filuz, robgarcia, azureidcic, v-leedennis
 ms.service: active-directory
 ms.subservice: enterprise-users
 ---

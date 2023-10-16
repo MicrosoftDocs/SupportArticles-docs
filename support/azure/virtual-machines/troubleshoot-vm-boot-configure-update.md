@@ -11,8 +11,8 @@ ms.subservice: vm-cannot-start-stop
 ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
-ms.topic: article
-ms.date: 04/29/2022
+ms.reviewer: jarrettr, v-leedennis
+ms.date: 10/10/2023
 ms.author: genli
 ---
 
@@ -22,7 +22,7 @@ This article describes the "Getting ready" and "Getting Windows ready" screens t
 
 ## Symptoms
 
-A Windows VM does not boot. When you use **Boot diagnostics** to get the screenshot of the VM, you may see that the VM displays the message "Getting ready" or "Getting Windows ready".
+A Windows VM doesn't boot. When you use **Boot diagnostics** to get the screenshot of the VM, you may see that the VM displays the message "Getting ready" or "Getting Windows ready".
 
 :::image type="content" source="media/troubleshoot-vm-boot-configure-update/getting-ready.png" alt-text="Screenshot of the Windows Server 2012 R2 V M, showing the message: Getting ready.":::
 
@@ -32,35 +32,37 @@ A Windows VM does not boot. When you use **Boot diagnostics** to get the screens
 
 Usually this issue occurs when the server is doing the final reboot after the configuration was changed. The configuration change might be initialized by Windows updates or by the changes on the roles/feature of the server. For Windows Update, if the size of the updates was large, the operating system needs more time to reconfigure the changes.
 
-## Collect an OS memory dump
+## Solution 1: Restore the VM from a backup
 
-> [!TIP]
-> If you have a recent backup of the VM, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
+If you have a recent backup of the VM, you can try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
 
-If the issue does not resolve after waiting for the changes to process, you would need to collect a memory dump file and contact support. To collect the Dump file, follow these steps:
+## Solution 2: Collect an OS memory dump file
 
-### Attach the OS disk to a recovery VM
+If restoring the VM from backup isn't possible or doesn't resolve the problem, you have to collect a memory dump file so that the crash can be analyzed. To collect the dump file, see the following sections.
+
+### Part 1: Attach the OS disk to a recovery VM
 
 1. Take a snapshot of the OS disk of the affected VM as a backup. For more information, see [Snapshot a disk](/azure/virtual-machines/windows/snapshot-copy-managed-disk).
 2. [Attach the OS disk to a recovery VM](./troubleshoot-recovery-disks-portal-windows.md).
 3. Remote desktop to the recovery VM.
-4. If the OS disk is encrypted, you must turn off the encryption before you move to the next step. For more information, see [Decrypt the encrypted OS disk in the VM that cannot boot](troubleshoot-bitlocker-boot-error.md#Decrypt-the-encrypted-OS disk).
+4. If the OS disk is encrypted, you must turn off the encryption before you move to the next step. For more information, see [Decrypt the encrypted OS disk in the VM that cannot boot](./troubleshoot-bitlocker-boot-error.md#decrypt-the-encrypted-os-disk).
 
-### Locate dump file and submit a support ticket
+### Part 2: Locate dump file and submit a support ticket
 
-1. On the recovery VM, go to windows folder in the attached OS disk. If the driver letter that is assigned to the attached OS disk is F, you need to go to F:\Windows.
+1. On the recovery VM, go to the Windows folder in the attached OS disk. If the drive letter that's assigned to the attached OS disk is F, you need to go to F:\Windows.
 2. Locate the memory.dmp file, and then [submit a support ticket](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) with the dump file.
 
-If you cannot find the dump file, move the next step to enable dump log and Serial Console.
+If you can't find the dump file, go to the next section to enable the dump log and the Serial Console.
 
-### Enable dump log and Serial Console
+#### Enable dump log and Serial Console
 
-To enable dump log and Serial Console, run the following script.
+To enable the dump log and the Serial Console, run the following script:
 
-1. Open elevated command Prompt session (Run as administrator).
+1. Open an administrative Command Prompt session.
 2. Run the following script:
 
-    In this script, we assume that the drive letter that is assigned to the attached OS disk is F.  Replace it with the appropriate value in your VM.
+   > [!NOTE]  
+   > In this script, we assume that the drive letter that is assigned to the attached OS disk is F. Replace it with the appropriate value in your VM.
 
     ```powershell
     reg load HKLM\BROKENSYSTEM F:\windows\system32\config\SYSTEM
@@ -85,10 +87,10 @@ To enable dump log and Serial Console, run the following script.
     reg unload HKLM\BROKENSYSTEM
     ```
 
-    1. Make sure that there's enough space on the disk to allocate as much memory as the RAM, which depends on the size that you are selecting for this VM.
-    2. If there's not enough space or this is a large size VM (G, GS or E series), you could then change the location where this file will be created and refer that to any other data disk which is attached to the VM. To do this, you will need to change the following key:
+    1. Make sure that there's enough space on the disk to allocate as much memory as the RAM, which depends on the size that you're selecting for this VM.
+    2. If there isn't enough space or this is a large size VM (G, GS or E series), you could then change the location where this file is created and refer that to any other data disk that's attached to the VM. To do this, you have to modify registry keys, as shown in the following code:
 
-        ```console
+        ```cmd
         reg load HKLM\BROKENSYSTEM F:\windows\system32\config\SYSTEM
 
         REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v DumpFile /t REG_EXPAND_SZ /d "<DRIVE LETTER OF YOUR DATA DISK>:\MEMORY.DMP" /f
@@ -103,7 +105,7 @@ To enable dump log and Serial Console, run the following script.
 
     :::image type="content" source="media/troubleshoot-vm-boot-configure-update/run-nmi.png" alt-text="Screenshot of the Send Non-Maskable Interrupt item.":::
 
-6. Attach the OS disk to a recovery VM again, collect dump file.
+6. Attach the OS disk to a recovery VM again, collect the dump file.
 
 After you collect the dump file, contact Microsoft support to analyze the root cause.
 

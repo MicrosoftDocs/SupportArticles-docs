@@ -7,6 +7,7 @@ ms.date: 05/29/2023
 ms.reviewer: jofrance
 ms.service: virtual-machines
 ms.subservice: vm-cannot-start-stop
+ms.custom: devx-track-azurecli
 ms.collection: linux
 ms.topic: troubleshooting
 ---
@@ -60,7 +61,7 @@ If the [Azure serial console](serial-console-linux.md) doesn't work in the speci
 1. Use [vm repair commands](repair-linux-vm-using-azure-virtual-machine-repair-commands.md) to create a repair VM that has a copy of the affected VM's OS disk attached. Mount the copy of the OS file systems in the repair VM by using [chroot](chroot-environment-linux.md).
 
     > [!NOTE]
-    > Alternatively, you can create a rescue VM manually by using the Azure portal. For more information, see [Troubleshoot a Linux VM by attaching the OS disk to a recovery VM using the Azure portal](/troubleshoot/azure/virtual-machines/troubleshoot-recovery-disks-portal-linux).
+    > Alternatively, you can create a rescue VM manually by using the Azure portal. For more information, see [Troubleshoot a Linux VM by attaching the OS disk to a recovery VM using the Azure portal](troubleshoot-recovery-disks-portal-linux.md).
 
 2. [Identify the specific kernel-related boot issue](#identify-kernel-boot-issue).
 
@@ -101,7 +102,7 @@ If the [Azure serial console](serial-console-linux.md) doesn't work in the speci
 
 ### <a id="bootingup-differentkernel-ARVMALAR"></a>Use repair VM (ALAR scripts)
 
-1. Run the following bash command in [Azure Cloud Shell](/azure/cloud-shell/overview) to create a repair VM. For more information, see [Use Azure Linux Auto Repair (ALAR) to fix a Linux VM - kernel option](/troubleshoot/azure/virtual-machines/repair-linux-vm-using-alar#kernel).
+1. Run the following bash command in [Azure Cloud Shell](/azure/cloud-shell/overview) to create a repair VM. For more information, see [Use Azure Linux Auto Repair (ALAR) to fix a Linux VM - kernel option](repair-linux-vm-using-ALAR.md#kernel).
 
     ```azurecli
     az vm repair create --verbose -g $RGNAME -n $VMNAME --repair-username rescue --repair-password 'password!234' --copy-disk-name repairdiskcopy
@@ -156,7 +157,7 @@ To modify the default kernel version from a repair VM (inside chroot) or on a ru
         grub2-editenv list
         ```
     
-    4. Make sure the value of the `GRUB_DEFAULT` variable in the */etc/default/grub* file is set to `saved`. To modify it, make sure you [regenerate the GRUB configuration file](/troubleshoot/azure/virtual-machines/troubleshoot-vm-boot-error#reinstall-grub-regenerate-grub-configuration-file) to apply the changes.
+    4. Make sure the value of the `GRUB_DEFAULT` variable in the */etc/default/grub* file is set to `saved`. To modify it, make sure you [regenerate the GRUB configuration file](troubleshoot-vm-boot-error.md#reinstall-grub-regenerate-grub-configuration-file) to apply the changes.
 
 - **RHEL 8/9 and CentOS 8**
 
@@ -215,7 +216,7 @@ To modify the default kernel version from a repair VM (inside chroot) or on a ru
         > [!NOTE]
         > For more information about how to configure the `GRUB_DEFAULT` variable, see [SUSE Boot Loader GRUB2](https://documentation.suse.com/sles/12-SP4/html/SLES-all/cha-grub2.html) and [Ubuntu Grub2/Setup](https://help.ubuntu.com/community/Grub2/Setup). As a reference: the top level menuentry value is 0, the first top level submenu value is 1, and each nested menuentry value starts with 0. For example, "1>2" is the third menuentry from the first submenu.
 
-    3. Regenerate the GRUB configuration file to apply the changes. Follow the instructions in [Reinstall GRUB and regenerate GRUB configuration file](/troubleshoot/azure/virtual-machines/troubleshoot-vm-boot-error#reinstall-grub-regenerate-grub-configuration-file) for the corresponding Linux distribution and VM generation.
+    3. Regenerate the GRUB configuration file to apply the changes. Follow the instructions in [Reinstall GRUB and regenerate GRUB configuration file](troubleshoot-vm-boot-error.md#reinstall-grub-regenerate-grub-configuration-file) for the corresponding Linux distribution and VM generation.
 
 ## <a id="missing-initramfs"></a>Kernel panic - not syncing: VFS: Unable to mount root fs on unknown-block(0,0)
 
@@ -267,7 +268,7 @@ Before rebooting a server, we recommend validating the GRUB configuration and `/
 
 ### <a id="missing-initramfs-alar"></a>Regenerate missing initramfs by using Azure Repair VM ALAR scripts
 
-1. Create a repair VM by running the following Bash command line with [Azure Cloud Shell](/azure/cloud-shell/overview). For more information, see [Use Azure Linux Auto Repair (ALAR) to fix a Linux VM - initrd option](/troubleshoot/azure/virtual-machines/repair-linux-vm-using-alar#initrd).
+1. Create a repair VM by running the following Bash command line with [Azure Cloud Shell](/azure/cloud-shell/overview). For more information, see [Use Azure Linux Auto Repair (ALAR) to fix a Linux VM - initrd option](repair-linux-vm-using-ALAR.md#initrd).
 
     ```azurecli
     az vm repair create --verbose -g $RGNAME -n $VMNAME --repair-username rescue --repair-password 'password!234' --copy-disk-name repairdiskcopy
@@ -328,7 +329,7 @@ Before rebooting a server, we recommend validating the GRUB configuration and `/
         > [!IMPORTANT]
         > Replace `5.4.0-1077-azure` with the corresponding kernel version.
 
-3. Regenerate the GRUB configuration file. Follow the instructions in [Reinstall GRUB and regenerate GRUB configuration file](/troubleshoot/azure/virtual-machines/troubleshoot-vm-boot-error#reinstall-grub-regenerate-grub-configuration-file) for the corresponding Linux distribution and VM generation
+3. Regenerate the GRUB configuration file. Follow the instructions in [Reinstall GRUB and regenerate GRUB configuration file](troubleshoot-vm-boot-error.md#reinstall-grub-regenerate-grub-configuration-file) for the corresponding Linux distribution and VM generation
 
 4. If the steps above are performed from a repair VM, follow step 3 in [Offline troubleshooting](#offline-troubleshooting). If the steps above are performed from the Azure Serial console, follow the [Online troubleshooting](#online-troubleshooting) method.
 
@@ -743,7 +744,7 @@ To update the system and apply the latest available changes, run one of the foll
     apt upgrade
     ```
 
-Kernel panics might be related to any of the following items. For more information, see [Kernel panics at run time](/troubleshoot/azure/virtual-machines/linux-kernel-panic-troubleshooting#scenario-2-kernel-panic-at-run-time).
+Kernel panics might be related to any of the following items. For more information, see [Kernel panics at run time](linux-kernel-panic-troubleshooting.md#scenario-2-kernel-panic-at-run-time).
 
 - Application workload changes.
 - Application development or application bugs.

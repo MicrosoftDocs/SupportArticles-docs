@@ -1,7 +1,7 @@
 ---
 title: Error (Provider load failure) when you add a node to a Failover Cluster
 description: Provides a solution to an error that occurs when you try to add a node to a Windows Server 2008-based Failover Cluster.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

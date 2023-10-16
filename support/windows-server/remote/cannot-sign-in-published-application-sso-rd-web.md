@@ -2,14 +2,12 @@
 title: Can't sign in to a published application with SSO through RD Web
 description: Helps resolve an issue in which you fail to sign in to a published application with single sign-on (SSO) through Remote Desktop Web (RD Web).
 ms.date: 06/16/2023
-author: v-lianna
-ms.author: v-lianna
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika, garymu
+ms.reviewer: kaushika, garymu, v-lianna
 ms.custom: sap:rdweb, csstroubleshoot
 ms.technology: windows-server-rds
 ---

@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 3178332
 
 After you run the `SFC /scannow` command in Windows 10, it detects a corrupted system file. The cbs.log file shows that %windir%\syswow64\opencl.dll is detected to be corrupted.
 
-For more information about how to analyze the `SFC /scannow` result, see [Analyze the log file entries that SFC.exe generates in Windows Vista](/troubleshoot/windows-client/deployment/analyze-sfc-program-log-file-entries).
+For more information about how to analyze the `SFC /scannow` result, see [Analyze the log file entries that SFC.exe generates in Windows Vista](analyze-sfc-program-log-file-entries.md).
 
 ## Resolution
 
@@ -36,4 +36,4 @@ Dism /online /cleanup-image /restorehealth
 
 ## Data collection
 
-If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

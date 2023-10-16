@@ -1,10 +1,9 @@
 ---
 title: Cumulative update 5 for SQL Server 2022 (KB5026806)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 5 (KB5026806).
-ms.date: 06/15/2023
+ms.date: 08/03/2023
 ms.custom: KB5026806
-author: Elena068
-ms.author: v-qianli2
+ms.reviewer: v-qianli2
 appliesto:
 - SQL Server 2022 on Windows
 - SQL Server 2022 on Linux
@@ -17,7 +16,7 @@ _Version:_ &nbsp; 16.0.4045.3
 
 ## Summary
 
-This article describes Cumulative Update package 5 (CU5) for Microsoft SQL Server 2022. This update contains 31 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 4, and it updates components in the following builds:
+This article describes Cumulative Update package 5 (CU5) for Microsoft SQL Server 2022. This update contains 32 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 4, and it updates components in the following builds:
 
 - SQL Server - Product version: **16.0.4045.3**, file version: **2022.160.4045.3**
 - Analysis Services - Product version: **16.0.43.218**, file version: **2022.160.43.218**
@@ -41,6 +40,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="2400346">[2400346](#2400346)</a> | Fixes an issue where a hierarchy created in Master Data Services (MDS) doesn't expand correctly (on both the **Edit Derived Hierarchy** page and the **Hierarchy** page in the Explorer area). | Master Data Services | Master Data Services | Windows |
 | <a id="2400389">[2400389](#2400389)</a> | Adds an option for the Master Data Services (MDS) configuration tool to decide whether to enable the **PerformanceImprovementEnable** performance improvement setting. |Master Data Services | Master Data Services | Windows|
 | <a id="2400415">[2400415](#2400415)</a> | Fixes the following error that you may encounter when selecting any cell of a domain-based attribute column that has a different name and display name in a Master Data Services (MDS) entity and then selecting the drop-down arrow: </br></br>The current cell column title was not found. If the column title was changed, close the sheet and try again. | Master Data Services | Master Data Services | Windows |
+| <a id="2342416">[2342416](#2342416)</a>| Adds the `sp_validate_certificate_ca_chain` stored procedure for checking the validity of the certificate chain used for certificate-based authentication on endpoints of Service Broker, availability groups, and Managed Instance link. | SQL Server Engine | Security infrastructure| All |
 | <a id="2384656">[2384656](#2384656)</a>| Updates the support for predicate pushdown when filtering on the `session_id` column of the `sys.dm_exec_connections` dynamic management view (DMV). | SQL Connectivity | SQL Connectivity| All |
 | <a id="2396496">[2396496](#2396496)</a> | Fixes a network socket crash that affects SQL connectivity during a large number of connections. |SQL Connectivity |SQL Connectivity | Linux |
 | <a id="2402260">[2402260](#2402260)</a> | Updates the version of the Microsoft ODBC driver to 17.10.4.1. For more information, see [Release Notes for Microsoft ODBC Driver for SQL Server on Windows](/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows). | SQL Connectivity | SQL Connectivity | Windows |
@@ -62,7 +62,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="2371755">[2371755](#2371755)</a> | Fixes a dump issue where the Cardinality Estimation (CE) feedback validation flag is set on statements that come after the statement analyzed by CE Feedback within a batch. | SQL Server Engine | Query Optimizer | All |
 | <a id="2320880">[2320880](#2320880)</a> | Fixes an issue where applying an update on a secondary replica or performing an in-place upgrade fails when the distribution database is in an availability group. The following error is returned: </br></br>Error: There was an error executing the Replication upgrade scripts. See the SQL Server error log for details. </br></br>You can see the following error details in the SQL Server error log: </br></br>Executing sp_vupgrade_replication. </br>Could not open distribution database distribution because it is offline or being recovered. Replication settings and system objects could not be upgraded. Be sure this database is available and run sp_vupgrade_replication again. | SQL Server Engine | Replication | Windows |
 | <a id="2357336">[2357336](#2357336)</a> | Fixes an issue that you encounter in the following scenario: </br></br>- A SQL Server 2017 instance is configured as the Publisher, and a SQL Server 2022 instance is configured as the Distributor. </br></br>- The Publication database is configured as a part of an availability group. </br></br>In this configuration, the Log Reader Agent fails together with the following error: </br></br>\<DateTime> Status: 0, code: 20011, text: 'The process could not execute 'sp_replcmds' on 'publisherserver'. </br>\<DateTime> Status: 0, code: 18751, text: 'sp_replcmds procedure was called with the wrong number of parameters.'. | SQL Server Engine | Replication | Windows |
-| <a id="2351584">[2351584](#2351584)</a> | Fixes an issue where high `PREEMPTIVE_OS_QUERYREGISTRY` waits occur. | SQL Server Engine | Security Infrastructure | Windows |
+| <a id="2351584">[2351584](#2351584)</a> | Fixes an issue where high PREEMPTIVE_OS_QUERYREGISTRY waits occur. To apply this fix, you need to turn on trace flag 12502, which is used to disable external authorization policies for on-premises SQL Server instances. | SQL Server Engine | Security Infrastructure | Windows |
 | <a id="2401498">[2401498](#2401498)</a> | Consider the following scenario: </br></br>- You connect to SQL Server as user A. </br></br>- In the meantime, user B's password is changed in the background. </br></br>In this scenario, the following error may occur when you create a database and then try to use it: </br></br>Msg 916, Level 14, State 2, Line \<LineNumber> </br>The server principal "\<LoginName>" is not able to access the database "\<DatabaseName>" under the current security context. | SQL Server Engine | Security Infrastructure | All |
 | <a id="2429240">[2429240](#2429240)</a> | Fixes an issue where upgrading to SQL Server 2022 database mirroring fails and returns the following errors: </br></br>Error: 37526, Severity: 16, State: 1. </br>A ledger table cannot be created while database mirroring is enabled. </br></br>Error: 928, Severity: 20, State: 1. </br>During upgrade, database raised exception 3602, severity 25, state 51, address 00007FFFC67A3614. Use the exception number to determine the cause. | SQL Server Engine | Security Infrastructure | Windows |
 | <a id="2357203">[2357203](#2357203)</a> | Fixes an issue where the following error occurs when you try to manually enter the product key while configuring SQL Server by using the command `/opt/mssql/bin/mssql-conf setup` or `sudo /opt/mssql/bin/sqlservr --pid XXXXX-XXXXX-XXXXX-XXXXX-XXXXX`: </br></br>The provided PID [XXXXX-XXXXX-XXXXX-XXXXX-XXXXX] is invalid.The PID must be in the form #####-#####-#####-#####-##### where '#' is a number or letter. | SQL Server Engine | SQL Agent | Linux |

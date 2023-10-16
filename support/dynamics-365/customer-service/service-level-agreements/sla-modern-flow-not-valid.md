@@ -1,8 +1,8 @@
 ---
 title: SLA modern flow is not valid for ExecuteWorkflow error
 description: Provides a resolution for the Modern flow is not valid for ExecuteWorkflow error.
-ms.reviewer: sdas
-ms.author: ravimanne
+ms.reviewer: sdas, ankugupta
+ms.author: sdas
 ms.date: 06/09/2023
 ---
 # "Modern flow is not valid for ExecuteWorkflow" error

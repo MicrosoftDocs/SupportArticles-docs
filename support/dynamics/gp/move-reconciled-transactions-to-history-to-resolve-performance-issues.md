@@ -53,4 +53,4 @@ Transactions you selected will move to historical tables as follows:
 
 ## References
 
-For more information, see [Microsoft Dynamics GP 2016 R2 - Bank Reconciliation - Reconciled Transaction Maintenance](https://community.dynamics.com/gp/b/dynamicsgp/posts/microsoft-dynamics-gp-2016-r2-bank-reconciliation-reconciled-transaction-maintenance).
+For more information, see [Microsoft Dynamics GP 2016 R2 - Bank Reconciliation - Reconciled Transaction Maintenance](https://community.dynamics.com/blogs/post/?postid=6692ee70-d3b4-4267-86d8-575e021cb4ae).

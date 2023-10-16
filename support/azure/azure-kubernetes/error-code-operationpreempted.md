@@ -1,11 +1,9 @@
 ---
 title: Troubleshoot the OperationPreempted error code
 description: Learn how to troubleshoot the OperationPreempted error when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
-ms.date: 3/10/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
+ms.date: 03/10/2022
 editor: v-jsitser
-ms.reviewer: rissing, chiragpa, erbookbi
+ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-create-operations
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the OperationPreempted error code so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.

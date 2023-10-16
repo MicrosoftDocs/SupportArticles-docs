@@ -1,12 +1,9 @@
 ---
 title: Azure Files performance troubleshooting - creating alerts
 description: Troubleshoot performance issues with SMB Azure file shares by receiving alerts if a share is being throttled or is about to be throttled.
-author: khdownie
-ms.service: storage
-ms.topic: troubleshooting
+ms.service: azure-file-storage
 ms.date: 06/26/2023
-ms.author: kendownie
-ms.subservice: files
+ms.reviewer: kendownie
 #Customer intent: As a system admin, I want to troubleshoot performance issues with Azure file shares to improve performance for applications and users.
 ---
 # Troubleshoot Azure Files by creating alerts

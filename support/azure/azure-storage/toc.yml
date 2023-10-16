@@ -19,7 +19,8 @@
     href: files-troubleshoot-linux-smb.md
   - name: Troubleshoot general NFS issues on Linux
     href: files-troubleshoot-linux-nfs.md
-
+  - name: Troubleshoot ClientOtherErrors (SMB)
+    href: files-client-other-errors.md
 - name: Azure File Sync
   items:
   - name: Troubleshoot Azure File Sync

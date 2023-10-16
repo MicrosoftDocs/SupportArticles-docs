@@ -2,14 +2,12 @@
 title: Issues after Autoplay is disabled in Group Policy
 description: Describes issues after Autoplay is disabled in Group Policy, and provides the resolutions.
 ms.date: 06/07/2023
-author: v-lianna
-ms.author: v-lianna
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
-ms.reviewer: kaushika, warrenw, kimberj, olturcio
+ms.reviewer: kaushika, warrenw, kimberj, olturcio, v-lianna
 ms.custom: sap:desktop-shell, csstroubleshoot
 ms.technology: windows-client-shell-experience
 ---

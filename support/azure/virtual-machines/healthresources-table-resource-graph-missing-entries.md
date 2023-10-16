@@ -1,11 +1,9 @@
 ---
 title: HealthResources table in Resource Graph has missing entries
 description: Understand how to react to a scenario in which the HealthResources table in Azure Resource Graph has missing entries.
-ms.date: 6/7/2023
-author: DennisLee-DennisLee
-ms.author: v-dele
+ms.date: 06/07/2023
 editor: v-jsitser
-ms.reviewer: macla, pudesira
+ms.reviewer: macla, pudesira, v-leedennis
 ms.service: virtual-machines
 ms.subservice: vm-health
 ---

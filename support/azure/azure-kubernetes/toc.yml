@@ -1,9 +1,6 @@
 - name: Welcome
   href: welcome-azure-kubernetes.yml
 
-- name: AKS cluster/node is in failed state
-  href: cluster-node-virtual-machine-failed-state.md
-
 - name: Troubleshoot create operations
   items:
   - name: Basic troubleshooting
@@ -46,7 +43,7 @@
     href: subnet-with-external-resources-cannot-be-used-by-other-resources.md
   - name: VMExtensionProvisioningTimeout error
     href: error-code-vmextensionprovisioningtimeout.md
-  - name: ZonalAllocationFailed or AllocationFailed error
+  - name: ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error
     href: error-code-zonalallocationfailed-allocationfailed.md
 
 - name: Troubleshoot upgrade operations
@@ -105,6 +102,11 @@
     href: aks-at-scale-troubleshoot-guide.md
   - name: Failed to fix node group sizes
     href: cluster-autoscaler-fails-to-scale.md
+
+- name: Troubleshoot Kubernetes control plane
+  items:
+  - name: Troubleshoot API server and etcd
+    href: troubleshoot-apiserver-etcd.md
 
 - name: Troubleshoot node not ready
   items:
@@ -174,6 +176,8 @@
 
 - name: Troubleshoot AKS cluster performance issues
   items:
+  - name: AKS cluster/node is in failed state
+    href: cluster-node-virtual-machine-failed-state.md
   - name: Identify nodes and containers consuming high CPU
     href: identify-high-cpu-consuming-containers-aks.md
   - name: Identify memory saturation in AKS clusters
@@ -199,6 +203,8 @@
     href: mountoptions-settings-azure-files.md
   - name: Slow attach and detach operations for an Azure Disk
     href: slow-attach-detach-operations-azure-disk.md
+  - name: Troubleshoot common Bring Your Own Key (BYOK) issues
+    href: troubleshoot-common-bring-your-own-key-issues.md
 
 - name: AKS common issues
   items:
@@ -218,6 +224,8 @@
     href: changing-property-imagereference-not-allowed.md
   - name: Cluster upgrading and scaling errors
     href: upgrading-or-scaling-does-not-succeed.md
+  - name: OperationIsNotAllowed errors
+    href: operationisnotallowed.md
   - name: '"Error from server: error dialing backend: dial tcp" messages'
     href: error-from-server-error-dialing-backend-dial-tcp.md
   - name: Errors using features that require virtual machine scale sets
@@ -226,6 +234,8 @@
     href: insufficientsubnetsize-error-advanced-networking.md
   - name: Memory saturation occurs in pods after cluster upgrade
     href: aks-memory-saturation-after-upgrade.md
+  - name: Increased memory usage reported in Kubernetes 1.25 or later versions
+    href: aks-increased-memory-usage-cgroup-v2.md
   - name: Missing or invalid service principal
     href: missing-or-invalid-service-principal.md
   - name: Network watch is stale after egress traffic restriction

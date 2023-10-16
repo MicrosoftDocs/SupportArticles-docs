@@ -26,7 +26,7 @@ items:
     href: application-request-routing/affinity-not-honored-ssl-common-names-arr.md
   - name: Troubleshooting cache items in ARR version 2.0 or later
     href: application-request-routing/troubleshooting-cache-items-arr-v2-or-later.md
-  - name: Troubleshooting 502 Errors in ARR
+  - name: Troubleshooting 502 errors in ARR
     href: application-request-routing/troubleshooting-502-errors-in-arr.md
 
 - name: Development
@@ -111,11 +111,6 @@ items:
     href: iisadmin-service-inetinfo/processor-affinity-not-work.md
   - name: Set multiple site bindings and SSL
     href: iisadmin-service-inetinfo/ssl-multiple-web-sites-shared-configuration.md
-
-- name: IIS Extensions, Tools, and Add-Ons
-  items:
-  - name: Troubleshooting problems with Microsoft Web Platform Installer
-    href: iis-extensions-tools-addons/troubleshooting-problems-with-microsoft-web-platform-installer.md
 
 - name: Site behavior and performance
   items:

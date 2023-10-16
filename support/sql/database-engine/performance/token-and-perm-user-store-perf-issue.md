@@ -4,8 +4,7 @@ description: This article helps you resolve performance issues that occur in the
 ms.date: 09/21/2022
 ms.custom: sap:Performance
 ms.topic: troubleshooting
-author: ramakoni1
-ms.author: v-jayaramanp
+ms.reviewer: ramakoni, v-jayaramanp
 ---
 
 # Queries take longer to finish when the size of the TokenAndPermUserStore cache grows in SQL Server

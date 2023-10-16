@@ -2,11 +2,10 @@
 title: Troubleshoot Azure File Sync
 description: Troubleshoot common issues that you might encounter with Azure File Sync, which you can use to transform Windows Server into a quick cache of your Azure file share.
 author: khdownie
-ms.service: storage
+ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 06/25/2023
+ms.date: 08/29/2023
 ms.author: kendownie
-ms.subservice: files 
 ---
 # Troubleshoot Azure File Sync
 
@@ -16,23 +15,63 @@ You can use Azure File Sync to centralize your organization's file shares in Azu
 - [Azure Community Feedback](https://feedback.azure.com/d365community/forum/a8bb4a47-3525-ec11-b6e6-000d3a4f0f84?c=c860fa6b-3525-ec11-b6e6-000d3a4f0f84).
 - Microsoft Support. To create a new support request, in the Azure portal, on the **Help** tab, select the **Help + support** button, and then select **New support request**.
 
-## I'm having an issue with Azure File Sync on my server (sync, cloud tiering, etc.). Should I remove and recreate my server endpoint?
+## Common troubleshooting documentation
 
-No: removing a server endpoint isn't like rebooting a server! Removing and recreating the server endpoint is almost never an appropriate solution to fixing issues with sync, cloud tiering, or other aspects of Azure File Sync. Removing a server endpoint is a destructive operation. It may result in data loss in the case that tiered files exist outside of the server endpoint namespace. For more information, see [why do tiered files exist outside of the server endpoint namespace](/azure/storage/files/storage-files-faq#afs-tiered-files-out-of-endpoint). Or it may result in inaccessible files for tiered files that exist within the server endpoint namespace. These issues won't resolve when the server endpoint is recreated. Tiered files may exist within your server endpoint namespace even if you never had cloud tiering enabled. That's why we recommend that you don't remove the server endpoint unless you would like to stop using Azure File Sync with this particular folder or have been explicitly instructed to do so by a Microsoft engineer. For more information on remove server endpoints, see [Remove a server endpoint](/azure/storage/file-sync/file-sync-server-endpoint-delete).
+Based on the issue you're experiencing, review the appropriate troubleshooting documentation:
+
+|Issues|Troubleshooting documentation|
+|---|---|
+|Agent installation or server registration issues|[Troubleshoot Azure File Sync agent installation and server registration](file-sync-troubleshoot-installation.md)|
+|Cloud endpoint or server endpoint creation issues, or the registered server is offline|[Troubleshoot Azure File Sync sync group management](file-sync-troubleshoot-sync-group-management.md)|
+|Server endpoint has an error status, or files fail to sync|[Troubleshoot Azure File Sync sync health and errors](file-sync-troubleshoot-sync-errors.md)|
+|Files fail to tier or recall|[Troubleshoot Azure File Sync cloud tiering](file-sync-troubleshoot-cloud-tiering.md)|
+
+If you're unsure where to start, see [General troubleshooting first steps](#general-troubleshooting-first-steps).
 
 ## General troubleshooting first steps
 
-If you encounter issues with Azure File Sync on a server, start by completing the following steps:
+If you're experiencing issues with Azure File Sync, start by completing the following steps:
 
-1. In Event Viewer, review the telemetry, operational, and diagnostic event logs.
-    - Sync, tiering, and recall issues are logged in the telemetry, diagnostic, and operational event logs under *Applications and Services\Microsoft\FileSync\Agent*.
-    - Issues related to managing a server (for example, configuration settings) are logged in the operational and diagnostic event logs under *Applications and Services\Microsoft\FileSync\Management*.
+1. Check for any errors using the Azure portal or event logs on the server. For information about how to view the health of your Azure File Sync environment by using the Azure portal or event logs, see [Monitor Azure File Sync](/azure/storage/file-sync/file-sync-monitoring#storage-sync-service).
 2. Verify the Azure File Sync service is running on the server:
     - Open the Services MMC snap-in and verify the Storage Sync Agent service (FileSyncSvc) is running.
-3. Verify the Azure File Sync filter drivers (*StorageSync.sys* and *StorageSyncGuard.sys*) are running:
+3. Verify the Azure File Sync filter drivers (*StorageSync.sys* and *StorageSyncGuard.sys*) are running on the server:
     - At an elevated command prompt, run `fltmc`. Verify the *StorageSync.sys* and *StorageSyncGuard.sys* file system filter drivers are listed.
+4. Use the [Debug-StorageSyncServer cmdlet](#debug-storagesyncserver-cmdlet) on the server to check for common issues.
 
-If the issue isn't resolved, run the AFSDiag tool and send its .zip file output to the support engineer assigned to your case for further diagnosis.
+### Debug-StorageSyncServer cmdlet
+
+The `Debug-StorageSyncServer` cmdlet will diagnose common issues on the Azure File Sync server, such as certificate misconfiguration and incorrect server time. We've also simplified Azure File Sync troubleshooting by merging the functionality of some existing scripts and cmdlets (*AFSDiag.ps1*, *FileSyncErrorsReport.ps1*, and `Test-StorageSyncNetworkConnectivity`) into the `Debug-StorageSyncServer` cmdlet.
+ 
+To run diagnostics on the server, run the following PowerShell commands:
+
+```powershell
+Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"
+Debug-StorageSyncServer -Diagnose
+```
+To test the network connectivity on the server, run the following PowerShell commands:
+```powershell
+Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"
+Debug-StorageSyncServer -TestNetworkConnectivity
+```
+
+To identify files that fail to sync on the server, run the following PowerShell commands:
+
+```powershell
+Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"
+Debug-StorageSyncServer -FileSyncErrorsReport
+```
+
+To collect logs and traces on the server, run the following PowerShell commands:
+
+```powershell
+Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"
+Debug-StorageSyncServer -AFSDiag -OutputDirectory C:\output -KernelModeTraceLevel Verbose -UserModeTraceLevel Verbose
+```
+
+## How to collect logs and traces on the Azure File Sync server
+
+If your issue isn't resolved after following the steps in the troubleshooting documentation, run the AFSDiag tool and send its .zip file output to the support engineer assigned to your case for further diagnosis.
 
 To run AFSDiag, perform the steps below:
 
@@ -42,24 +81,12 @@ To run AFSDiag, perform the steps below:
     > AFSDiag will create the output directory and a temp folder within it prior to collecting logs and will delete the temp folder after execution. Specify an output location which does not contain data.
 
     ```powershell
-    cd "c:\Program Files\Azure\StorageSyncAgent"
-    Import-Module .\afsdiag.ps1
-    Debug-AFS -OutputDirectory C:\output -KernelModeTraceLevel Verbose -UserModeTraceLevel Verbose
+    Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"
+    Debug-StorageSyncServer -AFSDiag -OutputDirectory C:\output -KernelModeTraceLevel Verbose -UserModeTraceLevel Verbose
     ```
 
 2. Reproduce the issue. When you finish, enter *D*.
 3. A .zip file that contains logs and trace files is saved to the output directory that you specified.
-
-## Common troubleshooting subject areas
-
-For more detailed information, choose the subject area that you'd like to troubleshoot.
-
-- [Agent installation and server registration issues](file-sync-troubleshoot-installation.md)
-- [Sync group management (including cloud endpoint and server endpoint creation)](file-sync-troubleshoot-sync-group-management.md)
-- [Sync errors](file-sync-troubleshoot-sync-errors.md)
-- [Cloud tiering issues](file-sync-troubleshoot-cloud-tiering.md)
-
-Some issues can be related to more than one subject area.
 
 ## See also
 

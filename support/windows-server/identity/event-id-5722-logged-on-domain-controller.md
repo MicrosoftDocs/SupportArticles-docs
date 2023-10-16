@@ -1,7 +1,7 @@
 ---
 title: Event ID 5722 is logged
 description: Describes how to diagnose and resolve a problem where event 5722 appears in the system log of your domain controller.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -76,7 +76,7 @@ To resolve this problem, first determine which scenario is the cause of the prob
     > [!NOTE]
     > ADSI Edit is included with the Windows Support Tools. You can install the Windows Support Tools from the Support\Tools folder of the Windows 2000 Server CD-ROM.
 
-     To install ADSI Edit on computers running Windows Server® 2003 or Windows® XP operating systems, install Windows Server 2003 Support Tools from the Windows Server 2003 product CD or from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=100114). For more information about how to install Windows Support Tools from the product CD, see [Install Windows Support Tools](https://go.microsoft.com/fwlink/?linkid=62270).
+     To install ADSI Edit on computers running Windows Server® 2003 or Windows® XP operating systems, install Windows Server 2003 Support Tools from the Windows Server 2003 product CD. For more information about how to install Windows Support Tools from the product CD, see [Install Windows Support Tools](https://go.microsoft.com/fwlink/?linkid=62270).
   
     On servers running Windows Server 2008 or Windows Server 2008 R2, ADSI Edit is installed when you install the Active Directory Domain Services (AD DS) role to make a server a domain controller. You can also install Windows Server 2008 Remote Server Administration Tools (RSAT) on domain member servers or stand-alone servers. For specific instructions, see [Installing or Removing the Remote Server Administration Tools Pack](https://go.microsoft.com/fwlink/?linkid=143345).
 

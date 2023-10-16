@@ -5,7 +5,7 @@ ms.date: 05/22/2020
 ms.reviewer: willfid
 ms.service: active-directory
 ms.subservice: enterprise-users
-ms.custom: devx-track-azurepowershell
+ms.custom:
 ---
 # Error when you try to install Azure Active Directory Module for Windows PowerShell: You must have Windows PowerShell 2.0 or greater installed
 

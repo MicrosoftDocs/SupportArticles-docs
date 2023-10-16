@@ -2,12 +2,10 @@
 title: Troubleshoot Azure Files SMB connectivity and access issues
 description: Troubleshoot problems connecting to and accessing SMB Azure file shares from Windows and Linux clients, and see possible resolutions.
 services: storage
-ms.subservice: files
-author: AmandaAZ
-ms.service: storage
-ms.date: 06/26/2023
-ms.author: v-weizhu
-ms.reviewer: kendownie, jarrettr
+ms.service: azure-file-storage
+ms.custom: devx-track-azurepowershell
+ms.date: 07/31/2023
+ms.reviewer: kendownie, jarrettr, v-weizhu
 ---
 # Troubleshoot Azure Files connectivity and access issues (SMB)
 
@@ -91,7 +89,7 @@ $resourceGroupName = "<your-resource-group-name>"
 $storageAccountName = "<your-storage-account-name>"
 
 # This command requires you to be logged into your Azure account and set the subscription your storage account is under, run:
-# Connect-AzAccount -SubscriptionId ‘xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx’
+# Connect-AzAccount -SubscriptionId 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'
 # if you haven't already logged in.
 $storageAccount = Get-AzStorageAccount -ResourceGroupName $resourceGroupName -Name $storageAccountName
 
@@ -283,6 +281,10 @@ If you can't upgrade to the latest kernel versions, you can work around this pro
 ---
 
 ## Unable to access, modify, or delete an Azure file share (or share snapshot)
+
+### "The user name or password is incorrect" error after a customer-initiated failover
+
+In a customer-initiated failover scenario with geo-redundant storage accounts, file handles and leases aren't retained on failover. Clients must unmount and remount the file shares.
 
 ### <a id="noaaccessfailureportal"></a>Error "No access" when you try to access or delete an Azure file share
 

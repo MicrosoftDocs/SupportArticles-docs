@@ -392,8 +392,8 @@
       href: ./identity/troubleshoot-high-lsass.exe-cpu-utilization.md
     - name: Issues when AD replication and Netlogon RPCs request backlog values are exceeded
       href: ./identity/issues-ad-replication-netlogon-rpcs-request-backlog-values-exceeded.md
-    - name: LDAP and Kerberos servers reset TCP sessions
-      href: ./identity/ldap-kerberos-server-reset-tcp-sessions.md
+    - name: LDAP and Kerberos servers not respond to UDP requests or reset TCP sessions
+      href: ./identity/ldap-kerberos-server-not-respond-udp-request-reset-tcp-sessions.md
     - name: Performance issues after you upgrade DCs
       href: ./identity/dc-delayed-response-to-ldap-kerberos-request.md
     - name: Use Event1644Reader.ps1 to analyze LDAP query performance
@@ -1092,6 +1092,8 @@
       href: ./deployment/mdt-media-deployment-isnt-bootable.md
     - name: Microsoft Deployment Toolkit support life cycle
       href: ./deployment/deployment-toolkit-support.md
+    - name: Mitigation for AMD Family 17h Models 30h-3Fh/Rome Erratum 1474
+      href: ./deployment/mitigation-for-amd-family-17h-models-30h-3fh-rome-erratum-1474.md
     - name: Post-Deployment Configuration task fails
       href: ./deployment/post-deployment-configuration-task-fail.md
     - name: Setup fails on a VM with error 0xE0000100
@@ -1436,6 +1438,8 @@
       href: ./high-availability/smb-features-dont-work-non-default-cluster-network-name-configuration.md
     - name: Third-party storage software solutions support policy
       href: ./high-availability/3rd-party-storage-software-solutions-support.md
+    - name: Troubleshoot issues with accounts used by failover clusters
+      href: ./high-availability/troubleshoot-issues-accounts-used-failover-clusters.md      
     - name: Unexpected warning messages in a virtualized failover cluster
       href: ./high-availability/errors-windows-failover-cluster-run-as-guest.md
     - name: Use Windows Server cluster nodes as DCs
@@ -2190,8 +2194,6 @@
       href: ./remote/deny-user-permissions-to-logon-to-rd-session-host.md
     - name: Error 2147944102 when you start BITS service
       href: ./remote/service-specific-error-code-2147944102.md
-    - name: Fair Share is enabled by default in RDS
-      href: ./remote/fair-share-enabled-by-default-in-rds.md
     - name: How to add a user to Terminal Services RDP permissions
       href: ./remote/add-user-services-rdp-permissions.md
     - name: How to enable Windows Remote Shell
@@ -2400,7 +2402,7 @@
       href: ./remote/rds-client-not-connect-to-rd-session-host-server.md
     - name: Remote Desktop Connection 6.0 prompts for credentials
       href: ./remote/remote-desktop-connection-6-prompts-credentials.md
-    - name: Remote Desktop IP Virtualization does not work
+    - name: Remote Desktop IP Virtualization
       href: ./remote/remote-desktop-ip-virtualization.md
     - name: Remote Desktop or RemoteApp session doesn't terminate
       href: ./remote/rd-or-remoteapp-session-not-terminate.md
@@ -3076,15 +3078,15 @@
     href: ./windows-server-eos-faq/end-of-support-windows-server-2008-2008r2.yml
 - name: Windows Troubleshooters
   items:
-  - name: TroubleShootingScript toolset (TSSv2)
+  - name: TroubleShootingScript toolset (TSS)
     items:
-    - name: Introduction to TroubleShootingScript toolset (TSSv2)
-      href: ../windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2.md?context=/troubleshoot/windows-server/context/context
+    - name: Introduction to TroubleShootingScript toolset (TSS)
+      href: ../windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tss.md?context=/troubleshoot/windows-server/context/context
     - name: Gather information for Active Directory replication issues
-      href: ../windows-client/windows-troubleshooters/gather-information-using-tssv2-ad-replication.md?context=/troubleshoot/windows-server/context/context
+      href: ../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md?context=/troubleshoot/windows-server/context/context
     - name: Gather information for deployment-related issues
-      href: ../windows-client/windows-troubleshooters/gather-information-using-tssv2-deployment.md?context=/troubleshoot/windows-server/context/context
+      href: ../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md?context=/troubleshoot/windows-server/context/context
     - name: Gather information for Group Policy issues
-      href: ../windows-client/windows-troubleshooters/gather-information-using-tssv2-group-policy.md?context=/troubleshoot/windows-server/context/context
+      href: ../windows-client/windows-troubleshooters/gather-information-using-tss-group-policy.md?context=/troubleshoot/windows-server/context/context
     - name: Gather information for user experience-related issues
-      href: ../windows-client/windows-troubleshooters/gather-information-using-tssv2-user-experience.md?context=/troubleshoot/windows-server/context/context
+      href: ../windows-client/windows-troubleshooters/gather-information-using-tss-user-experience.md?context=/troubleshoot/windows-server/context/context

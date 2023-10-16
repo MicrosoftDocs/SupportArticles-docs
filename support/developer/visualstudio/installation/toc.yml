@@ -1,84 +1,94 @@
-- name: Troubleshoot installation and upgrade issues
-  href: ./troubleshoot-installation-issues.md
-- name: Running Parallels on Mac may cause error 1606
-  href: ./error-1606-psf-folder.md
-- name: Visual Studio 2015 is stuck while installing KB2999226
-  href: ./stuck-installing-visual-studio-2015.md
-- name: Error - This update requires Visual Studio 2015 Update 3 to be installed
-  href: ./error-visual-studio-2015-update-3-to-be-installed.md
 - name: Can't find Visual Studio 2015 on the Start menu
   href: ./not-finding-start-menu-visual-studio.md
+- name: Can't find Windows 10 developer tools
+  href: ./cant-find-win-10-developer-tools-vs-2015.md
+- name: Can't install VS Admin updates through SCCM and WSUS
+  href: ./unable-install-vs-admin-updates-sccm-wsus.md
+- name: Can't update Visual Studio using the Help menu
+  href: ./unable-update-using-help-menu.md
+- name: Description of Visual Studio 2012 Update 4
+  href: ./visual-studio-2012-update-4.md
+- name: Error message for installing an additional language pack
+  href: ./error-installing-additional-language-pack.md
 - name: Error - Microsoft Visual Studio Enterprise is required
   href: ./vs-enterprise-required-error.md
 - name: Error - Microsoft Visual Studio Professional is required
   href: ./ms-visual-studio-not-installed.md
 - name: Error - No Internet connection detected on this machine
   href: ./error-no-internet-connection.md
-- name: Error - There is not enough space on the disk
-  href: ./error-not-enough-space-on-disk.md
 - name: Error - Please restart the computer and run setup again
   href: ./error-restart-computer-and-run-setup.md
-- name: Error message for installing an additional language pack
-  href: ./error-installing-additional-language-pack.md
 - name: Error - Product version that is being installed is old
   href: ./error-product-version-is-old.md
-- name: The trial will expire after you sign in to the IDE
-  href: ./sign-into-ide-trial-expire.md
-- name: Wait for setup to finish before trying again
-  href: ./another-setup-already-running-wait-finish.md
-- name: Windows Program Compatibility mode is on
-  href: ./windows-program-compatibility-mode-on.md
-- name: Visual Studio requires a newer version of Windows
-  href: ./visual-studio-requires-computer-newer-version-windows.md
-- name: The version of Visual Studio requires the April 2014 update
-  href: ./visual-studio-requires-computer-newer-version-windows.md
-- name: The specified program requires a newer version of Windows
-  href: ./specified-program-requires-newer-version-windows.md
-- name:  We recommend you close Visual Studio now before setup continues
-  href: ./we-recommend-you-close-visual-studio.md
-- name:  The installation hangs when you try to install a KB update
-  href: ./installation-hangs-install-kb-update.md
-- name:  Update requires a member to be present or is blocked by another condition
-  href: ./member-visual-studio-family-present.md
+- name: Error - There is not enough space on the disk
+  href: ./error-not-enough-space-on-disk.md
+- name: Error - This update requires Visual Studio 2015 Update 3 to be installed
+  href: ./error-visual-studio-2015-update-3-to-be-installed.md
+- name: Error when testing or deploying a minimal layout
+  href: ./error-test-deploy-minimal-layout.md
+- name: Fail to install Web Deploy 3.0
+  href: ./web-deploy-issue-visual-studio-2012.md
 - name: Fix DIA SDK install location
   href: ./fix-dia-sdk-install-location.md
 - name: Install Windows SDK 7.1 in Silent Mode
   href: ./install-windows-sdk-silent-mode.md
+- name: Installer fails to perform repair or update
+  href: ./installer-fails-perform-repair-update.md
+- name: Invalid entries passed to switch
+  href: ./invalid-entries-passed-switch.md
 - name: Issues and workarounds in Visual Studio setup
   href: ./issues-workarounds-visual-studio-setup.md
-- name: MsiApplyMultiplePatches returns 1601 error
-  href: ./msiapplymultiplepatches-error-1601.md
 - name: Known issues for Visual Studio 2012 and updates
   href: ./known-issues-visual-studio-2012-update.md
-- name: Uninstall third-party applications in Visual Studio 2015
-  href: ./secondary-installer-third-party-app.md
-- name: Setup crashes due to certain fonts
-  href: ./fonts-cause-setup-crash.md
-- name: Uninstall Visual Studio 2012
-  href: ./uninstall-visual-studio-2012.md
-- name: Visual Studio 2015 and 2013 features doesn't work
-  href: ./visual-studio-2015-2013-feature-not-work.md
-- name: Windows Installer may display inaccurate progress
-  href: ./windows-installer-display-inaccurate-progress.md
-- name: Fail to install Web Deploy 3.0
-  href: ./web-deploy-issue-visual-studio-2012.md
-- name: Description of Visual Studio 2012 Update 4
-  href: ./visual-studio-2012-update-4.md
 - name: Known issues when you install Release Management
   href: ./release-management-installation-issues.md
-- name: Visual Studio 2013 known issues
-  href: ./known-issues-visual-studio-2013.md
-- name: Warnings about an untrusted certificate
-  href: ./warnings-untrusted-certificate.md
-- name: Can't find Windows 10 developer tools
-  href: ./cant-find-win-10-developer-tools-vs-2015.md
-- name: Visual Studio requires the April 2014 update
-  href: ./version-visual-studio-requires-april-2014-update.md
+- name: MsiApplyMultiplePatches returns 1601 error
+  href: ./msiapplymultiplepatches-error-1601.md
+- name: Network or proxy errors
+  href: ./troubleshoot-network-related-errors.md
+- name: Running Parallels on Mac may cause error 1606
+  href: ./error-1606-psf-folder.md
+- name: Setup crashes due to certain fonts
+  href: ./fonts-cause-setup-crash.md
 - name: Some shortcut names still indicate preview
   href: ./issues-workarounds-visual-studio-2013-setup.md
 - name: SQL packages may fail in the local administrator account
   href: ./packages-fail-local-administrator-not-rights.md
-- name: Invalid entries passed to switch
-  href: ./invalid-entries-passed-switch.md
-- name: Network or proxy errors
-  href: ./troubleshoot-network-related-errors.md
+- name: The installation hangs when you try to install a KB update
+  href: ./installation-hangs-install-kb-update.md
+- name: The specified program requires a newer version of Windows
+  href: ./specified-program-requires-newer-version-windows.md
+- name: The trial will expire after you sign in to the IDE
+  href: ./sign-into-ide-trial-expire.md
+- name: The version of Visual Studio requires the April 2014 update
+  href: ./visual-studio-requires-computer-newer-version-windows.md
+- name: Troubleshoot installation and upgrade issues
+  href: ./troubleshoot-installation-issues.md
+- name: Uninstall third-party applications in Visual Studio 2015
+  href: ./secondary-installer-third-party-app.md
+- name: Uninstall Visual Studio 2012
+  href: ./uninstall-visual-studio-2012.md
+- name: Update deployed via Configuration Manager fails to install
+  href: ./update-deployed-via-configuration-manager-fails-install.md
+- name: Update requires a member to be present or is blocked by another condition
+  href: ./member-visual-studio-family-present.md
+- name: Visual Studio 2013 known issues
+  href: ./known-issues-visual-studio-2013.md
+- name: Visual Studio 2015 and 2013 features doesn't work
+  href: ./visual-studio-2015-2013-feature-not-work.md
+- name: Visual Studio 2015 is stuck while installing KB2999226
+  href: ./stuck-installing-visual-studio-2015.md
+- name: Visual Studio requires a newer version of Windows
+  href: ./visual-studio-requires-computer-newer-version-windows.md
+- name: Visual Studio requires the April 2014 update
+  href: ./version-visual-studio-requires-april-2014-update.md
+- name: Wait for setup to finish before trying again
+  href: ./another-setup-already-running-wait-finish.md
+- name: Warnings about an untrusted certificate
+  href: ./warnings-untrusted-certificate.md
+- name: We recommend you close Visual Studio now before setup continues
+  href: ./we-recommend-you-close-visual-studio.md
+- name: Windows Installer may display inaccurate progress
+  href: ./windows-installer-display-inaccurate-progress.md
+- name: Windows Program Compatibility mode is on
+  href: ./windows-program-compatibility-mode-on.md

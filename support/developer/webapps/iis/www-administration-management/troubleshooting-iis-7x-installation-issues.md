@@ -1,10 +1,8 @@
 ---
-title: Troubleshooting IIS 7.x installation problems by checking the log files.
-description: This article helps you troubleshoot IIS 7.x installation issues. 
+title: Troubleshooting IIS 7.x installation problems by checking the log files
+description: This article helps you troubleshoot IIS 7.x installation issues.
 ms.date: 04/09/2012
-author: padmajayaraman
-ms.author: v-jayaramanp
-ms.reviewer: puneetg, johnhart, senyum
+ms.reviewer: puneetg, johnhart, senyum, v-jayaramanp
 ms.topic: troubleshooting
 ---
 
@@ -20,7 +18,7 @@ The installation process does its own logging in the *IIS7.log* text file (typic
 
 Here is an example of an entry in *IIS7.log*:
 
-```Console
+```output
 [11/12/2010 19:48:13] [ ***** IIS 7.0 Component Based Setup ***** ] 
 [11/12/2010 19:48:13] "C:\Windows\System32\inetsrv\iissetup.exe" /install FTPServer 
 [11/12/2010 19:48:13] < !!FAIL!! > METABASE_UTIL::InstallFtpMetabaseEntries result=0x800708c5 
@@ -37,7 +35,7 @@ Try stopping all third party (non-Microsoft services from startup) services and 
 
 To quickly identify and disable these services:
 
-1. Go to **Start** menu and type "msconfig".
+1. Go to **Start** menu and type *msconfig*.
 1. In the **System Configuration** dialog box, go to the **Services** tab, and select the **Hide all Microsoft services** checkbox at the bottom.
 1. Disable all third party services that can be stopped without affecting the server's reboot. Usually, these are anti-virus software and backup software.
 
@@ -48,11 +46,11 @@ Another common but important step is to uninstall WPAS "Windows Process Activati
 
 ## Reviewing the CBS (Component based Setup) logs
 
-If *IIS7.log* is clean, then there's a good chance that the problem is with the CBS (Component based Setup) engine. CBS logs can be found at *C:\Windows\Logs\CBS folder*.
+If *IIS7.log* is clean, then there's a good chance that the problem is with the CBS (Component Based Setup) engine. CBS logs can be found at *C:\Windows\Logs\CBS folder*.
 
 Just like *IIS7.log* file, *CBS.log* file is a text file and can be opened using any text editor (You have to open this file from administrative command prompt). You can get some useful information from these logs by keeping the time frame of the installation failure in mind and searching for "Failure will not be ignored: A rollback will be initiated" string in the *CBS.log* file. Here's an example of one such instance.
 
-```Console
+```output
 2010-07-08 14:04:08, Info CSI 00000047 Calling generic command executable (sequence 2): [40]"C:\Windows\System32\inetsrv\iissetup.exe" CmdLine: [151]""C:\Windows\System32\inetsrv\iissetup.exe" /launch C:\Windows\System32\inetsrv\appcmd.exe reset config -section:system.applicationHost/listenerAdapters" 
 2010-07-08 14:04:08, Error CSI 00000048 (F) Done with generic command 2; CreateProcess returned 0, CPAW returned S_OK Process exit code 16386 (0x00004002) resulted in success? FALSE Process output: [l:22 [22]"Failed = 0x80004002"][gle=0x80004005] 
 2010-07-08 14:04:09, Info CSI 00000051@2010/7/8:18:04:09.688 CSI Advanced installer perf trace:CSIPERF:AIDONE; {81a34a10-4256-436a-89d6-794b97ca407c};Microsoft-Windows-IIS-SharedLibraries, Version = 6.1.7600.16385, pA = PROCESSOR_ARCHITECTURE_AMD64 (9), Culture neutral, VersionScope = 1 nonSxS, PublicKeyToken = {l:8 b:31bf3856ad364e35}, Type neutral, TypeName neutral, PublicKey Neutral;6148228 
@@ -78,7 +76,7 @@ Windows Resource Protection found corrupt files and successfully repaired
 them. Details are included in the CBS.Log windir\Logs\CBS\CBS.log. For example C:\Windows\Logs\CBS\CBS.log
 ```
 
-If this command reports errors that the tool cannot fix, you may see something like the following message. In this case, contact Microsoft support for assistance.
+If this command reports errors that the tool can't fix, you may see something like the following message. In this case, contact Microsoft Support for assistance.
 
 ```output
 Windows Resource Protection found corrupt files but was unable to fix some of them. 

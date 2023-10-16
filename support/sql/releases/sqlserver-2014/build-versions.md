@@ -5,8 +5,7 @@ ms.date: 10/12/2022
 ms.custom: KB2936603
 appliesto:
 - SQL Server 2014
-author: simonxjx
-ms.author: v-six
+ms.reviewer: v-six
 ---
 # KB2936603 - SQL Server 2014 build versions
 
@@ -16,7 +15,9 @@ This article lists the Microsoft SQL Server 2014 builds that were released after
 
 | Cumulative update name| Build version | Knowledge Base number | Release day |
 |-------------------------|---------------|-----------------------|-------------------|
-| SQL Server 2014 SP3 CU4 GDR| 12.0.6444.4 | [KB5021045](https://support.microsoft.com/help/5021045) | February 14, 2023 |
+| SQL Server 2014 SP3 CU4 + GDR| 12.0.6449.1 | [KB5029185](https://support.microsoft.com/help/5029185) | October 10, 2023 |
+| SQL Server 2014 SP3 GDR| 12.0.6179.1 | [KB5029184](https://support.microsoft.com/help/5029184) | October 10, 2023 |
+| SQL Server 2014 SP3 CU4 + GDR| 12.0.6444.4 | [KB5021045](https://support.microsoft.com/help/5021045) | February 14, 2023 |
 | SQL Server 2014 SP3 GDR| 12.0.6174.8 | [KB5021037](https://support.microsoft.com/help/5021037) | February 14, 2023 |
 | SQL Server 2014 SP3 CU4 + GDR| 12.0.6439.10 | [KB5014164](https://support.microsoft.com/help/5014164) | June 14, 2022 |
 | SQL Server 2014 SP3 GDR| 12.0.6169.19 | [KB5014165](https://support.microsoft.com/help/5014165) | June 14, 2022 |

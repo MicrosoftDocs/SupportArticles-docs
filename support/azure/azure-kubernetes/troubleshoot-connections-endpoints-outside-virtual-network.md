@@ -1,10 +1,8 @@
 ---
 title: Troubleshoot connections to endpoints outside the virtual network
 description: Troubleshoot connections to endpoints outside the virtual network (through the public internet) from an Azure Kubernetes Service (AKS) cluster.
-ms.date: 11/4/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
-ms.reviewer: chiragpa, rissing
+ms.date: 11/04/2022
+ms.reviewer: chiragpa, rissing, v-leedennis
 editor: v-jsitser
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-outbound-connections
@@ -134,7 +132,7 @@ If these remedies don't resolve the issue, analyze the process that does heavy r
 
 #### Is the source network address translation port exhausted?
 
-If applications are making many outbound connections, they may exhaust the number of available ports on the outbound device's IP address. Follow [Standard load balancer diagnostics with metrics, alerts, and resource health](/azure/load-balancer/load-balancer-standard-diagnostics) to monitor the usage and allocation of your existing load balancer’s [source network address translation (SNAT) port](/azure/load-balancer/load-balancer-outbound-connections#what-are-snat-ports). Monitor to verify or determine the risk of [SNAT port exhaustion](/azure/load-balancer/load-balancer-outbound-connections#port-exhaustion).
+If applications are making many outbound connections, they may exhaust the number of available ports on the outbound device's IP address. Follow [Standard load balancer diagnostics with metrics, alerts, and resource health](/azure/load-balancer/load-balancer-standard-diagnostics) to monitor the usage and allocation of your existing load balancer's [source network address translation (SNAT) port](/azure/load-balancer/load-balancer-outbound-connections#what-are-snat-ports). Monitor to verify or determine the risk of [SNAT port exhaustion](/azure/load-balancer/load-balancer-outbound-connections#port-exhaustion).
 
 Are you reaching or exceeding the maximum number of allocated SNAT ports? In that case, you can check your application to determine whether it's reusing existing connections. For more information, see [Design your applications to use connections efficiently](/azure/load-balancer/troubleshoot-outbound-connection#design-your-applications-to-use-connections-efficiently).
 

@@ -3,8 +3,7 @@ title: Cumulative update 20 for SQL Server 2019 (KB5024276)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 20 (KB5024276).
 ms.date: 06/30/2023
 ms.custom: KB5024276
-author: Elena068
-ms.author: v-qianli2
+ms.reviewer: v-qianli2
 appliesto:
 - SQL Server 2019 on Windows
 - SQL Server 2019 on Linux
@@ -102,7 +101,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="2204764">[2204764](#2204764)</a> | Fixes access violations and `INVALID_POINTER_READ_c0000005_sqlmin.dll!CProfileList::FGetPartitionSummaryXML` exceptions that you may encounter during the execution of `sys.dm_exec_query_plan_stats`. | SQL Server Engine | Query Execution | Windows |
 | <a id="2275387">[2275387](#2275387)</a> | Fixes an assertion failure (Location: bpctxt.cpp:129; Expression: 'm_cCreated < m_cMaxBatches') that you encounter when running window queries that have aggregate functions in batch mode. | SQL Server Engine | Query Execution | All |
 | <a id="2292999">[2292999](#2292999)</a> | Fixes an issue where running the `ALTER ASSEMBLY` command for a complex common language runtime (CLR) assembly can cause some of the other commands that are executed in parallel to time out. | SQL Server Engine | Query Execution | All |
-| <a id="2112485">[2112485](#2112485)</a> | Fixes an issue where the cardinality estimation (CE) uniformly increases after each `LEFT JOIN` or `RIGHT JOIN` combines, which causes overestimation. This fix adds a limitation to the CE when the join predicates are the primary keys of the tables that are involved. | SQL Server Engine | Query Optimizer | Windows |
+| <a id="2112485">[2112485](#2112485)</a> | Fixes an issue where the cardinality estimation (CE) uniformly increases after each `LEFT JOIN` or `RIGHT JOIN` combines, which causes overestimation. This fix adds a limitation to the CE when the join predicates are the primary keys of the tables that are involved. </br></br>**Note**: Trace flag 9440 will turn off the functionality provided by this fix for databases with a compatibility level of 160 and earlier. | SQL Server Engine | Query Optimizer | All |
 | <a id="2161795">[2161795](#2161795)</a> | Fixes an assertion failure (Location: purecall.cpp:51; Expression: !"purecall") that you encounter after you cancel a user-defined stored procedure that is still running. | SQL Server Engine | Query Optimizer | All |
 | <a id="2216357">[2216357](#2216357)</a> | Produces consistent results for statements that perform multiple updates to a variable when the query optimization hotfixes are enabled, such as `SELECT @sum = @sum + c FROM t`. | SQL Server Engine | Query Optimizer | All |
 | <a id="2264977">[2264977](#2264977)</a> | Fixes an issue that's caused by automatic parameterization of queries where interleaved execution of multi-statement table-valued functions (MSTVFs) may return incorrect results or cause a deadlock on the first execution. | SQL Server Engine | Query Optimizer | All |

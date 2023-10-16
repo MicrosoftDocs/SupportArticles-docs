@@ -1,7 +1,7 @@
 ---
 title: Limitations of $WinPeDriver$
 description: Describes limitations of $WinPeDriver$.
-ms.date: 04/28/2023
+ms.date: 09/01/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -319,7 +319,7 @@ If your requirement is to create a WinPE environment that loads out of box drive
 
 ## Data collection
 
-If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).
 
 ## References and Links
 
@@ -351,7 +351,7 @@ If you need assistance from Microsoft support, we recommend you collect the info
 
 - [Copype.cmd](/previous-versions/windows/embedded/ff794790(v=winembedded.60))
 
-- [Windows Automated Installation Kit (AIK) for Win7/2008r2](https://www.microsoft.com/download/en/details.aspx?displaylang=en&id=5753)
+- [Windows Automated Installation Kit (AIK) for Win7/2008r2](https://www.microsoft.com/download/en/details.aspx?id=5753)
 
 - [Windows OEM Preinstallation Kit (OPK)](https://www.microsoft.com/oem/en/downloads/pages/technical-downloads.aspx)
 

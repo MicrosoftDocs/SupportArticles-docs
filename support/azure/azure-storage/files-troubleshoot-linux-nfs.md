@@ -1,12 +1,9 @@
 ---
 title: Troubleshoot NFS file shares - Azure Files
 description: Troubleshoot issues with NFS Azure file shares.
-author: khdownie
-ms.service: storage
-ms.topic: troubleshooting
+ms.service: azure-file-storage
 ms.date: 06/26/2023
-ms.author: kendownie
-ms.subservice: files
+ms.reviewer: kendownie
 ---
 
 # Troubleshoot NFS Azure file shares

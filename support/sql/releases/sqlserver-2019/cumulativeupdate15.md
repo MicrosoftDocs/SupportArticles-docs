@@ -3,8 +3,7 @@ title: Cumulative Update 15 for SQL Server 2019 (KB5008996)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 15 (KB5008996).
 ms.date: 06/30/2023
 ms.custom: KB5008996
-author: Elena068
-ms.author: v-qianli2
+ms.reviewer: v-qianli2
 appliesto:
 - SQL Server 2019 on Windows
 - SQL Server 2019 on Linux
