@@ -49,6 +49,10 @@ Deleting the virtual machine scale set attached to the cluster causes the cluste
 
 You may receive scaling errors if you modify or delete Azure-created tags and other resource properties in the node resource group. For more information, see [Can I modify tags and other properties of the AKS resources in the node resource group?](/azure/aks/faq#can-i-modify-tags-and-other-properties-of-the-aks-resources-in-the-node-resource-group)
 
+## Cause 3: The cluster node resource group was deleted
+
+Deleting the node resource group causes the cluster autoscaler to fail. In general, deleting this resource group causes issues when provisioning the infrastructure resources required by the cluster.
+
 ## Solution: Update the cluster to the goal state without changing the configuration
 
 To resolve this issue, you can run the following command to recover the deleted virtual machine scale set or any tags (missing or modified):
