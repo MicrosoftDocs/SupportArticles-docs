@@ -45,6 +45,7 @@ This issue occurs if one or more of the following conditions are true:
 - You aren't a company administrator.
 - You don't have a subscription that includes Azure Information Protection.
 - The network is preventing you from connecting to Azure Information Protection.
+- You are using PowerShell v7
 
 ## Resolution
 
@@ -60,6 +61,7 @@ To resolve this issue, make sure that the following are true:
   - Incoming and outgoing connections to `*.aadrm.com` are enabled.
   - Incoming and outgoing connections to `*.cloudapp.net` (`rmsoprod*-b-rms*.cloudapp.net`) are enabled.
   - Port 443 is open.
+- Try using PowerShell v5 (check with `$PSVersionTable.PSVersion`)
 
 ## More information
 
