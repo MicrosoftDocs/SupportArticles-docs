@@ -25,7 +25,7 @@ If a user who is the current owner of the flow needs to be removed from the orga
 
 ## Resolution
 
-##Possible Mitigation 1: 
+## Possible Mitigation 1: 
 
 To change the owner of any flow:
 
@@ -34,7 +34,7 @@ To change the owner of any flow:
 1. Select **Edit**. A new flyout menu is displayed where you can set a new owner.
 1. In the **Owner** field, remove the current owner and add the new owner. Ensure the new owner has all required flow licenses.
 
-##Possible Mitigation 2: 
+## Possible Mitigation 2: 
 
 To turn off and turn on the static flow again. Below are the steps :
 
@@ -44,7 +44,7 @@ To turn off and turn on the static flow again. Below are the steps :
 4. This will fix the issue for newly created kpiinstances.
 5. For older kpiinstance Cx can change the status with their own logic or Can reach out the dev team for script, with affected record details and the status in which the slakpiinstance needs to be.
 
-##Possible Mitigation 3:
+## Possible Mitigation 3:
 
 1. This steps should be performed by real AAD user
 2. On customers environment, through power automate go to default solution.
