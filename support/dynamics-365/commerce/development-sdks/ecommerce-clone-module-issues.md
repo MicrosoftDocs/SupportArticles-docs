@@ -3,7 +3,7 @@ title: E-commerce SDK clone module known issues
 description: Provides information about the clone module process and known issues associated with this process in Dynamics 365 Commerce.
 author: Bstorie
 ms.author: Brstor
-ms.date: 10/12/2023
+ms.date: 10/16/2023
 ---
 # Known issues with e-commerce SDK clone modules
 
