@@ -60,7 +60,7 @@ Alternatively, if resetting the data doesn't work, go to the `%LOCALAPPDATA%\Cos
 
 ## Collect trace files
 
-To collect debugging traces, run the following commands as an administrator in Command Prompt:
+To collect debugging traces, run the following commands as an administrator in a Command Prompt window:
 
 1. Navigate to the path in which the emulator is installed:
 
