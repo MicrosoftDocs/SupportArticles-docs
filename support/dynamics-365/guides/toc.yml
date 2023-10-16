@@ -3,7 +3,7 @@
   items:
     - name: Guides
       items: 
-      - name: Install and migrate
+      - name: Setup and configuration
         items:
           - name: The solution installation or update fails repeatedly
             href: install-migrate/install-update-fails.md
@@ -11,20 +11,18 @@
             href: install-migrate/migrate-troubleshoot.md
           - name: Can't sign in to the Guides PC or HoloLens app
             href: install-migrate/sign-in-error.md
-      - name: PC app
+          - name: Sign-in error when trying to sign into Guides on a shared HoloLens device
+            href: hololens-app/device-license-sign-in-error.md
+      - name: Application functionality
         items:
           - name: Convert a 3D model into an object anchor fails
             href: pc-app/anchors-3d-model-conversion-fails.md
           - name: Detect an object anchor on HoloLens fails
             href: pc-app/anchors-object-anchor-fails.md
-      - name: HoloLens app
-        items:
           - name: Can't make a video call in the HoloLens app
             href: hololens-app/cant-make-video-call.md
           - name: Can't find a guide on a shared HoloLens device
             href: hololens-app/device-license-cant-find-guide.md
-          - name: Sign-in error when trying to sign into Guides on a shared HoloLens device
-            href: hololens-app/device-license-sign-in-error.md
           - name: Step content failed to load message in the HoloLens app
             href: hololens-app/step-content-fail-load.md
           - name: Hazard sign appears when I load a step
