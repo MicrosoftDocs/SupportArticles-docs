@@ -11,7 +11,7 @@
           href: administration/entity-names-duplicated-numbers.md
     - name: Customization
       items:
-        - name: Can't delete record because of an restrict-delete relationships
+        - name: Can't delete record due to a restrict-delete association
           href: customization/restrict-delete-relationships.md
         - name: Forms show an error about being read-only
           href: customization/forms-record-read-only-error.md
