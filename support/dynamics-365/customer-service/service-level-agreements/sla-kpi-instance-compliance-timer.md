@@ -25,9 +25,35 @@ If a user who is the current owner of the flow needs to be removed from the orga
 
 ## Resolution
 
+##Possible Mitigation 1: 
+
 To change the owner of any flow:
 
-1. In [Power Automate](https://powerautomate.microsoft.com), navigate to **My flows** > **Cloud flows**.
+1. In [Power Automate](https://powerautomate.microsoft.com), navigate to **Default solution** > **Cloud flows**.
 1. Search for the failed flow with the error.
 1. Select **Edit**. A new flyout menu is displayed where you can set a new owner.
 1. In the **Owner** field, remove the current owner and add the new owner. Ensure the new owner has all required flow licenses.
+
+##Possible Mitigation 2: 
+
+To turn off and turn on the static flow again. Below are the steps :
+
+1. In [Power Automate](https://powerautomate.microsoft.com), navigate to **Default solution** > **Cloud flows**.
+2. In Cloud flows, select SLAInstanceMonitoringWarningAndExpiryFlow.
+3. Even though it in on state. Select Turn off and then again Turn on.
+4. This will fix the issue for newly created kpiinstances.
+5. For older kpiinstance Cx can change the status with their own logic or Can reach out the dev team for script, with affected record details and the status in which the slakpiinstance needs to be.
+
+##Possible Mitigation 3:
+
+1. This steps should be performed by real AAD user
+2. On customers environment, through power automate go to default solution.
+3. Get the all "flows". open flow "Flow to monitor warning and failure of service level agreement".
+4. Verified its not getting triggered.
+5. "Save as" with another name and turn it on.
+6. It started executed.
+7. Verified instance for above created flow has been instantiated.
+
+And status started updating for SLA.
+
+:::image type="content" source="media\sla-kpi-instance-compliance-timer\SLA_KPI_Timer.png" alt-text="Screenshot that shows how to turn on/off flow." Border="false":::
