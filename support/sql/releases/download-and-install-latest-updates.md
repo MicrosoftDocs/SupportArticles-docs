@@ -40,11 +40,11 @@ Each of the following links provides information for all of the applicable produ
 |**SQL Server 2022**<br/><br/>- [Build information](#sql-server-2022)<br/>- [Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver16&preserve-view=true)|None|[GDR](https://support.microsoft.com/help/5029379) (16.0.1105.1 - October 2023) |[CU9 for 2022](sqlserver-2022/cumulativeupdate9.md) <br/>(16.0.4085.2 - October 2023) <br/><br/>[CU8 + GDR](https://support.microsoft.com/help/5029503) <br/>(16.0.4080.1 - October 2023)|
 |**SQL Server 2019**<br/><br/>- [Build information](#sql-server-2019)<br/>- [Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|None|[GDR](https://support.microsoft.com/help/5029377) (15.0.2104.1 - October 2023)|[CU23 for 2019](sqlserver-2019/cumulativeupdate23.md) <br/>(15.0.4335.1 - October 2023)<br/><br/>[CU22 + GDR](https://support.microsoft.com/help/5029378) <br/>(15.0.4326.1 - October 2023)|
 |**SQL Server 2017**<br/><br/>- [Build information](#sql-server-2017)<br/>- [Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|None|[GDR](https://support.microsoft.com/help/5029375) (14.0.2052.1 - October 2023)|[CU31 for 2017](sqlserver-2017/cumulativeupdate31.md) <br/>(14.0.3456.2 - September 2022)<br/><br/>[CU31 + GDR](https://support.microsoft.com/help/5029376) <br/>(14.0.3465.1 - October 2023)|
-|**SQL Server 2016**<br/><br/>- [Build information](#sql-server-2016)<br/>- [Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|[Azure Connect pack](https://support.microsoft.com/help/5014242) <br/>(13.0.7000.253 - May 2022)<br/><br/>[SP3](https://support.microsoft.com/help/5003279) (13.0.6300.2 - September 2021)<br/><br/>[SP2](https://support.microsoft.com/help/4052908) (13.0.5026.0 - April 2018)<br/><br/>[SP1](https://support.microsoft.com/help/3182545) (13.0.4001.0 - November 2016)|[GDR for Azure Connect pack](https://support.microsoft.com/help/5029187) <br/>(13.0.7029.3 - October 2023)<br/><br/>[GDR for SP3](https://support.microsoft.com/help/5029186) (13.0.6435.1 - October 2023)<br/><br/>[GDR for SP2](https://support.microsoft.com/help/5014365) (13.0.5108.50 - June 2022)<br/><br/>[GDR for SP1](https://support.microsoft.com/help/4505219) (13.0.4259.0 - July 2019)<br/><br/>[GDR for RTM](https://support.microsoft.com/help/4058560) (13.0.1745.2 - January 2018)|[CU17 + GDR for SP2](https://support.microsoft.com/help/5014351) (13.0.5893.48 - June 2022)<br/><br/>[CU17 for 2016 SP2](https://support.microsoft.com/help/5001092) <br/>(13.0.5888.11 - March 2021)<br/><br/>[CU15 + GDR for SP1](https://support.microsoft.com/help/4505221) <br/>(13.0.4604.0 - July 2019)<br/><br/>[CU15 for SP1](https://support.microsoft.com/help/4495257) <br/>(13.0.4574.0 - May 2019)<br/><br/>[CU9 for RTM](https://support.microsoft.com/help/4037357) <br/>(13.0.2216.0 - November 2017)|
+|**SQL Server 2016**<br/><br/>- [Build information](#sql-server-2016)<br/>- [Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|[Azure Connect pack](https://support.microsoft.com/help/5014242) <br/>(13.0.7000.253 - May 2022)<br/><br/>[SP3](https://support.microsoft.com/help/5003279) (13.0.6300.2 - September 2021)<br/><br/>[SP2](https://support.microsoft.com/help/4052908) (13.0.5026.0 - April 2018)<br/><br/>[SP1](https://support.microsoft.com/help/3182545) (13.0.4001.0 - November 2016)|[GDR for Azure Connect pack](https://support.microsoft.com/help/5029187) <br/>(13.0.7029.3 - October 2023)<br/><br/>[GDR for SP3](https://support.microsoft.com/help/5029186) (13.0.6435.1 - October 2023)<br/><br/>[GDR for SP2](https://support.microsoft.com/help/5014365) (13.0.5108.50 - June 2022)<br/><br/>[GDR for SP1](https://support.microsoft.com/help/4505219) (13.0.4259.0 - July 2019)<br/><br/>[GDR for RTM](https://support.microsoft.com/help/4058560) (13.0.1745.2 - January 2018)|[CU17 + GDR for SP2](https://support.microsoft.com/help/5014351) <br/>(13.0.5893.48 - June 2022)<br/><br/>[CU17 for 2016 SP2](https://support.microsoft.com/help/5001092) <br/>(13.0.5888.11 - March 2021)<br/><br/>[CU15 + GDR for SP1](https://support.microsoft.com/help/4505221) <br/>(13.0.4604.0 - July 2019)<br/><br/>[CU15 for SP1](https://support.microsoft.com/help/4495257) <br/>(13.0.4574.0 - May 2019)<br/><br/>[CU9 for RTM](https://support.microsoft.com/help/4037357) <br/>(13.0.2216.0 - November 2017)|
 |**SQL Server 2014**<br/><br/>- [Build information](#sql-server-2014)<br/>- [Installation](https://www.microsoft.com/download/details.aspx?id=42299)|[SP3](https://support.microsoft.com/help/4022619) (12.0.6024.0 - October 2018)<br/><br/>[SP2](https://support.microsoft.com/help/3171021) (12.0.5000.0 - July 2016)<br/><br/>[SP1](https://support.microsoft.com/help/3058865) (12.0.4100.1 - May 2015)|[GDR for SP3](https://support.microsoft.com/help/5029184) (12.0.6179.1 - October 2023)<br/><br/>[GDR for SP2](https://support.microsoft.com/help/4505217) (12.0.5223.6 - July 2019)<br/><br/>[GDR for SP1](https://support.microsoft.com/help/4019091) (August 2017)<br/><br/>[MS15-058](/security-updates/SecurityBulletins/2015/ms15-058) (July 2015)|[CU4 + GDR for SP3](https://support.microsoft.com/help/5029185) <br/>(12.0.6449.1 - October 2023)<br/><br/>[CU4 for SP3](https://support.microsoft.com/help/4500181) <br/>(12.0.6329.1 - July 2019)<br/><br/>[CU18 for SP2](https://support.microsoft.com/help/4500180) <br/>(12.0.5687.1 - July 2019)<br/><br/>[CU13 for SP1](https://support.microsoft.com/help/4019099) <br/>(12.0.4522.0 - August 2017)|
-|**SQL Server 2012**<br/><br/>- [Build information](#sql-server-2012)<br/>- [Installation](/previous-versions/sql/sql-server-2012/cc281837(v=sql.110))| [SP4](https://support.microsoft.com/help/4018073) (11.0.7001.0 - September 2017)<br/><br/>[SP3](https://support.microsoft.com/help/3072779) (11.0.6020.0 - November 2015)<br/><br/>[SP2](https://support.microsoft.com/help/2958429) (11.0.5058.0 - June 2014)<br/><br/>[SP1](https://support.microsoft.com/help/2674319) (11.0.3000.00 - November 2012)|[GDR for SP4](https://support.microsoft.com/help/5021123) (11.0.7512.11 - February 2023)<br/><br/>[GDR for SP3](https://support.microsoft.com/help/4057115) (January 2018)<br/><br/>[MS16-136](/security-updates/SecurityBulletins/2016/ms16-136) (November 2016)<br/><br/>[MS15-058](/security-updates/SecurityBulletins/2015/ms15-058) (December 2015)|[CU10 for SP3](https://support.microsoft.com/help/4025925) <br/>(11.0.6607.3 - August 2017)<br/><br/>[CU16 for SP2](https://support.microsoft.com/help/3205054) <br/>(11.0.5678.0 - January 2017)<br/><br/>[CU16 for SP1](https://support.microsoft.com/help/3052476) <br/>(11.0.3487.0 - May 2015)|
+|**SQL Server 2012**<br/><br/>- [Build information](#sql-server-2012)<br/>- [Installation](/previous-versions/sql/sql-server-2012/cc281837(v=sql.110))| [SP4](https://support.microsoft.com/help/4018073) (11.0.7001.0 - September 2017)<br/><br/>[SP3](https://support.microsoft.com/help/3072779) (11.0.6020.0 - November 2015)<br/><br/>[SP2](https://support.microsoft.com/help/2958429) (11.0.5058.0 - June 2014)<br/><br/>[SP1](https://support.microsoft.com/help/2674319) (11.0.3000.0 - November 2012)|[GDR for SP4](https://support.microsoft.com/help/5021123) (11.0.7512.11 - February 2023)<br/><br/>[GDR for SP3](https://support.microsoft.com/help/4057115) (January 2018)<br/><br/>[MS16-136](/security-updates/SecurityBulletins/2016/ms16-136) (November 2016)<br/><br/>[MS15-058](/security-updates/SecurityBulletins/2015/ms15-058) (December 2015)|[CU10 for SP3](https://support.microsoft.com/help/4025925) <br/>(11.0.6607.3 - August 2017)<br/><br/>[CU16 for SP2](https://support.microsoft.com/help/3205054) <br/>(11.0.5678.0 - January 2017)<br/><br/>[CU16 for SP1](https://support.microsoft.com/help/3052476) <br/>(11.0.3487.0 - May 2015)|
 |**SQL&nbsp;Server&nbsp;2008&nbsp;R2**<br/><br/>- [Build information](#sql-server-2008-r2)<br/>- [Installation](https://www.microsoft.com/download/details.aspx?id=44271)|[SP3](https://support.microsoft.com/help/2979597) (10.50.6000.34 - September 2014)<br/><br/>[SP2](https://support.microsoft.com/help/2630458) (10.50.4000.0 - July 2012)|[GDR for SP3](https://support.microsoft.com/help/5021112) (10.50.6785.2 - February 2023)<br/><br/>[MS15-058](/security-updates/SecurityBulletins/2015/ms15-058) (July 2015)|None|
-|**SQL Server 2008**<br/><br/>- [Build information](#sql-server-2008)<br/>- [Servicing](/previous-versions/sql/sql-server-2008/dd638062(v=sql.100))|[SP4](https://support.microsoft.com/help/2979596) (10.0.6000.29 - September 2014)<br/><br/>[SP3](https://support.microsoft.com/help/2546951) (10.00.5500.00 - October 2011)|[GDR for SP4](https://support.microsoft.com/help/5020863) (10.0.6814.4 - February 2023)<br/><br/>[MS15-058](/security-updates/SecurityBulletins/2015/ms15-058) (July 2015)|None|
+|**SQL Server 2008**<br/><br/>- [Build information](#sql-server-2008)<br/>- [Servicing](/previous-versions/sql/sql-server-2008/dd638062(v=sql.100))|[SP4](https://support.microsoft.com/help/2979596) (10.0.6000.29 - September 2014)<br/><br/>[SP3](https://support.microsoft.com/help/2546951) (10.00.5500.0 - October 2011)|[GDR for SP4](https://support.microsoft.com/help/5020863) (10.0.6814.4 - February 2023)<br/><br/>[MS15-058](/security-updates/SecurityBulletins/2015/ms15-058) (July 2015)|None|
 
 > [!NOTE]
 > "Latest" = During the past 12 months
@@ -373,33 +373,33 @@ Each of the following links provides information for all of the applicable produ
 |11.0.5343.0|SP2| MS15-058: GDR Security Update| [3045321](https://support.microsoft.com/help/3045321)|July 14, 2015|
 |11.0.5058.0|SP2| RTW/PCU2| [2958429](https://support.microsoft.com/help/2958429)|June 10, 2014|
 |11.0.3513.0|SP1| MS15-058: QFE Security Update| [3045317](https://support.microsoft.com/help/3045317)|July 14, 2015|
-|11.0.3482.00|SP1|CU13| [3002044](https://support.microsoft.com/help/3002044)|November 17, 2014|
-|11.0.3470.00|SP1|CU12| [2991533](https://support.microsoft.com/help/2991533)|September 15, 2014|
+|11.0.3482.0|SP1|CU13| [3002044](https://support.microsoft.com/help/3002044)|November 17, 2014|
+|11.0.3470.0|SP1|CU12| [2991533](https://support.microsoft.com/help/2991533)|September 15, 2014|
 |11.0.3460.0|SP1| MS14-044: QFE Security Update| [2977325](https://support.microsoft.com/help/2977325)|August 12, 2014|
-|11.0.3449.00|SP1|CU11| [2975396](https://support.microsoft.com/help/2975396)|July 21, 2014|
-|11.0.3431.00|SP1|CU10| [2954099](https://support.microsoft.com/help/2954099)|May 19, 2014|
-|11.0.3412.00|SP1|CU9| [2931078](https://support.microsoft.com/help/2931078)|March 17, 2014|
-|11.0.3401.00|SP1|CU8| [2917531](https://support.microsoft.com/help/2917531)|January 20, 2014|
-|11.0.3393.00|SP1|CU7| [2894115](https://support.microsoft.com/help/2894115)|November 18, 2013|
-|11.0.3381.00|SP1|CU6| [2874879](https://support.microsoft.com/help/2874879)|September 16, 2013|
-|11.0.3373.00|SP1|CU5| [2861107](https://support.microsoft.com/help/2861107)|July 15, 2013|
-|11.0.3368.00|SP1|CU4| [2833645](https://support.microsoft.com/help/2833645)|May 30, 2013|
-|11.0.3349.00|SP1|CU3| [2812412](https://support.microsoft.com/help/2812412)|March 18, 2013|
-|11.0.3339.00|SP1|CU2| [2790947](https://support.microsoft.com/help/2790947)|January 21, 2013|
-|11.0.3321.00|SP1|CU1| [2765331](https://support.microsoft.com/help/2765331)|November 20, 2012|
-|11.0.3156.00|SP1| MS15-058: GDR Security Update| [3045318](https://support.microsoft.com/help/3045318)|July 14, 2015|
-|11.0.3153.00|SP1| MS14-044: GDR Security Update| [2977326](https://support.microsoft.com/help/2977326)|August 12, 2014|
-|11.0.3000.00|SP1| RTW/PCU1| [2674319](https://support.microsoft.com/help/2674319)|November 7, 2012|
-|11.0.2424.00|RTM|CU11| [2908007](https://support.microsoft.com/help/2908007)|December 16, 2013|
-|11.0.2420.00|RTM|CU10| [2891666](https://support.microsoft.com/help/2891666)|October 21, 2013|
-|11.0.2401.00|RTM|CU6| [2728897](https://support.microsoft.com/help/2728897)|February 18, 2013|
-|11.0.2395.00|RTM|CU5| [2777772](https://support.microsoft.com/help/2777772)|December 17, 2012|
-|11.0.2383.00|RTM|CU4| [2758687](https://support.microsoft.com/help/2758687)|October 15, 2012|
-|11.0.2376.00|RTM| MS12-070: QFE Security Update| [2716441](https://support.microsoft.com/help/2716441)|October 9, 2012|
-|11.0.2332.00|RTM|CU3| [2723749](https://support.microsoft.com/help/2723749)|August 31, 2012|
-|11.0.2325.00|RTM|CU2| [2703275](https://support.microsoft.com/help/2703275)|June 18, 2012|
-|11.0.2316.00|RTM|CU1| [2679368](https://support.microsoft.com/help/2679368)|April 12, 2012|
-|11.0.2218.00|RTM| MS12-070: GDR Security Update| [2716442](https://support.microsoft.com/help/2716442)|October 9, 2012|
+|11.0.3449.0|SP1|CU11| [2975396](https://support.microsoft.com/help/2975396)|July 21, 2014|
+|11.0.3431.0|SP1|CU10| [2954099](https://support.microsoft.com/help/2954099)|May 19, 2014|
+|11.0.3412.0|SP1|CU9| [2931078](https://support.microsoft.com/help/2931078)|March 17, 2014|
+|11.0.3401.0|SP1|CU8| [2917531](https://support.microsoft.com/help/2917531)|January 20, 2014|
+|11.0.3393.0|SP1|CU7| [2894115](https://support.microsoft.com/help/2894115)|November 18, 2013|
+|11.0.3381.0|SP1|CU6| [2874879](https://support.microsoft.com/help/2874879)|September 16, 2013|
+|11.0.3373.0|SP1|CU5| [2861107](https://support.microsoft.com/help/2861107)|July 15, 2013|
+|11.0.3368.0|SP1|CU4| [2833645](https://support.microsoft.com/help/2833645)|May 30, 2013|
+|11.0.3349.0|SP1|CU3| [2812412](https://support.microsoft.com/help/2812412)|March 18, 2013|
+|11.0.3339.0|SP1|CU2| [2790947](https://support.microsoft.com/help/2790947)|January 21, 2013|
+|11.0.3321.0|SP1|CU1| [2765331](https://support.microsoft.com/help/2765331)|November 20, 2012|
+|11.0.3156.0|SP1| MS15-058: GDR Security Update| [3045318](https://support.microsoft.com/help/3045318)|July 14, 2015|
+|11.0.3153.0|SP1| MS14-044: GDR Security Update| [2977326](https://support.microsoft.com/help/2977326)|August 12, 2014|
+|11.0.3000.0|SP1| RTW/PCU1| [2674319](https://support.microsoft.com/help/2674319)|November 7, 2012|
+|11.0.2424.0|RTM|CU11| [2908007](https://support.microsoft.com/help/2908007)|December 16, 2013|
+|11.0.2420.0|RTM|CU10| [2891666](https://support.microsoft.com/help/2891666)|October 21, 2013|
+|11.0.2401.0|RTM|CU6| [2728897](https://support.microsoft.com/help/2728897)|February 18, 2013|
+|11.0.2395.0|RTM|CU5| [2777772](https://support.microsoft.com/help/2777772)|December 17, 2012|
+|11.0.2383.0|RTM|CU4| [2758687](https://support.microsoft.com/help/2758687)|October 15, 2012|
+|11.0.2376.0|RTM| MS12-070: QFE Security Update| [2716441](https://support.microsoft.com/help/2716441)|October 9, 2012|
+|11.0.2332.0|RTM|CU3| [2723749](https://support.microsoft.com/help/2723749)|August 31, 2012|
+|11.0.2325.0|RTM|CU2| [2703275](https://support.microsoft.com/help/2703275)|June 18, 2012|
+|11.0.2316.0|RTM|CU1| [2679368](https://support.microsoft.com/help/2679368)|April 12, 2012|
+|11.0.2218.0|RTM| MS12-070: GDR Security Update| [2716442](https://support.microsoft.com/help/2716442)|October 9, 2012|
 |11.0.2100.60|RTM|||March 6, 2012|
 
 ### SQL Server 2008 R2
@@ -407,56 +407,56 @@ Each of the following links provides information for all of the applicable produ
 |Build number or version|Service pack|Update|KB article|Release date|
 |---|---|---|---|---|
 |10.50.6785.2|SP3| GDR Security Update| [5021112](https://support.microsoft.com/help/5021112)|February 14, 2023|
-|10.50.6560.00|SP3| GDR Security Update| [4057113](https://support.microsoft.com/help/4057113)|January 6, 2018|
-|10.50.6529.00|SP3| MS15-058: QFE Security Update| [3045314](https://support.microsoft.com/help/3045314)|July 14, 2015|
-|10.50.6220.00|SP3| MS15-058: QFE Security Update| [3045316](https://support.microsoft.com/help/3045316)|July 14, 2015|
+|10.50.6560.0|SP3| GDR Security Update| [4057113](https://support.microsoft.com/help/4057113)|January 6, 2018|
+|10.50.6529.0|SP3| MS15-058: QFE Security Update| [3045314](https://support.microsoft.com/help/3045314)|July 14, 2015|
+|10.50.6220.0|SP3| MS15-058: QFE Security Update| [3045316](https://support.microsoft.com/help/3045316)|July 14, 2015|
 |10.50.6000.34|SP3| RTW/PCU3| [2979597](https://support.microsoft.com/help/2979597)|September 26, 2014|
-|10.50.4339.00|SP2| MS15-058: QFE Security Update| [3045312](https://support.microsoft.com/help/3045312)|July 14, 2015|
-|10.50.4321.00|SP2| MS14-044: QFE Security Update| [2977319](https://support.microsoft.com/help/2977319)|August 14, 2014|
-|10.50.4319.00|SP2|CU13| [2967540](https://support.microsoft.com/help/2967540)|June 30, 2014|
-|10.50.4305.00|SP2|CU12| [2938478](https://support.microsoft.com/help/2938478)|April 21, 2014|
-|10.50.4302.00|SP2|CU11| [2926028](https://support.microsoft.com/help/2926028)|February 18, 2014|
-|10.50.4297.00|SP2|CU10| [2908087](https://support.microsoft.com/help/2908087)|December 17, 2013|
-|10.50.4295.00|SP2|CU9| [2887606](https://support.microsoft.com/help/2887606)|October 28, 2013|
-|10.50.4286.00|SP2|CU7| [2844090](https://support.microsoft.com/help/2844090)|June 17, 2013|
-|10.50.4279.00|SP2|CU6| [2830140](https://support.microsoft.com/help/2830140)|April 15, 2013|
-|10.50.4276.00|SP2|CU5| [2797460](https://support.microsoft.com/help/2797460)|February 18, 2013|
-|10.50.4270.00|SP2|CU4| [2777358](https://support.microsoft.com/help/2777358)|December 17, 2012|
-|10.50.4266.00|SP2|CU3| [2754552](https://support.microsoft.com/help/2754552)|October 15, 2012|
-|10.50.4263.00|SP2|CU2| [2740411](https://support.microsoft.com/help/2740411)|August 31, 2012|
-|10.50.4260.00|SP2|CU1| [2720425](https://support.microsoft.com/help/2720425)|July 24, 2012|
-|10.50.4042.00|SP2| MS15-058: GDR Security Update| [3045313](https://support.microsoft.com/help/3045313)|July 14, 2015|
-|10.50.4033.00|SP2| MS14-044: GDR Security Update| [2977320](https://support.microsoft.com/help/2977320)|August 12, 2014|
+|10.50.4339.0|SP2| MS15-058: QFE Security Update| [3045312](https://support.microsoft.com/help/3045312)|July 14, 2015|
+|10.50.4321.0|SP2| MS14-044: QFE Security Update| [2977319](https://support.microsoft.com/help/2977319)|August 14, 2014|
+|10.50.4319.0|SP2|CU13| [2967540](https://support.microsoft.com/help/2967540)|June 30, 2014|
+|10.50.4305.0|SP2|CU12| [2938478](https://support.microsoft.com/help/2938478)|April 21, 2014|
+|10.50.4302.0|SP2|CU11| [2926028](https://support.microsoft.com/help/2926028)|February 18, 2014|
+|10.50.4297.0|SP2|CU10| [2908087](https://support.microsoft.com/help/2908087)|December 17, 2013|
+|10.50.4295.0|SP2|CU9| [2887606](https://support.microsoft.com/help/2887606)|October 28, 2013|
+|10.50.4286.0|SP2|CU7| [2844090](https://support.microsoft.com/help/2844090)|June 17, 2013|
+|10.50.4279.0|SP2|CU6| [2830140](https://support.microsoft.com/help/2830140)|April 15, 2013|
+|10.50.4276.0|SP2|CU5| [2797460](https://support.microsoft.com/help/2797460)|February 18, 2013|
+|10.50.4270.0|SP2|CU4| [2777358](https://support.microsoft.com/help/2777358)|December 17, 2012|
+|10.50.4266.0|SP2|CU3| [2754552](https://support.microsoft.com/help/2754552)|October 15, 2012|
+|10.50.4263.0|SP2|CU2| [2740411](https://support.microsoft.com/help/2740411)|August 31, 2012|
+|10.50.4260.0|SP2|CU1| [2720425](https://support.microsoft.com/help/2720425)|July 24, 2012|
+|10.50.4042.0|SP2| MS15-058: GDR Security Update| [3045313](https://support.microsoft.com/help/3045313)|July 14, 2015|
+|10.50.4033.0|SP2| MS14-044: GDR Security Update| [2977320](https://support.microsoft.com/help/2977320)|August 12, 2014|
 |10.50.4000.0|SP2| RTW/PCU2| [2630458](https://support.microsoft.com/help/2630458)|July 26, 2012|
-|10.50.2881.00|SP1|CU14| [2868244](https://support.microsoft.com/help/2868244)|August 8, 2013|
-|10.50.2876.00|SP1|CU13| [2855792](https://support.microsoft.com/help/2855792)|June 17, 2013|
-|10.50.2874.00|SP1|CU12| [2828727](https://support.microsoft.com/help/2828727)|April 15, 2013|
-|10.50.2869.00|SP1|CU11| [2812683](https://support.microsoft.com/help/2812683)|February 18, 2013|
-|10.50.2866.00|SP1|CU9| [2756574](https://support.microsoft.com/help/2756574)|October 15, 2012|
-|10.50.2861.00|SP1| MS12-070: QFE Security Update| [2716439](https://support.microsoft.com/help/2716439)|October 9, 2012|
-|10.50.2822.00|SP1|CU8| [2723743](https://support.microsoft.com/help/2723743)|August 31, 2012|
-|10.50.2817.00|SP1|CU7| [2703282](https://support.microsoft.com/help/2703282)|June 18, 2012|
-|10.50.2811.00|SP1|CU6| [2679367](https://support.microsoft.com/help/2679367)|April 16, 2012|
-|10.50.2806.00|SP1|CU5| [2659694](https://support.microsoft.com/help/2659694)|February 22, 2012|
-|10.50.2796.00|SP1|CU4| [2633146](https://support.microsoft.com/help/2633146)|December 19, 2011|
-|10.50.2789.00|SP1|CU3| [2591748](https://support.microsoft.com/help/2591748)|October 17, 2011|
-|10.50.2772.00|SP1|CU2| [2567714](https://support.microsoft.com/help/2567714)|August 15, 2011|
-|10.50.2769.00|SP1|CU1| [2544793](https://support.microsoft.com/help/2544793)|July 18, 2011|
-|10.50.2550.00|SP1| MS12-070: GDR Security Update| [2754849](https://support.microsoft.com/help/2754849)|October 9, 2012|
+|10.50.2881.0|SP1|CU14| [2868244](https://support.microsoft.com/help/2868244)|August 8, 2013|
+|10.50.2876.0|SP1|CU13| [2855792](https://support.microsoft.com/help/2855792)|June 17, 2013|
+|10.50.2874.0|SP1|CU12| [2828727](https://support.microsoft.com/help/2828727)|April 15, 2013|
+|10.50.2869.0|SP1|CU11| [2812683](https://support.microsoft.com/help/2812683)|February 18, 2013|
+|10.50.2866.0|SP1|CU9| [2756574](https://support.microsoft.com/help/2756574)|October 15, 2012|
+|10.50.2861.0|SP1| MS12-070: QFE Security Update| [2716439](https://support.microsoft.com/help/2716439)|October 9, 2012|
+|10.50.2822.0|SP1|CU8| [2723743](https://support.microsoft.com/help/2723743)|August 31, 2012|
+|10.50.2817.0|SP1|CU7| [2703282](https://support.microsoft.com/help/2703282)|June 18, 2012|
+|10.50.2811.0|SP1|CU6| [2679367](https://support.microsoft.com/help/2679367)|April 16, 2012|
+|10.50.2806.0|SP1|CU5| [2659694](https://support.microsoft.com/help/2659694)|February 22, 2012|
+|10.50.2796.0|SP1|CU4| [2633146](https://support.microsoft.com/help/2633146)|December 19, 2011|
+|10.50.2789.0|SP1|CU3| [2591748](https://support.microsoft.com/help/2591748)|October 17, 2011|
+|10.50.2772.0|SP1|CU2| [2567714](https://support.microsoft.com/help/2567714)|August 15, 2011|
+|10.50.2769.0|SP1|CU1| [2544793](https://support.microsoft.com/help/2544793)|July 18, 2011|
+|10.50.2550.0|SP1| MS12-070: GDR Security Update| [2754849](https://support.microsoft.com/help/2754849)|October 9, 2012|
 |10.50.2500.0|SP1| RTW/PCU1| [2528583](https://support.microsoft.com/help/2528583)|July 12, 2011|
-|10.50.1815.00|RTM|CU13| [2679366](https://support.microsoft.com/help/2679366)|April 16, 2012|
-|10.50.1810.00|RTM|CU12| [2659692](https://support.microsoft.com/help/2659692)|February 21, 2012|
-|10.50.1807.00|RTM|CU10| [2591746](https://support.microsoft.com/help/2591746)|October 17, 2011|
-|10.50.1804.00|RTM|CU9| [2567713](https://support.microsoft.com/help/2567713)|August 15, 2011|
-|10.50.1790.00|RTM| MS11-049: QFE Security Update| [2494086](https://support.microsoft.com/help/2494086)|June 14, 2011|
-|10.50.1777.00|RTM|CU7| [2507770](https://support.microsoft.com/help/2507770)|April 18, 2011|
-|10.50.1765.00|RTM|CU6| [2489376](https://support.microsoft.com/help/2489376)|February 21, 2011|
-|10.50.1753.00|RTM|CU5| [2438347](https://support.microsoft.com/help/2438347)|December 20, 2010|
-|10.50.1746.00|RTM|CU4| [2345451](https://support.microsoft.com/help/2345451)|October 18, 2010|
-|10.50.1734.00|RTM|CU3| [2261464](https://support.microsoft.com/help/2261464)|August 16, 2010|
-|10.50.1720.00|RTM|CU2| [2072493](https://support.microsoft.com/help/2072493)|June 21, 2010|
-|10.50.1702.00|RTM|CU1| [981355](https://support.microsoft.com/help/981355)|May 18, 2010|
-|10.50.1617.00|RTM| MS11-049: GDR Security Update| [2494088](https://support.microsoft.com/help/2494088)|June 14, 2011|
+|10.50.1815.0|RTM|CU13| [2679366](https://support.microsoft.com/help/2679366)|April 16, 2012|
+|10.50.1810.0|RTM|CU12| [2659692](https://support.microsoft.com/help/2659692)|February 21, 2012|
+|10.50.1807.0|RTM|CU10| [2591746](https://support.microsoft.com/help/2591746)|October 17, 2011|
+|10.50.1804.0|RTM|CU9| [2567713](https://support.microsoft.com/help/2567713)|August 15, 2011|
+|10.50.1790.0|RTM| MS11-049: QFE Security Update| [2494086](https://support.microsoft.com/help/2494086)|June 14, 2011|
+|10.50.1777.0|RTM|CU7| [2507770](https://support.microsoft.com/help/2507770)|April 18, 2011|
+|10.50.1765.0|RTM|CU6| [2489376](https://support.microsoft.com/help/2489376)|February 21, 2011|
+|10.50.1753.0|RTM|CU5| [2438347](https://support.microsoft.com/help/2438347)|December 20, 2010|
+|10.50.1746.0|RTM|CU4| [2345451](https://support.microsoft.com/help/2345451)|October 18, 2010|
+|10.50.1734.0|RTM|CU3| [2261464](https://support.microsoft.com/help/2261464)|August 16, 2010|
+|10.50.1720.0|RTM|CU2| [2072493](https://support.microsoft.com/help/2072493)|June 21, 2010|
+|10.50.1702.0|RTM|CU1| [981355](https://support.microsoft.com/help/981355)|May 18, 2010|
+|10.50.1617.0|RTM| MS11-049: GDR Security Update| [2494088](https://support.microsoft.com/help/2494088)|June 14, 2011|
 |10.50.1600.1|RTM|||May 10, 2010|
 
 ### SQL Server 2008
@@ -464,64 +464,64 @@ Each of the following links provides information for all of the applicable produ
 |Build number or version|Service pack|Update|KB article|Release date|
 |---|---|---|---|---|
 |10.0.6814.4|SP4| GDR Security Update| [5020863](https://support.microsoft.com/help/5020863)|February 14, 2023|
-|10.00.6535.00|SP4| MS15-058: QFE Security Update| [3045308](https://support.microsoft.com/help/3045308)|July 14, 2015|
-|10.00.6241.00|SP4| MS15-058: GDR Security Update| [3045311](https://support.microsoft.com/help/3045311)|July 14, 2015|
-|10.00.5890.00|SP3| MS15-058: QFE Security Update| [3045303](https://support.microsoft.com/help/3045303)|July 14, 2015|
-|10.00.5869.00|SP3| MS14-044: QFE Security Update| [2984340](https://support.microsoft.com/help/2984340)<br/>[2977322](https://support.microsoft.com/help/2977322)|August 12, 2014|
-|10.00.5867.00|(on-demand update package)|| [2877204](https://support.microsoft.com/help/2877204)| |
-|10.00.5861.00|SP3|CU17| [2958696](https://support.microsoft.com/help/2958696)|May 19, 2014|
-|10.00.5852.00|SP3|CU16| [2936421](https://support.microsoft.com/help/2936421)|March 17, 2014|
-|10.00.5850.00|SP3|CU15| [2923520](https://support.microsoft.com/help/2923520)|January 20, 2014|
-|10.00.5848.00|SP3|CU14| [2893410](https://support.microsoft.com/help/2893410)|November 18, 2013|
-|10.00.5846.00|SP3|CU13| [2880350](https://support.microsoft.com/help/2880350)|September 16, 2013|
-|10.00.5844.00|SP3|CU12| [2863205](https://support.microsoft.com/help/2863205)|July 15, 2013|
-|10.00.5840.00|SP3|CU11| [2834048](https://support.microsoft.com/help/2834048)|May 20, 2013|
-|10.00.5835.00|SP3|CU10| [2814783](https://support.microsoft.com/help/2814783)|March 18, 2013|
-|10.00.5829.00|SP3|CU9| [2799883](https://support.microsoft.com/help/2799883)|January 21, 2013|
-|10.00.5828.00|SP3|CU8| [2771833](https://support.microsoft.com/help/2771833)|November 19, 2012|
-|10.00.5826.00|SP3| MS12-070: QFE Security Update| [2716435](https://support.microsoft.com/help/2716435)|October 9, 2012|
-|10.00.5794.00|SP3|CU7| [2738350](https://support.microsoft.com/help/2738350)|September 17, 2012|
-|10.00.5788.00|SP3|CU6| [2715953](https://support.microsoft.com/help/2715953)|July 16, 2012|
-|10.00.5785.00|SP3|CU5| [2696626](https://support.microsoft.com/help/2696626)|May 21, 2012|
-|10.00.5768.00|SP3|CU2| [2633143](https://support.microsoft.com/help/2633143)|November 21, 2011|
-|10.00.5766.00|SP3|CU1| [2617146](https://support.microsoft.com/help/2617146)|October 17, 2011|
-|10.00.5538.00|SP3| MS15-058: GDR Security Update| [3045305](https://support.microsoft.com/help/3045305)|July 14, 2015|
-|10.00.5520.00|SP3| MS14-044: GDR Security Update| [2977321](https://support.microsoft.com/help/2977321)|August 12, 2014|
-|10.00.5512.00|SP3| MS12-070: GDR Security Update| [2716436](https://support.microsoft.com/help/2716436)|October 9, 2012|
-|10.00.5500.00| SP3| RTW / PCU 3| [2546951](https://support.microsoft.com/help/2546951)|October 6, 2011|
-|10.00.4371.00|SP2| MS12-070: QFE Security Update| [2716433](https://support.microsoft.com/help/2716433)|October 9, 2012|
-|10.00.4332.00|SP2|CU10| [2696625](https://support.microsoft.com/help/2696625)|May 21, 2012|
-|10.00.4330.00|SP2|CU9| [2673382](https://support.microsoft.com/help/2673382)|March 19, 2012|
-|10.00.4326.00|SP2|CU8| [2648096](https://support.microsoft.com/help/2648096)|January 16, 2012|
-|10.00.4323.00|SP2|CU7| [2617148](https://support.microsoft.com/help/2617148)|November 21, 2011|
-|10.00.4321.00|SP2|CU6| [2582285](https://support.microsoft.com/help/2582285)|September 19, 2011|
-|10.00.4316.00|SP2|CU5| [2555408](https://support.microsoft.com/help/2555408)|July 18, 2011|
-|10.00.4311.00|SP2| MS11-049: QFE Security Update| [2494094](https://support.microsoft.com/help/2494094)|June 14, 2011|
-|10.00.4285.00|SP2|CU4| [2527180](https://support.microsoft.com/help/2527180)|May 16, 2011|
-|10.00.4279.00|SP2|CU3| [2498535](https://support.microsoft.com/help/2498535)|March 17, 2011|
-|10.00.4266.00|SP2|CU1| [2289254](https://support.microsoft.com/help/2289254)|November 15, 2010|
-|10.00.4067.00|SP2| MS12-070: GDR Security Update| [2716434](https://support.microsoft.com/help/2716434)|October 9, 2012|
-|10.00.4064.00|SP2| MS11-049: GDR Security Update| [2494089](https://support.microsoft.com/help/2494089)|June 14, 2011|
-|10.00.4000.00| SP2| RTW / PCU 2| [2285068](https://support.microsoft.com/help/2285068)|September 29, 2010|
+|10.00.6535.0|SP4| MS15-058: QFE Security Update| [3045308](https://support.microsoft.com/help/3045308)|July 14, 2015|
+|10.00.6241.0|SP4| MS15-058: GDR Security Update| [3045311](https://support.microsoft.com/help/3045311)|July 14, 2015|
+|10.00.5890.0|SP3| MS15-058: QFE Security Update| [3045303](https://support.microsoft.com/help/3045303)|July 14, 2015|
+|10.00.5869.0|SP3| MS14-044: QFE Security Update| [2984340](https://support.microsoft.com/help/2984340)<br/>[2977322](https://support.microsoft.com/help/2977322)|August 12, 2014|
+|10.00.5867.0|(on-demand update package)|| [2877204](https://support.microsoft.com/help/2877204)| |
+|10.00.5861.0|SP3|CU17| [2958696](https://support.microsoft.com/help/2958696)|May 19, 2014|
+|10.00.5852.0|SP3|CU16| [2936421](https://support.microsoft.com/help/2936421)|March 17, 2014|
+|10.00.5850.0|SP3|CU15| [2923520](https://support.microsoft.com/help/2923520)|January 20, 2014|
+|10.00.5848.0|SP3|CU14| [2893410](https://support.microsoft.com/help/2893410)|November 18, 2013|
+|10.00.5846.0|SP3|CU13| [2880350](https://support.microsoft.com/help/2880350)|September 16, 2013|
+|10.00.5844.0|SP3|CU12| [2863205](https://support.microsoft.com/help/2863205)|July 15, 2013|
+|10.00.5840.0|SP3|CU11| [2834048](https://support.microsoft.com/help/2834048)|May 20, 2013|
+|10.00.5835.0|SP3|CU10| [2814783](https://support.microsoft.com/help/2814783)|March 18, 2013|
+|10.00.5829.0|SP3|CU9| [2799883](https://support.microsoft.com/help/2799883)|January 21, 2013|
+|10.00.5828.0|SP3|CU8| [2771833](https://support.microsoft.com/help/2771833)|November 19, 2012|
+|10.00.5826.0|SP3| MS12-070: QFE Security Update| [2716435](https://support.microsoft.com/help/2716435)|October 9, 2012|
+|10.00.5794.0|SP3|CU7| [2738350](https://support.microsoft.com/help/2738350)|September 17, 2012|
+|10.00.5788.0|SP3|CU6| [2715953](https://support.microsoft.com/help/2715953)|July 16, 2012|
+|10.00.5785.0|SP3|CU5| [2696626](https://support.microsoft.com/help/2696626)|May 21, 2012|
+|10.00.5768.0|SP3|CU2| [2633143](https://support.microsoft.com/help/2633143)|November 21, 2011|
+|10.00.5766.0|SP3|CU1| [2617146](https://support.microsoft.com/help/2617146)|October 17, 2011|
+|10.00.5538.0|SP3| MS15-058: GDR Security Update| [3045305](https://support.microsoft.com/help/3045305)|July 14, 2015|
+|10.00.5520.0|SP3| MS14-044: GDR Security Update| [2977321](https://support.microsoft.com/help/2977321)|August 12, 2014|
+|10.00.5512.0|SP3| MS12-070: GDR Security Update| [2716436](https://support.microsoft.com/help/2716436)|October 9, 2012|
+|10.00.5500.0| SP3| RTW / PCU 3| [2546951](https://support.microsoft.com/help/2546951)|October 6, 2011|
+|10.00.4371.0|SP2| MS12-070: QFE Security Update| [2716433](https://support.microsoft.com/help/2716433)|October 9, 2012|
+|10.00.4332.0|SP2|CU10| [2696625](https://support.microsoft.com/help/2696625)|May 21, 2012|
+|10.00.4330.0|SP2|CU9| [2673382](https://support.microsoft.com/help/2673382)|March 19, 2012|
+|10.00.4326.0|SP2|CU8| [2648096](https://support.microsoft.com/help/2648096)|January 16, 2012|
+|10.00.4323.0|SP2|CU7| [2617148](https://support.microsoft.com/help/2617148)|November 21, 2011|
+|10.00.4321.0|SP2|CU6| [2582285](https://support.microsoft.com/help/2582285)|September 19, 2011|
+|10.00.4316.0|SP2|CU5| [2555408](https://support.microsoft.com/help/2555408)|July 18, 2011|
+|10.00.4311.0|SP2| MS11-049: QFE Security Update| [2494094](https://support.microsoft.com/help/2494094)|June 14, 2011|
+|10.00.4285.0|SP2|CU4| [2527180](https://support.microsoft.com/help/2527180)|May 16, 2011|
+|10.00.4279.0|SP2|CU3| [2498535](https://support.microsoft.com/help/2498535)|March 17, 2011|
+|10.00.4266.0|SP2|CU1| [2289254](https://support.microsoft.com/help/2289254)|November 15, 2010|
+|10.00.4067.0|SP2| MS12-070: GDR Security Update| [2716434](https://support.microsoft.com/help/2716434)|October 9, 2012|
+|10.00.4064.0|SP2| MS11-049: GDR Security Update| [2494089](https://support.microsoft.com/help/2494089)|June 14, 2011|
+|10.00.4000.0| SP2| RTW / PCU 2| [2285068](https://support.microsoft.com/help/2285068)|September 29, 2010|
 |10.00.2850.0|SP1|CU16| [2582282](https://support.microsoft.com/help/2582282)|September 19, 2011|
 |10.00.2847.0|SP1|CU15| [2555406](https://support.microsoft.com/help/2555406)|July 18, 2011|
 |10.00.2841.0|SP1| MS11-049: QFE Security Update| [2494100](https://support.microsoft.com/help/2494100)|June 14, 2011|
-|10.00.2821.00|SP1|CU14| [2527187](https://support.microsoft.com/help/2527187)|May 16, 2011|
-|10.00.2816.00|SP1|CU13| [2497673](https://support.microsoft.com/help/2497673)|March 17, 2011|
-|10.00.2804.00|SP1|CU11| [2413738](https://support.microsoft.com/help/2413738)|November 15, 2010|
-|10.00.2775.00|SP1|CU8| [981702](https://support.microsoft.com/help/981702)|May 17, 2010|
-|10.00.2746.00|SP1|CU5| [975977](https://support.microsoft.com/help/975977)|November 16, 2009|
-|10.00.2734.00|SP1|CU4| [973602](https://support.microsoft.com/help/973602)|September 21, 2009|
-|10.00.2723.00|SP1|CU3| [971491](https://support.microsoft.com/help/971491)|July 20, 2009|
-|10.00.2714.00|SP1|CU2| [970315](https://support.microsoft.com/help/970315)|May 18, 2009|
-|10.00.2710.00|SP1|CU1| [969099](https://support.microsoft.com/help/969099)|April 16, 2009|
-|10.00.2573.00|SP1| MS11-049: GDR Security update| [2494096](https://support.microsoft.com/help/2494096)|June 14, 2011|
-|10.00.2531.00| SP1| RTW / PCU 1||April, 2009|
-|10.00.1835.00|RTM|CU10| [979064](https://support.microsoft.com/help/979064)|March 15, 2010|
-|10.00.1823.00|RTM|CU8| [975976](https://support.microsoft.com/help/975976)|November 16, 2009|
-|10.00.1787.00|RTM|CU3| [960484](https://support.microsoft.com/help/960484)|January 19, 2009|
-|10.00.1779.00|RTM|CU2| [958186](https://support.microsoft.com/help/958186)|November 19, 2008|
-|10.00.1763.00|RTM|CU1| [956717](https://support.microsoft.com/help/956717)|September 22, 2008|
+|10.00.2821.0|SP1|CU14| [2527187](https://support.microsoft.com/help/2527187)|May 16, 2011|
+|10.00.2816.0|SP1|CU13| [2497673](https://support.microsoft.com/help/2497673)|March 17, 2011|
+|10.00.2804.0|SP1|CU11| [2413738](https://support.microsoft.com/help/2413738)|November 15, 2010|
+|10.00.2775.0|SP1|CU8| [981702](https://support.microsoft.com/help/981702)|May 17, 2010|
+|10.00.2746.0|SP1|CU5| [975977](https://support.microsoft.com/help/975977)|November 16, 2009|
+|10.00.2734.0|SP1|CU4| [973602](https://support.microsoft.com/help/973602)|September 21, 2009|
+|10.00.2723.0|SP1|CU3| [971491](https://support.microsoft.com/help/971491)|July 20, 2009|
+|10.00.2714.0|SP1|CU2| [970315](https://support.microsoft.com/help/970315)|May 18, 2009|
+|10.00.2710.0|SP1|CU1| [969099](https://support.microsoft.com/help/969099)|April 16, 2009|
+|10.00.2573.0|SP1| MS11-049: GDR Security update| [2494096](https://support.microsoft.com/help/2494096)|June 14, 2011|
+|10.00.2531.0| SP1| RTW / PCU 1||April, 2009|
+|10.00.1835.0|RTM|CU10| [979064](https://support.microsoft.com/help/979064)|March 15, 2010|
+|10.00.1823.0|RTM|CU8| [975976](https://support.microsoft.com/help/975976)|November 16, 2009|
+|10.00.1787.0|RTM|CU3| [960484](https://support.microsoft.com/help/960484)|January 19, 2009|
+|10.00.1779.0|RTM|CU2| [958186](https://support.microsoft.com/help/958186)|November 19, 2008|
+|10.00.1763.0|RTM|CU1| [956717](https://support.microsoft.com/help/956717)|September 22, 2008|
 |10.00.1600.22|RTM|||August 6, 2008|
 
 ### SQL Server 2005
