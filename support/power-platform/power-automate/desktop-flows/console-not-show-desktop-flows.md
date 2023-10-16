@@ -2,7 +2,7 @@
 title: Power Automate for desktop console not showing any flows
 description: Provides a resolution for the issue that the Power Automate for desktop console doesn't show any desktop flows.
 ms.reviewer: pefelesk
-ms.date: 10/12/2023
+ms.date: 10/16/2023
 ms.subservice: power-automate-desktop-flows
 ---
 # Power Automate for desktop console doesn't show any desktop flows
