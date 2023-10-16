@@ -56,4 +56,4 @@ To turn off and turn on the static flow again. Below are the steps :
 
 And status started updating for SLA.
 
-:::image type="content"source="media\sla-kpi-instance-compliance-timer\SLA_KPI_Timer.png" alt-text="Screenshot that shows how to turn on/off flow." Border="false":::
+:::image type="content" source="media\sla-kpi-instance-compliance-timer\SLA_KPI_Timer.png" alt-text="Screenshot that shows how to turn on/off flow." Border="false":::
