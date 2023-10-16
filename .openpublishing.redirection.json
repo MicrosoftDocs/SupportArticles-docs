@@ -1,6 +1,121 @@
 {
   "redirections": [
     {
+      "source_path": "support/power-platform/power-apps/manage-apps-and-solutions/dataverse-records-missing-required-fields.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/manage-apps/dataverse-records-missing-required-fields",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/manage-apps-and-solutions/wrap-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/manage-apps/wrap-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/manage-apps-and-solutions/unmanaged-active-layer-created-after-solution-import.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/solutions/unmanaged-active-layer-created-after-solution-import",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/manage-apps-and-solutions/entitykey-selected-attributes-already-exists.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/solutions/entitykey-selected-attributes-already-exists",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/manage-apps-and-solutions/cannot-import-solutions-publish-changes.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/solutions/cannot-import-solutions-publish-changes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/manage-apps-and-solutions/failure-converting-to-managed-solution.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/solutions/failure-converting-to-managed-solution",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/manage-apps-and-solutions/changes-not-effective-solution-import.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/solutions/changes-not-effective-solution-import",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/manage-apps-and-solutions/concurrent-solution-operation-failures.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/solutions/concurrent-solution-operation-failures",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/manage-apps-and-solutions/duplicate-security-roles.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/solutions/duplicate-security-roles",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/manage-apps-and-solutions/dataverse-environment-variables.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/solutions/dataverse-environment-variables",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/manage-apps-and-solutions/form-not-appear-after-import.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/solutions/form-not-appear-after-import",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/manage-apps-and-solutions/full-formxml-expected-to-create-form-error.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/solutions/full-formxml-expected-to-create-form-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/manage-apps-and-solutions/multiple-publisher-shared-component-failure.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/solutions/multiple-publisher-shared-component-failure",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/manage-apps-and-solutions/label-text-not-displayed.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/solutions/label-text-not-displayed",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/manage-apps-and-solutions/maximum-row-size-exceeds.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/solutions/maximum-row-size-exceeds",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/manage-apps-and-solutions/missing-dependency-on-solution-import.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/solutions/missing-dependency-on-solution-import",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/manage-apps-and-solutions/newly-added-components-dont-appear.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/solutions/newly-added-components-dont-appear",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/manage-apps-and-solutions/primaryname-attribute-not-found.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/solutions/primaryname-attribute-not-found",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/manage-apps-and-solutions/install-failure-priviledge-not-assigned.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/solutions/install-failure-priviledge-not-assigned",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/manage-apps-and-solutions/solution-checker-enforcement-import-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/solutions/solution-checker-enforcement-import-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/manage-apps-and-solutions/solution-cannot-be-deleted-due-to-dependencies.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/solutions/solution-cannot-be-deleted-due-to-dependencies",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/manage-apps-and-solutions/upgrade-fails-pending-upgrade.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/solutions/upgrade-fails-pending-upgrade",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/manage-apps-and-solutions/you-cannot-delete-this-form-only-fallback.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/solutions/you-cannot-delete-this-form-only-fallback",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "support/power-platform/power-automate/actions-not-available.md",
       "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/actions-not-available",
       "redirect_document_id": true

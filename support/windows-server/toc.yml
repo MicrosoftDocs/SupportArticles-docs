@@ -2402,7 +2402,7 @@
       href: ./remote/rds-client-not-connect-to-rd-session-host-server.md
     - name: Remote Desktop Connection 6.0 prompts for credentials
       href: ./remote/remote-desktop-connection-6-prompts-credentials.md
-    - name: Remote Desktop IP Virtualization does not work
+    - name: Remote Desktop IP Virtualization
       href: ./remote/remote-desktop-ip-virtualization.md
     - name: Remote Desktop or RemoteApp session doesn't terminate
       href: ./remote/rd-or-remoteapp-session-not-terminate.md
