@@ -2,7 +2,7 @@
 title: Failed deleting solution error due to circular dependencies between two solutions
 description: Works around an issue where you can't delete a solution due to circular dependencies between two solutions in Power Apps.
 ms.reviewer: jdaly
-ms.date: 10/13/2023
+ms.date: 10/16/2023
 author: swatimadhukargit
 ms.author: swatim
 ---
@@ -33,8 +33,6 @@ To work around the circular dependencies between the two solutions, first you ne
 
 The dependencies show all the components that are dependent on the solution you're trying to uninstall. You can select each component in the list and select **See solution layers** to find the dependent solutions the component comes from.
 
-If you encounter the same issue when trying to delete the dependent solution, and you find the dependent solution also has a dependency on the current solution, then it's a circular dependency.
-
 ### Example
 
 For example, Solution A and Solution B have dependencies on each other. As shown in the diagram: 
@@ -63,7 +61,7 @@ You're allowed to delete Solution B now, as Solution A doesn't have a dependency
 ##### Option 2
 
 1. Go to the source environment of Solution B and edit Component 4 to remove the dependency on Component 1.
-1. Export Solution B as a new version, and import it to the target environment.
+1. Export Solution B as a new version, and upgrade it to the target environment.
 
 You're allowed to delete Solution A now, as Solution B doesn't have a dependency on Solution A.
 
