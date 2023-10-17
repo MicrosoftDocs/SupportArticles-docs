@@ -1,12 +1,12 @@
 ---
-title: Call to number without country code failed
-description: Provides a resolution for an issue where call via Teams dialer failed when the number is without country code in Microsoft Dynamics 365 Sales.
+title: Fail to call through CRM records
+description: Provides a resolution for an issue where call via Teams dialer failed when calling through Contact/Account/Lead in Microsoft Dynamics 365 Sales.
 ms.date: 10/16/2023
 ms.reviewer: asaftzuk, ilanak
 author: t-ronioded
 ms.author: t-ronioded
 ---
-# Teams dialer calling through Contact/Account/Lead fails
+# Fail to call through CRM records
 
 This article provides a resolution for an issue where call via [Microsoft Teams dialer](/dynamics365/sales/configure-microsoft-teams-dialer) fails when calling through Contact/Account/Lead in Microsoft Dynamics 365 Sales.
 

@@ -447,8 +447,8 @@
           href: dialer-not-available-in-custom-app.md
         - name: Teams dialer isn't visible in the Sales Hub
           href: dialer-not-visible-in-sales.md
-        - name: Call to number without country code failed
-          href: call-to-number-without-country-code-failed.md
+        - name: Fail to call through CRM records
+          href: fail-to-call-through-CRM-records.md
     - name: Mobile Apps
       items:
         - name: We can't find any apps for your role
