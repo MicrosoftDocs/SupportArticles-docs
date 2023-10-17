@@ -410,7 +410,8 @@ For customers who want to use AES 256 GCM encryption only which is Maximum secur
 **Linux:**
 **The following script would check if the client supports AES256 GCM and enforce it only if it is supported:** 
 
-              cifsConfPath="/etc/modprobe.d/cifs.conf" 
+```bash
+cifsConfPath="/etc/modprobe.d/cifs.conf" 
               echo "`date` before change ${cifsConfPath}:"
               cat ${cifsConfPath} 
               if !(( grep require_gcm_256 ${cifsConfPath} )) 
