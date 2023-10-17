@@ -6428,28 +6428,8 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "support/azure/microsoft-entra/index.md",
-      "redirect_url": "/troubleshoot/azure/microsoft-entra/welcome-microsoft-entra",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "support/azure/virtual-desktop/index.md",
       "redirect_url": "/troubleshoot/azure/virtual-desktop/welcome-virtual-desktop",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/developer/dotnet/index.md",
-      "redirect_url": "/troubleshoot/developer/dotnet/welcome-dotnet-landing",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/developer/webapps/index.md",
-      "redirect_url": "/troubleshoot/developer/webapps/aspnet-welcome",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/developer/webapps/iis/index.md",
-      "redirect_url": "/troubleshoot/developer/webapps/iis/iis-welcome",
       "redirect_document_id": false
     },
     {
