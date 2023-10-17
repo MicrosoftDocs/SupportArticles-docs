@@ -94,7 +94,7 @@ For the VM that is created from a custom image, you must configure the appropria
 
     The command should return: Key Management Service machine name set to kms.core.windows.net:1688 successfully.
 
-2. Ensure that the outbound network traffic to KMS endpoint on port 1688 is not blocked by the firewall in the VM. To do this, Use [Test-NetConnection](/powershell/module/nettcpip/test-netconnection?view=windowsserver2022-ps) PowerShell commnad or [PSping](/sysinternals/downloads/psping) tool.
+2. Ensure that the outbound network traffic to KMS endpoint on port 1688 is not blocked by the firewall in the VM. To do this, Use [Test-NetConnection](/powershell/module/nettcpip/test-netconnection?view=windowsserver2022-ps&preserve-view=true) PowerShell commnad or [PSping](/sysinternals/downloads/psping) tool.
 
     - Verify by using Test-NetConnection, run the following commnad:
 
