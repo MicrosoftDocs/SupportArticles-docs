@@ -420,7 +420,7 @@ For customers who want to use AES 256 GCM encryption only which is Maximum secur
               echo "options cifs require_gcm_256=1" > ${cifsConfPath}
               echo "`date` after changing ${cifsConfPath}:"
               cat ${cifsConfPath}
-              fi
+fi
 
 **Windows:**
 This command below specifies the encryption ciphers used by the SMB client, and the preferred Encryption type without user confirmation.
