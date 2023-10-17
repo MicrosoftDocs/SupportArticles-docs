@@ -1,10 +1,11 @@
 ---
 title: Use Proxy Servers with Internet Explorer
-description: Discusses how to use Internet Explorer in Proxy environments.
+description: This article describes how to use the Internet Explorer in proxy environments.
 ms.date: 07/14/2020
 ms.reviewer: ramakoni
 ms.technology: internet-explorer-connectivity-navigation
 ---
+
 # Using Proxy Servers together with Internet Explorer
 
 [!INCLUDE [](../../../includes/browsers-important.md)]
@@ -74,7 +75,7 @@ To bypass servers, use an asterisk ("*") as a wildcard to replace actual charact
 
 - Enter a wildcard at the end of an Internet address, IP address, or domain name that has a common beginning. For example, use **www.microsoft.*** to bypass any entries that begin as **www.microsoft.**, such as `www.microsoft.com`, `www.microsoft.org`, but not `www.microsoftcorporation.com`.
 
-- The list is intended to bypass servers, and not URLs. Therefore do not enter subwebs or trailing slashes, such as **https://www.microsoft.com/en-us** or **www.microsoft.com/**, as they are invalidating the whole list otherwise.
+- The list is intended to bypass servers, and not URLs. Therefore don't enter subwebs or trailing slashes, such as **https://www.microsoft.com/en-us** or **www.microsoft.com/**, as they are invalidating the whole list otherwise.
 
 To bypass addresses that have similar patterns, use multiple wildcards. For example, use 123.1*.66.* to bypass addresses such as 123.144.66.12, 123.133.66.15, and 123.187.66.13.
 
