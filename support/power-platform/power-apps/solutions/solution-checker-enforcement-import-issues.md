@@ -30,7 +30,7 @@ This message occurs because [solution checker enforcement in Managed Environment
 
 ## Resolution
 
-The critical violations in the solution must be fixed before the solution can be imported without the warning or error message. If the results link is present in the message, you can use it download the SARIF file with results. The [rules documentation](/power-apps/maker/data-platform/use-powerapps-checker#best-practice-rules-used-by-solution-checker) lists each rule with a link to more information and how to fix.
+The critical violations in the solution must be fixed before the solution can be imported without the warning or error message. If the results link is present in the message, you can use it download [the SARIF file with results](/power-platform/alm/checker-api/overview#report-format). The [rules documentation](/power-apps/maker/data-platform/use-powerapps-checker#best-practice-rules-used-by-solution-checker) lists each rule with a link to more information and how to fix.
 
 If the results link is not present in the message, you can run solution checker separately to see results. There are some special considerations to keep in mind:
 
