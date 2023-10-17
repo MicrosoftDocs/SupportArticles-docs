@@ -54,15 +54,28 @@
     "fileMetadata": {
       "uhfHeaderId": {
         "azure/**.*": "Azure",
+        "developer/biztalk/**.*": "MSDocsHeader-BizTalk",
+        "developer/browsers/**.*": "MSDocsHeader-MSEdge",
+        "developer/dotnet/**.*": "MSDocsHeader-DotNet",
+        "developer/host-integration-server/**.*": "MSDocsHeader-His",
+        "developer/webapps/**.*": "MSDocsHeader-AspNet",
+        "developer/webapps/aspnet/**.*": "MSDocsHeader-AspNet",
+        "developer/webapps/aspnetcore/**.*": "MSDocsHeader-AspNet",
         "developer/webapps/iis/**.*": "MSDocsHeader-Windows",
         "dynamics-365/commerce/**.*": "MSDocsHeader-Dynamics365-Commerce",
         "dynamics-365/customer-insights/**.*": "MSDocsHeader-Dynamics365-Customer-Insights",
         "dynamics-365/customer-service/**.*": "MSDocsHeader-Dynamics365-CustomerService",
         "dynamics-365/sales/**.*": "MSDocsHeader-Dynamics365Sales",
+        "mem/**.*": "MSDocsHeader-Intune",
         "power-platform/**.*": "MSDocsHeader-PowerPlatform",
         "power-platform/power-apps/**.*": "MSDocsHeader-MSPowerApps",
         "power-platform/power-automate/**.*": "MSDocsHeader-MSPowerAutomate",
+        "sql/**.*": "MSDocsHeader-DocsSQL",
         "system-center/**.*": "MSDocsHeader-SystemCenter",
+        "windows/**.*": "MSDocsHeader-Windows",
+        "windows/win32/*.*": "MSDocsHeader-WinDevCenter",
+        "windows-client/**.*": "MSDocsHeader-Windows",
+        "windows-hardware/**.*": "MSDocsHeader-WinHW",
         "windows-server/**.*": "MSDocsHeader-WindowsServer"
     },
       "feedback_product_url": {
