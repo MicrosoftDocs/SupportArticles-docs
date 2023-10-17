@@ -261,6 +261,8 @@
       href: ../sharing-and-permissions/access-denied-due-to-org-policies.md
     - name: Access Denied error when accessing a shared folder
       href: ../sharing-and-permissions/access-denied-shared-folder.md
+    - name: App permission error when updating user profile properties
+      href: ../sharing-and-permissions/app-permission-error-update-user-profile-property.md
     - name: '"Error 403 Forbidden" in OneDrive or SharePoint'
       href: ../sharing-and-permissions/error-403-forbidden.md
     - name: Error ResponseStatusNotOK when sharing a site
