@@ -403,6 +403,35 @@ AKS versions 1.25 and later versions are based on Ubuntu 22.04, which uses the L
 
 Enable the AES-128-GCM algorithm by using the **Maximum compatibility** profile or a **Custom** profile that enables AES-128-GCM. For more information, see [Azure Files Security Settings](/azure/storage/files/files-smb-protocol?tabs=azure-portal#smb-security-settings).
 
+### Cause 5: Minimum encryption requirement for a storage account not met.
+#### Solution AES128-GCM should be enabled for all storage accounts in order to successfully mount or access a file share.
+**Note:**
+For customers who want to use AES 256 GCM encryption only which is Maximum security (SMB3.1.1) should follow the following:
+**Linux:**
+**The following script would check if the client supports AES256 GCM and enforce it only if it is supported:** 
+
+              cifsConfPath="/etc/modprobe.d/cifs.conf" 
+              echo "`date` before change ${cifsConfPath}:"
+              cat ${cifsConfPath} 
+              if !(( grep require_gcm_256 ${cifsConfPath} )) 
+              then
+              modprobe cifs
+              echo 1 > /sys/module/cifs/parameters/require_gcm_256
+              echo "options cifs require_gcm_256=1" > ${cifsConfPath}
+              echo "`date` after changing ${cifsConfPath}:"
+              cat ${cifsConfPath}
+              fi
+
+**Windows:**
+This command below specifies the encryption ciphers used by the SMB client, and the preferred Encryption type without user confirmation.
+[Set-SmbClientConfiguration (SmbShare) | Microsoft Learn](/powershell/module/smbshare/set-smbclientconfiguration)
+
+Set-SmbClientConfiguration -EncryptionCiphers "AES_256_GCM" -Confirm:$false
+
+**Note that this is not available on all clients, my Windows 10 machine does not have it even though it is fully patched
+The EncryptionCiphers parameter is available beginning with 2022-06 Cumulative Update for Microsoft server operating system version 21H2 for x64-based Systems (KB5014665), and Cumulative Update for Windows 11, version 22H2 (KB5014668)**
+
+
 ## More information
 
 If you experience some other mount errors, see [Troubleshoot Azure Files problems in Linux](/azure/storage/files/storage-troubleshoot-linux-file-connection-problems).
