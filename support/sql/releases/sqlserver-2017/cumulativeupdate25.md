@@ -57,7 +57,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 ## How to obtain or download this or the latest cumulative update package
 
 <details>
-<summary><b>How to obtain or download the latest cumulative update package for Windows (recommended)</b></summary>
+<summary><b>How to obtain or download the latest cumulative update package for Windows (recommended)</b></summary>
 
 The following update is available from the Microsoft Download Center:
 
@@ -73,7 +73,7 @@ If the download page doesn't appear, contact [Microsoft Customer Service and Sup
 </details>
 
 <details>
-<summary><b>How to obtain or download this cumulative update package for Windows from Microsoft Update Catalog </b></summary>
+<summary><b>How to obtain or download this cumulative update package for Windows from Microsoft Update Catalog </b></summary>
 
 > [!NOTE]
 >
@@ -99,7 +99,7 @@ For installation instructions and direct links to the CU package downloads, see 
 <details>
 <summary><b>File hash information</b></summary>
 
-You can verify the download by computing the hash of the *SQLServer2017-KB5003830-x64.exe* file through the following command:
+You can verify the download by computing the hash of the *SQLServer2017-KB5003830-x64.exe* file through the following command:
 
 `certutil -hashfile SQLServer2017-KB5003830-x64.exe SHA256`
 
