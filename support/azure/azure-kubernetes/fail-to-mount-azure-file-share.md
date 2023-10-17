@@ -415,7 +415,7 @@ cifsConfPath="/etc/modprobe.d/cifs.conf"
 echo "`date` before change ${cifsConfPath}:"
               cat ${cifsConfPath} 
               if !(( grep require_gcm_256 ${cifsConfPath} )) 
-              then
+then
 modprobe cifs
               echo 1 > /sys/module/cifs/parameters/require_gcm_256
               echo "options cifs require_gcm_256=1" > ${cifsConfPath}
