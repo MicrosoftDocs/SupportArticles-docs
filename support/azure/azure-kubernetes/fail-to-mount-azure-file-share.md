@@ -419,7 +419,7 @@ For customers who want to use AES 256 GCM encryption only which is Maximum secur
               echo 1 > /sys/module/cifs/parameters/require_gcm_256
               echo "options cifs require_gcm_256=1" > ${cifsConfPath}
               echo "`date` after changing ${cifsConfPath}:"
-              cat ${cifsConfPath}
+cat ${cifsConfPath}
 fi
 
 **Windows:**
