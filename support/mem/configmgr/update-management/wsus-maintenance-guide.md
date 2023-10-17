@@ -372,10 +372,12 @@ Needed/helpful links:
 
 ### WSUS cleanup script
 
+If the script is being run on the WSUS server, LOCALHOST can be used in place of the actual SERVERNAME. Additionally, replace the PORT with the used Port
+
 ```powershell
 [reflection.assembly]::LoadWithPartialName("Microsoft.UpdateServices.Administration")`
  | out-null
-$wsus = [Microsoft.UpdateServices.Administration.AdminProxy]::GetUpdateServer();
+$wsus = [Microsoft.UpdateServices.Administration.AdminProxy]::GetUpdateServer("SERVERNAME",$true,Port);
 $cleanupScope = new-object Microsoft.UpdateServices.Administration.CleanupScope;
 $cleanupScope.DeclineSupersededUpdates = $true
 $cleanupScope.DeclineExpiredUpdates = $true
