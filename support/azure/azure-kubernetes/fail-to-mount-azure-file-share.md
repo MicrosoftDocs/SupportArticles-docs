@@ -412,7 +412,7 @@ For customers who want to use AES 256 GCM encryption only which is Maximum secur
 
 ```bash
 cifsConfPath="/etc/modprobe.d/cifs.conf" 
-              echo "`date` before change ${cifsConfPath}:"
+echo "`date` before change ${cifsConfPath}:"
               cat ${cifsConfPath} 
               if !(( grep require_gcm_256 ${cifsConfPath} )) 
               then
