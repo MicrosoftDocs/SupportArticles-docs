@@ -54,7 +54,7 @@ To configure the proxy setting through a group policy, see [How to configure Pro
 
 ### More information
 
-A proxy bypass entry may begin by using an **http://**, **https://**, **ftp://**, or **gopher://** protocol type.
+A proxy bypass entry might begin by using an **http://**, **https://**, **ftp://**, or **gopher://** protocol type.
 
 If a protocol type is used, the exception entry applies only to requests for that protocol.
 
