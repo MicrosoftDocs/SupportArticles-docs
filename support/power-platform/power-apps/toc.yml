@@ -90,6 +90,8 @@ items:
           href: solutions/duplicate-security-roles.md
         - name: Data source references not updated after solution import
           href: solutions/dataverse-environment-variables.md
+        - name: '"Failed deleting solution" error due to circular dependencies between solutions'
+          href: solutions/circular-dependencies-between-solutions.md
         - name: Form doesn't appear in target environment after import
           href: solutions/form-not-appear-after-import.md
         - name: '"Full formXml is expected to create a form" error'
