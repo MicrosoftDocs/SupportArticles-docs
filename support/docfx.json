@@ -55,11 +55,15 @@
       "uhfHeaderId": {
         "azure/**.*": "Azure",
         "developer/webapps/iis/**.*": "MSDocsHeader-Windows",
+        "dynamics-365/commerce/**.*": "MSDocsHeader-Dynamics365-Commerce",
+        "dynamics-365/customer-insights/**.*": "MSDocsHeader-Dynamics365-Customer-Insights",
+        "dynamics-365/customer-service/**.*": "MSDocsHeader-Dynamics365-CustomerService",
+        "dynamics-365/sales/**.*": "MSDocsHeader-Dynamics365Sales",
         "power-platform/**.*": "MSDocsHeader-PowerPlatform",
         "power-platform/power-apps/**.*": "MSDocsHeader-MSPowerApps",
         "power-platform/power-automate/**.*": "MSDocsHeader-MSPowerAutomate",
-        "system-center/**/*.*": "MSDocsHeader-SystemCenter",
-        "windows-server/**/*.*": "MSDocsHeader-WindowsServer"
+        "system-center/**.*": "MSDocsHeader-SystemCenter",
+        "windows-server/**.*": "MSDocsHeader-WindowsServer"
     },
       "feedback_product_url": {
         "dynamics/gp/*.md": "https://experience.dynamics.com/ideas/categories/?forum=771cc5ac-c117-e811-8105-3863bb2e0320&forumName=Dynamics%20GP",
