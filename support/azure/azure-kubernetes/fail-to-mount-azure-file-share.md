@@ -416,7 +416,7 @@ echo "`date` before change ${cifsConfPath}:"
               cat ${cifsConfPath} 
               if !(( grep require_gcm_256 ${cifsConfPath} )) 
               then
-              modprobe cifs
+modprobe cifs
               echo 1 > /sys/module/cifs/parameters/require_gcm_256
               echo "options cifs require_gcm_256=1" > ${cifsConfPath}
               echo "`date` after changing ${cifsConfPath}:"
