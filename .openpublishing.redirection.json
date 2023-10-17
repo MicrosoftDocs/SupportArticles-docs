@@ -6419,67 +6419,67 @@
     },
     {
       "source_path": "support/azure/azure-container-instances/index.md",
-      "redirect_url": "/support/azure/azure-container-instances/welcome-container-instances",
+      "redirect_url": "/troubleshoot/azure/azure-container-instances/welcome-container-instances",
       "redirect_document_id": false
     },
     {
       "source_path": "support/azure/azure-storage/index.md",
-      "redirect_url": "/support/azure/azure-storage/welcome-azure-storage",
+      "redirect_url": "/troubleshoot/azure/azure-storage/welcome-azure-storage",
       "redirect_document_id": false
     },
     {
       "source_path": "support/azure/microsoft-entra/index.md",
-      "redirect_url": "/support/azure/microsoft-entra/welcome-microsoft-entra",
+      "redirect_url": "/troubleshoot/azure/microsoft-entra/welcome-microsoft-entra",
       "redirect_document_id": false
     },
     {
       "source_path": "support/azure/virtual-desktop/index.md",
-      "redirect_url": "/support/azure/virtual-desktop/welcome-virtual-desktop",
+      "redirect_url": "/troubleshoot/azure/virtual-desktop/welcome-virtual-desktop",
       "redirect_document_id": false
     },
     {
       "source_path": "support/developer/dotnet/index.md",
-      "redirect_url": "/support/developer/dotnet/welcome-dotnet-landing",
+      "redirect_url": "/troubleshoot/developer/dotnet/welcome-dotnet-landing",
       "redirect_document_id": false
     },
     {
       "source_path": "support/developer/webapps/index.md",
-      "redirect_url": "/support/developer/webapps/aspnet-welcome",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet-welcome",
       "redirect_document_id": false
     },
     {
       "source_path": "support/developer/webapps/iis/index.md",
-      "redirect_url": "/support/developer/webapps/iis/iis-welcome",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/iis-welcome",
       "redirect_document_id": false
     },
     {
       "source_path": "support/dynamics-365/commerce/index.md",
-      "redirect_url": "/support/dynamics-365/commerce/welcome-commerce",
+      "redirect_url": "/troubleshoot/dynamics-365/commerce/welcome-commerce",
       "redirect_document_id": false
     },
     {
       "source_path": "support/dynamics-365/customer-insights/index.md",
-      "redirect_url": "/support/dynamics-365/customer-insights/welcome-customer-insights",
+      "redirect_url": "/troubleshoot/dynamics-365/customer-insights/welcome-customer-insights",
       "redirect_document_id": false
     },
     {
       "source_path": "support/dynamics-365/customer-service/index.md",
-      "redirect_url": "/support/dynamics-365/customer-service/welcome-customer-service",
+      "redirect_url": "/troubleshoot/dynamics-365/customer-service/welcome-customer-service",
       "redirect_document_id": false
     },
     {
       "source_path": "support/dynamics-365/finance/index.md",
-      "redirect_url": "/support/dynamics-365/finance/welcome-finance",
+      "redirect_url": "/troubleshoot/dynamics-365/finance/welcome-finance",
       "redirect_document_id": false
     },
     {
       "source_path": "support/dynamics-365/supply-chain/index.md",
-      "redirect_url": "/support/dynamics-365/supply-chain/welcome-supply-chain",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/welcome-supply-chain",
       "redirect_document_id": false
     },
     {
       "source_path": "support/power-platform/ai-builder/index.md",
-      "redirect_url": "/support/power-platform/ai-builder/welcome-ai-builder",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/welcome-ai-builder",
       "redirect_document_id": false
     }
 ]
