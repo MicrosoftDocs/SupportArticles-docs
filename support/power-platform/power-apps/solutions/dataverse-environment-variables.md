@@ -18,13 +18,13 @@ contributors:
 
 ## Symptoms
 
-References to data sources aren't updated when importing a Power Apps solution into a different environment. Depending on the cause, the app may continue to run correctly, however, Power Apps Studio may not reflect the correct references in the target environment.
+References to data sources aren't updated when importing a Power Apps solution into a different environment. Depending on the cause, the app might continue to run correctly, however, Power Apps Studio might not reflect the correct references in the target environment.
 
 ## Cause
 
 There are several possible causes:
 
-- Data source environment variables are dynamically retrieved for a data source at play/runtime. For performance reasons, once retrieved, environment variable values are cached locally in the browser. Values may take up to an hour to auto-refresh.
+- Data source environment variables are dynamically retrieved for a data source at play/runtime. For performance reasons, once retrieved, environment variable values are cached locally in the browser. Values might take up to an hour to auto-refresh.
 
 - A missing current value. A default value will be used if no "current" value is available.
 
@@ -62,7 +62,7 @@ Issues with SharePoint choice columns were fixed and the update was deployed at 
 
 Review the environment variables [documentation](/power-apps/maker/data-platform/EnvironmentVariables). Use [Monitor](/power-apps/maker/monitor-overview) to investigate environment variable issues to verify if the data calls are connecting to the correct dataset or list. Lists created using Microsoft Lists are internally identified by a unique ID/GUID. You can find this value by using a trace inside Monitor. Use this value to trace what and where lists are being used.
 
-### Avoid locally cached values that may be out of date
+### Avoid locally cached values that might be out of date
 
 1. Test your solution with a new browser instance. Close all browser windows to ensure you've cleared all cached values. Environment variable values are cached at multiple levels to improve performance. Testing with a new browser instance will ensure you aren't using older cached values.
 
