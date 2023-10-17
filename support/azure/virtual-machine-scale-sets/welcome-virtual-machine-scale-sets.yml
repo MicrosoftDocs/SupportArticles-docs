@@ -80,3 +80,5 @@ landingContent:
         links:
           - text: Resource Health shows Degraded state in VMSS
             url:  resource-health-degraded-state.md
+          - text: VMSS instances remain in "Unhealthy" state and are not repaired
+            url:  instances-not-repaired.md
