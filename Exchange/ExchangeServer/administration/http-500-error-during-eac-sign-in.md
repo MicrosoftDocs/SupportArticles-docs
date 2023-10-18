@@ -1,5 +1,5 @@
 ---
-title: HTTP server error status (500) when signing in to the EAC
+title: HTTP server error status (500) when signing in to EAC
 description: Resolves an issue in which you, as an administrator, receive an HTTP 500 error message when you sign in to the EAC.
 author: cloud-writer
 ms.author: meerak
@@ -19,7 +19,7 @@ search.appverid: MET150
 ms.date: 10/18/2023
 ---
 
-# HTTP server error status (500) when signing in to the EAC
+# HTTP server error status (500) when signing in to EAC
 
 ## Symptoms
 
