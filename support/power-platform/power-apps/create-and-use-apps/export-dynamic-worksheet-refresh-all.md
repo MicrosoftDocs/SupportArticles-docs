@@ -1,9 +1,9 @@
 ---
 title: Refresh All doesn't work after exporting app data to a dynamic worksheet
-description: Describes an issue where refresh All doesn't work after exporting app data to a dynamic worksheet.
+description: Describes an issue where Refresh All doesn't work after exporting app data to a dynamic worksheet in Power Apps.
 author: sriharibs-msft
 ms.reviewer: aartigoyle
-ms.date: 10/05/2023
+ms.date: 10/18/2023
 ms.author: srihas
 search.audienceType: 
   - maker
@@ -14,12 +14,11 @@ contributors:
   - aartig13
   - tapanm-msft
 ---
-
 # Refresh All doesn't work after exporting app data to a dynamic worksheet
 
 ## Symptoms
 
-After you use the [Export to Excel](/power-apps/user/export-excel-dynamic-worksheet) command to export a file to your local computer and open the file by selecting **Data** > **Refresh All**. The data disappears and workbook appears blank.
+After you use the [Export to Excel](/power-apps/user/export-excel-dynamic-worksheet) command to export app data to a dynamic worksheet and open the file by selecting **Data** > **Refresh All**, the data disappears and workbook appears blank.
 
 ## Cause
 
@@ -27,37 +26,31 @@ This issue occurs when the data that you're accessing is password-protected and 
 
 ## Resolution
 
-1. In the Excel file, select the **Data** tab > **Queries and Connections**.
+1. In the Excel file, select **Data** > **Queries & Connections**.
 
-   > [!div class="mx-imgBorder"] 
-   > ![Go to Queries and Connections.](media/export-dynamic-worksheet-refresh-all/excel-dynamic-ts-1.png "Go to Queries and Connections") 
-   
-3. The **Queries & Connections** pane opens on the right of the window. On the **Connections** tab, right-click to select the query and then select **Properties**.
+   :::image type="content" source="media/export-dynamic-worksheet-refresh-all/queries-and-connections.png" alt-text="Screenshot that shows the Queries and Connections option in the Data tab." border="false":::
 
-   > [!div class="mx-imgBorder"] 
-   > ![Go connections properties.](media/export-dynamic-worksheet-refresh-all/excel-dynamic-ts-2.png "Go connections properties")
-   
-5. The **Connection Properties** window opens. On **Definition** tab, select **Edit Query**
+2. The **Queries & Connections** pane opens on the right of the window. On the **Connections** tab, right-click to select the query and then select **Properties**.
 
-   > [!div class="mx-imgBorder"] 
-   > ![Edit query.](media/export-dynamic-worksheet-refresh-all/excel-dynamic-ts-3.png "Edit Query")
+   :::image type="content" source="media/export-dynamic-worksheet-refresh-all/query-properties.png" alt-text="Screenshot that shows the Properties settings of a query on the Queries and Connections pane." border="false":::
 
-6. If prompted, enter username and password. Enter the same user and password that you use to sign in to your app.
+3. The **Connection Properties** window opens. On **Definition** tab, select **Edit Query**
 
-7. On the **Edit Web Query** window, select **GO**. An error message will show: **Can't complete this action** 
+   :::image type="content" source="media/export-dynamic-worksheet-refresh-all/edit-query.png" alt-text="Screenshot that shows the Edit Query button in the Connection Properties window." border="false":::
 
-   > [!div class="mx-imgBorder"] 
-   > ![Select Go.](media/export-dynamic-worksheet-refresh-all/excel-dynamic-ts-4.png "Select GO")
+4. If prompted, enter username and password. Enter the same user and password that you use to sign in to your app.
 
-8. Close the **Edit Web Query** window.
+5. On the **Edit Web Query** window, select **Go**. An error message occurs:
 
-   > [!div class="mx-imgBorder"] 
-   > ![Close the window.](media/export-dynamic-worksheet-refresh-all/excel-dynamic-ts-5.png "Close the window")
+   > Can't complete this action
 
-9. This should fix the issue. Refresh the data in the worksheet again by going to, **Data** > **Refresh All**. 
+   :::image type="content" source="media/export-dynamic-worksheet-refresh-all/go-button-in-edit-web-query.png" alt-text="Screenshot that shows the Go button in the Edit Web Query window." border="false"  lightbox="media/export-dynamic-worksheet-refresh-all/go-button-in-edit-web-query.png":::
 
-   > [!div class="mx-imgBorder"] 
-   > ![Refresh your app data in Excel.](media/export-dynamic-worksheet-refresh-all/refresh-data.png "Refresh your app data in Excel") 
+6. Close the **Edit Web Query** window.
+
+7. This should fix the issue. Refresh the data in the worksheet again by selecting **Data** > **Refresh All**.
+
+    :::image type="content" source="media/export-dynamic-worksheet-refresh-all/refresh-data.png" alt-text="Screenshot that shows how to refresh your app data in Excel." border="false":::
 
 ### See also
 
