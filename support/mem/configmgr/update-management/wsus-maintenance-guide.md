@@ -188,7 +188,7 @@ If updates are not configured to be immediately expired in Configuration Manager
 The following command lines illustrate the various ways that the PowerShell script can be run:
 
 > [!NOTE]
-> When you run the script on the WSUS server, use `LOCALHOST` instead of the actual `SERVERNAME`. Additionally, replace `PORT` with the used port.
+> When you run the script on the WSUS server, use `LOCALHOST` instead of the actual `SERVERNAME`.
 
 ```powershell
 Decline-SupersededUpdatesWithExclusionPeriod.ps1 -UpdateServer SERVERNAME -Port 8530 –SkipDecline
