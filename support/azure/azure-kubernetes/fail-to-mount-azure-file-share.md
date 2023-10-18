@@ -1,7 +1,7 @@
 ---
 title: Unable to mount Azure file share
 description: Describes errors that cause the mounting of an Azure file share to fail and provides solutions.
-ms.date: 05/20/2022
+ms.date: 10/18/2023
 author: genlin
 ms.author: genli
 ms.reviewer: chiragpa, akscsscic
@@ -16,7 +16,7 @@ This article provides possible causes and solutions for errors that cause the mo
 
 You deploy a Kubernetes resource such as a Deployment or a StatefulSet, in an Azure Kubernetes Service (AKS) environment. The deployment will create a pod that mounts a PersistentVolumeClaim (PVC) referencing an Azure file share.
 
-However, the pod stays in the **ContainerCreating** status. When you run the `kubectl describe pods` command, you may see one of the following errors in the command output, which causes the mounting operation to fail:
+However, the pod stays in the **ContainerCreating** status. When you run the `kubectl describe pods` command, you might see one of the following errors in the command output, which causes the mounting operation to fail:
 
 - [Mount error(2): No such file or directory](#mounterror2)
 - [Mount error(13): Permission denied](#mounterror13)
@@ -241,6 +241,7 @@ Here are possible causes for this error:
 - [Cause 2: AKS's VNET and subnet aren't allowed for the storage account](#akssubnetnotallowed)
 - [Cause 3: Connectivity is via a private link but nodes and the private endpoint are in different VNETs](#aksnotawareprivateipaddress)
 - [Cause 4: Storage account is set to require encryption that the client doesn't support](#akssmbencryption)
+- [Cause 5: Minimum encryption requirement for a storage account not met](#minimumencryption)
 
 > [!NOTE]
 >
@@ -248,6 +249,7 @@ Here are possible causes for this error:
 > - Cause 2 applies to the public scenario only.
 > - Cause 3 applies to the private scenario only.
 > - Cause 4 applies to public and private scenarios.
+> - Cause 5 applies to public and private scenarios.
 
 ### <a id="secretnotusecorrectstorageaccountkey"></a>Cause 1: Kubernetes secret doesn't reference correct storage account name or key
 
@@ -403,7 +405,7 @@ AKS versions 1.25 and later versions are based on Ubuntu 22.04, which uses the L
 
 Enable the AES-128-GCM algorithm by using the **Maximum compatibility** profile or a **Custom** profile that enables AES-128-GCM. For more information, see [Azure Files Security Settings](/azure/storage/files/files-smb-protocol?tabs=azure-portal#smb-security-settings).
 
-### Cause 5: Minimum encryption requirement for a storage account not met
+### <a id="minimumencryption"></a>Cause 5: Minimum encryption requirement for a storage account not met
 
 #### Solution AES128-GCM should be enabled for all storage accounts in order to successfully mount or access a file share.
 
@@ -411,7 +413,7 @@ Customers who want to use AES256 GCM encryption only, which is maximum security 
 
 #### Linux
 
-The following script will check if the client supports AES256 GCM and enforce it only if it is supported:
+The following script will check if the client supports AES256 GCM and enforce it only if it's supported:
 
 ```bash
 cifsConfPath="/etc/modprobe.d/cifs.conf" 
