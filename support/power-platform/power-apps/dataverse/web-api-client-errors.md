@@ -160,7 +160,9 @@ Verify that the property name you use exists in the [CSDL $metadata document](/p
 
 ## Error identified in Payload provided by the user for Entity '{entity name}'
 
-### Symptoms
+### InnerException : Microsoft.OData.ODataException: An undeclared property [...] was found in the payload.
+
+#### Symptoms
 
 **Request**
 
@@ -191,7 +193,7 @@ HTTP/1.1 400 Bad Request
 }
 ```
 
-### Cause
+#### Cause
 
 This error occurs because there is no single-valued navigation property in the contact entity type named `parentcustomerid`. For more information, see [contact EntityType > Single-valued navigation properties](/power-apps/developer/data-platform/webapi/reference/contact#single-valued-navigation-properties).
 
@@ -199,9 +201,47 @@ This error occurs because there is no single-valued navigation property in the c
 
 In this case, the `parentcustomerid` column is a customer lookup type that may link to either the account or contact tables. To support this customer lookup, there are two separate relationships and each has a different single-valued navigation property. The correct single-valued navigation property in this case is `parentcustomerid_account`.
 
-### How to avoid
+#### How to avoid
 
 Verify that the navigation property name you use exists in the [CSDL $metadata document](/power-apps/developer/data-platform/webapi/web-api-service-documents#csdl-metadata-document). For more information, see [Web API Navigation Properties](/power-apps/developer/data-platform/webapi/web-api-navigation-properties), especially the [Multi-table lookups](/power-apps/developer/data-platform/webapi/web-api-navigation-properties#multi-table-lookups) section.
+
+### InnerException : System.ArgumentException: Stream was not readable.
+
+#### Symptoms
+
+**Request**
+
+```http
+POST [Organization URI]/api/data/v9.0/contacts HTTP/1.1
+
+{
+  "firstname":"test",
+  "lastname":"contact",
+  "parentcustomerid@odata.bind": "accounts(a779956b-d748-ed11-bb44-6045bd01152a)"
+}
+```
+
+**Response**
+
+```http
+HTTP/1.1 400 Bad Request
+
+{
+    "error": {
+        "code":"0x80048d19",
+        "message":"Error identified in Payload provided by the user for Entity :'accounts', For more information on this error please follow this help link https://go.microsoft.com/fwlink/?linkid=2195293  ---->  InnerException : System.ArgumentException: Stream was not readable.\r\n   at System.IO.StreamReader..ctor(Stream stream, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean leaveOpen)\r\n   at System.IO.StreamReader..ctor(Stream stream, Encoding encoding)\r\n   at Microsoft.OData.JsonLight.ODataJsonLightInputContext.CreateTextReader(Stream messageStream, Encoding encoding)\r\n   at Microsoft.OData.JsonLight.ODataJsonLightInputContext..ctor(ODataMessageInfo messageInfo, ODataMessageReaderSettings messageReaderSettings)\r\n   at Microsoft.OData.Json.ODataJsonFormat.CreateInputContext(ODataMessageInfo messageInfo, ODataMessageReaderSettings messageReaderSettings)\r\n   at Microsoft.OData.ODataMessageReader.ReadFromInput[T](Func`2 readFunc, ODataPayloadKind[] payloadKinds)\r\n   at System.Web.OData.Formatter.Deserialization.ODataResourceDeserializer.Read(ODataMessageReader messageReader, Type type, ODataDeserializerContext readContext)\r\n   at System.Web.OData.Formatter.ODataMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)."
+        }
+}
+
+```
+
+#### Cause
+
+This error occurs because
+
+#### How to avoid
+
+Verify that 
 
 ### See also
 
