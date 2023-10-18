@@ -1,7 +1,7 @@
 ---
 title: TLS 1.2 support for Microsoft SQL Server
 description: This article provides information about the updates that Microsoft releases to enable TLS 1.2 support for SQL Server.
-ms.date: 08/11/2023
+ms.date: 10/18/2023
 ms.custom: sap:Connection issues
 author: PiJoCoder 
 ms.author: jopilov
@@ -53,6 +53,7 @@ Use the following table to download the client components and driver updates tha
 |---------|---------|
 |SQL Server Native Client 10.0 for SQL Server 2008/2008 R2 (x86/x64/IA64)     |    [Microsoft SQL Server 2008 and SQL Server 2008 R2 Native Client](https://www.microsoft.com/download/details.aspx?id=57606)     |
 |SQL Server Native Client 11.0 for SQL Server 2012/2014 (x86/x64)     |    [Microsoft SQL Server 2012 Native Client - QFE](https://www.microsoft.com/download/details.aspx?id=50402)     |
+|MDAC Client components (Sqlsrv32.dll and Sqloledb.dll)  | [Servicing stack update for Windows 10, version 1809: November 10, 2020](https://support.microsoft.com/en-us/topic/servicing-stack-update-for-windows-10-version-1809-november-10-2020-c7a4dc25-458f-b068-025b-b5d05fabee47) |
 
 ## Additional fixes needed for SQL Server to use TLS 1.2
 
