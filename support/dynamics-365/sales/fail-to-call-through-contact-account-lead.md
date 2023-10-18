@@ -1,29 +1,37 @@
 ---
-title: Fail to call through CRM records
-description: Provides a resolution for an issue where call via Teams dialer failed when calling through Contact/Account/Lead in Microsoft Dynamics 365 Sales.
-ms.date: 10/16/2023
+title: Fail to call through a contact, account, or lead record
+description: Provides a resolution for an issue where a Teams dialer call fails when you make the call by using a contact, account, or lead record in Microsoft Dynamics 365 Sales.
+ms.date: 10/18/2023
 ms.reviewer: asaftzuk, ilanak
 author: t-ronioded
 ms.author: t-ronioded
 ---
-# Fail to call through CRM records
+# Can't make a Teams dialer call through a contact, account, or lead record
 
-This article provides a resolution for an issue where call via [Microsoft Teams dialer](/dynamics365/sales/configure-microsoft-teams-dialer) fails when calling through Contact/Account/Lead in Microsoft Dynamics 365 Sales.
+This article provides a resolution for an issue where you can't make a call through a contact, account or lead record by using [Microsoft Teams dialer](/dynamics365/sales/configure-microsoft-teams-dialer) in Microsoft Dynamics 365 Sales.
 
 ## Symptoms
 
-Call via the phone call icon next to the Contact/Account/Lead's number (see the photo below) failed when the number is without country code.  
-![Phone call icon](media/call-to-number-without-country-code-failed/phone-call-icon.png)
+You can't make a call by selecting the phone call icon next to the contact, account, or lead's number when the number doesn't have a country code in Dynamics 365 Sales.
+
+:::image type="content" source="media/fail-to-call-through-contact-account-lead/phone-call-icon.png" alt-text="Screenshot that shows the phone call icon next to the contact, account, or lead's number.":::
 
 ## Cause
 
-Country/region code prefixing is enabled on the CRM platform.
+This issue occurs because the **country/region code prefixing** is enabled.
 
 ## Resolution
 
-To resolve this issue, you should disable country/region code prefixing.
+To resolve this issue, disable the **country/region code prefixing**.
 
-1. Click the settings icon in the top toolbar ![Crm settings icon](media/call-to-number-without-country-code-failed/crm-settings-icon.png).   
-2. Click on Personalization Settings:  
-![Personalization Settings](media/call-to-number-without-country-code-failed/personalization-settings.png).
-3. Uncheck country/region code prefixing.  ![Country code prefixing on settings](media/call-to-number-without-country-code-failed/country-code-prefixing-on-settings.png)
+1. Select the Settings icon on the top toolbar.
+  
+   :::image type="content" source="media/fail-to-call-through-contact-account-lead/settings-icon.png" alt-text="Screenshot that shows the Settings icon." border="false":::
+
+2. Select **Personalization Settings**.
+
+   :::image type="content" source="media/fail-to-call-through-contact-account-lead/personalization-settings.png" alt-text="Screenshot that shows the Personalization Settings option.":::
+
+3. Clear the **country/region code prefixing** checkbox.
+
+   :::image type="content" source="media/fail-to-call-through-contact-account-lead/country-code-prefixing-on-settings.png" alt-text="Screenshot that shows the country/region code prefixing checkbox.":::
