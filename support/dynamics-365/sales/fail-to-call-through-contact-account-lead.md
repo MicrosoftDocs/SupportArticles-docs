@@ -1,3 +1,4 @@
+---
 title: Fail to call from a contact, account, or lead record
 description: Provides a resolution for an issue where a Teams dialer call fails when you make the call by using a contact, account, or lead record in Microsoft Dynamics 365 Sales.
 ms.date: 10/18/2023
