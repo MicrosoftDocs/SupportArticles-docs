@@ -82,7 +82,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 ## How to obtain or download this or the latest cumulative update package
 
 <details>
-<summary><b>How to obtain or download the latest cumulative update package for Windows (recommended)</b></summary>
+<summary><b>How to obtain or download the latest cumulative update package for Windows (recommended)</b></summary>
 
 The following update is available from the Microsoft Download Center:
 
@@ -96,7 +96,7 @@ The following update is available from the Microsoft Download Center:
 </details>
 
 <details>
-<summary><b>How to obtain or download this cumulative update package for Windows from Microsoft Update Catalog</b></summary>
+<summary><b>How to obtain or download this cumulative update package for Windows from Microsoft Update Catalog</b></summary>
 
 The following update is available from the Microsoft Update Catalog:
 
@@ -120,7 +120,7 @@ For installation instructions and direct links to the CU package downloads, see 
 </details>
 
 <details>
-<summary><b>How to obtain or download the latest cumulative update for Big Data Clusters (BDC)</b></summary>
+<summary><b>How to obtain or download the latest cumulative update for Big Data Clusters (BDC)</b></summary>
 
 To upgrade Microsoft SQL Server 2019 Big Data Clusters (BDC) on Linux to the latest CU, see the [Big Data Clusters Deployment Guidance](/sql/big-data-cluster/deployment-guidance).
 
@@ -135,7 +135,7 @@ For more information, see the [Big Data Clusters release notes](/sql/big-data-cl
 <details>
 <summary><b>File hash information</b></summary>
 
-You can verify the download by computing the hash of the *SQLServer2019-KB5008996-x64.exe* file by using the following command:
+You can verify the download by computing the hash of the *SQLServer2019-KB5008996-x64.exe* file by using the following command:
 
 `certutil -hashfile SQLServer2019-KB5008996-x64.exe SHA256`
 
@@ -931,8 +931,8 @@ Beginning in Microsoft SQL Server 2017, the Analysis Services build version numb
 - Each new CU contains all the fixes that were included with the previous CU for the installed version of SQL Server.
 - SQL Server CUs are certified to the same levels as service packs, and should be installed at the same level of confidence.
 - We recommend ongoing, proactive installation of CUs as they become available according to these guidelines:
-- Historical data shows that a significant number of support cases involve an issue that has already been addressed in a released CU.
-- CUs may contain added value over and above hotfixes. This includes supportability, manageability, and reliability updates.
+  - Historical data shows that a significant number of support cases involve an issue that has already been addressed in a released CU.
+  - CUs may contain added value over and above hotfixes. This includes supportability, manageability, and reliability updates.
 - We recommend that you test SQL Server CUs before you deploy them to production environments.
 
 </details>
@@ -1002,7 +1002,7 @@ To uninstall this CU on Linux, you must roll back the package to the previous ve
 
 ## References
 
-- [Announcing updates to the SQL Server Incremental Servicing Model (ISM)](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/)
+- [Announcing updates to the SQL Server Incremental Servicing Model (ISM)](/archive/blogs/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism)
 - [SQL Server Service Packs are no longer supported starting from SQL Server 2017](https://support.microsoft.com/topic/fd405dee-cae7-b40f-db14-01e3e4951169)
 - [Determine which version and edition of SQL Server Database Engine is running](../find-my-sql-version.md)
 - [Servicing models for SQL Server](../../general/servicing-models-sql-server.md)
