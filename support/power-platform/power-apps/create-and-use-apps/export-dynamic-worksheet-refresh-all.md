@@ -52,6 +52,14 @@ This issue occurs when the data that you're accessing is password-protected and 
 
     :::image type="content" source="media/export-dynamic-worksheet-refresh-all/refresh-data.png" alt-text="Screenshot that shows how to refresh your app data in Excel." border="false":::
 
+If this resolution doesn't solve the issue, follow these additional steps:
+
+1. Input the following link to the address bar of **Edit Web Query** window to access the **Advanced Settings** page in Dynamics 365 Customer Engagement. Remember to replace the `OrgURL` with your organization URL.
+
+   `https://OrgURL/main.aspx?settingsonly=true`
+
+2. Now, sign out using the top-right profile option link and then re-sign in using the right identity. Once you're signed in, close the **Edit Web Query** window, and then in the Excel file, select **Data** > **Refresh All**. The data will be refreshed as expected.
+
 ### See also
 
 [Export data to an Excel dynamic worksheet](/power-apps/user/export-excel-dynamic-worksheet)
