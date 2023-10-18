@@ -36,7 +36,8 @@ HttpStatus: "500"
 ErrorCode: "OrganizationMailboxNotFound"
 Method: "POST"
 RoutingHint: "WindowsIdentity-NoDatabase"
-GenericErrors: "HttpProxyException=Microsoft.Exchange.HttpProxy.HttpProxyException: Unable to find organization mailbox for organization"
+GenericErrors: "HttpProxyException=Microsoft.Exchange.HttpProxy.HttpProxyException: Unable to find
+organization mailbox for organization"
 ```
 
 ## Cause
