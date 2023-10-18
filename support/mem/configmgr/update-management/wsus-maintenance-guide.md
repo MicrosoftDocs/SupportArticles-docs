@@ -185,7 +185,10 @@ If updates are not configured to be immediately expired in Configuration Manager
 
 :::image type="content" source="media/wsus-maintenance-guide/month-setting.png" alt-text="Screenshot of the months to expire superseded updates.":::
 
-The following command lines illustrate the various ways that the PowerShell script can be run (if the script is being run on the WSUS server, `LOCALHOST` can be used in place of the actual `SERVERNAME`):
+The following command lines illustrate the various ways that the PowerShell script can be run:
+
+> [!NOTE]
+> When you run the script on the WSUS server, use `LOCALHOST` instead of the actual `SERVERNAME`. Additionally, replace `PORT` with the used port.
 
 ```powershell
 Decline-SupersededUpdatesWithExclusionPeriod.ps1 -UpdateServer SERVERNAME -Port 8530 –SkipDecline
@@ -373,7 +376,7 @@ Needed/helpful links:
 ### WSUS cleanup script
 
 > [!NOTE]
-> If the script is being run on the WSUS server, `LOCALHOST` can be used in place of the actual `SERVERNAME`. Additionally, replace `PORT` with the used port.
+> When you run the script on the WSUS server, use `LOCALHOST` instead of the actual `SERVERNAME`. Additionally, replace `PORT` with the used port.
 
 ```powershell
 [reflection.assembly]::LoadWithPartialName("Microsoft.UpdateServices.Administration")`
@@ -404,7 +407,7 @@ The [Weekend Scripter](https://blogs.technet.com/b/heyscriptingguy/archive/2012/
 2. Under the **Actions** tab, add a new action and specify the program/script you want to run. In this case, we need to use PowerShell and point it to the PS1 file we want it to run. You can use the [WSUS Cleanup script](#wsus-cleanup-script). This script performs cleanup options that Configuration Manager current branch version 1906 doesn't do. You can uncomment them if you are using standalone WSUS or an older version of Configuration Manager. If you would like a log, you can modify the last line of the script as follows:
 
     > [!NOTE]
-    > If the script is being run on the WSUS server, `LOCALHOST` can be used in place of the actual `SERVERNAME`. Additionally, replace `PORT` with the used port.
+    > When you run the script on the WSUS server, use `LOCALHOST` instead of the actual `SERVERNAME`. Additionally, replace `PORT` with the used port.
 
     ```powershell
     [reflection.assembly]::LoadWithPartialName("Microsoft.UpdateServices.Administration") | out-null
