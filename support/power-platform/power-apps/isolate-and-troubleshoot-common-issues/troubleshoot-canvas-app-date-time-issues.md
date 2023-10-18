@@ -2,7 +2,7 @@
 title: Troubleshoot date and time issues in canvas apps
 description: Helps troubleshoot date and time issues in Power Apps canvas apps.
 author: tahoon
-ms.date: 10/17/2023
+ms.date: 10/18/2023
 ms.author: tahoon
 search.audienceType: 
   - maker
@@ -15,7 +15,7 @@ contributors:
 
 When date and time values are off by a day or a few hours, it might be caused by time zone or daylight saving adjustments. This article provides tips to troubleshoot issues such as:
 
-- The **Date and Time** field shows UTC or local time instead of the opposite value.
+- The **Date and Time** field shows UTC instead of local time and vice versa.
 - The **Date Only** value shows the wrong date for some users and time zones.
 - Entering a daylight saving switchover date results in the date being off by one day or the time being off by an hour.
 
@@ -37,27 +37,28 @@ A common mistake is mismatching the data source and control settings. For exampl
 
 Note that this potential conflict doesn't occur with model-driven apps because it's impossible to customize time zone handling for individual controls.
 
-## Try a different time zone
+## Investigate date and time zone issues
+
+#### Try a different time zone
 
 To find out if time zone and daylight saving adjustments are causing unexpected values, try changing the user's time zone.
 
 Canvas apps use the system time zone. For information on how to change it, see the respective documentation in Windows, Android, iOS, or macOS.
 
-## Make it easy to investigate
+> [!TIP]
+> The following methods provide more details to make it easier to investigate date and time issues.
 
-Date and time issues can be more easily investigated with more details.
-
-### Show the user's time zone
+#### Show the user's time zone
 
 You can verify the user's time zone with the [TimeZoneOffset function](/power-platform/power-fx/reference/function-dateadd-datediff). It gives the number of minutes between UTC and the user's time zone. For example, if the user is in Pacific Standard Time, it will return **480**. This is the same offset that the Date Picker control and Power Fx use to adjust time zones and daylight savings.
 
 With this offset, you can calculate whether the date and time values have been adjusted correctly.
 
-### Change the "Date Only" format to "Date and Time"
+#### Change the "Date Only" format to "Date and Time"
 
 If a date-only value is off by a day, it's helpful to show the time part to see if time zone adjustments could be the cause.
 
-### Don't use 2-digit years
+#### Don't use 2-digit years
 
 The 2-digit year is ambiguous. For example, 40 might mean 1940, 2040, or 2140. How the system interprets 2-digit years can and will likely change over time.
 
@@ -78,7 +79,10 @@ This issue can occur for [Time-Zone Independent and User Local adjustment behavi
 If you don't want users to see or edit the time component of the value,
 
 - Remove the time picker.
-- For **User Local** columns that don't need time zone adjustments, change their adjustment behavior to **Date Only**. Note that this is different from the **Date Only** format. This is a permanent change and can't be undone. Other apps, plugins, or workflows that previously adjusted the column for time zones might not work correctly.
+- For **User Local** columns that don't need time zone adjustments, change their adjustment behavior to **Date Only**.
+
+  > [!NOTE]
+  > This is different from the **Date Only** format. This is a permanent change and can't be undone. Other apps, plugins, or workflows that previously adjusted the column for time zones might not work correctly.
 
 ### See also
 
