@@ -1,6 +1,6 @@
 ---
 title: Imported PST file content doesn't appear in archive mailbox
-description: Works around an issue in which the content of an imported PST file doesn't appear in an archive mailbox in Exchange Online.
+description: Provides a work around for an issue in which the content of an imported PST file doesn't appear in an archive mailbox in Exchange Online.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
