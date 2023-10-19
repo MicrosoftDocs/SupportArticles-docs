@@ -153,8 +153,8 @@ Useful combinations to try:
 > [!TIP]
 > The following methods provide more details to make it easier to investigate date and time issues.
 >
-> [Change the "Date Only" format to "Date and Time"](#change-the-date-only-format-to-date-and-time)
-> [Don't use 2-digit years](#dont-use-2-digit-years)
+> - [Change the "Date Only" format to "Date and Time"](#change-the-date-only-format-to-date-and-time)
+> - [Don't use 2-digit years](#dont-use-2-digit-years)
 
 ## Change the "Date Only" format to "Date and Time"
 
