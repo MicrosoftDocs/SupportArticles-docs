@@ -1,6 +1,6 @@
 ---
 title: HTTP server error status (500) when signing in to EAC
-description: Resolves an issue in which you, as an administrator, receive an HTTP 500 error message when you sign in to the EAC.
+description: Provides a resolution for an issue in which an administrator receives an HTTP 500 error message when signing in to the EAC.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -23,7 +23,7 @@ ms.date: 10/18/2023
 
 ## Symptoms
 
-When you, as an administrator, try to sign in to the Exchange Admin Center (EAC) in Microsoft Exchange Server, you receive the following error message:
+When you sign in to the Exchange Admin Center (EAC) as an administrator in Microsoft Exchange Server, you receive the following error message:
 
 > This page isn't working right now  
 > \<server FQDN\> can't currently handle this request.  
@@ -61,10 +61,12 @@ Enable-Mailbox -Identity <admin ID>
 
 ### Fix the arbitration mailboxes
 
-To check the status of the arbitration mailboxes, run the following command:
+1. Run the following command to check the status of the arbitration mailboxes:
 
-```PowerShell
-Get-Mailbox -Arbitration
-```
+   ```PowerShell
+   Get-Mailbox -Arbitration
+   ```
 
-If you run this command when the arbitration mailboxes exist and are healthy, the output lists seven mailboxes and contains no warnings or error messages. Fix any arbitration mailboxes that are missing or unhealthy by following the steps in [Re-create missing arbitration mailboxes](/exchange/architecture/mailbox-servers/recreate-arbitration-mailboxes).
+   If you run this command when the arbitration mailboxes exist and are healthy, the output lists seven mailboxes and contains no warnings or error messages.
+
+2. Fix any arbitration mailboxes that are missing or unhealthy by following the steps in [Re-create missing arbitration mailboxes](/exchange/architecture/mailbox-servers/recreate-arbitration-mailboxes).
