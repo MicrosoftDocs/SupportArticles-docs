@@ -1,6 +1,6 @@
 ---
 title: Reconnect inactive or soft-deleted mailboxes to AD
-description: Explains how to reconnect an on-premises AD account with an inactive mailbox when the account is brought back into the scope of Azure AD Connect.
+description: Explains how to reconnect an on-premises AD account with an inactive mailbox when the account is brought back into the scope of Microsoft Entra Connect.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -23,14 +23,14 @@ _Original KB number:_ &nbsp; 4337973
 
 ## Symptoms
 
-When your on-premises Active Directory account is brought back into the scope of Azure AD Connect, your inactive mailbox is not reconnected automatically in Exchange Online. Additionally, a newly provisioned mailbox is created in Exchange Online.
+When your on-premises Active Directory account is brought back into the scope of Microsoft Entra Connect, your inactive mailbox is not reconnected automatically in Exchange Online. Additionally, a newly provisioned mailbox is created in Exchange Online.
 
 > [!NOTE]
 > For Office 365 dedicated/ITAR customers, Microsoft Managed Services Service Provisioning Provider (MMSSPP) writes back the `msExchMailboxGUID` and `ExchangeGUID` attributes from the dedicated environment to a customer's on-premises Active Directory during the coexistence phase. Instead of a newly provisioned mailbox in Exchange Online, a mail-enabled user is created.
 
 ## Cause
 
-After mailbox objects are removed from the scope of Azure AD Connect, they remain in the Azure AD Recycle Bin for 30 days. You have to take additional steps to reconnect an on-premises AD account with an inactive mailbox when the account is purged from the Recycle Bin.
+After mailbox objects are removed from the scope of Microsoft Entra Connect, they remain in the Microsoft Entra ID Recycle Bin for 30 days. You have to take additional steps to reconnect an on-premises AD account with an inactive mailbox when the account is purged from the Recycle Bin.
 
 ## Resolution
 
@@ -69,13 +69,13 @@ Restore the content from the inactive mailbox to the newly provisioned mailbox b
    [system.convert]::ToBase64String(([GUID]"<ObjectGUID>").tobytearray())
    ```
 
-5. Set the `ImmutableID` parameter in Azure AD:
+5. Set the `ImmutableID` parameter in Microsoft Entra ID:
 
     ```powershell
     Set-MsolUser -UserPrincipalName <UPN> -ImmutableId <ImmutableId>
     ```
 
-6. Run an Azure AD Connect delta sync. This brings the original Azure AD account into the scope of Azure AD Connect.
+6. Run a Microsoft Entra Connect delta sync. This brings the original Microsoft Entra account into the scope of Microsoft Entra Connect.
 
 8. Check the mailbox object, and verify that the primary SMTP address is updated from a temporary user principal name (UPN) value to the correct primary address.
 

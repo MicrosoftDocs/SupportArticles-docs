@@ -66,7 +66,7 @@ This article describes the necessary configuration, administration details, and 
 - Send As permissions enable mail to be sent from another mailbox that enabled the mail user object's primary email address.
 - Permissions are granted by administrators by using the Exchange Admin Center or Remote PowerShell ([Add-ADPermission](/powershell/module/exchange/add-adpermission) in on-premises Active Directory and [Add-RecipientPermission](/powershell/module/exchange/add-recipientpermission) in Exchange Online).
 - Permissions must exist in the sending user's forest. For example, if a user's mailbox is moved to Exchange Online, the Send As permissions must be listed on the mail user object that represents the on-premises mailbox.
-- Permissions are not synchronized by Azure AD Connect.
+- Permissions are not synchronized by Microsoft Entra Connect.
 - Permissions set in on-premises AD DS must be manually added in the Exchange Online for full functionality. For more information, see [Exchange hybrid deployment considerations](/exchange/exchange-hybrid#exchange-hybrid-deployment-considerations).
 
 ### Folder access
@@ -84,10 +84,10 @@ This article describes the necessary configuration, administration details, and 
 - Send on Behalf of permissions enable mail to be sent on behalf of another email address
 - Permissions can be granted by users by using Outlook or by administrators by using Exchange Admin Center or Remote PowerShell ([Set-Mailbox](/powershell/module/exchange/set-mailbox) cmdlet).
 - Permissions must exist in the sending user's forest.
-- By default, the `PublicDelegates` attribute (also known as the `GrantSendOnBehalfTo` attribute in Exchange on-premises) is synchronized to Exchange Online by Azure AD Connect.
-- Additional configuration is required to synchronize the `PublicDelegates` attribute with on-premises AD DS. This configuration requires enabling Exchange hybrid deployment settings in Azure AD Connect.For more information, see [Exchange hybrid writeback](/azure/active-directory/hybrid/reference-connect-sync-attributes-synchronized#exchange-hybrid-writeback).
+- By default, the `PublicDelegates` attribute (also known as the `GrantSendOnBehalfTo` attribute in Exchange on-premises) is synchronized to Exchange Online by Microsoft Entra Connect.
+- Additional configuration is required to synchronize the `PublicDelegates` attribute with on-premises AD DS. This configuration requires enabling Exchange hybrid deployment settings in Microsoft Entra Connect.For more information, see [Exchange hybrid writeback](/azure/active-directory/hybrid/reference-connect-sync-attributes-synchronized#exchange-hybrid-writeback).
 
-  :::image type="content" source="media/overview-delegation-office-365-hybrid/optional-features.png" alt-text="Screenshot of the optional features in Azure AD Connect dialog box.":::
+  :::image type="content" source="media/overview-delegation-office-365-hybrid/optional-features.png" alt-text="Screenshot of the optional features in Microsoft Entra Connect dialog box.":::
 
 - If Exchange hybrid deployment setting is not enabled, the Send on Behalf of permission has to be added manually by an administrator by using Remote PowerShell. To do this, refer to[Delegate can't send on behalf of after migration to Microsoft 365 hybrid environment](./delegate-cannot-send-on-behalf-of-after-migration.md).
 
@@ -126,7 +126,7 @@ This article describes the necessary configuration, administration details, and 
   - Misconfigured delegates may result in a non-delivery report. For more information, see [Users receive NDR 5.2.0 when they send meeting invites in Microsoft 365 hybrid environment](../email-delivery/ndr-5-2-0-when-sending-meeting-invites.md).
   - The `LegacyExchangeDN` attribute of objects from Exchange Online and on-premises should be synching as x500 addresses between forests to avoid resolution issues that require enabling Exchange hybrid deployment settings in AD Connect. For more information, see [Exchange hybrid writeback](/azure/active-directory/hybrid/reference-connect-sync-attributes-synchronized#exchange-hybrid-writeback).
 
-    :::image type="content" source="media/overview-delegation-office-365-hybrid/optional-features.png" alt-text="Screenshot of the optional features in Azure AD Connect dialog box.":::
+    :::image type="content" source="media/overview-delegation-office-365-hybrid/optional-features.png" alt-text="Screenshot of the optional features in Microsoft Entra Connect dialog box.":::
 
   - If the Exchange hybrid deployment setting is not enabled, delegates may see a non-delivery report when they update meetings. For more information, see ["550 5.1.11 RESOLVER.ADR.ExRecipNotFound" when delegate sends update to meeting after manager moved to Microsoft 365 hybrid environment](https://support.microsoft.com/help/4039597).
 

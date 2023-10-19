@@ -26,10 +26,10 @@ You have a hybrid deployment of on-premises Microsoft Exchange Server and Exchan
 
 ## Cause
 
-Although the `thumbnailPhoto` attribute is synced from the on-premises environment to Azure Active Directory (Azure AD), the following behaviors could cause this problem:
+Although the `thumbnailPhoto` attribute is synced from the on-premises environment to Microsoft Entra ID, the following behaviors could cause this problem:
 
 - The `thumbnailPhoto` attribute can store a user photo as large as 100 kilobytes (KB).
-- Exchange Online accepts only a photo that's no larger than 10 KB from Azure AD.
+- Exchange Online accepts only a photo that's no larger than 10 KB from Microsoft Entra ID.
 
 ## Resolution
 

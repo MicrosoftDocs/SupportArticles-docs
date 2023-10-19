@@ -1,6 +1,6 @@
 ---
 title: Validation errors for a mailbox archive GUID for Microsoft 365 users
-description: You receive a validation error in the Microsoft 365 admin center or in Azure Active Directory.
+description: You receive a validation error in the Microsoft 365 admin center or in Microsoft Entra ID.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -21,13 +21,13 @@ _Original KB number:_ &nbsp; 4053483
 
 ## Symptoms
 
-An administrator who signs in to Microsoft 365 admin center or Azure Active Directory (Azure AD) may receive the following validation errors for some users:
+An administrator who signs in to Microsoft 365 admin center or Microsoft Entra ID may receive the following validation errors for some users:
 
 > "Failed to sync the ArchiveGuid \<GUID> of mailboxMailboxGuid because one cloud archiveCloudArchiveGuid exists."
 
 > "Failed to enable the new cloud archiveCloudArchiveGuid of mailboxMailboxGuid because a different archiveArchiveGuid exists. To enable the new archive, first disable the archive on-premises. After the next Dirsync sync cycle, enable the archive on-premises again."
 
-In this situation, updates to other property values of these users can't be synchronized from Azure AD to Exchange Online.
+In this situation, updates to other property values of these users can't be synchronized from Microsoft Entra ID to Exchange Online.
 
 ## Resolution
 

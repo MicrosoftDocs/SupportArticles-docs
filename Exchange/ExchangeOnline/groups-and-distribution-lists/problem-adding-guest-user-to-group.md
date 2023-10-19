@@ -28,7 +28,7 @@ When you try to add a guest user to a Microsoft 365 group, you receive the follo
 
 ## Cause
 
-This issue occurs if the guest user who is being added already exists in Azure Active Directory (Azure AD).
+This issue occurs if the guest user who is being added already exists in Microsoft Entra ID.
 
 ## Workaround 1
 
@@ -42,11 +42,11 @@ Delete the user object from the on-premises directory.
 Replace the user with a mail contact. To do this, save the user properties, delete the user object, and then create a mail contact that has the same properties.
 
 > [!NOTE]
-> When the guest is invited, a new user object is created in Azure AD, and the object coexists together with the mail contact.
+> When the guest is invited, a new user object is created in Microsoft Entra ID, and the object coexists together with the mail contact.
 
 ## Workaround 3
 
-Move the user object to an organizational unit (OU) in the on-premises directory, and then exclude that OU from synchronizing through Azure AD Connector.
+Move the user object to an organizational unit (OU) in the on-premises directory, and then exclude that OU from synchronizing through Microsoft Entra Connector.
 
 > [!NOTE]
-> This behavior deletes the user object from Azure AD, but keeps it available in the on-premises directory. After you make these changes, the guest user can be added to group.
+> This behavior deletes the user object from Microsoft Entra ID, but keeps it available in the on-premises directory. After you make these changes, the guest user can be added to group.
