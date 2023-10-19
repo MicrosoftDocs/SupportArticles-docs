@@ -40,7 +40,7 @@ Your client app version doesn't support your Dynamics 365 Guides solution versio
 
 #### Resolution
 
-To solve this issue, [update your client app](/dynamics365/mixed-reality/guides/upgrade) or contact your admininitrator.
+To solve this issue, update your PC and HoloLens apps by installing the latest version from the Microsoft Store or contact your admininitrator.
 
 ## Cause 4: No license
 
