@@ -1,24 +1,20 @@
 ---
 title: Can't sign in to the Guides PC or HoloLens app 
-description: Learn how to resolve an error when trying to sign into Dynamics 365 Guides on the PC or HoloLens app
+description: Provides a resolution for an issue where you can't sign in to the Dynamics 365 Guides PC app or the HoloLens app.
 author: davepinch
 ms.author: davepinch
-ms.topic: troubleshooting-general 
-ms.date: 09/29/2023
+ms.date: 10/19/2023
 ms.custom: bap-template
 ---
+# Can't sign in to the Dynamics 365 Guides PC app or the HoloLens app
 
-# Can't sign in to the Guides PC or HoloLens app
-
-## Symptoms
-
-Common problems that might occur when trying to log into the Guides PC app or HoloLens app.
+This article lists common issues that cause failures when you try to sign in to the Microsoft Dynamics 365 Guides PC app or the Microsoft HoloLens app.
 
 ## Cause 1: Wrong account used
 
-Your using a Microsoft account (an account used for Outlook.com, Windows Store, or other Microsoft products) or your corporate credentials to sign in.
+You're using a Microsoft account (an account used for Outlook.com, Windows Store, or other Microsoft products) or your corporate credentials to sign in.
 
-### Resolution
+#### Resolution
 
 You must use the Dynamics 365 Guides sign-in credentials for your organization. For example: `johndoe@contoso.onmicrosoft.com`.
 
@@ -26,30 +22,30 @@ You must use the Dynamics 365 Guides sign-in credentials for your organization. 
 
 Connection through a proxy or VPN isn't configured correctly.
 
-### Resolution
+#### Resolution
 
-[Configure a VPN or proxy for Dynamics 365 Guides](/dynamics365/mixed-reality/guides/admin-deployment-playbook#vpn-or-proxy-configuration).
+To solve this issue, see [configure a VPN or proxy for Dynamics 365 Guides](/dynamics365/mixed-reality/guides/admin-deployment-playbook#vpn-or-proxy-configuration).
 
 ## Cause 3: Don't have permission
 
-You might not have permission to access Guides or it isn't set up correctly.
+You might not have permission to access Dynamics 365 Guides or your permission isn't set up correctly.
 
-### Resolution
+#### Resolution
 
-Contact your admin.
+To solve this issue, contact your admininitrator.
 
 ## Cause 4: Wrong version
 
-Your client app version doesn't support your Guides solution version.
+Your client app version doesn't support your Dynamics 365 Guides solution version.
 
-### Resolution
+#### Resolution
 
-[Update your client app](/dynamics365/mixed-reality/guides/upgrade) or contact your admin.
+To solve this issue, [update your client app](/dynamics365/mixed-reality/guides/upgrade) or contact your admininitrator.
 
 ## Cause 4: No license
 
-You don't have a license to use Guides.
+You don't have a license to use Dynamics 365 Guides.
 
-### Resolution
+#### Resolution
 
-Contact your admin or [sign up for a free trial subscription](/dynamics365/mixed-reality/guides/setup).
+To solve this issue, [sign up for a free trial subscription](/dynamics365/mixed-reality/guides/setup) or contact your admininitrator.

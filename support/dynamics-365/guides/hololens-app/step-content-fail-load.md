@@ -1,21 +1,21 @@
 ---
-author: davepinch
-description: Learn how to resolve a problem when 3D content doesn't load when authoring in the HoloLens app
+title: Step content failed to load error in the HoloLens app
+description: Provides a resolution for an issue where 3D content doesn't load when authoring in the HoloLens app.
 ms.author: davepinch
-ms.date: 08/07/2023
-ms.topic: troubleshooting-problem-resolution
-title: Step content failed to load message in the HoloLens app
+author: davepinch
+ms.date: 10/18/2023
 ms.reviewer: v-wendysmith
 ms.custom: bap-template
 ---
+# "Step content failed to load" error occurs in the HoloLens app
 
-# Step content failed to load message in the HoloLens app
+## Symptoms
 
-## Symptom
+The following error message displays in the HoloLens app:
 
-The following message displays in the HoloLens app:
+> Step content failed to load.
 
-![Screenshot of Step content failed to load message.](../media/step-content-failed-load.jpg "Screenshot of Step content failed to load message")
+:::image type="content" source="media/step-content-fail-load/step-content-failed-to-load-error.png" alt-text="Screenshot that shows the error message about step content failed to load.":::
 
 ## Cause
 

@@ -1,27 +1,27 @@
 ---
-author: davepinch
-description: Learn how to resolve a problem when a high memory usage warning displays when authoring in the HoloLens app
+title: High step memory usage warning in the HoloLens app
+description: Learn how to resolve a problem when a high memory usage warning message displays when authoring in the HoloLens app.
 ms.author: davepinch
-ms.date: 07/07/2023
-ms.topic: troubleshooting-problem-resolution
-title: High step memory usage message in the HoloLens app
+author: davepinch
+ms.date: 10/18/2023
 ms.reviewer: v-wendysmith
 ms.custom: bap-template
 ---
+# "High step memory usage" warning occurs in the HoloLens app
 
-# High step memory usage message in the HoloLens app
+## Symptoms
 
-## Symptom
+The following warning message displays in the HoloLens app:
 
-The following message displays in the HoloLens app:
+> Warning! High step memory usage.
 
-![Screenshot of warning message.](../media/step-content-warning.jpg "Screenshot of warning message about high step memory usage")
+:::image type="content" source="media/step-content-warning-memory/high-step-memory-usage-warning.png" alt-text="Screenshot that shows the warning message about high step memory usage.":::
 
 ## Cause
 
-The 3D models that you placed for the step are reaching HoloLens' memory limit. Models will display but the operator may have a degraded experience. For example, the guide may have low frame rates or there may be noticeable loading times when moving between steps.
+The 3D models that you place for the step reach HoloLens' memory limit. The 3D models will display but the operator might have a degraded experience. For example, the guide might have low frame rates or there might be noticeable loading times when moving between steps.
 
-If you continue to add 3D models and HoloLens reaches its memory limit, the [Step content failed to load](step-content-fail-load.md) message displays.
+If you continue to add the 3D models and HoloLens, the ["Step content failed to load"](step-content-fail-load.md) error message will occur.
 
 ## Resolution
 

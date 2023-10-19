@@ -1,40 +1,28 @@
 ---
-author: davepinch
-description: Learn how to resolve a problem when you can't make a video call in the HoloLens app
-ms.author: davepinch
-ms.date: 09/05/2023
-ms.topic: troubleshooting-general
 title: Can't make a video call in the HoloLens app
+description: Provides a resolution for an issue where you can't make a video call in the HoloLens app.
+ms.author: davepinch
+author: davepinch
 ms.reviewer: v-wendysmith
+ms.date: 10/18/2023
 ms.custom: bap-template
 ---
-
 # Can't make a video call in the HoloLens app
+
+This article provides a resolution for an issue where you can't make a video call in the Microsoft HoloLens app.
 
 ## Symptoms
 
-I can't make a video call in the HoloLens app.
+You can't make a video call in the Microsoft HoloLens app.
 
-## Cause 1: You're using a Dynamics 365 Guides version earlier than 7.0
+## Resolution
 
-### Resolution
+To solve this issue, first you should verify if:
 
-[Update your client app](/dynamics365/mixed-reality/guides/upgrade) or contact your admin.
+1. Your Dynamics 365 Guides version is earlier than 7.0. If yes, [update your client app](/dynamics365/mixed-reality/guides/upgrade) or contact your admin.
+2. You're currently offline. If yes, reconnect to the internet.
 
-## Cause 2: Your admin has [disabled the option directly from the Guides web portal](/dynamics365/mixed-reality/guides/admin-enable-calls)
+If the issue still exists, contact your admin to verify if:
 
-### Resolution
-
-Contact your admin.
-
-## Cause 3: The appropriate Microsoft Teams license hasn't been assigned to you
-
-### Resolution
-
-Contact your admin. [Learn more about licensing requirements](/dynamics365/mixed-reality/guides/requirements).
-
-## Cause 4: You're currently offline
-
-### Resolution
-
-Reconnect to the internet.
+- You're [disabled the option directly from the Dynamics 365 Guides web portal](/dynamics365/mixed-reality/guides/admin-enable-calls).
+- You're assigned an incorrect Microsoft Teams license. [Learn more about licensing requirements](/dynamics365/mixed-reality/guides/requirements)

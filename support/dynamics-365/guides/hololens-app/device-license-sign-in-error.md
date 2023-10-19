@@ -1,31 +1,23 @@
 ---
-title: Sign-in error when trying to sign into Guides on a shared HoloLens device 
-description: Learn how to resolve an error when trying to sign into Dynamics 365 Guides on a shared device license
+title: Sign-in error when signing in to Dynamics 365 Guides on a shared HoloLens device
+description: Resolves an error that occurs when you try to sign in to Dynamics 365 Guides on a shared HoloLens device.
 author: davepinch
 ms.author: davepinch
-ms.topic: troubleshooting-problem-resolution 
-ms.date: 09/13/2023
+ms.date: 10/18/2023
 ms.custom: bap-template
 ---
+# Sign-in error when you sign in to Dynamics 365 Guides on a shared HoloLens device
 
-# Sign-in error when trying to sign into Guides on a shared HoloLens device
+This article provides resolutions for a sign-in error when you sign in to [Microsoft Dynamics 365 Guides](/dynamics365/mixed-reality/guides/overview) from a shared HoloLens device.
 
-## Symptom
+## Symptoms
 
-A sign-in error occurs when trying to sign into Dynamics 365 Guides from a shared HoloLens device.
+When you try to sign in to Dynamics 365 Guides from a shared HoloLens device, a sign-in error occurs.
 
-## Prerequisites
+## Resolution 1
 
-- Admin permissions in Dynamics 365 Guides
+Contact your admin to [create a shared account](/dynamics365/mixed-reality/guides/device-license) and assign it to you.
 
-## Cause 1: A shared account hasn't been assigned
+## Resolution 2
 
-### Resolution
-
-[Create a shared account.](/dynamics365/mixed-reality/guides/device-license)
-
-## Cause 2: The right roles weren't assigned
-
-### Resolution
-
-[Assign the **Basic User** role and a **Dynamics 365 Guides Operator** or **Dynamics 365 Guides Restricted Operator** role.](/dynamics365/mixed-reality/guides/device-license#assign-an-operator-role-to-the-shared-account)
+Contact your admin to assign the [Basic User role](/dynamics365/mixed-reality/guides/admin-assign-role-groups#option-1-assign-a-group-team-to-a-dynamics-365-guides-role) and the [Dynamics 365 Guides Operator or Dynamics 365 Guides Restricted Operator role](/dynamics365/mixed-reality/guides/device-license#assign-an-operator-role-to-the-shared-account).

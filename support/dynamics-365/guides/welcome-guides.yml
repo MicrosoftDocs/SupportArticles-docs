@@ -9,51 +9,51 @@ metadata:
   ms.service: guides
   author: v-wendysmith
   ms.author: v-wendysmith
-  ms.date: 10/09/2023
+  ms.date: 10/19/2023
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
-  # Card
-  - title: Install and migrate
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: The solution installation or update fails repeatedly
-            url: install-migrate/install-update-fails.md
-          - text: Import failed when moving content with the Dynamics 365 Guides Content Migration Tool
-            url: install-migrate/migrate-troubleshoot.md
-          - text: Can't sign in to the Guides PC or HoloLens app
-            url: install-migrate/sign-in-error.md
-
-  # Card
-  - title: PC app
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Convert a 3D model into an object anchor fails
-            url: pc-app/anchors-3d-model-conversion-fails.md
-          - text: Detect an object anchor on HoloLens fails
-            url: pc-app/anchors-object-anchor-fails.md
 
   # Card
   - title: HoloLens app
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Can't make a video call in the HoloLens app
+          - text: Can't make a video call
             url: hololens-app/cant-make-video-call.md
           - text: Can't find a guide on a shared HoloLens device
             url: hololens-app/device-license-cant-find-guide.md
-          - text: Sign-in error when trying to sign into Guides on a shared HoloLens device
-            url: hololens-app/device-license-sign-in-error.md
-          - text: Step content failed to load message in the HoloLens app
-            url: hololens-app/step-content-fail-load.md
-          - text: Hazard sign appears when I load a step
+          - text: Hazard sign appears when loading a step
             url: hololens-app/step-content-hazard.md
-          - text: High step memory usage message in the HoloLens app
+          - text: '"High step memory usage" warning'
             url: hololens-app/step-content-warning-memory.md
-  
+          - text: Sign-in error when signing in to Guides on a shared HoloLens device
+            url: hololens-app/device-license-sign-in-error.md
+          - text: '"Step content failed to load" error'
+            url: hololens-app/step-content-fail-load.md
+
+  # Card
+  - title: Install and migrate
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Can't sign in to the Guides PC or HoloLens app
+            url: install-migrate/sign-in-error.md
+          - text: '"Installation failed" error during solution installation or update'
+            url: install-migrate/install-update-fails.md
+          - text: Import failed when moving content with Content Migration Tool
+            url: install-migrate/failed-to-import-microsoft-xrm-data-powershell.md
+
+  # Card
+  - title: PC app
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Fail to convert a 3D model to an object anchor
+            url: pc-app/anchors-3d-model-conversion-fails.md
+          - text: Fail to detect an object anchor in the HoloLens
+            url: pc-app/fail-to-detect-object-anchor.md
 
   # Card
   - title: Documentation and training

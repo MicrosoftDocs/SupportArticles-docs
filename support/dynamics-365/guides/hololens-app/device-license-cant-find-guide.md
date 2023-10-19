@@ -1,18 +1,18 @@
 ---
 title: Can't find a guide on a shared HoloLens device 
-description: Learn how to resolve a problem when you can't find a guide in Dynamics 365 Guides on a shared device license
+description: Resolves an issue where you can't find a guide in Dynamics 365 Guides on a shared HoloLens device.
 author: davepinch
 ms.author: davepinch
-ms.topic: troubleshooting-problem-resolution 
-ms.date: 09/07/2023
+ms.date: 10/18/2023
 ms.custom: bap-template
 ---
-
 # Can't find a guide on a shared HoloLens device
 
-## Symptom
+This article provides a resolution for an issue where you can't find a guide in [Microsoft Dynamics 365 Guides](/dynamics365/mixed-reality/guides/overview) on a shared HoloLens device.
 
-Can't find a guide in Dynamics 365 Guides on a shared HoloLens device.
+## Symptoms
+
+You can't find a guide in Dynamics 365 Guides on a shared HoloLens device.
 
 ## Cause
 
@@ -20,4 +20,4 @@ The shared account doesn't have access to the guide.
 
 ## Resolution
 
-[Assign](/dynamics365/mixed-reality/guides/admin-access-assign) or [share](/dynamics365/mixed-reality/guides/admin-access-teams) the guide to the shared account.
+To solve this issue, try to [assign](/dynamics365/mixed-reality/guides/admin-access-assign) or [share](/dynamics365/mixed-reality/guides/admin-access-teams) the guide to the shared account.
