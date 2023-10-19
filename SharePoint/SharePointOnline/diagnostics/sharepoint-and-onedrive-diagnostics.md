@@ -3,7 +3,7 @@ title: Self-help diagnostics for SharePoint Online and OneDrive administrators
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 09/15/2023
+ms.date: 10/18/2023
 audience: Admin
 ms.topic: troubleshooting
 localization_priority: Normal
@@ -17,29 +17,25 @@ ms.custom:
   - CI 122279
   - CSSTroubleshoot
 ms.reviewer: salarson
-description: SharePoint Online and OneDrive Diagnostics
+description: List of SharePoint Online and OneDrive diagnostics
 ---
 
 # Self-help diagnostics for SharePoint Online and OneDrive administrators
 
-## Summary
-
-It's important that administrators can diagnose and resolve issues quickly in SharePoint Online and OneDrive. To support this effort, the SharePoint support team has released features in the Microsoft 365 admin center to resolve common issues. 
+It's important that administrators are able to diagnose and resolve issues quickly in SharePoint Online and OneDrive. To support this effort, the SharePoint support team has released diagnostics in the Microsoft 365 admin center to resolve common issues.
 
 > [!NOTE]
 > These diagnostics are not currently supported for GCC High, DoD, or Microsoft 365 operated by 21Vianet.
-
-## More information
 
 Diagnostic capabilities for a few text queries were first released within the Microsoft 365 admin center support portal in December 2018.
 
 :::image type="content" source="media/sharepoint-and-onedrive-diagnostics/run-diagnostics.png" alt-text="Screenshot of the Run diagnostics page in the Microsoft 365 admin center.":::
 
-When IT admins run customer diagnostics in the Microsoft 365 admin center to resolve issues without logging support requests, Microsoft will make donations to global nonprofit organizations.
+When IT admins run customer diagnostics in the Microsoft 365 admin center to resolve issues without logging support requests, Microsoft makes a donation to global nonprofit organizations.
 
 For more information, see [Diagnostics for Social Good](https://aka.ms/DiagnosticsforSocialGood)
 
-### What scenarios are currently covered?
+## Scenarios covered by diagnostics
 
 > [!NOTE]
 > You must be a Microsoft 365 administrator to run diagnostics.
@@ -64,8 +60,7 @@ There are currently diagnostics covering various areas within SharePoint and One
 | **Locked Site**| Validates that the user's OneDrive or SharePoint site exists, and there are no known issues accessing the site due to lock or archived state. | [Run Tests: Locked Site](https://aka.ms/PillarLockedSite) | [SharePoint or OneDrive read-only error messages](/sharepoint/troubleshoot/sites/site-is-read-only)
 | **Site User ID Mismatch**| Detects ID mismatches for users on OneDrive or SharePoint sites and offers to fix the issue. | [Run Tests: Site User ID Mismatch](https://aka.ms/PillarSiteUserIDMismatch) | [Fix site user ID mismatch in SharePoint or OneDrive](../sharing-and-permissions/fix-site-user-id-mismatch.md)
 
-
 > [!NOTE]
-> If a diagnostic detects an issue, and you've implemented a fix based on the results, consider rerunning the diagnostic to ensure the issue is completely resolved. 
+> If a diagnostic detects an issue, and you've implemented a fix based on the results, consider rerunning the diagnostic to ensure the issue is completely resolved.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
