@@ -187,6 +187,8 @@
           href: ../administration/exchange-diagnostic-logging-levels.md
         - name: HTTP error 403 when starting EMS
           href: ../administration/http-403-error-start-ems.md
+        - name: HTTP error 500 when signing in to EAC
+          href: ../administration/http-500-error-during-eac-sign-in.md
         - name: HTTP error 500 when starting EMS or EMC
           href: ../administration/http-error-500-start-ems-emc.md
         - name: Information collected by Managed Availability Diagnostic
