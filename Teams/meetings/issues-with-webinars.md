@@ -53,20 +53,20 @@ If your users are still not receiving invitations to Teams webinars, modify the 
 
 1. Navigate to the [Anti-spam policies](https://security.microsoft.com/antispam) page on the Microsoft 365 Defender portal.
 1. Select **Connection filter policy (Default)** from the list (but don't select the check box next to the name).
-1. Select **Edit connection filter policy** in the **Connection filtering** section.
-1. Click in the box for the **Always allow messages from the following IP addresses or address range** option and type one of the IP addresses used by the email delivery service and press the ENTER key.
-Alternatively, you can select the complete IP address value that's displayed below the box.
+1. In the flyout pane, select **Edit connection filter policy** in the **Connection filtering** section.
+1. Click in the box for the **Always allow messages from the following IP addresses or address range** option and type one of the IP addresses used by the email delivery service.
+1. Either press the ENTER key or select the complete IP address value that's displayed below the box.
 1. Select **Save**.
 1. If prompted to enable customization, select **Yes**. This step might take some time to complete.
 
 - If you see an error about customization being disabled, use the following steps:
 
-  1. repeat steps 1 to 6 after a few hours and add one IP address range for the email delivery service in step 4. 
+  1. Repeat steps 1 to 7 after a few hours and add one IP address range for the email delivery service in step 4.
   1. If the addition is successful, add the rest of the IP address ranges and select **Save**.
   
 - If you're still unable to add the IP addresses, use the following steps:
 
-  1. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell)
+  1. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
   1. Run the [Enable-OrganizationCustomization](/powershell/module/exchange/enable-organizationcustomization?view=exchange-ps) PowerShell cmdlet to enable customization.
   1. After customization is enabled, add the rest of the IP address ranges and select **Save**.
 
