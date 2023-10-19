@@ -1,6 +1,6 @@
 ---
 title: Update or repair settings of a federated domain in Microsoft 365, Azure, or Intune
-description: Describes how to update or repair the settings of a federated domain configuration in Microsoft 365, Azure, or Microsoft Intune by using the Azure Active Directory Module for Windows PowerShell.
+description: Describes how to update or repair the settings of a federated domain configuration in Microsoft 365, Azure, or Microsoft Intune by using the Azure Active Directory module for Windows PowerShell.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
@@ -37,9 +37,9 @@ The configuration of the federated domain has to be updated in the scenarios tha
 - [2535191 ](https://support.microsoft.com/help/2535191)""Sorry, but we're having trouble signing you in" and "80048163" error when a federated user tries to sign in to Microsoft 365, Azure, or Intune    
 - [2647020 ](https://support.microsoft.com/help/2647020)  "Sorry, but we're having trouble signing you in" and "80041317" or "80043431" error when a federated user tries to sign in to Microsoft 365, Azure, or Intune    
 
-To update the configuration of the federated domain on a domain-joined computer that has Azure Active Directory Module for Windows PowerShell installed, follow these steps:
+To update the configuration of the federated domain on a domain-joined computer that has Azure Active Directory module for Windows PowerShell installed, follow these steps:
 
-1. Click **Start**, click **All Programs**, click **Windows Azure Active Directory**, and then click **Windows Azure Active Directory Module for Windows PowerShell**.   
+1. Click **Start**, click **All Programs**, click **Windows Azure Active Directory**, and then click **Windows Azure Active Directory module for Windows PowerShell**.   
 2. At the command prompt, type the following commands, and press Enter after each command:
    ```powershell
    $cred = get-credential
@@ -71,7 +71,7 @@ To update the configuration of the federated domain on a domain-joined computer 
 > [!IMPORTANT]
 > A script is available to automate the update of federation metadata regularly to make sure that changes to the AD FS token signing certificate are replicated correctly. 
 
-The script creates a Windows scheduled task on the primary AD FS server to make sure that changes to the AD FS configuration such as trust info, signing certificate updates, and so on are propagated regularly to the Azure Active Directory (Azure AD). 
+The script creates a Windows scheduled task on the primary AD FS server to make sure that changes to the AD FS configuration such as trust info, signing certificate updates, and so on are propagated regularly to the Microsoft Entra ID. 
 
 If the token-signing certificate is automatically renewed in an environment where the script is implemented, the script will update the cloud trust info to prevent downtime that is caused by out-of-date cloud certificate info.
 
@@ -85,7 +85,7 @@ The configuration of the federated domain has to be repaired in the scenarios th
 - [2647020 ](https://support.microsoft.com/help/2647020) "Your organization could not sign you in to this service" error and "80041317" or "80043431" error code when a federated user tries to sign in to Microsoft 365   
 - The Federation Service name in AD FS is changed. For more info, go to the following Microsoft website: [AD FS 2.0: How to Change the Federation Service Name](https://social.technet.microsoft.com/wiki/contents/articles/ad-fs-2-0-how-to-change-the-federation-service-name.aspx)   
 
-To repair the federated domain configuration on a domain-joined computer that has Azure Active Directory Module for Windows PowerShell installed, follow these steps.
+To repair the federated domain configuration on a domain-joined computer that has Azure Active Directory module for Windows PowerShell installed, follow these steps.
 
 > [!WARNING]
 > - The following procedure removes any customizations that are created by [limiting access to Microsoft 365 services by using the location of the client](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/hh526961(v=ws.10)). After the configuration of the federated domain is repaired, you may have to reconfigure limited AD FS access.   
@@ -115,12 +115,12 @@ The following scenarios cause problems when you update or repair a federated dom
 
 - You can't connect by using Windows PowerShell. For more info about this issue, see the following Microsoft Knowledge Base article: 
 
-  [2494043 ](https://support.microsoft.com/help/2494043)  You cannot connect by using the Azure Active Directory Module for Windows PowerShell   
-- The Azure Active Directory Module for Windows PowerShell can't load because of missing prerequisites. For more info, see the following Microsoft Knowledge Base article:  
+  [2494043 ](https://support.microsoft.com/help/2494043)  You cannot connect by using the Azure Active Directory module for Windows PowerShell   
+- The Azure Active Directory module for Windows PowerShell can't load because of missing prerequisites. For more info, see the following Microsoft Knowledge Base article:  
   
-  [2461873 ](https://support.microsoft.com/help/2461873)  You can't open the Azure Active Directory Module for Windows PowerShell    
+  [2461873 ](https://support.microsoft.com/help/2461873)  You can't open the Azure Active Directory module for Windows PowerShell    
 - You get an "Access Denied" error message when you try to run the set-MSOLADFSContext cmdlet. For more info, see the following Microsoft Knowledge Base article: 
 
   [2587730 ](https://support.microsoft.com/help/2587730) "The connection to \<ServerName> Active Directory Federation Services 2.0 server failed" error when you use the Set-MsolADFSContext cmdlet    
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Microsoft Entra Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.

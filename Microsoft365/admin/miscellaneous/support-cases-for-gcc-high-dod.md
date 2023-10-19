@@ -73,7 +73,7 @@ Options and steps to populate a valid email address for a Microsoft 365 user acc
 1. Log into the Microsoft 365 admin center and look up the user.  
 1. Edit the user and go the Roles section. Select Edit. 
 
-    :::image type="content" source="media/support-cases-for-gcc-high-dod/edit-role.png" alt-text="Screenshot shows steps to edit the roles for an Microsoft 365 user.":::
+    :::image type="content" source="media/support-cases-for-gcc-high-dod/edit-role.png" alt-text="Screenshot shows steps to edit the roles for a Microsoft 365 user.":::
 
 1. Scroll down and under Alternative email address, input the desired address. 
 

@@ -20,7 +20,7 @@ ms.date: 03/31/2022
 
 ## Symptoms
 
-Federated users on Apple iOS devices that have valid user certificates discover that they can't perform Certificate-Based Authentication (CBA) against Azure AD. However, federated users on Android and Windows devices can successfully authenticate by using CBA. The same iOS users encounter no issues when they authenticate by using their user name and password.
+Federated users on Apple iOS devices that have valid user certificates discover that they can't perform Certificate-Based Authentication (CBA) against Microsoft Entra ID. However, federated users on Android and Windows devices can successfully authenticate by using CBA. The same iOS users encounter no issues when they authenticate by using their user name and password.
 
 Here's the typical experience for iOS users who can't authenticate when they sign in to ADAL-enabled Office applications on iOS:
 

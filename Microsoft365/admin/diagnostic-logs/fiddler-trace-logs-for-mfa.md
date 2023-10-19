@@ -1,5 +1,5 @@
 ---
-title: How to use Fiddler trace logs for MFA in Microsoft 365 and Azure AD
+title: How to use Fiddler trace logs for MFA in Microsoft 365 and Microsoft Entra ID
 description: Describes how to use the Fiddler tool to trace multifactor authentication (MFA) scenarios in Microsoft 365.
 author: helenclu
 ms.author: luche
@@ -16,7 +16,7 @@ appliesto:
 ms.date: 03/31/2022
 ---
 
-# How to use Fiddler trace logs for MFA in Microsoft 365 and Azure AD
+# How to use Fiddler trace logs for MFA in Microsoft 365 and Microsoft Entra ID
 
 ## Summary
 
@@ -32,7 +32,7 @@ This article introduces the Fiddler trace log for the following multifactor auth
 
 If a user account is federated, the user is redirected to the Service Token Server (STS) for authentication and to login.microsoftonline.com, and the SAML token is issued by the STS. If the user is managed, login.microsoftonline.com authenticates the user by way of the user's password.
 
-MFA starts after the user's password has been verified by Azure AD or STS. The `SANeeded=1` cookie will be set if the user is enabled for MFA authentication in Microsoft 365 or Azure directory. The communication between the client and login.microsoftonline.com after the user password authentication resembles the following:
+MFA starts after the user's password has been verified by Microsoft Entra ID or STS. The `SANeeded=1` cookie will be set if the user is enabled for MFA authentication in Microsoft 365 or Azure directory. The communication between the client and login.microsoftonline.com after the user password authentication resembles the following:
 
 > POST `https://login.microsoftonline.com/login.srf` HTTP/1.1  
 > Host: login.microsoftonline.com
