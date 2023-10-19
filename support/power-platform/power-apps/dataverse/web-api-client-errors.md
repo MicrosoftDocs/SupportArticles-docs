@@ -242,7 +242,17 @@ REQ_ID: 4c8c75eb-10bf-47f9-9998-c119146d511f
 Content-Type: application/json; odata.metadata=minimal
 OData-Version: 4.0
 
-{"error":{"code":"0x80048d19","message":"Error identified in Payload provided by the user for Entity :'accounts', For more information on this error please follow this help link https://go.microsoft.com/fwlink/?linkid=2195293  ---->  InnerException : System.ArgumentException: Stream was not readable.\r\n   at System.IO.StreamReader..ctor(Stream stream, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean leaveOpen)\r\n   at System.IO.StreamReader..ctor(Stream stream, Encoding encoding)\r\n   at Microsoft.OData.JsonLight.ODataJsonLightInputContext.CreateTextReader(Stream messageStream, Encoding encoding)\r\n   at Microsoft.OData.JsonLight.ODataJsonLightInputContext..ctor(ODataMessageInfo messageInfo, ODataMessageReaderSettings messageReaderSettings)\r\n   at Microsoft.OData.Json.ODataJsonFormat.CreateInputContext(ODataMessageInfo messageInfo, ODataMessageReaderSettings messageReaderSettings)\r\n   at Microsoft.OData.ODataMessageReader.ReadFromInput[T](Func`2 readFunc, ODataPayloadKind[] payloadKinds)\r\n   at System.Web.OData.Formatter.Deserialization.ODataResourceDeserializer.Read(ODataMessageReader messageReader, Type type, ODataDeserializerContext readContext)\r\n   at System.Web.OData.Formatter.ODataMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)."}}
+{"error":{"code":"0x80048d19","message":"Error identified in Payload provided by the user for Entity :'accounts',
+For more information on this error please follow this help link https://go.microsoft.com/fwlink/?linkid=2195293
+---->  InnerException : System.ArgumentException: Stream was not readable.\r\n
+at System.IO.StreamReader..ctor(Stream stream, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean leaveOpen)\r\n
+at System.IO.StreamReader..ctor(Stream stream, Encoding encoding)\r\n
+at Microsoft.OData.JsonLight.ODataJsonLightInputContext.CreateTextReader(Stream messageStream, Encoding encoding)\r\n
+at Microsoft.OData.JsonLight.ODataJsonLightInputContext..ctor(ODataMessageInfo messageInfo, ODataMessageReaderSettings messageReaderSettings)\r\n
+at Microsoft.OData.Json.ODataJsonFormat.CreateInputContext(ODataMessageInfo messageInfo, ODataMessageReaderSettings messageReaderSettings)\r\n
+at Microsoft.OData.ODataMessageReader.ReadFromInput[T](Func`2 readFunc, ODataPayloadKind[] payloadKinds)\r\n
+at System.Web.OData.Formatter.Deserialization.ODataResourceDeserializer.Read(ODataMessageReader messageReader, Type type, ODataDeserializerContext readContext)\r\n
+at System.Web.OData.Formatter.ODataMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)."}}
 --batchresponse_5bd81edb-2ef9-4269-85c3-4623981e6c6e--
 ```
 
