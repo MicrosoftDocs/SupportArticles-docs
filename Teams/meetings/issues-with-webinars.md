@@ -67,7 +67,7 @@ If your users are still not receiving invitations to Teams webinars, modify the 
 - If you're still unable to add the IP addresses, use the following steps:
 
   1. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
-  1. Run the [Enable-OrganizationCustomization](/powershell/module/exchange/enable-organizationcustomization?view=exchange-ps) PowerShell cmdlet to enable customization.
+  1. Run the [Enable-OrganizationCustomization](/powershell/module/exchange/enable-organizationcustomization) PowerShell cmdlet to enable customization.
   1. After customization is enabled, add the rest of the IP address ranges and select **Save**.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
