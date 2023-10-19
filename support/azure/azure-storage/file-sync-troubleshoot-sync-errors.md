@@ -4,7 +4,7 @@ description: Troubleshoot common issues with monitoring sync health and resolvin
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 10/12/2023
+ms.date: 10/13/2023
 ms.author: kendownie
 ms.custom: devx-track-azurepowershell
 ms.reviewer: v-weizhu
@@ -145,7 +145,7 @@ If you made changes directly in your Azure file share, Azure File Sync won't det
 If the **Persistent sync errors** and **Transient sync errors** counts in the portal or `PerItemErrorCount` on the server is greater than 0 for any given sync session, that means some items are failing to sync. Files and folders can have characteristics that prevent them from syncing. These characteristics can be persistent and require explicit action to resume sync, for example removing unsupported characters from the file or folder name. They can also be transient, meaning the file or folder will automatically resume sync; for example, files with open handles will automatically resume sync when the file is closed. When the Azure File Sync engine detects such a problem, an error log is produced that can be parsed to list the items currently not syncing properly.
 
 > [!Note]  
-> **Persistent sync errors** and **Transient sync errors** counts in the portal are updated once a sync session completes. If a sync session is in progress, wait until the sync session completes and the **Persistent sync errors** and **Transient sync errors** counts are updated before you investigate the remaining errors.
+> Once a sync session is completed, the **Persistent sync errors** and **Transient sync errors** counts in the portal are updated. If a sync session is in progress, wait until the sync session is completed and the **Persistent sync errors** and **Transient sync errors** counts are updated before you investigate the remaining errors.
 
 To see the names of files and directories that are failing to sync, run the *FileSyncErrorsReport.ps1* PowerShell script (located in the agent installation directory of the Azure File Sync agent) or use the `Debug-StorageSyncServer` cmdlet. The `ItemPath` field tells you the location of the file in relation to the root sync directory. See the list of [common per-item errors](#troubleshooting-per-filedirectory-sync-errors) for remediation steps.
 
@@ -169,12 +169,12 @@ Debug-StorageSyncServer -FileSyncErrorsReport
 
 ### Troubleshooting per file/directory sync errors
 
-If a file or directory fails to sync due to per-item errors, an event is logged in the *Microsoft-FileSync-Agent/ItemResults* event log. This section covers common error codes and remediation steps for per-item errors.
+If a file or directory fails to sync due to an error, an event is logged in the *Microsoft-FileSync-Agent/ItemResults* event log. This section covers common error codes and remediation steps for per-item errors.
 
 > [!Note]  
 > If a file or directory fails to sync, it can take up to 30 minutes before Azure File Sync retries syncing that item. If no changes are detected within the server endpoint location, Azure File Sync initiates a sync session every 30 minutes. To force a sync session, restart the Storage Sync Agent (*FileSyncSvc*) service or make a change to a file or directory within the server endpoint location.
 
-**ItemResults log - per-item sync errors**
+**Common per-item sync errors that are logged in the ItemResults event log**
 
 | HRESULT | HRESULT (decimal) | Error string | Issue | Remediation |
 |---------|-------------------|--------------|-------|-------------|
