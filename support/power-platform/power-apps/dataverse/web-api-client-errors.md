@@ -212,13 +212,20 @@ Verify that the navigation property name you use exists in the [CSDL $metadata d
 **Request**
 
 ```http
-POST [Organization URI]/api/data/v9.0/contacts HTTP/1.1
+POST [Organization URI]/api/data/v9.1/$batch HTTP/1.1
+Content-Type: multipart/mixed;boundary="batch_80dd1615-2a10-428a-bb6f-0e559792721f"
+
+--batch_80dd1615-2a10-428a-bb6f-0e559792721f
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+
+POST [Organization URI]/api/data/v9.1/accounts HTTP/1.1
+Content-Type: application/json; type=entry
 
 {
-  "firstname":"test",
-  "lastname":"contact",
-  "parentcustomerid@odata.bind": "accounts(a779956b-d748-ed11-bb44-6045bd01152a)"
+  "name": "Sample Account"
 }
+--batch_80dd1615-2a10-428a-bb6f-0e559792721f--
 ```
 
 **Response**
@@ -226,22 +233,26 @@ POST [Organization URI]/api/data/v9.0/contacts HTTP/1.1
 ```http
 HTTP/1.1 400 Bad Request
 
-{
-    "error": {
-        "code":"0x80048d19",
-        "message":"Error identified in Payload provided by the user for Entity :'accounts', For more information on this error please follow this help link https://go.microsoft.com/fwlink/?linkid=2195293  ---->  InnerException : System.ArgumentException: Stream was not readable.\r\n   at System.IO.StreamReader..ctor(Stream stream, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean leaveOpen)\r\n   at System.IO.StreamReader..ctor(Stream stream, Encoding encoding)\r\n   at Microsoft.OData.JsonLight.ODataJsonLightInputContext.CreateTextReader(Stream messageStream, Encoding encoding)\r\n   at Microsoft.OData.JsonLight.ODataJsonLightInputContext..ctor(ODataMessageInfo messageInfo, ODataMessageReaderSettings messageReaderSettings)\r\n   at Microsoft.OData.Json.ODataJsonFormat.CreateInputContext(ODataMessageInfo messageInfo, ODataMessageReaderSettings messageReaderSettings)\r\n   at Microsoft.OData.ODataMessageReader.ReadFromInput[T](Func`2 readFunc, ODataPayloadKind[] payloadKinds)\r\n   at System.Web.OData.Formatter.Deserialization.ODataResourceDeserializer.Read(ODataMessageReader messageReader, Type type, ODataDeserializerContext readContext)\r\n   at System.Web.OData.Formatter.ODataMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)."
-        }
-}
+--batchresponse_5bd81edb-2ef9-4269-85c3-4623981e6c6e
+Content-Type: application/http
+Content-Transfer-Encoding: binary
 
+HTTP/1.1 400 Bad Request
+REQ_ID: 4c8c75eb-10bf-47f9-9998-c119146d511f
+Content-Type: application/json; odata.metadata=minimal
+OData-Version: 4.0
+
+{"error":{"code":"0x80048d19","message":"Error identified in Payload provided by the user for Entity :'accounts', For more information on this error please follow this help link https://go.microsoft.com/fwlink/?linkid=2195293  ---->  InnerException : System.ArgumentException: Stream was not readable.\r\n   at System.IO.StreamReader..ctor(Stream stream, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean leaveOpen)\r\n   at System.IO.StreamReader..ctor(Stream stream, Encoding encoding)\r\n   at Microsoft.OData.JsonLight.ODataJsonLightInputContext.CreateTextReader(Stream messageStream, Encoding encoding)\r\n   at Microsoft.OData.JsonLight.ODataJsonLightInputContext..ctor(ODataMessageInfo messageInfo, ODataMessageReaderSettings messageReaderSettings)\r\n   at Microsoft.OData.Json.ODataJsonFormat.CreateInputContext(ODataMessageInfo messageInfo, ODataMessageReaderSettings messageReaderSettings)\r\n   at Microsoft.OData.ODataMessageReader.ReadFromInput[T](Func`2 readFunc, ODataPayloadKind[] payloadKinds)\r\n   at System.Web.OData.Formatter.Deserialization.ODataResourceDeserializer.Read(ODataMessageReader messageReader, Type type, ODataDeserializerContext readContext)\r\n   at System.Web.OData.Formatter.ODataMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)."}}
+--batchresponse_5bd81edb-2ef9-4269-85c3-4623981e6c6e--
 ```
 
 #### Cause
 
-This error occurs because
+This deserialization error is caused by the use of line endings other than [CRLF](/power-apps/developer/data-platform/webapi/web-api-navigation-properties#multi-table-lookups) in the batch request body. For more information, see [Batch requests](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/execute-batch-operations-using-web-api#batch-requests).
 
 #### How to avoid
 
-Verify that 
+Ensure all line endings in the $batch request body are CRLF. If you cannot use CRLF, add two non-CRLF line endings at the end of the batch request body to resolve this deserialization error. For more information, see [Batch requests](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/execute-batch-operations-using-web-api#batch-requests).
 
 ### See also
 
