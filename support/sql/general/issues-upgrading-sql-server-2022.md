@@ -38,7 +38,7 @@ Error: A user request from the session with SPID <SPID> generated a fatal except
 
 There's a known issue with [LIGHTWEIGHT_QUERY_PROFILING](/sql/t-sql/statements/alter-database-scoped-configuration-transact-sql#lightweight_query_profiling---on--off-) in SQL Server 2022.
 
-This issue has been fixed in [Cumulative Update 4 for SQL Server 2022](../releases/sqlserver-2022/cumulativeupdate4.md) and [Cumulative Update 20 for SQL Server 2019](../releases/sqlserver-2019/cumulativeupdate20.md).
+This issue has been fixed in [Cumulative Update 4 for SQL Server 2022](../releases/sqlserver-2022/cumulativeupdate4.md#2306513) and [Cumulative Update 20 for SQL Server 2019](../releases/sqlserver-2019/cumulativeupdate20.md#2204764).
 
 **Workaround:**
 

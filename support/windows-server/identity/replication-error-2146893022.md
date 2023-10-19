@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot AD replication error -2146893022
 description: This article describes how to troubleshoot a problem in which Active Directory replication fails and generates an error (-2146893022).
-ms.date: 04/28/2023
+ms.date: 10/09/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -80,9 +80,9 @@ When this problem occurs, you experience one or more of the following symptoms:
 
     `Repadmin` commands that commonly indicate the **-2146893022 (0x80090322)** status include but aren't limited to the following ones:
 
-  - `DMIN /REPLSUMREPA`
+  - `REPADMIN /REPLSUM`
   - `REPADMIN /SHOWREPL`
-  - `REPADMIN /SHOWREPL`
+  - `REPADMIN /SHOWREPS`
   - `REPADMIN /SYNCALL`
 
     Sample output from `REPADMIN /SHOWREPS` and `REPADMIN /SYNCALL` that indicate the **target principal name is incorrect** error is as follows:
