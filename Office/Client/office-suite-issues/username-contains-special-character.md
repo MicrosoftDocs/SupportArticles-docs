@@ -33,7 +33,7 @@ Invalid user name
 Only letters and numbers are allowed. No spaces.
 ```
 
-Within Microsoft Azure Active Directory Module for Windows PowerShell
+Within Microsoft Azure Active Directory module for Windows PowerShell
 
 ```adoc
 New-MsolUser : Invalid value for parameter. Parameter Name: UserPrincipalName.

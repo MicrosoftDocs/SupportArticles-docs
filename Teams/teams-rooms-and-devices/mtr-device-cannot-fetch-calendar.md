@@ -27,7 +27,7 @@ After you sign in to a Microsoft Teams Rooms device, the following error message
 
 :::image type="content" source="media/mtr-device-cannot-fetch-calendar/error.png" alt-text="Screenshot of the Cannot fetch calendar error.":::
 
-And the following error is logged in the [sign-in logs in Azure Active Directory](/azure/active-directory/reports-monitoring/concept-sign-ins):
+And the following error is logged in the [sign-in logs in Microsoft Entra ID](/azure/active-directory/reports-monitoring/concept-sign-ins):
 
 ```output
 “requestId": "<request ID>",
@@ -52,7 +52,7 @@ status": {
 
 This issue occurs if modern authentication isn't enabled for Teams Rooms, and your organization uses a Conditional Access policy to block basic authentication.
 
-To find out which Conditional Access policy is applied, review the [Azure AD sign-in events](/azure/active-directory/conditional-access/troubleshoot-conditional-access#azure-ad-sign-in-events).
+To find out which Conditional Access policy is applied, review the [Microsoft Entra sign-in events](/azure/active-directory/conditional-access/troubleshoot-conditional-access#azure-ad-sign-in-events).
 
 ## Resolution
 

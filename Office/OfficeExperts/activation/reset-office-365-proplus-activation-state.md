@@ -157,7 +157,7 @@ If you have Shared Computer Activation enabled, remove the Identity registry key
 <details>
 <summary><b>Section B: Clear cached Office credentials for managed devices</b></summary>
 
-For managed devices, there are additional locations from which you need to remove cached Office credentials. Devices are considered managed if they're Azure AD Joined (AADJ), Hybrid Azure AD Joined (HAADJ), or Workplace Joined (WPJ). These configurations use Web Account Management (WAM), which stores credentials in different locations.
+For managed devices, there are additional locations from which you need to remove cached Office credentials. Devices are considered managed if they're Microsoft Entra joined (AADJ), Microsoft Entra hybrid joined (HAADJ), or Workplace Joined (WPJ). These configurations use Web Account Management (WAM), which stores credentials in different locations.
 
 There are no steps that you can run manually to clear WAM accounts associated with Office on the device for AADJ and HAADJ devices.
 
@@ -173,7 +173,7 @@ In the output that displays, check the values for the **AzureAdJoined**, **Enter
 
 | AzureAdJoined | EnterpriseJoined | DomainJoined | Device state |
 | ---------------- | ---------------- | ---------------- | ---------------- |
-| YES | NO | NO | Azure AD Joined (AADJ) |
+| YES | NO | NO | Microsoft Entra joined (AADJ) |
 | NO | NO | YES | Domain Joined (DJ) |
 | YES | NO | YES | Hybrid AD Joined (HAADJ) |
 
@@ -191,7 +191,7 @@ When you clear a WPJ account on a device, the Single Sign-On (SSO) behavior for 
 
 Check whether your device is Workplace Joined if you're not sure. Run the `dsregcmd /status` command from an elevated command prompt as described in <a href="#sectionb">Section B</a>, above.
 
-The state of Workplace Joined (WPJ) (Azure AD registered) devices is displayed in the **User State** section of the output. If the value displayed for the WorkplaceJoined parameter is **YES**, it indicates that your device is Workplace Joined.
+The state of Workplace Joined (WPJ) (Microsoft Entra registered) devices is displayed in the **User State** section of the output. If the value displayed for the WorkplaceJoined parameter is **YES**, it indicates that your device is Workplace Joined.
 
 To clear WPJ accounts:
 
@@ -212,5 +212,5 @@ To clear WPJ accounts:
 - ["We are unable to connect right now" error when users try to activate Microsoft 365 Apps for enterprise](../../Client/activation/issue-when-activate-office-365-proplus.md)
 - [Troubleshoot issues with shared computer activation for Microsoft 365 Apps](../../Client/activation/shared-computer-activation.md)
 - [Device identity and desktop virtualization](/azure/active-directory/devices/howto-device-identity-virtual-desktop-infrastructure#microsofts-guidance)
-- [What is device identity in Azure Active Directory (AD)?](/azure/active-directory/devices/overview)
+- [What is device identity in Microsoft Entra ID?](/azure/active-directory/devices/overview)
 - [OneDrive for Business can't sync after tenant migration](/sharepoint/troubleshoot/sync/cant-sync-after-migration)

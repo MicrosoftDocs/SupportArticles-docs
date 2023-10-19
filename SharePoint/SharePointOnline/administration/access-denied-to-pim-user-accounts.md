@@ -27,7 +27,7 @@ You receive an "Access denied" error message or have an inconsistent experience 
 
 ## Cause
 
-Access to a user account is not immediately available in SPO when you request that access by using PIM in Azure Active Directory (AAD). Access should be granted in SPO within a few hours. However, it may take longer.
+Access to a user account is not immediately available in SPO when you request that access by using PIM in Microsoft Entra ID. Access should be granted in SPO within a few hours. However, it may take longer.
 
 ## Workaround
 
@@ -39,16 +39,16 @@ Microsoft is researching this problem and will post more information in this art
 
 ### How PIM and SharePoint admin role works
 
-If an administrator enables the SharePoint Administrator role In AAD by using PIM at 7 A.M. for four hours, PIM disables the role assignment at 11 A.M. The user then loses access to the SPO admin center.
+If an administrator enables the SharePoint Administrator role In Microsoft Entra ID by using PIM at 7 A.M. for four hours, PIM disables the role assignment at 11 A.M. The user then loses access to the SPO admin center.
 
 After the role is activated in PIM, it must be synchronized with SPO. This synchronization may take some time to finish. This means that the user will not have complete four-hour access. For example, if activation in PIM ends at 7 A.M. and SPO synchronization ends at 9 A.M., the user will have access for two hours only (assuming that the duration is four hours).
 
-Therefore, this problem is expected to occur if you try to access the SPO admin center immediately after you enable the role in PIM. The system requires some time to sync the changes from AAD to SPO. Therefore, we recommend the 24-hour access window.
+Therefore, this problem is expected to occur if you try to access the SPO admin center immediately after you enable the role in PIM. The system requires some time to sync the changes from Microsoft Entra ID to SPO. Therefore, we recommend the 24-hour access window.
 
 
 For more information, see the following Knowledge Base articles:
 
 - [Roles you can't manage in Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-roles)
-- [Assign Azure AD roles in Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-how-to-add-role-to-user?tabs=new)
+- [Assign Microsoft Entra roles in Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-how-to-add-role-to-user?tabs=new)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

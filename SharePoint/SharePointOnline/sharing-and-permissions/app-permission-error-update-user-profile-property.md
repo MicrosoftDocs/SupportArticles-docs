@@ -1,6 +1,6 @@
 ---
 title: App permission error when updating user profile properties in SharePoint
-description: Fix an access error and System.UnauthorizedAccessException when you use an Entra ID app to update user profile properties in SharePoint Online by using app-only authentication.
+description: Fix an access error and System.UnauthorizedAccessException when you use a Microsoft Entra app to update user profile properties in SharePoint Online by using app-only authentication.
 manager: dcscontentpm
 localization_priority: Normal
 ms.date: 10/13/2023
@@ -20,7 +20,7 @@ appliesto:
 
 ## Symptoms
 
-You use a Microsoft Entra ID app to update user profile properties in SharePoint Online by using app-only authentication. In this scenario, you receive **System.UnauthorizedAccessException** and the following error message:
+You use a Microsoft Entra app to update user profile properties in SharePoint Online by using app-only authentication. In this scenario, you receive **System.UnauthorizedAccessException** and the following error message:
 
 > Access denied. You do not have permission to perform this action or access this resource.
 

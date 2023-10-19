@@ -30,7 +30,7 @@ As a Microsoft Teams administrator, you can't access the Microsoft Teams admin c
 
 This behavior is by design. Authentication and authorization won't work as intended if the third-party cookies are disabled in the browser.
 
-This is the recommended path that relies on browser session cookies during Microsoft Azure Active Directory authentication or authorization.
+This is the recommended path that relies on browser session cookies during Microsoft Entra authentication or authorization.
 
 ## Resolution
 

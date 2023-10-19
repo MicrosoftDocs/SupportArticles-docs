@@ -183,9 +183,9 @@ The steps below remove the external user's ability to access SharePoint Online. 
    > [!NOTE]
    > Replace live.com#jondoe@company.com with the user in your scenario.
 
-Next, you have to remove the account from Azure Active Directory:
+Next, you have to remove the account from Microsoft Entra ID:
 
-1. Download and install the Azure Active Directory PowerShell Module and its prerequisites. To this, go to [Manage Azure AD using Windows PowerShell](/previous-versions/azure/jj151815(v=azure.100)).
+1. Download and install the Azure Active Directory PowerShell Module and its prerequisites. To this, go to [Manage Microsoft Entra ID using Windows PowerShell](/previous-versions/azure/jj151815(v=azure.100)).
 
 2. Open the Azure Active Directory PowerShell Module, and then run the following commands:
 

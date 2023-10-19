@@ -20,7 +20,7 @@ ms.custom: CI168070
 
 ## Symptoms
 
-Conditional Access is an Azure Active Directory (Azure AD) feature that helps make sure that devices that access corporate resources are correctly managed and secured. If Conditional Access policies are applied to the Teams service, Android devices (including Teams phones, Teams displays, Teams panels, and Microsoft Teams Rooms on Android) that access Teams must comply with the policies. Otherwise, Conditional Access will prevent users from signing in to or using the Teams app on the devices.
+Conditional Access is a Microsoft Entra feature that helps make sure that devices that access corporate resources are correctly managed and secured. If Conditional Access policies are applied to the Teams service, Android devices (including Teams phones, Teams displays, Teams panels, and Microsoft Teams Rooms on Android) that access Teams must comply with the policies. Otherwise, Conditional Access will prevent users from signing in to or using the Teams app on the devices.
 
 If these policies are applied, you might experience one or more of the following issues on non-compliant devices:
 
@@ -34,12 +34,12 @@ These issues can occur for the following reasons:
 
 - Unsupported Conditional Access policy or Intune device compliance policy settings
 
-  If a device is marked as non-compliant, the Azure AD token issuing service stops renewing the tokens for the device object, or even revokes the token. In this case, the device can't get an updated authentication token, and it's forced to sign out.
+  If a device is marked as non-compliant, the Microsoft Entra token issuing service stops renewing the tokens for the device object, or even revokes the token. In this case, the device can't get an updated authentication token, and it's forced to sign out.
 
   To check the compliance status of your devices, use the [Intune Device compliance dashboard](/mem/intune/protect/compliance-policy-monitor).
 - The [Sign-in frequency](/azure/active-directory/conditional-access/howto-conditional-access-session-lifetime#user-sign-in-frequency) setting
 
-  This setting forces periodic reauthentication. This might cause the devices to sign out randomly, depending on how many of your Conditional Access policies have different sign-in frequencies set. Whenever reauthentication occurs, the token is revoked and a new device object is created under the user account. If the number of device objects exceeds the Azure AD device limit or Intune device limit, the user can't sign in to the device.
+  This setting forces periodic reauthentication. This might cause the devices to sign out randomly, depending on how many of your Conditional Access policies have different sign-in frequencies set. Whenever reauthentication occurs, the token is revoked and a new device object is created under the user account. If the number of device objects exceeds the Microsoft Entra device limit or Intune device limit, the user can't sign in to the device.
 - The Terms of Use (ToU) and MFA Conditional Access policies, if both are used
 
   For more information, see [Known issues with Teams phones](rooms-known-issues.md#issues-with-teams-phones).

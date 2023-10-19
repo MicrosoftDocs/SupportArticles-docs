@@ -29,7 +29,7 @@ For more information about this issue, see [Control access to SharePoint Online 
 
 ## Workaround
 
-To work around this issue, [set conditional access in Azure Active Directory (Azure AD)](/azure/active-directory/active-directory-conditional-access-azure-portal).
+To work around this issue, [set conditional access in Microsoft Entra ID](/azure/active-directory/active-directory-conditional-access-azure-portal).
 
 ## Status
 
