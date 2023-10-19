@@ -22,7 +22,7 @@ When you run the [Content Migration Tool (Public Preview)](https://aka.ms/Conten
 
 Before running the PowerShell script, unblock the *.zip* folder that contains the Content Migration Tool (Public Preview).
 
-1. Download the [Content Migration Tool](https://aka.ms/guidesmigration). The *.zip* folder is downloaded to your *Downloads* folder.
+1. Download the [Content Migration Tool](https://aka.ms/ContentMigrationTool). The *.zip* folder is downloaded to your *Downloads* folder.
 
 1. In Windows File Explorer, select the *.zip* folder, right-click and then select **Properties**.
 
