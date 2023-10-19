@@ -27,7 +27,7 @@ When a user tries to set up Azure Multi-Factor Authentication, the user can't se
 
 ## Cause 
 
-This problem occurs for on-premises users who are synchronized from the on-premises Active Directory environment to Azure Active Directory. 
+This problem occurs for on-premises users who are synchronized from the on-premises Active Directory environment to Microsoft Entra ID. 
 
 ## Solution 
 
@@ -37,4 +37,4 @@ Change the user's office phone number in the on-premises Active Directory.
 
 For more information about Azure Multi-Factor Authentication, see [Azure Multi-Factor Authentication](/previous-versions/azure/azure-services/dn249471(v=azure.100)).
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Microsoft Entra Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.

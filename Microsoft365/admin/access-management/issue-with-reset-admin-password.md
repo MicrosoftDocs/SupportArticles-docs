@@ -38,7 +38,7 @@ When you try to reset your admin password for a Microsoft cloud service such as 
 
 ## Cause 
 
-This issue occurs if the UsageLocation parameter isn't set for your user account in Azure Active Directory (Azure AD). Self-service password reset for admins doesn't work if the UsageLocation parameter isn't set.
+This issue occurs if the UsageLocation parameter isn't set for your user account in Microsoft Entra ID. Self-service password reset for admins doesn't work if the UsageLocation parameter isn't set.
 
 ## Solution 
 
@@ -58,10 +58,10 @@ Work with another admin to set your user location. Or, after you're able to sign
 2. Go to **users and groups**, and then select the admin account.   
 3. Go to **settings**.   
 4. Under **Set user location**, select the region where you're located.    
-Or, you can use the Set-MsolUser Azure Active Directory Module for Windows PowerShell cmdlet together with the UsageLocation parameter to set your user location.
+Or, you can use the Set-MsolUser Azure Active Directory module for Windows PowerShell cmdlet together with the UsageLocation parameter to set your user location.
 
 ## More information
 
 For more info about the Set-MsolUser cmdlet, see [Set-MsolUser](/previous-versions/azure/dn194136(v=azure.100)).
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Microsoft Entra Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.

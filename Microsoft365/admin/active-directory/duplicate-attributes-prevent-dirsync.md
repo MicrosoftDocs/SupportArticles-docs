@@ -36,7 +36,7 @@ The error report in the email message may contain one or more of the following e
 - Unable to update this object because the following attributes associated with this object have values that may already be associated with another object in your local directory services: [UserPrincipalName *john\@contoso.com*;]. Correct or remove the duplicate values in your local directory.
 - Unable to update this object because the following attributes associated with this object have values that may already be associated with another object in your local directory services: [ProxyAddresses SMTP:*john\@contoso.com*;]. Correct or remove the duplicate values in your local directory.
 
-Additionally, if you're running Azure Active Directory (Connect) Sync Service, an instance of event ID 6941 that contains one of the following error messages is logged in the Application login Event Viewer:
+Additionally, if you're running Microsoft Entra ID (Connect) Sync Service, an instance of event ID 6941 that contains one of the following error messages is logged in the Application login Event Viewer:
 
 ```asciidoc
 Event ID: 6941
@@ -76,21 +76,27 @@ If you create objects that have duplicate alias values in the cloud for Microsof
 
 To resolve this issue, determine duplicate values and values that conflict with other AD DS objects. To do this, use one of the following methods.
 
-### Method 1: Use the IdFix Microsoft Azure Active Directory Synchronization Tool Error Remediation Tool
+<a name='method-1-use-the-idfix-microsoft-azure-active-directory-synchronization-tool-error-remediation-tool'></a>
 
-Use the IdFix Microsoft Azure Active Directory Synchronization Tool Error Remediation Tool to identify duplicate or invalid attributes. To resolve duplicate attributes by using the IdFix Tool, see the following Microsoft Knowledge Base article:
+### Method 1: Use the IdFix Microsoft Entra Synchronization Tool Error Remediation Tool
+
+Use the IdFix Microsoft Entra Synchronization Tool Error Remediation Tool to identify duplicate or invalid attributes. To resolve duplicate attributes by using the IdFix Tool, see the following Microsoft Knowledge Base article:
 
 [2857385](https://support.microsoft.com/help/2857385) "Duplicate" is displayed in the ERROR column for two or more objects after you run the IdFix tool
 
-### Method 2: Map an existing on-premises user to an Azure AD user
+<a name='method-2-map-an-existing-on-premises-user-to-an-azure-ad-user'></a>
+
+### Method 2: Map an existing on-premises user to a Microsoft Entra user
 
 To do this, see the following Microsoft Knowledge Base article:
 
 [2641663](https://support.microsoft.com/help/2641663) How to use SMTP matching to match on-premises user accounts to Microsoft 365 user accounts for directory synchronization
 
-### Method 3: Determine attribute conflicts that are caused by objects that weren't created in Azure AD through directory synchronization
+<a name='method-3-determine-attribute-conflicts-that-are-caused-by-objects-that-werent-created-in-azure-ad-through-directory-synchronization'></a>
 
-To determine attribute conflicts that are caused by user objects that were created by using Microsoft 365 management tools (and that weren't created in Azure AD through directory synchronization), follow these steps:
+### Method 3: Determine attribute conflicts that are caused by objects that weren't created in Microsoft Entra ID through directory synchronization
+
+To determine attribute conflicts that are caused by user objects that were created by using Microsoft 365 management tools (and that weren't created in Microsoft Entra ID through directory synchronization), follow these steps:
  
 1. Determine the unique attributes of the on-premises AD DS user account. To do this, on a computer that has Windows Support Tools installed, follow these steps:  
    1. Click **Start**, click **Run**, type ldp.exe, and then click **OK**. 
@@ -111,8 +117,8 @@ To determine attribute conflicts that are caused by user objects that were creat
       > [!NOTE]
       > Ldp.exe is included in Windows Server 2008 and in the Windows Server 2003 Support Tools. The Windows Server 2003 Support Tools are included in the Windows Server 2003 installation media. Or, to obtain the tool, go to the following Microsoft website: [Windows Server 2003 Service Pack 2 32-bit Support Tools](https://go.microsoft.com/fwlink/?linkid=100114)
 
-2. Connect to Microsoft 365 by using the Azure Active Directory Module for Windows PowerShell. To do this, follow these steps:  
-   1. Click **Start**, click **All Programs**, click **Azure Active Directory**, and then click **Azure Active Directory Module for Windows PowerShell**.
+2. Connect to Microsoft 365 by using the Azure Active Directory module for Windows PowerShell. To do this, follow these steps:  
+   1. Click **Start**, click **All Programs**, click **Microsoft Entra ID**, and then click **Azure Active Directory module for Windows PowerShell**.
    2. Type the following commands in the order in which they are presented, and press Enter after each command:
 
       ```powershell
@@ -173,8 +179,8 @@ After you determine conflicting or invalid attribute values, troubleshoot the is
 
 ## More information
 
-The Windows PowerShell commands in this article require the Azure Active Directory Module for Windows PowerShell. For more information about Azure Active Directory Module for Windows PowerShell, go to the following Microsoft website:
+The Windows PowerShell commands in this article require the Azure Active Directory module for Windows PowerShell. For more information about Azure Active Directory module for Windows PowerShell, go to the following Microsoft website:
 
-[Azure Active Directory Cmdlets](/previous-versions/azure/jj151815(v=azure.100))
+[Microsoft Entra Cmdlets](/previous-versions/azure/jj151815(v=azure.100))
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

@@ -43,11 +43,11 @@ Non-admins will then be able to add guest users without admin approval.
 
 **Microsoft recommends that admins make this change to alleviate the number of requests they may receive for remote access.**
 
-For more detailed instructions, see [Step 2: Configure Azure AD business-to-business settings](/microsoftteams/guest-access-checklist#step-2-configure-azure-ad-business-to-business-settings) in the article [Microsoft Teams guest access checklist](/microsoftteams/guest-access-checklist#step-2-configure-azure-ad-business-to-business-settings). 
+For more detailed instructions, see [Step 2: Configure Microsoft Entra business-to-business settings](/microsoftteams/guest-access-checklist#step-2-configure-azure-ad-business-to-business-settings) in the article [Microsoft Teams guest access checklist](/microsoftteams/guest-access-checklist#step-2-configure-azure-ad-business-to-business-settings). 
 
 ### Admins
 
-For admins to directly add a guest user, go to **All users** in the [Azure Active Directory (AAD) admin center](https://aad.portal.azure.com/), and then select **New guest user**. 
+For admins to directly add a guest user, go to **All users** in the [Microsoft Entra admin center](https://aad.portal.azure.com/), and then select **New guest user**. 
 
 ## More information
 

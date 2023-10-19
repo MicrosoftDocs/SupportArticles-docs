@@ -49,7 +49,7 @@ Get-ADUser -SearchBase "OU=Italy,OU=Countries,DC=contoso,DC=com" -Filter * | Set
 Get-MsolUser -UserPrincipalName user1@contoso.com | Set-MsolUser –UsageLocation IT
 ```
 
-Then, force the settings to sync through Azure AD Connect.
+Then, force the settings to sync through Microsoft Entra Connect.
 
 ## For Exchange Online
 

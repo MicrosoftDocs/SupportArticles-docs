@@ -28,21 +28,21 @@ Federated sharing features for an Exchange 2010 organization stop working correc
 
 ## Cause
 
-Microsoft has discontinued federation trust support for the consumer instance of the Microsoft Federation Gateway. Currently, only federation trusts in the business instance of the Microsoft Azure AD authentication system are supported.
+Microsoft has discontinued federation trust support for the consumer instance of the Microsoft Federation Gateway. Currently, only federation trusts in the business instance of the Microsoft Entra authentication system are supported.
 
 By default, the following Exchange organizations use the consumer instance of the Microsoft Federation Gateway and are immediately affected by this change in support:
 
 - Release to manufacturing (RTM) versions of Exchange 2010 that have set up federation trusts for sharing free/busy calendar information together with other federated organizations
 - Exchange organizations that are hosted by Microsoft Live@edu
 
-By default, the following Exchange organizations use the business instance of the Microsoft Azure AD authentication system and are not affected by this change:
+By default, the following Exchange organizations use the business instance of the Microsoft Entra authentication system and are not affected by this change:
 
 - Exchange 2013 (or later version) organizations that use the Enable Federation Trust wizard
 - Exchange 2010 Service Pack 1 (SP1) (or later version) organizations that use the New Federation Trust wizard
 - Exchange organizations that are hosted by Microsoft 365, such as Exchange Online
 - Federation trusts that are configured to support hybrid deployments between Exchange 2010 organizations and Exchange Online
 
-If you are using Azure, and you have to verify which Microsoft Azure AD authentication system instance your Exchange organization is using for an existing federation trust, run the following command in the Exchange Management Shell:
+If you are using Azure, and you have to verify which Microsoft Entra authentication system instance your Exchange organization is using for an existing federation trust, run the following command in the Exchange Management Shell:
 
 ```powershell
 Get-FederationInformation -DomainName <your hosted Exchange domain namespace>
@@ -52,7 +52,7 @@ The consumer instance returns a value of \<uri:WindowsLiveID> for the *TokenIssu
 
 ## Resolution
 
-To resolve this issue, Exchange 2010 organizations and any affected federated Exchange 2010 partner organizations must remove their existing federation trusts and create new federation trusts by using the Microsoft Azure AD authentication system. To do this, follow these steps:
+To resolve this issue, Exchange 2010 organizations and any affected federated Exchange 2010 partner organizations must remove their existing federation trusts and create new federation trusts by using the Microsoft Entra authentication system. To do this, follow these steps:
 
 1. Identify your federated domains
 

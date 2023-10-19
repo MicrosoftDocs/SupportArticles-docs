@@ -13,11 +13,11 @@
           href: ../administration/remote-mailbox-created-in-ad-ds-not-aclable.md
         - name: Access denied when using remote Windows PowerShell
           href: ../administration/access-denied-connect-powershell.md
-        - name: Azure AD Connect workflow in Microsoft 365
+        - name: Microsoft Entra Connect workflow in Microsoft 365
           href: ../administration/azure-ad-connect-workflow.md
         - name: Bad Request when connecting to Exchange Online PowerShell
           href: ../administration/bad-request-error-when-connecting-to-exchange-online-powershell.md
-        - name: Can't add Exchange license in Azure AD Connect
+        - name: Can't add Exchange license in Microsoft Entra Connect
           href: ../administration/cannot-add-exchange-license-in-azure-ad-connect.md
         - name: Can't connect to Exchange Online
           href: ../administration/incorrect-settings.md

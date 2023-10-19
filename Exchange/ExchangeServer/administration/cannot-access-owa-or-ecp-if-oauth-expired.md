@@ -72,7 +72,7 @@ If the command returns an error, or the certificate has expired, use the followi
     ```
 
     > [!NOTE]
-    > In some environments, it may take an hour for the OAuth certificate to be published. If you have a hybrid setup, you have to run the Hybrid Configuration Wizard again to update the changes to Azure Active Directory (Azure AD).
+    > In some environments, it may take an hour for the OAuth certificate to be published. If you have a hybrid setup, you have to run the Hybrid Configuration Wizard again to update the changes to Microsoft Entra ID.
 
 ## More information
 

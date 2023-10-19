@@ -65,7 +65,7 @@ You can use any account as the service account. If the service account's passwor
 
 ### Step 4: Download Microsoft 365 tools
 
-Windows Azure Active Directory Module for Windows PowerShell and Azure Active Directory sync appliance are available in Microsoft 365 portal. To obtain the tools, click **Active Users**, and then click **Single sign-on: Set up**.
+Windows Azure Active Directory module for Windows PowerShell and Azure Active Directory Sync appliance are available in Microsoft 365 portal. To obtain the tools, click **Active Users**, and then click **Single sign-on: Set up**.
 
 ### Step 5: Add your domain to Microsoft 365
 
