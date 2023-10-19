@@ -1,5 +1,5 @@
 ---
-title: Can't sign in to Microsoft 365 desktop applications
+title: Can't sign in to Microsoft 365 Windows desktop applications
 description: Describes issues that occur when users try to sign in to Microsoft 365 desktop applications on devices that have security software installed.
 author: helenclu
 manager: dcscontentpm
@@ -95,6 +95,9 @@ To fix the issues, follow these steps on the device:
    - `%localappdata%\Packages\Microsoft.AAD.BrokerPlugin_cw5n1h2txyewy`
    - `%windir%\SystemApps\Microsoft.Windows.CloudExperienceHost_cw5n1h2txyewy`
    - `%localappdata%\Packages\Microsoft.Windows.CloudExperienceHost_cw5n1h2txyewy`
+   - `%localappdata%\Microsoft\TokenBroker`
+   - `%localappdata%\Microsoft\OneAuth`
+   - `%localappdata%\Microsoft\IdentityCache`
 
    **Processes to exclude**
   
@@ -102,3 +105,4 @@ To fix the issues, follow these steps on the device:
    - `%windir%\System32\backgroundTaskHost.exe` for the following package names:
        - `Microsoft.AAD.BrokerPlugin_cw5n1h2txyewy`
        - `Microsoft.Windows.CloudExperienceHost_cw5n1h2txyewy`
+   - `%windir%\System32\svchost.exe` loading NT service TokenBroker as TokenBroker.dll
