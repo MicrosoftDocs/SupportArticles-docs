@@ -33,7 +33,7 @@ This issue may occur if one of the following conditions is true:
 
 To fix this issue, follow these steps:
 
-1. Ensure that ADSyncTools module is installed for PowerShell. For more information, see [Microsoft Entra Connect: ADSyncTools PowerShell Reference](/azure/active-directory/hybrid/connect/reference-connect-adsynctools).
+1. Ensure that the ADSyncTools module is installed for PowerShell. For more information, see [Microsoft Entra Connect: ADSyncTools PowerShell Reference](/azure/active-directory/hybrid/connect/reference-connect-adsynctools).
 1. Run the following command to force directory synchronization:
     ```powershell
     Start-ADSyncSyncCycle -PolicyType Initial
