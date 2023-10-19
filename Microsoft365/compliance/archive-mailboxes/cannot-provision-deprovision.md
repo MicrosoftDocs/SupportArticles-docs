@@ -58,7 +58,7 @@ After a migration, managing archives for mailboxes that were migrated from Dedic
 
     `Enable-remotearchive.ps1 -Identity 'John'`
 
-1. Wait for AzureAD (AAD) Connect to synchronize the changes.Optional: The
+1. Wait for Microsoft Entra Connect to synchronize the changes.Optional: The
  **ArchiveName** parameter specifies the name of the archive mailbox. This is the name displayed to users in Outlook and Outlook Web App (OWA). If you don't use this parameter, the default value is **In-Place Archive - \<Mailbox_User_Display_Name>**.
 
 ### Deprovisioning an archive
@@ -69,4 +69,4 @@ After a migration, managing archives for mailboxes that were migrated from Dedic
 
     `disable-remotearchive.ps1 -Identity 'John'`
 
-4. Wait for AAD Connect to synchronize the changes.
+4. Wait for Microsoft Entra Connect to synchronize the changes.

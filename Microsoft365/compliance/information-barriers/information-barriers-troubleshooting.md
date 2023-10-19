@@ -109,7 +109,7 @@ Verify that the users in question are included in an information barrier policy.
 
     |**Results**|**What to do next**|
     |:----------|:------------------|
-    | No segments are listed for the selected user(s) | Do one of the following:<br/>- Assign users to an existing segment by editing their user profiles in Azure Active Directory. (See [Configure user account properties with Microsoft 365 PowerShell](/microsoft-365/enterprise/configure-user-account-properties-with-microsoft-365-powershell).)<br/>- Define a segment using a [supported attribute for information barriers](/microsoft-365/compliance/information-barriers-attributes). Then, either [define a new policy](/microsoft-365/compliance/information-barriers-policies#part-2-define-information-barrier-policies) or [edit an existing policy](/microsoft-365/compliance/information-barriers-edit-segments-policies#edit-a-policy) to include that segment. |
+    | No segments are listed for the selected user(s) | Do one of the following:<br/>- Assign users to an existing segment by editing their user profiles in Microsoft Entra ID. (See [Configure user account properties with Microsoft 365 PowerShell](/microsoft-365/enterprise/configure-user-account-properties-with-microsoft-365-powershell).)<br/>- Define a segment using a [supported attribute for information barriers](/microsoft-365/compliance/information-barriers-attributes). Then, either [define a new policy](/microsoft-365/compliance/information-barriers-policies#part-2-define-information-barrier-policies) or [edit an existing policy](/microsoft-365/compliance/information-barriers-edit-segments-policies#edit-a-policy) to include that segment. |
     | Segments are listed but no information barrier policies are assigned to those segments | Do one of the following:<br/>- [Define a new information barrier policy](/microsoft-365/compliance/information-barriers-policies#part-2-define-information-barrier-policies) for each segment in question <br/>- [Edit an existing information barrier policy](/microsoft-365/compliance/information-barriers-edit-segments-policies#edit-a-policy) to assign it to the correct segment |
     | Segments are listed and each is included in an information barrier policy | - Run the `Get-InformationBarrierPolicy` cmdlet to verify that information barrier policies are active<br/>- Run the `Get-InformationBarrierPoliciesApplicationStatus` cmdlet to confirm the policies are applied<br/>- Run the `Start-InformationBarrierPoliciesApplication` cmdlet to apply all active information barrier policies |
 
@@ -119,7 +119,7 @@ In this case, information barrier policies are in effect, and one or more users 
 
 ### What to do
 
-Information barrier policies are assigned to segments of users. Segments are defined by using certain [attributes in user account profiles](/microsoft-365/compliance/information-barriers-attributes). If you must remove a policy from a single user, consider editing that user's profile in Azure Active Directory such that the user is no longer included in a segment affected by information barriers.
+Information barrier policies are assigned to segments of users. Segments are defined by using certain [attributes in user account profiles](/microsoft-365/compliance/information-barriers-attributes). If you must remove a policy from a single user, consider editing that user's profile in Microsoft Entra such that the user is no longer included in a segment affected by information barriers.
 
 1. Use the **Get-InformationBarrierRecipientStatus** cmdlet with Identity parameters. This cmdlet returns information about users, such as attribute values and any information barrier policies that are applied.
 
@@ -130,7 +130,7 @@ Information barrier policies are assigned to segments of users. Segments are def
 
 2. Review the results to see if information barrier policies are assigned, and to which segment(s) the user(s) belong.
 
-3. To remove a user from a segment affected by information barriers, [update the user's profile information in Azure Active Directory](/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal).
+3. To remove a user from a segment affected by information barriers, [update the user's profile information in Microsoft Entra ID](/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal).
 
 4. Wait about 30 minutes for FwdSync to occur. Or, run the `Start-InformationBarrierPoliciesApplication` cmdlet to apply all active information barrier policies.
 

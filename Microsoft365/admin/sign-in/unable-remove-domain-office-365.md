@@ -56,7 +56,7 @@ For more info about how to remove a domain in the Microsoft 365 admin center, go
 > You can also create a user view and then set the domain to the domain that you're trying to remove. Use this view to note the user names, and then change the user names so that the domain in question isn't part of the user name.
 
 To check whether user names contain the domain name, follow these steps: 
-1. Connect to Microsoft Azure Active Directory by using the Azure Active Directory Module for Windows PowerShell. To do this, open the Azure Active Directory Modules for Windows PowerShell, type the following cmdlet, and then press Enter.
+1. Connect to Microsoft Entra ID by using the Azure Active Directory module for Windows PowerShell. To do this, open the Microsoft Entra Modules for Windows PowerShell, type the following cmdlet, and then press Enter.
    ```powershell
    Connect-MsolService
    ```

@@ -35,7 +35,7 @@ You can't sign in to Microsoft 365, Microsoft Azure, or Microsoft Intune. You mi
 - Office apps, such as Outlook, Word, Excel, and PowerPoint
 - Office apps on mobile devices, such as Office Mobile, Teams, and Microsoft OneDrive for Business (formerly Microsoft SkyDrive Pro)
 - Azure Active Directory Sync
-- Azure Active Directory Module for Windows PowerShell
+- Azure Active Directory module for Windows PowerShell
 - Dynamics CRM
   
 ## Cause
@@ -97,7 +97,7 @@ If you can't sign in to the portal, use one of the solutions in the following ta
 
 ## More information
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Microsoft Entra Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.
 
 - **If you are an admin for a Microsoft Business Subscription** who requires assisted technical support, see [Ways to contact support for business products - Admin Help](/microsoft-365/admin/contact-support-for-business-products?preserve-view=true&tabs=phone&view=o365-worldwide).
 

@@ -36,7 +36,7 @@ In those cases, the user will also see a banner beneath the ribbon in the docume
 
 > LICENSE REQUIRED Your admin needs to assign an Office license to this device so you can edit your files.
 
-To troubleshoot this issue, make sure the device is correctly joined to Azure AD and that the device is added to the group that has been assigned the licenses. Also, there can be a delay of approximately one hour after you add the device to the group, so that might be causing this message to appear. Close the app and open the app again later.
+To troubleshoot this issue, make sure the device is correctly joined to Microsoft Entra ID and that the device is added to the group that has been assigned the licenses. Also, there can be a delay of approximately one hour after you add the device to the group, so that might be causing this message to appear. Close the app and open the app again later.
 
 In other cases, the user might see this message:
 
@@ -64,8 +64,10 @@ Device-based licensing can be used with RDS. However, you must have enough licen
 
 If you want the activation process to be invisible to the RDS user, you can create a script to open a Microsoft 365 App, such as Word or Excel, when the device is started. This will acquire the device-based license.
 
-## Make sure the device is joined to Azure Active Directory (Azure AD)
+<a name='make-sure-the-device-is-joined-to-azure-active-directory-azure-ad'></a>
 
-Sign in to the [Microsoft Azure portal](https://portal.azure.com/) and go to **Azure Active Directory** > **Devices**. The type of join for your Windows client device is listed in the **Join Type** column.
+## Make sure the device is joined to Microsoft Entra ID
 
-If the Windows client device doesn't appear, sign in to the Windows client device. Then go to **Settings** > **Accounts** > **Access work or school**, choose **Connect**, and follow the steps to join the device to either Azure Active Directory or to a local Active Directory domain.
+Sign in to the [Microsoft Azure portal](https://portal.azure.com/) and go to **Microsoft Entra ID** > **Devices**. The type of join for your Windows client device is listed in the **Join Type** column.
+
+If the Windows client device doesn't appear, sign in to the Windows client device. Then go to **Settings** > **Accounts** > **Access work or school**, choose **Connect**, and follow the steps to join the device to either Microsoft Entra ID or to a local Active Directory domain.
