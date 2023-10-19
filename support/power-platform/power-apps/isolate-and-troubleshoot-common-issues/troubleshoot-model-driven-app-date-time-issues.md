@@ -2,7 +2,7 @@
 title: Troubleshoot date and time issues in model-driven apps
 description: Helps troubleshoot date and time issues in Power Apps model-driven apps.
 author: tahoon
-ms.date: 10/17/2023
+ms.date: 10/19/2023
 ms.author: tahoon
 search.audienceType: 
   - maker
@@ -27,7 +27,7 @@ Model-driven apps are web apps. They get data from the Dataverse cloud service (
 
 If the date and time value stored on the server is unexpected, it will likely appear incorrectly in all apps regardless of user or system time zone. Therefore, verifying the server value is an important first step.
 
-### Check the configuration of the date and time column
+#### Check the configuration of the date and time column
 
 Dataverse supports different time zone adjustment behaviors for [date and time columns](/power-apps/maker/data-platform/behavior-format-date-time-field#date-and-time-column-behavior-and-format) (fields). Before troubleshooting, it's important to [understand how different parts of the system process date and time values](/power-apps/maker/data-platform/behavior-format-date-time-field).
 
@@ -36,7 +36,7 @@ Dataverse supports different time zone adjustment behaviors for [date and time c
 - Whether it accounts for a user's time zone
 - Whether it displays the time part of the value
 
-### Check if the correct value is stored on the server
+#### Check if the correct value is stored on the server
 
 Date and time values are always stored as UTC on the server. You can view the raw value on the server with a [Web API query](/power-apps/developer/data-platform/webapi/query-data-web-api).
 
@@ -82,7 +82,7 @@ Let's say a user in the time zone UTC-8 views this column in a model-driven app.
 
 If the value shown in the app isn't adjusted correctly, it's likely a client issue. If the server value is incorrect to begin with, it's likely a server issue.
 
-### Check the formatted value from the server
+#### Check the formatted value from the server
 
 Time zone and daylight saving adjustments can be done on the server or in the app. If the same column shows a different value in different parts of the app, it's likely that some parts of the app are using the formatted value from the server, while others are making the adjustments in the app.
 
@@ -112,7 +112,7 @@ The response will include the value adjusted by the server. In this example, the
 
 If this formatted value is incorrect, it's a server issue. If it's correct, then it's a client issue.
 
-### Investigate unexpected server values
+#### Investigate unexpected server values
 
 Possible reasons for unexpected server values are:
 
@@ -123,11 +123,11 @@ Possible reasons for unexpected server values are:
 
 [Customizations](isolate-model-app-issues.md#remove-customizations) can lead to unexpected behavior. The following methods can help rule out problems caused by customizations.
 
-### Disable custom scripts
+#### Disable custom scripts
 
 Custom scripts frequently cause issues. Try [disabling them temporarily](isolate-model-app-issues.md#client-scripts).
 
-### Create a new date and time column
+#### Create a new date and time column
 
 Creating a new date and time column is the easiest way to find out if the issue is caused by configuration errors or customizations like business rules. Ideally, use a different table and app.
 
@@ -135,7 +135,7 @@ If the new column works as expected, it's likely a customization issue. Compare 
 
 If the new column has the same problem, it might be a product issue. You can [create a vanilla repro model-driven app](vanilla-model-driven-app-repro.md) and report it through a [support request](/power-platform/admin/get-help-support).
 
-### Try a different time zone
+## Try a different time zone
 
 To find out if time zone and daylight saving adjustments are causing unexpected values, try changing the user's time zone.
 
@@ -150,15 +150,17 @@ Useful combinations to try:
 - Use UTC time zone.
 - Use a time zone with the same offset, but doesn't observe daylight savings.
 
-## Make it easy to investigate
+> [!TIP]
+> The following methods provide more details to make it easier to investigate date and time issues.
+>
+> [Change the "Date Only" format to "Date and Time"](#change-the-date-only-format-to-date-and-time)
+> [Don't use 2-digit years](#dont-use-2-digit-years)
 
-Date and time issues can be more easily investigated with more details.
-
-### Change the "Date Only" format to "Date and Time"
+## Change the "Date Only" format to "Date and Time"
 
 If a date-only value is off by a day, it's helpful to show the time part to see if time zone adjustments could be the cause. You can temporarily [change the column format](/power-apps/maker/data-platform/create-edit-fields) in the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) or solution explorer.
 
-### Don't use 2-digit years
+## Don't use 2-digit years
 
 The 2-digit year is ambiguous. For example, 40 might mean 1940, 2040, or 2140. How the system interprets 2-digit years can and will likely change over time.
 
@@ -166,6 +168,6 @@ It's also difficult to investigate when the complete date and time values aren't
 
 If you can't switch to 4-digit years permanently, try it temporarily to help troubleshoot.
 
-### See also
+## See also
 
 [Behavior and format of the Date and Time column](/power-apps/maker/data-platform/behavior-format-date-time-field)
