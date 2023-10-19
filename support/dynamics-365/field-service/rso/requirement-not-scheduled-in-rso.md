@@ -4,7 +4,7 @@ description: Provides a resolution to solve the issues with unscheduled requirem
 ms.author: feiqiu
 author: feifeiqiu
 ms.reviewer: mhart
-ms.date: 10/13/2023
+ms.date: 10/19/2023
 ---
 # Requirements not scheduled in Resource Scheduling Optimization
 

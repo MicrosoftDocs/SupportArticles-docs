@@ -4,7 +4,7 @@ description: Provides a resolution to identify and delete related records to res
 author: jshotts
 ms.author: jasonshotts
 ms.reviewer: mhart
-ms.date: 10/16/2023
+ms.date: 10/19/2023
 ---
 # Can't delete record because of a restrict-delete relationships
 

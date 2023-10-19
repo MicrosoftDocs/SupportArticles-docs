@@ -4,7 +4,7 @@ description: Find out how to get your Time Series Insights instance changed for 
 ms.author: vhorvath
 author: vhorvathms
 ms.reviewer: mhart
-ms.date: 10/16/2023
+ms.date: 10/19/2023
 ---
 # Can't change Time Series Insights instance
 

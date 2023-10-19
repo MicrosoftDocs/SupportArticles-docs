@@ -4,7 +4,7 @@ description: Resolves errors with privileges in the Resource Scheduling Optimiza
 ms.author: feiqiu
 author: feifeiqiu
 ms.reviewer: mhart
-ms.date: 10/13/2023
+ms.date: 10/19/2023
 ---
 # "User lacks privileges" error occurs in Resource Scheduling Optimization
 

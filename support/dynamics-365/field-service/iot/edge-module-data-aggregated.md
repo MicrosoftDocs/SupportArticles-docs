@@ -4,7 +4,7 @@ description: Finds out why charts show aggregated telemetry data for IoT Edge mo
 ms.author: vhorvath
 author: vhorvathms
 ms.reviewer: mhart
-ms.date: 10/13/2023
+ms.date: 10/19/2023
 ---
 # IoT Edge module data is aggregated in charts in Dynamics 365 Field Service
 

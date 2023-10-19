@@ -4,7 +4,7 @@ description: Resolves the issues with read-only forms in Dynamics 365 Field Serv
 author: jshotts
 ms.author: jasonshotts
 ms.reviewer: mhart
-ms.date: 10/16/2023
+ms.date: 10/19/2023
 ---
 # Forms show an error about being read-only in Dynamics 365 Field Service
 

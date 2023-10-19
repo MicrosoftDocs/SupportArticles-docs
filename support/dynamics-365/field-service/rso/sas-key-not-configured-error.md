@@ -4,7 +4,7 @@ description: Resolves an issue with misconfigured Azure resources in the Resourc
 ms.author: feiqiu
 author: feifeiqiu
 ms.reviewer: mhart
-ms.date: 10/13/2023
+ms.date: 10/19/2023
 ---
 # "SAS Key hasn't been configured" error in Resource Scheduling Optimization
 

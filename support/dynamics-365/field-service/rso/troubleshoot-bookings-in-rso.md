@@ -4,7 +4,7 @@ description: Resolves issues with bookings in the Resource Scheduling Optimizati
 ms.author: feiqiu
 author: feifeiqiu
 ms.reviewer: mhart
-ms.date: 10/13/2023
+ms.date: 10/19/2023
 ---
 # Troubleshoot issues with bookings in Resource Scheduling Optimization
 

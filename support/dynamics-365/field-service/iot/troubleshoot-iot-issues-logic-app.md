@@ -4,7 +4,7 @@ description: Provides a resolution to solve issues with IoT capabilities in Dyna
 ms.author: vhorvath
 author: vhorvathms
 ms.reviewer: mhart
-ms.date: 10/13/2023
+ms.date: 10/19/2023
 ---
 # Troubleshoot issues with IoT capabilities in Dynamics 365 Field Service
 

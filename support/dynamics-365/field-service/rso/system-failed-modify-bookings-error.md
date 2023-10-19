@@ -4,7 +4,7 @@ description: Resolves issues with optimization requests in the Resource Scheduli
 ms.author: feiqiu
 author: feifeiqiu
 ms.reviewer: mhart
-ms.date: 10/13/2023
+ms.date: 10/19/2023
 ---
 # An optimization request fails to modify some bookings
 

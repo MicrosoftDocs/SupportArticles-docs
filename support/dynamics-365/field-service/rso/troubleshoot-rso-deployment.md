@@ -4,7 +4,7 @@ description: Resolves issues with deployments of the Resource Scheduling Optimiz
 ms.author: feiqiu
 author: feifeiqiu
 ms.reviewer: mhart
-ms.date: 10/13/2023
+ms.date: 10/19/2023
 ---
 # Troubleshoot issues with Resource Scheduling Optimization add-in deployments
 
