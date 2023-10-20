@@ -59,7 +59,7 @@ To end the task for your browser, follow these steps:
 2. Click the **Details** tab, and then do one of the following:  
      - If you're using Internet Explorer, find **iexplore.exe** in the list, right-click it, and then click **End task**.
 
-       **Note** Make sure that you end the Iexplore.exe task. Do not end the Explore.exe task.    
+       **Note** Make sure that you end the Iexplore.exe task. Don't end the Explore.exe task.    
      - If you're using Mozilla Firefox, find and right-click **firefox.exe** in the list, and then click **End task**.    
      - If you're using Apple Safari, find and right-click **safari.exe** in the list, and then click **End task**.    
      - If you're using Google Chrome, find and right-click **chrome.exe** in the list, and then click **End task**.    
@@ -84,14 +84,14 @@ Clear cookies from the web browser, and then try signing out again. The steps fo
 
 The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
 
-Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft does not guarantee the accuracy of this third-party contact information.     
+Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft doesn't guarantee the accuracy of this third-party contact information.     
 
 ## More information
 
 This behavior is by design. Microsoft Entra ID-based services (including Microsoft 365, Azure, and Intune) use cookies to remember who you are and to automatically sign you in. 
 
-The sign-out process for services forces the session cookies to expire. These session cookies are used to maintain your sign-in state when you use these services. However, because the web browser is still running and may not be updated to handle cookies correctly, you may have a cookie that is not updated to expire and finish the sign-out process. By default, these cookies are valid for eight hours or are set to expire when you close all web browsers.
+The sign-out process for services forces the session cookies to expire. These session cookies are used to maintain your sign-in state when you use these services. However, because the web browser is still running and may not be updated to handle cookies correctly, you may have a cookie that isn't updated to expire and finish the sign-out process. By default, these cookies are valid for eight hours or are set to expire when you close all web browsers.
 
-To prevent session cookies from inadvertently being re-used, it is recomended to close all browsers after signing out of any Microsoft 365 web application.
+To prevent session cookies from inadvertently being re-used, it's recommended to close all browsers after signing out of any Microsoft 365 web application.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Microsoft Entra Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.
