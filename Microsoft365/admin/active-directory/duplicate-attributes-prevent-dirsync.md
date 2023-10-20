@@ -74,7 +74,7 @@ If you create objects that have duplicate alias values in the cloud for Microsof
 
 ## Solution
 
-To resolve this issue, determine duplicate values and values that conflict with other AD DS objects. To do this, use one of the following methods.
+To resolve this issue, determine duplicate values and values that conflict with other AD DS objects. To do so, use one of the following methods.
 
 <a name='method-1-use-the-idfix-microsoft-azure-active-directory-synchronization-tool-error-remediation-tool'></a>
 
@@ -88,7 +88,7 @@ Use the IdFix Microsoft Entra Synchronization Tool Error Remediation Tool to ide
 
 ### Method 2: Map an existing on-premises user to a Microsoft Entra user
 
-To do this, see the following Microsoft Knowledge Base article:
+To do so, see the following Microsoft Knowledge Base article:
 
 [2641663](https://support.microsoft.com/help/2641663) How to use SMTP matching to match on-premises user accounts to Microsoft 365 user accounts for directory synchronization
 
@@ -98,7 +98,7 @@ To do this, see the following Microsoft Knowledge Base article:
 
 To determine attribute conflicts that are caused by user objects that were created by using Microsoft 365 management tools (and that weren't created in Microsoft Entra ID through directory synchronization), follow these steps:
  
-1. Determine the unique attributes of the on-premises AD DS user account. To do this, on a computer that has Windows Support Tools installed, follow these steps:  
+1. Determine the unique attributes of the on-premises AD DS user account. To do so, on a computer that has Windows Support Tools installed, follow these steps:  
    1. Click **Start**, click **Run**, type ldp.exe, and then click **OK**. 
    2. Click **Connection**, click **Connect**, type the computer name of an AD DS domain controller, and then click **OK**.
    3. Click **Connection**, click **Bind**, and then click **OK**.
@@ -117,7 +117,7 @@ To determine attribute conflicts that are caused by user objects that were creat
       > [!NOTE]
       > Ldp.exe is included in Windows Server 2008 and in the Windows Server 2003 Support Tools. The Windows Server 2003 Support Tools are included in the Windows Server 2003 installation media. Or, to obtain the tool, go to the following Microsoft website: [Windows Server 2003 Service Pack 2 32-bit Support Tools](https://go.microsoft.com/fwlink/?linkid=100114)
 
-2. Connect to Microsoft 365 by using the Azure Active Directory module for Windows PowerShell. To do this, follow these steps:  
+2. Connect to Microsoft 365 by using the Azure Active Directory module for Windows PowerShell. To do so, follow these steps:  
    1. Click **Start**, click **All Programs**, click **Microsoft Entra ID**, and then click **Azure Active Directory module for Windows PowerShell**.
    2. Type the following commands in the order in which they're presented, and press Enter after each command:
 
