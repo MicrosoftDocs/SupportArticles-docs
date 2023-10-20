@@ -1,6 +1,6 @@
 ---
 title: Certificate-based authentication for iOS fails to prompt for user certificates
-description: Fixes an issue that federated users on iOS devices cannot use Certificate-Based Authentication (CBA) to authenticate.
+description: Fixes an issue that federated users on iOS devices can't use Certificate-Based Authentication (CBA) to authenticate.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -11,16 +11,16 @@ ms.custom: CSSTroubleshoot
 search.appverid: 
   - MET150
 appliesto: 
-  - Azure Active Directory
+  - Microsoft Entra ID
   - Microsoft 365
-ms.date: 03/31/2022
+ms.date: 10/20/2023
 ---
 
 # Certificate-based authentication for iOS fails to prompt for user certificates
 
 ## Symptoms
 
-Federated users on Apple iOS devices that have valid user certificates discover that they can't perform Certificate-Based Authentication (CBA) against Microsoft Entra ID. However, federated users on Android and Windows devices can successfully authenticate by using CBA. The same iOS users encounter no issues when they authenticate by using their user name and password.
+Federated users on Apple iOS devices that have valid user certificates discover that they can't perform Certificate-Based Authentication (CBA) against Microsoft Entra ID. However, federated users on Android and Windows devices can successfully authenticate by using CBA. The same iOS users encounter no issues when they authenticate by using their username and password.
 
 Here's the typical experience for iOS users who can't authenticate when they sign in to ADAL-enabled Office applications on iOS:
 
@@ -28,36 +28,35 @@ Here's the typical experience for iOS users who can't authenticate when they sig
 2. The ADAL Sign-in page appears, on which the user enters their federated email address and then clicks Next.   
 3. The ADAL Sign-in process hangs at a blank page until it times out and returns a "There is a problem with your account. Try again later" error. This page includes the option to tap OK.   
 4. If the user taps OK, they sit at the same blank Sign-in page with the option at the top to tap Back.   
-5. Tapping Backreturns the user to the ADAL Sign-in page, where the process starts all over: the user is prompted to enter their federated email address and then click Next.   
+5. Tapping Back returns the user to the ADAL Sign-in page, where the process starts all over: the user is prompted to enter their federated email address and then click Next.   
 6. Tapping OK returns to a blank Sign-in screen, where the user can enter their UserPrincipalName and repeat the process.
 
-To eliminate Office applications as a factor, we recommend that federated users in an iOS environment test certificate-based authentication in the Safari browser by following the steps in "More Information" section. The typical experience for iOS users who cannot authenticate against [https://portal.office.com](https://portal.office.com/) from a Safari browser goes as follows:
+To eliminate Office applications as a factor, we recommend that federated users in an iOS environment test certificate-based authentication in the Safari browser by following the steps in the "More Information" section. The typical experience for iOS users who can't authenticate against [https://portal.office.com](https://portal.office.com/) from a Safari browser goes as follows:
 
-1. The user is not prompted as expected to approve the use of their user certificate after they click the Sign-in using an X.509 certificate link.    
-2. The federated user either sits at an unresponsive STS sign-in page or advances to the default STS sign-in page, where they are prompted as follows: 
+1. The user isn't prompted as expected to approve the use of their user certificate after they click the Sign-in using an X.509 certificate link.    
+2. The federated user either sits at an unresponsive STS sign-in page or advances to the default STS sign-in page, where they're prompted as follows: 
 
     Select a certificate that you want to use for authentication. If you cancel the operation, please close your browser and try again.
 
-    **Note** If other authentication methods are enabled in AD FS, the user will also see a link stating "Sign-in with other options." If they click this, they return to the STS sign-in page. 
+    **Note** If other authentication methods are enabled in AD FS, the users also see a link stating "Sign-in with other options." If they click this link, they return to the STS sign-in page. 
  
 3. Both experiences fail with the following error:
 
     Safari could not open the page because the server stopped responding.   
 
-
 ##  Cause
 
-The certificate chain is incomplete because the issuing subordinate CA certificate is not retrieved by the device as expected when the MDM policy pushes just the Root certificate to the Apple device along with the SCEP profile.
+The certificate chain is incomplete because the issuing subordinate CA certificate isn't retrieved by the device as expected when the MDM policy pushes just the Root certificate to the Apple device along with the SCEP profile.
 
-The iOS device does not correctly acquire the Issuing CA's *.crt file, even though the AIA path on the user certificate has a valid URL that points to the Issuing subordinate CA's *.crt file.
+The iOS device doesn't correctly acquire the Issuing CA's *.crt file, even though the AIA path on the user certificate has a valid URL that points to the Issuing subordinate CA's *.crt file.
 
 ##  Resolution
 
-If the customer is using Intune to manage the device, advise them create a new configuration policy for an iOS Trusted Root Certificate that points to the Intermediate Certificate Authorities' *.CER file. Then, advise them to open the company portal on the device and refresh the policy. The connection should now succeed.
+If the customer is using Intune to manage the device, advise them to create a new configuration policy for an iOS Trusted Root Certificate that points to the Intermediate Certificate Authorities' *.CER file. Then, advise them to open the company portal on the device and refresh the policy. The connection should now succeed.
 
 ##  More Information
 
-If you take an "Apple Configurator 2" trace from an OS X client that's connected to the iPad by using the lightning cable, the trace log resembles the following:
+If you take an "Apple Configurator 2" trace from an OS X client that's connected to the iPad by using the lightning cable, the trace log resembles the following example:
 
 ```adoc
 } 
