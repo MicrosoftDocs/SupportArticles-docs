@@ -46,4 +46,4 @@ For more information about Windows Server Essentials and Small Business Server, 
 
 [Windows Server Essentials and Small Business Server](https://techcommunity.microsoft.com/t5/Windows-Server-Essentials-and/bg-p/SBS/2014/01/01/how-to-create-a-service-integration-add-in-for-windows-server-essentials-experience)
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Microsoft Entra Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.

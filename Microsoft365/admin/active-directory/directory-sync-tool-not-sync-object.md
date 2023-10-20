@@ -37,18 +37,18 @@ Description: This version of the Microsoft Online Services Directory Sync tool i
 
 ## Cause
 
-This issue occurs if you're using a deprecated version of the Microsoft Online Services Directory Synchronization tool. We no longer accept connections to Azure Active Directory (Azure AD) if you're using a deprecated version of the Microsoft Online Services Directory Synchronization tool.
+This issue occurs if you're using a deprecated version of the Microsoft Online Services Directory Synchronization tool. We no longer accept connections to Microsoft Entra ID if you're using a deprecated version of the Microsoft Online Services Directory Synchronization tool.
 
 ## Solution
 
-Upgrade to Azure AD Connect. This tool must be installed on a 64-bit version of Windows Server. For more information about how to upgrade from DirSync, see [Azure AD Connect: Upgrade from DirSync](/azure/active-directory/hybrid/how-to-dirsync-upgrade-get-started).
+Upgrade to Microsoft Entra Connect. This tool must be installed on a 64-bit version of Windows Server. For more information about how to upgrade from DirSync, see [Microsoft Entra Connect: Upgrade from DirSync](/azure/active-directory/hybrid/how-to-dirsync-upgrade-get-started).
 
 ## More information
 
-For more information about hybrid identity with Azure Active Directory, see [Prepare for directory synchronization](/azure/active-directory/hybrid/whatis-hybrid-identity).
+For more information about hybrid identity with Microsoft Entra ID, see [Prepare for directory synchronization](/azure/active-directory/hybrid/whatis-hybrid-identity).
 
-For more information about the system and software requirements for Azure AD Connect, see [Prerequisites for Azure AD Connect](/azure/active-directory/hybrid/how-to-connect-install-prerequisites).
+For more information about the system and software requirements for Microsoft Entra Connect, see [Prerequisites for Microsoft Entra Connect](/azure/active-directory/hybrid/how-to-connect-install-prerequisites).
 
-For more information about the attributes that are synchronized by Azure AD Connect, see [Azure AD Connect sync: Attributes synchronized to Azure Active Directory](/azure/active-directory/hybrid/reference-connect-sync-attributes-synchronized).
+For more information about the attributes that are synchronized by Microsoft Entra Connect, see [Microsoft Entra Connect Sync: Attributes synchronized to Microsoft Entra ID](/azure/active-directory/hybrid/reference-connect-sync-attributes-synchronized).
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/), or [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread).
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/), or [Microsoft Entra Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread).

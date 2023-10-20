@@ -1,6 +1,6 @@
 ---
 title: Microsoft 365 email address contains underscore character
-description: Describes an issue in which after you run the Azure Active Directory Connect Tool  to synchronize your on-premises Active Directory environment to Azure Active Directory, an email address unexpectedly contains an underscore character _.
+description: Describes an issue in which after you run the Microsoft Entra Connect Tool  to synchronize your on-premises Active Directory environment to Microsoft Entra ID, an email address unexpectedly contains an underscore character _.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
@@ -21,7 +21,7 @@ ms.date: 03/31/2022
 
 ## Symptoms
 
-After the Microsoft Azure Active Directory Connect Tool runs to sync your on-premises Active Directory environment to Azure Active Directory, a user's Microsoft 365 email address unexpectedly contains an underscore (_) character. 
+After the Microsoft Entra Connect Tool runs to sync your on-premises Active Directory environment to Microsoft Entra ID, a user's Microsoft 365 email address unexpectedly contains an underscore (_) character. 
 
 ## Cause
 

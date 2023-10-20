@@ -32,16 +32,16 @@ A user account that was accidentally deleted from Microsoft 365, Microsoft Azure
 
 #### Before you start  
 
-When users are deleted from Azure Active Directory (Azure AD), they are moved to a "deleted" state and no longer appear in the user list. However, they are not completely removed, and they can be recovered within 30 days. 
+When users are deleted from Microsoft Entra ID, they are moved to a "deleted" state and no longer appear in the user list. However, they are not completely removed, and they can be recovered within 30 days. 
 
-Use Microsoft 365 and the Azure Active Directory Module for PowerShell as follows to determine whether a user is eligible to be recovered from "deleted" status:
+Use Microsoft 365 and the Azure Active Directory module for PowerShell as follows to determine whether a user is eligible to be recovered from "deleted" status:
 
 1. In the **Microsoft 365** portal, look up user accounts that were deleted through the portal. To do this, follow these steps:
    1. Sign in to the Microsoft 365 portal ([https://portal.office.com](https://portal.office.com/)) by using administrative credentials.
    1. Select **Users**, and then select **Deleted Users**.
    1. Locate the user that you want to recover.
-1. In the Azure Active Directory Module for Windows PowerShell, follow these steps:
-   1. Select **Start** > **All Programs** > **Windows Azure Active Directory** > **Windows Azure Active Directory Module for Windows PowerShell**.
+1. In the Azure Active Directory module for Windows PowerShell, follow these steps:
+   1. Select **Start** > **All Programs** > **Windows Azure Active Directory** > **Windows Azure Active Directory module for Windows PowerShell**.
    1. Type the following commands in the order in which they are presented, and press Enter after each command:
       - `$cred = get-credential`
 
@@ -50,12 +50,12 @@ Use Microsoft 365 and the Azure Active Directory Module for PowerShell as follow
       - `Connect-MSOLService -credential:$cred`
       - `Get-MsolUser -ReturnDeletedUsers`
 
-### Resolution 1: Recover manually deleted accounts by using Microsoft 365 portal or the Azure Active Directory Module  
+### Resolution 1: Recover manually deleted accounts by using Microsoft 365 portal or the Azure Active Directory module  
 
 To recover a user account that was deleted manually, use one of the following methods:
 
 - Use the Microsoft 365 portal to recover the user account. For more information about how to do this, [Restore a user](/microsoft-365/admin/add-users/restore-user).
-- Use the Azure Active Directory Module for Windows PowerShell to recover the user account. To do this, type the following command, and then press Enter:
+- Use the Azure Active Directory module for Windows PowerShell to recover the user account. To do this, type the following command, and then press Enter:
 
     `Restore-MsolUser -ObjectId <Guid> -AutoReconcileProxyConflicts -NewUserPrincipalName <string>`
 
@@ -73,7 +73,7 @@ To recover a user account that was deleted manually, use one of the following me
 
 To recover deleted user accounts, make sure that directory synchronization filtering (scoping) is set in such a way that the scope includes the objects that you want to recover.
 
-For more information, see [Azure AD Connect sync: Configure filtering](/azure/active-directory/hybrid/how-to-connect-sync-configure-filtering).
+For more information, see [Microsoft Entra Connect Sync: Configure filtering](/azure/active-directory/hybrid/how-to-connect-sync-configure-filtering).
 
 ### Resolution 3: Recover accounts deleted because the on-premises user object was deleted from the on-premises Active Directory schema
 
@@ -207,4 +207,4 @@ The Microsoft 365 portal shows the equivalent error messages in the form of the 
 
 To restore users who are in this state, complete the information that is requested in the form.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](/answers/products/?WT.mc_id=msdnredirect-web-msdn) website.
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Microsoft Entra Forums](/answers/products/?WT.mc_id=msdnredirect-web-msdn) website.

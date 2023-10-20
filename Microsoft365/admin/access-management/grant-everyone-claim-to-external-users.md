@@ -32,11 +32,11 @@ Administrators can change the default behavior to enable external users to see c
 
 In on-premises Active Directory domains, the **Everyone** special group represents all identities in the Active Directory domain. It includes the domain's guest account, which is disabled by default. By default, the **Everyone** group includes all user accounts that are added by delegated administrators to the domain.
  
-Before this change, Microsoft 365 shared the behavior of on-premises Active Directory domains: Every user in a tenant's Azure Active Directory (Azure AD) was effectively considered a member of the **Everyone** group after you added an **Everyone** claim to the user's security context. This included external users. This claim enables a user to access any content that is shared with the **Everyone** group.
+Before this change, Microsoft 365 shared the behavior of on-premises Active Directory domains: Every user in a tenant's Microsoft Entra ID was effectively considered a member of the **Everyone** group after you added an **Everyone** claim to the user's security context. This included external users. This claim enables a user to access any content that is shared with the **Everyone** group.
  
-Similarly, the **All Authenticated Users** and **All Forms Users** claims were added automatically to each user's security context. This included external users who have accounts in the tenant's Azure AD. These claims enable users to access any content that is shared with the **All Authenticated Users** or **All Forms Users** groups.
+Similarly, the **All Authenticated Users** and **All Forms Users** claims were added automatically to each user's security context. This included external users who have accounts in the tenant's Microsoft Entra ID. These claims enable users to access any content that is shared with the **All Authenticated Users** or **All Forms Users** groups.
  
-Microsoft 365 enables users to share and collaborate seamlessly with users inside and outside their organizations. When a user in your organization adds an external user to a Microsoft 365 group or shares content with an external user and requires authentication ("sign-in") for access, an account is automatically created in Azure AD to represent the external guest user. It isn't necessary for a delegated administrator to create the account for the external user.
+Microsoft 365 enables users to share and collaborate seamlessly with users inside and outside their organizations. When a user in your organization adds an external user to a Microsoft 365 group or shares content with an external user and requires authentication ("sign-in") for access, an account is automatically created in Microsoft Entra ID to represent the external guest user. It isn't necessary for a delegated administrator to create the account for the external user.
  
 ### Updates to the default access for external users
 
@@ -53,11 +53,13 @@ Use the following guidelines to grant access to external users for the selected 
 |**Everyone**|Configure your tenant to grant the **Everyone** claim to external users by running the **Set-SPOTenant -ShowEveryoneClaim $true** Windows PowerShell cmdlet.|External users who are granted the **Everyone** claim  have access to content that is shared to the **Everyone** group.|
 |**All Authenticated Users** and **All Forms Users**|Configure your tenant to grant the **All Authenticated Users** and **All Forms Users** claims to external users by running the **Set-SPOTenant -ShowAllUsersClaim $true** Windows PowerShell cmdlet|External users who are granted the **All Authenticated Users** and **All Forms Users** claims have access to content that is shared to the **All Authenticated Users** and **All Forms Users** groups.|
 
-### Use Azure AD groups and dynamic membership instead of default claims
+<a name='use-azure-ad-groups-and-dynamic-membership-instead-of-default-claims'></a>
 
-Although we continue to support sharing with the **Everyone**, **Everyone Except External Users**, **All Authenticated Users**, and **All Forms Users** groups, we encourage you to implement role-based access management by using customer-defined groups in Azure AD. This includes Microsoft 365 groups.
+### Use Microsoft Entra groups and dynamic membership instead of default claims
+
+Although we continue to support sharing with the **Everyone**, **Everyone Except External Users**, **All Authenticated Users**, and **All Forms Users** groups, we encourage you to implement role-based access management by using customer-defined groups in Microsoft Entra ID. This includes Microsoft 365 groups.
  
-Microsoft 365 groups define the membership and access to content across Microsoft 365 services and experiences. Many Microsoft 365 services already support Azure AD dynamic groups, and these services are defined as a set of rules that are based on Azure AD properties and business logic.
+Microsoft 365 groups define the membership and access to content across Microsoft 365 services and experiences. Many Microsoft 365 services already support Microsoft Entra dynamic groups, and these services are defined as a set of rules that are based on Microsoft Entra properties and business logic.
  
 Dynamic groups are the best way to make sure that the appropriate users have access to the correct content. Dynamic groups let you define a group one time by using a definition that is based on rules. By having this ability, you don't have to add or remove members as your organization changes. 
 
