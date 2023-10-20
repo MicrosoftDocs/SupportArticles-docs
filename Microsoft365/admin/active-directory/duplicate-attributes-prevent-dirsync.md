@@ -15,7 +15,7 @@ ms.author: luche
 appliesto: 
   - Azure Active Directory
   - Microsoft 365
-ms.date: 03/31/2022
+ms.date: 10/20/2023
 ---
 
 # Duplicate or invalid attributes prevent directory synchronization in Microsoft 365
@@ -64,13 +64,13 @@ Error Detail: Unable to update this object because the following attributes asso
 
 ## Cause
 
-This issue may occur if user objects in the on-premises Active Directory Domain Services (AD DS) schema have duplicate or invalid alias values, and if these user objects are not synced from the AD DS schema to Microsoft 365 correctly during directory synchronization.
+This issue may occur if user objects in the on-premises Active Directory Domain Services (AD DS) schema have duplicate or invalid alias values, and if these user objects aren't synced from the AD DS schema to Microsoft 365 correctly during directory synchronization.
 
 All alias values in Microsoft 365 must be unique for a given organization. Even if you have multiple unique suffixes after the at sign (@) in the Simple Mail Transfer Protocol (SMTP) address, all alias values must be unique.
 
-In an on-premises environment, you can have alias values that are the same as long as they are unique based on the suffixes after the at sign (@) in the SMTP address.
+In an on-premises environment, you can have alias values that are the same as long as they're unique based on the suffixes after the at sign (@) in the SMTP address.
 
-If you create objects that have duplicate alias values in the cloud for Microsoft 365, to make the aliases unique, one alias has a unique number appended to it. (For example, if the duplicate alias values are "Albert," one of them becomes "Albert2" automatically. If "Albert2" is already being used, the alias becomes "Albert3," and so on.) However, if objects that have duplicate alias values are created in your on-premises AD DS, an object collision occurs when directory synchronization runs, and object synchronization fails.
+If you create objects that have duplicate alias values in the cloud for Microsoft 365, to make the aliases unique, one alias has a unique number appended to it. (For example, if the duplicate alias values are "Albert", one of them becomes "Albert2" automatically. If "Albert2" is already being used, the alias becomes "Albert3", and so on.) However, if objects that have duplicate alias values are created in your on-premises AD DS, an object collision occurs when directory synchronization runs, and object synchronization fails.
 
 ## Solution
 
@@ -107,7 +107,7 @@ To determine attribute conflicts that are caused by user objects that were creat
 
       :::image type="content" source="./media/duplicate-attributes-prevent-dirsync/object-attributes.png" alt-text="Screenshot shows an example of object attributes." border="false":::
 
-   6. Record the values of the userPrincipalName attribute and each SMTP address in the multivalue proxyAddresses attribute. You will need these values later.  
+   6. Record the values of the userPrincipalName attribute and each SMTP address in the multivalue proxyAddresses attribute. You'll need these values later.  
 
       |Attribute name|Example|Notes|
       |----------|----------|----------|
@@ -119,7 +119,7 @@ To determine attribute conflicts that are caused by user objects that were creat
 
 2. Connect to Microsoft 365 by using the Azure Active Directory module for Windows PowerShell. To do this, follow these steps:  
    1. Click **Start**, click **All Programs**, click **Microsoft Entra ID**, and then click **Azure Active Directory module for Windows PowerShell**.
-   2. Type the following commands in the order in which they are presented, and press Enter after each command:
+   2. Type the following commands in the order in which they're presented, and press Enter after each command:
 
       ```powershell
       $cred = get-credential
@@ -132,11 +132,11 @@ To determine attribute conflicts that are caused by user objects that were creat
       Connect-MSOLService –credential $cred
       ```
 
-      Leave the console window open. You will have to use it in the next step.
+      Leave the console window open. You'll have to use it in the next step.
 
 3. Check for the duplicate userPrincipalName attributes in Microsoft 365.
 
-   In the console connection that you opened in step 2, type the following commands in the order in which they are presented, and press Enter after each command:
+   In the console connection that you opened in step 2, type the following commands in the order in which they're presented, and press Enter after each command:
 
    ```powershell
    $userUPN = "<search UPN>"
@@ -149,16 +149,16 @@ To determine attribute conflicts that are caused by user objects that were creat
    get-msoluser –UserPrincipalName $userUPN | where {$_.LastDirSyncTime -eq $null}
    ```
 
-   Leave the console window open. You will use it again in the next step.
+   Leave the console window open. You'll use it again in the next step.
 
-4. Check for duplicate proxyAddressesattributes. In the console connection that you opened in step 2, type the following commands in the order in which they are presented, and press Enter after each command:
+4. Check for duplicate proxyAddressesattributes. In the console connection that you opened in step 2, type the following commands in the order in which they're presented, and press Enter after each command:
 
    ```powershell
    $UserCredential = Get-Credential
    Connect-ExchangeOnline -Credential $UserCredential
    ```
 
-5. For each proxy address entry that you recorded in step 1f, type the following commands in the order in which they are presented, and press Enter after each command:
+5. For each proxy address entry that you recorded in step 1f, type the following commands in the order in which they're presented, and press Enter after each command:
 
    ```powershell
    $proxyAddress = "<search proxyAddress>"
@@ -171,7 +171,7 @@ To determine attribute conflicts that are caused by user objects that were creat
    Get-EXOMailbox | Where {[string] $str = ($_.EmailAddresses); $str.tolower().Contains($proxyAddress.tolower()) -eq $true} | foreach {get-MsolUser -ObjectID $_.ExternalDirectoryObjectId | Where {($_.LastDirSyncTime -eq $null)}}
    ```
 
-Items that are returned after you run the commands in step 3 and 4 represent user objects that weren't created through directory synchronization and that have attributes that conflict with the object that is not syncing correctly.
+Items that are returned after you run the commands in step 3 and 4 represent user objects that weren't created through directory synchronization and that have attributes that conflict with the object that isn't syncing correctly.
 
 After you determine conflicting or invalid attribute values, troubleshoot the issue by following the steps in the following Microsoft Knowledge Base article:
 
