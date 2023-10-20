@@ -188,7 +188,7 @@ Assume that *contoso.com* is your primary email domain and contoso.onmicrosoft.c
 Set-UnifiedGroup Marketing -PrimarySmtpAddress marketing@contoso.com
 ```
 
-To learn more about MOERA addresses, see [How the proxyAddresses attribute is populated in Azure AD](https://support.microsoft.com/help/3190357/how-the-proxyaddresses-attribute-is-populated-in-azure-ad).
+To learn more about MOERA addresses, see [How the proxyAddresses attribute is populated in Microsoft Entra ID](https://support.microsoft.com/help/3190357/how-the-proxyaddresses-attribute-is-populated-in-azure-ad).
 
 [Back to top](#summary)
 

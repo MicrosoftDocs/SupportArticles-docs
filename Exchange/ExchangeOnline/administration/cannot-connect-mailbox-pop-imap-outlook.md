@@ -26,7 +26,7 @@ If you've disabled Basic authentication, and you're trying to configure an Outlo
 
 > _There is no plan for Outlook clients to support OAuth for POP and IMAP, but Outlook can connect use MAPI/HTTP (Windows clients) and EWS (Outlook for Mac)._
 
-If you're using POP/IMAP and SMTP for an Exchange Online account in Outlook, you must enable Basic authentication for these protocols (until it's permanently deprecated in October 1st). To do so, disable [Azure Active Directory security defaults](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults) if they are enabled.
+If you're using POP/IMAP and SMTP for an Exchange Online account in Outlook, you must enable Basic authentication for these protocols (until it's permanently deprecated in October 1st). To do so, disable [Microsoft Entra security defaults](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults) if they are enabled.
 
 ## Enable Basic authentication for POP and IMAP protocols
 

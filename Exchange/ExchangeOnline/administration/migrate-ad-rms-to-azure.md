@@ -122,7 +122,7 @@ Do the following:
 
 1. Configure Azure RMS in read-only mode by setting up an onboarding control policy that excludes all users.
 
-   This step involves creating an empty AAD group, and assigning it to the onboarding control policy by running the following PowerShell script:
+   This step involves creating an empty Microsoft Entra group, and assigning it to the onboarding control policy by running the following PowerShell script:
    ```
    Set-AipServiceOnboardingControlPolicy -UseRmsUserLicense $False -SecurityGroupObjectId "{Group’s GUID}"
    ```

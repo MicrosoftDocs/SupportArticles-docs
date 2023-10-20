@@ -50,7 +50,7 @@ The errors occur if the internal URL that's used by the Hybrid Agent application
 
 ### Cause 1
 
-The same internal URL is used by an existing enterprise on-premises app that uses [Microsoft Azure AD Application Proxy](/azure/active-directory/app-proxy/application-proxy).
+The same internal URL is used by an existing enterprise on-premises app that uses [Microsoft Entra application proxy](/azure/active-directory/app-proxy/application-proxy).
 
 ### Cause 2
 
@@ -109,7 +109,7 @@ Remove the previously installed, orphaned Hybrid Agent application. To do this, 
       ```
 
       When you're prompted for credentials, enter your Microsoft 365 or Office 365 Global Administrator credentials.
-1. Re-run the HCW in classic mode to unregister the Application Proxy service in Azure AD.
+1. Re-run the HCW in classic mode to unregister the Application Proxy service in Microsoft Entra ID.
 1. Go to **Programs and Features** in Control Panel, verify that **Microsoft Hybrid Service** isn't [installed](/exchange/hybrid-deployment/hybrid-agent#additional-information). If it is, re-run step 2 to remove the Hybrid Agent application.
 1. Re-run the HCW in modern mode.
   

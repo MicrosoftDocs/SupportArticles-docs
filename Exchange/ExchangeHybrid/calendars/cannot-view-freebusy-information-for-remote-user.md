@@ -40,7 +40,7 @@ xmlns="`http://schemas.microsoft.com/exchange/services/2006/errors`"> *ServerNam
 xmlns="`http://schemas.microsoft.com/exchange/services/2006/errors`">`https://\<Server>.outlook.com/EWS/Exchange.asmx/WSSecurity`\</ResponseSource>\</MessageXml>\</ResponseMessage>\<FreeBusyView>\<FreeBusyViewType
 xmlns="`http://schemas.microsoft.com/exchange/services/2006/types`">None\</FreeBusyViewType>\</FreeBusyView>\</FreeBusyResponse>
 
-For example, an Microsoft 365 user can't view free/busy information for an on-premises user. However, other users can view free/busy information for that same on-premises user.
+For example, a Microsoft 365 user can't view free/busy information for an on-premises user. However, other users can view free/busy information for that same on-premises user.
 
 ## Cause
 

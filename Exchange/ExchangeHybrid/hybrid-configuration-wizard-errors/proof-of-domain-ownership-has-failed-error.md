@@ -30,7 +30,7 @@ When you run the Hybrid Configuration wizard, you receive a **Proof of domain ow
 
 ## Cause
 
-This problem occurs if proof of ownership for the domain is required. If an existing federation trust isn't present, the Hybrid Configuration wizard creates a federation trust between the on-premises organization and the Microsoft Azure Active Directory (Azure AD) authentication system. When the federation trust is being created, proof of domain ownership is required.
+This problem occurs if proof of ownership for the domain is required. If an existing federation trust isn't present, the Hybrid Configuration wizard creates a federation trust between the on-premises organization and the Microsoft Entra authentication system. When the federation trust is being created, proof of domain ownership is required.
 
 ## Resolution
 

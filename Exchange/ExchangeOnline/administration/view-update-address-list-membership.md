@@ -57,7 +57,7 @@ This article describes how to view and update address list membership for object
     Set-MailUser -SimpleDisplayName
     ```
 
-    **Option 3:** Set any relevant attributes, including custom attributes, on-premises. Then, synchronize the changes to Exchange Online through Azure AD Connect.
+    **Option 3:** Set any relevant attributes, including custom attributes, on-premises. Then, synchronize the changes to Exchange Online through Microsoft Entra Connect.
 
     After you tickle the objects, you should see them by running the command from step 2. You can also verify the objects individually by running the following commands:
 
