@@ -15,7 +15,7 @@ ms.reviewer: kerbo, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 10/20/2023
 ---
 # How Microsoft Entra Connect works in Microsoft 365
 
@@ -33,9 +33,9 @@ It's important to understand the flow of data from on-premises to the cloud in E
 
 1. The data flows from source on-premises AD to a source connector space.
 
-    During this process, new objects and changes to existing objects are evaluated and if any conflicts exist, they are flagged. If the object is new and errors are present, the object will not be provisioned.
+    During this process, new objects and changes to existing objects are evaluated and if any conflicts exist, they're flagged. If the object is new and errors are present, the object isn't provisioned.
 
-    If it's an existing object, the conflicting data may not be passed forward. The object may continue to function. However, the desired change, intended or accidental, will not be made. This triggers a DirSync error that has to be corrected in source AD.  
+    If it's an existing object, the conflicting data may not be passed forward. The object may continue to function. However, the desired change, intended or accidental, isn't made. It triggers a DirSync error that has to be corrected in source AD.  
 
     For more information, see the following articles:
 
@@ -46,9 +46,9 @@ It's important to understand the flow of data from on-premises to the cloud in E
 
 3. If there are no issues, the change is populated into the Target Data Store and Microsoft Entra ID. At this point, you can use the [Get-MSOLUser](/powershell/module/msonline/get-msoluser) command and other Azure commands against the object to view them in Microsoft Entra ID.
 
-    If a problem occurs between the Target Connector Space and Microsoft Entra ID, you may have to remove the object from Microsoft Entra ID by using the [Remove-MsolUser](/powershell/module/msonline/remove-msoluser) cmdlet. You cannot force Microsoft Entra ID to reevaluate the object as you can in MMSSPP.
+    If a problem occurs between the Target Connector Space and Microsoft Entra ID, you may have to remove the object from Microsoft Entra ID by using the [Remove-MsolUser](/powershell/module/msonline/remove-msoluser) cmdlet. You can't force Microsoft Entra ID to reevaluate the object as you can in MMSSPP.
 
-4. Finally, the data synchronizes to Exchange, where the object exists as a Mailbox, MailUser, Resource, and so on. This is known as **Forward Sync**. If there is a problem on an object between Microsoft Entra ID and Exchange Online (represented by validation errors), ask Microsoft to submit the object for a Forward Sync from Microsoft Entra ID to Exchange Online to force this action.
+4. Finally, the data synchronizes to Exchange, where the object exists as a Mailbox, MailUser, Resource, and so on. It's known as **Forward Sync**. If there's a problem on an object between Microsoft Entra ID and Exchange Online (represented by validation errors), ask Microsoft to submit the object for a Forward Sync from Microsoft Entra ID to Exchange Online to force this action.
 
 ## More information
 
@@ -63,7 +63,7 @@ A related topic is Active Directory Federation Services. See the following artic
 
 Here are articles for some common issues:
 
-- [Exchange Online object is not present or updated in Microsoft Entra Connect](https://support.microsoft.com/help/4051392/a-vnext-object-is-not-present-or-updated-in-azure-ad-connect-for)
+- [Exchange Online object isn't present or updated in Microsoft Entra Connect](https://support.microsoft.com/help/4051392/a-vnext-object-is-not-present-or-updated-in-azure-ad-connect-for)
 - [Mailbox not provisioned in Microsoft Entra Connect for Microsoft 365](https://support.microsoft.com/help/4051375/mailbox-is-not-provisioned-in-azure-ad-connect-for-office-365)
 - [A user is missing from a group in Microsoft Entra Connect for Microsoft 365](https://support.microsoft.com/help/4052041/a-user-is-missing-from-a-group-in-azure-ad-connect-for-office-365)
 - [Mailbox is present in both Office 365 Legacy Dedicated and vNext after license is applied](https://support.microsoft.com/help/3202607/can-t-complete-auto-discover-or-connect-to-a-mailbox-after-the-mailbox)
