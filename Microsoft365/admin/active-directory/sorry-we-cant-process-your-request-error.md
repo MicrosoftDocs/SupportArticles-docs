@@ -1,6 +1,6 @@
 ---
-title: Can't set security verification with Azure MFA
-description: Describes an issue that triggers an error message when you try to set up additional security verification settings for a user for Azure Multi-Factor Authentication (MFA).
+title: Can't set security verification with Microsoft Entra multifactor authentication
+description: Describes an issue that triggers an error message when you try to set up extra security verification settings for a user for Microsoft Entra multifactor authentication.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -19,17 +19,17 @@ appliesto:
 ms.date: 10/20/2023
 ---
 
-# "Sorry! We can't process your request" error when you try to set up security verification settings for Azure MFA
+# "Sorry! We can't process your request" error when you try to set up security verification settings for Microsoft Entra multifactor authentication
 
 ## Problem
 
-When you try to set up additional security verification settings for Microsoft Azure MFA, you receive the following message:
+When you try to set up extra security verification settings for Microsoft Entra multifactor authentication, you receive the following message:
 
 > Sorry! We can't process your request. Your session is invalid or expired.
 >
 > There was an error processing your request because your session is invalid or expired. Please try again.
 
-This issue occurs if you wait too long to complete the Azure MFA setup process for the user. 
+This issue occurs if you wait too long to complete the setup process for the user. 
 
 ## Solution
 
