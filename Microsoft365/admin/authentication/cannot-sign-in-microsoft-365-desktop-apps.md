@@ -15,7 +15,7 @@ ms.custom:
 ms.reviewer: alextok,balram,naveerap
 appliesto: 
   - Microsoft 365 Apps for enterprise
-ms.date: 07/05/2023
+ms.date: 10/20/2023
 ---
 
 # Can't sign in to Microsoft 365 desktop applications
@@ -105,4 +105,4 @@ To fix the issues, follow these steps on the device:
    - `%windir%\System32\backgroundTaskHost.exe` for the following package names:
        - `Microsoft.AAD.BrokerPlugin_cw5n1h2txyewy`
        - `Microsoft.Windows.CloudExperienceHost_cw5n1h2txyewy`
-   - `%windir%\System32\svchost.exe` loading NT service TokenBroker as TokenBroker.dll
+   - `%windir%\System32\svchost.exe` loading NT service `TokenBroker` as TokenBroker.dll
