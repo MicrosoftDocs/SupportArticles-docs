@@ -69,7 +69,7 @@ Windows Azure Active Directory module for Windows PowerShell and Azure Active Di
 
 ### Step 5: Add your domain to Microsoft 365
 
-The video doesn'tt explain how to add and verify your domain to Microsoft 365. For more information about that procedure, see [Verify your domain in Microsoft 365](https://support.office.com/en-ca/article/verify-your-domain-in-office-365-6383f56d-3d09-4dcb-9b41-b5f5a5efd611).
+The video doesn't explain how to add and verify your domain to Microsoft 365. For more information about that procedure, see [Verify your domain in Microsoft 365](https://support.office.com/en-ca/article/verify-your-domain-in-office-365-6383f56d-3d09-4dcb-9b41-b5f5a5efd611).
 
 ### Step 6: Connect AD FS to Microsoft 365
 
