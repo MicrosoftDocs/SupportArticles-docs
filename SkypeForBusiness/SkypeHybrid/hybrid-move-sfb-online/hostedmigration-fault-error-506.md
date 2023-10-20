@@ -31,7 +31,7 @@ Consider the following scenarios:
 
     > [!NOTE]
     > This cmdlet updates the on-premises MSRtcSipDeploymentLocator attribute for the user to "sipfed.online.lync.com." After DirSync is complete, the HostingProvider attribute of the online user should change from SRV to sipfed.online.lync.com.    
-- You configured identity synchronization to Azure Active Directory before Skype for Business on-premises was installed. Later, a hybrid environment was configured by installing Skype for Business on-premises, and the MSRtcSip* attributes of the on-premises users were updated correctly. Identity synchronization didn't sync the MSRtcSip* on-premises attributes to the cloud because it syncs only those attributes that existed in the on-premises schema at the time when identity synchronization was originally configured.   
+- You configured identity synchronization to Microsoft Entra ID before Skype for Business on-premises was installed. Later, a hybrid environment was configured by installing Skype for Business on-premises, and the MSRtcSip* attributes of the on-premises users were updated correctly. Identity synchronization didn't sync the MSRtcSip* on-premises attributes to the cloud because it syncs only those attributes that existed in the on-premises schema at the time when identity synchronization was originally configured.   
 
 When you try to move users from Skype for Business Online to Skype for Business on-premises in either of these scenarios, you receive the following error message:
 
@@ -44,11 +44,11 @@ Exception: Microsoft.Rtc.Management.AD.MoveUserException: HostedMigration fault:
 
 ## Solution 
 
-To fix this issue, rerun the configuration wizard for Directory Synchronization (DirSync) or Azure AD Connect, depending on which appliance you're using. After the configuration wizard is completed and synchronization is performed, the Skype for Business Online HostingProvider attribute for the user will change from SRV to sipfed.online.lync.com.
+To fix this issue, rerun the configuration wizard for Directory Synchronization (DirSync) or Microsoft Entra Connect, depending on which appliance you're using. After the configuration wizard is completed and synchronization is performed, the Skype for Business Online HostingProvider attribute for the user will change from SRV to sipfed.online.lync.com.
 
 ## More Information 
 
-Attributes that were added to your Active Directory environment after identity synchronization was set up won't be recognized until you rerun the configuration wizard for the Azure AD identity synchronization appliance. For Skype for Business, the MSRtcSip* attributes were added. Because these are missing from the sync, Skype for Business Online will continue to believe that these users are Skype for Business Online and not Skype for Business on-premises users.
+Attributes that were added to your Active Directory environment after identity synchronization was set up won't be recognized until you rerun the configuration wizard for the Microsoft Entra identity synchronization appliance. For Skype for Business, the MSRtcSip* attributes were added. Because these are missing from the sync, Skype for Business Online will continue to believe that these users are Skype for Business Online and not Skype for Business on-premises users.
 
 For more information, see [Migrating Lync Online users to Lync on-premises in Lync Server 2013](/previous-versions/office/lync-server-2013/lync-server-2013-migrating-lync-online-users-to-lync-on-premises?f=255&mspperror=-2147217396).
 

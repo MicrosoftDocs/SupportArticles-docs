@@ -31,7 +31,7 @@ However, members can be added directly to Microsoft 365 groups.
 
 ## Workaround
 
-This issue occurs when the value **UsersPermissionToReadOtherUsersEnabled** is set to **False** in Azure AD. To correct the issue, change this setting to **True**.
+This issue occurs when the value **UsersPermissionToReadOtherUsersEnabled** is set to **False** in Microsoft Entra ID. To correct the issue, change this setting to **True**.
 
 ## More information
 

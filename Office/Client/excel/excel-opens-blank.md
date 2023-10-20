@@ -141,7 +141,7 @@ If you aren't sure whether you are running UE-V, examine the program list in the
 
 Try to repair your Office programs. To do this, follow the steps for your installation type and operating system.
 
-### For an Microsoft 365 Apps, Office LTSC 2021, or Office 2019 Click-to-Run installation
+### For a Microsoft 365 Apps, Office LTSC 2021, or Office 2019 Click-to-Run installation
 
 #### Windows 10
 

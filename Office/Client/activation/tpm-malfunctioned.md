@@ -15,7 +15,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft 365
-ms.date: 05/17/2023
+ms.date: 10/19/2023
 ---
 
 # Microsoft 365 Apps activation error: “Trusted Platform Module malfunctioned”
@@ -88,14 +88,14 @@ For manual troubleshooting for step 7, or for more information, see [Fix authent
 </details>
 
 <details>
-<summary><b>Troubleshoot Azure AD hybrid join</b></summary>
+<summary><b>Troubleshoot Microsoft Entra hybrid join</b></summary>
 
 1.	Open a Command Prompt window as an administrator. From Start, type *cmd.exe* in the search box, right-click **Command Prompt** in the list, and then select **Run as administrator**.  
 1. Type the following command, and then press Enter:
 
    `dsregcmd /status`
 
-If EventID 220 is present in User Device Registration event logs, see [Troubleshoot hybrid Azure AD-joined devices](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current).
+If EventID 220 is present in User Device Registration event logs, see [Troubleshoot Microsoft Entra hybrid joined devices](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current).
 
 If error code 0x801c001d is present, [configure a service connection point](/azure/active-directory/devices/hybrid-azuread-join-manual#configure-a-service-connection-point).
 <br/><br/>
@@ -119,14 +119,14 @@ If error code 0x801c001d is present, [configure a service connection point](/azu
 </details>
 
 <details>
-<summary><b>Disconnect from and then connect to Azure Active Directory</b></summary>
+<summary><b>Disconnect from and then connect to Microsoft Entra ID</b></summary>
 
 1.	From Start, select **Settings** (the gear icon) > **Accounts** > **Access work or school**.
-1.	Select the Azure Active Directory (Azure AD or AAD) connection.
+1.	Select the Microsoft Entra ID connection.
 1.	Select **Disconnect**.
 1.	Restart the device.
 1.	Return to the **Access work or school** page as described in step 1.
-1.	Select **Join this device to Azure Active Directory**.
+1.	Select **Join this device to Microsoft Entra ID**.
 1.	Enter your credentials.
 1.	Select **Let my organization manage my device**.
 1.	Restart the device and try to activate Microsoft 365 again.
@@ -144,18 +144,18 @@ If error code 0x801c001d is present, [configure a service connection point](/azu
 </details>
 
 <details>
-<summary><b>Enable or add the device in Azure AD</b></summary>
+<summary><b>Enable or add the device in Microsoft Entra ID</b></summary>
 
-If the device was disabled in Azure AD, an administrator who has sufficient privileges can re-enable it from the Azure AD portal, as follows:
+If the device was disabled in Microsoft Entra ID, an administrator who has sufficient privileges can re-enable it from the Microsoft Entra admin center, as follows:
 
 1.	Sign in to the [Azure portal](https://portal.azure.com).
-1.	Select **Azure Active Directory** > **Devices**.
+1.	Select **Microsoft Entra ID** > **Devices**.
 1.	Examine the disabled devices list in **Devices**, by searching on the username or device name.
 1.	Select the device, and then select **Enable**.
 
 For more information, see [Manage device identities using the Azure portal](/azure/active-directory/devices/device-management-azure-portal#device-management-tasks). 
 
-If the device was deleted in Azure AD, you have to re-register it manually. For detailed steps to do this, see [Re-enable or re-register the device](/azure/active-directory/devices/faq#q-i-disabled-or-deleted-my-device-in-the-azure-portal-or-by-using-windows-powershell-but-the-local-state-on-the-device-says-its-still-registered-what-should-i-do).
+If the device was deleted in Microsoft Entra ID, you have to re-register it manually. For detailed steps to do this, see [Re-enable or re-register the device](/azure/active-directory/devices/faq#q-i-disabled-or-deleted-my-device-in-the-azure-portal-or-by-using-windows-powershell-but-the-local-state-on-the-device-says-its-still-registered-what-should-i-do).
 <br/><br/>
 </details>
 
@@ -188,5 +188,3 @@ Update the BIOS for your device. If you need more information about doing so, co
 1.	Try to activate Microsoft 365 again.
 <br/><br/>
 </details>
-
-

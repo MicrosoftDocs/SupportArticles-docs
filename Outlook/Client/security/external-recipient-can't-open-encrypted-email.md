@@ -68,4 +68,4 @@ Use one of the following resolutions or workarounds, depending on the cause.
 
   - Open the encrypted message in Outlook on the web, Outlook for Android, or Outlook for iOS. Those applications handle decryption in the service and don't require access to the AIP endpoint.
 
-  - Exclude the recipient (and possibly all guest and external users) from your organization's MFA policy. MFA can be configured in Microsoft Azure Active Directory [Identity Protection](/azure/active-directory/identity-protection/howto-identity-protection-configure-mfa-policy) and in CA policies.
+  - Exclude the recipient (and possibly all guest and external users) from your organization's MFA policy. MFA can be configured in Microsoft Entra [Identity Protection](/azure/active-directory/identity-protection/howto-identity-protection-configure-mfa-policy) and in CA policies.
