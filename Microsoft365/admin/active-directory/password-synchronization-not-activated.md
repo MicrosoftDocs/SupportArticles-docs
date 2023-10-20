@@ -13,7 +13,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft 365
-ms.date: 03/31/2022
+ms.date: 10/20/2023
 ---
 
 # User passwords aren't synced, and "Password Synchronization has not been activated for this company" error is logged in Event Viewer
@@ -29,22 +29,24 @@ This issue may occur if password synchronization was disabled after it was set u
 
 ## Solution 
 
-To resolve this issue, enable password synchronization. To do this, take one of the following actions, as appropriate to the Azure Active Directory Sync appliance that you're running.
+To resolve this issue, enable password synchronization. To do so, take one of the following actions, as appropriate to the Azure Active Directory Sync appliance that you're running.
+
 ### If you're running the Azure Active Directory Sync tool
-Run the Azure Active Directory Sync Configuration Wizard, and then, on the Password Synchronization page, select the **Enable Password Synchronization** check box. Doing this finishes password synchronization set up and starts a full sync. 
+
+Run the Azure Active Directory Sync Configuration Wizard, and then, on the Password Synchronization page, select the **Enable Password Synchronization** check box. Doing this finishes the password synchronization setup and starts a full sync. 
 <a name='if-youre-running-azure-active-directory-connect'></a>
 
 ### If you're running Microsoft Entra Connect
 
-
 1. Open Windows PowerShell.   
 2. Run the following commands:
-   1. Import-Module ADSync    
-   2. $aadcon = Get-ADSyncConnector | Where {$_.Type -eq "Extensible2"}    
-   3. Set-ADSyncAADPasswordSyncState -ConnectorName $aadcon. Name -Enable $True    
+
+   ```powershell
+   Import-Module ADSync    
+   $aadcon = Get-ADSyncConnector | Where {$_.Type -eq "Extensible2"}    
+   Set-ADSyncAADPasswordSyncState -ConnectorName $aadcon. Name -Enable $True
+   ```
    
-
-
 ## More Information 
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Microsoft Entra Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.
