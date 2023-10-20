@@ -34,7 +34,7 @@ When you select Additional problem information in the error message, you see the
 
 ## Cause
 
-This error occurs if a SharePoint Framework (SPFx) web part is added to Viva Connections. Because of the web part addition, the **SharePoint Online Client Extensibility Web Application Principal** object that's available under **Azure Active Directory** > **App Registrations** isn't configured correctly to trust the Teams desktop client.
+This error occurs if a SharePoint Framework (SPFx) web part is added to Viva Connections. Because of the web part addition, the **SharePoint Online Client Extensibility Web Application Principal** object that's available under **Microsoft Entra ID** > **App Registrations** isn't configured correctly to trust the Teams desktop client.
 
 ## Resolution
 
