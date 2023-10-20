@@ -15,7 +15,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft 365
-ms.date: 03/31/2022
+ms.date: 10/20/2023
 ---
 
 # Set up AD FS for Microsoft 365 for Single Sign-On
@@ -32,7 +32,7 @@ Add AD FS by using Add Roles and Features Wizard.
 
 **Notes for AD FS 2.0**
 
-If you are using Windows Server 2008, you must download and install AD FS 2.0 to be able to work with Microsoft 365. You can obtain AD FS 2.0 from the following Microsoft Download Center website:
+If you're using Windows Server 2008, you must download and install AD FS 2.0 to be able to work with Microsoft 365. You can obtain AD FS 2.0 from the following Microsoft Download Center website:
 
 [Active Directory Federation Services 2.0 RTW](https://support.microsoft.com/help/974408)
 
@@ -44,32 +44,32 @@ Microsoft 365 requires a trusted certificate on your AD FS server. Therefore, yo
 
 When you customize the certificate request, make sure that you add the Federation server name in the **Common name** field. 
 
-In this video, we explain only how to generate a certificate signing request (CSR). You must send the CSR file to a third-party CA. The CA will return a signed certificate to you. Then, follow these steps to import the certificate to your computer certificate store:
+In this video, we explain only how to generate a certificate signing request (CSR). You must send the CSR file to a third-party CA. The CA returns a signed certificate to you. Then, follow these steps to import the certificate to your computer certificate store:
 
-1. Run Certlm.msc to open the local computer's certificate store.   
+1. Run `Certlm.msc` to open the local computer's certificate store.   
 2. In the navigation pane, Expand **Personal**, expand **Certificate**, right click the Certificate folder, and then click **Import**.   
 
 **About the Federation server name**
 
-The Federation Service name is the Internet-facing domain name of your AD FS server. The Microsoft 365 user will be redirected to this domain for authentication. Therefore, make sure that you add a public A record for the domain name. 
+The Federation Service name is the Internet-facing domain name of your AD FS server. The Microsoft 365 user is redirected to this domain for authentication. Therefore, make sure that you add a public A record for the domain name. 
 
 ### Step 3: Configure AD FS
 
-You cannot manually type a name as the Federation server name. The name is determined by the subject name (Common name) of a certificate in the local computer's certificate store.
+You can't manually type a name as the Federation server name. The name is determined by the subject name (Common name) of a certificate in the local computer's certificate store.
 
 **Notes for AD FS 2.0**
 
 In AD FS 2.0, the Federation server name is determined by the certificate that binds to "Default Web Site" in Internet Information Services (IIS). You must bind the new certificate to the Default website before you configure AD FS.
 
-You can use any account as the service account. If the service account's password is expired, AD FS will stop working. Therefore, make sure that the password of the account is set to never expire.
+You can use any account as the service account. If the service account's password is expired, AD FS stops working. Therefore, make sure that the password of the account is set to never expire.
 
 ### Step 4: Download Microsoft 365 tools
 
-Windows Azure Active Directory module for Windows PowerShell and Azure Active Directory Sync appliance are available in Microsoft 365 portal. To obtain the tools, click **Active Users**, and then click **Single sign-on: Set up**.
+Windows Azure Active Directory module for Windows PowerShell and Azure Active Directory Sync appliance are available in the Microsoft 365 portal. To obtain the tools, click **Active Users**, and then click **Single sign-on: Set up**.
 
 ### Step 5: Add your domain to Microsoft 365
 
-The video does not explain how to add and verify your domain to Microsoft 365. For more information about that procedure, see [Verify your domain in Microsoft 365](https://support.office.com/en-ca/article/verify-your-domain-in-office-365-6383f56d-3d09-4dcb-9b41-b5f5a5efd611).
+The video doesn'tt explain how to add and verify your domain to Microsoft 365. For more information about that procedure, see [Verify your domain in Microsoft 365](https://support.office.com/en-ca/article/verify-your-domain-in-office-365-6383f56d-3d09-4dcb-9b41-b5f5a5efd611).
 
 ### Step 6: Connect AD FS to Microsoft 365
 
@@ -93,11 +93,11 @@ If the commands run successfully, you should see the following:
 
 If your internal domain name differs from the external domain name that is used as an email address suffix, you have to add the external domain name as an alternative UPN suffix in the local Active Directory domain. For example, the internal domain name is "company.local" but the external domain name is "company.com." In this situation, you have to add "company.com" as an alternative UPN suffix.
 
-Sync the user accounts to Microsoft 365 by using Directory Sync Tool.
+Sync the user accounts to Microsoft 365 by using the Directory Sync Tool.
 
 **Notes for AD FS 2.0**
 
-If you are using AD FS 2.0, you must change the UPN of the user account from "company.local" to "company.com" before you sync the account to Microsoft 365. Otherwise, the user will not be validated on the AD FS server. 
+If you're using AD FS 2.0, you must change the UPN of the user account from "company.local" to "company.com" before you sync the account to Microsoft 365. Otherwise, the user isn't validated on the AD FS server. 
 
 ### Step 8: Configure the client computer for Single Sign-On
 
