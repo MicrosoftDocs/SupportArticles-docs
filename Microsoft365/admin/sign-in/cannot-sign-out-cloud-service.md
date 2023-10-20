@@ -15,7 +15,7 @@ appliesto:
   - Microsoft Intune
   - Azure Backup
   - Microsoft 365
-ms.date: 03/31/2022
+ms.date: 10/20/2023
 ---
 
 # Problems when signing out of Microsoft 365, Azure, or Intune in a web browser
@@ -70,7 +70,7 @@ To end the task for your browser, follow these steps:
     
 ### Method 3: Sign out of all Microsoft online services  
   
-You may be signed in to another Microsoft online service, and this may be preventing you from signing out. If this is the case, sign out of all Microsoft online services. To do this, follow these steps: 
+You may be signed in to another Microsoft online service, and it may be preventing you from signing out. If so, sign out of all Microsoft online services: 
  
 1. Go to [https://login.microsoftonline.com/logout.srf](https://login.microsoftonline.com/logout.srf), and then sign out (if you aren't already signed out).    
 2. Go to [https://login.live.com/logout.srf](https://login.live.com/logout.srf), and then sign out (if you aren't already signed out).    
