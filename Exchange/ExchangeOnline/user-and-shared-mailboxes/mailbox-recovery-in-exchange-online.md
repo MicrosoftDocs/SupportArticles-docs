@@ -27,7 +27,7 @@ A Tenant Administrator that is comfortable with executing PowerShell cmdlets.
 
 **How does it work?**
 
-We are going to ask you some specific questions to scope your situation. Then we'll take you through a series of steps tailored to your scenario.
+We are going to ask you some specific questions to scope your situation. Then we take you through a series of steps tailored to your scenario.
 
 **Estimated time of completion:**
 
@@ -111,7 +111,7 @@ Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange
    Connect-ExchangeOnline
    ```
 
-   When prompted, enter the credentials for your Microsoft 365 admin account. If the account has multifactor authentication (MFA) enabled, you'll also need to enter a security code.
+   When prompted, enter the credentials for your Microsoft 365 admin account. If the account has multifactor authentication (MFA) enabled, you also need to enter a security code.
 
 3. Run `Get-Mailbox -Identity <user Alias>`.  
    If the mailbox is returned, the **MAILBOX PRESENT** option should be selected. If not, go to step 4.
@@ -137,7 +137,7 @@ Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange
    Connect-ExchangeOnline
    ```
 
-   When prompted, enter the credentials for your Microsoft 365 admin account. If the account has multifactor authentication (MFA) enabled, you'll also need to enter a security code.
+   When prompted, enter the credentials for your Microsoft 365 admin account. If the account has multifactor authentication (MFA) enabled, you also need to enter a security code.
 
 3. Run `Get-Mailbox -Identity <user Alias>`.  
    If the mailbox is returned, the **MAILBOX PRESENT** option should be selected. If not, go to step 4.
@@ -156,9 +156,9 @@ Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange
 **Solution:**  
 Contact Microsoft Support
 
-When an Active Directory User object is deleted from on-premises, the deletion will be synchronized to Microsoft Entra ID. This synchronization process could take up to three hours. If the deletion has not synchronized yet, there may be an issue with the directory synchronization application.
+When an Active Directory User object is deleted from on-premises, the deletion is synchronized to Microsoft Entra ID. This synchronization process could take up to three hours. If the deletion has not synchronized yet, there may be an issue with the directory synchronization application.
 
-For additional Directory Synchronization troubleshooting tips, see [Troubleshoot Azure Active Directory Sync tool installation and Configuration Wizard errors](/troubleshoot/azure/active-directory/installation-configuration-wizard-errors).
+For more Directory Synchronization troubleshooting tips, see [Troubleshoot Azure Active Directory Sync tool installation and Configuration Wizard errors](/troubleshoot/azure/active-directory/installation-configuration-wizard-errors).
 
 - If your issue is resolved, congratulations! Your scenario is complete.
 - If your issue isn't resolved, see [Additional Resources](#additional-resources).
@@ -168,7 +168,7 @@ For additional Directory Synchronization troubleshooting tips, see [Troubleshoot
 ### AD User Account Deleted, Microsoft Entra account Present, Online Mailbox not present
 
 **Solution:**  
-Contact Microsoft Support Due to the way Microsoft Entra Connect and the Online Services work, this should not be a possible scenario. Contact Microsoft Support to get assistance with your issue.
+Contact Microsoft Support. Due to the way Microsoft Entra Connect and the Online Services work, it shouldn't be a possible scenario. Contact Microsoft Support to get assistance with your issue.
 
 - If your issue is resolved, congratulations! Your scenario is complete.
 - If your issue isn't resolved, see [Additional Resources](#additional-resources).
@@ -259,9 +259,9 @@ Restore Inactive mailbox and perform a **soft match**.
 ### AD User Account Deleted, Microsoft Entra account Soft Deleted, Online Mailbox Present
 
 **Solution:**  
-If the Account is soft deleted the mailbox should not be present. However, we will take you through the steps to attempt to recreate the user and reconnect them to the original mailbox.
+If the Account is soft deleted the mailbox shouldn't be present. However, we take you through the steps to attempt to recreate the user and reconnect them to the original mailbox.
 
-To identify duplicates, run the following:
+To identify duplicates, use the following steps:
 
 1. Connect to [Azure AD PowerShell](/previous-versions/azure/jj151815(v=azure.100)). In the same PowerShell window, connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -450,8 +450,8 @@ Follow these steps to recover the mailbox.
 
      - Run `$DelUser = Get-MsolUser -UserPrincipalName User@contoso.com -ReturnDeletedUsers`.
      - `Restore-MsolUser -ObjectId $DelUser.ObjectId`.
-6. After 5 minutes, restore the Microsoft Entra user using the steps below.
-7. If the `ExternalDirectoryObjectID` values from step 2 and step 3 don't match, it means there is a duplicate Microsoft Entra user. Contact support.
+6. After 5 minutes, restore the Microsoft Entra user using the following steps.
+7. If the `ExternalDirectoryObjectID` values from step 2 and step 3 don't match, it means there's a duplicate Microsoft Entra user. Contact support.
 
 - If your issue is resolved, congratulations! Your scenario is complete.
 - If your issue isn't resolved, see [Additional Resources](#additional-resources).
@@ -498,7 +498,7 @@ Synchronize the user account to allow the mailbox to automatically reconnect to 
 
 1. Using the on-premises Active Directory Users and Computers, move the user to an Organizational Unit that isn't filtered in directory synchronization.
 2. Force delta synchronization.
-3. After synchronization is complete, confirm that the user is present in Microsoft Entra ID (through **O365 admin center** > **Active users**). The mailbox will get reconnected to the Microsoft Entra user automatically.
+3. After synchronization is complete, confirm that the user is present in Microsoft Entra ID (through **O365 admin center** > **Active users**). The mailbox gets reconnected to the Microsoft Entra user automatically.
 
 - If your issue is resolved, congratulations! Your scenario is complete.
 - If your issue isn't resolved, see [Additional Resources](#additional-resources).
@@ -527,7 +527,7 @@ Follow these steps to review the license status of the user. If the license prop
 **Solution:**  
 Contact Microsoft Support
 
-This scenario should not be possible because of the way Exchange Online Account provisioning in Microsoft 365 works. It would be best to contact Microsoft Support so we can assist in working out the best solution for this issue.
+This scenario should not be possible because of the way Exchange Online Account provisioning in Microsoft 365 works. It would be best to contact Microsoft Support so we can help work out the best solution for this issue.
 
 - If your issue is resolved, congratulations! Your scenario is complete.
 - If your issue isn't resolved, see [Additional Resources](#additional-resources).
@@ -557,7 +557,7 @@ This scenario should not be possible because of the way Exchange Online Account 
      1. Run `Undo-SoftDeletedMailbox user@contoso.com -WindowsLiveID user@contoso.com -Password (ConvertTo-SecureString -String 'Pa$$word1' -AsPlainText -Force)`.
      2. Connect to [Azure AD PowerShell](/previous-versions/azure/jj151815(v=azure.100)).
      3. Run `get-msoluser -userprincipalname user@contoso.com`.
-     4. Once you verified that the **MSOLUser** is returned in the previous step to force a delta sync from on-premises Active Directory. It will soft-match to the user in Microsoft Entra ID.
+     4. Once you verified that the **MSOLUser** is returned in the previous step to force a delta sync from on-premises Active Directory. It soft-matches to the user in Microsoft Entra ID.
 
 - If your issue is resolved, congratulations! Your scenario is complete.
 - If your issue isn't resolved, see [Additional Resources](#additional-resources).
@@ -587,7 +587,7 @@ Follow these steps to provision a new mailbox for the affected user:
 
 Service is functioning normally.
 
-This is the expected behavior of the Exchange Online Services.
+This behavior is expected in the Exchange Online Services.
 
 - If your issue is solved, congratulations! Your scenario is complete.
 - If your issue wasn't solved, see [Additional Resources](#additional-resources).
@@ -630,7 +630,7 @@ The original mailbox is not recoverable. Assign a license to the user to create 
 **Solution:**  
 Contact Microsoft Support
 
-Because of the way Exchange Online Account provisioning in Microsoft 365 works, this should not be possible. It would be best to contact Microsoft Support to assist in working out the best solution for this issue.
+Because of the way Exchange Online Account provisioning in Microsoft 365 works, it shouldn't be possible. It would be best to contact Microsoft Support to assist in working out the best solution for this issue.
 
 - If your issue is solved, congratulations! Your scenario is complete.
 - If your issue isn't solved, see [Additional Resources](#additional-resources).
@@ -676,7 +676,7 @@ Follow these steps to recover the mailbox.
 **Solution:**  
 Contact Microsoft Support
 
-Because of the way Exchange Online Account provisioning in Microsoft 365 works, this should not be possible. It would be best to contact Microsoft Support to assist in working out the best solution for this issue.
+Because of the way Exchange Online Account provisioning in Microsoft 365 works, it shouldn't be possible. It would be best to contact Microsoft Support to assist in working out the best solution for this issue.
 
 - If your issue is solved, congratulations! Your scenario is complete.
 - If your issue isn't solved, see [Additional Resources](#additional-resources).
@@ -727,7 +727,7 @@ Mailbox is not recoverable. Following these steps will ensure that a new user ac
 
 ### Additional Resources
 
-Sorry, we couldn't resolve your issue with this guide, use the following resources to continue troubleshooting. Visit the [Microsoft 365 Community](https://answers.microsoft.com/msoffice/forum?sort=LastReplyDate&dir=Desc&tab=All&status=all&mod=&modAge=&advFil=&postedAfter=&postedBefore=&threadType=All&isFilterExpanded=false&page=1) for self-help support. Do one of the following:
+Sorry, we couldn't resolve your issue with this guide, use the following resources to continue troubleshooting. Visit the [Microsoft 365 Community](https://answers.microsoft.com/msoffice/forum?sort=LastReplyDate&dir=Desc&tab=All&status=all&mod=&modAge=&advFil=&postedAfter=&postedBefore=&threadType=All&isFilterExpanded=false&page=1) for self-help support. Use one of the following ways:
 
 - Use search to find a solution to your issue.
 - Sign in with your Microsoft 365 admin credentials, and then post a question to the community.
