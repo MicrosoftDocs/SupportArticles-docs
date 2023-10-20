@@ -1,6 +1,6 @@
 ---
 title: 50,000 seats are assigned to RIGHTSMANAGEMENT_ADHOC SKU in Microsoft 365
-description: Describes a scenario where you see an RIGHTSMANAGEMENT_ADHOC entry that has 50,000 seats assigned to it. Occurs when you run the Get-MsolAccountSku Azure Active Directory Module for Windows PowerShell cmdlet.
+description: Describes a scenario where you see an RIGHTSMANAGEMENT_ADHOC entry that has 50,000 seats assigned to it. Occurs when you run the Get-MsolAccountSku Azure Active Directory module for Windows PowerShell cmdlet.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
@@ -24,7 +24,7 @@ ms.date: 03/31/2022
 
 ## Problem 
 
-In your Microsoft 365 subscription, you see that 50,000 seats are assigned to the RIGHTSMANAGEMENT_ADHOC SKU. For example, when you run the Get-MsolAccountSku Microsoft Azure Active Directory Module for Windows PowerShell cmdlet, you receive output that resembles the following:
+In your Microsoft 365 subscription, you see that 50,000 seats are assigned to the RIGHTSMANAGEMENT_ADHOC SKU. For example, when you run the Get-MsolAccountSku Microsoft Azure Active Directory module for Windows PowerShell cmdlet, you receive output that resembles the following:
 
 ```asciidoc
 Windows PowerShell

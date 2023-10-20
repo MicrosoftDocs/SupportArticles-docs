@@ -55,7 +55,7 @@
       href: ../active-directory/directory-sync-tool-not-sync-object.md
     - name: Email address contains an underscore character
       href: ../active-directory/email-address-contain-underscore.md
-    - name: Error when connecting with Azure AD Module
+    - name: Error when connecting with Azure AD module
       href: ../active-directory/connect-error-0x800488ee.md
     - name: Error when you run IdFix tool
       href: ../active-directory/idfix-tool-running-error.md

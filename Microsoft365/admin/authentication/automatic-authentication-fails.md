@@ -26,7 +26,7 @@ ms.date: 03/31/2022
 
 ## Symptoms
 
-Authentication automatically fails in some Microsoft Office applications and Outlook may go into the "Need Password" state without any interaction. Additionally, when you make a Web Account Manager API call to [FindAllAccountsAsync](/uwp/api/windows.security.authentication.web.core.webauthenticationcoremanager.findallaccountsasync), you may see error code "-2147024809" in the AAD logs or Office Client logs.
+Authentication automatically fails in some Microsoft Office applications and Outlook may go into the "Need Password" state without any interaction. Additionally, when you make a Web Account Manager API call to [FindAllAccountsAsync](/uwp/api/windows.security.authentication.web.core.webauthenticationcoremanager.findallaccountsasync), you may see error code "-2147024809" in the Microsoft Entra logs or Office Client logs.
 
 > [!IMPORTANT]
 > This issue occurs only on computers that are running Windows 10, version 1703 or later, and Microsoft 365 version 1807 or later.
@@ -43,11 +43,11 @@ The authentication issue occurs because of missing package information about eit
 > [!div class="nextstepaction"]
 > [Download the Assistant](https://aka.ms/SaRA-OfficeSignInScenario)
 
-To fix this issue, use PowerShell to reinstall the packages for Azure AD WAM plugin (for organizational or work accounts) and Live ID (for personal accounts such as @outlook.com, @hotmail.com, and so on). To do this, follow these steps:
+To fix this issue, use PowerShell to reinstall the packages for Microsoft Entra WAM plugin (for organizational or work accounts) and Live ID (for personal accounts such as @outlook.com, @hotmail.com, and so on). To do this, follow these steps:
 
 1. Right-click the Windows icon in your task bar, and then select **Windows PowerShell (Admin)**.
 2. If you're prompted by a User Account Control ([UAC](/windows/security/identity-protection/user-account-control/user-account-control-overview)) window, select **Yes** to start PowerShell.
-3. If your issue is about a work account, you have to fix the Azure AD WAM plugin package. Run the following command in the command console:
+3. If your issue is about a work account, you have to fix the Microsoft Entra WAM plugin package. Run the following command in the command console:
 
    ```powershell
    if (-not (Get-AppxPackage Microsoft.AAD.BrokerPlugin)) { Add-AppxPackage -Register "$env:windir\SystemApps\Microsoft.AAD.BrokerPlugin_cw5n1h2txyewy\Appxmanifest.xml" -DisableDevelopmentMode -ForceApplicationShutdown } Get-AppxPackage Microsoft.AAD.BrokerPlugin
