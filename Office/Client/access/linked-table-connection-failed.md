@@ -1,5 +1,5 @@
 ---
-title: Linked table connection failed when using Azure AD interactive authentication
+title: Linked table connection failed when using Microsoft Entra interactive authentication
 description: You experience repetitive connection failed messages when opening objects that use an Access linked table connection.
 author: helenclu
 manager: dcscontentpm
@@ -18,11 +18,11 @@ appliesto:
 ms.date: 03/31/2022
 ---
 
-# Access: Linked table "connection failed" messages when using Azure AD interactive authentication
+# Access: Linked table "connection failed" messages when using Microsoft Entra interactive authentication
 
 ## Symptoms
 
-In Microsoft Access, you create a linked table that uses Azure Active Directory interactive authentication. When you open objects that use this connection, you experience repetitive "connection failed" messages that resemble the following example:
+In Microsoft Access, you create a linked table that uses Microsoft Entra interactive authentication. When you open objects that use this connection, you experience repetitive "connection failed" messages that resemble the following example:
 
 ```output
 Connection failed: SQLState: 'FA003' SQL Server Error: 0 [Microsoft][ODBC Driver 17 for SQL Server][SQL Server] User option must be specified, if Authentication option is 'ActiveDirectoryInteractive'.     
@@ -39,7 +39,7 @@ When you establish the connection in Access, the **Save Password** option is not
 
 ## Resolution
 
-In this situation, Azure Active Directory (Azure AD) interactive authentication doesn't use a stored password. However, you should select the **Save Password** option to store the UID in the connection string.
+In this situation, Microsoft Entra interactive authentication doesn't use a stored password. However, you should select the **Save Password** option to store the UID in the connection string.
 
 ## More Information
 

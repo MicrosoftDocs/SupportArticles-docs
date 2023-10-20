@@ -31,11 +31,11 @@ This article discusses how to troubleshoot the activation issues in Microsoft Of
 
 This issue might be caused by one of several circumstances. Follow these steps to help troubleshoot the issue. After each step, check to see whether the issue is fixed. If not, proceed to the next step.
 
-### Step 1. Identify and fix activation issues by using the Support and Recovery Assistant for Microsoft 365  
+### Step 1: Identify and fix activation issues by using the Support and Recovery Assistant for Microsoft 365  
 
 The [Microsoft Support and Recovery Assistant](https://support.microsoft.com/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f) runs on Windows PCs and can help you identify and fix activation issues with Microsoft 365.
 
-### Step 2. Check whether you're behind a proxy server  
+### Step 2: Check whether you're behind a proxy server  
 
 Are you behind a proxy server? If you're not sure, ask your administrator. If so, you (or your administrator) might have to change the proxy settings for Windows HTTP clients. To do this, follow these steps: 
  
@@ -45,7 +45,7 @@ Are you behind a proxy server? If you're not sure, ask your administrator. If so
     netsh winhttp set proxy < Address of proxy server >
     ```
 
-### Step 3. Check whether you're behind a firewall  
+### Step 3: Check whether you're behind a firewall  
 
 Are you behind a firewall? If you're not sure, ask your administrator. If you're behind a firewall, it might have to be configured to enable access to the following:
 
@@ -64,7 +64,7 @@ Each firewall will have a different method for enable access to these URIs. Chec
 
 For more information about Microsoft 365 Apps for enterprise URLs and IP addresses, see the following Microsoft article: [Microsoft 365 URLs and IP address ranges](https://technet.microsoft.com/library/hh373144.aspx)
 
-### Step 4. Check whether you have the appropriate license   
+### Step 4: Check whether you have the appropriate license   
  
 1. Sign in to the Microsoft 365 portal.     
 2. Click **Settings** :::image type="icon" source="./media/issue-when-activate-office-from-office-365/setting-icon.png"::: and then click **Office 365 settings**.    
@@ -72,7 +72,7 @@ For more information about Microsoft 365 Apps for enterprise URLs and IP address
 4. If you see **The latest desktop version of Office**, then you have an Office subscription assigned correctly.    
 5. If you don't see **The latest desktop version of Office**, contact your administrator or see the Office article [What Microsoft 365 business product or license do I have?](https://support.office.com/article/What-Office-365-business-product-or-license-do-I-have-f8ab5e25-bf3f-4a47-b264-174b1ee925fd) 
 
-### Step 5. If you previously activated an Office 2013 program on the computer, try to remove the existing product key   
+### Step 5: If you previously activated an Office 2013 program on the computer, try to remove the existing product key   
 
 To manually remove existing product keys for an Office 2013 program, follow these steps: 
  

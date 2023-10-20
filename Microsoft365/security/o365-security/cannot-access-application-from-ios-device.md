@@ -39,7 +39,7 @@ To resolve this issue, determine which Conditional Access policy causes the erro
 
 Here's how to identify the problematic Conditional Access policy:
 
-1. In the error message, select **More details** to open the Azure Active Directory **Sign-in logs**.
+1. In the error message, select **More details** to open the Microsoft Entra ID **Sign-in logs**.
 1. To see the **Request ID** of the failed request, select **User sign-ins (interactive)**.
 
     :::image type="content" source="media/cannot-access-application-from-ios-device/sign-in-details.png" alt-text="Screenshot of the sign-in log in which the Request ID of the failed request is highlighted.":::
