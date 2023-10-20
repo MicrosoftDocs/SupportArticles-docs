@@ -17,7 +17,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft 365
-ms.date: 03/31/2022
+ms.date: 10/19/2023
 ---
 
 # "Invalid user name" when you try to create a user name that contains a special character in Microsoft 365
@@ -48,7 +48,7 @@ A Windows Live error occurred while provisioning for "user+invalid_characters@co
 
 ## Cause
 
-This behavior occurs because certain special characters aren't permitted in user names that you create in the Microsoft 365. These special characters include but aren't limited to the following:
+This behavior occurs because certain special characters aren't permitted in user names that you create in Microsoft 365. These special characters include but aren't limited to the following characters:
 
 | Property | UserPrincipalName requirements |
 | --- | --- |
@@ -58,11 +58,11 @@ This behavior occurs because certain special characters aren't permitted in user
 
 However, the following exceptions apply:
 
-- An underscore (_) is permitted anywhere in the user name. This includes at the beginning or end of the name.
+- An underscore (_) is permitted anywhere in the user name, including at the beginning or end of the name.
 - When creating a group, the number sign (#) **can** be used as part of the group's name. However, the email address you create for a distribution group or shared mailbox **cannot** use the # sign.  
 
 ## Solution
 
-When you create a new user in Microsoft 365, make sure that you don't use any of the special characters that are listed in the "Cause" section.
+When you create a new user in Microsoft 365, make sure that you don't use any of the special characters that are listed in the [Cause](#cause) section.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
