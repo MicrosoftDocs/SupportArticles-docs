@@ -15,7 +15,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft 365
-ms.date: 05/17/2023
+ms.date: 10/19/2023
 ---
 
 # Microsoft 365 Apps activation error: “Trusted Platform Module malfunctioned”
@@ -122,7 +122,7 @@ If error code 0x801c001d is present, [configure a service connection point](/azu
 <summary><b>Disconnect from and then connect to Microsoft Entra ID</b></summary>
 
 1.	From Start, select **Settings** (the gear icon) > **Accounts** > **Access work or school**.
-1.	Select the Microsoft Entra ID (Microsoft Entra ID or Microsoft Entra ID) connection.
+1.	Select the Microsoft Entra ID connection.
 1.	Select **Disconnect**.
 1.	Restart the device.
 1.	Return to the **Access work or school** page as described in step 1.
