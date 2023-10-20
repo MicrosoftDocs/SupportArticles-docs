@@ -43,13 +43,13 @@ You can't sign in to Microsoft 365, Microsoft Azure, or Microsoft Intune. You mi
 The following conditions might cause this issue:
 
 - Your subscription has expired.
-- Your user account is not enabled.
+- Your user account isn't enabled.
 - You're locked out from your user account.
 - You tried to sign in with the wrong user name and password.
 - The password you tried to sign in with is temporary and expired. (It might happen if your user account is new or your password was recently reset.)
 - Your password has expired.
 - You're blocked from signing in.
-- If you're a federated user, single sign-on is not working.
+- If you're a federated user, single sign-on isn't working.
 
 ## Resolution
 
@@ -81,9 +81,9 @@ If you can't sign in to the portal, use one of the solutions in the following ta
 
 |Error or description| Solution |
 |------|-----|
-|We don't recognize this user ID or password. Make sure you typed the user ID assigned to you by your organization. It usually looks like **someone**@**example**.com or **someone**@**example**.onmicrosoft.com. And check to make sure you typed the correct password.  |   To resolve this issue, see ["We don't recognize this user ID or password" error when a user tries to sign in to the Microsoft 365 portal](https://support.microsoft.com/help/2853347).  |
-| You've tried to sign in too many times with an incorrect user ID or password.|After 10 unsuccessful sign-in attempts (wrong password), the user is locked out for one minute. Subsequent incorrect sign-in attempts will lock out the user for increasing durations. To resolve this issue, do one of these methods: 1. Try again. You have to enter a random set of letters and numbers as part of the sign-in process. 2. Update your password on all devices that connect to your account. 3. Reset your password. |
-|It looks like your account has been blocked. Please contact your admin to unblock it.|To resolve this issue, see ["It looks like your account has been blocked" error when a user tries to sign in to Microsoft 365](https://support.microsoft.com/help/2742372). If the issue still occurs, use one of these methods: 1. Wait 15 minutes, and then try again. 2. Have your admin reset the password. This unlocks the account.|
+|We don't recognize this user ID or password. Make sure you typed the user ID assigned to you by your organization. It usually looks like **someone**@**example**.com or **someone**@**example**.onmicrosoft.com. And check to make sure you typed the correct password.  |To resolve this issue, see ["We don't recognize this user ID or password" error when a user tries to sign in to the Microsoft 365 portal](https://support.microsoft.com/help/2853347).  |
+| You've tried to sign in too many times with an incorrect user ID or password.|After 10 unsuccessful sign-in attempts (wrong password), the user is locked out for one minute. Subsequent incorrect sign-in attempts lock out the user for increasing durations. To resolve this issue, do one of these methods: 1. Try again. You have to enter a random set of letters and numbers as part of the sign-in process. 2. Update your password on all devices that connect to your account. 3. Reset your password. |
+|It looks like your account has been blocked. Please contact your admin to unblock it.|To resolve this issue, see ["It looks like your account has been blocked" error when a user tries to sign in to Microsoft 365](https://support.microsoft.com/help/2742372). If the issue still occurs, use one of these methods: 1. Wait 15 minutes, and then try again. 2. Have your admin reset the password to unlock the account.|
 |Sorry, that didn't work. This doesn't look like a valid user ID. Make sure you typed the user ID assigned to you by your organization. It usually looks like **someone**@**example**.com or **someone**@**example**.onmicrosoft.com.|To resolve this issue, see ["This doesn't look like a valid user ID" error when a user tries to sign in to Microsoft 365](https://support.microsoft.com/help/2844931).   |
 |You're automatically signed in as a different user.|If you're using more than one user account in a web browser, try one of these methods: 1. Sign out of the portal. 2. Clear the cache in the web browser, delete Internet cookies, and then try to sign in again.|
 |You see a correlation ID that resembles "Correlation ID:ac5d279c-cf72-5073-278e-a5b2b0c8a4bc"|Contact [Microsoft Technical Support](https://support.microsoft.com/contactus). |
