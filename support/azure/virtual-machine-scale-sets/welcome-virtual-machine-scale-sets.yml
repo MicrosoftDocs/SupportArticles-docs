@@ -83,4 +83,4 @@ landingContent:
           - text: VMSS instances remain in "Unhealthy" state and are not repaired
             url:  instances-not-repaired.md
           - text: VM is unavailable for 15 minutes
-            url:  azure-vm-unavailable.md
+            url:  /azure/virtual-machines/azure-vm-unavailable.md
