@@ -51,7 +51,7 @@ To ensure a secure connection to Azure AD and Microsoft 365 services, configure 
 - Identify and reduce you dependency on the client apps and operating systems that don't support TLS 1.2.
 - Enable TLS 1.2 for applications and services that communicate with Azure AD.
 - Update and configure your .NET Framework installation to support TLS 1.2.
-- Make sure that applications and PowerShell (that use [Microsoft Graph](https://graph.microsoft.com)) and Azure AD PowerShell scripts are hosted and run on a platform that supports TLS 1.2.
+- Make sure that applications and PowerShell (that use [Microsoft Graph](https://graph.microsoft.com)) and [Microsoft Graph PowerShell](/powershell/microsoftgraph/overview) scripts are hosted and run on a platform that supports TLS 1.2.
 - Make sure that your web browser has the latest updates. We recommend that you use the new Microsoft Edge browser (based on Chromium). For more information, see the [Microsoft Edge release notes for Stable Channel](/deployedge/microsoft-edge-relnote-stable-channel).
 - Make sure that your web proxy supports TLS 1.2. For more information about how to update a web proxy, check with the vendor of your web proxy solution.
 
@@ -156,7 +156,7 @@ To check which TLS protocol is being used by using Internet Properties, follow t
 
 ## Update and configure .NET Framework to support TLS 1.2 <a name="update-configure-tls-12"></a>
 
-Managed Azure AD-integrated applications and Windows PowerShell scripts (using Azure AD PowerShell V1 (Microsoft MSOnline), V2 (AzureAD), [Microsoft Graph](https://graph.microsoft.com)) may use .NET Framework.
+Managed Azure AD-integrated applications and Windows PowerShell scripts (using [Microsoft Graph PowerShell](/powershell/microsoftgraph/overview), [Microsoft Graph](https://graph.microsoft.com)) may use .NET Framework.
 
 ### Install .NET updates to enable strong cryptography
 
