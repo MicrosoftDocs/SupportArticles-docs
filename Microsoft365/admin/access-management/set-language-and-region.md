@@ -17,7 +17,7 @@ appliesto:
 ms.date: 06/27/2022
 ---
 
-# How to set language and regional settings for Microsoft 365
+# How to set the language and regional settings for Microsoft 365
 
 For all Microsoft 365 services (including OneDrive For Business, Delve, and SharePoint Online), you can change the language and regional settings at the user level in a Cloud identity or Synchronized identity model by using Microsoft 365 PowerShell.
 
@@ -35,9 +35,32 @@ For all Microsoft 365 services (including OneDrive For Business, Delve, and Shar
 To sync the settings by using a user ID, run the following example cmdlets after you substitute the actual values:
 
 ```powershell
-Get-MsolUser -UserPrincipalName user1@contoso.com | Set-MsolUser -PreferredLanguage "it-it"
-Get-MsolUser -UserPrincipalName user1@contoso.com | Set-MsolUser –UsageLocation IT
+# Update the User's Preferred Language details
+Import-Module Microsoft.Graph.Users
+
+Connect-MgGraph  -Scopes 'User.ReadWrite.All'
+
+$preferredLanguage = 'it-it'
+$userId = Get-MgUser -UserId user1@contoso.com
+Update-MgUser -UserId $userId.Id -PreferredLanguage $preferredLanguage
 ```
+
+> [!NOTE] 
+> The preferred language for the user. Should follow ISO 639-1 Code; for example en-US.
+
+```powershell
+# Update User's Usage Location details
+Import-Module Microsoft.Graph.Users
+
+Connect-MgGraph  -Scopes 'User.ReadWrite.All'
+
+$usageLocation = 'IT'
+$userId = Get-MgUser -UserId user1@contoso.com
+Update-MgUser -UserId $userId.Id -Usagelocation $usageLocation
+```
+
+> [!NOTE] 
+> A two-letter country code (ISO standard 3166). Required for users that will be assigned licenses due to legal requirements to check for availability of services in countries. Examples include US, JP, and GB. Not nullable.
 
 ### Synchronized identity model
 
@@ -45,8 +68,6 @@ To sync the settings by using an on-premises instance of Active Directory, run t
 
 ```powershell
 Get-ADUser -SearchBase "OU=Italy,OU=Countries,DC=contoso,DC=com" -Filter * | Set-ADUser –replace @{PreferredLanguage="it-it"}
-
-Get-MsolUser -UserPrincipalName user1@contoso.com | Set-MsolUser –UsageLocation IT
 ```
 
 Then, force the settings to sync through Microsoft Entra Connect.
