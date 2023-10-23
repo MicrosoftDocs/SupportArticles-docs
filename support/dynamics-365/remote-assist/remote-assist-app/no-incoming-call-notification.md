@@ -1,19 +1,19 @@
 ---
-author: davepinch
-description: Learn how to resolve a problem when incoming call notifications aren't received in  Dynamics 365 Remote Assist
+title: Can't receive incoming call notifications
+description: Resolves an issue where you can't receive incoming call notifications in Microsoft Dynamics 365 Remote Assist.
 ms.author: davepinch
-ms.date: 09/26/2023
-ms.topic: troubleshooting-problem-resolution
-title: Not receiving incoming call notifications
+author: davepinch
+ms.date: 10/23/2023
 ms.reviewer: v-wendysmith
 ms.custom: bap-template
 ---
+# Can't receive incoming call notifications in Dynamics 365 Remote Assist
 
-# Not receiving incoming call notifications
+This article provides a resolution for an issue where you can't receive notifications for an incoming call when using Microsoft Dynamics 365 Remote Assist on a HoloLens.
 
 ## Symptoms
 
-When working in Dynamics 365 Remote Assist on a HoloLens, I'm not getting notifications when I receive an incoming call.
+When you're working in Microsoft Dynamics 365 Remote Assist on a HoloLens, you don't get notifications when you receive an incoming call.
 
 ## Cause
 
@@ -21,4 +21,4 @@ You might be signed in to Dynamics 365 Remote Assist with a different account th
 
 ## Resolution
 
-Make sure you’re signed into both the app and the device with the same account.
+To solve this issue, make sure you sign in to both the app and the device with the same account.

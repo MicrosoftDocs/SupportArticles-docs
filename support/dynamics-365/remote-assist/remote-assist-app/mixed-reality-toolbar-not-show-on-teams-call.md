@@ -1,28 +1,26 @@
 ---
-author: davepinch
-description: Learn how to resolve a problem when you can't see the Mixed Reality toolbar on the Teams desktop during a Dynamics 365 Remote Assist call
+title: The Mixed Reality toolbar doesn't appear on Teams during a Dynamics 365 Remote Assist call
+description: Resolves an issue where you can't see the Mixed Reality toolbar on Microsoft Teams desktop during a Microsoft Dynamics 365 Remote Assist call.
 ms.author: davepinch
-ms.date: 09/26/2023
-ms.topic: troubleshooting-problem-resolution
-title: The Mixed Reality toolbar doesn’t appear on Teams during a Dynamics 365 Remote Assist call
+author: davepinch
+ms.date: 10/23/2023
 ms.reviewer: v-wendysmith
 ms.custom: bap-template
 ---
-
-# The Mixed Reality toolbar doesn’t appear on Teams during a Dynamics 365 Remote Assist call
+# The Mixed Reality toolbar doesn't show on Teams during a Dynamics 365 Remote Assist call
 
 ## Symptoms
 
-The Mixed Reality toolbar doesn’t appear on the Teams desktop application during a Dynamics 365 Remote Assist call.
+The Mixed Reality toolbar doesn't appear on Microsoft Teams desktop application during a Microsoft Dynamics 365 Remote Assist call.
 
-## Cause 1: Teams downloaded a new version of the client app in the background but is still running the older version of the app
+## Cause 1: Microsoft Teams downloaded a new version of the client app in the background but is still running the older version of the app
 
-### Resolution
+#### Resolution
 
-Restart your PC.
+To solve this issue, restart your PC.
 
 ## Cause 2: The Dynamics 365 Remote Assist HoloLens user has temporarily lost tracking
 
-### Resolution
+#### Resolution
 
-The Dynamics 365 Remote Assist HoloLens user should [review tips for restoring tracking.](/dynamics365/mixed-reality/remote-assist/mobile-app/mobile-tutorial#what-happens-if-the-app-loses-tracking)
+The Dynamics 365 Remote Assist HoloLens user should [review tips for restoring tracking](/dynamics365/mixed-reality/remote-assist/mobile-app/mobile-tutorial#what-happens-if-the-app-loses-tracking).

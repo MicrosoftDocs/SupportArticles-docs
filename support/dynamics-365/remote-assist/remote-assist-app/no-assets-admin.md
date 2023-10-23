@@ -1,29 +1,34 @@
 ---
-author: davepinch
-description: Learn how to resolve a problem when the Asset tab informs a user to contact IT admin for Dynamics 365 Remote Assist
+title: Assets tab indicates contact an IT administrator
+description: Resolves an issue where the Assets tab informs a user to contact an IT administrator in Microsoft Dynamics 365 Remote Assist.
 ms.author: davepinch
-ms.date: 09/12/2023
-ms.topic: troubleshooting-problem-resolution
-title: Asset tab indicates contact IT admin
+author: davepinch
+ms.date: 10/23/2023
 ms.reviewer: v-wendysmith
 ms.custom: bap-template
 ---
+# Assets tab indicates contact an IT administrator
 
-# Asset tab indicates contact IT admin
+This article provides a resolution for an issue where the **Assets** tab informs you to contact an IT administrator in Microsoft Dynamics 365 Remote Assist.
 
 ## Symptoms
 
-In the HoloLens app, when a user selects the **Assets** tab, Dynamics 365 Remote Assist says to contact IT admin.
+In the HoloLens app, when a user selects the **Assets** tab, Microsoft Dynamics 365 Remote Assist says to contact an IT administrator.
 
-## Prerequisites
+> [!NOTE]
+> As an administrator, to solve the issues discussed in this article, you need Admin permissions in Dynamics 365 Remote Assist.
 
-- Admin permissions in Dynamics 365 Remote Assist
+## Cause 1: The app isn't installed on the right environment
 
-## Cause 1: The app wasn't installed on the right envrionment
+#### Resolution
 
-1. [Install the app to the right environment.](/dynamics365/mixed-reality/remote-assist/ra-webapp-install#install-the-dynamics-365-remote-assist-model-driven-app)
+To solve this issue, [install the app to the right environment](/dynamics365/mixed-reality/remote-assist/ra-webapp-install#install-the-dynamics-365-remote-assist-model-driven-app).
 
 ## Cause 2: The user doesn't have the correct roles assigned
+
+#### Resolution
+
+To solve this issue,
 
 1. Verify that the user has the **Basic User** and **Remote Assist - App User** or **Remote Assist - Administrator** [security roles assigned.](/dynamics365/mixed-reality/remote-assist/asset-capture-add-users#assign-dynamics-365-security-roles)
 
