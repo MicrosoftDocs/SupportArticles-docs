@@ -56,6 +56,8 @@
       href: nodepoolmcversionincompatible-error.md
     - name: PodDrainFailure error
       href: error-code-poddrainfailure.md
+    - name: UnsatisfiablePDB error
+      href: error-code-unsatisfiablepdb.md
     - name: PublicIPCountLimitReached error
       href: error-code-publicipcountlimitreached.md
     - name: QuotaExceeded error
