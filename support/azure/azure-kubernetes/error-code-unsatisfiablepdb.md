@@ -42,7 +42,7 @@ To resolve this issue, use one of the following solutions.
 
 ## Solution 1: Adjust the PDB's maxUnavailable parameter
 
-1. Adjust the PDB's maxUnavailable parameter so that the value is **1** or greater. For more information, see [Plan for availability using pod disruption budgets](/azure/aks/operator-best-practices-scheduler#plan-for-availability-using-pod-disruption-budgets).
+1. Adjust the PDB's maxUnavailable parameter so that the value is **1** or greater. For more information, see [Specifying a PodDisruptionBudget](https://kubernetes.io/docs/tasks/run-application/configure-pdb/#specifying-a-poddisruptionbudget).
 2. Retry the AKS cluster upgrade operation.
 
 ## Solution 2: Back up, delete, and redeploy the PDB
