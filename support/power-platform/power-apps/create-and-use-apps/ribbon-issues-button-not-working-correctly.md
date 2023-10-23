@@ -39,7 +39,7 @@ If these configurations are correct, a JavaScript code error might be the cause.
 
 Identify what the button command is and which solution installed the bad definition.
 
-1. [Enable Command checker and select the command button to inspect](/troubleshoot/power-platform/power-apps/create-and-use-apps/ribbon-issues#use-commmand-checker).
+1. [Enable Command checker and select the command button to inspect](ribbon-issues.md#use-command-checker).
 1. Select the **Command Properties** tab to display the details of the command for this button.
 
     :::image type="content" source="media/ribbon-issues-button-not-working-correctly/command-properties.png" alt-text="Screenshot of the Command Properties tab of a button.":::
@@ -250,7 +250,7 @@ You might receive a script error message that resembles the following:
 
 This is caused by an invalid ribbon command customization that has declared an incorrect Library on the command's `JavaScriptFunction`.
 
-1. [Enable Command checker and select the command button to inspect](/troubleshoot/power-platform/power-apps/create-and-use-apps/ribbon-issues#use-commmand-checker).
+1. [Enable Command checker and select the command button to inspect](ribbon-issues.md#use-command-checker).
 1. The following example shows the **New** button on the account entity's form page is visible and is represented by an item labeled **New**.
 
     :::image type="content" source="media/ribbon-issues-button-not-working-correctly/new-button.png" alt-text="Screenshot shows the New button on the account entity's form page.":::
@@ -457,7 +457,7 @@ When a button is selected and an error occurs, it might be caused by an incorrec
 
 Let's identify what the button's command is and what solution installed the definition.
 
-1. [Enable Command checker and select the command button to inspect](/troubleshoot/power-platform/power-apps/create-and-use-apps/ribbon-issues#use-commmand-checker).
+1. [Enable Command checker and select the command button to inspect](ribbon-issues.md#use-command-checker).
 1. Select the **Command Properties** tab to display the details of the command for this button.
 
     :::image type="content" source="media/ribbon-issues-button-not-working-correctly/command-properties.png" alt-text="Screenshot of the Command Properties tab of the Delete button.":::

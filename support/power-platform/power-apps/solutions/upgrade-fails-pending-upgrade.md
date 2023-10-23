@@ -2,7 +2,7 @@
 title: Solution upgrade fails due to a previously pending upgrade
 description: Works around the solution upgrade failure due to a previously pending upgrade in Power Apps.
 ms.reviewer: jdaly
-ms.date: 10/09/2023
+ms.date: 10/10/2023
 author: swatimadhukargit
 ms.author: swatim
 ---
