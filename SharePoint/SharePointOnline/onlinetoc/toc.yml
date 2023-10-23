@@ -299,6 +299,8 @@
       href: ../sharing-and-permissions/request-approval-failed.md
     - name: Issue with activate or deactivate the Publishing feature
       href: ../sharing-and-permissions/activating-publishing-feature-access-error.md
+    - name: New guests can't access a SharePoint resource
+      href: ../sharing-and-permissions/error-selected-user-account-does-not-exist.md
     - name: No verification code to access shared secure link
       href: ../sharing-and-permissions/no-verification-code-to-access-shared-secure-link.md
     - name: Option isn't received to request access to resource
