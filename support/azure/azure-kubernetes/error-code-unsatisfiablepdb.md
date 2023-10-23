@@ -61,7 +61,7 @@ To resolve this issue, use one of the following solutions.
 
 3. Retry the AKS cluster upgrade operation.
 
-4. If the AKS cluster operation succeeds, re-deploy the PDB using the following command:
+4. If the AKS cluster upgrade operation succeeds, re-deploy the PDB using the following command:
 
 > ```console
 > $ kubectl apply -f pdb_backup.yaml
