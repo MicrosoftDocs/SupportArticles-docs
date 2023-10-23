@@ -62,6 +62,8 @@
         "developer/webapps/aspnet/**.*": "MSDocsHeader-AspNet",
         "developer/webapps/aspnetcore/**.*": "MSDocsHeader-AspNet",
         "developer/webapps/iis/**.*": "MSDocsHeader-Windows",
+        "devices/**.*": "MSDocsHeader-Surface",
+        "dynamics-365/**.*": "MSDocsHeader-Dynamics365",
         "dynamics-365/commerce/**.*": "MSDocsHeader-Dynamics365-Commerce",
         "dynamics-365/customer-insights/**.*": "MSDocsHeader-Dynamics365-Customer-Insights",
         "dynamics-365/customer-service/**.*": "MSDocsHeader-Dynamics365-CustomerService",
