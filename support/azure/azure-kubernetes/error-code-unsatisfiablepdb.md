@@ -29,11 +29,13 @@ Message: 1 error occurred:
 
 ## Cause
 
-Before allowing an upgrade operation to proceed, AKS will check the cluster for any existing Pod Disruption Budgets (PDBs) which have maxUnavailable=0, as such PDBs will likely block node drain operations and therefore prevent the cluster upgrade operation from completing successfuly, potentially leaving the cluster in a failed state.
+Before allowing an upgrade operation to proceed, AKS will check the cluster for any existing [Pod Disruption Budgets (PDBs)](https://kubernetes.io/docs/concepts/workloads/pods/disruptions/#pod-disruption-budgets) which have maxUnavailable=0, as such PDBs will likely block node drain operations and therefore prevent the cluster upgrade operation from completing successfuly, potentially leaving the cluster in a failed state.
 
 Upon receving the **UnsatisfiablePDB** error message you may confirm the PDB's status by running the following command:
 
-`kubectl get pdb <pdb-name> -n <pdb-namespace>`
+> ```console
+> $ kubectl get pdb <pdb-name> -n <pdb-namespace>
+> ```
 
 If the **Allowed Disruption** value is **0**, the node drain will fail during the upgrade process.
 
@@ -48,17 +50,24 @@ To resolve this issue, use one of the following solutions.
 
 1. Take a backup of the PDB using the following command:
 
-`kubectl get pdb <pdb-name> -n <pdb-namespace> -o yaml > pdb_backup.yaml`
+> ```console
+> $ kubectl get pdb <pdb-name> -n <pdb-namespace> -o yaml > pdb_backup.yaml
+> ```
 
-2. Delete the PDB with the following command:
+2. Delete the PDB using the following command:
 
-`kubectl delete pdb <pdb-name> -n <pdb-namespace>`
+> ```console
+> $ kubectl delete pdb <pdb-name> -n <pdb-namespace>
+> ```
 
 3. Retry the AKS cluster upgrade operation.
+
 4. If the AKS cluster operation succeeds, re-deploy the PDB using the following command:
 
-`kubectl apply -f pdb_backup.yaml`
- 
+> ```console
+> $ kubectl apply -f pdb_backup.yaml
+> ```
+
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
-
-
