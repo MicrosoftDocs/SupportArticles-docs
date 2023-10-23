@@ -2,7 +2,7 @@
 title: Image pull fails with managed identity authentication
 description: Troubleshoot why image pull fails with managed identity authentication
 ms.date: 10/17/2023
-ms.service: azure-container-instances
+ms.service: container-instances
 ms.subservice: common-issues
 keywords:
 #Customer intent:
