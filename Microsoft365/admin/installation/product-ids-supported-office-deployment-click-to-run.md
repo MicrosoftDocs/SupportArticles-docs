@@ -36,19 +36,27 @@ For more information about using these product IDs with the Office Deployment To
 
 The following table lists Office 365 and Microsoft 365 plan names and the correct product ID to use for that plan:
 
-|**Plan**          |**Product ID**      |
-|-----------------------------|--------------------|
-|Microsoft 365 Apps for enterprise           |`O365ProPlusRetail`   |
-|Office 365 Enterprise E3     |`O365ProPlusRetail`   |
-|Office 365 Enterprise E4     |`O365ProPlusRetail`   |
-|Office 365 Enterprise E5     |`O365ProPlusRetail`   |
-|Office 365 Midsize           |`O365ProPlusRetail`   |
-|Microsoft 365 Apps for business          |`O365BusinessRetail`  |
-|Microsoft 365 Business Standard |`O365BusinessRetail`  |
-|Office Small Business Premium|`O365SmallBusPremRetail` |
-|Microsoft 365 E3 | `O365ProPlusRetail`|
-|Microsoft 365 E5 | `O365ProPlusRetail` |
-|Microsoft 365 Business Premium | `O365BusinessRetail` |
+|**Plan**                                         |**Product ID**                     |
+|-------------------------------------------------|-----------------------------------|
+|Microsoft 365 Apps for enterprise                |`O365ProPlusEEANoTeamsRetail`      |
+|Office 365 Enterprise E3                         |`O365ProPlusRetail`                |
+|Office 365 Enterprise E4                         |`O365ProPlusRetail`                |
+|Office 365 Enterprise E5                         |`O365ProPlusRetail`                |
+|Office 365 Midsize                               |`O365ProPlusRetail`                |
+|Microsoft 365 Apps for business                  |`O365BusinessEEANoTeamsRetail`     |
+|Microsoft 365 Business Standard                  |`O365BusinessRetail`               |
+|Office Small Business Premium                    |`O365SmallBusPremRetail`           |
+|Microsoft 365 E3                                 |`O365ProPlusRetail`                |
+|Microsoft 365 E5                                 |`O365ProPlusRetail`                |
+|Microsoft 365 Business Premium                   |`O365BusinessRetail`               |
+|Office 365 E3                                    |`O365ProPlusRetail`                |
+|Office 365 E5                                    |`O365ProPlusRetail`                |
+|Office 365 E3 EEA (no Teams)                     |`O365ProPlusEEANoTeamsRetail`      |
+|Office 365 E5 EEA (no Teams)                     |`O365ProPlusEEANoTeamsRetail`      |
+|Microsoft 365 E3 EEA (no Teams)                  |`O365ProPlusEEANoTeamsRetail`      |
+|Microsoft 365 E5 EEA (no Teams)                  |`O365ProPlusEEANoTeamsRetail`      |
+|Microsoft 365 Business Standard EEA (no Teams)   |`O365BusinessEEANoTeamsRetail`     |
+|Microsoft 365 Business Premium EEA (no Teams)    |`O365BusinessEEANoTeamsRetail`     |
 
 In addition to these product IDs, the following non-Microsoft 365 product IDs are supported by this tool:
 
