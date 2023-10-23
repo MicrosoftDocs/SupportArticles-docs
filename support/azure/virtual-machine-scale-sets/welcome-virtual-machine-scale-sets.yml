@@ -80,7 +80,7 @@ landingContent:
         links:
           - text: Resource Health shows Degraded state in VMSS
             url:  resource-health-degraded-state.md
-          - text: VMSS instances remain in "Unhealthy" state and are not repaired
+          - text: VMSS instances remain in "Unhealthy" state and aren't repaired
             url:  instances-not-repaired.md
           - text: VM is unavailable for 15 minutes
             url:  ../virtual-machines/azure-vm-unavailable.md
