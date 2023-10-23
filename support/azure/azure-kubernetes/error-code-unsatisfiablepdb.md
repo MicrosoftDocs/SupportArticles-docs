@@ -28,9 +28,9 @@ Message: 1 error occurred:
 
 ## Cause
 
-Before allowing an upgrade operation to proceed, AKS will check the cluster for any existing [Pod Disruption Budgets (PDBs)](https://kubernetes.io/docs/concepts/workloads/pods/disruptions/#pod-disruption-budgets) which have maxUnavailable=0, as such PDBs will likely block node drain operations and therefore prevent the cluster upgrade operation from completing successfuly, potentially leaving the cluster in a failed state.
+Before allowing an upgrade operation to proceed, AKS will check the cluster for any existing [Pod Disruption Budgets (PDBs)](https://kubernetes.io/docs/concepts/workloads/pods/disruptions/#pod-disruption-budgets) which have maxUnavailable=0, as such PDBs will likely block node drain operations and therefore prevent the cluster upgrade operation from completing successfully, potentially leaving the cluster in a failed state.
 
-Upon receving the **UnsatisfiablePDB** error message you may confirm the PDB's status by running the following command:
+Upon receiving the **UnsatisfiablePDB** error message you may confirm the PDB's status by running the following command:
 
 > ```console
 > $ kubectl get pdb <pdb-name> -n <pdb-namespace>
