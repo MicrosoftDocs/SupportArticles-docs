@@ -1,7 +1,7 @@
 ---
 title: Enable TLS 1.2 support as Azure AD TLS 1.0/1.1 is deprecated
 description: This article describes how to enable support for TLS 1.2 in your environment, in preparation for upcoming Azure AD TLS 1.0/1.1 deprecation.
-ms.date: 10/12/2023
+ms.date: 10/23/2023
 ms.reviewer: dahans, abizerh, v-leedennis, v-weizhu
 ms.service: active-directory
 ms.subservice: authentication
@@ -156,7 +156,7 @@ To check which TLS protocol is being used by using Internet Properties, follow t
 
 ## Update and configure .NET Framework to support TLS 1.2 <a name="update-configure-tls-12"></a>
 
-Managed Azure AD-integrated applications and Windows PowerShell scripts (using [Microsoft Graph PowerShell](/powershell/microsoftgraph/overview), [Microsoft Graph](https://graph.microsoft.com)) may use .NET Framework.
+Managed Azure AD-integrated applications and Windows PowerShell scripts (using [Microsoft Graph PowerShell](/powershell/microsoftgraph/overview) and [Microsoft Graph](https://graph.microsoft.com)) may use .NET Framework.
 
 ### Install .NET updates to enable strong cryptography
 
