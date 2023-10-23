@@ -2,7 +2,7 @@
 title: Troubleshoot date and time issues in canvas apps
 description: Helps troubleshoot date and time issues in Power Apps canvas apps.
 author: tahoon
-ms.date: 10/19/2023
+ms.date: 10/23/2023
 ms.author: tahoon
 search.audienceType: 
   - maker
