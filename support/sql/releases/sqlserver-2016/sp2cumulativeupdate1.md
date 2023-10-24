@@ -13,7 +13,7 @@ appliesto:
 _Release Date:_ &nbsp; May 30, 2018  
 _Version:_ &nbsp; 13.0.5149.0
 
-This article describes Cumulative Update package 1 (CU1) (build number: **13.0.5149.0**) for Microsoft SQL Server 2016 Service Pack 2 (SP2). This update contains [fixes](#additional-hotfixes-that-are-included-in-this-cumulative-update-package) that were released after the initial release of SQL Server 2016 SP2.
+This article describes Cumulative Update package 1 (CU1) (build number: **13.0.5149.0**) for Microsoft SQL Server 2016 Service Pack 2 (SP2). This update contains [fixes](#hotfixes-that-are-included-in-this-cumulative-update-package) that were released after the initial release of SQL Server 2016 SP2.
 
 ## Cumulative update
 
@@ -75,7 +75,7 @@ If the download page doesn't appear, contact [Microsoft Customer Service and Sup
 | <a id="11983394">[11983394](#11983394)</a> | [FIX: An access violation occurs when incremental statistics are automatically updated on a table in SQL Server (KB4163478)](https://support.microsoft.com/help/4163478) | SQL performance |
 | <a id="11983386">[11983386](#11983386)</a> | [FIX: TDE-enabled backup and restore operations are slow if the encryption key is stored in an EKM provider in SQL Server (KB4058175)](https://support.microsoft.com/help/4058175) | SQL security |
 | <a id="11983381">[11983381](#11983381)</a> | FIX: TDE database goes offline during log flush operations when connectivity issues cause the EKM provider to become inaccessible in SQL Server (KB4293839) | SQL security |
-| <a id="11983391">[11983391](#11983391)</a> | [Performance issues occur in the form of PAGELATCH_EX and PAGELATCH_SH waits in TempDB when you use SQL Server 2016 (KB4131193)](https://support.microsoft.com/help4131193) | SQL Engine |
+| <a id="11983391">[11983391](#11983391)</a> | [Performance issues occur in the form of PAGELATCH_EX and PAGELATCH_SH waits in TempDB when you use SQL Server 2016 (KB4131193)](https://support.microsoft.com/help/4131193) | SQL Engine |
 
 ## Notes for this update
 

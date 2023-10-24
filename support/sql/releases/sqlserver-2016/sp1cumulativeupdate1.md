@@ -13,7 +13,7 @@ appliesto:
 _Release Date:_ &nbsp; January 18, 2017  
 _Version:_ &nbsp; 13.0.4411.0
 
-This article describes cumulative update package 1 (build number: 13.0.4411.0) for Microsoft SQL Server 2016 Service Pack 1 (SP1). This update contains [fixes](#additional-hotfixes-that-are-included-in-this-cumulative-update-package) that were released after the release of SQL Server 2016 SP1.
+This article describes cumulative update package 1 (build number: 13.0.4411.0) for Microsoft SQL Server 2016 Service Pack 1 (SP1). This update contains [fixes](#hotfixes-that-are-included-in-this-cumulative-update-package) that were released after the release of SQL Server 2016 SP1.
 
 ## Cumulative update
 
@@ -32,7 +32,7 @@ Only the most recent CU that was released for SQL Server 2016 SP1 is available a
 > [!NOTE]
 > After you apply this update, Database Mail does not work on computers that do not have the .NET Framework 3.5 installed. Microsoft is currently working on addressing this in a future cumulative update. See the following KB article for more information about affected builds and suggested workarounds:
 >
-> [FIX: SQL Server 2016 Database Mail does not work on a computer that does not have the .NET Framework 3.5 installed](https://support.microsoft.com/help/3186453)
+> [FIX: SQL Server 2016 Database Mail does not work on a computer that does not have the .NET Framework 3.5 installed](https://support.microsoft.com/help/3186435)
 
 ## How to obtain this cumulative update package
 

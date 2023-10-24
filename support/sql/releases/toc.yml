@@ -330,7 +330,7 @@ items:
   - name: Service Pack 2
     items:
     - name: Service Pack 2 (KB4052908)
-      href: sqlserver-2016/servicepack2.md.md
+      href: sqlserver-2016/servicepack2.md
   - name: SP 1 Cumulative Update 6
     items:
     - name: SP 1 Cumulative Update 6 (KB4037354)
@@ -358,7 +358,7 @@ items:
   - name: Service Pack 1
     items:
     - name: Service Pack 1 (KB3182545)
-      href: sqlserver-2016/servicepack1.md.md
+      href: sqlserver-2016/servicepack1.md
   - name: Cumulative Update 9
     items:
     - name: Cumulative Update 9 (KB4037357)
