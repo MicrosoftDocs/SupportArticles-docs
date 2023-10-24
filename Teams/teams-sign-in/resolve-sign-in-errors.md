@@ -32,8 +32,7 @@ If your users encounter errors when they try to sign in to Microsoft Teams, use 
    > [Run Tests: Teams Sign-in](https://aka.ms/TeamsSignInDiag)
 1. In the **User Name or Email Address field**, enter the email address of the user who's experiencing the Teams sign-in issue.
 
-
-## Use the Microsoft Support and Recovery Assistant (SaRA) 
+## Use the Microsoft Support and Recovery Assistant (SaRA)
 
 If the diagnostic doesn't detect any issue, but you still can't sign in to Teams, or you don't have a Microsoft 365 administrator account, select the button below to download SaRA and automatically start the tests. For more information about SaRA, see [About the Microsoft Support and Recovery Assistant](https://support.microsoft.com/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f).
 
