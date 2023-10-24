@@ -58,6 +58,7 @@
         "developer/browsers/**.*": "MSDocsHeader-MSEdge",
         "developer/dotnet/**.*": "MSDocsHeader-DotNet",
         "developer/host-integration-server/**.*": "MSDocsHeader-His",
+        "developer/visualstudio/**.*": "MSDocsHeader-VisualStudio",
         "developer/webapps/**.*": "MSDocsHeader-AspNet",
         "developer/webapps/aspnet/**.*": "MSDocsHeader-AspNet",
         "developer/webapps/aspnetcore/**.*": "MSDocsHeader-AspNet",
