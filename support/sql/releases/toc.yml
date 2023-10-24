@@ -295,6 +295,10 @@ items:
   items:
   - name: SQL Server 2016 build versions
     href: sqlserver-2016/build-versions.md
+  - name: Cumulative Update 5
+    items:
+    - name: Cumulative Update 5 (KB4013105)
+      href: sqlserver-2016/cumulativeupdate5.md
 - name: SQL Server 2014
   items:
   - name: SQL Server 2014 build versions
