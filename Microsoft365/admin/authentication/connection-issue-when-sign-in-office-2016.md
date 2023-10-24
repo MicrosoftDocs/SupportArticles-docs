@@ -56,7 +56,7 @@ To determine whether you're experiencing this kind of issue, follow these steps:
 
 1. Make sure that you're running Office build 16.0.9126.2259 or a later build. (The latest build on your channel is great. See the [general guidance](#general-guidance) in the [Overview](#overview) section.)
 2. Open Event Viewer.
-3. Go to **Applications and Services Logs** > **Microsoft** > **Windows** > **AAD**.
+3. Go to **Applications and Services Logs** > **Microsoft** > **Windows** > **Microsoft Entra ID**.
 4. In the Operational logs, locate messages from XMLHTTPWebRequest that have the following pattern:
 
     ```AsciiDoc
@@ -71,7 +71,7 @@ Then, to determine whether your issue is due to network environment or local fir
   
 1. Open Edge (not Internet Explorer) in InPrivate mode and go to [https://login.microsoftonline.com](https://login.microsoftonline.com). After you enter credentials, navigation should land on [https://www.office.com](https://www.office.com) or your company's default landing page. If this fails, the issue is in a network environment or local firewall/antivirus software.
 
-To resolve this issue, make sure that your local firewall, antivirus software, and Windows Defender don't block the following AAD WAM plug-in processes that engaged in token acquisition:
+To resolve this issue, make sure that your local firewall, antivirus software, and Windows Defender don't block the following Microsoft Entra WAM plug-in processes that engaged in token acquisition:
 
 C:\Windows\SystemApps\Microsoft.AAD.BrokerPlugin_cw5n1h2txyewy\Microsoft.AAD.BrokerPlugin.exe
 
@@ -93,7 +93,7 @@ When you try to open or save a document in Microsoft SharePoint Online, OneDrive
 
 - The Trusted Platform Module (TPM) chip or firmware is malfunctioning. Windows uses the TPM chip to protect your credentials. The chip may become corrupted or reset in some conditions. To determine whether you are experiencing this kind of issue, follow these steps:  
   1. Open Event Viewer.
-  2. Go to **Applications and Services Logs** > **Microsoft** > **Windows** > **AAD**.
+  2. Go to **Applications and Services Logs** > **Microsoft** > **Windows** > **Microsoft Entra ID**.
   3. In the Operational logs, locate the errors that display the following pattern:
 0x?**028**????, 0x?**029**???? or 0x?**009**????
 
@@ -101,19 +101,19 @@ When you try to open or save a document in Microsoft SharePoint Online, OneDrive
 
    **For Windows 10, version 1709 or later versions:** The operating system automatically detects situations that are related to TPM failures and provides a user recovery process that should occur automatically. If this process doesn't occur automatically, we recommend that you use [this manual recovery](#manual-recovery) method.
 
-   **For Windows 10, version 1703:** An automatic process is provided for Hybrid Azure AD join. No automatic process is provided for other environment configurations. If the Hybrid Azure AD join process doesn't occur automatically, we recommend that you use [this manual recovery](#manual-recovery) method.
+   **For Windows 10, version 1703:** An automatic process is provided for Microsoft Entra hybrid join. No automatic process is provided for other environment configurations. If the Microsoft Entra hybrid join process doesn't occur automatically, we recommend that you use [this manual recovery](#manual-recovery) method.
 - A device is disabled by the user, the Enterprise administrator, or a policy because of a security concern or by mistake. To determine whether you are experiencing this issue, follow these steps:  
   1. Open Event viewer.
-  2. Go to **Applications and Services Logs** > **Microsoft** > **Windows** > **AAD**.
+  2. Go to **Applications and Services Logs** > **Microsoft** > **Windows** > **Microsoft Entra ID**.
   3. In the Operational logs, locate the following message:
 
     **Description: AADSTS70002: Error validating credentials. AADSTS135011: Device used during the authentication is disabled.**
 
-    To resolve this issue, we recommend that the Enterprise administrator enable the device in Active Directory or Azure Active Directory (Azure AD). For information about how to manage devices in Azure AD, see the [Device management tasks](/azure/active-directory/devices/device-management-azure-portal#device-management-tasks) section of the "How to manage devices using the Azure portal" topic.
+    To resolve this issue, we recommend that the Enterprise administrator enable the device in Active Directory or Microsoft Entra ID. For information about how to manage devices in Microsoft Entra ID, see the [Device management tasks](/azure/active-directory/devices/device-management-azure-portal#device-management-tasks) section of the "How to manage devices using the Azure portal" topic.
 
 - The Enterprise administrator or a policy deleted a device because of a security reason or by mistake. To verify that you are experiencing this issue, follow these steps:  
   1. Open Event viewer.
-  2. Go to **Applications and Services Logs** > **Microsoft** > **Windows** > **AAD**.
+  2. Go to **Applications and Services Logs** > **Microsoft** > **Windows** > **Microsoft Entra ID**.
   3. In the Operational logs, locate the following message:
 
     **Description: AADSTS70002: Error validating credentials. AADSTS50155: Device is not authenticated.**
@@ -122,9 +122,9 @@ When you try to open or save a document in Microsoft SharePoint Online, OneDrive
 
 #### Manual recovery
 
-To do a manual recovery of the computer, follow the appropriate steps, depending on how the device is joined to the cloud (Hybrid Azure AD join, Add a work account, or Azure AD join).
+To do a manual recovery of the computer, follow the appropriate steps, depending on how the device is joined to the cloud (Microsoft Entra hybrid join, Add a work account, or Microsoft Entra join).
 
-- **Hybrid Azure AD join**
+- **Microsoft Entra hybrid join**
 
     Run the following command: ​​`>dsregcmd /status`
 
@@ -157,7 +157,7 @@ To do a manual recovery of the computer, follow the appropriate steps, depending
     **Recovery (safe to do):**
 
     Remove the work account in **Setting** > **Accounts** > **Access work or school**, and then restore the work account.
-- **Azure AD join**
+- **Microsoft Entra join**
 
     Run the following command:   `>dsregcmd /status`
 
@@ -168,13 +168,13 @@ To do a manual recovery of the computer, follow the appropriate steps, depending
     DomainJoined : NO
     ```
 
-    The current logon user should be an Azure Active Directory (AAD) user. The affected identity should be the current logon user.
+    The current logon user should be a Microsoft Entra user. The affected identity should be the current logon user.
 
     **Recovery:**
 
     **Note** Back up your data first.
 
-    Create a new local administrator. Disconnect from the domain (**Setting** > **Accounts** > **Access work or school** > **Disconnect**). Then, log on as the new local administrator, and reconnect to Azure AD.
+    Create a new local administrator. Disconnect from the domain (**Setting** > **Accounts** > **Access work or school** > **Disconnect**). Then, log on as the new local administrator, and reconnect to Microsoft Entra ID.
 
 ### Symptom 3
 
@@ -185,7 +185,7 @@ The Office sign-in workflow stops or shows no on-screen progress. The sign-in wi
 This issue occurs because WAM is disabling non-HTTPS traffic to prevent security threats, such as someone stealing user credentials. To verify that you are experiencing this issue, follow these steps:
 
 1. Open Event viewer.
-2. Go to **Applications and Services Logs** > **Microsoft** > **Windows** > **AAD**.
+2. Go to **Applications and Services Logs** > **Microsoft** > **Windows** > **Microsoft Entra ID**.
 3. In the Operational logs, locate the following message:
 
     > Navigation to non-SSL destination. Non-secure communication is prohibited. Canceling navigation.

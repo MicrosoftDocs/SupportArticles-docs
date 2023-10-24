@@ -57,7 +57,7 @@ Did this fix the problem?
 
 - Check whether the problem is fixed.
   - If the problem is fixed, you are finished with these steps.    
-  - If the problem is not fixed, go to the [Microsoft Community](https://answers.microsoft.com/), the [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website, or [contact support](https://support.microsoft.com/contactus).   
+  - If the problem is not fixed, go to the [Microsoft Community](https://answers.microsoft.com/), the [Microsoft Entra Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website, or [contact support](https://support.microsoft.com/contactus).   
    
 - We would appreciate your feedback. To provide feedback or to report any issues with this solution, please send us an [email](mailto:fixit4me@microsoft.com?subject=kb) message.   
 
@@ -68,4 +68,4 @@ For more information about related technical issues, see the following Microsoft
 
 [2637629](https://support.microsoft.com/help/2637629) How to troubleshoot non-browser apps that can't sign in to Microsoft 365, Azure, or Intune
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Microsoft Entra Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.

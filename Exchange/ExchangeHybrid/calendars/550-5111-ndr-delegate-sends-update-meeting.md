@@ -33,8 +33,8 @@ In this scenario, the delegate receives a non-delivery report that includes the 
 
 ## Cause
 
-The **legacyExchangeDN** attribute value of the invitee's cloud object is stored in the calendar item. If the Azure Active Directory Connect (AAD Connect) Exchange hybrid deployment settings aren't enabled, the **legacyExchangeDN** attribute values in the cloud aren't written back to the on-premises.
+The **legacyExchangeDN** attribute value of the invitee's cloud object is stored in the calendar item. If the Microsoft Entra Connect (Microsoft Entra Connect) Exchange hybrid deployment settings aren't enabled, the **legacyExchangeDN** attribute values in the cloud aren't written back to the on-premises.
 
 ## Resolution
 
-To resolve this issue, enable the Exchange hybrid deployment settings in AAD Connect. For more information, see [Exchange hybrid writeback](/azure/active-directory/connect/active-directory-aadconnectsync-attributes-synchronized#exchange-hybrid-writeback).
+To resolve this issue, enable the Exchange hybrid deployment settings in Microsoft Entra Connect. For more information, see [Exchange hybrid writeback](/azure/active-directory/connect/active-directory-aadconnectsync-attributes-synchronized#exchange-hybrid-writeback).

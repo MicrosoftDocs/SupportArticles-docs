@@ -158,7 +158,7 @@ When prompted, select **Allow my organization to manage my device**. When the pr
 A Microsoft 365 admin can try the following steps to solve the problem.
 
 1. Sign in to the [Microsoft 365 admin center](https://admin.microsoft.com).
-1. Navigate to **Azure Active Directory Admin Center** > **Azure Active Directory** > **Devices**.
+1. Navigate to **Microsoft Entra Admin Center** > **Microsoft Entra ID** > **Devices**.
 1. Check the disabled device list for the device, select it, and choose **Enable**.
 
 </details>

@@ -31,7 +31,7 @@ Select the **Run Tests** link. This will populate the diagnostic in the Microsof
 > [!div class="nextstepaction"]
 > [Run Tests: Teams Federation](https://aka.ms/TeamsFederationDiag)
 
-If you have imported contacts from a federated partner tenant into Azure Active Directory (Azure AD) or Exchange Online, the contacts might not appear in Microsoft Teams contact searches.
+If you have imported contacts from a federated partner tenant into Microsoft Entra ID or Exchange Online, the contacts might not appear in Microsoft Teams contact searches.
 
 This problem occurs because Teams uses contacts in your organization's Active Directory and contacts that are added to your Outlook default folder.
 

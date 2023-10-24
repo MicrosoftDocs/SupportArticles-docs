@@ -32,7 +32,7 @@ The Secure Sockets Layer (SSL) certificate or the token-signing certificate is a
 
 To resolve this issue, follow these steps:
 
-1. Install the Microsoft Azure Active Directory Module for Windows PowerShell on the computer (if the module isn't already installed).  
+1. Install the Microsoft Azure Active Directory module for Windows PowerShell on the computer (if the module isn't already installed).  
 2. Follow the steps in the "Scenario 1: The AD FS token-signing certificate expired" section in ["There was a problem accessing the site" error from AD FS when a federated user signs in to Microsoft 365, Azure, or Intune](https://support.microsoft.com/help/2713898).   
 3. Follow the steps in [How to update or repair the settings of a federated domain in Microsoft 365, Azure, or Intune ](https://support.microsoft.com/help/2647048).   
 

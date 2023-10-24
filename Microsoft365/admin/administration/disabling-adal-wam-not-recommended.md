@@ -3,7 +3,7 @@ title: Disabling ADAL or WAM to fix Office sign-in or activation issues not reco
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 04/24/2020
+ms.date: 10/20/2023
 audience: Admin
 ms.topic: troubleshooting
 localization_priority: Normal
@@ -16,17 +16,17 @@ ms.custom:
   - CI 117023
   - CSSTroubleshoot
 ms.reviewer: MS aliases for tech reviewers and CI requestor, without @microsoft.com.
-description: Explains why disabling ADAL or WAM authentication to fix Office sign-in issues is not recommended and offers possible resolutions.
+description: Explains why disabling ADAL or WAM authentication to fix Office sign-in issues isn't recommended and offers possible resolutions.
 ---
 
-# Disabling ADAL or WAM not recommended for fixing Office sign-in or activation issues
+# Disabling ADAL or WAM isn't recommended for fixing Office sign-in or activation issues
 
 ## Summary
 
 > [!TIP]
 > To diagnose and automatically fix several common Office sign-in issues, you can download and run the [Microsoft Support and Recovery Assistant](https://aka.ms/SaRA-OfficeSignInScenario).
 
-Disabling ADAL or WAM authentication as a solution to fix sign-in or activation issues can have adverse effects in your environment and **is not recommended**.
+Disabling ADAL or WAM authentication as a solution to fix sign-in or activation issues can have adverse effects in your environment and **isn't recommended**.
 
 ## More information
 
@@ -47,13 +47,13 @@ If you experience sign-in issues, consider the following recommendations:
 1. [Manually sign-out](https://support.office.com/article/sign-out-of-office-5a20dc11-47e9-4b6f-945d-478cb6d92071) of all accounts in the Office app, then restart the app and sign-in again.
 2. [Reset the Office activation state](/microsoft-365/troubleshoot/activation/reset-office-365-proplus-activation-state).
 3. If you experience device issues, for example, the device is deleted or disabled, [follow these recommendations](../authentication/connection-issue-when-sign-in-office-2016.md#symptom-2).
-4. If the investigation suggests that an authentication process is experiencing network or connectivity issues, then [these steps](../authentication/connection-issue-when-sign-in-office-2016.md#symptom-1) will be helpful. Additionally, you can reset Internet Explorer Options, and then try signing into Office again (go to **Tools** > **Internet Options** > **Advanced** > **Reset Internet Explorer Settings**). After resetting Internet Explorer Settings, you will lose any custom settings.
-5. In some cases, Microsoft Azure Active Directory, or MSA WAM plugins may be missing on the device that blocks user from signing into Office. Follow the steps in [Fix authentication issues in Office applications when you try to connect to a Microsoft 365 service](../authentication/automatic-authentication-fails.md) to restore the plugins and avoid removing them in future.
+4. If the investigation suggests that an authentication process is experiencing network or connectivity issues, then [these steps](../authentication/connection-issue-when-sign-in-office-2016.md#symptom-1) are helpful. Additionally, you can reset Internet Explorer Options, and then try signing into Office again (go to **Tools** > **Internet Options** > **Advanced** > **Reset Internet Explorer Settings**). After resetting Internet Explorer Settings, you'll lose any custom settings.
+5. In some cases, Microsoft Entra ID, or MSA WAM plugins may be missing on the device that blocks user from signing into Office. Follow the steps in [Fix authentication issues in Office applications when you try to connect to a Microsoft 365 service](../authentication/automatic-authentication-fails.md) to restore the plugins and avoid removing them in the future.
 6. See [Connection issues in sign-in after update to Office 2016 build 16.0.7967](../authentication/connection-issue-when-sign-in-office-2016.md) on Windows 10 for information about troubleshooting other commonly occurring sign-in issues.
 
 For more information about sign-in related symptoms and solutions, see the following articles:
 
-- [Azure Active Directory device management FAQ](/azure/active-directory/devices/faq)
+- [Microsoft Entra device management FAQ](/azure/active-directory/devices/faq)
 - [Troubleshooting devices using the dsregcmd command](/azure/active-directory/devices/troubleshoot-device-dsregcmd)
 - [How to troubleshoot non-browser apps that can't sign in-to Microsoft 365, Azure, or Intune](https://support.office.com/article/how-to-troubleshoot-non-browser-apps-that-can-t-sign-in-to-office-365-azure-or-intune-3ba1b268-66f6-462c-b0e5-070f5c2603c1)
 - ["Access Denied", or user is repeatedly prompted for credentials when connecting to Microsoft 365](/microsoft-365/troubleshoot/security/access-denied-when-connect-to-office-365)

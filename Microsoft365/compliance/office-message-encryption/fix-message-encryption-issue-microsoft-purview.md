@@ -72,7 +72,7 @@ The affected users have to make sure that the account that they use to sign in t
    1. Open **Control Panel** > **User Accounts** > **Credential Manager**.
    1. Select **Windows Credentials**.
    1. Remove all Outlook or Office credentials by expanding each credential and then selecting **Remove**.
-1. If the device isn't Azure AD-joined, remove the unlicensed account from the device:
+1. If the device isn't Microsoft Entra joined, remove the unlicensed account from the device:
 
    1. Select **Start** > **Settings** > **Accounts** > **Access work or school**.
    1. Select the account to be removed, and then select **Disconnect**.
@@ -102,5 +102,5 @@ If the issue persists after you complete all these steps, [contact Microsoft Sup
 
 ## More information
 
-- If users in your organization experience issues when they send encrypted messages to or receive encypted messages from people outside your organization, check the Conditional Access policies and guest account configuration in both organizations. For more information, see [Azure AD configuration for encrypted content](/microsoft-365/compliance/encryption-azure-ad-configuration?view=o365-worldwide&preserve-view=true) and [Conditional Access policies for Azure Information Protection](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/conditional-access-policies-for-azure-information-protection/ba-p/250357).
+- If users in your organization experience issues when they send encrypted messages to or receive encypted messages from people outside your organization, check the Conditional Access policies and guest account configuration in both organizations. For more information, see [Microsoft Entra configuration for encrypted content](/microsoft-365/compliance/encryption-azure-ad-configuration?view=o365-worldwide&preserve-view=true) and [Conditional Access policies for Azure Information Protection](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/conditional-access-policies-for-azure-information-protection/ba-p/250357).
 - Users can open encrypted email messages that are sent to a shared mailbox. If the message is sent from the same organization, users can open it when they're signed in to a supported Outlook client. If the message is sent from an external organization, users must use Outlook on the web. For more information, see [Message encryption FAQ](/microsoft-365/compliance/ome-faq?view=o365-worldwide#can-i-open-encrypted-messages-sent-to-a-shared-mailbox-&preserve-view=true).

@@ -55,4 +55,4 @@ For more info about Windows Server Essentials and Microsoft 365, see the followi
 - [How to create a service integration add-in for Windows Server Essentials Experience](/archive/blogs/sbs/how-to-create-a-service-integration-add-in-for-windows-server-essentials-experience)
 - [Manage online accounts for Windows Server Essentials users](/previous-versions/windows/it-pro/windows-server-essentials-sbs/dn737016(v=ws.11))
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Microsoft Entra Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.

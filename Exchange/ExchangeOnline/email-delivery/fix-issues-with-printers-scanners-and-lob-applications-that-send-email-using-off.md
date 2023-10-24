@@ -148,14 +148,14 @@ There are a few things you should check:
    > Don't do this step unless you understand the risks that are involved.
 
    - Sign in to the Azure portal as a Security administrator, Conditional Access administrator, or Global administrator.
-   - Browse to **Azure Active Directory** \> **Properties**.
+   - Browse to **Microsoft Entra ID** \> **Properties**.
    - Select **Manage security defaults**.
    - Set the **Enable security defaults** toggle to **No**.
    - Select **Save**.
 
 4. Exclude the user from a [Conditional Access policy](/azure/active-directory/conditional-access/overview) that [blocks Legacy Authentication](/azure/active-directory/conditional-access/block-legacy-authentication):
    - Sign in to the Azure portal as a Security administrator, Conditional Access administrator, or Global administrator.
-   - Browse to **Azure Active Directory** \> **Security** \> **Conditional Access**.
+   - Browse to **Microsoft Entra ID** \> **Security** \> **Conditional Access**.
    - In the policy that blocks Legacy Authentication, exclude the mailbox being used under **Users and Groups** > **Exclude**.
    - Select **Save**.
 

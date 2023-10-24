@@ -171,7 +171,7 @@ If WIP is configured, you might encounter error code 0x80070164 when trying to a
 <summary><b>Make sure Virtual Desktop Infrastructure (VDI) is configured correctly</b></summary>
 
 If you are using VDI, make sure your Microsoft 365 credentials are not roamed. 
-If you are using non-persistent VDI, set up Seamless Single Sign On (SSO). For more information, see [Azure Active Directory Seamless Single Sign-On](/azure/active-directory/hybrid/how-to-connect-sso).
+If you are using non-persistent VDI, set up Seamless Single Sign On (SSO). For more information, see [Microsoft Entra seamless single sign-on](/azure/active-directory/hybrid/how-to-connect-sso).
 <br/><br/>
 </details>
 

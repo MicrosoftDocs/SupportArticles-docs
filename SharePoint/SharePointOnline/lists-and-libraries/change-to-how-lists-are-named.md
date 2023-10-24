@@ -25,7 +25,7 @@ Modern List creation is an update to the Microsoft Lists, Microsoft Teams, and S
 
 Users can update previously created lists by following these steps:
 
-## Step 1. Add the "Item” content type to the list.
+## Step 1: Add the "Item” content type to the list.
 
 
 
@@ -39,19 +39,19 @@ Users can update previously created lists by following these steps:
 
     :::image type="content" source="media/change-to-how-lists-are-named/add-item-content-type.png" alt-text="Screenshot to select and add the Item content type to the list.":::
  
-## Step 2. Make "Item” the default, and hide the old default content type.
+## Step 2: Make "Item” the default, and hide the old default content type.
 
 1.	Select **Change new button order and default content type**.
 2.	Set the position of “Item” as **1**. Clear the check box beneath **Visible** for any other content type to hide that content type (such as “Content scheduler” in the example below).
 
     :::image type="content" source="media/change-to-how-lists-are-named/set-item-content-type-1.png" alt-text="Screenshot to set the position of the Item content type as 1.":::
  
-## Step 3. Copy all fields from the old default content type to the new default content type.
+## Step 3: Copy all fields from the old default content type to the new default content type.
 
 1.	Select the “Item” content type, and then select **Add from existing site or list columns**.
 2.	Add all the columns that are required, and then adjust the column ordering, as necessary.
 
-## Step 4. Move all items from the old default content type to the new "Item” default content type.
+## Step 4: Move all items from the old default content type to the new "Item” default content type.
 
 To do this, bulk edit all list items. 
 

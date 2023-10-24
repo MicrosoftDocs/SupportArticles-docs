@@ -30,10 +30,10 @@ This issue occurs because the `publicDelegates` attribute (`GrantSendOnBehalfTo`
 
 ## Resolution
 
-To automatically write back the send on behalf (`publicDelegates`) attribute, the user must enable the Azure Active Directory (Azure AD) Connect Exchange hybrid deployment settings and must be running version 1.1.553 or a later version. For more information, see the following articles:
+To automatically write back the send on behalf (`publicDelegates`) attribute, the user must enable the Microsoft Entra Connect Exchange hybrid deployment settings and must be running version 1.1.553 or a later version. For more information, see the following articles:
 
 - [Exchange hybrid writeback](/azure/active-directory/hybrid/reference-connect-sync-attributes-synchronized#exchange-hybrid-writeback)
-- [Azure AD Connect Version 1.1.553.0](/azure/active-directory/hybrid/reference-connect-version-history#115530)
+- [Microsoft Entra Connect Version 1.1.553.0](/azure/active-directory/hybrid/reference-connect-version-history#115530)
 
 As a workaround, an administrator can manually add the **send on behalf** permission by using Remote PowerShell. To do this, run the following cmdlet:
 

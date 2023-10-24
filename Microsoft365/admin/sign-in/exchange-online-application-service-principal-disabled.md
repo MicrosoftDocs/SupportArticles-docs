@@ -37,7 +37,7 @@ This issue occurs if the Service Principal for the Exchange Online application i
 
 Before you follow these steps, make sure that the following prerequisites are met:
 
-- Install the Azure Active Directory Module for Windows PowerShell. For more information, go to [Connect to Microsoft 365 PowerShell](/office365/enterprise/powershell/connect-to-office-365-powershell
+- Install the Azure Active Directory module for Windows PowerShell. For more information, go to [Connect to Microsoft 365 PowerShell](/office365/enterprise/powershell/connect-to-office-365-powershell
 ).
 - The steps are performed by a Microsoft 365 global administrator.
 

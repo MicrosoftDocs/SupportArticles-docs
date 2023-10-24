@@ -170,7 +170,7 @@ The [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-ai
 
 Verfy that the appropriate permissions are defined correctly in the Azure portal.
 
-For more information, see [Create and configure Azure AD applications for Set-AIPAuthentication](/azure/information-protection/rms-client/clientv2-admin-guide-powershell#create-and-configure-azure-ad-applications-for-set-aipauthentication).
+For more information, see [Create and configure Microsoft Entra applications for Set-AIPAuthentication](/azure/information-protection/rms-client/clientv2-admin-guide-powershell#create-and-configure-azure-ad-applications-for-set-aipauthentication).
 
 ### Authentication token missing
 
@@ -199,7 +199,7 @@ Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "
 Acquired application access token on behalf of CONTOSO\scanner.
 ```
 
-For more information, see [Get an Azure AD token for the scanner](/microsoft-365/compliance/deploy-scanner-configure-install#get-an-azure-ad-token-for-the-scanner).
+For more information, see [Get a Microsoft Entra token for the scanner](/microsoft-365/compliance/deploy-scanner-configure-install#get-an-azure-ad-token-for-the-scanner).
 
 ### Policy missing
 

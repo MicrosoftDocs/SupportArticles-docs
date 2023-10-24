@@ -1,6 +1,6 @@
 ---
-title: Cannot add Exchange license in Azure AD Connect
-description: Fixes an issue in which you encounter issues when you try to add an Exchange license in Azure AD Connect for Microsoft 365.
+title: Cannot add Exchange license in Microsoft Entra Connect
+description: Fixes an issue in which you encounter issues when you try to add an Exchange license in Microsoft Entra Connect for Microsoft 365.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -17,17 +17,17 @@ appliesto:
 search.appverid: MET150
 ms.date: 03/31/2022
 ---
-# Can't add Exchange license in Azure AD Connect for Microsoft 365
+# Can't add Exchange license in Microsoft Entra Connect for Microsoft 365
 
 _Original KB number:_ &nbsp; 4052036
 
 ## Symptoms
 
-You receive an error message when you try to add an Exchange license in Azure Active Directory (Azure AD) for Microsoft 365.
+You receive an error message when you try to add an Exchange license in Microsoft Entra ID for Microsoft 365.
 
 ## Resolution
 
-There are two Windows Azure Active Directory modules to administer Azure AD through PowerShell. Both are supported currently.
+There are two Windows Azure Active Directory modules to administer Microsoft Entra ID through PowerShell. Both are supported currently.
 
 - MSOL - For more information about MSOL module, see the following articles:
 
@@ -40,7 +40,7 @@ There are two Windows Azure Active Directory modules to administer Azure AD thro
 
 This issue can occur under different circumstances.
 
-- If you receive an error message when assigning a new license, confirm that the object exists in the Azure AD by using the Azure AD PowerShell module. A `UsageLocation` parameter is required and has to be populated. For example:
+- If you receive an error message when assigning a new license, confirm that the object exists in the Microsoft Entra ID by using the Azure AD PowerShell module. A `UsageLocation` parameter is required and has to be populated. For example:
 
   ```powershell
   Get-MsolUser -SearchString <userPrinicipalName or DisplayName> | fl UsageLocation
@@ -57,9 +57,9 @@ This issue can occur under different circumstances.
 - If DirSync errors are present on an object, you may receive an error message when you try to change the license for the object, including adding or removing features. Check for DirSync errors by using the following support articles:
 
   - [View directory synchronization errors in Microsoft 365](/microsoft-365/enterprise/identify-directory-synchronization-errors?view=o365-worldwide&preserve-view=true)
-  - [How to identify DirSync or Azure AD Connect provisioning errors in Microsoft 365](https://support.microsoft.com/help/4040885)
+  - [How to identify DirSync or Microsoft Entra Connect provisioning errors in Microsoft 365](https://support.microsoft.com/help/4040885)
 
   For more information about how to troubleshoot, see the following articles:
 
   - [Troubleshooting Errors during synchronization](/azure/active-directory/hybrid/tshoot-connect-sync-errors)
-  - [Troubleshoot an object that is not synchronizing with Azure Active Directory](/azure/active-directory/hybrid/tshoot-connect-object-not-syncing)
+  - [Troubleshoot an object that is not synchronizing with Microsoft Entra ID](/azure/active-directory/hybrid/tshoot-connect-object-not-syncing)

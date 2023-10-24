@@ -33,7 +33,7 @@ For information about usage reports, see the following articles:
 
 - [Overview of inventory in the Microsoft 365 Apps admin center](/deployoffice/admincenter/inventory)
 
-- [Sign-in logs in Azure Active Directory](/azure/active-directory/reports-monitoring/concept-sign-ins)
+- [Sign-in logs in Microsoft Entra ID](/azure/active-directory/reports-monitoring/concept-sign-ins)
 
 For issues with the usage reports, see the following troubleshooting topics.
 

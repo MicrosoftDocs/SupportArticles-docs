@@ -50,7 +50,7 @@ Sign-in issues can occur for different reasons. The following options can help y
 
 - Review the device log file.
 
-  1. On the Teams Rooms device, open Event Viewer, and then go to **Applications and Services Log** > **Microsoft** > **Windows** > **AAD** > **Operational**. Or, [download the device's diagnostic log files](/microsoftteams/rooms/rooms-manage#download-device-logs), extract the downloaded .zip file to a folder, then open the _Windows\EventLog\Microsoft-Windows-AAD_Operational.evtx_ file.
+  1. On the Teams Rooms device, open Event Viewer, and then go to **Applications and Services Log** > **Microsoft** > **Windows** > **Microsoft Entra ID** > **Operational**. Or, [download the device's diagnostic log files](/microsoftteams/rooms/rooms-manage#download-device-logs), extract the downloaded .zip file to a folder, then open the _Windows\EventLog\Microsoft-Windows-AAD_Operational.evtx_ file.
   1. Look for Event ID 1098. If you see error code **AADSTS50076** or **AADSTS50079**, it means that MFA is enabled on the resource account.
 
 - In [sign-in logs on the Azure portal](/azure/active-directory/reports-monitoring/concept-sign-ins#where-can-you-find-it-in-the-azure-portal), if you see a **Failure** status with error code **50079** or **50076**, and the error description says "Due to a configuration change made by your administrator, or because you moved to a new location, you must enroll in multi-factor authentication to access.", it means that MFA is enabled on the resource account.
@@ -63,12 +63,12 @@ To check whether sign-in is blocked by Conditional Access policies, use one of t
 
 - Review the device log file.
 
-  1. On the Teams Rooms device, in Event Viewer, go to **Applications and Services Log** > **Microsoft** > **Windows** > **AAD** > **Operational**. Or, [download the device's diagnostic log files](/microsoftteams/rooms/rooms-manage#download-device-logs), extract the downloaded .zip file to a folder, then open the _Windows\EventLog\Microsoft-Windows-AAD_Operational.evtx_ file.
+  1. On the Teams Rooms device, in Event Viewer, go to **Applications and Services Log** > **Microsoft** > **Windows** > **Microsoft Entra ID** > **Operational**. Or, [download the device's diagnostic log files](/microsoftteams/rooms/rooms-manage#download-device-logs), extract the downloaded .zip file to a folder, then open the _Windows\EventLog\Microsoft-Windows-AAD_Operational.evtx_ file.
   1. Look for Event ID 1098. If you see error **AADSTS53003**, it means that sign-in is blocked by Conditional Access policies.
 
 - In [sign-in logs on the Azure portal](/azure/active-directory/reports-monitoring/concept-sign-ins#where-can-you-find-it-in-the-azure-portal), if you see an **Interrupted** status with error code **53003**, and the error description says, "Access has been blocked by Conditional Access policies. The access policy does not allow token issuance.", this means that the sign-in is blocked by Conditional Access policies.
 
-For more information about supported Conditional Access assignments for Teams Rooms resource accounts, see [Conditional Access and Intune compliance for Microsoft Teams Rooms](/microsoftteams/rooms/conditional-access-and-compliance-for-devices). To fix the issue, contact your identity management team or see [Configure Azure Active Directory Conditional Access](/appcenter/general/configuring-aad-conditional-access) for more information.
+For more information about supported Conditional Access assignments for Teams Rooms resource accounts, see [Conditional Access and Intune compliance for Microsoft Teams Rooms](/microsoftteams/rooms/conditional-access-and-compliance-for-devices). To fix the issue, contact your identity management team or see [Configure Microsoft Entra Conditional Access](/appcenter/general/configuring-aad-conditional-access) for more information.
 
 ### Check whether the resource account's password has expired
 
@@ -78,7 +78,7 @@ To check whether the password of the resource account is expired, use one of the
 
 - Review the device log file.
 
-  1. On the Teams Rooms device, open Event Viewer, and then go to **Applications and Services Log** > **Microsoft** > **Windows** > **AAD** > **Operational**. Or, [download the device's diagnostic log files](/microsoftteams/rooms/rooms-manage#download-device-logs), extract the downloaded .zip file to a folder, and then open the _Windows\EventLog\Microsoft-Windows-AAD_Operational.evtx_ file.
+  1. On the Teams Rooms device, open Event Viewer, and then go to **Applications and Services Log** > **Microsoft** > **Windows** > **Microsoft Entra ID** > **Operational**. Or, [download the device's diagnostic log files](/microsoftteams/rooms/rooms-manage#download-device-logs), extract the downloaded .zip file to a folder, and then open the _Windows\EventLog\Microsoft-Windows-AAD_Operational.evtx_ file.
   1. Look for Event ID 1098. If you see error code **AADSTS50055**, this means that the password is expired.
 
 - In [sign-in logs on the Azure portal](/azure/active-directory/reports-monitoring/concept-sign-ins#where-can-you-find-it-in-the-azure-portal), if you see an **Interrupted** status, and the additional details contain the following message, it means the password has expired.
@@ -100,7 +100,7 @@ To check whether an incorrect username or password is used, use one the followin
 
 - Review the device log file.
 
-  1. On the Teams Rooms device, open Event Viewer, and then go to **Applications and Services Log** > **Microsoft** > **Windows** > **AAD** > **Operational**. Or, [download the device's diagnostic log files](/microsoftteams/rooms/rooms-manage#download-device-logs), extract the downloaded .zip file to a folder, and then open the _Windows\EventLog\Microsoft-Windows-AAD_Operational.evtx_ file.
+  1. On the Teams Rooms device, open Event Viewer, and then go to **Applications and Services Log** > **Microsoft** > **Windows** > **Microsoft Entra ID** > **Operational**. Or, [download the device's diagnostic log files](/microsoftteams/rooms/rooms-manage#download-device-logs), extract the downloaded .zip file to a folder, and then open the _Windows\EventLog\Microsoft-Windows-AAD_Operational.evtx_ file.
   1. Look for Event ID 1098. If you see error code **AADSTS50126**, this means that the username or password is incorrect.
 - In [sign-in logs on the Azure portal](/azure/active-directory/reports-monitoring/concept-sign-ins#where-can-you-find-it-in-the-azure-portal), if you see a **Failure** status that shows code **50126**, and the error description says "Error validating credentials due to invalid username or password," this means that the username or password is incorrect.
 
@@ -164,4 +164,4 @@ To fix this issue, make sure that a [Teams Rooms Pro or Teams Rooms Basic licens
 - [Authentication in Microsoft Teams Rooms on Windows](/microsoftteams/rooms/rooms-authentication)
 - [Create resource accounts for rooms and shared Teams devices](/microsoftteams/rooms/with-office-365?tabs=m365-admin-center%2Cazure-active-directory2-password)
 - [Conditional Access and compliance best practices for Microsoft Teams Rooms](/microsoftteams/rooms/conditional-access-and-compliance-for-devices#teams-rooms-conditional-access-best-practices)
-- [Azure AD authentication & authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes#aadsts-error-codes)
+- [Microsoft Entra authentication & authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes#aadsts-error-codes)

@@ -28,7 +28,7 @@ The following example shows a GUID in the **Name** field of a public folder perm
 
 ## Cause
 
-To ensure the uniqueness of new recipient objects that are synced from Azure Active Directory, Exchange Online replaces the object **Name** property value with the object [ExternalDirectoryObjectId](/powershell/module/exchange/get-exomailbox#-externaldirectoryobjectid) (EDOID) property value. New recipient objects include mailboxes, users, groups, and contacts. For more information, see [Change in naming convention of user's Name parameter](https://techcommunity.microsoft.com/t5/exchange-team-blog/change-in-naming-convention-of-user-s-name-parameter/ba-p/3284733).
+To ensure the uniqueness of new recipient objects that are synced from Microsoft Entra ID, Exchange Online replaces the object **Name** property value with the object [ExternalDirectoryObjectId](/powershell/module/exchange/get-exomailbox#-externaldirectoryobjectid) (EDOID) property value. New recipient objects include mailboxes, users, groups, and contacts. For more information, see [Change in naming convention of user's Name parameter](https://techcommunity.microsoft.com/t5/exchange-team-blog/change-in-naming-convention-of-user-s-name-parameter/ba-p/3284733).
 
 ## Workaround
 

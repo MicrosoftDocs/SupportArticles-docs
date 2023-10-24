@@ -35,22 +35,22 @@ When you try to sign in to or activate Microsoft 365 apps, you receive the follo
 
 ## Cause
 
-This issue can occur if the device was either deleted or disabled in Azure Active Directory (AD), and the action was not initiated for the device itself. 
+This issue can occur if the device was either deleted or disabled in Microsoft Entra ID, and the action was not initiated for the device itself. 
 
 ## Resolution
  
 To resolve the issue, follow the steps: 
 
-- If the device was disabled in Azure AD, an administrator who has sufficient privileges can re-enable it from the Azure AD portal, as follows:
+- If the device was disabled in Microsoft Entra ID, an administrator who has sufficient privileges can re-enable it from the Microsoft Entra admin center, as follows:
 
     1. Sign in to the [Azure portal](https://portal.azure.com/).
-    2. Select **Azure Active Directory** > **Devices**.
+    2. Select **Microsoft Entra ID** > **Devices**.
     3. Examine the disabled devices list in **Devices**, by searching on the username or device name. 
     4. Select the device, and then select **Enable**.
 
     For more information, see [Manage device identities using the Azure portal](/azure/active-directory/devices/device-management-azure-portal#device-management-tasks).
 
-- If the device was deleted in Azure AD, you  have to re-register it manually. For detailed steps to do this, see [Re-enable or re-register the device](/azure/active-directory/devices/faq#q-i-disabled-or-deleted-my-device-in-the-azure-portal-or-by-using-windows-powershell-but-the-local-state-on-the-device-says-its-still-registered-what-should-i-do).
+- If the device was deleted in Microsoft Entra ID, you  have to re-register it manually. For detailed steps to do this, see [Re-enable or re-register the device](/azure/active-directory/devices/faq#q-i-disabled-or-deleted-my-device-in-the-azure-portal-or-by-using-windows-powershell-but-the-local-state-on-the-device-says-its-still-registered-what-should-i-do).
 
 
 ## More information

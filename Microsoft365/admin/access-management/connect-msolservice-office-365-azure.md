@@ -27,7 +27,7 @@ ms.date: 03/31/2022
 
 ## Problem
 
-When you try to use the connect-MSOLService cmdlet in the Microsoft Azure Active Directory Module for Windows PowerShell to connect to a Microsoft cloud service such as Microsoft 365, Azure, or Microsoft Intune, your attempt is unsuccessful. Additionally, you may receive the following error message:
+When you try to use the connect-MSOLService cmdlet in the Microsoft Azure Active Directory module for Windows PowerShell to connect to a Microsoft cloud service such as Microsoft 365, Azure, or Microsoft Intune, your attempt is unsuccessful. Additionally, you may receive the following error message:
 
 **Connect-MsolService : The user name or password is incorrect. Verify your user name, and then type your password again.**
 
@@ -41,4 +41,4 @@ To resolve this issue, see [You can't sign in to your organizational account suc
 
 ## More information 
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Microsoft Entra Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.

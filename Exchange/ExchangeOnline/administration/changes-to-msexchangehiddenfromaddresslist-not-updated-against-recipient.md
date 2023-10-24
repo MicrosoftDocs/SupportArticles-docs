@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 4042820
 Consider the following scenario:
 
 - You change the `msExchangeHiddenFromAddressList` attribute in on-premises.
-- The attribute is synced by using Azure Active Directory Connect (Azure AD Connect).
+- The attribute is synced by using Microsoft Entra Connect (Microsoft Entra Connect).
 
 In this scenario, the changes are not updated against the recipient object in Microsoft Exchange Online.
 
@@ -34,7 +34,7 @@ In this scenario, the changes are not updated against the recipient object in Mi
 This issue occurs due to one of the following reasons:
 
 - The Alias (`MailNickname`) attribute on the source object that's located in on-premises doesn't have the required value.
-- A sync rule in Azure AD Connect has a scoping filter that states that the **Operator** of the `MailNickName` attribute is **ISNOTNULL**. The rule sets **Link Type** to **Join** for syncing Exchange attributes together and uses the name **In From AD - User Exchange**.
+- A sync rule in Microsoft Entra Connect has a scoping filter that states that the **Operator** of the `MailNickName` attribute is **ISNOTNULL**. The rule sets **Link Type** to **Join** for syncing Exchange attributes together and uses the name **In From AD - User Exchange**.
 
 ## Resolution
 

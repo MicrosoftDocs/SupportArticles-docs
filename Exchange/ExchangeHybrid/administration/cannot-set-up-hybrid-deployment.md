@@ -36,7 +36,7 @@ at Microsoft.Exchange.Management.Hybrid.RemotePowershellSession.RunCommand(Strin
 
 ## Cause
 
-This problem occurs if the domain name for your organization was previously in use and you try to reconfigure the domain. A domain name may be blocked in Windows Live for the Azure Active Directory (Azure AD) authentication system if the domain name was previously used.
+This problem occurs if the domain name for your organization was previously in use and you try to reconfigure the domain. A domain name may be blocked in Windows Live for the Microsoft Entra authentication system if the domain name was previously used.
 
 ## Resolution
 

@@ -33,11 +33,13 @@ With a single license, you can install Microsoft 365 Apps on up to 5 devices. Fo
 
 Go to https://myaccount.microsoft.com/device-list and sign in with the same account you’re using to activate Microsoft 365 Apps. Remove any unused devices.  
 
-## Check Azure Active Directory (Azure AD)
+<a name='check-azure-active-directory-azure-ad'></a>
+
+## Check Microsoft Entra ID
 
 1. Go to the [Microsoft 365 admin center](https://admin.microsoft.com).
 
-1. Select **Azure Active Directory** > **Users** and then select the account that received the error.
+1. Select **Microsoft Entra ID** > **Users** and then select the account that received the error.
 
 1. Select **Devices**.
 

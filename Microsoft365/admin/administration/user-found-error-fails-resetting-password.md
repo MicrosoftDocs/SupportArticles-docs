@@ -27,12 +27,12 @@ When you try to reset a password for a user in Microsoft 365, you receive the fo
 
 ## Solution
 
-To resolve this issue, use Microsoft Azure Active Directory Module for Windows PowerShell to set the user principal name (UPN) to the default domain. Then, change the user principal name back to use the vanity domain. To do this, follow these steps:
+To resolve this issue, use Microsoft Azure Active Directory module for Windows PowerShell to set the user principal name (UPN) to the default domain. Then, change the user principal name back to use the vanity domain. To do this, follow these steps:
 
-1. Start Azure Active Directory Module for Windows PowerShell, and connect to Azure Active Directory.
+1. Start Azure Active Directory module for Windows PowerShell, and connect to Microsoft Entra ID.
 
    > [!NOTE]
-   > For more info about Azure Active Directory Module for Windows PowerShell, go to the following Microsoft website: [Azure Active Directory Cmdlets](/previous-versions/azure/jj151815(v=azure.100)).
+   > For more info about Azure Active Directory module for Windows PowerShell, go to the following Microsoft website: [Microsoft Entra Cmdlets](/previous-versions/azure/jj151815(v=azure.100)).
 
 1. Change the UPN of the user to the default domain. To do this, run the following command:
 

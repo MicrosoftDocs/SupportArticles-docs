@@ -43,9 +43,9 @@ Before you begin to resolve this issue, determine the AD FS endpoint address for
 
 ### Determine the AD FS endpoint address for the on-premises federation server 
 
-To do this, follow these steps on a domain-connected computer that has Azure Active Directory Module for Windows PowerShell installed:
+To do this, follow these steps on a domain-connected computer that has Azure Active Directory module for Windows PowerShell installed:
 
-1. Run the Azure Active Directory Module for Windows PowerShell as an elevated admin. To do this, right-click **Windows Azure Active Directory Module for Windows PowerShell**, and then click **Run as administrator**.   
+1. Run the Azure Active Directory module for Windows PowerShell as an elevated admin. To do this, right-click **Windows Azure Active Directory module for Windows PowerShell**, and then click **Run as administrator**.   
 2. Type the following commands. Press Enter after you type each command:
 
     ```powershell
@@ -119,6 +119,6 @@ If the on-premises network contains a proxy, and if only internal clients are ha
 
 ## More information
 
-The Windows PowerShell commands in this article require the Azure Active Directory Module for Windows PowerShell.
+The Windows PowerShell commands in this article require the Azure Active Directory module for Windows PowerShell.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Microsoft Entra Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.

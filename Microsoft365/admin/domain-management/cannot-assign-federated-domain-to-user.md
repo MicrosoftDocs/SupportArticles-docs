@@ -37,7 +37,7 @@ This behavior is by design in Microsoft 365. You can't create federated users th
 
 ## Solution
 
-To work around this behavior, create a matching user account in the on-premises Active Directory Domain Services (AD DS) environment, set up the user principal name (UPN) appropriately, and then sync the account and Azure Active Directory by using directory synchronization. To do so, follow these steps:
+To work around this behavior, create a matching user account in the on-premises Active Directory Domain Services (AD DS) environment, set up the user principal name (UPN) appropriately, and then sync the account and Microsoft Entra ID by using directory synchronization. To do so, follow these steps:
 
 1. Obtain the primary SMTP address of the Microsoft 365 user account by following these steps:
    1. Sign in to the [Microsoft 365 portal](https://portal.office.com) as a global admin.

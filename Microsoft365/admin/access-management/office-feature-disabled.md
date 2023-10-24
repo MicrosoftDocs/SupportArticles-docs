@@ -141,4 +141,4 @@ The `SignInOptions` setting controls whether users can provide credentials to Of
 - 3 = Users can't sign in by using either ID (see the note below)
 
 > [!NOTE]
-> Based on the [recent license improvements](https://techcommunity.microsoft.com/t5/office-365-blog/office-365-client-licensing-and-activation-improvements/ba-p/763694), users are required to sign in to activate Office on their devices. We don't recommend using options **1** and **3** for `SignInOptions` in Microsoft 365 Apps. Either of these options will block sign-ins that use work accounts or Azure Active Directory (AAD) accounts and users won't be able to access Office clients.
+> Based on the [recent license improvements](https://techcommunity.microsoft.com/t5/office-365-blog/office-365-client-licensing-and-activation-improvements/ba-p/763694), users are required to sign in to activate Office on their devices. We don't recommend using options **1** and **3** for `SignInOptions` in Microsoft 365 Apps. Either of these options will block sign-ins that use work accounts or Microsoft Entra accounts and users won't be able to access Office clients.

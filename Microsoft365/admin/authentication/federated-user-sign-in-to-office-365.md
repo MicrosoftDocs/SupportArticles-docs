@@ -1,6 +1,6 @@
 ---
 title: Sorry, but we're having trouble signing you in error and 8004789A error
-description: Describes an issue in which authentication fails for single sign-on (SSO) users when they try to sign in to a Microsoft cloud service such as Microsoft 365, Azure, or Microsoft Intune after you update the relying party trust with Azure AD in AD FS 2.0.
+description: Describes an issue in which authentication fails for single sign-on (SSO) users when they try to sign in to a Microsoft cloud service such as Microsoft 365, Azure, or Microsoft Intune after you update the relying party trust with Microsoft Entra ID in AD FS 2.0.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
@@ -23,7 +23,7 @@ ms.date: 03/31/2022
 
 ## Problem
 
-Consider the following scenario. You update the relying party trust with Microsoft Azure Active Directory (Azure AD) in Active Directory Federation Services (AD FS) 2.0 by using the procedures that are described in one of the following resources: 
+Consider the following scenario. You update the relying party trust with Microsoft Entra ID in Active Directory Federation Services (AD FS) 2.0 by using the procedures that are described in one of the following resources: 
  
 - [Limiting Access to Microsoft 365 Services Based on the Location of the Client](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/hh526961(v=ws.10))    
 - ["Federation service identifier specified in the AD FS 2.0 server is already in use." error when you try to set up another federated domain in Microsoft 365, Azure, or Intune ](https://support.microsoft.com/help/2618887)
@@ -49,4 +49,4 @@ To resolve this issue, install Update Rollup 1 for AD FS 2.0 on all AD FS 2.0 Fe
 
 To use multiple top level domains or client access policies, you must install Update Rollup 1 for Active Directory Federation Services (AD FS) 2.0.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Microsoft Entra Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.

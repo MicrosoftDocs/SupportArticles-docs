@@ -22,7 +22,7 @@ ms.date: 10/03/2023
 
 ## Symptoms
 
-When a user is created or changed in Microsoft 365, or synced to Azure Active Directory from the on-premises environment, either no mailbox is provisioned for the user, or the change isn't reflected in Exchange Online.
+When a user is created or changed in Microsoft 365, or synced to Microsoft Entra ID from the on-premises environment, either no mailbox is provisioned for the user, or the change isn't reflected in Exchange Online.
 
 ## Resolution
 

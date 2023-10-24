@@ -35,7 +35,7 @@ In this scenario, the mail contacts lose access to the encrypted content or have
 
 This issue occurs because of a known issue that affects mail contacts in groups that are assigned usage rights.  
 
-In this case, the mail contacts are users outside your organization who have an Azure Active Directory (Azure AD) object type of **Contact** instead of **User**. In the Exchange admin center, these contacts display a **Contact Type** of **MailContact**.
+In this case, the mail contacts are users outside your organization who have a Microsoft Entra object type of **Contact** instead of **User**. In the Exchange admin center, these contacts display a **Contact Type** of **MailContact**.
 
 To verify the object type for group members, run the following [Get-AzureADGroupMember](/powershell/module/azuread/get-azureadgroupmember) cmdlet:
 

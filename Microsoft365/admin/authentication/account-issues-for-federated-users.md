@@ -45,12 +45,12 @@ If these issues only occur for some user accounts, this indicates that those use
 - Microsoft 365 user account isn't licensed for the Microsoft 365 resource
 
   Access to Microsoft 365 resources for which the user account doesn't have a license is restricted. To check the license status for a user account, follow these steps:
-  1. Sign in to the Microsoft 365 portal ([https://portal.office.com](https://portal.office.com/)) by using an Microsoft 365 admin user account. You can use a managed account if it's required.   
+  1. Sign in to the Microsoft 365 portal ([https://portal.office.com](https://portal.office.com/)) by using a Microsoft 365 admin user account. You can use a managed account if it's required.   
   2. Select **Admin**, and then in the left navigation pane, select **Users**.   
   3. In the list of users, locate the user accounts that you want to test, and then select **Display Name**. Check that each user account has the required licensing for the Microsoft 365 resource.   
   4. Select the **Select all items** check box.
 
-     If a user account that you want to test isn't listed, Active Directory synchronization may be syncing the account to Azure Active Directory (Azure AD).
+     If a user account that you want to test isn't listed, Active Directory synchronization may be syncing the account to Microsoft Entra ID.
 
      Note If the user account has an on-premises mailbox, a Microsoft 365 mailbox isn't created. This specific resource remains unavailable, even when the user account is licensed for Exchange Online.   
    
@@ -62,9 +62,9 @@ If these issues only occur for some user accounts, this indicates that those use
   3. In the list of domains, locate the federated subdomain name, and then determine whether the **Domain type** setting is set to **Single Sign-On**.   
   4. Repeat step 1 to step 3 for the parent domain. If the Domain type setting differs from the subdomain setting, the subdomain has been orphaned from its parent.   
    
-- Directory synchronization issues are preventing proper user account configuration on-premises from syncing to Azure AD.
+- Directory synchronization issues are preventing proper user account configuration on-premises from syncing to Microsoft Entra ID.
 
-  Single sign-on (SSO) relies on identical user accounts being represented in both the on-premises Active Directory and in Azure AD. Directory synchronization is responsible for making sure that the same Microsoft 365 user account is created for each on-premises user account. Sign in may fail when directory synchronization doesn't sync correct account settings from the on-premises Active Directory to Azure AD.   
+  Single sign-on (SSO) relies on identical user accounts being represented in both the on-premises Active Directory and in Microsoft Entra ID. Directory synchronization is responsible for making sure that the same Microsoft 365 user account is created for each on-premises user account. Sign in may fail when directory synchronization doesn't sync correct account settings from the on-premises Active Directory to Microsoft Entra ID.   
 
 
 ## Solution
@@ -110,4 +110,4 @@ To resolve this issue, use one or more of the following methods:
 
 ## More Information
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Microsoft Entra Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.
