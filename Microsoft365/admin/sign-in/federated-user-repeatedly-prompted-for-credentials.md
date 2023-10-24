@@ -302,6 +302,6 @@ For more information about the Set-ADFSProperties cmdlet, go to the following Mi
 
 [Set-ADFSProperties](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee892317(v=technet.10))
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Microsoft Entra Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.
 
 The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.

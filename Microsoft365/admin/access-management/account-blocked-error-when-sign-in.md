@@ -48,7 +48,7 @@ To do this, follow these steps:
 
 Method 3: Reset the user's password.
 
-As an Microsoft 365 admin, perform a password reset for the user.
+As a Microsoft 365 admin, perform a password reset for the user.
 
 Method 4: Reset the user's sign-in status.
 

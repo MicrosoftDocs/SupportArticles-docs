@@ -53,7 +53,7 @@ Perform one of the following actions:
 - Have the users change their computer password.
 - Reset the computer password for the users. When you reset the users' password, make sure that the **User must change password at next logon** check box isn't selected.
 
-After Active Directory synchronization occurs, the users' computer password in the on-premises Active Directory Domain Services (AD DS) environment is synced to Azure Active Directory (Azure AD). The users can then log on to the computer, and sign in to Microsoft 365 by using the same password.
+After Active Directory synchronization occurs, the users' computer password in the on-premises Active Directory Domain Services (AD DS) environment is synced to Microsoft Entra ID. The users can then log on to the computer, and sign in to Microsoft 365 by using the same password.
 
 ## More information
 

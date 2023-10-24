@@ -122,7 +122,7 @@ If you have the [SharePoint Online Management Shell](https://www.microsoft.com/d
 ### Run a self-diagnostics tool
 
 > [!NOTE]
-> This diagnostic isn't currently supported for GCC High, DoD, or Microsoft 365 operated by 21Vianet.
+> This diagnostic isn't available for the GCC High or DoD environments, or for Microsoft 365 operated by 21Vianet.
 
 Microsoft 365 admin users have access to diagnostics that can be run within the tenant to verify possible issues with the OneDrive provision.
 

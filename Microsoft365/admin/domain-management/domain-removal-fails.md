@@ -27,7 +27,7 @@ When you use the **Remove-MsolDomain -domain name domain.com** PowerShell cmdlet
 
 ## More information
 
-This error occurs when an Azure Active Directory application uses IdentifierURIs to refer to the domain that is being removed.
+This error occurs when a Microsoft Entra application uses IdentifierURIs to refer to the domain that is being removed.
 You can retrieve a list of applications that refer to the domain by running the following cmdlet.
 
 > [!IMPORTANT]
@@ -41,7 +41,7 @@ Get-AzureADApplication | Where-Object -Property identifieruris -Match '<domain t
 
 ## Solution
 
-To resolve the issue, update the **identifierURIs** attribute to refer to the .onmicrosoft.com domain of the tenant. Do this in each of the Azure AD applications that refer to the domain.
+To resolve the issue, update the **identifierURIs** attribute to refer to the .onmicrosoft.com domain of the tenant. Do this in each of the Microsoft Entra applications that refer to the domain.
 
 To make the replacement, use the following cmdlets:
 

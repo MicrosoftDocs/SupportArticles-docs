@@ -34,7 +34,7 @@ There are many scenarios that can cause one of these messages during SharePoint 
 ## Automated troubleshooting
 
 > [!NOTE]
-> This feature requires a Microsoft 365 administrator account. This diagnostic isn't currently supported for GCC High, DoD, or Microsoft 365 operated by 21Vianet.
+> This feature requires a Microsoft 365 administrator account. This diagnostic isn't available for the GCC High or DoD environments, or for Microsoft 365 operated by 21Vianet.
 
 Microsoft 365 admin users have access to diagnostics that can be run within the tenant to verify possible issues with sites that have the error messages mentioned above. To populate the diagnostic in the Microsoft 365 Admin Center and try to unlock the site, select Run Tests:
 

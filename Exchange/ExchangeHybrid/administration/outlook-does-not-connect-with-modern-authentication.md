@@ -41,9 +41,9 @@ In this scenario, you encounter the following issues when you try to add your Ex
 
 When you enter your credentials, the Outlook client connects to Exchange Online to request an OAuth token for the on-premises Autodiscover resource principle. However, authentication fails because the resource principal is either:
 
-- Missing from the list of service principal names (SPNs) in the Azure Active Directory (Azure AD) tenant.
+- Missing from the list of service principal names (SPNs) in the Microsoft Entra tenant.
 
-- In an invalid state within the Azure AD tenant.
+- In an invalid state within the Microsoft Entra tenant.
 
 ## Resolution
 
@@ -55,11 +55,11 @@ Use a Click-to-Run version of Outlook. Outlook Click-to-Run versions determine w
 
 ## Resolution 2
 
-Add the missing Autodiscover resource principle to the SPN list in the Azure AD tenant. Follow these steps:
+Add the missing Autodiscover resource principle to the SPN list in the Microsoft Entra tenant. Follow these steps:
 
 1. Determine the resource principal name by using either of the following methods:
 
-   - Search the [Azure AD sign-in logs](/azure/active-directory/reports-monitoring/concept-sign-ins) for the following sign-in failure message:
+   - Search the [Microsoft Entra sign-in logs](/azure/active-directory/reports-monitoring/concept-sign-ins) for the following sign-in failure message:
 
      ```output
      "status": {
@@ -89,10 +89,10 @@ Add the missing Autodiscover resource principle to the SPN list in the Azure AD 
 
     An example of the resource principal name is `https://autodiscover.contoso.com`.
 
-2. Add the resource principal name to the SPN list in the Azure AD tenant by following the procedure that's described in [Step 5: Register all hostname authorities for your internal and external on-premises Exchange HTTP endpoints](/exchange/configure-oauth-authentication-between-exchange-and-exchange-online-organizations-exchange-2013-help#step-5-register-all-hostname-authorities-for-your-internal-and-external-on-premises-exchange-http-endpoints-with-azure-active-directory).
+2. Add the resource principal name to the SPN list in the Microsoft Entra tenant by following the procedure that's described in [Step 5: Register all hostname authorities for your internal and external on-premises Exchange HTTP endpoints](/exchange/configure-oauth-authentication-between-exchange-and-exchange-online-organizations-exchange-2013-help#step-5-register-all-hostname-authorities-for-your-internal-and-external-on-premises-exchange-http-endpoints-with-azure-active-directory).
 
    > [!NOTE]
-   > You can check the list of SPNs in Azure AD by running the following command:
+   > You can check the list of SPNs in Microsoft Entra ID by running the following command:
    >
    > ```powershell
    > Get-MsolServicePrincipal -AppPrincipalId 00000002-0000-0ff1-ce00-000000000000 | select -ExpandProperty ServicePrincipalNames

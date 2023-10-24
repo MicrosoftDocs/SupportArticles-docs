@@ -36,14 +36,14 @@ To resolve this issue, remove the user objects in Exchange Online. To do this, f
 
 1. Sign in to the Microsoft 365 portal as an admin.
 2. Select **users and groups**, and then search for the users who didn't migrate.
-3. Permanently delete the users. You can do this in the Microsoft 365 portal or by using the Microsoft Azure Active Directory Module for Windows PowerShell.
+3. Permanently delete the users. You can do this in the Microsoft 365 portal or by using the Microsoft Azure Active Directory module for Windows PowerShell.
 
 > [!IMPORTANT]
 > Deleting a user account will also delete the associated SharePoint Online and Skype for Business Online (formerly Lync Online) information for that user.
 
-To delete users by using the Azure Active Directory Module for Windows PowerShell, follow these steps:
+To delete users by using the Azure Active Directory module for Windows PowerShell, follow these steps:
 
-  1. Connect to Azure Active Directory (Azure AD). For more information about how to do this, see [Azure Active Directory Cmdlets](/previous-versions/azure/jj151815(v=azure.100)).
+  1. Connect to Microsoft Entra ID. For more information about how to do this, see [Microsoft Entra Cmdlets](/previous-versions/azure/jj151815(v=azure.100)).
   2. Run the following command:
 
         ```powershell

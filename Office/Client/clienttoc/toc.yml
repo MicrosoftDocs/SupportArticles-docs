@@ -187,7 +187,7 @@
           href: ../access/jet-compact-utility-download.md
         - name: Linked Excel data is truncated
           href: ../access/linked-table-data-truncated.md
-        - name: Linked table connection failed when using Azure AD
+        - name: Linked table connection failed when using Microsoft Entra ID
           href: ../access/linked-table-connection-failed.md
         - name: Linked table to a SharePoint list returns
           href: ../access/access-linked-table-return-deleted.md

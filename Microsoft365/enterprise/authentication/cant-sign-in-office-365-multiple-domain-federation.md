@@ -37,8 +37,8 @@ This issue occurs when multiple top-level domains are federated to the same AD F
 
 ## SOLUTION
 
-1. Go to [Azure AD RPT Claim Rules](https://adfshelp.microsoft.com/AadTrustClaims/GenerateClaims), and then click **Next**.
-2. Specify the value for **Immutable ID** (sourceAnchor) -> **User Sign In** (for example, UPN or mail). If multiple top-level domains are federated, select **Yes** when you are prompted to respond to "**Does the Azure AD trust with AD FS support multiple domains?**"
+1. Go to [Microsoft Entra RPT Claim Rules](https://adfshelp.microsoft.com/AadTrustClaims/GenerateClaims), and then click **Next**.
+2. Specify the value for **Immutable ID** (sourceAnchor) -> **User Sign In** (for example, UPN or mail). If multiple top-level domains are federated, select **Yes** when you are prompted to respond to "**Does the Microsoft Entra ID trust with AD FS support multiple domains?**"
 3. Connect to the Microsoft 365 PowerShell, and then export the list of domains to a .csv file (for example, output.csv). To do this, run the following cmdlets:
 
    ```powershell

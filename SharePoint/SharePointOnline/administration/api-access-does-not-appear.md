@@ -3,7 +3,7 @@ title: The SharePoint Online Modern admin center does not display (Advanced) and
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 11/02/2020
+ms.date: 10/19/2023
 audience: Admin
 ms.topic: troubleshooting
 localization_priority: Normal
@@ -23,13 +23,13 @@ description: How to resolve an issue where API access and the Advanced tab don't
 
 ## Symptoms
 
-The **Advanced** and **API Access** options do not appear in the navigation pane of the SharePoint Online Modern admin center. 
+The **Advanced** and **API Access** options don't appear in the navigation pane of the SharePoint Online Modern admin center. 
 
 :::image type="content" source="media/api-access-does-not-appear/advanced-api-access-options.png" alt-text="Screenshot of SharePoint admin center showing Advanced and API Access options." border="false":::
 
 ## Cause
 
-These options may not available if an app catalog site is not created or is incorrectly registered on the tenant.
+These options may not be available if an app catalog site isn't created or is incorrectly registered on the tenant.
 
 ## Resolution
 
@@ -53,14 +53,14 @@ Note: This process may take up to 10 minutes.
     > [!note]
     > The site may take up to 20 minutes to complete the registration process.
 
-After the site is registered as an app catalog, return to the SharePoint Modern admin center. You will now see both the **Advanced** and  **API access** options.
+After the site is registered as an app catalog, return to the SharePoint Modern admin center. You can now see both the **Advanced** and  **API access** options.
 
 ## More information
 
 For more information about the app catalog feature, see the following articles:
 
 - [Use the App Catalog to make custom business apps available for your SharePoint environment](/sharepoint/use-app-catalog)
-- [Manage access to Azure AD-secured APIs](/sharepoint/api-access)
+- [Manage access to Microsoft Entra ID-secured APIs](/sharepoint/api-access)
 
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

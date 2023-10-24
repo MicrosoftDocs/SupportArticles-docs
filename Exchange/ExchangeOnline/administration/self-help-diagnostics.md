@@ -16,7 +16,7 @@ appliesto:
   - Exchange Online
   - Outlook
 search.appverid: MET150
-ms.date: 07/11/2023
+ms.date: 10/19/2023
 ---
 # Self-help diagnostics for issues in Exchange Online and Outlook
 
@@ -25,7 +25,7 @@ It's vital that administrators be able to diagnose and resolve issues quickly in
 Currently, we provide diagnostics through text analytics. It's important to note that while these diagnostics can't make automatic changes to your tenant without your consent, they do offer insights into known issues, and provide instructions to fix those issues quickly. We also want to make it easier for you to find our diagnostics within the current experience. Therefore, we have created a new set of queries to help administrators.
 
 > [!NOTE]
-> These diagnostics are not currently supported for GCC High, DoD, or Microsoft 365 operated by 21Vianet.
+> These diagnostics aren't available for the GCC High or DoD environments, or for Microsoft 365 operated by 21Vianet.
 
 |Example for an Exchange Online issue|Example for an Outlook issue|
 |----------|----------|
@@ -42,6 +42,7 @@ Several diagnostics currently cover the various areas within Exchange Online and
 |Diagnostic|Description|Shortcut Link|Support article|
 |---|---|---|---|
 |Migration Exchange Web Services (EWS) throttling policy|Verify that the EWS throttling policy isn't too restrictive for a mailbox data migration that uses third-party tools. (Doesn't apply to Microsoft tools for Hybrid, IMAP, G Suite, or Public Folder migrations.)|[Run Tests: EWS Throttling](https://aka.ms/PillarEWSThrottling)||
+|Exchange Online Accepted Domain diagnostics|Check if a domain is correctly configured as an Exchange Online accepted domain.|[Run Tests: Exchange accepted domains](https://aka.ms/EXOAcceptedDomain)|["You can't use the domain because it's not an accepted domain for your organization" error](/exchange/troubleshoot/move-or-migrate-mailboxes/issue-with-add-recipientpermission-cmdlet)|
 |Test a user's Exchange Online RBAC permissions|If a user has issues running a specific PowerShell cmdlet or command, or gets an error indicating that they don't have the correct roles or permissions, run this diagnostic to check whether the user has permissions to run the cmdlet and the specific parameter.|[Run Tests: EXO RBAC test user](https://aka.ms/PillarEXORBACTest)||
 |Compare Exchange Online RBAC permissions for two users|If one user has issues running a specific PowerShell cmdlet or command, or gets an error indicating that they don't have the correct roles or permissions, while another user doesn't have these problems, run this diagnostic to compare the RBAC roles of the two users.|[Run Tests: EXO RBAC compare users](https://aka.ms/PillarEXORBACCompare)||
 |Recipient failure|Check the state of an Exchange Online recipient and resolve common issues.|[Run Tests: EXO Recipient Object Failures](https://aka.ms/PillarEXORecipients)|[Delays in provisioning of user/mailbox or synchronizing changes in Exchange Online](/exchange/troubleshoot/user-and-shared-mailboxes/delays-provision-mailbox-sync-changes)|

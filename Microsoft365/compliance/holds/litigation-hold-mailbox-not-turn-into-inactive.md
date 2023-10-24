@@ -19,7 +19,7 @@ ms.date: 03/31/2022
 
 ## Symptoms
 
-Assume that you synchronize accounts from your local Active Directory Domain Services (AD DS) to Azure Active Directory (Azure AD) by using Azure AD Connect. After the Microsoft Exchange Server license is removed from a Microsoft 365 account, which has a mailbox that's placed on Litigation Hold or assigned to a retention policy, the mailbox doesn't turn into an inactive mailbox, as expected. Additionally, when you view the account information in the Microsoft 365 admin center, you see the following error message:
+Assume that you synchronize accounts from your local Active Directory Domain Services (AD DS) to Microsoft Entra ID by using Microsoft Entra Connect. After the Microsoft Exchange Server license is removed from a Microsoft 365 account, which has a mailbox that's placed on Litigation Hold or assigned to a retention policy, the mailbox doesn't turn into an inactive mailbox, as expected. Additionally, when you view the account information in the Microsoft 365 admin center, you see the following error message:
 
 > The execution of cmdlet Disable-Mailbox failed..; Exchange: An unknown error has occurred.
 
@@ -29,10 +29,10 @@ Removing the Exchange Server license will hard delete the mailbox. However, a Li
 
 ## Resolution
 
-To turn the mailbox that's placed on Litigation Hold or assigned to a retention policy into an inactive mailbox, follow these steps in Azure AD:
+To turn the mailbox that's placed on Litigation Hold or assigned to a retention policy into an inactive mailbox, follow these steps in Microsoft Entra ID:
 
 1. Reassign the license to the account to recover the mailbox.
-1. Delete the account from AD DS, or delete the account from the scope of the synchronization with Azure AD Connect.
+1. Delete the account from AD DS, or delete the account from the scope of the synchronization with Microsoft Entra Connect.
 
 ## More information
 

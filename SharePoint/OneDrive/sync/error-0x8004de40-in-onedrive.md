@@ -83,7 +83,7 @@ For more information, see [What are the current cipher suites supported by Azure
 
 **Solution 3: Restart the device**
 
-Restart the device while it is connected to your Azure Active Directory (Azure AD) domain. If that doesn’t fix the problem, unjoin your device from Azure AD and rejoin it, by using the following steps.
+Restart the device while it is connected to your Microsoft Entra domain. If that doesn’t fix the problem, unjoin your device from Microsoft Entra ID and rejoin it, by using the following steps.
 
 > [!IMPORTANT]
 > You must be connected to your organization’s network when you do these steps. Don’t do these steps if you aren’t connected to your organization’s infrastructure (for example, while traveling).

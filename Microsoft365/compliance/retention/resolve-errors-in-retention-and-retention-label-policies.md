@@ -345,7 +345,7 @@ Get-RetentionCompliancePolicy -Identity "<policy name>" -DistributionDetail | Se
 
 ### Cause
 
-The policy didn't sync with Azure Active Directory (Azure AD).
+The policy didn't sync with Microsoft Entra ID.
 
 ### Resolution
 
