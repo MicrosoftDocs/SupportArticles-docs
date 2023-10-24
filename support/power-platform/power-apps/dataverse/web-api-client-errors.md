@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Web API client errors
 description: Provides resolutions for the common client errors that occur when you use the Dataverse Web API.
-ms.date: 10/19/2023
+ms.date: 10/24/2023
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -17,7 +17,7 @@ contributors:
 ---
 # Troubleshoot Dataverse Web API client errors
 
-This article describes common client errors you may encounter when using the [Dataverse Web API](/power-apps/developer/data-platform/webapi/overview) and how you can avoid them.
+This article describes common client errors you might encounter when using the [Dataverse Web API](/power-apps/developer/data-platform/webapi/overview) and how you can avoid them.
 
 ## Resource not found for the segment
 
@@ -166,7 +166,6 @@ There are two separate issues that can occur with this error. The difference is 
 - [InnerException : Microsoft.OData.ODataException: An undeclared property [...] was found in the payload.](#innerexception--microsoftodataodataexception-an-undeclared-property--was-found-in-the-payload)
 - [InnerException : System.ArgumentException: Stream was not readable.](#innerexception--systemargumentexception-stream-was-not-readable)
 
-
 ### InnerException : Microsoft.OData.ODataException: An undeclared property [...] was found in the payload
 
 This error occurs when an invalid navigation property name is sent with a request.
@@ -208,7 +207,7 @@ This error occurs because there is no single-valued navigation property in the c
 
 `parentcustomerid` is the logical name of a lookup column in the contact table. All lookups are represented by single-valued navigation properties in OData. The names of the lookup properties don't always match the corresponding single-valued navigation property name.
 
-In this case, the `parentcustomerid` column is a customer lookup type, a kind of [multi-table lookup](/power-apps/developer/data-platform/webapi/web-api-navigation-properties#multi-table-lookups) that may link to either the account or contact tables. To support this customer lookup, there are two separate relationships and each has a different single-valued navigation property. The correct single-valued navigation property in this case is `parentcustomerid_account`.
+In this case, the `parentcustomerid` column is a customer lookup type, a kind of [multi-table lookup](/power-apps/developer/data-platform/webapi/web-api-navigation-properties#multi-table-lookups) that might link to either the account or contact tables. To support this customer lookup, there are two separate relationships and each has a different single-valued navigation property. The correct single-valued navigation property in this case is `parentcustomerid_account`.
 
 #### How to avoid
 
@@ -220,7 +219,7 @@ This error occurs when [executing batch operations](/power-apps/developer/data-p
 
 #### Symptoms
 
-You get the follow error when sending a `$batch` request
+You get the following error when sending a `$batch` request.
 
 **Response**
 
@@ -258,18 +257,17 @@ These non-printing characters can be difficult to see depending on the editor yo
 
 This payload will work:
 
-:::image type="content" source="media/batch-request-body-with-CRLF-endings-for-all-lines.png" alt-text="batch request body with CRLF endings for all lines":::
+:::image type="content" source="media/web-api-client-errors/batch-request-body-with-crlf-endings-for-all-lines.png" alt-text="Screenshot that shows a batch request body with CRLF endings for all lines.":::
 
 This payload will fail because the final line doesn't end with `CRLF`.
 
-:::image type="content" source="media/batch-request-body-with-CRLF-missing-last-line.png" alt-text="batch request body with CRLF missing on last line":::
+:::image type="content" source="media/web-api-client-errors/batch-request-body-with-crlf-missing-last-line.png" alt-text="Screenshot that shows a batch request body with CRLF missing on last line.":::
 
 In this case, just adding a carriage return at the end of the last line is enough to allow it to succeed.
 
-
 #### How to avoid
 
-Ensure all line endings in the $batch request body are `CRLF`. If you cannot use `CRLF`, add two non-`CRLF` line endings at the end of the batch request body to resolve this deserialization error. For more information, see [Batch requests](/power-apps/developer/data-platform/webapi/execute-batch-operations-using-web-api#batch-requests).
+Ensure all line endings in the `$batch` request body are `CRLF`. If you can't use `CRLF`, add two non-`CRLF` line endings at the end of the batch request body to resolve this deserialization error. For more information, see [Batch requests](/power-apps/developer/data-platform/webapi/execute-batch-operations-using-web-api#batch-requests).
 
 ### See also
 
