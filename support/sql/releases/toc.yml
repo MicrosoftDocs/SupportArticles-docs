@@ -295,6 +295,70 @@ items:
   items:
   - name: SQL Server 2016 build versions
     href: sqlserver-2016/build-versions.md
+  - name: SP 2 Cumulative Update 8
+    items:
+    - name: SP 2 Cumulative Update 8 (KB4505830)
+      href: sqlserver-2016/sp2cumulativeupdate8.md
+  - name: SP 2 Cumulative Update 7
+    items:
+    - name: SP 2 Cumulative Update 7 (KB4495256)
+      href: sqlserver-2016/sp2cumulativeupdate7.md
+  - name: SP 2 Cumulative Update 6
+    items:
+    - name: SP 2 Cumulative Update 6 (KB4488536)
+      href: sqlserver-2016/sp2cumulativeupdate6.md
+  - name: SP 2 Cumulative Update 5
+    items:
+    - name: SP 2 Cumulative Update 5 (KB4475776)
+      href: sqlserver-2016/sp2cumulativeupdate5.md
+  - name: SP 2 Cumulative Update 4
+    items:
+    - name: SP 2 Cumulative Update 4 (KB4464106)
+      href: sqlserver-2016/sp2cumulativeupdate4.md
+  - name: SP 2 Cumulative Update 3
+    items:
+    - name: SP 2 Cumulative Update 3 (KB4458871)
+      href: sqlserver-2016/sp2cumulativeupdate3.md
+  - name: SP 2 Cumulative Update 2
+    items:
+    - name: SP 2 Cumulative Update 2 (KB4340355)
+      href: sqlserver-2016/sp2cumulativeupdate2.md
+  - name: SP 2 Cumulative Update 1
+    items:
+    - name: SP 2 Cumulative Update 1 (KB4135048)
+      href: sqlserver-2016/sp2cumulativeupdate1.md
+  - name: Service Pack 2
+    items:
+    - name: Service Pack 2 (KB4052908)
+      href: sqlserver-2016/servicepack2.md.md
+  - name: SP 1 Cumulative Update 6
+    items:
+    - name: SP 1 Cumulative Update 6 (KB4037354)
+      href: sqlserver-2016/sp1cumulativeupdate6.md
+  - name: SP 1 Cumulative Update 5
+    items:
+    - name: SP 1 Cumulative Update 5 (KB4040714)
+      href: sqlserver-2016/sp1cumulativeupdate5.md
+  - name: SP 1 Cumulative Update 4
+    items:
+    - name: SP 1 Cumulative Update 4 (KB4024305)
+      href: sqlserver-2016/sp1cumulativeupdate4.md
+  - name: SP 1 Cumulative Update 3
+    items:
+    - name: SP 1 Cumulative Update 3 (KB4019916)
+      href: sqlserver-2016/sp1cumulativeupdate3.md
+  - name: SP 1 Cumulative Update 2
+    items:
+    - name: SP 1 Cumulative Update 2 (KB4013106)
+      href: sqlserver-2016/sp1cumulativeupdate2.md
+  - name: SP 1 Cumulative Update 1
+    items:
+    - name: SP 1 Cumulative Update 1 (KB3208177)
+      href: sqlserver-2016/sp1cumulativeupdate1.md
+  - name: Service Pack 1
+    items:
+    - name: Service Pack 1 (KB3182545)
+      href: sqlserver-2016/servicepack1.md.md
   - name: Cumulative Update 9
     items:
     - name: Cumulative Update 9 (KB4037357)
@@ -315,6 +379,18 @@ items:
     items:
     - name: Cumulative Update 5 (KB4013105)
       href: sqlserver-2016/cumulativeupdate5.md
+  - name: Cumulative Update 4
+    items:
+    - name: Cumulative Update 4 (KB3205052)
+      href: sqlserver-2016/cumulativeupdate4.md
+  - name: Cumulative Update 3
+    items:
+    - name: Cumulative Update 3 (KB3205413)
+      href: sqlserver-2016/cumulativeupdate3.md
+  - name: Cumulative Update 2
+    items:
+    - name: Cumulative Update 2 (KB3182270)
+      href: sqlserver-2016/cumulativeupdate2.md
   - name: Cumulative Update 1
     items:
     - name: Cumulative Update 1 (KB3164674)

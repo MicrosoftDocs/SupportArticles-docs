@@ -10,6 +10,9 @@ appliesto:
 
 # KB3164674 - Cumulative Update 1 for SQL Server 2016
 
+_Release Date:_ &nbsp; July 25, 2016  
+_Version:_ &nbsp; 13.0.2149.0
+
 This article describes cumulative update package 1 (build number: 13.0.2149.0) for Microsoft SQL Server 2016. This update contains [fixes](#hotfixes-that-are-included-in-this-cumulative-update-package) that were released after the release of SQL Server 2016.
 
 ## Cumulative update
@@ -166,7 +169,7 @@ If the download page doesn't appear, contact [Microsoft Customer Service and Sup
 | <a id=7694330>[7694330](#7694330)</a> | [FIX: Can't delete a row from a filtered table part of a merge publication in SQL Server 2012, 2014, or 2016 (KB3155209)](https://support.microsoft.com/help/3155209) | SQL service |
 | <a id=7694670>[7694670](#7694670)</a> | [FIX: Can't create or delete a table or index when another DDL transaction is running on the same database in SQL Server 2016 (KB3168793)](https://support.microsoft.com/help/3168793) | SQL service |
 | <a id=7709918>[7709918](#7709918)</a> | [Creating or updating statistics takes a long time on a large memory-optimized table in SQL Server 2016 (KB3170996)](https://support.microsoft.com/help/3170996) | SQL service |
-| <a id=7735631>[7735631](#7735631)</a> | [FIX: ShortestLineTo() and STDistance() methods return incorrect result for the shortest distance in SQL Server 2016 (KB3175203)](https://support.microsoft.com/help3175203) | SQL service |
+| <a id=7735631>[7735631](#7735631)</a> | [FIX: ShortestLineTo() and STDistance() methods return incorrect result for the shortest distance in SQL Server 2016 (KB3175203)](https://support.microsoft.com/help/3175203) | SQL service |
 | <a id=7735635>[7735635](#7735635)</a> | [FIX: Long query that contains specific expressions receives syntax error if forced parameterization is enabled in SQL Server 2016 (KB3175205)](https://support.microsoft.com/help/3175205) | SQL service |
 | <a id=7770910>[7770910](#7770910)</a> | [FIX: Error 8061 when you use BULK INSERT on a table in SQL Server 2016 (KB3172959)](https://support.microsoft.com/help/3172959) | SQL service |
 | <a id=7771144>[7771144](#7771144)</a> | [FIX: Error 8624 occurs when you run a query against a nonclustered columnstore index in SQL Server 2016 (KB3171544)](https://support.microsoft.com/help/3171544) | SQL service |
@@ -246,7 +249,7 @@ One cumulative update package includes all the component packages. However, the 
 <details>
 <summary><b>Support for this update</b></summary>
 
-If other issues occur, or if any troubleshooting is required, you might have to create a separate service request. The usual support costs will apply to additional support questions and to issues that don't qualify for this specific cumulative update package. For a complete list of Microsoft Customer Service and Support telephone numbers, or to create a separate service request, go to the [Microsoft support website](http://support.microsoft.com/contactus/?ws=support).
+If other issues occur, or if any troubleshooting is required, you might have to create a separate service request. The usual support costs will apply to additional support questions and to issues that don't qualify for this specific cumulative update package. For a complete list of Microsoft Customer Service and Support telephone numbers, or to create a separate service request, go to the [Microsoft support website](https://support.microsoft.com/contactus/?ws=support).
 
 </details>
 
