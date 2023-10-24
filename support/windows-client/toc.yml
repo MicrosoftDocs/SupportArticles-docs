@@ -1104,23 +1104,23 @@ items:
 - name: TroubleShootingScript toolset (TSS)
   items:
   - name: Introduction to TroubleShootingScript toolset (TSS)
-    href: ./windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tss.md
+    href: ./windows-tss/introduction-to-troubleshootingscript-toolset-tss.md
   - name: Identity
     items:
     - name: Gather information for Active Directory replication issues
-      href: ./windows-troubleshooters/gather-information-using-tss-ad-replication.md
+      href: ./windows-tss/gather-information-using-tss-ad-replication.md
     - name: Gather information for Group Policy issues
-      href: ./windows-troubleshooters/gather-information-using-tss-group-policy.md
+      href: ./windows-tss/gather-information-using-tss-group-policy.md
   - name: Deployment (DnD)
     items:
     - name: Gather information for deployment-related issues
-      href: ./windows-troubleshooters/gather-information-using-tss-deployment.md
+      href: ./windows-tss/gather-information-using-tss-deployment.md
     - name: Gather information for Windows Update for Business reports-related issues
-      href: ./windows-troubleshooters/gather-information-using-tss-wufb-reports.md
+      href: ./windows-tss/gather-information-using-tss-wufb-reports.md
   - name: User Experience (UEX)
     items:
     - name: Gather information for user experience-related issues
-      href: ./windows-troubleshooters/gather-information-using-tss-user-experience.md 
+      href: ./windows-tss/gather-information-using-tss-user-experience.md 
 - name: UserProfiles and Logon
   items:
   - name: UserProfiles and Logon
