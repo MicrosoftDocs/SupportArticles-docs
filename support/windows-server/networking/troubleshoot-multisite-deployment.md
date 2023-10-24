@@ -20,8 +20,9 @@ _Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server 20
 
 This topic describes how to troubleshoot the most common errors that may occur when configuring a multisite Remote Access deployment.
 
-- [Troubleshooting enabling multisite](troubleshoot-enabling-multisite.md)
 - [Troubleshooting adding entry points](troubleshoot-adding-entry-points.md)
+- [Troubleshooting enabling multisite](troubleshoot-enabling-multisite.md)
+- [Troubleshooting general issues](troubleshoot-general-issues-related-remote-access.md)
 - [Troubleshooting setting the entry point domain controller](troubleshoot-setting-entry-point-domain-controller.md)
 - [Troubleshooting web probe URLs](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj591654(v=ws.11))
-- [Troubleshooting general issues](troubleshoot-general-issues-related-remote-access.md)
+
