@@ -6461,6 +6461,16 @@
       "source_path": "support/power-platform/ai-builder/index.md",
       "redirect_url": "/troubleshoot/power-platform/ai-builder/welcome-ai-builder",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/virtual-desktop/windows-virtual-desktop-blank-screen.md",
+      "redirect_url": "/azure/virtual-desktop",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/virtual-desktop/welcome-virtual-desktop.yml",
+      "redirect_url": "/azure/virtual-desktop",
+      "redirect_document_id": false
     }
 ]
 }
