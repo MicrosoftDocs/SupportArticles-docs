@@ -30,7 +30,7 @@ In this scenario, when guests try to access the resource by signing in by using 
 
 ## Cause
 
-This issue is caused by changes in how SharePoint shares invitation redemption for guests. Because of these changes, when a site, list, or library is shared with guests, the guest account isn't provisioned in Microsoft Entra ID. Therefore, guest access to the resource is blocked by the Conditional Access policies.
+This issue is caused by changes in SharePoint sharing invitation redemption for guests. Because of these changes, when a site, list, or library is shared with guests, the guest account isn't provisioned in Microsoft Entra ID. Therefore, guest access to the resource is blocked by the Conditional Access policies.
 
 ## Resolution
 
