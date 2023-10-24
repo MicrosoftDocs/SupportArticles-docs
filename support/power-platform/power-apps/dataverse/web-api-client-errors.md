@@ -80,11 +80,11 @@ HTTP/1.1 400 Bad Request
 
 This error occurs when you use the incorrect name for a property. Property names are case sensitive.
 
-In the example above, there is property called `name`, but not one named `Name`.
+In the example above, there is a property called `name`, but not one named `Name`.
 
 ### How to avoid
 
-Verify that the name you use exists in the [CSDL $metadata document](/power-apps/developer/data-platform/webapi/web-api-service-documents#csdl-metadata-document). For more information, see [Web API Properties](/power-apps/developer/data-platform/webapi/web-api-properties).
+Verify that the name you use exists in the [CSDL $metadata document](/power-apps/developer/data-platform/webapi/web-api-service-documents#csdl-metadata-document). For more information, see [Web API properties](/power-apps/developer/data-platform/webapi/web-api-properties).
 
 ## No HTTP resource was found that matches the request URI
 
@@ -157,7 +157,7 @@ This error occurs because the incorrect name for a property was used. Property n
 
 ### How to avoid
 
-Verify that the property name you use exists in the [CSDL $metadata document](/power-apps/developer/data-platform/webapi/web-api-service-documents#csdl-metadata-document). For more information, see [Web API Properties](/power-apps/developer/data-platform/webapi/web-api-properties).
+Verify that the property name you use exists in the [CSDL $metadata document](/power-apps/developer/data-platform/webapi/web-api-service-documents#csdl-metadata-document). For more information, see [Web API properties](/power-apps/developer/data-platform/webapi/web-api-properties).
 
 ## Error identified in Payload provided by the user for Entity '{entity name}'
 
@@ -253,23 +253,23 @@ at System.Web.OData.Formatter.ODataMediaTypeFormatter.ReadFromStream(Type type, 
 
 This deserialization error is caused by the use of line endings other than [CRLF](https://developer.mozilla.org/docs/Glossary/CRLF) in the batch request body.
 
-These non-printing characters can be difficult to see depending on the editor you use. If you use [Notepad++](https://notepad-plus-plus.org/), you can use the **Show all characters** option to make these visible.
+Depending on the editor you use, these non-printing characters can be difficult to see . If you use [Notepad++](https://notepad-plus-plus.org/), you can use the **Show all characters** option to make these characters visible.
 
 This payload will work:
 
 :::image type="content" source="media/web-api-client-errors/batch-request-body-with-crlf-endings-for-all-lines.png" alt-text="Screenshot that shows a batch request body with CRLF endings for all lines.":::
 
-This payload will fail because the final line doesn't end with `CRLF`.
+This payload will fail because the last line doesn't end with `CRLF`.
 
-:::image type="content" source="media/web-api-client-errors/batch-request-body-with-crlf-missing-last-line.png" alt-text="Screenshot that shows a batch request body with CRLF missing on last line.":::
+:::image type="content" source="media/web-api-client-errors/batch-request-body-with-crlf-missing-last-line.png" alt-text="Screenshot that shows a batch request body with CRLF missing on the last line.":::
 
-In this case, just adding a carriage return at the end of the last line is enough to allow it to succeed.
+In this case, just adding a carriage return at the end of the last line is enough to make it succeed.
 
 #### How to avoid
 
 Ensure all line endings in the `$batch` request body are `CRLF`. If you can't use `CRLF`, add two non-`CRLF` line endings at the end of the batch request body to resolve this deserialization error. For more information, see [Batch requests](/power-apps/developer/data-platform/webapi/execute-batch-operations-using-web-api#batch-requests).
 
-### See also
+## See also
 
 - [Web API types and operations](/power-apps/developer/data-platform/webapi/web-api-types-operations)
 - [Compose HTTP requests and handle errors](/power-apps/developer/data-platform/webapi/compose-http-requests-handle-errors)
