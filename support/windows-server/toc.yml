@@ -1787,13 +1787,19 @@
     - name: The Routing and Remote Access service doesn't start
       href: ./networking/rras-doesnt-start.md
     - name: Troubleshoot a multisite deployment
-      href: ./networking/troubleshoot-multisite-deployment.md
-    - name: Troubleshoot adding entry points
-      href: ./networking/troubleshoot-adding-entry-points.md
+      items:
+      - name: Troubleshoot a multisite deployment
+        href: ./networking/troubleshoot-multisite-deployment.md
+      - name: Troubleshoot adding entry points
+        href: ./networking/troubleshoot-adding-entry-points.md
+      - name: Troubleshoot enabling multisite
+        href: ./networking/troubleshoot-enabling-multisite.md
+      - name: Troubleshoot general issues related to Remote Access
+        href: ./networking/troubleshoot-general-issues-related-remote-access.md
+      - name: Troubleshoot setting entry point domain controller
+        href: ./networking/troubleshoot-setting-entry-point-domain-controller.md
     - name: Troubleshoot Always On VPN
       href: ./networking/troubleshoot-always-on-vpn.md
-    - name: Troubleshoot authentication issues
-      href: ./networking/troubleshoot-authentication-issues.md
     - name: Troubleshoot DirectAccess
       href: ./networking/troubleshoot-directAccess.md
     - name: 'Troubleshoot DirectAccess Server console: 6to4'
@@ -1806,18 +1812,16 @@
       href: ./networking/troubleshoot-directaccess-server-console-ip-https-ipsec.md
     - name: 'Troubleshoot DirectAccess Server console: Network and high availability'
       href: ./networking/troubleshoot-directaccess-server-console-networking.md
-    - name: Troubleshoot enabling multisite
-      href: ./networking/troubleshoot-enabling-multisite.md
-    - name: Troubleshoot enabling OTP
-      href: ./networking/troubleshoot-enabling-otp.md
     - name: Troubleshoot error 720 when establishing a VPN connection
       href: ./networking/troubleshoot-error-720-when-establishing-a-vpn-connection.md
-    - name: Troubleshoot general issues related to Remote Access
-      href: ./networking/troubleshoot-general-issues-related-remote-access.md
     - name: Troubleshoot OTP deployment
-      href: ./networking/troubleshoot-otp-deployment.md
-    - name: Troubleshoot setting entry point domain controller
-      href: ./networking/troubleshoot-setting-entry-point-domain-controller.md
+      items: 
+      - name: Troubleshoot OTP deployment
+        href: ./networking/troubleshoot-otp-deployment.md
+      - name: Troubleshoot authentication issues
+        href: ./networking/troubleshoot-authentication-issues.md
+      - name: Troubleshoot enabling OTP
+        href: ./networking/troubleshoot-enabling-otp.md
   - name: TCP/IP communications
     items:
     - name: 'Troubleshooting guidance: TCP/IP communication'
