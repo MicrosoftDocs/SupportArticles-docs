@@ -295,6 +295,10 @@ items:
   items:
   - name: SQL Server 2016 build versions
     href: sqlserver-2016/build-versions.md
+  - name: SP 3 Azure Connect Pack
+    items:
+    - name: SP 3 Azure Connect Pack (KB5014242)
+      href: sqlserver-2016/sp3azureconnect.md
   - name: SP 2 Cumulative Update 8
     items:
     - name: SP 2 Cumulative Update 8 (KB4505830)

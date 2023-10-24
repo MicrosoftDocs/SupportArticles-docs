@@ -70,7 +70,8 @@ If the download page doesn't appear, contact [Microsoft Customer Service and Sup
 
 ## Notes for this update
 
-### Hybrid environments deployment
+<details>
+<summary><b>Hybrid environments deployment</b></summary>
 
 When you deploy an update to a hybrid environment (such as Always On, replication, cluster, and mirroring), we recommend that you refer to the following articles before you deploy the update:
 
@@ -91,6 +92,8 @@ When you deploy an update to a hybrid environment (such as Always On, replicatio
 - [How to apply a hotfix for SQL Server in a replication topology](../../database-engine/replication/apply-hotfix-sql-replication-topology.md)
 - [Upgrading Mirrored Instances](/sql/database-engine/database-mirroring/upgrading-mirrored-instances)
 - [Overview of SQL Server Servicing Installation](https://technet.microsoft.com/library/dd638062.aspx)
+
+</details>
 
 <details>
 <summary><b>Language support</b></summary>
