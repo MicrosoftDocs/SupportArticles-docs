@@ -3,7 +3,7 @@ title: Product IDs that are supported by the Office Deployment Tool for Click-to
 description: Lists product IDs that the Office Deployment Tool for Click-to-Run supports.
 author: helenclu
 ms.author: luche
-ms.date: 08/28/2023
+ms.date: 10/23/2023
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -40,12 +40,9 @@ The following table lists Office 365 and Microsoft 365 plan names and the correc
 |-------------------------------------------------|-----------------------------------|
 |Microsoft 365 Apps for enterprise                |`O365ProPlusEEANoTeamsRetail`      |
 |Office 365 Enterprise E3                         |`O365ProPlusRetail`                |
-|Office 365 Enterprise E4                         |`O365ProPlusRetail`                |
 |Office 365 Enterprise E5                         |`O365ProPlusRetail`                |
-|Office 365 Midsize                               |`O365ProPlusRetail`                |
 |Microsoft 365 Apps for business                  |`O365BusinessEEANoTeamsRetail`     |
 |Microsoft 365 Business Standard                  |`O365BusinessRetail`               |
-|Office Small Business Premium                    |`O365SmallBusPremRetail`           |
 |Microsoft 365 E3                                 |`O365ProPlusRetail`                |
 |Microsoft 365 E5                                 |`O365ProPlusRetail`                |
 |Microsoft 365 Business Premium                   |`O365BusinessRetail`               |
