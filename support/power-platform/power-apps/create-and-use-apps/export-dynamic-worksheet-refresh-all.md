@@ -3,7 +3,7 @@ title: Refresh All doesn't work after exporting app data to a dynamic worksheet
 description: Describes an issue where Refresh All doesn't work after exporting app data to a dynamic worksheet in Power Apps.
 author: sriharibs-msft
 ms.reviewer: aartigoyle
-ms.date: 10/19/2023
+ms.date: 10/24/2023
 ms.author: srihas
 search.audienceType: 
   - maker
@@ -18,7 +18,11 @@ contributors:
 
 ## Symptoms
 
-After you use the [Export to Excel](/power-apps/user/export-excel-dynamic-worksheet) command to export app data to a dynamic worksheet and open the file by selecting **Data** > **Refresh All**, the data disappears, and the workbook appears blank.
+You use the [Export to Excel](/power-apps/user/export-excel-dynamic-worksheet) command to export app data to a dynamic worksheet. Then, you open the downloaded  file and refresh the data by selecting **Data** > **Refresh All**. In this situation, you find that the data disappears and the workbook appears blank. You might receive the following error message:
+
+> This Web query returned no data. To change the query, click OK, click the arrow on the name box in the formula bar, click the name of the external data range for the Web query, right-click the selection, and then click Edit Query.
+
+:::image type="content" source="media/export-dynamic-worksheet-refresh-all/web-query-returned-no-data-error.png" alt-text="Screenshot that shows the Web query returned no data error that occurs after you refresh the exported app data." lightbox="media/export-dynamic-worksheet-refresh-all/web-query-returned-no-data-error.png":::
 
 ## Cause
 
@@ -54,13 +58,15 @@ To resolve this issue, you must edit and save the web query.
 
     :::image type="content" source="media/export-dynamic-worksheet-refresh-all/refresh-data.png" alt-text="Screenshot that shows how to refresh your app data in Excel.":::
 
-If this resolution doesn't solve the issue, follow these additional steps:
+If the above steps don't resolve the issue, follow these additional steps:
 
 1. Enter the following link in the address bar of the **Edit Web Query** window to access the **Advanced Settings** page in Microsoft Dynamics 365 Customer Engagement. Remember to replace `OrgURL` with your organization URL.
 
    `https://OrgURL/main.aspx?settingsonly=true`
 
-2. Now, sign out using the top-right profile option link and then sign back in using the right identity. Once you're signed in, close the **Edit Web Query** window, and then in the Excel file, select **Data** > **Refresh All**. The data will be refreshed as expected.
+2. Sign out using the top-right profile option link and then sign back in using the right identity.
+
+3. Once you're signed in, close the **Edit Web Query** window, and then in the Excel file, select **Data** > **Refresh All**. The data will be refreshed as expected.
 
 ## See also
 
