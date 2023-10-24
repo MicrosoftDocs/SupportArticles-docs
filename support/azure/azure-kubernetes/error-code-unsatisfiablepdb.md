@@ -36,16 +36,27 @@ Upon receiving the **UnsatisfiablePDB** error message you may confirm the PDB's 
 > $ kubectl get pdb <pdb-name> -n <pdb-namespace>
 > ```
 
-If the **Allowed Disruption** value is **0**, the node drain will fail during the upgrade process.
+The output of this command should be similar to the following:
+
+> ```console
+> NAME         MIN AVAILABLE   MAX UNAVAILABLE   ALLOWED DISRUPTIONS   AGE
+> <pdb-name>   N/A             0                 0                     49s
+> ```
+
+If the value of **MAX UNAVAILABLE** is **0**, the node drain will fail during the upgrade process.
 
 To resolve this issue, use one of the following solutions.
 
 ## Solution 1: Adjust the PDB's maxUnavailable parameter
 
+Consider using this solution whenever editing the PDB resource directly is a viable option: 
+
 1. Adjust the PDB's maxUnavailable parameter so that the value is **1** or greater. For more information, see [Specifying a PodDisruptionBudget](https://kubernetes.io/docs/tasks/run-application/configure-pdb/#specifying-a-poddisruptionbudget).
 2. Retry the AKS cluster upgrade operation.
 
 ## Solution 2: Back up, delete, and redeploy the PDB
+
+Consider using this solution if for any reason editing the PDB resource directly is not viable, and it is preferable to temporarily remove the PDB resource from the cluster (while the cluster upgrade operation is ongoing): 
 
 1. Take a backup of the PDB using the following command:
 
