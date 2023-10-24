@@ -32,7 +32,7 @@ Only the most recent CU that was released for SQL Server 2016 is available at th
 
 - Just as for SQL Server service packs, we recommend that you test CUs before you deploy them to production environments.
 
-- We recommend that you upgrade your SQL Server installation to [the latest SQL Server 2016 service pack](http://support.microsoft.com/en-us/help/3177534).
+- We recommend that you upgrade your SQL Server installation to [the latest SQL Server 2016 service pack](https://support.microsoft.com/en-us/help/3177534).
 
 ## How to obtain this cumulative update package
 
@@ -40,7 +40,7 @@ The following update is available from the Microsoft Download Center:
 
 :::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for Microsoft SQL Server 2016 now](https://www.microsoft.com/en-us/download/details.aspx?id=53338)
 
-If the download page doesn't appear, contact [Microsoft Customer Service and Support](http://support.microsoft.com/contactus/?ws=support) to obtain the cumulative update package.
+If the download page doesn't appear, contact [Microsoft Customer Service and Support](https://support.microsoft.com/contactus/?ws=support) to obtain the cumulative update package.
 
 > [!NOTE] 
 > After future cumulative updates are released for SQL Server 2016, this CU can be located and downloaded from the [Microsoft Windows Update Catalog](https://catalog.update.microsoft.com/Search.aspx?q=sql%20server%202016). However, Microsoft recommends that you install the latest cumulative update available.
@@ -159,7 +159,7 @@ One cumulative update package includes all the component packages. However, the 
 <details>
 <summary><b>Support for this update</b></summary>
 
-If other issues occur or if any troubleshooting is required, you might have to create a separate service request. The usual support costs will apply to additional support questions and to issues that don't qualify for this specific cumulative update package. For a complete list of Microsoft Customer Service and Support telephone numbers or to create a separate service request, go to the [Microsoft support website](http://support.microsoft.com/contactus/?ws=support).
+If other issues occur or if any troubleshooting is required, you might have to create a separate service request. The usual support costs will apply to additional support questions and to issues that don't qualify for this specific cumulative update package. For a complete list of Microsoft Customer Service and Support telephone numbers or to create a separate service request, go to the [Microsoft support website](https://support.microsoft.com/contactus/?ws=support).
 
 </details>
 
@@ -388,7 +388,7 @@ SQL Server 2016 Database Services Core Shared
 | Microsoft.sqlserver.integrationservices.runtimetelemetry.dll | 13.0.2197.0     | 33992     | 25-Feb-2017 | 20:15 | x86      |
 | Microsoft.sqlserver.manageddts.dll                           | 13.0.2197.0     | 606408    | 25-Feb-2017 | 20:15 | x86      |
 | Microsoft.sqlserver.management.pssnapins.dll                 | 13.0.2197.0     | 215232    | 25-Feb-2017 | 20:14 | x86      |
-| Microsoft.sqlserver.management.sdk.scripting.dll             | 13.0.14510.3    | 30912     | 12-Oct-16 | 10:35 | x86      |
+| Microsoft.sqlserver.management.sdk.scripting.dll             | 13.0.14510.3    | 30912     | 12-Oct-2016 | 10:35 | x86      |
 | Microsoft.sqlserver.packageformatupdate.dll                  | 13.0.2197.0     | 445128    | 25-Feb-2017 | 20:15 | x86      |
 | Microsoft.sqlserver.replication.dll                          | 2015.130.2197.0 | 1638088   | 25-Feb-2017 | 20:15 | x64      |
 | Repldp.dll                                                   | 2015.130.2197.0 | 276168    | 25-Feb-2017 | 20:12 | x64      |

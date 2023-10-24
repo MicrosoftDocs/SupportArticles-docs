@@ -295,6 +295,22 @@ items:
   items:
   - name: SQL Server 2016 build versions
     href: sqlserver-2016/build-versions.md
+  - name: Cumulative Update 9
+    items:
+    - name: Cumulative Update 9 (KB4037357)
+      href: sqlserver-2016/cumulativeupdate9.md
+  - name: Cumulative Update 8
+    items:
+    - name: Cumulative Update 8 (KB4040713)
+      href: sqlserver-2016/cumulativeupdate8.md
+  - name: Cumulative Update 7
+    items:
+    - name: Cumulative Update 7 (KB4024304)
+      href: sqlserver-2016/cumulativeupdate7.md
+  - name: Cumulative Update 6
+    items:
+    - name: Cumulative Update 6 (KB4019914)
+      href: sqlserver-2016/cumulativeupdate6.md
   - name: Cumulative Update 5
     items:
     - name: Cumulative Update 5 (KB4013105)
