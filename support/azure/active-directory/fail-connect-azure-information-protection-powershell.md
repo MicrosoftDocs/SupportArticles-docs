@@ -39,7 +39,7 @@ When you try to connect to Microsoft Azure Information Protection using Windows 
 
 You may also see the following error message:
 
-> Object reference not set to an instance of an object
+> Object reference not set to an instance of an object.
 
 ## Cause
 
