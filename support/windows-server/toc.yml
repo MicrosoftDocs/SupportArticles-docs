@@ -2880,7 +2880,7 @@
       href: ./virtualization/fcoe-io-failures-hyper-v-guests.md
     - name: Virtual machine LUNs disappear after you configure them as MPIO devices
       href: ./virtualization/vm-dda-luns-disappear-after-mpio-config.md
-  - name: Troubleshoot a guarded fabric
+  - name: Shielded VMs
     items:
     - name: Troubleshoot a guarded fabric
       href: ./virtualization/troubleshoot-guarded-fabric-overview.md
