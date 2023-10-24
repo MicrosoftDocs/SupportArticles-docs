@@ -53,27 +53,27 @@ If the download page doesn't appear, contact [Microsoft Customer Service and Sup
 
 ## Hotfixes that are included in this cumulative update package
 
-| VSTS bug number | KB article number | Description | Fix area|
-|---------------------------------------------|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------|
-| <a id=10729319>[10729319](#10729319) </a> | 4017827 | FIX: Reporting Services "SortExpression" cause rsComparisonError when there's a NULL value in a column set as "DataTimeOffset" | Reporting Services|
-| <a id=10817781>[10817781](#10817781) </a> | 4040276 | [FIX: Indirect checkpoints on the tempdb database cause "Non-yielding scheduler" error in SQL Server 2016](https://support.microsoft.com/help/4040276)| SQL Engine|
-| <a id=10682296>[10682296](#10682296) </a> | 4022895 | [FIX: Excel crashes when you save a workbook as a PDF file by using the Adobe Acrobat PDFMaker add-in if the MDS add-in for Excel in SQL Server 2014 or 2016 is also installed](https://support.microsoft.com/help/4022895) | Data Quality Services (DQS) |
-| <a id=10682302>[10682302](#10682302) </a> | 4023926 | [FIX: Unable to drop stored procedure execution article from P2P publication in SQL Server 2014 or 2016](https://support.microsoft.com/help/4023926)| SQL Engine|
-| <a id=10682256>[10682256](#10682256) </a> | 3108537 | FIX: DBCC CHECKFILEGROUP reports false inconsistency error 5283 on a database that contains a partitioned table in SQL Server | SQL Engine|
-| <a id=10682300>[10682300](#10682300) </a> | 4024311 | [FIX: "Non-yielding Scheduler" condition occurs on spinlock contention in Microsoft SQL Server 2014 or 2016](https://support.microsoft.com/help/4024311)| SQL Engine|
-| <a id=10716344>[10716344](#10716344) </a> | 4039966 | [FIX: Access violation occurs when a DDL trigger is raised by the CREATE EXTERNAL TABLE command in SQL Server 2016](https://support.microsoft.com/help/4039966) | SQL Engine|
-| <a id=10729323>[10729323](#10729323) </a> | 4022935 | [FIX: Fails to resume a suspended availability database after a write error in SQL Server 2014 or 2016](https://support.microsoft.com/help/4022935) | High Availability |
-| <a id=10679744>[10679744](#10679744) </a> | 4040533 | [FIX: Returns incorrect results when computed column is queried after installing hotfix that's described in KB 3213683 and enabling TF 176 in SQL Server 2016](https://support.microsoft.com/help/4040533)| SQL Engine|
-| <a id=10682282>[10682282](#10682282) </a> | 4024563 | [FIX: Unhandled exception when you export a SSRS report to a .pdf file if the page height is set to 8.5 inches in SQL Server 2014 or 2016](https://support.microsoft.com/help/4024563)| Reporting Services|
-| <a id=10682251>[10682251](#10682251) </a> | 4024184 | [FIX: Access violation with query to retrieve data from a clustered columnstore index in SQL Server 2014 or 2016](https://support.microsoft.com/help/4024184) | SQL Engine|
-| <a id=10479291>[10479291](#10479291) </a> | 4034789 | [FIX: An unexpected exception error occurs when a XIRR measure processes too many records in SSAS 2016](https://support.microsoft.com/help/4034789) | Analysis Services |
-| <a id=10682270>[10682270](#10682270) </a> | 4022753 | [FIX: SSAS 2014 or 2016 crashes when you execute an MDX query that refers to a calculated member that is a child member of another hierarchy](https://support.microsoft.com/help/4022753)| Analysis Services |
-| <a id=10682266>[10682266](#10682266) </a> | 4023679 | [FIX: Timeout when you back up a large database to URL in SQL Server 2014 or 2016](https://support.microsoft.com/help/4023679)| SQL Engine|
-| <a id=10682259>[10682259](#10682259) </a> | 4023170 | [FIX: Error 574 when you try to install Service Pack 2 for SQL Server 2014](https://support.microsoft.com/help/4023170) | Management Tools|
-| <a id=10682322>[10682322](#10682322) </a> | 4034376 | [FIX: Couldn't disable "change data capture" if any column is encrypted by "Always Encrypted" feature of SQL Server 2016](https://support.microsoft.com/help/4034376) | SQL Engine|
-| <a id=10271367>[10271367](#10271367) </a> | 4024860 | [Update to improve the performance for columnstore dynamic management views "column_store_row_groups" and "dm_db_column_store_row_group_physical_stats" in SQL Server 2016](https://support.microsoft.com/help/4024860) | SQL Performance |
-| <a id=10988058>[10988058](#10988058) </a> | 4053693 | [FIX: CDC components in SSIS do not function in SQL Server after a cumulative update is applied](https://support.microsoft.com/help/4053693)| Integration Services|
-| <a id=10988062>[10988062](#10988062) </a> | 4038932 | FIX: Change Data Capture functionality doesn't work in SQL Server| Change Data Capture |
+| VSTS bug number | Description | Fix area|
+|---------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------|
+| <a id=10729319>[10729319](#10729319) </a> | FIX: Reporting Services "SortExpression" cause rsComparisonError when there's a NULL value in a column set as "DataTimeOffset" (KB4017827) | Reporting Services|
+| <a id=10817781>[10817781](#10817781) </a> | [FIX: Indirect checkpoints on the tempdb database cause "Non-yielding scheduler" error in SQL Server 2016 (KB4040276)](https://support.microsoft.com/help/4040276)| SQL Engine|
+| <a id=10682296>[10682296](#10682296) </a> | [FIX: Excel crashes when you save a workbook as a PDF file by using the Adobe Acrobat PDFMaker add-in if the MDS add-in for Excel in SQL Server 2014 or 2016 is also installed (KB4022895)](https://support.microsoft.com/help/4022895) | Data Quality Services (DQS) |
+| <a id=10682302>[10682302](#10682302) </a> | [FIX: Unable to drop stored procedure execution article from P2P publication in SQL Server 2014 or 2016 (KB4023926)](https://support.microsoft.com/help/4023926)| SQL Engine|
+| <a id=10682256>[10682256](#10682256) </a> | FIX: DBCC CHECKFILEGROUP reports false inconsistency error 5283 on a database that contains a partitioned table in SQL Server (KB3108537) | SQL Engine|
+| <a id=10682300>[10682300](#10682300) </a> | [FIX: "Non-yielding Scheduler" condition occurs on spinlock contention in Microsoft SQL Server 2014 or 2016 (KB4024311)](https://support.microsoft.com/help/4024311)| SQL Engine|
+| <a id=10716344>[10716344](#10716344) </a> | [FIX: Access violation occurs when a DDL trigger is raised by the CREATE EXTERNAL TABLE command in SQL Server 2016 (KB4039966)](https://support.microsoft.com/help/4039966) | SQL Engine|
+| <a id=10729323>[10729323](#10729323) </a> | [FIX: Fails to resume a suspended availability database after a write error in SQL Server 2014 or 2016 (KB4022935)](https://support.microsoft.com/help/4022935) | High Availability |
+| <a id=10679744>[10679744](#10679744) </a> | [FIX: Returns incorrect results when computed column is queried after installing hotfix that's described in KB3213683 and enabling TF 176 in SQL Server 2016 (KB4040533)](https://support.microsoft.com/help/4040533)| SQL Engine|
+| <a id=10682282>[10682282](#10682282) </a> | [FIX: Unhandled exception when you export a SSRS report to a .pdf file if the page height is set to 8.5 inches in SQL Server 2014 or 2016 (KB4024563)](https://support.microsoft.com/help/4024563)| Reporting Services|
+| <a id=10682251>[10682251](#10682251) </a> | [FIX: Access violation with query to retrieve data from a clustered columnstore index in SQL Server 2014 or 2016 (KB4024184)](https://support.microsoft.com/help/4024184) | SQL Engine|
+| <a id=10479291>[10479291](#10479291) </a> | [FIX: An unexpected exception error occurs when a XIRR measure processes too many records in SSAS 2016 (KB4034789)](https://support.microsoft.com/help/4034789) | Analysis Services |
+| <a id=10682270>[10682270](#10682270) </a> | [FIX: SSAS 2014 or 2016 crashes when you execute an MDX query that refers to a calculated member that is a child member of another hierarchy (KB4022753)](https://support.microsoft.com/help/4022753)| Analysis Services |
+| <a id=10682266>[10682266](#10682266) </a> | [FIX: Timeout when you back up a large database to URL in SQL Server 2014 or 2016 (KB4023679)](https://support.microsoft.com/help/4023679)| SQL Engine|
+| <a id=10682259>[10682259](#10682259) </a> | [FIX: Error 574 when you try to install Service Pack 2 for SQL Server 2014 (KB4023170)](https://support.microsoft.com/help/4023170) | Management Tools|
+| <a id=10682322>[10682322](#10682322) </a> | [FIX: Couldn't disable "change data capture" if any column is encrypted by "Always Encrypted" feature of SQL Server 2016 (KB4034376)](https://support.microsoft.com/help/4034376) | SQL Engine|
+| <a id=10271367>[10271367](#10271367) </a> | [Update to improve the performance for columnstore dynamic management views "column_store_row_groups" and "dm_db_column_store_row_group_physical_stats" in SQL Server 2016 (KB4024860)](https://support.microsoft.com/help/4024860) | SQL Performance |
+| <a id=10988058>[10988058](#10988058) </a> | [FIX: CDC components in SSIS do not function in SQL Server after a cumulative update is applied (KB4053693)](https://support.microsoft.com/help/4053693)| Integration Services|
+| <a id=10988062>[10988062](#10988062) </a> | FIX: Change Data Capture functionality doesn't work in SQL Server (KB4038932)| Change Data Capture |
 
 ## Notes for this update
 

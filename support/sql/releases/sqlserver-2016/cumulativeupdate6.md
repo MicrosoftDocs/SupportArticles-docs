@@ -52,30 +52,30 @@ If the download page doesn't appear, contact [Microsoft Customer Service and Sup
 
 ## Hotfixes that are included in this cumulative update package
 
-| VSTS bug number| KB article number | Description | Fix area |
-|------------------------------------------|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------|
-| <a id=9917140>[9917140](#9917140) </a> |  | [FIX: Query against sys.dm_db_partition_stats DMV is slow if the database contains many partitions in SQL Server 2016 (KB4019903)](https://support.microsoft.com/help/4019903)| SQL service|
-| <a id=9902335>[9902335](#9902335) </a> |  | [FIX: Restore fails when you do backup with compression and checksum on TDE enabled database in SQL Server 2016 (KB4019893)](https://support.microsoft.com/help/4019893)| SQL service|
-| <a id=9813852>[9813852](#9813852) </a> |  | [GDR update package for SQL Server 2016 SP1 (KB3210089)](https://support.microsoft.com/help/3210089)| Reporting Services |
-| <a id=9813828>[9813828](#9813828) </a> |  | [FIX: DMV sys.dm_hadr_availability_group_states displays "NOT_HEALTHY" in synchronization_health_desc column on secondary replicas in SQL Server (KB4013111)](https://support.microsoft.com/help/4013111) | High Availability|
-| <a id=9813857>[9813857](#9813857) </a> |  | [Update reduces the execution frequency of the sp_MSsubscription_cleanup stored procedure in SQL Server (KB4014798)](https://support.microsoft.com/help/4014798)| SQL service|
-| <a id=9720331>[9720331](#9720331) </a> |  | [FIX: You receive incorrect results when you use SQL Server Management Objects to generate a script for a full-text Search index (KB4016850)](https://support.microsoft.com/help/4016850) | Management Tools |
-| <a id=9642869>[9642869](#9642869) </a> |  | [FIX: Deadlock when you use sys.column_store_row_groups and sys.dm_db_column_store_row_group_physical_stats DMV with large DDL operations in SQL Server 2016 (KB4016946)](https://support.microsoft.com/help/4016946) | SQL service|
-| <a id=9813835>[9813835](#9813835) </a> |  | [FIX: SQL Server Profiler fails to obfuscate sp_setapprole when it's executed from a remote procedure call in SQL Server (KB4014756)](https://support.microsoft.com/help/4014756) | SQL service|
-| <a id=9808882>[9808882](#9808882) </a> |  | [FIX: Significantly increased PAGELATCH_EX contentions in sys.sysobjvalues in SQL Server 2016 (KB4013999)](https://support.microsoft.com/help/4013999)| SQL service|
-| <a id=9901863>[9901863](#9901863) </a> |  | [FIX: Database schema is corrupted when you restore a database from a snapshot in SQL Server (KB4019701)](https://support.microsoft.com/help/4019701) | SQL service|
-| <a id=9627365>[9627365](#9627365) </a> |  | [FIX: "The custom resolver for this article requires OLEAUT32.DLL with a minimum version of 2.40.4276" error with merge publication in SQL Server (KB4016945)](https://support.microsoft.com/help/4016945)| SQL service|
-| <a id=9813867>[9813867](#9813867) </a> |  | [FIX: Error occurs when you drop a subscription by using a non-sysadmin account in SQL Server (KB4014738)](https://support.microsoft.com/help/4014738)| SQL service|
-| <a id=9822981>[9822981](#9822981) </a> |  | Intra-query deadlock on communication buffer when you run a bulk load against a clustered columnstore index in SQL Server 2016 (KB4017154)| SQL performance|
-| <a id=9813871>[9813871](#9813871) </a> |  | [FIX: "Partition cannot contain column segments of different data versions" error when you process data on a partition in SSAS Tabular model (KB4013208)](https://support.microsoft.com/help/4013208) | Analysis Services|
-| <a id=9906184>[9906184](#9906184) </a> | 4019671 | FIX: A severe error occurs when you create a spatial index with the GEOMETRY_GRID or GEOGRAPHY_GRID option in SQL Server | SQL service|
-| <a id=9813824>[9813824](#9813824) </a> | 4014732 | [FIX: A memory leak in SQLWEP causes the host process Wmiprvse.exe to crash in SQL Server](https://support.microsoft.com/help/4014732)| SQL service|
-| <a id=9875181>[9875181](#9875181) </a> | 4019048 | FIX: SSAS crashes when you retrieve KPIs as hidden members by using schema rowsets in SQL Server | Analysis Services|
-| <a id=9813861>[9813861](#9813861) </a> | 4014706 | [FIX: Failed assertion and many access violation dump files after the sp_replcmds stored procedure is canceled in SQL Server](https://support.microsoft.com/help/4014706) | SQL service|
-| <a id=9719215>[9719215](#9719215) </a> | 4016361 | [FIX: Service Broker endpoint connections aren't closed after an availability group failover in SQL Server](https://support.microsoft.com/help/4016361) | SQL service|
-| <a id=9877136>[9877136](#9877136) </a> | 4019840 | [FIX: Queries against PolyBase external tables return incorrect results in SQL Server 2016](https://support.microsoft.com/help/4019840) | SQL service|
-| <a id=9917205>[9917205](#9917205) </a> | 4019863 | [FIX: An assertion occurs when you execute an ALTER TABLE SWITCH statement on a partitioned temporal history table in SQL Server 2016](https://support.microsoft.com/help/4019863)| SQL service|
-| <a id=9901010>[9901010](#9901010) </a> | 4019446 | [FIX: SQL Server 2016 stops responding when the "Latch_Suspend_End" extended event is triggered incorrectly](https://support.microsoft.com/help/4019446)| SQL performance|
+| VSTS bug number| Description | Fix area |
+|------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------|
+| <a id=9917140>[9917140](#9917140) </a> | [FIX: Query against sys.dm_db_partition_stats DMV is slow if the database contains many partitions in SQL Server 2016 (KB4019903)](https://support.microsoft.com/help/4019903)| SQL service|
+| <a id=9902335>[9902335](#9902335) </a> | [FIX: Restore fails when you do backup with compression and checksum on TDE enabled database in SQL Server 2016 (KB4019893)](https://support.microsoft.com/help/4019893)| SQL service|
+| <a id=9813852>[9813852](#9813852) </a> | [GDR update package for SQL Server 2016 SP1 (KB3210089)](https://support.microsoft.com/help/3210089)| Reporting Services |
+| <a id=9813828>[9813828](#9813828) </a> | [FIX: DMV sys.dm_hadr_availability_group_states displays "NOT_HEALTHY" in synchronization_health_desc column on secondary replicas in SQL Server (KB4013111)](https://support.microsoft.com/help/4013111) | High Availability|
+| <a id=9813857>[9813857](#9813857) </a> | [Update reduces the execution frequency of the sp_MSsubscription_cleanup stored procedure in SQL Server (KB4014798)](https://support.microsoft.com/help/4014798)| SQL service|
+| <a id=9720331>[9720331](#9720331) </a> | [FIX: You receive incorrect results when you use SQL Server Management Objects to generate a script for a full-text Search index (KB4016850)](https://support.microsoft.com/help/4016850) | Management Tools |
+| <a id=9642869>[9642869](#9642869) </a> | [FIX: Deadlock when you use sys.column_store_row_groups and sys.dm_db_column_store_row_group_physical_stats DMV with large DDL operations in SQL Server 2016 (KB4016946)](https://support.microsoft.com/help/4016946) | SQL service|
+| <a id=9813835>[9813835](#9813835) </a> | [FIX: SQL Server Profiler fails to obfuscate sp_setapprole when it's executed from a remote procedure call in SQL Server (KB4014756)](https://support.microsoft.com/help/4014756) | SQL service|
+| <a id=9808882>[9808882](#9808882) </a> | [FIX: Significantly increased PAGELATCH_EX contentions in sys.sysobjvalues in SQL Server 2016 (KB4013999)](https://support.microsoft.com/help/4013999)| SQL service|
+| <a id=9901863>[9901863](#9901863) </a> | [FIX: Database schema is corrupted when you restore a database from a snapshot in SQL Server (KB4019701)](https://support.microsoft.com/help/4019701) | SQL service|
+| <a id=9627365>[9627365](#9627365) </a> | [FIX: "The custom resolver for this article requires OLEAUT32.DLL with a minimum version of 2.40.4276" error with merge publication in SQL Server (KB4016945)](https://support.microsoft.com/help/4016945)| SQL service|
+| <a id=9813867>[9813867](#9813867) </a> | [FIX: Error occurs when you drop a subscription by using a non-sysadmin account in SQL Server (KB4014738)](https://support.microsoft.com/help/4014738)| SQL service|
+| <a id=9822981>[9822981](#9822981) </a> | Intra-query deadlock on communication buffer when you run a bulk load against a clustered columnstore index in SQL Server 2016 (KB4017154)| SQL performance|
+| <a id=9813871>[9813871](#9813871) </a> | [FIX: "Partition cannot contain column segments of different data versions" error when you process data on a partition in SSAS Tabular model (KB4013208)](https://support.microsoft.com/help/4013208) | Analysis Services|
+| <a id=9906184>[9906184](#9906184) </a> | FIX: A severe error occurs when you create a spatial index with the GEOMETRY_GRID or GEOGRAPHY_GRID option in SQL Server (KB4019671) | SQL service|
+| <a id=9813824>[9813824](#9813824) </a> | [FIX: A memory leak in SQLWEP causes the host process Wmiprvse.exe to crash in SQL Server (KB4014732)](https://support.microsoft.com/help/4014732)| SQL service|
+| <a id=9875181>[9875181](#9875181) </a> | FIX: SSAS crashes when you retrieve KPIs as hidden members by using schema rowsets in SQL Server (KB4019048) | Analysis Services|
+| <a id=9813861>[9813861](#9813861) </a> | [FIX: Failed assertion and many access violation dump files after the sp_replcmds stored procedure is canceled in SQL Server (KB4014706)](https://support.microsoft.com/help/4014706) | SQL service|
+| <a id=9719215>[9719215](#9719215) </a> | [FIX: Service Broker endpoint connections aren't closed after an availability group failover in SQL Server (KB4016361)](https://support.microsoft.com/help/4016361) | SQL service|
+| <a id=9877136>[9877136](#9877136) </a> | [FIX: Queries against PolyBase external tables return incorrect results in SQL Server 2016 (KB4019840)](https://support.microsoft.com/help/4019840) | SQL service|
+| <a id=9917205>[9917205](#9917205) </a> | [FIX: An assertion occurs when you execute an ALTER TABLE SWITCH statement on a partitioned temporal history table in SQL Server 2016 (KB4019863)](https://support.microsoft.com/help/4019863)| SQL service|
+| <a id=9901010>[9901010](#9901010) </a> | [FIX: SQL Server 2016 stops responding when the "Latch_Suspend_End" extended event is triggered incorrectly (KB4019446)](https://support.microsoft.com/help/4019446)| SQL performance|
 
 ## Notes for this update
 

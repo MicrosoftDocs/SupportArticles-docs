@@ -53,30 +53,30 @@ If the download page doesn't appear, contact [Microsoft Customer Service and Sup
 > [!NOTE]
 > The following table lists the status of individual Microsoft Knowledge Base articles. A separate Microsoft Knowledge Base article might not be created for each bug.
 
-| VSTS bug number | KB article number | Description| Fix area|
-|-------------------------------------------|-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------|
-| <a id=10868755>[10868755](#10868755) </a> | 4040512 | [FIX: Error when exporting a Reporting Services report to PDF in SQL Server 2016 or 2017](https://support.microsoft.com/help/4040512)| Reporting Services|
-| <a id=10868765>[10868765](#10868765) </a> | 4039510 | [FIX: Access violation occurs when you use sp_xml_preparedocument to open XML documents in SQL Server](https://support.microsoft.com/help/4039510) | XML |
-| <a id=11078703>[11078703](#11078703) </a> | 4039592 | [FIX: Cannot change the password for a SQL Server 2014 or 2016 service account when additional LSA protection is enabled](https://support.microsoft.com/help/4039592)| Management Tools|
-| <a id=11078710>[11078710](#11078710) </a> | 4042232 | [FIX: Access violation when you cancel a pending query if the missing indexes feature is enabled in SQL Server 2014 and 2016](https://support.microsoft.com/help/4042232)| SQL performance |
-| <a id=11078717>[11078717](#11078717) </a> | 4043947 | [FIX: Bookmarks functionality does not work completely when you open a report in MHTML format through Outlook in SSRS 2014 and 2016](https://support.microsoft.com/help/4043947) | Reporting Services|
-| <a id=10868752>[10868752](#10868752) </a> | 4033789 | [FIX: A memory leak may occur when you perform Process Update operations in SSAS](https://support.microsoft.com/help/4033789)| Analysis Services |
-| <a id=11077635>[11077635](#11077635) </a> | 4035062 | [FIX: Memory use with many databases greater in SQL Server 2016 than earlier versions](https://support.microsoft.com/help/4035062) | SQL Engine|
-| <a id=10868720>[10868720](#10868720) </a> | 4038882 | [FIX: SQL Server Managed Backup does not delete old backups that are beyond the retention period in SQL Server](https://support.microsoft.com/help/4038882)| SQL Engine|
-| <a id=10868737>[10868737](#10868737) </a> | 4039509 | [FIX: SSAS crashes when you process an SSAS database or cube in SQL Server](https://support.microsoft.com/help/4039509)| Analysis Services |
-| <a id=10868724>[10868724](#10868724) </a> | 4039511 | [FIX: Managed Backup fails intermittently because of SQLVDI error in SQL Server](https://support.microsoft.com/help/4039511) | SQL Engine|
-| <a id=10868769>[10868769](#10868769) </a> | 4039735 | [FIX: "Non-yielding Scheduler" condition occurs for query with many expressions in SQL Server 2014 and 2016](https://support.microsoft.com/help/4039735) | SQL performance |
-| <a id=11078700>[11078700](#11078700) </a> | 4040108 | [FIX: Backup of availability database via VSS-based application may fail in SQL Server](https://support.microsoft.com/help/4040108)| SQL Engine|
-| <a id=10868731>[10868731](#10868731) </a> | 4040376 | [FIX: Managed Backup to Microsoft Azure stops after large database backup in SQL Server](https://support.microsoft.com/help/4040376) | SQL Engine|
-| <a id=11061122>[11061122](#11061122) </a> | 4046056 | [FIX: Assertion occurs when you access memory-optimized table through MARS in SQL Server 2016](https://support.microsoft.com/help/4046056) | SQL Engine|
-| <a id=11057320>[11057320](#11057320) </a> | 4052134 | [FIX: Errors 33111 and 3013 when you back up a TDE encrypted database in SQL Server](https://support.microsoft.com/help/4052134) | SQL Engine|
-| <a id=11124143>[11124143](#11124143) </a> | 4052127 | [FIX: The Alert Engine reads the complete Application event log and sends alerts on old events after Windows is updated](https://support.microsoft.com/help/4052127) | Management Tools|
-| <a id=10881287>[10881287](#10881287) </a> | 4052131 | [FIX: DMV sys.dm_os_windows_info returns wrong values for Windows 10 and Windows Server 2016](https://support.microsoft.com/help/4052131)| SQL Engine|
-| <a id=11127656>[11127656](#11127656) </a> | 4052625 | [FIX: Queries that retrieve data by using non-clustered index seek take longer in SQL Server](https://support.microsoft.com/help/4052625)| SQL Engine|
-| <a id=10870632>[10870632](#10870632) </a> | 4042948 | [FIX: Data-driven subscription fails after you upgrade from SSRS 2008 to SSRS 2016](https://support.microsoft.com/help/4042948)| Reporting Services|
-| <a id=10868734>[10868734](#10868734) </a> | 4022483 | [FIX: Error when you export a DQS knowledge base that contains domains in the DQS client in SQL Server](https://support.microsoft.com/help/4022483)| Data Quality Services (DQS) |
-| <a id=10868746>[10868746](#10868746) </a> | 4040401 | [FIX: Access violation for spatial datatypes query via linked server in SQL Server](https://support.microsoft.com/help/4040401)| SQL Engine|
-| <a id=11078721>[11078721](#11078721) </a> | 4055758 | [FIX: Inconsistent behavior for returning trailing blanks at the end of CHAR and BINARY data in SQL Server](https://support.microsoft.com/help/4055758)| SQL Engine|
+| VSTS bug number | Description| Fix area|
+|-------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------|
+| <a id=10868755>[10868755](#10868755) </a> | [FIX: Error when exporting a Reporting Services report to PDF in SQL Server 2016 or 2017 (KB4040512)](https://support.microsoft.com/help/4040512)| Reporting Services|
+| <a id=10868765>[10868765](#10868765) </a> | [FIX: Access violation occurs when you use sp_xml_preparedocument to open XML documents in SQL Server (KB4039510)](https://support.microsoft.com/help/4039510) | XML |
+| <a id=11078703>[11078703](#11078703) </a> | [FIX: Cannot change the password for a SQL Server 2014 or 2016 service account when additional LSA protection is enabled (KB4039592)](https://support.microsoft.com/help/4039592)| Management Tools|
+| <a id=11078710>[11078710](#11078710) </a> | [FIX: Access violation when you cancel a pending query if the missing indexes feature is enabled in SQL Server 2014 and 2016 (KB4042232)](https://support.microsoft.com/help/4042232)| SQL performance |
+| <a id=11078717>[11078717](#11078717) </a> | [FIX: Bookmarks functionality does not work completely when you open a report in MHTML format through Outlook in SSRS 2014 and 2016 (KB4043947)](https://support.microsoft.com/help/4043947) | Reporting Services|
+| <a id=10868752>[10868752](#10868752) </a> | [FIX: A memory leak may occur when you perform Process Update operations in SSAS (KB4033789)](https://support.microsoft.com/help/4033789)| Analysis Services |
+| <a id=11077635>[11077635](#11077635) </a> | [FIX: Memory use with many databases greater in SQL Server 2016 than earlier versions (KB4035062)](https://support.microsoft.com/help/4035062) | SQL Engine|
+| <a id=10868720>[10868720](#10868720) </a> | [FIX: SQL Server Managed Backup does not delete old backups that are beyond the retention period in SQL Server (KB4038882)](https://support.microsoft.com/help/4038882)| SQL Engine|
+| <a id=10868737>[10868737](#10868737) </a> | [FIX: SSAS crashes when you process an SSAS database or cube in SQL Server (KB4039509)](https://support.microsoft.com/help/4039509)| Analysis Services |
+| <a id=10868724>[10868724](#10868724) </a> | [FIX: Managed Backup fails intermittently because of SQLVDI error in SQL Server (KB4039511)](https://support.microsoft.com/help/4039511) | SQL Engine|
+| <a id=10868769>[10868769](#10868769) </a> | [FIX: "Non-yielding Scheduler" condition occurs for query with many expressions in SQL Server 2014 and 2016 (KB4039735)](https://support.microsoft.com/help/4039735) | SQL performance |
+| <a id=11078700>[11078700](#11078700) </a> | [FIX: Backup of availability database via VSS-based application may fail in SQL Server (KB4040108)](https://support.microsoft.com/help/4040108)| SQL Engine|
+| <a id=10868731>[10868731](#10868731) </a> | [FIX: Managed Backup to Microsoft Azure stops after large database backup in SQL Server (KB4040376)](https://support.microsoft.com/help/4040376) | SQL Engine|
+| <a id=11061122>[11061122](#11061122) </a> | [FIX: Assertion occurs when you access memory-optimized table through MARS in SQL Server 2016 (KB4046056)](https://support.microsoft.com/help/4046056) | SQL Engine|
+| <a id=11057320>[11057320](#11057320) </a> | [FIX: Errors 33111 and 3013 when you back up a TDE encrypted database in SQL Server (KB4052134)](https://support.microsoft.com/help/4052134) | SQL Engine|
+| <a id=11124143>[11124143](#11124143) </a> | [FIX: The Alert Engine reads the complete Application event log and sends alerts on old events after Windows is updated (KB4052127)](https://support.microsoft.com/help/4052127) | Management Tools|
+| <a id=10881287>[10881287](#10881287) </a> | [FIX: DMV sys.dm_os_windows_info returns wrong values for Windows 10 and Windows Server 2016 (KB4052131)](https://support.microsoft.com/help/4052131)| SQL Engine|
+| <a id=11127656>[11127656](#11127656) </a> | [FIX: Queries that retrieve data by using non-clustered index seek take longer in SQL Server (KB4052625)](https://support.microsoft.com/help/4052625)| SQL Engine|
+| <a id=10870632>[10870632](#10870632) </a> | [FIX: Data-driven subscription fails after you upgrade from SSRS 2008 to SSRS 2016 (KB4042948)](https://support.microsoft.com/help/4042948)| Reporting Services|
+| <a id=10868734>[10868734](#10868734) </a> | [FIX: Error when you export a DQS knowledge base that contains domains in the DQS client in SQL Server (KB4022483)](https://support.microsoft.com/help/4022483)| Data Quality Services (DQS) |
+| <a id=10868746>[10868746](#10868746) </a> | [FIX: Access violation for spatial datatypes query via linked server in SQL Server (KB4040401)](https://support.microsoft.com/help/4040401)| SQL Engine|
+| <a id=11078721>[11078721](#11078721) </a> | [FIX: Inconsistent behavior for returning trailing blanks at the end of CHAR and BINARY data in SQL Server (KB4055758)](https://support.microsoft.com/help/4055758)| SQL Engine|
 
 ## Notes for this update
 
