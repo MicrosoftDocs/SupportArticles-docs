@@ -48,7 +48,7 @@ These errors can occur for various reasons, such as:
 ## Resolution option 1: Run the Check User Access diagnostic
 
 > [!NOTE]
-> This diagnostic isn't currently supported for GCC High, DoD, or Microsoft 365 operated by 21Vianet.
+> This diagnostic isn't available for the GCC High or DoD environments, or for Microsoft 365 operated by 21Vianet.
 
 Microsoft 365 administrators can run diagnostics within the tenant to identify possible issues that affect user access.
 

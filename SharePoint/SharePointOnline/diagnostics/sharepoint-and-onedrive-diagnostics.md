@@ -25,7 +25,7 @@ description: List of SharePoint Online and OneDrive diagnostics
 It's important that administrators are able to diagnose and resolve issues quickly in SharePoint Online and OneDrive. To support this effort, the SharePoint support team has released diagnostics in the Microsoft 365 admin center to resolve common issues.
 
 > [!NOTE]
-> These diagnostics are not currently supported for GCC High, DoD, or Microsoft 365 operated by 21Vianet.
+> These diagnostics aren't available for the GCC High or DoD environments, or for Microsoft 365 operated by 21Vianet.
 
 Diagnostic capabilities for a few text queries were first released within the Microsoft 365 admin center support portal in December 2018.
 
