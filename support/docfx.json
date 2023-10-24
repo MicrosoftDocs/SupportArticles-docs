@@ -62,6 +62,8 @@
         "developer/webapps/aspnet/**.*": "MSDocsHeader-AspNet",
         "developer/webapps/aspnetcore/**.*": "MSDocsHeader-AspNet",
         "developer/webapps/iis/**.*": "MSDocsHeader-Windows",
+        "devices/**.*": "MSDocsHeader-Surface",
+        "dynamics-365/**.*": "MSDocsHeader-Dynamics365",
         "dynamics-365/commerce/**.*": "MSDocsHeader-Dynamics365-Commerce",
         "dynamics-365/customer-insights/**.*": "MSDocsHeader-Dynamics365-Customer-Insights",
         "dynamics-365/customer-service/**.*": "MSDocsHeader-Dynamics365-CustomerService",
@@ -84,6 +86,7 @@
         "dynamics-365/finance/**/*.md": "https://experience.dynamics.com/ideas/categories/?forum=16691718-61e2-e611-8101-5065f38b21f1&forumName=Dynamics%20365%20Finance",
         "dynamics-365/commerce/**/*.md": "https://experience.dynamics.com/ideas/categories/?forum=fd509429-7e87-e711-8105-c4346bb5988c&forumName=Dynamics%20365%20Commerce",
         "dynamics-365/customer-service/**/*.md": "https://experience.dynamics.com/ideas/categories/?forum=b68e50a6-88d9-e811-a96b-000d3a1be7ad&forumName=Dynamics%20365%20Customer%20Service",
+        "dynamics-365/field-service/**/*.md": "https://experience.dynamics.com/ideas/categories/?forum=bee3d862-df65-e811-a95d-000d3a1be7ad&forumName=Dynamics%20365%20Field%20Service",
         "dynamics-365/sales/*.md": "https://experience.dynamics.com/ideas/categories/?forum=3d83d841-984b-ea11-a812-000d3a579c39&forumName=Dynamics%20365%20Sales",
         "dynamics-365/supply-chain/**/*.md": "https://experience.dynamics.com/ideas/categories/?forum=515617a5-dedb-e911-a814-000d3a4f1244&forumName=Dynamics%20365%20Supply%20Chain%20Management",
         "power-platform/power-apps/**/*.md": "https://ideas.powerapps.com/d365community/forum/f1458c72-ae29-ed11-9db2-000d3a8c451e",
@@ -311,6 +314,7 @@
         "dynamics-365/finance/**/**.*": "dynamics-365-finance",
         "dynamics-365/commerce/**/**.*": "dynamics-365-commerce",
         "dynamics-365/supply-chain/**/**.*": "dynamics-365-supply-chain",
+        "dynamics-365/field-service/**/**.*": "dynamics-365-field-service",
         "mem/intune/**/*.md": "microsoft-intune",
         "power-platform/ai-builder/*.md": "aibuilder",
         "sql/**/*.md": "sql",
@@ -437,6 +441,7 @@
         "azure/cosmos-db/**/*.md": "Azure Cosmos DB",
         "dynamics-365/customer-insights/**/*.md": "Dynamics 365 Customer Insights",
         "dynamics-365/customer-service/**/*.md": "Dynamics 365 Customer Service",
+        "dynamics-365/field-service/**/*.md": "Dynamics 365 Field Service",
         "dynamics-365/sales/*.md": "Dynamics 365 Sales",
         "dynamics-365/finance/**/*.md": "Dynamics 365 Finance",
         "dynamics-365/commerce/**/*.md": "Dynamics 365 Commerce",
@@ -536,6 +541,11 @@
           "Troubleshoot",
           "Dynamics 365",
           "Customer Insights"
+        ],
+        "dynamics-365/field-service/**/*.md": [
+          "Troubleshoot",
+          "Dynamics 365",
+          "Field Service"
         ],
         "dynamics-365/customer-service/**/*.md": [
           "Troubleshoot",
