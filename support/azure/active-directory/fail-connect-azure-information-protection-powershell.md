@@ -1,8 +1,8 @@
 ---
 title: Fail to connect to the Microsoft Azure Information Protection by using Windows PowerShell with error (The attempt to connect to the Windows Azure AD Rights Management
 description: Describes an issue in which you can't connect to the Azure Information Protection by using Windows PowerShell in Office 365. Provides a resolution.
-ms.date: 10/06/2020
-ms.reviewer: willfid
+ms.date: 10/24/2023
+ms.reviewer: willfid, v-weizhu
 ms.service: active-directory
 ms.subservice: enterprise-users
 ms.custom:
@@ -37,6 +37,10 @@ When you try to connect to Microsoft Azure Information Protection using Windows 
 >
 > `+ FullyQualifiedErrorId : NotSpecified,Microsoft.RightsManagementServices.Online.Admin.PowerShell.ConnectAipServiceCommand`
 
+You may also see the following error message:
+
+> Object reference not set to an instance of an object
+
 ## Cause
 
 This issue occurs if one or more of the following conditions are true:
@@ -45,7 +49,7 @@ This issue occurs if one or more of the following conditions are true:
 - You aren't a company administrator.
 - You don't have a subscription that includes Azure Information Protection.
 - The network is preventing you from connecting to Azure Information Protection.
-- You are using PowerShell v7
+- You're using Windows PowerShell 7. Using PowerShell 7 will result in the "Object reference not set to an instance of an object" error. For more information, see [Known issues - Azure Information Protection](/azure/information-protection/known-issues#powershell-support-for-the-azure-information-protection-client).
 
 ## Resolution
 
@@ -61,7 +65,7 @@ To resolve this issue, make sure that the following are true:
   - Incoming and outgoing connections to `*.aadrm.com` are enabled.
   - Incoming and outgoing connections to `*.cloudapp.net` (`rmsoprod*-b-rms*.cloudapp.net`) are enabled.
   - Port 443 is open.
-- Try using PowerShell v5 (check with `$PSVersionTable.PSVersion`)
+- Use Windows PowerShell 5. You can check the PowerShell version by using the `$PSVersionTable.PSVersion` command.
 
 ## More information
 
