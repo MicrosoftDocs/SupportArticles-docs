@@ -1,10 +1,8 @@
 ---
 title: Unable to mount Azure file share
 description: Describes errors that cause the mounting of an Azure file share to fail and provides solutions.
-ms.date: 10/18/2023
-author: genlin
-ms.author: genli
-ms.reviewer: chiragpa, akscsscic
+ms.date: 10/25/2023
+ms.reviewer: chiragpa, akscsscic, v-weizhu
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-azure-storage-issues
 ---
@@ -241,7 +239,7 @@ Here are possible causes for this error:
 - [Cause 2: AKS's VNET and subnet aren't allowed for the storage account](#akssubnetnotallowed)
 - [Cause 3: Connectivity is via a private link but nodes and the private endpoint are in different VNETs](#aksnotawareprivateipaddress)
 - [Cause 4: Storage account is set to require encryption that the client doesn't support](#akssmbencryption)
-- [Cause 5: Minimum encryption requirement for a storage account not met](#minimumencryption)
+- [Cause 5: Minimum encryption requirement for a storage account isn't met](#minimumencryption)
 
 > [!NOTE]
 >
@@ -405,15 +403,17 @@ AKS versions 1.25 and later versions are based on Ubuntu 22.04, which uses the L
 
 Enable the AES-128-GCM algorithm by using the **Maximum compatibility** profile or a **Custom** profile that enables AES-128-GCM. For more information, see [Azure Files Security Settings](/azure/storage/files/files-smb-protocol?tabs=azure-portal#smb-security-settings).
 
-### <a id="minimumencryption"></a>Cause 5: Minimum encryption requirement for a storage account not met
+### <a id="minimumencryption"></a>Cause 5: Minimum encryption requirement for a storage account isn't met
 
-#### Solution AES128-GCM should be enabled for all storage accounts in order to successfully mount or access a file share.
+#### Solution: Enable AES-128-GCM encryption algorithm for all storage accounts
 
-Customers who want to use AES256 GCM encryption only, which is maximum security (SMB3.1.1), should do the following:
+To successfully mount or access a file share, the AES-128-GCM encryption algorithm should be enabled for all storage accounts.
+
+If you want to use the AES-256-GCM encryption only, which is the maximum security (SMB 3.1.1), do the following:
 
 #### Linux
 
-The following script will check if the client supports AES256 GCM and enforce it only if it's supported:
+Use the following script to check if the client supports AES-256-GCM and enforce it only if it does:
 
 ```bash
 cifsConfPath="/etc/modprobe.d/cifs.conf" 
@@ -431,14 +431,14 @@ fi
 
 #### Windows
 
-Use the `Set-SmbClientConfiguration` PowerShell command to specify the encryption ciphers used by the SMB client and the preferred encryption type without user confirmation. For more information, see [Set-SmbClientConfiguration (SmbShare)](/powershell/module/smbshare/set-smbclientconfiguration).
+Use the [Set-SmbClientConfiguration](/powershell/module/smbshare/set-smbclientconfiguration) PowerShell command to specify the encryption ciphers used by the SMB client and the preferred encryption type without user confirmation:
 
 ```powershell
 Set-SmbClientConfiguration -EncryptionCiphers "AES_256_GCM" -Confirm:$false
 ```
 
 > [!NOTE]
-> The `EncryptionCiphers` parameter is available beginning with 2022-06 Cumulative Update for Microsoft Windows Server version 21H2 for x64-based Systems (KB5014665), and Cumulative Update for Windows 11, version 22H2 (KB5014668).
+> The `EncryptionCiphers` parameter is available beginning with the 2022-06 Cumulative Update for Windows Server version 21H2 for x64-based systems ([KB5014665](https://support.microsoft.com/help/5014665)) and the Cumulative Update for Windows 11, version 22H2 ([KB5014668](https://support.microsoft.com/help/5014668)).
 
 ## More information
 
