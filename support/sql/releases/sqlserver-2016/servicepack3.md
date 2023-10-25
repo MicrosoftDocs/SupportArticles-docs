@@ -39,9 +39,9 @@ SQL Server 2016 SP3, Microsoft SQL Server 2016 SP3 Express, and Microsoft SQL Se
 
 ## List of fixes included in SQL Server 2016 SP3
 
-Microsoft SQL Server 2016 service packs are cumulative updates. SQL Server 2016 SP3 upgrades all editions and service levels of SQL Server 2016 to SQL Server 2016 SP3. In addition to the fixes that are listed in this article, SQL Server 2016 SP3 includes hotfixes that were included in [SQL Server 2016 Cumulative Update 1 (CU1)](https://support.microsoft.com/help/3164674) to [SQL Server 2016 SP2 CU17](https://support.microsoft.com/help/5001092).
+Microsoft SQL Server 2016 service packs are cumulative updates. SQL Server 2016 SP3 upgrades all editions and service levels of SQL Server 2016 to SQL Server 2016 SP3. In addition to the fixes that are listed in this article, SQL Server 2016 SP3 includes hotfixes that were included in [SQL Server 2016 Cumulative Update 1 (CU1)](rtm-cumulativeupdate1.md) to [SQL Server 2016 SP2 CU17](servicepack2-cumulativeupdate17.md).
 
-For more information about the cumulative updates that are available in SQL Server 2016, see [SQL Server 2016 build versions](https://support.microsoft.com/help/3177312).
+For more information about the cumulative updates that are available in SQL Server 2016, see [SQL Server 2016 build versions](build-versions.md).
 
 > [!NOTE]
 > - Additional fixes that aren't documented here may also be included in the service pack.
