@@ -52,7 +52,7 @@ If the download page doesn't appear, contact [Microsoft Customer Service and Sup
 
 ## Hotfixes that are included in this cumulative update package
 
-| VSTS bug number| Description | Fix area |
+| Bug reference | Description | Fix area |
 |------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------|
 | <a id=9917140>[9917140](#9917140) </a> | [FIX: Query against sys.dm_db_partition_stats DMV is slow if the database contains many partitions in SQL Server 2016 (KB4019903)](https://support.microsoft.com/help/4019903)| SQL service|
 | <a id=9902335>[9902335](#9902335) </a> | [FIX: Restore fails when you do backup with compression and checksum on TDE enabled database in SQL Server 2016 (KB4019893)](https://support.microsoft.com/help/4019893)| SQL service|

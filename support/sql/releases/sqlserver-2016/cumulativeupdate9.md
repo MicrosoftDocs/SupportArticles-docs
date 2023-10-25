@@ -53,7 +53,7 @@ If the download page doesn't appear, contact [Microsoft Customer Service and Sup
 > [!NOTE]
 > The following table lists the status of individual Microsoft Knowledge Base articles. A separate Microsoft Knowledge Base article might not be created for each bug.
 
-| VSTS bug number | Description| Fix area|
+| Bug reference | Description| Fix area|
 |-------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------|
 | <a id=10868755>[10868755](#10868755) </a> | [FIX: Error when exporting a Reporting Services report to PDF in SQL Server 2016 or 2017 (KB4040512)](https://support.microsoft.com/help/4040512)| Reporting Services|
 | <a id=10868765>[10868765](#10868765) </a> | [FIX: Access violation occurs when you use sp_xml_preparedocument to open XML documents in SQL Server (KB4039510)](https://support.microsoft.com/help/4039510) | XML |

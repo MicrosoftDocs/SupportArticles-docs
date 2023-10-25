@@ -61,7 +61,7 @@ For more information, see:
 
 ## Hotfixes that are included in this cumulative update package
 
-| VSTS bug number| Description| Fix area |
+| Bug reference | Description| Fix area |
 |------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------|
 | <a id=9077598>[9077598](#9077598) </a> | [FIX: "Adjust height to fit zone" setting of the SSRS 2016 Report Viewer Web Part isn't respected on a SharePoint webpage (KB3211948)](https://support.microsoft.com/help/3211948) | Reporting Services |
 | <a id=9367817>[9367817](#9367817) </a> | [FIX: Cannot save the SSRS report after you change a parameter in Report Builder or the SQL Server Data Tool (KB3212193)](https://support.microsoft.com/help/3212193)| Reporting Services |

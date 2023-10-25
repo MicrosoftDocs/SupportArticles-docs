@@ -61,7 +61,7 @@ If the download page doesn't appear, contact [Microsoft Customer Service and Sup
 
 ## Hotfixes that are included in this cumulative update package
 
-| VSTS bug number |  Description | Fix area|
+| Bug reference |  Description | Fix area|
 |---------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------|
 | <a id=10029683>[10029683](#10029683) </a> | [FIX: A stored procedure may fail after an automatic failover occurs on a mirrored database in SQL Server (KB4018227)](https://support.microsoft.com/help/4018227)| High Availability |
 | <a id=10015189>[10015189](#10015189) </a> | [FIX: Change Data Capture stops working after a recent cumulative update for SQL Server is installed (KB4038210)](https://support.microsoft.com/help/4038210) | SQL service |

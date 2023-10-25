@@ -53,7 +53,7 @@ If the download page doesn't appear, contact [Microsoft Customer Service and Sup
 
 ## Hotfixes that are included in this cumulative update package
 
-| VSTS bug number | Description | Fix area|
+| Bug reference | Description | Fix area|
 |---------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------|
 | <a id=10729319>[10729319](#10729319) </a> | FIX: Reporting Services "SortExpression" cause rsComparisonError when there's a NULL value in a column set as "DataTimeOffset" (KB4017827) | Reporting Services|
 | <a id=10817781>[10817781](#10817781) </a> | [FIX: Indirect checkpoints on the tempdb database cause "Non-yielding scheduler" error in SQL Server 2016 (KB4040276)](https://support.microsoft.com/help/4040276)| SQL Engine|
@@ -280,35 +280,35 @@ SQL Server 2016 Analysis Services
 | Microsoft.analysisservices.server.core.dll    | 13.0.2213.0     | 1343680   | 06-Sep-2017  | 02:09  | x86      |
 | Microsoft.analysisservices.server.tabular.dll | 13.0.2213.0     | 765640    | 06-Sep-2017  | 02:09  | x86      |
 | Microsoft.data.edm.netfx35.dll                | 5.7.0.62516     | 667872    | 16-Jun-2016 | 14:21 | x86      |
-| Microsoft.data.edm.netfx35.dll                | 5.7.0.62516     | 667872    | 17-Jun-16 | 17:30 | x86      |
+| Microsoft.data.edm.netfx35.dll                | 5.7.0.62516     | 667872    | 17-Jun-2016 | 17:30 | x86      |
 | Microsoft.data.mashup.dll                     | 2.35.4399.541   | 186592    | 16-Jun-2016 | 14:21 | x86      |
-| Microsoft.data.mashup.dll                     | 2.35.4399.541   | 186592    | 17-Jun-16 | 17:30 | x86      |
+| Microsoft.data.mashup.dll                     | 2.35.4399.541   | 186592    | 17-Jun-2016 | 17:30 | x86      |
 | Microsoft.data.odata.netfx35.dll              | 5.7.0.62516     | 1461464   | 16-Jun-2016 | 14:21 | x86      |
-| Microsoft.data.odata.netfx35.dll              | 5.7.0.62516     | 1461464   | 17-Jun-16 | 17:30 | x86      |
+| Microsoft.data.odata.netfx35.dll              | 5.7.0.62516     | 1461464   | 17-Jun-2016 | 17:30 | x86      |
 | Microsoft.data.odata.query.netfx35.dll        | 5.7.0.62516     | 188128    | 16-Jun-2016 | 14:21 | x86      |
-| Microsoft.data.odata.query.netfx35.dll        | 5.7.0.62516     | 188128    | 17-Jun-16 | 17:30 | x86      |
+| Microsoft.data.odata.query.netfx35.dll        | 5.7.0.62516     | 188128    | 17-Jun-2016 | 17:30 | x86      |
 | Microsoft.mashup.container.exe                | 2.35.4399.541   | 27872     | 16-Jun-2016 | 14:21 | x64      |
-| Microsoft.mashup.container.exe                | 2.35.4399.541   | 27872     | 17-Jun-16 | 17:30 | x64      |
+| Microsoft.mashup.container.exe                | 2.35.4399.541   | 27872     | 17-Jun-2016 | 17:30 | x64      |
 | Microsoft.mashup.container.netfx40.exe        | 2.35.4399.541   | 28384     | 16-Jun-2016 | 14:21 | x64      |
-| Microsoft.mashup.container.netfx40.exe        | 2.35.4399.541   | 28384     | 17-Jun-16 | 17:30 | x64      |
+| Microsoft.mashup.container.netfx40.exe        | 2.35.4399.541   | 28384     | 17-Jun-2016 | 17:30 | x64      |
 | Microsoft.mashup.container.netfx45.exe        | 2.35.4399.541   | 28384     | 16-Jun-2016 | 14:21 | x64      |
-| Microsoft.mashup.container.netfx45.exe        | 2.35.4399.541   | 28384     | 17-Jun-16 | 17:30 | x64      |
+| Microsoft.mashup.container.netfx45.exe        | 2.35.4399.541   | 28384     | 17-Jun-2016 | 17:30 | x64      |
 | Microsoft.mashup.eventsource.dll              | 2.35.4399.541   | 159456    | 16-Jun-2016 | 14:21 | x86      |
-| Microsoft.mashup.eventsource.dll              | 2.35.4399.541   | 159456    | 17-Jun-16 | 17:30 | x86      |
+| Microsoft.mashup.eventsource.dll              | 2.35.4399.541   | 159456    | 17-Jun-2016 | 17:30 | x86      |
 | Microsoft.mashup.oauth.dll                    | 2.35.4399.541   | 63200     | 16-Jun-2016 | 14:21 | x86      |
-| Microsoft.mashup.oauth.dll                    | 2.35.4399.541   | 63200     | 17-Jun-16 | 17:30 | x86      |
+| Microsoft.mashup.oauth.dll                    | 2.35.4399.541   | 63200     | 17-Jun-2016 | 17:30 | x86      |
 | Microsoft.mashup.storage.xmlserializers.dll   | 1.0.0.0         | 143072    | 16-Jun-2016 | 14:21 | x86      |
-| Microsoft.mashup.storage.xmlserializers.dll   | 1.0.0.0         | 143072    | 17-Jun-16 | 17:30 | x86      |
+| Microsoft.mashup.storage.xmlserializers.dll   | 1.0.0.0         | 143072    | 17-Jun-2016 | 17:30 | x86      |
 | Microsoft.mashupengine.dll                    | 2.35.4399.541   | 5652704   | 16-Jun-2016 | 14:21 | x86      |
-| Microsoft.mashupengine.dll                    | 2.35.4399.541   | 5652704   | 17-Jun-16 | 17:30 | x86      |
+| Microsoft.mashupengine.dll                    | 2.35.4399.541   | 5652704   | 17-Jun-2016 | 17:30 | x86      |
 | Microsoft.odata.core.netfx35.dll              | 6.15.0.0        | 1444576   | 16-Jun-2016 | 14:21 | x86      |
-| Microsoft.odata.core.netfx35.dll              | 6.15.0.0        | 1444576   | 17-Jun-16 | 17:30 | x86      |
+| Microsoft.odata.core.netfx35.dll              | 6.15.0.0        | 1444576   | 17-Jun-2016 | 17:30 | x86      |
 | Microsoft.odata.edm.netfx35.dll               | 6.15.0.0        | 785632    | 16-Jun-2016 | 14:21 | x86      |
-| Microsoft.odata.edm.netfx35.dll               | 6.15.0.0        | 785632    | 17-Jun-16 | 17:30 | x86      |
+| Microsoft.odata.edm.netfx35.dll               | 6.15.0.0        | 785632    | 17-Jun-2016 | 17:30 | x86      |
 | Microsoft.powerbi.adomdclient.dll             | 13.0.2213.0     | 985288    | 06-Sep-2017  | 02:09  | x86      |
 | Microsoft.powerbi.adomdclient.dll             | 13.0.2213.0     | 985288    | 06-Sep-2017  | 02:09  | x86      |
 | Microsoft.spatial.netfx35.dll                 | 6.15.0.0        | 133344    | 16-Jun-2016 | 14:21 | x86      |
-| Microsoft.spatial.netfx35.dll                 | 6.15.0.0        | 133344    | 17-Jun-16 | 17:30 | x86      |
+| Microsoft.spatial.netfx35.dll                 | 6.15.0.0        | 133344    | 17-Jun-2016 | 17:30 | x86      |
 | Msmdlocal.dll                                 | 2015.130.2213.0 | 37020360  | 06-Sep-2017  | 02:08  | x86      |
 | Msmdlocal.dll                                 | 2015.130.2213.0 | 56109768  | 06-Sep-2017  | 02:10  | x64      |
 | Msmdsrv.exe                                   | 2015.130.2213.0 | 56656584  | 06-Sep-2017  | 02:08  | x64      |
@@ -320,7 +320,7 @@ SQL Server 2016 Analysis Services
 | Sqlboot.dll                                   | 2015.130.2213.0 | 186560    | 06-Sep-2017  | 02:10  | x64      |
 | Sqlceip.exe                                   | 13.0.2213.0     | 249024    | 06-Sep-2017  | 02:09  | x86      |
 | System.spatial.netfx35.dll                    | 5.7.0.62516     | 124640    | 16-Jun-2016 | 14:21 | x86      |
-| System.spatial.netfx35.dll                    | 5.7.0.62516     | 124640    | 17-Jun-16 | 17:30 | x86      |
+| System.spatial.netfx35.dll                    | 5.7.0.62516     | 124640    | 17-Jun-2016 | 17:30 | x86      |
 | Tmapi.dll                                     | 2015.130.2213.0 | 4344520   | 06-Sep-2017  | 02:06  | x64      |
 | Tmcachemgr.dll                                | 2015.130.2213.0 | 2825416   | 06-Sep-2017  | 02:06  | x64      |
 | Tmpersistence.dll                             | 2015.130.2213.0 | 1069760   | 06-Sep-2017  | 02:06  | x64      |
