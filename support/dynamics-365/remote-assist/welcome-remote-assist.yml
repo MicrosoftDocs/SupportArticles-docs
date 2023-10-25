@@ -9,7 +9,7 @@ metadata:
   ms.service: remote-assist
   author: v-wendysmith
   ms.author: v-wendysmith
-  ms.date: 10/23/2023
+  ms.date: 10/25/2023
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -39,7 +39,7 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Troubleshoot failures with the installation of the Dynamics 365 Remote Assist model-driven app
+          - text: Troubleshoot Remote Assist model-driven app installation failures
             url: model-driven-app/troubleshoot-model-driven-app-installation.md
           - text: Can't find the Dynamics 365 Remote Assist model-driven app
             url: model-driven-app/can't-find-model-driven-app.md

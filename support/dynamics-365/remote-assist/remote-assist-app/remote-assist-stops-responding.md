@@ -1,9 +1,9 @@
 ---
 title: Dynamics 365 Remote Assist stops responding
-description: Learn how to resolve a problem when Microsoft Dynamics 365 Remote Assist app stops responding.
+description: Learn how to resolve a problem where the Microsoft Dynamics 365 Remote Assist app stops responding.
 ms.author: davepinch
 author: davepinch
-ms.date: 10/23/2023
+ms.date: 10/25/2023
 ms.reviewer: v-wendysmith
 ms.custom: bap-template
 ---

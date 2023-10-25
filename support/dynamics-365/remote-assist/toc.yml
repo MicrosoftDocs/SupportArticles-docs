@@ -21,6 +21,6 @@
           href: model-driven-app/can't-find-model-driven-app.md
         - name: Can't sign in to Dynamics 365 Remote Assist
           href: remote-assist-app/cannot-sign-in-to-remote-assist.md
-        - name: Troubleshoot failures with installation of Remote Assist model-driven app
+        - name: Troubleshoot Remote Assist model-driven app installation failures
           href: model-driven-app/troubleshoot-model-driven-app-installation.md
 

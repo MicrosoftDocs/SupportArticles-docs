@@ -3,7 +3,7 @@ title: Fail to detect an object anchor in the HoloLens app
 description: Provides a resolutin for an issue where you fail to detect an object anchor in the Microsoft HoloLens app.
 author: alwinv
 ms.author: alwinv
-ms.date: 10/19/2023
+ms.date: 10/25/2023
 ms.reviewer: v-wendysmith
 ms.custom: bap-template
 ---
@@ -27,13 +27,13 @@ You might find one or more of the following causes:
 
 To solve this issue,
 
-1. Confirm object measurements and **Length Unit** type by double-clicking the object anchor in the PC app to open the **Properties** tab.
+1. Confirm object measurements and the **Length Unit** type by double-clicking the object anchor in the PC app to open the **Properties** tab.
 
    :::image type="content" source="media/fail-to-detect-object-anchor/object-anchor-chair-properties.png" alt-text="Screenshot that shows the Properties tab with My chair measurements." border="false":::
 
-   - If the dimensions of the object in the **Properties** tab are different from the actual object dimensions by a factor of 2 or more, an incorrect **Length Unit** type was likely used.
+   - If the dimensions of the object in the **Properties** tab are different from the actual object dimensions by a factor of 2 or more, an incorrect **Length Unit** type is likely to be used.
 
-   - If the gravity direction of the model in the **Properties** tab (the down direction) is different from the actual orientation of the object in its environment, an incorrect gravity direction was likely used (for example, if the chair in the example above is shown upside down or with its legs pointing to the side instead of pointing down).
+   - If the gravity direction of the model in the **Properties** tab (the down direction) is different from the actual orientation of the object in its environment, an incorrect gravity direction is likely to be used (for example, if the chair in the example above is shown upside down or with its legs pointing to the side instead of pointing down).
 
    - 3D models that are converted correctly might not be detected on HoloLens if their model geometries differ greatly from the surfaces detected by HoloLens.
 
@@ -41,4 +41,4 @@ To solve this issue,
 
 1. Follow [best practices for choosing a target object for your object anchor](/dynamics365/mixed-reality/guides/pc-app-anchor-object#best-practices-for-choosing-a-target-object-for-your-object-anchor).
 
-1. Make any necessary adustments to your model and then [convert the file](/dynamics365/mixed-reality/guides/pc-app-anchor-object#convert-the-file-in-the-guides-model-driven-app).
+1. Make any necessary adjustments to your model and then [convert the file](/dynamics365/mixed-reality/guides/pc-app-anchor-object#convert-the-file-in-the-guides-model-driven-app).

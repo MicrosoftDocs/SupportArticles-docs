@@ -3,7 +3,7 @@ title: Step content failed to load error in the HoloLens app
 description: Provides a resolution for an issue where 3D content doesn't load when authoring in the HoloLens app.
 ms.author: davepinch
 author: davepinch
-ms.date: 10/18/2023
+ms.date: 10/25/2023
 ms.reviewer: v-wendysmith
 ms.custom: bap-template
 ---

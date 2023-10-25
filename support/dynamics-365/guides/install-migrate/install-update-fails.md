@@ -3,13 +3,13 @@ title: Solution installation or update fails repeatedly
 description: Provides a resolution for an issue where the installation or update of the Dynamics 365 Guides solution fails.
 ms.author: davepinch
 author: davepinch
-ms.date: 10/19/2023
+ms.date: 10/25/2023
 ms.reviewer: v-wendysmith
 ms.custom: bap-template
 ---
 # "Installation failed" error occurs during solution installation or update
 
-This article provides a resolution for an issue where you receive an "Installation failed" error when trying to insatll or update the Microsoft Dynamics 365 Guides solution.
+This article provides a resolution for an issue where you receive an "Installation failed" error when trying to install or update the Microsoft Dynamics 365 Guides solution.
 
 ## Symptoms
 
@@ -17,7 +17,7 @@ When you try to [install](/dynamics365/mixed-reality/guides/setup-step-two) or [
 
 ## Cause
 
-This issue occurs because one or all of the following requirements aren't met:
+This issue occurs because any of the following requirements isn't met:
 
 - The [System Administrator](/power-platform/admin/database-security) role.
 - A [Dynamics 365 Guides license assigned to your account](/dynamics365/mixed-reality/guides/add-users#assign-a-dynamics-365-guides-license-to-an-existing-user).

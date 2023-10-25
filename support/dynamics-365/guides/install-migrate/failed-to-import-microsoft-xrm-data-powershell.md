@@ -4,7 +4,7 @@ description: Resolves the failure when migrating from Dynamics 365 Guides using 
 ms.author: brunasi
 author: brunasilvalopes
 ms.service: dynamics-365-guides
-ms.date: 10/19/2023
+ms.date: 10/25/2023
 ms.reviewer: v-wendysmith
 ms.custom: bap-template 
 ---

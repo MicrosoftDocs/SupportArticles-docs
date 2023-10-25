@@ -3,7 +3,7 @@ title: Hazard sign appears when loading a step
 description: Provides a resolution for an issue where a triangle-shaped hazard sign shows when you load a step in the HoloLens app.
 ms.author: alwinv
 author: alwinv
-ms.date: 10/18/2023
+ms.date: 10/25/2023
 ms.reviewer: v-wendysmith
 ms.custom: bap-template
 ---

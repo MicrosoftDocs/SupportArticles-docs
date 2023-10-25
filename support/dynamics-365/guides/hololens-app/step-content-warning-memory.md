@@ -19,7 +19,7 @@ The following warning message displays in the HoloLens app:
 
 ## Cause
 
-The 3D models that you place for the step reach HoloLens' memory limit. The 3D models will display but the operator might have a degraded experience. For example, the guide might have low frame rates or there might be noticeable loading times when moving between steps.
+The 3D models that you place for the step reach HoloLens' memory limit. The 3D models will display, but the operator might have a degraded experience. For example, the guide might have low frame rates or there might be noticeable loading times when moving between steps.
 
 If you continue to add the 3D models and HoloLens, the ["Step content failed to load"](step-content-fail-load.md) error message will occur.
 

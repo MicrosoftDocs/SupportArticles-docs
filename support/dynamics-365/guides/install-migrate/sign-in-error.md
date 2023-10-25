@@ -3,7 +3,7 @@ title: Can't sign in to the Guides PC or HoloLens app
 description: Provides a resolution for an issue where you can't sign in to the Dynamics 365 Guides PC app or the HoloLens app.
 author: davepinch
 ms.author: davepinch
-ms.date: 10/19/2023
+ms.date: 10/25/2023
 ms.custom: bap-template
 ---
 # Can't sign in to the Dynamics 365 Guides PC app or the HoloLens app
@@ -12,11 +12,11 @@ This article lists common issues that cause failures when you try to sign in to 
 
 ## Cause 1: Wrong account used
 
-You're using a Microsoft account (an account used for Outlook.com, Windows Store, or other Microsoft products) or your corporate credentials to sign in.
+You use a Microsoft account (an account used for Outlook.com, Windows Store, or other Microsoft products) or your corporate credentials to sign in.
 
 #### Resolution
 
-You must use the Dynamics 365 Guides sign-in credentials for your organization. For example: `johndoe@contoso.onmicrosoft.com`.
+You must use the Dynamics 365 Guides sign-in credentials for your organization. For example, `johndoe@contoso.onmicrosoft.com`.
 
 ## Cause 2: Network isn't configured correctly
 
@@ -32,7 +32,7 @@ You might not have permission to access Dynamics 365 Guides or your permission i
 
 #### Resolution
 
-To solve this issue, contact your admininitrator.
+To solve this issue, contact your administrator.
 
 ## Cause 4: Wrong version
 
@@ -40,12 +40,12 @@ Your client app version doesn't support your Dynamics 365 Guides solution versio
 
 #### Resolution
 
-To solve this issue, update your PC and HoloLens apps by installing the latest version from the Microsoft Store or contact your admininitrator.
+To solve this issue, update your PC and HoloLens apps by installing the latest version from the Microsoft Store or contact your administrator.
 
-## Cause 4: No license
+## Cause 5: No license
 
 You don't have a license to use Dynamics 365 Guides.
 
 #### Resolution
 
-To solve this issue, [sign up for a free trial subscription](/dynamics365/mixed-reality/guides/setup) or contact your admininitrator.
+To solve this issue, [sign up for a free trial subscription](/dynamics365/mixed-reality/guides/setup) or contact your administrator.

@@ -1,22 +1,22 @@
 ---
-title: Troubleshoot failures with the installation of the Dynamics 365 Remote Assist model-driven app
-description: Resolves the failures with the installation of Microsoft Dynamics 365 Remote Assist model-driven app.
+title: Troubleshoot Dynamics 365 Remote Assist model-driven app installation failures
+description: Resolves an issue where the installation of the Microsoft Dynamics 365 Remote Assist model-driven app fails.
 ms.author: davepinch
 author: davepinch
-ms.date: 10/23/2023
+ms.date: 10/25/2023
 ms.reviewer: v-wendysmith
 ms.custom: bap-template
 ---
 # Troubleshoot failures with the installation of the Dynamics 365 Remote Assist model-driven app
 
-There are several reasons why the installation of Microsoft Dynamics 365 Remote Assist model-driven app might fail.
+There are several reasons why the installation of the Microsoft Dynamics 365 Remote Assist model-driven app might fail.
 
 > [!NOTE]
-> As an administrator, to solve the issues discussed in this article, you need:
+> To solve the issue, you need the following administrator accesses:
 >
 > - Admin access to the [Microsoft Power Platform admin center](https://admin.powerplatform.microsoft.com/).
 > - Admin access to the [Microsoft 365 admin center](https://admin.microsoft.com/AdminPortal).
-> - Admin access to the environment Dynamics 365 Remote Assist is installed in.
+> - Admin access to the environment where Dynamics 365 Remote Assist is installed in.
 
 ## Symptoms 1: Missing dependencies
 
@@ -48,7 +48,7 @@ Environment creation requires at least 1 GB of available database capacity.
 
 ### Resolution
 
-Paid subscriptions of Dynamics 365 Remote Assist provide a default tenant entitlement of 10 GB of database capacity (if Dynamics 365 Remote Assist was your first Dynamics 365 subscription). See [new Dataverse storage capacity](/power-platform/admin/capacity-storage) for possible resolution.
+Paid subscriptions of Dynamics 365 Remote Assist provide a default tenant entitlement of 10 GB of database capacity (if Dynamics 365 Remote Assist is your first Dynamics 365 subscription). See [new Dataverse storage capacity](/power-platform/admin/capacity-storage) for possible resolutions.
 
 ## Symptoms 4: The Dynamics 365 Remote Assist app doesn't show up in the Power Platform admin center
 
@@ -62,4 +62,4 @@ An active Dynamics 365 Remote Assist subscription or license is missing.
 
 2. Try assigning a Dynamics 365 Remote Assist license to your account from the [Microsoft 365 admin center](https://admin.microsoft.com) to force a license sync to occur. After five minutes, check if the app appears in the [Power Platform admin center](https://admin.powerplatform.com).
 
-3. If the issue isn't resolved, file a support request by going to the [Power Platform admin center](https://admin.powerplatform.com) > **Help + support** > **New support request**.
+3. If the issue isn't resolved, file a support request by going to the [Power Platform admin center](https://admin.powerplatform.com) and selecting **Help + support** > **New support request**.
