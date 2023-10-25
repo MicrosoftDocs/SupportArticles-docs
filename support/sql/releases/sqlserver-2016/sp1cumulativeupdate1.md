@@ -13,7 +13,7 @@ appliesto:
 _Release Date:_ &nbsp; January 18, 2017  
 _Version:_ &nbsp; 13.0.4411.0
 
-This article describes cumulative update package 1 (build number: 13.0.4411.0) for Microsoft SQL Server 2016 Service Pack 1 (SP1). This update contains [fixes](#hotfixes-that-are-included-in-this-cumulative-update-package) that were released after the release of SQL Server 2016 SP1.
+This article describes cumulative update package 1 (build number: **13.0.4411.0**) for Microsoft SQL Server 2016 Service Pack 1 (SP1). This update contains [fixes](#hotfixes-that-are-included-in-this-cumulative-update-package) that were released after the release of SQL Server 2016 SP1.
 
 ## Cumulative update
 

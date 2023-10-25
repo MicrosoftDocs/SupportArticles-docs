@@ -13,7 +13,7 @@ appliesto:
 _Release Date:_ &nbsp; September 22, 2016  
 _Version:_ &nbsp; 13.0.2164.0
 
-This article describes cumulative update package 2 (build number: 13.0.2164.0) for Microsoft SQL Server 2016. This update contains [fixes](#hotfixes-that-are-included-in-this-cumulative-update-package) that were released after the release of SQL Server 2016.
+This article describes cumulative update package 2 (build number: **13.0.2164.0**) for Microsoft SQL Server 2016. This update contains [fixes](#hotfixes-that-are-included-in-this-cumulative-update-package) that were released after the release of SQL Server 2016.
 
 ## Cumulative update
 

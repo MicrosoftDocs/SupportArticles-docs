@@ -80,7 +80,7 @@ For more information about the bugs that are fixed in SQL Server 2016 SP1, go to
 | | ["A digitally signed driver is required" warning when you install SQL Server packages in Windows Server 2016 and Windows 10 (KB3203693)](https://support.microsoft.com/help/3203693) |
 | <a id=8024991>[8024991](#8024991)</a> | FIX: Missing columns aren't specified in the error message when you import data by using the Import and Export Wizard (KB3112704) |
 
-**Additional resolutions**
+### Additional resolutions
 
 Resolutions to the following issues are also included in SQL Server 2016 SP1.
 

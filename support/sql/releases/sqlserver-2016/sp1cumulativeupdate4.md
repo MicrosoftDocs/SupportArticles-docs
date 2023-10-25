@@ -22,7 +22,7 @@ This indicates that CU4 is already installed and no further action is required.
 > [!NOTE]
 > The package name for CU4, "SQLServer2016SP1-KB4024305-<x86/x64>.exe", contains the CVE-2017-8516 KB number (4019095), not the CU4 KB number, (4024305). This can be ignored as a single package services both release channels.
 
-This article describes cumulative update package 4 (build number: 13.0.4446.0) for Microsoft SQL Server 2016 Service Pack 1 (SP1). This update contains [fixes](#additional-hotfixes-that-are-included-in-this-cumulative-update-package) that were released after the release of SQL Server 2016 SP1.
+This article describes cumulative update package 4 (build number: **13.0.4446.0**) for Microsoft SQL Server 2016 Service Pack 1 (SP1). This update contains [fixes](#additional-hotfixes-that-are-included-in-this-cumulative-update-package) that were released after the release of SQL Server 2016 SP1.
 
 ## Cumulative update
 

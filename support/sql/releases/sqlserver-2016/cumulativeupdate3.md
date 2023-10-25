@@ -23,7 +23,7 @@ Cumulative Update 3 (CU3) for SQL Server 2016 was also released as a SQL Server 
 > [!NOTE]
 > The package name for CU3 (*SQLServer2016-KB3194717-x64.exe*) contains the security update MS16-136 KB number (3194717), not the CU3 KB number (3205413). This can be ignored as a single package services both release channels.
 
-This article describes cumulative update package 3 (build number: 13.0.2186.6) for Microsoft SQL Server 2016. This update contains [fixes](#hotfixes-that-are-included-in-this-cumulative-update-package) that were released after the release of SQL Server 2016.
+This article describes cumulative update package 3 (build number: **13.0.2186.6**) for Microsoft SQL Server 2016. This update contains [fixes](#hotfixes-that-are-included-in-this-cumulative-update-package) that were released after the release of SQL Server 2016.
 
 ## Cumulative update
 

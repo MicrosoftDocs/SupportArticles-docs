@@ -21,7 +21,7 @@ This article lists the Microsoft SQL Server 2016 builds that were released after
 | Azure Connect Pack + GDR | 13.0.7029.3     | [KB5029187](https://support.microsoft.com/help/5029187) | October 10, 2023  |
 | Azure Connect Pack + GDR | 13.0.7024.30    | [KB5021128](https://support.microsoft.com/help/5021128) | February 14, 2023 |
 | Azure Connect Pack + GDR | 13.0.7016.1     | [KB5015371](https://support.microsoft.com/help/5015371) | June 14, 2022     |
-| Azure Connect Pack       | 13.0.7000.253   | [KB5014242](https://support.microsoft.com/help/5014242) | May 19, 2022      |
+| Azure Connect Pack       | 13.0.7000.253   | [KB5014242](sp3azureconnect.md) | May 19, 2022      |
 
 ## SQL Server 2016 Service Pack 3 (SP3) Cumulative Update (CU) Builds
 
@@ -50,19 +50,19 @@ This article lists the Microsoft SQL Server 2016 builds that were released after
 | GDR                    | 13.0.5102.14    | [KB4532097](https://support.microsoft.com/help/4532097) | February 11, 2020  |
 | CU11                   | 13.0.5598.27    | [KB4527378](https://support.microsoft.com/help/4527378) | December 09, 2019  |
 | CU10                   | 13.0.5492.2     | [KB4524334](https://support.microsoft.com/help/4524334) | October 08, 2019   |
-| CU8                    | 13.0.5426.0     | [KB4505830](https://support.microsoft.com/help/4505830) | July 31, 2019      |
+| CU8                    | 13.0.5426.0     | [KB4505830](sp2cumulativeupdate8.md) | July 31, 2019      |
 | CU7 + GDR              | 13.0.5366.0     | [KB4505222](https://support.microsoft.com/help/4505222) | July 09, 2019      |
 | GDR                    | 13.0.5101.9     | [KB4505220](https://support.microsoft.com/help/4505220) | July 09, 2019      |
-| CU7                    | 13.0.5337.0     | [KB4495256](https://support.microsoft.com/help/4495256) | May 22, 2019       |
-| CU6                    | 13.0.5292.0     | [KB4488536](https://support.microsoft.com/help/4488536) | March 19, 2019     |
-| CU5                    | 13.0.5264.1     | [KB4475776](https://support.microsoft.com/help/4475776) | January 23, 2019   |
-| CU4                    | 13.0.5233.0     | [KB4464106](https://support.microsoft.com/help/4464106) | November 13, 2018  |
-| CU3                    | 13.0.5216.0     | [KB4458871](https://support.microsoft.com/help/4458871) | September 20, 2018 |
+| CU7                    | 13.0.5337.0     | [KB4495256](sp2cumulativeupdate7.md) | May 22, 2019       |
+| CU6                    | 13.0.5292.0     | [KB4488536](sp2cumulativeupdate6.md) | March 19, 2019     |
+| CU5                    | 13.0.5264.1     | [KB4475776](sp2cumulativeupdate5.md) | January 23, 2019   |
+| CU4                    | 13.0.5233.0     | [KB4464106](sp2cumulativeupdate4.md) | November 13, 2018  |
+| CU3                    | 13.0.5216.0     | [KB4458871](sp2cumulativeupdate3.md) | September 20, 2018 |
 | CU2 + GDR              | 13.0.5201.2     | [KB4458621](https://support.microsoft.com/help/4458621) | August 21, 2018    |
 | GDR                    | 13.0.5081.1     | [KB4293802](https://support.microsoft.com/help/4293802) | August 04, 2018    |
-| CU2                    | 13.0.5153.0     | [KB4340355](https://support.microsoft.com/help/4340355) | July 16, 2018      |
-| CU1                    | 13.0.5149.0     | [KB4135048](https://support.microsoft.com/help/4135048) | May 30, 2018       |
-| SP2                    | 13.0.5026.0     | [KB4052908](https://support.microsoft.com/help/4052908) | April 24, 2018     |
+| CU2                    | 13.0.5153.0     | [KB4340355](sp2cumulativeupdate2.md) | July 16, 2018      |
+| CU1                    | 13.0.5149.0     | [KB4135048](sp2cumulativeupdate1.md) | May 30, 2018       |
+| SP2                    | 13.0.5026.0     | [KB4052908](servicepack2.md) | April 24, 2018     |
 
 ## SQL Server 2016 Service Pack 1 (SP1) Cumulative Update (CU) Builds
 
@@ -82,14 +82,14 @@ This article lists the Microsoft SQL Server 2016 builds that were released after
 | CU8                    | 13.0.4474.0     | [KB4077064](https://support.microsoft.com/help/4077064) | March 19, 2018     |
 | CU7                    | 13.0.4466.4     | [KB4057119](https://support.microsoft.com/help/4057119) | January 04, 2018   |
 | GDR                    | 13.0.4210.6     | [KB4057118](https://support.microsoft.com/help/4057118) | January 03, 2018   |
-| CU6                    | 13.0.4457.0     | [KB4037354](https://support.microsoft.com/help/4037354) | November 21, 2017  |
-| CU5                    | 13.0.4451.0     | [KB4040714](https://support.microsoft.com/help/4040714) | September 18, 2017 |
-| CU4                    | 13.0.4446.0     | [KB4024305](https://support.microsoft.com/help/4024305) | August 8, 2017     |
+| CU6                    | 13.0.4457.0     | [KB4037354](sp1cumulativeupdate6.md) | November 21, 2017  |
+| CU5                    | 13.0.4451.0     | [KB4040714](sp1cumulativeupdate5.md) | September 18, 2017 |
+| CU4                    | 13.0.4446.0     | [KB4024305](sp1cumulativeupdate4.md) | August 8, 2017     |
 | GDR                    | 13.0.4206.0     | [KB4019089](https://support.microsoft.com/help/4019089) | August 8, 2017     |
-| CU3                    | 13.0.4435.0     | [KB4019916](https://support.microsoft.com/help/4019916) | May 15, 2017       |
-| CU2                    | 13.0.4422.0     | [KB4013106](https://support.microsoft.com/help/4013106) | March 20, 2017     |
-| CU1                    | 13.0.4411.0     | [KB3208177](https://support.microsoft.com/help/3208177) | January 18, 2017   |
-| SP1                    | 13.0.4001.0     | [KB3182545](https://support.microsoft.com/help/3182545) | November 16, 2016  |
+| CU3                    | 13.0.4435.0     | [KB4019916](sp1cumulativeupdate3.md) | May 15, 2017       |
+| CU2                    | 13.0.4422.0     | [KB4013106](sp1cumulativeupdate2.md) | March 20, 2017     |
+| CU1                    | 13.0.4411.0     | [KB3208177](sp1cumulativeupdate1.md) | January 18, 2017   |
+| SP1                    | 13.0.4001.0     | [KB3182545](servicepack1.md) | November 16, 2016  |
 
 ## SQL Server 2016 cumulative update (CU) builds
 
@@ -102,14 +102,14 @@ This article lists the Microsoft SQL Server 2016 builds that were released after
 | CU7                    | 13.0.2210.0     | [KB4024304](https://support.microsoft.com/help/4024304) | August 8, 2017     |
 | CU6                    | 13.0.2204.0     | [KB4019914](https://support.microsoft.com/help/4019914) | May 15, 2017       |
 | CU5                    | 13.0.2197.0     | [KB4013105](https://support.microsoft.com/help/4013105) | March 20, 2017     |
-| CU4                    | 13.0.2193.0     | [KB3205052](https://support.microsoft.com/help/3205052) | January 18, 2017   |
+| CU4                    | 13.0.2193.0     | [KB3205052](cumulativeupdate4.md) | January 18, 2017   |
 | GDR                    | 13.0.4202.2     | [KB3210089](https://support.microsoft.com/help/3210089) | December 16, 2016  |
 | CU3 + GDR              | 13.0.1728.2     | [KB3210111](https://support.microsoft.com/help/3210111) | December 16, 2016  |
-| CU3                    | 13.0.2186.6     | [KB3205413](https://support.microsoft.com/help/3205413) | November 16, 2016  |
+| CU3                    | 13.0.2186.6     | [KB3205413](cumulativeupdate3.md) | November 16, 2016  |
 | CU3 + GDR              | 13.0.2186.6     | [KB3194717](https://support.microsoft.com/help/3194717) | November 8, 2016   |
 | GDR                    | 13.0.1722.0     | [KB3194716](https://support.microsoft.com/help/3194716) | November 8, 2016   |
-| CU2                    | 13.0.2164.0     | [KB3182270](https://support.microsoft.com/help/3182270) | September 22, 2016 |
-| CU1                    | 13.0.2149.0     | [KB3164674](https://support.microsoft.com/help/3164674) | July 25, 2016      |
+| CU2                    | 13.0.2164.0     | [KB3182270](cumulativeupdate2.md) | September 22, 2016 |
+| CU1                    | 13.0.2149.0     | [KB3164674](cumulativeupdate1.md) | July 25, 2016      |
 
 ## References
 

@@ -99,7 +99,7 @@ For more information about the bugs that are fixed in SQL Server 2016 SP2, go to
 | <a id="11543252">[11543252](#11543252)</a> | FIX: Replication isn't enabled when database collation uses '`_SC`' collation extension in SQL Server 2016 and 2017 (KB4092066) |
 | <a id="11566335">[11566335](#11566335)</a> | FIX: Access Violation when you use QDS and specify a query plan to resolve a performance regression (KB4089509) |
 
-**Additional resolutions**
+### Additional resolutions
 
 Resolutions to the following issues are also included in SQL Server 2016 SP2.
 
