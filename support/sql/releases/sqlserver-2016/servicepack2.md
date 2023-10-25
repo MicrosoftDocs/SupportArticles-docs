@@ -24,11 +24,9 @@ This article contains important information to read before you install Microsoft
 
 SQL Server 2016 SP2, Microsoft SQL Server 2016 SP2 Express, and Microsoft SQL Server 2016 SP2 Feature Pack are available for manual download and installation at the following Microsoft Download Center websites.
 
-|                                            |                             |
-|--------------------------------------------|-----------------------------|
-| SQL Server 2016 SP2                        | :::image type="icon" source="../media/download-icon.png" border="false"::: [Download the package now](https://www.microsoft.com/download/details.aspx?id=56836) |
-| SQL Server 2016 SP2 Express                | :::image type="icon" source="../media/download-icon.png" border="false"::: [Download the package now](https://www.microsoft.com/download/details.aspx?id=56840) |
-| Microsoft SQL Server 2016 SP2 Feature Pack | :::image type="icon" source="../media/download-icon.png" border="false"::: [Download the package now](https://www.microsoft.com/download/details.aspx?id=56833) |
+- [SQL Server 2016 SP2](https://www.microsoft.com/download/details.aspx?id=56836)
+- [SQL Server 2016 SP2 Express](https://www.microsoft.com/download/details.aspx?id=56840)
+- [SQL Server 2016 SP2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=56833)
 
 > [!NOTE]
 > After you install the service pack, the SQL Server service version should be **13.0.5026.0** Microsoft SQL Server 2016 service packs are cumulative updates. SQL Server 2016 SP2 upgrades all editions and service levels of SQL Server 2016 to SQL Server 2016 SP2.
