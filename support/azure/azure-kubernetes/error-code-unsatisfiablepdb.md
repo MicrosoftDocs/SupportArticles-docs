@@ -22,7 +22,7 @@ An AKS cluster upgrade operation fails with the following error message:
 
 > Code: UnsatisfiablePDB  
 > Message: 1 error occurred:  
-> * PDB <pdb-namespace>/<pdb-name> has maxunavailble == 0 can't proceed with put operation
+> * PDB \<pdb-namespace>/\<pdb-name> has maxunavailble == 0 can't proceed with put operation
 
 ## Cause
 
@@ -56,7 +56,7 @@ To resolve this issue, use one of the following solutions.
 ## Solution 2: Back up, delete, and redeploy the PDB
 
 > [!NOTE]
-> Use this solution if editing the PDB resource directly isn't viable. It's preferable to temporarily remove the PDB resource from the cluster (while the cluster upgrade operation is ongoing):
+> Use this solution if editing the PDB resource directly isn't viable.
 
 1. Take a backup of the PDB using the following command:
 
