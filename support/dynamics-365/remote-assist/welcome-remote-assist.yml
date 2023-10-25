@@ -19,19 +19,19 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Can't sign in to Dynamics 365 Remote Assist
-            url: remote-assist-app/cannot-sign-in-to-remote-assist.md
           - text: Assets tab indicates contact IT admin
             url: remote-assist-app/no-assets-admin.md
           - text: Assets don't appear or aren't expected
             url: remote-assist-app/assets-not-appear-or-expected.md
+          - text: Can't sign in to Dynamics 365 Remote Assist
+            url: remote-assist-app/cannot-sign-in-to-remote-assist.md
           - text: Contacts don't appear or aren't expected
             url: remote-assist-app/contacts-not-appear-or-expected.md
           - text: Incoming call notifications aren't received
             url: remote-assist-app/no-incoming-call-notification.md
           - text: Mixed Reality toolbar doesn't appear on Teams during a Dynamics 365 Remote Assist call
             url: remote-assist-app/mixed-reality-toolbar-not-show-on-teams-call.md
-          - text: Dynamics 365 Remote Assistnot responding
+          - text: Dynamics 365 Remote Assist not responding
             url: remote-assist-app/remote-assist-stops-responding.md
 
   # Card
@@ -39,10 +39,11 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Troubleshoot Remote Assist model-driven app installation failures
-            url: model-driven-app/troubleshoot-model-driven-app-installation.md
           - text: Can't find the Dynamics 365 Remote Assist model-driven app
             url: model-driven-app/can't-find-model-driven-app.md
+          - text: Troubleshoot Remote Assist model-driven app installation failures
+            url: model-driven-app/troubleshoot-model-driven-app-installation.md
+
 
     # Card
   - title: Documentation and training
