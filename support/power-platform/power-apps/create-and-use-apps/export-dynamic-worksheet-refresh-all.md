@@ -3,7 +3,7 @@ title: Refresh All doesn't work after exporting app data to a dynamic worksheet
 description: Describes an issue where Refresh All doesn't work after exporting app data to a dynamic worksheet in Power Apps.
 author: sriharibs-msft
 ms.reviewer: aartigoyle
-ms.date: 10/24/2023
+ms.date: 10/25/2023
 ms.author: srihas
 search.audienceType: 
   - maker
