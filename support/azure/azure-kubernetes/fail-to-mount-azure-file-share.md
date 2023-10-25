@@ -413,7 +413,7 @@ If you want to use the AES-256-GCM encryption only, which is the maximum securit
 
 #### Linux
 
-Use the following script to check if the client supports AES-256-GCM and enforce it only if it's supported:
+Use the following script to check if the client supports AES-256-GCM and enforce it only if it does:
 
 ```bash
 cifsConfPath="/etc/modprobe.d/cifs.conf" 
@@ -431,14 +431,14 @@ fi
 
 #### Windows
 
-Use the [Set-SmbClientConfiguration](/powershell/module/smbshare/set-smbclientconfiguration) PowerShell command to specify the encryption ciphers used by the SMB client, and the preferred encryption type without user confirmation:
+Use the [Set-SmbClientConfiguration](/powershell/module/smbshare/set-smbclientconfiguration) PowerShell command to specify the encryption ciphers used by the SMB client and the preferred encryption type without user confirmation:
 
 ```powershell
 Set-SmbClientConfiguration -EncryptionCiphers "AES_256_GCM" -Confirm:$false
 ```
 
 > [!NOTE]
-> The `EncryptionCiphers` parameter is available beginning with 2022-06 Cumulative Update for Microsoft Windows Server version 21H2 for x64-based Systems ([KB5014665](https://support.microsoft.com/help/5014665)), and Cumulative Update for Windows 11, version 22H2 ([KB5014668](https://support.microsoft.com/help/5014668)).
+> The `EncryptionCiphers` parameter is available beginning with the 2022-06 Cumulative Update for Windows Server version 21H2 for x64-based systems ([KB5014665](https://support.microsoft.com/help/5014665)) and the Cumulative Update for Windows 11, version 22H2 ([KB5014668](https://support.microsoft.com/help/5014668)).
 
 ## More information
 
