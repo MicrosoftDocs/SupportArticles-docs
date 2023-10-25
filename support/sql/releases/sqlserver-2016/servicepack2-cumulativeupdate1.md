@@ -4,7 +4,8 @@ description: This article contains the summary, known issues, improvements, fixe
 ms.date: 10/31/2023
 ms.custom: KB4135048
 appliesto:
-- SQL Server 2016 SQL Server 2016 Business Intelligence
+- SQL Server 2016
+- SQL Server 2016 Business Intelligence
 - SQL Server 2016 Developer
 - SQL Server 2016 Enterprise
 - SQL Server 2016 Enterprise Core
