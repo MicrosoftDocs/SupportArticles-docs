@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Web API client errors
 description: Provides resolutions for the common client errors that occur when you use the Dataverse Web API.
-ms.date: 10/24/2023
+ms.date: 10/25/2023
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
