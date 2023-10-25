@@ -19,7 +19,7 @@ _Release Date:_ &nbsp; February 11, 2021
 _Version:_ &nbsp; 13.0.5882.1
 
 > [!NOTE]
-> After you apply CU 16 for SQL Server 2016 SP2, you might encounter an issue in which DML (insert/update/delete) queries that use parallel plans cannot complete any execution and encounter `HP_SPOOL_BARRIER`` waits. You can use the trace flag 13116 or MAXDOP=1 hint to work around this issue. This issue is related to the introduction of fix for [13685819](cumulativeupdate16-for-sp2.md#13685819) and it will be fixed in the next Cumulative Update.
+> After you apply CU 16 for SQL Server 2016 SP2, you might encounter an issue in which DML (insert/update/delete) queries that use parallel plans cannot complete any execution and encounter `HP_SPOOL_BARRIER`` waits. You can use the trace flag 13116 or MAXDOP=1 hint to work around this issue. This issue is related to the introduction of fix for [13685819](servicepack2-cumulativeupdate16.md#13685819) and it will be fixed in the next Cumulative Update.
 
 ## Summary
 

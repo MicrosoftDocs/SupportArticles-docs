@@ -29,7 +29,7 @@ SQL Server 2016 SP1 is available for download at the [SQL Server 2016 SP1 downlo
 
 ### List of fixes included in SQL Server 2016 SP1
 
-Microsoft SQL Server 2016 service packs are cumulative updates. SQL Server 2016 SP1 upgrades all editions and service levels of SQL Server 2016 to SQL Server 2016 SP1. In addition to the fixes that are listed in this article, SQL Server 2016 SP1 includes hotfixes that were included in [SQL Server 2016 Cumulative Update 1 (CU1)](cumulativeupdate1.md) to [SQL Server 2016 CU3](cumulativeupdate3.md).
+Microsoft SQL Server 2016 service packs are cumulative updates. SQL Server 2016 SP1 upgrades all editions and service levels of SQL Server 2016 to SQL Server 2016 SP1. In addition to the fixes that are listed in this article, SQL Server 2016 SP1 includes hotfixes that were included in [SQL Server 2016 Cumulative Update 1 (CU1)](rtm-cumulativeupdate1.md) to [SQL Server 2016 CU3](rtm-cumulativeupdate3.md).
 
 For more information about the cumulative updates that are available in SQL Server 2016, see [SQL Server 2016 build versions](build-versions.md).
 
@@ -98,7 +98,7 @@ Resolutions to the following issues are also included in SQL Server 2016 SP1.
 | <a id=8025058>[8025058](#8025058)</a> | Add the table name and Primary Key value information for error 20598 in the `msdistribution_history` table (SQL Server Replication). | Improvement |
 | <a id=8025059>[8025059](#8025059)</a> | When a replication agent fails with query timeout, the query text is logged without verbose logging enabled. | Replication |
 | <a id=8025081>[8025081](#8025081)</a> | The Replication Log Reader Agent may fail when destination table is an empty string. | Replication |
-| <a id=4300066>[4300066](#4300066)</a> | Update the copyright information to '© 2016 Microsoft' in the SQL Server command prompt installation. | Setup |
+| <a id=4300066>[4300066](#4300066)</a> | Update the copyright information to '&copy; 2016 Microsoft' in the SQL Server command prompt installation. | Setup |
 | <a id=5610151>[5610151](#5610151)</a> | Unnecessary warning message is returned in the command line output when slipstream installs SQL Server with command line option. | Setup |
 | <a id=7270486>[7270486](#7270486)</a> | After you removed one or more updates for SQL Server, when you repair SQL Server, the repair operation fails with errors. | Setup |
 | <a id=7350315>[7350315](#7350315)</a> | Install SQL Server on a computer that has a non-English domain name will fail with error 'Illegal characters in path'. | Setup |
@@ -113,7 +113,7 @@ Resolutions to the following issues are also included in SQL Server 2016 SP1.
 | <a id=7487320>[7487320](#7487320)</a> | Queries that contain Row-Level Security (RLS) may fail even if the DataView is set to Sample. | SSAS |
 | <a id=8210484>[8210484](#8210484)</a> | Affinity mask doesn't work correctly for NUMA nodes in SQL Server 2016 Analysis Services. | SSAS |
 | <a id=8281121>[8281121](#8281121)</a> | Improve SSAS Tabular performance scalability by implementing NUMA awareness in SSAS Tabular mode. | SSAS |
-| <a id=8430619>[8430619](#8430619)</a> | Improve SSAS Tabular performance scalability by using Intel® Threading Building Blocks (Intel® TBB). | SSAS |
+| <a id=8430619>[8430619](#8430619)</a> | Improve SSAS Tabular performance scalability by using Intel&reg; Threading Building Blocks (Intel&reg; TBB). | SSAS |
 | <a id=8024998>[8024998](#8024998)</a> | Error "Log provider 'Microsoft.LogProviderEventLog' is not installed" occurs when you open the Configure SSIS Logs: Package dialog in an SSIS package that already has a log. | SSIS |
 | <a id=8025032>[8025032](#8025032)</a> | This update changes the behavior that when the XML Task can't get encoding from the XML documents, Unicode encoding will be used. | SSIS |
 | <a id=7330691>[7330691](#7330691)</a> | Adds additional information to indicate whether a report is a Mobile report to the SSRS report server execution logs. | SSRS |

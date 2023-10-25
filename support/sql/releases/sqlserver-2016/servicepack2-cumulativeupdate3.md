@@ -14,7 +14,7 @@ _Release Date:_ &nbsp; September 20, 2018
 _Version:_ &nbsp; 13.0.5216.0
 
 > [!NOTE]
-> Because of a known issue with a fix included in Cumulative Update 3 (CU3), we recommend customers who use the SQL Server Auditing feature to avoid production deployment of the present CU or apply a later Cumulative update. If you have deployed already and are hitting any issues , please upgrade the server to [Cumulative Update 4](sp2cumulativeupdate4.md) or contact Microsoft Support.
+> Because of a known issue with a fix included in Cumulative Update 3 (CU3), we recommend customers who use the SQL Server Auditing feature to avoid production deployment of the present CU or apply a later Cumulative update. If you have deployed already and are hitting any issues , please upgrade the server to [Cumulative Update 4](servicepack2-cumulativeupdate4.md) or contact Microsoft Support.
 
 This article describes Cumulative Update package 3 (CU3) (build number: **13.0.5216.0**) for Microsoft SQL Server 2016 Service Pack 2 (SP2). This update contains [fixes](#additional-hotfixes-that-are-included-in-this-cumulative-update-package) that were released after the initial release of SQL Server 2016 SP2.
 

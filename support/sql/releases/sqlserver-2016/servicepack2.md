@@ -33,7 +33,7 @@ SQL Server 2016 SP2, Microsoft SQL Server 2016 SP2 Express, and Microsoft SQL Se
 
 ### List of fixes included in SQL Server 2016 SP2
 
-Microsoft SQL Server 2016 service packs are cumulative updates. SQL Server 2016 SP2 upgrades all editions and service levels of SQL Server 2016 to SQL Server 2016 SP2. In addition to the fixes that are listed in this article, SQL Server 2016 SP2 includes hotfixes that were included in [SQL Server 2016 Cumulative Update 1 (CU1)](cumulativeupdate1.md) to [SQL Server 2016 SP1 CU8](sp1cumulativeupdate8.md).
+Microsoft SQL Server 2016 service packs are cumulative updates. SQL Server 2016 SP2 upgrades all editions and service levels of SQL Server 2016 to SQL Server 2016 SP2. In addition to the fixes that are listed in this article, SQL Server 2016 SP2 includes hotfixes that were included in [SQL Server 2016 Cumulative Update 1 (CU1)](rtm-cumulativeupdate1.md) to [SQL Server 2016 SP1 CU8](servicepack1-cumulativeupdate8.md).
 
 For more information about the cumulative updates that are available in SQL Server 2016, see [SQL Server 2016 build versions](build-versions.md).
 
