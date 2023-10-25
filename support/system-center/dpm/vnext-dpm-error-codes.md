@@ -544,7 +544,7 @@ _Original KB number:_ &nbsp; 3041345
 |Error code|Message|Additional information|
 |---|---|---|
 |1000|Login failure caused by incorrect user name or password.|Verify the user name and password, and then try again.|
-|1001|InvalidJobDefinition| |
+|1001|InvalidJobDefinition|This error can occur when attempting to do an item-level recovery for a Hyper-V VM from a disk-to-tape (D2T) configuration, which is unsupported. To work around this issue, restore the VM as a folder or configure a disk-to-disk-to-tape (D2D2T) backup for the VM.|
 |1002|You cannot cancel the selected job at this time.|No user action is required.|
 |1003|JobNotFound| |
 |1004|JobDefinitionNotFound| |
