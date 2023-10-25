@@ -4,8 +4,7 @@ description: This article contains the summary, known issues, improvements, fixe
 ms.date: 10/31/2023
 ms.custom: KB4013106
 appliesto:
-- SQL Server 2016 on Windows
-- SQL Server 2016 on Linux
+- SQL Server 2016 Service Pack 1
 ---
 
 # KB4013106 - Cumulative Update 2 for SQL Server 2016 SP1

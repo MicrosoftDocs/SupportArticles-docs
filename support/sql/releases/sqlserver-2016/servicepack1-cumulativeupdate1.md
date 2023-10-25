@@ -4,8 +4,7 @@ description: This article contains the summary, known issues, improvements, fixe
 ms.date: 10/31/2023
 ms.custom: KB3208177
 appliesto:
-- SQL Server 2016 on Windows
-- SQL Server 2016 on Linux
+- Microsoft SQL Server
 ---
 
 # KB3208177 - Cumulative Update 1 for SQL Server 2016 SP1

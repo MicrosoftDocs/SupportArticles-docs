@@ -4,8 +4,13 @@ description: This article contains the summary, known issues, improvements, fixe
 ms.date: 10/31/2023
 ms.custom: KB4464106
 appliesto:
-- SQL Server 2016 on Windows
-- SQL Server 2016 on Linux
+- SQL Server 2016 Developer
+- SQL Server 2016 Enterprise
+- SQL Server 2016 Enterprise Core
+- SQL Server 2016 Standard
+- SQL Server 2016 Business Intelligence
+- SQL Server 2016 Express
+- SQL Server 2016 Web
 ---
 
 # KB4464106 - Cumulative Update 4 for SQL Server 2016 SP2
@@ -52,7 +57,7 @@ If the download page doesn't appear, contact [Microsoft Customer Service and Sup
 | <a id="12449923">[12449923](#12449923)</a> | FIX: Relationships not working correctly on synchronized tabular database (KB4468869) | Analysis Services |
 | <a id="12456157">[12456157](#12456157)</a> | [FIX: Can't connect to the MDS database by using the MDS Add-in for Microsoft Excel (KB4469292)](https://support.microsoft.com/help/4469292) | Data Quality Services (DQS) |
 | <a id="12425044">[12425044](#12425044)</a> | FIX: Error occurs when you change the "Display value" of "Name" attribute of an entity to any value other than "Name" in SQL Server 2016 MDS Add-in for Excel (KB4462426) | Data Quality Services (DQS) |
-| <a id="12466467">[12466467](#12466467)</a> | FIX: Can't add data to a new user attribute in an MDS database in SQL Server (KB4469815) | Data Quality Services (DQS) |
+| <a id="12466467">[12466467](#12466467)</a> | FIX: Can't add data to a new users attribute in an MDS database in SQL Server (KB4469815) | Data Quality Services (DQS) |
 | <a id="12352282">[12352282](#12352282)</a> | FIX: `DefaultLanguage.LCID` property changes for partially contained In-Memory OLTP database (KB4469539) | High Availability |
 | <a id="12399753">[12399753](#12399753)</a> | FIX: Assertion occurs when you use parallel redo in a secondary replica of SQL Server 2016 AG (KB4468322) | High Availability |
 | <a id="12470289">[12470289](#12470289)</a> | [FIX: Assertion error occurs when you restart the SQL Server 2016 database (KB4466793)](https://support.microsoft.com/help/4466793) | In-Memory OLTP |

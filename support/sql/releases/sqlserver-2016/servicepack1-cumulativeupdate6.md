@@ -4,8 +4,11 @@ description: This article contains the summary, known issues, improvements, fixe
 ms.date: 10/31/2023
 ms.custom: KB4037354
 appliesto:
-- SQL Server 2016 on Windows
-- SQL Server 2016 on Linux
+- SQL Server 2016 Developer
+- SQL Server 2016 Enterprise
+- SQL Server 2016 Enterprise Core
+- SQL Server 2016 Standard
+- SQL Server 2016 Service Pack 1
 ---
 
 # KB4037354 - Cumulative Update 6 for SQL Server 2016 SP1

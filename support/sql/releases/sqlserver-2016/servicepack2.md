@@ -4,8 +4,10 @@ description: This article contains the summary, known issues, improvements, fixe
 ms.date: 10/31/2023
 ms.custom: KB4052908
 appliesto:
-- SQL Server 2016 on Windows
-- SQL Server 2016 on Linux
+- SQL Server 2016 Developer
+- SQL Server 2016 Enterprise
+- SQL Server 2016 Enterprise Core
+- SQL Server 2016 Standard
 ---
 
 # KB4052908 - SQL Server 2016 Service Pack 2 release information
