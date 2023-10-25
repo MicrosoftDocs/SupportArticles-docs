@@ -28,11 +28,11 @@ If you use the Change Tracking feature, you might encounter errors. For more inf
 
 SQL Server 2016 SP3, Microsoft SQL Server 2016 SP3 Express, and Microsoft SQL Server 2016 SP3 Feature Pack are available for manual download and installation at the following Microsoft Download Center websites.
 
-|                                              |                            |
-|----------------------------------------------|----------------------------|
-| SQL Server 2016 SP3 | :::image type="icon" source="../media/download-icon.png" border="false"::: [Download the package now](https://www.microsoft.com/en-us/download/details.aspx?id=103440). |
-| SQL Server 2016 SP3 Express | :::image type="icon" source="../media/download-icon.png" border="false"::: [Download the package now](https://www.microsoft.com/en-us/download/details.aspx?id=103447). |
-| Microsoft SQL Server 2016 SP3 Feature Pack | :::image type="icon" source="../media/download-icon.png" border="false"::: [Download the package now](https://www.microsoft.com/en-us/download/details.aspx?id=103444). |
+- [SQL Server 2016 SP3](https://www.microsoft.com/en-us/download/details.aspx?id=103440)
+
+- [SQL Server 2016 SP3 Express](https://www.microsoft.com/en-us/download/details.aspx?id=103447)
+
+- [Microsoft SQL Server 2016 SP3 Feature Pack](https://www.microsoft.com/en-us/download/details.aspx?id=103444)
 
 > [!NOTE]
 > After you install this service pack, the SQL Server service version should be 13.0.6300.2. Microsoft SQL Server 2016 service packs are cumulative updates. SQL Server 2016 SP3 upgrades all editions and service levels of SQL Server 2016 to SQL Server 2016 SP3.
@@ -51,34 +51,34 @@ For more information about the bugs that are fixed in SQL Server 2016 SP3, go to
 
 | Bug reference| Area Path| Description|
 |----------------------------------------------------------------------------------------------|------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <a id=14048342>[14048342](#14048342) </a>| [Improvement: Availability Group listener without the load balancer in SQL Server 2019, 2017, and 2016 (KB4578579)](https://suppoort.microsoft.com/help/4578579)| High Availability |
-| <a id=12344341>[12344341](#12344341) </a>| [FIX: Transaction log isn't truncated on a single node Availability Group in SQL Server (KB4515772)](https://suppoort.microsoft.com/help/4515772)| High Availability |
-| <a id=13323519>[13323519](#13323519) </a>| [FIX: Non-yielding Scheduler error may occur with Always On availability group in Microsoft SQL Server (KB4541303)](https://suppoort.microsoft.com/help/4541303)| High Availability |
-| <a id=14059362>[14059362](#14059362) </a>| [FIX: Log line is verbose when Always On Availability Group has many databases in SQL Server 2019 and 2016 (KB5003596)](https://suppoort.microsoft.com/help/5003596)| High Availability |
+| <a id=14048342>[14048342](#14048342) </a>| [Improvement: Availability Group listener without the load balancer in SQL Server 2019, 2017, and 2016 (KB4578579)](https://support.microsoft.com/help/4578579)| High Availability |
+| <a id=12344341>[12344341](#12344341) </a>| [FIX: Transaction log isn't truncated on a single node Availability Group in SQL Server (KB4515772)](https://support.microsoft.com/help/4515772)| High Availability |
+| <a id=13323519>[13323519](#13323519) </a>| [FIX: Non-yielding Scheduler error may occur with Always On availability group in Microsoft SQL Server (KB4541303)](https://support.microsoft.com/help/4541303)| High Availability |
+| <a id=14059362>[14059362](#14059362) </a>| [FIX: Log line is verbose when Always On Availability Group has many databases in SQL Server 2019 and 2016 (KB5003596)](https://support.microsoft.com/help/5003596)| High Availability |
 | <a id=13829857>[13829857](#13829857) </a>| Fixes an access violation exception that may occur when `sp_server_diagnostics` is executed.| High Availability|
 | <a id=14031841>[14031841](#14031841) </a>| Fixes an issue that causes the database `log_reuse_wait_desc` to change to `AVAILABILITY_REPLICA` when a database is removed from Availability Group.|High Availability |
 | <a id=13435419>[13435419](#13435419) </a>| Fixes security vulnerabilities [CVE-2015-6420](https://nvd.nist.gov/vuln/detail/CVE-2015-6420) and [CVE-2017-15708](https://nvd.nist.gov/vuln/detail/CVE-2017-15708) | Integration Services |
-| <a id=13163658>[13163658](#13163658) </a>| [FIX: Setup fails when you install SQL Server on FCI with mount points (KB5005686)](https://suppoort.microsoft.com/help/5005686)| Setup & Install |
-| <a id=14056703>[14056703](#14056703) </a>| [Improvement: Enable DNN feature in SQL Server 2019 and 2016 FCI (KB4537868)](https://suppoort.microsoft.com/help/4537868) | SQL Connectivity |
-| <a id=13526297>[13526297](#13526297) </a>| [INSERT EXEC failed because the stored procedure altered the schema of the target table error in SQL Server 2016](../../database-engine/general/error-556-insert-exec-failed) |SQL Engine |
-| <a id=12670403>[12670403](#12670403) </a>| [Improvement: Improve CDC supportability and usability with In-Memory Databases (KB4500511)](https://suppoort.microsoft.com/help/4500511) | SQL Engine |
-| <a id=13330609>[13330609](#13330609) </a>| [Improvement: Size and retention policy are increased in default XEvent trace system_health in SQL Server 2019, 2017, and 2016 (KB4541132)](https://suppoort.microsoft.com/help/4541132) | SQL Engine |
-| <a id=13032229>[13032229](#13032229) </a>| [Improvement: New XEvents temp_table_cache_trace and temp_table_destroy_list_trace are created in SQL Server 2019 and 2016 (KB5003937)](https://suppoort.microsoft.com/help/5003937) | SQL Engine |
-| <a id=11324212>[11324212](#11324212) </a>| [FIX: Assertion occurs when you access memory-optimized table through MARS in SQL Server 2017 or 2016 (KB4046056)](https://suppoort.microsoft.com/help/4046056) | SQL Engine |
-| <a id=12920913>[12920913](#12920913) </a>| [FIX: Error occurs when sp_addarticle is used to add article for transactional replication to memory-optimized table on subscriber in SQL Server 2017 and 2016 (KB4493329)](https://suppoort.microsoft.com/help/4493329) | SQL Engine |
-| <a id=13048725>[13048725](#13048725) </a>| [FIX: Geocentric Datum of Australia 2020 is added to SQL Server 2017, 2016, and 2014 (KB4506023)](https://suppoort.microsoft.com/help/4506023) | SQL Engine |
-| <a id=13186160>[13186160](#13186160) </a>| [FIX: SQL update package does not update Local DB files correctly when installed using SqlLocalDb.msi (KB4526524)](https://suppoort.microsoft.com/help/4526524) | SQL Engine |
-| <a id=12107073>[12107073](#12107073) </a>| [FIX: Assertion occurs when sys.sp_cdc_enable_table is used to enable CDC on column set table in SQL Server 2017 and 2016 (KB4531386)](https://suppoort.microsoft.com/help/4531386) |SQL Engine |
-| <a id=13128336>[13128336](#13128336) </a>| [FIX: Fix incorrect memory page accounting that causes out-of-memory errors in SQL Server (KB4536005)](https://suppoort.microsoft.com/help/4536005) |SQL Engine |
-| <a id=13127842>[13127842](#13127842) </a>| [FIX: Access violation exception occurs when promoting latches of frequently used database pages in SQL Server 2017 and 2016 (KB4551720)](https://suppoort.microsoft.com/help/4551720) | SQL Engine |
-| <a id=13345987>[13345987](#13345987) </a>| [FIX: Managed backup fails to take full backup when backup preference is set to secondary on Read-Only secondary in SQL Server 2016 (KB5004059)](https://suppoort.microsoft.com/help/5004059) |SQL Engine |
-| <a id=14048422>[14048422](#14048422) </a>| [FIX: Update SQL Server 2017 and 2016 CEIP service to send usage and diagnostic data to a new endpoint (KB5004466)](https://suppoort.microsoft.com/help/5004466) | SQL Engine |
-| <a id=14037575>[14037575](#14037575) </a>| [FIX: SQLLocalDB.exe info doesn't display information about the specified LocalDB instance if SQL LocalDB 2016 SP2 is installed (KB5005453)](https://suppoort.microsoft.com/help/5005453) |SQL Engine |
-| <a id=13327250>[13327250](#13327250) </a>| [FIX: "SQLLocalDB.exe versions" stops listing the versions of LocalDB installed on the computer if SQL LocalDB 2016 SP1/SP2 is installed (KB5005687)](https://suppoort.microsoft.com/help/5005687) | SQL Engine |
+| <a id=13163658>[13163658](#13163658) </a>| [FIX: Setup fails when you install SQL Server on FCI with mount points (KB5005686)](https://support.microsoft.com/help/5005686)| Setup & Install |
+| <a id=14056703>[14056703](#14056703) </a>| [Improvement: Enable DNN feature in SQL Server 2019 and 2016 FCI (KB4537868)](https://support.microsoft.com/help/4537868) | SQL Connectivity |
+| <a id=13526297>[13526297](#13526297) </a>| [INSERT EXEC failed because the stored procedure altered the schema of the target table error in SQL Server 2016](/troubleshoot/sql/database-engine/general/error-556-insert-exec-failed) |SQL Engine |
+| <a id=12670403>[12670403](#12670403) </a>| [Improvement: Improve CDC supportability and usability with In-Memory Databases (KB4500511)](https://support.microsoft.com/help/4500511) | SQL Engine |
+| <a id=13330609>[13330609](#13330609) </a>| [Improvement: Size and retention policy are increased in default XEvent trace system_health in SQL Server 2019, 2017, and 2016 (KB4541132)](https://support.microsoft.com/help/4541132) | SQL Engine |
+| <a id=13032229>[13032229](#13032229) </a>| [Improvement: New XEvents temp_table_cache_trace and temp_table_destroy_list_trace are created in SQL Server 2019 and 2016 (KB5003937)](https://support.microsoft.com/help/5003937) | SQL Engine |
+| <a id=11324212>[11324212](#11324212) </a>| [FIX: Assertion occurs when you access memory-optimized table through MARS in SQL Server 2017 or 2016 (KB4046056)](https://support.microsoft.com/help/4046056) | SQL Engine |
+| <a id=12920913>[12920913](#12920913) </a>| [FIX: Error occurs when sp_addarticle is used to add article for transactional replication to memory-optimized table on subscriber in SQL Server 2017 and 2016 (KB4493329)](https://support.microsoft.com/help/4493329) | SQL Engine |
+| <a id=13048725>[13048725](#13048725) </a>| [FIX: Geocentric Datum of Australia 2020 is added to SQL Server 2017, 2016, and 2014 (KB4506023)](https://support.microsoft.com/help/4506023) | SQL Engine |
+| <a id=13186160>[13186160](#13186160) </a>| [FIX: SQL update package does not update Local DB files correctly when installed using SqlLocalDb.msi (KB4526524)](https://support.microsoft.com/help/4526524) | SQL Engine |
+| <a id=12107073>[12107073](#12107073) </a>| [FIX: Assertion occurs when sys.sp_cdc_enable_table is used to enable CDC on column set table in SQL Server 2017 and 2016 (KB4531386)](https://support.microsoft.com/help/4531386) |SQL Engine |
+| <a id=13128336>[13128336](#13128336) </a>| [FIX: Fix incorrect memory page accounting that causes out-of-memory errors in SQL Server (KB4536005)](https://support.microsoft.com/help/4536005) |SQL Engine |
+| <a id=13127842>[13127842](#13127842) </a>| [FIX: Access violation exception occurs when promoting latches of frequently used database pages in SQL Server 2017 and 2016 (KB4551720)](https://support.microsoft.com/help/4551720) | SQL Engine |
+| <a id=13345987>[13345987](#13345987) </a>| [FIX: Managed backup fails to take full backup when backup preference is set to secondary on Read-Only secondary in SQL Server 2016 (KB5004059)](https://support.microsoft.com/help/5004059) |SQL Engine |
+| <a id=14048422>[14048422](#14048422) </a>| [FIX: Update SQL Server 2017 and 2016 CEIP service to send usage and diagnostic data to a new endpoint (KB5004466)](https://support.microsoft.com/help/5004466) | SQL Engine |
+| <a id=14037575>[14037575](#14037575) </a>| [FIX: SQLLocalDB.exe info doesn't display information about the specified LocalDB instance if SQL LocalDB 2016 SP2 is installed (KB5005453)](https://support.microsoft.com/help/5005453) |SQL Engine |
+| <a id=13327250>[13327250](#13327250) </a>| [FIX: "SQLLocalDB.exe versions" stops listing the versions of LocalDB installed on the computer if SQL LocalDB 2016 SP1/SP2 is installed (KB5005687)](https://support.microsoft.com/help/5005687) | SQL Engine |
 | <a id=13965515>[13965515](#13965515) </a>| Fixes `EXCEPTION_INVALID_CRT_PARAMETER` exception when you perform `INSERT`\\`UPDATE` of wide replicated table. | SQL Engine |
 | <a id=13990061>[13990061](#13990061) </a>| Fixes a memory leak when you use STDistance spatial method with a spatial index. | SQL Engine |
 | <a id=13992219>[13992219](#13992219) </a>| Fixes the `sp_hadr_verify_replication_publisher` displaying wrong distribution database name in error message. | SQL Engine |
-| <a id=14034656>[14034656](#14034656) </a>| Introduces new logging and XEvents to help troubleshoot long-running Buffer Pool scans. For more information, see [Operations that scan SQL Server buffer pool are slow on large memory machines](../database-engine/performance/buffer-pool-scan-runs-slowly-large-memory-machines). | SQL Engine |
+| <a id=14034656>[14034656](#14034656) </a>| Introduces new logging and XEvents to help troubleshoot long-running Buffer Pool scans. For more information, see [Operations that scan SQL Server buffer pool are slow on large memory machines](/troubleshoot/sql/database-engine/performance/buffer-pool-scan-runs-slowly-large-memory-machines). | SQL Engine |
 | <a id=14042368>[14042368](#14042368) </a>| Fixes an issue in which some of the temporary working folders are not cleared when many R queries are run in parallel. | SQL Engine |
 | <a id=14043334>[14043334](#14043334) </a>| Fixes the following assertion that may cause SQL Server to generate a dump: </br></br>RecXdes::AnalyzeLogRecord file =FilePath\FileName line = LineNumber expression = m_state == XDES_COMMITTED | SQL Engine |
 | <a id=14068486>[14068486](#14068486) </a>| Fixes an issue where you are unable to set up Managed Backup on SQL Server 2016 by using Azure SAS credential with a long secret due to SAS expiration. |SQL Engine |
@@ -87,13 +87,13 @@ For more information about the bugs that are fixed in SQL Server 2016 SP3, go to
 | <a id=14130908>[14130908](#14130908) </a>| Fixes a missing data problem in Change Data Capture (CDC) side table and adds more error handling to prevent data loss. | SQL Engine |
 | <a id=14187407>[14187407](#14187407) </a>| Fixes an issue where you cannot run Machine Learning Services (R scripts) when you slipstream an installation of Microsoft SQL Server 2016 without [vc_redist 2015 (msvcp140.dll)](https://www.microsoft.com/download/details.aspx?id=48145). | SQL Engine |
 | <a id=14193631>[14193631](#14193631) </a>|  Fixes an issue where an access violation (AV) occurs and you see keywords `EXCEPTION_ACCESS_VIOLATION` and `FFtFileObject::ProcessSetInfo` in the SQL Server error log when you use FileTable feature in SQL Server on the machine that uses Windows Defender Antivirus. </br></br>**Note**: This issue can occur after Windows Defender updates on Windows 10, version 1607 or a later version, Windows Server 2016, and Windows Server 2019. |SQL Engine |
-| <a id=12904837>[12904837](#12904837) </a>| [Improvement: Enhancement adds sql_statement_post_compile XEvent in SQL Server 2017 and 2016 (KB4480630)](https://suppoort.microsoft.com/help/4480630) |SQL Performance|
-| <a id=11985415>[11985415](#11985415) </a> </br><a id=13377244>[13377244](#13377244) </a> | [Improvement: Corrupt statistics can be detected by using extended_logical_checks in SQL Server 2019 and 2016 (KB4530907)](https://suppoort.microsoft.com/help/4530907)|SQL Performance |
+| <a id=12904837>[12904837](#12904837) </a>| [Improvement: Enhancement adds sql_statement_post_compile XEvent in SQL Server 2017 and 2016 (KB4480630)](https://support.microsoft.com/help/4480630) |SQL Performance|
+| <a id=11985415>[11985415](#11985415) </a> </br><a id=13377244>[13377244](#13377244) </a> | [Improvement: Corrupt statistics can be detected by using extended_logical_checks in SQL Server 2019 and 2016 (KB4530907)](https://support.microsoft.com/help/4530907)|SQL Performance |
 | <a id=12994428>[12994428](#12994428) </a>| Makes CPU time and duration reported by xevent `query_plan_profile` more accurate. For more information, see [Query Profiling Infrastructure](/sql/relational-databases/performance/query-profiling-infrastructure#lightweight-query-execution-statistics-profiling-infrastructure-v2).| SQL Performance |
 | <a id=13989322>[13989322](#13989322) </a>| Fixes the Access Violation error that occurs when `ALTER INDEX` is forced to execute using Query Store.| SQL Performance |
 | <a id=14056563>[14056563](#14056563) </a>| Fixes a stack overflow issue when you run a query that has a very large number of `UNION` clauses.| SQL Performance |
 | <a id=14080827>[14080827](#14080827) </a>| Fixes an assertion in CQPOnDemandTask::ExecuteQPJob if auto async update statistics is enabled.|SQL Performance |
-| <a id=10087766>[10087766](#10087766) </a>| [FIX: SQL Server fails to start with error messages when an incorrect certificate is provisioned for SSL (KB5005689)](https://suppoort.microsoft.com/help/5005689) | SQL Security |
+| <a id=10087766>[10087766](#10087766) </a>| [FIX: SQL Server fails to start with error messages when an incorrect certificate is provisioned for SSL (KB5005689)](https://support.microsoft.com/help/5005689) | SQL Security |
 
 <details>
 <summary><b>File hash information</b></summary>
@@ -108,7 +108,7 @@ For more information about the bugs that are fixed in SQL Server 2016 SP3, go to
 <details>
 <summary><b>Notes for this update</b></summary>
 
-For more information about how to upgrade your SQL Server installation to SQL Server 2016 SP3, see [Supported Version and Edition Upgrades](../database-engine/install-windows/supported-version-and-edition-upgrades).
+For more information about how to upgrade your SQL Server installation to SQL Server 2016 SP3, see [Supported Version and Edition Upgrades](/sql/database-engine/install-windows/supported-version-and-edition-upgrades).
 
 </details>
 
@@ -119,14 +119,14 @@ If, for any reason, you choose to uninstall SQL Server 2016 SP3, the uninstallat
 
 We recommend that you verify that all the new features are disabled or dropped before you choose to uninstall SQL Server 2016 SP3 on editions other than the Enterprise edition. You cannot drop the [memory_optimized_data](../relational-databases/in-memory-oltp/the-memory-optimized-filegroup) filegroup on your database with SP3, you should not uninstall SQL Server 2016 SP3. Otherwise, the database will get into a suspect state, and the following entry will be logged in the error log:
 
-> \<DateTime> Error: 41381, Severity: 21, State: 1.</br><DateTime> The database cannot be started in this edition of SQL Server because it contains a MEMORY_OPTIMIZED_DATA filegroup. See Books Online for more details on feature support in different SQL Server editions.
+> \<DateTime> Error: 41381, Severity: 21, State: 1.</br>\<DateTime> The database cannot be started in this edition of SQL Server because it contains a MEMORY_OPTIMIZED_DATA filegroup. See Books Online for more details on feature support in different SQL Server editions.
 
 </details>
 
 <details>
 <summary><b>How to intall R Services</b></summary>
 
-To learn how to install SQL Server 2016 R Services on Windows, see [Install SQL Server 2016 R Services](../machine-learning/install/sql-r-services-windows-install)
+To learn how to install SQL Server 2016 R Services on Windows, see [Install SQL Server 2016 R Services](/sql/relational-databases/in-memory-oltp/the-memory-optimized-filegroup)
 
 </details>
 
