@@ -133,8 +133,10 @@ To check the etcd database usage, navigate to **Diagnose and Solve problems** in
 If you just want a quick way to view the current size of your etcd database in bytes, run the following command:
 
 ```bash
-kubectl get --raw /metrics | grep "etcd_db_total_size_in_bytes"
+kubectl get --raw /metrics | grep "apiserver_storage_size_bytes"
 ```
+> [!NOTE]
+> The metric name is different for different Kubernetes versions. For 1.25 and below, use `etcd_db_total_size_in_bytes`. For 1.26 to 1.28, use `apiserver_storage_db_total_size_in_bytes`
 
 ### Solution 2: Define quotas for object creation, delete objects, or limit object lifetime in etcd
 
