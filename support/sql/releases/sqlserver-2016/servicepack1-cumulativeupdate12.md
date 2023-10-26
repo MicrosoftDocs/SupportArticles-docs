@@ -110,7 +110,7 @@ SQL Server Cumulative Updates are currently multilingual. Therefore, this cumula
 <details>
 <summary><b>Components (features) updated</b></summary>
 
-One Cumulative Update package includes all available updates for ALL SQL Server 2017 components (features). However, the cumulative update package updates only those components that are currently installed on the SQL Server instance you select to be serviced. If a SQL Server feature (e.g. Analysis Services) is added to the instance after this CU is applied, you must re-apply this CU to update the new feature to this CU.
+One Cumulative Update package includes all available updates for ALL SQL Server 2016 components (features). However, the cumulative update package updates only those components that are currently installed on the SQL Server instance you select to be serviced. If a SQL Server feature (e.g. Analysis Services) is added to the instance after this CU is applied, you must re-apply this CU to update the new feature to this CU.
 
 </details>
 
@@ -197,7 +197,7 @@ SQL Server 2016 Database Services Common Core
 | Sql_common_core_keyfile.dll                 | 2015.130.4541.0  | 88864     | 27-Oct-2018 | 04:09 | x86      |
 | Sqldumper.exe                               | 2015.130.4541.0  | 107840    | 27-Oct-2018 | 04:10 | x86      |
 | Sqlftacct.dll                               | 2015.130.4541.0  | 46880     | 27-Oct-2018 | 04:09 | x86      |
-| Sqlmanager.dll                              | 2015.130.16111.4 | 607920    | 03-Jan-2018  | 3:04 | x86      |
+| Sqlmanager.dll                              | 2015.130.16111.4 | 607920    | 03-Jan-2018  | 03:04 | x86      |
 | Sqlmgmprovider.dll                          | 2015.130.4541.0  | 364320    | 27-Oct-2018 | 04:09 | x86      |
 | Sqlsecacctchg.dll                           | 2015.130.4541.0  | 35104     | 27-Oct-2018 | 04:09 | x86      |
 | Sqlsvcsync.dll                              | 2015.130.4541.0  | 267552    | 27-Oct-2018 | 04:09 | x86      |
@@ -400,8 +400,8 @@ SQL Server 2016 Database Services Common Core
 | Sqldumper.exe                               | 2015.130.4541.0  | 127056    | 27-Oct-2018 | 04:10 | x64      |
 | Sqlftacct.dll                               | 2015.130.4541.0  | 46880     | 27-Oct-2018 | 04:09 | x86      |
 | Sqlftacct.dll                               | 2015.130.4541.0  | 51792     | 27-Oct-2018 | 04:10 | x64      |
-| Sqlmanager.dll                              | 2015.130.16111.4 | 607920    | 03-Jan-2018  | 3:04 | x86      |
-| Sqlmanager.dll                              | 2015.130.16111.4 | 732336    | 03-Jan-2018  | 4:18 | x64      |
+| Sqlmanager.dll                              | 2015.130.16111.4 | 607920    | 03-Jan-2018  | 03:04 | x86      |
+| Sqlmanager.dll                              | 2015.130.16111.4 | 732336    | 03-Jan-2018  | 04:18 | x64      |
 | Sqlmgmprovider.dll                          | 2015.130.4541.0  | 404240    | 27-Oct-2018 | 04:09 | x64      |
 | Sqlmgmprovider.dll                          | 2015.130.4541.0  | 364320    | 27-Oct-2018 | 04:09 | x86      |
 | Sqlsecacctchg.dll                           | 2015.130.4541.0  | 37648     | 27-Oct-2018 | 04:09 | x64      |
@@ -453,7 +453,7 @@ SQL Server 2016 Database Services Core Instance
 | C1.dll                                       | 18.10.40116.18  | 925456    | 27-Oct-2018 | 04:09  | x64      |
 | C2.dll                                       | 18.10.40116.18  | 5341456   | 27-Oct-2018 | 04:09  | x64      |
 | Cl.exe                                       | 18.10.40116.18  | 192080    | 27-Oct-2018 | 04:10  | x64      |
-| Databasemail.exe                             | 13.0.16100.4    | 29888     | 09-Dec-2016  | 0:46  | x64      |
+| Databasemail.exe                             | 13.0.16100.4    | 29888     | 09-Dec-2016  | 00:46  | x64      |
 | Datacollectorcontroller.dll                  | 2015.130.4541.0 | 225360    | 27-Oct-2018 | 04:10  | x64      |
 | Dcexec.exe                                   | 2015.130.4541.0 | 74328     | 27-Oct-2018 | 04:11  | x64      |
 | Fssres.dll                                   | 2015.130.4541.0 | 81488     | 27-Oct-2018 | 04:10  | x64      |
@@ -564,7 +564,7 @@ SQL Server 2016 Database Services Core Shared
 | Microsoft.analysisservices.applocal.core.dll                       | 13.0.4541.0     | 1313368   | 27-Oct-2018 | 04:12  | x86      |
 | Microsoft.analysisservices.applocal.dll                            | 13.0.4541.0     | 696408    | 27-Oct-2018 | 04:12  | x86      |
 | Microsoft.analysisservices.applocal.tabular.dll                    | 13.0.4541.0     | 763480    | 27-Oct-2018 | 04:12  | x86      |
-| Microsoft.data.datafeedclient.dll                                  | 13.1.1.0        | 171208    | 25-Oct-18 | 18:43 | x86      |
+| Microsoft.data.datafeedclient.dll                                  | 13.1.1.0        | 171208    | 25-Oct-2018 | 18:43 | x86      |
 | Microsoft.sqlserver.integrationservice.hadoop.common.dll           | 13.0.4541.0     | 54360     | 27-Oct-2018 | 04:11  | x86      |
 | Microsoft.sqlserver.integrationservice.hadoopcomponents.dll        | 13.0.4541.0     | 89688     | 27-Oct-2018 | 04:11  | x86      |
 | Microsoft.sqlserver.integrationservice.hadoopcomponents.ui.dll     | 13.0.4541.0     | 49752     | 27-Oct-2018 | 04:11  | x86      |
@@ -579,7 +579,7 @@ SQL Server 2016 Database Services Core Shared
 | Microsoft.sqlserver.integrationservices.odatasrc.dll               | 13.0.4541.0     | 57632     | 27-Oct-2018 | 04:09  | x86      |
 | Microsoft.sqlserver.manageddts.dll                                 | 13.0.4541.0     | 606496    | 27-Oct-2018 | 04:09  | x86      |
 | Microsoft.sqlserver.management.pssnapins.dll                       | 13.0.4541.0     | 215328    | 27-Oct-2018 | 04:10  | x86      |
-| Microsoft.sqlserver.management.sdk.scripting.dll                   | 13.0.16107.4    | 30912     | 20-Mar-17 | 23:54 | x86      |
+| Microsoft.sqlserver.management.sdk.scripting.dll                   | 13.0.16107.4    | 30912     | 20-Mar-2017 | 23:54 | x86      |
 | Microsoft.sqlserver.replication.dll                                | 2015.130.4541.0 | 1639200   | 27-Oct-2018 | 04:09  | x64      |
 | Microsoft.sqlserver.xevent.configuration.dll                       | 2015.130.4541.0 | 150104    | 27-Oct-2018 | 04:11  | x64      |
 | Microsoft.sqlserver.xevent.dll                                     | 2015.130.4541.0 | 158808    | 27-Oct-2018 | 04:11  | x64      |
@@ -739,8 +739,8 @@ SQL Server 2016 Integration Services
 | Microsoft.analysisservices.applocal.tabular.dll                    | 13.0.4541.0     | 763680    | 27-Oct-2018 | 04:09  | x86      |
 | Microsoft.analysisservices.applocal.tabular.dll                    | 13.0.4541.0     | 763480    | 27-Oct-2018 | 04:12  | x86      |
 | Microsoft.applicationinsights.dll                                  | 2.7.0.13435     | 329872    | 06-Jul-2018  | 22:33 | x86      |
-| Microsoft.data.datafeedclient.dll                                  | 13.1.1.0        | 171208    | 24-Oct-18 | 23:54 | x86      |
-| Microsoft.data.datafeedclient.dll                                  | 13.1.1.0        | 171208    | 25-Oct-18 | 18:43 | x86      |
+| Microsoft.data.datafeedclient.dll                                  | 13.1.1.0        | 171208    | 24-Oct-2018 | 23:54 | x86      |
+| Microsoft.data.datafeedclient.dll                                  | 13.1.1.0        | 171208    | 25-Oct-2018 | 18:43 | x86      |
 | Microsoft.sqlserver.astasks.dll                                    | 13.0.4541.0     | 73304     | 27-Oct-2018 | 04:11  | x86      |
 | Microsoft.sqlserver.bulkinserttaskconnections.dll                  | 2015.130.4541.0 | 107280    | 27-Oct-2018 | 04:09  | x86      |
 | Microsoft.sqlserver.bulkinserttaskconnections.dll                  | 2015.130.4541.0 | 112216    | 27-Oct-2018 | 04:11  | x64      |
@@ -851,70 +851,70 @@ SQL Server 2016 sql_polybase_core_inst
 
 | File   name                                                          | File version     | File size | Date      | Time | Platform |
 |----------------------------------------------------------------------|------------------|-----------|-----------|------|----------|
-| Dms.dll                                                              | 10.0.8224.43     | 483496    | 02-Feb-2018  | 0:09 | x86      |
-| Dmsnative.dll                                                        | 2014.120.8224.43 | 75440     | 02-Feb-2018  | 0:09 | x64      |
-| Dwengineservice.dll                                                  | 10.0.8224.43     | 45744     | 02-Feb-2018  | 0:09 | x86      |
+| Dms.dll                                                              | 10.0.8224.43     | 483496    | 02-Feb-2018  | 00:09 | x86      |
+| Dmsnative.dll                                                        | 2014.120.8224.43 | 75440     | 02-Feb-2018  | 00:09 | x64      |
+| Dwengineservice.dll                                                  | 10.0.8224.43     | 45744     | 02-Feb-2018  | 00:09 | x86      |
 | Instapi130.dll                                                       | 2015.130.4541.0  | 61200     | 27-Oct-2018 | 04:09 | x64      |
-| Microsoft.sqlserver.datawarehouse.backup.backupmetadata.dll          | 10.0.8224.43     | 74416     | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.catalog.dll                        | 10.0.8224.43     | 201896    | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.common.dll                         | 10.0.8224.43     | 2347184   | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.configuration.dll                  | 10.0.8224.43     | 102064    | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.datamovement.common.dll            | 10.0.8224.43     | 378544    | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.datamovement.manager.dll           | 10.0.8224.43     | 185512    | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.datamovement.messagetypes.dll      | 10.0.8224.43     | 127144    | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.datamovement.messagingprotocol.dll | 10.0.8224.43     | 63152     | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.diagnostics.dll                    | 10.0.8224.43     | 52400     | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.distributor.dll                    | 10.0.8224.43     | 87208     | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.engine.dll                         | 10.0.8224.43     | 721584    | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.engine.statsstream.dll             | 10.0.8224.43     | 87208     | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.eventing.dll                       | 10.0.8224.43     | 78000     | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.fabric.appliance.dll               | 10.0.8224.43     | 41640     | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.fabric.interface.dll               | 10.0.8224.43     | 36528     | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.fabric.polybase.dll                | 10.0.8224.43     | 47792     | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.fabric.xdbinterface.dll            | 10.0.8224.43     | 27304     | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.failover.dll                       | 10.0.8224.43     | 32936     | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.hadoop.hadoopbridge.dll            | 10.0.8224.43     | 118952    | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.loadercommon.dll                   | 10.0.8224.43     | 94384     | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.loadmanager.dll                    | 10.0.8224.43     | 108208    | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.localization.dll                   | 10.0.8224.43     | 256680    | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 10.0.8224.43     | 102056    | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 10.0.8224.43     | 115888    | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 10.0.8224.43     | 118952    | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 10.0.8224.43     | 115888    | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 10.0.8224.43     | 125608    | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 10.0.8224.43     | 117928    | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 10.0.8224.43     | 113328    | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 10.0.8224.43     | 145576    | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 10.0.8224.43     | 100016    | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 10.0.8224.43     | 114864    | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.nodes.dll                          | 10.0.8224.43     | 69296     | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.nulltransaction.dll                | 10.0.8224.43     | 28336     | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.parallelizer.dll                   | 10.0.8224.43     | 43696     | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.resourcemanagement.dll             | 10.0.8224.43     | 82096     | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.setup.componentupgradelibrary.dll  | 10.0.8224.43     | 136872    | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.sql.dll                            | 10.0.8224.43     | 2155688   | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.sql.parser.dll                     | 10.0.8224.43     | 3818672   | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 10.0.8224.43     | 107688    | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 10.0.8224.43     | 119976    | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 10.0.8224.43     | 124592    | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 10.0.8224.43     | 121008    | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 10.0.8224.43     | 133296    | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 10.0.8224.43     | 121000    | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 10.0.8224.43     | 118448    | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 10.0.8224.43     | 152240    | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 10.0.8224.43     | 105136    | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 10.0.8224.43     | 119472    | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.sqldistributor.dll                 | 10.0.8224.43     | 66736     | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.transactsql.scriptdom.dll          | 10.0.8224.43     | 2756272   | 02-Feb-2018  | 0:09 | x86      |
-| Microsoft.sqlserver.datawarehouse.utilities.dll                      | 10.0.8224.43     | 752296    | 02-Feb-2018  | 0:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.backup.backupmetadata.dll          | 10.0.8224.43     | 74416     | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.catalog.dll                        | 10.0.8224.43     | 201896    | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.common.dll                         | 10.0.8224.43     | 2347184   | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.configuration.dll                  | 10.0.8224.43     | 102064    | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.datamovement.common.dll            | 10.0.8224.43     | 378544    | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.datamovement.manager.dll           | 10.0.8224.43     | 185512    | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.datamovement.messagetypes.dll      | 10.0.8224.43     | 127144    | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.datamovement.messagingprotocol.dll | 10.0.8224.43     | 63152     | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.diagnostics.dll                    | 10.0.8224.43     | 52400     | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.distributor.dll                    | 10.0.8224.43     | 87208     | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.engine.dll                         | 10.0.8224.43     | 721584    | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.engine.statsstream.dll             | 10.0.8224.43     | 87208     | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.eventing.dll                       | 10.0.8224.43     | 78000     | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.fabric.appliance.dll               | 10.0.8224.43     | 41640     | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.fabric.interface.dll               | 10.0.8224.43     | 36528     | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.fabric.polybase.dll                | 10.0.8224.43     | 47792     | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.fabric.xdbinterface.dll            | 10.0.8224.43     | 27304     | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.failover.dll                       | 10.0.8224.43     | 32936     | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.hadoop.hadoopbridge.dll            | 10.0.8224.43     | 118952    | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.loadercommon.dll                   | 10.0.8224.43     | 94384     | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.loadmanager.dll                    | 10.0.8224.43     | 108208    | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.localization.dll                   | 10.0.8224.43     | 256680    | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 10.0.8224.43     | 102056    | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 10.0.8224.43     | 115888    | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 10.0.8224.43     | 118952    | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 10.0.8224.43     | 115888    | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 10.0.8224.43     | 125608    | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 10.0.8224.43     | 117928    | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 10.0.8224.43     | 113328    | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 10.0.8224.43     | 145576    | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 10.0.8224.43     | 100016    | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 10.0.8224.43     | 114864    | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.nodes.dll                          | 10.0.8224.43     | 69296     | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.nulltransaction.dll                | 10.0.8224.43     | 28336     | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.parallelizer.dll                   | 10.0.8224.43     | 43696     | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.resourcemanagement.dll             | 10.0.8224.43     | 82096     | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.setup.componentupgradelibrary.dll  | 10.0.8224.43     | 136872    | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.sql.dll                            | 10.0.8224.43     | 2155688   | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.sql.parser.dll                     | 10.0.8224.43     | 3818672   | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 10.0.8224.43     | 107688    | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 10.0.8224.43     | 119976    | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 10.0.8224.43     | 124592    | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 10.0.8224.43     | 121008    | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 10.0.8224.43     | 133296    | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 10.0.8224.43     | 121000    | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 10.0.8224.43     | 118448    | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 10.0.8224.43     | 152240    | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 10.0.8224.43     | 105136    | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 10.0.8224.43     | 119472    | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.sqldistributor.dll                 | 10.0.8224.43     | 66736     | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.transactsql.scriptdom.dll          | 10.0.8224.43     | 2756272   | 02-Feb-2018  | 00:09 | x86      |
+| Microsoft.sqlserver.datawarehouse.utilities.dll                      | 10.0.8224.43     | 752296    | 02-Feb-2018  | 00:09 | x86      |
 | Mpdwinterop.dll                                                      | 2015.130.4541.0  | 394328    | 27-Oct-2018 | 04:11 | x64      |
 | Mpdwsvc.exe                                                          | 2015.130.4541.0  | 6614096   | 27-Oct-2018 | 04:13 | x64      |
 | Pdwodbcsql11.dll                                                     | 2015.130.4541.0  | 2155280   | 27-Oct-2018 | 04:09 | x64      |
-| Sharedmemory.dll                                                     | 2014.120.8224.43 | 47280     | 02-Feb-2018  | 0:09 | x64      |
+| Sharedmemory.dll                                                     | 2014.120.8224.43 | 47280     | 02-Feb-2018  | 00:09 | x64      |
 | Sqldk.dll                                                            | 2015.130.4541.0  | 2530576   | 27-Oct-2018 | 04:09 | x64      |
 | Sqldumper.exe                                                        | 2015.130.4541.0  | 127056    | 27-Oct-2018 | 04:13 | x64      |
 | Sqlos.dll                                                            | 2015.130.4541.0  | 26384     | 27-Oct-2018 | 04:09 | x64      |
-| Sqlsortpdw.dll                                                       | 2014.120.8224.43 | 4348072   | 02-Feb-2018  | 0:09 | x64      |
+| Sqlsortpdw.dll                                                       | 2014.120.8224.43 | 4348072   | 02-Feb-2018  | 00:09 | x64      |
 | Sqltses.dll                                                          | 2015.130.4541.0  | 9091344   | 27-Oct-2018 | 04:09 | x64      |
 
 SQL Server 2016 Reporting Services
