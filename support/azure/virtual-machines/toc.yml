@@ -204,7 +204,6 @@
             href: boot-error-disk-read-error-occurred.md
           - name: BitLocker errors
             href: troubleshoot-bitlocker-boot-error.md
-          - name: Checking file system errors
           - name: Troubleshoot directory service initialization failure
             href: troubleshoot-directory-service-initialization-failure.md
           - name: Critical process disabled
