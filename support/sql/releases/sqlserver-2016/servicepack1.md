@@ -22,7 +22,7 @@ This article contains important information to read before you install Microsoft
 > [!NOTE]
 > This article serves as a single source of information to locate all documentation that's related to this service pack. It includes all the information that you previously found in the release notes and *Readme.txt* files.
 
-## Known issues in this update
+## Known issues in this service pack
 
 ### SQL Server Reporting Services
 

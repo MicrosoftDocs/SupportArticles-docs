@@ -18,23 +18,9 @@ appliesto:
 _Release Date:_ &nbsp; January 23, 2019  
 _Version:_ &nbsp; 13.0.5264.1
 
-This article describes Cumulative Update package 5 (CU5) (build number: **13.0.5264.1**) for Microsoft SQL Server 2016 Service Pack 2 (SP2). This update contains [fixes](#additional-hotfixes-that-are-included-in-this-cumulative-update-package) that were released after the initial release of SQL Server 2016 SP2.
+This article describes Cumulative Update package 5 (CU5) (build number: **13.0.5264.1**) for Microsoft SQL Server 2016 Service Pack 2 (SP2). This update contains [fixes](#improvements-and-fixes-included-in-this-update) that were released after the initial release of SQL Server 2016 SP2.
 
-## Cumulative update
-
-Cumulative updates (CU) are now available at the Microsoft Download Center.
-
-Only the most recent CU that was released for SQL Server 2016 SP2 is available at the Download Center.
-
-- Each new CU contains all the fixes that were included with the previous CU for the installed version/Service Pack of SQL Server.
-- Microsoft recommends ongoing, proactive installation of CUs as they become available:
-  - SQL Server CUs are certified to the same levels as Service Packs, and should be installed at the same level of confidence.
-  - Historical data shows that a significant number of support cases involve an issue that has already been addressed in a released CU.
-  - CUs might contain added value over and above hotfixes. This includes supportability, manageability, and reliability updates.
-- Just as for SQL Server service packs, we recommend that you test CUs before you deploy them to production environments.
-- We recommend that you upgrade your SQL Server installation to [the latest SQL Server 2016 service pack](https://support.microsoft.com/help/3177534).
-
-## Additional hotfixes that are included in this cumulative update package
+## Improvements and fixes included in this update
 
 | Bug reference | Description | Fix area |
 |---|---|---|
@@ -95,6 +81,23 @@ If the download page doesn't appear, contact [Microsoft Customer Service and Sup
 > After future cumulative updates are released for SQL Server 2016, this CU can be located and downloaded from the [Microsoft Windows Update Catalog](https://catalog.update.microsoft.com/search.aspx?q=sql%20server%202016). However, we recommend that you always install the latest cumulative update that is available.
 
 ## Notes for this update
+
+<details>
+<summary><b>Cumulative update</b></summary>
+
+Cumulative updates (CU) are now available at the Microsoft Download Center.
+
+Only the most recent CU that was released for SQL Server 2016 SP2 is available at the Download Center.
+
+- Each new CU contains all the fixes that were included with the previous CU for the installed version/Service Pack of SQL Server.
+- Microsoft recommends ongoing, proactive installation of CUs as they become available:
+  - SQL Server CUs are certified to the same levels as Service Packs, and should be installed at the same level of confidence.
+  - Historical data shows that a significant number of support cases involve an issue that has already been addressed in a released CU.
+  - CUs might contain added value over and above hotfixes. This includes supportability, manageability, and reliability updates.
+- Just as for SQL Server service packs, we recommend that you test CUs before you deploy them to production environments.
+- We recommend that you upgrade your SQL Server installation to [the latest SQL Server 2016 service pack](https://support.microsoft.com/help/3177534).
+
+</details>
 
 <details>
 <summary><b>Hybrid environments deployment</b></summary>
