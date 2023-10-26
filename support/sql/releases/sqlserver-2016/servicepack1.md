@@ -1,5 +1,5 @@
 ---
-title: Service pack 1 for SQL Server 2016 (KB3182545)
+title: SQL Server 2016 Service Pack 1 release information (KB3182545)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2016 Service Pack 1 (KB3182545).
 ms.date: 10/26/2023
 ms.custom: KB3182545
