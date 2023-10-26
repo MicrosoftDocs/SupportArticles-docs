@@ -113,16 +113,14 @@ When you deploy the hotfixes to a hybrid environment (such as Always On, replica
 <details>
 <summary><b>Language support</b></summary>
 
-- SQL Server Cumulative Updates are currently multilingual. Therefore, this cumulative update package isn't specific to one language. It applies to all supported languages.
-
-- The "Download the latest cumulative update package for Microsoft SQL Server 2014 now" form displays the languages for which the update package is available. If you don't see your language, that's because a cumulative update package isn't available for specifically for that language and the ENU download applies to all languages.
+SQL Server Cumulative Updates are currently multilingual. Therefore, this cumulative update package isn't specific to one language. It applies to all supported languages.
 
 </details>
 
 <details>
 <summary><b>Components (features) updated</b></summary>
 
-One cumulative update package includes all the component packages. However, the cumulative update package updates only those components that are installed on the system.
+One Cumulative Update package includes all available updates for ALL SQL Server 2016 components (features). However, the cumulative update package updates only those components that are currently installed on the SQL Server instance you select to be serviced. If a SQL Server feature (e.g. Analysis Services) is added to the instance after this CU is applied, you must re-apply this CU to update the new feature to this CU.
 
 </details>
 
@@ -138,12 +136,9 @@ If other issues occur or if any troubleshooting is required, you might have to c
 
 To do this, follow these steps:
 
-1. In Control Panel, select **Add or Remove Programs**.
+1. In Control Panel, select **View installed updates** under **Programs and Features**.
 
-   > [!NOTE]
-   > If you are running Windows 7 or a later version, select **Programs and Features** in Control Panel.
-
-2. Locate the entry that corresponds to this cumulative update package under Microsoft SQL Server 2016.
+2. Locate the entry that corresponds to this cumulative update package under **Microsoft SQL Server 2016**.
 
 3. Press and hold (or right-click) the entry, and then select **Uninstall**.
 
@@ -173,8 +168,6 @@ To use one of the hotfixes in this package, you don't have to make any changes t
 </details>
 
 ## Cumulative update package file information
-
-This cumulative update package may not contain all the files that you must have to fully update a product to the latest build. This package contains only the files that you must have to correct the issues that are listed in this article.
 
 The English version of this package has the file attributes (or later file attributes) that are listed in the following table. The dates and times for these files are listed in Coordinated Universal Time (UTC). When you view the file information, it's converted to local time. To find the difference between UTC and local time, use the **Time Zone** tab in the **Date and Time** item in Control Panel.
 
@@ -214,7 +207,7 @@ SQL Server 2016 Database Services Common Core
 | Sql_common_core_keyfile.dll                 | 2015.130.4502.0  | 88752     | 15-May-2018 | 00:57 | x86      |
 | Sqldumper.exe                               | 2015.130.4502.0  | 107688    | 15-May-2018 | 00:57 | x86      |
 | Sqlftacct.dll                               | 2015.130.4502.0  | 46768     | 15-May-2018 | 00:58 | x86      |
-| Sqlmanager.dll                              | 2015.130.16111.4 | 607920    | 3-Jan-18  | 04:04 | x86      |
+| Sqlmanager.dll                              | 2015.130.16111.4 | 607920    | 03-Jan-2018  | 04:04 | x86      |
 | Sqlmgmprovider.dll                          | 2015.130.4502.0  | 364208    | 15-May-2018 | 00:58 | x86      |
 | Sqlsecacctchg.dll                           | 2015.130.4502.0  | 34984     | 15-May-2018 | 00:58 | x86      |
 | Sqlsvcsync.dll                              | 2015.130.4502.0  | 267440    | 15-May-2018 | 00:58 | x86      |
@@ -470,7 +463,7 @@ SQL Server 2016 Database Services Core Instance
 | C1.dll                                       | 18.10.40116.18  | 925360    | 15-May-2018 | 00:56  | x64      |
 | C2.dll                                       | 18.10.40116.18  | 5341360   | 15-May-2018 | 00:56  | x64      |
 | Cl.exe                                       | 18.10.40116.18  | 192176    | 15-May-2018 | 00:56  | x64      |
-| Databasemail.exe                             | 13.0.16100.4    | 29888     | 09-Dec-2016  | 1:46  | x64      |
+| Databasemail.exe                             | 13.0.16100.4    | 29888     | 09-Dec-2016  | 01:46  | x64      |
 | Datacollectorcontroller.dll                  | 2015.130.4502.0 | 225456    | 15-May-2018 | 00:56  | x64      |
 | Dcexec.exe                                   | 2015.130.4502.0 | 74416     | 15-May-2018 | 00:57  | x64      |
 | Fssres.dll                                   | 2015.130.4502.0 | 81584     | 15-May-2018 | 00:56  | x64      |
@@ -479,7 +472,7 @@ SQL Server 2016 Database Services Core Instance
 | Hkengine.dll                                 | 2015.130.4502.0 | 5600944   | 15-May-2018 | 00:56  | x64      |
 | Hkruntime.dll                                | 2015.130.4502.0 | 158896    | 15-May-2018 | 00:56  | x64      |
 | Link.exe                                     | 12.10.40116.18  | 1017520   | 15-May-2018 | 00:56  | x64      |
-| Microsoft.applicationinsights.dll            | 2.6.0.6787      | 239328    | 10-May-18 | 13:11 | x86      |
+| Microsoft.applicationinsights.dll            | 2.6.0.6787      | 239328    | 10-May-2018 | 13:11 | x86      |
 | Microsoft.sqlautoadmin.autobackupagent.dll   | 13.0.4502.0     | 235184    | 15-May-2018 | 00:58  | x86      |
 | Microsoft.sqlautoadmin.sqlautoadmin.dll      | 13.0.4502.0     | 79528     | 15-May-2018 | 00:58  | x86      |
 | Microsoft.sqlserver.types.dll                | 2015.130.4502.0 | 391856    | 15-May-2018 | 00:56  | x86      |
@@ -581,7 +574,7 @@ SQL Server 2016 Database Services Core Shared
 | Microsoft.analysisservices.applocal.core.dll                       | 13.0.4502.0     | 1313456   | 15-May-2018 | 00:57  | x86      |
 | Microsoft.analysisservices.applocal.dll                            | 13.0.4502.0     | 696496    | 15-May-2018 | 00:57  | x86      |
 | Microsoft.analysisservices.applocal.tabular.dll                    | 13.0.4502.0     | 763568    | 15-May-2018 | 00:57  | x86      |
-| Microsoft.data.datafeedclient.dll                                  | 13.1.1.0        | 171208    | 14-May-18 | 13:40 | x86      |
+| Microsoft.data.datafeedclient.dll                                  | 13.1.1.0        | 171208    | 14-May-2018 | 13:40 | x86      |
 | Microsoft.sqlserver.integrationservice.hadoop.common.dll           | 13.0.4502.0     | 54448     | 15-May-2018 | 00:58  | x86      |
 | Microsoft.sqlserver.integrationservice.hadoopcomponents.dll        | 13.0.4502.0     | 89776     | 15-May-2018 | 00:58  | x86      |
 | Microsoft.sqlserver.integrationservice.hadoopcomponents.ui.dll     | 13.0.4502.0     | 49840     | 15-May-2018 | 00:58  | x86      |
@@ -693,11 +686,11 @@ SQL Server 2016 Integration Services
 
 | File   name                                                        | File version    | File size | Date      | Time  | Platform |
 |--------------------------------------------------------------------|-----------------|-----------|-----------|-------|----------|
-| Attunity.sqlserver.cdccontroltask.dll                              | 4.0.0.89        | 77936     | 06-Apr-2018  | 101:09 | x86      |
+| Attunity.sqlserver.cdccontroltask.dll                              | 4.0.0.89        | 77936     | 06-Apr-2018  | 11:09 | x86      |
 | Attunity.sqlserver.cdccontroltask.dll                              | 4.0.0.89        | 77936     | 08-Apr-2018  | 00:02  | x86      |
-| Attunity.sqlserver.cdcsplit.dll                                    | 4.0.0.89        | 37488     | 06-Apr-2018  | 101:09 | x86      |
+| Attunity.sqlserver.cdcsplit.dll                                    | 4.0.0.89        | 37488     | 06-Apr-2018  | 11:09 | x86      |
 | Attunity.sqlserver.cdcsplit.dll                                    | 4.0.0.89        | 37488     | 08-Apr-2018  | 00:02  | x86      |
-| Attunity.sqlserver.cdcsrc.dll                                      | 4.0.0.89        | 78448     | 06-Apr-2018  | 101:09 | x86      |
+| Attunity.sqlserver.cdcsrc.dll                                      | 4.0.0.89        | 78448     | 06-Apr-2018  | 11:09 | x86      |
 | Attunity.sqlserver.cdcsrc.dll                                      | 4.0.0.89        | 78448     | 08-Apr-2018  | 00:02  | x86      |
 | Commanddest.dll                                                    | 2015.130.4502.0 | 249008    | 15-May-2018 | 00:56  | x64      |
 | Commanddest.dll                                                    | 2015.130.4502.0 | 202928    | 15-May-2018 | 00:57  | x86      |
@@ -755,9 +748,9 @@ SQL Server 2016 Integration Services
 | Microsoft.analysisservices.applocal.dll                            | 13.0.4502.0     | 696488    | 15-May-2018 | 00:58  | x86      |
 | Microsoft.analysisservices.applocal.tabular.dll                    | 13.0.4502.0     | 763568    | 15-May-2018 | 00:57  | x86      |
 | Microsoft.analysisservices.applocal.tabular.dll                    | 13.0.4502.0     | 763568    | 15-May-2018 | 00:58  | x86      |
-| Microsoft.applicationinsights.dll                                  | 2.6.0.6787      | 239328    | 10-May-18 | 13:11 | x86      |
-| Microsoft.data.datafeedclient.dll                                  | 13.1.1.0        | 171208    | 14-May-18 | 13:31 | x86      |
-| Microsoft.data.datafeedclient.dll                                  | 13.1.1.0        | 171208    | 14-May-18 | 13:40 | x86      |
+| Microsoft.applicationinsights.dll                                  | 2.6.0.6787      | 239328    | 10-May-2018 | 13:11 | x86      |
+| Microsoft.data.datafeedclient.dll                                  | 13.1.1.0        | 171208    | 14-May-2018 | 13:31 | x86      |
+| Microsoft.data.datafeedclient.dll                                  | 13.1.1.0        | 171208    | 14-May-2018 | 13:40 | x86      |
 | Microsoft.sqlserver.astasks.dll                                    | 13.0.4502.0     | 73392     | 15-May-2018 | 00:58  | x86      |
 | Microsoft.sqlserver.bulkinserttaskconnections.dll                  | 2015.130.4502.0 | 112304    | 15-May-2018 | 00:58  | x64      |
 | Microsoft.sqlserver.bulkinserttaskconnections.dll                  | 2015.130.4502.0 | 107184    | 15-May-2018 | 00:58  | x86      |
