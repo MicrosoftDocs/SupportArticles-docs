@@ -156,7 +156,10 @@ To use one of the hotfixes in this package, you don't have to make any changes t
 
 </details>
 
-## Cumulative update package file information
+## File information
+
+<details>
+<summary><b>Cumulative update package file information</b></summary>
 
 The English version of this package has the file attributes (or later file attributes) that are listed in the following table. The dates and times for these files are listed in Coordinated Universal Time (UTC). When you view the file information, it's converted to local time. To find the difference between UTC and local time, use the **Time Zone** tab in the **Date and Time** item in Control Panel.
 

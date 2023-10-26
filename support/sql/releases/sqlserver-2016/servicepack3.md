@@ -61,7 +61,7 @@ For more information about the bugs that are fixed in SQL Server 2016 SP3, go to
 | <a id=13435419>[13435419](#13435419) </a>| Fixes security vulnerabilities [CVE-2015-6420](https://nvd.nist.gov/vuln/detail/CVE-2015-6420) and [CVE-2017-15708](https://nvd.nist.gov/vuln/detail/CVE-2017-15708) | Integration Services |
 | <a id=13163658>[13163658](#13163658) </a>| [FIX: Setup fails when you install SQL Server on FCI with mount points (KB5005686)](https://support.microsoft.com/help/5005686)| Setup & Install |
 | <a id=14056703>[14056703](#14056703) </a>| [Improvement: Enable DNN feature in SQL Server 2019 and 2016 FCI (KB4537868)](https://support.microsoft.com/help/4537868) | SQL Connectivity |
-| <a id=13526297>[13526297](#13526297) </a>| [INSERT EXEC failed because the stored procedure altered the schema of the target table error in SQL Server 2016](/troubleshoot/sql/database-engine/general/error-556-insert-exec-failed) |SQL Engine |
+| <a id=13526297>[13526297](#13526297) </a>| [INSERT EXEC failed because the stored procedure altered the schema of the target table error in SQL Server 2016](../../database-engine/general/error-556-insert-exec-failed.md) |SQL Engine |
 | <a id=12670403>[12670403](#12670403) </a>| [Improvement: Improve CDC supportability and usability with In-Memory Databases (KB4500511)](https://support.microsoft.com/help/4500511) | SQL Engine |
 | <a id=13330609>[13330609](#13330609) </a>| [Improvement: Size and retention policy are increased in default XEvent trace system_health in SQL Server 2019, 2017, and 2016 (KB4541132)](https://support.microsoft.com/help/4541132) | SQL Engine |
 | <a id=13032229>[13032229](#13032229) </a>| [Improvement: New XEvents temp_table_cache_trace and temp_table_destroy_list_trace are created in SQL Server 2019 and 2016 (KB5003937)](https://support.microsoft.com/help/5003937) | SQL Engine |
@@ -79,7 +79,7 @@ For more information about the bugs that are fixed in SQL Server 2016 SP3, go to
 | <a id=13965515>[13965515](#13965515) </a>| Fixes `EXCEPTION_INVALID_CRT_PARAMETER` exception when you perform `INSERT`\\`UPDATE` of wide replicated table. | SQL Engine |
 | <a id=13990061>[13990061](#13990061) </a>| Fixes a memory leak when you use STDistance spatial method with a spatial index. | SQL Engine |
 | <a id=13992219>[13992219](#13992219) </a>| Fixes the `sp_hadr_verify_replication_publisher` displaying wrong distribution database name in error message. | SQL Engine |
-| <a id=14034656>[14034656](#14034656) </a>| Introduces new logging and XEvents to help troubleshoot long-running Buffer Pool scans. For more information, see [Operations that scan SQL Server buffer pool are slow on large memory machines](/troubleshoot/sql/database-engine/performance/buffer-pool-scan-runs-slowly-large-memory-machines). | SQL Engine |
+| <a id=14034656>[14034656](#14034656) </a>| Introduces new logging and XEvents to help troubleshoot long-running Buffer Pool scans. For more information, see [Operations that scan SQL Server buffer pool are slow on large memory machines](../../database-engine/performance/buffer-pool-scan-runs-slowly-large-memory-machines.md). | SQL Engine |
 | <a id=14042368>[14042368](#14042368) </a>| Fixes an issue in which some of the temporary working folders aren't cleared when many R queries are run in parallel. | SQL Engine |
 | <a id=14043334>[14043334](#14043334) </a>| Fixes the following assertion that may cause SQL Server to generate a dump: </br></br>RecXdes::AnalyzeLogRecord file =FilePath\FileName line = LineNumber expression = m_state == XDES_COMMITTED | SQL Engine |
 | <a id=14068486>[14068486](#14068486) </a>| Fixes an issue where you are unable to set up Managed Backup on SQL Server 2016 by using Azure SAS credential with a long secret due to SAS expiration. |SQL Engine |
@@ -96,6 +96,8 @@ For more information about the bugs that are fixed in SQL Server 2016 SP3, go to
 | <a id=14080827>[14080827](#14080827) </a>| Fixes an assertion in CQPOnDemandTask::ExecuteQPJob if auto async update statistics is enabled.|SQL Performance |
 | <a id=10087766>[10087766](#10087766) </a>| [FIX: SQL Server fails to start with error messages when an incorrect certificate is provisioned for SSL (KB5005689)](https://support.microsoft.com/help/5005689) | SQL Security |
 
+## File information
+
 <details>
 <summary><b>File hash information</b></summary>
 
@@ -106,12 +108,9 @@ For more information about the bugs that are fixed in SQL Server 2016 SP3, go to
 
 </details>
 
-<details>
-<summary><b>Notes for this update</b></summary>
+## Notes for this update
 
 For more information about how to upgrade your SQL Server installation to SQL Server 2016 SP3, see [Supported Version and Edition Upgrades](/sql/database-engine/install-windows/supported-version-and-edition-upgrades).
-
-</details>
 
 <details>
 <summary><b>Uninstalling SQL Server 2016 SP3 (not recommended)</b></summary>
@@ -138,11 +137,11 @@ To learn how to install SQL Server 2016 R Services on Windows, see [Install SQL 
 
 - This product includes software from the zlib general purpose compression library.
 
-- Parts of this software are based in part on the work of RSA Data Security, Inc. Because Microsoft has included the RSA Data Security, Inc., software in this product, Microsoft is required to include the text below that accompanied such software: 
-  - Copyright 1990, RSA Data Security, Inc. All rights reserved. 
+- Parts of this software are based in part on the work of RSA Data Security, Inc. Because Microsoft has included the RSA Data Security, Inc., software in this product, Microsoft is required to include the text below that accompanied such software:
+  - Copyright 1990, RSA Data Security, Inc. All rights reserved.
   
-  - License to copy and use this software is granted provided that it is identified as the "RSA Data Security, Inc., MD5 Message-Digest Algorithm" in all material mentioning or referencing this software or this function. License is also granted to make and use derivative works provided that such works are identified as "derived from the RSA Data Security, Inc., MD5 Message-Digest Algorithm" in all material mentioning or referencing the derived work. 
-  - RSA Data Security, Inc., makes no representations concerning either the merchantability of this software or the suitability of this software for any particular purpose. It is provided "as is" without express or implied warranty of any kind. 
+  - License to copy and use this software is granted provided that it is identified as the "RSA Data Security, Inc., MD5 Message-Digest Algorithm" in all material mentioning or referencing this software or this function. License is also granted to make and use derivative works provided that such works are identified as "derived from the RSA Data Security, Inc., MD5 Message-Digest Algorithm" in all material mentioning or referencing the derived work.
+  - RSA Data Security, Inc., makes no representations concerning either the merchantability of this software or the suitability of this software for any particular purpose. It is provided "as is" without express or implied warranty of any kind.
   
   These notices must be retained in any copies of any part of this documentation or software.
 

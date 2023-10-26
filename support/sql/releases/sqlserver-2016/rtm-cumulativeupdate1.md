@@ -298,7 +298,10 @@ To use one of the hotfixes in this package, you don't have to make any changes t
 
 </details>
 
-## Cumulative update package file information
+## File information
+
+<details>
+<summary><b>Cumulative update package file information</b></summary>
 
 This cumulative update package might not contain all the files that you must have to fully update a product to the latest build. This package contains only the files that you must have to correct the issues that are listed in this article.
 

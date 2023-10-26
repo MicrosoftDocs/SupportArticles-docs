@@ -111,6 +111,8 @@ This article lists the Microsoft SQL Server 2016 builds that were released after
 | CU2                    | 13.0.2164.0     | [KB3182270](rtm-cumulativeupdate2.md) | September 22, 2016 |
 | CU1                    | 13.0.2149.0     | [KB3164674](rtm-cumulativeupdate1.md) | July 25, 2016      |
 
+</details>
+
 ## References
 
 - [Microsoft SQL Server support lifecycle](https://support.microsoft.com/lifecycle/)

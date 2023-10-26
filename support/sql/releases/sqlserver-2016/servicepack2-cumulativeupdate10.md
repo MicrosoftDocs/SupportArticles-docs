@@ -87,23 +87,23 @@ If the download page doesn't appear, contact [Microsoft Customer Service and Sup
 
 When you deploy the hotfixes to a hybrid environment (such as Always On, replication, cluster, and mirroring), we recommend that you refer to the following articles before you deploy the hotfixes:
 
-- [SQL Server failover cluster rolling update and service pack process](/sql/sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance)
+- [Upgrade a failover cluster instance](/sql/sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance)
 
   > [!NOTE]
   > If you don't want to use the rolling update process, follow these steps to apply an update: </br></br>1. Install the service pack on the passive node. </br></br>2. Install the update on the active node (requires a service restart).
 
-- [Upgrade and update of availability group servers that use minimal downtime and data loss](/sql/database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances)
+- [Upgrade availability group replicas](/sql/database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances)
 
   > [!NOTE]
   > If you enabled Always On with SSISDB catalog, see the [information about SSIS with Always On](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-with-alwayson/ba-p/388091) for more information about how to apply an update in these environments.
 
-- [How to apply a hotfix for SQL Server in a transactional replication and database mirroring topology](/troubleshoot/sql/database-engine/replication/install-service-packs-hotfixes)
+- [Apply a hotfix for SQL Server in a transactional replication and database mirroring topology](../../database-engine/replication/install-service-packs-hotfixes.md)
 
-- [How to apply a hotfix for SQL Server in a replication topology](/troubleshoot/sql/database-engine/replication/apply-hotfix-sql-replication-topology)
+- [Apply a hotfix for SQL Server in a replication topology](../../database-engine/replication/apply-hotfix-sql-replication-topology.md)
 
-- [How to install service packs and hotfixes on an instance of SQL Server that is configured to use database mirroring](/sql/database-engine/database-mirroring/upgrading-mirrored-instances)
+- [Upgrading Mirrored Instances](/sql/database-engine/database-mirroring/upgrading-mirrored-instances)
 
-- [Overview of SQL Server Servicing Installation](/sql/database-engine/install-windows/install-sql-server-servicing-updates)
+- [Install SQL Server Servicing Updates](/sql/database-engine/install-windows/install-sql-server-servicing-updates)
 
 </details>
 
@@ -162,7 +162,10 @@ To use one of the hotfixes in this package, you don't have to make any changes t
 
 </details>
 
-## Cumulative update package file information
+## File information
+
+<details>
+<summary><b>Cumulative update package file information</b></summary>
 
 The English version of this package has the file attributes (or later file attributes) that are listed in the following table. The dates and times for these files are listed in Coordinated Universal Time (UTC). When you view the file information, it's converted to local time. To find the difference between UTC and local time, use the **Time Zone** tab in the **Date and Time** item in Control Panel.
 
@@ -854,6 +857,8 @@ SQL Server 2016 sql_tools_extensions
 | Xmlrwbin.dll                                   | 2015.131.5492.2 | 227448    | 05-Oct-2019 | 07:15 | x64      |
 | Xmsrv.dll                                      | 2015.131.5492.2 | 32727664  | 05-Oct-2019 | 07:14 | x86      |
 | Xmsrv.dll                                      | 2015.131.5492.2 | 24051824  | 05-Oct-2019 | 07:51 | x64      |
+
+</details>
 
 ## References
 
