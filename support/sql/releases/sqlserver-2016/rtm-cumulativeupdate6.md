@@ -528,10 +528,10 @@ SQL Server 2016 sql_tools_extensions
 
 - [How to obtain the latest service pack for SQL Server 2016](https://support.microsoft.com/help/3177534)
 
-- [The script to determine which version and edition of SQL Server Database Engine is running](../find-my-sql-version.md)
+- [Determine which version and edition of SQL Server Database Engine is running](../find-my-sql-version.md)
 
-- [The Incremental Servicing Model for SQL Server to deliver hotfixes for reported problems](../../general/servicing-models-sql-server.md)
+- [Servicing models for SQL Server](../../general/servicing-models-sql-server.md)
 
-- [Naming schema for Microsoft SQL Server software update packages](../../database-engine/install/windows/naming-schema-and-fix-area.md)
+- [Naming schema and Fix area descriptions for SQL Server software update packages](../../database-engine/install/windows/naming-schema-and-fix-area.md)
 
 - [Description of the standard terminology that is used to describe Microsoft software updates](../../../windows-client/deployment/standard-terminology-software-updates.md)
