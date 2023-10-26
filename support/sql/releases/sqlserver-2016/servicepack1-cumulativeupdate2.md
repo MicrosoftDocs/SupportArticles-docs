@@ -26,7 +26,7 @@ For more information, see:
 - [CDC functionality may break after upgrading to the latest CU for SQL Server 2012, 2014 and 2016](https://techcommunity.microsoft.com/t5/sql-server-blog/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for/ba-p/385297)
 - [Special steps for change data capture or replication](/sql/database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances#special-steps-for-change-data-capture-or-replication)
 
-## Additional Improvements and fixes included in this update
+## Improvements and fixes included in this update
 
 | Bug reference | Description | Fix area |
 |---|---|---|
