@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 8 for SQL Server 2016 SP1 (KB4077064)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2016 SP1 cumulative update 8 (KB4077064).
-ms.date: 10/30/2023
+ms.date: 10/26/2023
 ms.custom: KB4077064
 appliesto:
 - SQL Server 2016 Service pack 1

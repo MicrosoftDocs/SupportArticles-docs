@@ -1,7 +1,7 @@
 ---
 title: Service pack 2 for SQL Server 2016 (KB4052908)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2016 Service Pack 2 (KB4052908).
-ms.date: 10/31/2023
+ms.date: 10/26/2023
 ms.custom: KB4052908
 appliesto:
 - SQL Server 2016 Developer

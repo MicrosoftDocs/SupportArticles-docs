@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2016 Service Pack 3 release information (KB5003279)
 description: This article contains the summary, known issues, improvements, fixes and other information for QL Server 2016 Service Pack 3 release information (KB5003279).
-ms.date: 10/30/2023
+ms.date: 10/26/2023
 ms.custom: KB5003279
 appliesto:
 - SQL Server 2016
