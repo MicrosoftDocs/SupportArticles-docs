@@ -5,9 +5,9 @@
       items:
         - name: Asset tab indicates contact IT admin
           href: remote-assist-app/no-assets-admin.md
-        - name: Assets don't appear or aren't expected
+        - name: Assets don't appear or aren't as expected
           href: remote-assist-app/assets-not-appear-or-expected.md
-        - name: Contacts don't appear or aren't expected
+        - name: Contacts don't appear or aren't as expected
           href: remote-assist-app/contacts-not-appear-or-expected.md
         - name: Dynamics 365 Remote Assist not responding
           href: remote-assist-app/remote-assist-stops-responding.md

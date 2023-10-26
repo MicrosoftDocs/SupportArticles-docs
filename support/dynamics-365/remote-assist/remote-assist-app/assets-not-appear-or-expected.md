@@ -1,19 +1,19 @@
 ---
-title: No assets appear or assets aren't expected in the HoloLens app
-description: Resolves an issue where the assets in the HoloLens app for Microsoft Dynamics 365 Remote Assist aren't expected or don't appear.
+title: No assets appear or assets aren't as expected in the HoloLens app
+description: Resolves an issue where the assets in the HoloLens app for Microsoft Dynamics 365 Remote Assist aren't as expected or don't appear.
 ms.author: davepinch
 author: davepinch
-ms.date: 10/25/2023
+ms.date: 10/26/2023
 ms.reviewer: v-wendysmith
 ms.custom: bap-template
 ---
-# Assets don't appear or aren't expected in Dynamics 365 Remote Assist
+# Assets don't appear or aren't as expected in Dynamics 365 Remote Assist
 
 This article provides a resolution for an issue where the assets don't appear or aren't shown as expected in Microsoft Dynamics 365 Remote Assist.
 
 ## Symptoms
 
-In the HoloLens app, when you select the **Assets** tab, the assets aren't expected or no assets appear.
+In the HoloLens app, when you select the **Assets** tab, the assets aren't as expected or no assets appear.
 
 ## Cause 1: You might have access to more than one environment with Dynamics 365 Remote Assist installed
 

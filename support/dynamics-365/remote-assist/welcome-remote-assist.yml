@@ -9,7 +9,7 @@ metadata:
   ms.service: remote-assist
   author: v-wendysmith
   ms.author: v-wendysmith
-  ms.date: 10/25/2023
+  ms.date: 10/26/2023
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -21,11 +21,11 @@ landingContent:
         links:
           - text: Assets tab indicates contact IT admin
             url: remote-assist-app/no-assets-admin.md
-          - text: Assets don't appear or aren't expected
+          - text: Assets don't appear or aren't as expected
             url: remote-assist-app/assets-not-appear-or-expected.md
           - text: Can't sign in to Dynamics 365 Remote Assist
             url: remote-assist-app/cannot-sign-in-to-remote-assist.md
-          - text: Contacts don't appear or aren't expected
+          - text: Contacts don't appear or aren't as expected
             url: remote-assist-app/contacts-not-appear-or-expected.md
           - text: Incoming call notifications aren't received
             url: remote-assist-app/no-incoming-call-notification.md
