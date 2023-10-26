@@ -114,7 +114,7 @@ SQL Server Cumulative Updates are currently multilingual. Therefore, this cumula
 <details>
 <summary><b>Components (features) updated</b></summary>
 
-One Cumulative Update package includes all available updates for ALL SQL Server 2017 components (features). However, the cumulative update package updates only those components that are currently installed on the SQL Server instance you select to be serviced. If a SQL Server feature (e.g. Analysis Services) is added to the instance after this CU is applied, you must re-apply this CU to update the new feature to this CU.
+One Cumulative Update package includes all available updates for ALL SQL Server 2016 components (features). However, the cumulative update package updates only those components that are currently installed on the SQL Server instance you select to be serviced. If a SQL Server feature (e.g. Analysis Services) is added to the instance after this CU is applied, you must re-apply this CU to update the new feature to this CU.
 
 </details>
 
