@@ -40,6 +40,32 @@ Only the most recent CU that was released for SQL Server 2016 is available at th
 
 - We recommend that you upgrade your SQL Server installation to [the latest SQL Server 2016 service pack](https://support.microsoft.com/help/3177534).
 
+## Additional hotfixes that are included in this cumulative update package
+
+| Bug reference   | Description| Fix area  |
+|---------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------|
+| <a id=12108237>[12108237](#12108237) </a> | [FIX: Parallel redo does not   work after you disable Trace Flag 3459 in an instance of SQL   Server (KB4339858)](https://support.microsoft.com/help/4339858)  | High Availability |
+| <a id=11963714>[11963714](#11963714) </a> | FIX: Access violation in cross   data center failover if you use Always On Availability Groups in SQL Server (KB4340986)   | High Availability |
+| <a id=12162395>[12162395](#12162395) </a> | [FIX: VSS backup fails in   secondary replica of Basic Availability Groups in SQL Server   2016 (KB4341221)](https://support.microsoft.com/help/4341221)   | SQL Engine|
+| <a id=12164652>[12164652](#12164652) </a> | [FIX: Event notifications for   AUDIT_LOGIN and AUDIT_LOGIN_FAILED events will cause an unusual growth of   TempDB in SQL Server 2016 (KB4341398)](https://support.microsoft.com/help/4341398) | SQL Engine|
+| <a id=12007659>[12007659](#12007659) </a> | FIX: SSAS stops responding when   you run MDX queries and DirectQuery mode is enabled in SQL Server (KB4294660)| Analysis Services |
+| <a id=12150033>[12150033](#12150033) </a> | FIX: The Excel   Add-in still appears on the MDS home page when the option is set to "No" in   MDS Configuration Manager (KB4340426)   | Data Quality   Services (DQS) |
+| <a id=11965145>[11965145](#11965145) </a> | [FIX: No records are returned   when you run an MDX query after restarting SSAS   2016 (KB4340746)](https://support.microsoft.com/help/4340746)| Analysis Services |
+| <a id=12110129>[12110129](#12110129) </a> | [FIX: Error 3906 when a hotfix   is applied on a SQL Server that has a database snapshot on a pull   subscription database (KB4340837)](https://support.microsoft.com/help/4340837)| SQL Engine|
+| <a id=11922700>[11922700](#11922700) </a> | [FIX: "Corrupted   index" message and server disconnection when an update statistics query   uses hash aggregate on SQL   Server (KB4316858)](https://support.microsoft.com/help/4316858)  | SQL performance   |
+| <a id=11888330>[11888330](#11888330) </a> | [FIX:   "PAGE_FAULT_IN_NONPAGED_AREA" Stop error when enumerating contents   in a SQL Server FileTable   directory (KB4338960)](https://support.microsoft.com/help/4338960)| SQL Engine|
+| <a id=12101696>[12101696](#12101696) </a> | [FIX: Rectangle does not grow   vertically together with internal Textbox in the report in SSRS 2016 when you   set rc:Toolbar=False (KB4338040)](https://support.microsoft.com/help/4338040)  | Reporting Services|
+| <a id=11919402>[11919402](#11919402) </a> | [FIX: Transaction delays on the   primary replica if database synchronization is reported incorrectly on a   secondary replica in SQL Server (KB4338576)](https://support.microsoft.com/help/4338576)  | High Availability |
+| <a id=12108229>[12108229](#12108229) </a> | FIX: Query on a secondary   replica takes two times as long to run as on a primary replica in SQL Server (KB4340342)   | High Availability |
+| <a id=11966745>[11966745](#11966745) </a> | [FIX: Assertion error occurs   when you add a database to an instance of SQL Server   2016 (KB4340730)](https://support.microsoft.com/help/4340730)| SQL Engine|
+| <a id=11970228>[11970228](#11970228) </a> | [FIX: SQL Server may generate   EXCEPTION_ACCESS_VIOLATION dump file when you merge two partitions of   system-versioned temporal tables in SQL Server   2016 (KB4338761)](https://support.microsoft.com/help/4338761) | SQL Engine|
+| <a id=11581433>[11581433](#11581433) </a> | [FIX: SSAS crashes when Process   Full is executed after Process Clear in SQL Server   2016 (KB4339447)](https://support.microsoft.com/help/4339447)   | Analysis Services |
+| <a id=11887487>[11887487](#11887487) </a> | [Transparent Data Encryption   added for Log Shipping in SQL Server 2016 and   2017 (KB4099919)](https://support.microsoft.com/help/4099919)   | High Availability |
+| <a id=11887486>[11887486](#11887486) </a> | [Improvement: Configure   SESSION_TIMEOUT value for a Distributed Availability Group replica in SQL   Server 2016 and 2017 (KB4090004)](https://support.microsoft.com/help/4090004)| High Availability |
+| <a id=12104371>[12104371](#12104371) </a> | [FIX: Leakage of sensitive data   occurs when you enable DDM function in SQL Server 2016 and   2017 (KB4100582)](https://support.microsoft.com/help/4100582)   | SQL security  |
+| <a id=12160103>[12160103](#12160103) </a> | Improvement that sets   distributed Always On Availability Groups to automatically seed to all   replicas when you add a new database in SQL Server (KB4341356)| High Availability |
+| <a id=12059046>[12059046](#12059046) </a> | [FIX: Error 19432 when you use   Always On Availability Groups in SQL   Server (KB4338746)](https://support.microsoft.com/help/4338746)| High Availability |
+
 ## How to obtain this cumulative update package
 
 The following update is available from the Microsoft Download Center:
@@ -50,32 +76,6 @@ If the download page doesn't appear, contact [Microsoft Customer Service and Sup
 
 > [!NOTE]
 > After future cumulative updates are released for SQL Server 2016, this CU can be located and downloaded from the [Microsoft Windows Update Catalog](https://catalog.update.microsoft.com/Search.aspx?q=sql%20server%202016). However, Microsoft recommends that you install the latest cumulative update available.
-
-## Additional hotfixes that are included in this cumulative update package
-
-| Bug reference   | Description| Fix area  |
-|---------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------|
-| <a   id=12108237>[12108237](#12108237) </a> | [FIX: Parallel redo does not   work after you disable Trace Flag 3459 in an instance of SQL   Server (KB4339858)](https://support.microsoft.com/help/4339858)  | High Availability |
-| <a   id=11963714>[11963714](#11963714) </a> | FIX: Access violation in cross   data center failover if you use Always On Availability Groups in SQL Server (KB4340986)   | High Availability |
-| <a   id=12162395>[12162395](#12162395) </a> | [FIX: VSS backup fails in   secondary replica of Basic Availability Groups in SQL Server   2016 (KB4341221)](https://support.microsoft.com/help/4341221)   | SQL Engine|
-| <a   id=12164652>[12164652](#12164652) </a> | [FIX: Event notifications for   AUDIT_LOGIN and AUDIT_LOGIN_FAILED events will cause an unusual growth of   TempDB in SQL Server 2016 (KB4341398)](https://support.microsoft.com/help/4341398) | SQL Engine|
-| <a   id=12007659>[12007659](#12007659) </a> | FIX: SSAS stops responding when   you run MDX queries and DirectQuery mode is enabled in SQL Server (KB4294660)| Analysis Services |
-| <a   id=12150033>[12150033](#12150033) </a> | FIX: The Excel   Add-in still appears on the MDS home page when the option is set to "No" in   MDS Configuration Manager (KB4340426)   | Data Quality   Services (DQS) |
-| <a   id=11965145>[11965145](#11965145) </a> | [FIX: No records are returned   when you run an MDX query after restarting SSAS   2016 (KB4340746)](https://support.microsoft.com/help/4340746)| Analysis Services |
-| <a   id=12110129>[12110129](#12110129) </a> | [FIX: Error 3906 when a hotfix   is applied on a SQL Server that has a database snapshot on a pull   subscription database (KB4340837)](https://support.microsoft.com/help/4340837)| SQL Engine|
-| <a   id=11922700>[11922700](#11922700) </a> | [FIX: "Corrupted   index" message and server disconnection when an update statistics query   uses hash aggregate on SQL   Server (KB4316858)](https://support.microsoft.com/help/4316858)  | SQL performance   |
-| <a   id=11888330>[11888330](#11888330) </a> | [FIX:   "PAGE_FAULT_IN_NONPAGED_AREA" Stop error when enumerating contents   in a SQL Server FileTable   directory (KB4338960)](https://support.microsoft.com/help/4338960)| SQL Engine|
-| <a   id=12101696>[12101696](#12101696) </a> | [FIX: Rectangle does not grow   vertically together with internal Textbox in the report in SSRS 2016 when you   set rc:Toolbar=False (KB4338040)](https://support.microsoft.com/help/4338040)  | Reporting Services|
-| <a   id=11919402>[11919402](#11919402) </a> | [FIX: Transaction delays on the   primary replica if database synchronization is reported incorrectly on a   secondary replica in SQL Server (KB4338576)](https://support.microsoft.com/help/4338576)  | High Availability |
-| <a   id=12108229>[12108229](#12108229) </a> | FIX: Query on a secondary   replica takes two times as long to run as on a primary replica in SQL Server (KB4340342)   | High Availability |
-| <a   id=11966745>[11966745](#11966745) </a> | [FIX: Assertion error occurs   when you add a database to an instance of SQL Server   2016 (KB4340730)](https://support.microsoft.com/help/4340730)| SQL Engine|
-| <a   id=11970228>[11970228](#11970228) </a> | [FIX: SQL Server may generate   EXCEPTION_ACCESS_VIOLATION dump file when you merge two partitions of   system-versioned temporal tables in SQL Server   2016 (KB4338761)](https://support.microsoft.com/help/4338761) | SQL Engine|
-| <a   id=11581433>[11581433](#11581433) </a> | [FIX: SSAS crashes when Process   Full is executed after Process Clear in SQL Server   2016 (KB4339447)](https://support.microsoft.com/help/4339447)   | Analysis Services |
-| <a   id=11887487>[11887487](#11887487) </a> | [Transparent Data Encryption   added for Log Shipping in SQL Server 2016 and   2017 (KB4099919)](https://support.microsoft.com/help/4099919)   | High Availability |
-| <a   id=11887486>[11887486](#11887486) </a> | [Improvement: Configure   SESSION_TIMEOUT value for a Distributed Availability Group replica in SQL   Server 2016 and 2017 (KB4090004)](https://support.microsoft.com/help/4090004)| High Availability |
-| <a   id=12104371>[12104371](#12104371) </a> | [FIX: Leakage of sensitive data   occurs when you enable DDM function in SQL Server 2016 and   2017 (KB4100582)](https://support.microsoft.com/help/4100582)   | SQL security  |
-| <a   id=12160103>[12160103](#12160103) </a> | Improvement that sets   distributed Always On Availability Groups to automatically seed to all   replicas when you add a new database in SQL Server (KB4341356)| High Availability |
-| <a   id=12059046>[12059046](#12059046) </a> | [FIX: Error 19432 when you use   Always On Availability Groups in SQL   Server (KB4338746)](https://support.microsoft.com/help/4338746)| High Availability |
 
 ## Notes for this update
 

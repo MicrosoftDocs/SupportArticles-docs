@@ -33,17 +33,6 @@ Only the most recent CU that was released for SQL Server 2016 is available at th
 - Just as for SQL Server service packs, we recommend that you test CUs before you deploy them to production environments.
 - We recommend that you upgrade your SQL Server installation to [the latest SQL Server 2016 service pack](https://support.microsoft.com/help/3177534).
 
-## How to obtain this cumulative update package
-
-The following update is available from the Microsoft Download Center:
-
-:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for Microsoft SQL Server 2016 now](https://www.microsoft.com/download/details.aspx?id=53338)
-
-If the download page doesn't appear, contact [Microsoft Customer Service and Support](https://support.microsoft.com/contactus/?ws=support) to obtain the cumulative update package.
-
-> [!NOTE]
-> After future cumulative updates are released for SQL Server 2016, this CU can be located and downloaded from the [Microsoft Windows Update Catalog](https://catalog.update.microsoft.com/search.aspx?q=sql%20server%202016). However, Microsoft recommends that you install the latest cumulative update available.
-
 ## Hotfixes that are included in this cumulative update package
 
 | Bug reference | Description | Fix area |
@@ -210,6 +199,17 @@ If the download page doesn't appear, contact [Microsoft Customer Service and Sup
 | <a id=7801553>[7801553](#7801553)</a> | FIX: Counters for job objects created by SQL Server Trusted Launchpad aren't visible in Windows Performance Monitor (KB3174396) | SQL service |
 | <a id=7806775>[7806775](#7806775)</a> | FIX: All data goes to deltastores when you bulk load data into a clustered columnstore index under memory pressure (KB3174073) | SQL service |
 | <a id=7811515>[7811515](#7811515)</a> | FIX: Can't query or migrate data from a local Stretch-enabled table after you execute `sys.sp_rda_reconcile_batch` (KB3174076) | SQL service |
+
+## How to obtain this cumulative update package
+
+The following update is available from the Microsoft Download Center:
+
+:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for Microsoft SQL Server 2016 now](https://www.microsoft.com/download/details.aspx?id=53338)
+
+If the download page doesn't appear, contact [Microsoft Customer Service and Support](https://support.microsoft.com/contactus/?ws=support) to obtain the cumulative update package.
+
+> [!NOTE]
+> After future cumulative updates are released for SQL Server 2016, this CU can be located and downloaded from the [Microsoft Windows Update Catalog](https://catalog.update.microsoft.com/search.aspx?q=sql%20server%202016). However, Microsoft recommends that you install the latest cumulative update available.
 
 ## Notes for this update
 

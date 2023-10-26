@@ -40,6 +40,20 @@ Only the most recent CU that was released for SQL Server 2016 is available at th
 
 - We recommend that you upgrade your SQL Server installation to [the latest SQL Server 2016 service pack](https://support.microsoft.com/help/3177534).
 
+## Additional hotfixes that are included in this cumulative update package
+
+| Bug reference  | Description  | Fix area |
+|---------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------|
+| <a id=12180193>[12180193](#12180193) </a> | [FIX: Circular dependency   between column names for a calculated table that summarizes the partition   query dataset in SQL Server (KB4338204)](https://support.microsoft.com/help/4338204) | Analysis Services|
+| <a id=12177840>[12177840](#12177840) </a> | [FIX: A memory leak occurs in   sqlwepxxx.dll causes the WmiPrvSe.exe process to   crash (KB4133191)](https://support.microsoft.com/help/4133191)| SQL Engine   |
+| <a id=12278211>[12278211](#12278211) </a> | [FIX: Access violations and   unhandled exceptions when you set automatic seeding for secondary replica or   Distributed Availability Group replica in SQL   Server (KB4457953)](https://support.microsoft.com/help/4457953) | High Availability|
+| <a id=12319581>[12319581](#12319581) </a> | [FIX: "9003 error, sev 20, state   1" error when a backup operation fails on a secondary replica that is running   under asynchronous-commit mode (KB4458880)](https://support.microsoft.com/help/4458880)   | SQL Engine   |
+| <a id=12177846>[12177846](#12177846) </a> | [FIX: Thai characters in SSAS   for SQL Server exported to a PDF file are displayed   incorrectly (KB4131251)](https://support.microsoft.com/help/4131251)   | Reporting   Services |
+| <a id=12267691>[12267691](#12267691) </a> | FIX: Masked data is exposed   when a query that uses sp_cursorfetch is run in SQL Server if Dynamic Data   Masking is enabled (KB4459535)  | SQL security |
+| <a id=12264620>[12264620](#12264620) </a> | [FIX: Error occurs when   encryption is enabled on a database that uses an  Azure Key vault in SQL   Server 2016 (KB4463125)](https://support.microsoft.com/help/4463125)| SQL security |
+| <a id=12043568>[12043568](#12043568) </a> | FIX: "An unexpected   exception occurred" when you run an MDX query after you run an XMLA   query to process a dimension in   SSAS (KB4463328) | Analysis Services|
+| <a id=12228212>[12228212](#12228212) </a> | Improves error messages 1412 and   1478 by adding LSN values (BackupLSN, FlushedLSN, RedoLSN, TruncationLSN,   HardenedLSN). | High Availability|
+
 ## How to obtain this cumulative update package
 
 The following update is available from the Microsoft Download Center:
@@ -50,20 +64,6 @@ If the download page doesn't appear, contact [Microsoft Customer Service and Sup
 
 > [!NOTE]
 > After future cumulative updates are released for SQL Server 2016, this CU can be located and downloaded from the [Microsoft Windows Update Catalog](https://catalog.update.microsoft.com/Search.aspx?q=sql%20server%202016). However, Microsoft recommends that you install the latest cumulative update available.
-
-## Additional hotfixes that are included in this cumulative update package
-
-| Bug reference  | Description  | Fix area |
-|---------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------|
-| <a   id=12180193>[12180193](#12180193) </a> | [FIX: Circular dependency   between column names for a calculated table that summarizes the partition   query dataset in SQL Server (KB4338204)](https://support.microsoft.com/help/4338204) | Analysis Services|
-| <a   id=12177840>[12177840](#12177840) </a> | [FIX: A memory leak occurs in   sqlwepxxx.dll causes the WmiPrvSe.exe process to   crash (KB4133191)](https://support.microsoft.com/help/4133191)| SQL Engine   |
-| <a   id=12278211>[12278211](#12278211) </a> | [FIX: Access violations and   unhandled exceptions when you set automatic seeding for secondary replica or   Distributed Availability Group replica in SQL   Server (KB4457953)](https://support.microsoft.com/help/4457953) | High Availability|
-| <a   id=12319581>[12319581](#12319581) </a> | [FIX: "9003 error, sev 20, state   1" error when a backup operation fails on a secondary replica that is running   under asynchronous-commit mode (KB4458880)](https://support.microsoft.com/help/4458880)   | SQL Engine   |
-| <a   id=12177846>[12177846](#12177846) </a> | [FIX: Thai characters in SSAS   for SQL Server exported to a PDF file are displayed   incorrectly (KB4131251)](https://support.microsoft.com/help/4131251)   | Reporting   Services |
-| <a   id=12267691>[12267691](#12267691) </a> | FIX: Masked data is exposed   when a query that uses sp_cursorfetch is run in SQL Server if Dynamic Data   Masking is enabled (KB4459535)  | SQL security |
-| <a   id=12264620>[12264620](#12264620) </a> | [FIX: Error occurs when   encryption is enabled on a database that uses an  Azure Key vault in SQL   Server 2016 (KB4463125)](https://support.microsoft.com/help/4463125)| SQL security |
-| <a   id=12043568>[12043568](#12043568) </a> | FIX: "An unexpected   exception occurred" when you run an MDX query after you run an XMLA   query to process a dimension in   SSAS (KB4463328) | Analysis Services|
-| <a   id=12228212>[12228212](#12228212) </a> | Improves error messages 1412 and   1478 by adding LSN values (BackupLSN, FlushedLSN, RedoLSN, TruncationLSN,   HardenedLSN). | High Availability|
 
 ## Notes for this update
 

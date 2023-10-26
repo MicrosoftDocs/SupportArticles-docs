@@ -34,17 +34,6 @@ Only the most recent CU that was released for SQL Server 2016 SP2 is available a
 - Just as for SQL Server service packs, we recommend that you test CUs before you deploy them to production environments.
 - We recommend that you upgrade your SQL Server installation to [the latest SQL Server 2016 service pack](https://support.microsoft.com/help/3177534).
 
-## How to obtain this cumulative update package
-
-The following update is available from the Microsoft Download Center:
-
-:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2016 SP2 now](https://www.microsoft.com/download/details.aspx?id=56975)
-
-If the download page doesn't appear, contact [Microsoft Customer Service and Support](https://support.microsoft.com/contactus/?ws=support) to obtain the cumulative update package.
-
-> [!NOTE]
-> After future cumulative updates are released for SQL Server 2016, this CU can be located and downloaded from the [Microsoft Windows Update Catalog](https://catalog.update.microsoft.com/search.aspx?q=sql%20server%202016). However, we recommend that you always install the latest cumulative update that is available.
-
 ## Additional hotfixes that are included in this cumulative update package
 
 | Bug reference | Description | Fix area |
@@ -72,6 +61,17 @@ If the download page doesn't appear, contact [Microsoft Customer Service and Sup
 | <a id="12118383">[12118383](#12118383)</a> | FIX: DMVs `sys.dm_db_log_stats` and `sys.dm_db_log_info` may return incorrect values for the last database of the SQL Server 2016 instance (KB4341253) | SQL Engine |
 | <a id="11922715">[11922715](#11922715)</a> | [FIX: "Corrupted index" message and server disconnection when an update statistics query uses hash aggregate on SQL Server (KB4316858)](https://support.microsoft.com/help/4316858) | SQL performance |
 | <a id="11965498">[11965498](#11965498)</a> | [FIX: Many xml_deadlock_report events are reported for one single intra-query deadlock occurrence in SQL Server 2016 (KB4338715)](https://support.microsoft.com/help/4338715) | SQL performance |
+
+## How to obtain this cumulative update package
+
+The following update is available from the Microsoft Download Center:
+
+:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2016 SP2 now](https://www.microsoft.com/download/details.aspx?id=56975)
+
+If the download page doesn't appear, contact [Microsoft Customer Service and Support](https://support.microsoft.com/contactus/?ws=support) to obtain the cumulative update package.
+
+> [!NOTE]
+> After future cumulative updates are released for SQL Server 2016, this CU can be located and downloaded from the [Microsoft Windows Update Catalog](https://catalog.update.microsoft.com/search.aspx?q=sql%20server%202016). However, we recommend that you always install the latest cumulative update that is available.
 
 ## Notes for this update
 

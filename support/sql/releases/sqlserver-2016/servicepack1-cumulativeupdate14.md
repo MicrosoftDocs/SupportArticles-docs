@@ -39,17 +39,6 @@ Only the most recent CU that was released for SQL Server 2016 is available at th
 
 - We recommend that you upgrade your SQL Server installation to [the latest SQL Server 2016 service pack](https://support.microsoft.com/help/3177534).
 
-## How to obtain this cumulative update package
-
-The following update is available from the Microsoft Download Center:
-
-:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2016 SP1 now](https://www.microsoft.com/download/details.aspx?id=54613)
-
-If the download page doesn't appear, contact [Microsoft Customer Service and Support](https://support.microsoft.com/contactus/?ws=support) to obtain the cumulative update package.
-
-> [!NOTE]
-> After future cumulative updates are released for SQL Server 2016, this CU can be located and downloaded from the [Microsoft Windows Update Catalog](https://catalog.update.microsoft.com/Search.aspx?q=sql%20server%202016). However, Microsoft recommends that you install the latest cumulative update available.
-
 ## Additional hotfixes that are included in this cumulative update package
 
 | Bug reference | Description | Fix area |
@@ -61,6 +50,17 @@ If the download page doesn't appear, contact [Microsoft Customer Service and Sup
 | <a id=12673774>[12673774](#12673774) </a> | [FIX: Floating point exception error 3628 occurs when you query DMV sys.dm_db_xtp_hash_index_stats in SQL Server 2016 (KB4491696)](https://support.microsoft.com/help/4491696)| In-Memory OLTP |
 | <a id=12644869>[12644869](#12644869) </a> | [FIX: Error occurs when sp_addarticle is used to add article for transactional replication to memory-optimized table on subscriber in SQL Server 2016 (KB4493329)](https://support.microsoft.com/help/4493329)| SQL Engine |
 | <a id=12746393>[12746393](#12746393) </a> | [FIX: A specially crafted query run by a low privileged user may expose the masked data in SQL Server 2016 (KB4493363)](https://support.microsoft.com/help/4493363) | SQL security |
+
+## How to obtain this cumulative update package
+
+The following update is available from the Microsoft Download Center:
+
+:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2016 SP1 now](https://www.microsoft.com/download/details.aspx?id=54613)
+
+If the download page doesn't appear, contact [Microsoft Customer Service and Support](https://support.microsoft.com/contactus/?ws=support) to obtain the cumulative update package.
+
+> [!NOTE]
+> After future cumulative updates are released for SQL Server 2016, this CU can be located and downloaded from the [Microsoft Windows Update Catalog](https://catalog.update.microsoft.com/Search.aspx?q=sql%20server%202016). However, Microsoft recommends that you install the latest cumulative update available.
 
 ## Notes for this update
 

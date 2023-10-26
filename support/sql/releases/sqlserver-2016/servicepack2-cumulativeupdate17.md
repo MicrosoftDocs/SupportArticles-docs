@@ -12,8 +12,6 @@ appliesto:
 _Release Date:_ &nbsp; March 29, 2021  
 _Version:_ &nbsp; 13.0.5888.11
 
-## Summary
-
 This article describes Cumulative Update package 17 (CU17) (build number: **13.0.5888.11**) for Microsoft SQL Server 2016 Service Pack 2 (SP2). This update contains [fixes](#additional-hotfixes-that-are-included-in-this-cumulative-update-package) that were released after the initial release of SQL Server 2016 SP2.
 
 ## About cumulative updates for SQL Server
@@ -33,17 +31,6 @@ Only the most recent CU that was released for SQL Server 2016 SP2 is available a
 >
 > Just as for SQL Server service packs, we recommend that you test CUs before you deploy them to production environments.
 > We recommend that you upgrade your SQL Server installation to [the latest SQL Server 2016 service pack](https://support.microsoft.com/help/3177534).
-
-## How to obtain this cumulative update package
-
-The following update is available from the Microsoft Download Center:
-
-:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2016 SP2 now](https://www.microsoft.com/download/details.aspx?id=56975)
-
-If the download page doesn't appear, contact [Microsoft Customer Service and Support](https://support.microsoft.com/contactus/?ws=support) to obtain the cumulative update package.
-
-> [!NOTE]
-> After future cumulative updates are released for SQL Server 2016, this CU can be located and downloaded from the [Microsoft Windows Update Catalog](https://catalog.update.microsoft.com/Search.aspx?q=sql%20server%202016). However, We recommend that you install the latest cumulative update available.
 
 ## Additional hotfixes that are included in this cumulative update package
 
@@ -66,6 +53,17 @@ If the download page doesn't appear, contact [Microsoft Customer Service and Sup
 | <a id=13969680>[13969680](#13969680) </a> | Fixes an error that occurs after a failover of a Distributed Availability Group that attempts to connect to the secondary AG listener with application intent set to READ ONLY.| High Availability| Windows|
 | <a id=13970219>[13970219](#13970219) </a> | Fixes an issue where `DBCC PAGE` with option 3 generates access violation dumps after dropping a unique identifier column from the table in SQL Server 2016. </br></br>Msg 596, Level 21, State 1, Line \<LineNumber> </br>Cannot continue the execution because the session is in the kill state. </br></br>Msg 0, Level 20, State 0, Line \<LineNumber> </br>A severe error occurred on the current command. The results, if any, should be discarded. | SQL Engine | Windows|
 | <a id=13988911>[13988911](#13988911) </a> | Fixes a potential issue that causes error 5511 when performing a log backup on a database that has filestream data.| SQL Engine | Windows|
+
+## How to obtain this cumulative update package
+
+The following update is available from the Microsoft Download Center:
+
+:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2016 SP2 now](https://www.microsoft.com/download/details.aspx?id=56975)
+
+If the download page doesn't appear, contact [Microsoft Customer Service and Support](https://support.microsoft.com/contactus/?ws=support) to obtain the cumulative update package.
+
+> [!NOTE]
+> After future cumulative updates are released for SQL Server 2016, this CU can be located and downloaded from the [Microsoft Windows Update Catalog](https://catalog.update.microsoft.com/Search.aspx?q=sql%20server%202016). However, We recommend that you install the latest cumulative update available.
 
 ## Notes for this update
 

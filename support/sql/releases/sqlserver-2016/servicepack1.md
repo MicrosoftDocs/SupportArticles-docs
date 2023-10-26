@@ -22,16 +22,31 @@ This article contains important information to read before you install Microsoft
 > [!NOTE]
 > This article serves as a single source of information to locate all documentation that's related to this service pack. It includes all the information that you previously found in the release notes and *Readme.txt* files.
 
-## More Information
+## Known issues in this update
 
-### How to get SQL Server 2016 SP1
+### SQL Server Reporting Services
 
-SQL Server 2016 SP1 is available for download at the [SQL Server 2016 SP1 download page](https://www.catalog.update.microsoft.com/Search.aspx?q=KB3182545).
+After you install SQL Server 2016 SP1, you may encounter the following issues when you use SQL Server Reporting Services:
 
-> [!NOTE]
-> After you install the service pack, the SQL Server service version should be reflected as 13.0.4422.0.
+- If Reporting Services is set to use a secure (https/SSL) connection, a warning about security content may be displayed.
 
-### List of fixes included in SQL Server 2016 SP1
+- In certain scenarios, the Print button stops working.
+
+Install the hotfix in [KB 3207512](https://support.microsoft.com/help/3207512) to address these issues.
+
+### SQL Server Integration Services (SSIS)
+
+After you install SQL Server 2016 SP1, the DCOM permissions for launching and accessing Integration Services service are reset to default permissions. If you have customized DCOM permissions, you'll need to reapply the customization.
+
+### ODBC Driver 13.1
+
+With the default installation of SQL Server 2016, ODBC Driver 13.0 is installed on the server which is used by SQL Agent and SSMS (installed on server) to connect to the SQL Server instance. If you have installed ODBC Driver 13.1 on your server for any reason, SQL Server 2016 SP1 installation overrides the ODBC Driver 13.1 installation and the fixes introduced in 13.1 like [KB 3185365](../../ssms/error-you-try-to-read-error-log.md) may be lost. In this case post installation of SQL Server 2016 SP1, it's recommended to uninstall the ODBC Driver installed by SQL Server 2016 SP1 and install [ODBC Driver 13.1](https://www.microsoft.com/download/details.aspx?id=53339).
+
+To check for ODBC Driver installed on the server, you can go to Control Panel of the server -> Programs and Features -> Search for ODBC. The version number of ODBC Driver 13.1 is 13.1.811.168 as shown below:
+
+:::image type="content" source="../media/servicepack1/odbc-driver.png" alt-text="Screenshot of the Microsoft ODBC Driver 13 for SQL Server.":::
+
+## List of fixes included in SQL Server 2016 SP1
 
 Microsoft SQL Server 2016 service packs are cumulative updates. SQL Server 2016 SP1 upgrades all editions and service levels of SQL Server 2016 to SQL Server 2016 SP1. In addition to the fixes that are listed in this article, SQL Server 2016 SP1 includes hotfixes that were included in [SQL Server 2016 Cumulative Update 1 (CU1)](rtm-cumulativeupdate1.md) to [SQL Server 2016 CU3](rtm-cumulativeupdate3.md).
 
@@ -128,39 +143,21 @@ Resolutions to the following issues are also included in SQL Server 2016 SP1.
 
 For more information about how to upgrade your SQL Server installation to SQL Server 2016 SP1, see [Supported version and edition upgrades](/sql/database-engine/install-windows/supported-version-and-edition-upgrades).
 
-## Known issues
+## How to get SQL Server 2016 SP1
 
-**SQL Server Reporting Services**
+SQL Server 2016 SP1 is available for download at the [SQL Server 2016 SP1 download page](https://www.catalog.update.microsoft.com/Search.aspx?q=KB3182545).
 
-After you install SQL Server 2016 SP1, you may encounter the following issues when you use SQL Server Reporting Services:
+> [!NOTE]
+> After you install the service pack, the SQL Server service version should be reflected as 13.0.4422.0.
 
-- If Reporting Services is set to use a secure (https/SSL) connection, a warning about security content may be displayed.
-
-- In certain scenarios, the Print button stops working.
-
-Install the hotfix in [KB 3207512](https://support.microsoft.com/help/3207512) to address these issues.
-
-**SQL Server Integration Services (SSIS)**
-
-After you install SQL Server 2016 SP1, the DCOM permissions for launching and accessing Integration Services service are reset to default permissions. If you have customized DCOM permissions, you'll need to reapply the customization.
-
-**ODBC Driver 13.1**
-
-With the default installation of SQL Server 2016, ODBC Driver 13.0 is installed on the server which is used by SQL Agent and SSMS (installed on server) to connect to the SQL Server instance. If you have installed ODBC Driver 13.1 on your server for any reason, SQL Server 2016 SP1 installation overrides the ODBC Driver 13.1 installation and the fixes introduced in 13.1 like [KB 3185365](../../ssms/error-you-try-to-read-error-log.md) may be lost. In this case post installation of SQL Server 2016 SP1, it's recommended to uninstall the ODBC Driver installed by SQL Server 2016 SP1 and install [ODBC Driver 13.1](https://www.microsoft.com/download/details.aspx?id=53339).
-
-To check for ODBC Driver installed on the server, you can go to Control Panel of the server –> Programs and Features –> Search for ODBC. The version number of ODBC Driver 13.1 is 13.1.811.168 as shown below:
-
-:::image type="content" source="../media/servicepack1/odbc-driver.png" alt-text="Screenshot of the Microsoft ODBC Driver 13 for SQL Server.":::
-
-**Uninstalling SQL Server 2016 SP1 (not recommended)**
+## Uninstalling SQL Server 2016 SP1 (not recommended)
 
 If for any reason you choose to uninstall SQL Server 2016 SP1, the uninstallation of SQL Server 2016 SP1 isn't blocked and you'll be able to uninstall SQL Server 2016 SP1 like any other service pack. However, if you're running Standard, Web, Express edition of SQL Server and leveraging some of the new features which are unlocked only starting SQL Server 2016 SP1, you might see some unforeseen errors or databases might even be left in suspect state after uninstallation of SQL Server 2016 SP1. Even worse would be if the system databases are using new features for example, partitioned table in master database, it can lead to SQL Server instance unable to start after uninstalling SQL Server 2016 SP1. Hence it's recommended to validate all the new features are disabled or dropped before you choose to uninstall SQL Server 2016 SP1 on editions other than Enterprise Edition. It isn't possible to drop [memory_optimized_data](/sql/relational-databases/in-memory-oltp/the-memory-optimized-filegroup) filegroup. Hence if you have setup `memory_optimized_data` filegroup on your database with SP1, you shouldn't uninstall SQL Server 2016 SP1 in that case else the database will get in suspect mode with following error message logged in the error log:
 
 > \<DateTime> spid15s Error: 41381, Severity: 21, State: 1.  
 > \<DateTime> spid15s The database cannot be started in this edition of SQL Server because it contains a MEMORY_OPTIMIZED_DATA filegroup. See Books Online for more details on feature support in different SQL Server editions.
 
-<details>
-<summary><b>Copyright attributions</b></summary>
+## Copyright attributions
 
 - This product contains software derived from the Xerox Secure Hash Function.
 - This product includes software from the zlib general purpose compression library.
@@ -173,8 +170,6 @@ If for any reason you choose to uninstall SQL Server 2016 SP1, the uninstallatio
 - The Reporting Services mapping feature uses data from TIGER/Line Shapefiles that are provided courtesy of the [United States Census Bureau](https://www.census.gov/). TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. TIGER/Line Shapefiles are available without charge from the United States Census Bureau. To get more information about the TIGER/Line shapefiles, go to [TIGER/Line shapefiles](https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html). The boundary information in the TIGER/Line Shapefiles is for statistical data collection and tabulation purposes only; its depiction and designation for statistical purposes doesn't constitute a determination of jurisdictional authority, rights of ownership, or entitlement, and doesn't reflect legal land descriptions. Census TIGER and TIGER/Line are registered trademarks of the United States Census Bureau.
 
 Copyright 2012 Microsoft. All rights reserved.
-
-</details>
 
 ## References
 

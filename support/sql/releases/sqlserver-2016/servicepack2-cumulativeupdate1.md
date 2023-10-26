@@ -35,17 +35,6 @@ Only the most recent CU that was released for SQL Server 2016 SP2 is available a
 - Just as for SQL Server service packs, we recommend that you test CUs before you deploy them to production environments.
 - We recommend that you upgrade your SQL Server installation to [the latest SQL Server 2016 service pack](https://support.microsoft.com/help/3177534).
 
-## How to obtain this cumulative update package
-
-The following update is available from the Microsoft Download Center:
-
-:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2016 SP2 now](https://www.microsoft.com/download/details.aspx?id=56975)
-
-If the download page doesn't appear, contact [Microsoft Customer Service and Support](https://support.microsoft.com/contactus/?ws=support) to obtain the cumulative update package.
-
-> [!NOTE]
-> After future cumulative updates are released for SQL Server 2016, this and all previous CUs can be located and downloaded from the [Microsoft Windows Update Catalog](https://catalog.update.microsoft.com/search.aspx?q=sql%20server%202016). However, we recommend that you always install the latest cumulative update that is available.
-
 ## Hotfixes that are included in this cumulative update package
 
 | Bug reference | Description | Fix area |
@@ -82,6 +71,17 @@ If the download page doesn't appear, contact [Microsoft Customer Service and Sup
 | <a id="11983386">[11983386](#11983386)</a> | [FIX: TDE-enabled backup and restore operations are slow if the encryption key is stored in an EKM provider in SQL Server (KB4058175)](https://support.microsoft.com/help/4058175) | SQL security |
 | <a id="11983381">[11983381](#11983381)</a> | FIX: TDE database goes offline during log flush operations when connectivity issues cause the EKM provider to become inaccessible in SQL Server (KB4293839) | SQL security |
 | <a id="11983391">[11983391](#11983391)</a> | [Performance issues occur in the form of PAGELATCH_EX and PAGELATCH_SH waits in TempDB when you use SQL Server 2016 (KB4131193)](https://support.microsoft.com/help/4131193) | SQL Engine |
+
+## How to obtain this cumulative update package
+
+The following update is available from the Microsoft Download Center:
+
+:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2016 SP2 now](https://www.microsoft.com/download/details.aspx?id=56975)
+
+If the download page doesn't appear, contact [Microsoft Customer Service and Support](https://support.microsoft.com/contactus/?ws=support) to obtain the cumulative update package.
+
+> [!NOTE]
+> After future cumulative updates are released for SQL Server 2016, this and all previous CUs can be located and downloaded from the [Microsoft Windows Update Catalog](https://catalog.update.microsoft.com/search.aspx?q=sql%20server%202016). However, we recommend that you always install the latest cumulative update that is available.
 
 ## Notes for this update
 

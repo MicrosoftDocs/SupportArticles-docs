@@ -21,8 +21,6 @@ _Version:_ &nbsp; 13.0.5882.1
 > [!NOTE]
 > After you apply CU 16 for SQL Server 2016 SP2, you might encounter an issue in which DML (insert/update/delete) queries that use parallel plans cannot complete any execution and encounter `HP_SPOOL_BARRIER`` waits. You can use the trace flag 13116 or MAXDOP=1 hint to work around this issue. This issue is related to the introduction of fix for [13685819](servicepack2-cumulativeupdate16.md#13685819) and it will be fixed in the next Cumulative Update.
 
-## Summary
-
 This article describes Cumulative Update package 16 (CU16) (build number: **13.0.5882.1**) for Microsoft SQL Server 2016 Service Pack 2 (SP2). This update contains [fixes](#additional-hotfixes-that-are-included-in-this-cumulative-update-package) that were released after the initial release of SQL Server 2016 SP2.
 
 ## About cumulative updates for SQL Server
@@ -43,17 +41,6 @@ Only the most recent CU that was released for SQL Server 2016 SP2 is available a
 > Just as for SQL Server service packs, we recommend that you test CUs before you deploy them to production environments.
 >
 > We recommend that you upgrade your SQL Server installation to [the latest SQL Server 2016 service pack](https://support.microsoft.com/help/3177534).
-
-## How to obtain this cumulative update package
-
-The following update is available from the Microsoft Download Center:
-
-:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2016 SP2 now](https://www.microsoft.com/download/details.aspx?id=56975)
-
-If the download page doesn't appear, contact [Microsoft Customer Service and Support](https://support.microsoft.com/contactus/?ws=support) to obtain the cumulative update package.
-
-> [!NOTE]
-> After future cumulative updates are released for SQL Server 2016, this CU can be located and downloaded from the [Microsoft Windows Update Catalog](https://catalog.update.microsoft.com/Search.aspx?q=sql%20server%202016). However, We recommend that you install the latest cumulative update available.
 
 ## Additional hotfixes that are included in this cumulative update package
 
@@ -82,6 +69,17 @@ If the download page doesn't appear, contact [Microsoft Customer Service and Sup
 | <a id=13578477>[13578477](#13578477) </a> | Fixes the foreign key referencing unique index with included columns which causes replication to fail. | SQL Engine| Windows|
 | <a id=13883910>[13883910](#13883910) </a> | Fixes the Access Violation error that occurs when importing large amount of data to Azure Blob storage. This can occur if PolyBase Data Movement Service encounters out-of-memory condition during large data insert transaction.| SQL Engine| Windows|
 | <a id=13905138>[13905138](#13905138) </a> | Fixes the error that occurs when a change tracking function in MSTVF is called in SQL Server 2016. </br></br>Msg 443, Level 16, State 1, Procedure \<ProcedureName>, Line \<LineNumber> [Batch Start Line \<LineNumber>] </br>Invalid use of a side-effecting operator 'change_tracking_current_version' within a function | SQL Engine| Windows|
+
+## How to obtain this cumulative update package
+
+The following update is available from the Microsoft Download Center:
+
+:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2016 SP2 now](https://www.microsoft.com/download/details.aspx?id=56975)
+
+If the download page doesn't appear, contact [Microsoft Customer Service and Support](https://support.microsoft.com/contactus/?ws=support) to obtain the cumulative update package.
+
+> [!NOTE]
+> After future cumulative updates are released for SQL Server 2016, this CU can be located and downloaded from the [Microsoft Windows Update Catalog](https://catalog.update.microsoft.com/Search.aspx?q=sql%20server%202016). However, We recommend that you install the latest cumulative update available.
 
 ## Notes for this update
 

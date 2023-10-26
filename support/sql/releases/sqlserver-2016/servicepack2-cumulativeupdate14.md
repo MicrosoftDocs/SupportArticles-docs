@@ -18,8 +18,6 @@ appliesto:
 _Release Date:_ &nbsp; August 06, 2020  
 _Version:_ &nbsp; 13.0.5830.85
 
-## Summary
-
 This article describes Cumulative Update package 14 (CU14) (build number: **13.0.5830.85**) for Microsoft SQL Server 2016 Service Pack 2 (SP2). This update contains [fixes](#additional-hotfixes-that-are-included-in-this-cumulative-update-package) that were released after the initial release of SQL Server 2016 SP2.
 
 ## About cumulative updates for SQL Server
@@ -38,17 +36,6 @@ Only the most recent CU that was released for SQL Server 2016 SP2 is available a
 > - CUs may contain added value over and above hotfixes. This includes supportability, manageability, and reliability updates.
 > - Just as for SQL Server service packs, we recommend that you test CUs before you deploy them to production environments.
 > - We recommend that you upgrade your SQL Server installation to [the latest SQL Server 2016 service pack](https://support.microsoft.com/help/3177534).
-
-## How to obtain this cumulative update package
-
-The following update is available from the Microsoft Download Center:
-
-:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2016 SP2 now](https://www.microsoft.com/download/details.aspx?id=56975)
-
-If the download page doesn't appear, contact [Microsoft Customer Service and Support](https://support.microsoft.com/contactus/?ws=support) to obtain the cumulative update package.
-
-> [!NOTE]
-> After future cumulative updates are released for SQL Server 2016, this CU can be located and downloaded from the [Microsoft Windows Update Catalog](https://catalog.update.microsoft.com/Search.aspx?q=sql%20server%202016). However, We recommend that you install the latest cumulative update available.
 
 ## Additional hotfixes that are included in this cumulative update package
 
@@ -70,6 +57,17 @@ If the download page doesn't appear, contact [Microsoft Customer Service and Sup
 | <a id=13606996>[13606996](#13606996) </a>| [FIX: Newly added articles' snapshot doesn't get applied to subscriber in SQL Server 2016 (KB4575940)](https://support.microsoft.com/help/4575940) | SQL Engine | Windows|
 | <a id=13616653>[13616653](#13616653) </a>| [FIX: ISDBUpgradeWizard.exe throws error when you try to upgrade SSISDB after restoring from earlier versions in SQL Server (KB4547890)](https://support.microsoft.com/help/4547890) | Integration Services | Windows|
 | <a id=13613608>[13613608](#13613608) </a> </br><a id=13622634>[13622634](#13622634) </a> | RSetup.exe is updated to version 9.4.7.515. This new version downloads new [SRS_9.4.7.958_1033.cab](https://go.microsoft.com/fwlink/?linkid=2136942) and [SRO_3.5.2.777_1033.cab](https://go.microsoft.com/fwlink/?linkid=2134897) CAB files. This update will install a new version of R 3.5, and configure it to be the default version in new installations. </br></br>An updated RegisterRext.exe that accepts the `/configure` and `/cleanup` command-line options to do the respective customer-requested actions is shipping together with the new R CAB files. To configure R 3.5 as the default version of R, or to clean up an unused old runtime in an existing installation by using this RegisterRext.exe, follow the instructions at [https://go.microsoft.com/fwlink/?linkid=2133077](https://go.microsoft.com/fwlink/?linkid=2133077). | SQL Engine | Windows|
+
+## How to obtain this cumulative update package
+
+The following update is available from the Microsoft Download Center:
+
+:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2016 SP2 now](https://www.microsoft.com/download/details.aspx?id=56975)
+
+If the download page doesn't appear, contact [Microsoft Customer Service and Support](https://support.microsoft.com/contactus/?ws=support) to obtain the cumulative update package.
+
+> [!NOTE]
+> After future cumulative updates are released for SQL Server 2016, this CU can be located and downloaded from the [Microsoft Windows Update Catalog](https://catalog.update.microsoft.com/Search.aspx?q=sql%20server%202016). However, We recommend that you install the latest cumulative update available.
 
 ## Notes for this update
 

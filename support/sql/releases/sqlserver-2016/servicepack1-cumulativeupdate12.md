@@ -40,6 +40,28 @@ Only the most recent CU that was released for SQL Server 2016 is available at th
 
 - We recommend that you upgrade your SQL Server installation to [the latest SQL Server 2016 service pack](https://support.microsoft.com/help/3177534).
 
+## Additional hotfixes that are included in this cumulative update package
+
+| Bug reference   | Description   | Fix area  |
+|---------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------|
+| <a id=12176017>[12176017](#12176017) </a> | [FIX: Deadlock when run the   "CleanOrphanedPolicies" and "DeleteDataSources" built-in   stored procedures together in SSRS   2016 (KB4019799)](https://support.microsoft.com/help/4019799)   | Reporting   Services  |
+| <a id=12180164>[12180164](#12180164) </a> | [FIX: Access violation when you   try to access a table when page compression is enabled on the table in SQL   Server (KB4294694)](https://support.microsoft.com/help/4294694)| SQL Engine|
+| <a id=12361234>[12361234](#12361234) </a> | [FIX: Incorrect results occur   when you convert "pollinginterval" parameter from seconds to hours   in sys.sp_cdc_scan in SQL Server (KB4459220)](https://support.microsoft.com/help/4459220)| SQL Engine|
+| <a id=12458030>[12458030](#12458030) </a> | [FIX: Access violation occurs   and SSAS crashes when you process an SSAS database in SQL Server 2014 and   2016 (KB4459981)](https://support.microsoft.com/help/4459981) | Analysis Services |
+| <a id=12458027>[12458027](#12458027) </a> | [FIX: Overestimations when using   default Cardinality Estimator to query table with many null   values (KB4460116)](https://support.microsoft.com/help/4460116)  | SQL performance   |
+| <a id=12199266>[12199266](#12199266) </a> | FIX: The   "modification_counter" in DMV `sys.dm_db_stats_properties` shows   incorrect value when partitions are merged through `ALTER PARTITION` in SQL   Server 2016 (KB4465443) | SQL Engine|
+| <a id=11179896>[11179896](#11179896) </a> | [FIX: Assertion error occurs   when you run a MERGE statement with an OUTPUT clause in SQL Server 2016 and   2017 (KB4465745)](https://support.microsoft.com/help/4465745)| SQL Engine|
+| <a id=12399978>[12399978](#12399978) </a> | FIX: Snapshot Agent fails when   you publish many tables using snapshot or transactional   replication (KB4465747) | Management Tools  |
+| <a id=12458041>[12458041](#12458041) </a>  | [FIX: "ran out of   memory" error when executing a query on a table that has a large   full-text index in SQL Server 2014 and   2016 (KB4465867)](https://support.microsoft.com/help/4465867) | SQL Engine|
+| <a id=12357742>[12357742](#12357742) </a> | [FIX: Access violation occurs in   Distribution Agent in SQL Server 2016 and   2017 (KB4468103)](https://support.microsoft.com/help/4468103)  | SQL Engine|
+| <a id=12366819>[12366819](#12366819) </a> | [FIX: VSS backup fails in SQL   Server 2008 after you install CU10 for SQL Server 2016 SP1 in the same   virtual machine (KB4469349)](https://support.microsoft.com/help/4469349) | SQL Engine|
+| <a id=12431343>[12431343](#12431343) </a> | [FIX: Assertion error occurs   during restore of TDE compressed backups in SQL Server   2016 (KB4469554)](https://support.microsoft.com/help/4469554) | SQL Engine|
+| <a id=12151799>[12151799](#12151799) </a> | [FIX: Peer-to-peer replication   fails in SQL Server 2016 when the host name is not   uppercase (KB4469600)](https://support.microsoft.com/help/4469600)  | SQL Engine|
+| <a id=12466466>[12466466](#12466466) </a> | FIX: Cannot add data to a new   users attribute in an MDS database in SQL   Server (KB4469815)  | Data Quality   Services (DQS) |
+| <a id=12323885>[12323885](#12323885) </a> | [FIX: Error 41168 occurs when   you try to alter DAG SEEDING_MODE in SQL Server   2016 (KB4470057)](https://support.microsoft.com/help/4470057)   | High Availability |
+| <a id=12361676>[12361676](#12361676) </a> | FIX: SSAS 2016 processing fails   in a Multidimensional dimension that has Proactive Caching feature   enabled (KB4470546)  | Analysis Services |
+| <a id=11677919>[11677919](#11677919) </a> | [FIX: Error 5901 occurs on the   same offset in SQL Server 2016 until server is   restarted (KB4476977)](https://support.microsoft.com/help/4476977)  | SQL Engine|
+
 ## How to obtain this cumulative update package
 
 The following update is available from the Microsoft Download Center:
@@ -50,28 +72,6 @@ If the download page doesn't appear, contact [Microsoft Customer Service and Sup
 
 > [!NOTE]
 > After future cumulative updates are released for SQL Server 2016, this CU can be located and downloaded from the [Microsoft Windows Update Catalog](https://catalog.update.microsoft.com/Search.aspx?q=sql%20server%202016). However, Microsoft recommends that you install the latest cumulative update available.
-
-## Additional hotfixes that are included in this cumulative update package
-
-| Bug reference   | Description   | Fix area  |
-|---------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------|
-| <a   id=12176017>[12176017](#12176017) </a> | [FIX: Deadlock when run the   "CleanOrphanedPolicies" and "DeleteDataSources" built-in   stored procedures together in SSRS   2016 (KB4019799)](https://support.microsoft.com/help/4019799)   | Reporting   Services  |
-| <a   id=12180164>[12180164](#12180164) </a> | [FIX: Access violation when you   try to access a table when page compression is enabled on the table in SQL   Server (KB4294694)](https://support.microsoft.com/help/4294694)| SQL Engine|
-| <a   id=12361234>[12361234](#12361234) </a> | [FIX: Incorrect results occur   when you convert "pollinginterval" parameter from seconds to hours   in sys.sp_cdc_scan in SQL Server (KB4459220)](https://support.microsoft.com/help/4459220)| SQL Engine|
-| <a   id=12458030>[12458030](#12458030) </a> | [FIX: Access violation occurs   and SSAS crashes when you process an SSAS database in SQL Server 2014 and   2016 (KB4459981)](https://support.microsoft.com/help/4459981) | Analysis Services |
-| <a   id=12458027>[12458027](#12458027) </a> | [FIX: Overestimations when using   default Cardinality Estimator to query table with many null   values (KB4460116)](https://support.microsoft.com/help/4460116)  | SQL performance   |
-| <a   id=12199266>[12199266](#12199266) </a> | FIX: The   "modification_counter" in DMV `sys.dm_db_stats_properties` shows   incorrect value when partitions are merged through `ALTER PARTITION` in SQL   Server 2016 (KB4465443) | SQL Engine|
-| <a   id=11179896>[11179896](#11179896) </a> | [FIX: Assertion error occurs   when you run a MERGE statement with an OUTPUT clause in SQL Server 2016 and   2017 (KB4465745)](https://support.microsoft.com/help/4465745)| SQL Engine|
-| <a   id=12399978>[12399978](#12399978) </a> | FIX: Snapshot Agent fails when   you publish many tables using snapshot or transactional   replication (KB4465747) | Management Tools  |
-| <a   id=12458041>[12458041](#12458041) </a>  | [FIX: "ran out of   memory" error when executing a query on a table that has a large   full-text index in SQL Server 2014 and   2016 (KB4465867)](https://support.microsoft.com/help/4465867) | SQL Engine|
-| <a   id=12357742>[12357742](#12357742) </a> | [FIX: Access violation occurs in   Distribution Agent in SQL Server 2016 and   2017 (KB4468103)](https://support.microsoft.com/help/4468103)  | SQL Engine|
-| <a   id=12366819>[12366819](#12366819) </a> | [FIX: VSS backup fails in SQL   Server 2008 after you install CU10 for SQL Server 2016 SP1 in the same   virtual machine (KB4469349)](https://support.microsoft.com/help/4469349) | SQL Engine|
-| <a   id=12431343>[12431343](#12431343) </a> | [FIX: Assertion error occurs   during restore of TDE compressed backups in SQL Server   2016 (KB4469554)](https://support.microsoft.com/help/4469554) | SQL Engine|
-| <a   id=12151799>[12151799](#12151799) </a> | [FIX: Peer-to-peer replication   fails in SQL Server 2016 when the host name is not   uppercase (KB4469600)](https://support.microsoft.com/help/4469600)  | SQL Engine|
-| <a   id=12466466>[12466466](#12466466) </a> | FIX: Cannot add data to a new   users attribute in an MDS database in SQL   Server (KB4469815)  | Data Quality   Services (DQS) |
-| <a   id=12323885>[12323885](#12323885) </a> | [FIX: Error 41168 occurs when   you try to alter DAG SEEDING_MODE in SQL Server   2016 (KB4470057)](https://support.microsoft.com/help/4470057)   | High Availability |
-| <a   id=12361676>[12361676](#12361676) </a> | FIX: SSAS 2016 processing fails   in a Multidimensional dimension that has Proactive Caching feature   enabled (KB4470546)  | Analysis Services |
-| <a   id=11677919>[11677919](#11677919) </a> | [FIX: Error 5901 occurs on the   same offset in SQL Server 2016 until server is   restarted (KB4476977)](https://support.microsoft.com/help/4476977)  | SQL Engine|
 
 ## Notes for this update
 

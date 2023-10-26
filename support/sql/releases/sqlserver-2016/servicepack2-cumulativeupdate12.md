@@ -40,16 +40,15 @@ Only the most recent CU that was released for SQL Server 2016 is available at th
 
 - We recommend that you upgrade your SQL Server installation to [the latest SQL Server 2016 service pack](https://support.microsoft.com/help/3177534).
 
-## How to obtain this cumulative update package
+## Known issues in this update
 
-The following update is available from the Microsoft Download Center:
+Under certain circumstances, there is a known uninstall issue with this SQL Server 2016 SP2 CU12.  If you uninstall this CU, SQL server doesn't come online and you find the following SQL Server error log message:
 
-:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2016 SP2 now](https://www.microsoft.com/download/details.aspx?id=56975)
+> The script level for 'system_xevents_modification.sql' in database 'master' cannot be downgraded from XXXXXXXXX to XXXXXXXXX, which is supported by this server. This usually implies that a future database was attached and the downgrade path is not supported by the current installation. Install a newer version of SQL Server and re-try opening the database.
 
-If the download page doesn't appear, contact [Microsoft Customer Service and Support](https://support.microsoft.com/contactus/?ws=support) to obtain the cumulative update package.
+Mitigation is to enable Trace Flag - T902, then SQL server will come online and you are done. You don't need to uninstall it again. To upgrade to new CU you need to remove this flag first.
 
-> [!NOTE]
-> After future cumulative updates are released for SQL Server 2016, this CU can be located and downloaded from the [Microsoft Windows Update Catalog](https://catalog.update.microsoft.com/Search.aspx?q=sql%20server%202016). However, We recommend that you install the latest cumulative update available.
+SQL Server 2016 SP2 CU13 or any later CU release contains the fix.
 
 ## Additional hotfixes that are included in this cumulative update package
 
@@ -88,20 +87,18 @@ If the download page doesn't appear, contact [Microsoft Customer Service and Sup
 | <a id=13325406>[13325406](#13325406) </a> | [FIX: Assertion failure occurs when persistent log buffer is used in SQL Server 2016 (KB4541770)](https://support.microsoft.com/help/4541770) | SQL Engine| Windows|
 | <a id=13012856>[13012856](#13012856) </a> | [FIX: Parallel sampled filtered statistics may cause incorrect histogram scaling in SQL Server 2016 (KB4543027)](https://support.microsoft.com/help/4543027)| SQL performance | All|
 
+## How to obtain this cumulative update package
+
+The following update is available from the Microsoft Download Center:
+
+:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2016 SP2 now](https://www.microsoft.com/download/details.aspx?id=56975)
+
+If the download page doesn't appear, contact [Microsoft Customer Service and Support](https://support.microsoft.com/contactus/?ws=support) to obtain the cumulative update package.
+
+> [!NOTE]
+> After future cumulative updates are released for SQL Server 2016, this CU can be located and downloaded from the [Microsoft Windows Update Catalog](https://catalog.update.microsoft.com/Search.aspx?q=sql%20server%202016). However, We recommend that you install the latest cumulative update available.
+
 ## Notes for this update
-
-<details>
-<summary><b>Known issue</b></summary>
-
-Under certain circumstances, there is a known uninstall issue with this SQL Server 2016 SP2 CU12.  If you uninstall this CU, SQL server doesn't come online and you find the following SQL Server error log message:
-
-> The script level for 'system_xevents_modification.sql' in database 'master' cannot be downgraded from XXXXXXXXX to XXXXXXXXX, which is supported by this server. This usually implies that a future database was attached and the downgrade path is not supported by the current installation. Install a newer version of SQL Server and re-try opening the database.
-
-Mitigation is to enable Trace Flag - T902, then SQL server will come online and you are done. You don't need to uninstall it again. To upgrade to new CU you need to remove this flag first.
-
-SQL Server 2016 SP2 CU13 or any later CU release contains the fix.
-
-</details>
 
 <details>
 <summary><b>Hybrid environments deployment</b></summary>

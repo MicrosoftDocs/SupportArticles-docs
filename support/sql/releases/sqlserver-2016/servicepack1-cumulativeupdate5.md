@@ -35,17 +35,6 @@ Only the most recent CU that was released for SQL Server 2016 SP1 is available a
 - Just as for SQL Server service packs, we recommend that you test CUs before you deploy them to production environments.
 - We recommend that you upgrade your SQL Server installation to [the latest SQL Server 2016 service pack](https://support.microsoft.com/help/3177534).
 
-## How to obtain this cumulative update package
-
-The following update is available from the Microsoft Download Center:
-
-:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2016 SP1 now](https://www.microsoft.com/download/details.aspx?id=54613)
-
-If the download page doesn't appear, contact [Microsoft Customer Service and Support](https://support.microsoft.com/contactus/?ws=support) to obtain the cumulative update package.
-
-> [!NOTE]
-> After future cumulative updates are released for SQL Server 2016, this CU can be located and downloaded from the [Microsoft Windows Update Catalog](https://catalog.update.microsoft.com/search.aspx?q=sql%20server%202016). However, Microsoft recommends that you install the latest cumulative update available.
-
 ## Additional hotfixes that are included in this cumulative update package
 
 | Bug reference | Description | Fix area |
@@ -95,6 +84,17 @@ If the download page doesn't appear, contact [Microsoft Customer Service and Sup
 | <a id=9900110>[9900110](#9900110)</a> | [Update to improve the performance for columnstore dynamic management views "column_store_row_groups" and "dm_db_column_store_row_group_physical_stats" in SQL Server 2016 (KB4024860)](https://support.microsoft.com/help/4024860) | SQL performance |
 | <a id=10660258>[10660258](#10660258)</a> | [FIX: EXCEPTION_ACCESS_VIOLATION for query using sys.dm_os_memory_objects statement in SQL Server 2016 (KB4038113)](https://support.microsoft.com/help/4038113) | SQL performance |
 | <a id=10764990>[10764990](#10764990)</a> | [FIX: Query that joins a view and contains UNION ALL slow in SQL Server 2016 (KB4040014)](https://support.microsoft.com/help/4040014) | SQL performance |
+
+## How to obtain this cumulative update package
+
+The following update is available from the Microsoft Download Center:
+
+:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2016 SP1 now](https://www.microsoft.com/download/details.aspx?id=54613)
+
+If the download page doesn't appear, contact [Microsoft Customer Service and Support](https://support.microsoft.com/contactus/?ws=support) to obtain the cumulative update package.
+
+> [!NOTE]
+> After future cumulative updates are released for SQL Server 2016, this CU can be located and downloaded from the [Microsoft Windows Update Catalog](https://catalog.update.microsoft.com/search.aspx?q=sql%20server%202016). However, Microsoft recommends that you install the latest cumulative update available.
 
 ## Notes for this update
 

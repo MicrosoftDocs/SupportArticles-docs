@@ -18,11 +18,9 @@ appliesto:
 _Release Date:_ &nbsp; September 28, 2020  
 _Version:_ &nbsp; 13.0.5850.14
 
-## Summary
-
 This article describes Cumulative Update package 15 (CU15) (build number: **13.0.5850.14**) for Microsoft SQL Server 2016 Service Pack 2 (SP2). This update contains [fixes](#additional-hotfixes-that-are-included-in-this-cumulative-update-package) that were released after the initial release of SQL Server 2016 SP2.
 
-## Known issue
+## Known issues in this update
 
 There is a known issue with the SQL Writer component in SQL Server 2016 SP2 CU15. The SQL Writer service is shared across all instances of SQL Server that run on the same server, regardless of version. If you have installed this cumulative update on a server that also runs older versions of SQL Server, such as SQL Server 2014 or SQL Server 2012, VSS backups will fail against these older instances. If you are running SQL Server 2016 side-by-side with older versions of SQL Server, we recommend that you do not install this Cumulative Update. This issue will be fixed in the next Cumulative Update release.
 
@@ -44,17 +42,6 @@ Only the most recent CU that was released for SQL Server 2016 SP2 is available a
 > Just as for SQL Server service packs, we recommend that you test CUs before you deploy them to production environments.
 >
 > We recommend that you upgrade your SQL Server installation to [the latest SQL Server 2016 service pack](https://support.microsoft.com/help/3177534).
-
-## How to obtain this cumulative update package
-
-The following update is available from the Microsoft Download Center:
-
-:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2016 SP2 now](https://www.microsoft.com/download/details.aspx?id=56975)
-
-If the download page doesn't appear, contact [Microsoft Customer Service and Support](https://support.microsoft.com/contactus/?ws=support) to obtain the cumulative update package.
-
-> [!NOTE]
-> After future cumulative updates are released for SQL Server 2016, this CU can be located and downloaded from the [Microsoft Windows Update Catalog](https://catalog.update.microsoft.com/Search.aspx?q=sql%20server%202016). However, We recommend that you install the latest cumulative update available.
 
 ## Additional hotfixes that are included in this cumulative update package
 
@@ -80,6 +67,17 @@ If the download page doesn't appear, contact [Microsoft Customer Service and Sup
 | <a id=13658146>[13658146](#13658146) </a>| Non-yielding Scheduler error may occur when query store tries to grow its memory structure during heavy workload.| SQL Engine | Windows|
 | <a id=13671014>[13671014](#13671014) </a>| When you export a report that has a period (.) in the report name, the exported file name will be truncated. | Reporting services | Windows|
 | <a id=13708141>[13708141](#13708141) </a>| SSAS 2016 tabular process 'calculate' may take 2-4 times longer time after upgrading to the latest Cumulative Update (CU) for SQL Server 2016 SP2. After the upgrade, the increased time was on the attribute hierarchy processing during the process calculate. | Analysis services| Windows|
+
+## How to obtain this cumulative update package
+
+The following update is available from the Microsoft Download Center:
+
+:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2016 SP2 now](https://www.microsoft.com/download/details.aspx?id=56975)
+
+If the download page doesn't appear, contact [Microsoft Customer Service and Support](https://support.microsoft.com/contactus/?ws=support) to obtain the cumulative update package.
+
+> [!NOTE]
+> After future cumulative updates are released for SQL Server 2016, this CU can be located and downloaded from the [Microsoft Windows Update Catalog](https://catalog.update.microsoft.com/Search.aspx?q=sql%20server%202016). However, We recommend that you install the latest cumulative update available.
 
 ## Notes for this update
 

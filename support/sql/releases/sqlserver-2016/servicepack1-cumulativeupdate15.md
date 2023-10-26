@@ -39,17 +39,6 @@ Only the most recent CU that was released for SQL Server 2016 is available at th
 
 - We recommend that you upgrade your SQL Server installation to [the latest SQL Server 2016 service pack](https://support.microsoft.com/help/3177534).
 
-## How to obtain this cumulative update package
-
-The following update is available from the Microsoft Download Center:
-
-:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2016 SP1 now](https://www.microsoft.com/download/details.aspx?id=54613)
-
-If the download page doesn't appear, contact [Microsoft Customer Service and Support](https://support.microsoft.com/contactus/?ws=support) to obtain the cumulative update package.
-
-> [!NOTE]
-> After future cumulative updates are released for SQL Server 2016, this CU can be located and downloaded from the [Microsoft Windows Update Catalog](https://catalog.update.microsoft.com/Search.aspx?q=sql%20server%202016). However, Microsoft recommends that you install the latest cumulative update available.
-
 ## Additional hotfixes that are included in this cumulative update package
 
 | Bug reference | Description| Fix area |
@@ -61,6 +50,17 @@ If the download page doesn't appear, contact [Microsoft Customer Service and Sup
 | <a id=12865859>[12865859](#12865859) </a> | [FIX: Fail to join the secondary replica if the database has a defunct filegroup in SQL Server 2014 and 2016 (KB4497230)](https://support.microsoft.com/help/4497230)| High Availability|
 | <a id=12865875>[12865875](#12865875) </a> | [FIX: Columnstore filter pushdown may return wrong results when there is an overflow in filter expressions in SQL Server 2014 and 2016 (KB4497701)](https://support.microsoft.com/help/4497701)| SQL Engine |
 | <a id=12865872>[12865872](#12865872) </a> | [FIX: Log reader agent may fail after AG failover with TF 1448 enabled in SQL Server 2014 and 2016 (KB4499231)](https://support.microsoft.com/help/4499231)| SQL Engine |
+
+## How to obtain this cumulative update package
+
+The following update is available from the Microsoft Download Center:
+
+:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2016 SP1 now](https://www.microsoft.com/download/details.aspx?id=54613)
+
+If the download page doesn't appear, contact [Microsoft Customer Service and Support](https://support.microsoft.com/contactus/?ws=support) to obtain the cumulative update package.
+
+> [!NOTE]
+> After future cumulative updates are released for SQL Server 2016, this CU can be located and downloaded from the [Microsoft Windows Update Catalog](https://catalog.update.microsoft.com/Search.aspx?q=sql%20server%202016). However, Microsoft recommends that you install the latest cumulative update available.
 
 ## Notes for this update
 

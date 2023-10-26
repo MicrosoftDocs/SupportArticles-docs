@@ -34,17 +34,6 @@ Only the most recent CU that was released for SQL Server 2016 SP2 is available a
 - Just as for SQL Server service packs, we recommend that you test CUs before you deploy them to production environments.
 - We recommend that you upgrade your SQL Server installation to [the latest SQL Server 2016 service pack](https://support.microsoft.com/help/3177534).
 
-## How to obtain this cumulative update package
-
-The following update is available from the Microsoft Download Center:
-
-:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2016 SP2 now](https://www.microsoft.com/download/details.aspx?id=56975)
-
-If the download page doesn't appear, contact [Microsoft Customer Service and Support](https://support.microsoft.com/contactus/?ws=support) to obtain the cumulative update package.
-
-> [!NOTE]
-> After future cumulative updates are released for SQL Server 2016, this CU can be located and downloaded from the [Microsoft Windows Update Catalog](https://catalog.update.microsoft.com/search.aspx?q=sql%20server%202016). However, we recommend that you always install the latest cumulative update that is available.
-
 ## Additional hotfixes that are included in this cumulative update package
 
 | Bug reference | Description | Fix area |
@@ -93,6 +82,17 @@ If the download page doesn't appear, contact [Microsoft Customer Service and Sup
 | <a id="12488528">[12488528](#12488528)</a> | [FIX: Error occurs when the Database Encryption Key is longer than 3,456 bits in SQL Server 2016 and 2017 (KB4463125)](https://support.microsoft.com/help/4463125) | SQL security |
 | <a id="12488531">[12488531](#12488531)</a> | FIX: Masked data is exposed when a query that uses `sp_cursorfetch` is run in SQL Server if Dynamic Data Masking is enabled (KB4459535) | SQL Security |
 | <a id="12482228">[12482228](#12482228)</a> | [FIX: Access violation when you run a query that uses the XML data type in SQL Server 2014, 2016 and 2017 (KB4460112)](https://support.microsoft.com/help/4460112) | XML |
+
+## How to obtain this cumulative update package
+
+The following update is available from the Microsoft Download Center:
+
+:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2016 SP2 now](https://www.microsoft.com/download/details.aspx?id=56975)
+
+If the download page doesn't appear, contact [Microsoft Customer Service and Support](https://support.microsoft.com/contactus/?ws=support) to obtain the cumulative update package.
+
+> [!NOTE]
+> After future cumulative updates are released for SQL Server 2016, this CU can be located and downloaded from the [Microsoft Windows Update Catalog](https://catalog.update.microsoft.com/search.aspx?q=sql%20server%202016). However, we recommend that you always install the latest cumulative update that is available.
 
 ## Notes for this update
 

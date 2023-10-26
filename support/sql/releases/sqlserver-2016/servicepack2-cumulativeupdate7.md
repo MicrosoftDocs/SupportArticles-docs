@@ -34,17 +34,6 @@ Only the most recent CU that was released for SQL Server 2016 SP2 is available a
 - Just as for SQL Server service packs, we recommend that you test CUs before you deploy them to production environments.
 - We recommend that you upgrade your SQL Server installation to [the latest SQL Server 2016 service pack](https://support.microsoft.com/help/3177534).
 
-## How to obtain this cumulative update package
-
-The following update is available from the Microsoft Download Center:
-
-:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2016 SP2 now](https://www.microsoft.com/download/details.aspx?id=56975)
-
-If the download page doesn't appear, contact [Microsoft Customer Service and Support](https://support.microsoft.com/contactus/?ws=support) to obtain the cumulative update package.
-
-> [!NOTE]
-> After future cumulative updates are released for SQL Server 2016, this CU can be located and downloaded from the [Microsoft Windows Update Catalog](https://catalog.update.microsoft.com/search.aspx?q=sql%20server%202016). However, we recommend that you always install the latest cumulative update that is available.
-
 ## Additional hotfixes that are included in this cumulative update package
 
 | Bug reference | Description | Fix area |
@@ -76,6 +65,17 @@ If the download page doesn't appear, contact [Microsoft Customer Service and Sup
 | <a id="12673144">[12673144](#12673144)</a> | [FIX: Assertion error occurs when you use sys.dm_exec_query_statistics_xml in SQL Server 2016 (KB4490136)](https://support.microsoft.com/help/4490136) | SQL performance |
 | <a id="12805639">[12805639](#12805639)</a> | [FIX: SQL Server 2016 doesn't perform the requested pre-row assignments when you use MERGE statement that performs assignments of local variables for each row (KB4502400)](https://support.microsoft.com/help/4502400) | SQL performance |
 | <a id="12822163">[12822163](#12822163)</a> | [FIX: Filtered index may be corrupted when you rebuild index in parallel in SQL Server 2014 and 2016 (KB4489150)](https://support.microsoft.com/help/4489150) | SQL performance |
+
+## How to obtain this cumulative update package
+
+The following update is available from the Microsoft Download Center:
+
+:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2016 SP2 now](https://www.microsoft.com/download/details.aspx?id=56975)
+
+If the download page doesn't appear, contact [Microsoft Customer Service and Support](https://support.microsoft.com/contactus/?ws=support) to obtain the cumulative update package.
+
+> [!NOTE]
+> After future cumulative updates are released for SQL Server 2016, this CU can be located and downloaded from the [Microsoft Windows Update Catalog](https://catalog.update.microsoft.com/search.aspx?q=sql%20server%202016). However, we recommend that you always install the latest cumulative update that is available.
 
 ## Notes for this update
 

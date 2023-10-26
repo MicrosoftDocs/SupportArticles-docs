@@ -13,29 +13,14 @@ appliesto:
 _Release Date:_ &nbsp; September 15, 2021  
 _Version:_ &nbsp; 13.0.6300.2
 
-## Summary
-
 This article contains important information to read before you install Microsoft SQL Server 2016 Service Pack 3 (SP3). It describes how to get the service pack, the list of fixes that are included in the service pack, known issues, and a list of copyright attributions for the product.
 
 > [!NOTE]
 > This article serves as a single source of information to locate all documentation that's related to this service pack. It includes all the information that you previously found in the release notes and Readme.txt files.
 
-## Known issues with this update
+## Known issues in this update
 
 If you use the Change Tracking feature, you might encounter errors. For more information, see [KB5007039](https://support.microsoft.com/help/5007039) before you apply this update package.
-
-## How to get SQL Server 2016 SP3
-
-SQL Server 2016 SP3, Microsoft SQL Server 2016 SP3 Express, and Microsoft SQL Server 2016 SP3 Feature Pack are available for manual download and installation at the following Microsoft Download Center websites.
-
-- [SQL Server 2016 SP3](https://www.microsoft.com/download/details.aspx?id=103440)
-
-- [SQL Server 2016 SP3 Express](https://www.microsoft.com/download/details.aspx?id=103447)
-
-- [Microsoft SQL Server 2016 SP3 Feature Pack](https://www.microsoft.com/download/details.aspx?id=103444)
-
-> [!NOTE]
-> After you install this service pack, the SQL Server service version should be 13.0.6300.2. Microsoft SQL Server 2016 service packs are cumulative updates. SQL Server 2016 SP3 upgrades all editions and service levels of SQL Server 2016 to SQL Server 2016 SP3.
 
 ## List of fixes included in SQL Server 2016 SP3
 
@@ -95,6 +80,19 @@ For more information about the bugs that are fixed in SQL Server 2016 SP3, go to
 | <a id=14056563>[14056563](#14056563) </a>| Fixes a stack overflow issue when you run a query that has a very large number of `UNION` clauses.| SQL Performance |
 | <a id=14080827>[14080827](#14080827) </a>| Fixes an assertion in CQPOnDemandTask::ExecuteQPJob if auto async update statistics is enabled.|SQL Performance |
 | <a id=10087766>[10087766](#10087766) </a>| [FIX: SQL Server fails to start with error messages when an incorrect certificate is provisioned for SSL (KB5005689)](https://support.microsoft.com/help/5005689) | SQL Security |
+
+## How to get SQL Server 2016 SP3
+
+SQL Server 2016 SP3, Microsoft SQL Server 2016 SP3 Express, and Microsoft SQL Server 2016 SP3 Feature Pack are available for manual download and installation at the following Microsoft Download Center websites.
+
+- [SQL Server 2016 SP3](https://www.microsoft.com/download/details.aspx?id=103440)
+
+- [SQL Server 2016 SP3 Express](https://www.microsoft.com/download/details.aspx?id=103447)
+
+- [Microsoft SQL Server 2016 SP3 Feature Pack](https://www.microsoft.com/download/details.aspx?id=103444)
+
+> [!NOTE]
+> After you install this service pack, the SQL Server service version should be 13.0.6300.2. Microsoft SQL Server 2016 service packs are cumulative updates. SQL Server 2016 SP3 upgrades all editions and service levels of SQL Server 2016 to SQL Server 2016 SP3.
 
 ## File information
 

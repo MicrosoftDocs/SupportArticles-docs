@@ -34,18 +34,7 @@ Only the most recent CU that was released for SQL Server 2016 is available at th
 
 - We recommend that you upgrade your SQL Server installation to [the latest SQL Server 2016 service pack](https://support.microsoft.com/help/3177534).
 
-## How to obtain this cumulative update package
-
-The following update is available from the Microsoft Download Center:
-
-:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for Microsoft SQL Server 2016 now](https://www.microsoft.com/download/details.aspx?id=53338)
-
-If the download page doesn't appear, contact [Microsoft Customer Service and Support](https://support.microsoft.com/contactus/?ws=support) to obtain the cumulative update package.
-
-> [!NOTE]
-> After future cumulative updates are released for SQL Server 2016, this CU can be located and downloaded from the [Microsoft Windows Update Catalog](https://catalog.update.microsoft.com/Search.aspx?q=sql%20server%202016). However, Microsoft recommends that you install the latest cumulative update available.
-
-## Known Issues in this update
+## Known issues in this update
 
 After installing this CU, Change Data Capture (CDC) functionality might break if:
 
@@ -112,6 +101,17 @@ For more information, see:
 | <a id=9503271>[9503271](#9503271) </a> | [FIX: SQL Server is stopped when you install patches on an instance of SQL Server that contains many databases (KB4010990)](https://support.microsoft.com/help/4010990)| Setup & Install|
 | <a id=9379254>[9379254](#9379254) </a> | [FIX: Bad query plan created on secondary replicas after FULLSCAN statistics update on primary replica in SQL Server 2016 (KB4016655)](https://support.microsoft.com/help/4016655) | Setup & Install|
 | <a id=8850865>[8850865](#8850865) </a> | Fixes large virtual allocations the size of Max Server Memory causing out of memory errors.| SQL Engine |
+
+## How to obtain this cumulative update package
+
+The following update is available from the Microsoft Download Center:
+
+:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for Microsoft SQL Server 2016 now](https://www.microsoft.com/download/details.aspx?id=53338)
+
+If the download page doesn't appear, contact [Microsoft Customer Service and Support](https://support.microsoft.com/contactus/?ws=support) to obtain the cumulative update package.
+
+> [!NOTE]
+> After future cumulative updates are released for SQL Server 2016, this CU can be located and downloaded from the [Microsoft Windows Update Catalog](https://catalog.update.microsoft.com/Search.aspx?q=sql%20server%202016). However, Microsoft recommends that you install the latest cumulative update available.
 
 ## Notes for this update
 

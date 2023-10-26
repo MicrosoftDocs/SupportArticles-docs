@@ -20,20 +20,7 @@ This article contains important information to read before you install Microsoft
 > [!NOTE]
 > This article serves as a single source of information to locate all documentation that's related to this service pack. It includes all the information that you previously found in the release notes and *Readme.txt* files.
 
-## More Information
-
-### How to get SQL Server 2016 SP2
-
-SQL Server 2016 SP2, Microsoft SQL Server 2016 SP2 Express, and Microsoft SQL Server 2016 SP2 Feature Pack are available for manual download and installation at the following Microsoft Download Center websites.
-
-- [SQL Server 2016 SP2](https://www.microsoft.com/download/details.aspx?id=56836)
-- [SQL Server 2016 SP2 Express](https://www.microsoft.com/download/details.aspx?id=56840)
-- [SQL Server 2016 SP2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=56833)
-
-> [!NOTE]
-> After you install the service pack, the SQL Server service version should be **13.0.5026.0** Microsoft SQL Server 2016 service packs are cumulative updates. SQL Server 2016 SP2 upgrades all editions and service levels of SQL Server 2016 to SQL Server 2016 SP2.
-
-### List of fixes included in SQL Server 2016 SP2
+## List of fixes included in SQL Server 2016 SP2
 
 Microsoft SQL Server 2016 service packs are cumulative updates. SQL Server 2016 SP2 upgrades all editions and service levels of SQL Server 2016 to SQL Server 2016 SP2. In addition to the fixes that are listed in this article, SQL Server 2016 SP2 includes hotfixes that were included in [SQL Server 2016 Cumulative Update 1 (CU1)](rtm-cumulativeupdate1.md) to [SQL Server 2016 SP1 CU8](servicepack1-cumulativeupdate8.md).
 
@@ -100,7 +87,7 @@ For more information about the bugs that are fixed in SQL Server 2016 SP2, go to
 | <a id="11543252">[11543252](#11543252)</a> | FIX: Replication isn't enabled when database collation uses '`_SC`' collation extension in SQL Server 2016 and 2017 (KB4092066) |
 | <a id="11566335">[11566335](#11566335)</a> | FIX: Access Violation when you use QDS and specify a query plan to resolve a performance regression (KB4089509) |
 
-### Additional resolutions
+## Additional resolutions
 
 Resolutions to the following issues are also included in SQL Server 2016 SP2.
 
@@ -134,7 +121,18 @@ Resolutions to the following issues are also included in SQL Server 2016 SP2.
 
 For more information about how to upgrade your SQL Server installation to SQL Server 2016 SP2, see [Supported version and edition upgrades](/sql/database-engine/install-windows/supported-version-and-edition-upgrades).
 
-**Uninstalling SQL Server 2016 SP2 (not recommended)**
+## How to get SQL Server 2016 SP2
+
+SQL Server 2016 SP2, Microsoft SQL Server 2016 SP2 Express, and Microsoft SQL Server 2016 SP2 Feature Pack are available for manual download and installation at the following Microsoft Download Center websites.
+
+- [SQL Server 2016 SP2](https://www.microsoft.com/download/details.aspx?id=56836)
+- [SQL Server 2016 SP2 Express](https://www.microsoft.com/download/details.aspx?id=56840)
+- [SQL Server 2016 SP2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=56833)
+
+> [!NOTE]
+> After you install the service pack, the SQL Server service version should be **13.0.5026.0** Microsoft SQL Server 2016 service packs are cumulative updates. SQL Server 2016 SP2 upgrades all editions and service levels of SQL Server 2016 to SQL Server 2016 SP2.
+
+## Uninstalling SQL Server 2016 SP2 (not recommended)
 
 If, for any reason, you choose to uninstall SQL Server 2016 SP2, the uninstallation of SQL Server 2016 SP2 will not be blocked, and you will be able to uninstall SQL Server 2016 SP2 in the same manner as any other service packs. However, if you are running the Standard, Web, or Express edition of SQL Server, and you are using some new features that are unlocked only when you start SQL Server 2016 SP2, you might experience errors or see databases left in a suspect state after the uninstallation of SQL Server 2016 SP2. Even worse, if the system databases are using new features (for example, partitioned tables in master databases), this could prevent SQL Server instances from starting after you uninstall SQL Server 2016 SP2.
 
@@ -143,8 +141,7 @@ We recommend that you verify that all the new features are disabled or dropped b
 > \<DateTime> spid15s Error: 41381, Severity: 21, State: 1.  
 > \<DateTime> spid15s The database cannot be started in this edition of SQL Server because it contains a MEMORY_OPTIMIZED_DATA filegroup. See Books Online for more details on feature support in different SQL Server editions.
 
-<details>
-<summary><b>Copyright attributions</b></summary>
+## Copyright attributions
 
 - This product contains software derived from the Xerox Secure Hash Function.
 - This product includes software from the zlib general purpose compression library.
@@ -157,8 +154,6 @@ We recommend that you verify that all the new features are disabled or dropped b
 - The Reporting Services mapping feature uses data from TIGER/Line Shapefiles that are provided courtesy of the [United States Census Bureau](https://www.census.gov/). TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. TIGER/Line Shapefiles are available without charge from the United States Census Bureau. To get more information about the TIGER/Line shapefiles, go to [TIGER/Line shapefiles](https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html). The boundary information in the TIGER/Line Shapefiles is for statistical data collection and tabulation purposes only; its depiction and designation for statistical purposes doesn't constitute a determination of jurisdictional authority, rights of ownership, or entitlement, and doesn't reflect legal land descriptions. Census TIGER and TIGER/Line are registered trademarks of the United States Census Bureau.
 
 Copyright 2012 Microsoft. All rights reserved.
-
-</details>
 
 ## References
 

@@ -39,17 +39,6 @@ Only the most recent CU that was released for SQL Server 2016 is available at th
 
 - We recommend that you upgrade your SQL Server installation to [the latest SQL Server 2016 service pack](https://support.microsoft.com/help/3177534).
 
-## How to obtain this cumulative update package
-
-The following update is available from the Microsoft Download Center:
-
-:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for Microsoft SQL Server 2016 now](https://www.microsoft.com/download/details.aspx?id=53338)
-
-If the download page doesn't appear, contact [Microsoft Customer Service and Support](https://support.microsoft.com/contactus/?ws=support) to obtain the cumulative update package.
-
-> [!NOTE]
-> After future cumulative updates are released for SQL Server 2016, this CU can be located and downloaded from the [Microsoft Windows Update Catalog](https://catalog.update.microsoft.com/Search.aspx?q=sql%20server%202016). However, Microsoft recommends that you install the latest cumulative update available.
-
 ## Hotfixes that are included in this cumulative update package
 
 | Bug reference | Description | Fix area |
@@ -76,6 +65,17 @@ If the download page doesn't appear, contact [Microsoft Customer Service and Sup
 | <a id=9877136>[9877136](#9877136) </a> | [FIX: Queries against PolyBase external tables return incorrect results in SQL Server 2016 (KB4019840)](https://support.microsoft.com/help/4019840) | SQL service|
 | <a id=9917205>[9917205](#9917205) </a> | [FIX: An assertion occurs when you execute an ALTER TABLE SWITCH statement on a partitioned temporal history table in SQL Server 2016 (KB4019863)](https://support.microsoft.com/help/4019863)| SQL service|
 | <a id=9901010>[9901010](#9901010) </a> | [FIX: SQL Server 2016 stops responding when the "Latch_Suspend_End" extended event is triggered incorrectly (KB4019446)](https://support.microsoft.com/help/4019446)| SQL performance|
+
+## How to obtain this cumulative update package
+
+The following update is available from the Microsoft Download Center:
+
+:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for Microsoft SQL Server 2016 now](https://www.microsoft.com/download/details.aspx?id=53338)
+
+If the download page doesn't appear, contact [Microsoft Customer Service and Support](https://support.microsoft.com/contactus/?ws=support) to obtain the cumulative update package.
+
+> [!NOTE]
+> After future cumulative updates are released for SQL Server 2016, this CU can be located and downloaded from the [Microsoft Windows Update Catalog](https://catalog.update.microsoft.com/Search.aspx?q=sql%20server%202016). However, Microsoft recommends that you install the latest cumulative update available.
 
 ## Notes for this update
 

@@ -12,8 +12,6 @@ appliesto:
 _Release Date:_ &nbsp; May 19, 2022  
 _Version:_ &nbsp; 13.0.7000.253
 
-## Summary
-
 This article describes the Azure Connect feature pack for Microsoft SQL Server 2016 Service Pack 3.
 
 ## Improvements included in this feature pack
