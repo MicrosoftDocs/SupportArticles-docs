@@ -20,6 +20,8 @@ This article describes how to set up a web server to use smart cards for cross-f
 _Applies to:_ &nbsp; Windows Server 2016  
 _Original KB number:_ &nbsp; 4509680
 
+_Original Author:_ &nbsp; Jitesh Thakur, Tech Lead within Windows Group.
+
 ## Environment configuration
 
 Consider an environment that uses the following configuration:
