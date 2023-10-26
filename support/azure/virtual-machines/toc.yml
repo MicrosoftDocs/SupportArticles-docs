@@ -252,8 +252,6 @@
             href: windows-stop-error-system-process-terminated.md
           - name: Windows stop error - System thread exception not handled
             href: windows-stop-error-system-thread-exception-not-handled.md
-          - name: Can't boot with 0xc000000f
-            href: error-code-0xc000000f.md
           - name: Unable to boot with 0xc000000f
             href: boot-error-0xc000000f.md
           - name: Can't boot with 0xc00000ba
