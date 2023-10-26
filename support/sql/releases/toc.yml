@@ -295,15 +295,17 @@ items:
   items:
   - name: SQL Server 2016 build versions
     href: sqlserver-2016/build-versions.md
-  - name: Azure Connect Pack for SP3
-    items:
-    - name: Azure Connect Pack for SP3 (KB5014242)
-      href: sqlserver-2016/servicepack3-azureconnect.md
   - name: SQL Server 2016 Service Pack 3
     items:
-    - name: SQL Server 2016 Service Pack 3 (KB5003279)
-      href: sqlserver-2016/servicepack3.md
-  - name: Cumulative Updates for SP2
+    - name: Azure Connect Pack for SP3
+      items:
+      - name: Azure Connect Pack for SP3 (KB5014242)
+        href: sqlserver-2016/servicepack3-azureconnect.md
+    - name: SQL Server 2016 Service Pack 3
+      items:
+      - name: SQL Server 2016 Service Pack 3 (KB5003279)
+        href: sqlserver-2016/servicepack3.md
+  - name: SQL Server 2016 Service Pack 2
     items:
     - name: Cumulative Update 17 for SP2
       items:
@@ -369,11 +371,11 @@ items:
       items:
       - name: Cumulative Update 1 for SP2 (KB4135048)
         href: sqlserver-2016/servicepack2-cumulativeupdate1.md
-  - name: SQL Server 2016 Service Pack 2
-    items:
-    - name: SQL Server 2016 Service Pack 2 (KB4052908)
-      href: sqlserver-2016/servicepack2.md
-  - name: Cumulative Updates for SP1
+    - name: SQL Server 2016 Service Pack 2
+      items:
+      - name: SQL Server 2016 Service Pack 2 (KB4052908)
+        href: sqlserver-2016/servicepack2.md
+  - name: SQL Server 2016 Service Pack 1
     items:
     - name: Cumulative Update 15 for SP1
       items:
@@ -435,11 +437,11 @@ items:
       items:
       - name: Cumulative Update 1 for SP1 (KB3208177)
         href: sqlserver-2016/servicepack1-cumulativeupdate1.md
-  - name: SQL Server 2016 Service Pack 1
-    items:
-    - name: SQL Server 2016 Service Pack 1 (KB3182545)
-      href: sqlserver-2016/servicepack1.md
-  - name: Cumulative Updates for RTM
+    - name: SQL Server 2016 Service Pack 1
+      items:
+      - name: SQL Server 2016 Service Pack 1 (KB3182545)
+        href: sqlserver-2016/servicepack1.md
+  - name: SQL Server 2016 RTM
     items:
     - name: Cumulative Update 9 for RTM
       items:
