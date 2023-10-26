@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot UnsatisfiablePDB error code
 description: Describes how to troubleshoot the "UnsatisfiablePDB" error that may occur when you try to upgrade an Azure Kubernetes Service (AKS) cluster.
-ms.date: 10/25/2023
+ms.date: 10/26/2023
 ms.reviewer: chiragpa, v-weizhu
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-upgrade-operations
@@ -22,7 +22,7 @@ An AKS cluster upgrade operation fails with the following error message:
 
 > Code: UnsatisfiablePDB  
 > Message: 1 error occurred:  
-> * PDB \<pdb-namespace>/\<pdb-name> has maxunavailble == 0 can't proceed with put operation
+> \* PDB \<pdb-namespace>/\<pdb-name> has maxunavailble == 0 can't proceed with put operation
 
 ## Cause
 
