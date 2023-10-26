@@ -61,7 +61,7 @@ Cumulative updates (CU) are now available at the Microsoft Download Center.
 
 Only the most recent CU that was released for SQL Server 2016 SP2 is available at the Download Center. Each new CU contains all the fixes that were included togetrher with the previous CU for the installed version or service pack of SQL Server. For a list of the latest cumulative updates for SQL Server, see the following article:
 
-[SQL Server 2016 build versions](https://support.microsoft.com/help/3177312)
+[SQL Server 2016 build versions](build-versions.md)
 
 > [!NOTE]
 > Microsoft recommends ongoing, proactive installation of CUs as they become available:
