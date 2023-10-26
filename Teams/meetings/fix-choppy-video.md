@@ -1,6 +1,6 @@
 ---
 title: Fix video display lag issue in Teams
-description: Resolves an issue in which the display for attendees lags when viewing a shared video during a Teams call.
+description: Resolves an issue in which the video display for attendees is of poor quality when sharing video during a Teams call.
 author: Cloud-Writer
 ms.author: meerak
 manager: dcscontentpm
@@ -15,7 +15,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 07/25/2023
+ms.date: 10/18/2023
 ---
 # Fix video display lag issue in Teams
 
@@ -43,7 +43,7 @@ In Teams 1.6.00.12455 and later versions, you can use a keyboard shortcut to ena
 
 ## More information
 
-After you run the keyboard shortcut, there's no visual indication that high motion viewing is enabled for you.
+After you run the keyboard shortcut, there's no visual indication that high motion viewing is enabled for you. The keyboard shortcut is a toggle. If you use it twice, the Teams app will return to the default behavior of not forcing high motion screen sharing.
 
 To check the frame rate for the content that's shared, follow these steps:
 

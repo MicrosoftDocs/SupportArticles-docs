@@ -25,7 +25,7 @@ It's vital that administrators be able to diagnose and resolve issues quickly in
 Currently, we provide diagnostics through text analytics. It's important to note that while these diagnostics can't make automatic changes to your tenant without your consent, they do offer insights into known issues, and provide instructions to fix those issues quickly. We also want to make it easier for you to find our diagnostics within the current experience. Therefore, we have created a new set of queries to help administrators.
 
 > [!NOTE]
-> These diagnostics are not currently supported for GCC High, DoD, or Microsoft 365 operated by 21Vianet.
+> These diagnostics aren't available for the GCC High or DoD environments, or for Microsoft 365 operated by 21Vianet.
 
 |Example for an Exchange Online issue|Example for an Outlook issue|
 |----------|----------|

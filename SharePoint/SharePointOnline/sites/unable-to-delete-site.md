@@ -33,7 +33,7 @@ The above errors are a sample of the possible errors. There are several other er
 Microsoft 365 admins can use the following diagnostic tool to help determine why the site can't be deleted.
 
 > [!NOTE]
-> This diagnostic isn't currently supported for GCC High, DoD, or Microsoft 365 operated by 21Vianet.
+> This diagnostic isn't available for the GCC High or DoD environments, or for Microsoft 365 operated by 21Vianet.
 
 > [!div class="nextstepaction"]
 > [Run Tests: Site deletion](https://aka.ms/PillarSiteDeletion)
