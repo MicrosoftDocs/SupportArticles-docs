@@ -99,7 +99,7 @@ SQL Server Cumulative Updates are currently multilingual. Therefore, this cumula
 <details>
 <summary><b>Components (features) updated</b></summary>
 
-One Cumulative Update package includes all available updates for ALL SQL Server 2017 components (features). However, the cumulative update package updates only those components that are currently installed on the SQL Server instance you select to be serviced. If a SQL Server feature (e.g. Analysis Services) is added to the instance after this CU is applied, you must re-apply this CU to update the new feature to this CU.
+One Cumulative Update package includes all available updates for ALL SQL Server 2016 components (features). However, the cumulative update package updates only those components that are currently installed on the SQL Server instance you select to be serviced. If a SQL Server feature (e.g. Analysis Services) is added to the instance after this CU is applied, you must re-apply this CU to update the new feature to this CU.
 
 </details>
 
@@ -553,7 +553,7 @@ SQL Server 2016 Database Services Core Shared
 | Microsoft.analysisservices.applocal.core.dll                       | 13.0.4560.0     | 1313360   | 12-Mar-2019 | 10:55 | x86      |
 | Microsoft.analysisservices.applocal.dll                            | 13.0.4560.0     | 696400    | 12-Mar-2019 | 10:55 | x86      |
 | Microsoft.analysisservices.applocal.tabular.dll                    | 13.0.4560.0     | 763472    | 12-Mar-2019 | 10:55 | x86      |
-| Microsoft.data.datafeedclient.dll                                  | 13.1.1.0        | 171208    | 11-Mar-2019 | 200:46 | x86      |
+| Microsoft.data.datafeedclient.dll                                  | 13.1.1.0        | 171208    | 11-Mar-2019 | 20:46 | x86      |
 | Microsoft.sqlserver.integrationservice.hadoop.common.dll           | 13.0.4560.0     | 54352     | 12-Mar-2019 | 10:55 | x86      |
 | Microsoft.sqlserver.integrationservice.hadoopcomponents.dll        | 13.0.4560.0     | 89680     | 12-Mar-2019 | 10:55 | x86      |
 | Microsoft.sqlserver.integrationservice.hadoopcomponents.ui.dll     | 13.0.4560.0     | 49744     | 12-Mar-2019 | 10:55 | x86      |
@@ -665,11 +665,11 @@ SQL Server 2016 Integration Services
 
 | File   name                                                        | File version    | File size | Date      | Time  | Platform |
 |--------------------------------------------------------------------|-----------------|-----------|-----------|-------|----------|
-| Attunity.sqlserver.cdccontroltask.dll                              | 4.0.0.111       | 77944     | 11-Mar-2019 | 200:46 | x86      |
+| Attunity.sqlserver.cdccontroltask.dll                              | 4.0.0.111       | 77944     | 11-Mar-2019 | 20:46 | x86      |
 | Attunity.sqlserver.cdccontroltask.dll                              | 4.0.0.111       | 77944     | 12-Mar-2019 | 02:08  | x86      |
-| Attunity.sqlserver.cdcsplit.dll                                    | 4.0.0.111       | 37496     | 11-Mar-2019 | 200:46 | x86      |
+| Attunity.sqlserver.cdcsplit.dll                                    | 4.0.0.111       | 37496     | 11-Mar-2019 | 20:46 | x86      |
 | Attunity.sqlserver.cdcsplit.dll                                    | 4.0.0.111       | 37496     | 12-Mar-2019 | 02:08  | x86      |
-| Attunity.sqlserver.cdcsrc.dll                                      | 4.0.0.111       | 78456     | 11-Mar-2019 | 200:46 | x86      |
+| Attunity.sqlserver.cdcsrc.dll                                      | 4.0.0.111       | 78456     | 11-Mar-2019 | 20:46 | x86      |
 | Attunity.sqlserver.cdcsrc.dll                                      | 4.0.0.111       | 78456     | 12-Mar-2019 | 02:08  | x86      |
 | Commanddest.dll                                                    | 2015.130.4560.0 | 202832    | 12-Mar-2019 | 10:54 | x86      |
 | Commanddest.dll                                                    | 2015.130.4560.0 | 248912    | 12-Mar-2019 | 10:58 | x64      |
@@ -728,7 +728,7 @@ SQL Server 2016 Integration Services
 | Microsoft.analysisservices.applocal.tabular.dll                    | 13.0.4560.0     | 763472    | 12-Mar-2019 | 10:53 | x86      |
 | Microsoft.analysisservices.applocal.tabular.dll                    | 13.0.4560.0     | 763472    | 12-Mar-2019 | 10:55 | x86      |
 | Microsoft.applicationinsights.dll                                  | 2.7.0.13435     | 329872    | 06-Jul-2018  | 22:33 | x86      |
-| Microsoft.data.datafeedclient.dll                                  | 13.1.1.0        | 171208    | 11-Mar-2019 | 200:46 | x86      |
+| Microsoft.data.datafeedclient.dll                                  | 13.1.1.0        | 171208    | 11-Mar-2019 | 20:46 | x86      |
 | Microsoft.data.datafeedclient.dll                                  | 13.1.1.0        | 171208    | 12-Mar-2019 | 02:08  | x86      |
 | Microsoft.sqlserver.astasks.dll                                    | 13.0.4560.0     | 73296     | 12-Mar-2019 | 10:55 | x86      |
 | Microsoft.sqlserver.bulkinserttaskconnections.dll                  | 2015.130.4560.0 | 107088    | 12-Mar-2019 | 10:54 | x86      |
