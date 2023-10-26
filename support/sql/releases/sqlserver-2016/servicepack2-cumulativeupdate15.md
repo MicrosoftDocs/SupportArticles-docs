@@ -111,14 +111,14 @@ When you deploy the hotfixes to a hybrid environment (such as Always On, replica
 <details>
 <summary><b>Language support</b></summary>
 
- SQL Server Cumulative Updates are currently multilingual. Therefore, this cumulative update package isn't specific to one language. It applies to all supported languages.
+SQL Server Cumulative Updates are currently multilingual. Therefore, this cumulative update package isn't specific to one language. It applies to all supported languages.
 
 </details>
 
 <details>
 <summary><b>Components (features) updated</b></summary>
 
-One Cumulative Update package includes all available updates for ALL SQL Server 2016 components (features). However, the cumulative update package updates only those components that are currently installed on the SQL Server instance you select to be serviced.  If a SQL Server feature (e.g. Analysis Services) is added to the instance after this CU is applied, you must re-apply this CU to update the new feature to this CU.
+One Cumulative Update package includes all available updates for ALL SQL Server 2017 components (features). However, the cumulative update package updates only those components that are currently installed on the SQL Server instance you select to be serviced. If a SQL Server feature (e.g. Analysis Services) is added to the instance after this CU is applied, you must re-apply this CU to update the new feature to this CU.
 
 </details>
 
@@ -132,9 +132,11 @@ If other issues occur or if any troubleshooting is required, you might have to c
 <details>
 <summary><b>How to uninstall this update</b></summary>
 
+To do this, follow these steps:
+
 1. In Control Panel, select **View installed updates** under **Programs and Features**.
 
-2. Locate the entry that corresponds to this cumulative update package under Microsoft SQL Server 2016.
+2. Locate the entry that corresponds to this cumulative update package under **Microsoft SQL Server 2016**.
 
 3. Press and hold (or right-click) the entry, and then select **Uninstall**.
 
@@ -445,11 +447,11 @@ SQL Server 2016 Integration Services
 
 |                          File   name                          |   File version   | File size |    Date   |  Time | Platform |
 |:-------------------------------------------------------------:|:----------------:|:---------:|:---------:|:-----:|:--------:|
-| Attunity.sqlserver.cdccontroltask.dll                         | 4.0.0.111        | 77944     | 18-Aug-20 | 0:31  | x86      |
+| Attunity.sqlserver.cdccontroltask.dll                         | 4.0.0.111        | 77944     | 18-Aug-2020 | 00:31  | x86      |
 | Attunity.sqlserver.cdccontroltask.dll                         | 4.0.0.111        | 77944     | 08-Sep-2020  | 10:08 | x86      |
-| Attunity.sqlserver.cdcsplit.dll                               | 4.0.0.111        | 37496     | 18-Aug-20 | 0:31  | x86      |
+| Attunity.sqlserver.cdcsplit.dll                               | 4.0.0.111        | 37496     | 18-Aug-2020 | 00:31  | x86      |
 | Attunity.sqlserver.cdcsplit.dll                               | 4.0.0.111        | 37496     | 08-Sep-2020  | 10:08 | x86      |
-| Attunity.sqlserver.cdcsrc.dll                                 | 4.0.0.111        | 78456     | 18-Aug-20 | 0:31  | x86      |
+| Attunity.sqlserver.cdcsrc.dll                                 | 4.0.0.111        | 78456     | 18-Aug-2020 | 00:31  | x86      |
 | Attunity.sqlserver.cdcsrc.dll                                 | 4.0.0.111        | 78456     | 08-Sep-2020  | 10:08 | x86      |
 | Commanddest.dll                                               | 2015.131.5850.14 | 195984    | 18-Sep-2020 | 10:00 | x86      |
 | Commanddest.dll                                               | 2015.131.5850.14 | 242056    | 18-Sep-2020 | 10:05 | x64      |
