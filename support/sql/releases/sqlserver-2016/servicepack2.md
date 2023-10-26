@@ -39,7 +39,7 @@ For more information about the bugs that are fixed in SQL Server 2016 SP2, go to
 | <a id="5660983">[5660983](#5660983)</a> | [Update adds new columns to SYS.DM_EXEC_QUERY_STATS DMV in SQL Server 2016 SP2 (KB4051358)](https://support.microsoft.com/help/4051358) |
 | <a id="8742052">[8742052](#8742052)</a> | [Improvement: General improvements to the change tracking cleanup process in SQL Server 2016 and 2017 (KB4054842)](https://support.microsoft.com/help/4054842) |
 | <a id="9443219">[9443219](#9443219)</a> | [Update to add a new column to DMV sys.dm_sql_referenced_entities in SQL Server 2016 SP2 (KB4038418)](https://support.microsoft.com/help/4038418) |
-| <a id="9824203">[9824203](#9824203)</a> | [Improves the Distribution Agent cleanup procedure to increase the transactional replication performance in SQL server 2016 (KB4092069)](https://support.microsoft.com/help/4092069) |
+| <a id="9824203">[9824203](#9824203)</a> | [Improves the Distribution Agent cleanup procedure to increase the transactional replication performance in SQL Server 2016 (KB4092069)](https://support.microsoft.com/help/4092069) |
 | <a id="9956170">[9956170](#9956170)</a> | [Update adds the "CLR strict security" feature to SQL Server 2016 (KB4018930)](https://support.microsoft.com/help/4018930) |
 | <a id="10385772">[10385772](#10385772)</a> | [Improve tempdb spill diagnostics in DMV and Extended Events in SQL Server 2017 and SQL Server 2016 SP2 (KB4041814)](https://support.microsoft.com/help/4041814) |
 | <a id="10696815">[10696815](#10696815)</a> | [Update adds CPU timeout setting to Resource Governor workgroup REQUEST_MAX_CPU_TIME_SEC in SQL Server 2016 and 2017 (KB4038419)](https://support.microsoft.com/help/4038419) |

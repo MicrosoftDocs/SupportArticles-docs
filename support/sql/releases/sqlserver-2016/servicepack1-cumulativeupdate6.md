@@ -35,7 +35,7 @@ This article describes cumulative update package 6 (build number: **13.0.4457.0*
 | <a id=10921921>[10921921](#10921921)</a> | [FIX: Access violation on primary replica of AlwaysOn AG in SQL Server 2016 (KB4048943)](https://support.microsoft.com/help/4048943) | High Availability |
 | <a id=11031058>[11031058](#11031058)</a> | FIX: Access violation when DMV queries run against a distributed availability group in SQL Server (KB4052121) | High Availability |
 | <a id=11052495>[11052495](#11052495)</a> | Fixes an access violation when querying DMVs (`sys.dm_hadr_availability_group_states`,` sys.availability_groups`) against a distributed Availability Group. | High Availability |
-| <a id=11029968>[11029968](#11029968)</a> | [FIX: In-Memory database restore fails with errors in SQL server 2016 (KB4051356)](https://support.microsoft.com/help/4051356) | In-Memory OLTP |
+| <a id=11029968>[11029968](#11029968)</a> | [FIX: In-Memory database restore fails with errors in SQL Server 2016 (KB4051356)](https://support.microsoft.com/help/4051356) | In-Memory OLTP |
 | <a id=10870250>[10870250](#10870250)</a> | FIX: SQL Server Integration Service packages randomly hang if custom logging is enabled (KB4040934) | Integration Services |
 | <a id=10678621>[10678621](#10678621)</a> | [FIX: Policy-Based Management policy isn't working after you install CU2 for SQL Server 2016 SP1 (KB4037454)](https://support.microsoft.com/help/4037454) | Management Tools |
 | <a id=11078704>[11078704](#11078704)</a> | [FIX: Can't change the password for a SQL Server 2014 or 2016 service account when additional LSA protection is enabled (KB4039592)](https://support.microsoft.com/help/4039592) | Management Tools |
