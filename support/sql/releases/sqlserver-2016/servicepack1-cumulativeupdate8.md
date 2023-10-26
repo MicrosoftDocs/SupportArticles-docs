@@ -38,17 +38,17 @@ Only the most recent CU that was released for SQL Server 2016 is available at th
 
 - Just as for SQL Server service packs, we recommend that you test CUs before you deploy them to production environments.
 
-- We recommend that you upgrade your SQL Server installation to [the latest SQL Server 2016 service pack](https://support.microsoft.com/en-us/help/3177534).
+- We recommend that you upgrade your SQL Server installation to [the latest SQL Server 2016 service pack](https://support.microsoft.com/help/3177534).
 
 ## How to obtain this cumulative update package
 
 The following update is available from the Microsoft Download Center:
 
-:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2016 SP1 now](https://www.microsoft.com/en-us/download/details.aspx?id=54613)
+:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2016 SP1 now](https://www.microsoft.com/download/details.aspx?id=54613)
 
 If the download page doesn't appear, contact [Microsoft Customer Service and Support](https://support.microsoft.com/contactus/?ws=support) to obtain the cumulative update package.
 
-> [!NOTE] 
+> [!NOTE]
 > After future cumulative updates are released for SQL Server 2016, this CU can be located and downloaded from the [Microsoft Windows Update Catalog](https://catalog.update.microsoft.com/Search.aspx?q=sql%20server%202016). However, Microsoft recommends that you install the latest cumulative update available.
 
 ## Additional hotfixes that are included in this cumulative update package
@@ -172,11 +172,11 @@ If other issues occur or if any troubleshooting is required, you might have to c
 <summary><b>How to uninstall this update</b></summary>
 
 To do this, follow these steps:
+
 1. In Control Panel, select **Add or Remove Programs**.
 
    > [!NOTE]
-   > If you are running Windows 7 or a later version, select 
-   **Programs and Features** in Control Panel.
+   > If you are running Windows 7 or a later version, select **Programs and Features** in Control Panel.
 
 2. Locate the entry that corresponds to this cumulative update package under Microsoft SQL Server 2016.
 

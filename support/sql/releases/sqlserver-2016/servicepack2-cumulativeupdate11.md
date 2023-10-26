@@ -38,7 +38,7 @@ Only the most recent CU that was released for SQL Server 2016 is available at th
 
 - Just as for SQL Server service packs, we recommend that you test CUs before you deploy them to production environments.
 
-- We recommend that you upgrade your SQL Server installation to [the latest SQL Server 2016 service pack](https://support.microsoft.com/en-us/help/3177534).
+- We recommend that you upgrade your SQL Server installation to [the latest SQL Server 2016 service pack](https://support.microsoft.com/help/3177534).
 
 ## How to obtain this cumulative update package
 
@@ -48,7 +48,7 @@ The following update is available from the Microsoft Download Center:
 
 If the download page doesn't appear, contact [Microsoft Customer Service and Support](https://support.microsoft.com/contactus/?ws=support) to obtain the cumulative update package.
 
-> [!NOTE] 
+> [!NOTE]
 > After future cumulative updates are released for SQL Server 2016, this CU can be located and downloaded from the [Microsoft Windows Update Catalog](https://catalog.update.microsoft.com/Search.aspx?q=sql%20server%202016). However, We recommend that you install the latest cumulative update available.
 
 ## Additional hotfixes that are included in this cumulative update package

@@ -38,6 +38,7 @@ Microsoft SQL Server 2016 service packs are cumulative updates. SQL Server 2016 
 For more information about the cumulative updates that are available in SQL Server 2016, see [SQL Server 2016 build versions](build-versions.md).
 
 > [!NOTE]
+>
 > - Additional fixes that aren't documented here may also be included in the service pack.
 > - This list will be updated when more articles are released.
 

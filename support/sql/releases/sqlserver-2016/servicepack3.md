@@ -28,11 +28,11 @@ If you use the Change Tracking feature, you might encounter errors. For more inf
 
 SQL Server 2016 SP3, Microsoft SQL Server 2016 SP3 Express, and Microsoft SQL Server 2016 SP3 Feature Pack are available for manual download and installation at the following Microsoft Download Center websites.
 
-- [SQL Server 2016 SP3](https://www.microsoft.com/en-us/download/details.aspx?id=103440)
+- [SQL Server 2016 SP3](https://www.microsoft.com/download/details.aspx?id=103440)
 
-- [SQL Server 2016 SP3 Express](https://www.microsoft.com/en-us/download/details.aspx?id=103447)
+- [SQL Server 2016 SP3 Express](https://www.microsoft.com/download/details.aspx?id=103447)
 
-- [Microsoft SQL Server 2016 SP3 Feature Pack](https://www.microsoft.com/en-us/download/details.aspx?id=103444)
+- [Microsoft SQL Server 2016 SP3 Feature Pack](https://www.microsoft.com/download/details.aspx?id=103444)
 
 > [!NOTE]
 > After you install this service pack, the SQL Server service version should be 13.0.6300.2. Microsoft SQL Server 2016 service packs are cumulative updates. SQL Server 2016 SP3 upgrades all editions and service levels of SQL Server 2016 to SQL Server 2016 SP3.
@@ -44,6 +44,7 @@ Microsoft SQL Server 2016 service packs are cumulative updates. SQL Server 2016 
 For more information about the cumulative updates that are available in SQL Server 2016, see [SQL Server 2016 build versions](build-versions.md).
 
 > [!NOTE]
+>
 > - Additional fixes that aren't documented here may also be included in the service pack.
 > - This list will be updated when more articles are released.
 

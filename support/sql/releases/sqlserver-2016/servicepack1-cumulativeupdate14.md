@@ -37,17 +37,17 @@ Only the most recent CU that was released for SQL Server 2016 is available at th
 
 - Just as for SQL Server service packs, we recommend that you test CUs before you deploy them to production environments.
 
-- We recommend that you upgrade your SQL Server installation to [the latest SQL Server 2016 service pack](https://support.microsoft.com/en-us/help/3177534).
+- We recommend that you upgrade your SQL Server installation to [the latest SQL Server 2016 service pack](https://support.microsoft.com/help/3177534).
 
 ## How to obtain this cumulative update package
 
 The following update is available from the Microsoft Download Center:
 
-:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2016 SP1 now](https://www.microsoft.com/en-us/download/details.aspx?id=54613)
+:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2016 SP1 now](https://www.microsoft.com/download/details.aspx?id=54613)
 
 If the download page doesn't appear, contact [Microsoft Customer Service and Support](https://support.microsoft.com/contactus/?ws=support) to obtain the cumulative update package.
 
-> [!NOTE] 
+> [!NOTE]
 > After future cumulative updates are released for SQL Server 2016, this CU can be located and downloaded from the [Microsoft Windows Update Catalog](https://catalog.update.microsoft.com/Search.aspx?q=sql%20server%202016). However, Microsoft recommends that you install the latest cumulative update available.
 
 ## Additional hotfixes that are included in this cumulative update package
@@ -57,7 +57,7 @@ If the download page doesn't appear, contact [Microsoft Customer Service and Sup
 | <a id=12491205>[12491205](#12491205) </a> | [FIX: Intermittent failures when you back up to Azure storage from SQL Server 2014, 2016 and 2017 (KB4463320)](https://support.microsoft.com/help/4463320)| SQL Engine |
 | <a id=12656913>[12656913](#12656913) </a> | [FIX: Assertion occurs when a parallel query deletes from a Filestream table in SQL Server 2014 and 2016 (KB4488809)](https://support.microsoft.com/help/4488809) | SQL Engine |
 | <a id=12677809>[12677809](#12677809) </a> | [FIX: Filtered NCI over a CCI may not be maintained when the table is updated in a way that none of the key or included columns of the NCI are changed (KB4490138)](https://support.microsoft.com/help/4490138) | SQL performance|
-| <a id=12750916>[12750916](#12750916) </a> | [FIX: “The given key was not present in the dictionary” occurs if you do a preview in the CDC Source in SQL Server 2016 (KB4490435)](https://support.microsoft.com/help/4490435)| Integration Services |
+| <a id=12750916>[12750916](#12750916) </a> | [FIX: "The given key was not present in the dictionary" occurs if you do a preview in the CDC Source in SQL Server 2016 (KB4490435)](https://support.microsoft.com/help/4490435)| Integration Services |
 | <a id=12673774>[12673774](#12673774) </a> | [FIX: Floating point exception error 3628 occurs when you query DMV sys.dm_db_xtp_hash_index_stats in SQL Server 2016 (KB4491696)](https://support.microsoft.com/help/4491696)| In-Memory OLTP |
 | <a id=12644869>[12644869](#12644869) </a> | [FIX: Error occurs when sp_addarticle is used to add article for transactional replication to memory-optimized table on subscriber in SQL Server 2016 (KB4493329)](https://support.microsoft.com/help/4493329)| SQL Engine |
 | <a id=12746393>[12746393](#12746393) </a> | [FIX: A specially crafted query run by a low privileged user may expose the masked data in SQL Server 2016 (KB4493363)](https://support.microsoft.com/help/4493363) | SQL security |
@@ -116,11 +116,11 @@ If other issues occur or if any troubleshooting is required, you might have to c
 <summary><b>How to uninstall this update</b></summary>
 
 To do this, follow these steps:
+
 1. In Control Panel, select **Add or Remove Programs**.
 
    > [!NOTE]
-   > If you are running Windows 7 or a later version, select 
-   **Programs and Features** in Control Panel.
+   > If you are running Windows 7 or a later version, select **Programs and Features** in Control Panel.
 
 2. Locate the entry that corresponds to this cumulative update package under Microsoft SQL Server 2016.
 

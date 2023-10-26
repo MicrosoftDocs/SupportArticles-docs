@@ -112,7 +112,6 @@ If the download page doesn't appear, contact [Microsoft Customer Service and Sup
 <details>
 <summary><b>Hybrid environments deployment</b></summary>
 
-
 When you deploy the hotfixes to a hybrid environment (such as Always On, replication, cluster, and mirroring), we recommend that you refer to the following articles before you deploy the hotfixes:
 
 - [Upgrade a failover cluster instance](/sql/sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance)
@@ -166,6 +165,7 @@ To do this, follow these steps:
 
     > [!NOTE]
     > If you are running Windows 7 or a later version, select **Programs and Features** in Control Panel.
+
 1. Locate the entry that corresponds to this cumulative update package.
 1. Press and hold (or right-click) the entry, and then select **Uninstall**.
 

@@ -38,7 +38,7 @@ Only the most recent CU that was released for SQL Server 2016 is available at th
 
 - Just as for SQL Server service packs, we recommend that you test CUs before you deploy them to production environments.
 
-- We recommend that you upgrade your SQL Server installation to [the latest SQL Server 2016 service pack](https://support.microsoft.com/en-us/help/3177534).
+- We recommend that you upgrade your SQL Server installation to [the latest SQL Server 2016 service pack](https://support.microsoft.com/help/3177534).
 
 ## How to obtain this cumulative update package
 
@@ -48,7 +48,7 @@ The following update is available from the Microsoft Download Center:
 
 If the download page doesn't appear, contact [Microsoft Customer Service and Support](https://support.microsoft.com/contactus/?ws=support) to obtain the cumulative update package.
 
-> [!NOTE] 
+> [!NOTE]
 > After future cumulative updates are released for SQL Server 2016, this CU can be located and downloaded from the [Microsoft Windows Update Catalog](https://catalog.update.microsoft.com/Search.aspx?q=sql%20server%202016). However, We recommend that you install the latest cumulative update available.
 
 ## Additional hotfixes that are included in this cumulative update package
@@ -66,7 +66,7 @@ If the download page doesn't appear, contact [Microsoft Customer Service and Sup
 | <a id=13184475>[13184475](#13184475) </a> | [FIX: Assertion occurs when you run DATABASE SCOPED command in SQL Server 2016 (KB4539947)](https://support.microsoft.com/help/4539947) | SQL Engine| Windows|
 | <a id=13329385>[13329385](#13329385) </a> | [FIX: System or background task may fail when number of sessions reaches the maximum limit in SQL Server 2016 (KB4540107)](https://support.microsoft.com/help/4540107)| SQL Engine| Windows|
 | <a id=13381812>[13381812](#13381812) </a> | [FIX: Non-yielding scheduler condition occurs with CONNECTION_MANAGER spinlock in SQL Server 2016 (KB4540342)](https://support.microsoft.com/help/4540342)| SQL Engine| Windows|
-| <a id=13372511>[13372511](#13372511) </a> | [FIX: MERGE statement fails with assert “Attempt to access expired blob handle (1)” in SQL Server 2016 (KB4540346)](https://support.microsoft.com/help/4540346) | SQL performance | Windows|
+| <a id=13372511>[13372511](#13372511) </a> | [FIX: MERGE statement fails with assert "Attempt to access expired blob handle (1)" in SQL Server 2016 (KB4540346)](https://support.microsoft.com/help/4540346) | SQL performance | Windows|
 | <a id=13367056>[13367056](#13367056) </a> | [FIX: DAX query causes server to have exceptions in TBB heap and crash in Windows heap in SQL Server 2016 (KB4540385)](https://support.microsoft.com/help/4540385)| Analysis Services | Windows|
 | <a id=13372802>[13372802](#13372802) </a> | [FIX: Error occurs in sp_xml_preparedocument where MSXMLSQL tries to access virtual address space beyond limit in SQL Server 2016, 2017 and 2019 (KB4540449)](https://support.microsoft.com/help/4540449) | XML | All|
 | <a id=13346757>[13346757](#13346757) </a> | [FIX: Unexpected exception error occurs when you run DISCOVER_CSDL_METADATA in Power BI Desktop in SQL Server 2016 (KB4540731)](https://support.microsoft.com/help/4540731) | Analysis Services | Windows|

@@ -269,6 +269,7 @@ To do this, follow these steps:
 
     > [!NOTE]
     > If you are running Windows 7 or a later version, select **Programs and Features** in Control Panel.
+
 1. Locate the entry that corresponds to this cumulative update package.
 1. Right-click the entry, and then select **Uninstall**.
 
