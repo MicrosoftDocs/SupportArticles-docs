@@ -22,11 +22,11 @@ This article describes Cumulative Update package 12 (CU12) (build number: **13.0
 
 ## Known issues in this update
 
-Under certain circumstances, there is a known uninstall issue with this SQL Server 2016 SP2 CU12.  If you uninstall this CU, SQL server doesn't come online and you find the following SQL Server error log message:
+Under certain circumstances, there is a known uninstall issue with this SQL Server 2016 SP2 CU12.  If you uninstall this CU, SQL Server doesn't come online and you find the following SQL Server error log message:
 
 > The script level for 'system_xevents_modification.sql' in database 'master' cannot be downgraded from XXXXXXXXX to XXXXXXXXX, which is supported by this server. This usually implies that a future database was attached and the downgrade path is not supported by the current installation. Install a newer version of SQL Server and re-try opening the database.
 
-Mitigation is to enable Trace Flag - T902, then SQL server will come online and you are done. You don't need to uninstall it again. To upgrade to new CU you need to remove this flag first.
+Mitigation is to enable Trace Flag - T902, then SQL Server will come online and you are done. You don't need to uninstall it again. To upgrade to new CU you need to remove this flag first.
 
 SQL Server 2016 SP2 CU13 or any later CU release contains the fix.
 
