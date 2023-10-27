@@ -3,9 +3,9 @@ title: Troubleshoot desktop flow run queue-based errors
 description: Provides solutions to desktop flow queue-based error codes like NoCandidateMachine or No machine able to run the desktop flow has been found.
 author: rpapostolis # GitHub alias
 ms.author: appapaio # Microsoft alias
-ms.reviewer: befrey
+ms.reviewer: befrey, lulubran
 ms.subservice: power-automate-desktop-flows
-ms.date: 10/25/2023
+ms.date: 10/27/2023
 ---
 # Troubleshoot desktop flow run queue errors
 
@@ -56,10 +56,10 @@ To resolve the issue,
 
 #### UIFlowAlreadyRunning
 
-This error might occur in one of the following situations:
+When a desktop flow is already running on the machine, this error might occur in one of the following situations:
 
-- When you run an attended or unattended desktop flow, and the number of active sessions on the machine has reached its limit.
-- When you try to open a session for a user who is already logged in.
+- You run an attended or unattended desktop flow, and the number of active sessions on the machine has reached its limit.
+- You try to open a session for a user who is already logged in.
 
 ##### Resolution
 
@@ -71,7 +71,7 @@ For information on other error codes that might occur when running desktop flows
 
 ## More information
 
-If the sub-error code isn't provided, perform the following checks.
+If the sub-error code isn't provided, check if:
 
 - The machine or all machines in the machine group are offline.
 
@@ -91,7 +91,7 @@ If the sub-error code isn't provided, perform the following checks.
 
 - The issue is transient.
   
-  Try changing the retry policy in actions' settings.
+  Try changing the [retry policy](/power-automate/guidance/planning/reducing-risk#retry-policy) in actions' settings.
 
 - The machine or all machines in the machine group aren't able to connect with the desktop flow.
   
