@@ -14,7 +14,9 @@ This article discusses how to identify and resolve the "UnsatisfiablePDB" error 
 
 ## Prerequisites
 
-This article requires Azure CLI version 2.53.0 or a later version. Run `az --version` to find your installed version. If you need to install or upgrade the Azure CLI, see [How to install the Azure CLI](/cli/azure/install-azure-cli) or [Upgrade an Azure Kubernetes Service (AKS) cluster](/azure/aks/upgrade-aks-cluster).
+This article requires Azure CLI version 2.53.0 or a later version. Run `az --version` to find your installed version. If you need to install or upgrade the Azure CLI, see [How to install the Azure CLI](/cli/azure/install-azure-cli).
+
+For more information about the upgrade process, see [Upgrade an Azure Kubernetes Service (AKS) cluster](/azure/aks/upgrade-aks-cluster).
 
 ## Symptoms
 
