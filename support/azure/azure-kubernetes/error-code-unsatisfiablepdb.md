@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot the UnsatisfiablePDB error code
 description: Describes how to troubleshoot the UnsatisfiablePDB error that might occur when you try to upgrade an Azure Kubernetes Service (AKS) cluster.
-ms.date: 10/26/2023
+ms.date: 10/27/2023
 ms.reviewer: chiragpa, v-weizhu
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-upgrade-operations
