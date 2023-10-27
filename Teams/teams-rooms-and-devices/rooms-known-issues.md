@@ -67,7 +67,7 @@ This article lists the known issues for the Microsoft Teams Rooms app when it's 
 | Issue  |  Description | Workaround |
 | --- | --- | --- |
 |The **Report an issue** option in Teams Rooms on Android devices doesn't work|In Teams Rooms on Android devices, Teams phones, Teams panels and Teams displays, the **Report an issue** option under **Settings** is unavailable.|The option to report issues from Teams Rooms on Android devices is being enhanced. The **Report an issue** option will be unavailable until the updated experience is released.</br></br>If you were using the **Report an issue** option to collect device logs to troubleshoot issues, use the Microsoft Teams admin center instead. See [Collect Android Teams device logs](/microsoftteams/troubleshoot/teams-rooms-and-devices/collect-device-logs) for detailed instructions.|
-|Teams phones sign out automatically, and Teams Rooms on Android devices become unpaired|On Teams phones that are running version 5882 of the Company Portal app, the phones sign out automatically.<br/><br/>Also, on Teams Rooms on Android devices that are running the Teams Rooms app version U2A, the touch console becomes unpaired.|Microsoft is investigating this issue. No workaround is available at this time.|
+|Teams phones and Teams panels sign out automatically, and Teams Rooms on Android devices become unpaired|Some models of Teams phones and Teams panels that are running version 5882 of the Company Portal app sign out automatically.<br/><br/>Also, Teams Rooms on Android devices that are running the Teams Rooms app version 1449/1.0.96.2023090601 and Company portal app version 5.0.5954.0 might sign out automatically and the touch console on the devices becomes unpaired.|Microsoft is investigating this issue. No workaround is available at this time.|
 
 ### Issues with meeting room devices
 
@@ -105,9 +105,9 @@ This article lists the known issues for the Microsoft Teams Rooms app when it's 
   Known symptoms include a black or gray screen on the front-of-room display, or the Teams Rooms console becomes unresponsive after waking from standby mode. If you experience issues when you use consumer TVs, we recommend that you install a configurable EDID controller or EDID emulator, such as the [HD-RX-4K-201-C-E](https://www.crestron.com/Products/Video/HDMI-Solutions/HDMI-Extenders/HD-RX-4K-210-C-E) from Crestron, or [DR-EDID Emulator](https://fsrinc.com/fsr-products/product/4051-dr-edid2-emulator) from FSR Video Products Group.
 - Teams Admin Center only identifies valid certified firmware. If uncertified firmware is updated on the device by means other than the Teams Admin Center, the Admin Center will provide only the old firmware. This issue may occur with Teams Rooms on Android devices and Teams IP phones.
 
-## Support for third party Teams devices
+## Support for third-party Teams devices
 
-For issues with Teams devices offered by third party providers, contact their individual sites for support:
+For issues with Teams devices offered by third-party providers, contact their individual sites for support:
 
 - Logitech: [Logitech Support](https://support.logi.com/hc/)
 - Crestron: [Crestron Support](https://support.crestron.com/)
