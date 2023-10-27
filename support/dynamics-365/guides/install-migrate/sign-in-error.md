@@ -13,7 +13,7 @@ This article lists common issues that cause failures when you try to sign in to 
 
 ## Cause 1: Wrong account used
 
-You use a Microsoft account (an account used for Outlook.com, Windows Store, or other Microsoft products) or your corporate credentials to sign in.
+You use a Microsoft account (an account used for `Outlook.com`, Windows Store, or other Microsoft products) or your corporate credentials to sign in.
 
 #### Resolution
 

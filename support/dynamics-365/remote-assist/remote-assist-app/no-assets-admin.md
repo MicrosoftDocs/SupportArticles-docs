@@ -30,6 +30,6 @@ To solve this issue, [install the app into the right environment](/dynamics365/m
 
 To solve this issue, follow the steps:
 
-1. Verify that the user has the **Basic User** and **Remote Assist - App User** or **Remote Assist - Administrator** [security roles assigned.](/dynamics365/mixed-reality/remote-assist/asset-capture-add-users#assign-dynamics-365-security-roles).
+1. Verify that the user has the **Basic User** and **Remote Assist - App User** or **Remote Assist - Administrator** [security roles assigned](/dynamics365/mixed-reality/remote-assist/asset-capture-add-users#assign-dynamics-365-security-roles).
 
 1. Close the app and the live tile, and then reopen it.
