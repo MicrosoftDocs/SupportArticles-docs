@@ -3,8 +3,8 @@ title: Can't make a video call in the HoloLens app
 description: Provides a resolution for an issue where you can't make a video call in the HoloLens app.
 ms.author: davepinch
 author: davepinch
-ms.reviewer: v-wendysmith
-ms.date: 10/25/2023
+ms.reviewer: v-wendysmith, mhart
+ms.date: 10/27/2023
 ms.custom: bap-template
 ---
 # Can't make a video call in the HoloLens app

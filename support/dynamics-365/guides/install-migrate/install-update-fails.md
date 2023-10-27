@@ -3,8 +3,8 @@ title: Solution installation or update fails repeatedly
 description: Provides a resolution for an issue where the installation or update of the Dynamics 365 Guides solution fails.
 ms.author: davepinch
 author: davepinch
-ms.date: 10/25/2023
-ms.reviewer: v-wendysmith
+ms.date: 10/27/2023
+ms.reviewer: v-wendysmith, mhart
 ms.custom: bap-template
 ---
 # "Installation failed" error occurs during solution installation or update

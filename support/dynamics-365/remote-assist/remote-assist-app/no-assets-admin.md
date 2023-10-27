@@ -3,8 +3,8 @@ title: Assets tab indicates to contact an IT administrator
 description: Resolves an issue where the Assets tab informs a user to contact an IT administrator in Microsoft Dynamics 365 Remote Assist.
 ms.author: davepinch
 author: davepinch
-ms.date: 10/25/2023
-ms.reviewer: v-wendysmith
+ms.date: 10/27/2023
+ms.reviewer: v-wendysmith, mhart
 ms.custom: bap-template
 ---
 # Assets tab indicates to contact an IT administrator

@@ -3,8 +3,8 @@ title: Mixed Reality toolbar doesn't appear on Teams during a Dynamics 365 Remot
 description: Resolves an issue where you can't see the Mixed Reality toolbar on the Microsoft Teams desktop during a Microsoft Dynamics 365 Remote Assist call.
 ms.author: davepinch
 author: davepinch
-ms.date: 10/25/2023
-ms.reviewer: v-wendysmith
+ms.date: 10/27/2023
+ms.reviewer: v-wendysmith, mhart
 ms.custom: bap-template
 ---
 # The Mixed Reality toolbar doesn't show on Teams during a Dynamics 365 Remote Assist call

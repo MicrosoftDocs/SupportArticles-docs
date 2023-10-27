@@ -1,16 +1,6 @@
 - name: Dynamics 365 Guides
   href: welcome-guides.yml
   items:
-    - name: Setup and configuration
-      items:
-        - name: Can't sign in to the Guides PC or HoloLens app
-          href: install-migrate/sign-in-error.md
-        - name: '"Installation failed" error during solution installation or update'
-          href: install-migrate/install-update-fails.md
-        - name: Import failed when moving content with Content Migration Tool
-          href: install-migrate/failed-to-import-microsoft-xrm-data-powershell.md
-        - name: Sign-in error when signing in to Guides on a shared HoloLens device
-          href: hololens-app/device-license-sign-in-error.md
     - name: Application functionality
       items:
         - name: Can't make a video call in the HoloLens app
@@ -27,3 +17,13 @@
           href: hololens-app/step-content-warning-memory.md
         - name: '"Step content failed to load" error in the HoloLens app'
           href: hololens-app/step-content-fail-load.md
+    - name: Setup and configuration
+      items:
+        - name: Can't sign in to the Guides PC or HoloLens app
+          href: install-migrate/sign-in-error.md
+        - name: '"Installation failed" error during solution installation or update'
+          href: install-migrate/install-update-fails.md
+        - name: Import failed when moving content with Content Migration Tool
+          href: install-migrate/failed-to-import-microsoft-xrm-data-powershell.md
+        - name: Sign-in error when signing in to Guides on a shared HoloLens device
+          href: hololens-app/device-license-sign-in-error.md

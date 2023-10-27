@@ -3,7 +3,8 @@ title: Can't sign in to Dynamics 365 Remote Assist
 description: Resolves common issues that might occur when you try to sign in to Microsoft Dynamics 365 Remote Assist.
 author: davepinch
 ms.author: davepinch
-ms.date: 10/25/2023
+ms.reviewer: v-wendysmith, mhart
+ms.date: 10/27/2023
 ms.custom: bap-template
 ---
 # Can't sign in to Dynamics 365 Remote Assist

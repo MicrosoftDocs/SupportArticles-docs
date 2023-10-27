@@ -3,7 +3,8 @@ title: Can't sign in to the Guides PC or HoloLens app
 description: Provides a resolution for an issue where you can't sign in to the Dynamics 365 Guides PC app or the HoloLens app.
 author: davepinch
 ms.author: davepinch
-ms.date: 10/25/2023
+ms.reviewer: v-wendysmith, mhart
+ms.date: 10/27/2023
 ms.custom: bap-template
 ---
 # Can't sign in to the Dynamics 365 Guides PC app or the HoloLens app

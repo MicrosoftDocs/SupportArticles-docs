@@ -3,8 +3,8 @@ title: Troubleshoot Dynamics 365 Remote Assist model-driven app installation fai
 description: Resolves an issue where the installation of the Microsoft Dynamics 365 Remote Assist model-driven app fails.
 ms.author: davepinch
 author: davepinch
-ms.date: 10/25/2023
-ms.reviewer: v-wendysmith
+ms.date: 10/27/2023
+ms.reviewer: v-wendysmith, mhart
 ms.custom: bap-template
 ---
 # Troubleshoot failures with the installation of the Dynamics 365 Remote Assist model-driven app
