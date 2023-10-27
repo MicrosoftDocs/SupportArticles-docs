@@ -3,7 +3,7 @@
   items:
     - name: Application functionality
       items:
-        - name: Asset tab indicates contact IT admin
+        - name: Assets tab indicates to contact IT admin
           href: remote-assist-app/no-assets-admin.md
         - name: Assets don't appear or aren't as expected
           href: remote-assist-app/assets-not-appear-or-expected.md
