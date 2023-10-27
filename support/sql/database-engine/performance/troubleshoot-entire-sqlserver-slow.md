@@ -219,4 +219,10 @@ Follow these steps to troubleshoot these issues:
 
 ## Step 9: Look for resource intensive Profiler or XEvent Traces
 
-Look for active Extended Events or SQL Server Profiler traces, especially those with filtering on text columns (database name, login name, query text, and so on). If possible, disable the traces and see if query performance improves. Depending on the event selected, each thread might consume additional CPU causing overall slowness. To identify the active traces for Extended Events, see [sys.dm_xe_sessions](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-sessions-transact-sql) and for Profiler traces, see [sys.fn_trace_getinfo](/sql/relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql).
+Look for active Extended Events or SQL Server Profiler traces, especially those with filtering on text columns (database name, login name, query text, and so on). If possible, disable the traces and see if query performance improves. Depending on the event selected, each thread might consume additional CPU causing overall slowness. To identify the active traces for Extended Events, see [sys.dm_xe_sessions](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-sessions-transact-sql) and for Profiler traces, see [sys.traces](/sql/relational-databases/system-catalog-views/sys-traces-transact-sql).
+
+   ```sql
+   SELECT * FROM sys.dm_xe_sessions
+   GO
+   SELECT * FROM sys.traces
+   ```
