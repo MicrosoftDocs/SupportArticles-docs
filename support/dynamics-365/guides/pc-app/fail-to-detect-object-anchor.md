@@ -31,7 +31,7 @@ To solve this issue,
 
    :::image type="content" source="media/fail-to-detect-object-anchor/object-anchor-chair-properties.png" alt-text="Screenshot that shows the Properties tab with My chair measurements." border="false":::
 
-   - If the dimensions of the object in the **Properties** tab are different from the actual object dimensions by a factor of 2 or more, an incorrect **Length Unit** type is likely to be used.
+   - If the dimensions of the object in the **Properties** tab are different from the actual object dimensions by a factor of two or more, an incorrect **Length Unit** type is likely to be used.
 
    - If the gravity direction of the model in the **Properties** tab (the down direction) is different from the actual orientation of the object in its environment, an incorrect gravity direction is likely to be used (for example, if the chair in the example above is shown upside down or with its legs pointing to the side instead of pointing down).
 
