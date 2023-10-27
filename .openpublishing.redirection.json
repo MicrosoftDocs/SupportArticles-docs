@@ -6461,6 +6461,36 @@
       "source_path": "support/power-platform/ai-builder/index.md",
       "redirect_url": "/troubleshoot/power-platform/ai-builder/welcome-ai-builder",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tss.md",
+      "redirect_url": "/troubleshoot/windows-client/windows-tss/introduction-to-troubleshootingscript-toolset-tss",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/windows-troubleshooters/gather-information-using-tss-wufb-reports.md",
+      "redirect_url": "/troubleshoot/windows-client/windows-tss/gather-information-using-tss-wufb-reports",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/windows-troubleshooters/gather-information-using-tss-user-experience.md",
+      "redirect_url": "/troubleshoot/windows-client/windows-tss/gather-information-using-tss-user-experience",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/windows-troubleshooters/gather-information-using-tss-group-policy.md",
+      "redirect_url": "/troubleshoot/windows-client/windows-tss/gather-information-using-tss-group-policy",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md",
+      "redirect_url": "/troubleshoot/windows-client/windows-tss/gather-information-using-tss-deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md",
+      "redirect_url": "/troubleshoot/windows-client/windows-tss/gather-information-using-tss-ad-replication",
+      "redirect_document_id": true
     }
 ]
 }
