@@ -20,7 +20,7 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Assets tab indicates contact IT admin
+          - text: Assets tab indicates to contact IT admin
             url: remote-assist-app/no-assets-admin.md
           - text: Assets don't appear or aren't as expected
             url: remote-assist-app/assets-not-appear-or-expected.md
