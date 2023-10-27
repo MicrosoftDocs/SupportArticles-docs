@@ -64,8 +64,6 @@
       href: error-code-subnetisfull-upgrade.md   
     - name: Unable to get log analytics workspace info error
       href: aks-upgrade-scale-fail-log-analytics-workspace-missing.md
-    - name: WINDOWS_CSE_ERROR_CHECK_API_SERVER_CONNECTIVITY error (5)
-      href: windows-cse-error-check-api-server-connectivity.md
   - name: Kubernetes 1.16 upgrades fail
     href: upgrades-to-kubernetes-fail-using-node-labels.md  
   - name: Upgrade issues with Gen2 VMs on Windows AKS cluster
