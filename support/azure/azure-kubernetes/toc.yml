@@ -43,6 +43,8 @@
     href: subnet-with-external-resources-cannot-be-used-by-other-resources.md
   - name: VMExtensionProvisioningTimeout error
     href: error-code-vmextensionprovisioningtimeout.md
+  - name: WINDOWS_CSE_ERROR_CHECK_API_SERVER_CONNECTIVITY error (5)
+    href: windows-cse-error-check-api-server-connectivity.md
   - name: ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error
     href: error-code-zonalallocationfailed-allocationfailed.md
 
