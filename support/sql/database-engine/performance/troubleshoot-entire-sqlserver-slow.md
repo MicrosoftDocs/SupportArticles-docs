@@ -116,7 +116,7 @@ Another common reason for the perceived overall slowness of SQL Server workloads
 
   - Exclude data folders from anti-virus scanning and have filter driver issues corrected by software vendors to prevent an impact on I/O performance.
 
-- Other application(s): Another application on the same machine with SQL Server can saturate the I/O path with excessive read or write requests. This situation might push the I/O subsystem beyond capacity limits and cause I/O slowness for SQL Server. Identify the application and tune it or move it elsewhere to eliminate its effect on the I/O stack. This problem might arise from other applications that are shared by this SQL Server machine and other machines that run on the same SAN. Work with your SAN administrator to balance I/O traffic (see [Check for hardware issues](#check-for-hardware-issues)).
+- Other application(s): Another application on the same machine with SQL Server can saturate the I/O path with excessive read or write requests. This situation may push the I/O subsystem beyond capacity limits and cause I/O slowness for SQL Server. Identify the application and tune it or move it elsewhere to eliminate its effect on the I/O stack. This problem issue can be caused by other applications running on other machines but sharing the same SAN with this SQL Server machine. Work with your SAN administrator to balance I/O traffic (see [Check for hardware issues](#check-for-hardware-issues)).
   
 For detailed troubleshooting of I/O-related issues with SQL Server, see [Troubleshoot slow SQL Server performance caused by I/O issues](../performance/troubleshoot-sql-io-performance.md).
   
