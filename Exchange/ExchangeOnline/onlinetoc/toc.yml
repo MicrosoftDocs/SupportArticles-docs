@@ -421,6 +421,8 @@
           href: ../move-or-migrate-mailboxes/resource-ciageoflastnotification-system-is-unhealthy-error.md
         - name: Server name doesn't update in a new region
           href: ../move-or-migrate-mailboxes/server-name-not-update-after-moved-new-region.md
+        - name: StoragePermanentException during a mailbox migration
+          href: ../move-or-migrate-mailboxes/storagepermanentexception-during-mailbox-migration.md
         - name: Target mailbox unlock operation was not replicated error
           href: ../move-or-migrate-mailboxes/target-mailbox-unlock-operation-was-not-replicated-error.md
         - name: This mailbox exceeded the maximum number of large items
