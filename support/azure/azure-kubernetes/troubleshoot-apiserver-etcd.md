@@ -111,7 +111,7 @@ AKSAudit
 | where TimeGenerated between(now(-1h)..now()) // When you experienced the problem
 | extend HttpMethod = Verb
 | extend Resource = tostring(ObjectRef.resource)
-| where UserAgent == "Ruby" // Filter by name of the useragent you are interested in
+| where UserAgent == "DUMMYUSERAGENT" // Filter by name of the useragent you are interested in
 | where Resource != ""
 | extend start_time = RequestReceivedTime
 | extend end_time = StageReceivedTime
