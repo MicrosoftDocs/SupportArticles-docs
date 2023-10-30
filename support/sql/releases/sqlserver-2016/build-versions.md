@@ -11,30 +11,30 @@ ms.reviewer: v-six
 
 This article lists the Microsoft SQL Server 2016 builds that were released after SQL Server 2016 was released.
 
-## SQL Server 2016 Service Pack 3 (SP3) Azure Connect Pack Builds
+## SQL Server 2016 Service Pack 3 (SP3) Azure Connect Pack builds
 
 > [!NOTE]
 > Azure Connect Feature Pack is optional and should be installed only if you intend to connect SQL Server with Azure SQL Managed Instance.
 
-| Cumulative Update Name   | Product Version | Knowledge Base Number                                   | Release Day       |
+| Cumulative update name   | Product version | Knowledge Base number                                   | Release date       |
 |--------------------------|-----------------|---------------------------------------------------------|-------------------|
 | Azure Connect Pack + GDR | 13.0.7029.3     | [KB5029187](https://support.microsoft.com/help/5029187) | October 10, 2023  |
 | Azure Connect Pack + GDR | 13.0.7024.30    | [KB5021128](https://support.microsoft.com/help/5021128) | February 14, 2023 |
 | Azure Connect Pack + GDR | 13.0.7016.1     | [KB5015371](https://support.microsoft.com/help/5015371) | June 14, 2022     |
 | Azure Connect Pack       | 13.0.7000.253   | [KB5014242](servicepack3-azureconnect.md) | May 19, 2022      |
 
-## SQL Server 2016 Service Pack 3 (SP3) Cumulative Update (CU) Builds
+## SQL Server 2016 Service Pack 3 (SP3) Cumulative Update (CU) builds
 
-| Cumulative Update Name | Product Version | Knowledge Base Number                                   | Release Day        |
+| Cumulative update name | Product version | Knowledge Base number                                   | Release date        |
 |------------------------|-----------------|---------------------------------------------------------|--------------------|
 | SP3 + GDR              | 13.0.6435.1     | [KB5029186](https://support.microsoft.com/help/5029186) | October 10, 2023   |
 | SP3 + GDR              | 13.0.6430.49    | [KB5021129](https://support.microsoft.com/help/5021129) | February 14, 2023  |
 | SP3 + GDR              | 13.0.6419.1     | [KB5014355](https://support.microsoft.com/help/5014355) | June 14, 2022      |
 | SP3                    | 13.0.6300.2     | [KB5003279](servicepack3.md) | September 15, 2021 |
 
-## SQL Server 2016 Service Pack 2 (SP2) Cumulative Update (CU) Builds
+## SQL Server 2016 Service Pack 2 (SP2) Cumulative Update (CU) builds
 
-| Cumulative Update Name | Product Version | Knowledge Base Number                                   | Release Day        |
+| Cumulative update name | Product version | Knowledge Base number                                   | Release date        |
 |------------------------|-----------------|---------------------------------------------------------|--------------------|
 | SP2 + GDR              | 13.0.5108.50    | [KB5014365](https://support.microsoft.com/help/5014365) | June 14, 2022      |
 | CU17 + GDR             | 13.0.5893.48    | [KB5014351](https://support.microsoft.com/help/5014351) | June 14, 2022      |
@@ -64,9 +64,9 @@ This article lists the Microsoft SQL Server 2016 builds that were released after
 | CU1                    | 13.0.5149.0     | [KB4135048](servicepack2-cumulativeupdate1.md) | May 30, 2018       |
 | SP2                    | 13.0.5026.0     | [KB4052908](servicepack2.md) | April 24, 2018     |
 
-## SQL Server 2016 Service Pack 1 (SP1) Cumulative Update (CU) Builds
+## SQL Server 2016 Service Pack 1 (SP1) Cumulative Update (CU) builds
 
-| Cumulative Update Name | Product Version | Knowledge Base Number                                   | Release Day        |
+| Cumulative update name | Product version | Knowledge Base number                                   | Release date        |
 |------------------------|-----------------|---------------------------------------------------------|--------------------|
 | CU15 + GDR             | 13.0.4604.0     | [KB4505221](https://support.microsoft.com/help/4505221) | July 09, 2019      |
 | GDR                    | 13.0.4259.0     | [KB4505219](https://support.microsoft.com/help/4505219) | July 09, 2019      |
@@ -93,7 +93,7 @@ This article lists the Microsoft SQL Server 2016 builds that were released after
 
 ## SQL Server 2016 cumulative update (CU) builds
 
-| Cumulative Update Name | Product Version | Knowledge Base Number                                   | Release Day        |
+| Cumulative update name | Product version | Knowledge Base number                                   | Release date        |
 |------------------------|-----------------|---------------------------------------------------------|--------------------|
 | GDR                    | 13.0.1745.2     | [KB4058560](https://support.microsoft.com/help/4058560) | January 6, 2018    |
 | CU9 + GDR              | 13.0.2218.0     | [KB4058559](https://support.microsoft.com/help/4058559) | January 6, 2018    |
