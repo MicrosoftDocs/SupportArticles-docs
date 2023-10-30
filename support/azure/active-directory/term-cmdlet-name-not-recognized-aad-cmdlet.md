@@ -1,5 +1,5 @@
 ---
-title: Error (The term \<cmdlet name> is not recognized) when you try to run Microsoft Entra ID for Windows PowerShell cmdlets
+title: Error (The term \<cmdlet name> is not recognized) when you try to run Azure Active Directory module for Windows PowerShell cmdlets
 description: Describes an issue in which you receive an error message when you try to run Azure Active Directory module for Windows PowerShell cmdlets. Resolutions are provided.
 ms.date: 07/06/2020
 ms.reviewer: 
@@ -7,7 +7,7 @@ ms.service: active-directory
 ms.subservice: domain-services
 ms.custom: has-azure-ad-ps-ref
 ---
-# Error when you try to run Microsoft Entra ID for Windows PowerShell cmdlets: The term \<cmdlet name> is not recognized
+# Error when you try to run Azure Active Directory module for Windows PowerShell cmdlets: The term \<cmdlet name> is not recognized
 
 _Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 Identity Management  
 _Original KB number:_ &nbsp; 2669552

@@ -14,9 +14,9 @@ ms.author: billmath
 
 # Understand Microsoft Entra Connect 1.4.xx.x and device disappearance
 
-With the implementation of version 1.4.xx.x of Microsoft Entra Connect (Microsoft Entra Connect), customers may see some or all of their Windows devices disappear from Microsoft Entra ID. This isn't a cause for concern, as these device identities aren't used by Microsoft Entra ID during *Conditional Access* authorization. This change won't delete any Windows devices that were correctly registered with Microsoft Entra ID for Microsoft Entra hybrid join.
+With the implementation of version 1.4.xx.x of Microsoft Entra Connect, customers may see some or all of their Windows devices disappear from Microsoft Entra ID. This isn't a cause for concern, as these device identities aren't used by Microsoft Entra ID during *Conditional Access* authorization. This change won't delete any Windows devices that were correctly registered with Microsoft Entra ID for Microsoft Entra hybrid join.
 
-If you see the deletion of device objects in Microsoft Entra exceeding the *Export Deletion Threshold*, allow the deletions to go through. [How To: allow deletes to flow when they exceed the deletion threshold](/azure/active-directory/hybrid/how-to-connect-sync-feature-prevent-accidental-deletes)
+If you see the deletion of device objects in Microsoft Entra ID exceeding the *Export Deletion Threshold*, allow the deletions to go through. [How To: allow deletes to flow when they exceed the deletion threshold](/azure/active-directory/hybrid/how-to-connect-sync-feature-prevent-accidental-deletes)
 
 ## Background
 
@@ -62,7 +62,7 @@ certificates issued by the Microsoft Entra hybrid join feature.
 It checks the certificates present in the UserCertificate property of a Computer object in AD and, for each 
 non-expired certificate present, validates if the certificate was issued for the Microsoft Entra hybrid join feature 
 (i.e. Subject Name matches CN={ObjectGUID}).
-Before, Microsoft Entra Connect would synchronize to Microsoft Entra any Computer that contained at least one valid 
+Before, Microsoft Entra Connect would synchronize to Microsoft Entra ID any Computer that contained at least one valid 
 certificate but starting on Microsoft Entra Connect version 1.4, the sync engine can identify Hybrid 
 Microsoft Entra join certificates and will 'cloudfilter' the computer object from synchronizing to Microsoft Entra ID unless 
 there's a valid Microsoft Entra hybrid join certificate.

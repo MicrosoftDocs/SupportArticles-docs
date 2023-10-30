@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 3092588
 
 ## Symptoms
 
-When you try to sign in to an app that is set up for Microsoft Entra business to consumer (B2C), you receive the following error message:
+When you try to sign in to an app that is set up for Microsoft Azure Active Directory (AD) business to consumer (B2C), you receive the following error message:
 
 > Server Error in '/' Application  
  Response status code does not indicate success: 404 (Not Found)  
