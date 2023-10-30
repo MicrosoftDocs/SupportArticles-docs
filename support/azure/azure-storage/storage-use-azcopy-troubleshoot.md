@@ -3,7 +3,7 @@ title: Troubleshoot problems with AzCopy (Azure Storage)
 description: Provides workarounds to common issues with AzCopy v10.
 ms.service: azure-storage
 ms.subservice: storage-common-concepts
-ms.date: 04/12/2023
+ms.date: 10/30/2023
 ms.reviewer: normesta, azurestocic, jarrettr, v-weizhu
 ---
 
