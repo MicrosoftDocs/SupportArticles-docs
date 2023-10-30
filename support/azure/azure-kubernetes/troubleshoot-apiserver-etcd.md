@@ -64,6 +64,7 @@ AzureDiagnostics
 | project User, count_ 
 ```
 ---
+
 Although it's helpful to know which clients generate the highest request volume, high request volume alone might not be a cause for concern. A better indicator of the actual load that each client generates on the API server is the response latency that they experience.
 
 ### Step 2: Identify and chart the average latency of API server requests per user agent
