@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot entire SQL Server or database application that appears to be slow
 description: This article describes how to troubleshoot a situation where the entire SQL Server or operating system appears to be slow.
-ms.date: 10/27/2023
+ms.date: 10/30/2023
 ms.custom: sap:Performance
 author: pijocoder
 ms.author: jopilov
@@ -62,6 +62,8 @@ Local drives are overwhelmed with I/O beyond their capacity. Use the following m
 ### [Power plan configuration is causing CPU underperformance](#tab/power-plan-configuration-is-causing-cpu-underperformance)
 
 For more information, see [Slow performance on Windows Server when using the Balanced power plan](../../../windows-server/performance/slow-performance-when-using-power-plan.md).
+
+---
 
 ## Step 3: Troubleshoot network issues
 
