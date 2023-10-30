@@ -73,6 +73,12 @@ To identify the average latency of API server requests per user agent as plotted
 ### [Resource Specific](#tab/resource-specific)
 ```kusto
 AKSAudit
+| where TimeGenerated between(now(-1h)..now()) // When you experienced the problem
+| extend start_time = RequestReceivedTime
+| extend end_time = StageReceivedTime
+| extend latency = datetime_diff('millisecond', end_time, start_time)
+| summarize avg(latency) by UserAgent, bin(start_time, 5m)
+| render timechart
 ```
 
 ### [Azure Diagnostics](#tab/azure-diagnostics)
@@ -102,6 +108,16 @@ Run the following query to tabulate the 99th percentile (P99) latency of API cal
 ### [Resource Specific](#tab/resource-specific)
 ```kusto
 AKSAudit
+| where TimeGenerated between(now(-1h)..now()) // When you experienced the problem
+| extend HttpMethod = Verb
+| extend Resource = tostring(ObjectRef.resource)
+| where UserAgent == "Ruby" // Filter by name of the useragent you are interested in
+| where Resource != ""
+| extend start_time = RequestReceivedTime
+| extend end_time = StageReceivedTime
+| extend latency = datetime_diff('millisecond', end_time, start_time)
+| summarize p99latency=percentile(latency, 99) by HttpMethod, Resource
+| render table
 ```
 
 ### [Azure Diagnostics](#tab/azure-diagnostics)
