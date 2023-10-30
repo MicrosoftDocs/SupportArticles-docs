@@ -10,7 +10,7 @@ ms.subservice: hybrid
 
 This article describes a problem in which a "The maximum number of devices that can be joined to the workplace by the user has been reached" error occurs when you try to perform a Workplace Join operation.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2 Datacenter, Windows Server 2012 R2 Standard, Windows 8.1 Enterprise, Azure Active Directory  
+_Original product version:_ &nbsp; Windows Server 2012 R2 Datacenter, Windows Server 2012 R2 Standard, Windows 8.1 Enterprise, Microsoft Entra ID  
 _Original KB number:_ &nbsp; 3045379
 
 ## Symptoms
@@ -36,15 +36,15 @@ This problem occurs because the user has joined the maximum number of devices an
 
 To resolve this problem, check the quota configuration. Then, check the number of devices that the user has previously registered. If the quota is reached, follow these steps, depending on the applicable scenario.
 
-- If the user is trying to perform Workplace Join to Azure Active Directory
+- If the user is trying to perform Workplace Join to Microsoft Entra ID
   1. Delete devices for the user.
-     1. Sign in to Azure portal or start the Azure AD console from the Microsoft 365 admin center as Company Administrator.
+     1. Sign in to Azure portal or start the Microsoft Entra ID console from the Microsoft 365 admin center as Company Administrator.
      2. Move to the directory that the user is trying the join.
      3. Locate **Users**, and then locate the user who cannot perform the Workplace Join operation.
      4. Locate **Devices**.
      5. Review the list to determine which devices can be deleted. Then, click **Delete Device**.
   2. Increase the Registered Device Quota.
-     1. Sign in to the Azure portal or start the Azure AD console from the Microsoft 365 admin center as Company Administrator.
+     1. Sign in to the Azure portal or start the Microsoft Entra ID console from the Microsoft 365 admin center as Company Administrator.
      2. Move to the directory that the user is trying the join.
      3. Locate **Devices**, and then locate **Device Settings**.
      4. Change the **Maximum Number of devices per user** setting to a larger value.
