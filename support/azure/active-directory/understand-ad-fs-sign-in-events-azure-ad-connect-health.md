@@ -21,8 +21,8 @@ This article shows how to use the Connect Health for AD FS agent, Azure Monitor,
 
 - [Microsoft Entra Connect Health](/azure/active-directory/hybrid/connect/how-to-connect-health-agent-install) for AD FS installed and upgraded to latest version (3.1.95.0 or greater).
 - The [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) or [Reports Reader](/azure/active-directory/roles/permissions-reference#reports-reader) role to view the Microsoft Entra sign-ins.
-- At least one Microsoft Entra ID P1 or P2 (P1 or P2) license for the first Connect Health agent.
-- 25 extra Microsoft Entra ID P1 or P2 (P1 or P2) licenses for each extra registered agent.
+- At least one Microsoft Entra ID P1 or P2 license for the first Connect Health agent.
+- 25 extra Microsoft Entra ID P1 or P2 licenses for each extra registered agent.
 - An equal agent count to the total number of agents that are registered across all monitored roles (AD FS, Microsoft Entra Connect, and Active Directory Domain Services).
 - The requisite number of valid Microsoft Entra Connect Health licenses. (You aren't required to assign the license to specific users.)
 

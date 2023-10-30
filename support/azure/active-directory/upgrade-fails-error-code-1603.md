@@ -20,7 +20,7 @@ When you try to upgrade Microsoft Entra Connect, you receive the following error
 The detailed event log resembles the following:
 
 > Date/Time[ 12] [INFO ] ServiceControllerProvider: StartService status: Running
-Date/Time[ 12] [ERROR] Error during sync engine upgrade. System.Exception: Unable to upgrade the Synchronization Service. Please see the event log for additional details. ---> Microsoft.Azure.ActiveDirectory.Client.Framework.ProcessExecutionFailedException: Error installing msi package 'Synchronization Service.msi'. Full log is available at 'C:\ProgramData\Azure AD Connect\Synchronization Service_Install-DateTime.log'.
+Date/Time[ 12] [ERROR] Error during sync engine upgrade. System.Exception: Unable to upgrade the Synchronization Service. Please see the event log for additional details. ---> Microsoft.Azure.ActiveDirectory.Client.Framework.ProcessExecutionFailedException: Error installing msi package 'Synchronization Service.msi'. Full log is available at 'C:\ProgramData\AADConnect\Synchronization Service_Install-DateTime.log'.
 >
 > Action startTime: DetectServiceAccount.
 CustomAction DetectServiceAccount returned actual error code 1603 (note this may not be 100% accurate if translation happened inside sandbox)
@@ -42,9 +42,9 @@ The underlying service account was configured by using the user principal name (
 To resolve this issue, follow these steps:
 
 1. Start the Service Console on the Microsoft Entra Connect server.
-2. Locate the **Microsoft Azure AD Sync**  service, and then right-click the service.
+2. Locate the **Microsoft Azure AD Sync** service, and then right-click the service.
 3. Select **Properties**, and then select **Logons**.
-4. Set the account by using Domain\SamAccountName instead of using the UPN.
+4. Set the account by using Domain\SamAccountName instead of using the UPN.
 5. Select **Apply** and **OK**.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
