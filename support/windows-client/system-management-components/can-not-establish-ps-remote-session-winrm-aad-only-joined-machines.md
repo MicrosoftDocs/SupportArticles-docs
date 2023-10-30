@@ -13,7 +13,7 @@ ms.technology: windows-client-system-management-components
 ---
 # Can't establish a PowerShell remote session using WinRM between Microsoft Entra-only joined machines
 
-This article helps to resolve the issue in which a PowerShell remote session using Windows Remote Management (WinRM) can't be established between machines that are joined to Microsoft Entra-only.
+This article helps to resolve the issue in which a PowerShell remote session using Windows Remote Management (WinRM) can't be established between machines that are only joined to Microsoft Entra ID.
 
 You have two machines on the same network. They aren't joined to a local domain and only joined to Microsoft Entra ID with no on-premises synchronization.
 
