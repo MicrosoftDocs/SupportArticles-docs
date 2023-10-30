@@ -10,7 +10,7 @@ ms.subservice: enterprise-users
 
 This article describes an issue in which changes to domain-based filtering in the Active Directory management agent or the Active Directory Connector fail to sync.
 
-_Original product version:_ &nbsp; Azure Active Directory, Cloud Services (Web roles/Worker roles), Microsoft Intune, Azure Backup, Office 365 Identity Management  
+_Original product version:_ &nbsp; Microsoft Entra ID, Cloud Services (Web roles/Worker roles), Microsoft Intune, Azure Backup, Office 365 Identity Management  
 _Original KB number:_ &nbsp; 2998261
 
 ## Symptoms

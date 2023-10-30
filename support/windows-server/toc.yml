@@ -138,7 +138,7 @@
       href: ./identity/restore-iis-clean-up-active-directory.md
     - name: Troubleshoot AD FS 2.0 error
       href: ./identity/adfs-2-error-access-is-denied.md
-    - name: Troubleshoot AD FS issues in Azure Active Directory
+    - name: Troubleshoot AD FS issues in Microsoft Entra ID
       href: ./identity/troubleshoot-ad-fs-issues.md
   - name: Active Directory FSMO
     items:

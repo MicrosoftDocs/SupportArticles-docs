@@ -1,17 +1,17 @@
 ---
-title: Fix user creation and deletion issues in Azure Active Directory
-description: Troubleshoot user creation and deletion issues in Azure Active Directory. Create and delete users in Azure portal, Microsoft Graph, PowerShell, and Azure CLI.
+title: Fix user creation and deletion issues in Microsoft Entra ID
+description: Troubleshoot user creation and deletion issues in Microsoft Entra ID. Create and delete users in Azure portal, Microsoft Graph, PowerShell, and Azure CLI.
 ms.date: 12/15/2021
 ms.reviewer: tovascon, anhorta, v-leedennis
 ms.service: active-directory
 ms.subservice: domain-services
 ms.custom: devx-track-azurecli, has-azure-ad-ps-ref
 keywords:
-#Customer intent: As an Azure Active Directory Global Administrator or User Administrator, I want create and delete users so that I can manage the current user list and let users access Azure services.
+#Customer intent: As a Microsoft Entra Global Administrator or User Administrator, I want create and delete users so that I can manage the current user list and let users access Azure services.
 ---
-# Troubleshoot user creation and deletion issues in Azure Active Directory
+# Troubleshoot user creation and deletion issues in Microsoft Entra ID
 
-This article outlines the methods in Azure Active Directory (Azure AD) you can use to:
+This article outlines the methods in Microsoft Entra ID you can use to:
 
 - Create a user.
 - Delete a user.
@@ -26,18 +26,18 @@ This article outlines the methods in Azure Active Directory (Azure AD) you can u
 
 ## Methods for user creation and deletion
 
-Azure AD has many methods for creating and deleting users, such as:
+Microsoft Entra ID has many methods for creating and deleting users, such as:
 
 - [Azure portal](https://portal.azure.com)
 - [Microsoft Graph REST API](/graph/use-the-api)
 - [Azure PowerShell](/powershell/azure/what-is-azure-powershell)
 - [Azure CLI](/cli/azure/what-is-azure-cli)
 
-These methods refer to users who are created directly in Azure AD. The article doesn't cover users who are created elsewhere and then synced to Azure AD or business-to-business scenarios.
+These methods refer to users who are created directly in Microsoft Entra ID. The article doesn't cover users who are created elsewhere and then synced to Microsoft Entra ID or business-to-business scenarios.
 
 ## Create a user
 
-Select a method to create a user in Azure AD.
+Select a method to create a user in Microsoft Entra ID.
 
 ## [Azure portal](#tab/azure-portal)
 
@@ -45,7 +45,7 @@ To add a new user in the Azure portal:
 
 1. In the [Azure portal](https://portal.azure.com), sign in as a Global Administrator or a User Administrator.
 
-1. Search for and select **Azure Active Directory**.
+1. Search for and select **Microsoft Entra ID**.
 
 1. Select **Users**, and then select **New user**.
 
@@ -55,7 +55,7 @@ To add a new user in the Azure portal:
 
 1. Select **Create**.
 
-For more information, see [Add or delete users - Azure Active Directory](/azure/active-directory/fundamentals/add-users-azure-active-directory).
+For more information, see [Add or delete users - Microsoft Entra ID](/azure/active-directory/fundamentals/add-users-azure-active-directory).
 
 ## [Microsoft Graph](#tab/microsoft-graph)
 
@@ -106,7 +106,7 @@ az ad user create --display-name "<New User>" \
 
 ## Delete a user
 
-Select a method to delete a user in Azure AD.
+Select a method to delete a user in Microsoft Entra ID.
 
 ## [Azure portal](#tab/azure-portal)
 
@@ -114,15 +114,15 @@ To delete a user in the Azure portal:
 
 1. In the [Azure portal](https://portal.azure.com), sign in as a Global Administrator or a User Administrator.
 
-1. Search for and select **Azure Active Directory**.
+1. Search for and select **Microsoft Entra ID**.
 
 1. Select **Users**.
 
-1. Search for and select the user you want to delete from your Azure AD tenant (for example, **Mary Parker**).
+1. Search for and select the user you want to delete from your Microsoft Entra tenant (for example, **Mary Parker**).
 
 1. Select **Delete user**.
 
-The user is deleted and no longer appears on the **Users - All users** page. You can view the user on the **Deleted users** page for the next 30 days. You may also restore the deleted user during that time. For more information about restoring a user, see [Restore or remove a recently deleted user using Azure Active Directory](/azure/active-directory/fundamentals/active-directory-users-restore).
+The user is deleted and no longer appears on the **Users - All users** page. You can view the user on the **Deleted users** page for the next 30 days. You may also restore the deleted user during that time. For more information about restoring a user, see [Restore or remove a recently deleted user using Microsoft Entra ID](/azure/active-directory/fundamentals/active-directory-users-restore).
 
 After you delete a user, any licenses that the user consumes are made available for other users.
 
@@ -160,33 +160,33 @@ az ad user delete --id "<NewUser@contoso.onmicrosoft.com>"
 
 ## Create users in bulk
 
-For more information about creating or deleting users in bulk, see [Bulk create users in Azure Active Directory](/azure/active-directory/enterprise-users/users-bulk-add).
+For more information about creating or deleting users in bulk, see [Bulk create users in Microsoft Entra ID](/azure/active-directory/enterprise-users/users-bulk-add).
 
 ## Permissions required to manage users with a service principal
 
-If you want to automate the creation and deletion of your Azure Active Directory users on Microsoft Graph, your application needs the following permissions:
+If you want to automate the creation and deletion of your Microsoft Entra users on Microsoft Graph, your application needs the following permissions:
 
 - [User.ReadWrite.All](/graph/permissions-reference#user-permissions)
 - [Directory.ReadWrite.All](/graph/permissions-reference#directory-permissions)
 
-For more information about who can manage each aspect of user management, see [Least privileged roles by task in Azure Active Directory&mdash;Users](/azure/active-directory/roles/delegate-by-task#users).
+For more information about who can manage each aspect of user management, see [Least privileged roles by task in Microsoft Entra ID&mdash;Users](/azure/active-directory/roles/delegate-by-task#users).
 
 ## Error messages and remediation actions
 
-The following table contains a list of common error messages when you attempt to create or delete a user in Azure Active Directory (Azure AD), and describes the proper remediation actions for them. The error messages are as shown for the Microsoft Graph REST API, Azure PowerShell, or Azure CLI. Similar, but briefer error messages are shown in the Azure portal, and the remedial actions are identical.
+The following table contains a list of common error messages when you attempt to create or delete a user in Microsoft Entra ID, and describes the proper remediation actions for them. The error messages are as shown for the Microsoft Graph REST API, Azure PowerShell, or Azure CLI. Similar, but briefer error messages are shown in the Azure portal, and the remedial actions are identical.
 
 | Error message | Action |
 | ------------- | ------ |
-| *Another object with the same value for property userPrincipalName already exists.* | Make the user principal name (UPN) unique. This error occurs when the administrator attempts to create a user with an existing user name in Azure AD. For more information, see [User name policies](/azure/active-directory/authentication/concept-sspr-policy#userprincipalname-policies-that-apply-to-all-user-accounts). |
+| *Another object with the same value for property userPrincipalName already exists.* | Make the user principal name (UPN) unique. This error occurs when the administrator attempts to create a user with an existing user name in Microsoft Entra ID. For more information, see [User name policies](/azure/active-directory/authentication/concept-sspr-policy#userprincipalname-policies-that-apply-to-all-user-accounts). |
 | *Insufficient privileges to complete the operation.* | Find a Global Administrator or a User Administrator to add or delete the user. This error occurs when the security principal tries to create or delete users, but doesn't have the needed permissions. A Global admin can create or delete any user, including other admins. A User admin can create users and delete any non-admin users, Helpdesk administrators, and other User admins. |
 | *Property userPrincipalName is invalid.* | See [User name policies](/azure/active-directory/authentication/concept-sspr-policy#userprincipalname-policies-that-apply-to-all-user-accounts) for a list of allowed and disallowed characters. This error occurs when you create a new user with unacceptable characters in the UPN. The user name and email address properties also can't contain accent characters. |
-| *The specified password does not comply with password complexity requirements. Please provide a different password.* | Avoid using a password that: <ul><li>Doesn't follow the [Azure AD password policies](/azure/active-directory/authentication/concept-sspr-policy#password-policies-that-only-apply-to-cloud-user-accounts). </li><li>Is on the [custom banned password list](/azure/active-directory/authentication/concept-password-ban-bad#custom-banned-password-list). </li><li>Contains the user name of the user. </li></ul> |
-| *The domain portion of the userPrincipalName property is invalid. You must use one of the verified domain names in your organization.* | Make sure the domain you're using to create the user [is on the list of verified domains in the Azure AD portal](/azure/active-directory/fundamentals/add-custom-domain#verify-your-custom-domain-name). The status of the domain needs to be **Verified**. If you've verified the domain status, see whether the domain is **Federated** (has a checkmark) or **Managed** (doesn't have a checkmark). You can only create users in Azure AD for managed domains. For federated domains, you must create the user on the identity provider (IdP), and then sync to Azure AD. [You can't assign a federated domain to a user](/office365/troubleshoot/domain-management/cannot-assign-federated-domain-to-user). |
+| *The specified password does not comply with password complexity requirements. Please provide a different password.* | Avoid using a password that: <ul><li>Doesn't follow the [Microsoft Entra password policies](/azure/active-directory/authentication/concept-sspr-policy#password-policies-that-only-apply-to-cloud-user-accounts). </li><li>Is on the [custom banned password list](/azure/active-directory/authentication/concept-password-ban-bad#custom-banned-password-list). </li><li>Contains the user name of the user. </li></ul> |
+| *The domain portion of the userPrincipalName property is invalid. You must use one of the verified domain names in your organization.* | Make sure the domain you're using to create the user [is on the list of verified domains in the Microsoft Entra admin center](/azure/active-directory/fundamentals/add-custom-domain#verify-your-custom-domain-name). The status of the domain needs to be **Verified**. If you've verified the domain status, see whether the domain is **Federated** (has a checkmark) or **Managed** (doesn't have a checkmark). You can only create users in Microsoft Entra ID for managed domains. For federated domains, you must create the user on the identity provider (IdP), and then sync to Microsoft Entra ID. [You can't assign a federated domain to a user](/office365/troubleshoot/domain-management/cannot-assign-federated-domain-to-user). |
 
 ## Directory quotas
 
-For the Free edition of Azure AD, you can create a maximum of 50,000 Azure AD resources in a single tenant by default. If you use at least one verified domain, the default Azure AD service quota for your organization is extended to 300,000 Azure AD resources. For organizations that are created by self-service sign-up, the Azure AD service quota remains 50,000 Azure AD resources. This limit applies even if you made an internal admin takeover and converted the organization to a managed tenant with one or more verified domains. This service limit is unrelated to the pricing tier limit of 500,000 resources on the Azure AD pricing page. To go beyond the default quota, you must contact Microsoft Support.
+For the Free edition of Microsoft Entra ID, you can create a maximum of 50,000 Microsoft Entra resources in a single tenant by default. If you use at least one verified domain, the default Microsoft Entra service quota for your organization is extended to 300,000 Microsoft Entra resources. For organizations that are created by self-service sign-up, the Microsoft Entra service quota remains 50,000 Microsoft Entra resources. This limit applies even if you made an internal admin takeover and converted the organization to a managed tenant with one or more verified domains. This service limit is unrelated to the pricing tier limit of 500,000 resources on the Microsoft Entra pricing page. To go beyond the default quota, you must contact Microsoft Support.
 
-For more information, see [Azure AD service limits and restrictions](/azure/active-directory/enterprise-users/directory-service-limits-restrictions).
+For more information, see [Microsoft Entra service limits and restrictions](/azure/active-directory/enterprise-users/directory-service-limits-restrictions).
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

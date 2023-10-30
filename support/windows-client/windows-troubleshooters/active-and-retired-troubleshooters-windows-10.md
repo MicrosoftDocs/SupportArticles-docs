@@ -22,7 +22,7 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 ## Access work or school troubleshooter for restoring access to M365 desktop applications
 
 Text displayed in Settings:  
-The troubleshooter checks if the Microsoft.AAD.BrokerPlugin package is missing. If so, it installs the package.
+The troubleshooter checks if the `Microsoft.AAD.BrokerPlugin` package is missing. If so, it installs the package.
 
 ### Description
 
@@ -32,7 +32,7 @@ This troubleshooter runs automatically on devices to meet the following criteria
 
 - Runs Windows 10, 20H1
 - Enterprise and Pro SKUs of Microsoft 365
-- Missing the package Microsoft.AAD.BrokerPlugin.
+- Missing the package `Microsoft.AAD.BrokerPlugin`
 
 |Activation date|Retirement date|More information|
 |---|---|---|

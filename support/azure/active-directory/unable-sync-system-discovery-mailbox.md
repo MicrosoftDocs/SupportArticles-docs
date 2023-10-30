@@ -10,7 +10,7 @@ ms.subservice: enterprise-users
 
 This article provides information about resolve a problem in which you receive errors when trying to use the Azure Active Directory Sync tool to synchronize the SystemMailbox and DiscoverySearchMailbox user accounts.
 
-_Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Azure Active Directory, Microsoft Intune, Azure Backup, Office 365 Identity Management  
+_Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 Identity Management  
 _Original KB number:_ &nbsp; 2804688
 
 ## Symptoms
