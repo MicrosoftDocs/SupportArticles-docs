@@ -27,11 +27,11 @@ When you try to create an Azure RM automatic subscription-based service connecti
 
 Check the behavior on the billing page (**Organization settings > Billing > Change billing**).
 
-This problem occurs if a Microsoft Entra ID refresh token expires.
+This problem occurs if a Microsoft Entra refresh token expires.
 
 ### Cause
 
-This scenario might occur if multi-factor authentication (MFA) is enabled in the Microsoft Entra directory (Microsoft Entra ID) to which the subscription is linked. This resolution fixes the issue for MFA-enabled Microsoft Entra ID. Alternatively, as a quick workaround, you can disable MFA.
+This scenario might occur if multi-factor authentication (MFA) is enabled in the Microsoft Entra ID to which the subscription is linked. This resolution fixes the issue for MFA-enabled Microsoft Entra ID. Alternatively, as a quick workaround, you can disable MFA.
 
 ### Resolution
 
