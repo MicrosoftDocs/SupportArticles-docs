@@ -1,26 +1,26 @@
 ---
-title: Azure AD Hybrid Sync Agent Installation Issues - No privileges to install MSI
-description: This troubleshooting guide focuses on when you have no privileges to install MSI. It helps unblock you to install the Azure AD Connect Provisioning Agent.
+title: Microsoft Entra Hybrid Sync Agent Installation Issues - No privileges to install MSI
+description: This troubleshooting guide focuses on when you have no privileges to install MSI. It helps unblock you to install the Microsoft Entra Connect Provisioning Agent.
 ms.date: 10/13/2021
 ms.service: active-directory
 ms.subservice: hybrid
 ---
 
-# Azure AD Hybrid Sync Agent Installation Issues - No privileges to install MSI
+# Microsoft Entra Hybrid Sync Agent Installation Issues - No privileges to install MSI
 
-This troubleshooting guide focuses on when you don't have privileges to install MSI. Without these privileges, you may be unable to successfully install the Azure AD Connect Provisioning Agent.
+This troubleshooting guide focuses on when you don't have privileges to install MSI. Without these privileges, you may be unable to successfully install the Microsoft Entra Connect Provisioning Agent.
 
 ## Prerequisites
 
-To install *Cloud Provisioning Agent*, the following prerequisites are required: [Prerequisites for Azure AD Connect cloud sync](/azure/active-directory/cloud-sync/how-to-prerequisites).
+To install *Cloud Provisioning Agent*, the following prerequisites are required: [Prerequisites for Microsoft Entra Connect cloud sync](/azure/active-directory/cloud-sync/how-to-prerequisites).
 
 ## No privileges to install MSI
 
 While installing Cloud Provisioning Agent, you may get the following error:
 
-> Service 'Microsoft Azure AD Connect Provisioning Agent' (AADConnectProvisioningAgent) failed to start. Verify that you have sufficient privileges to start system services.
+> Service 'Microsoft Entra Connect Provisioning Agent' (AADConnectProvisioningAgent) failed to start. Verify that you have sufficient privileges to start system services.
 
-:::image type="content" source="media/azure-ad-hybrid-sync-no-privileges-install-msi/1-provisioning-agent-failed-start.png" alt-text="Screenshot of error when installing Microsoft Azure A D Connect Provisioning Agent, about how the Connect Provisioning Agent service failed to start." border="true":::
+:::image type="content" source="media/azure-ad-hybrid-sync-no-privileges-install-msi/1-provisioning-agent-failed-start.png" alt-text="Screenshot of error when installing Microsoft Entra Connect Provisioning Agent, about how the Connect Provisioning Agent service failed to start." border="true":::
 
 To verify that you have sufficient privileges:
 

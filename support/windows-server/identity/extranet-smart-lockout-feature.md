@@ -157,7 +157,7 @@ AD FS provides three cmdlets to manage user account activity data. These cmdlets
     Update the account activity for a user account. This can be used to add new familiar locations or erase state for any account.
 
     ```powershell
-    Set-ADFSAccountActivityuser@contoso.com -FamiliarLocation "1.2.3.4"
+    Set-ADFSAccountActivity user@contoso.com -FamiliarLocation "1.2.3.4"
     ```
 
 - `Reset-ADFSAccountLockout`
@@ -165,7 +165,7 @@ AD FS provides three cmdlets to manage user account activity data. These cmdlets
     Resets the lockout counter for a user account.
 
     ```powershell
-    Reset-ADFSAccountLockoutuser@contoso.com -Familiar
+    Reset-ADFSAccountLockout user@contoso.com -Familiar
     ```
 
 ## Troubleshooting

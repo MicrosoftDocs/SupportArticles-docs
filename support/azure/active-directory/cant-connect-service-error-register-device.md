@@ -8,7 +8,7 @@ ms.subservice: hybrid
 ---
 # Error when you try to register a device: Can't connect to the service
 
-_Original product version:_ &nbsp; Windows 8.1 Enterprise, Windows Server 2012 R2 Standard, Windows Server 2012 R2 Datacenter, Azure Active Directory  
+_Original product version:_ &nbsp; Windows 8.1 Enterprise, Windows Server 2012 R2 Standard, Windows Server 2012 R2 Datacenter, Microsoft Entra ID  
 _Original KB number:_ &nbsp; 3045378
 
 ## Symptoms

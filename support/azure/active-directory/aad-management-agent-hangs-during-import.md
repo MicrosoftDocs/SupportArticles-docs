@@ -1,6 +1,6 @@
 ---
-title: Azure AD Management Agent hangs during Full Import or Delta Import
-description: Provides a resolution to an issue in which the Azure AD Management Agent stops responding with error System.Collections.Generic.KeyNotFoundException.
+title: Microsoft Entra Management Agent hangs during Full Import or Delta Import
+description: Provides a resolution to an issue in which the Microsoft Entra Management Agent stops responding with error System.Collections.Generic.KeyNotFoundException.
 ms.date: 10/10/2020
 ms.service: active-directory
 ms.author: genli
@@ -8,16 +8,16 @@ author: genlin
 ms.reviewer: 
 ms.subservice: enterprise-users
 ---
-# Azure AD Management Agent hangs during Full Import or Delta Import with error: System.Collections.Generic.KeyNotFoundException
+# Microsoft Entra Management Agent hangs during Full Import or Delta Import with error: System.Collections.Generic.KeyNotFoundException
 
-This article provides a resolution to an issue in which the Azure Active Directory (Azure AD) Management Agent stops responding with error System.Collections.Generic.KeyNotFoundException.
+This article provides a resolution to an issue in which the Microsoft Entra Management Agent stops responding with error System.Collections.Generic.KeyNotFoundException.
 
 _Original product version:_ &nbsp; Active Directory  
 _Original KB number:_ &nbsp; 3096482
 
 ## Symptoms
 
-When you run a Full Import or a Delta Import on the Microsoft Azure AD Connector, one of the following actions occur:
+When you run a Full Import or a Delta Import on the Microsoft Entra Connector, one of the following actions occur:
 
 - The following error is logged in the Application log:
 
@@ -53,8 +53,8 @@ When you run a Full Import or a Delta Import on the Microsoft Azure AD Connector
 
 To resolve this problem, select the missing object type (**device**). To do this, follow these steps:
 
-1. Open Management Agent for the Azure AD directory in the Forefront Identity Manager (FIM) Sync console.
-2. Click **Connectors**, and then click **Azure Active Directory**.
+1. Open Management Agent for the Microsoft Entra directory in the Forefront Identity Manager (FIM) Sync console.
+2. Click **Connectors**, and then click **Microsoft Entra ID**.
 3. In the **Actions** pane, click **Properties**.
 
     > [!NOTE]

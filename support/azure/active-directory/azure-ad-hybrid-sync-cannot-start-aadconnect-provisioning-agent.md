@@ -1,30 +1,30 @@
 ---
-title: Azure AD Hybrid Sync Agent Installation Issues - Cannot start service AADConnectProvisioningAgent
-description: This troubleshooting guide focuses on when you can't start service AADConnectProvisioningAgent. It unblocks you to install Azure AD Connect Provisioning Agent.
+title: Microsoft Entra Hybrid Sync Agent Installation Issues - Cannot start service AADConnectProvisioningAgent
+description: This troubleshooting guide focuses on when you can't start service AADConnectProvisioningAgent. It unblocks you to install Microsoft Entra Connect Provisioning Agent.
 ms.date: 10/13/2021
 ms.service: active-directory
 ms.subservice: hybrid
 ---
 
-# Azure AD Hybrid Sync Agent Installation Issues - Cannot start service AADConnectProvisioningAgent
+# Microsoft Entra Hybrid Sync Agent Installation Issues - Cannot start service AADConnectProvisioningAgent
 
-This troubleshooting guide focuses on when you can't start the AADConnectProvisioningAgent service. This problem may block you from installing the Azure AD Connect Provisioning Agent successfully.
+This troubleshooting guide focuses on when you can't start the AADConnectProvisioningAgent service. This problem may block you from installing the Microsoft Entra Connect Provisioning Agent successfully.
 
 ## Prerequisites
 
-To install *Cloud Provisioning Agent*, the following prerequisites are required: [Prerequisites for Azure AD Connect cloud sync](/azure/active-directory/cloud-sync/how-to-prerequisites).
+To install *Cloud Provisioning Agent*, the following prerequisites are required: [Prerequisites for Microsoft Entra Connect cloud sync](/azure/active-directory/cloud-sync/how-to-prerequisites).
 
 ## Cannot start service AADConnectProvisioningAgent
 
 While installing Cloud Provisioning Agent, you may get the following error:
 
-> Service 'Microsoft Azure AD Connect Provisioning Agent' (AADConnectProvisioningAgent) failed to start. Verify that you have sufficient privileges to start system services.
+> Service 'Microsoft Entra Connect Provisioning Agent' (AADConnectProvisioningAgent) failed to start. Verify that you have sufficient privileges to start system services.
 
-:::image type="content" source="media/azure-ad-hybrid-sync-cannot-start-aadconnect-provisioning-agent/1-aad-connect-provision-agent-failed.png" alt-text="Screenshot of error when installing Microsoft Azure AD Connect Provisioning Agent, about how the Connect Provisioning Agent service failed to start." border="true":::
+:::image type="content" source="media/azure-ad-hybrid-sync-cannot-start-aadconnect-provisioning-agent/1-aad-connect-provision-agent-failed.png" alt-text="Screenshot of error when installing Microsoft Entra Connect Provisioning Agent, about how the Connect Provisioning Agent service failed to start." border="true":::
 
 Assign domain administrator credentials to the **AADConnectProvisioningAgent** service, as shown in [How to troubleshoot agent failed to start](/azure/active-directory/cloud-sync/how-to-troubleshoot#agent-failed-to-start).
 
-:::image type="content" source="media/azure-ad-hybrid-sync-cannot-start-aadconnect-provisioning-agent/2-provisioning-agent-properties.png" alt-text="Screenshot of the 'Log On' tab of the Microsoft Azure AD Connect Provisioning Agent Properties window, including the account and password entries." border="true":::
+:::image type="content" source="media/azure-ad-hybrid-sync-cannot-start-aadconnect-provisioning-agent/2-provisioning-agent-properties.png" alt-text="Screenshot of the 'Log On' tab of the Microsoft Entra Connect Provisioning Agent Properties window, including the account and password entries." border="true":::
 
 After assigning credentials to the service, you may still be unable to complete the installation wizard, and receive the following error message:
 
