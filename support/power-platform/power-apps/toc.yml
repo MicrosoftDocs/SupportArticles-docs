@@ -16,6 +16,8 @@ items:
           href: create-and-use-apps/filter-blank-records.md
         - name: Lookup doesn't filter records for particular entity
           href: create-and-use-apps/lookup-does-not-filter-entity-records.md
+        - name: Refresh All doesn't work after exporting app data to a dynamic worksheet
+          href: create-and-use-apps/export-dynamic-worksheet-refresh-all.md
         - name: Ribbons and Command bar
           items:
             - name: Ribbon issues
@@ -62,6 +64,10 @@ items:
           href: isolate-and-troubleshoot-common-issues/isolate-canvas-app-issues.md
         - name: Isolate issues in model-driven apps
           href: isolate-and-troubleshoot-common-issues/isolate-model-app-issues.md
+        - name: Troubleshoot date and time issues in canvas apps
+          href: isolate-and-troubleshoot-common-issues/troubleshoot-canvas-app-date-time-issues.md
+        - name: Troubleshoot date and time issues in model-driven apps
+          href: isolate-and-troubleshoot-common-issues/troubleshoot-model-driven-app-date-time-issues.md
         - name: Troubleshoot Power Query
           href: isolate-and-troubleshoot-common-issues/troubleshoot-power-query-issues.md
         - name: Troubleshoot startup issues for Power Apps

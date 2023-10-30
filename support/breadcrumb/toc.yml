@@ -164,6 +164,9 @@ items:
       - name: Dynamics 365 Finance
         tocHref: /troubleshoot/dynamics-365/finance/
         topicHref: /troubleshoot/dynamics-365/finance/welcome-finance
+      - name: Dynamics 365 Field Service
+        tocHref: /troubleshoot/dynamics-365/field-service/
+        topicHref: /troubleshoot/dynamics-365/field-service/welcome-field-service
       - name: Dynamics 365 Sales
         tocHref: /troubleshoot/dynamics-365/sales/
         topicHref: /troubleshoot/dynamics-365/sales/welcome-sales
