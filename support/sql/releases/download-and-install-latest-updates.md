@@ -190,8 +190,8 @@ Each of the following links provides information for all of the applicable produ
 | 13.0.5598.27            | SP2          | CU11                     | [KB4527378](sqlserver-2016/servicepack2-cumulativeupdate11.md) | December 09, 2019  |
 | 13.0.5492.2             | SP2          | CU10                     | [KB4524334](sqlserver-2016/servicepack2-cumulativeupdate10.md) | October 08, 2019   |
 | 13.0.5426.0             | SP2          | CU8                      | [KB4505830](sqlserver-2016/servicepack2-cumulativeupdate8.md) | July 31, 2019      |
-| 13.0.5366.0             | SP2          | CU7 + GDR                | [KB4505222](https://support.microsoft.com/help/4505222) | July 9, 2019       |
-| 13.0.5101.9             | SP2          | GDR                      | [KB4505220](https://support.microsoft.com/help/4505220) | July 9, 2019       |
+| 13.0.5366.0             | SP2          | CU7 + GDR                | [KB4505222](https://support.microsoft.com/help/4505222) | July 09, 2019       |
+| 13.0.5101.9             | SP2          | GDR                      | [KB4505220](https://support.microsoft.com/help/4505220) | July 09, 2019       |
 | 13.0.5337.0             | SP2          | CU7                      | [KB4495256](sqlserver-2016/servicepack2-cumulativeupdate7.md) | May 22, 2019       |
 | 13.0.5292.0             | SP2          | CU6                      | [KB4488536](sqlserver-2016/servicepack2-cumulativeupdate6.md) | March 19, 2019     |
 | 13.0.5264.1             | SP2          | CU5                      | [KB4475776](sqlserver-2016/servicepack2-cumulativeupdate5.md) | January 23, 2019   |
@@ -202,8 +202,8 @@ Each of the following links provides information for all of the applicable produ
 | 13.0.5153.0             | SP2          | CU2                      | [KB4340355](sqlserver-2016/servicepack2-cumulativeupdate2.md) | July 16 2018       |
 | 13.0.5149.0             | SP2          | CU1                      | [KB4135048](sqlserver-2016/servicepack2-cumulativeupdate1.md) | May 30, 2018       |
 | 13.0.5026.0             | SP2          | RTW/PCU2                 | [KB4052908](sqlserver-2016/servicepack2.md) | April 24, 2018     |
-| 13.0.4604.0             | SP1          | CU15 + GDR               | [KB4505221](https://support.microsoft.com/help/4505221) | July 9, 2019       |
-| 13.0.4259.0             | SP1          | GDR                      | [KB4505219](https://support.microsoft.com/help/4505219) | July 9, 2019       |
+| 13.0.4604.0             | SP1          | CU15 + GDR               | [KB4505221](https://support.microsoft.com/help/4505221) | July 09, 2019       |
+| 13.0.4259.0             | SP1          | GDR                      | [KB4505219](https://support.microsoft.com/help/4505219) | July 09, 2019       |
 | 13.0.4574.0             | SP1          | CU15                     | [KB4495257](sqlserver-2016/servicepack1-cumulativeupdate15.md) | May 16, 2019       |
 | 13.0.4560.0             | SP1          | CU14                     | [KB4488535](sqlserver-2016/servicepack1-cumulativeupdate14.md) | March 19, 2019     |
 | 13.0.4550.1             | SP1          | CU13                     | [KB4475775](sqlserver-2016/servicepack1-cumulativeupdate13.md) | January 23, 2019   |
@@ -218,25 +218,25 @@ Each of the following links provides information for all of the applicable produ
 | 13.0.4210.6             | SP1          | GDR                      | [KB4057118](https://support.microsoft.com/help/4057118) | January 3, 2018    |
 | 13.0.4457.0             | SP1          | CU6                      | [KB4037354](sqlserver-2016/servicepack1-cumulativeupdate6.md) | November 20, 2017  |
 | 13.0.4451.0             | SP1          | CU5                      | [KB4040714](sqlserver-2016/servicepack1-cumulativeupdate5.md) | September 18, 2017 |
-| 13.0.4446.0             | SP1          | CU4                      | [KB4024305](sqlserver-2016/servicepack1-cumulativeupdate4.md) | August 8, 2017     |
-| 13.0.4206.0             | SP1          | GDR                      | [KB4019089](https://support.microsoft.com/help/4019089) | August 8, 2017     |
+| 13.0.4446.0             | SP1          | CU4                      | [KB4024305](sqlserver-2016/servicepack1-cumulativeupdate4.md) | August 08, 2017     |
+| 13.0.4206.0             | SP1          | GDR                      | [KB4019089](https://support.microsoft.com/help/4019089) | August 08, 2017     |
 | 13.0.4435.0             | SP1          | CU3                      | [KB4019916](sqlserver-2016/servicepack1-cumulativeupdate3.md) | May 15, 2017       |
 | 13.0.4422.0             | SP1          | CU2                      | [KB4013106](sqlserver-2016/servicepack1-cumulativeupdate2.md) | March 20, 2017     |
 | 13.0.4411.0             | SP1          | CU1                      | [KB3208177](sqlserver-2016/servicepack1-cumulativeupdate1.md) | January 17, 2017   |
 | 13.0.4001.0             | SP1          | RTW/PCU1                 | [KB3182545](sqlserver-2016/servicepack1.md) | November 16, 2016  |
-| 13.0.1745.2             | RTM          | GDR                      | [KB4058560](https://support.microsoft.com/help/4058560) | January 6, 2018    |
-| 13.0.2218.0             | RTM          | CU9 + GDR                | [KB4058559](https://support.microsoft.com/help/4058559) | January 6, 2018    |
+| 13.0.1745.2             | RTM          | GDR                      | [KB4058560](https://support.microsoft.com/help/4058560) | January 06, 2018    |
+| 13.0.2218.0             | RTM          | CU9 + GDR                | [KB4058559](https://support.microsoft.com/help/4058559) | January 06, 2018    |
 | 13.0.2216.0             | RTM          | CU9                      | [KB4037357](sqlserver-2016/rtm-cumulativeupdate9.md) | November 20, 2017  |
 | 13.0.2213.0             | RTM          | CU8                      | [KB4040713](sqlserver-2016/rtm-cumulativeupdate8.md) | September 18, 2017 |
-| 13.0.2210.0             | RTM          | CU7                      | [KB4024304](sqlserver-2016/rtm-cumulativeupdate7.md) | August 8, 2017     |
+| 13.0.2210.0             | RTM          | CU7                      | [KB4024304](sqlserver-2016/rtm-cumulativeupdate7.md) | August 08, 2017     |
 | 13.0.2204.0             | RTM          | CU6                      | [KB4019914](sqlserver-2016/rtm-cumulativeupdate6.md) | May 15, 2017       |
 | 13.0.2197.0             | RTM          | CU5                      | [KB4013105](sqlserver-2016/rtm-cumulativeupdate5.md) | March 20, 2017     |
 | 13.0.2193.0             | RTM          | CU4                      | [KB3205052](sqlserver-2016/rtm-cumulativeupdate4.md) | January 17, 2017   |
 | 13.0.4202.2             | RTM          | GDR                      | [KB3210089](https://support.microsoft.com/help/3210089) | December 16, 2016  |
 | 13.0.1728.2             | RTM          | CU3 + GDR                | [KB3210111](https://support.microsoft.com/help/3210111) | December 16, 2016  |
 | 13.0.2186.6             | RTM          | CU3                      | [KB3205413](sqlserver-2016/rtm-cumulativeupdate3.md) | November 16, 2016  |
-| 13.0.2186.6             | RTM          | CU3 + GDR                | [KB3194717](https://support.microsoft.com/help/3194717) | November 8, 2016   |
-| 13.0.1722.0             | RTM          | GDR                      | [KB3194716](https://support.microsoft.com/help/3194716) | November 8, 2016   |
+| 13.0.2186.6             | RTM          | CU3 + GDR                | [KB3194717](https://support.microsoft.com/help/3194717) | November 08, 2016   |
+| 13.0.1722.0             | RTM          | GDR                      | [KB3194716](https://support.microsoft.com/help/3194716) | November 08, 2016   |
 | 13.0.2164.0             | RTM          | CU2                      | [KB3182270](sqlserver-2016/rtm-cumulativeupdate2.md) | September 22, 2016 |
 | 13.0.2149.0             | RTM          | CU1                      | [KB3164674](sqlserver-2016/rtm-cumulativeupdate1.md) | July 25, 2016      |
 | 13.0.1601.5             | None         | RTM                      | NA                                                    | June 1, 2016       |
@@ -256,15 +256,15 @@ Each of the following links provides information for all of the applicable produ
 | 12.0.6372.1             | SP3          | CU4 + GDR                     | [KB4535288](https://support.microsoft.com/help/4535288) | February 11, 2020     |
 | 12.0.6118.4             | SP3          | GDR                           | [KB4532095](https://support.microsoft.com/help/4532095) | February 11, 2020     |
 | 12.0.6329.1             | SP3          | CU4                           | [KB4500181](https://support.microsoft.com/help/4500181) | July 29, 2019         |
-| 12.0.6293.0             | SP3          | CU3 + GDR                     | [KB4505422](https://support.microsoft.com/help/4505422) | July 9, 2019          |
-| 12.0.6108.1             | SP3          | GDR                           | [KB4505218](https://support.microsoft.com/help/4505218) | July 9, 2019          |
+| 12.0.6293.0             | SP3          | CU3 + GDR                     | [KB4505422](https://support.microsoft.com/help/4505422) | July 09, 2019          |
+| 12.0.6108.1             | SP3          | GDR                           | [KB4505218](https://support.microsoft.com/help/4505218) | July 09, 2019          |
 | 12.0.6259.0             | SP3          | CU3                           | [KB4491539](https://support.microsoft.com/help/4491539) | April 16, 2019        |
 | 12.0.6214.1             | SP3          | CU2                           | [KB4482960](https://support.microsoft.com/help/4482960) | February 19, 2019     |
 | 12.0.6205.1             | SP3          | CU1                           | [KB4470220](https://support.microsoft.com/help/4470220) | December 12, 2018     |
 | 12.0.6024.0             | SP3          | RTW/PCU3                      | [KB4022619](https://support.microsoft.com/help/4022619) | October 30, 2018      |
 | 12.0.5687.1             | SP2          | CU18                          | [KB4500180](https://support.microsoft.com/help/4500180) | July 29, 2019         |
-| 12.0.5659.1             | SP2          | CU17 + GDR                    | [KB4505419](https://support.microsoft.com/help/4505419) | July 9, 2019          |
-| 12.0.5223.6             | SP2          | GDR                           | [KB4505217](https://support.microsoft.com/help/4505217) | July 9, 2019          |
+| 12.0.5659.1             | SP2          | CU17 + GDR                    | [KB4505419](https://support.microsoft.com/help/4505419) | July 09, 2019          |
+| 12.0.5223.6             | SP2          | GDR                           | [KB4505217](https://support.microsoft.com/help/4505217) | July 09, 2019          |
 | 12.0.5632.1             | SP2          | CU17                          | [KB4491540](https://support.microsoft.com/help/4491540) | April 16, 2019        |
 | 12.0.5626.1             | SP2          | CU16                          | [KB4482967](https://support.microsoft.com/help/4482967) | February 19, 2019     |
 | 12.0.5605.1             | SP2          | CU15                          | [KB4469137](https://support.microsoft.com/help/4469137) | December 12, 2018     |
@@ -277,23 +277,23 @@ Each of the following links provides information for all of the applicable produ
 | 12.0.5563.0             | SP2          | CU9                           | [KB4055557](https://support.microsoft.com/help/4055557) | December 18, 2017     |
 | 12.0.5557.0             | SP2          | CU8                           | [KB4037356](https://support.microsoft.com/help/4037356) | October 16, 2017      |
 | 12.0.5556.0             | SP2          | CU7                           | [KB4032541](https://support.microsoft.com/help/4032541) | August 28, 2017       |
-| 12.0.5553.0             | SP2          | CU6                           | [KB4019094](https://support.microsoft.com/help/4019094) | August 8, 2017        |
-| 12.0.5207.0             | SP2          | GDR                           | [KB4019093](https://support.microsoft.com/help/4019093) | August 8, 2017        |
+| 12.0.5553.0             | SP2          | CU6                           | [KB4019094](https://support.microsoft.com/help/4019094) | August 08, 2017        |
+| 12.0.5207.0             | SP2          | GDR                           | [KB4019093](https://support.microsoft.com/help/4019093) | August 08, 2017        |
 | 12.0.5546.0             | SP2          | CU5                           | [KB4013098](https://support.microsoft.com/help/4013098) | April 17, 2017        |
 | 12.0.5540.0             | SP2          | CU4                           | [KB4010394](https://support.microsoft.com/help/4010394) | February 21, 2017     |
 | 12.0.5538.0             | SP2          | CU3                           | [KB3204388](https://support.microsoft.com/help/3204388) | December 19, 2016     |
-| 12.0.5532.0             | SP2          | GDR                           | [KB3194718](https://support.microsoft.com/help/3194718) | November 8, 2016      |
-| 12.0.5203.0             | SP2          | GDR                           | [KB3194714](https://support.microsoft.com/help/3194714) | November 8, 2016      |
+| 12.0.5532.0             | SP2          | GDR                           | [KB3194718](https://support.microsoft.com/help/3194718) | November 08, 2016      |
+| 12.0.5203.0             | SP2          | GDR                           | [KB3194714](https://support.microsoft.com/help/3194714) | November 08, 2016      |
 | 12.0.5522.0             | SP2          | CU2                           | [KB3188778](https://support.microsoft.com/help/3188778) | October 17, 2016      |
 | 12.0.5511.0             | SP2          | CU1                           | [KB3178925](https://support.microsoft.com/help/3178925) | August 25, 2016       |
 | 12.0.5000.0             | SP2          | RTW/PCU2                      | [KB3171021](https://support.microsoft.com/help/3171021) | July 11, 2016         |
-| 12.0.4522.0             | SP1          | CU13                          | [KB4019099](https://support.microsoft.com/help/4019099) | August 8, 2017        |
-| 12.0.4237.0             | SP1          | GDR                           | [KB4019091](https://support.microsoft.com/help/4019091) | August 8, 2017        |
+| 12.0.4522.0             | SP1          | CU13                          | [KB4019099](https://support.microsoft.com/help/4019099) | August 08, 2017        |
+| 12.0.4237.0             | SP1          | GDR                           | [KB4019091](https://support.microsoft.com/help/4019091) | August 08, 2017        |
 | 12.0.4511.0             | SP1          | CU12                          | [KB4017793](https://support.microsoft.com/help/4017793) | April 17, 2017        |
 | 12.0.4502.0             | SP1          | CU11                          | [KB4010392](https://support.microsoft.com/help/4010392) | February 21, 2017     |
 | 12.0.4491.0             | SP1          | CU10                          | [KB3204399](https://support.microsoft.com/help/3204399) | December 19, 2016     |
-| 12.0.4487.0             | SP1          | GDR                           | [KB3194722](https://support.microsoft.com/help/3194722) | November 8, 2016      |
-| 12.0.4232.0             | SP1          | GDR                           | [KB3194720](https://support.microsoft.com/help/3194720) | November 8, 2016      |
+| 12.0.4487.0             | SP1          | GDR                           | [KB3194722](https://support.microsoft.com/help/3194722) | November 08, 2016      |
+| 12.0.4232.0             | SP1          | GDR                           | [KB3194720](https://support.microsoft.com/help/3194720) | November 08, 2016      |
 | 12.0.4474.0             | SP1          | CU9                           | [KB3186964](https://support.microsoft.com/help/3186964) | October 17, 2016      |
 | 12.0.4468.0             | SP1          | CU8                           | [KB3174038](https://support.microsoft.com/help/3174038) | August 15, 2016       |
 | 12.0.4459.0             | SP1          | CU7                           | [KB3162659](https://support.microsoft.com/help/3162659) | June 20, 2016         |
@@ -337,16 +337,16 @@ Each of the following links provides information for all of the applicable produ
 | 11.0.6614.2             | SP3          | QFE Security Update           | [KB4057121](https://support.microsoft.com/help/4057121) | January 16, 2018   |
 | 11.0.6260.1             | SP3          | GDR Security Update           | [KB4057115](https://support.microsoft.com/help/4057115) | January 16, 2018   |
 | 11.0.7001.0             | SP4          | RTW/PCU4                      | [KB4018073](https://support.microsoft.com/help/4018073) | October 2, 2017    |
-| 11.0.6607.3             | SP3          | CU10                          | [KB4025925](https://support.microsoft.com/help/4025925) | August 8, 2017     |
-| 11.0.6251.0             | SP3          | QFE Security Update           | [KB4019092](https://support.microsoft.com/help/4019092) | August 8, 2017     |
+| 11.0.6607.3             | SP3          | CU10                          | [KB4025925](https://support.microsoft.com/help/4025925) | August 08, 2017     |
+| 11.0.6251.0             | SP3          | QFE Security Update           | [KB4019092](https://support.microsoft.com/help/4019092) | August 08, 2017     |
 | 11.0.6598.0             | SP3          | CU9                           | [KB4016762](https://support.microsoft.com/help/4016762) | May 15, 2017       |
 | 11.0.6594.0             | SP3          | CU8                           | [KB4013104](https://support.microsoft.com/help/4013104) | March 20, 2017     |
 | 11.0.6579.0             | SP3          | CU7                           | [KB3205051](https://support.microsoft.com/help/3205051) | January 17, 2017   |
 | 11.0.6567.0             | SP3          | CU6                           | [KB3194992](https://support.microsoft.com/help/3194992) | November 17, 2016  |
-| 11.0.6248.0             | SP3          | MS16-136 GDR Security Update  | [KB3194721](https://support.microsoft.com/help/3194721) | November 8, 2016   |
-| 11.0.6567.0             | SP3          | MS16-136 QFE Security Update  | [KB3194724](https://support.microsoft.com/help/3194724) | November 8, 2016   |
-| 11.0.5388.0             | SP2          | MS16-136 GDR Security Update  | [KB3194719](https://support.microsoft.com/help/3194719) | November 8, 2016   |
-| 11.0.5676.0             | SP3          | MS16-136 QFE Security Update  | [KB3194725](https://support.microsoft.com/help/3194725) | November 8, 2016   |
+| 11.0.6248.0             | SP3          | MS16-136 GDR Security Update  | [KB3194721](https://support.microsoft.com/help/3194721) | November 08, 2016   |
+| 11.0.6567.0             | SP3          | MS16-136 QFE Security Update  | [KB3194724](https://support.microsoft.com/help/3194724) | November 08, 2016   |
+| 11.0.5388.0             | SP2          | MS16-136 GDR Security Update  | [KB3194719](https://support.microsoft.com/help/3194719) | November 08, 2016   |
+| 11.0.5676.0             | SP3          | MS16-136 QFE Security Update  | [KB3194725](https://support.microsoft.com/help/3194725) | November 08, 2016   |
 | 11.0.6544.0             | SP3          | CU5                           | [KB3180915](https://support.microsoft.com/help/3180915) | September 19, 2016 |
 | 11.0.6540.0             | SP3          | CU4                           | [KB3165264](https://support.microsoft.com/help/3165264) | July 18, 2016      |
 | 11.0.6537.0             | SP3          | CU3                           | [KB3152635](https://support.microsoft.com/help/3152635) | May 16, 2016       |
@@ -389,25 +389,25 @@ Each of the following links provides information for all of the applicable produ
 | 11.0.3321.0             | SP1          | CU1                           | [KB2765331](https://support.microsoft.com/help/2765331) | November 20, 2012  |
 | 11.0.3156.0             | SP1          | MS15-058: GDR Security Update | [KB3045318](https://support.microsoft.com/help/3045318) | July 14, 2015      |
 | 11.0.3153.0             | SP1          | MS14-044: GDR Security Update | [KB2977326](https://support.microsoft.com/help/2977326) | August 12, 2014    |
-| 11.0.3000.0             | SP1          | RTW/PCU1                      | [KB2674319](https://support.microsoft.com/help/2674319) | November 7, 2012   |
+| 11.0.3000.0             | SP1          | RTW/PCU1                      | [KB2674319](https://support.microsoft.com/help/2674319) | November 07, 2012   |
 | 11.0.2424.0             | RTM          | CU11                          | [KB2908007](https://support.microsoft.com/help/2908007) | December 16, 2013  |
 | 11.0.2420.0             | RTM          | CU10                          | [KB2891666](https://support.microsoft.com/help/2891666) | October 21, 2013   |
 | 11.0.2401.0             | RTM          | CU6                           | [KB2728897](https://support.microsoft.com/help/2728897) | February 18, 2013  |
 | 11.0.2395.0             | RTM          | CU5                           | [KB2777772](https://support.microsoft.com/help/2777772) | December 17, 2012  |
 | 11.0.2383.0             | RTM          | CU4                           | [KB2758687](https://support.microsoft.com/help/2758687) | October 15, 2012   |
-| 11.0.2376.0             | RTM          | MS12-070: QFE Security Update | [KB2716441](https://support.microsoft.com/help/2716441) | October 9, 2012    |
+| 11.0.2376.0             | RTM          | MS12-070: QFE Security Update | [KB2716441](https://support.microsoft.com/help/2716441) | October 09, 2012    |
 | 11.0.2332.0             | RTM          | CU3                           | [KB2723749](https://support.microsoft.com/help/2723749) | August 31, 2012    |
 | 11.0.2325.0             | RTM          | CU2                           | [KB2703275](https://support.microsoft.com/help/2703275) | June 18, 2012      |
 | 11.0.2316.0             | RTM          | CU1                           | [KB2679368](https://support.microsoft.com/help/2679368) | April 12, 2012     |
-| 11.0.2218.0             | RTM          | MS12-070: GDR Security Update | [KB2716442](https://support.microsoft.com/help/2716442) | October 9, 2012    |
-| 11.0.2100.60            | RTM          |                               |                                                       | March 6, 2012      |
+| 11.0.2218.0             | RTM          | MS12-070: GDR Security Update | [KB2716442](https://support.microsoft.com/help/2716442) | October 09, 2012    |
+| 11.0.2100.60            | RTM          |                               |                                                       | March 06, 2012      |
 
 ### SQL Server 2008 R2
 
 | Build number or version | Service pack | Update                        | Knowledge Base number                                            | Release date       |
 |-------------------------|--------------|-------------------------------|-------------------------------------------------------|--------------------|
 | 10.50.6785.2            | SP3          | GDR Security Update           | [KB5021112](https://support.microsoft.com/help/5021112) | February 14, 2023  |
-| 10.50.6560.0            | SP3          | GDR Security Update           | [KB4057113](https://support.microsoft.com/help/4057113) | January 6, 2018    |
+| 10.50.6560.0            | SP3          | GDR Security Update           | [KB4057113](https://support.microsoft.com/help/4057113) | January 06, 2018    |
 | 10.50.6529.0            | SP3          | MS15-058: QFE Security Update | [KB3045314](https://support.microsoft.com/help/3045314) | July 14, 2015      |
 | 10.50.6220.0            | SP3          | MS15-058: QFE Security Update | [KB3045316](https://support.microsoft.com/help/3045316) | July 14, 2015      |
 | 10.50.6000.34           | SP3          | RTW/PCU3                      | [KB2979597](https://support.microsoft.com/help/2979597) | September 26, 2014 |
@@ -428,12 +428,12 @@ Each of the following links provides information for all of the applicable produ
 | 10.50.4042.0            | SP2          | MS15-058: GDR Security Update | [KB3045313](https://support.microsoft.com/help/3045313) | July 14, 2015      |
 | 10.50.4033.0            | SP2          | MS14-044: GDR Security Update | [KB2977320](https://support.microsoft.com/help/2977320) | August 12, 2014    |
 | 10.50.4000.0            | SP2          | RTW/PCU2                      | [KB2630458](https://support.microsoft.com/help/2630458) | July 26, 2012      |
-| 10.50.2881.0            | SP1          | CU14                          | [KB2868244](https://support.microsoft.com/help/2868244) | August 8, 2013     |
+| 10.50.2881.0            | SP1          | CU14                          | [KB2868244](https://support.microsoft.com/help/2868244) | August 08, 2013     |
 | 10.50.2876.0            | SP1          | CU13                          | [KB2855792](https://support.microsoft.com/help/2855792) | June 17, 2013      |
 | 10.50.2874.0            | SP1          | CU12                          | [KB2828727](https://support.microsoft.com/help/2828727) | April 15, 2013     |
 | 10.50.2869.0            | SP1          | CU11                          | [KB2812683](https://support.microsoft.com/help/2812683) | February 18, 2013  |
 | 10.50.2866.0            | SP1          | CU9                           | [KB2756574](https://support.microsoft.com/help/2756574) | October 15, 2012   |
-| 10.50.2861.0            | SP1          | MS12-070: QFE Security Update | [KB2716439](https://support.microsoft.com/help/2716439) | October 9, 2012    |
+| 10.50.2861.0            | SP1          | MS12-070: QFE Security Update | [KB2716439](https://support.microsoft.com/help/2716439) | October 09, 2012    |
 | 10.50.2822.0            | SP1          | CU8                           | [KB2723743](https://support.microsoft.com/help/2723743) | August 31, 2012    |
 | 10.50.2817.0            | SP1          | CU7                           | [KB2703282](https://support.microsoft.com/help/2703282) | June 18, 2012      |
 | 10.50.2811.0            | SP1          | CU6                           | [KB2679367](https://support.microsoft.com/help/2679367) | April 16, 2012     |
@@ -442,7 +442,7 @@ Each of the following links provides information for all of the applicable produ
 | 10.50.2789.0            | SP1          | CU3                           | [KB2591748](https://support.microsoft.com/help/2591748) | October 17, 2011   |
 | 10.50.2772.0            | SP1          | CU2                           | [KB2567714](https://support.microsoft.com/help/2567714) | August 15, 2011    |
 | 10.50.2769.0            | SP1          | CU1                           | [KB2544793](https://support.microsoft.com/help/2544793) | July 18, 2011      |
-| 10.50.2550.0            | SP1          | MS12-070: GDR Security Update | [KB2754849](https://support.microsoft.com/help/2754849) | October 9, 2012    |
+| 10.50.2550.0            | SP1          | MS12-070: GDR Security Update | [KB2754849](https://support.microsoft.com/help/2754849) | October 09, 2012    |
 | 10.50.2500.0            | SP1          | RTW/PCU1                      | [KB2528583](https://support.microsoft.com/help/2528583) | July 12, 2011      |
 | 10.50.1815.0            | RTM          | CU13                          | [KB2679366](https://support.microsoft.com/help/2679366) | April 16, 2012     |
 | 10.50.1810.0            | RTM          | CU12                          | [KB2659692](https://support.microsoft.com/help/2659692) | February 21, 2012  |
@@ -479,7 +479,7 @@ Each of the following links provides information for all of the applicable produ
 |10.00.5835.0|SP3|CU10| [KB2814783](https://support.microsoft.com/help/2814783)|March 18, 2013|
 |10.00.5829.0|SP3|CU9| [KB2799883](https://support.microsoft.com/help/2799883)|January 21, 2013|
 |10.00.5828.0|SP3|CU8| [KB2771833](https://support.microsoft.com/help/2771833)|November 19, 2012|
-|10.00.5826.0|SP3| MS12-070: QFE Security Update| [KB2716435](https://support.microsoft.com/help/2716435)|October 9, 2012|
+|10.00.5826.0|SP3| MS12-070: QFE Security Update| [KB2716435](https://support.microsoft.com/help/2716435)|October 09, 2012|
 |10.00.5794.0|SP3|CU7| [KB2738350](https://support.microsoft.com/help/2738350)|September 17, 2012|
 |10.00.5788.0|SP3|CU6| [KB2715953](https://support.microsoft.com/help/2715953)|July 16, 2012|
 |10.00.5785.0|SP3|CU5| [KB2696626](https://support.microsoft.com/help/2696626)|May 21, 2012|
@@ -487,9 +487,9 @@ Each of the following links provides information for all of the applicable produ
 |10.00.5766.0|SP3|CU1| [KB2617146](https://support.microsoft.com/help/2617146)|October 17, 2011|
 |10.00.5538.0|SP3| MS15-058: GDR Security Update| [KB3045305](https://support.microsoft.com/help/3045305)|July 14, 2015|
 |10.00.5520.0|SP3| MS14-044: GDR Security Update| [KB2977321](https://support.microsoft.com/help/2977321)|August 12, 2014|
-|10.00.5512.0|SP3| MS12-070: GDR Security Update| [KB2716436](https://support.microsoft.com/help/2716436)|October 9, 2012|
-|10.00.5500.0| SP3| RTW / PCU 3| [KB2546951](https://support.microsoft.com/help/2546951)|October 6, 2011|
-|10.00.4371.0|SP2| MS12-070: QFE Security Update| [KB2716433](https://support.microsoft.com/help/2716433)|October 9, 2012|
+|10.00.5512.0|SP3| MS12-070: GDR Security Update| [KB2716436](https://support.microsoft.com/help/2716436)|October 09, 2012|
+|10.00.5500.0| SP3| RTW / PCU 3| [KB2546951](https://support.microsoft.com/help/2546951)|October 06, 2011|
+|10.00.4371.0|SP2| MS12-070: QFE Security Update| [KB2716433](https://support.microsoft.com/help/2716433)|October 09, 2012|
 |10.00.4332.0|SP2|CU10| [KB2696625](https://support.microsoft.com/help/2696625)|May 21, 2012|
 |10.00.4330.0|SP2|CU9| [KB2673382](https://support.microsoft.com/help/2673382)|March 19, 2012|
 |10.00.4326.0|SP2|CU8| [KB2648096](https://support.microsoft.com/help/2648096)|January 16, 2012|
@@ -500,7 +500,7 @@ Each of the following links provides information for all of the applicable produ
 |10.00.4285.0|SP2|CU4| [KB2527180](https://support.microsoft.com/help/2527180)|May 16, 2011|
 |10.00.4279.0|SP2|CU3| [KB2498535](https://support.microsoft.com/help/2498535)|March 17, 2011|
 |10.00.4266.0|SP2|CU1| [KB2289254](https://support.microsoft.com/help/2289254)|November 15, 2010|
-|10.00.4067.0|SP2| MS12-070: GDR Security Update| [KB2716434](https://support.microsoft.com/help/2716434)|October 9, 2012|
+|10.00.4067.0|SP2| MS12-070: GDR Security Update| [KB2716434](https://support.microsoft.com/help/2716434)|October 09, 2012|
 |10.00.4064.0|SP2| MS11-049: GDR Security Update| [KB2494089](https://support.microsoft.com/help/2494089)|June 14, 2011|
 |10.00.4000.0| SP2| RTW / PCU 2| [KB2285068](https://support.microsoft.com/help/2285068)|September 29, 2010|
 |10.00.2850.0|SP1|CU16| [KB2582282](https://support.microsoft.com/help/2582282)|September 19, 2011|
@@ -528,9 +528,9 @@ Each of the following links provides information for all of the applicable produ
 
 | Build number or version | Service pack | Update                        | Knowledge Base number                                            | Release date      |
 |-------------------------|--------------|-------------------------------|-------------------------------------------------------|-------------------|
-| 9.00.5324               | SP4          | MS12-070: QFE Security update | [KB2716427](https://support.microsoft.com/help/2716427) | October 9, 2012   |
+| 9.00.5324               | SP4          | MS12-070: QFE Security update | [KB2716427](https://support.microsoft.com/help/2716427) | October 09, 2012   |
 | 9.00.5292               | SP4          | MS11-049: QFE Security update | [KB2494123](https://support.microsoft.com/help/2494123) | June 14, 2011     |
-| 9.00.5069               | SP4          | MS12-070: GDR Security update | [KB2716429](https://support.microsoft.com/help/2716429) | October 9, 2012   |
+| 9.00.5069               | SP4          | MS12-070: GDR Security update | [KB2716429](https://support.microsoft.com/help/2716429) | October 09, 2012   |
 | 9.00.5057               | SP4          | MS11-049: GDR Security update | [KB2494120](https://support.microsoft.com/help/2494120) | June 14, 2011     |
 | 9.00.5000               | SP4          | RTW / PCU4                    |                                                       | December 16, 2010 |
 | 9.00.4309               | SP3          | CU11                          | [KB2258854](https://support.microsoft.com/help/2258854) | August 16, 2010   |
@@ -556,7 +556,7 @@ Each of the following links provides information for all of the applicable produ
 |-------------------------|----------------------------------------------------------------|
 | 8.00.2283               | Post-SP4 hotfix for MS09-004 (971524)                          |
 | 8.00.2282               | MS09-004: KB959420 October 29, 2008                            |
-| 8.00.2273               | MS08-040 - KB 948111 July 8, 2008                              |
+| 8.00.2273               | MS08-040 - KB 948111 July 08, 2008                              |
 | 8.00.2040               | Post-SP4 AWE fix (899761)                                      |
 | 8.00.2039               | SQL Server 2000 SP4                                            |
 | 8.00.1007               | Update.exe Hotfix Installer Baseline 2 (891640)                |

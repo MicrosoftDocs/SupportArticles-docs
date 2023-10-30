@@ -84,8 +84,8 @@ This article lists the Microsoft SQL Server 2016 builds that were released after
 | GDR                    | 13.0.4210.6     | [KB4057118](https://support.microsoft.com/help/4057118) | January 03, 2018   |
 | CU6                    | 13.0.4457.0     | [KB4037354](servicepack1-cumulativeupdate6.md) | November 21, 2017  |
 | CU5                    | 13.0.4451.0     | [KB4040714](servicepack1-cumulativeupdate5.md) | September 18, 2017 |
-| CU4                    | 13.0.4446.0     | [KB4024305](servicepack1-cumulativeupdate4.md) | August 8, 2017     |
-| GDR                    | 13.0.4206.0     | [KB4019089](https://support.microsoft.com/help/4019089) | August 8, 2017     |
+| CU4                    | 13.0.4446.0     | [KB4024305](servicepack1-cumulativeupdate4.md) | August 08, 2017     |
+| GDR                    | 13.0.4206.0     | [KB4019089](https://support.microsoft.com/help/4019089) | August 08, 2017     |
 | CU3                    | 13.0.4435.0     | [KB4019916](servicepack1-cumulativeupdate3.md) | May 15, 2017       |
 | CU2                    | 13.0.4422.0     | [KB4013106](servicepack1-cumulativeupdate2.md) | March 20, 2017     |
 | CU1                    | 13.0.4411.0     | [KB3208177](servicepack1-cumulativeupdate1.md) | January 18, 2017   |
@@ -95,19 +95,19 @@ This article lists the Microsoft SQL Server 2016 builds that were released after
 
 | Cumulative update name | Product version | Knowledge Base number                                   | Release date        |
 |------------------------|-----------------|---------------------------------------------------------|--------------------|
-| GDR                    | 13.0.1745.2     | [KB4058560](https://support.microsoft.com/help/4058560) | January 6, 2018    |
-| CU9 + GDR              | 13.0.2218.0     | [KB4058559](https://support.microsoft.com/help/4058559) | January 6, 2018    |
+| GDR                    | 13.0.1745.2     | [KB4058560](https://support.microsoft.com/help/4058560) | January 06, 2018    |
+| CU9 + GDR              | 13.0.2218.0     | [KB4058559](https://support.microsoft.com/help/4058559) | January 06, 2018    |
 | CU9                    | 13.0.2216.0     | [KB4037357](rtm-cumulativeupdate9.md) | November 21, 2017  |
 | CU8                    | 13.0.2213.0     | [KB4040713](rtm-cumulativeupdate8.md) | September 18, 2017 |
-| CU7                    | 13.0.2210.0     | [KB4024304](rtm-cumulativeupdate7.md) | August 8, 2017     |
+| CU7                    | 13.0.2210.0     | [KB4024304](rtm-cumulativeupdate7.md) | August 08, 2017     |
 | CU6                    | 13.0.2204.0     | [KB4019914](rtm-cumulativeupdate6.md) | May 15, 2017       |
 | CU5                    | 13.0.2197.0     | [KB4013105](rtm-cumulativeupdate5.md) | March 20, 2017     |
 | CU4                    | 13.0.2193.0     | [KB3205052](rtm-cumulativeupdate4.md) | January 18, 2017   |
 | GDR                    | 13.0.4202.2     | [KB3210089](https://support.microsoft.com/help/3210089) | December 16, 2016  |
 | CU3 + GDR              | 13.0.1728.2     | [KB3210111](https://support.microsoft.com/help/3210111) | December 16, 2016  |
 | CU3                    | 13.0.2186.6     | [KB3205413](rtm-cumulativeupdate3.md) | November 16, 2016  |
-| CU3 + GDR              | 13.0.2186.6     | [KB3194717](https://support.microsoft.com/help/3194717) | November 8, 2016   |
-| GDR                    | 13.0.1722.0     | [KB3194716](https://support.microsoft.com/help/3194716) | November 8, 2016   |
+| CU3 + GDR              | 13.0.2186.6     | [KB3194717](https://support.microsoft.com/help/3194717) | November 08, 2016   |
+| GDR                    | 13.0.1722.0     | [KB3194716](https://support.microsoft.com/help/3194716) | November 08, 2016   |
 | CU2                    | 13.0.2164.0     | [KB3182270](rtm-cumulativeupdate2.md) | September 22, 2016 |
 | CU1                    | 13.0.2149.0     | [KB3164674](rtm-cumulativeupdate1.md) | July 25, 2016      |
 
