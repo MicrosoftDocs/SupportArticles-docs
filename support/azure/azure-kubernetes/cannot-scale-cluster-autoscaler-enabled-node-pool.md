@@ -4,7 +4,7 @@ description: Learn how to troubleshoot the cannot scale cluster autoscaler enabl
 author: sgeannina
 ms.author: ninasegares
 ms.topic: troubleshooting-general #Required; leave this attribute/value as-is.
-ms.date: 07/03/2023
+ms.date: 10/17/2023
 ms.reviewer: aritraghosh, chiragpa
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-scale-operations
@@ -48,6 +48,10 @@ Deleting the virtual machine scale set attached to the cluster causes the cluste
 ## Cause 2: Tags or any other properties were modified from the node resource group
 
 You may receive scaling errors if you modify or delete Azure-created tags and other resource properties in the node resource group. For more information, see [Can I modify tags and other properties of the AKS resources in the node resource group?](/azure/aks/faq#can-i-modify-tags-and-other-properties-of-the-aks-resources-in-the-node-resource-group)
+
+## Cause 3: The cluster node resource group was deleted
+
+Deleting the cluster node resource group causes issues when provisioning the infrastructure resources required by the cluster, which causes the cluster autoscaler to fail.
 
 ## Solution: Update the cluster to the goal state without changing the configuration
 

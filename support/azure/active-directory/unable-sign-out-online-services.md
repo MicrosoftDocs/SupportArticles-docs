@@ -1,6 +1,6 @@
 ---
-title: Unable to sign out of online services that use Azure AD
-description: Describes a sign-out problem that occurs when you try to sign out of services that use Azure AD. Provides a resolution.
+title: Unable to sign out of online services that use Microsoft Entra ID
+description: Describes a sign-out problem that occurs when you try to sign out of services that use Microsoft Entra ID. Provides a resolution.
 ms.date: 07/06/2020
 ms.reviewer: willfid
 ms.service: active-directory
@@ -8,12 +8,12 @@ ms.subservice: aad-general
 ---
 # Error when signing out of online services: Sorry, but we're having trouble signing you out
 
-_Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Azure Active Directory, Microsoft Intune, Azure Backup, Office 365 Identity Management  
+_Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 Identity Management  
 _Original KB number:_ &nbsp; 2871385
 
 ## Symptoms
 
-When you try to sign out of online services that use Microsoft Azure Active Directory (Azure AD), you receive the following error message:
+When you try to sign out of online services that use Microsoft Entra ID, you receive the following error message:
 
 > Sorry, but we're having trouble signing you out
 

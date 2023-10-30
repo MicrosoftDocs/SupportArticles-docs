@@ -1,6 +1,6 @@
 ---
 title: Can't manage or remove objects that were synchronized through the Azure Active Directory Sync tool
-description: Resolves an issue that you can't manage or remove objects created through directory synchronization from Azure AD.
+description: Resolves an issue that you can't manage or remove objects created through directory synchronization from Microsoft Entra ID.
 ms.date: 08/30/2021
 ms.reviewer: 
 ms.service: active-directory
@@ -9,16 +9,16 @@ ms.custom: has-azure-ad-ps-ref
 ---
 # Can't manage or remove objects that were synchronized through the Azure Active Directory Sync tool
 
-This article describes an issue that you can't manage or remove objects that were created through directory synchronization from Azure AD. It provides two resolutions for this issue according to different reasons.
+This article describes an issue that you can't manage or remove objects that were created through directory synchronization from Microsoft Entra ID. It provides two resolutions for this issue according to different reasons.
 
-_Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Azure Active Directory, Microsoft Intune, Azure Backup, Office 365 Identity Management  
+_Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 Identity Management  
 _Original KB number:_ &nbsp; 2619062
 
 ## Symptoms
 
-You try to manually manage or remove objects that were created through directory synchronization from Azure Active Directory (Azure AD):
+You try to manually manage or remove objects that were created through directory synchronization from Microsoft Entra ID:
 
-For example, you want to remove an orphaned user account that was synced to Azure AD from your on-premises Active Directory Domain Services (AD DS).
+For example, you want to remove an orphaned user account that was synced to Microsoft Entra ID from your on-premises Active Directory Domain Services (AD DS).
 
 In this scenario, you can't remove the orphaned user account by using the Microsoft cloud service portal in Office 365, Azure, or Microsoft Intune, or by using Windows PowerShell.
 
@@ -36,7 +36,7 @@ This issue may occur if one or more of the following conditions are true:
 You want to manage objects in Office 365, Azure, or Intune and you no longer want to use directory synchronization.
 
 1. If you're not running Windows 10, install the 64-bit version of the Microsoft Online Services Sign-in Assistant: [Microsoft Online Services Sign-in Assistant for IT Professionals RTW](https://download.microsoft.com/download/7/1/E/71EF1D05-A42C-4A1F-8162-96494B5E615C/msoidcli_32bit.msi).
-1. Install the Microsoft Azure Active Directory Module for Windows PowerShell:
+1. Install the Microsoft Azure Active Directory module for Windows PowerShell:
 
     1. Open an elevated Windows PowerShell command prompt (run Windows PowerShell as an administrator).
     2. Run the `Install-Module MSOnline` command.
@@ -69,7 +69,7 @@ Force directory synchronization by using the steps on this article: [Start the S
 - If all updates and deletions aren't synchronized to the cloud service, contact Support.
 
     > [!NOTE]
-    > As an alternative resolution for this scenario, an object can be manually deleted in the cloud service. However, the object can't be updated in the cloud service. For more information about how to resolve this issue, see the following Microsoft Knowledge Base article: [Object deletions aren't synchronized to Azure AD when using the Azure Active Directory Sync tool](https://support.microsoft.com/help/2709902).  
+    > As an alternative resolution for this scenario, an object can be manually deleted in the cloud service. However, the object can't be updated in the cloud service. For more information about how to resolve this issue, see the following Microsoft Knowledge Base article: [Object deletions aren't synchronized to Microsoft Entra ID when using the Azure Active Directory Sync tool](https://support.microsoft.com/help/2709902).  
 
 ## More information
 

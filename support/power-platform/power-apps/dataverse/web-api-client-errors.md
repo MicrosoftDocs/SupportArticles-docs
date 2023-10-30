@@ -1,9 +1,9 @@
 ---
 title: Troubleshoot Web API client errors
 description: Provides resolutions for the common client errors that occur when you use the Dataverse Web API.
-ms.date: 10/14/2022
-author: JimDaly
-ms.author: jdaly
+ms.date: 10/25/2023
+author: divkamath
+ms.author: dikamath
 ms.reviewer: jdaly
 manager: kvivek
 search.audienceType: 
@@ -13,10 +13,11 @@ search.app:
   - D365CE
 contributors: 
   - JimDaly
+  - hakhemic
 ---
 # Troubleshoot Dataverse Web API client errors
 
-This article describes common client errors you may encounter when using the [Dataverse Web API](/power-apps/developer/data-platform/webapi/overview) and how you can avoid them.
+This article describes common client errors you might encounter when using the [Dataverse Web API](/power-apps/developer/data-platform/webapi/overview) and how you can avoid them.
 
 ## Resource not found for the segment
 
@@ -79,11 +80,11 @@ HTTP/1.1 400 Bad Request
 
 This error occurs when you use the incorrect name for a property. Property names are case sensitive.
 
-In the example above, there is property called `name`, but not one named `Name`.
+In the example above, there is a property called `name`, but not one named `Name`.
 
 ### How to avoid
 
-Verify that the name you use exists in the [CSDL $metadata document](/power-apps/developer/data-platform/webapi/web-api-service-documents#csdl-metadata-document). For more information, see [Web API Properties](/power-apps/developer/data-platform/webapi/web-api-properties).
+Verify that the name you use exists in the [CSDL $metadata document](/power-apps/developer/data-platform/webapi/web-api-service-documents#csdl-metadata-document). For more information, see [Web API properties](/power-apps/developer/data-platform/webapi/web-api-properties).
 
 ## No HTTP resource was found that matches the request URI
 
@@ -156,11 +157,20 @@ This error occurs because the incorrect name for a property was used. Property n
 
 ### How to avoid
 
-Verify that the property name you use exists in the [CSDL $metadata document](/power-apps/developer/data-platform/webapi/web-api-service-documents#csdl-metadata-document). For more information, see [Web API Properties](/power-apps/developer/data-platform/webapi/web-api-properties).
+Verify that the property name you use exists in the [CSDL $metadata document](/power-apps/developer/data-platform/webapi/web-api-service-documents#csdl-metadata-document). For more information, see [Web API properties](/power-apps/developer/data-platform/webapi/web-api-properties).
 
 ## Error identified in Payload provided by the user for Entity '{entity name}'
 
-### Symptoms
+There are two separate issues that can occur with this error. The difference is in the InnerException.
+
+- [InnerException : Microsoft.OData.ODataException: An undeclared property [...] was found in the payload.](#innerexception--microsoftodataodataexception-an-undeclared-property--was-found-in-the-payload)
+- [InnerException : System.ArgumentException: Stream was not readable.](#innerexception--systemargumentexception-stream-was-not-readable)
+
+### InnerException : Microsoft.OData.ODataException: An undeclared property [...] was found in the payload
+
+This error occurs when an invalid navigation property name is sent with a request.
+
+#### Symptoms
 
 **Request**
 
@@ -191,19 +201,75 @@ HTTP/1.1 400 Bad Request
 }
 ```
 
-### Cause
+#### Cause
 
 This error occurs because there is no single-valued navigation property in the contact entity type named `parentcustomerid`. For more information, see [contact EntityType > Single-valued navigation properties](/power-apps/developer/data-platform/webapi/reference/contact#single-valued-navigation-properties).
 
 `parentcustomerid` is the logical name of a lookup column in the contact table. All lookups are represented by single-valued navigation properties in OData. The names of the lookup properties don't always match the corresponding single-valued navigation property name.
 
-In this case, the `parentcustomerid` column is a customer lookup type that may link to either the account or contact tables. To support this customer lookup, there are two separate relationships and each has a different single-valued navigation property. The correct single-valued navigation property in this case is `parentcustomerid_account`.
+In this case, the `parentcustomerid` column is a customer lookup type, a kind of [multi-table lookup](/power-apps/developer/data-platform/webapi/web-api-navigation-properties#multi-table-lookups) that might link to either the account or contact tables. To support this customer lookup, there are two separate relationships and each has a different single-valued navigation property. The correct single-valued navigation property in this case is `parentcustomerid_account`.
 
-### How to avoid
+#### How to avoid
 
 Verify that the navigation property name you use exists in the [CSDL $metadata document](/power-apps/developer/data-platform/webapi/web-api-service-documents#csdl-metadata-document). For more information, see [Web API Navigation Properties](/power-apps/developer/data-platform/webapi/web-api-navigation-properties), especially the [Multi-table lookups](/power-apps/developer/data-platform/webapi/web-api-navigation-properties#multi-table-lookups) section.
 
-### See also
+### InnerException : System.ArgumentException: Stream was not readable
+
+This error occurs when [executing batch operations](/power-apps/developer/data-platform/webapi/execute-batch-operations-using-web-api).
+
+#### Symptoms
+
+You get the following error when sending a `$batch` request.
+
+**Response**
+
+```http
+HTTP/1.1 400 Bad Request
+
+--batchresponse_5bd81edb-2ef9-4269-85c3-4623981e6c6e
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+
+HTTP/1.1 400 Bad Request
+REQ_ID: 4c8c75eb-10bf-47f9-9998-c119146d511f
+Content-Type: application/json; odata.metadata=minimal
+OData-Version: 4.0
+
+{"error":{"code":"0x80048d19","message":"Error identified in Payload provided by the user for Entity :'accounts',
+For more information on this error please follow this help link https://go.microsoft.com/fwlink/?linkid=2195293
+---->  InnerException : System.ArgumentException: Stream was not readable.\r\n
+at System.IO.StreamReader..ctor(Stream stream, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean leaveOpen)\r\n
+at System.IO.StreamReader..ctor(Stream stream, Encoding encoding)\r\n
+at Microsoft.OData.JsonLight.ODataJsonLightInputContext.CreateTextReader(Stream messageStream, Encoding encoding)\r\n
+at Microsoft.OData.JsonLight.ODataJsonLightInputContext..ctor(ODataMessageInfo messageInfo, ODataMessageReaderSettings messageReaderSettings)\r\n
+at Microsoft.OData.Json.ODataJsonFormat.CreateInputContext(ODataMessageInfo messageInfo, ODataMessageReaderSettings messageReaderSettings)\r\n
+at Microsoft.OData.ODataMessageReader.ReadFromInput[T](Func`2 readFunc, ODataPayloadKind[] payloadKinds)\r\n
+at System.Web.OData.Formatter.Deserialization.ODataResourceDeserializer.Read(ODataMessageReader messageReader, Type type, ODataDeserializerContext readContext)\r\n
+at System.Web.OData.Formatter.ODataMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)."}}
+--batchresponse_5bd81edb-2ef9-4269-85c3-4623981e6c6e--
+```
+
+#### Cause
+
+This deserialization error is caused by the use of line endings other than [CRLF](https://developer.mozilla.org/docs/Glossary/CRLF) in the batch request body.
+
+Depending on the editor you use, these non-printing characters can be difficult to see . If you use [Notepad++](https://notepad-plus-plus.org/), you can use the **Show all characters** option to make these characters visible.
+
+This payload will work:
+
+:::image type="content" source="media/web-api-client-errors/batch-request-body-with-crlf-endings-for-all-lines.png" alt-text="Screenshot that shows a batch request body with CRLF endings for all lines.":::
+
+This payload will fail because the last line doesn't end with `CRLF`.
+
+:::image type="content" source="media/web-api-client-errors/batch-request-body-with-crlf-missing-last-line.png" alt-text="Screenshot that shows a batch request body with CRLF missing on the last line.":::
+
+In this case, just adding a carriage return at the end of the last line is enough to make it succeed.
+
+#### How to avoid
+
+Ensure all line endings in the `$batch` request body are `CRLF`. If you can't use `CRLF`, add two non-`CRLF` line endings at the end of the batch request body to resolve this deserialization error. For more information, see [Batch requests](/power-apps/developer/data-platform/webapi/execute-batch-operations-using-web-api#batch-requests).
+
+## See also
 
 - [Web API types and operations](/power-apps/developer/data-platform/webapi/web-api-types-operations)
 - [Compose HTTP requests and handle errors](/power-apps/developer/data-platform/webapi/compose-http-requests-handle-errors)

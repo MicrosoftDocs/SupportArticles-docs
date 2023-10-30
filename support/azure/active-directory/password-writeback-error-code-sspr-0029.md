@@ -6,7 +6,7 @@ ms.reviewer: jarrettr, nualex, v-leedennis
 ms.service: active-directory
 ms.subservice: enterprise-users
 keywords:
-#Customer intent: As an Azure Active Directory administrator, I want to fix the on-premises configuration for password reset so that users can successfully reset or change their password.
+#Customer intent: As a Microsoft Entra administrator, I want to fix the on-premises configuration for password reset so that users can successfully reset or change their password.
 ---
 # Troubleshoot error SSPR_0029: Your organization hasn't properly set up the on-premises configuration for password reset
 
@@ -36,7 +36,7 @@ You're a synchronized Windows Active Directory admin who belongs (or used to bel
 
 ### Solution: None (behavior is by design)
 
-For security, administrator accounts that exist within a local Active Directory protected group can't be used together with password writeback. Administrators can change their password in the cloud, but can't reset a forgotten password. For more information, see [How does self-service password reset writeback work in Azure Active Directory](/azure/active-directory/authentication/concept-sspr-writeback).
+For security, administrator accounts that exist within a local Active Directory protected group can't be used together with password writeback. Administrators can change their password in the cloud, but can't reset a forgotten password. For more information, see [How does self-service password reset writeback work in Microsoft Entra ID](/azure/active-directory/authentication/concept-sspr-writeback).
 
 ## Cause 2: AD DS Connector account doesn't have the right Active Directory permissions
 
@@ -49,9 +49,9 @@ To resolve issues that affect Active Directory permissions, see [Password Writeb
 ### Workaround: Target a different Active Directory domain controller
 
 > [!NOTE]
-> Password writeback has a dependency on the legacy API [NetUserGetInfo](/windows/win32/api/lmaccess/nf-lmaccess-netusergetinfo). The `NetUserGetInfo` API requires a complex set of allowed permissions in Active Directory that can be difficult to identify, especially when an Azure AD Connect server is running on a domain controller. For more information, see [Applications using NetUserGetInfo and similar APIs rely on read access to certain Active Directory objects](../../windows-server/identity/netuser-netgroup-fails-with-access-denied.md).
+> Password writeback has a dependency on the legacy API [NetUserGetInfo](/windows/win32/api/lmaccess/nf-lmaccess-netusergetinfo). The `NetUserGetInfo` API requires a complex set of allowed permissions in Active Directory that can be difficult to identify, especially when a Microsoft Entra Connect server is running on a domain controller. For more information, see [Applications using NetUserGetInfo and similar APIs rely on read access to certain Active Directory objects](../../windows-server/identity/netuser-netgroup-fails-with-access-denied.md).
 
-Do you have a scenario in which an Azure AD Connect server is running on a domain controller, and it isn't possible to resolve Active Directory permissions? In this case, we recommend that you deploy Azure AD Connect server on a member server instead of a domain controller. Or, configure your Active Directory connector to **Only use preferred domain controllers** by using the following steps:
+Do you have a scenario in which a Microsoft Entra Connect server is running on a domain controller, and it isn't possible to resolve Active Directory permissions? In this case, we recommend that you deploy Microsoft Entra Connect server on a member server instead of a domain controller. Or, configure your Active Directory connector to **Only use preferred domain controllers** by using the following steps:
 
 1. On the **Start** menu, search for and select **Synchronization Service Manager**.
 
@@ -73,7 +73,7 @@ In this case, two similar application error events are logged: Event ID 33004 an
 
 > ERR_: MMS(####): admaexport.cpp(2944): Failed to acquire user information: Contoso\MSOL_############. Error Code: ERROR_ACCESS_DENIED
 
-This situation can occur if the Azure AD Connect server or the domain controller has or had a hardening security setting applied with a Domain Group Policy Object (GPO) or in the Local Security Policy of the server. To check whether this is the case, follow these steps:
+This situation can occur if the Microsoft Entra Connect server or the domain controller has or had a hardening security setting applied with a Domain Group Policy Object (GPO) or in the Local Security Policy of the server. To check whether this is the case, follow these steps:
 
 1. Open an administrative Command Prompt window, and run the following commands:
 
@@ -92,7 +92,7 @@ This situation can occur if the Azure AD Connect server or the domain controller
     > [!NOTE]
     > By default, this policy setting is turned off. When this setting is applied on a device through a GPO or a Local Policy setting, a registry value that's named **RestrictRemoteSam** is created in the **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Lsa\\** registry path. However, this registry setting can be difficult to clear after it's defined and applied to the server. Disabling the Group Policy setting or clearing the **Define this policy setting** option in Group Policy Management Console (GPMC) doesn't remove the registry entry. Therefore, the server still restricts which clients are allowed to make remote calls to SAM.
     >
-    > How do you accurately verify that the Azure AD Connect server or the domain controller is still restricting remote calls to SAM? You check whether the registry entry remains present by running the [Get-ItemProperty](/powershell/module/microsoft.powershell.management/get-itemproperty#example-3--get-the-value-name-and-data-of-a-registry-entry-in-a-registry-subkey) cmdlet in PowerShell:
+    > How do you accurately verify that the Microsoft Entra Connect server or the domain controller is still restricting remote calls to SAM? You check whether the registry entry remains present by running the [Get-ItemProperty](/powershell/module/microsoft.powershell.management/get-itemproperty#example-3--get-the-value-name-and-data-of-a-registry-entry-in-a-registry-subkey) cmdlet in PowerShell:
     >
     > ```powershell
     > Get-ItemProperty -Path HKLM:\System\CurrentControlSet\Control\Lsa -Name RestrictRemoteSam
@@ -102,7 +102,7 @@ Does the PowerShell output show that a **RestrictRemoteSam** registry entry is s
 
 ### Solution 1: Add the AD DS Connector account to the list of allowed users
 
-Keep the **Network access: Restrict clients allowed to make remote calls to SAM** policy setting enabled and applied on the Azure AD Connect server, but add the Active Directory Domain Services (AD DS) Connector account (*MSOL_* account) to the list of allowed users. For instructions, see the following steps:
+Keep the **Network access: Restrict clients allowed to make remote calls to SAM** policy setting enabled and applied on the Microsoft Entra Connect server, but add the Active Directory Domain Services (AD DS) Connector account (*MSOL_* account) to the list of allowed users. For instructions, see the following steps:
 
 1. If you don't know the name of your AD DS Connector account, see [Identify the AD DS Connector account][identify-ad-ds-connector].
 

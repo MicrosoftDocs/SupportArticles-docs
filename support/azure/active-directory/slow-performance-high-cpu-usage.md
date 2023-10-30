@@ -1,27 +1,27 @@
 ---
-title: Slow performance and high CPU usage in Azure AD Connect Health for Sync monitoring agent on a system that has installed .NET Framework
-description: Describes an issue that causes slow performance and high CPU usage in Azure AD Connect Health for Sync monitoring agent on a system that has installed .NET Framework 4.7.2 or the July 2018 updates for .NET Framework 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2. Provides a resolution.
+title: Slow performance and high CPU usage in Microsoft Entra Connect Health for Sync monitoring agent on a system that has installed .NET Framework
+description: Describes an issue that causes slow performance and high CPU usage in Microsoft Entra Connect Health for Sync monitoring agent on a system that has installed .NET Framework 4.7.2 or the July 2018 updates for .NET Framework 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2. Provides a resolution.
 ms.date: 05/28/2020
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: enterprise-users
 ---
-# Slow performance and high CPU usage in Azure AD Connect Health for Sync monitoring agent on a system that has installed .NET Framework
+# Slow performance and high CPU usage in Microsoft Entra Connect Health for Sync monitoring agent on a system that has installed .NET Framework
 
-This article describes an issue that causes slow performance and high CPU usage in Azure AD Connect Health for Sync monitoring agent on a system that has installed .NET Framework 4.7.2 or the July 2018 updates for .NET Framework 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2.
+This article describes an issue that causes slow performance and high CPU usage in Microsoft Entra Connect Health for Sync monitoring agent on a system that has installed .NET Framework 4.7.2 or the July 2018 updates for .NET Framework 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2.
 
-_Original product version:_ &nbsp; Azure Active Directory  
+_Original product version:_ &nbsp; Microsoft Entra ID  
 _Original KB number:_ &nbsp; 4457331
 
 ## Symptoms
 
-Assume that you run the Microsoft Azure Active Directory (Azure AD) Connect Health for Sync monitoring agent on a system that has installed .NET Framework 4.7.2 or the July 2018 updates for .NET Framework 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2. In this scenario, the system may experience slow performance and high CPU usage.
+Assume that you run the Microsoft Entra Connect Health for Sync monitoring agent on a system that has installed .NET Framework 4.7.2 or the July 2018 updates for .NET Framework 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2. In this scenario, the system may experience slow performance and high CPU usage.
 
 To see the high CPU usage, start Task Manager, and view the CPU usage of the **MIcrosoft.Online.Reporting.MonitoringAgent.Startup** process on the **Processes** tab.
 
 ## Cause
 
-This issue occurs because the Azure AD Connect Health for Sync monitoring agent does not fully support .NET Framework 4.7.2 or the July 2018 updates for .NET Framework 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2.
+This issue occurs because the Microsoft Entra Connect Health for Sync monitoring agent does not fully support .NET Framework 4.7.2 or the July 2018 updates for .NET Framework 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2.
  The following updates may cause high CPU usage of the monitoring agent.
 
 | **.NET Framework** **update**| **Server version**| **Type of update** |
@@ -45,14 +45,14 @@ To resolve this issue, install the update that is appropriate for your environme
 
 - For Connect Health for AD DS and AD FS
 
-    Install the Azure AD Connect Health Agent, version 3.1.7.0 that was released in July 2018. This update is available for [download here]/azure/active-directory/hybrid/how-to-connect-health-agent-install#download-and-install-the-azure-ad-connect-health-agent).
+    Install the Microsoft Entra Connect Health Agent, version 3.1.7.0 that was released in July 2018. This update is available for [download here]/azure/active-directory/hybrid/how-to-connect-health-agent-install#download-and-install-the-azure-ad-connect-health-agent).
 
-- For Azure AD Connect
+- For Microsoft Entra Connect
 
-    Install the latest version of Azure AD Connect that contains the fix for this high CPU usage issue. This version is available for [download here](https://download.microsoft.com/download/B/0/0/B00291D0-5A83-4DE7-86F5-980BC00DE05A/AzureADConnect.msi).
+    Install the latest version of Microsoft Entra Connect that contains the fix for this high CPU usage issue. This version is available for [download here](https://download.microsoft.com/download/B/0/0/B00291D0-5A83-4DE7-86F5-980BC00DE05A/AzureADConnect.msi).
 
     > [!NOTE]
-    > If you have enabled the auto-upgrade feature on your AAD Connect server, the latest version will be installed automatically.  
+    > If you have enabled the auto-upgrade feature on your Microsoft Entra Connect server, the latest version will be installed automatically.  
 
 ### Virus-scan claim
 

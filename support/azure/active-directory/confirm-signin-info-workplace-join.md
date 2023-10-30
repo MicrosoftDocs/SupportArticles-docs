@@ -10,7 +10,7 @@ ms.subservice: authentication
 
 This article describes a problem in which an error occurs when you perform a Workplace Join operation.
 
-_Original product version:_ &nbsp; Windows 8.1 Enterprise, Windows Server 2012 R2 Datacenter, Windows Server 2012 R2 Standard, Azure Active Directory  
+_Original product version:_ &nbsp; Windows 8.1 Enterprise, Windows Server 2012 R2 Datacenter, Windows Server 2012 R2 Standard, Microsoft Entra ID  
 _Original KB number:_ &nbsp; 3045386
 
 ## Symptoms
@@ -49,7 +49,7 @@ To do this, open a Command Prompt window, and then run the following command:
 Nslookup enterpriseregistration.domain.com
 ```
 
-- If you use Azure Active Directory Join
+- If you use Microsoft Entra join
   - This should return the CNAME result of `EnterpriseRegistration.windows.net` as the target.
 - If you use Windows Server Workplace Join
   - The internal host should return the internal AD FS node.
@@ -57,9 +57,9 @@ Nslookup enterpriseregistration.domain.com
 
 ### Verify that Device Registration is enabled
 
-If you try to perform Workplace Join to Azure Active Directory, follow these steps:
+If you try to perform Workplace Join to Microsoft Entra ID, follow these steps:
 
-1. Sign in to Azure portal, or launch the Azure AD console from the M365 admin center as a Company Administrator.
+1. Sign in to Azure portal, or launch the Microsoft Entra ID console from the M365 admin center as a Company Administrator.
 2. Locate the directory where the user is trying the join operation.
 3. Go to Configure.
 4. Scroll down to the Device Registration section.

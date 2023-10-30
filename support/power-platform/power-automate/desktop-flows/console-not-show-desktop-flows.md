@@ -2,7 +2,7 @@
 title: Power Automate for desktop console not showing any flows
 description: Provides a resolution for the issue that the Power Automate for desktop console doesn't show any desktop flows.
 ms.reviewer: pefelesk
-ms.date: 09/21/2022
+ms.date: 10/16/2023
 ms.subservice: power-automate-desktop-flows
 ---
 # Power Automate for desktop console doesn't show any desktop flows
@@ -28,24 +28,6 @@ The Power Automate for desktop console doesn't show any desktop flows in the **M
 
 5. Verify that the Proxy server isn't a socks proxy server.
 
-## Resolution
+## Resolution and workaround
 
-Right-click the Power Automate for desktop icon in the system tray and then exit Power Automate for desktop.
-
-To solve this issue, take the following steps:
-
-1. Make sure that you have administrator rights or someone who has such rights is available.
-2. Navigate to the installation folder (_C:\Program Files (x86)\Power Automate Desktop_).
-3. Back up the _PAD.Designer.Host.exe.config_ and _PAD.Console.Host.exe.config_ two files in order to recover them if something goes wrong.
-
-4. For both files, edit each file with administrator rights, and at the end of the root xml node (\<configuration>), add the following child xml node:
-
-    ```xml
-     <system.net>
-          <defaultProxy enabled="true" useDefaultCredentials="true"> 
-          </defaultProxy> 
-     </system.net>
-    ```
-
-5. Save the files.
-6. Restart Power Automate for desktop.
+To solve this issue, follow the steps described in [Proxy server related errors in Power Automate for desktop](proxy-error-console.md).
