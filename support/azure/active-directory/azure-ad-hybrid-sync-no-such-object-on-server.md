@@ -1,18 +1,18 @@
 ---
-title: Azure AD Hybrid Sync Agent Installation Issues - There is no such object on the server
-description: This troubleshooting guide covers when an object reference isn't set to an object instance. It unblocks you to install the Azure AD Connect Provisioning Agent.
+title: Microsoft Entra Hybrid Sync Agent Installation Issues - There is no such object on the server
+description: This troubleshooting guide covers when an object reference isn't set to an object instance. It unblocks you to install the Microsoft Entra Connect Provisioning Agent.
 ms.date: 10/13/2021
 ms.service: active-directory
 ms.subservice: hybrid
 ---
 
-# Azure AD Hybrid Sync Agent Installation Issues - There is no such object on the server
+# Microsoft Entra Hybrid Sync Agent Installation Issues - There is no such object on the server
 
-This troubleshooting guide focuses on when an object reference isn't set to an object instance. This situation may block you from installing the Azure AD Connect Provisioning Agent.
+This troubleshooting guide focuses on when an object reference isn't set to an object instance. This situation may block you from installing the Microsoft Entra Connect Provisioning Agent.
 
 ## Prerequisites
 
-To install *Cloud Provisioning Agent*, the following prerequisites are required: [Prerequisites for Azure AD Connect cloud sync](/azure/active-directory/cloud-sync/how-to-prerequisites).
+To install *Cloud Provisioning Agent*, the following prerequisites are required: [Prerequisites for Microsoft Entra Connect cloud sync](/azure/active-directory/cloud-sync/how-to-prerequisites).
 
 ## Scenario 1
 
