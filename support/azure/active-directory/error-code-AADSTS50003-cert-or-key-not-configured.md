@@ -16,7 +16,7 @@ You receive error `AADSTS50003` when trying to sign into an application that has
 
 ## Cause
 
-The application object is corrupted and Microsoft Entra doesn’t recognize the certificate configured for the application.
+The application object is corrupted and Microsoft Entra ID doesn't recognize the certificate configured for the application.
 
 ## Resolution
 

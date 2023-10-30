@@ -16,7 +16,7 @@ You receive error `AADSTS750054` when trying to sign into an application that ha
 
 ## Cause
 
-Microsoft Entra wasn’t able to identify the SAML request within the URL parameters in the HTTP request. This can happen if the application is not using HTTP redirect binding when sending the SAML request to Microsoft Entra ID.
+Microsoft Entra ID wasn't able to identify the SAML request within the URL parameters in the HTTP request. This can happen if the application is not using HTTP redirect binding when sending the SAML request to Microsoft Entra ID.
 
 ## Resolution
 

@@ -18,7 +18,7 @@ _Original KB number:_ &nbsp; 2882421
 You experience one of the following symptoms:
 
 - The Microsoft Azure Active Directory Sync Tool stops syncing.
-- You receive email messages that say that Microsoft Entra didn't register a synchronization attempt in the last 24 hours.
+- You receive email messages that say that Microsoft Entra ID didn't register a synchronization attempt in the last 24 hours.
 - In the `MIISClient.exe` tool, you receive a "Stopped-Server-Down" message or a "Stopped-Extension-DLL-Exception" message.
 - You're unable to start one or more of the directory synchronization services.
 

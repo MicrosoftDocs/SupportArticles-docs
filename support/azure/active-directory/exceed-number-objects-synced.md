@@ -24,7 +24,7 @@ You receive an email message from `MSOnlineServicesTeam@MicrosoftOnline.com` tha
 
 ## Cause
 
-This issue occurs because the number of objects that you created in your Microsoft Entra exceed your directory service limit. Microsoft Entra ID limits how many objects can be created by each organization. Groups, contacts, and user objects in your Microsoft Entra organization are counted as part of your organization's directory usage.
+This issue occurs because the number of objects that you created in your Microsoft Entra ID exceed your directory service limit. Microsoft Entra ID limits how many objects can be created by each organization. Groups, contacts, and user objects in your Microsoft Entra organization are counted as part of your organization's directory usage.
 
 Your default directory service quota is calculated according to the following guidelines:
 
