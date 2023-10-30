@@ -3,7 +3,7 @@ title: SLA KPI instance doesn't reach Nearing Non-compliance or Non-compliant an
 description: Provides a resolution for an issue related to the permissions and licenses of the SLAInstanceMonitoringWarningAndExpiryFlow in Dynamics 365 Customer Service.
 ms.reviewer: sdas, ankugupta
 ms.author: sdas
-ms.date: 10/27/2023
+ms.date: 10/30/2023
 ---
 # The SLA KPI instance doesn't reach Nearing Non-compliance or Non-compliant and the SLA KPI instance timer continues to run
 
@@ -11,7 +11,9 @@ This article provides a resolution for an issue where the service-level agreemen
 
 ## Symptoms
 
-The flow runs created for the SLA KPI instances timer fail with a license error message.
+The flow runs created for the SLA KPI instances timer fail with the following license error message:
+
+> The user with SystermUserId = XXXX in OrganizationContext = YYYY is not licensed.
 
 ## Cause
 
@@ -21,9 +23,12 @@ If the user is missing any of the required licenses, then the flow runs that are
 
 Additionally, the current owner of the flow must have the required permissions with read and write access for the SLA KPI instance.
 
-If a user who is the current owner of the flow needs to be removed from the organization, you should first change the owner of the flow to another user. This new user must also have all the required permissions. Once a new owner is added, you can remove the previous owner. This action ensures the flow runs continue to be executed without issues.
-
 ## Possible mitigation step 1: Change the owner of the flow
+
+> [!TIP]
+> If a user who is the current owner of the flow needs to be removed from the organization, you should first change the owner of the flow to another user. This new user must also have all the required permissions. Once a new owner is added, you can delete the previous owner from the owner list. This action ensures the flow runs continue to be executed without issues.
+
+To change the current owner of the failed flow, follow these steps:
 
 1. In [Power Automate](https://powerautomate.microsoft.com), navigate to **Default solution** > **Cloud flows**.
 1. Search for the failed flow with the error.
@@ -54,3 +59,9 @@ For older KPI instances, you can change the status with your own logic or contac
 The status of the SLA will be updated successfully.
 
 :::image type="content" source="media\sla-kpi-instance-compliance-timer\sla-kpi-timer.png" alt-text="Screenshot that shows how to turn on or off a flow." lightbox="media\sla-kpi-instance-compliance-timer\sla-kpi-timer.png":::
+
+## See also
+
+- [Configure actions for the SLA item](/dynamics365/customer-service/define-service-level-agreements?tabs=customerserviceadmincenter#configure-actions-for-the-sla-item)
+- [Timer control for SLA-enabled entities](/dynamics365/customer-service/customer-service-hub-user-guide-case-sla#timer-control-for-sla-enabled-entities)
+- [Add a timer control for SLA-enabled entities](/dynamics365/customer-service/add-timer-control-case-form-track-time-against-sla)
