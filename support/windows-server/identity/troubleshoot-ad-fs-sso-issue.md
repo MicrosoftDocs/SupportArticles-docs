@@ -107,7 +107,7 @@ For more information, see [Overview of authentication handlers of AD FS sign-in 
 
 If the application that you want to access is not Microsoft Online Services, what you experience is expected and controlled by the incoming authentication request. Work with the application owner to change the behavior.
 
-If the application is Microsoft Online Services, what you experience may be controlled by the **PromptLoginBehavior** setting from the trusted realm object. This setting controls whether Azure AD tenants send prompt=login to AD FS. To set the **PromptLoginBehavior** setting, follow these steps:
+If the application is Microsoft Online Services, what you experience may be controlled by the **PromptLoginBehavior** setting from the trusted realm object. This setting controls whether Microsoft Entra tenants send prompt=login to AD FS. To set the **PromptLoginBehavior** setting, follow these steps:
 
 1. Open Windows PowerShell with the "Run as administrator" option.
 2. Get the existing domain federation setting by running the following command:
@@ -124,15 +124,17 @@ If the application is Microsoft Online Services, what you experience may be cont
 
    The values for the PromptLoginBehavior parameter are:
 
-   1. **TranslateToFreshPasswordAuth**: Azure AD sends wauth and wfresh to AD FS instead of prompt=login. This leads to an authentication request to use forms-based authentication.
+   1. **TranslateToFreshPasswordAuth**: Microsoft Entra ID sends wauth and wfresh to AD FS instead of prompt=login. This leads to an authentication request to use forms-based authentication.
    2. **NativeSupport**: The prompt=login parameter is sent as is to AD FS.
    3. **Disabled**: Nothing is sent to AD FS.
 
 To learn more about the Set-MSOLDomainFederationSettings command, see [Active Directory Federation Services prompt=login parameter support](/windows-server/identity/ad-fs/operations/ad-fs-prompt-login).
 
-### Azure Active Directory (Azure AD) scenario
+<a name='azure-active-directory-azure-ad-scenario'></a>
 
-If the authentication request sent to Azure AD include [the prompt=login parameter](/windows-server/identity/ad-fs/operations/ad-fs-prompt-login), disable the prompt=login capability by running the following command:
+### Microsoft Entra scenario
+
+If the authentication request sent to Microsoft Entra ID include [the prompt=login parameter](/windows-server/identity/ad-fs/operations/ad-fs-prompt-login), disable the prompt=login capability by running the following command:
 
 ```powershell
 Set-MsolDomainFederationSettings –DomainName DomainName -PromptLoginBehavior Disabled
@@ -140,7 +142,9 @@ Set-MsolDomainFederationSettings –DomainName DomainName -PromptLoginBehavior D
 
 After you run this command, Office 365 applications won't include the prompt=login parameter in each authentication request.
 
-### Non Azure AD scenario
+<a name='non-azure-ad-scenario'></a>
+
+### Non Microsoft Entra scenario
 
 Request parameters like **WAUTH** and **RequestedAuthNContext** in authentication requests can have authentication methods specified. Check if other request parameters enforcing the unexpected authentication prompt. If so, modify the request parameter to use the expected authentication method.
 
@@ -311,11 +315,11 @@ Check if the endpoints are enabled. AD FS provides various endpoints for differe
 
    :::image type="content" source="media/troubleshoot-adfs-sso-issue/adfs-endpoints-enabled.png" alt-text="Double check the status of all the A D F S endpoints are enabled.":::
 
-Then, check if Azure AD Connect is installed. We recommend that you use Azure AD Connect which makes SSL certificate management easier.
+Then, check if Microsoft Entra Connect is installed. We recommend that you use Microsoft Entra Connect which makes SSL certificate management easier.
 
-If Azure AD Connect is installed, ensure that you [use it to manage and update SSL certificates](/azure/active-directory/connect/active-directory-aadconnectfed-ssl-update).
+If Microsoft Entra Connect is installed, ensure that you [use it to manage and update SSL certificates](/azure/active-directory/connect/active-directory-aadconnectfed-ssl-update).
 
-If Azure AD Connect is not installed, check if the SSL certificate meets the following AD FS requirements:
+If Microsoft Entra Connect is not installed, check if the SSL certificate meets the following AD FS requirements:
 
 - The certificate is from a trusted root certification authority.
 
@@ -328,7 +332,7 @@ If Azure AD Connect is not installed, check if the SSL certificate meets the fol
 
   Check for certificate revocation. If the certificate is revoked, SSL connection can't be trusted and will be blocked by clients.
 
-If the SSL certificate does not meet these requirements, try to get a qualified certificate for SSL communication. We recommend that you use Azure AD Connect which makes SSL certificate management easier. See [Update the TLS/SSL certificate for an Active Directory Federation Services (AD FS) farm](/azure/active-directory/connect/active-directory-aadconnectfed-ssl-update).
+If the SSL certificate does not meet these requirements, try to get a qualified certificate for SSL communication. We recommend that you use Microsoft Entra Connect which makes SSL certificate management easier. See [Update the TLS/SSL certificate for an Active Directory Federation Services (AD FS) farm](/azure/active-directory/connect/active-directory-aadconnectfed-ssl-update).
 
 If the SSL certificate meets these requirements, check the following configurations of the SSL certificate.
 
@@ -613,26 +617,28 @@ If these steps did not help you solve the issue, continue the troubleshooting wi
 
 #### Not all users are impacted by the issue, and the user can access some of the relying parties
 
-In this scenario, check if this issue occurs in an Azure AD scenario. If so, do these checks to troubleshoot this issue. If not, see [Use the Dump Token app](#use-the-dump-token-app) to troubleshoot this issue.
+In this scenario, check if this issue occurs in a Microsoft Entra scenario. If so, do these checks to troubleshoot this issue. If not, see [Use the Dump Token app](#use-the-dump-token-app) to troubleshoot this issue.
 
-##### Check if the user is synced to Azure AD
+<a name='check-if-the-user-is-synced-to-azure-ad'></a>
 
-If a user is trying to log in to Azure AD, they will be redirected to AD FS for authentication for a federated domain. One of the possible reasons for a failed login is that the user is not yet synced to Azure AD. You might see a loop from Azure AD to AD FS after the first authentication attempt at AD FS. To determine whether the user is synced to Azure AD, follow these steps:
+##### Check if the user is synced to Microsoft Entra ID
+
+If a user is trying to log in to Microsoft Entra ID, they will be redirected to AD FS for authentication for a federated domain. One of the possible reasons for a failed login is that the user is not yet synced to Microsoft Entra ID. You might see a loop from Microsoft Entra ID to Active Directory FS after the first authentication attempt at AD FS. To determine whether the user is synced to Microsoft Entra ID, follow these steps:
 
 1. [Download](https://connect.microsoft.com/site1164/Downloads/DownloadDetails.aspx?DownloadID=59185) and install the Azure AD PowerShell module for Windows PowerShell.
 1. Open Windows PowerShell with the "Run as administrator" option.
-1. Initiate a connection to Azure AD by running the following command:  
+1. Initiate a connection to Microsoft Entra ID by running the following command:  
 `Connect-MsolService`
 1. Provide the global administrator credential for the connection.
-1. Get the list of users in the Azure AD by running the following command:  
+1. Get the list of users in the Microsoft Entra ID by running the following command:  
 `Get-MsolUser`
 1. Verify if the user is in the list.
 
-If the user is not in the list, sync the user to Azure AD.
+If the user is not in the list, sync the user to Microsoft Entra ID.
 
 ##### Check immutableID and UPN in issuance claim rule
 
-Azure AD requires immutableID and the user's UPN to authenticate the user.
+Microsoft Entra ID requires immutableID and the user's UPN to authenticate the user.
 
 > [!NOTE]
 > immutableID is also called sourceAnchor in the following tools:
@@ -640,35 +646,35 @@ Azure AD requires immutableID and the user's UPN to authenticate the user.
 > - Azure AD Sync
 > - Azure Active Directory Sync (DirSync)
 
-Administrators can use Azure AD Connect for automatic management of AD FS trust with Azure AD. If you are not managing the trust via Azure AD Connect, we recommend that you do so by [downloading Azure AD Connect](https://go.microsoft.com/fwlink/?LinkId=615771) Azure AD Connect enables automatic claim rules management based on sync settings.
+Administrators can use Microsoft Entra Connect for automatic management of AD FS trust with Microsoft Entra ID. If you are not managing the trust via Microsoft Entra Connect, we recommend that you do so by [downloading Microsoft Entra Connect](https://go.microsoft.com/fwlink/?LinkId=615771) Microsoft Entra Connect enables automatic claim rules management based on sync settings.
 
-To check if the claim rules for immutableID and UPN in AD FS matches what Azure AD uses, follow these steps:
+To check if the claim rules for immutableID and UPN in AD FS matches what Microsoft Entra ID uses, follow these steps:
 
-1. Get sourceAnchor and UPN in Azure AD Connect.
+1. Get sourceAnchor and UPN in Microsoft Entra Connect.
 
-   1. Open Azure AD Connect.
+   1. Open Microsoft Entra Connect.
    2. Click **View current configuration**.
 
-      :::image type="content" source="media/troubleshoot-adfs-sso-issue/microsoft-azure-active-directory-connect.png"  alt-text="Select the View current configuration in the Azure A D Connect additional tasks page." border="false":::
+      :::image type="content" source="media/troubleshoot-adfs-sso-issue/microsoft-azure-active-directory-connect.png"  alt-text="Select the View current configuration in the Microsoft Entra Connect additional tasks page." border="false":::
 
    3. On the **Review Your Solution** page, make a note of the values of **SOURCE ANCHOR** and **USER PRINCIPAL NAME**.
 
-      :::image type="content" source="media/troubleshoot-adfs-sso-issue/azure-active-directory-connect.png"  alt-text="Get the values of SOURCE ANCHOR and USER PRINCIPAL NAME in the Azure A D Connect page.":::
+      :::image type="content" source="media/troubleshoot-adfs-sso-issue/azure-active-directory-connect.png"  alt-text="Get the values of SOURCE ANCHOR and USER PRINCIPAL NAME in the Microsoft Entra Connect page.":::
 
 2. Verify the values of immutableID (sourceAnchor) and UPN in the corresponding claim rule configured in the AD FS server.
 
    1. On the AD FS server, open the AD FS management console.
    2. Click **Relying Party Trusts**.
-   3. Right-click the relying party trust with Azure AD, and then click **Edit Claim Issuance Policy**.
+   3. Right-click the relying party trust with Microsoft Entra ID, and then click **Edit Claim Issuance Policy**.
    4. Open the claim rule for immutable ID and UPN.
-   5. Verify if the variables queried for values of immutableID and UPN are the same as those appear in Azure AD Connect.
+   5. Verify if the variables queried for values of immutableID and UPN are the same as those appear in Microsoft Entra Connect.
 
       :::image type="content" source="media/troubleshoot-adfs-sso-issue/edit-rule-issue-upn-and-immutableid.png" alt-text="Verify the values of immutableID and UPN in the corresponding claim rule configured in the A D F S server.":::
 
 3. If there is a difference, use one of the methods below:
 
-   - If AD FS is managed by Azure AD Connect, reset the relying party trust by using Azure AD Connect.
-   - If AD FS is not managed by Azure AD Connect, correct the claims with the right attributes.
+   - If AD FS is managed by Microsoft Entra Connect, reset the relying party trust by using Microsoft Entra Connect.
+   - If AD FS is not managed by Microsoft Entra Connect, correct the claims with the right attributes.
 
 If these checks did not help you solve the issue, see [Use the Dump Token app](#use-the-dump-token-app) to troubleshoot this issue.
 
@@ -1052,7 +1058,7 @@ The IP:port binding takes the highest precedence. If an IP:port binding is in th
 
 ### Problem 2: The AD FS certificate binding doesn't have CTL Store Name set to AdfsTrustedDevices
 
-If Azure AD Connect is installed, use AAD Connect to set CTL Store Name to AdfsTrustedDevices for the SSL certificate bindings on all AD FS servers. If Azure AD Connect is not installed, regenerate the AD FS certificate bindings by running the following command on all AD FS servers.
+If Microsoft Entra Connect is installed, use Microsoft Entra Connect to set CTL Store Name to AdfsTrustedDevices for the SSL certificate bindings on all AD FS servers. If Microsoft Entra Connect is not installed, regenerate the AD FS certificate bindings by running the following command on all AD FS servers.
 
 ```powershell
 Set-AdfsSslCertificate -Thumbprint Thumbprint
