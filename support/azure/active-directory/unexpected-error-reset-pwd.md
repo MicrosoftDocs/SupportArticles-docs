@@ -10,7 +10,7 @@ ms.subservice: authentication
 
 This article describes an issue in which you receive an error message when you try to reset your password in Microsoft Azure, Office 365, or Microsoft Intune. To resolve this problem, work with your administrator to update your telephone number(s).
 
-_Original product version:_ &nbsp; Azure Active Directory, Microsoft Intune, Cloud Services (Web roles/Worker roles)  
+_Original product version:_ &nbsp; Microsoft Entra ID, Microsoft Intune, Cloud Services (Web roles/Worker roles)  
 _Original KB number:_ &nbsp; 2951260
 
 ## Symptoms

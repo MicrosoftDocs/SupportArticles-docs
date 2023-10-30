@@ -8,7 +8,7 @@ ms.subservice: authentication
 ---
 # Error when you run the Azure Active Directory Sync Tool Configuration Wizard: An unknown error occurred with the Microsoft Online Services Sign-in Assistant
 
-_Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Azure Active Directory, Microsoft Intune, Azure Backup, Office 365 Identity Management  
+_Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 Identity Management  
 _Original KB number:_ &nbsp; 2502710
 
 ## Symptoms
