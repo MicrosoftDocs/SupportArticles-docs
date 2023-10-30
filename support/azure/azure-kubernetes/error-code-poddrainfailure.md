@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot Eviction Failures due to Pod Disruption Budgets
+title: Troubleshoot eviction failures due to Pod Disruption Budgets
 description: Learn how to troubleshoot eviction failures due to Pod Disruption Budgets when you try to upgrade an Azure Kubernetes Service cluster.
 ms.date: 10/30/2023
 editor: v-jsitser
@@ -9,7 +9,7 @@ ms.subservice: troubleshoot-upgrade-operations
 #Customer intent: As an Azure Kubernetes Services (AKS) user, I want to troubleshoot an Azure Kubernetes Service cluster upgrade that failed because of eviction failures caused by Pod Disruption Budgets so that I can upgrade the cluster successfully.
 ---
 
-# Troubleshoot Eviction Failures due to Pod Disruption Budgets
+# Troubleshoot eviction failures due to Pod Disruption Budgets
 
 This article discusses how to identify and resolve eviction failures due to Pod Disruption Budgets that occur when you try to upgrade an Azure Kubernetes Service (AKS) cluster.
 
