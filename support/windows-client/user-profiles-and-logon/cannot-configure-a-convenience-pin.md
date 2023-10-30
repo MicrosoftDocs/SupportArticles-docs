@@ -34,16 +34,16 @@ Windows 10 Version 1607 and later include new functionality that differentiates 
 
 Windows Hello for Business has strong user authentication properties that are frequently and mistakenly assumed to be functioning when the Windows Hello for Business infrastructure isn't in place and when a user is using a convenience PIN. This change prevents the creation of a PIN in Windows 10 and later version without Windows Hello for Business.
 
-Additionally, a user can't create a convenience PIN in Windows 10 version 1607 and later version when the following policies are both enabled, unless the device is joined to Azure Active Directory in some way:
+Additionally, a user can't create a convenience PIN in Windows 10 version 1607 and later version when the following policies are both enabled, unless the device is joined to Microsoft Entra ID in some way:
 
 - Use Convenience PIN
 - Use Windows Hello for Business  
 
-For example, the device is either Azure AD-joined, or has the following policy enabled:
+For example, the device is either Microsoft Entra joined, or has the following policy enabled:
 
 Computer Configuration\Administrative Templates\Windows Components\device registration\Register domain joined computers as devices
 
-To allow convenience PINs to be created on devices that aren't joined to Azure AD, make sure that the following conditions are true:
+To allow convenience PINs to be created on devices that aren't joined to Microsoft Entra ID, make sure that the following conditions are true:
 
 - The Use Windows Hello for Business policy isn't enabled.
 - The Turn on convenience PIN sign-in policy is enabled.
