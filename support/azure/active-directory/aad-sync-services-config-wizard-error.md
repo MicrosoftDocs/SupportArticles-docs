@@ -1,6 +1,6 @@
 ---
 title: Error 80070005 when you run the Azure Active Directory Sync Services config wizard
-description: Describes an issue that generates a failed due to the 80070005 error when you run the Azure Active Directory Sync (AAD Sync) Services config wizard. Provides a solution.
+description: Describes an issue that generates a failed due to the 80070005 error when you run the Azure Active Directory Sync (Azure AD Sync) Services config wizard. Provides a solution.
 ms.date: 11/09/2021
 ms.reviewer: willfid
 ms.service: active-directory
@@ -8,18 +8,18 @@ ms.subservice: enterprise-users
 ---
 # Error: 80070005 when you run the Azure Active Directory Sync Services config wizard
 
-_Original product version:_ &nbsp; Azure Active Directory, Microsoft Intune, Azure Backup, Office 365 Identity Management  
+_Original product version:_ &nbsp; Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 Identity Management  
 _Original KB number:_ &nbsp; 2988408
 
 ## Symptoms
 
-When you run the Azure Active Directory Sync (AAD Sync) Services config wizard, you receive the following message:
+When you run the Azure Active Directory Sync (Azure AD Sync) Services config wizard, you receive the following message:
 
 > Retrieving the COM class factory for remote component with CSLID {...} from machine ... failed due to the following error: 80070005
 
 ## Cause
 
-This issue may occur if you're not a member of the **ADSyncAdmins** group on the local computer or if you have just installed AAD Sync Services.
+This issue may occur if you're not a member of the **ADSyncAdmins** group on the local computer or if you have just installed Azure AD Sync Services.
 
 ## Resolution
 

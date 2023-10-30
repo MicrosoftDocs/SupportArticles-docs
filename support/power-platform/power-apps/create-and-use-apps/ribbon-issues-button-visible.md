@@ -19,7 +19,7 @@ A button will be made visible if all the [enable rules](/powerapps/developer/mod
 > [!WARNING]
 > Do not remove the `Mscrm.HideOnModern` display rule from a command to force a button to appear in the Unified Interface. Commands that have the `Mscrm.HideOnModern` display rule are intended for the legacy Web Client interface and are not supported in the Unified Interface, and may not work correctly.
 
-1. [Enable Command checker and select the command button to inspect](/troubleshoot/power-platform/power-apps/create-and-use-apps/ribbon-issues#use-commmand-checker).
+1. [Enable Command checker and select the command button to inspect](ribbon-issues.md#use-command-checker).
 1. The following example shows two **Appointment** buttons on the activities grid page, and one is expected to be hidden.
 
     :::image type="content" source="media/ribbon-issues-button-visible/appointment-button.png" alt-text="Screenshot shows there are two Appointment buttons on the activities grid page.":::

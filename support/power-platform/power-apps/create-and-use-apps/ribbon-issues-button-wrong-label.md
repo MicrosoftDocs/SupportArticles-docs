@@ -30,7 +30,7 @@ You can [customize labels and create translations for classic commands](/power-a
 
 #### Check if correct translations are present
 
-1. [Enable Command checker and select the command button to inspect](/troubleshoot/power-platform/power-apps/create-and-use-apps/ribbon-issues#use-commmand-checker).
+1. [Enable Command checker and select the command button to inspect](ribbon-issues.md#use-command-checker).
 1. The right pane shows four kinds of text that can be customized for a command button.
 
     :::image type="content" source="media/ribbon-issues-button-wrong-label/button-properties-with-labels.png" alt-text="Screenshot shows the text that can be customized for a command button." lightbox="media/ribbon-issues-button-wrong-label/button-properties-with-labels.png":::
