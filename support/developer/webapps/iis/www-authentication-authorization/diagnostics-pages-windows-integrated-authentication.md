@@ -40,7 +40,7 @@ These pages are coded in [ASP.NET Web Forms](/aspnet/web-forms/) and are intende
   - The identity of the account executing the page's code (which can be the authenticated user or the application pool user depending on the [impersonation](../../aspnet/development/implement-impersonation.md) settings).
   - All the values of the request headers for the request that came into the *WhoAmI.aspx* page as recovered from the [IIS Server Variables](/previous-versions/iis/6.0-sdk/ms524602(v=vs.90)).
 
-    :::image type="content" source="media/diagnostics-pages-windows-integrated-authentication/whoami-page.png" alt-text="The screenshot shows the "Who Am I Page" with authentication information and identity.":::
+    :::image type="content" source="media/diagnostics-pages-windows-integrated-authentication/whoami-page.png" alt-text="The screenshot shows "Who Am I Page" with authentication information and identity.":::
 
 - *ScrapperTest.aspx* page is made to work with the *WhoAmI.aspx* page, allowing requests from a front-end server to be directed to arbitrary urls for the backend servers. The page presents a UI interface that allows a user to:
 

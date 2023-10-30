@@ -191,7 +191,7 @@ items:
   - name: Default permissions and user rights
     href: www-authentication-authorization/default-permissions-user-rights.md
   - name: Diagnostics pages for Windows Integrated Authentication
-    href: diagnostics-pages-windows-integrated-authentication.md
+    href: www-authentication-authorization/diagnostics-pages-windows-integrated-authentication.md
   - name: Digest authentication fails
     href: www-authentication-authorization/digest-authentication.md
   - name: Errors when you install certificates
