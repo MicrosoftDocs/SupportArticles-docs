@@ -6,7 +6,7 @@ ms.reviewer: jarrettr, v-leedennis
 ms.service: active-directory
 ms.subservice: authentication
 keywords:
-#Customer intent: As an Azure Active Directory (Azure AD) user, I want to understand how to send Microsoft Authenticator logs to customer support and get the incident ID which must be included so I can submit my support request correctly.
+#Customer intent: As a Microsoft Entra user, I want to understand how to send Microsoft Authenticator logs to customer support and get the incident ID which must be included so I can submit my support request correctly.
 ---
 
 # Send Microsoft Authenticator logs and get an incident ID
