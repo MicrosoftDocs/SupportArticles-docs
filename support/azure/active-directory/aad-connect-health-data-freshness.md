@@ -19,7 +19,7 @@ This article offers common diagnostic fixes for the data freshness alert "Health
 
 - [Microsoft Entra Connect](https://www.microsoft.com/download/details.aspx?id=47594).
 - The [Microsoft Entra Connect Health agent for AD DS](https://go.microsoft.com/fwlink/?LinkID=820540).
-- The [Microsoft Entra Connect Health agent for Azure AD FS](https://go.microsoft.com/fwlink/?LinkID=518973).
+- The [Microsoft Entra Connect Health agent for Active Directory Federation Services](https://go.microsoft.com/fwlink/?LinkID=518973).
 - The [PsExec](/sysinternals/downloads/psexec) tool.
 
 ## Symptoms
