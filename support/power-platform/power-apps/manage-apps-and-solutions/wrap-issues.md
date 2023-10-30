@@ -74,7 +74,7 @@ If you can't sign in to your wrapped mobile app, verify that:
   :::image type="content" source="media/wrap-issues/api-permissions.png" alt-text="Screenshot that shows the API permissions for the app." lightbox="media/wrap-issues/api-permissions.png":::
 
 - The `Add-AdminAllowedThirdPartyApps` script has run successfully. For more information, see [Allow registered apps in your environment](/power-apps/maker/common/wrap/how-to).
-- Your Microsoft Entra app type is **Multitenant**. Under your Microsoft Entra app's **Authentication** tab, the supported account type should be **Accounts in any organizational directory (Any Microsoft Entra directory – Multitenant)**.
+- Your Microsoft Entra app type is **Multitenant**. Under your Microsoft Entra app's **Authentication** tab, the supported account type should be **Accounts in any organizational directory (Any Microsoft Entra directory - Multitenant)**.
 - The proper redirect URIs have been created for iOS and Android. For Android, confirm that the hash is provided correctly. For more information about configuring a redirect URI, see [Configure platform settings](/azure/active-directory/develop/quickstart-register-app#configure-platform-settings).
 
 ## Issue 6 - Errors in Azure key vault in wrap for Power Apps

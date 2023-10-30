@@ -63,7 +63,7 @@ To resolve this issue, tenant administrators need to go to the **Enterprise Appl
 
 > The Dataverse database for this environment is disabled
 
-The Dataverse instance has been disabled in this environment. It isn't expected and is related to the expiration of all Power Automate & Dataverse plans within your Microsoft Entra tenancy. To ensure the database can be enabled, make sure at least one user has active plans.
+The Dataverse instance has been disabled in this environment. It isn't expected and is related to the expiration of all Power Automate & Dataverse plans within your Microsoft Entra tenant. To ensure the database can be enabled, make sure at least one user has active plans.
 
 ## Error "Database isn't ready yet"
 
