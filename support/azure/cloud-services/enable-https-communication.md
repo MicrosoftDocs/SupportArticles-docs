@@ -246,7 +246,7 @@ Before you proceed, see [Deploy Cloud Services (extended support) by using the A
 > [!NOTE]
 > This section contains code that's rewritten from the official SDK example code that you can find at [GitHub example code page for Azure Cloud Services (extended support)](https://github.com/Azure-Samples/cloud-services-extended-support/tree/main/SDKSample/CreateCloudService/CreateCloudService).
 
-This section describes how to use the Azure SDK and C# to make the correct configuration changes. To successfully use the SDK to deploy the cloud service project and modify the related configuration, you should register an application in Azure Active Directory. To do the registration, see the [Use the portal to create an Azure AD application and service principal that can access resources](/azure/active-directory/develop/howto-create-service-principal-portal) article. The following table outlines the specific steps to take and the corresponding subsection to read in that article.
+This section describes how to use the Azure SDK and C# to make the correct configuration changes. To successfully use the SDK to deploy the cloud service project and modify the related configuration, you should register an application in Microsoft Entra ID. To do the registration, see the [Use the portal to create a Microsoft Entra application and service principal that can access resources](/azure/active-directory/develop/howto-create-service-principal-portal) article. The following table outlines the specific steps to take and the corresponding subsection to read in that article.
 
 | Step | Subsection link |
 |--|--|
