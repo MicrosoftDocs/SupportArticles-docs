@@ -1,4 +1,4 @@
-
+---
 title: Object deletions aren't synchronized to Microsoft Entra ID when using the Azure AD Connect
 description: Describes an issue in which a deleted on-premises Active Directory object isn't removed from Microsoft Entra ID when directory synchronization is used in Office 365, Azure, or Microsoft Intune.
 ms.date: 10/19/2023
