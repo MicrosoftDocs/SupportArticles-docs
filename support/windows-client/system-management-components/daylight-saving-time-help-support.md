@@ -42,7 +42,7 @@ In order for Microsoft to provide an update at the earliest and ensure a seamles
 
 ### Standalone DST updates
 
-[KB 914387](https://support.microsoft.com/kb/914387) provides a list of DST updates that have been released. It also includes a short summary of the content that's included in each update. This allows a consistent means for customers and partners to be informed whenever such an update is made available.
+Standalone DST updates are no longer available. Please use the current monthly rollup for your version of Windows.
 
 ### Monthly rollups
 

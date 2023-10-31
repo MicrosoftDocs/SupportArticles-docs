@@ -27,6 +27,6 @@ The following table lists the attributes that are synced from the on-premises Ac
 | proxyAddresses|X|X|X|X|The address by which a Microsoft Exchange Server recipient object is recognized in a foreign mail system|
 | pwdLastSet|X||||Stores the time of last password change|
 | securityEnabled|||X|X|Specifies whether the group is a security group|
-| sourceAnchor|X|X|||Each account in your local on-premises environment will be linked to the corresponding Azure AD account through the `sourceAnchor` value|
+| sourceAnchor|X|X|||Each account in your local on-premises environment will be linked to the corresponding Microsoft Entra account through the `sourceAnchor` value|
 | usageLocation|X||||Usage location|
 | userPrincipalName|X||X|X|UPN|

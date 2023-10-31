@@ -14,7 +14,7 @@ ms.custom:
 
 This article resolves an issue where you can't connect to the Azure Information Protection Service using Windows PowerShell in Office 365.
 
-_Original product version:_ &nbsp; Azure Active Directory, Azure Information Protection  
+_Original product version:_ &nbsp; Microsoft Entra ID, Azure Information Protection  
 _Original KB number:_ &nbsp; 2797755
 
 ## Symptoms

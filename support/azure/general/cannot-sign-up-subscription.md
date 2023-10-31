@@ -22,7 +22,7 @@ When you try to sign up for a Microsoft Azure subscription, you receive the fol
 
 ## Cause
 
-The email address that is used to sign up for the Azure subscription already exists in an unmanaged Azure AD directory. Unmanaged Azure AD directories cannot be associated with an Azure subscription.
+The email address that is used to sign up for the Azure subscription already exists in an unmanaged Microsoft Entra directory. Unmanaged Microsoft Entra directories cannot be associated with an Azure subscription.
 
 ## Resolution
 
@@ -33,6 +33,6 @@ This process transforms the unmanaged directory into a managed directory by ass
 ## References
 
 - [How to perform an IT Admin Takeover with O365](https://powerbi.microsoft.com/blog/how-to-perform-an-it-admin-takeover-with-o365/)
-- [Take over an unmanaged directory in Azure Active Directory](/azure/active-directory/domains-admin-takeover)
+- [Take over an unmanaged directory in Microsoft Entra ID](/azure/active-directory/domains-admin-takeover)
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

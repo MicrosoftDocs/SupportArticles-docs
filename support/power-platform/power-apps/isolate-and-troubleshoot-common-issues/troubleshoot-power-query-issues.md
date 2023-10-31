@@ -17,20 +17,20 @@ search.app:
 
 When you use Power Query for Excel to create a custom table that contains data from external sources, you may receive the following error:
 
-> "Your Azure Active Directory administrator has set a policy that prevents you from using this feature. Please contact your administrator, who can grant permissions for this feature on your behalf."
+> "Your Microsoft Entra administrator has set a policy that prevents you from using this feature. Please contact your administrator, who can grant permissions for this feature on your behalf."
 
 The error appears if Power Query can't access the organization's data in Power Apps or Microsoft Dataverse. This situation arises under two sets of circumstances:
 
-* An Azure Active Directory (Azure AD) tenant administrator has disallowed users' ability to consent to apps that access company data on their behalf.
+* A Microsoft Entra tenant administrator has disallowed users' ability to consent to apps that access company data on their behalf.
 * Using an unmanaged Active Directory tenant. An unmanaged tenant is a directory without a global administrator that was created to complete a self-service signup offer. To fix this scenario, users must first convert to a managed tenant and then follow one of the two solutions to this issue. The solutions are described in the next section.
 
-To resolve this issue, the Azure Active Directory administrator must follow either of the procedures that are presented later in this article.
+To resolve this issue, the Microsoft Entra administrator must follow either of the procedures that are presented later in this article.
 
 ## Allow users to consent to apps that access company data
 
 This approach is perhaps easier than the next, but it allows for broader permissions.
 
-1. In the [Azure portal](https://portal.azure.com), open the **Azure Active Directory** pane, and then select **User settings**.
+1. In the [Azure portal](https://portal.azure.com), open the **Microsoft Entra ID** pane, and then select **User settings**.
 2. Next to **Users can consent to apps accessing company data on their behalf**, select **Yes**, and then select **Save**.
 
 ## Allow Power Query to access company data

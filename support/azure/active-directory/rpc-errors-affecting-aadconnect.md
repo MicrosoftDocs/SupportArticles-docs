@@ -1,22 +1,24 @@
 ---
-title: RPC errors affecting AADConnect
-description: This article describes common examples of AADConnect features affected by RPC errors.
+title: RPC errors affecting Microsoft Entra Connect
+description: This article describes common examples of Microsoft Entra Connect features affected by RPC errors.
 ms.date: 11/05/2020
 ms.service: active-directory
 ms.subservice: enterprise-users
 ---
 
-# RPC errors affecting AADConnect
+# RPC errors affecting Microsoft Entra Connect
 
-Customers may experience issues where they cannot configure AADConnect and or enable features due to Remote Procedure Call (RPC) related errors.
+Customers may experience issues where they cannot configure Microsoft Entra Connect and or enable features due to Remote Procedure Call (RPC) related errors.
 
 Customers may also experience features previously enabled stop working due to these types of errors.  
 
-In the vast majority of cases, the issue is affecting AADConnect and not caused by AADConnect, so finding the exact underlying problem is crucial to correctly define troubleshooting steps and identify the right underlying issue causing the errors.
+In the vast majority of cases, the issue is affecting Microsoft Entra Connect and not caused by Microsoft Entra Connect, so finding the exact underlying problem is crucial to correctly define troubleshooting steps and identify the right underlying issue causing the errors.
 
-This article cover examples of AADConnect features affected by RPC errors.
+This article cover examples of Microsoft Entra Connect features affected by RPC errors.
 
-## Investigating a Remote Procedure Call error affecting AADConnect
+<a name='investigating-a-remote-procedure-call-error-affecting-aadconnect'></a>
+
+## Investigating a Remote Procedure Call error affecting Microsoft Entra Connect
 
 When an issue is identified, it is generally recommended as part of troubleshooting initial steps, to carefully investigate Application events using Event Viewer. Determining the system error being returned from the remote procedure call will help you target your investigation and define the right troubleshooting methods and tools.
 
@@ -47,7 +49,7 @@ In this case, the RPC communication failed with error **"1722 : The RPC server i
 
 [System Error Codes 1700-3999](/windows/win32/debug/system-error-codes--1700-3999-)
 
-In this example, the error is affecting AADConnect password synchronization feature.
+In this example, the error is affecting Microsoft Entra Connect password synchronization feature.
 
 ### Troubleshooting Example 1
 
@@ -59,10 +61,10 @@ In this scenario, investigating a network trace reveals retransmit packets being
 
 These errors can manifest intermittently, which adds complexity to the process of collecting data, like a network trace, for investigation and troubleshooting.
 
-The following steps allow you to automatically collect a network trace, when the error event id is generated.
+The following steps allow you to automatically collect a network trace, when the error event ID is generated.
 
 > [!NOTE]
-> To automatically collect an network trace, **Microsoft Network Monitor** must be installed on the AADConnect server.
+> To automatically collect an network trace, **Microsoft Network Monitor** must be installed on the Microsoft Entra Connect server.
 >
 > [Download Netmon](https://www.microsoft.com/download/details.aspx?id=4865)
 
@@ -74,7 +76,7 @@ The following steps allow you to automatically collect a network trace, when the
 
 2. To stop the trace when the error is generated, send a Ping with the correct size.
 
-   Prepare the Ping Command in a script (cmd file for instance) that you execute when the AADConnect throws the Error in Event log.
+   Prepare the Ping Command in a script (cmd file for instance) that you execute when the Microsoft Entra Connect throws the Error in Event log.
 
    Ping command:
 
@@ -117,7 +119,7 @@ In Example 2 the Remote Procedure Call returned error is **8333**, an error for 
 
 [System Error Codes 8200-8999](/windows/win32/debug/system-error-codes--8200-8999-)
 
-AADConnect server was not able to find the user object for which it is trying to perform Password Hash Synchronization in Active Directory.
+Microsoft Entra Connect server was not able to find the user object for which it is trying to perform Password Hash Synchronization in Active Directory.
 
 More detailed information and troubleshooting guidance can be found in [Windows Server Troubleshooting : RPC Server is unavailable](https://social.technet.microsoft.com/wiki/contents/articles/4494.windows-server-troubleshooting-rpc-server-is-unavailable.aspx).
 
@@ -177,7 +179,9 @@ There may be various reasons to raise an access denied error. Hardening group po
 
 [Network access: Restrict clients allowed to make remote calls to SAM](/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls)  
 
-## Other commonly found system error codes returned in Remote Procedure Call affecting AADConnect
+<a name='other-commonly-found-system-error-codes-returned-in-remote-procedure-call-affecting-aadconnect'></a>
+
+## Other commonly found system error codes returned in Remote Procedure Call affecting Microsoft Entra Connect
 
 | Error ID | Hexadecimal error representation | Error symbolic name | Error descriptive text
 |:-----------:|:-----------:|:-----------:|:-----------:|  

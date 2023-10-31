@@ -8,7 +8,7 @@ ms.subservice: enterprise-users
 ---
 # Error (LogonUser() Failed with error code: 1789) after you enter enterprise administrator credentials in the Azure Active Directory Sync tool Configuration Wizard
 
-_Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Azure Active Directory, Microsoft Intune, Azure Backup, Office 365 Identity Management  
+_Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 Identity Management  
 _Original KB number:_ &nbsp; 2508225
 
 ## Symptoms

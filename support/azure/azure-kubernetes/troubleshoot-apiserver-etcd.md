@@ -3,7 +3,7 @@ title: Troubleshoot API server and etcd problems in AKS
 description: Provides a troubleshooting guide for API server and etcd problems in Azure Kubernetes Services.
 author: seguler
 ms.author: segule
-ms.date: 08/17/2023
+ms.date: 10/30/2023
 ms.service: azure-kubernetes-service
 ms.reviewer: mikerooney, v-weizhu, axelg, v-leedennis
 ---
@@ -174,8 +174,11 @@ To check the etcd database usage, navigate to **Diagnose and Solve problems** in
 If you just want a quick way to view the current size of your etcd database in bytes, run the following command:
 
 ```bash
-kubectl get --raw /metrics | grep "etcd_db_total_size_in_bytes"
+kubectl get --raw /metrics | grep -E "etcd_db_total_size_in_bytes|apiserver_storage_size_bytes|apiserver_storage_db_total_size_in_bytes"
 ```
+
+> [!NOTE]
+> The metric name in the previous command is different for different Kubernetes versions. For Kubernetes 1.25 and earlier, use `etcd_db_total_size_in_bytes`. For Kubernetes 1.26 to 1.28, use `apiserver_storage_db_total_size_in_bytes`.
 
 ### Solution 2: Define quotas for object creation, delete objects, or limit object lifetime in etcd
 

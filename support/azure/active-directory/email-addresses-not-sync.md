@@ -1,21 +1,21 @@
 ---
-title: Email addresses aren't synced to Azure Active Directory
-description: Describes an issue in which users are synced to Azure AD but one or more SMTP proxy addresses aren't synced.  This issue occurs if duplicate SMTP proxy addresses exist. Provides a resolution.
+title: Email addresses aren't synced to Microsoft Entra ID
+description: Describes an issue in which users are synced to Microsoft Entra ID but one or more SMTP proxy addresses aren't synced.  This issue occurs if duplicate SMTP proxy addresses exist. Provides a resolution.
 ms.date: 05/11/2020
 ms.reviewer: willfid
 ms.service: active-directory
 ms.subservice: enterprise-users
 ---
-# Email addresses aren't synced to Azure Active Directory
+# Email addresses aren't synced to Microsoft Entra ID
 
-This article describes an issue in which users are synced to Azure AD but one or more SMTP proxy addresses aren't synced. This issue occurs if duplicate SMTP proxy addresses exist.
+This article describes an issue in which users are synced to Microsoft Entra ID but one or more SMTP proxy addresses aren't synced. This issue occurs if duplicate SMTP proxy addresses exist.
 
-_Original product version:_ &nbsp; Azure Active Directory  
+_Original product version:_ &nbsp; Microsoft Entra ID  
 _Original KB number:_ &nbsp; 3166798
 
 ## Symptoms
 
-Although your users are synced to Azure Active Directory (Azure AD), one or more SMTP proxy addresses aren't synced. Additionally, you may see a message that resembles one of the following:
+Although your users are synced to Microsoft Entra ID, one or more SMTP proxy addresses aren't synced. Additionally, you may see a message that resembles one of the following:
 
 In the Office 365 portal:
 
@@ -25,7 +25,7 @@ In the Office 365 portal:
 
 From an email report:
 
-> This object has been updated in your Azure Active Directory, but with some modified properties, because the following attributes are associated with another object [ProxyAddresses SMTP:`john@contoso.com`;].
+> This object has been updated in your Microsoft Entra ID, but with some modified properties, because the following attributes are associated with another object [ProxyAddresses SMTP:`john@contoso.com`;].
 
 This issue occurs if another object has the same SMTP proxy address.
 
@@ -41,9 +41,11 @@ To resolve duplicate attributes by using the IdFix Tool, see ["Duplicate" is dis
 
 For more information about the IdFix tool, go to [IdFix DirSync Error Remediation Tool](https://github.com/microsoft/idfix).
 
-### Step 2: Check Azure AD
+<a name='step-2-check-azure-ad'></a>
 
-You can use the Office 365 portal or the Azure Active Directory Module for Windows PowerShell to check Azure AD for duplicate attributes.
+### Step 2: Check Microsoft Entra ID
+
+You can use the Office 365 portal or the Azure Active Directory module for Windows PowerShell to check Microsoft Entra ID for duplicate attributes.
 
 > [!NOTE]
 > The report in the Office 365 portal only displays user objects that have these errors. The report doesn't show information about conflicts between groups, contacts, or public folders. See Method 2 to learn how to view conflicts for the other objects.
@@ -59,8 +61,8 @@ You can use the Office 365 portal or the Azure Active Directory Module for Windo
 4. Select an object to view details about the conflict. This information is displayed in the lower-right corner of the page.
 5. Change the email address so that it's unique.
 
-#### Method 2: Use the Azure AD Module for Windows PowerShell
+#### Method 2: Use the Azure AD module for Windows PowerShell
 
-To learn more about how to use the Azure AD Module for Windows PowerShell to identify objects that have duplicate values, see [Identity synchronization and duplicate attribute resiliency](/azure/active-directory/hybrid/how-to-connect-syncservice-duplicate-attribute-resiliency).
+To learn more about how to use the Azure AD module for Windows PowerShell to identify objects that have duplicate values, see [Identity synchronization and duplicate attribute resiliency](/azure/active-directory/hybrid/how-to-connect-syncservice-duplicate-attribute-resiliency).
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
