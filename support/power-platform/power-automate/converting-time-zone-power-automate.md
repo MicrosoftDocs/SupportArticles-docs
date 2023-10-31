@@ -82,7 +82,7 @@ For more information about the format string parameter, see [standard date and t
 - You may get errors where your date time string isn't in the correct format. For example:
   > The date time string must match ISO8601 format.
 
-For more information about how to correctly format your datetime string, see [convertTimeZone](/azure/logic-apps/workflow-definition-language-functions-reference).
+  For more information about how to correctly format your datetime string, see [convertTimeZone](/azure/logic-apps/workflow-definition-language-functions-reference).
 
 #### **Check the time zone of an output**
 
