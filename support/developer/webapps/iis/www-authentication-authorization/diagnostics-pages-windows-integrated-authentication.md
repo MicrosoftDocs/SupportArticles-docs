@@ -21,7 +21,7 @@ For the purposes of this article, use the following layout:
 
 - *Web-serv1* is the front-end IIS server hosting an ASP.NET (on .NET Framework) website that uses Windows Integrated Authentication and runs using the identity of a service account: *domain\serviceaccount*.
 
-- *Web-serv2* is the back-end web server that also hosts an ASP.NET (on .NET Framework) site that will expose API endpoints for the front-end application. It's also configured to allow requests that use Windows Integrated Authentication and execute in an application pool that uses *domain\serviceapiaccount* as the application pool identity.
+- *Web-serv2* is the back-end web server that also hosts an ASP.NET (on .NET Framework) site that will expose API endpoints for the front-end application. It's also configured to allow requests that use Windows Integrated Authentication and execute in an application pool that uses *domain\serviceapiaccount* as an application pool identity.
 
 :::image type="content" source="media/diagnostics-pages-windows-integrated-authentication/workstation-web-serv1-web-serv2.png" alt-text="Screenshot shows the layout of workstation, Web-serv1, and Web-serv2.":::
 
