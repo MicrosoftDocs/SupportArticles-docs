@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot WINDOWS_CSE_ERROR_CHECK_API_SERVER_CONNECTIVITY error (5)
 description: Learn how to troubleshoot the WINDOWS_CSE_ERROR_CHECK_API_SERVER_CONNECTIVITY error (5) when you try to add Windows node pools in an AKS cluster.
-ms.date: 10/25/2023
+ms.date: 10/31/2023
 ms.reviewer: shtao, abelch, junjiezhang, v-weizhu
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-create-operations
@@ -29,7 +29,7 @@ When you try to add a Windows node pool in an AKS cluster, you receive the follo
 
 Your cluster nodes can't connect to the cluster API server pod.
 
-## Troubleshooting
+## Troubleshooting steps
 
 1. Verify that your nodes can resolve the cluster's fully qualified domain name (FQDN):
 
@@ -45,7 +45,7 @@ Your cluster nodes can't connect to the cluster API server pod.
     nc -vz <cluster-fqdn> 443
     ```
 
-2. If the command output shows "False" or "Timeout," check your network configuration. For example, check whether you set "Deny" rules for the API server in network security groups (NSGs) of the virtual network.
+2. If the command output shows `False` or `Timeout`, check your network configuration. For example, check whether you set "Deny" rules for the API server in network security groups (NSGs) of the virtual network.
 
 3. If you're using egress filtering through a firewall, make sure that traffic is allowed to your cluster FQDN.
 
@@ -53,7 +53,7 @@ Your cluster nodes can't connect to the cluster API server pod.
 
 ## References
 
-- [General troubleshooting of AKS cluster creation issues](troubleshoot-aks-cluster-creation-issues.md)
+[General troubleshooting of AKS cluster creation issues](troubleshoot-aks-cluster-creation-issues.md)
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
 
