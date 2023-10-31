@@ -29,15 +29,13 @@ Power Automate has a built-in operation called **Convert time zone**.
 
 1. Add the required and optional inputs for the **Convert time zone** operation.
 - **Base time**: The datetime you wish to convert.
-
 - **Source time zone**: The time zone that the datetime is currently in.
-
-      - **Destination time zone**: The time zone you want to convert your date to.
-            - **Format string:** The string specifying the desired format of the converted time.
+- **Destination time zone**: The time zone you want to convert your date to.
+- **Format string:** The string specifying the desired format of the converted time.
             
-               See the [More information](#more-information) section for ways to find the current time zone.
+See the [More information](#more-information) section for ways to find the current time zone.
 
-               :::image type="content" source="media/converting-time-zone-power-automate/required-inputs.png" alt-text="Screenshot of the required inputs in the Convert time zone operation.":::
+:::image type="content" source="media/converting-time-zone-power-automate/required-inputs.png" alt-text="Screenshot of the required inputs in the Convert time zone operation.":::
 
 ## Convert time zone using an expression
 
@@ -56,33 +54,29 @@ The function takes the following parameters:
 - `destinationTimeZone`: The time zone you want to convert your date to.
 - `format` (optional): The format of the time zone you wish to convert your date to.
 
-This example converts a time zone to the specified time zone and format:
-
+Example 1: This example converts a time zone to the specified time zone and format:
 
 ```
-convertTimeZone('2020-01-01T80:00:00.0000000Z', 'UTC', 'Pacific Standard Time', 'D')
+convertTimeZone('2018-01-01T80:00:00.0000000Z', 'UTC', 'Pacific Standard Time', 'D')
 ```
-
 It returns the result: `Monday, January 1, 2018`
 
-This is an example of using dynamic content in the expression. Here, timestamp `triggerBody()?['Date']` is the dynamic content you want to format, the source time zone is `UTC`, the destination time zone is `Eastern Standard Time`, and the format is the custom format string `HH:mm`.
-
+Example 2: This is an example of using dynamic content in the expression. Here, timestamp `triggerBody()?['Date']` is the dynamic content you want to format, the source time zone is `UTC`, the destination time zone is `Eastern Standard Time`, and the format is the custom format string `HH:mm`.
 
 ```console
 convertTimeZone(triggerBody()?['Date'],'UTC','Eastern Standard Time','HH:mm')
 
 ```
-
 For more information about this expression function, see [convertTimeZone](/azure/logic-apps/workflow-definition-language-functions-reference#convertTimeZone).
 
-For more information about the format string parameter, see [standard date and time format strings](/dotnet/standard/base-types/standard-date-and-time-format-strings) and [custom date and time format string](/dotnet/standard/base-types/custom-date-and-time-format-strings)s.
+For more information about the format string parameter, see [standard date and time format strings](/dotnet/standard/base-types/standard-date-and-time-format-strings) and [custom date and time format strings](/dotnet/standard/base-types/custom-date-and-time-format-strings).
 
 ## More information
 
 #### **Decipher a datetime**
 
 - Datetimes might come in different formats. If your datetime has a **Z** at the end, it means it's in UTC time.
-For example: 2020-04-10T01:28:14.0406387Z
+  For example: 2020-04-10T01:28:14.0406387Z
 - You may get errors where your date time string isn't in the correct format. For example:
 > The date time string must match ISO8601 format.
 
