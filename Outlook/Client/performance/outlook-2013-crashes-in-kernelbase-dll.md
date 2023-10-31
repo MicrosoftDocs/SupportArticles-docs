@@ -120,7 +120,7 @@ If you have one or more pst files in your profile, you can use the following ste
 8. Close all Mail Control Panel windows, and restart Outlook.
 9. If the problem no longer occurs, you have identified the problematic PST.
 
-    You can attempt to recover the affected PST using the Inbox Repair Tool (Scanpst.exe) as described in the article [How to repair your Outlook personal folder file (.pst)](https://support2.microsoft.com/help/272227).
+    You can attempt to recover the affected PST using the Inbox Repair Tool (Scanpst.exe) as described in the article [How to repair your Outlook personal folder file (.pst)](../data-files/how-to-repair-personal-folder-file.md).
 
 10. If the behavior persists, repeat steps 1 through 9 for additional PST files (as needed).
 
