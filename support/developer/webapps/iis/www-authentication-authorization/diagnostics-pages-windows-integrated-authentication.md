@@ -25,7 +25,7 @@ For the purposes of this article, use the following layout:
 
 :::image type="content" source="media/diagnostics-pages-windows-integrated-authentication/workstation-web-serv1-web-serv2.png" alt-text="Screenshot shows the layout of workstation, Web-serv1, and Web-serv2.":::
 
-To ease the data collection for these scenarios and not to rely on external data-gathering tools such as Fiddler or WireShark (since connections between the three computers may use HTTPS and therefore all exchanges between them will be encrypted), two self-contained diagnostic pages are at your disposal in [ASP.NET Self Contained Pages for Troubleshooting Windows Integrated Authentication issues on IIS](https://github.com/aspnet/samples/tree/main/samples/aspnet/Identity/CurrentUserInfoRetrieval).
+To ease the data collection for these scenarios and not to rely on external data-gathering tools such as Fiddler or WireShark (since connections between the three computers might use HTTPS and therefore all exchanges between them will be encrypted), two self-contained diagnostic pages are at your disposal in [ASP.NET Self Contained Pages for Troubleshooting Windows Integrated Authentication issues on IIS](https://github.com/aspnet/samples/tree/main/samples/aspnet/Identity/CurrentUserInfoRetrieval).
 
 ## Troubleshooting pages
 
@@ -73,7 +73,7 @@ The *WhoAmI.aspx* page also displays a small form at the bottom. This form allow
 1. The browser first sends the HTTP `POST` request headers.
 1. It then issues the body of the `POST` request, which contains the information captured from the various input fields on the HTTP form displayed on the page.
 
-If the browser doesn't wait after sending the `POST` request's headers, but instead sends the body directly on an unauthenticated connection, the following issues may occur:
+If the browser doesn't wait after sending the `POST` request's headers, but instead sends the body directly on an unauthenticated connection, the following issues might occur:
 
 - The server receives the `POST` request headers, and since the connection isn't authenticated (assuming Windows Integrated Authentication or another challenge-based authentication is used), it issues a 401 response with the appropriate authentication response HTTP header (`WWW-Authenticate`).
 - During this time, the browser has already sent the `POST` request body before receiving the 401 response from the server.
