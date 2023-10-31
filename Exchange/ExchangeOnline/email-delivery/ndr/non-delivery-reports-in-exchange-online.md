@@ -142,7 +142,7 @@ The **User information** section appears first in some NDRs, and the main purpos
 
 ### Diagnostic information for administrators
 
-The **Diagnostic information for administrators** section provides deeper technical information to help administrators troubleshoot the message delivery problem. It contains detailed information about the specific error that occurred during delivery of the message, the server that generated the NDR, and the server that rejected the message. This information will always be in English and it is not customizable. This section uses the following format:
+The **Diagnostic information for administrators** section provides deeper technical information to help administrators troubleshoot the message delivery problem. It contains detailed information about the specific error that occurred during delivery of the message, the server that generated the NDR, and the server that rejected the message. The SMTP error and message header details that are part of this information will be in English and it is not customizable. This section uses the following format:
 
 ```text
 Diagnostic information for administrators
