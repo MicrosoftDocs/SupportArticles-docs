@@ -19,7 +19,7 @@ Microsoft has tested the reliability and performance of the API server at a scal
 
 - The Kubernetes [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) tool. To install kubectl by using Azure CLI, run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
 
-- AKS diagnostics logs (specifically, kube-audit events) that have been enabled and sent to a [Log Analytics workspace](/azure/aks/monitor-apiserver). Determine if the logs are being collected using [Resource-specific](/azure/azure-monitor/essentials/resource-logs#resource-specific) or [Azure diagnostics](/azure/azure-monitor/essentials/resource-logs#azure-diagnostics-mode) mode for the queries below.
+- AKS diagnostics logs (specifically, kube-audit events) that have been enabled and sent to a [Log Analytics workspace](/azure/aks/monitor-apiserver). Check the Diagnostic Settings blade in Azure Portal to determine whether the logs are collected using [Resource-specific](/azure/azure-monitor/essentials/resource-logs#resource-specific) or [Azure diagnostics](/azure/azure-monitor/essentials/resource-logs#azure-diagnostics-mode) mode.
 
 - The Standard tier for AKS clusters. If you're using the Free tier, the API server and etcd contain limited resources. AKS clusters in the Free tier don't provide high availability. This is often the root cause of API server and etcd problems.
 
@@ -68,7 +68,8 @@ AzureDiagnostics
 > [!NOTE]
 > If your query returns no results, you may have selected the wrong table for querying diagnostics logs. In Resource-specific mode, data is
 > written to individual tables depending on the category of the resource: diagnostic logs are written to the AKSAudit table. In Azure
-> diagnostics mode, all data is written to the AzureDiagnostics table. For more information, see [Azure resource logs](/azure/azure-monitor/essentials/resource-logs)
+> diagnostics mode, all data is written to the AzureDiagnostics table. For more information, see
+> [Azure resource logs](/azure/azure-monitor/essentials/resource-logs).
 
 Although it's helpful to know which clients generate the highest request volume, high request volume alone might not be a cause for concern. A better indicator of the actual load that each client generates on the API server is the response latency that they experience.
 
