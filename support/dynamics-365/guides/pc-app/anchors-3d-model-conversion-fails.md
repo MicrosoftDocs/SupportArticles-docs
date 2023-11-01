@@ -25,7 +25,7 @@ You might find one or more of the following causes:
 
 ## Resolution
 
-To solve this issue,
+To solve this issue:
 
 1. Follow [best practices for choosing a target object for your object anchor](/dynamics365/mixed-reality/guides/pc-app-anchor-object#best-practices-for-choosing-a-target-object-for-your-object-anchor).
 
