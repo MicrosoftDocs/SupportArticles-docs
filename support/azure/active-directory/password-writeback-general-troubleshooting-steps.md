@@ -8,6 +8,7 @@ ms.reviewer: jarrettr, nualex
 editor: v-jsitser
 ms.service: active-directory
 ms.subservice: enterprise-users
+ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 keywords:
 #Customer intent: As an Azure Active Directory administrator, I want to understand how to troubleshoot password writeback issues better so that I can more quickly resolve problems that affect password writeback.
 ---
@@ -28,11 +29,11 @@ You should be consistent about how the password issue is reproduced or tested. U
 
 Does the operation fail for one user but succeed for another user? In this situation, try to determine the differences between a working and nonworking user. You can use the following steps:
 
-1. Get information about certain Active Directory users by running the [Ldifde](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731033(v=ws.11)) command or the [Get-ADUser](/powershell/module/activedirectory/get-aduser) PowerShell cmdlet.
+1. Get information about certain Active Directory users by running the [Ldifde](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731033(v=ws.11)) command or the [Get-MgUser](/powershell/microsoftgraph/find-mg-graph-command?view=graph-powershell-1.0#example-1-use-a-uri-to-get-all-related-cmdlets) PowerShell cmdlet.
 
-1. Run [user commands in Azure Active Directory (Azure AD) PowerShell](/powershell/module/azuread/#users) to get information about those users in Azure AD.
+1. Run [user commands in Microsoft Graph PowerShell](/powershell/microsoftgraph/find-mg-graph-command) to get information about those users in [Microsoft Graph PowerShell](/powershell/microsoftgraph/overview).
 
-1. Compare the Active Directory and Azure AD information about those two users offline, especially in terms of:
+1. Compare the Active Directory and Microsoft Graph PowerShell information about those two users offline, especially in terms of:
 
     - Administrator roles and groups
     - Organizational unit placement

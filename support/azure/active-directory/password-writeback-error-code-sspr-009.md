@@ -7,6 +7,7 @@ ms.author: v-dele
 ms.reviewer: jarrettr, nualex
 ms.service: active-directory
 ms.subservice: enterprise-users
+ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 keywords:
 #Customer intent: As a user with an Azure AD Administrator role, I want to avoid SSPR_009 errors so that I can reset my own password from the cloud.
 ---

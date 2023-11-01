@@ -5,6 +5,7 @@ ms.date: 05/22/2020
 ms.reviewer: willfid
 ms.service: active-directory
 ms.subservice: enterprise-users
+ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ---
 # Password isn't synced from Azure AD to on-premises after the password is changed or reset
 
@@ -42,7 +43,7 @@ Before troubleshooting this issue, it's important to know which scenarios allow 
 |Password change in My Apps or in Office 365 portal|Yes|
 |Admins who perform password resets by using the Azure Management Portal | Yes |
 |Admins who perform password resets by using the Microsoft 365 admin center| No  |
-|Passwords at new user creation through Azure Management Portal, Microsoft 365 admin center, or Azure AD PowerShell Module| No |
+|Passwords at new user creation through Azure Management Portal, Microsoft 365 admin center, or [Microsoft Graph PowerShell](/powershell/microsoftgraph/overview) Module| No |
 |Admins who perform password resets by using PowerShell Modules V1 (MSOnline) or V2 (AzureAD)|No|
 
 To resolve this issue, see the **Troubleshoot Password Writeback** section of [How to troubleshoot Password Management](/azure/active-directory/authentication/active-directory-passwords-troubleshoot#troubleshoot-password-writeback).
