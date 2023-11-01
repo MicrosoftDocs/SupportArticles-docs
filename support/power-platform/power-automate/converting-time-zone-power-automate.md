@@ -1,11 +1,10 @@
 ---
 title: Converting time zone in Power Automate
-description: Provides a solution to an issue where you find a datetime in the wrong time zone.
+description: Provides a solution to an issue where you find a datetime in the wrong time zone in Microsoft Power Automate.
 ms.reviewer: anaggar
-ms.date: 09/28/2023
+ms.date: 11/01/2023
 ms.subservice: power-automate-connections
 ---
-
 # Converting time zone in Microsoft Power Automate
 
 This article provides steps to convert the time zone to the intended time zone in a Power Automate trigger or action.
@@ -32,8 +31,8 @@ Power Automate has a built-in operation called **Convert time zone**.
    - **Base time**: The datetime you wish to convert.
    - **Source time zone**: The time zone that the datetime is currently in.
    - **Destination time zone**: The time zone you want to convert your date to.
-   - **Format string** (optional): The string specifying the desired format of the converted time.
-            
+   - **Format string** (optional): The string that specifies the desired format of the converted time.
+
    See the [More information](#more-information) section for ways to find the current time zone.
 
    :::image type="content" source="media/converting-time-zone-power-automate/required-inputs.png" alt-text="Screenshot of the required inputs in the Convert time zone operation.":::
@@ -55,36 +54,39 @@ The function takes the following parameters:
 - `destinationTimeZone`: The time zone you want to convert your date to.
 - `format` (optional): The format of the time zone you wish to convert your date to.
 
-**Example 1**: This example converts a time zone to the specified time zone and format:
+**Example 1**: This example converts a time zone to the specified time zone and format.
 
-```
+```console
 convertTimeZone('2018-01-01T80:00:00.0000000Z', 'UTC', 'Pacific Standard Time', 'D')
 ```
-It returns the result: `Monday, January 1, 2018`
 
-**Example 2**: This is an example of using dynamic content in the expression. Here, timestamp `triggerBody()?['Date']` is the dynamic content you want to format, the source time zone is `UTC`, the destination time zone is `Eastern Standard Time`, and the format is the custom format string `HH:mm`.
+It returns the result: `Monday, January 1, 2018`.
+
+**Example 2**: This is an example of using dynamic content in the expression. Here, the `triggerBody()?['Date']` timestamp is the dynamic content you want to format, the source time zone is `UTC`, the destination time zone is `Eastern Standard Time`, and the format is the custom format string `HH:mm`.
 
 ```console
 convertTimeZone(triggerBody()?['Date'],'UTC','Eastern Standard Time','HH:mm')
 ```
+
 For more information about this expression function, see [convertTimeZone](/azure/logic-apps/workflow-definition-language-functions-reference#convertTimeZone).
 
 For more information about the format string parameter, see [standard date and time format strings](/dotnet/standard/base-types/standard-date-and-time-format-strings) and [custom date and time format strings](/dotnet/standard/base-types/custom-date-and-time-format-strings).
 
 ## More information
 
-#### **Decipher a datetime**
+#### Decipher a datetime
 
-- Datetimes might come in different formats. If your datetime has a **Z** at the end, it means it's in UTC time.
+- Datetimes might come in different formats. If your datetime has a `Z` at the end, it means it's in UTC time.
 
-  For example: 2020-04-10T01:28:14.0406387Z
+  For example: `2020-04-10T01:28:14.0406387Z`
 
-- You may get errors where your date time string isn't in the correct format. For example:
+- You might receive an error that states your date time string isn't in the correct format. For example:
+
   > The date time string must match ISO8601 format.
 
   For more information about how to correctly format your datetime string, see [convertTimeZone](/azure/logic-apps/workflow-definition-language-functions-reference).
 
-#### **Check the time zone of an output**
+#### Check the time zone of an output
 
 If you're unsure what format the datetime time zone is currently in, you can run your flow and see the datetime output format.
 
@@ -94,7 +96,7 @@ In this example, the **Get forecast for today** operation outputs the timestamp 
 
 This datetime uses the ISO-8601 datetime format. This operation outputs the datetime in the UTC time zone.
 
-#### **Convert a timestamp to or from UTC**
+#### Convert a timestamp to or from UTC
 
 To convert a timestamp from the source time zone to UTC or from UTC to the target time zone, use the [convertFromUtc](/azure/logic-apps/workflow-definition-language-functions-reference#convertfromutc) and [convertToUtc](/azure/logic-apps/workflow-definition-language-functions-reference#converttoutc) expression functions.
 
@@ -106,5 +108,3 @@ There might be limitations in some connectors on how the time zone is displayed.
 
 - [How to customize or format Date and Time values in a flow](how-to-customize-or-format-date-and-time-values-in-flow.md)
 - [Reference guide to workflow expression functions in Azure Logic Apps and Power Automate](/azure/logic-apps/workflow-definition-language-functions-reference)
-
-
