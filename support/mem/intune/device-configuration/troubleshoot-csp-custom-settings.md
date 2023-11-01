@@ -74,11 +74,13 @@ You can collect Windows 10 logs to review for detailed information about the err
    1. Select **Display information for these languages**, and then select **English**.
    1. Click **Ok**.
 
-## Collect Azure AD logs
+<a name='collect-azure-ad-logs'></a>
 
-If you experience issues such as those related to communication with Azure Active Directory (Azure AD), authentication, or workplace join, you may want to collect Azure AD logs. To do this, use these steps.
+## Collect Microsoft Entra logs
 
-1. Open Event Viewer and go to **Applications and Services Logs** > **Microsoft** > **Windows** > **AAD**.
+If you experience issues such as those related to communication with Microsoft Entra ID, authentication, or workplace join, you may want to collect Microsoft Entra logs. To do this, use these steps.
+
+1. Open Event Viewer and go to **Applications and Services Logs** > **Microsoft** > **Windows** > **Microsoft Entra ID**.
 2. To collect analytic logs, do the following:
 
    1. Right-click the **Analytic** node.
