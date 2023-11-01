@@ -130,7 +130,7 @@ To adjust the number of days of data that are synced for shared folders, add the
 |Description|Setting to enable Shared Folders window|
 |---|---|
 |Registry path|HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Outlook\Cached Mode|
-|Name|SharedFolderSyncWindowDays|
+|Name|SharedFolderSyncWindowSettingDays|
 |Type|REG_DWORD|
 |Value|Value = Select a _Decimal_ value to set the number of days (1-365) for the shared folders sync window.|
 
