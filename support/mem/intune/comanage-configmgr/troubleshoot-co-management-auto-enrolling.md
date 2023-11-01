@@ -117,7 +117,7 @@ Starting in Configuration Manager version 1906, a co-managed device running Wind
 
 When this issue occurs, the following error message is logged in **Applications and Services Logs** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostic-Provider** > **Admin log** in the Event Viewer:
 
-> MDM Session: Failed to get Microsoft Entra Token for sync session User Token: (Unknown Win32 Error code: 0xcaa2000c) Device Token: (Incorrect function).
+> MDM Session: Failed to get AAD Token for sync session User Token: (Unknown Win32 Error code: 0xcaa2000c) Device Token: (Incorrect function).
 
 The following error message is logged in **Applications and Services Logs** > **Microsoft** > **Windows** > **Microsoft Entra ID** > **Operational log** in the Event Viewer:
 

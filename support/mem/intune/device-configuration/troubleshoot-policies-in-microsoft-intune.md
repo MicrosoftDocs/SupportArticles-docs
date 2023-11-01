@@ -43,7 +43,7 @@ You can use the built-in troubleshooting feature to review different compliance 
 
         For more information, see [get started with device compliance policies](/mem/intune/protect/device-compliance-get-started).
 
-    - **Microsoft Entra compliant**: Should be **Yes**. If **No** is shown, there may be an issue with compliance policies, or the device isn't connecting to the Intune service. For example, the device may be turned off, or may not have a network connection. Eventually, the device becomes non-compliant, possibly after 30 days.
+    - **Azure AD compliant**: Should be **Yes**. If **No** is shown, there may be an issue with compliance policies, or the device isn't connecting to the Intune service. For example, the device may be turned off, or may not have a network connection. Eventually, the device becomes non-compliant, possibly after 30 days.
 
         For more information, see [get started with device compliance policies](/mem/intune/protect/device-compliance-get-started).
 
