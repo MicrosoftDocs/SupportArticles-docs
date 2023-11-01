@@ -18,7 +18,7 @@ ms.technology: windows-server-active-directory
 This article describes how to set up a web server to use smart cards for cross-forest certificate-based authentication when the user forests and the resource forest do not trust one another.
 
 _Applies to:_ &nbsp; Windows Server 2016  
-_Original KB number:_ &nbsp; 4509680
+_Original KB number:_ &nbsp; 4509680  
 
 ## Environment configuration
 
