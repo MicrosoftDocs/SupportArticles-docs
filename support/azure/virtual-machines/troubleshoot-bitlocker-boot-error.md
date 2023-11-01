@@ -310,7 +310,7 @@ If you are using the old Az PowerShell module, you must change the two commands 
 |$kekName   |mykey   | Run `Get-AzVM -ResourceGroupName $rgName -Name $vmName -DisplayHint expand` and check **Settings** and **KeyEncryptionKeyURL** in the output.  Here is an example:</br>"KeyEncryptionKeyURL":`https://myKeyVault2707.vault.azure.net/keys/mykey/000072b987145a3b79b0ed415f0000`|
 |$secretName   |7EB4F531-5FBA-4970-8E2D-C11FD6B0C69D  | The name of the secret of the VM key.</br> To find the correct secret name, check the step 6 in the [Decrypt the encrypted OS disk](#decrypt-the-encrypted-os-disk) section.|
 |$bekFilePath   |c:\bek\7EB4F531-5FBA-4970-8E2D-C11FD6B0C69D.BEK |A local path where you want to save the BEK file. In the example, You need to create the "bek" folder before running the script or it will error out.|
-|$adTenant  |contoso.onmicrosoft.com   | FQDN or GUID of your Azure Active Directory that hosts the key vault |
+|$adTenant  |contoso.onmicrosoft.com   | FQDN or GUID of your Microsoft Entra ID that hosts the key vault |
 
 ## Install Az PowerShell module
 

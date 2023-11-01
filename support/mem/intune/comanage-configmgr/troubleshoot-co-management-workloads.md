@@ -18,7 +18,7 @@ Before you start troubleshooting, it's important to collect some basic informati
 - Did you [complete the prerequisites](/mem/configmgr/comanage/overview#prerequisites)?
 - Did you take [path 1 or path 2](/mem/configmgr/comanage/quickstart-paths) to co-management?
 - If you took path 2, did you [configure the cloud management gateway (CMG)](/mem/configmgr/core/clients/manage/cmg/setup-cloud-management-gateway)?
-- Did you join the Windows 10 devices to Azure Active Directory (Azure AD) through [Hybrid Azure AD join](/azure/active-directory/devices/hybrid-azuread-join-plan) or [Azure AD join](/azure/active-directory/devices/azureadjoin-plan)?
+- Did you join the Windows 10 devices to Microsoft Entra ID through [Microsoft Entra hybrid join](/azure/active-directory/devices/hybrid-azuread-join-plan) or [Microsoft Entra join](/azure/active-directory/devices/azureadjoin-plan)?
 - If you used [hybrid MDM with Configuration Manager and Microsoft Intune](/mem/configmgr/mdm/understand/what-happened-to-hybrid) before, did you [migrate to Intune standalone](/mem/intune/fundamentals/mdm-authority-set)?
 
 Most issues occur because one or more of these steps were not completed. If you find that a step was skipped or was not completed successfully, check the details of each step.
@@ -126,7 +126,7 @@ You receive this message if you didn't install the CMG. After you install the CM
 In this case, do the following:
 
 - If you are taking [Path 1: Auto-enroll existing clients](/mem/configmgr/comanage/quickstart-paths#bkmk_path1), you can ignore this message because CMG isn't used.
-- If you are taking [Path 2: Bootstrap with modern provisioning](/mem/configmgr/comanage/quickstart-paths#bkmk_path2), you must [install and configure the CMG](/mem/configmgr/core/clients/manage/cmg/setup-cloud-management-gateway) and onboard the app to Azure AD.
+- If you are taking [Path 2: Bootstrap with modern provisioning](/mem/configmgr/comanage/quickstart-paths#bkmk_path2), you must [install and configure the CMG](/mem/configmgr/core/clients/manage/cmg/setup-cloud-management-gateway) and onboard the app to Microsoft Entra ID.
 
 ### I unassign Intune policies from a security group, but some settings remain
 

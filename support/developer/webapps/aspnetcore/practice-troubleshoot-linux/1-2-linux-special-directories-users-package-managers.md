@@ -90,7 +90,7 @@ When you run this command, you receive a **permission denied** error message.
 
 The operation fails because the */etc* folder is special folder that a standard user can't change. Verify the user by running the `id` command.
 
-:::image type="content" source="./media/1-2-linux-special-directories-users-package-managers/id-command.png" alt-text="Screenshot of id command." border="false":::
+:::image type="content" source="./media/1-2-linux-special-directories-users-package-managers/id-command.png" alt-text="Screenshot of I D command." border="false":::
 
 To become the root account user, run the `sudo su` command.
 
