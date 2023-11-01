@@ -27,7 +27,7 @@ As an admin, when trying to delete a guide in the Guides model-driven app, the e
 
    1. Select **Guide Operator Sessions** on the left.
 
-      :::image type="content" source="media/cant-delete-guide/mda-operator-sessions.png" alt-text="Screenshot that shows an open guide in the model-driven app with the Related tab highlighted.":::
+      :::image type="content" source="media/cant-delete-guide/mda-operator-sessions.png" alt-text="Screenshot that shows the model-driven app with the Operator sessions highlighted.":::
 
    1. Delete the operator session records for the guide. The operator sessions will no longer display in the [PowerBI dashboard](/dynamics365/mixed-reality/guides/analytics-guide).
 
