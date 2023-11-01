@@ -35,7 +35,7 @@ Power Automate has a built-in operation called **Convert time zone**.
 
    See the [More information](#more-information) section for ways to find the current time zone.
 
-   :::image type="content" source="media/converting-time-zone-power-automate/required-inputs.png" alt-text="Screenshot of the required inputs in the Convert time zone operation.":::
+   :::image type="content" source="media/converting-time-zone-power-automate/required-inputs.png" alt-text="Screenshot of the required inputs in the Convert time zone operation." border="false":::
 
 ## Convert time zone using an expression
 
@@ -62,7 +62,7 @@ convertTimeZone('2018-01-01T80:00:00.0000000Z', 'UTC', 'Pacific Standard Time', 
 
 It returns the result: `Monday, January 1, 2018`.
 
-**Example 2**: This is an example of using dynamic content in the expression. Here, the `triggerBody()?['Date']` timestamp is the dynamic content you want to format, the source time zone is `UTC`, the destination time zone is `Eastern Standard Time`, and the format is the custom format string `HH:mm`.
+**Example 2**: This is an example of using dynamic content in the expression. Here, the `triggerBody()?['Date']` timestamp is the dynamic content you want to format. The source time zone is `UTC`. The destination time zone is `Eastern Standard Time`. The format is the custom format string `HH:mm`.
 
 ```console
 convertTimeZone(triggerBody()?['Date'],'UTC','Eastern Standard Time','HH:mm')
@@ -76,7 +76,7 @@ For more information about the format string parameter, see [standard date and t
 
 #### Decipher a datetime
 
-- Datetimes might come in different formats. If your datetime has a `Z` at the end, it means it's in UTC time.
+- Datetimes might have different formats. If your datetime has a `Z` at the end, it means it's in UTC time.
 
   For example: `2020-04-10T01:28:14.0406387Z`
 
