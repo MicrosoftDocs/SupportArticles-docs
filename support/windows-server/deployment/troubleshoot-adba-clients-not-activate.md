@@ -18,9 +18,9 @@ ms.technology: windows-server-deployment
 > [!NOTE]
 > This article was originally published as a TechNet blog on March 26, 2018.
 
-Hello everyone! My name is Mike Kammer, and I have been a Platforms PFE with Microsoft for just over two years now. I recently helped a customer with deploying Windows Server 2016 in their environment. We took this opportunity to also migrate their activation methodology from a KMS Server to [Active Directory Based Activation](/previous-versions/windows/hh852637(v=win.10)).
+I recently helped a customer with deploying Windows Server 2016 in their environment. We took this opportunity to also migrate their activation methodology from a KMS Server to [Active Directory Based Activation](/previous-versions/windows/hh852637(v=win.10)).
 
-As proper procedure for making all changes, we started our migration in the customer's test environment. We began our deployment by following the instructions in this excellent blog post by Charity Shelbourne, [Active Directory-Based Activation vs. Key Management Services](https://techcommunity.microsoft.com/t5/Core-Infrastructure-and-Security/Active-Directory-Based-Activation-vs-Key-Management-Services/ba-p/256016). The domain controllers in our test environment were all running Windows Server 2012 R2, so we didn't need to prep our forest. We installed the role on a Windows Server 2012 R2 Domain Controller and chose Active Directory Based Activation as our volume activation method. We installed our KMS key and gave it a name of "KMS AD Activation (\*\* LAB)." We followed the blog post step by step.
+As proper procedure for making all changes, we started our migration in the customer's test environment. We began our deployment by following the instructions in [Active Directory-Based Activation vs. Key Management Services](https://techcommunity.microsoft.com/t5/Core-Infrastructure-and-Security/Active-Directory-Based-Activation-vs-Key-Management-Services/ba-p/256016). The domain controllers in our test environment were all running Windows Server 2012 R2, so we didn't need to prep our forest. We installed the role on a Windows Server 2012 R2 Domain Controller and chose Active Directory Based Activation as our volume activation method. We installed our KMS key and gave it a name of "KMS AD Activation (\*\* LAB)." We followed the blog post step by step.
 
 We started by building four virtual machines, two Windows 2016 Standard and two Windows 2016 Datacenter. At this point everything was great, and everyone was happy. We built a physical server running Windows 2016 Standard, and the machine activated properly. And that's where our story ends.
 
@@ -32,7 +32,7 @@ I went to one of my problem servers, opened a command prompt, and checked my out
 
 :::image type="content" source="media/troubleshoot-adba-clients-not-activate/activation-objects-active-directory.png" alt-text="Screenshot showing the results of the slmgr command.":::
 
-The results show that we have two Activation Objects: one for Server 2012 R2, and our newly created KMS AD Activation (\*\* LAB) which is our Windows Server 2016 license. This confirms our Active Directory is correctly configured to activate Windows KMS Clients
+The results show that we have two activation objects: one for Server 2012 R2, and our newly created KMS AD Activation (\*\* LAB) which is our Windows Server 2016 license. This confirms our Active Directory is correctly configured to activate Windows KMS clients.
 
 Knowing that the `slmgr` command is my friend for license activation, I continued with different options. I tried the `/dlv` switch, which will display detailed license information. This looked fine to me, I was running the Standard version of Windows Server 2016, there's an Activation ID, an Installation ID, a validation URL, even a partial Product Key.
 
@@ -84,7 +84,7 @@ Using the `/dlv` switch again, we can see that now we have been activated by Act
 
 :::image type="content" source="media/troubleshoot-adba-clients-not-activate/activated-active-directory.png" alt-text="Screenshot of the Command Prompt window showing the slmgr /dlv command and the resulting message indicating that the user is activated by Active Directory.":::
 
-Now, what had gone wrong? Why did I have to remove the installed key and add those generic keys to get these machines to activate properly? Why did the other dozen or so machines activate with no issues? As I said earlier, I missed something key in the initial stages of looking at the issue. I was thoroughly confused, so reached out to Charity from the initial blog post to see if Charity could help me. Charity saw the problem right away and helped me understand what I had missed early on.
+Now, what had gone wrong? Why did I have to remove the installed key and add those generic keys to get these machines to activate properly? Why did the other dozen or so machines activate with no issues? As I said earlier, I missed something key in the initial stages of looking at the issue. I was thoroughly confused, so reached out to the poster from the initial blog. The poster saw the problem right away and helped me understand what I had missed early on.
 
 When I ran the first `/dlv` switch, in the description was the key. The description was Windows&reg; Operating System, RETAIL Channel. I had looked at that and thought that RETAIL Channel meant that it had been purchased and was a valid key.
 
@@ -95,7 +95,3 @@ When we look at the output of the `/dlv` switch from a properly activated server
 :::image type="content" source="media/troubleshoot-adba-clients-not-activate/volume-kmsclient-channel.png" alt-text="Screenshot showing the results of the slmgr /dlv command with the VOLUME_KMSCLIENT channel information highlighted.":::
 
 So what does that RETAIL channel mean then? Well, it means the media that was used to install the operating system was an MSDN ISO. I went back to my customer and asked if, by some chance, there was a second Windows Server 2016 ISO floating around the network. Turns out that yes, there was another ISO on the network, and it had been used to create the other dozen machines. They compared the two ISOs and sure enough the one that was given to me to build the virtual servers was, in fact, an MSDN ISO. They removed that MSDN ISO from their network and now we have all our existing servers activated and no more worries about the activation failing on future builds.
-
-I hope this has been helpful and may save you some time going forward!
-
-Mike
