@@ -26,8 +26,6 @@ In this scenario, when guests try to access the resource by signing in by using 
 
 > Selected user account does not exist in tenant '\<tenant name\>' and cannot access the application '\<application GUID\>' in that tenant. The account needs to be added as an external user in the tenant first. Please use a different account.
 
-:::image type="content" source="media/error-selected-user-account-does-not-exist/access-error.png" alt-text="Screenshot of the Selected user account does not exist error message.":::
-
 ## Cause
 
 This issue is caused by changes in SharePoint sharing invitation redemption for guests. Because of these changes, when a site, list, or library is shared with guests, the guest account isn't provisioned in Microsoft Entra ID. Therefore, guest access to the resource is blocked by the Conditional Access policies.
