@@ -9,7 +9,7 @@ ms.custom:
   - CI 154689
   - CI 183376
   - CSSTroubleshoot
-ms.reviewer: sylviebo, meerak
+ms.reviewer: sylviebo, meerak, lehill
 appliesto: 
   - Microsoft Teams
 search.appverid: 
@@ -50,6 +50,9 @@ Meeting policies are enabled and configured by Teams administrators. To update t
 1. Select the meeting policy that's assigned to you.
 1. Navigate to the **Meeting engagement** section.
 1. Set **Meeting chat** to **On for everyone** or **On for everyone but anonymous users**.
+
+   > [!NOTE]
+   > To allow users to use chat in Teams meetings that are hosted by other organizations, make sure that **External meeting chat** is set to **On**. For more information, see [Manage chat messages in Teams meetings hosted by other organizations](/microsoftteams/manage-meeting-chat#manage-chat-messages-in-teams-meetings-hosted-by-other-organizations-that-you-dont-have-a-two-way-trust-relationship-with).
 1. Select **Save**.
 
 > [!NOTE]
