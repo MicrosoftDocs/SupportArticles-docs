@@ -6,6 +6,7 @@ ms.reviewer: "willfid,riantu,nualex,reviei"
 ms.service: active-directory
 ms.subservice: enterprise-users
 ---
+
 # How the proxyAddresses attribute is populated in Microsoft Entra ID
 
 This article describes how the proxyAddresses attribute is populated in Microsoft Entra ID and discusses common scenarios to help you understand how the proxyAddresses attribute is populated in Microsoft Entra ID.
@@ -69,6 +70,11 @@ AAD:mailNickName      : user1upn
 AAD:proxyAddresses    : {smtp:user1upn@Contoso.onmicrosoft.com; SMTP:user1upn@Contoso.com}
 AAD:userPrincipalName : user1upn@Contoso.com
 ```
+
+> [!NOTE]
+> The UserPrincipalName is always added as a proxy address when the user is an Exchange Online Recipient. For instance, when it's a shared mailbox or has an Exchange license assigned.
+
+
 
 ## Scenario 2: User doesn't have the mailNickName or proxyAddresses attribute set
 
@@ -327,3 +333,4 @@ AAD:userPrincipalName : user6b@Contoso.com
 ```
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+
