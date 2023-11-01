@@ -33,7 +33,7 @@
           href: check-if-gateway-is-the-right-region.md
         - name: Common errors creating and assigning flow approvals
           href: common-errors-creating-and-assigning-flow-approvals.md
-        - name: Desktop flow invalid credentials error using AAD account
+        - name: Desktop flow invalid credentials error using Microsoft Entra account
           href: troubleshoot-ui-flow-invalid-credentials-error-using-aad-account.md
         - name: Differences between flow approval actions
           href: differences-between-flow-approval-actions.md
@@ -201,6 +201,8 @@
           href: desktop-flows/troubleshoot-direct-connectivity-issues.md
         - name: Troubleshoot issues with Power Automate browser extensions
           href: desktop-flows/web-extensions-policies.md
+        - name: Temporary profile error during machine registration
+          href: desktop-flows/temporary-profile-error-machine-registration.md
         - name: UI flow playback error KeyboardIdMismatch
           href: desktop-flows/ui-flow-playback-error-keyboardidmismatch.md
         - name: UI flow playback error UnableToLaunchApplication

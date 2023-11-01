@@ -169,7 +169,7 @@ The following list describes the actions that the Client Checker tool takes:
 
    If either of these checks indicate failure, take one or more of the following actions:
 
-   - Make sure that the device is Microsoft Entra joined or Microsoft Entra Hybrid joined. For now, Microsoft Entra-registered devices aren't supported.
+   - Make sure that the device is Microsoft Entra joined or Microsoft Entra hybrid joined. For now, Microsoft Entra registered devices aren't supported.
 
    - Make sure that the device state for your managed device is `healthy`. For more information, see [Troubleshoot devices by using the dsregcmd command](/azure/active-directory/devices/troubleshoot-device-dsregcmd).
 

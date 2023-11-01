@@ -105,7 +105,7 @@ Follow these steps to troubleshoot this issue.
 1. Check that the device has scanned for updates and is scanning the Windows Update service.  
 
    To learn more about scanning for updates, see [Scanning updates](/windows/deployment/update/how-windows-update-works#scanning-updates).
-1. **Feature updates only:** Verify that the device is successfully enrolled in feature update management by the deployment service. A device that's successfully enrolled is represented by an Azure AD device resource. That resource documents an update management enrollment for feature updates, and has no Azure AD device registration errors.
+1. **Feature updates only:** Verify that the device is successfully enrolled in feature update management by the deployment service. A device that's successfully enrolled is represented by a Microsoft Entra ID device resource. That resource documents an update management enrollment for feature updates, and has no Microsoft Entra ID device registration errors.
 1. **Expedited quality updates only:** Check that the device has the Update Health Tools installed (available for Windows 10 version 1809 or later in the update described in [KB 4023057 - Update for Windows 10 Update Service components](https://support.microsoft.com/topic/kb4023057-update-for-windows-10-update-service-components-fccad0ca-dc10-2e46-9ed1-7e392450fb3a), or a more recent quality update).  
 
    The Update Health Tools are required for a device to receive an expedited quality update. The program's location on the device is *C:\\Program Files\\Microsoft Update Health Tools*. To verify its presence, view the installed programs list or run the following PowerShell script:  
@@ -123,7 +123,7 @@ To troubleshoot this issue, follow these steps:
    For example, if the device is scanning for updates from a WSUS endpoint, it might receive different updates. To learn more about scanning for updates, see [Scanning updates](/windows/deployment/update/how-windows-update-works#scanning-updates).
 1. **Feature updates only:** Check that the device is successfully enrolled in feature update management by the deployment service.  
 
-   A device that isn't successfully enrolled might receive different updates according to its feature update deferral period. A device that's successfully enrolled is represented by an Azure AD device resource. That resource documents an update management enrollment for feature updates, and has no Azure AD device registration errors.
+   A device that isn't successfully enrolled might receive different updates according to its feature update deferral period. A device that's successfully enrolled is represented by a Microsoft Entra ID device resource. That resource documents an update management enrollment for feature updates, and has no Microsoft Entra ID device registration errors.
 
 ## Data collection
 

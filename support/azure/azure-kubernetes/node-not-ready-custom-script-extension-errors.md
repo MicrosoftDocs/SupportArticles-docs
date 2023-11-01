@@ -29,7 +29,7 @@ The node extension deployment fails and returns more than one error code when yo
     ```azurecli
     clusterResourceId=$(az aks show \
         --resource-group <resource-group-name> --name <cluster-name> --output tsv --query id)
-    az resource update --debug --verbose -–ids $clusterResourceId
+    az resource update --debug --verbose --ids $clusterResourceId
     ```
 
 1. Check the debugging output and the error messages that you received from the `az resource update` command against the error list in the [CSE helper](https://github.com/Azure/AgentBaker/blob/1bf9892afd715a34e0c6b7312e712047f10319ce/parts/linux/cloud-init/artifacts/cse_helpers.sh) executable file on GitHub.

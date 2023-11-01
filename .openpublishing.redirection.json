@@ -6416,6 +6416,81 @@
       "source_path": "support/dynamics-365/customer-insights/insights/segment-no-results.md ",
       "redirect_url": "/troubleshoot/dynamics-365/customer-insights/data/insights/segment-no-results",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/azure-container-instances/index.md",
+      "redirect_url": "/troubleshoot/azure/azure-container-instances/welcome-container-instances",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/azure-storage/index.md",
+      "redirect_url": "/troubleshoot/azure/azure-storage/welcome-azure-storage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/virtual-desktop/index.md",
+      "redirect_url": "/troubleshoot/azure/virtual-desktop/welcome-virtual-desktop",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/commerce/index.md",
+      "redirect_url": "/troubleshoot/dynamics-365/commerce/welcome-commerce",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/customer-insights/index.md",
+      "redirect_url": "/troubleshoot/dynamics-365/customer-insights/welcome-customer-insights",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/customer-service/index.md",
+      "redirect_url": "/troubleshoot/dynamics-365/customer-service/welcome-customer-service",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/finance/index.md",
+      "redirect_url": "/troubleshoot/dynamics-365/finance/welcome-finance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/index.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/welcome-supply-chain",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/index.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/welcome-ai-builder",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tss.md",
+      "redirect_url": "/troubleshoot/windows-client/windows-tss/introduction-to-troubleshootingscript-toolset-tss",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/windows-troubleshooters/gather-information-using-tss-wufb-reports.md",
+      "redirect_url": "/troubleshoot/windows-client/windows-tss/gather-information-using-tss-wufb-reports",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/windows-troubleshooters/gather-information-using-tss-user-experience.md",
+      "redirect_url": "/troubleshoot/windows-client/windows-tss/gather-information-using-tss-user-experience",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/windows-troubleshooters/gather-information-using-tss-group-policy.md",
+      "redirect_url": "/troubleshoot/windows-client/windows-tss/gather-information-using-tss-group-policy",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md",
+      "redirect_url": "/troubleshoot/windows-client/windows-tss/gather-information-using-tss-deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md",
+      "redirect_url": "/troubleshoot/windows-client/windows-tss/gather-information-using-tss-ad-replication",
+      "redirect_document_id": true
     }
 ]
 }

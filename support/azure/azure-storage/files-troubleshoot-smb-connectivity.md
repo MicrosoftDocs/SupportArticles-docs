@@ -56,17 +56,17 @@ Verify that virtual network and firewall rules are configured properly on the st
 
 #### Cause 3: Share-level permissions are incorrect when using identity-based authentication
 
-If end users are accessing the Azure file share using Active Directory (AD) or Azure Active Directory Domain Services (Azure AD DS) authentication, access to the file share fails with the "Access is denied" error if share-level permissions are incorrect.
+If end users are accessing the Azure file share using Active Directory (AD) or Microsoft Entra Domain Services authentication, access to the file share fails with the "Access is denied" error if share-level permissions are incorrect.
 
 #### Solution for cause 3
 
 Validate that permissions are configured correctly:
 
-- **Active Directory Domain Services (AD DS)** see [Assign share-level permissions](/azure/storage/files/storage-files-identity-ad-ds-assign-permissions).
+- **Microsoft Entra Domain Services** see [Assign share-level permissions](/azure/storage/files/storage-files-identity-ad-ds-assign-permissions).
 
-    Share-level permission assignments are supported for groups and users that have been synced from AD DS to Azure Active Directory (Azure AD) using Azure AD Connect sync or Azure AD Connect cloud sync. Confirm that groups and users being assigned share-level permissions aren't unsupported "cloud-only" groups.
+    Share-level permission assignments are supported for groups and users that have been synced from AD DS to Microsoft Entra ID using Microsoft Entra Connect Sync or Microsoft Entra Connect cloud sync. Confirm that groups and users being assigned share-level permissions aren't unsupported "cloud-only" groups.
 
-- **Azure Active Directory Domain Services (Azure AD DS)** see [Assign share-level permissions](/azure/storage/files/storage-files-identity-auth-active-directory-domain-service-enable?tabs=azure-portal#assign-share-level-permissions).
+- **Microsoft Entra Domain Services** see [Assign share-level permissions](/azure/storage/files/storage-files-identity-auth-active-directory-domain-service-enable?tabs=azure-portal#assign-share-level-permissions).
 
 ### <a id="error53-67-87"></a>Error 53, Error 67, or Error 87 when you mount or unmount an Azure file share
 

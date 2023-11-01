@@ -54,7 +54,7 @@ If you want to access blob containers, Azure Data Lake Storage Gen2 containers o
 
 1. Open the **Connect** dialog box.
 1. Select the resource type you want to connect to.
-1. Select **Sign in using Azure Active Directory (Azure AD)** > **Next**.
+1. Select **Sign in using Microsoft Entra ID** > **Next**.
 1. Select the user account and tenant associated with the resource you're attaching to, and then select **Next**.
 1. Type the URL to the resource and then type a unique display name for the connection. Select **Next** > **Connect**.
 
@@ -143,13 +143,13 @@ Make sure you've read the [Sign in to Storage Explorer](/azure/storage/common/st
 
 ### Frequently having to reenter credentials
 
-Having to reenter credentials is most likely the result of Conditional Access policies set by your Azure Active Directory (Azure AD) admin. When Storage Explorer asks you to reenter credentials from the account panel, you should see an **Error details** link. Select it to see why Storage Explorer is asking you to reenter credentials. Conditional Access policy errors that require reentering of credentials might look something like these:
+Having to reenter credentials is most likely the result of Conditional Access policies set by your Microsoft Entra admin. When Storage Explorer asks you to reenter credentials from the account panel, you should see an **Error details** link. Select it to see why Storage Explorer is asking you to reenter credentials. Conditional Access policy errors that require reentering of credentials might look something like these:
 
 - The refresh token has expired.
 - You must use multifactor authentication to access.
 - Your admin made a configuration change.
 
-To reduce the frequency of having to reenter credentials because of errors like the preceding ones, talk to your Azure AD admin.
+To reduce the frequency of having to reenter credentials because of errors like the preceding ones, talk to your Microsoft Entra admin.
 
 ### Conditional access policies
 
@@ -696,4 +696,3 @@ If none of these solutions work for you, use one of the following methods:
 [!INCLUDE [Third-party information disclaimer](../../includes/third-party-disclaimer.md)]
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
-

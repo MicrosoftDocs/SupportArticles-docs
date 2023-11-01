@@ -10,7 +10,7 @@ ms.subservice: enterprise-users
 
 This article describes a problem in which you receive an error message "We could not verify your account" when you try to reset your password in Microsoft Azure, Office 365, or Microsoft Intune. To resolve this problem, work with your administrator to update your telephone number.
 
-_Original product version:_ &nbsp; Azure Active Directory, Microsoft Intune, Cloud Services (Web roles/Worker roles)  
+_Original product version:_ &nbsp; Microsoft Entra ID, Microsoft Intune, Cloud Services (Web roles/Worker roles)  
 _Original KB number:_ &nbsp; 2951246
 
 ## Symptoms

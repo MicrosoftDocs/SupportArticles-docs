@@ -25,7 +25,7 @@ In this scenario, users are unexpectedly prompted to enroll in Intune when they 
 
 This behavior is by design.
 
-This behavior occurs if Basic Mobility and Security security policies are still deployed to a group that contains the affected users. When users are targeted by Basic Mobility and Security security policies, Conditional Access will be evaluated by Azure Active Directory (Azure AD) authentication services. These services check a user's group membership. Azure AD authentication services don't check the user authority (Intune instead of Microsoft 365) when they enforce Conditional Access.
+This behavior occurs if Basic Mobility and Security security policies are still deployed to a group that contains the affected users. When users are targeted by Basic Mobility and Security security policies, Conditional Access will be evaluated by Microsoft Entra authentication services. These services check a user's group membership. Microsoft Entra authentication services don't check the user authority (Intune instead of Microsoft 365) when they enforce Conditional Access.
 
 ## Solution
 

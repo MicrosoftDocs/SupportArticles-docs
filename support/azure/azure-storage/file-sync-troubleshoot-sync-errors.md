@@ -844,7 +844,7 @@ This error occurs because the storage account has failed over to another region.
 
 This error occurs because of an internal problem with the sync database. This error will auto-resolve when sync retries. If this error continues for an extend period of time, create a support request, and we will contact you to help you resolve this issue.
 
-<a id="-2134364024"></a>**Sync failed due to change in Azure Active Directory tenant**  
+<a id="-2134364024"></a>**Sync failed due to change in Microsoft Entra tenant**  
 
 | Error | Code |
 |-|-|

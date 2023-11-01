@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, muratka, waltere
-ms.custom: sap:windows-troubleshooters, csstroubleshoot
+ms.custom: sap:windows-tss, csstroubleshoot
 ms.technology: windows-client-troubleshooter
 ---
 # Introduction to TroubleShootingScript toolset (TSS)

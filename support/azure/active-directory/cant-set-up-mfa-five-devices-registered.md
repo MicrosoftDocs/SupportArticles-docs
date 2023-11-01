@@ -25,22 +25,22 @@ You previously set up five different phones or other devices to be registered fo
 
 ## Solution 1: Delete the sign-in methods directly in a web browser
 
-To delete the device tokens, you can delete the sign-in methods from your security settings directly within a web browser. However, if you aren't an administrator, or you aren't the only administrator for your Microsoft Azure Active Directory (Azure AD), you must first have someone else (the administrator or another administrator user) set the requirement for re-registering MFA in the procedure in the following section.
+To delete the device tokens, you can delete the sign-in methods from your security settings directly within a web browser. However, if you aren't an administrator, or you aren't the only administrator for your Microsoft Entra ID, you must first have someone else (the administrator or another administrator user) set the requirement for re-registering MFA in the procedure in the following section.
 
 ### Part 1: Have your administrator or another administrator user set the MFA re-registration requirement
 
 > [!NOTE]  
-> This procedure isn't required if you're the only administrator for your Azure AD.
+> This procedure isn't required if you're the only administrator for your Microsoft Entra ID.
 
-1. In the [Azure portal](https://portal.azure.com), search for and select **Azure Active Directory**.
+1. In the [Azure portal](https://portal.azure.com), search for and select **Microsoft Entra ID**.
 
-1. In the Azure AD navigation pane, locate the **Manage** heading, and then select **Users**.
+1. In the Microsoft Entra navigation pane, locate the **Manage** heading, and then select **Users**.
 
-1. In the list of Azure AD users, select the **Display name** of the user.
+1. In the list of Microsoft Entra users, select the **Display name** of the user.
 
-1. In the navigation pane for the Azure AD user, locate the **Manage** heading, and then select **Authentication methods**.
+1. In the navigation pane for the Microsoft Entra user, locate the **Manage** heading, and then select **Authentication methods**.
 
-1. In the Azure AD user menu, select **Require re-register multifactor authentication**.
+1. In the Microsoft Entra user menu, select **Require re-register multifactor authentication**.
 
 ### Part 2: Delete some or all of your sign-in methods
 
@@ -48,7 +48,7 @@ You can delete the device tokens by deleting the corresponding sign-in methods. 
 
 1. To view your sign-in methods, go to <https://aka.ms/mysecurityinfo>.
 
-   For example, the sign-in method list might include a phone method that's associated with a phone number, and an authenticator app method that's associated with a particular device. For more information, see [What authentication and verification methods are available in Azure Active Directory?](/azure/active-directory/authentication/concept-authentication-methods)
+   For example, the sign-in method list might include a phone method that's associated with a phone number, and an authenticator app method that's associated with a particular device. For more information, see [What authentication and verification methods are available in Microsoft Entra ID?](/azure/active-directory/authentication/concept-authentication-methods)
 
 1. Delete any or all five of the sign-in methods that are listed.
 

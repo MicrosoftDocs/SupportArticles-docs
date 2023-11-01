@@ -9,9 +9,9 @@ metadata:
   ms.subservice: domain-services
 title: "Set up your enterprise for working remotely in Azure: FAQ"
 summary: |
-  This Azure Active Directory (Azure AD) and cloud services FAQ can help you manage your IT Pro teams as they work remotely.
+  This Microsoft Entra ID and cloud services FAQ can help you manage your IT Pro teams as they work remotely.
 
-  _Original product version:_ &nbsp; Azure Active Directory
+  _Original product version:_ &nbsp; Microsoft Entra ID
   _Original KB number:_ &nbsp; 4559203
 
   ## Frequently asked questions
@@ -25,14 +25,14 @@ sections:
           Microsoft offers a free E1 license for six months to enable your employees to increase their productivity from home through Microsoft Teams. For information about licensing, and to check your eligibility, go to: [Manage the Office 365 E1 Trial](/microsoftteams/e1-trial-license).
 
       - question: |
-          What guidance is available to set up Microsoft Teams from an Azure AD perspective to work with my existing on-premises deployment?
+          What guidance is available to set up Microsoft Teams from a Microsoft Entra perspective to work with my existing on-premises deployment?
         answer: |
-          Microsoft Teams uses identities stored in Azure Active Directory. You can integrate Azure Active Directory with on-premises AD environments. For more information, see [Microsoft 365 integration with on-premises environments](/microsoft-365/enterprise/microsoft-365-integration?view=o365-worldwide) 
+          Microsoft Teams uses identities stored in Microsoft Entra ID. You can integrate Microsoft Entra ID with on-premises AD environments. For more information, see [Microsoft 365 integration with on-premises environments](/microsoft-365/enterprise/microsoft-365-integration?view=o365-worldwide) 
 
       - question: |
           I work in education, and I have no existing on-premises infrastructure. How can I use Microsoft Teams for educational purposes, such as online teaching?
         answer: |
-          Microsoft offers a free A1 license for education. For information about licensing, go to [Get Office 365 free for your entire school](https://www.microsoft.com/microsoft-365/academic/compare-office-365-education-plans?activetab=tab%3aprimaryr1).
+          Microsoft offers a free A1 license for education. For information about licensing, go to [Get Office 365 free for your entire school](https://www.microsoft.com/microsoft-365/academic/compare-office-365-education-plans?activetab=tab%3aprimaryr1).
           The following documentation provides useful information about how to enable remote learning at your school or university:
 
           - [Get started with Microsoft Teams for remote learning](/MicrosoftTeams/remote-learning-edu) 
@@ -64,33 +64,33 @@ sections:
           - [Integrate your VPN infrastructure with Azure MFA](/azure/active-directory/authentication/howto-mfa-nps-extension-vpn)
 
       - question: |
-          I want to enable Azure MFA. How can I choose the type of MFA to use?
+          I want to enable Azure MFA. How can I choose the type of MFA to use?
         answer: |
           The following table provides multiple scenarios in which to deploy MFA.
 
           |Scenario|Prerequisite|
           |---|---|
           |Cloud-only identity environment that uses modern authentication|No additional prerequisite tasks|
-          |Hybrid identity scenarios|Azure AD Connect is deployed, and user identities are synchronized or federated with the on-premises Active Directory Domain Services (AD DS) with Azure Active Directory.|
-          |On-premises legacy applications published for cloud access|Azure AD Application Proxy is deployed.|
+          |Hybrid identity scenarios|Microsoft Entra Connect is deployed, and user identities are synchronized or federated with the on-premises Active Directory Domain Services (AD DS) with Microsoft Entra ID.|
+          |On-premises legacy applications published for cloud access|Microsoft Entra Application Proxy is deployed.|
           |Using Azure MFA with RADIUS Authentication|A Network Policy Server (NPS) is deployed.|
           |Users have Microsoft Office 2010 or earlier, or Apple Mail for iOS 11 or earlier|Upgrade to Microsoft Office 2013 or later and Apple Mail for iOS 12 or later. Conditional access is not supported by legacy authentication protocols.|
                       
-          For more information about how each MFA type works and when to use it, go to [Plan an Azure Multi-Factor Authentication deployment](/azure/active-directory/authentication/howto-mfa-getstarted).
+          For more information about how each MFA type works and when to use it, go to [Plan an Azure Multi-Factor Authentication deployment](/azure/active-directory/authentication/howto-mfa-getstarted).
 
       - question: |
-          How can I enable users to be able to reset their passwords directly from Azure AD?
+          How can I enable users to be able to reset their passwords directly from Microsoft Entra ID?
         answer: |
-          Azure AD provides several methods to achieve this based on your current scenario:
+          Microsoft Entra ID provides several methods to achieve this based on your current scenario:
 
-          - If the user has Azure Active Directory Premium and wants to enable SSPR-U (SSPR for users), we recommend this option:
+          - If the user has Microsoft Entra ID P1 or P2 and wants to enable SSPR-U (SSPR for users), we recommend this option:
 
-              [Enable Azure Active Directory self-service password reset](/azure/active-directory/authentication/howto-sspr-windows)
-          - If the user doesn't have Azure Active Directory Premium, and uses an Active Directory Federation Services (AD FS) for federation but doesn't have any SSPR, we recommend this option:
+              [Enable Microsoft Entra self-service password reset](/azure/active-directory/authentication/howto-sspr-windows)
+          - If the user doesn't have Microsoft Entra ID P1 or P2, and uses an Active Directory Federation Services (AD FS) for federation but doesn't have any SSPR, we recommend this option:
 
-          If the user doesn't have Azure Active Directory premium but wants to use ADFS to change the password endpoint, they must explicitly enable the endpoint ([Update password customization](/windows-server/identity/ad-fs/operations/update-password-customization)). They can do this also on a proxy endpoint. Doing this enables the capability on AD FS.
+          If the user doesn't have Microsoft Entra ID P1 or P2 but wants to use ADFS to change the password endpoint, they must explicitly enable the endpoint ([Update password customization](/windows-server/identity/ad-fs/operations/update-password-customization)). They can do this also on a proxy endpoint. Doing this enables the capability on AD FS.
 
-          Users can send a claim that is named "passwordchangeurl" for the URL as a claim to Azure AD. Azure AD will honor this for Windows 10, Azure AD-joined workstations that are running Windows 10, version 1703 or a later version. The user will be directed to the URL that is shown in the claim when the user presses Ctrl+Alt+Del.
+          Users can send a claim that is named "passwordchangeurl" for the URL as a claim to Microsoft Entra ID. Microsoft Entra ID will honor this for Windows 10, Microsoft Entra joined workstations that are running Windows 10, version 1703 or a later version. The user will be directed to the URL that is shown in the claim when the user presses Ctrl+Alt+Del.
 
           Here's are some sample references on claims in the context of AD FS:
 
@@ -99,95 +99,95 @@ sections:
       - question: |
           I have a cloud-only deployment, and I have to add Azure MFA as an extra layer of security. Is there a free license for this?
         answer: |
-          Yes. Azure AD Free or standalone Office 365 licenses use security defaults to require MFA for users and administrators.
+          Yes. Microsoft Entra ID Free or standalone Office 365 licenses use security defaults to require MFA for users and administrators.
 
           To learn how to manage your users' MFA settings, go to [View the status for a user](/azure/active-directory/authentication/howto-mfa-userstates#view-the-status-for-a-user).
 
       - question: |
-          Is it worth connecting my user's devices to Azure AD while they are working remotely?
+          Is it worth connecting my user's devices to Microsoft Entra ID while they are working remotely?
         answer: |
-          Azure AD enables single sign-on to devices, apps, and services from anywhere through connected devices. IT professionals get the controls they must have to manage and secure your organization's resources. For more information, go to [Getting devices in Azure AD](/azure/active-directory/devices/overview#getting-devices-in-azure-ad).
+          Microsoft Entra ID enables single sign-on to devices, apps, and services from anywhere through connected devices. IT professionals get the controls they must have to manage and secure your organization's resources. For more information, go to [Getting devices in Microsoft Entra ID](/azure/active-directory/devices/overview#getting-devices-in-azure-ad).
 
       - question: |
-          What kinds of device types can connect to Azure AD?
+          What kinds of device types can connect to Microsoft Entra ID?
         answer: |
-          You can connect three kinds of devices to Azure AD: Azure AD Registered, Azure AD Joined, or Hybrid Azure AD joined, depending on your infrastructure. For more information, go to [Getting devices in Azure AD](/azure/active-directory/devices/overview#getting-devices-in-azure-ad).
+          You can connect three kinds of devices to Microsoft Entra ID: Microsoft Entra registered, Microsoft Entra joined, or Microsoft Entra hybrid joined, depending on your infrastructure. For more information, go to [Getting devices in Microsoft Entra ID](/azure/active-directory/devices/overview#getting-devices-in-azure-ad).
 
       - question: |
-          Is an extra license required to connect my device to Azure AD?
+          Is an extra license required to connect my device to Microsoft Entra ID?
         answer: |
-          No. An extra license is not required. Because the Azure AD Free license is enabled by default together with the Office 365 license, users can connect devices to Azure AD.
+          No. An extra license is not required. Because the Microsoft Entra ID Free license is enabled by default together with the Office 365 license, users can connect devices to Microsoft Entra ID.
 
       - question: |
-          While working remotely, why can't I access Office 365 services after I reset my password from my Azure AD-joined device?
+          While working remotely, why can't I access Office 365 services after I reset my password from my Microsoft Entra joined device?
         answer: |
-          After you reset your password, you have to log out and log back in by using the new password.
+          After you reset your password, you have to log out and log back in by using the new password.
 
       - question: |
-          While working remotely, why can't I access Office 365 services after I reset my password from my Hybrid Azure AD-joined device.
+          While working remotely, why can't I access Office 365 services after I reset my password from my Microsoft Entra hybrid joined device.
         answer: |
-          When you reset your password on a Hybrid Azure AD-joined device, you must have a line of sight to the domain controller. If you're outside the corporate network, make sure that you're connected through a VPN. Then, log out and log back in by using the new password.
+          When you reset your password on a Microsoft Entra hybrid joined device, you must have a line of sight to the domain controller. If you're outside the corporate network, make sure that you're connected through a VPN. Then, log out and log back in by using the new password.
 
       - question: |
-          Do I still have access to Office 365 resources from Hybrid Azure AD-joined device when I work outside my corporate network?
+          Do I still have access to Office 365 resources from Microsoft Entra hybrid joined device when I work outside my corporate network?
         answer: |
-          Yes. You still have access to Office 365 resources from Hybrid Azure AD-joined devices from outside the corporate network unless you change your password.
+          Yes. You still have access to Office 365 resources from Microsoft Entra hybrid joined devices from outside the corporate network unless you change your password.
 
       - question: |
-          Is there a way to keep access to Office 365 resources from Hybrid Azure AD joined devices even if I changed my password while outside the corporate network?
+          Is there a way to keep access to Office 365 resources from Microsoft Entra hybrid joined devices even if I changed my password while outside the corporate network?
         answer: |
-          If you're using Windows Hello for Business (WHfB) to sign in a Hybrid Azure AD joined device, you will retain access to Office 365 resources even after changing your password.
+          If you're using Windows Hello for Business (WHfB) to sign in a Microsoft Entra hybrid joined device, you will retain access to Office 365 resources even after changing your password.
 
       - question: |
-          How I can verify the health status of my Azure AD device?
+          How I can verify the health status of my Microsoft Entra device?
         answer: |
-          You can verify the health status for all join types (Hybrid Azure AD-joined, Azure AD-Joined, and Azure AD Register) by using the Device Registration Troubleshooter Tool.
+          You can verify the health status for all join types (Microsoft Entra hybrid joined, Microsoft Entra joined, and Microsoft Entra register) by using the Device Registration Troubleshooter Tool.
 
       - question: |
           How can I verify that Single Sign-On (SSO) is working as expected on my device?
         answer: |
-          Run the **dsregcmd /status**  command from a Hybrid Azure AD-joined or Azure AD-joined device, and check whether **AzureAdPrt**  is set as **YES**. For more information, go to [SSO state](/azure/active-directory/devices/troubleshoot-device-dsregcmd#sso-state).
+          Run the **dsregcmd /status**  command from a Microsoft Entra hybrid joined or Microsoft Entra joined device, and check whether **AzureAdPrt**  is set as **YES**. For more information, go to [SSO state](/azure/active-directory/devices/troubleshoot-device-dsregcmd#sso-state).
 
       - question: |
-          What are the Hybrid Azure AD device registration steps?
+          What are the Hybrid Microsoft Entra device registration steps?
         answer: |
-          The following are the device registration steps for Hybrid Azure AD-joined:
+          The following are the device registration steps for Microsoft Entra hybrid joined:
 
-          1. The device tries to retrieve the tenant ID and domain name from the following registry subkey: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\CDJ\AAD`.
+          1. The device tries to retrieve the tenant ID and domain name from the following registry subkey: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\CDJ\AAD`.
           2. If step 1 fails, the device communicates with the Local AD (configuration partition) to get the tenant's information form the Service Connection Point (SCP). (You can get SCP information by using Device Registration SCP Tool PowerShell.)
-          3. The device communicates with the Azure AD tenant.
-          4. The device authenticates against either Azure AD or a federation service (for example, ADFS).
+          3. The device communicates with the Microsoft Entra tenant.
+          4. The device authenticates against either Microsoft Entra ID or a federation service (for example, ADFS).
           5. The device registration process finishes.
 
-          For more information, go to [Hybrid Azure AD Device Registration](https://azureera.com/hybrid-azure-ad-device-registration/).
+          For more information, go to [Hybrid Microsoft Entra Device Registration](https://azureera.com/hybrid-azure-ad-device-registration/).
 
       - question: |
           What is the best method to troubleshoot device registration issues?
         answer: |
-          The Device Registration Troubleshooter Tool runs more than 30 tests to identify and fix the most common device registration issues for all join types (Hybrid Azure AD-joined, Azure AD-joined, and Azure AD Register).
+          The Device Registration Troubleshooter Tool runs more than 30 tests to identify and fix the most common device registration issues for all join types (Microsoft Entra hybrid joined, Microsoft Entra joined, and Microsoft Entra register).
 
       - question: |
-          While working from home, I can't access cloud resources. My device's conditional access policy isn't registered, but the device seems to be connected to Azure AD. What might be wrong?
+          While working from home, I can't access cloud resources. My device's conditional access policy isn't registered, but the device seems to be connected to Microsoft Entra ID. What might be wrong?
         answer: |
-          Double-check the device connection to Azure AD. Also check the Azure AD PRT value. For more information, go to [SSO state](/azure/active-directory/devices/troubleshoot-device-dsregcmd#sso-state).
+          Double-check the device connection to Microsoft Entra ID. Also check the Microsoft Entra PRT value. For more information, go to [SSO state](/azure/active-directory/devices/troubleshoot-device-dsregcmd#sso-state).
 
       - question: |
           When users work from home, is there a way to allow them to reset their passwords?
         answer: |
           Yes. You can allow users to change their password from home. Here's how to configure the password writeback feature:
 
-          1. Enable the password writeback feature from Azure Active Directory Connect. For more information, go to [Enable password writeback in Azure AD Connect](/azure/active-directory/authentication/tutorial-enable-sspr-writeback#enable-password-writeback-in-azure-ad-connect).
-          2. Set the required permission to the Azure Active Directory Connect account by running the following PowerShell commands on the Azure Active Directory Connect server:
+          1. Enable the password writeback feature from Microsoft Entra Connect. For more information, go to [Enable password writeback in Microsoft Entra Connect](/azure/active-directory/authentication/tutorial-enable-sspr-writeback#enable-password-writeback-in-azure-ad-connect).
+          2. Set the required permission to the Microsoft Entra Connect account by running the following PowerShell commands on the Microsoft Entra Connect server:
 
               ```powershell
-              Import-Module "C:\Program Files\Microsoft Azure Active Directory Connect\AdSyncConfig\AdSyncConfig.psm1"
+              Import-Module "C:\Program Files\Microsoft Entra Connect\AdSyncConfig\AdSyncConfig.psm1"
               ```
             
               ```powershell
               Set-ADSyncPasswordWritebackPermissions -ADConnectorAccountNameAADConnectAccount -ADConnectorAccountDomain domain.local
               ```
 
-              To get **ADConnectorAccountName**  and **ADConnectorAccountDomain** values:
+              To get **ADConnectorAccountName** and **ADConnectorAccountDomain** values:
 
                 ```powershell
                 Get-ADSyncADConnectorAccount
@@ -198,13 +198,13 @@ sections:
       - question: |
           What is the required license for password writeback and SSPR?
         answer: |
-          The required licenses are listed in the following article:
+          The required licenses are listed in the following article:
 
-          [How does self-service password reset writeback work in Azure Active Directory?](/azure/active-directory/authentication/concept-sspr-writeback#licensing-requirements-for-password-writeback)
+          [How does self-service password reset writeback work in Microsoft Entra ID?](/azure/active-directory/authentication/concept-sspr-writeback#licensing-requirements-for-password-writeback)
 
       - question: |
           What are the required ports and URLs for password writeback and SSPR?
         answer: |
-          For an Azure Active Directory Connect server that is running behind a firewall or through a proxy, open the ports and URLs that are listed in [this article](/azure/active-directory/authentication/active-directory-passwords-troubleshoot#confirm-network-connectivity).
+          For a Microsoft Entra Connect server that is running behind a firewall or through a proxy, open the ports and URLs that are listed in [this article](/azure/active-directory/authentication/active-directory-passwords-troubleshoot#confirm-network-connectivity).
 
           [!INCLUDE [Third-party information disclaimer](../../includes/third-party-disclaimer.md)]
