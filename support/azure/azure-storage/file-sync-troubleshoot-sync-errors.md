@@ -4,7 +4,7 @@ description: Troubleshoot common issues with monitoring sync health and resolvin
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 10/13/2023
+ms.date: 11/02/2023
 ms.author: kendownie
 ms.custom: devx-track-azurepowershell
 ms.reviewer: v-weizhu
@@ -653,7 +653,18 @@ By setting this registry value, the Azure File Sync agent will accept any locall
 | **Error string** | WININET_E_DECODING_FAILED |
 | **Remediation required** | Yes |
 
-This error typically occurs if a network proxy is modifying the response from the Azure File Sync service. Please check your proxy configuration.
+This error typically occurs if a firewall, proxy or gateway is blocking access to the PKI URLs, or if the PKI servers are down.
+
+Ensure the server can access the following URLs:
+
+- https://www.microsoft.com/pki/mscorp/cps
+- http://crl.microsoft.com/pki/mscorp/crl/
+- http://mscrl.microsoft.com/pki/mscorp/crl/
+- http://ocsp.msocsp.com
+- http://ocsp.digicert.com/
+- http://crl3.digicert.com/
+
+Once the Azure File Sync agent is installed, the PKI URL is used to download intermediate certificates required to communicate with the Azure File Sync service and Azure file share. The OCSP URL is used to check the status of a certificate. If the error persists for several days, create a support request.
 
 <a id="-2134375680"></a>**Sync failed due to a problem with authentication.**  
 
