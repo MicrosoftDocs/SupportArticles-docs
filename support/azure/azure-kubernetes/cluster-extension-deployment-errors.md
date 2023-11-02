@@ -1,43 +1,41 @@
 ---
-title: Troubleshoot errors while deploying Kubernetes cluster extensions 
-description: Describes the errors that occur while you deploy Kubernetes cluster extensions and how to troubleshoot them.
+title: Troubleshoot errors while deploying extensions in AKS cluster
+description: Describes the errors that occur while you deploy cluster extensions in an Azure Kubernetes Service (AKS) cluster and how to troubleshoot them.
 ms.date: 11/02/2023
 ms.reviewer: maanasagovi, nickoman, v-weizhu
 ms.service: azure-kubernetes-service
 ---
-# Troubleshoot errors while deploying Kubernetes cluster extensions
+# Troubleshoot errors while deploying AKS cluster extensions
 
-This article describes how to troubleshoot errors that occur while you deploy Kubernetes cluster extensions.
+This article describes how to troubleshoot errors that occur while you deploy cluster extensions for Azure Kubernetes Service (AKS).
 
 ## Extension creation errors
 
 ### Unable to get a response from the agent in time
 
-This error occurs when an Azure service doesn't receive a response from the Extension Agent. It could be because the Kubernetes cluster is unable to establish a connection with Azure.
+This error occurs when Azure services don't receive a response from the cluster extension agent. It could be because the AKS cluster is unable to establish a connection with Azure.
 
-#### Cause 1: The Extension Agent and Manager pods aren't healthy
+#### Cause 1: The cluster extension agent and manager pods fail to be initialized
 
-The Extension Agent and Extension Manager are crucial system components. They're responsible for managing the life cycle of Kubernetes applications. The initialization of pods might fail due to the following problems:
+The cluster extension agent and manager are crucial system components. They're responsible for managing the life cycle of Kubernetes applications. The initialization of the cluster extension agent and manager pods might fail due to the following problems:
 
 - Limitations in resources
 - Policy restrictions
 - Node taints, such as "noschedule"
 
-#### Solution for Cause 1: Ensure the Extension Agent and Manager pods works
+#### Solution for Cause 1: Ensure the Extension Agent and Extension Manager pods works
 
-To resolve this issue, ensure that the Extension Agent and Manager pods are correctly scheduled and able to start. If the pods are stuck in a non-ready state, check the pod description by using the `kubectl describe pod` command for more details about the underlying issues (for example, taints preventing scheduling, insufficient memory, or policy restrictions).
+To resolve this issue, ensure that the cluster extension agent and manager pods are correctly scheduled and able to start. If the pods are stuck in a non-ready state, check the pod description by using the `kubectl describe pod` command for more details about the underlying issues (for example, taints preventing scheduling, insufficient memory, or policy restrictions).
 
-Once the Extension Agent and Manager pods are operational and in a healthy state, they will establish communication with Azure services to install and manage Kubernetes applications.
+Once the cluster extension agent and manager pods are operational and in a healthy state, they will establish communication with Azure services to install and manage Kubernetes applications.
 
 #### Cause 2: There's an issue with the egress block or firewall
 
-If the Extension Agent and Manager pods are healthy, and you still encounter the "Unable to get a response from the agent in time" error, it's likely that an egress block or firewall issue is present. This issue might block the Extension Manager and Agent pods from communicating with Azure.
+If the cluster extension agent and manager pods are healthy, and you still encounter the "Unable to get a response from the agent in time" error, it's likely that an egress block or firewall issue is present. This issue might block the cluster extension agent and manager pods from communicating with Azure.
 
 #### Solution for Cause 2: Ensure networking prerequisites are met
 
 To resolve this issue, ensure that you follow the networking prerequisites outlined in [Network Rules for Clusters](/azure/aks/outbound-rules-control-egress).
-
-If you're compliant with those networking prerequisites and still see the error, contact MS Support.
 
 ## Helm errors
 
@@ -76,9 +74,7 @@ To resolve this issue, follow these steps:
 
 3. Check Helm charts and configuration: Many Kubernetes applications deploy resources on the cluster using Helm charts. Some applications may require user input through configuration settings. Ensure that all provided configuration values are accurate and meet the installation requirements.
 
-If none of the troubleshooting steps resolve the issue, contact MS Support.
-
-### Unable to download the Helm chart from the repository
+### Unable to download the Helm chart from the repo url
 
 When connectivity problems occur between the cluster and the firewall, coupled with egress block problems, this error occurs. To resolve this issue, refer to [Network Rules for Clusters](/azure/aks/outbound-rules-control-egress).
 
