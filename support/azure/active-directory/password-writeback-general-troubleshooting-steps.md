@@ -27,7 +27,7 @@ You should be consistent about how the password issue is reproduced or tested. U
 
 Does the operation fail for one user but succeed for another user? In this situation, try to determine the differences between a working and nonworking user. You can use the following steps:
 
-1. Get information about certain Active Directory users by running the [Ldifde](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731033(v=ws.11)) command or the [Get-MgUser](/powershell/microsoftgraph/find-mg-graph-command?view=graph-powershell-1.0#example-1-use-a-uri-to-get-all-related-cmdlets) PowerShell cmdlet.
+1. Get information about certain Active Directory users by running the [Ldifde](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731033(v=ws.11)) command or the [Get-ADUser](/powershell/module/activedirectory/get-aduser) PowerShell cmdlet.
 
 1. Run [user commands in Microsoft Graph PowerShell](/powershell/microsoftgraph/find-mg-graph-command) to get information about those users in [Microsoft Graph PowerShell](/powershell/microsoftgraph/overview).
 
