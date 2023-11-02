@@ -23,7 +23,7 @@ The cluster extension agent and manager are crucial system components. They're r
 - Policy restrictions
 - Node taints, such as "noschedule"
 
-#### Solution for Cause 1: Ensure the Extension Agent and Extension Manager pods works
+#### Solution for Cause 1: Ensure the cluster extension agent and manager pods works
 
 To resolve this issue, ensure that the cluster extension agent and manager pods are correctly scheduled and able to start. If the pods are stuck in a non-ready state, check the pod description by using the `kubectl describe pod` command for more details about the underlying issues (for example, taints preventing scheduling, insufficient memory, or policy restrictions).
 
@@ -35,7 +35,7 @@ If the cluster extension agent and manager pods are healthy, and you still encou
 
 #### Solution for Cause 2: Ensure networking prerequisites are met
 
-To resolve this issue, ensure that you follow the networking prerequisites outlined in [Network Rules for Clusters](/azure/aks/outbound-rules-control-egress).
+To resolve this issue, ensure that you follow the networking prerequisites outlined in [Outbound network and FQDN rules for Azure Kubernetes Service (AKS) clusters](/azure/aks/outbound-rules-control-egress).
 
 ## Helm errors
 
@@ -48,7 +48,7 @@ Here are some Helm related errors:
 
 ### Timed out waiting for resource readiness
 
-When trying to install a Kubernetes application fails, this error might occur. Here are detailed error messages:
+The installation of a Kubernetes application fails with the following error messages:
 
 > job failed: BackoffLimitExceeded
 
@@ -76,7 +76,7 @@ To resolve this issue, follow these steps:
 
 ### Unable to download the Helm chart from the repo url
 
-When connectivity problems occur between the cluster and the firewall, coupled with egress block problems, this error occurs. To resolve this issue, refer to [Network Rules for Clusters](/azure/aks/outbound-rules-control-egress).
+When connectivity problems occur between the cluster and the firewall, coupled with egress block problems, this error occurs. To resolve this issue, refer to [Outbound network and FQDN rules for Azure Kubernetes Service (AKS) clusters](/azure/aks/outbound-rules-control-egress).
 
 ### Helm chart rendering failed with given values
 
