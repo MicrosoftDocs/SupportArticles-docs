@@ -1,6 +1,6 @@
 ---
-title: Old user profiles weren't deleted as expected on system restart
-description: Helps resolve the issue in which GPO "Delete user profile older than specified number of days on system restart" is applied but doesn’t take effect.
+title: Old user profiles aren't deleted as expected on system restart
+description: Helps resolve an issue in which the Delete user profile older than a specified number of days on system restart GPO is applied but doesn't take effect.
 ms.date: 11/02/2023
 author: Deland-Han
 ms.author: delhan
@@ -13,25 +13,25 @@ ms.reviewer: kaushika, dennhu, rahugoyal, v-lianna
 ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot, ikb2lmc
 ms.technology: windows-server-deployment
 ---
-# User profiles older than a specified number of days weren't deleted as expected on system restart
+# User profiles older than a specified number of days aren't deleted as expected on system restart
 
-This article helps resolve the issue in which Group Policy Object (GPO) "Delete user profiles older than a specified number of days on system restart" is applied but doesn't take effect.
+This article helps resolve an issue in which the **Delete user profiles older than a specified number of days on system restart** Group Policy Object (GPO) is applied but doesn't take effect.
 
-GPO “Delete user profiles older than a specified number of days on system restart” is under **Computer Configuration** > **Administrative Templates** > **System** > **User Profiles**  in the Local Group Policy Editor. After it's applied, it fails to delete user profiles older than the number of days specified in the GPO.
+The **Delete user profiles older than a specified number of days on system restart** GPO is under **Computer Configuration** > **Administrative Templates** > **System** > **User Profiles** in the Local Group Policy Editor. After it's applied, it fails to delete user profiles older than the number of days specified in the GPO.
 
-This issue occurs because the Microsoft System Center Configuration Manager (SCCM)
-compliance settings take precedence over the GPO settings.
-To determine if user profile settings are controlled by SCCM, check the following registry settings. If they're set to 1, this implies that the settings are managed by SCCM.
+This issue occurs because the Microsoft System Center Configuration Manager (SCCM) compliance settings take precedence over the GPO settings.
+
+To determine if user profile settings are controlled by SCCM, check the following registry settings. If they're set to **1**, it means that the settings are managed by SCCM.
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\UserState\UserStateTechnologies\ConfigurationControls`
 
 |Value name|Value type|Value data|
 |---|---|---|
-| RoamingUserProfile |DWORD|00000001|
-| FolderRedirection |DWORD|00000001|
-| OfflineFiles |DWORD|00000001|
+|`RoamingUserProfile`|DWORD|00000001|
+|`FolderRedirection`|DWORD|00000001|
+|`OfflineFiles`|DWORD|00000001|
 
-## Disable the compliance settings "Enable User Data and Profile" pushed through SCCM
+## Disable the "Enable User Data and Profile" compliance setting pushed through SCCM
 
 To resolve the issue, follow these steps:
 
