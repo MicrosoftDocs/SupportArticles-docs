@@ -5,7 +5,7 @@ author: rpapostolis # GitHub alias
 ms.author: appapaio # Microsoft alias
 ms.reviewer: befrey, lulubran
 ms.subservice: power-automate-desktop-flows
-ms.date: 10/27/2023
+ms.date: 11/02/2023
 ---
 # Troubleshoot desktop flow run queue errors
 
@@ -63,7 +63,7 @@ When a desktop flow is already running on the machine, this error might occur in
 
 ##### Resolution
 
-To resolve the issue, wait for the flows that are already running to complete.
+To resolve the issue, either wait for the flows that are already running to complete or [cancel their parent cloud flow run](/power-automate/desktop-flows/monitor-desktop-flow-queues#cancel-parent-flow-run).
 
 ### See also
 
@@ -91,7 +91,7 @@ If the sub-error code isn't provided, check if:
 
 - The issue is transient.
   
-  Try changing the [retry policy](/power-automate/guidance/planning/reducing-risk#retry-policy) in actions' settings.
+  Try changing the [retry policy](/azure/logic-apps/logic-apps-exception-handling?tabs=consumption#retry-policies) in actions' settings.
 
 - The machine or all machines in the machine group aren't able to connect with the desktop flow.
   
@@ -104,4 +104,4 @@ If the sub-error code isn't provided, check if:
   
   Add a new machine, then update the desktop flow connections in your cloud flows to use the new machine.
 
-If you have a backup of desktop flows in your run queue due to one of the above reasons, you can bulk cancel your desktop flow runs by canceling the parent cloud flow run using the **Cancel parent flow run** action on the Desktop flow runs page. Once your machine issue is resolved, you can restart those cloud flows.
+If you have a backup of desktop flows in your run queue due to one of the above reasons, you can bulk cancel your desktop flow runs by [canceling the parent cloud flow run](/power-automate/desktop-flows/monitor-desktop-flow-queues#cancel-parent-flow-run) using the **Cancel parent flow run** action on the Desktop flow runs page. Once your machine issue is resolved, you can restart those cloud flows.
