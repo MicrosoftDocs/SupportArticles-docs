@@ -15,7 +15,7 @@ Troubleshooting Windows Integrated Authentication failure scenarios can be chall
 - You can sign in to your target website, but you're prompted to sign in only after entering a username and password combination.
 - You can access your target website on the front-end server, but it fails when you initiate an action that requires the front-end server to call a back-end HTTP endpoint using the authenticated user's credentials.
 
-For the purposes of this article, use the following layout:
+For the purposes of this article, consider the following layout:
 
 - *Client 1* is the domain-joined workstation or laptop from which the hypothetical user will initiate all connection attempts.
 
@@ -25,13 +25,13 @@ For the purposes of this article, use the following layout:
 
 :::image type="content" source="media/diagnostics-pages-windows-integrated-authentication/workstation-web-serv1-web-serv2.png" alt-text="Screenshot shows the layout of workstation, Web-serv1, and Web-serv2.":::
 
-To ease the data collection for these scenarios and not to rely on external data-gathering tools such as Fiddler or WireShark (since connections between the three computers might use HTTPS and therefore all exchanges between them will be encrypted), two self-contained diagnostic pages are at your disposal in [ASP.NET Self Contained Pages for Troubleshooting Windows Integrated Authentication issues on IIS](https://github.com/aspnet/samples/tree/main/samples/aspnet/Identity/CurrentUserInfoRetrieval).
+To ease the data collection for these scenarios and not to rely on external data-gathering tools such as Fiddler or WireShark (since connections between the three computers might use HTTPS and therefore all exchanges between them will be encrypted), use the two self-contained diagnostic pages in [ASP.NET Self Contained Pages for Troubleshooting Windows Integrated Authentication issues on IIS](https://github.com/aspnet/samples/tree/main/samples/aspnet/Identity/CurrentUserInfoRetrieval).
 
 ## Troubleshooting pages
 
 The two pages are coded in [ASP.NET Web Forms](/aspnet/web-forms/). They're intended to bundle the code and the markup for the page in one file that can be copied to the root of the web application you're trying to troubleshoot, without any need for compilation or deployment. The pages are:
 
-- *WhoAmI.aspx* - This page allows the dumping of authentication-related information such as:
+- *[WhoAmI.aspx](https://github.com/aspnet/samples/blob/main/samples/aspnet/Identity/CurrentUserInfoRetrieval/WhoAmI.aspx)* - This page allows the dumping of authentication-related information such as:
 
   - The authentication method used to access the target site. If the method is based on the Negotiate provider for Windows Integrated Authentication, the page shows if Kerberos or NTLM is used to authenticate the user.
   - The identity of the account that runs the application pool hosting the site.
@@ -42,19 +42,19 @@ The two pages are coded in [ASP.NET Web Forms](/aspnet/web-forms/). They're inte
 
     :::image type="content" source="media/diagnostics-pages-windows-integrated-authentication/whoami-page.png" alt-text="Screenshot shows the Who Am I Page with authentication information and identity.":::
 
-- *ScrapperTest.aspx* - This page is made to work with the *WhoAmI.aspx* page, allowing requests from the front-end server to be directed to any URLs on the back-end server. The page presents a UI interface that allows a user to:
+- *[ScrapperTest.aspx](https://github.com/aspnet/samples/blob/main/samples/aspnet/Identity/CurrentUserInfoRetrieval/ScrapperTest.aspx)* - This page is made to work with the *WhoAmI.aspx* page, allowing requests from the front-end server to be directed to any URLs on the back-end server. The page presents a UI interface that allows a user to:
 
   - Enter the desired URL of the back-end server resource that the page should attempt to load.
   - Determine if they're authenticated when loading the *ScrapperTest.aspx* page, and if authenticated, which users they're authenticated as.
   - In the scenario where the user is indeed authenticated, a checkbox allows the attempt to reuse the user's credentials when trying to load the back-end resource indicated in the URL textbox.
 
-  :::image type="content" source="media/diagnostics-pages-windows-integrated-authentication/web-serv1-scrappertest.png" alt-text="Screenshot shows the ScrapperTest page.":::
+    :::image type="content" source="media/diagnostics-pages-windows-integrated-authentication/web-serv1-scrappertest.png" alt-text="Screenshot shows the ScrapperTest page.":::
 
 ## How to deploy
 
 Since both pages are self-contained, the only thing needed is to:
 
-1. Download the pages from the [GitHub repository](https://github.com/aspnet/samples/tree/main/samples/aspnet/Identity/CurrentUserInfoRetrieval) and extract the pages from the zip file archive.
+1. Download the pages from the [GitHub repository](https://github.com/aspnet/samples/tree/main/samples/aspnet/Identity/CurrentUserInfoRetrieval).
 1. Copy the *WhoAmI.aspx* page or both pages to the root of your target web applications that are running inside of IIS.
 1. Make a request to the URL of your site appending */WhoAmI.aspx* or */ScrapperTest.aspx*, depending on which page you wish to access.
 
@@ -88,7 +88,7 @@ The *ScrapperTest.aspx* page is used to test the delegation of credential scenar
 
 Once the **Scrap Page** button is selected, the code of the *ScrapperTest.aspx* page will issue a `GET` request for the indicated target URL. If the **Use Credentials** checkbox is checked, and authentication is needed to access the back-end endpoint specified, the authenticated user's credentials are also used to make the request. If a request is successful, the result is displayed in the text area control of the page as the raw HTTP output of the received response.
 
-We envisaged the usage of the *ScrapperTest.aspx* page with the *WhoAmI.aspx* page should be placed inside the ASP.NET application that would be contacted on the back-end server. Thus, the HTTP response recovered by the *ScrapperTest.aspx* page will be the HTML output of the *WhoAmI.aspx* page when executed on the back end. This output can then be evaluated to understand how the request was authenticated on the back end and which accounts were used.
+A usage scenario that we envision is to place the *ScrapperTest.aspx* page and the *WhoAmI.aspx* page inside the ASP.NET application that would be contacted on the back-end server. Thus, the HTTP response recovered by the *ScrapperTest.aspx* page will be the HTML output of the *WhoAmI.aspx* page when executed on the back end. This output can then be evaluated to understand how the request was authenticated on the back end and which accounts were used.
 
 ## More information
 
