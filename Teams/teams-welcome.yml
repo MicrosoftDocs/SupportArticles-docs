@@ -20,7 +20,7 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Stuck in a login loop
+          - text: Teams doesn't load
             url: ./teams-sign-in/sign-in-loop.md
           - text: Teams doesn't automatically update
             url: ./teams-sign-in/teams-doesnt-automatically-update.md
