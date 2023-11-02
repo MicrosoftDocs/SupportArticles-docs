@@ -43,7 +43,7 @@ If you are experiencing high latency times, follow these steps to pinpoint the o
 
 To identify which clients are generating the most requests (and potentially the most API server load), run a query that resembles the following code. The following query lists the top 10 user agents by the number of API server requests sent.
 
-### [Resource specific](#tab/resource-specific)
+### [Resource-specific](#tab/resource-specific)
 ```kusto
 AKSAudit
 | where TimeGenerated between(now(-1h)..now()) // When you experienced the problem
@@ -74,7 +74,7 @@ Although it's helpful to know which clients generate the highest request volume,
 
 To identify the average latency of API server requests per user agent as plotted on a time chart, run the following query:
 
-### [Resource specific](#tab/resource-specific)
+### [Resource-specific](#tab/resource-specific)
 ```kusto
 AKSAudit
 | where TimeGenerated between(now(-1h)..now()) // When you experienced the problem
@@ -110,7 +110,7 @@ This query is a follow-up to the query in the ["Identify top user agents by the 
 
 Run the following query to tabulate the 99th percentile (P99) latency of API calls across different resource types for a given client:
 
-### [Resource specific](#tab/resource-specific)
+### [Resource-specific](#tab/resource-specific)
 ```kusto
 AKSAudit
 | where TimeGenerated between(now(-1h)..now()) // When you experienced the problem
