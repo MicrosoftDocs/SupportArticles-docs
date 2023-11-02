@@ -241,10 +241,10 @@
       href: ./teams-sign-in/sign-in-error-after-password-change.md
     - name: Someone has already setup Teams for your organization
       href: ./teams-sign-in/someone-has-already-setup-teams.md
-    - name: Stuck in login loop
-      href: ./teams-sign-in/sign-in-loop.md
     - name: Teams doesn't automatically update
       href: ./teams-sign-in/teams-doesnt-automatically-update.md
+    - name: Teams doesn't load
+      href: ./teams-sign-in/sign-in-loop.md      
     - name: Using a symlink or mapping a drive to C:\users causes Teams to start with a white screen
       href: ./teams-sign-in/symlink-or-drivemap-causes-white-screen.md
     - name: Error "You're missing out" during sign-in
