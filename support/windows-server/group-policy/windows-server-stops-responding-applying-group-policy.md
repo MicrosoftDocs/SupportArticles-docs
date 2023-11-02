@@ -15,7 +15,7 @@ ms.technology: windows-server-group-policy
 ---
 # Windows Server stops responding on startup when applying Group Policy
 
-This article helps resolve the issue in which Windows Server stops responding on startup when applying Group Policy if System Monitor (Sysmon) is installed.
+This article helps resolve the issue in which Windows Server stops responding on startup when applying Group Policy if [System Monitor (Sysmon)](/sysinternals/downloads/sysmon) is installed.
 
 Sysmon driver (SysmonDrv.sys) intercepts the transition from user mode to kernel mode and then to its user mode process *Sysmon64.exe*. Most *Sysmon64.exe* threads are stuck waiting for a critical section. The critical section owner is called LsaLookuprOpenPolicy2 and is waiting on the Local Security Authority Subsystem Service (LSASS) thread. However, the LSASS thread tries to acquire a critical section (LsapDbLock). And many other LSASS threads are blocked waiting on the same critical section. The thread owned by the critical section is blocked in SysmonDrv's communication from kernel mode to user mode process *Sysmon64.exe*, which is observed to be stuck waiting on the LSASS thread. This result in a deadlock.
 
