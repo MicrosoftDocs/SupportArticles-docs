@@ -644,7 +644,7 @@ This error can happen if your organization is using a TLS terminating proxy or i
 
 By setting this registry value, the Azure File Sync agent will accept any locally trusted TLS/SSL certificate when transferring data between the server and the cloud service.
 
-<a id="-2147012721"></a>**Sync failed because the server was unable to decode the response from the Azure File Sync service**  
+<a id="-2147012721"></a>**Sync failed because the server was unable to decode the response from the Azure File Sync service.**  
 
 | Error | Code |
 |-|-|
