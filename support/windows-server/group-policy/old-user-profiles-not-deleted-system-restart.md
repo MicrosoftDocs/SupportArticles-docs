@@ -17,6 +17,8 @@ ms.technology: windows-server-deployment
 
 This article helps resolve an issue in which the **Delete user profiles older than a specified number of days on system restart** Group Policy Object (GPO) is applied but doesn't take effect.
 
+_Original KB number:_ &nbsp; 5030063
+
 The **Delete user profiles older than a specified number of days on system restart** GPO is under **Computer Configuration** > **Administrative Templates** > **System** > **User Profiles** in the Local Group Policy Editor. After it's applied, it fails to delete user profiles older than the number of days specified in the GPO.
 
 This issue occurs because the Microsoft System Center Configuration Manager (SCCM) compliance settings take precedence over the GPO settings.
