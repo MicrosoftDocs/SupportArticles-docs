@@ -60,7 +60,7 @@ Since both pages are self-contained, the only thing needed is to:
 
 ## Usage
 
-The first usage scenario is attempting to determine what authentication method is used to access a given website or web application hosted on IIS. For this one, you can make requests to the *WhoAmI.aspx* page that you have previously deployed to the site. 
+The first usage scenario is attempting to determine what authentication method is used to access a given website or web application hosted on IIS. For this one, you can make requests to the *WhoAmI.aspx* page that you have previously deployed to the site.
 
 - On the first request, the page will display the authentication information. If the Negotiate provider for Windows Integrated Authentication is used, it will also list the authentication protocol that's used: Kerberos or NTLM.
 
