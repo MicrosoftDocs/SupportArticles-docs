@@ -657,12 +657,12 @@ This error typically occurs if a firewall, proxy or gateway is blocking access t
 
 Ensure the server can access the following URLs:
 
-- https://www.microsoft.com/pki/mscorp/cps
-- http://crl.microsoft.com/pki/mscorp/crl/
-- http://mscrl.microsoft.com/pki/mscorp/crl/
-- http://ocsp.msocsp.com
-- http://ocsp.digicert.com/
-- http://crl3.digicert.com/
+- `https://www.microsoft.com/pki/mscorp/cps`
+- `http://crl.microsoft.com/pki/mscorp/crl/`
+- `http://mscrl.microsoft.com/pki/mscorp/crl/`
+- `http://ocsp.msocsp.com`
+- `http://ocsp.digicert.com/`
+- `http://crl3.digicert.com/`
 
 Once the Azure File Sync agent is installed, the PKI URL is used to download intermediate certificates required to communicate with the Azure File Sync service and Azure file share. The OCSP URL is used to check the status of a certificate. If the error persists for several days, create a support request.
 
