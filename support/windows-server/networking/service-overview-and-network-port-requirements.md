@@ -184,6 +184,7 @@ System service name: **ClusSvc**
 |---|---|---|
 |Cluster Service|UDP and DTLS¹|3343|
 |Cluster Service|TCP|3343 (This port is required during a node join operation.)|
+|Cluster Service|ICMP|ECHO (This port is required during a node join operation from Add Node Wizard.)|
 |RPC|TCP|135|
 |Cluster Administrator|UDP|137|
 |Randomly allocated high ports²|TCP|Random port number between 49152 and 65535|
