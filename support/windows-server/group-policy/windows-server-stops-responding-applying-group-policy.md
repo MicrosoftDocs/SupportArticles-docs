@@ -42,8 +42,8 @@ To work around this issue, follow these steps:
 
 2. Eliminate the following condition:
 
-```xml
-          <FileBlockShredding onmatch="...">
-             ...
-          </FileBlockShredding>
-```
+    ```xml
+    <FileBlockShredding onmatch="...">
+     ...
+    </FileBlockShredding>
+    ```
