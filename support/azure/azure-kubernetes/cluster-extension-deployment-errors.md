@@ -42,7 +42,7 @@ To resolve this issue, ensure that you follow the networking prerequisites outli
 Here are some Helm related errors:
 
 - [Timed out waiting for resource readiness](#timed-out-waiting-for-resource-readiness)
-- [Unable to download the Helm chart from the repository](#unable-to-download-the-helm-chart-from-the-repository)
+- [Unable to download the Helm chart from the repo url](#unable-to-download-the-helm-chart-from-the-repo-url)
 - [Helm chart rendering failed with given values](#helm-chart-rendering-failed-with-given-values)
 - [Resource already exists in your cluster](#resource-already-exists-in-your-cluster)
 
