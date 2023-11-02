@@ -20,7 +20,7 @@ adobe-target: true
 
 When you try to open Microsoft Teams in Microsoft Edge, Google Chrome, Mozilla Firefox, or Safari, or access Teams from within an app such as Outlook on the web, the Teams app doesn't load.
 
-This issue occurs if you use the **Trusted Sites** feature in your browser and don't add the URLs for Microsoft Teams to the list of sites that your browser should trust. In this situation, the Teams client is unable to load.
+This issue occurs if you use the **Trusted Sites** feature in your browser and you don't add the URLs for Microsoft Teams to the list of sites that your browser should trust. In this situation, the Teams client is unable to load.
 
 To resolve this issue, update your browser settings by using the steps in the appropriate section.
 
