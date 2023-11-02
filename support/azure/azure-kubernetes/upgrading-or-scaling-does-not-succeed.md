@@ -1,12 +1,11 @@
 ---
 title: Troubleshoot cluster upgrading and scaling errors
 description: Troubleshoot errors that occur when you try to upgrade or scale an Azure Kubernetes Service (AKS) cluster.
-ms.date: 7/6/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
+ms.date: 07/06/2022
 editor: v-jsitser
-ms.reviewer: chiragpa, nickoman
-ms.service: container-service
+ms.reviewer: chiragpa, nickoman, v-leedennis
+ms.service: azure-kubernetes-service
+ms.subservice: common-issues
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot errors so that I can successfully upgrade or scale an Azure Kubernetes Service (AKS) cluster.
 ---

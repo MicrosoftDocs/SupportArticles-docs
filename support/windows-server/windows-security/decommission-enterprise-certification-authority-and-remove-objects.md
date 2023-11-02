@@ -1,7 +1,7 @@
 ---
 title: Decommission a Windows enterprise CA
 description: Provides step-by-step instructions for removing a CA from Windows Server 2012 R2.
-ms.date: 09/08/2020
+ms.date: 10/10/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -70,7 +70,7 @@ By default, an enterprise CA does not store certificate requests. However, an ad
    ```
   
    If the value is **Microsoft Strong Cryptographic Provider**, or **Microsoft Enhanced Cryptographic Provider v1.0**, type *CertUtil -Key* and press Enter.  
-   If the value is **Microsoft Key Storage Provider**, type *CertUtil -CSP KSP -Key* and press Enter.  
+   If the value is **Microsoft Software Key Storage Provider**, type *CertUtil -CSP KSP -Key* and press Enter.  
    If the value is something else, type *CertUtil -CSP \<PROVIDER NAME\> -Key* and press Enter.
 
    This command will display the names of all the installed cryptographic service providers (CSP) and the key stores that are associated with each provider. Listed among the listed key stores will be the name of your CA. The name will be listed several times, as shown in the following example:

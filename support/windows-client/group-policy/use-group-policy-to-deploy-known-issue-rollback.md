@@ -2,14 +2,12 @@
 title: Use Group Policy to deploy a Known Issue Rollback
 description: describes how to configure Group Policy to use a Known Issue Rollback (KIR) policy definition that activates a KIR on managed devices.
 ms.date: 06/15/2022
-author: v-tappelgate
-ms.author: v-tappelgate
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, v-tappelgate
 ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
 ms.technology: windows-client-group-policy
 keywords: Windows Update, known issue, kir, group policy, rollback
@@ -28,7 +26,7 @@ Microsoft has developed a new Windows servicing technology that's named [KIR](ht
 > [!IMPORTANT]  
 > KIRs apply to only nonsecurity updates. This is because rolling back a fix for a nonsecurity update doesn't create a potential security vulnerability.
 
-Microsoft manages the KIR deployment process for non-enterprise devices. For enterprise devices, Microsoft provides KIR policy definition MSI files. Enterprises can then use Group Policy to deploy KIRs in hybrid Azure Active Directory (Azure AD) or Active Directory Domain Services (AD DS) domains.
+Microsoft manages the KIR deployment process for non-enterprise devices. For enterprise devices, Microsoft provides KIR policy definition MSI files. Enterprises can then use Group Policy to deploy KIRs in hybrid Microsoft Entra ID or Active Directory Domain Services (AD DS) domains.
 
 > [!NOTE]  
 > You have to restart the affected computers in order to apply this Group Policy change.
@@ -65,9 +63,11 @@ To use Group Policy to apply a KIR to a single device, follow these steps:
 
 For more information about how to use the Local Group Policy Editor, see [Working with the Administrative Template policy settings using the Local Group Policy Editor](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn789184(v=ws.11)).
 
-## Apply a KIR to devices in a hybrid Azure AD or AD DS domain using Group Policy
+<a name='apply-a-kir-to-devices-in-a-hybrid-azure-ad-or-ad-ds-domain-using-group-policy'></a>
 
-To apply a KIR policy definition to devices that belong to a hybrid Azure AD or AD DS domain, follow these steps:
+## Apply a KIR to devices in a hybrid Microsoft Entra ID or AD DS domain using Group Policy
+
+To apply a KIR policy definition to devices that belong to a hybrid Microsoft Entra ID or AD DS domain, follow these steps:
 
 1. [Download and install the KIR MSI files](#install)
 1. [Create a Group Policy Object (GPO)](#gpo).
@@ -161,13 +161,13 @@ Group Policies and GPOs aren't compatible with mobile device management (MDM) ba
 To perform a KIR activation on Intune managed devices, follow these steps:  
 
 1. [Download and install the KIR MSI file to get ADMX files](#1-download-and-install-the-kir-msi-file-to-get-admx-files).  
-2. [Create a custom configuration profile in Microsoft Endpoint Manager](#2-create-a-custom-configuration-profile-in-microsoft-endpoint-manager).
+2. [Create a custom configuration profile in Microsoft Intune](#2-create-a-custom-configuration-profile-in-microsoft-intune).
 3. [Monitor KIR activation](#3-monitor-kir-activation).  
   
 ### 1. Download and install the KIR MSI file to get ADMX files
 
 1. Check the KIR release information or the known issues lists to identify which operating system (OS) versions you must update.  
-2. Download the required KIR policy definition .msi files on the machine you use to sign in to Microsoft Endpoint Manager.  
+2. Download the required KIR policy definition .msi files on the machine you use to sign in to Microsoft Intune.  
 
     > [!NOTE]
     > You will need access to the contents of a KIR activation ADMX file.  
@@ -183,7 +183,7 @@ To perform a KIR activation on Intune managed devices, follow these steps:
     > msiexec /i c:\admx_file.msi /qb TARGETDIR=c:\temp\admx
     > ```
 
-### 2. Create a custom configuration profile in Microsoft Endpoint Manager  
+### 2. Create a custom configuration profile in Microsoft Intune  
 
 To configure devices to perform a KIR activation, you need to create a custom configuration profile for each OS of your managed devices. To create a custom profile, follow these steps:
 
@@ -196,7 +196,7 @@ To configure devices to perform a KIR activation, you need to create a custom co
 
 #### A. Select properties and add basic information about the profile
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
 2. Select **Devices** > **Configuration profiles** > **Create profile**.  
 3. Select the following properties:  
 
@@ -331,5 +331,5 @@ For more information, see [Monitor device configuration profiles in Microsoft In
 - [GPMC How To](/previous-versions/windows/it-pro/windows-server-2003/cc783034(v=ws.10))
 - [Create WMI Filters for the GPO (Windows 10) - Windows security](/windows/security/threat-protection/windows-firewall/create-wmi-filters-for-the-gpo)
 - [Edit a Group Policy object from GPMC](/previous-versions/windows/it-pro/windows-server-2003/cc759123(v=ws.10))
-- [Create and manage group policy in Azure AD Domain Services](/azure/active-directory-domain-services/manage-group-policy)
+- [Create and manage group policy in Microsoft Entra Domain Services](/azure/active-directory-domain-services/manage-group-policy)
 - [Use Windows 10/11 templates to configure group policy settings in Microsoft Intune](/mem/intune/configuration/administrative-templates-windows)

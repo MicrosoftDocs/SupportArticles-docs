@@ -1,1 +1,173 @@
 - name: Dynamics 365 Customer Service
+  href: welcome-customer-service.yml
+  items:
+    - name: Customer Service Insights
+      items:
+        - name: Troubleshoot issues using Solution Health Hub
+          href: customer-service-insights/troubleshoot-cs-oc-solution-health.md  
+    - name: Email
+      items: 
+        - name: '"Case is missing customer" error'
+          href: email/case-creation-queue-address-issue.md
+        - name: Incoming email isn't converted to a case
+          href: email/incoming-email-not-converted-case.md
+        - name: Troubleshoot configuration issues with automatic record creation and update rules
+          href: email/common-email-error-messages.md
+    - name: Entitlements
+      items:
+        - name: Can't create entitlements due to Allocation Type missing options
+          href: entitlements/allocation-type-missing-options.md
+    - name: Knowledge Management
+      items:  
+        - name: Data isn't updated on Insights for integrated search providers
+          href: knowledge-management/data-not-updated-integrated-search-providers.md                
+    - name: Service Level Agreements (SLAs)
+      items:
+        - name: Import, export, or upgrade SLA
+          items:
+            - name: '"A managed solution cannot overwrite the SLAItem component" error'
+              href: service-level-agreements/solution-contains-slakpi-butnot-slaitem.md
+            - name: Changes to SLAItem via upgrade solution don't appear
+              href: service-level-agreements/slaitem-changes-missing-upgrade.md
+            - name: Can't import solution with active SLAs and SLAs are deactivated when imported
+              href: service-level-agreements/import-solution-active-slas.md
+            - name: SLA's state changes from Active to Draft after importing an upgrade solution
+              href: service-level-agreements/sla-draft-state-post-solution-import.md
+        - name: SLA creation
+          items:
+            - name: '"Nullable object must have a value" error when saving an SLA item'
+              href: service-level-agreements/sla-item-pause-configuration.md
+            - name: Primary entity isn't available when creating SLAs
+              href: service-level-agreements/create-slas-primary-entity.md 
+        - name: SLA migration
+          items:
+            - name: Common SLA migration failures
+              href: service-level-agreements/sla-migration-issues.md
+            - name: Can't migrate a large number of SLAs
+              href: service-level-agreements/migration-tool-issue-slas.md
+            - name: GUID is shown instead of owner name in migrated SLA action flow
+              href: service-level-agreements/guid-instead-name-in-flow-generated-email.md
+            - name: Standard SLAs not showing in migration tool
+              href: service-level-agreements/standard-slas-migration-tool.md
+            - name: ServiceAnchor installation fails after migrating to Dynamics 365 online
+              href: service-level-agreements/service-anchor-installation-fails-after-ol-migration.md
+            - name: '"Workflow with ID = [GUID] does not exist" error'
+              href: service-level-agreements/sla-workflow-does-not-exist.md
+        - name: SLA time calculation
+          items:
+            - name: Errors on custom time calculation for SLA
+              href: service-level-agreements/errors-sla-time-calculation.md
+            - name: Warning and failure duration times are wrong for SLA
+              href: service-level-agreements/warning-failure-times-incorrect-sla.md
+        - name: SLA timer
+          items:
+            - name: Can't delete SLAs or SLA Items in upgrade or manual deletion
+              href: service-level-agreements/sla-deletion-error-messages.md
+            - name: OnHold Time isn't populated for Case for Unified Interface SLA
+              href: service-level-agreements/onhold-time-not-populated.md
+            - name: SLA KPI instance isn't Nearing Non-compliance or Non-compliant and timer runs
+              href: service-level-agreements/sla-kpi-instance-compliance-timer.md
+            - name: SLA timer doesn't pause when state is changed to OnHold on a holiday
+              href: service-level-agreements/sla-timer-pause-state-changed.md
+            - name: SLA Timer keeps running or expires prior to the Timer failure time 
+              href: service-level-agreements/sla-timer-keep-running-or-expired.md
+            - name: Warning appears on SLA KPI instances
+              href: service-level-agreements/warning-slakpiinstances.md
+        - name: SLA flow
+          items:
+            - name: '"Disabled users cannot access the system" error'
+              href: service-level-agreements/sla-users-cannot-access-system.md
+            - name: '"Modern flow is not valid for ExecuteWorkflow" error'
+              href: service-level-agreements/sla-modern-flow-not-valid.md
+            - name: SLA workflow must be in published state error
+              href: service-level-agreements/sla-workflow-published-state-error.md
+        - name: Other SLA issues
+          items:
+            - name: Can't delete managed solution consisting of SLA-enabled entity
+              href: service-level-agreements/unable-delete-sla-enabled-entity-managed-solution.md
+            - name: Entity fields for modifiedon and modifiedby are updated for resolved cases
+              href: service-level-agreements/entity-case-field-updates.md
+            - name: Errors occur when updating a case
+              href: service-level-agreements/errors-updating-case.md
+            - name: Fails to apply active SLA to case if ChangedAttributeList is null
+              href: service-level-agreements/slakpi-instance-not-existed-error.md
+            - name: First Response By and Resolve By aren't getting populated
+              href: service-level-agreements/sla-firstresponseby-resolveby-not-populating-uci.md
+            - name: SLA KPI instance status shows as canceled
+              href: service-level-agreements/sla-kpi-instance-shows-canceled.md
+            - name: Success, warning, and failure actions run many times in web client
+              href: service-level-agreements/actions-run-multiple-times-client.md
+            - name: SLA KPI instance isn't created on entity
+              href: service-level-agreements/sla-kpi-instance-not-created-entity.md
+            - name: '"SLA KPI instance does not exist" error when updating a case'
+              href: service-level-agreements/slakpi-instance-not-existed-error.md
+            - name: SLA isn't applied to a case
+              href: service-level-agreements/sla-not-getting-applied.md
+            - name: SLA instances associated with a case don't have SLA items
+              href: service-level-agreements/slaitem-not-mapped-to-sla-instance.md
+            - name: SLA KPI instance pausedon is null when status is On-Hold (paused)
+              href: service-level-agreements/slakpiinstance-pausedon-null.md
+    - name: Teams collaboration
+      items:
+        - name: Flow connection isn't valid in customer support swarming
+          href: teams-collaboration/flow-connection-invalid-customer-support-swarming.md
+    - name: Omnichannel for Customer Service
+      items:
+        - name: Agent Scripts and Macros
+          items:
+            - name: Can't deploy a custom Agent script solution
+              href: omnichannel-for-customer-service/custom-agentscript-solution.md
+        - name: Conversation control
+          items:
+            - name: Conversation is stuck in a wrap-up state
+              href: omnichannel-for-customer-service/conversation-stuck-wrap-up-state.md
+            - name: Conversation widget blank when changing browser tabs
+              href: omnichannel-for-customer-service/conversation-widget-blank.md  
+        - name: Live chat channel
+          items:
+            - name: Agent doesn't receive chat
+              href: omnichannel-for-customer-service/agent-does-not-receive-chat.md
+            - name: Chat isn't initiated when starting a new chat from portal
+              href: omnichannel-for-customer-service/new-chat-not-initiated-portal.md
+            - name: Error when creating a chat widget or social channel
+              href: omnichannel-for-customer-service/error-create-chat-widget-social-channel.md  
+        - name: Live Chat Widget (LCW)
+          items:
+            - name: Chat widget icon doesn't load on portal
+              href: omnichannel-for-customer-service/chat-widget-icon-does-not-load-portal.md
+            - name: Chat widget doesn't load on the portal
+              href: omnichannel-for-customer-service/chat-widget-not-loading-portal.md                    
+        - name: Licensing, provisioning, and installation
+          items:
+            - name: Instance unavailable to select on the provisioning app
+              href: omnichannel-for-customer-service/instance-unavailable-provision-omnichannel.md
+            - name: Omnichannel provisioning fails with an error
+              href: omnichannel-for-customer-service/omnichannel-provision-fail-errors.md
+            - name: Omnichannel provisioning fails due to expired license
+              href: omnichannel-for-customer-service/provision-fails-expired-license.md
+        - name: Omnichannel dashboards
+          items:
+            - name: Agent dashboard shows authentication error after provisioning
+              href: omnichannel-for-customer-service/agent-dashboard-error-omnichannel-provision.md
+            - name: Agent dashboard doesn't load or displays error
+              href: omnichannel-for-customer-service/agent-dashboard-auth-error.md
+            - name: Communication panel doesn't load
+              href: omnichannel-for-customer-service/communication-panel-load-issue.md
+            - name: Dashboards don't appear
+              href: omnichannel-for-customer-service/dashboard-not-appearing-omnichannel.md
+            - name: Error in communication panel
+              href: omnichannel-for-customer-service/error-communication-panel.md
+        - name: Power Virtual Agents (PVA)
+          items:
+            - name: Missing variables and actions when agent transfers from PVA bots
+              href: omnichannel-for-customer-service/agent-transfer-pva-bot-issue.md
+            - name: PVA bot conversations are active after chat ends
+              href: omnichannel-for-customer-service/pva-conversations-active-dashboard.md            
+        - name: Social channels
+          items:
+            - name: Troubleshoot sync issue with social data
+              href: omnichannel-for-customer-service/social-data-sync.md
+        - name: Voice channel
+          items:
+            - name: Use diagnostic messages to troubleshoot call issues
+              href: omnichannel-for-customer-service/use-diagnostic-messages-in-call-issues.md 

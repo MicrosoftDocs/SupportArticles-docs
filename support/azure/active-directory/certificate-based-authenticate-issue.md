@@ -1,24 +1,25 @@
 ---
-title: Troubleshoot Azure AD Certificate-Based Authentication issues
-description: Provides information to help you troubleshoot Certificate-Based Authentication issues in Azure AD.
+title: Troubleshoot Microsoft Entra Certificate-Based Authentication issues
+description: Provides information to help you troubleshoot Certificate-Based Authentication issues in Microsoft Entra ID.
 ms.date: 05/22/2020
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: enterprise-users
+ms.custom: has-azure-ad-ps-ref
 ---
-# Troubleshoot Azure AD Certificate-Based Authentication issues
+# Troubleshoot Microsoft Entra Certificate-Based Authentication issues
 
-The Certificate-Based Authentication feature in Microsoft Azure Active Directory (AD) for iOS or Android devices allows Single Sign-On (SSO) by using X.509 certificates. By enabling this feature, you can log in to accounts or services without having to enter a user name and password when you connect to your Exchange Online account or Office mobile applications.
+The Certificate-Based Authentication feature in Microsoft Entra ID for iOS or Android devices allows Single Sign-On (SSO) by using X.509 certificates. By enabling this feature, you can log in to accounts or services without having to enter a user name and password when you connect to your Exchange Online account or Office mobile applications.
 
 This article provides information to help you troubleshoot Certificate-Based Authentication issues.
 
-_Original product version:_ &nbsp; Azure Active Directory  
+_Original product version:_ &nbsp; Microsoft Entra ID  
 _Original KB number:_ &nbsp; 4032987
 
 ## General requirements
 
 - Certificate-Based Authentication supports only Federated environments by using Modern Authentication (ADAL). The one exception is Exchange ActiveSync (EAS) for Exchange Online that can be used by Managed Accounts.
-- The user certificate that's issued in the user's profile requires the user's routable email address to be listed in the **Subject Alternative Name**. This can be in either the UserPrincipalName or RFC822 format. Azure AD maps the RFC822 value to the **Proxy Address** attribute in the directory.
+- The user certificate that's issued in the user's profile requires the user's routable email address to be listed in the **Subject Alternative Name**. This can be in either the UserPrincipalName or RFC822 format. Microsoft Entra ID maps the RFC822 value to the **Proxy Address** attribute in the directory.
 
 ## Determine if Certificate-Based Authentication works on Azure portal
 
@@ -35,7 +36,9 @@ _Original KB number:_ &nbsp; 4032987
     1. Verify that the user certificate and the issuing certificate authority root certificates are installed on the device.
     2. Verify that TCP port 49443 is open on the ADFS/Web Application Proxy servers, and that the certificate chain of the issuing certificate authority is installed on all ADFS/Web Application Proxy servers.
 
-## Determine if Azure AD is correctly configured
+<a name='determine-if-azure-ad-is-correctly-configured'></a>
+
+## Determine if Microsoft Entra ID is correctly configured
 
 1. Run the following PowerShell command to Install the Azure Active Directory PowerShell (Preview) module:
 
@@ -46,7 +49,7 @@ _Original KB number:_ &nbsp; 4032987
 2. To create a trusted certificate authority, use the [New-AzureADTrustedCertificateAuthority](/powershell/module/azuread/new-azureadtrustedcertificateauthority?view=azureadps-2.0&preserve-view=true) cmdlet, and set the **crlDistributionPoint** attribute to a correct value.
 
     > [!NOTE]
-    > When you create the **TrustedRootCertificateAuthority** objects in Azure AD, the CRL URLs that are defined within the .CER file are not used. The **CrlDistributionPoin** and **DeltaCrlDistributionPoint** values must be manually populated by a web location where Azure AD can access the CRLs. The CRL paths within the issued certificates do not have to contain the URLs that are accessible to Azure AD. Also, large CRLs that take more than 15 seconds to download should be put on a faster link, such as Azure Storage, to avoid caching delays that can cause intermediate authentication failures.
+    > When you create the **TrustedRootCertificateAuthority** objects in Microsoft Entra ID, the CRL URLs that are defined within the .CER file are not used. The **CrlDistributionPoint** and **DeltaCrlDistributionPoint** values must be manually populated by a web location where Microsoft Entra ID can access the CRLs. The CRL paths within the issued certificates do not have to contain the URLs that are accessible to Microsoft Entra ID. Also, large CRLs that take more than 15 seconds to download should be put on a faster link, such as Azure Storage, to avoid caching delays that can cause intermediate authentication failures.
 
     ```powershell
     $cert=Get-Content -Encoding byte "[LOCATION OF THE CER FILE]"
@@ -56,7 +59,7 @@ _Original KB number:_ &nbsp; 4032987
     ```
 
 3. Make sure that the following values are correctly defined on the **TrustedCertificateAuthority** objects according to the following guidelines:
-   - All **CrlDistributionPoin** and **DeltaCrlDistributionPoint** URLs must be accessible from the Internet by the client devices and the ADFS and Web Application Proxy servers.
+   - All **CrlDistributionPoint** and **DeltaCrlDistributionPoint** URLs must be accessible from the Internet by the client devices and the ADFS and Web Application Proxy servers.
    - The *.CER for the Root CA should be listed as **AuthorityType = RootAuthority**.
    - The *.CER for the Intermediate CA should be listed as follows:
 
@@ -77,9 +80,9 @@ _Original KB number:_ &nbsp; 4032987
     ```
 
     > [!NOTE]
-    > This occurs because some modern apps send _prompt=login_ to Azure AD in their request. Azure AD translates this in the ADFS request to **wauth=usernamepassworduri** (this tells ADFS to do username/password authentication) and **wfresh=0** (tells ADFS to ignore the SSO state and do a fresh authentication). If users have to use Certificate Based Authentication, the **PromptLoginBehavior** must be set to **False**.
+    > This occurs because some modern apps send _prompt=login_ to Microsoft Entra ID in their request. Microsoft Entra ID translates this in the ADFS request to **wauth=usernamepassworduri** (this tells ADFS to do username/password authentication) and **wfresh=0** (tells ADFS to ignore the SSO state and do a fresh authentication). If users have to use Certificate Based Authentication, the **PromptLoginBehavior** must be set to **False**.
 
-    To disable **PromptLoginBehavior** on the Azure AD domain, run the following command:
+    To disable **PromptLoginBehavior** on the Microsoft Entra domain, run the following command:
 
     ```powershell
     Set-MSOLDomainFederationSettings -domainname <domain> -PromptLoginBehavior Disabled
@@ -218,8 +221,8 @@ _Original KB number:_ &nbsp; 4032987
 
 ## More information
 
-- [Azure AD: Certificate based authentication for iOS and Android now in preview.](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/azuread-certificate-based-authentication-for-ios-and-android-now/ba-p/244999)
+- [Microsoft Entra ID: Certificate based authentication for iOS and Android now in preview.](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/azuread-certificate-based-authentication-for-ios-and-android-now/ba-p/244999)
 - [Get started with certificate based authentication on iOS - Public Preview](/azure/active-directory/authentication/active-directory-certificate-based-authentication-ios)
-- [ADFS: Certificate Authentication with Azure AD & Office 365](/archive/blogs/samueld/adfs-certauth-aad-o365)
+- [ADFS: Certificate Authentication with Microsoft Entra ID & Office 365](/archive/blogs/samueld/adfs-certauth-aad-o365)
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

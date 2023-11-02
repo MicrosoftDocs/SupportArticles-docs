@@ -5,12 +5,13 @@ ms.date: 07/06/2020
 ms.reviewer: dahans
 ms.service: active-directory
 ms.subservice: enterprise-users
+ms.custom: has-azure-ad-ps-ref
 ---
 # Users can no longer sign in after you run the Convert-MSOLDomaintoFederated command to convert an existing domain
 
 This article provides information about troubleshooting an issue in which users can no longer access Office 365, Azure, or Microsoft Intune after running the `Convert-MSOLDomaintoFederated` command to convert an existing domain from standard authentication to federated authentication.
 
-_Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Azure Active Directory, Microsoft Intune, Azure Backup, Office 365 Identity Management  
+_Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 Identity Management  
 _Original KB number:_ &nbsp; 2662960
 
 ## Symptoms
@@ -46,7 +47,7 @@ Use this method only if all the following conditions are true:
 
 If these conditions are true, reset the authentication setting for the domain and for each user account to use standard authentication. To do this, follow these steps:
 
-1. Start the Azure Active Directory Module for Windows PowerShell. To do this, select **Start**, select **All** Programs, select **Windows Azure Active Directory**, right-click **Windows Azure Active Directory Module for Windows PowerShell**, and then select **Run as administrator**.
+1. Start the Azure Active Directory module for Windows PowerShell. To do this, select **Start**, select **All** Programs, select **Windows Azure Active Directory**, right-click **Windows Azure Active Directory module for Windows PowerShell**, and then select **Run as administrator**.
 2. To convert the domain, run the following commands in the order in which they are presented. Press Enter after you type each command.
 
     ```powershell
@@ -77,7 +78,7 @@ If these conditions are true, reset the authentication setting for the domain an
 ## More information
 
 > [!IMPORTANT]
-> In scenarios in which the last Microsoft cloud services organization administrator is assigned the domain suffix of a federated domain and in which that administrator becomes SSO-enabled, subsequent AD FS failures will limit running the connect-MSOLService command and may prevent the remediation of SSO problems. It's a best practice recommendation that Microsoft cloud services organization administrators always keep at least one global administrator account that isn't SSO-enabled to allow for troubleshooting SSO problems by using the Azure Active Directory Module for Windows PowerShell.
+> In scenarios in which the last Microsoft cloud services organization administrator is assigned the domain suffix of a federated domain and in which that administrator becomes SSO-enabled, subsequent AD FS failures will limit running the connect-MSOLService command and may prevent the remediation of SSO problems. It's a best practice recommendation that Microsoft cloud services organization administrators always keep at least one global administrator account that isn't SSO-enabled to allow for troubleshooting SSO problems by using the Azure Active Directory module for Windows PowerShell.
 
 If this problem occurs, contact Microsoft Support to have the domain federation reversed temporarily so that the administrator (who is no longer SSO-enabled) can regain access to troubleshoot SSO-related problems.
 

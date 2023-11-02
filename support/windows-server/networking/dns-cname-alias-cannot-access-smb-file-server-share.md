@@ -1,7 +1,7 @@
 ---
 title: Can't access SMB file server
 description: Describes an issue that blocks SMB file server share access to files and other resources through the DNS CNAME alias in some scenarios and successful in other scenarios. Provides a resolution.
-ms.date: 09/08/2020
+ms.date: 09/15/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -142,7 +142,7 @@ To collect a network trace, follow these steps:
    2. To delete the NetBIOS cache, type the following command, and then press Enter:
 
       ```console
-      NBTSTAT RR
+      NBTSTAT /RR
       ```
 
    3. To delete the Kerberos cache, type the following command, and then press Enter:

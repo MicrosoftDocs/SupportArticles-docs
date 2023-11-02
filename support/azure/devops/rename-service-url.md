@@ -4,7 +4,8 @@ description: This article provides the steps to rename the URL of your Azure Dev
 ms.date: 10/15/2020
 ms.custom: sap:Client Connectivity
 ms.topic: how-to
-ms.service: az-devops-project
+ms.service: azure-devops
+ms.subservice: ts-client-connectivity
 ---
 # Things to do before and after you rename the URL of your Azure DevOps Service
 

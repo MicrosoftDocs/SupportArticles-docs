@@ -1,7 +1,7 @@
 ---
 title: Guidance for troubleshooting high CPU usage
 description: Introduces general guidance for troubleshooting scenarios in which you experience high CPU usage.
-ms.date: 4/15/2022
+ms.date: 12/08/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -81,7 +81,7 @@ If a svchost process consumes high CPU usage, and the svchost process contains m
 2. Break out each service into its own svchost process if it's a shared svchost process. To do this, run the following command:
 
    ```console
-   sc config <service name> type= ow
+   sc config <service name> type= own
    ```
 
    > [!NOTE]

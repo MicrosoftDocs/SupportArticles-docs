@@ -1,12 +1,24 @@
 ---
 title: Known issues with Microsoft Intune
 description: Learn about known issues with Microsoft Intune, including workarounds and updated fixes.
-ms.date: 08/25/2022
+ms.date: 09/16/2022
 search.appverid: MET150
+ms.reviewer: kaushika
 ---
 # Known issues
 
 This page lists recent known issues with Microsoft Intune. For a list of weekly feature announcements, see [What's new in Microsoft Intune](/mem/intune/fundamentals/whats-new) in the Intune product documentation. Visit the [Intune Customer Success blog](https://techcommunity.microsoft.com/t5/intune-customer-success/bg-p/IntuneCustomerSuccess) for posts about best practices, support tips, and other tutorials, and a backlog of past known issues.
+
+## Remediation message doesn't list all valid builds in Company Portal for Windows 10/11
+
+- **Status:** Active
+- **Blog Post:** [Remediation message doesn't list all valid builds in Company Portal for Windows 10/11](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-remediation-message-doesn-t-list-all-valid-builds-in/ba-p/3622082)
+
+We are aware of an issue with the noncompliance messaging details that appear in Company Portal for Windows 10/11 devices. When a device is identified as noncompliant due to having a Windows build outside the ranges an admin specifies in the Intune compliance policy, a remediation message is displayed in the Company Portal indicating the operating system (OS) needs updating along with a valid range of OS versions. However, when multiple OS ranges are specified in the policy by configuring the [Valid operating system builds](/mem/intune/protect/compliance-policy-create-windows#device-properties) compliance setting, the message in the Company Portal will only display the first OS build range rather than all acceptable ranges.
+
+The compliance policy is being enforced correctly despite the missing ranges in the remediation messaging. To make the device compliant, update the device OS build to a version within the specified acceptable range in the compliance policy.
+
+For more information about this known issue, see our blog [Remediation message doesn't list all valid builds in Company Portal for Windows 10/11](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-remediation-message-doesn-t-list-all-valid-builds-in/ba-p/3622082).
 
 ## A limited number of macOS devices may be unexpectedly unenrolled from the Microsoft Intune service
 
@@ -18,19 +30,19 @@ There is a known issue (originally posted on the Service Health Dashboard as IT3
 
 - **Status:** Active
 
-Android 12 introduced a toast notification when an application accesses the clipboard, regardless of whether the device is MDM enrolled or if apps are protected by app protection policies. Users running Android Company Portal version 5.0.5450.0 or later may notice an unexpected toast notification when using apps, such as Outlook. An example notification reads “Outlook pasted from your clipboard.”
+Android 12 introduced a toast notification when an application accesses the clipboard, regardless of whether the device is MDM enrolled or if apps are protected by app protection policies. Users running Android Company Portal version 5.0.5450.0 or later may notice an unexpected toast notification when using apps, such as Outlook. An example notification reads "Outlook pasted from your clipboard."
 
 > [!NOTE]
 > The clipboard data is never stored locally or transmitted to Microsoft.
 
 ## Android devices lose access to Intune-managed resources after upgrading to Android 12
 
-- **Status:** Active
+- **Status:** Resolved
 - **Blog post:** [Known Issue: Android devices lose access to Intune-managed resources after upgrading to Android 12](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-android-devices-lose-access-to-intune-managed/ba-p/3249657)
 
-We are aware of an issue where customers lose access to Microsoft Intune-managed resources or are prevented from completing enrollment after upgrading certain devices from Android 11 to Android 12. Currently, this includes some OPPO, OnePlus, and Realme devices enrolled as Android Enterprise personally-owned work profile. 
+The issue where customers lose access to Microsoft Intune-managed resources or are prevented from completing enrollment after upgrading certain devices from Android 11 to Android 12 has been resolved. The impacted brands included OPPO, OnePlus, and Realme devices enrolled as Android Enterprise personally-owned work profiles.
 
-Device OEMs are working with Google to identify and deploy fixes, so make sure to install the latest OS updates as they are released. For more information, see [Known Issue: Android devices lose access to Intune-managed resources after upgrading to Android 12](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-android-devices-lose-access-to-intune-managed/ba-p/3249657) on the Intune Customer Success blog. 
+At this time, the fix should have been rolled out to all S-product devices across OPPO, OnePlus, and Realme brands, with no issues with devices accessing Intune-managed resources after upgrading to Android 12. We encourage customers to install any new OTA updates as soon as they become available and check with Google and Device OEM support resources as software release dates are subject to change.
 
 ## Several Office settings in settings catalog do not automatically enable the parent setting
 
@@ -45,10 +57,10 @@ To help identify which configuration settings have this behavior, we recently ma
 
 - **Status:** Active
 
-We're aware of an issue where granular OS filtering isn't working as expected for corporate-owned Android Enterprise devices when exporting the [All devices report](/mem/intune/fundamentals/reports#all-devices-report-operational) from the Microsoft Endpoint Manager admin center, when exporting the [DevicesWithInventory](/mem/intune/fundamentals/reports-export-graph-available-reports) and [Devices](/mem/intune/fundamentals/reports-export-graph-available-reports) reports using the Export API, or when making native calls to the [/deviceManagement/managedDevices](/graph/api/intune-devices-manageddevice-list) API.
+We're aware of an issue where granular OS filtering isn't working as expected for corporate-owned Android Enterprise devices when exporting the [All devices report](/mem/intune/fundamentals/reports#all-devices-report-operational) from the Microsoft Intune admin center, when exporting the [DevicesWithInventory](/mem/intune/fundamentals/reports-export-graph-available-reports) and [Devices](/mem/intune/fundamentals/reports-export-graph-available-reports) reports using the Export API, or when making native calls to the [/deviceManagement/managedDevices](/graph/api/intune-devices-manageddevice-list) API.
 
 > [!NOTE]
-> This issue doesn't affect device filtering in the Endpoint Manager admin center UI.
+> This issue doesn't affect device filtering in the Intune admin center UI.
 
 The Export API doesn't distinguish between Android Enterprise management modes and will instead group them together. This issue affects exported report data and managedDevices API calls for the following device types:
 
@@ -72,7 +84,7 @@ We're aware of an issue that affects Samsung devices enrolled with a work profil
 - **Status:** Resolved
 - **Blog post:** [Known Issue: Long sync times in Intune for Managed Google Play private apps and web apps](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-long-sync-times-in-intune-for-managed-google-play/ba-p/3039795)
 
-Admins who recently published a new Managed Google Play web or line-of-business (LOB) app will notice delays for those apps to sync to Intune. After selecting Sync from either the Microsoft Endpoint Manager admin center or the Google Play console, it can take six hours or longer for the new apps to appear in the app list in Intune. For more information and workarounds, see [Known Issue: Long sync times in Intune for Managed Google Play private apps and web apps](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-long-sync-times-in-intune-for-managed-google-play/ba-p/3039795).
+Admins who recently published a new Managed Google Play web or line-of-business (LOB) app will notice delays for those apps to sync to Intune. After selecting Sync from either the Microsoft Intune admin center or the Google Play console, it can take six hours or longer for the new apps to appear in the app list in Intune. For more information and workarounds, see [Known Issue: Long sync times in Intune for Managed Google Play private apps and web apps](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-long-sync-times-in-intune-for-managed-google-play/ba-p/3039795).
 
 > [!NOTE]
 > Existing web and private apps aren't affected, including updates or edits to those apps.
@@ -103,12 +115,12 @@ We are aware of an issue that can affect organization using app protection polic
 
 For more information and a workaround, see [Support Tip: Known Issue occasionally occurring with iOS MAM and Office apps](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-known-issue-occasionally-occurring-with-ios-mam-and/ba-p/2617909).
 
-## Known issues with filters in Microsoft Endpoint Manager
+## Known issues with filters in Microsoft Intune
 
 - **Status:** Active
 - **Blog post:** [Filters Public Preview - Overview and Known Issues](https://techcommunity.microsoft.com/t5/intune-customer-success/filters-public-preview-overview-and-known-issues/ba-p/2346835)
 
-There are some known issues with filters in Microsoft Endpoint Manager. This feature became generally available in February 2021. We are tracking remaining known issues with this feature in [Filters Public Preview - Overview and Known Issues](https://techcommunity.microsoft.com/t5/intune-customer-success/filters-public-preview-overview-and-known-issues/ba-p/2346835), which also includes common questions and documentation links.
+There are some known issues with filters in Microsoft Intune. This feature became generally available in February 2021. We are tracking remaining known issues with this feature in [Filters Public Preview - Overview and Known Issues](https://techcommunity.microsoft.com/t5/intune-customer-success/filters-public-preview-overview-and-known-issues/ba-p/2346835), which also includes common questions and documentation links.
 
 ## App install lifecycle or app install history status might be inaccurate
 
@@ -138,7 +150,7 @@ Intune shared a known issue in MC203629, whereby approximately 1% of devices Int
 - **Status:** Active
 - **Blog post:** [Known Issue: Profile error enrolling iOS devices with Apple Configurator](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-profile-error-enrolling-ios-devices-with-apple/ba-p/294412)
 
-We are aware of an issue when [enrolling and iOS devices with Apple Configurator](/mem/intune/enrollment/apple-configurator-enroll-ios) for Setup Assistant enrollment. After accepting **Apply configuration** on the device, you might see the error: “Invalid Profile: The configuration for your iPad/iPhone could not be downloaded from [Your Organization Name].” This is due to an invalid enrollment URL. For more information and a workaround, see [Known Issue: Profile error enrolling iOS devices with Apple Configurator](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-profile-error-enrolling-ios-devices-with-apple/ba-p/294412) on the Intune Customer Success blog.
+We are aware of an issue when [enrolling and iOS devices with Apple Configurator](/mem/intune/enrollment/apple-configurator-enroll-ios) for Setup Assistant enrollment. After accepting **Apply configuration** on the device, you might see the error: "Invalid Profile: The configuration for your iPad/iPhone could not be downloaded from [Your Organization Name]." This is due to an invalid enrollment URL. For more information and a workaround, see [Known Issue: Profile error enrolling iOS devices with Apple Configurator](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-profile-error-enrolling-ios-devices-with-apple/ba-p/294412) on the Intune Customer Success blog.
 
 ## iOS certificate-based authentication issue with Pulse Secure 7.0.0 and Check Point Capsule Connect versions 1.600
 
@@ -147,9 +159,17 @@ We are aware of an issue when [enrolling and iOS devices with Apple Configurator
 
 There are issues with certificate-based authentication when using the Pulse Secure VPN client for iOS, version 7.0 and Check Point Capsule Connect version 1.600 for iOS. Specifically, both VPN clients may report that the certificate is missing from the device, even when the certificate has been properly delivered. These issues impact Intune in addition to other Enterprise Mobility Management providers. For more information and workarounds, see [Known issue: Certificate-based authentication issue with Pulse Secure 7.0.0 for iOS and Check Point Capsule Connect versions 1.600 for iOS](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-certificate-based-authentication-issue-with-pulse/ba-p/280162) on the Intune Customer Success blog.
 
-## "Rename device" setting disabled for hybrid Azure AD joined Windows devices
+<a name='rename-device-setting-disabled-for-hybrid-azure-ad-joined-windows-devices'></a>
+
+## "Rename device" setting disabled for Microsoft Entra hybrid joined Windows devices
 
 - **Status:** Feature disabled
-- **Blog post:** [Known issue with “Rename device” setting for Windows 10 devices in the Intune console](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-with-rename-device-setting-for-windows-10-devices-in/ba-p/390868)
+- **Blog post:** [Known issue with "Rename device" setting for Windows 10 devices in the Intune console](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-with-rename-device-setting-for-windows-10-devices-in/ba-p/390868)
 
-In the Endpoint Manager admin center, we’ve disabled the "Rename device setting" for Windows devices that are hybrid Azure AD joined. This is to prevent device single sign-on errors that might occur after a user changes their password. Device renaming is available for co-managed devices that are Azure AD joined. For details, see [Known issue with “Rename device” setting for Windows 10 devices in the Intune console](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-with-rename-device-setting-for-windows-10-devices-in/ba-p/390868) on the Intune Customer Success blog.
+In the Intune admin center, we've disabled the "Rename device setting" for Windows devices that are Microsoft Entra hybrid joined. This is to prevent device single sign-on errors that might occur after a user changes their password. Device renaming is available for co-managed devices that are Microsoft Entra joined. For details, see [Known issue with "Rename device" setting for Windows 10 devices in the Intune console](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-with-rename-device-setting-for-windows-10-devices-in/ba-p/390868) on the Intune Customer Success blog.
+
+## iOS/iPadOS or macOS device unenrollment through management profile deletion may not be reflected in Microsoft Intune
+
+- **Status:** Active
+
+There is a known issue where the enrollment status of an iOS/iPadOS or macOS device may not update correctly in Microsoft Intune if a user manually deletes the management profile. The device will be unenrolled from Intune, but it may not be reflected in Microsoft Intune admin center for 30 days.

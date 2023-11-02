@@ -4,6 +4,7 @@ description: This article discusses billing scenarios as they apply to a Capacit
 ms.date: 08/26/2021
 ms.reviewer: 
 ms.service: virtual-machines
+ms.subservice: vm-capacity-reservation
 ms.collection: windows
 ---
 

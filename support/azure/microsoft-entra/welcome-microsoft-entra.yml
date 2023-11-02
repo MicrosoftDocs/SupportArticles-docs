@@ -1,0 +1,33 @@
+### YamlMime:Landing
+
+title: Microsoft Entra troubleshooting documentation # < 60 chars
+summary: Welcome to Microsoft Entra troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Microsoft Entra. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+metadata:
+  title: Troubleshoot Microsoft Entra ID issues
+  description: Documentation for troubleshooting common issues with Microsoft Entra. # Required; article description that is displayed in search results. < 160 chars.
+  services: active-directory
+  ms.service: active-directory  #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: landing-page # Required
+  author: genlin  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: genli #Required; microsoft alias of author; optional team alias.
+  ms.date: 10/10/2023
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: Microsoft Entra ID
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Microsoft Entra troubleshooting documentation
+            url: ../active-directory/welcome-azure-ad.yml
+
+ # Card
+  - title: Global Secure Access
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot Global Secure Access client For Windows issues
+            url: ./troubleshoot-global-secure-access-client-windows-issues.md

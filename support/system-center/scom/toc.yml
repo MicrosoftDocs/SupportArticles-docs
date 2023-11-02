@@ -98,6 +98,8 @@
     href: exchange-2010-management-pack-guidance.md
   - name: Regular expression support
     href: regular-expression-support.md
+  - name: Remove duplicate Management pack aliases
+    href: remove-duplicate-management-pack-aliases.md
 - name: Monitor log files
   items:
   - name: Monitor text and CSV log files
@@ -204,9 +206,13 @@
     href: management-server-installation-error-0x80131604.md
   - name: Install OpsMgr console and Service Manager console on the same server
     href: install-opsmgr-service-manager-consoles-on-same-server.md
+  - name: Reporting Services installation fails
+    href: reporting-services-installation-fails.md
   - name: Setup cannot be completed
     href: setup-not-completed-error.md
   - name: Troubleshoot OMS onboarding issues
     href: troubleshoot-oms-onboarding-issues.md
   - name: Unable to register to Advisor Service
     href: error-3000-unable-to-register-to-advisor-service.md
+  - name: Use CA certificate on SCX agent
+    href: use-ca-certificate-on-scx-agent.md

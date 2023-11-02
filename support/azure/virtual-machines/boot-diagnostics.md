@@ -5,8 +5,8 @@ services: virtual-machines
 author: genli
 manager: dcscontentpm
 tags: azure-resource-manager
-
 ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
 ms.topic: troubleshooting
 ms.date: 05/17/2022
 ms.author: genli

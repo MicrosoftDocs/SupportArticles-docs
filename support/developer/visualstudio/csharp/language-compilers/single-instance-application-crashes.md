@@ -32,16 +32,17 @@ To work around this issue, you can use a named `mutex` or enumerate all the proc
 - Visual C# code
 
     ```cs
-    public System.Threading.Mutex mutex;
-    public void main ()
+    [STAThread]
+    public static void Main()
     {
-        bool prevInstance = false;
-        mutex = new System.Threading.Mutex (true, 'Application Name', prevInstance);
-        if ((prevInstance == false))
+        bool prevInstance;
+        _ = new System.Threading.Mutex(true, "Application Name", out prevInstance);
+        if (prevInstance == false)
         {
-            MessageBox.Show ('There is another instance running');   return;  
-        }  
-        Application.Run (new Form1 ());
+            MessageBox.Show("There is another instance running");
+            return;
+        }
+        Application.Run(new Form1());
     }
     ```
 

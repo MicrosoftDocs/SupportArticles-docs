@@ -1,7 +1,7 @@
 ---
 title: Description of the support for Suite B cryptographic algorithms that was added to IPsec
 description: Describes the support for Suite B cryptographic algorithms that was added to IPsec. Also describes the IPsec policy configuration syntax that uses Suite B algorithms.
-ms.date: 09/21/2020
+ms.date: 12/30/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -20,7 +20,7 @@ This article describes the support for Suite B cryptographic algorithms that was
 _Applies to:_ &nbsp; Windows Server 2012 R2, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 949856
 
-Support for Windows Vista Service Pack 1 (SP1) ends on July 12, 2011. To continue receiving security updates for Windows, make sure you're running Windows Vista with Service Pack 2 (SP2). For more information, see this Microsoft web page: [Support is ending for some versions of Windows](https://windows.microsoft.com/windows/help/end-support-windows-xp-sp2-windows-vista-without-service-packs).
+Support for Windows Vista Service Pack 1 (SP1) ends on July 12, 2011. To continue receiving security updates for Windows, make sure you're running Windows Vista with Service Pack 2 (SP2). For more information, see [Support is ending for some versions of Windows](https://windows.microsoft.com/windows/help/end-support-windows-xp-sp2-windows-vista-without-service-packs).
 
 ## Introduction
 
@@ -61,8 +61,7 @@ Suite B is a set of standards that are specified by the National Security Agency
 
 FIPS is a set of guidelines and standards that govern federal computing resources. All Suite B algorithms are FIPS-approved.
 
-For more information, visit the following Web site:  
-[http://www.itl.nist.gov/fipspubs/geninfo.htm](http://www.itl.nist.gov/fipspubs/geninfo.htm) 
+For more information, see [Information Technology Laboratory](http://www.itl.nist.gov/fipspubs/geninfo.htm).
 
 - NIST 
 
@@ -79,13 +78,13 @@ For more information, visit the following Web site:
 
   This is an abbreviation for the term "Internet Protocol security."
 
-  For more information about IPsec, visit the following Microsoft Web site: [https://technet.microsoft.com/network/bb531150.aspx](https://technet.microsoft.com/network/bb531150.aspx) 
+  For more information about IPsec, see [What Is IPSec?](https://technet.microsoft.com/network/bb531150.aspx)
 
 - Elliptic Curve Digital Signature Algorithm (ECDSA) 
 
   Elliptic curve (EC) is a variant of the digital signature algorithm that operates on EC groups. The EC variant provides smaller key sizes for the same security level.
 
-  This algorithm is described in FIPS publication 186-2. To view this publication, visit the following Web site: [http://csrc.nist.gov/publications/fips/archive/fips186-2/fips186-2.pdf](http://csrc.nist.gov/publications/fips/archive/fips186-2/fips186-2.pdf) 
+  This algorithm is described in FIPS publication 186-2. To view this publication, see [Digital Signature Standard (DSS)](http://csrc.nist.gov/publications/fips/archive/fips186-2/fips186-2.pdf).
 
 - Certification authority (CA) 
 
@@ -534,6 +533,6 @@ The combinations that are described in the following table are not supported.
 |AH+ESP|AES-GMAC 192|AES-GMAC 192|Any supported encryption algorithm|
 |AH+ESP|AES-GMAC 256|AES-GMAC 256|Any supported encryption algorithm|
 
-For more information about Suite B, visit the following Web site: [Commercial National Security Algorithm Suite](https://apps.nsa.gov/iaarchive/programs/iad-initiatives/cnsa-suite.cfm)
+For more information about Suite B, see [Commercial National Security Algorithm Suite](https://media.defense.gov/2021/Sep/27/2002862527/-1/-1/0/CNSS%20WORKSHEET.PDF).
 
-For more information about IPsec and connection security rules, visit the following Microsoft Web site: [https://go.microsoft.com/fwlink/?linkid=96525](https://go.microsoft.com/fwlink/?linkid=96525)
+For more information about IPsec and connection security rules, see [Windows Firewall with Advanced Security and IPsec](https://go.microsoft.com/fwlink/?linkid=96525).

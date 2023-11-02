@@ -1,7 +1,7 @@
 ---
 title: 802.1X authentication issues troubleshooting
 description: Troubleshoot authentication flow by learning how 802.1X Authentication works for wired and wireless clients.
-ms.date: 08/22/2022
+ms.date: 03/10/2023
 ms.prod: windows-client
 author: aczechowski
 ms.author: aaroncz
@@ -15,6 +15,9 @@ audience: itpro
 localization_priority: medium
 ---
 # Advanced troubleshooting 802.1X authentication
+
+> [!div class="nextstepaction"]
+> <a href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806441" target='_blank'>Try our Virtual Agent</a> - It can help you quickly identify and fix common Wireless technology issues.
 
 _Applies to:_ &nbsp; Windows 10
 
@@ -81,15 +84,17 @@ When troubleshooting complex 802.1X authentication issues, it's important to und
 If you [collect a network packet capture](collect-data-using-network-monitor.md) on both the client and the server (NPS) side, you can see a flow like the one below. Type *EAPOL* in the Display Filter for a client-side capture, and *EAP* for an NPS-side capture. See the following examples:
 
 :::image type="content" source="media/802-1x-authentication-issues-troubleshooting/client-side-packet-cap-data.png" alt-text="Screenshot of the client-side packet capture data." border="false":::
+
 *Client-side packet capture data*
 
-:::image type="content" source="media/802-1x-authentication-issues-troubleshooting/nps-side-packet-capture-data.png" alt-text="Screenshot of the NPS-side packet capture data." border="false":::
+:::image type="content" source="media/802-1x-authentication-issues-troubleshooting/nps-side-packet-capture-data.png" alt-text="Screenshot of the NPS-side packet capture data." border="false" lightbox="media/802-1x-authentication-issues-troubleshooting/nps-side-packet-capture-data.png":::
+
 *NPS-side packet capture data*
 
 > [!NOTE]
 > If you have a wireless trace, you can also [view ETL files with network monitor](/windows/desktop/ndf/using-network-monitor-to-view-etl-files) and apply the **ONEX_MicrosoftWindowsOneX** and **WLAN_MicrosoftWindowsWLANAutoConfig** Network Monitor filters. If you need to load the required [parser](/archive/blogs/netmon/parser-profiles-in-network-monitor-3-4), see the instructions under the **Help** menu in Network Monitor. Here's an example:
 
-:::image type="content" source="media/802-1x-authentication-issues-troubleshooting/etl-file-network-monitor.png" alt-text="Screenshot of microsoft network monitor window showing a wireless trace." border="false":::
+:::image type="content" source="media/802-1x-authentication-issues-troubleshooting/etl-file-network-monitor.png" alt-text="Screenshot of microsoft network monitor window showing a wireless trace." lightbox="media/802-1x-authentication-issues-troubleshooting/etl-file-network-monitor.png":::
 
 ## Audit policy
 

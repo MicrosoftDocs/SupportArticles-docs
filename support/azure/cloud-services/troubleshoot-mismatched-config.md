@@ -2,10 +2,9 @@
 title: Troubleshoot Cloud Service mismatched .cscfg and .csdef schemas
 description: Troubleshoot InvalidModel/BadRequest exceptions while deploying Azure cloud services (classic). Fix config schema (.cscfg) and definition schema (.csdef) files.
 ms.service: cloud-services
-ms.date: 12/10/2021
-author: DennisLee-DennisLee
-ms.author: v-dele
-ms.reviewer: chiragpa
+ms.subservice: troubleshoot-deployment-classic
+ms.date: 09/26/2022
+ms.reviewer: chiragpa, v-leedennis
 articleID: cab2e0b3-d753-4461-8a1e-38fc7629304e 
 ---
 # Troubleshooting Cloud Service (classic) InvalidModel exception

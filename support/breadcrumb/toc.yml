@@ -1,3 +1,4 @@
+items:
 - name: Docs
   tocHref: /
   topicHref: /
@@ -7,7 +8,7 @@
     tocHref: /troubleshoot/
     topicHref: /troubleshoot/index
     items:
-    
+
     - name: Windows
       tocHref: /troubleshoot/windows/
       topicHref: /troubleshoot/windows/
@@ -20,7 +21,7 @@
         topicHref: /troubleshoot/windows-client/welcome-windows-client
       - name: Application Developer
         tocHref: /troubleshoot/windows/win32
-        topicHref: /troubleshoot/windows/win32/welcome-windowsdeveloper    
+        topicHref: /troubleshoot/windows/win32/welcome-windowsdeveloper
       - name: Hardware Developer
         tocHref: /troubleshoot/windows-hardware/drivers
         topicHref: /troubleshoot/windows-hardware/drivers/welcome-windowshardware
@@ -32,10 +33,10 @@
     - name: BizTalk Server
       tocHref: /troubleshoot/developer/biztalk/
       topicHref: /troubleshoot/developer/biztalk/welcome-biztalk-server
-      
+
     - name: .NET
       tocHref: /troubleshoot/developer/dotnet/
-      topicHref: /troubleshoot/developer/dotnet/welcome-dotnet
+      topicHref: /troubleshoot/developer/dotnet/welcome-dotnet-landing
 
     - name: Host Integration Server
       tocHref: /troubleshoot/developer/host-integration-server/
@@ -45,9 +46,17 @@
       tocHref: /troubleshoot/developer/visualstudio/
       topicHref: /troubleshoot/developer/visualstudio/welcome-visual-studio
 
-    - name: Web Apps
-      tocHref: /troubleshoot/developer/webapps/
-      topicHref: /troubleshoot/developer/webapps/welcome-webapps
+    - name: ASP.NET
+      tocHref: /troubleshoot/developer/webapps/aspnet
+      topicHref: /troubleshoot/developer/webapps/aspnet-welcome
+
+    - name: ASP.NET Core
+      tocHref: /troubleshoot/developer/webapps/aspnetcore
+      topicHref: /troubleshoot/developer/webapps/aspnet-welcome
+      
+    - name: Internet Information Services
+      tocHref: /troubleshoot/developer/webapps/iis/
+      topicHref: /troubleshoot/developer/webapps/iis/iis-welcome
 
     - name: SQL Server
       tocHref: /troubleshoot/sql/
@@ -57,16 +66,16 @@
       tocHref: /troubleshoot/microsoft-identity-manager/
       topicHref: /troubleshoot/microsoft-identity-manager/welcome-identity-manager
 
-    - name: Microsoft Endpoint Manager
+    - name: Microsoft Intune
       tocHref: /troubleshoot/mem/
       topicHref: /troubleshoot/mem/
       items:
-      - name: Intune
-        tocHref: /troubleshoot/mem/intune/
-        topicHref: /troubleshoot/mem/intune/welcome-intune
       - name: Configuration Manager
         tocHref: /troubleshoot/mem/configmgr/
         topicHref: /troubleshoot/mem/configmgr/welcome-configuration-manager
+      - name: Intune
+        tocHref: /troubleshoot/mem/intune/
+        topicHref: /troubleshoot/mem/intune/welcome-intune
 
     - name: System Center
       tocHref: /troubleshoot/system-center/
@@ -92,57 +101,92 @@
       tocHref: /troubleshoot/azure/
       topicHref: /troubleshoot/azure/
       items:
-      - name: Active Directory
-        tocHref: /troubleshoot/azure/active-directory/
-        topicHref: /troubleshoot/azure/active-directory/welcome-azure-ad
+      - name: Azure App Service
+        tocHref: /troubleshoot/azure/app-service/
+        topicHref: /troubleshoot/azure/app-service/welcome-app-service
+      - name: Azure Cosmos DB
+        tocHref: /troubleshoot/azure/cosmos-db/
+        topicHref: /troubleshoot/azure/cosmos-db/
+      - name: Azure Functions
+        tocHref: /troubleshoot/azure/azure-functions
+        topicHref: /troubleshoot/azure/azure-functions/welcome-azure-functions
+      - name: Azure Kubernetes Service
+        tocHref: /troubleshoot/azure/azure-kubernetes/
+        topicHref: /troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes
+      - name: Azure Monitor
+        tocHref: /troubleshoot/azure/azure-monitor/
+        topicHref: /troubleshoot/azure/azure-monitor/welcome-azure-monitor
+      - name: Azure Storage
+        tocHref: /troubleshoot/azure/azure-storage/
+        topicHref: /troubleshoot/azure/azure-storage/welcome-azure-storage
+      - name: Azure Synapse Analytics
+        tocHref: /troubleshoot/azure/synapse-analytics
+        topicHref: /troubleshoot/azure/synapse-analytics/welcome-synapse-analytics
       - name: Cloud Services
         tocHref: /troubleshoot/azure/cloud-services/
         topicHref: /troubleshoot/azure/cloud-services/welcome-cloud-services
       - name: DevOps Services
         tocHref: /troubleshoot/azure/devops/
         topicHref: /troubleshoot/azure/devops/welcome-azure-devops
-      - name: Site Recovery
-        tocHref: /troubleshoot/azure/site-recovery/
-        topicHref: /troubleshoot/azure/site-recovery/welcome-site-recovery
       - name: General
         tocHref: /troubleshoot/azure/general/
         topicHref: /troubleshoot/azure/general/welcome-general
+      - name: Microsoft Entra
+        tocHref: /troubleshoot/azure/microsoft-entra/
+        topicHref: /troubleshoot/azure/microsoft-entra/welcome-microsoft-entra
+        items:
+        - name: Microsoft Entra ID
+          tocHref: /troubleshoot/azure/active-directory/
+          topicHref: /troubleshoot/azure/active-directory/welcome-azure-ad
+      - name: Site Recovery
+        tocHref: /troubleshoot/azure/site-recovery/
+        topicHref: /troubleshoot/azure/site-recovery/welcome-site-recovery
       - name: Virtual Machines
         tocHref: /troubleshoot/azure/virtual-machines/
         topicHref: /troubleshoot/azure/virtual-machines/welcome-virtual-machines
       - name: Virtual Machine Scale Sets
         tocHref: /troubleshoot/azure/virtual-machine-scale-sets/
         topicHref: /troubleshoot/azure/virtual-machine-scale-sets/welcome-virtual-machine-scale-sets
-      - name: Azure Kubernetes Service
-        tocHref: /troubleshoot/azure/azure-kubernetes/
-        topicHref: /troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes
-      - name: Azure App Service
-        tocHref: /troubleshoot/azure/app-service/
-        topicHref: /troubleshoot/azure/app-service/welcome-app-service
-      - name: Azure Monitor
-        tocHref: /troubleshoot/azure/azure-monitor/
-        topicHref: /troubleshoot/azure/azure-monitor/welcome-azure-monitor
+
     - name: Microsoft Dynamics 365
       tocHref: /troubleshoot/dynamics-365/
       topicHref: /troubleshoot/dynamics-365/
       items:
-      - name: Dynamics 365 Fraud Protection
-        tocHref: /troubleshoot/dynamics-365/fraud-protection/
-        topicHref: /troubleshoot/dynamics-365/fraud-protection/welcome-fraud-protection
-      - name: Dynamics 365 Marketing
-        tocHref: /troubleshoot/dynamics-365/marketing/
-        topicHref: /troubleshoot/dynamics-365/marketing/welcome-marketing
+      - name: Dynamics 365 Customer Insights
+        tocHref: /troubleshoot/dynamics-365/customer-insights/
+        topicHref: /troubleshoot/dynamics-365/customer-insights/welcome-customer-insights
+      - name: Dynamics 365 Customer Service
+        tocHref: /troubleshoot/dynamics-365/customer-service/
+        topicHref: /troubleshoot/dynamics-365/customer-service/welcome-customer-service
+      - name: Dynamics 365 Commerce
+        tocHref: /troubleshoot/dynamics-365/commerce/
+        topicHref: /troubleshoot/dynamics-365/commerce/welcome-commerce
+      - name: Dynamics 365 Finance
+        tocHref: /troubleshoot/dynamics-365/finance/
+        topicHref: /troubleshoot/dynamics-365/finance/welcome-finance
+      - name: Dynamics 365 Field Service
+        tocHref: /troubleshoot/dynamics-365/field-service/
+        topicHref: /troubleshoot/dynamics-365/field-service/welcome-field-service
       - name: Dynamics 365 Sales
         tocHref: /troubleshoot/dynamics-365/sales/
         topicHref: /troubleshoot/dynamics-365/sales/welcome-sales
       - name: Dynamics 365 Supply Chain Management
         tocHref: /troubleshoot/dynamics-365/supply-chain/
         topicHref: /troubleshoot/dynamics-365/supply-chain/welcome-supply-chain
+      - name: Dynamics 365 Guides
+        tocHref: /troubleshoot/dynamics-365/guides/
+        topicHref: /troubleshoot/dynamics-365/guides/welcome-guides
+      - name: Dynamics 365 Remote Assist
+        tocHref: /troubleshoot/dynamics-365/remote-assist/
+        topicHref: /troubleshoot/dynamics-365/remote-assist/welcome-remote-assist
 
     - name: Microsoft Power Platform
       tocHref: /troubleshoot/power-platform/
       topicHref: /troubleshoot/power-platform/
       items:
+      - name: AI Builder
+        tocHref: /troubleshoot/power-platform/ai-builder/
+        topicHref: /troubleshoot/power-platform/ai-builder/welcome-ai-builder
       - name: Power Apps
         tocHref: /troubleshoot/power-platform/power-apps/
         topicHref: /troubleshoot/power-platform/power-apps/welcome-power-apps

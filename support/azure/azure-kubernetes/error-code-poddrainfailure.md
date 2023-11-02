@@ -1,12 +1,11 @@
 ---
 title: Troubleshoot PodDrainFailure error code
 description: Learn how to troubleshoot the PodDrainFailure error when you try to upgrade an Azure Kubernetes Service cluster.
-ms.date: 7/28/2022
-author: kelleyguiney22
-ms.author: v-kegui
+ms.date: 07/28/2022
 editor: v-jsitser
-ms.reviewer: chiragpa
-ms.service: container-service
+ms.reviewer: chiragpa, v-leedennis
+ms.service: azure-kubernetes-service
+ms.subservice: troubleshoot-upgrade-operations
 #Customer intent: As an Azure Kubernetes Services (AKS) user, I want to troubleshoot an Azure Kubernetes Service cluster upgrade that failed because of a PodDrainFailure error so that I can upgrade the cluster successfully.
 ---
 
@@ -41,12 +40,12 @@ To resolve this issue, use one of the following solutions.
 
 ## Solution 2: Back up, delete, and redeploy the PDB
 
-1. Make a backup of the PDB `kubectl get pdb <pdb-name> -n <pdb-namespace> -o yaml > pdb_backup.yaml`, and then delete the PDB `kubectl delete pdb <pdb-name> -n /<pdb-namespace>`. After the upgrade is finished, you can redeploy the PDB `kubectl apply -f pdb_backup.yaml`.
+1. Take a backup of the PDB `kubectl get pdb <pdb-name> -n <pdb-namespace> -o yaml > pdb_backup.yaml`, and then delete the PDB `kubectl delete pdb <pdb-name> -n /<pdb-namespace>`. After the upgrade is finished, you can redeploy the PDB `kubectl apply -f pdb_backup.yaml`.
 1. Try again to upgrade the AKS cluster to the same version that you tried to upgrade to previously. This process will trigger a reconciliation.
 
 ## Solution 3: Delete the pods that can't be drained
 
-1. Delete the pods that can’t be drained. **Note**: If the pods were created by a deployment or StatefulSet, they'll be controlled by a ReplicaSet. If that's the case, you might have to delete the deployment or StatefulSet. Before you do that, we recommend that you make a backup: `kubectl get <kubernetes-object> <name> -n <namespace> -o yaml > backup.yaml`.
+1. Delete the pods that can't be drained. **Note**: If the pods were created by a deployment or StatefulSet, they'll be controlled by a ReplicaSet. If that's the case, you might have to delete the deployment or StatefulSet. Before you do that, we recommend that you make a backup: `kubectl get <kubernetes-object> <name> -n <namespace> -o yaml > backup.yaml`.
 
 2. Try again to upgrade the AKS cluster to the same version that you tried to upgrade to previously. This process will trigger a reconciliation.
 

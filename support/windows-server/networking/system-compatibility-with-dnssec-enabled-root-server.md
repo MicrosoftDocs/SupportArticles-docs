@@ -1,7 +1,7 @@
 ---
 title: OS compatibility with DNSSEC enabled root servers
 description: DNSSEC was recently enabled on root servers on the Internet between January and May 2010. Several blogs and press articles have reported potential DNS outages because of DNSSEC being recently enabled on root hint DNS servers on the internet. This document describes the impact and compatibility story for Windows client and server operating systems as well computers hosting the Microsoft DNS Server role.
-ms.date: 09/18/2020
+ms.date: 03/24/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -30,7 +30,7 @@ This article summarizes the impact of enabling DNSSEC on root zone DNS Servers t
 |---|---|
 |<br/>Windows 2000 Professional<br/>Windows 2000 Server<br/>Windows XP<br/>Windows Server 2003<br/>Windows Server 2003 R2<br/>Windows Vista<br/>Windows Server 2008<br/><br/>|No configuration change is required.<br/><br/>DNSSEC is a DNS Server technology. Windows DNS Clients are not impacted by DNSSEC.<br/><br/>DNSSEC is only enabled by DNS Servers that request DNSSEC. These Microsoft DNS Server versions aren't DNSSEC aware and should not be impacted by the enabling of DNSSEC on DNS Root Zones.|
 |Windows 7 and Windows Server 2008 R2 with DNSSEC disabled<br/>|<br/>No configuration change is required.<br/><br/>DNSSEC is a DNS Server technology. Windows DNS Clients are not impacted by DNSSEC<br/><br/>DNSSEC is only enabled by DNS Servers that request DNSSEC. DNSSEC isn't enabled Windows Server 2008 R2 DNS Servers by default. Such DNS Servers should not be impacted by the enabling of DNSSEC on DNS Root Zones.<br/><br/>|
-|<br/>Windows Server 2008 R2 DNS Servers with DNSSEC enabled<br/><br/>|<br/>No additional configuration change is required by the enabling of DNSSEC on root zone DNS Servers.<br/><br/>DNSSEC-enabled Windows Server 2008 R2 DNS Servers have been tested and verified by Microsoft to interoperate with DNSSEC enabled root zone servers on the internet.<br/><br/>If you wish to deploy DNSSEC, see the Microsoft [DNSSEC Deployment Guide](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn593684(v=ws.11)) for requirements to deploy DNSSEC including large UDP packet support needed by UDP-formatted ENDS frames used by DNSSEC.<br/><br/>|
+|<br/>Windows Server 2008 R2 DNS Servers with DNSSEC enabled<br/><br/>|<br/>No additional configuration change is required by the enabling of DNSSEC on root zone DNS Servers.<br/><br/>DNSSEC-enabled Windows Server 2008 R2 DNS Servers have been tested and verified by Microsoft to interoperate with DNSSEC enabled root zone servers on the internet.<br/><br/>If you wish to deploy DNSSEC, see the Microsoft [DNSSEC Deployment Guide](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn593684(v=ws.11)) for requirements to deploy DNSSEC including large UDP packet support needed by UDP-formatted EDNS frames used by DNSSEC.<br/><br/>|
   
 ## More information
 

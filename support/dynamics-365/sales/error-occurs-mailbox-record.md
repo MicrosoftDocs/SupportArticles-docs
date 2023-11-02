@@ -3,7 +3,7 @@ title: Error occurs on a mailbox record
 description: Provides a solution to an error that occurs when you select the Test & Enable Mailbox button on a mailbox record in Microsoft Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-email-office-integration
 ---
 # Appointments, contacts, and tasks can't be synchronized error occurs when you select the Test & Enable Mailbox button on a mailbox record in Microsoft Dynamics 365

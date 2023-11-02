@@ -10,7 +10,7 @@ ms.subservice: authentication
 
 This article can help you resolve a problem in which you receive Code 403 (Forbidden) when using Azure Seamless Single Sign-On on Windows 10.
 
-_Original product version:_ &nbsp; Azure Active Directory, Windows 10  
+_Original product version:_ &nbsp; Microsoft Entra ID, Windows 10  
 _Original KB number:_ &nbsp; 4135083
 
 ## Symptoms

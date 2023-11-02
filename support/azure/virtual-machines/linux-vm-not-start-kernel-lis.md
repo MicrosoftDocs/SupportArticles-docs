@@ -6,6 +6,7 @@ ms.author: genli
 author: genlin
 ms.reviewer: delhan, craigw
 ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
 ms.collection: linux
 ---
 # A Linux VM does not start correctly with kernel 3.10.0-514.16 after an LIS upgrade

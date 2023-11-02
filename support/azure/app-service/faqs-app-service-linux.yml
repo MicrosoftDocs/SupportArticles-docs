@@ -239,9 +239,9 @@ sections:
               app.run(host="0.0.0.0", port=80, debug=True)
           ```
           ## Web Sockets
-          Web Sockets are supported on Linux apps.
+          Web Sockets are supported on Linux apps. The `webSocketsEnabled` ARM setting does not apply to Linux apps since Web Sockets are always enabled for Linux.
           > [!IMPORTANT]
-          > Web Sockets are now supported for Linux apps on Free App Service plans. We support up to five web socket connections on Free App Service plans.
+          > Web Sockets are now supported for Linux apps on Free App Service plans. We support up to five web socket connections on Free App Service plans. Exceeding this limit results in an HTTP 429 (Too Many Requests) response.
   - name: Pricing and SLA
     questions:
       - question: |

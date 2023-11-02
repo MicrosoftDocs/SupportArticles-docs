@@ -1,5 +1,5 @@
 ---
-title: CMD and PowerShell in Azure Windows VMs  | Microsoft Docs
+title: CMD and PowerShell in Azure Windows VMs
 description: How to use CMD and PowerShell commands within SAC in Azure Windows VMs
 services: virtual-machines
 documentationcenter: ''
@@ -7,6 +7,7 @@ author: genlin
 manager: dcscontentpm
 tags: azure-resource-manager
 ms.service: virtual-machines
+ms.subservice: vm-troubleshooting-tools
 ms.collection: windows
 ms.topic: article
 ms.tgt_pltfrm: vm-windows

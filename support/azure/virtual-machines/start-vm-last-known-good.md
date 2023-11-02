@@ -4,6 +4,7 @@ description: Describes how to start a VM that fails to boot by using the Last Kn
 ms.date: 07/21/2020
 ms.reviewer: 
 ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
 ms.collection: windows
 ---
 # How to start Azure Windows VM with Last Known Good Configuration

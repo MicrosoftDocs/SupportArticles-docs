@@ -4,7 +4,8 @@ description: Describes how to capture TCP traffic at a POD running on an AKS clu
 ms.date: 07/08/2021
 ms.author: genli
 author: y2kdread
-ms.service: container-service
+ms.service: azure-kubernetes-service
+ms.subservice: data-collection-guide
 ---
 # Capture TCP packets from a pod on an AKS cluster
 

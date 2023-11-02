@@ -1,5 +1,5 @@
 - name: Welcome
-  href: welcome-host-integration-server.md
+  href: welcome-host-integration-server.yml
 
 - name: Application integration (Transaction Integrator)
   items:

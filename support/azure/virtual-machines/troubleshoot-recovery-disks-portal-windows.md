@@ -5,6 +5,7 @@ description: This article describes how to attach a disk to a repair VM for offl
 ms.author: genli
 ms.date: 07/16/2021
 ms.service: virtual-machines
+ms.subservice: vm-backup-restore
 ms.topic: troubleshooting
 ---
 

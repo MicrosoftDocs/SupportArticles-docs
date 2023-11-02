@@ -1,11 +1,12 @@
 ---
-title: Troubleshoot an RDP general error to a Windows VM in Azure | Microsoft Docs
-description: Learn how to troubleshoot an RDP general error to a Windows VM in Azure | Microsoft Docs
+title: Troubleshoot an RDP general error to a Windows VM in Azure
+description: Learn how to troubleshoot an RDP general error to a Windows VM in Azure.
 services: virtual-machines
 documentationCenter: ''
 author: genlin
 manager: dcscontentpm
 ms.service: virtual-machines
+ms.subservice: vm-cannot-connect
 ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows

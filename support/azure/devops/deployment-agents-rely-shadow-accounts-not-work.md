@@ -4,7 +4,7 @@ description: This article provides resolutions for the problem that occurs when 
 ms.date: 08/14/2020
 ms.custom: sap:Server Administration
 ms.reviewer: achand, daleche, muthuk, sriramb, ronai, ans, leov
-ms.service: az-devops-project
+ms.service: azure-devops-server
 ---
 # Deployment agents that rely on shadow accounts do not work with Release Management Server for Visual Studio 2013
 

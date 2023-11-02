@@ -1,11 +1,12 @@
 ---
-title: 'Troubleshoot boot errors in Azure Virtual Machines | Microsoft Docs'
+title: 'Troubleshoot boot errors in Azure Virtual Machines'
 description: This article helps link you to articles to troubleshoot boot errors in Azure Virtual Machines.
 services: virtual-machines
 documentationCenter: ''
 author: genlin
 manager: dcscontentpm
 ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
 ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows

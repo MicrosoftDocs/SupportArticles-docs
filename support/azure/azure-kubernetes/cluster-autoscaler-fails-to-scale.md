@@ -1,12 +1,11 @@
 ---
 title: Cluster autoscaler fails to scale with failed to fix group sizes error
 description: Learn how to troubleshoot the failed to fix group sizes error that occurs when your autoscaler isn't scaling up or down.
-ms.date: 5/17/2022
-author: kelleyguiney22
-ms.author: v-kegui
+ms.date: 05/17/2022
 editor: v-jsitser
-ms.reviewer: chiragpa, nickoman
-ms.service: container-service
+ms.reviewer: chiragpa, nickoman, v-leedennis
+ms.service: azure-kubernetes-service
+ms.subservice: troubleshoot-scale-operations
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the failed to fix group sizes error so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.
 ---
 

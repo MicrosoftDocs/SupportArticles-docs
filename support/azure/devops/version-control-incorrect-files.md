@@ -4,7 +4,8 @@ description: This article provides resolutions to the error that occurs after yo
 ms.date: 08/18/2020
 ms.custom: sap:Repos
 ms.reviewer: mmitrik, remilema, congyiw
-ms.service: az-devops-project
+ms.service: azure-devops
+ms.subservice: ts-repos
 ---
 # Version control download returns incorrect files after restoring Team Project Collection database
 

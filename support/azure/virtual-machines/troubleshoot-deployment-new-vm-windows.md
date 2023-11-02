@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot Windows VM deployment in Azure | Microsoft Docs
+title: Troubleshoot Windows VM deployment in Azure
 description: Troubleshoot Resource Manager deployment issues when you create a new Windows virtual machine in Azure
 services: virtual-machines, azure-resource-manager
 documentationcenter: ''
@@ -7,6 +7,7 @@ author: genlin
 manager: dcscontentpm
 tags: top-support-issue, azure-resource-manager
 ms.service: virtual-machines
+ms.subservice: vm-deploy
 ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows
@@ -177,7 +178,7 @@ If you encounter issues when you start a stopped Windows VM or resize an existin
 
 ## Next steps
 
-* [Supportability of adding Azure VMs to an existing availability set](/troubleshoot/azure/virtual-machines/virtual-machines-availability-set-supportability)
-* [Redeploy Windows virtual machine to new Azure node](/troubleshoot/azure/virtual-machines/redeploy-to-new-node-windows)
+* [Supportability of adding Azure VMs to an existing availability set](virtual-machines-availability-set-supportability.md)
+* [Redeploy Windows virtual machine to new Azure node](redeploy-to-new-node-windows.md)
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

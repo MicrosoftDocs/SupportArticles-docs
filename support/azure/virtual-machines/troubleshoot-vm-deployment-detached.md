@@ -1,11 +1,12 @@
 ---
-title: Troubleshoot virtual machine deployment due to detached disks | Microsoft Docs
+title: Troubleshoot virtual machine deployment due to detached disks
 description: Troubleshoot virtual machine deployment due to detached disks
 services: virtual-machines
 documentationCenter: ''
 author: genlin
 manager: dcscontentpm
 ms.service: virtual-machines
+ms.subservice: vm-deploy
 ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows

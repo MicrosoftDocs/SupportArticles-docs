@@ -7,7 +7,7 @@ ms.topic: troubleshooting #Required.
 ms.date: #Required; enter the date in the mm/dd/yyyy format.
 ---
 
-<!---For SEO metadata, refer to the SEO cheat sheet provided at https://review.docs.microsoft.com/en-us/help/contribute/contribute-how-to-write-seo-basics?branch=main. It has complete information on metadata that impacts SEO, specifically the page title and meta description.--->
+<!---For SEO metadata, refer to the SEO cheat sheet provided at https://review.learn.microsoft.com/help/contribute/contribute-how-to-write-seo-basics?branch=main. It has complete information on metadata that impacts SEO, specifically the page title and meta description.--->
 
 <!--- We write general troubleshooting articles when a specific error message isn't known. The customer has come across an issue that they need to resolve, but it's not clear what's causing the issue.--->
 

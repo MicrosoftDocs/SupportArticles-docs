@@ -3,7 +3,7 @@ title: Delete a corrupted Azure Analysis Services database
 description: Provides a workaround for the problem where you may be unable to delete a corrupted database in Azure Analysis Services by using JavaScript Object Notation (JSON) script in Microsoft SQL Server Management Studio (SSMS).
 ms.date: 01/14/2021
 ms.topic: troubleshooting
-ms.service: azure
+ms.service: azure-common-issues-support
 ---
 # JSON script sent via SSMS unable to delete a corrupted database in Azure Analysis Services
 

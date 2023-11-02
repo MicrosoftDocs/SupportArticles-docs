@@ -1,7 +1,7 @@
 ---
 title: Windows 10 upgrade quick fixes
 description: Learn how to quickly resolve many problems, which may come up during a Windows 10 upgrade.
-ms.date: 08/19/2022
+ms.date: 04/28/2023
 manager: dcscontentpm
 ms.author: aaroncz
 ms.custom: sap:setup, csstroubleshoot
@@ -14,21 +14,21 @@ audience: itpro
 localization_priority: medium
 ---
 
-# Quick fixes
+# Windows 10 upgrade quick fixes
 
 _Applies to:_ &nbsp; Windows 10
 
 > [!NOTE]
 > This is a 100 level topic (basic).
 >
-> See [Resolve Windows 10 upgrade errors](/windows/deployment/upgrade/resolve-windows-10-upgrade-errors) for a full list of topics in this article.
+> For IT professionals, check more information in [Resolve Windows 10 upgrade errors](/windows/deployment/upgrade/resolve-windows-10-upgrade-errors).
 
 The following list of fixes can resolve many Windows upgrade problems. You should try these steps before contacting Microsoft support, or attempting a more advanced analysis of a Windows upgrade failure. Also review information at [Windows 10 help](https://support.microsoft.com/products/windows?os=windows-10).
 
-The Microsoft Virtual Agent provided by [Microsoft Support](https://support.microsoft.com/contactus/) can help you to analyze and correct some Windows upgrade errors. To talk to a person about your issue, start the Virtual Agent (select **Get started**) and enter *Talk to a person* two times.
+The Microsoft Virtual Agent provided by [Microsoft Support](https://support.microsoft.com/contactus/) can help you to analyze and correct some Windows upgrade errors.
 
 > [!TIP]
-> You might also wish to try a new tool available from Microsoft that helps to diagnose many Windows upgrade errors. For more information and to download this tool, see [SetupDiag](setupdiag-tool-for-windows-10-upgrade.md). The topic is more advanced (300 level) because several advanced options are available for using the tool. However, you can now just download and then double-click the tool to run it. By default when you click Save, the tool is saved in your *Downloads* folder. Double-click the tool in the folder and wait until it finishes running (it might take a few minutes), then double-click the *SetupDiagResults.log* file and open it using Notepad to see the results of the analysis.
+> You might also wish to try a new tool available from Microsoft that helps to diagnose many Windows upgrade errors. For more information and to download this tool, see [SetupDiag](/windows/deployment/upgrade/setupdiag). The topic is more advanced (300 level) because several advanced options are available for using the tool. However, you can now just download and then double-click the tool to run it. By default when you click Save, the tool is saved in your *Downloads* folder. Double-click the tool in the folder and wait until it finishes running (it might take a few minutes), then double-click the *SetupDiagResults.log* file and open it using Notepad to see the results of the analysis.
 
 ## List of fixes
 
@@ -111,7 +111,7 @@ If any errors are displayed in the Windows Update Troubleshooter, use the Micros
 
 ### Repair system files
 
-This fix is also described in detail at [answers.microsoft.com](https://answers.microsoft.com/EN-US/windows/forum/windows_10-update/system-file-check-sfc-scan-and-repair-system-files/bc609315-da1f-4775-812c-695b60477a93).
+This fix is also described in detail at [answers.microsoft.com](https://answers.microsoft.com/EN-US/windows/forum/all/sfc-scannow/bc609315-da1f-4775-812c-695b60477a93).
 
 To check and repair system files:
 
@@ -204,13 +204,13 @@ In **File Explorer**, select **Computer** or **This PC** on the left, then look 
 
 The amount of space available on the system drive will be displayed under the drive. See the following example:
 
-:::image type="content" source="media/windows-10-upgrade-quick-fixes/system-drive-space-available.png" alt-text="Screenshot of the system drive with the amount of available space." border="false":::
+:::image type="content" source="media/windows-10-upgrade-quick-fixes/system-drive-space-available.png" alt-text="Screenshot of the system drive with the amount of available space.":::
 
 In the previous example, there's 703 GB of available free space on the system drive (C:).
 
 To free up more space on the system drive, begin by running Disk Cleanup. You can access Disk Cleanup by right-clicking the hard drive icon and then clicking Properties. See the following example:
 
-:::image type="content" source="media/windows-10-upgrade-quick-fixes/disk-cleanup-option.png" alt-text="Screenshot of the system drive properties with the disk cleanup option on the general tab." border="false":::
+:::image type="content" source="media/windows-10-upgrade-quick-fixes/disk-cleanup-option.png" alt-text="Screenshot of the system drive properties with the disk cleanup option on the general tab.":::
 
 For instructions to run Disk Cleanup and other suggestions to free up hard drive space, see [Tips to free up drive space on your PC](https://support.microsoft.com/help/17421/windows-free-up-drive-space).
 
@@ -219,7 +219,7 @@ When you run Disk Cleanup and enable the option to Clean up system files, you ca
 ### Open an elevated command prompt
 
 > [!TIP]
-> It is no longer necessary to open an elevated command prompt to run the [SetupDiag](setupdiag-tool-for-windows-10-upgrade.md) tool. However, this is still the optimal way to run the tool.
+> It is no longer necessary to open an elevated command prompt to run the [SetupDiag](/windows/deployment/upgrade/setupdiag) tool. However, this is still the optimal way to run the tool.
 
 To launch an elevated command prompt, press the Windows key on your keyboard, type *cmd*, press Ctrl+Shift+Enter, and then select **Yes** to confirm the elevation prompt. For more information about screenshots and other steps to open an elevated command prompt, see [Command Prompt (Admin) Windows 7](https://answers.microsoft.com/EN-US/windows/forum/windows_7-security/command-prompt-admin-windows-7/6a188166-5e23-461f-b468-f325688ec8c7).
 
@@ -230,7 +230,11 @@ Another option is to use File Explorer to create a new folder under C: with a sh
 
 If you downloaded the *SetupDiag.exe* program to your computer, then copied it to the folder *C:\new*, and you opened an elevated command prompt then typed `cd c:\new` to change to this directory, you can just type `setupdiag` and press Enter to run the program. This program will analyze the files on your computer to see why a Windows Upgrade failed and if the reason was a common one, it will report this reason. It will not fix the problem for you but knowing why the upgrade failed enables you to take steps to fix the problem.
 
-## More information
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).
+
+## Reference
 
 - [Windows 10 FAQ for IT professionals](/windows/deployment/planning/windows-10-enterprise-faq-itpro)
 - [Windows 10 Enterprise system requirements](https://technet.microsoft.com/windows/dn798752.aspx)

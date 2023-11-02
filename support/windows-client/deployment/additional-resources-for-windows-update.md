@@ -1,7 +1,7 @@
 ---
 title: Additional resources for Windows Update
 description: Describes details about to troubleshooting WSUS and resetting Windows Update components manually.
-ms.date: 08/19/2022
+ms.date: 04/28/2023
 ms.prod: windows-client
 manager: dcscontentpm
 ms.topic: troubleshooting
@@ -160,3 +160,7 @@ If all else fails, try resetting the Windows Update Agent by running these comma
     ``` console
     bitsadmin.exe /reset /allusers
     ```
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

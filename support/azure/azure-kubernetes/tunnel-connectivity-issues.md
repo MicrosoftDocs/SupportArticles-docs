@@ -1,11 +1,10 @@
 ---
 title: Tunnel connectivity issues
 description: Resolve communication issues that are related to tunnel connectivity in an Azure Kubernetes Service (AKS) cluster.
-ms.date: 7/14/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
-ms.reviewer: chiragpa, andbar
-ms.service: container-service
+ms.date: 07/14/2022
+ms.reviewer: chiragpa, andbar, v-leedennis
+ms.service: azure-kubernetes-service
+ms.subservice: cannot-connect-to-cluster-through-api-server
 keywords: Azure Kubernetes Service, AKS cluster, Kubernetes cluster, tunnels, connectivity, tunnel-front, aks-link
 #Customer intent: As an Azure Kubernetes user, I want to avoid tunnel connectivity issues so that I can use an Azure Kubernetes Service (AKS) cluster successfully.
 ---
@@ -36,7 +35,7 @@ Because the tunnel components or the connectivity between the server and client 
 
 - Admission controller webhooks
 
-- Log retrieval (using the [kubectl logs](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#logs) command)
+- Ability of log retrieval (using the [kubectl logs](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#logs) command)
 
 - Running a command in a container or getting inside a container (using the [kubectl exec](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#exec) command)
 
@@ -81,7 +80,7 @@ If you want to be more restrictive, you can allow access to port 10250 at the su
 
 [Uncomplicated Firewall](https://wiki.ubuntu.com/UncomplicatedFirewall) (UFW) is a command-line program for managing a [netfilter](https://www.netfilter.org/) firewall. AKS nodes use Ubuntu. Therefore, UFW is installed on AKS nodes by default, but UFW is disabled.
 
-By default, if UFW is enabled, it will block access to all ports, including port 10250. In this case, it's unlikely that you can use Secure Shell (SSH) to [connect to AKS cluster nodes for troubleshooting](/azure/aks/node-access). This is because UFW might also be blocking port 22. To troubleshoot, you can run the [az vmss run-command invoke](/cli/azure/vmss/run-command#az-vmss-run-command-invoke) command to invoke a [ufw command](https://manpages.ubuntu.com/manpages/bionic/man8/ufw.8.html) that checks whether UFW is enabled:
+By default, if UFW is enabled, it will block access to all ports, including port 10250. In this case, it's unlikely that you can use Secure Shell (SSH) to [connect to AKS cluster nodes for troubleshooting](/azure/aks/node-access). This is because UFW might also be blocking port 22. To troubleshoot, you can run the [az vmss run-command invoke](/cli/azure/vmss/run-command#az-vmss-run-command-invoke) command to invoke a [ufw command](https://manpages.ubuntu.com/manpages/lunar/en/man8/ufw.8.html) that checks whether UFW is enabled:
 
 ```azurecli
 az vmss run-command invoke --resource-group <infra-or-MC-resource-group> \
@@ -177,7 +176,7 @@ To address your exact or potential scenario, we recommend that you check the [ip
 
 Are there any egress traffic restrictions, such as from an AKS firewall? If there are, port 9000 is required in order to enable correct functionality of the `tunnel-front` pod. Similarly, port 1194 is required for the `aks-link` pod.
 
-Konnectivity relies on port 443. By default, this port is open. Therefore, you don’t have to worry about connectivity issues on that port.
+Konnectivity relies on port 443. By default, this port is open. Therefore, you don't have to worry about connectivity issues on that port.
 
 ### Solution 4: Open port 1194 or 9000
 

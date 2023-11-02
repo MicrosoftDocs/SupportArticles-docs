@@ -3,9 +3,8 @@ metadata:
   title: Azure Application Insights availability monitoring common issues FAQ
   description: Review a list of frequently asked questions (FAQ) about common issues that occur when you use Application Insights availability monitoring.
   ms.topic: faq
-  ms.date: 8/15/2022
-  author: kelleyguiney22
-  ms.author: v-kgui
+  ms.date: 08/15/2022
+  ms.reviewer: v-leedennis
   ms.service: azure-monitor
   ms.subservice: application-insights
 
@@ -43,6 +42,11 @@ sections:
           This error indicates that you have to add firewall exceptions to allow the availability agents to test your target URL. For a full list of agent IP addresses to allow, see the [IP exception article](/azure/azure-monitor/app/ip-addresses#availability-tests).
 
       - question: |
+          Why do I see "Other values" in my web test telemetry?
+        answer: |
+          Application Insights [limits availability tests](/azure/azure-resource-manager/management/azure-subscription-service-limits#application-insights) to 100 per Application Insights resource. If you create custom web test results by calling the `TrackAvailability()` API, you could attempt to exceed that limit. For any availability test name, location, or other field values where the cardinality exceeds 100, its value will be replaced with "Other values". If you need more than 100 different web test names or locations, you can use a second Application Insights component. 
+ 
+      - question: |
           Why don't I see any related server-side telemetry to diagnose test failures?
         answer: |
           This situation might exist if you have Application Insights set up for your server-side application and [sampling](/azure/azure-monitor/app/sampling) is in operation. Select a different availability result.
@@ -70,7 +74,13 @@ sections:
       - question: |
           Can I run a test by using client certificates?
         answer: |
-          No. This scenario isn't currently supported. 		  
+          No. This scenario isn't currently supported. 	
+          
+      - question: |
+          Why does my availability test continue to run after it is paused or disabled?
+        answer: |
+          It is an expected behavior. Depending on how close the deadline for the scheduled execution of the next iteration is, availability tests may not be stopped in time before they perform the next iteration. In the same way, when you create, disable, or manipulate new tests, there is a delay.
+
 
 additionalContent: |
 

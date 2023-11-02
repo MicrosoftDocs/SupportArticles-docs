@@ -4,6 +4,7 @@ description: Discusses an issue in which you can't ping a Clustered Name that ru
 ms.date: 07/21/2020
 ms.reviewer: mariliu
 ms.service: virtual-machines
+ms.subservice: vm-common-errors-issues
 ---
 # Error when you try to ping a Clustered Name that runs on Azure IaaS VMs: Request timed out
 

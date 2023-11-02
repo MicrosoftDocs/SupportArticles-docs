@@ -1,21 +1,19 @@
 ---
 title: Troubleshoot password writeback access rights and permissions
 description: Learn about preparatory troubleshooting steps involving the required access rights and permissions for password writeback.
-ms.date: 6/2/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
-ms.reviewer: jarrettr, nualex
+ms.date: 06/02/2022
+ms.reviewer: jarrettr, nualex, v-leedennis
 ms.service: active-directory
 ms.subservice: enterprise-users
 keywords:
-#Customer intent: As an Azure Active Directory administrator, I want to learn about the required access rights and permissions for password writeback so that I can troubleshoot password writeback issues more easily.
+#Customer intent: As a Microsoft Entra administrator, I want to learn about the required access rights and permissions for password writeback so that I can troubleshoot password writeback issues more easily.
 ---
 # Troubleshoot password writeback access rights and permissions
 
 This article describes the access rights and permissions that are required in the domain root, the user object, and the Builtin container in Active Directory. It also discusses the following items:
 
 - Required domain group policies
-- How to identify the Active Directory Domain Services (AD DS) Connector account that Microsoft Azure AD Connect uses
+- How to identify the Active Directory Domain Services (AD DS) Connector account that Microsoft Entra Connect uses
 - How to check existing permissions on that account
 - How to avoid replication issues
 
@@ -23,11 +21,11 @@ This information can help you troubleshoot specific problems that involve passwo
 
 ## Identify the AD DS Connector account
 
-Before you check for password writeback permissions, verify the current AD DS Connector account (also known as the *MSOL_* account) in Azure AD Connect. Verifying this account helps you avoid taking the wrong steps during password writeback troubleshooting.
+Before you check for password writeback permissions, verify the current AD DS Connector account (also known as the *MSOL_* account) in Microsoft Entra Connect. Verifying this account helps you avoid taking the wrong steps during password writeback troubleshooting.
 
 To identify the AD DS Connector account:
 
-1. Open the Synchronization Service Manager. To do this, select **Start**, enter *azure ad connect*, select **Azure AD Connect** in the search results, and then select **Synchronization Service**.
+1. Open the Synchronization Service Manager. To do this, select **Start**, enter *Microsoft Entra Connect*, select **Microsoft Entra Connect** in the search results, and then select **Synchronization Service**.
 
 1. Select the **Connectors** tab, and then select the applicable Active Directory connector. In the **Actions** pane, select **Properties** to open the **Properties** dialog box.
 
@@ -84,7 +82,7 @@ The PowerShell method is useful for offline analysis. It lets you import the fil
 
 ## Avoid replication issues when fixing permissions
 
-When you fix Active Directory permissions, the changes to Active Directory might not take effect immediately. Active Directory permissions are also subject to replications across the forest in the same manner that Active Directory objects are. How do you mitigate the Active Directory replication issues or delays? You set a preferred domain controller in Azure AD Connect, and work on only that domain controller for any changes. When you use the Active Directory Users and Computers snap-in, right-click the domain root in the console tree, select the **Change Domain Controller** menu item, and then pick the same preferred domain controller.
+When you fix Active Directory permissions, the changes to Active Directory might not take effect immediately. Active Directory permissions are also subject to replications across the forest in the same manner that Active Directory objects are. How do you mitigate the Active Directory replication issues or delays? You set a preferred domain controller in Microsoft Entra Connect, and work on only that domain controller for any changes. When you use the Active Directory Users and Computers snap-in, right-click the domain root in the console tree, select the **Change Domain Controller** menu item, and then pick the same preferred domain controller.
 
 For a quick sanity check within Active Directory, run domain controller diagnostics by using the [dcdiag](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731968(v=ws.11)) command. Then, run the [repadmin /replsummary](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc770963(v=ws.11)) command to view a summary of replication problems. The following commands store the command output to text files, although you can modify them to display the output on the console:
 
@@ -302,7 +300,7 @@ This section describes the expected Active Directory permissions for password wr
 
 ## Other required Active Directory permissions
 
-In the **Pre-Windows 2000 Compatible Access** group properties, go to the **Members** tab, and make sure that **Authenticated Users** is a member of this group. Otherwise, you might experience issues that affect password writeback on Azure AD Connect and Active Directory (especially on older versions).
+In the **Pre-Windows 2000 Compatible Access** group properties, go to the **Members** tab, and make sure that **Authenticated Users** is a member of this group. Otherwise, you might experience issues that affect password writeback on Microsoft Entra Connect and Active Directory (especially on older versions).
 
 ## Required domain group policies
 

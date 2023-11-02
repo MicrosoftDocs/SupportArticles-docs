@@ -1,7 +1,7 @@
 ---
 title: Windows Installer reconfigured all applications
 description: Fixes an error that indicates the Windows Installer reconfigured all installed applications.
-ms.date: 09/08/2020
+ms.date: 09/23/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -78,6 +78,9 @@ If you're using a group policy with the WMIFilter that queries `Win32_Product`, 
 If you have an application that uses the previous class, contact the vendor to get an updated version that doesn't use this class.
 
 To narrow down the application that causes the problem, you can follow the *Clean boot* troubleshooting method.
+
+> [!NOTE]
+> Using `Win32Reg_AddRemovePrograms` requires System Center Configuration Manager (SCCM) client to be installed. If SCCM is not installed, use the [StdRegProv](/previous-versions/windows/desktop/regprov/stdregprov) class instead.
 
 ## More information
 

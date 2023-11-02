@@ -1,7 +1,7 @@
 ---
 title: Stop 0x0000007B error after you use a Group Policy setting to prevent the installation of devices
 description: Describes an issue that occurs when you uninstall a third-party SATA controller driver and then restart the computer
-ms.date: 09/21/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This article helps to fix the error "Stop 0x0000007B" after you use a Group Policy setting to prevent the installation of devices.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2008 R2, Windows 7  
 _Original KB number:_ &nbsp; 2773300
 
 ## Symptoms
@@ -59,3 +59,7 @@ To do this, follow these steps:
 8. Restart the computer in the standard way.  
 > [!NOTE]
 > These steps do not delete any policy settings.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

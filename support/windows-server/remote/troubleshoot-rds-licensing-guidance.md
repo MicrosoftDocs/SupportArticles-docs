@@ -1,7 +1,7 @@
 ---
 title: Guidance for troubleshooting RDS Licensing
 description: Introduces general guidance for troubleshooting scenarios related to RDS Licensing.
-ms.date: 03/16/2022
+ms.date: 05/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -15,13 +15,15 @@ ms.technology: windows-server-rds
 ---
 # RDS Licensing troubleshooting guidance
 
+<p class="alert is-flex is-primary"><span class="has-padding-left-medium has-padding-top-extra-small"><a class="button is-primary" href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806373" target='_blank'><b>Try our Virtual Agent</b></a></span><span class="has-padding-small"> - It can help you quickly identify and fix common Active Directory replication issues</span>
+
 The listed resources in this article can help you resolve Remote Desktop Services (RDS) licensing issues.
 
 ## Troubleshooting checklist
 
 ### Grace period
 
-The 120-day licensing grace period value is decremented to 0 (zero) as soon as a license server is configured. For more information, see the following articles:
+There is a licensing grace period of 120 Days during which no license server is required. Once the grace period ends, clients must have a valid RDS CAL issued by a license server before they can log on to an RD Session Host server. For more information, see the following articles:
 
 - [License your RDS deployment with client access licenses (CALs)](/windows-server/remote/remote-desktop-services/rds-client-access-license)
 - [Troubleshooting specific RDP error messages to a Windows VM in Azure](/azure/virtual-machines/troubleshooting/troubleshoot-specific-rdp-errors)
@@ -39,7 +41,7 @@ $obj = gwmi -namespace "Root/CIMV2/TerminalServices" Win32_TerminalServiceSettin
 $obj.GetGracePeriodDays()
 ```
 
-**Reset grace period**: The grace period can be reset to 0. However, we don't recommended this approach. Instead, you must implement a license server together with a license pack.
+**Reset grace period**: The grace period can be reset to 120 Days. However, we don't recommended this approach. Instead, you must implement a license server together with a license pack.
 
 ### Verify the license servers and current licensing mode that's configured on the Remote Desktop Session Host (RDSH) server
 
@@ -120,7 +122,7 @@ To do this, start the Remote Desktop Licensing Manager console on the licensing 
 
 - Check the minimal TCP ports.
 
-  Verify that the minimal TCP ports are open. For more information, see [RD Licensing Network Port Requirements](../networking/service-overview-and-network-port-requirements.md#terminal-services-licensing)
+  Verify that the minimal TCP ports are open. For more information, see [RD Licensing Network Port Requirements](../networking/service-overview-and-network-port-requirements.md#rds-licensing-rdsl)
 
 - Use the event log to determine the behavior of the licensing server.
   - On the licensing server, start Event Viewer.
@@ -148,24 +150,24 @@ This issue is fixed in update [KB 4457127](https://support.microsoft.com/topic/s
 
 ## Data collection
 
-Before contacting Microsoft support, you can gather information about your issue.
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-user-experience.md#terminal-server-licensing).
 
 ### Prerequisites
 
-1. TSSv2 must be run by accounts with administrator privileges on the local system, and EULA must be accepted (once EULA is accepted, TSSv2 won't prompt again).
+1. TSS must be run by accounts with administrator privileges on the local system, and EULA must be accepted (once EULA is accepted, TSS won't prompt again).
 2. We recommend the local machine `RemoteSigned` PowerShell execution policy.
 
 > [!NOTE]
-> If the current PowerShell execution policy doesn't allow running TSSv2, take the following actions:
+> If the current PowerShell execution policy doesn't allow running TSS, take the following actions:
 >
 > - Set the `RemoteSigned` execution policy for the process level by running the cmdlet `PS C:\> Set-ExecutionPolicy -scope Process -ExecutionPolicy RemoteSigned`.
 > - To verify if the change takes effect, run the cmdlet `PS C:\> Get-ExecutionPolicy -List`.
-> - Because the process level permissions only apply to the current PowerShell session, once the given PowerShell window in which TSSv2 runs is closed, the assigned permission for the process level will also go back to the previously configured state.
+> - Because the process level permissions only apply to the current PowerShell session, once the given PowerShell window in which TSS runs is closed, the assigned permission for the process level will also go back to the previously configured state.
 
 ### Gather key information before contacting Microsoft support
 
-1. Download [TSSv2](https://aka.ms/getTSSv2) on all nodes and unzip it in the *C:\\tss_tool* folder.
-2. Open the *C:\\tss_tool* folder from an elevated PowerShell command prompt.
+1. Download [TSS](https://aka.ms/getTSS) on all nodes and unzip it in the *C:\\tss* folder.
+2. Open the *C:\\tss* folder from an elevated PowerShell command prompt.
 3. Start the traces on the client and the server by using the following cmdlets:
     > [!NOTE]
     > Run these traces simultaneously on the client, Session Host server(s) and licensing server(s).
@@ -173,13 +175,13 @@ Before contacting Microsoft support, you can gather information about your issue
     - Client:  
 
         ```powershell
-        TSSv2.ps1 -scenario Net_RDScli
+        TSS.ps1 -scenario Net_RDScli
         ```
 
     - Server(s):  
 
         ```powershell
-        TSSv2.ps1 -scenario Net_RDSsrv
+        TSS.ps1 -scenario Net_RDSsrv
         ```
 
     If you get many security warnings related to the execution policy while running the script, run the `Set-ExecutionPolicy -ExecutionPolicy Bypass -force -Scope Process` cmdlet to bypass those warnings.
@@ -188,7 +190,7 @@ Before contacting Microsoft support, you can gather information about your issue
 6. When the script displays `Reproduce the issue and enter 'Y' key AFTER finishing the repro` on both the client and the server(s), start reproducing the issue.
 7. Enter *Y* to finish the log collection after the issue is reproduced.
 
-The traces will be stored in a zip file in the *C:\\MSDATA* folder, which can be uploaded to the Microsoft workspace for analysis.
+The traces will be stored in a zip file in the *C:\\MS_DATA* folder, which can be uploaded to the Microsoft workspace for analysis.
 
 ## Reference
 

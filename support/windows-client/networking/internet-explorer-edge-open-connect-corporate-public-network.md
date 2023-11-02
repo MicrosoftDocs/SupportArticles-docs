@@ -63,7 +63,7 @@ The active probe process consists of the following steps:
 
 - Windows 8.1 or earlier versions:
   1. NCSI sends a DNS request to resolve the address of the `www.msftncsi.com` FQDN.
-  2. If NCSI receives a valid response from a DNS server, NCSI sends a plain HTTP GET request to `http://www.msftncsi.com`/ncsi.txt.
+  2. If NCSI receives a valid response from a DNS server, NCSI sends a plain HTTP GET request to `http://www.msftncsi.com/ncsi.txt`.
   3. If NCSI successfully downloads the text file, it makes sure that the file contains Microsoft NCSI.
   4. NCSI sends another DNS request to resolve the address of the `dns.msftncsi.com` FQDN.
 
@@ -105,7 +105,7 @@ In some cases, such as when you connect to a network that uses a proxy server to
 > - \*.msftncsi.com
 > - \*.msftconnecttest.com
 >
->For more information, see [KB 2778122, Using authenticated proxy servers together with Windows 8](/troubleshoot/windows-client/networking/use-authenticated-proxy-servers)
+>For more information, see [KB 2778122, Using authenticated proxy servers together with Windows 8](use-authenticated-proxy-servers.md)
 
 ## Workaround
 

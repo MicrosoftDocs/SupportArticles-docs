@@ -2,7 +2,7 @@
 title: Azure region access request process
 description: Describes the process to request access for certain Azure regions.
 ms.date: 05/17/2022
-ms.service: azure
+ms.service: azure-common-issues-support
 ms.author: genli
 author: genlin
 ms.reviewer: 
@@ -38,7 +38,7 @@ The process to request access is relatively straight forward, you can initiate t
     :::image type="content" source="media/region-access-request-process/enter-details.png" alt-text="Screenshot of the enter details button." border="true":::
 
 1. Select the deployment mode.
-1. Select one or more countries/regions that you want to request access. If the countries/regions are not listed, go to the [Reserved access regions](#reserved-access-regions) section.  
+1. Select one or more regions that you want to request access. If the regions are not listed, go to the [Reserved access regions](#reserved-access-regions) section.  
 1. Select the VM series, and then specify new vCPU limit.
 
     :::image type="content" source="media/region-access-request-process/quota-details.png" alt-text="Screenshot of the quota details page." border="true":::

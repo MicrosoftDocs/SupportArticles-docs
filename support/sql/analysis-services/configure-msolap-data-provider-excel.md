@@ -5,7 +5,6 @@ ms.date: 11/05/2020
 ms.custom: sap:Analysis Services
 ms.reviewer: dyonker
 ms.topic: how-to
-ms.prod: sql
 ---
 # Configure MSOLAP data provider for Excel to connect to Analysis Services
 

@@ -1,0 +1,19 @@
+items: 
+- name: Cluster resource in Failed state
+  href: cluster-resource-goes-failed-state.md
+- name: Cluster validation rule failure
+  href: error-install-sql-server-windows-server-cluster.md
+- name: Create databases or change disk file locations
+  href: create-databases-change-disk-file-locations.md
+- name: Installation of SQL Server on a CSV disk fails
+  href: install-sql-server-2016-on-a-csv-disk-fails.md
+- name: Manually re-create registry keys for cluster resources
+  href: manually-re-create-resource-specific-registry-keys.md
+- name: Support policy for clustered configurations
+  href: support-policy-clustered-configurations.md
+- name: Update fails on Cluster_IsOnlineIfClustered rule
+  href: cannot-update-cluster-setup-program-checks-rule.md
+- name: Windows Failover cluster resource dependencies
+  href: windows-failover-cluster-resource-depend.md
+- name: Warning about network binding order
+  href: warning-about-network-binding.md

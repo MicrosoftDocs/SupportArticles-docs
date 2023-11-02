@@ -1,9 +1,10 @@
 ---
 title: Error CredSSP encryption oracle remediation when you try to RDP to a Windows VM in Azure
 description: Fixes an issue that you receive a CredSSP encryption oracle remediation error when you try to RDP to a Windows VM in Azure.
-ms.date: 07/21/2020
+ms.date: 08/25/2023
 ms.reviewer: 
 ms.service: virtual-machines
+ms.subservice: vm-cannot-connect
 ms.collection: windows
 ---
 
@@ -21,7 +22,7 @@ _Original KB number:_ &nbsp; 4295591
 
 Consider the following scenario:
 
-- The [Credential Security Support Provider protocol (CredSSP) updates for CVE-2018-0886](https://support.microsoft.com/help/4093492/credssp-updates-for-cve-2018-0886-march-13-2018) are applied to a Windows VM (remote server) in Microsoft Azure or on a local client.
+- The [Credential Security Support Provider protocol (CredSSP) updates for CVE-2018-0886](https://support.microsoft.com/help/4093492/credssp-updates-for-cve-2018-0886-march-13-2018) are applied to a Windows VM (remote server) in Microsoft Azure or on a local client.
 - You try to make a remote desktop (RDP) connection to the server from the local client.
 
 In this scenario, you receive the following error message:
@@ -30,9 +31,9 @@ In this scenario, you receive the following error message:
 
 ### How to verify that the CredSSP update is installed
 
-Check the **update history** for the following updates, or check the version of TSpkg.dll.
+Check the **update history** for the following updates, or check the version of TSpkg.dll that is located at `%systemroot%\system32`.
 
-|Operating system|TSpkg.dll version with CredSSP update|CredSSP update|
+|Operating system|TSpkg.dll version with CredSSP update|CredSSP update|
 |---|---|---|
 |Windows 7 Service Pack 1 / Windows Server 2008 R2 Service Pack 1|6.1.7601.24117| [KB4103718 (Monthly Rollup)](https://support.microsoft.com/kb/4103718) |
 | [KB4103712 (Security-only update)](https://support.microsoft.com/kb/4103712) |
@@ -46,24 +47,21 @@ Check the **update history** for the following updates, or check the version of 
   
 ## Cause
 
-This error occurs if you are trying to establish an insecure RDP connection, and the insecure RDP connection is blocked by an **Encryption Oracle Remediation** policy setting on the server or client. This setting defines how to build an RDP session by using CredSSP, and whether an insecure RDP is allowed.
+This error occurs if you are trying to establish an insecure RDP connection, and the insecure RDP connection is blocked by an **Encryption Oracle Remediation** policy setting on the server or client. This setting defines how to build an RDP session by using CredSSP, and whether an insecure RDP is allowed.
 
-See the following interoperability matrix for scenarios that are either vulnerable to this exploit or cause operational failures.
+The following table summarizes the behavior of RDP connection based on the CredSSP update status and CredSSP policy setting (**AllowEncryptionOracle** value):
 
-|   - |        -       |Server            |   -                    |     -      |       -     |
-|--------|-----------------------|----------|-----------------------|-----------|------------|
-|    -    |        -               | Updated  | Force updated clients | Mitigated | Vulnerable |
-| **Client** | Updated               | Allowed  | Blocked<sup> **2** </sup>             | Allowed   | Allowed    |
-|        | Force updated clients | Blocked  | Allowed               | Allowed   | Allowed    |
-|        | Mitigated             | Blocked <sup> **1** </sup> | Allowed               | Allowed   | Allowed    |
-|        | Vulnerable            | Allowed  | Allowed               | Allowed   | Allowed    |
+|Server CredSSP update status|Client CredSSP update status|Force updated clients (0)|Mitigated (1)| Vulnerable (2)|
+|---|---|---|---|---|
+|Installed|No| Block  |  Allow<sup> **1** </sup>  |  Allow |
+|No|Installed| Block<sup> **2** </sup>  |  Block |  Allow |
+|Installed|Installed|Allow   |Allow   | Allow  |
 
 **Examples**
 
-<sup> **1** </sup> The client has the CredSSP update installed, and **Encryption Oracle Remediation** is set to **Mitigated**. This client will not RDP to a server that does not have the CredSSP update installed.
+<sup> **1** </sup> The server has the CredSSP update installed, and **Encryption Oracle Remediation** is set to **Mitigated** on the server side. The server will accpect the RDP connection from clients that do not have the CredSSP update installed.
 
-<sup> **2** </sup> The server has the CredSSP update installed, and **Encryption Oracle Remediation** is set to **Force updated clients**. The server will block any RDP connection from clients that do not have the CredSSP update installed.
-
+<sup> **2** </sup> The client has the CredSSP update installed, and **Encryption Oracle Remediation** is set to **Force updated clients** or **Mitigated** on the client side. This client will cannot connect to a server that does not have the CredSSP update installed.
 ## Resolution
 
 To resolve the issue, install CredSSP updates for both client and server so that RDP can be established in a secure manner. For more information, see [CVE-2018-0886 | CredSSP Remote Code Execution Vulnerability](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2018-0886).
@@ -71,25 +69,25 @@ To resolve the issue, install CredSSP updates for both client and server so that
 ### How to install this update by using Azure Serial console
 
 1. Sign in to the [Azure portal](https://portal.azure.com), select **Virtual Machine**, and then select the VM.
-2. Scroll down to the **Support + Troubleshooting** section, and then click **Serial console (Preview)**. The serial console requires Special Administrative Console (SAC) to be enabled within the Windows VM. If you do not see **SAC>** in the console (as shown in the following screenshot), go to the "[How to install this update by using Remote PowerShell](#how-to-install-this-update-by-using-remote-powershell)" section in this article.
+2. Scroll down to the **Help** section, and then click **Serial console**. The serial console requires Special Administrative Console (SAC) to be enabled within the Windows VM. If you do not see **SAC>** in the console (as shown in the following screenshot), go to the "[How to install this update by using Remote PowerShell](#how-to-install-this-update-by-using-remote-powershell)" section in this article.
 
     :::image type="content" source="media/credssp-encryption-oracle-remediation/connected-sac.svg" alt-text="Screenshot of connected SAC." border="false":::
   
 3. Type `cmd` to start a channel that has a CMD instance.
 
-4. Type `ch-si 1` to switch to the channel that is running the CMD instance. You receive the following output:
+4. Type `ch -si 1` to switch to the channel that is running the CMD instance. You receive the following output:
 
     :::image type="content" source="media/credssp-encryption-oracle-remediation/launch-cmd.svg" alt-text="Screenshot of launching CMD in SAC." border="false":::
 
-5. Press Enter, and then enter your login credentials that have administrative permission.
-6. After you enter valid credentials, the CMD instance opens, and you will see the command at which you can start troubleshooting.
+5. Press Enter, and then enter your login credentials that have administrative permission.
+6. After you enter valid credentials, the CMD instance opens, and you will see the command at which you can start troubleshooting.
 
     :::image type="content" source="media/credssp-encryption-oracle-remediation/cmd-section.svg" alt-text="Screenshot of CMD section in SAC." border="false":::
 
 7. To start a PowerShell instance, type `PowerShell`.
 8. In the PowerShell instance, [run the Serial console script](#azure-serial-console-scripts) based on the VM operating system. This script performs the following steps:
 
-   - Create a folder in which to save the download file.
+   - Create a folder in which to save the download file.
    - Download the update.
    - Install the update.
    - Add the vulnerability key to allow non-updated clients to connect to the VM.
@@ -104,10 +102,10 @@ To resolve the issue, install CredSSP updates for both client and server so that
     ```
 
 2. In the Azure portal, configure **Network Security Groups** on the VM to allow traffic to port 5986.
-3. In the Azure portal, select **Virtual Machine** > < **your VM** >, scroll down to the **OPERATIONS** section, click the **Run command**, and then run **EnableRemotePS**.
-4. On the Windows-based computer, [run the Remote PowerShell script](#remote-powershell-scripts) for the appropriate system version of your VM. This script performs the following steps:
-   - Connect to Remote PowerShell on the VM.
-   - Create a folder to which to save the download file.
+3. In the Azure portal, select **Virtual Machine** > < **your VM** >, scroll down to the **OPERATIONS** section, click the **Run command**, and then run **EnableRemotePS**.
+4. On the Windows-based computer, [run the Remote PowerShell script](#remote-powershell-scripts) for the appropriate system version of your VM. This script performs the following steps:
+   - Connect to Remote PowerShell on the VM.
+   - Create a folder to which to save the download file.
    - Download the Credssp update.
    - Install the update.
    - Set the vulnerability registry key to allow non-updated clients to connect to the VM.
@@ -117,15 +115,15 @@ To resolve the issue, install CredSSP updates for both client and server so that
 ## Workaround
 
 > [!WARNING]
-> After you change the following setting, an unsecure connection is allowed that will expose the remote server to attacks. Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
+> After you change the following setting, an unsecure connection is allowed that will expose the remote server to attacks. Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
 
-### Scenario 1: Updated clients cannot communicate with non-updated servers
+### Scenario 1: Updated clients cannot communicate with non-updated servers
 
-The most common scenario is that the client has the CredSSP update installed, and the **Encryption Oracle Remediation** policy setting doesn't allow an insecure RDP connection to a server that does not have the CredSSP update installed.
+The most common scenario is that the client has the CredSSP update installed, and the **Encryption Oracle Remediation** policy setting doesn't allow an insecure RDP connection to a server that does not have the CredSSP update installed.
 
 To work around this issue, follow these steps:
 
-1. On the client that has the CredSSP update installed, run **gpedit.msc**, and then browse to **Computer Configuration** > **Administrative Templates** > **System** > **Credentials Delegation** in the navigation pane.
+1. On the client that has the CredSSP update installed, run **gpedit.msc**, and then browse to **Computer Configuration** > **Administrative Templates** > **System** > **Credentials Delegation** in the navigation pane.
 2. Change the **Encryption Oracle Remediation policy** to **Enabled**, and then change **Protection Level** to **Vulnerable**.
 
     If you cannot use gpedit.msc, you can make the same change by using the registry, as follows:
@@ -137,17 +135,17 @@ To work around this issue, follow these steps:
         REG ADD HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System\CredSSP\Parameters\ /v AllowEncryptionOracle /t REG_DWORD /d 2
         ```
 
-### Scenario 2: Non-updated clients cannot communicate with patched servers
+### Scenario 2: Non-updated clients cannot communicate with patched servers
 
-If the Azure Windows VM has this update installed, and it is restricted to receiving non-updated clients, follow these steps to change the **Encryption Oracle Remediation** policy setting:
+If the Azure Windows VM has this update installed, and it is restricted to receiving non-updated clients, follow these steps to change the **Encryption Oracle Remediation** policy setting:
 
-1. On any Windows computer that has PowerShell installed, add the IP of the VM to the "trusted" list in the host file:
+1. On any Windows computer that has PowerShell installed, add the IP of the VM to the "trusted" list in the host file:
 
     ```powershell
     Set-item wsman:\localhost\Client\TrustedHosts -value <IP>
     ```
 
-2. Go to the [Azure portal](https://portal.azure.com), locate the VM, and then update the **Network Security group** to allow PowerShell ports 5985 and 5986.
+2. Go to the [Azure portal](https://portal.azure.com), locate the VM, and then update the **Network Security group** to allow PowerShell ports 5985 and 5986.
 3. On the Windows computer, connect to the VM by using PowerShell:
 
    **For HTTP:**  
@@ -162,7 +160,7 @@ If the Azure Windows VM has this update installed, and it is restricted to rece
     $Skip = New-PSSessionOption -SkipCACheck -SkipCNCheck Enter-PSSession -ComputerName "<<Public IP>>" -port "5986" -Credential (Get-Credential) -useSSL -SessionOption $Skip
     ```
 
-4. Run the following command to change the **Encryption Oracle Remediation** policy setting by using the registry:
+4. Run the following command to change the **Encryption Oracle Remediation** policy setting by using the registry:
 
     ```powershell
     Set-ItemProperty -Path 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System\CredSSP\Parameters' -name "AllowEncryptionOracle" 2 -Type DWord

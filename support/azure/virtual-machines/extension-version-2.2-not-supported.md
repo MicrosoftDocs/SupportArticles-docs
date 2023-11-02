@@ -4,6 +4,7 @@ description: Works around a problem in which you receive an Extension version '2
 ms.date: 07/21/2020
 ms.reviewer: Ejarvi, devtiw, scotro
 ms.service: virtual-machines
+ms.subservice: vm-extensions-not-operating
 ---
 # Error when you try to enable Azure Disk Encryption: Extension version '2.2' is not supported
 
@@ -24,7 +25,7 @@ To work around this problem, use one of the following methods.
 
 ### Method 1
 
-Revert to using the Azure AD parameters in the syntax for [Set-AzureRmVmDiskEncryptionExtension](/powershell/module/azurerm.compute/set-azurermvmdiskencryptionextension?view=azurermps-6.2.0&preserve-view=true).
+Revert to using the Microsoft Entra parameters in the syntax for [Set-AzureRmVmDiskEncryptionExtension](/powershell/module/azurerm.compute/set-azurermvmdiskencryptionextension?view=azurermps-6.2.0&preserve-view=true).
 
 The parameters are the following:
 

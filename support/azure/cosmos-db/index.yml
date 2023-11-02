@@ -1,0 +1,23 @@
+### YamlMime:Landing
+
+title: Azure Cosmos DB troubleshooting documentation
+summary: Welcome to Azure Cosmos DB troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might experience when you use Azure Cosmos DB. In the navigation pane, browse through the article list or use the search to find specific issues and solutions.
+metadata:
+  title: Troubleshoot Azure Cosmos DB issues
+  description: Documentation for troubleshooting common issues with Azure Cosmos DB.
+  ms.service: cosmos-db
+  author: oury-msft
+  ms.author: ouryba
+  ms.reviewer: v-jayaramanp
+  ms.topic: landing-page
+  ms.date: 09/25/2023
+
+landingContent:
+  - title: General troubleshooting
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Troubleshoot Azure Cosmos DB Emulator
+            url: ./emulator.md
+          - text: Failed private endpoints deployment
+            url: ./private-endpoints.md

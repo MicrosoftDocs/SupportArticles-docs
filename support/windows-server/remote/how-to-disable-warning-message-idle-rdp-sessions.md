@@ -1,21 +1,19 @@
 ---
 title: How to disable warning message for idle remote desktop sessions
 description: Provides the method to disable warning message for idle remote desktop sessions by using PowerShell.
-ms.date: 4/30/2021
-author: v-lianna
-ms.author: delhan
+ms.date: 09/24/2021
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika, ishimada
+ms.reviewer: kaushika, ishimada, v-lianna
 ms.custom: sap:remote-desktop-sessions, csstroubleshoot
 ms.technology: windows-server-rds
 ---
 # How to disable warning message for idle remote desktop sessions
 
-_Applies to:_ &nbsp; Windows Servers  
+_Applies to:_ &nbsp; Windows Servers
 
 When a remote desktop session idle session limit is exceeded, a warning message is displayed and the session is disconnected after two minutes. If you want the session to be disconnected immediately and without a warning message, set the **EnableTimeoutWarning** property of the **Win32_TSSessionSettings** WMI class to **0** by using the following PowerShell cmdlet from an elevated PowerShell prompt (as an administrator):
 

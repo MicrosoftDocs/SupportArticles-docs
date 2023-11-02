@@ -4,6 +4,7 @@ description: Describes the Microsoft support policy that applies when you run Ci
 ms.date: 07/21/2020
 ms.reviewer: 
 ms.service: virtual-machines
+ms.subservice: vm-support-statements
 ---
 # Support policy for Citrix services on Azure
 

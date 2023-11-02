@@ -1,9 +1,9 @@
 ---
 title: Unable to send SMTP Email
 description: Provides a solution to an error that occurs when  try to send mails via your own SMTP server from a newly created Flow app.
-ms.reviewer: 
+ms.reviewer: xiangl
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: power-automate-flows
 ---
 # Unable to send SMTP Email

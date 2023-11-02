@@ -1,11 +1,10 @@
 ---
 title: Quota exceeded error during creation or upgrade
 description: Troubleshoot the Quota exceeded error during creation or upgrade of an Azure Kubernetes Service (AKS) cluster.
-ms.date: 6/1/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
-ms.reviewer: chiragpa, nickoman
-ms.service: container-service
+ms.date: 06/01/2022
+ms.reviewer: chiragpa, nickoman, v-leedennis
+ms.service: azure-kubernetes-service
+ms.subservice: common-issues
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to avoid exceeding a "Quota exceeded" error for virtual CPU (vCPU) usage so that I can create or upgrade an Azure Kubernetes Service (AKS) cluster successfully.
 ---

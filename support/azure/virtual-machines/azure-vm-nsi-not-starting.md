@@ -4,6 +4,7 @@ description: Troubleshoot Network Store Interface service not starting
 ms.date: 12/20/2021
 ms.reviewer: 
 ms.service: virtual-machines
+ms.subservice: vm-cannot-connect
 ms.collection: windows
 ---
 

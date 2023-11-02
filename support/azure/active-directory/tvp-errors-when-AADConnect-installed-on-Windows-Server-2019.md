@@ -1,7 +1,7 @@
 ---
-title: Table-valued parameter errors when Azure AD Connect is installed on Windows Server 2019
-description: Describes an issue in which an Azure AD Connect synchronization generates errors in Windows Server 2019.
-ms.date: 3/10/2021
+title: Table-valued parameter errors when Microsoft Entra Connect is installed on Windows Server 2019
+description: Describes an issue in which a Microsoft Entra Connect synchronization generates errors in Windows Server 2019.
+ms.date: 03/10/2021
 author: genlin
 ms.author: genli
 ms.reviewer: riantu, nualex, wufrank
@@ -9,11 +9,11 @@ ms.service: active-directory
 ms.subservice: enterprise-users
 ---
 
-# Table-valued parameter errors after Azure AD Connect is installed on Windows Server 2019
+# Table-valued parameter errors after Microsoft Entra Connect is installed on Windows Server 2019
 
-This article describes a problem in which synchronization errors appear   after Microsoft Azure AD Connect is installed on Windows Server 2019-based servers.
+This article describes a problem in which synchronization errors appear   after Microsoft Entra Connect is installed on Windows Server 2019-based servers.
 
-_Original product version:_&nbsp; Azure Active Directory, Windows Server 2019
+_Original product version:_&nbsp; Microsoft Entra ID, Windows Server 2019
 
 ## Symptoms
 
@@ -49,7 +49,7 @@ When this problem occurs, Event ID 6301 is logged in the server Application log,
 >BAIL: MMS(7996): ..\syncstage.cpp(414): 0x80004005 (Unspecified error)<br>
 >Azure AD Sync 1.5.45.0"
 
-This event indicates that an error occurs when Azure AD Connect attempts a read or write operation over the LocalDB database by using table-valued parameters.
+This event indicates that an error occurs when Microsoft Entra Connect attempts a read or write operation over the LocalDB database by using table-valued parameters.
 
 For more information about table-valued parameters, see [Use Table-Valued Parameters (Database Engine)](/sql/relational-databases/tables/use-table-valued-parameters-database-engine?text=Table-valued%20parameters%20are%20declared,temporary%20table%20or%20many%20parameters).
 
@@ -67,7 +67,7 @@ To resolve this problem, clear the checkbox next to **Beta: Use Unicode UTF-8 fo
 
 To change the setting, follow these steps:
 
-1. On the Azure AD Connect server, open Control Panel, and then select **Clock, Language and Region**.  
+1. On the Microsoft Entra Connect server, open Control Panel, and then select **Clock, Language and Region**.  
 
     :::image type="content" source="media/tvp-errors-when-AADConnect-installed-on-Windows-Server-2019/control-panel-clock-language.png" alt-text="Screenshot of Control Panel with the Clock, Language, and Region option selected.":::
 

@@ -1,7 +1,7 @@
 ---
 title: Error message when you run the w32tm /resync command
 description: Describes a problem that occurs if a Group Policy object for a Windows Time Service object is configured incorrectly.
-ms.date: 12/07/2020
+ms.date: 12/05/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 929276
 When you run the `w32tm /resync` command to synchronize Microsoft Windows Server 2003 or Microsoft Windows Small Business Server 2003 (Windows SBS) to an external time source, you receive the following error message:
 > The computer did not resync because no time data was available.
 
-If you run the `w32tm /config /syncfromflags:manual` command or the `w32tm /config/manualpeerlist:peerlist` command to determine whether Windows is configured correctly, the commands complete successfully.
+If you run the `w32tm /config /syncfromflags:manual` command or the `w32tm /config /manualpeerlist:peerlist` command to determine whether Windows is configured correctly, the commands complete successfully.
 
 ## Cause
 
@@ -65,4 +65,4 @@ To resolve this problem, examine the Group Policies that set the Windows Time Se
 ## More Information
 
 For more information, click the following article numbers to view the articles in the Microsoft Knowledge Base:  
-[816042](/troubleshoot/windows-server/identity/configure-authoritative-time-server) How to configure an authoritative time server in Windows Server 2003
+[816042](configure-authoritative-time-server.md) How to configure an authoritative time server in Windows Server 2003

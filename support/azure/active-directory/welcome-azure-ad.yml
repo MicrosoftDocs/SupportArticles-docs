@@ -1,16 +1,16 @@
 ### YamlMime:Landing
 
-title: Azure Active Directory troubleshooting documentation # < 60 chars
-summary: Welcome to Azure Active Directory troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Azure Active Directory. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+title: Microsoft Entra troubleshooting documentation # < 60 chars
+summary: Welcome to Microsoft Entra troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Microsoft Entra ID. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
 metadata:
-  title: Troubleshoot Azure Active Directory issues
-  description: Documentation for troubleshooting common issues with Azure Active Directory. # Required; article description that is displayed in search results. < 160 chars.
+  title: Troubleshoot Microsoft Entra ID issues
+  description: Documentation for troubleshooting common issues with Microsoft Entra ID. # Required; article description that is displayed in search results. < 160 chars.
   services: active-directory
   ms.service: active-directory  #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.
-  ms.date: 2/11/2022
+  ms.date: 02/11/2022
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -29,7 +29,7 @@ landingContent:
             url: ./code-403-azure-seamless-sso-win10.md
 
  # Card
-  - title: Azure AD Hybrid Sync Agent Installation Issues
+  - title: Microsoft Entra Hybrid Sync Agent Installation Issues
     linkLists:
       - linkListType: how-to-guide
         links:
@@ -55,7 +55,7 @@ landingContent:
             url: ./password-writeback-access-rights-permissions.md
           - text: Error code 8023062C - insecure password reset or change
             url: ./password-writeback-error-code-8023062c.md
-          - text: Error code SSPR_009 - synced Azure AD admin can't do cloud reset
+          - text: Error code SSPR_009 - synced Microsoft Entra admin can't do cloud reset
             url: ./password-writeback-error-code-sspr-009.md
           - text: Error code SSPR_0029 - on-premises configuration not set up
             url: ./password-writeback-error-code-sspr-0029.md

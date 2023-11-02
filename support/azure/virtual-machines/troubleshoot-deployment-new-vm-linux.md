@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot Linux VM deployment| Microsoft Docs
-description: Troubleshoot Resource Manager deployment issues when you create a new Linux virtual machine in Azure
+title: Troubleshoot Linux VM deployment
+description: Troubleshoot Resource Manager deployment issues when you create a new Linux virtual machine in Azure.
 services: virtual-machines, azure-resource-manager
 documentationcenter: ''
 
@@ -8,6 +8,7 @@ author: srijang
 manager: dcscontentpm
 tags: top-support-issue, azure-resource-manager
 ms.service: virtual-machines
+ms.subservice: vm-deploy
 ms.collection: linux
 ms.workload: na
 ms.tgt_pltfrm: vm-linux
@@ -375,7 +376,7 @@ Yes. You can add an existing classic VM to a new or existing Availability Set. F
 
 ## Next steps
 
-- [Supportability of adding Azure VMs to an existing availability set](/troubleshoot/azure/virtual-machines/virtual-machines-availability-set-supportability)
-- [Redeploy Linux virtual machine to new Azure node](/troubleshoot/azure/virtual-machines/redeploy-to-new-node-linux)
+- [Supportability of adding Azure VMs to an existing availability set](virtual-machines-availability-set-supportability.md)
+- [Redeploy Linux virtual machine to new Azure node](redeploy-to-new-node-linux.md)
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

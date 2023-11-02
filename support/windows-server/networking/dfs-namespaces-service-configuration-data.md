@@ -1,7 +1,7 @@
 ---
 title: DFS Namespaces service and configuration
 description: Provides information about the Distributed File System (DFS) Namespaces service to help you create a new namespace.
-ms.date: 10/19/2020
+ms.date: 11/21/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -106,7 +106,9 @@ For more information about the recovery process for a DFS namespace, click the f
             **HKEY_LOCAL_MACHINE\Software\Microsoft\Dfs\Roots\Domain**  
 
       2. If a registry key that is named identically to the inconsistent namespace is found, use the Dfsutil.exe tool to remove the registry key. For example, run the following command:  
-        dfsutil /clean /server: **servername** /share: **sharename** /verbose  
+         ```console
+         dfsutil /clean /server:<servername> /share:<sharename> /verbose
+         ```  
 
             > [!NOTE]
             > The **servername** placeholder is the name of the server hosting the namespace and the **sharename** placeholder is the name of the root share.

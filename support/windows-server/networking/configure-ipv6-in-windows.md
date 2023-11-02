@@ -1,7 +1,7 @@
 ---
 title: Configure IPv6 for advanced users
 description: Provides step-by-step guidance for how to use the Windows registry to disable IPv6 or certain IPv6 components in Windows.
-ms.date: 09/08/2020
+ms.date: 02/15/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -24,7 +24,6 @@ Windows Vista, Windows Server 2008, and later versions of Windows implement RFC 
 
 By default, Windows favors IPv6 global unicast addresses over IPv4 addresses.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 929852
 
 ## Summary

@@ -1,9 +1,9 @@
 ---
 title: There is a problem with the flow's trigger
 description: You may see an error that states there is a problem with the flow's trigger in a flow's run history. Provides a resolution.
-ms.reviewer: 
+ms.reviewer: alchin
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: power-automate-flows
 ---
 # "There is a problem with the flow's trigger" error shown in a flow's run history

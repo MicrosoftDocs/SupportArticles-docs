@@ -3,7 +3,6 @@ title: Error when you modify large table
 description: This article provides resolutions for the problem that occurs when you try to modify a large table by using the table designer in SQL Server Management Studio.
 ms.date: 11/19/2020
 ms.custom: sap:Management Studio
-ms.prod: sql
 ---
 # Error when you try to modify a large table by using SQL Server Management Studio
 

@@ -1,9 +1,10 @@
 ---
 title: Windows boot error 0xc0000034 on an Azure VM
 description: Fixes an issue that triggers Boot or BCD error 0xc0000034 when you try to start Windows on an Azure virtual machine (VM).
-ms.date: 07/21/2020
+ms.date: 10/20/2023
 ms.reviewer: jarrettr
 ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
 ms.collection: windows
 ---
 # Windows boot error 0xc0000034 on an Azure VM
@@ -41,7 +42,7 @@ To fix the issue, follow these steps.
 
     If the OS disk contains more than one partition, you can identify them by viewing the folders in the partitions:  
 
-    - The Windows partition contains a folder named "Windows," and this partition is larger than the others.  
+    - The Windows partition contains a folder named "Windows", and this partition is larger than the others.  
     - The Boot partition contains a folder named "Boot." This folder is hidden by default. To see the folder, you must display the hidden files and folders and disable the **Hide protected operating system files (Recommended)** option. The boot partition is typically 300 MB~500 MB.  
 
 ### Step 2: Repair the Boot Configuration data
@@ -49,14 +50,14 @@ To fix the issue, follow these steps.
 1. Run the following command line as an administrator, and then record the identifier of Windows Boot Loader (not Windows Boot Manager). The identifier is a 32-character code and it looks like this: xxxxxxxx-xxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. You will use this identifier in the next step.  
 
     ```console
-    bcdedit /store **<Boot partition>** :\boot\bcd /enum
+    bcdedit /store <Boot partition>:\boot\bcd /enum /v
     ```
 
 2. Repair the Boot Configuration data by running the following command lines. You must replace these placeholders by the actual values:
 
     - \<Windows partition> is the partition that contains a folder named "Windows."
     - \<Boot partition> is the partition that contains a hidden system folder named "Boot."
-    - \<Identifier> is the identifier of Windows Boot Loader you found in the previous step.
+    - \<Identifier> is the identifier of Windows Boot Loader you found in the previous step. For example: {9f25ee7a-e7b7-11db-94b5-f7e662935912}
 
     ```console
     bcdedit /store <Boot partition>:\boot\bcd /create {bootmgr}

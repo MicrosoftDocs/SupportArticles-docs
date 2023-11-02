@@ -3,7 +3,7 @@ title: Verification check fails
 description: This article provides resolutions to the error that occurs when verification check fails.
 ms.date: 08/18/2020
 ms.custom: sap:Installation, Migration, and Move
-ms.service: az-devops-project
+ms.service: azure-devops-server
 ---
 # Verification check fails with the error TF255435
 

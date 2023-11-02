@@ -1,5 +1,5 @@
 ---
-title: How to use PerfInsights in Microsoft Azure| Microsoft Docs
+title: How to use PerfInsights in Microsoft Azure
 description: Learns how to use PerfInsights to troubleshoot Windows VM performance problems.
 services: virtual-machines
 documentationcenter: ''
@@ -7,6 +7,7 @@ author: anandhms
 manager: dcscontentpm
 tags: ''
 ms.service: virtual-machines
+ms.subservice: vm-performance
 ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
@@ -184,14 +185,13 @@ Diskspd I/O workload tests (OS Disk [write] and pool drives [read/write])
 - This tool must be run on the VM that has the performance issue.
 
 - The following operating systems are supported:
+  - Windows Server 2022
   - Windows Server 2019
   - Windows Server 2016
   - Windows Server 2012 R2
   - Windows Server 2012
-  - Windows Server 2008 R2
+  - Windows 11
   - Windows 10
-  - Windows 8.1
-  - Windows 8
 
 #### Accessing SQL Server
 

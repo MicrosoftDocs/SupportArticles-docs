@@ -1,7 +1,13 @@
 - name: Microsoft Azure
   href: index.yml
   items:
-  - name: Azure Active Directory
+  - name: Azure Container Instances
+    href: azure-container-instances/welcome-container-instances.yml
+  - name: Microsoft Entra ID
+    href: active-directory/welcome-azure-ad.yml
+  - name: Microsoft Entra
+    href: microsoft-entra/welcome-microsoft-entra.yml
+  - name: Microsoft Entra ID
     href: active-directory/welcome-azure-ad.yml
   - name: Azure Kubernetes Services
     href: azure-kubernetes/welcome-azure-kubernetes.yml
@@ -17,3 +23,5 @@
     href: virtual-desktop/welcome-virtual-desktop.yml
   - name: Azure DevOps
     href: devops/welcome-azure-devops.yml
+  - name: Azure Cosmos DB
+    href: cosmos-db/index.yml

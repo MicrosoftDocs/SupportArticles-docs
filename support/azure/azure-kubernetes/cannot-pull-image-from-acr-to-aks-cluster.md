@@ -1,11 +1,13 @@
 ---
 title: Can't pull images from Azure Container Registry to Kubernetes
 description: This article helps you troubleshoot the most common errors that you may encounter when pulling images from a container registry to an AKS cluster.
-ms.date: 5/27/2022
+ms.date: 05/27/2022
 author: genlin
 ms.author: genli
 ms.reviewer: chiragpa, andbar
-ms.service: container-service
+ms.service: azure-kubernetes-service
+ms.subservice: troubleshoot-cant-pull-images-from-acr-to-cluster
+ms.custom: devx-track-azurecli
 ---
 # Fail to pull images from Azure Container Registry to Azure Kubernetes Service cluster
 
@@ -19,7 +21,7 @@ This article assumes that you have an existing AKS cluster and an existing conta
 
 - If you need an AKS cluster, deploy one by using [the Azure CLI](/azure/aks/kubernetes-walkthrough) or [the Azure portal](/azure/aks/kubernetes-walkthrough-portal).
 
-- If you need a container registry, create a private container registry by using [the Azure CLI](/azure/container-registry/container-registry-get-started-azure-cli) or [the Azure portal](/azure/container-registry/container-registry-get-started-portal).
+- If you need an Azure Container Registry (ACR), create one by using [the Azure CLI](/azure/container-registry/container-registry-get-started-azure-cli) or [the Azure portal](/azure/container-registry/container-registry-get-started-portal).
 
 You also need the Azure CLI version 2.0.59 or later to be installed and configured. Run [az version](/cli/azure/reference-index#az-version) to find the version. If you need to install or upgrade, see [Install Azure CLI](/cli/azure/install-azure-cli).
 
@@ -166,7 +168,7 @@ If you pull an image by using an [image pull secret](https://kubernetes.io/docs/
 
 1. In the **Access keys** page for the container registry, compare the container registry values with the values in the Kubernetes secret.
 
-1. If the values don’t match, then update or re-create the Kubernetes secret accordingly.
+1. If the values don't match, then update or re-create the Kubernetes secret accordingly.
 
 > [!NOTE]
 > If a **Regenerate** password operation happened, an operation that's named "Regenerate Container Registry Login Credentials" will be displayed in the **Activity log** page of the container registry. The **Activity log** has a [90-day retention period](/azure/azure-monitor/essentials/activity-log#retention-period).

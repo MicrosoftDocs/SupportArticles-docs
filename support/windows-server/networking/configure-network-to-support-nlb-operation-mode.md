@@ -1,7 +1,7 @@
 ---
 title: Configure network infrastructure to support the NLB operation mode
 description: Describes how the different NLB operation modes affect network infrastructure, and the best ways in which the network can support each mode.
-ms.date: 12/07/2020
+ms.date: 02/02/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -111,11 +111,10 @@ The articles that are listed in the following table explain clearly what you hav
 |Cisco| [<ul><li>Catalyst Switches for Microsoft Network Load Balancing Configuration Example](https://www.cisco.com/c/en/us/support/docs/switches/catalyst-6500-series-switches/107995-configure-nlb-00.html) <br/>If you use VSS on Cisco Catalyst, you may experience traffic issues on one of the stack nodes. For more information, contact Cisco and mention [this bug](https://bst.cloudapps.cisco.com/bugsearch/bug/CSCvd69060) (you must have a Cisco account to access the bug).</li> <li> [Microsoft Network Load Balancing on Nexus 7000 Configuration Example](http://www.cisco.com/c/en/us/support/docs/ip/multicast/116150-configure-Nexus7000-00.html) </li> <li>[Configuring Microsoft Network Load Balancing (NLB) on Nexus 9000 Series](https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus9000/sw/92x/multicast/b-cisco-nexus-9000-series-nx-os-multicast-routing-configuration-guide-92x.html)</li> </ul> |
 |Juniper| <ul><li>[EX Series Switches and Microsoft Network Load Balancing (NLB) in multicast mode](https://kb.juniper.net/InfoCenter/index?page=content&id=KB14854) </li> <li> [[EX/QFX] Example - Workaround for using Microsoft network load balancing on EX4300 and QFX5100 switches](https://kb.juniper.net/InfoCenter/index?page=content&id=KB30135) </li> </ul> |
 |HPE| [HP Switch 5500/5500G - How to implement Microsoft Network Load Balancing using multicasts on the Switch 5500 and 5500G](https://support.hpe.com/hpesc/public/docDisplay?docId=emr_na-c02656362) |
-|Dell| <ul><li>[Dell Configuration Guide for the S4048-ON System 9.9(0.0)](https://www.dell.com/support/manuals/en-sg/force10-s4048-on/S4048_ON_9.9.0.0_Config_Pub-v1/Microsoft-Network-Load-Balancing?guid=GUID-A7EAB672-025C-4498-A1A2-6C32CCB9552C&lang=en-us) </li> <li>[Dell Networking Force10 switches and Microsoft Network Load Balancing](https://www.dell.com/support/kbdoc/en-sg/000121394/dell-networking-force10-switches-and-microsoft-network-load-balancing) </li> </ul>|
+|Dell| [Dell Networking Force10 switches and Microsoft Network Load Balancing](https://www.dell.com/support/kbdoc/en-sg/000121394/dell-networking-force10-switches-and-microsoft-network-load-balancing)|
 |Huawei| [Example for Connecting a Device to an NLB Cluster (Using Multi-Interface ARP)](https://support.huawei.com/ehedex/pages/DOC1000135317AEG0221R/04/DOC1000135317AEG0221R/04/resources/dc/dc_s_ccase_arp_003.html) |
 |D-Link| [D-Link Layer 3 Switch Microsoft NLB in Multicast Mode Configuration Example](https://files.dlink.com.au/Products/DGS-3620-52P/REV_A/SetupGuides/Layer_3_Switch_Microsoft_NLB_in_Multicast_Mode_Configuration_Example.pdf) |
 |Avaya| [Technical Configuration Guide for Microsoft Network Load Balancing](https://downloads.avaya.com/css/P8/documents/100123894) (download)|
-|H3C| [05-Layer 3 - IP Services Configuration Guide](https://www.h3c.com/en/Support/Resource_Center/HK/Switches/H3C_S10500/H3C_S10500/Technical_Documents/Configure/Configuration_Guide/H3C_S10500_CG-Release7536P05-6W100/05/) |
   
 ### Configure virtual environments in multicast mode
 
@@ -132,6 +131,9 @@ This mode is basically the same as multicast mode, except that the switches can 
 When you enable IGMP multicast, the NLB nodes send IGMP Join messages to the 239.255.x.y multicast address (in this address, x.y represents the last two octets of the NLB VIP). For example, if the NLB VIP is 10.0.0.1, the multicast address for IGMP Join messages is 239.244.0.1. These messages indicate the group membership of the NLB nodes. The switches use this information to configure the MAC address table.
 
 Some of the articles that are listed in the [Multicast](#multicast) section include the correct configuration parameters for their devices for multicast with IGMP. To verify that your equipment can support this mode, contact your hardware vendor.
+
+> [!NOTE]
+> Up until Windows Server 2022, NLB supports IGMP Version 1 on any Windows versions that include IGMP multicast mode.
 
 ## Configure the NLB operation mode
 

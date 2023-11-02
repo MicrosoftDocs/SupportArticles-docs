@@ -17,7 +17,7 @@ ms.technology: windows-client-security
 
 This article discusses the issues that occur because the recovery password for Windows BitLocker isn't FIPS-compliant in Windows.
 
-_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2008 R2  
 _Original KB number:_ &nbsp; 947249
 
 ## Introduction

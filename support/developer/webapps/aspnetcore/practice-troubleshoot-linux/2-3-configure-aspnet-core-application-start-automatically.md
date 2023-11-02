@@ -132,7 +132,7 @@ Should the web application stop unexpectedly, it will automatically start again 
 There is one final step: The service is running but not enabled. "Enabled" means that it starts automatically after the server is started. This is the desired final configuration. Run the following command to make sure that the service is enabled:
 
 ```bash
-Sudo systemctl enable myfirstwebapp.service
+sudo systemctl enable myfirstwebapp.service
 ```
 
 :::image type="content" source="./media/2-3-configure-aspnet-core-application-start-automatically/sudo-systemctl-enable-command.png" alt-text="Screenshot of sudo systemctl enable command." border="true":::

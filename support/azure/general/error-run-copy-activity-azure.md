@@ -3,7 +3,7 @@ title: Error when you try to copy content to Azure
 description: This article provides a resolution for the problem that occurs when you try to copy content to Microsoft Azure by using a Java-based tool or program.
 ms.date: 10/22/2020
 ms.custom: sap:Data Factory, V2 - Azure-SSIS Integration Runtime
-ms.service: azure
+ms.service: azure-common-issues-support
 ---
 # UserErrorJreNotFound error message when you run a copy activity to Azure
 

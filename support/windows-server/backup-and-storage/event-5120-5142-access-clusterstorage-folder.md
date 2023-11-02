@@ -1,7 +1,7 @@
 ---
 title: Unable to access ClusterStorage folder
 description: Describes an issue where you can't access a CSV volume from a passive (non-coordinator) node and receive event ID 5120 or 5142.
-ms.date: 09/08/2020
+ms.date: 11/18/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -81,6 +81,6 @@ The recommendation is for any network that the cluster might use (any network no
 
 Reference Articles:
 
-[Hyper-V: Using Live Migration with Cluster Shared Volumes in Windows Server 2008 R2](https://technet.microsoft.com/library/dd446679%28WS.10%29.aspx)
+[Hyper-V: Using Live Migration with Cluster Shared Volumes in Windows Server 2008 R2](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd446679(v=ws.10))
 
 [Cluster Shared Volumes Support for Hyper-V](https://technet.microsoft.com/library/dd630633%28WS.10%29.aspx)

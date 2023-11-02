@@ -208,3 +208,5 @@
     href: reflectiontypeloadexception-error-vmm-service.md
   - name: VMMAdminUI has stopped working
     href: vmmadminui-has-stopped-working.md
+  - name: Enable debug logging in VMM
+    href: enable-debug-logging.md

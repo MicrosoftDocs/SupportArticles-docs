@@ -1,11 +1,12 @@
 ---
-title: An internal error occurs when you make an RDP connection to Azure Virtual Machines | Microsoft Docs
-description: Learn how to troubleshoot RDP internal errors in Microsoft Azure.| Microsoft Docs
+title: An internal error occurs when you make an RDP connection to Azure Virtual Machines
+description: Learn how to troubleshoot RDP internal errors in Microsoft Azure.
 services: virtual-machines
 documentationCenter: ''
 author: genlin
 manager: dcscontentpm
 ms.service: virtual-machines
+ms.subservice: vm-cannot-connect
 ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows

@@ -1,7 +1,7 @@
 ---
 title: Service overview and network port requirements
 description: A roadmap of ports, protocols, and services that are required by Microsoft client and server operating systems, server-based applications, and their subcomponents to function in a segmented network.
-ms.date: 09/08/2020
+ms.date: 02/08/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -82,9 +82,9 @@ Active Directory runs under the Lsass.exe process and includes the authenticatio
 
 > [!NOTE]
 >
-> - If your computer network environment uses only Windows Server 2008 R2, Windows Server 2008, Windows 7, or Windows Vista, you must enable connectivity over the high port range of 49152 through 65535.
+> - If your computer network environment uses only Windows Server 2008 R2, Windows Server 2008, Windows 7, Windows Vista or later versions, you must enable connectivity over the high port range of 49152 through 65535.
 >
-> - If your computer network environment uses Windows Server 2008 R2, Windows Server 2008, Windows 7, or Windows Vista together with versions of Windows earlier than Windows Server 2008 and Windows Vista, you must enable connectivity over both port ranges:  
+> - If your computer network environment uses Windows Server 2008 R2, Windows Server 2008, Windows 7, Windows Vista or later versions together with versions of Windows earlier than Windows Server 2008 and Windows Vista, you must enable connectivity over both port ranges:  
 > High port range of 49152 through 65535  
 > Low port range of 1025 through 5000
 > - If your computer network environment uses only versions of Windows earlier than Windows Server 2008 and Windows Vista, you must enable connectivity over the low port range of 1025 through 5000.
@@ -113,12 +113,10 @@ Finally, you can hard-code the port that is used for Active Directory replicatio
 |IPsec ISAKMP|UDP|500|
 |NAT-T|UDP|4500|
 |RPC|TCP|135|
-|RPC randomly allocated high TCP ports¹|TCP|1024 - 5000<br/>49152 - 65535²|
+|RPC randomly allocated high TCP ports¹|TCP|49152 - 65535|
 |SMB|TCP|445|
   
 ¹ For more information about how to customize this port, see Domain controllers and Active Directory in the [References](#references) section. This section also includes remote WMI and DCOM communications first used in Windows Server 2012 domain controller promotion during prerequisite validation and with the Server Manager tool.
-
-² It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
 In addition, the Microsoft LDAP client uses ICMP pings to verify that an LDAP server it has a pending request with is still present on the network. The following settings are LDAP session options:
 
@@ -170,11 +168,9 @@ System service name: **CertSvc**
 |---|---|---|
 |RPC|TCP|135|
 |SMB|TCP|445, 139|
-|Randomly allocated high TCP ports¹|TCP|**random port number between 1024 - 65535**<br/>**random port number between 49152 - 65535**²|
+|Randomly allocated high TCP ports¹|TCP|**random port number between 49152 - 65535**|
   
 ¹ For more information about how to customize this port, see Remote Procedure Calls and DCOM in the [References](#references) section.
-
-² It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
 For more information, see [3.2.2.6.2.1.4.5.9 msPKI-Certificate-Name-Flag](/openspecs/windows_protocols/ms-wcce/a1f27ffb-7f74-4fa1-8841-7cde4ba0bcfe).
 
@@ -190,7 +186,7 @@ System service name: **ClusSvc**
 |Cluster Service|TCP|3343 (This port is required during a node join operation.)|
 |RPC|TCP|135|
 |Cluster Administrator|UDP|137|
-|Randomly allocated high UDP ports²|UDP|Random port number between 1024 and 65535<br/>Random port number between 49152 and 65535³|
+|Randomly allocated high ports²|TCP|Random port number between 49152 and 65535|
   
 > [!NOTE]
 > Additionally, for successful validation on Windows Failover Clusters on 2008 and above, allow inbound and outbound traffic for ICMP4, ICMP6, and port 445/TCP for SMB.
@@ -198,8 +194,6 @@ System service name: **ClusSvc**
 > ¹ Cluster Service UDP traffic over port 3343 requires the Datagram Transport Layer Security (DTLS) protocol, version 1.0 or version 1.2. By default, DTLS is enabled. For more information, see [Protocols in TLS/SSL (Schannel SSP)](/windows/win32/secauthn/protocols-in-tls-ssl--schannel-ssp-).
 >
 > ² For more information about how to customize these ports, see Remote Procedure Calls and DCOM in the [References](#references) section.
->
-> ³ It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
 ### Computer Browser
 
@@ -237,19 +231,17 @@ System service name: `Dfs`
 
 |Application protocol|Protocol|Ports|
 |---|---|---|
-|NetBIOS Datagram Service|UDP|138³|
-|NetBIOS Session Service|TCP|139³|
+|NetBIOS Datagram Service|UDP|138<sup>2</sup>|
+|NetBIOS Session Service|TCP|139<sup>2</sup>|
 |LDAP Server|TCP|389|
 |LDAP Server|UDP|389|
 |SMB|TCP|445|
 |RPC|TCP|135|
-|Randomly allocated high TCP ports¹|TCP|**random port number between 1024 - 65535**<br/>**random port number between 49152 - 65535**²|
+|Randomly allocated high TCP ports¹|TCP|**random port number between 49152 - 65535**|
   
 ¹ For more information about how to customize this port, see Remote Procedure Calls and DCOM in the [References](#references) section.
 
-² It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
-
-³ The NETBIOS ports are optional and are not required when DFSN is using FQDN Server names.
+<sup>2</sup> The NETBIOS ports are optional and are not required when DFSN is using FQDN Server names.
 
 ### Distributed File System Replication
 
@@ -260,13 +252,12 @@ System service name: **DFSR**
 |Application protocol|Protocol|Ports|
 |---|---|---|
 |RPC|TCP|135|
-|RPC|TCP|5722³|
-|Randomly allocated high TCP ports¹|TCP|**random port number between 1024 - 65535**<br/>**random port number between 49152 - 65535**²|
+|RPC|TCP|5722<sup>2</sup>|
+|Randomly allocated high TCP ports¹|TCP|**random port number between 49152 - 65535**|
   
 ¹ For more information about how to customize this port, see Distributed File Replication Service in the [References](#references) section.
 
-² It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
-³ Port 5722 is only used on a Windows Server 2008 domain controller or on a Windows Server 2008 R2 domain controller. It is not used on a Windows Server 2012 domain controller.
+<sup>2</sup> Port 5722 is only used on a Windows Server 2008 domain controller or on a Windows Server 2008 R2 domain controller. It is not used on a Windows Server 2012 domain controller.
 
 ### Distributed Link Tracking Server
 
@@ -277,11 +268,9 @@ System service name: **TrkSvr**
 |Application protocol|Protocol|Ports|
 |---|---|---|
 |RPC|TCP|135|
-|Randomly allocated high TCP ports¹|TCP|**random port number between 1024 - 65535**<br/>**random port number between 49152 - 65535**²|
+|Randomly allocated high TCP ports¹|TCP|**random port number between 49152 - 65535**|
   
 ¹ For more information about how to customize this port, see Remote Procedure Calls and DCOM in the [References](#references) section.
-
-² It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
 ### Distributed Transaction Coordinator
 
@@ -292,11 +281,9 @@ System service name: **MSDTC**
 |Application protocol|Protocol|Ports|
 |---|---|---|
 |RPC|TCP|135|
-|Randomly allocated high TCP ports¹|TCP|**random port number between 1024 - 5000**<br/>**random port number between 49152 - 65535**²|
+|Randomly allocated high TCP ports¹|TCP|**random port number between 49152 - 65535**|
   
 ¹ For more information about how to customize this port, see Distributed Transaction Coordinator in the [References](#references) section.
-
-² It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
 ### DNS Server
 
@@ -336,11 +323,9 @@ System service name: **Fax**
 |NetBIOS Session Service|TCP|139|
 |SMB|TCP|445|
 |RPC|TCP|135|
-|Randomly allocated high TCP ports¹|TCP|**random port number between 1024 - 65535**<br/>**random port number between 49152 - 65535**²|
+|Randomly allocated high TCP ports¹|TCP|**random port number between 49152 - 65535**|
   
 ¹ For more information about how to customize this port, see Remote Procedure Calls and DCOM in the [References](#references) section.
-
-² It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
 ### File Replication
 
@@ -351,11 +336,9 @@ System service name: **NtFrs**
 |Application protocol|Protocol|Ports|
 |---|---|---|
 |RPC|TCP|135|
-|Randomly allocated high TCP ports¹|TCP|**random port number between 1024 - 65535**<br/>**random port number between 49152 - 65535**²|
+|Randomly allocated high TCP ports¹|TCP|**random port number between 49152 - 65535**|
   
 ¹ For more information about how to customize this port, see File Replication Service in the [References](#references) section.
-
-² It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
 ### FTP Publishing Service
 
@@ -367,9 +350,8 @@ System service name: **MSFTPSVC**
 |---|---|---|
 |FTP control|TCP|21|
 |FTP default data|TCP|20|
-|Randomly allocated high TCP ports|TCP| **random port number between 1024 - 65535**<br/>**random port number between 49152 - 65535¹** |
+|Randomly allocated high TCP ports|TCP|**random port number between 49152 - 65535** |
   
-¹ It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
 ### Group Policy
 
@@ -381,17 +363,15 @@ System service name: **Group Policy**
 
 |Application protocol|Protocol|Ports|
 |---|---|---|
-|DCOM¹|TCP + UDP|**random port number between 1024 - 65535**<br/>**random port number between 49152 - 65535**²|
-|ICMP (ping)³|ICMP|
+|DCOM¹|TCP + UDP|**random port number between 49152 - 65535**|
+|ICMP (ping)<sup>2</sup>|ICMP|
 |LDAP|TCP|389|
 |SMB|TCP|445|
-|RPC¹|TCP|135<br/>**random port number between 1024 - 65535**<br/>**random port number between 49152 - 65535**²|
+|RPC¹|TCP|135<br/>**random port number between 49152 - 65535**|
   
 ¹ For more information about how to customize this port, see Domain controllers and Active Directory in the [References](#references) section.
 
-² It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
-
-³ This protocol is required only by Windows XP and Windows Server 2003 acting as clients.
+<sup>2</sup> This protocol is required only by Windows XP and Windows Server 2003 acting as clients.
 
 > [!NOTE]
 > When the Group Policy Microsoft Management Console (MMC) snap-in creates Group Policy Results reports and Group Policy Modeling reports, it uses DCOM and RPC to send and to receive information from the Resultant Set of Policy (RSoP) provider on the client or on the domain controller. The various binary files that make up the Group Policy Microsoft Management Console (MMC) snap-in features primarily use COM calls to send or to receive information. When you initiate remote group policy results reporting from a Windows Server 2012 computer, access to the destination computer's event log is required. (See the [Event Log](#event-log) section in this article for port requirements.)
@@ -561,18 +541,16 @@ System service name: `Netlogon`
 
 |Application protocol|Protocol|Ports|
 |---|---|---|
-|NetBIOS Datagram Service|UDP|138³|
-|NetBIOS Name Resolution|UDP|137³|
-|NetBIOS Session Service|TCP|139³|
+|NetBIOS Datagram Service|UDP|138<sup>2</sup>|
+|NetBIOS Name Resolution|UDP|137<sup>2</sup>|
+|NetBIOS Session Service|TCP|139<sup>2</sup>|
 |SMB|TCP|445|
 |LDAP|UDP|389|
-|RPC¹|TCP|135, **random port number between 1024 - 65535**<br/>135, **random port number between 49152 - 65535**²|
+|RPC¹|TCP|135<br/>**random port number between 49152 - 65535**|
   
 ¹ For more information about how to customize this port, see Domain controllers and Active Directory in the [References](#references) section.
 
-² It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
-
-³ The NETBIOS ports are optional. `Netlogon` uses these only for trusts that don't support DNS or when DNS fails during an attempted fallback. If there is no WINS infrastructure and broadcasts can't work, you should either disable NetBt or set the computers and servers to NodeType=2.
+<sup>2</sup> The NETBIOS ports are optional. `Netlogon` uses these only for trusts that don't support DNS or when DNS fails during an attempted fallback. If there is no WINS infrastructure and broadcasts can't work, you should either disable NetBt or set the computers and servers to NodeType=2.
 
 > [!NOTE]
 > The Net Logon service uses RPC over named pipes for earlier versions of Windows clients. This service has the same firewall requirements as the File and Printer Sharing feature.
@@ -625,10 +603,14 @@ System service name: **Spooler**
 
 |Application protocol|Protocol|Ports|
 |---|---|---|
+|RPC|TCP|135|
+|Randomly allocated high TCP ports¹|TCP|**random port number between 49152 - 65535**|
 |NetBIOS Datagram Service|UDP|138|
 |NetBIOS Name Resolution|UDP|137|
 |NetBIOS Session Service|TCP|139|
 |SMB|TCP|445|
+  
+¹ For more information about how to customize this port, see Remote Procedure Calls and DCOM in the [References](#references) section.
   
 > [!NOTE]
 > The Print Spooler service uses RPC over named pipes. This service has the same firewall requirements as the File and Printer Sharing feature.
@@ -688,11 +670,9 @@ System service name: **Remote_Storage_User_Link**
 |Application protocol|Protocol|Ports|
 |---|---|---|
 |RPC|TCP|135|
-|Randomly allocated high TCP ports¹|TCP|**random port number between 1024 - 65535**<br/>**random port number between 49152 - 65535**²|
+|Randomly allocated high TCP ports¹|TCP|**random port number between 49152 - 65535**|
   
 ¹ For more information about how to customize this port, see Remote Procedure Calls and DCOM in the [References](#references) section.
-
-² It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
 ### Remote Storage
 
@@ -703,11 +683,9 @@ System service name: **Remote_Storage_Server**
 |Application protocol|Protocol|Ports|
 |---|---|---|
 |RPC|TCP|135|
-|Randomly allocated high TCP ports¹|TCP|**random port number between 1024 - 65535**<br/>**random port number between 49152 - 65535**²|
+|Randomly allocated high TCP ports¹|TCP|**random port number between 49152 - 65535**|
   
 ¹ For more information about how to customize this port, see Remote Procedure Calls and DCOM in the [References](#references) section.
-
-² It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
 ### Routing and Remote Access
 
@@ -848,27 +826,27 @@ System service name: **TlntSvr**
 |---|---|---|
 |Telnet|TCP|23|
   
-### Terminal Services
+### Remote Desktop Services (RDS)
 
-Terminal Services provides a multi-session environment that enables client devices to access a virtual Windows desktop session and Windows-based programs that are running on the server. Terminal Services enables multiple users to be connected interactively to a computer.
+RDS provides a multi-session environment that enables client devices to access a virtual Windows desktop session and Windows-based programs that are running on the server. RDS enables multiple users to be connected interactively to a computer.
 
 System service name: **TermService**
 
 |Application protocol|Protocol|Ports|
 |---|---|---|
-|Terminal Services|TCP|3389|
-|Terminal Services|UDP|3389|
+|RDS|TCP|3389|
+|RDS|UDP|3389|
   
-### Terminal Services Licensing
+### RDS Licensing (RDSL)
 
-The Terminal Services Licensing system service installs a license server and provides licenses to registered clients when the clients connect to a terminal server (a server that has Terminal Server enabled). Terminal Services Licensing is a low-impact service that stores the client licenses that are issued for a terminal server and tracks the licenses that are issued to client computers or terminals.
+The RDSL system service installs a license server and provides licenses to registered clients when the clients connect to a RDS server (a server that has RDS enabled). RDSL is a low-impact service that stores the client licenses that are issued for a RDS server and tracks the licenses that are issued to client computers or servers.
 
 System service name: **TermServLicensing**
 
 |Application protocol|Protocol|Ports|
 |---|---|---|
 |RPC|TCP|135|
-|Randomly allocated high TCP ports¹|TCP|**random port number between 1024 - 65535**<br/>**random port number between 49152 - 65535**²|
+|Randomly allocated high TCP ports¹|TCP|**random port number between 49152 - 65535**|
 |NetBIOS Datagram Service|UDP|138|
 |NetBIOS Name Resolution|UDP|137|
 |NetBIOS Session Service|TCP|139|
@@ -876,25 +854,21 @@ System service name: **TermServLicensing**
   
 ¹ For more information about how to customize this port, see Remote Procedure Calls and DCOM in the [References](#references) section.
 
-² It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
-
 > [!NOTE]
-> Terminal Services Licensing offers its services by using RPC over named pipes. This service has the same firewall requirements as the File and Printer Sharing feature.
+> RDSL offers its services by using RPC over named pipes. This service has the same firewall requirements as the File and Printer Sharing feature.
 
-### Terminal Services Session Directory
+### Remote Desktop Connection Broker
 
-The Terminal Services Session Directory system service enables clusters of load-balanced terminal servers to correctly route a user's connection request to the server where the user already has a session running. Users are routed to the first-available terminal server regardless of whether they are running another session in the server cluster. The load-balancing functionality pools the processing resources of several servers by using the TCP/IP networking protocol. You can use this service together with a cluster of terminal servers to increase the performance of a single terminal server by distributing sessions across multiple servers. Terminal Services Session Directory keeps track of disconnected sessions on the cluster and makes sure that users are reconnected to those sessions.
+The Remote Desktop Connection Broker system service enables clusters of load-balanced RDS servers to correctly route a user's connection request to the server where the user already has a session running. Users are routed to the first-available RDS server regardless of whether they are running another session in the server cluster. The load-balancing functionality pools the processing resources of several servers by using the TCP/IP networking protocol. You can use this service together with a cluster of RDS servers to increase the performance of a single RDS server by distributing sessions across multiple servers. Remote Desktop Connection Broker keeps track of disconnected sessions on the cluster and makes sure that users are reconnected to those sessions.
 
 System service name: **Tssdis**
 
 |Application protocol|Protocol|Ports|
 |---|---|---|
 |RPC|TCP|135|
-|Randomly allocated high TCP ports¹|TCP|**random port number between 1024 - 65535**<br/>**random port number between 49152 - 65535**²|
+|Randomly allocated high TCP ports¹|TCP|**random port number between 49152 - 65535**|
   
 ¹ For more information about how to customize this port, see Remote Procedure Calls and DCOM in the [References](#references) section.
-
-² It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
 ### Trivial FTP Daemon
 
@@ -1056,8 +1030,8 @@ The following table summarizes the information from the [System services ports](
 |135|TCP|RPC|Remote Storage Notification|
 |135|TCP|RPC|Remote Storage|
 |135|TCP|RPC|Systems Management Server 2.0|
-|135|TCP|RPC|Terminal Services Licensing|
-|135|TCP|RPC|Terminal Services Session Directory|
+|135|TCP|RPC|RDSL|
+|135|TCP|RPC|Remote Desktop Connection Broker|
 |137|UDP|NetBIOS Name Resolution|Computer Browser|
 |137|UDP|NetBIOS Name Resolution|Server|
 |137|UDP|NetBIOS Name Resolution|Windows Internet Name Service|
@@ -1158,8 +1132,8 @@ The following table summarizes the information from the [System services ports](
 |3268|TCP|Global Catalog|Local Security Authority|
 |3269|TCP|Global Catalog|Local Security Authority|
 |3343|UDP|Cluster Services|Cluster Service|
-|3389|TCP|Terminal Services|Terminal Services|
-|3389|UDP|Terminal Services|Terminal Services|
+|3389|TCP|RDS|RDS|
+|3389|UDP|RDS|RDS|
 |3527|UDP|MSMQ-Ping|Message Queuing|
 |4011|UDP|BINL|Remote Installation|
 |4500|UDP|NAT-T|Local Security Authority|
@@ -1232,9 +1206,9 @@ The list of services that require Active Directory services:
 - Routing and Remote Access
 - Server
 - Simple Mail Transfer Protocol (SMTP)
-- Terminal Services
-- Terminal Services Licensing
-- Terminal Services Session Directory
+- RDS
+- RDSL
+- Remote Desktop Connection Broker
 
 ## References
 
@@ -1324,9 +1298,9 @@ For more information about the ports that are used by Microsoft Message Queuing,
 
 For information about how to plan for and to deploy MOM, see [System Center Developer Documentation Library](/previous-versions/system-center/developer/cc817313(v=msdn.10)).
 
-### Terminal Services
+### RDS
 
-For more information about how to configure the port that is used by Terminal Services, see [Change the listening port for Remote Desktop on your computer](/windows-server/remote/remote-desktop-services/clients/change-listening-port).
+For more information about how to configure the port that is used by RDS, see [Change the listening port for Remote Desktop on your computer](/windows-server/remote/remote-desktop-services/clients/change-listening-port).
 
 ### Controlling communications over the Internet in Windows
 

@@ -4,6 +4,7 @@ description: Works around an issue in which you can't connect to a specialized D
 ms.date: 07/21/2020
 ms.reviewer: 
 ms.service: virtual-machines
+ms.subservice: vm-cannot-connect
 ms.collection: linux
 ---
 # Can't connect to a specialized Debian Linux VM that is migrated from VMware to Azure

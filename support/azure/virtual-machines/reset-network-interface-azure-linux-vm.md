@@ -6,13 +6,14 @@ documentationcenter: ''
 author: genlin
 manager: dcscontentpm
 ms.service: virtual-machines
+ms.subservice: vm-cannot-connect
 ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
+ms.custom: devx-track-azurecli
 ms.workload: infrastructure-services
 ms.date: 07/19/2021
 ms.author: tibasham
-
 ---
 # Reset the network interface for Azure Linux VM
 

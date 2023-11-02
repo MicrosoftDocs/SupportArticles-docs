@@ -6,6 +6,7 @@ metadata:
    ms.topic: hub-page
    services: service
    ms.service: power-platform
+   ms.date: 04/01/2021
 
 productDirectory:
   items:
@@ -34,4 +35,4 @@ additionalContent:
       # Card
       - title: Microsoft Power Platform training 
         summary: "Check out the free training for Microsoft Power Platform"
-        url: /learn/powerplatform/
+        url: /training/powerplatform/

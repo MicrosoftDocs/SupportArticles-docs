@@ -11,7 +11,7 @@ metadata:
   ms.topic: landing-page # Required
   author: genlin   #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.
-  ms.date: 5/27/2022
+  ms.date: 10/23/2023
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -28,12 +28,26 @@ landingContent:
             url: allocationfailed-or-zonalallocationfailed.md
 
    # Card
+  - title: Deletion errors
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: OperationNotAllowed
+            url: vmss-operation-not-allowed.md
+
+   # Card
   - title: Deployment errors
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: Public IP count limit exceeded
             url: vmss-public-ip-count-limit-exceeded.md
+          - text: InvalidParameter - Fault domain count
+            url: vmss-invalid-parameter-fault-domain-count.md
+          - text: InvalidParameter - SinglePlacementGroup
+            url: vmss-invalid-parameter-single-placement-group.md
+          - text: OutboundConnectivityNotEnabledOnVM
+            url: vmss-outbound-connectivity-not-enabled.md
 
    # Card
   - title: Extension issues
@@ -66,3 +80,7 @@ landingContent:
         links:
           - text: Resource Health shows Degraded state in VMSS
             url:  resource-health-degraded-state.md
+          - text: VMSS instances remain in "Unhealthy" state and aren't repaired
+            url:  instances-not-repaired.md
+          - text: VM is unavailable for 15 minutes
+            url:  ../virtual-machines/azure-vm-unavailable.md

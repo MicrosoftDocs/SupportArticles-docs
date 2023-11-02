@@ -4,6 +4,7 @@ description: Provides information about Windows Server 2003 support and answers 
 ms.date: 07/21/2020
 ms.reviewer: 
 ms.service: virtual-machines
+ms.subservice: vm-support-statements
 ms.collection: windows
 ---
 # Running Windows Server 2003 on Microsoft Azure

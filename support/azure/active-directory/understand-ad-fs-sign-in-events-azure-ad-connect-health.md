@@ -1,17 +1,15 @@
 ---
-title: Understand AD FS sign-in events in Azure AD with Connect Health
+title: Understand AD FS sign-in events in Microsoft Entra ID with Connect Health
 description: Understand how to correlate sign-in events in Active Directory Federation Services (AD FS) security logs into one sign-in event in Azure for parsing.
-ms.date: 12/14/2021
-author: DennisLee-DennisLee
-ms.author: v-dele
-ms.reviewer: brheld
+ms.date: 05/18/2023
+ms.reviewer: brheld, v-leedennis
 ms.service: active-directory
 ms.subservice: hybrid
-#Customer intent: As an Azure Active Directory user, I want to know how sign-in events in AD FS security logs relate to a single Azure sign-in event so that I can parse sign-in data in Azure.
+#Customer intent: As a Microsoft Entra user, I want to know how sign-in events in AD FS security logs relate to a single Azure sign-in event so that I can parse sign-in data in Azure.
 ---
-# Understand AD FS sign-in events in Azure AD with Connect Health
+# Understand AD FS sign-in events in Microsoft Entra ID with Connect Health
 
-With Azure AD Connect Health, you can integrate Active Directory Federation Services (AD FS) sign-in events into the Azure Active Directory (Azure AD) sign-ins report. The Azure AD sign-ins report includes information about when the following types of entities sign in to Azure AD and access resources:
+With Microsoft Entra Connect Health, you can integrate Active Directory Federation Services (AD FS) sign-in events into the Microsoft Entra sign-ins report. The Microsoft Entra sign-ins report includes information about when the following types of entities sign in to Microsoft Entra ID and access resources:
 
 - Users
 - Applications
@@ -21,24 +19,24 @@ This article shows how to use the Connect Health for AD FS agent, Azure Monitor,
 
 ## Prerequisites
 
-- [Azure AD Connect Health](/azure/active-directory/hybrid/reference-connect-health-faq) for AD FS installed and upgraded to latest version (3.1.95.0 or greater).
-- The [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) or [Reports Reader](/azure/active-directory/roles/permissions-reference#reports-reader) role to view the Azure AD sign-ins.
-- At least one Azure AD Premium (P1 or P2) license for the first Connect Health agent.
-- 25 extra Azure AD Premium (P1 or P2) licenses for each extra registered agent.
-- An equal agent count to the total number of agents that are registered across all monitored roles (AD FS, Azure AD Connect, and Active Directory Domain Services).
-- The requisite number of valid Azure AD Connect Health licenses. (You aren't required to assign the license to specific users.)
+- [Microsoft Entra Connect Health](/azure/active-directory/hybrid/connect/how-to-connect-health-agent-install) for AD FS installed and upgraded to latest version (3.1.95.0 or greater).
+- The [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) or [Reports Reader](/azure/active-directory/roles/permissions-reference#reports-reader) role to view the Microsoft Entra sign-ins.
+- At least one Microsoft Entra ID P1 or P2 license for the first Connect Health agent.
+- 25 extra Microsoft Entra ID P1 or P2 licenses for each extra registered agent.
+- An equal agent count to the total number of agents that are registered across all monitored roles (AD FS, Microsoft Entra Connect, and Active Directory Domain Services).
+- The requisite number of valid Microsoft Entra Connect Health licenses. (You aren't required to assign the license to specific users.)
 
 ## Sign-in data reporting
 
-The Connect Health for AD FS agent correlates many event IDs from AD FS to offer information about the sign-in request and error details if a request fails. The request information is correlated to the Azure AD sign-ins report schema. The information can be displayed in the Azure AD sign-in report user interface. Along with the report, a new Azure Monitor workbook template and a new Azure Log Analytics stream are available with the AD FS data. You can use and modify the workbook template for an in-depth analysis for scenarios, such as:
+The Connect Health for AD FS agent correlates many event IDs from AD FS to offer information about the sign-in request and error details if a request fails. The request information is correlated to the Microsoft Entra sign-ins report schema. The information can be displayed in the Microsoft Entra sign-in report user interface. Along with the report, a new Azure Monitor workbook template and a new Azure Log Analytics stream are available with the AD FS data. You can use and modify the workbook template for an in-depth analysis for scenarios, such as:
 
 - AD FS account lockouts.
 - Bad password attempts.
 - Spikes of unexpected sign-in attempts.
 
-The available data mirrors the same data that's available for Azure AD sign-ins. Five tabs with information are available, based on the sign-in type:
+The available data mirrors the same data that's available for Microsoft Entra sign-ins. Five tabs with information are available, based on the sign-in type:
 
-- Azure AD
+- Microsoft Entra ID
 - AD FS
 
 Connect Health correlates events from AD FS, dependent on the server version. It then matches the events with the AD FS schema. For more information, see [What data is displayed in the report?](/azure/active-directory/hybrid/how-to-connect-health-ad-fs-sign-in#what-data-is-displayed-in-the-report)
@@ -67,6 +65,6 @@ cluster('Idsharedwus').database('ADFSConnectHealth').SignInEvent
 
 ## Next steps
 
-Read more about [AD FS sign-ins in Azure AD with Connect Health](/azure/active-directory/hybrid/how-to-connect-health-ad-fs-sign-in).
+Read more about [AD FS sign-ins in Microsoft Entra ID with Connect Health](/azure/active-directory/hybrid/how-to-connect-health-ad-fs-sign-in).
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

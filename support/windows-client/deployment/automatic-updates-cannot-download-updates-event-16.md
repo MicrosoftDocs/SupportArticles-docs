@@ -1,7 +1,7 @@
 ---
 title: Automatic Updates can't download updates and event ID 16 is logged
 description: Describes an issue where Automatic Updates can't download updates and event ID 16 is recorded in the system log.
-ms.date: 09/07/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -68,3 +68,7 @@ To release and to renew the DHCP lease on the client computers, and to confirm t
 
     > [!NOTE]
     > If the computer successfully resolves the name of the WPAD server, you see a series of messages that include the words "Reply from."
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

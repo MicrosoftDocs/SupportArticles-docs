@@ -1,11 +1,8 @@
 - name: Welcome
-  href: welcome-webapps.md
+  href: aspnet-welcome.yml
 
 - name: ASP.NET
   href: aspnet/toc.yml
 
 - name: ASP.NET Core
   href: aspnetcore/toc.yml
-
-- name: Internet Information Services
-  href: iis/toc.yml

@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot VM application access in Azure | Microsoft Docs
+title: Troubleshoot VM application access in Azure
 description: Use these detailed troubleshooting steps to isolate issues in connecting to applications running on virtual machines in Azure.
 services: virtual-machines
 documentationcenter: ''
@@ -11,8 +11,8 @@ keywords: cannot start application, program won't open, listen port blocked, una
 ms.service: virtual-machines
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
-
 ms.topic: troubleshooting
+ms.subservice: vm-cannot-connect
 ms.date: 10/31/2018
 ms.author: genli
 

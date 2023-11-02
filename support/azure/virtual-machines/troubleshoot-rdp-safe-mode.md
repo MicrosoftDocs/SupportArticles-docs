@@ -1,11 +1,12 @@
 ---
-title: Cannot connect to Azure Virtual Machines remotely because the VM boots into Safe Mode | Microsoft Docs
-description: Learn how to troubleshoot a problem in which cannot RDP to a VM because the VM boots into Safe Mode.| Microsoft Docs
+title: Cannot connect to Azure Virtual Machines remotely because the VM boots into Safe Mode
+description: Learn how to troubleshoot a problem in which cannot RDP to a VM because the VM boots into Safe Mode.
 services: virtual-machines
 documentationCenter: ''
 author: genlin
 manager: dcscontentpm
 ms.service: virtual-machines
+ms.subservice: vm-cannot-connect
 ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows

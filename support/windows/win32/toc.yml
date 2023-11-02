@@ -1,5 +1,5 @@
 - name: Welcome
-  href: welcome-windowsdeveloper.md
+  href: welcome-windowsdeveloper.yml
 
 - name: General
   items:
@@ -12,6 +12,8 @@
     items:
     - name: An application fails to create a COM+ component
       href: client-application-error-create-com-plus-component.md
+    - name: CoInitializeEx fails after calling HtmlHelp on the same thread
+      href: coinitializeex-fails-after-calling-htmlhelp-same-thread.md
     - name: COM+ supports automatic collection of process dump file
       href: com-supports-collect-dump-file.md 
     - name: Descriptions and workings of OLE threading models
@@ -22,6 +24,8 @@
       href: vari8fromcy-produces-incorrect-value.md
   - name: Desktop app UI development
     items:
+    - name: CreateProcessWithLogonW fails when called on a Microsoft Entra account
+      href: createprocesswithlogonw-fails-microsoft-entra-id-account.md
     - name: Hook procedure doesn't receive the VK_CONVERT message
       href: hook-procedure-not-receiving-vk-convert-message.md
     - name: Apps using message filters may not respond in Windows 10
@@ -34,6 +38,8 @@
       href: desktop-bridge-app-fail-start-run-as-administrator.md
     - name: East Asian first character isn't recognized
       href: east-asian-first-character-not-recognized.md
+    - name: Half-width and full-width Japanese characters are treated as different characters
+      href: half-width-full-width-katakana-hiragana-characters.md
     - name: GetMessage ignores messages
       href: getmessage-ignores-posted-messages.md
     - name: SystemParametersInfo works incorrectly
@@ -50,6 +56,8 @@
       href: screen-saver-command-line.md
     - name: Warning 1946 when you install an Installer package
       href: warning-1946-when-you-install-installer-package.md
+    - name: Owner window gets activated when taskbar buttons are created
+      href: owner-window-activated-taskbar-buttons-created-both-windows.md
   - name: Distributed transactions
     items:
     - name: Can't start transactions
@@ -68,6 +76,8 @@
     items:
     - name: AAC audio isn't playing for MPEG-2 TS file in Windows 8.1
       href: AAC-audio-not-playing-for-MPEG-2-TS-file-Windows-8-1.md
+    - name: Converting PDF to bitmap causes partial data loss in the image
+      href: converting-pdf-file-to-bitmap-image.md
     - name: Can't print to XPS Document Writer
       href: print-app-xps-document-writer.md
     - name: DirectShow doesn't connect to a downstream filter
@@ -83,7 +93,9 @@
     - name: Get status of printer and print job
       href: printer-print-job-status.md
     - name: GetICMProfile might leak one or more handles on Windows 10
-      href: geticmprofile-might-leak-one-or-more-handles-on-windows10.md      
+      href: geticmprofile-might-leak-one-or-more-handles-on-windows10.md
+    - name: Graphics::DrawImage is slow when drawing JPEG or PNG images to a printer
+      href: graphicsdrawimage-slow-drawing-jpeg-png-printer.md
     - name: Interoperability between GDI and GDI+
       href: mix-gdi-and-gdi-plus-drawing.md
     - name: Modify printer settings by using SetPrinter
@@ -144,6 +156,8 @@
       href: custom-virtual-channel-not-supported.md
     - name: File copy operation deletes content
       href: file-copy-operation-deletes-content.md
+    - name: GetTickCount resets to zero after approximately 776 days
+      href: gettickcount-resets-zero-after-approximately-776-days.md
     - name: Heap manager may not decommit memory
       href: heap-manager-may-not-decommit-memory.md
     - name: Get formatted strings for an event

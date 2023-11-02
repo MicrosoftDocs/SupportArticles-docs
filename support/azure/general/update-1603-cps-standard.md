@@ -4,7 +4,7 @@ description: Describes Update 1603 for Cloud Platform System Standard. Includes 
 ms.date: 08/14/2020
 author: genlin
 ms.author: genli
-ms.service: cloud-services
+ms.service: cloud-platform-system
 ms.reviewer: 
 ---
 # Update 1603 for Cloud Platform System Standard

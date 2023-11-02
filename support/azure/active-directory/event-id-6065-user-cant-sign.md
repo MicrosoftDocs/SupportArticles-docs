@@ -5,6 +5,7 @@ ms.date: 06/08/2020
 ms.reviewer: cpuckett
 ms.service: active-directory
 ms.subservice: authentication
+ms.custom: has-azure-ad-ps-ref
 ---
 # Error when Windows 10 devices settings fail to sync: This user can't sign in because this account is currently disabled
 
@@ -15,7 +16,7 @@ _Original KB number:_ &nbsp; 3193791
 
 ## Symptoms
 
-You have enabled **Enterprise State Roaming** in the Azure Active Directory portal and on some Windows 10 clients. Any supported settings for sync, such as the desktop background or the task bar position, do not sync between devices for the same user.
+You have enabled **Enterprise State Roaming** in the Microsoft Entra admin center and on some Windows 10 clients. Any supported settings for sync, such as the desktop background or the task bar position, do not sync between devices for the same user.
 
 Additionally, Event ID 6065 is logged in the Microsoft-Windows-SettingSync/Debug event log:
 
@@ -31,13 +32,13 @@ Description: shell\roaming\cloudsync\cloudsyncengine\cloudsyncengine.cpp(990)\Se
 
 ## Cause
 
-The tenant has not been provisioned with the RMSBASIC subscription. This happens automatically when **Enterprise State Roaming** is enabled in the Azure Active Directory portal and is used to encrypt the synchronized data. If `AllowAdHocSubscriptions` is set to **False** on the tenant, this configuration can prevent the tenant from being provisioned with the RMSBASIC subscription.
+The tenant has not been provisioned with the RMSBASIC subscription. This happens automatically when **Enterprise State Roaming** is enabled in the Microsoft Entra admin center and is used to encrypt the synchronized data. If `AllowAdHocSubscriptions` is set to **False** on the tenant, this configuration can prevent the tenant from being provisioned with the RMSBASIC subscription.
 
 ## Resolution
 
 ### Verify RMSBASIC subscription is enabled on the tenant
 
-1. Open PowerShell and sign in to Azure Active Directory using your Azure Active Directory credentials. The first line will prompt you for your credentials. The second line connects to Azure Active Directory.
+1. Open PowerShell and sign in to Microsoft Entra ID using your Microsoft Entra credentials. The first line will prompt you for your credentials. The second line connects to Microsoft Entra ID.
 
     ```powershell
     $msolcred = get-credential connect-msolservice -credential $msolcred
@@ -74,7 +75,7 @@ The tenant has not been provisioned with the RMSBASIC subscription. This happens
 
 The tenant cannot be provisioned with the RMSBASIC subscription if `AllowAdHocSubscriptions` is set to **False** on the tenant. Use these steps to verify the configuration of `AllowAdHocSubscriptions` and temporarily set it to **True** to obtain the RMSBASIC subscription.
 
-1. Open PowerShell and sign in to Azure Active Directory using your Azure Active Directory credentials. The first line will prompt you for your credentials. The second line connects to Azure Active Directory.
+1. Open PowerShell and sign in to Microsoft Entra ID using your Microsoft Entra credentials. The first line will prompt you for your credentials. The second line connects to Microsoft Entra ID.
 
     ```powershell
     $msolcred = get-credential connect-msolservice -credential $msolcred
@@ -92,7 +93,7 @@ The tenant cannot be provisioned with the RMSBASIC subscription if `AllowAdHocSu
     Set-MsolCompanySettings -AllowAdHocSubscriptions $true
     ```
 
-4. In the Azure AD portal, disable and re-enable **Enterprise State Roaming**. See the **Verify USERS MAY SYNC SETTINGS AND ENTERPRISE APP DATA is enabled on the tenant** section.
+4. In the Microsoft Entra admin center, disable and re-enable **Enterprise State Roaming**. See the **Verify USERS MAY SYNC SETTINGS AND ENTERPRISE APP DATA is enabled on the tenant** section.
 5. Run the `Get-MsolAccountSku` cmdlet to see if the RMSBASIC subscription has been added:
 
     ```powershell
@@ -101,13 +102,13 @@ The tenant cannot be provisioned with the RMSBASIC subscription if `AllowAdHocSu
 
 ### Verify USERS MAY SYNC SETTINGS AND ENTERPRISE APP DATA is enabled on the tenant
 
-After obtaining a Premium Azure AD subscription, follow these steps to enable **Enterprise State Roaming**:
+After obtaining a Premium Microsoft Entra subscription, follow these steps to enable **Enterprise State Roaming**:
 
 1. Sign in to the Azure classic portal.
 2. On the left side, select **ACTIVE DIRECTORY**, and then select the directory for which you want to enable **Enterprise State Roaming**.
 3. Go to the **CONFIGURE** tab.
 4. Scroll down the page, look for **USERS MAY SYNC SETTINGS AND ENTERPRISE APP DATA**, and verify that **ALL** or **SELECTED** is selected.
-5. If **All** or **SELECTED** is already selected, select None, save, and go back to the previously selected **ALL** or **SELECTED** with the original SG option, and then save again. For a reference with screenshots, see [Enable Enterprise State Roaming in Azure Active Directory](/azure/active-directory/devices/enterprise-state-roaming-enable).
+5. If **All** or **SELECTED** is already selected, select None, save, and go back to the previously selected **ALL** or **SELECTED** with the original SG option, and then save again. For a reference with screenshots, see [Enable Enterprise State Roaming in Microsoft Entra ID](/azure/active-directory/devices/enterprise-state-roaming-enable).
 
 ### (Optional) Set AllowAdHocSubscriptions to "False" on the tenant
 

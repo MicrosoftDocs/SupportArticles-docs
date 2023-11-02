@@ -4,7 +4,7 @@ description: This article introduces that when Team Foundation Server creates a 
 ms.date: 08/14/2020
 ms.custom: sap:Server Administration
 ms.topic: article
-ms.service: az-devops-project
+ms.service: azure-devops-server
 ---
 # Incorrect default project administrator permissions in Team Foundation Server 2015
 

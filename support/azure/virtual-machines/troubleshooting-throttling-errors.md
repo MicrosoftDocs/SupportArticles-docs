@@ -1,12 +1,14 @@
 ---
-title: Troubleshooting throttling errors in Azure | Microsoft Docs
+title: Troubleshooting throttling errors in Azure
 description: Throttling errors, retries and backoff in Azure Compute.
 services: virtual-machines
 documentationcenter: ''
 author: changov
 manager: dcscontentpm
 tags: azure-resource-manager,azure-service-management
+ms.custom: devx-track-arm-template
 ms.service: virtual-machines
+ms.subservice: vm-common-errors-issues
 ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.date: 09/18/2018

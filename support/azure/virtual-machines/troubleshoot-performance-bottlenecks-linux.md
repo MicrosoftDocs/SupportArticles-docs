@@ -4,6 +4,7 @@ description: Troubleshoot CPU, memory, and disk input and output performance, an
 ms.date: 05/27/2021
 ms.reviewer: 
 ms.service: virtual-machines
+ms.subservice: vm-performance
 author: genlin
 ms.author: esflores
 ---

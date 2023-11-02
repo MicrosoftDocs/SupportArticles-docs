@@ -4,7 +4,7 @@ description: This article describes the new identity control for work items and 
 ms.date: 08/14/2020
 ms.custom: sap:Server Administration
 ms.topic: article
-ms.service: az-devops-project
+ms.service: azure-devops-server
 ---
 # Client support for selecting distinct users in identity fields in Team Foundation Server 2015
 

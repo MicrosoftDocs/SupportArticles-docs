@@ -2,7 +2,7 @@
 title: System administrators can't clear order holds because they aren't authorized
 description: System administrators aren't typically allowed to clear sales order holds.
 author: Henrikan
-ms.date: 4/11/2021
+ms.date: 04/11/2021
 ms.topic: troubleshooting
 ms.search.form: SalesTable
 audience: Application User

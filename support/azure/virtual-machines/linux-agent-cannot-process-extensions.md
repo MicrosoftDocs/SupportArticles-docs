@@ -4,6 +4,7 @@ description: Resolves an issue in which Azure Linux VMs that are running Azure L
 ms.date: 07/21/2020
 ms.reviewer: danis, danis, scotro
 ms.service: virtual-machines
+ms.subservice: vm-extensions-not-operating
 ms.collection: linux
 ---
 # Azure Linux VMs running Linux VM Agent 2.1.5 or 2.1.6 cannot process extensions

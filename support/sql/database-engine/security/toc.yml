@@ -1,0 +1,23 @@
+items: 
+- name: Block remote use of local accounts in Windows
+  href: block-remote-use-local-accounts.md
+- name: Configure antivirus software to work with SQL Server
+  href: antivirus-and-sql-server.md
+- name: Create database permission is logged
+  href: create-database-permission-logged.md
+- name: Decryption Failed error working with Always-Encrypted-enabled database
+  href: always-encrypted-database-connection-fail.md
+- name: Errors when you disable the guest user
+  href: error-disable-guest-user.md
+- name: Fix permission problem when you move MSDB database
+  href: fix-permission-issues-move-msdb.md
+- name: Transfer logins and passwords between instances
+  href: transfer-logins-passwords-between-instances.md
+- name: Use PFX-formatted certificates
+  href: use-pfx-formatted-certificates.md
+- name: Using SQL Server 2014 in the FIPS 140-2-compliant mode
+  href: sql-2014-fips-140-2-compliant-mode.md
+- name: Using SQL Server 2016 in the FIPS 140-2-compliant mode
+  href: sql-2016-fips-140-2-compliant-mode.md
+- name: Using SQL Server 2008 in FIPS 140-2-compliant mode
+  href: instructions-in-fips-140-2-compliant-mode.md

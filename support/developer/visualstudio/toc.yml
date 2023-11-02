@@ -4,6 +4,14 @@
   href: ./cpp/libraries/toc.yml
 - name: Debuggers and analyzers
   href: ./debuggers/toc.yml
+- name: Extensibility - Visual Studio SDK
+  items:
+  - name: Can't get a service in SDK
+    href: ./extensibility/how-to-troubleshoot-services.md
+  - name: Troubleshoot VSPackages
+    href: ./extensibility/troubleshooting-vspackages.md
+  - name: Troubleshoot brokered services
+    href: ./extensibility/how-to-troubleshoot-brokered-services.md
 - name: General
   href: ./general/toc.yml
 - name: Installation
@@ -52,9 +60,13 @@
     href: ./tools-utilities/cannot-use-custom-report-items-ssdt.md
   - name: NuGet-based Package Manager is missing
     href: ./tools-utilities/nuget-based-package-manager-missing.md
-- name: Silverlight
-  href: ./silverlight/toc.yml
-- name: Subscriptions
-  items:
-  - name: Opt out of dev essentials
-    href: ./subscriptions/opt-out-of-dev-essentials.md
+  - name: Troubleshoot XAML Hot Reload
+    href: ./tools-utilities/xaml-hot-reload-troubleshooting.md
+  - name: Troubleshoot Office solution security
+    href: ./tools-utilities/troubleshooting-office-solution-security.md
+  - name: Troubleshoot Office solution deployment
+    href: ./tools-utilities/troubleshooting-office-solution-deployment.md
+  - name: Troubleshoot issues in Office solutions
+    href: ./tools-utilities/troubleshooting-errors-in-office-solutions.md
+  - name: Troubleshoot references to WCF or WCF Data Services
+    href: ./tools-utilities/troubleshooting-service-references.md

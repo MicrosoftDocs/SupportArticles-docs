@@ -4,10 +4,11 @@ description: Provides a resolution to an issue in which you receive an error (Id
 ms.date: 07/06/2020
 ms.reviewer: willfid
 ms.service: active-directory
+ms.subservice: aad-general
 ---
 # Error when you run the IdFix tool: IdFix.exe is not a valid Win32 application
 
-_Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Azure Active Directory, Microsoft Intune, Azure Backup, Office 365 Identity Management  
+_Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 Identity Management  
 _Original KB number:_ &nbsp; 2859165
 
 ## Symptoms
