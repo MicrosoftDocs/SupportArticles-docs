@@ -82,7 +82,7 @@ Users receive a **Company Portal Temporarily Unavailable** error on their device
 1. Remove the Intune Company Portal app from the device.
 1. On the device, open the browser, browse to [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com), and try a user login.
 1. If the user fails to sign in, they should try another network.
-1. If that fails, validate that the user's credentials have synced correctly with Azure Active Directory.
+1. If that fails, validate that the user's credentials have synced correctly with Microsoft Entra ID.
 1. If the user successfully logs in, an iOS/iPadOS device will prompt you to install the Intune Company Portal app and enroll. On an Android device, you'll need to manually install the Intune Company Portal app, after which you can retry enrolling.
 
 > [!NOTE]
@@ -97,7 +97,7 @@ A user receives an "MDM authority not defined" error.
 **Solution:**
 
 1. Verify that the MDM Authority has been [set appropriately](/mem/intune/fundamentals/mdm-authority-set).
-1. Verify that the user's credentials have synced correctly with Azure Active Directory. You can verify that the user's UPN matches the Active Directory information in the Microsoft 365 admin center.
+1. Verify that the user's credentials have synced correctly with Microsoft Entra ID. You can verify that the user's UPN matches the Active Directory information in the Microsoft 365 admin center.
     If the UPN doesn't match the Active Directory information:
 
     1. Turn off DirSync on the local server.

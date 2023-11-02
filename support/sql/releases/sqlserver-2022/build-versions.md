@@ -13,7 +13,7 @@ This article lists the Microsoft SQL Server 2022 builds that were released after
 
 ## SQL Server 2022 Cumulative Update (CU) builds
 
-| CU Name | SQL Server build version | SQL Server (sqlservr.exe) file version | Analysis Services build version | Analysis Services (msmdsrv.exe) file version | Knowledge Base number | Release date |
+| Cumulative update name | SQL Server build version | SQL Server (sqlservr.exe) file version | Analysis Services build version | Analysis Services (msmdsrv.exe) file version | Knowledge Base number | Release date |
 |--------------|-------------|-----------------|-------------|-----------------|-----------------------------------|--------------------|
 | CU9 (Latest) | 16.0.4085.2 | 2022.160.4085.2 | 16.0.43.222 | 2022.160.43.222 | [KB5030731](cumulativeupdate9.md) | October 12, 2023   |
 | CU8          | 16.0.4075.1 | 2022.160.4075.1 | 16.0.43.221 | 2022.160.43.221 | [KB5029666](cumulativeupdate8.md) | September 14, 2023 |
@@ -28,7 +28,7 @@ This article lists the Microsoft SQL Server 2022 builds that were released after
 
 ## SQL Server 2022 GDR builds
 
-| GDR Name | SQL Server build version | SQL Server (sqlservr.exe) file version | Analysis Services build version | Analysis Services (msmdsrv.exe) file version | Knowledge Base number | Release date |
+| GDR name | SQL Server build version | SQL Server (sqlservr.exe) file version | Analysis Services build version | Analysis Services (msmdsrv.exe) file version | Knowledge Base number | Release date |
 |------------|-------------|-----------------|-------------|-----------------|---------------------------------------------------------|-------------------|
 | CU8 + GDR  | 16.0.4080.1 | 2022.160.4080.1 | 16.0.43.221 | 2022.160.43.221 | [KB5029503](https://support.microsoft.com/help/5029503) | October 10, 2023  |
 | GDR        | 16.0.1105.1 | 2022.160.1105.1 | 16.0.42.216 | 2022.160.42.216 | [KB5029379](https://support.microsoft.com/help/5029379) | October 10, 2023  |

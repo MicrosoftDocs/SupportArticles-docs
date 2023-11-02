@@ -24,7 +24,7 @@ To restrict user access to storefront pages in Commerce site builder, follow the
 1. In the properties pane, select **Requires sign-in?** > **Finish editing**.
 1. Select **Publish**.
 
-To block the creation of new users in Azure AD, follow these steps:
+To block the creation of new users in Microsoft Entra ID, follow these steps:
 
 1. Go to the [Azure portal](https://portal.azure.com/).
 1. Select the Azure AD B2C application that you created for your site access.

@@ -68,6 +68,7 @@
         "dynamics-365/commerce/**.*": "MSDocsHeader-Dynamics365-Commerce",
         "dynamics-365/customer-insights/**.*": "MSDocsHeader-Dynamics365-Customer-Insights",
         "dynamics-365/customer-service/**.*": "MSDocsHeader-Dynamics365-CustomerService",
+        "dynamics-365/field-service/**.*": "MSDocsHeader-Dynamics365-Field-Service",
         "dynamics-365/sales/**.*": "MSDocsHeader-Dynamics365Sales",
         "mem/**.*": "MSDocsHeader-Intune",
         "power-platform/**.*": "MSDocsHeader-PowerPlatform",
@@ -328,6 +329,11 @@
         "sql/reporting-services/**/*.md": "reporting-services"
       },
       "ms.subservice": {
+        "dynamics-365/field-service/administration/**.*": "d365-fs-admin-settings",
+        "dynamics-365/field-service/customization/**.*": "d365-fs-customization",
+        "dynamics-365/field-service/iot/**.*": "d365-fs-iot-connected",
+        "dynamics-365/field-service/rso/**.*": "d365-fs-resource-scheduling-optimization",
+        "dynamics-365/field-service/scheduling/**.*": "d365-fs-scheduling",
         "dynamics-365/customer-insights/administration/**.*": "d365-ci-administration",
         "dynamics-365/customer-insights/data-ingestion/**.*": "d365-ci-data-ingestion",
         "dynamics-365/customer-insights/exports/**.*": "d365-ci-exports",
@@ -406,7 +412,11 @@
         "sql/database-engine/replication/**/*.md": "sql-engine-replication",
         "sql/database-engine/startup-shutdown/**/*.md": "sql-engine-startup-shutdown",
         "sql/database-engine/performance/**/*.md": "sql-engine-performance",
-        "sql/database-engine/security/**/*.md": "sql-engine-security"
+        "sql/database-engine/security/**/*.md": "sql-engine-security",
+        "azure/azure-functions/deployment/**/*.md": "code-deployment",
+        "azure/azure-functions/config-mgmt/**/*.md": "configuration-management",
+        "azure/azure-functions/creation-deletion/**/*.md": "creation-deletion",
+        "azure/azure-functions/monitoring/**/*.md": "monitoring"
       },
       "titleSuffix": {
         "developer/biztalk/**/*.md": "BizTalk Server",

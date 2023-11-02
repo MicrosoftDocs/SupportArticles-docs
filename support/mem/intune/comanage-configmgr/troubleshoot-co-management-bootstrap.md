@@ -10,13 +10,13 @@ ms.reviewer: kaushika, luche
 
 This article helps you understand and troubleshoot issues that you may encounter when you set up co-management by taking path 2: [Bootstrap the Configuration Manager client with modern provisioning](/mem/configmgr/comanage/quickstart-paths#bkmk_path2).
 
-This scenario occurs when you have new Windows 10 devices that join Azure Active Directory (Azure AD) and automatically enroll to Intune, and then you install the Configuration Manager client to reach a co-management state.
+This scenario occurs when you have new Windows 10 devices that join Microsoft Entra ID and automatically enroll to Intune, and then you install the Configuration Manager client to reach a co-management state.
 
 ## Before you start
 
 Before you start troubleshooting, it's important to collect some basic information about the issue and make sure that you follow all required configuration steps. This helps you better understand the problem and reduce the time to find a resolution. To do this, follow this checklist of pre-troubleshooting questions:
 
-- Which [Azure AD hybrid identity option](/azure/active-directory/hybrid/plan-connect-user-signin#choosing-the-user-sign-in-method-for-your-organization) did you select?
+- Which [Microsoft Entra hybrid identity option](/azure/active-directory/hybrid/plan-connect-user-signin#choosing-the-user-sign-in-method-for-your-organization) did you select?
 - What is your [current MDM authority](/mem/intune/fundamentals/mdm-authority-set)?
 - Did you [set up enhanced HTTP](/mem/configmgr/core/plan-design/hierarchy/enhanced-http)?
 - Did you [create the cloud services in Azure](/mem/configmgr/core/servers/deploy/configure/azure-services-wizard)?
@@ -28,20 +28,22 @@ Most issues occur because one or more of these steps were not completed. If you 
 
 [Tutorial: Enable co-management for modern provisioned clients](/mem/configmgr/comanage/tutorial-co-manage-new-devices)
 
-## Troubleshooting hybrid Azure AD configuration
+<a name='troubleshooting-hybrid-azure-ad-configuration'></a>
 
-If you are experiencing issues that affect either Azure AD hybrid identity or Azure AD connect, refer to the following troubleshooting guides:
+## Troubleshooting hybrid Microsoft Entra configuration
 
-- [Troubleshoot Azure AD Connect install issues](/azure/active-directory/hybrid/tshoot-connect-install-issues)
-- [Troubleshoot errors during Azure AD connect synchronization](/azure/active-directory/hybrid/tshoot-connect-sync-errors)
-- [Troubleshoot password hash synchronization with Azure AD Connect sync](/azure/active-directory/hybrid/tshoot-connect-password-hash-synchronization)
-- [Troubleshoot Azure Active Directory Seamless Single Sign-On](/azure/active-directory/hybrid/tshoot-connect-sso)
-- [Troubleshoot Azure Active Directory Pass-through Authentication](/azure/active-directory/hybrid/tshoot-connect-pass-through-authentication)
+If you are experiencing issues that affect either Microsoft Entra hybrid identity or Microsoft Entra Connect, refer to the following troubleshooting guides:
+
+- [Troubleshoot Microsoft Entra Connect install issues](/azure/active-directory/hybrid/tshoot-connect-install-issues)
+- [Troubleshoot errors during Microsoft Entra Connect synchronization](/azure/active-directory/hybrid/tshoot-connect-sync-errors)
+- [Troubleshoot password hash synchronization with Microsoft Entra Connect Sync](/azure/active-directory/hybrid/tshoot-connect-password-hash-synchronization)
+- [Troubleshoot Microsoft Entra seamless single sign-on](/azure/active-directory/hybrid/tshoot-connect-sso)
+- [Troubleshoot Microsoft Entra pass-through authentication](/azure/active-directory/hybrid/tshoot-connect-pass-through-authentication)
 - [Troubleshoot single sign-on issues with Active Directory Federation Services](https://support.microsoft.com/help/4034932)
 
-If you are experiencing issues that affect hybrid Azure AD join for managed domains or federated domains, refer to the following troubleshooting guides:
+If you are experiencing issues that affect Microsoft Entra hybrid join for managed domains or federated domains, refer to the following troubleshooting guides:
 
-- [Troubleshooting hybrid Azure Active Directory joined devices](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current)
+- [Troubleshooting Microsoft Entra hybrid joined devices](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current)
 - [Troubleshooting devices using the dsregcmd command](/azure/active-directory/devices/troubleshoot-device-dsregcmd)
 
 ## Frequently asked questions  
@@ -84,7 +86,9 @@ To verify the deployment, follow these steps on the Windows 10 device:
 
 ## Common issues
 
-### Configuration Manager allows only an HTTPS-enabled management point for Azure AD-joined clients
+<a name='configuration-manager-allows-only-an-https-enabled-management-point-for-azure-ad-joined-clients'></a>
+
+### Configuration Manager allows only an HTTPS-enabled management point for Microsoft Entra joined clients
 
 This issue occurs if you use Configuration Manager current branch version 1802 or an earlier version. In these versions, management points that you enable for CMG must be HTTPS. Starting in version 1806, the management point can be HTTP.
 
@@ -109,16 +113,18 @@ This behavior is expected. It can take up to 30 minutes for the management point
 
 `<ConfigMgr installation directory>\Logs\CloudMgr.log`
 
-### Records for the resources and their associated information from Azure AD aren't created in the Configuration Manager database
+<a name='records-for-the-resources-and-their-associated-information-from-azure-ad-arent-created-in-the-configuration-manager-database'></a>
 
-When you onboard the Configuration Management site to Azure AD, the Azure AD user resources aren't discovered or populated into the Configuration Manager database. Usually, you receive the 0x87d00231 error in this scenario.
+### Records for the resources and their associated information from Microsoft Entra ID aren't created in the Configuration Manager database
+
+When you onboard the Configuration Management site to Microsoft Entra ID, the Microsoft Entra user resources aren't discovered or populated into the Configuration Manager database. Usually, you receive the 0x87d00231 error in this scenario.
 
 This issue occurs in one of the following situations:
 
 - You didn't successfully configure the API permissions for the app registration in the Azure portal.
-- Azure AD User Discovery isn't enabled or configured.
+- Microsoft Entra user Discovery isn't enabled or configured.
 
-To fix the issue, follow the steps in [Azure AD User Discovery](/mem/configmgr/core/servers/deploy/configure/configure-discovery-methods#azureaadisc) to configure API permissions and Azure AD User Discovery. You can use the following logs to check details:
+To fix the issue, follow the steps in [Microsoft Entra user Discovery](/mem/configmgr/core/servers/deploy/configure/configure-discovery-methods#azureaadisc) to configure API permissions and Microsoft Entra user Discovery. You can use the following logs to check details:
 
 - `<ConfigMgr installation directory>\Logs\SMS_AZUREAD_DISCOVERY_AGENT.log` on the site server
 - `%WinDir%\CCM\logs\CcmMessaging.log` on the client

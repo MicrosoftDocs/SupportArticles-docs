@@ -46,7 +46,7 @@ For role-based access control (RBAC) implementation in storage, details are cont
 
 ### Azure role-based access control
 
-Azure role-based access control uses role assignments to apply sets of permissions to security principals such as the Synapse Workspace MSI, Logged-in User, or Application register in the Azure Active Directory. Roles such as Owner, Contributor, Reader, and Storage Account Contributor enable a security principal to manage a storage account.
+Azure role-based access control uses role assignments to apply sets of permissions to security principals such as the Synapse Workspace MSI, Logged-in User, or Application register in the Microsoft Entra ID. Roles such as Owner, Contributor, Reader, and Storage Account Contributor enable a security principal to manage a storage account.
 
 ### Access control lists
 

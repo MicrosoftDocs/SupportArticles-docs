@@ -20,16 +20,18 @@ If your tenant has an expired Microsoft 365 license, then the provisioning of Om
 
 ## Resolution
 
-To avoid the provisioning failure, you must remove the Microsoft Teams service principal and Skype Teams Calling API Service in Azure Active Directory (Azure AD), and add it back. Follow these steps to remove the services:
+To avoid the provisioning failure, you must remove the Microsoft Teams service principal and Skype Teams Calling API Service in Microsoft Entra ID, and add it back. Follow these steps to remove the services:
 
-1. [Identify the services in Azure AD](#identify-the-services-in-azure-ad)
+1. [Identify the services in Microsoft Entra ID](#identify-the-services-in-azure-ad)
 2. [Use PowerShell to remove Microsoft Teams and Skype Teams Calling API Service](#use-powershell-to-remove-microsoft-teams-and-skype-teams-calling-api-service)
 3. [Add the service principal back](#add-the-service-principal-for-the-permission-service-app)
 
-### Identify the services in Azure AD
+<a name='identify-the-services-in-azure-ad'></a>
+
+### Identify the services in Microsoft Entra ID
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
-2. Select **Azure Active Directory** in the left pane.
+2. Select **Microsoft Entra ID** in the left pane.
 3. Select **Enterprise Applications**.
 4. In the search criteria, select **All Applications** and **Disabled** in **Application Type** and **Application Status**.
 5. In the search box, enter the application ID `cc15fd57-2c6c-4117-a88c-83b1d56b4bbe` for Microsoft Teams.
@@ -51,7 +53,7 @@ To avoid the provisioning failure, you must remove the Microsoft Teams service p
    :::image type="content" source="media/provision-fails-expired-license/run-powershell-as-admin.png" alt-text="Screenshot that shows how to run Windows PowerShell as an administrator.":::
 
 1. Select **Yes** on the **User Control** dialog to allow the application to make changes.
-1. Type the `Install-Module AzureAD` command in the PowerShell window, and press **Enter**. This command installs the PowerShell commands for interacting with Azure AD.
+1. Type the `Install-Module AzureAD` command in the PowerShell window, and press **Enter**. This command installs the PowerShell commands for interacting with Microsoft Entra ID.
 
    :::image type="content" source="media/provision-fails-expired-license/install-module-azuread.png" alt-text="Screenshot that shows how to execute the Install-Module AzureAD command." border="false":::
 
@@ -61,10 +63,10 @@ To avoid the provisioning failure, you must remove the Microsoft Teams service p
 
 1. Type the `Connect-AzureAD` command in the PowerShell window, and press **Enter**.
 
-   This establishes a connection with the tenant's Azure AD, so you can manage it using PowerShell.
+   This establishes a connection with the tenant's Microsoft Entra ID, so you can manage it using PowerShell.
 
 1. Sign in to your organization as a tenant admin.
-1. Run the `Remove-AzureADServicePrincipal -ObjectID <ObjectID>` command in the PowerShell window twice, one each for Microsoft Teams and Skype Teams Calling API Service. Replace `<ObjectID>` with the object ID you had stored earlier. This command deletes the expired Teams service and Skype Teams Calling API Service from Azure AD.
+1. Run the `Remove-AzureADServicePrincipal -ObjectID <ObjectID>` command in the PowerShell window twice, one each for Microsoft Teams and Skype Teams Calling API Service. Replace `<ObjectID>` with the object ID you had stored earlier. This command deletes the expired Teams service and Skype Teams Calling API Service from Microsoft Entra ID.
 
    > [!NOTE]
    > Right-click the PowerShell window to paste the Object ID.
@@ -94,8 +96,8 @@ After removing the expired Microsoft Teams license from the tenant, you can add 
    > [!NOTE]
    > Ignore the error page that appears with the message "no reply URLs configured".
 
-1. Sign in to the [Azure portal](https://portal.azure.com/) as a tenant admin to enable Azure AD for user sign-in.
-1. Go to **Azure Active Directory** > **Enterprise Applications**.
+1. Sign in to the [Azure portal](https://portal.azure.com/) as a tenant admin to enable Microsoft Entra ID for user sign-in.
+1. Go to **Microsoft Entra ID** > **Enterprise Applications**.
 1. In the search box, enter *6d32b7f8-782e-43e0-ac47-aaad9f4eb839* for the application ID. The **Permission Service O365** is listed.
 1. Select the app, go to the **Properties** tab, and turn on the **Enabled for users to sign-in** toggle.
 

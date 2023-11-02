@@ -1,6 +1,6 @@
 ---
 title: One or more objects don't sync when the Azure Active Directory Sync tool is used
-description: Describes an issue in which one or more AD DS object attributes don't sync to Azure AD through the Azure Active Directory Sync tool. Provides resolutions.
+description: Describes an issue in which one or more AD DS object attributes don't sync to Microsoft Entra ID through the Azure Active Directory Sync tool. Provides resolutions.
 ms.date: 07/06/2020
 ms.reviewer: 
 ms.service: active-directory
@@ -9,14 +9,14 @@ ms.custom: has-azure-ad-ps-ref
 ---
 # One or more objects don't sync when using Azure Active Directory Sync tool
 
-This article resolves an issue that one or more Active Directory Domain Services (AD DS) object attributes don't sync to Azure Active Directory (Azure AD) through the Azure Active Directory Sync tool.
+This article resolves an issue that one or more Active Directory Domain Services (AD DS) object attributes don't sync to Microsoft Entra ID through the Azure Active Directory Sync tool.
 
-_Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Azure Active Directory, Microsoft Intune, Azure Backup, Office 365 Identity Management  
+_Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 Identity Management  
 _Original KB number:_ &nbsp; 2643629
 
 ## Symptoms
 
-One or more AD DS objects or attributes don't sync to Microsoft Azure AD as expected. When Active Directory synchronization runs, an object doesn't sync, and you experience one of the following symptoms:
+One or more AD DS objects or attributes don't sync to Microsoft Entra ID as expected. When Active Directory synchronization runs, an object doesn't sync, and you experience one of the following symptoms:
 
 - You receive an error message that states that an attribute has a duplicate value.
 - You receive an error message that states that one or more attributes violate formatting requirements such as character set or character length.
@@ -66,7 +66,7 @@ To resolve this issue, use one of the following methods, as appropriate for your
 
 ### Run IdFix to check for duplicates, missing attributes, and rule violations
 
-Use the [IdFix DirSync Error Remediation Tool](https://github.com/microsoft/idfix) to find objects and errors that prevent synchronization to Azure AD.
+Use the [IdFix DirSync Error Remediation Tool](https://github.com/microsoft/idfix) to find objects and errors that prevent synchronization to Microsoft Entra ID.
 
 - If you see "Blank" in the **ERROR** column after you run IdFix, the displayName attribute of the object isn't defined. To resolve this issue, specify a value for the displayName attribute of the object using these steps:
 
@@ -81,9 +81,11 @@ Use the [IdFix DirSync Error Remediation Tool](https://github.com/microsoft/idfi
 2. In the ACTION column, click EDIT, and then click Apply.
 3. Run IdFix again to look for more object errors.
 
-### Determine attribute conflicts that are caused by objects that weren't created in Azure AD through directory synchronization
+<a name='determine-attribute-conflicts-that-are-caused-by-objects-that-werent-created-in-azure-ad-through-directory-synchronization'></a>
 
-To determine attribute conflicts caused by user objects that were created by using management tools (and that weren't created in Azure AD through directory synchronization), follow these steps:
+### Determine attribute conflicts that are caused by objects that weren't created in Microsoft Entra ID through directory synchronization
+
+To determine attribute conflicts caused by user objects that were created by using management tools (and that weren't created in Microsoft Entra ID through directory synchronization), follow these steps:
 
 1. Determine the unique attributes of the on-premises AD DS user account. To do it, on a computer that has Windows Support Tools installed, follow these steps:
 
@@ -105,7 +107,7 @@ To determine attribute conflicts caused by user objects that were created by usi
         > [!NOTE]
         > Ldp.exe is included in Windows Server 2008 and in the Windows Server 2003 Support Tools. The Windows Server 2003 Support Tools are included in the Windows Server 2003 installation media. Or, to obtain the Support Tools, go to the following Microsoft website: [Windows Server 2003 Service Pack 2 32-bit Support Tools](https://go.microsoft.com/fwlink/?linkid=100114)
 
-2. Connect to Azure AD by using the Azure Active Directory Module for Windows PowerShell. For more info, go to [Manage Azure AD using Windows PowerShell](/previous-versions/azure/jj151815(v=azure.100)?redirectedfrom=MSDN).
+2. Connect to Microsoft Entra ID by using the Azure Active Directory module for Windows PowerShell. For more info, go to [Manage Microsoft Entra ID using Windows PowerShell](/previous-versions/azure/jj151815(v=azure.100)?redirectedfrom=MSDN).
 
     Leave the console window open. You'll need to use it in the next step.
 3. Check for the duplicate userPrincipalName attributes.
@@ -189,8 +191,8 @@ For more information, see [How to use SMTP matching to match on-premises user ac
 
 To update a user account UPN that was licensed after initial directory synchronization has occurred, follow these steps:
 
-1. Install Azure Active Directory V2 PowerShell Module. For more information, see [Azure Active Directory V2 PowerShell Module](https://www.powershellgallery.com/packages/AzureAD/2.0.0.71).
-2. Run the following cmdlets at the Azure Active Directory V2 PowerShell prompt:
+1. Install Azure Active Directory v2 PowerShell Module. For more information, see [Azure Active Directory v2 PowerShell Module](https://www.powershellgallery.com/packages/AzureAD/2.0.0.71).
+2. Run the following cmdlets at the Azure Active Directory v2 PowerShell prompt:
 
     ```powershell
     $cred = get-credential
@@ -231,8 +233,8 @@ We highly recommend that one of these attributes is used consistently to manage 
 
 ## More information
 
-The Windows PowerShell commands that are mentioned in this article require the Azure Active Directory Module for Windows PowerShell. For more information about the Azure Active Directory Module for Windows PowerShell, see the following article:  
-[Manage Azure AD using Windows PowerShell](/previous-versions/azure/jj151815(v=azure.100)?redirectedfrom=MSDN).
+The Windows PowerShell commands that are mentioned in this article require the Azure Active Directory module for Windows PowerShell. For more information about the Azure Active Directory module for Windows PowerShell, see the following article:  
+[Manage Microsoft Entra ID using Windows PowerShell](/previous-versions/azure/jj151815(v=azure.100)?redirectedfrom=MSDN).
 
 For more information about filtering directory synchronization by attributes, see the following Microsoft TechNet wiki article:  
 [List of Attributes that are Synced by the Azure Active Directory Sync Tool](https://social.technet.microsoft.com/wiki/contents/articles/19901.list-of-attributes-that-are-synced-by-the-windows-azure-active-directory-sync-tool.aspx)

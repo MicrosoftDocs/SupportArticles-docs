@@ -1,21 +1,18 @@
 ---
-title: Solution checker enforcement in Managed Environments (preview) blocks or warns on import
+title: Solution checker enforcement in Managed Environments blocks or warns on import
 description: Describes an issue in which importing solutions fails due to solution checker enforcement and provides resolutions and workarounds.
 ms.reviewer: matp
 ms.date: 10/17/2023
 author: jeparson
 ms.author: jeparson
 ---
-# Solution checker enforcement in Managed Environments (preview) blocks or warns on import
+# Solution checker enforcement in Managed Environments blocks or warns on import
 
 _Applies to:_ &nbsp; Power Platform, Solutions
 
-> [!IMPORTANT]
-> This article is pre-release documentation and is subject to change.
-
 ## Background
 
-[Solution checker enforcement in Managed Environments (preview)](/power-platform/admin/managed-environment-solution-checker) allows admins to require valid solution checker results before a solution can be imported.
+[Solution checker enforcement in Managed Environments](/power-platform/admin/managed-environment-solution-checker) allows admins to require valid solution checker results before a solution can be imported.
 
 ## Symptoms
 
@@ -27,7 +24,7 @@ When you try to [import a solution](/powerapps/maker/data-platform/import-update
 
 ## Cause
 
-The error or warning message occurs because [solution checker enforcement in Managed Environments (preview)](/power-platform/admin/managed-environment-solution-checker) is enabled in either **Warn** or **Block** mode, and critical violations are present in the results.
+The error or warning message occurs because [solution checker enforcement in Managed Environments](/power-platform/admin/managed-environment-solution-checker) is enabled in either **Warn** or **Block** mode, and critical violations are present in the results.
 
 ## Resolution
 

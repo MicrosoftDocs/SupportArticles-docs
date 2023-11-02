@@ -10,7 +10,7 @@ ms.subservice: enterprise-users
 
 This article provides a resolution to resolve an issue where you receive an error message when you run the Azure Active Directory Sync Tool Configuration Wizard.
 
-_Original product version:_ &nbsp; Office 365 Identity Management, Azure Active Directory, Cloud Services (Web roles/Worker roles), Microsoft Intune, Azure Backup  
+_Original product version:_ &nbsp; Office 365 Identity Management, Microsoft Entra ID, Cloud Services (Web roles/Worker roles), Microsoft Intune, Azure Backup  
 _Original KB number:_ &nbsp; 3003331
 
 ## Symptoms
