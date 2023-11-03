@@ -19,9 +19,9 @@ This article helps resolve an issue in which Windows Server stops responding on 
 
 _Original KB number:_ &nbsp; 5032046
 
-Sysmon driver (SysmonDrv.sys) intercepts the transition from user mode to kernel and then sends work to its user mode process Sysmon64.exe. Most Sysmon64.exe threads are stuck waiting on a critical section. The critical section owner is waiting on a Local Security Authority Subsystem Service (LSASS) thread. However, the LSASS owner thread is trying to acquire a different critical section. Many other LSASS threads are blocked waiting on this critical section.
+Sysmon driver (*SysmonDrv.sys*) intercepts the transition from user mode to kernel and then sends work to its user mode process *Sysmon64.exe*. Most *Sysmon64.exe* threads are stuck waiting on a critical section. The critical section owner is waiting on a Local Security Authority Subsystem Service (LSASS) thread. However, the LSASS owner thread is trying to acquire a different critical section. Many other LSASS threads are blocked waiting on this critical section.
 
-The critical section owning thread is blocked in SysmonDrv's kernel to the user mode communication to process Sysmon64.exe, which is observed to be stuck waiting on the LSASS thread. This results in a deadlock.
+The critical section owning thread is blocked in SysmonDrv's kernel to the user mode communication to process *Sysmon64.exe*, which is observed to be stuck waiting on the LSASS thread. This results in a deadlock.
 
 ## Disable FileBlockShredding
 
