@@ -33,7 +33,7 @@ DRIVER=SQL Server Native Client \<VersionNumber>;SERVER=\<SQL Server Name>;Trust
 > - The SQL Server Native Client version should be compatible with the SQL server.
 > - Don't include the file extension when you input the file name into the string.
 
-## Verify permission on SQL Server for RD Connection Broker server
+## Verify permission for the RD Connection Broker server on SQL Server 
 
 Verify that correct permission is assigned to the RD Connection Broker Server on the SQL Server. To do that, follow these steps:
 
@@ -49,7 +49,7 @@ Verify that correct permission is assigned to the RD Connection Broker Server on
 
 ## Check case-sensitivity of SQL Server collation
 
-The database creation script for Remote Desktop Services (RDS) only supports case-insensitive collations. Make sure that the instance collation of the SQL Server database is set to be case-insensitive. 
+The database creation script for Remote Desktop Services (RDS) supports only case-insensitive collations. Make sure that the instance collation of the SQL Server database is set to be case-insensitive. 
 
 ## References
 
