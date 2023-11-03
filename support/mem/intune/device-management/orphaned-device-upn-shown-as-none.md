@@ -1,10 +1,10 @@
 ---
 title: "How to remove a disabled Microsoft Entra user's device from Intune"
 description: Fixes a problem in which a device becomes orphaned/unidentifiable if its owner is removed from Microsoft Entra ID before the device is removed from Microsoft Intune.
-ms.date: 09/22/2021
+ms.date: 11/03/2023
 search.appverid: MET150
-ms.custom: sap:Remove devices, has-azure-ad-ps-ref
-ms.reviewer: kaushika, patlewis
+ms.custom: sap:Remove devices, has-azure-ad-ps-ref, azure-ad-ref-level-one-done
+ms.reviewer: patlewis
 ---
 
 # How to remove a disabled Microsoft Entra user's device from Intune
@@ -30,7 +30,7 @@ A script is available that removes an orphaned, Intune-managed device if the own
 
 - The logged-on user must have the appropriate Graph permissions set up in Intune before you run the script. For more information, see the **Intune permission scopes** section of [How to use Microsoft Entra ID to access the Intune APIs in Microsoft Graph](/mem/intune/developer/intune-graph-apis#intune-permission-scopes).
 
-- Install the Azure AD PowerShell module by running `Install-Module AzureAD` or `Install-Module AzureADPreview` at an elevated PowerShell prompt.
+- Install the [Microsoft Graph PowerShell](/powershell/microsoftgraph/overview) module by running `Install-Module Microsoft.Graph` or `Install-Module Microsoft.Graph.Beta` at an elevated PowerShell prompt.
 
 - You must have an Intune tenant that supports the Azure portal by having a production or trial license. Read more about [Introduction to Microsoft Intune in the Azure portal](/mem/intune/fundamentals/what-is-intune).
 

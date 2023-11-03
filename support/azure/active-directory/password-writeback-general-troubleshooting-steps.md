@@ -1,12 +1,12 @@
 ---
 title: General password writeback troubleshooting steps
 description: Review general steps to help you troubleshoot password writeback issues in Microsoft Entra ID.
-ms.date: 02/25/2022
+ms.date: 11/03/2023
 ms.reviewer: jarrettr, nualex, v-leedennis
 editor: v-jsitser
 ms.service: active-directory
 ms.subservice: enterprise-users
-ms.custom: has-azure-ad-ps-ref
+ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 keywords:
 #Customer intent: As a Microsoft Entra administrator, I want to understand how to troubleshoot password writeback issues better so that I can more quickly resolve problems that affect password writeback.
 ---
@@ -29,9 +29,9 @@ Does the operation fail for one user but succeed for another user? In this situa
 
 1. Get information about certain Active Directory users by running the [Ldifde](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731033(v=ws.11)) command or the [Get-ADUser](/powershell/module/activedirectory/get-aduser) PowerShell cmdlet.
 
-1. Run [user commands in Azure Active Directory (Azure AD) PowerShell](/powershell/module/azuread/#users) to get information about those users in Microsoft Entra ID.
+1. Run [user commands in Microsoft Graph PowerShell](/powershell/microsoftgraph/find-mg-graph-command) to get information about those users in [Microsoft Graph PowerShell](/powershell/microsoftgraph/overview).
 
-1. Compare the Active Directory and Microsoft Entra information about those two users offline, especially in terms of:
+1. Compare the Active Directory and Microsoft Graph PowerShell information about those two users offline, especially in terms of:
 
     - Administrator roles and groups
     - Organizational unit placement
