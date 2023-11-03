@@ -30,7 +30,7 @@ To work around this issue, follow these steps:
 1. Find the XML config file by running the following cmdlet:
 
     ```powershell
-    PS C:\remote\Sysmon> .\Sysmon64.exe -c
+    PS C:\Sysmon> .\Sysmon64.exe -c
     
     Sysmon (internal) v15.00 - Monitors system events
     By Mark Russinovich and Thomas Garnier
