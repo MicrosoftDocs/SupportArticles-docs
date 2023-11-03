@@ -13,6 +13,7 @@ ms.custom:
   - CSSTroubleshoot
   - CI 183792
 localization_priority: Normal
+ms.service: viva
 ms.subservice: viva-pulse
 ---
 
