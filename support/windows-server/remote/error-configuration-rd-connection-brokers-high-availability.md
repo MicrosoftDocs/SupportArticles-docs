@@ -33,7 +33,7 @@ DRIVER=SQL Server Native Client \<VersionNumber>;SERVER=\<SQL Server Name>;Trust
 > - The SQL Server Native Client version should be compatible with the SQL server.
 > - Don't include the file extension when you input the file name into the string.
 
-## Permission on SQL Server for RD Connection Broker server
+## Verify permission on SQL Server for RD Connection Broker server
 
 Verify that correct permission is assigned to the RD Connection Broker Server on the SQL Server. To do that, follow these steps:
 
