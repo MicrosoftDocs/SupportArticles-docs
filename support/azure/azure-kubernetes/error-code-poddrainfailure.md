@@ -1,17 +1,17 @@
 ---
-title: Troubleshoot eviction failures due to Pod Disruption Budgets
-description: Learn how to troubleshoot eviction failures due to Pod Disruption Budgets when you try to upgrade an Azure Kubernetes Service cluster.
-ms.date: 10/30/2023
+title: Troubleshoot UpgradeFailed errors due to eviction failures caused by PDBs
+description: Learn how to troubleshoot UpgradeFailed errors due to eviction failures caused by Pod Disruption Budgets when you try to upgrade an Azure Kubernetes Service cluster.
+ms.date: 11/03/2023
 editor: v-jsitser
-ms.reviewer: chiragpa, v-leedennis
+ms.reviewer: chiragpa, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-upgrade-operations
 #Customer intent: As an Azure Kubernetes Services (AKS) user, I want to troubleshoot an Azure Kubernetes Service cluster upgrade that failed because of eviction failures caused by Pod Disruption Budgets so that I can upgrade the cluster successfully.
 ---
 
-# Troubleshoot eviction failures due to Pod Disruption Budgets
+# Troubleshoot UpgradeFailed errors due to eviction failures caused by PDBs
 
-This article discusses how to identify and resolve eviction failures due to Pod Disruption Budgets that occur when you try to upgrade an Azure Kubernetes Service (AKS) cluster.
+This article discusses how to identify and resolve UpgradeFailed errors due to eviction failures caused by Pod Disruption Budgets (PDBs) that occur when you try to upgrade an Azure Kubernetes Service (AKS) cluster.
 
 ## Prerequisites
 
@@ -24,7 +24,7 @@ For more detailed information about the upgrade process, see the "Upgrade an AKS
 An AKS cluster upgrade operation fails with the following error message:
 
 > Code: UpgradeFailed
-> Message: Drain node <node-name> failed when evicting pod <pod-name>. Eviction failed with Too many Requests error. This is often caused by a restrictive Pod Disruption Budget (PDB) policy. See http://aka.ms/aks/debugdrainfailures. Original error: API call to Kubernetes API Server failed.
+> Message: Drain node \<node-name> failed when evicting pod \<pod-name>. Eviction failed with Too many Requests error. This is often caused by a restrictive Pod Disruption Budget (PDB) policy. See http://aka.ms/aks/debugdrainfailures. Original error: API call to Kubernetes API Server failed.
 
 ## Cause
 
