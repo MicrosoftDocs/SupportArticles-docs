@@ -1,7 +1,7 @@
 ---
 title: Diagnostic pages for Windows Integrated Authentication troubleshooting
 description: This article describes the diagnostic pages for troubleshooting Windows Integrated Authentication failures.
-ms.date: 10/31/2023
+ms.date: 11/03/2023
 ms.custom: sap:WWW authentication and authorization
 ms.reviewer: paulboc, aartigoyle, v-sidong
 ms.technology: iis-www-authentication-authorization
