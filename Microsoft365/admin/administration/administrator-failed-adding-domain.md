@@ -10,6 +10,7 @@ audience: ITPro
 ms.custom:
   - CSSTroubleshoot
   - has-azure-ad-ps-ref
+  - azure-ad-ref-level-one-done
 ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
@@ -30,7 +31,7 @@ When you try to add a domain to Microsoft 365, Microsoft Azure, or Microsoft Int
   - **Number of unverified domains exceeded. Your account has too many unverified domains. Verify or delete one of your unverified domains, and then add the new domain.**
   - **Before you continue, you'll need to verify or delete one of your unverified domains. Then you can add and verify a new domain.**
 
-- In Azure Active Directory PowerShell, you receive the following error message:
+- In [Microsoft Graph PowerShell](/powershell/microsoftgraph/overview), you receive the following error message:
 
   **Before you continue, you'll need to verify or delete one of your unverified domains. Then you can add and verify a new domain.**
 
