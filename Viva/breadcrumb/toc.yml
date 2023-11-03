@@ -16,3 +16,6 @@ items:
     - name: Viva Learning
       tocHref: /viva/troubleshoot/learning/
       topicHref: /viva/troubleshoot/learning/viva-learning-welcome      
+    - name: Viva Pulse
+      tocHref: /viva/troubleshoot/pulse/
+      topicHref: /viva/troubleshoot/pulse/viva-pulse-welcome

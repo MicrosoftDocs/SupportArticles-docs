@@ -98,12 +98,14 @@ productDirectory:
     - title: Microsoft Viva
       imageSrc: /support/media/hub-landing/logo-viva.png
       links:
-        - url: /viva/troubleshoot/learning/viva-learning-welcome
-          text: Microsoft Viva Learning
         - url: /viva/troubleshoot/connections/viva-connections-welcome
           text: Microsoft Viva Connections
         - url: /viva/troubleshoot/glint/viva-glint-welcome
           text: Microsoft Viva Glint  
+        - url: /viva/troubleshoot/learning/viva-learning-welcome
+          text: Microsoft Viva Learning
+        - url: /viva/troubleshoot/pulse/viva-pulse-welcome
+          text: Microsoft Viva Pulse
     # Card
     - title: Endpoint management
       imageSrc: /media/logos/logo-ms-social.png
