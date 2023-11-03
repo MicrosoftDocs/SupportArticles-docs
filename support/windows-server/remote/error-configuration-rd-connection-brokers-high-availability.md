@@ -47,6 +47,10 @@ Verify that correct permission is assigned to the RD Connection Broker Server on
 > [!NOTE]
 > The RD Connection Broker server is now allowed to create databases in the SQL server. The RD Connection Broker service will attempt to migrate Windows Internal Database (WID) to a SQL Server instance when converting the RD Connection Broker server to a high available cluster.
 
+## SQL Server collation
+
+The Remote Desktop Services (RDS) database creation script only supports Case Insensitive (CI) collation. Ensure that SQL Server database instance collation is using Case Sensitive under SQL Server instance properties or checking mater database collation.  
+
 ## References
 
 - [Add the RD Connection Broker server to the deployment and configure high availability](/windows-server/remote/remote-desktop-services/rds-connection-broker-cluster)
