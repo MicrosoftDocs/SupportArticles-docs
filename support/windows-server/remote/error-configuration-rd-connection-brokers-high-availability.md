@@ -1,7 +1,7 @@
 ---
 title: Error after completing configuration of the RD Connection Broker server for high availability
 description: Provides resolutions for the error that occur after completing configuration of the RD Connection Broker server for high availability.
-ms.date: 12/09/2021
+ms.date: 11/03/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -47,9 +47,9 @@ Verify that correct permission is assigned to the RD Connection Broker Server on
 > [!NOTE]
 > The RD Connection Broker server is now allowed to create databases in the SQL server. The RD Connection Broker service will attempt to migrate Windows Internal Database (WID) to a SQL Server instance when converting the RD Connection Broker server to a high available cluster.
 
-## SQL Server collation
+## Check case-sensitivity of SQL Server collation
 
-The Remote Desktop Services (RDS) database creation script only supports Case Insensitive (CI) collation. Ensure that SQL Server database instance collation is using Case Sensitive under SQL Server instance properties or checking mater database collation.  
+The database creation script for Remote Desktop Services (RDS) only supports case-insensitive collations. Make sure that the instance collation of the SQL Server database is set to be case-insensitive. 
 
 ## References
 
