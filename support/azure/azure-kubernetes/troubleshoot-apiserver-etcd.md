@@ -68,7 +68,7 @@ AzureDiagnostics
 ---
 
 > [!NOTE]
-> If your query returns no results, you may have selected the wrong table to query diagnostics logs. In resource-specific mode, data is written to individual tables depending on the category of the resource. Diagnostic logs are written to the `AKSAudit` table. In Azure diagnostics mode, all data is written to the `AzureDiagnostics` table. For more information, see [Azure resource logs](/azure/azure-monitor/essentials/resource-logs).
+> If your query returns no results, you may have selected the wrong table to query diagnostics logs. In resource-specific mode, data is written to individual tables depending on the category of the resource. Diagnostics logs are written to the `AKSAudit` table. In Azure diagnostics mode, all data is written to the `AzureDiagnostics` table. For more information, see [Azure resource logs](/azure/azure-monitor/essentials/resource-logs).
 
 Although it's helpful to know which clients generate the highest request volume, high request volume alone might not be a cause for concern. A better indicator of the actual load that each client generates on the API server is the response latency that they experience.
 
