@@ -24,7 +24,7 @@ For more detailed information about the upgrade process, see the "Upgrade an AKS
 An AKS cluster upgrade operation fails with the following error message:
 
 > Code: UpgradeFailed
-> Message: Drain node \<node-name> failed when evicting pod \<pod-name>. Eviction failed with Too many Requests error. This is often caused by a restrictive Pod Disruption Budget (PDB) policy. See http://aka.ms/aks/debugdrainfailures. Original error: API call to Kubernetes API Server failed.
+> Message: Drain node \<node-name> failed when evicting pod \<pod-name>. Eviction failed with Too many Requests error. This is often caused by a restrictive Pod Disruption Budget (PDB) policy. See `http://aka.ms/aks/debugdrainfailures`. Original error: API call to Kubernetes API Server failed.
 
 ## Cause
 
