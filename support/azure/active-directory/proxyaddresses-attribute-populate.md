@@ -1,7 +1,7 @@
 ---
 title: How the proxyAddresses attribute is populated in Microsoft Entra ID
 description: Describes how the proxyAddresses attribute is populated in Microsoft Entra ID. Provides example scenarios.
-ms.date: 06/08/2023
+ms.date: 11/03/2023
 ms.reviewer: "willfid,riantu,nualex,reviei"
 ms.service: active-directory
 ms.subservice: enterprise-users
@@ -72,7 +72,7 @@ AAD:userPrincipalName : user1upn@Contoso.com
 ```
 
 > [!NOTE]
-> The UserPrincipalName is always added as a proxy address when the user is an Exchange Online Recipient. For instance, when it's a shared mailbox or has an Exchange license assigned.
+> When the user has an Exchange license assigned or the user is an Exchange Online recipient, such as a shared mailbox, the `userPrincipalName` is added as a proxy address.
 
 
 
