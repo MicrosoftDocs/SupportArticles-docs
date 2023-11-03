@@ -1,7 +1,7 @@
 ---
 title: General password writeback troubleshooting steps
 description: Review general steps to help you troubleshoot password writeback issues in Microsoft Entra ID.
-ms.date: 02/25/2022
+ms.date: 11/03/2023
 ms.reviewer: jarrettr, nualex, v-leedennis
 editor: v-jsitser
 ms.service: active-directory
