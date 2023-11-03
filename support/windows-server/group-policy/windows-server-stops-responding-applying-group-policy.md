@@ -32,7 +32,7 @@ To work around this issue, follow these steps:
     ```powershell
     PS C:\remote\Sysmon> .\Sysmon64.exe -c
     
-    Sysmon (internal) v15.01 - Monitors system events
+    Sysmon (internal) v15.00 - Monitors system events
     By Mark Russinovich and Thomas Garnier
     Copyright (C) 2014-2023 Microsoft Corporation
     Using libxml2. libxml2 is Copyright (C) 1998-2012 Daniel Veillard. All Rights Reserved.
