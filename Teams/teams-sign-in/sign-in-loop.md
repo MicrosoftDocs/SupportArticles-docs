@@ -1,6 +1,6 @@
 ---
-title: Teams web client is stuck in a login loop
-description: Provides a fix for multiple browsers if the Teams web client continually loops when you try to sign in.
+title: Teams doesn't load
+description: Provides a fix for when the Teams client doesn't load.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
@@ -12,20 +12,22 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - Microsoft Teams
-ms.date: 12/30/2022
+ms.date: 11/02/2023
 adobe-target: true
 ---
 
-# Teams web client is stuck in a login loop
+# Teams doesn't load
 
-When you try to sign in to Microsoft Teams in Microsoft Edge, Google Chrome, Mozilla Firefox, Safari, or Internet Explorer, the Teams site loops continuously, and you can't sign in.
+When you try to open Microsoft Teams in Microsoft Edge, Google Chrome, Mozilla Firefox, or Safari, or access Teams from within an app such as Outlook on the web, the Teams app doesn't load.
 
-This issue occurs if you use the **Trusted Sites** feature in your browser and you don't add the URLs for Microsoft Teams to the list of sites that your browser should trust. In this situation, the Teams web client can't sign in.
+This issue occurs if you use the **Trusted Sites** feature in your browser and you don't add the URLs for Microsoft Teams to the list of sites that your browser should trust. In this situation, the Teams client is unable to load.
 
 To resolve this issue, update your browser settings by using the steps in the appropriate section.
 
 > [!NOTE]  
-> You must have administrative rights to make the updates. If you're the administrator for your organization, you can use a Group Policy Object (GPO) to make the updates simultaneously for all users.
+>
+> - You must have administrative rights to make the updates. If you're the administrator for your organization, you can use a Group Policy Object (GPO) to make the updates simultaneously for all users.
+> - Microsoft recommends that you block third-party cookies from your browser. Third-party cookies can put your privacy and security at risk by exposing your personal information, or opening your device to vulnerabilities. Microsoft recommends that you explicitly allow specific cookies from domains that you trust.
 
 ## Microsoft Edge
 
@@ -122,29 +124,6 @@ Teams support for Safari is currently in preview. Update the following setting, 
 3. Close Safari, reopen the browser, and then navigate to teams.microsoft.com.
 
 For more information, see [Limits and specifications for Teams](/microsoftteams/limits-specifications-teams#browsers).
-
-## Internet Explorer
-
-> [!Note]
-> Starting on November 30, 2020, the Microsoft Teams web client no longer supports Internet Explorer 11. For more information, see [this Microsoft 365 Blog article](https://aka.ms/AA97tsw).
-
-1. In Windows Control Panel, open **Internet Options**.
-2. In the Internet Options window, select the **Privacy** tab, and then select **Advanced**.
-3. Select **Accept** for **First-party Cookies** and **Third-party Cookies**, and then select the **Always allow session cookies** checkbox.
-
-    :::image type="content" source="media/sign-in-loop/ie-advanced-privacy-settings.png" alt-text="Screenshot of the advanced privacy settings dialog box showing that first and third party cookies are selected as accept and always allow session cookies is selected":::
-
-Alternatively, follow these steps:
-
-1. In the **Internet Options** window, select **Security** > **Trusted Sites** > **Sites**.
-2. Add the following sites:
-
-    - `https://*.microsoft.com`
-    - `https://*.microsoftonline.com`
-    - `https://*.teams.skype.com`
-    - `https://*.teams.microsoft.com`
-    - `https://*.sfbassets.com`
-    - `https://*.skypeforbusiness.com`
 
 [!INCLUDE [Third-party information disclaimer](../../includes/third-party-information-disclaimer.md)]
 
