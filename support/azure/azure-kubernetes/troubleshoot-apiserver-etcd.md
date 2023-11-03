@@ -3,7 +3,7 @@ title: Troubleshoot API server and etcd problems in AKS
 description: Provides a troubleshooting guide for API server and etcd problems in Azure Kubernetes Services.
 author: seguler
 ms.author: segule
-ms.date: 11/02/2023
+ms.date: 11/03/2023
 ms.service: azure-kubernetes-service
 ms.reviewer: mikerooney, v-weizhu, axelg, v-leedennis
 ---
@@ -41,9 +41,10 @@ If you are experiencing high latency times, follow these steps to pinpoint the o
 
 ### <a id="identifytopuseragents"></a> Step 1: Identify top user agents by the number of requests
 
-To identify which clients are generating the most requests (and potentially the most API server load), run a query that resembles the following code. The following query lists the top 10 user agents by the number of API server requests sent.
+To identify which clients generate the most requests (and potentially the most API server load), run a query that resembles the following code. The following query lists the top 10 user agents by the number of API server requests sent.
 
 ### [Resource-specific](#tab/resource-specific)
+
 ```kusto
 AKSAudit
 | where TimeGenerated between(now(-1h)..now()) // When you experienced the problem
@@ -53,6 +54,7 @@ AKSAudit
 ```
 
 ### [Azure diagnostics](#tab/azure-diagnostics)
+
 ```kusto
 AzureDiagnostics
 | where TimeGenerated between(now(-1h)..now())  // When you experienced the problem
@@ -66,7 +68,7 @@ AzureDiagnostics
 ---
 
 > [!NOTE]
-> If your query returns no results, you may have selected the wrong table for querying diagnostics logs. In resource-specific mode, data is written to individual tables depending on the category of the resource. The diagnostic logs are written to the `AKSAudit` table. In Azure diagnostics mode, all data is written to the `AzureDiagnostics` table. For more information, see [Azure resource logs](/azure/azure-monitor/essentials/resource-logs).
+> If your query returns no results, you may have selected the wrong table to query diagnostics logs. In resource-specific mode, data is written to individual tables depending on the category of the resource. Diagnostic logs are written to the `AKSAudit` table. In Azure diagnostics mode, all data is written to the `AzureDiagnostics` table. For more information, see [Azure resource logs](/azure/azure-monitor/essentials/resource-logs).
 
 Although it's helpful to know which clients generate the highest request volume, high request volume alone might not be a cause for concern. A better indicator of the actual load that each client generates on the API server is the response latency that they experience.
 
@@ -75,6 +77,7 @@ Although it's helpful to know which clients generate the highest request volume,
 To identify the average latency of API server requests per user agent as plotted on a time chart, run the following query:
 
 ### [Resource-specific](#tab/resource-specific)
+
 ```kusto
 AKSAudit
 | where TimeGenerated between(now(-1h)..now()) // When you experienced the problem
@@ -111,6 +114,7 @@ This query is a follow-up to the query in the ["Identify top user agents by the 
 Run the following query to tabulate the 99th percentile (P99) latency of API calls across different resource types for a given client:
 
 ### [Resource-specific](#tab/resource-specific)
+
 ```kusto
 AKSAudit
 | where TimeGenerated between(now(-1h)..now()) // When you experienced the problem
@@ -126,6 +130,7 @@ AKSAudit
 ```
 
 ### [Azure diagnostics](#tab/azure-diagnostics)
+
 ```kusto
 AzureDiagnostics
 | where TimeGenerated between(now(-1h)..now())  // When you experienced the problem
