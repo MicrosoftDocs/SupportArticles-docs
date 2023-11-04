@@ -34,7 +34,7 @@ To work around the issue, create a `DWMFRAMEINTERVAL` entry in registry subkey `
 6. Select **Decimal**, type *15* in the **Value data** box, and then select **OK**. This sets the maximum frame rate to 60 frames per second (FPS).
 
     > [!NOTE]
-    > This registry entry sets the maximum frame rate limit that the remote display protocol can deliver to the remote session client. This setting does not set the actual frame rate for the remote session client. The actual frame rate in the remote session depends on other factors such as application and computer hardware resources. Additionally, not all remote display protocols support a frame rate that is greater than 30 FPS. For example, Remote Desktop Protocol (RDP) limits the frame rate to 30 FPS. Please contact the remote display protocol providers for more information.
+    > This registry entry sets the maximum frame rate limit that the remote display protocol can deliver to the remote session client. This setting does not set the actual frame rate for the remote session client. The actual frame rate in the remote session depends on other factors such as application and computer hardware resources. Additionally, not all remote display protocols support a frame rate that is greater than 30 FPS. Please contact the remote display protocol providers for more information.
 7. Exit Registry Editor, and then restart the computer.
 
 ## Frame rate mapping
