@@ -81,32 +81,34 @@ For a complete description of every tool and sample usage, see the RML Help file
 
 ### Dependencies for Reporter
 
-You have to make sure that the Report Viewer controls are available either in the same folder as *Reporter.exe* or in the Global Assembly Cache (GAC). The DLLs that *Reporter.exe* requires are:
+1. You have to make sure that the Report Viewer controls are available either in the same folder as *Reporter.exe* or in the Global Assembly Cache (GAC). The DLLs that *Reporter.exe* requires are:
 
-- *Microsoft.ReportViewer.Common.dll*
-- *Microsoft.ReportViewer.DataVisualization.dll*
-- *Microsoft.ReportViewer.ProcessingObjectModel.dll*
-- *Microsoft.ReportViewer.WinForms.dll*
+   - *Microsoft.ReportViewer.Common.dll*
+   - *Microsoft.ReportViewer.DataVisualization.dll*
+   - *Microsoft.ReportViewer.ProcessingObjectModel.dll*
+   - *Microsoft.ReportViewer.WinForms.dll*
 
-You can download these DLLs by using the following PowerShell script:
+   You can download these DLLs by using the following PowerShell script:
 
-```powershell
-Register-PackageSource -Name MyNuGet -Location https://www.nuget.org/api/v2 -ProviderName NuGet
-Get-PackageSource
+   ```powershell
+   Register-PackageSource -Name MyNuGet -Location https://www.nuget.org/api/v2 -ProviderName NuGet
+   Get-PackageSource
 
-Find-Package Microsoft.ReportViewer.Common -AllVersions
-Install-Package Microsoft.ReportViewer.Common -RequiredVersion 10.0.40219.1
+   Find-Package Microsoft.ReportViewer.Common -AllVersions
+   Install-Package Microsoft.ReportViewer.Common -RequiredVersion 10.0.40219.1
 
-Copy-Item -Path "C:\Program Files\PackageManagement\NuGet\Packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.Common.dll" -Destination "C:\Program Files\Microsoft Corporation\RMLUtils"
-Copy-Item -Path "C:\Program Files\PackageManagement\NuGet\Packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.DataVisualization.dll" -Destination "C:\Program Files\Microsoft Corporation\RMLUtils"
-Copy-Item -Path "C:\Program Files\PackageManagement\NuGet\Packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.ProcessingObjectModel.dll" -Destination "C:\Program Files\Microsoft Corporation\RMLUtils"
+   Copy-Item -Path "C:\Program Files\PackageManagement\NuGet\Packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.Common.dll" -Destination "C:\Program Files\Microsoft Corporation\RMLUtils"
+   Copy-Item -Path "C:\Program Files\PackageManagement\NuGet\Packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.DataVisualization.dll" -Destination "C:\Program Files\Microsoft Corporation\RMLUtils"
+   Copy-Item -Path "C:\Program Files\PackageManagement\NuGet\Packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.ProcessingObjectModel.dll" -Destination "C:\Program Files\Microsoft Corporation\RMLUtils"
 
-Find-Package Microsoft.ReportViewer.WinForms -AllVersions
-Install-Package Microsoft.ReportViewer.WinForms -RequiredVersion 10.0.40219.1
+   Find-Package Microsoft.ReportViewer.WinForms -AllVersions
+   Install-Package Microsoft.ReportViewer.WinForms -RequiredVersion 10.0.40219.1
 
-Copy-Item -Path "C:\Program Files\PackageManagement\NuGet\Packages\Microsoft.ReportViewer.WinForms.10.0.40219.1\lib\Microsoft.ReportViewer.WinForms.dll" -Destination "C:\Program Files\Microsoft Corporation\RMLUtils"
-```
+   Copy-Item -Path "C:\Program Files\PackageManagement\NuGet\Packages\Microsoft.ReportViewer.WinForms.10.0.40219.1\lib\Microsoft.ReportViewer.WinForms.dll" -Destination "C:\Program Files\Microsoft Corporation\RMLUtils"
+   ```
 
+1. You must download and install a ReporterViewer fix to allow links inside the ReadTrace reports to work properly. To download go to [Microsoft Visual Studio 2010 Service Pack 1 Report Viewer (KB2549864)](https://www.microsoft.com/en-us/download/details.aspx?id=27231)
+   
 ### Dependencies for Expander
 
 Make sure that the compression and decompression controls are available either in the same folder as *Expander.exe* or in the GAC. The DLLs that *Expander.exe* requires are as follows:
