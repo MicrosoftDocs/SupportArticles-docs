@@ -119,7 +119,7 @@ Make sure that the compression and decompression controls are available either i
 
 You can obtain these DLLs from the respective software packages of the vendors:
 
-- <https://www.rarlab.com/rar/UnRARDLL.exe>
+- <https://www.rarlab.com/rar_add.htm> - find the UnRAR.dll dynamic library for Windows software developers
 
 - <https://www.7-zip.org/a/7z1900-x64.exe>
 
