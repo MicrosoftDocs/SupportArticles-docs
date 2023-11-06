@@ -4,7 +4,7 @@ description: Troubleshoot common issues with monitoring sync health and resolvin
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 10/13/2023
+ms.date: 11/06/2023
 ms.author: kendownie
 ms.custom: devx-track-azurepowershell
 ms.reviewer: v-weizhu
@@ -644,7 +644,7 @@ This error can happen if your organization is using a TLS terminating proxy or i
 
 By setting this registry value, the Azure File Sync agent will accept any locally trusted TLS/SSL certificate when transferring data between the server and the cloud service.
 
-<a id="-2147012721"></a>**Sync failed because the server was unable to decode the response from the Azure File Sync service**  
+<a id="-2147012721"></a>**Sync failed because the server was unable to decode the response from the Azure File Sync service.**  
 
 | Error | Code |
 |-|-|
@@ -653,7 +653,18 @@ By setting this registry value, the Azure File Sync agent will accept any locall
 | **Error string** | WININET_E_DECODING_FAILED |
 | **Remediation required** | Yes |
 
-This error typically occurs if a network proxy is modifying the response from the Azure File Sync service. Please check your proxy configuration.
+This error typically occurs if a firewall, proxy, or gateway blocks access to the PKI URL, or if the PKI server is down.
+
+To resolve this issue, ensure that the server can access the following URLs:
+
+- `https://www.microsoft.com/pki/mscorp/cps`
+- `http://crl.microsoft.com/pki/mscorp/crl/`
+- `http://mscrl.microsoft.com/pki/mscorp/crl/`
+- `http://ocsp.msocsp.com`
+- `http://ocsp.digicert.com/`
+- `http://crl3.digicert.com/`
+
+Once the Azure File Sync agent is installed, the PKI URL is used to download the intermediate certificates required to communicate with the Azure File Sync service and Azure file share. The OCSP URL is used to check the status of a certificate. If the error persists for several days, [create a support request](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview?DMC=troubleshoot).
 
 <a id="-2134375680"></a>**Sync failed due to a problem with authentication.**  
 

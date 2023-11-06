@@ -116,7 +116,7 @@ items:
           href: solutions/primaryname-attribute-not-found.md
         - name: Solution import or app installation fails due to missing privileges
           href: solutions/install-failure-priviledge-not-assigned.md
-        - name: Solution checker enforcement in Managed Environments (preview) blocks or warns on import
+        - name: Solution checker enforcement in Managed Environments blocks or warns on import
           href: solutions/solution-checker-enforcement-import-issues.md
         - name: '"Solution cannot be deleted due to dependencies" error'
           href: solutions/solution-cannot-be-deleted-due-to-dependencies.md
