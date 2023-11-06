@@ -98,7 +98,7 @@ keda-operator-metrics-apiserver   kube-system
 > [!WARNING]
 > If the namespace isn't `kube-system`, the AKS add-on is being ignored, and another metric server is being used.
 
-### How to restart KEDA operator pods when workload identity is not being injected properly
+### How to restart KEDA operator pods when workload identity isn't injected properly
 
 If you're using [Microsoft Entra Workload ID](/azure/aks/workload-identity-overview) and you enable KEDA before the Workload ID is used, you must restart the KEDA operator pods. This ensures the correct environment variables are injected. To do this, follow these steps:
 
