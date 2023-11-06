@@ -56,7 +56,7 @@
       href: upgrade-fails-because-of-nsg-rules.md
     - name: NodePoolMcVersionIncompatible error
       href: nodepoolmcversionincompatible-error.md
-    - name: PodDrainFailure error
+    - name: Troubleshoot eviction failures due to Pod Disruption Budgets
       href: error-code-poddrainfailure.md
     - name: UnsatisfiablePDB error
       href: error-code-unsatisfiablepdb.md
@@ -266,6 +266,8 @@
   items:
   - name: Troubleshoot Azure Key Vault Provider for Secrets Store CSI Driver
     href: troubleshoot-key-vault-csi-secrets-store-csi-driver.md
+  - name: Troubleshoot cluster extension deployment errors
+    href: cluster-extension-deployment-errors.md
   - name: Troubleshoot Dapr extension installation errors
     href: troubleshoot-dapr-extension-installation-errors.md
   - name: Troubleshoot deployment failures of Azure Marketplace offers
