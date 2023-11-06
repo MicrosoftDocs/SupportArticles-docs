@@ -1,7 +1,7 @@
 ### YamlMime:Landing
 
 title: Viva Pulse troubleshooting
-summary: This library of articles provides guidance to troubleshoot and fix errors that you may experience when using Viva Pulse. For a complete list of articles, browse the navigation pane on the left, or use the search box above the pane to filter by keywords and find help with a specific issue.
+summary: Provides guidance to troubleshoot and fix errors that you may experience when using Viva Pulse.
 metadata:
   title: Viva Pulse troubleshooting
   description: Documentation for troubleshooting common issues with Viva Pulse.
@@ -9,16 +9,23 @@ metadata:
   ms.topic: landing-page
   author: helenclu
   ms.author: luche
-  ms.date: 11/03/2023
+  ms.date: 11/06/2023
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
 
  # Card
-  - title: Documentation
+  - title: Introduction
     linkLists:
-      - linkListType: reference
+      - linkListType: overview
         links:
-          - text: Overview of Viva Pulse
+          - text: Introduction to Viva Pulse
             url: /viva/pulse/introduction-to-viva-pulse
+ # Card
+  - title: Setup errors
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Resolve setup errors
+            url: /viva/pulse/fix-setup-error-messages
