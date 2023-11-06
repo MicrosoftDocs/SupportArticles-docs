@@ -106,17 +106,20 @@ If you're using [Microsoft Entra Workload ID](/azure/aks/workload-identity-overv
 
      ```bash
      kubectl rollout restart deployment keda-operator -n kube-system
-     ``` 
+     ```
 
-2. Obtain KEDA operator pods by running the following command and locate pods that begin with `keda-operator`
+2. Obtain KEDA operator pods by running the following command, and then locate pods with names starting with 'keda-operator'.
+
      ```bash
     kubectl get pod -n kube-system
-     ``` 
-3. To verify that the environment variables have been successfully injected, run the following command. In the Environment section, You should see values for `AZURE_TENANT_ID`,  `AZURE_FEDERATED_TOKEN_FILE`, and `AZURE_AUTHORITY_HOST`.
+     ```
+
+3. To verify that the environment variables have been successfully injected, run the following command:
 
      ```bash
-    kubectl describe pod <keda-operator-pod> -n kube-system
+    kubectl describe pod <keda-operator-pod-name> -n kube-system
      ```
+     If the variables have been successfully injected, you should see values for `AZURE_TENANT_ID`, `AZURE_FEDERATED_TOKEN_FILE`, and `AZURE_AUTHORITY_HOST` in the **Environment** section.
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
 
