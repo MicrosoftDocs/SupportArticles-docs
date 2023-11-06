@@ -27,8 +27,6 @@ ms.dyn365.ops.version: 10.0.14
 
 # Change the accounting or reporting currency
 
-[!include [banner](../includes/banner.md)]
-
 This article explains how to change the accounting or reporting currency, or add a reporting currency to the setup of a ledger.
 
 ## Symptom
