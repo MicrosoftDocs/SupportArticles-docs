@@ -1240,6 +1240,8 @@
       href: ./group-policy/group-policy-add-maxtokensize-registry-entry.md
     - name: User GPP Scheduled Task item fails to apply
       href: ./group-policy/user-gpp-scheduled-task-item-fails-apply.md
+    - name: User-based GPO settings aren't applied when signing in with shadow principals
+      href: ./group-policy/user-based-gpo-settings-not-work-shadow-principals.md      
     - name: Userenv errors occur and events are logged
       href: ./group-policy/userenv-errors-occur-events-are-logged.md
     - name: WMI Group Policy filters don't work
