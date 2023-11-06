@@ -56,7 +56,7 @@
       href: upgrade-fails-because-of-nsg-rules.md
     - name: NodePoolMcVersionIncompatible error
       href: nodepoolmcversionincompatible-error.md
-    - name: PodDrainFailure error
+    - name: Troubleshoot eviction failures due to Pod Disruption Budgets
       href: error-code-poddrainfailure.md
     - name: UnsatisfiablePDB error
       href: error-code-unsatisfiablepdb.md
