@@ -4,7 +4,7 @@
 title: Troubleshoot Finance insights setup issues
 description: This article lists issues that can occur when you use Finance insights capabilities. It also explains how to fix those issues.
 author: panolte
-ms.date: 02/11/2022
+ms.date: 11/06/2023
 ms.topic: article
 ms.prod: 
 ms.technology: 
@@ -15,7 +15,7 @@ ms.search.form:
 # ROBOTS: 
 audience: Application User
 # ms.devlang: 
-ms.reviewer: kfend
+ms.reviewer: twheeloc
 # ms.tgt_pltfrm: 
 ms.collection: get-started
 ms.assetid: 3d43ba40-780c-459a-a66f-9a01d556e674
@@ -67,7 +67,7 @@ Dynamics 365 Finance users must have a Microsoft Power Apps user account for the
 
 The cash flow forecasting function in Cash and bank management and the Cash flow forecasts feature in Finance insights must be set up and enabled to correctly show data in the **Cash flow forecast** workspace.
 
-First, set up and enable the cash flow forecasting and liquidity accounts. For more information, see [Cash flow forecasting](/dynamics365/finance/cash-bank-management/cash-flow-forecasting). If this setup has been completed, but you don't see the results that you expect, see [Troubleshoot cash flow forecasting setup](/cash-bank-management/cash-flow-forecasting-tsg.md) for more information.
+First, set up and enable the cash flow forecasting and liquidity accounts. For more information, see [Cash flow forecasting](/dynamics365/finance/cash-bank-management/cash-flow-forecasting). If this setup has been completed, but you don't see the results that you expect, see [Troubleshoot cash flow forecasting setup](/dynamics365/finance/general-ledger/cash-bank-management/cash-flow-forecasting-tsg) for more information.
 
 Next, confirm that the Cash flow forecasts feature in Finance insights (**Cash and bank management \> Setup \> Finance Insights \> Cash flow forecasts**) has been enabled, and that training of the AI model has been completed. If the training hasn't been completed, select **Forecast now** to start the model training process.
 
@@ -102,7 +102,7 @@ The following steps should have been completed.
 ### Resolution
 
 Check the data integrator setup to validate that it's functioning as expected and upserting the data from AI Builder back to Finance.  
-For more information, see [Create a data integration project](dynamics365/finance/finance-insights/create-data-integrate-project).
+For more information, see [Create a data integration project](/dynamics365/finance/finance-insights/create-data-integrate-project).
 
 ## Symptom: Customer payment prediction training failed and the AI Builder error states, "Prediction should have only 2 distinct outcome values to train the model. Map to two outcomes and retrain", "Training report issue: IsNotMinRequiredDistinctNonNullValues".
 
