@@ -29,8 +29,6 @@ ms.dyn365.ops.version: AX 10.0.20
 
 # Troubleshoot Finance insights setup issues
 
-[!include [banner](../includes/banner.md)]
-
 This article lists issues that can occur when you use Finance insights capabilities. It also explains how to fix those issues.
 
 ## Symptom: Why can't I map the Customer payment insights Data Integration template destination column?
@@ -55,7 +53,7 @@ Follow these steps in Finance after you upgrade.
 Follow these steps in the [Power Platform admin center](https://admin.powerplatform.microsoft.com/environments) to update your data integration projects.
 
 1. If you're using a preview version of Finance insights, remove the DI project that is associated with the **Customer payment insights results (CDS to Fin and Ops)** template.
-2. Follow the steps in [Create a data integrator project](create-data-integrate-project.md). Use the **Customer payment insights results (CDS to Fin and Ops 10.0.17 and later)** template.
+2. Follow the steps in [Create a data integrator project](/dynamics365/finance/finance-insights/create-data-integrate-project). Use the **Customer payment insights results (CDS to Fin and Ops 10.0.17 and later)** template.
 
 ## Symptom: When I try to open AI Builder by using the links on the Customer payment predictions setup page, why do I receive the following error message: "Sorry, there's been a disconnect"?
 
@@ -69,7 +67,7 @@ Dynamics 365 Finance users must have a Microsoft Power Apps user account for the
 
 The cash flow forecasting function in Cash and bank management and the Cash flow forecasts feature in Finance insights must be set up and enabled to correctly show data in the **Cash flow forecast** workspace.
 
-First, set up and enable the cash flow forecasting and liquidity accounts. For more information, see [Cash flow forecasting](../cash-bank-management/cash-flow-forecasting.md). If this setup has been completed, but you don't see the results that you expect, see [Troubleshoot cash flow forecasting setup](../cash-bank-management/cash-flow-forecasting-tsg.md) for more information.
+First, set up and enable the cash flow forecasting and liquidity accounts. For more information, see [Cash flow forecasting](/dynamics365/finance/cash-bank-management/cash-flow-forecasting). If this setup has been completed, but you don't see the results that you expect, see [Troubleshoot cash flow forecasting setup](/cash-bank-management/cash-flow-forecasting-tsg.md) for more information.
 
 Next, confirm that the Cash flow forecasts feature in Finance insights (**Cash and bank management \> Setup \> Finance Insights \> Cash flow forecasts**) has been enabled, and that training of the AI model has been completed. If the training hasn't been completed, select **Forecast now** to start the model training process.
 
@@ -104,7 +102,7 @@ The following steps should have been completed.
 ### Resolution
 
 Check the data integrator setup to validate that it's functioning as expected and upserting the data from AI Builder back to Finance.  
-For more information, see [Create a data integration project](../finance-insights/create-data-integrate-project.md).
+For more information, see [Create a data integration project](dynamics365/finance/finance-insights/create-data-integrate-project).
 
 ## Symptom: Customer payment prediction training failed and the AI Builder error states, "Prediction should have only 2 distinct outcome values to train the model. Map to two outcomes and retrain", "Training report issue: IsNotMinRequiredDistinctNonNullValues".
 
@@ -112,7 +110,7 @@ For more information, see [Create a data integration project](../finance-insight
 
 This error indicates that there are not enough historical transactions in the last year that represent each category described in the **On-time**, **Late**, and **Very late** categories. To resolve this error, adjust the **Very late** transaction period. If adjusting the **Very late** transaction period doesn't fix the error, **Customer payment predictions** is not the best solution to use as it needs data in each category for training purposes.
 
-For more information about how to adjust the **On-time**, **Late**, and **Very late** categories, see [Enable customer payment predictions](../finance-insights/enable-cust-paymnt-prediction.md).
+For more information about how to adjust the **On-time**, **Late**, and **Very late** categories, see [Enable customer payment predictions](/dynamics365/finance/finance-insights/enable-cust-paymnt-prediction).
 
 ## Symptom: Model training failed
 
@@ -128,4 +126,4 @@ The **Budget proposal** feature requires a minimum of three years of budget or a
 
 ### Resolution
 
-The environment has reached the Data Lake Services maximum table limit. For more information about the limit, see the **Enable near real-time data changes** section of the article, [Export to Azure Data Lake overview](../../fin-ops-core/dev-itpro/data-entities/Azure-Data-Lake-GA-version-overview.md).
+The environment has reached the Data Lake Services maximum table limit. For more information about the limit, see the **Enable near real-time data changes** section of the article, [Export to Azure Data Lake overview](/dynamics365/fin-ops-core/dev-itpro/data-entities/Azure-Data-Lake-GA-version-overview).
