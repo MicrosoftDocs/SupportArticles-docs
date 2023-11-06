@@ -1,6 +1,106 @@
 {
   "redirections": [
     {
+      "source_path": "support/dynamics-365/guides/hololens-app/cant-make-video-call.md",
+      "redirect_url": "/troubleshoot/dynamics-365/guides/application-functionality/cant-make-video-call",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/guides/hololens-app/device-license-cant-find-guide.md",
+      "redirect_url": "/troubleshoot/dynamics-365/guides/application-functionality/device-license-cant-find-guide",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/guides/pc-app/anchors-3d-model-conversion-fails.md",
+      "redirect_url": "/troubleshoot/dynamics-365/guides/application-functionality/anchors-3d-model-conversion-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/guides/pc-app/fail-to-detect-object-anchor.md",
+      "redirect_url": "/troubleshoot/dynamics-365/guides/application-functionality/fail-to-detect-object-anchor",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/guides/hololens-app/step-content-hazard.md",
+      "redirect_url": "/troubleshoot/dynamics-365/guides/application-functionality/step-content-hazard",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/guides/hololens-app/step-content-warning-memory.md",
+      "redirect_url": "/troubleshoot/dynamics-365/guides/application-functionality/step-content-warning-memory",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/guides/hololens-app/step-content-fail-load.md",
+      "redirect_url": "/troubleshoot/dynamics-365/guides/application-functionality/step-content-fail-load",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/guides/install-migrate/sign-in-error.md",
+      "redirect_url": "/troubleshoot/dynamics-365/guides/setup-and-configuration/sign-in-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/guides/install-migrate/install-update-fails.md",
+      "redirect_url": "/troubleshoot/dynamics-365/guides/setup-and-configuration/install-update-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/guides/install-migrate/failed-to-import-microsoft-xrm-data-powershell.md",
+      "redirect_url": "/troubleshoot/dynamics-365/guides/setup-and-configuration/failed-to-import-microsoft-xrm-data-powershell",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/guides/hololens-app/device-license-sign-in-error.md",
+      "redirect_url": "/troubleshoot/dynamics-365/guides/setup-and-configuration/device-license-sign-in-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/remote-assist/remote-assist-app/no-assets-admin.md",
+      "redirect_url": "/troubleshoot/dynamics-365/remote-assist/application-functionality/no-assets-admin",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/remote-assist/remote-assist-app/assets-not-appear-or-expected.md",
+      "redirect_url": "/troubleshoot/dynamics-365/remote-assist/application-functionality/assets-not-appear-or-expected",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/remote-assist/remote-assist-app/contacts-not-appear-or-expected.md",
+      "redirect_url": "/troubleshoot/dynamics-365/remote-assist/application-functionality/contacts-not-appear-or-expected",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/remote-assist/remote-assist-app/remote-assist-stops-responding.md",
+      "redirect_url": "/troubleshoot/dynamics-365/remote-assist/application-functionality/remote-assist-stops-responding",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/remote-assist/remote-assist-app/no-incoming-call-notification.md",
+      "redirect_url": "/troubleshoot/dynamics-365/remote-assist/application-functionality/no-incoming-call-notification",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/remote-assist/remote-assist-app/mixed-reality-toolbar-not-show-on-teams-call.md",
+      "redirect_url": "/troubleshoot/dynamics-365/remote-assist/application-functionality/mixed-reality-toolbar-not-show-on-teams-call",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/remote-assist/remote-assist-app/can't-find-model-driven-app.md",
+      "redirect_url": "/troubleshoot/dynamics-365/remote-assist/setup-and-configuration/can't-find-model-driven-app",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/remote-assist/remote-assist-app/cannot-sign-in-to-remote-assist.md",
+      "redirect_url": "/troubleshoot/dynamics-365/remote-assist/setup-and-configuration/cannot-sign-in-to-remote-assist",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/remote-assist/remote-assist-app/troubleshoot-model-driven-app-installation.md",
+      "redirect_url": "/troubleshoot/dynamics-365/remote-assist/setup-and-configuration/troubleshoot-model-driven-app-installation",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "support/power-platform/power-apps/manage-apps-and-solutions/dataverse-records-missing-required-fields.md",
       "redirect_url": "/troubleshoot/power-platform/power-apps/manage-apps/dataverse-records-missing-required-fields",
       "redirect_document_id": true
