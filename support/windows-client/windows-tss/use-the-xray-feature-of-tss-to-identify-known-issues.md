@@ -15,7 +15,7 @@ ms.technology: windows-client-troubleshooter
 ---
 # Identify known issues by using the xray feature of TSS
 
-Xray is a diagnostic framework-based PowerShell feature of the [TroubleShootingScript (TSS)](/troubleshoot/windows-client/windows-tss/introduction-to-troubleshootingscript-toolset-tss) toolset, and it helps troubleshoot known issue. The xray feature scans for issues during data collection and creates reports with issue information and solutions. The Xray feature displays the reports on screen, and also saves the reports in the dataset in the .zip file created by the TSS tool.
+Xray is a diagnostic framework-based PowerShell feature of the [TroubleShootingScript (TSS)](/troubleshoot/windows-client/windows-tss/introduction-to-troubleshootingscript-toolset-tss) toolset, and it helps troubleshoot known issues. The xray feature scans for known issues during data collection, and creates reports with issue information and solutions. The Xray feature displays the reports on screen, and also saves the reports in the dataset in the .zip file created by the TSS tool.
 
 Xray is a dynamic feature that releases new versions every week. It constantly updates its diagnostics to identify new problems and removes outdated ones to enhance performance and reduce runtime. TSS prompts you to update automatically when you run it. It's important that you keep TSS updated to get the latest features and fixes from TSS and xray. Otherwise, you might not detect some issues that were recently added to xray.
 
