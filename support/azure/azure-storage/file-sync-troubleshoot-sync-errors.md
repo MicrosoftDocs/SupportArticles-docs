@@ -653,7 +653,7 @@ By setting this registry value, the Azure File Sync agent will accept any locall
 | **Error string** | WININET_E_DECODING_FAILED |
 | **Remediation required** | Yes |
 
-This error typically occurs if a firewall, proxy or gateway is blocking access to the PKI URLs, or if the PKI servers are down.
+This error typically occurs if a firewall, proxy, or gateway blocks access to the PKI URL, or if the PKI server is down.
 
 To resolve this issue, ensure that the server can access the following URLs:
 
@@ -664,7 +664,7 @@ To resolve this issue, ensure that the server can access the following URLs:
 - `http://ocsp.digicert.com/`
 - `http://crl3.digicert.com/`
 
-Once the Azure File Sync agent is installed, the PKI URL is used to download intermediate certificates required to communicate with the Azure File Sync service and Azure file share. The OCSP URL is used to check the status of a certificate. If the error persists for several days, [create a support request](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview?DMC=troubleshoot).
+Once the Azure File Sync agent is installed, the PKI URL is used to download the intermediate certificates required to communicate with the Azure File Sync service and Azure file share. The OCSP URL is used to check the status of a certificate. If the error persists for several days, [create a support request](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview?DMC=troubleshoot).
 
 <a id="-2134375680"></a>**Sync failed due to a problem with authentication.**  
 
