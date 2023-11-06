@@ -4,7 +4,7 @@
 title: Open financial journal templates in Office 
 description: This article describes issues that might occur when you create custom financial journals by using a Microsoft Excel template.
 author: kweekley
-ms.date: 05/14/2021
+ms.date: 05/14/2023
 ms.topic: conceptual
 ms.prod: 
 ms.technology: 
@@ -14,7 +14,7 @@ ms.technology:
 ms.search.form: 
 audience: Application User
 # ms.devlang: 
-ms.reviewer: kfend
+ms.reviewer: twheeloc
 # ms.tgt_pltfrm: 
 # ms.custom: 
 ms.search.region: Global 
@@ -26,8 +26,6 @@ ms.dyn365.ops.version: 10.0.14
 ---
 
 # Open financial journal templates in Office
-
-[!include [banner](../includes/banner.md)]
 
 This article describes issues that might occur when you create custom financial journals by using a Microsoft Excel template.
 
@@ -45,4 +43,4 @@ If you want to promote a template so that it's available on the **Open lines in 
 
 When the **LedgerIJournalExcelTemplate** interface is implemented for your template, the **Open Lines in Excel** menu will filter templates by the journal type of your journal and will show only the templates that are available for that journal. The interface also provides a validation method that ensures that a template can't be opened for a journal if it doesn't meet the account type requirements. For example, you can specify that the account type must be of the **Vendor** or **Ledger** type.
 
-For more information about this functionality, see [Add templates to the Open lines in Excel menu](../../fin-ops-core/dev-itpro/user-interface/add-templates-open-lines-excel-menu.md).
+For more information about this functionality, see [Add templates to the Open lines in Excel menu](/dynamics365/fin-ops-core/dev-itpro/user-interface/add-templates-open-lines-excel-menu).
