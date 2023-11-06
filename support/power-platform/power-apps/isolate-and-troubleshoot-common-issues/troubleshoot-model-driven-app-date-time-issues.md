@@ -148,7 +148,7 @@ Useful combinations to try:
 
 - Match the time zone in personal options with the system time zone.
 - Use UTC time zone.
-- Use a time zone with the same offset, but doesn't observe daylight savings.
+- Use a time zone with the same offset, but doesn't observe daylight saving.
 
 > [!TIP]
 > The following methods provide more details to make it easier to investigate date and time issues.
