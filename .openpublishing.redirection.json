@@ -86,7 +86,7 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "support/dynamics-365/remote-assist/remote-assist-app/can't-find-model-driven-app.md",
+      "source_path": "support/dynamics-365/remote-assist/model-driven-app/can't-find-model-driven-app.md",
       "redirect_url": "/troubleshoot/dynamics-365/remote-assist/setup-and-configuration/can't-find-model-driven-app",
       "redirect_document_id": true
     },
@@ -96,7 +96,7 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "support/dynamics-365/remote-assist/remote-assist-app/troubleshoot-model-driven-app-installation.md",
+      "source_path": "support/dynamics-365/remote-assist/model-driven-app/troubleshoot-model-driven-app-installation.md",
       "redirect_url": "/troubleshoot/dynamics-365/remote-assist/setup-and-configuration/troubleshoot-model-driven-app-installation",
       "redirect_document_id": true
     },
