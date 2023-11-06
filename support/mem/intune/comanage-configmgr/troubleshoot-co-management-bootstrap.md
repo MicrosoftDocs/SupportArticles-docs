@@ -78,7 +78,7 @@ You can find the **ccmsetup.msi** file in the following folder on the Configurat
 To verify the deployment, follow these steps on the Windows 10 device:
 
 1. Open File Explorer, and go to `%WinDir%\CCM\logs`.
-2. Open the ADALOperationProvider.log file with [CMTrace](/mem/configmgr/core/support/cmtrace), and look for **Getting AAD (User) token and Getting AAD (device) token** to verify the tokens.
+2. Open the ADALOperationProvider.log file with [CMTrace](/mem/configmgr/core/support/cmtrace), and look for **Getting Microsoft Entra ID (User) token and Getting Microsoft Entra ID (device) token** to verify the tokens.
 3. In CMTrace, open the CoManagementHandler.log file, look for **Device is already enrolled with MDM and Device Provisioned** to verify the enrollment.
 4. Open Control Panel, type **Configuration Manager** in the search box, and then select it.
 5. Select the **General** tab, and verify the **Assigned management point**.
@@ -135,7 +135,7 @@ To fix the issue, follow the steps in [Microsoft Entra user Discovery](/mem/conf
 
 ### CoManagementHandler.log shows **Queuing enrollment timer to fire at...**
 
-The ADALOperationProvider.log file on the Windows devices shows **Getting AAD (User) token and Getting AAD (device) token**. However, the device isn't enrolled, and the last line in CoManagementHandler.log is **Queuing enrollment timer to fire at...**.
+The ADALOperationProvider.log file on the Windows devices shows **Getting Microsoft Entra ID (User) token and Getting Microsoft Entra ID (device) token**. However, the device isn't enrolled, and the last line in CoManagementHandler.log is **Queuing enrollment timer to fire at...**.
 
 This behavior is expected in Configuration Manager current branch version 1806 and later versions. Starting in version 1806, automatic enrollment isn't immediate for all clients. This behavior helps enrollment scale better for large environments. Configuration Manager randomizes enrollment based on the number of clients. For example, if your environment has 100,000 clients, enrollment may occur over several days.
 
