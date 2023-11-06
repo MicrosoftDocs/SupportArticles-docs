@@ -4,7 +4,7 @@
 title: How do I set up balancing financial dimensions?
 description: This article describes the options for setting up and using the Balancing financial dimension feature.
 author: kweekley
-ms.date: 08/25/2021
+ms.date: 08/25/2023
 ms.topic: article
 ms.prod: 
 ms.technology: 
@@ -14,7 +14,7 @@ ms.technology:
 ms.search.form: DimensionDetails
 audience: Application User
 # ms.devlang: 
-ms.reviewer: kfend
+ms.reviewer: twheeloc
 # ms.tgt_pltfrm: 
 # ms.custom: 
 ms.search.region: Global 
@@ -25,8 +25,6 @@ ms.dyn365.ops.version: 10.0.210
 ---
 
 # How do I set up balancing financial dimensions?
-
-[!include [banner](../includes/banner.md)]
 
 This article describes the options for setting up and using the Balancing financial dimension feature.
 
@@ -77,7 +75,7 @@ Follow these steps to turn on the use of a balancing dimension at the financial 
     - You can set more than one financial dimension as a balancing dimension.
     - Don't yet set the financial dimensions that will be required to balance a transaction on the **Financial dimensions** page.
 
-2. Define the posting definitions for each type of journal or source document used by your organization. Posting definitions consume the ledger accounts from an unposted journal or source document as ‘match criteria’. The posting definition then returns the ‘generated entries’ which become the accounting entry. If the posting definition is correctly set up, the generated entry includes the match criteria ledger accounts, plus additional accounts to balance the accounting entry at the dimension level. For more information, see [Posting definitions](posting-definitions.md). 
+2. Define the posting definitions for each type of journal or source document used by your organization. Posting definitions consume the ledger accounts from an unposted journal or source document as ‘match criteria’. The posting definition then returns the ‘generated entries’ which become the accounting entry. If the posting definition is correctly set up, the generated entry includes the match criteria ledger accounts, plus additional accounts to balance the accounting entry at the dimension level. For more information, see [Posting definitions](/dynamics365/finance/general-ledger/posting-definitions). 
    
    Posting definitions aren’t supported on every type of transaction. For example, posting definitions can't be defined for any transactions entered through the General journal or the Fixed asset journal. If a posting definition can’t be defined for a journal or source document, the transaction must be manually balanced at the financial dimension value. For example, if a general journal entry is made and the Department dimension is the balancing dimension, you must ensure that each department value is in balance.  If the dimension isn’t balanced for each department value, the voucher won’t post until the imbalance is corrected by manually adding an interunit debit or credit to the voucher. 
 
