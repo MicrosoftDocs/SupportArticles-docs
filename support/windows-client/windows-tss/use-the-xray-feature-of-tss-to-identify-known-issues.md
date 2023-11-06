@@ -15,10 +15,9 @@ ms.technology: windows-client-troubleshooter
 ---
 # Identify known issues by using the xray feature of TSS
 
-xray is a diagnostics framework-based PowerShell (PS) feature that helps troubleshoot known problems with [TroubleShootingScript (TSS)](/troubleshoot/windows-client/windows-tss/introduction-to-troubleshootingscript-toolset-tss) toolset. It scans for issues during data collection and creates reports with issue information and solutions. xray displays the reports on screen. The reports are also in the TSS data set, in the .zip file created by TSS.
+Xray is a diagnostic framework-based PowerShell feature of the [TroubleShootingScript (TSS)](/troubleshoot/windows-client/windows-tss/introduction-to-troubleshootingscript-toolset-tss) toolset, and it helps troubleshoot known issue. The xray feature scans for issues during data collection and creates reports with issue information and solutions. The Xray feature displays the reports on screen, and also saves the reports in the dataset in the .zip file created by the TSS tool.
 
-xray is a dynamic feature that releases new versions every week. It constantly updates its diagnostics to identify new problems and removes outdated ones to enhance performance and reduce runtime.
-TSS will prompt you to update automatically when you run it. It is very important that you keep TSS updated to get the latest features and fixes from TSS and xray. Otherwise, you might not detect some issues that were recently added to xray.
+Xray is a dynamic feature that releases new versions every week. It constantly updates its diagnostics to identify new problems and removes outdated ones to enhance performance and reduce runtime. TSS prompts you to update automatically when you run it. It's important that you keep TSS updated to get the latest features and fixes from TSS and xray. Otherwise, you might not detect some issues that were recently added to xray.
 
 An administrator or a support professional can review the report files to check if a known issue occurs.
 
@@ -30,7 +29,7 @@ When TSS is unzipped, there's an xray directory within TSS directory.
 
 You can also download xray as a stand-alone package on its own by clicking this [link](https://aka.ms/getxray).
 
-xray runs by default. All you need to do is open the report, read it, and then check if a known issue occurs.
+Xray runs by default. All you need to do is open the report, read it, and then check if a known issue occurs.
 
 We recommend that you run xray as part of TSS. If you want to run xray directly (separate from TSS), run the following command:
 
