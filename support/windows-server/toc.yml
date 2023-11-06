@@ -2092,6 +2092,8 @@
       href: ./performance/enable-debug-mode-causes-hang.md
     - name: The computer stops responding
       href: ./performance/computer-stops-responding.md
+    - name: Windows Server stops responding during the sign-in process of a custom account
+      href: ./performance/windows-server-stops-responding-signing-custom-account.md    
 - name: Printing
   items:
   - name: Printing
