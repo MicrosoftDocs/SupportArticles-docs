@@ -4,7 +4,7 @@
 title: Why can't I reverse this transaction?
 description: This article describes different reasons why transactions can't be reversed. It also lists solutions for this issue.
 author: kweekley
-ms.date: 07/21/2021
+ms.date: 07/21/2023
 ms.topic: article
 ms.prod: 
 ms.technology: 
@@ -26,8 +26,6 @@ ms.dyn365.ops.version: 10.0.20
 ---
 
 # Why can't I reverse this transaction?
-
-[!include [banner](../includes/banner.md)]
 
 This article describes different reasons why transactions can't be reversed. It also lists solutions for this issue.
 
@@ -51,7 +49,7 @@ If the **Mass reversal for multiple documents** feature (also known as the Mass 
 
 The Mass reversal feature does **not** enable more types of transactions to be reversed. If a transaction type could not previously be reversed, it still can't be reversed after the feature is turned on. For example, purchase order vendor invoices can't be reversed, regardless of whether the Mass reversal feature is turned on.
 
-For more information about the Mass reversal feature, see [Reverse journal posting](reverse-journal-posting.md).
+For more information about the Mass reversal feature, see [Reverse journal posting](/dynamics365/finance/general-ledger/reverse-journal-posting).
 
 ## General ledger
 
@@ -185,7 +183,7 @@ The following types of transactions can't be reversed:
 
 - Purchase order vendor invoice:
 
-    - A credit note must be created to reverse the vendor invoice. For more information about how to create a reversing transaction, see [Create a purchase return order](../../supply-chain/procurement/tasks/create-purchase-return-order.md).
+    - A credit note must be created to reverse the vendor invoice. For more information about how to create a reversing transaction, see [Create a purchase return order](/dynamics365/supply-chain/procurement/tasks/create-purchase-return-order).
 
 - Promissory note
 - Bank letter of credit export shipment
@@ -249,7 +247,7 @@ The following types of transactions can't be reversed:
 - A transaction that has adjusted tax withholding
 - Sales order customer invoice:
 
-    - A credit note or return must be created to reverse the transaction. For information about how to create the reversing transaction, see [Sales returns](../../supply-chain/warehousing/sales-returns.md).
+    - A credit note or return must be created to reverse the transaction. For information about how to create the reversing transaction, see [Sales returns](/dynamics365/supply-chain/warehousing/sales-returns).
 
 - Bill of exchange
 - Cash register transaction
@@ -339,7 +337,7 @@ Transactions can't be reversed for the following reasons:
 
 - Acquisitions:
 
-    - If the acquisition occurred on a purchase order vendor invoice, the reversal must be done by entering a vendor credit note. For information about how to enter the reversal transaction, see [Create a purchase return order](../../supply-chain/procurement/tasks/create-purchase-return-order.md).
+    - If the acquisition occurred on a purchase order vendor invoice, the reversal must be done by entering a vendor credit note. For information about how to enter the reversal transaction, see [Create a purchase return order](/dynamics365/supply-chain/procurement/tasks/create-purchase-return-order).
     - The acquisition occurred on a project transaction.
     - The acquisition can't be reversed after depreciation is posted for the asset. The depreciation must be reversed before the acquisition can be reversed.
     - If the status of the value model or depreciation book for a fixed asset isn't open, the transaction can't be reversed.
