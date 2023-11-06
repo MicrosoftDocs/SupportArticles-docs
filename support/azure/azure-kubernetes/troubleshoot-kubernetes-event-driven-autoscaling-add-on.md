@@ -2,7 +2,7 @@
 title: Troubleshoot the Kubernetes Event-driven Autoscaling (KEDA) add-on
 description: Learn how to troubleshoot the Kubernetes Event-driven Autoscaling (KEDA) add-on to the Azure Kubernetes Service (AKS).
 ms.service: azure-kubernetes-service
-ms.date: 12/22/2022
+ms.date: 11/06/2023
 editor: v-jsitser
 ms.reviewer: nickoman, v-leedennis
 ms.subservice: troubleshoot-extensions-add-ons
@@ -97,6 +97,26 @@ keda-operator-metrics-apiserver   kube-system
 
 > [!WARNING]
 > If the namespace isn't `kube-system`, the AKS add-on is being ignored, and another metric server is being used.
+
+### How to restart KEDA operator pods when workload identity is not being injected properly
+
+If you're using [Microsoft Entra Workload ID](/azure/aks/workload-identity-overview) and you enable KEDA before the Workload ID is used, you must restart the KEDA operator pods. This ensures the correct environment variables are injected. To do this, follow these steps:
+
+1. Restart the pods by running the following command:
+
+     ```bash
+     kubectl rollout restart deployment keda-operator -n kube-system
+     ``` 
+
+2. Obtain KEDA operator pods by running the following command and locate pods that begin with `keda-operator`
+     ```bash
+    kubectl get pod -n kube-system
+     ``` 
+3. To verify that the environment variables have been successfully injected, run the following command. In the Environment section, You should see values for `AZURE_TENANT_ID`,  `AZURE_FEDERATED_TOKEN_FILE`, and `AZURE_AUTHORITY_HOST`.
+
+     ```bash
+    kubectl describe pod <keda-operator-pod> -n kube-system
+     ```
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
 
