@@ -28,4 +28,4 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Resolve setup errors
-            url: /viva/pulse/fix-setup-error-messages
+            url: /viva/troubleshoot/pulse/fix-setup-error-messages
