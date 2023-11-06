@@ -4,7 +4,7 @@
 title: Default financial dimensions on financial journals 
 description: This article describes the rules that define how financial dimension values are set on transactions that are entered through financial journals. It also includes details for scenarios where fixed dimensions are used.
 author: kweekley
-ms.date: 09/04/2021
+ms.date: 09/04/2023
 ms.topic: conceptual
 ms.prod: 
 ms.technology: 
@@ -14,7 +14,7 @@ ms.technology:
 ms.search.form: LedgerJournalTransDaily, LedgerJournalTransVendInvoice, LedgerJournalTransVendPaym, LedgerJournalTransCustPaym
 audience: Application User
 # ms.devlang: 
-ms.reviewer: kfend
+ms.reviewer: twheeloc
 # ms.tgt_pltfrm: 
 # ms.custom: 
 ms.search.region: Global 
@@ -26,8 +26,6 @@ ms.dyn365.ops.version: 10.0.17
 ---
 
 # Default financial dimensions on financial journals
-
-[!include [banner](../includes/banner.md)]
 
 This article describes the rules that define how financial dimension values are set on transactions that are entered through financial journals (but not through inventory journals or project journals). It also includes details for scenarios where fixed dimensions are used.
 
@@ -84,15 +82,12 @@ Go to **General ledger \> Journal setup \> Journal names**, and select the **Gen
 - **BUSINESSUNIT:** 001
 - **DEPARTMENT:** 024
 
-[![Journal names page](./media/financial-dimension-defaulting-jrnl-names-01.png)](./media/financial-dimension-defaulting-jrnl-names-01.png)
 
 Go to **General ledger \> Journal entries \> General journal**, and create a new general journal that uses the **GenJrn** journal name. The dimensions are entered by default from the journal name (LedgerJournalName table) to the journal header (LedgerJournalTable table), as shown on the **Financial dimensions** tab.
 
-[![Financial dimensions tab on the General journals page](./media/financial-dimension-defaulting-genrl-jrnl-02.png)](./media/financial-dimension-defaulting-genrl-jrnl-02.png)
 
 Go to the **Lines**. In the **Account type** field, select **Ledger**, and then, in the **Account** field, enter **170150**. Then select the **Tab** key to move out of the field. The dimensions are entered by default from the journal header. Therefore, the **Account** value is shown as **170150-001-024**.
 
-[![Journal lines for a general journal on the Journal voucher page](./media/financial-dimension-defaulting-jrnl-vchr-03.png)](./media/financial-dimension-defaulting-jrnl-vchr-03.png)
 
 Change the **Account** value to **170150-001-023**. Enter either a debit amount or a credit amount. In the **Offset account type** field, select **Ledger**, and then, in the **Offset account** field, enter **600150**. The dimension values are entered by default from the account. Therefore, the **Offset account** value is shown as **600150-001-023**.
 
