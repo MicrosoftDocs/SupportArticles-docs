@@ -38,7 +38,8 @@ You might experience one of the following scenarios.
 
 **Scenario 3:** You've excluded or removed a SharePoint site or a OneDrive site from a retention policy. More than 24 hours after you make these updates, you try to delete the affected site or a version of a document on the site. However, the attempt is unsuccessful, and you receive one of the error messages that are mentioned in scenarios 1 and 2.
 
-**Scenario 4:** You've excluded or removed a SharePoint or a OneDrive site from an eDiscovery hold, the hold stays in grace period for 30 days and prevents the site to be deleted. And you receive the error message that's mentioned in scenario 1.
+**Scenario 4:** You've excluded or removed a SharePoint or a OneDrive site from an eDiscovery hold, the hold stays in grace period for 30 days and prevents the site to be deleted. And you receive the error message that's mentioned in scenario 1. 
+
 
 ## Cause
 
@@ -61,3 +62,6 @@ To verify the validity of the retention policy or grace eDiscovery hold and dele
 3. Select **Run Tests**.
 
 4. If the test finds an invalid retention policy that might be blocking the deletion, you can choose to remove the policy.
+
+## Additional Information
+A new command has been introduced to facilitate the removal of eDiscovery holds which are invalid, legacy and in 30 day grace period. See [Invoke-HoldRemovalAction](https://learn.microsoft.com/powershell/module/exchange/invoke-holdremovalaction). Scenario 4 is where the diagnostic and the commandlet have an overlap.
