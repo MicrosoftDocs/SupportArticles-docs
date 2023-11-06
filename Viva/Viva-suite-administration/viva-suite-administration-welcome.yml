@@ -1,10 +1,10 @@
 ### YamlMime:Landing
 
-title: Viva Administration troubleshooting
-summary: Provides guidance to help Microsoft Viva administrators troubleshoot and resolve issues.
+title: Viva Suite Administration troubleshooting
+summary: Provides guidance to help Microsoft Viva administrators troubleshoot and resolve issues that affect the Viva suite.
 metadata:
-  title: Viva Administration troubleshooting
-  description: Documentation for Viva administrators to troubleshoot and resolve common issues.
+  title: Viva Suite Administration troubleshooting
+  description: Documentation for Viva administrators to troubleshoot and resolve common issues that affect the Viva suite.
   ms.service: viva
   ms.topic: landing-page
   author: helenclu
@@ -20,5 +20,5 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Self-help diagnostics for administrators
+          - text: Self-help diagnostics for Viva administrators
             url: /viva/troubleshoot/viva-suite-administration/viva-self-help-diagnostics
