@@ -27,8 +27,7 @@ ms.dyn365.ops.version: 8.1
 
 ---
 
-
-## Resolve issues with transactions that can't be settled
+# Resolve issues with transactions that can't be settled
 
 Sometimes, you can't settle transactions because another activity is currently processing the document. If you try to settle the transactions, an error occurs, because those transactions are being used. To fix 
 this issue, you can use the **Marked transaction details** page to find transactions that are marked for settlement and identify any other processes that are accessing them.
