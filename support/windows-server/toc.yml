@@ -1814,14 +1814,6 @@
       href: ./networking/troubleshoot-directaccess-server-console-networking.md
     - name: Troubleshoot error 720 when establishing a VPN connection
       href: ./networking/troubleshoot-error-720-when-establishing-a-vpn-connection.md
-    - name: Troubleshoot OTP deployment
-      items: 
-      - name: Troubleshoot OTP deployment
-        href: ./networking/troubleshoot-otp-deployment.md
-      - name: Troubleshoot authentication issues
-        href: ./networking/troubleshoot-authentication-issues.md
-      - name: Troubleshoot enabling OTP
-        href: ./networking/troubleshoot-enabling-otp.md
   - name: TCP/IP communications
     items:
     - name: 'Troubleshooting guidance: TCP/IP communication'
