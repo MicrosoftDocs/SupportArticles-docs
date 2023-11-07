@@ -15,7 +15,7 @@ ms.technology: windows-client-troubleshooter
 ---
 # Identify known issues by using the xray feature of TSS
 
-Xray is a diagnostic framework-based PowerShell feature of the [TroubleShootingScript (TSS)](/troubleshoot/windows-client/windows-tss/introduction-to-troubleshootingscript-toolset-tss) toolset, and it helps troubleshoot known issues. The xray feature scans for known issues during data collection, and creates reports with issue information and solutions. The Xray feature displays the reports on screen, and also saves the reports in the dataset in the .zip file created by the TSS tool.
+Xray is a diagnostic framework-based PowerShell feature of the [TroubleShootingScript (TSS)](/troubleshoot/windows-client/windows-tss/introduction-to-troubleshootingscript-toolset-tss) toolset. The xray feature scans for known issues during data collection, and creates reports with issue information and solutions. The xray feature displays the reports on screen, and also saves the reports in the dataset in the .zip file created by the TSS tool.
 
 Xray is a dynamic feature that releases new versions every week. It constantly updates its diagnostics to identify new problems and removes outdated ones to enhance performance and reduce runtime. TSS prompts you to update automatically when you run it. It's important that you keep TSS updated to get the latest features and fixes from TSS and xray. Otherwise, you might not detect some issues that were recently added to xray.
 
@@ -23,13 +23,13 @@ An administrator or a support professional can review the report files to check 
 
 ## Download and run the xray feature
 
-Xray can be downloaded as part of the [TSS package](https://aka.ms/getTSS).
+The xray feature can be downloaded as part of the [TSS package](https://aka.ms/getTSS).
 
 When TSS is unzipped, there's an xray directory within TSS directory.
 
 You can also download xray as a stand-alone package on its own by clicking this [link](https://aka.ms/getxray).
 
-Xray runs by default. All you need to do is open the report, read it, and then check if a known issue occurs.
+The xray feature runs by default. All you need to do is open the report, read it, and then check if a known issue occurs.
 
 We recommend that you run xray as part of TSS. If you want to run xray directly (separate from TSS), run the following command:
 
