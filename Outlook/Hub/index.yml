@@ -106,7 +106,7 @@ productDirectory:
           text: Microsoft Viva Learning
         - url: /viva/troubleshoot/pulse/viva-pulse-welcome
           text: Microsoft Viva Pulse
-        - url: /viva/troubleshoot/viva-suite-administration/viva-suite-administration-welcome.yml
+        - url: /viva/troubleshoot/viva-suite-administration/viva-suite-administration-welcome
           text: Microsoft Viva Suite Administration
     # Card
     - title: Endpoint management
