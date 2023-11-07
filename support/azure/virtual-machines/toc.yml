@@ -344,6 +344,8 @@
       href: understand-vm-reboot.md
     - name: Unexpected reboots of VMs with attached VHDs
       href: unexpected-reboots-attached-vhds.md
+    - name: Unexpected VM Reboot RCA
+      href: unexpected-VM-Reboot-RCA.md
 
 - name: VM deployment failures
   items:
