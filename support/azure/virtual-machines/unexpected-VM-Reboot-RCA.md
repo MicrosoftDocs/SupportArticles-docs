@@ -3,10 +3,10 @@ title: Unexpected Azure VM Reboot Root Cause Analysis
 description: To determine root cause for Azure VM reboot.
 services: virtual-machines
 documentationcenter: ''
-author: Tanya Gangwar
+author: Gtanya24
 tags: ''
 ms.service: virtual-machines
-ms.subservice: root-cause-for-unexpected-vm-reboot
+ms.subservice: vm-troubleshooting-tools
 ms.topic: troubleshooting
 ms.tgt_pltfrm: na
 ms.workload: infrastructure-services
