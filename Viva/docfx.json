@@ -49,14 +49,14 @@
     },
     "fileMetadata": {
       "ms.service": {
-        "Learning/**/*.md": "viva",
-        "Connections/**/*.md": "viva",
-        "Glint/**/*.md": "viva"       
+        "**/*.md": "viva"
       },
       "ms.subservice": {
         "Connections/**/*.md": "viva-connections",
         "Learning/**/*.md": "viva-learning",
-        "Glint/**/*.md": "viva-glint"
+        "Glint/**/*.md": "viva-glint",
+        "Pulse/**/*.md": "viva-pulse",
+        "Viva-suite-administration/**/*.md": "viva-suite-admin"
       },
       "author": {
         "**/*.md": "helenclu"
