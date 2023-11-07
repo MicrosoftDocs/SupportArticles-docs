@@ -40,6 +40,7 @@
       "feedback_system": "Standard",
       "feedback_product_url": "https://techcommunity.microsoft.com/t5/microsoft-viva-blog/bg-p/MicrosoftVivaBlog",
       "titleSuffix": "Viva",
+      "ms.service": "viva",
       "hideEdit": true,
       "uhfHeaderId": "MSDocsHeader-M365-IT",
       "searchScope": ["Viva Support"],
@@ -48,15 +49,12 @@
       ]
     },
     "fileMetadata": {
-      "ms.service": {
-        "Learning/**/*.md": "viva",
-        "Connections/**/*.md": "viva",
-        "Glint/**/*.md": "viva"       
-      },
       "ms.subservice": {
         "Connections/**/*.md": "viva-connections",
         "Learning/**/*.md": "viva-learning",
-        "Glint/**/*.md": "viva-glint"
+        "Glint/**/*.md": "viva-glint",
+        "Pulse/**/*.md": "viva-pulse",
+        "Viva-suite-administration/**/*.md": "viva-suite-admin"
       },
       "author": {
         "**/*.md": "helenclu"
