@@ -19,3 +19,6 @@ items:
     - name: Viva Pulse
       tocHref: /viva/troubleshoot/pulse/
       topicHref: /viva/troubleshoot/pulse/viva-pulse-welcome
+    - name: Viva suite administration
+      tocHref: /viva/troubleshoot/viva-suite-administration
+      topicHref: /viva/troubleshoot/viva-suite-administration/viva-suite-administration-welcome
