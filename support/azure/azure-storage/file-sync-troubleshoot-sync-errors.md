@@ -4,7 +4,7 @@ description: Troubleshoot common issues with monitoring sync health and resolvin
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 11/06/2023
+ms.date: 11/07/2023
 ms.author: kendownie
 ms.custom: devx-track-azurepowershell
 ms.reviewer: v-weizhu
@@ -1384,9 +1384,10 @@ Run the following PowerShell command on the server to reset the certificate:
 1. Navigate to the sync group within the Storage Sync Service.
 2. Select the cloud endpoint within the sync group.
 3. Note the Azure file share name in the opened pane.
-4. Select the linked storage account. If this link fails, the referenced storage account has been removed.
 
-    :::image type="content" source="media/file-sync-troubleshoot-sync-errors/file-share-inaccessible.png" alt-text="Screenshot that shows the cloud endpoint detail pane with a link to the storage account.":::
+   :::image type="content" source="media/file-sync-troubleshoot-sync-errors/cloud-endpoint-detail.png" alt-text="Screenshot showing the cloud endpoint detail pane with a link to the file share.":::
+
+4. Select the file share name to open the file share settings page in the storage account. If this link fails, the referenced storage account has been removed.
 
 ## [PowerShell](#tab/azure-powershell)
 
