@@ -40,6 +40,7 @@
       "feedback_system": "Standard",
       "feedback_product_url": "https://techcommunity.microsoft.com/t5/microsoft-viva-blog/bg-p/MicrosoftVivaBlog",
       "titleSuffix": "Viva",
+      "ms.service": "Viva",
       "hideEdit": true,
       "uhfHeaderId": "MSDocsHeader-M365-IT",
       "searchScope": ["Viva Support"],
@@ -48,9 +49,6 @@
       ]
     },
     "fileMetadata": {
-      "ms.service": {
-        "**/*.md": "viva"
-      },
       "ms.subservice": {
         "Connections/**/*.md": "viva-connections",
         "Learning/**/*.md": "viva-learning",
