@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Dataverse bulk operation errors
-description: Provides resolutions for the common errors that might occur while using bulk operations with Dataverse.
-ms.date: 11/06/2023
+description: Provides resolutions for common errors that might occur while using bulk operations with Microsoft Dataverse.
+ms.date: 11/07/2023
 author: hakhemic
 ms.author: hakhemic
 ms.reviewer: jdaly
@@ -17,15 +17,15 @@ contributors:
 ---
 # Troubleshoot Dataverse bulk operation errors
 
-This article describes common errors you might encounter when using Dataverse [bulk operations](/power-apps/developer/data-platform/bulk-operations) and how you can avoid them.
+This article describes common errors you might encounter when using Microsoft Dataverse [bulk operations](/power-apps/developer/data-platform/bulk-operations) and how to avoid them.
 
 ## Client errors
 
-You might encounter common errors that are due to issues in the bulk operation request being sent. See [Troubleshoot Dataverse client errors](client-errors.md) if you encounter a client error when using bulk operations.
+You might encounter common errors caused by issues in the bulk operation requests being sent. If you encounter a client error when using bulk operations, see [Troubleshoot Dataverse client errors](client-errors.md).
 
 ## System errors
 
-This section contains resolutions for the most ommonly encountered system errors when using [bulk operation messages (preview)](/power-apps/developer/data-platform/bulk-operations?tabs=sdk).
+This section contains resolutions for the most common system errors encountered when using [bulk operation messages (preview)](/power-apps/developer/data-platform/bulk-operations?tabs=sdk).
 
 ### Error "Sql error: Generic SQL error"
 
@@ -36,18 +36,18 @@ This section contains resolutions for the most ommonly encountered system errors
 
 #### Resolution
 
-This error occurs when attempting to update the same record concurrently. Make sure you don't attempt concurrent requests on the same records.
+This error occurs when attempting to update the same record concurrently. Make sure you don't attempt concurrent requests on the same record.
 
 ### Error "Sql error: SQL timeout expired"
 
 > Error Code: -2147204783  
 > Sql ErrorCode: -2146232060  
 > Sql Number: -2  
-> Error Message:SQL timeout expired. CRM ErrorCode: -2147204783 Sql ErrorCode: -2146232060 Sql Number: -2
+> Error Message: SQL timeout expired. CRM ErrorCode: -2147204783 Sql ErrorCode: -2146232060 Sql Number: -2
 
 #### Resolution
 
-This error is likely to occur if the batch size of your request is too large. To avoid SQL timeouts, reduce the batch size of your request.
+This error is likely to occur if the batch size of your request is too large. To avoid SQL time-outs, reduce the batch size of your request.
 
 ### Error "The transaction of the SQL command has already been rolled back or committed"
 <!-- 
@@ -58,7 +58,7 @@ I wish we had some specific error codes for this
 
 #### Resolution
 
-This error and its underlying deadlock exception are likely to occur when attempting to update the same record concurrently. To avoid deadlocks, make sure you don't attempt concurrent requests on the same records.
+This error and its underlying deadlock exception are likely to occur when trying to update the same record concurrently. To avoid deadlocks, make sure you don't attempt concurrent requests on the same record.
 
 ### Error "There is no active transaction"
 
