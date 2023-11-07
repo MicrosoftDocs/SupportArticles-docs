@@ -14,7 +14,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 11/02/2023
+ms.date: 11/03/2023
 ---
 
 # Chat issues in Teams meeting
