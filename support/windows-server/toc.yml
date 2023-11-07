@@ -2092,6 +2092,8 @@
       href: ./performance/enable-debug-mode-causes-hang.md
     - name: The computer stops responding
       href: ./performance/computer-stops-responding.md
+    - name: Windows Server stops responding when a Trigger Start service crashes
+      href: ./performance/windows-server-stops-responding-trigger-start-service-crashes.md    
 - name: Printing
   items:
   - name: Printing
