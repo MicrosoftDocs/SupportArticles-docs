@@ -4,8 +4,8 @@ description: Provides a list of available diagnostics for apps in the Viva suite
 manager: dcscontentpm
 ms.author: luche
 author: helenclu
-ms.reviewer: bpeterse; meerak
-ms.date: 11/07/2023
+ms.reviewer: bpeterse, meerak
+ms.date: 11/06/2023
 audience: ITPro
 f1.keywords: NOCSH
 ms.topic: troubleshooting
@@ -15,6 +15,7 @@ ms.custom:
   - CI 183789
 localization_priority: Normal
 ms.service: viva
+ms.subservice: viva-suite-admin
 ms.collection:
   - M365initiative-viva
   - highpri
@@ -34,7 +35,7 @@ Microsoft 365 self-help diagnostics are a set of tools available in the Microsof
 1. Under **How can we help?**, type a phrase that describes your issue, and press Enter.
 
    :::image type="content" source="media/viva-self-help-diagnostics/viva-diagnostics.png" alt-text="Screenshot of the pane to search for help in the Microsoft 365 admin center.":::
-   
+
    If your issue is covered by one of the available diagnostics, the **Run diagnostics** section is displayed.
   
 1. In the **SharePoint Online root URL** field, enter the URL of your tenant, and then select **Run Tests**.
@@ -51,6 +52,5 @@ The following diagnostics are available for various apps in the Viva suite. Each
 
 **Note**:
 After you implement a fix based on the results of a diagnostic, you can rerun the diagnostic to make sure that the issue is completely resolved.  
-
 
 Still need help? Go to the [Microsoft Community](https://answers.microsoft.com/).
