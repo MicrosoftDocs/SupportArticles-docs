@@ -21,7 +21,7 @@ To improve the security posture of your tenant, and to remain in compliance with
 Do your applications communicate with or authenticate against Microsoft Entra ID? Then those applications might not work as expected if they can't use TLS 1.2 to communicate. This situation includes:
 
 - Microsoft Entra Connect
-- Azure AD PowerShell
+- Microsoft Graph PowerShell
 - Microsoft Entra application proxy connectors
 - PTA agents
 - Legacy browsers
