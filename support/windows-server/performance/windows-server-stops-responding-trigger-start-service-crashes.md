@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jasone, v-lianna
-ms.custom: sap: system-hang, csstroubleshoot, ikb2lmc
+ms.custom: sap:system-hang, csstroubleshoot, ikb2lmc
 ms.technology: windows-server-performance
 ---
 # Windows Server stops responding when a Trigger Start service crashes with a failed restart
