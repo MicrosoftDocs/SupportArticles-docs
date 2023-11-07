@@ -34,7 +34,8 @@ This article describes how to use Problem Steps Recorder (PSR) to automatically 
 
 ## More information
 
-The following instructions explain how to use the PSR tool. To install and access PSR, select **Start**, type *psr* in the **Start search** box, and then select **psr.exe** in the search results.
+### To open the PSR tool 
+Select **Start**, type *psr* in the **Start search** box, and then select **psr.exe** in the search results.
 
 ### To record and save steps on the computer
 
