@@ -265,6 +265,8 @@
           href: ../email-delivery/property-length-too-long-error.md
         - name: Messages with attachments not delivered
           href: ../email-delivery/messages-with-attachments-are-not-delivered.md
+        - name: NDR when external users send email to a Microsoft 365 group
+          href: ../email-delivery/ndr-when-external-users-send-email-to-microsoft-365-group.md
         - name: Non-delivery report (NDR)
           items:
             - name: NDR and SMTP errors
@@ -325,8 +327,6 @@
               href: ../email-delivery/ndr/fix-error-code-5-7-134-in-exchange-online.md
             - name: 550 5.7.136
               href: ../email-delivery/ndr/fix-error-code-5-7-136-in-exchange-online.md
-            - name: 550 5.7.193
-              href: ../email-delivery/ndr/550-5-7-193-when-external-users-send-to-microsoft-365-group.md
             - name: 550 5.7.700 through 550 5.7.750
               href: ../email-delivery/ndr/fix-error-code-5-7-700-through-5-7-750.md
             - name: 554 4.3.2 mailbox busy
