@@ -43,10 +43,8 @@ This error occurs when attempting to update the same record concurrently. Make s
 This error is likely to occur if the batch size of your request is too large. To avoid SQL time-outs, reduce the batch size of your request.
 
 ## Error "The transaction of the SQL command has already been rolled back or committed"
-<!-- 
-I wish we had some specific error codes for this 
--->
 
+> Error Code: -2147220907  
 > Error Message: The transaction of the SQL command has already been rolled back or committed; this is usually caused by a swallowed SQL deadlock exception.
 
 ### Resolution
