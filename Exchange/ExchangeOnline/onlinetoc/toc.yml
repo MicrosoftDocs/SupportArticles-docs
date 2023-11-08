@@ -265,6 +265,8 @@
           href: ../email-delivery/property-length-too-long-error.md
         - name: Messages with attachments not delivered
           href: ../email-delivery/messages-with-attachments-are-not-delivered.md
+        - name: NDR when external users send email to a Microsoft 365 group
+          href: ../email-delivery/ndr-when-external-users-send-email-to-microsoft-365-group.md
         - name: Non-delivery report (NDR)
           items:
             - name: NDR and SMTP errors
