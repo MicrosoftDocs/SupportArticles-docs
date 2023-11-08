@@ -27,8 +27,8 @@ An external sender receives the following nondelivery report (NDR) when they sen
 > The group \<group name\> isn't set up to receive messages from \<sender name\>.  
 > More Info for Email Admins  
 > Status code: 550 5.7.193  
-> 550 5.7.193 UnifiedGroupAgent; Delivery failed because the sender isn't a group member or external senders  
-> aren't permitted to send to this group.
+> 550 5.7.193 UnifiedGroupAgent; Delivery failed because the sender isn't a group member  
+> or external senders aren't permitted to send to this group.
 
 ## Cause
 
@@ -52,7 +52,7 @@ To configure a group to accept email messages from external senders, use either 
 
 Use either the Exchange admin center (EAC) or Exchange Online PowerShell.
 
-**EAC**
+#### EAC
 
 1. Navigate to **Recipients** \> **Groups** and then select the relevant group to open the group details pane.
 
@@ -64,7 +64,7 @@ Use either the Exchange admin center (EAC) or Exchange Online PowerShell.
 
 **Note**: Exchange Online can take up to one hour to apply the new setting.
 
-**PowerShell**
+#### PowerShell
 
 1. Run the following command to connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell):
 
