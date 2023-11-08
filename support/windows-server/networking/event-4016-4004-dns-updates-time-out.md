@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, ANRATH, tfairman, v-lianna
 ms.custom: sap:dns, csstroubleshoot, ikb2lmc
-ms.technology: windows-server-networking
+ms.technology: networking
 ---
 # Event IDs 4016 and 4004 when DNS updates time out
 
@@ -32,7 +32,7 @@ In AD-integrated DNS zones that are hosted on domain controllers (Windows Server
 	User:          S-1-5-18
 	Computer:      Contoso.com
 	Description:
-	The DNS server timed out attempting an Active Directory service operation on DC=15.5,DC=170.10.in-addr.arpa,cn=MicrosoftDNS,DC=ForestDnsZones,DC=xxx,DC=com.  Check Active Directory to see that it is functioning properly. The event data contains the error.
+	The DNS server timed out attempting an Active Directory service operation on DC=15.5,DC=170.10.in-addr.arpa,cn=MicrosoftDNS,DC=ForestDnsZones,DC=xxx,DC=com. Check Active Directory to see that it is functioning properly. The event data contains the error.
 	```
 - Event ID 4004
 
@@ -45,7 +45,7 @@ In AD-integrated DNS zones that are hosted on domain controllers (Windows Server
 	User:          S-1-5-18
 	Computer:      Contoso.com
 	Description:
-	The DNS server was unable to complete directory service enumeration of zone xx.xxx.xx.in-addr.arpa.  This DNS server is configured to use information obtained from Active Directory for this zone and is unable to load the zone without it.  Check that the Active Directory is functioning properly and repeat enumeration of the zone. The extended error debug information (which may be empty) is "". The event data contains the error.
+	The DNS server was unable to complete directory service enumeration of zone xx.xxx.xx.in-addr.arpa.  This DNS server is configured to use information obtained from Active Directory for this zone and is unable to load the zone without it. Check that the Active Directory is functioning properly and repeat enumeration of the zone. The extended error debug information (which may be empty) is "". The event data contains the error.
 	```
 	
 If Event IDs 4016 and 4004 are logged, the DNS records are updated on other domain controllers and visible in ADSI Edit (*adsiedit.msc*). However, the DNS Server service can't read them until the DNS Server service is restarted. During this period, records can be created at the same time by using ADSI Edit on the problematic domain controllers. These records are then replicated to all domain controllers, which means the AD is working properly. The memory usage of the *dns.exe* process is low. Meanwhile, the CPU and memory usage on domain controllers is also low, but they remain unresponsive.
@@ -59,6 +59,7 @@ Because of the presence of query data instead of the expected update bytes, the 
 ## Restart the DNS Server service and delete the Kerberos ticket cache
 
 To work around this issue, restart the DNS Server service after deleting the Kerberos ticket cache by using a Windows PowerShell script. See the following script for an example:
+
 > [!NOTE]
 > Because the default `$EventIntervalMinutes` and `$NumberOfEvents` values may not be optimal, adjust the values accordingly.
 
