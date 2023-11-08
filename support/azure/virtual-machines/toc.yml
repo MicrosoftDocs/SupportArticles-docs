@@ -204,14 +204,13 @@
             href: boot-error-disk-read-error-occurred.md
           - name: BitLocker errors
             href: troubleshoot-bitlocker-boot-error.md
-          - name: Checking file system errors
           - name: Troubleshoot directory service initialization failure
             href: troubleshoot-directory-service-initialization-failure.md
           - name: Critical process disabled
             href: troubleshoot-guide-critical-process-died.md
           - name: Critical service failed
             href: troubleshoot-critical-service-failed-boot-error.md
-          - name: Troubleshoot boot error - Status not found
+          - name: Troubleshoot boot error 0xC0000225 - Status not found
             href: boot-error-status-not-found.md
           - name: Troubleshoot Windows could not finish configuring the system
             href: windows-could-not-configure-system.md
@@ -254,8 +253,6 @@
           - name: Windows stop error - System thread exception not handled
             href: windows-stop-error-system-thread-exception-not-handled.md
           - name: Can't boot with 0xc000000f
-            href: error-code-0xc000000f.md
-          - name: Unable to boot with 0xc000000f
             href: boot-error-0xc000000f.md
           - name: Can't boot with 0xc00000ba
             href: boot-error-0xc00000ba.md
@@ -269,8 +266,6 @@
             href: boot-error-0xc0000098.md
           - name: Can't boot with 0xC0000102
             href: error-code-0xC0000102-status-file-corrupt.md
-          - name: Can't boot with 0xc0000225
-            href: boot-error-0xc0000225.md
           - name: Can't boot with 0xc0000359
             href: boot-error-0xc0000359.md
           - name: Can't boot with 0xc000000e

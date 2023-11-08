@@ -4,8 +4,9 @@ description: Troubleshoot common issues in managing Azure File Sync sync groups,
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 08/28/2023
+ms.date: 10/12/2023
 ms.author: kendownie
+ms.reviewer: v-weizhu
 ---
 # Troubleshoot Azure File Sync sync group management
 
@@ -66,6 +67,10 @@ If you see this message and the Azure file share currently isn't in use by a clo
 3. Right-click **SyncService**, and then select **Delete**.
 
 ## Server endpoint creation and deletion errors
+
+<a id="server-endpoint-provisioningcanceled"></a>**Server endpoint has a health status of "Provisioning canceled"**
+
+A server endpoint health status of "Provisioning canceled" means the server endpoint creation failed. To troubleshoot why the server endpoint creation failed, select the "Provisioning canceled" status to view the error code and search this documentation for the error. Once the cause is understood, delete the server endpoint that failed to create before attempting to create the server endpoint again. To delete the server endpoint that has a health status of "Provisioning canceled," right-click the server endpoint and select **Delete**.
 
 <a id="-2134375898"></a>**Server endpoint creation fails, with this error: "MgmtServerJobFailed" (Error code: -2134375898 or 0x80c80226)**
   

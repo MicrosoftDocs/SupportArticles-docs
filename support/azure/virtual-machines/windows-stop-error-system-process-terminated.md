@@ -11,8 +11,8 @@ ms.subservice: vm-cannot-start-stop
 ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows
-ms.topic: troubleshooting
-ms.date: 09/21/2020
+ms.reviewer: jarrettr, v-leedennis
+ms.date: 10/10/2023
 ---
 
 # Windows stop error - 0xC000021A Status System Process Terminated
@@ -38,22 +38,20 @@ This error occurs when a critical process, such as WinLogon (winlogon.exe) or th
 - A backup program that is used to restore a hard disk did not correctly restore files that may have been in use.
 - An incompatible third-party program has been installed.
 
-## Solution
+## Solution 1: Restore the VM from a backup
 
-### Collect the Memory Dump File
+If you have a recent backup of the VM, you can try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
 
-> [!TIP]
-> If you have a recent backup of the VM, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
+## Solution 2: Collect the memory dump file
 
-To resolve this problem, the crash dump will need to be analyzed. Collect the memory dump file for the crash and contact support.
-To collect the dump file, follow these steps:
+If restoring the backup doesn't solve the problem, you have to collect a memory dump file so that the crash can be analyzed. To collect the dump file, see the following sections.
 
-### Attach the OS disk to a new Repair VM
+#### Attach the OS disk to a new Repair VM
 
-1. Use steps 1-3 of the [VM Repair Commands](./repair-windows-vm-using-azure-virtual-machine-repair-commands.md) to prepare a Repair VM.
+1. Use steps 1-3 of the [VM repair process example](./repair-windows-vm-using-azure-virtual-machine-repair-commands.md#repair-process-example) to prepare a Repair VM.
 2. Using **Remote Desktop Connection**, connect to the Repair VM.
 
-### Locate the dump file and submit a support ticket
+#### Locate the dump file and submit a support ticket
 
 1. On the repair VM, go to windows folder in the attached OS disk. If the driver letter that is assigned to the attached OS disk is F, go to F:\Windows.
 2. Locate the memory.dmp file, and then [submit a support ticket](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) with the memory dump file.

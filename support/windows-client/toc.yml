@@ -1,3 +1,4 @@
+items:
 - name: Windows Client
   href: welcome-windows-client.yml
 - name: Active Directory
@@ -474,6 +475,10 @@
       href: ./group-policy/point-print-restrictions-policies-ignored.md
     - name: Save documents to OneDrive by default
       href: ./group-policy/save-documents-to-onedrive-by-default.md
+    - name: "Scenario guide: Wallpaper GPO doesn't apply on some client computers"
+      href: ./group-policy/scenario-guide-wallpaper-gpo-does-not-apply-on-some-client-computers.md
+    - name: "Scenario guide: GPO to map network drives doesn't apply as expected"
+      href: ./group-policy/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected.md
     - name: Use Group Policy to deploy a Known Issue Rollback
       href: ./group-policy/use-group-policy-to-deploy-known-issue-rollback.md
 - name: High Availability
@@ -1053,7 +1058,7 @@
     - name: Task scheduler runs tasks as background processes
       href: ./system-management-components/task-scheduler-task-only-runs-in-background.md
     - name: Use the at command to schedule tasks
-      href: ./system-management-components/use-at-command-to-schedule-tasks.md
+      href: ./system-management-components/use-at-command-to-schedule-tasks.md 
   - name: WER
     items:
     - name: Windows Error Reporting and Windows diagnostics enablement guidance
@@ -1061,7 +1066,7 @@
   - name: WinRM
     items:
     - name: Can't establish a PowerShell remote session using WinRM
-      href: ./system-management-components/can-not-establish-ps-remote-session-winrm-aad-only-joined-machines.md    
+      href: ./system-management-components/can-not-establish-ps-remote-session-winrm-aad-only-joined-machines.md
     - name: Errors when you run WinRM commands
       href: ./system-management-components/errors-when-you-run-winrm-commands.md
     - name: How to configure WINRM for HTTPS
@@ -1096,6 +1101,26 @@
       href: ./ue-v/ue-v-replication-issues.md
     - name: UE-V Registry Settings
       href: ./ue-v/ue-v-registry-settings.md
+- name: TroubleShootingScript toolset (TSS)
+  items:
+  - name: Introduction to TroubleShootingScript toolset (TSS)
+    href: ./windows-tss/introduction-to-troubleshootingscript-toolset-tss.md
+  - name: Identity
+    items:
+    - name: Gather information for Active Directory replication issues
+      href: ./windows-tss/gather-information-using-tss-ad-replication.md
+    - name: Gather information for Group Policy issues
+      href: ./windows-tss/gather-information-using-tss-group-policy.md
+  - name: Deployment (DnD)
+    items:
+    - name: Gather information for deployment-related issues
+      href: ./windows-tss/gather-information-using-tss-deployment.md
+    - name: Gather information for Windows Update for Business reports-related issues
+      href: ./windows-tss/gather-information-using-tss-wufb-reports.md
+  - name: User Experience (UEX)
+    items:
+    - name: Gather information for user experience-related issues
+      href: ./windows-tss/gather-information-using-tss-user-experience.md 
 - name: UserProfiles and Logon
   items:
   - name: UserProfiles and Logon
@@ -1292,15 +1317,3 @@
     href: ./windows-troubleshooters/windows-troubleshooters-overview.md
   - name: Active and retired Windows 10 troubleshooters
     href: ./windows-troubleshooters/active-and-retired-troubleshooters-windows-10.md
-  - name: TroubleShootingScript toolset (TSS)
-    items:
-    - name: Introduction to TroubleShootingScript toolset (TSS)
-      href: ./windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tss.md
-    - name: Gather information for Active Directory replication issues
-      href: ./windows-troubleshooters/gather-information-using-tss-ad-replication.md
-    - name: Gather information for deployment-related issues
-      href: ./windows-troubleshooters/gather-information-using-tss-deployment.md
-    - name: Gather information for Group Policy issues
-      href: ./windows-troubleshooters/gather-information-using-tss-group-policy.md
-    - name: Gather information for user experience-related issues
-      href: ./windows-troubleshooters/gather-information-using-tss-user-experience.md

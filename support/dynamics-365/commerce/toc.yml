@@ -19,6 +19,8 @@
       items:
         - name: Errors when debugging against a Tier 1 Retail Server virtual machine
           href: development-sdks/set-up-dev-environment-debugging.md
+        - name: E-commerce SDK clone modules known issues
+          href: development-sdks/ecommerce-clone-module-issues.md
     - name: E-commerce storefront
       items:
         - name: Items without inventory can be checked out
@@ -77,6 +79,12 @@
           href: point-of-sale/store-commerce-setup-installation.md
         - name: Troubleshoot Store Commerce sign-in issues
           href: point-of-sale/store-commerce-sign-in.md
+        - name: Troubleshoot generic errors displayed on the POS
+          href: point-of-sale/troubleshoot-generic-error-in-pos.md
+    - name: Pricing, discounts, and taxes 
+      items:
+        - name: Price change tracking issues
+          href: pricing-discounts-taxes/price-track-issues.md        
     - name: Ratings and reviews 
       items:
         - name: Ratings refiner appears when the ratings and reviews solution isn't enabled

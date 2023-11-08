@@ -35,7 +35,7 @@ You can use the built-in troubleshooting feature to review different compliance 
 
         - App protection policies (mobile application management) don't require devices to be enrolled. For more information, see [create and assign app protection policies](/mem/intune/apps/app-protection-policies).
 
-    - **Azure AD Join Type**: Should be set to **Workplace** or **AzureAD**.
+    - **Microsoft Entra join Type**: Should be set to **Workplace** or **AzureAD**.
 
         - If this column is **Not Registered**, there may be an issue with enrollment. Typically, unenrolling and re-enrolling the device resolves this state.
 
@@ -43,7 +43,7 @@ You can use the built-in troubleshooting feature to review different compliance 
 
         For more information, see [get started with device compliance policies](/mem/intune/protect/device-compliance-get-started).
 
-    - **Azure AD compliant**: Should be **Yes**. If **No** is shown, there may be an issue with compliance policies, or the device isn't connecting to the Intune service. For example, the device may be turned off, or may not have a network connection. Eventually, the device becomes non-compliant, possibly after 30 days.
+    - **Microsoft Entra compliant**: Should be **Yes**. If **No** is shown, there may be an issue with compliance policies, or the device isn't connecting to the Intune service. For example, the device may be turned off, or may not have a network connection. Eventually, the device becomes non-compliant, possibly after 30 days.
 
         For more information, see [get started with device compliance policies](/mem/intune/protect/device-compliance-get-started).
 

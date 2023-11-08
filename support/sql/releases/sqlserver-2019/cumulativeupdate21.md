@@ -80,7 +80,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="2405054">[2405054](#2405054)</a> | Updates the version of the Microsoft ODBC driver to 17.10.4.1. For more information, see [Release Notes for Microsoft ODBC Driver for SQL Server on Windows](/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows). | SQL Connectivity | SQL Connectivity | Windows |
 | <a id="2405058">[2405058](#2405058)</a> | Updates the version of the Microsoft OLE DB driver to 18.6.6. For more information, see [Release notes for the Microsoft OLE DB Driver for SQL Server](/sql/connect/oledb/release-notes-for-oledb-driver-for-sql-server). | SQL Connectivity | SQL Connectivity | Windows |
 | <a id="2405087">[2405087](#2405087)</a> | Fixes an issue where applying the option `ONLINE` in the `ALTER INDEX REBUILD` statement is invalid when running the index rebuild task created in an index maintenance plan. | SQL Server Client Tools | Management Services | All |
-| <a id="2399354">[2399354](#2399354)</a> | Consider the following scenario: </br></br>- You have an instance of SQL Server that connects to Azure Active Directory (Azure AD). </br></br>- You enable Transport Layer Security (TLS) encryption on this instance of SQL Server. </br></br>In this scenario, you may receive the following error 39011 if you run the `sp_execute_external_script` query against the instance: </br></br>Msg 39011, Level 16, State 7, Line \<LineNumber> </br>SQL Server was unable to communicate with the LaunchPad service for request id: \<ID>. Please verify the configuration of the service. | SQL Server Engine | Extensibility | Linux |
+| <a id="2399354">[2399354](#2399354)</a> | Consider the following scenario: </br></br>- You have an instance of SQL Server that connects to Microsoft Entra ID. </br></br>- You enable Transport Layer Security (TLS) encryption on this instance of SQL Server. </br></br>In this scenario, you may receive the following error 39011 if you run the `sp_execute_external_script` query against the instance: </br></br>Msg 39011, Level 16, State 7, Line \<LineNumber> </br>SQL Server was unable to communicate with the LaunchPad service for request id: \<ID>. Please verify the configuration of the service. | SQL Server Engine | Extensibility | Linux |
 | <a id="2375469">[2375469](#2375469)</a> | Fixes an issue where the following error occurs when you disable the FILESTREAM feature on a SQL Server failover cluster instance (FCI) by using SQL Server Configuration Manager (SSCM): </br></br>There was an unknown error applying FILESTREAM settings. </br>Check the parameters are valid. (0x800713d6) | SQL Server Engine | FileStream and FileTable | Windows |
 | <a id="2195940">[2195940](#2195940)</a> | Fixes an issue where messages in the `sys.transmission_queue` of the initiator database in a SQL Server Service Broker conversation are missing or stuck after a failover of the target database.| SQL Server Engine | High Availability and Disaster Recovery | All |
 | <a id="2101590">[2101590](#2101590)</a> | Fixes an issue where restoring an In-Memory OLTP database backup that has Transparent data encryption (TDE) enabled fails and returns the following error message: </br></br>Error: 33126, Severity: 16, State: 1. </br>Database encryption key is corrupted and cannot be read. </br></br>**Note**: To apply this fix, you need to enable a trace flag (TF) to relax TDE checks for In-Memory tables and disable the TF after the restoration is completed. For more information, contact [Microsoft Customer Service and Support](https://support.microsoft.com/contactus/?ws=support). | SQL Server Engine | In-Memory OLTP | Windows |
@@ -989,8 +989,8 @@ Beginning in Microsoft SQL Server 2017, the Analysis Services build version numb
 - Each new CU contains all the fixes that were included with the previous CU for the installed version of SQL Server.
 - SQL Server CUs are certified to the same levels as service packs, and should be installed at the same level of confidence.
 - We recommend ongoing, proactive installation of CUs as they become available according to these guidelines:
-- Historical data shows that a significant number of support cases involve an issue that has already been addressed in a released CU.
-- CUs may contain added value over and above hotfixes. This includes supportability, manageability, and reliability updates.
+  - Historical data shows that a significant number of support cases involve an issue that has already been addressed in a released CU.
+  - CUs may contain added value over and above hotfixes. This includes supportability, manageability, and reliability updates.
 - We recommend that you test SQL Server CUs before you deploy them to production environments.
 
 </details>
@@ -1060,10 +1060,9 @@ To uninstall this CU on Linux, you must roll back the package to the previous ve
 
 ## References
 
-- [Announcing updates to the SQL Server Incremental Servicing Model (ISM)](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/)
+- [Announcing updates to the SQL Server Incremental Servicing Model (ISM)](/archive/blogs/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism)
 - [SQL Server Service Packs are no longer supported starting from SQL Server 2017](https://support.microsoft.com/topic/fd405dee-cae7-b40f-db14-01e3e4951169)
 - [Determine which version and edition of SQL Server Database Engine is running](../find-my-sql-version.md)
 - [Servicing models for SQL Server](../../general/servicing-models-sql-server.md)
 - [Naming schema and Fix area descriptions for SQL Server software update packages](../../database-engine/install/windows/naming-schema-and-fix-area.md)
 - [Description of the standard terminology that is used to describe Microsoft software updates](../../../windows-client/deployment/standard-terminology-software-updates.md)
-

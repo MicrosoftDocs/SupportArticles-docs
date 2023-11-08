@@ -62,7 +62,7 @@ To resolve this problem, follow these steps:
     Nslookup enterpriseregistration.domain.com 
     ```
 
-    - If you use Azure Active Directory Join
+    - If you use Microsoft Entra join
 
       Results should return the CNAME result of EnterpriseRegistration.windows.net.
 
