@@ -715,6 +715,8 @@ items:
       href: ./performance/issues-when-calls-createwindowex-32-bit-applications.md
   - name: Blue Screen/Bugcheck
     items:
+    - name: Bug check 0x124 after a Windows in-place upgrade on Apple devices
+      href: ./performance/bug-check-0x124-windows-upgrade-boot-camp-apple-devices.md
     - name: Event ID 41 "The system has rebooted without cleanly shutting down first"
       href: ./performance/event-id-41-restart.md
     - name: Stop error 7B or Inaccessible_Boot_Device troubleshooting
