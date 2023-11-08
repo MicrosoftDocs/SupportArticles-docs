@@ -40,7 +40,8 @@ In AD-integrated DNS zones that are hosted on domain controllers (Windows Server
 	```output
 	LogName:       DNS Server
 	Source:        Microsoft-Windows-DNS-Server-Service
-	Date:          <DateTime>Event ID:      4004
+	Date:          <DateTime>
+ 	Event ID:      4004
 	Task Category:
 	Level:         Error
 	User:          S-1-5-18
@@ -67,8 +68,8 @@ To work around this issue, restart the DNS Server service after deleting the Ker
 
 ```powershell
     #NOTE: 
-# The following two parameters should be adjusted according to your customer's environment.
-# The current values are only defaults and may not be optimal for your customer.
+# The following two parameters should be adjusted according to your environment.
+# The current values are only defaults and may not be optimal for you.
 
 # How long to wait to ensure the 4016 event occurs consistently (that is, not one-offs)
 [int]$EventIntervalMinutes=3
