@@ -6591,6 +6591,11 @@
       "source_path": "support/windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md",
       "redirect_url": "/troubleshoot/windows-client/windows-tss/gather-information-using-tss-ad-replication",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/virtual-machines/boot-error-0xc0000225.md",
+      "redirect_url": "/troubleshoot/azure/virtual-machines/boot-error-status-not-found",
+      "redirect_document_id": true
     }
 ]
 }

@@ -210,7 +210,7 @@
             href: troubleshoot-guide-critical-process-died.md
           - name: Critical service failed
             href: troubleshoot-critical-service-failed-boot-error.md
-          - name: Troubleshoot boot error - Status not found
+          - name: Troubleshoot boot error 0xC0000225 - Status not found
             href: boot-error-status-not-found.md
           - name: Troubleshoot Windows could not finish configuring the system
             href: windows-could-not-configure-system.md
@@ -266,8 +266,6 @@
             href: boot-error-0xc0000098.md
           - name: Can't boot with 0xC0000102
             href: error-code-0xC0000102-status-file-corrupt.md
-          - name: Can't boot with 0xc0000225
-            href: boot-error-0xc0000225.md
           - name: Can't boot with 0xc0000359
             href: boot-error-0xc0000359.md
           - name: Can't boot with 0xc000000e
