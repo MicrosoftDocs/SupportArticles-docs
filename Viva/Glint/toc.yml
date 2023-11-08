@@ -1,5 +1,7 @@
 - name: Viva Glint troubleshooting
   href: viva-glint-welcome.yml
   items:
-    - name: Resolve manager hierarchy error
-      href: fix-manager-hierarchy-circular-reporting.md
+    - name: Data file uploads
+      items:
+        - name: Resolve manager hierarchy error
+          href: fix-manager-hierarchy-circular-reporting.md
