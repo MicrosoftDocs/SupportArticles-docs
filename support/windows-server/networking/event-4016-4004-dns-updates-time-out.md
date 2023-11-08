@@ -59,7 +59,7 @@ After the Kerberos expiration (10 hours), the lightweight directory access proto
 
 Because of the presence of query data instead of the expected update bytes, the subsequent bytes are mistakenly interpreted as the length, often resulting in a large number. When the LDAP server starts to read the bytes, the buffer contains fewer bytes than indicated by the length of bytes. Therefore, the LDAP server waits for additional data to arrive. As a result, the LDAP server request becomes corrupt and eventually times out because of the LDAP time-out (six minutes), because the additional updates don't reach the expected length on the receive side.
 
-## Restart the DNS Server service and delete the Kerberos ticket cache
+## Restart DNS Server service and delete Kerberos ticket cache
 
 To work around this issue, restart the DNS Server service after deleting the Kerberos ticket cache by using a Windows PowerShell script. See the following script for an example:
 
