@@ -22,12 +22,13 @@ ms.date: 11/08/2023
 
 ## Symptoms
 
-An external sender receives the following non-delivery report (NDR) when they send an email message to a Microsoft 365 group:
+An external sender receives the following nondelivery report (NDR) when they send an email message to a Microsoft 365 group:
 
-> The group \<group name\> isn't set up to receive messages from \<sender name\>.
-> More Info for Email Admins
-> Status code: 550 5.7.193
-> 550 5.7.193 UnifiedGroupAgent; Delivery failed because the sender isn't a group member or external senders aren't permitted to send to this group.
+> The group \<group name\> isn't set up to receive messages from \<sender name\>.  
+> More Info for Email Admins  
+> Status code: 550 5.7.193  
+> 550 5.7.193 UnifiedGroupAgent; Delivery failed because the sender isn't a group member or external senders  
+> aren't permitted to send to this group.
 
 ## Cause
 
@@ -35,7 +36,7 @@ The Microsoft 365 group isn't configured to accept email messages from external 
 
 ## Resolution
 
-To configure a group to accept email messages from external senders, use either of the following procedures. The procedure you choose depends on whether you are an administrator or the group owner.
+To configure a group to accept email messages from external senders, use either of the following procedures. The procedure you choose depends on whether you're an administrator or the group owner.
 
 ### Method for group owner
 
@@ -67,12 +68,12 @@ Use either the Exchange admin center (EAC) or Exchange Online PowerShell.
 
 1. Run the following command to connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell):
 
-```PowerShell
-Connect-ExchangeOnline
-```
+   ```PowerShell
+   Connect-ExchangeOnline
+   ```
 
 2. Run the following command to configure the group to receive mail from unauthenticated (external) senders:
 
-```PowerShell
-Set-UnifiedGroup -Identity <group name or SMTP address> -RequireSenderAuthenticationEnabled $False
-```
+   ```PowerShell
+   Set-UnifiedGroup -Identity <group name or SMTP address> -RequireSenderAuthenticationEnabled $False
+   ```
