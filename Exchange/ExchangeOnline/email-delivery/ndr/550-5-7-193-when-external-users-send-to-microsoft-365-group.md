@@ -18,7 +18,7 @@ search.appverid: MET150
 ms.date: 11/08/2023
 ---
 
-# NDR 550 5.7.193 when external users send email to Microsoft 365 group
+# NDR "550 5.7.193" when external users send email to a Microsoft 365 group
 
 ## Symptoms
 
@@ -36,15 +36,15 @@ The Microsoft 365 group isn't configured to accept email messages from external 
 
 ## Resolution
 
-To configure a group to accept email messages from external senders, use either of the following procedures. The procedure you choose depends on whether you're an administrator or the group owner.
+To configure a group to accept email messages from external senders, use either of the following methods. The method that you choose depends on whether you're an administrator or the group owner.
 
 ### Method for group owner
 
 1. Open the [Microsoft Outlook Groups hub](https://outlook.office.com/people/group/owner).
 
-2. Select the group and then select **Edit** from the menu bar to open the **Edit group** dialog.
+2. Select the group and then select **Edit** from the menu bar to open the **Edit group** dialog box.
 
-3. In the **Edit group** dialog, select **Let people outside the organization email the groups**.
+3. In the **Edit group** dialog box, select **Let people outside the organization email the groups**.
 
 4. Select **Save**.
 
@@ -54,7 +54,7 @@ Use either the Exchange admin center (EAC) or Exchange Online PowerShell.
 
 #### EAC
 
-1. Navigate to **Recipients** \> **Groups** and then select the relevant group to open the group details pane.
+1. Navigate to **Recipients** \> **Groups**, and then select the relevant group to open the group details pane.
 
 2. In the details pane, select **Settings**.
 
@@ -66,13 +66,13 @@ Use either the Exchange admin center (EAC) or Exchange Online PowerShell.
 
 #### PowerShell
 
-1. Run the following command to connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell):
+1. Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) by running the following command:
 
    ```PowerShell
    Connect-ExchangeOnline
    ```
 
-2. Run the following command to configure the group to receive mail from unauthenticated (external) senders:
+2. Configure the group to receive mail from unauthenticated (external) senders by running the following command:
 
    ```PowerShell
    Set-UnifiedGroup -Identity <group name or SMTP address> -RequireSenderAuthenticationEnabled $False
