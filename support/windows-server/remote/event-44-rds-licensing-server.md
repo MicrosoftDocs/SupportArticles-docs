@@ -1,6 +1,6 @@
 ---
-title: RDS License server logs Event 44 in Windows Server 2016 and 2012
-description: Address the Event 44 on a Remote Desktop Services (RDS) licensing server that's running Windows Server 2016 and Windows Server 2012.
+title: RDS License server logs Event 44 in Windows Server 2022, 2019 and 2016
+description: Address the Event 44 on a Remote Desktop Services (RDS) licensing server that's running Windows Server 2022 or Windows Server 2019 or Windows Server 2016.
 ms.date: 05/16/2023
 author: Deland-Han
 ms.author: delhan
@@ -13,16 +13,16 @@ ms.reviewer: kaushika, robertvi, v-jesits
 ms.custom: sap:remote-desktop-services-terminal-services-licensing, csstroubleshoot
 ms.technology: windows-server-rds
 ---
-# Event 44 on an RDS licensing server running Windows Server 2016 or Windows Server 2012
+# Event 44 on an RDS licensing server running Windows Server 2022 or Windows Server 2019 or Windows Server 2016
 
-This article describes the Event 44 on an RDS licensing server running Windows Server 2016 or Windows Server 2012.
+This article describes the Event 44 on an RDS licensing server running Windows Server 2022 or Windows Server 2019 or Windows Server 2016.
 
-_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server 2016
 _Original KB number:_ &nbsp; 4078299
 
 [View the products that this article applies to.](#applies-to)
 
-On a Remote Desktop Services (RDS) licensing server that's running Windows Server 2016 or Windows Server 2012, the following entry for Event 44 is entered in the event log:
+On a Remote Desktop Services (RDS) licensing server that's running Windows Server 2022 or Windows Server 2019 or Windows Server 2016, the following entry for Event 44 is entered in the event log:
 > Event ID: 44  
 Log Name: System  
 Source: Microsoft-Windows-TerminalServices-Licensing  
@@ -49,8 +49,9 @@ Microsoft is researching this issue and will post more information in this artic
 
 ### Applies to
 
+- Windows Server 2022
+- Windows Server 2019
 - Windows Server 2016
-- Windows Server 2012
 
 ## Data collection
 
