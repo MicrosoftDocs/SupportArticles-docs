@@ -52,4 +52,4 @@ If the issue still exists, repeat steps 2 and 3 to determine the specific USB de
  
 For more information, see [MacBook Pro 2017 bootcamp Windows 10 freezes when connecting Apple USB C AV digital adapter](https://discussions.apple.com/thread/8171221). 
 
-[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
