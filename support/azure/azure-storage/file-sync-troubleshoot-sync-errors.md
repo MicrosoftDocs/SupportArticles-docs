@@ -4,7 +4,7 @@ description: Troubleshoot common issues with monitoring sync health and resolvin
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 11/07/2023
+ms.date: 11/09/2023
 ms.author: kendownie
 ms.custom: devx-track-azurepowershell
 ms.reviewer: v-weizhu
@@ -515,12 +515,12 @@ Sync sessions fail with either of these errors when the Azure file share storage
 
     :::image type="content" source="media/file-sync-troubleshoot-sync-errors/cloud-endpoint-detail.png" alt-text="Screenshot showing the cloud endpoint detail pane with a link to the file share.":::
 
-4. Select the file share to get the details on the Overview page.
-5. Verify the file share quota by selecting **Edit quota**. Unless an alternate quota has been specified, the quota will match the [maximum size of the Azure file share](/azure/storage/files/storage-files-scale-targets?toc=/azure/storage/filesync/toc.json).
+4. Select the file share to get the details on the **Overview** page.
+5. Select **Edit quota** to verify the file share quota. Unless an alternate quota has been specified, the quota will match the [maximum size of the Azure file share](/azure/storage/files/storage-files-scale-targets?toc=/azure/storage/filesync/toc.json).
 
-    :::image type="content" source="media/file-sync-troubleshoot-sync-errors/edit-quota.png" alt-text="Screenshot that shows the Azure file share properties.":::
+    :::image type="content" source="media/file-sync-troubleshoot-sync-errors/edit-quota.png" alt-text="Screenshot that shows the Azure file share properties." lightbox="media/file-sync-troubleshoot-sync-errors/edit-quota.png":::
 
-If the file share is full (used capacity equals quota), free up space on the file share. One possible way of fixing this issue is to make each subfolder of the current server endpoint into its own server endpoint in their own separate sync groups. This way each subfolder will sync to individual Azure file shares.
+If the file share is full (the used capacity equals the quota), free up space on the file share. One possible way of fixing this issue is to make each subfolder of the current server endpoint into its own server endpoint in their own separate sync groups. This way each subfolder will sync to individual Azure file shares.
 
 <a id="-2134351824"></a>**The Azure file share cannot be found.**  
 
@@ -1387,7 +1387,7 @@ Run the following PowerShell command on the server to reset the certificate:
 
    :::image type="content" source="media/file-sync-troubleshoot-sync-errors/cloud-endpoint-detail.png" alt-text="Screenshot showing the cloud endpoint detail pane with a link to the file share.":::
 
-4. Select the file share name to open the file share settings page in the storage account. If this link fails, the referenced storage account has been removed.
+4. Select the file share name to open the file share settings page in the storage account. If this link fails to open, the referenced storage account has been removed.
 
 ## [PowerShell](#tab/azure-powershell)
 
