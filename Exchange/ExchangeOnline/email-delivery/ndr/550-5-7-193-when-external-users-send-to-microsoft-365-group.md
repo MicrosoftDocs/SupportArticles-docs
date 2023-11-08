@@ -22,7 +22,7 @@ ms.date: 11/08/2023
 
 ## Symptoms
 
-An external sender receives the following nondelivery report (NDR) when they send an email message to a Microsoft 365 group:
+An external sender receives the following nondelivery report (NDR) when they send an email message to a group in Microsoft 365 Groups:
 
 > The group \<group name\> isn't set up to receive messages from \<sender name\>.  
 > More Info for Email Admins  
@@ -36,7 +36,7 @@ The Microsoft 365 group isn't configured to accept email messages from external 
 
 ## Resolution
 
-To configure a group to accept email messages from external senders, use either of the following methods. The method that you choose depends on whether you're an administrator or the group owner.
+To configure a group in Microsoft 365 Groups to accept email messages from external senders, use either of the following methods. The method that you choose depends on whether you're an administrator or the group owner.
 
 ### Method for group owner
 
