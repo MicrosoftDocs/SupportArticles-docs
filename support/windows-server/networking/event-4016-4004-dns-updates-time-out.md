@@ -54,6 +54,7 @@ By checking the DNS audit logs and Netsh trace with the NetConnection scenario, 
 ## LDAP server requests time out and corrupt
 
 After the Kerberos expiration (10 hours), the lightweight directory access protocol (LDAP) server resets connections for DNS updates, which causes the LDAP server to perform an automatic reconnection to get a new socket handle. The new socket handle might be the same as a Transmission Control Protocol (TCP) socket handle that a DNS query thread already has. If the DNS query thread writes first, the updated bytes will be appended to the existing message buffer and sent through the same socket. The LDAP server thread within the Local Security Authority Subsystem Service (LSASS) successfully receives all the bytes, but the length of the update payload is expected to be the first 4 bytes.
+
 Because of the presence of query data instead of the expected update bytes, the subsequent bytes are mistakenly interpreted as the length, often resulting in a large number. When the LDAP server starts to read the bytes, the buffer contains fewer bytes than indicated by the length of bytes. Therefore, the LDAP server waits for additional data to arrive. As a result, the LDAP server request becomes corrupt and eventually times out because of the LDAP time-out (six minutes), because the additional updates don't reach the expected length on the receive side.
 
 ## Restart the DNS Server service and delete the Kerberos ticket cache
