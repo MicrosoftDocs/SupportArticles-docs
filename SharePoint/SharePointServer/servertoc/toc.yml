@@ -161,10 +161,6 @@
       href: ../lists-and-libraries/upload-multiple-documents-option-not-available.md
     - name: Visio Graphics Service application pool isn't recycled
       href: ../lists-and-libraries/visio-graphics-service-application-pool-not-recycled.md
-  - name: Migration Tool
-    items:
-    - name: Products Preparation Tool may not progress past
-      href: ../migration-tool/products-preparation-tool-not-progress-past-configuring-application.md
   - name: People Picker
     items:
     - name: No exact match was found
