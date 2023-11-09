@@ -25,6 +25,7 @@ This issue occurs because the **Specify startup policy processing wait time** gr
 
 - `HKLM\Software\Microsoft\Windows\CurrentVersion\Group Policy\History\AvgWaitTimeoutAtStartup`
 - `HKLM\Software\Microsoft\Windows\CurrentVersion\Group Policy\History\CurrentWaitAtStartup`
+
 In this case, the time-out is miscalculated, and the Group Policy Service doesn't wait for the default 30 seconds for the network to be available.
 
 To work around this issue, configure the **Specify startup policy processing wait time** group policy with the expected value.
