@@ -161,13 +161,13 @@ kernel: CIFS: VFS: cifs_mount failed w/return code = -2
 ### Cause
 
 The mount fails because FIPS is enabled on the cifs-client system. NTLMSSP authentication requires MD5 hashing algorithm which is disabled when the system is made FIPS compliant. In summary the use of MD4/MD5 isn't approved by FIPS.
-To check to see if FIPS mode is enabled run the following command. If set to 1 `enabled`, CIFS mount fails and get the `hmac(md5)` error from the kernel. If set to 0 `disabled`, then the CIFS mount works correctly without any errors.
+To check to see if FIPS mode is enabled run the following command. If set to 1 `enabled`, CIFS mount fails and gets the `hmac(md5)` error from the kernel. If set to 0 `disabled`, then the CIFS mount works correctly without any errors.
 
 ```bash
 sudo cat /proc/sys/crypto/fips_enabled
 ```
 
-Another alternative to check if FIPS is enable is by checking the `/proc/cmdline` file.
+Another alternative to check if FIPS is enable is by running:
 
 ```bash
 sudo cat /proc/cmdline
