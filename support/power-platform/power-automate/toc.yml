@@ -199,6 +199,8 @@
           href: desktop-flows/troubleshooting-ui-flow-playback.md
         - name: Troubleshoot direct connectivity issues
           href: desktop-flows/troubleshoot-direct-connectivity-issues.md
+        - name: Troubleshoot desktop flow run queue-based errors
+          href: desktop-flows/troubleshoot-desktop-flow-run-queue-errors.md
         - name: Troubleshoot issues with Power Automate browser extensions
           href: desktop-flows/web-extensions-policies.md
         - name: Temporary profile error during machine registration
