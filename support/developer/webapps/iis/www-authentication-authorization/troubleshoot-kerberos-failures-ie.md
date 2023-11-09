@@ -276,7 +276,7 @@ Kernel mode authentication is a feature that was introduced in IIS 7. It provide
 > If an SPN has been declared for a specific user account (also used as application pool identity), kernel mode authentication can't decrypt the Kerberos ticket because it uses the machine account. This problem is typical in web farm scenarios. This scenario usually declares an SPN for the (virtual) NLB hostname. To prevent this problem, use one of the following methods:
 >
 > - Disable Kernel mode authentication. (Not recommended from a performance standpoint.)
-> - Set **useAppPoolCredentials** to **true**. Doing so retains the performance benefit of kernel mode authentication, while allowing the Kerberos ticket to be decoded under the application pool identity. For more information, see [Security Authentication <authentication>](/configuration/system.webserver/security/authentication).
+> - Set **useAppPoolCredentials** to **true**. Doing so retains the performance benefit of kernel mode authentication, while allowing the Kerberos ticket to be decoded under the application pool identity. For more information, see [Security Authentication \<authentication\>](/iis/configuration/system.webserver/security/authentication).
 
 ### Why does delegation fail although Kerberos authentication works
 
