@@ -47,7 +47,7 @@ You receive Event ID 4015 in one of the following scenarios:
     The DNS server has encountered a critical error from the Active Directory. Check that the Active Directory is functioning properly. The extended error debug information (which may be empty) is "0000051B: AttrErr: DSID-xxxx, #1: 0:0000051B: DSID-xxxx, problem 1005 (CONSTRAINT_ATT_TYPE), data 0, Att 20119(nTSecurityDescriptor)". The eventdata contains the error."
     ```
 
-- In a forest or domain located in Active Directory integrated Domain Name System (DNS) zones, some domain controllers that have the DNS Server role installed have been promoted and demoted. Some promoted domain controllers can't register the SRV, Host A, Pointer (PTR), or Name Server (NS) in the Active Directory integrated DNS zones, and the following events are logged:
+- In a forest or domain located in Active Directory integrated Domain Name System (DNS) zones, some domain controllers that have the DNS Server role installed have been promoted and demoted. Some promoted domain controllers can't register the SRV, Host A, Pointer (PTR), or Name Server (NS) in the Active Directory integrated DNS zones, and the following event is logged:
 
     ```ouput
     The DNS server has encountered a critical error from the Active Directory. Check that the Active Directory is functioning properly. The extended error debug information (which may be empty) is "00002024: SvcErr: DSID-02050BBD, problem 5008 (ADMIN_LIMIT_EXCEEDED), data -1026". The event data contains the error.
@@ -117,8 +117,7 @@ repadmin /showattr . "CN=MicrosoftDNS,DC=ForestDnsZones,DC=contoso,DC=com" /subt
 The output displays the current number of entries in `dnsRecord` attributes of the corresponding Active Directory integrated zone. For example:
 
 ```output
-DN:
-DC=@,DC=..TrustAnchors,CN=MicrosoftDNS,DC=ForestDnsZones,DC=contoso,DC=com
+DN: DC=@,DC=..TrustAnchors,CN=MicrosoftDNS,DC=ForestDnsZones,DC=contoso,DC=com
 1280> dnsRecord: <48 byte blob>;
 ```
 
@@ -133,7 +132,7 @@ The DNS Server service ETL trace also includes related logs:
 <DateTime> [DNSServer16 ] The DNS server has encountered a critical error from the Active Directory. Check that the Active Directory is functioning properly. The extended error debug information (which may be empty) is _00002024: SvcErr: DSID-02050AF3, problem 5008 (ADMIN_LIMIT_EXCEEDED), data -1026_. The event data contains the error. 00002024: SvcErr: DSID-02050AF3, problem 5008 (ADMIN_LIMIT_EXCEEDED), data -1026, 4
 ```
 
-## Delete orphaned entries of denoted domain controllers
+### Delete orphaned entries of denoted domain controllers
 
 To resolve this issue, remove all orphaned entries of the denoted domain controllers from the zones. To check and selectively delete the entries, run the following Windows PowerShell cmdlets:
 
@@ -159,7 +158,7 @@ $Record | Remove-DnsServerResourceRecord -ZoneName _msdcs.contoso.com
 }
 ```
 
-## Enable debug logging with TroubleShootingScript (TSS)
+### Enable debug logging with TroubleShootingScript (TSS)
 
 To start traces on the DNS Server by using [TSS](https://aka.ms/getTSS), run the following cmdlet:
 
