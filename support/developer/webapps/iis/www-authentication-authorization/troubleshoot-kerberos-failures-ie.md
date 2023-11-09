@@ -327,3 +327,7 @@ These keys should be created under the respective path. Inside the key, a DWORD 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_INCLUDE_PORT_IN_SPN_KB908209]
 "iexplore.exe"=dword:00000001
 ```
+
+## More information
+
+[Diagnostic pages for Windows Integrated Authentication troubleshooting](diagnostics-pages-windows-integrated-authentication.md)
