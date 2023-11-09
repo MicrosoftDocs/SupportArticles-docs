@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Dataverse bulk operation errors
-description: Provides resolutions for common errors that might occur while using bulk operations with Microsoft Dataverse.
-ms.date: 11/07/2023
+description: Provides resolutions for system errors that might occur while using bulk operations with Microsoft Dataverse.
+ms.date: 11/09/2023
 author: hakhemic
 ms.author: hakhemic
 ms.reviewer: jdaly
@@ -18,7 +18,6 @@ contributors:
 # Troubleshoot Dataverse bulk operation errors
 
 This article describes system errors you might encounter when using Microsoft Dataverse [bulk operations](/power-apps/developer/data-platform/bulk-operations) and how to avoid them.
-
 
 ## Error "Sql error: Generic SQL error"
 
