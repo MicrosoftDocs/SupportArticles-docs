@@ -23,7 +23,7 @@ The **Delete user profiles older than a specified number of days on system resta
 
 This issue occurs because the Microsoft System Center Configuration Manager (SCCM) compliance settings take precedence over the GPO settings.
 
-To determine if user profile settings are controlled by SCCM, check the following registry settings. If they're set to **1**, it means that the settings are managed by SCCM.
+To determine if user profile settings are controlled by SCCM or a third party application, check the following registry settings. If they're set to **1**, it means that the settings are managed by SCCM or a third party application.
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\UserState\UserStateTechnologies\ConfigurationControls`
 
