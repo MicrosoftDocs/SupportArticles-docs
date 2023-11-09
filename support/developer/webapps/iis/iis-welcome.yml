@@ -87,7 +87,7 @@ landingContent:
           - text: Configure Many-to-One client certificate mappings
             url: www-authentication-authorization/configure-many-to-one-client-mappings.md
           - text: Diagnostic pages for Windows Integrated Authentication troubleshooting
-            url: www-authentication-authorization/diagnostics-pages-windows-integrated-authentication
+            url: www-authentication-authorization/diagnostics-pages-windows-integrated-authentication.md
           - text: IIS authenticates browser clients
             url: www-authentication-authorization/iis-authenticates-browser-client.md
           - text: Kerberos double-hop authentication with Microsoft Edge (Chromium)
