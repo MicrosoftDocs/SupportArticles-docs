@@ -46,6 +46,7 @@ grub rescue>
     * [Error 15: File not found](#error15)
     * [Error: file '/boot/grub2/i386-pc/normal.mod' not found](#normal-mod-file-not-found)
     * [Error: no such partition](#no-such-partition)
+    * [Error: symbol 'grub_efi_get_secure_boot'not found](#grub_efi_get_secure_boot)
     * [Other GRUB rescue errors](#other-grub-rescue-errors)
 
 3. After the GRUB rescue issue is resolved, perform the following actions:
@@ -355,6 +356,31 @@ If the /boot partition is missing, recreate it by following these steps:
     ```
 
 3. If the /boot file system isn't visible after recreating the partition, it means the /boot data is no longer there. You'll need to recreate the /boot file system (by using the same UUID than in the */etc/fstab* /boot entry) and [restore its contents from backup](/azure/backup/backup-azure-arm-restore-vms).
+   
+   
+## <a id="grub_efi_get_secure_boot"></a>Error: symbol ‘grub_efi_get_secure_boot’ not found  
+
+The below error will occur with a SUSE SLES-based VMs during the boot process:  
+
+**Loading Linux 4.12.14-122.153-default ...  
+error: symbol grub_efi_get_secureboot' not found. Loading initial ramdisk ... error: symbol   grub_efi_get_secureboot' not found.  
+Press any key to continue...**  
+
+## Cause:  
+If the physical host node where the VM was running encountered a hardware memory error or is affected by a platform level health event, it can damage the GRUB bootloader and may impact the guest operating system for your VM. 
+
+## Solution: 
+To resolve the boot error, follow the below steps:  
+
+1. Make sure that a rescue/repair VM has been created. If not, follow the step 1 in [Troubleshoot GRUB rescue issue offline](#offline-troubleshooting) to create it. Mount all the required file systems, including / and /boot, and then do [chroot](chroot-environment-linux.md).
+   
+2. Execute the below commands in chroot environment:
+   
+```bash
+# grub2-mkconfig -o /boot/grub2/grub.cfg
+# shim-install --config-file=/boot/grub2/grub.cfg
+```
+3.Proceed with step 3 in [Troubleshoot GRUB rescue issue offline](#offline-troubleshooting) to swap the OS disk.  
 
 ## <a id="other-grub-rescue-errors"></a>Other GRUB rescue errors
 
