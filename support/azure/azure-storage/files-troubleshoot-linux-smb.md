@@ -148,6 +148,54 @@ For a permanent fix, upgrade your client OS to a Linux distro version with accou
 
 - [dns: Apply a default TTL to records obtained from getaddrinfo()](https://git.kernel.org/pub/scm/linux/kernel/git/dhowells/keyutils.git/commit/?id=75e7568dc516db698093b33ea273e1b4a30b70be)
 
+## 	Unable To Mount Samba Share when FIPS is enabled 
+
+Unable to mount an Azure File Share using CIFS when `Federal Information Processing Standard (FIPS)` is enable on the VM. Linux dmesg logs on the client show repeated errors like:
+
+```output
+kernel: CIFS: VFS: Could not allocate crypto hmac(md5)
+kernel: CIFS: VFS: Error -2 during NTLMSSP authentication
+kernel: CIFS: VFS: \\contoso.file.core.windows.net Send error in SessSetup = -2
+kernel: CIFS: VFS: cifs_mount failed w/return code = -2
+```
+### Cause
+
+The mount fails because FIPS is enabled on the cifs-client system. NTLMSSP authentication requires MD5 hashing algorithm which is disabled when the system is made FIPS compliant. In this case, use of MD4/MD5 is not approved by FIPS
+
+To check to see if FIPS mode is enabled run the following command. If set to 1 `enabled` CIFS mount will fail and get the `hmac(md5)`error from the kernel. If set to 0 `disabled`, then the CIFS mount works just fine without any errors
+
+```bash
+sudo cat /proc/sys/crypto/fips_enabled
+```
+
+Another way to check if FIPS is enable is by running the following command.
+
+```bash
+sudo cat /proc/cmdline
+```
+
+###  Solution
+
+Disable `FIPS` by removing the parameter from GRUB command line to successfully mount CIFS share.
+
+1. Change the sysctl value of `crypto.fips_enabled` to 0 in `/etc/sysctl.conf`
+
+2. Modify the `GRUB_CMDLINE_LINUX_DEFAULT` in `/etc/default/grub` file and remove the parameter `fips=1`
+
+3. Rebuilt the grub2 config file
+
+```bash
+sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+```
+4. Rebuilt the initramfs image.
+
+```
+sudo dracut -fv
+```
+5. Reboot the VM
+
+Additional information can be found in [Red Hat](https://access.redhat.com/solutions/256053) and [SUSE](https://www.suse.com/support/kb/doc/?id=000021162) vendors.
+
 ## Need help?
 
 If you still need help, [contact support](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) to get your problem resolved quickly.
