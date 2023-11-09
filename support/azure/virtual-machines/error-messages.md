@@ -132,6 +132,7 @@ This section lists the common error messages you may encounter when managing VMs
 |  NotSupported  |  The license type is {0}, but the image blob {1} is not from on-premises.  |
 |  OperationNotAllowed  |  Availability Set {0} cannot be deleted. Before deleting an Availability Set please ensure that it does not contain any VM.  |
 |  OperationNotAllowed  |  Changing availability set SKU from 'Aligned' to 'Classic' is not allowed.  |
+|  OperationNotAllowed  |  Change in disk property of OS disk '' is not allowed when VM is running.   |
 |  OperationNotAllowed  |  Cannot modify extensions in the VM when the VM is not running.  |
 |  OperationNotAllowed  |  The Capture action is only supported on a Virtual Machine with blob based disks. Please use the 'Image' resource APIs to create an Image from a managed Virtual Machine.  |
 |  OperationNotAllowed  |  The resource {0} cannot be created from Image {1} until Image has been successfully created.  |
