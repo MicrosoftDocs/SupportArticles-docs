@@ -44,12 +44,17 @@ items:
               href: create-and-use-apps/no-navigation-when-selecting-button.md
     - name: Dataverse
       items:
+        - name: Bulk operation errors
+          href: dataverse/bulk-operation-errors.md
         - name: Clean up inherited access
           href: dataverse/cleanup-inherited-access.md
+        - name: Dataverse client errors
+          href: dataverse/client-errors.md
         - name: Dataverse plug-ins
           href: dataverse/dataverse-plug-ins-errors.md
         - name: Web API client errors
           href: dataverse/web-api-client-errors.md
+        
     - name: Isolate and troubleshoot common issues
       items:
         - name: Common issues and resolutions
