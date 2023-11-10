@@ -19,11 +19,14 @@ This article helps resolve an issue in which you receive error code 2359302 when
 
 _Original KB number:_ &nbsp; 5030033
 
-When you install updates in Windows Server 2019, you receive the 2359302 error in Event Viewer. For example:
+When you install updates in Windows Server 2019, you receive the 2359302 error in the Windows Setup event log under Event Viewer. For example:
 
 > Windows update could not be installed because of error 2359302 "" (Command line: ""C:\Windows\system32\wusa.exe" "C:\temp\windows10.0-kb5027222-x64 5802ce76528f37a5abbd6bde65549a9bad98acfc.msu" ")
 
 In the system, the updates are displayed as **Install Pending**.
+
+> [!NOTE]
+> To obtain the similar output, open a command prompt or Powershell window as an administrator and run `Dism /Online /Get-Packages /Format:table`. 
 
 :::image type="content" source="media/error-2359302-installing-windows-updates/install-pending.png" alt-text="Screenshot showing that the updates are displayed as Install Pending status.":::
 
