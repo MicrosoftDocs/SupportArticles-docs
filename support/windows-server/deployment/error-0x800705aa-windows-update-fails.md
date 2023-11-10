@@ -21,7 +21,7 @@ _Original KB number:_ &nbsp; 5028393
  
 Windows Cumulative Updates (CUs) can't be installed, or the system shows a notification that updates are missing. 
  
-You can also find the following error in *CBS.log*: 
+You can also find the following error by searching "Failed to load the COMPONENTS hive" in *CBS.log* (*C:\\Windows\\Logs\\CBS*): 
  
 > Info CBS Failed to load the COMPONENTS hive from 'C:\Windows\System32\config\COMPONENTS' into registry key 'HKLM\COMPONENTS'. [HRESULT = 0x800705aa - ERROR_NO_SYSTEM_RESOURCES]
 
