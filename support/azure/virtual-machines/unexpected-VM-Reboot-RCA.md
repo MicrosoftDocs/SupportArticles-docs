@@ -38,8 +38,7 @@ This guide will walk you through the steps to check the RCA message in the Azure
    ![Screenshot of accessing VM restarted or stopped unexpectedly blade.](media/unexpected-VM-Reboot-RCA/VM-restarted-or-stopped-unexpectedly.png) 
 
 6.	Once you select the option **My resource has been stopped unexpectedly**, a diagnostic will run in the backend to check the VM for any issue. And then provide the reboot RCA which customer can refer.
-    ![Screenshot of running diagnostics over VM restarted or stopped unexpectedly blade.](media/unexpected-VM-Reboot-RCA/My-resource-has-been-stopped-unexpectedly.png) 
-    ![Screenshot of diagnostic report over VM restarted or stopped unexpectedly blade.](media/unexpected-VM-Reboot-RCA/My-resource-has-been-stopped-unexpectedly2.png) 
+    ![Screenshot of diagnostics report over VM restarted or stopped unexpectedly blade.](media/unexpected-VM-Reboot-RCA/My-resource-has-been-stopped-unexpectedly.png) 
 
 >[!Note]
 >If Azure has further information about the root cause of a platform-initiated unavailability, that information may be posted in resource health up to 72 hours after the initial unavailability. This information is only available for virtual machines for now.
