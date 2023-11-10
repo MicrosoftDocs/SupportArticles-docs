@@ -121,17 +121,6 @@ DN: DC=@,DC=..TrustAnchors,CN=MicrosoftDNS,DC=ForestDnsZones,DC=contoso,DC=com
 1280> dnsRecord: <48 byte blob>;
 ```
 
-The DNS Server service ETL trace also includes related logs:
-
-```output
-<DateTime> [server] ds_c1947 writeRecordsToDsNode() - Operation 2, node DN DC=DomainDnsZones,DC=contoso.com,cn=MicrosoftDNS,DC=DomainDnsZones,DC=contoso,DC=com, zone DN DC=contoso.com,cn=MicrosoftDNS,DC=DomainDnsZones,DC=contoso,DC=com, using client LDAP session
-<DateTime> [server] ds_c16965 Ds_CommitAsyncRequest() - Warning 11: cannot commit request 729645. Administration Limit Exceeded
-<DateTime> [server] ds_c17421 Ds_ErrorHandler() - Error 11: Administration Limit Exceeded
-<DateTime> [server] ds_c894 Ds_GetExtendedLdapErrString() - Extended error string is: 00002024: SvcErr: DSID-02050AF3, problem 5008 (ADMIN_LIMIT_EXCEEDED), data -1026
-<DateTime> [server] ds_c17272 logDsError() - LDAP extended error string: "00002024: SvcErr: DSID-02050AF3, problem 5008 (ADMIN_LIMIT_EXCEEDED), data -1026"
-<DateTime> [DNSServer16 ] The DNS server has encountered a critical error from the Active Directory. Check that the Active Directory is functioning properly. The extended error debug information (which may be empty) is _00002024: SvcErr: DSID-02050AF3, problem 5008 (ADMIN_LIMIT_EXCEEDED), data -1026_. The event data contains the error. 00002024: SvcErr: DSID-02050AF3, problem 5008 (ADMIN_LIMIT_EXCEEDED), data -1026, 4
-```
-
 ### Delete orphaned entries of denoted domain controllers
 
 To resolve this issue, remove all orphaned entries of the denoted domain controllers from the zones. To check and selectively delete the entries, run the following Windows PowerShell cmdlets:
