@@ -9,7 +9,7 @@ metadata:
   ms.topic: landing-page # Required
   author:   #Required; your GitHub user alias, with correct capitalization.
   ms.author:  #Required; microsoft alias of author; optional team alias.
-  ms.date: 01/31/2023
+  ms.date: 11/08/2023
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -72,6 +72,32 @@ landingContent:
             url: troubleshoot-lead-form-auto-generated-contact-company-fields.md
           - text: Troubleshoot issues with table views
             url: troubleshoot-table-views-issues.md
+
+ # Card
+  - title: Teams Integration
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Can't enable Teams dialer
+            url: cannot-enable-dialer.md
+          - text: Customers can't hear a seller 
+            url: seller-voice-unheard-by-other-customer.md
+          - text: Duplicate phone calls in Sales accelerator
+            url: duplicate-phone-calls.md
+          - text: Fail to call through contact, account, or lead records
+            url: fail-to-call-through-contact-account-lead.md
+          - text: Seller can't hear customers
+            url: cannot-hear-other-customer.md
+          - text: Seller can't make phone calls to PSTN
+            url: cannot-make-phone-calls-to-pstn.md
+          - text: Troubleshoot Microsoft Teams chat integration with Dynamics 365
+            url: troubleshoot-dynamics365-embedcollab-issues.md
+          - text: Teams dialer basic troubleshooting
+            url: dialer-basic-troubleshooting.md
+          - text: Teams dialer isn't visible in custom app
+            url: dialer-not-available-in-custom-app.md
+          - text: Teams dialer isn't visible in the Sales Hub
+            url: dialer-not-visible-in-sales.md
 
 # Card
   - title: Documentation and training

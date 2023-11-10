@@ -2,9 +2,9 @@
 title: Troubleshoot the Kubernetes Event-driven Autoscaling (KEDA) add-on
 description: Learn how to troubleshoot the Kubernetes Event-driven Autoscaling (KEDA) add-on to the Azure Kubernetes Service (AKS).
 ms.service: azure-kubernetes-service
-ms.date: 11/06/2023
+ms.date: 11/09/2023
 editor: v-jsitser
-ms.reviewer: nickoman, v-leedennis
+ms.reviewer: nickoman, v-leedennis, v-weizhu
 ms.subservice: troubleshoot-extensions-add-ons
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot problems that involve the Kubernetes Event-driven Autoscaling (KEDA) add-on so that I can successfully use event-driven autoscaling on Azure Kubernetes Service (AKS).
 ---
@@ -16,6 +16,10 @@ This article discusses how to troubleshoot the Kubernetes Event-driven Autoscali
 ## Prerequisites
 
 - The Kubernetes [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) tool. To install kubectl by using the [Azure CLI](/cli/azure/install-azure-cli), run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
+
+## KEDA add-on support
+
+The KEDA add-on follows a similar support model to other [AKS add-ons](/azure/aks/integrations). All [Azure KEDA scalers](https://keda.sh/docs/scalers/) are supported, but AKS doesn't support third-party scalers. If you encounter issues with third-party scalers, open an issue in the official [KEDA GitHub repository](https://github.com/kedacore/keda).
 
 ## Troubleshooting checklist
 
