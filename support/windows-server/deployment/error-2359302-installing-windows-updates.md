@@ -85,7 +85,7 @@ To resolve this issue, follow these steps:
 7. In Registry Editor, select the `HKEY_LOCAL_MACHINE` registry key, and then select **File** > **Load Hive**.
 8. Navigate to the following folder and select the **COMPONENTS** hive:
 
-	*C:\\Windows\\System32\\config**
+	*C:\\Windows\\System32\\config*
 
 9. Delete the `ExecutionState` and `PendingXmlIdentifier` registry values (if they exist) from the following registry key:
 
