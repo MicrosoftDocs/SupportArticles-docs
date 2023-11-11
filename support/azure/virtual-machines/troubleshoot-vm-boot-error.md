@@ -46,7 +46,7 @@ grub rescue>
     * [Error 15: File not found](#error15)
     * [Error: file '/boot/grub2/i386-pc/normal.mod' not found](#normal-mod-file-not-found)
     * [Error: no such partition](#no-such-partition)
-    * [Error: symbol 'grub_efi_get_secure_boot'not found](#grub_efi_get_secure_boot)
+    * [Error: symbol 'grub_efi_get_secure_boot' not found](#grub_efi_get_secure_boot)
     * [Other GRUB rescue errors](#other-grub-rescue-errors)
 
 3. After the GRUB rescue issue is resolved, perform the following actions:
