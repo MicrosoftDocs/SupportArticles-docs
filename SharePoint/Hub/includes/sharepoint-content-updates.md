@@ -2,25 +2,9 @@
 
 
 
-## Week of September 25, 2023
+## Week of November 06, 2023
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 9/25/2023 | [ResponseStatusNotOK when sharing a SharePoint or OneDrive site](/sharepoint/troubleshoot/sharing-and-permissions/responsestatusnotok-sharing-sharepoint-onedrive-site) | added |
-
-
-## Week of September 18, 2023
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 9/18/2023 | [SharePoint Online or OneDrive for Business access denied due to organizational policies error message](/sharepoint/troubleshoot/sharing-and-permissions/access-denied-due-to-org-policies) | modified |
-
-
-## Week of September 11, 2023
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 9/14/2023 | [SharePoint site collection admins can't register apps or update permissions](/sharepoint/troubleshoot/apps/cannot-register-app-update-permissions) | added |
+| 11/8/2023 | The Products Preparation Tool in SharePoint Server 2013 may not progress past Configuring Application Server Role, Web Server (IIS) Role | removed |
