@@ -2,9 +2,10 @@
 
 
 
-## Week of August 28, 2023
+## Week of November 06, 2023
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 8/30/2023 | [Resolve manager hierarchy error in Viva Glint](/viva/troubleshoot/glint/fix-manager-hierarchy-circular-reporting) | added |
+| 11/5/2023 | [Resolve setup errors in Viva Pulse](/viva/troubleshoot/pulse/fix-setup-error-messages) | added |
+| 11/6/2023 | [Self-help diagnostics for Microsoft Viva administrators](/viva/troubleshoot/viva-suite-administration/viva-self-help-diagnostics) | added |
