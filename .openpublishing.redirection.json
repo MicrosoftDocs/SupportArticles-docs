@@ -48,12 +48,12 @@
     },
     {
       "source_path": "support/power-platform/power-automate/desktop-flows/troubleshoot-ui-flow-playback-unabletolaunchapplication.md",
-      "redirect_url": "/previous-versions/power-platform/power-automate/desktop-flows/troubleshoot-ui-flow-playback-unabletolaunchapplication",
+      "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/troubleshoot-ui-flow-playback-unabletolaunchapplication",
       "redirect_document_id": false
     },
     {
       "source_path": "support/power-platform/power-automate/desktop-flows/troubleshoot-unavailable-gateway-when-desktop-flows-fail.md",
-      "redirect_url": "/previous-versions/power-platform/power-automate/desktop-flows/troubleshoot-unavailable-gateway-when-desktop-flows-fail",
+      "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/troubleshoot-unavailable-gateway-when-desktop-flows-fail",
       "redirect_document_id": false
     },
     {
@@ -73,7 +73,7 @@
     },
     {
       "source_path": "support/power-platform/power-automate/desktop-flows/ui-flow-playback-error-keyboardidmismatch.md",
-      "redirect_url": "/previous-versions/power-platform/power-automate/desktop-flows/ui-flow-playback-error-keyboardidmismatch",
+      "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/ui-flow-playback-error-keyboardidmismatch",
       "redirect_document_id": false
     },
     {
