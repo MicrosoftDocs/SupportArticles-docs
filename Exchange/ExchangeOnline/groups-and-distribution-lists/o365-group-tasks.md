@@ -16,7 +16,7 @@ ms.reviewer: batre
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 11/08/2023
 ---
 # Microsoft 365 Groups - common tasks
 
@@ -318,26 +318,7 @@ Set-MailboxAutoReplyConfiguration -Identity <groupmailbox> -AutoReplyState Enabl
 
 #### Issue 1: Messages sent from external users to a Microsoft 365 group are not received
 
-If your sender receives a non-delivery report (NDR) that has the status code 550 5.7.193, make sure that the Microsoft 365 group is enabled to receive email messages from external users.
-
-##### For Microsoft 365 group owners
-
-1. Open the [Groups hub](https://outlook.office.com/people/group/owner).
-2. Edit the group that's not receiving messages from external users.
-3. Make sure that you select the **Let people outside the organization email the group** check box.
-
-   :::image type="content" source="media/o365-group-tasks/outside-checkbox.png" alt-text="Screenshot of the Let people outside the organization email the group checkbox.":::
-
-4. Save the group.
-
-##### For tenant admins
-
-1. [Connect to Exchange Online PowerShell](/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell?view=exchange-ps&preserve-view=true).
-2. Run the following command:
-
-   ```powershell
-   Set-UnifiedGroup <GroupName> -RequireSenderAuthenticationEnabled $false
-   ```
+If your sender receives a non-delivery report (NDR) that has the status code 550 5.7.193, make sure that the Microsoft 365 group is [enabled to receive email messages from external users](/exchange/troubleshoot/email-delivery/ndr-when-external-users-send-email-to-microsoft-365-group).
 
 #### Issue 2: Messages sent to a Microsoft 365 group are not received by all members
 

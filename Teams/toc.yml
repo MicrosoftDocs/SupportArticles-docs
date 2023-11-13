@@ -333,6 +333,8 @@
     items:
     - name: Virtual Camera stops working on macOS desktop client
       href: ./teams-on-mac/virtual-camera-doesnt-work-macos.md
+    - name: Incorrect presence status in Teams for Mac
+      href: ./teams-on-mac/incorrect-presence-status-teams-for-mac.md  
   - name: Teams on Windows
     items:
     - name: Error when calling from a contact card
