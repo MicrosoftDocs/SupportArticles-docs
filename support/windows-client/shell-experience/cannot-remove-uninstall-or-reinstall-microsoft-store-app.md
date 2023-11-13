@@ -17,7 +17,7 @@ ms.technology: windows-client-shell-experience
 
 In Windows, we don't recommend removing or uninstalling the Microsoft Store app.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows 11 - all editions
+_Applies to:_ &nbsp; All supported versions of Windows Client
 _Original KB number:_ &nbsp; 4339074
 
 ## More information
