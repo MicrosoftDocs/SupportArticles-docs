@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, ANRATH, brianoakes, v-lianna
 ms.custom: sap:dns, csstroubleshoot, ikb2lmc
-ms.technology: windows-server-networking
+ms.technology: networking
 ---
 # Incremental zone transfer doesn't work for DNS zones
 
