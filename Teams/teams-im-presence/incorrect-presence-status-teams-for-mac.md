@@ -1,5 +1,5 @@
 ---
-title: Stale or incorrect presence status in Teams for Mac
+title: Stale presence status in Teams for Mac
 description: Provides a workaround for an issue that causes your presence status to be incorrect in Teams on a macOS device. 
 ms.date: 11/13/2023
 audience: ITPro
