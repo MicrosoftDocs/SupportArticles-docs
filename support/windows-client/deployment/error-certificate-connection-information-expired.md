@@ -19,10 +19,10 @@ This article helps resolve an issue in which you receive the "certificate in the
 
 When you try to connect to an AVD VM by using the Remote Desktop client for Windows, you receive the following error message:
 
-> We have blocked the connection because the certificate in the connection information has expired. Either refresh your Workspace or contact Support for help.
-  Error code: 0x1608
-  Extended error code: 0x0
-  Timestamp (UTC): <DateTime>
+> We have blocked the connection because the certificate in the connection information has expired. Either refresh your Workspace or contact Support for help.  
+  Error code: 0x1608  
+  Extended error code: 0x0  
+  Timestamp (UTC): \<DateTime\>  
   Activity ID: 00000000-0000-0000-0000-000000000000
 
 This issue occurs when multiple users try to connect to the VM at the same time.
