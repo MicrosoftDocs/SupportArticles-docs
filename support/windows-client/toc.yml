@@ -377,6 +377,8 @@ items:
       href: ./deployment/customize-default-local-user-profile.md
     - name: Download and burn an ISO file from VLSC
       href: ./deployment/iso-file-on-vlsc.md
+    - name: Error "certificate in the connection information has expired"
+      href: ./deployment/error-certificate-connection-information-expired.md    
     - name: Error 0x80042468 when creating a single partition
       href: ./deployment/error-when-creating-single-partition.md
     - name: Event ID 10 is logged in Application log
