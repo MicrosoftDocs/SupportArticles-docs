@@ -1620,6 +1620,8 @@
       href: ./networking/enable-disable-dns-dynamic-registration.md
     - name: How to move DNS zones to another server
       href: ./networking/move-zone-files-dns-server.md
+    - name: Incremental zone transfer doesn't work for DNS zones
+      href: ./networking/incremental-zone-transfer-not-work-dns-zones.md
     - name: Integrate Windows DNS into an existing DNS namespace
       href: ./networking/integrate-windows-dns-into-existing-dns-namespace.md
     - name: Name resolution and connectivity issues
