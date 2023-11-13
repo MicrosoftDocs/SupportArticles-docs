@@ -11,7 +11,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft Teams
-ms.custom: 
+ms.custom:
   - CI 184113
   - CSSTroubleshoot
 ms.reviewer: corbinm, kristinw
