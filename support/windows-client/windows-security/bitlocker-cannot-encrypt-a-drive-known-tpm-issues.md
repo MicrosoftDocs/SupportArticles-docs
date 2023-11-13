@@ -152,4 +152,4 @@ The issue can be resolved with the following steps:
 For more information, see the following articles:
 
 - [Back up the TPM recovery information to AD DS](/windows/security/information-protection/tpm/backup-tpm-recovery-information-to-ad-ds)
-- [Prepare your organization for BitLocker: Planning and policies](/windows/security/information-protection/bitlocker/prepare-your-organization-for-bitlocker-planning-and-policies)
+- [Prepare your organization for BitLocker: Planning and policies](/windows/security/operating-system-security/data-protection/bitlocker/planning-guide)
