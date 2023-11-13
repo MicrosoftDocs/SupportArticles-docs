@@ -1342,6 +1342,8 @@
       href: ./high-availability/unable-to-get-computer-object-using-guid.md
     - name: Cluster validation test on Active Directory configuration fails
       href: ./high-availability/cluster-validation-test-fails-multi-site-cluster-scenario.md
+    - name: Cluster validation test on Active Directory configuration fails for domain change
+      href: ./high-availability/cluster-validation-test-fails-domain-change-cluster-scenario.md
     - name: Error "An item with the same key has already been added"
       href: ./high-availability/error-an-item-with-the-same-key-has-already-been-added.md
     - name: Failover cluster validation fails
