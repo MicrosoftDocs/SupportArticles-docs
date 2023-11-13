@@ -38,6 +38,7 @@ The issue occurs because the presence subscription expires and isn't recreated w
 ## Workaround
 
 To work around this issue, try to reset your status. If the issue persists, restart the Teams client.
+
 **Note:** If you’re using Teams on other devices, sign out of the Teams app on those devices.
 
 ## Status
