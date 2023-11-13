@@ -1,6 +1,6 @@
 ---
 title: Stale or incorrect presence status in Teams for Mac
-description: Work around an issue that causes your presence status to be out of date or incorrect when you run Teams on a macOS device. This issue usually occurs when the device is locked.
+description: Provides a workaround for an issue that causes your presence status to be incorrect in Teams on a macOS device. 
 ms.date: 11/13/2023
 audience: ITPro
 ms.topic: troubleshooting
@@ -17,11 +17,11 @@ ms.custom:
 ms.reviewer: corbinm, kristinw
 ---
 
-# Stale or incorrect presence status in Teams for Mac
+# Stale presence status in Teams for Mac
 
 ## Symptoms
 
-Your presence status is out of date or incorrect when you run one of the following Microsoft Teams clients on a macOS device:
+Your presence status is incorrect when you run one of the following Microsoft Teams clients on a macOS device:
 
 - New Teams
 - Classic Teams
