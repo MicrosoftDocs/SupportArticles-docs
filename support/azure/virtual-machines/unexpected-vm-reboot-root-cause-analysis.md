@@ -24,7 +24,7 @@ For unexpected Azure virtual machine (VM) reboots, Azure provides straightforwar
 ## Method 2: Run diagnostics
 
 1.	Navigate to the impacted VM in the Azure portal.
-2.	Select **Diagnose and solve problems** > **Common problems** > **VM Restarted or Stopped unexpectedly**.
+2.	Select **Diagnose and solve problems** > **Common problems** > **VM restarted or stopped unexpectedly**.
 
    :::image type="content" source="media/unexpected-vm-reboot-root-cause-analysis/diagnose-and-solve-problems.png" alt-text="Screenshot that shows 'Diagnose and solve problems' for Azure VM.":::
 
