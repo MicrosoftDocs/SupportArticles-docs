@@ -23,8 +23,8 @@ ms.reviewer: corbinm, kristinw
 
 Your presence status may be out of date or incorrect when you use one of the following Microsoft Teams clients on a macOS device:
 
-- The new Teams
-- The classic Teams
+- New Teams
+- Classic Teams
 - Teams on the web
 
 This issue usually occurs when the device is locked manually or due to inactivity.  When you resume activity on the device, your presence status remains the same as it was before the device was locked.
