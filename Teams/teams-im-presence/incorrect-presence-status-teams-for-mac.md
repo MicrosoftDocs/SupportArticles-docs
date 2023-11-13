@@ -10,7 +10,9 @@ search.appverid:
   - SPO160
   - MET150
 appliesto: 
-  - Microsoft Teams
+  - New Microsoft Teams
+  - Classic Microsoft Teams
+  - Teams on the web
 ms.custom:
   - CI 184113
   - CSSTroubleshoot
