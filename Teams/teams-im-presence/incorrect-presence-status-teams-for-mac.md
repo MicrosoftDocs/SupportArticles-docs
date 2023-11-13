@@ -21,15 +21,15 @@ ms.reviewer: corbinm, kristinw
 
 ## Symptoms
 
-Your presence status is incorrect when you run one of the following Microsoft Teams clients on a macOS device:
+Your presence status is incorrect when you when you resume activity on a locked macOS device that's running one of the following Microsoft Teams clients:
 
 - New Teams
 - Classic Teams
 - Teams on the web
 
-This issue usually occurs if the device is locked manually or because of inactivity.  When you resume activity on the device, your presence status remains the same as it was before the device was locked.
+The device might be locked manually or because of inactivity. After the device is unlocked, your presence status doesn't update as expected but remains unchanged.
 
-**Note:** If you also run Teams on other devices, such as Teams for iOS on iPhone, the status on your Mac might reflect the last status that was set on the iOS client. For example, you lock your Mac and you don't touch it for a while (more than five minutes), but Teams for iOS is running on your iPhone. In this situation, your presence status on the macOS device might reflect the status on the iOS client. When you resume activity on the macOS device, the presence status remains unchanged and doesn’t reflect the current activity on your Mac.
+**Note:** If you also run Teams on other devices, such as Teams for iOS on iPhone, the status on your macOS device might reflect the last status that was set on the iOS client. For example, you lock your macOS device and the device remains unlocked for more than five minutes, but Teams for iOS is running on your iPhone. In this situation, your presence status on the macOS device might reflect the status on the iOS client. When you resume activity on the macOS device, the presence status remains unchanged and doesn’t reflect the current activity.
 
 ## Cause
 
@@ -37,10 +37,10 @@ The issue occurs because the presence subscription expires and isn't re-created 
 
 ## Workaround
 
-To work around this issue, try to reset your status. If the issue persists, restart the Teams client.
+To work around this issue, reset your status. If the issue persists, restart the Teams client on the macOS device.
 
 **Note:** If you’re also running Teams on other devices, sign out of the Teams app on those devices.
 
 ## Status
 
-Microsoft is researching this issue and will update this article when new information becomes available. In the meantime, we recommend that you try the workarounds that are mentioned in the [Workaround](#workaround) section.
+Microsoft is researching this issue and will update this article when new information becomes available.
