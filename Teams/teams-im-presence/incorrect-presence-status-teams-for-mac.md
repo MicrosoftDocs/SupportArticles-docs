@@ -43,4 +43,4 @@ To work around this issue, try to reset your status. If the issue persists, rest
 
 ## Status
 
-Microsoft is aware of this issue and is investigating possible solutions. In the meantime, we recommend that you try the workarounds that are mentioned in the [Workaround](#workaround) section.
+Microsoft is researching this issue and will post more information in this article when the information becomes available. In the meantime, we recommend that you try the workarounds that are mentioned in the [Workaround](#workaround) section.
