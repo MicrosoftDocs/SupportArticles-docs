@@ -173,7 +173,13 @@ sudo cat /proc/cmdline
 
 ###  Solution
 
-Disable `FIPS` by removing the parameter from GRUB command line to successfully mount CIFS share.
+**Option 1:  Enable Kerberos authentication for Samba share.**
+
+ "In order to mount a Samba share on a virtual machine where FIPS is enabled, use the security mode `Kerberos`, i.e., `sec=krb5`
+
+For more information, see [Enable Active Directory authentication over SMB for Linux clients accessing Azure Files](https://learn.microsoft.com/en-us/azure/storage/files/storage-files-identity-auth-linux-kerberos-enable)
+
+**Option 2:  Disable FIPS to mount the Samba share.**
 
 1. Change the sysctl value of `crypto.fips_enabled` to 0 in `/etc/sysctl.conf`
 
