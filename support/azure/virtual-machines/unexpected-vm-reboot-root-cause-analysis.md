@@ -19,12 +19,12 @@ For unexpected Azure virtual machine (VM) reboots, Azure provides straightforwar
 2.	Go to the **Help** section and then select **Resource health**.
 3. Check the health events for the unexpected VM reboot to get RCA information.
 
-   :::image type="content" source="media/unexpected-vm-reboot-root-cause-analysis/resource-health-check.png" alt-text="Screenshot that shows the Azure portal 'Resource health' dashboard.":::
+:::image type="content" source="media/unexpected-vm-reboot-root-cause-analysis/resource-health-check.png" alt-text="Screenshot that shows the Azure portal 'Resource health' dashboard.":::
 
 ## Method 2: Run diagnostics
 
 1.	Navigate to the impacted VM in the Azure portal.
-2.	Go to the **Diagnose and solve problems** section and select **VM Restarted or Stopped unexpectedly**.
+2.	Select **Diagnose and solve problems** > **Common problems** > **VM Restarted or Stopped unexpectedly**.
 
    :::image type="content" source="media/unexpected-vm-reboot-root-cause-analysis/diagnose-and-solve-problems.png" alt-text="Screenshot that shows 'Diagnose and solve problems' for Azure VM.":::
 
