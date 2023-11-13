@@ -177,7 +177,7 @@ sudo cat /proc/cmdline
 
  "In order to mount a Samba share on a virtual machine where FIPS is enabled, use the security mode `Kerberos`, i.e., `sec=krb5`
 
-For more information, see [Enable Active Directory authentication over SMB for Linux clients accessing Azure Files](https://learn.microsoft.com/en-us/azure/storage/files/storage-files-identity-auth-linux-kerberos-enable)
+For more information, see [Enable Active Directory authentication over SMB for Linux clients accessing Azure Files](https://learn.microsoft.com/azure/storage/files/storage-files-identity-auth-linux-kerberos-enable)
 
 **Option 2:  Disable FIPS to mount the Samba share.**
 
