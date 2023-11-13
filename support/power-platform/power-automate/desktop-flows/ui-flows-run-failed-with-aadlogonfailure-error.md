@@ -52,4 +52,4 @@ Disabling NLA with Group Policy Editor on the machine may resolve the issue, but
 
 4. Click on "Disabled" and "Apply" and "OK".
 
-    :::image type="content" source="media/disable-gpo-nla.png" alt-text="Disable 'Require user authentication for remote connections by using Network Level Authentication'":::
+    :::image type="content" source="media/ui-flows-run-failed-with-aadlogonfailure-error/disable-gpo-nla.png" alt-text="Disable 'Require user authentication for remote connections by using Network Level Authentication'":::
