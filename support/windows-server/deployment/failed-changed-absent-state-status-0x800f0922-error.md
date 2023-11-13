@@ -1,5 +1,5 @@
 ---
-title: "Failed to be changed to the Absent state. Status: 0x800f0922" error
+title: '"Failed to be changed to the Absent state. Status: 0x800f0922" error'
 description: Helps fix the "Failed to be changed to the Absent state. Status 0x800f0922" error when installing updates in Windows Server 2019.
 author: Deland-Han
 ms.author: delhan
