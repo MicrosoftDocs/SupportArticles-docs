@@ -15,9 +15,7 @@ ms.technology: windows-server-group-policy
 ---
 # "Specify startup policy processing wait time" default value isn't honored and Group Policy fails to apply
 
-This article helps fix an issue in which Group Policy fails to apply because the **Specify startup policy processing wait time** group policy value isn't honored.
-
-_Original KB number:_ &nbsp; 5021008
+This article helps fix an issue in which Group Policy fails to apply because the [Specify startup policy processing wait time](https://gpsearch.azurewebsites.net/Default.aspx?PolicyID=319) group policy value isn't honored.
 
 Group Policy fails to apply during system startup because the default value of the **Specify startup policy processing wait time** group policy isn't honored. 
 
@@ -34,9 +32,12 @@ To work around this issue, configure the **Specify startup policy processing wai
 
 To fix this issue, install the following updates accordingly.
 
+> [!NOTE]
+> The issue is also fixed in later updates. You can also install later updates after the following updates to fix ths issue.
+
 |Products  |Updates  |
 |---------|---------|
-|Windows 11, version 22H2     |[August 22, 2023 - KB5029351 (OS Build 22621.2215)](https://support.microsoft.com/topic/august-22-2023-kb5029351-os-build-22621-2215-preview-9af25662-083a-43f5-b3a7-975fe25cc692)         |
+|Windows 11, version 22H2     |[August 22, 2023—KB5029351 (OS Build 22621.2215)](https://support.microsoft.com/topic/august-22-2023-kb5029351-os-build-22621-2215-preview-9af25662-083a-43f5-b3a7-975fe25cc692)         |
 |Windows 11, version 21H2     |[August 22, 2023—KB5029332 (OS Build 22000.2360)](https://support.microsoft.com/topic/august-22-2023-kb5029332-os-build-22000-2360-preview-8f8aec64-77b4-4225-9a0f-f0153204ae28)         |
 |Windows Server 2022     |[September 12, 2023—KB5030216 (OS Build 20348.1970)](https://support.microsoft.com/topic/september-12-2023-kb5030216-os-build-20348-1970-34d4aff3-fd05-4270-b288-4ab6379c7f81)         |
 |Windows 10, version 22H2     |[August 22, 2023—KB5029331 (OS Build 19045.3393)](https://support.microsoft.com/topic/august-22-2023-kb5029331-os-build-19045-3393-preview-9f6c1dbd-0ee6-469b-af24-f9d0bf35ca18)         |
