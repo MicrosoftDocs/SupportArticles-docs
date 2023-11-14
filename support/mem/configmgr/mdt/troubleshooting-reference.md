@@ -953,9 +953,9 @@ Flow charts are provided for the following phases of ZTI deployment with Configu
 
 Microsoft provides Premier and Professional level support for Microsoft Deployment Toolkit.  
 
-- Professional level support: [https://support.microsoft.com/](https://support.microsoft.com/)  
+- [Professional level support](https://support.microsoft.com/)  
 
-- Premier level support: [https://premier.microsoft.com/](https://premier.microsoft.com/)  
+- [Premier level support](https://www.microsoft.com/unifiedsupport/premier)  
 
 > [!NOTE]
 > When contacting support, be clear that the issue is with MDT and the specific version.
