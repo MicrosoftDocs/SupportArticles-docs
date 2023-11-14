@@ -28,9 +28,9 @@ To resolve this issue, follow these steps:
 1. Determine the affected user profile, and then check the [setupact.log](/windows/deployment/upgrade/log-files) file. For example:
 
 	```output
-	<DateTime>, Info MIG Processing profile: C:\Users\xyz123
-	<DateTime>, Info MIG Detected profile with linked profile root: C:\Users\xyz123 => \??\Volume{<Volume ID>}\
-	<DateTime>, Info MIG Adding extra mapping: C:\Users\xyz123 => \??\Volume{<Volume ID>}\
+	<DateTime>, Info MIG Processing profile: C:\Users\<UserProfileName>
+	<DateTime>, Info MIG Detected profile with linked profile root: C:\Users\<UserProfileName> => \??\Volume{<Volume ID>}\
+	<DateTime>, Info MIG Adding extra mapping: C:\Users\<UserProfileName> => \??\Volume{<Volume ID>}\
 	<DateTime>, Info MIG Offline platform: adding mappings:
 	<DateTime>, Info MIG AdjustPrivilege: Privilege SeTakeOwnershipPrivilege will be Disabled
 	<DateTime>, Info MIG Privilege has been disabled
