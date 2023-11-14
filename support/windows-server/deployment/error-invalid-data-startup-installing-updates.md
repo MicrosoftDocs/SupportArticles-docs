@@ -48,7 +48,6 @@ To resolve this issue, follow these steps:
 	
 	```output 
 	Successfully rebuilt performance counter setting from system backup store 
-
 	```
 
 4.	Install the update again.
