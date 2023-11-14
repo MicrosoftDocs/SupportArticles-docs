@@ -33,7 +33,7 @@ The value of the `RegistrySizeLimit` registry key specifies the maximum size of 
  
 ## Delete the RegistrySizeLimit setting 
  
-Open the Registry Editor as an administrator, and go to `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control. Then, delete the `RegistrySizeLimit` registry key or set it to **0**, and restart the system.
+Open the Registry Editor as an administrator, and go to `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control`. Then, delete the `RegistrySizeLimit` registry key or set it to **0**, and restart the system.
 
 > [!NOTE]
 > This allows the operating system to automatically set the registry size as needed. We recommend deleting the registry key unless it's specifically required.
