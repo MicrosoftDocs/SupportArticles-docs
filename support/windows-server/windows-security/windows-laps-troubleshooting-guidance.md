@@ -438,7 +438,7 @@ This issue can also occur if you move the machine to a different organizational 
 1. If you haven't run the Windows LAPS PowerShell cmdlet to assign the Self Permission to the computer account, run the following cmdlet:
 
     ```PowerShell
-    Set-LapsADComputerSelfPermissions -identity <OU Name>
+    Set-LapsADComputerSelfPermission -identity <OU Name>
     ```
 
     For example:
