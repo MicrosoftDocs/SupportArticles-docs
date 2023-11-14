@@ -33,7 +33,7 @@ To work around this issue, configure the **Specify startup policy processing wai
 To fix this issue, install the following updates accordingly.
 
 > [!NOTE]
-> The issue is also fixed in later updates. You can also install later updates after the following updates to fix ths issue.
+> The issue is also fixed in later updates. You can also install later updates after the following updates to fix the issue.
 
 |Products  |Updates  |
 |---------|---------|
