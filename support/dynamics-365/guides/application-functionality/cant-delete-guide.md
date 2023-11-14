@@ -4,7 +4,7 @@ description: Provides a resolution for an issue where you can't delete a guide b
 ms.author: davepinch
 author: davepinch
 ms.reviewer: v-wendysmith, mhart
-ms.date: 11/09/2023
+ms.date: 11/14/2023
 ms.custom: bap-template
 ---
 # Can't delete a guide in the Guides model-driven app

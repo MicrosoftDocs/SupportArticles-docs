@@ -3,7 +3,7 @@ title: Fail to convert a 3D model to an object anchor
 description: Provides a resolution for an issue where you fail to convert a 3D model to an object anchor in Microsoft Dynamics 365 Guides.
 ms.author: alwinv
 author: alwinv
-ms.date: 11/13/2023
+ms.date: 11/14/2023
 ms.reviewer: v-wendysmith, mhart
 ms.custom: bap-template
 ---
@@ -21,7 +21,7 @@ You might find one or more of the following causes:
 
 - The 3D model uses an unsupported file format.
 - The physical dimensions of the 3D model are larger than 10 meters or smaller than 1 meter.
-- The 3D model file is larger than the maximum supported file size (150 MB).
+- The 3D model file is larger than the maximum supported file size (128 MB).
 
 ## Resolution
 
