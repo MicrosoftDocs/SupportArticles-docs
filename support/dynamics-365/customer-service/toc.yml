@@ -143,8 +143,6 @@
               href: omnichannel-for-customer-service/instance-unavailable-provision-omnichannel.md
             - name: Omnichannel provisioning fails with an error
               href: omnichannel-for-customer-service/omnichannel-provision-fail-errors.md
-            - name: Omnichannel provisioning fails due to expired license
-              href: omnichannel-for-customer-service/provision-fails-expired-license.md
         - name: Omnichannel dashboards
           items:
             - name: Agent dashboard shows authentication error after provisioning
