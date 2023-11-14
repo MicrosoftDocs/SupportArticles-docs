@@ -7,6 +7,8 @@
           href: application-functionality/cant-make-video-call.md
         - name: Can't find a guide on a shared HoloLens device
           href: application-functionality/device-license-cant-find-guide.md
+        - name: Can't delete a guide
+          href: application-functionality/cant-delete-guide.md
         - name: Fail to convert a 3D model to an object anchor
           href: application-functionality/anchors-3d-model-conversion-fails.md
         - name: Fail to detect an object anchor in the HoloLens
