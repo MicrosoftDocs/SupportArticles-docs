@@ -24,9 +24,9 @@ UI flows failed to validate your Microsoft Entra credentials on the machine.
 
 You need to disable Network Level Authentication (NLA) on the machine.
 
-### Disable NLA using "System and Security"
+### Disable NLA using the "System and Security" setting
 
-1. Go to **Control Panel**, select **System and Security**.
+1. Go to **Control Panel**, and then select **System and Security**.
 
     :::image type="content" source="media/ui-flows-run-failed-with-aadlogonfailure-error/system-and-security-in-control-panel.png" alt-text="Screenshot to select the System and Security option in the Control Panel.":::
 
@@ -41,16 +41,16 @@ You need to disable Network Level Authentication (NLA) on the machine.
 ### Disable NLA using Group Policy Editor
 
 > [!NOTE]
-> Disabling NLA with Group Policy Editor on the machine might resolve the issue. However, when the machine synchronizes Group Policy Object with the domain, it will override the local GPO settings.
+> Disabling NLA with Group Policy Editor on the machine might resolve the issue. However, when the machine synchronizes a Group Policy Object (GPO) with the domain, it overrides the local GPO settings.
 
-1. Open the **Run** dialog box (<kbd>windows</kbd> + <kbd>R</kbd>) and type *gpedit.msc*
+1. Open the **Run** dialog box (<kbd>Windows</kbd> + <kbd>R</kbd>), type *gpedit.msc*, and select **OK**.
 
     :::image type="content" source="media/ui-flows-run-failed-with-aadlogonfailure-error/run-gpedit.png" alt-text="Screenshot that shows how to open Group Policy Editor by running gpedit.msc.":::
 
 2. Navigate to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Remote Desktop Services** > **Remote Desktop Session Host** > **Security**.
 
-3. On the right panel, find and double-click the **Require user authentication for remote connections by using Network Level Authentication**
+3. On the right panel, find and double-click **Require user authentication for remote connections by using Network Level Authentication**
 
 4. Select **Disabled** > **Apply** > **OK**.
 
-    :::image type="content" source="media/ui-flows-run-failed-with-aadlogonfailure-error/disable-gpo-nla.png" alt-text="Screenshot that shows how to disable the Require user authentication for remote connections by using Network Level Authentication.":::
+    :::image type="content" source="media/ui-flows-run-failed-with-aadlogonfailure-error/disable-gpo-nla.png" alt-text="Screenshot that shows how to disable Require user authentication for remote connections by using Network Level Authentication.":::
