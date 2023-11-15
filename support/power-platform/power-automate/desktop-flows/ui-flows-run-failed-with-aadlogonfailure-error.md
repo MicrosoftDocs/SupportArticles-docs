@@ -40,7 +40,7 @@ You need to disable Network Level Authentication (NLA) on the machine.
 
 
 ### Disable NLA using Group Policy Editor
-Disabling NLA with Group Policy Editor on the machine may resolve the issue, but when the machine synchronizes Group Policy Object with domain, it overrides GPO on the machine.
+To understand whether NLA is required by group policy on your computer, you can use the local group policy editor.
 
 1. Open run dialog (windows + R) and type "gpedit.msc".
 
@@ -53,3 +53,7 @@ Disabling NLA with Group Policy Editor on the machine may resolve the issue, but
 4. Click on "Disabled" and "Apply" and "OK".
 
     :::image type="content" source="media/ui-flows-run-failed-with-aadlogonfailure-error/disable-gpo-nla.png" alt-text="Disable 'Require user authentication for remote connections by using Network Level Authentication'":::
+
+> [!NOTE]
+>
+> If NLA is required, please work with your system administrator to disable this policy on the required machines.
