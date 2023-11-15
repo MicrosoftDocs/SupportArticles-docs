@@ -5,11 +5,14 @@ author: rpapostolis # GitHub alias
 ms.author: appapaio # Microsoft alias
 ms.reviewer: befrey, lulubran
 ms.subservice: power-automate-desktop-flows
-ms.date: 11/09/2023
+ms.date: 11/15/2023
 ---
 # Troubleshoot desktop flow run queue errors
 
 This article provides background and potential solutions to queue-based errors encountered during desktop flow runs.
+
+_Applies to:_ &nbsp; Power Automate  
+_Original KB number:_ &nbsp; 5004537
 
 ## Symptoms
 
