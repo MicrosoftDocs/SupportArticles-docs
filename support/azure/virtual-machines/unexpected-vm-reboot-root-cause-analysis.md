@@ -5,13 +5,13 @@ services: virtual-machines
 ms.service: virtual-machines
 ms.subservice: vm-troubleshooting-tools
 ms.workload: infrastructure-services
-ms.date: 11/13/2023
+ms.date: 11/15/2023
 ms.reviewer: tagangwa, v-weizhu
 ---
 
 # How to check Root Cause Analysis for unexpected Azure virtual machine reboots
 
-For unexpected Azure virtual machine (VM) reboots, Azure provides straightforward methods to access detailed Root Cause Analysis (RCA) information through the Azure portal. This article walks you through the steps to check RCA information in the Azure portal, ensuring that you can quickly identify and resolve the unexpected VM reboot issue.
+Azure provides methods to access detailed Root Cause Analysis (RCA) of unexpected reboots of Azure virtual machines (VMs) through the Azure portal. This article walks you through the steps to check RCA information in the Azure portal, ensuring that you can quickly identify and resolve the unexpected VM reboot issue.
 
 ## Method 1: Check resource health
 
@@ -38,6 +38,6 @@ For unexpected Azure virtual machine (VM) reboots, Azure provides straightforwar
     :::image type="content" source="media/unexpected-vm-reboot-root-cause-analysis/my-resource-has-been-stopped-unexpectedly.png" alt-text="Screenshot that shows diagnostics results."::: 
 
    > [!Note]
-   > If there is more information about the root cause of a VM unavailability, it may be posted on the **Resource Health** tab within 72 hours after the VM unavailability. Currently, this information is only available for Azure virtual machines.
+   > If there is more information about the root cause of a VM unavailability, the **Resource Health** tab may post additional details up to 72 hours after the VM was impacted. This type of RCA is only available for Azure VMs.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
