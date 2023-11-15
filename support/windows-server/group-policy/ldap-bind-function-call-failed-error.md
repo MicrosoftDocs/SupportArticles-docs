@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 5032097
 When you use the [gpupdate](/windows-server/administration/windows-commands/gpupdate) command to update Group Policy settings, you receive the following error:
 
 ```output
-C:Windows system32>gpupdate
+C:\Windows\system32\gpupdate
 Updating policy...
 Computer policy could not be updated successfully. The following errors were encountered:
 The processing of Group Policy failed because of lack of network connectivity to a domain controller. This may be a transient condition. A success message would be generated once the machine gets connected to the domain controller and Group Policy has successfully processed. If you do not see a success message for several hours, then contact your administrator.
