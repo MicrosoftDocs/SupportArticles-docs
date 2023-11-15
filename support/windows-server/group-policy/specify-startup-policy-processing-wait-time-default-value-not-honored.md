@@ -13,7 +13,7 @@ ms.reviewer: kaushika, teterenc, dennhu, v-lianna
 ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot, ikb2lmc
 ms.technology: windows-server-group-policy
 ---
-# "Specify startup policy processing wait time" default value isn't honored and Group Policy fails to apply
+# Group Policy fails to apply if default value of "Specify startup policy processing wait time" isn't honored
 
 This article helps fix an issue in which Group Policy fails to apply because the [Specify startup policy processing wait time](https://gpsearch.azurewebsites.net/Default.aspx?PolicyID=319) group policy value isn't honored.
 
@@ -30,10 +30,7 @@ To work around this issue, configure the **Specify startup policy processing wai
 
 ## Install Windows updates
 
-To fix this issue, install the following updates accordingly.
-
-> [!NOTE]
-> The issue is also fixed in later updates. You can also install later updates after the following updates to fix the issue.
+To fix this issue, install Windows Updates released on or after the following:
 
 |Products  |Updates  |
 |---------|---------|
