@@ -18,7 +18,7 @@ Your unattended desktop flows run failed with the error code **AadLogonFailure**
 
 ## Cause
 
-UI flows failed to validate your Microsoft Entra credentials on the machine.
+Desktop flows failed to validate your Microsoft Entra credentials on the machine.
 
 ## Resolution
 
