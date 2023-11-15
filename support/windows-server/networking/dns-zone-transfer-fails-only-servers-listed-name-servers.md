@@ -38,9 +38,9 @@ You can use the following steps to set the zone transfers to name servers only o
 1. Close the Microsoft Management Console (MMC).
 2. From an elevated command prompt, run the following command:
 
-  ```console
-  dnscmd <servername> /zoneresetsecondaries <zonename> /securens
-  ```
+    ```console
+    dnscmd <servername> /zoneresetsecondaries <zonename> /securens
+    ```
 
 3. Wait for 60 seconds, then open the MMC.
 4. Select **Refresh** to refresh the settings.
