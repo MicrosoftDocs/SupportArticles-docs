@@ -150,7 +150,10 @@ For a permanent fix, upgrade your client OS to a Linux distro version with accou
 
 ## 	Unable To Mount Samba Share when FIPS is enabled 
 
-Unable to mount an Azure File Share using CIFS when `Federal Information Processing Standard (FIPS)` is enable on the VM. Linux dmesg logs on the client show repeated errors like:
+Unable to mount an Azure File Share using CIFS when `Federal Information Processing Standard (FIPS)` enabled in the the VM. Linux dmesg logs on the client show repeated errors like:
+
+>[!IMPORTANT]
+>FIPS is a set of standards that the U.S. government uses to ensure the security and integrity of computer systems. When a system is in FIPS mode, it adheres to specific cryptographic requirements outlined by these standards.
 
 ```output
 kernel: CIFS: VFS: Could not allocate crypto hmac(md5)
@@ -158,6 +161,10 @@ kernel: CIFS: VFS: Error -2 during NTLMSSP authentication
 kernel: CIFS: VFS: \\contoso.file.core.windows.net Send error in SessSetup = -2
 kernel: CIFS: VFS: cifs_mount failed w/return code = -2
 ```
+In FIPS mode, certain cryptographic algorithms, including MD5 (Message Digest Algorithm 5), may be restricted or disallowed because they do not meet the security standards outlined by FIPS.
+
+MD5 is a widely used hash function that produces a 128-bit hash value. However, MD5 is considered insecure for cryptographic purposes due to vulnerabilities that can be exploited.
+
 ### Cause
 
 The mount fails because FIPS is enabled on the cifs-client system. NTLMSSP authentication requires MD5 hashing algorithm, which is disabled when the system is made FIPS compliant. In summary, the use of MD4/MD5 isn't approved by FIPS.
@@ -171,6 +178,10 @@ sudo cat /proc/sys/crypto/fips_enabled
 sudo cat /proc/cmdline
 ```
 
+>[!NOTE]
+>In case FIPs has been enabled unintentionally, go to [Solution, option 2](#option2)
+
+
 ###  Solution
 
 **Option 1:  Enable Kerberos authentication for Samba share.**
@@ -179,7 +190,7 @@ sudo cat /proc/cmdline
 
 For more information, see [Enable Active Directory authentication over SMB for Linux clients accessing Azure Files](/azure/storage/files/storage-files-identity-auth-linux-kerberos-enable)
 
-**Option 2:  Disable FIPS to mount the Samba share.**
+**<a name="option2"> </a> Option 2:  Disable FIPS to mount the Samba share.**
 
 1. Change the sysctl value of `crypto.fips_enabled` to 0 in `/etc/sysctl.conf`
 
