@@ -2,7 +2,7 @@
 title: Desktop flows run failed with AadLogonFailure
 description: Provides a resolution for an issue where UI flows run failed with the AadLogonFailure error code. 
 ms.reviewer: quseleba, fredg
-ms.date: 11/14/2023
+ms.date: 11/15/2023
 ms.subservice: power-automate-desktop-flows
 ---
 # Desktop flows run failed with the AadLogonFailure error code
@@ -49,7 +49,7 @@ You need to disable Network Level Authentication (NLA) on the machine.
 
 2. Navigate to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Remote Desktop Services** > **Remote Desktop Session Host** > **Security**.
 
-3. On the right panel, find and double-click **Require user authentication for remote connections by using Network Level Authentication**
+3. On the right panel, find and double-click **Require user authentication for remote connections by using Network Level Authentication**.
 
 4. Select **Disabled** > **Apply** > **OK**.
 
