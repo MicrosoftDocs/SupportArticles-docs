@@ -15,9 +15,9 @@ ms.technology: windows-client-shell-experience
 ---
 # Removing, uninstalling, or reinstalling Microsoft Store app isn't supported
 
-In Windows 10, we don't recommend removing or uninstalling the Microsoft Store app.
+In Windows, we don't recommend removing or uninstalling the Microsoft Store app.
 
-_Applies to:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; All supported versions of Windows Client
 _Original KB number:_ &nbsp; 4339074
 
 ## More information
