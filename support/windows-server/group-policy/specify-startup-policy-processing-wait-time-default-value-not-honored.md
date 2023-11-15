@@ -30,7 +30,7 @@ To work around this issue, configure the **Specify startup policy processing wai
 
 ## Install Windows updates
 
-To fix this issue, install Windows Updates released on or after the following:
+To fix this issue, install Windows updates released on or after the following:
 
 |Products  |Updates  |
 |---------|---------|
