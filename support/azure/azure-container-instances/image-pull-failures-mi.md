@@ -3,7 +3,6 @@ title: Image pull fails with managed identity authentication
 description: Troubleshoot why image pull fails with managed identity authentication
 ms.date: 10/17/2023
 ms.service: container-instances
-ms.subservice: common-issues
 keywords:
 #Customer intent:
 ---
@@ -79,6 +78,7 @@ Deployment failed. Correlation ID: e78e754f-1d49-4206-8386-7cafb1733ddd. {
 } 
 ```
 Check ACR has [Trusted Services](https://learn.microsoft.com/azure/container-registry/allow-access-trusted-services) enabled. 
+
 ## Next Steps 
 If the previous checks did not resolve the incident, please submit a [support request](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportrequest) 
 Azure Container Registry ResourceURI 
