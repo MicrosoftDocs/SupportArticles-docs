@@ -23,7 +23,7 @@ ms.reviewer: corbinm, kristinw
 
 ## Symptoms
 
-Your presence status is incorrect when you when you resume activity on a locked macOS device that's running one of the following Microsoft Teams clients:
+Your presence status is incorrect when you resume activity on a locked macOS device that's running one of the following Microsoft Teams clients:
 
 - New Teams
 - Classic Teams
@@ -41,7 +41,7 @@ The issue occurs because the presence subscription expires and isn't re-created 
 
 To work around this issue, reset your status. If the issue persists, restart the Teams client on the macOS device.
 
-**Note:** If you’re also running Teams on other devices, sign out of the Teams app on those devices.
+**Note:** If you're also running Teams on other devices, sign out of the Teams app on those devices.
 
 ## Status
 
