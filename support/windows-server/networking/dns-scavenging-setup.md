@@ -28,26 +28,24 @@ In Windows Server, scavenging should be set in all the following three places:
 2. On a zone to be scavenged.
 3. On one or more servers performing scavenging.
 
-## Scavenging settings on a resource record
+## Scavenging settings on the resource record
 
 In the DNS Microsoft Management Console (MMC), select **View** > **Advanced** and check the properties of a resource record to see the scavenging settings. For example:
 
 :::image type="content" source="media/dns-scavenging-setup/scavenging-settings-resource-record.png" alt-text="Screenshot of checking the properties of a resource record to see the scavenging settings.":::
 
-Scavenging on a resource record can be set in three methods.
+Scavenging on a resource record can be set in three methods:
 
-The first is checking the **Delete this record when it becomes stale** checkbox and selecting **Apply**. When you select **Apply**, the current time is rounded down to the nearest hour and applied as the timestamp on the record. The timestamp of static records is **0**, indicating they aren't scavenged.
-
-The second way is when a record is created by a client machine registering using dynamic DNS (DDNS). Windows clients dynamically update DNS every 24 hours. All DDNS records are set to scavenge. When a record is first created by a client that has no existing record, it's considered an "Update," and a timestamp is set. If the client has an existing host record and changes the IP of the host record, this is also considered an "Update," and a timestamp is set. If the client has an existing host record with the same IP address, this is considered a "Refresh," and whether the timestamp changes depends on zone settings.
-
-The third way to set scavenging on records is using the [dnscmd /ageallrecords](/windows-server/administration/windows-commands/dnscmd#dnscmd-ageallrecords-command) command. If you run this command against a zone, it will set scavenging and a timestamp for all records in the zone, including static records that you don't want to be scavenged.
+- The first is checking the **Delete this record when it becomes stale** checkbox and selecting **Apply**. When you select **Apply**, the current time is rounded down to the nearest hour and applied as the timestamp on the record. The timestamp of static records is **0**, indicating they aren't scavenged.
+- The second way is when a record is created by a client machine registering using dynamic DNS (DDNS). Windows clients dynamically update DNS every 24 hours. All DDNS records are set to scavenge. When a record is first created by a client that has no existing record, it's considered an "Update," and a timestamp is set. If the client has an existing host record and changes the IP of the host record, this is also considered an "Update," and a timestamp is set. If the client has an existing host record with the same IP address, this is considered a "Refresh," and whether the timestamp changes depends on zone settings.
+- The third way to set scavenging on records is using the [dnscmd /ageallrecords](/windows-server/administration/windows-commands/dnscmd#dnscmd-ageallrecords-command) command. If you run this command against a zone, it will set scavenging and a timestamp for all records in the zone, including static records that you don't want to be scavenged.
 
 Once a timestamp is set on a record, it will be replicated to all servers that host the zone.
 
 > [!NOTE]
 > If the zone that hosts the record doesn't enable scavenging, it won't scavenge, so the timestamp is irrelevant. The timestamp may be updated on the server where the client dynamically registers, but it won't be replicated to other servers in the zone.
 
-## Scavenging settings on a zone
+## Scavenging settings on the zone
 
 Before a server checks a record to see if it will be scavenged, the zone should have scavenging enabled. To access the scavenging settings of a zone, right-click the zone, select **Properties**, and then select **Aging** on the **General** tab.
 
@@ -100,7 +98,7 @@ Check the following before you delete the stale records:
 - Is scavenging enabled on the zone?
 - Is dynamic update enabled on the zone?
 - Is the scavenging server listed as one of the scavenging servers for the zone?
-- Is the “zone can be scavenged after” timestamp on the zone exceeded?  
+- Is the "zone can be scavenged after" timestamp on the zone exceeded?  
     This allows the clients and AD replication to be prepared before you start.
 - Has it been longer than the refresh interval since this zone was last replicated in Active Directory?  
     If scavenging is enabled on a server that has replication issues, this can help prevent unnecessary tombstoning of records that may still be valid on other servers.
