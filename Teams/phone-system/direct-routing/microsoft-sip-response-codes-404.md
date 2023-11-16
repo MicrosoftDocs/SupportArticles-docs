@@ -1,7 +1,7 @@
 ---
 title: SIP 404 and Microsoft response codes
 description: Lists combinations of Microsoft response codes and the SIP 404 error, and provides actions to resolve the errors.
-ms.date: 03/27/2023
+ms.date: 10/30/2023
 author: helenclu
 ms.author: luche
 manager: dcscontentpm

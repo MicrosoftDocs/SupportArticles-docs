@@ -1,7 +1,7 @@
 ---
 title: Signed out of Teams on Android devices 
 description: Provides workarounds for when Android devices are signed out of Teams automatically.
-ms.date: 05/04/2022
+ms.date: 10/30/2023
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
