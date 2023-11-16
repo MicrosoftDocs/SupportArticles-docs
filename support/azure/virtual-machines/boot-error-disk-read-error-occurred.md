@@ -96,7 +96,7 @@ Generation 1 VMs should first verify that the OS partition that holds the BCD st
 
 **Recommended**: Before you rebuild the VM, enable the Serial Console and memory dump collection by following these steps:
 
-[!INCLUDE [Enable Serial Console and Memory Dump Collection](../../includes/enable-serial-console-memory-dump-collection.md)]
+[!INCLUDE [Enable Serial Console and Memory Dump Collection](../../includes/azure/enable-serial-console-memory-dump-collection.md)]
 
 ### Rebuild the VM
 

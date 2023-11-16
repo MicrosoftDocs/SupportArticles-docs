@@ -36,7 +36,7 @@ az vm redeploy --resource-group myResourceGroup --name myVM
 
 ## Use the Azure classic CLI
 
-[!INCLUDE [classic-vm-deprecation](../../includes/classic-vm-deprecation.md)]
+[!INCLUDE [classic-vm-deprecation](../../includes/azure/classic-vm-deprecation.md)]
 
 Install the [latest Azure classic CLI](/cli/azure/install-classic-cli) and log in to your Azure account. Make sure that you are in Resource Manager mode (`azure config mode arm`).
 
@@ -46,7 +46,7 @@ The following example redeploys the VM named *myVM* in the resource group named 
 azure vm redeploy --resource-group myResourceGroup --vm-name myVM 
 ```
 
-[!INCLUDE [virtual-machines-common-redeploy-to-new-node](../../includes/virtual-machines-common-redeploy-to-new-node.md)]
+[!INCLUDE [virtual-machines-common-redeploy-to-new-node](../../includes/azure/virtual-machines-common-redeploy-to-new-node.md)]
 
 ## Next steps
 

@@ -61,7 +61,7 @@ If you can't find the dump file, move to the next part to enable a dump log and 
 
 To enable a dump log and a serial console, follow these steps:
 
-[!INCLUDE [Enable Serial Console and Memory Dump Collection](../../includes/enable-serial-console-memory-dump-collection.md)]
+[!INCLUDE [Enable Serial Console and Memory Dump Collection](../../includes/azure/enable-serial-console-memory-dump-collection.md)]
 
 ### Collect the dump file
 

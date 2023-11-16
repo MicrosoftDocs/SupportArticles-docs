@@ -58,7 +58,7 @@ Upload your script to a storage account, and generate its own container. Then, r
 
 ### For classic deployment model VMs
 
-[!INCLUDE [classic-vm-deprecation](../../includes/classic-vm-deprecation.md)]
+[!INCLUDE [classic-vm-deprecation](../../includes/azure/classic-vm-deprecation.md)]
 
 ```powershell
 #Set up the basic variables.

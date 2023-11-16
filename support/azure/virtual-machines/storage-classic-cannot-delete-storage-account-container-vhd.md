@@ -26,7 +26,7 @@ A "Disk" resource is used to mount a *.vhd page blob file to a virtual machine, 
 
 ## Steps while deleting a classic virtual machine
 
-[!INCLUDE [classic-vm-deprecation](../../includes/classic-vm-deprecation.md)]
+[!INCLUDE [classic-vm-deprecation](../../includes/azure/classic-vm-deprecation.md)]
 
 1. Delete the classic virtual machine.
 
