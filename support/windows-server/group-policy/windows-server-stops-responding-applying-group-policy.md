@@ -23,6 +23,8 @@ Sysmon driver (*SysmonDrv.sys*) intercepts the transition from user mode to kern
 
 The critical section owning thread is blocked in SysmonDrv's kernel to the user mode communication to process *Sysmon64.exe*, which is observed to be stuck waiting on the LSASS thread. This results in a deadlock.
 
+You can resolve this issue by upgrading [Sysmon](/sysinternals/downloads/sysmon) to the latest version, or work around this issue by disabling `FileBlockShredding`.
+
 ## Disable FileBlockShredding
 
 To work around this issue, follow these steps:
