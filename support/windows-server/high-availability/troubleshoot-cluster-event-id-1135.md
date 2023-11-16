@@ -180,7 +180,7 @@ System service name: **ClusSvc**
 > Additionally, for successful validation on Windows Failover Clusters on Windows Server 2008 and above, allow inbound and outbound traffic for ICMP4, ICMP6.
 
 - For more information, see [Creating a Windows Server 2012 Failover Cluster Fails with Error 0xc000005e](creating-failover-cluster-fails-error-0xc0000055.md).
-- For more information about how to customize these ports, see the "References" section in [Service overview and network port requirements for Windows](/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements).
+- For more information about how to customize these ports, see the "References" section in [Service overview and network port requirements for Windows](../networking/service-overview-and-network-port-requirements.md).
 
 This is the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
