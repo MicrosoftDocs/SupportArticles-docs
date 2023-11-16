@@ -4,4 +4,6 @@
     - name: Data file uploads
       items:
         - name: Resolve manager hierarchy error
-          href: fix-manager-hierarchy-circular-reporting.md
+          href: ./data-file-upload/fix-manager-hierarchy-circular-reporting.md
+        - name: Understand file upload errors and warnings
+          href: ./data-file-upload/file-upload-errors-warnings.md
