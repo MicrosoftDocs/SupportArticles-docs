@@ -70,7 +70,7 @@ To resolve the issue, either wait for the flows that are already running to comp
 
 ### Other error codes
 
-For information on other error codes that might occur when running desktop flows and steps to mitigate, see [Error code occurs when running an attended or unattended desktop flow](/troubleshoot/power-platform/power-automate/desktop-flows/troubleshoot-errors-running-attended-or-unattended-desktop-flows).
+For information on other error codes that might occur when running desktop flows and steps to mitigate, see [Error code occurs when running an attended or unattended desktop flow](troubleshoot-errors-running-attended-or-unattended-desktop-flows.md).
 
 ## More information
 
