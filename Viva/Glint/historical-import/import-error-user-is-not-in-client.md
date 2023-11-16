@@ -13,7 +13,7 @@ ms.custom:
 localization_priority: Normal
 ---
 
-# Error "User is not in client" during historical imports
+# "User is not in client" error during historical imports
 
 ## Symptoms
 
@@ -30,6 +30,6 @@ This issue occurs because the user's email address in the Respondent User File a
 
 ## Resolution
 
-To fix the issue, confirm that the user's email address is mismatched in the two locations. Then, update the email address in the user's profile to the email address in the Respondent User File.
+To fix the issue, verify that the user's email address differs between the two locations. Then, revise the email address in the user's profile to match the email address in the Respondent User File.
 
-After you save the updated user profile, import the historical data again.
+After you save the revised user profile, import the historical data again.
