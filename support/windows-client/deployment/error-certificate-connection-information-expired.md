@@ -25,7 +25,7 @@ When you try to connect to an AVD VM by using the Remote Desktop client for Wind
   Timestamp (UTC): \<DateTime\>  
   Activity ID: 00000000-0000-0000-0000-000000000000
 
-This issue occurs when multiple users try to connect to the VM at the same time.
+This issue occurs when multiple users try to connect to the AVD VMs.
 
 > [!NOTE]
 > When the issue occurs, the trace log is saved in the *%temp%\\DiagOutputDir\\RdClientAutoTrace* folder.
