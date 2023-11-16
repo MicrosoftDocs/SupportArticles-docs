@@ -15,7 +15,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # Your actual presence status isn't reflected in Teams
 

@@ -35,8 +35,6 @@ landingContent:
             url: ./teams-conferencing/no-dial-pad.md
           - text: Give Control doesn't work
             url: ./teams-conferencing/give-control-doesn’t-work-sharescreen.md
-          - text: No audio while sharing content during a live event
-            url: ./teams-conferencing/no-audio-when-sharing-content-in-meeting.md
  # Card
   - title: IM and presence
     linkLists:

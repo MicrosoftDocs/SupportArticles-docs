@@ -15,7 +15,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 02/16/2023
+ms.date: 10/30/2023
 ---
 # "Couldn't complete the call" error when you call from a contact card
 

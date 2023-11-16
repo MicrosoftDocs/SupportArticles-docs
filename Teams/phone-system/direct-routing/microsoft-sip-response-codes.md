@@ -1,7 +1,7 @@
 ---
 title: Microsoft and SIP response codes
 description: A combination of Microsoft and SIP response codes can help identify the cause of call failures and provide detailed descriptions of errors and actions that you can take.
-ms.date: 03/27/2023
+ms.date: 10/30/2023
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
