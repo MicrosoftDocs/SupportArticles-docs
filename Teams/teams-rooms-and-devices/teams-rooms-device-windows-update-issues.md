@@ -3,7 +3,7 @@ title: Fix Windows Update issues on Teams Rooms Pro devices
 description: Fix common Windows Update issues on a Microsoft Teams Rooms Pro device.
 ms.reviewer: joolive
 ms.topic: troubleshooting
-ms.date: 09/26/2022
+ms.date: 10/30/2023
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -111,3 +111,4 @@ Compare the version with the latest version in [Microsoft Teams Rooms Release No
 - [Manage connection endpoints for Windows 10 Enterprise](/windows/privacy/manage-windows-21h2-endpoints)
 - [Windows Update error codes by component](/windows/deployment/update/windows-update-error-reference)
 - [WUA Networking Error Codes](/previous-versions/windows/desktop/aa387293(v=vs.85))
+

@@ -3,7 +3,7 @@ title: Teams Rooms doesn't start automatically after a Windows update
 description: After Windows updates are installed on a Teams Rooms device and the system restarts, the Microsoft Teams Rooms app doesn't start automatically.
 ms.reviewer: gosepulv
 ms.topic: troubleshooting
-ms.date: 04/18/2023
+ms.date: 10/30/2023
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -52,3 +52,4 @@ To check whether Windows updates are being applied to Teams Rooms devices, use t
 - [About log files in Configuration Manager](/mem/configmgr/core/plan-design/hierarchy/about-log-files)
 - [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics)
 - [Windows Update issues troubleshooting](/troubleshoot/windows-client/deployment/windows-update-issues-troubleshooting)
+

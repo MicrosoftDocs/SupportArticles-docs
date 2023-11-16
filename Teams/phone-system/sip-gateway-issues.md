@@ -1,7 +1,7 @@
 ---
 title: Common issues when using SIP devices with Teams
 description: Troubleshoots common issues that occur when you use compatible SIP devices with Microsoft Teams.
-ms.date: 01/17/2022
+ms.date: 10/30/2023
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -94,3 +94,4 @@ The SIP device state isn't accurately reflected if the device user isn't signed 
 ## More information
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+

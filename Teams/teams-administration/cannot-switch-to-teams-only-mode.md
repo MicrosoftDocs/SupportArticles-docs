@@ -16,7 +16,7 @@ appliesto:
   - Skype for Business Online
 search.appverid: 
   - MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # Error when switching a tenant to Teams Only mode
 
@@ -89,3 +89,4 @@ To fix this error, do the following:
      > Do not run this cmdlet on domains that contain users who are hosted on Skype for Business Online or Teams. If you disable an online SIP domain, all Skype for Business Online accounts that are provisioned in that domain will be deleted. Although Teams doesn't use the SIP functionality in the same manner as Skype for Business Online, it has dependencies that are built on the SIP functionality and on the Skype for Business Online accounts that are provisioned in the SIP domain.
 
 6. Try to enable Teams Only mode for your tenant again.
+

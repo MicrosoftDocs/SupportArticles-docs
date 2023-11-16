@@ -2,7 +2,7 @@
 title: A Teams meeting wants to open Skype for Business
 ms.author: luche
 author: helenclu
-ms.date: 04/09/2020
+ms.date: 10/30/2023
 audience: ITPro
 ms.topic: troubleshooting
 manager: dcscontentpm
@@ -34,3 +34,4 @@ If the meeting was scheduled with Skype for Business, Microsoft Teams will launc
 Microsoft Teams will decide whether Skype for Business is required for a user to join the meeting based on the URL included in the meeting description.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+

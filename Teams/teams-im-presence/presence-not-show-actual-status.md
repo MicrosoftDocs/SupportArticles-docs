@@ -15,7 +15,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # Your actual presence status isn't reflected in Teams
 
@@ -73,3 +73,4 @@ Select the **Run Tests** link. This will populate the diagnostic in the Microsof
 ## More information
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+

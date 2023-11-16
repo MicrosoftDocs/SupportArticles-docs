@@ -3,7 +3,7 @@ title: The Teams Rooms device's displays show a black or blank screen
 description: Resolve the issue that causes one or more of the Teams Rooms device displays to show a black or blank screen, or the system doesn't respond.
 ms.reviewer: joolive
 ms.topic: troubleshooting
-ms.date: 10/19/2022
+ms.date: 10/30/2023
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -113,3 +113,4 @@ Some console manufacturers provide firmware updates through Windows Update. When
 > - Any other recommendations, such as not disconnecting the cable or powering off the device
 
 Some OEM touchscreen consoles include a factory reset button that can be operated through a pinhole. This button lets you restore the device functionality in unexpected circumstances, such as a transient failure that occurs when you install firmware.
+

@@ -4,7 +4,7 @@ description: Provides a resolution to an issue in which user can't open a file t
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 11/26/2020
+ms.date: 10/30/2023
 audience: Admin
 ms.topic: troubleshooting
 localization_priority: Normal
@@ -61,3 +61,4 @@ The diagnostic performs a large range of verifications.
 ### Need More Help?
 
 Get help from the [Microsoft Community](https://answers.microsoft.com/) online community, search for more information on [Microsoft Support](https://support.microsoft.com/) or [Office Help and How To](https://office.microsoft.com/support/), or learn more about [Assisted Support](https://support.microsoft.com/contactus/) options.
+

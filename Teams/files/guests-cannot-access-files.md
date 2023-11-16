@@ -15,7 +15,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 
 # "Attempted to perform an unauthorized operation" error when accessing Files tab in Teams
@@ -63,3 +63,4 @@ Select the **Run Tests** link. This will populate the diagnostic in the Microsof
 > [Run Tests: Teams Files Guest Access](https://aka.ms/TeamsFilesGuestAccessDiag)
 
 The diagnostic runs a large range of verification checks.
+

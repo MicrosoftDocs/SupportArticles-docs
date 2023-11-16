@@ -2,7 +2,7 @@
 title: Teams meeting shows PSTN callers as having the same From number
 ms.author: luche
 author: helenclu
-ms.date: 04/09/2020
+ms.date: 10/30/2023
 audience: ITPro
 ms.topic: troubleshooting
 manager: dcscontentpm
@@ -30,3 +30,4 @@ When multiple Public Switched Telephone Network (PSTN) callers join a meeting in
 Microsoft is researching this problem and will post more information in this article when the information becomes available.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+

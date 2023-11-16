@@ -1,7 +1,7 @@
 ---
 title: SIP 408 and Microsoft response codes
 description: Lists combinations of Microsoft response code and the SIP 408 error, and provides actions to resolve the errors.
-ms.date: 03/27/2023
+ms.date: 10/30/2023
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -52,3 +52,4 @@ This article provides troubleshooting information for various combinations of th
 - SIP response code: **408**
 - Suggested actions:  
   - This code indicates a client error. Check the network connection between the client and the Teams service.
+

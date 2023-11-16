@@ -15,7 +15,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 07/04/2023
+ms.date: 10/30/2023
 ---
 # Can't share files in a large group chat or meeting chat
 
@@ -49,3 +49,4 @@ To work around this issue, follow these steps:
    > 1. Select **Sharing**.
    > 1. Make sure that the [People in your organization links](/microsoft-365/solutions/microsoft-365-limit-sharing?view=o365-worldwide#people-in-your-organization-sharing-links&preserve-view=true) aren't disabled.
    > 1. Under **File and folder links**, select **Only people in your organization**.
+

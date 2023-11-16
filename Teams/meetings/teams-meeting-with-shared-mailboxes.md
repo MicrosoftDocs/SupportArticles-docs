@@ -14,7 +14,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 05/15/2023
+ms.date: 10/30/2023
 ---
 # Teams meeting features for shared mailboxes
 
@@ -34,3 +34,4 @@ For Microsoft Teams meetings that are managed by using a shared mailbox, only a 
 |Create custom meeting policies|To create custom meeting policies, the shared mailbox must be assigned a Teams license.|
 
 For more information about Teams license options, see [Microsoft Teams add-on licenses](/microsoftteams/teams-add-on-licensing/microsoft-teams-add-on-licensing).
+

@@ -15,7 +15,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 05/23/2022
+ms.date: 10/30/2023
 ---
 # Resolve sign-in errors in Teams
 
@@ -73,3 +73,4 @@ If you want to perform the checks and fix the issue manually, follow these steps
     1. Download and install [Teams](https://www.microsoft.com/en-us/microsoft-teams/group-chat-software). If possible, reinstall Teams as an administrator. To do this, right-click the Teams installer file, and select  **Run as administrator**.
 
 If none of these steps help to resolve the Teams sign-in issue, create a support request. For the request, [collect debug logs](/microsoftteams/log-files), and provide the error code that's displayed on the Teams sign-in screen.
+

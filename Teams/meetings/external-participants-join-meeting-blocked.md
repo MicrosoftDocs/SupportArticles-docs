@@ -15,7 +15,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 04/24/2023
+ms.date: 10/30/2023
 ---
 # Errors when external participants try to join a Teams meeting
 
@@ -93,3 +93,4 @@ Here are some example situations.
 ## More information
 
 For more information about anonymous meeting join, see [Manage anonymous participant access to Teams meetings (IT admins)](/microsoftteams/anonymous-users-in-meetings).
+

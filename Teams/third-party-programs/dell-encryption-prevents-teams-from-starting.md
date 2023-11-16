@@ -2,7 +2,7 @@
 title: Teams doesn't start with Dell Encryption
 ms.author: luche
 author: helenclu
-ms.date: 04/09/2020
+ms.date: 10/30/2023
 audience: ITPro
 ms.topic: troubleshooting
 manager: dcscontentpm
@@ -32,3 +32,4 @@ Exclude the Teams folder %LocalAppData%\Microsoft\Teams from the encryption poli
 ## More information
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com).
+

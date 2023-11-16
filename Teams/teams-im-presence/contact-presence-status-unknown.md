@@ -15,7 +15,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # A contact's presence status is unknown in Teams
 
@@ -51,3 +51,4 @@ If none of these steps fixes the issue, open a support ticket that contains the 
 ## More information
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+

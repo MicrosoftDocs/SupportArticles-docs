@@ -3,7 +3,7 @@ title: The Sleep timer status of a Teams Rooms device is Unhealthy
 description: Resolves an issue that causes the Sleep timer signal of a Microsoft Teams Rooms device to appear as Unhealthy.
 ms.reviewer: rebenite
 ms.topic: troubleshooting
-ms.date: 08/23/2023
+ms.date: 10/30/2023
 manager: dcscontentpm
 audience: Admin
 localization_priority: Normal
@@ -70,3 +70,4 @@ powercfg /SETACVALUEINDEX SCHEME_CURRENT 238c9fa8-0aad-41ed-83f4-97be242c8f20 29
    ```
 
 1. [Create a script policy (add the script to script settings), and assign the policy to groups](/mem/intune/apps/intune-management-extension#create-a-script-policy-and-assign-it).
+

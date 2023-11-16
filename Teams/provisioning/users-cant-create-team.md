@@ -2,7 +2,7 @@
 title: Unable to create a team in Teams
 ms.author: luche
 author: helenclu
-ms.date: 04/09/2020
+ms.date: 10/30/2023
 audience: ITPro
 ms.topic: troubleshooting
 manager: dcscontentpm
@@ -32,3 +32,4 @@ Your company may have set a policy restricting who can create Microsoft 365 grou
 Check with your IT admin to understand your company's policy for creating groups and teams. 
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+

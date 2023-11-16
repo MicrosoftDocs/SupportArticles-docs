@@ -15,7 +15,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # Teams performance is affected if it's remembered as a game by Xbox Game Bar
 
@@ -48,3 +48,4 @@ To resolve this issue, use one of the following methods.
 [Xbox Game Bar on Windows 10](https://support.xbox.com/help/games-apps/game-setup-and-play/get-to-know-game-bar-on-windows-10)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+

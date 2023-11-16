@@ -15,7 +15,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # Collect device logs for Android Teams devices
 
@@ -33,3 +33,4 @@ If you experience issues when you try to use Android devices that run Microsoft 
 4. Compress the log files and share them when you create a support request with Microsoft Support. If you already have an open support request, upload the files to the location provided by the support engineer.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+

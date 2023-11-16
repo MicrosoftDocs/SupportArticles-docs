@@ -1,7 +1,7 @@
 ---
 title: SIP 504 and Microsoft response codes
 description: Lists combinations of Microsoft response code and the SIP 504 error, and provides actions to resolve the errors.
-ms.date: 03/27/2023
+ms.date: 10/30/2023
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -115,3 +115,4 @@ This article provides troubleshooting information for various combinations of th
   - Request a certificate that's signed by one of the public root certification authorities that are listed in [public trusted certificate for the SBC](/microsoftteams/direct-routing-plan#public-trusted-certificate-for-the-sbc).
 
   If you have multiple TLS profiles, check that you're using a profile that has the correct certificate when you connect to the Direct Routing interface. If you have multiple TLS profiles on the SBC, make sure that you select a profile that's signed by using a certificate that's trusted by Direct Routing.
+

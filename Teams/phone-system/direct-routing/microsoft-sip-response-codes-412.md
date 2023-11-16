@@ -1,7 +1,7 @@
 ---
 title: SIP 412 and Microsoft response codes
 description: Lists combinations of Microsoft response code and the SIP 412 error, and provides actions to resolve the errors.
-ms.date: 03/27/2023
+ms.date: 10/30/2023
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -29,3 +29,4 @@ This article provides troubleshooting information for various combinations of th
 - SIP response code: **412**
 - Suggested actions:  
   - To fix the number parsing error, correct the malformed callee number in the inbound call. This will enable creating a correct Messaging Resource Identifier (MRI) that's required for further processing of the call.
+

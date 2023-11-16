@@ -22,7 +22,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 11/01/2023
+ms.date: 10/30/2023
 ---
 # Known issues in Teams Rooms and devices
 
@@ -116,3 +116,4 @@ For issues with Teams devices offered by third-party providers, contact their in
 - Yealink: [Yealink Support](https://support.yealink.com/portal/home)
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-contact-disclaimer.md)]
+

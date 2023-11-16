@@ -1,7 +1,7 @@
 ---
 title: SIP 500 and Microsoft response codes
 description: Lists combinations of Microsoft response code and the SIP 500 error, and provides actions to resolve the errors.
-ms.date: 03/27/2023
+ms.date: 10/30/2023
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -43,3 +43,4 @@ This article provides troubleshooting information for various combinations of th
 - SIP response code: **500**
 - Suggested actions:  
   - Review the [emergency call routing policies](/microsoftteams/manage-emergency-call-routing-policies) and fix any misconfiguration.
+

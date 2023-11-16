@@ -2,7 +2,7 @@
 title: Teams meeting organizer cannot start meeting
 ms.author: luche
 author: helenclu
-ms.date: 04/09/2020
+ms.date: 10/30/2023
 audience: ITPro
 ms.topic: troubleshooting
 manager: dcscontentpm
@@ -36,3 +36,4 @@ When you join the meeting, make sure your Outlook client and Teams client are si
 ## More information
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+

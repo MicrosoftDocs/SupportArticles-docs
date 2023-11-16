@@ -16,7 +16,7 @@ appliesto:
   - Outlook
 search.appverid: 
   - MET150
-ms.date: 06/06/2023
+ms.date: 10/30/2023
 ---
 # User presence status issues in Outlook
 
@@ -123,3 +123,4 @@ If these steps don't resolve the issue, an administrator should create a support
 - Outlook currently shows **Status unknown** for federated (external) Teams contacts.
 - In the 32-bit version of Outlook, the presence status icons related to "Out of Office" aren't currently displayed.
 - When a user sets up automatic Out of Office replies in Outlook, the presence status icon in Outlook doesn't match Teams. Others see the presence status of this user as *Away* or *Offline* in Outlook, but as *Out of Office* in Teams.  
+

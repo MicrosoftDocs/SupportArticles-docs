@@ -1,7 +1,7 @@
 ---
 title: SIP 403 and Microsoft response codes
 description: Lists combinations of Microsoft response codes and the SIP 403 error, and provides actions to resolve the errors.
-ms.date: 03/27/2023
+ms.date: 10/30/2023
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -107,3 +107,4 @@ This article provides troubleshooting information for various combinations of th
 - SIP response code: **403**
 - Suggested actions:  
   - Make sure that the dialed number in Teams matches a corresponding number pattern in a voice route for the given user. In some cases, this error occurs because an incorrect number is dialed, or the customer's own internal policy prevents calls to specific countries/regions, or number patterns.
+
