@@ -406,45 +406,71 @@
   - name: VM availability might be inaccurate during restart
     href: inaccurate-vm-availability-during-vm-restart.md
 
-- name: VM agent and extensions
+- name: VM agent
   items:
-  - name: Azure cloud-init support for Linux VMs
-    href: cloud-init-support-linux-vms.md
-  - name: Can't enable Azure Disk Encryption
-    href: extension-version-2.2-not-supported.md
-  - name: Can't process extensions
-    href: linux-agent-cannot-process-extensions.md
-  - name: Extension status isn't reported
-    href: linux-vm-extension-status-not-reported.md
-  - name: Linux VM extensions stop running
-    href: extensions-stop-running.md
   - name: Minimum version support for agents
     href: support-extensions-agent-version.md
-  - name: Multiple certificates on IaaS VM that uses extensions
-    href: multiple-certificates-iaas-vm-extensions.md
-  - name: Previous command is re-run
-    href: customscript-reruns-previous-command.md
-  - name: Supported extensions
-    href: support-agent-extensions.md
-  - name: Supported operating systems
-    href: extension-supported-os.md
-  - name: The host keys of Linux VM are written to ec2
-    href: cloud-init-writes-vm-host-keys-as-ec2.md
-  - name: Update awareness for Linux Image Provisioning Agent
-    href: linux-image-provisioning-agent-update-awareness.md
+  - name: Windows
+    items:
+    - name: Azure Windows VM Agent overview
+      href: /azure/virtual-machines/extensions/agent-windows-?context=/troubleshoot/azure/virtual-machines/context/context
+    - name: Install Windows VM agent offline
+      href: install-vm-agent-offline.md
+    - name: Troubleshoot Windows VM agent
+      href: windows-azure-guest-agent.md
+  - name: Linux
+    items:
+    - name: Azure Linux VM Agent overview
+      href: /azure/virtual-machines/extensions/agent-linux?context=/troubleshoot/azure/virtual-machines/context/context
+    - name: Troubleshoot Linux VM agent
+      href: linux-azure-guest-agent.md
+    - name: Azure cloud-init support for Linux VMs
+      href: cloud-init-support-linux-vms.md
+    - name: Update awareness for Linux Image Provisioning Agent
+      href: linux-image-provisioning-agent-update-awareness.md
+    - name: The host keys of Linux VM are written to ec2
+      href: cloud-init-writes-vm-host-keys-as-ec2.md
+    - name: Extension status isn't reported
+      href: linux-vm-extension-status-not-reported.md
+    - name: Can't process extensions
+      href: linux-agent-cannot-process-extensions.md
+    - name: Linux VM extensions stop running
+      href: extensions-stop-running.md
+  - name: Cloud Init
+    items:
+    - name: Azure cloud-init support for Linux VMs
+      href: cloud-init-support-linux-vms.md
+      
+- name: VM extensions
+  items:
   - name: Azure extension overview
     href: /azure/virtual-machines/extensions/overview?context=/troubleshoot/azure/virtual-machines/context/context
+  - name: Supported operating systems
+    href: extension-supported-os.md
+  - name: Supported extensions
+    href: support-agent-extensions.md
   - name: Troubleshoot extension issues
     href: /azure/virtual-machines/extensions/troubleshoot?context=/troubleshoot/azure/virtual-machines/context/context
-  - name: Install Windows VM agent offline
-    href: install-vm-agent-offline.md
-  - name: Troubleshoot extension certificate issues on Windows VM
-    href: troubleshoot-extension-certificates-issues-windows-vm.md
-  - name: Troubleshoot Windows VM agent
-    href: windows-azure-guest-agent.md
-  - name: Troubleshoot Linux VM agent
-    href: linux-azure-guest-agent.md
-
+  - name: General Issues
+    items:
+    - name: Issues with Python 3-enabled Linux systems
+      href: /azure/virtual-machines/extensions/issues-using-vm-extensions-python-3?context=/troubleshoot/azure/virtual-machines/context/context
+    - name: Troubleshoot extension certificate issues on Windows VM
+      href: troubleshoot-extension-certificates-issues-windows-vm.md
+    - name: Multiple certificates on IaaS VM that uses extensions
+      href: multiple-certificates-iaas-vm-extensions.md
+  - name: Custom script extenions (CSE)
+    items:
+    - name: Troubleshoot - Windows
+      href: azure/virtual-machines/extensions/custom-script-windows#troubleshoot-and-support?context=/troubleshoot/azure/virtual-machines/context/context
+    - name: Troubleshoot - Linux
+      href: azure/virtual-machines/extensions/custom-script-linux#troubleshooting?context=/troubleshoot/azure/virtual-machines/context/context
+    - name: Previous command is re-run
+      href: customscript-reruns-previous-command.md
+  - name: Azure Disk Encryption (ADE)
+    items:
+    - name: Can't enable Azure Disk Encryption
+      href: extension-version-2.2-not-supported.md
 - name: Disk management
   items:
   - name: Resizing disks
