@@ -15,7 +15,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 08/16/2022
+ms.date: 10/30/2023
 ---
 
 # Dial pad is missing in Teams

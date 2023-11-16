@@ -1,7 +1,7 @@
 ---
 title: Diagnose issues with Direct Routing
 description: Describes how to troubleshoot your Direct Routing configuration by using a diagnostic tool. 
-ms.date: 07/25/2023
+ms.date: 10/30/2023
 author: helenclu
 ms.author: luche
 manager: dcscontentpm

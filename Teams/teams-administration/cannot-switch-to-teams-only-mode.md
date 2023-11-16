@@ -16,7 +16,7 @@ appliesto:
   - Skype for Business Online
 search.appverid: 
   - MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # Error when switching a tenant to Teams Only mode
 

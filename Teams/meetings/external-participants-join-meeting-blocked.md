@@ -15,7 +15,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 04/24/2023
+ms.date: 10/30/2023
 ---
 # Errors when external participants try to join a Teams meeting
 
