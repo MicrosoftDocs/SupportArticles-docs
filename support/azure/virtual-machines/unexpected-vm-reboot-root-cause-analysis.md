@@ -33,7 +33,7 @@ Azure provides methods to access detailed Root Cause Analysis (RCA) of unexpecte
       :::image type="content" source="media/unexpected-vm-reboot-root-cause-analysis/vm-restarted-or-stopped-unexpectedly.png" alt-text="Screenshot that shows how to select your problem type.":::
 
 
-4. Once you select **My resource has been stopped unexpectedly**, the diagnostics runs on the impacted VM. After the diagnostics is completed, you can check the reboot RCA information from the diagnostics result.
+4. Once you select **My resource has been stopped unexpectedly**, the diagnostics run on the impacted VM. After the diagnostics are completed, you can check the reboot RCA information from the diagnostics result.
 
       :::image type="content" source="media/unexpected-vm-reboot-root-cause-analysis/my-resource-has-been-stopped-unexpectedly.png" alt-text="Screenshot that shows diagnostics results."::: 
 
