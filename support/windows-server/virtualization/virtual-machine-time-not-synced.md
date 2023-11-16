@@ -1,7 +1,7 @@
 ---
 title: Hyper-V Time Synchronization can't correct system clock
 description: Discusses an issue in which The Hyper-V Time Synchronization Service won't correct the system clock in the virtual machine if the system clock in the VM is running more than five seconds ahead of the system clock on the host machine.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

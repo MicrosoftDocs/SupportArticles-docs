@@ -1,7 +1,7 @@
 ---
 title: Antivirus software cause problems with Cluster Services
 description: Resolve problems with Cluster Services that be caused by antivirus software that isn't cluster-aware.
-ms.date: 7/26/2022
+ms.date: 07/26/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -60,4 +60,4 @@ Additionally, you should exclude the following file system locations and the pro
 
     This file may have to be configured as a process exclusion within the antivirus software.
 
-For more information about running antivirus software on servers that are running SQL Server, see [How to choose antivirus software to run on computers that are running SQL Server](https://support.microsoft.com/help/309422).
+For more information about running antivirus software on servers that are running SQL Server, see [Configure antivirus software to work with SQL Server](../../sql/database-engine/security/antivirus-and-sql-server.md).

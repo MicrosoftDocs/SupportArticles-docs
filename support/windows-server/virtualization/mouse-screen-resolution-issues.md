@@ -1,7 +1,7 @@
 ---
 title: Mouse and screen resolution issues
 description: Provides a solution to mouse and screen resolution issues when managing a virtual machine using the Hyper-V Manager Console.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

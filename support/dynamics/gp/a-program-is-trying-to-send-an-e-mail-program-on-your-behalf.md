@@ -39,7 +39,7 @@ If you run into trouble with editing the Win.ini, you can save this to your desk
 
 If this still does not work, you will need validate your Registry. The document below will walk you through on how to check your Registry for Mail. Go through steps 1-7 and choose Option A if you are 32-bit or Option B if you are 64-bit.
 
-See [A program is trying to send an e-mail message on your behalf when trying to send a Template via E-mail](https://community.dynamics.com/gp/b/dynamicsgp/posts/draft-a-program-is-trying-to-send-an-e-mail-message-on-your-behalf-when-trying-to-send-a-template-via-e-mail) and select the link at the bottom to download the Registry MAPI Fix.doc.
+See [A program is trying to send an e-mail message on your behalf when trying to send a Template via E-mail](https://community.dynamics.com/blogs/post/?postid=87175f05-f890-4f9d-82ce-7ab6a00fdc5a) and select the link at the bottom to download the Registry MAPI Fix.doc.
 
 > [!NOTE]
 > As of 1/11/18 we found some situations where the Customer did have MAPIX=1 in the Win.ini file and it still did not work. We removed this line in the Win.ini and it started working. Not sure if there was a certain Windows update that is preventing this setting from being used.

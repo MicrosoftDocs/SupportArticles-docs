@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting scenarios for printing
 description: Advanced troubleshooting printing scenarios.
-ms.date: 10/12/2021
+ms.date: 05/16/2023
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm
@@ -114,3 +114,7 @@ You might have to enable auditing on the specific objects (printers). Unless you
 6. Select **OK** to return to the **Advanced Security Settings** window, and view the audit configuration that is in place.
 7. Select **OK** to close the **Advanced Security Settings** window and return to **Properties** for the printer that you configured auditing for. Select **OK** to commit the changes.
 8. Repeat steps 1-7 to enable auditing on all desired printer objects.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-user-experience.md#printing).

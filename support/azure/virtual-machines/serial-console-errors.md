@@ -12,7 +12,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: vm
 ms.workload: infrastructure-services
-ms.date: 7/26/2022
+ms.date: 07/26/2022
 ms.author: genli
 ---
 

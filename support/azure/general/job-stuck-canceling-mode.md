@@ -2,10 +2,8 @@
 title: HPC jobs are stuck in canceling mode, and new jobs don't start
 description: Provides a solution for an issue where performance computing (HPC) jobs are stuck in canceling mode.
 ms.date: 09/16/2022
-author: AmandaAZ
-ms.author: v-weizhu
 ms.prod: hpcpack
-ms.reviewer: hclvteam, cargonz
+ms.reviewer: hclvteam, cargonz, v-weizhu
 ---
 # HPC jobs are stuck in canceling mode, and new jobs don't start
 

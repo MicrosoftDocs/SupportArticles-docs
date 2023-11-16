@@ -1,7 +1,7 @@
 ---
 title: Error 0x800f0922 when you uninstall roles
 description: Provides a solution to an issue where uninstalling Windows Server roles or features fails with error 0x800f0922.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -76,3 +76,7 @@ This issue can occur if there are more than 65,000 files in the Windows Temp dir
 ## Resolution
 
 To resolve the problem, delete the contents of the Windows Temp folder (normally `C:\Windows\Temp`), and then again try to remove the Windows Server role or feature.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

@@ -7,20 +7,20 @@
     href: could-not-verify-account-reset-pwd.md
   - name: Maximum number of devices is reached
     href: maximum-number-of-devices-joined-workplace.md
-  - name: Troubleshoot data freshness alerts in Azure AD Connect Health
+  - name: Troubleshoot data freshness alerts in Microsoft Entra Connect Health
     href: aad-connect-health-data-freshness.md
   - name: Unable to register a device
     href: cant-connect-service-error-register-device.md
-  - name: Understand AD FS sign-in events in Azure AD with Connect Health
+  - name: Understand AD FS sign-in events in Microsoft Entra ID with Connect Health
     href: understand-ad-fs-sign-in-events-azure-ad-connect-health.md
-  - name: Understand Azure AD Connect 1.4 and device disappearance
+  - name: Understand Microsoft Entra Connect 1.4 and device disappearance
     href: reference-connect-device-disappearance.md
   - name: Sign-in and Multi-factor Authentication
     items:
     - name: Authentication fails with error 'The requested federation realm object '<Object ID>' does not exist'
       href: authentication-fails-with-error.md
 
-  - name: Azure AD Hybrid Sync Agent Installation Issues
+  - name: Microsoft Entra Hybrid Sync Agent Installation Issues
 
     items:
     - name: Installation issues overview
@@ -40,6 +40,15 @@
   items:
   - name: Troubleshoot adding apps
     href: troubleshoot-adding-apps.md
+    items: 
+      - name: Application takes a long time to appear
+        href: app-takes-long-time-appear.md
+      - name: Application doesn't appear
+        href: app-doesnt-appear.md
+      - name: Unable to delete an application
+        href: unable-delete-app.md
+      - name: Send notification details to Microsoft support
+        href: send-notification-details.md
   - name: Troubleshoot sign-in to apps
     items:
       - name: Error AADSTS50003 - certificate or key not configured
@@ -50,6 +59,8 @@
         href: error-code-AADSTS50011-redirect-uri-mismatch.md
       - name: Error AADSTS50020 - guest sign-in to resource tenant fails
         href: error-code-AADSTS50020-user-account-identity-provider-does-not-exist.md
+      - name: Error AADSTS500571 - guest user account is disabled
+        href: error-code-aadsts500571-guest-user-account-is-disabled.md
       - name: Error AADSTS50105 - user not assigned a role
         href: error-code-AADSTS50105-user-not-assigned-role.md
       - name: Error AADSTS650056 - misconfigured app
@@ -78,11 +89,17 @@
   - name: Server Error in '/' Application error in application
     href: server-error-application.md
 
-- name: Directories, Domains, and Objects
+- name: Microsoft Entra Directories, Domains, and Objects
   items:
+  - name: Devices
+    items:
+      - name: No local administrator group privileges on Microsoft Entra joined device
+        href: no-local-admin-privileges-azure-ad-joined-device.md
+      - name: Pending devices
+        href: pending-devices.md
   - name: Can't delete a directory using portal
     href: cannot-delete-directory-azure-portal.md
-  - name: Can't open Azure AD Module PowerShell
+  - name: Can't open Azure AD module PowerShell
     href: cant-open-aad-module-powershell.md
   - name: Can't verify account when resetting password
     href: could-not-verify-account-reset-pwd.md
@@ -90,8 +107,6 @@
     href: method-invocation-failed-error.md
   - name: Password changes aren't saved
     href: pwd-change-not-save.md
-  - name: Pending devices
-    href: pending-devices.md
   - name: Perform a Workplace Join using DRS
     href: cant-perform-workplace-join.md
   - name: Remove user from recycle bin
@@ -111,7 +126,6 @@
     items:
       - name: Unknown Actors in Audit Reports
         href: unknown-actors-in-audit-reports.md
-
   - name: Sign-in Activity Reports
     items:
       - name: Verify 1st party Microsoft apps in sign-in reports
@@ -127,6 +141,8 @@
     href: adal-authenticate-android-devices-fail.md
   - name: Can't perform a Workplace Join
     href: confirm-signin-info-workplace-join.md
+  - name: MFA fails because five registered devices already use authenticator apps
+    href: cant-set-up-mfa-five-devices-registered.md
   - name: Can't sync SystemMailbox or DiscoveryMailboxSearch accounts
     href: unable-sync-system-discovery-mailbox.md
   - name: Can't verify account when resetting password
@@ -184,7 +200,7 @@
       href: password-writeback-access-rights-permissions.md
     - name: Error code 8023062C - insecure password reset or change
       href: password-writeback-error-code-8023062c.md
-    - name: Error code SSPR_009 - synced Azure AD admin can't do cloud reset
+    - name: Error code SSPR_009 - synced Microsoft Entra admin can't do cloud reset
       href: password-writeback-error-code-sspr-009.md
     - name: Error code SSPR_0029 - on-premises configuration not set up
       href: password-writeback-error-code-sspr-0029.md
@@ -196,16 +212,16 @@
       href: password-writeback-not-compliant-on-premises-ad-pwd-policy.md
   - name: Administrator credentials error
     href: admin-credentials-supplied-not-valid.md
-  - name: Azure AD Connect services don't start
+  - name: Microsoft Entra Connect services don't start
     href: services-sync-not-start.md
-  - name: Azure AD Connect hangs during importing
+  - name: Microsoft Entra Connect hangs during importing
     href: aad-management-agent-hangs-during-import.md
-  - name: Azure AD Connect won't work after upgrading
+  - name: Microsoft Entra Connect won't work after upgrading
     href: cannot-work-automatic-upgrade.md
   - name: Can't connect to Azure RMS
-    href: fail-connect-azure-information-protection-PowerShell.md
+    href: fail-connect-azure-information-protection-powerShell.md
   - name: Can't enable Device writeback
-    href: Cannot-enable-device-writeback.md
+    href: cannot-enable-device-writeback.md
   - name: Can't manage or remove objects
     href: cannot-manage-objects.md
   - name: Can't run DirSyncConfigShell.psc1
@@ -228,19 +244,19 @@
     href: pwd-hash-sync-auto-enable.md
   - name: Enable support for TLS 1.2 in your environment
     href: enable-support-tls-environment.md
-  - name: Error code 1603 in Azure AD Connect
+  - name: Error code 1603 in Microsoft Entra Connect
     href: upgrade-fails-error-code-1603.md
   - name: Error 80070005 in Azure AD Sync Services config wizard
     href: aad-sync-services-config-wizard-error.md
-  - name: Errors with event ID 6301 after installing Azure AD Connect
+  - name: Errors with event ID 6301 after installing Microsoft Entra Connect
     href: tvp-errors-when-AADConnect-installed-on-Windows-Server-2019.md
   - name: Fail to get address for method
     href: failed-get-address-method.md
-  - name: Fail to install Azure AD Module
+  - name: Fail to install Azure AD module
     href: unable-install-aad-module-powershell.md
   - name: Fail to sync domain-based filtering changes
     href: domain-based-filtering-fail-sync.md
-  - name: High CPU usage when using Azure AD Connect
+  - name: High CPU usage when using Microsoft Entra Connect
     href: high-cpu-usage.md
   - name: Identity sync client can't authenticate
     href: unable-communicate-windows-service.md
@@ -266,23 +282,27 @@
     href: pwd-not-sync.md
   - name: Password sync fails with event ID 611 
     href: pwd-hash-sync-stops-work.md
-  - name: ProxyAddresses attribute in Azure AD
+  - name: Permission-issue 8344 (insufficient access rights to perform the operation)
+    href: troubleshoot-permission-issue-sync-service-manager.md
+  - name: ProxyAddresses attribute in Microsoft Entra ID
     href: proxyaddresses-attribute-populate.md
   - name: Request isn't processed when resetting password
     href: request-not-processed-reset-pwd.md
-  - name: RPC errors affecting AADConnect
+  - name: RPC errors affecting Microsoft Entra Connect
     href: rpc-errors-affecting-aadconnect.md
   - name: Scripts cannot be loaded
     href: cannot-run-scripts-powershell.md
   - name: Separate passwords required
     href: separate-pwds-required-computer-work-account.md
+  - name: Size limit was exceeded
+    href: size-limit-exceeded.md
   - name: Slow performance and high CPU usage
     href: slow-performance-high-cpu-usage.md
-  - name: Troubleshoot Azure AD Connect version upgrading issues
+  - name: Troubleshoot Microsoft Entra Connect version upgrading issues
     href: troubleshoot-aad-connect-fails-to-install-upgraded-version.md
   - name: Troubleshoot Azure AD Sync installation issues
     href: installation-configuration-wizard-errors.md
-  - name: Troubleshoot Azure AD Connect objects and attributes
+  - name: Troubleshoot Microsoft Entra Connect objects and attributes
     href: troubleshoot-aad-connect-objects-attributes.md
   - name: Troubleshoot Certificate-Based Authentication issues
     href: certificate-based-authenticate-issue.md
@@ -316,7 +336,7 @@
     href: enable-disable-trace-online-services.md
   - name: IdFix.exe is not a valid Win32 application
     href: idfix-not-valid-win32-application.md
-  - name: IPv6 Support in Azure AD
+  - name: IPv6 Support in Microsoft Entra ID
     href: azure-ad-ipv6-support.md
   - name: Security context is not associated in IdFix
     href: security-context-not-associate-domian.md

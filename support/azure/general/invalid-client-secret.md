@@ -3,9 +3,7 @@ title: Client secret key is expired error
 description: Provides a solution for a Client secret key is expired error that occurs when you deploy or terminate virtual machines.
 ms.date: 09/15/2022
 ms.service: cyclecloud
-ms.author: v-weizhu
-author: AmandaAZ
-ms.reviewer: hclvteam
+ms.reviewer: hclvteam, v-weizhu
 ---
 # Client secret key is expired error occurs when deploying or terminating virtual machines
 
@@ -27,7 +25,7 @@ When you validate the credential in the CycleCloud portal, you see the following
 
 To resolve this issue, reset the client secret keys in the Azure portal.
 
-1. Sign in to the Azure portal and navigate to the Azure Active Directory service.
+1. Sign in to the Azure portal and navigate to the Microsoft Entra service.
 2. Select the application name under the **App Registrations**.
 
    :::image type="content" source="media/invalid-client-secret/select-application-name.png" alt-text="Screenshot of an application name." lightbox="media/invalid-client-secret/select-application-name.png":::

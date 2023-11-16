@@ -1,7 +1,7 @@
 ---
 title: Extranet Smart Lockout feature in Windows Server 2016
 description: Describes the Extranet Smart Lockout feature in Windows Server 2016.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 4096478
 
 ## Overview
 
-As of the March 2018 update for Windows Server 2016, Active Directory Federation Services (AD FS) has a new feature that is namedExtranet Smart Lockout (ESL). In an era of increased attacks on authentication services, ESL enables AD FS t o differentiate between sign-in attempts from a valid user and sign-ins from what may be an attacker. As a result, AD FS can lock out attackers while letting valid users continue to use their accounts. This prevents denial of service for users and protects against targeted attacks against known user accounts.
+As of the March 2018 update for Windows Server 2016, Active Directory Federation Services (AD FS) has a new feature that is namedExtranet Smart Lockout (ESL). In an era of increased attacks on authentication services, ESL enables AD FS to differentiate between sign-in attempts from a valid user and sign-ins from what may be an attacker. As a result, AD FS can lock out attackers while letting valid users continue to use their accounts. This prevents denial of service for users and protects against targeted attacks against known user accounts.
 
 The ESL feature is available for AD FS in Windows Server 2016.
 
@@ -157,7 +157,7 @@ AD FS provides three cmdlets to manage user account activity data. These cmdlets
     Update the account activity for a user account. This can be used to add new familiar locations or erase state for any account.
 
     ```powershell
-    Set-ADFSAccountActivityuser@contoso.com -FamiliarLocation "1.2.3.4"
+    Set-ADFSAccountActivity user@contoso.com -FamiliarLocation "1.2.3.4"
     ```
 
 - `Reset-ADFSAccountLockout`
@@ -165,7 +165,7 @@ AD FS provides three cmdlets to manage user account activity data. These cmdlets
     Resets the lockout counter for a user account.
 
     ```powershell
-    Reset-ADFSAccountLockoutuser@contoso.com -Familiar
+    Reset-ADFSAccountLockout user@contoso.com -Familiar
     ```
 
 ## Troubleshooting

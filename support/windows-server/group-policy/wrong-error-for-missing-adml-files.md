@@ -1,7 +1,7 @@
 ---
 title: Wrong error message for missing .adml files
 description: Provides a solution to an issue where wrong error messages are returned when .adml files are missing.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -47,3 +47,7 @@ The error reporting is incorrect since it is referring to the .admx file as miss
 ## Resolution
 
 Making the .adml files available for the language queried for in the correct folder solves the problem. See [How to create the Central Store for Group Policy Administrative Template files in Windows Vista](https://support.microsoft.com/help/929841).
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Group Policy issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-group-policy.md).

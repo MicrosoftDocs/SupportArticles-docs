@@ -1,7 +1,7 @@
 ---
 title: Group Policy objects to Terminal Services
 description: Explains how to apply Group Policy objects to Terminal Services servers without adversely affecting other servers on the network.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -79,3 +79,7 @@ The computer account of the terminal server should be added to the security prop
 4. Click the computer account from the **Group or user names** box.
 5. In the **Permissions for computer name** box, click to select the **Read** and **Apply Group Policy** check boxes in the **Allow** column.
 6. Click OK two times to close and save the policy settings.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Group Policy issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-group-policy.md).

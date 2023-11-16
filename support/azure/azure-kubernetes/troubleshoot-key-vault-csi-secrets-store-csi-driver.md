@@ -1,13 +1,11 @@
 ---
 title: Troubleshoot Azure Key Vault Provider for Secrets Store CSI Driver on Azure Kubernetes Service (AKS)
 description: Troubleshoot and resolve common problems when you're using the Azure Key Vault Provider for Secrets Store CSI Driver on Azure Kubernetes Service (AKS).
-author: DennisLee-DennisLee
-ms.author: v-dele
 editor: v-jsitser
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-extensions-add-ons
 ms.date: 12/20/2022
-ms.reviewer: nickoman
+ms.reviewer: nickoman, v-leedennis
 ---
 
 # Troubleshoot Azure Key Vault Provider for Secrets Store CSI Driver
@@ -56,10 +54,10 @@ This error occurs because a Node Managed Identity (NMI) component in *aad-pod-id
 
 ### Solution 1: Check the NMI pod logs
 
-For more information about this error and how to resolve it, check the NMI pod logs and refer to the [Azure Active Directory pod identity troubleshooting guide](https://azure.github.io/aad-pod-identity/docs/troubleshooting/).
+For more information about this error and how to resolve it, check the NMI pod logs and refer to the [Microsoft Entra pod identity troubleshooting guide](https://azure.github.io/aad-pod-identity/docs/troubleshooting/).
 
 > [!NOTE]
-> Azure Active Directory (Azure AD) is abbreviated as *aad* in the *aad-pod-identity* string.
+> Microsoft Entra ID is abbreviated as *Microsoft Entra ID* in the *aad-pod-identity* string.
 
 ## Cause 2: "keyvault.BaseClient#GetSecret: Failure sending request: StatusCode=0" error
 
@@ -83,7 +81,7 @@ To fix the issue, take the following actions:
 
 - Check for policies that are configured to block traffic.
 
-- Make sure that the node has connectivity to Azure AD and your key vault.
+- Make sure that the node has connectivity to Microsoft Entra ID and your key vault.
 
 To test the connectivity to your Azure key vault from the pod that's running on the host network, follow these steps:
 

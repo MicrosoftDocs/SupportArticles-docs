@@ -1,7 +1,7 @@
 ---
 title: Information about Group Policy Preferences events
 description: Provides some information about Group Policy Preferences events.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -83,3 +83,7 @@ The possible event sources of these events are:
 |MessageId=0x1A00 (6656) | Success |A hidden filter did not pass. |
 |MessageId=0xF001 (61441) | Success |This error was suppressed.%0|
 |MessageId=0xF003 (61441) | Success |See trace file for more details.%0  |
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Group Policy issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-group-policy.md).

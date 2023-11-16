@@ -1,7 +1,7 @@
 ---
 title: Determine the type of processor
 description: Describes how to determine the type of processor that is used on a computer.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -64,3 +64,7 @@ To use Registry Editor to determine the processor type, follow these steps:
 ### Technical support for x64-based versions of Microsoft Windows
 
 Your hardware manufacturer provides technical support and assistance for x64-based versions of Windows. Your hardware manufacturer provides support because an x64-based version of Windows was included with your hardware. Your hardware manufacturer might have customized the installation of Windows with unique components. Unique components might include specific device drivers or might include optional settings to maximize the performance of the hardware. Microsoft will provide reasonable-effort assistance if you need technical help with your x64-based version of Windows. However, you might have to contact your manufacturer directly. Your manufacturer is best qualified to support the software that your manufacturer installed on the hardware.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

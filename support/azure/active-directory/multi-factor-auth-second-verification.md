@@ -10,7 +10,7 @@ ms.subservice: authentication
 
 This article describes a scenario in which users who are enabled for Azure Multi-Factor Authentication aren't prompted for a second verification factor when they sign in.
 
-_Original product version:_ &nbsp; Azure Active Directory, Cloud Services (Web roles/Worker roles), Microsoft Intune  
+_Original product version:_ &nbsp; Microsoft Entra ID, Cloud Services (Web roles/Worker roles), Microsoft Intune  
 _Original KB number:_ &nbsp; 3124671
 
 ## Symptoms

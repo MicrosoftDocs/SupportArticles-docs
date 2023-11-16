@@ -4,9 +4,9 @@ description: Provides a methodology to isolate and troubleshoot SQL performance 
 ms.date: 09/28/2022
 ms.custom: sap:Performance
 ms.topic: troubleshooting
-ms.prod: sql
 author: PijoCoder 
-ms.author: v-jayaramanp
+ms.author: jopilov
+ms.reviewer: v-jayaramanp
 ---
 
 # Troubleshoot slow SQL Server performance caused by I/O issues
@@ -186,7 +186,7 @@ fltmc instances
 
 For more information, see [How to choose antivirus software to run on computers that are running SQL Server](https://support.microsoft.com/topic/how-to-choose-antivirus-software-to-run-on-computers-that-are-running-sql-server-feda079b-3e24-186b-945a-3051f6f3a95b).
 
-Avoid using Encrypting File System (EFS) and file-system compression because they cause asynchronous I/O to become synchronous and therefore slower. For more information, see the [Asynchronous disk I/O appears as synchronous on Windows](/troubleshoot/windows/win32/asynchronous-disk-io-synchronous#compression) article.
+Avoid using Encrypting File System (EFS) and file-system compression because they cause asynchronous I/O to become synchronous and therefore slower. For more information, see the [Asynchronous disk I/O appears as synchronous on Windows](../../../windows/win32/asynchronous-disk-io-synchronous.md#compression) article.
 
 #### Step 3: Is the I/O subsystem overwhelmed beyond capacity?
 

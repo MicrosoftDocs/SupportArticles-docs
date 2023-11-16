@@ -1,7 +1,7 @@
 ---
 title: Recommended updates for RDS in Windows Server 2012 R2
 description: Describes the hotfixes and updates that are currently available for Remote Desktop Services in Windows Server 2012 R2.
-ms.date: 3/24/2022
+ms.date: 03/24/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -59,7 +59,7 @@ Before you install the hotfix for any Remote Desktop Services role, you must hav
 |Date the update was added|Related Knowledge Base article|Title|Component|Why we recommend this update|
 |---|---|---|---|---|
 |November 2015| [3091411](https://support.microsoft.com/help/3091411)|User connection fails when many connections are made to Windows Server 2012 R2-based RD Connection Broker|Multiple|This rollup contains the following improvements:<ul><li> Improves the number of successful user connections when many user connections exist (especially during peak logon periods).</li><li> Decreases CPU usage on SQL Server that's used in a High Availability-based Connection Broker deployment.</li><li> Optimizes the number of SQL calls that are invoked by Connection Broker when it processes RD user connections. This hotfix improves the overall performance of the Connection Broker by scaling more user connections that typically occur during peak logon periods.</li></ul>|
-|December 2014| [3020474](/troubleshoot/windows-server/remote/communication-issues)|Communication issues occur when Remote Desktop Connection Broker connects to SQL Server in Windows Server 2012 R2|script|If you are using RD Connection Broker High Availability, make sure that you watch for the security events that are described in the Knowledge Base article that indicate communication issues between the RD Connection Brokers and SQL Server. You have to enable auditing for failure events by using the script `auditpol /set /subcategory:"Filtering Platform Connection" /success:disable /failure:enable` <br/><br/> This script unblocks only UDP port 1434 from a Windows level. If you have a network device that also blocks this port, you must unblock at this level, too.|
+|December 2014| [3020474](communication-issues.md)|Communication issues occur when Remote Desktop Connection Broker connects to SQL Server in Windows Server 2012 R2|script|If you are using RD Connection Broker High Availability, make sure that you watch for the security events that are described in the Knowledge Base article that indicate communication issues between the RD Connection Brokers and SQL Server. You have to enable auditing for failure events by using the script `auditpol /set /subcategory:"Filtering Platform Connection" /success:disable /failure:enable` <br/><br/> This script unblocks only UDP port 1434 from a Windows level. If you have a network device that also blocks this port, you must unblock at this level, too.|
 
 ## Updates and hotfixes for Remote Desktop Gateway
 

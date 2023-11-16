@@ -1,7 +1,7 @@
 ---
 title: Active Directory replication error 8453
 description: This article describes how to troubleshoot Active Directory replication error 8453.
-ms.date: 3/24/2022
+ms.date: 03/24/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -94,7 +94,7 @@ When this problem occurs, you experience one or more of the following symptoms:
   ......................... <DC tested by DCDIAG> failed test Replications
   ```
 
-- The DCDIAG NCSecDesc test (`DCDIAG /TEST:NCSecDes`) reports that the domain controller that was tested by DCDIAG **failed test NCSecDec** and that one or more permissions are missing on the NC head of one or more directory partitions on the tested domain controller that was tested by DCDIAG:
+- The DCDIAG NCSecDesc test (`DCDIAG /TEST:NCSecDesc`) reports that the domain controller that was tested by DCDIAG **failed test NCSecDec** and that one or more permissions are missing on the NC head of one or more directory partitions on the tested domain controller that was tested by DCDIAG:
 
   ```output
   Starting test: NCSecDesc  

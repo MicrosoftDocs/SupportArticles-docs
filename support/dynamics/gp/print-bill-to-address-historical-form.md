@@ -74,4 +74,4 @@ Next we'll create another relationship between the RM Customer Master and the Cu
 
 ## More information
 
-See [Printing Bill to Address assigned to Customer Maintenance on the Historical SOP Invoice form for Microsoft Dynamics GP 2016](https://community.dynamics.com/gp/b/dynamicsgp/archive/2017/04/25/printing-bill-to-address-assigned-to-customer-maintenance-on-the-historical-sop-invoice-form-for-microsoft-dynamics-gp-2016) for this topic.
+See [Printing Bill to Address assigned to Customer Maintenance on the Historical SOP Invoice form for Microsoft Dynamics GP 2016](https://community.dynamics.com/blogs/post/?postid=a245936f-7aac-487c-91bd-091f480996d9) for this topic.

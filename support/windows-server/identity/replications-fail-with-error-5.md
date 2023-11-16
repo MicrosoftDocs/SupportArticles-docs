@@ -1,7 +1,7 @@
 ---
 title: troubleshoot AD replication error 5 Access is denied
 description: Discusses the Access is denied error 5 when Active Directory replications fail. This issue can occur in Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows Server 2003 R2, Windows Server 2003, or Microsoft Windows 2000 Server.
-ms.date: 3/24/2022
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -428,3 +428,7 @@ Checking machine account for DC \<DC name> on DC \<DC Name>
 \* Missing SPN :HOST/\<hostname>.\<DNS domain name>/\<NetBIOS domain name>  
 \* Missing SPN :GC/\<hostname>.\<DNS domain name>/\<DNS domain name>
 Unable to verify the machine account (\<DN path for Dc machine account>) for \<DC Name> on \<DC name>.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).

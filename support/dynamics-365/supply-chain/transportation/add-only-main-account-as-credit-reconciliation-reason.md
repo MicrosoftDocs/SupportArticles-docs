@@ -2,7 +2,7 @@
 title: You can add only the main account as the credit account for reconciliation reasons
 description: You can add only the main account as the credit account when setting up a reconciliation reason in Transportation management.
 author: Weijiesa
-ms.date: 4/11/2021
+ms.date: 04/11/2021
 ms.topic: troubleshooting
 ms.search.form: TMSFBDetailReconcile
 audience: Application User

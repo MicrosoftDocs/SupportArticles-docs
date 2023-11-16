@@ -22,24 +22,24 @@ If you see the message, save your work, and then close and restart Visual Studio
 
 Following is a list of out-of-proc processes used by Visual Studio. This list is inclusive of processes that launch in specific workflows or scenarios, and so in most cases they aren't all running at the same time.
 
-- Microsoft.Alm.Shared.Remoting.RemoteContainer.dll
-- Microsoft.CodeAnalysis.LiveUnitTesting.EntryPoint
-- MSBuild.exe
-- PerfWatson2.exe
-- ScriptedSandbox64.exe
-- ServiceHub.Host.CLR.x86.exe
-- ServiceHub.Host.Node.x86.exe
-- ServiceHub.IdentityHost.exe
-- ServiceHub.RoslynCodeAnalysisService.exe
-- ServiceHub.RoslynCodeAnalysisService32.exe
-- ServiceHub.SettingsHost.exe
-- ServiceHub.VSDetouredHost.exe
-- VBCSCompiler.exe
-- VsHub.exe
-- vstest.discoveryengine.x86.exe
-- WaAppAgent.exe
-- WindowsAzureGuestAgent.exe
-- WindowsAzureTelemetryService.exe
+- _Microsoft.Alm.Shared.Remoting.RemoteContainer.dll_
+- _Microsoft.CodeAnalysis.LiveUnitTesting.EntryPoint_
+- _MSBuild.exe_
+- _PerfWatson2.exe_
+- _ScriptedSandbox64.exe_
+- _ServiceHub.Host.CLR.x86.exe_
+- _ServiceHub.Host.Node.x86.exe_
+- _ServiceHub.IdentityHost.exe_
+- _ServiceHub.RoslynCodeAnalysisService.exe_
+- _ServiceHub.RoslynCodeAnalysisService32.exe_
+- _ServiceHub.SettingsHost.exe_
+- _ServiceHub.VSDetouredHost.exe_
+- _VBCSCompiler.exe_
+- _VsHub.exe_
+- _vstest.discoveryengine.x86.exe_
+- _WaAppAgent.exe_
+- _WindowsAzureGuestAgent.exe_
+- _WindowsAzureTelemetryService.exe_
 
 If any of these processes terminates unexpectedly, some functionalities within Visual Studio stop working. For some processes, the loss of functionality may be insignificant. For others, the stability of Visual Studio is affected and an error message is displayed.
 

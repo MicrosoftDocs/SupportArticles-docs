@@ -1,7 +1,7 @@
 ---
 title: lingering objects in AD forest
 description: Contains information about lingering objects in a forest. Specifically, it provides information about events that indicate the presence of lingering objects, the causes of lingering objects, and methods to remove lingering objects.
-ms.date: 3/24/2022
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -228,3 +228,7 @@ Increase the TSL to 180 days by using the Adsiedit tool. To do it, follow these 
 2. Click the **Attribute Editor** tab.
 3. In the **Attribute** list, click **TombstoneLifetime**, and then click **Edit**.
 4. In the **Value** box, type 180, and then click **OK**.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).

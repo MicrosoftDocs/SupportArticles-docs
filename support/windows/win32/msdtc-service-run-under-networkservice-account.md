@@ -94,7 +94,7 @@ After you have made the registry changes, you must restart the MSDTC service. To
 
 ## References
 
-- [New functionality in the Distributed Transaction Coordinator service in Windows](/troubleshoot/windows/win32/new-functionality-in-msdtc-service)
+- [New functionality in the Distributed Transaction Coordinator service in Windows](new-functionality-in-msdtc-service.md)
 - [Managing Accounts and Privileges](/previous-versions/windows/desktop/ms682801(v=vs.85))
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

@@ -1,7 +1,7 @@
 ---
 title: error when adding a trusted domain user to a trusting domain
 description: Explains that when you try to add a trusted domain user to a trusting domain, you may receive an error message if the guest account on the trusted domain is turned on.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: AD Replication error 8333 Directory Object Not Found
 description: Describes an issue where AD operations fail with error 8333 (Directory object not found (ERROR_DS_OBJ_NOT_FOUND)).
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -223,6 +223,10 @@ There are multiple approaches to check for Lingering Objects including:
 Multiple third-party products have been found to cause this issue including:
     1. Anti-Virus software  
     2. Directory Synchronization
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).
 
 ## More information
 

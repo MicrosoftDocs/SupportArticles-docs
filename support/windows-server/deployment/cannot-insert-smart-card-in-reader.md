@@ -1,7 +1,7 @@
 ---
 title: Fail to insert a smart card in a reader
 description: Provides a solution to an error that occurs when you insert a smart card in a reader.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -737,3 +737,7 @@ LONG __cdecl main(
 ## References
 
 For more information about troubleshooting smart card Plug and Play issues, see [Smart Card Troubleshooting Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd979536(v=ws.10)).
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

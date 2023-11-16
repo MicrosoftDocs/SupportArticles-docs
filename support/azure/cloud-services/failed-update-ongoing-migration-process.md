@@ -2,10 +2,8 @@
 title: Failed cloud service update because of ongoing migration progress
 description: Resolve a cloud service update failure that occurs during a migration from Azure Cloud Services (classic) to Azure Cloud Services (extended support).
 ms.date: 09/26/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
 editor: v-jsitser
-ms.reviewer: v-maallu, piw, prpillai
+ms.reviewer: v-maallu, piw, prpillai, v-leedennis
 ms.service: cloud-services
 ms.subservice: troubleshoot-deployment-classic
 #Customer intent: As a cloud service user, I want to resolve a cloud service update failure that occurs when I migrate from Azure Cloud Services (classic) to Azure Cloud Services (extended support) so that I can avoid or reduce downtime.
@@ -17,7 +15,7 @@ This article discusses how to resolve a failed update to your cloud service that
 
 ## Symptoms
 
-During a migration of your cloud service, you receive a `ChangeDeploymentConfigurationOperationFailed` error message in Azure Cloud Services (classic) or an `OperationNotAllowed` error message in Azure Cloud Services (extended support). These messages resemble the following examples:
+During a migration of your cloud service, you receive a `ChangeDeploymentConfigurationOperationFailed` error message in Azure Cloud Services (classic) or an `OperationNotAllowed` error message in Azure Cloud Services (extended support). These messages resemble the following examples.
 
 ### Azure Cloud Services (classic)
 
@@ -82,7 +80,7 @@ To abort the migration in the Azure portal, follow these steps:
 
 ### [Azure PowerShell](#tab/azure-powershell)
 
-Use the [Move-AzureService](/powershell/module/servicemanagement/azure.service/move-azureservice) cmdlet to abort the migration, as shown in the following code snippet:
+Use the [Move-AzureService](/powershell/module/servicemanagement/azure/move-azureservice) cmdlet to abort the migration, as shown in the following code snippet:
 
 ```azurepowershell
 $abortMigrationDetails = @{
@@ -119,7 +117,7 @@ To commit the migration in the Azure portal, follow these steps:
 
 ### [Azure PowerShell](#tab/azure-powershell)
 
-Use the [Move-AzureService](/powershell/module/servicemanagement/azure.service/move-azureservice) cmdlet to commit the migration, as shown in the following code snippet:
+Use the [Move-AzureService](/powershell/module/servicemanagement/azure/move-azureservice) cmdlet to commit the migration, as shown in the following code snippet:
 
 ```azurepowershell
 $commitMigrationDetails = @{

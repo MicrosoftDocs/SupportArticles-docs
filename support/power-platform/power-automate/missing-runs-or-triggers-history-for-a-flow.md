@@ -2,7 +2,7 @@
 title: Missing runs or triggers history for a flow
 description: Run history provides the history of each flow's execution for the past 28 days.
 ms.reviewer: anaggar
-ms.date: 9/26/2022
+ms.date: 09/26/2022
 ms.subservice: power-automate-flows
 ---
 # Missing runs or triggers history for a flow

@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot AD FS issues
-description: Describes how to troubleshoot authentication issues that may arise for federated users in Azure Active Directory or Office 365. Provides a comprehensive list of symptoms and their solutions.
-ms.date: 3/24/2022
+description: Describes how to troubleshoot authentication issues that may arise for federated users in Microsoft Entra ID or Office 365. Provides a comprehensive list of symptoms and their solutions.
+ms.date: 03/24/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -10,12 +10,12 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, abizerh, fszita, meerak
-ms.custom: sap:active-directory-federation-services-ad-fs, csstroubleshoot
+ms.custom: sap:active-directory-federation-services-ad-fs, csstroubleshoot, has-azure-ad-ps-ref
 ms.technology: windows-server-active-directory
 ---
-# Troubleshoot AD FS issues in Azure Active Directory and Office 365
+# Troubleshoot AD FS issues in Microsoft Entra ID and Office 365
 
-This article discusses workflow troubleshooting for authentication issues for federated users in Azure Active Directory or Office 365.
+This article discusses workflow troubleshooting for authentication issues for federated users in Microsoft Entra ID or Office 365.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3079872
@@ -41,9 +41,9 @@ _Original KB number:_ &nbsp; 3079872
 
     :::image type="content" source="media/troubleshoot-ad-fs-issues/office-365-redirecting.png" alt-text="Page that is shown when the A D F S redirection occurs.":::
 
-    1. If no redirection occurs and you're prompted to enter a password on the same page, which means that Azure Active Directory (AD) or Office 365 doesn't recognize the user or the domain of the user to be federated. To check whether there's a federation trust between Azure AD or Office 365 and your AD FS server, run the `Get-msoldomain` cmdlet from Azure AD PowerShell. If a domain is federated, its authentication property will be displayed as **Federated**, as in the following screenshot:
+    1. If no redirection occurs and you're prompted to enter a password on the same page, which means that Microsoft Entra ID or Office 365 doesn't recognize the user or the domain of the user to be federated. To check whether there's a federation trust between Microsoft Entra ID or Office 365 and your AD FS server, run the `Get-msoldomain` cmdlet from Azure AD PowerShell. If a domain is federated, its authentication property will be displayed as **Federated**, as in the following screenshot:
 
-        :::image type="content" source="media/troubleshoot-ad-fs-issues/federated-domain.png" alt-text="Cmdlet Get-msoldomain output shows that there is a federation trust between Azure AD or Office 365 and your A D F S server.":::
+        :::image type="content" source="media/troubleshoot-ad-fs-issues/federated-domain.png" alt-text="Cmdlet Get-msoldomain output shows that there is a federation trust between Microsoft Entra ID or Office 365 and your A D F S server.":::
 
     2. If redirection occurs but you aren't redirected to your AD FS server for sign-in, check whether the AD FS service name resolves to the correct IP and whether it can connect to that IP on TCP port 443.
 
@@ -54,7 +54,7 @@ _Original KB number:_ &nbsp; 3079872
         Get-MsolDomainFederationSettings -DomainName <domain>
         ```
 
-        Check the URI, URL, and certificate of the federation partner that's configured by Office 365 or Azure AD.
+        Check the URI, URL, and certificate of the federation partner that's configured by Office 365 or Microsoft Entra ID.
 
 2. After you're redirected to AD FS, the browser may throw a certificate trust-related error, and for some clients and devices it may not let you establish an SSL (Secure Sockets Layer) session with AD FS. To resolve this issue, follow these steps:
 
@@ -272,22 +272,22 @@ _Original KB number:_ &nbsp; 3079872
             Make sure that the time on the AD FS server and the time on the proxy are in sync. When the time on the AD FS server is off by more than five minutes from the time on the domain controllers, authentication failures occur. When the time on AD FS proxy isn't synced with AD FS, the proxy trust is affected and broken. So a request that comes through the AD FS proxy fails.
           - Check whether the AD FS proxy Trust with the AD FS service is working correctly. Rerun the proxy configuration if you suspect that the proxy trust is broken.
 
-5. After your AD FS issues a token, Azure AD or Office 365 throws an error. In this situation, check for the following issues:
-   - The claims that are issued by AD FS in token should match the respective attributes of the user in Azure AD. In the token for Azure AD or Office 365, the following claims are required.
+5. After your AD FS issues a token, Microsoft Entra ID or Office 365 throws an error. In this situation, check for the following issues:
+   - The claims that are issued by AD FS in token should match the respective attributes of the user in Microsoft Entra ID. In the token for Microsoft Entra ID or Office 365, the following claims are required.
 
         WSFED:  
-        UPN: The value of this claim should match the UPN of the users in Azure AD.  
-        ImmutableID: The value of this claim should match the sourceAnchor or ImmutableID of the user in Azure AD.
+        UPN: The value of this claim should match the UPN of the users in Microsoft Entra ID.  
+        ImmutableID: The value of this claim should match the sourceAnchor or ImmutableID of the user in Microsoft Entra ID.
 
-        To get the User attribute value in Azure AD, run the following command line:
+        To get the User attribute value in Microsoft Entra ID, run the following command line:
 
         ```powershell
         Get-MsolUser -UserPrincipalName <UPN>
         ```
 
         SAML 2.0:  
-        IDPEmail: The value of this claim should match the user principal name of the users in Azure AD.  
-        NAMEID: The value of this claim should match the sourceAnchor or ImmutableID of the user in Azure AD.
+        IDPEmail: The value of this claim should match the user principal name of the users in Microsoft Entra ID.  
+        NAMEID: The value of this claim should match the sourceAnchor or ImmutableID of the user in Microsoft Entra ID.
 
         For more information, see [Use a SAML 2.0 identity provider to implement single sign-on](/previous-versions/azure/azure-services/dn641269(v=azure.100)).
 
@@ -306,7 +306,7 @@ _Original KB number:_ &nbsp; 3079872
 
         However, if the token-signing certificate on the AD FS is changed because of Auto Certificate Rollover or by an admin's intervention (after or before certificate expiry), the details of the new certificate must be updated on the Office 365 tenant for the federated domain. It may not happen automatically; it may require an admin's intervention. When the Primary token-signing certificate on the AD FS is different from what Office 365 knows about, the token that's issued by AD FS isn't trusted by Office 365. So the federated user isn't allowed to sign in.
 
-        Office 365 or Azure AD will try to reach out to the AD FS service, assuming the service is reachable over the public network. We try to poll the AD FS federation metadata at regular intervals, to pull any configuration changes on AD FS, mainly the token-signing certificate info. If this process is not working, the global admin should receive a warning on the Office 365 portal about the token-signing certificate expiry and about the actions that are required to update it.
+        Office 365 or Microsoft Entra ID will try to reach out to the AD FS service, assuming the service is reachable over the public network. We try to poll the AD FS federation metadata at regular intervals, to pull any configuration changes on AD FS, mainly the token-signing certificate info. If this process is not working, the global admin should receive a warning on the Office 365 portal about the token-signing certificate expiry and about the actions that are required to update it.
 
         You can use `Get-MsolFederationProperty -DomainName <domain>` to dump the federation property on AD FS and Office 365. Here you can compare the TokenSigningCertificate thumbprint, to check whether the Office 365 tenant configuration for your federated domain is in sync with AD FS. If you find a mismatch in the token-signing certificate configuration, run the following command to update it:
 
@@ -324,18 +324,18 @@ _Original KB number:_ &nbsp; 3079872
 
         In a scenario where you have multiple TLDs (top-level domains), you might have logon issues if the Supportmultipledomain switch wasn't used when the RP trust was created and updated. For more information, see [SupportMultipleDomain switch, when managing SSO to Office 365](/archive/blogs/abizerh/supportmultipledomain-switch-when-managing-sso-to-office-365).
 
-   - Make sure that token encryption isn't being used by AD FS or STS when a token is issued to Azure AD or to Office 365.
+   - Make sure that token encryption isn't being used by AD FS or STS when a token is issued to Microsoft Entra ID or to Office 365.
 6. There are stale cached credentials in Windows Credential Manager.
 
     Sometimes during login in from a workstation to the portal (or when using Outlook), when the user is prompted for credentials, the credentials may be saved for the target (Office 365 or AD FS service) in the Windows Credentials Manager (`Control Panel\User Accounts\Credential Manager`). This helps prevent a credentials prompt for some time, but it may cause a problem after the user password has changed and the credentials manager isn't updated. In that scenario, stale credentials are sent to the AD FS service, and that's why authentication fails. Removing or updating the cached credentials, in Windows Credential Manager may help.
 
 7. Make sure that Secure Hash Algorithm that's configured on the Relying Party Trust for Office 365 is set to SHA1.
 
-    When the trust between the STS/AD FS and Azure AD/Office 365 is using SAML 2.0 protocol, the Secure Hash Algorithm configured for digital signature should be SHA1.
+    When the trust between the STS / AD FS and Microsoft Entra ID / Office 365 is using SAML 2.0 protocol, the Secure Hash Algorithm configured for digital signature should be SHA1.
 
 8. If none of the preceding causes apply to your situation, create a support case with Microsoft and ask them to check whether the User account appears consistently under the Office 365 tenant. For more information, see [A federated user is repeatedly prompted for credentials during sign-in to Office 365, Azure or Intune](/office365/troubleshoot/sign-In/federated-user-repeatedly-prompted-for-credentials).
 
-9. Depending on which cloud service (integrated with Azure AD) you are accessing, the authentication request that's sent to AD FS may vary. For example: certain requests may include additional parameters such as Wauth or Wfresh, and these parameters may cause different behavior at the AD FS level.
+9. Depending on which cloud service (integrated with Microsoft Entra ID) you are accessing, the authentication request that's sent to AD FS may vary. For example: certain requests may include additional parameters such as Wauth or Wfresh, and these parameters may cause different behavior at the AD FS level.
 
     We recommend that AD FS binaries always be kept updated to include the fixes for known issues. For more information about the latest updates, see the following table.
 

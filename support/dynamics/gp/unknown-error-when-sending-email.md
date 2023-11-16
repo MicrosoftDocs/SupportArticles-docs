@@ -39,4 +39,4 @@ Verify that all of the addresses listed in the "Have replies sent to" are valid 
 
 ## More information
 
-See [When trying to email a Word Template you get the following message: An unknown error has occurred](https://community.dynamics.com/gp/b/dynamicsgp/archive/2011/10/04/when-trying-to-email-a-word-template-you-get-the-following-message-an-unknown-error-has-occurred) article with additional troubleshooting steps.
+See [When trying to email a Word Template you get the following message: An unknown error has occurred](https://community.dynamics.com/blogs/post/?postid=96a2539e-2b0d-45be-9e1c-f3dfc29e383b) article with additional troubleshooting steps.

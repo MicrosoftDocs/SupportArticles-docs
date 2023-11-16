@@ -7,7 +7,7 @@ ms.topic: how-to
 ---
 # Use Visual C# to read XML data from a URL
 
-This article shows you how to use the `XmlTextReader` class to read XML from a URL. The streamed information can come from kinds of sources, such as a byte stream from a server, a file, or a `TextReader` class.
+This article shows you how to use the `XmlTextReader` class to read XML from a URL. The streamed information can come from all kinds of sources, such as a byte stream from a server, a file, or a `TextReader` class.
 
 _Original product version:_ &nbsp; Visual Studio  
 _Original KB number:_ &nbsp; 307643

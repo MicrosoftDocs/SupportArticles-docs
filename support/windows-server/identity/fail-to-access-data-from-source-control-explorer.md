@@ -1,7 +1,7 @@
 ---
 title: Can't access AD data from Source Control Explorer
 description: Provides a solution to solve an error that occurs when you access Active Directory information from Team Foundation Server Source Control Explorer.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

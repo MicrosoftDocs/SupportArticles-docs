@@ -1,7 +1,7 @@
 ---
 title: Windows 10 upgrade error codes
 description: Understand the error codes that may come up if something goes wrong during the Windows 10 upgrade process.
-ms.date: 03/13/2023
+ms.date: 04/28/2023
 manager: dcscontentpm
 ms.author: aaroncz
 ms.prod: windows-client
@@ -144,6 +144,10 @@ The following tables provide the corresponding phase and operation for values of
 |20|SP_EXECUTION_OP_ADD_PROVISIONING_PACKAGE|
 
 For example: An extend code of 0x4000D, represents a problem during phase 4 (0x4) with data migration (000D).
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).
 
 ## More information
 

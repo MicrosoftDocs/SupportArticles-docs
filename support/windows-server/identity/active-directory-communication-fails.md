@@ -1,7 +1,7 @@
 ---
 title: Active Directory communication fails
 description: Describes an issue in which Active Directory communication, including replication fails intermittently.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

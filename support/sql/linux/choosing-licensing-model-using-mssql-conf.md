@@ -4,7 +4,6 @@ description: This article describes how to choose a licensing model for SQL Serv
 ms.date: 11/02/2020
 ms.custom: sap:SQL Server on Linux
 ms.topic: how-to
-ms.prod: sql
 ---
 # Choose a licensing model for SQL Server on Linux
 

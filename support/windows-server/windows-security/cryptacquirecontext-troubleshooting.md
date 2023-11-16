@@ -1,7 +1,7 @@
 ---
 title: Use and troubleshoot CryptAcquireContext function
 description: Provides information about when to use specific flags when you call CryptAcquireContext and the reasons for using these flags.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

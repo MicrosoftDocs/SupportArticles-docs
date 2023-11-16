@@ -4,7 +4,6 @@ description: This article provides a method to test the accuracy of the PDW stat
 ms.date: 07/22/2020
 ms.custom: sap:Parallel Data Warehouse (APS)
 ms.topic: how-to
-ms.prod: sql
 ---
 # Evaluate PDW statistics accuracy
 

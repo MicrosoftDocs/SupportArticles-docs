@@ -1,7 +1,7 @@
 ---
 title: UserAccountControl property flags
 description: Describes information about using the UserAccountControl attribute to manipulate user account properties.
-ms.date: 3/24/2022
+ms.date: 07/17/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes information about using the **UserAccountControl** attribute to manipulate user account properties.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2 , Windows Server 2016, Windows Server 2019, Windows Server 2022  
 _Original KB number:_ &nbsp; 305144
 
 ## Summary
@@ -114,3 +114,13 @@ Here are the default UserAccountControl values for the certain objects:
 - Typical user: 0x200 (512)
 - Domain controller: 0x82000 (532480)
 - Workstation/server: 0x1000 (4096)
+- Trust: 0x820 (2080)
+
+> [!NOTE]
+> A Windows trust account is exempt from having a password through PASSWD_NOTREQD UserAccountControl attribute value because trust objects don't use the traditional password policy and password attributes in the same way as user and computer objects.
+>
+> Trust secrets are represented by special attributes on the interdomain trust accounts, indicating the direction of the trust.  Inbound trust secrets are stored in the trustAuthIncoming attribute, on the "trusted" side of a trust. Outbound trust secrets are stored in the trustAuthOutgoing attribute, on the "trusting" end of a trust.
+>
+> - For two-way trusts the INTERDOMAIN_TRUST_ACCOUNT object on each side of the trust will have both set.
+> - Trust secrets are maintained by the domain controller which is the primary domain controller (PDC) emulator Flexible Single Master Operation (FSMO) role in the trusting domain.
+> - For this reason the PASSWD_NOTREQD UserAccountControl attribute is set on INTERDOMAIN_TRUST_ACCOUNT accounts by default.

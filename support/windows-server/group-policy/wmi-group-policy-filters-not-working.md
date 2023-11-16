@@ -1,7 +1,7 @@
 ---
 title: WMI Group Policy filters don't work
 description: Describes an issue in which Windows 10 builds are excluded from WMI filter results.
-ms.date: 9/24/2021
+ms.date: 05/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -61,3 +61,7 @@ To fix this issue, use a filter that resembles the following example.
 ```console
 Select BuildNumber from Win32_OperatingSystem WHERE BuildNumber >= 10000 AND BuildNumber LIKE "%[123456789][0123456789][0123456789][0123456789][0123456789]%" OR BuildNumber >= 9200 AND BuildNumber LIKE "%[123456789][0123456789][0123456789][0123456789]%"
 ```
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-user-experience.md#wmi).

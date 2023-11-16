@@ -1,7 +1,7 @@
 ---
 title: User Profiles and Folder Redirection group policies aren't applied
 description: Addresses an issue that prevents User Profiles and folder redirection group policies from working in SCCM.
-ms.date: 1/20/2022
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -31,3 +31,7 @@ To work around this issue, disable the **Enable User Data and Profiles** device 
 :::image type="content" source="media/folder-redirection-group-policy-not-applied/enable-user-data-and-profiles-option.png" alt-text="Set the Enable User Data and Profiles option to No.":::
 
 For more information, see [Create user data and profiles configuration items in Configuration Manager](/mem/configmgr/compliance/deploy-use/create-user-data-and-profiles-configuration-items).
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Group Policy issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-group-policy.md).

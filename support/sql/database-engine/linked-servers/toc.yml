@@ -1,0 +1,13 @@
+items: 
+- name: Configuring permissions to access remote data
+  href: configure-permissions-access-remote-data.md
+- name: Crashes when you run an Oracle linked server query
+  href: crashes-run-oracle-linked-server-query.md
+- name: Decreased performance when querying view across linked servers
+  href: decreased-performance-linkedserver-views.md
+- name: Pass a variable to a linked server query
+  href: pass-variable-linked-server-query.md
+- name: Set up and troubleshoot a linked server to an Oracle database
+  href: set-up-troubleshoot-linked-server.md
+- name: Unable to begin a distributed transaction
+  href: error-message-ole-db-provider.md

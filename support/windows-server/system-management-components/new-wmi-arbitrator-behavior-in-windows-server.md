@@ -1,7 +1,7 @@
 ---
 title: New WMI arbitrator behavior in Windows Server
 description: Introduces new WMI arbitrator behavior in Windows Server 2016 and 2012 R2 introduced by March 2018 Windows cumulative updates.
-ms.date: 9/24/2021
+ms.date: 05/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -49,3 +49,7 @@ These are the two possible scenarios:
 - The cumulative memory usage in the arbitrator buffer reaches the 256-MB threshold.
 
     WMI service will start the cleanup process that cancels queries, enumerations, or ESS tasks/requests that hold memory in Winmgmt. When this cleanup occurs, an event ID 5858 is logged in the WMI-Activity/Operational log with the possible cause "Throttling Idle/stack Tasks in hitting Max Memory quota."
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-user-experience.md#wmi).

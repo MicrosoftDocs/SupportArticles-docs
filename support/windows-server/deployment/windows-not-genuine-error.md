@@ -1,7 +1,7 @@
 ---
 title: Error 0x80070005 when you log on to computer
 description: Describes a problem in which you receive an error (Windows is not genuine. Your computer might not be running a counterfeit copy of Windows. 0x80070005) in Windows. Provides resolutions.
-ms.date: 12/9/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -223,3 +223,7 @@ Check whether the problem is fixed. If the problem is fixed, you're finished wit
 #### Advanced information
 
 Because the Licensing service uses Plug and Play to obtain hardware ID information and binds the license to the computer, this setting can result in an activated system appearing to be out of tolerance. The default permissions of the Plug and Play policy don't grant the Licensing service the appropriate rights to access the Plug and Play service. The Licensing service runs under the Network Service account.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

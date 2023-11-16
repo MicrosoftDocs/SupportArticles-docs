@@ -1,7 +1,7 @@
 ---
 title: Fail to activate Windows Server over the Internet
 description: Provides help to solve an error that occurs when you activate Windows Server 2003 over the Internet fails.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -106,3 +106,7 @@ Because other issues may generate error message number 32777, you can view the S
 *\<DateTime>*,d:\dnsrv\base\ntsetup\oobe\msobmain\msobmain.cpp,311,,Windows Product Activation error.  
 *\<DateTime>*,d:\dnsrv\base\ntsetup\oobe\msobmain\msobmain.cpp,313,,ReturnActivationStatus: Status = 7, Detail = 32777  
 *\<DateTime>*,OOBE Trace,0,,Activation failed. Error = 7
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

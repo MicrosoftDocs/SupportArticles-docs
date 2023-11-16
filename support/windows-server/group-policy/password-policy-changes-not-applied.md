@@ -1,7 +1,7 @@
 ---
 title: Password policy changes aren't applied
 description: Provides a solution to an issue where the changes aren't applied as expected when you change the password policy.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -47,3 +47,7 @@ This behavior is by design.
 ## More information
 
 In Windows 2000, password policies are read-only at the domain level. The policy must be applied to the domain controllers for the policy to be applied. If you initiate a password change for a domain password from anywhere in the domain, the change actually occurs on a domain controller.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Group Policy issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-group-policy.md).

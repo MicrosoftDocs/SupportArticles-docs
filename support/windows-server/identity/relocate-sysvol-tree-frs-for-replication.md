@@ -1,7 +1,7 @@
 ---
 title: Relocate a SYSVOL tree
 description: Describes two options for moving the SYSVOL tree on your domain controller. You can use the Active Directory Installation Wizard, or you can edit the registry and manually move the SYSVOL tree.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -55,7 +55,7 @@ To estimate the required time for a network-based promotion, compare the start a
 
 In the life cycle of a domain controller that is using the File Replication Service (FRS), you may have to relocate the SYSVOL tree to a different logical or physical drive. You may relocate the SYSVOL tree to enhance system performance or to obtain more free disk space for the SYSVOL tree or for the FRS staging folder.
 
-For more information about changing the FRS staging folder to a location that is independent of the SYSVOL tree, see [How to reset the File Replication service staging folder to a different logical drive](/troubleshoot/windows-server/networking/move-frs-staging-folder-to-different-drive).
+For more information about changing the FRS staging folder to a location that is independent of the SYSVOL tree, see [How to reset the File Replication service staging folder to a different logical drive](../networking/move-frs-staging-folder-to-different-drive.md).
 
 To move a SYSVOL tree to a new drive, use one of the following options:
 
@@ -117,7 +117,7 @@ To manually move the SYSVOL tree, move the SYSVOL tree from its drive and path t
     > [!NOTE]
     > If the domain controller hosts any FRS-replicated DFS roots or links, you may want to set the replica set-specific **BurFlags** registry key to prevent a temporary service outage and re-replication of data in FRS-replicated DFS roots or links.
 
-    For more information, see [Use the BurFlags registry key to reinitialize File Replication Service](/troubleshoot/windows-server/networking/use-burflags-to-reinitialize-frs).
+    For more information, see [Use the BurFlags registry key to reinitialize File Replication Service](../networking/use-burflags-to-reinitialize-frs.md).
 
 8. Apply default permissions to the new path of the SYSVOL tree. To do this task, copy the following text, and then paste it in a Notepad file:
 

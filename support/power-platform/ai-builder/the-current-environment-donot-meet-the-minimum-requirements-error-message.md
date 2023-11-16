@@ -3,7 +3,7 @@ title: The current environment doesn't meet the minimum requirements
 description: Provides a resolution for the error that the current environment doesn't meet the minimum requirements.
 ms.reviewer: angieandrews
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: 
 ms.author: angieandrews
 author: v-aangie

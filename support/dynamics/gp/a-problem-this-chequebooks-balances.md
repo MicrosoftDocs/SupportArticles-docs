@@ -190,4 +190,4 @@ The following content is additional information to note on the SQL tables involv
 
 ## More information
 
-The above information was published externally in [Cashbook Management Reconciliation Error: "There is a problem with this Chequebook's balances"](https://community.dynamics.com/gp/b/dynamicsgp/archive/2015/04/28/gp-dynamics-cashbook-management-reconciliation-error-quot-there-is-a-problem-with-this-chequebook-39-s-balances-quot).
+The above information was published externally in [Cashbook Management Reconciliation Error: "There is a problem with this Chequebook's balances"](https://community.dynamics.com/blogs/post/?postid=e9e4c726-6147-406e-80d6-0d049696a3c0).

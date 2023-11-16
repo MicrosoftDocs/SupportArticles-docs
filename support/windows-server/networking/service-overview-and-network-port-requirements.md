@@ -1,7 +1,7 @@
 ---
 title: Service overview and network port requirements
 description: A roadmap of ports, protocols, and services that are required by Microsoft client and server operating systems, server-based applications, and their subcomponents to function in a segmented network.
-ms.date: 2/8/2023
+ms.date: 11/09/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -184,6 +184,8 @@ System service name: **ClusSvc**
 |---|---|---|
 |Cluster Service|UDP and DTLS¹|3343|
 |Cluster Service|TCP|3343 (This port is required during a node join operation.)|
+|Cluster Service|ICMP|Echo port (This port is required during a node join operation from the **Add Node Wizard**.)|
+|Cluster Service|TCP|445 (This port is required during a node join operation from the **Add Node Wizard**.)|
 |RPC|TCP|135|
 |Cluster Administrator|UDP|137|
 |Randomly allocated high ports²|TCP|Random port number between 49152 and 65535|

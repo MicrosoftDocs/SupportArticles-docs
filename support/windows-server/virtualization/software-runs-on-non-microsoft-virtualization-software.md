@@ -1,7 +1,7 @@
 ---
 title: Run programs on non-Microsoft hardware virtualization software
 description: Describes the type of support that Microsoft provides for programs that are run in a virtual environment.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -42,8 +42,8 @@ Where issues are confirmed to be unrelated to the non-Microsoft hardware virtual
 
 ## Reference
 
-For more information about the support policy for running Microsoft server software in supported virtualization environments, see [Microsoft server software and supported virtualization environments](/troubleshoot/windows-server/virtualization/microsoft-server-software-support-policy).
+For more information about the support policy for running Microsoft server software in supported virtualization environments, see [Microsoft server software and supported virtualization environments](microsoft-server-software-support-policy.md).
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
 
-For more information about third-party vendors who will support virtualization software, see [Support partners for non-Microsoft hardware virtualization software](/troubleshoot/windows-server/virtualization/non-microsoft-hardware-virtualization-software).
+For more information about third-party vendors who will support virtualization software, see [Support partners for non-Microsoft hardware virtualization software](non-microsoft-hardware-virtualization-software.md).

@@ -1,7 +1,7 @@
 ---
 title: Can't use ImageX.exe as backup tool
 description: Describes the reasons why you cannot use the ImageX.exe tool as a backup tool
-ms.date: 09/21/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -33,3 +33,7 @@ Although the ImageX.exe tool may appear to be a mechanism to create an image of 
 - Symbolic links and junctions are automatically updated which in some scenarios such as Single Instance Storage(SIS) could lead to reparse points that contain NTFS file id's could be pointing to incorrect locations  
 
 Microsoft recommends you use Windows backup, Windows Server backup, or other tool designed specifically for backup to make a full system image backup.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

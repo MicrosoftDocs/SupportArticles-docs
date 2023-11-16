@@ -1,7 +1,7 @@
 ---
 title: Use the Disk Management Snap-in
 description: Describes how to use the Disk Management Snap-in to manage Basic and Dynamic Disks.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

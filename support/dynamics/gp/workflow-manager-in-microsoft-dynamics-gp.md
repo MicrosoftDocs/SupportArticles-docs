@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 4053565
 
 The **Workflow Manager** for all workflow types will function the same. Being the workflow manager primarily makes your user the failsafe approver for when a workflow doesn't meet any conditions and is required t o be assigned to someone. There is a brief explanation in the GP 2013 R2 new feature documentation for Workflow.
 
-[New Workflow in Microsoft Dynamics GP 2013 R2](https://community.dynamics.com/gp/b/dynamicsgp/posts/new-workflow-in-microsoft-dynamics-gp-2013-r2)
+[New Workflow in Microsoft Dynamics GP 2013 R2](https://community.dynamics.com/blogs/post/?postid=fd778606-5dff-4cba-9c13-56febce618af)
 
 Here is an expanded explanation of what the Workflow Manager is able to do:
 

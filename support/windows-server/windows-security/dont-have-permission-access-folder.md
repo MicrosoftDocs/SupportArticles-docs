@@ -1,7 +1,7 @@
 ---
 title: Continue dialog box for folder access in Windows Explorer when user only has access with elevated token
 description: Describes an issue in which your user ID is added to the ACL list for a directory that you don't have permissions, and you receive an access denied message when accessing a folder which you don't have read permissions with Windows Explorer.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -45,7 +45,7 @@ However, if the user selects **Continue** and the folder's current security desc
 
 This feature may cause unexpected behavior. For example, assume that you belong to the Administrators group and that you use Windows Explorer to access a folder that requires administrative access. After the permissions have been changed, any program that's running through your user account can have full control of the folder, even if the program isn't elevated and even after your account has been removed from the Administrators group. Such altered permissions may violate an organization's security policies and may be flagged in a security audit. Additionally, if a program verifies file system permissions, it may refuse to run if the permissions have been changed.
 
-UAC should remain enabled in all cases except under the constrained circumstances that are described in [How to disable User Account Control (UAC) on Windows Server](/troubleshoot/windows-server/windows-security/disable-user-account-control).
+UAC should remain enabled in all cases except under the constrained circumstances that are described in [How to disable User Account Control (UAC) on Windows Server](disable-user-account-control.md).
 
 ## Workaround 1
 

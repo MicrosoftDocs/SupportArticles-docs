@@ -10,7 +10,7 @@ ms.subservice: authentication
 
 This article describes the conditions in which Active Directory Federation Services (AD FS) doesn't behave as expected when you sign in to Office 365 services by using a single sign-on (SSO)-enabled user ID.
 
-_Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Azure Active Directory, Microsoft Intune, Azure Backup, Office 365 Identity Management  
+_Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 Identity Management  
 _Original KB number:_ &nbsp; 2715326
 
 ## Symptoms

@@ -54,7 +54,7 @@
       - name: Increase networking limits
         href: /azure/azure-portal/supportability/networking-quota-requests?context=/troubleshoot/azure/virtual-machines/context/context
 
-- name: Troubleshoot Cannot connect to my VM
+- name: Cannot connect to my VM
   items:
   - name: Linux
     items:
@@ -68,8 +68,8 @@
       href: azure-linux-vm-uefi-boot-failures.md
     - name: Network issues
       href: cannot-connect-linux-network.md
-    - name: SSH connection
-      href: connect-linux-vm-sshconnection.md
+    - name: SSH connection fails due to permission and ownership issues
+      href: linux-vm-sshconnectionissue-perms.md
     - name: SSH troubleshooting
       href: troubleshoot-ssh-connection.md
     - name: Reset network interface for Azure Linux VM
@@ -145,20 +145,21 @@
   - name: Application access issues
     href: troubleshoot-app-connection.md
 
-- name: Troubleshoot VM password reset
+- name: VM password reset
   items:
   - name: Windows
     href: reset-local-password-without-agent.md
   - name: Linux
     href: reset-password.md
 
-- name: Troubleshoot VM is not booting
+- name: VM is not booting
   items:
     - name: Linux
       items:
         - name: Serial Console for Linux
           href: serial-console-linux.md
         - name: Linux - Specific scenarios
+          href: boot-error-troubleshoot-linux.md
           items:
             - name: Troubleshoot file system errors
               href: linux-recovery-cannot-start-file-system-errors.md
@@ -203,14 +204,13 @@
             href: boot-error-disk-read-error-occurred.md
           - name: BitLocker errors
             href: troubleshoot-bitlocker-boot-error.md
-          - name: Checking file system errors
           - name: Troubleshoot directory service initialization failure
             href: troubleshoot-directory-service-initialization-failure.md
           - name: Critical process disabled
             href: troubleshoot-guide-critical-process-died.md
           - name: Critical service failed
             href: troubleshoot-critical-service-failed-boot-error.md
-          - name: Troubleshoot boot error - Status not found
+          - name: Troubleshoot boot error 0xC0000225 - Status not found
             href: boot-error-status-not-found.md
           - name: Troubleshoot Windows could not finish configuring the system
             href: windows-could-not-configure-system.md
@@ -253,8 +253,6 @@
           - name: Windows stop error - System thread exception not handled
             href: windows-stop-error-system-thread-exception-not-handled.md
           - name: Can't boot with 0xc000000f
-            href: error-code-0xc000000f.md
-          - name: Unable to boot with 0xc000000f
             href: boot-error-0xc000000f.md
           - name: Can't boot with 0xc00000ba
             href: boot-error-0xc00000ba.md
@@ -268,8 +266,6 @@
             href: boot-error-0xc0000098.md
           - name: Can't boot with 0xC0000102
             href: error-code-0xC0000102-status-file-corrupt.md
-          - name: Can't boot with 0xc0000225
-            href: boot-error-0xc0000225.md
           - name: Can't boot with 0xc0000359
             href: boot-error-0xc0000359.md
           - name: Can't boot with 0xc000000e
@@ -288,12 +284,14 @@
             href: os-bucket-boot-failure.md
           - name: VM stops at "Please wait for the Group Policy Client" screen
             href: vm-stops-at-please-wait-for-group-policy-client.md
+          - name: VM stops at "Checking file system" screen
+            href: troubleshoot-check-disk-boot-error.md
           - name: Azure VM cannot RDP - driver IRQL not less or equal
             href: azure-vm-cannot-rdp-driver-irql-not-less-equal.md
           - name: Azure VM cannot RDP - working on features
             href: azure-vm-cannot-rdp-working-features.md
 
-- name: Troubleshoot VM performance
+- name: VM performance
   items:
   - name: Performance diagnostics (PerfInsights)
     items:
@@ -326,26 +324,26 @@
     - name: Poor performance on Windows Server 2012 R2
       href: poor-performance-emulated-storage-stack.md
 
-- name: Troubleshoot VM allocation failures
+- name: VM allocation failures
   items:
   - name: Allocation failures
     href: allocation-failure.md
   - name: Classic allocation failures
     href: allocation-failure-classic.md
 
-- name: Understanding planned maintenance
+- name: VM planned maintenance
   items:
   - name: Overview
     href: /azure/virtual-machines/maintenance-notifications?context=/troubleshoot/azure/virtual-machines/context/context
 
-- name: Troubleshoot VM unexpected restarts
+- name: VM restarts
   items:
     - name: Understand a system reboot
       href: understand-vm-reboot.md
     - name: Unexpected reboots of VMs with attached VHDs
       href: unexpected-reboots-attached-vhds.md
 
-- name: Troubleshoot VM deployment failures
+- name: VM deployment failures
   items:
   - name: VM deployment issues
     href: welcome-deployment-troubleshooting.yml
@@ -376,7 +374,7 @@
     - name: Upgrade to SLES 15 SP1
       href: linux-upgrade-suse-15sp1.md
 
-- name: Troubleshoot cannot start or stop VM
+- name: VM cannot start or stop VM
   items:
   - name: Understanding VM lifecycle and states
     href: /azure/virtual-machines/states-billing?context=/troubleshoot/azure/virtual-machines/context/context
@@ -401,7 +399,14 @@
       - name: Restarting, shutting down, or stopping services
         href: boot-error-troubleshoot-windows.md
 
-- name: Troubleshoot VM extensions
+- name: VM health
+  items:
+  - name: HealthResources table in Resource Graph has missing entries
+    href: healthresources-table-resource-graph-missing-entries.md
+  - name: VM availability might be inaccurate during restart
+    href: inaccurate-vm-availability-during-vm-restart.md
+
+- name: VM agent and extensions
   items:
   - name: Azure cloud-init support for Linux VMs
     href: cloud-init-support-linux-vms.md
@@ -415,6 +420,8 @@
     href: extensions-stop-running.md
   - name: Minimum version support for agents
     href: support-extensions-agent-version.md
+  - name: Multiple certificates on IaaS VM that uses extensions
+    href: multiple-certificates-iaas-vm-extensions.md
   - name: Previous command is re-run
     href: customscript-reruns-previous-command.md
   - name: Supported extensions
@@ -431,13 +438,19 @@
     href: /azure/virtual-machines/extensions/troubleshoot?context=/troubleshoot/azure/virtual-machines/context/context
   - name: Install Windows VM agent offline
     href: install-vm-agent-offline.md
+  - name: Troubleshoot extension certificate issues on Windows VM
+    href: troubleshoot-extension-certificates-issues-windows-vm.md
   - name: Troubleshoot Windows VM agent
     href: windows-azure-guest-agent.md
   - name: Troubleshoot Linux VM agent
     href: linux-azure-guest-agent.md
 
-- name: Troubleshoot disk management
+- name: Disk management
   items:
+  - name: Resizing disks
+    items:
+      - name: Downsize a data disk without losing data
+        href: downsize-data-disk-without-losing-data.md
   - name: Overview
     href: /azure/virtual-machines/managed-disks-overview?context=/troubleshoot/azure/virtual-machines/context/context
   - name: FAQ
@@ -455,14 +468,16 @@
   - name: VHD is not supported when you create a VM in Azure
     href: vhd-not-supported-vm-azure.md
 
-- name: Troubleshoot Windows activation
+- name: Windows activation
   items:
-  - name: Windows activation problems
+  - name: Troubleshoot Windows activation problems
     href: troubleshoot-activation-problems.md
-  - name: Activation problem with forced tunneling
+  - name: Activation fails in forced tunneling scenario
     href: custom-routes-enable-kms-activation.md
+  - name: Windows activation - Two new KMS endpoints
+    href: windows-activation-stopped-working.md
 
-- name: Troubleshoot Azure disk encryption
+- name: Azure disk encryption
   items:
   - name: Windows
     items:
@@ -481,15 +496,15 @@
     - name: FAQ
       href: /azure/virtual-machines/linux/disk-encryption-faq?context=/troubleshoot/azure/virtual-machines/context/context
 
-- name: Troubleshoot Azure Compute Gallery
+- name: Azure Compute Gallery
   items:
-  - name: Troubleshoot Azure Compute Gallery - Windows/Linux
+  - name: Windows/Linux troubleshooting
     href: /azure/virtual-machines/troubleshooting-shared-images?context=/troubleshoot/azure/virtual-machines/context/context
 
-- name: Troubleshoot Azure Backup
+- name: Azure Backup
   href: /azure/backup/backup-azure-vms-troubleshoot?context=/troubleshoot/azure/virtual-machines/context/context
 
-- name: Troubleshoot On-demand Capacity Reservation issues
+- name: On-demand Capacity Reservation issues
   items:
   - name: Can't deploy Virtual Machines or Virtual Machine Scale Sets (Uniform) with Capacity Reservation
     href: capacity-reservation-cant-deploy-vm-vmss.md
@@ -502,10 +517,10 @@
   - name: A Capacity Reservation is in a "Failed" provisioning state
     href: capacity-reservation-failed-provisioning-state.md
 
-- name: Troubleshoot Azure Virtual Desktop
+- name: Azure Virtual Desktop
   href: how-to-videos-windows-virtual-desktop.md
 
-- name: Help with Linux administration
+- name: Linux administration
   items:
   - name: Configure multiple NICs
     href: linux-vm-multiple-virtual-network-interfaces-configuration.md
@@ -514,7 +529,7 @@
   - name: Maximum RAM memory of Linux VM
     href: max-linux-ram-limited-64-gb.md
 
-- name: Help with Linux repositories
+- name: Linux repositories
   items:
   - name: SUSE
     items:
@@ -526,6 +541,7 @@
       href: troubleshoot-linux-rhui-certificate-issues.md
 
 - name: Remote troubleshooting for VM tools
+  href: remote-tools-troubleshoot-azure-vm-issues.md
   items:
     - name: Custom Script Extension or Run Command
       items:

@@ -1,0 +1,25 @@
+items:
+- name: Cannot toggle results pane
+  href: cannot-toggle-results-pane.md
+- name: Error when you try to read error log
+  href: error-you-try-to-read-error-log.md
+- name: Failed to retrieve data for this request 
+  href: error-click-databases-node.md
+- name: Object Explorer intermittently crashes
+  href: object-explorer-intermittently-crashes.md
+- name: OutofMemoryException when executing a query
+  href: exception-you-execute-query.md
+- name: Saving changes is not permitted error message
+  href: error-when-you-save-table.md
+- name: Unable to modify table - Timeout Expired
+  href: error-modify-large-table-using-ssms.md
+- name: Uninstall SQL Server Management Studio
+  href: uninstall-management-studio.md
+- name: Various errors when updating rows in a table
+  href: error-use-ssms-update-row-table.md
+- name: SQL Agent (Jobs, Alerts, Operators)
+  items:
+  - name: Agent job may fail with error 65535
+    href: agent/agent-job-fail-error-65535-782-7437.md
+  - name: Policy-Based Management generates alerts
+    href: agent/34052-error-pbm-generates-alerts.md

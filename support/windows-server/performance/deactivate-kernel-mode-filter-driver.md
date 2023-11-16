@@ -1,7 +1,7 @@
 ---
 title: Deactivate the kernel mode filter driver
 description: Describes how you can temporarily deactivate the kernel mode filter driver in Windows.
-ms.date: 3/24/2022
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -115,3 +115,7 @@ The following table lists valid settings and their description for the driver's 
 |Type|8 = SERVICE_RECOGNIZER_DRIVER|File system recognizer driver.|
   
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

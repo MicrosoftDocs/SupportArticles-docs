@@ -8,7 +8,7 @@ ms.reviewer: kaushika, jarrettr
 
 This article helps you fix an issue in which the Configuration Manager console is slow or the SQL query times out for certain Configuration Manager database queries.
 
-_Original product version:_ &nbsp; SQL Server 2017 on Windows (all editions), SQL Server 2016 Enterprise, SQL Server 2016 Standard, SQL Server 2014 Enterprise, SQL Server 2014 Standard, System Center Configuration Manager  
+_Original product version:_ &nbsp; SQL Server 2022 on Windows (all editions), SQL Server 2019 on Windows (all editions), SQL Server 2017 on Windows (all editions), SQL Server 2016 Enterprise, SQL Server 2016 Standard, SQL Server 2014 Enterprise, SQL Server 2014 Standard, System Center Configuration Manager  
 _Original KB number:_ &nbsp; 3196320
 
 ## Symptoms
@@ -25,6 +25,8 @@ In affected environments, Configuration Manager may run better when the site dat
 
 |SQL Server version|Supported compatibility level values|Recommended compatibility level for Configuration Manager|Recommended level for specific performance issues|
 |---|---|---|---|
+|SQL Server 2022|150, 140, 130, 120, 110|150|110|
+|SQL Server 2019|150, 140, 130, 120, 110|150|110|
 |SQL Server 2017|140, 130, 120, 110|140|110|
 |SQL Server 2016|130, 120, 110|130|110|
 |SQL Server 2014|120, 110|110|110|

@@ -3,7 +3,6 @@ title: Error when you update a row of a table
 description: This article provides a workaround for the problem that occurs when you try to update a table by using SQL Server Management Studio in SQL Server.
 ms.date: 11/19/2020
 ms.custom: sap:Management Studio
-ms.prod: sql
 ---
 # You may receive an error message when you try to use SQL Server Management Studio to update a row of a table in SQL Server
 

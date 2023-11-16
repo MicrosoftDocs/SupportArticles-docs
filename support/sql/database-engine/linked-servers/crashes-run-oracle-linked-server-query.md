@@ -4,7 +4,6 @@ description: This article provides workarounds to the problem that occurs when y
 ms.date: 01/07/2022
 ms.custom: sap:Administration and Management
 ms.reviewer: ramakoni
-ms.prod: sql
 ---
 # SQL Server service crashes when you run an Oracle linked server query
 

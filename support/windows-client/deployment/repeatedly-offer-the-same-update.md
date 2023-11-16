@@ -1,7 +1,7 @@
 ---
 title: Windows Update repeatedly offers the same update
 description: Describes how to troubleshoot the problem where you are repeatedly offered the same update in Windows Update or Microsoft Update.
-ms.date: 10/13/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -47,3 +47,7 @@ To check your update history, follow these steps.
     4. Right-click an update that has a status of **Failed**, and then select **View Details**. The window that opens displays the error code for that update. If this problem persists, post this issue to the [Microsoft Communities](https://answers.microsoft.com/?auth=1).
 
     You can also check the [telephone number to contact Microsoft Support](https://support.microsoft.com/contactus/) for help. Charges may apply.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

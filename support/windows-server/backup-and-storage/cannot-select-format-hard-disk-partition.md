@@ -1,7 +1,7 @@
 ---
 title: Can't select or format hard disk partition
 description: Describes a problem that may occur when you try to install Windows.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

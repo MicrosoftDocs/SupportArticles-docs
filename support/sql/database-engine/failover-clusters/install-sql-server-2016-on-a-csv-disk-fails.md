@@ -4,7 +4,6 @@ description: Provides a workaround for permissions problem that occurs when you 
 ms.date: 07/22/2020
 ms.custom: sap:High Availability and Disaster Recovery features
 ms.reviewer: Mnilson, cmathews
-ms.prod: sql
 ---
 # Error occurs when you install SQL Server 2016 on a Cluster Shared Volume disk
 

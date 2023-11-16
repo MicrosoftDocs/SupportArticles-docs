@@ -24,15 +24,15 @@ The feature is enabled by default in Visual Studio 2019 and later versions. When
 
 Visual Studio 2019:
 
-![Screenshot of the 'XAML Hot Reload available' toolbar in Visual Studio 2019](./media/xaml-hot-reload-troubleshooting/xaml-hot-reload-available-2019.png)
+:::image type="content" source="media/xaml-hot-reload-troubleshooting/xaml-hot-reload-available-2019.png" alt-text="Screenshot of the 'XAML Hot Reload available' toolbar in Visual Studio 2019.":::
 
 Visual Studio 2022:
 
-![Screenshot of the 'XAML Hot Reload available' toolbar in Visual Studio 2022](./media/xaml-hot-reload-troubleshooting/xaml-hot-reload-available-2022.png)
+:::image type="content" source="media/xaml-hot-reload-troubleshooting/xaml-hot-reload-available-2022.png" alt-text="Screenshot of the 'XAML Hot Reload available' toolbar in Visual Studio 2022.":::
 
 If you don't see the in-app toolbar, then select **Debug** > **Options** > **XAML Hot Reload** from the Visual Studio menu bar. Next, in the **Options** dialog box, make sure that the **Enable XAML Hot Reload** option is selected.
 
-![Screenshot of the Visual Studio Debug Options window, with the Enable XAML Hot Reload option highlighted.](./media/xaml-hot-reload-troubleshooting/xaml-hot-reload-enable-2022.png)
+:::image type="content" source="media/xaml-hot-reload-troubleshooting/xaml-hot-reload-enable-2022.png" alt-text="Screenshot of the Visual Studio Debug Options window, with the Enable XAML Hot Reload option highlighted.":::
 
 ### Verify that you use Start Debugging rather than Attach to Process
 
@@ -57,6 +57,10 @@ UWP:
 
 You must either manually set the correct MSBuild property to support XAML Hot Reload (see previous section), or you must use the default build configuration name (Debug). If you don't set the MSBuild property correctly, a custom build configuration name won't work, nor will a Release build.
 
+### Ensure your program is not running elevated
+
+XAML Hot Reload is not supported in apps that run elevated/run as administrator.
+
 ### Verify that your XAML file has no errors
 
 If your XAML file shows errors in the **Error List**, then XAML Hot Reload may not work.
@@ -65,7 +69,7 @@ If your XAML file shows errors in the **Error List**, then XAML Hot Reload may n
 
 Setting the `XAML_HOT_RELOAD_ACCURACY_OVER_PERF` environment variable to `1` enables a more extensive search to update resource references and styles in WPF applications. Be aware that some applications, such as those that use third-party toolkits, can experience significant delays with XAML Hot Reload. When a delay occurs, a Hot Reload progress timer appears in Editor status bar.
 
-![Screenshot of the 'XAML Hot Reload progress timer' in Visual Studio 2022](./media/xaml-hot-reload-troubleshooting/xaml-hot-reload-long-2022.gif)
+:::image type="content" source="media/xaml-hot-reload-troubleshooting/xaml-hot-reload-long-2022.gif" alt-text="Screenshot of the 'XAML Hot Reload progress timer' in Visual Studio 2022.":::
 
 ## Known limitations
 

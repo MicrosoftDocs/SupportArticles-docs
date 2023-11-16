@@ -1,7 +1,7 @@
 ---
 title: COM+ supports collection of dump file and process termination
 description: This article introduces the new functionalities of Microsoft COM+, including automatic collection of process dump file and process termination.
-ms.date: 6/25/2021
+ms.date: 06/25/2021
 ms.custom: sap:Component development
 ms.reviewer: dave.anderson
 ms.technology: windows-dev-apps-component-dev

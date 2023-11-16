@@ -270,7 +270,7 @@ The key to remember is that you have THAT YEAR'S taxes in place when you take an
 
 - Refer to our latest blog article about ACA:
 
-   [Microsoft Dynamics GP Year-End Update 2022: Affordable Care Act (ACA)](https://community.dynamics.com/gp/b/dynamicsgp/posts/microsoft-dynamics-gp-year-end-update-2022-affordable-care-act-aca)
+   [Microsoft Dynamics GP Year-End Update 2022: Affordable Care Act (ACA)](https://community.dynamics.com/blogs/post/?postid=fc90c41e-2721-4bd4-ab84-4e013c1858ee)
 
 - In the Detailed Module Information section of the [Microsoft Dynamics GP Resource](/dynamics-gp/resources) page, select [Affordable Care Act/Year End](https://mbs2.microsoft.com/fileexchange/?fileID=b6386ed9-7351-46b2-8682-6e74ca756d1c) to see the information about complying with ACA and other information about other year-end changes.
 
@@ -278,8 +278,9 @@ The key to remember is that you have THAT YEAR'S taxes in place when you take an
 
 **Q3: Is there a year-end update for GP 2016 for this year?**
 
-Mainstream support for Microsoft Dynamics GP 2016 ended on July 13, 2021. This means that you'll no longer receive any tax or year-end updates for Microsoft Dynamics GP 2016 or previous versions. See [Lifecycle guidelines](https://community.dynamics.com/gp/b/dynamicsgp/posts/microsoft-dynamics-gp-2018-r2-and-year-end-update-lifecycle-and-upgrade-services) for all Microsoft Dynamics GP products.
+Mainstream support for Microsoft Dynamics GP 2016 ended on July 13, 2021. This means that you'll no longer receive any tax or year-end updates for Microsoft Dynamics GP 2016 or previous versions. See [Lifecycle guidelines](https://community.dynamics.com/blogs/post/?postid=dbd4de4c-deba-4f47-b3f3-5d9cef50ea0a) for all Microsoft Dynamics GP products.
 
 **Q4: Is there a year-end update for GP 2018 for this year?**
 
 Microsoft Dynamics GP 2018 users will install the Year-end Update for Dynamics GP and be brought up to the version 18 series. See [Microsoft Dynamics GP Resource Directory](/dynamics-gp/resources) for upgrade information and general guidance.
+

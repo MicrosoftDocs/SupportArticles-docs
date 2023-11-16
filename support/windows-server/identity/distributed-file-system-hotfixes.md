@@ -1,7 +1,7 @@
 ---
 title: Hotfixes for DFS technologies
 description: Lists the currently available hotfixes for Distributed File System (DFS) technologies in Windows Server 2012 and Windows Server 2012 R2.
-ms.date: 3/24/2022
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -109,6 +109,10 @@ You can get the latest fixes for these DFS components by installing the followin
 |---|---|---|
 |January 21, 2012| [KB 2663685](https://support.microsoft.com/help/2663685)| `HKLM\System\CurrentControlSet\Services\DFSR\Parameters\StopReplicationOnAutoRecovery/strong>`|
 |November 18. 2009| KB 967326| `HKLM\System\CurrentControlSet\Services\DFSR\Parameters\Settings\RpcContextHandleTimeoutMs`|
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).
 
 ## References
 

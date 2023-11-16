@@ -1,7 +1,7 @@
 ---
 title: Administrator on RDSH gets error in Licensing Diagnosis-Licenses are not available for this Remote Desktop Session Host server
 description: Describes an issue where you get an error when you click Licensing Diagnosis.
-ms.date: 9/24/2021
+ms.date: 05/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -48,3 +48,7 @@ The Licensing Diagnosis uses a WMI method to query the licensing information. Th
 ## Resolution
 
 Add the querying User Account to the local Administrators group on the Remote Desktop Licensing Server.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-user-experience.md#terminal-server-licensing).

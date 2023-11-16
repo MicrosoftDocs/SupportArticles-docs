@@ -1,7 +1,7 @@
 ---
 title: Error (This property is limited to 64 values) when adding more than 64 logon workstations
 description: Describes a problem in which you cannot add more than 64 logon workstation entries by using the user account properties on a Windows Server 2003-based computer.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

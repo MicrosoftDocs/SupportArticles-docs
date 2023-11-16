@@ -1,7 +1,7 @@
 ---
 title: Windows Server 2008 Service Pack 2
 description: Describes how to obtain the latest service pack for Windows Server 2008.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -64,3 +64,7 @@ For more information, see [Information about Service Pack 2 for Windows Vista an
 For documentation, tools, and resources to help you evaluate, deploy, and manage Windows Server 2008 SP2 on the servers in your organization, see [What's new in Windows 10 deployment](/windows/deployment/deploy-whats-new).
 
 For frequently asked questions about Windows Server 2008 Service Pack 2 and about Windows Vista Service Pack 2, see [Frequently Asked Questions: Windows Server 2008 Service Pack 2 and Windows Vista Service Pack 2](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd335038(v=ws.10)).
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

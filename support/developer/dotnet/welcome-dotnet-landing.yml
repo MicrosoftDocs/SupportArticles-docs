@@ -7,8 +7,8 @@ metadata:
   description: Landing page for .NET troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
   ms.prod: dotnet #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
-  author: sevend2 #Required; your GitHub user alias, with correct capitalization.
-  ms.author: v-sidong #Required; microsoft alias of author; optional team alias.
+  author: HaiyingYu #Required; your GitHub user alias, with correct capitalization.
+  ms.author: HaiyingYu #Required; microsoft alias of author; optional team alias.
   ms.date: 11/29/2022
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new

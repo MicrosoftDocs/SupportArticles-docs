@@ -1,7 +1,7 @@
 ---
 title: Single-application sharing with Terminal Server
 description: Describes how to set up a Terminal Server and Terminal Server Client for single-application sharing.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

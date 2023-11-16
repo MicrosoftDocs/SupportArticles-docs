@@ -1,7 +1,7 @@
 ---
 title: Event ID 4105 when RD Licensing runs
 description: Event ID 4105 occurs on a computer running Remote Desktop Licensing (RD Licensing). This issue occurs in various scenarios for which resolutions are provided.
-ms.date: 9/24/2021
+ms.date: 05/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -99,3 +99,7 @@ Use the Delegate Control Wizard to add the permissions to add read\write permiss
 4. In the **Active Directory Object Type** dialog box, click **Only the following objects in the folder**. In the list, click **User objects** (the last entry that is in the list), and then click **Next**.
 5. For forests that are running Windows Server 2008 or newer Schema, in the **Permissions** dialog box, make sure that only the **General** check box is selected. In the **Permissions** list, click to select the **Read and Write Terminal Server license server** check box, and then click **Next**.
 6. In the **Completing the Delegation of Control Wizard** dialog box, click **Finish**.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-user-experience.md#terminal-server-licensing).

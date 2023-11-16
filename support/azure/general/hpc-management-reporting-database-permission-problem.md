@@ -2,10 +2,8 @@
 title: Resolve HPC reporting database permission problem
 description: Resolve a high-performance computing (HPC) reporting database permission problem in the HPC Cluster Manager.
 ms.date: 10/17/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
 editor: v-jsitser
-ms.reviewer: cargonz
+ms.reviewer: cargonz, v-leedennis
 ms.prod: hpcpack
 #Customer intent: As a Microsoft HPC Pack user, I want to resolve a reporting database permission problem in the HPC Cluster Manager so that I can successfully use a high-performance computing (HPC) management database.
 ---

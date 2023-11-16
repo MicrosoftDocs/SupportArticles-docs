@@ -26,4 +26,4 @@ Use the DIVIDE function instead of the `/` operator in the calculation.
 
 ## References
 
-[terminDescription of the standard terminology that is used to describe Microsoft software updatesology](/troubleshoot/windows-client/deployment/standard-terminology-software-updates)
+[terminDescription of the standard terminology that is used to describe Microsoft software updatesology](../../windows-client/deployment/standard-terminology-software-updates.md)

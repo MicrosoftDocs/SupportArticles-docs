@@ -2,14 +2,12 @@
 title: Outdated cached credentials are used when you run an elevated task
 description: Helps to resolve the issue in which the outdated cached credentials are used when you run an elevated task.
 ms.date: 12/19/2022
-author: v-lianna
-ms.author: v-lianna
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika, herbertm
+ms.reviewer: kaushika, herbertm, v-lianna
 ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---

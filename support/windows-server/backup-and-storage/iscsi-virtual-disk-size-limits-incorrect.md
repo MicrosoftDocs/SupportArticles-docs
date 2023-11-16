@@ -1,7 +1,7 @@
 ---
 title: iSCSI virtual disk size limits are incorrect
 description: Resolve issues that occur when you provision new iSCSI Target virtual disks through the New iSCSI Target Virtual Disk wizard by using Server Manager File and Storage Services GUI.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

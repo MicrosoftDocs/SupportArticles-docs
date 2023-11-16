@@ -1,7 +1,7 @@
 ---
 title: COM+ application stops working when users logs off
 description: Provides a solution to an issue where a COM+ application stops working when a user logs off Windows.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

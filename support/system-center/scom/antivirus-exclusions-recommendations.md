@@ -1,12 +1,12 @@
 ---
-title: Antivirus exclusions recommendations
-description: Describes some recommendations for antivirus exclusions that relate to Operations Manager. These exclusions include process-based exclusions, directory-specific exclusions, and file name extension-specific exclusions.
-ms.date: 06/22/2020
-ms.reviewer: adoyle, adoyle
+title: Antivirus exclusions (Operations Manager 2012, 2012 R2, and 2016)
+description: Describes some antivirus exclusions that relate to Operations Manager. These exclusions include process-based exclusions, directory-specific exclusions, and file name extension-specific exclusions.
+ms.date: 04/26/2023
+ms.reviewer: adoyle, adoyle, blakedrumm
 ---
-# Recommendations for antivirus exclusions that relate to Operations Manager
+# Antivirus exclusions that relate to Operations Manager 2012, 2012 R2, and 2016
 
-This article introduces some recommendations for antivirus exclusions that relate to System Center 2012 Operations Manager, System Center 2012 R2 Operations Manager, and System Center 2016 Operations Manager. For later versions of Operations Manager, see [Configuring antivirus exclusions for agent and components](/system-center/scom/plan-security-antivirus).
+This article shows antivirus exclusions that relate to System Center 2012 Operations Manager, System Center 2012 R2 Operations Manager, and System Center 2016 Operations Manager. For later versions of Operations Manager, see [antivirus exclusions (Operations Manager 2019 and later)](/system-center/scom/plan-security-antivirus).
 
 _Original product version:_ &nbsp; Microsoft System Center 2012 Operations Manager, System Center 2012 R2 Operations Manager, System Center 2016 Operations Manager  
 _Original KB number:_ &nbsp; 975931

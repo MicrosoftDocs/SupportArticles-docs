@@ -1,7 +1,7 @@
 ---
 title: Guidance for troubleshooting printing issues
 description: Introduces general guidance for troubleshooting scenarios related to printers.
-ms.date: 5/10/2022
+ms.date: 05/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -125,7 +125,11 @@ Resolution: For more information, see [KB5005010: Restricting installation of ne
 
 - [Troubleshooting various scenarios for printing](troubleshoot-printing-scenarios.md)
 - [Known issues for printing](troubleshoot-printing-known-issues.md)
-- [Point and Print Default Behavior Change](https://msrc-blog.microsoft.com/2021/08/10/point-and-print-default-behavior-change/)
+- [Point and Print Default Behavior Change](https://msrc.microsoft.com/blog/2021/08/point-and-print-default-behavior-change/)
 - [Windows Print Spooler Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-34527)
 - [Windows Release Health: Take action: Out-of-band update to address a remote code execution exploit in the Windows Print Spooler service](/windows/release-health/windows-message-center#1646)
 - [Windows Key Distribution Center Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-33764)
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-user-experience.md#printing).

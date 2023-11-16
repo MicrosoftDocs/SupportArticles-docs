@@ -1,15 +1,13 @@
 ---
-title: AI Builder actions are disabled/deactivated
+title: AI Builder actions are disabled or deactivated
 description: Provides a resolution for the issue that AI Builder actions are disabled or deactivated.
-ms.reviewer: angieandrews
-ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.reviewer: angieandrews, jelenak
+ms.date: 08/11/2023
 ms.subservice: 
 ms.author: angieandrews
 author: v-aangie
 ---
-
-# AI Builder actions are disabled/deactivated
+# AI Builder actions are disabled or deactivated
 
 This article provides steps to activate AI Builder actions.
 
@@ -17,15 +15,11 @@ _Applies to:_ &nbsp; AI Builder
 
 ## Symptoms
 
-AI Builder actions are disabled/deactivated.
-
-## Cause
-
-AI Builder can't be used if its actions have been deactivated.
+You can't use AI Builder because the AI Builder actions are disabled or deactivated.
 
 ## Resolution
 
-To activate the actions, the administrator of the environment needs to perform the following steps.
+To activate the actions, the administrator of the environment needs to perform the following steps:
 
 1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/environments).
 1. Select the environment where the actions are deactivated.
@@ -35,6 +29,7 @@ To activate the actions, the administrator of the environment needs to perform t
 
     - IsPaiEnabled
     - Predict
+    - Predict by Reference
     - PredictionSchema
     - Train
     - QuickTest

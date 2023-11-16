@@ -13,7 +13,7 @@ This article provides troubleshooting guidance for common issues related to poli
 
 You can use the built-in troubleshooting feature to review different compliance and configuration statuses.
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Troubleshooting + support** > **Troubleshoot**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Troubleshooting + support** > **Troubleshoot**.
 
     :::image type="content" source="media/troubleshoot-policies-in-microsoft-intune/troubleshoot-plus-support.png" alt-text="In Endpoint Management admin center and Intune, go to Troubleshooting and support.":::
 
@@ -35,7 +35,7 @@ You can use the built-in troubleshooting feature to review different compliance 
 
         - App protection policies (mobile application management) don't require devices to be enrolled. For more information, see [create and assign app protection policies](/mem/intune/apps/app-protection-policies).
 
-    - **Azure AD Join Type**: Should be set to **Workplace** or **AzureAD**.
+    - **Microsoft Entra join Type**: Should be set to **Workplace** or **AzureAD**.
 
         - If this column is **Not Registered**, there may be an issue with enrollment. Typically, unenrolling and re-enrolling the device resolves this state.
 
@@ -43,11 +43,11 @@ You can use the built-in troubleshooting feature to review different compliance 
 
         For more information, see [get started with device compliance policies](/mem/intune/protect/device-compliance-get-started).
 
-    - **Azure AD compliant**: Should be **Yes**. If **No** is shown, there may be an issue with compliance policies, or the device isn't connecting to the Intune service. For example, the device may be turned off, or may not have a network connection. Eventually, the device becomes non-compliant, possibly after 30 days.
+    - **Microsoft Entra compliant**: Should be **Yes**. If **No** is shown, there may be an issue with compliance policies, or the device isn't connecting to the Intune service. For example, the device may be turned off, or may not have a network connection. Eventually, the device becomes non-compliant, possibly after 30 days.
 
         For more information, see [get started with device compliance policies](/mem/intune/protect/device-compliance-get-started).
 
-    - **Last check in**: Should be a recent time and date. By default, Intune devices check in every 8 hours.
+    - **Last check in**: Should be a recent time and date. By default, Intune devices check in every 8 hours and the **Last check-in** value also updates every 8 hours in the Intune portal.
 
         - If **Last check in** is more than 24 hours, there may be an issue with the device. A device that can't check in can't receive your policies from Intune.
 
@@ -77,7 +77,7 @@ Check the [Tenant Status](/mem/intune/fundamentals/tenant-status) and confirm th
 
 ## Confirm a configuration profile is correctly applied
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **All devices** > select the device > **Device configuration**.
 
     Every device lists its profiles. Each profile has a **Status**. The status applies when all of the assigned profiles, including hardware and OS restrictions and requirements, are considered together. Possible statuses include:

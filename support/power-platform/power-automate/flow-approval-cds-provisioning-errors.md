@@ -5,6 +5,7 @@ ms.reviewer: hamenon, mansong
 ms.topic: troubleshooting
 ms.date: 03/07/2023
 ms.subservice: power-automate-flows
+ms.custom: has-azure-ad-ps-ref
 ---
 # Power Automate Approval Dataverse provisioning errors and recommendations
 
@@ -54,7 +55,7 @@ Option 3: Create the database as an environment admin directly from [Power Platf
 
 These errors occur if the Dynamics CRM Online or Dataverse applications are disabled either in the tenant or through Conditional Access for specific users. The exact error message may vary depending on the exact state of the Dataverse instance corresponding to the Power Apps or Power Automate environment - unprovisioned, provisioned but no approvals installed, or approvals already installed.
 
-To resolve this issue, tenant administrators need to go to the **Enterprise Applications** tab under **Azure Active Directory** in [Microsoft Azure](https://ms.portal.azure.com) to ensure application 00000007-0000-0000-c000-000000000000 (Dataverse or Dynamics CRM Online) is enabled for users to sign in, and any relevant Conditional Access policies grant the necessary access to users expecting to use Power Automate Approvals.
+To resolve this issue, tenant administrators need to go to the **Enterprise Applications** tab under **Microsoft Entra ID** in [Microsoft Azure](https://ms.portal.azure.com) to ensure application 00000007-0000-0000-c000-000000000000 (Dataverse or Dynamics CRM Online) is enabled for users to sign in, and any relevant Conditional Access policies grant the necessary access to users expecting to use Power Automate Approvals.
 
 :::image type="content" source="media/flow-approval-cds-provisioning-errors/properties-settings.png" alt-text="Screenshot that shows how to set the Enabled for users to sign-in option to Yes.":::
 
@@ -62,7 +63,7 @@ To resolve this issue, tenant administrators need to go to the **Enterprise Appl
 
 > The Dataverse database for this environment is disabled
 
-The Dataverse instance has been disabled in this environment. It isn't expected and is related to the expiration of all Power Automate & Dataverse plans within your Azure Active Directory (Azure AD) tenancy. To ensure the database can be enabled, make sure at least one user has active plans.
+The Dataverse instance has been disabled in this environment. It isn't expected and is related to the expiration of all Power Automate & Dataverse plans within your Microsoft Entra tenant. To ensure the database can be enabled, make sure at least one user has active plans.
 
 ## Error "Database isn't ready yet"
 

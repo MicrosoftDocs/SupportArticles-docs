@@ -4,7 +4,6 @@ description: This article provides a workaround for the problem that Snapshot or
 ms.date: 07/22/2020
 ms.custom: sap:Replication, change tracking, change data capture
 ms.reviewer: rvrosa
-ms.prod: sql
 ---
 # Snapshot or Logreader agents fail when destination table is empty in SQL Server
 

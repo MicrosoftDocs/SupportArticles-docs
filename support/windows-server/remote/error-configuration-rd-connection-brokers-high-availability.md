@@ -1,15 +1,13 @@
 ---
 title: Error after completing configuration of the RD Connection Broker server for high availability
 description: Provides resolutions for the error that occur after completing configuration of the RD Connection Broker server for high availability.
-ms.date: 12/9/2021
-author: v-lianna
-ms.author: delhan
+ms.date: 11/06/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika, v-jenya
+ms.reviewer: kaushika, v-jenya, v-lianna
 ms.custom: sap:remote-desktop-services-terminal-services-licensing, csstroubleshoot
 ms.technology: windows-server-rds
 ---
@@ -35,7 +33,7 @@ DRIVER=SQL Server Native Client \<VersionNumber>;SERVER=\<SQL Server Name>;Trust
 > - The SQL Server Native Client version should be compatible with the SQL server.
 > - Don't include the file extension when you input the file name into the string.
 
-## Permission on SQL Server for RD Connection Broker server
+## Verify permission for the RD Connection Broker server on SQL Server 
 
 Verify that correct permission is assigned to the RD Connection Broker Server on the SQL Server. To do that, follow these steps:
 
@@ -49,7 +47,11 @@ Verify that correct permission is assigned to the RD Connection Broker Server on
 > [!NOTE]
 > The RD Connection Broker server is now allowed to create databases in the SQL server. The RD Connection Broker service will attempt to migrate Windows Internal Database (WID) to a SQL Server instance when converting the RD Connection Broker server to a high available cluster.
 
+## Check case-sensitivity of SQL Server collation
+
+The database creation script for Remote Desktop Services (RDS) supports only case-insensitive collations. Make sure that the instance collation of the SQL Server database is set to be case-insensitive. 
+
 ## References
 
 - [Add the RD Connection Broker server to the deployment and configure high availability](/windows-server/remote/remote-desktop-services/rds-connection-broker-cluster)
-- [Useful log files for troubleshooting RDS issues](/troubleshoot/windows-server/remote/log-files-to-troubleshoot-rds-issues)
+- [Useful log files for troubleshooting RDS issues](log-files-to-troubleshoot-rds-issues.md)

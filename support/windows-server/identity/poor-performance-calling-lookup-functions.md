@@ -1,15 +1,13 @@
 ---
 title: How to disable the lookup of isolated names
 description: Provides a resolution to the poor performance when calling lookup functions to resolve names. Gives a method to disable the lookup of isolated names in trusted domain.
-ms.date: 9/24/2021
-author: v-lianna
-ms.author: delhan
+ms.date: 09/24/2021
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika, herbertm
+ms.reviewer: kaushika, herbertm, v-lianna
 ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---

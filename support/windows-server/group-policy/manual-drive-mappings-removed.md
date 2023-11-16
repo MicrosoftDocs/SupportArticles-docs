@@ -1,7 +1,7 @@
 ---
 title: Manual drive mappings are removed
 description: Provides a solution to an issue where manual drive mappings are removed after drive maps are deployed through Group Policy Preferences.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -40,3 +40,7 @@ If the **Use first available, starting at** setting is required, make sure that 
 - Only a single GPP drive map policy is applied to the user.
 
 You can also assign specific drive letters to each drive map and not use the **Use first available, starting at** option on any drive map. Then, any number of GPP drive map policies may be applied to the user without the loss of manually mapped drives or of GPP drive maps that are configured in multiple policies that apply to the user.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Group Policy issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-group-policy.md).

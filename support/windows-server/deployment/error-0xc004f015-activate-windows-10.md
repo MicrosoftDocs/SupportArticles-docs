@@ -1,7 +1,7 @@
 ---
 title: Error 0xC004F015 when you activate Windows 10
 description: Discusses that you cannot activate Windows 10 Enterprise on a Windows Server 2012 R2 and Windows Server 2008 R2 KMS host and Error 0xC004F015 is logged. Provides a resolution.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -73,3 +73,7 @@ Activation of Windows 10 is not supported if you are running a KMS host on any o
 - Windows Server 2003
 
 The Generic Volume License Key (GVLK) for Windows 10 editions can be located at [Appendix A: KMS Client Setup Keys](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj612867(v=ws.11)).
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

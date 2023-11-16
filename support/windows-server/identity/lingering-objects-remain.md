@@ -1,7 +1,7 @@
 ---
 title: Lingering objects still remain
 description: Describes procedures for cleaning up objects that are reintroduced to AD after you bring an offline DC back online.
-ms.date: 12/10/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -364,3 +364,7 @@ In this case the DC created the object after replication with the DCs in its own
 To resolve this issue, let these objects become real lingering objects (aged beyond TSL) and then remove them using the script in this article. To make sure that the data continues to replicate, set **Allow Replication With Divergent and Corrupt Partner**  on all DCs in the forest.
 
 If you cannot resolve the errors in the log files by using these methods, you may be experiencing a different problem. Contact Microsoft Product Support Services for additional assistance.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).

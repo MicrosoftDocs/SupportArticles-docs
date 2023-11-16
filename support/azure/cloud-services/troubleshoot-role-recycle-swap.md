@@ -4,9 +4,7 @@ description: Troubleshoot UpdateDeploymentRoleRecycleThresholdReached (role recy
 ms.service: cloud-services
 ms.subservice: troubleshoot-deployment-classic
 ms.date: 09/26/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
-ms.reviewer: chiragpa
+ms.reviewer: chiragpa, v-leedennis
 ---
 # Troubleshoot Cloud Service (Classic) role recycle threshold exceptions
 
@@ -35,7 +33,7 @@ To resolve this issue, take one of the following steps:
 
 - [Delete the deployment](/previous-versions/azure/virtual-network/virtual-networks-reserved-public-ip#remove-a-reserved-ip-from-a-running-deployment) slot from which the roles are recycling. Then do a new deployment to an empty slot.
 
-- Create a new cloud service instance, deploy it, and update the service’s canonical name (CName).
+- Create a new cloud service instance, deploy it, and update the service's canonical name (CName).
 
 What if you don't want to lose the IP address that's associated with your existing deployment slot? Then follow these steps to reserve and release the address. For more information, see [Reserved IP addresses for Cloud Services & Virtual Machines](https://azure.microsoft.com/blog/reserved-ip-addresses/).
 

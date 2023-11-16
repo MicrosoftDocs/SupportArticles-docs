@@ -19,7 +19,7 @@ _Original KB number:_ &nbsp; 4513675
 
 > Required field 'assignedTo' contained no valid users in the organization
 
-This error occurs if the input value(s) to the Assigned To field of the approval action was either not a well -formatted email address, UPN, or AAD object id, or it was well formatted, but didn't match any users in Microsoft Graph. If multiple users were specified (semi-colon delimited), then this means that all entries couldn't be found in Graph.
+This error occurs if the input value(s) to the Assigned To field of the approval action was either not a well -formatted email address, UPN, or Microsoft Entra object ID, or it was well formatted, but didn't match any users in Microsoft Graph. If multiple users were specified (semi-colon delimited), then this means that all entries couldn't be found in Graph.
 
 ### InvalidApprovalCreateRequestAssignedToMissing
 
@@ -31,7 +31,7 @@ This error occurs if the Assigned To field of the approval action didn't contain
 
 > The approval requestor must be a single, valid user account within your organization
 
-This error occurs if the input value(s) to the Assigned To field of the approval action was either not a well-formatted email address, UPN, or AAD object id, or it was well formatted, but didn't match any users in Microsoft Graph. It will also be returned if multiple value users were specified for the re questor field.
+This error occurs if the input value(s) to the Assigned To field of the approval action was either not a well-formatted email address, UPN, or Microsoft Entra object ID, or it was well formatted, but didn't match any users in Microsoft Graph. It will also be returned if multiple value users were specified for the re questor field.
 
 ### InvalidXrmRecordId
 
@@ -43,7 +43,7 @@ The record identifier passed to "Wait for an approval" is null, empty, or not a 
 
 > Found multiple matching users ('\<ID>, \<ID>') for 'someUserName@contoso.com'.
 
-This error will occur if two users in Microsoft Graph were found for the same Assigned To (or Requestor) input (email address or UPN). Rather than potentially assign the approval to the wrong user account, Flow will fail the run. The unique AAD object ids for the two or more matching records are returned in the error message so that users can investigate further with a user administrator in their tenant. (The user accounts can be viewed on `graph.microsoft.com`).
+This error will occur if two users in Microsoft Graph were found for the same Assigned To (or Requestor) input (email address or UPN). Rather than potentially assign the approval to the wrong user account, Flow will fail the run. The unique Microsoft Entra object IDs for the two or more matching records are returned in the error message so that users can investigate further with a user administrator in their tenant. (The user accounts can be viewed on `graph.microsoft.com`).
 
 ## Attachments
 
@@ -91,7 +91,7 @@ For more information about these provisioning errors, see [Flow Approval CDS Pro
 
 > The Common Data Service database for this environment is disabled
 
-The Common Data Service instance has been disabled in this environment. This isn't expected, and is may related to the expiration of all Flow & CDS plans within your AAD tenancy. To ensure the database can be enabled, make sure at least one user has active plans.
+The Common Data Service instance has been disabled in this environment. This isn't expected, and is may related to the expiration of all Flow & CDS plans within your Microsoft Entra tenant. To ensure the database can be enabled, make sure at least one user has active plans.
 
 ### CdsInstanceNotReady
 
@@ -103,7 +103,7 @@ The database for this instance is still being provisioned, or has failed provisi
 
 > The current user does not have permissions to create a Common Data Service database for this environment. Please ask an environment administrator to create the database.
 
-For non-Default Flow and Power Appsenvironments, only environment admins can directly (through the Flow Admin portal) or indirectly (through Flow Approvals) create the Common Data Service database. Either an administrator must
+For non-Default Flow and Power Apps environments, only environment admins can directly (through the Flow Admin portal) or indirectly (through Flow Approvals) create the Common Data Service database. Either an administrator must
 
 - Create the environment manually from the Flow Admin portal.
 - Create and run an Approvals Flow.
@@ -127,7 +127,7 @@ Microsoft Flow hasn't yet been able to set up the Approvals solution within the 
 
 > 'The Flow Enterprise Application has been disabled by your tenant administrator. Contact your tenant administrator and request that they enable Microsoft Flow applications 'Microsoft Flow Service' (AppID: '...') and 'Microsoft Flow CDS Integration Service' (AppID: '...') in the Azure Portal.'.
 
-One or more necessary AAD applications for Approvals to work have been disabled by your tenant administrator(s). An administrator will need to re-enable the application(s) in the Azure portal.
+One or more necessary Microsoft Entra applications for Approvals to work have been disabled by your tenant administrator(s). An administrator will need to re-enable the application(s) in the Azure portal.
 
 ## Miscellaneous
 

@@ -1,7 +1,7 @@
 ---
 title: Access checks fail because of AuthZ
 description: Addresses an issue in which AuthZ fails and returns an Access Denied error when an application does access checks in Windows Server.
-ms.date: 3/24/2022
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -160,3 +160,7 @@ Description:
 For more information please see [https://go.microsoft.com/fwlink/?LinkId=787651](/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
 If you have the throttling disabled, you will see one 16965 event for each access denial incident together with the client information.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Group Policy issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-group-policy.md).

@@ -4,7 +4,7 @@ description: Introduce the Windows Server operating system support statements an
 author: Deland-Han
 ms.author: delhan
 ms.topic: troubleshooting
-ms.date: 2/2/2023
+ms.date: 02/02/2023
 ms.prod: windows-server
 ms.technology: hyper-v
 ms.custom: sap:installation-and-configuration-of-hyper-v, csstroubleshoot

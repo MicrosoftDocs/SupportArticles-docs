@@ -1,7 +1,7 @@
 ---
 title: Download and burn an ISO file from Volume Licensing Service Center (VLSC)
 description: Describes how to download an ISO file from the Microsoft Volume Licensing Service Center (VLSC).
-ms.date: 09/22/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -55,6 +55,10 @@ From the VLSC, you can download software included in your contract. On the secti
 7. The ISO file should be saved on the hard disk on your computer.
 8. When the download is completed, copy the ISO file to a CD or DVD using a software burning program.
 9. This CD or DVD can then be used to install the ISO software.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).
 
 ## References
 

@@ -1,7 +1,7 @@
 ---
 title: Version 3 (CNG) templates won't appear in certificate web enrollment
 description: Fixes an issue where the CNG or 2008 templates don't appear in the Advanced Certificate Request template pulldown menu.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

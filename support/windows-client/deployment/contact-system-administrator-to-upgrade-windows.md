@@ -1,7 +1,7 @@
 ---
 title: Fail to upgrade Windows 10 Enterprise edition
 description: Describes an error that's returned when you run the Windows 10 update tool and provides a solution to this issue.
-ms.date: 10/19/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -34,3 +34,7 @@ The tool works only with the Windows 10 Home, Pro, and Education editions. If yo
 ## Resolution
 
 To resolve this issue, use a different method to upgrade to Windows 10 version 1607. For example, download the ISO, and then run Setup from it.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

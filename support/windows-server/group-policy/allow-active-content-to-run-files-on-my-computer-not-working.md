@@ -1,7 +1,7 @@
 ---
 title: Can't allow active content to run files
 description: Helps solve an issue where the Allow active content to run files on My Computer Group Policy setting doesn't work.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -51,3 +51,7 @@ The default location of the Group Policy Preferences XML setting file is:
 ## Resolution
 
 As a workaround you can disable the **Allow active content to run files on My Computer** policy setting and the setting will be enabled when the policy is applied to the client computers.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Group Policy issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-group-policy.md).

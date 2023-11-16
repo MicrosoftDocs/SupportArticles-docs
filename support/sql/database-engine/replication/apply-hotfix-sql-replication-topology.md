@@ -4,7 +4,6 @@ description: This article describes how to apply a hotfix for Microsoft SQL Serv
 ms.date: 03/16/2020
 ms.custom: sap:Replication, change tracking, change data capture
 ms.reviewer: vijayts
-ms.prod: sql
 ---
 # Apply a hotfix for SQL Server in a replication topology
 

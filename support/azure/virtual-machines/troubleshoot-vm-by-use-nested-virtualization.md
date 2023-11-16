@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot a faulty Azure VM by using nested virtualization in Azure
-description: How to troubleshoot a problem Azure VM by using nested virtualization in Azure
+description: How to troubleshoot a faulty Azure VM by using nested virtualization in Azure.
 services: virtual-machines
 documentationcenter: ''
 author: genlin
@@ -11,10 +11,10 @@ ms.subservice: vm-backup-restore
 ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
-
 ms.topic: article
-ms.date: 10/11/2020
+ms.date: 10/12/2023
 ms.author: glimoli
+ms.reviewer: v-weizhu
 ---
 # Troubleshoot a faulty Azure VM by using nested virtualization in Azure
 
@@ -28,7 +28,7 @@ In order to mount the faulty VM, the Rescue VM must use the same type of Storage
 
 1. Create a new Rescue VM:
 
-    - Operating system: Windows Server 2016 Datacenter or newer versions of Windows Server Datacenter
+    - Operating system: Windows Server 2016 Datacenter or newer versions of Windows Server Datacenter.
 
     - Size: Select a series that supports nested virtualization. For example: [Dv3](/azure/virtual-machines/dv3-dsv3-series) or [Dv4](/azure/virtual-machines/dv4-dsv4-series).
 
@@ -36,6 +36,14 @@ In order to mount the faulty VM, the Rescue VM must use the same type of Storage
 
     - Select the same storage type as the faulty VM (Standard or Premium).
 
+    - Image: Choose either a Generation 2 image or a Generation 1 image.
+
+    - Security type: Change the security type to **Standard**. By default, the security type is **Trusted launch virtual machines** that doesn't support nested virtualization. If you set the security type to **Trusted launch virtual machines**, and attempt to add server roles on the Rescue VM, you'll encounter the following error message:
+
+        > Hyper-V cannot be installed because virtualization support is not enabled in the BIOS.
+
+        :::image type="content" source="media/troubleshoot-vm-by-use-nested-virtualization/hyper-v-cannot-be-installed-error.png" alt-text="Screenshot that shows the 'Hyper-V cannot be installed' error message. "lightbox="media/troubleshoot-vm-by-use-nested-virtualization/hyper-v-cannot-be-installed-error.png":::
+      
 2. After the Rescue VM is created, remote desktop to the Rescue VM.
 
 3. In Server Manager, select **Manage** > **Add Roles and Features**.

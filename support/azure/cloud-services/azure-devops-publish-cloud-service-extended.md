@@ -2,10 +2,9 @@
 title: Publish Cloud Services (extended support) via Azure DevOps
 description: Describes how to publish Cloud Services (extended support) by using Azure DevOps.
 ms.date: 12/16/2022
-ms.reviewer: piw, maheshallu
-author: AmandaAZ
-ms.author: v-weizhu
+ms.reviewer: piw, maheshallu, v-weizhu
 ms.service: cloud-services
+ms.subservice: troubleshoot-dev
 ms.topic: how-to
 ---
 # How to use Azure DevOps to publish Cloud Services (extended support)
@@ -85,7 +84,7 @@ For classic Cloud Services, the Azure DevOps built-in pipeline task [AzureCloudP
         TargetFolder: '$(Build.ArtifactStagingDirectory)'
     ```
 
-3. Use the pipeline task [AzureFileCopy@4 - Azure file copy v4 task](/azure/devops/pipelines/tasks/reference/azure-file-copy-v4) to upload the configuration, definition, and package files of the cloud service. The task supports authentication based on Azure Active Directory. Authentication can be done using a service principal and managed identity. You can assign the permission Contributor and Storage Blob Data Contributor to allow the access of [service connections](/azure/devops/pipelines/library/service-endpoints).
+3. Use the pipeline task [AzureFileCopy@4 - Azure file copy v4 task](/azure/devops/pipelines/tasks/reference/azure-file-copy-v4) to upload the configuration, definition, and package files of the cloud service. The task supports authentication based on Microsoft Entra ID. Authentication can be done using a service principal and managed identity. You can assign the permission Contributor and Storage Blob Data Contributor to allow the access of [service connections](/azure/devops/pipelines/library/service-endpoints).
 
     Find the service principle in the project settings:
 

@@ -4,8 +4,7 @@ description: This article provides a resolution for the problem where File Downl
 ms.date: 01/14/2021
 ms.custom: sap:Data Quality Services
 ms.reviewer: JasonH, MatthewL
-ms.topic: troubleshooting
-ms.prod: sql 
+ms.topic: troubleshooting 
 ---
 # SQL Server 2012 DQS Export to 64-bit .xls Excel file fails with error
 

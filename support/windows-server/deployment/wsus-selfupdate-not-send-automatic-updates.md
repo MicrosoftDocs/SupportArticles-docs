@@ -1,7 +1,7 @@
 ---
 title: WSUS SelfUpdate doesn't send automatic updates
 description: Provides a resolution to a problem that occurs when a WSUS SelfUpdate service does not send automatic updates and client computers do not report to the server.
-ms.date: 3/24/2022
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -132,3 +132,7 @@ When you use IIS, you can move the SelfUpdate directory to a different Web site.
 ## References
 
 For more information about automatic updates in Windows, see [Description of the Automatic Updates feature in Windows](https://support.microsoft.com/help/294871).
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

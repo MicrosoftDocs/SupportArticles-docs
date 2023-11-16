@@ -1,7 +1,7 @@
 ---
 title: Avoid duplicate GUIDs when you image SMS clients
 description: Describes how to avoid duplicate globally unique identifiers (GUIDs) when you use disk imaging or cloning to deploy the Microsoft Systems Management Server (SMS) 2003 clients.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -96,3 +96,7 @@ To prepare the SMS 2003 Advanced Client computer for imaging:
 For more information on troubleshooting Advanced Client Push Installations, see the following article in the Microsoft Knowledge Base:
 
 [928282 How to troubleshoot Advanced Client Push Installation Issues in Systems Management Server 2003 and System Center Configuration Manager 2007](https://support.microsoft.com/help/925282)
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

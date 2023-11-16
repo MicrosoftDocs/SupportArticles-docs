@@ -1,21 +1,25 @@
 - name: Dynamics 365 Customer Insights
   href: welcome-customer-insights.yml
   items:
-    - name: Data ingestion
-      items:
-        - name: Power Query data source refresh issues
-          href: data-ingestion/power-query-data-source-refresh-issues-dataflows.md
-    - name: Exports
-      items:
-        - name: Controls from Customer Card Add-in if they don't find data
-          href: exports/controls-customer-card-add-in.md
-        - name: Customer Insights environment doesn't show in Power BI
-          href: exports/environment-not-showing-in-power-bi.md
-        - name: Errors on date fields when loading Customer Insights entities in Power BI Desktop
-          href: exports/error-date-fields-power-bi-connector.md
-        - name: Troubleshoot segment not eligible for export
-          href: exports/ineligible-segments-b-to-b.md
-    - name: Insights
-      items:
-        - name: Segments return no members
-          href: insights/segment-no-results.md
+    - name: Customer Insights - Data
+      items: 
+      - name: Data ingestion
+        items:
+          - name: Power Query data source refresh issues
+            href: data/data-ingestion/power-query-data-source-refresh-issues-dataflows.md
+      - name: Exports
+        items:
+          - name: Controls from Customer Card Add-in if they don't find data
+            href: data/exports/controls-customer-card-add-in.md
+          - name: Environment doesn't show in Power BI
+            href: data/exports/environment-not-showing-in-power-bi.md
+          - name: Errors on date fields when loading entities in Power BI Desktop
+            href: data/exports/error-date-fields-power-bi-connector.md
+          - name: Exports fail with error stating that the following name already exists
+            href: data/exports/export-fails-name-already-exists.md
+          - name: Troubleshoot segment not eligible for export
+            href: data/exports/ineligible-segments-b-to-b.md
+      - name: Insights
+        items:
+          - name: Segments return no members
+            href: data/insights/segment-no-results.md

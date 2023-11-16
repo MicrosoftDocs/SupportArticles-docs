@@ -1,7 +1,7 @@
 ---
 title: Error 0x80072EE7 when you perform Workplace Join
 description: Fixes an error 0x80072EE7 that occurs when users perform a Workplace Join.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -62,7 +62,7 @@ To resolve this problem, follow these steps:
     Nslookup enterpriseregistration.domain.com 
     ```
 
-    - If you use Azure Active Directory Join
+    - If you use Microsoft Entra join
 
       Results should return the CNAME result of EnterpriseRegistration.windows.net.
 

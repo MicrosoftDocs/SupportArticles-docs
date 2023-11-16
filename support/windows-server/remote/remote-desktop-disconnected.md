@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot establishing Terminal Services session
 description: Helps you understand the most common settings that affect establishing a Terminal Services session in an enterprise environment.
-ms.date: 9/24/2021
+ms.date: 05/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -309,10 +309,14 @@ To resolve this issue, back up and then remove the X509 Certificate registry key
 
 ## References
 
-- [How to limit the number of connections on a terminal server that runs Windows Server 2003](/troubleshoot/windows-server/remote/limit-connections-terminal-server)
+- [How to limit the number of connections on a terminal server that runs Windows Server 2003](limit-connections-terminal-server.md)
 
 - [Troubleshooting General Remote Desktop Error Messages](/previous-versions/windows/it-pro/windows-server-2003/cc780927(v=ws.10))
 
 - [Because of a security error, the client could not connect to the Terminal Server](https://support.microsoft.com/help/329896)
 
 If this article does not help you resolve the problem or if you experience symptoms that differ from those that are described in this article, search the [Microsoft Support](https://support.microsoft.com/). Then, type the text of the error message that you receive, or type a description of the problem in the Search Support (KB) box.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-user-experience.md#remote-desktop-disconnection).

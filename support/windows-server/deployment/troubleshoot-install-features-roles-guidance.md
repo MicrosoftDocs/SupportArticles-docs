@@ -1,7 +1,7 @@
 ---
 title: Guidance for troubleshooting the installation of Windows features and roles
 description: Provides guidance to help troubleshoot issues when adding or removing roles and features in Windows.
-ms.date: 5/13/2022
+ms.date: 04/28/2023
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm
@@ -14,6 +14,9 @@ ms.custom: sap:servicing, csstroubleshoot
 ms.technology: windows-server-deployment
 ---
 # Installing Windows features and roles troubleshooting guidance
+
+> [!div class="nextstepaction"]
+> <a href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806294" target='_blank'>Try our Virtual Agent</a> - It can help you quickly identify and fix Roles and Features related issues.
 
 This guidance is designed to help troubleshoot issues when adding or removing roles and features in Windows.
 
@@ -55,3 +58,7 @@ See the following list of common issues for scenario-specific guidance:
 |Error 0x800F0818 and can't add roles or features|[Error 0x800F0818](/archive/blogs/shanecothran/server-manager-both-roles-and-features-display-error-hresult-0x800f0818)|
 
 For more information, see [Install or uninstall roles, role services, or features](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features).
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

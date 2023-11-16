@@ -6,7 +6,7 @@ manager: dcscontentpm
 ms.author: delhan
 ms.prod: windows-client
 author: Deland-Han
-ms.date: 03/14/2023
+ms.date: 04/28/2023
 ms.topic: troubleshooting
 ms.technology: windows-client-deployment
 ms.custom: sap:usmt, csstroubleshoot
@@ -333,6 +333,10 @@ The following information lists each return code by numeric value, along with th
 | **An error occurred in the gather process** | Data transfer has begun, and there was an error during migration-store creation or during the apply phase. Review the ScanState log or LoadState log for details. |
 | **Out of disk space while writing the store** | Data transfer has begun, and there was an error during migration-store creation or during the apply phase. Review the ScanState log or LoadState log for details. |
 | **Out of temporary disk space on the local system** | Data transfer has begun, and there was an error during migration-store creation or during the apply phase. Review the ScanState log or LoadState log for details. |
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).
 
 ## Related articles
 

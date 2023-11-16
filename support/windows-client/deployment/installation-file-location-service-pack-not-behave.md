@@ -1,7 +1,7 @@
 ---
 title: Installation File Location not behaves
 description: Describes how to edit the registry to specify the location of the Installation files and the location of the Service Pack Installation files.
-ms.date: 10/09/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -72,3 +72,7 @@ To resolve this problem, edit the registry to specify the location of the Window
 ## Status
 
 Microsoft has confirmed that it is a problem in the Microsoft products that are listed in the "Applies to" section of this article.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

@@ -1,7 +1,7 @@
 ---
 title: WMI-Activity Event 5858 ResultCode 0x80041032
 description: WMI-Activity Event ID 5858 is logged with ResultCode 0x80041032 when applications issue WMI queries.
-ms.date: 09/08/2020
+ms.date: 05/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -57,3 +57,7 @@ For more information, see:
 
 - [IWbemServices::ExecQuery method](/windows/win32/api/wbemcli/nf-wbemcli-iwbemservices-execquery)
 - [IEnumWbemClassObject::Next method](/windows/win32/api/wbemcli/nf-wbemcli-ienumwbemclassobject-next)
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../windows-troubleshooters/gather-information-using-tss-user-experience.md#wmi).

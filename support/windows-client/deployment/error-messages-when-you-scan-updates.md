@@ -1,7 +1,7 @@
 ---
 title: Error messages when you scan for updates
 description: Describes the download behavior of Windows Update Web site and the error messages that can occur.
-ms.date: 10/10/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -46,3 +46,7 @@ To resolve this behavior, use the `regsvr32` command to register several .dll fi
 
 3. Select **OK**.
 4. Restart your computer.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

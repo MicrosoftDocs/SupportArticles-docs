@@ -1,7 +1,7 @@
 ---
 title: Configure W32Time against huge time offset
 description: Discusses how to configure W32Time to help prevent large time offsets in the domain.
-ms.date: 3/24/2022
+ms.date: 03/24/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

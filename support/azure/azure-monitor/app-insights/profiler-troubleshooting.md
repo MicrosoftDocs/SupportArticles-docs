@@ -1,10 +1,8 @@
 --- 
 title: Troubleshoot problems with Azure Application Insights Profiler
 description: This article presents troubleshooting steps and information to help developers enable and use Application Insights Profiler.
-ms.date: 03/07/2023
-author: AmandaAZ
-ms.author: v-weizhu
-ms.reviewer: v-dele, aaronmax, cweining, v-jsitser
+ms.date: 07/25/2023
+ms.reviewer: v-leedennis, aaronmax, cweining, v-jsitser, hannahhunter, ryankahng, v-weizhu
 ms.service: azure-monitor
 ms.subservice: application-insights
 #Customer intent: As an Azure Application Insights user, I want to know how to troubleshoot various problems enabling or viewing Application Insights Profiler so I can use it effectively.  
@@ -43,7 +41,7 @@ If the data you try to view is older than a couple of weeks, try limiting your t
 
 Check that proxies or a firewall isn't blocking your access to `https://gateway.azureserviceprofiler.net`.
 
-## Make sure the Profiler is running
+## Make sure the Profiler is running or hasn't timed out
 
 Profiling data is uploaded only when it can be attached to a request that happens while Profiler is running. The Profiler collects data for two minutes each hour. You can also trigger the Profiler by [starting a profiling session](/azure/azure-monitor/profiler/profiler-settings#profile-now).
 
@@ -65,7 +63,7 @@ To search for trace messages and custom events that Profiler sends to your Appli
 
    - Profiler starts and sends custom events when it detects requests that happens while Profiler is running. If the `ServiceProfilerSample` custom event is displayed, it means that a profile is captured and is available in the **Application Insights Performance** pane.
 
-   If no records are displayed, Profiler isn't running. Make sure you've [enabled Profiler on your Azure service](/azure/azure-monitor/profiler/profiler).  
+   If no records are displayed, Profiler isn't running or has timed out. Make sure you've [enabled Profiler on your Azure service](/azure/azure-monitor/profiler/profiler).  
 
 ## Double counting in parallel threads
 
@@ -89,7 +87,9 @@ For Profiler to work properly, make sure the following things:
 
         In the Azure portal, go to your App Service. Select **Advanced Tools** from the left side menu and then select **Go**.
 
-   1. In the top menu, select **Tools** > **WebJobs dashboard**. The **WebJobs** pane opens.
+   1. In the top menu, select **Tools** > **WebJobs dashboard**. The **WebJobs** pane opens. 
+
+      If **ApplicationInsightsProfiler3** doesn't show up, restart your App Service application.
 
       :::image type="content" source="media/profiler-troubleshooting/profiler-web-job.png" alt-text="Screenshot of the WebJobs pane, which displays the name, status, and last run time of jobs.":::
 

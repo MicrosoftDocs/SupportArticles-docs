@@ -1,7 +1,7 @@
 ---
 title: Kernel processor power Event ID 37 after changing power policy
 description: Provides a solution to an issue where the Event ID 37 is logged in the System log after you change the power policy for a Windows Server 2016-based server.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -40,3 +40,7 @@ Event ID 37 is logged when the hardware platform determines that the OS can't us
 ## Resolution
 
 To fix this issue, check for any Power Capping policy from the hardware manufactory, or verify the system options for any power policy that is configured to system firmware.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

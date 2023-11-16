@@ -1,7 +1,7 @@
 ---
 title: Simple volumes become inaccessible
 description: Provides a resolution for the issue that simple volumes may become inaccessible if a power loss occurs shortly after creation.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

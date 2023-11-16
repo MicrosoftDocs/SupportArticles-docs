@@ -4,10 +4,8 @@ metadata:
   description: Get answers to frequently asked questions about role instance restarts that are caused by operating system upgrades on an Azure virtual machine.
   ms.topic: faq
   ms.date: 09/26/2022
-  author: DennisLee-DennisLee
-  ms.author: v-dele
   editor: v-jsitser
-  ms.reviewer: v-maallu
+  ms.reviewer: v-maallu, v-leedennis
   ms.service: cloud-services
   ms.subservice: troubleshoot-extended-support
 

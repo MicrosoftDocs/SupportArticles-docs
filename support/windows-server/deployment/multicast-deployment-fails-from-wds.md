@@ -1,7 +1,7 @@
 ---
 title: Multicast deployment fails from WDS
 description: Provides a solution to an issue where deploying an image from a Windows Deployment Services (WDS) server by using multicast fails.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -85,3 +85,7 @@ Other possible reasons for multicast failures include
 - Test with different machines.  A machine participating in the multicast stream that has a bad NIC can cause problems with multicast completing
 
 For more information on optimizing and troubleshooting, see [Optimizing Performance and Scalability](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732088(v=ws.10))
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

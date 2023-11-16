@@ -1,7 +1,7 @@
 ---
 title: Errors connecting to Device Manager remotely
 description: Fixes an issue where you can't connect remotely to Device Manager from a Windows-based computer.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

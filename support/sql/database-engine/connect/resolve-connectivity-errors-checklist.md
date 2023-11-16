@@ -5,7 +5,6 @@ ms.date: 05/25/2022
 ms.custom: sap:Connection issues
 author: HaiyingYu
 ms.author: haiyingyu
-ms.prod: sql
 ---
 # Recommended prerequisites and checklist for troubleshooting SQL Server connectivity issues
 
@@ -38,14 +37,14 @@ To effectively troubleshoot connectivity issues, gather the following informatio
 
 ### Option 1
 
-If you have access to the output of the SQLCheck tool mentioned in the [Recommended prerequisites](#recommended-prerequisites) section and review information in various sections in the output file (Computer, Client Security, and SQL Server), use the information to address the issues contributing to your problem. See the examples below:
+If you have access to the output of the SQLCheck tool mentioned in the [Recommended prerequisites](#recommended-prerequisites) section and review information in various sections in the output file (Computer, Client Security, and SQL Server), use the information to address the issues contributing to your problem. See the following examples:
 
 |Section in the file |Text to search for |Potential action |Can help troubleshoot (examples) |
 |-|-|-|-|
 |Computer Information |Warning: Network driver may be out of date |Check online for new drivers. |Various connectivity errors |
-|Client Security and Driver Information |Diffie-Hellman cipher suites are enabled. Possible risk of intermittent TLS failures if the algorithm version is different between clients and servers |If you're having intermittent connectivity issues, see [Applications experience forcibly closed TLS connection errors when connecting to SQL Servers in Windows](/troubleshoot/windows-server/identity/apps-forcibly-closed-tls-connection-errors).|[An existing connection was forcibly closed by the remote host](../connect/tls-exist-connection-closed.md)|
+|Client Security and Driver Information |Diffie-Hellman cipher suites are enabled. Possible risk of intermittent TLS failures if the algorithm version is different between clients and servers |If you're having intermittent connectivity issues, see [Applications experience forcibly closed TLS connection errors when connecting to SQL Servers in Windows](../../../windows-server/identity/apps-forcibly-closed-tls-connection-errors.md).|[An existing connection was forcibly closed by the remote host](../connect/tls-exist-connection-closed.md)|
 |Client Security and Driver Information |SQL Aliases |If present, ensure aliases are configured properly and pointing to the correct server and IP addresses. |[A network-related or instance-specific error occurred while establishing a connection to SQL Server](../connect/network-related-or-instance-specific-error-occurred-while-establishing-connection.md) |
-|SQL Server Information |Services of Interest |If your SQL service  isn't started,  start it. If you're having issues connecting to a named instance, ensure SQL Server Browser service is started or try restarting the browser service. |[A network-related or instance-specific error occurred while establishing a connection to SQL Server](../connect/network-related-or-instance-specific-error-occurred-while-establishing-connection.md) |
+|SQL Server Information |Services of Interest |If your SQL service isn't started, start it. If you're having issues connecting to a named instance, ensure SQL Server Browser service is started or try restarting the browser service. |[A network-related or instance-specific error occurred while establishing a connection to SQL Server](../connect/network-related-or-instance-specific-error-occurred-while-establishing-connection.md) |
 |SQL Server Information |Domain Service Account Properties |If you configure linked servers from your SQL Server and the **Trust for Del** value is set to false, then you may run into authentication issues with your linked server queries. |[Troubleshooting "Login failed for user" errors](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?context=/troubleshoot/sql/context/context) |
 |SQL Server Information |SPN does not exist |Check this table to see if SPNs for your SQL Server are properly configured and fix any issues identified. |[Cannot generate SSPI context](../connect/cannot-generate-sspi-context-error.md)|
 |SQL Server Information |Details for SQL Server Instance |Check the values of TCP Enabled, TCP Ports, and so on. Review whether TCP/IP is enabled on the server side and if your SQL default instance is listening on 1433 or a different port.  |Various connectivity errors |

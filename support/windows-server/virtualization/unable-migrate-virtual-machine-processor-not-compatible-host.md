@@ -1,7 +1,7 @@
 ---
 title: Unable to migrate virtual machine from one host to another
 description: Describes the errors that occur when you migrate a Virtual Machine (VM) from one Host to another from the SCVMM 2008 Console.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

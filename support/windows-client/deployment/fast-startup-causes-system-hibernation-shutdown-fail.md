@@ -1,7 +1,7 @@
 ---
 title: Fast startup causes hibernation or shutdown to fail in Windows 10 or Windows 8.1
 description: Provides help to solve an issue where the process fails when you try to shut down or hibernate the system on a computer.
-ms.date: 12/03/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -87,3 +87,7 @@ During Fast Startup, the kernel session is not closed, but it is hibernated. Fas
 When you restart the computer, this typically means that you want a completely new Windows state, either because you have installed a driver or replaced Windows elements that cannot be replaced without a full restart.
 
 Therefore, the restart process in Windows continues to perform a full boot cycle, without the hibernation performance improvement that's described in this article.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

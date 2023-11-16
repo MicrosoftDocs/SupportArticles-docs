@@ -2,8 +2,7 @@
 title: PerfInsights and scale set VM instances
 description: Download, install, and run PerfInsights to troubleshoot problematic Windows or Linux virtual machine (VM) instances within a virtual machine scale set.
 ms.date: 11/17/2021
-author: DennisLee-DennisLee
-ms.author: v-dele
+ms.reviewer: v-leedennis
 ms.service: virtual-machines
 ms.subservice: vm-performance
 ---

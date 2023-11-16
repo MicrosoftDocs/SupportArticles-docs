@@ -1,7 +1,7 @@
 ---
 title: Loss of functionality for some Intel SMBus Controller devices after you update your system through Windows Update
 description: Describes an issue that triggers a loss of functionality for some Intel SMBus Controller devices after you update your system from Windows Update. Provides several methods to resolve this issue.
-ms.date: 12/03/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -76,3 +76,7 @@ To do this, follow these steps:
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-contact-disclaimer.md)]
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

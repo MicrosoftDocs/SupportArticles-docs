@@ -1,7 +1,7 @@
 ---
 title: Long paths with spaces require quotation marks
 description: Solves an issue that occurs when you specify long filenames or paths with spaces.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -48,3 +48,7 @@ copy "c:\my file name" "d:\my new file name"
 ## More information
 
 Spaces are allowed in long filenames or paths, which can be up to 255 characters with NTFS. All operations at the command prompt involving long names with spaces, however, must be treated differently. Normally, it is an MS-DOS convention to use a space after a word to specify a parameter. The same convention is being followed in Windows NT command prompt operations even when using long filenames.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

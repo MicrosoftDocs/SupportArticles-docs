@@ -5,7 +5,7 @@ ms.reviewer: frankroj
 manager: dcscontentpm
 ms.author: delhan
 ms.prod: windows-client
-ms.date: 03/13/2023
+ms.date: 04/28/2023
 author: Deland-Han
 ms.topic: troubleshooting
 ms.technology: windows-client-deployment
@@ -293,6 +293,10 @@ UsmtUtils.exe /rd <storedir>
 ```
 
 You should also reboot the machine.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).
 
 ## Related articles
 

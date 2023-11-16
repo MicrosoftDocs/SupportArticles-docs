@@ -1,7 +1,7 @@
 ---
 title: User receives WebUI Oops error message in StorSimple
 description: Describes an issue that User receives WebUI Oops error message in StorSimple.
-ms.date: 08/14/2020
+ms.date: 11/01/2023
 author: genlin
 ms.author: genli
 ms.service: azure-common-issues-support
@@ -34,7 +34,7 @@ If the StorSimple device is running software **earlier than version 2.1.1.454**,
     2. Run the http off command, and then run http on .
     3. Log on to the WebUI, and then confirm that you no longer receive the error message.
 
-2. If you receive the error message by using both http and https, or if the error persists after you run the http off and http on commands, open a support case at [https://support2.microsoft.com/gp/storsimple](https://support2.microsoft.com/gp/storsimple). The StorSimple team will help you resolve the issue.
+2. If you receive the error message by using both http and https, or if the error persists after you run the http off and http on commands, open a support case at [StorSimple Support 5000 - 7000 Series](/previous-versions//mt179343(v=technet.10)). The StorSimple team will help you resolve the issue.
   
 If the StorSimple device is running **version 2.1.1.454 or later**, follow these steps:
 
@@ -43,6 +43,6 @@ If the StorSimple device is running **version 2.1.1.454 or later**, follow these
 
     :::image type="content" source="media/storsimple-user-receives-webui/web-restart-command.png" alt-text="Screenshot shows the output of the web restart command.":::
 
-3. Log on to the WebUI, and then confirm that you no longer receive the error message. If the error persists, open a support case at [https://support2.microsoft.com/gp/storsimple](https://support2.microsoft.com/gp/storsimple).
+1. Log on to the WebUI, and then confirm that you no longer receive the error message. If the error persists, open a support case at [StorSimple Support 5000 - 7000 Series](/previous-versions//mt179343(v=technet.10)).
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

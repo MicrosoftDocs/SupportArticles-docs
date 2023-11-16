@@ -1,7 +1,7 @@
 ---
 title: Change the default permissions on GPOs
 description: Describes how to change the default permissions on Group Policy objects (GPOs).
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

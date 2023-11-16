@@ -1,7 +1,7 @@
 ---
 title: Sysprep fails with Microsoft Store apps
 description: Describes an issue that occurs when you remove a provisioned Windows Store app or update a Windows Store app by using the Windows Store and then running sysprep on the machine.
-ms.date: 09/08/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -120,3 +120,7 @@ For more information about how to add and remove apps, see:
 
 - [Sideload Apps with DISM](/previous-versions/windows/it-pro/windows-8.1-and-8/hh852635(v=win.10))
 - [Add or Remove Packages Offline Using DISM](/previous-versions/windows/it-pro/windows-8.1-and-8/hh824838(v=win.10))
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

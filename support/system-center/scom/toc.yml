@@ -98,6 +98,8 @@
     href: exchange-2010-management-pack-guidance.md
   - name: Regular expression support
     href: regular-expression-support.md
+  - name: Remove duplicate Management pack aliases
+    href: remove-duplicate-management-pack-aliases.md
 - name: Monitor log files
   items:
   - name: Monitor text and CSV log files
@@ -142,7 +144,7 @@
     href: event-4001-monitor-sql-server-2012.md
   - name: Health Service doesn't process configuration files
     href: health-service-not-process-configuration-files.md
-  - name: HTTP 500 error when connecting to the web console remotely
+  - name: HTTP 500 error connecting to the web console
     href: http-500-error-connecting-to-web-console.md
   - name: Maintenance mode FAQ
     href: maintenance-mode.md
@@ -212,3 +214,5 @@
     href: troubleshoot-oms-onboarding-issues.md
   - name: Unable to register to Advisor Service
     href: error-3000-unable-to-register-to-advisor-service.md
+  - name: Use CA certificate on SCX agent
+    href: use-ca-certificate-on-scx-agent.md

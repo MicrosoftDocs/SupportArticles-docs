@@ -1,7 +1,7 @@
 ---
 title: AD replication fails with error 8409
 description: AD replication fails with error 8409 after you restore or undelete AD objects in Windows Server 2016.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -140,3 +140,7 @@ Task Category: Internal Configuration
 Level: Information  
 Description:  
 This Active Directory Domain Services server does not support the Recycle Bin. Deleted objects may be undeleted, however, when an object is undeleted, some attributes of that object may be lost. Additionally, attributes of other objects that refer to the object being undeleted may also be lost.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).

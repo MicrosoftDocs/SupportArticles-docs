@@ -3,7 +3,6 @@ title: Exception when you execute a query
 description: This article provides workarounds for the problem that occurs when you use SQL Server Management Studio (SSMS) to run a SQL query that returns a large amount of data.
 ms.date: 10/29/2020
 ms.custom: sap:Management Studio
-ms.prod: sql
 ---
 # Exception when you execute a query in SQL Server Management Studio
 

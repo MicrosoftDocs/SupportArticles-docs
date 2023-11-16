@@ -108,7 +108,7 @@ Use the Active Directory Schema Master snap-in to transfer the schema master rol
 
 For more information, see:
 
-- [Active Directory FSMO roles in Windows](/troubleshoot/windows-server/identity/fsmo-roles)
+- [Active Directory FSMO roles in Windows](fsmo-roles.md)
 - [FSMO placement and optimization on Active Directory domain controllers](https://support.microsoft.com/help/223346)
 - [Flexible Single Master Operation Transfer and Seizure Process](https://support.microsoft.com/help/223787)
 - [HOW TO: Use Ntdsutil to find and clean up duplicate security identifiers](https://support.microsoft.com/help/816099)

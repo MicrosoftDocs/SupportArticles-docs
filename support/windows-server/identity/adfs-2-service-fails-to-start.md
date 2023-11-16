@@ -1,7 +1,7 @@
 ---
 title: ADFS 2.0 service fails to start
 description: Provides troubleshooting steps for ADFS service configuration and startup problems.
-ms.date: 12/9/2021
+ms.date: 12/09/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -27,8 +27,8 @@ Most of ADFS 2.0 problems belong to one of the following main categories. This a
 - [Connectivity problems](https://support.microsoft.com/help/3044971)
 - ADFS service problems (KB 3044973)
 - [Certificate problems](https://support.microsoft.com/help/3044974)
-- [Authentication problems](/troubleshoot/windows-server/identity/adfs-error-401-requested-resource-requires-authentication)
-- [Claim rules problems](/troubleshoot/windows-server/identity/adfs-2-error-access-is-denied)
+- [Authentication problems](adfs-error-401-requested-resource-requires-authentication.md)
+- [Claim rules problems](adfs-2-error-access-is-denied.md)
 
 ## Symptoms
 

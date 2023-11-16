@@ -4,7 +4,6 @@ description: Provides information to understand and troubleshoot update statemen
 ms.date: 10/28/2022
 ms.custom: sap:Performance
 ms.topic: troubleshooting
-ms.prod: sql
 ms.reviewer: jopilov, shaunbe
 author: liwei-yin
 ms.author: liweiyin

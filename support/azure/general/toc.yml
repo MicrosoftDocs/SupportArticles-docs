@@ -82,19 +82,6 @@
   - name: Azure Service Fabric troubleshooter
     href: fabric-logs.md
 
-- name: Azure Storage
-  items:
-  - name: Embedded application error when install Azure backup agent
-    href: unable-to-execute-the-embedded-application-error-backup-agent.md
-  - name: Invalid blob or block content, or invalid block list
-    href: invalid-blob-or-block-content-or-invalid-block-list.md
-  - name: Request body is too large error when write to file
-    href: request-body-large.md
-  - name: Optimize CreateFile function
-    href: optimize-createfile-function.md
-  - name: Troubleshoot high CPU or disk usage issues
-    href: diagnose-high-cpu-disk-perfinsights.md
-
 - name: Azure Batch
   items:
   - name: Access to storage account is denied
@@ -109,8 +96,12 @@
     href: azure-batch-pool-creation-failure.md
   - name: Batch pool deletion failure
     href: azure-batch-pool-deletion-failure.md
+  - name: Batch task is stuck in Running state
+    href: azure-batch-task-stuck-in-running-state.md
   - name: Batch pool resizing failure
     href: azure-batch-pool-resizing-failure.md
+  - name: Batch task fails without stdout or stderr
+    href: azure-batch-task-failure-no-stdout-stderr-log.md
   - name: Use managed identities in a Batch account or a Batch pool
     href: use-managed-identities-azure-batch-account-pool.md
 

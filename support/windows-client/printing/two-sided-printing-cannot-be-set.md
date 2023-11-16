@@ -1,7 +1,7 @@
 ---
 title: Duplex printing options can't be set
 description: Resolves an issue that prevents the settings for duplex printing options from being changed through applications.
-ms.date: 09/08/2020
+ms.date: 05/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -62,3 +62,7 @@ Microsoft has confirmed that this is a problem in the Microsoft products that ar
 ## More information
 
 To learn more about how to print more detail, see [How to print](https://windows.microsoft.com/windows-8/how-to-print) in Windows 8.1.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../windows-troubleshooters/gather-information-using-tss-user-experience.md#printing).

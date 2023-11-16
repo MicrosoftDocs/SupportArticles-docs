@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot known issues for printing
 description: Overview of printing known issues.
-ms.date: 1/31/2023
+ms.date: 05/16/2023
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm
@@ -158,3 +158,7 @@ Use Active Directory Sites and Services to update the sites and subnets. Then, y
 ### Resolution
 
 Active Directory cannot locate a node in the tree of your directory without having a subnet associated with it. If your organization is small enough, this situation isn't a problem because users can search for any printer in the organization. However, for larger organizations or organization that has many printers, you can still enable users to browse the location hierarchy as an aid to locate a printer. To do this, you have to create artificial subnets in Active Directory that correspond to the hierarchy that you want to create.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-user-experience.md#printing).

@@ -3,7 +3,7 @@ title: You aren't part of this organization
 description: Describes an error that occurs when you try to use the Dynamics 365 App for Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-email-office-integration
 ---
 # You are not part of this organization. Please contact your administrator error occurs in Microsoft Dynamics 365 App for Outlook

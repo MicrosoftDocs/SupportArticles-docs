@@ -3,7 +3,7 @@ title: Cannot connect to Dynamics CRM server or value cannot be null
 description: Provides a solution to an error that occurs when you try to connect Microsoft Dynamics CRM 2013 for Microsoft Office Outlook to CRM Online.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-email-office-integration
 ---
 # Cannot connect to Microsoft Dynamics CRM server error occurs when you try to connect Microsoft Dynamics CRM 2013 for Microsoft Office Outlook to CRM Online

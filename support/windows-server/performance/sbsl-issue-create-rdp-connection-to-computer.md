@@ -1,7 +1,7 @@
 ---
 title: SBSL issue when you create an RDP connection to Windows Server 2012 R2
 description: Describes an issue in which computer freezes when you create an RDP connection to Windows Server 2012 R2.
-ms.date: 1/17/2023
+ms.date: 01/17/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

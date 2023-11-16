@@ -178,7 +178,7 @@ If you encounter issues when you start a stopped Windows VM or resize an existin
 
 ## Next steps
 
-* [Supportability of adding Azure VMs to an existing availability set](/troubleshoot/azure/virtual-machines/virtual-machines-availability-set-supportability)
-* [Redeploy Windows virtual machine to new Azure node](/troubleshoot/azure/virtual-machines/redeploy-to-new-node-windows)
+* [Supportability of adding Azure VMs to an existing availability set](virtual-machines-availability-set-supportability.md)
+* [Redeploy Windows virtual machine to new Azure node](redeploy-to-new-node-windows.md)
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

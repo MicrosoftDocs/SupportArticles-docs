@@ -1,7 +1,7 @@
 ---
 title: Media device isn't available in the Devices charm
 description: Describes how to add non-certified devices as Play To endpoints on the Devices charm in Windows 8.1.
-ms.date: 09/23/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -57,3 +57,7 @@ To add this registry key value, follow these steps:
 > - This feature can also be enabled by following the same steps for `HKEY_CURRENT_USER\Software\Microsoft\PlayTo`. However, we recommend that you add this **ShowNonCertifiedDevices** value under a key that is machine-centric rather than user-centric.
 > - This feature is for users who would prefer to connect to their non-certified devices even if they won't be guaranteed a great experience.
 > - Devices not certified for Windows 8 may not be compatible with modern formats used by websites and apps in the Store or playback controls such as volume, skip, or seek.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

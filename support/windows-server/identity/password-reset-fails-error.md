@@ -1,7 +1,7 @@
 ---
 title: Password Reset using Active Directory Users & Computers fails
 description: Provides a solution to an error that occurs when you reset the password of a user.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -27,7 +27,7 @@ You have the task to manage users in your domain and you need to reset the passw
 > Windows cannot complete the password change for \<user name> because:  
 The System cannot find the path specified
 
-The password for the user isn't changed afterwards. The same task may work with other administrator user accounts, and also for the same administrator accounts on other workstations. Resetting the user password may also work through other tools, for example using the LDIFDE as outlined in [How to set a user's password with Ldifde](/troubleshoot/windows-server/identity/set-user-password-with-ldifde).
+The password for the user isn't changed afterwards. The same task may work with other administrator user accounts, and also for the same administrator accounts on other workstations. Resetting the user password may also work through other tools, for example using the LDIFDE as outlined in [How to set a user's password with Ldifde](set-user-password-with-ldifde.md).
 
 ## Cause
 

@@ -5,7 +5,6 @@ ms.date: 06/16/2022
 ms.custom: sap:Connection issues
 author: HaiyingYu
 ms.author: haiyingyu
-ms.prod: sql
 ---
 # Troubleshoot connectivity issues in SQL Server
 
@@ -23,7 +22,7 @@ Before you start troubleshooting, check [Recommended prerequisites and checklist
 
 ## Common connectivity issues
 
-Use the list below to navigate to the appropriate article page for detailed troubleshooting steps for your scenario:
+Use the following list to navigate to the appropriate article page for detailed troubleshooting steps for your scenario:
 
 - [A network-related or instance-specific error occurred while establishing a connection to SQL Server](../connect/network-related-or-instance-specific-error-occurred-while-establishing-connection.md)
 

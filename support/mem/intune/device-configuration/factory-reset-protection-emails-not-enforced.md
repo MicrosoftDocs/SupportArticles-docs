@@ -19,13 +19,13 @@ Consider the following scenario:
 
   :::image type="content" source="media/factory-reset-protection-emails-not-enforced/factory-reset-protection-emails.png" alt-text="Screenshot of Factory reset protection emails setting and a sample email address.":::
 
-- You do a factory reset on the device through the **Settings** menu (for example, tap **Settings** > **General management** > **Reset** > **Factory data reset**), or you wipe the device from Intune in the Microsoft Endpoint Manager admin center.
+- You do a factory reset on the device through the **Settings** menu (for example, tap **Settings** > **General management** > **Reset** > **Factory data reset**), or you wipe the device from Intune in the Microsoft Intune admin center.
 
 In this scenario, you can activate the device by using a Google account that isn't included in the **Factory reset protection emails** setting.
 
 ## Cause
 
-This behavior is expected. When you do a factory reset on the device through the **Settings** menu or you wipe the device from Intune in the Microsoft Endpoint Manager admin center, all your data is removed. This includes the Factory Reset Protection (FRP) data.
+This behavior is expected. When you do a factory reset on the device through the **Settings** menu or you wipe the device from Intune in the Microsoft Intune admin center, all your data is removed. This includes the Factory Reset Protection (FRP) data.
 
 ## Solution
 

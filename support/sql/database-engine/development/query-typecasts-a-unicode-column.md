@@ -1,13 +1,13 @@
 ---
-title: Query that typecasts a Unicode column
-description: This article provides workarounds for the problem that occurs when a statement contains an "IN" or "Or" clause that's defined for a Unicode column and contains 'collate' to typecast the Unicode column to another binary collation.
+title: Query that typecasts a Unicode column to a binary collation returns incorrect results
+description: This article provides workarounds for the problem that occurs when a statement contains an IN or OR clause that's defined for a Unicode column and contains 'collate' to typecast the Unicode column to another binary collation.
 ms.date: 09/07/2020
 ms.custom: sap:Database Design and Development
-ms.prod: sql
 ---
+
 # SQL Server query that typecasts a Unicode column to a binary collation returns incorrect results
 
-This article helps you resolve the problem that occurs when a statement contains an `IN` or `Or` clause that's defined for a Unicode column and contains `collate` to typecast the Unicode column to another binary collation.
+This article helps you resolve the problem that occurs when a statement contains an `IN` or `OR` clause that's defined for a Unicode column and contains `collate` to typecast the Unicode column to another binary collation.
 
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 3053639
@@ -16,11 +16,11 @@ _Original KB number:_ &nbsp; 3053639
 
 You have a table in a SQL Server database in which the following conditions are true:
 
-- The table contains a Unicode column. For example, the table has a nchar(5) column.
+- The table contains a Unicode column. For example, the table has a `nchar(5)` column.
 - Collation of the Unicode column is `Latin1_General_BIN`.
 - The same Unicode column is part of an index. However, T-SQL statements that are run against this table may return incorrect results. This problem occurs when the following conditions are true:
-- The T-SQL statement contains an `IN` or `Or` clause that's defined for the same Unicode column.
-- The T-SQL statement contains `collate` to typecast the Unicode column to another binary collation.
+  - The T-SQL statement contains an `IN` or `OR` clause that's defined for the same Unicode column.
+  - The T-SQL statement contains `collate` to typecast the Unicode column to another binary collation.
 
 Sample query:
 
@@ -37,18 +37,18 @@ CONSTRAINT [PK__Table_1] PRIMARY KEY CLUSTERED -- Primary Key on all the 3 colum
 
 GO
 
-select * from Table_1 where Col1 = 1 and Col2 = '1' and Col3 collate Chinese_PRC_BIN IN (N'1' ,N'2')  -- This statement using "IN" and "collate" might give incorrect results.
-go
+SELECT * FROM Table_1 WHERE Col1 = 1 AND Col2 = '1' AND Col3 COLLATE Chinese_PRC_BIN IN (N'1' ,N'2')  -- This statement using "IN" and "collate" might give incorrect results.
+GO
 
-select * from Table_1 where Col1 = 1 and Col2 = '1' and (Col3 collate Chinese_PRC_BIN = N'1' or Col3 collate Chinese_PRC_BIN = N'2') -- This statement using "OR" and "collate" might give incorrect results.
-go
+SELECT * FROM Table_1 WHERE Col1 = 1 AND Col2 = '1' AND (Col3 COLLATE Chinese_PRC_BIN = N'1' OR Col3 COLLATE Chinese_PRC_BIN = N'2') -- This statement using "OR" and "collate" might give incorrect results.
+GO
 ```
 
 ## Workaround
 
 To work around this problem, make sure that the Unicode column (Col3 in the sample query in the [Symptoms](#symptoms) section) meets one of the following conditions:
 
-- Is of the datatype char(5) or nvarchar(5).
+- Is of the datatype `char(5)` or `nvarchar(5)`.
 - Is defined by using the same collation of `Chinese_PROC_BIN` for which collate is desired (be aware that `Chinese_PROC_BIN` is just an example; other binary collations also apply).
 - Is of a collation other than `Latin1_General_BIN`.
 - Is collated on CI collation. For example: `collate Chinese_PRC_90_CI_AI IN (N'1 ', N'2 ')`.
@@ -64,8 +64,8 @@ To reproduce this issue, run the following script:
 CREATE DATABASE Test_DB
 GO
 
-use Test_DB
-go
+USE Test_DB
+GO
 
 CREATE TABLE [dbo].[Table_1]([Col1] [smallint] NOT NULL,
 [Col2] [nchar](5),
@@ -82,31 +82,31 @@ GO
 
 -- Populate the table with a sample script as below
 
-declare @x as int
-declare @y as int
+DECLARE @x AS INT
+DECLARE @y AS INT
 
-set @x=1
-set @y=1
+SET @x=1
+SET @y=1
 
-while (@x<=2)
-begin
-while (@y<=1000)
-begin
-insert into Table_1 values (@x,@y,@y)
-set @y=@y+1
-end
-set @x=@x +1
-end
-go
+WHILE (@x<=2)
+BEGIN
+WHILE (@y<=1000)
+BEGIN
+INSERT INTO Table_1 values (@x,@y,@y)
+SET @y=@y+1
+END
+SET @x=@x +1
+END
+GO
 
-select * from Table_1 where Col1 = 1 and Col2 = '1' and Col3 collate Chinese_PRC_BIN = N'1' -- Expected output of one row.
-go
+SELECT * FROM Table_1 WHERE Col1 = 1 AND Col2 = '1' AND Col3 COLLATE Chinese_PRC_BIN = N'1' -- Expected output of one row.
+GO
 
-select * from Table_1 where Col1 = 1 and Col2 = '1' and Col3 collate Chinese_PRC_BIN in (N'1' ,N'2') -- No rows returned when output for Col3= N'1' is expected.
-go
+SELECT * FROM Table_1 WHERE Col1 = 1 AND Col2 = '1' AND Col3 COLLATE Chinese_PRC_BIN IN (N'1' ,N'2') -- No rows returned when output for Col3= N'1' is expected.
+GO
 
-select * from Table_1 where Col1 = 1 and Col2 = '1' and (Col3 collate Chinese_PRC_BIN = N'1' or Col3 collate Chinese_PRC_BIN = N'2') -- No rows returned when output for Col3= N'1' is expected.
-go
+SELECT * FROM Table_1 WHERE Col1 = 1 AND Col2 = '1' AND (Col3 COLLATE Chinese_PRC_BIN = N'1' OR Col3 COLLATE Chinese_PRC_BIN = N'2') -- No rows returned when output for Col3= N'1' is expected.
+GO
 ```
 
 ## Applies to

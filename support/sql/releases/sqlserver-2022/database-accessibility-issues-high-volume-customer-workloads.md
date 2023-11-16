@@ -6,15 +6,13 @@ ms.custom: KB5023236
 appliesto:
 - SQL Server 2022 on Windows
 - SQL Server 2019 on Windows
-author: MonicaChenc
-ms.author: v-cuichen
-ms.reviewer: mireks, vanto, rajat.jain, chrisbrower, arupp
+ms.reviewer: mireks, vanto, rajat.jain, chrisbrower, arupp, v-cuichen
 ---
 # FIX: Database accessibility issues with high-volume customer workloads that use EKM for encryption and key generation
 
 ## Symptoms
 
-High-volume customer workloads that use [Extensible Key Management (EKM)](/sql/relational-databases/security/encryption/extensible-key-management-ekm) may experience intermittent database accessibility issues. These accessibility issues are caused by the frequent creation or rotation of the virtual log file (VLF) that requires access to Azure Key Vault (AKV). If AKV or supporting services such as Azure Active Directory (Azure AD) aren't accessible during this creation or rotation, you can't perform the creation or rotation of the VLF. Additionally, it causes database accessibility issues.
+High-volume customer workloads that use [Extensible Key Management (EKM)](/sql/relational-databases/security/encryption/extensible-key-management-ekm) may experience intermittent database accessibility issues. These accessibility issues are caused by the frequent creation or rotation of the virtual log file (VLF) that requires access to Azure Key Vault (AKV). If AKV or supporting services such as Microsoft Entra ID aren't accessible during this creation or rotation, you can't perform the creation or rotation of the VLF. Additionally, it causes database accessibility issues.
 
 VLFs can be created or rotated frequently when the transaction log files are small, or the automatic growth (autogrow) increment of the transaction log is small, instead of large enough to stay ahead of the needs of the workload transactions. For more information, see [Manage the size of the transaction log file](/sql/relational-databases/logs/manage-the-size-of-the-transaction-log-file).
 
@@ -25,7 +23,7 @@ You can monitor the size and the creation frequency of VLFs by using [sys.dm_db_
 This problem is fixed in the following cumulative updates for SQL Server:
 
 - [Cumulative Update 1 for SQL Server 2022](cumulativeupdate1.md)
-- [Cumulative Update 19 for SQL Server 2019](https://support.microsoft.com/help/5023049)
+- [Cumulative Update 19 for SQL Server 2019](../sqlserver-2019/cumulativeupdate19.md)
 
 This fix introduces a startup trace flag (TF) 15025. You can use TF 15025 to disable the AKV access that's required for a newly created VLF, which allows high-volume customer workloads to continue without interruption. Once this trace flag is enabled, SQL Server that uses EKM for encryption and key generation doesn't contact AKV during the creation or rotation of the VLF.
 

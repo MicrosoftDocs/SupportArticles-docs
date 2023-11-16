@@ -1,7 +1,7 @@
 ---
 title: Kerberos double-hop authentication with Microsoft Edge (Chromium)
 description: This article introduces extra steps to set up integrated Windows authentication with Microsoft Edge (Chromium).
-ms.date: 6/30/2021
+ms.date: 06/30/2021
 ms.custom: sap:WWW authentication and authorization
 ms.reviewer: aartigoyle, dili
 author: HaiyingYu
@@ -179,3 +179,7 @@ Once the policy has been configured and deployed, the following steps must be ta
     - `"delegated":false` means that the ticket shouldn't be delegated even if the ticket is marked as `delegatable`.
     - `"mutual":false` means that the client (browser) doesn't require the server to also authenticate to the client and prove its identity. Only the client should authenticate to the server to prove its identity.
     - `HTTP/web-server.odessy.local` is the SPN used by the browser when making the authentication call.
+
+## More information
+
+[Diagnostic pages for Windows Integrated Authentication troubleshooting](diagnostics-pages-windows-integrated-authentication.md)

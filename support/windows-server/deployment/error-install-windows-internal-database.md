@@ -1,7 +1,7 @@
 ---
 title: MSSQL$MICROSOFT##WID service was unable to log on as NT SERVICE\MSSQL$MICROSOFT##WID
 description: Describes an issue where you can't install Windows Internal Database on a computer running Windows Server 2012. Provides workarounds.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -51,3 +51,7 @@ To work around the issue, use one of the following methods:
 ## More information
 
 You may also experience other symptoms in this situation. For example, the WID service may seem to be installed, but it doesn't start. Additionally, the Add Roles and Features Wizard indicates that a restart is pending.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

@@ -19,7 +19,7 @@ When you try to use Microsoft Business Solutions-Great Plains eConnect on a comp
 New transaction cannot enlist in the specified transaction coordinator
 
 > [!IMPORTANT]
-> This article contains information about modifying the registry. Before you modify the registry, make sure to back it up and make sure that you understand how to restore the registry if a problem occurs. For information about how to back up, restore, and edit the registry, see [Windows registry information for advanced users](/troubleshoot/windows-server/performance/windows-registry-advanced-users).
+> This article contains information about modifying the registry. Before you modify the registry, make sure to back it up and make sure that you understand how to restore the registry if a problem occurs. For information about how to back up, restore, and edit the registry, see [Windows registry information for advanced users](../../windows-server/performance/windows-registry-advanced-users.md).
 
 ## Cause
 

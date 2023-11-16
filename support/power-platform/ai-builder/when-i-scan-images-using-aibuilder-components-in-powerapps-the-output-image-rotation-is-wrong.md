@@ -3,7 +3,7 @@ title: Wrong output image rotation for scanned images with AI Builder components
 description: Provides a resolution for the incorrect image rotation issue that occurs when you scan images by using AI Builder components in Power Apps.
 ms.reviewer: angiendrews
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: 
 ms.author: angieandrews
 author: v-aangie

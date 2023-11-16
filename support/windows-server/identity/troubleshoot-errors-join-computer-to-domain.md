@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot errors that occur when you join Windows-based computers to a domain
 description: Troubleshooting guide for error messages that occurs when you join Windows-based computers to a domain.
-ms.date: 10/4/2022
+ms.date: 10/04/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -139,7 +139,7 @@ When you type the domain name, make sure that you type the DNS name and not the 
 
 #### Resolution
 
-Make sure that the DC that hosts the relative ID (RID) operations master is online and functional. For more information, see [Event ID 16650: The account-identifier allocator failed to initialize in Windows Server](/troubleshoot/windows-server/identity/event-16650-account-identifier-allocator-not-initialize).
+Make sure that the DC that hosts the relative ID (RID) operations master is online and functional. For more information, see [Event ID 16650: The account-identifier allocator failed to initialize in Windows Server](event-16650-account-identifier-allocator-not-initialize.md).
 
 > [!Note]
 > You can use the `netdom query fsmo` command to determine which DC has the RID Master role.
@@ -165,8 +165,8 @@ This problem can also be caused by one of the following conditions:
 
 > [!NOTE]
 > The following articles contain port requirement information:  
-[832017 Service overview and network port requirements for Windows](/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements)  
-[179442 How to configure a firewall for domains and trusts](/troubleshoot/windows-server/identity/config-firewall-for-ad-domains-and-trusts)  
+[832017 Service overview and network port requirements for Windows](../networking/service-overview-and-network-port-requirements.md)  
+[179442 How to configure a firewall for domains and trusts](config-firewall-for-ad-domains-and-trusts.md)  
 
 ### Error 10
 
@@ -232,8 +232,8 @@ This error is likely a transient error that is logged when a domain join searche
 #### Resolution
 
 This error can occur when the Kerberos token size is larger than the maximum default size. If this situation, you have to increase the Kerberos token size of the computer that you try to join to the domain. For more information, see the following Knowledge Base articles:  
-[935744 "Not enough storage is available to complete this operation" error message when you use a domain controller to join a computer to a domain](/troubleshoot/windows-client/windows-security/not-enough-storage-available-complete-operation-error)  
-[327825 Problems with Kerberos authentication when a user belongs to many groups](/troubleshoot/windows-server/windows-security/kerberos-authentication-problems-if-user-belongs-to-groups)
+[935744 "Not enough storage is available to complete this operation" error message when you use a domain controller to join a computer to a domain](../../windows-client/windows-security/not-enough-storage-available-complete-operation-error.md)  
+[327825 Problems with Kerberos authentication when a user belongs to many groups](../windows-security/kerberos-authentication-problems-if-user-belongs-to-groups.md)
 
 ### Error 7
 
@@ -242,7 +242,7 @@ This error can occur when the Kerberos token size is larger than the maximum def
 #### Resolution
 
 This problem is related to mismatched SMB Signing settings between the client computer and the DC that is being contacted for the domain join operation. Review the following documentation to further investigate the current and recommended values in your environment:  
-[281648 Error message: The account is not authorized to login from this station](/troubleshoot/windows-server/identity/account-not-authorized-login-from-this-station)
+[281648 Error message: The account is not authorized to login from this station](account-not-authorized-login-from-this-station.md)
 [823659 Client, service, and program issues can occur if you change security settings and user rights assignments](https://support.microsoft.com/help/823659/client-service-and-program-issues-can-occur-if-you-change-security-set)
 
 ### Error 8

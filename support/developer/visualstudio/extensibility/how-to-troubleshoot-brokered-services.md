@@ -6,7 +6,7 @@ author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: andarno
 ---
-# How to: Troubleshoot brokered services
+# Troubleshoot brokered services
 
 _Applies to:_&nbsp;Visual Studio 2019 and later versions
 

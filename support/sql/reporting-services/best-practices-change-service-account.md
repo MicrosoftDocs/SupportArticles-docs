@@ -4,7 +4,6 @@ description: This article describes the best practices for changing the service 
 ms.date: 09/21/2020
 ms.custom: sap:Reporting Services
 ms.reviewer: tinadeo
-ms.prod: sql
 ---
 # Best practices for changing the service account for the report server in SQL Server Reporting Services
 

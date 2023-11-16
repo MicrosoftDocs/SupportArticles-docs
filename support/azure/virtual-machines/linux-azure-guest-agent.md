@@ -5,7 +5,7 @@ services: virtual-machines
 ms.collection: linux
 ms.service: virtual-machines
 ms.subservice: vm-extensions-not-operating
-author: axelg
+author: axelgMS
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-linux
@@ -22,7 +22,7 @@ The [Azure Linux Agent](/azure/virtual-machines/extensions/agent-linux) enables 
 
 ## Before you begin
 
-Check the agent status and version to make sure it is still supported. See [Minimum version support for virtual machine agents in Azure](/troubleshoot/azure/virtual-machines/support-extensions-agent-version) to check version support, or see [WALinuxAgent FAQ](https://github.com/Azure/WALinuxAgent/wiki/FAQ#what-does-goal-state-agent-mean-in-waagent---version-output) for steps to find the status and version.
+Check the agent status and version to make sure it is still supported. See [Minimum version support for virtual machine agents in Azure](support-extensions-agent-version.md) to check version support, or see [WALinuxAgent FAQ](https://github.com/Azure/WALinuxAgent/wiki/FAQ#what-does-goal-state-agent-mean-in-waagent---version-output) for steps to find the status and version.
 
 ## Troubleshoot a Not Ready status
 

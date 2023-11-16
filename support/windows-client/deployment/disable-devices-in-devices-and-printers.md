@@ -1,7 +1,7 @@
 ---
 title: Disable Devices in Devices and Printers
 description: Describes how to hide or disable **Devices** in **Devices and Printers**.
-ms.date: 09/08/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -42,3 +42,7 @@ Create a new key **{2227a280-3aea-1069-a2de-08002b30309d}**
 On the right hand Pane **Edit** the **Default** Key and give it the value **Printers**.
 
 This will create a folder on the Desktop as Printers which when opened gives only the Printer listing.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

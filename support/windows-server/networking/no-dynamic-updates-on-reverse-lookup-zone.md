@@ -1,7 +1,7 @@
 ---
 title: No dynamic update on classless reverse lookup zone
 description: Dynamic update does not work with classless in - addr.arpa zones. If you need to dynamically update PTR resource records, do not use classless zones.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -45,7 +45,7 @@ To create PTR records in a reverse lookup zone, follow these steps on the parent
 2. Create PTR records for every host under the new zone. In the Host IP Number box, type the last octet of the IP address. In the **Host Name** box, type the fully qualified domain name of the host.
 
 > [!NOTE]
-> This example is for a subnetted class C network. For networks that use other class addresses, make the appropriate changes. For more information about subnetted reverse lookup zones, see [How to configure a subnetted reverse lookup zone](/troubleshoot/windows-server/networking/configure-subnetted-reverse-lookup-zone).
+> This example is for a subnetted class C network. For networks that use other class addresses, make the appropriate changes. For more information about subnetted reverse lookup zones, see [How to configure a subnetted reverse lookup zone](configure-subnetted-reverse-lookup-zone.md).
 
 ## Status
 

@@ -5,7 +5,6 @@ ms.date: 11/27/2021
 ms.custom: sap:Connection issues
 author: HaiyingYu
 ms.author: haiyingyu
-ms.prod: sql
 ---
 # Test OLE DB connectivity to SQL Server by using a UDL file
 

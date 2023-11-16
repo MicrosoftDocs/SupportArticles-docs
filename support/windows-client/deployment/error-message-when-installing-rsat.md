@@ -1,7 +1,7 @@
 ---
 title: Error (This update is not applicable to your computer) when installing RSAT
 description: Provides a solution to an error that occurs when you install the Remote Server Administration Tools.
-ms.date: 09/15/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -37,3 +37,7 @@ Install RSAT tools before installing Service Pack 1 for Windows 7. If Service Pa
 ## More information
 
 Microsoft has confirmed this to be by design, as RSAT was designed for Windows 7 RTM version. A newer version of RSAT is slated to be released in the future.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

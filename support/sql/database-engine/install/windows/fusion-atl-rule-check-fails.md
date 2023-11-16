@@ -3,7 +3,6 @@ title: Fusion ATL rule check fails
 description: This article provides a workaround for the problem that occurs when you try to uninstall a SQL Server instance or when you try to remove a SQL Server node from a failover cluster.
 ms.date: 09/25/2020
 ms.custom: sap:Installation, Patching and Upgrade
-ms.prod: sql
 ---
 # The Fusion ATL rule check fails when you try to uninstall a SQL Server 2008 instance or when you try to remove a SQL Server 2008 node from a failover cluster
 

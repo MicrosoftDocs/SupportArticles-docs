@@ -43,7 +43,7 @@ If you're running into issues using Power Apps, try these common troubleshooting
 
 1. **Performance degradation when opening Power Apps Studio in China** (March 25, 2022)
 
-    Power Apps Studio may take more than 30 seconds to load within the China region currently. This issue does not impact tenants hosted locally by 21Vianet.
+    Power Apps Studio may take more than 30 seconds when loading in China. This issue does not impact tenants hosted locally by 21Vianet.
 
 1. **Unable to copy paste forms into data cards** (March 2022)
 
@@ -221,6 +221,16 @@ If you're running into issues using Power Apps, try these common troubleshooting
 
     Next links (the property on a query result that enables a gallery or grid to automatically page in the next set of results of a query) are not yet supported for [action-based connectors](/power-apps/maker/canvas-apps/connections-list) in Power Apps. This means that when you use an action-based connector, it will retrieve data up to the delegable limit and then stop. To get paging behaviors by using a gallery or grid and an action-based connection, use a Power Automate flow.
 
+1. **Explicit column selection and columns that disappear.**
+
+   With the Preview feature Explicit column selection (ECS) turned on, columns may not be retrieved from the data source if the data is first retrieved into a collection. As some tables may have many columns, ECS automatically computes which columns are necessary to retrieve based on their usage in controls (for example, galleries and forms). This also generally works for collections. However, the column lineage is occasionally lost when the data moves through collections and variables, and Power Apps may lose track of the column it should retrieve. To resolve this issue, you can force Power Apps to "remember" the column by using the `ShowColumns` function. For example:
+
+    ```powerapps-dot
+    ClearCollect(MyColTable, ShowColumns(Filter(BankAccounts, AcountNo = 32), "Col1", "Col2", Col3"));
+    ```
+
+   Where `Col1`, `Col2`, and `Col3` are columns you expect to be retrieved from the data source (for example, the `Account` data source).
+
 ## Power Apps for Windows
 
 1. **Power Apps mobile app for Windows platform doesn't support Dropbox connector.** (December 15, 2020)
@@ -231,9 +241,9 @@ If you're running into issues using Power Apps, try these common troubleshooting
 
    When this issue happens, consider using web player on Windows platform.
 
-1. **AAD Conditional access with the policy "Require device to be marked as compliant" does not work in Power Apps for Windows** (July 30, 2020)
+1. **Microsoft Entra Conditional Access with the policy "Require device to be marked as compliant" does not work in Power Apps for Windows** (July 30, 2020)
 
-   When setting the conditional access policy "Require device to be marked as compliant" in Azure Active Directory, users will face login errors with the message "The application contains sensitive information and can only be accessed from devices or client applications that meet your enterprise management compliance policy" and won't be able to access their Power Apps. As a workaround, use your browser.
+   When setting the conditional access policy "Require device to be marked as compliant" in Microsoft Entra ID, users will face login errors with the message "The application contains sensitive information and can only be accessed from devices or client applications that meet your enterprise management compliance policy" and won't be able to access their Power Apps. As a workaround, use your browser.
 
 1. **`Connection.Connected` returns the wrong value during OnStart in Power Apps for Windows** (July 21, 2020)
 

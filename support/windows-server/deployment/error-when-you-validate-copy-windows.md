@@ -1,7 +1,7 @@
 ---
 title: Error when you validate a copy of Windows
 description: Provides a solution to an error that occurs when you try to validate a copy of Windows.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -86,3 +86,7 @@ In some cases, you might be required to update the **State** value for following
 
 > [!NOTE]
 > Ensure whatever value is updated for `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\WinTrust\Trust Providers\Software Publishing`, should be exact for above two registry.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

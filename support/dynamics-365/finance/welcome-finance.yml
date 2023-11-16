@@ -5,22 +5,107 @@ summary: Welcome to Microsoft Dynamics 365 Finance troubleshooting. These articl
 metadata:
   title: Microsoft Dynamics 365 Finance troubleshooting
   description: Landing page for Microsoft Dynamics 365 Finance troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
-  ms.prod: dynamics-365 #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.service: dynamics-365-finance #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
   author: #Required; your GitHub user alias, with correct capitalization.
   ms.author: #Required; microsoft alias of author; optional team alias.
-  ms.date: 01/31/2023
+  ms.date: 09/20/2023
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
 # Card
+  - title: Accounts payable
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Invoice automation exception processing
+            url: /dynamics365/finance/accounts-payable/vendor-invoice-automation#exception-processing
+# Card
+  - title: Business performance analytics (preview)
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Business performance analytics self-help overview
+            url: /dynamics365/finance/business-performance-analytics/BPA-help-overview
+          - text: Missing fiscal calendar for general ledger 
+            url: /dynamics365/finance/business-performance-analytics/BPA-self-help-1
+          - text: Missing fiscal calendar for budget
+            url: /dynamics365/finance/business-performance-analytics/BPA-self-help-2
+          - text: Missing main account in budget
+            url: /dynamics365/finance/business-performance-analytics/BPA-self-help-3
+          - text: Missing journal entries
+            url: /dynamics365/finance/business-performance-analytics/BPA-self-help-4
+          - text: Mismatch between debits and credits
+            url: /dynamics365/finance/business-performance-analytics/BPA-self-help-5
+          - text: Missing budget data
+            url: /dynamics365/finance/business-performance-analytics/BPA-self-help-6
+          - text: Missing budget transaction header
+            url: /dynamics365/finance/business-performance-analytics/BPA-self-help-7
+            
+# Card
+  - title: Budgeting
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Position budgeting troubleshooting
+            url: /dynamics365/finance/budgeting/position-budgeting-set-up-issues
+ 
+# Card
+  - title: Cash and bank management
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Resolve issues with transactions that can't be settled
+            url: /dynamics365/finance/cash-bank-management/settlement-overview#resolve-issues-with-transactions-that-cant-be-settled
+          - text: Troubleshoot cash flow forecasting setup
+            url: /dynamics365/finance/cash-bank-management/cash-flow-forecasting-tsg
+
+# Card
+  - title: Finance insights
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Finance insights troubleshooting FAQ
+            url: /dynamics365/finance/finance-insights/finance-insights-troubleshooting-faq
+
+# Card
+  - title: Financial reporting
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshooting issues opening Report Designer
+            url: /dynamics365/finance/general-ledger/financial-reporting-getting-started#troubleshooting-issues-opening-report-designer
+          - text: Troubleshoot report designer issues with Event viewer
+            url: /dynamics365/finance/general-ledger/financial-reporting-getting-started#troubleshoot-report-designer-issues-with-event-viewer
+          - text: Troubleshoot issues connecting to Financial reporting
+            url: /dynamics365/finance/general-ledger/financial-reporting-getting-started#troubleshoot-issues-connecting-to-financial-reporting
+          - text: Troubleshoot the Office integration
+            url: /dynamics365/fin-ops-core/dev-itpro/office-integration/office-integration-troubleshooting?context=/dynamics365/context/finance
+
+# Card
   - title: General ledger
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: Change the accounting or reporting currency 
+            url: /dynamics365/finance/general-ledger/add-change-acctg-rprtg-crrncy
+          - text: Default financial dimensions on financial journals
+            url: /dynamics365/finance/general-ledger/dimension-default-values
+          - text: How do I set up balancing financial dimensions? 
+            url: /dynamics365/finance/general-ledger/set-up-balance-dimensions
+          - text: Journal posting failure due to imbalance
+            url: /dynamics365/finance/general-ledger/posting-fail-imbalance
+          - text: Open financial journal templates in Office 
+            url: /dynamics365/finance/general-ledger/open-fincl-jrnls-in-office
+          - text: Reverse settings on journals and lines 
+            url: /dynamics365/finance/general-ledger/rvrs-settgs-on-jrnls-lines
           - text: Troubleshoot issues with the General ledger adjustments page
             url: general-ledger/ledger-adjustments-troubleshoot.md
+          - text: Why can't I reverse this transaction?
+            url: /dynamics365/finance/general-ledger/cant-reverse-transctns
+          - text: Year-end close missing opening balances
+            url: /dynamics365/finance/general-ledger/yec-mssng-open-blnces
 
   # Card
   - title: Tax

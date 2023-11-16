@@ -1,7 +1,7 @@
 ---
 title: Use language ID to identify language pack
 description: Describes how to resolve the language ID to the name of the correct language pack to install.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -45,3 +45,7 @@ You can find the language ID in the Windows registry. To do it, start Registry E
 You can also search for the language ID in the [LCID-Locale Mapping Table](/openspecs/windows_protocols/ms-adts/a29e5c28-9fb9-4c49-8e43-4b9b8e733a05). For the example language ID (411) that is mentioned in the [Summary](#summary) section, the value indicates the Japanese language (listed as **0411** in the mapping table).
 
 For information about which sort object identifiers (OIDs) the sort control uses, see [LDAP_SERVER_SORT_OID and LDAP_SERVER_RESP_SORT_OID](/openspecs/windows_protocols/ms-adts/6b7b93f1-7c1a-45c2-9544-c067b94bba20).
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

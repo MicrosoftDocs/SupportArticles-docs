@@ -5,11 +5,11 @@ summary: Welcome to Power Automate troubleshooting. These articles explain how t
 metadata:
   title: Power Automate troubleshooting
   description: Landing page for Power Automate troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
-  ms.prod: power-platform #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.service: power-automate #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
   author: #Required; your GitHub user alias, with correct capitalization.
   ms.author: #Required; microsoft alias of author; optional team alias.
-  ms.date: 02/17/2023
+  ms.date: 08/22/2023
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -33,8 +33,6 @@ landingContent:
             url: getting-errors-null-fields.md
           - text: Manage orphaned flows without valid owner
             url: manage-orphan-flow-when-owner-leaves-org.md
-          - text: Send email with embedded image
-            url: how-to-send-email-with-embedded-image.md
           - text: Troubleshoot common errors with creating and assigning flow approvals
             url: common-errors-creating-and-assigning-flow-approvals.md
             
@@ -57,3 +55,5 @@ landingContent:
             url: https://powerautomate.microsoft.com/support/
           - text: Power Automate Community forum
             url: https://powerusers.microsoft.com/t5/Microsoft-Power-Automate/ct-p/MPACommunity
+          - text: Power Automate Ideas forum
+            url: https://ideas.powerautomate.com/d365community/forum/086dd68e-597f-ec11-8d21-0022482e8f9f

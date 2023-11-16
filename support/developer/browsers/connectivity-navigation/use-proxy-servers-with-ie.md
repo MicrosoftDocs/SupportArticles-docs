@@ -1,10 +1,11 @@
 ---
 title: Use Proxy Servers with Internet Explorer
-description: Discusses how to use Internet Explorer in Proxy environments.
+description: This article describes how to use the Internet Explorer in proxy environments.
 ms.date: 07/14/2020
-ms.reviewer: ramakoni
+ms.reviewer: heikom, axelr
 ms.technology: internet-explorer-connectivity-navigation
 ---
+
 # Using Proxy Servers together with Internet Explorer
 
 [!INCLUDE [](../../../includes/browsers-important.md)]
@@ -53,7 +54,7 @@ To configure the proxy setting through a group policy, see [How to configure Pro
 
 ### More information
 
-A proxy bypass entry may begin by using an **http://**, **https://**, **ftp://**, or **gopher://** protocol type.
+A proxy bypass entry might begin by using an **http://**, **https://**, **ftp://**, or **gopher://** protocol type.
 
 If a protocol type is used, the exception entry applies only to requests for that protocol.
 
@@ -72,7 +73,9 @@ To bypass servers, use an asterisk ("*") as a wildcard to replace actual charact
 
 - Enter a wildcard in the middle of an Internet address, IP address, or domain name that has a common beginning and ending. For example, the entry **www.*.com** matches any entry that starts as **www** and ends as **com**.
 
-- Enter a wildcard at the end of an Internet address, IP address, or domain name that has a common beginning. For example, use **www.microsoft.*** to bypass any entries that begin as **www.microsoft.**，such as `www.microsoft.com`, `www.microsoft.org`, but not `www.microsoftcorporation.com`.
+- Enter a wildcard at the end of an Internet address, IP address, or domain name that has a common beginning. For example, use **www.microsoft.*** to bypass any entries that begin as **www.microsoft.**, such as `www.microsoft.com`, `www.microsoft.org`, but not `www.microsoftcorporation.com`.
+
+- The list is intended to bypass servers, and not URLs. Therefore don't enter subwebs or trailing slashes, such as **https://www.microsoft.com/en-us** or **www.microsoft.com/**, as they are invalidating the whole list otherwise.
 
 To bypass addresses that have similar patterns, use multiple wildcards. For example, use 123.1*.66.* to bypass addresses such as 123.144.66.12, 123.133.66.15, and 123.187.66.13.
 

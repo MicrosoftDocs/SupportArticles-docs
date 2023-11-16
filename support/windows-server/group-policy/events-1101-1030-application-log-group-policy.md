@@ -1,7 +1,7 @@
 ---
 title: Events 1101 and 1030 are logged in the Application log when applying Group Policy
 description: Describes a problem that may occur when the Group Policy engine does not have read permissions to the gPLink attribute and the gPOptions attribute of the parent OUs. In this situation, the Group Policy engine cannot apply Group Policy settings.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -54,3 +54,7 @@ To resolve this problem, grant sufficient permissions to access the parent OUs t
 Granting permissions on the "distinguishedName" attribute through ACL Editor requires you to change the attribute visibility in DSSEC.DAT in the "[organizationalUnit]" section. You need to change the line "distinguishedname=7" to "distinguishedname=0".
 
 When you then restart the application showing ACL Editor, the attribute should be visible.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Group Policy issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-group-policy.md).

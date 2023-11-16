@@ -1,7 +1,7 @@
 ---
 title: Add OEM PnP drivers to Windows installations
 description: Provides the steps to add OEM Plug and Play drivers to Windows installations.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -340,3 +340,7 @@ Assume that you have completed these steps and new hardware is installed. When a
 
 > [!NOTE]
 > If the device has already been recognized by the operating system as a known or unknown device, you must remove the device by using Device Manager before you run Sysprep or the updated drivers are installed on startup during mini-Setup.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

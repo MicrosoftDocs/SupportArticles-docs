@@ -18,7 +18,7 @@ How to find what receipt layer was affected by the cost adjustment in Microsoft 
 
 Hopefully, you find this article useful for determining the receipt layers that were affected by a cost adjustment and how to update the exact layer that was affected if you didn't mean to or did it wrong.
 
-The below information taken from [Blog](https://community.dynamics.com/gp/b/dynamicsgp/posts/how-to-find-what-receipt-layer-was-affected-by-the-cost-adjustment). (Refer to the blog article for screen prints.)
+The below information taken from [Blog](https://community.dynamics.com/blogs/post/?postid=8d612be9-be06-41c4-b72b-3fdbaf1831fa). (Refer to the blog article for screen prints.)
 
 ## Resolution
 
@@ -34,7 +34,7 @@ It can make hard to determine what exact receipt layer this cost adjustment affe
 > [!NOTE]
 > You would have to have theHistorical Inventory Trial BalanceInstalled, running and recording information in theSEE30303table before you can use this method to identify the receipt layer that was affected by the cost adjustment.
 
-- See [Why to use the Historical Inventory Trial Balance Report.](https://community.dynamics.com/gp/b/dynamicsgp/posts/why-to-use-the-historical-inventory-trial-balance-report) on how to do it. It also goes over why to use this report as well.
+- See [Why to use the Historical Inventory Trial Balance Report.](https://community.dynamics.com/blogs/post/?postid=0956a4c1-5f98-46ac-a819-5b1aea35d4f9) on how to do it. It also goes over why to use this report as well.
 
 Additionally, you'll need access to SQL Server Management Studios with the ability to run select statements. (Read permissions)
 
@@ -64,7 +64,7 @@ Now, that you found the receipt layer and determined it was Invoiced incorrectly
 In this situation, I received one quantity at $1.00 and sold it at that cost (screen print in blog article). Then I invoiced receipt layer for $1.50 accidentally (should have been $1.00) which created the cost adjustment. I now then switch the $1.50 to $1.00 and then process it. GP then will output a posting journal like this below to show you the new cost for the Subledger and a new Journal Entry will be created for the GL as well
 
 If you want to drill down on the Document Number that depleted the layer go to Item Transaction Inquiry. Or you can go to an Inquiry respective to what type of outflow it's such a Sales Inquiries.  
-(The above information taken from [How to Find What Receipt Layer was Affected by the Cost Adjustment.](https://community.dynamics.com/gp/b/dynamicsgp/archive/2018/03/12/how-to-find-what-receipt-layer-was-affected-by-the-cost-adjustment) and includes screen prints.)
+(The above information taken from [How to Find What Receipt Layer was Affected by the Cost Adjustment.](https://community.dynamics.com/blogs/post/?postid=8d612be9-be06-41c4-b72b-3fdbaf1831fa) and includes screen prints.)
 
 ## More information
 

@@ -1,7 +1,7 @@
 ---
 title: Loopback processing of Group Policy
 description: This article describes why you need to enable loopback processing for Group Policy.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -58,3 +58,7 @@ This processing order may not be appropriate in some cases. For example, when yo
 - Replace Mode
 
   In this mode, the user's list of GPOs isn't gathered. Only the list of GPOs based on the computer object is used.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Group Policy issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-group-policy.md).

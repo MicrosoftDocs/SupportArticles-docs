@@ -1,7 +1,7 @@
 ---
 title: Fail to log on to a local administrator account
 description: Works around an issue that occurs after you log on to a local administrator domain account.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: Errors when unknown environment variable is used
 description: Describes an issue where Group Policy error events are logged when unknown environment variable is used. Provides a solution to this issue.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -67,7 +67,7 @@ If you are running an Active Directory forest and using a file system security p
 
 The events are logged because the file system security settings of one policy contain an environment variable that is unknown on the client computer. To find out more about the problem, enable logging of the security configuration client-side extension:
 
-[Troubleshoot SCECLI 1202 events](/troubleshoot/windows-server/group-policy/scecli-1202-events).
+[Troubleshoot SCECLI 1202 events](scecli-1202-events.md).
 
 In the %windir%\security\logs\winlogon.log file, you will see an entry such as:
 
@@ -105,3 +105,7 @@ The settings for registry and file system policy are deemed to be expensive to c
 With regard to missing environment variables, SCECLI reads the settings in the first phase and encounters an error when it resolves the environment variable to the actual path. SCECLI will skip the entry and continue adding settings to the security database and later return an error to Userenv/GPSVC.  
 
 When the problem happens in any policy except the last policy, Userenv/GPSVC treats the error as a fatal problem and aborts security group policy. Therefore the second phase is never happening. When the problem happens in the last policy, SCECLI ignores the error and executes the second phase. Userenv/GPSVC still aborts policy application with an error, but actually policy processing has been completed by this point.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Group Policy issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-group-policy.md).

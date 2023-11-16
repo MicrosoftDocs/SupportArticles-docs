@@ -1,15 +1,14 @@
 ---
 title: Troubleshoot the failed deployment of a Kubernetes application offer
 description: Troubleshoot the failed deployment of a Kubernetes application offer that was made on the Azure Marketplace.
-ms.date: 12/1/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
-ms.reviewer: chiragpa, atchub
+ms.date: 04/19/2023
+ms.reviewer: chiragpa, atchub, v-leedennis
 editor: v-jsitser
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-extensions-add-ons
 #Customer intent: As an Azure Marketplace user, I want to troubleshoot the failed deployment of a Kubernetes application after I accept an offer on the Marketplace.
 ---
+
 # Troubleshoot the failed deployment of a Kubernetes application offer
 
 This article discusses how to troubleshoot a failed deployment of a Kubernetes application offer that was accepted on the Microsoft Azure Marketplace. When you initiate the purchase of a Kubernetes offer, Azure deploys an Azure Resource Manager template (ARM template) that tries to install the required resources to fulfill the offer. However, the ARM template deployment might fail for various reasons.
@@ -22,7 +21,7 @@ To determine the cause of the deployment failure, you have to examine the [deplo
 
 1. In the [Azure portal][azure-portal], search for and select **Resource groups**.
 1. In the list of resource groups, select the name of the resource group in which you tried to deploy the Kubernetes application.
-1. On the **Overview** page of your resource group, locate the **Essentials** section, and then select the hyperlinked text that appears next to the **Deployments** field. This text will display the success rate of your resource group's resource deployment history (for example, **4 failed, 30 succeeded**).
+1. On the **Overview** page of your resource group, locate the **Essentials** section, and then select the hyperlinked text that appears next to the **Deployments** field. This text displays the success rate of your resource group's resource deployment history (for example, **4 failed, 30 succeeded**).
 1. In the list of attempted deployments for your resource group, select the **Deployment name** value of the deployment that failed, based on the following corresponding fields:
    - **Last modified** (a time stamp)
    - **Duration**
@@ -115,6 +114,28 @@ Errors in the Helm chart generate the following error message:
 #### Solution 5: Recheck the entries that you made in the ARM template
 
 Make sure that the values and selections that you entered on the Azure portal for the ARM template deployment are acceptable in the Kubernetes application.
+
+## Cause 6: You haven't accepted the legal terms on the subscription for this plan
+
+Before the subscription can be used, you need to accept the legal terms of the image. Otherwise, you get the following error message:
+
+> You have not accepted the legal terms on this subscription: '\<subscription-guid>' for this plan. Before the subscription can be used, you need to accept the legal terms of the image. 
+
+#### Solution 6: Accept the legal terms
+
+#### [CLI](#tab/CLI)
+
+You can use the Azure CLI commands that are described in the [Azure CLI legal terms](/cli/azure/vm/image/terms). Although the commands are for VMs, the commands also work for containers.
+
+#### [PowerShell](#tab/PowerShell)
+
+To accept the legal terms through PowerShell, run the cmdlets that are described in the [PowerShell legal terms](/powershell/module/azurerm.marketplaceordering).
+
+#### [Portal](#tab/azure-portal)
+
+You can choose to deploy through the [Azure portal](https://portal.azure.com). The Azure portal provides a UI experience for reading and accepting the legal terms. 
+
+---
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
 

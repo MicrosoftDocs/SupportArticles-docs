@@ -3,7 +3,7 @@ title: Isolate issues in model-driven apps
 description: Learn about techniques to narrow down the cause of errors in model-driven apps.
 author: tahoon
 ms.reviewer: matp
-ms.date: 06/15/2022
+ms.date: 10/23/2023
 ms.author: tahoon
 search.audienceType: 
   - maker
@@ -26,13 +26,19 @@ The following features can affect normal operation. Try disabling or removing th
 
 **Affects**: Form pages
 
-[Business rules](/dynamics365/customerengagement/on-premises/customize/create-business-rules-recommendations-apply-logic-form?view=op-9-1&preserve-view=true) change a form's behavior based on the state of a record. Try disabling or simplifying the rule and check if the form still works as expected.
+[Business rules](/power-apps/maker/data-platform/data-platform-create-business-rule) change a form's behavior based on the state of a record. Try disabling or simplifying the rule and check if the form still works as expected.
 
 ### Client scripts
 
 **Affects**: Form pages
 
 [Client scripts](/power-apps/developer/model-driven-apps/client-scripting) contain JavaScript code that can conflict with the Power Apps system or change it in unexpected ways. If disabling the script solves the issue, you should [isolate which part of the custom script causes the issue](#simplify-custom-scripts).
+
+You can temporarily disable all custom scripts by appending this to the URL of the page:
+
+```http
+&flags=DisableFormLibraries=true,DisableWebResourceControls=true
+```
 
 ### Custom commands
 
@@ -81,7 +87,7 @@ If any of the following aren't working, try re-creating them. It can be a simpli
 
 ## Find out if the issue occurs when getting data or showing data
 
-When data isn't showing correctly in an app, it could either be a server issue in providing the data, or an app issue in processing and displaying it. To narrow down the cause, you can try [general methods for isolating the problematic layer](isolate-common-issues.md#data-issues).
+When data isn't showing correctly in an app, it could either be a server issue in providing the data, or an app issue in processing and displaying it. To narrow down the cause, you can try [general methods for isolating the problematic layer](isolate-common-issues.md#find-out-which-layer-has-data-issues).
 
 Model-driven apps have a complex data flow. Here are more advanced things to try.
 
@@ -106,6 +112,10 @@ If you suspect that a script is causing an issue, follow these steps:
    - If the error is from custom code, contact the developer who wrote the script for assistance.
 
    - If a Client API feature isn't working as documented, you can report it to Microsoft. Attach a copy of the simplified script and mention which API feature isn't working.
+
+## Create a vanilla repro app
+
+The process of creating a [vanilla repro app](vanilla-model-driven-app-repro.md) may uncover configuration errors that aren't obvious in an environment with many customizations. Even if the problem isn't fixed, you would have narrowed the cause and made it easier to explain the problem to others.
 
 ## Next steps
 

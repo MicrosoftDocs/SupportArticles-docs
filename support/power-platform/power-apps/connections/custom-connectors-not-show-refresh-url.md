@@ -3,7 +3,7 @@ title: Refresh URL isn't displayed
 description: Describes issues in which custom connectors don't show the configured Refresh URL when Generic Oauth 2 is used.
 ms.reviewer: squassina
 ms.topic: troubleshooting
-ms.date: 6/17/2021
+ms.date: 06/17/2021
 author: squassina
 ms.author: risquass
 ---

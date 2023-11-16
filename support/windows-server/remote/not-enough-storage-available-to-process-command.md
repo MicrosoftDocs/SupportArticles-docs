@@ -1,7 +1,7 @@
 ---
 title: New user fails to log on through RDP
 description: Describes an issue in which a new user receives an error message after the user types a new password.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

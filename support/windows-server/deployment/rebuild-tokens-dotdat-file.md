@@ -1,7 +1,7 @@
 ---
 title: Rebuild the Tokens.dat file
 description: Describes how to rebuild the Tokens.dat file when you troubleshoot Windows activation issues.
-ms.date: 7/8/2022
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -68,3 +68,7 @@ After you rebuild theTokens.dat file, you must reinstall your product key by usi
 >
 > - You should never use the `/upk` switch to uninstall a product key. To install a product key over an existing product key, use the `/ipk` switch.
 > - For more information about Key Management Services (KMS) client setup keys, see [KMS client activation and product keys](/windows-server/get-started/kms-client-activation-keys).
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

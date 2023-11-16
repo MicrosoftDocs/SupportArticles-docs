@@ -1,7 +1,7 @@
 ---
 title: Multiple operations fail if Windows 8 is improperly identified as a Windows To Go installation
 description: Discusses issues that occur when Windows 8 is improperly identified as a Windows To Go installation.
-ms.date: 09/07/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -82,3 +82,7 @@ You can also use the command-line option to make the change. Run the below comma
 ```console
 reg add HKLM\SYSTEM\CurrentControlSet\Control /v PortableOperatingSystem /t REG_DWORD /d 0
 ```
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

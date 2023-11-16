@@ -1,7 +1,7 @@
 ---
 title: Communication issues when RD Connection Broker connects to SQL Server
 description: Fixes an issue in which Remote Desktop Connection Broker does not work correctly in Windows Server 2012 R2.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

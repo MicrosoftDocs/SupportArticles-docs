@@ -2,7 +2,7 @@
 title: You can't remove the Warehouse demand forecast dimension from forecast lines
 description: Provides a resolution for the issue that you can't remove the Warehouse demand forecast dimension from forecast lines.
 author: t-benebo
-ms.date: 4/11/2021
+ms.date: 04/11/2021
 ms.topic: troubleshooting
 ms.search.form: ForecastSales
 audience: Application User

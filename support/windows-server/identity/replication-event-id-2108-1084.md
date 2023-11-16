@@ -1,7 +1,7 @@
 ---
 title: Active Directory replication event ID 2108 and 1084
 description: Documents steps to troubleshoot and to resolve two specific events on domain controllers.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -215,3 +215,7 @@ To resolve this problem, follow these steps. Retry the replication operation aft
     > The semantic database commands do not perform lossy repairs on Active Directory databases such as the pre-Windows Server 2003 Service Pack 1 Ntdsutil File Repair or `Esentutl /p` commands.
 
     [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).

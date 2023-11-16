@@ -4358,6 +4358,41 @@
       "source_path": "support/power-platform/power-apps/dataverse-web-api/web-api-client-errors.md",
       "redirect_url": "/troubleshoot/power-platform/power-apps/dataverse/web-api-client-errors",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/networking/rodc-logs-event-4015-error-00002095.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/event-4015-dns-server-encounters-critical-error",
+      "redirect_document_id": true
+    },    
+    {
+      "source_path": "support/developer/webapps/welcome-webapps.yml",
+      "redirect_url": "/troubleshoot",
+      "redirect_document_id": false
+    },    
+    {
+      "source_path": "support/developer/visualstudio/cpp/libraries/minimum-service-pack-levels.md",
+      "redirect_url": "/cpp/windows/latest-supported-vc-redist",
+      "redirect_document_id": false
+    },    
+    {
+      "source_path": "support/developer/webapps/iis/iis-extensions-tools-addons/troubleshooting-problems-with-microsoft-web-platform-installer.md",
+      "redirect_url": "/previous-versions/troubleshoot/iis/troubleshoot-problems-microsoft-web-platform-installer",
+      "redirect_document_id": false
+    },  
+    {
+      "source_path": "support/dynamics-365/field-service/index.md",
+      "redirect_url": "/troubleshoot/dynamics-365/field-service/welcome-field-service",
+      "redirect_document_id": false
+    },  
+    {
+      "source_path": "support/azure/microsoft-entra/index.yml",
+      "redirect_url": "/troubleshoot/azure/microsoft-entra/welcome-microsoft-entra",
+      "redirect_document_id": true
+    },  
+    {
+      "source_path": "support/azure/virtual-machines/error-code-0xc000000f.md",
+      "redirect_url": "/troubleshoot/azure/virtual-machines/boot-error-0xc000000f",
+      "redirect_document_id": true
     }
   ]
 }

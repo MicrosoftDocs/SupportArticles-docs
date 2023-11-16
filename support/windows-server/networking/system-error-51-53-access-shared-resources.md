@@ -1,7 +1,7 @@
 ---
 title: Error 51 or 53 when you access shared resources
 description: Provides a solution to system error 51 or 53 that occurs when you access shared resources.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

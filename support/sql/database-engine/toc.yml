@@ -1,0 +1,157 @@
+items:
+- name: Always On Availability Groups (AG)
+  href: availability-groups/toc.yml
+
+- name: Always On Failover Cluster Instance (FCI)
+  href: failover-clusters/toc.yml
+
+- name: Database Mirroring (DBM)
+  items:
+  - name: Assertion when you execute Bulk Insert or BCP
+    href: database-mirroring/assertion-execute-bulk-insert-bcp.md
+  - name: Assertion failure on partner servers when using mirroring
+    href: database-mirroring/assertion-partner-servers-using-mirroring.md
+  - name: Mirrored databases are disconnected
+    href: database-mirroring/mirrored-databases-disconnected.md
+
+- name: Database Backup and Restore
+  href: backup-restore/toc.yml
+
+- name: Database Connectivity and Authentication
+  href: connect/toc.yml
+
+- name: Database Development
+  href: development/toc.yml
+
+- name: Database Mail
+  items:
+  - name: The Transaction not longer valid when using Database Mail
+    href: database-mail/database-mail-fails-send-message.md
+
+- name: Full-Text Search, Semantic Search
+  href: search/toc.yml
+
+- name: File, Filegroup, Database Operations, or Corruption
+  href: database-file-operations/toc.yml
+
+- name: General Troubleshooting Information
+  items:
+    - name: Error 556 insert exec failed
+      href: general/error-556-insert-exec-failed.md
+    - name: Improvements in handling some data types and uncommon operations
+      href: general/sql-server-azure-sql-database-improvements.md
+    - name: Policy for untested .NET Framework assemblies
+      href: general/policy-untested-net-framework-assemblies.md
+    - name: Transaction log file grows for databases with In-Memory OLTP
+      href: general/transaction-log-file-grows-databases-in-memory-oltp.md
+
+- name: Installation, Patching, Upgrade, Uninstall
+  href: install/windows/toc.yml
+
+- name: Log Shipping
+  items:
+  - name: Configure security for log shipping
+    href: log-shipping/configure-security-log-shipping.md
+  - name: Logshipping monitor raises 14420 error
+    href: log-shipping/logshipping-monitor-14420-error.md
+
+- name: Linked Server and distributed queries
+  href: linked-servers/toc.yml
+
+- name: Machine Learning Services (in database)
+  items:
+  - name: Inconsistent results in MKL computations
+    href: machine-learning/inconsistent-results-mkl-computations-missing-variable.md
+
+- name: Replication, Change Tracking, Change Data Capture
+  href: replication/toc.yml
+
+- name: Startup, shutdown, restart issues (instance or database)
+  href: startup-shutdown/toc.yml
+
+- name: SQL Server resource usage (CPU, Memory, Storage) and Configuration
+  items: 
+  - name: 701 error with large batches
+    href: performance/701-error-large-batches.md
+  - name: Blocked column is populated for latch waits
+    href: performance/blocked-column-populated-latch-waits.md
+  - name: Decreased performance when using EFS to encrypt database files
+    href: performance/decreased-performance-use-efs.md
+  - name: Decreased performance when using TOP, MAX, or MIN
+    href: performance/decreased-performance-run-aggregating-clause.md
+  - name: External modules and filter drivers cause performance issues
+    href: performance/performance-consistency-issues-filter-drivers-modules.md
+  - name: Filtered index not used in queries
+    href: performance/filtered-index-with-column-is-null.md
+  - name: Generate a script to create a statistics-only database
+    href: performance/stats-only-db-script.md
+  - name: Memory-optimized temppdb metadata out-of-memory errors
+    href: performance/memory-optimized-tempdb-out-of-memory.md
+  - name: Non-yielding error if the lock pages in memory option is disabled
+    href: performance/non-yielding-error-lock-pages-disable.md
+  - name: Non-yielding Resource Monitor
+    href: performance/resource-monitor-nonyielding-condition.md
+  - name: Operations that trigger buffer pool scan may run slowly on large-memory computers
+    href: performance/buffer-pool-scan-runs-slowly-large-memory-machines.md
+  - name: Interoperability issues between batch mode processing and large page memory model
+    href: performance/batch-mode-with-large-page-memory-issues.md
+  - name: Reducing allocation contention in tempdb
+    href: performance/recommendations-reduce-allocation-contention.md
+  - name: SchemaMgr Store entries degrade performance
+    href: performance/schemamgr-store-degrades-performance.md
+  - name: Troubleshoot high-CPU-usage issues
+    href: performance/troubleshoot-high-cpu-usage-issues.md
+  - name: Troubleshoot SQL Server slow performance caused by IO
+    href: performance/troubleshoot-sql-io-performance.md
+  - name: TokenAndPermUserStore related performance issues
+    href: performance/token-and-perm-user-store-perf-issue.md
+  - name: Troubleshoot query time-out errors
+    href: performance/troubleshoot-query-timeouts.md
+  - name: Troubleshoot out of memory issues in SQL Server
+    href: performance/troubleshoot-memory-issues.md
+  - name: Troubleshoot memory grant issues in SQL Server
+    href: performance/troubleshoot-memory-grant-issues.md
+  - name: Updates and configuration options for high-performance workloads (SQL Server 2014 and 2012)
+    href: performance/recommended-updates-configuration-options.md
+  - name: Updates and configuration options for high-performance workloads (SQL Server 2017 and 2016)
+    href: performance/recommended-updates-configuration-workloads.md
+  - name: Use DBCC MEMORYSTATUS to monitor memory usage
+    href: performance/dbcc-memorystatus-monitor-memory-usage.md
+
+- name: Slow query performance
+  items: 
+  - name: Different query performance between two SQL Servers
+    href: performance/troubleshoot-query-perf-between-servers.md
+  - name: Decreased query performance after upgrade
+    href: performance/decreased-query-perf-after-upgrade.md
+  - name: High CPU or high memory grants with queries that use optimized nested loops
+    href: performance/decreased-perf-high-cpu-optimized-nested-loop.md   
+  - name: Performance degradation with new CE join containment assumption
+    href: performance/cardinality-estimator-degrades-query-performance.md
+  - name: Resolve last-page insert PAGELATCH_EX contention
+    href: performance/resolve-pagelatch-ex-contention.md
+  - name: Resolve blocking problems caused by lock escalation
+    href: performance/resolve-blocking-problems-caused-lock-escalation.md
+  - name: Slower query in database application than in SSMS
+    href: performance/troubleshoot-application-slow-ssms-fast.md
+  - name: Troubleshoot slow queries affected by Optimizer Timeout
+    href: performance/troubleshoot-optimizer-timeout-performance.md
+  - name: Troubleshoot entire SQL Server or application appears slow
+    href: performance/troubleshoot-entire-sqlserver-slow.md
+  - name: Troubleshoot slow-running queries
+    href: performance/troubleshoot-slow-running-queries.md
+  - name: Troubleshoot performance issues with narrow and wide plans
+    href: performance/troubleshoot-performance-narrow-vs-wide-plans.md
+  - name: Troubleshoot queries that seem to never end
+    href: performance/troubleshoot-never-ending-query.md
+  - name: Troubleshoot ASYNC_NETWORK_IO issues
+    href: performance/troubleshoot-query-async-network-io.md
+  - name: Troubleshoot blocking caused by compile locks
+    href: performance/troubleshoot-blocking-caused-compile-locks.md
+  - name: Understand and resolve blocking problems
+    href: performance/understand-resolve-blocking.md
+  - name: Upgrading compatibility level degrades performance for spatial queries
+    href: performance/upgrade-compatibility-level-degrades-performance.md
+
+- name: Security, Encryption, Auditing, Authorization
+  href: security/toc.yml

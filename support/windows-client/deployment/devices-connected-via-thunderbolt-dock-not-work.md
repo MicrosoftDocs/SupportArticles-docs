@@ -1,7 +1,7 @@
 ---
 title: Devices connected through a Thunderbolt Dock stop working
 description: Describes an issue in which devices that are connected through a Thunderbolt Dock stop working after the computer resumes from a power state. Provides a workaround.
-ms.date: 06/02/2022
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -18,7 +18,7 @@ ms.technology: windows-client-deployment
 This article provides a workaround for an issue in which devices that are connected through a Thunderbolt Dock stop working after the computer resumes from a power state.  
 
 _Applies to:_ &nbsp; Windows Client  
-_Original KB number:_ &nbsp; 4532436  
+_Original KB number:_ &nbsp; 4532436
 
 ## Symptoms
 
@@ -39,3 +39,7 @@ When the issue occurs, the functionality of the devices can be restored by reatt
 ## References
 
 For more information about Windows power states, see [System Power States](/windows/win32/power/system-power-states).
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

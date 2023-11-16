@@ -1,7 +1,7 @@
 ---
 title: Error when you run the Convert-MsolDomainToStandard cmdlet
 description: Describes an issue where you receive an error message when converting a domain from federated to managed using Convert-MsolDomainToStandard cmdlet. Provides a resolution.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: willfid
 ms.author: delhan
 manager: dcscontentpm
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:active-directory-federation-services-ad-fs, csstroubleshoot
+ms.custom: sap:active-directory-federation-services-ad-fs, csstroubleshoot, has-azure-ad-ps-ref
 ms.technology: windows-server-active-directory
 ---
 # Error when you run the Convert-MsolDomainToStandard cmdlet: Failed to connect to Active Directory Federation Services 2.0 on the local machine
@@ -57,4 +57,4 @@ Do one of the following, as appropriate for your situation:
 
 ## More information
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums/home?forum=windowsazuread) website.
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or [Microsoft Entra Forums](https://social.msdn.microsoft.com/Forums/home?forum=windowsazuread) website.

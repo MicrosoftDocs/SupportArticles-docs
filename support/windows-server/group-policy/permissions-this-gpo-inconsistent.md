@@ -1,7 +1,7 @@
 ---
 title: Permissions for this GPO are inconsistent
 description: Describes a permissions issue that occurs when you run Group Policy Management Console in a Windows 2008 or Windows Server 2003 domain. A resolution is provided.
-ms.date: 12/9/2021
+ms.date: 12/09/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

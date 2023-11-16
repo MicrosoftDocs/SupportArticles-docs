@@ -1,7 +1,7 @@
 ---
 title: Windows Server printer redirection isn't working
 description: Discusses an issue in which the printer redirection isn't working and no event IDs occur.
-ms.date: 9/24/2021
+ms.date: 05/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -67,7 +67,7 @@ You could then copy the above output in a notepad as follows:
 > [!NOTE]
 > Ensure that you're appending the "sc sdset spooler D: (A;;CCLCSWLOCRRC;;;AU)" section of above command to the output you see in your case.  
 
-Copy and paste this command in the command prompt. (Ensure that "(A;;CCLCSWLOCRRC;;;AU)" appears in the beginning. I'm not sure why this is the way it seems to work.)
+Copy and paste this command in the command prompt. (Ensure that "(A;;CCLCSWLOCRRC;;;AU)" appears in the beginning. Otherwise, this might not work.)
 
 By running the above command, you retain the old ACLs and also add the missing ACL that is the one for authenticated user (AU).  
 
@@ -78,6 +78,10 @@ Following is a list of some more things that can be looked into in a "Printer Re
 1. If the client machines are running Windows XP, ensure that .NET Framework 3.5 SP1 is installed and at least RDC 6.1 is being used.
 2. Even if RDC 6.1 or above is used, the user must install a supported version of .NET Framework separately. Microsoft .NET Framework 3.5 (which includes .NET Framework 3.0 SP1) can be downloaded from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=21).
 3. If you connect over RD Gateway, ensure that the policy that disables printer redirection is turned off.
-4. If your server is also a domain controller, refer to [Install Remote Desktop Session Host role service in Windows Server without Connection Broker role service](/troubleshoot/windows-server/remote/install-rds-host-role-service-without-connection-broker).
+4. If your server is also a domain controller, refer to [Install Remote Desktop Session Host role service in Windows Server without Connection Broker role service](install-rds-host-role-service-without-connection-broker.md).
 5. Group Policy must be correctly set to enable Easy Print on the Server. The policy location is "Computer Configuration > Administrative templates > Windows Components > Remote Desktop Services > Remote Desktop Session Host > Printer Redirection". The setting "Use Remote Desktop Easy Print printer driver first" must be set to "Enabled" for Easy Print redirection, and it has to be "Disabled" for Legacy Print. For "Not configured", Easy Print is chosen by default.
 6. Make sure that the **Printers** check box in the client (mstsc.exe) window on the **Local Resources** tab is checked. The corresponding setting in the associated RDP file is "redirectprinters:i:1".
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-user-experience.md#printing).

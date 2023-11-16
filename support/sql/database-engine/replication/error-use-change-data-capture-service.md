@@ -4,7 +4,6 @@ description: This article provides resolution for the problem that occurs when y
 ms.date: 11/10/2020
 ms.custom: sap:Replication, change tracking, change data capture
 ms.reviewer: JasonH, jasonh
-ms.prod: sql
 ---
 # Error message when you use the Microsoft Change Data Capture Service for Oracle by Attunity
 

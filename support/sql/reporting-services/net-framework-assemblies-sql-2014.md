@@ -4,7 +4,6 @@ description: This article describes how .NET Framework 4.x assemblies aren't sup
 ms.date: 08/24/2022
 ms.prod-support-area-path: Reporting Services
 ms.reviewer: 
-ms.prod: sql
 ---
 
 # The .NET Framework 4.x assemblies aren't supported in SQL Server Reporting Services

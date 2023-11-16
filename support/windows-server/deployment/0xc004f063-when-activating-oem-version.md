@@ -1,7 +1,7 @@
 ---
 title: Error code 0xc004f063 when activating or validating an OEM version of Windows
 description: Provides a solution to an 0xc004f063 error that occurs when you try to activate or validate an OEM version of Windows.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -46,3 +46,7 @@ This issue mostly occurs on OEM_SLP machines wherein Windows is bound with the S
 > To check the Service Tag number on a machine, run the command `wmic bios get serialnumber`.
 
 Upgrading the BIOS is an effort to put the correct SLIC table on the machine. Software Licensing Description Table (SLIC) is a digital signature placed inside the BIOS by the system manufacturer. The OEM-SLP Key, and an XML formatted OEM certificate (issued by Microsoft to each OEM) will be verified against this OEM-specific SLIC and auto activate if everything is in order.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

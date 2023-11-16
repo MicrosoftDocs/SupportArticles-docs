@@ -1,7 +1,7 @@
 ---
 title: Host's A record is registered in DNS
 description: The IP address registers an A record for the host name in its primary DNS suffix zone. It occurs after you clear the "Register this connection's address in DNS" check box.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -46,7 +46,7 @@ By default, when the DNS service is installed on a Windows 2000 computer, it lis
 ## Resolution
 
 > [!NOTE]
-> The resolution that is described in this article only works on member servers that run DNS in a domain. It does not resolve this issue on domain controller computers. For more information about how to resolve this issue on a domain controller, see [Name resolution and connectivity issues on a Routing and Remote Access Server that also runs DNS or WINS](/troubleshoot/windows-server/networking/name-resolution-connectivity-issues).
+> The resolution that is described in this article only works on member servers that run DNS in a domain. It does not resolve this issue on domain controller computers. For more information about how to resolve this issue on a domain controller, see [Name resolution and connectivity issues on a Routing and Remote Access Server that also runs DNS or WINS](name-resolution-connectivity-issues.md).
 
 To prevent a DNS server from registering an A record for a specific interface in its primary DNS suffix zone, use one of the following methods.
 
@@ -87,7 +87,7 @@ Microsoft has confirmed that it's a problem in the products that are listed at t
 
 ## More information
 
-For more information about how to disable dynamic registrations, see [How to enable or disable DNS updates in Windows 2000 and in Windows Server 2003](/troubleshoot/windows-server/networking/enable-disable-dns-dynamic-registration).
+For more information about how to disable dynamic registrations, see [How to enable or disable DNS updates in Windows 2000 and in Windows Server 2003](enable-disable-dns-dynamic-registration.md).
 
 The registry key to disable dynamic update of the DHCP client service is:
 

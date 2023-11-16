@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot AD replication error 8545
 description: Describes an issue that causes Active Directory replication to fail for one or more partitions and trigger error 8545. This issue occurs in Windows Server 2012 and earlier. A resolution is provided.
-ms.date: 3/24/2022
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -153,3 +153,7 @@ Source DC: `NADC1.na.contoso.com`
         
         Repadmin /options the DC -disable_ntdsconn_xlate 
         ```
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).

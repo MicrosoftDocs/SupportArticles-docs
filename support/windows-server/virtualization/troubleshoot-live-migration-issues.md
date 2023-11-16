@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot live migration issues
 description: Provides information on solving the problem of live migration in windows server 2016.
-ms.date: 12/1/2021
+ms.date: 08/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -132,6 +132,13 @@ Get-ClusterNetwork
 :::image type="content" source="media/troubleshoot-live-migration-issues/get-clusternetwork.png" alt-text="Screenshot of the Get-ClusterNetwork command result." border="false":::
 
 Make sure the cluster network isn't configured and that **Allow cluster network communication on this network** is selected. For more information, see [Configuring Network Prioritization on a Failover Cluster](https://techcommunity.microsoft.com/t5/failover-clustering/configuring-network-prioritization-on-a-failover-cluster/ba-p/371683).  
+
+**Workaround**
+
+Currently, live migration cross site does not work in Azure Stack HCI 22H2 and later versions. To work around this issue, use one of the following solutions:
+
+- Use quick migration to perform cross site migration.  
+- Set the live migration preferred network to a stretched VLAN (single subnet) that includes all the nodes of the cluster.
 
 #### Live migration failed with error code (0x8007271D)  
 

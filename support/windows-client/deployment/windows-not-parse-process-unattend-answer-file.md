@@ -1,7 +1,7 @@
 ---
 title: Fail to perform an in-place upgrade
 description: Describes behavior that occurs when you receive a "Windows could not parse or process the unattend answer file for pass [specialize]" error message when you perform an in-place upgrade. This behavior occurs on computers that are running Windows 7 or Windows Server 2008 R2.
-ms.date: 09/16/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -55,3 +55,7 @@ To avoid this behavior, you can remove a registry subkey before you use the OEM 
 ## Status
 
 This behavior is by design.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

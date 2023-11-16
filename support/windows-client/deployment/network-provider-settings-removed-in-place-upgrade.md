@@ -1,7 +1,7 @@
 ---
 title: Network provider settings are removed during an in-place upgrade to Windows 10
 description: Discusses an issue in which network provider settings are removed during an in-place upgrade to Windows 10. Provides workarounds.
-ms.date: 12/07/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -71,3 +71,7 @@ For example, the following are the default network providers:
 > - `HKLM\System\CurrentControlSet\Services\WebClient\NetworkProvider`
 >
 > The provider name is removed from the list, and all added registry key are removed.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

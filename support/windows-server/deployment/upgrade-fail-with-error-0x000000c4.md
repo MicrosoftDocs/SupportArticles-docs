@@ -1,7 +1,7 @@
 ---
 title: Upgrade fails with error 0x000000C4
 description: Provides a solution to fix the error 0x000000C4 that occurs when you upgrade a Windows Server computer.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -45,3 +45,7 @@ This issue is normally not noticed when you create a new VM and select Window Se
 Because the issue is noticed with WinPE 4.0 and 5.0, this issue is also noticed when you deploy OS by using System Center 2012 Configuration Manager.
 
 Step-by-step information on how to change these settings on vSphere client is documented in [VMware document](https://pubs.vmware.com/vsphere-4-esx-vcenter/index.jsp?topic=/com.vmware.vsphere.vmadmin.doc_41/vsp_vm_guide/configuring_virtual_machines/t_change_cpuid_mask_virtual_machine_settings.html).
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

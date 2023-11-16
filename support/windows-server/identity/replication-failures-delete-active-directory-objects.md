@@ -1,7 +1,7 @@
 ---
 title: Deleting Active Directory objects that have many links causes replication failures
 description: Discusses an issue in which deleting Active Directory objects that have many links causes replication failures. Provides a workaround.
-ms.date: 3/24/2022
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -138,6 +138,10 @@ For more information, see the following articles:
 ## Workaround
 
 To work around this issue, set the value of **Links process batch size** lower than 10,000. This decreases the potential for an object access collision to occur. By doing this, you make the replication process of large object deletion more reliable. Also, it now takes a longer time to complete the whole transaction. This also helps you avoid version store depletion.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).
 
 ## References
 

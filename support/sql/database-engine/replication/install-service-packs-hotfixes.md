@@ -4,7 +4,6 @@ description: This article describes how to install service packs and hotfixes on
 ms.date: 09/25/2020
 ms.custom: sap:Replication, change tracking, change data capture
 ms.reviewer: benjones
-ms.prod: sql
 ms.topic: how-to
 ---
 # Apply a hotfix for SQL Server in a transactional replication and database mirroring topology

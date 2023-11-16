@@ -1,7 +1,7 @@
 ---
 title: Change AD FS 2.0 service communications
 description: Contains the steps to change the Active Directory Federation Services 2.0 service communications certificate.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

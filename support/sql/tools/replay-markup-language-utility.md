@@ -1,13 +1,10 @@
 ---
 title: Replay Markup Language Utilities
 description: This article discusses a group of tools that are used by support professionals to troubleshoot SQL Server.
-ms.date: 01/09/2023
+ms.date: 06/11/2023
 ms.custom: sap:Tools
-author: padmajayaraman
-ms.author: v-jayaramanp
-ms.reviewer: sureshka, jopilov, toddhayn, troymoen
+ms.reviewer: sureshka, jopilov, toddhayn, troymoen, v-jayaramanp
 ms.topic: article
-ms.prod: sql
 ---
 # Replay Markup Language (RML) Utilities for SQL Server
 
@@ -84,31 +81,33 @@ For a complete description of every tool and sample usage, see the RML Help file
 
 ### Dependencies for Reporter
 
-You have to make sure that the Report Viewer controls are available either in the same folder as *Reporter.exe* or in the Global Assembly Cache (GAC). The DLLs that *Reporter.exe* requires are:
+1. You have to make sure that the Report Viewer controls are available either in the same folder as *Reporter.exe* or in the Global Assembly Cache (GAC). The DLLs that *Reporter.exe* requires are:
 
-- *Microsoft.ReportViewer.Common.dll*
-- *Microsoft.ReportViewer.DataVisualization.dll*
-- *Microsoft.ReportViewer.ProcessingObjectModel.dll*
-- *Microsoft.ReportViewer.WinForms.dll*
+   - *Microsoft.ReportViewer.Common.dll*
+   - *Microsoft.ReportViewer.DataVisualization.dll*
+   - *Microsoft.ReportViewer.ProcessingObjectModel.dll*
+   - *Microsoft.ReportViewer.WinForms.dll*
 
-You can download these DLLs by using the following PowerShell script:
+   You can download these DLLs by using the following PowerShell script:
 
-```powershell
-Register-PackageSource -Name MyNuGet -Location https://www.nuget.org/api/v2 -ProviderName NuGet
-Get-PackageSource
+   ```powershell
+   Register-PackageSource -Name MyNuGet -Location https://www.nuget.org/api/v2 -ProviderName NuGet
+   Get-PackageSource
 
-Find-Package Microsoft.ReportViewer.Common -AllVersions
-Install-Package Microsoft.ReportViewer.Common -RequiredVersion 10.0.40219.1
+   Find-Package Microsoft.ReportViewer.Common -AllVersions
+   Install-Package Microsoft.ReportViewer.Common -RequiredVersion 10.0.40219.1
 
-Copy-Item -Path "C:\Program Files\PackageManagement\NuGet\Packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.Common.dll" -Destination "C:\Program Files\Microsoft Corporation\RMLUtils"
-Copy-Item -Path "C:\Program Files\PackageManagement\NuGet\Packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.DataVisualization.dll" -Destination "C:\Program Files\Microsoft Corporation\RMLUtils"
-Copy-Item -Path "C:\Program Files\PackageManagement\NuGet\Packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.ProcessingObjectModel.dll" -Destination "C:\Program Files\Microsoft Corporation\RMLUtils"
+   Copy-Item -Path "C:\Program Files\PackageManagement\NuGet\Packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.Common.dll" -Destination "C:\Program Files\Microsoft Corporation\RMLUtils"
+   Copy-Item -Path "C:\Program Files\PackageManagement\NuGet\Packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.DataVisualization.dll" -Destination "C:\Program Files\Microsoft Corporation\RMLUtils"
+   Copy-Item -Path "C:\Program Files\PackageManagement\NuGet\Packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.ProcessingObjectModel.dll" -Destination "C:\Program Files\Microsoft Corporation\RMLUtils"
 
-Find-Package Microsoft.ReportViewer.WinForms -AllVersions
-Install-Package Microsoft.ReportViewer.WinForms -RequiredVersion 10.0.40219.1
+   Find-Package Microsoft.ReportViewer.WinForms -AllVersions
+   Install-Package Microsoft.ReportViewer.WinForms -RequiredVersion 10.0.40219.1
 
-Copy-Item -Path "C:\Program Files\PackageManagement\NuGet\Packages\Microsoft.ReportViewer.WinForms.10.0.40219.1\lib\Microsoft.ReportViewer.WinForms.dll" -Destination "C:\Program Files\Microsoft Corporation\RMLUtils"
-```
+   Copy-Item -Path "C:\Program Files\PackageManagement\NuGet\Packages\Microsoft.ReportViewer.WinForms.10.0.40219.1\lib\Microsoft.ReportViewer.WinForms.dll" -Destination "C:\Program Files\Microsoft Corporation\RMLUtils"
+   ```
+
+1. You must download and install a ReporterViewer fix to allow links within the ReadTrace reports to work properly. To download the ReporterViewer fix, go to [Microsoft Visual Studio 2010 Service Pack 1 Report Viewer (KB2549864)](https://www.microsoft.com/en-us/download/details.aspx?id=27231).
 
 ### Dependencies for Expander
 
@@ -120,18 +119,25 @@ Make sure that the compression and decompression controls are available either i
 
 You can obtain these DLLs from the respective software packages of the vendors:
 
-- <https://www.rarlab.com/rar/UnRARDLL.exe>
+- <https://www.rarlab.com/rar_add.htm> - find the *UnRAR.dll* dynamic library for Windows software developers
 
 - <https://www.7-zip.org/a/7z1900-x64.exe>
 
 - <https://www.nuget.org/packages/Xceed.Products.Zip.Full/>
 
+### Dependencies for ReadTrace and Ostress
+
+ReadTrace and Ostress use the ODBC and OLEDB drivers shipped as part of the [SQL Server Native Client](/sql/relational-databases/native-client/applications/installing-sql-server-native-client).
+If you plan to analyze Extended Event files (_*.xel_), make sure that [Visual C++ 2010 Redistributable](/cpp/windows/latest-supported-vc-redist) is installed on the system.
+
 ## Known issues and fixes
 
 |Issue|Resolution|
-|----|----|
-|ReadTrace encounters "ERROR: Event runtime check: Detected missing column [cached_text] in event [sp_cache_remove] at event sequence 209494"|Fixed in version 09.04.0102. As a workaround, you can add trace flags (-T28 -T29) to the ReadTrace command line.|
+|------|---|
+|ReadTrace encounters "ERROR: Event runtime check: Detected missing column [cached_text] in event [sp_cache_remove] at event sequence 209494"|Fixed in version 09.04.0102. As a workaround, you can add trace flags (`-T28 -T29`) to the ReadTrace command line.|
 |Reporter encounters "Could not load file or assembly 'Reporter, Version=9.4.10000.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' or one of its dependencies. Strong name validation failed. (Exception from HRESULT: 0x8013141A)"|Fixed in version 09.04.0102. As a workaround, you can create the following registry key to override the strong name verification: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\StrongName\Verification\Reporter,31BF3856AD364E35`.|
+|ReadTrace fails with error "Unable to connect to the specified server. Initial HRESULT: 0x80040154". Ostress fails with error "Attempt to establish connection failed. SSL Security error.".|See instructions to [Install SQL Server Native Client](/sql/relational-databases/native-client/applications/installing-sql-server-native-client).|
+|You encounter the exception from ReadTrace "Unhandled Exception: System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.SqlServer.XEvent.Linq.dll' or one of its dependencies. The specified module could not be found".|Install [Visual C++ 2010 Redistributable](/cpp/windows/latest-supported-vc-redist)|
 
 ## Examples
 

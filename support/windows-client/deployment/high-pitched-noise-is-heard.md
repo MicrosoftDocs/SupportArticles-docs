@@ -1,7 +1,7 @@
 ---
 title: A high pitched noise is heard when using Bluetooth headphones
 description: Provides a solution to an issue where a high pitched noise is heard when using Bluetooth headphones.
-ms.date: 10/23/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -37,3 +37,7 @@ This issue is fixed by going to Windows Update and installing the latest importa
 ## More information
 
 Advanced Audio Distribution Profile (A2DP) is a profile that defines how high-quality audio is streamed to a device over a Bluetooth connection.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

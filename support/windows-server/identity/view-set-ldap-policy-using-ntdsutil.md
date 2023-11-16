@@ -1,7 +1,7 @@
 ---
 title: View and set Lightweight Directory Access Protocol (LDAP) policy with Ntdsutil
 description: The article describes the most important LDAP query policy limits.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -96,7 +96,7 @@ Ntdsutil.exe is located in the Support tools folder on the Windows installation 
 1. At the Ntdsutil.exe command prompt, type `LDAP policies`, and then press ENTER.
 2. At the LDAP policy command prompt, type `connections`, and then press ENTER.
 3. At the server connection command prompt, type `connect to server <DNS name of server>`, and then press ENTER. You want to connect to the server that you are currently working with.
-4. At the server connection command prompt, type `**q**`, and then press ENTER to return to the previous menu.
+4. At the server connection command prompt, type `q`, and then press ENTER to return to the previous menu.
 5. At the LDAP policy command prompt, type `Show Values`, and then press ENTER.
 
 A display of the policies as they exist appears.

@@ -1,7 +1,7 @@
 ---
 title: Can't activate Windows 7 with KMS
 description: Describes why you may receive an error message when you try to activate Windows Vista or Windows 7 on a computer by using the Key Management Service (KMS).
-ms.date: 09/08/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -116,3 +116,7 @@ OEMID and OEMTableID Consistent: N/A
 
 > [!NOTE]
 > The KMS compliance check only applies to Windows 7 and Windows Vista machines running as KMS clients, it does not apply to Windows Server 2008 or Windows Server 2008 R2 machines running as KMS client machines.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

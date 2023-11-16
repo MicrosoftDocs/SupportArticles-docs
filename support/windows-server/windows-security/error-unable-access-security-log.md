@@ -1,7 +1,7 @@
 ---
 title: Unable to Access the security log
 description: Helps to fix the error where we are unable to Access the security log.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

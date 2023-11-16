@@ -1,7 +1,7 @@
 ---
 title: Windows Server Update Services 3.0 SP2 Dynamic Installer for Server Manager
 description: Describes the Windows Server Update Services 3.0 SP2 Dynamic Installer for Server Manager.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -94,3 +94,7 @@ To remove WSUS 3.0 SP2 by using Server Manager, follow these steps:
 7. On the **Confirm Installation Selections** page, click **Remove**.
 8. On the **Remove Windows Server Update Services 3.0 SP2** page, select any additional items to be removed, and then click **Next**.
 9. Click **Finish** to exit the wizard when the WSUS 3.0 SP2 Removal Wizard is finished.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

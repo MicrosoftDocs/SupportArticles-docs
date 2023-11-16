@@ -3,7 +3,6 @@ title: Error message when you run the Distribution Agent
 description: This article provides workarounds for the problem when you run the Distribution Agent in SQL Server.
 ms.date: 02/22/2021
 ms.custom: sap:Replication, change tracking, change data capture
-ms.prod: sql
 ---
 # "The distribution agent failed to create temporary files" error message when you run the Distribution Agent in SQL Server
 

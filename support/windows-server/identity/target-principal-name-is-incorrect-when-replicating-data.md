@@ -1,7 +1,7 @@
 ---
 title: Error (Target Principal Name is incorrect) when manually replicating data between domain controllers
 description: Provides a solution to an error that occurs when you manually replicate data between domain controllers.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -65,7 +65,7 @@ To resolve this issue, first determine which domain controller is the current pr
 
 - Start the Active Directory Users and Computers snap-in, right-click the domain, and then click **Operations Masters**. Click the **PDC** tab; the current role holder is displayed in the **Operations Master** window. On this tab, you can change the operations master role to the current computer in the second window (if this computer is not the current holder).
 
-- Use the Ntdsutil.exe utility (that is included in Windows 2000), and the Resource Kit command-line utility. However, these interfaces are recommended for more advanced users. For additional information, see [How to find servers that hold flexible single master operations roles](/troubleshoot/windows-server/identity/find-servers-holding-fsmo-role).
+- Use the Ntdsutil.exe utility (that is included in Windows 2000), and the Resource Kit command-line utility. However, these interfaces are recommended for more advanced users. For additional information, see [How to find servers that hold flexible single master operations roles](find-servers-holding-fsmo-role.md).
 
 On domain controllers that are experiencing this issue, disable the Kerberos Key Distribution Center service (KDC):
 
@@ -105,3 +105,7 @@ When this problem occurs, numerous errors may be reported in the event logs. The
   Source: MRxSmb  
   Description: The redirector was unable to initialize security context or query context attributes.
   ```
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).

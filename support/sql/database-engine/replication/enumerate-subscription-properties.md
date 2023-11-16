@@ -4,7 +4,6 @@ description: This article provides a workaround for the error that occurs when y
 ms.date: 08/05/2020
 ms.custom: sap:Replication, change tracking, change data capture
 ms.reviewer: lzhang, tzakir, akbarf, maarumug, ramakoni
-ms.prod: sql
 ---
 # Error when you enumerate the subscription properties in SQL Server 2016 or 2017
 

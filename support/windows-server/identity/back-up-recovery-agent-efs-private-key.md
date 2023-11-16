@@ -1,7 +1,7 @@
 ---
 title: Back up recovery agent EFS private key
 description: Describes how to back up the recovery agent Encrypting File System (EFS) private key in Windows.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

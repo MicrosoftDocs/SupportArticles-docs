@@ -1,11 +1,9 @@
 ---
 title: TLS client offered only unsupported versions
 description: Troubleshoot tls client offered only unsupported versions error messages from the client when connecting to the Azure Kubernetes Service (AKS) API server.
-ms.date: 7/8/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
+ms.date: 07/08/2022
 editor: v-jsitser
-ms.reviewer: chiragpa, nickoman
+ms.reviewer: chiragpa, nickoman, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: common-issues
 keywords:
@@ -25,6 +23,6 @@ Your version of the Transport Layer Security (TLS) protocol is out of date. The 
 
 ## Solution
 
-Upgrade your TLS version to 1.2. For upgrade instructions, see [Enable support for TLS 1.2 in your environment](/troubleshoot/azure/active-directory/enable-support-tls-environment).
+Upgrade your TLS version to 1.2. For upgrade instructions, see [Enable support for TLS 1.2 in your environment](../active-directory/enable-support-tls-environment.md).
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

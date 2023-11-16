@@ -3,7 +3,7 @@ title: It looks like the app is not installed for your Outlook mailbox error
 description: We're sorry. It looks like the app isn't installed for your Outlook mailbox. You may receive this error when using Microsoft Dynamics 365 App for Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-email-office-integration
 ---
 # It looks like the app isn't installed for your Outlook mailbox error occurs when using Dynamics 365 App for Outlook

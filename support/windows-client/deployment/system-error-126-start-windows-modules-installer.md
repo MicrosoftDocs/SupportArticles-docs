@@ -1,7 +1,7 @@
 ---
 title: System Error 126 when you start TrustedInstaller
 description: Fixes the System Error 126 that occurs when you start the Windows Modules Installer service.
-ms.date: 10/21/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -76,3 +76,7 @@ First, you have to check whether the registry subkey exists. To do this, start R
 7. Click **OK**, and then exit Registry Editor.
 
 You can now start the Windows Modules Installer (TrustedInstaller) service as usual.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

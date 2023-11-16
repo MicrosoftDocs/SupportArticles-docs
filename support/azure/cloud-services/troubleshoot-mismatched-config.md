@@ -4,9 +4,7 @@ description: Troubleshoot InvalidModel/BadRequest exceptions while deploying Azu
 ms.service: cloud-services
 ms.subservice: troubleshoot-deployment-classic
 ms.date: 09/26/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
-ms.reviewer: chiragpa
+ms.reviewer: chiragpa, v-leedennis
 articleID: cab2e0b3-d753-4461-8a1e-38fc7629304e 
 ---
 # Troubleshooting Cloud Service (classic) InvalidModel exception

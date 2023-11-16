@@ -1,7 +1,7 @@
 ---
 title: Active Directory Replication Error 8451
 description: provides a resolution for Active Directory Replication Error 8451 "The replication operation encountered a database error".
-ms.date: 3/24/2022
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -268,3 +268,7 @@ Verify the vertical jet database stack from the bottom up (proceeding up to the 
 |(1) Physical consistency|no equivalent| `Esentutl /k` |
 |(2) Extensible Storage Engine (ESE) logical consistency| **Ntdsutil**, **files**, **integrity**| **Esentutl /g** |
 |(3) Application logical consistency| **Ntdsutil**, **semantic database analysis** + **Ntdsutil**, **compact**|no equivalent for SDA  + **Esentutl /d** |
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).

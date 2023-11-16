@@ -1,7 +1,7 @@
 ---
 title: Changes aren't replicated to destination domain controllers
 description: Describes an issue that occurs in a Windows Server 2003 environment, where changes that are made to security groups or distribution groups aren‘t replicated to destination domain controllers when you use link value replication. Resolution is provided.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -48,7 +48,7 @@ Consider the following scenario. In a Windows Server 2003 environment, you set t
     > [!NOTE]
     > This event is logged when you enable diagnostic logging and set the value for the **5 Replication Events** registry entry to 1 or greater.
 
-    For more information about NTDS diagnostic logging, see [How to configure Active Directory and LDS diagnostic event logging](/troubleshoot/windows-server/identity/configure-ad-and-lds-event-logging).
+    For more information about NTDS diagnostic logging, see [How to configure Active Directory and LDS diagnostic event logging](configure-ad-and-lds-event-logging.md).
 
 These symptoms may occur when changes are made to any LVR-replicated object class that has forward links. (These changes to the LVR-replicated object class are also to the changes that are made to security and distribution groups.)
 
@@ -98,3 +98,7 @@ To resolve this issue, follow these steps:
 > Disabling strict replication consistency functionality in the registry of Windows Server 2008-based or Windows Server 2003-based destination domain controllers does not resume replication. You must not set the value of the Strict Replication Consistency registry entry to 0 to unblock replication of directory partitions.
 >
 > Do not force replication of directory partitions on source domain controllers by using the repadmin /sync command or an equivalent command together with the /force switch.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).

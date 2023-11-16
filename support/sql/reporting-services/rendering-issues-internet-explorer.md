@@ -3,7 +3,6 @@ title: Rendering issue with SSRS report in Internet Explorer
 description: This article describes an issue where reports are not rendering as expected in Internet Explorer 8 and later versions in standards mode.
 ms.date: 07/22/2020
 ms.custom: sap:Reporting Services
-ms.prod: sql
 ---
 # Rendering issues with SQL Server Reporting Services reports in Internet Explorer
 

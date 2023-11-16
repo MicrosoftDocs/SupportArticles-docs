@@ -54,7 +54,7 @@ This issue occurs if the Microsoft Account sign-in assistant (MSA or wlidsvc) se
 
 To fix this issue, follow these steps:
 
-1. Sign in to [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/), and select **Device configuration** > **Profiles**.
+1. Sign in to [Microsoft Intune admin center](https://endpoint.microsoft.com/), and select **Device configuration** > **Profiles**.
 
 1. Select the profile that's assigned to the affected Windows 10 devices, and then select **Properties** > **Device restrictions** > **Cloud and Storage**.
 

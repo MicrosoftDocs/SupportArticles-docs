@@ -1,7 +1,7 @@
 ---
 title: Error (Windows cannot verify the digital signature for this file) occurs when you upgrade to Windows Storage Server 2016 or Windows Server 2016
 description: Describes an issue in which an upgrade to Windows Storage Server 2016 or Windows Server 2016 fails at 95 percent completion.
-ms.date: 12/04/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -43,3 +43,7 @@ To work around this issue, use DISM to uninstall the OEM Appliance OOBE feature 
 ```console
 dism /online /disable-feature /featurename:OEM-Appliance-OOBE
 ```
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

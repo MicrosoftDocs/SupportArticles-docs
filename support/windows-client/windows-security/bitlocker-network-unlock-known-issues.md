@@ -4,10 +4,8 @@ description: Describes several known issues that you may encounter while using n
 ms.date: 11/21/2022
 ms.technology: windows-client-security
 ms.prod: windows-client
-author: v-tappelgate
-ms.author: v-tappelgate
 manager: dcscontentpm
-ms.reviewer: kaushika
+ms.reviewer: kaushika, v-tappelgate
 ms.collection: Windows Security Technologies\BitLocker
 ms.topic: troubleshooting
 ms.custom: sap:bitlocker, csstroubleshoot

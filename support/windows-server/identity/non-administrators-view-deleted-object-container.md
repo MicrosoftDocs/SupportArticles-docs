@@ -1,7 +1,7 @@
 ---
 title: Let non-administrators view deleted objects container
 description: Explains how to change permissions so that non-administrators can view the Active Directory deleted objects container.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,17 +1,17 @@
 ---
 title: Hash of the file does not match when running signed PowerShell script
 description: This article provides resolutions for an issue where the execution of a signed PowerShell script fails with an error message.
-ms.date: 08/05/2022
-ms.reviewer: milanmil
-ms.author: v-sidong
+ms.date: 05/16/2023
+ms.reviewer: v-sidong
+ms.author: milanmil
 author: mrmilanmm
 ms.prod: windows-client
 ms.technology: windows-client-system-management-components
-ms.custom: Fix, csstroubleshoot, devx-track-azurepowershell
+ms.custom: Fix, csstroubleshoot
 audience: itpro
 localization_priority: medium
 ---
-#  Hash of the file does not match when running signed PowerShell script
+# Hash of the file does not match when running signed PowerShell script
 
 _Applies to:_ &nbsp; Windows PowerShell
 
@@ -119,3 +119,7 @@ For more information about the PowerShell scripts that are encoded differently, 
 |**Windows 11**|Affected with HASH mismatch issue|Affected with HASH mismatch issue|n/a (Set-AuthenticodeSignature fails with UnknownError)|NOT affected with HASH mismatch issue|
 |**Windows Server 2019**|Affected with HASH mismatch issue|Affected with HASH mismatch issue|n/a (Set-AuthenticodeSignature fails with UnknownError)|NOT affected with HASH mismatch issue|
 |**Windows Server 2022**|Affected with HASH mismatch issue|Affected with HASH mismatch issue|n/a (Set-AuthenticodeSignature fails with UnknownError)|NOT affected with HASH mismatch issue|
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../windows-troubleshooters/gather-information-using-tss-user-experience.md#powershell).

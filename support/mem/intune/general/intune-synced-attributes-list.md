@@ -16,7 +16,7 @@ The following table lists the attributes that are synced from the on-premises Ac
 |Attribute name|User|Contact|Group|Intune required|Description of attribute|
 |---|---|---|---|---|---|
 | AccountEnabled|X|||X|States whether the account is active|
-| c|X|X||X|Country code|
+| c|X|X||X|Country/Region code|
 | cn|X||X||Common name of the object|
 | description|X|X|X|X|Human-readable descriptive phrases about the object|
 | displayName|X|X|X|X|Display name for the object, usually the combination of the user's first name, middle initial, and last name|
@@ -27,6 +27,6 @@ The following table lists the attributes that are synced from the on-premises Ac
 | proxyAddresses|X|X|X|X|The address by which a Microsoft Exchange Server recipient object is recognized in a foreign mail system|
 | pwdLastSet|X||||Stores the time of last password change|
 | securityEnabled|||X|X|Specifies whether the group is a security group|
-| sourceAnchor|X|X|||Each account in your local on-premises environment will be linked to the corresponding Azure AD account through the `sourceAnchor` value|
+| sourceAnchor|X|X|||Each account in your local on-premises environment will be linked to the corresponding Microsoft Entra account through the `sourceAnchor` value|
 | usageLocation|X||||Usage location|
 | userPrincipalName|X||X|X|UPN|

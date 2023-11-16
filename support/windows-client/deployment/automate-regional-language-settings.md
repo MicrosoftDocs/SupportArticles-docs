@@ -1,7 +1,7 @@
 ---
 title: Automate regional and language settings
 description: Describes how to automate regional and language settings.
-ms.date: 09/08/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -97,7 +97,7 @@ This article describes the Regional and Language Settings options in Windows Vis
 - UserList - This setting specifies the user account for which we need to do the change settings. CopySettingsToDefaultUserAcct and CopySettingsToSystemAcct are the parameters that can be used to copy the settings to all users and also the system account(logonUI screen)
 - GeoID/Location Preferences  - Updates the current location field under the location tab. Some software, including Windows may provide additional information passed on this, such as weather
 - MUILanguagePreference - Supports setting the display language and, if appropriate, the display language fallbacks for the system. Set by using a child element \<gs:MUILanguage> with an attribute containing the language string. To set the fallback language of the language set using \<gs:MUILanguage>, use the element \<gs:MUIFallback>. Using this XML entity does NOT install the display languages. It should only be used for selecting display languages after they have been installed.
-- SystemLocale - This setting enables programs that do not use Unicode to run and display menus and dialog boxes in the localized language. If a localized program does not display correctly on the computer, setting the system locale to match the language of the localized program may resolve the problem. However, this setting is system-wide, so it is not possible to support simultaneously the localized programs that do not use Unicode for multiple languages.
+- SystemLocale - This setting enables programs that don't use Unicode to run and display menus and dialog boxes in the localized language. If a localized program doesn't display correctly on the computer, setting the system locale to match the language of the localized program may resolve the problem. However, this setting is system-wide, so it isn't possible to support simultaneously the localized programs that don't use Unicode for multiple languages.
 - InputPreferences - This setting specifies the input locale and keyboard layout combinations. Note: Unlike in 2003/XP, for some complex languages, the usage of KLIDs to identify keyboard layouts have been replaced by GUIDs. The following link gives a table for the replacement: [From KLID to GUID (aka KLIDoral stimulation, it feels GUID)](http://archives.miloush.net/michkap/archive/2009/09/15/9894707.html)
 - UserLocale - This setting controls the settings for sorting numbers, time, currency, and dates. To use .xml answer file to set language preferences:
 
@@ -118,3 +118,7 @@ This article describes the Regional and Language Settings options in Windows Vis
 
 Guide to Windows Vista Multilingual User Interface  
  [https://technet.microsoft.com/library/cc721887(WS.10).aspx](https://technet.microsoft.com/library/cc721887%28ws.10%29.aspx)
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

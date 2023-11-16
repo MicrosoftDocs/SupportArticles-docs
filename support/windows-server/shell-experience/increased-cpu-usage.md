@@ -1,7 +1,7 @@
 ---
 title: Increased CPU usage in explorer.exe
 description: Describes an issue that causes CPU usage to increase when you access a SQL Server FileTable share from Windows Explorer. Occurs in a Windows Server 2012 and 2008 environment. A resolution is provided.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

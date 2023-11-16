@@ -5,11 +5,11 @@ summary: Welcome to Power Apps troubleshooting. These articles explain how to de
 metadata:
   title: Power Apps troubleshooting
   description: Landing page for Power Apps troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
-  ms.prod: power-platform #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.service: powerapps #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
   author: #Required; your GitHub user alias, with correct capitalization.
   ms.author: #Required; microsoft alias of author; optional team alias.
-  ms.date: 3/31/2021
+  ms.date: 03/31/2021
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 

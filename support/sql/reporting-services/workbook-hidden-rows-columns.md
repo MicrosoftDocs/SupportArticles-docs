@@ -4,7 +4,6 @@ description: This article provides a workaround for the problem where hidden row
 ms.date: 07/22/2020
 ms.custom: sap:Reporting Services
 ms.reviewer: kayokon, shink, ramakoni
-ms.prod: sql
 ---
 # Workbook contains hidden rows and columns when you export reports from SQL Server Reporting Services to Excel
 

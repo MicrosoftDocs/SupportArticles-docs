@@ -1,7 +1,7 @@
 ---
 title: SystemInfo.exe doesn't display all updates
 description: Works around an issue where SystemInfo.exe can't display all installed updates.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -39,3 +39,7 @@ wmic qfe list
 ## More information
 
 Windows Server 2003 is currently at end of life cycle and Service Packs are no longer being developed for this product. When installing a Service Pack, the number of hotfixes being shown by the SystemInfo.exe tool is reduced to a much smaller number.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

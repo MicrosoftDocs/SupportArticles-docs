@@ -1,7 +1,7 @@
 ---
 title: Error 0xC004E002 during activation
 description: Provides a solution to an error 0xC004E002 when you try to activate Windows.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -181,3 +181,7 @@ To resolve this issue, try the following methods in order.
 ### Did this fix the problem
 
 Check whether the problem is fixed. If the problem is fixed, you're finished with this section. If the problem isn't fixed, for Windows 7 or Windows Server 2008, you can [contact support](https://support.microsoft.com/contactus/). Assisted support is no longer available for Windows Vista.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

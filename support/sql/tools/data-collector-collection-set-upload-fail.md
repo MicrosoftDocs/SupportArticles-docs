@@ -4,7 +4,6 @@ description: This article introduces that a Data Collector collection set might 
 ms.date: 07/22/2020
 ms.custom: sap:Other tools
 ms.reviewer: bartd
-ms.prod: sql
 ---
 # A Data Collector collection set may not be uploaded if a cache file is corrupted
 

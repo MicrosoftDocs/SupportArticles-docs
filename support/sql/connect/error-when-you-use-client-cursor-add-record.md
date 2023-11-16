@@ -3,7 +3,6 @@ title: Error when you use client cursor to add record
 description: This article provides resolutions for the problem that occurs when you use client cursor to add record to SQL Server table that has default value in Datetime field.
 ms.date: 11/03/2020
 ms.custom: sap:MDAC and ADO
-ms.prod: sql
 ---
 # Error when you use client cursor to add record to SQL Server table that has default value in Datetime field
 

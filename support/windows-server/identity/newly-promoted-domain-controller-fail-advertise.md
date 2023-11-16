@@ -1,7 +1,7 @@
 ---
 title: A newly promoted domain controller may fail to advertise after completion of DCpromo
 description: Describes an issue where a newly promoted domain controller fails to advertise after completion of DCpromo.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -121,7 +121,7 @@ References:
 
 [Distributed File System Replication FAQ](/previous-versions/windows/it-pro/windows-server-2003/cc773238(v=ws.10))
 
-[Additional information on DFSR debug Logging](/troubleshoot/windows-server/networking/change-dfsr-debug-log-settings)
+[Additional information on DFSR debug Logging](../networking/change-dfsr-debug-log-settings.md)
 
 [DCpromo](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc732887(v=ws.11))
 

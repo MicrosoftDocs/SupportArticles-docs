@@ -24,19 +24,19 @@ When you try to delete a Windows Autopilot deployment profile in Intune, you rec
 
 This issue occurs for either of the following reasons:
 
-- The Windows Autopilot deployment profile is still assigned to one or more groups in Azure Active Directory (Azure AD).
-- The group that the Windows Autopilot deployment profile was assigned to was deleted from Azure AD before the group was removed from the **Included groups** of the deployment profile.
+- The Windows Autopilot deployment profile is still assigned to one or more groups in Microsoft Entra ID.
+- The group that the Windows Autopilot deployment profile was assigned to was deleted from Microsoft Entra ID before the group was removed from the **Included groups** of the deployment profile.
 
     > [!NOTE]
     > In this scenario, you can use [Solution 2](#solution-2) to delete the profile immediately. Or, you can wait until the assignment to the deleted group is removed (this usually occurs within seven days), and then delete the profile in Intune.
 
-To fix the issue, use one of the following solutions, depending on whether the group that the Windows Autopilot deployment profile was assigned to still exists in Azure AD.
+To fix the issue, use one of the following solutions, depending on whether the group that the Windows Autopilot deployment profile was assigned to still exists in Microsoft Entra ID.
 
 ## Solution 1
 
-If the group the deployment profile was assigned to *still exists* in Azure AD, use the following steps to resolve the issue.
+If the group the deployment profile was assigned to *still exists* in Microsoft Entra ID, use the following steps to resolve the issue.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Select **Devices** > **Windows** > **Windows enrollment** > **Deployment Profiles**.
 1. Select the Windows Autopilot deployment profile that you want to delete, and then select **Assignments**.
 1. Remove all groups in **Included groups**, and select **Save**.
@@ -45,13 +45,13 @@ After you delete the assignment, you can delete the Windows Autopilot deployment
 
 ## Solution 2
 
-If the group the deployment profile was assigned to *was deleted* from Azure AD, complete the following procedures.
+If the group the deployment profile was assigned to *was deleted* from Microsoft Entra ID, complete the following procedures.
 
 ### Step 1: Find the AutopilotProfileID
 
 To find the `AutopilotProfileID`, follow these steps:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Windows** > **Windows enrollment** > **Deployment Profiles**.
 3. Select the Autopilot deployment profile that you want to delete, and then copy the `AutopilotProfileID` from the following URL in the address bar:
 

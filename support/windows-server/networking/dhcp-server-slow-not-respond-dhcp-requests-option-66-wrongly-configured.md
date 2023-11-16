@@ -1,15 +1,13 @@
 ---
 title: DHCP Server is slow or fails to respond to DHCP requests if option 66 is wrongly configured
 description: Helps to resolve the issue in which the Dynamic Host Configuration Protocol (DHCP) server answers delayed or doesn't respond to DHCP requests, even though the request volume won't cause DHCP performance issues.
-ms.date: 2/1/2023
-author: v-lianna
-ms.author: v-lianna
+ms.date: 02/01/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika, rnitsch, markusr
+ms.reviewer: kaushika, rnitsch, markusr, v-lianna
 ms.custom: sap:dynamic-host-configuration-protocol-dhcp, csstroubleshoot
 ms.technology: networking
 ---

@@ -1,7 +1,7 @@
 ---
 title: Windows Search 4.0 and Multilingual User Interface Pack
 description: Describes the features and improvements in Windows Search 4.0. Provides download information.
-ms.date: 10/19/2020
+ms.date: 04/07/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -101,8 +101,6 @@ To determine the status of Terminal Services, and start the service if it is dis
 > If the installation of Windows Search 4.0 was not successful because Terminal Services was disabled on the computer, you can now restart the installation of Windows Search 4.0.
 
 Microsoft scanned this file for viruses. Microsoft used the most current virus-detection software that was available on the date that the file was posted. The file is stored on security-enhanced servers that help prevent any unauthorized changes to the file.
-
-For more information about Windows Search, visit the following Microsoft Web site: [https://www.microsoft.com/windows/products/winfamily/desktopsearch/default.mspx](https://www.microsoft.com/windows/products/winfamily/desktopsearch/default.mspx) 
 
 ## The Multilingual User Interface Pack for Windows Search 4.0
 

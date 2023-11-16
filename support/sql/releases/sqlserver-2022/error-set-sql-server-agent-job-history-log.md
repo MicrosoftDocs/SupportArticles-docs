@@ -1,13 +1,12 @@
 ---
 title: Error may occur when setting the SQL Server Agent job history log
 description: Fixes an error that occurs when setting or changing the maximum number of job history log rows and job history rows per job.
-ms.date: 03/15/2023
+ms.date: 04/13/2023
 ms.custom: KB5024352
-author: Elena068
-ms.author: v-qianli2
-ms.reviewer: derekw, pcaronauger
+ms.reviewer: derekw, pcaronauger, v-qianli2
 appliesto:
 - SQL Server 2022 on Linux
+- SQL Server 2019 on Linux
 ---
 # FIX: Error may occur when setting the SQL Server Agent job history log
 
@@ -15,7 +14,7 @@ appliesto:
 
 Assume that the Microsoft SQL Server Agent is enabled within a SQL Server instance on a Linux installation. When you try to set or change the maximum number of rows for the job history log and the maximum number of job history rows per job, the following error may occur:
 
->Msg 0, Level 11, State 0, Line \<LineNumber> </br>A severe error occurred on the current command. The results, if any, should be discarded.
+> Msg 0, Level 11, State 0, Line \<LineNumber> </br>A severe error occurred on the current command. The results, if any, should be discarded.
 
 ## Resolution
 
@@ -26,15 +25,17 @@ Example: </br>`sudo /opt/mssql/bin/mssql-conf set sqlagent.jobhistorymaxrows 100
 > [!NOTE]
 > The two properties can't be configured by using SQL Server Management Studio (SSMS).
 
-This problem is fixed in the following cumulative update for SQL Server:
+This problem is fixed in the following cumulative updates for SQL Server:
 
-[Cumulative Update 2 for SQL Server 2022](cumulativeupdate2.md)
+- [Cumulative Update 2 for SQL Server 2022](cumulativeupdate2.md)
+- [Cumulative Update 20 for SQL Server 2019](../sqlserver-2019/cumulativeupdate20.md)
 
 ## About cumulative updates for SQL Server
 
 Each new cumulative update for SQL Server contains all the hotfixes and security fixes that were in the previous build. We recommend that you install the latest build for your version of SQL Server:
 
-[Latest cumulative update for SQL Server 2022](build-versions.md)
+- [Latest cumulative update for SQL Server 2022](build-versions.md)
+- [Latest cumulative update for SQL Server 2019](https://support.microsoft.com/help/4518398)
 
 ## Status
 

@@ -36,7 +36,7 @@ Starting on Microsoft Dynamics GP 9.0 the system will automatically generate Gen
 
 For more information about cost changes, click the following article numbers to view the article in the Microsoft Knowledge Base: [939912](https://support.microsoft.com/help/939912) Information about the calculation of Inventory item costs and the maintenance of these costs in Inventory in Microsoft Dynamics GP
 
-[4094695](https://community.dynamics.com/gp/b/dynamicsgp/archive/2018/03/12/how-to-find-what-receipt-layer-was-affected-by-the-cost-adjustmen) How to find what Receipt Layer was affected by the Cost Adjustment
+[4094695](https://community.dynamics.com/blogs/post/?postid=8d612be9-be06-41c4-b72b-3fdbaf1831fa) How to find what Receipt Layer was affected by the Cost Adjustment
 
 ## What do the reference numbers indicate?
 

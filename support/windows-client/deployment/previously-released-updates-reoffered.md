@@ -1,7 +1,7 @@
 ---
 title: Previously released updates are reoffered
 description: Lists the previously released updates that will be reoffered for systems that were built by using media that contains the November 2014 update rollup for Windows RT 8.1, Windows 8.1, and Windows Server 2012 R2.
-ms.date: 09/18/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -88,3 +88,7 @@ To integrate packages into an image by using the DISM method, follow these steps
     For example, the command to integrate the update 2959977 .cab file would be as follows:
 
     DISM /Online /Add-Package /PackagePath:c:\cabs\Windows8.1-KB2959977-x64.cab
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

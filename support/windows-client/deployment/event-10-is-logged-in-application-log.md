@@ -1,7 +1,7 @@
 ---
 title: Event ID 10 is logged in Application log
 description: Event ID 10 is logged after you install Service Pack 1 for Windows 7 or Windows Server 2008 R2. Provides a resolution.
-ms.date: 09/08/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -92,3 +92,7 @@ After running the script, the Event ID 10 errors related to this event should st
 ## More information
 
 This particular Event ID 10 error message listed above can be safely ignored. It isn't indicative of a problem with the Service Pack or with the operating system.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

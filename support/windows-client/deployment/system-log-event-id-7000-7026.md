@@ -1,7 +1,7 @@
 ---
 title: Event ID 7000 or 7026 in System log
 description: Describes a problem in which event ID 7000 or event ID 7026 may be logged after you start a computer that's running Windows.
-ms.date: 09/08/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -52,3 +52,7 @@ To do this, change the value of the following registry subkeys to 3 (Manual) or 
 
 > [!NOTE]
 > If the above registry is changed to 4 (Disabled), the related device isn't usable because a driver used in the device isn't loaded. So if the device will be used in the future, the above registry should be set as 3 (Manual).
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

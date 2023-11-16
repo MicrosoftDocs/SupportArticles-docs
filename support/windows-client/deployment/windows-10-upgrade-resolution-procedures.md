@@ -1,7 +1,7 @@
 ---
 title: Windows 10 upgrade resolution procedures
 description: Discover general troubleshooting procedures for dealing with 0xC1900101, the generic rollback code thrown when something goes wrong during a Windows 10 upgrade.
-ms.date: 03/13/2023
+ms.date: 04/28/2023
 manager: dcscontentpm
 ms.author: aaroncz
 ms.prod: windows-client
@@ -179,6 +179,10 @@ Also see the following sequential list of modern setup (mosetup) error codes wit
 | 0XC1900403 | MOSETUP_E_UA_CORRUPT_PAYLOAD_FILES | Payload files were corrupt. |
 | 0XC1900404 | MOSETUP_E_UA_BOX_NOT_FOUND | The installation executable was not found. |
 | 0XC1900405 | MOSETUP_E_UA_BOX_CRASHED | The installation process terminated unexpectedly. |
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).
 
 ## More information
 

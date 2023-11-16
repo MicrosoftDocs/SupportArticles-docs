@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting AD Replication error 8477
 description: Describes an issue where AD operations fail with error 8477 (The replication request has been posted; waiting for reply).
-ms.date: 3/24/2022
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -233,6 +233,10 @@ Attribute definitions are stored in attributeSchema objects in the schema direct
 Modification of the schema through the use of LDIFDE or customized binaries included with applications (that is, Microsoft Exchange, Operations Manager, and so on) may add indexed attributes to the schema directory partition. Depending on the size of the update, replication delays can be caused in large databases.
 
 In cases such as these, the 8477 state may appear as a transient issue and should be expected to self-resolve once the higher priority schema updates are successfully replicated and all other replication catches up on backlogged changes within the directory.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).
 
 ## More information
 

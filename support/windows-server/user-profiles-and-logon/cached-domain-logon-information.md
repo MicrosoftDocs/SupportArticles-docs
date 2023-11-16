@@ -1,7 +1,7 @@
 ---
 title: Cached domain logon information
 description: This article describes how cached domain logon information works and how to control cached logon information.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

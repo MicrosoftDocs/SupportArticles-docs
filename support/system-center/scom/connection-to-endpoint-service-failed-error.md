@@ -7,7 +7,7 @@ ms.date: 07/06/2020
 
 This article helps you fix an issue in which you receive the **Connection to EndPoint Service failed** error when you import the Office 365 management pack for Operations Manager.
 
-_Original product version:_ &nbsp; System Center 2012 R2 Operations Manager, Microsoft System Center 2012 Operations Manager, Azure Active Directory  
+_Original product version:_ &nbsp; System Center 2012 R2 Operations Manager, Microsoft System Center 2012 Operations Manager, Microsoft Entra ID  
 _Original KB number:_ &nbsp; 3026285
 
 ## Symptom

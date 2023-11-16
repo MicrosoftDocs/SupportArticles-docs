@@ -20,7 +20,6 @@
     }
   ],
   "notification_subscribers": [
-    "christys@microsoft.com",
     "luche@microsoft.com",
     "haiyingyu@microsoft.com",
     "delhan@microsoft.com",
@@ -34,12 +33,17 @@
   "branches_to_filter": [],
   "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/SupportArticles-docs",
   "git_repository_branch_open_to_public_contributors": "main",
-  "skip_source_output_uploading": false,
   "need_preview_pull_request": true,
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
       "url": "https://github.com/Microsoft/templates.docs.msft",
+      "branch": "main",
+      "branch_mapping": {}
+    },
+    {
+      "path_to_root": "dynamics-365-customer-engagement-pr",
+      "url": "https://github.com/MicrosoftDocs/dynamics-365-customer-engagement-pr",
       "branch": "main",
       "branch_mapping": {}
     },
@@ -63,6 +67,7 @@
     }
   },
   "docs_build_engine": {},
+  "skip_source_output_uploading": false,
   "contribution_branch_mappings": {},
   "redirection_files": [
     ".openpublishing.redirection.json",

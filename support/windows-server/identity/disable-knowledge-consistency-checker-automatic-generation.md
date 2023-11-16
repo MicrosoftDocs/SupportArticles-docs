@@ -1,7 +1,7 @@
 ---
 title: Disable KCC from creating replication topology
 description: Describes how to disable the Knowledge Consistency Checker from automatically creating replication topology.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -90,3 +90,7 @@ Site Topology Failover:
 
 > [!NOTE]
 > NTDSSETTINGS_OPT_IS_AUTO_TOPOLOGY_DISABLED means that intra-site topology management is disabled, and NTDSSETTINGS_OPT_IS_INTER_SITE_AUTO_TOPOLOGY_DISABLED means that inter-site topology management is disabled.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).

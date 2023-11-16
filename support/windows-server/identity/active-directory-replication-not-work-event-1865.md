@@ -1,7 +1,7 @@
 ---
 title: AD replication isn't working with event 1865 logged
 description: Fixes an issue where Active Directory replication doesn't work and event IDs 1865 and 1311 are logged.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -62,6 +62,10 @@ This may happen when there are connectivity issues between the ISTG servers. For
 
 Use the portqry tool to troubleshoot the connectivity issues to the Bridgehead servers of the sites that are listed in Event 1865. If the ports are blocked by the firewall, configure the firewall to open the ports.
 
-### Community solutions content disclaimer
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).
+
+## Community solutions content disclaimer
 
 Microsoft corporation and/or its respective suppliers make no representations about the suitability, reliability, or accuracy of the information and related graphics contained herein. All such information and related graphics are provided "as is" without warranty of any kind. Microsoft and/or its respective suppliers hereby disclaim all warranties and conditions with regard to this information and related graphics, including all implied warranties and conditions of merchantability, fitness for a particular purpose, workmanlike effort, title, and non-infringement. You specifically agree that in no event shall microsoft and/or its suppliers be liable for any direct, indirect, punitive, incidental, special, consequential damages or any damages whatsoever including, without limitation, damages for loss of use, data or profits, arising out of or in any way connected with the use of or inability to use the information and related graphics contained herein, whether based on contract, tort, negligence, strict liability or otherwise, even if microsoft or any of its suppliers has been advised of the possibility of damages.

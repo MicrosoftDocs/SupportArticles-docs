@@ -1,15 +1,13 @@
 ---
 title: How to evaluate effective permissions for resources on remote computers
 description: Resolves an issue in which access checks for remote resources return incorrect results.
-ms.date: 5/24/2022
-author: v-tappelgate
-ms.author: v-tappelgate
+ms.date: 05/24/2022
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika, herbertm
+ms.reviewer: kaushika, herbertm, v-tappelgate
 ms.custom: sap:permissions-access-control-and-auditing, csstroubleshoot
 ms.technology: windows-server-security
 ---

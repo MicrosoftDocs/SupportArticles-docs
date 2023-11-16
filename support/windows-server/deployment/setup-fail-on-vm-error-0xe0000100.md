@@ -1,7 +1,7 @@
 ---
 title: Setup fails on VM with error 0xE0000100
 description: Describes an issue in which you receive an error 0xE0000100 that occurs when Windows Server 2012 R2 setup fails on a virtual machine.
-ms.date: 3/3/2022
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -53,3 +53,7 @@ To work around this issue, use one of the following methods:
   4. Exit the Command Prompt window, and then continue the setup.
 - Increase the allocated memory of the virtual machine before setup.
 - Create and set up another virtual machine that is configured to use more memory, and then attach the virtual hard disk.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

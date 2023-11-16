@@ -1,7 +1,7 @@
 ---
 title: Printing pauses after every 11 print jobs when you use an LPR port
 description: Fixes an issue where printing pauses after every 11 print jobs when printing through a line printer remote (LPR) port and event IDs 2004 and 4227 are logged.
-ms.date: 9/24/2021
+ms.date: 05/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -67,3 +67,7 @@ To work around the 11-port RFC default for LPR ports, follow these steps:
 ## More information
 
 By default, the key isn't present. This limits the number of LPR ports to 11. Setting the registry value to 1 will make the LPD use any port whose number is greater than 1024 to transmit the jobs.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-user-experience.md#printing).

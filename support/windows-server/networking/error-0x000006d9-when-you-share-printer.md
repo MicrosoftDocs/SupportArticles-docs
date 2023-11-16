@@ -1,7 +1,7 @@
 ---
 title: Error 0x000006D9 when you share a printer
 description: Provides a solution to an error 0x000006D9 when you try to share a printer on a computer.
-ms.date: 9/24/2021
+ms.date: 05/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -122,3 +122,7 @@ Security Options: None
 Edge Traversal: None  
 Modifying User: SYSTEM  
 Modifying Application: C:\Windows\System32\svchost.exe
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-user-experience.md#printing).

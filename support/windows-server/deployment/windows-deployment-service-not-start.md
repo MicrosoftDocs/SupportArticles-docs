@@ -1,7 +1,7 @@
 ---
 title: Error 0x5 when starting Windows Deployment Service
 description: Provides a solution to the error 0x5 that occurs when you start the Windows Deployment Service.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -63,3 +63,7 @@ SELF:  Create All Child Objects, Delete All Child Objects, Validated write to DN
 ## More information
 
 For more information, see [Event ID 1804—Active Directory Integration](https://technet.microsoft.com/library/cc726539(WS.10).aspx)
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

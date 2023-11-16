@@ -3,7 +3,7 @@ title: Records aren't filtered in lookup for particular entity
 description: Provides workarounds to an issue in which the lookup displays all records instead of only the records that are related to what you typed in.
 ms.reviewer: krgoldie, srihas
 ms.topic: troubleshooting
-ms.date: 4/12/2021
+ms.date: 04/12/2021
 ---
 # Lookup doesn't filter records as expected for particular entity in Dynamics 365
 

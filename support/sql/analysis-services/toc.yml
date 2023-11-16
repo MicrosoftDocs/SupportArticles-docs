@@ -1,0 +1,43 @@
+items:
+- name: Calculate previous period growth
+  href: calculate-previous-period-growth.md
+- name: Can't connect to a named instance
+  href: cannot-connect-named-instance.md
+- name: Configure MSOLAP data provider for Excel
+  href: configure-msolap-data-provider-excel.md
+- name: Configure SSAS to generate memory dump files
+  href: configure-ssas-generate-memory-dump-files.md
+- name: Determine the first or last member with data
+  href: determine-first-or-last-member-with-data.md
+- name: Disk space exhaustion causes SSAS crash
+  href: disk-space-exhaustion-ssas-crash.md
+- name: Enable the snapshot transaction isolation level
+  href: enable-snapshot-transaction-isolation-level.md
+- name: Error 1032 in the application log
+  href: error-1032-application-log.md
+- name: Error and MDX query fails in SSAS multidimensional instance
+  href: error-mdx-query-fails-ssas-multidimensional-instance.md
+- name: Error when you connect to a named instance
+  href: error-connect-named-instance.md
+- name: Error when you process a database or a cube
+  href: error-messages-process-database-cube.md
+- name: Error when you process a dimension
+  href: error-process-dimension.md
+- name: Error when you use PowerPivot for Excel
+  href: error-use-powerpivot-excel-workbook.md
+- name: MDX query contains Aggregate returns error
+  href: mdx-query-contains-aggregate-returns-error.md
+- name: MDX query with calculated measure runs slowly
+  href: mdx-query-calculated-measure-run-slow.md
+- name: No properties and members of Dimension Hierarchy
+  href: no-dimension-hierarchy-properties.md
+- name: NA returns when you run a multi-subselect query
+  href: na-returns-run-a-multi-subselect-query.md
+- name: Perform a distributed query with OLAP Server
+  href: perform-distributed-query-olap.md
+- name: Unexpected result from Analysis Services
+  href: unexpected-result-analysis-services.md
+- name: Writeback performance issue
+  href: writeback-performance-issue-cell-security-enable.md
+- name: WMI Provider Error and 0x80004005 code
+  href: wmi-provider-error-0x80004005-code.md

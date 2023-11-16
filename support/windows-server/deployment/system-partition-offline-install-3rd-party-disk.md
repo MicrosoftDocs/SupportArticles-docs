@@ -1,7 +1,7 @@
 ---
 title: System Partition goes offline after installing third-party disk or Storage Management Software
 description: Provides a resolution to an issue where System Partition goes offline after installing some third-Party Disk or Storage Management Software.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -94,3 +94,7 @@ To solve this issue, use one of the following methods:
     ```
 
     Reboot the server and the volume will not go offline.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

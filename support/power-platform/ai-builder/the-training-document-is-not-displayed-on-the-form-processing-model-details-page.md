@@ -3,7 +3,7 @@ title: Training document isn't displayed on the document processing model detail
 description: Provides a resolution for the issue that the training document isn't shown on the document processing model details page.
 ms.reviewer: angieandrews
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: 
 ms.author: angieandrews
 author: v-aangie

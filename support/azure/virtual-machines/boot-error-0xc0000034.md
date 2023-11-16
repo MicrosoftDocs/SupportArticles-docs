@@ -1,7 +1,7 @@
 ---
 title: Windows boot error 0xc0000034 on an Azure VM
 description: Fixes an issue that triggers Boot or BCD error 0xc0000034 when you try to start Windows on an Azure virtual machine (VM).
-ms.date: 07/21/2020
+ms.date: 10/20/2023
 ms.reviewer: jarrettr
 ms.service: virtual-machines
 ms.subservice: vm-cannot-start-stop
@@ -50,7 +50,7 @@ To fix the issue, follow these steps.
 1. Run the following command line as an administrator, and then record the identifier of Windows Boot Loader (not Windows Boot Manager). The identifier is a 32-character code and it looks like this: xxxxxxxx-xxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. You will use this identifier in the next step.  
 
     ```console
-    bcdedit /store <Boot partition>:\boot\bcd /enum
+    bcdedit /store <Boot partition>:\boot\bcd /enum /v
     ```
 
 2. Repair the Boot Configuration data by running the following command lines. You must replace these placeholders by the actual values:

@@ -3,7 +3,7 @@
 title: Windows application developer troubleshooting # < 60 chars
 summary: Welcome to Windows application troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Windows applications.
 metadata:
-  title: Windows application developer troubleshooting document
+  title: Windows application developer troubleshooting documentation
   description: This article lists Knowledge Base (KB) and other Support articles for Windows application developer. # Required; article description that is displayed in search results. < 160 chars.
   ms.prod: windows-dev-apps
   ms.topic: landing-page # Required
@@ -22,6 +22,8 @@ landingContent:
         links:
           - text: An application fails to create a COM+ component
             url: client-application-error-create-com-plus-component.md
+          - text: CoInitializeEx fails after calling HtmlHelp on the same thread
+            url: coinitializeex-fails-after-calling-htmlhelp-same-thread.md
           - text: COM+ supports automatic collection of process dump file
             url: com-supports-collect-dump-file.md 
           - text: Descriptions and workings of OLE threading models

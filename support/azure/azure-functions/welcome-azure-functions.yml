@@ -1,0 +1,45 @@
+### YamlMime:Landing
+
+title: Azure Functions troubleshooting documentation # < 60 chars
+summary: Welcome to Azure Functions troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Azure Functions. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+metadata:
+  title: Troubleshoot Azure Functions issues
+  description: Documentation for troubleshooting common issues with Azure Functions. # Required; article description that is displayed in search results. < 160 chars.
+  ms.service: azure-functions  #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: landing-page # Required
+  author: HaiyingYu  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: haiyingyu #Required; microsoft alias of author; optional team alias.
+  ms.date: 08/24/2023
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+  # Card
+  - title: Code Deployment
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Application issues post deployment
+            url: deployment/functions-deploying-runtime-issues-post-deployment.md
+
+  - title: Configuration and Management
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Migration of runtime/language version
+            url: config-mgmt/functions-configuring-updateversion.md
+
+  - title: Creation or Deletion
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: General troubleshooting
+            url: creation-deletion/functions-create-or-delete-faq.md
+
+  - title: Monitoring
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Application Insights logs missing or incorrect
+            url: monitoring/functions-monitoring-appinsightslogs.md

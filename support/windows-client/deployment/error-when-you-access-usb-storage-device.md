@@ -1,7 +1,7 @@
 ---
 title: Error when you access a USB storage device
 description: Provides a solution to an error that occurs when you access a USB storage device after resuming from suspend.
-ms.date: 09/21/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -59,3 +59,7 @@ After you apply the hotfix that is mentioned earlier in this article, the follow
     When the EHCI controller (for USB 2.0) root hub driver then powers up later, the root hub ports are reset and USB 1.x devices are routed back to the companion controllers. The companion controller hub then enumerates the devices again. They are then detected and become functional.
 
     This does not affect USB 2.0 devices because they always remain attached to the EHCI controller.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

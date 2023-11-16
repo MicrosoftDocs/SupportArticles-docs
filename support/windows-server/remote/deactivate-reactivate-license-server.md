@@ -1,7 +1,7 @@
 ---
 title: Deactivate or reactivate a license server
 description: How to deactivate or reactivate a license server by using Terminal Services Licensing
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

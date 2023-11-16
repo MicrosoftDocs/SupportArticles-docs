@@ -12,6 +12,8 @@
     items:
     - name: An application fails to create a COM+ component
       href: client-application-error-create-com-plus-component.md
+    - name: CoInitializeEx fails after calling HtmlHelp on the same thread
+      href: coinitializeex-fails-after-calling-htmlhelp-same-thread.md
     - name: COM+ supports automatic collection of process dump file
       href: com-supports-collect-dump-file.md 
     - name: Descriptions and workings of OLE threading models
@@ -22,6 +24,8 @@
       href: vari8fromcy-produces-incorrect-value.md
   - name: Desktop app UI development
     items:
+    - name: CreateProcessWithLogonW fails when called on a Microsoft Entra account
+      href: createprocesswithlogonw-fails-microsoft-entra-id-account.md
     - name: Hook procedure doesn't receive the VK_CONVERT message
       href: hook-procedure-not-receiving-vk-convert-message.md
     - name: Apps using message filters may not respond in Windows 10
@@ -89,7 +93,9 @@
     - name: Get status of printer and print job
       href: printer-print-job-status.md
     - name: GetICMProfile might leak one or more handles on Windows 10
-      href: geticmprofile-might-leak-one-or-more-handles-on-windows10.md      
+      href: geticmprofile-might-leak-one-or-more-handles-on-windows10.md
+    - name: Graphics::DrawImage is slow when drawing JPEG or PNG images to a printer
+      href: graphicsdrawimage-slow-drawing-jpeg-png-printer.md
     - name: Interoperability between GDI and GDI+
       href: mix-gdi-and-gdi-plus-drawing.md
     - name: Modify printer settings by using SetPrinter
@@ -150,6 +156,8 @@
       href: custom-virtual-channel-not-supported.md
     - name: File copy operation deletes content
       href: file-copy-operation-deletes-content.md
+    - name: GetTickCount resets to zero after approximately 776 days
+      href: gettickcount-resets-zero-after-approximately-776-days.md
     - name: Heap manager may not decommit memory
       href: heap-manager-may-not-decommit-memory.md
     - name: Get formatted strings for an event

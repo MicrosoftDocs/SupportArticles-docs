@@ -4,7 +4,6 @@ description: Provides troubleshooting steps for an issue where a query runs slow
 ms.date: 07/20/2022
 ms.custom: sap:Performance
 ms.topic: troubleshooting
-ms.prod: sql
 ms.reviewer: jopilov
 author: pijocoder
 ms.author: jopilov

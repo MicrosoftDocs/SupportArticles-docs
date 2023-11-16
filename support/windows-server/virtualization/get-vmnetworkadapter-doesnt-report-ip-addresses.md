@@ -1,15 +1,13 @@
 ---
 title: Get-VMNetworkAdapter command does not report IP addresses
 description: Describes a problem in which the output of the `Get-VMNetworkAdapter` command doesn't contain the IP addresses that are associated with the specified adapter.
-ms.date: 5/5/2022
-author: v-tappelgate
-ms.author: v-tappelgate
+ms.date: 05/05/2022
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, v-tappelgate
 ms.custom: sap:virtual-machine-state, csstroubleshoot
 ms.technology: hyper-v
 keywords: Get-VMNetworkAdapter

@@ -1,7 +1,7 @@
 ---
 title: Can't enter UEFI firmware setup
 description: Provides a solution to an issue where you can't enter UEFI firmware setup when in native UEFI mode.
-ms.date: 09/16/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -13,7 +13,7 @@ ms.reviewer: kaushika, match, jaysenb
 ms.custom: sap:setup, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
-# Cannot enter UEFI firmware setup when in native UEFI mode in Windows 7 and Windows 8
+# Can't enter UEFI firmware setup when in native UEFI mode in Windows 7 and Windows 8
 
 This article provides a solution to an issue where you can't enter UEFI firmware setup when in native UEFI mode.
 
@@ -36,12 +36,16 @@ After Windows 7/Windows 8 setup completes, you're no longer able to enter the UE
 
 ## Cause
 
-During Windows 7/Windows 8 setup, certain BCDEdit commands will be executed to configure the new installation. These commands may delete information in the BCD store that is necessary for the UEFI boot manager to load the UEFI firmware menu. Also, Vista, Windows Server 2008, Windows 7, Windows 8, or Windows Server 2008 R2 and Windows Server 2012 may modify the BCD store in a way that prevents the UEFI firmware menu from loading.
+During Windows 7/Windows 8 setup, certain BCDEdit commands are executed to configure the new installation. These commands may delete information in the BCD store that is necessary for the UEFI boot manager to load the UEFI firmware menu. Also, Vista, Windows Server 2008, Windows 7, Windows 8, or Windows Server 2008 R2 and Windows Server 2012 may modify the BCD store in a way that prevents the UEFI firmware menu from loading.
 
 ## Resolution
 
-Contact your hardware vendor to see if there is a firmware update available to resolve this issue.
+Contact your hardware vendor to see if there's a firmware update available to resolve this issue.
 
 ## More information
 
-LOAD_OPTION_CATEGORY_APP bit of Attributes in Boot#### is deleted by `bcdedit.exe /export`, then `bcdedit.exe /import /clean` process. It may also be cleared by installing Windows Vista or later. This can cause the UEFI Boot Manager failure to enter UEFI firmware menu.
+LOAD_OPTION_CATEGORY_APP bit of Attributes in Boot#### is deleted by `bcdedit.exe /export`, then `bcdedit.exe /import /clean` process. It may also be cleared by installing Windows Vista or later. It can cause the UEFI Boot Manager failure to enter UEFI firmware menu.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

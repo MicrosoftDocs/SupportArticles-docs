@@ -1,7 +1,7 @@
 ---
 title: Large WMI repository causes slow logon
 description: Provides help to solve slow logon process that occurs when users log on to the Remote Desktop servers.
-ms.date: 9/24/2021
+ms.date: 05/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -107,3 +107,7 @@ After you enable this policy, run `gpupdate /force` on the computer, and then re
 
 > [!NOTE]
 > By disabling RSoP logging, you prevent the RSoP snap-in (rsop.msc) from running on that computer. You can get RSoP modeling information by using the Group Policy Management Console (GPMC), if it is necessary.  
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-user-experience.md#wmi).

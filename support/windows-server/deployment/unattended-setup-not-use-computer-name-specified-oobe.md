@@ -1,7 +1,7 @@
 ---
-title: Unattended Setup does not Use Computer Name Specified by User during OOBE to Join the Domain
-description: Provides a resolution for the issue that unattended setup does not use Computer Name Specified by User during OOBE to Join the Domain
-ms.date: 9/24/2021
+title: Unattended Setup doesn't Use Computer Name Specified by User during OOBE to Join the Domain
+description: Provides a resolution for the issue that unattended setup doesn't use Computer Name Specified by User during OOBE to Join the Domain
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -13,14 +13,14 @@ ms.reviewer: kaushika
 ms.custom: sap:setup, csstroubleshoot
 ms.technology: windows-server-deployment
 ---
-# Unattended Setup does not Use Computer Name Specified by User during OOBE to Join the Domain
+# Unattended Setup doesn't Use Computer Name Specified by User during OOBE to Join the Domain
 
-This article provides a resolution for the issue that unattended setup does not use Computer Name Specified by User during OOBE to Join the Domain.
+This article provides a resolution for the issue that unattended setup doesn't use Computer Name Specified by User during OOBE to Join the Domain.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 944353
 
-## Rapid Publishing
+## Rapid publishing
 
 Rapid publishing articles provide information directly from within the microsoft support organization. The information contained herein is created in response to emerging or unique topics, or is intended supplement other knowledge base information.
 
@@ -28,20 +28,18 @@ Rapid publishing articles provide information directly from within the microsoft
 
 After you deploy a Windows Vista image or Windows Server 2008 image, you may encounter the following issues:
 
-
 - When logging into the computer, you receive the following error message "The trust relationship between this workstation and the primary domain failed."
 - The computer account in Active Directory is a random computer name instead of the computer name specified during OOBE when the image booted up for the first time.
 
-
 ## Cause
 
-This behavior is by design. Domain joining occurs much earlier in the process than the Computer Name page in OOBE. The OOBE phase of setup cannot correctly change the computer name in the domain if the computer has already been joined to a domain during installation.
+This behavior is by design. Domain joining occurs much earlier in the process than the Computer Name page in OOBE. The OOBE phase of setup can't correctly change the computer name in the domain if the computer has already been joined to a domain during installation.
 
 ## Resolution
 
 A workaround is as follows:
 
-1. Do not use the Microsoft-Windows-UnattendedJoin section to auto join the domain.
+1. Don't use the Microsoft-Windows-UnattendedJoin section to auto join the domain.
 
 2. Use the Microsoft-Windows-Shell-Setup\FirstLogonCommands section to automatically run a script post setup. This script is to join the computer to the domain and reboot.
 
@@ -49,8 +47,9 @@ A workaround is as follows:
 
 This issue is resolved in Windows 7 since a random computer name is used and users are no longer prompted to enter the computer name during the OOBE phase.
 
-Sample script: Join a Computer to a Domain
- [https://www.microsoft.com/technet/scriptcenter/scripts/ad/computer/cptrvb06.mspx?mfr=true](https://www.microsoft.com/technet/scriptcenter/scripts/ad/computer/cptrvb06.mspx?mfr=true) 
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).
 
 ## Disclaimer
 

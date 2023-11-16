@@ -1,7 +1,7 @@
 ---
 title: Adding support for more than eight LUNs in Windows Server
 description: Describes the support for a large number of logical unit numbers (LUNs) in Windows Server products.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -18,7 +18,7 @@ ms.technology: windows-server-high-availability
 This article describes the support for a large number of logical unit numbers (LUNs) in Windows Server products.
 
 > [!IMPORTANT]
-> This article contains information about how to modify the registry. Make sure to back up the registry before you modify it. Make sure that you know how to restore the registry if a problem occurs. For more information about how to back up, restore, and modify the registry, see [Windows registry information for advanced users](/troubleshoot/windows-server/performance/windows-registry-advanced-users).
+> This article contains information about how to modify the registry. Make sure to back up the registry before you modify it. Make sure that you know how to restore the registry if a problem occurs. For more information about how to back up, restore, and modify the registry, see [Windows registry information for advanced users](../performance/windows-registry-advanced-users.md).
 
 _Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2016  
 _Original KB number:_ &nbsp; 310072

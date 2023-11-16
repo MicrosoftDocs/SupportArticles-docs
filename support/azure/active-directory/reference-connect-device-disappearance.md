@@ -1,6 +1,6 @@
 ---
-title: Understand Azure AD Connect 1.4.xx.x and device disappearance
-description: This document describes an issue that arises with version 1.4.xx.x of Azure AD Connect
+title: Understand Microsoft Entra Connect 1.4.xx.x and device disappearance
+description: This document describes an issue that arises with version 1.4.xx.x of Microsoft Entra Connect
 services: active-directory
 author: billmath
 manager: daveba
@@ -12,39 +12,39 @@ ms.subservice: hybrid
 ms.author: billmath
 ---
 
-# Understand Azure AD Connect 1.4.xx.x and device disappearance
+# Understand Microsoft Entra Connect 1.4.xx.x and device disappearance
 
-With the implementation of version 1.4.xx.x of Azure Active Directory Connect (Azure AD Connect), customers may see some or all of their Windows devices disappear from Azure AD. This isn't a cause for concern, as these device identities aren't used by Azure Active Directory (Azure AD) during *Conditional Access* authorization. This change won't delete any Windows devices that were correctly registered with Azure AD for Hybrid Azure AD Join.
+With the implementation of version 1.4.xx.x of Microsoft Entra Connect, customers may see some or all of their Windows devices disappear from Microsoft Entra ID. This isn't a cause for concern, as these device identities aren't used by Microsoft Entra ID during *Conditional Access* authorization. This change won't delete any Windows devices that were correctly registered with Microsoft Entra ID for Microsoft Entra hybrid join.
 
-If you see the deletion of device objects in Azure AD exceeding the *Export Deletion Threshold*, allow the deletions to go through. [How To: allow deletes to flow when they exceed the deletion threshold](/azure/active-directory/hybrid/how-to-connect-sync-feature-prevent-accidental-deletes)
+If you see the deletion of device objects in Microsoft Entra ID exceeding the *Export Deletion Threshold*, allow the deletions to go through. [How To: allow deletes to flow when they exceed the deletion threshold](/azure/active-directory/hybrid/how-to-connect-sync-feature-prevent-accidental-deletes)
 
 ## Background
 
-Windows devices registered as Hybrid Azure AD Joined are represented in Azure AD as device objects, and they can be used for Conditional Access. Windows 10 devices are synchronized to the cloud via Azure AD Connect, while down level Windows devices are registered directly using either Active Directory Federation Services (AD FS) or seamless single sign-on.
+Windows devices registered as Microsoft Entra hybrid joined are represented in Microsoft Entra ID as device objects, and they can be used for Conditional Access. Windows 10 devices are synchronized to the cloud via Microsoft Entra Connect, while down level Windows devices are registered directly using either Active Directory Federation Services (AD FS) or seamless single sign-on.
 
 ## Windows 10 devices
 
-Only Windows 10 devices with a specific *userCertificate* attribute value that's configured by Hybrid Azure AD Join should be synchronized to the cloud by Azure AD Connect. In previous versions of Azure AD Connect, this requirement was not rigorously enforced, and unnecessary device objects were added to Azure AD. Such devices in Azure AD always stayed in the "pending" state, as these devices were not intended to be registered with Azure AD.
+Only Windows 10 devices with a specific *userCertificate* attribute value that's configured by Microsoft Entra hybrid join should be synchronized to the cloud by Microsoft Entra Connect. In previous versions of Microsoft Entra Connect, this requirement was not rigorously enforced, and unnecessary device objects were added to Microsoft Entra ID. Such devices in Microsoft Entra ID always stayed in the "pending" state, as these devices were not intended to be registered with Microsoft Entra ID.
 
-This version of Azure AD Connect will only synchronize Windows 10 devices that are correctly configured to be Hybrid Azure AD Joined. Windows 10 device objects without the Azure AD join specific userCertificate will be removed from Azure AD.
+This version of Microsoft Entra Connect will only synchronize Windows 10 devices that are correctly configured to be Microsoft Entra hybrid joined. Windows 10 device objects without the Microsoft Entra join specific userCertificate will be removed from Microsoft Entra ID.
 
 ## Down-Level Windows devices
 
-Azure AD Connect should never synchronize [down-level Windows devices](/azure/active-directory/devices/hybrid-azuread-join-plan#windows-down-level-devices). Any devices in Azure AD previously synchronized incorrectly will be deleted from Azure AD. If Azure AD Connect attempts to delete [down-level Windows devices](/azure/active-directory/devices/hybrid-azuread-join-plan#windows-down-level-devices), then the device isn't the one that was created by the [Microsoft Workplace Join for non-Windows 10 computers MSI](https://www.microsoft.com/download/details.aspx?id=53554), and it can't be consumed by any other Azure AD feature.
+Microsoft Entra Connect should never synchronize [down-level Windows devices](/azure/active-directory/devices/hybrid-azuread-join-plan#windows-down-level-devices). Any devices in Microsoft Entra ID previously synchronized incorrectly will be deleted from Microsoft Entra ID. If Microsoft Entra Connect attempts to delete [down-level Windows devices](/azure/active-directory/devices/hybrid-azuread-join-plan#windows-down-level-devices), then the device isn't the one that was created by the [Microsoft Workplace Join for non-Windows 10 computers MSI](https://www.microsoft.com/download/details.aspx?id=53554), and it can't be consumed by any other Microsoft Entra feature.
 
-Some customers might need to revisit [How To: Plan your hybrid Azure Active Directory join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan) to register their Windows devices correctly and ensure that those devices can participate in device-based Conditional Access.
+Some customers might need to revisit [How To: Plan your Microsoft Entra hybrid join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan) to register their Windows devices correctly and ensure that those devices can participate in device-based Conditional Access.
 
 ## How can I verify which devices are deleted with this update?
 
 To verify which devices are deleted, use the PowerShell script in [PowerShell certificate report script](#powershell-certificate-report-script).
 
-This script generates a report about certificates stored in *Active Directory Computer* objects, and specifically certificates issued by the Hybrid Azure AD join feature.
+This script generates a report about certificates stored in *Active Directory Computer* objects, and specifically certificates issued by the Microsoft Entra hybrid join feature.
 
-The script also checks the certificates present in the UserCertificate property of a Computer object in AD. For each non-expired certificate present, the script validates whether or not the certificate was issued for the Hybrid Azure AD join feature; for example, `Subject Name matches CN={ObjectGUID}`.
+The script also checks the certificates present in the UserCertificate property of a Computer object in AD. For each non-expired certificate present, the script validates whether or not the certificate was issued for the Microsoft Entra hybrid join feature; for example, `Subject Name matches CN={ObjectGUID}`.
 
-Before this update, Azure AD Connect would synchronize to Azure AD any Computer that contained at least one valid certificate. Beginning with Azure AD Connect version 1.4, the synchronization engine identifies Hybrid Azure AD join certificates, and will use the *cloudfilter* filter to prevent the computer object from synchronizing to Azure AD unless there's a valid Hybrid Azure AD join certificate.
+Before this update, Microsoft Entra Connect would synchronize to Microsoft Entra any Computer that contained at least one valid certificate. Beginning with Microsoft Entra Connect version 1.4, the synchronization engine identifies Microsoft Entra hybrid join certificates, and will use the *cloudfilter* filter to prevent the computer object from synchronizing to Microsoft Entra ID unless there's a valid Microsoft Entra hybrid join certificate.
 
-Azure AD devices that were previously synchronized to AD, but don't have a valid Hybrid Azure AD join certificate, will be deleted by the synchronization engine using the filter `CloudFiltered=TRUE`.
+Microsoft Entra devices that were previously synchronized to AD, but don't have a valid Microsoft Entra hybrid join certificate, will be deleted by the synchronization engine using the filter `CloudFiltered=TRUE`.
 
 ## PowerShell certificate report script
 
@@ -57,16 +57,16 @@ DISCLAIMER:
 Copyright (c) Microsoft Corporation. All rights reserved. This script is made available to you without any express, implied or statutory warranty, not even the implied warranty of  merchantability or fitness for a particular purpose, or the warranty of title or non-infringement. The entire risk of the use or the results from the use of this script remains with you.
 .Synopsis
 This script generates a report about certificates stored in Active Directory Computer objects, specifically, 
-certificates issued by the Hybrid Azure AD join feature.
+certificates issued by the Microsoft Entra hybrid join feature.
 .DESCRIPTION
 It checks the certificates present in the UserCertificate property of a Computer object in AD and, for each 
-non-expired certificate present, validates if the certificate was issued for the Hybrid Azure AD join feature 
+non-expired certificate present, validates if the certificate was issued for the Microsoft Entra hybrid join feature 
 (i.e. Subject Name matches CN={ObjectGUID}).
-Before, Azure AD Connect would synchronize to Azure AD any Computer that contained at least one valid 
-certificate but starting on Azure AD Connect version 1.4, the sync engine can identify Hybrid 
-Azure AD join certificates and will 'cloudfilter' the computer object from synchronizing to Azure AD unless 
-there's a valid Hybrid Azure AD join certificate.
-Azure AD Device objects that were already synchronized to AD but do not have a valid Hybrid Azure AD join 
+Before, Microsoft Entra Connect would synchronize to Microsoft Entra ID any Computer that contained at least one valid 
+certificate but starting on Microsoft Entra Connect version 1.4, the sync engine can identify Hybrid 
+Microsoft Entra join certificates and will 'cloudfilter' the computer object from synchronizing to Microsoft Entra ID unless 
+there's a valid Microsoft Entra hybrid join certificate.
+Microsoft Entra Device objects that were already synchronized to AD but do not have a valid Microsoft Entra hybrid join 
 certificate will be deleted (CloudFiltered=TRUE) by the sync engine.
 .EXAMPLE
 .\Export-ADSyncToolsHybridAzureADjoinCertificateReport.ps1 -DN 'CN=Computer1,OU=SYNC,DC=Fabrikam,DC=com'
@@ -165,7 +165,7 @@ certificate will be deleted (CloudFiltered=TRUE) by the sync engine.
         $validCertsCount = $validCerts.Count
         Write-verbose "'$objDN' has $validCertsCount valid certificates (not-expired)."
 
-        # Check for AAD Hybrid Join Certificates
+        # Check for Microsoft Entra hybrid join Certificates
         $hybridJoinCerts = @()
         $hybridJoinCertsThumbprints = [string] "|"
         ForEach ($cert in $validCerts)
@@ -182,12 +182,12 @@ certificate will be deleted (CloudFiltered=TRUE) by the sync engine.
         if ($hybridJoinCertsCount -gt 0)
         {
             $cloudFiltered = 'FALSE'
-            Write-verbose "'$objDN' has $hybridJoinCertsCount AAD Hybrid Join Certificates with Thumbprints: $hybridJoinCertsThumbprints (cloudFiltered=FALSE)"
+            Write-verbose "'$objDN' has $hybridJoinCertsCount Microsoft Entra hybrid join Certificates with Thumbprints: $hybridJoinCertsThumbprints (cloudFiltered=FALSE)"
         }
         Else
         {
             $cloudFiltered = 'TRUE'
-            Write-verbose "'$objDN' has no AAD Hybrid Join Certificates (cloudFiltered=TRUE)."
+            Write-verbose "'$objDN' has no Microsoft Entra hybrid join Certificates (cloudFiltered=TRUE)."
         }
         
         # Save results
@@ -206,7 +206,7 @@ certificate will be deleted (CloudFiltered=TRUE) by the sync engine.
     Try
     {        
         $results | Export-Csv $Filename -NoTypeInformation -Delimiter ';'
-        Write-Host "Exported Hybrid Azure AD Domain Join Certificate Report to '$Filename'.`n"
+        Write-Host "Exported Hybrid Microsoft Entra Domain Join Certificate Report to '$Filename'.`n"
     }
     Catch
     {
@@ -217,6 +217,6 @@ certificate will be deleted (CloudFiltered=TRUE) by the sync engine.
 
 ## Next Steps
 
-- [Azure AD Connect Version history](/azure/active-directory/hybrid/reference-connect-version-history)
+- [Microsoft Entra Connect Version history](/azure/active-directory/hybrid/reference-connect-version-history)
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

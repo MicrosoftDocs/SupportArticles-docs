@@ -1,7 +1,7 @@
 ---
 title: The system registry is no longer backed up to the RegBack folder starting in Windows 10 version 1803
 description: Starting in Windows 10, version 1803, Windows no longer automatically backs up the system registry to the RegBack folder. System restore points include registry information.
-ms.date: 12/07/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -39,3 +39,7 @@ If you have to use the legacy backup behavior, you can re-enable it by configuri
 Windows backs up the registry to the RegBack folder when the computer restarts, and creates a RegIdleBackup task to manage subsequent backups. Windows stores the task information in the Scheduled Task Library, in the Microsoft\\Windows\\Registry folder. The task has the following properties:
 
 :::image type="content" source="media/system-registry-no-backed-up-regback-folder/properties-of-regIdlebackup-task.png" alt-text="Screenshot of RegIdleBackup task properties.":::
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

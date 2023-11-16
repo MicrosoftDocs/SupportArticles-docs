@@ -1,7 +1,7 @@
 ---
 title: How to rebuild the SYSVOL tree and its content in a domain
 description: Describes how to use the Burflags registry value to rebuild each domain controller's copy of the system volume tree (SYSVOL) on all domain controllers in a common Active Directory domain.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -64,7 +64,7 @@ The following section lists the valid uses of a bulk restart of the SYSVOL repli
 
 - The members of an FRS replica set that are currently inconsistent can perform a full synchronization of all files and folders in the SYSVOL tree faster than the members can process the backlog of changes that reside in the outgoing logs of upstream replication partners.
 
-- Most of the members in an FRS replica set have errors, such as journal_wrap errors. For more information about journal_wrap errors, see [How to troubleshoot journal_wrap errors on Sysvol and DFS replica sets](/troubleshoot/windows-server/networking/how-frs-uses-usn-change-journal-ntfs-file-system).
+- Most of the members in an FRS replica set have errors, such as journal_wrap errors. For more information about journal_wrap errors, see [How to troubleshoot journal_wrap errors on Sysvol and DFS replica sets](../networking/how-frs-uses-usn-change-journal-ntfs-file-system.md).
 
 - The ID table on most of the members of the replica set contains an incomplete description of the files that should be hosted in the replica set.
 

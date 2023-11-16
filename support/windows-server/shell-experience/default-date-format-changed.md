@@ -1,7 +1,7 @@
 ---
 title: The default date format is changed
 description: Discusses that the default date format is changed in Windows 8 and Windows Server 2012.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

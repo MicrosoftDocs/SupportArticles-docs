@@ -4,7 +4,6 @@ description: This article describes the usage of -SkipErrors parameter in Distri
 ms.date: 09/22/2020
 ms.custom: sap:Replication
 ms.topic: article
-ms.prod: sql
 ---
 # Use the -SkipErrors parameter in Distribution Agent
 

@@ -1,7 +1,7 @@
 ---
 title: An update is available that integrates Windows Server Update Services (WSUS) 3.0 into Server Manager
 description: Fixes a problem in which you cannot use the Server Manager snap-in to install WSUS, or WSUS does not appear in the Server Manager snap-in
-ms.date: 12/9/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -20,10 +20,9 @@ This article helps to fix a problem in which you cannot use the Server Manager s
 _Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 940518
 
-## INTRODUCTION
+## Introduction
 
-The Server Manager snap-in is a new feature in Windows Server 2008 that guides administrators through installing, configuring, and managing Windows Server 2008 roles and features. For more information about Server Manager, visit the following Microsoft Web site:  
- [https://www.microsoft.com/windowsserver2008/servermanagement.mspx](https://www.microsoft.com/windowsserver2008/servermanagement.mspx)  
+The Server Manager snap-in is a new feature in Windows Server 2008 that guides administrators through installing, configuring, and managing Windows Server 2008 roles and features.
 
 By default, Windows Server 2008 includes several server roles. Server Manager enables integration of additional roles and features that are available from the Microsoft Download Center and from Windows Update Web sites as optional updates to Windows Server 2008. One role that is available as an update is Windows Server Update Services (WSUS) 3.0 with Service Pack 1 (SP1). This update for Server Manager in Windows Server 2008 fully integrates WSUS 3.0 SP1 into Server Manager. This update lets you use the Server Manager snap-in and wizards to install, configure, and manage WSUS 3.0 SP1.
 
@@ -180,3 +179,7 @@ For more information, click the following article number to view the article in 
 [948014](https://support.microsoft.com/help/948014) Description of the Windows Server Update Services 3.0 Service Pack 1 package  
 
 For more information, click the following article number to view the article in the Microsoft Knowledge Base:
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

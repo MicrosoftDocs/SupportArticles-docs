@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot network or proxy errors
 description: Find solutions for network- or proxy-related errors that you might encounter when you install, update, or use Visual Studio behind a firewall or a proxy server.
-ms.date: 1/6/2023
+ms.date: 04/18/2023
 author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: meghaanand
@@ -77,24 +77,7 @@ Visual Studio uses Transport Layer Security (TLS) 1.2 protocol to connect to net
 
 ### Resolution
 
-To resolve this issue, enable connections for the following URLs:
-
-- `https://management.core.windows.net`
-- `https://app.vssps.visualstudio.com`
-- `https://login.microsoftonline.com`
-- `https://login.live.com`
-- `https://go.microsoft.com`
-- `https://graph.windows.net`
-- `https://app.vsspsext.visualstudio.com`
-- `*.azurewebsites.net` (for Azure connections)
-- `*.visualstudio.microsoft.com`
-- `cdn.vsassets.io` (hosts content delivery network, or CDN, content)
-- `*.gallerycdn.vsassets.io` (hosts Azure DevOps Services extensions)
-- `static2.sharepointonline.com` (hosts resources that Visual Studio uses in the Office UI Fabric kit, such as fonts)
-- `*.nuget.org` (for NuGet connections)
-
-  > [!NOTE]
-  > Privately owned NuGet server URLs may not be included in this list. You can check for the NuGet servers that you are using in _%APPData%\Nuget\NuGet.Config_.
+Enable connections by adding [these domain URLs](/visualstudio/install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server#urls-to-add-to-an-allowlist) to an allowlist.
 
 ## Error "Failed to parse ID from parent process"
 

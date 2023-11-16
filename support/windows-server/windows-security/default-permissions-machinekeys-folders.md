@@ -1,7 +1,7 @@
 ---
 title: Default permissions for MachineKeys folders
 description: Describes default permissions for the MachineKeys folders.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

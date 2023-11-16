@@ -1,7 +1,7 @@
 ---
 title: Group policy with WMI filters can be denied or cause slow logon/boot
 description: Provides the resolution for the issue that Group policy with WMI filters can be denied or cause slow logon/boot
-ms.date: 9/24/2021
+ms.date: 05/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -68,3 +68,7 @@ Per-Vista = None
 Vista onwards = 30 seconds (hardcoded)
 
 In one of the cases, it was informed that removing customized security filtering from the GPO (that has WMI filter configured) resolved the issue, however, it has not been tested or verified.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-user-experience.md#wmi).

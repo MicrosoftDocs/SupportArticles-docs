@@ -1,7 +1,7 @@
 ---
 title: Fix Windows Update errors via DISM or System Update Readiness tool
 description: Use the System Update Readiness Tool or the DISM tool to fix problems that prevent Windows Update from installing successfully.
-ms.date: 12/30/2022
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -55,7 +55,7 @@ Windows updates may fail to install if there are corruption errors. The followin
 
 For example, an update might not install if a system file is damaged. The DISM or [System Update Readiness tool](#what-does-the-system-update-readiness-tool-do) may help you fix some Windows corruption errors.
 
-Check this page for [Windows Update troubleshooting scenarios](/troubleshoot/windows-client/deployment/troubleshoot-windows-update-issues).
+Check this page for [Windows Update troubleshooting scenarios](../../windows-client/deployment/troubleshoot-windows-update-issues.md).
 
 ## Solution 1: Use DISM
 
@@ -196,4 +196,8 @@ To manually fix corruption errors that the System Update Readiness tool detects 
 4. Copy the package (.msu) to the `%SYSTEMROOT%\CheckSUR\packages` directory. By default, this directory doesn't exist, and you need to create it.
 5. Rerun the System Update Readiness tool.
 
-If you're a technical professional, see [How to fix errors found in the CheckSUR.log](/troubleshoot/windows-client/deployment/errors-in-checksur-log) for another option on fixing errors in the _CheckSUR.log_.
+If you're a technical professional, see [How to fix errors found in the CheckSUR.log](../../windows-client/deployment/errors-in-checksur-log.md) for another option on fixing errors in the _CheckSUR.log_.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

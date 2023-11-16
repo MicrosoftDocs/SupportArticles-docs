@@ -1,7 +1,7 @@
 ---
 title: Default Core Parking behavior changes
 description: Describes the changes of the default behavior for Core Parking.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -35,3 +35,7 @@ Currently by default, Windows Server 2012 disables core parking for Intel-based 
 How Core Parking works: 
 
 Windows Core parking for Windows Server 2012 works by Parking and unparking of cores as needed to adjust to changing workloads for efficiency reasons. Parking a core, by itself, does not save power. Parking a core alters the behavior of the scheduler to target threads at other cores. This allows the parked core to stay idle more (decreasing its power consumption), at the cost of placing additional work on unparked cores (increasing their power consumption). Whether or not this tradeoff results in a more or less efficient system is highly dependent on the processor. Windows is tuned to select optimal settings (core parking on or off) depending on which processor is installed and for Windows Server 2012 is considered the most efficient.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

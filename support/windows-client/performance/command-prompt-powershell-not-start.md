@@ -1,7 +1,7 @@
 ---
 title: Command prompt and PowerShell don't start
 description: Command prompt and PowerShell don't start after in-place upgrade of Windows 10 S to Professional, Education, or Enterprise edition.
-ms.date: 09/08/2020
+ms.date: 05/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: Fix, csstroubleshoot, devx-track-azurepowershell
+ms.custom: Fix, csstroubleshoot
 ms.technology: windows-client-performance
 ---
 # Command prompt and PowerShell don't open after in-place upgrade of Windows 10 S
@@ -49,3 +49,7 @@ To resolve this issue, restart the computer. You may have to restart two or thre
 ## Reference
 
 For more information about what is blocked in Windows 10 S, see [Planning a Windows 10 in S mode deployment](/windows-hardware/manufacture/desktop/windows-10-s-planning#what-is-blocked-in-windows-10-s).
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../windows-troubleshooters/gather-information-using-tss-user-experience.md#powershell).

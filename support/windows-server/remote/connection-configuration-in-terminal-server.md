@@ -1,7 +1,7 @@
 ---
 title: Connection Configuration in Terminal Server
 description: Discusses the Terminal Server Administration tool, Connection Configuration.
-ms.date: 9/24/2021
+ms.date: 05/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -142,3 +142,7 @@ This allows all of the above plus permission to:
 - Shadow (ICA Clients only).
 - Reset sessions.
 - Delete sessionsAlong with Guest, User, and Full permissions, there's a more granular set of permissions called Special Access that is used to grant each of the above individually.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-user-experience.md#remote-desktop-disconnection-configuration).

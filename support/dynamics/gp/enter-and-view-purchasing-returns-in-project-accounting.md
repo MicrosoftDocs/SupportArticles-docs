@@ -52,7 +52,7 @@ Use the Purchases Materials Inquiry window to view the following transactions:
 
 - Return w/Credit transactions that are entered in the Returns Transaction Entry window. The **Type** field for the document displays **RET/CR**.
 
-    To open the Purchases Materials Inquiry window, point to **Project** on the **Inquiry** menu, point to **PA Transaction Documents**, and then click **Purchases Materials.**  
+    To open the Purchases Materials Inquiry window, point to **Project** on the **Inquiry** menu, point to **PA Transaction Documents**, and then click **Purchases Materials.**
 
 Use the Inventory Transfer Inquiry window or the Inventory Transfer - Detail Inquiry window to view the following transactions:
 
@@ -60,6 +60,6 @@ Use the Inventory Transfer Inquiry window or the Inventory Transfer - Detail Inq
 
 - Return from Project transactions that are entered in the Returns from Project Entry window. The **Type** field for the documents displays **Return From Project**.
 
-    To open the Inventory Transfer Inquiry window, point to **Project** on the **Inquiry** menu, point to **PA Transaction Documents**, and then click **Inventory Transfer.**  
+    To open the Inventory Transfer Inquiry window, point to **Project** on the **Inquiry** menu, point to **PA Transaction Documents**, and then click **Inventory Transfer.**
 
     To open the Inventory Transfer - Detail Inquiry window, point to **Project** on the **Inquiry** menu, point to **PA Transaction Documents**, and then click **Inventory Transfer - Detail**.

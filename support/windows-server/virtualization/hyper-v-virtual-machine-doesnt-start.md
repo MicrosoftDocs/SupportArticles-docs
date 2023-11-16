@@ -1,7 +1,7 @@
 ---
 title: Hyper-V virtual machine doesn't start and triggers 0x80070057 error
 description: Describes an issue that triggers an error when you try to start a virtual machine that's running in a Windows Server 2012 R2 Hyper-V environment. This issue occurs when McAfee VirusScan is installed. A workaround is provided.
-ms.date: 7/20/2022
+ms.date: 07/20/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -62,7 +62,7 @@ This is a known issue in McAfee VirusScan Enterprise 8.8 Patch 5.
 >
 > - This section contains information about opening or modifying the registry.
 > - The following information is intended for system administrators. Registry modifications are irreversible and could cause system failure if done incorrectly.
-> - Before you proceed, Intel Security strongly recommends that you back up your registry and understand the restore process. For more information, see [Windows registry information for advanced users](/troubleshoot/windows-server/performance/windows-registry-advanced-users).
+> - Before you proceed, Intel Security strongly recommends that you back up your registry and understand the restore process. For more information, see [Windows registry information for advanced users](../performance/windows-registry-advanced-users.md).
 
 To work around this issue, disable the mfedisk.sys driver in the registry:
 

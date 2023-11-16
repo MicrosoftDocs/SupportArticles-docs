@@ -3,9 +3,7 @@ title: HPC Management Service fails to initialize
 description: Provides a solution for an issue where HPC Management Service fails to start after you restore a corrupted database
 ms.date: 09/14/2022
 ms.prod: hpcpack
-ms.author: v-weizhu
-author: AmandaAZ
-ms.reviewer: hclvteam 
+ms.reviewer: hclvteam, v-weizhu
 ---
 # HPC Management Service fails to start after restoring database
 
@@ -17,13 +15,13 @@ After you restore a corrupted HPC management database, HPC Management Service fa
 
 The following error is shown in HPC Management event logs:
 
-> The HPC Management Service failed to initialize correctly: The instance collection of ids cannot be resolved in the current instance view.
+> The HPC Management Service failed to initialize correctly: The instance collection of IDs cannot be resolved in the current instance view.
 
 ## Cause
 
 HPC Management Service crashed with "InstanceCacheLoadException". Here is the error message in the HPC Management event log:
 
-> [HPCManagement] Exception: Microsoft.SystemDefinitionModel.InstanceCacheLoadException: The instance collection of ids cannot be resolved in the current instance view.
+> [HPCManagement] Exception: Microsoft.SystemDefinitionModel.InstanceCacheLoadException: The instance collection of IDs cannot be resolved in the current instance view.
 
 This issue occurs because many instances are in the wrong state. For each instance, there should be only one version in the "Current" state (instanceState value is 2). When the issue occurs, there are instances with two or three versions in the "Current" state (instanceState value is 2). To verify the number of the instance versions in the "Current" state, run the following SQL query against an HPC Management Database:
 

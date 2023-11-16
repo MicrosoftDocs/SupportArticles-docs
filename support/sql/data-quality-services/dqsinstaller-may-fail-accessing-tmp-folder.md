@@ -4,8 +4,7 @@ description: This article provides a resolution for the problem where the temp f
 ms.date: 01/14/2021
 ms.custom: sap:Data Quality Services
 ms.reviewer: JasonH
-ms.topic: troubleshooting
-ms.prod: sql 
+ms.topic: troubleshooting 
 ---
 # SQL Server 2012 DQSInstaller.exe may fail accessing TMP folder
 

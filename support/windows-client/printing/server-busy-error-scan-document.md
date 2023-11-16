@@ -1,7 +1,7 @@
 ---
 title: (Server Busy) error message when you try to scan a document
 description: Provides a resolution for fixing (Server Busy) error when you try to scan a document
-ms.date: 09/14/2020
+ms.date: 05/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -45,3 +45,7 @@ If you are a developer, see the following information:
 
 When you call the AfxOleInit(); function, the *m_nTimeout*  parameter is set to a default value of 8 seconds. To disable the time-out of the OLE call, you must add the following line after you call the AfxOleInit(); function:
 >AfxOleGetMessageFilter()->EnableNotRespondingDialog(FALSE);  
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../windows-troubleshooters/gather-information-using-tss-user-experience.md#printing).

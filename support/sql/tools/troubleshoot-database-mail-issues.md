@@ -5,7 +5,6 @@ ms.date: 12/22/2021
 ms.custom: sap:Other tools
 author: pijocoder
 ms.author: nathansc
-ms.prod: sql
 ---
 # Troubleshoot Database Mail issues
 

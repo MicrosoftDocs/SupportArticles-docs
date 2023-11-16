@@ -1,7 +1,7 @@
 ---
 title: Installing AD DS fails
 description: Provides a solution to an issue where installing Active Directory Domain Services fails.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: Enable logging in WDS
 description: Explains how to modify the registry to enable tracing and logging in WDS. You can use the information to help troubleshoot issues that you may experience in WDS.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -206,3 +206,7 @@ If the failure occurs in Windows PE before the disk configuration page of the WD
 If the failure occurs in Windows PE after the disk configuration page of the WDS client is completed, you can find the logs on the local disk volume at the **$Windows.~BT\\Sources\\Panther** folder. The local disk volume is usually the drive **C**. Use Shift+F10 to open a command prompt, and then change the directory to the location.
 
 If the failure occurs on the first boot after the image is applied, you can find the logs in the **\\Windows\\Panther** folder of the local disk volume. The local disk volume is usually the drive **C**.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

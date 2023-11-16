@@ -15,7 +15,7 @@ This article fixes errors when you configure and assign a Simple Certificate Enr
 After you configure and assign a SCEP certificate profile in Intune, you experience the following problems:
 
 - Targeted devices do not receive a certificate.
-- The certificate profile shows a status of **Failed** in the Microsoft Endpoint Manager admin center.
+- The certificate profile shows a status of **Failed** in the Microsoft Intune admin center.
 - Incoming SCEP requests generate **HTTP 500** error entries in the IIS logs on the computer that's running the Microsoft Intune NDES Connector. These entries resemble the following:
 
     > *DateTime* *IPAddress* GET /certsrv/mscep/mscep.dll operation=GetCACert&message=SCEP%20Authority 443 -IPAddress profiled/1.0+CFNetwork/975.0.3+Darwin/18.2.0 - 200 0 0 0  

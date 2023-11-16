@@ -105,7 +105,7 @@ In some cases, such as when you connect to a network that uses a proxy server to
 > - \*.msftncsi.com
 > - \*.msftconnecttest.com
 >
->For more information, see [KB 2778122, Using authenticated proxy servers together with Windows 8](/troubleshoot/windows-client/networking/use-authenticated-proxy-servers)
+>For more information, see [KB 2778122, Using authenticated proxy servers together with Windows 8](use-authenticated-proxy-servers.md)
 
 ## Workaround
 

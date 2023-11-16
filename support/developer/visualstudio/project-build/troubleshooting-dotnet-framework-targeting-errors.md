@@ -5,9 +5,7 @@ ms.date: 10/07/2022
 f1_keywords:
 - vs.FrameworkTargetingErrors
 - MSBuild.ResolveAssemblyReference.FailedToResolveReferenceBecausePrimaryAssemblyInExclusionList
-author: padmajayaraman
-ms.author: v-jayaramanp
-ms.reviewer: ghogen
+ms.reviewer: ghogen, v-jayaramanp
 ---
 
 # Troubleshoot .NET Framework targeting errors
@@ -31,7 +29,7 @@ To resolve the error, make sure that your application targets a .NET version tha
 
 If you change the target version of .NET for your application, Visual Studio changes some of the references, but you might have to update some references manually. For example, one of the previously mentioned errors might occur if you change an application to target .NET Core 3.1 and that application has references, resources, or settings that rely on .NET 6.
 
-![Screenshot that shows changing the target framework in Visual Studio.](media/troubleshooting-dotnet-framework-targeting-errors/change-target-framework.png)
+:::image type="content" source="media/troubleshooting-dotnet-framework-targeting-errors/change-target-framework.png" alt-text="Screenshot that shows changing the target framework in Visual Studio.":::
 
 ### Update references in app.config
 

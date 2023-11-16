@@ -30,14 +30,14 @@ This issue occurs if the following conditions are true:
 
 Set the **Authentication method** to **Company Portal** in the enrollment profile. To do this, follow these steps:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **iOS/iPad** > **iOS/iPad enrollment** > **Enrollment Program Tokens**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **iOS/iPad** > **iOS/iPad enrollment** > **Enrollment Program Tokens**.
 
 2. Select the token, select **Profiles**, select the enrollment profile that's assigned to the affected devices.
 
 3. In the **Authentication method** list, select **Company Portal**.
 
     > [!NOTE]
-    > After you change the authentication method from **Setup Assistant** to **Company Portal**, Intune skips user authentication through the iOS Setup Assistant and, instead, uses modern authentication. This enables the user to use Azure Active Directory multi-factor authentication (MFA). This method can be enforced without blocking Apple ADE enrollment.
+    > After you change the authentication method from **Setup Assistant** to **Company Portal**, Intune skips user authentication through the iOS Setup Assistant and, instead, uses modern authentication. This enables the user to use Microsoft Entra multifactor authentication (MFA). This method can be enforced without blocking Apple ADE enrollment.
 
     :::image type="content" source="media/cannot-access-company-resources-on-dep/select-where-users-must-authenticate.png" alt-text="Screenshot of the Select where users must authenticate option.":::
 

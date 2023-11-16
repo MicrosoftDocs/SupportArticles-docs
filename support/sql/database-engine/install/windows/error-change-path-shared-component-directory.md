@@ -4,7 +4,6 @@ description: This article provides workarounds for the problem that occurs when 
 ms.date: 11/09/2020
 ms.custom: sap:Installation, Patching and Upgrade
 ms.reviewer: amylewis, mcimfl
-ms.prod: sql
 ---
 # Error if you change the shared component directory path on the Feature Selection screen when you install SQL Server 2008 on a computer
 

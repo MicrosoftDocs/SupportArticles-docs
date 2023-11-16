@@ -1,7 +1,7 @@
 ---
 title: Apply predefined security templates
 description: Describes how to apply predefined security templates.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -4,8 +4,7 @@ description: This article provides two workarounds for the problem where an erro
 ms.date: 01/14/2021
 ms.custom: sap:Data Quality Services
 ms.reviewer: smat
-ms.topic: troubleshooting
-ms.prod: sql 
+ms.topic: troubleshooting 
 ---
 # Error (DQS Cleansing failed the pre-execute phase) when you run the DQS Cleansing transformation in SQL Server 2012
 

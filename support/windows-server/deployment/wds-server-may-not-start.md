@@ -1,7 +1,7 @@
 ---
 title: WDS server may not start
 description: Resolves an issue that occurs when you start the WDS server on a Windows 2008-based computer. The WDS server may not start, and an error message is logged in the System log.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -62,4 +62,8 @@ To disable the PXE server from listening on port 67, set the `UseDHCPPorts` regi
 
 ## References
 
-For more information about how to enable WDS Server logging, see [How to enable logging in Windows Deployment Services (WDS) in Windows Server 2003, Windows Server 2008, Windows Server 2008 R2, and in Windows Server 2012](/troubleshoot/windows-server/deployment/enable-logging-windows-deployment-service).
+For more information about how to enable WDS Server logging, see [How to enable logging in Windows Deployment Services (WDS) in Windows Server 2003, Windows Server 2008, Windows Server 2008 R2, and in Windows Server 2012](enable-logging-windows-deployment-service.md).
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

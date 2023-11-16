@@ -113,7 +113,7 @@ iPhone mobileassetd[83] <Notice>: 0x1a49aebc0 Client connection: XPC_TYPE_ERROR 
 
 **Solution:**
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Enroll devices** > **Enrollment restrictions**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Enroll devices** > **Enrollment restrictions**.
 2. Under **Device type restrictions**, select **All Users** > **Properties**.
 3. Select **Edit** next to the **Platform settings**.
 4. On the **Edit restriction** page, select **Allow** for **iOS/iPadOS** and proceed to the **Review + save** page, then select **Save**.
@@ -127,7 +127,7 @@ When you turn on an ADE-managed device that is assigned an enrollment profile, t
 **Solution:**
 
 1. Edit the enrollment profile. You can make any change to the profile. The purpose is to update the modification time of the profile.
-2. Synchronize ADE-managed devices: In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS** > **iOS enrollment** > **Enrollment program tokens** > choose a token > **Sync now**. A sync request is sent to Apple.
+2. Synchronize ADE-managed devices: In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS** > **iOS enrollment** > **Enrollment program tokens** > choose a token > **Sync now**. A sync request is sent to Apple.
 
 ### ADE enrollment stuck at user login
 
@@ -141,7 +141,7 @@ When you turn on an ADE-managed device that is assigned an enrollment profile, t
 
 Government users signing in from another device are redirected to the public cloud for authentication rather than the government cloud. 
 
-**Cause:** Azure AD does not yet support redirecting to the government cloud when signing in from another device. 
+**Cause:** Microsoft Entra ID does not yet support redirecting to the government cloud when signing in from another device. 
 
 **Solution:**
 Use the iOS Company Portal **Cloud** setting in the **Settings** app to redirect government users’ authentication towards the government cloud. By default, the **Cloud** setting is set to **Automatic** and Company Portal directs authentication towards the cloud that is automatically detected by the device (such as Public or Government). Government users who are signing in from another device will need to manually select the government cloud for authentication. 

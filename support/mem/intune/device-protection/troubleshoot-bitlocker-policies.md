@@ -170,7 +170,7 @@ Additionally, there are settings such as AllowStandardUserEncryption (added in v
 
 #### Investigating with the EntDMID
 
-The EntDMID is a unique device ID for Intune enrollment. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can use the EntDMID to search through the **All Devices** view and identify a specific device. It is also a crucial piece of information for Microsoft support to enable further troubleshooting on the service side if a support case is required.
+The EntDMID is a unique device ID for Intune enrollment. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can use the EntDMID to search through the **All Devices** view and identify a specific device. It is also a crucial piece of information for Microsoft support to enable further troubleshooting on the service side if a support case is required.
 
 You can also use the MDM Diagnostic Report to identify whether a policy has been successfully sent to the device with the settings the administrator configured. By using the BitLocker CSP as a reference, you can decipher which settings have been picked up when syncing with the Intune service. You can use the report to determine if the policy is targeting the device and use the [BitLocker CSP documentation](/windows/client-management/mdm/bitlocker-csp) to identify what settings have been configured.
 
@@ -227,9 +227,9 @@ Manage-bde is a BitLocker encryption command-line tool included in Windows. It's
 
 You can use manage-bde to discover the following information about a device:
 
-- Is it encrypted? If reporting in the Microsoft Endpoint Manager admin center indicates a device is not encrypted, this command-line tool can identify the encryption status.
-- Which encryption method has been used? You can compare information from the tool to the encryption method in the policy to make sure they match. For example, if the Intune policy is configured to XTS-AES 256-bit and the device is encrypted using XTS-AES 128-bit, this will result in errors in Microsoft Endpoint Manager admin center policy reporting.
-- What specific protectors are being used? There are several [combinations of protectors](/windows/security/information-protection/bitlocker/prepare-your-organization-for-bitlocker-planning-and-policies). Knowing which protector is used on a device will help you understand if the policy has been applied correctly.
+- Is it encrypted? If reporting in the Microsoft Intune admin center indicates a device is not encrypted, this command-line tool can identify the encryption status.
+- Which encryption method has been used? You can compare information from the tool to the encryption method in the policy to make sure they match. For example, if the Intune policy is configured to XTS-AES 256-bit and the device is encrypted using XTS-AES 128-bit, this will result in errors in Microsoft Intune admin center policy reporting.
+- What specific protectors are being used? There are several [combinations of protectors](/windows/security/operating-system-security/data-protection/bitlocker/planning-guide). Knowing which protector is used on a device will help you understand if the policy has been applied correctly.
 
 In the following example, the device is not encrypted:
 

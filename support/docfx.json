@@ -52,15 +52,50 @@
       "recommendations": true
     },
     "fileMetadata": {
+      "uhfHeaderId": {
+        "azure/**.*": "Azure",
+        "developer/biztalk/**.*": "MSDocsHeader-BizTalk",
+        "developer/browsers/**.*": "MSDocsHeader-MSEdge",
+        "developer/dotnet/**.*": "MSDocsHeader-DotNet",
+        "developer/host-integration-server/**.*": "MSDocsHeader-His",
+        "developer/visualstudio/**.*": "MSDocsHeader-VisualStudio",
+        "developer/webapps/**.*": "MSDocsHeader-AspNet",
+        "developer/webapps/aspnet/**.*": "MSDocsHeader-AspNet",
+        "developer/webapps/aspnetcore/**.*": "MSDocsHeader-AspNet",
+        "developer/webapps/iis/**.*": "MSDocsHeader-Windows",
+        "devices/**.*": "MSDocsHeader-Surface",
+        "dynamics-365/**.*": "MSDocsHeader-Dynamics365",
+        "dynamics-365/commerce/**.*": "MSDocsHeader-Dynamics365-Commerce",
+        "dynamics-365/customer-insights/**.*": "MSDocsHeader-Dynamics365-Customer-Insights",
+        "dynamics-365/customer-service/**.*": "MSDocsHeader-Dynamics365-CustomerService",
+        "dynamics-365/field-service/**.*": "MSDocsHeader-Dynamics365-Field-Service",
+        "dynamics-365/sales/**.*": "MSDocsHeader-Dynamics365Sales",
+        "mem/**.*": "MSDocsHeader-Intune",
+        "power-platform/**.*": "MSDocsHeader-PowerPlatform",
+        "power-platform/power-apps/**.*": "MSDocsHeader-MSPowerApps",
+        "power-platform/power-automate/**.*": "MSDocsHeader-MSPowerAutomate",
+        "sql/**.*": "MSDocsHeader-DocsSQL",
+        "system-center/**.*": "MSDocsHeader-SystemCenter",
+        "windows/**.*": "MSDocsHeader-Windows",
+        "windows/win32/*.*": "MSDocsHeader-WinDevCenter",
+        "windows-client/**.*": "MSDocsHeader-Windows",
+        "windows-hardware/**.*": "MSDocsHeader-WinHW",
+        "windows-server/**.*": "MSDocsHeader-WindowsServer"
+    },
       "feedback_product_url": {
         "dynamics/gp/*.md": "https://experience.dynamics.com/ideas/categories/?forum=771cc5ac-c117-e811-8105-3863bb2e0320&forumName=Dynamics%20GP",
         "dynamics-365/customer-insights/**/*.md": "https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights",
         "dynamics-365/finance/**/*.md": "https://experience.dynamics.com/ideas/categories/?forum=16691718-61e2-e611-8101-5065f38b21f1&forumName=Dynamics%20365%20Finance",
-        "dynamics-365/marketing/*.md": "https://experience.dynamics.com/ideas/categories/?forum=dfa5b83d-9e4c-e811-a956-000d3a1bef07&forumName=Dynamics%20365%20Marketing",
+        "dynamics-365/commerce/**/*.md": "https://experience.dynamics.com/ideas/categories/?forum=fd509429-7e87-e711-8105-c4346bb5988c&forumName=Dynamics%20365%20Commerce",
+        "dynamics-365/customer-service/**/*.md": "https://experience.dynamics.com/ideas/categories/?forum=b68e50a6-88d9-e811-a96b-000d3a1be7ad&forumName=Dynamics%20365%20Customer%20Service",
+        "dynamics-365/field-service/**/*.md": "https://experience.dynamics.com/ideas/categories/?forum=bee3d862-df65-e811-a95d-000d3a1be7ad&forumName=Dynamics%20365%20Field%20Service",
         "dynamics-365/sales/*.md": "https://experience.dynamics.com/ideas/categories/?forum=3d83d841-984b-ea11-a812-000d3a579c39&forumName=Dynamics%20365%20Sales",
+        "dynamics-365/guides/**/*.md": "https://experience.dynamics.com/ideas/categories/?forum=4d46097d-3138-e911-a95b-000d3a4f3883&forumName=Dynamics%20365%20Guides",
+        "dynamics-365/remote-assist/**/*.md": "https://experience.dynamics.com/ideas/categories/?forum=4323c621-52bc-e811-a975-000d3a1bec70&forumName=Dynamics%20365%20Remote%20Assist",
         "dynamics-365/supply-chain/**/*.md": "https://experience.dynamics.com/ideas/categories/?forum=515617a5-dedb-e911-a814-000d3a4f1244&forumName=Dynamics%20365%20Supply%20Chain%20Management",
         "power-platform/power-apps/**/*.md": "https://ideas.powerapps.com/d365community/forum/f1458c72-ae29-ed11-9db2-000d3a8c451e",
         "power-platform/power-automate/*.md": "https://ideas.powerautomate.com/d365community/forum/086dd68e-597f-ec11-8d21-0022482e8f9f",
+        "power-platform/power-automate/**/*.md": "https://ideas.powerautomate.com/d365community/forum/086dd68e-597f-ec11-8d21-0022482e8f9f",
         "power-platform/ai-builder/*.md": "https://powerusers.microsoft.com/t5/AI-Builder/bd-p/AIBuilder1",
         "windows-server/**/*.md": "https://techcommunity.microsoft.com/t5/windows-server-for-it-pro/bd-p/WindowsServer",
         "windows-client/**/*.md": "https://support.microsoft.com/windows/f59187f8-8739-22d6-ba93-f66612949332",
@@ -81,6 +116,7 @@
         "azure/azure-kubernetes/*.md": "https://feedback.azure.com/d365community/forum/aabe212a-f724-ec11-b6e6-000d3a4f0da0",
         "azure/site-recovery/*.md": "https://feedback.azure.com/d365community/forum/3ccca344-2d25-ec11-b6e6-000d3a4f0f84",
         "azure/synapse-analytics/**/*.md": "https://feedback.azure.com/d365community/forum/9b9ba8e4-0825-ec11-b6e6-000d3a4f07b8",
+        "azure/cosmos-db/**/*.md": "https://feedback.azure.com/d365community/forum/3002b3be-0d25-ec11-b6e6-000d3a4f0858",
         "azure/general/*.md": "https://learn.microsoft.com/answers/tags/133/azure",
         "azure/virtual-desktop/*.md": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop-feedback/idb-p/AzureVirtualDesktop"
       },
@@ -97,7 +133,9 @@
         "**/*.md": "ChristySu",
         "azure/**/*.md": "genlin",
         "azure/devops/**/*.md": "HaiyingYu",
+        "azure/azure-functions/**/*.md": "haiyingyu",
         "azure/synapse-analytics/**/*.md": "HaiyingYu",
+        "azure/cosmos-db/**/*.md": "haiyingyu",
         "developer/**/*.md": "HaiyingYu",
         "sql/**/*.md": "HaiyingYu",
         "windows/win32/**/*.md": "HaiyingYu",
@@ -106,7 +144,6 @@
         "windows-server/**/*.md": "Deland-Han",
         "mem/**/*.md": "helenclu",
         "system-center/**/*.md": "helenclu",
-        "dynamics-365/**/*.md": "David-Pack",
         "dynamics-365/customer-insights/**/*.md": "m-hartmann",
         "dynamics-365/supply-chain/costing/*.md": "JennySong-SH",
         "dynamics-365/supply-chain/inventory/*.md": "sherry-zheng",
@@ -117,15 +154,15 @@
         "dynamics-365/supply-chain/rebates/*.md": "sherry-zheng",
         "dynamics-365/supply-chain/sales/*.md": "Henrikan",
         "dynamics-365/supply-chain/transportation/*.md": "Weijiesa",
-        "dynamics-365/supply-chain/warehousing/*.md": "Mirzaab",
-        "power-platform/**/*.md": "David-Pack",
-        "dynamics/gp/*.md": "David-Pack"
+        "dynamics-365/supply-chain/warehousing/*.md": "Mirzaab"
       },
       "ms.author": {
         "**/*.md": "christys",
         "azure/**/*.md": "genli",
         "azure/devops/**/*.md": "haiyingyu",
+        "azure/azure-functions/**/*.md": "haiyingyu",
         "azure/synapse-analytics/**/*.md": "haiyingyu",
+        "azure/cosmos-db/**/*.md": "haiyingyu",
         "developer/**/*.md": "haiyingyu",
         "sql/**/*.md": "haiyingyu",
         "windows/win32/**/*.md": "haiyingyu",
@@ -134,7 +171,6 @@
         "windows-server/**/*.md": "delhan",
         "mem/**/*.md": "luche",
         "system-center/**/*.md": "luche",
-        "dynamics-365/**/*.md": "davidpac",
         "dynamics-365/customer-insights/**/*.md": "mhart",
         "dynamics-365/supply-chain/costing/*.md": "yanansong",
         "dynamics-365/supply-chain/inventory/*.md": "chuzheng",
@@ -145,9 +181,7 @@
         "dynamics-365/supply-chain/rebates/*.md": "chuzheng",
         "dynamics-365/supply-chain/sales/*.md": "henrikan",
         "dynamics-365/supply-chain/transportation/*.md": "weijiesa",
-        "dynamics-365/supply-chain/warehousing/*.md": "mirzaab",
-        "power-platform/**/*.md": "davidpac",
-        "dynamics/gp/*.md": "davidpac"
+        "dynamics-365/supply-chain/warehousing/*.md": "mirzaab"
       },
       "ms.localizationpriority": {
         "**/*.md": "medium"
@@ -161,30 +195,6 @@
         "developer/webapps/aspnet/**/*.md": "asp.net",
         "developer/webapps/aspnetcore/**/*.md": "aspnet-core",
         "developer/webapps/iis/**/*.md": "iis",
-        "sql/admin/**/*.md": "sql",
-        "sql/analytics-platform-system/**/*.md": "sql",
-        "sql/availability-groups/**/*.md": "sql",
-        "sql/connect/**/*.md": "sql",
-        "sql/context/**/*.md": "sql",
-        "sql/data-quality-services/**/*.md": "sql",
-        "sql/database-design/**/*.md": "sql",
-        "sql/database-engine/**/*.md": "sql",
-        "sql/database-mirroring/**/*.md": "sql",
-        "sql/failover-clusters/**/*.md": "sql",
-        "sql/general/**/*.md": "sql",
-        "sql/install/**/*.md": "sql",
-        "sql/integration-services/**/*.md": "sql",
-        "sql/linux/**/*.md": "sql",
-        "sql/log-shipping/**/*.md": "sql",
-        "sql/machine-learning/**/*.md": "sql",
-        "sql/master-data-services/**/*.md": "sql",
-        "sql/performance/**/*.md": "sql",
-        "sql/releases/**/*.md": "sql",
-        "sql/replication/**/*.md": "sql",
-        "sql/reporting-services/**/*.md": "sql",
-        "sql/security/**/*.md": "sql",
-        "sql/ssms/**/*.md": "sql",
-        "sql/tools/**/*.md": "sql",
         "developer/host-integration-server/**/*.md": "host-integration-server",
         "developer/visualstudio/**/*.md": "visual-studio-family",
         "developer/visualstudio/cpp/**/*.md": "visual-cpp",
@@ -290,52 +300,62 @@
         "system-center/orchestrator/**/*.md": "orchestrator",
         "system-center/scsm/**/*.md": "service-manager",
         "system-center/vmm/**/*.md": "virtual-machine-manager",
-        "microsoft-identity-manager/*.md": "",
-        "sql/admin/**/*.md": "sql-engine-admin-management",
-        "sql/analytics-platform-system/**/*.md": "sql-pdw-aps",
-        "sql/availability-groups/**/*.md": "sql-engine-hadr",
-        "sql/database-design/**/*.md": "sql-engine-dbdesign-development",
-        "sql/database-mirroring/**/*.md": "sql-engine-hadr",
-        "sql/data-quality-services/**/*.md": "sql-dqs",
-        "sql/failover-clusters/**/*.md": "sql-engine-hadr",
-        "sql/general/**/*.md": "sql-general",
-        "sql/install/**/*.md": "sql-engine-installation-patching",
-        "sql/integration-services/**/*.md": "sql-integration-services-ssis",
-        "sql/linux/**/*.md": "sql-linux",
-        "sql/log-shipping/**/*.md": "sql-engine-hadr",
-        "sql/machine-learning/**/*.md": "sql-engine-ml",
-        "sql/master-data-services/**/*.md": "sql-mds",
-        "sql/performance/**/*.md": "sql-engine-performance",
-        "sql/replication/**/*.md": "sql-engine-replication-changetracking-cdc",
-        "sql/reporting-services/**/*.md": "sql-reporting-services-ssrs",
-        "sql/security/**/*.md": "sql-engine-security",
-        "sql/ssms/**/*.md": "sql-tools",
-        "sql/tools/**/*.md": "sql-tools"
+        "microsoft-identity-manager/*.md": ""
       },
       "ms.service": {
         "azure/active-directory/*.md": "active-directory",
         "azure/virtual-machines/*.md": "virtual-machines",
         "azure/cloud-services/*.md": "cloud-services",
+        "azure/azure-functions/**/*.md": "azure-functions",
         "azure/synapse-analytics/**/*.md": "synapse-analytics",
+        "azure/cosmos-db/**/*.md": "cosmos-db",
         "power-platform/power-apps/**/**.*": "powerapps",
         "power-platform/power-automate/*.md": "power-automate",
+        "power-platform/power-automate/**/*.md": "power-automate",
         "dynamics-365/customer-insights/**/**.*": "customer-insights",
-        "dynamics-365/fraud-protection/*.md": "dynamics-365-fraud-protection",
-        "dynamics-365/marketing/*.md": "dynamics-365-marketing",
+        "dynamics-365/customer-service/**/**.*": "dynamics-365-customerservice",
         "dynamics-365/sales/*.md": "dynamics-365-sales",
         "dynamics-365/finance/**/**.*": "dynamics-365-finance",
+        "dynamics-365/commerce/**/**.*": "dynamics-365-commerce",
         "dynamics-365/supply-chain/**/**.*": "dynamics-365-supply-chain",
+        "dynamics-365/guides/**/**.*": "dynamics-365-guides",
+        "dynamics-365/remote-assist/**/**.*": "dynamics-365-remote-assist",
+        "dynamics-365/field-service/**/**.*": "dynamics-365-field-service",
         "mem/intune/**/*.md": "microsoft-intune",
         "power-platform/ai-builder/*.md": "aibuilder",
+        "sql/**/*.md": "sql",
         "sql/analysis-services/**/*.md": "analysis-services",
-        "sql/azure-sql/**/*.md": "virtual-machines-sql"
+        "sql/azure-sql/**/*.md": "virtual-machines-sql",
+        "sql/reporting-services/**/*.md": "reporting-services"
       },
       "ms.subservice": {
+        "dynamics-365/field-service/administration/**.*": "d365-fs-admin-settings",
+        "dynamics-365/field-service/customization/**.*": "d365-fs-customization",
+        "dynamics-365/field-service/iot/**.*": "d365-fs-iot-connected",
+        "dynamics-365/field-service/rso/**.*": "d365-fs-resource-scheduling-optimization",
+        "dynamics-365/field-service/scheduling/**.*": "d365-fs-scheduling",
         "dynamics-365/customer-insights/administration/**.*": "d365-ci-administration",
         "dynamics-365/customer-insights/data-ingestion/**.*": "d365-ci-data-ingestion",
         "dynamics-365/customer-insights/exports/**.*": "d365-ci-exports",
         "dynamics-365/customer-insights/insights/**.*": "d365-ci-insights",
         "dynamics-365/customer-insights/profile-unification/**.*": "d365-ci-profile-unification",
+        "dynamics-365/customer-service/customer-service-insights/**.*": "d365-cs-insights",
+        "dynamics-365/customer-service/email/**.*": "d365-cs-email",
+        "dynamics-365/customer-service/entitlements/**.*": "d365-cs-entitlements",
+        "dynamics-365/customer-service/knowledge-management/**.*": "d365-cs-knowledge-management",
+        "dynamics-365/customer-service/omnichannel-for-customer-service/**.*": "d365-cs-omnichannel",
+        "dynamics-365/customer-service/service-level-agreements/**.*": "d365-cs-sla",
+        "dynamics-365/commerce/commerce-headquarters-operations/**.*": "d365-commerce-headquarters-operations",
+        "dynamics-365/commerce/customer-accounts-loyalty/**.*": "d365-commerce-customer-accounts-loyalty",
+        "dynamics-365/commerce/data-synchronization/**.*": "d365-commerce-data-sync",
+        "dynamics-365/commerce/development-sdks/**.*": "d365-commerce-development-sdks",
+        "dynamics-365/commerce/ecommerce-storefront/**.*": "d365-commerce-ecommerce-storefront",
+        "dynamics-365/commerce/financial-statements/**.*": "d365-commerce-financial-statements",
+        "dynamics-365/commerce/order-management/**.*": "d365-commerce-order-management",
+        "dynamics-365/commerce/payments/**.*": "d365-commerce-payments",
+        "dynamics-365/commerce/point-of-sale/**.*": "d365-commerce-pos",
+        "dynamics-365/commerce/ratings-reviews/**.*": "d365-commerce-ratings-reviews",
+        "dynamics-365/commerce/site-builder-content-management/**.*": "d365-commerce-site-builder-content",
         "dynamics-365/supply-chain/costing/**.*": "d365-scm-inventory-cost-close",
         "dynamics-365/supply-chain/inventory/**.*": "d365-scm-inventory-manage",
         "dynamics-365/supply-chain/planning/**.*": "d365-scm-master-planning",
@@ -353,7 +373,8 @@
         "power-platform/power-apps/create-and-use-apps/**.*": "powerapps-create-use-apps",
         "power-platform/power-apps/dataverse-web-api/**.*": "powerapps-dataverse",
         "power-platform/power-apps/isolate-and-troubleshoot-common-issues/**.*": "powerapps-common-issues",
-        "power-platform/power-apps/manage-apps-and-solutions/**.*": "powerapps-manage-apps-solutions",
+        "power-platform/power-apps/manage-apps/**.*": "powerapps-manage-apps",
+        "power-platform/power-apps/solutions/**.*": "solutions",
         "mem/intune/app-management/*.md": "intune-app-management",
         "mem/intune/app-protection-policies/*.md": "intune-app-protection-policies",
         "mem/intune/certificates/*.md": "intune-certificates",
@@ -363,7 +384,39 @@
         "mem/intune/device-management/*.md": "intune-device-management",
         "mem/intune/device-protection/*.md": "intune-device-protection",
         "mem/intune/general/*.md": "intune-general",
-        "mem/intune/get-support/*.md": "intune-get"
+        "mem/intune/get-support/*.md": "intune-get",
+        "sql/data-quality-services/**/*.md": "sql-dqs",
+        "sql/connect/**/*.md": "sql-client-prog",
+        "sql/general/**/*.md": "sql-general",
+        "sql/integration-services/**/*.md": "sql-integration-services-ssis",
+        "sql/master-data-services/**/*.md": "sql-mds",
+        "sql/analytics-platform-system/**/*.md": "sql-pdw-aps",
+        "sql/linux/**/*.md": "sql-linux",
+        "sql/tools/**/*.md": "sql-tools",
+        "sql/releases/**/*.md": "sql-releases",
+        "sql/ssms/**/*.md": "sql-tools",
+        "sql/database-engine/availability-groups/**/*.md": "sql-engine-ag",
+        "sql/database-engine/failover-clusters/**/*.md": "sql-engine-fci",
+        "sql/database-engine/database-mirroring/**/*.md": "sql-engine-dbm",
+        "sql/database-engine/backup-restore/**/*.md": "sql-engine-backup-restore",
+        "sql/database-engine/connect/**/*.md": "sql-engine-connectivity",
+        "sql/database-engine/development/**/*.md": "sql-engine-development",
+        "sql/database-engine/database-mail/**/*.md": "sql-engine-db-mail",
+        "sql/database-engine/search/**/*.md": "sql-engine-search",
+        "sql/database-engine/database-file-operations/**/*.md": "sql-engine-file-operations",
+        "sql/database-engine/general/**/*.md": "sql-engine-general",
+        "sql/database-engine/install/**/*.md": "sql-engine-install",
+        "sql/database-engine/log-shipping/**/*.md": "sql-engine-log-shipping",
+        "sql/database-engine/linked-servers/**/*.md": "sql-engine-linked-server",
+        "sql/database-engine/machine-learning/**/*.md": "sql-engine-ml",
+        "sql/database-engine/replication/**/*.md": "sql-engine-replication",
+        "sql/database-engine/startup-shutdown/**/*.md": "sql-engine-startup-shutdown",
+        "sql/database-engine/performance/**/*.md": "sql-engine-performance",
+        "sql/database-engine/security/**/*.md": "sql-engine-security",
+        "azure/azure-functions/deployment/**/*.md": "code-deployment",
+        "azure/azure-functions/config-mgmt/**/*.md": "configuration-management",
+        "azure/azure-functions/creation-deletion/**/*.md": "creation-deletion",
+        "azure/azure-functions/monitoring/**/*.md": "monitoring"
       },
       "titleSuffix": {
         "developer/biztalk/**/*.md": "BizTalk Server",
@@ -400,14 +453,19 @@
         "azure/active-directory/*.md": "Active Directory",
         "azure/devops/*.md": "Azure DevOps",
         "azure/synapse-analytics/**/*.md": "Azure Synapse Analytics",
+        "azure/cosmos-db/**/*.md": "Azure Cosmos DB",
         "dynamics-365/customer-insights/**/*.md": "Dynamics 365 Customer Insights",
-        "dynamics-365/fraud-protection/*.md": "Dynamics 365 Fraud Protection",
-        "dynamics-365/marketing/*.md": "Dynamics 365 Marketing",
+        "dynamics-365/customer-service/**/*.md": "Dynamics 365 Customer Service",
+        "dynamics-365/field-service/**/*.md": "Dynamics 365 Field Service",
+        "dynamics-365/guides/**/**.*": "Dynamics 365 Guides",
+        "dynamics-365/remote-assist/**/**.*": "Dynamics 365 Remote Assist",
         "dynamics-365/sales/*.md": "Dynamics 365 Sales",
         "dynamics-365/finance/**/*.md": "Dynamics 365 Finance",
+        "dynamics-365/commerce/**/*.md": "Dynamics 365 Commerce",
         "dynamics-365/supply-chain/**/*.md": "Dynamics 365 Supply Chain Management",
         "power-platform/power-apps/**/*.md": "Power Apps",
         "power-platform/power-automate/*.md": "Power Automate",
+        "power-platform/power-automate/**/*.md": "Power Automate",
         "power-platform/ai-builder/*.md": "AI Builder",
         "dynamics/gp/*.md": "Dynamics GP"
       },
@@ -496,25 +554,40 @@
           "Dynamics 365",
           "Sales"
         ],
-        "dynamics-365/marketing/**/*.md": [
-          "Troubleshoot",
-          "Dynamics 365",
-          "Marketing"
-        ],
         "dynamics-365/customer-insights/**/*.md": [
           "Troubleshoot",
           "Dynamics 365",
           "Customer Insights"
         ],
-        "dynamics-365/fraud-protection/**/*.md": [
+        "dynamics-365/field-service/**/*.md": [
           "Troubleshoot",
           "Dynamics 365",
-          "Fraud protection"
+          "Field Service"
+        ],
+        "dynamics-365/customer-service/**/*.md": [
+          "Troubleshoot",
+          "Dynamics 365",
+          "Customer Service"
+        ],
+        "dynamics-365/guides/**/*.md": [
+          "Troubleshoot",
+          "Dynamics 365",
+          "Guides"
+        ],
+        "dynamics-365/remote-assist/**/*.md": [
+          "Troubleshoot",
+          "Dynamics 365",
+          "Remote Assist"
         ],
         "dynamics-365/finance/**/*.md": [
           "Troubleshoot",
           "Dynamics 365",
           "Finance"
+        ],
+        "dynamics-365/commerce/**/*.md": [
+          "Troubleshoot",
+          "Dynamics 365",
+          "Commerce"
         ],
         "dynamics-365/supply-chain/**/*.md": [
           "Troubleshoot",
@@ -527,6 +600,11 @@
           "Troubleshoot",
           "Power Platform",
           "Power Apps"
+        ],
+        "power-platform/power-automate/**/*.md": [
+          "Troubleshoot",
+          "Power Platform",
+          "Power Automate"
         ],
         "power-platform/power-automate/*.md": [
           "Troubleshoot",
@@ -553,14 +631,23 @@
           "Flow",
           "powerautomate-docs"
         ],
+        "power-platform/power-automate/**/*.md": [
+          "Flow",
+          "powerautomate-docs"
+        ],
         "power-platform/ai-builder/*.md": [
           "PowerApps",
           "Flow",
           "powerapps-docs",
           "powerautomate-docs"
         ],
-        "dynamics-365/customer-insights/**/**.*": [
-          "customerinsights-docs"
+        "dynamics-365/customer-insights/data/**/**.*": [
+          "customerinsights-docs",
+          "customerinsightsdata-docs"
+        ],
+        "dynamics-365/customer-insights/journeys/**.*": [
+          "marketing-docs",
+          "customerinsightsjourneys-docs"
         ],
         "dynamics-365/customer-service/**/**.*": [
           "D365CE",
@@ -572,15 +659,6 @@
           "FinanceAndOperations",
           "financeandoperations-docs"
         ],
-        "dynamics-365/fraud-protection/**/**.*": [
-          "Capaedac-fraudprotection",
-          "fraudprotection-docs"
-        ],
-        "dynamics-365/marketing/**/**.*": [
-          "D365CE",
-          "D365Mktg",
-          "marketing-docs"
-        ],
         "dynamics-365/sales/**/**.*": [
           "D365CE",
           "D365Sales",
@@ -588,6 +666,7 @@
         ],
         "dynamics-365/supply-chain/**/**.*": [
           "SCM",
+          "FinanceAndOperations",
           "supplychainmanagement-docs",
           "supplychaincenter-docs"
         ]

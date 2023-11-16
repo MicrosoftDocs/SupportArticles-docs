@@ -1,7 +1,7 @@
 ---
 title: Fail to attach PCI Express expansion chassis
 description: Provides workarounds for errors that occur when you attach a PCI Express expansion chassis to a computer.
-ms.date: 09/08/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -121,3 +121,7 @@ This issue may occur if the operating system runs out of Peripheral Component In
    1. Right-click **HackFlags**, and then click **Modify**.
    2. In the **Value data** box, type 600, click **Hexadecimal** in the **Base** area, and then click **OK**.
    3. Exit Registry Editor.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).
