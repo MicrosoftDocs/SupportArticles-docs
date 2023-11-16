@@ -1,8 +1,10 @@
 ---
 title: Desktop flows run failed with AadLogonFailure
-description: Provides a resolution for an issue where UI flows run failed with the AadLogonFailure error code. 
-ms.reviewer: quseleba, fredg
-ms.date: 11/15/2023
+description: Provides a resolution for an issue where desktop flows run failed with the AadLogonFailure error code. 
+ms.reviewer: fredg, johndund
+author: QuentinSele
+ms.author: quseleba
+ms.date: 11/16/2023
 ms.subservice: power-automate-desktop-flows
 ---
 # Desktop flows run failed with the AadLogonFailure error code
@@ -38,17 +40,16 @@ You need to disable Network Level Authentication (NLA) on the machine.
 
     :::image type="content" source="media/ui-flows-run-failed-with-aadlogonfailure-error/disable-network-level-auth.png" alt-text="Screenshot to disable Network Level Authentication in the System Properties window.":::
 
-### Disable NLA using Group Policy Editor
+### Disable NLA using the Local Group Policy Editor
+
 > [!NOTE]
->
-> The following steps show how you can check if the policy setting is enabled. If NLA is required, work with your system administrator to disable this policy on the required machines.
+> The following steps show how to check if the policy setting is enabled. If NLA is required, work with your system administrator to disable this policy on the required machines.
 
-To understand whether NLA is required by group policy on your computer, you can use the local group policy editor.
-
+To understand whether NLA is required by Group Policy on your computer, you can use the Local Group Policy Editor.
 
 1. Open the **Run** dialog box (<kbd>Windows</kbd> + <kbd>R</kbd>), type *gpedit.msc*, and select **OK**.
 
-    :::image type="content" source="media/ui-flows-run-failed-with-aadlogonfailure-error/run-gpedit.png" alt-text="Screenshot that shows how to open Group Policy Editor by running gpedit.msc.":::
+    :::image type="content" source="media/ui-flows-run-failed-with-aadlogonfailure-error/run-gpedit.png" alt-text="Screenshot that shows how to open the Local Group Policy Editor by running gpedit.msc.":::
 
 2. Navigate to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Remote Desktop Services** > **Remote Desktop Session Host** > **Security**.
 
