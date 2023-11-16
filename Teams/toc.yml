@@ -7,14 +7,6 @@
       href: ./teams-administration/failed-to-auto-discover-domain-error-teams-admin-center.md
     - name: "\"We couldn't add member\" error when adding users"
       href: ./teams-administration/couldnt-add-member-error.md
-    - name: Activate guest users
-      href: ./teams-administration/activate-guest-user-access-in-teams.md
-    - name: EMET EAF policy identifies Chromium sandbox optimizations as threats
-      href: ./teams-administration/eaf-in-emet-ids-chrome-optimizations-as-threats.md
-    - name: Can't access admin center
-      href: ./teams-administration/cannot-access-admin-center.md
-    - name: Can't enable archiving or increase mailbox quota in O365 Group mailbox
-      href: ./teams-administration/group-mailboxes-will-not-enable-archive.md
     - name:  Can't send messages to a group chat
       href: ./teams-administration/unable-send-message-group-chat.md
     - name: Clear the Teams client cache
@@ -25,24 +17,18 @@
       href: ./teams-administration/include-exclude-teams-from-antivirus-dlp.md
     - name: Issues receiving messages and calls
       href: /microsoftteams/legacy-login-issues?context=/MicrosoftTeams/troubleshoot/context/context
-    - name: Public team list doesn't display all teams
-      href: ./teams-administration/public-team-list-doesnt-display-all.md
     - name: Self-help diagnostics for Teams admins
       href: ./teams-administration/admin-self-help-diagnostics.md
     - name: Troubleshoot connectivity issues
       href: /microsoftteams/connectivity-issues?context=/MicrosoftTeams/troubleshoot/context/context
     - name: Troubleshoot installation and update issues
       href: /microsoftteams/troubleshoot-installation?context=/MicrosoftTeams/troubleshoot/context/context
-    - name: User doesn't receive welcome email when added by an administrator
-      href: ./teams-administration/welcome-email-not-received-in-teams.md
     - name: User information isn't updated
       href: ./teams-administration/user-information-not-updated.md
   - name: Authentication
     items:
     - name: Always log into the domain-joined PC account
       href: ./authentication/teams-defaults-to-domain-joined-account.md
-    - name: Modern authentication failure
-      href: ./authentication/modern-authentication-failure-teams.md
     - name: Stops working when joining from Microsoft Edge or Internet Explorer 
       href: ./authentication/teams-stops-working-when-joining-from-edge.md
   - name: Channels
@@ -61,8 +47,6 @@
       href: ./teams-conferencing/phone-number-blocked-in-teams.md
     - name: Attendee maximum for meetings capped at 250
       href: ./teams-conferencing/teams-meetings-capped-at-250.md
-    - name: Can't open PowerPoint presentations after disabling TLS 1.0/1.1
-      href: ./teams-conferencing/teams-room-cant-open-powerpoint-presentations-tls.md
     - name: CVI information doesn't autopopulate in a Meet Now instance 
       href: ./teams-conferencing/cvi-info-does-not-populate-in-meet-now.md
     - name: Dialing out requires five or more digits 
@@ -71,8 +55,6 @@
       href: ./teams-conferencing/no-dial-pad.md
     - name: Give Control doesn't work
       href: ./teams-conferencing/give-control-doesn’t-work-sharescreen.md
-    - name: Lenovo Yoga L13 might shut down during Teams meetings
-      href: ./teams-conferencing/lenovo-shut-down-during-meeting.md
     - name: Organizer can't start Outlook meeting and stuck in virtual lobby
       href: ./teams-conferencing/organizer-cant-start-teams-meeting.md
     - name: PSTN callers with the same "From" number are shown as the same user
@@ -89,8 +71,6 @@
       href: ./teams-conferencing/teams-slow-video-meetings-laptops-4k.md
     - name: '"The following application instance is not present in BVD" error when assigning a phone number to a resource accounts'
       href: ./teams-conferencing/following-application-instance-not-present-error.md
-    - name: Users with Exchange Online mailboxes can't access meetings or connectors 
-      href: ./teams-conferencing/exchange-users-cant-access-meetings.md
   - name: Exchange integration
     items:
     - name: External federated contacts don't appear in Teams search
@@ -109,8 +89,6 @@
       href: ./files/cannot-share-files-in-large-chat.md  
     - name: Desktop app option is missing
       href: ./files/desktop-app-option-missing.md
-    - name: Downloaded documents open in protected view
-      href: ./files/download-documents-open-in-protected-view.md
     - name: Guest user can't access Files tab
       href: ./files/guests-cannot-access-files.md   
   - name: Forms
@@ -157,12 +135,6 @@
       href: ./mobile/websites-with-conditional-access-dont-display.md
     - name: Can't see autofavorited channels in mobile app
       href: ./mobile/cant-see-auto-favorited-channels-in-mobile.md
-    - name: Can't switch accounts on Intune-managed mobile devices
-      href: ./mobile/teams-users-cant-switch-accounts-intune-mobile.md    
-    - name: Chrome version 80 users can't sign in to some applications
-      href: ./mobile/chrome-80-users-unable-to-sign-in-on-teams.md
-    - name: Notifications and preview issues in iOS 13 Beta
-      href: ./mobile/problems-using-teams-on-ios-13-beta.md
     - name: Settings for Teams calls with Apple CarPlay
       href: ./mobile/settings-teams-calls-carplay.md
   - name: OneNote Integration
@@ -227,16 +199,10 @@
       href: ./provisioning/users-cant-create-team.md
     - name: Deleting a team also deletes the group associated with it
       href: ./provisioning/deleting-team-also-deletes-group.md
-    - name: Incorrect user listed as SharePoint site creator
-      href: ./provisioning/wrong-teams-user-listed-as-site-creator.md
   - name: Sign-in
     items:
-    - name: Can't start Teams for Surface Hub from Microsoft Store
-      href: ./teams-sign-in/teams-for-surface-hub-wont-start-from-store.md
     - name: Resolve sign-in errors
       href: ./teams-sign-in/resolve-sign-in-errors.md
-    - name: Sign-in error after password change
-      href: ./teams-sign-in/sign-in-error-after-password-change.md
     - name: Someone has already setup Teams for your organization
       href: ./teams-sign-in/someone-has-already-setup-teams.md
     - name: Teams doesn't automatically update
@@ -255,10 +221,6 @@
       href: /sharepoint/troubleshoot/sites/err-invalid-response-accessing-sharepoint-site?context=/MicrosoftTeams/troubleshoot/context/context
   - name: Tabs
     items:
-    - name: Can't rename legacy OneNote tabs
-      href: ./tabs/unable-to-rename-legacy-onenote-tabs.md
-    - name: File download failure
-      href: ./tabs/file-download-failure-teams.md
     - name: Owner can't create Planner tab
       href: ./tabs/teams-owner-cannot-create-planner-tab.md
     - name: Removed user appears as "Unknown user"
@@ -267,8 +229,6 @@
       href: ./tabs/tabs-dont-work-after-enabling-conditional-access.md
     - name: Task buckets don't appear in Teams Planner online
       href: ./tabs/task-buckets-do-not-appear-in-planner.md
-    - name: Teams website tabs lead to customer confusion
-      href: ./tabs/website-tabs-cause-confusion-teams.md
   - name: Teams Rooms and devices
     items:
     - name: Collect Android Teams device logs
@@ -329,8 +289,6 @@
       href: ./teams-on-linux/linux-known-issues.md
   - name: Teams on Mac
     items:
-    - name: Virtual Camera stops working on macOS desktop client
-      href: ./teams-on-mac/virtual-camera-doesnt-work-macos.md
     - name: Incorrect presence status in Teams for Mac
       href: ./teams-on-mac/incorrect-presence-status-teams-for-mac.md  
   - name: Teams on Windows
@@ -343,9 +301,5 @@
     items:
     - name: Dell Encryption prevents Teams from starting correctly
       href: ./third-party-programs/dell-encryption-prevents-teams-from-starting.md
-    - name: Problems with Safari Intelligent Tracking Prevention
-      href: ./third-party-programs/safari-intelligent-tracking-prevention-problems.md
-    - name: Requires access to Google Gstatic
-      href: ./third-party-programs/unable-to-access-gstatic-in-teams.md
     - name: Symantec DLP interferes with Teams processes
       href: ./third-party-programs/symantec-dlp-interferes-with-teams.md
