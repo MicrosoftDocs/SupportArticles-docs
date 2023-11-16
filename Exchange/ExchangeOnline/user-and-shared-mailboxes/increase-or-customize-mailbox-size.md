@@ -40,7 +40,7 @@ To set a custom mailbox quota for Exchange Online mailboxes, use one of the foll
 ### Set mailbox quota for a single user
 
 1. Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
-1. Run the following PowerShell cmdlet:  
+1. Run the following PowerShell cmdlet:
 
     ```powershell
     Set-Mailbox <UserID> -ProhibitSendQuota <Value> -ProhibitSendReceiveQuota <Value> -IssueWarningQuota <Value>
