@@ -3,7 +3,7 @@ title: Fix Conditional Access-related issues for Teams Android devices
 description: Discusses how to exclude devices from Conditional Access policies or Intune device compliance policies that can prevent users from signing in to or using the Teams app on Android devices.
 ms.reviewer: taherr
 ms.topic: troubleshooting
-ms.date: 11/03/2022
+ms.date: 10/30/2023
 author: helenclu
 ms.author: luche
 manager: dcscontentpm

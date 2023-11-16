@@ -2,7 +2,7 @@
 title: A Teams meeting wants to open Skype for Business
 ms.author: luche
 author: helenclu
-ms.date: 04/09/2020
+ms.date: 10/30/2023
 audience: ITPro
 ms.topic: troubleshooting
 manager: dcscontentpm
