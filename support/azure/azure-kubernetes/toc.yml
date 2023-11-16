@@ -64,6 +64,8 @@
       href: error-code-publicipcountlimitreached.md
     - name: QuotaExceeded error
       href: error-code-quotaexceeded.md   
+    - name: ServiceCidrOverlapExistingSubnetsCidr error
+      href: error-code-servicecidroverlapexistingsubnetscidr.md
     - name: SubnetIsFull upgrade error
       href: error-code-subnetisfull-upgrade.md   
     - name: Unable to get log analytics workspace info error
