@@ -14,7 +14,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 05/15/2023
+ms.date: 10/30/2023
 ---
 # Teams meeting features for shared mailboxes
 
