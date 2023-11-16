@@ -3,7 +3,7 @@ title: The Front of Room status of a Teams Rooms device is Unhealthy
 description: Resolve the issue that causes the Front of Room signal of a Microsoft Teams Rooms device to appear as Unhealthy.
 ms.reviewer: lamos
 ms.topic: troubleshooting
-ms.date: 08/29/2023
+ms.date: 10/30/2023
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
