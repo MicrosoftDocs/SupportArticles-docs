@@ -2,7 +2,7 @@
 title: Deleting a team in Teams also deletes the group
 ms.author: luche
 author: helenclu
-ms.date: 10/30/2023
+ms.date: 04/09/2020
 audience: ITPro
 ms.topic: troubleshooting
 manager: dcscontentpm
@@ -35,4 +35,3 @@ Additional language in Microsoft Teams provides this information to the user. Th
 > When you delete a group, you're permanently removing everything related to this group, including conversations, files, the group notebook, and Planner tasks. For more information, see [Delete a group in Outlook](https://support.microsoft.com/office/delete-a-group-in-outlook-ca7f5a9e-ae4f-4cbe-a4bc-89c469d1726f).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
-

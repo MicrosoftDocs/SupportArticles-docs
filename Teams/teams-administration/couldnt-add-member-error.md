@@ -2,7 +2,7 @@
 title: We couldn't add member error when adding users to Teams
 ms.author: luche
 author: helenclu
-ms.date: 10/30/2023
+ms.date: 04/08/2020
 audience: ITPro
 ms.topic: troubleshooting
 manager: dcscontentpm
@@ -36,4 +36,3 @@ This issue occurs when the value **UsersPermissionToReadOtherUsersEnabled** is s
 ## More information
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
-

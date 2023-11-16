@@ -1,7 +1,7 @@
 ---
 title: SIP 480 and Microsoft response codes
 description: Lists combinations of Microsoft response code and SIP 480 error, and provides actions to resolve the errors.
-ms.date: 10/30/2023
+ms.date: 03/27/2023
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -44,4 +44,3 @@ This article provides troubleshooting information for various combinations of th
 - SIP response code: **480**
 - Suggested actions:  
   - In the calling policy that's assigned to the affected user, check the [Voicemail is available for routing inbound calls](/MicrosoftTeams/teams-calling-policy#voicemail-is-available-for-routing-inbound-calls) setting. If the setting is set to **Not enabled**, set it to **Enabled** or **User controlled**.
-

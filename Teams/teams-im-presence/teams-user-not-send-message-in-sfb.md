@@ -14,7 +14,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business Online
   - Teams
-ms.date: 10/30/2023
+ms.date: 03/31/2022
 ---
 
 # Microsoft Teams user cannot send a message in Skype for Business

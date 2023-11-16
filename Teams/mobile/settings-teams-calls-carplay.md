@@ -15,7 +15,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 10/30/2023
+ms.date: 03/31/2022
 ---
 
 # Settings for Teams calls with Apple CarPlay
@@ -45,4 +45,3 @@ If your admin has created an application protection policy that allows data tran
     :::image type="content" source="media/cannot-make-teams-calls-carplay/setting-send-org-data-to-other-apps.png" alt-text="Screenshot of setting Send Org data to other apps to All apps.":::
 
 For more information, see [iOS app protection policy settings](/mem/intune/apps/app-protection-policy-settings-ios#data-protection).
-

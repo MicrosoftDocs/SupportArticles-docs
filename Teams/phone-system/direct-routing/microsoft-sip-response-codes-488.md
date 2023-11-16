@@ -1,7 +1,7 @@
 ---
 title: SIP 488 and Microsoft response codes
 description: Lists combinations of Microsoft response code and the SIP 488 error, and provides actions to resolve the errors.
-ms.date: 10/30/2023
+ms.date: 03/27/2023
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -43,4 +43,3 @@ This article provides troubleshooting information for various combinations of th
 - SIP response code: **488**
 - Suggested actions:  
   - Media bypass won't work if the SBC doesn't provide any ICE candidates in its SDP offer. Make sure that you enable ICE Lite on the SBC. For more information about media bypass, see [About Media Bypass with Direct Routing](/microsoftteams/direct-routing-plan-media-bypass#about-media-bypass-with-direct-routing) and [Direct Routing - media protocols](/microsoftteams/direct-routing-protocols-media).
-

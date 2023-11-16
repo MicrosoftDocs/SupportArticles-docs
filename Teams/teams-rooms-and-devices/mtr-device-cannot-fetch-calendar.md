@@ -1,7 +1,7 @@
 ---
 title: Teams Rooms devices can't fetch calendar from Exchange Online
 description: Resolves an issue that a Microsoft Teams Rooms (MTR) device can't fetch calendar from Exchange Online.
-ms.date: 10/30/2023
+ms.date: 05/31/2022
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -61,4 +61,3 @@ To fix the issue, enable the client-side setting for modern authentication on Te
 1. In Teams Rooms, select the **More (...)** button.
 2. Select **Settings**, and then enter the username and password for the device administrator.
 3. On the **Account** tab, turn on the **Modern Authentication** switch, and then select **Save and exit**.
-

@@ -13,7 +13,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 10/30/2023
+ms.date: 03/31/2022
 ---
 # Issues with Local Media Optimization for Direct Routing
 
@@ -145,4 +145,3 @@ To determine whether the SBC assignment is correct, identify the user site that'
     :::image type="content" source="media/issues-with-lmo/update-gatewaysiteid.png" alt-text="Screenshot of updating Gateway Site I d.":::
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
-

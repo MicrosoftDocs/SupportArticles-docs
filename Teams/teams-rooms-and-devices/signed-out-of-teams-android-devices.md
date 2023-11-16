@@ -1,7 +1,7 @@
 ---
 title: Signed out of Teams on Android devices 
 description: Provides workarounds for when Android devices are signed out of Teams automatically.
-ms.date: 10/30/2023
+ms.date: 05/04/2022
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -120,4 +120,3 @@ If you still can't sign in to the device, reset the device to its factory settin
 
 1. Perform a factory reset from the OEM device settings or by using the key combination that's specific to the OEM model.
 2. Use option 1, 2 or 3 to sign in to the device.
-

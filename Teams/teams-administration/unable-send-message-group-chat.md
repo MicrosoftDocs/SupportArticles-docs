@@ -15,7 +15,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 10/30/2023
+ms.date: 03/31/2022
 ---
 
 # Error when sending messages to a group chat in Teams: Failed to send
@@ -27,5 +27,4 @@ In Microsoft Teams, the chat creator receives the following error message if mor
 :::image type="content" source="./media/unable-send-message-group-chat/teams-error.png" alt-text="Screenshot that shows the Teams Failed to send error message.":::
 
 This behavior is by design. Although group chats can have up to 250 members, no more than 200 members can be added at the same time.
-
 

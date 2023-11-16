@@ -2,7 +2,7 @@
 title: Teams channel can't be recreated after it's deleted
 ms.author: luche
 author: helenclu
-ms.date: 10/30/2023
+ms.date: 04/09/2020
 audience: ITPro
 ms.topic: troubleshooting
 manager: dcscontentpm
@@ -32,4 +32,3 @@ This is by design. The system maintains this data for information-protection sce
 ## More information
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
-

@@ -1,7 +1,7 @@
 ---
 title: SBC connectivity issues
 description: Describes how to diagnose SIP options or TLS certificate issues with SBC.
-ms.date: 10/30/2023
+ms.date: 07/05/2022
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -183,4 +183,3 @@ The TLS connection may have been closed by one of the intermediary devices (such
 ## More information
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
-

@@ -3,7 +3,7 @@ title: The microphone or speaker status of a Teams Rooms device is unhealthy
 description: Fixes the issue that causes the microphone or speaker signal of a Microsoft Teams Rooms device to appear as Unhealthy.
 ms.reviewer: lamos
 ms.topic: troubleshooting
-ms.date: 10/30/2023
+ms.date: 08/30/2023
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -80,4 +80,3 @@ These signals are handled differently in the Microsoft Teams admin center and th
 - There is no audio peripheral available.
 
 **Teams Rooms Pro Management portal**: If the configured audio peripheral isn't available, the next available microphone or speaker is automatically selected. The portal reports the signal as **Unhealthy** if no speaker or microphone is available.
-

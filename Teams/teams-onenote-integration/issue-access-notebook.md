@@ -12,7 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - Microsoft Teams
-ms.date: 10/30/2023
+ms.date: 03/31/2022
 ---
 
 # "One or more of the document libraries on the user or group's OneDrive contains more than 5,000 OneNote items" error when you access a notebook for Microsoft Teams
@@ -61,4 +61,3 @@ To determine the item count, use one of the following methods:
     ```
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
-

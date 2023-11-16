@@ -3,7 +3,7 @@ title: The Default Credentials status of a Teams Rooms device is Unhealthy
 description: Resolve the issue that causes the Default Credentials signal of a Microsoft Teams Rooms device to appear as Unhealthy.
 ms.reviewer: joolive
 ms.topic: troubleshooting
-ms.date: 10/30/2023
+ms.date: 09/23/2022
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -42,4 +42,3 @@ To fix this issue, change the password of the built-in **Admin** account. You ca
 
 > [!NOTE]
 > As a best practice, organizations should define policies to govern administrative access of Teams Rooms devices and password configuration as necessary. For more information, see [Teams Rooms account security](/microsoftteams/rooms/security#account-security).
-

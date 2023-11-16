@@ -15,7 +15,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 10/30/2023
+ms.date: 08/16/2022
 ---
 
 # Dial pad is missing in Teams
@@ -83,4 +83,3 @@ These actions force an update of the policy in the backend environment of Teams.
 ## More information
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
-

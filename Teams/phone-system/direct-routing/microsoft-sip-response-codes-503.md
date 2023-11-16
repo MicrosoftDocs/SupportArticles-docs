@@ -1,7 +1,7 @@
 ---
 title: SIP 503 and Microsoft response codes
 description: Lists combinations of Microsoft response code and the SIP 503 error, and provides actions to resolve the errors.
-ms.date: 10/30/2023
+ms.date: 03/27/2023
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -39,4 +39,3 @@ This article provides troubleshooting information for various combinations of th
   - Check the logs on the SBC to investigate why it returns the "503" SIP response.
   - Make sure that the SBC is correctly licensed to handle the number of concurrent sessions.
   - Determine whether the "503" error is related to a specific destination country/region or calling corridor.
-

@@ -2,7 +2,7 @@
 title: When setting up a Meet Now in Teams, the CVI information does not autopopulate
 ms.author: luche
 author: helenclu
-ms.date: 10/30/2023
+ms.date: 04/09/2020
 audience: ITPro
 ms.topic: troubleshooting
 manager: dcscontentpm
@@ -40,4 +40,3 @@ To meet right away by using working CVI coordinates, select **Meet Now** in the 
 ## Unsupported scenarios
 
 - **Meet Now** meetings created from the Teams channels
-

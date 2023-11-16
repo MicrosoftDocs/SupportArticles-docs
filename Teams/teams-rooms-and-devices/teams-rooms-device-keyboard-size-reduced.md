@@ -1,7 +1,7 @@
 ---
 title: On-screen keyboard size is reduced on some Teams Rooms devices
 description: Provides a workaround for an issue that causes the on-screen keyboard to be reduced in size on some Teams Rooms devices. 
-ms.date: 10/30/2023
+ms.date: 05/24/2023
 author: Cloud-Writer
 ms.author: meerak
 ms.reviewer: travissnoozy
@@ -46,4 +46,3 @@ To increase the size of the on-screen keyboard on these devices, switch the Team
    ```
 
 Restart the device, and then verify that the keyboard size in the Teams Rooms app matches the updated setting.
-

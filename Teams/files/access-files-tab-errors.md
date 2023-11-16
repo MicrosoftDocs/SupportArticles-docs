@@ -17,7 +17,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 10/30/2023
+ms.date: 03/31/2022
 ---
 # Errors when selecting the Files tab on a Teams channel
 
@@ -98,4 +98,3 @@ The diagnostic performs a large range of verifications.
 ### Need More Help?
 
 Get help from the [Microsoft Community](https://answers.microsoft.com/) online community, search for more information on [Microsoft Support](https://support.microsoft.com/) or [Office Help and How To](https://office.microsoft.com/support/), or learn more about [Assisted Support](https://support.microsoft.com/contactus/) options.
-

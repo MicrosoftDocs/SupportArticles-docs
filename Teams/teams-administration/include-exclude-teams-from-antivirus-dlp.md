@@ -3,7 +3,7 @@ title: Exclude antivirus and DLP applications from blocking Teams
 ms.author: meerak
 author: cloud-writer
 manager: dcscontentpm
-ms.date: 10/30/2023
+ms.date: 10/05/2023
 audience: Admin
 ms.topic: troubleshooting
 localization_priority: Normal
@@ -63,4 +63,3 @@ To add the Teams processes to either the exclusion list or the Safe list/Allow l
 1. On the **Details** tab, locate and right-click **ms-teams.exe** and select **Open file location**.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
-

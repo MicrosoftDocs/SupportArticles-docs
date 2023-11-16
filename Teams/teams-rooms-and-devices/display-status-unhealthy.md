@@ -3,7 +3,7 @@ title: The Front of Room status of a Teams Rooms device is Unhealthy
 description: Resolve the issue that causes the Front of Room signal of a Microsoft Teams Rooms device to appear as Unhealthy.
 ms.reviewer: lamos
 ms.topic: troubleshooting
-ms.date: 10/30/2023
+ms.date: 08/29/2023
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -72,4 +72,3 @@ In these situations, try the following methods:
   Investigate and test all power-related settings on the Front of Room displays. Each display, manufacturer, and model can be different. Therefore, it might be necessary to field test various power settings. We recommend that you standardize the display brand, model, and settings as much as possible. Many commercial displays allow configuration profiles to be imported and exported through a USB flash drive.
 - Check whether the display supports the "wake on signal" feature.
 - Most consumer TV sets, and even many commercial displays, don't automatically wake up when the Teams Rooms device wakes up and sends a video signal. In these cases, Consumer Electronics Control (CEC) must be supported on the display, and additional hardware might be required to send these CEC signals. Some PCs that are certified for use in Microsoft Teams Rooms include integrated CEC support. For more information, contact your PC's OEM, and also see [Front of Room display settings](/microsoftteams/rooms/rooms-operations#front-of-room-display-settings).
-

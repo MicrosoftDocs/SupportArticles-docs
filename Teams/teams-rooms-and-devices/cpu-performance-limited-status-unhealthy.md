@@ -3,7 +3,7 @@ title: The CPU performance limited status of a Teams Rooms device is Unhealthy
 description: Resolves an issue that causes the CPU performance limited signal of a Microsoft Teams Rooms device to appear as Unhealthy.
 ms.reviewer: rebenite
 ms.topic: troubleshooting
-ms.date: 10/30/2023
+ms.date: 07/13/2023
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -72,4 +72,3 @@ powercfg /SETACVALUEINDEX SCHEME_CURRENT 54533251-82be-4824-96c1-47b60b740d00 bc
    ```
 
 1. [Create a script policy (add the script to script settings), and assign the policy to groups](/mem/intune/apps/intune-management-extension#create-a-script-policy-and-assign-it).
-

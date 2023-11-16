@@ -13,7 +13,7 @@ ms.custom:
 ms.reviewer: sarvdon, SfB_Triage
 appliesto: 
   - Microsoft Teams
-ms.date: 10/30/2023
+ms.date: 03/31/2022
 ---
 
 # "Give Control" doesn't work when you share a screen in Teams
@@ -42,4 +42,3 @@ info -- [screenSharing][control] appSharingToolbar: AppSharingToolbar created wi
 > To collect the logs on a Windows machine, go to `%appdata%\Microsoft\Teams\media-stack\*.*`. On a Mac machine, go to `~Library/Application Support/Microsoft/Teams/media-stack/*.*`.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
-

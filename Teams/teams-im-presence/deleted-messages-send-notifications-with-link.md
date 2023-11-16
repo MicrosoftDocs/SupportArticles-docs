@@ -2,7 +2,7 @@
 title: Deleted messages in Teams with an @ mention send notifications to the channel
 ms.author: luche
 author: helenclu
-ms.date: 10/30/2023
+ms.date: 04/09/2020
 audience: ITPro
 ms.topic: troubleshooting
 manager: dcscontentpm
@@ -30,4 +30,3 @@ When a user is "at-mentioned" (@ mentioned) in a deleted message, the notificati
 This is by design. 
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
-

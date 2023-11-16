@@ -15,7 +15,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 10/30/2023
+ms.date: 03/31/2022
 ---
 
 # Unable to view websites using Teams on the web
@@ -31,4 +31,3 @@ The websites can't be displayed using an iFrame in Microsoft Teams on the web.
 ## Resolution
 
 Visit the website outside of Microsoft Teams on the web or use the Teams desktop client.
-

@@ -15,7 +15,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 10/30/2023
+ms.date: 03/31/2022
 ---
 # Issues that affect call transfers
 
@@ -74,4 +74,3 @@ To resolve this issue, follow these steps:
 1. If SBC receives the SIP Refer message, but PSTN users still don't hear a ring tone, make sure that SBC connects to the newly initiated transfer call and plays a ring tone that's based on the "SIP 180 Ringing" or "SIP 183 Session" response that's sent from the SIP proxy.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
-

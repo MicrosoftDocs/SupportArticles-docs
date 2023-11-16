@@ -2,7 +2,7 @@
 title: Can't join Teams when using IE or Edge
 ms.author: luche
 author: helenclu
-ms.date: 10/30/2023
+ms.date: 04/09/2020
 audience: ITPro
 ms.topic: troubleshooting
 manager: dcscontentpm

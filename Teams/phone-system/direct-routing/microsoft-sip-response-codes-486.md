@@ -1,7 +1,7 @@
 ---
 title: SIP 486 and Microsoft response codes
 description: Lists combinations of Microsoft response code and the SIP 486 error, and provides actions to resolve the error codes.
-ms.date: 10/30/2023
+ms.date: 03/27/2023
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -31,4 +31,3 @@ This article provides troubleshooting information for various combinations of th
   The effect of this error depends on the specific bot and the expectations for the given scenario. If this error is unexpected, take the following action, as appropriate:
   - If the bot is provided by Microsoft, such as the built-in call recording, [contact Microsoft Support](https://support.microsoft.com/contactus).
   - If the bot is your own bot or from a third-party provider, work with the bot provider to verify that the bot is set up correctly.
-

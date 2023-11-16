@@ -1,7 +1,7 @@
 ---
 title: Errors when trying to manage dial plans
 description: Describes errors that occur if you try to manage dial plans by using an unlicensed account.
-ms.date: 10/30/2023
+ms.date: 04/30/2021
 author: Cloud-Writer
 ms.author: luche
 manager: dcscontentpm
@@ -54,4 +54,3 @@ These actions trigger a query to look up the value of the **EffectiveTenantDialP
 ## Resolution
 
 If you have to [manage dial plans](/microsoftteams/create-and-manage-dial-plans), your administrator account must be [assigned a Teams license](/microsoft-365/admin/manage/assign-licenses-to-users).
-

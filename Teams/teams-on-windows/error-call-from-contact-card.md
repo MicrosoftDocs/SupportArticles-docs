@@ -15,7 +15,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 10/30/2023
+ms.date: 02/16/2023
 ---
 # "Couldn't complete the call" error when you call from a contact card
 
@@ -35,4 +35,3 @@ To work around this issue, use one of the following methods to make the call:
 
 - In a one-to-one chat with the target user, select the **Audio call** icon:::image type="icon" source="media/error-call-from-contact-card/call-icon.png":::.
 - Select **Calls** on the vertical toolbar, enter the user's name, select the user from the results list, and then select **Call**.
-
