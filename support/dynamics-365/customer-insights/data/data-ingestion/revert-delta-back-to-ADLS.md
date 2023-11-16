@@ -30,10 +30,10 @@ To solve the issue, take the following steps:
 
 1. Select the Azure Data Lake data source and then select **Revert to ADLS**.
 
+   :::image type="content" source="media/revert-to-adls.png" alt-text="Dialog box to enter connection details for Delta Lake.":::
+
 1. Confirm that you want to revert. The **Data sources** page opens showing the new data source in **Refreshing** status.
 
    > [!IMPORTANT]
    > Don't stop the refreshing process as it could negatively impact reverting the data source.
-
-   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 
