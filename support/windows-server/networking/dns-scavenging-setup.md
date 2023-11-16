@@ -103,7 +103,7 @@ Check the following before you delete the stale records:
 - Has it been longer than the refresh interval since this zone was last replicated in Active Directory?  
     If scavenging is enabled on a server that has replication issues, this can help prevent unnecessary tombstoning of records that may still be valid on other servers.
 
-If all of the above checks are passed, the zone is ready for scavenging. At this point, the scavenging server checks the timestamp on each resource record. If the current date and time is greater than the timestamp plus No-refresh and Refresh intervals, the record is deleted.
+If all the above checks are passed, the zone is ready for scavenging. At this point, the scavenging server checks the timestamp on each resource record. If the current date and time is greater than the timestamp plus No-refresh and Refresh intervals, the record is deleted.
 
 ## Example: Setting scavenging up on a pre-existing zone
 
