@@ -377,7 +377,7 @@ To resolve the boot error, follow the below steps:
     ```output
     # yast2 bootloader
     ```
-3. Remove the "x" from "Enable Secure Boot Support" and Save it.
+3. Remove the "x" from "Enable Secure Boot Support" and save it.
 
 :::image type="content" source="support/azure/virtual-machines/media/troubleshoot-vm-boot-error/suseconsole.jpg" alt-text="Screenshot of bootloader settings.":::
    
