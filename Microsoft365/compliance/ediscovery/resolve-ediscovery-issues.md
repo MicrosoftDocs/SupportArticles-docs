@@ -300,6 +300,16 @@ Reduce the download size by splitting your search into smaller searches. For exa
 
 [Back to top](#resolve-search-errors-in-ediscovery-standard)
 
+
+Note:
+You can run the following diagnostic to check if the Search, Export or Preview role are assigned to the designated admin account. Do the following:
+
+1.	Select the Run Tests: eDiscovery RBAC check button below to populate the associated test in the Microsoft 365 admin center:
+Run Tests: eDiscovery RBAC Check
+2.	In the Run diagnostics section, enter the UPN or email address of the user trying to run the Export, Search or Preview task.
+3.	Select  Run Tests.
+4.	If the user does not have the necessary eDiscovery role, assign the proper eDiscovery permissions to perform the desired task. 
+
 ## Export error: "File wasn't exported because it doesn't exist" or "File not found"
 
 ### Symptoms
