@@ -545,6 +545,8 @@
           href: ../profiles-and-accounts/operation-failed-send-email-outlook.md
         - name: Access is denied when opening public folder link
           href: ../profiles-and-accounts/access-is-denied-when-accessing-outlook-public-folder.md
+        - name: Add a shared mailbox as an additional account
+          href: ../profiles-and-accounts/add-shared-mailbox-as-additional-account.md
         - name: Additional RSS feeds appear
           href: ../profiles-and-accounts/additional-rss-feeds-appear.md
         - name: Can't send email with Metered Connection Warning
