@@ -26,7 +26,7 @@
     - name: General ledger
       items:
         - name: How to change the accounting or reporting currency
-          href: general-ledger/add-change-acctg-rprtg-crrncy
+          href: general-ledger/add-change-acctg-rprtg-crrncy.md
         - name: Troubleshoot issues with the General ledger adjustments page
           href: general-ledger/ledger-adjustments-troubleshoot.md
     - name: Tax
