@@ -436,7 +436,7 @@
       href: linux-agent-cannot-process-extensions.md
     - name: Linux VM extensions stop running
       href: extensions-stop-running.md
-  - name: Cloud Init
+  - name: Cloud-init
     items:
     - name: Azure cloud-init support for Linux VMs
       href: cloud-init-support-linux-vms.md
@@ -451,7 +451,7 @@
     href: support-agent-extensions.md
   - name: Troubleshoot extension issues
     href: /azure/virtual-machines/extensions/troubleshoot?context=/troubleshoot/azure/virtual-machines/context/context
-  - name: General Issues
+  - name: General issues
     items:
     - name: Issues with Python 3-enabled Linux systems
       href: /azure/virtual-machines/extensions/issues-using-vm-extensions-python-3?context=/troubleshoot/azure/virtual-machines/context/context
@@ -462,9 +462,9 @@
   - name: Custom script extenions (CSE)
     items:
     - name: Troubleshoot - Windows
-      href: azure/virtual-machines/extensions/custom-script-windows#troubleshoot-and-support?context=/troubleshoot/azure/virtual-machines/context/context
+      href: /azure/virtual-machines/extensions/custom-script-windows#troubleshoot-and-support?context=/troubleshoot/azure/virtual-machines/context/context
     - name: Troubleshoot - Linux
-      href: azure/virtual-machines/extensions/custom-script-linux#troubleshooting?context=/troubleshoot/azure/virtual-machines/context/context
+      href: /azure/virtual-machines/extensions/custom-script-linux#troubleshooting?context=/troubleshoot/azure/virtual-machines/context/context
     - name: Previous command is re-run
       href: customscript-reruns-previous-command.md
   - name: Azure Disk Encryption (ADE)
