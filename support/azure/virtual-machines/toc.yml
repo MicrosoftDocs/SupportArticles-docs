@@ -342,6 +342,8 @@
       href: understand-vm-reboot.md
     - name: Unexpected reboots of VMs with attached VHDs
       href: unexpected-reboots-attached-vhds.md
+    - name: Root Cause Analysis of unexpected VM reboot
+      href: unexpected-vm-reboot-root-cause-analysis.md
 
 - name: VM deployment failures
   items:
