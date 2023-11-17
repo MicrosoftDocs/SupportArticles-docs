@@ -27,13 +27,17 @@ ms.dyn365.ops.version: 8.1
 
 ---
 
-# Resolve issues with transactions that can't be settled
+# Troubleshoot issues with transactions that can't be settled
+
+## Symptoms
 
 Sometimes, you can't settle transactions because another activity is currently processing the document. If you try to settle the transactions, an error occurs, because those transactions are being used. To fix 
 this issue, you can use the **Marked transaction details** page to find transactions that are marked for settlement and identify any other processes that are accessing them.
 
 Transactions are marked for settlement either when vendor invoices are being paid or when customers pay their open invoices. Occasionally, these invoices might already be marked for settlement. Therefore, users 
 can't select them for payment. The invoices might be marked by another customer payment journal, sales order, vendor payment journal, or purchase order in the current legal entity or another legal entity.
+
+## Resolution
 
 If a transaction is blocked for settlement when you're entering a customer payment, open the **Customer marked transaction details** page (**Accounts receivable \> Periodic tasks \> Customer marked transaction 
 details**). To quickly identify where a transaction is blocked, you can set any of the following selection parameters: **Customer account**, **Voucher**, **Date**, or **Invoice**. If you don't set any selection 
