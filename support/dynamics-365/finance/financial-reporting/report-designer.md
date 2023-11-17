@@ -31,8 +31,11 @@ ms.dyn365.ops.version: AX 7.0.0
 
 There are a few common issues that can cause problems when you open Report Designer. Those issues and the steps to resolve them are as follows.
 
-Issue 1: Report Designer doesn't start when you select **New** or **Edit**.
+## Symptom
 
+ Report Designer doesn't start when you select **New** or **Edit**.
+
+## Resolution
 * In Internet Explorer, select **Settings**, then select **Internet Options**. Select the **Security** tab. Select Trusted Sites and then select **Sites**. In the **Add this website to zone** field, enter "\*\.dynamics.com" (without quotation marks), and then select **Add**. 
 * In Internet Explorer, select **Settings**, then select **Internet Options**. Select the **Security** tab. Select Trusted Sites. In the area labeled Security level for this zone, change the option to **Medium-Low**.
 * Disable the pop-up blocker in your browser.
@@ -46,8 +49,10 @@ Issue 1: Report Designer doesn't start when you select **New** or **Edit**.
     4. Set the drop-down menu option to **Enabled**.
     5. Select **Restart Browser**.
 
-Issue 2: The user hasn't been assigned the required permissions to use Financial reporting. 
+## Symptom 
+The user hasn't been assigned the required permissions to use Financial reporting. 
 
+## Resolution
 * To verify if the user does not have permission, select **Yes** on the error, "Unable to connect to the Financial reporting server. Select Yes if you want to continue and specify a different server address." Then select **Test Connection**. If you don't have permission, you will see a message that says, "Connection attempt failed. User does not have appropriate permissions to connect to the server. Contact your system administrator."
 * Required permissions are listed above in [Granting security access to Financial reporting](/dynamics365/finance/general-ledger/financial-reporting-getting-started#granting-security-access-to-financial-reporting). Security in Financial reporting is based on these privileges. You won't have access unless these privileges (or another security role that includes these privileges) are assigned to you. 
 * The **Company Users Provider to Company** integration task (which is also responsible for and known as user integration) runs on a 5-minute interval. It may take up to 10 minutes for any permission changes to take effect in Financial reporting. 
@@ -56,7 +61,9 @@ Issue 2: The user hasn't been assigned the required permissions to use Financial
 
 * It may be possible that another error has prevented **Dynamics user to Financial reporting user integration** from finishing. Or it's possible that a datamart reset has been initiated and not yet completed, or that another system error has occurred. Try running the process again later. If the problem persists, contact your system admin.
 
-Issue 3: You can proceed past the **ClickOnce Report Designer** sign-in page, but are unable to complete sign in within Report Designer. 
+## Symptom
+ You can proceed past the **ClickOnce Report Designer** sign-in page, but are unable to complete sign in within Report Designer. 
 
+## Resolution
 * The time set on your local computer when you enter your login credentials must be within five minutes of the time on the Financial reporting server. If there is a difference of more than five minutes, the system will not allow sign in. 
 * If the time on your computer differs from the time on Financial reporting server, we recommend enabling the Windows option to set your computer's time automatically. 
