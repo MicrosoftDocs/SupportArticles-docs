@@ -5,7 +5,8 @@ services: virtual-machines
 ms.service: virtual-machines
 ms.subservice: vm-troubleshooting-tools
 ms.workload: infrastructure-services
-ms.date: 11/16/2023
+ms.topic: how-to
+ms.date: 11/17/2023
 ms.reviewer: tagangwa, macla, v-weizhu
 ---
 
