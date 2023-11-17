@@ -3,7 +3,7 @@
 
 title: Troubleshoot Finance insights setup issues
 description: This article lists issues that can occur when you use Finance insights capabilities. It also explains how to fix those issues.
-author: panolte
+author: twheeloc 
 ms.date: 11/06/2023
 ms.topic: article
 ms.prod: 
@@ -21,7 +21,7 @@ ms.collection: get-started
 ms.assetid: 3d43ba40-780c-459a-a66f-9a01d556e674
 ms.search.region: Global
 # ms.search.industry: 
-ms.author: panolte
+ms.author: twheeloc
 ms.search.validFrom: 2021-08-20
 ms.dyn365.ops.version: AX 10.0.20
 
@@ -67,7 +67,7 @@ Dynamics 365 Finance users must have a Microsoft Power Apps user account for the
 
 The cash flow forecasting function in Cash and bank management and the Cash flow forecasts feature in Finance insights must be set up and enabled to correctly show data in the **Cash flow forecast** workspace.
 
-First, set up and enable the cash flow forecasting and liquidity accounts. For more information, see [Cash flow forecasting](/dynamics365/finance/cash-bank-management/cash-flow-forecasting). If this setup has been completed, but you don't see the results that you expect, see [Troubleshoot cash flow forecasting setup](/dynamics365/finance/general-ledger/cash-bank-management/cash-flow-forecasting-tsg) for more information.
+First, set up and enable the cash flow forecasting and liquidity accounts. For more information, see [Cash flow forecasting](/dynamics365/finance/cash-bank-management/cash-flow-forecasting). If this setup has been completed, but you don't see the results that you expect, see [Troubleshoot cash flow forecasting setup](/dynamics365/finance/cash-bank-management/cash-flow-forecasting-tsg) for more information.
 
 Next, confirm that the Cash flow forecasts feature in Finance insights (**Cash and bank management \> Setup \> Finance Insights \> Cash flow forecasts**) has been enabled, and that training of the AI model has been completed. If the training hasn't been completed, select **Forecast now** to start the model training process.
 

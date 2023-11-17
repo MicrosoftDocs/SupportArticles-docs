@@ -65,5 +65,4 @@ The “Rebuild balances” step in the year-end close failed, do I need to re-ru
 
 The Rebuild balances step updates the General ledger balances that are used when the Trial balance inquiry is generated.  It is the final step in the year-end close process.  If this step is the only step that failed, the General ledger transactions have posted successfully.  You do not need to run the year-end close again. You can run the process to rebuild the balances manually using the **Financial dimension sets** page (**General ledger > Chart of accounts > Dimensions > Financial dimension sets**).
 
-If this step takes a long time to process, we recommend reviewing the best practices for financial dimension sets as described in [Best practices for updating Financial dimension sets](https://community.dynamics.com/365/financeandoperations/b/dynamics-365-finance-blog/posts/best-practices-for-updating-financial-dimension-set-dimension-sets). 
-
+If this step takes a long time to process, we recommend reviewing the best practices for financial dimension sets as described in [Best practices for updating Financial dimension sets](https://community.dynamics.com/blogs/post/?postid=0864032e-99ee-461d-885b-f3d9de6b6bae). 

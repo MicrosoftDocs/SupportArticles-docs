@@ -3,7 +3,7 @@
 
 title: Settlement troubleshooting
 description: This article describes how to resolve issues with transactions that can't be settled.
-author: angelad116
+author: twheeloc 
 ms.date: 10/30/2023
 ms.topic: overview
 ms.prod: 
@@ -21,7 +21,7 @@ ms.collection: get-started
 ms.assetid: 0968fa71-5984-415b-8689-759a0136d5d1
 ms.search.region: Global
 # ms.search.industry: 
-ms.author: angelading
+ms.author: twheeloc
 ms.search.validFrom: 2018-10-31
 ms.dyn365.ops.version: 8.1
 
