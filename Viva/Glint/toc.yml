@@ -1,9 +1,13 @@
 - name: Viva Glint troubleshooting
   href: viva-glint-welcome.yml
   items:
-    - name: Data file uploads
+    - name: Data File Uploads
       items:
         - name: Resolve manager hierarchy error
           href: ./data-file-upload/fix-manager-hierarchy-circular-reporting.md
         - name: Understand file upload errors and warnings
           href: ./data-file-upload/file-upload-errors-warnings.md
+    - name: Historical Imports
+      items:
+        - name: Error "User is not in client"
+          href: ./historical-import/import-error-user-is-not-in-client.md
