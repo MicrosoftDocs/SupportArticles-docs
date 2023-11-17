@@ -251,6 +251,8 @@
           href: ../administration/s-mime-email-cannot-be-viewed.md
         - name: SCOM reports unhealthy health sets
           href: ../administration/scom-reports-unhealthy-health-sets.md
+        - name: Search-MailboxAuditLog returns AQS parser error
+          href: ../administration/search-mailboxauditlog-returns-aqs-parser-error.md
         - name: SendAs permission not shown in Send As Permission
           href: ../administration/sendas-permissions-not-visible-in-wizard.md
         - name: Server component state remains Inactive after changed to Active
