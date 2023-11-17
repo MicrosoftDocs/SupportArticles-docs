@@ -29,8 +29,9 @@ ms.dyn365.ops.version: AX 7.0.0
 
 # Troubleshoot report designer issues with Event viewer
 Troubleshoot report designer issues with Event viewer
-
 You can use the Event viewer to analyze some of the issues that arise when using Financial reporting. 
+
+## Symptoms
 
 ### What happens when you have connections issues with Financial reporting? 
 
