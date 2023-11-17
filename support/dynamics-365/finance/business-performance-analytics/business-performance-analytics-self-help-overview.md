@@ -13,7 +13,6 @@ ms.custom:
 ms.search.form: business-performance-analytics
 audience: Application User
 ---
-
 # Business performance analytics self-help
 
 > [!NOTE]
