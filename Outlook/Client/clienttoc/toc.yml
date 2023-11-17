@@ -117,8 +117,6 @@
           href: ../calendaring/outlook-not-showing-more-than-12-months-of-free-busy-data.md
         - name: No available rooms for meetings outside working hours
           href: ../calendaring/no-available-rooms-for-meeting-outside-working-hours.md
-        - name: No event reminders for automapped or additional mailboxes
-          href: ../calendaring/no-event-reminders-for-automapped-additional-mailboxes.md
         - name: Organizer's meeting outdated after delegate sends update
           href: ../calendaring/organizers-meeting-outdated-after-delegate-sends-update.md
         - name: Outlook crashes when opening a meeting that contains Lync meeting details
