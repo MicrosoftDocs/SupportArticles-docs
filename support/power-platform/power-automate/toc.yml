@@ -97,8 +97,6 @@
           href: desktop-flows/cannot-automate-webpage-with-iframes.md
         - name: Can't create a connection from a shared canvas app
           href: desktop-flows/cannot-create-desktop-flow-connection-from-a-shared-canvas-app.md
-        - name: Check if Gateway or machine is online when desktop flows fail with a gateway
-          href: desktop-flows/troubleshoot-unavailable-gateway-when-desktop-flows-fail.md
         - name: Can't interact with web elements on runtime
           href: desktop-flows/web-automation-action-fails-runtime.md
         - name: Can't record in a VDI environment
@@ -107,8 +105,6 @@
           href: desktop-flows/enable-webview-pad-login.md
         - name: Can't access the parent flow
           href: desktop-flows/cannot-access-parent-flow.md
-        - name: Can't access the run queue of a gateway
-          href: desktop-flows/cannot-access-gateway-run-queue.md
         - name: Can't automate "Save as", "Open" or "Upload" dialog boxes in web browser
           href: desktop-flows/automate-save-as-open-upload-dialog-box-web-browser.md
         - name: Can't interact with desktop application without an error
@@ -139,16 +135,12 @@
           href: desktop-flows/ui-flows-run-failed-with-aadlogonfailure-error.md
         - name: Desktop flow fails with the SessionCreationTimeout error code
           href: desktop-flows/sessioncreationtimeout-error-code.md
-        - name: Double-click, drag and drop aren't working
-          href: desktop-flows/double-click-drag-drop-are-not-working.md
         - name: Errors when running desktop flows including Excel actions
           href: desktop-flows/troubleshoot-excel-errors.md
         - name: Errors when running attended or unattended desktop flows
           href: desktop-flows/troubleshoot-errors-running-attended-or-unattended-desktop-flows.md
         - name: Failed license check on a desktop flow run
           href: desktop-flows/desktop-flow-run-time-license-check.md
-        - name: Find which machine is failing within a cluster
-          href: desktop-flows/find-which-machine-is-failing-within-a-cluster.md
         - name: Failed to get UI element
           href: desktop-flows/failed-get-ui-element.md
         - name: '"Failed to deserialize Flow" error'
@@ -165,14 +157,8 @@
           href: desktop-flows/invalid-private-key-file-error.md
         - name: Internet connection is interrupted after installing Power Automate
           href: desktop-flows/no-ethernet-after-pad-install.md
-        - name: Keyboard and mouse click combinations not working
-          href: desktop-flows/key-and-mouse-click-combo-not-working.md
-        - name: Known limitations of Selenium IDE
-          href: desktop-flows/known-limitations-selenium-ide.md
         - name: Login windows keep appearing
           href: desktop-flows/login-windows-keep-appearing.md
-        - name: Multi-screen recording isn't working
-          href: desktop-flows/multi-screen-recording-is-not-working.md
         - name: Machine registration failure
           href: desktop-flows/desktop-flow-machine-registration-troubleshooting.md
         - name: Module or action wasn't found error
@@ -185,38 +171,20 @@
           href: desktop-flows/windows-services-not-start-after-restart.md
         - name: Proxy server related errors in Power Automate for desktop
           href: desktop-flows/proxy-error-console.md
-        - name: Restart UI flows to recover from a bad state
-          href: desktop-flows/reset-ui-flow-service-when-bad-state.md
-        - name: Recorder not recording applications
-          href: desktop-flows/recorder-not-recording-applications.md
         - name: Some actions appear to be missing or aren't visible
           href: desktop-flows/actions-not-available.md
         - name: Set drop-down list value in window/on web page action fails
           href: desktop-flows/set-drop-down-list-value-fails.md
         - name: Tips on working with SQL queries
           href: desktop-flows/troubleshooting-tips-sql-queries.md
-        - name: Troubleshoot UI flow Playback
-          href: desktop-flows/troubleshooting-ui-flow-playback.md
         - name: Troubleshoot direct connectivity issues
           href: desktop-flows/troubleshoot-direct-connectivity-issues.md
+        - name: Troubleshoot desktop flow run queue-based errors
+          href: desktop-flows/troubleshoot-desktop-flow-run-queue-errors.md
         - name: Troubleshoot issues with Power Automate browser extensions
           href: desktop-flows/web-extensions-policies.md
         - name: Temporary profile error during machine registration
           href: desktop-flows/temporary-profile-error-machine-registration.md
-        - name: UI flow playback error KeyboardIdMismatch
-          href: desktop-flows/ui-flow-playback-error-keyboardidmismatch.md
-        - name: UI flow playback error UnableToLaunchApplication
-          href: desktop-flows/troubleshoot-ui-flow-playback-unabletolaunchapplication.md
-        - name: UI flows can't launch recorder
-          href: desktop-flows/ui-flows-cannot-launch-recorder.md
-        - name: UI flow inputs not working
-          href: desktop-flows/ui-flow-inputs-not-working.md
-        - name: UI flow outputs not working
-          href: desktop-flows/ui-flow-outputs-not-working.md
-        - name: UI flows fails with error UIAElementMismatch
-          href: desktop-flows/ui-flows-fails-uiaelementmismatch.md
-        - name: UI flows UIAElementNotFound
-          href: desktop-flows/issue-with-ui-flows-error-uiaelementnotfound.md
         - name: We can't sign you in - browser blocks cookies
           href: desktop-flows/browser-blocks-cookies.md
     - name: Solutions

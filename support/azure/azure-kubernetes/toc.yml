@@ -64,6 +64,8 @@
       href: error-code-publicipcountlimitreached.md
     - name: QuotaExceeded error
       href: error-code-quotaexceeded.md   
+    - name: ServiceCidrOverlapExistingSubnetsCidr error
+      href: error-code-servicecidroverlapexistingsubnetscidr.md
     - name: SubnetIsFull upgrade error
       href: error-code-subnetisfull-upgrade.md   
     - name: Unable to get log analytics workspace info error
@@ -264,6 +266,8 @@
 
 - name: Extensions and add-ons
   items:
+  - name: AKS Cost Analysis add-on issues
+    href: aks-cost-analysis-add-on-issues.md
   - name: Troubleshoot Azure Key Vault Provider for Secrets Store CSI Driver
     href: troubleshoot-key-vault-csi-secrets-store-csi-driver.md
   - name: Troubleshoot cluster extension deployment errors
