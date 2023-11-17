@@ -360,27 +360,29 @@ If the /boot partition is missing, recreate it by following these steps:
    
 ## <a id="grub_efi_get_secure_boot"></a>Error: symbol ‘grub_efi_get_secure_boot’ not found  
 
-The below error will occur with a SUSE SLES-based VMs during the boot process:  
+The following screenshot shows the error message:  
 
-**Loading Linux 4.12.14-122.153-default ...  
-error: symbol grub_efi_get_secureboot' not found. Loading initial ramdisk ... error: symbol   grub_efi_get_secureboot' not found.  
-Press any key to continue...**  
+:::image type="content" source="support/azure/virtual-machines/media/troubleshoot-vm-boot-error/error3.jpg" alt-text="Screenshot of grub error ‘grub_efi_get_secure_boot’ not found ":::
 
 ## Cause:  
-If the physical host node where the VM was running encountered a hardware memory error or is affected by a platform level health event, it can damage the GRUB bootloader and may impact the guest operating system for your VM. 
+The kernel version 4.12.14 i.e. SLES 12 SP5, doesn't support Secure Boot option. Hence, if the secure boot is enabled during the deployment of the virtual machine i.e. the Security type is selected as "Trusted Launch Virtual Machines", the virtual machine will throw the secure boot error through the console when we are trying to boot with this SUSE kernel version on GEN 2 image.  
 
 ## Solution: 
 To resolve the boot error, follow the below steps:  
 
 1. Make sure that a rescue/repair VM has been created. If not, follow the step 1 in [Troubleshoot GRUB rescue issue offline](#offline-troubleshooting) to create it. Mount all the required file systems, including / and /boot, and then do [chroot](chroot-environment-linux.md).
    
-2. Execute the below commands in chroot environment:
+2. Execute the below command in chroot environment:  
+
+    ```output
+    # yast2 bootloader
+    ```
+3. Remove the "x" from "Enable Secure Boot Support" and Save it.
+
+:::image type="content" source="support/azure/virtual-machines/media/troubleshoot-vm-boot-error/suseconsole.jpg" alt-text="Screenshot of bootloader settings.":::
    
-```bash
-# grub2-mkconfig -o /boot/grub2/grub.cfg
-# shim-install --config-file=/boot/grub2/grub.cfg
-```
-3.Proceed with step 3 in [Troubleshoot GRUB rescue issue offline](#offline-troubleshooting) to swap the OS disk.  
+4. Proceed with step 3 in [Troubleshoot GRUB rescue issue offline](#offline-troubleshooting) to swap the OS disk.
+ 
 
 ## <a id="other-grub-rescue-errors"></a>Other GRUB rescue errors
 
