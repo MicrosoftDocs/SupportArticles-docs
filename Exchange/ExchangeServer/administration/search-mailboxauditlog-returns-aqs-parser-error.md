@@ -1,6 +1,6 @@
 ---
 title: Search-MailboxAuditLog returns an error message that says the AQS parser has been removed
-description: Resolves an issue in which the Search-MailboxAuditLog cmdlet in Exchange Server 2019 returns an Advanced Query Syntax parser error message.
+description: Provides a resolution for an issue in which the Search-MailboxAuditLog cmdlet in Exchange Server 2019 returns an Advanced Query Syntax parser error message.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
