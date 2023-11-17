@@ -19,8 +19,14 @@
           href: business-performance-analytics/missing-budget-data-err00006.md
         - name: Missing budget transaction header ERR00007
           href: business-performance-analytics/missing-budget-transaction-header-err00007.md
+    - name: Finance Insights
+      items:
+        - name: Troubleshoot Finance insights setup issues
+          href: finance-insights/finance-insights-troubleshooting-faq.md
     - name: General ledger
       items:
+        - name: How to change the accounting or reporting currency
+          href: general-ledger/add-change-acctg-rprtg-crrncy
         - name: Troubleshoot issues with the General ledger adjustments page
           href: general-ledger/ledger-adjustments-troubleshoot.md
     - name: Tax
