@@ -1,7 +1,7 @@
 ---
 title: Event IDs 4016 and 4004 when DNS updates time out
 description: Helps resolve an issue in which Event IDs 4016 and 4004 are logged when DNS can't enumerate AD-integrated zones or create/write records in zones.
-ms.date: 11/08/2023
+ms.date: 11/17/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -33,7 +33,7 @@ In AD-integrated DNS zones that are hosted on domain controllers (Windows Server
 	User:          S-1-5-18
 	Computer:      Contoso.com
 	Description:
-	The DNS server timed out attempting an Active Directory service operation on DC=15.5,DC=170.10.in-addr.arpa,cn=MicrosoftDNS,DC=ForestDnsZones,DC=xxx,DC=com. Check Active Directory to see that it is functioning properly. The event data contains the error.
+	The DNS server timed out attempting an Active Directory service operation on DC=xx.x,DC=xxx.xx.in-addr.arpa,cn=MicrosoftDNS,DC=ForestDnsZones,DC=xxx,DC=com. Check Active Directory to see that it is functioning properly. The event data contains the error.
 	```
 - Event ID 4004
 
@@ -50,14 +50,9 @@ In AD-integrated DNS zones that are hosted on domain controllers (Windows Server
 	The DNS server was unable to complete directory service enumeration of zone xx.xxx.xx.in-addr.arpa.  This DNS server is configured to use information obtained from Active Directory for this zone and is unable to load the zone without it. Check that the Active Directory is functioning properly and repeat enumeration of the zone. The extended error debug information (which may be empty) is "". The event data contains the error.
 	```
 	
-If Event IDs 4016 and 4004 are logged, the DNS records are updated on other domain controllers and visible in ADSI Edit (*adsiedit.msc*). However, the DNS Server service can't read them until the DNS Server service is restarted. During this period, records can be created at the same time by using ADSI Edit on the problematic domain controllers. These records are then replicated to all domain controllers, which means the AD is working properly. The memory usage of the *dns.exe* process is low. Meanwhile, the CPU and memory usage on domain controllers is also low, but they remain unresponsive.
-By checking the DNS audit logs and Netsh trace with the NetConnection scenario, DNS updates stop on the server even though DNS queries are responded to quickly. In addition, error 0x55 is logged.
+If Event IDs 4016 and 4004 are logged, the DNS records are updated on other domain controllers and visible in ADSI Edit (*adsiedit.msc*). However, the records can't be written and the DNS updates stop until the DNS Server service is restarted. During this period, records can be created at the same time by using ADSI Edit on the problematic domain controllers. These records are then replicated to all domain controllers, which means the AD is working properly. The memory usage of the *dns.exe* process is low. Meanwhile, the CPU and memory usage on domain controllers is also low, but they remain unresponsive.
 
-## LDAP server requests time out and corrupt
-
-After the Kerberos expiration (10 hours), the lightweight directory access protocol (LDAP) server resets connections for DNS updates, which causes the LDAP server to perform an automatic reconnection to get a new socket handle. The new socket handle might be the same as a Transmission Control Protocol (TCP) socket handle that a DNS query thread already has. If the DNS query thread writes first, the updated bytes will be appended to the existing message buffer and sent through the same socket. The LDAP server thread within the Local Security Authority Subsystem Service (LSASS) successfully receives all the bytes, but the length of the update payload is expected to be the first 4 bytes.
-
-Because of the presence of query data instead of the expected update bytes, the subsequent bytes are mistakenly interpreted as the length, often resulting in a large number. When the LDAP server starts to read the bytes, the buffer contains fewer bytes than indicated by the length of bytes. Therefore, the LDAP server waits for additional data to arrive. As a result, the LDAP server request becomes corrupt and eventually times out because of the LDAP time-out (six minutes), because the additional updates don't reach the expected length on the receive side.
+By checking the DNS audit logs, event logs and packet captures, DNS updates stop on the server even though DNS queries are responded to quickly. In addition, error 0x55 is logged.
 
 ## Restart DNS Server service and delete Kerberos ticket cache
 
