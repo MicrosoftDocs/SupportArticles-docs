@@ -32,17 +32,15 @@ For example, you receive the error message about the [Advanced Query Syntax](/wi
 Search-MailboxAuditLog <mailbox ID> -ShowDetails
 ```
 
-If you run the following PowerShell cmdlet to check the default locale of the system account, you see that it's not `en-US`:
+## Cause
+
+The default locale of the system account on the server isn't English (United States). As a best practice, the default locale of the system account on the server should be set to English (United States) to avoid localization issues.
+
+To check the default locale of the system account, run the following PowerShell cmdlet:
 
 ```PowerShell
 Get-ItemProperty -Path "Registry::HKEY_USERS\S-1-5-18\Control Panel\International" | FL LocaleName
 ```
-
-**Note**: As a best practice, the default locale of the system account on the server should be set to English (United States) to avoid localization issues.
-
-## Cause
-
-The default locale of the system account on the server isn't English (United States).
 
 ## Resolution
 
