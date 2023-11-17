@@ -1,40 +1,37 @@
 ---
-
-title: Business performance analytics self-help error - Missing fiscal calendar for budget
-description: This article provides information about the Missing fiscal calendar for budget error (error code ERR00002) in business performance analytics.
+title: Missing fiscal calendar for budget error
+description: Provides information about the Missing fiscal calendar for budget error (error code ERR00002) in business performance analytics in Microsoft Dynamics 365 Finance.
 author: jinniew
 ms.author: jiwo
 ms.reviewer: twheeloc 
-ms.date: 09/09/2023
-ms.topic: welcome
+ms.date: 11/17/2023
 ms.prod: 
 ms.technology:
 ms.custom:
 ms.search.form: business-performance-analytics
 audience: Application User
 ---
-
-# Business performance analytics self-help error - Missing fiscal calendar for budget
+# Missing fiscal calendar for budget: Error code: ERR00002 [Type: Error]
 
 > [!NOTE]
-> The functionality that's described in this article is available as part of a preview release. The functionality and the content of this article are subject to change. For more information about how to participate in the public preview for business performance analytics, contact <bpaquestions@service.microsoft.com>.
+> The functionality that's described in this article is available as part of a preview release. The functionality and the content of this article are subject to change. For more information about how to participate in the public preview for [business performance analytics](/dynamics365/finance/business-performance-analytics/business-performance-analytics-home-page), contact <bpaquestions@service.microsoft.com>.
 
-## Missing fiscal calendar for budget: Error code: ERR00002 [Type: Error]
+## Symptoms
 
-Error code *ERR00002* is logged in the `Transform Log` table in Microsoft Dataverse when the transaction dates on budget transaction lines in Dynamics 365 Finance aren't aligned with the corresponding fiscal calendar in the ledger. This misalignment causes the transaction in the Budget fact to be linked to an accounting date key of *-1*.
+Error code *ERR00002* is logged in the **Transform Log** table in Microsoft Dataverse when the transaction dates on budget transaction lines in Dynamics 365 Finance aren't aligned with the corresponding fiscal calendar in the ledger. This misalignment causes the transaction in the Budget fact to be linked to an accounting date key of **-1**.
 
-### Resolution
+## Resolution
 
-To address this error, include calendar years/periods from the `minBudgetTransactionDate` value through the `maxBudgetTransactionDate` value for the relevant Fiscal calendars. You can find the fiscal calendar, the `minBudgetTransactionDate` value, and the `maxBudgetTransactionDate` value in the `LogDetails` column of the `Transform Log` table.
+To solve this error, include calendar years or periods from the `minBudgetTransactionDate` value through the `maxBudgetTransactionDate` value for the relevant Fiscal calendars. You can find the fiscal calendar, the `minBudgetTransactionDate` value, and the `maxBudgetTransactionDate` value in the `LogDetails` column of the **Transform Log** table.
 
 Here's an example of a record:
 
-> 1 records in BudgetTransactionLine have TransactionDate outside of the Fiscal Calendar - \[Row(b9d140ec-7227-4942-b20f-b0e0a3012d41_mserp_calendarid='Fiscal', fiscalCalendarStartDate='2014-01-01 00:00:00', fiscalCalendarEndDate='2025-12-31 00:00:00', cae61f4c-c088-4bc4-b600-c5bd07f1af3d_mserp_name='USMF', minBudgetTransactionDate='2026-01-01 00:00:00', maxBudgetTransactionDate='2026-02-01 00:00:00')\]
+> 1 records in BudgetTransactionLine have TransactionDate outside of the Fiscal Calendar - [Row(b9d140ec-7227-4942-b20f-b0e0a3012d41_mserp_calendarid='Fiscal', fiscalCalendarStartDate='2014-01-01 00:00:00', fiscalCalendarEndDate='2025-12-31 00:00:00', cae61f4c-c088-4bc4-b600-c5bd07f1af3d_mserp_name='USMF', minBudgetTransactionDate='2026-01-01 00:00:00', maxBudgetTransactionDate='2026-02-01 00:00:00')]
 
 > [!IMPORTANT]
-> Before you begin, confirm that you have the permissions that are required to make changes to the fiscal calendar.
+> Before you fix this issue, confirm that you have the permissions to make changes to the fiscal calendar.
 
-1. In Dynamics 365 Finance, go to **General ledger** \> **Calendars** \> **Fiscal calendar**.
+1. In Dynamics 365 Finance, go to **General ledger** > **Calendars** > **Fiscal calendar**.
 2. In the dropdown list, select the fiscal calendar that requires the addition of a new year. This calendar should be the calendar that corresponds to the reported issue.
 3. In the selected fiscal calendar, select **New year**.
 4. Enter the relevant information for the new fiscal year, such as the start and end dates. For this example, confirm that the new fiscal year includes the months of January and February (as specified in `minBudgetTransactionDate` and `maxBudgetTransactionDate`).

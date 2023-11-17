@@ -1,31 +1,30 @@
 ---
-
-title: Business performance analytics self-help error - Missing budget data
-description: This article provides information about the Missing budget data error (error code ERR00006) in business performance analytics.
+title: Missing budget data error
+description: Provides information about the Missing budget data error (error code ERR00006) in business performance analytics in Microsoft Dynamics 365 Finance.
 author: jinniew
 ms.author: jiwo
 ms.reviewer: twheeloc 
-ms.date: 09/09/2023
-ms.topic: welcome
+ms.date: 11/17/2023
 ms.prod: 
 ms.technology:
 ms.custom:
 ms.search.form: business-performance-analytics
 audience: Application User
 ---
-
-# Business performance analytics self-help error - Missing budget data
+# Missing budget data: Error code: ERR00006 [Type: Warning]
 
 > [!NOTE]
-> The functionality that's described in this article is available as part of a preview release. The functionality and the content of this article are subject to change. For more information about how to participate in the public preview for business performance analytics, contact <bpaquestions@service.microsoft.com>.
+> The functionality that's described in this article is available as part of a preview release. The functionality and the content of this article are subject to change. For more information about how to participate in the public preview for [business performance analytics](/dynamics365/finance/business-performance-analytics/business-performance-analytics-home-page), contact <bpaquestions@service.microsoft.com>.
 
-## Missing budget data: Error code: ERR00006 [Type: Warning]
+## Symptoms
 
-Error code *ERR00006* is logged in the `Transform Log` table in Microsoft Dataverse when no budget is created in Dynamics 365 Finance, and no budget data is available for reports.
+Error code *ERR00006* is logged in the **Transform Log** table in Microsoft Dataverse when no budget is created in Dynamics 365 Finance, and no budget data is available for reports.
 
 Here's an example of a record:
 
-> BudgetFact is empty due to one or more missing inputs \['mserp_budgettransactionlinebientity', 'mserp_budgettransactionheaderbientity'\]
+> BudgetFact is empty due to one or more missing inputs ['mserp_budgettransactionlinebientity', 'mserp_budgettransactionheaderbientity']
+
+## Resolution
 
 This warning is for information only. No action is required.
 

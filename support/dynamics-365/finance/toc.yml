@@ -1,6 +1,24 @@
 - name: Dynamics 365 Finance
   href: welcome-finance.yml
   items:
+    - name: Business performance analytics
+      items:
+        - name: Business performance analytics self-help
+          href: business-performance-analytics/business-performance-analytics-self-help-overview.md
+        - name: Missing fiscal calendar for GL ERR00001
+          href: business-performance-analytics/missing-fiscal-calendar-for-general-ledger-err00001.md
+        - name: Missing fiscal calendar for budget ERR00002
+          href: business-performance-analytics/missing-fiscal-calendar-for-budget-err00002.md
+        - name: Missing main account in budget ERR00003 
+          href: business-performance-analytics/missing-main-account-in-budget-err00003.md
+        - name: Missing journal entries ERR00004 
+          href: business-performance-analytics/missing-journal-entries-err00004.md
+        - name: Mismatch between debits and credits ERR00005 
+          href: business-performance-analytics/mismatch-between-debits-and-credits-err00005.md
+        - name: Missing budget data ERR00006 
+          href: business-performance-analytics/missing-budget-data-err00006.md
+        - name: Missing budget transaction header ERR00007
+          href: business-performance-analytics/missing-budget-transaction-header-err00007.md
     - name: General ledger
       items:
         - name: Troubleshoot issues with the General ledger adjustments page
