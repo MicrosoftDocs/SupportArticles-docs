@@ -13,7 +13,7 @@ ms.custom:
 localization_priority: Normal
 ---
 
-# Error "missing required field" during historical imports
+# "Missing required field" error during historical imports
 
 ## Symptoms
 
@@ -34,5 +34,5 @@ This issue occurs because the .csv file that's imported into Viva Glint isn't en
 To fix the issue, follow these steps:
 
 1. Open the .csv file in a text editor, such as Notepad++ or Sublime.
-1. Resave the file in UTF-8 encoding. Don't save in UTF-8 with BOM encoding.
+1. Resave the file in UTF-8 encoding. (Don't save the file in UTF-8 with BOM encoding.)
 1. Import the file again.
