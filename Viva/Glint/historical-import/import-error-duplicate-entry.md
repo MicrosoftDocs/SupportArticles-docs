@@ -29,4 +29,4 @@ This issue occurs because there is at least one duplicate user record in the imp
 
 ## Resolution
 
-To fix the issue, remove duplicate user records from the Raw Score File and import the data again.
+To fix the issue, remove duplicate user records from the Raw Score File, and then import the data again.
