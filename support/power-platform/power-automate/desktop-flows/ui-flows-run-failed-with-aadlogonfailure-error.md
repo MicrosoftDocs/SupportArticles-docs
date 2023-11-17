@@ -4,7 +4,7 @@ description: Provides a resolution for an issue where desktop flows run failed w
 ms.reviewer: fredg, johndund
 author: QuentinSele
 ms.author: quseleba
-ms.date: 11/16/2023
+ms.date: 11/17/2023
 ms.subservice: power-automate-desktop-flows
 ---
 # Desktop flows run failed with the AadLogonFailure error code
@@ -55,4 +55,4 @@ To understand whether NLA is required by Group Policy on your computer, you can 
 
 3. On the right panel, find and double-click **Require user authentication for remote connections by using Network Level Authentication**.
 
-4. Work with your system administrator to disable the setting.
+4. If the setting is enabled, work with your system administrator to disable it.
