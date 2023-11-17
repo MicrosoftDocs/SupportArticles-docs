@@ -1,7 +1,7 @@
 {
   "redirections": [
     {
-      "source_path": "/support/dynamics-365/customer-service/omnichannel-for-customer-service/provision-fails-expired-license.md",
+      "source_path": "support/dynamics-365/customer-service/omnichannel-for-customer-service/provision-fails-expired-license.md",
       "redirect_url": "/troubleshoot/dynamics-365/customer-service/welcome-customer-service",
       "redirect_document_id": false
     },
