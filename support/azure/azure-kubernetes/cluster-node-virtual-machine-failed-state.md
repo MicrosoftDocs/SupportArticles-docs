@@ -16,6 +16,9 @@ This article discusses how to troubleshoot a Microsoft Azure Kubernetes Service 
 If you created a cluster recently and is in failed state, you need to use the [Activity Log]([/troubleshoot/azure/azure-kubernetes/troubleshoot-aks-cluster-creation-issues#view-error-details-in-the-azure-portal)) to get to root cause of the failure
 
 
+## Cluster upgrade failed
+The cause of cluster upgrade failure can be found in the Activity Logs. More information on the specific errors can be found under the [Troubleshoot upgrade operations](/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes)
+
 ## Cluster is in a failed state
 
 You may encounter an issue where the provisioning status of your Microsoft Azure Kubernetes Service (AKS) cluster has changed from **Ready** to **Failed**. In this case, if your cluster applications continue to run, AKS may resolve the provisioning status automatically even if you didn't do an operation. Your running applications shouldn't be affected by the provisioning status change.
