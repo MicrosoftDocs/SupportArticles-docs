@@ -19,9 +19,9 @@ You may encounter an issue where the provisioning status of your Microsoft Azure
 Alternatively, you can also manually bring back the cluster from a **Failed** to a **Succeeded** state by running the following [az resource update](/cli/azure/resource#az-resource-update) command:
 
 ```azurecli
-az resource update --ids <aks-resource-id>
+az resource update --name <cluster_name> --namespace Microsoft.ContainerService --resource-group <resource_group_of_cluster> --resource-type ManagedClusters --subscription <subscription_of_cluster>
 ```
-
+Replace cluster_name , resource_group_of_cluster,  subscription_of_cluster with appropriate cluster information
 ## Node is in a failed state
 
 In some rare cases, an Azure Disk detach operation may partially fail, which leaves the node virtual machine (VM) in a failed state.
