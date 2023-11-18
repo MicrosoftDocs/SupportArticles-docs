@@ -13,7 +13,7 @@ keywords:
 This article discusses how to troubleshoot a Microsoft Azure Kubernetes Service (AKS) cluster/node that's entered a failed state.
 
 ## Cluster creation failed
-If you created a cluster recently and is in failed state, you need to use the [Activity Log]([url](/troubleshoot/azure/azure-kubernetes/troubleshoot-aks-cluster-creation-issues#view-error-details-in-the-azure-portal)) to get to root cause of the failure
+If you created a cluster recently and is in failed state, you need to use the [Activity Log]([/troubleshoot/azure/azure-kubernetes/troubleshoot-aks-cluster-creation-issues#view-error-details-in-the-azure-portal)) to get to root cause of the failure
 
 
 ## Cluster is in a failed state
