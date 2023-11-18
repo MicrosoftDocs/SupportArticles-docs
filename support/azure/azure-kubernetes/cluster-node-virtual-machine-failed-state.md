@@ -17,7 +17,7 @@ If you created a cluster recently and is in failed state, you need to use the [A
 
 
 ## Cluster upgrade failed
-The cause of cluster upgrade failure can be found in the Activity Logs. More information on the specific errors can be found under the [Troubleshoot upgrade operations](/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes)
+The cause of cluster upgrade failure can be found in the Activity Logs. More information on the specific errors can be found under the [Troubleshoot upgrade operations](troubleshoot-aks-cluster-creation-issues.md)
 
 ## Cluster is in a failed state
 
