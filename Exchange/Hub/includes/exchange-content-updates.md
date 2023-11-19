@@ -2,6 +2,14 @@
 
 
 
+## Week of November 13, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 11/17/2023 | [Search-MailboxAuditLog returns an error message that says the AQS parser has been removed](/exchange/troubleshoot/administration/search-mailboxauditlog-returns-aqs-parser-error) | added |
+
+
 ## Week of November 06, 2023
 
 
