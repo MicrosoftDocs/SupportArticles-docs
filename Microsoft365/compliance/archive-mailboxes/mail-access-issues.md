@@ -43,7 +43,7 @@ You experience the following symptoms in a hybrid deployment of on-premises Micr
 
 - A user who has a cloud-based archive can't access mail in Outlook or Outlook on the web (formerly known as Outlook Web App [OWA]). The user receives the following error message in Outlook on the web:
 
-    > Url: <https://mail.contoso.com:443/owa/auth.owaOWA> version: 14.3.146.0
+    > Url: <`https://mail.contoso.com:443/owa/auth.owaOWA`> version: 14.3.146.0
     >
     > ExceptionException type: System.NullReferenceException Exception message: Object reference not set to an instance of an object.
 
