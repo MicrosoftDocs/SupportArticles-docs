@@ -7,6 +7,7 @@ ms.reviewer: ladirohit
 ms.date: 09/06/2023
 ms.subservice: d365-sales-sales
 ---
+
 # Troubleshoot issues with forecasting
 
 This article helps you troubleshoot and resolve issues related to forecasting in Microsoft Dynamics 365 Sales.
@@ -239,7 +240,7 @@ To solve the issue, make sure that:
 
 ### Cause
 
-The fields in the rollup entity have field-level security.
+The fields in the rollup entity have field-level security. The rollup entity fields include option set used for selector field, amount field and date field.
 
 ### Resolution
 
