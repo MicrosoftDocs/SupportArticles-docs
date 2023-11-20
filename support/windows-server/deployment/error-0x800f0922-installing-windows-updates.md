@@ -3,7 +3,7 @@ title: Error code 0x800f0922 when installing Windows updates
 description: Helps resolve the 0x800f0922 (CBS_E_INSTALLERS_FAILED) error when installing Windows updates.
 author: Deland-Han
 ms.author: delhan
-ms.date: 11/10/2023
+ms.date: 11/20/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -13,7 +13,7 @@ ms.reviewer: kaushika, ismael, v-lianna
 ms.custom: sap:servicing, csstroubleshoot, ikb2lmc
 ms.technology: windows-server-deployment
 ---
-# Error code 0x800f0922 when installing Windows updates
+# Error 0x800f0922 caused by corrupted scheduled task when installing Windows updates
 
 This article helps resolve the 0x800f0922 (CBS_E_INSTALLERS_FAILED) error that occurs when installing Windows updates.
 
@@ -96,10 +96,13 @@ To fix this issue, follow these steps:
 
 	```output
 	HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tree\Microsoft\Windows\PI\SecureBootEncodeUEFI
-    ID    REG_SZ    {FFF233E6-1111-1111-1111-9B7C5594517C}
+    ID    REG_SZ    {<GUID>}
 	```
 	
 4. Running the following cmdlets to delete the `SecureBootEncodeUEFI` registry values:
+
+	> [!NOTE]
+ 	> You need to replace the `{GUID}` value returned from Step 3.
 
 	```powershell
 	reg delete "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Maintenance\{GUID}" /f
