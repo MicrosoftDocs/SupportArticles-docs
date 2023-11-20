@@ -1,6 +1,6 @@
 ---
 title: Camera pictures are blurry or not focused
-description: Synchronous save event limitation causes error notification in Field Service forms.
+description: Improve camera quality in the Field Service mobile app on iOS devices by using the native iOS camera app instead.
 ms.author: andreo
 author: Andrea-Orimoto
 ms.reviewer: mhart
