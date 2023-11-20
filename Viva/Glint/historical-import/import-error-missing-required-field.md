@@ -23,7 +23,7 @@ When you import historical data from a .csv file into Viva Glint, you receive an
 
 Here is an example:
 
-> Error at line 2: missing required field - [reed@contoso.com, 4, We have wonderful career progression in the organization., 4,, 3, There is cool promotion opportunities in the organization. That makes me proud. I'm really excited about the future here. 4,, 3,, 5, We have cool team work in the organization., 5, We have fantastic recognition on my team. , 2,, 4, There is energizing support., 4, We have energizing department structure. This is really important to me.,...]
+> Error at line 2: missing required field - [reed@contoso.com, 4, We have wonderful career progression in the organization., 4,, 3, There are cool promotion opportunities in the organization. That makes me proud. I'm really excited about the future here. 4,, 3,, 5, We have cool team work in the organization., 5, We have fantastic recognition on my team. , 2,, 4, There is energizing support., 4, We have energizing department structure. This is really important to me.,...]
 
 ## Cause
 
