@@ -3,7 +3,7 @@ title: Missing required field error during historical imports
 description: Fix the missing required field error when you import historical data in Viva Glint.
 manager: dcscontentpm
 ms.reviewer: aweixelman
-ms.date: 11/18/2023
+ms.date: 11/19/2023
 audience: ITPro
 ms.topic: troubleshooting
 search.appverid: MET150
