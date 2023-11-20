@@ -1,8 +1,8 @@
 ---
 title: Validations have been restarted in the background because of inconsistent validation data
 description: Synchronous save event limitation causes error notification in Field Service forms.
-ms.author: vhorvath
-author: vhorvathms
+ms.author: andreo
+author: Andrea-Orimoto
 ms.reviewer: mhart
 ms.date: 11/20/2023
 ---
