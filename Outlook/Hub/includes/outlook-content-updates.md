@@ -2,25 +2,10 @@
 
 
 
-## Week of September 25, 2023
+## Week of November 13, 2023
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 9/27/2023 | [Incorrect search results when using a date filter in the Outlook search bar](/outlook/troubleshoot/data-files/incorrect-search-results-for-search-bar-date-filter) | added |
-
-
-## Week of September 18, 2023
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 9/19/2023 | [SMTP address in user's profile doesn't change](/outlook/troubleshoot/user-interface/smtp-address-in-users-profile-not-change) | modified |
-
-
-## Week of September 04, 2023
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 9/8/2023 | [Issues that can occur when you add multiple Exchange accounts to the same Outlook profile](/outlook/troubleshoot/profiles-and-accounts/issues-that-occur-when-adding-multiple-exchange-accounts) | modified |
+| 11/17/2023 | [Add a shared mailbox as an additional account in Outlook Desktop](/outlook/troubleshoot/profiles-and-accounts/add-shared-mailbox-as-additional-account) | added |
+| 11/17/2023 | Outlook doesn't show event reminders for automapped or additional mailboxes | removed |
