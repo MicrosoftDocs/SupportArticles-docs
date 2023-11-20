@@ -1,12 +1,13 @@
 ---
 title: Troubleshooting operating system disk sector size greater than 4 KB
 description: This article troubleshoots SQL Server installation or startup failures related to some new storage devices and device drivers exposing a disk sector size greater than the supported 4-KB sector size.
-ms.date: 12/20/2022
+ms.date: 11/20/2023
 ms.custom: sap:Administration and Management
 ms.reviewer: ramakoni, dplessMSFT, briancarrig, suresh-kandoth 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
+
 # Troubleshoot errors related to system disk sector size greater than 4 KB
 
 This article provides solutions for troubleshooting errors during installation or starting an instance of SQL Server on Windows 11 and Windows Server 2022. This article is valid for all released versions of SQL Server.
@@ -65,6 +66,13 @@ Source             : SQLLocalDB 11.0
 
 > [!Note]
 > You might encounter the failures mentioned in the previous scenarios for a SQL Server instance you installed manually or on a LocalDB instance installed by applications.
+
+**Scenario #5:** If you try to use sector size that is higher than 4 KB, you will see the following error message:
+
+```output
+Error: 5179, Severity: 16, State: 1.
+Cannot use file 'data file path', because it is on a volume with sector size 8192. SQL Server supports a maximum sector size of 4096 bytes. Move the file to a volume with a compatible sector size.
+```
 
 ## Cause
 
@@ -144,6 +152,8 @@ Consider _one_ of the following solutions:
 
 - Install SQL Server on available Windows 10 devices instead.
 
+
+
 ## More information
 
 Windows 11 native NVMe drivers were updated to include the actual sector size reported directly by the NVMe storage devices. This was done rather than relying on the information that's emulated from the filesystem drivers.  
@@ -171,7 +181,6 @@ The following table provides a comparison of the sector sizes reported by the op
   
 ## See also
 
-- [Hard disk drive sector-size support boundaries in SQL Server](https://support.microsoft.com/topic/hard-disk-drive-sector-size-support-boundaries-in-sql-server-4d5b73fa-7dc4-1d8a-2735-556e6b60d046)
-- [SQL Server 2019 Storage types for data files](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15#StorageTypes)
+- [SQL Server 2022 Storage types for data files](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2019?view=sql-server-ver16#StorageTypes)
 - [KB3009974 - FIX: Slow synchronization when disks have different sector sizes for primary and secondary replica log files in SQL Server AG and Logshipping environments](https://support.microsoft.com/topic/kb3009974-fix-slow-synchronization-when-disks-have-different-sector-sizes-for-primary-and-secondary-replica-log-files-in-sql-server-ag-and-logshipping-environments-ed181bf3-ce80-b6d0-f268-34135711043c)
 - [SQL Server LocalDB](/sql/database-engine/configure-windows/sql-server-express-localdb)
