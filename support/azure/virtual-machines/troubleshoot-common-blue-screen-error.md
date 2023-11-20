@@ -55,11 +55,11 @@ To resolve this problem, you first have to gather a dump file for the crash befo
 
 If you can't find the dump file, move to the next part to enable a dump log and a serial console.
 
-### Part 3: Enable a dump log and a serial console
+### Part 3: Enable a dump log and the serial console
 
 [!INCLUDE [Registry important alert](../../includes/registry-important-alert.md)]
 
-To enable a dump log and a serial console, follow these steps:
+To enable a dump log and the serial console, follow these steps:
 
 [!INCLUDE [Enable Serial Console and Memory Dump Collection](../../includes/enable-serial-console-memory-dump-collection.md)]
 
