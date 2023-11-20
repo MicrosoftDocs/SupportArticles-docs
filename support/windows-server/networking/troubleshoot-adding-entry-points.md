@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot adding entry points
 description: Learn how to troubleshoot issues related to the Add-DAEntryPoint command.
-ms.date: 10/16/2023
+ms.date: 11/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
