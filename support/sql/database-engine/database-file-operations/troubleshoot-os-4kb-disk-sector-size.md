@@ -67,7 +67,7 @@ Source             : SQLLocalDB 11.0
 > [!Note]
 > You might encounter the failures mentioned in the previous scenarios for a SQL Server instance you installed manually or on a LocalDB instance installed by applications.
 
-**Scenario #5:** If you try to use sector size that is higher than 4 KB, you will see the following error message:
+**Scenario #5:** If you try to use sector size that is higher than 4 KB, you see the following error message:
 
 ```output
 Error: 5179, Severity: 16, State: 1.
@@ -78,7 +78,7 @@ Cannot use file 'data file path', because it is on a volume with sector size 819
 
 During service startup, SQL Server begins the database recovery process to ensure database consistency. Part of this database recovery process involves consistency checks on the underlying filesystem before you try to open system and user database files.  
 
-On systems running Windows 11, some new storage devices and device drivers will expose a disk sector size greater than the supported 4-KB sector size.
+On systems running Windows 11, some new storage devices and device drivers exposes a disk sector size greater than the supported 4-KB sector size.
   
 When this occurs, SQL Server will be unable to start due to the unsupported file system as SQL Server currently supports sector storage sizes of 512 bytes and 4 KB.
 
@@ -109,7 +109,7 @@ Consider _one_ of the following solutions:
 
 - If you have multiple drives on this system, you can specify a different location for the database files after installation of SQL Server is complete. Make sure that drive reflects a supported sector size when querying the `fsutil` commands. SQL Server currently supports sector storage sizes of 512 bytes and 4096 bytes.
 
-- You can add a registry key, which will cause the behavior of Windows 11 and later to be similar to Windows 10. This will force the sector size to be emulated as 4 KB. To add the `ForcedPhysicalSectorSizeInBytes` registry key, use the [Registry Editor](#registryeditor) or run commands as described in the [PowerShell as Administrator](#powershellasadmin) section. You must reboot the device after adding the registry key in order for this change to take effect.
+- You can add a registry key, which will cause the behavior of Windows 11 and later to be similar to Windows 10. This forces the sector size to be emulated as 4 KB. To add the `ForcedPhysicalSectorSizeInBytes` registry key, use the [Registry Editor](#registryeditor) or run commands as described in the [PowerShell as Administrator](#powershellasadmin) section. You must reboot the device after adding the registry key in order for this change to take effect.
   
   > [!IMPORTANT]
   > This section contains steps that tell you how to modify the Windows registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see the [How to back up and restore the registry in Windows](../../../windows-server/performance/windows-registry-advanced-users.md#back-up-the-registry) article.
@@ -181,6 +181,6 @@ The following table provides a comparison of the sector sizes reported by the op
   
 ## See also
 
-- [SQL Server 2022 Storage types for data files](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2019?view=sql-server-ver16#StorageTypes)
+- [SQL Server storage types for data files](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2019?view=sql-server-ver16&preserve-view=true#StorageTypes)
 - [KB3009974 - FIX: Slow synchronization when disks have different sector sizes for primary and secondary replica log files in SQL Server AG and Logshipping environments](https://support.microsoft.com/topic/kb3009974-fix-slow-synchronization-when-disks-have-different-sector-sizes-for-primary-and-secondary-replica-log-files-in-sql-server-ag-and-logshipping-environments-ed181bf3-ce80-b6d0-f268-34135711043c)
 - [SQL Server LocalDB](/sql/database-engine/configure-windows/sql-server-express-localdb)
