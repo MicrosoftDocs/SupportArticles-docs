@@ -240,7 +240,7 @@ To solve the issue, make sure that:
 
 ### Cause
 
-The fields in the rollup entity have field-level security. The rollup entity fields include option set used for selector field, amount field and date field.
+The fields in the rollup entity have field-level security. The rollup entity fields include the option set used for the selector field, amount field, and date field.
 
 ### Resolution
 
