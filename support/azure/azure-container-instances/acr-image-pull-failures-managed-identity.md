@@ -10,11 +10,11 @@ ms.reviewer: tysonfreeman, v-weizhu
 
 This article discusses how to troubleshoot image pull failures when you deploy to Azure Container Instances (ACI) from Azure Container Registry (ACR) by using a managed identity.
 
-## Symptoms 
+## Symptoms
 
 When you try to deploy a container group and pull images from an Azure container registry that runs behind a private endpoint by using a managed identity, the image pulls fail.
 
-## Cause 
+## Cause
 
 Here are some causes of image pull failures:
 
@@ -22,7 +22,7 @@ Here are some causes of image pull failures:
 
   - Based on the ACI API version used when deploying the container group, the credential format provided in the [container group ARM template](/azure/templates/microsoft.containerinstance/containergroups?pivots=deployment-language-arm-template) might be invalid.
   - Using a managed identity in the container group might violate ACI limitations.
-  - The container group definition in the ARM template might be malformed. 
+  - The container group definition in the ARM template might be malformed.
 
 - From the ACR side:
 
@@ -36,7 +36,7 @@ Here are some causes of image pull failures:
     If yes, you might see the "InvalidImageRegistryCredentialType" error:
 
     ```azurecli
-    $ az deployment group create —g <resourcegroupname> --template—file containergroup_trusted.json 
+    $ az deployment group create -g <resourcegroupname> --template-file containergroup_trusted.json 
     Deployment failed. Correlation ID: <Correlation ID>. { 
       "error": { 
         "code": "InvalidImageRegistryCredentialType", 
@@ -71,6 +71,7 @@ Here are some causes of image pull failures:
         } 
         } 
         ```
+
     - Error code: "InvalidImageRegistryIdentity"
 
         ```output
@@ -81,6 +82,7 @@ Here are some causes of image pull failures:
         } 
         } 
         ```
+
     - Error code: "InvalidRequestContent"
 
         ```outout
@@ -112,8 +114,8 @@ Here are some causes of image pull failures:
     } 
     ```
 
-    To resolve this issue, grant the `AcrPull` role to the managed identity. For more information, refer to step 3 in this tutorial. 
+    To resolve this issue, grant the `AcrPull` role to the managed identity. For more information, refer to step 3 in this tutorial.
 
-3. Check if ACR has [trusted services](/azure/container-registry/allow-access-trusted-services) enabled. If not, enable trusted services.
+2. Check if ACR has [trusted services](/azure/container-registry/allow-access-trusted-services) enabled. If not, enable trusted services.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
