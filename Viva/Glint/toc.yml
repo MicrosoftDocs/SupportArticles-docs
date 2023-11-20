@@ -9,6 +9,8 @@
           href: ./data-file-upload/file-upload-errors-warnings.md
     - name: Historical Imports
       items:
+        - name: Error "Duplicate entry"
+          href: ./historical-import/import-error-duplicate-entry.md
         - name: Error "missing required field"
           href: ./historical-import/import-error-missing-required-field.md
         - name: Error "User is not in client"
