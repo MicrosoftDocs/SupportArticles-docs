@@ -3,7 +3,7 @@ title: Remove node from active failover cluster membership
 description: Addresses the issue of finding nodes removed from active failover cluster membership.
 author: Deland-Han
 ms.author: delhan
-ms.date: 10/16/2023
+ms.date: 11/16/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
