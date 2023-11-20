@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot a multisite deployment
 description: Learn how to troubleshoot the most common errors that may occur when configuring a multisite Remote Access deployment.
-ms.date: 10/16/2023
+ms.date: 11/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
