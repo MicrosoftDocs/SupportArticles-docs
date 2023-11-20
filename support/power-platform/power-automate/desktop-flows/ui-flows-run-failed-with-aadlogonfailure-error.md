@@ -4,7 +4,7 @@ description: Provides a resolution for an issue where desktop flows run failed w
 ms.reviewer: fredg, johndund
 author: QuentinSele
 ms.author: quseleba
-ms.date: 11/17/2023
+ms.date: 11/20/2023
 ms.subservice: power-automate-desktop-flows
 ---
 # Desktop flows run failed with the AadLogonFailure error code
