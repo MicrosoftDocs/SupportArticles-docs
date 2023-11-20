@@ -2,6 +2,15 @@
 
 
 
+## Week of November 13, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 11/16/2023 | [Understand file upload errors and warnings in Viva Glint](/viva/troubleshoot/glint/data-file-upload/file-upload-errors-warnings) | added |
+| 11/17/2023 | [User is not in client error during historical imports](/viva/troubleshoot/glint/historical-import/import-error-user-is-not-in-client) | added |
+
+
 ## Week of November 06, 2023
 
 
