@@ -1,7 +1,7 @@
 ---
 title: Guidance for troubleshooting SMB
 description: Introduces general guidance for troubleshooting scenarios related to SMB.
-ms.date: 07/13/2023
+ms.date: 11/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: Poor performance or application problems during remote desktop connection
 description: Troubleshoot poor performance or application problems during remote desktop connection.
-ms.date: 10/17/2023
+ms.date: 11/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

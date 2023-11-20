@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot domain controller deployment
 description: Provides information about troubleshooting domain controller deployment.
-ms.date: 10/23/2023
+ms.date: 11/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

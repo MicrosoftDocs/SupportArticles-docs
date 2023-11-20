@@ -1,7 +1,7 @@
 ---
 title: Slow SMB files transfer speed
 description: Learn how to resolve transfer performance issues with SMB files by using the provided troubleshooting steps.
-ms.date: 10/19/2023
+ms.date: 11/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
