@@ -148,9 +148,9 @@ For a permanent fix, upgrade your client OS to a Linux distro version with accou
 
 - [dns: Apply a default TTL to records obtained from getaddrinfo()](https://git.kernel.org/pub/scm/linux/kernel/git/dhowells/keyutils.git/commit/?id=75e7568dc516db698093b33ea273e1b4a30b70be)
 
-## Unable To mount SMB file share when FIPS is enabled 
+## Unable to mount SMB file share when FIPS is enabled 
 
-When **Federal Information Processing Standard (FIPS)** is enabled in a Linux VM,  the SMB file share cannot be mounted. The Linux dmesg logs on the client show errors like:
+When **Federal Information Processing Standard (FIPS)** is enabled in a Linux VM,  the SMB file share cannot be mounted. The Linux dmesg logs on the client display errors such as:
 
 ```output
 kernel: CIFS: VFS: Could not allocate crypto hmac(md5)
@@ -168,6 +168,7 @@ The client of SMB file share uses the NTLMSSP authentication, which requires the
 *MD5 is a widely used hash function that produces a 128-bit hash value. However, MD5 is considered insecure for cryptographic 
 
 **How to check if FIPS mode is enabled**
+
 To verify if FIPS mode is enabled on the client, run the following command. If the value is set to 1, then FIPS is enabled. 
 
 ```bash
@@ -177,11 +178,11 @@ sudo cat /proc/sys/crypto/fips_enabled
 
 To resolve this issue, enable Kerberos authentication for SMB file share. If FIPS is enabled unintentionally, refer to [option2](#option2) to disable it. 
 
-**Option 1:  Enable Kerberos authentication for SMB file share.**
+**Option 1:  Enable Kerberos authentication for SMB file share**
 
  "In order to mount a SMB file share on the Linux VM where FIPS is enabled, use Kerberos/Azure AD authenticaiton. For more information, see [Enable Active Directory authentication over SMB for Linux clients accessing Azure Files](/azure/storage/files/storage-files-identity-auth-linux-kerberos-enable).
 
-**<a name="option2"> </a> Option 2:  Disable FIPS to mount the Samba share.**
+**<a name="option2"> </a> Option 2:  Disable FIPS to mount the Samba share**
 
 1. Change the sysctl value of `crypto.fips_enabled` to 0 in `/etc/sysctl.conf`.
 
@@ -189,14 +190,14 @@ To resolve this issue, enable Kerberos authentication for SMB file share. If FIP
 
 3. Rebuilt the grub2 config file:
 
-  ```bash
-  sudo grub2-mkconfig -o /boot/grub2/grub.cfg
-  ```
+    ```bash
+    sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+    ```
 4. Rebuilt the initramfs image:
 
-  ```
-  sudo dracut -fv
-  ```
+    ```
+    sudo dracut -fv
+    ```
 5. Reboot the VM.
 
 For more information, see to the following documents from Linux distributors:
