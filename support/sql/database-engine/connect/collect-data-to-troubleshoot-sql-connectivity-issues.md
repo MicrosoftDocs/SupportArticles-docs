@@ -103,12 +103,12 @@ If the user is remote to the client application, collect the following details:
 - What is the exact error message in the call stack?
 - Has the log been collected from the SQL Server ERRORLOG and ERRORLOG.1?
 - Have the application event logs been collected from the client and server?
-- Have the client application's log files and configuration files been collected? For example: web.config, rsreportserver.config, *.config, or *.ini.
+- Have the client application's log files and configuration files been collected? For example, web.config, rsreportserver.config, *.config, or *.ini.
 - Is a visual representation of the network available, which shows the computers, routers, and so on?
 
 ## Big picture questions
 
-If none of the questions in the previous sections provide an answer, consider the following questions to collect relevant information.
+Following are some questions which will help you understand the category of issue so that you can proceed in the right direction to troubleshoot the problems:
 
 - Does the issue only affect database connections, or does it affect web and file share connections as well? Many cases are reported to the SQL team because they are seen on the database server. However, it might be possible that the problem isn't related to the database  at all and might call for more general Windows or Active Directory support.
 - If the user domain, client domain, or server domain are different, what is the trust relationship between them? Is it external, forest, one-way, two-way, or none?
@@ -127,7 +127,7 @@ If none of the questions in the previous sections provide an answer, consider th
 ## New or existing problem
 
 - Has the problem always existed (new installation) or did it function properly before recently breaking down?
-- If it used to function properly, what changes were made to the environment? Foe example,  installed patches, upgraded domain controllers, changed the firewall settings, decommissioned domain controllers, and moved to a different Organizational Unit (OU) in the domain.
+- If it used to function properly, what changes were made to the environment? For example,  installed patches, upgraded domain controllers, changed the firewall settings, decommissioned domain controllers, and moved to a different Organizational Unit (OU) in the domain.
 
 ## See also
 
