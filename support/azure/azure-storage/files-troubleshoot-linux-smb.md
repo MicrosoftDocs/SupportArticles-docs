@@ -148,7 +148,7 @@ For a permanent fix, upgrade your client OS to a Linux distro version with accou
 
 - [dns: Apply a default TTL to records obtained from getaddrinfo()](https://git.kernel.org/pub/scm/linux/kernel/git/dhowells/keyutils.git/commit/?id=75e7568dc516db698093b33ea273e1b4a30b70be)
 
-## 	Unable To mount SMB file share when FIPS is enabled 
+## Unable To mount SMB file share when FIPS is enabled 
 
 When **Federal Information Processing Standard (FIPS)** is enabled in a Linux VM,  the SMB file share cannot be mounted. The Linux dmesg logs on the client show errors like:
 
@@ -175,7 +175,7 @@ sudo cat /proc/sys/crypto/fips_enabled
 ```
 ###  Solution
 
-To resolve this issue, enable Kerberos authentication for SMB file share. If FIPS has been enabled unintentionally, refer to [option2](#option2) to disable it. 
+To resolve this issue, enable Kerberos authentication for SMB file share. If FIPS is enabled unintentionally, refer to [option2](#option2) to disable it. 
 
 **Option 1:  Enable Kerberos authentication for SMB file share.**
 
