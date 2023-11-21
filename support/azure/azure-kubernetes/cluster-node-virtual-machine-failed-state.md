@@ -44,7 +44,7 @@ az resource update --name <cluster_name> --namespace Microsoft.ContainerService 
 ```
 Replace cluster_name , resource_group_of_cluster,  subscription_of_cluster with appropriate cluster information
 
-!NOTE: This does not guarantee fixing the cluster state
+[!NOTE] This does not guarantee fixing the cluster state
 
 
 ## Node is in a failed state
