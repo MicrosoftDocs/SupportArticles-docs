@@ -32,12 +32,13 @@ Some common errors and possible remediations are listed below(The list is not ex
 | Issue | Link/Resolution |
 | ----- | -------- |
 |OutboundConnFailVMExtensionError | [Link](/troubleshoot/azure/azure-kubernetes/error-code-outboundconnfailvmextensionerror)  |
-|Drain errors|[Link](troubleshoot/azure/azure-kubernetes/error-code-poddrainfailure)|
+|Drain errors|[Link](/troubleshoot/azure/azure-kubernetes/error-code-poddrainfailure)|
 |SubscriptionNotRegistered|[Link](/azure/azure-resource-manager/troubleshooting/error-register-resource-provider?tabs=azure-cli)|
 |RequestDisallowedByPolicy|[Link](/troubleshoot/azure/azure-kubernetes/error-code-requestdisallowedbypolicy#solution)|
 | QuotaExceeded | [Link](/troubleshoot/azure/azure-kubernetes/error-code-quotaexceeded)|
 |PublicIPCountLimitReached|[Link](/troubleshoot/azure/azure-kubernetes/error-code-publicipcountlimitreached#solution)|
 |OverconstrainedAllocationRequest|[Link](/troubleshoot/azure/azure-kubernetes/error-code-zonalallocationfailed-allocationfailed)|
+| ReadOnlyDisabledSubscription |The subscription is disabled and marked as ready only, please fix the permissions on the subscription |
 
 
 
