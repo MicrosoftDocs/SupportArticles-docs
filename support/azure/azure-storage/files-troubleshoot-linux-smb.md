@@ -186,12 +186,12 @@ To resolve this issue, enable Kerberos authentication for SMB file share. If FIP
 
 2. Modify the `GRUB_CMDLINE_LINUX_DEFAULT` in `/etc/default/grub` file and remove the parameter `fips=1`.
 
-3. Rebuilt the grub2 config file:
+3. Rebuilt the grub2 config file with the following command:
 
     ```bash
     sudo grub2-mkconfig -o /boot/grub2/grub.cfg
     ```
-4. Rebuilt the initramfs image:
+4. Rebuilt the initramfs image with the following command:
 
     ```
     sudo dracut -fv
