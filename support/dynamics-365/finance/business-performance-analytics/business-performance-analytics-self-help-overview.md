@@ -4,7 +4,7 @@ description: Provides information about business performance analytics self-help
 author: jinniew
 ms.author: jiwo
 ms.reviewer: twheeloc 
-ms.date: 11/17/2023
+ms.date: 11/21/2023
 ms.prod: 
 ms.technology:
 ms.custom:
@@ -18,15 +18,15 @@ audience: Application User
 
 To maintain the accuracy of report data, business performance analytics assesses the quality of the source data. If the assessments don't meet defined rules, business performance analytics logs information in the **Transform Log** table in Microsoft Dataverse. This table provides insights into issues and helps you take appropriate action.
 
-## Access the Transform Log table
+## Access the "Transform Log" table
 
 To access the **Transform Log** table, follow these steps.
 
-1. Open the [Power Apps makers portal](https://make.preview.powerapps.com/).
+1. Open the [Power Apps maker portal](https://make.preview.powerapps.com/).
 2. Go to **Tables** > **All**.
 3. Search for **Transform\ Log**.
 
-## Understanding the Transform Log table
+## Understand the "Transform Log" table
 
 | Sno | Column name | Description |
 |---|---|---|

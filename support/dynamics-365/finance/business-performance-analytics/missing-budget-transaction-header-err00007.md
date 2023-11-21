@@ -4,7 +4,7 @@ description: Provides information about the Missing budget transaction header er
 author: jinniew
 ms.author: jiwo
 ms.reviewer: twheeloc 
-ms.date: 11/17/2023
+ms.date: 11/21/2023
 ms.prod: 
 ms.technology:
 ms.custom:
@@ -22,7 +22,7 @@ Error code *ERR00007* is logged in the **Transform Log** table in Microsoft Data
 
 ## Resolution
 
-No immediate action is required, because this issue might be caused by data synchronization delays. It's recommended that you observe the next few business performance analytics runs to see whether the issue is fixed.
+No immediate action is required, because this issue might be caused by data synchronization delays. We recommend that you observe the next few business performance analytics runs to see whether the issue is fixed.
 
 If the issue persists, follow these steps.
 

@@ -4,7 +4,7 @@
 title: Troubleshoot Finance insights setup issues
 description: Provides resolutions for the common issues that can occur when you use Finance insights capabilities in Microsoft Dynamics 365 Finance.
 author: twheeloc 
-ms.date: 11/17/2023
+ms.date: 11/21/2023
 ms.prod: 
 ms.technology: 
 
@@ -56,7 +56,7 @@ Follow these steps in the [Power Platform admin center](https://admin.powerplatf
 
 ### Resolution
 
-Dynamics 365 Finance users must have a Microsoft Power Apps user account for the environment, and that user account must have the System customizer role. The Microsoft Power Apps system administrator can create the user account and assign the role. You can then go to the [Power Apps makers portal](https://make.preview.powerapps.com/), sign in by using that user account, and try the links again.
+Dynamics 365 Finance users must have a Microsoft Power Apps user account for the environment, and that user account must have the System customizer role. The Microsoft Power Apps system administrator can create the user account and assign the role. You can then go to the [Power Apps maker portal](https://make.preview.powerapps.com/), sign in by using that user account, and try the links again.
 
 ## Symptom 3: The Cash forecast tab in the Cash flow forecast workspace doesn't show any data
 
@@ -68,13 +68,13 @@ First, set up and enable the cash flow forecasting and liquidity accounts. For m
 
 Next, confirm that the Cash flow forecasts feature in Finance insights (**Cash and bank management** > **Setup** > **Finance Insights** > **Cash flow forecasts**) has been enabled, and that training of the AI model has been completed. If the training hasn't been completed, select **Forecast now** to start the model training process.
 
-## Symptom 4: The "Install anew add-in" button isn't visible in Microsoft Dynamics Lifecycle Services
+## Symptom 4: The "Install a new add-in" button isn't visible in Microsoft Dynamics Lifecycle Services
 
 ### Resolution
 
 First, verify that the **Environment Manager** or **Project Owner** role is assigned to the signed-in user in the **Project security role** field in Microsoft Dynamics Lifecycle Services (LCS). Installation of the new add-ins requires one of these project security roles.
 
-If the correct project security role is assigned to you, you might have to refresh your browser window to see the **Install new add-in** button.
+If the correct project security role is assigned to you, you might have to refresh your browser window to see the **Install a new add-in** button.
 
 ## Symptom 5: The Finance insights add-in doesn't seem to be installing
 
@@ -102,9 +102,9 @@ Check the data integrator setup to validate that it's functioning as expected an
 
 ## Symptom 7: Customer payment prediction training fails and an AI Builder error occurs
 
-The Ai builder error states:
+The AI builder error states:
 
-> "Prediction should have only 2 distinct outcome values to train the model. Map to two outcomes and retrain", "Training report issue: IsNotMinRequiredDistinctNonNullValues"
+> Prediction should have only 2 distinct outcome values to train the model. Map to two outcomes and retrain, Training report issue: IsNotMinRequiredDistinctNonNullValues
 
 ### Resolution
 
@@ -126,4 +126,4 @@ The **Budget proposal** feature requires a minimum of three years of budget or a
 
 ### Resolution
 
-The environment has reached the Data Lake Services maximum table limit. For more information about the limit, see the **Enable near real-time data changes** section of the article [Export to Azure Data Lake overview](/dynamics365/fin-ops-core/dev-itpro/data-entities/Azure-Data-Lake-GA-version-overview).
+The environment has reached the Data Lake Services maximum table limit. For more information about the limit, see [Enable near real-time data changes](/dynamics365/fin-ops-core/dev-itpro/data-entities/Azure-Data-Lake-GA-version-overview#enable-near-real-time-data-changes).

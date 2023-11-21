@@ -36,7 +36,7 @@ If the **Undo previous close** field is set to **Yes**, the previous year-end cl
 
 This scenario is covered in the year-end close FAQ article. For more information, see [Year-end activities FAQ](/dynamics365/finance/general-ledger/faq-year-end-activities).
 
-## Issue 2 - Still missing opening balances for your fiscal year after running year-end close with "Undo previous close" set to No
+## Issue 2 - Still missing opening balances for your fiscal year after running year-end close with "Undo previous close" set to "No"
 
 ### Resolution
 

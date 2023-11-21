@@ -2,7 +2,7 @@
 # required metadata
 
 title: Can't reverse a transaction
-description: Describes different reasons why transactions can't be reversed. It also lists solutions for this issue in Microsoft Dynamics 365 Finance.
+description: Describes different reasons why transactions can't be reversed. It also lists solutions to this issue in Microsoft Dynamics 365 Finance.
 author: kweekley
 ms.date: 11/20/2023
 ms.prod: 
@@ -24,7 +24,7 @@ ms.dyn365.ops.version: 10.0.20
 ---
 # Can't reverse a transaction
 
-This article describes different reasons why transactions can't be reversed in Microsoft Dynamics 365 Finance. It also provides solutions for this issue.
+This article describes different reasons why transactions can't be reversed in Microsoft Dynamics 365 Finance. It also provides solutions to this issue.
 
 ## Symptoms
 

@@ -2,7 +2,7 @@
 # required metadata
 
 title: Troubleshoot issues with transactions that can't be settled
-description: This article describes how to resolve issues with transactions that can't be settled in Microsoft Dynamics 365 Finance.
+description: Describes how to resolve issues with transactions that can't be settled in Microsoft Dynamics 365 Finance.
 author: twheeloc 
 ms.date: 11/21/2023
 ms.prod: 
@@ -30,7 +30,7 @@ This article provides a resolution for an issue where you can't settle transacti
 
 ## Symptoms
 
-Sometimes, you can't settle transactions because another activity is currently processing the document. If you try to settle the transactions, an error occurs, because those transactions are being used.
+Sometimes, you can't settle transactions because another activity is currently processing the document. If you try to settle the transactions, an error occurs because those transactions are being used.
 
 Transactions are marked for settlement either when vendor invoices are being paid or when customers pay their open invoices. Occasionally, these invoices might already be marked for settlement. Therefore, users can't select them for payment. The invoices might be marked by another customer payment journal, sales order, vendor payment journal, or purchase order in the current legal entity or another legal entity.
 
@@ -52,4 +52,6 @@ To fix this issue, you can use the **Marked transaction details** page to find t
 
   To quickly identify where a transaction is blocked, you can set any of these selection parameters: **Vendor account**, **Voucher**, **Date**, or **Invoice**. If you don't set any selection parameters, the system shows all blocked documents from the current company or another company that you select. After the transaction is identified, you can select it and then select **Unmark selected transactions** to fix the blocking issue. The selected transaction is then removed from any other journal where it's selected. However, the document isn't removed from the other location. Only the marking information is removed from that journal.
 
-- To identify all blocked documents, go to **Accounts receivable** > **Periodic tasks** > **All marked transaction details** or **Accounts payable** > **Periodic tasks** > **All marked transaction details** to open the **All marked transaction details** page. To quickly identify where a transaction is blocked, you can set any of these selection parameters: **Customer account**, **Vendor account**, **Voucher**, **Date**, or **Invoice**. If you don't set any selection parameters, the system shows all blocked documents from the current company or another company that you select. After the transaction is identified, you can select it and then select **Unmark selected transactions** to fix the blocking issue. The selected transaction is then removed from any other journal where it's selected. However, the document isn't removed from the other location. Only the marking information is removed from that journal.
+- To identify all blocked documents, go to **Accounts receivable** > **Periodic tasks** > **All marked transaction details** or **Accounts payable** > **Periodic tasks** > **All marked transaction details** to open the **All marked transaction details** page.
+
+  To quickly identify where a transaction is blocked, you can set any of these selection parameters: **Customer account**, **Vendor account**, **Voucher**, **Date**, or **Invoice**. If you don't set any selection parameters, the system shows all blocked documents from the current company or another company that you select. After the transaction is identified, you can select it and then select **Unmark selected transactions** to fix the blocking issue. The selected transaction is then removed from any other journal where it's selected. However, the document isn't removed from the other location. Only the marking information is removed from that journal.

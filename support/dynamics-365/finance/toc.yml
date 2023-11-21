@@ -1,6 +1,10 @@
 - name: Dynamics 365 Finance
   href: welcome-finance.yml
   items:
+    - name: Budgeting
+      items:
+        - name: Frequently asked questions about position budgeting
+          href: budgeting/position-budgeting-set-up-issues.md
     - name: Business performance analytics
       items:
         - name: Business performance analytics self-help
@@ -19,16 +23,38 @@
           href: business-performance-analytics/missing-budget-data-err00006.md
         - name: Missing budget transaction header ERR00007
           href: business-performance-analytics/missing-budget-transaction-header-err00007.md
+    - name: Cash bank management
+      items:
+        - name: Troubleshoot issues with transactions that can't be settled
+          href: cash-bank-management/settlement-overview-resolve-issues.md
     - name: Finance Insights
       items:
         - name: Troubleshoot Finance insights setup issues
           href: finance-insights/finance-insights-troubleshooting-faq.md
+    - name: Finance reporting
+      items:
+        - name: Troubleshoot issues opening Report Designer
+          href: finance-reporting/issues-open-report-designer.md
+        - name: Troubleshoot report designer issues with Event Viewer
+          href: finance-reporting/troubleshoot-report-designer-with-event-viewer.md
+        - name: '"Unable to Connect to the Financial reporting server" error'
+          href: finance-reporting/unable-to-connect-financial-reporting-server.md
     - name: General ledger
       items:
+        - name: A custom Excel template for financial journals isn't available on the menu
+          href: general-ledger/custom-excel-template-financial-journals-not-available.md
+        - name: Can't reverse a transaction
+          href: general-ledger/cant-reverse-transactions.md
+        - name: Can't post a journal due to imbalance
+          href: general-ledger/posting-fail-imbalance.md
         - name: How to change the accounting or reporting currency
           href: general-ledger/add-change-accounting-reporting-currency.md
         - name: Troubleshoot issues with the General ledger adjustments page
           href: general-ledger/ledger-adjustments-troubleshoot.md
+        - name: Vouchers aren't reversed when posting a journal with reversing entry and date
+          href: general-ledger/vouchers-not-reversed-posting-journal.md
+        - name: Year-end close missing opening balances
+          href: general-ledger/year-end-close-miss-opening-balances.md
     - name: Tax
       items:
         - name: Tax Calculation service
@@ -89,7 +115,4 @@
               href: tax/apac-ind-gst-troubleshooting-taxtrans-or-voucher-not-generated.md
             - name: Tax transaction ID is incorrect
               href: tax/apac-ind-gst-troubleshooting-tax-transaction-id-incorrect.md
-    - name: Budgeting
-      items:
-        - name: Frequently asked questions about position budgeting
-          href: budgeting/position-budgeting-set-up-issues.md
+

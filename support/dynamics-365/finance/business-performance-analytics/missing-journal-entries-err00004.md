@@ -4,7 +4,7 @@ description: Provides information about the Missing journal entries error (error
 author: jinniew
 ms.author: jiwo
 ms.reviewer: twheeloc 
-ms.date: 09/09/2023
+ms.date: 11/21/2023
 ms.prod: 
 ms.technology:
 ms.custom:
@@ -22,7 +22,7 @@ Error code *ERR00004* is logged in the **Transform Log** table in Microsoft Data
 
 ## Resolution
 
-No immediate action is required, because this issue might be caused by a delay in data synchronization. It's recommended that you observe the next few business performance analytics runs to see whether the issue is fixed.
+No immediate action is required, because this issue might be caused by a delay in data synchronization. We recommend that you observe the next few business performance analytics runs to see whether the issue is fixed.
 
 If the issue persists, confirm that the entries are in the General journal entry table in Dynamics 365 Finance. If the records are in the table, contact Microsoft Support for further assistance.
 
