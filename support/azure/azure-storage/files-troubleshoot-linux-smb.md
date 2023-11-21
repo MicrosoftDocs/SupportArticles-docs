@@ -148,12 +148,9 @@ For a permanent fix, upgrade your client OS to a Linux distro version with accou
 
 - [dns: Apply a default TTL to records obtained from getaddrinfo()](https://git.kernel.org/pub/scm/linux/kernel/git/dhowells/keyutils.git/commit/?id=75e7568dc516db698093b33ea273e1b4a30b70be)
 
-## 	Unable To Mount Samba Share when FIPS is enabled 
+## 	Unable To mount SMB file share when FIPS is enabled 
 
-Unable to mount an Azure File Share using CIFS when `Federal Information Processing Standard (FIPS)` enabled in the the VM. Linux dmesg logs on the client show repeated errors like:
-
->[!IMPORTANT]
->FIPS is a set of standards that the U.S. government uses to ensure the security and integrity of computer systems. When a system is in FIPS mode, it adheres to specific cryptographic requirements outlined by these standards.
+When **Federal Information Processing Standard (FIPS)** is enabled in a Linux VM,  the SMB file share cannot be mounted. The Linux dmesg logs on the client show errors like:
 
 ```output
 kernel: CIFS: VFS: Could not allocate crypto hmac(md5)
@@ -161,54 +158,51 @@ kernel: CIFS: VFS: Error -2 during NTLMSSP authentication
 kernel: CIFS: VFS: \\contoso.file.core.windows.net Send error in SessSetup = -2
 kernel: CIFS: VFS: cifs_mount failed w/return code = -2
 ```
-In FIPS mode, certain cryptographic algorithms, including MD5 (Message Digest Algorithm 5), may be restricted or disallowed because they do not meet the security standards outlined by FIPS.
-
-MD5 is a widely used hash function that produces a 128-bit hash value. However, MD5 is considered insecure for cryptographic purposes due to vulnerabilities that can be exploited.
+>[!IMPORTANT]
+>FIPS is a set of standards that the U.S. government uses to ensure the security and integrity of computer systems. When a system is in FIPS mode, it adheres to specific cryptographic requirements outlined by these standards.
 
 ### Cause
 
-The mount fails because FIPS is enabled on the cifs-client system. NTLMSSP authentication requires MD5 hashing algorithm, which is disabled when the system is made FIPS compliant. In summary, the use of MD4/MD5 isn't approved by FIPS.
-To check to see if FIPS mode is enabled run the following command. If set to 1 `enabled`, CIFS mount fails and gets the `hmac(md5)` error from the kernel. If set to 0 `disabled`, then the CIFS mount works correctly without any errors.
+The client of SMB file share uses the NTLMSSP authentication, which requires the MD5* hashing algorithm. However, in FIPS mode, the MD5 algorithm is restricted because it’s not FIPS-compliant. 
+
+*MD5 is a widely used hash function that produces a 128-bit hash value. However, MD5 is considered insecure for cryptographic 
+
+**How to check if FIPS mode is enabled**
+To verify if FIPS mode is enabled on the client, run the following command. If the value is set to 1, then FIPS is enabled. 
 
 ```bash
 sudo cat /proc/sys/crypto/fips_enabled
 ```
-
-```bash
-sudo cat /proc/cmdline
-```
-
->[!NOTE]
->In case FIPs has been enabled unintentionally, go to [Solution, option 2](#option2)
-
-
 ###  Solution
 
-**Option 1:  Enable Kerberos authentication for Samba share.**
+To resolve this issue, enable Kerberos authentication for SMB file share. If FIPS has been enabled unintentionally, refer to [option2](#option2) to disable it. 
 
- "In order to mount a Samba share on a virtual machine where FIPS is enabled, use the security mode `Kerberos`, i.e., `sec=krb5`
+**Option 1:  Enable Kerberos authentication for SMB file share.**
 
-For more information, see [Enable Active Directory authentication over SMB for Linux clients accessing Azure Files](/azure/storage/files/storage-files-identity-auth-linux-kerberos-enable)
+ "In order to mount a SMB file share on the Linux VM where FIPS is enabled, use Kerberos/Azure AD authenticaiton. For more information, see [Enable Active Directory authentication over SMB for Linux clients accessing Azure Files](/azure/storage/files/storage-files-identity-auth-linux-kerberos-enable).
 
 **<a name="option2"> </a> Option 2:  Disable FIPS to mount the Samba share.**
 
-1. Change the sysctl value of `crypto.fips_enabled` to 0 in `/etc/sysctl.conf`
+1. Change the sysctl value of `crypto.fips_enabled` to 0 in `/etc/sysctl.conf`.
 
-2. Modify the `GRUB_CMDLINE_LINUX_DEFAULT` in `/etc/default/grub` file and remove the parameter `fips=1`
+2. Modify the `GRUB_CMDLINE_LINUX_DEFAULT` in `/etc/default/grub` file and remove the parameter `fips=1`.
 
-3. Rebuilt the grub2 config file
+3. Rebuilt the grub2 config file:
 
-```bash
-sudo grub2-mkconfig -o /boot/grub2/grub.cfg
-```
-4. Rebuilt the initramfs image.
+  ```bash
+  sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+  ```
+4. Rebuilt the initramfs image:
 
-```
-sudo dracut -fv
-```
-5. Reboot the VM
+  ```
+  sudo dracut -fv
+  ```
+5. Reboot the VM.
 
-Additional information can be found in [Red Hat](https://access.redhat.com/solutions/256053) and [SUSE](https://www.suse.com/support/kb/doc/?id=000021162) vendors.
+For more information, refer to the following details from Linux distributors:
+
+•	[RedHat: Why would enabling FIPS mode in the kernel break CIFS mounts](https://access.redhat.com/solutions/256053)
+•	[SUSE: CIFS mount fails with error "mount error(2): No such file or directory"](https://www.suse.com/support/kb/doc/?id=000021162)
 
 ## Need help?
 
