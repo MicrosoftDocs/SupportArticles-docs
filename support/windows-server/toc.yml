@@ -138,7 +138,7 @@
       href: ./identity/restore-iis-clean-up-active-directory.md
     - name: Troubleshoot AD FS 2.0 error
       href: ./identity/adfs-2-error-access-is-denied.md
-    - name: Troubleshoot AD FS issues in Azure Active Directory
+    - name: Troubleshoot AD FS issues in Microsoft Entra ID
       href: ./identity/troubleshoot-ad-fs-issues.md
   - name: Active Directory FSMO
     items:
@@ -2194,8 +2194,6 @@
       href: ./remote/deny-user-permissions-to-logon-to-rd-session-host.md
     - name: Error 2147944102 when you start BITS service
       href: ./remote/service-specific-error-code-2147944102.md
-    - name: Fair Share is enabled by default in RDS
-      href: ./remote/fair-share-enabled-by-default-in-rds.md
     - name: How to add a user to Terminal Services RDP permissions
       href: ./remote/add-user-services-rdp-permissions.md
     - name: How to enable Windows Remote Shell
@@ -2404,7 +2402,7 @@
       href: ./remote/rds-client-not-connect-to-rd-session-host-server.md
     - name: Remote Desktop Connection 6.0 prompts for credentials
       href: ./remote/remote-desktop-connection-6-prompts-credentials.md
-    - name: Remote Desktop IP Virtualization does not work
+    - name: Remote Desktop IP Virtualization
       href: ./remote/remote-desktop-ip-virtualization.md
     - name: Remote Desktop or RemoteApp session doesn't terminate
       href: ./remote/rd-or-remoteapp-session-not-terminate.md

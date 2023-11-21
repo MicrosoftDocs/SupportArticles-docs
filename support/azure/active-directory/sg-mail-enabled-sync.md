@@ -10,7 +10,7 @@ ms.subservice: enterprise-users
 
 This article provides information about resolving an issue in which a security group remains mail-enabled after it is disabled through a sync in on-premises AD.
 
-_Original product version:_ &nbsp; Azure Active Directory  
+_Original product version:_ &nbsp; Microsoft Entra ID  
 _Original KB number:_ &nbsp; 4096314
 
 ## Symptoms
@@ -18,14 +18,14 @@ _Original KB number:_ &nbsp; 4096314
 Consider the following scenario:
 
 - You have a security group that has an email address that is specified in on-premises Active Directory (on-premises AD).
-- The security group is synchronized to Azure Active Directory (Azure AD).
+- The security group is synchronized to Microsoft Entra ID.
 - You remove the email address from the security group in on-premises AD.
 - You run  a synchronization.
-In this scenario, the security group remains mail-enabled, and it still has the original email address that was assigned to it in Azure AD.
+In this scenario, the security group remains mail-enabled, and it still has the original email address that was assigned to it in Microsoft Entra ID.
 
 ## Cause
 
-When a mail-enabled security group is synchronized to Azure AD, the email address that uses the original domain (`onmicrosoft.com`) is appended to the group as the secondary email address. If you delete the primary email address, the email address that has the original domain becomes the primary email address.
+When a mail-enabled security group is synchronized to Microsoft Entra ID, the email address that uses the original domain (`onmicrosoft.com`) is appended to the group as the secondary email address. If you delete the primary email address, the email address that has the original domain becomes the primary email address.
 
 The following is the impact of this issue:
 

@@ -8,7 +8,7 @@ ms.subservice: authentication
 ---
 # Can't use Azure Multi-Factor Authentication to sign in to cloud services after you lose your phone or the phone number changes
 
-_Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Azure Active Directory, Microsoft Intune, Azure Backup, Office 365 Identity Management  
+_Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 Identity Management  
 _Original KB number:_ &nbsp; 2834954
 
 ## Symptoms

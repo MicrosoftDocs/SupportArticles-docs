@@ -7,6 +7,8 @@
         items:
           - name: Power Query data source refresh issues
             href: data/data-ingestion/power-query-data-source-refresh-issues-dataflows.md
+          - name: Fail to convert from Azure Data Lake data source to Delta Lake data source
+            href:  data/data-ingestion/revert-delta-back-to-ADLS.md
       - name: Exports
         items:
           - name: Controls from Customer Card Add-in if they don't find data

@@ -4,7 +4,7 @@ description: Troubleshoot common issues with installing the Azure File Sync agen
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 06/25/2023
+ms.date: 10/13/2023
 ms.author: kendownie
 ---
 # Troubleshoot Azure File Sync agent installation and server registration
@@ -89,7 +89,7 @@ To resolve this issue, install [KB2919355](https://support.microsoft.com/help/29
 
 When registering a server using *ServerRegistration.exe*, subscriptions are missing when you select the **Azure Subscription** drop-down.
 
-This issue occurs because *ServerRegistration.exe* will only retrieve subscriptions from the first five Azure AD tenants.
+This issue occurs because *ServerRegistration.exe* will only retrieve subscriptions from the first five Microsoft Entra tenants.
 
 To increase the Server Registration tenant limit on the server, create a DWORD value called `ServerRegistrationTenantLimit` under `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Azure\StorageSync` with a value greater than 5.
 
@@ -99,22 +99,6 @@ You can also work around this issue by using the following PowerShell commands t
 Connect-AzAccount -Subscription "<guid>" -Tenant "<guid>"
 Register-AzStorageSyncServer -ResourceGroupName "<your-resource-group-name>" -StorageSyncServiceName "<your-storage-sync-service-name>"
 ```
-
-<a id="server-registration-prerequisites"></a>**Server Registration displays the following message: "Pre-requisites are missing"**
-
-This message appears if Az or AzureRM PowerShell module isn't installed on PowerShell 5.1.
-
-> [!Note]  
-> *ServerRegistration.exe* does not support PowerShell 6.x. You can use the `Register-AzStorageSyncServer` cmdlet on PowerShell 6.x to register the server.
-
-To install the Az or AzureRM module on PowerShell 5.1, perform the following steps:
-
-1. Type *powershell* from an elevated command prompt and hit <kbd>Enter</kbd>.
-2. Install the latest Az or AzureRM module by following the documentation:
-    - [Az module (requires .NET 4.7.2)](/powershell/azure/install-azure-powershell)
-    - [AzureRM module](https://go.microsoft.com/fwlink/?linkid=856959)
-3. Run *ServerRegistration.exe*, and complete the wizard to register the server with a Storage Sync Service.
-
 <a id="server-already-registered"></a>**Server Registration displays the following message: "This server is already registered"**
 
 :::image type="content" source="media/file-sync-troubleshoot-installation/server-already-registered-error.png" alt-text="Screenshot that shows the Server Registration dialog box with the 'server is already registered' error message.":::

@@ -1,0 +1,23 @@
+### YamlMime:Landing
+
+title: Azure Container Instances troubleshooting documentation # < 60 chars
+summary: Welcome to Azure Container Instances troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Azure Container Instances. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+metadata:
+  title: Troubleshoot Azure Container Instances issues
+  description: Documentation for troubleshooting common issues with Azure Container Instances. # Required; article description that is displayed in search results. < 160 chars.
+  ms.service: container-instances  #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: landing-page # Required
+  author: genlin  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: genli #Required; microsoft alias of author; optional team alias.
+  ms.date: 10/12/2023
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+ # Card
+  - title: Learn how to use ACI with these quickstarts, tutorials, and samples
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: ACI Documentation
+            url: /azure/container-instances/

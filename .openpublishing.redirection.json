@@ -1,6 +1,627 @@
 {
   "redirections": [
     {
+      "source_path": "support/power-platform/power-automate/desktop-flows/cannot-access-gateway-run-queue.md",
+      "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/cannot-access-gateway-run-queue",
+      "redirect_document_id": false
+    },
+ {
+      "source_path": "support/power-platform/power-automate/desktop-flows/double-click-drag-drop-are-not-working.md",
+      "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/double-click-drag-drop-are-not-working",
+      "redirect_document_id": false
+    },
+ {
+      "source_path": "support/power-platform/power-automate/desktop-flows/find-which-machine-is-failing-within-a-cluster.md",
+      "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/find-which-machine-is-failing-within-a-cluster",
+      "redirect_document_id": false
+    },
+
+ {
+      "source_path": "support/power-platform/power-automate/desktop-flows/issue-with-ui-flows-error-uiaelementnotfound.md",
+      "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/issue-with-ui-flows-error-uiaelementnotfound",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/key-and-mouse-click-combo-not-working.md",
+      "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/key-and-mouse-click-combo-not-working",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/known-limitations-selenium-ide.md",
+      "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/known-limitations-selenium-ide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/multi-screen-recording-is-not-working.md",
+      "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/multi-screen-recording-is-not-working",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/recorder-not-recording-applications.md",
+      "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/recorder-not-recording-applications",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/reset-ui-flow-service-when-bad-state.md",
+      "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/reset-ui-flow-service-when-bad-state",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/troubleshoot-ui-flow-playback-unabletolaunchapplication.md",
+      "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/troubleshoot-ui-flow-playback-unabletolaunchapplication",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/troubleshoot-unavailable-gateway-when-desktop-flows-fail.md",
+      "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/troubleshoot-unavailable-gateway-when-desktop-flows-fail",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/troubleshooting-ui-flow-playback.md",
+      "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/troubleshooting-ui-flow-playback",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/ui-flow-inputs-not-working.md",
+      "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/ui-flow-inputs-not-working",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/ui-flow-outputs-not-working.md",
+      "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/ui-flow-outputs-not-working",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/ui-flow-playback-error-keyboardidmismatch.md",
+      "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/ui-flow-playback-error-keyboardidmismatch",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/ui-flows-cannot-launch-recorder.md",
+      "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/ui-flows-cannot-launch-recorder",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/ui-flows-fails-uiaelementmismatch.md",
+      "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/ui-flows-fails-uiaelementmismatch",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/guides/hololens-app/cant-make-video-call.md",
+      "redirect_url": "/troubleshoot/dynamics-365/guides/application-functionality/cant-make-video-call",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/guides/hololens-app/device-license-cant-find-guide.md",
+      "redirect_url": "/troubleshoot/dynamics-365/guides/application-functionality/device-license-cant-find-guide",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/guides/pc-app/anchors-3d-model-conversion-fails.md",
+      "redirect_url": "/troubleshoot/dynamics-365/guides/application-functionality/anchors-3d-model-conversion-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/guides/pc-app/fail-to-detect-object-anchor.md",
+      "redirect_url": "/troubleshoot/dynamics-365/guides/application-functionality/fail-to-detect-object-anchor",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/guides/hololens-app/step-content-hazard.md",
+      "redirect_url": "/troubleshoot/dynamics-365/guides/application-functionality/step-content-hazard",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/guides/hololens-app/step-content-warning-memory.md",
+      "redirect_url": "/troubleshoot/dynamics-365/guides/application-functionality/step-content-warning-memory",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/guides/hololens-app/step-content-fail-load.md",
+      "redirect_url": "/troubleshoot/dynamics-365/guides/application-functionality/step-content-fail-load",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/guides/install-migrate/sign-in-error.md",
+      "redirect_url": "/troubleshoot/dynamics-365/guides/setup-and-configuration/sign-in-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/guides/install-migrate/install-update-fails.md",
+      "redirect_url": "/troubleshoot/dynamics-365/guides/setup-and-configuration/install-update-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/guides/install-migrate/failed-to-import-microsoft-xrm-data-powershell.md",
+      "redirect_url": "/troubleshoot/dynamics-365/guides/setup-and-configuration/failed-to-import-microsoft-xrm-data-powershell",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/guides/hololens-app/device-license-sign-in-error.md",
+      "redirect_url": "/troubleshoot/dynamics-365/guides/setup-and-configuration/device-license-sign-in-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/remote-assist/remote-assist-app/no-assets-admin.md",
+      "redirect_url": "/troubleshoot/dynamics-365/remote-assist/application-functionality/no-assets-admin",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/remote-assist/remote-assist-app/assets-not-appear-or-expected.md",
+      "redirect_url": "/troubleshoot/dynamics-365/remote-assist/application-functionality/assets-not-appear-or-expected",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/remote-assist/remote-assist-app/contacts-not-appear-or-expected.md",
+      "redirect_url": "/troubleshoot/dynamics-365/remote-assist/application-functionality/contacts-not-appear-or-expected",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/remote-assist/remote-assist-app/remote-assist-stops-responding.md",
+      "redirect_url": "/troubleshoot/dynamics-365/remote-assist/application-functionality/remote-assist-stops-responding",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/remote-assist/remote-assist-app/no-incoming-call-notification.md",
+      "redirect_url": "/troubleshoot/dynamics-365/remote-assist/application-functionality/no-incoming-call-notification",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/remote-assist/remote-assist-app/mixed-reality-toolbar-not-show-on-teams-call.md",
+      "redirect_url": "/troubleshoot/dynamics-365/remote-assist/application-functionality/mixed-reality-toolbar-not-show-on-teams-call",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/remote-assist/model-driven-app/can't-find-model-driven-app.md",
+      "redirect_url": "/troubleshoot/dynamics-365/remote-assist/setup-and-configuration/can't-find-model-driven-app",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/remote-assist/remote-assist-app/cannot-sign-in-to-remote-assist.md",
+      "redirect_url": "/troubleshoot/dynamics-365/remote-assist/setup-and-configuration/cannot-sign-in-to-remote-assist",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/remote-assist/model-driven-app/troubleshoot-model-driven-app-installation.md",
+      "redirect_url": "/troubleshoot/dynamics-365/remote-assist/setup-and-configuration/troubleshoot-model-driven-app-installation",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/manage-apps-and-solutions/dataverse-records-missing-required-fields.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/manage-apps/dataverse-records-missing-required-fields",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/manage-apps-and-solutions/wrap-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/manage-apps/wrap-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/manage-apps-and-solutions/unmanaged-active-layer-created-after-solution-import.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/solutions/unmanaged-active-layer-created-after-solution-import",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/manage-apps-and-solutions/entitykey-selected-attributes-already-exists.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/solutions/entitykey-selected-attributes-already-exists",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/manage-apps-and-solutions/cannot-import-solutions-publish-changes.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/solutions/cannot-import-solutions-publish-changes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/manage-apps-and-solutions/failure-converting-to-managed-solution.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/solutions/failure-converting-to-managed-solution",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/manage-apps-and-solutions/changes-not-effective-solution-import.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/solutions/changes-not-effective-solution-import",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/manage-apps-and-solutions/concurrent-solution-operation-failures.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/solutions/concurrent-solution-operation-failures",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/manage-apps-and-solutions/duplicate-security-roles.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/solutions/duplicate-security-roles",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/manage-apps-and-solutions/dataverse-environment-variables.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/solutions/dataverse-environment-variables",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/manage-apps-and-solutions/form-not-appear-after-import.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/solutions/form-not-appear-after-import",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/manage-apps-and-solutions/full-formxml-expected-to-create-form-error.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/solutions/full-formxml-expected-to-create-form-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/manage-apps-and-solutions/multiple-publisher-shared-component-failure.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/solutions/multiple-publisher-shared-component-failure",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/manage-apps-and-solutions/label-text-not-displayed.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/solutions/label-text-not-displayed",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/manage-apps-and-solutions/maximum-row-size-exceeds.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/solutions/maximum-row-size-exceeds",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/manage-apps-and-solutions/missing-dependency-on-solution-import.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/solutions/missing-dependency-on-solution-import",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/manage-apps-and-solutions/newly-added-components-dont-appear.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/solutions/newly-added-components-dont-appear",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/manage-apps-and-solutions/primaryname-attribute-not-found.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/solutions/primaryname-attribute-not-found",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/manage-apps-and-solutions/install-failure-priviledge-not-assigned.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/solutions/install-failure-priviledge-not-assigned",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/manage-apps-and-solutions/solution-checker-enforcement-import-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/solutions/solution-checker-enforcement-import-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/manage-apps-and-solutions/solution-cannot-be-deleted-due-to-dependencies.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/solutions/solution-cannot-be-deleted-due-to-dependencies",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/manage-apps-and-solutions/upgrade-fails-pending-upgrade.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/solutions/upgrade-fails-pending-upgrade",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/manage-apps-and-solutions/you-cannot-delete-this-form-only-fallback.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/solutions/you-cannot-delete-this-form-only-fallback",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/actions-not-available.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/actions-not-available",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/agent-connectivity-issues-pad.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/agent-connectivity-issues-pad",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/automate-save-as-open-upload-dialog-box-web-browser.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/automate-save-as-open-upload-dialog-box-web-browser",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/browser-automation-error-after-chromium-update.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/browser-automation-error-after-chromium-update",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/browser-blocks-cookies.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/browser-blocks-cookies",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/cannot-access-gateway-run-queue.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/cannot-access-gateway-run-queue",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/cannot-access-java-application-elements.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/cannot-access-java-application-elements",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/cannot-access-parent-flow.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/cannot-access-parent-flow",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/cannot-automate-webpage-with-iframes.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/cannot-automate-webpage-with-iframes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/cannot-connect-access-database-engine-ole-db.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/cannot-connect-access-database-engine-ole-db",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/cannot-create-desktop-flow-connection-from-a-shared-canvas-app.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/cannot-create-desktop-flow-connection-from-a-shared-canvas-app",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/cannot-interact-with-desktop-application.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/cannot-interact-with-desktop-application",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/cannot-record-in-vdi-environments.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/cannot-record-in-vdi-environments",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/cannot-sign-in-create-edit-save-view-desktop-flows.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/cannot-sign-in-create-edit-save-view-desktop-flows",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/cannot-update-power-automate-for-desktop.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/cannot-update-power-automate-for-desktop",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/cloud-flow-suspended-missing-attended-rpa-capability.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/cloud-flow-suspended-missing-attended-rpa-capability",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/cloud-flow-suspended-missing-unattended-rpa-capability.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/cloud-flow-suspended-missing-unattended-rpa-capability",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/communication-error-console.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/communication-error-console",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/console-not-show-desktop-flows.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/console-not-show-desktop-flows",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flow-machine-registration-troubleshooting.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/desktop-flow-machine-registration-troubleshooting",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flow-runs-list-not-updated.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/desktop-flow-runs-list-not-updated",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flow-runs-missing-from-list.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/desktop-flow-runs-missing-from-list",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flow-runs-not-show-monitor-runs.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/desktop-flow-runs-not-show-monitor-runs",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flow-run-time-license-check.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/desktop-flow-run-time-license-check",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows-not-show-console-license-expired-unassigned.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/desktop-flows-not-show-console-license-expired-unassigned",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/double-click-drag-drop-are-not-working.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/double-click-drag-drop-are-not-working",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/enable-webview-pad-login.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/enable-webview-pad-login",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/failed-get-ui-element.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/failed-get-ui-element",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/failed-to-assume-control-of-edge-chrome-firefox-error.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/failed-to-assume-control-of-edge-chrome-firefox-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/failed-to-deserialize-flow-error.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/failed-to-deserialize-flow-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/find-which-machine-is-failing-within-a-cluster.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/find-which-machine-is-failing-within-a-cluster",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/focus-window-action-not-working.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/focus-window-action-not-working",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/how-to-get-power-automate-desktop-installer-logs.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/how-to-get-power-automate-desktop-installer-logs",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/invalid-private-key-file-error.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/invalid-private-key-file-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/issue-with-ui-flows-error-uiaelementnotfound.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/issue-with-ui-flows-error-uiaelementnotfound",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/key-and-mouse-click-combo-not-working.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/key-and-mouse-click-combo-not-working",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/known-limitations-selenium-ide.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/known-limitations-selenium-ide",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/login-windows-keep-appearing.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/login-windows-keep-appearing",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/module-action-wasnt-found-error.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/module-action-wasnt-found-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/multi-screen-recording-is-not-working.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/multi-screen-recording-is-not-working",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/no-ethernet-after-pad-install.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/no-ethernet-after-pad-install",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/proxy-error-console.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/proxy-error-console",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/recorder-not-recording-applications.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/recorder-not-recording-applications",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/reset-ui-flow-service-when-bad-state.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/reset-ui-flow-service-when-bad-state",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/sessioncreationtimeout-error-code.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/sessioncreationtimeout-error-code",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/set-drop-down-list-value-fails.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/set-drop-down-list-value-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/sharing-deskop-flow-with-connections.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/sharing-deskop-flow-with-connections",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/troubleshoot-direct-connectivity-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/troubleshoot-direct-connectivity-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/troubleshoot-errors-running-attended-or-unattended-desktop-flows.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/troubleshoot-errors-running-attended-or-unattended-desktop-flows",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/troubleshoot-excel-errors.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/troubleshoot-excel-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/troubleshooting-tips-sql-queries.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/troubleshooting-tips-sql-queries",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/troubleshooting-ui-flow-playback.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/troubleshooting-ui-flow-playback",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/troubleshoot-ui-flow-playback-unabletolaunchapplication.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/troubleshoot-ui-flow-playback-unabletolaunchapplication",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/troubleshoot-unavailable-gateway-when-desktop-flows-fail.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/troubleshoot-unavailable-gateway-when-desktop-flows-fail",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/ui-automation-action-fails-errors.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/ui-automation-action-fails-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/ui-flow-inputs-not-working.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/ui-flow-inputs-not-working",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/ui-flow-outputs-not-working.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/ui-flow-outputs-not-working",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/ui-flow-playback-error-keyboardidmismatch.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/ui-flow-playback-error-keyboardidmismatch",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/ui-flows-cannot-launch-recorder.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/ui-flows-cannot-launch-recorder",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/ui-flows-fails-uiaelementmismatch.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/ui-flows-fails-uiaelementmismatch",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/ui-flows-run-failed-with-aadlogonfailure-error.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/ui-flows-run-failed-with-aadlogonfailure-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/web-automation-action-fails-runtime.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/web-automation-action-fails-runtime",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/web-extensions-policies.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/web-extensions-policies",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/windows-services-not-start-after-restart.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/windows-services-not-start-after-restart",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "support/windows-server/identity/support-for-admt-and-pes.md",
       "redirect_url": "/troubleshoot/windows-server/identity/support-policy-and-known-issues-for-admt",
       "redirect_document_id": true
@@ -5973,9 +6594,94 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/windows-server/remote/fair-share-enabled-by-default-in-rds.md",
+      "redirect_url": "https://learn.microsoft.com/windows-server/remote/remote-desktop-services/fair-share-enabled-by-default-rds?toc=%2Fazure%2Fvirtual-desktop%2Ftoc.json&bc=%2Fazure%2Fvirtual-desktop%2Fbreadcrumb%2Ftoc.json",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/dynamics-365/customer-insights/insights/segment-no-results.md ",
       "redirect_url": "/troubleshoot/dynamics-365/customer-insights/data/insights/segment-no-results",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/azure-container-instances/index.md",
+      "redirect_url": "/troubleshoot/azure/azure-container-instances/welcome-container-instances",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/azure-storage/index.md",
+      "redirect_url": "/troubleshoot/azure/azure-storage/welcome-azure-storage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/virtual-desktop/index.md",
+      "redirect_url": "/troubleshoot/azure/virtual-desktop/welcome-virtual-desktop",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/commerce/index.md",
+      "redirect_url": "/troubleshoot/dynamics-365/commerce/welcome-commerce",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/customer-insights/index.md",
+      "redirect_url": "/troubleshoot/dynamics-365/customer-insights/welcome-customer-insights",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/customer-service/index.md",
+      "redirect_url": "/troubleshoot/dynamics-365/customer-service/welcome-customer-service",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/finance/index.md",
+      "redirect_url": "/troubleshoot/dynamics-365/finance/welcome-finance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/index.md",
+      "redirect_url": "/troubleshoot/dynamics-365/supply-chain/welcome-supply-chain",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/index.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/welcome-ai-builder",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tss.md",
+      "redirect_url": "/troubleshoot/windows-client/windows-tss/introduction-to-troubleshootingscript-toolset-tss",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/windows-troubleshooters/gather-information-using-tss-wufb-reports.md",
+      "redirect_url": "/troubleshoot/windows-client/windows-tss/gather-information-using-tss-wufb-reports",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/windows-troubleshooters/gather-information-using-tss-user-experience.md",
+      "redirect_url": "/troubleshoot/windows-client/windows-tss/gather-information-using-tss-user-experience",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/windows-troubleshooters/gather-information-using-tss-group-policy.md",
+      "redirect_url": "/troubleshoot/windows-client/windows-tss/gather-information-using-tss-group-policy",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md",
+      "redirect_url": "/troubleshoot/windows-client/windows-tss/gather-information-using-tss-deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md",
+      "redirect_url": "/troubleshoot/windows-client/windows-tss/gather-information-using-tss-ad-replication",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/virtual-machines/boot-error-0xc0000225.md",
+      "redirect_url": "/troubleshoot/azure/virtual-machines/boot-error-status-not-found",
+      "redirect_document_id": true
     }
 ]
 }

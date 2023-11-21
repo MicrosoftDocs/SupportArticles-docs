@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot Azure AD device registration and Windows Autopilot
-description: Provides tips for troubleshooting Azure Active Directory (Azure AD) device registration and Windows Autopilot.
+title: Troubleshoot Microsoft Entra device registration and Windows Autopilot
+description: Provides tips for troubleshooting Microsoft Entra device registration and Windows Autopilot.
 author: helenclu
 ms.author: luche
 ms.reviewer: kaushika, horemaw
@@ -8,19 +8,21 @@ ms.date: 10/06/2021
 search.appverid: MET150
 ms.custom: sap:Windows enrollment
 ---
-# Troubleshooting Azure AD device registration and Windows Autopilot
+# Troubleshooting Microsoft Entra device registration and Windows Autopilot
 
-This article contains tips for troubleshooting Azure Active Directory (Azure AD) device registration and Windows Autopilot issues.
+This article contains tips for troubleshooting Microsoft Entra device registration and Windows Autopilot issues.
 
-## Azure AD device registration
+<a name='azure-ad-device-registration'></a>
 
-By connecting devices to Azure AD, users can easily access the organization's assets, and IT administrators can easily control and manage the connected devices to protect the organization's assets. For more information about device identity, see [What is a device identity?](/azure/active-directory/devices/overview)
+## Microsoft Entra device registration
 
-You have the following options to connect a device to Azure AD:
+By connecting devices to Microsoft Entra ID, users can easily access the organization's assets, and IT administrators can easily control and manage the connected devices to protect the organization's assets. For more information about device identity, see [What is a device identity?](/azure/active-directory/devices/overview)
 
-- Azure AD registered
-- Azure AD joined
-- Hybrid Azure AD joined
+You have the following options to connect a device to Microsoft Entra ID:
+
+- Microsoft Entra registered
+- Microsoft Entra joined
+- Microsoft Entra hybrid joined
 
 To troubleshoot common device registration issues, use the [Device Registration Troubleshooter Tool](https://aka.ms/DevRegTS).
 
@@ -30,7 +32,7 @@ The following screenshot shows the main menu of the tool:
 
 For example, if the device health status is **Pending**, select **5** on the menu. If the device doesn't have the Primary Refresh Token (PRT) issued, select **6** on the menu.
 
-For more information about Azure AD device registration, see the [Azure AD device identity documentation](/azure/active-directory/devices).
+For more information about Microsoft Entra device registration, see the [Microsoft Entra device identity documentation](/azure/active-directory/devices).
 
 ## Windows Autopilot
 

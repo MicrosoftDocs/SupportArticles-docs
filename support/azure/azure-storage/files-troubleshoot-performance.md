@@ -2,8 +2,8 @@
 title: Azure Files performance troubleshooting guide
 description: Troubleshoot performance issues with Azure file shares and discover potential causes and associated workarounds for these problems.
 ms.service: azure-file-storage
-ms.date: 09/21/2023
-ms.reviewer: kendownie
+ms.date: 09/28/2023
+ms.reviewer: kendownie, v-weizhu
 #Customer intent: As a system admin, I want to troubleshoot performance issues with Azure file shares to improve performance for applications and users.
 ---
 # Troubleshoot Azure Files performance issues
@@ -175,11 +175,11 @@ We recommend that you increase the `read_ahead_kb` kernel parameter value to 15 
    ```output
    SUBSYSTEM=="bdi" \
    , ACTION=="add" \
-   , PROGRAM="<absolute_path>/awk -v bdi=$kernel 'BEGIN{ret=1} {if ($4 == bdi) {ret=0}} END{exit ret}' /proc/fs/nfsfs/volumes" \
+   , PROGRAM="/usr/bin/awk -v bdi=$kernel 'BEGIN{ret=1} {if ($4 == bdi) {ret=0}} END{exit ret}' /proc/fs/nfsfs/volumes" \
    , ATTR{read_ahead_kb}="15360"
    ```
 
-1. In a console, apply the udev rule by running the [udevadm](https://www.man7.org/linux/man-pages/man8/udevadm.8.html) command as a superuser:
+1. In a console, apply the udev rule by running the [udevadm](https://www.man7.org/linux/man-pages/man8/udevadm.8.html) command as a superuser and reloading the rules files and other databases. To make udev aware of the new file, you only need to run this command once.
 
    ```bash
    sudo udevadm control --reload

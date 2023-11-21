@@ -7,6 +7,7 @@ documentationcenter: ''
 author: genlin
 manager: dcscontentpm
 tags: virtual-machines
+ms.custom: devx-track-azurecli
 ms.service: virtual-machines
 ms.collection: windows
 ms.topic: troubleshooting

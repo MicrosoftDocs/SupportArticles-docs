@@ -1,20 +1,20 @@
 ---
-title: You can't open the Azure Active Directory Module for Windows PowerShell
-description: Discusses that you can't open the Azure Active Directory Module for Windows PowerShell because the .NET Framework 3.51 is not enabled on the computer. A resolution is provided to enable the .NET Framework 3.51.
+title: You can't open the Azure Active Directory module for Windows PowerShell
+description: Discusses that you can't open the Azure Active Directory module for Windows PowerShell because the .NET Framework 3.51 is not enabled on the computer. A resolution is provided to enable the .NET Framework 3.51.
 ms.date: 06/22/2020
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: domain-services
 ms.custom:
 ---
-# You can't open the Azure Active Directory Module for Windows PowerShell
+# You can't open the Azure Active Directory module for Windows PowerShell
 
-_Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Azure Active Directory, Microsoft Intune, Azure Backup, Office 365 User and Domain Management, Office 365 Identity Management  
+_Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 User and Domain Management, Office 365 Identity Management  
 _Original KB number:_ &nbsp; 2461873
 
 ## Symptoms
 
-When you try to open the Microsoft Azure Active Directory Module for Windows PowerShell, the Windows PowerShell console window opens with many text errors indicating that module packages couldn't be loaded.
+When you try to open the Microsoft Azure Active Directory module for Windows PowerShell, the Windows PowerShell console window opens with many text errors indicating that module packages couldn't be loaded.
 
 ## Cause
 

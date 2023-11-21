@@ -65,16 +65,18 @@ If the NPS server must forward the request to another radius server for authenti
 - The **Remote Radius Server Groups** list includes the radius server in question.
 - The authentication settings for the connection request policy are correct, including the group that is used in forward requests to the remote server.
 
-### Step 5: Temporarily remove Azure AD MFA registry keys
+<a name='step-5-temporarily-remove-azure-ad-mfa-registry-keys'></a>
 
-If you're using NPS and Azure Active Directory (Azure AD) Multi-Factor Authentication (MFA), try to isolate the behavior by temporarily removing the Azure AD MFA registry keys. To do this, follow these steps:
+### Step 5: Temporarily remove Microsoft Entra multifactor authentication registry keys
+
+If you're using NPS and Microsoft Entra multifactor authentication (MFA), try to isolate the behavior by temporarily removing the Microsoft Entra multifactor authentication registry keys. To do this, follow these steps:
 
 1. In Registry Editor, back up the **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Authsrv\Parameters** subkey.
 
 1. Under this subkey, delete the **AuthorizationDLLs** and **ExtensionDLLs** entries.
 1. Test NPS authentication again.
 1. If NPS authentication fails, check Event Viewer to see the reason codes for any related events.
-1. If NPS authentication succeeds, then the issue might be specific to Azure AD MFA. To check for related events, open Event Viewer and go to **Applications and Services Logs** > **Microsoft** > **AzureMfa** > **AuthN** > **AuthZ**.
+1. If NPS authentication succeeds, then the issue might be specific to Microsoft Entra multifactor authentication. To check for related events, open Event Viewer and go to **Applications and Services Logs** > **Microsoft** > **AzureMfa** > **AuthN** > **AuthZ**.
 
 ## Common issues and solutions
 

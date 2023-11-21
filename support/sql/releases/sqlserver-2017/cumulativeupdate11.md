@@ -40,7 +40,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="12333468">[12333468](#12333468)</a> | [FIX: Error occurs when you delete a record in an entity that has "Approval Required" permission enabled in SQL Server 2017 MDS (KB4459575)](https://support.microsoft.com/help/4459575) | Master Data Services | Client | Windows |
 | <a id="12333342">[12333342](#12333342)</a> | [Update makes you set order for processing of business rules for Master Data Services database in SQL Server (KB4459576)](https://support.microsoft.com/help/4459576) | Master Data Services | Server | Windows |
 | <a id="12099875">[12099875](#12099875)</a> | [FIX: Synchronization fails when you stop primary replica and failover a secondary replica to primary in Read-Scale AG in SQL Server 2017 (KB4459900)](https://support.microsoft.com/help/4459900) | SQL Server Engine | High Availability and Disaster Recovery | Windows |
-| <a id="12357208">[12357208](#12357208)</a> | [Update improves SQL server performance by restricting which KDC can be contacted in geographically large networks (KB4463314)](https://support.microsoft.com/help/4463314) | SQL Server Engine | Linux | Linux |
+| <a id="12357208">[12357208](#12357208)</a> | [Update improves SQL Server performance by restricting which KDC can be contacted in geographically large networks (KB4463314)](https://support.microsoft.com/help/4463314) | SQL Server Engine | Linux | Linux |
 | <a id="12347661">[12347661](#12347661)</a> | [FIX: Pacemaker may kill the resource agent processes when operation times out in SQL Server 2017 AlwaysOn Availability Group (KB4460203)](https://support.microsoft.com/help/4460203) | SQL Server Engine | Linux | Linux |
 | <a id="12180166">[12180166](#12180166)</a> | [FIX: Access violation when you try to access a table when page compression is enabled on the table in SQL Server (KB4294694)](https://support.microsoft.com/help/4294694) | SQL Server Engine | Methods to access stored data | Windows |
 | <a id="12245670">[12245670](#12245670)</a> | [FIX: Assertion error occurs when you add a database to an instance of SQL Server 2017 (KB4340730)](https://support.microsoft.com/help/4340730) | SQL Server Engine | Programmability | Windows |
@@ -1020,7 +1020,7 @@ The third-party products that are discussed in this article are manufactured by 
 
 ## References
 
-- [Announcing updates to the SQL Server Incremental Servicing Model (ISM)](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/)
+- [Announcing updates to the SQL Server Incremental Servicing Model (ISM)](/archive/blogs/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism)
 - [SQL Server Service Packs are no longer supported starting from SQL Server 2017](https://support.microsoft.com/topic/fd405dee-cae7-b40f-db14-01e3e4951169)
 - [Determine which version and edition of SQL Server Database Engine is running](../find-my-sql-version.md)
 - [Servicing models for SQL Server](../../general/servicing-models-sql-server.md)

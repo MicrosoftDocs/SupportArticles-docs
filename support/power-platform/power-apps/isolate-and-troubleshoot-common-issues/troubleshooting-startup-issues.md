@@ -33,7 +33,7 @@ The following are some common errors that may appear when you start up or sign i
     > Please select sign in to continue.  
     > Session ID: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
     >
-    > AADSTS50058: A silent sign-in request was sent but no user is signed in. The cookies used to represent the user's session were not sent in the request to Azure AD. This can happen if the user is using Internet Explorer or Edge, and the web app sending the silent sign-in request is in different IE security zone than the Azure AD endpoint (login.microsoftonline.com).  
+    > AADSTS50058: A silent sign-in request was sent but no user is signed in. The cookies used to represent the user's session were not sent in the request to Microsoft Entra ID. This can happen if the user is using Internet Explorer or Edge, and the web app sending the silent sign-in request is in different IE security zone than the Microsoft Entra endpoint (login.microsoftonline.com).  
     > Trace ID: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx  
     > Correlation ID: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx  
     > Timestamp: xxxx-xx-xx xx:xx:xxZ
@@ -73,7 +73,7 @@ Try the following steps to resolve the issue:
 2. Cached data can sometimes prevent you from signing in. [Clear your browser's cache](#clear-your-browser-cache) and cookies and try again.
 3. Try signing in with a different browser. For a list of supported browsers, see [system requirements](/power-apps/limits-and-config#supported-browsers-for-running-power-apps).
 4. Check your network connection to make sure it's stable.
-5. If you're getting Azure Active Directory (Azure AD) errors, they're usually related to user authentication and authorization. The error page might contain additional information that can help diagnose and fix the problem. To resolve Azure AD errors, you might need assistance from your IT department.
+5. If you're getting Microsoft Entra errors, they're usually related to user authentication and authorization. The error page might contain additional information that can help diagnose and fix the problem. To resolve Microsoft Entra errors, you might need assistance from your IT department.
 
 ## Enable storage of third-party cookies and local data in your browser or app
 

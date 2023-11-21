@@ -1,7 +1,7 @@
 ---
 title: Verify first-party Microsoft applications in sign-in reports
 description: Describes how to verify first-party Microsoft applications in sign-in reports.
-ms.date: 07/20/2023
+ms.date: 11/06/2023
 ms.reviewer: bernaw
 ms.service: active-directory
 ms.subservice: compliance
@@ -13,18 +13,20 @@ When you're reviewing your sign-in reports, you might see an application in your
 
 Here's an example sign-in report:
 
-:::image type="content" source="media/verify-first-party-apps-sign-in/sign-in-report.png" alt-text="Screenshot of a sign-in report in Azure Active Directory.":::
+:::image type="content" source="media/verify-first-party-apps-sign-in/sign-in-report.png" alt-text="Screenshot of a sign-in report in Microsoft Entra ID.":::
 
 For example, when you access `learn.microsoft.com`, the application that's shown in the sign-in log may say `dev-rel-auth-prod`, which isn't descriptive of `learn.microsoft.com`.
 
-Although the apps that are listed in sign-in reports are owned by Microsoft and aren't suspicious applications, you can determine whether Microsoft owns an Azure Active Directory (Azure AD) service principal that's found in your Azure AD logs.
+Although the apps that are listed in sign-in reports are owned by Microsoft and aren't suspicious applications, you can determine whether Microsoft owns a Microsoft Entra service principal that's found in your Microsoft Entra logs.
 
 > [!NOTE]
 > First-party Microsoft applications don't always result in a service principal that's created in your tenant. In this case, you'll likely continue to see the applications in your sign-in reports. This article lists the [application IDs of commonly used Microsoft applications](#application-ids-of-commonly-used-microsoft-applications).
 
-## Verify a first-party Microsoft service principal in your Azure AD tenant
+<a name='verify-a-first-party-microsoft-service-principal-in-your-azure-ad-tenant'></a>
 
-1. Open the [list of enterprise applications in Azure AD](https://portal.azure.com/#blade/Microsoft_AAD_IAM/StartboardApplicationsMenuBlade/AllApps/menuId/).
+## Verify a first-party Microsoft service principal in your Microsoft Entra tenant
+
+1. Open the [list of enterprise applications in Microsoft Entra ID](https://portal.azure.com/#blade/Microsoft_AAD_IAM/StartboardApplicationsMenuBlade/AllApps/menuId/).
 
 2. In the navigation pane, select **All applications**.
 
@@ -46,7 +48,7 @@ Although the apps that are listed in sign-in reports are owned by Microsoft and 
 
 ## Verify a first-party Microsoft service principal through PowerShell
 
-1. Open the Azure Active Directory Module in PowerShell.
+1. Open the Azure Active Directory module in PowerShell.
 
 2. In the PowerShell module, enter the following cmdlet:
 
@@ -58,13 +60,13 @@ Although the apps that are listed in sign-in reports are owned by Microsoft and 
 
 3. Review the result's `AppOwnerTenantId`.
 
-    :::image type="content" source="media/verify-first-party-apps-sign-in/review-the-app-owner-tenant-id.png" alt-text="Screenshot of the output of a request to show the Azure AD service principal.":::
+    :::image type="content" source="media/verify-first-party-apps-sign-in/review-the-app-owner-tenant-id.png" alt-text="Screenshot of the output of a request to show the Microsoft Entra service principal.":::
 
-   In the screenshot, `f8cdef31-a31e-4b4a-93e4-5f571e91255a` is the Microsoft Service's Azure AD tenant ID.
+   In the screenshot, `f8cdef31-a31e-4b4a-93e4-5f571e91255a` is the Microsoft Service's Microsoft Entra tenant ID.
 
 ## Application IDs of commonly used Microsoft applications
 
-The following table lists some, but not all, first-party Microsoft applications. You may see these applications in the Sign-ins report in Azure AD.  
+The following table lists some, but not all, first-party Microsoft applications. You may see these applications in the Sign-ins report in Microsoft Entra ID.  
 
 |Application Name|Application IDs|
 |--|--|
@@ -92,6 +94,7 @@ The following table lists some, but not all, first-party Microsoft applications.
 |IrisSelectionFrontDoor|16aeb910-ce68-41d1-9ac3-9e1673ac9575|
 |MCAPI Authorization Prod|d73f4b35-55c9-48c7-8b10-651f6f2acb2e|
 |Media Analysis and Transformation Service|944f0bd1-117b-4b1c-af26-804ed95e767e<br>0cd196ee-71bf-4fd6-a57c-b491ffd4fb1e|
+|Microsoft 365 Security and Compliance Center|80ccca67-54bd-44ab-8625-4b79c4dc7775|
 |Microsoft 365 Support Service|ee272b19-4411-433f-8f28-5c13cb6fd407|
 |Microsoft App Access Panel|0000000c-0000-0000-c000-000000000000|
 |Microsoft Approval Management|65d91a3d-ab74-42e6-8a2f-0add61688c74<br>38049638-cc2c-4cde-abe4-4479d721ed44|
@@ -136,9 +139,9 @@ The following table lists some, but not all, first-party Microsoft applications.
 |Office 365 SharePoint Online|00000003-0000-0ff1-ce00-000000000000|
 |Office Delve|94c63fef-13a3-47bc-8074-75af8c65887a|
 |Office Online Add-in SSO|93d53678-613d-4013-afc1-62e9e444a0a5|
-|Office Online Client AAD- Augmentation Loop|2abdc806-e091-4495-9b10-b04d93c3f040|
-|Office Online Client AAD- Loki|b23dd4db-9142-4734-867f-3577f640ad0c|
-|Office Online Client AAD- Maker|17d5e35f-655b-4fb0-8ae6-86356e9a49f5|
+|Office Online Client Microsoft Entra ID- Augmentation Loop|2abdc806-e091-4495-9b10-b04d93c3f040|
+|Office Online Client Microsoft Entra ID- Loki|b23dd4db-9142-4734-867f-3577f640ad0c|
+|Office Online Client Microsoft Entra ID- Maker|17d5e35f-655b-4fb0-8ae6-86356e9a49f5|
 |Office Online Client MSA- Loki|b6e69c34-5f1f-4c34-8cdf-7fea120b8670|
 |Office Online Core SSO|243c63a3-247d-41c5-9d83-7788c43f1c43|
 |Office Online Search|a9b49b65-0a12-430b-9540-c80b3332c127|
@@ -193,6 +196,6 @@ The following table lists some, but not all, Microsoft tenant-owned applications
 
 ## More information
 
-For more information, see [Sign-in activity reports in the Azure Active Directory portal](/azure/active-directory/reports-monitoring/concept-sign-ins#sign-ins-report).
+For more information, see [Sign-in activity reports in the Microsoft Entra admin center](/azure/active-directory/reports-monitoring/concept-sign-ins#sign-ins-report).
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

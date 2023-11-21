@@ -223,7 +223,7 @@ Here are some recommended methods:
 
 - Only grant the access users need.
 - Limit the number of subscription owners.
-- Use Azure AD Privileged Identity Management.
+- Use Microsoft Entra Privileged Identity Management.
 - Assign roles to groups, not users.
 - Assign roles using the unique role ID instead of the role name.
 

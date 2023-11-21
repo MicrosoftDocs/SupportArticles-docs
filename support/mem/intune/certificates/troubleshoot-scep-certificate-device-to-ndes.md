@@ -248,9 +248,9 @@ When you browse to the SCEP server URL, you receive the following error:
 
 :::image type="content" source="media/troubleshoot-scep-certificate-device-to-ndes/gateway-timeout.png" alt-text="Screenshot of the Gatewaytimeout error." border="false":::
 
-- **Cause**: The **Microsoft Azure AD Application Proxy Connector** service isn't started.
+- **Cause**: The **Microsoft Entra application proxy Connector** service isn't started.
 
-  **Solution**:  Run **services.msc**, and then make sure that the **Microsoft Azure AD Application Proxy Connector** service is running and **Startup Type** is set to **Automatic**.
+  **Solution**:  Run **services.msc**, and then make sure that the **Microsoft Entra application proxy Connector** service is running and **Startup Type** is set to **Automatic**.
 
 ### HTTP 414 Request-URI Too Long
 
@@ -280,7 +280,7 @@ When you browse to the SCEP server URL, you receive the following error: `HTTP 4
 
 ### This page can't be displayed
 
-You have Azure AD Application Proxy configured. When you browse to the SCEP server URL, you receive the following error:
+You have Microsoft Entra application proxy configured. When you browse to the SCEP server URL, you receive the following error:
 
 `This page can't be displayed`
 

@@ -41,8 +41,4 @@ If you have a mix of UEFI and Legacy BIOS machines, you cannot use DHCP Scope Op
 
 ## More information
 
-The WDS Boot Program's for each type of machine are:  
-
-- Legacy BIOS computers: [Wdsnbp Website](http://wdsnbp.com/)
-- UEFI computers: wdsmgfw.efi
- [Managing Network Boot Programs](https://technet.microsoft.com/library/cc732351%28ws.10%29.aspx)
+For more information about he WDS Boot Program's for UEFI computers wdsmgfw.efi, see [Managing Network Boot Programs](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732351%28v=ws.10%29).

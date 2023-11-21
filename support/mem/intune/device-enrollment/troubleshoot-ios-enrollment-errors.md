@@ -141,7 +141,7 @@ When you turn on an ADE-managed device that is assigned an enrollment profile, t
 
 Government users signing in from another device are redirected to the public cloud for authentication rather than the government cloud. 
 
-**Cause:** Azure AD does not yet support redirecting to the government cloud when signing in from another device. 
+**Cause:** Microsoft Entra ID does not yet support redirecting to the government cloud when signing in from another device. 
 
 **Solution:**
 Use the iOS Company Portal **Cloud** setting in the **Settings** app to redirect government users’ authentication towards the government cloud. By default, the **Cloud** setting is set to **Automatic** and Company Portal directs authentication towards the cloud that is automatically detected by the device (such as Public or Government). Government users who are signing in from another device will need to manually select the government cloud for authentication. 

@@ -1,9 +1,9 @@
 ---
 title: Troubleshoot the InvalidResourceReference error code
 description: Learn how to troubleshoot the InvalidResourceReference error when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
-ms.date: 03/23/2022
+ms.date: 10/07/2023
 editor: v-jsitser
-ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis
+ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-create-operations
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the InvalidResourceReference error code so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.
@@ -18,7 +18,11 @@ When you try to create an AKS cluster, you receive the following error message:
 
 > Code="InvalidResourceReference"
 >
-> Message="Resource /subscriptions/*\<subscription-id-guid>*/resourceGroups/MyResourceGroup/providers/Microsoft.Network/virtualNetworks/vnet-otcom/subnets/Subnet-AKS referenced by resource /subscriptions/*\<subscription-id-guid>*/resourceGroups/MC_MyResourceGroup_MyCluster-AKS_JAPANEAST/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-13686447-vmss was not found. Please make sure that the referenced resource exists, and that both resources are in the same region."
+> Message="Resource  
+> **/subscriptions/*\<subscription-id-guid>*/resourceGroups/MyResourceGroup/providers/Microsoft.Network/virtualNetworks/vnet-otcom/subnets/Subnet-AKS**  
+> referenced by resource  
+> **/subscriptions/*\<subscription-id-guid>*/resourceGroups/MC_MyResourceGroup_MyCluster-AKS_JAPANEAST/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool-vmss**  
+> was not found. Please make sure that the referenced resource exists, and that both resources are in the same region."
 >
 > Details=[]
 

@@ -1,14 +1,14 @@
 ---
 title: General password writeback troubleshooting steps
-description: Review general steps to help you troubleshoot password writeback issues in Azure Active Directory (Azure AD).
-ms.date: 02/25/2022
+description: Review general steps to help you troubleshoot password writeback issues in Microsoft Entra ID.
+ms.date: 11/03/2023
 ms.reviewer: jarrettr, nualex, v-leedennis
 editor: v-jsitser
 ms.service: active-directory
 ms.subservice: enterprise-users
-ms.custom: has-azure-ad-ps-ref
+ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 keywords:
-#Customer intent: As an Azure Active Directory administrator, I want to understand how to troubleshoot password writeback issues better so that I can more quickly resolve problems that affect password writeback.
+#Customer intent: As a Microsoft Entra administrator, I want to understand how to troubleshoot password writeback issues better so that I can more quickly resolve problems that affect password writeback.
 ---
 # General password writeback troubleshooting steps
 
@@ -29,9 +29,9 @@ Does the operation fail for one user but succeed for another user? In this situa
 
 1. Get information about certain Active Directory users by running the [Ldifde](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731033(v=ws.11)) command or the [Get-ADUser](/powershell/module/activedirectory/get-aduser) PowerShell cmdlet.
 
-1. Run [user commands in Azure Active Directory (Azure AD) PowerShell](/powershell/module/azuread/#users) to get information about those users in Azure AD.
+1. Run [user commands in Microsoft Graph PowerShell](/powershell/microsoftgraph/find-mg-graph-command) to get information about those users in [Microsoft Graph PowerShell](/powershell/microsoftgraph/overview).
 
-1. Compare the Active Directory and Azure AD information about those two users offline, especially in terms of:
+1. Compare the Active Directory and Microsoft Graph PowerShell information about those two users offline, especially in terms of:
 
     - Administrator roles and groups
     - Organizational unit placement
@@ -46,7 +46,7 @@ Try to use the same domain controller every time that you test or make changes. 
 
 To set the preferred domain controller, follow these steps:
 
-1. Open the Synchronization Service Manager. To do this, select **Start**, enter *azure ad*, select the **Azure AD Connect** group, and then select **Synchronization Service**.
+1. Open the Synchronization Service Manager. To do this, select **Start**, enter *Microsoft Entra ID*, select the **Microsoft Entra Connect** group, and then select **Synchronization Service**.
 
 1. Select the **Connectors** tab, and then select the applicable Active Directory connector. In the **Actions** pane, select **Properties** to open the **Properties** dialog box.
 
@@ -58,7 +58,7 @@ To set the preferred domain controller, follow these steps:
 
 Depending on the issue, it might actually help to try different domain controllers, instead. Then, you can determine whether the issue can be isolated to a specific domain controller or occurs on any domain controller.
 
-In addition, when you use the Active Directory Users and Computers snap-in, change the connected domain controller to the same one that you used for Azure AD Connect. Follow these steps:
+In addition, when you use the Active Directory Users and Computers snap-in, change the connected domain controller to the same one that you used for Microsoft Entra Connect. Follow these steps:
 
 1. Open the Active Directory Users and Computers snap-in. To do this, select **Start**, search on *dsa.msc*, and then press Enter.
 
@@ -66,7 +66,7 @@ In addition, when you use the Active Directory Users and Computers snap-in, chan
 
 1. In the **Change Directory Server** dialog box, select the **This Domain Controller or AD LDS instance** option.
 
-1. In the list of domain controllers, select the domain controller that matches the one that you selected for Azure AD Connect, and then select **OK**.
+1. In the list of domain controllers, select the domain controller that matches the one that you selected for Microsoft Entra Connect, and then select **OK**.
 
 ## Temporarily relax the local Active Directory password policy
 
@@ -78,10 +78,10 @@ These troubleshooting articles for specific password writeback issues contain ma
 
 ## Identify the exact account name for the AD DS Connector
 
-Recheck the name of the current account for the Active Directory Domain Connector. Make sure that this account has the same name as the account that the Azure AD Connect server uses. To find this account name, see [Identify the AD DS Connector account](password-writeback-access-rights-permissions.md#identify-the-ad-ds-connector-account).
+Recheck the name of the current account for the Active Directory Domain Connector. Make sure that this account has the same name as the account that the Microsoft Entra Connect server uses. To find this account name, see [Identify the AD DS Connector account](password-writeback-access-rights-permissions.md#identify-the-ad-ds-connector-account).
 
 ## Learn which writeback operations are supported or unsupported
 
-To review the lists of supported and unsupported password writeback operations, see [How does self-service password reset writeback work in Azure Active Directory?](/azure/active-directory/authentication/concept-sspr-writeback).
+To review the lists of supported and unsupported password writeback operations, see [How does self-service password reset writeback work in Microsoft Entra ID?](/azure/active-directory/authentication/concept-sspr-writeback).
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -43,7 +43,9 @@
     href: subnet-with-external-resources-cannot-be-used-by-other-resources.md
   - name: VMExtensionProvisioningTimeout error
     href: error-code-vmextensionprovisioningtimeout.md
-  - name: ZonalAllocationFailed or AllocationFailed error
+  - name: WINDOWS_CSE_ERROR_CHECK_API_SERVER_CONNECTIVITY error (5)
+    href: windows-cse-error-check-api-server-connectivity.md
+  - name: ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error
     href: error-code-zonalallocationfailed-allocationfailed.md
 
 - name: Troubleshoot upgrade operations
@@ -54,8 +56,10 @@
       href: upgrade-fails-because-of-nsg-rules.md
     - name: NodePoolMcVersionIncompatible error
       href: nodepoolmcversionincompatible-error.md
-    - name: PodDrainFailure error
+    - name: Troubleshoot UpgradeFailed errors due to eviction failures caused by PDBs
       href: error-code-poddrainfailure.md
+    - name: UnsatisfiablePDB error
+      href: error-code-unsatisfiablepdb.md
     - name: PublicIPCountLimitReached error
       href: error-code-publicipcountlimitreached.md
     - name: QuotaExceeded error
@@ -214,7 +218,7 @@
     href: 429-too-many-requests-errors.md
   - name: Argument list too long
     href: application-fails-argument-list-too-long.md
-  - name: Azure AD Pod Identity NMI returns 500 Internal Server Error
+  - name: Microsoft Entra Pod Identity NMI returns 500 Internal Server Error
     href: stale-watch-azure-ad-pod-identity-nmi-status-500.md
   - name: Can't access the cluster API server using authorized IP ranges
     href: cannot-access-cluster-api-server-using-authorized-ip-ranges.md
@@ -260,8 +264,12 @@
 
 - name: Extensions and add-ons
   items:
+  - name: AKS Cost Analysis add-on issues
+    href: aks-cost-analysis-add-on-issues.md
   - name: Troubleshoot Azure Key Vault Provider for Secrets Store CSI Driver
     href: troubleshoot-key-vault-csi-secrets-store-csi-driver.md
+  - name: Troubleshoot cluster extension deployment errors
+    href: cluster-extension-deployment-errors.md
   - name: Troubleshoot Dapr extension installation errors
     href: troubleshoot-dapr-extension-installation-errors.md
   - name: Troubleshoot deployment failures of Azure Marketplace offers

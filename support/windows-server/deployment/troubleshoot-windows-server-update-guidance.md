@@ -91,7 +91,7 @@ To troubleshoot this issue, follow these steps:
 2. Feature updates only: The device might have a safeguard hold applied for the given feature update version. For more information about safeguard holds, see [Safeguard holds](/windows/deployment/update/safeguard-holds) and [Opt out of safeguard holds](/windows/deployment/update/safeguard-opt-out).
 3. Check that the deployment to which the device is assigned has the state **offering**. Deployments that have the states **paused** or **scheduled** won't deploy content to devices.
 4. Check that the device has scanned for updates and is scanning the Windows Update service. To learn more about scanning for updates, see [Scanning updates](/windows/deployment/update/how-windows-update-works#scanning-updates).
-5. Feature updates only: Verify that the device is successfully enrolled in feature update management by the deployment service. A device that is successfully enrolled is represented by an Azure AD device resource with an update management enrollment for feature updates and has no Azure AD device registration errors.
+5. Feature updates only: Verify that the device is successfully enrolled in feature update management by the deployment service. A device that is successfully enrolled is represented by a Microsoft Entra device resource with an update management enrollment for feature updates and has no Microsoft Entra device registration errors.
 6. Expedited quality updates only: Check that the device has the Update Health Tools installed (available for Windows 10 version 1809 or later in the update described in [KB 4023057 - Update for Windows 10 Update Service components](https://support.microsoft.com/topic/kb4023057-update-for-windows-10-update-service-components-fccad0ca-dc10-2e46-9ed1-7e392450fb3a), or a more recent quality update). The Update Health Tools are required for a device to receive an expedited quality update. The program’s location on the device is *C:\\Program Files\\Microsoft Update Health Tools*.  
    To verify its presence, view the installed programs list or use this PowerShell script:
 
@@ -104,7 +104,7 @@ To troubleshoot this issue, follow these steps:
 To troubleshoot this issue, follow these steps:
 
 1. Check that the device is scanning the Windows Update service and not a different endpoint. If the device is scanning for updates from a WSUS endpoint, for example, it might receive different updates. To learn more about scanning for updates, see [Scanning updates](/windows/deployment/update/how-windows-update-works#scanning-updates).
-2. Feature updates only: Check that the device is successfully enrolled in feature update management by the deployment service. A device that isn't successfully enrolled might receive different updates according to its feature update deferral period. A device that is successfully enrolled is represented by an Azure AD device resource with an update management enrollment for feature updates and has no Azure AD device registration errors.
+2. Feature updates only: Check that the device is successfully enrolled in feature update management by the deployment service. A device that isn't successfully enrolled might receive different updates according to its feature update deferral period. A device that is successfully enrolled is represented by a Microsoft Entra device resource with an update management enrollment for feature updates and has no Microsoft Entra device registration errors.
 
 ## WSUS troubleshooting  
 

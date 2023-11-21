@@ -1,0 +1,26 @@
+- name: Dynamics 365 Remote Assist
+  href: welcome-remote-assist.yml
+  items:
+    - name: Application functionality
+      items:
+        - name: Assets tab indicates to contact IT admin
+          href: application-functionality/no-assets-admin.md
+        - name: Assets don't appear or aren't as expected
+          href: application-functionality/assets-not-appear-or-expected.md
+        - name: Contacts don't appear or aren't as expected
+          href: application-functionality/contacts-not-appear-or-expected.md
+        - name: Dynamics 365 Remote Assist not responding
+          href: application-functionality/remote-assist-stops-responding.md
+        - name: Incoming call notifications aren't received
+          href: application-functionality/no-incoming-call-notification.md
+        - name: Mixed Reality toolbar doesn't appear on Teams during a Remote Assist call
+          href: application-functionality/mixed-reality-toolbar-not-show-on-teams-call.md
+    - name: Setup and configuration
+      items:
+        - name: Can't find the Dynamics 365 Remote Assist model-driven app
+          href: setup-and-configuration/can't-find-model-driven-app.md
+        - name: Can't sign in to Dynamics 365 Remote Assist
+          href: setup-and-configuration/cannot-sign-in-to-remote-assist.md
+        - name: Troubleshoot Remote Assist model-driven app installation failures
+          href: setup-and-configuration/troubleshoot-model-driven-app-installation.md
+

@@ -8,7 +8,7 @@ ms.custom: has-azure-ad-ps-ref
 ---
 # Recommendations for conditional access and multi-factor authentication in Microsoft Flow
 
-[Conditional Access](/azure/active-directory/conditional-access/overview) is a feature of Azure Active Directory (Azure AD) that lets you control how and when users can access applications and services. Despite its usefulness, you should be aware that using conditional access may have an adverse or unexpected effect on users in your organization who use Microsoft Flow to connect to Microsoft services that are relevant to conditional access policies.
+[Conditional Access](/azure/active-directory/conditional-access/overview) is a feature of Microsoft Entra ID that lets you control how and when users can access applications and services. Despite its usefulness, you should be aware that using conditional access may have an adverse or unexpected effect on users in your organization who use Microsoft Flow to connect to Microsoft services that are relevant to conditional access policies.
 
 _Applies to:_ &nbsp; Power Automate  
 _Original KB number:_ &nbsp; 4467879
@@ -25,7 +25,7 @@ The following screenshot shows an MFA policy example that requires MFA for speci
 
 :::image type="content" source="media/conditional-access-and-multi-factor-authentication-in-flow/require-mfa-for-azure-portal.png" alt-text="Screenshot shows an example that requires M F A for the specific users when accessing the Azure Management portal.":::
 
-You can also open the MFA configuration from the Azure portal. To do this, select **Azure Active Directory** > **Users and groups** > **All users** > **Multi-Factor Authentication**, and then configure policies by using the **service settings** tab.
+You can also open the MFA configuration from the Azure portal. To do this, select **Microsoft Entra ID** > **Users and groups** > **All users** > **Multi-Factor Authentication**, and then configure policies by using the **service settings** tab.
 
 :::image type="content" source="media/conditional-access-and-multi-factor-authentication-in-flow/mfa-azure-portal.png" alt-text="Screenshot shows steps to open the M F A configuration from the Azure portal.":::
 
@@ -35,7 +35,7 @@ MFA can also be configured from **Microsoft 365 admin center**. A subset of Azur
 
 :::image type="content" source="media/conditional-access-and-multi-factor-authentication-in-flow/remember-multi-factor-authentication-option.png" alt-text="Screenshot of the remember multi-factor authentication option details.":::
 
-The **remember multi-factor authentication** setting can help you to reduce the number of user logons by using a persistent cookie. This policy controls the Azure AD settings that are documented in [Remember Multi-Factor Authentication for trusted devices](/azure/active-directory/authentication/howto-mfa-mfasettings#remember-multi-factor-authentication-for-trusted-devices).
+The **remember multi-factor authentication** setting can help you to reduce the number of user logons by using a persistent cookie. This policy controls the Microsoft Entra settings that are documented in [Remember Multi-Factor Authentication for trusted devices](/azure/active-directory/authentication/howto-mfa-mfasettings#remember-multi-factor-authentication-for-trusted-devices).
 
 Unfortunately, this setting changes the token policy settings that make the Flow connections expire every 14 days. This is one of the common reasons why Flow connections fail more frequently after MFA is enabled. We recommend that you do not use this setting. Instead, you can achieve the same functionality by using the following token lifetime policy.
 
@@ -54,7 +54,7 @@ The primary adverse effect of conditional access on Flow is caused by the settin
 
 We recommend that you use the token policy instead of the **remember multi-factor authentication** setting to configure different values for _theMaxAgeMultiFactor_ and _MaxAgeSessionMultiFactor_ settings. The token policy lets Flow connections keep working while also controlling a user logon session for the Office 365 web apps._MaxAgeMultiFactor_ has to have a reasonably longer period - ideally, the Until-Revoked value. This is to make Flow connections keep working until the refresh token is revoked by the admin. _MaxAgeSessionMultiFactor_ affects a user logon session. Tenant administrators can select the value that they want, depending on how frequently they want the users to sign in to the Office 365 web apps before the session expires.
 
-To view Active Directory policies in your organization, you can use the following commands. The [Configurable token lifetimes in Azure Active Directory (Preview)](/azure/active-directory/develop/active-directory-configurable-token-lifetimes) document provides specific instructions to query and update the settings in your organization.
+To view Active Directory policies in your organization, you can use the following commands. The [Configurable token lifetimes in Microsoft Entra ID (Preview)](/azure/active-directory/develop/active-directory-configurable-token-lifetimes) document provides specific instructions to query and update the settings in your organization.
 
 ## View existing token lifetime policies
 

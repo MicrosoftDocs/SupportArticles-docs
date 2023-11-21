@@ -14,11 +14,11 @@ ms.subservice: ts-pipelines
 
 Per company policy and security protocols, some Azure DevOps admins don't have permissions to manage Azure subscriptions. To create service principal names (SPNs), these admins can use the manual Azure RM service principal option.
 
-To create SPNs, users who have permissions for Azure subscriptions and Azure Active Directory (Azure AD) can follow these steps:
+To create SPNs, users who have permissions for Azure subscriptions and Microsoft Entra ID can follow these steps:
 
 1. Sign in to the [Azure portal](https://ms.portal.azure.com/#home).
 
-1. Select **Azure Active Directory > App registrations**.
+1. Select **Microsoft Entra ID > App registrations**.
 
 1. Select your application on the list, and then select **Client secrets > New client secret**.
 

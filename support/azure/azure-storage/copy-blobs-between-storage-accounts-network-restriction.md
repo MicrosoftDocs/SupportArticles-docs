@@ -18,13 +18,13 @@ Copying blobs between two storage accounts by using AzCopy doesn't rely on the n
 
 ## AzCopy commands for copying blobs between storage accounts
 
-- If you provide authorization credentials by using Azure Active Directory (Azure AD), use the following command:
+- If you provide authorization credentials by using Microsoft Entra ID, use the following command:
 
     ```azcopy
     azcopy copy 'https://<source-storage-account-name>.blob.core.windows.net/<container-name>/<blob-path>' 'https://<destination-storage-account-name>.blob.core.windows.net/<container-name>/<blob-path>'
     ```
 
-    In this scenario, you need to make sure your Azure AD identity has the proper role assignments for both source and destination accounts.
+    In this scenario, you need to make sure your Microsoft Entra identity has the proper role assignments for both source and destination accounts.
 
 - If you use a Shared Access Signature (SAS) token, use the following command:
 

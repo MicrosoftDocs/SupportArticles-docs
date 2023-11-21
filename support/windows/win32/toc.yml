@@ -24,7 +24,7 @@
       href: vari8fromcy-produces-incorrect-value.md
   - name: Desktop app UI development
     items:
-    - name: CreateProcessWithLogonW fails when called on a Microsoft Entra ID account
+    - name: CreateProcessWithLogonW fails when called on a Microsoft Entra account
       href: createprocesswithlogonw-fails-microsoft-entra-id-account.md
     - name: Hook procedure doesn't receive the VK_CONVERT message
       href: hook-procedure-not-receiving-vk-convert-message.md
@@ -93,7 +93,9 @@
     - name: Get status of printer and print job
       href: printer-print-job-status.md
     - name: GetICMProfile might leak one or more handles on Windows 10
-      href: geticmprofile-might-leak-one-or-more-handles-on-windows10.md      
+      href: geticmprofile-might-leak-one-or-more-handles-on-windows10.md
+    - name: Graphics::DrawImage is slow when drawing JPEG or PNG images to a printer
+      href: graphicsdrawimage-slow-drawing-jpeg-png-printer.md
     - name: Interoperability between GDI and GDI+
       href: mix-gdi-and-gdi-plus-drawing.md
     - name: Modify printer settings by using SetPrinter

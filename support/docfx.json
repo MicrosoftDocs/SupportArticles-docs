@@ -52,17 +52,50 @@
       "recommendations": true
     },
     "fileMetadata": {
+      "uhfHeaderId": {
+        "azure/**.*": "Azure",
+        "developer/biztalk/**.*": "MSDocsHeader-BizTalk",
+        "developer/browsers/**.*": "MSDocsHeader-MSEdge",
+        "developer/dotnet/**.*": "MSDocsHeader-DotNet",
+        "developer/host-integration-server/**.*": "MSDocsHeader-His",
+        "developer/visualstudio/**.*": "MSDocsHeader-VisualStudio",
+        "developer/webapps/**.*": "MSDocsHeader-AspNet",
+        "developer/webapps/aspnet/**.*": "MSDocsHeader-AspNet",
+        "developer/webapps/aspnetcore/**.*": "MSDocsHeader-AspNet",
+        "developer/webapps/iis/**.*": "MSDocsHeader-Windows",
+        "devices/**.*": "MSDocsHeader-Surface",
+        "dynamics-365/**.*": "MSDocsHeader-Dynamics365",
+        "dynamics-365/commerce/**.*": "MSDocsHeader-Dynamics365-Commerce",
+        "dynamics-365/customer-insights/**.*": "MSDocsHeader-Dynamics365-Customer-Insights",
+        "dynamics-365/customer-service/**.*": "MSDocsHeader-Dynamics365-CustomerService",
+        "dynamics-365/field-service/**.*": "MSDocsHeader-Dynamics365-Field-Service",
+        "dynamics-365/sales/**.*": "MSDocsHeader-Dynamics365Sales",
+        "mem/**.*": "MSDocsHeader-Intune",
+        "power-platform/**.*": "MSDocsHeader-PowerPlatform",
+        "power-platform/power-apps/**.*": "MSDocsHeader-MSPowerApps",
+        "power-platform/power-automate/**.*": "MSDocsHeader-MSPowerAutomate",
+        "sql/**.*": "MSDocsHeader-DocsSQL",
+        "system-center/**.*": "MSDocsHeader-SystemCenter",
+        "windows/**.*": "MSDocsHeader-Windows",
+        "windows/win32/*.*": "MSDocsHeader-WinDevCenter",
+        "windows-client/**.*": "MSDocsHeader-Windows",
+        "windows-hardware/**.*": "MSDocsHeader-WinHW",
+        "windows-server/**.*": "MSDocsHeader-WindowsServer"
+    },
       "feedback_product_url": {
         "dynamics/gp/*.md": "https://experience.dynamics.com/ideas/categories/?forum=771cc5ac-c117-e811-8105-3863bb2e0320&forumName=Dynamics%20GP",
         "dynamics-365/customer-insights/**/*.md": "https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights",
         "dynamics-365/finance/**/*.md": "https://experience.dynamics.com/ideas/categories/?forum=16691718-61e2-e611-8101-5065f38b21f1&forumName=Dynamics%20365%20Finance",
-        "dynamics-365/marketing/*.md": "https://experience.dynamics.com/ideas/categories/?forum=dfa5b83d-9e4c-e811-a956-000d3a1bef07&forumName=Dynamics%20365%20Marketing",
         "dynamics-365/commerce/**/*.md": "https://experience.dynamics.com/ideas/categories/?forum=fd509429-7e87-e711-8105-c4346bb5988c&forumName=Dynamics%20365%20Commerce",
         "dynamics-365/customer-service/**/*.md": "https://experience.dynamics.com/ideas/categories/?forum=b68e50a6-88d9-e811-a96b-000d3a1be7ad&forumName=Dynamics%20365%20Customer%20Service",
+        "dynamics-365/field-service/**/*.md": "https://experience.dynamics.com/ideas/categories/?forum=bee3d862-df65-e811-a95d-000d3a1be7ad&forumName=Dynamics%20365%20Field%20Service",
         "dynamics-365/sales/*.md": "https://experience.dynamics.com/ideas/categories/?forum=3d83d841-984b-ea11-a812-000d3a579c39&forumName=Dynamics%20365%20Sales",
+        "dynamics-365/guides/**/*.md": "https://experience.dynamics.com/ideas/categories/?forum=4d46097d-3138-e911-a95b-000d3a4f3883&forumName=Dynamics%20365%20Guides",
+        "dynamics-365/remote-assist/**/*.md": "https://experience.dynamics.com/ideas/categories/?forum=4323c621-52bc-e811-a975-000d3a1bec70&forumName=Dynamics%20365%20Remote%20Assist",
         "dynamics-365/supply-chain/**/*.md": "https://experience.dynamics.com/ideas/categories/?forum=515617a5-dedb-e911-a814-000d3a4f1244&forumName=Dynamics%20365%20Supply%20Chain%20Management",
         "power-platform/power-apps/**/*.md": "https://ideas.powerapps.com/d365community/forum/f1458c72-ae29-ed11-9db2-000d3a8c451e",
         "power-platform/power-automate/*.md": "https://ideas.powerautomate.com/d365community/forum/086dd68e-597f-ec11-8d21-0022482e8f9f",
+        "power-platform/power-automate/**/*.md": "https://ideas.powerautomate.com/d365community/forum/086dd68e-597f-ec11-8d21-0022482e8f9f",
         "power-platform/ai-builder/*.md": "https://powerusers.microsoft.com/t5/AI-Builder/bd-p/AIBuilder1",
         "windows-server/**/*.md": "https://techcommunity.microsoft.com/t5/windows-server-for-it-pro/bd-p/WindowsServer",
         "windows-client/**/*.md": "https://support.microsoft.com/windows/f59187f8-8739-22d6-ba93-f66612949332",
@@ -278,13 +311,16 @@
         "azure/cosmos-db/**/*.md": "cosmos-db",
         "power-platform/power-apps/**/**.*": "powerapps",
         "power-platform/power-automate/*.md": "power-automate",
+        "power-platform/power-automate/**/*.md": "power-automate",
         "dynamics-365/customer-insights/**/**.*": "customer-insights",
         "dynamics-365/customer-service/**/**.*": "dynamics-365-customerservice",
-        "dynamics-365/marketing/*.md": "dynamics-365-marketing",
         "dynamics-365/sales/*.md": "dynamics-365-sales",
         "dynamics-365/finance/**/**.*": "dynamics-365-finance",
         "dynamics-365/commerce/**/**.*": "dynamics-365-commerce",
         "dynamics-365/supply-chain/**/**.*": "dynamics-365-supply-chain",
+        "dynamics-365/guides/**/**.*": "dynamics-365-guides",
+        "dynamics-365/remote-assist/**/**.*": "dynamics-365-remote-assist",
+        "dynamics-365/field-service/**/**.*": "dynamics-365-field-service",
         "mem/intune/**/*.md": "microsoft-intune",
         "power-platform/ai-builder/*.md": "aibuilder",
         "sql/**/*.md": "sql",
@@ -293,6 +329,11 @@
         "sql/reporting-services/**/*.md": "reporting-services"
       },
       "ms.subservice": {
+        "dynamics-365/field-service/administration/**.*": "d365-fs-admin-settings",
+        "dynamics-365/field-service/customization/**.*": "d365-fs-customization",
+        "dynamics-365/field-service/iot/**.*": "d365-fs-iot-connected",
+        "dynamics-365/field-service/rso/**.*": "d365-fs-resource-scheduling-optimization",
+        "dynamics-365/field-service/scheduling/**.*": "d365-fs-scheduling",
         "dynamics-365/customer-insights/administration/**.*": "d365-ci-administration",
         "dynamics-365/customer-insights/data-ingestion/**.*": "d365-ci-data-ingestion",
         "dynamics-365/customer-insights/exports/**.*": "d365-ci-exports",
@@ -332,7 +373,8 @@
         "power-platform/power-apps/create-and-use-apps/**.*": "powerapps-create-use-apps",
         "power-platform/power-apps/dataverse-web-api/**.*": "powerapps-dataverse",
         "power-platform/power-apps/isolate-and-troubleshoot-common-issues/**.*": "powerapps-common-issues",
-        "power-platform/power-apps/manage-apps-and-solutions/**.*": "powerapps-manage-apps-solutions",
+        "power-platform/power-apps/manage-apps/**.*": "powerapps-manage-apps",
+        "power-platform/power-apps/solutions/**.*": "solutions",
         "mem/intune/app-management/*.md": "intune-app-management",
         "mem/intune/app-protection-policies/*.md": "intune-app-protection-policies",
         "mem/intune/certificates/*.md": "intune-certificates",
@@ -370,7 +412,11 @@
         "sql/database-engine/replication/**/*.md": "sql-engine-replication",
         "sql/database-engine/startup-shutdown/**/*.md": "sql-engine-startup-shutdown",
         "sql/database-engine/performance/**/*.md": "sql-engine-performance",
-        "sql/database-engine/security/**/*.md": "sql-engine-security"
+        "sql/database-engine/security/**/*.md": "sql-engine-security",
+        "azure/azure-functions/deployment/**/*.md": "code-deployment",
+        "azure/azure-functions/config-mgmt/**/*.md": "configuration-management",
+        "azure/azure-functions/creation-deletion/**/*.md": "creation-deletion",
+        "azure/azure-functions/monitoring/**/*.md": "monitoring"
       },
       "titleSuffix": {
         "developer/biztalk/**/*.md": "BizTalk Server",
@@ -410,13 +456,16 @@
         "azure/cosmos-db/**/*.md": "Azure Cosmos DB",
         "dynamics-365/customer-insights/**/*.md": "Dynamics 365 Customer Insights",
         "dynamics-365/customer-service/**/*.md": "Dynamics 365 Customer Service",
-        "dynamics-365/marketing/*.md": "Dynamics 365 Marketing",
+        "dynamics-365/field-service/**/*.md": "Dynamics 365 Field Service",
+        "dynamics-365/guides/**/**.*": "Dynamics 365 Guides",
+        "dynamics-365/remote-assist/**/**.*": "Dynamics 365 Remote Assist",
         "dynamics-365/sales/*.md": "Dynamics 365 Sales",
         "dynamics-365/finance/**/*.md": "Dynamics 365 Finance",
         "dynamics-365/commerce/**/*.md": "Dynamics 365 Commerce",
         "dynamics-365/supply-chain/**/*.md": "Dynamics 365 Supply Chain Management",
         "power-platform/power-apps/**/*.md": "Power Apps",
         "power-platform/power-automate/*.md": "Power Automate",
+        "power-platform/power-automate/**/*.md": "Power Automate",
         "power-platform/ai-builder/*.md": "AI Builder",
         "dynamics/gp/*.md": "Dynamics GP"
       },
@@ -505,20 +554,30 @@
           "Dynamics 365",
           "Sales"
         ],
-        "dynamics-365/marketing/**/*.md": [
-          "Troubleshoot",
-          "Dynamics 365",
-          "Marketing"
-        ],
         "dynamics-365/customer-insights/**/*.md": [
           "Troubleshoot",
           "Dynamics 365",
           "Customer Insights"
         ],
+        "dynamics-365/field-service/**/*.md": [
+          "Troubleshoot",
+          "Dynamics 365",
+          "Field Service"
+        ],
         "dynamics-365/customer-service/**/*.md": [
           "Troubleshoot",
           "Dynamics 365",
           "Customer Service"
+        ],
+        "dynamics-365/guides/**/*.md": [
+          "Troubleshoot",
+          "Dynamics 365",
+          "Guides"
+        ],
+        "dynamics-365/remote-assist/**/*.md": [
+          "Troubleshoot",
+          "Dynamics 365",
+          "Remote Assist"
         ],
         "dynamics-365/finance/**/*.md": [
           "Troubleshoot",
@@ -542,6 +601,11 @@
           "Power Platform",
           "Power Apps"
         ],
+        "power-platform/power-automate/**/*.md": [
+          "Troubleshoot",
+          "Power Platform",
+          "Power Automate"
+        ],
         "power-platform/power-automate/*.md": [
           "Troubleshoot",
           "Power Platform",
@@ -564,6 +628,10 @@
           "dataverse-docs"
         ],
         "power-platform/power-automate/*.md": [
+          "Flow",
+          "powerautomate-docs"
+        ],
+        "power-platform/power-automate/**/*.md": [
           "Flow",
           "powerautomate-docs"
         ],

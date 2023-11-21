@@ -4,7 +4,7 @@ description: This article contains the release history for SQL Server 2017 runni
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, vanto
-ms.date: 09/15/2023
+ms.date: 10/10/2023
 ms.custom: linux-related-content
 ---
 # <a id="release-history"></a> Release history for SQL Server 2017 on Linux
@@ -18,6 +18,7 @@ The following table lists the release history for [!INCLUDE [sql-server-2017](..
 
 | Release                | Version       | Release date |
 | ---------------------- | ------------- | ------------ |
+| [CU 31 GDR 2](#CU31-GDR2) | 14.0.3465.1   | 2023-10-10   |
 | [CU 31 GDR](#CU31-GDR) | 14.0.3460.9   | 2023-02-14   |
 | [CU 31](#CU31)         | 14.0.3456.2   | 2022-09-20   |
 | [CU 30](#CU30)         | 14.0.3451.2   | 2022-07-13   |
@@ -58,6 +59,25 @@ The following table lists the release history for [!INCLUDE [sql-server-2017](..
 | [CU 2](#CU2)           | 14.0.3008.27  | 2017-11-28   |
 | [CU 1](#CU1)           | 14.0.3006.16  | 2017-10-24   |
 | [GA](#GA)              | 14.0.1000.169 | 2017-10-02   |
+
+## <a id="CU31-GDR2"></a> CU 31 GDR 2 (October 2023)
+
+This is the Cumulative Update 31-GDR2 (CU 31 GDR 2) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. This is a security update that also includes the previously released CU (CU 31). The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3465.1. For information about the fixes and improvements in this release, see [KB 5029376](https://support.microsoft.com/help/5029376).
+
+> [!IMPORTANT]  
+> This is the final cumulative update for [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)].
+
+### Package details
+
+For manual or offline package installations, you can download the RPM and Debian packages with the information in the following table:
+
+| Distribution | Package version | Downloads |
+| --- | --- | --- |
+| **RHEL 8.x RPM packages**<br /><br />(Get [RHEL 7.x RPM packages](https://packages.microsoft.com/rhel/7/mssql-server-2017/Packages/m/)) | 14.0.3465.1-1 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-14.0.3465.1-1.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3465.1-1.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3465.1-1.x86_64.rpm) |
+| **SLES 12 RPM packages** | 14.0.3465.1-1 | [Database Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-14.0.3465.1-1.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3465.1-1.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3465.1-1.x86_64.rpm) |
+| **Ubuntu 18.04 Debian packages**<br /><br />(Get [Ubuntu 16.04 Debian packages](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/)) | 14.0.3465.1-1 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3465.1-1_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3465.1-1_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3465.1-1_amd64.deb) |
+
+Go back to the [release history](#release-history).
 
 ## <a id="CU31-GDR"></a> CU 31 GDR (February 2023)
 
@@ -779,16 +799,12 @@ Package details and download locations for the RPM and Debian packages are liste
 
 Go back to the [release history](#release-history).
 
-## See also
+## Related content
 
 - [SQL Server on Linux FAQ](/sql/linux/sql-server-linux-faq)
-
-## Next steps
-
 - [Install on Red Hat Enterprise Linux](/sql/linux/quickstart-install-connect-red-hat)
 - [Install on SUSE Linux Enterprise Server](/sql/linux/quickstart-install-connect-suse)
 - [Install on Ubuntu](/sql/linux/quickstart-install-connect-ubuntu)
 - [Run on Docker](/sql/linux/quickstart-install-connect-docker)
 - [Create a SQL VM in Azure](/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart)
 - [Run & Connect - Cloud](/sql/linux/quickstart-install-connect-clouds)
-

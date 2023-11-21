@@ -1,6 +1,6 @@
 ---
 title: Can't delete a directory through the Azure Management Portal
-description: Fixes an issue in which you can't delete a directory from the Azure Active Directory extension.
+description: Fixes an issue in which you can't delete a directory from the Microsoft Entra extension.
 ms.date: 05/22/2020
 ms.reviewer: willfid
 ms.service: active-directory
@@ -9,14 +9,14 @@ ms.custom: has-azure-ad-ps-ref
 ---
 # Can't delete a directory through the Azure Management Portal
 
-This article can help you fix an issue in which you can't delete a directory from the Azure Active Directory extension in Azure portal.
+This article can help you fix an issue in which you can't delete a directory from the Microsoft Entra extension in Azure portal.
 
-_Original product version:_ &nbsp; Azure Active Directory  
+_Original product version:_ &nbsp; Microsoft Entra ID  
 _Original KB number:_ &nbsp; 2967860
 
 ## Symptoms
 
-You can't delete a directory from the Microsoft Azure Active Directory extension through the Azure Management Portal. Additionally, you receive one of the following messages:
+You can't delete a directory from the Microsoft Entra extension through the Azure Management Portal. Additionally, you receive one of the following messages:
 
 > You are signed in as a user for whom \<Your Company Name> is the home directory.
   
@@ -43,7 +43,7 @@ For example, your directory has the domains `contoso.onmicrosoft.com` and `conto
 To learn more about how to add a guest user, see [Create or edit users](/previous-versions/azure/hh967632(v=azure.100)). When you create this user in your directory, select one of the following:
 
 - A user who has an existing Microsoft account
-- A user in another Azure AD directory
+- A user in another Microsoft Entra directory
 
 This user must also be an admin of your Azure subscription.
 
@@ -59,14 +59,14 @@ Do you have one of the following subscriptions?
 - Intune
 - Dynamics
 - Microsoft Azure Information Protection (previously known as Microsoft Azure Rights Management)
-- Azure Active Directory Premium
+- Microsoft Entra ID P1 or P2
 
 If you have one of these subscriptions, contact [billing and subscriptions support](https://support.office.com/).
 
 Do you have one of the following subscriptions?
 
 - Microsoft Enterprise Mobility + Security
-- Azure Active Directory Basic
+- Microsoft Entra Basic
 
 If you have one of these subscriptions, contact your Volume Licensing partner to cancel the subscription.
 
@@ -92,9 +92,9 @@ If you have an Azure subscription, make sure that your Azure subscription is not
 
 To learn how to remove applications from your directory, read [Adding, updating, and removing an application](/azure/active-directory/develop/quickstart-register-app)
 
-You may also have to remove additional service principals. Use Azure Active Directory Module for Windows PowerShell to remove all service principals. To do this, follow these steps:
+You may also have to remove additional service principals. Use Azure Active Directory module for Windows PowerShell to remove all service principals. To do this, follow these steps:
 
-1. Open Azure Active Directory Module for Windows PowerShell.
+1. Open Azure Active Directory module for Windows PowerShell.
 2. Connect to the Microsoft Online Service.
 3. Run the following command:
 
@@ -117,6 +117,6 @@ Contact Microsoft Partner Support at [Microsoft Partner Site](https://partner.mi
 
 ## Directory contains one or more applications that were added by a user or administrator
 
-To fix this issue, follow the steps in ["Cannot delete" error when you try to delete a B2C directory in Azure AD](https://support.microsoft.com/help/3112170).
+To fix this issue, follow the steps in ["Cannot delete" error when you try to delete a B2C directory in Microsoft Entra ID](https://support.microsoft.com/help/3112170).
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

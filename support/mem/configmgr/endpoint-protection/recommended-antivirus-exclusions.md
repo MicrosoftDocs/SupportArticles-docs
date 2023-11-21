@@ -73,6 +73,7 @@ We recommend that you add the following real-time protection exclusions to preve
     - *Installation drive*\SMS\MP\OUTBOXES
 - Distribution points
   - *Client installation folder*\ServiceData
+  - *ContentLib_drive*\SCCMContentLib
   - *ContentLib_drive*\SMS_DP$
   - *ContentLib_drive*\SMSPKGDrive_Letter$
   - *ContentLib_drive*\SMSPKG

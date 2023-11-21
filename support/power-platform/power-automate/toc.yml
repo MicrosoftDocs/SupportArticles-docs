@@ -33,7 +33,7 @@
           href: check-if-gateway-is-the-right-region.md
         - name: Common errors creating and assigning flow approvals
           href: common-errors-creating-and-assigning-flow-approvals.md
-        - name: Desktop flow invalid credentials error using AAD account
+        - name: Desktop flow invalid credentials error using Microsoft Entra account
           href: troubleshoot-ui-flow-invalid-credentials-error-using-aad-account.md
         - name: Differences between flow approval actions
           href: differences-between-flow-approval-actions.md
@@ -90,133 +90,103 @@
     - name: Desktop flows
       items:
         - name: Agent-related errors when running attended or unattended desktop flows
-          href: agent-connectivity-issues-pad.md
+          href: desktop-flows/agent-connectivity-issues-pad.md
         - name: Browser automation actions stop working after a browser update
-          href: browser-automation-error-after-chromium-update.md
+          href: desktop-flows/browser-automation-error-after-chromium-update.md
         - name: Can't automate webpage with cross-domain iframes
-          href: cannot-automate-webpage-with-iframes.md
+          href: desktop-flows/cannot-automate-webpage-with-iframes.md
         - name: Can't create a connection from a shared canvas app
-          href: cannot-create-desktop-flow-connection-from-a-shared-canvas-app.md
-        - name: Check if Gateway or machine is online when desktop flows fail with a gateway
-          href: troubleshoot-unavailable-gateway-when-desktop-flows-fail.md
+          href: desktop-flows/cannot-create-desktop-flow-connection-from-a-shared-canvas-app.md
         - name: Can't interact with web elements on runtime
-          href: web-automation-action-fails-runtime.md
+          href: desktop-flows/web-automation-action-fails-runtime.md
         - name: Can't record in a VDI environment
-          href: cannot-record-in-vdi-environments.md
+          href: desktop-flows/cannot-record-in-vdi-environments.md
         - name: Can't sign in with JavaScript error
-          href: enable-webview-pad-login.md
+          href: desktop-flows/enable-webview-pad-login.md
         - name: Can't access the parent flow
-          href: cannot-access-parent-flow.md
-        - name: Can't access the run queue of a gateway
-          href: cannot-access-gateway-run-queue.md
+          href: desktop-flows/cannot-access-parent-flow.md
         - name: Can't automate "Save as", "Open" or "Upload" dialog boxes in web browser
-          href: automate-save-as-open-upload-dialog-box-web-browser.md
+          href: desktop-flows/automate-save-as-open-upload-dialog-box-web-browser.md
         - name: Can't interact with desktop application without an error
-          href: cannot-interact-with-desktop-application.md
+          href: desktop-flows/cannot-interact-with-desktop-application.md
         - name: Can't sign in, create, edit, save or view desktop flows
-          href: cannot-sign-in-create-edit-save-view-desktop-flows.md
+          href: desktop-flows/cannot-sign-in-create-edit-save-view-desktop-flows.md
         - name: Can't establish connection to Access Database Engine OLE DB
-          href: cannot-connect-access-database-engine-ole-db.md
+          href: desktop-flows/cannot-connect-access-database-engine-ole-db.md
         - name: Can't access the elements of a Java application
-          href: cannot-access-java-application-elements.md
+          href: desktop-flows/cannot-access-java-application-elements.md
         - name: Can't execute a shared desktop flow after changing the connection
-          href: sharing-deskop-flow-with-connections.md
+          href: desktop-flows/sharing-deskop-flow-with-connections.md
         - name: Cloud flow is suspended due to missing the attended RPA capability
-          href: cloud-flow-suspended-missing-attended-rpa-capability.md
+          href: desktop-flows/cloud-flow-suspended-missing-attended-rpa-capability.md
         - name: Cloud flow is suspended due to missing the unattended RPA capability
-          href: cloud-flow-suspended-missing-unattended-rpa-capability.md 
+          href: desktop-flows/cloud-flow-suspended-missing-unattended-rpa-capability.md 
         - name: Communication error when launching Power Automate for desktop
-          href: communication-error-console.md
+          href: desktop-flows/communication-error-console.md
         - name: Desktop flows don't show in console if license expired or unassigned
-          href: desktop-flows-not-show-console-license-expired-unassigned.md
+          href: desktop-flows/desktop-flows-not-show-console-license-expired-unassigned.md
         - name: Desktop flow runs don't show in Desktop flow runs page
-          href: desktop-flow-runs-not-show-monitor-runs.md
+          href: desktop-flows/desktop-flow-runs-not-show-monitor-runs.md
         - name: Desktop flow runs are missing from the list
-          href: desktop-flow-runs-missing-from-list.md
+          href: desktop-flows/desktop-flow-runs-missing-from-list.md
         - name: Desktop flow runs list isn't updated
-          href: desktop-flow-runs-list-not-updated.md
+          href: desktop-flows/desktop-flow-runs-list-not-updated.md
         - name: Desktop flows run failed with AadLogonFailure
-          href: ui-flows-run-failed-with-aadlogonfailure-error.md
+          href: desktop-flows/ui-flows-run-failed-with-aadlogonfailure-error.md
         - name: Desktop flow fails with the SessionCreationTimeout error code
-          href: sessioncreationtimeout-error-code.md
-        - name: Double-click, drag and drop aren't working
-          href: double-click-drag-drop-are-not-working.md
+          href: desktop-flows/sessioncreationtimeout-error-code.md
         - name: Errors when running desktop flows including Excel actions
-          href: troubleshoot-excel-errors.md
+          href: desktop-flows/troubleshoot-excel-errors.md
         - name: Errors when running attended or unattended desktop flows
-          href: troubleshoot-errors-running-attended-or-unattended-desktop-flows.md
+          href: desktop-flows/troubleshoot-errors-running-attended-or-unattended-desktop-flows.md
         - name: Failed license check on a desktop flow run
-          href: desktop-flow-run-time-license-check.md
-        - name: Find which machine is failing within a cluster
-          href: find-which-machine-is-failing-within-a-cluster.md
+          href: desktop-flows/desktop-flow-run-time-license-check.md
         - name: Failed to get UI element
-          href: failed-get-ui-element.md
+          href: desktop-flows/failed-get-ui-element.md
         - name: '"Failed to deserialize Flow" error'
-          href: failed-to-deserialize-flow-error.md
+          href: desktop-flows/failed-to-deserialize-flow-error.md
         - name: '"Failed to assume control of Microsoft Edge/Chrome/Firefox" error'
-          href: failed-to-assume-control-of-edge-chrome-firefox-error.md
+          href: desktop-flows/failed-to-assume-control-of-edge-chrome-firefox-error.md
         - name: Failed to get element/window or Element/Window wasn't found error
-          href: ui-automation-action-fails-errors.md
+          href: desktop-flows/ui-automation-action-fails-errors.md
         - name: Focus window action can't bring a window to focus
-          href: focus-window-action-not-working.md
+          href: desktop-flows/focus-window-action-not-working.md
         - name: How to get Power Automate for desktop installer logs
-          href: how-to-get-power-automate-desktop-installer-logs.md
+          href: desktop-flows/how-to-get-power-automate-desktop-installer-logs.md
         - name: '"Invalid Private key file" error in Open secure FTP connection action'
-          href: invalid-private-key-file-error.md
+          href: desktop-flows/invalid-private-key-file-error.md
         - name: Internet connection is interrupted after installing Power Automate
-          href: no-ethernet-after-pad-install.md
-        - name: Keyboard and mouse click combinations not working
-          href: key-and-mouse-click-combo-not-working.md
-        - name: Known limitations of Selenium IDE
-          href: known-limitations-selenium-ide.md
+          href: desktop-flows/no-ethernet-after-pad-install.md
         - name: Login windows keep appearing
-          href: login-windows-keep-appearing.md
-        - name: Multi-screen recording isn't working
-          href: multi-screen-recording-is-not-working.md
+          href: desktop-flows/login-windows-keep-appearing.md
         - name: Machine registration failure
-          href: desktop-flow-machine-registration-troubleshooting.md
+          href: desktop-flows/desktop-flow-machine-registration-troubleshooting.md
         - name: Module or action wasn't found error
-          href: module-action-wasnt-found-error.md
+          href: desktop-flows/module-action-wasnt-found-error.md
         - name: '"Power Automate needs an update" occurs when opening Power Automate for desktop'
-          href: cannot-update-Power-Automate-for-desktop.md
+          href: desktop-flows/cannot-update-power-automate-for-desktop.md
         - name: Power Automate for desktop console doesn't show any flows
-          href: console-not-show-desktop-flows.md
+          href: desktop-flows/console-not-show-desktop-flows.md
         - name: Power Automate service doesn't start automatically after restarting
-          href: windows-services-not-start-after-restart.md
+          href: desktop-flows/windows-services-not-start-after-restart.md
         - name: Proxy server related errors in Power Automate for desktop
-          href: proxy-error-console.md
-        - name: Restart UI flows to recover from a bad state
-          href: reset-ui-flow-service-when-bad-state.md
-        - name: Recorder not recording applications
-          href: recorder-not-recording-applications.md
+          href: desktop-flows/proxy-error-console.md
         - name: Some actions appear to be missing or aren't visible
-          href: actions-not-available.md
+          href: desktop-flows/actions-not-available.md
         - name: Set drop-down list value in window/on web page action fails
-          href: set-drop-down-list-value-fails.md
+          href: desktop-flows/set-drop-down-list-value-fails.md
         - name: Tips on working with SQL queries
-          href: troubleshooting-tips-sql-queries.md
-        - name: Troubleshoot UI flow Playback
-          href: troubleshooting-ui-flow-playback.md
+          href: desktop-flows/troubleshooting-tips-sql-queries.md
         - name: Troubleshoot direct connectivity issues
-          href: troubleshoot-direct-connectivity-issues.md
+          href: desktop-flows/troubleshoot-direct-connectivity-issues.md
+        - name: Troubleshoot desktop flow run queue-based errors
+          href: desktop-flows/troubleshoot-desktop-flow-run-queue-errors.md
         - name: Troubleshoot issues with Power Automate browser extensions
-          href: web-extensions-policies.md
-        - name: UI flow playback error KeyboardIdMismatch
-          href: ui-flow-playback-error-keyboardidmismatch.md
-        - name: UI flow playback error UnableToLaunchApplication
-          href: troubleshoot-ui-flow-playback-unabletolaunchapplication.md
-        - name: UI flows can't launch recorder
-          href: ui-flows-cannot-launch-recorder.md
-        - name: UI flow inputs not working
-          href: ui-flow-inputs-not-working.md
-        - name: UI flow outputs not working
-          href: ui-flow-outputs-not-working.md
-        - name: UI flows fails with error UIAElementMismatch
-          href: ui-flows-fails-uiaelementmismatch.md
-        - name: UI flows UIAElementNotFound
-          href: issue-with-ui-flows-error-uiaelementnotfound.md
+          href: desktop-flows/web-extensions-policies.md
+        - name: Temporary profile error during machine registration
+          href: desktop-flows/temporary-profile-error-machine-registration.md
         - name: We can't sign you in - browser blocks cookies
-          href: browser-blocks-cookies.md
+          href: desktop-flows/browser-blocks-cookies.md
     - name: Solutions
       items:
         - name: Can't import solutions or publish changes

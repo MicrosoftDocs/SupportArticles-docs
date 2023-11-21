@@ -3,7 +3,7 @@ title: Troubleshoot Azure Files identity-based authentication and authorization 
 description: Troubleshoot problems using identity-based authentication to connect to SMB Azure file shares and see possible resolutions.
 ms.service: azure-file-storage
 ms.custom: has-azure-ad-ps-ref
-ms.date: 09/26/2023
+ms.date: 09/28/2023
 ms.reviewer: kendownie, v-weizhu
 ---
 # Troubleshoot Azure Files identity-based authentication and authorization issues (SMB)
@@ -26,7 +26,7 @@ When you try to mount a file share, you might receive the following error:
 
 ### Cause: Share-level permissions are incorrect
 
-If end users are accessing the Azure file share using Active Directory Domain Services (AD DS) or Azure Active Directory Domain Services (Azure AD DS) authentication, access to the file share fails with "Access is denied" error if share-level permissions are incorrect. 
+If end users are accessing the Azure file share using Active Directory Domain Services (AD DS) or Microsoft Entra Domain Services authentication, access to the file share fails with "Access is denied" error if share-level permissions are incorrect. 
 
 > [!NOTE]
 > This error might be caused by issues other than incorrect share-level permissions. For information on other possible causes and solutions, see [Troubleshoot Azure Files connectivity and access issues](files-troubleshoot-smb-connectivity.md#error5).
@@ -37,19 +37,21 @@ Validate that permissions are configured correctly:
 
 - **Active Directory Domain Services (AD DS)** see [Assign share-level permissions](/azure/storage/files/storage-files-identity-ad-ds-assign-permissions).
 
-    Share-level permission assignments are supported for groups and users that have been synced from AD DS to Azure Active Directory (Azure AD) using Azure AD Connect sync or Azure AD Connect cloud sync. Confirm that groups and users being assigned share-level permissions are not unsupported "cloud-only" groups.
+    Share-level permission assignments are supported for groups and users that have been synced from AD DS to Microsoft Entra ID using Microsoft Entra Connect Sync or Microsoft Entra Connect cloud sync. Confirm that groups and users being assigned share-level permissions are not unsupported "cloud-only" groups.
 
-- **Azure Active Directory Domain Services (Azure AD DS)** see [Assign share-level permissions](/azure/storage/files/storage-files-identity-auth-active-directory-domain-service-enable?tabs=azure-portal#assign-share-level-permissions).
+- **Microsoft Entra Domain Services** see [Assign share-level permissions](/azure/storage/files/storage-files-identity-auth-active-directory-domain-service-enable?tabs=azure-portal#assign-share-level-permissions).
 
-## Error AadDsTenantNotFound in enabling Azure AD DS authentication for Azure Files "Unable to locate active tenants with tenant ID aad-tenant-id"
+<a name='error-aaddstenantnotfound-in-enabling-azure-ad-ds-authentication-for-azure-files-unable-to-locate-active-tenants-with-tenant-id-aad-tenant-id'></a>
+
+## Error AadDsTenantNotFound in enabling Microsoft Entra Domain Services authentication for Azure Files "Unable to locate active tenants with tenant ID Microsoft Entra tenant-id"
 
 ### Cause
 
-Error AadDsTenantNotFound happens when you try to [enable Azure AD DS authentication for Azure Files](/azure/storage/files/storage-files-identity-auth-active-directory-domain-service-enable) on a storage account where Azure AD DS isn't created on the Azure AD tenant of the associated subscription.  
+Error AadDsTenantNotFound happens when you try to [enable Microsoft Entra Domain Services authentication for Azure Files](/azure/storage/files/storage-files-identity-auth-active-directory-domain-service-enable) on a storage account where Microsoft Entra Domain Services isn't created on the Microsoft Entra tenant of the associated subscription.  
 
 ### Solution
 
-Enable Azure AD DS on the Azure AD tenant of the subscription that your storage account is deployed to. You need administrator privileges of the Azure AD tenant to create a managed domain. If you aren't the administrator of the Azure AD tenant, contact the administrator and follow the step-by-step guidance to [create and configure an Azure AD DS managed domain](/azure/active-directory-domain-services/tutorial-create-instance).
+Enable Microsoft Entra Domain Services on the Microsoft Entra tenant of the subscription that your storage account is deployed to. You need administrator privileges of the Microsoft Entra tenant to create a managed domain. If you aren't the administrator of the Microsoft Entra tenant, contact the administrator and follow the step-by-step guidance to [create and configure a Microsoft Entra Domain Services managed domain](/azure/active-directory-domain-services/tutorial-create-instance).
 
 ## Unable to mount Azure file shares with AD credentials
 
@@ -74,8 +76,8 @@ The cmdlet performs these checks in sequence and provides guidance for failures:
 2. `CheckADObject`: Confirm that there is an object in the Active Directory that represents the storage account and has the correct SPN (service principal name). If the SPN isn't correctly set up, run the `Set-AD` cmdlet returned in the debug cmdlet to configure the SPN.
 3. `CheckDomainJoined`: Validate that the client machine is domain joined to AD. If your machine isn't domain joined to AD, refer to [Join a Computer to a Domain](/windows-server/identity/ad-fs/deployment/join-a-computer-to-a-domain) for domain join instructions.
 4. `CheckPort445Connectivity`: Check that port 445 is opened for SMB connection. If port 445 isn't open, refer to the troubleshooting tool [AzFileDiagnostics](https://github.com/Azure-Samples/azure-files-samples/tree/master/AzFileDiagnostics/Windows) for connectivity issues with Azure Files.
-5. `CheckSidHasAadUser`: Check that the logged on AD user is synced to Azure AD. If you want to look up whether a specific AD user is synchronized to Azure AD, you can specify the `-UserName` and `-Domain` in the input parameters. For a given SID, it checks if there is an AAD user associated.
-6. `CheckAadUserHasSid`: Check that the logged on AD user is synced to Azure AD. If you want to look up whether a specific AD user is synchronized to Azure AD, you can specify the `-UserName` and `-Domain` in the input parameters. For a given AAD user, it checks its SID.
+5. `CheckSidHasAadUser`: Check that the logged on AD user is synced to Microsoft Entra ID. If you want to look up whether a specific AD user is synchronized to Microsoft Entra ID, you can specify the `-UserName` and `-Domain` in the input parameters. For a given SID, it checks if there is a Microsoft Entra user associated.
+6. `CheckAadUserHasSid`: Check that the logged on AD user is synced to Microsoft Entra ID. If you want to look up whether a specific AD user is synchronized to Microsoft Entra ID, you can specify the `-UserName` and `-Domain` in the input parameters. For a given Microsoft Entra user, it checks its SID.
 7. `CheckGetKerberosTicket`: Attempt to get a Kerberos ticket to connect to the storage account. If there isn't a valid Kerberos token, run the `klist get cifs/storage-account-name.file.core.windows.net` cmdlet and examine the error code to determine the cause of the ticket retrieval failure.
 8. `CheckStorageAccountDomainJoined`: Check if the AD authentication has been enabled and the account's AD properties are populated. If not, [enable AD DS authentication on Azure Files](/azure/storage/files/storage-files-identity-ad-ds-enable).
 9. `CheckUserRbacAssignment`: Check if the AD identity has the proper RBAC role assignment to provide share-level permissions to access Azure Files. If not, [configure the share-level permission](/azure/storage/files/storage-files-identity-ad-ds-assign-permissions). (Supported on AzFilesHybrid v0.2.3+ version)
@@ -179,9 +181,9 @@ az storage account keys renew \
 
 ## Set the API permissions on a newly created application
 
-After enabling Azure AD Kerberos authentication, you'll need to explicitly grant admin consent to the new Azure AD application registered in your Azure AD tenant to complete your configuration. You can configure the API permissions from the [Azure portal](https://portal.azure.com) by following these steps.
+After enabling Microsoft Entra Kerberos authentication, you'll need to explicitly grant admin consent to the new Microsoft Entra application registered in your Microsoft Entra tenant to complete your configuration. You can configure the API permissions from the [Azure portal](https://portal.azure.com) by following these steps.
 
-1. Open **Azure Active Directory**.
+1. Open **Microsoft Entra ID**.
 2. Select **App registrations** in the left pane.
 3. Select **All Applications** in the right pane.
 
@@ -192,23 +194,27 @@ After enabling Azure AD Kerberos authentication, you'll need to explicitly grant
 6. Select **Add permissions** at the bottom of the page.
 7. Select **Grant admin consent for "DirectoryName"**.
 
-## Potential errors when enabling Azure AD Kerberos authentication for hybrid users
+<a name='potential-errors-when-enabling-azure-ad-kerberos-authentication-for-hybrid-users'></a>
 
-You might encounter the following errors when enabling Azure AD Kerberos authentication for hybrid user accounts.
+## Potential errors when enabling Microsoft Entra Kerberos authentication for hybrid users
+
+You might encounter the following errors when enabling Microsoft Entra Kerberos authentication for hybrid user accounts.
 
 ### Error - Grant admin consent disabled
 
-In some cases, Azure AD admin may disable the ability to grant admin consent to Azure AD applications. Below is the screenshot of what this may look like in the Azure portal.
+In some cases, Microsoft Entra admin may disable the ability to grant admin consent to Microsoft Entra applications. Below is the screenshot of what this may look like in the Azure portal.
 
    :::image type="content" source="media/files-troubleshoot-smb-authentication/grant-admin-consent-disabled.png" alt-text="Screenshot that shows the 'Configured permissions' blade displaying a warning that some actions may be disabled due to your permissions." lightbox="media/files-troubleshoot-smb-authentication/grant-admin-consent-disabled.png":::
 
-If this is the case, ask your Azure AD admin to grant admin consent to the new Azure AD application. To find and view your administrators, select **roles and administrators**, then select **Cloud application administrator**.
+If this is the case, ask your Microsoft Entra admin to grant admin consent to the new Microsoft Entra application. To find and view your administrators, select **roles and administrators**, then select **Cloud application administrator**.
 
-### Error - "The request to AAD Graph failed with code BadRequest"
+<a name='error---the-request-to-aad-graph-failed-with-code-badrequest'></a>
 
-#### Cause 1: an application management policy is preventing credentials from being created
+### Error - "The request to Azure AD Graph failed with code BadRequest"
 
-When enabling Azure AD Kerberos authentication, you might encounter this error if the following conditions are met:
+#### Cause 1: An application management policy is preventing credentials from being created
+
+When enabling Microsoft Entra Kerberos authentication, you might encounter this error if the following conditions are met:
 
 1. You're using the beta/preview feature of [application management policies](/graph/api/resources/applicationauthenticationmethodpolicy).
 2. You (or your administrator) have set a [tenant-wide policy](/graph/api/resources/tenantappmanagementpolicy) that:
@@ -217,34 +223,30 @@ When enabling Azure AD Kerberos authentication, you might encounter this error i
 
 There is currently no workaround for this error.
 
-#### Cause 2: an application already exists for the storage account
+#### Cause 2: An application already exists for the storage account
 
-You might also encounter this error if you previously enabled Azure AD Kerberos authentication through manual limited preview steps. To delete the existing application, the customer or their IT admin can run the following script. Running this script will remove the old manually created application and allow the new experience to auto-create and manage the newly created application.
-
-> [!IMPORTANT]
-> This script must be run in PowerShell 5.1 (Windows PowerShell) because the AzureAD module doesn't work in PowerShell 7. Or you can import the module by using the `-UseWindowsPowerShell` option in a PowerShell 7 session:
-> 
-> `Import-Module AzureAD -UseWindowsPowerShell`
-> 
-> The AzureAD module is scheduled to be deprecated and replaced by Microsoft Graph PowerShell. If you want to use the Microsoft.Graph module instead, see [Upgrade from Azure AD PowerShell to Microsoft Graph PowerShell](/powershell/microsoftgraph/migration-steps) and the [Cmdlet map](/powershell/microsoftgraph/azuread-msoline-cmdlet-map).
+You might also encounter this error if you previously enabled Microsoft Entra Kerberos authentication through manual limited preview steps. To delete the existing application, the customer or their IT admin can run the following script. Running this script will remove the old manually created application and allow the new experience to auto-create and manage the newly created application. After initiating the connection to Microsoft Graph, sign in to the Microsoft Graph Command Line Tools application on your device and grant permissions to the app.
 
 ```powershell
 $storageAccount = "exampleStorageAccountName"
 $tenantId = "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"
-Import-Module AzureAD
-Connect-AzureAD -TenantId $tenantId
+Install-Module Microsoft.Graph
+Import-Module Microsoft.Graph
+Connect-MgGraph -TenantId $tenantId -Scopes "User.Read","Application.Read.All"
 
-$application = Get-AzureADApplication -Filter "DisplayName eq '${storageAccount}'"
+$application = Get-MgApplication -Filter "DisplayName eq '${storageAccount}'"
 if ($null -ne $application) {
-   Remove-AzureADApplication -ObjectId $application.ObjectId
+   Remove-MgApplication -ObjectId $application.ObjectId
 }
 ```
 
-### Error - Service principal password has expired in Azure AD
+<a name='error---service-principal-password-has-expired-in-azure-ad'></a>
 
-If you've previously enabled Azure AD Kerberos authentication through manual limited preview steps, the password for the storage account's service principal is set to expire every six months. Once the password expires, users won't be able to get Kerberos tickets to the file share.
+### Error - Service principal password has expired in Microsoft Entra ID
 
-To mitigate this, you have two options: either rotate the service principal password in Azure AD every six months, or disable Azure AD Kerberos, delete the existing application, and reconfigure Azure AD Kerberos.
+If you've previously enabled Microsoft Entra Kerberos authentication through manual limited preview steps, the password for the storage account's service principal is set to expire every six months. Once the password expires, users won't be able to get Kerberos tickets to the file share.
+
+To mitigate this, you have two options: either rotate the service principal password in Microsoft Entra every six months, or disable Microsoft Entra Kerberos, delete the existing application, and reconfigure Microsoft Entra Kerberos.
 
 #### Option 1: Update the service principal password using PowerShell
 
@@ -276,7 +278,7 @@ To mitigate this, you have two options: either rotate the service principal pass
     $password = "kk:" + [System.Convert]::ToBase64String($azureAdPasswordBuffer);
     ```
 
-4. Connect to Azure AD and retrieve the tenant information, application, and service principal.
+4. Connect to Microsoft Entra ID and retrieve the tenant information, application, and service principal.
 
     ```azurepowershell
     Connect-AzureAD 
@@ -325,29 +327,31 @@ To mitigate this, you have two options: either rotate the service principal pass
     }
     ```
 
-#### Option 2: Disable Azure AD Kerberos, delete the existing application, and reconfigure
+<a name='option-2-disable-azure-ad-kerberos-delete-the-existing-application-and-reconfigure'></a>
 
-If you don't want to rotate the service principal password every six months, you can follow these steps. Be sure to save domain properties (domainName and domainGUID) before disabling Azure AD Kerberos, as you'll need them during reconfiguration if you want to configure directory and file-level permissions using Windows File Explorer. If you didn't save domain properties, you can still [configure directory/file-level permissions using icacls](/azure/storage/files/storage-files-identity-ad-ds-configure-permissions#configure-windows-acls-with-icacls) as a workaround.
+#### Option 2: Disable Microsoft Entra Kerberos, delete the existing application, and reconfigure
 
-1. [Disable Azure AD Kerberos](/azure/storage/files/storage-files-identity-auth-azure-active-directory-enable#disable-azure-ad-authentication-on-your-storage-account)
+If you don't want to rotate the service principal password every six months, you can follow these steps. Be sure to save domain properties (domainName and domainGUID) before disabling Microsoft Entra Kerberos, as you'll need them during reconfiguration if you want to configure directory and file-level permissions using Windows File Explorer. If you didn't save domain properties, you can still [configure directory/file-level permissions using icacls](/azure/storage/files/storage-files-identity-ad-ds-configure-permissions#configure-windows-acls-with-icacls) as a workaround.
+
+1. [Disable Microsoft Entra Kerberos](/azure/storage/files/storage-files-identity-auth-azure-active-directory-enable#disable-azure-ad-authentication-on-your-storage-account)
 1. [Delete the existing application](#cause-2-an-application-already-exists-for-the-storage-account)
-1. [Reconfigure Azure AD Kerberos via the Azure portal](/azure/storage/files/storage-files-identity-auth-azure-active-directory-enable#enable-azure-ad-kerberos-authentication-for-hybrid-user-accounts)
+1. [Reconfigure Microsoft Entra Kerberos via the Azure portal](/azure/storage/files/storage-files-identity-auth-azure-active-directory-enable#enable-azure-ad-kerberos-authentication-for-hybrid-user-accounts)
 
-Once you've reconfigured Azure AD Kerberos, the new experience will auto-create and manage the newly created application.
+Once you've reconfigured Microsoft Entra Kerberos, the new experience will auto-create and manage the newly created application.
 
 ### Error 1326 - The username or password is incorrect when using private link
 
-If you're connecting to a storage account via a private endpoint/private link using Azure AD Kerberos authentication, when attempting to mount a file share via `net use` or other method, the client is prompted for credentials. The user will likely type their credentials in, but the credentials are rejected.
+If you're connecting to a storage account via a private endpoint/private link using Microsoft Entra Kerberos authentication, when attempting to mount a file share via `net use` or other method, the client is prompted for credentials. The user will likely type their credentials in, but the credentials are rejected.
 
 #### Cause 
 
-This is because the SMB client has tried to use Kerberos but failed, so it falls back to using NTLM authentication, and Azure Files doesn't support using NTLM authentication for domain credentials. The client can't get a Kerberos ticket to the storage account because the private link FQDN isn't registered to any existing Azure AD application.
+This is because the SMB client has tried to use Kerberos but failed, so it falls back to using NTLM authentication, and Azure Files doesn't support using NTLM authentication for domain credentials. The client can't get a Kerberos ticket to the storage account because the private link FQDN isn't registered to any existing Microsoft Entra application.
 
 #### Solution
 
-The solution is to add the privateLink FQDN to the storage account's Azure AD application before you mount the file share. You can add the required identifierUris to the application object using the [Azure portal](https://portal.azure.com) by following these steps.
+The solution is to add the privateLink FQDN to the storage account's Microsoft Entra application before you mount the file share. You can add the required identifierUris to the application object using the [Azure portal](https://portal.azure.com) by following these steps.
 
-1. Open **Azure Active Directory**.
+1. Open **Microsoft Entra ID**.
 1. Select **App registrations** in the left pane.
 1. Select **All Applications**.
 1. Select the application with the name matching **[Storage Account] $storageAccountName.file.core.windows.net**.
@@ -398,11 +402,11 @@ The request was interrupted by the following error AADSTS50105:
 
 #### Cause
 
-If you set up "assignment required" for the corresponding enterprise application, you won't be able to get a Kerberos ticket, and Azure AD sign-in logs will show an error even though users or groups are assigned to the application.
+If you set up "assignment required" for the corresponding enterprise application, you won't be able to get a Kerberos ticket, and Microsoft Entra sign-in logs will show an error even though users or groups are assigned to the application.
 
 #### Solution
 
-Don't select **Assignment required for Azure AD application** for the storage account because we don't populate entitlements in the Kerberos ticket that's returned back to the requestor. For more information, see [Error AADSTS50105 - The signed in user is not assigned to a role for the application](../active-directory/error-code-aadsts50105-user-not-assigned-role.md).
+Don't select **Assignment required for Microsoft Entra application** for the storage account because we don't populate entitlements in the Kerberos ticket that's returned back to the requestor. For more information, see [Error AADSTS50105 - The signed in user is not assigned to a role for the application](../active-directory/error-code-aadsts50105-user-not-assigned-role.md).
 
 ## See also
 
