@@ -29,7 +29,7 @@ You can collect the following information for the Client machine component.
 - What is the operating system name, edition, and version (WinVer) used?
 - What is the name and version of the SQL Server Driver or Provider?
 - What is the machine name and IP address?
-- Is the machine domain joined? if yes, what is the domain name?
+- Is the machine domain joined? If yes, what is the domain name?
 - What is the application run-time environment used? For example, IIS, Windows Forms, Web Sphere, SSIS Job, and so on.
 - Which is the Application language used?
 - What is the connection string used?
@@ -58,17 +58,17 @@ For a Linked Server, collect server information for both the mid-tier server and
 - What is the name and version of the database?  
 - What is the name of the computer?
 - What is the IP address?
-- Is the machine domain joined? if yes, what is the domain name?
+- Is the machine domain joined? If yes, what is the domain name?
 - What is the SQL Server service account and domain?
 - What is the name of the SQL Server instance?
 - Which protocols are enabled?
 - Which is the port that the server listens on?
-- What is the name of the server pipe?. You can find this information in the (ERRORLOG).
+- What is the name of the server pipe? You can find this information in the (ERRORLOG).
 - Which type of environment is used? Is it physical, virtual, or cloud? For example, IaaS (SQL in an Azure VM) or PaaS (Azure SQL Database, SQL MI).
 - Is the database stand-alone, clustered, mirrored, or Always On?
 - What is the Failover partner name and IP address?
 - What is the Virtual cluster name or Listener name and port?
-- Virtual IP/Listener IP:
+- Which is the Virtual IP or Listener IP?
 - Which operating system is the database installed on? Is it Windows, Linux, or Mac? This might affect data collection.
 - Is the database located in Azure?
 - Is the server on the latest Service Pack and Cumulative Update? There’s no point in debugging an issue that's already fixed.
@@ -88,7 +88,7 @@ For a Linked Server, collect server information for both the mid-tier server and
 If the user is remote to the client application, collect the following details:
 
 - What is the name of the computer and IP address?
-- Is the machine domain joined? if yes, what is the domain name?
+- Is the machine domain joined? If yes, what is the domain name?
 - Is the user connecting over a VPN or a proxy server? Does the issue happen if either of them is directly connected?
 - If the user is connecting to a web server, is it load balanced?
 - Are sticky sessions or session affinity being used?
@@ -103,12 +103,12 @@ If the user is remote to the client application, collect the following details:
 - What is the exact error message in the call stack?
 - Has the log been collected from the SQL Server ERRORLOG and ERRORLOG.1?
 - Have the application event logs been collected from the client and server?
-- Have the client application's log files and configuration files been collected? For example, web.config, rsreportserver.config, *.config, or *.ini.
+- Have the client application's log files and configuration files collected? For example, web.config, rsreportserver.config, *.config, or *.ini.
 - Is a visual representation of the network available, which shows the computers, routers, and so on?
 
 ## Big picture questions
 
-Following are some questions which will help you understand the category of issue so that you can proceed in the right direction to troubleshoot the problems:
+Following are some questions, which help you understand the category of issue so that you can proceed in the right direction in troubleshooting the problems:
 
 - Does the issue only affect database connections, or does it affect web and file share connections as well? Many cases are reported to the SQL team because they are seen on the database server. However, it might be possible that the problem isn't related to the database  at all and might call for more general Windows or Active Directory support.
 - If the user domain, client domain, or server domain are different, what is the trust relationship between them? Is it external, forest, one-way, two-way, or none?
