@@ -239,7 +239,7 @@ To solve the issue, make sure that:
 
 ### Cause
 
-The fields in the rollup entity have field-level security. The rollup entity fields include the option set used for the **Selector**, **Amount**, and **Date** fields.
+The columns associated with the **Selector**, **Amount field**, and **Date field** may have field-level security enabled. 
 
 ### Resolution
 
