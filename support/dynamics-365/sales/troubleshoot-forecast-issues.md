@@ -4,10 +4,9 @@ description: Provides resolutions for the known issues that are related to forec
 author: sbmjais
 ms.author: shjais
 ms.reviewer: ladirohit 
-ms.date: 09/06/2023
+ms.date: 11/21/2023
 ms.subservice: d365-sales-sales
 ---
-
 # Troubleshoot issues with forecasting
 
 This article helps you troubleshoot and resolve issues related to forecasting in Microsoft Dynamics 365 Sales.
@@ -240,7 +239,7 @@ To solve the issue, make sure that:
 
 ### Cause
 
-The fields in the rollup entity have field-level security. The rollup entity fields include the option set used for the selector field, amount field, and date field.
+The fields in the rollup entity have field-level security. The rollup entity fields include the option set used for the **Selector**, **Amount**, and **Date** fields.
 
 ### Resolution
 
