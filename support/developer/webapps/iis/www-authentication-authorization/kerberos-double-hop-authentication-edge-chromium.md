@@ -137,7 +137,7 @@ Use this setting to configure a list of servers for which delegation of Kerberos
 
 :::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/credentials-servers.png" alt-text="Screenshot of a list of servers." border="false":::
 
-After the newly editing group policy object is applied to the client computers inside the domain, go to the test authentication page in [Troubleshoot Kerberos failures in Internet Explorer](troubleshoot-kerberos-failures-ie.md) and download from [ASP.NET Authentication test page](/archive/blogs/friis/asp-net-authentication-test-page). It will yield a **ImpersonationLevel** setting of Delegate instead of **Impersonate** signaling that the delegation of credentials is now allowed.
+After the newly editing group policy object is applied to the client computers inside the domain, go to the test authentication page in [Diagnostic pages for Windows Integrated Authentication Troubleshooting](diagnostics-pages-windows-integrated-authentication.md) and download the whoami.aspx page from the [ASP.net Samples Repository](https://github.com/aspnet/samples/tree/main/samples/aspnet/Identity/CurrentUserInfoRetrieval) on GitHub. It will yield a **ImpersonationLevel** setting of Delegate instead of **Impersonate** signaling that the delegation of credentials is now allowed.
 
 :::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/impersonation-level-setting-page.png" alt-text="Screenshot of ImpersonationLevel setting page.":::
 
