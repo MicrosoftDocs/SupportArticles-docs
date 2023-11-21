@@ -31,14 +31,14 @@
       items:
         - name: Troubleshoot Finance insights setup issues
           href: finance-insights/finance-insights-troubleshooting-faq.md
-    - name: Finance reporting
+    - name: Financial reporting
       items:
         - name: Troubleshoot issues opening Report Designer
-          href: finance-reporting/issues-open-report-designer.md
+          href: financial-reporting/issues-open-report-designer.md
         - name: Troubleshoot report designer issues with Event Viewer
-          href: finance-reporting/troubleshoot-report-designer-with-event-viewer.md
+          href: financial-reporting/troubleshoot-report-designer-with-event-viewer.md
         - name: '"Unable to Connect to the Financial reporting server" error'
-          href: finance-reporting/unable-to-connect-financial-reporting-server.md
+          href: financial-reporting/unable-to-connect-financial-reporting-server.md
     - name: General ledger
       items:
         - name: A custom Excel template for financial journals isn't available on the menu
