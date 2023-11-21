@@ -163,9 +163,7 @@ kernel: CIFS: VFS: cifs_mount failed w/return code = -2
 
 ### Cause
 
-The client of SMB file share uses the NTLMSSP authentication, which requires the MD5* hashing algorithm. However, in FIPS mode, the MD5 algorithm is restricted because it’s not FIPS-compliant. 
-
-*MD5 is a widely used hash function that produces a 128-bit hash value. However, MD5 is considered insecure for cryptographic 
+The client of SMB file share uses the NTLMSSP authentication, which requires the MD5* hashing algorithm. However, in FIPS mode, the MD5 algorithm is restricted because it’s not FIPS-compliant. MD5 is a widely used hash function that produces a 128-bit hash value. However, MD5 is considered insecure for cryptographic purposes.
 
 **How to check if FIPS mode is enabled**
 
@@ -202,8 +200,8 @@ To resolve this issue, enable Kerberos authentication for SMB file share. If FIP
 
 For more information, see to the following documents from Linux distributors:
 
-•	[RedHat: Why would enabling FIPS mode in the kernel break CIFS mounts](https://access.redhat.com/solutions/256053)
-•	[SUSE: CIFS mount fails with error "mount error(2): No such file or directory"](https://www.suse.com/support/kb/doc/?id=000021162)
+-	[RedHat: Why would enabling FIPS mode in the kernel break CIFS mounts](https://access.redhat.com/solutions/256053)
+-	[SUSE: CIFS mount fails with error "mount error(2): No such file or directory"](https://www.suse.com/support/kb/doc/?id=000021162)
 
 ## Need help?
 
