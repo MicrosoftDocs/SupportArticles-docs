@@ -30,7 +30,6 @@ Some common errors and possible remediations are listed below(The list is not ex
 
 
 | Issue | Link/Resolution |
-
 |OutboundConnFailVMExtensionError | [Link](https://learn.microsoft.com/en-us/troubleshoot/azure/azure-kubernetes/error-code-outboundconnfailvmextensionerror)  |
 |Drain errors|[Link](https://learn.microsoft.com/en-us/troubleshoot/azure/azure-kubernetes/error-code-poddrainfailure)|
 |SubscriptionNotRegistered|[Link](https://learn.microsoft.com/en-us/azure/azure-resource-manager/troubleshooting/error-register-resource-provider?tabs=azure-cli)|
