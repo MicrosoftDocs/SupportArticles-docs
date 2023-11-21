@@ -36,6 +36,8 @@ Some common errors and possible remediations are listed below(The list is not ex
 |SubscriptionNotRegistered|[Link](/azure/azure-resource-manager/troubleshooting/error-register-resource-provider?tabs=azure-cli)|
 |RequestDisallowedByPolicy|[Link](/troubleshoot/azure/azure-kubernetes/error-code-requestdisallowedbypolicy#solution)|
 | QuotaExceeded | [Link](/troubleshoot/azure/azure-kubernetes/error-code-quotaexceeded)|
+|PublicIPCountLimitReached|[Link](/troubleshoot/azure/azure-kubernetes/error-code-publicipcountlimitreached#solution)|
+|OverconstrainedAllocationRequest|[Link](/troubleshoot/azure/azure-kubernetes/error-code-zonalallocationfailed-allocationfailed)|
 
 
 
