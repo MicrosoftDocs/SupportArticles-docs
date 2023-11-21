@@ -61,7 +61,7 @@ For a Linked Server, collect server information for both the mid-tier server and
 - Is the machine domain joined? if yes, what is the domain name?
 - What is the SQL Server service account and domain?
 - What is the name of the SQL Server instance?
-- Which protocols have been enabled?
+- Which protocols are enabled?
 - Which is the port that the server listens on?
 - What is the name of the server pipe?. You can find this information in the (ERRORLOG).
 - Which type of environment is used? Is it physical, virtual, or cloud? For example, IaaS (SQL in an Azure VM) or PaaS (Azure SQL Database, SQL MI).
@@ -104,13 +104,13 @@ If the user is remote to the client application, collect the following details:
 - Has the log been collected from the SQL Server ERRORLOG and ERRORLOG.1?
 - Have the application event logs been collected from the client and server?
 - Have the client application's log files and configuration files been collected? For example: web.config, rsreportserver.config, *.config, or *.ini.
-- Is a visual representation of the network available, which shows the computers, routers, and so on.
+- Is a visual representation of the network available, which shows the computers, routers, and so on?
 
 ## Big picture questions
 
 If none of the questions in the previous sections provide an answer, consider the following questions to collect relevant information.
 
-- Does the issue only affect database connections, or does it affect web and file share connections as well? Many cases are reported to the SQL team because they are seen on the database server, but the problem might not be related to database related at all and might require more general Windows or Active Directory support.
+- Does the issue only affect database connections, or does it affect web and file share connections as well? Many cases are reported to the SQL team because they are seen on the database server. However, it might be possible that the problem isn't related to the database  at all and might call for more general Windows or Active Directory support.
 - If the user domain, client domain, or server domain are different, what is the trust relationship between them? Is it external, forest, one-way, two-way, or none?
 - Does the connection work correctly if all the resources are in the same domain?
 - Is the issue intermittent (or periodic) or is it consistent?
