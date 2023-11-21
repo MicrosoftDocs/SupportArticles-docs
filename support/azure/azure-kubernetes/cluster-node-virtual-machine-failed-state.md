@@ -35,6 +35,7 @@ Some common errors and possible remediations are listed below(The list is not ex
 |Drain errors|[Link](troubleshoot/azure/azure-kubernetes/error-code-poddrainfailure)|
 |SubscriptionNotRegistered|[Link](/azure/azure-resource-manager/troubleshooting/error-register-resource-provider?tabs=azure-cli)|
 |RequestDisallowedByPolicy|[Link](/troubleshoot/azure/azure-kubernetes/error-code-requestdisallowedbypolicy#solution)|
+| QuotaExceeded | [Link](/troubleshoot/azure/azure-kubernetes/error-code-quotaexceeded)|
 
 
 
