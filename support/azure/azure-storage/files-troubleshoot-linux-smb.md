@@ -199,7 +199,7 @@ To resolve this issue, enable Kerberos authentication for SMB file share. If FIP
   ```
 5. Reboot the VM.
 
-For more information, refer to the following details from Linux distributors:
+For more information, see to the following documents from Linux distributors:
 
 •	[RedHat: Why would enabling FIPS mode in the kernel break CIFS mounts](https://access.redhat.com/solutions/256053)
 •	[SUSE: CIFS mount fails with error "mount error(2): No such file or directory"](https://www.suse.com/support/kb/doc/?id=000021162)
