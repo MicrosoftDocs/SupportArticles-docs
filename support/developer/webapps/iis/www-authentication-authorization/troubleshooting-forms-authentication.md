@@ -153,7 +153,7 @@ After the request leaves the client, there are various layers that can affect th
 
 **Client request**
 
-This is a `GET` request after the user has been authenticated. The forms authentication ticket information is highlighted in grey. This confirms that the cookie information left the client. When you use a network capture tool, like Netmon, you see the traffic that actually went through the adapter.
+This is a `GET` request after the user has been authenticated. The forms authentication ticket information is highlighted in grey. This confirms that the cookie information left the client. When you use a network capture tool, like [WireShark](https://www.wireshark.org/download.html), you see the traffic that actually went through the adapter.
 
 ```output
 47 45 54 20 68 74 74 70-3a 2f 2f 6c 6f 63 61 6c   GET http://local
