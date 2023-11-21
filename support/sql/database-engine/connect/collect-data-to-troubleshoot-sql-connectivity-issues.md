@@ -10,7 +10,7 @@ ms.custom: sap:Connection issues
 
 # Collect data to troubleshoot SQL connectivity issues
 
-This section is a comprehensive list of questions classified based on certain categories. While  [Prerequisites and checklist for resolving connectivity errors](resolve-connectivity-errors-checklist.md) has the most important items to be collected, the questions is this article can help you rule out many scenarios and narrow down your focus for  troubleshooting problems in an effective manner.
+This section is a comprehensive list of questions classified based on certain categories. While  [Prerequisites and checklist for resolving connectivity errors](resolve-connectivity-errors-checklist.md) has the most important items to be collected, the questions in this article can help you rule out many scenarios and narrow down your focus for  troubleshooting problems in an effective manner.
 
 > [!NOTE]
 > Not all questions might be applicable to all problems but serve as a list of things to consider while troubleshooting connectivity problems.
@@ -37,7 +37,7 @@ You can collect the following information for the Client machine component.
 - If the application is a server or service, does it delegate user credentials to the backend database?
 - Is constrained delegation being used?
 - Which is the application service account and domain?
-- Which type of service is used? Is it physical, virtual or cloud? For example IaaS vs Web App vs Web Role vs Power BI.
+- Which type of service is used? Is it physical, virtual or cloud? For example, IaaS vs Web App vs Web Role vs Power BI.
 - Is the client driver JDBC or does it run on Linux or Mac?
 
 > [!NOTE]
@@ -104,7 +104,7 @@ If the user is remote to the client application, collect the following details:
 - Has the log been collected from the SQL Server ERRORLOG and ERRORLOG.1?
 - Have the application event logs been collected from the client and server?
 - Have the client application's log files and configuration files been collected? For example: web.config, rsreportserver.config, *.config, or *.ini.
-- Is a visual representation of the network available which shows the computers, routers, and so on.
+- Is a visual representation of the network available, which shows the computers, routers, and so on.
 
 ## Big picture questions
 
@@ -132,3 +132,5 @@ If none of the questions in the previous sections provide an answer, consider th
 ## See also
 
 Consistent SQL Network Connectivity Issue
+[Recommended prerequisites and checklist for troubleshooting SQL Server connectivity issues](resolve-connectivity-errors-checklist.md)
+[Troubleshoot connectivity issues in SQL Server](resolve-connectivity-errors-overview.md)
