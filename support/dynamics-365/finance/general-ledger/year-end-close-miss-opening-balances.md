@@ -2,7 +2,7 @@
 # required metadata
 
 title: Year-end close missing opening balances 
-description: Explains why opening balances might be missing when you close a year, and how to rebuild those balances if they're missing in Microsoft Dynamics Finance.
+description: Explains why opening balances might be missing when you close a year, and how to rebuild those balances if they're missing in Microsoft Dynamics 365 Finance.
 author: kweekley
 ms.date: 11/20/2023
 ms.prod: 
@@ -24,7 +24,7 @@ ms.dyn365.ops.version: 10.0.14
 ---
 # Year-end close missing opening balances
 
-This article explains why opening balances might be missing when you close a year, and how to rebuild those balances if they're missing in Microsoft Dynamics Finance.
+This article explains why opening balances might be missing when you close a year, and how to rebuild those balances if they're missing in Microsoft Dynamics 365 Finance.
 
 ## Issue 1 - No beginning balances after running the General ledger year-end close
 

@@ -2,7 +2,7 @@
 # required metadata
 
 title: Journal posting failure due to imbalance
-description: Provides a resolution for an issue where you can't post a journal if the debits and credits aren't balanced in voucher transactions in Microsoft Dynamics Finance. 
+description: Provides a resolution for an issue where you can't post a journal if the debits and credits aren't balanced in voucher transactions in Microsoft Dynamics 365 Finance. 
 author: kweekley
 ms.date: 11/20/2023
 ms.prod: 
@@ -24,7 +24,7 @@ ms.dyn365.ops.version: 10.0.14
 ---
 # Can't post a journal due to imbalance
 
-This article explains why debits and credits might not be balanced in voucher transactions, so that the transactions can't be posted in Microsoft Dynamics Finance. The article also includes steps for fixing the issue.
+This article explains why debits and credits might not be balanced in voucher transactions, so that the transactions can't be posted in Microsoft Dynamics 365 Finance. The article also includes steps for fixing the issue.
 
 ## Symptoms
 
