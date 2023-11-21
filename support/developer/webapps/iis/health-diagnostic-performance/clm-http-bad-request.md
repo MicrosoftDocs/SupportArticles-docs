@@ -56,38 +56,7 @@ Example entry from the *httperrX.log*:
 > date time c-ip c-port s-ip s-port cs-version cs-method cs-uri sc-status s-siteid s-reason s-queuename
 2007-04-12 07:37:51 10.201.25.27 1682 10.248.10.65 80 HTTP/1.1 GET /clm 400 - RequestLength
 
-### NetMon
-
-In the NetMon trace, to determine how large the HTTP request is, use the following steps:
-
-1. Locate the frame that submits an HTTP `Get` statement
-2. Add the Transmission Control Protocol (TCP) `Len` value for each frame from the HTTP `Get` statement until the IIS server returns an **ACK**.
-
-    This will be the size of the HTTP request.
-
-    Example:
-
-    > 28209 19:13:04.041 53.906250 Client Server HTTP HTTP: Request, GET /CLM/content/sm/requests/SubscriberPrintDocuments.aspx  
-    > 28210 19:13:04.041 53.906250 Client Server HTTP HTTP: HTTP Payload  
-    > 28210 19:13:04.041 53.906250 Client Server HTTP HTTP: HTTP Payload  
-    > 28211 19:13:04.041 53.906250 Client Server HTTP HTTP: HTTP Payload  
-    > 28212 19:13:04.041 53.906250 Client Server HTTP HTTP: HTTP Payload  
-    > 28213 19:13:04.041 53.906250 Client Server HTTP HTTP: HTTP Payload  
-    > 28214 19:13:04.041 53.906250 Client Server HTTP HTTP: HTTP Payload  
-    > 28215 19:13:04.041 53.906250 Client Server HTTP HTTP: HTTP Payload  
-    > 28216 19:13:04.041 53.906250 Client Server HTTP HTTP: HTTP Payload  
-    > 28217 19:13:04.041 53.906250 Client Server HTTP HTTP: HTTP Payload  
-    > 28218 19:13:04.041 53.906250 Client Server HTTP HTTP: HTTP Payload  
-    > 28219 19:13:04.041 53.906250 Client Server HTTP HTTP: HTTP Payload  
-    > 28220 19:13:04.041 53.906250 Client Server HTTP HTTP: HTTP Payload
-
-    Each of the above will have a detail line similar to the following:
-
-    > Tcp: Flags=....A..., SrcPort=3281, DstPort=HTTP(80), Len=1460 , Seq=3225410770 - 3225412230, Ack=1377780890, Win=33580 (scale factor 0) = 0
-
-    In this example, the HTTP request size is somewhere around 17000, which is more than the default maximum.
-
 ### WireShark
 
 1. Locate the frame that submits the HTTP `Get` statement
-2. View the tab at the bottom of the WireShark screen titled **Reassembled TCP** and the number beside this will be the size of the reassembled HTTP request.
+2. View the tab at the bottom right of the WireShark screen titled **Reassembled TCP** and the number beside this will be the size of the reassembled HTTP request.
