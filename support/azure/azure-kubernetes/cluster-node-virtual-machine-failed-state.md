@@ -19,7 +19,7 @@ To be able to fix a cluster in failed state, you need to get the operation that 
 
 
 ### Cluster creation failed
-If you created a cluster recently and is in failed state, you need to use the [Activity Log]([/troubleshoot/azure/azure-kubernetes/troubleshoot-aks-cluster-creation-issues#view-error-details-in-the-azure-portal)) to get to root cause of the failure
+If you created a cluster recently and is in failed state, you need to use the [Activity Log](/troubleshoot/azure/azure-kubernetes/troubleshoot-aks-cluster-creation-issues#view-error-details-in-the-azure-portal)) to get to root cause of the failure
 
 
 ### Cluster upgrade failed
