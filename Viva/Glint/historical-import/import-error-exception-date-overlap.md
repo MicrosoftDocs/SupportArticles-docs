@@ -1,6 +1,6 @@
 ---
 title: Exception date overlap error during historical imports
-description: Fix the exception date overlap error when Viva Glint processes a historical import.
+description: Fix the exception date overlap error that occurs when Viva Glint processes a historical import.
 manager: dcscontentpm
 ms.reviewer: aweixelman
 ms.date: 11/21/2023
@@ -17,7 +17,7 @@ localization_priority: Normal
 
 ## Symptoms
 
-You receive the following error message when the Viva Glint app processes a historical import:
+When the Viva Glint app processes a historical import, you receive the following error message:
 
 > Errors (1)  
 > Must correct to continue.
@@ -26,17 +26,17 @@ You receive the following error message when the Viva Glint app processes a hist
 
 ## Cause
 
-This issue occurs because the exception date that's selected overlaps with the start date of an existing or scheduled survey in your survey program.
+This issue occurs because the exception date that's selected overlaps the start date of an existing or scheduled survey in your survey program.
 
 ## Resolution
 
-To fix the issue, select a different exception date that's in the past and doesn't overlap with the start date of any existing or scheduled surveys in the survey program. 
+To fix the issue, select a different exception date that's in the past and that doesn't overlap the start date of any existing or scheduled surveys in the survey program. 
 
 > [!IMPORTANT]
-> You can't select the exception dates that you selected during any failed historical imports for the same survey in the past. For example, if you tried to import the survey by using October 16, 2023 as the exception date, but it failed, then you can't use October 16, 2023 as the exception date again. Select a different date.
+> You can't select the same exception dates that you previously selected during any failed historical imports for the same survey. For example, if you tried to import the survey by using October 16, 2023, as the exception date, and that attempt failed, then you can't use October 16, 2023, as the exception date again.
 
 To check the start date for all completed and scheduled surveys in the program, follow these steps:
 
-1. From the admin dashboard, select the **Configure** symbol.
+1. In the admin dashboard, select the **Configure** symbol.
 1. Select **Survey Programs**, and then select your survey program.
-1. In the list of surveys, review the start date for all the surveys listed in the **Completed** tab. If your survey program is marked as **Approved**, you can also review the start dates for the surveys listed in the **Upcoming and Live** tab.
+1. In the list of surveys, review the start date for all the surveys that are listed on the **Completed** tab. If your survey program is marked as **Approved**, you can also review the start dates for the surveys that are listed on the **Upcoming and Live** tab.
