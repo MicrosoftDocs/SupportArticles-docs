@@ -1,7 +1,7 @@
 ---
 title: Windows Server stops responding when signing in using a custom account
 description: Helps resolve an issue in which Windows Server stops responding when signing in by using a custom account that has an auto-start service.
-ms.date: 11/07/2023
+ms.date: 11/23/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -16,8 +16,6 @@ ms.technology: windows-server-performance
 # Windows Server stops responding during the sign-in process of a custom account
 
 This article helps resolve an issue in which Windows Server stops responding when you use a custom account that has an auto-start service to sign in.
-
-_Original KB number:_ &nbsp; 2703143
 
 When you use a custom account to sign in to Windows Server, the system stops responding:
 
