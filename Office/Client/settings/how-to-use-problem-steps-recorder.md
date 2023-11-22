@@ -13,13 +13,9 @@ ms.reviewer: kerbo
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 11/21/2023
 ---
 # How to use the Problem Steps Recorder in Microsoft 365
-
-_Original KB number:_ &nbsp; 3035258
-
-## Summary
 
 This article describes how to use Problem Steps Recorder (PSR) to automatically capture steps on a computer. These steps include a picture of the screen during each select and a text description of the selected areas. You can use the tool to save performed actions, such as repro steps, that can be provided to Microsoft 365 technical support to troubleshoot or diagnose an issue.
 
@@ -32,11 +28,11 @@ This article describes how to use Problem Steps Recorder (PSR) to automatically 
 > - The tool only collects the last 25 screen shots. If you see the following in your capture, refer to the **To adjust settings** in the section below to increase this value if you need to capture longer than 25 screen shots.  
     Step 1: <date/time> user left-click on **Text Editor (edit)** in **Untitled - Notepad**.
 
-## More information
+## To open the PSR tool 
 
-The following instructions explain how to use the PSR tool. To install and access PSR, select **Start**, type *psr* in the **Start search** box, and then select **psr.exe** in the search results.
+Select **Start**, type *psr* in the **Start search** box, and then select **psr.exe** in the search results.
 
-### To record and save steps on the computer
+## To record and save steps on the computer
 
 1. Select **Start Record**. Perform the steps on your computer to reproduce the problem. You can pause the recording at any time and resume it later.
 2. Select **Stop Record**.
@@ -47,7 +43,7 @@ The following instructions explain how to use the PSR tool. To install and acces
 
 To view the recording, open the compressed file that you just saved, and then double-click the file. The file opens in your browser.
 
-### To annotate problem steps
+## To annotate problem steps
 
 1. Select **Start Record**.
 2. When you want to add a comment, select **Add Comment**.
@@ -57,7 +53,7 @@ To view the recording, open the compressed file that you just saved, and then do
 
 To view the recording, open the compressed file that you just saved, and then double-click the file. The file opens in your browser.
 
-### To adjust settings
+## To adjust settings
 
 When you adjust settings for PSR, the settings are saved for only your current session. After you close and reopen PSR, the program returns to the regular settings.
 
