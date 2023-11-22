@@ -157,7 +157,7 @@ The following sections describe NetBIOS domain names and DNS domain names.
   > [!NOTE]  
   > Microsoft Windows NT allows non-DNS names to have period. Periods shouldn't be used in Active Directory NetBIOS domain names. If you're upgrading a computer whose NetBIOS name contains a period, change the name by migrating the domain to a new domain structure. Don't use periods in new NetBIOS domain names.
   >
-  > Use of the ampersand (&) character in NetBIOS domain names was allowed previously and is supported for historical purposes only. Don't create new Active Directory domains that contain ampersand (&) characters in the NetBIOS domain name.
+  > The ampersand (&) character in NetBIOS domain names was allowed previously and is supported for historical purposes only. Don't create new Active Directory domains whose NetBIOS domain names contain ampersand (&) characters.
 
 - **Disallowed characters:** The DNS host name checking function verifies NetBIOS domain names. These names can't contain the following characters:
 
