@@ -3,7 +3,7 @@ title: Error code 0x800f0922 when installing Windows updates
 description: Helps resolve the 0x800f0922 (CBS_E_INSTALLERS_FAILED) error when installing Windows updates.
 author: Deland-Han
 ms.author: delhan
-ms.date: 11/20/2023
+ms.date: 11/23/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -16,8 +16,6 @@ ms.technology: windows-server-deployment
 # Error 0x800f0922 caused by corrupted scheduled task when installing Windows updates
 
 This article helps resolve the 0x800f0922 (CBS_E_INSTALLERS_FAILED) error that occurs when installing Windows updates.
-
-_Original KB number:_ &nbsp; 5030591
 
 When you install Windows updates, you receive the 0x800f0922 (CBS_E_INSTALLERS_FAILED) error.
 
