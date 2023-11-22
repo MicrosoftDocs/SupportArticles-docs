@@ -34,7 +34,7 @@ Perform the [initial data collection] and narrow down steps. This helps understa
 
 ## Isolation shortcuts
 
-The following steps helps divide the troubleshooting into a focused area:
+The following steps help divide the troubleshooting into a focused area:
 
 - Client: application, connection string, driver (lacking Transport Layer Security (TLS) 1.2), SQL alias (64/32-bit), `hosts`` file, and incorrect [Domain Name System (DNS)](/previous-versions/windows/it-pro/windows-server-2003/cc787921(v=ws.10)) suffix (full name connects; short name fails).
 - SQL Server: database engine, enabled protocols, and firewall.
@@ -119,7 +119,7 @@ In an SSMS, UDL, or ODBC Data Source Administrator connection, bypass the SQL Se
 
 If SQL Server is using a port other than 1433:
 
-If you can connect by hard-coding the port number but can't connect when it is omitted, this is a SQL Server Browser issue. If it happens on the server, it's more likely a firewall issue if it only happens remotely. The SQL Server Browser service may need to be restarted.
+If you can connect by hard-coding the port number but can't connect when it's omitted, this is a SQL Server Browser issue. If it happens on the server, it's more likely a firewall issue if it only happens remotely. The SQL Server Browser service may need to be restarted.
 
 If using Always On, connecting to the listener doesn't use SQL Server Browser, so you have to hardcode the port number in the connection string. If that doesn't work, try connecting directly to the primary node on its regular SQL port. If that works, the listener may be bad for some reason. Engage SQL Server High Availability to check the cluster and listener configuration.
 
