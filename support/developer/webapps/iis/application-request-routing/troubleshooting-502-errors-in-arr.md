@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting 502 errors in ARR
 description: This article provides resolutions for the IIS Failed Request Tracing Network Monitor WinHTTP tracing related to ARR.
-ms.date: 04/09/2012
+ms.date: 11/22/2023
 ms.reviewer: riande, rimarr, v-jayaramanp
 ms.topic: troubleshooting
 ---
@@ -116,7 +116,7 @@ To bring back the offline servers, right-click on the server name, and select **
 
 ## WinHTTP or WebIO tracing
 
-Usually, packet capture tools like [WireShark](https://www.wireshark.org/download.html) provides you with the information you need to identify exactly what is timing out. However, there are times (such as when the traffic is SSL encrypted) that you will need to try a different approach. Starting with Windows 7 and Windows Server 2008R2 and owards you can enable WinHTTP tracing using the netsh tool by running the following command from an administrative command prompt:
+Usually, packet capture tools like [WireShark](https://www.wireshark.org/download.html) provide you with the information you need to identify exactly what's timing out. However, there are times (such as when the traffic is SSL encrypted) that you will need to try a different approach. Starting with Windows 7 and Windows Server 2008 R2, you can enable WinHTTP tracing using the netsh tool by running the following command from an administrative command prompt:
 
 ```Console
 netsh trace start scenario=internetclient capture=yes persistent=no level=verbose tracefile=c:\temp\net.etl
@@ -133,7 +133,7 @@ The `stop` command takes a few seconds to finish. When it's done, you find a *ne
 To analyze the log,
 
 1. Open it in Netmon 3.4 or later.
-1. Make sure you have set up your parser profile. To achieve this open the Tools > Options menu, and select the **Parser Profiles** tab, select the **Windows** profile, then select the **Set as Active** button to apply the changes.
+1. Make sure you have set up your parser profile. To achieve this, open the **Tools** > **Options** menu, select the **Parser Profiles** tab > **Windows** profile, and then select the **Set as Active** button to apply the changes.
 1. Scroll through the trace until you find the *w3wp.exe* instance where ARR is running by correlating with the **UT process name** column.
 1. Right-click on w3wp and select **Add UT Process name to display filter**. This sets the display filter similar to:
 
@@ -178,3 +178,5 @@ To analyze the log,
 - [Failed Request Tracing](https://www.iis.net/learn/troubleshoot/using-failed-request-tracing/troubleshooting-failed-requests-using-tracing-in-iis)
 - [Winhttp Tracing](https://technet.microsoft.com/library/cc731131(WS.10).aspx)
 - [Network Monitor](https://www.microsoft.com/download/details.aspx?id=4865)
+
+[!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)] 
