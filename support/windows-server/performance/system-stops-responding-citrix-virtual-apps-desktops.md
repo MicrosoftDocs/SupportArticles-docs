@@ -1,7 +1,7 @@
 ---
 title: System stops responding when using Citrix Virtual Apps and Desktops
 description: Helps resolve an issue in which the system stops responding when using Citrix Virtual Apps and Desktops to access a terminal server.
-ms.date: 11/08/2023
+ms.date: 11/23/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -16,8 +16,6 @@ ms.technology: windows-server-performance
 # System stops responding when using Citrix Virtual Apps and Desktops
 
 This article helps resolve an issue in which the system stops responding when using Citrix Virtual Apps and Desktops to access a terminal server.
-
-_Original KB number:_ &nbsp; 4552327
 
 When you use Citrix Virtual Apps and Desktops to access a terminal server, the system may stop responding when you try to sign in, sign out, or shut down the server. This issue is triggered by a deadlock in Local Session Manager (LSM) and Remote Desktop Services (*termsvcs.exe*).
 
