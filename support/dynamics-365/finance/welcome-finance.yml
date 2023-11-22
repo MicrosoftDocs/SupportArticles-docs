@@ -41,7 +41,7 @@ landingContent:
           - text: Missing budget data
             url: business-performance-analytics/missing-budget-data-err00006.md
           - text: Missing budget transaction header
-            url: usiness-performance-analytics/missing-budget-transaction-header-err00007.md
+            url: business-performance-analytics/missing-budget-transaction-header-err00007.md
             
 # Card
   - title: Budgeting
@@ -57,7 +57,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Troubleshoot issues with transactions that can't be settled
-            url: /cash-bank-management/settlement-overview-resolve-issues.md
+            url: cash-bank-management/settlement-overview-resolve-issues.md
           - text: Troubleshoot cash flow forecasting setup
             url: /dynamics365/finance/cash-bank-management/cash-flow-forecasting-tsg
 
