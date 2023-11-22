@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting Forms Authentication
 description: This article helps you troubleshoot problems related to Forms Authentication.
-ms.date: 04/09/2012
+ms.date: 11/22/2023
 ms.reviewer: senyum, apurvajo, v-jayaramanp
 ms.topic: troubleshooting
 ---
@@ -199,3 +199,5 @@ When you see the request that reached the server, make sure that the server rece
 ### More information
 
 - [Internet Explorer and Microsoft Edge per-domain cookie limit](/internet-explorer/kb-support/ie-edge-faqs)
+
+[!INCLUDE [Third-party disclaimer](../includes/third-party-disclaimer.md)] 
