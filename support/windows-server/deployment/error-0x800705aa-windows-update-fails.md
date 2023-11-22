@@ -5,7 +5,7 @@ author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
-ms.date: 11/07/2023
+ms.date: 11/23/2023
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
@@ -17,8 +17,6 @@ ms.technology: windows-server-deployment
 
 This article helps resolve an issue in which Windows Update fails with error 0x800705aa.
 
-_Original KB number:_ &nbsp; 5028393
- 
 Windows Cumulative Updates (CUs) can't be installed, or the system shows a notification that updates are missing. 
  
 You can also find the following error by searching "Failed to load the COMPONENTS hive" in *CBS.log* (*C:\\Windows\\Logs\\CBS*): 
