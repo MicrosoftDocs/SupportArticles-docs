@@ -22,6 +22,55 @@ This section is a comprehensive list of questions classified based on certain ca
 - [Big picture questions](#big-picture-questions)
 - [New or existing problem](#new-or-existing-problem)
 
+## Method of collecting data
+
+You can use tools such as Problem Steps Recorder (PSR), Network trace, and NETLOGON trace to collect data. This section provides detailed steps you can use to install and configure a combination of all three tools.
+
+Follow these steps simultaneously on both the client and server machines. If the application is a 3-tier or n-tier architecture, run on intermediate servers, as well.
+
+1. Install **NETMON** or **WIRESHARK** on all affected machines or use the built-in `NETSH` command (Windows 2008 or newer). No reboot is required.
+
+1. Enable NETLOGON debug logging on the client and all servers by running the following command:
+
+   `NLTEST /DBFLAG:2080FFFF`
+
+1. If possible, do one of the following:
+
+    - Reboot the client machine.
+    - Ask the user to log off and log in again.
+    - Close the client application and re-open it.
+
+1. On the client machine, start the **Problem Steps Recorder** (psr.exe) and select **Start Record**.
+
+   This will accurately capture all user actions that lead up to the problem and save the results to a ZIP file.
+
+1. Start the network capture on all machines.
+
+1. If you are using NETSH, run the `NETSH TRACE START CAPTURE=YES TRACEFILE=C:\TEMP%computername%.ETL` command (use an appropriate file or path name).
+
+1. Flush the DNS cache on all machines by running the `IPCONFIG /FLUSHDNS` command.
+
+1. Clear the NETBIOS cache on all machines by running the `NBTSTAT /RR` command.
+
+1. Purge client Kerberos tickets by running the `KLIST purge` command.
+
+1. Clear tickets on each server by running the `KLIST -li 0x3e7 purge` command.
+
+    > [!NOTE]
+    > Type the command and don't use copy or paste into the command line. The dash might get converted to a hyphen and break the command. `KLIST` is case-sensitive.
+
+1. Reproduce the issue.
+
+1. Stop the *psr.exe* recording.
+
+1. Stop the network captures and save the recorded file by running the command `NETSH: NETSH TRACE STOP` with a meaningful name. For example, *SQLProd01.netmon.cap*.
+
+1. Wait for the command prompt to reappear. Don't close the command window until this happens.
+
+1. Copy the NETLOGON log to *C:\windows\debug\netlogon.log* and give a meaningful name. For example, *SQLProd01.netlogon.log*.
+
+1. Disable logging by running the `NLTEST /DBFLAG:0x0` command.
+
 ## Client machine
 
 You can collect the following information for the Client machine component.
