@@ -3,7 +3,7 @@ title: DNS zone transfer fails when using "Only to servers listed in the Name se
 description: Helps resolve an issue in which DNS zone transfer fails when using the "Only to servers listed in the Name servers tab" setting.
 author: Deland-Han
 ms.author: delhan
-ms.date: 11/13/2023
+ms.date: 11/23/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
