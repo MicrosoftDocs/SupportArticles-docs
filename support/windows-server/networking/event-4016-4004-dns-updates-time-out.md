@@ -1,7 +1,7 @@
 ---
 title: Event IDs 4016 and 4004 when DNS updates time out
 description: Helps resolve an issue in which Event IDs 4016 and 4004 are logged when DNS can't enumerate AD-integrated zones or create/write records in zones.
-ms.date: 11/17/2023
+ms.date: 11/23/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -16,8 +16,6 @@ ms.technology: networking
 # Event IDs 4016 and 4004 when DNS updates time out
 
 This article helps resolve an issue in which Event IDs 4016 and 4004 are logged in the Domain Name System (DNS) when DNS updates from the Lightweight Directory Access Protocol (LDAP) to Active Directory (AD) time out.
-
-_Original KB number:_ &nbsp; 4559507
 
 In AD-integrated DNS zones that are hosted on domain controllers (Windows Server 2012 R2 or later versions), DNS can't enumerate the zones or intermittently fail to create or write records. Additionally, Event IDs 4016 and 4004 are logged in the DNS event log:
 
