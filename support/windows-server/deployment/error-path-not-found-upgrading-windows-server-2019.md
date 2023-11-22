@@ -4,7 +4,7 @@ description: Helps resolve the ERROR_PATH_NOT_FOUND error when performing an in-
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
-ms.date: 11/14/2023
+ms.date: 11/23/2023
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
