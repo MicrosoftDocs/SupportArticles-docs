@@ -5,7 +5,7 @@ author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
-ms.date: 11/03/2023
+ms.date: 11/23/2023
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
@@ -16,8 +16,6 @@ ms.technology: windows-server-group-policy
 # "LDAP Bind function call failed" error when updating Group Policy settings
 
 This article helps resolve the error "LDAP Bind function call failed" that occurs when updating Group Policy settings.
-
-_Original KB number:_ &nbsp; 5032097
 
 When you use the [gpupdate](/windows-server/administration/windows-commands/gpupdate) command to update Group Policy settings, you receive the following error:
 
