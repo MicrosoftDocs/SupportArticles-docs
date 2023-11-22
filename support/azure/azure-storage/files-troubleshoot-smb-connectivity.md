@@ -379,7 +379,8 @@ Although file handles and leases serve an important purpose, sometimes file hand
 
 The resolution to this issue depends on whether this is being caused by an orphaned file handle or lease.
 
-**Note:** REST leases are used by application to prevent deletion and modification, and the customer should identify which application is acquiring the said leases, before trying to break them, else they could break the application behavior.
+> [!NOTE]
+> REST leases are used by applications to prevent files from being deleted or modified. You should identify which application is acquiring the leases before trying to break them, or else you might break the application behavior.
 
 #### Cause 1
 
