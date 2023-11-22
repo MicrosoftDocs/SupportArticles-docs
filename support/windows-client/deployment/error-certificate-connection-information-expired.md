@@ -4,7 +4,7 @@ description: Helps resolve the error certificate in the connection information h
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
-ms.date: 11/13/2023
+ms.date: 11/23/2023
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
