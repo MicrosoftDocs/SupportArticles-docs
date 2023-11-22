@@ -1,7 +1,7 @@
 ---
 title: User-based GPO settings aren't applied when signing in with shadow principals
 description: Helps resolve an issue in which user-based Group Policy Object (GPO) settings don't work with shadow principals.
-ms.date: 11/06/2023
+ms.date: 11/23/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -16,8 +16,6 @@ ms.technology: windows-server-group-policy
 # User-based GPO settings aren't applied when signing in with shadow principals
 
 This article helps resolve an issue in which user-based Group Policy Object (GPO) settings don't work when signing in using shadow principals.
-
-_Original KB number:_ &nbsp; 5031575
 
 You have two forests, `contoso.net` and `pam.contoso.com`. `Pam.contoso.com` is an admin forest that has shadow principals. Selective authentication is configured for the forest trust. Then, you create a group named `ShadowPrincipalGroup` that includes all shadow principals.
 
