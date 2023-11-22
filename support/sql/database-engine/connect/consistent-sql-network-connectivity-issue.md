@@ -36,7 +36,7 @@ Perform the [initial data collection] and narrow down steps. This helps understa
 
 The following steps help divide the troubleshooting into a focused area:
 
-- Client: application, connection string, driver (lacking Transport Layer Security (TLS) 1.2), SQL alias (64/32-bit), `hosts`` file, and incorrect [Domain Name System (DNS)](/previous-versions/windows/it-pro/windows-server-2003/cc787921(v=ws.10)) suffix (full name connects; short name fails).
+- Client: application, connection string, driver (lacking Transport Layer Security (TLS) 1.2), SQL alias (64/32-bit), `hosts` file, and incorrect [Domain Name System (DNS)](/previous-versions/windows/it-pro/windows-server-2003/cc787921(v=ws.10)) suffix (full name connects; short name fails).
 - SQL Server: database engine, enabled protocols, and firewall.
 - Network: DNS alias, gateway, router, and firewall.
 
@@ -105,7 +105,7 @@ In an SSMS, UDL, or ODBC Data Source Administrator connection, bypass the SQL Se
 
   1. Validate SQL Server Browser is running. If SQL Server is the default instance listening on port 1433, it doesn't have to be running. You should be able to leave off the port number and still have it work.
   1. If leaving off the `tcp:` prefix causes it to fail, you may be connecting via Named Pipes by default. You can validate by using `np:hostname\instancename` as the server name.
-  1. If using the Network Basic Input/Output System (NETBIOS) name fails, you may have a SQL alias (SQL Server Configuration Manager) or an incorrect DNS suffix in the network configuration. Also, check 32-bit aliases.
+  1. If using the Network Basic Input/Output System (NetBIOS) name fails, you may have a SQL alias (SQL Server Configuration Manager) or an incorrect DNS suffix in the network configuration. Also, check 32-bit aliases.
 
 - If SSMS fails to connect, try connecting with a UDL file or via the ODBC Data Source Administrator.
 
