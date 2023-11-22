@@ -5,7 +5,7 @@ ms.date: 11/22/2023
 ms.reviewer: prmadhes, jopilov, v-sidong
 ms.custom: sap:Connection issues
 ---
-# Consistent SQL network connectivity issue
+# Consistent SQL network connectivity issues
 
 This article helps troubleshoot network connectivity errors in SQL Server. These errors are consistent and repeatable every time. They point to some configuration issues, such as SQL Server not enabling the Transmission Control Protocol (TCP) or a firewall blocking the connection. They don't include any text about Security Support Provider Interface (SSPI) or user errors, which would be an authentication error. This troubleshooting focuses on remote TCP connections as this is the most common connection type in most data centers, but many of the techniques can also be applied to Named Pipes.
 
