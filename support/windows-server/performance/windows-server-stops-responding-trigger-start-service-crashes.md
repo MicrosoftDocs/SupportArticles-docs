@@ -17,8 +17,6 @@ ms.technology: windows-server-performance
 
 This article helps resolve an issue in which Windows Server stops responding during the sign-in process if a Trigger Start service has a recovery action and the reset period is set to **0**.
 
-_Original KB number:_ &nbsp; 4486889
-
 When you try to sign in to a Windows Server-based device, the system stops responding. On a Windows Server Failover Cluster node, [bug check 0x9E](/windows-hardware/drivers/debugger/bug-check-0x9e--user-mode-health-monitor) may occur. 
 
 When the service crashes, the service control manager (SCM) queues a recovery work item based on the failure action configuration of the service. The service is set to restart after 60 seconds if a failure occurs, and the reset period is set to **0**, which indicates an indefinitely continuous action. The recovery work item results in acquiring a critical section, followed by a request to start the service. If the service crashes again, it triggers another recovery process.
