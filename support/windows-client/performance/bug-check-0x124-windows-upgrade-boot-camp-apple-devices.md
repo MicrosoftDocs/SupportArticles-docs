@@ -1,7 +1,7 @@
 ---
 title: Bug check 0x124 after a Windows in-place upgrade on Apple devices
 description: Helps resolve bug check 0x124 after performing an in-place upgrade of Windows 10 by using Boot Camp Assistant on Apple devices.
-ms.date: 11/08/2023
+ms.date: 11/23/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -16,8 +16,6 @@ ms.technology: windows-client-performance
 # Bug check 0x124 after an in-place upgrade of Windows 10 by using Boot Camp on Apple devices
 
 This article helps resolve bug check 0x124 that occurs after performing an in-place upgrade of Windows 10 by using [Boot Camp Assistant](https://support.microsoft.com/topic/how-to-install-windows-10-on-mac-4cbe5c9c-cd37-87e1-043c-27e8f764b12d) on Apple devices. 
-
-_Original KB number:_ &nbsp; 4488167
 
 You have an Apple device (such as an iMac or  MacBook Pro) that runs Boot Camp Assistant to dual-boot Windows and macOS. After you perform an in-place upgrade to Windows 10, version 1709 via Microsoft System Center Configuration Manager (SCCM), you receive [bug check 0x124 WHEA_UNCORRECTABLE_ERROR](/windows-hardware/drivers/debugger/bug-check-0x124---whea-uncorrectable-error), and Windows fails to boot.
 
