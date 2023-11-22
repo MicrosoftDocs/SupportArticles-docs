@@ -3,7 +3,7 @@ title: Error code 2359302 when installing updates in Windows Server 2019
 description: Helps resolve an issue in which you receive error code 2359302 when installing updates in Windows Server 2019.
 author: Deland-Han
 ms.author: delhan
-ms.date: 11/10/2023
+ms.date: 11/23/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -16,8 +16,6 @@ ms.technology: windows-server-deployment
 # Error code 2359302 when installing updates in Windows Server 2019
 
 This article helps resolve an issue in which you receive error code 2359302 when installing updates in Windows Server 2019.
-
-_Original KB number:_ &nbsp; 5030033
 
 When you install updates in Windows Server 2019, you receive the 2359302 error in the Windows Setup event log under Event Viewer. For example:
 
