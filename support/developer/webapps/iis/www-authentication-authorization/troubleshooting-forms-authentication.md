@@ -200,4 +200,4 @@ When you see the request that reached the server, make sure that the server rece
 
 - [Internet Explorer and Microsoft Edge per-domain cookie limit](/internet-explorer/kb-support/ie-edge-faqs)
 
-[!INCLUDE [Third-party disclaimer](../../../../../includes/third-party-disclaimer.md)] 
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)] 
