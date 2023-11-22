@@ -379,6 +379,9 @@ Although file handles and leases serve an important purpose, sometimes file hand
 
 The resolution to this issue depends on whether this is being caused by an orphaned file handle or lease.
 
+> [!NOTE]
+> REST leases are used by applications to prevent files from being deleted or modified. Before breaking any leases, you should identify which application is acquiring them. Otherwise, you might break the application behavior.
+
 #### Cause 1
 
 A file handle is preventing a file/directory from being modified or deleted. You can use the [Get-AzStorageFileHandle](/powershell/module/az.storage/get-azstoragefilehandle) PowerShell cmdlet to view open handles.
