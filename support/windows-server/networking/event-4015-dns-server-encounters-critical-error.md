@@ -1,7 +1,7 @@
 ---
 title: Event ID 4015 is logged and the DNS server encounters a critical error
 description: Helps to resolve the issue in which Event ID 4015 is logged and the Domain Name Service (DNS) server encounters a critical error.
-ms.date: 11/09/2023
+ms.date: 11/23/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -16,7 +16,7 @@ ms.technology: networking
 This article helps to resolve the issue in which Event ID 4015 is logged and the Domain Name Service (DNS) server encounters a critical error.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp; 969488, 2733147, 4592214
+_Original KB number:_ &nbsp; 969488, 2733147
 
 You receive Event ID 4015 in one of the following scenarios:
 
