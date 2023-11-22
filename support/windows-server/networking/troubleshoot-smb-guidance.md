@@ -1,7 +1,7 @@
 ---
 title: Guidance for troubleshooting SMB
 description: Introduces general guidance for troubleshooting scenarios related to SMB.
-ms.date: 07/13/2023
+ms.date: 11/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -107,11 +107,11 @@ To troubleshoot this issue, use multiple virtual network adapters to make sure t
 ## SMB known issues
 
 - [TCP three-way handshake failure](/windows-server/storage/file-server/troubleshoot/tcp-three-way-handshake-fails)
-- [Slow files transfer speed](/windows-server/storage/file-server/troubleshoot/slow-file-transfer)
+- [Slow files transfer speed](slow-smb-file-transfer.md)
 - [Negotiate, Session Setup, and Tree Connect Failures](/windows-server/storage/file-server/troubleshoot/negotiate-session-setup-tree-connect-fails)
-- [TCP connection is aborted during Validate Negotiate](/windows-server/storage/file-server/troubleshoot/abort-during-validate-negotiate)
+- [TCP connection is aborted during Validate Negotiate](tcp-connection-abort-validate-negotiate.md)
 - [SMB Multichannel troubleshooting](/windows-server/storage/file-server/troubleshoot/smb-multichannel-troubleshooting)
-- [High CPU usage issue on the SMB server](/windows-server/storage/file-server/troubleshoot/high-cpu-usage-issue-on-smb-server)
+- [High CPU usage issue on the SMB server](high-cpu-usage-issue-smb-server.md)
 - [Troubleshoot the Event ID 50 Error Message](/windows-server/storage/file-server/troubleshoot/troubleshoot-event-id-50-error)
 - [SMBv1 is not installed by default](/windows-server/storage/file-server/troubleshoot/smbv1-not-installed-by-default-in-windows)
 - [Access Denied when you access an SMB file share](../../windows-client/networking/access-denied-access-smb-file-share.md)
