@@ -3,8 +3,8 @@ title: Troubleshoot issues with forecasting
 description: Provides resolutions for the known issues that are related to forecasting in Dynamics 365 Sales.
 author: sbmjais
 ms.author: shjais
-ms.reviewer: ladirohit 
-ms.date: 11/21/2023
+ms.reviewer: ladirohit, lavanyakr
+ms.date: 11/22/2023
 ms.subservice: d365-sales-sales
 ---
 # Troubleshoot issues with forecasting
@@ -239,7 +239,7 @@ To solve the issue, make sure that:
 
 ### Cause
 
-The columns associated with the **Selector**, **Amount field**, and **Date field** may have field-level security enabled. 
+The columns associated with the **Selector**, **Amount field**, and **Date field** might have field-level security enabled.
 
 ### Resolution
 
