@@ -13,7 +13,6 @@ ms.reviewer: kaushika, hamansoor, v-lianna
 ms.custom: sap:servicing, csstroubleshoot, ikb2lmc
 ms.technology: windows-server-deployment
 ---
-
 # ERROR_INVALID_DATA error at startup after installing updates
 
 This article helps resolve an issue in which you receive the "ERROR_INVALID_DATA" error at the system startup after installing Windows updates.
