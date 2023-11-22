@@ -58,8 +58,8 @@ Before you start to troubleshoot errors, it's important to understand what each 
     [Login failed for user '(null)'](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?view=sql-server-ver16#login-failed-for-user-(null))
     Login failed for user ''
     Login failed for user 'NT AUTHORITY\ANONYMOUS LOGON'
-    Login failed for user 'JohnDoe'
-    Login failed for user 'CONTOSO\JohnDoe'
+    Login failed for user 'username'
+    Login failed for user 'DOMAIN\username'
     Login failed. The login is from an untrusted domain and cannot be used with Windows authentication.
     SQL Server does not exist or access denied - This can also be a network error.
 - [SSPI context messages](/troubleshoot/sql/database-engine/connect/cannot-generate-sspi-context-error?branch=main)
