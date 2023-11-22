@@ -23,7 +23,7 @@ When you use Citrix Virtual Apps and Desktops to access a terminal server, the s
 
 This issue occurs because Citrix Virtual Apps and Desktops use a Windows Terminal Server (WTS) API when handling a remote desktop request. If a terminal server or remote desktop server component is handling an incoming remote desktop request, it can't make direct or indirect blocking calls to remote desktop services (such as IWTS* or IWRDs APIs). 
 
-This issue is fixed in version 7.5 and later versions of Citrix Virtual Apps (XenApp) and Citrix Virtual Desktops (XenDesktop).
+If you encounter this issue, make sure you have the Citrix components fully patched. If you still encounter this issue, follow up with [Citrix](https://www.citrix.com/support/) for additional support.
 
 > [!NOTE]
 > To avoid a possible deadlock when calling any methods on this interface, don't make any function or method calls that will directly or indirectly result in a Remote Desktop Services API being called. If you need to make an outbound call, start a new thread and make the outbound call from the new thread.
