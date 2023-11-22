@@ -9,6 +9,8 @@ items:
   href: /sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?context=/troubleshoot/sql/context/context
 - name: Network-related or instance-specific error
   href: network-related-or-instance-specific-error-occurred-while-establishing-connection.md
+- name: Collect data to troubleshoot SQL connectivity issues
+  href: collect-data-to-troubleshoot-sql-connectivity-issues.md
 - name: Pre-reqs for connectivity troubleshooting
   href: resolve-connectivity-errors-checklist.md
 - name: The certificate chain was issued by an authority that isn't trusted
