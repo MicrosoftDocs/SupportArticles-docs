@@ -415,7 +415,7 @@
   - name: Windows
     items:
     - name: Azure Windows VM Agent overview
-      href: /azure/virtual-machines/extensions/agent-windows-?context=/troubleshoot/azure/virtual-machines/context/context
+      href: /azure/virtual-machines/extensions/agent-windows?context=/troubleshoot/azure/virtual-machines/context/context
     - name: Install Windows VM agent offline
       href: install-vm-agent-offline.md
     - name: Troubleshoot Windows VM agent
