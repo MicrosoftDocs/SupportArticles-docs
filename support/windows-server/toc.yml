@@ -1216,6 +1216,8 @@
     items:
     - name: 'Troubleshooting guidance: Applying Group Policy'
       href: ./group-policy/applying-group-policy-troubleshooting-guidance.md
+    - name: '"LDAP Bind function call failed" error when updating Group Policy settings'
+      href: ./group-policy/ldap-bind-function-call-failed-error.md      
     - name: '"Namespace is already defined" error when editing a policy'
       href: ./group-policy/microsoft-policies-sensors-windowslocationprovider-defined.md
     - name: '"Set roaming profile path for all users logging onto this computer" setting applies to local accounts'
