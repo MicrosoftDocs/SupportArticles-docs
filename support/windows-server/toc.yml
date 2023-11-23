@@ -1626,6 +1626,8 @@
       href: ./networking/dns-records-not-present.md
     - name: DNS registers duplicate SRV records for a DC
       href: ./networking/dns-registers-duplicate-srv-records-for-dc.md
+    - name: DNS scavenging setup
+      href: ./networking/dns-scavenging-setup.md
     - name: DNS Servers don't resolve queries for top-level domains
       href: ./networking/dns-server-not-resolve-queries-for-top-level-domain.md
     - name: DNS Server geo-location policy doesn't work as expected
