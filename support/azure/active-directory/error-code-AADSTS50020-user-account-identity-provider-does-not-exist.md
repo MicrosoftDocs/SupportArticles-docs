@@ -32,7 +32,7 @@ When users try to log in to Microsoft Entra admin center by using their personal
 
 To create a new tenant, browse to [https://azure.microsoft.com/en-us/free/](https://azure.microsoft.com/free/), and then select *Start free** to create a free Azure account.
 
-After setting up the new tenant, you will automatically be assigned the role of Global Administrator. It provides you with full access to all options within this tenant.
+After setting up the new tenant, the user will automatically be assigned the role of Global Administrator. It provides the user with full access to all options within this tenant.
 
 ## Cause 2: Used unsupported account type (multitenant and personal accounts)
 
