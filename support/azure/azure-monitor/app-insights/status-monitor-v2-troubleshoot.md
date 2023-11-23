@@ -155,8 +155,9 @@ Review the [Get-ApplicationInsightsMonitoringStatus reference](/azure/azure-moni
 
 #### Setup
 
-1. Download *PerfView.exe* and *PerfView64.exe* from [GitHub](https://github.com/Microsoft/perfview/releases).
-2. Run *PerfView64.exe*.
+1. Download *PerfView.exe* from [GitHub](https://github.com/Microsoft/perfview/releases).
+1. Run *PerfView.exe*.
+1. Click on the **Collect** option in the menu bar and click on **Collect** again. 
 3. Expand **Advanced Options**.
 4. Clear these check boxes:
     - **Zip**
