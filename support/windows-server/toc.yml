@@ -1220,6 +1220,8 @@
       href: ./group-policy/microsoft-policies-sensors-windowslocationprovider-defined.md
     - name: '"Set roaming profile path for all users logging onto this computer" setting applies to local accounts'
       href: ./group-policy/set-roaming-profile-path-all-users-applies-all-acccounts.md
+    - name: Group Policy fails to apply if default value of "Specify startup policy processing wait time" isn't honored
+      href: ./group-policy/specify-startup-policy-processing-wait-time-default-value-not-honored.md      
     - name: A Group Policy setting isn't available in the security policy settings list
       href: ./group-policy/default-owner-objects-created-members-administrators-group-not-available.md
     - name: AuthZ fails with an Access Denied error
