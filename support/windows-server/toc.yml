@@ -1036,6 +1036,8 @@
       href: ./deployment/error-0x800f0922-uninstall-role-feature.md
     - name: Error C0190003 after installing updates
       href: ./deployment/error-c0190003-install-updates-restart-computer.md
+    - name: Error code 2359302 when installing updates in Windows Server 2019
+      href: ./deployment/error-2359302-installing-windows-updates.md
     - name: Fail to install Network Policy Server role
       href: ./deployment/error-0x80004005-network-policy-server-role.md
     - name: Failed to schedule Software Protection service for restart
