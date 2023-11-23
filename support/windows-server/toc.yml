@@ -1026,6 +1026,8 @@
       href: ./deployment/description-of-windows-server-update-services-3.md
     - name: Error 0x800f0906 when you convert Server Core to GUI
       href: ./deployment/dism-fails-with-error-0x800f0906.md
+    - name: Error 0x800f0922 when installing Windows updates
+      href: ./deployment/error-0x800f0922-installing-windows-updates.md
     - name: Error 0x800f0922 when MPIO feature installation fails
       href: ./deployment/error-0x800f0922-mpio-feature-installation-fails.md
     - name: Error 0x800f0922 when you uninstall roles/features
