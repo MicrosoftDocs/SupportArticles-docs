@@ -1638,6 +1638,8 @@
       href: ./networking/dns-zone-transfer-options-reset.md
     - name: DNS Server becomes an island
       href: ./networking/dns-server-becomes-island.md
+    - name: 'DNS zone transfer fails when using the "Only to servers listed in the Name servers tab" setting'
+      href: ./networking/dns-zone-transfer-fails-only-servers-listed-name-servers.md
     - name: Events 407 and 408 when querying DNS server
       href: ./networking/events-407-408-in-dns-server-event-log.md
     - name: Event ID 4000 and 4007 when DNS zones not loaded
