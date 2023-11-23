@@ -1,7 +1,7 @@
 ---
 title: Azure Kubernetes Service cluster/node is in a failed state
 description: Troubleshoot an issue where an Azure Kubernetes Service (AKS) cluster/node is in a failed state.
-ms.date: 07/28/2023
+ms.date: 11/23/2023
 ms.reviewer: chiragpa, nickoman, v-weizhu
 ms.service: azure-kubernetes-service
 ms.subservice: common-issues
@@ -35,7 +35,7 @@ The following list outlines some common errors:
 - [OverconstrainedAllocationRequest](error-code-zonalallocationfailed-allocationfailed.md)
 - ReadOnlyDisabledSubscription
 
-  To fix this error, review and adjust the subscription permissions as the subscription is currently disabled and set to ready-only.
+  To fix this error, review and adjust the subscription permissions, as the subscription is currently disabled and set to read-only.
 
 Alternatively, try to manually restore the cluster state from **Failed** to **Succeeded** by running the following [az resource update](/cli/azure/resource#az-resource-update) command:
 
