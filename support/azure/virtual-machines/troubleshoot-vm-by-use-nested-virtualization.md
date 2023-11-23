@@ -44,57 +44,59 @@ In order to mount the faulty VM, the Rescue VM must use the same type of Storage
 
         :::image type="content" source="media/troubleshoot-vm-by-use-nested-virtualization/hyper-v-cannot-be-installed-error.png" alt-text="Screenshot that shows the 'Hyper-V cannot be installed' error message. "lightbox="media/troubleshoot-vm-by-use-nested-virtualization/hyper-v-cannot-be-installed-error.png":::
 
->[!NOTE]
->If you encounter the similar error as above while attempting to add Hyper-V role on the Rescue VM, post following all the prerequisites as well as below steps (steps 3 to 12), it could be because by default the hypervisor is not enabled in the bcdedit configuration of the VM i.e. **hypervisorlaunchtype** is not set as **Auto**. To fix this, you will need to enable it before installing the Hyper-V role.  
+        > [!NOTE]
+        > This error occurs because the hypervisor is not enabled in the BCDEdit configuration of the Rescue VM. For example, the `hypervisorlaunchtype` option is not set to `auto`. To fix this error, set the option before installing the Hyper-V role.
 
-To check the **hypervisorlaunchtype** on your VM, open command prompt as Administrator and execute the below command:  
-```powershell  
-#bcdedit /enum  
-```
-If the output is similar to below one, you may need to enable it.  
+        To check the `hypervisorlaunchtype` option on the VM, run the following cmdlet from an elevated PowerShell command prompt:
 
-```powershell 
-#Windows Boot Manager
---------------------
-identifier              {bootmgr}
-device                  partition=\Device\HarddiskVolume3
-path                    \EFI\Microsoft\Boot\bootmgfw.efi
-description             Windows Boot Manager
-locale                  en-US
-inherit                 {globalsettings}
-bootshutdowndisabled    Yes
-default                 {current}
-resumeobject            {24089230-6481-11ee-8dea-6045bd34a71d}
-displayorder            {current}
-toolsdisplayorder       {memdiag}
-timeout                 30
- 
-Windows Boot Loader
--------------------
-identifier              {current}
-device                  partition=C:
-path                    \Windows\system32\winload.efi
-description             Windows Server
-locale                  en-US
-inherit                 {bootloadersettings}
-recoveryenabled         No
-isolatedcontext         Yes
-allowedinmemorysettings 0x15000075
-osdevice                partition=C:
-systemroot              \Windows
-resumeobject            {24089230-6481-11ee-8dea-6045bd34a71d}
-nx                      OptOut
-bootstatuspolicy        IgnoreAllFailures
-ems                     Yes  
-``` 
+        ```powershell
+        bcdedit /enum
+        ```
 
-To set the hypervisorlaunchtype, execute the below commands::      
+        See the following output for an example. In this example, the hypervisor parameter isn't included, indicating that the hypervisor isn't enabled.
 
-```powershell
-#bcdedit /set hypervisorlaunchtype auto
-#Restart-Computer -Force  
-```  
-      
+        ```output
+        Windows Boot Manager
+        --------------------
+        identifier              {bootmgr}
+        device                  partition=\Device\HarddiskVolume3
+        path                    \EFI\Microsoft\Boot\bootmgfw.efi
+        description             Windows Boot Manager
+        locale                  en-US
+        inherit                 {globalsettings}
+        bootshutdowndisabled    Yes
+        default                 {current}
+        resumeobject            {24089230-1111-2222-3333-6045bd34a71d}
+        displayorder            {current}
+        toolsdisplayorder       {memdiag}
+        timeout                 30
+         
+        Windows Boot Loader
+        -------------------
+        identifier              {current}
+        device                  partition=C:
+        path                    \Windows\system32\winload.efi
+        description             Windows Server
+        locale                  en-US
+        inherit                 {bootloadersettings}
+        recoveryenabled         No
+        isolatedcontext         Yes
+        allowedinmemorysettings 0x15000075
+        osdevice                partition=C:
+        systemroot              \Windows
+        resumeobject            {24089230-1111-2222-3333-6045bd34a71d}
+        nx                      OptOut
+        bootstatuspolicy        IgnoreAllFailures
+        ems                     Yes
+        ```
+
+        To set the `hypervisorlaunchtype` option to `auto` and restart the VM, run the following cmdlet:
+
+        ```powershell
+        bcdedit /set hypervisorlaunchtype auto
+        Restart-Computer -Force
+        ```
+
 2. After the Rescue VM is created, remote desktop to the Rescue VM.
 
 3. In Server Manager, select **Manage** > **Add Roles and Features**.
