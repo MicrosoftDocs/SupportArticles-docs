@@ -1026,8 +1026,10 @@
       href: ./deployment/system-file-checker.md
     - name: Description of Windows Server Update Services 3.0
       href: ./deployment/description-of-windows-server-update-services-3.md
+    - name: ERROR_INVALID_DATA error after installing Windows updates
+      href: ./deployment/error-invalid-data-startup-installing-updates.md
     - name: Error 0x800705aa when Windows Update fails
-      href: ./deployment/error-0x800705aa-windows-update-fails.md      
+      href: ./deployment/error-0x800705aa-windows-update-fails.md
     - name: Error 0x800f0906 when you convert Server Core to GUI
       href: ./deployment/dism-fails-with-error-0x800f0906.md
     - name: Error 0x800f0922 when installing Windows updates
