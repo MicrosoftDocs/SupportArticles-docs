@@ -304,7 +304,6 @@ To check whether the Export, Search, or Preview roles are assigned to the design
 
 > [!NOTE]
 > This diagnostic isn't available for the GCC High or DoD environments, or for Microsoft 365 operated by 21Vianet.
-You can run the following diagnostic to check if the Search, Export or Preview role are assigned to the designated admin account. Do the following:
 
 1.	Select the **Run Tests: eDiscovery RBAC check** button to populate the associated test in the Microsoft 365 admin center:
     Run Tests: eDiscovery RBAC Check
