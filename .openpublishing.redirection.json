@@ -1,6 +1,97 @@
 {
   "redirections": [
     {
+      "source_path": "support/dynamics-365/customer-service/omnichannel-for-customer-service/provision-fails-expired-license.md",
+      "redirect_url": "/troubleshoot/dynamics-365/customer-service/welcome-customer-service",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/cannot-access-gateway-run-queue.md",
+      "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/cannot-access-gateway-run-queue",
+      "redirect_document_id": false
+    },
+ {
+      "source_path": "support/power-platform/power-automate/desktop-flows/double-click-drag-drop-are-not-working.md",
+      "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/double-click-drag-drop-are-not-working",
+      "redirect_document_id": false
+    },
+ {
+      "source_path": "support/power-platform/power-automate/desktop-flows/find-which-machine-is-failing-within-a-cluster.md",
+      "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/find-which-machine-is-failing-within-a-cluster",
+      "redirect_document_id": false
+    },
+
+ {
+      "source_path": "support/power-platform/power-automate/desktop-flows/issue-with-ui-flows-error-uiaelementnotfound.md",
+      "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/issue-with-ui-flows-error-uiaelementnotfound",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/key-and-mouse-click-combo-not-working.md",
+      "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/key-and-mouse-click-combo-not-working",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/known-limitations-selenium-ide.md",
+      "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/known-limitations-selenium-ide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/multi-screen-recording-is-not-working.md",
+      "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/multi-screen-recording-is-not-working",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/recorder-not-recording-applications.md",
+      "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/recorder-not-recording-applications",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/reset-ui-flow-service-when-bad-state.md",
+      "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/reset-ui-flow-service-when-bad-state",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/troubleshoot-ui-flow-playback-unabletolaunchapplication.md",
+      "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/troubleshoot-ui-flow-playback-unabletolaunchapplication",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/troubleshoot-unavailable-gateway-when-desktop-flows-fail.md",
+      "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/troubleshoot-unavailable-gateway-when-desktop-flows-fail",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/troubleshooting-ui-flow-playback.md",
+      "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/troubleshooting-ui-flow-playback",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/ui-flow-inputs-not-working.md",
+      "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/ui-flow-inputs-not-working",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/ui-flow-outputs-not-working.md",
+      "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/ui-flow-outputs-not-working",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/ui-flow-playback-error-keyboardidmismatch.md",
+      "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/ui-flow-playback-error-keyboardidmismatch",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/ui-flows-cannot-launch-recorder.md",
+      "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/ui-flows-cannot-launch-recorder",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/ui-flows-fails-uiaelementmismatch.md",
+      "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/ui-flows-fails-uiaelementmismatch",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/dynamics-365/guides/hololens-app/cant-make-video-call.md",
       "redirect_url": "/troubleshoot/dynamics-365/guides/application-functionality/cant-make-video-call",
       "redirect_document_id": true
@@ -6590,6 +6681,11 @@
     {
       "source_path": "support/windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md",
       "redirect_url": "/troubleshoot/windows-client/windows-tss/gather-information-using-tss-ad-replication",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/virtual-machines/boot-error-0xc0000225.md",
+      "redirect_url": "/troubleshoot/azure/virtual-machines/boot-error-status-not-found",
       "redirect_document_id": true
     }
 ]

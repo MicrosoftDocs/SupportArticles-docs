@@ -35,8 +35,6 @@
     href: error-code-reservedresourcename.md
   - name: ServicePrincipalValidationClientError error
     href: error-code-serviceprincipalvalidationclienterror.md
-  - name: SubnetIsFull error
-    href: error-code-subnetisfull.md
   - name: SubscriptionRequestsThrottled error (429)
     href: error-code-subscriptionrequeststhrottled.md
   - name: SubnetWithExternalResourcesCannotBeUsedByOtherResources error
@@ -56,7 +54,7 @@
       href: upgrade-fails-because-of-nsg-rules.md
     - name: NodePoolMcVersionIncompatible error
       href: nodepoolmcversionincompatible-error.md
-    - name: Troubleshoot eviction failures due to Pod Disruption Budgets
+    - name: Troubleshoot UpgradeFailed errors due to eviction failures caused by PDBs
       href: error-code-poddrainfailure.md
     - name: UnsatisfiablePDB error
       href: error-code-unsatisfiablepdb.md
@@ -64,6 +62,8 @@
       href: error-code-publicipcountlimitreached.md
     - name: QuotaExceeded error
       href: error-code-quotaexceeded.md   
+    - name: ServiceCidrOverlapExistingSubnetsCidr error
+      href: error-code-servicecidroverlapexistingsubnetscidr.md
     - name: SubnetIsFull upgrade error
       href: error-code-subnetisfull-upgrade.md   
     - name: Unable to get log analytics workspace info error
@@ -106,6 +106,8 @@
     href: aks-at-scale-troubleshoot-guide.md
   - name: Failed to fix node group sizes
     href: cluster-autoscaler-fails-to-scale.md
+  - name: SubnetIsFull error
+    href: error-code-subnetisfull.md
 
 - name: Troubleshoot Kubernetes control plane
   items:
@@ -264,6 +266,8 @@
 
 - name: Extensions and add-ons
   items:
+  - name: AKS Cost Analysis add-on issues
+    href: aks-cost-analysis-add-on-issues.md
   - name: Troubleshoot Azure Key Vault Provider for Secrets Store CSI Driver
     href: troubleshoot-key-vault-csi-secrets-store-csi-driver.md
   - name: Troubleshoot cluster extension deployment errors

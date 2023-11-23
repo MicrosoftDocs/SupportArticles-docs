@@ -4,7 +4,7 @@ description: Troubleshoot common issues with monitoring sync health and resolvin
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 11/02/2023
+ms.date: 11/09/2023
 ms.author: kendownie
 ms.custom: devx-track-azurepowershell
 ms.reviewer: v-weizhu
@@ -511,18 +511,16 @@ Sync sessions fail with either of these errors when the Azure file share storage
 
 1. Navigate to the sync group within the Storage Sync Service.
 2. Select the cloud endpoint within the sync group.
-3. Note the Azure file share name in the opened pane.
-4. Select the linked storage account. If this link fails, the referenced storage account has been removed.
+3. Note the Azure file share name in the opened pane. Select the file share name to open the file share settings page in the storage account.
 
-    :::image type="content" source="media/file-sync-troubleshoot-sync-errors/file-share-inaccessible.png" alt-text="Screenshot that shows the cloud endpoint detail pane with a link to the storage account.":::
+    :::image type="content" source="media/file-sync-troubleshoot-sync-errors/cloud-endpoint-detail.png" alt-text="Screenshot showing the cloud endpoint detail pane with a link to the file share.":::
 
-5. Select **Files** to view the list of file shares.
-6. Select the ellipses (...) at the end of the row for the Azure file share referenced by the cloud endpoint.
-7. Verify the **Usage** is the **Quota** below. Note unless an alternate quota has been specified, the quota will match the [maximum size of the Azure file share](/azure/storage/files/storage-files-scale-targets?toc=/azure/storage/filesync/toc.json).
+4. Select the file share to get the details on the **Overview** page.
+5. Select **Edit quota** to verify the file share quota. Unless an alternate quota has been specified, the quota will match the [maximum size of the Azure file share](/azure/storage/files/storage-files-scale-targets?toc=/azure/storage/filesync/toc.json).
 
-    :::image type="content" source="media/file-sync-troubleshoot-sync-errors/file-share-limit-reached.png" alt-text="Screenshot that shows the Azure file share properties.":::
+    :::image type="content" source="media/file-sync-troubleshoot-sync-errors/edit-quota.png" alt-text="Screenshot that shows the Azure file share properties." lightbox="media/file-sync-troubleshoot-sync-errors/edit-quota.png":::
 
-If the share is full and a quota isn't set, one possible way of fixing this issue is to make each subfolder of the current server endpoint into its own server endpoint in their own separate sync groups. This way each subfolder will sync to individual Azure file shares.
+If the file share is full (the used capacity equals the quota), free up space on the file share. One possible way of fixing this issue is to make each subfolder of the current server endpoint into its own server endpoint in their own separate sync groups. This way each subfolder will sync to individual Azure file shares.
 
 <a id="-2134351824"></a>**The Azure file share cannot be found.**  
 
@@ -653,9 +651,9 @@ By setting this registry value, the Azure File Sync agent will accept any locall
 | **Error string** | WININET_E_DECODING_FAILED |
 | **Remediation required** | Yes |
 
-This error typically occurs if a firewall, proxy or gateway is blocking access to the PKI URLs, or if the PKI servers are down.
+This error typically occurs if a firewall, proxy, or gateway blocks access to the PKI URL, or if the PKI server is down.
 
-Ensure the server can access the following URLs:
+To resolve this issue, ensure that the server can access the following URLs:
 
 - `https://www.microsoft.com/pki/mscorp/cps`
 - `http://crl.microsoft.com/pki/mscorp/crl/`
@@ -664,7 +662,7 @@ Ensure the server can access the following URLs:
 - `http://ocsp.digicert.com/`
 - `http://crl3.digicert.com/`
 
-Once the Azure File Sync agent is installed, the PKI URL is used to download intermediate certificates required to communicate with the Azure File Sync service and Azure file share. The OCSP URL is used to check the status of a certificate. If the error persists for several days, create a support request.
+Once the Azure File Sync agent is installed, the PKI URL is used to download the intermediate certificates required to communicate with the Azure File Sync service and Azure file share. The OCSP URL is used to check the status of a certificate. If the error persists for several days, [create a support request](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview?DMC=troubleshoot).
 
 <a id="-2134375680"></a>**Sync failed due to a problem with authentication.**  
 
@@ -1386,9 +1384,10 @@ Run the following PowerShell command on the server to reset the certificate:
 1. Navigate to the sync group within the Storage Sync Service.
 2. Select the cloud endpoint within the sync group.
 3. Note the Azure file share name in the opened pane.
-4. Select the linked storage account. If this link fails, the referenced storage account has been removed.
 
-    :::image type="content" source="media/file-sync-troubleshoot-sync-errors/file-share-inaccessible.png" alt-text="Screenshot that shows the cloud endpoint detail pane with a link to the storage account.":::
+   :::image type="content" source="media/file-sync-troubleshoot-sync-errors/cloud-endpoint-detail.png" alt-text="Screenshot showing the cloud endpoint detail pane with a link to the file share.":::
+
+4. Select the file share name to open the file share settings page in the storage account. If this link fails to open, the referenced storage account has been removed.
 
 ## [PowerShell](#tab/azure-powershell)
 

@@ -6,6 +6,7 @@ author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: mikejo
 ---
+
 # Troubleshoot Breakpoints in the Visual Studio Debugger
 
 _Applies to:_&nbsp;Visual Studio
@@ -21,7 +22,7 @@ To determine the difference, hover over the breakpoint and see if there's a warn
 
 ### "No Symbols have been loaded for this document"
 
-Go to the **Modules** window (**Debug** > **Windows** > **Modules**) and check whether your module is loaded.
+Go to the **Modules** window (**Debug** > **Windows** > **Modules**) when debugging and check whether your module is loaded.
 
 - If your module is loaded, check the **Symbol Status** column to see whether symbols have been loaded.
   - If symbols aren't loaded, check the symbol status to diagnose the issue. From the context menu on a module in the **Modules** window, select **Symbol Load Information...** to see where the debugger looked to try and load symbols. For more information about loading symbols, see [Specify Symbol (.pdb) and Source Files](/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger).
