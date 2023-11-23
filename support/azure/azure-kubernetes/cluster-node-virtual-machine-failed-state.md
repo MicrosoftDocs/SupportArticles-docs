@@ -12,45 +12,36 @@ keywords:
 
 This article discusses how to troubleshoot a Microsoft Azure Kubernetes Service (AKS) cluster/node that's entered a failed state.
 
-
 ## Cluster is in a failed state
-To be able to fix a cluster in failed state, you need to get the operation that caused the failure. From the operation, you need to figure out the error. A few common operations that lead to a failed cluster are listed below
 
-
+To resolve this issue, get the operation that caused the failure and figure out the error. The following are two common operations that can result in a failed cluster.
 
 ### Cluster creation failed
-If you created a cluster recently and is in failed state, you need to use the [Activity Log](/troubleshoot/azure/azure-kubernetes/troubleshoot-aks-cluster-creation-issues#view-error-details-in-the-azure-portal)) to get to root cause of the failure
 
+If a recently created cluster is in a failed state, examine the [activity logs](troubleshoot-aks-cluster-creation-issues.md#view-error-details-in-the-azure-portal) to identify the root cause of the failure.
 
 ### Cluster upgrade failed
-The cause of cluster upgrade failure can be found in the Activity Logs. More information on the specific errors can be found under the [Troubleshoot upgrade operations](troubleshoot-aks-cluster-creation-issues.md)
 
+The activity logs can be used to identify the cause of the upgrade failure. For more information about the specific errors, see the [basic troubleshooting methods](troubleshoot-aks-cluster-creation-issues.md).
 
-Some common errors and possible remediations are listed below(The list is not exhaustive)
+The following list outlines some common errors:
 
+- [OutboundConnFailVMExtensionError](error-code-outboundconnfailvmextensionerror.md)
+- [Drain errors](error-code-poddrainfailure.md)
+- [SubscriptionNotRegistered](/azure/azure-resource-manager/troubleshooting/error-register-resource-provider)
+- [RequestDisallowedByPolicy](error-code-requestdisallowedbypolicy.md)
+- [QuotaExceeded](error-code-quotaexceeded.md)
+- [PublicIPCountLimitReached](error-code-publicipcountlimitreached.md)
+- [OverconstrainedAllocationRequest](error-code-zonalallocationfailed-allocationfailed.md)
+- ReadOnlyDisabledSubscription
 
-| Issue | Link/Resolution |
-| ----- | -------- |
-|OutboundConnFailVMExtensionError | [Link](/troubleshoot/azure/azure-kubernetes/error-code-outboundconnfailvmextensionerror)  |
-|Drain errors|[Link](/troubleshoot/azure/azure-kubernetes/error-code-poddrainfailure)|
-|SubscriptionNotRegistered|[Link](/azure/azure-resource-manager/troubleshooting/error-register-resource-provider?tabs=azure-cli)|
-|RequestDisallowedByPolicy|[Link](/troubleshoot/azure/azure-kubernetes/error-code-requestdisallowedbypolicy#solution)|
-| QuotaExceeded | [Link](/troubleshoot/azure/azure-kubernetes/error-code-quotaexceeded)|
-|PublicIPCountLimitReached|[Link](/troubleshoot/azure/azure-kubernetes/error-code-publicipcountlimitreached#solution)|
-|OverconstrainedAllocationRequest|[Link](/troubleshoot/azure/azure-kubernetes/error-code-zonalallocationfailed-allocationfailed)|
-| ReadOnlyDisabledSubscription |The subscription is disabled and marked as ready only, please fix the permissions on the subscription |
+  To fix this error, review and adjust the subscription permissions as the subscription is currently disabled and set to ready-only.
 
-
-
-If everything fails, you can try manually bringing back the cluster from a **Failed** to a **Succeeded** state by running the following [az resource update](/cli/azure/resource#az-resource-update) command:
+Alternatively, try to manually restore the cluster state from **Failed** to **Succeeded** by running the following [az resource update](/cli/azure/resource#az-resource-update) command:
 
 ```azurecli
-az resource update --name <cluster_name> --namespace Microsoft.ContainerService --resource-group <resource_group_of_cluster> --resource-type ManagedClusters --subscription <subscription_of_cluster>
+az resource update --name <cluster-name> --namespace Microsoft.ContainerService --resource-group <resource-group-name> --resource-type ManagedClusters --subscription <subscription-name>
 ```
-Replace cluster_name , resource_group_of_cluster,  subscription_of_cluster with appropriate cluster information
-
-[!NOTE] This does not guarantee fixing the cluster state
-
 
 ## Node is in a failed state
 
