@@ -1246,6 +1246,8 @@
       href: ./group-policy/network-disconnection-after-configuring-lltdio-rspndr-gpos.md
     - name: Netlogon event ID 5719 or Group Policy event 1129
       href: ./group-policy/netlogon-event-id-5719-or-group-policy-event-1129.md
+    - name: Old user profiles aren't deleted as expected on system restart
+      href: ./group-policy/old-user-profiles-not-deleted-system-restart.md
     - name: Password policy changes aren't applied
       href: ./group-policy/password-policy-changes-not-applied.md
     - name: Settings are applied from Group Policy
