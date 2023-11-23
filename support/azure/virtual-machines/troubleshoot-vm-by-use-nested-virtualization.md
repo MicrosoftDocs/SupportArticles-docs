@@ -12,7 +12,7 @@ ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 ms.topic: article
-ms.date: 10/12/2023
+ms.date: 11/23/2023
 ms.author: glimoli
 ms.reviewer: v-weizhu
 ---
@@ -45,7 +45,7 @@ In order to mount the faulty VM, the Rescue VM must use the same type of Storage
         :::image type="content" source="media/troubleshoot-vm-by-use-nested-virtualization/hyper-v-cannot-be-installed-error.png" alt-text="Screenshot that shows the 'Hyper-V cannot be installed' error message. "lightbox="media/troubleshoot-vm-by-use-nested-virtualization/hyper-v-cannot-be-installed-error.png":::
 
         > [!NOTE]
-        > This error occurs because the hypervisor is not enabled in the BCDEdit configuration of the Rescue VM. For example, the `hypervisorlaunchtype` option is not set to `auto`. To fix this error, set the option before installing the Hyper-V role.
+        > This error occurs because the hypervisor isn't enabled in the BCDEdit configuration of the Rescue VM. For example, the `hypervisorlaunchtype` option isn't set to `auto`. To fix this error, set the option before installing the Hyper-V role.
 
         To check the `hypervisorlaunchtype` option on the VM, run the following cmdlet from an elevated PowerShell command prompt:
 
@@ -53,7 +53,7 @@ In order to mount the faulty VM, the Rescue VM must use the same type of Storage
         bcdedit /enum
         ```
 
-        See the following output for an example. In this example, the hypervisor parameter isn't included, indicating that the hypervisor isn't enabled.
+        Here's an output example. In this example, the hypervisor parameter isn't included, indicating that the hypervisor isn't enabled.
 
         ```output
         Windows Boot Manager
