@@ -1010,6 +1010,8 @@
       href: ./deployment/troubleshoot-install-features-roles-guidance.md
     - name: 'Troubleshooting guidance: Windows Server update'
       href: ./deployment/troubleshoot-windows-server-update-guidance.md
+    - name: '"Failed to be changed to the Absent state. Status: 0x800f0922" error'
+      href: ./deployment/failed-changed-absent-state-status-0x800f0922-error.md    
     - name: Can't connect to WSUS Administration Website
       href: ./deployment/cannot-connect-to-wsus-administration-website.md
     - name: Can't install .NET Framework 3.5 on OEM Windows installation
