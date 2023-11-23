@@ -4,7 +4,7 @@
 title: Can't reverse a transaction
 description: Describes different reasons why transactions can't be reversed. It also lists solutions to this issue in Microsoft Dynamics 365 Finance.
 author: kweekley
-ms.date: 11/20/2023
+ms.date: 11/23/2023
 ms.prod: 
 ms.technology: 
 
@@ -35,7 +35,7 @@ Organizations might encounter situations where they must reverse a transaction t
 
 ## Resolution
 
-Transactions must meet specific criteria before they can be reversed. The remaining sections of this article provide the validation for each module. Although this article focuses on transactions in Microsoft Dynamics 365 Finance, some of the concepts and validation can be applied to other apps, such as Dynamics 365 Supply Chain Management.
+Transactions must meet specific criteria before they can be reversed. The [More information](#more-information) section of this article provide the validation for each module. Although this article focuses on transactions in Microsoft Dynamics 365 Finance, some of the concepts and validation can be applied to other apps, such as Dynamics 365 Supply Chain Management.
 
 Additionally, the place where a transaction is reversed might affect whether it can be reversed. For example, a vendor payment that is posted as a check can be reversed only from the **Checks** section on the transaction page for the bank accounts. It can't be reversed from the **Voucher transactions** page in General ledger.
 
@@ -49,14 +49,16 @@ If the **Mass reversals for multiple documents** feature (also known as the Mass
 
 For more information about the Mass reversal feature, see [Reverse journal posting](/dynamics365/finance/general-ledger/reverse-journal-posting).
 
-## General ledger
+## More information
+
+### General ledger
 
 General ledger adjustments are entered only by using ledger accounts. Therefore, they update only General ledger.
 
 - If the Mass reversal feature is turned off, most general ledger adjustments can be reversed individually from the **Transactions for \<main account\>** page for the ledger (**LedgerTransAccount**). (The exact title of the page varies, depending on the selected main account.) The page shows each transaction that has been posted to the main account. It's typically opened from the **Trial balance list** page, or by selecting **Transactions** on the **Voucher transactions** page.
 - If the Mass reversal feature is turned on, one or more general ledger vouchers can now be reversed from the **Voucher transactions** page, and from the journal that the transaction was posted from. The exceptions are General ledger foreign currency revaluation, consolidation, and year-end close transactions. Those transactions are reversed from the pages that the year-end close was run from.
 
-### Reasons why transactions can't be reversed
+#### Reasons why transactions can't be reversed
 
 Transactions can't be reversed for the following reasons:
 
@@ -117,7 +119,7 @@ Transactions can't be reversed for the following reasons:
     > [!NOTE]
     > The reversal of the year-end close actually deletes the closing and opening transactions. A reversing voucher is never posted.
 
-## Accounts payable
+### Accounts payable
 
 Multiple transaction types update the Accounts payable subledger. Examples include vendor invoices, vendor invoice journals, and expense reports.
 
@@ -127,7 +129,7 @@ Multiple transaction types update the Accounts payable subledger. Examples inclu
 > [!NOTE]
 > Some transactions can't be reversed at all. Examples include purchase order vendor invoices and electronic vendor payments.
 
-### Reasons why vouchers can't be reversed
+#### Reasons why vouchers can't be reversed
 
 Vouchers can't be reversed for the following reasons:
 
@@ -171,7 +173,7 @@ Vouchers can't be reversed for the following reasons:
 
   - As this reason suggests, even when the Mass reversals feature is turned on, some subledger transactions can be reversed only from specific pages.
 
-### Types of transactions that can't be reversed
+#### Types of transactions that can't be reversed
 
 The following types of transactions can't be reversed:
 
@@ -186,7 +188,7 @@ The following types of transactions can't be reversed:
 - Promissory note
 - Bank letter of credit export shipment
 
-## Accounts receivable
+### Accounts receivable
 
 Several transaction types update Accounts receivable subledgers. Examples include customer invoices from sales orders, customer invoices that are entered through the general journal, free text invoices, customer payments, and write-offs.
 
@@ -197,7 +199,7 @@ If the Mass reversal feature is turned on, one or more Accounts receivable trans
 > [!NOTE]
 > Some transactions can't be reversed. Examples include sales order customer invoices and write-offs.
 
-### Reasons why transactions can't be reversed
+#### Reasons why transactions can't be reversed
 
 Transactions can't be reversed for the following reasons:
 
@@ -235,7 +237,7 @@ Transactions can't be reversed for the following reasons:
 
   - As this reason suggests, even when the Mass reversals feature is turned on, some subledger transactions can be reversed only from specific pages.
 
-### Types of transactions that can't be reversed
+#### Types of transactions that can't be reversed
 
 The following types of transactions can't be reversed:
 
@@ -259,7 +261,7 @@ The following types of transactions can't be reversed:
 
   - When you recognize revenue through the revenue recognition journal, the vouchers are posted to ledger accounts. Therefore, they appear as if they're only general ledger entries. These entries can't be reversed, because the revenue schedule won't be reopened to recognize the revenue again.
 
-## Cash and bank management
+### Cash and bank management
 
 Several transaction types update the Bank subledger through the general journal. Examples include vendor payments, customer payments, and bank transfers.
 
@@ -270,7 +272,7 @@ If the Mass reversal feature is turned on, one or more payment transactions can 
 > [!NOTE]
 > Some transactions can't be reversed. Examples include electronic vendor payments.
 
-### Reasons why transactions can't be reversed
+#### Reasons why transactions can't be reversed
 
 Transactions can't be reversed for the following reasons:
 
@@ -305,7 +307,7 @@ Transactions can't be reversed for the following reasons:
 
   - Bank foreign currency revaluation can be reversed. However, reversal might be prevented if you complete the reversal steps out of chronological order. For example, if you ran the revaluation in March and April, the March revaluation can't be reversed until the April revaluation is reversed.
 
-### Types of transactions that can't be reversed
+#### Types of transactions that can't be reversed
 
 The following types of transactions can't be reversed:
 
@@ -313,7 +315,7 @@ The following types of transactions can't be reversed:
 - Promissory notes
 - Bills of exchange
 
-## Fixed assets
+### Fixed assets
 
 Several transaction types update the Fixed assets subledger. Examples include acquisitions and depreciation.
 
@@ -321,7 +323,7 @@ If the Mass reversal feature is turned off, transactions can be reversed individ
 
 If the Mass reversal feature is turned on, one or more Fixed asset transactions can also be reversed from the **Voucher transactions** page in the journal that the transactions were posted from.
 
-### Reasons why transactions can't be reversed
+#### Reasons why transactions can't be reversed
 
 Transactions can't be reversed for the following reasons:
 

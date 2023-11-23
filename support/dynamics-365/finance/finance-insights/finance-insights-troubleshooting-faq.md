@@ -4,7 +4,7 @@
 title: Troubleshoot Finance insights setup issues
 description: Provides resolutions for the common issues that can occur when you use Finance insights capabilities in Microsoft Dynamics 365 Finance.
 author: twheeloc 
-ms.date: 11/21/2023
+ms.date: 11/24/2023
 ms.prod: 
 ms.technology: 
 
@@ -28,15 +28,15 @@ ms.dyn365.ops.version: AX 10.0.20
 
 This article lists common issues that can occur when you use Finance insights capabilities in Microsoft Dynamics 365 Finance. It also explains how to fix these issues.
 
-## Symptom 1: Can't map the Customer payment insights Data Integration template destination column
+## Issue 1: Can't map the Customer payment insights Data Integration template destination column
 
 ### Resolution
 
-You might use a template for an earlier version. Before the release of version 10.0.17, preview customers configured the **Customer payment insights results (CDS to Fin and Ops)** Data Integration (DI) template by using the **Payment prediction result (preview)** entity. After an upgrade to 10.0.17 and later, you should use the **Customer payment insights results (CDS to Fin and Ops 10.0.17 and later)** DI template to complete the mapping. You might not be able to map the DI template destination column until the data management entity list is refreshed and the **Payment prediction result** entity appears in it. To refresh the entity list and show the payment prediction result, you will complete steps in both Microsoft Dynamics 365 Finance and Dataverse (previously known as the Common Data Service [CDS] admin portal).
+You might use a template for an earlier version. Before the release of version 10.0.17, preview customers configured the **Customer payment insights results (CDS to Fin and Ops)** Data Integration (DI) template by using the **Payment prediction result (preview)** entity. After an upgrade to 10.0.17 and later, you should use the **Customer payment insights results (CDS to Fin and Ops 10.0.17 and later)** DI template to complete the mapping. You might not be able to map the DI template destination column until the data management entity list is refreshed and the **Payment prediction result** entity appears in it. To refresh the entity list and show the payment prediction result, you'll complete steps in both Microsoft Dynamics 365 Finance and Dataverse (previously known as the Common Data Service [CDS] admin portal).
 
 #### In Finance
 
-Follow these steps in Finance after you upgrade.
+Follow these steps in Finance after upgrade.
 
 1. Go to **System administration** > **Workspaces** > **Data management**.
 2. In the **Data management** workspace, select the **Framework parameters** tile.
@@ -52,13 +52,13 @@ Follow these steps in the [Power Platform admin center](https://admin.powerplatf
 1. If you're using a preview version of Finance insights, remove the DI project that is associated with the **Customer payment insights results (CDS to Fin and Ops)** template.
 2. Follow the steps in [Create a data integrator project](/dynamics365/finance/finance-insights/create-data-integrate-project). Use the **Customer payment insights results (CDS to Fin and Ops 10.0.17 and later)** template.
 
-## Symptom 2: "Sorry, there's been a disconnect" error occurs when opening AI Builder using the links on the Customer payment predictions setup page
+## Issue 2: "Sorry, there's been a disconnect" error occurs when opening AI Builder using the links on the Customer payment predictions setup page
 
 ### Resolution
 
 Dynamics 365 Finance users must have a Microsoft Power Apps user account for the environment, and that user account must have the System customizer role. The Microsoft Power Apps system administrator can create the user account and assign the role. You can then go to the [Power Apps maker portal](https://make.preview.powerapps.com/), sign in by using that user account, and try the links again.
 
-## Symptom 3: The Cash forecast tab in the Cash flow forecast workspace doesn't show any data
+## Issue 3: The Cash forecast tab in the Cash flow forecast workspace doesn't show any data
 
 ### Resolution
 
@@ -68,7 +68,7 @@ First, set up and enable the cash flow forecasting and liquidity accounts. For m
 
 Next, confirm that the Cash flow forecasts feature in Finance insights (**Cash and bank management** > **Setup** > **Finance Insights** > **Cash flow forecasts**) has been enabled, and that training of the AI model has been completed. If the training hasn't been completed, select **Forecast now** to start the model training process.
 
-## Symptom 4: The "Install a new add-in" button isn't visible in Microsoft Dynamics Lifecycle Services
+## Issue 4: The "Install a new add-in" button isn't visible in Microsoft Dynamics Lifecycle Services
 
 ### Resolution
 
@@ -76,7 +76,7 @@ First, verify that the **Environment Manager** or **Project Owner** role is assi
 
 If the correct project security role is assigned to you, you might have to refresh your browser window to see the **Install a new add-in** button.
 
-## Symptom 5: The Finance insights add-in doesn't seem to be installing
+## Issue 5: The Finance insights add-in doesn't seem to be installing
 
 ### Resolution
 
@@ -90,17 +90,17 @@ The following steps should have been completed.
     | ---------------------------- | ---------------- |
     | Microsoft Dynamics ERP Microservices CDS | 703e2651-d3fc-48f5-942c-74274233dba8 |
   
-    To verify the application is registered in Microsoft Entra ID, check the **All Applications** list. For more details, see [View enterprise applications](/azure/active-directory/manage-apps/view-applications-portal).
+    To verify the application is registered in Microsoft Entra ID, check the **All Applications** list. For more information, see [View enterprise applications](/azure/active-directory/manage-apps/view-applications-portal).
   
     If the application isn't registered in Microsoft Entra ID, contact Microsoft Support.
 
-## Symptom 6: "We didn't find any data for the selected filter range. Please select a different filter range and try again" error
+## Issue 6: "We didn't find any data for the selected filter range. Please select a different filter range and try again" error
 
 ### Resolution
 
 Check the data integrator setup to validate that it's functioning as expected and upserting the data from AI Builder back to Finance. For more information, see [Create a data integration project](/dynamics365/finance/finance-insights/create-data-integrate-project).
 
-## Symptom 7: Customer payment prediction training fails and an AI Builder error occurs
+## Issue 7: Customer payment prediction training fails and an AI Builder error occurs
 
 The AI builder error states:
 
@@ -108,11 +108,11 @@ The AI builder error states:
 
 ### Resolution
 
-This error indicates that there are not enough historical transactions in the last year that represent each category described in the **On-time**, **Late**, and **Very late** categories. To resolve this error, adjust the **Very late** transaction period. If adjusting the **Very late** transaction period doesn't fix the error, **Customer payment predictions** isn't the best solution to use as it needs data in each category for training purposes.
+This error indicates that there aren't enough historical transactions in the last year that represent each category described in the **On-time**, **Late**, and **Very late** categories. To resolve this error, adjust the **Very late** transaction period. If adjusting the **Very late** transaction period doesn't fix the error, **Customer payment predictions** isn't the best solution to use as it needs data in each category for training purposes.
 
 For more information about how to adjust the **On-time**, **Late**, and **Very late** categories, see [Enable customer payment predictions](/dynamics365/finance/finance-insights/enable-cust-paymnt-prediction).
 
-## Symptom 8: Model training fails
+## Issue 8: Model training fails
 
 ### Resolution
 
@@ -120,9 +120,9 @@ The **Cash flow forecast** model training requires data that contains 100 or mor
 
 The **Customer payment predictions** feature requires more than 100 transactions in the previous six to nine months. The transactions can include free text invoices, sales orders, and customer payments. This data must be spread across the **On-time**, **Late**, and **Very late** settings defined on the **Configuration** page.
 
-The **Budget proposal** feature requires a minimum of three years of budget or actual data. This solution uses three to ten years of data in the projections. More than three years will provide better results. The data itself works best when there is variation in the values. If the data contains all constant data, such as a lease expense, the training may fail because the lack of variation doesn’t require AI to project the amounts.
+The **Budget proposal** feature requires a minimum of three years of budget or actual data. This solution uses three to ten years of data in the projections. More than three years will provide better results. The data works best when there's variation in the values. If the data contains all constant data, such as a lease expense, the training might fail because the lack of variation doesn’t require AI to project the amounts.
 
-## Symptom 9: "Table with name, 'msdyn_paypredpredictionresultentities' does not exist. The remote server returned an error: (404) Not Found..." error
+## Issue 9: "Table with name, 'msdyn_paypredpredictionresultentities' does not exist. The remote server returned an error: (404) Not Found..." error
 
 ### Resolution
 

@@ -5,7 +5,7 @@
       items:
         - name: Frequently asked questions about position budgeting
           href: budgeting/position-budgeting-set-up-issues.md
-    - name: Business performance analytics
+    - name: Business intelligence, reporting, analytics
       items:
         - name: Business performance analytics self-help
           href: business-performance-analytics/business-performance-analytics-self-help-overview.md
@@ -23,15 +23,15 @@
           href: business-performance-analytics/missing-budget-data-err00006.md
         - name: Missing budget transaction header ERR00007
           href: business-performance-analytics/missing-budget-transaction-header-err00007.md
-    - name: Cash bank management
+    - name: Cash and bank management
       items:
         - name: Troubleshoot issues with transactions that can't be settled
           href: cash-bank-management/settlement-overview-resolve-issues.md
-    - name: Finance Insights
+    - name: Finance insights
       items:
         - name: Troubleshoot Finance insights setup issues
           href: finance-insights/finance-insights-troubleshooting-faq.md
-    - name: Financial reporting
+    - name: Financial reporting and management reporter
       items:
         - name: Troubleshoot issues opening Report Designer
           href: financial-reporting/issues-open-report-designer.md
