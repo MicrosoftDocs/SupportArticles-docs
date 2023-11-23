@@ -13,7 +13,7 @@ ms.custom: sap:Connection issues
 A consistent authentication issue in SQL Server typically refers to problems related to authentication and authorization of users or applications trying to access the SQL Server database. These issues can lead to authentication failures, access denied errors, or other security-related problems.
 
 > [!NOTE]
-> The commands provided in this article are for Windows systems.
+> The commands provided in this article are for Windows systems only.
 
 ## Recommended pre-requisites for consistent authentication problems
 
@@ -66,11 +66,19 @@ Before you start to troubleshoot errors, it's important to understand what each 
 
 ## Categorization of error messages
 
-This section helps you to drill down to the category of error so that you can effectively troubleshoot. It also provides the cause, symptoms, and possible solutions.
+Before you start with troubleshooting, it is important to understand the nature of an error and the category that it belongs to. This section provides error messages grouped based on a category. Some errors might appear in more than one category. Each of these error scenarios has the symptoms and the solutions as well. Following are the error categories.
 
-Issues with a SQL Login - This mainly refers to the error messages related to failed login. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
+- Issues with a SQL Login - Refers to the error scenarios related to failed login. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
 
+- [Issues with different aspects of SQL Server](consistentauth-some-aspects-of-sql-error-scenarios.md) - Refers to error scenarios related to database offline, database permissions, missing login and so on. For more information, see [Login failed for user NT AUTHORITY\ANONYMOUS LOGON](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#Login-failed-for-user-NT-AUTHORITY\ANONYMOUS-LOGON).
 
+- Issues with the connection string - Refers to various error scenarios such as wrong database name, wrong SPN account, missing SPN, misplaced SPN, and duplicate SPN.
 
+- Issues with local Windows permissions or Policy settings - Refers to permission oriented error scenarios such as corrupt user profile, local security subsystem issues, network login disallowed, and so on.
 
+- Issues specific to NTLM - Refers to scenarios related to NTLM such as peer login, double hop, loopback protection, and so on. For more information, see [Login failed for user NT AUTHORITY\ANONYMOUS LOGON](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#Login-failed-for-user-NT-AUTHORITY\ANONYMOUS-LOGON).
+
+- Issues specific to Active Directory and Domain Controller - Refers to scenarios such as account and group related error scenarios.
+
+- Miscellaneous issues - Refers to scenarios that do not fall under any of the previous scenarios.
 
