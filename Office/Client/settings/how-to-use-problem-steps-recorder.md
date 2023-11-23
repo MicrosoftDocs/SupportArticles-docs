@@ -13,7 +13,7 @@ ms.reviewer: kerbo
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 11/21/2023
+ms.date: 11/22/2023
 ---
 # How to use the Problem Steps Recorder in Microsoft 365
 
