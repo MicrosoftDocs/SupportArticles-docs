@@ -14,7 +14,7 @@ appliesto:
   - Microsoft Purview
   - Exchange Online
 search.appverid: MET150
-ms.date: 05/18/2023
+ms.date: 11/22/2023
 ---
 
 # Resolve search errors in eDiscovery (Standard)
@@ -300,15 +300,17 @@ Reduce the download size by splitting your search into smaller searches. For exa
 
 [Back to top](#resolve-search-errors-in-ediscovery-standard)
 
+To check whether the Export, Search, or Preview roles are assigned to the designated admin account, run the following test in the Microsoft 365 admin center. You must have **Global** or **Compliance** administrator permissions to use the following steps.
 
-Note:
+> [!NOTE]
+> This diagnostic isn't available for the GCC High or DoD environments, or for Microsoft 365 operated by 21Vianet.
 You can run the following diagnostic to check if the Search, Export or Preview role are assigned to the designated admin account. Do the following:
 
-1.	Select the Run Tests: eDiscovery RBAC check button below to populate the associated test in the Microsoft 365 admin center:
-Run Tests: eDiscovery RBAC Check
-2.	In the Run diagnostics section, enter the UPN or email address of the user trying to run the Export, Search or Preview task.
-3.	Select  Run Tests.
-4.	If the user does not have the necessary eDiscovery role, assign the proper eDiscovery permissions to perform the desired task. 
+1.	Select the **Run Tests: eDiscovery RBAC check** button to populate the associated test in the Microsoft 365 admin center:
+    Run Tests: eDiscovery RBAC Check
+1.	In the **Run diagnostics** section, enter the UPN or email address of the user who tries to run the Export, Search, or Preview task.
+1.	Select **Run Tests**.
+1.	If the user doesn't have the necessary eDiscovery roles assigned, assign those roles so that the user can perform the desired task.
 
 ## Export error: "File wasn't exported because it doesn't exist" or "File not found"
 
