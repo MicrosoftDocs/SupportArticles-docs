@@ -56,13 +56,19 @@ Before you start to troubleshoot errors, it's important to understand what each 
 
 - [Login failed error messages](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?view=sql-server-ver16&preserve-view=true) - Refers to some of the common login failures. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?view=sql-server-ver16&preserve-view=true).
     [Login failed for user '(null)'](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?view=sql-server-ver16#login-failed-for-user-(null))
-    Login failed for user ''
-    Login failed for user 'NT AUTHORITY\ANONYMOUS LOGON'
-    Login failed for user 'username'
-    Login failed for user 'DOMAIN\username'
+    [Login failed for user ''](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error)
+    [Login failed for user 'NT AUTHORITY\ANONYMOUS LOGON'](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error)
+    [Login failed for user 'username'](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error)
+    [Login failed for user 'DOMAIN\username'](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error)
     Login failed. The login is from an untrusted domain and cannot be used with Windows authentication.
     SQL Server does not exist or access denied - This can also be a network error.
 - [SSPI context messages](/troubleshoot/sql/database-engine/connect/cannot-generate-sspi-context-error?branch=main)
+
+## Categorization of error messages
+
+This section helps you to drill down to the category of error so that you can effectively troubleshoot. It also provides the cause, symptoms, and possible solutions.
+
+Issues with a SQL Login - This mainly refers to the error messages related to failed login. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
 
 
 
