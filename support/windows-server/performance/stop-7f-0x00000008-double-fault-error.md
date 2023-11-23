@@ -15,7 +15,7 @@ ms.technology: windows-server-performance
 ---
 # Stop 7F, 0x00000008 (double-fault) error occurs because of a single-bit error in the ESP register
 
-This article provides a solution to a STOP 0x0000007F, 0x00000008 error message on your computer because of a specific processor error. This error message may be displayed when a single-bit error occurs in the  Electric Service Provider (ESP) register of a processor that is running on the computer.
+This article provides a solution to a STOP 0x0000007F, 0x00000008 error message on your computer because of a specific processor error. This error message may be displayed when a single-bit error occurs in the ESP register of a processor that is running on the computer.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 842465
