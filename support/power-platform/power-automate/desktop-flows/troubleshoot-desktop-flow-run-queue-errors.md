@@ -5,11 +5,14 @@ author: rpapostolis # GitHub alias
 ms.author: appapaio # Microsoft alias
 ms.reviewer: befrey, lulubran
 ms.subservice: power-automate-desktop-flows
-ms.date: 11/09/2023
+ms.date: 11/15/2023
 ---
 # Troubleshoot desktop flow run queue errors
 
 This article provides background and potential solutions to queue-based errors encountered during desktop flow runs.
+
+_Applies to:_ &nbsp; Power Automate  
+_Original KB number:_ &nbsp; 5004537
 
 ## Symptoms
 
@@ -67,7 +70,7 @@ To resolve the issue, either wait for the flows that are already running to comp
 
 ### Other error codes
 
-For information on other error codes that might occur when running desktop flows and steps to mitigate, see [Error code occurs when running an attended or unattended desktop flow](/troubleshoot/power-platform/power-automate/desktop-flows/troubleshoot-errors-running-attended-or-unattended-desktop-flows).
+For information on other error codes that might occur when running desktop flows and steps to mitigate, see [Error code occurs when running an attended or unattended desktop flow](troubleshoot-errors-running-attended-or-unattended-desktop-flows.md).
 
 ## More information
 

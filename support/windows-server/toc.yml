@@ -106,6 +106,8 @@
       href: ./identity/config-firewall-for-ad-domains-and-trusts.md
     - name: Raise Active Directory domain and forest functional levels
       href: ./identity/raise-active-directory-domain-forest-functional-levels.md
+    - name: Troubleshoot domain controller deployment
+      href: ./identity/troubleshoot-domain-controller-deployment.md  
   - name: Active Directory Federation Services (AD FS)
     items:
     - name: Troubleshoot ADFS SSO issues
@@ -586,6 +588,8 @@
       href: ./identity/configure-authoritative-time-server.md
     - name: How Windows Time service treats leap second
       href: ./identity/time-service-treats-leap-second.md
+    - name: Support boundary for high-accuracy time
+      href: ./identity/support-boundary-high-accuracy-time.md
     - name: Support for the leap second
       href: ./identity/support-for-leap-second.md
     - name: Time service not correct the time
@@ -776,6 +780,8 @@
       href: ./backup-and-storage/file-services-hotfixes-in-windows-server-2008.md
     - name: Not enough storage to process this command
       href: ./backup-and-storage/not-enough-storage-process-this-command.md
+    - name: Troubleshoot File Server Resource Manager
+      href: ./backup-and-storage/troubleshoot-file-server-resource-manager.md      
   - name: iSCSI
     items:
     - name: File shares on iSCSI devices aren't re-created
@@ -848,6 +854,8 @@
       href: ./backup-and-storage/restore-system-boot-drive-letter.md
     - name: Simple volumes may become inaccessible
       href: ./backup-and-storage/simple-volumes-inaccessible-power-loss.md
+    - name: Troubleshoot Disk Management
+      href: ./backup-and-storage/troubleshoot-disk-management.md     
     - name: Usability limit for Volume Shadow Copy Service (VSS)
       href: ./backup-and-storage/usability-limit-volume-shadow-copy-service.md
     - name: Use the Disk Management Snap-in
@@ -950,6 +958,10 @@
       href: ./deployment/rebuild-tokens-dotdat-file.md
     - name: Specified database is not a valid VAMT database error
       href: ./deployment/specified-database-not-valid-vamt-error.md
+    - name: Troubleshoot ADBA clients that don't activate
+      href: ./deployment/troubleshoot-adba-clients-not-activate.md
+    - name: Troubleshoot Windows activation error codes
+      href: ./deployment/troubleshoot-activation-error-codes.md
     - name: Windows Activation fails with error 0x8007267C
       href: ./deployment/windows-activation-fails-with-error-0x8007267.md
     - name: Windows installation fails with error
@@ -998,6 +1010,8 @@
       href: ./deployment/troubleshoot-install-features-roles-guidance.md
     - name: 'Troubleshooting guidance: Windows Server update'
       href: ./deployment/troubleshoot-windows-server-update-guidance.md
+    - name: '"Failed to be changed to the Absent state. Status: 0x800f0922" error'
+      href: ./deployment/failed-changed-absent-state-status-0x800f0922-error.md    
     - name: Can't connect to WSUS Administration Website
       href: ./deployment/cannot-connect-to-wsus-administration-website.md
     - name: Can't install .NET Framework 3.5 on OEM Windows installation
@@ -1013,15 +1027,21 @@
     - name: Description of Windows Server Update Services 3.0
       href: ./deployment/description-of-windows-server-update-services-3.md
     - name: ERROR_INVALID_DATA error after installing Windows updates
-      href: ./deployment/error-invalid-data-startup-installing-updates.md     
+      href: ./deployment/error-invalid-data-startup-installing-updates.md
+    - name: Error 0x800705aa when Windows Update fails
+      href: ./deployment/error-0x800705aa-windows-update-fails.md
     - name: Error 0x800f0906 when you convert Server Core to GUI
       href: ./deployment/dism-fails-with-error-0x800f0906.md
+    - name: Error 0x800f0922 when installing Windows updates
+      href: ./deployment/error-0x800f0922-installing-windows-updates.md
     - name: Error 0x800f0922 when MPIO feature installation fails
       href: ./deployment/error-0x800f0922-mpio-feature-installation-fails.md
     - name: Error 0x800f0922 when you uninstall roles/features
       href: ./deployment/error-0x800f0922-uninstall-role-feature.md
     - name: Error C0190003 after installing updates
       href: ./deployment/error-c0190003-install-updates-restart-computer.md
+    - name: Error code 2359302 when installing updates in Windows Server 2019
+      href: ./deployment/error-2359302-installing-windows-updates.md
     - name: Fail to install Network Policy Server role
       href: ./deployment/error-0x80004005-network-policy-server-role.md
     - name: Failed to schedule Software Protection service for restart
@@ -1074,6 +1094,8 @@
       href: ./deployment/create-iso-image-for-uefi-platforms.md
     - name: Enable logging and tracing for WDS components
       href: ./deployment/enable-logging-windows-deployment-service.md
+    - name: ERROR_PATH_NOT_FOUND error when performing an in-place upgrade
+      href: ./deployment/error-path-not-found-upgrading-windows-server-2019.md      
     - name: Event ID 307 and 304 logged for deploying Windows
       href: ./deployment/event-307-and-304-logged-for-deploying.md
     - name: Fail to run applications on Windows Server Core
@@ -1128,6 +1150,8 @@
     items:
     - name: Apply Group Policy objects to Terminal Services servers
       href: ./group-policy/apply-group-policy-objects-terminal-services.md
+    - name: Troubleshoot software restriction policies
+      href: ./group-policy/troubleshoot-software-restriction-policies.md
   - name: Deploying software through Group Policy
     items:
     - name: Change a location or set multiple UNC paths for MSI package
@@ -1204,10 +1228,14 @@
     items:
     - name: 'Troubleshooting guidance: Applying Group Policy'
       href: ./group-policy/applying-group-policy-troubleshooting-guidance.md
+    - name: '"LDAP Bind function call failed" error when updating Group Policy settings'
+      href: ./group-policy/ldap-bind-function-call-failed-error.md      
     - name: '"Namespace is already defined" error when editing a policy'
       href: ./group-policy/microsoft-policies-sensors-windowslocationprovider-defined.md
     - name: '"Set roaming profile path for all users logging onto this computer" setting applies to local accounts'
       href: ./group-policy/set-roaming-profile-path-all-users-applies-all-acccounts.md
+    - name: Group Policy fails to apply if default value of "Specify startup policy processing wait time" isn't honored
+      href: ./group-policy/specify-startup-policy-processing-wait-time-default-value-not-honored.md      
     - name: A Group Policy setting isn't available in the security policy settings list
       href: ./group-policy/default-owner-objects-created-members-administrators-group-not-available.md
     - name: AuthZ fails with an Access Denied error
@@ -1232,6 +1260,8 @@
       href: ./group-policy/network-disconnection-after-configuring-lltdio-rspndr-gpos.md
     - name: Netlogon event ID 5719 or Group Policy event 1129
       href: ./group-policy/netlogon-event-id-5719-or-group-policy-event-1129.md
+    - name: Old user profiles aren't deleted as expected on system restart
+      href: ./group-policy/old-user-profiles-not-deleted-system-restart.md
     - name: Password policy changes aren't applied
       href: ./group-policy/password-policy-changes-not-applied.md
     - name: Settings are applied from Group Policy
@@ -1242,8 +1272,12 @@
       href: ./group-policy/group-policy-add-maxtokensize-registry-entry.md
     - name: User GPP Scheduled Task item fails to apply
       href: ./group-policy/user-gpp-scheduled-task-item-fails-apply.md
+    - name: User-based GPO settings aren't applied when signing in with shadow principals
+      href: ./group-policy/user-based-gpo-settings-not-work-shadow-principals.md      
     - name: Userenv errors occur and events are logged
       href: ./group-policy/userenv-errors-occur-events-are-logged.md
+    - name: Windows Server stops responding on startup when applying Group Policy
+      href: ./group-policy/windows-server-stops-responding-applying-group-policy.md
     - name: WMI Group Policy filters don't work
       href: ./group-policy/wmi-group-policy-filters-not-working.md
   - name: Security filtering and item-level targeting
@@ -1302,6 +1336,8 @@
       href: ./high-availability/error-messages-bring-cluster-group-online.md
     - name: Fail to share folders in failover cluster
       href: ./high-availability/cannot-share-folder-in-failover-cluster.md
+    - name: Failover Clustering system log events
+      href: ./high-availability/failover-clustering-system-log-events.md
     - name: Local SAS Disks getting added in Windows Server Failover Cluster
       href: ./high-availability/local-sas-disks-getting-added-failover-cluster.md
     - name: Network Name resource fails to come online
@@ -1328,6 +1364,8 @@
       href: ./high-availability/cluster-service-stops-responding-a-cluster-node.md
     - name: How to troubleshoot the Cluster service account
       href: ./high-availability/troubleshoot-cluster-service-account.md
+    - name: Troubleshoot cluster issue with Event ID 1135
+      href: ./high-availability/troubleshoot-cluster-event-id-1135.md
     - name: Troubleshoot Cluster service startup issues
       href: ./high-availability/troubleshoot-cluster-service-startup-issues.md
   - name: Cluster Shared Volume (CSV)
@@ -1380,6 +1418,10 @@
     items:
     - name: Cluster IP address resources fail on both nodes when one node disconnects
       href: ./high-availability/cluster-ip-resources-fail-2-node-2-site-fsw-cluster.md
+    - name: Problem with deleting nodes from active failover cluster membership
+      href: ./high-availability/problem-nodes-failover-cluster.md
+    - name: Remove nodes from active failover cluster membership
+      href: ./high-availability/nodes-failover-cluster-vmware.md
   - name: Print clusters and High Availability Printing
     items:
     - name: How to set up a clustered print server
@@ -1441,7 +1483,9 @@
     - name: Third-party storage software solutions support policy
       href: ./high-availability/3rd-party-storage-software-solutions-support.md
     - name: Troubleshoot issues with accounts used by failover clusters
-      href: ./high-availability/troubleshoot-issues-accounts-used-failover-clusters.md      
+      href: ./high-availability/troubleshoot-issues-accounts-used-failover-clusters.md
+    - name: Tuning Failover Cluster Network Thresholds
+      href: ./high-availability/iaas-sql-failover-cluster-network-thresholds.md
     - name: Unexpected warning messages in a virtualized failover cluster
       href: ./high-availability/errors-windows-failover-cluster-run-as-guest.md
     - name: Use Windows Server cluster nodes as DCs
@@ -1482,6 +1526,8 @@
       href: ./networking/cannot-open-file-shares-group-policy-snap-ins.md
     - name: Guest access in SMB2 is disabled by default
       href: ./networking/guest-access-in-smb2-is-disabled-by-default.md
+    - name: High CPU usage issue on the SMB server
+      href: ./networking/high-cpu-usage-issue-smb-server.md      
     - name: Hotfixes for File Services technologies
       href: ./networking/hotfixes-for-file-services-technologies.md
     - name: How to allow remote users to access your network
@@ -1498,6 +1544,8 @@
       href: ./networking/mapped-network-drive-disconnected.md
     - name: Name of redirected folder isn't user name
       href: ./networking/redirected-documents-folder-name-not-user-name.md
+    - name: Negotiate, Session Setup, and Tree Connect failures
+      href: ./networking/negotiate-session-setup-tree-connect-fails.md
     - name: Network performance of SMB Direct is reduced
       href: ./networking/reduced-performance-after-smb-encryption-signing.md
     - name: NFS Server and File Permissions
@@ -1512,14 +1560,24 @@
       href: ./networking/overview-server-message-block-signing.md
     - name: Setting primary and secondary WINS server options
       href: ./networking/setting-wins-server-options.md
+    - name: Slow SMB files transfer speed
+      href: ./networking/slow-smb-file-transfer.md
+    - name: SMB Multichannel troubleshooting
+      href: ./networking/smb-multichannel-troubleshooting.md 
     - name: System error 1331 when you connect to a share
       href: ./networking/account-currently-disabled-system-error-1331.md
     - name: System error 67 has occurred. The network name cannot be found
       href: ./networking/system-error-67-network-name-cannot-be-found.md
+    - name: TCP connection is aborted during Validate Negotiate
+      href: ./networking/tcp-connection-abort-validate-negotiate.md
+    - name: TCP three-way handshake failure during SMB connection
+      href: ./networking/tcp-three-way-handshake-fails.md     
     - name: Troubleshoot DFSN access failures
       href: ./networking/dfsn-access-failures.md
     - name: Troubleshoot event ID 1020 on a file server
       href: ./networking/troubleshoot-event-id-1020-warnings-file-server.md
+    - name: Troubleshoot the Event ID 50 error message
+      href: ./networking/troubleshoot-event-id-50-error.md    
   - name: Background Intelligent Transfer Service (BITS)
     items:
     - name: '"Content file download failed" error when downloading a file by BITS'
@@ -1588,6 +1646,8 @@
       href: ./networking/dns-records-not-present.md
     - name: DNS registers duplicate SRV records for a DC
       href: ./networking/dns-registers-duplicate-srv-records-for-dc.md
+    - name: DNS scavenging setup
+      href: ./networking/dns-scavenging-setup.md
     - name: DNS Servers don't resolve queries for top-level domains
       href: ./networking/dns-server-not-resolve-queries-for-top-level-domain.md
     - name: DNS Server geo-location policy doesn't work as expected
@@ -1602,12 +1662,16 @@
       href: ./networking/dns-zone-transfer-options-reset.md
     - name: DNS Server becomes an island
       href: ./networking/dns-server-becomes-island.md
+    - name: 'DNS zone transfer fails when using the "Only to servers listed in the Name servers tab" setting'
+      href: ./networking/dns-zone-transfer-fails-only-servers-listed-name-servers.md
     - name: Events 407 and 408 when querying DNS server
       href: ./networking/events-407-408-in-dns-server-event-log.md
     - name: Event ID 4000 and 4007 when DNS zones not loaded
       href: ./networking/dns-zones-do-not-load-event-4000-4007.md
     - name: Event ID 4015 is logged and the DNS server encounters a critical error
       href: ./networking/event-4015-dns-server-encounters-critical-error.md
+    - name: Event IDs 4016 and 4004 when DNS updates time out
+      href: ./networking/event-4016-4004-dns-updates-time-out.md      
     - name: Forwarded DNS name resolution fails for dual-stacked queries
       href: ./networking/forwarded-dns-name-resolution-fails-for-dual-stacked-queries.md
     - name: Forwarders and conditional forwarders resolution timeouts
@@ -1672,6 +1736,8 @@
       href: ./networking/event-4199-windows-client-cannot-get-ip-address-dhcp-server.md
     - name: Fail to modify existing DHCP scope
       href: ./networking/modify-existing-dhcp-scope-results.md
+    - name: General guidance to troubleshoot DHCP
+      href: ./networking/general-guidance-troubleshoot-dhcp.md
     - name: Increase the number of IP addresses on a subnet
       href: ./networking/change-ip-hosts-amount-on-subnet.md
     - name: Install and Configure a DHCP Server in a Workgroup
@@ -1680,6 +1746,8 @@
       href: ./networking/dhcp-servers-report-different-failover-states.md
     - name: PXE clients don't start
       href: ./networking/pxe-clients-not-start-dhcp-60-66-67-option.md
+    - name: Troubleshoot problems on the DHCP client
+      href: ./networking/troubleshoot-problems-dhcp-client.md
     - name: Use Netsh utility to export and import DHCP scopes
       href: ./networking/netsh-utility-export-import-dhcp-scopes.md
   - name: FRS
@@ -1746,8 +1814,22 @@
       href: ./networking/set-up-routing-remote-access-intranet.md
     - name: The Routing and Remote Access service doesn't start
       href: ./networking/rras-doesnt-start.md
-    - name: Troubleshoot error 720 when establishing a VPN connection
-      href: ./networking/troubleshoot-error-720-when-establishing-a-vpn-connection.md
+    - name: Troubleshoot a multisite deployment
+      items:
+      - name: Troubleshoot a multisite deployment
+        href: ./networking/troubleshoot-multisite-deployment.md
+      - name: Troubleshoot adding entry points
+        href: ./networking/troubleshoot-adding-entry-points.md
+      - name: Troubleshoot enabling multisite
+        href: ./networking/troubleshoot-enabling-multisite.md
+      - name: Troubleshoot general issues related to Remote Access
+        href: ./networking/troubleshoot-general-issues-related-remote-access.md
+      - name: Troubleshoot setting entry point domain controller
+        href: ./networking/troubleshoot-setting-entry-point-domain-controller.md
+    - name: Troubleshoot Always On VPN
+      href: ./networking/troubleshoot-always-on-vpn.md
+    - name: Troubleshoot DirectAccess
+      href: ./networking/troubleshoot-directAccess.md
     - name: 'Troubleshoot DirectAccess Server console: 6to4'
       href: ./networking/troubleshoot-directaccess-server-console-6to4.md
     - name: 'Troubleshoot DirectAccess Server console: DNS'
@@ -1758,6 +1840,8 @@
       href: ./networking/troubleshoot-directaccess-server-console-ip-https-ipsec.md
     - name: 'Troubleshoot DirectAccess Server console: Network and high availability'
       href: ./networking/troubleshoot-directaccess-server-console-networking.md
+    - name: Troubleshoot error 720 when establishing a VPN connection
+      href: ./networking/troubleshoot-error-720-when-establishing-a-vpn-connection.md
   - name: TCP/IP communications
     items:
     - name: 'Troubleshooting guidance: TCP/IP communication'
@@ -1866,6 +1950,8 @@
       href: ./networking/automatic-metric-for-ipv4-routes.md
     - name: The default dynamic port range for TCP/IP has changed
       href: ./networking/default-dynamic-port-range-tcpip-chang.md
+    - name: Troubleshoot Web Application Proxy
+      href: ./networking/troubleshoot-web-application-proxy.md
     - name: Use WHOIS to research Internet domains
       href: ./networking/research-internet-domains-with-whois.md
     - name: Virtual machines lose network connectivity
@@ -2092,8 +2178,14 @@
       href: ./performance/desktop-heap-limitation-out-of-memory.md
     - name: Enabling Debug mode causes Windows to hang
       href: ./performance/enable-debug-mode-causes-hang.md
+    - name: System stops responding when using Citrix Virtual Apps and Desktops
+      href: ./performance/system-stops-responding-citrix-virtual-apps-desktops.md  
     - name: The computer stops responding
       href: ./performance/computer-stops-responding.md
+    - name: Windows Server stops responding during the sign-in process of a custom account
+      href: ./performance/windows-server-stops-responding-signing-custom-account.md    
+    - name: Windows Server stops responding when a Trigger Start service crashes
+      href: ./performance/windows-server-stops-responding-trigger-start-service-crashes.md
 - name: Printing
   items:
   - name: Printing
@@ -2270,6 +2362,8 @@
       href: ./remote/event-10000-terminal-server-enabled.md
     - name: Fail to log on to a terminal server
       href: ./remote/error-log-on-to-terminal-server.md
+    - name: General Remote Desktop connection troubleshooting
+      href: ./remote/rdp-error-general-troubleshooting.md
     - name: How to connect clients to Terminal Services
       href: ./remote/connect-client-to-terminal-services-remote-desktop-connection.md
     - name: How to remove entries from the Remote Desktop Connection Computer box
@@ -2374,6 +2468,8 @@
     items:
     - name: 'Troubleshooting guidance: RDS session connectivity'
       href: ./remote/troubleshoot-rds-session-connectivity-guidance.md
+    - name: '"Out of memory" error when connecting to Azure Virtual Desktop'
+      href: ./remote/out-of-memory-error-avd.md     
     - name: '"System error 67 has occurred" when using FQDN to connect a remote computer'
       href: ./remote/network-name-cannot-found-fqdn-remote-computer.md
     - name: Applications crash if another user logs off
@@ -2390,30 +2486,46 @@
       href: ./remote/remote-connection-manager-changes.md
     - name: Clients are disconnected during Group Policy update
       href: ./remote/client-disconnected-group-policy-updates.md
+    - name: Clients can't connect and get the "Class not registered" error
+      href: ./remote/rdp-error-class-not-registered.md
     - name: Connection Broker can't be mixed
       href: ./remote/connection-broker-cant-be-mixed.md
+    - name: Credential limit per app
+      href: ./remote/credential-limit-per-app.md
     - name: How to disable warning message for idle remote desktop sessions
       href: ./remote/how-to-disable-warning-message-idle-rdp-sessions.md
+    - name: Input method editor issue in RemoteApp scenarios
+      href: ./remote/input-method-editor-issue-remoteapp.md 
     - name: Local drive redirection isn't working in RDP Session
       href: ./remote/local-drive-redirection-isnt-working.md
     - name: Log Off all Terminal Server Session Users
       href: ./remote/log-off-terminal-server-session-users-command-prompt.md
+    - name: Poor performance or application problems during remote desktop connection
+      href: ./remote/poor-performance-application-problems-rdc.md 
     - name: QUERY USER command can't query from remote server
       href: ./remote/query-user-command-cannot-query-remotely.md
     - name: RDS client can't connect to RD Session Host server
       href: ./remote/rds-client-not-connect-to-rd-session-host-server.md
+    - name: Remote Desktop client disconnects and can't reconnect to the same session
+      href: ./remote/rdp-client-disconnects-cannot-reconnect-same-session.md 
     - name: Remote Desktop Connection 6.0 prompts for credentials
       href: ./remote/remote-desktop-connection-6-prompts-credentials.md
     - name: Remote Desktop IP Virtualization
       href: ./remote/remote-desktop-ip-virtualization.md
     - name: Remote Desktop or RemoteApp session doesn't terminate
       href: ./remote/rd-or-remoteapp-session-not-terminate.md
+    - name: Remote laptop disconnects from wireless network
+      href: ./remote/remote-laptop-disconnects-wireless-network.md
     - name: Single-application sharing with Terminal Server
       href: ./remote/single-application-sharing-with-terminal-server.md
     - name: Terminal Server commands MSG
       href: ./remote/terminal-server-commands-msg.md
     - name: Terminal Server User's Home Directory is not set correctly
       href: ./remote/terminal-server-users-home-directory-not-set-correctly.md
+    - name: User can't authenticate or must authenticate twice
+      href: ./remote/cannot-authenticate-must-authenticate-twice.md
+    - name: User receives "Remote Desktop Service is currently busy" message
+      href: ./remote/remote-desktop-service-currently-busy.md
   - name: RemoteApp applications
     items:
     - name: Application doesn't start in TS RemoteApp session
@@ -2506,6 +2618,10 @@
     href: ./software-defined-networking/software-defined-networking-overview.md
   - name: 'Troubleshooting guidance: SDN'
     href: ./software-defined-networking/troubleshoot-sdn-guidance.md
+  - name: Troubleshoot SDN
+    href: ./software-defined-networking/troubleshoot-software-defined-networking.md
+  - name: Troubleshoot the Windows Server Software Defined Networking Stack
+    href: ./software-defined-networking/troubleshoot-windows-server-software-defined-networking-stack.md
   - name: Internal DNS Server for SDN
     items:
     - name: Software Defined Data Center and Software Defined Networking
@@ -2640,6 +2756,8 @@
       href: ./user-profiles-and-logon/relocation-of-users-and-programdata-directories.md
     - name: Roaming user profiles versioning
       href: ./user-profiles-and-logon/roaming-user-profiles-versioning.md
+    - name: Troubleshoot user profiles with events
+      href: ./user-profiles-and-logon/troubleshoot-user-profiles-events.md  
     - name: User may not be able to Change Their Password
       href: ./user-profiles-and-logon/user-must-change-password-at-next-logon-setting.md
 - name: Virtualization
@@ -2788,6 +2906,18 @@
       href: ./virtualization/fcoe-io-failures-hyper-v-guests.md
     - name: Virtual machine LUNs disappear after you configure them as MPIO devices
       href: ./virtualization/vm-dda-luns-disappear-after-mpio-config.md
+  - name: Shielded VMs
+    items:
+    - name: Troubleshoot a guarded fabric
+      href: ./virtualization/troubleshoot-guarded-fabric-overview.md
+    - name: Troubleshoot Guarded Hosts
+      href: ./virtualization/troubleshoot-guarded-hosts.md
+    - name: Troubleshoot shielded VMs
+      href: ./virtualization/troubleshoot-shielded-vms.md
+    - name: Troubleshoot the Host Guardian Service
+      href: ./virtualization/troubleshoot-guarded-fabric-hgs.md
+    - name: Troubleshoot using the Guarded Fabric Diagnostic Tool
+      href: ./virtualization/troubleshoot-guarded-fabric-diagnostics.md
   - name: Virtual machine creation
     items:
     - name: Error when you manage a VHD file

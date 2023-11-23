@@ -16,49 +16,49 @@ The following table lists the release history for [!INCLUDE [sql-server-2017](..
 - [Release history for SQL Server 2019 on Linux](release-history-2019.md?view=sql-server-ver15&preserve-view=true).
 - [Release history for SQL Server 2022 on Linux](release-history-2022.md?view=sql-server-ver16&preserve-view=true).
 
-| Release                | Version       | Release date |
-| ---------------------- | ------------- | ------------ |
-| [CU 31 GDR 2](#CU31-GDR2) | 14.0.3465.1   | 2023-10-10   |
-| [CU 31 GDR](#CU31-GDR) | 14.0.3460.9   | 2023-02-14   |
-| [CU 31](#CU31)         | 14.0.3456.2   | 2022-09-20   |
-| [CU 30](#CU30)         | 14.0.3451.2   | 2022-07-13   |
-| [CU 29 GDR](#CU29-GDR) | 14.0.3445.2   | 2022-06-14   |
-| [CU 29](#CU29)         | 14.0.3436.1   | 2022-03-30   |
-| [CU 28](#CU28)         | 14.0.3430.2   | 2022-01-13   |
-| [CU 27](#CU27)         | 14.0.3421.10  | 2021-10-27   |
-| [CU 26](#CU26)         | 14.0.3411.3   | 2021-09-14   |
-| [CU 25](#CU25)         | 14.0.3401.7   | 2021-07-12   |
-| [CU 24](#CU24)         | 14.0.3391.2   | 2021-05-10   |
-| [CU 23](#CU23)         | 14.0.3381.3   | 2021-02-24   |
-| [CU 22 GDR](#CU22)     | 14.0.3370.1   | 2021-01-12   |
-| [GDR 3](#GDR3)         | 14.0.2037.2   | 2021-01-12   |
-| [CU 22](#CU22)         | 14.0.3356.20  | 2020-09-10   |
-| [CU 21](#CU21)         | 14.0.3335.7   | 2020-07-01   |
-| [CU 20](#CU20)         | 14.0.3294.2   | 2020-04-10   |
-| [CU 19](#CU19)         | 14.0.3281.6   | 2020-02-05   |
-| [CU 18](#CU18)         | 14.0.3257.3   | 2019-12-09   |
-| [CU 17](#CU17)         | 14.0.3238.1   | 2019-10-08   |
-| [CU 16](#CU16)         | 14.0.3223.3   | 2019-08-01   |
-| [CU 15 GDR](#CU15-GDR) | 14.0.3192.2   | 2019-07-09   |
-| [CU 15](#CU15)         | 14.0.3162.1   | 2019-05-23   |
-| [CU 14](#CU14)         | 14.0.3076.1   | 2019-03-25   |
-| [CU 13](#CU13)         | 14.0.3048.4   | 2018-12-18   |
-| [CU 12](#CU12)         | 14.0.3045.24  | 2018-10-24   |
-| [CU 11](#CU11)         | 14.0.3038.14  | 2018-09-20   |
-| [CU 10](#CU10)         | 14.0.3037.1   | 2018-08-27   |
-| [CU 9 GDR](#CU9-GDR)   | 14.0.3035.2   | 2018-08-18   |
-| [GDR 2](#GDR2)         | 14.0.2002.14  | 2018-08-18   |
-| [CU 9](#CU9)           | 14.0.3030.27  | 2018-07-18   |
-| [CU 8](#CU8)           | 14.0.3029.16  | 2018-06-21   |
-| [CU 7](#CU7)           | 14.0.3026.27  | 2018-05-24   |
-| [CU 6](#CU6)           | 14.0.3025.34  | 2018-04-19   |
-| [CU 5](#CU5)           | 14.0.3023.8   | 2018-03-20   |
-| [CU 4](#CU4)           | 14.0.3022.28  | 2018-02-20   |
-| [CU 3](#CU3)           | 14.0.3015.40  | 2018-01-03   |
-| [GDR 1](#GDR1)         | 14.0.2000.63  | 2018-01-03   |
-| [CU 2](#CU2)           | 14.0.3008.27  | 2017-11-28   |
-| [CU 1](#CU1)           | 14.0.3006.16  | 2017-10-24   |
-| [GA](#GA)              | 14.0.1000.169 | 2017-10-02   |
+| Release                    | Version       | Release date |
+| -------------------------- | ------------- | ------------ |
+| [CU 31 GDR 2](#CU31-GDR2)  | 14.0.3465.1   | 2023-10-10   |
+| [CU 31 GDR](#CU31-GDR)     | 14.0.3460.9   | 2023-02-14   |
+| [CU 31](#CU31)             | 14.0.3456.2   | 2022-09-20   |
+| [CU 30](#CU30)             | 14.0.3451.2   | 2022-07-13   |
+| [CU 29 GDR](#CU29-GDR)     | 14.0.3445.2   | 2022-06-14   |
+| [CU 29](#CU29)             | 14.0.3436.1   | 2022-03-30   |
+| [CU 28](#CU28)             | 14.0.3430.2   | 2022-01-13   |
+| [CU 27](#CU27)             | 14.0.3421.10  | 2021-10-27   |
+| [CU 26](#CU26)             | 14.0.3411.3   | 2021-09-14   |
+| [CU 25](#CU25)             | 14.0.3401.7   | 2021-07-12   |
+| [CU 24](#CU24)             | 14.0.3391.2   | 2021-05-10   |
+| [CU 23](#CU23)             | 14.0.3381.3   | 2021-02-24   |
+| [CU 22 GDR](#CU22)         | 14.0.3370.1   | 2021-01-12   |
+| [GDR 3](#GDR3)             | 14.0.2037.2   | 2021-01-12   |
+| [CU 22](#CU22)             | 14.0.3356.20  | 2020-09-10   |
+| [CU 21](#CU21)             | 14.0.3335.7   | 2020-07-01   |
+| [CU 20](#CU20)             | 14.0.3294.2   | 2020-04-10   |
+| [CU 19](#CU19)             | 14.0.3281.6   | 2020-02-05   |
+| [CU 18](#CU18)             | 14.0.3257.3   | 2019-12-09   |
+| [CU 17](#CU17)             | 14.0.3238.1   | 2019-10-08   |
+| [CU 16](#CU16)             | 14.0.3223.3   | 2019-08-01   |
+| [CU 15 GDR](#CU15-GDR)     | 14.0.3192.2   | 2019-07-09   |
+| [CU 15](#CU15)             | 14.0.3162.1   | 2019-05-23   |
+| [CU 14](#CU14)             | 14.0.3076.1   | 2019-03-25   |
+| [CU 13](#CU13)             | 14.0.3048.4   | 2018-12-18   |
+| [CU 12](#CU12)             | 14.0.3045.24  | 2018-10-24   |
+| [CU 11](#CU11)             | 14.0.3038.14  | 2018-09-20   |
+| [CU 10](#CU10)             | 14.0.3037.1   | 2018-08-27   |
+| [CU 9 GDR](#CU9-GDR)       | 14.0.3035.2   | 2018-08-18   |
+| [GDR 2](#GDR2)             | 14.0.2002.14  | 2018-08-18   |
+| [CU 9](#CU9)               | 14.0.3030.27  | 2018-07-18   |
+| [CU 8](#CU8)               | 14.0.3029.16  | 2018-06-21   |
+| [CU 7](#CU7)               | 14.0.3026.27  | 2018-05-24   |
+| [CU 6](#CU6)               | 14.0.3025.34  | 2018-04-19   |
+| [CU 5](#CU5)               | 14.0.3023.8   | 2018-03-20   |
+| [CU 4](#CU4)               | 14.0.3022.28  | 2018-02-20   |
+| [CU 3](#CU3)               | 14.0.3015.40  | 2018-01-03   |
+| [GDR 1](#GDR1)             | 14.0.2000.63  | 2018-01-03   |
+| [CU 2](#CU2)               | 14.0.3008.27  | 2017-11-28   |
+| [CU 1](#CU1)               | 14.0.3006.16  | 2017-10-24   |
+| [GA](#GA)                  | 14.0.1000.169 | 2017-10-02   |
 
 ## <a id="CU31-GDR2"></a> CU 31 GDR 2 (October 2023)
 
@@ -724,7 +724,7 @@ For manual or offline package installations, you can download the RPM and Debian
 | **SLES 12 RPM packages** | 14.0.3015.40-1 | [Database Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-14.0.3015.40-1.x86_64.rpm)<br />[SQL Server Agent RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-agent-14.0.3015.40-1.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3015.40-1.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3015.40-1.x86_64.rpm) |
 | **Ubuntu 16.04 Debian packages** | 14.0.3015.40-1 <sup>1</sup> | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3015.40-1_amd64.deb)<br />[SQL Server Agent Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.3015.40-1_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3015.40-1_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3015.40-1_amd64.deb)<br />[SSIS Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.3015.40-1_amd64.deb) |
 
-<sup>1</sup> SSIS package may have a different build number.
+<sup>1</sup> SSIS package can have a different build number.
 
 Go back to the [release history](#release-history).
 
@@ -795,7 +795,7 @@ Package details and download locations for the RPM and Debian packages are liste
 | **SLES 12 RPM packages** | 14.0.1000.169-2 | [Database Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-14.0.1000.169-2.x86_64.rpm)<br />[SQL Server Agent RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-agent-14.0.1000.169-2.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-fts-14.0.1000.169-2.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-ha-14.0.1000.169-2.x86_64.rpm) |
 | **Ubuntu 16.04 Debian packages** | 14.0.1000.169-2 <sup>1</sup> | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.1000.169-2_amd64.deb)<br />[SQL Server Agent Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.1000.169-2_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.1000.169-2_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.1000.169-2_amd64.deb)<br />[SSIS Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-<sup>1</sup> SSIS package may have a different build number.
+<sup>1</sup> SSIS package can have a different build number.
 
 Go back to the [release history](#release-history).
 
