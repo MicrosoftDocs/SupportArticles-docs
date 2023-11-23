@@ -1092,6 +1092,8 @@
       href: ./deployment/create-iso-image-for-uefi-platforms.md
     - name: Enable logging and tracing for WDS components
       href: ./deployment/enable-logging-windows-deployment-service.md
+    - name: ERROR_PATH_NOT_FOUND error when performing an in-place upgrade
+      href: ./deployment/error-path-not-found-upgrading-windows-server-2019.md      
     - name: Event ID 307 and 304 logged for deploying Windows
       href: ./deployment/event-307-and-304-logged-for-deploying.md
     - name: Fail to run applications on Windows Server Core
