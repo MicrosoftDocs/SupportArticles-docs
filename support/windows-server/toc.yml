@@ -1644,6 +1644,8 @@
       href: ./networking/dns-zones-do-not-load-event-4000-4007.md
     - name: Event ID 4015 is logged and the DNS server encounters a critical error
       href: ./networking/event-4015-dns-server-encounters-critical-error.md
+    - name: Event IDs 4016 and 4004 when DNS updates time out
+      href: ./networking/event-4016-4004-dns-updates-time-out.md      
     - name: Forwarded DNS name resolution fails for dual-stacked queries
       href: ./networking/forwarded-dns-name-resolution-fails-for-dual-stacked-queries.md
     - name: Forwarders and conditional forwarders resolution timeouts
