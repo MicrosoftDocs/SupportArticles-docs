@@ -1258,6 +1258,8 @@
       href: ./group-policy/user-gpp-scheduled-task-item-fails-apply.md
     - name: Userenv errors occur and events are logged
       href: ./group-policy/userenv-errors-occur-events-are-logged.md
+    - name: Windows Server stops responding on startup when applying Group Policy
+      href: ./group-policy/windows-server-stops-responding-applying-group-policy.md
     - name: WMI Group Policy filters don't work
       href: ./group-policy/wmi-group-policy-filters-not-working.md
   - name: Security filtering and item-level targeting
