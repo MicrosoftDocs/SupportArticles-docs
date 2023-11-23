@@ -178,7 +178,7 @@ To resolve this issue, enable Kerberos authentication for SMB file share. If FIP
 
 **Option 1:  Enable Kerberos authentication for SMB file share**
 
-To mount a SMB file share on the Linux VM where FIPS is enabled, use Kerberos/Azure AD authenticaiton. For more information, see [Enable Active Directory authentication over SMB for Linux clients accessing Azure Files](/azure/storage/files/storage-files-identity-auth-linux-kerberos-enable).
+To mount a SMB file share on the Linux VM where FIPS is enabled, use Kerberos/Azure AD authentication. For more information, see [Enable Active Directory authentication over SMB for Linux clients accessing Azure Files](/azure/storage/files/storage-files-identity-auth-linux-kerberos-enable).
 
 **<a name="option2"> </a> Option 2:  Disable FIPS to mount the Samba share**
 
