@@ -2156,6 +2156,8 @@
       href: ./performance/desktop-heap-limitation-out-of-memory.md
     - name: Enabling Debug mode causes Windows to hang
       href: ./performance/enable-debug-mode-causes-hang.md
+    - name: System stops responding when using Citrix Virtual Apps and Desktops
+      href: ./performance/system-stops-responding-citrix-virtual-apps-desktops.md  
     - name: The computer stops responding
       href: ./performance/computer-stops-responding.md
 - name: Printing
