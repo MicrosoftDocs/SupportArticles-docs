@@ -24,15 +24,19 @@ When an administrator reviews the sign-in logs on the home tenant, a "90072" err
 
 > User account {email} from identity provider {idp} does not exist in tenant {tenant} and cannot access the application {appId}({appName}) in that tenant. The account needs to be added as an external user in the tenant first. Sign out and sign in again with a different Microsoft Entra user account.
 
-## Cause 1: Log in to Microsoft Entra admin center with personal Microsoft Accounts
+### Cause 1： Users log in to Microsoft Entra admin center by using personal Microsoft Accounts
 
-When users try to log in to Microsoft Entra admin center by using their personal Microsoft Accounts (Outlook, Hotmail or OneDrive), they are connected to the Microsoft Services tenant by default. In this default tenant, there is no directory linked to it for performing any actions. 
+When you try to log in to Microsoft Entra admin center by using your personal Microsoft Accounts (Outlook, Hotmail or OneDrive), you are connected to the Microsoft Services tenant by default. Within the default tenant, there is no linked directory for performing any actions. This behavior is expected. 
 
-### Solution: Users need to create their own tenant
+In the prior experience, a directory (for example: UserNamehotmail735.onmicrosoft.com) is created and linked to the personal account, and you can perform actions such as creating user accounts in this directory. The behavior has now been altered. 
 
-To create a new tenant, browse to [https://azure.microsoft.com/en-us/free/](https://azure.microsoft.com/free/), and then select *Start free** to create a free Azure account.
+### Solution: Create an Azure account with a new tenant
 
-After setting up the new tenant, the user will automatically be assigned the role of Global Administrator. It provides the user with full access to all options within this tenant.
+If you aim to have a directory,  you must create an Azure account and a new tenant: 
+
+1.	Browse to [https://azure.microsoft.com/en-us/free/](https://azure.microsoft.com/free/), and then select **Start free** .
+2.	Follow the instructions to create an Azure account.
+3.	A tenant will be generated alongside the Azure account, and you will be automatically designated as the Global Administrator. This grants you full access to all options within this tenant.
 
 ## Cause 2: Used unsupported account type (multitenant and personal accounts)
 
