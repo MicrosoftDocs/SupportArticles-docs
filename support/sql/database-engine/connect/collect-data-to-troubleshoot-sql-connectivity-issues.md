@@ -181,5 +181,7 @@ Following are some questions, which help you understand the category of issue so
 ## See also
 
 Consistent SQL Network Connectivity Issue
+
 [Recommended prerequisites and checklist for troubleshooting SQL Server connectivity issues](resolve-connectivity-errors-checklist.md)
+
 [Troubleshoot connectivity issues in SQL Server](resolve-connectivity-errors-overview.md)
