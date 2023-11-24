@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting operating system disk sector size greater than 4 KB
 description: This article troubleshoots SQL Server installation or startup failures related to some new storage devices and device drivers exposing a disk sector size greater than the supported 4-KB sector size.
-ms.date: 11/20/2023
+ms.date: 11/24/2023
 ms.custom: sap:Administration and Management
 ms.reviewer: ramakoni, dplessMSFT, briancarrig, suresh-kandoth, rdorr 
 author: WilliamDAssafMSFT
@@ -67,7 +67,7 @@ Source             : SQLLocalDB 11.0
 > [!Note]
 > You might encounter the failures mentioned in the previous scenarios for a SQL Server instance you installed manually or on a LocalDB instance installed by applications.
 
-**Scenario #5:** If you try to use sector size that is higher than 4 KB, you see the following error message:
+**Scenario #5:** If you try to use sector size higher than 4 KB, you see the following error message:
 
 ```output
 Error: 5179, Severity: 16, State: 1.
