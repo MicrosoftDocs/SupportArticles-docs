@@ -1,7 +1,7 @@
 ---
 title: Event ID 4015 is logged and the DNS server encounters a critical error
 description: Helps to resolve the issue in which Event ID 4015 is logged and the Domain Name Service (DNS) server encounters a critical error.
-ms.date: 05/19/2023
+ms.date: 11/23/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -47,6 +47,12 @@ You receive Event ID 4015 in one of the following scenarios:
     The DNS server has encountered a critical error from the Active Directory. Check that the Active Directory is functioning properly. The extended error debug information (which may be empty) is "0000051B: AttrErr: DSID-xxxx, #1: 0:0000051B: DSID-xxxx, problem 1005 (CONSTRAINT_ATT_TYPE), data 0, Att 20119(nTSecurityDescriptor)". The eventdata contains the error."
     ```
 
+- In a forest or domain located in Active Directory integrated Domain Name System (DNS) zones, some domain controllers that have the DNS Server role installed have been promoted and demoted. Some promoted domain controllers can't register the SRV, Host A, Pointer (PTR), or Name Server (NS) in the Active Directory integrated DNS zones, and the following event is logged:
+
+    ```ouput
+    The DNS server has encountered a critical error from the Active Directory. Check that the Active Directory is functioning properly. The extended error debug information (which may be empty) is "00002024: SvcErr: DSID-02050BBD, problem 5008 (ADMIN_LIMIT_EXCEEDED), data -1026". The event data contains the error.
+    ```
+
 ## RODC logs DNS Event ID 4015 every three minutes with error code 00002095
 
 When an RODC locates a writeable DNS server to perform ReplicateSingleObject (RSO), it performs a DSGETDC function with the following flags set:
@@ -89,3 +95,67 @@ To resolve this issue, follow these steps:
 2. Correlate the exact time of Event ID 4015 to the Directory Service Event ID 1644, and identify the DNS application directory partition.
 3. Open the ADSI Edit (*Adsiedit.msc*) tool, and go to the LDAP location of the object identified in Event ID 1644, which correlates to Event ID 4015.
 4. Right-click the zone, go to **Properties** > **Security** > **Advanced**, and make sure the **Owner** is set to **SYSTEM**.
+
+## Event ID 4015 is logged with an extended error code (ADMIN_LIMIT_EXCEEDED)
+
+This issue occurs when the DNS Server service reaches the `dnsRecord` multi-valued attribute limit for the `dnsNode` object in Active Directory. In Active Directory integrated DNS zones, DNS names are represented by `dnsNode` objects, and DNS records are stored as values in `dnsRecord` attributes of `dnsNode` objects. DNS resource records (RRs) of demoted domain controllers won't be deleted automatically from `dnsRecord` attributes of `dnsNode` objects in the corresponding zone of the related Active Directory partition. For example:
+
+```output
+DC=..TrustAnchors,CN=MicrosoftDNS,DC=ForestDnsZones,DC=xxx,DC=xxx
+```
+
+When additional records are added to `dnsRecord` attributes of `dnsNode` objects, the orphaned entries of demoted domain controllers result in the ADMIN_LIMIT_EXCEEDED error.
+
+To check the current number of records in each partition, run the following `repadmin` commands:
+
+```console
+repadmin /showattr . "CN=MicrosoftDNS,CN=System,DC=contoso,DC=com" /subtree /filter:"(objectclass=dnsnode)" /atts:"dnsRecord" /allvalues >c:\temp\dns_Domain.txt
+repadmin /showattr . "CN=MicrosoftDNS,DC=DomainDnsZones,DC=contoso,DC=com" /subtree /filter:"(objectclass=dnsnode)" /atts:"dnsRecord" /allvalues>c:\temp\dns_DomainDnsZones.txt
+repadmin /showattr . "CN=MicrosoftDNS,DC=ForestDnsZones,DC=contoso,DC=com" /subtree /filter:"(objectclass=dnsnode)" /atts:"dnsRecord" /allvalues >c:\temp\dns_ForestDnsZones.txt
+```
+
+The output displays the current number of entries in `dnsRecord` attributes of the corresponding Active Directory integrated zone. For example:
+
+```output
+DN: DC=@,DC=..TrustAnchors,CN=MicrosoftDNS,DC=ForestDnsZones,DC=contoso,DC=com
+1280> dnsRecord: <48 byte blob>;
+```
+
+### Delete orphaned entries of denoted domain controllers
+
+To resolve this issue, remove all orphaned entries of the denoted domain controllers from the zones. To check and selectively delete the entries, run the following Windows PowerShell cmdlets:
+
+```powershell
+Get-DnsServerResourceRecord -ZoneName trustanchors -RRType Ns
+Remove-DnsServerResourceRecord -zonename trustanchors -RRType Ns -Name “@” -RecordData DC.contoso.com
+```
+
+If you need to delete multiple resource records (RRs) for a single host, run the following cmdlets:
+
+```powershell
+$AllNsRecords = Get-DnsServerResourceRecord -ZoneName “trustanchors” -RRType Ns
+Foreach($Record in $AllNsRecords){
+If($Record.recorddata.nameserver -like "*dc2*"){
+$Record | Remove-DnsServerResourceRecord -ZoneName trustanchors
+}
+}
+$AllSrvRecords = Get-DnsServerResourceRecord -ZoneName “_msdcs.contoso.com” -RRType Srv
+Foreach($Record in $AllSrvRecords){
+If($Record.recorddata.domainname -like "*dc2*"){
+$Record | Remove-DnsServerResourceRecord -ZoneName _msdcs.contoso.com
+}
+}
+```
+
+### Enable debug logging with TroubleShootingScript (TSS)
+
+To start traces on the DNS Server by using [TSS](https://aka.ms/getTSS), run the following cmdlet:
+
+```powershell
+.\TSS.ps1 -Scenario NET_DNSsrv -Mode Verbose -WaitEvent Evt:4015:'DNS Server'
+```
+
+> [!NOTE]
+> The trace logging will stop automatically after Event ID 4015 is logged.
+
+For more information, see [Gather key information before contacting Microsoft support](troubleshoot-dns-guidance.md#gather-key-information-before-contacting-microsoft-support).
