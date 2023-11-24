@@ -32,7 +32,7 @@ In the prior experience, a directory (for example: UserNamehotmail735.onmicrosof
 
 ### Solution: Create an Azure account with a new tenant
 
-If you aim to have a directory,  you must create an Azure account and a new tenant: 
+If you aim to have a directory, you must create an Azure account and a new tenant: 
 
 1.	Browse to [https://azure.microsoft.com/en-us/free/](https://azure.microsoft.com/free/), and then select **Start free** .
 2.	Follow the instructions to create an Azure account.
