@@ -158,11 +158,11 @@ If the issue only happens on a virtual private network (VPN) and not when the la
 
 ## Client
 
-Other confirmation indicators:
+If the issue is related to clients, you might see the following indicators:
 
 - Other clients can connect to the server normally.
 - No applications can connect from this machine.
-- A [UDL](test-oledb-connectivity-use-udl-file.md) can't connect, nor can a connection be made from the [ODBC Data Source Administrator](/sql/integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard).
+- You can't connect using a [UDL](test-oledb-connectivity-use-udl-file.md) or [ODBC Data Source Administrator](/sql/integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard).
 
   This might be caused by an outbound firewall rule or incorrect default DNS suffixes. Try testing with the fully qualified server name, for example:
 
@@ -188,7 +188,7 @@ Other confirmation indicators:
 
 ## Driver
 
-If the issue is related to driver, try different drivers.
+If the issue is related to drivers, try different drivers.
 
 - If some drivers work and others fail, suspect a TLS issue. Download the latest driver, such as [Microsoft OLE DB Driver for SQL Server](/sql/connect/oledb/download-oledb-driver-for-sql-server) or [ODBC Driver 17 for SQL Server](/sql/connect/odbc/download-odbc-driver-for-sql-server), and try that.
 
@@ -196,7 +196,7 @@ If the issue is related to driver, try different drivers.
 
 ## User
 
-If the issue is related to user, have another user log in to this machine.
+If the issue is related to users, have another user log in to this machine.
 
 - If succeed to connect, see what's different about the failing user. For example, the Windows user profile is incorrect, or perhaps the users belong to a different organizational unit (OU) or domain.
 
