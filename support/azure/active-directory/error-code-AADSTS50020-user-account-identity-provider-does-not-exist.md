@@ -28,7 +28,7 @@ When an administrator reviews the sign-in logs on the home tenant, a "90072" err
 
 When you try to log in to Microsoft Entra admin center by using your personal Microsoft Accounts (Outlook, Hotmail or OneDrive), you are connected to the Microsoft Services tenant by default. Within the default tenant, there is no linked directory for performing any actions. This behavior is expected. 
 
-In the prior experience, a directory (for example: UserNamehotmail735.onmicrosoft.com) is created and linked to the personal account, and you can perform actions such as creating user accounts in this directory. The behavior has now been changed. 
+In the prior experience, a directory (for example: UserNamehotmail735.onmicrosoft.com) is created and linked to the personal account, and you can perform actions such as creating user accounts in the directory. The behavior has now been changed. 
 
 ### Solution: Create an Azure account with a new tenant
 
