@@ -377,6 +377,8 @@ items:
       href: ./deployment/customize-default-local-user-profile.md
     - name: Download and burn an ISO file from VLSC
       href: ./deployment/iso-file-on-vlsc.md
+    - name: Error "certificate in the connection information has expired"
+      href: ./deployment/error-certificate-connection-information-expired.md    
     - name: Error 0x80042468 when creating a single partition
       href: ./deployment/error-when-creating-single-partition.md
     - name: Event ID 10 is logged in Application log
@@ -715,6 +717,8 @@ items:
       href: ./performance/issues-when-calls-createwindowex-32-bit-applications.md
   - name: Blue Screen/Bugcheck
     items:
+    - name: Bug check 0x124 after a Windows in-place upgrade on Apple devices
+      href: ./performance/bug-check-0x124-windows-upgrade-boot-camp-apple-devices.md
     - name: Event ID 41 "The system has rebooted without cleanly shutting down first"
       href: ./performance/event-id-41-restart.md
     - name: Stop error 7B or Inaccessible_Boot_Device troubleshooting
