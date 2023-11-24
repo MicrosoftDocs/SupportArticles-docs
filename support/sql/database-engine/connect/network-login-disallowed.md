@@ -1,0 +1,23 @@
+---
+title: Troubleshooting the network login disallowed error 
+description: This article provides cause, symptoms, and workarounds for troubleshooting the network login disallowed error.
+ms.date: 11/24/2023
+author: prmadhes-msft
+ms.author: prmadhes
+ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
+ms.custom: sap:Connection issues
+---
+
+# Network login disallowed error
+
+This article provides the cause, symptoms, and resolution of the Network login disallowed error.
+
+## Symptoms
+
+The following error message might be shown in an event on the SQL Server where the user doesn't have the allowed login type.
+
+> "The user account is not allowed the Network Login type."
+
+## Solution
+
+Check in the *secpol.msc* file to see that the user account (or a group they might belong to) doesn't exist in the **Local Policies > User Rights Assignment > Deny access to this computer from the network** security policy settings.
