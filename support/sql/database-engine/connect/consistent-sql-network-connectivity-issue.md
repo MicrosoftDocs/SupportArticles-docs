@@ -172,7 +172,7 @@ If the issue is related to clients, you might see the following indicators:
   - `portqry -n <InstanceName> -p udp -e 1434`
   - `portqry -n <InstanceName>.<DomainName>.com -p udp -e 1434`
 
-  `- ping <InstanceName>`
+  - `ping <InstanceName>`
   - `ping <InstanceName>.<DomainName>.com`
 
   If `telnet` isn't available, use the `Test-NetConnection` PowerShell command:
@@ -184,7 +184,7 @@ If the issue is related to clients, you might see the following indicators:
 
    This might be a TLS issue. For example, the server uses TLS 1.2, and the client drivers haven't been upgraded for it.
 
- There might be a `hosts` file entry, a SQL alias, or a DNS alias that directs the connection to another server. Use [ping](/windows-server/administration/windows-commands/ping) and `telnet`. If they work, but the driver fails, suspect a SQL alias or TLS issue.
+   There might be a `hosts` file entry, a SQL alias, or a DNS alias that directs the connection to another server. Use [ping](/windows-server/administration/windows-commands/ping) and `telnet`. If they work, but the driver fails, suspect a SQL alias or TLS issue.
 
 ## Driver
 
