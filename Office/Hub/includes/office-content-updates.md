@@ -2,9 +2,9 @@
 
 
 
-## Week of September 11, 2023
+## Week of November 20, 2023
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 9/12/2023 | To install and use this product error when you install Office 2010 | removed |
+| 11/23/2023 | [How to use Problem Steps Recorder](/office/troubleshoot/settings/how-to-use-problem-steps-recorder) | modified |
