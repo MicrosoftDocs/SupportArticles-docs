@@ -1,6 +1,6 @@
 ---
-title: Troubleshooting local security subsystem issues
-description: This article provides cause, symptoms, and workarounds for troubleshooting the local security subsystem issues.
+title: Troubleshooting local security subsystem errors
+description: This article provides symptoms and resolution for the local security subsystem issues.
 ms.date: 11/25/2023
 author: prmadhes-msft
 ms.author: prmadhes
@@ -11,10 +11,6 @@ ms.custom: sap:Connection issues
 # Local security subsystem issues
 
 This article helps to resolve the problem related to local security subsystem issues.
-
-## Cause
-
-To be added
 
 ## Symptoms
 

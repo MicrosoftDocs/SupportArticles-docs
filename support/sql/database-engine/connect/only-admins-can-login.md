@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting only admins can login error 
-description: This article provides cause, symptoms, and workarounds for troubleshooting the only admins can login error.
+description: This article provides symptoms and resolution for troubleshooting the only admins can login error.
 ms.date: 11/23/2023
 author: prmadhes-msft
 ms.author: prmadhes
@@ -12,7 +12,7 @@ ms.custom: sap:Connection issues
 
 This article helps you resolve the "Only admins can login" error.
 
-## Cause
+## Symptoms
 
 The **CrashOnAuditFail** feature is a security feature used by system administrators to check all security events. The valid values for "CrashOnAuditFail" are 0, 1, and 2. If the key is set to 2, it means that the security event log is full.
 

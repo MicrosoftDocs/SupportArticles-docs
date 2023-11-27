@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting bad server name in connection string issue
-description: This article provides cause, symptoms, and workarounds for troubleshooting the bad server name in connection string error.
-ms.date: 11/23/2023
+description: This article provides symptoms and resolution for troubleshooting the bad server name in connection string error.
+ms.date: 11/27/2023
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
@@ -11,8 +11,6 @@ ms.custom: sap:Connection issues
 # Bad server name in connection string error
 
 This article helps you to resolve the problem related to the bad server name error.
-
-## Cause
 
 This can be a common issue if you deploy an application that uses a DEV or QA server into production and you fail to update the connection string.
 
@@ -37,9 +35,9 @@ The SQL Server Errorlog will have one of the following messages:
 > "'Login failed for user'. Reason: Could not find a login matching the name provided."
 > "'Login failed for user 'CONTOSO\USER1'. Reason: Could not find a login matching the name provided."
 
-## Solution
+## Resolution
 
-To resolve this issue:
+To resolve this issue, follow these steps:
 
 1. Validate that you are connecting to the appropriate server.
 
@@ -48,4 +46,3 @@ To resolve this issue:
 1. If the connection string is correct, add the login to the database.
 
 1. If it is a Windows login, add it to a local group or domain group that's allowed to connect to the database server.
-
