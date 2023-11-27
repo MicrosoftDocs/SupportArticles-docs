@@ -36,7 +36,7 @@ If users are signed in to a domain-joined computer and don't want their user nam
 
 ```output
 Subkey: Computer\HKEY_CURRENT_USER\Software\Microsoft\Office\Teams
-Entry: SkipUpnPrefill(REG_DWORD)
+Entry: SkipUpnPrefill (REG_DWORD)
 Value: 0x00000001 (1)
 ```
 
