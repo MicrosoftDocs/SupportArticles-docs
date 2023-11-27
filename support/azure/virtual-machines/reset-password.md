@@ -51,7 +51,7 @@ Use the [Serial Console](serial-console-linux.md) to reset either the `admin use
 
 1. Follow the [single user mode](troubleshoot/azure/virtual-machines/serial-console-grub-single-user-mode#use-single-user-mode-to-reset-or-add-a-password) process to reset or add a password.
 
-2. Make sure that password authentication is enabled on the OpenSSH server if you will try to log in to the server by using SSH and password authentication.
+2. Make sure that password authentication is enabled on the OpenSSH server if you try to log in to the server by using SSH and password authentication.
 
     ```bash
     egrep "^PasswordAuthentication" /etc/ssh/sshd_config
@@ -62,7 +62,7 @@ Use the [Serial Console](serial-console-linux.md) to reset either the `admin use
     ```bash
     passwd <admin_user>
     ```
-4. Check if `SElinux` is in `enforcing` mode in `/etc/sysconfig/selinux`(In case of RHEL distributions).
+4. Check if `SElinux` is in `enforcing` mode in `/etc/sysconfig/selinux`(If there was RHEL distributions).
 
     ```bash
     cat /etc/sysconfig/selinux
@@ -92,7 +92,7 @@ Use [vm repair](/cli/azure/vm/repair) commands to create a repair VM that has a 
 > [!NOTE]
 > Alternatively, you can create a rescue VM manually by using the Azure portal. For more information, see [Troubleshoot a Linux VM by attaching the OS disk to a recovery VM using the Azure portal](troubleshoot-recovery-disks-portal-linux.md).
 
-1. Run following [az vm repair create](/cli/azure/vm/repair) commands. This will create a copy of the OS disk, and attach the disk to a recovery VM automatically.
+1. Run following [az vm repair create](/cli/azure/vm/repair) commands. This creates a copy of the OS disk, and attach the disk to a recovery VM automatically.
 
     ```
     AZ_RESOURCE_GROUP="YourResourceGroupName"
@@ -105,7 +105,7 @@ Use [vm repair](/cli/azure/vm/repair) commands to create a repair VM that has a 
 
 2. Log in to the repair VM and follow the [Chroot Process](/troubleshoot/azure/virtual-machines/chroot-environment-linux)
 
-3. Once the `chroot process` is done. Make sure that password authentication is enabled on the OpenSSH server if you will try to log in to the server by using SSH and password authentication.
+3. Once the `chroot process` is done. Make sure that password authentication is enabled on the OpenSSH server if you try to log in to the server by using SSH and password authentication.
 
     ```bash
     egrep "^PasswordAuthentication" /etc/ssh/sshd_config
@@ -121,7 +121,7 @@ Use [vm repair](/cli/azure/vm/repair) commands to create a repair VM that has a 
     cat /etc/sysconfig/selinux
     ```
 
-7. If `selinux` is in enforcing mode, make sure SElinux allows the file changes we did with the `passwd` command. On the upcoming reboot, this action will notify SELinux that the filesystem has been modified (due to the changed password), facilitating the loading of the alteration.
+7. If `selinux` is in enforcing mode, make sure SElinux allows the file changes we did with the `passwd` command. On the upcoming reboot, this action notifies SELinux that the filesystem has been modified (due to the changed password), facilitating the loading of the alteration.
 
     ```bash
     touch /.autorelabel
