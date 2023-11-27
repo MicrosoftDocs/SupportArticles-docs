@@ -24,9 +24,6 @@ Error code *ERR00007* is logged in the **Transform Log** table in Microsoft Data
 
 No immediate action is required, because this issue might be caused by data synchronization delays. We recommend that you observe the next few business performance analytics runs to see whether the issue is fixed.
 
-If the issue persists, follow these steps.
-
-1. Verify entries in the Budget transaction header table.
-2. Confirm that the entries exist in the Budget transaction header table in Dynamics 365 Finance.
+If the issue persists, confirm that the entries exist in the Budget transaction header table in Dynamics 365 Finance.
 
 If the entries exist, contact Microsoft Support for further assistance.
