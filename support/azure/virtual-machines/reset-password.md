@@ -49,7 +49,7 @@ You can also reset the password or SSH key by using the **Reset Password** featu
 
 Use the [Serial Console](serial-console-linux.md) to reset either the `admin user` or `root` account through `single user mode` for VM access.
 
-1. Follow the [single user mode](troubleshoot/azure/virtual-machines/serial-console-grub-single-user-mode) process to reset or add a password.
+1. Follow the [single user mode](/azure/virtual-machines/serial-console-grub-single-user-mode) process to reset or add a password.
 
 2. Make sure that password authentication is enabled on the OpenSSH server if you try to log in to the server by using SSH and password authentication.
 
