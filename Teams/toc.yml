@@ -19,6 +19,8 @@
       href: /microsoftteams/legacy-login-issues?context=/MicrosoftTeams/troubleshoot/context/context
     - name: Self-help diagnostics for Teams admins
       href: ./teams-administration/admin-self-help-diagnostics.md
+    - name: '"The following application instance is not present in BVD" error when assigning a phone number to a resource accounts'
+      href: ./teams-administration/following-application-instance-not-present-error.md
     - name: Troubleshoot connectivity issues
       href: /microsoftteams/connectivity-issues?context=/MicrosoftTeams/troubleshoot/context/context
     - name: Troubleshoot installation and update issues
@@ -68,9 +70,7 @@
     - name: Meetings are unavailable 
       href: ./teams-conferencing/teams-meetings-not-available.md
     - name: Teams is slow during video meetings on laptops docked to 4K/HDR monitors
-      href: ./teams-conferencing/teams-slow-video-meetings-laptops-4k.md
-    - name: '"The following application instance is not present in BVD" error when assigning a phone number to a resource accounts'
-      href: ./teams-conferencing/following-application-instance-not-present-error.md
+      href: ./teams-conferencing/teams-slow-video-meetings-laptops-4k.md    
   - name: Exchange integration
     items:
     - name: External federated contacts don't appear in Teams search
