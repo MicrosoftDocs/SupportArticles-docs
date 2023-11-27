@@ -26,7 +26,7 @@ This article provides two methods to reset local Linux Virtual Machine (VM) pass
 
 You can reset the password without attaching the OS disk to another VM. This method requires that the [Azure Linux Agent](/azure/virtual-machines/extensions/agent-linux) be installed on the affected VM.
 
-1. Make sure that the Azure Linux Agent (waagent) service is running on the affected VM.
+1. Make sure that the Azure Linux Agent (waagent) service is running on the affected VM and it is on `Ready State` on the Azure Portal.
 
 2. Set up the environment variables, and use the Azure CLI or Azure Cloud Shell to do the password reset:
 
@@ -45,6 +45,8 @@ To update the SSH key, see [Manage administrative users, SSH by using the VMAcce
 
 You can also reset the password or SSH key by using the **Reset Password** feature in the Azure portal.
 
+More information, see [vmaccess extension](/azure/virtual-machines/extensions/vmaccess)
+
 ## Reset the password by using the serial console with single user mode.
 
 Use the [Serial Console](serial-console-linux.md) to reset either the `admin user` or `root` account through `single user mode` for VM access.
@@ -53,31 +55,34 @@ Use the [Serial Console](serial-console-linux.md) to reset either the `admin use
 
 2. Make sure that password authentication is enabled on the OpenSSH server if you try to log in to the server by using SSH and password authentication.
 
+    a. Check is PasswordAuthentitcation is set to `yes` or `no` in `/etc/ssh/sshd_config`
+
     ```bash
     egrep "^PasswordAuthentication" /etc/ssh/sshd_config
-    ```    
-
-3. Create the new password for the `admin_user` or `root` by using the `passwd` command.
+    ```
+    b. If the `PasswordAuthentication` is currently set to no, you can use your preferred text editor such as `vi` or `nano` to modify the configuration file and change it to `yes`.
+   
+4. Create the new password for the `admin_user` or `root` by using the `passwd` command.
 
     ```bash
     passwd <admin_user>
     ```
-4. Check if `SElinux` is in `enforcing` mode in `/etc/sysconfig/selinux`(If there was RHEL distributions).
+5. Check if `SElinux` is in `enforcing` mode in `/etc/sysconfig/selinux`(If there was RHEL distributions).
 
     ```bash
     cat /etc/sysconfig/selinux
     ```
-5. If `SElinux` is in enforcing mode, make sure SElinux allows the file changes we did with the `passwd` command. On the upcoming reboot, this action will notify SELinux that the filesystem has been modified (due to the changed password), facilitating the loading of the alteration.
+6. If `SElinux` is in enforcing mode, make sure SElinux allows the file changes we did with the `passwd` command. On the upcoming reboot, this action will notify SELinux that the filesystem has been modified (due to the changed password), facilitating the loading of the alteration.
 
     ```bash
     touch /.autorelabel
     ```
-6. Reboot the VM
+7. Reboot the VM
 
     ```bash
     /usr/sbin/reboot -f
     ```
-7. Try to access the VM.
+8. Try to access the VM.
 
 
 ## Reset the password by using a repair VM
@@ -105,11 +110,15 @@ Use [vm repair](/cli/azure/vm/repair) commands to create a repair VM that has a 
 
 2. Log in to the repair VM and follow the [Chroot Process](/troubleshoot/azure/virtual-machines/chroot-environment-linux)
 
-3. Once the `chroot process` is done. Make sure that password authentication is enabled on the OpenSSH server if you try to log in to the server by using SSH and password authentication.
+3. Make sure that password authentication is enabled on the OpenSSH server if you try to log in to the server by using SSH and password authentication.
+
+    a. Check is PasswordAuthentitcation is set to `yes` or `no` in `/etc/ssh/sshd_config`
 
     ```bash
     egrep "^PasswordAuthentication" /etc/ssh/sshd_config
-    ```    
+    ```
+    b. If the `PasswordAuthentication` is currently set to no, you can use your preferred text editor such as `vi` or `nano` to modify the configuration file and change it to `yes`.
+   
 4. Create the new password for the `admin_user` or `root` by using the `passwd` command.
 
     ```bash
