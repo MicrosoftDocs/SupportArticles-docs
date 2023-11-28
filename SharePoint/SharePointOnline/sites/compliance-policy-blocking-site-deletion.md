@@ -42,7 +42,7 @@ You might experience one of the following scenarios.
 
 ## Cause
 
-Each of these error messages is generated when you try to delete a SharePoint or OneDrive site in either of the following situations:
+Each of these error messages is generated when you try to delete a SharePoint or OneDrive site in either of the following situations:  
 
 - You exclude or remove the site from a retention policy, but the retention policy is invalid.
 - The eDiscovery hold is within a 30-day grace period that prevents the site from being deleted. 
