@@ -7,6 +7,16 @@
         items:
           - name: Power Query data source refresh issues
             href: data/data-ingestion/power-query-data-source-refresh-issues-dataflows.md
+      - name: Data unification
+        items:
+          - name: Match failed error
+            href: match-failed.md
+          - name: Merge failed error
+            href: merge-failed.md
+          - name: Can't update a field from matching rules
+            href: cant-remove-field-from-match.md
+          - name: Missing business unit
+            href: missing-business-unit.md
       - name: Exports
         items:
           - name: Controls from Customer Card Add-in if they don't find data
