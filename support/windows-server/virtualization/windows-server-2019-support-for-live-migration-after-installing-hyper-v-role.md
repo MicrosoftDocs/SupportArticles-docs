@@ -1,13 +1,13 @@
 ---
 title: Windows Server 2019 support for live migration after installing the Hyper-V role
-description: 
+description: Describes an issue where a Windows Server 2019 Hyper-V server might not perform Hyper-V node live migrations correctly.
 ms.date: 11/30/2023
 author: v-tappelgate
 ms.author: v-tappelgate
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:live-migration, csstroubleshoot
