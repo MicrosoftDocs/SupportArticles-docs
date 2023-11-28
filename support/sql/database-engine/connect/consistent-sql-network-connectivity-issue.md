@@ -1,11 +1,11 @@
 ---
-title: Consistent SQL network connectivity issues
-description: Troubleshoots consistent SQL network connectivity issues.
+title: Consistent SQL Server network connectivity issues
+description: Troubleshoots consistent SQL Server network connectivity issues.
 ms.date: 11/24/2023
 ms.reviewer: prmadhes, jopilov, v-sidong
 ms.custom: sap:Connection issues
 ---
-# Consistent SQL network connectivity issues
+# Consistent SQL Server network connectivity issues
 
 > [!NOTE]
 > Before you start troubleshooting, we recommend that you check the [prerequisites](../connect/resolve-connectivity-errors-checklist.md) and go through the checklist.
@@ -40,7 +40,7 @@ For example, use the connection string `tcp:<InstanceName>.<DomainName>.COM,1433
 > [!NOTE]
 > `tcp` added before the server name must be lowercase.
 
-If yes, SQL Server works well. The issue is related to [firewall](#firewall), [network](#network), or [client](#client).
+If yes, SQL Server works well. The issue is related to [firewalls](#firewall), [networks](#network), or [clients](#client).
 
 If not, the issue is related to [SQL Server Service](#sql-server-service).
 
@@ -48,32 +48,32 @@ If not, the issue is related to [SQL Server Service](#sql-server-service).
 
 For example, the command to establish a [telnet](/windows-server/administration/windows-commands/telnet) connection to the SQL Server instance is `telnet <InstanceName>.<DomainName>.COM 1433`.
 
-If yes, the issue is related to [driver/provider](#driver), security/Secure Sockets Layer (SSL), SQL alias, or [application](#application).
+If yes, the issue is related to [drivers/providers](#driver), security/Secure Sockets Layer (SSL), SQL aliases, or [applications](#application).
 
-If not, the issue is related to the `hosts` file, [network](#network), or [firewall](#firewall) when the [step 1](#1-can-you-connect-to-sql-server-locally-using-sql-server-management-studio-ssms-and-tcp) works.
+If not, the issue is related to `hosts` files, [networks](#network), or [firewalls](#firewall) when [step 1](#1-can-you-connect-to-sql-server-locally-using-sql-server-management-studio-ssms-and-tcp) works.
 
-- If `telnet` isn't available as a command, add it as a Windows feature. It doesn't require a reboot.
+- If `telnet` isn't available as a command, add it as a Windows feature. This doesn't require a reboot.
 - Newer versions of Windows have the [Test-NetConnection](/powershell/module/nettcpip/test-netconnection) PowerShell command.
 
    For example, use the command `TCP/IPTest-NetConnection <InstanceName>.<DomainName>.com -Port 1433` to test the network connection to a SQL Server instance.
 
 ### 3. Can you connect to the server using a UDL file if step 2 works?
 
-If yes, the issue is related to [application](#application), like an incorrect connection string, or the provider used by the application if different from the provider used in the [Universal Data Link](test-oledb-connectivity-use-udl-file.md) (UDL) file.
+If yes, the issue is related to [applications](#application), like an incorrect connection string, or the provider used by the application if different from the provider used in the [Universal Data Link](test-oledb-connectivity-use-udl-file.md) (UDL) file.
 
-If not, the issue is related to [client](#client).
+If not, the issue is related to [clients](#client).
 
 ### 4. Can other clients connect to SQL Server?
 
-If yes, there's a problem with [firewall](#firewall), [network](#network), TLS 1.2, or [client](#client).
+If yes, the issue is related to [firewalls](#firewall), [networks](#network), TLS 1.2, or [clients](#client).
 
-If not, the issue is related to [firewall](#firewall) or [server](#sql-server-service).
+If not, the issue is related to [firewalls](#firewall) or [servers](#sql-server-service).
 
 ### 5. Can the client connect to other servers?
 
-If yes, the issue is related to [firewall](#firewall), [network](#network), TLS 1.2, or [server](#sql-server-service).
+If yes, the issue is related to [firewalls](#firewall), [networks](#network), TLS 1.2, or [servers](#sql-server-service).
 
-If not, the issue related to [firewall](#firewall), [network](#network), or TLS 1.2.
+If not, the issue related to [firewalls](#firewall), [networks](#network), or TLS 1.2.
 
 ## SQL Server Service
 
@@ -101,7 +101,7 @@ If the issue is related to SQL Server Service, follow these steps:
    > [!NOTE]
    > Using the fully qualified domain name (FQDN), `tcp:`, and the port number to create a connection is the most reliable and resilient method. `tcp:` must be lowercase.
 
-   - If succeed to connect:
+   - If the connection is successful:
 
      - Validate SQL Server Browser is running. If SQL Server is a default instance listening on port 1433, it doesn't have to be running. You can remove the port number and have it still work.
      - If removing the `tcp:` prefix causes it to fail, you may be connecting via Named Pipes by default. You can validate by using `np:hostname\instancename` as the server name.
@@ -192,13 +192,13 @@ If the issue is related to drivers, try different drivers.
 
 - If some drivers work and others fail, suspect a TLS issue. Download the latest driver, such as [Microsoft OLE DB Driver for SQL Server](/sql/connect/oledb/download-oledb-driver-for-sql-server) or [ODBC Driver 17 for SQL Server](/sql/connect/odbc/download-odbc-driver-for-sql-server), and try that.
 
-- If using .NET, make sure you're using the latest version of the framework. If it still fails, it should give a better error message. You can also download the latest version of [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms that's independent of SQL Server and install it on any client. This uses the `SqlClient .NET` class.
+- If using .NET, make sure you're using the latest version of the framework. If it still fails, it should give a better error message. You can also download the latest version of [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) that's independent of SQL Server and install it on any client. This uses the `SqlClient .NET` class.
 
 ## User
 
 If the issue is related to users, have another user log in to this machine.
 
-- If succeed to connect, see what's different about the failing user. For example, the Windows user profile is incorrect, or perhaps the users belong to a different organizational unit (OU) or domain.
+- If the connection is successful, see what's different about the failing user. For example, the Windows user profile is incorrect, or perhaps the users belong to a different organizational unit (OU) or domain.
 
 - If there are users from multiple domains, try using a user from the same domain as the server. Typically, user issues result in authentication errors and have a different troubleshooting workflow.
 
