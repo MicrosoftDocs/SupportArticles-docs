@@ -1,7 +1,7 @@
 ---
 title: Introduction to TroubleShootingScript toolset (TSS)
 description: Introduces the TroubleShootingScript (TSS) toolset and provides answers to frequently asked questions about the toolset.
-ms.date: 07/26/2023
+ms.date: 11/29/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -70,8 +70,8 @@ Logs related to the traces are also automatically collected when you stop data c
 
 |ETW trace  |PowerShell cmdlet  |Description  |
 |---------|---------|---------|
-|Enable a scenario trace.     |`.\TSS.ps1 -Scenario <ScenarioName>`         |The supported scenario names are listed using the `TSSv2.ps1 -ListSupportedScenarioTrace` cmdlet.         |
-|Enable component traces.     |`.\TSS.ps1 <-ComponentName> <-ComponentName> ...`         |The supported `<-componentName>` is listed using the `TSSv2.ps1 -ListSupportedTrace` cmdlet.         |
+|Enable a scenario trace.     |`.\TSS.ps1 -Scenario <ScenarioName>`         |The supported scenario names are listed using the `TSS.ps1 -ListSupportedScenarioTrace` cmdlet.         |
+|Enable component traces.     |`.\TSS.ps1 <-ComponentName> <-ComponentName> ...`         |The supported `<-componentName>` is listed using the `TSS.ps1 -ListSupportedTrace` cmdlet.         |
 |Start traces with no-wait mode.     |`.\TSS.ps1 -StartNoWait -Scenario <ScenarioName>`<br><br>`.\TSS.ps1 -Stop`         |The prompt returns immediately, so you can sign out or use a cmdlet like `Shutdown`.<br><br>The cmdlet `.\TSS.ps1 -Stop` stops the trace.         |
 
 > [!NOTE]  
@@ -108,7 +108,7 @@ Start support tools or commands (for example, ProcMon, ProcDump, netsh, Performa
 |`-Video`|Start video capturing (requires .NET 3.5 to be installed).|
 |`-WFPdiag`|Collect traces with the `netsh Wfp capture` command.|
 |`-WireShark`|Start WireShark. The following parameters are configurable through the *tss_config.cfg* file. <br><br>1. `WS_IF`: used for `-i`. Specify the interface number (for example, `_WS_IF=1`).<br>2. `WS_Filter`: used for `-f`. Filter for the interface (for example, `_WS_Filter="port 443"`).<br>3. `WS_Snaplen`: used for `-s`. Limit the amount of data for each frame. This parameter has better performance and is helpful for high-load situations (for example, `_WS_Snaplen=128`).<br>4. `WS_TraceBufferSizeInMB`: used for `-b FileSize` (multiplied by 1024). Switch to the next file after the number of megabytes. (for example, `_WS_TraceBufferSizeInMB=512`, default=512 MB)<br>5. `WS_PurgeNrFilesToKeep`: used for `-b files`. Replace after the number of the files. (for example, `_WS_PurgeNrFilesToKeep=20`)<br>6. `WS_Options`: any other options for `-i` (for example, `_WS_Options="-P"`).<br><br>Example:<br>To collect WireShark on interfaces 15 and 11, input when TSS prompts for an interface number: `15 -i 11`.<br><br>By default, Wireshark starts `dumpcap.exe -i <all NICs> -B 1024 -n -t -w _WireShark-packetcapture.pcap -b files:10 -b filesize:524288`.|
-|`-WPR <WPRprofile>`<br>1. `-SkipPdbGen`<br>2. `-WPROptions '<Option string>'`|Start a WPR profile trace. `<WPRprofile>` is one of `General`\|`BootGeneral`\|`CPU`\|`Device`\|`Memory`\|`Network`\|`Registry`\|`Storage`\|`Wait`\|`SQL`\|`Graphic`\|`Xaml`\|`VSOD_CPU`\|`VSOD_Leak`.<br><br>1. Skip generating symbol files (PDB files).<br>2. Specify options for *WPR.exe*. For example, `-WPROptions '-onoffproblemdescription "test description"'`.<br><br>Example 1:<br>`.\TSSv2.ps1 -StartAutoLogger -WPR BootGeneral -WPROptions '-addboot CPU'` will capture WPR boot traces with the `General` and `CPU` profiles.<br><br>Example 2:<br>`.\TSSv2.ps1 -WPR General -WPROptions '-Start CPU -start Network -start Minifilter'` will combine profiles (`General`, `CPU`, `Network`, and `Minifilter`).|
+|`-WPR <WPRprofile>`<br>1. `-SkipPdbGen`<br>2. `-WPROptions '<Option string>'`|Start a WPR profile trace. `<WPRprofile>` is one of `General`\|`BootGeneral`\|`CPU`\|`Device`\|`Memory`\|`Network`\|`Registry`\|`Storage`\|`Wait`\|`SQL`\|`Graphic`\|`Xaml`\|`VSOD_CPU`\|`VSOD_Leak`.<br><br>1. Skip generating symbol files (PDB files).<br>2. Specify options for *WPR.exe*. For example, `-WPROptions '-onoffproblemdescription "test description"'`.<br><br>Example 1:<br>`.\TSS.ps1 -StartAutoLogger -WPR BootGeneral -WPROptions '-addboot CPU'` will capture WPR boot traces with the `General` and `CPU` profiles.<br><br>Example 2:<br>`.\TSS.ps1 -WPR General -WPROptions '-Start CPU -start Network -start Minifilter'` will combine profiles (`General`, `CPU`, `Network`, and `Minifilter`).|
 |`-Xperf <Profile>`<br>1. `-XperfMaxFileMB <Size>`<br>2. `-XperfTag <Pool Tag>`<br>3. `-XperfPIDs <PID>`<br>4. `-XperfOptions <Option string>`|Start Xperf. `<Profile>` is one of `General`\|`CPU`\|`Disk`\|`Leak`\|`Memory`\|`Network`\|`Pool`\|`PoolNPP`\|`Registry`\|`SMB2`\|`SBSL`\|`SBSLboot`.<br><br>1. Specify the maximum log size in MB (the default value is 2048 MB). The default value for SBSL\* scenarios is 16384 (same for ADS_\/NET_SBSL).<br>2. Specify `PoolTag` to be logged. This parameter is used with the `Pool` or `PoolNPP` profile (for example, `-Xperf Pool -XperfTag TcpE+AleE+AfdE+AfdX`).<br>3. Specify `ProcessID`. This parameter is used with the `Leak` profile (for example, `-Xperf Leak -XperfPIDs <PID>`).<br>4. Specify other option strings for `Xperf`.|
 |`-xray`|Start xray to diagnose a system for known issues.|
 
@@ -133,7 +133,7 @@ Defines specific parameters within the TSS options to control, enhance, or simpl
 |`-CollectEventLog <Eventlog[]>`     |Collect specified event logs. The asterisk (\*) wildcard character can be used for the event log name.<br><br>Example:<br>`-CollectEventLog Security,*Cred*`<br>Collect security and all event logs that match `*Cred*` like `'Microsoft-Windows-CertificateServicesClient-CredentialRoaming/Operational'`.         |
 |`-CommonTask` \<`<POD>`\|`Full`\|`Mini`>     |Run common tasks before starting and after stopping the trace.<br><br>`<POD>`: currently, only "NET" is available. Collect additional information before starting and after stopping the trace.<br>`Full`: the full basic log is collected after stopping the trace.<br>`Mini`: the mini basic log is collected after stopping the trace.         |
 |`-Crash`     |Trigger a system crash with `NotMyFault` at the stop of repro, or after all events are signaled if used with `-WaitEvent`.<br><br>Caution:<br>This switch will force a memory dump (the system will restart), so open files won't be saved.          |
-|`-CustomETL`     |Add custom ETL trace providers. For example, `.\TSSv2.ps1 -WIN_CustomETL -CustomETL '{<GUID>}','Microsoft-Windows-PrimaryNetworkIcon'` (a comma-separated list of single-quoted `'{GUID}'` and/or `'Provider-Name'`).         |
+|`-CustomETL`     |Add custom ETL trace providers. For example, `.\TSS.ps1 -WIN_CustomETL -CustomETL '{<GUID>}','Microsoft-Windows-PrimaryNetworkIcon'` (a comma-separated list of single-quoted `'{GUID}'` and/or `'Provider-Name'`).         |
 |`-DebugMode`     |Run with debug mode for a developer.         |
 |`-VerboseMode`     |Show more verbose or informational output while processing TSS functions.         |
 |`-Discard`     |Used to discard a dataset at phase `-Stop`. `*Stop-` or `*Collect-` functions won't run. `xray` and `psSDP` will be skipped.         |
@@ -148,7 +148,7 @@ Defines specific parameters within the TSS options to control, enhance, or simpl
 |`-Mode` \<`Basic`\|`Medium`\|`Advanced`\|`Full`\|`Verbose`\|`VerboseEx`\|`Hang`\|`Restart`<br>\|`Swarm`\|`Kube`\|`GetFarmdata`\|`Permission`\|`traceMS`>     |Run scripts in `Basic`, `Medium`, `Advanced`, `Full`, or `Verbose(Ex)` mode for data collection. `Restart` will restart the associated service.         |
 |`-RemoteRun`     |Use when TSS is being executed on a remote host, for example, via PsExec, in the Azure Serial Console, or with PowerShell remoting. This parameter will inhibit PSR, video recording, starting TssClock, and opening Explorer with final results. In such a case, also consider `-AcceptEula`.         |
 |`-StartNoWait`     |Don't wait, and prompt will return immediately. This parameter is useful for the scenario where a user needs to log off.         |
-|`-WaitEvent`     |Monitor for the specified event or stop-trigger; if it's signaled, traces will be stopped automatically.<br><br>There's a wide variety of options to trigger an automatic stop. Run `.\TSSv2.ps1 -Find Monitoring` to see the usage.         |
+|`-WaitEvent`     |Monitor for the specified event or stop-trigger; if it's signaled, traces will be stopped automatically.<br><br>There's a wide variety of options to trigger an automatic stop. Run `.\TSS.ps1 -Find Monitoring` to see the usage.         |
 |`-Update`<br>1. `-UpdMode` \<`Online`\|`Lite`>      |Update the TSS package. It can be used together with `-UpdMode Online|Lite`.<br><br>`Online` is the default, and `Lite` is the `Upd` lite version.         |
 |`-Help`<br>1. `Common`<br>2. `ALL`<br>3. `Monitoring`<br>4. `Config`<br>5. `Keyword`     |Provide help messages on various scenarios.<br><br>1. Common general help message.<br>2.    All available options.<br>3. Show help messages for monitoring and remote features.<br>4. Help with all config parameters.<br>5. You can enter any keyword, and it will show the help information about that keyword.          |
 |`-Status`     |Show the status of the running trace, if any.        |
@@ -169,7 +169,7 @@ Defines specific parameters within the TSS options to control, enhance, or simpl
 1. Run this cmdlet after a failure:
 
     ```PowerShell
-    .\TSSv2.ps1 -Stop -noBasiclog -noXray
+    .\TSS.ps1 -Stop -noBasiclog -noXray
     ```
 
 2. Close the opened elevated PowerShell window and start a new elevated PowerShell window.
@@ -185,7 +185,7 @@ Defines specific parameters within the TSS options to control, enhance, or simpl
       ```
 
 2. Verify the settings with the `Get-ExecutionPolicy -List` cmdlet that no `ExecutionPolicy` with higher precedence is blocking the execution of this script.
-3. Run the `.\TSSv2.ps1 <Desired Parameters>` cmdlet again.
+3. Run the `.\TSS.ps1 <Desired Parameters>` cmdlet again.
 
 ### Method 2 (alternative)
 
