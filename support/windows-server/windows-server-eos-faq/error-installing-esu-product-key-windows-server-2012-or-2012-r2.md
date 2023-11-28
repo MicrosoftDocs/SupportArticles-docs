@@ -64,6 +64,6 @@ To resolve these error messages, install and configure the following prerequisit
       > Overwrite any existing files.
   1. If VAMT is running, close the tool and then restart it.
 
-# More information
+## More information
 
 For more information about ESU for Windows Server 2012 R2 and Windows Server 2012, see [KB5031043: Procedure to continue receiving security updates after extended support has ended on October 10, 2023 - Microsoft Support](https://support.microsoft.com/topic/kb5031043-procedure-to-continue-receiving-security-updates-after-extended-support-has-ended-on-october-10-2023-c1a20132-e34c-402d-96ca-1e785ed51d45).
