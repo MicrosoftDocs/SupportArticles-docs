@@ -12,8 +12,6 @@ ms.custom: sap:Connection issues
 
 This article helps you to resolve the access via group Windows permission error.
 
-## Cause
-
 If the user doesn't belong to a local group used to grant access to the server, the provider should display the "Login failed for user 'contoso/user1'" error message.
 The DBA can double-check the access by looking at the Security\Logins in SSMS. If it's a contained database, the DBA checks under database name.
 
@@ -25,10 +23,6 @@ When you run the `xp_logininfo 'contoso/user1'` stored procedure, the following 
 
 - If no rows are returned, then there is no group that provides access to the server.
 - If one or more rows are returned, then the user belongs to a group that provides the access.
-
-## Symptoms
-
-To be added
 
 ## Resolution
 

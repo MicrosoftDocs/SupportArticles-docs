@@ -100,8 +100,21 @@ Before you start with troubleshooting, it is important to understand the nature 
   - [Credential Guard is enabled](/windows/security/identity-protection/credential-guard/considerations-known-issues)
 
 - Following are the errors specific to NTLM:
-  (To be added)
+  - [NTLM Peer Login](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?view=sql-server-ver16)
+  - [Loopback Protection](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?view=sql-server-ver16)
+  - [Always-On Listener Loopback Protection](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?view=sql-server-ver16)
+  - [Double Hop](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?view=sql-server-ver16)
+  - [LANMAN Compatibility Level](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?view=sql-server-ver16)
 
-- Issues specific to Active Directory and Domain Controller - To be added
+- Issues specific to Active Directory and Domain Controller:
+  - [Account disabled](account-disabled-error.md)
+  - [Cross-domain groups](cross-domain-groups.md)
+  - [Firewall blocks the DC](firewall-blocks-the-dc.md)
+  - [Domain trust](domain-trust-error.md)
+  - [Selective authentication](selective-authentication.md)
+  - [Account migration](account-migration-error.md)
+  - [Directory Services specific error messages](directory-services-specific-error-messages.md)
 
+- Issues specific to Kerberos:
+  - 
 - Miscellaneous issues - To be added.
