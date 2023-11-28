@@ -25,10 +25,10 @@ To configure your system for End of Service Updates (ESU), you have to install E
 
 - After you enter the product key, you see the following error message:
   > Error: 0xC004E016 on a computer running microsoft windows non-core edition, run 'slui.exe 0x2a 0xC004E016' to display the error  
-- When you use the Volume Activation Management Tool (VAMT) to install a ESU product key, you see the following error message:
+- When you use the Volume Activation Management Tool (VAMT) to install an ESU product key, you see the following error message:
   > Unable to verify product key  
   >The specified product key is invalid, or is unsupported by this version of VAMT. An update to support additional products may be available online.
-- When you use VAMT to acquire confirmation IDs as part of the [MAK Proxy scenario](/windows/deployment/volume-activation/proxy-activation-vamt), you an error message that resembles the following:  
+- When you use VAMT to acquire confirmation IDs as part of the [MAK Proxy scenario](/windows/deployment/volume-activation/proxy-activation-vamt), you get an error message that resembles the following:  
   > Successfully acquire confirmation ID's for 0 out of X products. The action was not applicable for 0 products in the file  
   > The results were saved back to : filename.cilx  
   > [!NOTE]  
@@ -36,7 +36,7 @@ To configure your system for End of Service Updates (ESU), you have to install E
 
 ## Cause
 
-Windows does not recognize the ESU key.
+Windows doesn't recognize the ESU key.
 
 ## Resolution
 
