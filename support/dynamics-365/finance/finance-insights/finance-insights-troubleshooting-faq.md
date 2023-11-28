@@ -32,7 +32,7 @@ This article lists common issues that can occur when you use Finance insights ca
 
 ### Resolution
 
-You might use a template for an earlier version. Before the release of version 10.0.17, preview customers configured the **Customer payment insights results (CDS to Fin and Ops)** Data Integration (DI) template by using the **Payment prediction result (preview)** entity. After an upgrade to 10.0.17 and later, you should use the **Customer payment insights results (CDS to Fin and Ops 10.0.17 and later)** DI template to complete the mapping. You might not be able to map the DI template destination column until the data management entity list is refreshed and the **Payment prediction result** entity appears in it. To refresh the entity list and show the payment prediction result, you'll complete steps in both Microsoft Dynamics 365 Finance and Dataverse (previously known as the Common Data Service [CDS] admin portal).
+This issue could occur if you're using a template for an earlier version. Before the release of version 10.0.17, preview customers configured the **Customer payment insights results (CDS to Fin and Ops)** Data Integration (DI) template by using the **Payment prediction result (preview)** entity. After an upgrade to 10.0.17 and later, you should use the **Customer payment insights results (CDS to Fin and Ops 10.0.17 and later)** DI template to complete the mapping. You might not be able to map the DI template destination column until the data management entity list is refreshed and the **Payment prediction result** entity appears in it. To refresh the entity list and show the payment prediction result, you'll need to complete steps in both Microsoft Dynamics 365 Finance and Dataverse (previously known as the Common Data Service [CDS] admin portal).
 
 #### In Finance
 
@@ -72,7 +72,7 @@ Next, confirm that the Cash flow forecasts feature in Finance insights (**Cash a
 
 ### Resolution
 
-First, verify that the **Environment Manager** or **Project Owner** role is assigned to the signed-in user in the **Project security role** field in Microsoft Dynamics Lifecycle Services (LCS). Installation of the new add-ins requires one of these project security roles.
+First, verify that the **Environment Manager** or **Project Owner** role is assigned to the signed-in user in the **Project security role** field in Microsoft Dynamics Lifecycle Services (LCS). To install new add-ins, you require one of these project security roles.
 
 If the correct project security role is assigned to you, you might have to refresh your browser window to see the **Install a new add-in** button.
 
@@ -80,7 +80,7 @@ If the correct project security role is assigned to you, you might have to refre
 
 ### Resolution
 
-The following steps should have been completed.
+Make sure the following steps have been completed.
 
 - Verify that you have **System administrator** and **System Customizer** access in the Power Portal admin center.
 - Verify that a Dynamics 365 Finance or equivalent license is applied to the user who is installing the add-in.
