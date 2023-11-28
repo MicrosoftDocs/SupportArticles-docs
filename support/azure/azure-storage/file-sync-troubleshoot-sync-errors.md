@@ -214,6 +214,7 @@ If a file or directory fails to sync due to an error, an event is logged in the 
 | 0x80041007 | -2147217401 | SYNC_E_ITEM_MUST_EXIST | An internal error occurred. | If the error persists for more than a day, create a support request. |
 | 0X80C80293 | -2134375789 | ECS_E_SYNC_INITIAL_SCAN_COMPLETED | The sync session failed because the initial enumeration was completed. The next session will cover the full namespace. | No action required. This error should automatically resolve. If the error persists for several days, create a support request. |
 | 0X80C80342 | -2134375614 | ECS_E_SYNC_CUSTOM_METADATA_VERSION_NOT_SUPPORTED | The sync database has custom metadata with a version higher than the supported version. | Please upgrade the File Sync agent to the latest version. If the error persists after upgrading the agent, create a support request. |
+| 0x80C86057 | -2134351785 | ECS_E_STABLEVERSION_SVID_CHECK_FAILED | The file cannot be recalled or tiered due to a known issue. | If the error is either persistent sync error or recall error, copy the file manually from a different endpoint or from the cloud share. If it's a tiering error ignore the error. The error will go away after we send out a fix. If you are not able to copy the file manually create a support ticket. |
 
 ### Handling unsupported characters
 
