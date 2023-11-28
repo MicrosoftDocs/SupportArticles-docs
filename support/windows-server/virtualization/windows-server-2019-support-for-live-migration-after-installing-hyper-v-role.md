@@ -25,7 +25,7 @@ You have a Windows Server 2019 server that has the Hyper-V role installed. In or
 
 ## Cause
 
-This feature is not supported on Windows Server 2019.
+This feature isn't supported on Windows Server 2019.
 
 ## Resolution
 
