@@ -1,6 +1,6 @@
 ---
 title: Data collection to troubleshoot SQL connectivity issues
-description: This article provides questions based on several components using which you can effectively troubleshoot connectivity issues.
+description: This article provides questions based on several components that you can use to effectively troubleshoot connectivity issues.
 ms.date: 11/23/2023
 author: prmadhes-msft
 ms.author: prmadhes
@@ -10,7 +10,7 @@ ms.custom: sap:Connection issues
 
 # Collect data to troubleshoot SQL connectivity issues
 
-This section provides a comprehensive list of questions that are classified by specific categories. Although the ["Recommended prerequisites and checklist for troubleshooting SQL Server connectivity issues"](resolve-connectivity-errors-checklist.md) topic includes the most important items to be collected, the questions in this article can help you troubleshoot effectively by ruling out many scenarios and narrowing your focus.
+This section provides a comprehensive list of questions that are classified by specific categories. Although the ["Recommended prerequisites and checklist for troubleshooting SQL Server connectivity issues"](resolve-connectivity-errors-checklist.md) topic includes the most important items to be collected, the questions in this article can help you troubleshoot more effectively by ruling out many scenarios and narrowing your focus.
 
 > [!NOTE]
 > Not all questions are applicable to all issues. However, these questions can guide you as you consider how to troubleshoot connectivity issues.
