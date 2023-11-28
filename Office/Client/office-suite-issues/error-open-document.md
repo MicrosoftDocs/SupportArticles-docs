@@ -21,7 +21,7 @@ ms.date: 03/31/2022
 
 ## Symptoms
 
-When you try to open a file in any Microsoft Office program that’s listed in the "Applies to" section, you receive one of the following error messages:
+When you try to open a file in any Microsoft Office program that's listed in the "Applies to" section, you receive one of the following error messages:
 
 > Filename is not valid.
 
@@ -70,7 +70,7 @@ To work around this issue, try any of the following workarounds.
 
     :::image type="content" source="media/error-open-document/open-and-repair.png" alt-text="Screenshot of the Open and Repair option.":::
 
-This option repairs the damage to the file, and then opens the file. After you repair the document, workbook, or presentation, it’s important to verify that the issue has been resolved successfully. To do this, begin working on the file, and make sure that everything is working as expected.
+This option repairs the damage to the file, and then opens the file. After you repair the document, workbook, or presentation, it's important to verify that the issue has been resolved successfully. To do this, begin working on the file, and make sure that everything is working as expected.
 
 ### Workaround 3: Change file format and resave
 
@@ -91,25 +91,25 @@ You might be able to rescue a damaged file by resaving it in a different file fo
 #### Step 2: Resave the file as a Word document
 
 1. Select **File** > **Open**.
-2. Select the new file that’s saved as a **Rich Text File**, and then select **Open**.
+2. Select the new file that's saved as a **Rich Text File**, and then select **Open**.
 3. Select **File** > **Save as**.
 4. On the **Save as** type list, select **Word Document**.
 5. Rename the file, and then select **Save**.
 
      :::image type="content" source="media/error-open-document/save-a-copy.png" alt-text="Screenshot of the Save a Copy option.":::
 
-You have to do this only one time to make sure that the document will now function correctly on your device. However, keep in mind that by saving the file as a new document, you are creating a different file. To avoid confusion, name the new file something distinctive, and archive or delete the damaged version. By doing this, you won’t accidentally re-open the original file that hasn’t been reformatted.
+You have to do this only one time to make sure that the document will now function correctly on your device. However, keep in mind that by saving the file as a new document, you are creating a different file. To avoid confusion, name the new file something distinctive, and archive or delete the damaged version. By doing this, you won't accidentally re-open the original file that hasn't been reformatted.
 
 ### Workaround 4: Open unrecognized file format
 
-If you can rule out file corruption as the culprit, check for file associations and unrecognized file formats. Sometimes, a file won’t open on your device because the device that the file was created on used software that your device doesn’t have.
+If you can rule out file corruption as the culprit, check for file associations and unrecognized file formats. Sometimes, a file won't open on your device because the device that the file was created on used software that your device doesn't have.
 
-For example, in Word, you want to view a PDF file that’s attached to an email message. However, you don't have a PDF viewer installed. Therefore, your device doesn’t know what program to open to view the file. In this case, you can change the format of the file to match a program that you do have installed.
+For example, in Word, you want to view a PDF file that's attached to an email message. However, you don't have a PDF viewer installed. Therefore, your device doesn't know what program to open to view the file. In this case, you can change the format of the file to match a program that you do have installed.
 
 1. Save the attachment to your computer. To do this, select the down arrow next to the attachment in the message, select **Save as**, navigate to the desired location, and then select **Save**.
 2. On the **File** menu, select **Open** > **Browse** to locate the file.
 3. Right-click the file, point to **Open with**, and then select a different program to open the file.
-4. If the desired program is not on the list, select “Choose another app” to locate a different program.
+4. If the desired program is not on the list, select "Choose another app" to locate a different program.
 
     > [!NOTE]
     > If this works, and you would like the selected program to always open this type of file, select the **Always use this app to open .docx files** (for example) check box.
@@ -119,7 +119,7 @@ For more information about file formats and how to manage them, see [Learn about
 
 ### Workaround 5: Clear some disk space
 
-You might not be able to open a new file or save a file to your device if you’re running out of space on the hard disk. On a full disk, much of the space is being used up by temporary, duplicate, and unnecessary items. The fastest and easiest method to free up space on a hard disk is to use the [Disk Cleanup](https://community.windows.com/stories/device-health) app that’s included in Windows.
+You might not be able to open a new file or save a file to your device if you're running out of space on the hard disk. On a full disk, much of the space is being used up by temporary, duplicate, and unnecessary items. The fastest and easiest method to free up space on a hard disk is to use the Disk Cleanup app that's included in Windows.
 
 1. Select **Search**, and type **Disk Cleanup**.
 2. In the results list, select **Disk Cleanup**.
