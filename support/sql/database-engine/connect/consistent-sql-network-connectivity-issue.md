@@ -29,7 +29,7 @@ The most common error messages are:
 
 The following steps help narrow the troubleshooting to a focused area:
 
-- Client: application, connection string, driver (lacking Transport Layer Security (TLS) 1.2), SQL alias (64/32-bit), `hosts` file, and incorrect [Domain Name System (DNS)](/previous-versions/windows/it-pro/windows-server-2003/cc787921(v=ws.10)) suffix (full name connects; short name fails).
+- Client: application, connection string, driver (lacking Transport Layer Security (TLS) 1.2), SQL alias (64/32-bit), hosts file, and incorrect [Domain Name System (DNS)](/previous-versions/windows/it-pro/windows-server-2003/cc787921(v=ws.10)) suffix (full name connects; short name fails).
 - SQL Server: database engine, enabled protocols, and firewall.
 - Network: DNS alias, gateway, router, and firewall.
 
@@ -40,7 +40,7 @@ For example, use the connection string `tcp:<InstanceName>.<DomainName>.COM,1433
 > [!NOTE]
 > `tcp` added before the server name must be lowercase.
 
-If yes, SQL Server works well. The issue is related to [firewalls](#firewall), [networks](#network), or [clients](#client).
+If yes, SQL Server works well. The issue is related to your [firewall](#firewall), [network](#network), or [client](#client).
 
 If not, the issue is related to [SQL Server Service](#sql-server-service).
 
@@ -50,7 +50,7 @@ For example, the command to establish a [telnet](/windows-server/administration/
 
 If yes, the issue is related to [drivers/providers](#driver), security/Secure Sockets Layer (SSL), SQL aliases, or [applications](#application).
 
-If not, the issue is related to `hosts` files, [networks](#network), or [firewalls](#firewall) when [step 1](#1-can-you-connect-to-sql-server-locally-using-sql-server-management-studio-ssms-and-tcp) works.
+If not, the issue is related to your hosts file, [network](#network), or [firewall](#firewall) when [step 1](#1-can-you-connect-to-sql-server-locally-using-sql-server-management-studio-ssms-and-tcp) works.
 
 - If `telnet` isn't available as a command, add it as a Windows feature. This doesn't require a reboot.
 - Newer versions of Windows have the [Test-NetConnection](/powershell/module/nettcpip/test-netconnection) PowerShell command.
@@ -65,15 +65,15 @@ If not, the issue is related to [clients](#client).
 
 ### 4. Can other clients connect to SQL Server?
 
-If yes, the issue is related to [firewalls](#firewall), [networks](#network), TLS 1.2, or [clients](#client).
+If yes, the issue is related to your [firewall](#firewall), [network](#network), TLS 1.2, or [client](#client).
 
-If not, the issue is related to [firewalls](#firewall) or [servers](#sql-server-service).
+If not, the issue is related to your [firewall](#firewall) or [server](#sql-server-service).
 
 ### 5. Can the client connect to other servers?
 
-If yes, the issue is related to [firewalls](#firewall), [networks](#network), TLS 1.2, or [servers](#sql-server-service).
+If yes, the issue is related to your [firewall](#firewall), [network](#network), TLS 1.2, or [server](#sql-server-service).
 
-If not, the issue related to [firewalls](#firewall), [networks](#network), or TLS 1.2.
+If not, the issue related to your [firewall](#firewall), [network](#network), or TLS 1.2.
 
 ## SQL Server Service
 
@@ -184,7 +184,7 @@ If the issue is related to clients, you might see the following indicators:
 
    This might be a TLS issue. For example, the server uses TLS 1.2, and the client drivers haven't been upgraded for it.
 
-   There might be a `hosts` file entry, a SQL alias, or a DNS alias that directs the connection to another server. Use [ping](/windows-server/administration/windows-commands/ping) and `telnet`. If they work, but the driver fails, suspect a SQL alias or TLS issue.
+   There might be a hosts file entry, a SQL alias, or a DNS alias that directs the connection to another server. Use [ping](/windows-server/administration/windows-commands/ping) and `telnet`. If they work, but the driver fails, suspect a SQL alias or TLS issue.
 
 ## Driver
 
