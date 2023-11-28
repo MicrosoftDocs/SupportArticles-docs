@@ -49,7 +49,7 @@ To resolve these error messages, install and configure the following prerequisit
   > Check the [Microsoft Update Catalog](https://www.catalog.update.microsoft.com) to make sure that you have the most recent Licensing Preparation Package updates.  
 
 - The VAMT component of [Windows ADK for Windows 10, version 2004](https://go.microsoft.com/fwlink/?linkid=2120254). For more information about this tool, see the following articles:
-  - [Download and install the Windows ADK](windows-hardware/get-started/adk-install).
+  - [Download and install the Windows ADK](/windows-hardware/get-started/adk-install).
   - [Introduction to VAMT](/windows/deployment/volume-activation/introduction-vamt)
 
 - Update to the VAMT configuration files.
