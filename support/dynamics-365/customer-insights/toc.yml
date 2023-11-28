@@ -10,13 +10,13 @@
       - name: Data unification
         items:
           - name: Match failed error
-            href: match-failed.md
+            href: data/profile-unification/match-failed.md
           - name: Merge failed error
-            href: merge-failed.md
+            href: data/profile-unification/merge-failed.md
           - name: Can't update a field from matching rules
-            href: cant-remove-field-from-match.md
+            href: data/profile-unification/cant-remove-field-from-match.md
           - name: Missing business unit
-            href: missing-business-unit.md
+            href: data/profile-unification/missing-business-unit.md
       - name: Exports
         items:
           - name: Controls from Customer Card Add-in if they don't find data
