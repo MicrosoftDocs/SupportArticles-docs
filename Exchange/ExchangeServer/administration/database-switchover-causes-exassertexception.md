@@ -47,7 +47,7 @@ Level: "Error"
 Source: "MSExchangeIS"
 Message: "Unhandled exception (Microsoft.Exchange.Diagnostics.ExAssertException: ASSERT: ProcessId perf counter (0) 
 does not match actual process id (34864) at Microsoft.Exchange.Diagnostics.ExAssert.AssertInternal(String formatString, 
-Object\[\] parameters) at Microsoft.Exchange.Server.Storage.Common.ErrorHelper.AssertRetail(Boolean assertCondition, String 
+Object[] parameters) at Microsoft.Exchange.Server.Storage.Common.ErrorHelper.AssertRetail(Boolean assertCondition, String 
 message) at Microsoft.Exchange.Server.Storage.Common.Globals.AssertRetail(Boolean assertCondition, String message) at 
 Microsoft.Exchange.Server.Storage.StoreCommonServices.PerformanceCounterFactory.CreateDatabaseInstance(StoreDatabase database)"
 ```
@@ -79,7 +79,7 @@ To fix the issue, increase the size of the page file for the performance counter
 
 2. Delete the following registry subkey:
 
-   `HKEY_LOCAL_MACHINE\SYSTEM\\CurrentControlSet\Services\MSExchangeIS\<server name>-NonReplicated`
+   `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSExchangeIS\<server name>-NonReplicated`
 
 3. (Optional) If another Exchange server that doesn't have the issue is available, copy the *MSExchangeISStorePerfCounters.xml* file from that server to the affected server. The file is in the *%ExchangeInstallPath%Setup\Perf* folder.
 
