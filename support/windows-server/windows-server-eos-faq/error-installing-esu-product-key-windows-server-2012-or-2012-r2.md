@@ -1,6 +1,6 @@
 ---
 title: Error when installing ESU product key for Windows Server 2012 R2 or Windows Server 2012
-description: Describes how to resolve error messages that might occur when you install ESU product keys for Windows Server 2012 R2 or Windows Server 2012.
+description: Describes how to resolve errors that might occur when you install ESU product keys for Windows Server 2012 R2 or Windows Server 2012.
 ms.date: 11/30/2023
 author: v-tappelgate
 ms.author: v-tappelgate
@@ -21,15 +21,15 @@ _Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2012
 
 ## Symptoms
 
-To configure your system for End of Service Updates (ESU), you have to install ESU product keys. In the following circumstances, you might see error messages when you install the product keys:
+To configure your system for End of Service Updates (ESU), you have to install ESU product keys. In the following circumstances, you might receive error messages when you install the product keys:
 
-- After you enter the product key, you see the following error message:
+- After you enter the product key, you receive the following error message:
   > Error: 0xC004E016 on a computer running microsoft windows non-core edition, run 'slui.exe 0x2a 0xC004E016' to display the error  
   > 0xC004E016: The Software Licensing Service reported that the product key is invalid.
-- When you use the Volume Activation Management Tool (VAMT) to install an ESU product key, you see the following error message:
+- When you use the Volume Activation Management Tool (VAMT) to install an ESU product key, you receive the following error message:
   > Unable to verify product key  
-  >The specified product key is invalid, or is unsupported by this version of VAMT. An update to support additional products may be available online.
-- When you use VAMT to acquire confirmation IDs as part of the [MAK Proxy scenario](/windows/deployment/volume-activation/proxy-activation-vamt), you get an error message that resembles the following:  
+  > The specified product key is invalid, or is unsupported by this version of VAMT. An update to support additional products may be available online.
+- When you use VAMT to acquire confirmation IDs as part of the [MAK Proxy scenario](/windows/deployment/volume-activation/proxy-activation-vamt), you receive an error message that resembles the following message:  
   > Successfully acquire confirmation ID's for 0 out of X products. The action was not applicable for 0 products in the file  
   > The results were saved back to : filename.cilx  
   > [!NOTE]  
@@ -41,7 +41,7 @@ Windows doesn't recognize the ESU key.
 
 ## Resolution
 
-To resolve these error messages, install and configure the following prerequisites for ESU:
+To resolve these errors, install and configure the following prerequisites for ESU:
 
 - Licensing Preparation Package.
   - Windows Server 2012 R2: [KB5017220: Update for the Extended Security Updates Licensing Preparation Package for Windows Server 2012 R2](https://support.microsoft.com/help/5017220).  
@@ -51,7 +51,7 @@ To resolve these error messages, install and configure the following prerequisit
 
 - Update to the VAMT configuration files (if you are using VAMT).
   1. Download [VAMT - Configuration](https://www.microsoft.com/download/details.aspx?id=104503), and then extract the files from the download.
-  1. Place the files in the following folder:  
+  1. Put the files into the following folder:  
 
       ```console
       C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\VAMT3\pkconfig
@@ -59,7 +59,7 @@ To resolve these error messages, install and configure the following prerequisit
 
       > [!NOTE]  
       > Overwrite any existing files.
-  1. If VAMT is running, close the tool and then restart it.
+  1. If VAMT is running, close the tool, and then restart it.
 
 ## More information
 
