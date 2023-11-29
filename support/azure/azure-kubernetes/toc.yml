@@ -35,8 +35,6 @@
     href: error-code-reservedresourcename.md
   - name: ServicePrincipalValidationClientError error
     href: error-code-serviceprincipalvalidationclienterror.md
-  - name: SubnetIsFull error
-    href: error-code-subnetisfull.md
   - name: SubscriptionRequestsThrottled error (429)
     href: error-code-subscriptionrequeststhrottled.md
   - name: SubnetWithExternalResourcesCannotBeUsedByOtherResources error
@@ -108,6 +106,8 @@
     href: aks-at-scale-troubleshoot-guide.md
   - name: Failed to fix node group sizes
     href: cluster-autoscaler-fails-to-scale.md
+  - name: SubnetIsFull error
+    href: error-code-subnetisfull.md
 
 - name: Troubleshoot Kubernetes control plane
   items:
