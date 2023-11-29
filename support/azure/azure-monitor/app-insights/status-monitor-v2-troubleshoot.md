@@ -155,14 +155,15 @@ Review the [Get-ApplicationInsightsMonitoringStatus reference](/azure/azure-moni
 
 #### Setup
 
-1. Download *PerfView.exe* and *PerfView64.exe* from [GitHub](https://github.com/Microsoft/perfview/releases).
-2. Run *PerfView64.exe*.
-3. Expand **Advanced Options**.
-4. Clear these check boxes:
+1. Download *PerfView.exe* from [GitHub](https://github.com/Microsoft/perfview/releases).
+1. Run *PerfView.exe*.
+1. On the menu bar, select **Collect** > **Collect**.
+1. Expand **Advanced Options**.
+1. Clear these check boxes:
     - **Zip**
     - **Merge**
     - **.NET Symbol Collection**
-5. Set these **Additional Providers**:
+1. Set these **Additional Providers**:
 
    `*Microsoft-ApplicationInsights-AspNetCore,*Microsoft-ApplicationInsights-AspNetCore-AiHostingStartup,*Microsoft-ApplicationInsights-AspNetCore-StartupBootstrapper,*Microsoft-ApplicationInsights-AspNetCore-StartupHook,*Microsoft-ApplicationInsights-Core,*Microsoft-ApplicationInsights-Data,*Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Dependency,*Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Web,*Microsoft-ApplicationInsights-Extensibility-DependencyCollector,*Microsoft-ApplicationInsights-Extensibility-EventCounterCollector,*Microsoft-ApplicationInsights-Extensibility-EventSourceListener,*Microsoft-ApplicationInsights-Extensibility-HostingStartup,*Microsoft-ApplicationInsights-Extensibility-PerformanceCollector,*Microsoft-ApplicationInsights-Extensibility-PerformanceCollector-QuickPulse,*Microsoft-ApplicationInsights-Extensibility-Web,*Microsoft-ApplicationInsights-Extensibility-WindowsServer,*Microsoft-ApplicationInsights-FrameworkLightup,*Microsoft-ApplicationInsights-IIS-ManagedHttpModuleHelper,*Microsoft-ApplicationInsights-Java-IPA,*Microsoft-ApplicationInsights-LoggerProvider,*Microsoft-ApplicationInsights-Nodejs-IPA,*Microsoft-ApplicationInsights-RedfieldIISModule,*Microsoft-ApplicationInsights-SnapshotCollectorLightup,*Microsoft-ApplicationInsights-WindowsServer-Core,*Microsoft-ApplicationInsights-WindowsServer-TelemetryChannel,*Redfield-Microsoft-ApplicationInsights-AspNetCore,*Redfield-Microsoft-ApplicationInsights-Core,*Redfield-Microsoft-ApplicationInsights-Data,*Redfield-Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Dependency,*Redfield-Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Web,*Redfield-Microsoft-ApplicationInsights-Extensibility-DependencyCollector,*Redfield-Microsoft-ApplicationInsights-Extensibility-EventCounterCollector,*Redfield-Microsoft-ApplicationInsights-Extensibility-EventSourceListener,*Redfield-Microsoft-ApplicationInsights-Extensibility-PerformanceCollector,*Redfield-Microsoft-ApplicationInsights-Extensibility-PerformanceCollector-QuickPulse,*Redfield-Microsoft-ApplicationInsights-Extensibility-Web,*Redfield-Microsoft-ApplicationInsights-Extensibility-WindowsServer,*Redfield-Microsoft-ApplicationInsights-LoggerProvider,*Redfield-Microsoft-ApplicationInsights-WindowsServer-TelemetryChannel`
 
