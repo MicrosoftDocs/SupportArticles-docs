@@ -158,17 +158,10 @@ If the issue is related to clients, you might see the following indicators:
 
   This might be caused by an outbound firewall rule or incorrect default DNS suffixes. Try testing with the fully qualified server name, for example:
 
-  - `telnet <ServerName> 1433`
-  - `telnet <ServerName>.<DomainName>.com 1433`
-
-  - `portqry -n <ServerName> -p udp -e 1434`
-  - `portqry -n <ServerName>.<DomainName>.com -p udp -e 1434`
-
-  - `ping <ServerName>`
-  - `ping <ServerName>.<DomainName>.com`
-
-  > [!NOTE]
-  > `test-netconnection` can replace the `telnet`, `portqry`, and `ping` commands.
+  ```powershell
+  Test-NetConnection <ServerName> -Port 1433   
+  Test-NetConnection <ServerName>.<DomainName>.com -Port 1433
+  ```
 
    This might be a TLS issue. For example, the server uses TLS 1.2, and the client drivers haven't been upgraded for it.
 
