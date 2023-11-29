@@ -58,9 +58,10 @@ Microsoft.Exchange.Server.Storage.StoreCommonServices.PerformanceCounterFactory.
 ID: "4999"
 Level: "Error"
 Source: "MSExchange Common"
-Message: "Watson report about to be sent for process id: \<process ID\>, with parameters: E12, c-RTL-AMD64, 15.01.2375.031, 
-M.E.Store.Worker, M.E.S.Storage.StoreCommonServices, M.E.S.S.S.PerformanceCounterFactory.CreateDatabaseInstance, 
-M.E.Diagnostics.ExAssertException, 6c3-dumptidset, 15.01.2375.031."
+Message: "Watson report about to be sent for process id: <process ID>, with parameters: E12, c-RTL-AMD64, 
+15.01.2375.031, M.E.Store.Worker, M.E.S.Storage.StoreCommonServices, 
+M.E.S.S.S.PerformanceCounterFactory.CreateDatabaseInstance, M.E.Diagnostics.ExAssertException, 
+6c3-dumptidset, 15.01.2375.031."
 ```
 
 ## Cause
