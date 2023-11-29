@@ -31,7 +31,12 @@ When you initiate a [database switchover](/exchange/high-availability/manage-ha/
 ID: "1001"
 Level: "Error"
 Source: "MSExchangeIS"
-Message: "Microsoft Exchange Server Information Store has encountered an internal logic error. Internal error text is (ProcessId perf counter (0) does not match actual process id (34864).) with a call stack of (at Microsoft.Exchange.Server.Storage.Common.ErrorHelper.AssertRetail(Boolean assertCondition, String message) at Microsoft.Exchange.Server.Storage.Common.Globals.AssertRetail(Boolean assertCondition, String message) at Microsoft.Exchange.Server.Storage.StoreCommonServices.PerformanceCounterFactory.CreateDatabaseInstance(StoreDatabase database)"
+Message: "Microsoft Exchange Server Information Store has encountered an internal logic error. Internal error 
+text is (ProcessId perf counter (0) does not match actual process id (34864).) with a call stack of (at 
+Microsoft.Exchange.Server.Storage.Common.ErrorHelper.AssertRetail(Boolean assertCondition, String message) at 
+Microsoft.Exchange.Server.Storage.Common.Globals.AssertRetail(Boolean assertCondition, String message) at 
+Microsoft.Exchange.Server.Storage.StoreCommonServices.PerformanceCounterFactory.CreateDatabaseInstance(StoreDatabase 
+database)"
 ```
 
 ### Event entry 2
@@ -40,7 +45,11 @@ Message: "Microsoft Exchange Server Information Store has encountered an interna
 ID: "1002"
 Level: "Error"
 Source: "MSExchangeIS"
-Message: "Unhandled exception (Microsoft.Exchange.Diagnostics.ExAssertException: ASSERT: ProcessId perf counter (0) does not match actual process id (34864) at Microsoft.Exchange.Diagnostics.ExAssert.AssertInternal(String formatString, Object\[\] parameters) at Microsoft.Exchange.Server.Storage.Common.ErrorHelper.AssertRetail(Boolean assertCondition, String message) at Microsoft.Exchange.Server.Storage.Common.Globals.AssertRetail(Boolean assertCondition, String message) at Microsoft.Exchange.Server.Storage.StoreCommonServices.PerformanceCounterFactory.CreateDatabaseInstance(StoreDatabase database)"
+Message: "Unhandled exception (Microsoft.Exchange.Diagnostics.ExAssertException: ASSERT: ProcessId perf counter (0) 
+does not match actual process id (34864) at Microsoft.Exchange.Diagnostics.ExAssert.AssertInternal(String formatString, 
+Object\[\] parameters) at Microsoft.Exchange.Server.Storage.Common.ErrorHelper.AssertRetail(Boolean assertCondition, String 
+message) at Microsoft.Exchange.Server.Storage.Common.Globals.AssertRetail(Boolean assertCondition, String message) at 
+Microsoft.Exchange.Server.Storage.StoreCommonServices.PerformanceCounterFactory.CreateDatabaseInstance(StoreDatabase database)"
 ```
 
 ### Event entry 3
@@ -49,7 +58,9 @@ Message: "Unhandled exception (Microsoft.Exchange.Diagnostics.ExAssertException:
 ID: "4999"
 Level: "Error"
 Source: "MSExchange Common"
-Message: "Watson report about to be sent for process id: \<process ID\>, with parameters: E12, c-RTL-AMD64, 15.01.2375.031, M.E.Store.Worker, M.E.S.Storage.StoreCommonServices, M.E.S.S.S.PerformanceCounterFactory.CreateDatabaseInstance, M.E.Diagnostics.ExAssertException, 6c3-dumptidset, 15.01.2375.031."
+Message: "Watson report about to be sent for process id: \<process ID\>, with parameters: E12, c-RTL-AMD64, 15.01.2375.031, 
+M.E.Store.Worker, M.E.S.Storage.StoreCommonServices, M.E.S.S.S.PerformanceCounterFactory.CreateDatabaseInstance, 
+M.E.Diagnostics.ExAssertException, 6c3-dumptidset, 15.01.2375.031."
 ```
 
 ## Cause
