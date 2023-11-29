@@ -2,7 +2,7 @@
 title: BVD error when assigning a phone number to a resource account in Teams
 ms.author: luche
 author: helenclu
-ms.date: 04/09/2020
+ms.date: 11/26/2023
 audience: ITPro
 ms.topic: troubleshooting
 manager: dcscontentpm
@@ -13,17 +13,18 @@ search.appverid:
 appliesto: 
   - Microsoft Teams
 ms.custom: 
-  - CI 113425
+  - CI113425
+  - CI184323
   - CSSTroubleshoot
 ms.reviewer: scapero
-description: Resolves an issue where you cannot assign a phone number to a resource account in Teams.
+description: Resolves an issue where you can't assign a phone number to a resource account in Teams.
 ---
 
 # "The following application instance is not present in BVD" error when assigning a phone number to a resource accounts
 
 ## Symptoms
 
-You see the error "The following application instance is not present in BVD" and cannot assign a phone number to a resource account in Microsoft Teams.
+You see the error "The following application instance is not present in BVD" and can't assign a phone number to a resource account in Microsoft Teams.
 
 ## Resolution
 

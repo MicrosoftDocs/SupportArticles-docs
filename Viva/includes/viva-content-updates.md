@@ -2,6 +2,14 @@
 
 
 
+## Week of November 20, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 11/21/2023 | [Exception date overlap error during historical imports](/viva/troubleshoot/glint/historical-import/import-error-exception-date-overlap) | added |
+
+
 ## Week of November 13, 2023
 
 
