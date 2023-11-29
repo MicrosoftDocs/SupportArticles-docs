@@ -169,6 +169,14 @@ These instructions are shown on the following tabs.
   1. Scroll down to **Edge**.
   1. Toggle on **Allow Cross-Website Tracking**.
 
+### [Mozilla Firefox](#tab/mozilla-firefox)
+
+ - Instructions to allow Power Apps to use cookies when embedded in another client like SharePoint.
+
+   1. Settings -> Privacy & Security
+   2. Under Enhanced Tracking Protection click Manage Exceptions
+   3. Add the address of the website that is embedding power apps (ie you'd have to put SharePoints URL to get the exception for the embedded power app)
+
 ---
 
 ## Clear your browser cache
