@@ -1,5 +1,5 @@
 ---
-title: "Error message: "Data source credentials are missing or invalid. Please update the connection credentials in settings, and try again.""
+title: "Error message: Data source credentials are missing or invalid."
 description: Troubleshoot an issue with Power Query connectors for missing or invalid credentials.
 ms.date: 11/22/2023
 author: m-hartmann

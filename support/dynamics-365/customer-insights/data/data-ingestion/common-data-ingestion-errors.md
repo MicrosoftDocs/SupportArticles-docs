@@ -27,9 +27,9 @@ If the data doesn't conform to the schema, the ingestion process completes with 
 
 ## Partition files are missing
 
-- If ingestion was successful without any corrupt records, but you can't see any data, edit your model.json or manifest.json file to make sure partitions are specified. Then, [refresh the data source](data-sources-manage.md#refresh-data-sources).
+- If ingestion was successful without any corrupt records, but you can't see any data, edit your model.json or manifest.json file to make sure partitions are specified. Then, [refresh the data source](/dynamics365/customer-insights/data/data-sources-manage#refresh-data-sources).
 
-- If data ingestion occurs at the same time as data sources are being refreshed during an automatic schedule refresh, the partition files may be empty or not available to the system process. To align with the upstream refresh schedule, change the [system refresh schedule](schedule-refresh.md) or the refresh schedule for the data source. Align the timing so that refreshes don't all occur at once.
+- If data ingestion occurs at the same time as data sources are being refreshed during an automatic schedule refresh, the partition files may be empty or not available to the system process. To align with the upstream refresh schedule, change the [system refresh schedule](/dynamics365/customer-insights/data/schedule-refresh) or the refresh schedule for the data source. Align the timing so that refreshes don't all occur at once.
 
 ## Datetime fields in the wrong format
 
@@ -122,8 +122,6 @@ The data can be fixed at the source and re-ingested. Or fix the transformation w
 1. Select **Next**.
 
 1. Select each of the queries and look for transformations applied inside "Applied Steps" that's incorrect, or date columns that haven't been transformed with a date format.
-
-   :::image type="content" source="media/PQ_corruped_date.png" alt-text="Power Query - Edit showing incorrect date format":::
 
 1. Change the data type to correctly match the data.
 
