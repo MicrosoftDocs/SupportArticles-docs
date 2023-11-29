@@ -20,6 +20,9 @@ This article helps you resolve some of the common issues that may occur when sta
 
 The following are some common errors that may appear when you start up or sign in to Power Apps.
 
+- You are prompted to sign-in every time an app is embedded in another experience like SharePoint, Microsoft teams, etc...
+    > The Power Apps open experience starts and halts until you sign-in.
+      
 - Error message related to cookie settings.
 
     > Hmmm... Something went wrong.  
