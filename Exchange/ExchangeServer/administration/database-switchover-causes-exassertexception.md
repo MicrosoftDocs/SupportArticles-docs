@@ -58,7 +58,7 @@ The size of the default page file for the performance counters is insufficient. 
 
 ## Resolution
 
-To fix the issue, follow these steps.
+To fix the issue, increase the size of the page file for the performance counters. Follow these steps.
 
 > [!IMPORTANT]
 > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For protection, back up the registry before you modify it so that you can restore it if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).
@@ -69,7 +69,7 @@ To fix the issue, follow these steps.
 
    `HKEY_LOCAL_MACHINE\SYSTEM\\CurrentControlSet\Services\MSExchangeIS\<server name>-NonReplicated`
 
-3. (Optional) If another Exchange server that doesn't have this issue is available, copy the *MSExchangeISStorePerfCounters.xml file* from that server to the affected server. The file is in the *%ExchangeInstallPath%Setup\Perf* folder.
+3. (Optional) If another Exchange server that doesn't have the issue is available, copy the *MSExchangeISStorePerfCounters.xml file* from that server to the affected server. The file is in the *%ExchangeInstallPath%Setup\Perf* folder.
 
 4. Increase the size of the page file for the performance counters by running the following PowerShell commands to update the registry:
 
@@ -78,10 +78,10 @@ To fix the issue, follow these steps.
    New-PerfCounters -DefinitionFileName "$env:exchangeinstallpath\Setup\Perf\MSExchangeISStorePerfCounters.xml" -FileMappingSize 10485760
    ```
 
-5. Check that the page file size was updated in the registry by navigating to the following registry subkey:
+5. Navigate to the following registry subkey:
 
-   `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSExchangeIS Store\Performance``
+   `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSExchangeIS Store\Performance`
 
-   Verify that the `FileMappingSize` registry value reflects the updated page file size.
+   Verify that the `FileMappingSize` registry value matches the updated page file size.
 
 6. Restart the server.
