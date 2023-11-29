@@ -131,15 +131,7 @@ The worst case scenario is to stop the SQL Server Service, install a new instanc
 
 ## Firewall
 
-In general, the firewall's default behavior is to block the SQL Server and SQL Server Browser ports. If so, remote connections fail, while local ones succeed. Test it by using `telnet` or [PortQry](/troubleshoot/windows-server/networking/portqry-command-line-port-scanner-v2):
-
-- `telnet <ServerName> 1433`
-- `portqry -n <ServerName> -p udp -e 1434`
-
-> [!NOTE]
-> SQL Server Browser uses UDP port 1434.
-
-If `telnet` isn't available, use the `Test-NetConnection` PowerShell command:
+In general, the firewall's default behavior is to block the SQL Server and SQL Server Browser ports. If so, remote connections fail, while local ones succeed. Test it by using `Test-NetConnection`. It's available on all supported versions of Windows.
 
 ```powershell
 Test-NetConnection <ServerName> -Port 1433   
