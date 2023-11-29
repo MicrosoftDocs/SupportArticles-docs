@@ -10,7 +10,7 @@ ms.custom: sap:Connection issues
 > [!NOTE]
 > Before you start troubleshooting, we recommend that you check the [prerequisites](../connect/resolve-connectivity-errors-checklist.md) and go through the checklist.
 
-This article helps troubleshoot network connectivity errors in SQL Server. These errors are consistent and repeatable every time. They point to some configuration issues, such as SQL Server not enabling the Transmission Control Protocol (TCP) or a firewall blocking the connection. The troubleshooting focuses on remote TCP connections because it's the most common connection type in most data centers, but many of the techniques can also be applied to Named Pipes.
+This article helps troubleshoot network connectivity errors in SQL Server. These errors are consistent and repeatable every time. They point to some configuration issues, such as SQL Server not enabling the TCP or a firewall blocking the connection. The troubleshooting focuses on remote TCP connections because it's the most common connection type in most data centers, but many of the techniques can also be applied to Named Pipes.
 
 ## Typical error messages
 
@@ -35,7 +35,7 @@ The following steps help narrow the troubleshooting to a focused area:
 
 ### 1. Can you connect to SQL Server locally using SQL Server Management Studio (SSMS) and TCP?
 
-For example, use the connection string `tcp:<InstanceName>.<DomainName>.COM,1433`.
+For example, use the connection string in this format: `tcp:<ServerName>.<DomainName>.COM,1433`, such as `tcp:sqlprod01.contoso.com,1433`.
 
 > [!NOTE]
 > `tcp` added before the server name must be lowercase.
@@ -46,7 +46,7 @@ If not, the issue is related to [SQL Server Service](#sql-server-service).
 
 ### 2. Can you connect to the SQL Server port from the client machine using telnet?
 
-For example, the command to establish a [telnet](/windows-server/administration/windows-commands/telnet) connection to the SQL Server instance is `telnet <InstanceName>.<DomainName>.COM 1433`.
+For example, the command to establish a [telnet](/windows-server/administration/windows-commands/telnet) connection to the SQL Server instance is `telnet <ServerName>.<DomainName>.COM 1433`.
 
 If yes, the issue is related to [drivers/providers](#driver), security/Secure Sockets Layer (SSL), SQL aliases, or [applications](#application).
 
@@ -55,7 +55,7 @@ If not, the issue is related to your hosts file, [network](#network), or [firewa
 - If `telnet` isn't available as a command, add it as a Windows feature. This doesn't require a reboot.
 - Newer versions of Windows have the [Test-NetConnection](/powershell/module/nettcpip/test-netconnection) PowerShell command.
 
-   For example, use the command `TCP/IPTest-NetConnection <InstanceName>.<DomainName>.com -Port 1433` to test the network connection to a SQL Server instance.
+   For example, use the command `Test-NetConnection <ServerName>.<DomainName>.com -Port 1433` to test the network connection to a SQL Server instance.
 
 ### 3. Can you connect to the server using a UDL file if step 2 works?
 
@@ -96,7 +96,7 @@ If the issue is related to SQL Server Service, follow these steps:
    2013-11-20 09:42:03.94 Server Server named pipe provider is ready to accept connection on [ \\.\pipe\MSSQL$KJ\sql\query].
    ```
 
-1. In an SSMS, [UDL](test-oledb-connectivity-use-udl-file.md), or [ODBC Data Source Administrator](/sql/integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard) connection, bypass the SQL Server Browser by specifying the server name in the format: `tcp:<InstanceName>.<DomainName>.com,1433`.
+1. In an SSMS, [UDL](test-oledb-connectivity-use-udl-file.md), or [ODBC Data Source Administrator](/sql/integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard) connection, bypass the SQL Server Browser by specifying the server name in the format: `tcp:<ServerName>.<DomainName>.com,1433`.
 
    > [!NOTE]
    > Using the fully qualified domain name (FQDN), `tcp:`, and the port number to create a connection is the most reliable and resilient method. `tcp:` must be lowercase.
@@ -104,14 +104,14 @@ If the issue is related to SQL Server Service, follow these steps:
    - If the connection is successful:
 
      - Validate SQL Server Browser is running. If SQL Server is a default instance listening on port 1433, it doesn't have to be running. You can remove the port number and have it still work.
-     - If removing the `tcp:` prefix causes it to fail, you may be connecting via Named Pipes by default. You can validate by using `np:hostname\instancename` as the server name.
-     - If using the Network Basic Input/Output System (NetBIOS) name fails, you may have a SQL alias that overrides the NetBIOS name or an incorrect DNS suffix in the network configuration. Also, check 32-bit aliases.
+     - If removing the `tcp:` prefix causes it to fail, you may be connecting via Named Pipes by default. You can validate by using `np:hostname\<ServerName>` as the server name.
+     - If using the NetBIOS name fails, you may have a SQL alias that overrides the NetBIOS name or an incorrect DNS suffix in the network configuration. Also, check 32-bit aliases.
 
    - If SSMS fails to connect, try [connecting with a UDL file](test-oledb-connectivity-use-udl-file.md) or via the [ODBC Data Source Administrator](/sql/integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard).
 
      - Try using the IP address of the server instead of the host name. You can even try using 127.0.0.1 if the server isn't clustered and is listening on "any."
      - Try different drivers. Newer drivers support TLS 1.2 and give better error messages.
-     - Try different protocols: `tcp:<InstanceName>.<DomainName>.com,1433`, `np:<InstanceName>.<DomainName>.com\instancename`, or `lpc:<InstanceName>.<DomainName>.com\instancename`. Use the SQL Server Configuration Manager to make changes. Then, restart SQL Server and use the *ERORLOG* file to confirm the changes.
+     - Try different protocols: `tcp:<ServerName>.<DomainName>.com,1433`, `np:<ServerName>.<DomainName>.com\<InstanceName>`, or `lpc:<ServerName>.<DomainName>.com\<InstanceName>`. Use the SQL Server Configuration Manager to make changes. Then, restart SQL Server and use the *ERORLOG* file to confirm the changes.
      - Has SQL Server (2014 or earlier) been upgraded to support TLS 1.2? Has the client been upgraded to support TLS 1.2? Are these protocols enabled?
      - Check for a SQL alias in SQL Server Configuration Manager or *cliconfg.exe* on all Windows machines. Check 64-bit and 32-bit aliases.
      - Check the *ERRORLOG* file for failure messages, such as the database being unavailable or in recovery.
@@ -123,7 +123,7 @@ If the issue is related to SQL Server Service, follow these steps:
 
      - If you can't connect even when you specify the port number, and this only happens when you connect remotely, it's a firewall issue. You should check the firewall settings and make sure that the port is allowed for inbound and outbound connections. You may also need to create a firewall rule to allow the SQL Server application or service to communicate through the firewall.
 
-     - If using Always On, connecting to the listener doesn't use SQL Server Browser, so you have to specify the port number in the connection string. If that doesn't work, try connecting directly to the primary node on its regular SQL port. (This means connecting directly to the SQL Server instance that's currently serving as the primary replica, rather than connecting to the listener.) If that works, the issue is related to listener. Engage SQL Server High Availability to check the cluster and listener configuration.
+     - If using Always On, connecting to the listener doesn't use SQL Server Browser, so you have to specify the port number in the connection string. If that doesn't work, try connecting directly to the primary node on its regular SQL port. If that works, the issue is related to listener.
 
 If none of the above methods work, restart the SQL Server computer.
 
@@ -133,8 +133,8 @@ The worst case scenario is to stop the SQL Server Service, install a new instanc
 
 In general, the firewall's default behavior is to block the SQL Server and SQL Server Browser ports. If so, remote connections fail, while local ones succeed. Test it by using `telnet` or [PortQry](/troubleshoot/windows-server/networking/portqry-command-line-port-scanner-v2):
 
-- `telnet <InstanceName> 1433`
-- `portqry -n <InstanceName> -p udp -e 1434`
+- `telnet <ServerName> 1433`
+- `portqry -n <ServerName> -p udp -e 1434`
 
 > [!NOTE]
 > SQL Server Browser uses UDP port 1434.
@@ -142,8 +142,8 @@ In general, the firewall's default behavior is to block the SQL Server and SQL S
 If `telnet` isn't available, use the `Test-NetConnection` PowerShell command:
 
 ```powershell
-Test-NetConnection <InstanceName> -Port 1433   
-Test-NetConnection <InstanceName>.<DomainName>.com -Port 1433
+Test-NetConnection <ServerName> -Port 1433   
+Test-NetConnection <ServerName>.<DomainName>.com -Port 1433
 ```
 
 Make sure to check which port SQL Server is listening on in the *ERRORLOG* file. You may have to enable `telnet` by adding it as a Windows feature. This doesn't require a reboot. SQL Server must also be listening on TCP. `PortQry` can be downloaded from the Microsoft download site. If using the SQL Server Browser, make sure the UDP port 1434 is opened in the firewall and the SQL Server TCP port.
@@ -166,21 +166,17 @@ If the issue is related to clients, you might see the following indicators:
 
   This might be caused by an outbound firewall rule or incorrect default DNS suffixes. Try testing with the fully qualified server name, for example:
 
-  - `telnet <InstanceName> 1433`
-  - `telnet <InstanceName>.<DomainName>.com 1433`
+  - `telnet <ServerName> 1433`
+  - `telnet <ServerName>.<DomainName>.com 1433`
 
-  - `portqry -n <InstanceName> -p udp -e 1434`
-  - `portqry -n <InstanceName>.<DomainName>.com -p udp -e 1434`
+  - `portqry -n <ServerName> -p udp -e 1434`
+  - `portqry -n <ServerName>.<DomainName>.com -p udp -e 1434`
 
-  - `ping <InstanceName>`
-  - `ping <InstanceName>.<DomainName>.com`
+  - `ping <ServerName>`
+  - `ping <ServerName>.<DomainName>.com`
 
-  If `telnet` isn't available, use the `Test-NetConnection` PowerShell command:
-
-   ```powershell
-   Test-NetConnection <InstanceName> -Port 1433   
-   Test-NetConnection <InstanceName>. <DomainName>.com -Port 1433
-   ```
+  > [!NOTE]
+> `test-netconnection` can replace the `telnet`, `portqry`, and `ping` commands.
 
    This might be a TLS issue. For example, the server uses TLS 1.2, and the client drivers haven't been upgraded for it.
 
@@ -198,7 +194,7 @@ If the issue is related to drivers, try different drivers.
 
 If the issue is related to users, have another user log in to this machine.
 
-- If the connection is successful, see what's different about the failing user. For example, the Windows user profile is incorrect, or perhaps the users belong to a different organizational unit (OU) or domain.
+- If the connection is successful, see what's different about the failing user. For example, the Windows user profile is corrupt, or perhaps the users belong to a different organizational unit (OU) or domain.
 
 - If there are users from multiple domains, try using a user from the same domain as the server. Typically, user issues result in authentication errors and have a different troubleshooting workflow.
 
@@ -212,7 +208,7 @@ If only a particular application fails and a [UDL](test-oledb-connectivity-use-u
 
 Capture a [client and server network trace](/sql/relational-databases/sql-trace/sql-trace). Run SQL trace on both the client and server at the same time.
 
-Install [WireShark](https://www.wireshark.org/download.html) with the Npcap driver to trace when the client and server are on the same machine.
+Install [WireShark](https://www.wireshark.org/download.html) with the NCAP driver to trace when the client and server are on the same machine.
 
 Your organization may have its own network infrastructure team that you can engage with and may have a preferred tracing tool to perform the capture. They can use any tool as long as it's saved in a format compatible with [Network Monitor (NetMon.exe)](/windows-hardware/drivers/portable/using-the-netmon-tool) or WireShark. PCAP format is the most popular.
 
