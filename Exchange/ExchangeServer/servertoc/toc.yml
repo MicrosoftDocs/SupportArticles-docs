@@ -89,6 +89,8 @@
           href: ../administration/cross-forest-free-busy-lookup-fails.md
         - name: DAG network Misconfigured error
           href: ../administration/dag-network-misconfigured-error.md
+        - name: Database switchover causes ExAssertException
+          href: ../administration/database-switchover-causes-exassertexception.md
         - name: Debug programs user right unexpectedly granted for groups
           href: ../administration/unexpected-debug-programs-user-right.md
         - name: Delete junk email rules by using MFCMAPI
