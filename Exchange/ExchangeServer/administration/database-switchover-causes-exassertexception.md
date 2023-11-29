@@ -1,6 +1,6 @@
 ---
 title: Database switchover causes an ExAssertException error
-description: Provides a resolution for an issue in which a database switchover fails and Microsoft Exchange Information Store (MSExchangeIS) logs an ExAssertException error for StoreCommonServices.
+description: Provides a resolution for an issue in which a database switchover fails and the Exchange Information Store service (MSExchangeIS) logs an ExAssertException error for StoreCommonServices.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
