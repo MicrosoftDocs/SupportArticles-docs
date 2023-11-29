@@ -69,7 +69,7 @@ To fix the issue, increase the size of the page file for the performance counter
 
    `HKEY_LOCAL_MACHINE\SYSTEM\\CurrentControlSet\Services\MSExchangeIS\<server name>-NonReplicated`
 
-3. (Optional) If another Exchange server that doesn't have the issue is available, copy the *MSExchangeISStorePerfCounters.xml file* from that server to the affected server. The file is in the *%ExchangeInstallPath%Setup\Perf* folder.
+3. (Optional) If another Exchange server that doesn't have the issue is available, copy the *MSExchangeISStorePerfCounters.xml* file from that server to the affected server. The file is in the *%ExchangeInstallPath%Setup\Perf* folder.
 
 4. Increase the size of the page file for the performance counters by running the following PowerShell commands to update the registry:
 
@@ -78,10 +78,8 @@ To fix the issue, increase the size of the page file for the performance counter
    New-PerfCounters -DefinitionFileName "$env:exchangeinstallpath\Setup\Perf\MSExchangeISStorePerfCounters.xml" -FileMappingSize 10485760
    ```
 
-5. Navigate to the following registry subkey:
+5. Verify that the `FileMappingSize` registry value under the following registry subkey matches the updated size of the page file:
 
    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSExchangeIS Store\Performance`
-
-   Verify that the `FileMappingSize` registry value matches the updated page file size.
 
 6. Restart the server.
