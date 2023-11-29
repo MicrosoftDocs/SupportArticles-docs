@@ -176,7 +176,7 @@ If the issue is related to clients, you might see the following indicators:
   - `ping <ServerName>.<DomainName>.com`
 
   > [!NOTE]
-> `test-netconnection` can replace the `telnet`, `portqry`, and `ping` commands.
+  > `test-netconnection` can replace the `telnet`, `portqry`, and `ping` commands.
 
    This might be a TLS issue. For example, the server uses TLS 1.2, and the client drivers haven't been upgraded for it.
 
