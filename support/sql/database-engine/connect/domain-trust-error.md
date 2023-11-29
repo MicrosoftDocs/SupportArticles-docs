@@ -10,7 +10,7 @@ ms.custom: sap:Connection issues
 
 # Domain trust error
 
-To be added
+This article helps you resolve the "Domain trust" error.
 
 ## Symptoms
 

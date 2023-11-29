@@ -116,5 +116,5 @@ Before you start with troubleshooting, it is important to understand the nature 
   - [Directory Services specific error messages](directory-services-specific-error-messages.md)
 
 - Issues specific to Kerberos:
-  - 
+  - Missing SPN - 
 - Miscellaneous issues - To be added.
