@@ -24,7 +24,7 @@ _Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2012
 To configure your system for End of Service Updates (ESU), you have to install ESU product keys. In the following circumstances, you might receive error messages when you install the product keys:
 
 - After you enter the product key, you receive the following error message:
-  > Error: 0xC004E016 on a computer running microsoft windows non-core edition, run 'slui.exe 0x2a 0xC004E016' to display the error  
+  > Error: 0xC004E016 on a computer running Microsoft Windows non-core edition, run 'slui.exe 0x2a 0xC004E016' to display the error  
   > 0xC004E016: The Software Licensing Service reported that the product key is invalid.
 - When you use the Volume Activation Management Tool (VAMT) to install an ESU product key, you receive the following error message:
   > Unable to verify product key  
