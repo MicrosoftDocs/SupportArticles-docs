@@ -60,9 +60,9 @@ SSPI handshake failed with error code 0x80090304 while establishing a connection
 
 These codes translate as follows:
 
-Error -2146893039 (0x80090311): No authority can be contacted for authentication.
+Error 2146893039 (0x80090311): No authority can be contacted for authentication.
 
-Error -2146893052 (0x80090304): The Local Security Authority can't be contacted.
+Error 2146893052 (0x80090304): The Local Security Authority can't be contacted.
 
 ### Client system event log
 
