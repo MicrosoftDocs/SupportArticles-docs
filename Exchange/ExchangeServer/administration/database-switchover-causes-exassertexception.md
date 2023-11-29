@@ -54,7 +54,7 @@ Message: "Watson report about to be sent for process id: \<process ID\>, with pa
 
 ## Cause
 
-The size of the default page file for the performance counters is insufficient. The Microsoft Exchange Information Store service (MSExchangeIS) sets the default page file size.
+The default size of the page file for the performance counters is insufficient. The Microsoft Exchange Information Store service (MSExchangeIS) sets the default size of the page file.
 
 ## Resolution
 
