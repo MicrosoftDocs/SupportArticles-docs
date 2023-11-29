@@ -25,6 +25,7 @@ To configure your system for End of Service Updates (ESU), you have to install E
 
 - After you enter the product key, you see the following error message:
   > Error: 0xC004E016 on a computer running microsoft windows non-core edition, run 'slui.exe 0x2a 0xC004E016' to display the error  
+  > 0xC004E016: The Software Licensing Service reported that the product key is invalid.
 - When you use the Volume Activation Management Tool (VAMT) to install an ESU product key, you see the following error message:
   > Unable to verify product key  
   >The specified product key is invalid, or is unsupported by this version of VAMT. An update to support additional products may be available online.
@@ -48,15 +49,11 @@ To resolve these error messages, install and configure the following prerequisit
   > [!NOTE]  
   > Check the [Microsoft Update Catalog](https://www.catalog.update.microsoft.com) to make sure that you have the most recent Licensing Preparation Package updates.  
 
-- The VAMT component of [Windows ADK for Windows 10, version 2004](https://go.microsoft.com/fwlink/?linkid=2120254). For more information about this tool, see the following articles:
-  - [Download and install the Windows ADK](/windows-hardware/get-started/adk-install).
-  - [Introduction to VAMT](/windows/deployment/volume-activation/introduction-vamt)
-
-- Update to the VAMT configuration files.
+- Update to the VAMT configuration files (if you are using VAMT).
   1. Download [VAMT - Configuration](https://www.microsoft.com/download/details.aspx?id=104503), and then extract the files from the download.
   1. Place the files in the following folder:  
 
-      ```
+      ```console
       C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\VAMT3\pkconfig
       ```
 
