@@ -94,7 +94,7 @@ This method has been tested by using [the supported Linux distributions and vers
 > [!NOTE]
 > If you are experiencing problems that affect an Azure network virtual appliance, this method does not apply to your situation. Instead, you must contact the vendor of the network virtual appliance to get instructions about how to do a password reset safely.
 
-You can run the [vm repair](/cli/azure/vm/repair) commands to create a repair VM that has a copy of the affected VM's OS disk attached. Then, mount the copy of the OS file systems in the repair VM via the [chroot environment](chroot-environment-linux.md).
+You can run the [vm repair](/cli/azure/vm/repair) commands to create a repair VM that has a copy of the affected VM's OS disk attached. Then, mount the copy of the OS file systems on the repair VM via the [chroot environment](chroot-environment-linux.md).
 
 > [!NOTE]
 > Alternatively, create a rescue VM manually by using the Azure portal. For more information, see [Troubleshoot a Linux VM by attaching the OS disk to a recovery VM using the Azure portal](troubleshoot-recovery-disks-portal-linux.md).
