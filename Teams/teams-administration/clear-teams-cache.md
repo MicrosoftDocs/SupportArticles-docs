@@ -17,7 +17,7 @@ appliesto:
   - New Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 11/28/2023
+ms.date: 11/30/2023
 ---
 # Clear the Teams client cache
 
@@ -55,7 +55,12 @@ If you're experiencing issues that affect Microsoft Teams, clearing the cache on
 
 1. If Teams is still running, right-click the Teams icon in the taskbar, and then select **Quit**.
 1. Open the **Run** dialog box by pressing the Windows logo key :::image type="icon" source="media\clear-teams-cache\windows-logo-key.png"::: +R.
-1. In the **Run** dialog box, enter *%userprofile%\appdata\local\Packages\MSTeams_8wekyb3d8bbwe\LocalCache\Microsoft\MSTeams*, and then select **OK**.
+1. In the **Run** dialog box, enter the following path, and then select **OK**.
+
+   ```console
+   %userprofile%\appdata\local\Packages\MSTeams_8wekyb3d8bbwe\LocalCache\Microsoft\MSTeams
+   ```
+
 1. Delete all files and folders in the directory.
 1. Restart Teams.
 
