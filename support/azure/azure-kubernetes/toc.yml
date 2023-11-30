@@ -238,7 +238,7 @@
     href: error-from-server-error-dialing-backend-dial-tcp.md
   - name: Errors using features that require virtual machine scale sets
     href: error-using-feature-requiring-virtual-machine-scale-set.md
-  - name: insufficientSubnetSize error
+  - name: InsufficientSubnetSize error
     href: insufficientsubnetsize-error-advanced-networking.md
   - name: Memory saturation occurs in pods after cluster upgrade
     href: aks-memory-saturation-after-upgrade.md
