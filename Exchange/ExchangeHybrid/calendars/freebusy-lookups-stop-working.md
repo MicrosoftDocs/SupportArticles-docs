@@ -72,7 +72,7 @@ This issue could affect any environment that uses the **Microsoft Federation Gat
 To run the procedure in the Resolution section as an automated task and prevent future issues, open a command prompt on the Exchange server, then run the following command. Doing this updates the Federation trust daily.
 
 ```console
-Schtasks /create /sc Daily /tn FedRefresh /tr "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -version 2.0 -command Add-PSSnapin Microsoft.Exchange.Management.PowerShell.E2010; $fedTrust = Get-FederationTrust;Set-FederationTrust -Identity $fedTrust.Name -RefreshMetadata" /ru System
+Schtasks /create /sc Daily /tn FedRefresh /tr "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -version 2.0 -command Add-PSSnapin Microsoft.Exchange.Management.PowerShell.SnapIn; $fedTrust = Get-FederationTrust;Set-FederationTrust -Identity $fedTrust.Name -RefreshMetadata" /ru System
 ```
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Microsoft Q&A](/answers/products/?WT.mc_id=msdnredirect-web-msdn).
